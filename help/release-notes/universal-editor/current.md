@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2024.11.05
-description: Detta är versionsinformationen för version 2024.11.05 av Universal Editor.
+title: Versionsinformation om Universal Editor 2024.11.12
+description: Detta är versionsinformationen för version 2024.11.12 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 7ace83e0df1d917c359f07a806da638739b4a4a6
+source-git-commit: 03ccad00e689052ada8cca976d6c385be01d3cc9
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2024.11.05 {#release-notes}
+# Versionsinformation om Universal Editor 2024.11.12 {#release-notes}
 
-Det här är versionsinformationen för den 5 november 2024-versionen av Universal Editor.
+Det här är versionsinformationen för den 12 november 2024-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,6 +22,22 @@ Det här är versionsinformationen för den 5 november 2024-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* **Återställningsförlopp för Universal Editor-tjänst:** Med en återställningsförlopp kan Adobe-call-team snabbt återställa den universella redigeringstjänsten till en viss gren vid behov, vilket garanterar hög tillgänglighet genom snabb återställning vid problem.
-* **Optimerade API-anrop för innehållsåtgärder:** I den universella redigeringstjänsten används nu JSON-API:er i stället för HTML-API:er för att skapa, kopiera och flytta åtgärder via SlingPostServlet, vilket effektiviserar tolkningen av svaren.
-* **Stöd för Universal Editor på AEM 6.5:** Universell redigerare finns nu för headless-användning [när AEM 6.5 används.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
+* **Återförsöksalternativ på CORS-timeout:** I [ version 2024.09.26,](/help/release-notes/universal-editor/2024/2024-09-26.md) introducerades en felpanel när redigeraren inte kunde upprätta en anslutning till den inlästa sidan, vilket förhindrade oändliga inläsningslägen.
+   * I den här versionen fortsätter redigeraren automatiskt att försöka igen och när anslutningen har upprättats kan redigeringen återupptas.
+   * Detta är särskilt användbart för sidor som kan ta längre tid än en minuts timeout att initiera.
+* **Förbättringar av utökningsmöjligheter för utvecklare:** Den universella redigeraren har nu stöd för sändning av händelser till tillägg, vilket gör att tilläggsutvecklare kan prenumerera på [händelser.](/help/implementing/universal-editor/events.md)
+   * Detta gör att utvecklare kan [reagera på redigeringshändelser i sina anpassade tillägg.](/help/implementing/universal-editor/customizing.md#extending)
+* **Beständig komponentmarkering:** Markerade komponenter i redigeraren kommer nu att finnas kvar även efter att webbläsaren har uppdaterats.
+   * Detta gör att användare kan fortsätta arbeta utan att förlora sitt sammanhang när de läser in sidan igen.
+* **Lokaliserade snabblänkar:** Avsnittet **Snabblänkar** på startskärmen innehåller nu lokaliserade länkar till dokumentation, vilket gör det enklare för användarna att komma åt relevanta guider baserat på deras språkinställningar.
+* **ID för begäran om avancerad felsökning:** Felmeddelanden innehåller nu **ID för begäran** i informationsavsnittet, som har samband med `x-request-id header`.
+   * Detta gör det enklare för ingenjörsteamen i Adobe att spåra och diagnostisera problem genom att matcha dessa fel med interna loggar.
+
+## Andra förbättringar {#other-improvements}
+
+* **Etiketter för träd med långt innehåll har korrigerats:** Ett problem där långa etiketter i panelen **Innehållsträd** stängdes av har åtgärdats
+   * Detta säkerställer att dra och släpp-handtag alltid är synliga vid ändring av ordningen.
+* **Långa egenskapsetiketter har korrigerats:** Ett fel där etiketter för långa fält i panelen **Egenskaper** överlappade med fältvalideringsinformation har åtgärdats
+* **Vågrät rullning i egenskapspanelen:** Korrigerade ett fel där breda element i panelen **Egenskaper** orsakade vågrät rullning
+* **Åtgärdat inaktivt verktygsfält vid meddelanden:** Det översta **Adobe Experience Cloud**-verktygsfältet fungerar nu helt när [popup](https://spectrum.adobe.com/page/toast/)-meddelanden visas.
+* **Förbättrad stabilitet:** Felgränser har lagts till för att hantera oväntade värden, vilket förhindrar att hela användargränssnittet kraschar när en enskild återgivare eller validerare misslyckas, vilket förbättrar tillförlitligheten
