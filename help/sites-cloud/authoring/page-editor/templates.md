@@ -1,27 +1,31 @@
 ---
-title: Skapa sidmallar
-description: Mallen definierar strukturen för den resulterande sidan och med mallredigeraren är det inte längre en uppgift som bara är avsedd för utvecklare att skapa och underhålla mallar
+title: Mallar för att skapa sidor som är redigerbara med sidredigeraren
+description: Du kan använda mallredigeraren för att skapa mallar som innehållsförfattarna kan använda för att skapa sidor som kan redigeras med sidredigeraren.
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 41abdfcf142a3f39854978c5acf0e5d28872b3c4
 workflow-type: tm+mt
-source-wordcount: '4524'
-ht-degree: 7%
+source-wordcount: '4415'
+ht-degree: 5%
 
 ---
 
-# Skapa sidmallar {#creating-page-templates}
 
-När du skapar en sida måste du välja en mall som används som bas för att skapa den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas.
+# Mallar för att skapa sidor som är redigerbara med sidredigeraren {#creating-page-templates}
 
-Tack vare **mallredigeraren** är det inte längre bara utvecklare som kan skapa och underhålla mallar. En typ av superanvändare, som kallas **mallskapare**, kan också arbeta med detta. Utvecklare måste fortfarande installera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när dessa grunder väl är på plats kan **mallskaparen** skapa och konfigurera mallar utan något utvecklingsprojekt.
+Du kan använda mallredigeraren för att skapa mallar som innehållsförfattarna kan använda för att skapa sidor som kan redigeras med sidredigeraren.
 
-Med **mallkonsolen** kan mallförfattare:
+## Ökning {#overview}
 
-* Skapa en ny mall eller kopiera en befintlig mall.
-* Hantera mallens livscykel.
+När en författare skapar en sida måste han eller hon välja en mall som används som bas för den nya sidan. Mallen definierar strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas när sidan redigeras i sidredigeraren.
+
+>[!NOTE]
+>
+>[Mallar är också tillgängliga för att skapa sidor som kan redigeras med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/templates.md)
+
+Med **mallredigeraren** är det inte bara utvecklaraktiviteten att skapa och underhålla mallar. En typ av avancerade användare, som kallas **mallskapare**, kan skapa mallar. Utvecklare måste konfigurera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när de här grunderna är på plats kan **mallskaparen** skapa och konfigurera mallar utan att behöva ta hjälp av en utvecklare.
 
 Med **mallredigeraren** kan mallförfattare:
 
@@ -29,9 +33,9 @@ Med **mallredigeraren** kan mallförfattare:
 * Förkonfigurera komponenterna.
 * Definiera vilka komponenter som kan redigeras på sidor som skapas med mallen.
 
-Det här dokumentet förklarar hur en **mallskapare** kan använda mallkonsolen och redigeraren för att skapa och hantera redigerbara mallar.
+Det här dokumentet förklarar hur en **mallskapare** kan använda **mallredigeraren** för att skapa och hantera redigerbara mallar.
 
-Mer information om hur redigerbara mallar fungerar på teknisk nivå finns i utvecklardokumentet [Sidmallar](/help/implementing/developing/components/templates.md).
+Mer information om hur redigerbara mallar fungerar på teknisk nivå finns i utvecklardokumentet [Redigerbara mallar](/help/implementing/developing/components/templates.md).
 
 >[!NOTE]
 >
@@ -39,15 +43,15 @@ Mer information om hur redigerbara mallar fungerar på teknisk nivå finns i utv
 
 ## Innan du börjar {#before-you-start}
 
+Innan du börjar är det viktigt att tänka på att det krävs samarbete när du skapar en mall. Därför anges [rollen](#roles) för varje uppgift. Detta påverkar inte hur du faktiskt använder en mall för att skapa en sida, men det påverkar hur en sida relaterar till dess mall.
+
 >[!NOTE]
 >
 >En administratör måste konfigurera en mallmapp i **Konfigurationsläsaren** och tillämpa rätt behörigheter innan en mallskapare kan skapa en mall i den mappen.
 
-Innan du börjar är det viktigt att tänka på att det krävs samarbete när du skapar en mall. Därför anges [rollen](#roles) för varje uppgift. Detta påverkar inte hur du faktiskt använder en mall för att skapa en sida, men det påverkar hur en sida relaterar till dess mall.
-
 ### Roller {#roles}
 
-Om du vill skapa en ny mall med hjälp av **mallkonsolen** och **mallredigeraren** måste följande roller samarbeta:
+Om du vill skapa en ny mall måste du samarbeta mellan följande roller:
 
 * **Admin**:
    * Skapar en ny mapp för mallar som kräver `admin` rättigheter.
@@ -72,9 +76,6 @@ De uppgifter som beskrivs i det här dokumentet listas med den roll som ansvarar
 
 När du skapar en redigerbar mall:
 
-* Använd konsolen **Template**. Det här är tillgängligt i avsnittet **Allmänt** i **verktygskonsolen**.
-   * Eller direkt på: `https://<host>:<port>/libs/wcm/core/content/sites/templates.html/conf`
-* Kan [skapa en mapp för mallarna](#creating-a-template-folder-admin) om det behövs
 * [Skapa en ny mall](#creating-a-new-template-template-author) som till att börja med är tom
 * [Definiera ytterligare egenskaper](#defining-template-properties-template-author) för mallen om det behövs
 * [Redigera mallen](#editing-templates-template-authors) för att definiera:
@@ -92,7 +93,7 @@ När du skapar en redigerbar mall:
 
 >[!TIP]
 >
->Ange aldrig någon information som måste internationaliseras i en mall. <!-- Never enter any information that must be [internationalized](/help/sites-developing/i18n.md) into a template.-->
+>Ange aldrig någon information som måste vara [internationaliserad](/help/implementing/developing/extending/i18n/dev.md) i en mall.
 >
 >Använd [lokaliseringsfunktionerna i kärnkomponenterna för mallelement som sidhuvuden och sidfötter som måste lokaliseras.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)
 
@@ -102,7 +103,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
 ### Skapa en ny mall - mallskapare {#creating-a-new-template-template-author}
 
-1. Öppna **Mallkonsolen** (med **Verktyg >** **Allmänt**) och navigera sedan till önskad mapp.
+1. Öppna **[Mallkonsolen](/help/sites-cloud/administering/templates-console.md)** och navigera sedan till önskad mapp.
 
    >[!NOTE]
    >
@@ -129,7 +130,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
    >
    >När en ny mall skapas markeras den som **Utkast** i konsolen, vilket innebär att den inte är tillgänglig för sidförfattare än.
 
->[!NOTE]
+>[!TIP]
 >
 >Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
 >
@@ -148,15 +149,7 @@ En mall kan ha följande egenskaper:
 * Beskrivning
    * En valfri beskrivning som ger mer information om mallen och dess användning, som till exempel kan visas i guiden **Skapa sida** .
 
-Så här visar och/eller redigerar du egenskaperna:
-
-1. Välj mallen i **Mallkonsolen**.
-1. Välj **Visa egenskaper** i verktygsfältet eller från snabbalternativen för att öppna dialogrutan.
-1. Nu kan du visa eller redigera mallegenskaperna.
-
->[!NOTE]
->
->Status för en mall (utkast, aktiverad eller inaktiverad) visas i konsolen.
+När du har skapat mallen kan du använda **[mallkonsolen](/help/sites-cloud/administering/templates-console.md)** för att visa eller redigera mallegenskaperna.
 
 #### Miniatyrbild för mall {#template-thumbnail-image}
 
@@ -181,17 +174,11 @@ För att kunna använda en mall när du skapar en sida måste du:
 
 En mall kan aktiveras eller inaktiveras för att bli tillgänglig eller inte tillgänglig i guiden **Skapa sida**.
 
+Använd **[Mallkonsolen](/help/sites-cloud/administering/templates-console.md)** för att aktivera eller inaktivera en mall.
+
 >[!CAUTION]
 >
 >När en mall har aktiverats visas en varning när en mallskapare börjar uppdatera mallen ytterligare. Detta är till för att informera användaren om att det finns referenser till mallen, så eventuella ändringar kan påverka de sidor som refererar till mallen.
-
-1. Välj mallen i **Mallkonsolen**.
-1. Välj **Aktivera** eller **Inaktivera** i verktygsfältet och sedan igen i bekräftelsedialogrutan.
-1. Du kan nu använda mallen när du [skapar en sida](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page), men du vill antagligen [redigera mallen](#editing-templates-template-authors) enligt dina önskemål.
-
->[!NOTE]
->
->Status för en mall (utkast, aktiverad eller inaktiverad) visas i konsolen.
 
 #### Tillåt en mall - Författare {#allowing-a-template-author}
 
@@ -211,7 +198,6 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
    >
    >Om listan **Tillåtna mallar** lämnas tom kommer trädet att ökas tills ett värde/en lista hittas.
    >
-   >
    >Se [Malltillgänglighet](/help/implementing/developing/components/templates.md#template-availability) - principerna för tillåtna mallar är desamma.
 
 1. Klicka på **Spara** för att spara ändringarna i sidegenskaperna.
@@ -224,10 +210,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 Eftersom mallen refereras när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
-1. Välj mallen i **Mallkonsolen**.
-1. Välj **Publish** i verktygsfältet för att öppna guiden.
-1. Markera de **innehållsprinciper** som ska publiceras tillsammans.
-1. Välj **Publish** i verktygsfältet för att slutföra åtgärden.
+Publish-mallar med **[Mallkonsolen.](/help/sites-cloud/administering/templates-console.md)**
 
 ## Redigera mallar - mallskapare {#editing-templates-template-authors}
 
@@ -664,4 +647,4 @@ När du skapar mallar bör du tänka på följande:
    >AEM ger uttryckliga varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
 
 1. [Skapar egna mappar](#creating-a-template-folder-admin) för dina platsspecifika mallar.
-1. [Publish dina mallar](#publishing-a-template-template-author) från konsolen **Mallar**.
+1. [Publish dina mallar](#publishing-a-template-template-author) från konsolen **[Mallar.]**(/help/sites-cloud/administering/templates-console.md)

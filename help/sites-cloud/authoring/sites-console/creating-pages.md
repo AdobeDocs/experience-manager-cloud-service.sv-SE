@@ -5,7 +5,7 @@ exl-id: 77264562-e76a-40c8-9878-847a8878fb8e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 6e13244d7ba7bb6e7a51525b66274427fe21d664
+source-git-commit: dbe4cd619f4dc680e6fc4826f6a4fea92bab9707
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 1. I det första steget i guiden kan du antingen:
 
    * Välj den mall som du vill använda för att skapa den nya sidan och välj sedan **Nästa** för att fortsätta eller **Avbryt** för att avbryta processen.
-   * Mallar stöds både för [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och för [den universella redigeraren.](/help/edge/wysiwyg-authoring/templates.md)
+   * Mallar stöds både för [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och för [den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/templates.md)
 
    ![Välja en mall för en ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-template.png)
 

@@ -4,13 +4,13 @@ description: Ta reda på vilka AEM Sites-funktioner och användningsexempel som 
 solution: Experience Manager Sites
 feature: Edge Delivery Services
 role: User
-source-git-commit: 50421f55444f61d64cd2ecd046bd7bc5f1f859e3
+exl-id: 21745f53-a7ef-4eec-9170-b267c2f4314e
+source-git-commit: dbe4cd619f4dc680e6fc4826f6a4fea92bab9707
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
-
 
 # Funktioner för pågående webbplatser för Edge Delivery Services {#wip-sites-features}
 
@@ -35,7 +35,7 @@ I följande lista visas sådana PIA-funktioner och alternativa lösningar. Om di
 | [Språkkopia](/help/sites-cloud/administering/translation/overview.md) | Delvis tillgänglig | Komponenter ärver innehåll, men arv kan bara återställas på sidnivå | [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md) |
 | [Hantering av flera webbplatser](/help/sites-cloud/administering/msm/overview.md) | Delvis tillgänglig | Komponenter ärver innehåll, men arv kan bara återställas på sidnivå | [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md) |
 | [Startar](/help/sites-cloud/authoring/launches/overview.md) | Delvis tillgänglig | Komponenter ärver innehåll, men arv kan bara återställas på sidnivå | [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md) |
-| [Sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) | Kommer snart! | Sidor som skapas från mallar är oberoende kopior av den ursprungliga mallen. | [Använda sidmallar med den universella redigeraren](/help/edge/wysiwyg-authoring/templates.md) |
+| [Sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) | Kommer snart! | Sidor som skapas från mallar är oberoende kopior av den ursprungliga mallen. | [Använda sidmallar med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/templates.md) |
 | [Kontextnav och mål](/help/sites-cloud/authoring/personalization/overview.md) | Inte tillgängligt |  |  |
 | [Timewarp](/help/sites-cloud/authoring/launches/preview.md) | Inte tillgängligt |  |  |
 | [Associerat innehåll](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#associated-content-browser) | Inte tillgängligt |  |  |
