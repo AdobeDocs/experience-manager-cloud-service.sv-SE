@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 9bb2d38feea2690bc112611d429dad22e7bcd278
+source-git-commit: 428942c8fd4a4b83dc5d226e48eda190165768d4
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -101,11 +101,19 @@ Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
+### Nya funktioner i AEM Forms {#forms-new-features}
+
+* **Förbättra användarupplevelsen med navigeringsknappar i panellayouter**: Nu kan du lägga till navigeringsknappar i panellayouterna, till exempel Vågräta flikar, Lodräta flikar, Dragspel eller Guide. Dessa knappar förbättrar användarupplevelsen genom att förenkla övergångar mellan paneler och fokusera på den valda panelen.
+
+* **Ange visningsformat för DoR-komponenter (Document of Record)**: I en XFA-fil kan du nu ange visningsformat för Record-komponenter. Dessa format kan sedan användas på motsvarande komponenter i Adaptiv Forms Editor.
+
 ### Nya funktioner i förhandsversionen av AEM Forms {#forms-new-prerelease-features}
 
-#### Autospara ett utkast för Core Components based Adaptive Forms
+* **Spara ett utkast automatiskt för Core Components-baserade Adaptive Forms**: Användare kan nu dra nytta av en autosparfunktion som sparar ett delvis ifyllt formulär som ett utkast automatiskt. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
 
-Användarna kan nu dra nytta av en autosparfunktion som automatiskt sparar ett delvis ifyllt formulär som ett utkast. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
+* **Uppdatera Adobe Sign-omfång enkelt**: Du kan ändra omfånget för en Adobe Sign-konfiguration direkt från sidan AEM Cloud Configurations, vilket gör det snabbare och enklare att uppdatera befintliga konfigurationer.
+
+* **Stöd för asynkrona funktioner i Adaptiv Forms**: När ditt adaptiva formulär kräver asynkrona åtgärder, t.ex. att vänta på externa processer eller datahämtning, kan du implementera dessa åtgärder med anpassade funktioner och konfigurera dem i regelredigeraren.
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
