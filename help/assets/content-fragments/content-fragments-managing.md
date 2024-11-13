@@ -5,9 +5,9 @@ exl-id: 333ad877-db2f-454a-a3e5-59a936455932
 feature: Content Fragments
 role: User, Admin
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1896'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ När du har definierat dina [modeller för innehållsfragment](#creating-a-conte
 >
 >De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **Assets**. I det här avsnittet beskrivs hantering från **Assets**-konsolen.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**). Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
+>Det finns två redigerare för att skapa innehållsfragment. Även om de grundläggande funktionerna är desamma finns det vissa skillnader. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**). Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 

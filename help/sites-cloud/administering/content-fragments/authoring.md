@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2704'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * på fliken **Egenskaper** kan du uppdatera **Title** och **Description** för fragmentet, eller **Variation**
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
+      * när den är konfigurerad (som flera) i modellen tillåter olika datatyper dig att **lägga till** instanser av det relevanta fältet
    * Om **platshållarfält** definieras i den modell som de visas här och kan användas för navigering, visas de antingen vågrätt eller som en listruta.
 
   >[!NOTE]

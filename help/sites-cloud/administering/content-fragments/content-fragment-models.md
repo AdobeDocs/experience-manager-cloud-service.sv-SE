@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
 solution: Experience Manager Sites
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 862a1f67782775cc1b2ee6e3d3d66ae5560a15ab
 workflow-type: tm+mt
-source-wordcount: '3209'
+source-wordcount: '3284'
 ht-degree: 1%
 
 ---
@@ -151,9 +151,12 @@ Content Fragment Model definierar effektivt strukturen för de resulterande inne
 Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
 * **Enkelradig text**
-   * Lägg till ett eller flera fält med en enda textrad. Den maximala längden kan definieras
+   * Lägg till ett fält för en enda textrad. Den maximala längden kan definieras
+   * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
+
 * **Flerradstext**
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
+   * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
 
   >[!NOTE]
   >
@@ -162,28 +165,40 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
   Det här formatet kan inte ändras från [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md), utan bara från modellen.
 
 * **Number**
-   * Lägg till ett eller flera numeriska fält
+   * Lägga till ett numeriskt fält
+   * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
+
 * **Boolean**
    * Lägg till en boolesk kryssruta
+
 * **Datum och tid**
-   * Lägg till ett datum och/eller en tid
+   * Lägg till ett datum- och/eller tidsfält
+
 * **Uppräkning**
-   * Lägga till en uppsättning kryssrutefält, alternativknappar eller nedrullningsbara listrutor
+   * Lägga till en uppsättning kryssrutefält, alternativknappar eller listrutor
+      * Du kan ange vilka alternativ som är tillgängliga för fragmentförfattaren
+
 * **Taggar**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
+
 * **Innehållsreferens**
    * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Om en bild refereras kan du välja att visa en miniatyrbild
+   * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
+
 * **Fragmentreferens**
    * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
-   * Datatypen kan konfigureras så att fragmentförfattare kan:
-      * Redigera det refererade fragmentet direkt.
+   * Fältet kan konfigureras så att fragmentförfattare kan:
+      * Redigera det refererade fragmentet direkt
       * Skapa ett nytt innehållsfragment baserat på lämplig modell
+      * Skapa nya instanser av fältet
+
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
       * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
       * JSON skickas och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i Content Fragment Editor.
+
 * **Platshållare för flik**
    * Tillåter att flikar kan användas när innehållet i innehållsfragmentet redigeras.
       * Dessa visas som avgränsare i modellredigeraren, och delar upp avsnitt i listan med innehållsdatatyper. Varje instans representerar början på en ny flik.

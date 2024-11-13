@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
 solution: Experience Manager Sites
-source-git-commit: 7afa76f62791cf7f34c39a09c5b80c6459028e5b
+source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1818'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragmen
 >
 >Du kan komma åt innehållsfragment från två konsoler: **Innehållsfragment** och **Assets**.
 >
->Det finns också två redigerare för innehållsfragment. (Båda redigerarna är tillgängliga från båda konsolerna.)
+>Det finns också två redigerare för att skapa innehållsfragment. Även om de grundläggande funktionerna är desamma finns det vissa skillnader. Båda redigerarna är tillgängliga från båda konsolerna.
 >
 >I det här avsnittet behandlas konsolen **Innehållsfragment** och den *nya* innehållsfragmentsredigeraren. Dessa har utvecklats för leverans av headless-innehåll (även om de kan användas för alla scenarier)
 >

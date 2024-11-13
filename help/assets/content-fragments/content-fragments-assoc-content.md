@@ -5,9 +5,9 @@ exl-id: 8c8ad768-a210-4d34-bb47-2347599bcac9
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '292'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ För innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service ger 
 >
 >Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
->Det finns två redigerare för att skapa innehållsfragment. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen.
+>Det finns två redigerare för att skapa innehållsfragment. Även om de grundläggande funktionerna är desamma finns det vissa skillnader. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen.
 
 ## Lägga till associerat innehåll {#adding-associated-content}
 
