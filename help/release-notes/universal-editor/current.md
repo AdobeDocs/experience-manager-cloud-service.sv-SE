@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation om Universal Editor 2024.11.12
-description: Detta är versionsinformationen för version 2024.11.12 av Universal Editor.
+title: Versionsinformation om Universal Editor 2024.11.13
+description: Detta är versionsinformationen för version 2024.11.13 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 03ccad00e689052ada8cca976d6c385be01d3cc9
+source-git-commit: 98795cab471470442cf5c424a67ce2846cfe85dc
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om Universal Editor 2024.11.12 {#release-notes}
+# Versionsinformation om Universal Editor 2024.11.13 {#release-notes}
 
-Det här är versionsinformationen för den 12 november 2024-versionen av Universal Editor.
+Det här är versionsinformationen för den 13 november 2024-versionen av Universal Editor.
 
 >[!TIP]
 >
