@@ -3,9 +3,10 @@ title: Utbyggbarhet för användargränssnittet i AEM Assets View
 description: Läs mer om UI Extensibility-funktionen i AEM Assets View. Med användargränssnittet i AEM Assets View kan du lägga till anpassade användargränssnittskomponenter som uppfyller specifika affärsbehov.
 feature: App Builder
 role: User, Developer
-source-git-commit: c1446200898102881a20508031d4853c61f7c964
+exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
+source-git-commit: e47a8fc65e58ae2ffff805966d7dae8c6edc7aac
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Du kan lägga till dina tillägg på resursnivå, mapp- och samlingsnivå. Det t
 Öppna vyn Assets på följande sätt:
 ![access-assets-view-ui](/help/assets/assets/access-assets-view.jpg)
 
-## Var visas den tillagda UI-utökningskomponenten i Assets View-gränssnittet? {#ui-extensibility-panel-assets-view}
+## Var visas gränssnittstillägg i användargränssnittet för Assets-vyn? {#ui-extensibility-panel-assets-view}
 
 I Assets View (Visa) går du till sidan Details (Detaljer) för en resurs, mapp eller samling. Den här informationssidan har en dedikerad panel som visar det tillagda gränssnittstillägget.
 ![min arbetsyta](/help/assets/assets/my-workspace-assets-view3.png)
@@ -52,5 +53,3 @@ I Assets View (Visa) går du till sidan Details (Detaljer) för en resurs, mapp 
 1. Konfigurera din lokala miljö och upplev processen att utveckla gränssnittstillägg i Assets-vyn först genom att skapa ditt första gränssnittstillägg. Mer information finns i [Steg-för-steg-AEM Assets View Extension Development](https://developer.adobe.com/uix/docs/services/aem-assets-view/extension-development/).
 1. Konfigurera appen med AIO CLI för att generera den grundläggande tilläggsstrukturen och den nödvändiga koden. Mer information finns i [Kodgenerering för AEM Assets-vyn](https://developer.adobe.com/uix/docs/services/aem-assets-view/code-generation/).
 1. Testa tilläggen lokalt för att kontrollera att de fungerar som förväntat före distributionen. Kör tillägget i en helt isolerad miljö eller med partiell isolering och anslut tillägget till produktionen i AEM Assets View för testning. Mer information finns i [Felsökning - AEM Assets View Extensibility](https://developer.adobe.com/uix/docs/services/aem-assets-view/debug/).
-
-
