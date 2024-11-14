@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: bb225fcb931c6e9014ab18e6efbb0620262bcd76
+source-git-commit: 2652582ce2a740c958c10bea42c7674513706735
 workflow-type: tm+mt
-source-wordcount: '5794'
+source-wordcount: '5799'
 ht-degree: 2%
 
 ---
@@ -1149,7 +1149,7 @@ ht-degree: 2%
       + Edge Delivery Sites {#edge-delivery-sites}
          + [Introduktion till Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
          + [Lägg till en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md)
-         + [Setup Push Validation for an Edge Delivery site](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md)
+         + [Konfigurera push-validering för en Edge Delivery-webbplats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md)
          + [Hantera Edge Delivery-webbplatser i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/manage-edge-delivery-sites.md)
       + Domäninställningar {#custom-domain-names}
          + [Introduktion till domäninställningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
