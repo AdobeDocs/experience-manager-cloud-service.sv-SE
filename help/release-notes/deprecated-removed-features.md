@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 04ec933125da9ee3c84ffd948b144581d31763d6
+source-git-commit: de73e38580895e3d8fe2029b59907d4c722556db
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2576'
 ht-degree: 0%
 
 ---
@@ -499,3 +499,16 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
       * Typ: boolesk
 +++
 
+## Java Runtime Update to Version 21 {#java-runtime-update-21}
+
+AEM as a Cloud Service kommer att gå över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att göra följande justeringar:
+
+### Minimiversion av org.objectweb.asm {#org.objectweb.asm}
+
+Uppdatera användningen av org.objectweb.asm till version 9.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+
+### Minimiversion av org.apache.groovy {#org.apache.groovy}
+
+Uppdatera användningen av org.apache.groovy till version 4.0.22 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+
+Det här paketet kan inkluderas indirekt genom att tredjepartsberoenden läggs till, som AEM Groovy Console.
