@@ -1,7 +1,7 @@
 ---
-source-git-commit: 54d1cdec9b30c08f28d4c9b2fbd97446f3ff05b3
+source-git-commit: f3502de1aebd44a056e1263b059e1588243f5845
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
@@ -214,7 +214,7 @@ Om ett produktproblem kräver ytterligare utredning och felsökning och måste u
 
 Om du vill logga en supportanmälan måste du först registrera din Edge Delivery-webbplats i Cloud Manager. Du bör registrera din webbplats hos Cloud Manager för alla AEM as a Cloud Service-användare och [ger ett antal fördelar](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md). Mer information finns i [Cloud Manager-dokumentationen](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md) om du inte redan har registrerat din webbplats.
 
-När webbplatsen har registrerats hos Cloud Manager följer du den här processen med Admin Console för att skicka in en supportanmälan:
+**Så här loggar du en supportanmälan:**
 
 1. [Följ standardsupportprocessen](https://experienceleague.adobe.com/?support-tab=home#support) och skapa en biljett.
 1. Lägg till **Edge Delivery** i biljettens titel.
