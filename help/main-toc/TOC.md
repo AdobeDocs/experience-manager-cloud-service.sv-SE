@@ -1149,6 +1149,7 @@ ht-degree: 2%
       + Edge Delivery Sites {#edge-delivery-sites}
          + [Introduktion till Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
          + [Lägg till en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md)
+         + [Setup Push Validation for an Edge Delivery site](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md)
          + [Hantera Edge Delivery-webbplatser i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/manage-edge-delivery-sites.md)
       + Domäninställningar {#custom-domain-names}
          + [Introduktion till domäninställningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
@@ -1163,7 +1164,6 @@ ht-degree: 2%
          + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
       + CDN-konfigurationer {#cdn-configurations}
          + [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
-         + [Ställ in push-validering](/help/implementing/cloud-manager/cdn-configurations/cdn-setup-push-invalidation.md)
          + [Hantera CDN-konfigurationer](/help/implementing/cloud-manager/cdn-configurations/manage-cdn-config.md)
       + IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
