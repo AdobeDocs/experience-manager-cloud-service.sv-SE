@@ -4,10 +4,10 @@ description: Läs mer om de dataattribut och objekttyper som krävs för den uni
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: edef86c67becf3b8094196d39baa9e69d6c81777
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 1%
+source-wordcount: '574'
+ht-degree: 0%
 
 ---
 
@@ -31,8 +31,8 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `data-aue-resource` | URN till resursen, se avsnittet [Instrument the Page of the document Getting Started with the Universal Editor in AEM](getting-started.md#instrument-thepage) |
 | `data-aue-prop` | Resursens attribut, se avsnittet [Instrument på sidan i dokumentet Getting Started with the Universal Editor i AEM](getting-started.md#instrument-thepage) |
 | `data-aue-type` | [Typ av redigerbart objekt](#item-types) (till exempel text, bild och referens) |
-| `data-aue-filter` | Definierar vilka referenser som kan användas |
-| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren <br>Om `data-aue-model` anges hämtas etiketten med hjälp av modellen |
+| `data-aue-filter` | Definierar:<br> - Vilka RTE-funktioner som är aktiverade <br> - Vilka komponenter som kan läggas till i en behållare <br> - Vilka resurser som kan läggas till i en medietyp |
+| `data-aue-label` | Definierar en anpassad etikett för ett markeringsbart objekt som visas i redigeraren |
 | `data-aue-model` | Definierar en modell som används för formulärbaserad redigering på egenskapspanelen |
 | `data-aue-behavior` | Definierar [beteendet för en instrumentering](#behaviors), t.ex. fristående text eller bild, kan också härma en komponent för att göra den flyttbar eller borttagbar |
 
@@ -47,10 +47,14 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 | `component` | Det redigerbara är en komponent. Det lägger inte till ytterligare funktioner. Du måste ange flyttbara/borttagbara delar av DOM och öppna egenskapspanelen och dess fält | Obligatoriskt | n/a | n/a | Valfritt | Valfritt | n/a |
 | `reference` | Det redigerbara är en referens, till exempel Innehållsfragment, Upplevelsefragment eller Produkt | Beroende <br>se nedan | Beroende <br>se nedan | Valfri<br>lista över villkor för innehållsfragment, produkt eller Experience Fragment-filter som skickas till referensväljaren | Valfritt | Valfritt | n/a |
 
-Beroende på användningsfallet kan `data-aue-prop` eller `data-aue-resource` behövas. Till exempel:
+`data-aue-resource` krävs alltid eftersom det är primärnyckeln som anger var innehållsändringar skrivs.
 
-* `data-aue-resource` krävs om du frågar innehållsfragment via GraphQL och vill göra listan redigerbar i sitt sammanhang.
-* `data-aue-prop` krävs om du har en komponent som återger innehållet i ett refererat innehållsfragment och du vill uppdatera referensen i komponenten.
+* Det krävs inte direkt på taggen där `data-aue-type` är inställd.
+* Om det inte anges används attributet `data-aue-resource` för närmaste överordnade.
+
+`data-aue-prop` krävs när du vill göra en redigering i kontexten, förutom för en behållare där den är valfri (om den är inställd är behållaren ett innehållsfragment och utkastet pekar på ett fält med flera referenser).
+
+* `data-aue-prop` är det attribut som ska uppdateras för primärnyckeln för `data-aue-resource`.
 
 ## Beteenden {#behaviors}
 
