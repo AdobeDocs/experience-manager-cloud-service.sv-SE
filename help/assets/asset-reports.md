@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Reports, Asset Management
 role: Admin, User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: 311230e2d6a395f9382af80df1cbe0fb25427874
+source-git-commit: 6a03eb1a4ac8284299c1ffcf27d6a6c8a8b9abc4
 workflow-type: tm+mt
 source-wordcount: '942'
 ht-degree: 3%
@@ -65,7 +65,11 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
    ![Verktygssida för att navigera bland resurser - rapport](assets/navigation.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet på sidan [!UICONTROL Asset Reports].
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**. Ange dig själv till en **AEM administratörsproduktprofil** för att skapa en **hämtningsrapport**. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM administratörsproduktprofil.
+1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**.
+
+   >[!NOTE]
+   >
+   >Ange dig själv till en **AEM administratörsproduktprofil** för att skapa en **hämtningsrapport**. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM administratörsproduktprofil.
 
    ![Välj rapporttyp](assets/choose_report.png)
 
