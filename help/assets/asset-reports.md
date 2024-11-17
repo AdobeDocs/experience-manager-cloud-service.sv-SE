@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Reports, Asset Management
 role: Admin, User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 311230e2d6a395f9382af80df1cbe0fb25427874
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '942'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Med resursrapportering kan du utvärdera verktyget för din [!DNL Adobe Experien
 
 Använd informationen i rapporterna för att härleda viktiga framgångsmått för att mäta användningen av [!DNL Assets] inom ditt företag och av dina kunder.
 
-Rapporteringsramverket [!DNL Assets] använder [!DNL Sling] jobb för att asynkront bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
+Rapporteringsramverket [!DNL Assets] använder [!DNL Sling] jobb asynkront för att bearbeta rapportbegäranden på ett ordnat sätt. Den kan skalas för stora databaser. Asynkron rapportbearbetning ökar effektiviteten och hastigheten med vilken rapporter genereras.
 
 Rapporthanteringsgränssnittet är intuitivt och innehåller detaljerade alternativ och kontroller för att komma åt arkiverade rapporter och visa rapportkörningsstatus (lyckad, misslyckad och köad).
 
@@ -65,7 +65,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
    ![Verktygssida för att navigera bland resurser - rapport](assets/navigation.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet på sidan [!UICONTROL Asset Reports].
-1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**.
+1. Välj den rapport du vill skapa på sidan **[!UICONTROL Create Report]** och klicka på **[!UICONTROL Next]**. Ange dig själv till en **AEM administratörsproduktprofil** för att skapa en **hämtningsrapport**. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM administratörsproduktprofil.
 
    ![Välj rapporttyp](assets/choose_report.png)
 
@@ -103,12 +103,12 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    ![Markera eller avbryt val av rapportkolumner](assets/configure_columns.png)
 
-   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden `jcr:content` i CRX. Du kan också lägga till den via egenskapssökvägsväljaren.
+   Om du vill visa ett anpassat kolumnnamn eller en egenskapssökväg konfigurerar du egenskaperna för resursens binärfil under noden `jcr:content` i CRX. Du kan också lägga till den via en egenskapssökvägsväljare.
 
    ![Markera eller avbryt val av rapportkolumner](assets/custom_columns.png)
 
 1. Klicka på **[!UICONTROL Create]** i verktygsfältet. Ett meddelande meddelar att rapportgenereringen har initierats.
-1. På sidan [!UICONTROL Asset Reports] baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden.Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
+1. På sidan [!UICONTROL Asset Reports] baseras rapportgenereringsstatusen på rapportjobbets aktuella tillstånd, till exempel [!UICONTROL Success], [!UICONTROL Failed], [!UICONTROL Queued] eller [!UICONTROL Scheduled]. Samma status visas i inkorgen för meddelanden. Om du vill visa rapportsidan klickar du på rapportlänken. Du kan också markera rapporten och klicka på **[!UICONTROL View]** i verktygsfältet.
 
    <!--![A generated report](assets/report_page.png)-->
    ![genererad rapportstatus](assets/report-status.JPG)
