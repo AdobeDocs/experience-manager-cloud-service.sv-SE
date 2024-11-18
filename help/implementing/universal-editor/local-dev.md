@@ -4,9 +4,9 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 54d1cdec9b30c08f28d4c9b2fbd97446f3ff05b3
+source-git-commit: 4fedb7a812b53fd9ebd9c82e86fa8f05394d464f
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -76,9 +76,17 @@ UES_PORT=8000
 UES_PRIVATE_KEY=./key.pem
 UES_CERT=./certificate.pem
 UES_TLS_REJECT_UNAUTHORIZED=false
+UES_CORS_PRIVATE_NETWORK=true
 ```
 
-Detta är de minimivärden som krävs för lokal utveckling i vårt exempel. Följande tabell innehåller information om dessa och ytterligare värden.
+Detta är de minimivärden som krävs för lokal utveckling i vårt exempel.
+
+>[!NOTE]
+>
+>Om du kör Chrome version 130+ måste du aktivera sändning av CORS-huvuden för [privat nätverksåtkomst](https://wicg.github.io/private-network-access/#private-network-request) med alternativet `UES_CORS_PRIVATE_NETWORK`.
+
+
+Följande tabell innehåller information om dessa och ytterligare värden.
 
 | Värde | Valfritt | Standard | Beskrivning |
 |---|---|---|---|
@@ -93,6 +101,7 @@ Detta är de minimivärden som krävs för lokal utveckling i vårt exempel. Fö
 | `UES_SPLUNK_TOKEN` | Ja | Ingen | Splunk-token |
 | `UES_SPLUNK_INDEX` | Ja | Ingen | Index att skriva loggar till |
 | `UES_SPLUNK_SOURCE` | Ja | `universal-editor-service` | Namnet på källan i skräppostloggarna |
+| `UES_CORS_PRIVATE_NETWORK` | Ja | `false` | Aktivera sändning av CORS-huvuden för att tillåta [privat nätverk.](https://wicg.github.io/private-network-access/#private-network-request) krävs för användare av Chrome version 130+ |
 
 >[!NOTE]
 >
