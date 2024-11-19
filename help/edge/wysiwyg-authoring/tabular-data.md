@@ -4,9 +4,9 @@ description: Lär dig hur du använder kalkylblad för att hantera tabelldata f�
 feature: Edge Delivery Services
 exl-id: 26d4db90-3e4b-4957-bf21-343c76322cdc
 role: Admin, Architect, Developer
-source-git-commit: 69c8e54bde6c6047fdefbbbb1f166af690584f88
+source-git-commit: 4e4234c1aaf0a410cb419140e9e353348ce118c1
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ I det här dokumentet används exemplet med omdirigeringar för att illustrera h
 
 Om du vill skapa mappningar med kalkylblad i AEM med Edge Delivery Services måste du ha skapat webbplatsen med den senaste webbplatsmallen.
 
-Mer information finns i dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
+Mer information finns i dokumentet [Utvecklarhandbok om att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 
 ## Skapa ett kalkylblad {#spreadsheet}
 
@@ -80,6 +80,52 @@ I det här exemplet skapar du ett kalkylblad för att hantera omdirigeringar fö
    * Flytta fokus till nästa cell med tabbtangenten.
    * Redigeraren lägger till nya rader i kalkylbladet efter behov.
    * Om du vill ta bort eller flytta en rad använder du ikonen **Ta bort** i slutet av varje rad och drar i början av varje rad.
+
+## Importera kalkylbladsdata {#importing}
+
+Förutom att redigera kalkylblad i AEM Page Editor kan du även importera data från en CSV-fil.
+
+1. När du redigerar kalkylbladet i AEM trycker du på eller klickar på knappen **Överför** längst upp till vänster på skärmen.
+1. I listrutan väljer du hur du vill importera dina data.
+   * **Ersätt dokument** om du vill ersätta innehållet i hela kalkylbladet med innehållet i den CSV-fil som du ska överföra.
+   * **Bifoga till dokument** om du vill bifoga data från CSV-filen som du överför till det befintliga kalkylbladsinnehållet.
+1. I den dialogruta som öppnas väljer du din CSV-fil och trycker eller klickar på **Öppna**.
+
+En dialogruta öppnas när importen bearbetas. När informationen i CSV-filen är klar läggs den till i eller ersätter innehållet i kalkylbladet. Om det uppstår fel, t.ex. om kolumnerna inte matchar, rapporteras de så att du kan korrigera CSV-filen.
+
+>[!NOTE]
+>
+>* Rubrikerna i CSV-filen måste matcha kolumnerna i kalkylbladet exakt.
+>* Om du importerar hela CSV-filen ändras inte kolumnrubrikerna, bara innehållsraderna.
+>* Om du behöver uppdatera kolumnerna måste du göra det i AEM Page Editor innan du importerar CSV-filen.
+>* En CSV-fil får inte vara större än 10 MB för import.
+
+Beroende på vad du väljer av `mode` kan du även `create`, `replace` eller `append` till kalkylblad med hjälp av en CSV-fil och ett cURL-kommando som liknar följande.
+
+```text
+curl --request POST \
+  --url http://<aem-instance>/bin/asynccommand \
+  --header 'content-type: multipart/form-data' \
+  --form file=@/path/to/your.csv \
+  --form spreadsheetPath=/content/<your-site>/<your-spreadsheet> \
+  --form 'spreadsheetTitle=Your Spreadsheet' \
+  --form cmd=spreadsheetImport \
+  --form operation=asyncSpreadsheetImport \
+  --form _charset_=utf-8 \
+  --form mode=append
+```
+
+Anropet returnerar en HTML-sida med information om jobb-ID:t.
+
+```text
+Message | Job(Id:2024/9/18/15/27/5cb0cacc-585d-4176-b018-b684ad2dfd02_90) created successfully. Please check status at Async Job Status Navigation.
+```
+
+[Du kan använda konsolen **Jobs**](/help/operations/asynchronous-jobs.md) för att visa jobbets status eller använda det ID som returnerats för att fråga efter det.
+
+```text
+https://<aem-instance>/bin/asynccommand?optype=JOBINF&jobid=2024/10/24/14/1/8da63f9e-066b-4134-95c9-21a9c57836a5_1
+```
 
 ## Publicera ett kalkylbladssökvägar.json {#paths-json}
 
