@@ -3,9 +3,9 @@ title: Dela Assets i [!DNL the Content Hub]
 description: Dela Assets i [!DNL the Content Hub]
 role: User
 exl-id: 5284d229-1596-40bf-aa5f-af4b6500ebdf
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,12 @@ ht-degree: 0%
 | ------------- | --------------------------- |---------|----|-----|
 
 ![Dela banderollbild för resurser](assets/share-assets-banner.png)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Att dela resurser via en länk är ett bekvämt sätt att göra resurserna tillgängliga för [!DNL the Content Hub]-användare. Funktionen gör att behöriga användare kan komma åt och hämta de resurser som delas med dem. När du hämtar resurser från en delad länk använder [!DNL the Content Hub] en asynkron tjänst som ger snabbare och oavbruten hämtning.
 

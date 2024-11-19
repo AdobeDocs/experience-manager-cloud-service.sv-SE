@@ -3,9 +3,9 @@ title: Hämta resurser från Content Hub
 description: Lär dig hur du hämtar resurser från Content Hub-portalen
 role: User
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: 76337282b7d3008864763541a957c44327e1a5be
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,12 @@ ht-degree: 0%
 
 <!-- ![Download assets](assets/download-asset.jpg) -->
 ![Hämta resurser](assets/download-asset-genstudio.jpeg)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Med Content Hub kan du hämta och dela dina resurser. Dessa resurser kan vara bilder, videor eller annat digitalt innehåll. Content Hub förbättrar tillgängligheten och anpassbarheten för effektiv materialdistribution.
 
@@ -36,7 +42,7 @@ Du kan också klicka på ![hämta](/help/assets/assets/download-icon.svg) på re
 
      >[!NOTE]
      >
-     >Kryssrutan Villkor visas endast för licensierade mediefiler. Dessutom visas i dialogrutan för mediefiler en förhandsgranskning av licensvillkoren endast för mediefiler med godkända licenser. [Godkänn resursens licens](/help/assets/approve-assets-content-hub.md) innan du hämtar den för att aktivera förhandsgranskningen av licensieringsvillkor i dialogrutan för mediefiler.
+     Kryssrutan Villkor visas endast för licensierade mediefiler. Dessutom visas i dialogrutan för mediefiler en förhandsgranskning av licensvillkoren endast för mediefiler med godkända licenser. [Godkänn resursens licens](/help/assets/approve-assets-content-hub.md) innan du hämtar den för att aktivera förhandsgranskningen av licensieringsvillkor i dialogrutan för mediefiler.
 
    * Klicka på den **ursprungliga återgivningsrutan** för att återgå till den ursprungliga återgivningen i den vänstra rutan.
 1. Acceptera licensvillkoren (för licensierad mediefil) och klicka på **Hämta** för att hämta mediefilen.
@@ -48,13 +54,13 @@ Du kan också klicka på ![hämta](/help/assets/assets/download-icon.svg) på re
 
    >[!NOTE]
    >
-   >[Aktivera nedladdningsalternativet för utgångna resurser](/help/assets/configure-content-hub-ui-options.md#expired-assets-content-hub) om du vill hämta dem. Endast material som har upphört att gälla och som har aktiverat hämtning är tillgängliga för hämtning.
+   [Aktivera nedladdningsalternativet för utgångna resurser](/help/assets/configure-content-hub-ui-options.md#expired-assets-content-hub) om du vill hämta dem. Endast material som har upphört att gälla och som har aktiverat hämtning är tillgängliga för hämtning.
 
    <a id="Download-asset-dialog-box"></a> **Dialogrutan Hämta resurser:** Den här dialogrutan visar en lista över licenser som är associerade med de valda resurserna i den vänstra rutan. Välj en licens om du vill förhandsgranska villkoren (i pdf-format) i den mittersta rutan och förhandsvisningen av de associerade resursernas antal i den högra rutan. Granskade licenser markeras med ljusblått.
 
    >[!NOTE]
    >
-   > I dialogrutan **Hämta mediefil** förhandsvisas licensvillkoren endast för godkända licenser. [Godkänn resurslicenserna](/help/assets/approve-assets-content-hub.md) innan du hämtar dem för att förhandsvisa deras licensvillkor i dialogrutan **Hämta mediefiler**.
+   I dialogrutan **Hämta mediefil** förhandsvisas licensvillkoren endast för godkända licenser. [Godkänn resurslicenserna](/help/assets/approve-assets-content-hub.md) innan du hämtar dem för att förhandsvisa deras licensvillkor i dialogrutan **Hämta mediefiler**.
 
 1. Klicka på ![remove-icon](/help/assets/assets/remove-icon.svg) om du vill ta bort en licens från hämtningsdialogrutan.
 

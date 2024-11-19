@@ -3,9 +3,9 @@ title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: 54300b9f27f1092a491820ab5279ee1633c6d53d
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '947'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,12 @@ ht-degree: 0%
 
 | [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 [Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från datakällor i OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna OneDrive och Dropbox för att förbättra sökfunktionerna.
 

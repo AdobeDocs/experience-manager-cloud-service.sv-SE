@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 76337282b7d3008864763541a957c44327e1a5be
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,16 @@ ht-degree: 0%
 >id="configure_content_hub"
 >title="Konfigurera Content Hub användargränssnitt"
 >abstract="Med Experience Manager Assets kan administratörer konfigurera de alternativ som finns i Content Hub användargränssnitt. Baserat på de konfigurationsalternativ som valts av administratörer kan Content Hub-användare visa fält på Content Hub. Konfigurationsalternativen inkluderar metadata vid import av resurser, filter, resursegenskaper, metadata vid sökning av resurser, anpassad varumärkning och eventuella anpassade länkar."
+>additional-url="https://images-tv.adobe.com/mpcv3/4477/98bce651-721c-442e-98b8-c43e7708e44c_1698834577.854x480at800_h264.mp4" text="Titta på videon"
 
 <!-- ![Download assets](assets/download-asset.jpg) -->
 ![Konfigurera resurser på Content Hub](assets/configure-assets.png)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Med Experience Manager Assets kan administratörer konfigurera de alternativ som finns i Content Hub användargränssnitt. Baserat på de konfigurationsalternativ som valts av administratörer kan Content Hub-användare visa fält på Content Hub. Konfigurationsalternativen är:
 
@@ -112,7 +119,7 @@ I Content Hub kan administratörer konfigurera filter som visas när de söker e
 
    >[!NOTE]
    >
-   >Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
+   Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgängligt filter, för att redigera etiketterna eller klicka på ikonen Ta bort för att ta bort befintliga filter. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
 

@@ -2,17 +2,23 @@
 title: Söka efter resurser i Content Hub
 description: Lär dig söka efter resurser i  [!DNL Content Hub]
 role: User
-source-git-commit: 5a968440c8841abe7af2c81c4af12258b7e4547f
+exl-id: 8578d7d0-32b9-4e5c-80ef-3827e358ac6c
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
-
 # Sök i Assets i [!DNL Content Hub] {#search-assets}
 
 ![Dela banderollbild för resurser](assets/search.png)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub]-sökningen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, till exempel hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel textbaserad sökning, filter, taggar eller smart taggspecifik sökning, sökning efter ett visst filformat och så vidare.
 

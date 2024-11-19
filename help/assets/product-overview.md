@@ -2,9 +2,9 @@
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur man får tillgång till det och hur man kan ge feedback kring de alternativ som finns i Content Hub.
 exl-id: c5908058-f1ad-4aaa-9e8e-c0157e107ed1
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 | ------------- | --------------------------- |----|-----|
 
 ![Content Hub - översikt](assets/content-hub-overview.png)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Content Hub ingår som en del av Experience Manager Assets as a Cloud Service för att demokratisera tillgången till varumärkesinnehåll för organisationer och deras affärspartners. Fokus ligger på att distribuera resurser för aktivering i stor skala och att skapa innehållsvarianter för varumärke, vilket ger förbättrad marknadsföringsflexibilitet.
 

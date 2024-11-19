@@ -2,9 +2,9 @@
 title: Integrera fjärr-AEM Assets med AEM Sites
 description: Lär dig hur du konfigurerar och ansluter AEM webbplatser med Godkänd AEM Assets.
 exl-id: 382e6166-3ad9-4d8f-be5c-55a7694508fa
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1005'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,12 @@ ht-degree: 0%
 
 | [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
+
+>[!AVAILABILITY]
+>
+>Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Dynamic Media med OpenAPI-funktionshandboken PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
 Effektiv hantering av digitala resurser är avgörande för att ni ska kunna leverera engagerande och enhetliga varumärkesupplevelser på olika onlineplattformar. Dynamic Media med OpenAPI-funktioner förbättrar den digitala resurshanteringen genom smidig integrering mellan AEM Sites och AEM Assets as a Cloud Service. Med den här innovativa funktionen kan ni enkelt dela och hantera olika typer av godkända digitala resurser i flera AEM miljöer, vilket effektiviserar arbetsflödena för webbplatsförfattare och redaktörer.
 
@@ -121,7 +127,7 @@ Följ stegen nedan för att använda fjärrresurser i AEM innehållsfragment på
 
    >[!NOTE]
    >
-   >Om du inte har AEM Content Fragment-modell kan du behöva [skapa en](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html?lang=en).
+   Om du inte har AEM Content Fragment-modell kan du behöva [skapa en](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html?lang=en).
 
 1. Klicka på ikonen ![bock](/help/assets/assets/do-not-localize/checkmark-icon.svg) bredvid textkomponenten.
 1. Välj **[!UICONTROL Remote]** om du vill hämta resursen från fjärr-DAM. <br>

@@ -1,15 +1,21 @@
 ---
 title: Hantera licensierade Assets på Content Hub
 description: Lär dig hur du lägger till ett licensfält i metadataformuläret för mediefiler, använder metadataegenskapen Licens på objektmappar och godkänner mediefiler med licenser för användning.
-source-git-commit: 9324faf8c93620f5fccb1476eb124f5e640f193e
+exl-id: ac3aad9f-c7b3-47a7-9314-a2f8277f0d3e
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
-
 # Hantera licensierade Assets på Content Hub {#manage-licensed-assets-on-content-hub}
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Som administratör redigerar du metadataformuläret så att det innehåller resurslicensfältet så att det visas i Resursegenskaper i AEM redigeringsmiljö. Du kan sedan godkänna mediefilen och dess licens för att göra den licensierad och tillgänglig på Content Hub.
 
@@ -22,6 +28,3 @@ Utför följande steg:
 1. Markera resursen och klicka på **Detaljer** för att visa dess egenskaper. I licensfältet som läggs till i steg 1 definierar du den absoluta sökvägen för den tillgångslicens som har godkänts i steg 3 eller som redan har godkänts tidigare. Content Hub absoluta sökväg följer det här standardmönstret: `/content/dam/(The asset's folder hierarchy within the DAM repository)/(asset_name).(file_extension)`. Till exempel /content/dam/teamA/projects/documents/file1.pdf
    ![absolut sökväg](/help/assets/assets/absolute-path.png)
 1. Godkänn resursen så att den blir tillgänglig i Content Hub och klicka på **Spara**. Mer information om hur du godkänner en resurs finns i [Ange resursstatus](/help/assets/manage-organize-assets-view.md#set-asset-status).
-
-
-

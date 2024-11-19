@@ -3,9 +3,9 @@ title: Begränsa leverans av resurser med Dynamic Media med OpenAPI-funktioner
 description: Lär dig hur du begränsar materialdistributionen med OpenAPI-funktioner.
 role: User
 exl-id: 3fa0b75d-c8f5-4913-8be3-816b7fb73353
-source-git-commit: 03e13d29629c5e0305401179502cd1fc24f9ad75
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 
 | [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
+
+>[!AVAILABILITY]
+>
+>Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Dynamic Media med OpenAPI-funktionshandboken PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
 Med central resursstyrning i Experience Manager kan DAM-administratören eller varumärkeshanterarna hantera åtkomst till resurser som är tillgängliga via Dynamic Media med OpenAPI-funktioner. De kan begränsa leveransen av godkända resurser (ned till en enskild resurs) till utvalda [Adobe Identity Management System-användare (IMS) eller grupper](https://helpx.adobe.com/in/enterprise/using/users.html#user-mgt-strategy) genom att konfigurera vissa metadata för resurserna i AEM as a Cloud Service-författartjänsten.
 
@@ -34,7 +40,7 @@ Du kan begränsa leveransen av resurser inom [!DNL Experience Manager] baserat p
 
 >[!NOTE]
 >
-> Den här funktionen är för närvarande inte självbetjäning. Om du vill begränsa resursleveransen för IMS [Users](https://helpx.adobe.com/in/enterprise/using/manage-directory-users.html) och [Groups](https://helpx.adobe.com/in/enterprise/using/user-groups.html) kan du kontakta ditt Enterprise Support-team för att få hjälp med hur du hämtar den information som krävs för att begränsa åtkomst från [Adobe Admin Console](https://adminconsole.adobe.com/)-portalen och hur du konfigurerar åtkomst i AEM as a Cloud Service författartjänst.
+Den här funktionen är för närvarande inte självbetjäning. Om du vill begränsa resursleveransen för IMS [Users](https://helpx.adobe.com/in/enterprise/using/manage-directory-users.html) och [Groups](https://helpx.adobe.com/in/enterprise/using/user-groups.html) kan du kontakta ditt Enterprise Support-team för att få hjälp med hur du hämtar den information som krävs för att begränsa åtkomst från [Adobe Admin Console](https://adminconsole.adobe.com/)-portalen och hur du konfigurerar åtkomst i AEM as a Cloud Service författartjänst.
 
 ### Begränsa leverans av resurser med På- och Av-datum och tid {#restrict-delivery-assets-date-time}
 
@@ -82,7 +88,7 @@ På AEM Cloud Service författartjänster och resursväljare genereras och anvä
 
 >[!NOTE]
 >
->Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM resursväljarbaserade integreringar kontaktar du Enterprise Support
+Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM resursväljarbaserade integreringar kontaktar du Enterprise Support
 
 1. För upplevelser som inte baseras på tillgångsväljare har AEM as a Cloud Service och Dynamic Media med OpenAPI-funktioner stöd för API-integreringar på serversidan och kan generera IMS Bearer-tokens.
    * Följ anvisningarna [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#the-server-to-server-flow) för att utföra service-to-server-API-integreringar som kan hämta IMS Bearer-tokens via [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console)

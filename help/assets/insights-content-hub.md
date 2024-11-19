@@ -3,9 +3,9 @@ title: Visa resursinsikter i Content Hub
 description: Lär dig hur du visar resursinsikter i  [!DNL Content Hub]
 role: User
 exl-id: 29cbe017-856d-486b-acf3-aa47dbd90f3f
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,12 @@ ht-degree: 0%
 | ------------- | --------------------------- |---------|----|-----|
 
 ![Assets-insikter](assets/asset-insights-banner.jpg)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 [!DNL Content Hub] ger värdefulla insikter om resurser, och åtgärdar en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
 

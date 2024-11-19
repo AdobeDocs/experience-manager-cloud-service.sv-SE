@@ -2,9 +2,9 @@
 title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner resurser i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
 exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
-source-git-commit: 189fc257fed1115f66559d0f9063885ae527a0fa
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '727'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 0%
 | ------------- | --------------------------- |---------|----|-----|
 
 ![Godkänn resurser för Content Hub](assets/content-hub-approve-assets.png)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkestillgångarna. Det är bara en godkänd och den senaste versionen av mediefilen som kan användas i Content Hub, vilket ger ett enhetligt varumärke i alla kanaler och i alla tillämpningar.
 
@@ -34,7 +40,7 @@ Resurserna som markerats som `approved` i Assets as a Cloud Service är automati
 
 >[!NOTE]
 >
->Assets as a Cloud Service och Content Hub måste använda samma organisation för de mediefiler som ska visas i Content Hub.
+Assets as a Cloud Service och Content Hub måste använda samma organisation för de mediefiler som ska visas i Content Hub.
 
 Så här anger du resursstatus som `approved` med hjälp av Assets-vyn i AEM as a Cloud Service:
 
@@ -89,7 +95,7 @@ Följ de här stegen för att automatisera godkännande av nyimporterade resurse
 
 >[!NOTE]
 > 
->Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt.
+Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt.
 
 ## Hantera resurser som överförts med Content Hub {#manage-assets-uploaded-using-content-hub}
 

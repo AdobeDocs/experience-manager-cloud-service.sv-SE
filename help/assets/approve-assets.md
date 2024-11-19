@@ -3,9 +3,9 @@ title: Godkänn resurser i Experience Manager
 description: Lär dig godkänna resurser i  [!DNL Experience Manager].
 role: User
 exl-id: fe61a0f1-94d3-409a-acb9-195979668c25
-source-git-commit: d542df9ae943d03a56b5d85b1bd189f81c35fe28
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 
 | [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
+
+>[!AVAILABILITY]
+>
+>Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Dynamic Media med OpenAPI-funktionshandboken PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
 Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkestillgångarna. Det är bara en godkänd och den senaste versionen av resursen som är tillgänglig för användning, vilket garanterar ett enhetligt varumärke i alla kanaler och tillämpningar.
 
@@ -36,7 +42,7 @@ Om du behöver visa egenskapen som fältet **[!UICONTROL Review Status]** är ma
 
 >[!NOTE]
 >
->Om dina resurser eller mappar har ett annat standardschema måste du uppdatera i det aktuella schemat.
+Om dina resurser eller mappar har ett annat standardschema måste du uppdatera i det aktuella schemat.
 
 ## Godkänn resurser {#approve-assets}
 
@@ -78,7 +84,7 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
 
 >[!NOTE]
 > 
->Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt. <br> Du kan också använda alternativet **[!UICONTROL Reprocess]** för att tillämpa ändringarna från metadataprofilen på äldre resurser.
+Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt. <br> Du kan också använda alternativet **[!UICONTROL Reprocess]** för att tillämpa ändringarna från metadataprofilen på äldre resurser.
 
 På samma sätt kan du gruppgodkänna resurser i en mapp i Assets-vyn:
 
@@ -105,6 +111,6 @@ Så här kopierar du en leverans-URL för en godkänd resurs i databasen:
 
    >[!NOTE]
    >
-   >Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
+   Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
 
 Mer information om andra återgivningar som visas på panelen Dynamic Media finns i [Visa och hämta Dynamic Media-återgivningar](/help/assets/renditions.md#view-download-dm-renditions).

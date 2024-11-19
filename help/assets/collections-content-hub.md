@@ -3,9 +3,9 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,12 @@ ht-degree: 0%
 
 <!-- ![Manage collections](assets/manage-collections.jpg) -->
 ![Hantera samlingar](assets/manage-collection.png)
+
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 En samling refererar till en uppsättning resurser som kan delas mellan användare. En samling kan innehålla resurser från olika platser och samtidigt bevara sin referensintegritet.
 

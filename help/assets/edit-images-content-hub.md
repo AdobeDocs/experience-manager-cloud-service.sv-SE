@@ -2,9 +2,9 @@
 title: Redigera bilder i Content Hub med Adobe Express
 description: Redigera bilder i Content Hub med Adobe Express
 exl-id: c9777862-226c-4d39-87da-9c4a30437dc5
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,12 @@ ht-degree: 0%
 
 ![Redigera bilder i Content Hub med Adobe Express](assets/edit-images-content-hub.png)
 
+>[!AVAILABILITY]
+>
+>Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+>
+>[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
+
 Med Content Hub kan du skapa nytt innehåll med Adobe Express. Du kan redigera befintligt innehåll med lättanvända verktyg, producera varumärkesanpassade varianter med mallar och märkeselement och skapa nytt innehåll med de senaste GenAI-funktionerna från Adobe Firefly.
 
 ## Förutsättningar {#prereqs-edit-image-content-hub}
@@ -24,7 +30,7 @@ Tillstånd att få tillgång till Adobe Express och [Content Hub-användare med 
 
 >[!NOTE]
 >
->Du kan redigera bilder av filtyperna PNG och JPG/JPEG med [!DNL Adobe Express].
+Du kan redigera bilder av filtyperna PNG och JPG/JPEG med [!DNL Adobe Express].
 
 ## Redigera bilder med [!DNL Adobe Express] {#edit-images-using-content-hub}
 
