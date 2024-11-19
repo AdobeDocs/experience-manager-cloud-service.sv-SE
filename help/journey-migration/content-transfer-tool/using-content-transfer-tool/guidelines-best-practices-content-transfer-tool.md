@@ -4,9 +4,9 @@ description: Lär dig riktlinjerna och de bästa sätten att använda verktyget 
 exl-id: d1975c34-85d4-42e0-bb1a-968bdb3bf85d
 feature: Migration
 role: Admin
-source-git-commit: 208a4de5aab5326490908fade8f12f17b8f3c0d7
+source-git-commit: 943685ed9c33ba42c4dd1cb941b2eca1cce8bfe8
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1389'
 ht-degree: 11%
 
 ---
@@ -72,8 +72,6 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Om inställningen **Rensa befintligt innehåll i molninstansen innan** har aktiverats, tas hela den befintliga databasen bort och en ny databas skapas för att importera innehåll till. Det innebär att alla inställningar återställs, inklusive behörigheter för målinstansen av Cloud Servicen. Det gäller även för en administratörsanvändare som har lagts till i gruppen **administratörer**. Användaren måste läsas till gruppen **administratörer** för att hämta åtkomsttoken för verktyget Innehållsöverföring.
 
-* Det finns inga funktioner för att sammanfoga innehåll från flera källor till målkällinstansen om Cloud Servicen från de två källorna flyttas till samma sökvägar i målet. Om du vill flytta innehåll från flera källor till en enda instans av målsökvägar, ska du se till att det inte finns någon överlappning av innehållssökvägarna från Cloud Servicen.
-
 * Extraheringsnyckeln gäller i 14 dagar från den tidpunkt då den skapades eller förnyades. Den kan förnyas när som helst. Om extraheringsnyckeln har upphört att gälla kan du inte utföra en extrahering.
 
 * Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en Publish-miljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. En användare kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Adobe rekommenderar att CTT installeras på källförfattarinstansen när innehåll flyttas till en Production-instans för att flytta innehållet till målförfattarinstansen. Du kan även installera CTT på Publish-källinstansen för att flytta innehåll till Publish-målinstansen. Mer information finns i [Köra verktyget Innehållsöverföring på en Publish-instans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#running-tool).
@@ -91,6 +89,8 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 * Om du tänker göra toppuppsättningar får innehållsstrukturen i det befintliga innehållet inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av toppuppsättningar körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
 * Om du tänker ta med versioner som en del av en migreringsuppsättning och utför tilläggsprogram med `wipe=false`, måste du inaktivera versionsrensning på grund av en aktuell begränsning i verktyget Innehållsöverföring. Om du föredrar att behålla versionsrensning aktiverad och utför toppuppsättningar i en migreringsuppsättning, måste du utföra det som `wipe=true`.
+
+* Innehållsöverföringsverktyget (CTT) stöder inte sammanfogningsförslag. Om du vill konsolidera innehåll från flera system till en enda instans av Cloud Servicen kan endast versioner från ett källsystem migreras. Den här processen kräver att migreringar med parametern wipe=false används, vilket kan ge utökad inmatningstid på grund av åtgärdens inkrementella karaktär. Om det är möjligt bör du konsolidera innehåll i ett enda källsystem innan du påbörjar migreringen, så att du slipper lägga samman innehåll.
 
 * Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod, efter vilken dess data inte längre är tillgängliga. Granska [migreringsuppsättningen upphör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html#migration-set-expiry) om du vill ha mer information.
 
