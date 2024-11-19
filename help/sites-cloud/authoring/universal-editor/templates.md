@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: f0d60086-e92e-4492-ad50-bef84fed2a82
-source-git-commit: 33eb71b2828314ee2c75206ef7034313e2638360
+source-git-commit: 92da26452438f2b56cdec1aecc76587d4982f00e
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,6 @@ ht-degree: 0%
 # Mallar för att skapa sidor som är redigerbara med den universella redigeraren {#page-templates}
 
 Lär dig hur du skapar mallar som kan användas för att skapa sidor som kan redigeras i den universella redigeraren, vilket sparar tid och säkerställer enhetlig profilering.
-
->[!NOTE]
->
->Den här funktionen kommer att finnas i en kommande version av AEM as a Cloud Service.
 
 >[!NOTE]
 >
