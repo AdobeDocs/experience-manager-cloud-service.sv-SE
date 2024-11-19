@@ -4,7 +4,7 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 4fedb7a812b53fd9ebd9c82e86fa8f05394d464f
+source-git-commit: ccdb43c31e3ba1365a514bff696c9ec11dbbc21e
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%
@@ -154,7 +154,7 @@ När den är inställd ska du se alla anrop om innehållsuppdatering gå till `h
 
 Med den [universella redigeringstjänsten som körs lokalt](#running-ue) och [innehållssidan som är instrumenterad för att använda den lokala tjänsten](#using-loca-ue) kan du nu starta redigeraren.
 
-1. Öppna webbläsaren på `https://localhost:8000/corslib/LATEST`.
+1. Öppna webbläsaren på `https://localhost:8000/ping`.
 1. Be webbläsaren acceptera [ditt självsignerade certifikat.](#ue-https)
 1. När det självsignerade certifikatet är betrott kan du redigera sidan med din lokala Universal Editor-tjänst.
 
