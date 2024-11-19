@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 9a653fbe13b29fa60af7410fff178cbac6ca554d
+source-git-commit: f9f3d1fcb32445269e5ca4b9479b8e9075c73c10
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ Funktionsaktiveringen i 2024.11.0 kommer att innehålla alla funktioner som finn
 * SITES-24369: Content Fragments: Förbättringar av OpenAPI-dokumentation.
 * SITES-25478: Content Fragments: Add back-end support for external asset references.
 * SITES-26119: Content Fragments: Add support of external asset references in reference type.
+* SITES-24609: Content Fragments: Förbättra valideringen när du tar bort innehållsfragment.
 * SITES-21199: Edge Delivery med Universal Editor: Lägg till stöd för mallar som skapats från sidor.
 * SITES-20311: Edge Delivery med Universal Editor: Lägg till stöd för import av CSV-filer till kalkylblad.
 * SITES-24821: Edge Delivery med Universal Editor: Gör aem.page / aem.live till standard för integrering med Edge Delivery.
