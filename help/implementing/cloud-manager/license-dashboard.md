@@ -5,9 +5,9 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8f3ceb5ebf348b5f3f496b1db04d7dd7c9a0ac5c
+source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,9 @@ Cloud Manager License Dashboard ger enkel åtkomst till tillgängliga lösningsr
 
 Kontrollpanelen är uppdelad i tre avsnitt som visar dig:
 
-* **Lösningar** - I det här avsnittet sammanfattas vilka lösningar som du har licensierat, till exempel Sites eller Assets.
-* **Tillägg** - I det här avsnittet sammanfattas vilka tillägg till dina licensierade lösningar som du har tillgängliga.
-* **Andra berättiganden** - I det här avsnittet sammanfattas vilken sandlåda och vilken dev-miljö som används samt andra berättiganden som kan användas i din klientorganisation.
+* **Lösningar** - Vilka lösningar har du licensierat?
+* **Tillägg** - Vilka tillägg till dina licensierade lösningar som du har tillgängliga.
+* **Andra berättiganden** - Vilken sandlåda, vilken dev-miljö och andra berättiganden som kan användas i din klientorganisation.
 
 I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om något alls. För närvarande visas bara Sites- och Assets-lösningar även om det finns andra lösningar i klienten.
 

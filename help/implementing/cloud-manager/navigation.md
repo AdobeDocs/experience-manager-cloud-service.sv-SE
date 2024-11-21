@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 767f6609b3f585630d45aee0d61483dbe66f66cf
+source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -249,7 +249,7 @@ Se även [Hantera miljöer](/help/implementing/cloud-manager/manage-environments
 
 ### Förloppskort {#pipelines}
 
-Kortet **Pipelines** ger dig en översikt över dina pipelines samt länkar för snabbåtgärder.
+Kortet **Pipelines** ger dig en översikt över dina pipelines och länkar för snabba åtgärder.
 
 Kortet **Pipelines** innehåller endast tre pipelines. Klicka på **Visa alla** om du vill visa alla rörledningar för programmet.
 

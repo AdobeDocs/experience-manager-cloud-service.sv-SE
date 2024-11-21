@@ -6,9 +6,9 @@ exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f7a8e823f058115f11241f0864517432a7dea5ab
+source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1162'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Du kan också klicka på ![Ellips - Mer ikon](https://spectrum.adobe.com/static/
 
 ## Aktivitetssida {#activity}
 
-På sidan **Aktivitet** visas en fullständig lista över alla pipelines-körningar för det valda programmet samt andra viktiga programhändelser.
+På sidan **Aktivitet** visas en fullständig lista över alla pipelines-körningar för det valda programmet och andra viktiga programhändelser.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
