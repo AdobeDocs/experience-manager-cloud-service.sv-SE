@@ -4,9 +4,9 @@ description: Läs mer om UI Extensibility-funktionen i AEM Assets View. Med anv�
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: e47a8fc65e58ae2ffff805966d7dae8c6edc7aac
+source-git-commit: af7e6ab40212dfa3d91cda80a76b1b6b01dd65a3
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,13 @@ ht-degree: 0%
 | ------------- | --------------------------- |---------|----|-----|
 
 AEM Assets View har UI Extensibility-funktioner. Med den här funktionen kan användare lägga till anpassade gränssnittskomponenter i användargränssnittet i Assets View för att uppfylla specifika affärsbehov som inte uppfylls av AEM Assets View-vyns färdiga funktioner. Den här utökningsfunktionen förbättrar flexibiliteten i AEM Assets View, som gör det möjligt att anpassa gränssnittet efter specifika arbetsflöden och krav.
-Du kan lägga till dina tillägg på resursnivå, mapp- och samlingsnivå. Det tillagda tillägget visas i en dedikerad panel på sidan Detaljer för resurs, samling eller mapp.
+Du kan lägga till dina tillägg på resursnivå, mapp- och samlingsnivå. Det tillagda tillägget visas i en dedikerad panel på sidan Resurs, Samling eller Mappinformation.
 
 >[!IMPORTANT]
-> AEM Assets View UI Extensibility är tillgängligt med [Assets Ultimate](/help/assets/assets-ultimate-overview.md).
+>
+> * AEM Assets View UI Extensibility är tillgängligt med [Assets Ultimate](/help/assets/assets-ultimate-overview.md).
+> * Assets View UI Extensibility är tillgängligt som en Beta-release. [Skapa och skicka ett kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tidig åtkomst till Assets-vyns UI-utökningsmöjligheter.
+> * Du kan ge feedback genom att utöka alternativen för Detaljerad feedback och klicka på Rapportera ett problem.
 
 ## <a id="1"></a> Så här kommer du åt Assets View
 
@@ -32,9 +35,6 @@ Du kan lägga till dina tillägg på resursnivå, mapp- och samlingsnivå. Det t
 I Assets View (Visa) går du till sidan Details (Detaljer) för en resurs, mapp eller samling. Den här informationssidan har en dedikerad panel som visar det tillagda gränssnittstillägget.
 ![min arbetsyta](/help/assets/assets/my-workspace-assets-view3.png)
 
->[!NOTE]
->
-> AEM Assets View UI Extensibility är tillgängligt som en Beta-release. Du kan ge feedback genom att utöka alternativen för Detaljerad feedback och klicka på Rapportera ett problem.
 
 ## Krav för att lägga till utökningskomponenten
 
