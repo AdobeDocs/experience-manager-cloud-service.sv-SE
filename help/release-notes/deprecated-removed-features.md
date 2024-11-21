@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: de73e38580895e3d8fe2029b59907d4c722556db
+source-git-commit: 644228b1bdae20c1ed6ca1de71b4c60d75f2cc4a
 workflow-type: tm+mt
-source-wordcount: '2576'
+source-wordcount: '2603'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,11 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | [!DNL Assets] | Överför resurser direkt till [!DNL Experience Manager]. Se [inaktuella API:er för överföring av resurser](/help/assets/developer-reference-material-apis.md#deprecated-asset-upload-api). | Använd [direkt binär överföring](/help/assets/add-assets.md). Mer teknisk information finns i [API:er för direktöverföring](/help/assets/developer-reference-material-apis.md#upload-binary). |
 | [!DNL Assets] | [Vissa arbetsflödessteg](/help/assets/developer-reference-material-apis.md#post-processing-workflows-steps) i `DAM Asset Update`-arbetsflödet stöds inte, inklusive anrop av kommandoradsverktyg som [!DNL ImageMagick]. | [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) ersätter många arbetsflöden. Använd [efterbearbetningsarbetsflöden](/help/assets/asset-microservices-configure-and-use.md#post-processing-workflows) för anpassad bearbetning. |
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att skapa miniatyrbilder för MPEG. Använd [Dynamic Media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
-| [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera publicering](/help/operations/replication.md#manage-publication) eller [arbetsflöden för publiceringsinnehåll](/help/operations/replication.md#publish-content-tree-workflow) |
-| [!DNL Foundation] | Varken fliken Distribuera på administrationsskärmen för replikeringsagenten eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB. Använd i stället [Hantera publikation](/help/operations/replication.md#manage-publication) eller [publicera innehållsträdet](/help/operations/replication.md#publish-content-tree-workflow) |
+| [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera i replikeringsagenten (borttagning efter 30 september 2021) | [Hantera arbetsflödesmetoderna för publikation](/help/operations/replication.md#manage-publication) eller [Trädaktivering](/help/operations/replication.md#tree-activation). |
+| [!DNL Foundation] | Varken fliken Distribuera på administrationsskärmen för replikeringsagenten eller replikerings-API:t kan användas för att replikera innehållspaket över 10 MB. | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflöde för trädaktivering](/help/operations/replication.md#tree-activation) |
 | [!DNL Foundation] | Integreringar som använder inloggningsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Det går inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console den 1 maj 2024 eller senare, även om befintliga JWT-autentiseringsuppgifter fortfarande kan användas för redan konfigurerade integreringar fram till 1 januari 2025, då befintliga JWT-autentiseringsuppgifter inte längre fungerar och kunderna måste migrera till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
+| [!DNL Foundation] | Publish Content Tree Workflow and the related Publish Content Tree Workflow Step, som användes för att replikera hierarkier med innehåll. | Använd [Arbetsflödessteget för trädaktivering](/help/operations/replication.md#tree-activation), vilket är mer prestandaförbättrat. |
+
 
 ## Borttagna funktioner {#removed-features}
 
