@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 083e334c2ac248e15168ae3ec4c8daf2b2888ee5
+source-git-commit: 5d2c09a3e1c67e6c2435d84112546107d284259f
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1778'
 ht-degree: 0%
 
 ---
@@ -51,6 +51,10 @@ Gör snabbt om en Edge Delivery-sida till en sidmall. På så sätt kan du start
 **[!DNL Edge Delivery Services]CSV-importerare för publicering via en AEM**
 
 Hantera dina Edge Delivery-kalkylbladsdata (t.ex. omdirigeringar) effektivt i ditt kalkylbladsverktyg och ladda upp dem till AEM via den nya CSV-importeraren. [Läs mer](/help/edge/wysiwyg-authoring/tabular-data.md#importing).
+
+### Förhandsversionsfunktioner i AEM Sites
+
+Förbättrad Content Fragment-referens med unika ID-baserade referenser, vilket säkerställer stabila länkar som förblir giltiga även när resurser eller fragment flyttas, vilket eliminerar behovet av uppdateringar eller ompublicering. Aktuell begränsning: Sidreferenser stöds ännu inte med unika ID:n. Om det finns referenser till sidor i innehållsfragment bör den här funktionen inte användas.
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
