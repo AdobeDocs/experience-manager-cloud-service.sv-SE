@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: 13e5d573d7522d9772f5a4080c2b2f0b460b5513
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1343'
 ht-degree: 1%
 
 ---
@@ -139,7 +139,7 @@ En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att
 
 #### AEM {#aem-content}
 
-En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att ange innehållsreferenser. Den erbjuder en extra valideringstyp.
+En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att välja valfri AEM. Till skillnad från referenskomponenten [,](#reference) som bara kan markera resurser, kan komponenten AEM referera till valfritt AEM. Den erbjuder en extra valideringstyp.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -636,6 +636,8 @@ En alternativgruppskomponenttyp tillåter en ömsesidigt uteslutande markering a
 >[!ENDTABS]
 
 #### Referens {#reference}
+
+En referenskomponenttyp aktiverar en AEM tillgångsväljare, som kan användas för att välja en AEM resurs att referera till. Till skillnad från innehållskomponenten [AEM,](#aem-content), som kan välja en AEM resurs, kan referenskomponenten bara referera till resurser. Den erbjuder en extra valideringstyp.
 
 En referenskomponenttyp tillåter en referens till ett annat dataobjekt från det aktuella objektet.
 
