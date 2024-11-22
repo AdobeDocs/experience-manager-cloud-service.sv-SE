@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 644228b1bdae20c1ed6ca1de71b4c60d75f2cc4a
+source-git-commit: 0ab75d1e49e06152cf3f4e8effe7d6d918b262c8
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2709'
 ht-degree: 0%
 
 ---
@@ -505,12 +505,67 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
 
 AEM as a Cloud Service kommer att gå över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att göra följande justeringar:
 
-### Minimiversion av org.objectweb.asm {#org.objectweb.asm}
+### Krav för byggtid:
+
+#### Minimiversion av org.objectweb.asm {#org.objectweb.asm}
 
 Uppdatera användningen av org.objectweb.asm till version 9.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
 
-### Minimiversion av org.apache.groovy {#org.apache.groovy}
+#### Minimiversion av org.apache.groovy {#org.apache.groovy}
 
 Uppdatera användningen av org.apache.groovy till version 4.0.22 eller senare för att säkerställa stöd för nyare JVM-miljöer.
 
 Det här paketet kan inkluderas indirekt genom att tredjepartsberoenden läggs till, som AEM Groovy Console.
+
+#### Lägsta version av bnd-maven-plugin {#bnd-maven-plugin}
+
+Uppdatera användningen av bnd-maven-plugin till version 6.4.0 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+
+#### Lägsta version av aemanalysator-maven-plugin {#aemanalyser-maven-plugin}
+
+Uppdatera användningen av aemanalysator-maven-plugin till version 1.6.6 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+
+#### Lägsta version av maven-bundle-plugin  {#maven-bundle-plugin}
+
+Uppdatera användningen av maven-bundle-plugin till version 5.1.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+
+#### Uppdatera beroenden i maven-scr-plugin  {#maven-scr-plugin}
+
+`maven-scr-plugin` är inte direkt kompatibel med Java 17 och 21. Det går dock att generera beskrivningsfilerna genom att uppdatera ASM-beroendeversionen i plugin-konfigurationen, som i fragmentet nedan:
+
+```
+[source,xml]
+ <project>
+   ...
+   <build>
+     ...
+     <plugins>
+       ...
+       <plugin>
+         <groupId>org.apache.felix</groupId>
+         <artifactId>maven-scr-plugin</artifactId>
+         <version>1.26.4</version>
+         <executions>
+           <execution>
+             <id>generate-scr-scrdescriptor</id>
+             <goals>
+               <goal>scr</goal>
+             </goals>
+           </execution>
+         </executions>
+         <dependencies>
+           <dependency>
+             <groupId>org.ow2.asm</groupId>
+             <artifactId>asm-analysis</artifactId>
+             <version>9.7.1</version>
+             <scope>compile</scope>
+           </dependency>
+         </dependencies>
+       </plugin>
+       ...
+     </plugins>
+     ...
+   </build>
+   ...
+ </project>
+```
