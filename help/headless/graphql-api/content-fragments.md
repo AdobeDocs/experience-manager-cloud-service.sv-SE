@@ -4,15 +4,21 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: 575b626447f6b88c1be601fbbd4de7eeb0264019
+source-git-commit: 83bc4e09cc7b6c420eee64091fab773ee1dcbd85
 workflow-type: tm+mt
-source-wordcount: '5582'
+source-wordcount: '5814'
 ht-degree: 0%
 
 ---
 
 
 # AEM GraphQL API för användning med innehållsfragment {#graphql-api-for-use-with-content-fragments}
+
+>[!IMPORTANT]
+>
+>Olika funktioner i GraphQL API för användning med innehållsfragment är tillgängliga via Tidiga Adobe-program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 
@@ -262,7 +268,9 @@ GraphQL för AEM har stöd för en lista med typer. Alla Content Fragment Model-
 | Uppräkning | `String` | Används för att visa ett alternativ från en lista med alternativ som definieras när modellen skapas |
 | Taggar | `[String]` | Används för att visa en lista över strängar som representerar taggar som används i AEM |
 | Innehållsreferens | `String`, `[String]` | Används för att visa sökvägen till en annan resurs i AEM |
+| Innehållsreferens (UUID) | `String`, `[String]` | Används för att visa sökvägen, som representeras av ett UUID mot en annan resurs i AEM |
 | Fragmentreferens |  *En modelltyp* <br><br>Ett fält: `Model` - Modelltyp, refererad direkt <br><br>Multifält, med en refererad typ: `[Model]` - Array av typen `Model`, refererad direkt från matris <br><br>Multifält, med flera refererade typer: `[AllFragmentModels]` - Array med alla modelltyper, refererad från matris med unionstyp |  Används för att referera till en eller flera innehållsfragment av vissa modelltyper, som definieras när modellen skapades |
+| Fragmentreferens (UUID) |  *En modelltyp* <br><br>Ett fält: `Model` - Modelltyp, refererad direkt <br><br>Multifält, med en refererad typ: `[Model]` - Array av typen `Model`, refererad direkt från matris <br><br>Multifält, med flera refererade typer: `[AllFragmentModels]` - Array med alla modelltyper, refererad från matris med unionstyp |  Används för att referera till en eller flera innehållsfragment av vissa modelltyper, som definieras när modellen skapades |
 
 {style="table-layout:auto"}
 
@@ -306,6 +314,27 @@ Om du vill hämta ett enstaka innehållsfragment av en viss typ måste du också
 ```
 
 Se [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/headless/graphql-api/sample-queries.md#sample-single-specific-city-fragment).
+
+#### ID (UUID) {#id-uuid}
+
+ID-fältet används också som identifierare i AEM GraphQL. Den representerar sökvägen till Content Fragment-resursen i AEM, men i stället för att innehålla den faktiska sökvägen innehåller den ett UUID som representerar resursen. Vi har valt detta som identifierare för ett innehållsfragment eftersom det:
+
+* är unikt inom AEM,
+* kan enkelt hämtas,
+* ändras inte när resursen flyttas.
+
+UUID för ett innehållsfragment och för ett refererat innehållsfragment, eller resurs, kan returneras via JSON-egenskapen `_id`.
+
+```graphql
+{
+  articleList {
+    items {
+        _id
+        _path
+    }
+  }
+}
+```
 
 #### Metadata {#metadata}
 
@@ -1112,6 +1141,11 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
       * `_path` : sökvägen till ditt innehållsfragment i databasen
          * Se [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/headless/graphql-api/sample-queries.md#sample-single-specific-city-fragment)
+
+      * `_id_` : UUID för ditt innehållsfragment i databasen
+
+         * Se [Exempelfråga för ett innehållsfragment av en specifik modell med UUID-referenser](/help/headless/graphql-api/sample-queries.md#sample-wknd-fragment-specific-model-uuid-references)
+         * [Se Exempelfråga för innehållsfragment efter UUID-referens](/help/headless/graphql-api/sample-queries.md#sample-wknd-fragment-specific-model-uuid-reference)
 
       * `_reference` : om du vill visa referenser, inklusive textbundna referenser i RTF-redigeraren
          * Se [Exempelfråga för flera innehållsfragment med förhämtade referenser](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragments-prefetched-references)

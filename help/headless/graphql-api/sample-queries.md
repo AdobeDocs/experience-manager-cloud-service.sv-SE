@@ -4,9 +4,9 @@ description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll
 feature: Headless, Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 83bc4e09cc7b6c420eee64091fab773ee1dcbd85
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1940'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,12 @@ ht-degree: 0%
 # Lära sig använda GraphQL med AEM - exempelinnehåll och frågor {#learn-graphql-with-aem-sample-content-queries}
 
 Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem genom att utforska exempelinnehåll och frågor.
+
+>[!IMPORTANT]
+>
+>Olika funktioner i GraphQL API för användning med innehållsfragment är tillgängliga via Tidiga Adobe-program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 >[!NOTE]
 >
@@ -1479,6 +1485,77 @@ Följande fråga returnerar alla `attachments` - ett specifikt fält (undergrupp
         ... on ArchiveRef {
           _path
           format
+        }
+      }
+    }
+  }
+}
+```
+
+### Exempelfrågor för ett innehållsfragment för en viss modell med hjälp av UUID-referenser {#sample-wknd-fragment-specific-model-uuid-references}
+
+De här frågorna förhör:
+
+* UUID för ett innehållsfragment och för refererade innehållsfragment eller resurser
+* resultatet returneras via JSON-egenskapen `_id`
+
+#### Exempelfråga för ett innehållsfragment för en viss modell med hjälp av en UUID-referens {#sample-wknd-fragment-specific-model-using-a-uuid-reference}
+
+Följande fråga returnerar alla innehållsreferenser med hjälp av `_id` och `_path`:
+
+```graphql
+{
+  articleList {
+    items {
+        _id
+        _path
+        title
+        featuredImage {
+          ... on ImageRef {
+            _id
+            _path           
+          }
+        }
+        authorFragment {
+          firstName
+          lastName
+          profilePicture {
+            ... on ImageRef {
+              _id
+              _path
+            }
+          }
+        }
+      }
+  }
+}
+```
+
+#### Exempelfråga för innehållsfragment efter UUID-referens {#sample-wknd-fragment-specific-model-by-uuid-reference}
+
+Följande fråga returnerar alla innehållsreferenser som är relaterade till en specifik `_id`:
+
+```graphql
+{
+  articleById(_id: "3ce2bf53-7436-4d3e-b19a-2793bc2ca63e") {
+    item {
+      _id
+      _path
+      title
+      featuredImage {
+        ... on ImageRef {
+          _id
+          _path
+        }
+      }
+      authorFragment {
+        firstName
+        lastName
+        profilePicture {
+          ... on ImageRef {
+            _id
+            _path
+          }
         }
       }
     }
