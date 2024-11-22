@@ -1195,6 +1195,7 @@ ht-degree: 2%
       + [Konfigurationer och Configuration Browser](/help/implementing/developing/introduction/configurations.md)
       + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
       + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
+      + [OpenAPI-Based APIs](/help/implementing/developing/open-api-based-apis.md)
       + [Genererar åtkomsttoken för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
       + [Genererar åtkomsttoken för API:er på serversidan (äldre)](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis-legacy.md)
       + [Skapa snabbt webbplatser och anpassa gränssnittet](/help/implementing/developing/introduction/quick-site-creation.md)
