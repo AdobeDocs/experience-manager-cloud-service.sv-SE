@@ -32,6 +32,7 @@ ht-degree: 2%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
+         + [Release Notes for 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
          + [Versionsinformation för 2024.7.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-7-0.md)
@@ -719,6 +720,11 @@ ht-degree: 2%
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
          + [Utforma XML-schema för ett adaptivt formulär](/help/forms/adaptive-form-xml-schema-form-model.md)
+         + Integrate Adaptive Forms with Adobe Marketo Engage{#integrate-adaptive-form-with-market-engage} 
+            +  [Integrate Adobe Marketo Engage with AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
+            + [Configure new form to integrate with Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md) 
+            + [Configure Adobe Marketo Engage data source for existing Adaptive Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
+            + [Configure the submit action to Marketo Engage for existing forms](/help/forms/submit-adaptive-form-to-marketo-engage.md)
    + Adaptiv Forms {#adaptive-forms-authoring}
       + [Skapa ett adaptivt formulär](/help/forms/create-an-adaptive-form.md)
       + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments.md)
@@ -730,6 +736,7 @@ ht-degree: 2%
             + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments-core-components.md)
             + [Skapa teman för ett adaptivt formulär - kärnkomponenter](/help/forms/using-themes-in-core-components.md)
             + [Skapa en adaptiv formulärmall baserad på kärnkomponenter](/help/forms/template-editor-core-components.md)
+            + [Create an Adaptive Form (Core Components) based on XFA Form templates](/help/forms/create-adaptive-form-using-xfa-templates.md)
             + [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-core-components.md)
             + [Använd maskinöversättning eller mänsklig översättning för att översätta ett adaptivt formulär](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
             + [Konfigurera omdirigeringssida eller tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)
@@ -758,6 +765,7 @@ ht-degree: 2%
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
                + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
+               + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
             + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
@@ -1043,6 +1051,7 @@ ht-degree: 2%
       + [Beständiga GraphQL-frågor](/help/headless/graphql-api/persisted-queries.md)
       + [Optimera GraphQL-frågor](/help/headless/graphql-api/graphql-optimization.md)
       + [Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md)
+      + [Upgrading your Content Fragments for UUID References](/help/headless/graphql-api/uuid-reference-upgrade.md)
       + [Exempel på GraphQL-frågor](/help/headless/graphql-api/sample-queries.md)
       + [Felsöka GraphQL-frågor](/help/headless/graphql-api/persisted-queries-troubleshoot.md)
    + [AEM REST OpenAPI for Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md)
