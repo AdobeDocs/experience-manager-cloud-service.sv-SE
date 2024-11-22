@@ -5,9 +5,9 @@ keywords: hur man väljer en inskickningsåtgärd för ett tilläggsformulär, k
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 6266da34305bc5d8b2bbb0d336028f4fede6c165
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,8 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
-| AEM as a Cloud Service | Den här artikeln |
+| AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
+| AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 
 Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på knappen **[!UICONTROL Submit]** i ett anpassat formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en rad fördefinierade Skicka-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
 
@@ -68,11 +69,13 @@ Mer information om följande Skicka-åtgärder finns i:
 * [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
 * [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
 * [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
+* [Skicka till Marketo](/help/forms/submit-adaptive-form-to-marketo-engage.md)
 
 Du kan även skicka ett adaptivt formulär till andra lagringskonfigurationer:
 
-* [Ansluta anpassat formulär till Salesforce-program](/help/forms/aem-forms-salesforce-integration.md)
+* [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)
+* [Ansluta ett adaptivt formulär till Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 
 Du kan [anpassa standardåtgärderna för att skicka ](custom-submit-action-form.md). Dessutom kan du anpassa Skicka-åtgärder så att de passar specifika organisatoriska krav.
 

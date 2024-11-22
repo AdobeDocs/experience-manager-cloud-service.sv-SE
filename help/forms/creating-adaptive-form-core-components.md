@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: 1e812d93-4ba5-4589-b59b-2f564d754b0f
-source-git-commit: 619cf91e3d1cc5504d8de0e70eb88e9ae7285af9
+source-git-commit: 66fd6f506aa8dddc2a948b3c7a07134b9ae3df54
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2296'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan
 
 Du behöver följande för att skapa ett adaptivt formulär:
 
-* **Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Om du har en Forms as a Cloud Service-miljö baserad på Arketyp 39 eller tidigare [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md). När du aktiverar kärnkomponenterna för din miljö läggs mallen och arbetsytetemat **Adaptive Forms (Core Component)** till i din miljö. Om din AEM SDK-version är äldre än 2023.02.0 bör du [kontrollera att du har `prerelease` -flaggan aktiverad i miljön](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features) eftersom adaptiva Forms Core-komponenter ingick i förversionen före version 2023.02.0.
+* **Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Om du har en Forms as a Cloud Service-miljö baserad på Arketyp 39 eller tidigare [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md). När du aktiverar kärnkomponenterna för din miljö läggs mallarna och temana för **Adaptive Forms (Core Component)** till i din miljö. Om din AEM SDK-version är äldre än 2023.02.0 bör du [kontrollera att du har `prerelease` -flaggan aktiverad i miljön](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=en#new-features) eftersom adaptiva Forms Core-komponenter ingick i förversionen före version 2023.02.0.
 
 * **En mall för adaptiva formulär**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in. Du kan till exempel skicka insamlade data till en datakälla. Molntjänsten tillhandahåller en OOTB-mall med namnet blank:
 
@@ -106,6 +106,10 @@ Du behöver följande för att skapa ett adaptivt formulär:
 1. Välj **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av anpassat formulär visas formulärelementen i det associerade <!--XFA form template, XML schema or --> JSON-schemat eller formulärdatamodellen (FDM) på fliken **[!UICONTROL Data Model Objects]** i **[!UICONTROL Content Browser]** i sidlisten. Du kan också dra och släppa dessa element för att skapa ett anpassat formulär.
 
 Nu kan du dra och släppa [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) till en adaptiv Forms-behållare för att utforma och skapa formuläret. Du kan även besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
+
+>[!NOTE]
+>
+> Du kan också [skapa adaptiv Forms med XFA-formulärmallar (*.XDP-filer)](/help/forms/create-adaptive-form-using-xfa-templates.md). Du sparar tid genom att återanvända fält från XDP-filer direkt i Adaptive Forms.
 
 ## Konfigurera åtgärden Skicka för ett anpassat formulär {#configure-submit-action-for-form}
 
@@ -216,6 +220,6 @@ Så här byter du namn på ett anpassat formulär:
 ## Se även {#see-also}
 
 {{see-also}}
-* [Lägga till dynamiskt beteende i formulär med regelredigeraren](rule-editor.md)
+* [Lägga till dynamiskt beteende i formulär med regelredigeraren](/help/forms/rule-editor-core-components.md)
 * [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
 

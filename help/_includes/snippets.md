@@ -1,7 +1,7 @@
 ---
-source-git-commit: f3502de1aebd44a056e1263b059e1588243f5845
+source-git-commit: 60cf4c34f3b4d7c7a757f2274f1a02de8ae51e11
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1323'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 0%
 * [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
+* [Ansluta ett adaptivt formulär till Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 * [Skapa anpassad skickaåtgärd](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
 
 ## Se även {#see-more-forms-eds}
@@ -131,6 +132,8 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Regelredigerarens användargränssnitt för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md)
 * [Olika användningsområden för regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
 * [Skillnader i olika utgåvor av regelredigeraren](/help/forms/rule-editor-core-components-difference-tables.md)
+* [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
+* [Anropa tjänstförbättringar i Visual Rule Editor för formulär som baseras på kärnkomponenter](/help/forms/invoke-service-enhancements-rule-editor.md)
 * [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
 * [Skapa en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
 * [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md)
@@ -144,6 +147,12 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 * [Spara formulären som utkast](/help/forms/save-core-component-based-form-as-draft.md)
 * [Lägga till formulärlänkar på en webbplatssida](/help/forms/add-form-link-to-aem-sites-page.md)
 
+## Marketo Engage{#marketo-engage-see-also}
+
+* [Integrera Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
+* [Konfigurera ett nytt formulär som ska integreras med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
+* [Konfigurera Marketo Engage-datakälla för befintlig adaptiv Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
+* [Konfigurera skicka-åtgärden till Marketo Engage för befintliga formulär](/help/forms/submit-adaptive-form-to-marketo-engage.md)
 
 ## Cloud Manager IP Tillåtelselista och rörledningar för frontendjur {#allowlist-frontend-pipeline}
 

@@ -4,9 +4,9 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 feature: Adaptive Forms, Foundation Components
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: db0487ab11f48690cb36b410b895324e0d4cf684
 workflow-type: tm+mt
-source-wordcount: '3710'
+source-wordcount: '3725'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
-| AEM as a Cloud Service | Den här artikeln |
+| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
+| AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 
 **Gäller för**: ✔️ adaptiva formulärets Foundation-komponenter. ❌ [Kärnkomponenter för adaptiv form](/help/forms/configure-submit-actions-core-components.md). Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](create-or-add-an-adaptive-form-to-aem-sites-page.md) eller för att [skapa fristående adaptiv Forms](creating-adaptive-form-core-components.md).
 
@@ -31,6 +32,7 @@ En Skicka-åtgärd utlöses när en användare klickar på knappen **[!UICONTROL
 * [Skicka till Azure Blob Storage](#azure-blob-storage)
 * [Skicka till Power Automate](#microsoft-power-automate)
 * [Skicka till Workfront Fusion](#workfront-fusion)
+* [Skicka till Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 
 Du kan också [utöka standardåtgärden för att skicka ](custom-submit-action-form.md) och skapa en egen åtgärd för att skicka.
 

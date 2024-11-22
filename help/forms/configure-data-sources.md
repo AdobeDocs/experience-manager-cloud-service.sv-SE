@@ -5,7 +5,7 @@ feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
+source-git-commit: 6266da34305bc5d8b2bbb0d336028f4fede6c165
 workflow-type: tm+mt
 source-wordcount: '1958'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Med dataintegrering i [!DNL Experience Manager Forms] kan du konfigurera och ans
 * SOAP webbtjänster
 * OData-tjänster (version 4.0)
 * Microsoft® Dynamics
-* SalesForce
+* Salesforce
 * Microsoft® Azure Blob Storage
 
 Dataintegrering har stöd för autentiseringstyperna OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering och API-nyckelautentisering som är körklara och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP- och OData-tjänster har konfigurerats i [!DNL Experience Manager] as a Cloud Service konfigureras JDBC för relationsdatabaser och koppling för användarprofilen [!DNL Experience Manager] i webbkonsolen [!DNL Experience Manager].
@@ -329,7 +329,6 @@ When you enable mutual authentication for form data model (FDM), both the data s
 ## Nästa steg {#next-steps}
 
 Du har konfigurerat datakällorna. Därefter kan du skapa en formulärdatamodell (FDM) eller, om du redan har skapat en formulärdatamodell (FDM) utan en datakälla, associera den med de datakällor du konfigurerade. Mer information finns i [Skapa formulärdatamodell](create-form-data-models.md).
-
 
 <!--
 

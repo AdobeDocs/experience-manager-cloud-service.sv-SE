@@ -5,9 +5,9 @@ Keywords: How to generate document?, Generate PDF document, Manipulation PDF doc
 feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: dcf7bde3bc73b70002f87f14d905cd294280ff94
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2365'
 ht-degree: 1%
 
 ---
@@ -194,7 +194,7 @@ PDF documents contain metadata, which is information about the document (as dist
 
 ### Konvertera till och validera dokument som följer PDF/A
 
-API:er för dokumentkonvertering för kommunikation hjälper till att konvertera ett PDF-dokument till PDF/A. Du kan använda API:erna för att konvertera ett PDF-dokument till ett dokument som överensstämmer med PDF/A och även för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll.
+API:er för dokumentkonvertering för kommunikation hjälper till att konvertera ett PDF-dokument till PDF/A. Du kan använda API:erna för att konvertera ett PDF-dokument till ett dokument som överensstämmer med PDF/A och även för att avgöra om ett PDF-dokument är PDF/A-kompatibelt. PDF/A är ett arkiveringsformat som är avsett för långtidsarkivering av dokumentets innehåll. Teckensnitten bäddas in i dokumentet och filen är okomprimerad. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Ett PDF/A-dokument innehåller inte heller ljud- och videoinnehåll. De kompatibilitetsstandarder för PDF/A som stöds är PDF/A-1a, 1b, 2a, 2b, 3a och 3b.
 
 ### Konvertera PDF till XDP {#convert-pdf-to-xdp}
 
@@ -202,7 +202,7 @@ API:er för dokumentkonvertering för kommunikation hjälper till att konvertera
 
 Konverterar ett PDF-dokument till en XDP-fil. För att ett PDF-dokument ska kunna konverteras till en XDP-fil måste PDF-dokumentet innehålla en XFA-ström i ordlistan.
 
-## Dokumentsäkerhet {#doc-assurance}
+## Document Assurance {#doc-assurance}
 
 Tjänsten DocAssurance innehåller API:erna för signatur och kryptering:
 
@@ -214,6 +214,24 @@ Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen f�
 * Lägg till ett osynligt signaturfält i ett PDF-dokument.
 * Signera det angivna signaturfältet i ett PDF-dokument.
 * Certifiera ett PDF-dokument
+* Ta bort signaturen från det angivna signaturfältet i ett PDF-dokument
+* Ta bort det angivna signaturfältet från ett PDF-dokument
+
+<span class="preview"> Ta bort signaturen från det angivna signaturfältet och ta bort det angivna signaturfältet från ett PDF-dokument som är tillgängligt under det tidiga adopterprogrammet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+
+
+<!--
+
+### Remove Signature APIs
+
+The Remove Signature API helps to remove an existing digital signatures from a PDF document. This API is useful when you need to update or revise a signed document and reapply signatures. It maintains document integrity while effectively clearing signatures from specific pages or the entire file. Use cases include re-signing documents with updated data or clearing previous approvals for revised versions.
+
+
+### Remove Signature Field APIs
+
+The Remove Signature Field API is tailored for removing signature fields from a PDF document. This is ideal when you need to delete empty or unused signature fields to streamline document presentation. It enables users to eliminate signature fields without impacting other form fields or the document structure, making it easier to create cleaner, final versions of a document that no longer require signatures.
+
+-->
 
 ### Krypterings-API:er
 

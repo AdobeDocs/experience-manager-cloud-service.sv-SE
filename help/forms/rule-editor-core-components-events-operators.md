@@ -5,20 +5,20 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: ac85ff04-25dc-4566-a986-90ae374bf383
-source-git-commit: f6e1de0c2cc2c056b3bfcea6ce5d7aaed041f6f8
+source-git-commit: 7acbf2099a2b47b5f42885e8f9a9e1727a8112b5
 workflow-type: tm+mt
-source-wordcount: '2031'
+source-wordcount: '2073'
 ht-degree: 0%
 
 ---
 
 # Operatortyper och händelser i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter
 
-I AEM Forms as a Cloud innehåller regelredigeraren olika operatortyper och händelser som gör att du enkelt kan definiera och köra komplexa villkor och åtgärder.
+I AEM Forms som moln innehåller regelredigeraren olika typer av operatorer och händelser som gör att du enkelt kan definiera och utföra komplexa villkor och åtgärder.
 
-De operatortyper som är tillgängliga i regelredigeraren för ett adaptivt formulär ger ett robust ramverk för att skapa exakta villkor. De låter dig manipulera data, utföra beräkningar och kombinera flera villkor på ett logiskt och sammanhängande sätt. Oavsett om du jämför värden, utför aritmetiska operationer eller manipulerar strängar ser dessa operatorer till att dina regler är både flexibla och kraftfulla.
+Operatortyperna som är tillgängliga i regelredigeraren för ett adaptivt formulär ger ett robust ramverk för att skapa exakta villkor. De gör det möjligt för er att hantera data, utföra beräkningar och kombinera olika villkor på ett logiskt och sammanhängande sätt. Oavsett om du jämför värden, utför aritmetiska operationer eller manipulerar strängar ser de här operatorerna till att reglerna är både flexibla och kraftfulla.
 
-Händelser i regelredigeraren fungerar som utlösare som aktiverar dina regler. De definierar de specifika åtgärder som inträffar när vissa villkor är uppfyllda. Genom att utnyttja olika typer av händelser kan du automatisera svar på en mängd olika scenarier, till exempel användarinteraktioner, schemalagda tider, dataändringar och systemtillstånd. Med möjlighet att ange dessa utlösare kan du skapa dynamiska och responsiva regler som uppfyller dina specifika krav.
+Händelser i regelredigeraren fungerar som utlösare som aktiverar reglerna. De definierar de specifika åtgärder som inträffar när vissa villkor uppfylls. Genom att utnyttja olika typer av händelser kan du automatisera svar på en mängd olika scenarier, till exempel användarinteraktioner, schemalagda tider, dataändringar och systemtillstånd. Med möjlighet att ange dessa utlösare kan du skapa dynamiska och responsiva regler som uppfyller dina specifika krav.
 
 Genom att förstå och använda tillgängliga operatortyper och händelser kan du utnyttja regelredigerarens fulla potential, som gör att du kan skapa effektiva regler som uppfyller dina unika behov och förbättra den övergripande systemfunktionaliteten.
 
@@ -36,7 +36,7 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 * **är inte tom**
 * **Har markerat:** Returnerar true när användaren väljer ett visst alternativ för en kryssruta, nedrullningsbar alternativknapp.
 * **Är initierad (händelse):** Returnerar true när ett formulärobjekt återges i webbläsaren.
-* **Har ändrats (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
+* **Is Changed (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
 
 <!--
 * **Navigation(event):** Returns true when the user clicks a navigation object. Navigation objects are used to move between panels. 
@@ -46,7 +46,7 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 
 ### Tillgängliga regeltyper i regelredigeraren {#available-rule-types-in-rule-editor}
 
-Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler. Vi tittar närmare på varje regeltyp. Mer information om hur du skriver regler i regelredigeraren finns i [Skriv regler](/help/forms/rule-editor-core-components-user-interface.md#write-rules).
+Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler. Nu ska vi titta närmare på varje regeltyp. Mer information om hur du skriver regler i regelredigeraren finns i [Skriv regler](/help/forms/rule-editor-core-components-user-interface.md#write-rules).
 
 #### [!UICONTROL When] {#whenruletype}
 
@@ -73,11 +73,11 @@ _
 
 När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
-En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När du skapar regeln hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen enligt följande:
+En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
-![Visningsalternativ för flera värden](assets/multivaluefcdisplaysoptions.png)
+![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-satsen för att lägga till ytterligare villkor
+När du skriver en When-regel kan du utlösa åtgärden Rensa värde för. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Om du har Clear Value of som ett alternativ i -instruktionen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-satsen för att lägga till ytterligare villkor
 
 ![Rensa värdet för ](assets/clearvalueof.png)
 
@@ -109,8 +109,8 @@ _
 
 **Att tänka på när du använder tillåtna flera fält i villkorsfunktionen**
 
-* Kontrollera att kärnkomponenten [är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
-* Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
+* Se till att kärnkomponenten är inställd på [version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
+* Om regler tillämpas på olika fält i When-villkoret utlöses regeln även om bara ett av dessa fält ändras.
 
 
 <!--
@@ -130,7 +130,7 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
    * value: deps
 1. Click **[!UICONTROL Done]**. -->
 
-Om det uppstår problem i de tillåtna fälten i villkorsfunktionen följer du felsökningsstegen enligt följande:
+Om de tillåtna flera fälten i funktionen När-villkor stöter på problem följer du felsökningsstegen som:
 
 1. Öppna formuläret i redigeringsläge.
 1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
@@ -145,9 +145,15 @@ Om det uppstår problem i de tillåtna fälten i villkorsfunktionen följer du f
 
 **[!UICONTROL Disable]** Inaktiverar det angivna objektet.
 
-**[!UICONTROL Invoke service]** Anropar en tjänst som konfigurerats i en formulärdatamodell (FDM). När du väljer åtgärden Anropa tjänst visas ett fält. När du trycker på fältet visas alla tjänster som är konfigurerade i alla FDM (Form Data Model) på din [!DNL Experience Manager] instans. När du väljer en formulärdatamodelltjänst visas fler fält där du kan mappa formulärobjekt med indata- och utdataparametrar för den angivna tjänsten. Se exempelregeln för att anropa FDM-tjänster (Form Data Model).
+**[!UICONTROL Invoke service]** Anropar en tjänst som konfigurerats i en formulärdatamodell (FDM). När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller (FDM) på [!DNL Experience Manager]-instansen. När du väljer en tjänst för formulärdatamodell visas fler fält där du kan mappa formulärobjekt med indataparametrar för den angivna tjänsten. Du kan mappa utdataparametrarna via händelsens nyttolastalternativ för den angivna tjänsten. Du kan också skapa regler för hantering av lyckade och misslyckade svar för Invoke-tjänståtgärden med regelredigeraren.
 
-Förutom tjänsten Form Data Model kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En formulärdatamodelltjänst har dock många fördelar och den rekommenderade metoden för att anropa en tjänst.
+>[!NOTE]
+>
+> [Klicka här](/help/forms/invoke-service-enhancements-rule-editor.md) om du vill veta mer om Invoke-tjänsten.
+
+Se exempelregeln för anrop av FDM-tjänster (Form Data Model).
+
+Utöver tjänsten Form Data Model kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En Form Data Model-tjänst har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen (FDM) finns i [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md).
 
@@ -161,10 +167,10 @@ Regeltypen **[!UICONTROL Set Property]** gör att du kan ange värdet för en eg
 * label.visible (Boolean)
 * description (String)
 * enabled (Boolean)
-* readOnly (Boolean)
-* required (Boolean)
-* screenReaderText (String)
-* valid (Boolean)
+* readOnly (boolesk)
+* obligatoriskt (booleskt)
+* screenReaderText (sträng)
+* giltig (boolesk)
 * errorMessage (String)
 * default (Number, String, Date)
 * enumNames (String[])
@@ -182,13 +188,13 @@ Med en regel för att ange egenskap som baseras på en objektegenskap kan du gö
 
 I bilden nedan visas ett exempel på hur kryssrutan kan aktiveras dynamiskt baserat på att en textruta döljs eller visas i ett adaptivt formulär:
 
-![Objekt, egenskap](assets/object_property_set_property_new.png)
+![Objektegenskap](assets/object_property_set_property_new.png)
 
 **[!UICONTROL Clear Value Of]** Rensar värdet för det angivna objektet.
 
-**[!UICONTROL Set Focus]** anger fokus på det angivna objektet.
+**[!UICONTROL Set Focus]** Ställer in fokus på det angivna objektet.
 
-**[!UICONTROL Submit Form]** skickar formuläret.
+**[!UICONTROL Submit Form]** Skickar formuläret.
 
 **[!UICONTROL Reset]** Återställer formuläret eller det angivna objektet.
 
@@ -212,11 +218,11 @@ Regeltypen **Ange värdet för** är inte tillgänglig för alla formulärobjekt
 
 Ange värdet för objekt A till:
 
-(String ABC) ELLER
-(objektegenskap X för objekt C) OR
-(värde från en funktion) OR
-(värde från ett matematiskt uttryck) OR
-(datavärde för en datamodelltjänst),
+(sträng ABC) ELLER
+(objektegenskap X för objekt C) ELLER
+(värde från en funktion) ELLER
+(värde från ett matematiskt uttryck) ELLER
+(utdatavärde för en datamodelltjänst);
 
 När (valfritt):
 
@@ -278,9 +284,9 @@ En vanlig Aktivera-regel är strukturerad på följande sätt:
 
 #### [!UICONTROL Disable] {#disable}
 
-På samma sätt som regeltypen Aktivera kan du med regeltypen **[!UICONTROL Disable]** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser även åtgärden Aktivera om villkoret inte uppfylls eller returnerar `False`.
+På liknande sätt som för typen Aktivera regel kan du med regeltypen **[!UICONTROL Disable]** aktivera eller inaktivera ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Inaktivera utlöser också åtgärden Aktivera om villkoret inte uppfylls eller returnerar `False`.
 
-En typisk inaktiveringsregel är strukturerad på följande sätt:
+En vanlig inaktiveringsregel är strukturerad på följande sätt:
 
 `Disable Object A;`
 
@@ -294,7 +300,7 @@ En typisk inaktiveringsregel är strukturerad på följande sätt:
 
 #### [!UICONTROL Validate] {#validate}
 
-Regeltypen **[!UICONTROL Validate]** validerar värdet i ett fält med hjälp av ett uttryck. Du kan till exempel skriva ett uttryck för att kontrollera att textrutan för att ange ett namn inte innehåller specialtecken eller siffror.
+Regeltypen **[!UICONTROL Validate]** validerar värdet i ett fält med hjälp av ett uttryck. Du kan till exempel skriva ett uttryck för att kontrollera att textrutan som anger ett namn inte innehåller specialtecken eller siffror.
 
 En vanlig valideringsregel är strukturerad enligt följande:
 
@@ -376,7 +382,7 @@ To define a rule based on a form data model:
 
 ## Nästa steg
 
-Låt oss nu förstå olika [exempel för en regelredigerare för ett anpassat formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md).
+Låt oss nu förstå olika [exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md).
 
 ## Se även
 

@@ -4,9 +4,9 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer
-source-git-commit: 2933b3be569724800a77b4ea93e91441046746f6
+source-git-commit: 2e4c9a7d30b954045082baf242737ac2f7426c70
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spara formulär som utkast och lista dem på sidan Webbplatser
 
-<span class="preview"> Den här artikeln innehåller innehåll om funktionen **Spara automatiskt** , en förhandsversion. Förhandsversionen är bara tillgänglig via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).</span>
+<span class="preview"> Den här artikeln innehåller innehåll om funktionen **Utkast** , en förhandsversionsfunktion. Förhandsversionen är bara tillgänglig via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).</span>
 
 Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM komponenten **Utkast och inskickat material** från portalen, som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
 
@@ -137,7 +137,7 @@ Om du vill spara ett formulär som ett utkast skapar du en **Spara formulär**-r
 
 När du förhandsgranskar ett adaptivt formulär, fyller i det och klickar på knappen **Spara formulär** sparas formuläret som ett utkast.
 
-### Spara automatiskt
+### Utkast
 
 >[!NOTE]
 >
@@ -147,13 +147,13 @@ Du kan också konfigurera ett adaptivt formulär så att det sparas automatiskt 
 
 1. Öppna ett adaptivt formulär i redigeringsläge i författarinstansen.
 1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
-1. Klicka på ikonen ![Egenskaper för stödlinjebehållare](/help/forms/assets/configure-icon.svg) och öppna fliken **[!UICONTROL Auto-Save]**.
+1. Klicka på ikonen ![Egenskaper för stödlinjebehållare](/help/forms/assets/configure-icon.svg) och öppna fliken **[!UICONTROL Drafts]**.
 
    ![Spara automatiskt](/help/forms/assets/auto-save.png)
 
-1. Markera kryssrutan **[!UICONTROL Enable]** om du vill att formuläret ska sparas automatiskt.
-1. Konfigurera **[!UICONTROL Trigger]** som **tidsbaserad** om du vill spara formuläret <!--based on the occurrence of an event or--> automatiskt efter ett visst tidsintervall.
-1. Ange tidsintervallet i **[!UICONTROL Auto save on this interval (In seconds)]** för att ange den varaktighet som utlöser det automatiska sparandet av formuläret vid det definierade intervallet.
+1. Markera kryssrutan **[!UICONTROL Automatically Save Drafts]** om du vill aktivera autosparande av formuläret som utkast.
+1. Konfigurera **[!UICONTROL Save Preference]** som **Spara utkast med regelbundna intervall** om du vill spara formuläret <!--based on the occurrence of an event or--> automatiskt efter ett visst tidsintervall.
+1. Ange tidsintervallet i **[!UICONTROL Save interval frequency (Seconds)]** för att ange den varaktighet som utlöser det automatiska sparandet av formuläret vid det definierade intervallet.
 1. Klicka på **[!UICONTROL Done]**.
 
 ## Visa utkast/skickade formulär på webbplatssidan med komponenten Utkast och inskickningar
