@@ -1100,6 +1100,7 @@ ht-degree: 2%
          + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
 + Generativ AI {#generative-ai}
    + [Generera variationer](/help/generative-ai/generate-variations.md)
+   + [Assistant (Limited Beta)](/help/implementing/cloud-manager/aem-ai-assistant.md)
 + Implementera {#implementing}
    + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
    + Använd Cloud Manager {#using-cloud-manager}
