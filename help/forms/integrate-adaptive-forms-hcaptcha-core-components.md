@@ -4,13 +4,11 @@ description: Förbättra formulärsäkerheten med Captcha&reg; service utan prob
 topic-tags: Adaptive Forms, author
 keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot Prevention, Core Components, formuläröverföringssäkerhet, förhindrande av skräppost
 feature: Adaptive Forms, Core Components
-hide: true
-hidefromtoc: true
 exl-id: 6c559df2-7b6a-42fe-b44c-29a782570a0c
 role: User, Developer
-source-git-commit: bba5e5d283da616baa57b788181af73d59d86ee3
+source-git-commit: 553f456f0eab43cee11fb9e66ce9e1dbacdc2b5c
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -22,7 +20,7 @@ ht-degree: 0%
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
 AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
-
+* [hCaptcha](#integrate-aem-forms-environment-with-hcaptcha-captcha)
 * [Google reCAPTCHA](/help/forms/captcha-adaptive-forms-core-components.md)
 * [hCaptcha](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
 

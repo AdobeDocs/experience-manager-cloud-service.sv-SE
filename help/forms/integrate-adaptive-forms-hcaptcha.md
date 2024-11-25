@@ -4,13 +4,11 @@ description: Förbättra formulärsäkerheten med Captcha&reg; service utan prob
 topic-tags: Adaptive Forms, author
 keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot prevent, Form submit security, Form spam prevent
 feature: Adaptive Forms, Foundation Components
-hide: true
-hidefromtoc: true
-exl-id: dc7ca723-1008-472a-b6eb-8e9ed6332a16
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+exl-id: dc7ca723-1008-472a-b6eb-8e9ed6332a16
+source-git-commit: 36832b02ac12c1ade70fb81b2cb2c267b5eebdfe
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '932'
 ht-degree: 0%
 
 ---
@@ -31,7 +29,7 @@ AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 
 Med tjänsten Captcha® kan du skydda dina formulär från stötar, skräppost och automatiskt missbruk. Det utgör en utmaning för kryssrutewidgeten och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med formuläret. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga aktiviteter publiceras.
 
-AEM Forms as a Cloud Service stöder hCaptcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
+AEM Forms as a Cloud Service stöder Captcha® i Adaptive Forms. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
 
 <!-- ![hCaptcha&reg;](assets/hCaptcha&reg;-challenge.png)-->
 

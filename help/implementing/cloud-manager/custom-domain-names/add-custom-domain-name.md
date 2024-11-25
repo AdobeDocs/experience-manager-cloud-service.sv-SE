@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d2fb23918b04f63aab3ae859485be673034e7aec
+source-git-commit: 9d169ad7a2982ee44d9b47a418d50b2806942ce2
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,11 @@ Stegen för de metoder som beskrivs i det här dokumentet baseras på Fast. Om d
 1. I dialogrutan **Lägg till domän** anger du det anpassade domännamnet som du använder i fältet **Domännamn**.
 Ta inte med `http://`, `https://` eller blanksteg när du anger domännamnet.
 
+   >[!NOTE]
+   >
+   >Om du behöver både `www`- och `non-www`-versioner av en domän måste du lägga till dem separat. Till exempel `example.com` och `www.example.com`.
+   <!-- Marius Petria on SLACK tmp-skyline-cdn-certificates - Actually  my opinion is that this option should be explicit in UI (that was present in the initial mocks of the design but for some reason it was dropped). I think when adding a domain there should be a check mark to also add www.domain. When adding example.com Customer should be prompted with the following options: Do you also want to add www.example.com and have a redirect example.com -> www.example.com?Do you also want to add www.example.com and have a redirect www.example.com -> example.com? -->
+
 1. Klicka på **Skapa**.
 
 1. I dialogrutan **Verifiera domän**, i **Vilken certifikattyp tänker du använda med den här domänen?**-listrutan och välj något av följande alternativ:
@@ -70,7 +75,7 @@ Ta inte med `http://`, `https://` eller blanksteg när du anger domännamnet.
 
    >[!NOTE]
    >
-   >Om du använder ditt eget kundhanterade (OV/EV eller DV) SSL-certifikat och tänker använda en kundhanterad CDN ***provider***, kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
+   >Om du använder ditt eget kundhanterade (OV/EV eller DV) SSL-certifikat och tänker använda en kundhanterad CDN ***provider***, kan du hoppa över att lägga till ett SSL-certifikat. Gå i stället direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när du är klar.
 
 
 ### Certifikatsteg som hanteras av Adobe {#adobe-managed-cert-steps}

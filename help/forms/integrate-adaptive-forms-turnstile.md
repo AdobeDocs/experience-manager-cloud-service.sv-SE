@@ -3,17 +3,14 @@ title: Hur man använder Turnstile i en AEM adaptiv form?
 description: Förbättra säkerheten i blanketterna med problemfri hantering. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
 feature: Adaptive Forms, Foundation Components
-hide: true
-hidefromtoc: true
-exl-id: 644c351b-a167-4d18-8b99-b7cae6be48d5
 role: User, Developer
-source-git-commit: d69d64a02c62b9a796188107cfe1ab7543b5a2be
+exl-id: 644c351b-a167-4d18-8b99-b7cae6be48d5
+source-git-commit: 36832b02ac12c1ade70fb81b2cb2c267b5eebdfe
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
-
 
 # Integrera Turnstile CAPTCHA med Adaptive Forms
 
@@ -29,13 +26,13 @@ AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 
 ## Integrera AEM Forms med Turnstile Captcha
 
-Cloudflare&#39;s Turnstile Captcha är en säkerhetsåtgärd som syftar till att skydda formulär och webbplatser från automatiserade robotar, skadliga attacker, spam och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret. AEM Forms as a Cloud Service stöder Turnstile Captcha i adaptiva Forms Core-komponenter.
+Cloudflare&#39;s Turnstile Captcha är en säkerhetsåtgärd som syftar till att skydda formulär och webbplatser från automatiserade robotar, skadliga attacker, spam och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret. AEM Forms as a Cloud Service stöder Turnstile Captcha i Adaptive Forms.
 
 <!-- ![Turnstile](assets/Turnstile-challenge.png)-->
 
 ### Förutsättningar för att integrera AEM Forms-miljön med Turnstile Captcha {#prerequisite}
 
-Om du vill konfigurera Turnstile för AEM Forms Core Components måste du hämta [Turnstile sitekey och hemlig nyckel](https://developers.cloudflare.com/turnstile/get-started/) från Turnstile-webbplatsen.
+Om du vill konfigurera Turnstile för AEM Forms måste du hämta [Turnstile sitekey och hemlig nyckel](https://developers.cloudflare.com/turnstile/get-started/) från Turnstile-webbplatsen.
 
 ### Steg för att konfigurera Turnstile för AEM Forms{#steps-to-configure-turnstile}
 
