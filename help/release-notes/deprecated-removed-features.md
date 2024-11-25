@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 0ab75d1e49e06152cf3f4e8effe7d6d918b262c8
+source-git-commit: 1ff3a9a0ff6b408794956323f12194f136d6b2ad
 workflow-type: tm+mt
-source-wordcount: '2709'
+source-wordcount: '2800'
 ht-degree: 0%
 
 ---
@@ -505,7 +505,9 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
 
 AEM as a Cloud Service kommer att gå över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att göra följande justeringar:
 
-### Krav för byggtid:
+### Körningskrav
+
+Dessa justeringar krävs för att säkerställa kompatibilitet med Java 21-miljön. Biblioteken kan uppdateras när som helst eftersom de är kompatibla med äldre versioner av Java.
 
 #### Minimiversion av org.objectweb.asm {#org.objectweb.asm}
 
@@ -517,9 +519,13 @@ Uppdatera användningen av org.apache.groovy till version 4.0.22 eller senare f�
 
 Det här paketet kan inkluderas indirekt genom att tredjepartsberoenden läggs till, som AEM Groovy Console.
 
+### Krav vid byggtid
+
+Dessa justeringar krävs för att projektet ska kunna byggas med nyare versioner av Java, men de krävs inte för körningskompatibilitet. Plugin-programmen för Maven kan uppdateras när som helst eftersom de är kompatibla med äldre versioner av Java.
+
 #### Lägsta version av bnd-maven-plugin {#bnd-maven-plugin}
 
-Uppdatera användningen av bnd-maven-plugin till version 6.4.0 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+Uppdatera användningen av bnd-maven-plugin till version 6.4.0 för att säkerställa stöd för nyare JVM-miljöer. Versioner 7 eller senare är inte kompatibla med Java 11 eller tidigare, så en uppgradering till den versionen rekommenderas inte för närvarande.
 
 #### Lägsta version av aemanalysator-maven-plugin {#aemanalyser-maven-plugin}
 
