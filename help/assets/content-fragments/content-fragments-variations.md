@@ -5,7 +5,7 @@ exl-id: af05aae6-d535-4007-ba81-7f41213ff152
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
+source-git-commit: abc114373f5db501bb8709fd2d4c33aebc1c5ec9
 workflow-type: tm+mt
 source-wordcount: '2504'
 ht-degree: 4%
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
 
-[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment i as a Cloud Service för Adobe Experience Manager (AEM). Detta beror på att du kan skapa och redigera kopior av **mallinnehållet** för användning i vissa kanaler och scenarier. Detta gör i synnerhet innehållsleverans utan motstycke ännu flexiblare.
+[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service. Detta beror på att du kan skapa och redigera kopior av **mallinnehållet** för användning i vissa kanaler och scenarier. Detta gör i synnerhet innehållsleverans utan motstycke ännu flexiblare.
 
 >[!NOTE]
 >
