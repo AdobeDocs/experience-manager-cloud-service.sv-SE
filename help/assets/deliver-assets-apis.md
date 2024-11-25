@@ -3,9 +3,9 @@ title: Leverans-API:er
 description: Lär dig hur du använder leverans-API:erna.
 role: User
 exl-id: 806ca38f-2323-4335-bfd8-a6c79f6f15fb
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: 7727aa87693cc96e3497dcda71190866b198975d
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '619'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,11 @@ I följande tabell visas hur de olika tillgängliga leverans-API:erna används:
 | [Resursmetadata](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetMetadata) | Returnerar egenskaperna som är kopplade till en resurs, till exempel titel, beskrivning, CreateDate, ModifyDate och så vidare. |
 | [Spelarbehållare för videoresursen](https://adobe-aem-assets-delivery.redoc.ly/#operation/videoPlayerDelivery) | Returnerar videoresursens spelarbehållare. Du kan bädda in spelaren i i ett iframe HTML-element och spela upp videon. |
 | [Uppspelningsmanifest i det valda utdataformatet](https://adobe-aem-assets-delivery.redoc.ly/#operation/videoManifestDelivery) | Returnerar uppspelningsmanifestfilen för den angivna videoresursen i det valda utdataformatet. Du måste skapa en anpassad spelare som kan hantera adaptiv strömning via HLS- eller DASH-protokoll för att kunna hämta uppspelningsmanifestfilen och spela upp videon. |
+
+
+>[!NOTE]
+>
+[Bildförinställningar, smart bildbehandling och ytterligare bildmodifierare](https://adobe-aem-assets-delivery-advancemodifiers.redoc.ly/) är tillgängliga som en begränsad tillgänglighetsfunktion. [Skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för att få åtkomst.
 
 ## Slutpunkter för leverans-API:er {#delivery-apis-endpoint}
 
