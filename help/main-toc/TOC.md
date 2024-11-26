@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 2652582ce2a740c958c10bea42c7674513706735
+source-git-commit: e454581a2e6f2b8184a54d6550daec60e58bbc6c
 workflow-type: tm+mt
-source-wordcount: '5799'
+source-wordcount: '5886'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
-         + [Release Notes for 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
+         + [Versionsinformation för 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
          + [Versionsinformation för 2024.7.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-7-0.md)
@@ -217,7 +217,7 @@ ht-degree: 2%
    + [Vad är Nytt?](/help/release-notes/what-is-new.md)
    + [Betydande förändringar i AEM Cloud Service](/help/release-notes/aem-cloud-changes.md)
    + [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md)
-   + [Förhandsversion - kanal](/help/release-notes/prerelease.md)
+   + [Prerelease Channel](/help/release-notes/prerelease.md)
 + Dokumentskydd {#security}
    + [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md)
    + [Konfigurera avancerat nätverk för AEM as a Cloud Service](/help/security/configuring-advanced-networking.md)
@@ -640,10 +640,10 @@ ht-degree: 2%
       + [Dela resurser](/help/assets/share-links-for-assets-view.md)
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
-      + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
+      + [Manage reports](/help/assets/manage-reports-assets-view.md)
+      + [Manage tags](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
       + [Utbyggbarhet för användargränssnittet i AEM Assets View](/help/assets/aem-assets-view-ui-extensibility.md)
    + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
@@ -720,11 +720,11 @@ ht-degree: 2%
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
          + [Utforma XML-schema för ett adaptivt formulär](/help/forms/adaptive-form-xml-schema-form-model.md)
-         + Integrate Adaptive Forms with Adobe Marketo Engage{#integrate-adaptive-form-with-market-engage} 
-            +  [Integrate Adobe Marketo Engage with AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
-            + [Configure new form to integrate with Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md) 
-            + [Configure Adobe Marketo Engage data source for existing Adaptive Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
-            + [Configure the submit action to Marketo Engage for existing forms](/help/forms/submit-adaptive-form-to-marketo-engage.md)
+         + Integrera adaptiv Forms med Adobe Marketo Engage{#integrate-adaptive-form-with-market-engage}
+            + [Integrera Adobe Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
+            + [Konfigurera ett nytt formulär som ska integreras med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
+            + [Konfigurera Adobe Marketo Engage-datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
+            + [Konfigurera skicka-åtgärden till Marketo Engage för befintliga formulär](/help/forms/submit-adaptive-form-to-marketo-engage.md)
    + Adaptiv Forms {#adaptive-forms-authoring}
       + [Skapa ett adaptivt formulär](/help/forms/create-an-adaptive-form.md)
       + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments.md)
@@ -736,7 +736,7 @@ ht-degree: 2%
             + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments-core-components.md)
             + [Skapa teman för ett adaptivt formulär - kärnkomponenter](/help/forms/using-themes-in-core-components.md)
             + [Skapa en adaptiv formulärmall baserad på kärnkomponenter](/help/forms/template-editor-core-components.md)
-            + [Create an Adaptive Form (Core Components) based on XFA Form templates](/help/forms/create-adaptive-form-using-xfa-templates.md)
+            + [Skapa ett adaptivt formulär (kärnkomponenter) baserat på XFA-formulärmallar](/help/forms/create-adaptive-form-using-xfa-templates.md)
             + [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-core-components.md)
             + [Använd maskinöversättning eller mänsklig översättning för att översätta ett adaptivt formulär](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
             + [Konfigurera omdirigeringssida eller tackmeddelande](/help/forms/configure-redirect-page-or-thank-you-message.md)
@@ -750,7 +750,7 @@ ht-degree: 2%
             + [Konfigurera Skicka till REST-slutpunktsåtgärd för adaptiv Forms](/help/forms/configure-submit-action-restpoint.md)
             + [Konfigurera åtgärden Skicka e-post för ett anpassat formulär](/help/forms/configure-submit-action-send-email.md)
             + [Använd Google reCAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
-            + [Använd hCAPTCHA i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
+            + [Använd hCAPTCHA i en adaptiv Form Core-komponent](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
             + [Lägga till en anpassad felhanterare i ett adaptivt formulär](/help/forms/add-custom-error-handler-adaptive-forms-core-components.md)
             + [Lägg till en språkinställning för adaptiv Forms baserat på kärnkomponenter](/help/forms/supporting-new-language-localization-core-components.md)
             + [Utforma JSON-schema för en adaptiv form (kärnkomponenter)](/help/forms/adaptive-form-core-components-json-schema-form-model.md)
@@ -764,17 +764,17 @@ ht-degree: 2%
                + [Skillnad mellan redigerare för grundregel och redigerare för grundkomponentregel](/help/forms/rule-editor-core-components-difference-tables.md)
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
-               + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
+               + [Using asynchronous functions in an Adaptive Form](/help/forms/using-async-funct-in-rule-editor.md)
                + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
-            + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
+            + {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
                + [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md)
                + [Exempel på anpassade funktioner för ett adaptivt formulär baserade på kärnkomponenter](/help/forms/custom-function-core-components-use-cases.md)
             + Introduktion till Forms Portal och dess komponenter{#introduction-to-forms-portal}
                + [Introduktion till komponenten Forms Portal](/help/forms/configure-forms-portal.md)
-               + [List forms on the Sites page using the Search &amp; Lister component](/help/forms/list-forms-on-sites-page.md)
-               + [Save and list forms as drafts on Sites page using the Drafts &amp; Submissions component](/help/forms/save-core-component-based-form-as-draft.md)
+               + [Visa formulär på webbplatssidan med komponenten Sök och lista](/help/forms/list-forms-on-sites-page.md)
+               + [Spara och lista formulär som utkast på webbplatssidan med komponenten Utkast och inskickningar](/help/forms/save-core-component-based-form-as-draft.md)
                + [Lägga till formulärlänkar på webbplatssidan med hjälp av komponenten Länk](/help/forms/add-form-link-to-aem-sites-page.md)
       + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till adaptiv Forms {#afcs}
@@ -797,7 +797,7 @@ ht-degree: 2%
          + Lägg till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
             + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
             + [Använd Captcha i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha.md)
-            + [Använd Turnstile i anpassad form](/help/forms/integrate-adaptive-forms-turnstile.md)
+            + [Använd Turnstile CAPTCHA i adaptiv form](/help/forms/integrate-adaptive-forms-turnstile.md)
             + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
             + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)
@@ -1051,7 +1051,7 @@ ht-degree: 2%
       + [Beständiga GraphQL-frågor](/help/headless/graphql-api/persisted-queries.md)
       + [Optimera GraphQL-frågor](/help/headless/graphql-api/graphql-optimization.md)
       + [Uppdatera dina innehållsfragment för optimerad GraphQL-filtrering](/help/headless/graphql-api/graphql-optimized-filtering-content-update.md)
-      + [Upgrading your Content Fragments for UUID References](/help/headless/graphql-api/uuid-reference-upgrade.md)
+      + [Uppgradera dina innehållsfragment för UUID-referenser](/help/headless/graphql-api/uuid-reference-upgrade.md)
       + [Exempel på GraphQL-frågor](/help/headless/graphql-api/sample-queries.md)
       + [Felsöka GraphQL-frågor](/help/headless/graphql-api/persisted-queries-troubleshoot.md)
    + [AEM REST OpenAPI for Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md)
@@ -1100,7 +1100,7 @@ ht-degree: 2%
          + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
 + Generativ AI {#generative-ai}
    + [Generera variationer](/help/generative-ai/generate-variations.md)
-   + [Assistant (Limited Beta)](/help/implementing/cloud-manager/aem-ai-assistant.md)
+   + [Assistent (begränsad Beta)](/help/implementing/cloud-manager/aem-ai-assistant.md)
 + Implementera {#implementing}
    + [Implementera program för AEM as a Cloud Service](/help/implementing/home.md)
    + Använd Cloud Manager {#using-cloud-manager}
@@ -1124,7 +1124,7 @@ ht-degree: 2%
          + [Hantera databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/managing-repositories.md)
          + [Lägg till en Adobe-databas](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
          + [Lägg till en privat databas](/help/implementing/cloud-manager/managing-code/private-repositories.md)
-         + [Lägg till en extern databas (tidig Adobe)](/help/implementing/cloud-manager/managing-code/external-repositories.md)
+         + [Lägg till en extern databas (begränsad Beta)](/help/implementing/cloud-manager/managing-code/external-repositories.md)
          + [Åtkomstdatabaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
          + [Stöd för Git-undermodul](/help/implementing/cloud-manager/managing-code/git-submodules.md)
          + [Använd Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
@@ -1189,14 +1189,14 @@ ht-degree: 2%
       + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
       + [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
       + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
-      + [AEM as a Cloud Service riktlinjer för utveckling](/help/implementing/developing/introduction/development-guidelines.md)
+      + [AEM as a Cloud Service Development Guidelines](/help/implementing/developing/introduction/development-guidelines.md)
       + [AEM as a Cloud Service Developer Console (Beta)](/help/implementing/developing/introduction/aem-developer-console.md)
       + [Loggning](/help/implementing/developing/introduction/logging.md)
       + [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md)
       + [Konfigurationer och Configuration Browser](/help/implementing/developing/introduction/configurations.md)
       + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
       + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
-      + [OpenAPI-Based APIs](/help/implementing/developing/open-api-based-apis.md)
+      + [OpenAPI-baserade API:er](/help/implementing/developing/open-api-based-apis.md)
       + [Genererar åtkomsttoken för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
       + [Genererar åtkomsttoken för API:er på serversidan (äldre)](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis-legacy.md)
       + [Skapa snabbt webbplatser och anpassa gränssnittet](/help/implementing/developing/introduction/quick-site-creation.md)
@@ -1308,9 +1308,9 @@ ht-degree: 2%
       + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
       + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
       + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
-      + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
+      + [Customizing the Content Fragment Console and Editor](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
       + Hantera sökning i Forms {#manage-search-forms}
-         + [Konfigurera Sök i Forms](/help/implementing/developing/extending/search-forms.md)
+         + [Configuring Search Forms](/help/implementing/developing/extending/search-forms.md)
          + [Konfigurera sökfilter för Inkorgen](/help/implementing/developing/extending/configure-inbox-search-rail.md)
       + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
       + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
@@ -1321,7 +1321,7 @@ ht-degree: 2%
       + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
       + [Utöka MSM](/help/implementing/developing/extending/msm.md)
       + Internationalisering{#internationalization}
-         + [Internationalizing Components](/help/implementing/developing/extending/i18n/components.md)
+         + [Internationalisering av komponenter](/help/implementing/developing/extending/i18n/components.md)
          + [Internationaliserar gränssnittssträngar](/help/implementing/developing/extending/i18n/dev.md)
          + [Extraherar strängar för översättning](/help/implementing/developing/extending/i18n/extract.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
