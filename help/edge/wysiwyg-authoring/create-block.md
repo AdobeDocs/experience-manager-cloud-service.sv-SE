@@ -4,9 +4,9 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: 487d918059e85e3f5dd19d2248b3a8365da41dee
 workflow-type: tm+mt
-source-wordcount: '1445'
+source-wordcount: '1428'
 ht-degree: 0%
 
 ---
@@ -328,8 +328,6 @@ Genom att lägga till en `classes`-egenskap i blocket återges egenskapen i tabe
 Den här guiden gjorde att du kunde binda dig direkt till grenen `main` för enkelhetens skull. Detta är vanligtvis inte något problem vid försök i en exempeldatabas. För verkligt projektarbete bör [du följa bästa praxis för utveckling](https://www.aem.live/docs/dev-collab-and-good-practices) genom att utveckla på en annan gren och granska alla ändringar via pull-begäran innan du sammanfogar till `main`.
 
 När du inte utvecklar i grenen `main` kan du lägga till `?ref=<branch>` i fältet Universal Editor för att läsa in sidan från din gren. `<branch>` är filialnamnet som det skulle användas för ditt projekts förhandsgransknings- eller direktwebbadresser, t.ex. `https://<branch>--<repo>--<owner>.hlx.page`.
-
-Publicering av innehåll med en ny modell stöds bara när modellen sammanfogas med grenen `main`.
 
 ## Återanvända era block för dokumentbaserad redigering {#reusing-blocks}
 
