@@ -4,9 +4,9 @@ description: Versionsinformation för version 2024.10.0 av  [!DNL Adobe Experien
 feature: Release Information
 role: Admin
 exl-id: 7a63f04f-10f0-4879-bd06-4182bb288a9b
-source-git-commit: 10de700e5e4b352051b8b77dfd0825bb9b6e0219
+source-git-commit: c3beecaab03c3721ad2fb70658a335d17f9a66d0
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,11 @@ Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktue
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
-<!-- ## Release Video {#release-video}
+## Släpp video {#release-video}
 
-Have a look at the October 2024 Release Overview video for a summary of the features added in the 2024.10.0 release:
+Titta på videon med versionsöversikten för oktober 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.10.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3434847?quality=12)
-
--->
+>[!VIDEO](https://video.tv.adobe.com/v/3440501?quality=12)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
