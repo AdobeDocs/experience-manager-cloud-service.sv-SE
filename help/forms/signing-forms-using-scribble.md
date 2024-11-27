@@ -7,9 +7,9 @@ topic-tags: author
 feature: Adaptive Forms, Foundation Components
 exl-id: dc89ecb1-2d9e-4d1d-b85b-af90c550e7d8
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: ad28fd933a85c8b5ba1cdad4927f0a0a45ad478d
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '1318'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 | AEM as a Cloud Service | Den här artikeln |
 
 
-Du kan använda komponenten **Skriptsignatur** och komponenten **Signatursteg** för att rita (Klottra) signatur i ett anpassat formulär. Underskriftsstegkomponenten visar en PDF-version av det adaptiva formuläret. Du måste aktivera alternativet Dokument för post eller formulärmallsbaserad adaptiv Forms för att kunna använda signaturstegskomponenten.
+Du kan använda komponenten **Klottsignatur** för att rita (Klottra) signatur i ett anpassat formulär. <!-- The Signature step component displays a PDF version of the Adaptive Form. You require a Document of Record option enabled or form template based Adaptive Forms to use the Signature step component. -->
 
 ![Dialogrutan Klottertecken](assets/scribble-signature.png)
 
@@ -55,50 +55,89 @@ Du kan välja ikonen **Konfigurera** ![konfigurera ikon](assets/configure.png) f
 
 ## Konfigurera ett anpassat formulär för att använda skriptsignatur {#configure-an-adaptive-form-to-use-scribble-signature}
 
-1. Alternativet Skapa ett postdokument aktiverat eller formulärmallsbaserat anpassat formulär. Stegvis information finns i [Skapa ett anpassat formulär](creating-adaptive-form.md).
+1. Öppna ett adaptivt formulär i redigeringsläge.
 1. Dra och släpp komponenten **Klottsignatur** från komponentwebbläsaren till det adaptiva formuläret.
-1. Välj ikonen **Konfigurera** ![konfigurera](assets/configure.png) . Egenskaper öppnas i webbläsaren och egenskaper för komponenten Skriptsignatur visas. Konfigurera egenskaper för komponenten Scribble Signature.
-1. Dra och släpp signaturstegskomponenten från komponentwebbläsaren till det adaptiva formuläret.
+1. Välj ikonen **Konfigurera** ![konfigurera](assets/configure.png) . Egenskaper öppnas i webbläsaren och egenskaper för komponenten Skriptsignatur visas. [Konfigurera egenskaper för Klottsignatur](#properties-of-scribble-signature-component) enligt beskrivningen i nästa avsnitt.
 
-   >[!NOTE]
-   >
-   >Komponenten Signatursteg får full bredd som är tillgänglig för formuläret. Vi rekommenderar att du inte har någon annan komponent i avsnittet som innehåller komponenten Signatursteg.
+   ![Klottersignatur](/help/forms/assets/scribblesig.png)
 
-1. I innehållsläsaren väljer du **Formulärbehållare** och sedan ikonen **Konfigurera** ![konfigurera](assets/configure.png) . Egenskaper öppnas i webbläsaren och egenskaper för behållare för adaptiva formulär visas. Navigera till **Adaptiv formulärbehållare** > **Elektronisk signatur** och avmarkera alternativet **Aktivera Adobe Sign** . Välj ikonen Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna.
+1. Välj ikonen Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
 
-   >[!NOTE]
-   >
-   >När du lägger till en komponent för signatursteg i ett anpassat formulär markeras alternativet Aktivera Adobe Sign automatiskt.
+## Konfigurera egenskaper för komponenten Klottsignatur
 
-1. Välj ikonen **Konfigurera** ![konfigurera](assets/configure.png) . Egenskaper öppnas i webbläsaren och egenskaper för signatursteg visas. Konfigurera följande egenskaper:
+Med dialogrutan Konfigurera kan du enkelt anpassa din skriptsigneringskomponent för besökare.
 
-   * **Elementnamn**: Ange komponentens namn.
+### Fliken Grundläggande
 
-   * **Titel:** Ange komponentens unika titel.
-   * **Mallmeddelande:** Ange meddelandet som ska visas när signaturen PDF läses in. Adobe Sign tjänster tar lite tid att förbereda och läsa in signaturen PDF.
-   * **Signeringstjänst:** Välj alternativet **Klottsignatur** .
+![Fliken Grundläggande](/help/forms/assets/scribblesig-basic.png)
 
-   * **CSS-klass**: Ange CSS-klass för klientbiblioteket, om sådan finns. Adobe rekommenderar att du använder [teman](themes.md) och [ infogade format](inline-style-adaptive-forms.md) i stället för CSS-klassen.
+* **Namn** - Du kan enkelt identifiera en formulärkomponent med dess unika namn både i formuläret och i regelredigeraren, men namnet får inte innehålla blanksteg eller specialtecken.
 
-   Välj ikonen Klar ![aem_forms_save](assets/aem_forms_save.png) om du vill spara ändringarna. Signaturen har konfigurerats.
+* **Titel** - Med titeln kan du enkelt identifiera en komponent i ett formulär. Som standard visas titeln ovanpå komponenten. Om du inte lägger till en titel visas komponentens namn i stället för rubriktexten.
 
-   När du fyller i ett formulär visas nu en PDF-version av det adaptiva formuläret och alternativ för att signera PDF-dokumentet finns. Mer information finns i [Signera ett anpassat formulär med Klottsignatur](signing-forms-using-scribble.md#sign-an-adaptive-form-using-scribble-signature).
+* **Tillåt RTF-text för rubrik** - Med den här funktionen kan användare formatera oformaterad text med funktioner som fet, kursiv, understruken text, olika teckensnitt, teckenstorlekar, färger och ytterligare alternativ för att förbättra visuell presentation och anpassning. Det ger större flexibilitet och kreativ kontroll när det gäller att få titlar att sticka ut i dokument, på webbplatser och i tillämpningar.\
+  När du markerar kryssrutan för **Tillåt RTF-text för titel** visas formateringsalternativ som formaterar komponentens titel. Om du vill visa alla tillgängliga formateringsalternativ klickar du på fliken ![Helskärmsikon](/help/forms/assets/fullscreen-icon.png) .
 
-## Signera ett anpassat formulär med klottrar signatur {#sign-an-adaptive-form-using-scribble-signature}
+  ![RTF-stöd](/help/forms/assets/richtext-support-title.png)
 
-1. När du har fyllt i ett adaptivt formulär och kommit till sidan Signatursteg visas signaturskärmen.
+* **Dölj titel** - Välj alternativet för att dölja komponentens titel.
+* **Obligatoriskt fält** - Välj alternativet att göra fältet obligatoriskt.
+* **Obligatoriskt fältmeddelande** - **Obligatoriskt fältmeddelande** är ett anpassningsbart meddelande som visas för användare när de försöker skicka ett formulär utan att fylla i ett obligatoriskt fält.
+* **Bindningsreferens för datamodell** - En bind-referens är en referens till ett dataelement som lagras i en extern datakälla och används i ett formulär. Med den binda referensen kan du binda data dynamiskt till formulärfält så att formuläret kan visa de senaste data från datakällan. En bindningsreferens kan till exempel användas för att visa en kunds namn och adress i ett formulär baserat på kundens ID som anges i formuläret. Bindningsreferensen kan också användas för att uppdatera datakällan med data som anges i formuläret. På så sätt kan AEM Forms skapa formulär som interagerar med externa datakällor, vilket ger en smidig användarupplevelse för att samla in och hantera data.
+* **Dölj objekt** - Välj alternativet för att dölja komponenten från formuläret. Komponenten är fortfarande tillgänglig för andra syften, som att använda den för beräkningar i regelredigeraren. Detta är användbart när du behöver lagra information som inte behöver visas eller ändras direkt av användaren.
+* **Inaktivera objekt** - Välj alternativet att inaktivera komponenten. Den inaktiverade komponenten är inte aktiv eller redigerbar av slutanvändaren. Användaren kan se fältets värde, men kan inte ändra det. Komponenten är fortfarande tillgänglig för andra syften, som att använda den för beräkningar i regelredigeraren.
+* **Proportioner** - Proportionerna i en klottersignaturkomponent definierar det proportionella förhållandet mellan dess bredd och höjd.
+* **Fältlayout** - Alternativet **Fältlayout** avgör hur formulärelement, inklusive etiketter (bildtexter) och felmeddelanden, placeras i förhållande till komponenten. Bildtexten **och felmeddelandet överst i widgeten** placerar fältets bildtext (etikett) och felmeddelanden ovanför komponenten. **Ärv från adaptiv formulärkonfiguration** använder de standardfältlayoutinställningar som anges i konfigurationen för adaptiv form.
+* **CSS-klass** - Med **CSS-klassen** kan du använda egna format på en komponent genom att tilldela en eller flera CSS-klasser som definieras i formatmallen. Det möjliggör enhetlig anpassning av format och layout i hela det adaptiva formuläret.
 
-   ![Signaturskärm för EchoSign-sida](assets/esignscribblesign.jpg)
+### Hjälpinnehåll
 
-1. Klicka på **[!UICONTROL Sign]**. Dialogrutan för klottersignering visas. Signera formuläret och klicka på ikonen Klar ![aem_forms_save](assets/aem_forms_save.png) för att spara signaturen.
+![Fliken Hjälpinnehåll](/help/forms/assets/scribblesig-help.png)
 
-   ![Dialogrutan Klottertecken](assets/scribblewidget.png)
+* **Kort beskrivning** - En kort beskrivning är en kort textförklaring som ger ytterligare information eller förtydliganden om syftet med ett visst formulärfält. Det hjälper användaren att förstå vilken typ av data som ska anges i fältet och kan ge riktlinjer eller exempel som hjälper till att säkerställa att den angivna informationen är giltig och uppfyller de önskade kriterierna. Som standard är korta beskrivningar dolda. Aktivera alternativet **Visa alltid kort beskrivning** för att visa det under komponenten.
 
-1. Klicka på Slutför för att slutföra signeringsprocessen.
+* **Visa alltid kort beskrivning** - Aktivera alternativet att visa den korta beskrivningen under komponenten.
 
-   ![Slutför signeringsprocessen](assets/scribblecomplete.jpg)
+* **Lång beskrivning** - Det hänvisar till ytterligare information eller vägledning som användaren får för att hjälpa dem att fylla i ett formulärfält korrekt. Det visas när användaren klickar på hjälpikonen (i) som finns bredvid komponenten. Den ger mer detaljerad information än etiketten eller platshållartexten för ett formulärfält och är utformad för att hjälpa användaren förstå kraven eller begränsningarna för fältet. Den kan också ge förslag eller exempel som gör det enklare och exaktare att fylla i formuläret.
 
-Signaturerna läggs till i formuläret och formulärkontrollen flyttas till nästa panel.
+### Fliken Tillgänglighet {#accessibility}
+
+![Fliken Tillgänglighet](/help/forms/assets/scribblesig-acc.png)
+
+På fliken **Hjälpmedel** anges värden för [ARIA-hjälpmedelsetiketter](https://www.w3.org/WAI/standards-guidelines/aria/) för komponenten. Det finns olika alternativ för att använda texten för skärmläsare:
+
+* **Företräde för Reader på skärm** - Företräde för Reader på skärm avser extra text som är särskilt avsedd att läsas av hjälpmedelstekniker, t.ex. skärmläsare, som används av personer med nedsatt syn. Den här texten innehåller en ljudbeskrivning av formulärfältets syfte och kan innehålla information om fältets titel, beskrivning, namn och relevanta meddelanden (anpassad text). Skärmläsartexten ser till att formuläret är tillgängligt för alla användare, även användare med nedsatt syn, och ger dem en fullständig förståelse för formulärfältet och dess krav.
+
+   * **Egen text**: Välj det här alternativet om du vill använda den anpassade texten för ARIA-hjälpmedelsetiketter. Om du väljer det här alternativet visas dialogrutan Egen text. Du kan lägga till relevant information i dialogrutan Egen text.
+   * **Kort beskrivning**: Välj det här alternativet om du vill använda beskrivningen för ARIA-hjälpmedelsetiketter.
+   * **Titel**: Välj det här alternativet om du vill använda titeln för ARIA-hjälpmedelsetiketter.
+   * **Namn**: Välj det här alternativet om du vill använda namnet på ARIA-hjälpmedelsetiketter.
+   * **Inget**: Välj det här alternativet om du inte vill lägga till för hjälpmedelsetiketter för ARIA.
+
+<!--
+
+ * **Element Name**: Specify name of the component.
+
+    * **Title:** Specify unique title of the component.
+    * **Template message:** Specify the message to be displayed while the signature PDF is being loaded. Adobe Sign services take some time to prepare and load signature PDF.
+    * **Signing Service:** Select the **Scribble Signature** option.
+
+    * **CSS Class**: Specify CSS class of the client library, if any. Adobe recommends using [themes](themes.md) and [in-line styles](inline-style-adaptive-forms.md) instead of CSS Class.
+## Sign an Adaptive Form using Scribble Signature {#sign-an-adaptive-form-using-scribble-signature}
+
+1. After you fill an Adaptive Form and reach the Signature Step page, the signature screen is displayed.
+
+   ![Signature screen for EchoSign page](assets/esignscribblesign.jpg)
+
+1. Click **[!UICONTROL Sign]**. The scribble sign dialog appears. Sign the form and click the Done ![aem_forms_save](assets/aem_forms_save.png) icon to save the signature.
+
+   ![Scribble sign dialog](assets/scribblewidget.png)
+
+1. Click complete to finish the signing process.
+
+   ![Complete the signing process](assets/scribblecomplete.jpg)
+
+The signatures are added to the form and the form control moves to the next panel. -->
 
 ## Se även {#see-also}
 
