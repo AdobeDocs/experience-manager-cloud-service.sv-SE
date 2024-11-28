@@ -4,9 +4,9 @@ description: Läs mer om UI Extensibility-funktionen i AEM Assets View. Med anv�
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: af7e6ab40212dfa3d91cda80a76b1b6b01dd65a3
+source-git-commit: 870f3f1826ea88cae0fc1fa31177bb9ffc8646f3
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ I Assets View (Visa) går du till sidan Details (Detaljer) för en resurs, mapp 
 ## Krav för att lägga till utökningskomponenten
 
 * [Åtkomst till Assets View](#1).
-* Åtkomst till [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/), som ingår i [Assets Ultimate](/help/assets/assets-ultimate-overview.md) som standard.
+* Åtkomst till appverktyget [Adobe](https://developer.adobe.com/app-builder/docs/overview/).
 * Har rätt till rollen som systemadministratör för utvecklare inom organisationen. Mer information finns i [this](https://developer.adobe.com/uix/docs/guides/get-access/).
 * Adobe IO-kommandoradsverktyget (AIO CLI) måste vara installerat på dina lokala datorer. Det här verktyget är nödvändigt för att skapa och distribuera tilläggsprojekt. Mer information finns i [this](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up).
 * Bra insikt i JavaScript, Node.js och React-tekniken.
