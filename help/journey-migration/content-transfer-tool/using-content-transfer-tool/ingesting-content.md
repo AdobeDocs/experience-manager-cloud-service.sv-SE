@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 1add389e1bba181757229ca73252f1fcaa9d049a
+source-git-commit: 114b7e795df6267d76d1bd923a7dff8826c67029
 workflow-type: tm+mt
-source-wordcount: '3187'
+source-wordcount: '3296'
 ht-degree: 1%
 
 ---
@@ -169,6 +169,17 @@ Om&quot;AEM versionsuppdateringar&quot; är aktiv (d.v.s. uppdateringar körs el
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_active.png)
 
+### Inmatningsfel på grund av att molnmiljön inte är i klart läge {#ingestion-failure-due-to-cloud-environment-not-in-ready-state}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_cam_ingestion_troubleshooting_cloud_environment_not_in_ready_state"
+>title="Molnmiljön är inte i tillståndet Ready"
+>abstract="I sällsynta fall kan det uppstå oväntade problem i målmolnmiljön, vilket kan leda till att importen misslyckas."
+
+I sällsynta fall kan det uppstå oväntade problem i Cloud Servicens målmiljö. Detta resulterar i att intaget misslyckas eftersom miljön inte är i det förväntade tillståndet klar. Kontrollera matningsloggen för att visa mer information om det feltillstånd som påträffats.
+
+Se till att författarmiljön är tillgänglig och vänta några minuter innan du försöker göra om importen. Om problemet kvarstår kontaktar du kundsupporten och får feltillståndet.
+
 ### Inmatningsfel i toppklass på grund av Unikhetsbegränsningsöverträdelse {#top-up-ingestion-failure-due-to-uniqueness-constraint-violation}
 
 >[!CONTEXTUALHELP]
@@ -239,7 +250,7 @@ Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer]
 
 Ibland kan oväntade problem ge upphov till misslyckade frågor där det enda sättet att göra detta är att försöka få igen. Undersök matningsloggen för att ta reda på orsaken till felet och se om den är i linje med något av de fel som anges nedan, där ett nytt försök bör göras.
 
-## MongoDB-problem {#mongo-db-issues}
+#### MongoDB-problem {#mongo-db-issues}
 
 * `Atlas prescale timeout error` - Inmatningsfasen försöker förskala målmolndatabasen till en lämplig storlek som passar storleken på det migreringsuppsättningsinnehåll som importeras. Oftast slutförs inte den här åtgärden inom den förväntade tidsramen.
 * `Exhausted mongo restore retries` - Ett försök att återställa en lokal dump av innehållet i den inkapslade migreringsuppsättningen till molndatabasen har gjorts. Detta tyder på ett övergripande hälso-/nätverksproblem med MongoDB, som ofta läker av sig själv efter några minuter.
