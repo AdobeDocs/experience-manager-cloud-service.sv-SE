@@ -7,9 +7,9 @@ content-type: reference
 feature: Adaptive Forms, Foundation Components
 exl-id: 198a26a9-d6bb-457d-aab8-0a5d15177c48
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: e1e122b730de07d9fff36828bb85ceec7c0b101b
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2305'
 ht-degree: 0%
 
 ---
@@ -197,7 +197,7 @@ För att förstå hur du använder en standardfelhanterare med hjälp av åtgär
 1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i avsnittet **När** i regeln. Till exempel ändras **När[namnet på fältet Pet-ID]** ändras. Markeringen ändras i listrutan **Välj läge**.
 1. I avsnittet **Sedan** väljer du **[!UICONTROL Invoke Service]** i listrutan **Välj åtgärd** .
-1. Välj en **Post-tjänst** och dess motsvarande databindningar i avsnittet **Indata**. Om du till exempel vill validera **Pet ID** väljer du en **Post-tjänst** som **GET /pet/{petId}** och väljer **Pet ID** i avsnittet **Indata** .
+1. Välj en **posttjänst** och dess motsvarande databindningar i avsnittet **Indata**. Om du till exempel vill validera **Pet ID** markerar du en **Post service** som **GET /pet/{petId}** och väljer **Pet ID** i avsnittet **Indata** .
 1. Välj databindningar i avsnittet **Utdata**. Välj **Djurnamn** i avsnittet **Utdata**.
 1. Välj **[!UICONTROL Default Error Handler]** i avsnittet **Felhanterare**.
 1. Klicka på **[!UICONTROL Done]**.
@@ -222,19 +222,24 @@ Den anpassade felhanteraren är en funktion (klientbibliotek) som är utformad f
 För att förstå hur du skapar och använder en anpassad felhanterare med hjälp av åtgärden [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke) kan vi ta ett exempel på Adaptiv form med två fält, **Pet ID** och **Pet Name**, och använda en anpassad felhanterare i fältet **Pet ID** för att kontrollera om det finns olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`.
 
 Så här lägger du till och använder en anpassad felhanterare i ett adaptivt formulär:
-1. [Skapa en anpassad felhanterare](#create-custom-error-message)
-1. [Använd regelredigeraren för att konfigurera en anpassad felhanterare](#use-custom-error-handler)
+1. [Lägg till anpassad funktion för felhanterare](#1-add-custom-function-for-error-handler)
+2. [Använd regelredigeraren för att konfigurera en anpassad felhanterare](#use-custom-error-handler)
 
-#### 1. Skapa en anpassad felhanterare {#create-custom-error-message}
+#### 1. Lägg till en anpassad funktion för felhanteraren
 
-Så här skapar du en anpassad felfunktion:
+>[!NOTE]
+>
+> Om du vill lära dig hur du lägger till anpassade funktioner klickar du på [Skapa anpassade funktioner i ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md#create-a-custom-function).
 
-1. [Klona din AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
-1. Skapa en mapp i mappen `[AEM Forms as a Cloud Service repository folder]/apps/`. Skapa till exempel en mapp med namnet `experience-league`
-1. Navigera till `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` och skapa en `ClientLibraryFolder` som `clientlibs`.
-1. Skapa en mapp med namnet `js`.
-1. Navigera till mappen `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js`.
-1. Lägg till en JavaScript-fil, till exempel `function.js`. Filen innehåller koden för den anpassade felhanteraren.
+<!-- To create a custom error function, perform the following steps:
+
+1. [Clone your AEM Forms as a Cloud Service Repository](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git). 
+2. Create a folder under the `[AEM Forms as a Cloud Service repository folder]/apps/` folder. For example, create a folder named as `experience-league`
+3. Navigate to `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/experience-league/` and create a `ClientLibraryFolder` as `clientlibs`.
+4. Create a folder named `js`.
+5. Navigate to the `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js` folder. -->
+
+1. Lägg till nedanstående kod för anpassad felhanterare i JavaScript-filen, till exempel `function.js`. Filen innehåller koden för den anpassade felhanteraren.
 Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rubriker som tagits emot från REST-tjänstens slutpunkt i webbläsarkonsolen.
 
    ```javascript
@@ -253,43 +258,45 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
        }
    ```
 
-   Följande rad i exempelkoden används för att anropa standardfelhanteraren från din anpassade felhanterare:
-   `guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `
+<!--
+1. Save the `function.js` file.
+1. Navigate to the `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js` folder.
+2. Add a text file as `js.txt`. The file contains:
 
-   >[!NOTE]
-   >
-   > Lägg till egenskaperna `allowProxy` och `categories` i filen `.content.xml`.
-   >
-   > * `allowProxy = [Boolean]true`
-   > * `categories= customfunctionsdemo`
-   >I det här fallet anges till exempel [custom-errorhandler-name] som `customfunctionsdemo`.
+    ```javascript
+        #base=js
+        functions.js
+    ```
 
-1. Spara filen `function.js`.
-1. Navigera till mappen `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js`.
-1. Lägg till en textfil som `js.txt`. Filen innehåller:
+3. Save the `js.txt` file.    
+The created folder structure looks like:
 
-   ```javascript
-       #base=js
-       functions.js
-   ```
+    ![Created Client Library Folder Structure](/help/forms/assets/customclientlibrary_folderstructure.png) -->
 
-1. Spara filen `js.txt`.\
-   Den skapade mappstrukturen ser ut så här:
 
-   ![Mappstrukturen för klientbiblioteket har skapats](/help/forms/assets/customclientlibrary_folderstructure.png)
+    >[!NOTE]
+    >
+    > * För att anropa standardfelhanteraren från din anpassade felhanterare används följande rad i exempelkoden:`guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `
+    > * I filen `.content.xml` lägger du till egenskaperna allowProxy och &quot;categories&quot; för användning klientbibliotek för anpassad felhantering i ett adaptivt formulär.
+    >
+    >   *`allowProxy = [Boolean]true`
+    >   *`categories= customfeatures.demo`
+    >       I det här fallet anges till exempel [custom-errorhandler-name] som &quot;customFuntionsDemo&quot;.
 
-   >[!NOTE]
-   >
-   > Om du vill veta mer om hur du skapar anpassade funktioner klickar du på [anpassade funktioner i regelredigeraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=en#write-rules).
 
-1. Lägg till, implementera och skicka ändringarna i databasen med följande kommandon:
+1. Lägg till, implementera och skicka ändringarna i databasen.
 
-   ```javascript
-       git add .
-       git commit -a -m "Adding error handling files"
-       git push
-   ```
+<!--
+    using the below commands:
+         
+    ```javascript
 
+        git add .
+        git commit -a -m "Adding error handling files"
+        git push
+    ```
+
+-->
 1. [Kör pipelinen.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline)
 
 När pipeline har körts blir den anpassade felhanteraren tillgänglig i regelredigeraren för adaptiva formulär. Nu ska vi förstå hur du konfigurerar och använder en anpassad felhanterare med hjälp av regelredigerarens Invoke-tjänst i AEM Forms.
@@ -308,7 +315,7 @@ Så här använder du en anpassad felhanterare med åtgärden **[!UICONTROL Rule
 1. Välj **[!UICONTROL Create]**.
 1. Skapa ett villkor i avsnittet **När** i regeln. Om till exempel **[namnet på fältet för Pet-ID]** ändras, ändras **väljs** i den nedrullningsbara listan **Välj läge**.
 1. I avsnittet **Sedan** väljer du **[!UICONTROL Invoke Service]** i listrutan **Välj åtgärd** .
-1. Välj en **Post-tjänst** och dess motsvarande databindningar i avsnittet **Indata**. Om du till exempel vill validera **Pet ID** väljer du en **Post-tjänst** som **GET /pet/{petId}** och väljer **Pet ID** i avsnittet **Indata** .
+1. Välj en **posttjänst** och dess motsvarande databindningar i avsnittet **Indata**. Om du till exempel vill validera **Pet ID** markerar du en **Post service** som **GET /pet/{petId}** och väljer **Pet ID** i avsnittet **Indata** .
 1. Välj databindningar i avsnittet **Utdata**. Välj till exempel **Djurnamn** i avsnittet **Utdata**.
 1. Välj **[!UICONTROL Custom Error Handler]** i avsnittet **[!UICONTROL Error Handler]**.
 1. Klicka på **[!UICONTROL Done]**.

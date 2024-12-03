@@ -5,7 +5,7 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: e7ab4233-2e91-45c6-9377-0c9204d03ee9
-source-git-commit: 747203ccd3c7e428e2afe27c56e47c3ec18699f6
+source-git-commit: 249c60c6b4a888b8d32bbb6bebf159c972f82f94
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Innan du börjar lägga till en anpassad funktion i din adaptiva Forms måste du
 * **Git:** Versionskontrollsystemet krävs för att hantera kodändringar. Om du inte har det installerat hämtar du det från https://git-scm.com.
 
 
-## Skapa en anpassad funktion {#create-custom-function}
+## Skapa en anpassad funktion
 
 Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 
