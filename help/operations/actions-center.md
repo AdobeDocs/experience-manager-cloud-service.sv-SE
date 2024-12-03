@@ -4,9 +4,9 @@ description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och an
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
 feature: Operations
 role: Admin
-source-git-commit: 41e06c75229d78827e35164eca37a96d6feeb730
+source-git-commit: 1bfa9ff24d3515a450216f3569b1e8b0b1e31ecc
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -86,4 +86,5 @@ I följande tabell visas de meddelandetyper som för närvarande stöds i Åtgä
 | Användare som läggs till direkt i en anpassad grupp | Proaktiv | Användare måste läggas till i relevanta IMS-grupper och dessa IMS-grupper måste läggas till som medlemmar i AEM. Justera med [IMS-tips](/help/security/ims-support.md) | |
 | JCR-innehåll saknas | Proaktiv | Lägg till noden JCR-innehåll som saknas. Mer information finns i [dokumentationen för Assets Content Validator](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) | |
 | Slutförda arbetsflöden har inte rensats | Proaktiv | Minimera antalet arbetsflödesinstanser och förbättra resultatet genom att rensa arbetsflödesinstanser som är mer än 90 dagar gamla. Lär dig hur du [konfigurerar underhållsaktiviteter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) | |
-| Sling-resurstypen saknas på sidan | Proaktiv | Lägg till saknad nod för Sling-resurstyp. Mer information finns i [dokumentationen för Assets Content Validator](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) |
+| Sling-resurstypen saknas på sidan | Proaktiv | Lägg till saknad nod för Sling-resurstyp. Mer information finns i [dokumentationen för Assets Content Validator](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) | |
+| Långsam fråga | Proaktiv | Åtgärda långsamma frågor genom att definiera korrekta indexdefinitioner enligt [JCQ-frågeformuläret](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf) |
