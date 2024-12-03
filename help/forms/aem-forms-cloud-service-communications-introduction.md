@@ -5,7 +5,7 @@ Keywords: How to generate document?, Generate PDF document, Manipulation PDF doc
 feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: dcf7bde3bc73b70002f87f14d905cd294280ff94
+source-git-commit: 13c1febf55c9b15eab49d356fc1ba3f3d91ad055
 workflow-type: tm+mt
 source-wordcount: '2365'
 ht-degree: 1%
@@ -33,6 +33,9 @@ Funktionen ger API:er för att generera och hantera dokument. Du kan generera el
 * HTTP-API:er för enklare integrering med externa system. Separata API:er för on demand-åtgärder (låg fördröjning) och batchåtgärder (högdataåtgärder) ingår.
 
 * säker åtkomst till data. Kommunikations-API:er ansluter till och får endast åtkomst till data från kundutsedda datalager, vilket gör kommunikationen mycket säker.
+
+[API-referensdokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
+
 
 <!-- 
 ![A sample credit card statement](assets/statement.png)
@@ -304,8 +307,6 @@ De olika funktionerna för användarrättigheter för utökning av PDF Reader ä
 
 * **Meddelande**: Meddelandet som visas i Adobe Acrobat Reader när ett PDF-dokument öppnas med en eller flera användningsrättigheter.
 * **Lås upp lösenord**: Lösenordet som krävs för att öppna ett krypterat PDF-dokument. Det här är vanligtvis lösenordet för dokumentöppning, men om PDF-dokumentet dessutom skyddas av ett behörighetslösenord kan det användas för att öppna det.
-
-[API-referensdokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
 
 ## Typer av API:er för kommunikation {#types}
 

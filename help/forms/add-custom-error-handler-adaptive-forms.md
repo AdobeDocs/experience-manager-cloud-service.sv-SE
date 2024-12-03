@@ -7,9 +7,9 @@ content-type: reference
 feature: Adaptive Forms, Foundation Components
 exl-id: 198a26a9-d6bb-457d-aab8-0a5d15177c48
 role: User, Developer
-source-git-commit: e1e122b730de07d9fff36828bb85ceec7c0b101b
+source-git-commit: 13c1febf55c9b15eab49d356fc1ba3f3d91ad055
 workflow-type: tm+mt
-source-wordcount: '2305'
+source-wordcount: '2292'
 ht-degree: 0%
 
 ---
@@ -185,7 +185,7 @@ Med åtgärden [Anropa tjänst](https://experienceleague.adobe.com/docs/experien
 
 Med regelredigeraren kan du:
 * [Lägg till standardfelhanterarfunktion](#add-default-errror-handler)
-* [Lägg till anpassad felhanterarfunktion](#add-custom-errror-handler)
+* [Lägg till anpassad felhanterarfunktion](#add-custom-error-handler-function)
 
 
 ### Lägg till standardfelhanterarfunktion {#add-default-errror-handler}
@@ -208,7 +208,7 @@ Som ett resultat av den här regeln kontrollerar de värden du anger för **Pet 
 
 ![visar standardfelmeddelandet när du lägger till en standardfelhanterare i ett formulär som hanterar felsvar](/help/forms/assets/default-error-message.png)
 
-### Lägg till anpassad felhanterarfunktion {#add-custom-errror-handler}
+### Lägg till anpassad felhanterarfunktion
 
 Du kan lägga till en anpassad felhanterarfunktion för att utföra några av åtgärderna:
 
@@ -222,14 +222,12 @@ Den anpassade felhanteraren är en funktion (klientbibliotek) som är utformad f
 För att förstå hur du skapar och använder en anpassad felhanterare med hjälp av åtgärden [Regelredigerarens anropstjänst](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=en#invoke) kan vi ta ett exempel på Adaptiv form med två fält, **Pet ID** och **Pet Name**, och använda en anpassad felhanterare i fältet **Pet ID** för att kontrollera om det finns olika fel som returneras av REST-slutpunkten som konfigurerats för att anropa en extern tjänst, till exempel `200 - OK`,`404 - Not Found`, `400 - Bad Request`.
 
 Så här lägger du till och använder en anpassad felhanterare i ett adaptivt formulär:
-1. [Lägg till anpassad funktion för felhanterare](#1-add-custom-function-for-error-handler)
+1. [Lägg till anpassad funktion för felhanterare](#1-add-the-custom-function-for-the-error-handler)
 2. [Använd regelredigeraren för att konfigurera en anpassad felhanterare](#use-custom-error-handler)
 
-#### 1. Lägg till en anpassad funktion för felhanteraren
+#### 1. Lägg till den anpassade funktionen för felhanteraren
 
->[!NOTE]
->
-> Om du vill lära dig hur du lägger till anpassade funktioner klickar du på [Skapa anpassade funktioner i ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md#create-a-custom-function).
+Om du vill lära dig hur du lägger till anpassade funktioner klickar du på [Skapa anpassade funktioner i ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md#create-a-custom-function).
 
 <!-- To create a custom error function, perform the following steps:
 
@@ -258,6 +256,20 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
        }
    ```
 
+   >[!NOTE]
+   >
+   > * Följande rad i exempelkoden används för att anropa standardfelhanteraren från din anpassade felhanterare: `guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `
+   > * Lägg till egenskaperna `allowProxy` och `categories` i filen `.content.xml` om du vill använda klientbiblioteket för anpassade felhanterare i ett adaptivt formulär.
+   >
+   >   * `allowProxy = [Boolean]true`
+   >   * `categories= customfunctionsdemo`
+   >       I det här fallet anges till exempel [custom-errorhandler-name] som `customfunctionsdemo`.
+
+
+1. Lägg till, implementera och skicka ändringarna i databasen.
+
+<!--
+
 <!--
 1. Save the `function.js` file.
 1. Navigate to the `[AEM Forms as a Cloud Service repository folder]/apps/[AEM Project Folder]/clientlibs/js` folder.
@@ -271,22 +283,7 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
 3. Save the `js.txt` file.    
 The created folder structure looks like:
 
-    ![Created Client Library Folder Structure](/help/forms/assets/customclientlibrary_folderstructure.png) -->
-
-
-    >[!NOTE]
-    >
-    > * För att anropa standardfelhanteraren från din anpassade felhanterare används följande rad i exempelkoden:`guidelib.dataIntegrationUtils.defaultErrorHandler(response, headers) `
-    > * I filen `.content.xml` lägger du till egenskaperna allowProxy och &quot;categories&quot; för användning klientbibliotek för anpassad felhantering i ett adaptivt formulär.
-    >
-    >   *`allowProxy = [Boolean]true`
-    >   *`categories= customfeatures.demo`
-    >       I det här fallet anges till exempel [custom-errorhandler-name] som &quot;customFuntionsDemo&quot;.
-
-
-1. Lägg till, implementera och skicka ändringarna i databasen.
-
-<!--
+    ![Created Client Library Folder Structure](/help/forms/assets/customclientlibrary_folderstructure.png) 
     using the below commands:
          
     ```javascript
@@ -295,8 +292,8 @@ The created folder structure looks like:
         git commit -a -m "Adding error handling files"
         git push
     ```
-
 -->
+
 1. [Kör pipelinen.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline)
 
 När pipeline har körts blir den anpassade felhanteraren tillgänglig i regelredigeraren för adaptiva formulär. Nu ska vi förstå hur du konfigurerar och använder en anpassad felhanterare med hjälp av regelredigerarens Invoke-tjänst i AEM Forms.
