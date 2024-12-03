@@ -4,9 +4,9 @@ description: Använd uppgifterna i rapportavsnittet i Assets-vyn för att utvär
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
 feature: Asset Insights, Asset Reports
 role: User, Admin, Developer
-source-git-commit: 5ff36490c4d9a6f61255ad06ffab984f18c1823b
+source-git-commit: 6e0cd465f8695c948ece4679e083d6b9b35dded4
 workflow-type: tm+mt
-source-wordcount: '1197'
+source-wordcount: '1549'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Med tillgångsrapportering kan administratörer se vilka aktiviteter Adobe Exper
 
 ## Åtkomstrapporter {#access-reports}
 
-Alla användare som har tilldelats produktprofilen för Assets-vyadministratörer kan komma åt Insikter-instrumentpanelen eller skapa användardefinierade rapporter i Assets-vyn.
+Alla användare som är tilldelade till AEM administratörsproduktprofil kan komma åt kontrollpanelen för insikter eller skapa användardefinierade rapporter i Assets-vyn.
 
 Navigera till **[!UICONTROL Reports]** under **[!UICONTROL Settings]** för att få åtkomst till rapporter.
 
@@ -48,7 +48,7 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
 
    **På fliken Konfiguration:**
 
-   1. **Typ av rapportering:** Välj mellan överförings- och hämtningstyp.
+   1. **Typ av rapportering:** Välj bland typerna [!UICONTROL upload], [!UICONTROL download] eller [Dynamic Media-leveransrapport](#dynamic-media-delivery-reports).
    1. **Titel:** Lägg till en titel i rapporten.
    1. **Beskrivning:** Lägg till en valfri beskrivning i rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera rapporten med överförda och hämtade resurser i den specifika mappen. Om du till exempel behöver rapporten med resurser som överförts till en mapp anger du sökvägen till den mappen.
@@ -76,7 +76,7 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
      <tr>
       <td>Bana</td>
       <td>Mappsökvägen där resursen är tillgänglig i Assets-vyn.</td>
-      <td>Överför och hämta</td>
+      <td>Ladda upp, ladda ned och Dynamic Media Delivery</td>
      </tr>
      <tr>
       <td>MIME-typ</td>
@@ -122,14 +122,73 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
       <td>Hämtat efter användarnamn</td>
       <td>Namnet på den användare som hämtade resursen.</td>
       <td>Ladda ned</td>
-     </tr>           
+     </tr> 
+     <tr>
+      <td>Referent</td>
+      <td>Den URL där resursen levereras eller inkluderas</td>
+      <td>Dynamic Media Delivery</td>
+     </tr>  
+     <tr>
+      <td>Träffar</td>
+      <td>Antalet gånger som tillgången levereras (leveransantal)</td>
+      <td>Dynamic Media Delivery</td>
+     </tr>          
     </tbody>
    </table>
+
+## Dynamic Media Delivery Reports {#dynamic-media-delivery-reports}
+
+Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leveransantal på tillgångsnivå, referensinformation, resurssökväg i AEM Assets och unikt resurs-ID. Rapporter kan genereras för alla resurser som levereras via Dynamic Media för AEM Assets eller för en viss mapphierarki i AEM Assets. Dessutom kan Dynamic Media Delivery Reports hjälpa till att mäta avkastningen på levererade tillgångar, mäta kanalernas prestanda och ta hjälp av välgrundade resurshanteringsåtgärder.
+
+>[!NOTE]
+> 
+>[Skapa och skicka ett kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tidig åtkomst till Dynamic Media-leveransrapporten för ditt Dynamic Media-konto.
+
+### Förutsättningar {#prereqs-dynamic-media-delivery-reports}
+
+Du bör ha en Dynamic Media-licens för att skapa och använda den här rapporten.
+
+>[!IMPORTANT]
+> 
+>* Det finns rapporter om mediefiler som levereras via Dynamic Media.
+>* Rapporterna genereras för de första 1 miljon raderna. Om du vill hämta alla filer inom den här gränsen bör du överväga att ta med refererarkolumnen för mindre mappar.
+>* Rapporterna kan bara genereras för de senaste tre månaderna.
+
+### Skapa en leveransrapport för Dynamic Media{#create-dynamic-media-delivery-report}
+
+1. Skapa en Dynamic Media-leveransrapport med hjälp av stegen som beskrivs i [Skapa en rapport](#create-report).
+
+1. Välj **[!UICONTROL Dynamic Media Delivery]** i listrutan **[!UICONTROL Report type]**.
+
+   ![Listrutan Dynamic Media-leveransrapport](assets/dynamic-media-delivery-report-option.png)
+
+
+1. På fliken **[!UICONTROL Columns]** kan du markera kolumnen **[!UICONTROL Referrer]** som ska ingå i rapporten.
+
+   ![Referent](assets/referrer.png)
+
+   Alla kolumner i den hämtade rapporten är skrivskyddade, förutom kolumnen **Referent** som du kan ändra för att inkludera eller exkludera från rapporten. <!--Choosing a referrer displays the number of visitors received from each referred report that directs traffic to the site. It offers insights into the sources of traffic and the origin of the visitors. Such insights help measure ROI of delivered assets, measure channel performance, and help take informed asset management tasks for assets.-->
+
+### Åtgärder som utförts i Dynamic Media Delivery Report {#actions-performed-dynamic-media-delivery-reports}
+
+När du har skapat rapporten kan du utföra följande åtgärder:
+
+* **[!UICONTROL Delete]**: Du kan ta bort den markerade rapporten.
+* **[!UICONTROL Download CSV]**: Du kan hämta den valda rapporten i CSV-format. Den hämtade rapporten består av kolumnerna Name, Path, DynamicMediaID, Referrer och Hits.
+   * Kolumnen **Referent** visar den URL där resursen levereras eller inkluderas.
+
+   * **I kolumnen** visas antalet gånger som resursen levereras (leveransantal).
+
+Information om hur du tar bort eller hämtar Dynamic Media-leveransrapporten som CSV finns i [Visa och hämta befintlig rapport](#View-and-download-existing-report).
+
+![Hämtad CSV på Dynamic Media-leveransrapport](assets/csv-dynamic-media-delivery-report.png)
+
 
 ## Visa och hämta befintlig rapport {#View-and-download-existing-report}
 
 Befintliga rapporter visas på fliken **Utförda rapporter**. Klicka på **Rapporter** och välj **Utförda rapporter** om du vill visa alla skapade rapporter med statusen **Slutförd**, vilket anger att de är klara för hämtning. Om du vill hämta rapporten i CSV-format eller ta bort rapporten markerar du rapportraden. Välj sedan **Hämta CSV** eller **Ta bort**.
 ![visa och hämta befintliga rapporter](/help/assets/assets/view-download-existing-report.png)
+
 
 ## Schemalägg en rapport {#schedule-report}
 

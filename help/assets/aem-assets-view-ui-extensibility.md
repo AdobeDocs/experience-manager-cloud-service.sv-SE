@@ -4,9 +4,9 @@ description: Läs mer om UI Extensibility-funktionen i AEM Assets View. Med anv�
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: 870f3f1826ea88cae0fc1fa31177bb9ffc8646f3
+source-git-commit: bbb183470e12c0fc81c821fc2e0c1e7d77c33707
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Du kan lägga till dina tillägg på resursnivå, mapp- och samlingsnivå. Det t
 >[!IMPORTANT]
 >
 > * AEM Assets View UI Extensibility är tillgängligt med [Assets Ultimate](/help/assets/assets-ultimate-overview.md).
-> * Assets View UI Extensibility är tillgängligt som en Beta-release. [Skapa och skicka ett kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tidig åtkomst till Assets-vyns UI-utökningsmöjligheter.
+> * [Skapa och skicka ett kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) från Adobe  om du vill få åtkomst till Assets-vyns UI-utökningsbarhet.
 > * Du kan ge feedback genom att utöka alternativen för Detaljerad feedback och klicka på Rapportera ett problem.
 
 ## <a id="1"></a> Så här kommer du åt Assets View
