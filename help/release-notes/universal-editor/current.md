@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2024.11.13
-description: Detta är versionsinformationen för version 2024.11.13 av Universal Editor.
+title: Versionsinformation om Universal Editor 2024.12.02
+description: Detta är versionsinformationen för version 2024.12.02 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 98795cab471470442cf5c424a67ce2846cfe85dc
+source-git-commit: 2aae8c63358680758e4f5324f38dea1bc2c47155
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2024.11.13 {#release-notes}
+# Versionsinformation om Universal Editor 2024.12.02 {#release-notes}
 
-Det här är versionsinformationen för den 13 november 2024-versionen av Universal Editor.
+Detta är versionsinformationen för den 2 december 2024-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,22 +22,18 @@ Det här är versionsinformationen för den 13 november 2024-versionen av Univer
 
 ## Nyheter {#what-is-new}
 
-* **Återförsöksalternativ på CORS-timeout:** I [ version 2024.09.26,](/help/release-notes/universal-editor/2024/2024-09-26.md) introducerades en felpanel när redigeraren inte kunde upprätta en anslutning till den inlästa sidan, vilket förhindrade oändliga inläsningslägen.
-   * I den här versionen fortsätter redigeraren automatiskt att försöka igen och när anslutningen har upprättats kan redigeringen återupptas.
-   * Detta är särskilt användbart för sidor som kan ta längre tid än en minuts timeout att initiera.
-* **Förbättringar av utökningsmöjligheter för utvecklare:** Den universella redigeraren har nu stöd för sändning av händelser till tillägg, vilket gör att tilläggsutvecklare kan prenumerera på [händelser.](/help/implementing/universal-editor/events.md)
-   * Detta gör att utvecklare kan [reagera på redigeringshändelser i sina anpassade tillägg.](/help/implementing/universal-editor/customizing.md#extending)
-* **Beständig komponentmarkering:** Markerade komponenter i redigeraren kommer nu att finnas kvar även efter att webbläsaren har uppdaterats.
-   * Detta gör att användare kan fortsätta arbeta utan att förlora sitt sammanhang när de läser in sidan igen.
-* **Lokaliserade snabblänkar:** Avsnittet **Snabblänkar** på startskärmen innehåller nu lokaliserade länkar till dokumentation, vilket gör det enklare för användarna att komma åt relevanta guider baserat på deras språkinställningar.
-* **ID för begäran om avancerad felsökning:** Felmeddelanden innehåller nu **ID för begäran** i informationsavsnittet, som har samband med `x-request-id header`.
-   * Detta gör det enklare för ingenjörsteamen i Adobe att spåra och diagnostisera problem genom att matcha dessa fel med interna loggar.
+* **Tangentbordsnavigering i innehållsträdet**: [Innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) som finns på sidopanelen är nu helt tillgängligt via tangentbordet.
+   * Författare kan navigera och interagera med trädvyobjekt med standardtangentbordskontroller, enligt [WCAG 2.1-riktlinjerna](/help/sites-cloud/authoring/page-editor/accessible-content.md) för tillgänglighet.
+   * Den här förbättringen säkerställer att alla interaktiva element i trädet kan opereras via tangentbordet, vilket förbättrar integriteten för användare som använder tangentbordsnavigering.
+* **Avmarkering av redigerbara element**: Författare kan nu avmarkera tidigare markerade redigerbara element på sidan.
+   * Detta eliminerar störande element när författare vill visa sidan utan aktiva markeringsgränser.
+* **Fragmentväljare**: I AEM as a Cloud Service-instanser öppnar fragmentreferenser nu fragmentväljaren som innehållsväljare, vilket ger förbättrad funktionalitet som att följa tillåtna modeller för innehållsfragment, söka efter innehållsfragment och en förbättrad helhetsupplevelse.
+   * Detta är i linje med andra användargränssnitt i Adobe och ger enhetlighet.
+   * [I AEM 6.5-miljöer ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) används den befintliga innehållsväljaren fortfarande.
+* **Behållarbeskrivning**: [Behållarkomponenten](/help/implementing/universal-editor/field-types.md#container) som används i [egenskapspanelen,](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel-properties-rail) för att referera till innehåll, stöder nu ett beskrivningsattribut som visas ovanför behållarfälten.
+   * Det här tillägget gör texten tydligare genom att ge författare kontext om de grupperade fält som de redigerar.
 
 ## Andra förbättringar {#other-improvements}
 
-* **Etiketter för träd med långt innehåll har korrigerats:** Ett problem där långa etiketter i panelen **Innehållsträd** stängdes av har åtgärdats
-   * Detta säkerställer att dra och släpp-handtag alltid är synliga vid ändring av ordningen.
-* **Långa egenskapsetiketter har korrigerats:** Ett fel där etiketter för långa fält i panelen **Egenskaper** överlappade med fältvalideringsinformation har åtgärdats
-* **Vågrät rullning i egenskapspanelen:** Korrigerade ett fel där breda element i panelen **Egenskaper** orsakade vågrät rullning
-* **Åtgärdat inaktivt verktygsfält vid meddelanden:** Det översta **Adobe Experience Cloud**-verktygsfältet fungerar nu helt när [popup](https://spectrum.adobe.com/page/toast/)-meddelanden visas.
-* **Förbättrad stabilitet:** Felgränser har lagts till för att hantera oväntade värden, vilket förhindrar att hela användargränssnittet kraschar när en enskild återgivare eller validerare misslyckas, vilket förbättrar tillförlitligheten
+* **Rich Text Field Synchronization**: Synkroniseringen av Raw- och renderat innehåll i RTF-fält på egenskapspanelen har förbättrats, vilket åtgärdar problem i Edge Delivery Services där RTF-innehåll och renderad representation kan skilja sig åt.
+* **Redigeringslägeshändelser**: Den universella redigeraren genererar nu redigeringslägeshändelser, inklusive efter att fjärrprogram har lästs in på nytt.
