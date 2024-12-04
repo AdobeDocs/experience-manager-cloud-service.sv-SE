@@ -4,9 +4,9 @@ description: På den här sidan finns en översikt över beredskapsfasen i Cloud
 exl-id: 2583985b-0358-433c-9d31-38e2c60dc3dc
 feature: Migration
 role: Admin
-source-git-commit: f86d681c8f8cb6d602058ef30b648c53ff7bad69
+source-git-commit: 3a0576e62518240b89290a75752386128b1ab082
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Följ stegen nedan för att navigera till beredskapsfasen:
    ![Hämta överföringsnyckel](/help/journey-migration/cloud-acceleration-manager/assets/readiness-3b.png)
 
    >[!IMPORTANT]
-   >Rapporten kan fortfarande överföras manuellt, men med Överföringsnyckel effektiviseras åtgärden. Observera att rapporten inte kan överföras manuellt om du är i webbläsarens Incognito-läge.
+   >Rapporten kan fortfarande överföras manuellt, men med Överföringsnyckel effektiviseras åtgärden. Observera att rapporten inte kan överföras manuellt om den är ungefär 200 MB eller större. Rapporten kan inte heller överföras i webbläsarens Incognito-läge.
 
 1. När en ny rapport har överförts kan du se rapporten Best Practices Analysis i CAM.
 

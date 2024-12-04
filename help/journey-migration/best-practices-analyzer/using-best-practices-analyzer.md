@@ -4,10 +4,10 @@ description: Lär dig hur du använder Best Practices Analyzer för att förstå
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
 feature: Migration
 role: Admin
-source-git-commit: 9f5d7ee97da1c92d3a3d4573fa3ec737356f54a9
+source-git-commit: 3a0576e62518240b89290a75752386128b1ab082
 workflow-type: tm+mt
-source-wordcount: '2701'
-ht-degree: 31%
+source-wordcount: '2724'
+ht-degree: 30%
 
 ---
 
@@ -85,6 +85,9 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
 >[!NOTE]
 >Du kan välja att hoppa över den automatiska överföringen till CAM genom att välja **Hoppa över automatisk rapportöverföring till CAM**. Om du väljer att hoppa över måste du hämta BPA-rapporten manuellt som en kommaseparerad värdefil och sedan överföra filen i CAM. Du bör använda alternativet för överföringsnyckel eftersom det effektiviserar åtgärden.
+
+>[!IMPORTANT]
+>Vid manuell överföring till CAM begränsas rapportstorlekarna till cirka 200 MB. För större rapporter måste du utnyttja den automatiska överföringen.
 
 1. Knappen **Generera** aktiveras när en giltig nyckel anges. Klicka på **Generera** för att initiera rapportgenerering.
 
