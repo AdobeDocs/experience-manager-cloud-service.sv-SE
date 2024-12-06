@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9d169ad7a2982ee44d9b47a418d50b2806942ce2
+source-git-commit: b2852673ad313e5ea6be6dc0ed185d60a46fedeb
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1020'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Om du valde certifikattypen *Adobe hanterat certifikat* slutför du följande st
 
 Du måste lägga till och verifiera en CNAME för att kunna verifiera den domän som används.
 
-När en `CNAME`- eller A-post har etablerats dirigeras all Internettrafik för domänen till den plats där den pekar. Om den platsen inte har etablerats för att betjäna trafiken uppstår ett driftstopp. Om innehållet inte har testats kan det finnas fel i det. Det här är orsaken till att det här steget alltid utförs när testningen är klar och du är redo att börja publicera.
+En `CNAME`-posttyp eller en `A`-posttyp dirigerar all Internettrafik för domänen till den plats där den pekar. Om den platsen inte har etablerats för att betjäna trafiken uppstår ett driftstopp. Om innehållet inte har testats kan det finnas fel i det. Det här är orsaken till att det här steget alltid utförs när testningen är klar och du är redo att börja publicera.
 
 Om du vill konfigurera de här inställningarna måste du kontrollera om en `CNAME`- eller en apex-post måste konfigureras så att den pekar ditt anpassade domännamn mot Cloud Manager domännamn. Följande avsnitt i det här dokumentet kan hjälpa dig att avgöra vilken typ av post som passar din DNS-konfiguration.
 
@@ -130,7 +130,7 @@ Lägg till följande `A`-poster i domänens DNS-inställningar via din domänlev
 
 >[!TIP]
 >
->*CNAME* eller *En post* kan anges på den styrande DNS-servern för att spara tid.
+>*CNAME-posten* eller *En post* kan anges på den styrande DNS-servern för att spara tid.
 
 <!--
 ![Customer managed certificate steps](/help/implementing/cloud-manager/assets/cdn/cdn-create-customer-cert.png)
