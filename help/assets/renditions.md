@@ -4,9 +4,9 @@ description: Läs om hur AEM Assets och Dynamic Media förenklar effektiv bildha
 exl-id: 006dc493-c400-4d0f-b314-c1978582b7fb
 feature: Renditions
 role: User
-source-git-commit: a3a6456dec178c36c9fe8acfb6f98915fc86e490
+source-git-commit: eb5886b5ed6a6f5b52303b4fccf5c266178b36f8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -25,12 +25,22 @@ Dynamic Media bildförinställningar och renderingar av Smart Crop främjar syst
 ## Statiska återgivningar {#static-renditions}
 
 Statiska återgivningar är förgenererade versioner av digitala resurser, som vanligtvis skapas vid tillgångsintag eller ändring. Dessa renderingar är optimerade för specifika syften och plattformar, som webbminiatyrer, mobilvänliga format för responsiv design eller högupplösta versioner för utskrift, vilket ger en effektiv och enhetlig upplevelse.
-Lär dig [hur du visar och hämtar ](#view-dynamic-renditions) statiska återgivningar i [!DNL Experience Manager Assets].
+Lär dig hur du [visar och hämtar statiska återgivningar](#view-and-download-static-renditions) i Experience Manager Assets.
+
+### Visa och hämta statiska återgivningar{#view-and-download-static-renditions}
+
+Följ de här stegen för att visa resursåtergivningarna och hämta dem:
+
+1. I Assets-vyn klickar du på **Assets**, navigerar till en mapp, väljer en resurs och klickar på **Information**.
+1. Klicka på återgivningens ikon som finns i den högra rutan.
+1. Markera en återgivning om du vill förhandsgranska den och klicka på ![hämtningsikonen](/help/assets/assets/download-icon.svg) för att hämta den.
+
+   ![Visa och hämta dynamiska återgivningar](/help/assets/assets/view-download-static-rendition.png)
 
 ## Dynamiska renderingar {#dynamic-renditions}
 
 Dynamiska återgivningar är anpassade versioner av resurser som skapats i realtid för att uppfylla specifika behov, som att ändra storlek på bilder baserat på enhetsupplösning eller beskära för att passa olika proportioner.
-Med dessa renderingar kan organisationer leverera personaliserade och optimerade upplevelser till olika målgruppsbehov. Du kan visa och hämta dynamiska återgivningar i [!DNL Experience Manager Assets].
+Med dessa renderingar kan organisationer leverera personaliserade och optimerade upplevelser till olika målgruppsbehov. Du kan visa och hämta dynamiska återgivningar i Experience Manager Assets.
 
 ## Dynamic Media renderingar {#dynamic-media-renditions}
 

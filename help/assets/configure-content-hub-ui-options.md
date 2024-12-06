@@ -2,7 +2,7 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 794d8f51f0a44b708538c491b8945c564382f1c5
+source-git-commit: deeb1487ce51f2a91e556b32f9db2a644656d828
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -73,6 +73,8 @@ Som administratör hanterar du följande konfigurationsalternativ för dina anv�
 * [Varumärke](#configure-branding-content-hub)
 
 * [Assets har gått ut](#expired-assets-content-hub)
+
+* [Återgivningar](#renditions-content-hub)
 
 * [Anpassade länkar](#configure-custom-links-content-hub)
 
@@ -165,7 +167,6 @@ Du kan också konfigurera de viktiga metadatafält som du behöver visa på **re
 
 Klicka på ![redigera](/help/assets/assets/edit-content-hub.svg) som är tillgänglig bredvid varje tillgänglig egenskap om du vill göra nödvändiga ändringar eller klicka på ![ta bort](/help/assets/assets/delete-content-hub.svg) om du vill ta bort en befintlig metadataegenskap. Klicka på **Spara** när du har gjort alla ändringar för att tillämpa ändringarna.
 
-
 ### Sök {#configure-metadata-search-content-hub}
 
 Administratörer kan definiera metadatafält som söks igenom när en användare anger ett sökvillkor i Content Hub. Utför följande steg:
@@ -223,6 +224,23 @@ Om administratören har aktiverat nedladdning kan Content Hub-användarna även 
 
 Om synligheten för utgångna resurser är aktiverad markeras även resurser som förfaller inom 15 dagar med meddelandet `Expiring in n days` på tillgångskortet.
 
+### Återgivningar {#renditions-content-hub}
+
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+
+Content Hub tillåter hämtning av statiska återgivningar. Statiska återgivningar är olika representationer av en resurs ursprungliga fil som genereras internt. Exempel är miniatyrbilder eller mobiloptimerade renderingar. Administratörer kan hantera och kontrollera tillgängligheten för resursrenderingar och hantera om du kan hämta originalresurser eller inte.
+
+Gör så här:
+
+Klicka på **[!UICONTROL Renditions]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub). Följande alternativ är tillgängliga:
+
+* Aktivera växlingsknappen [!UICONTROL Enable availability of static renditions] för att göra alla statiska återgivningar synliga på Content Hub.
+
+* Aktivera eller inaktivera **[!UICONTROL Allow users to download original assets]** för att kontrollera tillgängligheten för hämtning av originalresurser.
+
+  ![Konfigurera renderingar på Content Hub](assets/config-renditions.png)
+
+Mer information om hur du visar och hämtar statiska återgivningar i Content Hub finns i [Hämta resurser i Content Hub](/help/assets/download-assets-content-hub.md).
 
 ### Anpassade länkar {#configure-custom-links-content-hub}
 
