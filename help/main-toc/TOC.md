@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 47ee6803146acd93ed62b7eef1419d52f870ae90
+source-git-commit: 9f376f64689855af21d72af010d8defb82ccac43
 workflow-type: tm+mt
-source-wordcount: '5890'
+source-wordcount: '5895'
 ht-degree: 2%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 2%
          + [Versionsinformation om underhåll för 2024.3.0](/help/release-notes/maintenance/2024/2024-3-0.md)
       + 2023 {#2023}
          + [](/help/release-notes/maintenance/2023/2023-12-0.md)
-         + [](/help/release-notes/maintenance/2023/2023-11-0.md)
+         + [Versionsinformation om underhåll för 2023.11.0](/help/release-notes/maintenance/2023/2023-11-0.md)
          + [Versionsinformation om underhåll för 2023.10.0](/help/release-notes/maintenance/2023/2023-10-0.md)
          + [Versionsinformation om underhåll för 2023.9.0](/help/release-notes/maintenance/2023/2023-9-0.md)
          + [Versionsinformation om underhåll för 2023.8.0](/help/release-notes/maintenance/2023/2023-8-0.md)
@@ -106,12 +106,12 @@ ht-degree: 2%
          + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023-6-0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
-         + [Maintenance Release Notes for 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
+         + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
 
-   + {#cloud-manager}
+   + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
-         + [Release Notes for 2024.11.0](/help/implementing/cloud-manager/release-notes/2024/2024-11-0.md)
+         + [Versionsinformation för 2024.11.0](/help/implementing/cloud-manager/release-notes/2024/2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/implementing/cloud-manager/release-notes/2024/2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/implementing/cloud-manager/release-notes/2024/2024-8-0.md)
@@ -219,7 +219,7 @@ ht-degree: 2%
    + [Vad är Nytt?](/help/release-notes/what-is-new.md)
    + [Betydande förändringar i AEM Cloud Service](/help/release-notes/aem-cloud-changes.md)
    + [Föråldrade och borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md)
-   + [Förhandsversion - kanal](/help/release-notes/prerelease.md)
+   + [Prerelease Channel](/help/release-notes/prerelease.md)
 + Dokumentskydd {#security}
    + [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md)
    + [Konfigurera avancerat nätverk för AEM as a Cloud Service](/help/security/configuring-advanced-networking.md)
@@ -532,8 +532,8 @@ ht-degree: 2%
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
       + [Översätta resurser](/help/assets/translate-assets.md)
       + [Sök efter ansikten](/help/assets/search-facets.md)
-      + [Assets HTTP API](/help/assets/mac-api-assets.md)
-      + [Content Fragments support in Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
+      + [ASSETS HTTP API](/help/assets/mac-api-assets.md)
+      + [Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
       + [Uppkopplad Assets](/help/assets/use-assets-across-connected-assets-instances.md)
       + [Generera renderingar endast för placering](/help/assets/configure-fpo-renditions.md)
       + [Resursrapporter](/help/assets/asset-reports.md)
@@ -645,16 +645,16 @@ ht-degree: 2%
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
       + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
       + [Utbyggbarhet för användargränssnittet i AEM Assets View](/help/assets/aem-assets-view-ui-extensibility.md)
    + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Överföra eller importera varumärkesgodkända mediefiler till Content Hub](/help/assets/upload-brand-approved-assets.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
-      + [Approve assets for Content Hub](/help/assets/approve-assets-content-hub.md)
-      + [Search assets in Content Hub](/help/assets/search-assets-content-hub.md)
-      + [Asset properties](/help/assets/asset-properties-content-hub.md)
+      + [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md)
+      + [Söka efter resurser i Content Hub](/help/assets/search-assets-content-hub.md)
+      + [Resursegenskaper](/help/assets/asset-properties-content-hub.md)
       + [Dela resurser i Content Hub](/help/assets/share-assets-content-hub.md)
       + [Hämta resurser med Content Hub](/help/assets/download-assets-content-hub.md)
       + [Hantera licensierade Assets på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md)
@@ -767,18 +767,18 @@ ht-degree: 2%
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
                + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
-               + [Anropa tjänstförbättringar i Visual Rule Editor för formulär som baseras på kärnkomponenter](/help/forms/invoke-service-enhancements-rule-editor.md)
+               + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
             + {#create-and-use-custom-function-core-component}
-               + [Introduction to Custom Functions for Adaptive Forms based on Core Components](/help/forms/create-and-use-custom-functions.md)
+               + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
                + [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md)
                + [Exempel på anpassade funktioner för ett adaptivt formulär baserade på kärnkomponenter](/help/forms/custom-function-core-components-use-cases.md)
             + Introduktion till Forms Portal och dess komponenter{#introduction-to-forms-portal}
                + [Introduktion till komponenten Forms Portal](/help/forms/configure-forms-portal.md)
                + [Visa formulär på webbplatssidan med komponenten Sök och lista](/help/forms/list-forms-on-sites-page.md)
-               + [Save and list forms as drafts on Sites page using the Drafts &amp; Submissions component](/help/forms/save-core-component-based-form-as-draft.md)
-               + [Add form links to Sites page using the Link component](/help/forms/add-form-link-to-aem-sites-page.md)
-      + {#authoring-adaptive-forms-foundation-components}
+               + [Spara och lista formulär som utkast på webbplatssidan med komponenten Utkast och inskickningar](/help/forms/save-core-component-based-form-as-draft.md)
+               + [Lägga till formulärlänkar på webbplatssidan med hjälp av komponenten Länk](/help/forms/add-form-link-to-aem-sites-page.md)
+      + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera PDF forms till adaptiv Forms {#afcs}
             + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)
             + [Konvertera ett befintligt PDF-formulär till ett adaptivt formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)
@@ -1190,7 +1190,7 @@ ht-degree: 2%
       + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
       + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
       + [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-      + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
+      + [AEM Rapid Development Environments](/help/implementing/developing/introduction/rapid-development-environments.md)
       + [AEM as a Cloud Service Development Guidelines](/help/implementing/developing/introduction/development-guidelines.md)
       + [AEM as a Cloud Service Developer Console (Beta)](/help/implementing/developing/introduction/aem-developer-console.md)
       + [Loggning](/help/implementing/developing/introduction/logging.md)
@@ -1199,9 +1199,9 @@ ht-degree: 2%
       + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
       + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
       + [OpenAPI-baserade API:er](/help/implementing/developing/open-api-based-apis.md)
-      + [Generating Access Tokens for Server Side APIs](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
+      + [Genererar åtkomsttoken för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md)
       + [Genererar åtkomsttoken för API:er på serversidan (äldre)](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis-legacy.md)
-      + [Quick Site Creation and Front-End Customization](/help/implementing/developing/introduction/quick-site-creation.md)
+      + [Skapa snabbt webbplatser och anpassa gränssnittet](/help/implementing/developing/introduction/quick-site-creation.md)
       + [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md)
       + [Anpassa webbplatsmallar och teman](/help/implementing/developing/introduction/customizing-site-templates-themes.md)
       + [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
@@ -1313,16 +1313,16 @@ ht-degree: 2%
       + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
       + Hantera sökning i Forms {#manage-search-forms}
          + [Configuring Search Forms](/help/implementing/developing/extending/search-forms.md)
-         + [Configure search filters for Inbox](/help/implementing/developing/extending/configure-inbox-search-rail.md)
+         + [Konfigurera sökfilter för Inkorgen](/help/implementing/developing/extending/configure-inbox-search-rail.md)
       + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
       + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
       + [Konfigurera RTE för att skapa tillgängliga webbplatser](/help/implementing/developing/extending/rte-accessible-content.md)
       + [Utöka sidredigering](/help/implementing/developing/extending/page-authoring.md)
       + [Utöka konsoler](/help/implementing/developing/extending/consoles.md)
       + [Utöka sidegenskaper](/help/implementing/developing/extending/page-properties.md)
-      + [Extending the Bulk Editor](/help/implementing/developing/extending/bulk-editor.md)
-      + [Extending MSM](/help/implementing/developing/extending/msm.md)
-      + {#internationalization}
+      + [Utöka gruppredigeraren](/help/implementing/developing/extending/bulk-editor.md)
+      + [Utöka MSM](/help/implementing/developing/extending/msm.md)
+      + Internationalisering{#internationalization}
          + [Internationalisering av komponenter](/help/implementing/developing/extending/i18n/components.md)
          + [Internationaliserar gränssnittssträngar](/help/implementing/developing/extending/i18n/dev.md)
          + [Extraherar strängar för översättning](/help/implementing/developing/extending/i18n/extract.md)
