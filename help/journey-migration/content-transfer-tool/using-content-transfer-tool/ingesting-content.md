@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 114b7e795df6267d76d1bd923a7dff8826c67029
+source-git-commit: 550d84f43cba472d74c7be6323bd69ba808c96f8
 workflow-type: tm+mt
-source-wordcount: '3296'
+source-wordcount: '3322'
 ht-degree: 1%
 
 ---
@@ -64,8 +64,9 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
    >[!IMPORTANT]
    > Du kan bara initiera en inmatning till målmiljön om du tillhör den lokala gruppen **AEM administratörer** i målserverns författartjänst. Om du inte kan påbörja ett inlägg kan du läsa [Det går inte att påbörja inmatningen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
 
-1. När du har valt alternativ för intag visas en uppskattning av dess varaktighet. Detta är en uppskattning av bästa möjliga insats baserad på historiska data om liknande inmatningar.
+1. När du har valt ett alternativ för intag kan en uppskattning av dess varaktighet visas. Detta är en uppskattning av bästa möjliga insats baserad på historiska data om liknande inmatningar.
 
+   * Den här uppskattningen beräknas inte eller visas inte för **icke-rensning**-frågor eftersom CAM inte vet hur mycket innehåll som finns på målsystemet i det här fallet.
    * Den här uppskattningen beräknas och visas endast om värdena för Kontrollera storlek för extraheringen har samlats in och är tillgängliga.
    * Detta värde är en uppskattning och bör inte betraktas som exakt, även om det beräknas på ett intelligent sätt. Olika faktorer kan ändra den faktiska varaktigheten.
    * Det här värdet är även tillgängligt i dialogrutan för varaktighet som du kommer åt via åtgärden **Visa varaktighet** för det aktuella inmatningen när inmatningen körs.
