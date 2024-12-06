@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: e5e0606c83f144f92f9ae57e5380a30389e8df1b
+source-git-commit: 4e65a0fb32273548860731c09e27cb58fab93ab4
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1377'
 ht-degree: 0%
 
 ---
@@ -241,7 +241,7 @@ data:
 
 ## Svarsomvandlingar {#response-transformations}
 
-Med reglerna för svarsomvandling kan du ange och ta bort rubriker för CDN:ens utgående svar. Se även exemplet ovan för att referera till en variabel som tidigare angetts i en omformningsregel för begäran.
+Med reglerna för svarsomvandling kan du ange och ta bort rubriker för CDN:ens utgående svar. Se även exemplet ovan för att referera till en variabel som tidigare angetts i en omformningsregel för begäran. Svarets statuskod kan också anges.
 
 Konfigurationsexempel:
 
@@ -282,6 +282,15 @@ data:
           - type: set
             respHeader: x-resp-header-2
             value: value-set-by-resp-rule-2
+      # Example: setting status code
+      - name: status-code-rule
+        when:
+          reqProperty: path
+          like: status-code
+        actions:
+          - type: set
+            respProperty: status
+            value: '410'        
 ```
 
 **Åtgärder**
@@ -291,6 +300,7 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
 | **uppsättning** | reqHeader, värde | Ställer in en angiven rubrik på ett givet värde i svaret. |
+|          | respProperty, värde | Anger en svarsegenskap. Stöder bara egenskapen &quot;status&quot; för att ange statuskoden. |
 | **unset** | respHeader | Tar bort en angiven rubrik från svaret. |
 
 ## Väljare för ursprung {#origin-selectors}
