@@ -3,19 +3,20 @@ title: Assets Prime
 description: Läs mer om viktiga aspekter av Assets Prime, t.ex. viktiga fördelar, användartyper och behörigheter.
 feature: Asset Management
 role: User, Admin
-source-git-commit: f033efd954ea7f9d27a891bfb9c0226e9d9c1432
+exl-id: 012f94c5-b1c3-4799-8eaf-af68d06c036f
+source-git-commit: 92faabc50ce4b83ad1015bbbadeac416d66c3b0b
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
 
 # [!DNL Assets] as a Cloud Service Prime  {#assets-prime}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Innehållsnav](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets utvecklardokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
 
-![AEM Assets Prime-bannerbild](/help/assets/assets/aem-assets-prime-package-banner.png)
+![AEM Assets Prime banner image](/help/assets/assets/aem-assets-prime-package-banner.png)
 
 Assets as a Cloud Service Prime innehåller ett lättviktigt DAM som gör att du kan utföra olika viktiga funktioner, som:
 
@@ -35,6 +36,12 @@ Assets as a Cloud Service Prime innehåller ett lättviktigt DAM som gör att du
 
 * **Dynamic Media (tillägg)**: Verktyg för att omvandla och leverera bilder, videor och annat framväxande innehåll för interaktiva multimedieupplevelser för alla typer av enheter i stor skala.
 
+  >[!NOTE]
+  >
+  >Dynamic Media med OpenAPI-funktioner, som ger dig tillgång till grundläggande bildmodifieringar som rotering, beskärning (endast manuellt - ingen smart beskärning), vändning, storlek, preferwebp, höjd, bredd, kvalitet, format och adaptiv videoströmning, finns också i Assets Prime. Kontakta Adobe kontoteam för mer information.
+
+1. [Skapa ett nytt program](/help/journey-onboarding/create-program.md).
+
 I takt med att DAM-behoven växer och du behöver fler funktioner, som UI-utökningsmöjligheter, API-driven automatisering och anpassad koddistribution, måste du överväga att uppgradera till [Assets Ultimate](/help/assets/assets-ultimate-overview.md).
 
 Den här artikeln innehåller ett komplett arbetsflöde för att aktivera Assets as a Cloud Service Prime.
@@ -43,7 +50,7 @@ Den här artikeln innehåller ett komplett arbetsflöde för att aktivera Assets
 
 Aktivera Assets Prime när du skapar ett nytt program med Cloud Manager. Utför följande steg:
 
-1. Logga in som systemadministratör i Cloud Manager. Se till att du väljer rätt organisation när du loggar in.
+1. Logga in på Cloud Manager som systemadministratör. Se till att du väljer rätt organisation när du loggar in.
 
    >[!NOTE]
    >
@@ -51,7 +58,7 @@ Aktivera Assets Prime när du skapar ett nytt program med Cloud Manager. Utför 
 
 1. [Skapa ett nytt program](/help/journey-onboarding/create-program.md).
 
-   När du skapar det nya programmet väljer du **[!UICONTROL Assets Prime]** på fliken **[!UICONTROL Solutions & Add-ons]**. Du kan också expandera **[!UICONTROL Assets Prime]** och välja **[!UICONTROL Content Hub]** för att aktivera [innehållsnav](/help/assets/product-overview.md) för resursdistribution.
+   Välj **[!UICONTROL Assets Prime]** på fliken **[!UICONTROL Solutions & Add-ons]** när du skapar det nya programmet. Du kan också expandera **[!UICONTROL Assets Prime]** och välja **[!UICONTROL Content Hub]** för att aktivera [Content Hub](/help/assets/product-overview.md) för resursdistribution.
 
    ![AEM Assets Ultimate](assets/aem-assets-prime.png)
 
@@ -86,7 +93,7 @@ Din AEM as a Cloud Service-instans på Admin Console innehåller följande produ
 * [AEM Assets Power Users](#onboard-power-users)
 
 
-![AEM Assets-produktprofiler](assets/aem-assets-product-profiles.png)
+![AEM Assets produktprofiler](assets/aem-assets-product-profiles.png)
 
 Du kan börja lägga till användare eller användargrupper i produktprofilerna för AEM Assets Collaborator Users och AEM Assets Power Users. Mer information finns i [Anlita användare av AEM Assets Collaborator](#onboard-collaborator-users) och [Anlita AEM Assets Power-användare](#onboard-power-users).
 
@@ -121,24 +128,24 @@ Anlita medarbetare:
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
 
-1. Klicka på Medarbetarnas användarprofil och klicka på **[!UICONTROL Add users]** för att lägga till användaren i produktprofilen.
-   ![Användarens produktprofil](assets/aem-assets-collaborator-user-permissions.png)
+1. Klicka på produktprofilen för medarbetare och klicka på **[!UICONTROL Add users]** för att lägga till användaren i produktprofilen.
+   ![Användarproduktprofil](assets/aem-assets-collaborator-user-permissions.png)
 
-1. Klicka på **[!UICONTROL Save]** för att spara ändringarna.
+1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 
 Du kan även komma åt och visa de tjänster som tilldelats till Collaborator-användare, vilket visas i följande bild:
 
 ![Tjänster för samarbetspartners](assets/aem-assets-collaborator-users.png)
 
-Tjänsterna `Adobe Express` och `AEM Assets Collaborator Users` är aktiverade som standard. Du kan slå av och på växlingsknappen enligt dina önskemål, men Adobe rekommenderar att du använder de standardtjänster som är aktiverade för produktprofilerna.
+`Adobe Express` och `AEM Assets Collaborator Users` tjänster är aktiverade som standard. Du kan stänga av och sätta på enligt dina önskemål, men Adobe rekommenderar att du använder standardtjänsterna som är aktiverade för produktprofilerna.
 
-## Inbyggd AEM Assets Power-användare {#onboard-power-users}
+## Införliva AEM Assets Power-användare {#onboard-power-users}
 
-AEM Assets Power-användare har tillgång till alla AEM Assets-funktioner, däribland hantering av resurser, behörigheter, metadata och den övergripande styrningen och automatiseringen av digitala resurser. De kan arbeta med resurser från Experience Manager via integreringar av resurser som är tillgängliga för ditt företag i andra program i Adobe och utanför Adobe, skapa och redigera resurser med hjälp av inbyggda Adobe Express- och Firefly-funktioner som använder professionellt utformade mallar, varumärkespaket, Adobe Stock-resurser och så vidare, och få tillgång till och utnyttja godkända resurser från ditt företag via AEM Assets Content Hub-portalen.
+AEM Assets Power-användare har tillgång till alla AEM Assets-funktioner, inklusive hantering av resurser, behörigheter, metadata och övergripande styrning och automatisering av digitala resurser, kan arbeta med resurser från Experience Manager via integreringar av Assets som är tillgängliga för din organisation i andra Adobe- och icke-Adobe-program, skapa och redigera resurser med hjälp av inbyggd Adobe Express och Firefly, och utnyttja professionellt utformade mallar, varumärkeskit, Adobe Stock-resurser och så vidare, samt få tillgång till och utnyttja godkända resurser från din organisation via Content Hub portal.
 
-Så här registrerar du privilegierade användare:
+Så här skaffar du Power-användare:
 
-1. Få åtkomst till Experience Manager Assets produktprofiler genom att klicka på produktnamnet AEM som molntjänst i listan över produkter i Admin Console.
+1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
