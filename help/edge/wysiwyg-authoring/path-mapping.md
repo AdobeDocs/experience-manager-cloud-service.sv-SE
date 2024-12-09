@@ -3,13 +3,13 @@ title: Banmappning för Edge Delivery Services
 description: Lär dig hur du mappar sidsökvägar som används i AEM till offentliga sidsökvägar som används på webbplatsen och styr vilket innehåll som publiceras till Edge Delivery Services.
 feature: Edge Delivery Services
 role: User
-source-git-commit: 2727744f276ee5facae718a987dcc6dc54d4e917
+exl-id: 3d68135d-e84c-4bf4-93d1-38a0be70ce4a
+source-git-commit: 01966d837391d13577956a733c2ee7dc02f88103
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # Banmappning för Edge Delivery Services {#path-mapping}
 
@@ -20,7 +20,7 @@ Lär dig hur du mappar sidsökvägar som används i AEM till offentliga sidsökv
 Om du vill kunna skapa WYSIWYG-innehåll med AEM och publicera det till Edge Delivery Services måste du konfigurera projektets sökvägsmappning. Mappningen har två syften.
 
 * Den mappar och skapar en relation mellan de sidsökvägar som används i AEM och de offentliga sidsökvägar som används på webbplatsen.
-* Den styr vilket innehåll (sidor, ark, resurser osv.) som ska användas publiceras på Edge Delivery Services.
+* Det styr vilket innehåll (sidor, ark, resurser osv.) som publiceras till Edge Delivery Services.
 
 Sökvägsmappningen måste konfigureras individuellt för varje projekt och enligt projektets innehåll och URL-struktur. Den används av AEM vid innehållspublicering och vid redigering av innehåll i [Universal Editor.](/help/sites-cloud/authoring/universal-editor/navigation.md)
 
@@ -79,7 +79,7 @@ Sökvägsmappningar kan konfigureras på ett av två sätt beroende på hur proj
 
    ```text
    curl --request POST \
-     --url https://admin.hlx.page/config/{org}/sites/{site}/public.json \
+     --url https://admin.aem.page/config/{org}/sites/{site}/public.json \
      --header 'Content-Type: application/json' \
      --header 'x-auth-token: ......' \
      --data '{

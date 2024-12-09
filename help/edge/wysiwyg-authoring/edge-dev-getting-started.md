@@ -4,7 +4,7 @@ description: Den här guiden hjälper dig att komma igång med en ny Adobe Exper
 feature: Edge Delivery Services
 exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
 role: Admin, Architect, Developer
-source-git-commit: 13bde08db33ff4b81a6e76cad91bb5ea257ab195
+source-git-commit: 01966d837391d13577956a733c2ee7dc02f88103
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%
@@ -180,7 +180,7 @@ När du är klar med redigeringen av den nya webbplatsen med Universal Editor ka
 
 1. Öppna en ny flik i samma webbläsare och navigera till URL:en för den nya platsen.
 
-   * `https://main--<repository-name>--<owner>.hlx.page`
+   * `https://main--<repository-name>--<owner>.aem.page`
 
 1. Se innehållet publiceras.
 

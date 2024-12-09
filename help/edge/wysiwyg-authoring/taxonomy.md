@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar taxonomidata för att använda taggar med 
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 017982e4-a4c8-4097-8751-9619cc4639d0
-source-git-commit: 13bde08db33ff4b81a6e76cad91bb5ea257ab195
+source-git-commit: 01966d837391d13577956a733c2ee7dc02f88103
 workflow-type: tm+mt
 source-wordcount: '845'
 ht-degree: 0%
@@ -132,7 +132,7 @@ När taxonomin publicerats kan informationen utnyttjas av den universella redige
 
 Du kan komma åt taxonomin som JSON-data på följande adress.
 
-`https://<branch>--<repository>--<owner>.hlx.page/<taxonomy-json-name>.json`
+`https://<branch>--<repository>--<owner>.aem.page/<taxonomy-json-name>.json`
 
 Använd `<taxonomy-json-name>` som du definierade när du [mappar taxonomin till `paths.json`-filen i projektet.](#paths-json) Taxonomidata returneras som JSON-data, som i följande exempel.
 
