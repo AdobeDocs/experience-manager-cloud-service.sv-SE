@@ -3,9 +3,10 @@ title: Pipeline-fria URL-omdirigeringar
 description: Lär dig hur du deklarerar 301- eller 302-omdirigeringar utan åtkomst till Git- eller Cloud Manager-pipelines.
 feature: Dispatcher
 role: Admin
-source-git-commit: 36b7d72f24bd60ad94762c9c9937105bea6e31b6
+exl-id: dacb1eda-79e0-4e76-926a-92b33bc784de
+source-git-commit: c80454204837529007c1fda7eef4486c213eb509
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
@@ -57,9 +58,9 @@ maps:
   path: /content/dam/redirectmaps/mysite-redirectmap.txt
 ```
 
-I en Apache-konfigurationsfil som `rewrites/rewrite.rules` eller `<yourfile>.vhost` måste du sedan konfigurera den mappningsfil som namnegenskapen refererar till (`my.map` i exemplet ovan).
+I en Apache-konfigurationsfil som `rewrites/rewrite.rules` eller `<yourfile>.vhost` måste du sedan konfigurera den mappningsfil som namnegenskapen refererar till (`my.map` i exemplet ovan). När mappningsfilen har lästs in sparas den i det lokala lagringsutrymmet för dispatchern på **fast** plats `/tmp/rewrites/`.
 
-Direktivet `RewriteMap` ska ange att data lagras i ett DBM-filformat (Database Manager) med formatet `sdbm` (simple DBM).
+Direktivet `RewriteMap` ska ange att data lagras i ett DBM-filformat (Database Manager) med formatet `sdbm` (simple DBM), och den fullständiga filsökvägen härleds från lagringsplatsens prefix och namnegenskapen.
 
 Resten av konfigurationen beror på formatet för `redirectmap.txt`. Det enklaste formatet som visas i exemplet nedan är en till en mappning mellan den ursprungliga URL:en och den mappade url:en:
 
