@@ -4,9 +4,9 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 01966d837391d13577956a733c2ee7dc02f88103
+source-git-commit: fb7da1530f916ec63d5993446fd0c328af09ae7c
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1415'
 ht-degree: 0%
 
 ---
@@ -45,13 +45,13 @@ Följande exempel på offertblock följer den här metoden.
 
 ### Skapa blockdefinition och modell {#create-block-model}
 
-1&amp;punkt; klona GitHub-projektet lokalt som du skapade i [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och öppna det i en valfri redigerare.
+1\. Klona GitHub-projektet lokalt som du skapade i guiden [Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och öppna det i en valfri redigerare.
 
 * Microsoft Code används här för illustrativa ändamål.
 
 ![Klonar projektet](assets/create-block/clone.png)
 
-2&amp;punkt; Redigera filen `component-definition.json` i projektets rot och lägg till följande definition för det nya offertblocket och spara filen.
+2\. Redigera filen `component-definition.json` i projektets rot och lägg till följande definition för det nya offertblocket och spara filen.
 
 >[!BEGINTABS]
 
@@ -83,7 +83,7 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-3&amp;punkt; Redigera filen `component-models.json` i projektets rot och lägg till följande [modelldefinition](/help/implementing/universal-editor/field-types.md#model-structure) för det nya offertblocket och spara filen.
+3\. Redigera filen `component-models.json` i projektets rot och lägg till följande [modelldefinition](/help/implementing/universal-editor/field-types.md#model-structure) för det nya offertblocket och spara filen.
 
 * Mer information om vad som är viktigt att tänka på när du skapar innehållsmodeller finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services ](/help/edge/wysiwyg-authoring/content-modeling.md) .
 
@@ -119,7 +119,7 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-4&amp;punkt; Redigera filen `component-filters.json` i projektets rot och lägg till offertblocket i [filterdefinitionen](/help/implementing/universal-editor/customizing.md#filtering-components) så att blocket kan läggas till i valfritt avsnitt och spara filen.
+4\. Redigera filen `component-filters.json` i projektets rot och lägg till offertblocket i [filterdefinitionen](/help/implementing/universal-editor/customizing.md#filtering-components) så att det kan läggas till i valfritt avsnitt och spara filen.
 
 >[!BEGINTABS]
 
@@ -147,7 +147,7 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-5&amp;punkt; Använd Git för att genomföra ändringarna i din `main`-gren.
+5\. Använd Git för att implementera de här ändringarna i din `main`-gren.
 
 * Att implementera på `main` är bara för illustrativa syften. [Följ bästa praxis](https://www.aem.live/docs/dev-collab-and-good-practices) och använd en pull-begäran för faktiskt projektarbete.
 
@@ -190,13 +190,13 @@ Nu när det grundläggande offertblocket är definierat och implementerat i exem
 
 Nu när du har ett fungerande offertblock kan du formatera det.
 
-1&amp;punkt; återgå till redigeraren för ditt projekt.
+1\. Gå tillbaka till redigeraren för ditt projekt.
 
-2&amp;punkt; Skapa en `quote`-mapp i mappen `blocks`.
+2\. Skapa en `quote`-mapp under mappen `blocks`.
 
 ![Skapa en offertmapp](assets/create-block/new-folder.png)
 
-3&amp;punkt; I den nya `quote`-mappen lägger du till en `quote.js`-fil som implementerar blockdekoration genom att lägga till följande JavaScript och spara filen.
+3\. I den nya mappen `quote` lägger du till en `quote.js`-fil som implementerar blockdekoration genom att lägga till följande JavaScript och spara filen.
 
 >[!BEGINTABS]
 
@@ -218,7 +218,7 @@ export default function decorate(block) {
 
 >[!ENDTABS]
 
-4&amp;punkt; I mappen `quote` lägger du till en `quote.css`-fil för att definiera blockets format genom att lägga till följande CSS-kod och spara filen.
+4\. I mappen `quote` lägger du till en `quote.css`-fil för att definiera blockets format genom att lägga till följande CSS-kod och spara filen.
 
 >[!BEGINTABS]
 
@@ -263,17 +263,17 @@ export default function decorate(block) {
 
 >[!ENDTABS]
 
-5&amp;punkt; Använd Git för att genomföra ändringarna i din `main`-gren.
+5\. Använd Git för att implementera de här ändringarna i din `main`-gren.
 
 * Att implementera på `main` är bara för illustrativa syften. [Följ bästa praxis](https://www.aem.live/docs/dev-collab-and-good-practices) och använd en pull-begäran för faktiskt projektarbete.
 
-6&amp;punkt; återgå till webbläsarfliken i Universal Editor där du redigerade sidan i ditt projekt och läsa in sidan igen för att visa det formaterade blocket.
+6\. Gå tillbaka till webbläsarfliken i Universal Editor där du redigerade sidan i ditt projekt och läs in sidan igen för att visa det formaterade blocket.
 
-7&amp;punkt; se det nu formaterade citattecknet på sidan.
+7\. Se det nu formaterade citattecknet på sidan.
 
 ![Det formaterade citatteckenblocket i den universella redigeraren](assets/create-block/quote-styled.png)
 
-8&amp;punkt; Verifiera att ändringarna flyttades till produktion genom att navigera till den publicerade sidan. Länken liknar `https://<branch>--<repo>--<owner>.aem.page`
+8\. Kontrollera att ändringarna har flyttats till produktion genom att navigera till den publicerade sidan. Länken liknar `https://<branch>--<repo>--<owner>.aem.page`
 
 ![Det publicerade och formaterade citatteckenblocket](assets/create-block/quote-styled-published.png)
 
@@ -344,4 +344,3 @@ Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery
 >[!TIP]
 >
 >En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
-
