@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: a509cb6b2d6fea0d8c53c570c46b1feef2a15191
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,7 @@ Med Content Hub kan större team enkelt hitta relevanta, godkända resurser via 
 
 ## Varför kan jag inte aktivera Content Hub i min Cloud Manager-miljö? {#cannot-enable-content-hub}
 
-Content Hub finns endast i AEM Cloud Manager Production-program, som innehåller en Assets-licens. När du klickar på [Content Hub](/help/assets/deploy-content-hub.md#enable-content-hub) för att aktivera det distribueras det och kopplas till författarproduktionsmiljön för AEM i det programmet. Mer information och krav finns i [Distribuera Content Hub](/help/assets/deploy-content-hub.md).
-
-Det finns ett program för tidig åtkomst till Content Hub i sandlådeprogram/redigeringsmiljöer. Mer information finns i [Introduktion till sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md). Om du vill veta mer om programmet för tidig åtkomst kan du kontakta ditt kontoteam på Adobe.
-
-Content Hub är inte tillgängligt för icke-produktionsmiljöer (stage, dev och så vidare) i det här skedet.
+Content Hub finns endast i AEM Cloud Manager Production-program, som innehåller en Assets-licens (Assets Cloud Service, Assets Ultimate, Assets Prime). När du klickar på [Content Hub](/help/assets/deploy-content-hub.md#enable-content-hub) för att aktivera det distribueras det och kopplas till författarproduktionsmiljön för AEM i det programmet. Mer information och krav finns i [Distribuera Content Hub](/help/assets/deploy-content-hub.md).
 
 ## Jag har aktiverat Content Hub i mitt produktionsprogram/i min produktionsmiljö, kan jag inaktivera det? {#can-i-disable-content-hub}
 
@@ -55,7 +51,9 @@ Du kan utvärdera Content Hub utan att påverka användare/produktionsinnehåll 
 * Admin Console-administratören lägger till [några utvalda användare](/help/assets/deploy-content-hub.md#onboard-content-hub-users) i Content Hub produktprofil, så att de kan starta utvärderingen.
 * När utvärderingen är klar kan AEM användare i författarinstansen ta bort godkännande från testresurser, godkänna produktionsresurser för Content Hub och sedan Admin Console-administratören lägga till alla användare som behöver tillgång till Content Hub och godkänt innehåll. Grattis, din Content Hub finns nu.
 
-Adobe erbjuder också ett program för tidig åtkomst till Content Hub på scenmiljöer - se frågan [Varför kan jag inte aktivera Content Hub på mitt Cloud Manager-program/i min-miljö?](#cannot-enable-content-hub) för mer information.
+Det finns ett program för tidig åtkomst till Content Hub i sandlådeprogram och deras redigeringsmiljöer. Mer information finns i [Introduktion till sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md). Om du vill veta mer om programmet för tidig åtkomst kan du kontakta ditt kontoteam på Adobe.
+
+Content Hub är ännu inte tillgängligt för icke-produktionsmiljöer (stage &amp; dev). Förväntad tillgänglighet för scen-/utvecklingsmiljöer för Assets Ultimate är mars 2025.
 
 ## Varför visas inga resurser när jag har loggat in på Content Hub? {#no-assets-in-content-hub}
 
