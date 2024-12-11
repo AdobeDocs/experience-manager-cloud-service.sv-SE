@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Asset Compute Microservices, Asset Processing, Asset Management
 role: Architect, Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 979c4accca8b271ba2ff0ba176985c94b6d469c7
+source-git-commit: 55ee7f866bcfc4ecc2e203102872af9752240019
 workflow-type: tm+mt
-source-wordcount: '2863'
+source-wordcount: '2846'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,6 @@ Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering).
 
 ### Skapa en standardprofil {#create-standard-profile}
 
-Så här skapar du en standardbearbetningsprofil:
-
 1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]**. Klicka på **[!UICONTROL Create]**.
 1. Ange ett namn som hjälper dig att identifiera profilen unikt när du använder den i en mapp.
 1. Aktivera **[!UICONTROL Create FPO Rendition]** på fliken **[!UICONTROL Image]** om du vill generera FPO-återgivningar. Ange ett **[!UICONTROL Quality]**-värde från 1-100.
@@ -124,8 +122,6 @@ Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade p
 >Du kan inte redigera standardmetadata med de anpassade programmen. Du kan bara ändra anpassade metadata.
 
 ### Skapa en anpassad profil {#create-custom-profile}
-
-Så här skapar du en anpassad profil:
 
 1. Administratörer har åtkomst till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Processing Profiles]** > **[!UICONTROL Create]**.
 1. Klicka på fliken **[!UICONTROL Custom]** på sidan Bearbeta profil och klicka sedan på **[!UICONTROL Add New]**.
