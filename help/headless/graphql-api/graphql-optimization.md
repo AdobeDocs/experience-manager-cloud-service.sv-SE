@@ -4,9 +4,9 @@ description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, s
 exl-id: 67aec373-4e1c-4afb-9c3f-a70e463118de
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: e8f992df5a270e7335af466a524daa013bff5f42
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -82,16 +82,6 @@ Se:
 
 * [Cachelagra beständiga frågor](/help/headless/graphql-api/persisted-queries.md#caching-persisted-queries)
 * [Hantera cache för dina beständiga frågor](/help/headless/graphql-api/graphiql-ide.md#managing-cache)
-
-#### Använd AEM GraphQL-förcachelagring {#use-aem-graphql-pre-caching}
-
-**Rekommendation**
-
-Med den här funktionen kan AEM cache-lagra innehåll ytterligare inom GraphQL-frågeintervallet som sedan kan sammanställas som block i JSON-utdata i stället för rad för rad.
-
-**Ytterligare referens**
-
-Kontakta Adobe för att aktivera den här funktionen för ditt AEM Cloud Service-program och -miljöer.
 
 ### GraphQL Query Optimization {#graphql-query-optimization}
 
