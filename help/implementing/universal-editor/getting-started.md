@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: edef86c67becf3b8094196d39baa9e69d6c81777
+source-git-commit: 8357caf2b0d396f6a1bd7b6160d6b48d8d6c026c
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,17 @@ Lär dig hur du får tillgång till den universella redigeraren och hur du börj
 
 ## Instrument för sidan {#instrument-page}
 
-Tjänsten Universal Editor kräver ett [enhetligt resursnamn (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) för att identifiera och använda rätt serverdelssystem för innehållet i appen som redigeras. Därför krävs ett URN-schema för att mappa tillbaka innehåll till innehållsresurser.
+Universal Editor kräver ett JavaScript-bibliotek för att sidan ska kunna återges och redigeras i redigeraren.
+
+Tjänsten Universal Editor kräver dessutom ett [enhetligt resursnamn (URN)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) för att identifiera och använda rätt serverdelssystem för innehållet i appen som redigeras. Därför krävs ett URN-schema för att mappa tillbaka innehåll till innehållsresurser.
+
+### Inkludera Universal Editor CORS Library {#cors-library}
+
+För att den universella redigeraren ska kunna ansluta till ditt program måste ditt program innehålla Universal Editor CORS-biblioteket. Lägg till följande skript i din app.
+
+```html
+ <script src="https://universal-editor-service.adobe.io/cors.js" async></script>
+```
 
 ### Skapa anslutningar {#connections}
 

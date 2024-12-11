@@ -4,9 +4,9 @@ description: Om du är en AEM utvecklare som är intresserad av hur den universe
 exl-id: d6f9ed78-f63f-445a-b354-f10ea37b0e9b
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: d82a88e5b7337e9d81a91e812f6a90237e80b1ea
 workflow-type: tm+mt
-source-wordcount: '3139'
+source-wordcount: '3160'
 ht-degree: 0%
 
 ---
@@ -150,7 +150,7 @@ Du måste lägga till det nödvändiga JavaScript-biblioteket till sidkomponente
 1. Lägg till JavaScript-biblioteket i slutet av filen.
 
    ```html
-   <script src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"></script>
+   <script src="https://universal-editor-service.adobe.io/cors.js" async></script>
    ```
 
 1. Klicka på **Spara alla** och läs sedan in den universella redigeraren igen.
@@ -160,7 +160,12 @@ Sidan läses nu in med rätt JavaScript-bibliotek så att den universella redige
 >[!TIP]
 >
 >* Biblioteket kan läsas in antingen i sidhuvudet eller i sidfoten.
->* `universal-editor-embedded.js`-biblioteket [ är tillgängligt på NPM](https://www.npmjs.com/package/@adobe/universal-editor-cors) och du kan vara värd för det själv om det behövs eller placera det direkt i programmet.
+
+>[!NOTE]
+>
+>Den tidigare rekommenderade metoden att inkludera JavaScript-biblioteket, `<script src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"></script>` eller via npmjs.com rekommenderas inte längre eftersom paketet har tagits bort.
+>
+>Om ett program fortfarande använder det föråldrade paketet visas en varning i gränssnittet om att ett föråldrat paket identifieras.
 
 ## Definiera en anslutning för att behålla ändringar {#connection}
 
