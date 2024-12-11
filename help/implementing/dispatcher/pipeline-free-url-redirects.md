@@ -4,9 +4,9 @@ description: Lär dig hur du deklarerar 301- eller 302-omdirigeringar utan åtko
 feature: Dispatcher
 role: Admin
 exl-id: dacb1eda-79e0-4e76-926a-92b33bc784de
-source-git-commit: c80454204837529007c1fda7eef4486c213eb509
+source-git-commit: 639a8927fb232f7d4a18e0f49b1221c184066787
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,14 @@ AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adob
 Kärnan i den här funktionen är möjligheten för AEM Apache/Dispatcher att läsa in (eller ladda om) en eller flera omskrivningsfiler som har placerats på en angiven plats i publiceringsdatabasen. Det är viktigt att nämna att hur filerna kommer in ligger utanför den här funktionens omfång, men du kan tänka dig någon av följande metoder:
 
 * Inmatning av omskrivningskartan som en resurs i författarens användargränssnitt och publicering.
-* Installerar [ACS Commons Rewrite Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html), som innehåller ett användargränssnitt för att hantera URL-mappningar och kan även publicera mappningsfilen för omskrivning.
+* Installerar [ACS Commons Rewrite Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html)([minst version 6.7.0 eller senare](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)), som innehåller ett användargränssnitt för att hantera URL-mappningar och kan även publicera mappningsfilen för omskrivning.
 * Full flexibilitet genom att skriva ett anpassat program. Till exempel ett användargränssnitt eller kommandoradsgränssnitt för att hantera URL-mappningar, eller alternativt ett formulär för att överföra en omskrivningskarta, som sedan använder AEM API:er för att publicera omskrivningskartan.
 
 >[!NOTE]
 > Den här funktionen kräver AEM **18311 eller senare**.
+
+>[!NOTE]
+> Funktionens användning av Rewrite Map Manager kräver ACS Commons version **6.7.0 eller senare**.
 
 ## Mappen för omskrivning {#rewrite-map}
 
