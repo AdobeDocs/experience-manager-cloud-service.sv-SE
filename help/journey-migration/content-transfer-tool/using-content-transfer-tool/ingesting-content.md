@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 550d84f43cba472d74c7be6323bd69ba808c96f8
+source-git-commit: 67b04abfc0213ac175afca34b9424dafbe150a25
 workflow-type: tm+mt
-source-wordcount: '3322'
+source-wordcount: '3412'
 ht-degree: 1%
 
 ---
@@ -48,6 +48,9 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 
    >[!NOTE]
    > Om målnivån är `Author` stängs författarinstansen av under den tid som inmatningen pågår och blir otillgänglig för användare (till exempel författare eller alla som utför underhåll). Orsaken är att skydda systemet och förhindra alla ändringar som antingen kan gå förlorade eller orsaka en konflikt i ett intag. Se till att ditt team är medvetna om detta. Observera också att miljön visas i viloläge under författarintaget.
+
+   >[!NOTE]
+   > Om målnivån är `Publish` fortsätter publiceringsinstansen att köras under inmatning.  Men om komprimeringsprocessen körs medan intag sker är det troligt att en konflikt uppstår mellan de två processerna.  Av den anledningen inaktiverar inmatningsprocessen (1) det tidsbestämda skriptet för komprimeringen så komprimeringen inte startar under intaget, och 2) kontrollerar om komprimeringen körs och i så fall väntar på att den ska slutföras innan intaget fortsätter.  Om publiceringsintaget tar längre tid än förväntat bör du kontrollera om det finns relaterade loggsatser i användningsloggarna.
 
    * **Rensa:** Välj värdet `Wipe`
       * Alternativet **Rensa** anger målets startpunkt för importen. Om **Rensa** är aktiverat återställs målet inklusive allt innehåll till den version av AEM som är angiven i Cloud Manager. Om det inte är aktiverat behåller målet sitt aktuella innehåll som startpunkt.
