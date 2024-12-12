@@ -4,9 +4,9 @@ description: AEM har omfattande och kraftfulla API:er som du kan använda för d
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7c2d2fc7b37d70bee4764921a138af6379401064
+source-git-commit: 4182374ea9d603ed53e75511d34fdfcf69829200
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '660'
 ht-degree: 1%
 
 ---
@@ -70,16 +70,21 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 | [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | Standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser |
 | [JSON-exporterare](/help/implementing/developing/components/json-exporter.md) | Leverera innehåll från alla AEM sidor i JSON-datamodellformat |
 | [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md) | Generera JSON-export av komponentinnehåll baserat på ett modellramverk |
-| [Assets API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
-| [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
-| [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md) | Effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementeringar |
-| [Innehållsfragment Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
 | [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) | OpenAPI:er för innehållsfragment och innehållsfragmentmodell |
 | [AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) | Ett HTTP REST API på AEM Edge Delivery Services, utformat för att leverera strukturerat innehåll från innehållsfragment i JSON-format. |
+| [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md) | Effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementeringar |
+|  |  |
+| [Assets API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
+| [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
+| [Innehållsfragment Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
+
+>[!NOTE]
+>
+>Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de berörda begreppen.
 
 ## SPA-specifika API:er {#spa-apis}
 
-AEM SDK-ramverket för redigeraren för enkelsidigt program (SPA) innehåller specifika JavaScript API-referenser.
+AEM Single-Page Application (SPA) Editor SDK-ramverket innehåller specifika JavaScript API-referenser.
 
 | API | Beskrivning |
 |---|---|
