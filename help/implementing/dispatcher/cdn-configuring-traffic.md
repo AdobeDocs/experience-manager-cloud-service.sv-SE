@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 4e65a0fb32273548860731c09e27cb58fab93ab4
+source-git-commit: cb1581e96f1cfeadf6ee37cae4738d9d51177504
 workflow-type: tm+mt
 source-wordcount: '1377'
 ht-degree: 0%
@@ -431,7 +431,7 @@ data:
 Platserna för en omdirigering kan antingen vara stränglitteraler (t.ex. https://www.example.com/page) eller resultatet av en egenskap (t.ex. path) som kan omformas, med följande syntax:
 
 ```
-experimental_redirects:
+redirects:
   rules:
     - name: country-code-redirect
       when: { reqProperty: path, like: "/" }
