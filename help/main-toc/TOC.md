@@ -88,6 +88,7 @@ ht-degree: 2%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2024 {#2024}
+         + [Maintenance Release Notes for 2024.11.0](/help/release-notes/maintenance/2024/2024-11-0.md)
          + [Underhållsinformation för 2024.10.0](/help/release-notes/maintenance/2024/2024-10-0.md)
          + [Underhållsinformation för 2024.9.0](/help/release-notes/maintenance/2024/2024-9-0.md)
          + [Underhållsinformation för 2024.8.0](/help/release-notes/maintenance/2024/2024-8-0.md)
