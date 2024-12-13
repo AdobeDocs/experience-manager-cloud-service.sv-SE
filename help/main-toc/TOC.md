@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 9f376f64689855af21d72af010d8defb82ccac43
+source-git-commit: 6895addee405a33f26b66a436ca7aff99e7ea0aa
 workflow-type: tm+mt
-source-wordcount: '5895'
+source-wordcount: '5914'
 ht-degree: 2%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 2%
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
       + 2024 {#2024}
-         + [Maintenance Release Notes for 2024.11.0](/help/release-notes/maintenance/2024/2024-11-0.md)
+         + [Underhållsinformation för 2024.11.0](/help/release-notes/maintenance/2024/2024-11-0.md)
          + [Underhållsinformation för 2024.10.0](/help/release-notes/maintenance/2024/2024-10-0.md)
          + [Underhållsinformation för 2024.9.0](/help/release-notes/maintenance/2024/2024-9-0.md)
          + [Underhållsinformation för 2024.8.0](/help/release-notes/maintenance/2024/2024-8-0.md)
@@ -98,8 +98,8 @@ ht-degree: 2%
          + [Underhållsinformation för 2024.4.0](/help/release-notes/maintenance/2024/2024-4-0.md)
          + [Versionsinformation om underhåll för 2024.3.0](/help/release-notes/maintenance/2024/2024-3-0.md)
       + 2023 {#2023}
-         + [](/help/release-notes/maintenance/2023/2023-12-0.md)
-         + [Versionsinformation om underhåll för 2023.11.0](/help/release-notes/maintenance/2023/2023-11-0.md)
+         + [Versionsinformation om underhåll för 2023.12.0](/help/release-notes/maintenance/2023/2023-12-0.md)
+         + [](/help/release-notes/maintenance/2023/2023-11-0.md)
          + [Versionsinformation om underhåll för 2023.10.0](/help/release-notes/maintenance/2023/2023-10-0.md)
          + [Versionsinformation om underhåll för 2023.9.0](/help/release-notes/maintenance/2023/2023-9-0.md)
          + [Versionsinformation om underhåll för 2023.8.0](/help/release-notes/maintenance/2023/2023-8-0.md)
@@ -108,7 +108,6 @@ ht-degree: 2%
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
          + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
-
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
@@ -646,7 +645,7 @@ ht-degree: 2%
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
       + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
       + [Utbyggbarhet för användargränssnittet i AEM Assets View](/help/assets/aem-assets-view-ui-extensibility.md)
    + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
@@ -712,6 +711,11 @@ ht-degree: 2%
          + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
          + [Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida](/help/forms/embed-adaptive-form-core-components-external-web-page.md)
          + [Bädda in anpassat formulär baserat på Foundation Components på en extern webbsida](/help/forms/embed-adaptive-form-external-web-page.md)
+         + Integrera adaptiv Forms med Adobe Marketo Engage{#integrate-adaptive-form-with-market-engage}
+            + [Integrera Adobe Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
+            + [Konfigurera ett nytt formulär som ska integreras med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
+            + [Konfigurera Adobe Marketo Engage-datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
+            + [Konfigurera skicka-åtgärden till Marketo Engage för befintliga formulär](/help/forms/submit-adaptive-form-to-marketo-engage.md)
       + Formulärdatamodell {#use-form-data-model}
          + [Koppla AEM Forms till databas eller datakälla](/help/forms/data-integration.md)
          + [Konfigurera datakällor](/help/forms/configure-data-sources.md)
@@ -723,11 +727,6 @@ ht-degree: 2%
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
          + [Utforma XML-schema för ett adaptivt formulär](/help/forms/adaptive-form-xml-schema-form-model.md)
-         + Integrera adaptiv Forms med Adobe Marketo Engage{#integrate-adaptive-form-with-market-engage}
-            + [Integrera Adobe Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
-            + [Konfigurera ett nytt formulär som ska integreras med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
-            + [Konfigurera Adobe Marketo Engage-datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
-            + [Konfigurera skicka-åtgärden till Marketo Engage för befintliga formulär](/help/forms/submit-adaptive-form-to-marketo-engage.md)
    + Adaptiv Forms {#adaptive-forms-authoring}
       + [Skapa ett adaptivt formulär](/help/forms/create-an-adaptive-form.md)
       + [Skapa ett adaptivt formulärfragment](/help/forms/adaptive-form-fragments.md)
@@ -768,7 +767,7 @@ ht-degree: 2%
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
                + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
-               + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
+               + [Anropa tjänstförbättringar i Visual Rule Editor för formulär som baseras på kärnkomponenter](/help/forms/invoke-service-enhancements-rule-editor.md)
             + {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
@@ -964,6 +963,9 @@ ht-degree: 2%
       + [WYSIWYG och dokumentbaserade block](/help/edge/wysiwyg-authoring/wysiwyg-doc-blocks.md)
       + [Sidor med DAM Assets](/help/edge/wysiwyg-authoring/dam-assets.md)
       + [Funktioner för WIP-platser](/help/edge/wysiwyg-authoring/wip-features.md)
+      + [Återanvända kod över flera platser](/help/edge/wysiwyg-authoring/repoless.md)
+      + [Tillförlitlig hantering av flera platser](/help/edge/wysiwyg-authoring/repoless-msm.md)
+      + [Repoless Stage- och Prod-miljöer](/help/edge/wysiwyg-authoring/repoless-stage-prod.md)
    + Dokumentbaserad redigering {#document-authoring}
       + [Redigering](/help/edge/docs/authoring.md)
       + [Massmetadata](/help/edge/docs/bulk-metadata.md)
@@ -1189,10 +1191,10 @@ ht-degree: 2%
       + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
    + Utveckla för AEM as a Cloud Service {#developing}
       + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
-      + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
+      + [AEM Project Repository Structure Package](/help/implementing/developing/introduction/repository-structure-package.md)
       + [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-      + [AEM Rapid Development Environments](/help/implementing/developing/introduction/rapid-development-environments.md)
-      + [AEM as a Cloud Service Development Guidelines](/help/implementing/developing/introduction/development-guidelines.md)
+      + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
+      + [AEM as a Cloud Service riktlinjer för utveckling](/help/implementing/developing/introduction/development-guidelines.md)
       + [AEM as a Cloud Service Developer Console (Beta)](/help/implementing/developing/introduction/aem-developer-console.md)
       + [Loggning](/help/implementing/developing/introduction/logging.md)
       + [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md)
@@ -1311,9 +1313,9 @@ ht-degree: 2%
       + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
       + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
       + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
-      + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
+      + [Customizing the Content Fragment Console and Editor](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
       + Hantera sökning i Forms {#manage-search-forms}
-         + [Configuring Search Forms](/help/implementing/developing/extending/search-forms.md)
+         + [Konfigurera Sök i Forms](/help/implementing/developing/extending/search-forms.md)
          + [Konfigurera sökfilter för Inkorgen](/help/implementing/developing/extending/configure-inbox-search-rail.md)
       + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
       + [Konfigurera RTE-plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md)
