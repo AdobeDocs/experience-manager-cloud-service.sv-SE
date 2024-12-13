@@ -5,9 +5,9 @@ role: User, Leader, Admin, Architect, Developer
 contentOwner: AG
 exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
 feature: Metadata
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 1252814d99927cb8fff81b66f6e7caca92bb6e9a
 workflow-type: tm+mt
-source-wordcount: '1741'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -170,6 +170,19 @@ Så här tar du bort ett metadataformulär från en mapp:
 1. Markera mappen och klicka på **[!UICONTROL Remove]**. Du kan också välja flera mappar i listan.
 
 Du kan också navigera till sidan med mappinformation och välja **[!UICONTROL System mapped Metadata Form]** i fältet **[!UICONTROL Metadata Forms]** för att ta bort det tilldelade metadataformuläret från en mapp.
+
+### Arbeta med komponenten Länk i metadataformulär {#link-component-metadata-form}
+
+Länkkomponenten används för att aktivera externa URL-adresser som lagringslänkar, copyrightinformation, kontaktformulär och så vidare. Om du vill använda länkkomponenten i metadataformulär måste du [konfigurera metadataformuläret](#metadata-forms).
+
+Följ stegen nedan för att använda länkkomponenten i metadataformuläret:
+
+1. Gå till sidan med resursinformation och navigera till **[!UICONTROL Link URL]**.
+1. Lägg till en URL som du vill använda för att omdirigera den valda resursen.
+1. Klicka på **[!UICONTROL Add link]**. Utför någon av följande åtgärder:
+   * Klicka på ikonen ![kopiera](assets/do-not-localize/copy.svg) för att kopiera URL:en.
+   * Klicka på ![redigeringsikonen](assets/do-not-localize/edit.svg) om du vill redigera URL-adressen.
+1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 
 ## Nästa steg {#next-steps}
 
