@@ -4,9 +4,9 @@ description: Lär dig hur borttagning av JWT-inloggningsuppgifter påverkar AEM 
 exl-id: 7c811081-484c-41f7-a289-4e9a10a837b3
 feature: Security
 role: Admin
-source-git-commit: d3c00c33925a23ad5b1080c1e864cfdb5a8d1c1b
+source-git-commit: 18e9daad8bec6749d493994264792c0cd3b55d15
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -64,11 +64,11 @@ När Cloud Manager etablerar AEM as a Cloud Service-miljöer genereras ett Adobe
 
 I det här avsnittet finns svar på de vanligaste frågorna om borttagning av JWT-autentiseringsuppgifter för autogenererade projekt i AEM as a Cloud Service.
 
-**Hur gör jag vilka projekt som genereras automatiskt?**
-Navigera till Adobe Developer Console | Projektavsnitt.  AEM as a Cloud Service autogenererade projekt kommer att ha en låsikon med identifieraren&quot;Automatiskt genererad&quot;.  Autogenererade projekt har formatet AEM-p#####-e##### och skapas av användare med tekniskt konto.
+**Hur gör jag för vilka projekt som genereras automatiskt?**
 
-<img width="439" alt="image" src="https://git.corp.adobe.com/storage/user/16149/files/6b20a8a3-3711-4741-8f2c-ec5e36fe97cc">
+Navigera till Adobe Developer Console | Projektavsnitt.  AEM as a Cloud Service autogenererade projekt kommer att ha en låsikon med identifieraren &quot;Automatiskt genererad&quot;.  Autogenererade projekt har formatet AEM-p#####-e##### och skapas av användare med tekniskt konto.
 
+![Autogenererade projekt](/help/security/assets/jwt-alert.png)
 
 **Vad händer om vi stöter på problem med våra automatiskt genererade projekt?**
 
