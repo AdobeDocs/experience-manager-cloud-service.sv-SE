@@ -2,9 +2,9 @@
 title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner resurser i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
 exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: 95bf82ceead9d06bc0f5720f1a6af945afc27622
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '778'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,12 @@ Följ de här stegen för att automatisera godkännande av nyimporterade resurse
    1. Ändra **[!UICONTROL Field Label]** till _Godkänd Assets_.
    1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:status_.
    1. Ändra standardvärdet till _godkänt_.
+
+1. Ungefär som i steg 6 drar du en **[!UICONTROL Single Line Text Field]** från avsnittet **[!UICONTROL Build Form]** till höger till avsnittet Metadata i formuläret.
+1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
+   1. Ändra **[!UICONTROL Field Label]** till _Aktiveringsmål_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:activationTarget_.
+   1. Ändra standardvärdet till _contenthub_.
 
 1. Klicka på **[!UICONTROL Save]**.
 1. På sidan **[!UICONTROL Metadata Profiles]** väljer du den nya metadataprofilen.
