@@ -3,13 +3,13 @@ title: Återanvända kod över flera platser
 description: Om du har många liknande webbplatser som oftast ser ut och beter sig på samma sätt, men har olika innehåll, ska du lära dig hur du kan dela kod mellan flera webbplatser i en responslös modell.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: e25e21984ebadde7076d95c6051b8bfca5b2ce03
+exl-id: a6bc0f35-9e76-4b5a-8747-b64e144c08c4
+source-git-commit: 7b37f3d387f0200531fe12cde649b978f98d5d49
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1041'
 ht-degree: 0%
 
 ---
-
 
 # Återanvända kod över flera platser {#repoless}
 
@@ -45,7 +45,7 @@ Det finns flera steg för att aktivera felfria funktioner för ditt projekt.
 
 1. [Hämta åtkomsttoken](#access-token)
 1. [Konfigurera konfigurationstjänsten](#config-service)
-1. [Ange åtkomstkontroll](#access-control)
+1. [Lägg till platskonfiguration och tekniskt konto](#access-control)
 1. [Uppdatera AEM](#update-aem)
 1. [Autentisera webbplats](#authenticate-site)
 
@@ -126,9 +126,9 @@ Nå ut till Adobe via din Slack-projektkanal eller utlösa ett supportproblem om
 
 När den offentliga konfigurationen har skapats kan du komma åt den via en URL som liknar `https://main--<your-aem-project>--<your-github-org>.aem.page/config.json` för att verifiera den.
 
-### Ange åtkomstkontroll {#access-control}
+### Lägg till sökvägsmappning för platskonfiguration och ange tekniskt konto {#access-control}
 
-Om du vill konfigurera åtkomstkontroll måste du ange ett tekniskt konto.
+Du måste skapa en platskonfiguration och lägga till den i sökvägsmappningen.
 
 1. Skapa en ny sida i platsens rot och välj mallen [**Konfiguration**.](/help/edge/wysiwyg-authoring/tabular-data.md#other)
    * Du kan lämna konfigurationen tom med endast de fördefinierade kolumnerna `key` och `value`. Du behöver bara skapa den.
@@ -156,28 +156,31 @@ Om du vill konfigurera åtkomstkontroll måste du ange ett tekniskt konto.
    ```text
    curl 'https://main--<your-aem-project>--<your-github-org>.aem.live/config.json'
    ```
-1. I webbläsaren kan du nu hämta det tekniska kontot som svar på följande länk.
+
+När platskonfigurationen har mappats kan du konfigurera åtkomstkontrollen genom att definiera ditt tekniska konto så att det har behörighet att publicera.
+
+1. I webbläsaren kan du hämta det tekniska kontot som svar på följande länk.
 
    ```text
    https://author-p<programID>-e<envionmentID>.adobeaemcloud.com/bin/franklin.delivery/<your-github-org>/<your-aem-project>/main/.helix/config.json
    ```
 
-Svaret liknar följande:
+1. Svaret liknar följande:
 
-```json
-{
-  "total": 1,
-  "offset": 0,
-  "limit": 1,
-  "data": [
-    {
-      "key": "admin.role.publish",
-      "value": "<tech-account-id>@techacct.adobe.com"
-    }
-  ],
-  ":type": "sheet"
-}
-```
+   ```json
+   {
+     "total": 1,
+     "offset": 0,
+     "limit": 1,
+     "data": [
+       {
+         "key": "admin.role.publish",
+         "value": "<tech-account-id>@techacct.adobe.com"
+       }
+     ],
+     ":type": "sheet"
+   }
+   ```
 
 1. Ange det tekniska kontot i konfigurationen med ett cURL-kommando som liknar följande.
 
