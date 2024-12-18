@@ -2,9 +2,9 @@
 title: Integrera AEM Assets när du skapar material för Edge Delivery Services
 description: Lär dig hur du integrerar AEM Assets med Edge Delivery Services. Integreringen gör att du kan integrera AEM Assets med Microsoft Word och Google Docs, integrera AEM Assets med Universal Editor, integrera Dynamic Media med OpenAPI-funktioner med Universal Editor och integrera Dynamic Media med OpenAPI-funktioner med Microsoft Word och Google Docs.
 exl-id: e58db2ce-a55a-49b3-ae8e-709b5ea8d095
-source-git-commit: def807c2bb1b2fe337879b3abe2c0a5d1b5f1dea
+source-git-commit: 9e7701152e1da4afc73d3d5ba271b04df2054397
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
@@ -60,11 +60,11 @@ Om du vill använda resursreferens måste du ha:
 * Tillstånd till en Assets-Cloud Service där Dynamic Media med Open API-funktioner är aktiverat.
 * En Dynamic Media-licens.
 * AEM Assets-pluginen för sidspark har aktiverats med kopieringsreferens för bildresurser. Mer information finns i [this](https://www.aem.live/developer/configuring-aem-assets-sidekick-plugin#copymode) för dokumentbaserad redigering och i [this](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) för Universal Editor-baserad redigering.
-* Assets som godkänts. Godkänd Assets har `dam:status=Approved` via Assets Cloud Services backend eller UI.
+* Assets som godkänts. Godkända resurser har `dam:status=Approved` via Assets Cloud Services backend eller UI-åtgärder.
 
 ### Använd material som levereras med Dynamic Media med OpenAPI-funktioner{#how-to-use-Dynamic-Media-with-OpenAPI-assets}
 
-Information om hur du använder resurser som levereras med Dynamic Media med OpenAPI-funktioner när du redigerar innehåll finns i:
+Information om hur du använder material som levereras med Dynamic Media med OpenAPI-funktioner när du redigerar innehåll finns i:
 
 * [Använda bildreferenser](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-image-references-when-authoring-content)
 * [Använda videoreferenser](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-video-references-when-authoring-content)
@@ -83,4 +83,4 @@ Se [WKND Travel](https://aem-dynamicmedia-demo--dm--hlxsites.aem.live/travel-hos
 Konfigurera Universal Editor för integrering med AEM Assets. Tack vare den här integreringen kan du använda Dynamic Media med OpenAPI-funktioner för att leverera resurser.
 
 * Se [Konfiguration i Edge Delivery Site](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site) om du vill lägga till en anpassad resursväljarfunktion i Universal Editor. Med den anpassade resursväljaren kan du infoga resurser direkt i det universella redigeringsinnehållet.
-* Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill lära dig hur du får åtkomst till AEM Assets och infogar resurser när du redigerar i Universellt redigeringsprogram.
+* Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill lära dig hur du får åtkomst till AEM Assets och infogar resurser när du redigerar i Universell redigerare.
