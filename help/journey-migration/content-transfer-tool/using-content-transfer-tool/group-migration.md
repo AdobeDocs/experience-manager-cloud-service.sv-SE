@@ -2,9 +2,9 @@
 title: Gruppmigrering
 description: Översikt över gruppmigrering i AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 7e7b311d425ae6cdee9eb9311c0a12af84f81096
+source-git-commit: bb041cf13d5e82fc4135f0849b03eeeed9a5d009
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -37,16 +37,16 @@ En stor förändring i AEM as a Cloud Service är den helintegrerade användning
 
 Verktyget Innehållsöverföring och Cloud Acceleration Manager migrerar alla grupper som är kopplade till innehållet som migreras till molnsystemet. Verktyget Innehållsöverföring gör detta genom att kopiera alla grupper från AEM under extraheringsprocessen. CAM-inmatning väljer och migrerar sedan endast vissa grupper:
 
+* Om en grupp använder en ACL- eller CUG-princip för migrerat innehåll migreras den gruppen, med några undantag som anges nedan.
 * Det finns ett antal inbyggda grupper som redan finns i målmolnet. De migreras aldrig.
-* Direktmedlemsgrupper i inbyggda grupper som direkt eller indirekt hänvisas till i en ACL- eller CUG-policy för migrerat innehåll migreras, så att användare som är direkt eller indirekt medlemmar i sådana grupper behåller sin åtkomst till det migrerade innehållet.
-* Om en grupp använder en ACL- eller CUG-princip för migrerat innehåll migreras den gruppen.
+   * Vissa inbyggda grupper kan innehålla medlemsgrupper som _inte_ är inbyggda. Alla sådana medlemsgrupper (direkta medlemmar eller medlemmar av medlemmar, osv.) som refereras i en ACL- eller CUG-princip för migrerat innehåll migreras, så att användare som är medlemmar i dessa grupper (antingen direkt eller indirekt) behåller åtkomsten till det migrerade innehållet.
 * Andra grupper, t.ex. de som inte finns i en ACL- eller CUG-princip, de som redan finns i målsystemet och de med unika data som redan finns i målsystemet, kommer inte att migreras.
 
 Observera att sökvägen som loggas/rapporteras för en grupp bara är den första sökvägen som utlöste den gruppen som ska migreras, och att den gruppen också kan finnas på andra innehållssökvägar.
 
 De flesta migrerade grupper är konfigurerade att hanteras av IMS.  Detta innebär att en grupp i IMS med samma namn länkas till gruppen i AEM, och alla IMS-användare i IMS-gruppen blir AEM användare och medlemmar i gruppen i AEM.  Detta gör att dessa användare har tillgång till innehållet enligt ACL- eller CUG-profiler för gruppen.
 
-Observera att migrerade grupper inte längre betraktas som&quot;lokala grupper&quot;. De är IMS-grupper och måste återskapas i IMS så att de kan synkroniseras mellan AEM och IMS.  Grupper kan skapas i IMS via Admin Console, bland annat på egen hand eller gruppvis.  Se [Hantera användargrupper](https://helpx.adobe.com/ca/enterprise/using/user-groups.html) för mer information om hur du skapar grupper individuellt eller gruppvis på Admin Console.
+Observera att migrerade grupper inte längre betraktas som AEM&quot;lokala grupper&quot;. De är IMS-färdiga grupper i AEM trots att de kanske inte finns i IMS ännu.  De måste återskapas separat i IMS så att de kan synkroniseras mellan AEM och IMS.  Grupper kan skapas i IMS via Admin Console, bland annat på egen hand eller gruppvis.  Se [Hantera användargrupper](https://helpx.adobe.com/ca/enterprise/using/user-groups.html) för mer information om hur du skapar grupper individuellt eller gruppvis på Admin Console.
 
 Undantaget för den här IMS-konfigurationen gäller grupper som skapats av Assets Collections. När en samling skapas på AEM skapas grupper för åtkomst till den samlingen. Sådana grupper migreras till molnsystemet, men de är inte konfigurerade att hanteras av IMS.  Om du vill lägga till IMS-användare i dessa grupper måste de läggas till på sidan Gruppegenskaper i Assets-gränssnittet, antingen individuellt eller tillsammans som en del av en annan IMS-grupp.
 
