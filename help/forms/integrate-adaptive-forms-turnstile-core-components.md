@@ -5,7 +5,7 @@ topic-tags: Adaptive Forms, author
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: e9c13228-0857-4936-9c39-12ed2bddf429
-source-git-commit: 709b3381eedefe7619cb961f345f202cadf512f3
+source-git-commit: eba6aec89e645e443ba6f4ca5aff66a39288ff1e
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 0%
@@ -98,6 +98,7 @@ Så här integrerar du AEM Forms med den färdiga tjänsten:
       * **Felmeddelande:** Ange felmeddelandet som ska visas för användaren när Captcha-överföringen misslyckas.
         >[!NOTE]
         >* Ett felmeddelande visas bara om CAPTCHA fylls i på klientsidan.
+
 1. Klicka på **[!UICONTROL Done]**.
 
 
