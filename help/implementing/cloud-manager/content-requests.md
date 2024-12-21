@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
+source-git-commit: 18d19acfedce57a3ae52020d36785689b715ed08
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -79,4 +79,3 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | Uteslut Commerce integrationa frameworkar | Exkluderad | Begäranden som görs till AEM som vidarebefordras till Commerce integrationa frameworken - URL:en börjar med `/api/graphql` - för att undvika dubbelräkning kan de inte faktureras för Cloud Service. |
 | Uteslut `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på en dator eller mobiltelefon. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
 | Uteslut `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON har vissa scenarier, som SAML-autentiseringsflöden, observerats returnera favoritikoner som HTML. Därför exkluderas favoritikoner uttryckligen från antalet. |
-| CDN-proxy till en annan serverdel | Exkluderad | Förfrågningar som dirigeras till andra icke-AEM bakgrunder med hjälp av tekniken [CDN-väljare](/help/implementing/dispatcher/cdn-configuring-traffic.md#origin-selectors) är exkluderade eftersom de inte träffar AEM. |
