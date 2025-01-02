@@ -2,7 +2,7 @@
 title: Integrera AEM Assets när du skapar material för Edge Delivery Services
 description: Lär dig hur du integrerar AEM Assets med Edge Delivery Services. Integreringen gör att du kan integrera AEM Assets med Microsoft Word och Google Docs, integrera AEM Assets med Universal Editor, integrera Dynamic Media med OpenAPI-funktioner med Universal Editor och integrera Dynamic Media med OpenAPI-funktioner med Microsoft Word och Google Docs.
 exl-id: e58db2ce-a55a-49b3-ae8e-709b5ea8d095
-source-git-commit: 3a758af4d17d761b8e3e4a77ea3cda6a4b6d0bb7
+source-git-commit: b908cb1e8d9c7814f4b23142aee589af74047cd8
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -84,4 +84,3 @@ Konfigurera Universal Editor för integrering med AEM Assets. Tack vare den här
 
 * Se [Konfiguration i Edge Delivery Site](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site) om du vill lägga till en anpassad resursväljarfunktion i Universal Editor. Med den anpassade resursväljaren kan du infoga resurser direkt i det universella redigeringsinnehållet.
 * Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill lära dig hur du får åtkomst till AEM Assets och infogar resurser när du redigerar i Universell redigerare.
-
