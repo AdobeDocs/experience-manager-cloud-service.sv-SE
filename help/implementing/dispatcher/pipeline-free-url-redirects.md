@@ -4,9 +4,9 @@ description: Lär dig hur du deklarerar 301- eller 302-omdirigeringar utan åtko
 feature: Dispatcher
 role: Admin
 exl-id: dacb1eda-79e0-4e76-926a-92b33bc784de
-source-git-commit: 41d610728fe92b07db722694432653cf7f03ce9c
+source-git-commit: e30a9fbe74f1f5cd8a924dc3fec140fad5e0a164
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '750'
 ht-degree: 0%
 
 ---
@@ -25,19 +25,20 @@ AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adob
 
 * De som underhåller omdirigeringarna är företagsanvändare som inte har den behörighet som krävs för att genomföra filändringar i källkontrollen eller möjligheten att utföra en konfigurationspipeline på Cloud Manager webbnivå.
 * Antalet omdirigeringar varierar från några till tiotusentals.
-* Du vill ha alternativet för ett användargränssnitt, antingen skapat som ett anpassat projekt eller genom att använda [ACS Commons Omdirigeringshanterare](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html).
+* Du vill ha alternativet för ett användargränssnitt, antingen skapat som ett anpassat projekt eller med hjälp av [ACS Commons Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) eller [ACS Commons Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html).
 
 Kärnan i den här funktionen är möjligheten för AEM Apache/Dispatcher att läsa in (eller ladda om) en eller flera omskrivningsfiler som har placerats på en angiven plats i publiceringsdatabasen. Det är viktigt att nämna att hur filerna kommer in ligger utanför den här funktionens omfång, men du kan tänka dig någon av följande metoder:
 
 * Inmatning av omskrivningskartan som en resurs i författarens användargränssnitt och publicering.
 * Installerar [ACS Commons Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ([minst version 6.7.0 eller senare](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)), som innehåller ett användargränssnitt för att hantera URL-mappningar och kan även publicera mappningsfilen för omskrivning.
+* Installerar [ACS Commons Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) ([minst version 6.10.0 eller senare](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)), som även innehåller ett användargränssnitt för att hantera URL-mappningar och kan även publicera mappningsfilen för omskrivning.
 * Full flexibilitet genom att skriva ett anpassat program. Till exempel ett användargränssnitt eller kommandoradsgränssnitt för att hantera URL-mappningar, eller alternativt ett formulär för att överföra en omskrivningskarta, som sedan använder AEM API:er för att publicera omskrivningskartan.
 
 >[!NOTE]
 > Den här funktionen kräver AEM **18311 eller senare**.
 
 >[!NOTE]
-> Funktionens användning av Redirect Map Manager kräver ACS Commons version **6.7.0 eller senare**.
+> Funktionens användning av Redirect Map Manager kräver ACS Commons version **6.7.0 eller senare** medan användningen av Redirect Manager kräver version **6.10.0 eller senare**.
 
 ## Mappen för omskrivning {#rewrite-map}
 
