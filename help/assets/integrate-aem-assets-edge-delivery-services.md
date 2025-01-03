@@ -2,9 +2,9 @@
 title: Integrera AEM Assets när du skapar material för Edge Delivery Services
 description: Lär dig hur du integrerar AEM Assets med Edge Delivery Services. Integreringen gör att du kan integrera AEM Assets med Microsoft Word och Google Docs, integrera AEM Assets med Universal Editor, integrera Dynamic Media med OpenAPI-funktioner med Universal Editor och integrera Dynamic Media med OpenAPI-funktioner med Microsoft Word och Google Docs.
 exl-id: e58db2ce-a55a-49b3-ae8e-709b5ea8d095
-source-git-commit: fc19e2bf43237418f3636d982c46915c8013cbfa
+source-git-commit: e6fd7b1d16aac5e7021a8c309f6483f98746e85e
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '743'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,11 @@ När du har redigerat innehållet kan du publicera det på Edge Delivery Service
 
 AEM Assets integration med dokumentbaserade redigeringsverktyg som Microsoft Word och Google Docs ger dig en resursväljare direkt i redigeraren. Använd den här resursväljaren för att komma åt AEM Assets och infoga godkända resurser i dokumentet.
 
+Om du redan har en Edge Delivery Services-webbplats kan du läsa [AEM Assets plugin](https://github.com/adobe-rnd/aem-assets-plugin/blob/main/README.md) för att integrera AEM Assets med ditt befintliga AEM. Om du inte har någon Edge Delivery Services-webbplats kan du läsa avsnitten [Förutsättningar](#integrate-aem-assets-with-microsoft-word-and-google-docs) och [Integrera AEM Assets med dokumentbaserad redigeringsmiljö](#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs) nedan.
+
 ### Förutsättningar{#integrate-aem-assets-with-microsoft-word-and-google-docs}
 
-Innan du börjar bör du kontrollera att din dokumentbaserade redigeringsmiljö är klar:
+Innan du börjar ser du till att den dokumentbaserade redigeringsmiljön är klar:
 
 * Integrera AEM med ett dokumentbaserat redigeringsverktyg för att konfigurera redigeringsmiljön. Se [Komma igång - självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för att konfigurera redigeringsmiljön.
 
