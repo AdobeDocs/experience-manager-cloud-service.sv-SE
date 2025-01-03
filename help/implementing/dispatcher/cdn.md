@@ -4,9 +4,9 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: c31441baa6952d92be4446f9035591b784091324
+source-git-commit: 6600f5c1861e496ae8ee3b6d631ed8c033c4b7ef
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1745'
 ht-degree: 2%
 
 ---
@@ -23,12 +23,12 @@ AEM as a Cloud Service har ett integrerat CDN, som utformats för att minska lat
 
 Det AEM CDN-nätverket uppfyller de flesta kunders behov av prestanda och säkerhet. För publiceringsnivån kan kunderna välja att dirigera trafik via sitt eget CDN, som de måste hantera. Det här alternativet är tillgängligt från fall till fall, särskilt när kunderna har befintliga integreringar med en CDN-leverantör som är svår att ersätta.
 
-Kunder som vill publicera på Edge Delivery Services-nivå kan dra nytta av Adobe hanterade CDN. Se [CDN som hanteras av Adobe](#aem-managed-cdn). <!-- CQDOC-21758, 5b -->
+Kunder som vill publicera på Edge Delivery Services-nivå kan dra nytta av Adobe hanterade CDN. Se [Hanterad CDN för Adobe](#aem-managed-cdn). <!-- CQDOC-21758, 5b -->
 
 
 <!-- ERROR: NEITHER URL IS FOUND (HTTP ERROR 404) Also, see the following videos [Cloud 5 AEM CDN Part 1](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-cdn-part1.html) and [Cloud 5 AEM CDN Part 2](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-cdn-part2.html) for additional information about CDN in AEM as a Cloud Service. -->
 
-## CDN hanterad i Adobe {#aem-managed-cdn}
+## Hanterad CDN i Adobe {#aem-managed-cdn}
 
 <!-- CQDOC-21758, 5a -->
 
@@ -120,7 +120,7 @@ curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com --header "X-Forwa
 
 >[!NOTE]
 >
->När du använder ditt eget CDN behöver du inte installera domäner och certifikat i Cloud Manager. Routningen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`, som ska skickas i begärandehuvudet `Host`. Om du skriver över begärandehuvudet `Host` med ett anpassat domännamn kan begäran skickas felaktigt via Adobe CDN.
+>När du använder ditt eget CDN behöver du inte installera domäner och certifikat i Cloud Manager. Routningen i CDN i Adobe görs med standarddomänen `publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com`, som ska skickas i begärandehuvudet `Host`. Om du skriver över begärandehuvudet `Host` med ett anpassat domännamn kan begäran slussas genom CDN i Adobe eller resultera i 421 fel.
 
 >[!NOTE]
 >
@@ -133,6 +133,30 @@ curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com --header "X-Forwa
 Det extra hoppet mellan kundens CDN och det AEM CDN behövs bara om det finns ett cacheminne. Genom att använda de strategier för cacheoptimering som beskrivs i den här artikeln bör tillägget av en kund-CDN endast medföra försumbar fördröjning.
 
 Kundens CDN-konfiguration stöds för publiceringsnivån, men inte framför författarnivån.
+
+### Felsökningskonfiguration
+
+Om du vill felsöka en BYOCDN-konfiguration använder du huvudet `x-aem-debug` med värdet `edge=true`. Till exempel:
+
+I Linux®:
+
+```
+curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -v -H "X-Forwarded-Host: example.com" -H "X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>" -H "x-aem-debug: edge=true"
+```
+
+I Windows:
+
+```
+curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -v --header "X-Forwarded-Host: example.com" --header "X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>" --header "x-aem-debug: edge=true"
+```
+
+Detta återspeglar vissa egenskaper som används i begäran i svarshuvudet `x-aem-debug`. Till exempel:
+
+```
+x-aem-debug: byocdn=true,edge=true,edge-auth=edge-auth,edge-key=edgeKey1,X-AEM-Edge-Key=set,host=publish-p87058-e257304-cmstg.adobeaemcloud.com,x-forwarded-host=wknd.site,adobe_unlocked_byocdn=true
+```
+
+Om du använder den här metoden kan du till exempel verifiera värden för värden, om edge-autentiseringen är konfigurerad, samt det x-vidarebefordrade host-värdet, om en edge-nyckel är inställd och vilken nyckel som används (om en nyckel matchar).
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 
@@ -160,6 +184,11 @@ De angivna exempelkonfigurationerna visar de basinställningar som behövs. En k
 **Omdirigering till slutpunkten för publiceringstjänsten**
 
 När en begäran tar emot ett 403 ej tillåtet svar betyder det att begäran saknar vissa obligatoriska rubriker. En vanlig orsak till detta är att CDN hanterar både API- och `www`-domäntrafik, men inte lägger till rätt rubrik för domänen `www`. Du kan lösa det här problemet genom att kontrollera AEM as a Cloud Service CDN-loggarna och verifiera begäranderubrikerna.
+
+**Fel 421 Feldirigerad omdirigering**
+
+När en begäran tar emot ett 421-fel med en brödtext runt `Requested host does not match any Subject Alternative Names (SANs) on TLS certificate` anger det att HTTP `Host`-uppsättningen inte matchar några värdar i värddatorns certifikat. Detta indikerar vanligtvis att antingen `Host` eller SNI-inställningen är fel. Kontrollera att både inställningarna för `Host` och SNI pekar på publish-p&lt;PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com värd.
+
 
 **För många omdirigeringsslinga**
 

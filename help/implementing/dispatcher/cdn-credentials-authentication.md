@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: 37d399c63ae49ac201a01027069b25720b7550b9
+source-git-commit: d6484393410d32f348648e13ad176ef5136752f2
 workflow-type: tm+mt
-source-wordcount: '1486'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,11 @@ Det finns ett avsnitt om hur du [roterar nycklar](#rotating-secrets), vilket är
 
 Så som beskrivs på [CDN-sidan i AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md#point-to-point-CDN) kan kunderna välja att dirigera trafik genom sitt eget CDN, som kallas kundens CDN (kallas ibland även BYOCDN).
 
-Som en del av konfigurationen måste Adobe CDN och kundens CDN komma överens om ett värde för HTTP-huvudet `X-AEM-Edge-Key`. Värdet anges för varje begäran, på kundens CDN, innan det dirigeras till Adobe CDN, som sedan validerar att värdet är som förväntat, så att det kan lita på andra HTTP-huvuden, inklusive de som hjälper till att dirigera begäran till rätt AEM.
+Som en del av konfigurationen måste Adobe CDN och kundens CDN komma överens om ett värde för HTTP-huvudet `X-AEM-Edge-Key`. Värdet anges för varje begäran hos Customer CDN, innan det dirigeras till Adobe CDN, som sedan validerar att värdet är som förväntat, så att det kan lita på andra HTTP-huvuden, inklusive de som hjälper till att dirigera begäran till rätt AEM.
 
 Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.  Syntaxen beskrivs i exemplet nedan.
+
+Mer felsökningsinformation och vanliga fel finns i [Vanliga fel](/help/implementing/dispatcher/cdn.md#common-errors).
 
 >[!WARNING]
 >Direktåtkomst utan korrekt X-AEM-Edge-Key nekas för alla begäranden som matchar villkoret (i exemplet nedan betyder det alla begäranden till publiceringsnivån). Om du behöver införa autentisering gradvis läser du avsnittet [Migrera säkert för att minska risken för blockerad trafik](#migrating-safely).
@@ -202,7 +204,7 @@ Dessutom innehåller syntaxen:
    * name - en beskrivande sträng
    * type - måste vara `basic`
    * en array med upp till 10 autentiseringsuppgifter, som vart och ett innehåller följande namn/värde-par, som slutanvändarna kan ange i den grundläggande autentiseringsdialogrutan:
-      * användare - namnet på användaren
+      * användare - användarens namn.
       * password - dess värde måste referera till en [Cloud Manager-miljövariabel av hemlig typ](/help/operations/config-pipeline.md#secret-env-vars), med **Alla** markerat som tjänstfält.
 * Regler: Här kan du deklarera vilka autentiserare som ska användas och vilka resurser som ska skyddas. Varje regel innehåller:
    * name - en beskrivande sträng
