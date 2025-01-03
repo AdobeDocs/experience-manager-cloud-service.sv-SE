@@ -2,7 +2,7 @@
 title: Integrera AEM Assets när du skapar material för Edge Delivery Services
 description: Lär dig hur du integrerar AEM Assets med Edge Delivery Services. Integreringen gör att du kan integrera AEM Assets med Microsoft Word och Google Docs, integrera AEM Assets med Universal Editor, integrera Dynamic Media med OpenAPI-funktioner med Universal Editor och integrera Dynamic Media med OpenAPI-funktioner med Microsoft Word och Google Docs.
 exl-id: e58db2ce-a55a-49b3-ae8e-709b5ea8d095
-source-git-commit: e6fd7b1d16aac5e7021a8c309f6483f98746e85e
+source-git-commit: f57edede03cf55110122c59f2874a5f40ffa9c76
 workflow-type: tm+mt
 source-wordcount: '743'
 ht-degree: 0%
@@ -78,7 +78,7 @@ I den här videon får du lära dig hur du levererar resurser med Dynamic Media 
 
 ## Exempelwebbplats för Edge Delivery Services{#example-of-an-Edge-Delivery-Services-site}
 
-Se [WKND Travel](https://aem-dynamicmedia-demo--dm--hlxsites.aem.live/travel-hospitality/wknd-trvl-home). Den här webbplatsen har byggts med Edge Delivery Servicens dokumentbaserade redigeringsfunktioner. Webbplatsens innehåll skapas i [Google Docs](https://drive.google.com/drive/folders/1HCCHRWp4HJIXW_cUv5cRDQ5DzzqiZsXT) med hjälp av Dynamic Media med OpenAPI-funktioner för leverans av resurser. När innehållet har skapats publiceras det direkt från dokumentet. För den här dokumentbaserade redigeringsinställningen lagras alla viktiga filer, mappar, konfigurationer, webbplatsens format och funktionskoder i den här [Git-databasen](https://github.com/hlxsites/franklin-assets-selector/tree/aem-dynamicmedia-demo/blocks).
+Se [WKND Travel](http://bit.ly/3DExLnf). Den här webbplatsen har byggts med Edge Delivery Servicens dokumentbaserade redigeringsfunktioner. Webbplatsens innehåll skapas i [Google Docs](https://drive.google.com/drive/folders/1HCCHRWp4HJIXW_cUv5cRDQ5DzzqiZsXT) med hjälp av Dynamic Media med OpenAPI-funktioner för leverans av resurser. När innehållet har skapats publiceras det direkt från dokumentet. För den här dokumentbaserade redigeringsinställningen lagras alla viktiga filer, mappar, konfigurationer, webbplatsens format och funktionskoder i den här [Git-databasen](https://github.com/hlxsites/franklin-assets-selector/tree/aem-dynamicmedia-demo/blocks).
 
 ## Integrera AEM Assets med universella redigeringsbaserade arbetsflöden för Edge Delivery Services {#integrate-aem-assets-with-universal-editor}
 
