@@ -4,9 +4,9 @@ description: Lär dig hur du deklarerar 301- eller 302-omdirigeringar utan åtko
 feature: Dispatcher
 role: Admin
 exl-id: dacb1eda-79e0-4e76-926a-92b33bc784de
-source-git-commit: e30a9fbe74f1f5cd8a924dc3fec140fad5e0a164
+source-git-commit: 8f5dd529b5f317326d9742be1dd3a3104fe6957a
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adob
 * Antalet omdirigeringar varierar från några till tiotusentals.
 * Du vill ha alternativet för ett användargränssnitt, antingen skapat som ett anpassat projekt eller med hjälp av [ACS Commons Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) eller [ACS Commons Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html).
 
-Kärnan i den här funktionen är möjligheten för AEM Apache/Dispatcher att läsa in (eller ladda om) en eller flera omskrivningsfiler som har placerats på en angiven plats i publiceringsdatabasen. Det är viktigt att nämna att hur filerna kommer in ligger utanför den här funktionens omfång, men du kan tänka dig någon av följande metoder:
+Kärnan i den här funktionen är möjligheten för AEM Apache/Dispatcher att läsa in (eller ladda om) en eller flera omskrivningsfiler som har placerats på en angiven plats i publiceringsdatabasen (så att de kan hämtas från AEM publicering). Det är viktigt att nämna att hur filerna kommer in ligger utanför den här funktionens omfång, men du kan tänka dig någon av följande metoder:
 
 * Inmatning av omskrivningskartan som en resurs i författarens användargränssnitt och publicering.
 * Installerar [ACS Commons Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ([minst version 6.7.0 eller senare](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)), som innehåller ett användargränssnitt för att hantera URL-mappningar och kan även publicera mappningsfilen för omskrivning.
