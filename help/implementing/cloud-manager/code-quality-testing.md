@@ -5,20 +5,20 @@ exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 6f17afc82b2d26fd6025a9ba8449a0cb1b368d48
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
-# Testning av kodkvalitet {#code-quality-testing}
+# Kodkvalitetstestning {#code-quality-testing}
 
 Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur det kan förbättra kvaliteten på dina distributioner.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_nonbpa_codequalitytests"
->title="Testning av kodkvalitet"
+>title="Kodkvalitetstestning"
 >abstract="Kodkvalitetstestningen utvärderar din programkod baserat på en uppsättning kvalitetsregler. Det är det främsta syftet med en rörledning av kodkvalitet och genomförs omedelbart efter byggsteget i alla rörledningar för produktion och icke-produktion."
 
 ## Introduktion {#introduction}
@@ -29,21 +29,23 @@ Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pip
 
 ## Regler för kodkvalitet {#understanding-code-quality-rules}
 
-Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. Detta implementeras genom en kombination av SonarQube och granskning på innehållspaketnivå med OakPAL. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM reglerna skapas baserat på bästa praxis från AEM och kallas [anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
+Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. En kombination av SonarQube och granskning på innehållspaketnivå med OakPAL implementerar det här steget. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM reglerna skapas baserat på bästa praxis från AEM och kallas [anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
->[!NOTE]
+Du kan hämta den aktuella fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx).
+
+>[!IMPORTANT]
 >
->Du kan hämta den fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx).
+>Från och med torsdagen den 13 februari 2025 (Cloud Manager 2025.2.0) använder Cloud Manager Code Quality en uppdaterad version av SonarQube 9.9 och en uppdaterad lista över regler som du kan [hämta här](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS-2024-12-0.xlsx).
 
 ### Tre nivåindelade omdömen {#three-tiered-gate}
 
 Problem som identifieras med kodkvalitetstestning tilldelas en av tre kategorier.
 
-* **Kritisk** - Detta är problem som orsakar ett omedelbart fel i pipeline.
+* **Kritisk** - Problem som orsakar ett omedelbart fel i pipeline.
 
-* **Viktigt** - Detta är problem som gör att pipeline försätts i pausläge. Distributionshanteraren, projektledaren eller företagsägaren kan antingen åsidosätta problemen, i vilket fall pipeline fortsätter, eller så kan de acceptera problemen. I så fall upphör pipeline med ett fel.
+* **Viktigt** - Problem som gör att pipeline försätts i pausat läge. En driftsättningshanterare, projektledare eller affärsägare kan antingen åsidosätta problemen, så att pipeline kan fortsätta. Alternativt kan de acceptera problemen, vilket gör att pipelinen avbryts om ett fel uppstår.
 
-* **Info** - Det här är problem som tillhandahålls endast i informationssyfte och som inte påverkar pipeline-körningen
+* **Info** - Problem som tillhandahålls endast i informationssyfte och som inte påverkar pipelinekörningen
 
 >[!NOTE]
 >
@@ -68,7 +70,7 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 
 >[!NOTE]
 >
->Mer detaljerade definitioner finns i [SonarQube metric Definitions](https://docs.sonarqube.org/latest/user-guide/metric-definitions/).
+>Mer detaljerade definitioner finns i [SonarQube metric Definitions](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/code-metrics/metrics-definition/).
 
 >[!NOTE]
 >
@@ -76,7 +78,7 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 
 ## Hantera med falskt positiva {#dealing-with-false-positives}
 
-Kvalitetsskanningsprocessen är inte perfekt och kan ibland felaktigt identifiera problem som inte är problematiska. Detta kallas **falskt positivt**.
+Kvalitetsskanningsprocessen är inte perfekt och identifierar ibland felaktigt problem som egentligen inte är problem. Det här läget kallas **falskt positivt**.
 
 I dessa fall kan källkoden antecknas med Java `@SuppressWarnings`-standardanteckningen som anger regel-ID som anteckningsattribut. En vanlig positiv sak är att SonarQube-regeln för att identifiera hårdkodade lösenord kan vara aggressiv om hur ett hårdkodat lösenord identifieras.
 
@@ -87,7 +89,7 @@ Följande kod är ganska vanlig i ett AEM projekt, som har kod för att ansluta 
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-SonarQube utlöser då en sårbarhet som kan leda till blockering. Men när du har granskat koden inser du att detta inte är någon sårbarhet och kan kommentera koden med rätt regel-ID.
+SonarQube har en sårbarhet som gör det möjligt att blockera. Men när du har granskat koden inser du att det här problemet inte är någon sårbarhet och kan kommentera koden med rätt regel-ID.
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -106,14 +108,14 @@ Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 
 >[!NOTE]
 >
->Även om det är en god vana att göra `@SuppressWarnings`-anteckningen så specifik som möjligt, d.v.s. bara anteckna den specifika programsats eller det block som orsakar problemet, är det möjligt att anteckna på en klassnivå.
+>Även om det är en god vana att göra `@SuppressWarnings`-anteckningen så specifik som möjligt - som att bara anteckna den programsats eller det block som orsakar problemet - är det också möjligt att anteckna på klassnivå.
 
 >[!NOTE]
 >Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Servicen.
 
 ## Optimering av skanning av innehållspaket {#content-package-scanning-optimization}
 
-Som en del av kvalitetsanalysprocessen gör Cloud Manager en analys av de innehållspaket som skapats av Maven-bygget. Cloud Manager erbjuder optimeringar som snabbar upp denna process, som är effektiva när vissa paketeringsbegränsningar iakttas. Det viktigaste är optimeringen som utförs för projekt som genererar ett enstaka innehållspaket, som vanligtvis kallas&quot;all&quot;-paket, som innehåller flera andra innehållspaket som skapats av bygget och som markeras som överhoppade. När Cloud Manager identifierar detta scenario, i stället för att packa upp&quot;all&quot;-paketet, skannas de enskilda innehållspaketen direkt och sorteras baserat på beroenden. Ta till exempel följande byggutdata.
+Som en del av kvalitetsanalysprocessen gör Cloud Manager en analys av de innehållspaket som skapats av Maven-bygget. Cloud Manager erbjuder optimeringar som snabbar upp denna process, som är effektiv när vissa paketeringsbegränsningar iakttas. Den viktigaste optimeringen avser projekt som producerar ett enda&quot;allt&quot;-paket, som innehåller flera innehållspaket från bygget, som markeras som överhoppade. När Cloud Manager identifierar detta scenario, i stället för att packa upp&quot;all&quot;-paketet, skannas de enskilda innehållspaketen direkt och sorteras baserat på beroenden. Ta till exempel följande byggutdata.
 
 * `all/myco-all-1.0.0-SNAPSHOT.zip` (innehållspaket)
 * `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (överhoppat innehållspaket)
@@ -128,4 +130,4 @@ Ett specialfall kan inträffa när innehållspaketet &quot;all&quot; innehåller
 >[!NOTE]
 >
 >* Optimeringen påverkar inte de paket som distribueras till AEM.
->* Eftersom matchningen mellan det inbäddade innehållspaketet och det överhoppade innehållspaketet baseras på filnamn, kan optimeringen inte utföras om flera överhoppade innehållspaket har exakt samma filnamn eller om filnamnet ändras vid inbäddning.
+>* Matchningen mellan inbäddade innehållspaket och överhoppade innehållspaket beror på filnamn. Den här optimeringen kan inte utföras om flera överhoppade paket delar samma filnamn eller om filnamnet ändras under inbäddningen.
