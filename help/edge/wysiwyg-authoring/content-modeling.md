@@ -4,9 +4,9 @@ description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring 
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: dce661331c42ba2cc082553e1e344c73556ce18d
+source-git-commit: 7f54d2ee61d2b92e7a0f02c66ce8ee5cdbedd73c
 workflow-type: tm+mt
-source-wordcount: '2196'
+source-wordcount: '2195'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Filen [`component-models.json`](https://github.com/adobe-rnd/aem-boilerplate-xwa
 
 Observera att inte alla block måste ha en modell. Vissa block är bara [behållare](#container) för en lista med underordnade objekt, där varje underordnad har sin egen modell.
 
-Det är också nödvändigt att definiera vilka block som finns och som kan läggas till på en sida med den universella redigeraren. [`component-definitions.json`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json)-filen visar komponenterna så fort de är tillgängliga av den universella redigeraren.
+Det är också nödvändigt att definiera vilka block som finns och som kan läggas till på en sida med den universella redigeraren. Filen [`component-definitions.json`](/help/implementing/universal-editor/component-definition.md) visar komponenterna när de görs tillgängliga av den universella redigeraren.
 
 ```json
 {

@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: e4db952e8284dba578c6b3ac86405e9ab640e7c0
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1378'
 ht-degree: 0%
 
 ---
@@ -123,9 +123,12 @@ Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i
 ### Lägga till komponenter i behållare {#adding-components}
 
 1. Markera en behållarkomponent i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) eller i redigeraren.
-1. Välj sedan ikonen Lägg till på egenskapspanelen.
 
    ![Markera en komponent som ska läggas till i en behållare](assets/ue-add-component.png)
+
+1. Välj sedan ikonen Lägg till på egenskapspanelen.
+
+   ![Välj ikonen Lägg till](assets/add-icon.png)
 
 Komponenten infogas i behållaren och kan redigeras i redigeraren.
 
