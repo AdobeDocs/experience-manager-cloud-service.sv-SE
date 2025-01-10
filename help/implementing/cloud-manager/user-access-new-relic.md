@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 41a67b0747ed665291631de4faa7fb7bb50aa9b9
+source-git-commit: 8f8662360d23926df91e91881e78dadea33504f0
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1809'
 ht-degree: 0%
 
 ---
@@ -174,7 +174,7 @@ Om du inte får något e-postmeddelande från New Relic gör du följande:
 Följande begränsningar gäller när du lägger till användare i New Relic One:
 
 * Högst 30 användare kan läggas till. Om det maximala antalet användare har uppnåtts tar du bort användare för att kunna lägga till nya användare.
-* Användare som läggs till i New Relic har typen **Begränsat**. Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/accounts/original-accounts-billing/original-users-roles/users-roles-original-user-model/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change).
+* Användare som läggs till i New Relic har typen **Begränsat**. Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/introduction-managing-users/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change).
 * AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
 >[!NOTE]
@@ -194,14 +194,14 @@ Adobe övervakar AEM as a Cloud Service författare, publicerar och förhandsgra
 Ditt New Relic One-konto är kopplat till ett primärt Adobe-underhållet konto och har flera program som rapporterar till det: tre per AEM as a Cloud Service-miljö.
 
 * Ett program för författartjänsten per miljö
-* Ett program för publiceringstjänsten per miljö (inklusive Golden Publish)
+* Ett program för tjänsten `Publish` per miljö (inklusive Golden Publish)
 * Ett program för förhandsgranskningstjänsten per miljö
 
 Obs!
 
 * Varje program använder en licensnyckel.
 * AEM as a Cloud Service-miljöer rapporterar till endast ett New Relic One-konto.
-* Full övervakning av mätvärden och händelser för båda New Relic One bevaras i sju dagar.
+* Full övervakning av mätvärden och händelser för båda New Relic One bevaras i tre månader. &lt;!- CQDOC-22238 - Uppdaterat från sju dagar till tre månader. >
 +++
 
 +++**Skickar Adobe varningsmeddelanden från New Relic One?** {#alerting-new-relic}
