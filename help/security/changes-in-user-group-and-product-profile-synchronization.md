@@ -5,13 +5,13 @@ feature: Security
 role: Admin
 hide: true
 hidefromtoc: true
-source-git-commit: 32ce30ce136a714e277e00197d38ea380c777377
+exl-id: 0b097ab3-bf1d-4d43-9e19-d544594844ef
+source-git-commit: ccfcecb77c7999784d6eaf6c1c6cfcb4269f5c80
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
 
 ---
-
 
 # Ändringar i synkronisering av användargrupp och produktprofil {#changes-in-user-group-and-product-profile-synchronization}
 
@@ -43,3 +43,4 @@ På så sätt navigerar du till Adobe Admin Console enligt skärmbilden nedan. O
 ![Suffix i Admin Console](/help/security/assets/admin-console-profile-suffixes.png)
 
 Om det osannolika fallet är att ditt AEM-program refererar till en grupp som inte längre visas i AEM ska du i stället antingen använda i) en produktprofil från den högra AEM eller ii) en Adobe Admin Console-användargrupp.
+
