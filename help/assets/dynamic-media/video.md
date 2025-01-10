@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: c142ac7ad12179dd842ce6c81cc4d97ece36a197
+source-git-commit: 222636f9520c17203df632778d3f60b62369a47b
 workflow-type: tm+mt
-source-wordcount: '10380'
+source-wordcount: '10401'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,8 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
    * Skapa en egen videokodningsprofil. Eller så kan du helt enkelt använda den fördefinierade _Adaptive Video Encoding_ -profilen som medföljer Dynamic Media.
 
-      * [Skapa en videokodningsprofil](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming).
+      * [Skapa en videokodningsprofil](/help/assets/dynamic-media/video-profiles.
+      * Den maximala upplösningen för videokodning vid utskrift är 8 192 × 4 320 eller 4 320 × 8 192.md#creating-a-video-encoding-profile-for-adaptive-streaming).
       * Läs mer om [Bästa tillvägagångssätt för videokodning](#best-practices-for-encoding-videos).
 
    * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.
@@ -41,7 +42,8 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
    * Överför dina primära källvideor till de angivna mapparna. När du har lagt till videofilmerna kodas de enligt den videobearbetningsprofil som tilldelats mappen.
 
-      * Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
+      * Dynamic Media har främst stöd för videoklipp i kort form med en maximal längd på 30 minuter och en lägsta upplösning som är större än 25 × 25.
+      * Den högsta videoupplösningen som stöds är 16 384 × 16 384.
       * Du kan överföra videofiler som är upp till 15 GB vardera.
       * [Överför dina videor](/help/assets/manage-video-assets.md#upload-and-preview-video-assets).
       * Läs mer om [Indatafilformat som stöds](/help/assets/file-format-support.md).
@@ -208,12 +210,12 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Skrivbord</td>
    <td>Firefox 45 eller senare</td>
-   <td>HLS- eller DASH*-strömning med adaptiv bithastighet</td>
+   <td>HLS eller DASH* adaptiv bithastighetsströmning</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
    <td>Chrome</td>
-   <td>HLS- eller DASH*-strömning med adaptiv bithastighet</td>
+   <td>HLS eller DASH* adaptiv bithastighetsströmning</td>
   </tr>
   <tr>
    <td>Skrivbord</td>
@@ -228,7 +230,7 @@ I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för v
   <tr>
    <td>Mobil</td>
    <td>Chrome (Android™ 7 eller senare)</td>
-   <td>HLS- eller DASH* adaptive bitrate streaming/td&gt;
+   <td>HLS eller DASH* adaptiv bithastighetsströmning/td&gt;
   </tr>
   <tr>
    <td>Mobil</td>
@@ -284,16 +286,16 @@ Nedan följer några tips om hur du kodar källvideofiler.
 
 När du kodar en videofil ska du använda en källvideofil med högsta möjliga kvalitet. Undvik att använda tidigare kodade videofiler eftersom dessa filer redan är komprimerade, och ytterligare kodning skapar en video med delkvalitet.
 
-* Dynamic Media har främst stöd för videoklipp i kort form med en maxlängd på 30 minuter och en minimiupplösning på mer än 25 x 25.
+* Dynamic Media har främst stöd för videoklipp i kort form med en maximal längd på 30 minuter och en lägsta upplösning som är större än 25 × 25.
 * Du kan överföra primära källvideofiler som är upp till 15 GB vardera.
 
 I följande tabell beskrivs rekommenderad storlek, proportioner och lägsta bithastighet som källvideofilerna måste ha innan du kodar dem:
 
 | Storlek | Proportioner | Minsta bithastighet |
 |--- |--- |--- |
-| 1024 x 768 | 4:3 | 4 500 kbit/s för de flesta videofilmer. |
-| 1280 x 720 | 16:9 | 3 000 - 6 000 kbit/s, beroende på mängden rörelse i videon. |
-| 1920 x 1080 | 16:9 | 6000 - 8 000 kbit/s, beroende på mängden rörelse i videon. |
+| 1024 × 768 | 4:3 | 4 500 kbit/s för de flesta videofilmer. |
+| 1280 × 720 | 16:9 | 3 000 - 6 000 kbit/s, beroende på mängden rörelse i videon. |
+| 1920 × 1080 | 16:9 | 6000 - 8 000 kbit/s, beroende på mängden rörelse i videon. |
 
 ### Hämta metadata för en fil {#obtaining-a-file-s-metadata}
 
@@ -320,7 +322,7 @@ I följande tabell beskrivs hur formelresultaten översätts till vanliga altern
 | 1,78 | 16:9 |
 | 0,56 | 9:16 |
 
-En video som till exempel är 1440 bredd x 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
+En video som till exempel är 1440 bredd × 1080 höjd har proportionerna 1440/1080 eller 1,33. I det här fallet väljer du en förinställning för videokodning med 4:3-proportioner för att koda videofilen.
 
 ### Bithastighet {#bitrate}
 
@@ -354,16 +356,16 @@ I den här tabellen beskrivs datahastigheten för typiska anslutningshastigheter
 
 ### Upplösning {#resolution}
 
-**Upplösning** beskriver videofilens höjd och bredd i pixlar. Den mesta källvideon lagras med hög upplösning (till exempel 1 920 x 1 080). Vid direktuppspelning komprimeras källvideo till en lägre upplösning (640 x 480 eller lägre).
+**Upplösning** beskriver videofilens höjd och bredd i pixlar. Den mesta källvideon lagras med hög upplösning (till exempel 1920 × 1080). Vid direktuppspelning komprimeras källvideo till en lägre upplösning (640 × 480 eller lägre).
 
-Upplösning och datahastighet är två sammankopplade faktorer som avgör videokvaliteten. Om du vill behålla samma videokvalitet måste datahastigheten vara högre ju fler pixlar en videofil har (ju högre upplösning). Ta till exempel antalet pixlar per bildruta i en 320 x 240-upplösning och en 640 x 480-upplösningsvideofil:
+Upplösning och datahastighet är två sammankopplade faktorer som avgör videokvaliteten. Om du vill behålla samma videokvalitet måste datahastigheten vara högre ju fler pixlar en videofil har (ju högre upplösning). Ta till exempel antalet pixlar per bildruta i en 320 × 240-upplösning och en 640 × 480-upplösningsvideofil:
 
 | Upplösning | Pixlar per bildruta |
 |--- |--- |
-| 320 x 240 | 76 800 |
-| 640 x 480 | 307 200 |
+| 320 × 240 | 76 800 |
+| 640 × 480 | 307 200 |
 
-Filen på 640 x 480 har fyra gånger fler pixlar per bildruta. För att uppnå samma datahastighet för dessa två exempelupplösningar tillämpar du fyra gånger komprimeringen på 640 x 480-filen, vilket kan minska videons kvalitet. En videodatahastighet på 250 kbit/s ger därför en högkvalitativ bild med upplösningen 320 x 240, men inte med upplösningen 640 x 480.
+Filen 640 × 480 har fyra gånger fler pixlar per bildruta. För att uppnå samma datahastighet för dessa två exempelupplösningar använder du fyra gånger så hög komprimering på 640 × 480-filen, vilket kan minska videons kvalitet. En videodatahastighet på 250 kbit/s ger därför en högkvalitativ bild med upplösningen 320 × 240, men inte med upplösningen 640 × 480.
 
 I allmänhet gäller att ju högre datahastighet du använder, desto bättre visas videon och ju högre upplösning du använder, desto högre datahastighet måste du behålla visningskvaliteten (jämfört med lägre upplösningar).
 
@@ -383,6 +385,8 @@ När du väljer (eller skapar) en förinställning för videokodning för den pr
 | 720p | 720 | Stor skärm |
 | 1080p | 1080 | Stor HD-skärm |
 
+Den högsta videoupplösningen som stöds är 16 384 × 16 384. Den maximala utdatakodningsupplösningen för video är 8 192 × 4 320 eller 4 320 × 8 192.
+
 ### Fps (bildrutor per sekund) {#fps-frames-per-second}
 
 I USA och Japan spelas de flesta videoklipp in med 29,97 bildrutor per sekund. I Europa spelas de flesta videoklipp in med 25 bildrutor per sekund. En film filmas med 24 fps.
@@ -397,14 +401,14 @@ Om du vill beräkna förhållandet dividerar du källbredden med den kodade bred
 
 Om förhållandet är ett heltal betyder det att videon är optimalt skalad. Om den resulterande kvoten inte är ett heltal påverkas videokvaliteten genom att kvarvarande pixelartefakter lämnas kvar på skärmen. Effekten märks mest när videon innehåller text.
 
-Anta till exempel att källvideon är 1 920 x 1 080. I följande tabell ger de tre kodade videoklippen de optimala kodningsinställningarna som kan användas.
+Anta till exempel att källvideon är 1 920 × 1 080. I följande tabell ger de tre kodade videoklippen de optimala kodningsinställningarna som kan användas.
 
-| Videotyp | Bredd x höjd | Breddförhållande | Höjdförhållande |
+| Videotyp | Bredd × höjd | Breddförhållande | Höjdförhållande |
 |--- |--- |--- |--- |
-| Source | 1920 x 1080 | 1 | 1 |
-| Kodad | 960 x 540 | 2 | 2 |
-| Kodad | 640 x 360 | 3 | 3 |
-| Kodad | 480 x 270 | 4 | 4 |
+| Source | 1920 × 1080 | 1 | 1 |
+| Kodad | 960 × 540 | 2 | 2 |
+| Kodad | 640 × 360 | 3 | 3 |
+| Kodad | 480 × 270 | 4 | 4 |
 
 ### Kodat videofilformat {#encoded-video-file-format}
 
@@ -532,7 +536,7 @@ Om du aktiverar någon av de tre funktionerna ovan aktiveras samtliga. Så om du
 
 | Funktion | Beskrivning |
 | --- | --- |
-| DASH | DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** väljs som uppspelningstyp i visningsförinställningen.<br>Några viktiga fördelar med att aktivera DASH för ditt konto är följande:<ul><li>Paketera DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.</li><li>Webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-strömning för att säkerställa bästa möjliga servicekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.</li><li>Du kan konfigurera den direktuppspelningsmetod (HLS eller DASH) som du föredrar genom att redigera förinställningen för visningsprogrammet för video.</li><li>Optimerad videokodning säkerställer att ingen ytterligare lagring används samtidigt som DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.</li><li>Gör videomaterialet mer tillgängligt för kunderna.</li><li>Hämta strömnings-URL:en via API:er också.</li></ul> |
+| DASH | DASH (Digital Adaptive Streaming over HTTP) är den internationella standarden för direktuppspelad video och används i stor utsträckning av olika videovisningsprogram. När DASH är aktiverat för ditt konto kan du välja mellan DASH eller HLS för adaptiv videoströmning. Du kan också välja båda med automatisk växling mellan spelare när **[!UICONTROL auto]** väljs som uppspelningstyp i visningsförinställningen.<br>Några viktiga fördelar med att aktivera DASH för ditt konto är följande:<ul><li>Paketera DASH-strömvideo för strömning med adaptiv bithastighet. Den här metoden leder till ökad effektivitet vid leverans. Adaptiv strömning ger bästa möjliga tittarupplevelse för dina kunder.</li><li>Webbläsaroptimerad direktuppspelning med Dynamic Media-spelare växlar mellan HLS- och DASH-direktuppspelning för att säkerställa bästa möjliga servicekvalitet. Videospelaren växlar automatiskt till HLS när en Safari-webbläsare används.</li><li>Du kan konfigurera den direktuppspelningsmetod du föredrar (HLS eller DASH) genom att redigera visningsförinställningen för videon.</li><li>Optimerad videokodning säkerställer att ingen ytterligare lagring används samtidigt som DASH-funktionen aktiveras. En enda uppsättning videokodningar skapas för både HLS och DASH för att optimera lagringskostnaderna för video.</li><li>Gör videomaterialet mer tillgängligt för kunderna.</li><li>Hämta strömnings-URL:en via API:er också.</li></ul> |
 | Flera bildtexter och ljudspår | Det kan vara bra att ha stöd för flera bildtexter och ljudspår automatiskt aktiverat. När du har aktiverat bearbetas alla efterföljande videor som du överför med en ny backend-arkitektur som har stöd för att lägga till flera bildtexter och ljudspår i videoklipp. |
 | AI-genererade bildtexter (begränsad tillgänglighet) | Skapa bildtexter för videoklipp med AI. Med hjälp av AI skapas videons transkript och konverteras till bildtexter. Även tidslinjen definieras. |
 
@@ -1224,7 +1228,7 @@ Based on the total time of the video, Dynamic Media captures ten (default) thumb
 
 Ideally, you can add a video thumbnail anytime after you upload your video but before you publish the video on your website.
 
-If you prefer, you can choose to upload a custom thumbnail to represent your video instead of using a thumbnail generated by Dynamic Media. For example, you could create a custom thumbnail image that has the title of your video, an eye-catching opening image, or a very specific image captured from your video. The custom video thumbnail image that you upload should have a maximum resolution of 1280 x 720 pixels (minimum width of 640 pixels) and be no larger than 2MB.
+If you prefer, you can choose to upload a custom thumbnail to represent your video instead of using a thumbnail generated by Dynamic Media. For example, you could create a custom thumbnail image that has the title of your video, an eye-catching opening image, or a very specific image captured from your video. The custom video thumbnail image that you upload should have a maximum resolution of 1280 &times; 720 pixels (minimum width of 640 pixels) and be no larger than 2MB.
 
 See also [About video thumbnails](/help/assets/dynamic-media/video.md#about-video-thumbnails-in-dynamic-media-scene-mode).
 
