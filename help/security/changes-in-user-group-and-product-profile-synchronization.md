@@ -5,9 +5,9 @@ feature: Security
 role: Admin
 hide: true
 hidefromtoc: true
-source-git-commit: c3e3905d3896d79149a386241d798f78631184b3
+source-git-commit: 32ce30ce136a714e277e00197d38ea380c777377
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
@@ -19,16 +19,15 @@ När en användare loggar in på AEM as a Cloud Service eller en åtkomsttoken a
 
 Den 28 januari kommer synkroniseringsbeteendet att ändras, vilket resulterar i att färre grupper visas i AEM för att användargränssnittet ska bli mer rörigt och prestandaoptimerat. Två kategorier AEM grupper kommer att tas bort:
 
-1. AEM med suffixet `GROUP_NAME_SUFFIX`. De här grupperna visas inte i Adobe Developer Console, men visas på AEM Group Management-skärmen (se nedan). Om det osannolika fallet att ditt AEM refererar till dessa grupper måste du använda Adobe Admin Console användargrupper i stället.
+1. AEM med suffixet `GROUP_NAME_SUFFIX`. De här grupperna visas inte i Adobe Developer Console, men visas på AEM Group Management-skärmen (se nedan). Om det osannolika fallet att ditt AEM refererar till dessa grupper måste du referera till Adobe Admin Console användargrupper utan det suffixet i stället.
 
    ![Borttagna grupper ](/help/security/assets/removed-groups-1.png)
 
-1. AEM som är kopplade till Adobe Admin Console produktprofiler som inte är kopplade till den specifika AEM eller systemkombinationen (till exempel `author` eller `e4535`). Detta kan omfatta produktprofiler som är:
+1. AEM som är kopplade till Adobe Admin Console produktprofiler som inte har med den specifika miljön att göra. Detta kan omfatta produktprofiler som är:
 
    * för andra Adobe-produkter
    * relaterade till andra AEM program
    * som rör andra AEM miljöer i samma AEM
-   * relaterat till ett annat skikt (till exempel `author` vs `publish`) i samma AEM
    * relaterat till Cloud Manager (till exempel `Business Owner - Cloud Service`)
 
    I bilden nedan finns till exempel många rader med mönstret `AEM Administrators-<suffix>` eller `AEM Users-<suffix>` där suffixet inte är relaterat till den aktuella miljön.
@@ -43,11 +42,4 @@ På så sätt navigerar du till Adobe Admin Console enligt skärmbilden nedan. O
 
 ![Suffix i Admin Console](/help/security/assets/admin-console-profile-suffixes.png)
 
-Om det osannolika fallet att ditt AEM refererar till dessa grupper måste du använda Adobe Admin Console användargrupper i stället.
-
->[!NOTE]
->
->Var särskilt uppmärksam på dessa potentiella fallgropar:
->
->1. Ditt AEM är beroende av en AEM som synkroniserats från en Cloud Manager-produktprofil
->1. AEM publiceringsnivå är beroende av en AEM grupp som synkroniserats från en produktprofil på författarnivå. Detta gäller även för det omvända scenariot (författarnivå som förlitar sig på publiceringsnivå).
+Om det osannolika fallet är att ditt AEM-program refererar till en grupp som inte längre visas i AEM ska du i stället antingen använda i) en produktprofil från den högra AEM eller ii) en Adobe Admin Console-användargrupp.
