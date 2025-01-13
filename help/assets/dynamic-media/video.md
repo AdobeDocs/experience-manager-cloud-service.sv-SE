@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 222636f9520c17203df632778d3f60b62369a47b
+source-git-commit: 91a1fb46d4300540eeecf38f7f049a2991513d29
 workflow-type: tm+mt
-source-wordcount: '10401'
+source-wordcount: '10397'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
    * Skapa en egen videokodningsprofil. Eller så kan du helt enkelt använda den fördefinierade _Adaptive Video Encoding_ -profilen som medföljer Dynamic Media.
 
-      * [Skapa en videokodningsprofil](/help/assets/dynamic-media/video-profiles.
-      * Den maximala upplösningen för videokodning vid utskrift är 8 192 × 4 320 eller 4 320 × 8 192.md#creating-a-video-encoding-profile-for-adaptive-streaming).
+      * [Skapa en videokodningsprofil](/help/assets/dynamic-media/video-profiles.md#creating-a-video-encoding-profile-for-adaptive-streaming).
+      * Den maximala utdatakodningsupplösningen är 8 192 × 4 320 eller 4 320 × 8 192.md.
       * Läs mer om [Bästa tillvägagångssätt för videokodning](#best-practices-for-encoding-videos).
 
    * Koppla videobearbetningsprofilen till en eller flera mappar där du ska överföra dina primära källvideor.

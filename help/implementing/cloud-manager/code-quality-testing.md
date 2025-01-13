@@ -5,9 +5,9 @@ exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 6f17afc82b2d26fd6025a9ba8449a0cb1b368d48
+source-git-commit: 91a1fb46d4300540eeecf38f7f049a2991513d29
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1164'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pip
 
 ## Regler för kodkvalitet {#understanding-code-quality-rules}
 
-Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. En kombination av SonarQube och granskning på innehållspaketnivå med OakPAL implementerar det här steget. Det finns över 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa av de AEM reglerna skapas baserat på bästa praxis från AEM och kallas [anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
+Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. En kombination av SonarQube och granskning på innehållspaketnivå med OakPAL implementerar det här steget. Det finns mer än 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa AEM-specifika regler baseras på god praxis från AEM och kallas [anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
 Du kan hämta den aktuella fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx).
 
