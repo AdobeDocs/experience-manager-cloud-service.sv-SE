@@ -4,9 +4,9 @@ description: Med snabbvyn Publish i Assets kan du publicera material till AEM oc
 exl-id: 147c1c35-0d81-4458-b4ed-7541d2b0dd54
 feature: Publishing, Dynamic Media
 role: User
-source-git-commit: 8ab19fe82fc390d28d33b17222177fd8486c8fc7
+source-git-commit: 991888d532b3396054bd04c11c7257b61c337725
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1209'
 ht-degree: 0%
 
 ---
@@ -22,18 +22,18 @@ I Experience Manager Assets-vyn kan du publicera resurser till AEM eller Dynamic
 
 ## Innan du börjar {#before-you-begin}
 
-Konfigurera de här inställningarna för att visa publiceringsalternativ för AEM och Dynamic Media:
+Konfigurera de här inställningarna för att visa publiceringsalternativen för AEM och Dynamic Media:
 
-* Om du vill visa publiceringsalternativ för Dynamic Media konfigurerar du följande inställningar i administrationsvyn:
+* Om du vill visa publiceringsalternativen för Dynamic Media konfigurerar du följande inställningar i administrationsvyn:
 
    * [Skapa en Dynamic Media Cloud-konfiguration](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
    * Ställ in Dynamic Media Publish-läget på mappnivå. Du kan konfigurera de här inställningarna när du skapar Dynamic Media Cloud-konfigurationen. Mer information om hur du skriver över de här inställningarna på mappnivå finns i [Konfigurera selektiv Publish på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).
 
-* Om du vill visa publiceringsalternativ för AEM måste du konfigurera AEM publiceringsslutpunkt för miljön.
+* Om du vill visa publiceringsalternativen för AEM måste du konfigurera AEM publiceringsslutpunkt för miljön.
 
 ## Publish Assets under överföring {#piblish-assets-during-upload}
 
-Du kan publicera resurser till AEM och Dynamic Media medan du överför resurser till en mapp. Vilka publiceringsalternativ som visas beror på Dynamic Media publiceringsläge som anges i den mapp som resurserna överförs till. Dynamic Media publiceringsläge kan anges till:
+Du kan publicera resurser till AEM och Dynamic Media medan du överför resurser till en mapp. Vilka publiceringsalternativ som visas beror på inställningarna för publiceringsläget i Dynamic Media för den mapp där resurserna överförs. Dynamic Media publiceringsläge kan anges till:
 
 * **Vid aktivering:** När resurser överförs till den här mappen måste du publicera resursen explicit innan en URL/Embed-länk anges.
 
@@ -42,7 +42,7 @@ Du kan publicera resurser till AEM och Dynamic Media medan du överför resurser
 
 ### Dynamic Media Publish Mode inställt på Vid aktivering {#dynamic-media-publish-mode-set-to-upon-activation}
 
-Så här publicerar du resurser under överföring till en mapp med Dynamic Media Publish Mode inställt på **Vid aktivering**:
+Så här publicerar du resurser när du överför dem till en mapp vars Dynamic Media Publish-läge är inställt på **Vid aktivering**:
 
 1. Klicka på **Lägg till Assets** > **Bläddra** > **Bläddra bland filer** för att navigera till rätt mapp för att överföra resurser. I avsnittet **Publish-alternativ** visas **DM Publish Mode** som **Vid aktivering**.
    ![Överför bild vid aktivering](/help/assets/assets/upload-uactivation.svg)
@@ -50,15 +50,15 @@ Så här publicerar du resurser under överföring till en mapp med Dynamic Medi
 
 ### Dynamic Media Publish Mode inställt på Omedelbar {#dynamic-media-publish-mode-set-to-immediate}
 
-Så här publicerar du resurser under överföring till en mapp med Dynamic Media Publish Mode inställt på **Omedelbart**:
+Så här publicerar du resurser när du överför dem till en mapp där Dynamic Media Publish Mode är inställt på **Omedelbart**:
 
-1. Klicka på **Lägg till Assets** > **Bläddra** > **Bläddra bland filer** för att navigera till rätt mapp för att överföra resurser. Under Publish-alternativ visas **DM Publish Mode** som **Omedelbart**.
+1. Klicka på **Lägg till Assets** > **Bläddra** > **Bläddra bland filer** för att navigera till rätt mapp för att överföra resurser. I avsnittet **Publish-alternativ** visas **DM Publish Mode** som **Omedelbart**.
    ![bild för filöverföring - omedelbart läge](/help/assets/assets/resized-image-pdf-svg-new.svg)
 
 
    Eftersom Dynamic Media Publish Mode är **Omedelbart** publiceras de överförda resurserna automatiskt till Dynamic Media när du klickar på **Överför**.
 
-2. Välj Publish för att **AEM publicera** de överförda resurserna som ska AEM och klicka på Överför.
+2. Välj **Publish om du vill AEM** om du vill publicera de överförda resurserna AEM och klicka på Överför.
 
    Om du väljer **Publish för att AEM** publiceras resurserna till AEM och Dynamic Media, annars publiceras resurserna till Dynamic Media.
 
@@ -68,7 +68,7 @@ Så här publicerar du resurser under överföring till en mapp med Dynamic Medi
 
 Så här publicerar du resurser under överföring till en mapp med Dynamic Media Publish Mode inställt på **Selektiv Publish**:
 
-1. Klicka på **Lägg till Assets** > **Bläddra** > **Bläddra bland filer** för att navigera till rätt mapp för att överföra resurser. Under Publish-alternativ visas **DM Publish Mode** som **Selektiv Publish**.
+1. Klicka på **Lägg till Assets** > **Bläddra** > **Bläddra bland filer** för att navigera till rätt mapp för att överföra resurser. I avsnittet **Publish-alternativ** visas **DM Publish Mode** som **Selektiv Publish**.
    ![överför bildselektivt publiceringsläge](/help/assets/assets/upload-selective.svg)
 
 2. Välj **Publish om du vill AEM**, **Publish till Dynamic Media** eller båda, beroende på dina behov, och klicka sedan på **Överför**.
