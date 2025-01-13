@@ -5,9 +5,9 @@ exl-id: af05aae6-d535-4007-ba81-7f41213ff152
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: abc114373f5db501bb8709fd2d4c33aebc1c5ec9
+source-git-commit: b018c1948d479c78e1ef25b2248f3674ec1fcf92
 workflow-type: tm+mt
-source-wordcount: '2504'
+source-wordcount: '2518'
 ht-degree: 4%
 
 ---
@@ -314,6 +314,10 @@ Så här kommenterar du ett fragment:
 1. Stäng helskärmsredigeraren, anteckningarna är fortfarande markerade. Om du väljer det här alternativet öppnas en dialogruta så att du kan redigera anteckningen ytterligare.
 
    ![anteckna](assets/cfm-variations-07c.png)
+
+>[!NOTE]
+>
+>Anteckningsfunktionen visar inte kommentarer som har angetts i den nya [innehållsfragmentsredigeraren](/help/sites-cloud/administering/content-fragments/authoring.md#commenting-on-your-fragment).
 
 ### Visa, redigera, ta bort anteckningar {#viewing-editing-deleting-annotations}
 

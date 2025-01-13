@@ -5,14 +5,20 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
+source-git-commit: 6a971fd5d0e071f72c17cf0a42f3dd8da0b476ae
 workflow-type: tm+mt
-source-wordcount: '2704'
+source-wordcount: '2841'
 ht-degree: 0%
 
 ---
 
 # Skapa innehållsfragment {#authoring-content-fragments}
+
+>[!IMPORTANT]
+>
+>Du kan få tillgång till olika funktioner i Content Fragment Editor via Early Adobe Program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 Att skapa innehållsfragment är inriktat på både headless-leverans och framtagning av sidor.
 
@@ -58,6 +64,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * dessa länkar kan användas för att [navigera i strukturen för innehållsfragment](#navigate-structure)
 * höger panel: presenterar flikar [som visar egenskaper (metadata) och taggar](#view-properties-tags), information om [versionshistoriken](#view-version-history) och information om [språkkopior](#view-language-copies)
    * på fliken **Egenskaper** kan du uppdatera **Title** och **Description** för fragmentet, eller **Variation**
+   * På fliken **Kommentarer** kan du lägga till och läsa kommentarer som hjälper dig att samarbeta med andra författare
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
       * när den är konfigurerad (som flera) i modellen tillåter olika datatyper dig att **lägga till** instanser av det relevanta fältet
@@ -466,6 +473,25 @@ Till exempel:
 >
 >Mer information om hur du översätter ett innehållsfragment och skapar språkkopior finns i [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md).
 
+## Kommentera fragmentet {#commenting-on-your-fragment}
+
+Fliken **Kommentarer** i den högra panelen innehåller följande funktioner:
+
+* Lägg till en ny kommentar
+* Tagga specifika användare i en kommentar
+   * De får ett meddelande med en länk för att öppna fragmentet direkt
+* Gilla en befintlig kommentar
+* Svara på en kommentar
+* Formatera dina kommentarer; grundläggande formatering finns tillgänglig
+* Genomför en textsökning med befintliga kommentarer
+* Redigera en befintlig kommentar
+* Ta bort kommentarer
+
+![Innehållsfragmentredigeraren - fliken Kommentarer](assets/cf-authoring-comments.png)
+
+>[!NOTE]
+>
+>Dessa kommentarer visas inte som [Anteckningar i den ursprungliga redigeraren](/help/assets/content-fragments/content-fragments-managing.md#annotating-a-content-fragment) eller i [tidslinjen i Assets-konsolen](/help/assets/content-fragments/content-fragments-managing.md#timeline-for-content-fragments).
 
 ## Förhandsgranska fragmentet {#preview-content-fragment}
 

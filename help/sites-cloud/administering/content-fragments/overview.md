@@ -5,14 +5,20 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
 solution: Experience Manager Sites
-source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
+source-git-commit: 2daddd852f4cfcbcd6b1d4aea9cd96e045c93ca0
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1857'
 ht-degree: 1%
 
 ---
 
 # En översikt över hur du arbetar med innehållsfragment {#overview-working-with-content-fragments}
+
+>[!IMPORTANT]
+>
+>Olika funktioner i Content Fragments och Content Fragment Models finns tillgängliga via Early Adobe Program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragments utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan förbereda innehåll som är klart för användning på flera platser och i flera kanaler, vilket är idealiskt för [headless delivery](/help/headless/what-is-headless.md) och [page authoring](/help/sites-cloud/authoring/fragments/content-fragments.md).
 
@@ -91,8 +97,11 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 
 När fragmenten har skapats kan du:
 
-* [Använd konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md) - för att komma åt, publicera (för att förhandsgranska eller producera) och referera till dina fragment
-* [Använd redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) - för att redigera, publicera (för att förhandsgranska eller producera) och referera till dina fragment
+* [Använd konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md) - för att:
+   * få tillgång till, publicera (för att förhandsgranska eller producera) och referera till dina fragment
+* [Använd redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) - för att:
+   * redigera, publicera (för att förhandsgranska eller producera) och referera till dina fragment
+   * samarbeta med andra författare med hjälp av kommentarer
 * [Analysera](/help/sites-cloud/administering/content-fragments/analysis.md) innehållsfragmentets struktur med hjälp av redigeraren
 * [Få tillgång till dina fragment med GraphQL för headless-leverans till dina program](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
 * [Eller använd fragmenten för att skapa sidor](/help/sites-cloud/authoring/fragments/content-fragments.md)

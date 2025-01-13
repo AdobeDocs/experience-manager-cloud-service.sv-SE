@@ -5,14 +5,20 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 2daddd852f4cfcbcd6b1d4aea9cd96e045c93ca0
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2661'
 ht-degree: 0%
 
 ---
 
 # Hantera innehållsfragment {#managing-content-fragments}
+
+>[!IMPORTANT]
+>
+>Olika funktioner i Content Fragments och Content Fragment Models finns tillgängliga via Early Adobe Program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 Lär dig hur du hanterar dina **innehållsfragment** i Adobe Experience Manager (AEM) as a Cloud Service från den dedikerade [konsolen för innehållsfragment](#content-fragments-console) och [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor). Dessa innehållsfragment kan användas som bas för rubrikfritt innehåll eller för att skapa sidor.
 
