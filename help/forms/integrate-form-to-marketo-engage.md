@@ -5,7 +5,7 @@ Keywords: How to connect a Marketo instance with form? , Connect a form to Marke
 Feature: Adaptive Forms, Form Data Model
 Role: User, Developer
 exl-id: 74cd25f9-1ee1-4f3f-8e02-8714071e7c86
-source-git-commit: 10de700e5e4b352051b8b77dfd0825bb9b6e0219
+source-git-commit: e46c5afac945620cc44e9064956848acecc786bf
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%
@@ -66,24 +66,26 @@ Nedan följer förutsättningarna för att ansluta Marketo Engage till AEM Forms
 
 ![Arbetsflöde](/help/forms/assets/workflow-marketo-1.png)
 
+>[!VIDEO](https://video.tv.adobe.com/v/3442865/engage-marketo-aem-forms-aem)
+
 Molnkonfigurationen kopplar din Experience Manager-instans till Adobe Marketo Engage-instansen. Så här skapar du en molnkonfiguration i Marketo Engage:
 
 1. Gå till **Verktyg** > **Cloud Service** > **Marketo Engage**.
 
    ![Marketo Engage](/help/forms/assets/marketo-engage.png)
 
-1. Öppna en mapp som ska vara värd för konfigurationen och klicka på **Skapa**. Fönstret **Skapa konfiguration för Marketo Engage** visas.
+2. Öppna en mapp som ska vara värd för konfigurationen och klicka på **Skapa**. Fönstret **Skapa konfiguration för Marketo Engage** visas.
 
    >[!NOTE]
    >
    > Du kan också [konfigurera mappen för molntjänstkonfigurationer](/help/forms/configure-data-sources.md#configure-folder-for-cloud-service-configurations).
 
-1. Ange **Rubrik** för konfigurationen och autentiseringsuppgifterna för att ansluta till tjänsten. Du kan hämta autentiseringsuppgifterna från Adobe Marketo Engage kontrollpanel:
+3. Ange **Rubrik** för konfigurationen och autentiseringsuppgifterna för att ansluta till tjänsten. Du kan hämta autentiseringsuppgifterna från Adobe Marketo Engage kontrollpanel:
    * **Klient-ID** och **Klienthemlighet** finns i **Admin** > **Integration** > **LaunchPoint** genom att markera den anpassade tjänsten och klicka på **Visa information**.
    * **Identitets-URL** är tillgänglig i **Admin** > **Integration** > **Webbtjänster** som **Identitet** i avsnittet **REST API** .
 
-1. Klicka på **Anslut**.  Om anslutningen lyckas visas meddelandet `Authentication Successful`.
-1. Klicka på **[!UICONTROL Create]** om du vill spara molnkonfigurationsinställningarna.
+4. Klicka på **Anslut**.  Om anslutningen lyckas visas meddelandet `Authentication Successful`.
+5. Klicka på **[!UICONTROL Create]** om du vill spara molnkonfigurationsinställningarna.
 
 ![Konfiguration för Marketo Engage Cloud](/help/forms/assets/marketo-engage-cloud-configuration.png)
 

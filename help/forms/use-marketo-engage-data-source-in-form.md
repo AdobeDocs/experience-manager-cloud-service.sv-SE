@@ -5,7 +5,7 @@ Keywords: Use Marketo Engage data source in Adaptive Forms, How to connect a Mar
 Feature: Adaptive Forms, Form Data Model
 Role: User, Developer
 exl-id: 4656ec65-f1ad-4e97-8d93-25933cdc7f7b
-source-git-commit: 10de700e5e4b352051b8b77dfd0825bb9b6e0219
+source-git-commit: e46c5afac945620cc44e9064956848acecc786bf
 workflow-type: tm+mt
 source-wordcount: '451'
 ht-degree: 0%
@@ -36,16 +36,18 @@ Krav för att använda Marketo Engage-datakällan med formulär:
 
 ## Hur konfigurerar man det befintliga adaptiva formuläret för datakällan i Marketo Engage?
 
+>[!VIDEO](https://video.tv.adobe.com/v/3442871/marketo-aem-forms-aem-marketo-engage)
+
 Så här konfigurerar du ett adaptivt formulär med datakällan Marketo Engage:
 1. Logga in på din [!DNL Experience Manager Forms] Author-instans.
 
-1. Öppna det adaptiva formuläret för redigering.
-1. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
-1. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare där du konfigurerar datakällan öppnas.
-1. Öppna fliken **[!UICONTROL Data Model]** och välj en formulärmodell som **Koppling**.
-1. Välj **[!UICONTROL Connector]** i listrutan.
+2. Öppna det adaptiva formuläret för redigering.
+3. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
+4. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare där du konfigurerar datakällan öppnas.
+5. Öppna fliken **[!UICONTROL Data Model]** och välj en formulärmodell som **Koppling**.
+6. Välj **[!UICONTROL Connector]** i listrutan.
 
-1. När du har valt **[!UICONTROL Connector]** kan du välja molnkonfigurationen.
+7. När du har valt **[!UICONTROL Connector]** kan du välja molnkonfigurationen.
 
    ![Välj Marketo Connector](/help/forms/assets/select-marketo-connector.png)
 
@@ -53,7 +55,7 @@ Så här konfigurerar du ett adaptivt formulär med datakällan Marketo Engage:
 
    ![Marketo Data Source](/help/forms/assets/marketo-engage-data-source.png)
 
-1. Klicka på **[!UICONTROL Done]**.
+8. Klicka på **[!UICONTROL Done]**.
 
 Du kan också redigera egenskaperna för det adaptiva formuläret för att ändra dess associerade konfiguration.
 

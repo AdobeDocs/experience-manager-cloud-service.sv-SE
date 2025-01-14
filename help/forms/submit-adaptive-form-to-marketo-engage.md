@@ -5,7 +5,7 @@ Keywords: Submit data to Marketo engage, Configure submit action as Submit to Ma
 Feature: Adaptive Forms, Form Data Model
 Role: User, Developer
 exl-id: 0683564b-1ac4-42b4-bc08-101c4fdef286
-source-git-commit: 10de700e5e4b352051b8b77dfd0825bb9b6e0219
+source-git-commit: e46c5afac945620cc44e9064956848acecc786bf
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
@@ -34,13 +34,15 @@ Krav för att konfigurera sändningsåtgärden till Marketo Engage:
 
 ## Hur konfigurerar jag skicka-åtgärden till Marketo Engage för befintliga formulär?
 
+>[!VIDEO](https://video.tv.adobe.com/v/3442866/submit-action-marketo-engage-marketo-aem-aem-forms-engage)
+
 Du kan konfigurera skickaåtgärden för ett adaptivt formulär så att data skickas till Adobe Marketo Engage. Så här konfigurerar du åtgärden skicka till Marketo Engage:
 
 1. Öppna det adaptiva formuläret för redigering.
-1. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
-1. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare där du kan konfigurera skickaåtgärden öppnas.
-1. Öppna fliken **[!UICONTROL Submission]** och välj en skicka-åtgärd som **Skicka till Marketo Engage**.
-1. Klicka på **[!UICONTROL Done]**.
+2. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
+3. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare där du kan konfigurera skickaåtgärden öppnas.
+4. Öppna fliken **[!UICONTROL Submission]** och välj en skicka-åtgärd som **Skicka till Marketo Engage**.
+5. Klicka på **[!UICONTROL Done]**.
 
 ![Marketo Submit Action](/help/forms/assets/marketo-engage-submit-action.png){width=50%, height=50%}
 
