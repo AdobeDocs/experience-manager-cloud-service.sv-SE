@@ -4,7 +4,7 @@ description: En översikt över enkelsidiga API-referenser och källkodsdatabase
 exl-id: c1cc2bd8-8ff1-406c-a0ce-0af001d66b53
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 # SPA referensmaterial {#spa-reference-materials}
 
+{{ue-over-spa}}
+
 ## SPA JavaScript API-referenser för NMP-moduler {#api-references}
 
-Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SDK-ramverket för redigeraren.
+Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SDK-ramverket SPA redigeraren.
 
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [Sidmodellhanteraren](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)

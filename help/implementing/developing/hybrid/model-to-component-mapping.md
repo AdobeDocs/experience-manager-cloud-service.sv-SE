@@ -4,7 +4,7 @@ description: I den här artikeln beskrivs hur den dynamiska mappningen av modell
 exl-id: 3a7b3f26-4a09-40c1-af03-bb8408a68e57
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 # Dynamisk mappning av modell till komponent för SPA {#dynamic-model-to-component-mapping-for-spas}
 
-I det här dokumentet beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM.
+I det här dokumentet beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK for AEM.
+
+{{ue-over-spa}}
 
 ## ComponentMapping-modul {#componentmapping-module}
 
@@ -27,7 +29,7 @@ Se även nPM-paketet: [@adobe/aem-spa-component-mapping](https://www.npmjs.com/p
 
 ## Modellstyrt Single Page-program {#model-driven-single-page-application}
 
-Single Page-program som använder JavaScript SPA SDK för AEM är modelldrivna:
+Single Page-program som använder JavaScript SPA SDK for AEM är modellstyrda:
 
 1. Front-end-komponenter registrerar sig själva för [Component Mapping Store](#componentmapping-module).
 1. Sedan itererar [behållaren](blueprint.md#container), när den har tillhandahållits med en modell av [modellprovidern](blueprint.md#the-model-provider), över sitt modellinnehåll (`:items`).

@@ -4,9 +4,9 @@ description: I det här dokumentet beskrivs de rekommenderade stegen för att ö
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: a69658d5657f4e1a4feed20cf7eda5e9899aaa3d
 workflow-type: tm+mt
-source-wordcount: '2374'
+source-wordcount: '2370'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 0%
 # Redigera en extern SPA i AEM {#editing-external-spa-within-aem}
 
 När du bestämmer [vilken nivå av integration](/help/implementing/developing/headful-headless.md) du vill ha mellan din externa SPA och AEM måste du tänka på att du ofta måste kunna redigera och visa SPA inom AEM.
+
+{{ue-over-spa}}
 
 ## Ökning {#overview}
 
@@ -79,7 +81,7 @@ I det här exemplet initieras `ModelManager` och en tom `ModelStore` skapas.
 
 * `path` - Vid initiering hämtas modellen vid den definierade sökvägen och lagras i `ModelStore`. Den här sökvägen kan användas för att hämta `rootModel` vid initiering, om det behövs.
 * `modelClient` - Tillåter att du anger en anpassad klient som ansvarar för att hämta modellen.
-* `model` - Ett `model`-objekt skickas som en parameter som vanligtvis fylls i när [SSR](/help/implementing/developing/hybrid/ssr.md) används.
+* `model` - Ett `model`-objekt som skickas som en parameter som vanligtvis fylls i när SSR används.
 
 ### AEM Authorable Components {#authorable-leaf-components}
 
@@ -375,4 +377,3 @@ Följande referensmaterial kan vara användbart för att förstå SPA i samband 
 * [SPA (API-referenser)](/help/implementing/developing/hybrid/reference-materials.md)
 * [SPA Blueprint och PageModelManager](/help/implementing/developing/hybrid/blueprint.md#pagemodelmanager)
 * [SPA](/help/implementing/developing/hybrid/routing.md)
-* [SPA- och serveråtergivning](/help/implementing/developing/hybrid/ssr.md)

@@ -5,9 +5,9 @@ exl-id: d74848f2-683e-49e1-9374-32596ca5d7d7
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: a69658d5657f4e1a4feed20cf7eda5e9899aaa3d
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,6 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [SPA Introduktion och genomgång](/help/implementing/developing/hybrid/introduction.md) - en bra introduktion till SPA i AEM.
 * [Utveckla SPA för AEM](/help/implementing/developing/hybrid/developing.md) - Riktlinjer för hur du utvecklar SPA för AEM
 * [SPA Översikt över redigeraren](/help/implementing/developing/hybrid/editor-overview.md) - Information om hur SPA redigeraren fungerar
-* [Återgivning på serversidan](/help/implementing/developing/hybrid/ssr.md) - Så här konfigurerar du SSR för AEM SPA
 * [SPA Referensdokument](/help/implementing/developing/hybrid/reference-materials.md) - JavaScript API-referenser och länkar till öppna AEM SPA GitHub-projekt
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#creating-content-fragments) - Skapa innehållsfragment
 * [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats

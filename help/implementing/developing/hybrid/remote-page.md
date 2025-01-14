@@ -4,7 +4,7 @@ description: RemotePage-komponenten är en anpassad sidkomponent för redigering
 exl-id: d3465592-0392-49b0-b49d-de93983c1d6e
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -14,6 +14,8 @@ ht-degree: 0%
 # RemotePage-komponenten {#remote-page-component}
 
 När du bestämmer [vilken nivå av integration](/help/implementing/developing/headful-headless.md) du vill ha mellan din externa SPA och AEM är det ofta tydligt att du måste kunna visa och redigera SPA inom AEM. RemotePage-komponenten är en anpassad sidkomponent för just detta ändamål.
+
+{{ue-over-spa}}
 
 ## Ökning {#overview}
 

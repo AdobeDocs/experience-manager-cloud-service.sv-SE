@@ -1,7 +1,7 @@
 ---
-source-git-commit: 60cf4c34f3b4d7c7a757f2274f1a02de8ae51e11
+source-git-commit: f6be839d58b796b3791342375ff61d17b1f8cb0f
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -232,3 +232,11 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
    * Den publicerade webbplatsens URL. Till exempel: `www.mydomain.com`.
    * URL för den ursprungliga webbplatsen (`.hlx` URL).
 
+## Universal Editor är föredragen framför SPA Editor {#ue-over-spa}
+
+>[!IMPORTANT]
+>
+>SPA Editor stöds fortfarande av Adobe, men de redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
+>
+>* [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering av headless-innehåll.
+>* [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering av rubrikfritt innehåll.

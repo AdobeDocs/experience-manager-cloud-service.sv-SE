@@ -4,7 +4,7 @@ description: Lär dig hur du skapar egna sammansatta komponenter, komponenter so
 exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -18,6 +18,8 @@ Komponenter som består av sammansatta komponenter är modulära AEM genom att k
 När sammansatta komponenter implementeras på rätt sätt i redigeringsramverket för AEM Single Page Application (SPA) kan innehållsförfattarna dra och släppa sådana komponenter som vilken annan komponent som helst, men ändå kunna redigera varje komponent som utgör den sammansatta komponenten separat.
 
 I den här artikeln visas hur du kan lägga till en sammansatt komponent i ett enkelsidigt program för att fungera sömlöst med AEM SPA.
+
+{{ue-over-spa}}
 
 ## Användningsfall {#use-case}
 

@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: c3e3905d3896d79149a386241d798f78631184b3
+source-git-commit: a69658d5657f4e1a4feed20cf7eda5e9899aaa3d
 workflow-type: tm+mt
-source-wordcount: '5948'
+source-wordcount: '5954'
 ht-degree: 2%
 
 ---
@@ -103,8 +103,8 @@ ht-degree: 2%
          + [Versionsinformation om underhåll för 2023.10.0](/help/release-notes/maintenance/2023/2023-10-0.md)
          + [Versionsinformation om underhåll för 2023.9.0](/help/release-notes/maintenance/2023/2023-9-0.md)
          + [Versionsinformation om underhåll för 2023.8.0](/help/release-notes/maintenance/2023/2023-8-0.md)
-         + [](/help/release-notes/maintenance/2023/2023-7-0.md)
-         + [Maintenance Release Notes for 2023.6.0](/help/release-notes/maintenance/2023/2023-6-0.md)
+         + [Versionsinformation om underhåll för 2023.7.0](/help/release-notes/maintenance/2023/2023-7-0.md)
+         + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023-6-0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
          + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
@@ -224,15 +224,15 @@ ht-degree: 2%
    + [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md)
    + [Konfigurera avancerat nätverk för AEM as a Cloud Service](/help/security/configuring-advanced-networking.md)
    + [IMS-stöd för AEM as a Cloud Service](/help/security/ims-support.md)
-   + [Changes in User Group and Product Profile Synchronization](/help/security/changes-in-user-group-and-product-profile-synchronization.md)
-   + [Same Site Cookie Support for AEM as a Cloud Service](/help/security/same-site-cookie-support.md)
+   + [Ändringar i synkronisering av användargrupp och produktprofil](/help/security/changes-in-user-group-and-product-profile-synchronization.md)
+   + [Stöd för samma webbplats-cookie för AEM as a Cloud Service](/help/security/same-site-cookie-support.md)
    + [OAuth2-stöd för e-posttjänsten](/help/security/oauth2-support-for-mail-service.md)
    + [Trafikfilterregler inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md)
    + [AEM as a Cloud Service säkerhetsfrågor](/help/security/security-considerations.md)
    + [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md)
    + [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md)
    + [Bästa praxis för användarmappning av delningstjänst och användardefinition av tjänst](/help/security/best-practices-for-sling-service-user-mapping-and-service-user-definition.md)
-   + [Customer Managed Keys for Adobe as a Cloud Service](/help/security/customer-managed-keys.md)
+   + [Kundhanterade nycklar för Adobe as a Cloud Service](/help/security/customer-managed-keys.md)
 + Introduktion till {#onboarding}
    + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
    + Onboarding Journey {#journey}
@@ -527,10 +527,10 @@ ht-degree: 2%
       + [Bearbeta resurser med  [!DNL Creative Cloud] API:er](/help/assets/cc-api-integration.md)
       + [Färgtaggar för bilder](/help/assets/color-tag-images.md)
       + [Hantera PDF-dokument](/help/assets/manage-pdf-documents.md)
-   + [!DNL Assets]{#admin}
-      + [Detect duplicate assets](/help/assets/detect-duplicate-assets.md)
-      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
-      + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
+   + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
+      + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
+      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
+      + [Folder metadata schema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
       + [Översätta resurser](/help/assets/translate-assets.md)
@@ -558,8 +558,8 @@ ht-degree: 2%
       + [Variationer - innehåll för redigeringsfragment](/help/assets/content-fragments/content-fragments-variations.md)
       + [Associerat innehåll för innehållsfragment](/help/assets/content-fragments/content-fragments-assoc-content.md)
       + [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md)
-      + [Content Fragments - Delete Considerations](/help/assets/content-fragments/content-fragments-delete.md)
-      + [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
+      + [Innehållsfragment - Ta bort överväganden](/help/assets/content-fragments/content-fragments-delete.md)
+      + [Markering](/help/assets/content-fragments/content-fragments-markdown.md)
       + [Strukturträd](/help/assets/content-fragments/content-fragments-structure-tree.md)
       + [Förhandsgranska - JSON-representation](/help/assets/content-fragments/content-fragments-json-preview.md)
       + [Återanvänd innehållsfragment med MSM (för Assets)](/help/assets/content-fragments/content-fragments-msm.md)
@@ -648,10 +648,10 @@ ht-degree: 2%
       + [Hantera samlingar](/help/assets/manage-collections-assets-view.md)
       + [Bevaka resurser, mappar och samlingar](/help/assets/manage-notifications-assets-view.md)
       + [Hantera rapporter](/help/assets/manage-reports-assets-view.md)
-      + [Manage tags](/help/assets/tagging-management-assets-view.md)
+      + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
-      + [Utbyggbarhet för användargränssnittet i AEM Assets View](/help/assets/aem-assets-view-ui-extensibility.md)
+      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [AEM Assets View UI Extensibility](/help/assets/aem-assets-view-ui-extensibility.md)
    + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
@@ -772,10 +772,10 @@ ht-degree: 2%
                + [Skillnad mellan redigerare för grundregel och redigerare för grundkomponentregel](/help/forms/rule-editor-core-components-difference-tables.md)
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
-               + [Using asynchronous functions in an Adaptive Form](/help/forms/using-async-funct-in-rule-editor.md)
-               + [Anropa tjänstförbättringar i Visual Rule Editor för formulär som baseras på kärnkomponenter](/help/forms/invoke-service-enhancements-rule-editor.md)
-            + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
-               + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
+               + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
+               + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
+            + {#create-and-use-custom-function-core-component}
+               + [Introduction to Custom Functions for Adaptive Forms based on Core Components](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
                + [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md)
                + [Exempel på anpassade funktioner för ett adaptivt formulär baserade på kärnkomponenter](/help/forms/custom-function-core-components-use-cases.md)
@@ -985,8 +985,8 @@ ht-degree: 2%
       + [Blockera samling](/help/edge/developer/block-collection.md)
       + [Kalkylblad](/help/edge/developer/spreadsheets.md)
       + [Forms](/help/edge/developer/forms.md)
-      + [Indexing](/help/edge/developer/indexing.md)
-      + [Keeping it 100](/help/edge/developer/keeping-it-100.md)
+      + [Indexering](/help/edge/developer/indexing.md)
+      + [Hålla den 100](/help/edge/developer/keeping-it-100.md)
       + [Markering - avsnitt](/help/edge/developer/markup-sections-blocks.md)
       + [Favicon](/help/edge/developer/favicon.md)
       + [Anpassade rubriker](/help/edge/docs/custom-headers.md)
@@ -1106,8 +1106,8 @@ ht-degree: 2%
       + Headless Content Author Journey {#author}
          + [AEM Headless Content Author Journey - översikt](/help/journey-headless/author/overview.md)
          + [Om du skriver för Headless med AEM - introduktion](/help/journey-headless/author/introduction.md)
-         + [Authoring Basics for Headless with AEM](/help/journey-headless/author/basics.md)
-         + [Learn about using references in Content Fragments](/help/journey-headless/author/references.md)
+         + [Grundläggande om redigering för Headless med AEM](/help/journey-headless/author/basics.md)
+         + [Läs om hur du använder referenser i innehållsfragment](/help/journey-headless/author/references.md)
          + [Läs om hur du definierar metadata och taggar för innehållsfragment](/help/journey-headless/author/metadata-tagging.md)
 + Generativ AI {#generative-ai}
    + [Generera variationer](/help/generative-ai/generate-variations.md)
@@ -1199,7 +1199,7 @@ ht-degree: 2%
       + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
       + [AEM Project Repository Structure Package](/help/implementing/developing/introduction/repository-structure-package.md)
       + [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-      + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
+      + [AEM Rapid Development Environments](/help/implementing/developing/introduction/rapid-development-environments.md)
       + [AEM as a Cloud Service riktlinjer för utveckling](/help/implementing/developing/introduction/development-guidelines.md)
       + [AEM as a Cloud Service Developer Console (Beta)](/help/implementing/developing/introduction/aem-developer-console.md)
       + [Loggning](/help/implementing/developing/introduction/logging.md)
@@ -1214,6 +1214,7 @@ ht-degree: 2%
       + [Developing Sites with the Front-End Pipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md)
       + [Anpassa webbplatsmallar och teman](/help/implementing/developing/introduction/customizing-site-templates-themes.md)
       + [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
+      + [Tillåt inte serialisering av ResourceResolvers via Sling Model Exporter](/help/implementing/developing/disallow-resourceresolver-serialization.md)
       + Fullständig AEM {#full-stack}
          + [Getting Started Developing AEM Sites - WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
          + [Struktur för AEM](/help/implementing/developing/introduction/ui-structure.md)
@@ -1225,9 +1226,9 @@ ht-degree: 2%
          + [Sidskillnader](/help/implementing/developing/introduction/page-diff.md)
          + [Begränsningar för redigerare](/help/implementing/developing/introduction/editor-limitations.md)
          + [Namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md)
-         + [Responsive Design](/help/implementing/developing/introduction/responsive-design.md)
+         + [Responsiv design](/help/implementing/developing/introduction/responsive-design.md)
          + Komponenter och mallar {#components-templates}
-            + [Components Overview](/help/implementing/developing/components/overview.md)
+            + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
             + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
@@ -1278,11 +1279,9 @@ ht-degree: 2%
          + [RemotePage-komponenten](/help/implementing/developing/hybrid/remote-page.md)
          + [Redigera en extern SPA i AEM](/help/implementing/developing/hybrid/editing-external-spa.md)
          + [Sammansatta komponenter i SPA](/help/implementing/developing/hybrid/composite-components.md)
-         + [Återgivning på serversidan](/help/implementing/developing/hybrid/ssr.md)
          + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
          + [Starta integrering](/help/implementing/developing/hybrid/launch-integration.md)
          + [SPA referensdokument](/help/implementing/developing/hybrid/reference-materials.md)
-         + [Tillåt inte serialisering av ResourceResolvers via Sling Model Exporter](/help/implementing/developing/hybrid/disallow-the-serialization-of-resourceresolvers-via-sling-model-exporter.md)
    + Utvecklarverktyg {#developer-tools}
       + [Utvecklarläge](/help/implementing/developing/tools/developer-mode.md)
       + [AEM Developer Tools for Eclipse](/help/implementing/developing/tools/eclipse.md)
@@ -1318,8 +1317,8 @@ ht-degree: 2%
          + [Distribuera program](/help/implementing/developing/extending/app-builder/videos/deploy.md)
          + [Publish-program](/help/implementing/developing/extending/app-builder/videos/publish.md)
       + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
-      + [Customizing and Extending Content Fragments](/help/implementing/developing/extending/content-fragments-customizing.md)
-      + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
+      + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
+      + [Content Fragments Configuring Components for Rendering](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
       + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
       + Hantera sökning i Forms {#manage-search-forms}
          + [Konfigurera Sök i Forms](/help/implementing/developing/extending/search-forms.md)

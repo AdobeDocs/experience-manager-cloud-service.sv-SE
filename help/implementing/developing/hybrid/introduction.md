@@ -4,7 +4,7 @@ description: I den här artikeln beskrivs begreppen för en SPA och du kan gå i
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -16,6 +16,8 @@ ht-degree: 0%
 Single page applications (SPA) can offer compelling experiences for website users. Utvecklare vill kunna skapa webbplatser med SPA ramverk och författare vill smidigt redigera innehåll i AEM för en webbplats som skapats med sådana ramverk.
 
 SPA Editor erbjuder en omfattande lösning för SPA inom AEM. I den här artikeln går vi igenom hur du använder ett grundläggande SPA för att skapa och visar hur det är relaterat till den underliggande AEM SPA Editor.
+
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 
@@ -29,7 +31,7 @@ Målet med den här introduktionen och genomgången är att visa AEM utvecklare 
 
 Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följa med i den här genomgången måste du ha följande till hands.
 
-* [Senaste SDK för utveckling av AEMaaCS](/help/release-notes/release-notes-cloud/release-notes-current.md)
+* [Senaste utveckling av SDK i AEMaaCS](/help/release-notes/release-notes-cloud/release-notes-current.md)
    * Den bör köras som en lokal utvecklingsmiljö.
    * Du måste ha administratörsbehörighet för systemet.
 * [WKND-exempelprogrammet SPA Project som finns på GitHub](https://github.com/adobe/aem-guides-wknd-spa)

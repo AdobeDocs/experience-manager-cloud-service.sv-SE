@@ -4,7 +4,7 @@ description: I det här dokumentet beskrivs det allmänna ramverksoberoende kont
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -14,6 +14,8 @@ ht-degree: 0%
 # SPA {#spa-blueprint}
 
 Om du vill att författaren ska kunna använda AEM SPA Editor för att redigera innehållet i en SPA måste SPA uppfylla kraven.
+
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 
