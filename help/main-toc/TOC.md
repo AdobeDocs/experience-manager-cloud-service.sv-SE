@@ -232,6 +232,7 @@ ht-degree: 2%
    + [Borttagning av JWT-autentiseringsuppgifter i Adobe Developer Console](/help/security/jwt-credentials-deprecation-in-adobe-developer-console.md)
    + [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md)
    + [Bästa praxis för användarmappning av delningstjänst och användardefinition av tjänst](/help/security/best-practices-for-sling-service-user-mapping-and-service-user-definition.md)
+   + [Customer Managed Keys for Adobe as a Cloud Service](/help/security/customer-managed-keys.md)
 + Introduktion till {#onboarding}
    + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
    + Onboarding Journey {#journey}
