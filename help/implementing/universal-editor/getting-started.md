@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 8357caf2b0d396f6a1bd7b6160d6b48d8d6c026c
+source-git-commit: 75acf37e7804d665e38e9510cd976adc872f58dd
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -119,6 +119,51 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 ```html
 <meta name="urn:adobe:aue:config:extensions" content="<url>,<url>,<url>">
 ```
+
+## Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas. (Valfritt) {#content-paths}
+
+Om du har ett befintligt AEM med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) när innehållsförfattare redigerar sidor öppnas sidorna automatiskt med sidredigeraren. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna eller `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
+
+1. Öppna Configuration Manager.
+
+   `http://<host>:<port>/system/console/configMgr`
+
+1. Leta reda på **URL-tjänsten för den universella redigeraren** i listan och klicka på **Redigera konfigurationsvärdena**.
+
+1. Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas.
+
+   * Ange sökvägarna som den universella redigeraren öppnas för i fältet **Öppna mappning för den universella redigeraren**.
+   * I fältet **Sling:resourceTypes, som ska öppnas av Universell redigerare**, anger du en lista över resurser som ska öppnas direkt av Universell redigerare.
+
+1. Klicka på **Spara**.
+
+AEM kommer att öppna Universal Editor för sidor som baseras på den här konfigurationen i följande ordning.
+
+1. AEM kontrollerar mappningarna under `Universal Editor Opening Mapping` och om innehållet finns under sökvägar som definierats där öppnas Universell redigerare för det.
+1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping` kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes, som ska öppnas av Universal Editor**, och om innehållet matchar någon av dessa typer, öppnas Universell redigerare för det på `${author}${path}.html`.
+1. I annat fall AEM sidredigeraren.
+
+Följande variabler är tillgängliga för att definiera dina mappningar i fältet **Öppna mappning för Universal Editor**.
+
+* `path`: Innehållssökvägen för resursen som ska öppnas
+* `localhost`: Post för externalisering för `localhost` utan schema, t.ex. `localhost:4502`
+* `author`: Externalizer-post för författare utan schema, t.ex. `localhost:4502`
+* `publish`: Post för externalisering för publicering utan schema, t.ex. `localhost:4503`
+* `preview`: Externalizer-post för förhandsgranskning utan schema, t.ex. `localhost:4504`
+* `env`: `prod`, `stage`, `dev` baserat på definierade körningslägen för Sling
+* `token`: Frågetoken krävs för `QueryTokenAuthenticationHandler`
+
+### Exempelmappningar {#example-mappings}
+
+* Öppna alla sidor under `/content/foo` på AEM författare:
+
+   * `/content/foo:${author}${path}.html?login-token=${token}`
+   * Detta resulterar i att `https://localhost:4502/content/foo/x.html?login-token=<token>` öppnas
+
+* Öppna alla sidor under `/content/bar` på en fjärr-NextJS-server, med alla variabler som information:
+
+   * `/content/bar:nextjs.server${path}?env=${env}&author=https://${author}&publish=https://${publish}&login-token=${token}`
+   * Detta resulterar i att `https://nextjs.server/content/bar/x?env=prod&author=https://localhost:4502&publish=https://localhost:4503&login-token=<token>` öppnas
 
 ## Du är redo att använda den universella redigeraren {#youre-ready}
 
