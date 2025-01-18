@@ -2,7 +2,7 @@
 title: Redigera flera metadata i Assets View
 description: Lär dig hur du kan uppdatera en fördefinierad uppsättning med standardmetadatafält för flera resurser som är tillgängliga i Assets View samtidigt.
 exl-id: f5fee1b3-2855-4010-ae4a-216beb20920d
-source-git-commit: 692ff4fbb5b7e703f727d6e20d87c4fc0abdb350
+source-git-commit: f986cbc979ecdb9e704257a8b94db9de0d67d4f1
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Utför de här stegen för att massredigera metadata för flera resurser samtidi
      >
      >Du kan redigera metadata för 100 resurser i taget.
 
-Om du vill visa de använda metadata som har uppdaterats för en resurs går du till sidan med resursinformation (markera resursen och klickar på **Detaljer**) och klickar på ![](/help/assets/assets/info-icon-solid-black.svg) för att visa resursens metadata på panelen **Information** .
+Om du vill visa de metadatauppdateringar som används för en resurs går du till sidan med resursinformation (markera resursen och klickar på **Detaljer**) och klickar på ![](/help/assets/assets/info-icon-solid-black.svg) för att visa resursens metadata på panelen **Information** .
 
 >[!NOTE]
 >
