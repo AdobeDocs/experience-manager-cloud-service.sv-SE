@@ -4,9 +4,9 @@ description: Med innehållskopieringsverktyget kan man kopiera muterbart innehå
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: dfd44fc637e60f48c3d13430f1f4b9b7b9427d3d
+source-git-commit: fef97af53726d45cae36e2c9c6a5d82aa2f872c2
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1286'
 ht-degree: 0%
 
 ---
@@ -200,10 +200,3 @@ Verktyget för innehållskopiering har följande begränsningar.
 * Verktyget för innehållskopiering har ingen versionshantering och kan inte automatiskt identifiera ändrat innehåll eller skapat innehåll i källmiljön i en innehållsuppsättning sedan den senaste kopieringsåtgärden.
    * Om du bara vill uppdatera målmiljön med innehållsändringar sedan den senaste kopieringsåtgärden måste du skapa en innehållsuppsättning. Ange sedan sökvägarna i källinstansen där ändringar har gjorts sedan den senaste kopieringsåtgärden.
 * Versionsinformation ingår inte i en innehållskopia.
-
-## Kända fel {#known-issues}
-
-Tänk på följande kända fel när du använder funktionen för att kopiera innehåll i [en.](/help/implementing/developing/tools/content-copy.md)
-
-* Om en resurs i källmiljön byter namn kan det leda till att innehållskopieringsåtgärden misslyckas på grund av att UUID:n i målmiljön är i konflikt.
-   * För att undvika det här felet bör du först ta bort resurserna och sedan återskapa dem med det nya resursnamnet, i stället för att byta namn.
