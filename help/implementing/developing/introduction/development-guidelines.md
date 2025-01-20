@@ -4,7 +4,7 @@ description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och 
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 16379d9cb7cdf876502205c12a233a95b410a67a
+source-git-commit: 9c684e3a82353c9e241efc9ee1f3bed694d8635a
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 0%
@@ -191,7 +191,7 @@ I stället kan databasläsaren startas från AEM as a Cloud Service Developer Co
 
 En uppsättning verktyg för felsökning av AEM as a Cloud Service utvecklingsmiljöer finns i AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller Publish tjänste-URL:er enligt följande:
 
-`https://dev-console/-<namespace>.<cluster>.dev.adobeaemcloud.com`
+`https://dev-console-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
 Följande Cloud Manager CLI-kommando kan användas för att starta AEM as a Cloud Service Developer Console baserat på en miljöparameter som beskrivs nedan:
 
