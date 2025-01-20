@@ -1,13 +1,13 @@
 ---
 title: Skapa innehållsfragment
-description: Lär dig hur du skapar innehåll för dina innehållsfragment och skapar varianter av det innehållet utifrån syfte. Detta ger större flexibilitet för både headless-leverans och redigering av sidor.
+description: Lär dig hur du skapar innehåll för dina innehållsfragment och skapar varianter av det innehållet utifrån syfte. Med Content Fragments får du större flexibilitet för både rubrikfri leverans och sidredigering.
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 6a971fd5d0e071f72c17cf0a42f3dd8da0b476ae
+source-git-commit: 84e329e893ead1d67a3a0f651d0d2d4b24021b12
 workflow-type: tm+mt
-source-wordcount: '2841'
+source-wordcount: '2851'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,9 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
 * central panel: visar de faktiska fälten och innehållet i den valda varianten
    * gör att du kan redigera innehållet
       * när den är konfigurerad (som flera) i modellen tillåter olika datatyper dig att **lägga till** instanser av det relevanta fältet
-   * Om **platshållarfält** definieras i den modell som de visas här och kan användas för navigering, visas de antingen vågrätt eller som en listruta.
+   * om **platshållarfält** definieras i modellen som de visas här och:
+      * kan användas för navigering
+      * visas antingen vågrätt eller som en listruta
 
   >[!NOTE]
   >
@@ -102,7 +104,7 @@ I den vänstra panelen ser du:
 
 ### Följ länkar {#follow-links}
 
-I olika delar av redigeraren ser du länkikonen. Detta kan användas för att öppna det objekt som visas, t.ex. en innehållsfragmentmodell, en överordnad referens eller ett fragment som refereras:
+I olika delar av redigeraren ser du länkikonen. Den här ikonen kan användas för att öppna det objekt som visas, till exempel en innehållsfragmentmodell, en överordnad referens eller ett fragment som refereras:
 
 ![Innehållsfragmentredigeraren - länkikon](assets/cf-authoring-link-icon.png)
 
@@ -475,7 +477,7 @@ Till exempel:
 
 ## Kommentera fragmentet {#commenting-on-your-fragment}
 
-Fliken **Kommentarer** i den högra panelen innehåller följande funktioner:
+Fliken **Kommentarer** i den högra panelen ger dig möjlighet att samarbeta i produkter och i sammanhang:
 
 * Lägg till en ny kommentar
 * Tagga specifika användare i en kommentar
