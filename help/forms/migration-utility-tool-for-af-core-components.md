@@ -8,7 +8,7 @@ hide: true
 hidefromtoc: true
 exl-id: ee71a576-96a7-4c81-b3a3-1d678f010cba
 feature: Adaptive Forms, Core Components
-source-git-commit: c374d95e6b64b8f35f89d469d698add8b95e01eb
+source-git-commit: 92a5599ac94d5bf09311d34dd0287def46b14353
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Forms Conversion Utility konverterar adaptiv Forms som är baserad på äldre Fo
 
 >[!NOTE]
 > 
-> Vi rekommenderar att du installerar verktygen AEM modernisering på din lokala AEM. Migrera det adaptiva Forms som bygger på Foundation Components till Core Component-baserade formulär. Hämta formuläret tillsammans med dess resurser. Överför sedan formuläret och dess resurser till den miljö som krävs.
+>Vi rekommenderar att du installerar verktygen AEM modernisering på din lokala AEM. Migrera det adaptiva Forms som bygger på Foundation Components till Core Component-baserade formulär. Hämta formuläret tillsammans med dess resurser. Överför sedan formuläret och dess resurser till den miljö som krävs.
 
 ## Att tänka på när du använder verktygen AEM Modernisering {#considerations}
 
@@ -39,6 +39,7 @@ Forms Conversion Utility konverterar adaptiv Forms som är baserad på äldre Fo
 * Översättningsinställningarna som används i det ursprungliga formuläret överförs inte. Konfigurera om översättning för det konverterade formuläret.
 * Om formuläret som bygger på Foundation Components innehåller skript eller anpassade funktionsregler måste du skriva om dem för det konverterade formuläret baserat på Core Components.
 * Följande OOTB-grundskomponenter stöds ännu inte i Core Components och tas därför bort i den konverterade formen:
+
    * Adobe Sign Block
    * Diagram
    * Lista över bifogade filer
@@ -54,10 +55,9 @@ Forms Conversion Utility konverterar adaptiv Forms som är baserad på äldre Fo
 
 * [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md)
 * [Aktivera adaptiva Forms Core-komponenter för din miljö.](/help/forms/enable-adaptive-forms-core-components.md)
-
 * Lägg till dina användare i gruppen [!DNL forms-users]. Medlemmarna i gruppen [!DNL forms-users] har behörighet att skapa ett anpassat formulär.
-
 * Användare med följande roller har behörighet att installera AEM Modernisera verktyg i en AEM miljö:
+
    * Utvecklarroll
    * Administratörsroll
 
@@ -68,7 +68,7 @@ En detaljerad lista med formulärspecifika användargrupper finns i [Grupper och
 Så här installerar och konfigurerar du de AEM verktygen för modernisering:
 
 1. [Installera AEM Modernisera verktyg i din lokala AEM Forms-miljö](#install-aem-modernize-Tools)
-2. [Aktivera AEM verktyg för modernisering i din lokala AEM Forms-miljö](#enable-aem-modernize-Tools)
+1. [Aktivera AEM verktyg för modernisering i din lokala AEM Forms-miljö](#enable-aem-modernize-Tools)
 
 ### Installera AEM Modernisera verktyg i din lokala AEM Forms-miljö {#install-aem-modernize-Tools}
 
@@ -93,6 +93,7 @@ Så här installerar du AEM Modernisera verktyg i din lokala AEM Forms-miljö:
    ```Shell
        mvn clean install 
    ```
+
 ![Installationsavbildningen ](/help/forms/assets/aem-modernize-install-steps.png) har slutförts
 
 När installationen är klar blir de AEM verktygen tillgängliga för din miljö.
@@ -128,10 +129,12 @@ Om du vill aktivera och använda AEM verktyg för modernisering för din AEM mil
 
 1. Ange **[!UICONTROL Job Name]**.
 1. På fliken **[!UICONTROL Form]** kan du välja något av följande alternativ:
+
    * **Inget** : Välj alternativet om du inte vill skapa en kopia av de Foundation Component-baserade formulären innan du påbörjar formulärkonverteringen.
    * **Återställ** : Välj alternativet att återställa formuläret till det tillstånd det hade innan formulärkonverteringen startades.
    * **Kopiera till mål**: Välj alternativet att skapa en kopia av de Foundation Component-baserade formulären innan du påbörjar formulärkonverteringen.
-I vårt fall är alternativet **Kopiera till mål** markerat. Om alternativet **Kopiera till mål** är markerat blir alternativen **[!UICONTROL Source Path]** och **[!UICONTROL Target Path]** synliga.
+
+   I vårt fall är alternativet **Kopiera till mål** markerat. Om alternativet **Kopiera till mål** är markerat blir alternativen **[!UICONTROL Source Path]** och **[!UICONTROL Target Path]** synliga.
 
 1. Ange namnet `source folder` i **[!UICONTROL Source Path]**.
 1. Ange namnet `target folder` i **[!UICONTROL Target Path]**.
@@ -152,6 +155,7 @@ I vårt fall är alternativet **Kopiera till mål** markerat. Om alternativet **
    ![AEM Verktyg har moderniserats](/help/forms/assets/aem-modernize-tools-success.png)
 
 1. Markera det adaptiva formuläret och välj > **[!UICONTROL Properties]**. Sidan Formuläregenskaper öppnas.
+
    ![AEM Verktyg och målmapp](/help/forms/assets/aem-modernize-tools-destination-folder.png)
 
 1. Välj **[!UICONTROL Save and Close]** om du vill spara egenskaperna för det konverterade formuläret igen.
