@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 33a30ea29023f90cc6ce1c8b64ed4f9cfdd4f4a7
+source-git-commit: 24c34daebf7d45d9262181890310eb196c58a7db
 workflow-type: tm+mt
-source-wordcount: '4863'
+source-wordcount: '4990'
 ht-degree: 0%
 
 ---
@@ -548,23 +548,23 @@ Om du återställer RDE tas all anpassad kod, konfigurationer och innehåll bort
 
 En återställning ställer in RDE till den senast tillgängliga AEM.
 
-<!-- Alexandru: hiding for now, do not delete
+Du kan återställa med hjälp av [Cloud Manager](#reset-the-rde-cloud-manager) eller med hjälp av [kommandoraden](#reset-the-rde-command-line). Återställningen tar några minuter och allt befintligt innehåll och all befintlig kod tas bort från den lokala utvecklingsmiljön.
 
-Resetting can be done by way of [Cloud Manager](#reset-the-rde-cloud-manager) or by way of the [command line](#reset-the-rde-command-line). Resetting takes a few minutes and all existing content and code is deleted from the RDE.
-
->[NOTE!]
+>[OBS!]
 >
->You must be assigned the Cloud Manager Developer role to use the reset feature. If not, a reset action results in an error.
+>Du måste tilldelas Cloud Manager Developer-rollen för att kunna använda återställningsfunktionen. Om så inte är fallet uppstår ett fel när en återställningsåtgärd utförs.
 
-### Reset the RDE by way of Command Line {#reset-the-rde-command-line}
+### Återställ RDE med kommandoraden {#reset-the-rde-command-line}
 
-You can reset the RDE and return it to a default state by running:
+Du kan återställa RDE och återställa det till standardläge genom att köra:
 
 `aio aem:rde:reset`
 
-This usually takes a few minutes. Use the [status command](#checking-rde-status) to check when the environment is ready again.
+Detta tar vanligtvis några minuter och rapporterar ```Environment reset.``` när det lyckades eller ```Failed to reset the environment.``` om fel. För strukturerade utdata, se kapitlet om ```--json```-utdata nedan.
 
-### Reset the RDE in Cloud Manager {#reset-the-rde-cloud-manager} -->
+Använd [statuskommandot](#checking-rde-status) för att kontrollera när miljön är klar igen.
+
+### Återställ RDE i Cloud Manager {#reset-the-rde-cloud-manager}
 
 Du kan använda Cloud Manager för att återställa din RDE genom att följa stegen nedan:
 
@@ -942,7 +942,7 @@ De flesta kommandon har stöd för den globala flaggan ```--json``` som undertry
 }
 ```
 
-#### Vänta på slutförande {#wait}
+#### Vänta på slutförande, återställningen har slutförts {#wait-success}
 
 ```$ aio aem rde reset --json```
 
@@ -951,6 +951,18 @@ De flesta kommandon har stöd för den globala flaggan ```--json``` som undertry
   "programId": "myProgram",
   "environmentId": "myEnv",
   "status": "reset"
+}
+```
+
+#### Vänta på slutförande, återställningen misslyckades {#wait-failed}
+
+```$ aio aem rde reset --json```
+
+```json
+{
+  "programId": "myProgram",
+  "environmentId": "myEnv",
+  "status": "reset_failed"
 }
 ```
 
