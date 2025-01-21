@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: e22e4e530c2d023724b360c488cab2b59ec22fc4
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -159,10 +159,10 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervyn](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* ![listvy](assets/do-not-localize/list-view.png) [!UICONTROL **Listvy**] I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* ![stödrastervy](assets/do-not-localize/grid-view.png) [!UICONTROL **Stödrastervy**] Stödrastervyn visar rullningsbara filer och mappar i ett stödraster med rader och kolumner.
+* ![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL **Gallerivy**] Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* ![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL **Vattenfall** Visa] I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 **Översiktsgrafik**
 

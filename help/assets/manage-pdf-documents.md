@@ -4,9 +4,9 @@ description: Hantera PDF-dokument i [!DNL Adobe Experience Manager]  som en [!DN
 feature: Asset Management
 role: User, Admin
 exl-id: 29660869-6902-4093-845b-cd629be59d4d
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: e22e4e530c2d023724b360c488cab2b59ec22fc4
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,14 @@ ht-degree: 0%
 Experience Manager Assets integreras smidigt med visningsprogrammet för PDF i Document Cloud, vilket gör att du kan förhandsgranska flera sidor i ett PDF-dokument. Dessutom kan du använda avancerade visningsfunktioner för Document Cloud PDF, som anteckningar, söktext, navigera i PDF-dokumentet med bokmärken och miniatyrbilder med mera under samma tak. Med Experience Manager Assets kan du även överföra dokument i andra format som stöds och förhandsgranska dem i PDF-format.
 
 Document Cloud PDF viewer ger AEM Assets fördelar på följande sätt:
+
 * [Stöd för visningsprogramkomponenter för PDF Document Cloud](#pdf-doc-cloud)
 * [Stöd för förhandsvisning av flera sidor och anteckningar för PDF-resurser](#multi-page)
 * [Stöd för förhandsgranskning av flera sidor för dokument i andra format](#multi-format)
 
-> Tips
-> Om du inte kan hämta förhandsgranskning av flera sidor för ett tidigare överfört PDF-dokument markerar du PDF och klickar på **![Bearbeta igen](/help/assets/assets/Reprocess.svg) Assets**.
+>[!TIP]
 >
+> Om du inte kan hämta förhandsgranskning av flera sidor för ett tidigare överfört PDF-dokument markerar du PDF och klickar på ![Bearbeta igen](/help/assets/assets/Reprocess.svg) **Bearbeta Assets igen**.
 
 ## Stöd för visningsprogramkomponenter för PDF Document Cloud {#pdf-doc-cloud}
 
@@ -57,9 +58,9 @@ Med Adobe Experience Manager Assets kan du förhandsgranska PDF-dokument som bes
 
 Du kan också använda [anteckningar](#pdf-annotations) på PDF-dokumentet i en förhandsvisning av flera sidor.
 
-> ANMÄRKNING
-> Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
+>[!NOTE]
 >
+> Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409355)
 
@@ -72,6 +73,7 @@ Du kan också använda [anteckningar](#pdf-annotations) på PDF-dokumentet i en 
 Med Experience Manager Assets kan du lägga till kommentarer i ett PDF-dokument. Ett PDF-dokument kan ha flera anteckningar.
 
 Gör så här om du vill lägga till kommentarer i ett PDF-dokument:
+
 1. Gå till Assets-gränssnittet och navigera till dokumentet PDF som du vill kommentera. Det inbyggda visningsprogrammet för PDF öppnas till höger och förhandsvisar det markerade PDF-dokumentet.
 1. Klicka på **Anteckna** på den översta menyn.
 Följande anteckningar kan användas på ett PDF-dokument:
@@ -126,15 +128,16 @@ Förutom PDF-dokument kan du även förhandsgranska flera sidor för dokument i 
 ![Flersidig förhandsgranskning av dokument i andra format](/help/assets/assets/multi-page-other-formats.png)
 
 Utför följande steg för att förhandsgranska flera sidor i andra dokumentformat som stöds:
+
 1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=en).
 1. Bläddra i dokumentet som du vill överföra och förhandsgranska.
 1. Öppna dokumentet.
 1. Markera PDF under det statiska avsnittet på den vänstra panelen. Den högra panelen visar förhandsgranskningen av en resurs på flera sidor. Välj en miniatyrbild i den vänstra panelen för att välja den sida som du vill förhandsgranska.
 
-> ANMÄRKNING
+>[!NOTE]
+>
 > * Den maximala storleken för en resurs som du kan förhandsgranska är upp till 100 MB.
 > * Den maximala storleken på XLS- eller XLSX-filer som kan förhandsgranskas är 20 MB.
->
 
 **Se även**
 

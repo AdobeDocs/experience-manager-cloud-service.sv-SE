@@ -5,9 +5,9 @@ contentOwner: Adobe
 role: Admin, User
 exl-id: 7e7bc1ee-d580-4c88-b550-273e8b0620ba
 feature: Selectors
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: e22e4e530c2d023724b360c488cab2b59ec22fc4
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1905'
 ht-degree: 0%
 
 ---
@@ -271,10 +271,10 @@ Du kan skapa en mapp i målmappen för [!DNL Adobe Experience Manager] som en [!
 
 Med målväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]**: I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervy](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]**: I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]**: I gallerivyn visas filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]**: I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* ![listvy](assets/do-not-localize/list-view.png) [!UICONTROL **listvy**]: I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* ![stödrastervy](assets/do-not-localize/grid-view.png) [!UICONTROL **Stödrastervy**]: I stödrastervyn visas rullningsbara filer och mappar i ett stödraster med rader och kolumner.
+* ![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL **Gallerivy**]: Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* ![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL **Vattenfallsvy**]: I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 ### Info {#info}
 
