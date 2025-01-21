@@ -4,7 +4,7 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 7f54d2ee61d2b92e7a0f02c66ce8ee5cdbedd73c
+source-git-commit: 384f8a1301ea488e0b2aa493389d090896fe3b33
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Följande exempel på offertblock följer den här metoden.
 
 >[!ENDTABS]
 
-4\. Redigera [`component-filters.json`-filen ](/help/implementing/universal-editor/customizing.md#filtering-components) i projektets rot och lägg till offertblocket i [filterdefinitionen](/help/implementing/universal-editor/customizing.md#filtering-components) så att blocket kan läggas till i valfritt avsnitt och spara filen.
+4\. Redigera [`component-filters.json`-filen ](/help/implementing/universal-editor/filtering.md) i projektets rot och lägg till offertblocket i [filterdefinitionen](/help/implementing/universal-editor/filtering.md) så att blocket kan läggas till i valfritt avsnitt och spara filen.
 
 >[!BEGINTABS]
 

@@ -1,7 +1,7 @@
 ---
-source-git-commit: f6be839d58b796b3791342375ff61d17b1f8cb0f
+source-git-commit: 72f2b67c805f964c93a8a3e2883b3d3160fe5723
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,7 @@ ht-degree: 0%
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
 * [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
+* [Använda tjänsten Skicka formulär](/help/forms/forms-submission-service.md)
 
 
 ## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation-komponenter {#rule-editor-diff}

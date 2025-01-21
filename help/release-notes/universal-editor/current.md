@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2024.12.02
-description: Detta är versionsinformationen för version 2024.12.02 av Universal Editor.
+title: Versionsinformation om Universal Editor 2054.01.16
+description: Detta är versionsinformationen för version 2025.01.16 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 2aae8c63358680758e4f5324f38dea1bc2c47155
+source-git-commit: 14bc45917f56ecf358278848e7e830afb1fedccd
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2024.12.02 {#release-notes}
+# Versionsinformation om Universal Editor 2025.01.16 {#release-notes}
 
-Detta är versionsinformationen för den 2 december 2024-versionen av Universal Editor.
+Det här är versionsinformationen för den 16 januari 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,18 +22,15 @@ Detta är versionsinformationen för den 2 december 2024-versionen av Universal 
 
 ## Nyheter {#what-is-new}
 
-* **Tangentbordsnavigering i innehållsträdet**: [Innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) som finns på sidopanelen är nu helt tillgängligt via tangentbordet.
-   * Författare kan navigera och interagera med trädvyobjekt med standardtangentbordskontroller, enligt [WCAG 2.1-riktlinjerna](/help/sites-cloud/authoring/page-editor/accessible-content.md) för tillgänglighet.
-   * Den här förbättringen säkerställer att alla interaktiva element i trädet kan opereras via tangentbordet, vilket förbättrar integriteten för användare som använder tangentbordsnavigering.
-* **Avmarkering av redigerbara element**: Författare kan nu avmarkera tidigare markerade redigerbara element på sidan.
-   * Detta eliminerar störande element när författare vill visa sidan utan aktiva markeringsgränser.
-* **Fragmentväljare**: I AEM as a Cloud Service-instanser öppnar fragmentreferenser nu fragmentväljaren som innehållsväljare, vilket ger förbättrad funktionalitet som att följa tillåtna modeller för innehållsfragment, söka efter innehållsfragment och en förbättrad helhetsupplevelse.
-   * Detta är i linje med andra användargränssnitt i Adobe och ger enhetlighet.
-   * [I AEM 6.5-miljöer ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) används den befintliga innehållsväljaren fortfarande.
-* **Behållarbeskrivning**: [Behållarkomponenten](/help/implementing/universal-editor/field-types.md#container) som används i [egenskapspanelen,](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel-properties-rail) för att referera till innehåll, stöder nu ett beskrivningsattribut som visas ovanför behållarfälten.
-   * Det här tillägget gör texten tydligare genom att ge författare kontext om de grupperade fält som de redigerar.
+* **Borttagning av CORS-bibliotek &lt; 3.0.0** - För att framtida kompatibilitet ska kunna garanteras och säkerheten förbättras stöder nu den universella redigeraren endast version 3.0.0 eller högre av
+  `@Adobe Express/universal-editor-cors`-bibliotek.
+   * Biblioteket levereras nu endast via [`universal-editor-service.adobe.io/cors.js`.](http://universal-editor-service.adobe.io/cors.js)
+   * Ett meddelande om borttagning visas för användare när de öppnar en sida som använder äldre versioner av CORS-biblioteket och uppmanar dem att uppdatera.
+* **Tilläggspunkt för landningssida** - [En ny tilläggspunkt](/help/implementing/universal-editor/customizing.md#extending) har introducerats för att tillägg ska visas på sidospåret på den universella redigerarens startsida.
+   * Nu kan utvecklare ange om tillägg ska gälla för redigeraren, landningssidan eller båda, vilket ger större anpassning och användbarhet.
 
 ## Andra förbättringar {#other-improvements}
 
-* **Rich Text Field Synchronization**: Synkroniseringen av Raw- och renderat innehåll i RTF-fält på egenskapspanelen har förbättrats, vilket åtgärdar problem i Edge Delivery Services där RTF-innehåll och renderad representation kan skilja sig åt.
-* **Redigeringslägeshändelser**: Den universella redigeraren genererar nu redigeringslägeshändelser, inklusive efter att fjärrprogram har lästs in på nytt.
+* **Ogiltiga URL:er i de senaste objekten på landningssidan** har korrigerats där URL:er som visas i listan Senaste på den universella redigerarens startsida har brutits.
+* **Temasynkronisering i Unified Shell** - Den universella redigeraren synkroniserar nu temat dynamiskt med systemets Unified Shell-inställningar och justerar automatiskt mellan ljust och mörkt läge.
+   * Detta ger ett konsekvent visuellt utseende över mikrofrontender, inklusive fragment- och resursväljare.

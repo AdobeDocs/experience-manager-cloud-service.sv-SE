@@ -4,7 +4,7 @@ description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring 
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 7f54d2ee61d2b92e7a0f02c66ce8ee5cdbedd73c
+source-git-commit: 384f8a1301ea488e0b2aa493389d090896fe3b33
 workflow-type: tm+mt
 source-wordcount: '2195'
 ht-degree: 0%
@@ -113,7 +113,7 @@ För varje block gäller följande:
    * Blocknamnet används för att hämta rätt format och skript för att dekorera blocket.
 * Kan definiera ett [modell-ID.](/help/implementing/universal-editor/field-types.md#model-structure)
    * Modell-ID är en referens till komponentens modell, som definierar de fält som är tillgängliga för författaren på egenskapspanelen.
-* Kan definiera ett [filter-ID.](/help/implementing/universal-editor/customizing.md#filtering-components)
+* Kan definiera ett [filter-ID.](/help/implementing/universal-editor/filtering.md)
    * Filter-ID är en referens till komponentens filter, som gör att du kan ändra redigeringsbeteendet, till exempel genom att begränsa vilka underordnade som kan läggas till i blocket eller avsnittet eller vilka RTE-funktioner som är aktiverade.
 
 All den här informationen lagras i AEM när ett block läggs till på en sida. Om resurstypen eller blocknamnet saknas återges inte blocket på sidan.
@@ -245,7 +245,7 @@ Ett exempel på detta är metadata för avsnittet [.](/help/edge/developer/marku
 
 Båda de tidigare strukturerna har en enda dimension: listan med egenskaper. Behållarblock gör att du kan lägga till underordnade (vanligtvis av samma typ eller modell) och därför är tvådimensionella. Dessa block har fortfarande stöd för sina egna egenskaper som återges som rader med en enda kolumn först. Men de tillåter också att du lägger till underordnade objekt, för vilka varje objekt återges som rad och varje egenskap som kolumn i den raden.
 
-I följande exempel accepterar ett block en lista med länkade ikoner som underordnade, där varje länkad ikon har en bild och en länk. Observera [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) som angetts i blockets data för att referera till filterkonfigurationen.
+I följande exempel accepterar ett block en lista med länkade ikoner som underordnade, där varje länkad ikon har en bild och en länk. Observera [filter-ID](/help/implementing/universal-editor/filtering.md) som angetts i blockets data för att referera till filterkonfigurationen.
 
 >[!BEGINTABS]
 
@@ -536,9 +536,9 @@ På samma sätt som en utvecklare kan definiera och modellera flera [block,](#bl
 
 Innehållsmodellen för Edge Delivery Services tillåter avsiktligt bara en enda kapslingsnivå, vilket är vilket standardinnehåll eller -block som finns i ett avsnitt. Detta innebär att om du vill ha mer komplexa visuella komponenter som kan innehålla andra komponenter måste de modelleras som sektioner och kombineras med hjälp av en autoblockerande klientsida. Typiska exempel på detta är tabbar och komprimerbara avsnitt som dragspelspaneler.
 
-Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och ett [filter-ID,](/help/implementing/universal-editor/customizing.md#filtering-components), som endast används av [Universal Editor](/help/implementing/universal-editor/introduction.md), samt ett [modell-ID,](/help/implementing/universal-editor/field-types.md#model-structure), som används för att återge avsnittsmetadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
+Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och ett [filter-ID,](/help/implementing/universal-editor/filtering.md), som endast används av [Universal Editor](/help/implementing/universal-editor/introduction.md), samt ett [modell-ID,](/help/implementing/universal-editor/field-types.md#model-structure), som används för att återge avsnittsmetadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
 
-[modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) och [filter-ID](/help/implementing/universal-editor/customizing.md#filtering-components) för standardavsnittet är `section`. Den kan användas för att ändra standardavsnittets beteende. I följande exempel läggs vissa format och en bakgrundsbild till i avsnittets metadatamodell.
+[modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) och [filter-ID](/help/implementing/universal-editor/filtering.md) för standardavsnittet är `section`. Den kan användas för att ändra standardavsnittets beteende. I följande exempel läggs vissa format och en bakgrundsbild till i avsnittets metadatamodell.
 
 ```json
 {

@@ -4,9 +4,9 @@ description: Lär dig mer om de olika tilläggspunkterna och andra funktioner so
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 732b0648e7114594cb8d35df03f83b842d62736e
+source-git-commit: afcb3cbc2b0868de7bac9446eb07ae30c033de66
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -41,39 +41,7 @@ Knappen **Publish** kan därför undertryckas helt i ett program genom att följ
 
 ### Filtrera komponenter {#filtering-components}
 
-När du använder Universal Editor kan du begränsa vilka komponenter som tillåts per behållarkomponent. För att göra detta måste du infoga ytterligare en script-tagg som pekar på filterdefinitionen.
-
-```html
-<script type="application/vnd.adobe.aue.filter+json" src="/static/filter-definition.json"></script>
-```
-
-En filterdefinition kan se ut så här, vilket begränsar en behållare så att bara text och bilder kan läggas till.
-
-```json
-[
-  {
-    "id": "container-filter",
-     "components": ["text", "image"]
-   }
-]
-```
-
-Sedan kan du referera till filterdefinitionen från behållarkomponenten genom att lägga till egenskapen `data-aue-filter` och skicka ID:t för filtret som du definierade tidigare.
-
-```html
-data-aue-filter="container-filter"
-```
-
-Om attributet `components` i en filterdefinition anges till `null` tillåts alla komponenter, som om det inte fanns något filter.
-
-```json
-[
-  {
-    "id": "another-container-filter",
-     "components": null
-   }
-]
-```
+Du kan begränsa vilka komponenter som tillåts per behållare i den universella redigeraren med hjälp av komponentfilter. Mer information finns i dokumentet [Filtrera komponenter](/help/implementing/universal-editor/filtering.md).
 
 ### Visa och dölj komponenter villkorligt på egenskapspanelen {#conditionally-hide}
 
