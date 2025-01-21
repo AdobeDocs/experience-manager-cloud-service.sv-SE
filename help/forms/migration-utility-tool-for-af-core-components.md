@@ -8,9 +8,9 @@ hide: true
 hidefromtoc: true
 exl-id: ee71a576-96a7-4c81-b3a3-1d678f010cba
 feature: Adaptive Forms, Core Components
-source-git-commit: c52d649e569ef427e70c85a88fa0f48fcc534e9e
+source-git-commit: c374d95e6b64b8f35f89d469d698add8b95e01eb
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1028'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,18 @@ Forms Conversion Utility konverterar adaptiv Forms som är baserad på äldre Fo
 
 * Vid lyckade konverteringar tas alla regler som tillämpas på formuläret bort. Regler migreras inte automatiskt. Du bör återskapa och tillämpa dessa regler på det konverterade formuläret manuellt.
 * Översättningsinställningarna som används i det ursprungliga formuläret överförs inte. Konfigurera om översättning för det konverterade formuläret.
-  <!-- * If the form built on Foundation Components contains custom function rules, you have to rewrite these rules for the converted form based on Core Components.-->
+* Om formuläret som bygger på Foundation Components innehåller skript eller anpassade funktionsregler måste du skriva om dem för det konverterade formuläret baserat på Core Components.
+* Följande OOTB-grundskomponenter stöds ännu inte i Core Components och tas därför bort i den konverterade formen:
+   * Adobe Sign Block
+   * Diagram
+   * Lista över bifogade filer
+   * Fotnotsplatshållare
+   * Bildval
+   * Knappen Nästa
+   * Knappen Föregående
+   * Klottersignatur
+   * Sammanfattningssteg
+   * Verktygsfält
 
 ## Krav för att använda AEM verktyg för modernisering
 
@@ -68,7 +79,7 @@ Så här installerar du AEM Modernisera verktyg i din lokala AEM Forms-miljö:
 
    `java -jar aem-author-p4502.jar`
 
-1. Klona [AEM-databasen för verktyget Modernisering](/help/journey-migration/refactoring-tools/aem-modernization-tools.md) i din lokala dator.
+1. Klona [AEM-databasen för verktyget Modernisering](https://github.com/adobe/forms-modernizer) i din lokala dator.
 
    ```Shell
    git clone [Path of Git repository of AEM Modernize Tool]
