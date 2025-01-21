@@ -87,6 +87,8 @@ ht-degree: 2%
          + [Versionsinformation för 2020.2.0](/help/release-notes/release-notes-cloud/2020/release-notes-2020-2-0.md)
    + Versionsinformation om underhåll av AEMaaCS {#maintenance}
       + [Versionsinformation om aktuellt underhåll](/help/release-notes/maintenance/latest.md)
+      + 2025 {#2025}
+         + [Maintenance Release Notes for 2025.1.0](/help/release-notes/maintenance/2025/2025-1-0.md)
       + 2024 {#2024}
          + [Underhållsinformation för 2024.11.0](/help/release-notes/maintenance/2024/2024-11-0.md)
          + [Underhållsinformation för 2024.10.0](/help/release-notes/maintenance/2024/2024-10-0.md)
@@ -1013,6 +1015,7 @@ ht-degree: 2%
          + [Använd regler för att lägga till dynamiskt beteende i ett formulär](/help/edge/docs/forms/rules-forms.md)
          + [Regex-uttryck för validering](/help/edge/docs/forms/regex-forms.md)
          + [Visa ett anpassat tackmeddelande efter att formuläret har skickats](/help/edge/docs/forms/thank-you-page-form.md)
+         + [Use Forms Submission Service](/help/forms/forms-submission-service.md)
       + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
@@ -1020,6 +1023,7 @@ ht-degree: 2%
          + [Använd reCAPTCHA för att skydda dina formulär](/help/edge/docs/forms/recaptacha-forms.md)
          + [Anpassade komponenter](/help/edge/docs/forms/custom-components-forms.md)
          + [Övervakning av faktisk användning för formulär](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
+         + [Publishing Forms for Edge Delivery Services](/help/edge/docs/forms/publishing-forms.md)
       + Referenser {#forms-references}
          + [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
    + Edge Delivery-resurser {#resources}
