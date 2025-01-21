@@ -4,9 +4,9 @@ description: Alternativen i listrutan ingår i ett visst kalkylblad och importer
 feature: Edge Delivery Services
 exl-id: 5b0bc1b6-6e33-41f3-b7c1-4d997787b6cd
 role: Admin, Architect, Developer
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: cb914f76b0b785a89b20ef5eaacbc36e8217944b
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,6 @@ Fördelarna med att läsa in en listruta från ett separat kalkylblad är:
 
 * Förenklad hantering: Bibehåll listrutealternativen centralt för enklare uppdateringar och tillägg.
 * Förbättrad effektivitet: Eliminera behovet av att lägga till långa alternativlistor manuellt i formulärdefinitionen.
-
-
-
 
 ![Listrutealternativ](/help/forms/assets/drop-down-options.png)
 
@@ -58,8 +55,9 @@ Ange dina landsalternativ i kolumnen&quot;Alternativ&quot; (och&quot;Värde&quot
 
 1. Förhandsgranska och publicera `shared-country`-bladet med [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content).
 
-   Se URL:en som visar bladet `shared-country`:
-https://main—weFinance—wkndforms.hlx.live/inquiry.json?sheet=country
+   Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontoägaren&quot;wkndform&quot; och du använder huvudgrenen, den URL som visar bladet `shared-country`:
+   `https://main--wefinance--wkndform.aem.live/enquiry.json?sheet=country`
+   <!--(https://main--wefinance--wkndform.aem.live/enquiry.json?sheet=country)  -->
 
 >[!NOTE]
 >
@@ -79,13 +77,15 @@ Egenskapen `Options` för ett `select`-fält accepterar en URL. URL:en returnera
 
    ![Listruta för land](/help/forms/assets/load-dropdown-options-form.png)
 
-Du kan referera till [frågekalkylbladet](/help/forms/assets/enquiry-options.xlsx) för att lägga till URL:en för att läsa in listrutealternativ.
+Du kan referera till [frågekalkylbladet](/help/edge/assets/enquiry.xlsx) för att lägga till URL:en för att läsa in listrutealternativ.
 
 När du har integrerat URL:en i formulärdefinitionen för att läsa in listrutealternativen visas alternativen för listrutan `Destination` från URL:en.
 
-Se URL:en nedan, som visar formuläret `enquiry` med de alternativ som har sparats i det separata bladet:
+Om projektdatabasen till exempel heter&quot;weFinance&quot;, finns den under kontoägaren&quot;wkndform&quot; och du använder huvudgrenen, visar URL:en nedan formuläret `enquiry` med de alternativ som har sparats i det separata bladet:
 
-https://main--wefinance--wkndforms.hlx.live/enquiry-form
+`https://main--wefinance--wkndform.aem.live/enquiry-form`
+<!--(https://main--wefinance--wkndform.aem.live/enquiry-form) 
+-->
 
 ## Se även
 

@@ -4,9 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med ett n
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: cb914f76b0b785a89b20ef5eaacbc36e8217944b
 workflow-type: tm+mt
-source-wordcount: '1850'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -61,27 +61,26 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
    >
    > Om du använder GitHub Enterprise med IP-filtrering kan du lägga till följande IP-adress i tillåtelselista: 3.227.118.73
 
-   Grattis! Du har en ny webbplats som körs på `https://<branch>--<repo>--<owner>.hlx.page/`.
+   Grattis! Du har en ny webbplats som körs på `https://<branch>--<repo>--<owner>.aem.page/`.
 
    * `<branch>` refererar till din GitHub-databas.
    * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
-   Om filialnamnet till exempel är `main`, databasen är `wefinance` och ägaren är `wkndforms`, kommer webbplatsen att vara igång på [https://main—weFinance—wkndforms.hlx.page/](https://main--wefinance--wkndforms.hlx.page/).
-
-
+   Om filialnamnet till exempel är `main`, databasen är `wefinance` och ägaren är `wkndforms`, kommer webbplatsen att vara igång på `https://main--wefinance--wkndforms.aem.page`
+&lt;!—(https://main—weFinance—wkndform.aem.page)—>
 
 ### Länka din egen innehållskälla
 
-Din nyligen skapade GitHub-databas pekar på [exempelinnehåll som lagras i en Google Drive-mapp](https://drive.google.com/drive/folders/1bvjfi6TqpYA7DvbX6kKc-m7FgHuJ4RUQ). Det här skrivskyddade innehållet är en bra utgångspunkt för dina formulär. Du kan kopiera det till din egen Google Drive och anpassa det efter dina behov.
+<!--Your newly created GitHub repository points to [example content stored in a Google Drive folder](https://drive.google.com/drive/folders/1bvjfi6TqpYA7DvbX6kKc-m7FgHuJ4RUQ). This read-only content provides a great starting point for your forms. Feel free to copy it into your own Google Drive and customize it to fit your needs.
 
-![Exempelinnehåll på Google Drive](/help/edge/assets/folder-with-sample-content.png)
+![Sample Content on Google Drive](/help/edge/assets/folder-with-sample-content.png)-->
 
 Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar din GitHub-databas mot din egen innehållsmapp:
 
 1. Skapa en ny mapp specifikt för ditt AEM innehåll i Google Drive eller Microsoft SharePoint. I det här dokumentet används en mapp som har skapats i Microsoft SharePoint.
 
-1. Dela mappen med Adobe Experience Manager-användaren (helix@adobe.com).
+1. Dela mappen med Adobe Experience Manager-användaren (forms@adobe.com).
 
    ![Använd alternativet Hantera åtkomst för att dela mappen med AEM användare - SharePoint](/help/edge/assets/share-folder-with-aem-user.png)
 
@@ -90,13 +89,13 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 
    Se till att du har gett Adobe Experience Manager-användaren redigeringsbehörighet för mappen.
 
-   ![Dela mapp med AEM användare, ange redigeringsbehörighet-SharePoint](/help/edge/assets/share-folder-with-aem-user-provide-editing-access.png)
+   ![Dela mapp med AEM användare, ange redigeringsbehörighet-SharePoint](/help/edge/assets/share-folder-with-aem-user-provide-editing-access.png){width=50%}
 
-   ![Dela mapp med AEM användare, ange redigeringsbehörighet - Google Drive](/help/edge/assets/add-aem-user-google-folder.png)
+   ![Dela mapp med AEM användare, ange redigeringsbehörighet - Google Drive](/help/edge/assets/add-aem-user-google-folder.png){width=50%}
 
-1. Kopiera exempelinnehållet [som lagras i Google Drive-mappen](https://drive.google.com/drive/folders/17LSiMZC77N8tCJRW45TnHHGcG8V3SLG_) till din mapp. Kopiera:
+1. Kopiera [exempelinnehållet](/help/edge/assets/wefinance1.zip) till din mapp. Kopiera:
 
-   1. Hämta filerna tillsammans eller hämta enskilda filer.
+   1. Zippa upp den hämtade mappen och kopiera innehållet.
 
       ![Hämta exempelinnehåll](/help/edge/assets/download-sample-content.png)
 
@@ -113,7 +112,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 
    1. Gå till GitHub-databasen som du skapade tidigare med AEM Forms Boilerplate.
    1. Öppna `fstab.yaml` för redigering.
-   1. Ersätt den befintliga referensen med sökvägen till mappen som du delade med AEM användare (helix@adobe.com).
+   1. Ersätt den befintliga referensen med sökvägen till mappen som du delade med AEM användare (forms@adobe.com).
 
       ![Exempelinnehåll på Google Drive](/help/edge/assets/replace-path-in-fstab-yaml-with-your-content-folder.png)
 
@@ -134,8 +133,6 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 
 
    1. Genomför den uppdaterade `fsatb.yaml`-filen när du har uppdaterat referensen och allt ser bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
-
-
 
       ![Bekräfta uppdaterad fsatab.yaml-fil](/help/edge/assets/commit-updated-fstab-yaml.png)
 
@@ -175,7 +172,7 @@ Så här förhandsgranskar du opublicerat innehåll:
 
 
    ```HTML
-   https://<branch>--<repository>--<owner>.hlx.live
+   https://<branch>--<repository>--<owner>.aem.live
    ```
 
    * `<branch>` refererar till din GitHub-databas.
@@ -183,11 +180,10 @@ Så här förhandsgranskar du opublicerat innehåll:
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
 
-   URL för `https://<branch>--<repo>--<owner>.hlx.page/enquiry`.
+   URL för `https://<branch>--<repo>--<owner>.aem.page/enquiry`.
 
-   Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontoägaren&quot;wkndforms&quot; (wkndforms)&quot; (wkndforms) och du använder huvudgrenen är URL:en:
-
-   [https://main—weFinance—wkndforms.hlx.page](https://main--wefinance--wkndforms.hlx.page).
+   Om projektets databas till exempel heter &quot;weFinance&quot;, finns den under kontoägaren &quot;wkndform&quot; och du använder huvudgrenen och formulärnamnet `enquiry`, är URL:en: `https://main--wefinance--wkndform.aem.live/enquiry`.
+&lt;!—(https://main—weFinance—wkndform.aem.live/inquiry).—>
 
 ### Skapa ett formulär
 
@@ -195,13 +191,13 @@ Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågef
 
 ![Formulär för förfrågan](/help/edge/docs/forms/assets/enquiry-form-microsoft-sharepoint.png)
 
-Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Chat` och använd AEM Sidekick för att förhandsgranska och publicera filen.
+Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Talk` och använd AEM Sidekick för att förhandsgranska och publicera filen.
 
 ![Formulär för förfrågan](/help/edge/assets/enquiry-form-preview-publish.png)
 
-När du förhandsgranskar eller publicerar filen visas en JSON-version av filen på en ny flik. Kopiera förhandsgransknings- (.hlx.page) eller publicerings-URL:en (.hlx.live) för filen.
+När du förhandsgranskar eller publicerar filen visas en JSON-version av filen på en ny flik. Kopiera förhandsgransknings- (.aem.page) eller publicerings-URL:en (.aem.live) för filen.
 
-![JSON för formulärkalkylbladet](/help/edge/assets//preview-and-publish-enquiry-form.png)
+![JSON för formulärkalkylbladet](/help/edge/assets/preview-and-publish-enquiry-form.png)
 
 Öppna filen `enquiry` och ersätt URL:en i formulärblocket med URL:en för filen som kopierades i föregående steg. Kontrollera att URL:en är en hyperlänk.
 
@@ -216,13 +212,19 @@ Om du vill förhandsgranska det uppdaterade frågeformuläret går du till följ
 
 
 ```HTML
-    https://<branch>--<repository>--<owner>.hlx.page/enquiry
+    https://<branch>--<repository>--<owner>.aem.page/enquiry
        
 ```
 
-Etiketten för skicka-knappen uppdateras till `Let's Chat`.
+Etiketten för skicka-knappen uppdateras till `Let's Talk`.
 
 ![Formulär för förfrågan](/help/edge/assets/updated-form.png)
+
+&lt;!—(https://main—weFinance—wkndform.aem.live/inquiry)—>
+
+URL: `https://main--wefinance--wkndform.aem.live/enquiry`
+&lt;!—(https://main—weFinance—wkndform.aem.live/inquiry)—>
+
 
 Mer information om hur du skapar och publicerar ett nytt formulär finns i handboken [Skapa ett formulär](/help/edge/docs/forms/create-forms.md).
 
@@ -254,8 +256,8 @@ Mappen Adaptive Forms Block `blocks/form` är din spelningsmiljö för formateri
 
 Är du redo att visa upp din skapelse? Använd Git för att implementera och föra över ändringarna. Detta uppdaterar förhandsgransknings- och produktionsmiljöer som du kan nå på dessa URL:er (ersätt platshållare med projektinformation):
 
-Förhandsgranska: `https://<branch>--<repo>--<owner>.hlx.page/`
-Produktion: `https://<branch>--<repo>--<owner>.hlx.live/`
+Förhandsgranska: `https://<branch>--<repo>--<owner>.aem.page/`
+Produktion: `https://<branch>--<repo>--<owner>.aem.live/`
 
 Grattis! Du har konfigurerat den lokala utvecklingsmiljön och distribuerat ändringarna.
 

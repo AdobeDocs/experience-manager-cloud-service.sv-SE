@@ -4,9 +4,9 @@ description: Publish och Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 81fbf43572c5129efb0a0718b408f0c9ae4a5ad3
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din AEM Edge Delivery projektkatalog.
 
-1. Öppna det kalkylblad som innehåller ditt formulär. Till exempel Microsoft Excel-arbetsboken för `enquiry`-formuläret.
+1. Öppna det kalkylblad som innehåller ditt formulär. [Förfrågan](/help/edge/assets/enquiry.xlsx) är till exempel en Microsoft Excel-arbetsbok.
 
 1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska bladet.
 
@@ -44,16 +44,17 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 
    ```JSON
-       https://<branch>--<repository>--<owner>.hlx.live/<form>.json
+       https://<branch>--<repository>--<owner>.aem.live/<form>.json
    ```
 
    * `<branch>` refererar till din GitHub-databas.
    * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
-   Om projektets databas till exempel heter &quot;portal&quot;, finns den under kontot &quot;wkndforms&quot; och du använder huvudgrenen, ser URL:en ut så här:
+   Om projektdatabasen till exempel heter&quot;weFinance&quot;, finns den under kontot&quot;wkndform&quot; och du använder huvudgrenen och formuläret som&quot;förfrågan&quot;, ser URL:en ut så här:
 
-   `https://main--portal--wkndforms.hlx.page/enquiry.json`
+   `https://main--wefinance--wkndform.aem.live/enquiry.json`
+&lt;!—(https://main—weFinance—wkndform.aem.live/inquiry.json)—>
 
 +++
 
@@ -66,15 +67,15 @@ Så här lägger du till formuläret på din webbsida:
 
 1. Gå till ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din `[AEM Edge Delivery project directory]`.
 
-1. Öppna en dokumentfil där du vill bädda in formuläret. Du kan till exempel öppna filen `index.docx` eller skapa ett nytt dokument.
+1. Öppna en dokumentfil där du vill bädda in formuläret. Du kan t.ex. öppna filen [förfrågningsformulär.docx](/help/edge/assets/enquiry-form.docx) eller skapa ett nytt dokument.
 
 1. Identifiera det önskade avsnittet i dokumentet där du vill infoga formuläret och navigera sedan till det.
 
-1. Lägg till ett block med namnet &#39;Form&#39; i filen, som i exemplet nedan:
+1. Lägg till ett block med namnet &#39;Formulär&#39; i filen. Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontoägaren&quot;wkndform&quot; och du använder huvudgrenen.
 
    | Formulär |
    |---|
-   | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
+   | `https://main--wefinance--wkndform.aem.live/enquiry.json` |
 
    ![Lägg till ett block med namnet Form i filen](/help/edge/assets/enquiry-doc-to-embed-form.png)
 
@@ -85,25 +86,29 @@ Så här lägger du till formuläret på din webbsida:
    >
    > Kontrollera att URL-adressen är formaterad som en hyperlänk i stället för att visas som oformaterad text.
 
-   Använd URL:en för förhandsgranskning (.page URL) för utvecklings- eller teständamål, eller publicerings-URL:en (.live) för produktion. Här är några exempel på förhandsgransknings- och publicerings-URL:
+   Använd URL:en för förhandsgranskning (.page URL) för utvecklings- eller teständamål, eller publicerings-URL:en (.live) för produktion.
+
+   Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontoägaren&quot;wkndform&quot; och du använder huvudgrenen.
+
+   Här är några exempel på förhandsgransknings- och publicerings-URL:
 
    **Förhandsgranska URL**
 
    | Formulär |
    |---|
-   | [https://main—weFinance—wkndforms.hlx.page/inquiry.json](https://main--wefinance--wkndforms.hlx.page/enquiry.json) |
+   | `https://main--wefinance--wkndform.aem.page/enquiry.json` |
 
 
    **Publish URL**
 
    | Formulär |
    |---|
-   | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
+   | `https://main--wefinance--wkndform.aem.live/enquiry.json` |
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska webbsidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på kalkylbladet [för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska webbsidan. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på kalkylbladet [för förfrågan](/help/edge/assets/enquiry-form.docx):
 
 
-   ![Ett exempel på EDS-formulär](/help/edge/assets/eds-form.png)
+   ![Ett exempel på EDS-formulär](/help/edge/assets/updated-form.png)
 
 1. Använd AEM Sidekick för att publicera formuläret. Nu kan kunderna fylla i formuläret och skicka in det.
 

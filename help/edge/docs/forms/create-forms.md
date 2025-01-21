@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery dokum
 feature: Edge Delivery Services
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: cb914f76b0b785a89b20ef5eaacbc36e8217944b
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -26,25 +26,24 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lade till Adaptivt Forms-block i ditt befintliga AEM ](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på den lokala datorn.
-I det här dokumentet kallas den lokala mappen för ditt EDS-projekt för `[EDS Project repository]`.
+* Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) [lade till Adaptivt Forms-block i ditt befintliga AEM ](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på den lokala datorn.
+<!--In this document, the local folder of your Edge Delivery Services (EDS) project is referred as `[EDS Project repository]`.  -->
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Använda SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
 
 ## Skapa ett formulär
 
-<!-- 
-
+<!--
 +++ Step 1: Add the Adaptive Forms Block to your Edge Delivery Services (EDS) project.
 
 The Adaptive  empowers users to create forms for an Edge Delivery Service Site. However, this block isn't included in the default AEM boilerplate (used to create an Edge Delivery Services project). To seamlessly integrate the Adaptive Forms Block into your Edge Delivery Services project:
 
 1. **Clone the Adaptive Forms Block repository**: Clone the [Adaptive Forms Block repository](https://github.com/adobe-rnd/form-block) on your local machine. It contains the code to render the form on an EDS webpage. In this document, the local folder of your Forms Block repository is referred as `[Adaptive Forms Block repository]`.
-1. **Locate the Adaptive Forms Block Repository:** Access the [Adaptive Forms Block repository]/blocks/src folder and copy its content. 
+2. **Locate the Adaptive Forms Block Repository:** Access the [Adaptive Forms Block repository]/blocks/src folder and copy its content. 
 
-1. on your local machine and copy the `form` folder. 
-1. **Paste the Adaptive Forms Block's code into your EDS Project:**
+3. on your local machine and copy the `form` folder. 
+4. **Paste the Adaptive Forms Block's code into your EDS Project:**
 Navigate to the [EDS Project repository]/blocks/ folder on your local machine and create a 'form' folder. Paste the `[Adaptive Forms Block repository]/blocks/src content`, copied in perevious step to the `[EDS Project repository]/blocks/form` folder.
 1. **Commit Changes to GitHub:** Check in the `[EDS Project repository]/blocks/form` folder and its underlying files to your Edge Delivery Services project on GitHub.
 
@@ -59,17 +58,13 @@ Ensure a smooth GitHub build process by addressing potential issues:
     If you encounter the error "Unable to resolve path to module "'../../scripts/lib-franklin.js'", navigate to the [EDS Project]/blocks/forms/form.js file. Update the import statement by replacing the lib-franklin.js file with the aem.js file.
 
 * **Handle Linting Errors:**
-    Should you come across any linting errors, you can bypass them. Open the [EDS Project]/package.json file and modify the "lint" script from "lint": "npm run lint:js && npm run lint:css" to "lint": "echo 'skipping linting for now'". Save the file and commit the changes to your GitHub project.
-
-+++
-
--->
+    Should you come across any linting errors, you can bypass them. Open the [EDS Project]/package.json file and modify the "lint" script from "lint": "npm run lint:js && npm run lint:css" to "lint": "echo 'skipping linting for now'". Save the file and commit the changes to your GitHub project. -->
 
 +++ Steg 1: Skapa ett formulär med Microsoft Excel eller Google Sheet.
 
 Istället för att navigera i komplexa processer kan du enkelt skapa ett formulär med hjälp av ett kalkylblad. Du kan definiera de rader och kolumner som ska utgöra formulärstrukturen. Varje rad representerar ett enskilt [formulärfält](/help/edge/docs/forms/form-components.md#available-components) och kolumnrubrikerna definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
-Ta till exempel följande kalkylblad, där rader anger fälten för ett `enquiry`-formulär och kolumnrubriker definierar deras egenskaper:
+Ta till exempel följande kalkylblad, där rader anger fälten för ett [frågetecken](/help/edge/assets/enquiry.xlsx)-kalkylblad och kolumnrubriker definierar deras egenskaper:
 
 ![Kalkylblad för förfrågan](/help/edge/assets/enquiry-form-spreadsheet.png)
 
@@ -79,18 +74,18 @@ Så här fortsätter du med att skapa formulär:
 
 1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` AEM Edge Delivery projektkatalog på Google Drive.
 
-   ![Exempelinnehåll på Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)
+   <!-- ![Sample Content on Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)-->
 
-1. Kontrollera att bladet delas med rätt AEM (till exempel `helix@adobe.com`) [ enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
+1. Kontrollera att bladet delas med rätt AEM (till exempel `forms@adobe.com`) [ enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
 
-1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-default&quot;.
+1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-aem&quot;.
 
    ![Byt namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
 
-1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-default&quot;. Varje rad ska representera ett [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
+1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-aem&quot;. Varje rad ska representera ett [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 
 
-   För att komma igång snabbt bör du överväga att kopiera innehållet i [kalkylbladet för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0) till kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
+   För att komma igång snabbt bör du överväga att kopiera innehållet i [kalkylbladet för förfrågan](/help/edge/assets/enquiry.xlsx) till kalkylbladet. När du har kopierat innehållet sparar du kalkylbladet.
 
    >[!VIDEO](https://video.tv.adobe.com/v/3427468?quality=12&learn=on)
 
@@ -103,16 +98,17 @@ Så här fortsätter du med att skapa formulär:
 
 
    ```JSON
-       https://<branch>--<repository>--<owner>.hlx.live/<form-path>/<form-file-name>.json
+       https://<branch>--<repository>--<owner>.aem.live/<form-path>/<form-file-name>.json
    ```
 
    * `<branch>` refererar till din GitHub-databas.
    * `<repository>` betecknar din GitHub-databas.
    * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
-   Om projektets databas till exempel heter &quot;portal&quot;, finns den under kontot &quot;wkndforms&quot; och du använder huvudgrenen, ser URL:en ut så här:
+   Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontot&quot;wkndform&quot; och du använder huvudgrenen ser URL-adressen ut så här:
 
-   `https://main--portal--wkndforms.hlx.page/enquiry.json`
+`https://main--wefinance--wkndform.aem.page/enquiry.json`
+&lt;!—(https://main—weFinance—wkndform.aem.page/inquiry.json)—>
 
 
 +++
@@ -126,7 +122,7 @@ Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska form
 
 
 
-1. Öppna en dokumentfil (t.ex. en indexfil) om du vill bädda in formuläret. Du kan också skapa ett nytt dokument.
+1. Öppna en dokumentfil (t.ex. en indexfil) om du vill bädda in formuläret. Du kan också [skapa ett nytt dokument](/help/edge/assets/enquiry-form.docx).
 
 1. Gå till önskad plats i dokumentet där du vill lägga till formuläret.
 
@@ -134,10 +130,10 @@ Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska form
 
    | Formulär |
    |---|
-   | [https://main—weFinance—wkndforms.hlx.live/inquiry.json](https://main--wefinance--wkndforms.hlx.live/enquiry.json) |
+   | `https://main--wefinance--wkndform.aem.live/enquiry.json` |
 
 
-   ![Lägg till anpassat Forms-block på din webbsida](/help/edge/assets/add-adaptive-forms-block.png)
+   ![Lägg till anpassat Forms-block på din webbsida](/help/edge/assets/enquiry-doc-to-embed-form.png)
 
    Det här blocket fungerar som en platshållare där formuläret är inbäddat. Lägg till förhandsgransknings-URL:en för din `<form>.json`-fil som en hyperlänk på den andra raden i blocket.
 
@@ -147,10 +143,10 @@ Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska form
    > Kontrollera att URL-adressen är formaterad som en hyperlänk i stället för att visas som oformaterad text.
 
 
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska dokumentet. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på kalkylbladet [för förfrågan](https://docs.google.com/spreadsheets/d/196lukD028RDK_evBelkOonPxC7w0l_IiJ-Yx3DvMfNk/edit#gid=0):
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska dokumentet. Formuläret visas nu på sidan. Här är till exempel formuläret baserat på kalkylbladet [för förfrågan](/help/edge/assets/enquiry-form.docx):
 
 
-   [![Ett exempel på ett EDS-formulär](/help/edge/assets/eds-form.png)](https://main--portal--wkndforms.hlx.live/)
+   [![Ett exempel på ett EDS-formulär](/help/edge/assets/updated-form.png)](https://main--wefinance--wkndform.aem.page/enquiry-form)
 
    Fyll i formuläret och klicka på skicka-knappen. Ett fel visas, ungefär som följande, eftersom kalkylbladet inte är inställt på att acceptera data än.
 
