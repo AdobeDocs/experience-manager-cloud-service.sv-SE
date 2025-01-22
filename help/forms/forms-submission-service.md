@@ -5,7 +5,7 @@ Keywords: Use form submission service, Submit form using form submission service
 feature: Edge Delivery Services
 Role: User, Developer
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: 42db7e5d4896a4a488643cb54f0b77cf4db86f3e
+source-git-commit: 4f2dcb02c3ad00ef9735679d8bd4cce568bfabb5
 workflow-type: tm+mt
 source-wordcount: '835'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Några fördelar med att använda Forms Submission Service med kalkylblad är:
 Nedan visas förutsättningarna för att använda Forms Submission-tjänsten:
 
 * Kontrollera att ditt AEM har det senaste adaptiva formulärblocket.
-* Se till att din Git-databas har lagts till på tillåtelselista för att använda Forms inskickningstjänst. mailto:aem-forms-ea@adobe.com med ditt GitHub-organisationsnamn och databasnamn om du vill att de ska läggas till i tillåtelselista för att använda Forms överföringstjänst.
+* Se till att din Git-databas har lagts till på tillåtelselista för att använda Forms inskickningstjänst. [mailto:aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med ditt GitHub-organisationsnamn och databasnamn om du vill att de ska läggas till i tillåtelselista för att använda Forms överföringstjänst.
 
 ## Konfigurera tjänsten Forms Submit
 
