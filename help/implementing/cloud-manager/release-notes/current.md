@@ -4,14 +4,16 @@ description: Läs om Cloud Manager 2025.1.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 4ec2f22b399528f35c07a95d7487264149521338
+source-git-commit: f6c1aa32647bcabeb0781973f81b75c11edc6a5d
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '412'
 ht-degree: 0%
 
 ---
 
 # Versionsinformation om Cloud Manager 2025.1.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+
+<!-- https://wiki.corp.adobe.com/pages/viewpage.action?pageId=3389843928 -->
 
 Läs om Cloud Manager 2025.1.0 i AEM (Adobe Experience Manager) as a Cloud Service.
 
@@ -28,7 +30,7 @@ Nästa planerade version är torsdagen den 13 februari 2025.
 
 ## Nyheter {#what-is-new}
 
-* **Regler för kodkvalitet:** Cloud Manager Code Quality step kommer att börja använda SonarQube Server 9.9 med Cloud Manager version 2025.2.0, som är planerad till torsdagen den 13 februari 2025.
+* **Kodkvalitetsregler - SonarQube Server Upgrade:** Cloud Manager Code Quality step kommer att börja använda SonarQube Server 9.9 med Cloud Manager 2025.2.0, som är planerad till torsdagen den 13 februari 2025.
 
 Uppdaterade SonarQube-regler finns nu tillgängliga på [Kodkvalitetsregler](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) för att förbereda.
 
@@ -56,6 +58,10 @@ Ange dessutom följande variabel för att säkerställa att kodkvalitetssteget k
       * Java 21-miljön distribueras när du skapar med Java 17 eller Java 21.
       * Den gradvisa lanseringen av alla Cloud Manager-miljöer börjar i februari för sandlådor och utvecklingsmiljöer och omfattar även produktionsmiljöer i april.
       * Kunder som bygger med Java 11 och som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
+
+* **CDN-konfigurationer har bytt namn till Domänmappningar:** Som en del av förbättringarna i användargränssnittet i AEM Cloud Manager har namnet CDN-konfigurationer ändrats till Domänmappningar för att underlätta terminologisk justering med funktioner. <!-- CMGR-64738 -->
+
+  ![&quot;CDN Configurations&quot; bytte namn till &quot;Domain Mappings&quot; i användargränssnittet ](/help/implementing/cloud-manager/release-notes/assets/domain-mappings.png)
 
 
 <!-- ## Early adoption program {#early-adoption}
