@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: cb1581e96f1cfeadf6ee37cae4738d9d51177504
+source-git-commit: c57fba06f23fa57fbf26796e747bb76f6a7a4203
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -158,6 +158,7 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 | **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde, som kan vara en stränglitteral eller begäranparameter. |
 |         | var | Tar bort en angiven variabel. |
 |         | queryParamMatch | Tar bort alla frågeparametrar som matchar ett angivet reguljärt uttryck. |
+|         | queryParamDoesNotMatch | Tar bort alla frågeparametrar som inte matchar ett angivet reguljärt uttryck. |
 | **omforma** | op:replace, (reqProperty eller reqHeader eller queryParam eller reqCookie eller var), match, replace | Ersätter en del av parametern request (endast egenskapen path stöds), huvudet request, parametern query, cookie, eller variabeln med ett nytt värde. |
 |              | op:tolower, (reqProperty eller reqHeader eller queryParam eller reqCookie eller var) | Ställer in parametern request (endast egenskapen path stöds), huvudet request, parametern query, cookie, eller variabeln till dess gemener. |
 
@@ -449,7 +450,7 @@ redirects:
       action:
         type: redirect
         location:
-          reqProperty: path
+          reqProperty: url
           transform:
             - op: replace
               match: '^/(.*)$'

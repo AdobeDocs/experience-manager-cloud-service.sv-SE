@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 51c54d29f998d4c5fcd6ff2e5139638c495955b3
+source-git-commit: 1b4c427a36ee26522e9da499156f78276e099bd0
 workflow-type: tm+mt
-source-wordcount: '4019'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,7 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 
 | **Egenskap** | **Typ** | **Beskrivning** |
 |---|---|---|
-| reqProperty | `string` | Request-egenskap.<br><br>En av:<br><ul><li>`path`: Returnerar den fullständiga sökvägen för en URL utan frågeparametrarna.</li><li>`queryString`: Returnerar frågedelen av en URL</li><li>`method`: Returnerar HTTP-metoden som används i begäran.</li><li>`tier`: Returnerar ett av `author`, `preview` eller `publish`.</li><li>`domain`: Returnerar egenskapen domain (enligt definition i rubriken `Host`) i gemener</li><li>`clientIp`: Returnerar klient-IP.</li><li>`clientCountry`: Returnerar en kod med två bokstäver ([Regional indikatorsymbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol)) som identifierar i vilket land klienten finns.</li></ul> |
+| reqProperty | `string` | Request-egenskap.<br><br>En av:<br><ul><li>`path`: Returnerar den fullständiga sökvägen för en URL utan frågeparametrarna. (använd `pathRaw` för varianten unescape)</li><li>`url`: Returnerar den fullständiga URL:en inklusive frågeparametrarna. (använd `urlRaw` för varianten unescape)</li><li>`queryString`: Returnerar frågedelen av en URL</li><li>`method`: Returnerar HTTP-metoden som används i begäran.</li><li>`tier`: Returnerar ett av `author`, `preview` eller `publish`.</li><li>`domain`: Returnerar egenskapen domain (enligt definition i rubriken `Host`) i gemener</li><li>`clientIp`: Returnerar klient-IP.</li><li>`clientCountry`: Returnerar en kod med två bokstäver ([Regional indikatorsymbol](https://en.wikipedia.org/wiki/Regional_indicator_symbol)) som identifierar i vilket land klienten finns.</li></ul> |
 | reqHeader | `string` | Returnerar begärandehuvud med angivet namn |
 | queryParam | `string` | Returnerar frågeparameter med angivet namn |
 | reqCookie | `string` | Returnerar cookie med angivet namn |
