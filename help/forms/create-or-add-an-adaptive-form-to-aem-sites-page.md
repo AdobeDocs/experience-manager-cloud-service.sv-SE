@@ -5,7 +5,7 @@ feature: Adaptive Forms, Foundation Components
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 exl-id: a1846c5d-7b0f-4f48-9d15-96b2a8836a9d
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 64a8b363cff079aa0a6f56effd77830ac797deca
 workflow-type: tm+mt
 source-wordcount: '3095'
 ht-degree: 0%
@@ -72,13 +72,11 @@ Du kan utnyttja den här funktionen till fullo genom att använda följande alte
 
 Innan du börjar skapa eller skapa ett adaptivt formulär ska du aktivera adaptiva Forms Core-komponenter och lägga till adaptiva Forms Client Libraries på din AEM Sites-sida:
 
-+++  Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö
+### Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö
 
 Kontrollera att de [adaptiva Forms Core-komponenterna är aktiverade för din AEM Forms as a Cloud Service miljö](enable-adaptive-forms-core-components.md).
 
-+++
-
-+++  Lägg till adaptiva Forms-klientbibliotek på din AEM Sites-sida eller Experience Fragment
+### Lägg till adaptiva Forms-klientbibliotek på din AEM Sites-sida eller Experience Fragment
 
 Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten lägger du till klientbiblioteken CustomHeaderlibs och CustomFoterlibs på din AEM Sites-sida via distributionsflödet. Så här lägger du till biblioteken:
 
@@ -123,9 +121,7 @@ Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten
 
 1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
 
-+++
-
-+++ Aktivera anpassad Forms-behållare för din AEM Sites-sida eller Experience Fragment
+### Aktivera anpassad Forms-behållare för din AEM Sites-sida eller Experience Fragment
 
 Så här aktiverar du komponenten [!UICONTROL Adaptive Forms Container] i mallprincipen:
 

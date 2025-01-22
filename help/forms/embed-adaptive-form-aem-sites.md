@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 Keywords: Forms AEM Sites, Embed Form to a Sites page, Adaptive Forms AEM Sites, Embed Adaptive Forms to AEM Page, Embed Forms in an AEM Sites page
 exl-id: 359b05e8-d8c1-4a77-9e70-6f6b6e668560
-source-git-commit: 5321fed58f66b2beabcacc2de4b7dfb2dc3754f1
+source-git-commit: 64a8b363cff079aa0a6f56effd77830ac797deca
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2938'
 ht-degree: 0%
 
 ---
@@ -75,13 +75,11 @@ Du kan utnyttja den här funktionen fullt ut genom att använda följande altern
 
 Innan du börjar bädda in ett nytt adaptivt formulär eller ett befintligt adaptivt formulär med **[!UICONTROL Adaptive Forms – Embed(v2)]** aktiverar du **Adaptiva Forms Core-komponenter** och lägger till **adaptiva Forms Client Libraries** på din AEM Sites-sida:
 
-+++  Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö
+### Aktivera adaptiva Forms Core-komponenter för din AEM Cloud Service-miljö
 
 Kontrollera att de [adaptiva Forms Core-komponenterna är aktiverade för din AEM Forms as a Cloud Service miljö](enable-adaptive-forms-core-components.md).
 
-+++
-
-+++  Lägg till adaptiva Forms-klientbibliotek på din AEM Sites-sida eller Experience Fragment
+### Lägg till adaptiva Forms-klientbibliotek på din AEM Sites-sida eller Experience Fragment
 
 När alternativet **[!UICONTROL When form covers entire width of a page]** är markerat i dialogrutan **[!UICONTROL Form Containers]** Konfigurera och Adaptiv Forms med hjälp av kärnkomponenter används, måste klientbiblioteken inkluderas på sidan för motsvarande webbplats.
 
@@ -130,9 +128,7 @@ Lägg till klientbiblioteken **CustomHeaderlibs** och **CustomFoterlibs** på di
 
 1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
 
-+++
-
-+++ Aktivera **[!UICONTROL Adaptive Forms – Embed(v2)]** för din AEM Sites-sida eller Experience Fragment
+### Aktivera anpassad Forms - Embed(v2) för din AEM Sites-sida eller Experience Fragment
 
 Så här aktiverar du komponenten **[!UICONTROL Adaptive Forms – Embed(v2)]** i mallprincipen:
 
@@ -142,8 +138,6 @@ Så här aktiverar du komponenten **[!UICONTROL Adaptive Forms – Embed(v2)]** 
 1. Klicka på **[!UICONTROL Done]**.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419369?quality=12&learn=on)
-
-+++
 
 ## Bädda in ett adaptivt formulär med komponenten Adaptiv Forms - Embed(v2) {#embed-an-adaptive-form-in-sites-editor-or-experience-fragment}
 
@@ -249,7 +243,7 @@ Så här konverterar du ett adaptivt formulär på en AEM Sites-sida till ett Ex
 Du kan anpassa de avancerade inställningarna för komponenten **[!UICONTROL Adaptive Form - Embed(v2)]**. I dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed]** kan du ange följande:
 
 * **Resurssökväg**: Bläddra och välj ett anpassat formulär att bädda in. Den fylls i automatiskt om du utelämnade den från Assets webbläsare.
-* **Post Submission** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan visa ett tackmeddelande eller en tacksida.
+* **Efter överföring** : Välj den åtgärd som ska utlösas när formulär skickas. Du kan visa ett tackmeddelande eller en tacksida.
    * **Visa tackmeddelande**: Skriv ett meddelande med textredigeraren som ska visas när formulär skickas. Det här alternativet är endast tillgängligt när du väljer att visa ett tackmeddelande.
    * **Visa sidan Tack**: Bläddra och markera sidan som ska visas när formulär skickas. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
    * **Omdirigering till dig:**: Aktivera alternativet att ersätta sidan som innehåller det inbäddade adaptiva formuläret med din tacksida. Annars ersätter du tacksidan det anpassade formuläret i komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]**, utan att de underliggande webbplatserna uppdateras på sidan. Det här alternativet är bara tillgängligt när du väljer att visa en tacksida.
