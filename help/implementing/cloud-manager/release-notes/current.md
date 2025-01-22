@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation för Cloud Manager 2024.12.0 i Adobe Experience Manager as a Cloud Service
-description: Läs om Cloud Manager 2024.12.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2025.1.0 i Adobe Experience Manager as a Cloud Service
+description: Läs om Cloud Manager 2025.1.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 6f17afc82b2d26fd6025a9ba8449a0cb1b368d48
+source-git-commit: 4ec2f22b399528f35c07a95d7487264149521338
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Cloud Manager 2024.12.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2025.1.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
-Läs om Cloud Manager 2024.12.0 i AEM (Adobe Experience Manager) as a Cloud Service.
+Läs om Cloud Manager 2025.1.0 i AEM (Adobe Experience Manager) as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,64 +21,50 @@ Läs om Cloud Manager 2024.12.0 i AEM (Adobe Experience Manager) as a Cloud Serv
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager 2024.12.0 i AEM as a Cloud Service är torsdagen den 5 december 2024.
+Lanseringsdatumet för Cloud Manager 2025.1.0 i AEM as a Cloud Service är onsdagen den 22 januari 2025.
 
-Nästa planerade version är 23 januari 2025.
+Nästa planerade version är torsdagen den 13 februari 2025.
 
 
 ## Nyheter {#what-is-new}
 
-* **Regler för kodkvalitet:** Från och med torsdagen den 13 februari 2025 använder Cloud Manager-kodkvalitetssteget nu en uppgraderad SonarQube-version 9.9.5.90363.
+* **Regler för kodkvalitet:** Cloud Manager Code Quality step kommer att börja använda SonarQube Server 9.9 med Cloud Manager version 2025.2.0, som är planerad till torsdagen den 13 februari 2025.
 
-  De uppdaterade reglerna, som är tillgängliga för Cloud Manager på AEM as a Cloud Service på [den här länken](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules), avgör säkerhetspoängen och kodkvaliteten för Cloud Manager-pipelines. Den här uppdateringen kan påverka dina kvalitetsportar och kan eventuellt blockera distributioner.
+Uppdaterade SonarQube-regler finns nu tillgängliga på [Kodkvalitetsregler](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) för att förbereda.
 
-<!-- * **Java 21 support:** Customers can now optionally build with Java 17 or Java 21, benefiting from performance improvements and new language features. See [Build environment](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) for configuration steps, including updating your Maven project description, and certain library versions. When the build version is set to Java 17 or Java 21, the runtime defaults to Java 21.
+Du kan kontrollera de nya reglerna tidigt genom att ange följande textvariabel för pipeline:
 
-    Starting February 2025, sandboxes and dev environments upgrade to the Java 21 runtime, regardless of the build version (Java 8, 11, 17, or 21). Production environments follow with an upgrade in April 2025. -->
+`CM_BUILD_IMAGE_OVERRIDE` = `self-service-build:sonar-99-upgrade-java17or21`
 
-* **En posttyp:** Stöd för A-posttyper har lagts till för att förbättra Go Live-beredskapen för domäner med CDN-konfigurationer i AEM Cloud Manager. Du kan nu välja att publicera genom att lägga till antingen en CNAME-posttyp eller en A-posttyp som representerar Fastys IP-adresser, vilket förenklar domändirigeringen. Den här förbättringen eliminerar begränsningen att förlita sig enbart på CNAME-poster för domänkonfiguration med Fastly.
+Ange dessutom följande variabel för att säkerställa att kodkvalitetssteget körs för samma implementering (som normalt hoppas över för samma `commitId`):
 
-  Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). <!-- CMGR-63076 -->
+`CM_DISABLE_BUILD_REUSE` = `true`
 
-<!-- * The AEM Code Quality step now uses SonarQube 9.9 Server, replacing the older 7.4 version. This upgrade brings additional security, performance, and code quality checks, offering more comprehensive analysis and coverage for your projects. -->
-
-* **Lägg till flera domäner på en Edge Delivery-webbplats:** Du kan nu lägga till flera domäner, inklusive både apex- och non-apex-domäner, på en Edge Delivery-webbplats (EDS) i AEM Cloud Manager. Den här förbättringen åtgärdar tidigare begränsningar som begränsar möjligheten att associera flera domäner med EDS-ursprung. Uppdateringen ger bättre flexibilitet vid hantering av domänkonfigurationer och förenklar Go Live-processerna för webbplatser med komplexa domänkonfigurationer. <!-- CMGR-63007 -->
-
-* **Avancerade filtreringsalternativ:** Avancerade filtreringsalternativ har introducerats på körningssidor i pipeline och SSL-certifikatsidor i AEM Cloud Manager. Du kan nu filtrera efter flera kriterier, vilket ger snabbare åtkomst till relevanta data och förbättrar driftsättningseffektiviteten. <!-- CMGR-26263 -->
-
-   * **Filtrering av pipeline-aktiviteter:** inkluderar filtrering av pipeline-aktivitet, vilket gör att du kan förfina sökresultaten för specifika pipelineaktiviteter. De tillgängliga filtren innehåller pipeline, action och status.
-     ![Filtrering av pipeline-aktiviteter](/help/implementing/cloud-manager/assets/filters-pipeline.png)
-
-
-   * **Filtrering av SSL-certifikat:** Innehåller filtrering av SSL-certifikat, vilket gör att du kan förfina sökresultaten för specifika certifikat. Tillgängliga filter inkluderar SSL-certifikatnamn, ägarskap och status.
-     ![SSL-certifikatfiltrering](/help/implementing/cloud-manager/assets/filters-ssl-certificates.png)
-
-## Program för tidigt antagande {#early-adoption}
-
-Bli en del av Cloud Manager program för tidig användning och få möjlighet att testa kommande funktioner.
-
-### Använd din egen Git - nu med stöd för GitLab och Bitbucket {#gitlab-bitbucket}
-
-<!-- BOTH CS & AMS -->
-
-Funktionen **Hämta egen Git** har utökats med stöd för externa databaser, som GitLab och Bitbucket. Det nya stödet är utöver det stöd som redan finns för privata och företags GitHub-databaser. När du lägger till dessa nya rapporter kan du även länka dem direkt till dina rörledningar. Du kan lagra dessa databaser på publika molnplattformar eller i ditt privata moln eller din privata infrastruktur. Den här integreringen eliminerar också behovet av konstant kodsynkronisering med databasen Adobe och ger möjlighet att validera pull-begäranden innan de slås samman till en huvudgren.
-
-Pipelinjer som använder externa databaser (utom GitHub-värddatabaser) och **Distributionsutlösaren** som är inställd på **Vid Git-ändringar** startar nu automatiskt.
-
-Se [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/external-repositories.md).
-
-![Dialogrutan Lägg till databas](/help/implementing/cloud-manager/release-notes/assets/repositories-add-release-notes.png)
+![Konfigurationssida för variabler](/help/implementing/cloud-manager/release-notes/assets/variables-config.png)
 
 >[!NOTE]
 >
->För närvarande gäller kvalitetskontrollerna av koden för pull-begäran som är klar endast för GitHub-värdbaserade databaser, men en uppdatering som utökar den här funktionen till andra Git-leverantörer finns i arbetsflödet.
+>Adobe rekommenderar att du skapar en ny CI/CD Code Quality-pipeline som är konfigurerad till samma gren som huvudproduktionsflödet. Ställ in lämpliga variabler *före* den 13 februari 2025 för att verifiera att de nya tvingande reglerna inte inför blockerare.
 
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
+* Stöd för **Java 17 och Java 21:** Kunder kan nu bygga med Java 17 eller Java 21 och få tillgång till prestandaförbättringar och nya språkfunktioner. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). När build-versionen är inställd på Java 17 eller Java 21 är den distribuerade miljön Java 21.
 
-## Felkorrigeringar
+   * **Funktionsaktivering**
+      * Den här funktionen kommer att aktiveras för alla kunder torsdagen den 13 februari 2025, vilket sammanfaller med den förvalda lanseringen av den nya SonarQube-versionen.
+      * Kunder kan aktivera den *omedelbart* genom att ställa in de två variabelkonfigurationer som beskrivs ovan för uppgradering av SonarQube 9.9-versionen.
 
-* En skyddsåtgärd har lagts till för att förhindra att domäner med aktiva domänmappningar i AEM Cloud Manager tas bort. Användare som försöker ta bort sådana domäner får nu ett felmeddelande som instruerar dem att först ta bort domänmappningen innan de fortsätter med domänborttagningen. Det här arbetsflödet säkerställer domänens integritet och förhindrar oavsiktliga felkonfigurationer. <!-- CMGR-63033 -->
-* Oftast kunde användare inte lägga till ett domännamn eller uppdatera ett SSL-certifikat på grund av en felaktig status som är associerad i respektive fall. <!-- CMGR-62816 -->
+   * **Java 21 runtime-distribution**
+      * Java 21-miljön distribueras när du skapar med Java 17 eller Java 21.
+      * Den gradvisa lanseringen av alla Cloud Manager-miljöer börjar i februari för sandlådor och utvecklingsmiljöer och omfattar även produktionsmiljöer i april.
+      * Kunder som bygger med Java 11 och som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
+
+
+<!-- ## Early adoption program {#early-adoption}
+
+Be a part of Cloud Manager's early adoption program and have a chance to test upcoming features. -->
+
+<!-- ## Bug fixes -->
+
+
 
 
 <!-- ## Known issues {#known-issues} -->
