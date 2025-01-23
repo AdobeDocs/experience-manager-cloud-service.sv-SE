@@ -4,9 +4,9 @@ description: Lär dig grunderna i cachelagring i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: fc555922139fe0604bf36dece27a2896a1a374d9
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2924'
 ht-degree: 0%
 
 ---
@@ -240,12 +240,24 @@ Webbplatsadresser innehåller ofta marknadsföringskampanjparametrar som använd
 För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort vanliga marknadsföringsrelaterade frågeparametrar, särskilt de som matchar följande regex-mönster, för att bättre cachelagra begäranden:
 
 ```
-^(utm_.*|gclid|gdftrk|_ga|mc_.*|trk_.*|dm_i|_ke|sc_.*|fbclid)$
+^(utm_.*|gclid|gdftrk|_ga|mc_.*|trk_.*|dm_i|_ke|sc_.*|fbclid|msclkid|ttclid)$
 ```
 
-Skicka en supportanmälan om du vill att det här beteendet ska inaktiveras.
+Den här funktionen kan aktiveras och inaktiveras med en `requestTransformations`-flagga i [CDN-konfigurationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
 
-För miljöer som skapats före oktober 2023 bör du konfigurera Dispatcher-konfigurationens `ignoreUrlParams`-egenskap. Mer information finns i [Konfigurera Dispatcher - Ignorera URL-parametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters).
+Om du till exempel vill sluta ta bort marknadsföringsparametrar på CDN-nivå måste du distribuera `removeMarketingParams: false` med en config som innehåller följande avsnitt.
+
+```
+kind: "CDN"
+version: "1"
+metadata:
+  envTypes: ["dev", "stage", "prod"]
+data:
+  requestTransformations:
+    removeMarketingParams: false
+```
+
+Om `removeMarketingParams`-funktionen är inaktiverad på CDN-nivå rekommenderar vi fortfarande att du konfigurerar Dispatcher-konfigurationens `ignoreUrlParams` -egenskap. Mer information finns i [Konfigurera Dispatcher - Ignorera URL-parametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters).
 
 Det finns två möjligheter att ignorera marknadsföringsparametrar. (Där den första är att föredra att ignorera cachebusting via frågeparametrar):
 
@@ -518,7 +530,7 @@ När de nya versionerna av biblioteken släpps i produktion uppdateras de refere
 
 Mekanismen bakom den här funktionen är en serialiserad hash som läggs till i klientbibliotekslänken. Den ser till att webbläsaren har en unik versionsadress för att cachelagra CSS/JS. Den serialiserade hashen uppdateras bara när innehållet i klientbiblioteket ändras. Det innebär att om det inte sker några ändringar (det vill säga om klientbibliotekets underliggande css/js ändras) även om det finns en ny distribution, förblir referensen densamma. Det säkerställer i sin tur färre avbrott i webbläsarens cache.
 
-### Aktivera Longcache-versioner av klientbibliotek - AEM as a Cloud Service SDK QuickStart {#enabling-longcache}
+### Aktivera Longcache-versioner av klientbibliotek - AEM as a Cloud Service SDK Quickstart {#enabling-longcache}
 
 Standardversionen av Clientlib som finns på en HTML-sida ser ut som i följande exempel:
 
@@ -534,7 +546,7 @@ När strikt klientlib-versionshantering är aktiverad läggs en långsiktig hash
 
 Strikta versioner av klientlib är aktiverat som standard i alla AEM as a Cloud Service-miljöer.
 
-Så här aktiverar du strikt versionshantering av klientlib i den lokala SDK QuickStart:
+Så här aktiverar du strikt versionshantering av klientlib i den lokala SDK Quickstart:
 
 1. Navigera till OSGi Configuration Manager `<host>/system/console/configMgr`
 1. Hitta OSGi Config för Adobe Granite HTML Library Manager:
