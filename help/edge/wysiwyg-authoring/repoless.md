@@ -4,9 +4,9 @@ description: Om du har många liknande webbplatser som oftast ser ut och beter s
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: a6bc0f35-9e76-4b5a-8747-b64e144c08c4
-source-git-commit: 7b37f3d387f0200531fe12cde649b978f98d5d49
+source-git-commit: e7f7c169e7394536fc2968ecf1418cd095177679
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,11 @@ Om du vill använda den här funktionen måste du göra följande.
 * Din webbplats är redan helt konfigurerad genom att följa dokumentet [Guiden Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services.](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md)
 * Du kör minst AEM as a Cloud Service 2024.08.
 
-Du måste också be Adobe att konfigurera två objekt åt dig. Nå ut till Adobe via din Slack-kanal eller ta upp ett supportproblem för att göra dessa förfrågningar.
+Du måste också be Adobe att konfigurera följande objekt. Nå ut via din Slack-kanal eller ta upp ett supportproblem och be Adobe att göra dessa ändringar:
 
-* Konfigurationstjänsten [aem.live](https://www.aem.live/docs/config-service-setup#prerequisites) är aktiv för din miljö och du är konfigurerad som administratör.
-* Den defekta funktionen måste aktiveras av Adobe.
+* Be om att få aktivera konfigurationstjänsten [aem.live](https://www.aem.live/docs/config-service-setup#prerequisites) för din miljö och att du är konfigurerad som administratör.
+* Be Adobe att aktivera den obestridliga funktionen för ditt program.
+* Be Adobe att skapa organisationen åt dig.
 
 ## Aktivera funktion för svarslös {#activate}
 
@@ -64,67 +65,6 @@ När du har en åtkomsttoken kan den skickas i huvudet för cURL-begäranden i f
 ```text
 --header 'x-auth-token: <your-token>'
 ```
-
-### Konfigurera konfigurationstjänsten {#config-service}
-
-Som anges i [förutsättningarna](#prerequisites) måste konfigurationstjänsten vara aktiverad för din miljö. Du kan kontrollera konfigurationen av konfigurationstjänsten med det här cURL-kommandot.
-
-```text
-curl  --location 'https://admin.hlx.page/config/<your-github-org>.json' \
---header 'x-auth-token: <your-token>'
-```
-
-Om konfigurationstjänsten är korrekt konfigurerad returneras JSON som liknar följande.
-
-```json
-{
-  "title": "<your-github-org>",
-  "description": "Your GitHub Org",
-  "lastModified": "2024-11-14T12:14:04.230Z",
-  "created": "2024-11-14T12:13:37.032Z",
-  "version": 1,
-  "users": [
-    {
-      "email": "justthisguyyouknow@adobe.com",
-      "roles": [
-        "admin"
-      ],
-      "id": "<your-id>"
-    }
-  ]
-}
-```
-
-Nå ut till Adobe via din Slack-projektkanal eller utlösa ett supportproblem om konfigurationstjänsten inte är aktiverad. När du har en token och verifierat att konfigurationstjänsten är aktiverad kan du fortsätta med konfigurationen.
-
-1. Kontrollera att innehållskällan är korrekt konfigurerad.
-
-   ```text
-   curl --request GET \
-   --url https://admin.hlx.page/config/<your-github-org>/sites/<your-aem-project>.json \
-   --header 'x-auth-token: <your-token>'
-   ```
-
-1. Lägg till en sökvägsmappning i den offentliga konfigurationen.
-
-   ```text
-   curl --request POST \
-     --url https://admin.hlx.page/config/<your-github-org>/sites/<your-aem-project>/public.json \
-     --header 'x-auth-token: <your-token>' \
-     --header 'Content-Type: application/json' \
-     --data '{
-       "paths": {
-           "mappings": [
-               "/content/<your-site-content>/:/"
-      ],
-           "includes": [
-               "/content/<your-site-content>/"
-           ]
-       }
-   }'
-   ```
-
-När den offentliga konfigurationen har skapats kan du komma åt den via en URL som liknar `https://main--<your-aem-project>--<your-github-org>.aem.page/config.json` för att verifiera den.
 
 ### Lägg till sökvägsmappning för platskonfiguration och ange tekniskt konto {#access-control}
 
@@ -184,6 +124,11 @@ När platskonfigurationen har mappats kan du konfigurera åtkomstkontrollen geno
 
 1. Ange det tekniska kontot i konfigurationen med ett cURL-kommando som liknar följande.
 
+   * Anpassa `admin`-blocket för att definiera de användare som ska ha fullständig administrativ åtkomst till platsen.
+      * Det är en matris med e-postadresser.
+      * Jokertecknet `*` kan användas.
+      * Mer information finns i dokumentet [Konfigurera autentisering för författare](https://www.aem.live/docs/authentication-setup-authoring#default-roles).
+
    ```text
    curl --request POST \
      --url https://admin.hlx.page/config/<your-github-org>/sites/<your-aem-project>/access.json \
@@ -193,7 +138,7 @@ När platskonfigurationen har mappats kan du konfigurera åtkomstkontrollen geno
        "admin": {
            "role": {
                "admin": [
-                   "*@adobe.com"
+                   "<email>@<domain>.<tld>"
                ],
                "config_admin": [
                    "<tech-account-id>@techacct.adobe.com"

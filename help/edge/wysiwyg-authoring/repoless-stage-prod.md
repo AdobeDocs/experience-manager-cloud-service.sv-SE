@@ -4,9 +4,9 @@ description: Lär dig hur du skapar separata sajter för staging- och produktion
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 701bd9bc-30e8-4654-8248-a06d441d1504
-source-git-commit: 42218450ab03201c69c59053f720954183f4b652
+source-git-commit: 5715a07dc3e90e3781afa8d837394533ba419483
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Det finns två steg för att konfigurera en separat produktionsplats.
    * Konfigurationen `code` ska vara densamma som du använde när du skapade det första projektet.
    * `content` > `source` > `url` måste anpassas till namnet på den nya platsen som du skapar. I det här exemplet är det `wknd-prod`.
    * Webbplatsnamnet i POST-URL och `content` > `source` > `url` måste vara samma.
+   * Anpassa `admin`-blocket för att definiera de användare som ska ha fullständig administrativ åtkomst till platsen.
+      * Det är en matris med e-postadresser.
+      * Jokertecknet `*` kan användas.
+      * Mer information finns i dokumentet [Konfigurera autentisering för författare](https://www.aem.live/docs/authentication-setup-authoring#default-roles).
 
    ```text
    curl --request POST \
@@ -71,7 +75,7 @@ Det finns två steg för att konfigurera en separat produktionsplats.
            "admin": {
                "role": {
                    "admin": [
-                       "*@adobe.com"
+                       "<email>@<domain>.<tld>"
                    ],
                    "config_admin": [
                        "<tech-account-id>@techacct.adobe.com"

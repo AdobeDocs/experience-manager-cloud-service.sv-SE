@@ -4,9 +4,9 @@ description: Lär dig rekommendationer om hur du skapar ett projekt på ett smid
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: f6b861ed-18e4-4c81-92d2-49fadfe4669a
-source-git-commit: 42218450ab03201c69c59053f720954183f4b652
+source-git-commit: 5715a07dc3e90e3781afa8d837394533ba419483
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -112,6 +112,10 @@ I det här exemplet skapar vi platsen `wknd-ch` för den schweiziska närvaron a
    * Konfigurationen `code` ska vara densamma som du använde när du skapade det första projektet.
    * `content` > `source` > `url` måste anpassas till namnet på den nya platsen som du skapar. I det här exemplet är det `wknd-ch`.
    * Webbplatsnamnet i POST-URL och `content` > `source` > `url` måste vara samma.
+   * Anpassa `admin`-blocket för att definiera de användare som ska ha fullständig administrativ åtkomst till platsen.
+      * Det är en matris med e-postadresser.
+      * Jokertecknet `*` kan användas.
+      * Mer information finns i dokumentet [Konfigurera autentisering för författare](https://www.aem.live/docs/authentication-setup-authoring#default-roles).
 
    ```text
    curl --request POST \
@@ -138,7 +142,7 @@ I det här exemplet skapar vi platsen `wknd-ch` för den schweiziska närvaron a
            "admin": {
                "role": {
                    "admin": [
-                       "*@adobe.com"
+                       "<email>@<domain>.<tld>"
                    ],
                    "config_admin": [
                        "<tech-account-id>@techacct.adobe.com"
