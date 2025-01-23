@@ -5,9 +5,9 @@ mini-toc-levels: 3
 exl-id: c27134f5-178c-4db1-a8e6-ec45d020f2b5
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: f64f6d90c6ae2490be4be5067df0f96e9df6be38
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Säg hej till en Digital Asset Management-lösning som förstår de olika behove
 
 ![Min Workspace-översikt](assets/my-workspace-demo.gif)
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](my-workspace-assets-view.md)
+[![Se guiden](assets/see-the-guide-sm.png)](my-workspace-assets-view.md)
 
 ### Insikter för att fatta databaserade beslut {#insights-data}
 
@@ -76,7 +76,7 @@ För att hålla jämna steg med innehållets hastighet är användbara insikter 
 
 ![Insikter - översikt](assets/insights-overview.gif)
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](manage-reports-assets-view.md#view-live-statistics)
+[![Se guiden](assets/see-the-guide-sm.png)](manage-reports-assets-view.md#view-live-statistics)
 
 ### Adobe Photoshop Express-integration snabbar upp samarbetet {#accelerate-collaboration}
 
@@ -86,7 +86,7 @@ I den här videon ser du hur väl Assets har integrerats med Adobe Photoshop Exp
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420922)
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](edit-images-assets-view.md)
+[![Se guiden](assets/see-the-guide-sm.png)](edit-images-assets-view.md)
 
 De kommande versionerna av Assets as a Cloud Service innehåller även [Adobe Firefly-integrering via Adobe Express](https://firefly.adobe.com/?gclid=EAIaIQobChMIlZeKuNfj_wIVeyCtBh3e5g2cEAAYASAAEgL56_D_BwE&amp;sdid=JM4FW6VL&amp;mv=search&amp;mv2=paidsearch&amp;ef_id=EAIaIQobChMIlZeKuNfj_wIVeyCtBh3e5g2cEAAYASAAEgL56_D_BwE:G:s&amp;s_kwcid=AL!3085!3!652077237594!e!!g!adobe%20firefly!1987073758!148140507838).
 
@@ -96,7 +96,7 @@ Konfigurera snabbt en mappstruktur för din organisation med Assets-vyn genom at
 
 ![Överför mappar](assets/folder-uploads.gif)
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](add-delete-assets-view.md)
+[![Se guiden](assets/see-the-guide-sm.png)](add-delete-assets-view.md)
 
 ### Sökning i första rummet för ökad effektivitet {#search-first}
 
@@ -110,7 +110,7 @@ I Assets-vyn kan du övervaka åtgärder som utförs på resurser, mappar och sa
 
 ![Ta emot meddelanden](assets/notifications.gif)
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](manage-notifications-assets-view.md)
+[![Se guiden](assets/see-the-guide-sm.png)](manage-notifications-assets-view.md)
 
 ### Mjuk borttagning av resurser för bättre kontroll till administratörer {#soft-delete-assets}
 
@@ -118,7 +118,7 @@ I papperskorgsmappen i Assets-vyn visas de resurser som tagits bort från Assets
 
 ![Mjuk borttagning](assets/soft-delete.gif)
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](navigate-assets-view.md)
+[![Se guiden](assets/see-the-guide-sm.png)](navigate-assets-view.md)
 
 Förutom dessa funktioner kan du i Assets-vyn även utföra följande funktioner som inte är tillgängliga i administrationsvyn:
 
