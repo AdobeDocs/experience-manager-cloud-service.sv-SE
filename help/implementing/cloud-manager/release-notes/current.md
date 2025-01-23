@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.1.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: f6c1aa32647bcabeb0781973f81b75c11edc6a5d
+source-git-commit: ee01e5a2b805330f47af7ff563ca1ac90036f0bf
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ Nästa planerade version är torsdagen den 13 februari 2025.
 
 * **Kodkvalitetsregler - SonarQube Server Upgrade:** Cloud Manager Code Quality step kommer att börja använda SonarQube Server 9.9 med Cloud Manager 2025.2.0, som är planerad till torsdagen den 13 februari 2025.
 
-Uppdaterade SonarQube-regler finns nu tillgängliga på [Kodkvalitetsregler](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) för att förbereda.
+  Uppdaterade SonarQube-regler finns nu tillgängliga på [Kodkvalitetsregler](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) för att förbereda.
 
-Du kan kontrollera de nya reglerna tidigt genom att ange följande textvariabel för pipeline:
+  Du kan kontrollera de nya reglerna tidigt genom att ange följande textvariabel för pipeline:
 
-`CM_BUILD_IMAGE_OVERRIDE` = `self-service-build:sonar-99-upgrade-java17or21`
+  `CM_BUILD_IMAGE_OVERRIDE` = `self-service-build:sonar-99-upgrade-java17or21`
 
-Ange dessutom följande variabel för att säkerställa att kodkvalitetssteget körs för samma implementering (som normalt hoppas över för samma `commitId`):
+  Ange dessutom följande variabel för att säkerställa att kodkvalitetssteget körs för samma implementering (som normalt hoppas över för samma `commitId`):
 
-`CM_DISABLE_BUILD_REUSE` = `true`
+  `CM_DISABLE_BUILD_REUSE` = `true`
 
 ![Konfigurationssida för variabler](/help/implementing/cloud-manager/release-notes/assets/variables-config.png)
 
@@ -59,9 +59,27 @@ Ange dessutom följande variabel för att säkerställa att kodkvalitetssteget k
       * Den gradvisa lanseringen av alla Cloud Manager-miljöer börjar i februari för sandlådor och utvecklingsmiljöer och omfattar även produktionsmiljöer i april.
       * Kunder som bygger med Java 11 och som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
 
-* **CDN-konfigurationer har bytt namn till Domänmappningar:** Som en del av förbättringarna i användargränssnittet i AEM Cloud Manager har namnet CDN-konfigurationer ändrats till Domänmappningar för att underlätta terminologisk justering med funktioner. <!-- CMGR-64738 -->
+* **&quot;CDN-konfigurationer&quot; har bytt namn till &quot;Domänmappningar&quot;:** Som en del av förbättringarna av användargränssnittet i AEM Cloud Manager har etiketten &quot;CDN-konfigurationer&quot; nu bytt namn till &quot;Domänmappningar&quot;. Den här ändringen förbättrar terminologisk justering med funktioner. <!-- CMGR-64738 -->
 
   ![&quot;CDN Configurations&quot; bytte namn till &quot;Domain Mappings&quot; i användargränssnittet ](/help/implementing/cloud-manager/release-notes/assets/domain-mappings.png)
+
+* **Tillhandahåller en Edge Delivery-webbplats med ett klick:** Cloud Manager tillåter nu användare med rätt behörigheter och licenser att skapa en exempelwebbplats för Edge Delivery Services med bara ett klick. Denna smidiga process erbjuder följande automatiska funktioner:
+
+   * **GitHub-integrering** - Skapar automatiskt en GitHub-databas inom en befintlig organisation, förkonfigurerad med en standardmall för Edge Delivery Services.
+   * **AEM Installation av appen för kodsynkronisering** - Installerar programmet för AEM kodsynkronisering i databasen, vilket garanterar smidig synkronisering och distribution.
+   * **Innehåll Collaboration Setup** - Länkar en angiven Google Drive-mapp för innehållslagring, vilket ger en samarbetsmiljö för innehållshantering.
+   * **Innehållspublicering** - Nu kan användare publicera innehåll för tilldelade webbplatser direkt från Cloud Manager användargränssnitt, vilket förenklar arbetsflödena och förbättrar effektiviteten.
+   * **Förbättrad Collaboration** - Med den här plattformen kan användare lägga till flera medarbetare i Google Drive-innehållslagringsmappen, vilket underlättar teamarbete och innehållsinsatser.
+
+  Dessa förbättringar syftar till att förbättra automatiseringen, förenkla installationsprocesserna och förbättra samarbetet för Edge Delivery Services. <!-- CMGR-59362 -->
+
+  ![Etablerar en Edge Delivery-webbplats](/help/implementing/cloud-manager/release-notes/assets/eds-one-click-60.png)
+
+  ![Dialogrutan etablerar Edge Delivery-webbplats](/help/implementing/cloud-manager/release-notes/assets/eds-provision-60.png)
+
+* **Utökat stöd för Edge Delivery Services:** Cloud Manager har nu stöd för nyanställda på webbplatser för de senaste Edge Delivery Servicens. Uppdateringen innehåller en omfattande omfaktorisering av CDN och leveransstack, vilket ger ökad tillförlitlighet och underhållbarhet.
+
+* **Tidig uppdatering av Adobe-program - PR-valideringsstöd för Bitbucket och GitLab:** Cloud Manager har nu stöd för Pull Request (PR)-validering för både Cloud och självhanterade versioner av Bitbucket och GitLab. Med den här funktionen kan kunderna testa sina kodändringar mot kvalitetströsklar för Adobe innan de sammanfogar en PR. Genom att säkerställa högre kodkvalitet före sammanslagningen förbättras kodsändringar i produktionspipelinerna avsevärt, vilket minskar time to market och effektiviserar utvecklingsarbetsflödena.
 
 
 <!-- ## Early adoption program {#early-adoption}
