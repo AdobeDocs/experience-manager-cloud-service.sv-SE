@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.1.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: ee01e5a2b805330f47af7ff563ca1ac90036f0bf
+source-git-commit: 9850a52626c2bd80f7528931d23691dff1dd3eb2
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -80,6 +80,17 @@ Nästa planerade version är torsdagen den 13 februari 2025.
 * **Utökat stöd för Edge Delivery Services:** Cloud Manager har nu stöd för nyanställda på webbplatser för de senaste Edge Delivery Servicens. Uppdateringen innehåller en omfattande omfaktorisering av CDN och leveransstack, vilket ger ökad tillförlitlighet och underhållbarhet.
 
 * **Tidig uppdatering av Adobe-program - PR-valideringsstöd för Bitbucket och GitLab:** Cloud Manager har nu stöd för Pull Request (PR)-validering för både Cloud och självhanterade versioner av Bitbucket och GitLab. Med den här funktionen kan kunderna testa sina kodändringar mot kvalitetströsklar för Adobe innan de sammanfogar en PR. Genom att säkerställa högre kodkvalitet före sammanslagningen förbättras kodsändringar i produktionspipelinerna avsevärt, vilket minskar time to market och effektiviserar utvecklingsarbetsflödena.
+
+* **Avancerade filtreringsalternativ för pipelines:** Cloud Manager har nu avancerade filtreringsalternativ på sidan för pipelines, vilket gör att du snabbt kan komma åt relevanta data och förbättra driftsättningseffektiviteten. Några av de viktigaste funktionerna är:
+
+   * **Flervillkorsfiltrering:** Förfina sökresultaten med filter som pipeline-namn, miljö och distribuera kod.
+   * **Smidig Pipeline-sökning:** Hitta enkelt specifika pipelines för snabbare navigering och förbättrad arbetsflödeshantering.
+
+  Tillsammans gör dessa förbättringar att hanteringen och driftsättningen av rörledningar blir effektivare och användarvänligare.
+
+  ![Funktionen Pipelinefilter](/help/implementing/cloud-manager/release-notes/assets/pipeline-filters.png)
+
+* **Självbetjäning-CDN-konfiguration för Edge Delivery-tjänst:** Nya användare av Edge Delivery Service kan nu konfigurera sitt CDN separat via Cloud Manager. Den här uppdateringen utökar stödet från `.hlx.page/live` till nya `.aem.page/live`, vilket ger större flexibilitet och effektiviserad konfiguration för användare.
 
 
 <!-- ## Early adoption program {#early-adoption}
