@@ -113,6 +113,7 @@ ht-degree: 2%
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
+         + [Release Notes for 2024.12.0](/help/implementing/cloud-manager/release-notes/2024/2024-12-0.md)
          + [Versionsinformation för 2024.11.0](/help/implementing/cloud-manager/release-notes/2024/2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/implementing/cloud-manager/release-notes/2024/2024-9-0.md)
