@@ -5,9 +5,9 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
+source-git-commit: 30d128c914b1eea19fb324f6587a364da3ebba1d
 workflow-type: tm+mt
-source-wordcount: '4421'
+source-wordcount: '4384'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,11 @@ ht-degree: 0%
 
 Lär dig mer om Cloud Manager regler för anpassad kodkvalitet, baserade på Adobe Experience Manager bästa praxis för teknikutveckling, för att säkerställa högklassig kod genom grundliga tester. Se även [kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md).
 
->[!NOTE]
+Fullständiga SonarQube-regler kan inte laddas ned på grund av Adobe egna information. Du kan hämta den fullständiga listan med *aktuella* regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx). Fortsätt läsa det här dokumentet för beskrivningar och exempel på reglerna.
+
+>[!IMPORTANT]
 >
->Fullständiga SonarQube-regler kan inte laddas ned på grund av Adobe egna information. Du kan hämta den fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx). Fortsätt läsa det här dokumentet för beskrivningar och exempel på reglerna.
+>Från och med torsdagen den 13 februari 2025 (Cloud Manager 2025.2.0) använder Cloud Manager Code Quality en uppdaterad version av SonarQube 9.9 och en uppdaterad lista över regler som du kan [hämta här](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS-2024-12-0.xlsx).
 
 >[!NOTE]
 >
@@ -187,7 +189,7 @@ public void orDoThis () {
 ### Stäng alltid ResursResolver-objekt {#resourceresolver-objects-should-always-be-closed}
 
 * **Nyckel**: CQRules:CQBP-72
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
@@ -229,7 +231,7 @@ public void orDoThis(Session session) throws Exception {
 ### Använd inte SSLING-serversökvägar för att registrera servlets {#do-not-use-sling-servlet-paths-to-register-servlets}
 
 * **Nyckel**: CQRules:CQBP-75
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
@@ -249,7 +251,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 ### Undantag som fångas upp ska loggas eller kastas, inte båda {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
 * **Nyckel**: CQRules:CQBP-44—CatchAndeitherLogOrThrow
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -291,7 +293,7 @@ public void orDoThis() throws MyCustomException {
 ### Undvik loggsatser som omedelbart följs av en throw-sats {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
 * **Nyckel**: CQRules:CQBP-44 - ConsecutiousLogAndThrow
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -317,7 +319,7 @@ public void doThis() throws Exception {
 ### Undvik att logga på INFO när du hanterar GET- eller HEAD-förfrågningar {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 * **Nyckel**: CQRules:CQBP-44—LogInfoInGetOrHeadRequests
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 
 I allmänhet bör INFO-loggnivån användas för att avgränsa viktiga åtgärder och Experience Manager är som standard konfigurerad för att logga på INFO-nivå eller högre. Metoderna GET och HEAD bör aldrig vara skrivskyddade och därför inte utgöra några viktiga åtgärder. Loggning på INFO-nivå som svar på GET- eller HEAD-förfrågningar skapar troligen avsevärt loggbrus, vilket gör det svårare att identifiera användbar information i loggfiler. När du hanterar GET- eller HEAD-begäranden loggar du på WARN- eller ERROR-nivåer om något har gått fel. Använd nivåerna DEBUG eller TRACE om detaljerad felsökningsinformation behövs.
@@ -345,7 +347,7 @@ public void doGet() throws Exception {
 ### Använd inte Exception.getMessage() som första parameter i en loggningssats {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 * **Nyckel**: CQRules:CQBP-44—ExceptionGetMessageIsFirstLogParam
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -378,7 +380,7 @@ public void doThis() {
 ### Inloggning av catch-block ska ske på WARN- eller ERROR-nivå {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 * **Nyckel**: CQRules:CQBP-44—WrongLogLevelInCatchBlock
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -411,7 +413,7 @@ public void doThis() {
 ### Skriv inte ut stackspår till konsolen {#do-not-print-stack-traces-to-the-console}
 
 * **Nyckel**: CQRules:CQBP-44—ExceptionPrintStackTrace
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -444,7 +446,7 @@ public void doThis() {
 ### Exportera inte till standardutdata eller standardfel {#do-not-output-to-standard-output-or-standard-error}
 
 * **Nyckel**: CQRules:CQBP-44—LogLevelConsolePrinters
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -477,7 +479,7 @@ public void doThis() {
 ### Undvik hårdkodade appar och libs paths {#avoid-hardcoded-apps-and-libs-paths}
 
 * **Nyckel**: CQRules:CQBP-71
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2018.4.0
 
@@ -502,7 +504,7 @@ public void doThis(Resource resource) {
 ### Använd inte Sling-schemaläggare {#sonarqube-sling-scheduler}
 
 * **Nyckel**: CQRules:AMSCORE-554
-* **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
+* **Typ**: `Code Smell`/Cloud Service-kompatibilitet
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
@@ -513,7 +515,7 @@ Läs [Apache Sling-händelser och jobbhantering](https://sling.apache.org/docume
 ### Använd inte inaktuella API:er från Experience Manager {#sonarqube-aem-deprecated}
 
 * **Nyckel**: AMSCORE-553
-* **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
+* **Typ**: `Code Smell`/Cloud Service-kompatibilitet
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
@@ -800,7 +802,7 @@ Ungefär som [Paket får inte innehålla regeln för duplicerade OSGi-konfigurat
 ### Standardredigeringsläget får inte vara ett klassiskt användargränssnitt {#oakpal-default-authoring}
 
 * **Nyckel**: ClassicUIAuthoringMode
-* **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
+* **Typ**: `Code Smell`/Cloud Service-kompatibilitet
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
@@ -809,7 +811,7 @@ OSGi-konfigurationen `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` defin
 ### Komponenter med dialogrutor måste ha dialogrutor för Touch UI {#oakpal-components-dialogs}
 
 * **Nyckel**: ComponentWithOnlyClassicUIDialog
-* **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
+* **Typ**: `Code Smell`/Cloud Service-kompatibilitet
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
@@ -824,7 +826,7 @@ Dokumentationen för Experience Manager Moderniseringsverktyg innehåller dokume
 ### Paket får inte innehålla både muterbara och oföränderliga {#oakpal-packages-immutable}
 
 * **Nyckel**: ImmutableMutableMixedPackage
-* **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
+* **Typ**: `Code Smell`/Cloud Service-kompatibilitet
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
@@ -839,7 +841,7 @@ Mer information finns i [Projektstruktur för Experience Manager](/help/implemen
 ### Använd inte agenter för omvänd replikering {#oakpal-reverse-replication}
 
 * **Nyckel**: ReverseReplication
-* **Typ**: Kompatibilitet med kodmeddelanden/Cloud Service
+* **Typ**: `Code Smell`/Cloud Service-kompatibilitet
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2020.5.0
 
@@ -892,7 +894,7 @@ Migreringsverktyget i [Experience Manager as a Cloud Service Assets GitHub-datab
 ### Användning av statiska mallar rekommenderas inte för redigerbara mallar {#oakpal-static-template}
 
 * **Nyckel**: StaticTemplateUsage
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -903,7 +905,7 @@ Migrering från statiska till redigerbara mallar kan till stor del automatiseras
 ### Användning av äldre baskomponenter rekommenderas inte {#oakpal-usage-legacy}
 
 * **Nyckel**: LegacyFoundationComponentUsage
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -914,7 +916,7 @@ De äldre Foundation-komponenterna (d.v.s. komponenterna under `/libs/foundation
 ### Använd endast namn och ordning för körningsläge som stöds {#oakpal-supported-runmodes}
 
 * **Nyckel**: SupportedRunmode
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -923,7 +925,7 @@ Experience Manager as a Cloud Service har en strikt namngivningsprincip för kö
 ### Definitionsnoder för anpassade sökindex måste vara direkt underordnade `/oak:index` {#oakpal-custom-search}
 
 * **Nyckel**: OakIndexLocation
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -932,7 +934,7 @@ Experience Manager as a Cloud Service kräver att anpassade sökindexdefinitione
 ### Definitionsnoder för anpassade sökindex måste ha en compatVersion av 2 {#oakpal-custom-search-compatVersion}
 
 * **Nyckel**: IndexCompatVersion
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -941,7 +943,7 @@ Experience Manager as a Cloud Service kräver att anpassade sökindexdefinitione
 ### Underordnade noder för anpassade sökindexdefinitionsnoder måste vara av typen `nt:unstructured `{#oakpal-descendent-nodes}
 
 * **Nyckel**: IndexDescendantNodeType
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -950,7 +952,7 @@ Det är svårt att felsöka problem när en anpassad sökindexdefinitionsnod har
 ### Definitionsnoder för anpassade sökindex måste innehålla en underordnad nod med namnet indexRules som har underordnade noder {#oakpal-custom-search-index}
 
 * **Nyckel**: IndexRulesNode
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -959,7 +961,7 @@ En korrekt definierad definitionsnod för anpassat sökindex måste innehålla e
 ### Definitionsnoder för anpassade sökindex måste följa namnkonventioner {#oakpal-custom-search-definitions}
 
 * **Nyckel**: IndexName
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -977,7 +979,7 @@ Experience Manager as a Cloud Service kräver att anpassade sökindexdefinitione
 ### Definitionsnoder för anpassade sökindex får inte innehålla en egenskap med namnet seed {#oakpal-property-name-seed}
 
 * **Nyckel**: IndexSeedProperty
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -986,7 +988,7 @@ Experience Manager as a Cloud Service tillåter inte att anpassade sökindexdefi
 ### Definitionsnoder för anpassade sökindex får inte innehålla egenskapen reindex {#oakpal-reindex-property}
 
 * **Nyckel**: IndexReindexProperty
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2021.2.0
 
@@ -1031,7 +1033,7 @@ Cloud Service. Mer information finns i dokumentet [Innehållssökning och indexe
 ### Om den anpassade sökindexsdefinitionen innehåller `compatVersion` måste den anges till 2 {#oakpal-compatVersion}
 
 * **Nyckel**: IndexCompatVersion
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 202.1.0
 
@@ -1039,7 +1041,7 @@ Cloud Service. Mer information finns i dokumentet [Innehållssökning och indexe
 ### Indexnoden som anger `includedPaths` ska även ange `queryPaths` med samma värden {#oakpal-included-paths-without-query-paths}
 
 * **Nyckel**: IndexIncludedPathsWithoutQueryPaths
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2023.1.0
 
@@ -1048,7 +1050,7 @@ Konfigurera `includedPaths` och `queryPaths` med identiska värden för anpassad
 ### Indexnoden som anger `nodeScopeIndex` för den generiska nodtypen ska också ange `includedPaths` och `queryPaths` {#oakpal-full-text-on-generic-node-type}
 
 * **Nyckel**: IndexFulltextOnGenericType
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2023.1.0
 
@@ -1094,7 +1096,7 @@ Nodtypen `nt:base` kan betraktas som generisk eftersom alla nodtyper ärver frå
 ### Egenskapen queryLimitReads för frågemotorn ska inte åsidosättas {#oakpal-query-limit-reads}
 
 * **Nyckel**: OverrideOfQueryLimitReads
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2023.1.0
 
@@ -1103,7 +1105,7 @@ Om du åsidosätter standardvärdet kan sidläsningen bli långsam, särskilt n�
 ### Flera aktiva versioner av samma index {#oakpal-multiple-active-versions}
 
 * **Nyckel**: IndexDetectMultipleActiveVersionsOfSameIndex
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2023.1.0
 
@@ -1130,7 +1132,7 @@ Om du åsidosätter standardvärdet kan sidläsningen bli långsam, särskilt n�
 ### Namnet på helt anpassade indexdefinitioner bör överensstämma med de officiella riktlinjerna {#oakpal-fully-custom-index-name}
 
 * **Nyckel**: IndexValidFullyCustomName
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2023.1.0
 
@@ -1191,7 +1193,7 @@ Om den analyserade egenskapen inte anges explicit är standardvärdet false.
 ### Tagg, egenskap {#tags-property}
 
 * **Nyckel**: IndexHasValidTagsProperty
-* **Typ**: kodmeddelande
+* **Typ**: `Code Smell`
 * **Allvarlighetsgrad**: Mindre
 * **Sedan**: Version 2023.1.0
 

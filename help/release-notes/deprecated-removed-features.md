@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 33dd48cc6484675ca54cfba19f741d23ee4f5ff1
+source-git-commit: b0bc2eb4298a88c6dc421390dd9527e181386b5d
 workflow-type: tm+mt
-source-wordcount: '2768'
+source-wordcount: '2513'
 ht-degree: 0%
 
 ---
@@ -510,43 +510,43 @@ Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/he
 
 ## Java runtime update to version 21 {#java-runtime-update-21}
 
-<!-- NEW but needed to be removed for now; removed 12/5/24 LEAVE HERE, DO NOT DELETE Adobe Experience Manager as a Cloud Service is transitioning to the Java 21 runtime. To ensure compatibility, updating library versions as outlined in [Runtime requirements](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements) is essential. -->
+Adobe Experience Manager as a Cloud Service går över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att uppdatera biblioteksversionerna enligt [Runtime Requirements](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
 
-AEM as a Cloud Service kommer att gå över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att göra följande justeringar:
+<!-- (OLD Removed from here to end of topic 1/16/25 as per instruction in https://wiki.corp.adobe.com/pages/viewpage.action?pageId=3359689801) AEM as a Cloud Service will be moving to Java 21 runtime. In order to ensure compatibility, it is essential to make the following adjustments:
 
-### Körningskrav
+### Runtime Requirements
 
-Dessa justeringar krävs för att säkerställa kompatibilitet med Java 21-miljön. Biblioteken kan uppdateras när som helst eftersom de är kompatibla med äldre versioner av Java.
+These adjustments are required to ensure compatibility with the Java 21 runtime. The libraries can be updated at any time as they are compatible with older versions of Java.
 
-#### Minimiversion av org.objectweb.asm {#org.objectweb.asm}
+#### Minimum version of org.objectweb.asm {#org.objectweb.asm}
 
-Uppdatera användningen av org.objectweb.asm till version 9.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+Update the usage of org.objectweb.asm to version 9.5 or higher to ensure support for newer JVM runtimes.
 
-#### Minimiversion av org.apache.groovy {#org.apache.groovy}
+#### Minimum version of org.apache.groovy {#org.apache.groovy}
 
-Uppdatera användningen av org.apache.groovy till version 4.0.22 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+Update the usage of org.apache.groovy to version 4.0.22 or higher to ensure support for newer JVM runtimes.
 
-Det här paketet kan inkluderas indirekt genom att tredjepartsberoenden läggs till, som AEM Groovy Console.
+This bundle can be indirectly included by adding third party dependencies such as the AEM Groovy Console.
 
-### Krav vid byggtid
+### Build-time Requirements
 
-Dessa justeringar krävs för att projektet ska kunna byggas med nyare versioner av Java, men de krävs inte för körningskompatibilitet. Plugin-programmen för Maven kan uppdateras när som helst eftersom de är kompatibla med äldre versioner av Java.
+These adjustments are required to allow building the project with newer versions of Java but not required for runtime compatibility. The Maven plug-ins can be updated at any time as they are compatible with older versions of Java.
 
-#### Lägsta version av bnd-maven-plugin {#bnd-maven-plugin}
+#### Minimum version of bnd-maven-plugin {#bnd-maven-plugin}
 
-Uppdatera användningen av bnd-maven-plugin till version 6.4.0 för att säkerställa stöd för nyare JVM-miljöer. Versioner 7 eller senare är inte kompatibla med Java 11 eller tidigare, så en uppgradering till den versionen rekommenderas inte för närvarande.
+Update the usage of bnd-maven-plugin to version 6.4.0 to ensure support for newer JVM runtimes. Versions 7 or higher are not compatible with Java 11 or lower so an upgrade to that version is not recommended at this time.
 
-#### Lägsta version av aemanalysator-maven-plugin {#aemanalyser-maven-plugin}
+#### Minimum version of aemanalyser-maven-plugin {#aemanalyser-maven-plugin}
 
-Uppdatera användningen av aemanalysator-maven-plugin till version 1.6.6 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+Update the usage of aemanalyser-maven-plugin to version 1.6.6 or higher to ensure support for newer JVM runtimes.
 
-#### Lägsta version av maven-bundle-plugin  {#maven-bundle-plugin}
+#### Minimum version of maven-bundle-plugin  {#maven-bundle-plugin}
 
-Uppdatera användningen av maven-bundle-plugin till version 5.1.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+Update the usage of maven-bundle-plugin to version 5.1.5 or higher to ensure support for newer JVM runtimes.
 
-#### Uppdatera beroenden i maven-scr-plugin  {#maven-scr-plugin}
+#### Update dependencies in maven-scr-plugin  {#maven-scr-plugin}
 
-`maven-scr-plugin` är inte direkt kompatibel med Java 17 och 21. Det går dock att generera beskrivningsfilerna genom att uppdatera ASM-beroendeversionen i plugin-konfigurationen, som i fragmentet nedan:
+The `maven-scr-plugin` is not directly compatible with Java 17 and 21. However, it is possible to generate the descriptor files by updating the ASM dependency version within the plugin configuration, similar to the snippet below: 
 
 ```
 [source,xml]
@@ -584,3 +584,4 @@ Uppdatera användningen av maven-bundle-plugin till version 5.1.5 eller senare f
    ...
  </project>
 ```
+-->
