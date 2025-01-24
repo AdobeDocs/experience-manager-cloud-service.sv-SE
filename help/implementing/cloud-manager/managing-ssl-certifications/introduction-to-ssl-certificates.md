@@ -5,9 +5,9 @@ exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fa99656e0dd02bb97965e8629d5fa657fbae9424
+source-git-commit: 3d9ad70351bfdedb6d81e90d9d193fac3088a3ec
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '1025'
 ht-degree: 0%
 
 ---
@@ -73,20 +73,47 @@ OV och EV erbjuder dessutom dessa funktioner jämfört med DV-certifikat i Cloud
 >
 >Om du har flera anpassade domäner kanske du inte vill överföra ett certifikat varje gång du lägger till en ny domän. I så fall kan du ha nytta av att skaffa ett enda certifikat som omfattar flera domäner.
 
->[!NOTE]
->
->Om två certifikat omfattar samma domän installeras, tillämpas det mer exakta certifikatet.
->
->Om din domän till exempel är `dev.adobe.com` och du har ett certifikat för `*.adobe.com` och ett annat för `dev.adobe.com`, används det mer specifika (`dev.adobe.com`).
-
 #### Krav för kundhanterade OV/EV SSL-certifikat {#requirements}
 
 Om du väljer att lägga till ett eget OV/EV SSL-certifikat som hanteras av kunden måste det uppfylla följande krav:
 
-* AEM as a Cloud Service godkänner certifikat som överensstämmer med OV- (Organization Validation) eller EV-principen (Extended Validation).
+* Certifikatet måste följa OV-profiler (Organization Validation) eller EV-profiler (Extended Validation).
    * Cloud Manager stöder inte tillägg av egna DV-certifikat (domänvalidering).
+* Självsignerade certifikat stöds inte.
 * Alla certifikat måste vara ett X.509 TLS-certifikat från en betrodd certifikatutfärdare med en matchande 2 048-bitars RSA privat nyckel.
-* Självsignerade certifikat accepteras inte.
+
+#### Bästa tillvägagångssätt för certifikatshantering
+
+* **Undvik överlappande certifikat:**
+
+   * Undvik att distribuera överlappande certifikat som matchar samma domän för att få en smidig certifikatshantering. Om du till exempel har ett jokertecken (*.example.com) bredvid ett visst certifikat (dev.example.com) kan det leda till förvirring.
+   * TLS-lagret prioriterar det mest specifika och nyligen distribuerade certifikatet.
+
+  Exempelscenarier:
+
+   * &quot;Dev Certificate&quot; omfattar `dev.example.com` och distribueras som en domänmappning för `dev.example.com`.
+   * &quot;Stage Certificate&quot; omfattar `stage.example.com` och distribueras som en domänmappning för `stage.example.com`.
+   * Om &quot;Stage Certificate&quot; distribueras/uppdateras *efter* &quot;Dev Certificate&quot; används även begäranden för `dev.example.com`.
+
+     För att undvika sådana konflikter måste du se till att certifikaten noggrant omfattar de domäner de är avsedda för.
+
+* **Jokertecken:**
+
+  Jokertecken (till exempel `*.example.com`) stöds, men de bör bara användas när det behövs. Vid överlappning har det mer specifika certifikatet företräde. Det specifika certifikatet visar till exempel `dev.example.com` i stället för jokertecknet (`*.example.com`).
+
+* **Validering och felsökning:**
+Innan du försöker installera ett certifikat med Cloud Manager rekommenderar Adobe att du validerar certifikatets integritet lokalt med verktyg som `openssl` . Exempel:
+
+  `openssl verify -untrusted intermediate.pem certificate.pem`
+
+
+<!--
+>[!NOTE]
+>
+>If two certificates cover the same domain are installed, the one that is more exact is applied.
+>
+>For example, if your domain is `dev.adobe.com` and you have one certificate for `*.adobe.com` and another for `dev.adobe.com`, the more specific one (`dev.adobe.com`) is used.
+-->
 
 #### Format för kundhanterade certifikat {#certificate-format}
 
@@ -112,13 +139,9 @@ Följande `openssl`-kommandon kan användas för att konvertera certifikat som i
   openssl x509 -inform der -in certificate.cer -out certificate.pem
   ```
 
->[!TIP]
->
->Adobe rekommenderar att du validerar integriteten för ditt certifikat lokalt med ett verktyg som `openssl verify -untrusted intermediate.pem certificate.pem` innan du försöker installera det med Cloud Manager.
-
 ## Begränsning av antalet installerade SSL-certifikat {#limitations}
 
-Vid en given tidpunkt tillåter Cloud Manager högst 50 installerade SSL-certifikat. Dessa certifikat kan kopplas till en eller flera miljöer i hela programmet och kan även innehålla certifikat som gått ut.
+Cloud Manager stöder vid varje given tidpunkt upp till 50 installerade certifikat. Dessa certifikat kan kopplas till en eller flera miljöer i hela programmet och kan även innehålla certifikat som gått ut.
 
 Om du har nått gränsen kan du granska dina certifikat och ta bort certifikat som har gått ut. Eller gruppera flera domäner i samma certifikat eftersom ett certifikat kan omfatta flera domäner (upp till 100 SAN-nätverk).
 
