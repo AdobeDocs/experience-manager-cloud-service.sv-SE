@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 7654289713246e894388bcd9bfa995248aeb3c38
+source-git-commit: b4ed1039e199f520a1d7b44ae9af11ecdf52f5c3
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive F
 
 ### AEM Forms till Marketo Connector
 
-[AEM Forms till Marketo Connector](/help/forms/integrate-adaptive-form-with-marketo-engage.md) överbryggar klyftan mellan dina webbformulär (Adaptive Forms) som skapats med Adobe Experience Manager (AEM) och din automatiseringsplattform för marknadsföring, Marketo.
+[AEM Forms till Marketo Connector](/help/forms/integrate-form-to-marketo-engage.md) överbryggar klyftan mellan dina webbformulär (Adaptive Forms) som skapats med Adobe Experience Manager (AEM) och din automatiseringsplattform för marknadsföring, Marketo.
 
 När någon skickar ett formulär på din webbplats som skapats med AEM Adaptive Forms ser kopplingen till att skickade data automatiskt skickas till Marketo. Detta eliminerar behovet av manuell datainmatning och minskar risken för fel.
 
@@ -100,6 +100,12 @@ Genom att effektivisera dataöverföringsprocessen kan kopplingen hjälpa dig at
 
 AEM Forms till Marketo Connector hjälper er att utnyttja båda plattformarnas styrkor för att skapa en effektivare marknadsföringstrå.
 
+Vill du börja? I följande artiklar finns detaljerade anvisningar om hur innovationen används.
+
+* [Integrera Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
+* [Integrera ett anpassat formulär med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
+* [Konfigurera Marketo Engage och datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
+* [Skicka ett befintligt anpassat formulär till Marketo Engage](/help/forms/submit-adaptive-form-to-marketo-engage.md)
 
 ## Ytterligare innovationer för tidig åtkomst
 
