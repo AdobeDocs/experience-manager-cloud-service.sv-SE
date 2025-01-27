@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7122022c4245887ec576d4c1cd9af288b440f0c2
+source-git-commit: 64270a0d3b65ac327b14826117631deeb749c95f
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -32,12 +32,13 @@ Den kraftfulla universella redigeraren bygger på de robusta funktionerna som in
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface"> 
     <h3>WYSIWYG Interface</h3>
-    <p>Universal Editor har ett WYSIWYG-gränssnitt för blankettkonstruktion. Det innehåller färdiga komponentbibliotek, stöd för responsiv design och mallbaserad formulärframtagning. Du kan omedelbart lägga till eller ta bort formulärfält och ändra fältegenskaper (som etikett, databindning, validering). Du kan också plugin-program för anpassade formulärkomponenter till Universal Editor.</p>
+    <p>Universell redigerare har ett WYSIWYG-gränssnitt för formulärdesign med ett färdigbyggt komponentbibliotek, responsiv design, mallbaserad framtagning och fältändringar i realtid.
+ </p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Regelredigeraren">
     <h3>Regelredigeraren</h3>
-    <p>Regelredigeraren gör det möjligt att skapa avancerade formulärinteraktioner med händelsestyrda regler, omedelbar validering och felhantering via enkla JavaScript- och JSON-baserade definitioner.</p>
+    <p>Designa responsiva formulär som kan anpassas sömlöst mellan olika enheter. Förhandsgranska och testa designer för datorer, surfplattor och mobiler i det responsiva läget.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Skicka funktionsmakron">
@@ -49,17 +50,17 @@ Den kraftfulla universella redigeraren bygger på de robusta funktionerna som in
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface alt=" WYSIWYG Interface"> 
     <h3>Personalization</h3>
-    <p>Personalization</p>
+    <p>Personalization använder användardata för att leverera skräddarsydda formulärupplevelser och dynamiskt justera innehåll, layout eller alternativ baserat på användarpreferenser.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Regelredigeraren">
-    <h3>Autentiseringsrubriker</h3>
-    <p>Regelredigeraren gör det möjligt att skapa avancerade formulärinteraktioner med händelsestyrda regler, omedelbar validering och felhantering via enkla JavaScript- och JSON-baserade definitioner.</p>
+    <h3>A/B-testning</h3>
+    <p>A/B-tester (experiment) gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Skicka funktionsmakron">
-    <h3> Publicering/avpublicering </h3>
-    <p>Styr enkelt formulärens synlighet genom att publicera och avpublicera dem med några klick.</p>
+    <h3> Aktivitetshantering </h3>
+    <p>Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll, vilket ger smidigt samarbete och smidiga arbetsflöden.</p>
   </div>
 </div>
 
@@ -67,17 +68,17 @@ Den kraftfulla universella redigeraren bygger på de robusta funktionerna som in
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Förifyll tjänster">
     <h3>Förifyll tjänster</h3>
-    <p>Pre-fill Services förbättrar användarupplevelsen genom att på ett intelligent sätt fylla i formulärfält med relevanta data från olika källor, vilket minskar behovet av manuell datainmatning.</p>
+    <p>I förifyllda tjänster fylls formulärfält automatiskt i med relevanta användardata från olika källor, vilket minskar behovet av manuell inmatning och förbättrar användarupplevelsen.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Databindning">
     <h3>Databindning</h3>
-    <p>Databindning möjliggör direkta, dynamiska anslutningar mellan formulärfält och backend-datakällor som stöder realtidssynkronisering och komplex datamappning.</p>
+    <p>Databindning möjliggör direkta anslutningar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Internationalisering/lokalisering">
-    <h3>Lokalisering</h3>
-    <p>Internationaliseringsstödet garanterar global tillgänglighet med flerspråkig återgivning, höger-till-vänster-språkkompatibilitet och språkspecifik formatering.</p>
+    <h3>Publicering/avpublicering</h3>
+    <p>Styr enkelt formulärens synlighet - publicera eller avpublicera dem med bara några klick för att dynamiskt hantera tillgänglighet, användaråtkomst och innehållsuppdateringar.</p>
   </div>
 </div>
 
@@ -85,17 +86,17 @@ Den kraftfulla universella redigeraren bygger på de robusta funktionerna som in
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Analys och uppföljning">
     <h3>Analys och uppföljning</h3>
-    <p>Inbyggda funktioner för analys och spårning ger insikter i formulärinteraktioner, överföringshastighet och användarbeteende, vilket möjliggör kontinuerlig optimering.</p>
+    <p>Få insikter om användarbeteende, formulärinteraktioner och överföringshastighet med inbyggda analyser och spårning för att möjliggöra datadriven optimering av formulär.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Experimentation (A/B-testning)">
-    <h3>Experimentation (A/B-testning)</h3>
-    <p>Experimentation gör det möjligt att utföra A/B-tester på formulärdesigner för att identifiera de bästa layouterna eller funktionerna.</p>
+    <h3>Skicka funktionsmakron</h3>
+    <p>Skicka funktionsmakron har stöd för serverdelsintegrering, logik för villkorlig inskickning, säkra slutpunkter och preprocessorer, vilket effektiviserar inskickningsarbetsflödena.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Aktivitetshantering">
-    <h3>Aktivitetshantering</h3>
-    <p>Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll, vilket ger ett smidigt samarbete.</p>
+    <h3>Anpassade komponenter</h3>
+    <p>Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen.</p>
   </div>
 </div>
 
@@ -108,12 +109,12 @@ Den kraftfulla universella redigeraren bygger på de robusta funktionerna som in
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Bädda in Forms">
     <h3>Bädda in Forms</h3>
-    <p>Den universella redigeraren stöder inbäddning av formulär direkt på Edge Deliver Services Sites-sidor. Detta kan du göra med inbäddningskomponenten som finns i förpackningen.</p>
+    <p>Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor för en smidig användarupplevelse.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Anpassade komponenter">
     <h3>Anpassade komponenter</h3>
-    <p>Med anpassade komponenter kan utvecklare utöka funktionaliteten i formulär genom att skapa unika formulärelement som är anpassade för specifika användningsområden 
+    <p>Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen.
     </p>
   </div>
 </div>
@@ -122,12 +123,12 @@ Den kraftfulla universella redigeraren bygger på de robusta funktionerna som in
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Tack">
     <h3>Tack</h3>
-    <p>Anpassa bekräftelsemeddelandet eller sidan som visas när formuläret har skickats.</p>
+    <p>Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats.</p>
   </div>
     <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface" alt="Skicka funktionsmakron">
     <h3>Skicka funktionsmakron</h3>
-    <p>Skicka-åtgärder underlättar arbetsflöden för att skicka in formulär med alternativ för backend-integrering, datapreprocessorer, logik för villkorsstyrda överföringar och säkra slutpunktsanslutningar.</p>
+    <p>Skicka-åtgärder underlättar arbetsflöden för att skicka in formulär med backend-integrering och säkra slutpunktsanslutningar.</p>
   </div>
 </div>
 
