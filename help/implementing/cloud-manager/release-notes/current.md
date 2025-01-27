@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.1.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 9850a52626c2bd80f7528931d23691dff1dd3eb2
+source-git-commit: befb092169e2278a9e84c183d342003ef325c71e
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -80,6 +80,8 @@ Nästa planerade version är torsdagen den 13 februari 2025.
 * **Utökat stöd för Edge Delivery Services:** Cloud Manager har nu stöd för nyanställda på webbplatser för de senaste Edge Delivery Servicens. Uppdateringen innehåller en omfattande omfaktorisering av CDN och leveransstack, vilket ger ökad tillförlitlighet och underhållbarhet.
 
 * **Tidig uppdatering av Adobe-program - PR-valideringsstöd för Bitbucket och GitLab:** Cloud Manager har nu stöd för Pull Request (PR)-validering för både Cloud och självhanterade versioner av Bitbucket och GitLab. Med den här funktionen kan kunderna testa sina kodändringar mot kvalitetströsklar för Adobe innan de sammanfogar en PR. Genom att säkerställa högre kodkvalitet före sammanslagningen förbättras kodsändringar i produktionspipelinerna avsevärt, vilket minskar time to market och effektiviserar utvecklingsarbetsflödena.
+
+Mer information om&quot;Bring Your Own Git&quot; - nu med stöd för GitLab och Bitbucket - och om hur du registrerar dig som tidig Adobe finns i [Versionsinformation för Cloud Manager oktober 2024](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md##gitlab-bitbucket).
 
 * **Avancerade filtreringsalternativ för pipelines:** Cloud Manager har nu avancerade filtreringsalternativ på sidan för pipelines, vilket gör att du snabbt kan komma åt relevanta data och förbättra driftsättningseffektiviteten. Några av de viktigaste funktionerna är:
 
