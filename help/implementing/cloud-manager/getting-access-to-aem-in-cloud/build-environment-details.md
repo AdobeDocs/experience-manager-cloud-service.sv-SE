@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ee01e5a2b805330f47af7ff563ca1ac90036f0bf
+source-git-commit: 0723d7a3166650d10f8af0210f24bb9b6c5cf325
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1374'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,7 @@ Cloud Manager byggprocess använder Oracle 8 JDK för att skapa projekt som stan
 
 #### Ange version av Maven JDK {#alternate-maven-jdk-version}
 
-Adobe rekommenderar att du ställer in JDK-versionen för Maven-körning på `21` eller `17` i en `.cloudmanager/java-version`-fil.
-
-Det gör du genom att skapa en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipeline. Redigera filen så att den bara innehåller texten, `21` eller `17`. Även om Cloud Manager accepterar värdet `8` stöds inte den här versionen längre för AEM Cloud Service-projekt. Alla andra värden ignoreras. När `21` eller `17` har angetts används Oraclet Java 21 eller Oraclet Java 17. <!-- Removed this last part as per Brian's feedback on Slack. ...and the `JAVA_HOME` environment variable is set to `/usr/lib/jvm/jdk-21` or `/usr/lib/jvm/jdk-17`. -->
+Om du vill ställa in Maven-körnings-JDK skapar du en fil med namnet `.cloudmanager/java-version` i Git-databasgrenen som används av pipelinen. Redigera filen så att den bara innehåller texten, `21` eller `17`. Även om Cloud Manager accepterar värdet `8` stöds inte den här versionen längre för AEM Cloud Service-projekt. Alla andra värden ignoreras. När `21` eller `17` har angetts används Oraclet Java 21 eller Oraclet Java 17.
 
 
 #### Krav för migrering till byggteknik med Java 21 eller Java 17 {#prereq-for-building}
@@ -99,27 +97,31 @@ Java 21-miljön används för byggen med Java 21 och Java 17, och den kommer gra
 
 Biblioteksuppdateringar kan användas när som helst eftersom de är kompatibla med äldre Java-versioner.
 
-* **Minimiversion av `org.objectweb.asm`:**
-Uppdatera användningen av `org.objectweb.asm` till version 9.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+* **Lägsta version av ASM:**
+Uppdatera användningen av Java-paketet `org.objectweb.asm`, som ofta paketeras i `org.ow2.asm.*` artefakter, till version 9.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
 
-* **Minimiversion av `org.apache.groovy`:**
-Uppdatera användningen av `org.apache.groovy` till version 4.0.22 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+* **Minimiversion av Groovy:**
+Uppdatera användningen av Java-paketen `org.apache.groovy` eller `org.codehaus.groovy` till version 4.0.22 eller senare för att säkerställa stöd för nyare JVM-miljöer.
 
   Det här paketet kan inkluderas indirekt genom att tredjepartsberoenden läggs till, som AEM Groovy Console.
+
+AEM Cloud Service SDK är kompatibelt med Java 21 och kan användas för att validera projektets kompatibilitet med Java 21 innan du kör en Cloud Manager-pipeline.
 
 * **Redigera en körningsparameter:**
 När AEM körs lokalt med Java 21 misslyckas startskripten (`crx-quickstart/bin/start` eller `crx-quickstart/bin/start.bat`) på grund av parametern `MaxPermSize` . Ta bort `-XX:MaxPermSize=256M` från skriptet eller definiera miljövariabeln `CQ_JVM_OPTS` genom att ange den som `-Xmx1024m -Djava.awt.headless=true`.
 
-  Adobe planerar att lösa problemet i en framtida version.
+  Problemet har lösts i AEM Cloud Service SDK version 19149 och senare.
 
 >[!IMPORTANT]
 >
->När `.cloudmanager/java-version` är inställt på `21` eller `17` distribueras Java 21-miljön. Java 21-miljön är planerad att gradvis lanseras i alla miljöer (inte bara de miljöer vars kod byggs med Java 11) från och med torsdagen den 13 februari 2025. Lanseringen börjar med sandlådor och utvecklingsmiljöer och börjar sedan i april 2025 på alla produktionsmiljöer. Kunder som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
+>När `.cloudmanager/java-version` är inställt på `21` eller `17` distribueras Java 21-miljön. Java 21-miljön är planerad att gradvis lanseras i alla miljöer (inte bara de miljöer vars kod byggts med Java 11) med början tisdagen den 4 februari 2025. Lanseringen börjar med sandlådor och utvecklingsmiljöer och börjar sedan i april 2025 på alla produktionsmiljöer. Kunder som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
 
 
 #### Krav för byggtid {#build-time-reqs}
 
 Följande justeringar krävs för att projektet ska kunna byggas med Java 21 och Java 17. De kan uppdateras även innan du kör Java 21 och Java 17 eftersom de är kompatibla med äldre Java-versioner.
+
+AEM Cloud Service-kunder rekommenderas att så tidigt som möjligt bygga projekt med Java 21 för att utnyttja de nya språkfunktionerna.
 
 * **Minimiversion av `bnd-maven-plugin`:**
 Uppdatera användningen av `bnd-maven-plugin` till version 6.4.0 för att säkerställa stöd för nyare JVM-miljöer.
