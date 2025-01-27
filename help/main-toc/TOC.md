@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 268c7357e77412d177aa29dfd22ce381192f13d6
+source-git-commit: ae31df22c723c58addd13485259e92abb4d4ad54
 workflow-type: tm+mt
-source-wordcount: '5978'
+source-wordcount: '5993'
 ht-degree: 2%
 
 ---
@@ -108,18 +108,18 @@ ht-degree: 2%
          + [Versionsinformation om underhåll för 2023.7.0](/help/release-notes/maintenance/2023/2023-7-0.md)
          + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023-6-0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
-         + [Maintenance Release Notes for 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
-         + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
+         + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
+         + [Maintenance Release Notes for 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
    + Versionsinformation för Cloud Manager {#cloud-manager}
       + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
-         + [Release Notes for 2024.12.0](/help/implementing/cloud-manager/release-notes/2024/2024-12-0.md)
+         + [Versionsinformation för 2024.12.0](/help/implementing/cloud-manager/release-notes/2024/2024-12-0.md)
          + [Versionsinformation för 2024.11.0](/help/implementing/cloud-manager/release-notes/2024/2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/implementing/cloud-manager/release-notes/2024/2024-9-0.md)
-         + [Release Notes for 2024.8.0](/help/implementing/cloud-manager/release-notes/2024/2024-8-0.md)
-         + [Release Notes for 2024.7.0](/help/implementing/cloud-manager/release-notes/2024/2024-7-0.md)
-         + [Release Notes for 2024.6.0](/help/implementing/cloud-manager/release-notes/2024/2024-6-0.md)
+         + [Versionsinformation för 2024.8.0](/help/implementing/cloud-manager/release-notes/2024/2024-8-0.md)
+         + [Versionsinformation för 2024.7.0](/help/implementing/cloud-manager/release-notes/2024/2024-7-0.md)
+         + [Versionsinformation för 2024.6.0](/help/implementing/cloud-manager/release-notes/2024/2024-6-0.md)
          + [Versionsinformation för 2024.5.0](/help/implementing/cloud-manager/release-notes/2024/2024-5-0.md)
          + [Versionsinformation för 2024.4.0](/help/implementing/cloud-manager/release-notes/2024/2024-4-0.md)
          + [Versionsinformation för 2024.3.0](/help/implementing/cloud-manager/release-notes/2024/2024-3-0.md)
@@ -533,7 +533,7 @@ ht-degree: 2%
       + [Hantera PDF-dokument](/help/assets/manage-pdf-documents.md)
    + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
       + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
-      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
+      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
       + [Folder metadata schema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
@@ -542,8 +542,8 @@ ht-degree: 2%
       + [ASSETS HTTP API](/help/assets/mac-api-assets.md)
       + [Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
       + [Uppkopplad Assets](/help/assets/use-assets-across-connected-assets-instances.md)
-      + [Generate For Placement Only renditions](/help/assets/configure-fpo-renditions.md)
-      + [Asset reports](/help/assets/asset-reports.md)
+      + [Generera renderingar endast för placering](/help/assets/configure-fpo-renditions.md)
+      + [Resursrapporter](/help/assets/asset-reports.md)
       + [Överlappande metadata](/help/assets/cascading-metadata.md)
       + [XMP metadata](/help/assets/xmp-metadata.md)
       + [MediaLibrary-funktioner](/help/assets/medialibrary.md)
@@ -662,9 +662,9 @@ ht-degree: 2%
       + [Distribuera Content Hub](/help/assets/deploy-content-hub.md)
       + [Överföra eller importera varumärkesgodkända mediefiler till Content Hub](/help/assets/upload-brand-approved-assets.md)
       + [Konfigurera Content Hub användargränssnitt](/help/assets/configure-content-hub-ui-options.md)
-      + [Approve assets for Content Hub](/help/assets/approve-assets-content-hub.md)
-      + [Search assets in Content Hub](/help/assets/search-assets-content-hub.md)
-      + [Asset properties](/help/assets/asset-properties-content-hub.md)
+      + [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md)
+      + [Söka efter resurser i Content Hub](/help/assets/search-assets-content-hub.md)
+      + [Resursegenskaper](/help/assets/asset-properties-content-hub.md)
       + [Dela resurser i Content Hub](/help/assets/share-assets-content-hub.md)
       + [Hämta resurser med Content Hub](/help/assets/download-assets-content-hub.md)
       + [Hantera licensierade Assets på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md)
@@ -779,7 +779,7 @@ ht-degree: 2%
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
                + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
                + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
-            + {#create-and-use-custom-function-core-component}
+            + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
                + [Omfångsobjekt i anpassade funktioner](/help/forms/custom-function-core-component-scope-function.md)
@@ -1018,7 +1018,7 @@ ht-degree: 2%
          + [Visa ett anpassat tackmeddelande efter att formuläret har skickats](/help/edge/docs/forms/thank-you-page-form.md)
          + [Använd Forms inskickningstjänst](/help/forms/forms-submission-service.md)
       + WYSIWYG {#universal-editor}
-         + [Overview - Universal Editor for Edge Delivery Services for Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
+         + [Översikt - Universell redigerare för Edge Delivery Services för Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
       + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
@@ -1079,20 +1079,20 @@ ht-degree: 2%
    + [Stöd för innehållsfragment i Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
       + [Behörigheter](/help/headless/security/permissions.md)
-      + [Autentisering](/help/headless/security/authentication.md)
+      + [Authentication](/help/headless/security/authentication.md)
    + Distribution {#deployment}
       + [Arkitektur](/help/headless/deployment/architecture.md)
-      + [Dispatcher - Endpoints](/help/headless/deployment/dispatcher.md)
-      + [Dispatcher - Enable Caching for Persisted Queries](/help/headless/deployment/dispatcher-caching.md)
+      + [Dispatcher - slutpunkter](/help/headless/deployment/dispatcher.md)
+      + [Dispatcher - Aktivera cachelagring för beständiga frågor](/help/headless/deployment/dispatcher-caching.md)
       + [CORS-konfiguration](/help/headless/deployment/cross-origin-resource-sharing.md)
       + [Referensfilter](/help/headless/deployment/referrer-filter.md)
    + Huvudlösa resor {#journeys}
       + Headless Developer Journey {#developer}
          + [Förstå Headless i AEM](/help/journey-headless/developer/overview.md)
          + [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
-         + [Getting Started with AEM Headless as a Cloud Service](/help/journey-headless/developer/getting-started.md)
+         + [Komma igång med AEM Headless as a Cloud Service](/help/journey-headless/developer/getting-started.md)
          + [Vägen till din första upplevelse med AEM Headless](/help/journey-headless/developer/path-to-first-experience.md)
-         + [How to model your content as AEM Content Models](/help/journey-headless/developer/model-your-content.md)
+         + [Modellera innehåll som AEM innehållsmodeller](/help/journey-headless/developer/model-your-content.md)
          + [Få åtkomst till ditt innehåll via AEM-API:er](/help/journey-headless/developer/access-your-content.md)
          + [Så här uppdaterar du innehåll via AEM Assets API:er](/help/journey-headless/developer/update-your-content.md)
          + [Hur man sammanför allt](/help/journey-headless/developer/put-it-all-together.md)
@@ -1200,10 +1200,10 @@ ht-degree: 2%
          + [Lägg till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
          + [Använd och ta bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
          + [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
-      + [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard.md)
+      + [License Dashboard](/help/implementing/cloud-manager/license-dashboard.md)
       + [Förstå förfrågningar om Cloud Service](/help/implementing/cloud-manager/content-requests.md)
       + [Kontrollpanel för CDN-prestanda](/help/implementing/cloud-manager/cdn-performance.md)
-      + [Cloud Manager FAQs](/help/implementing/cloud-manager/faqs.md)
+      + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
    + Utveckla för AEM as a Cloud Service {#developing}
       + [AEM projektstruktur](/help/implementing/developing/introduction/aem-project-content-package-structure.md)
       + [AEM projektdatabasstrukturpaket](/help/implementing/developing/introduction/repository-structure-package.md)
@@ -1211,9 +1211,9 @@ ht-degree: 2%
       + [AEM miljöer för snabb utveckling](/help/implementing/developing/introduction/rapid-development-environments.md)
       + [AEM as a Cloud Service riktlinjer för utveckling](/help/implementing/developing/introduction/development-guidelines.md)
       + [AEM as a Cloud Service Developer Console (Beta)](/help/implementing/developing/introduction/aem-developer-console.md)
-      + [Logging](/help/implementing/developing/introduction/logging.md)
-      + [Log Forwarding](/help/implementing/developing/introduction/log-forwarding.md)
-      + [Configurations and the Configuration Browser](/help/implementing/developing/introduction/configurations.md)
+      + [Loggning](/help/implementing/developing/introduction/logging.md)
+      + [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md)
+      + [Konfigurationer och Configuration Browser](/help/implementing/developing/introduction/configurations.md)
       + [AEM Technical Foundations](/help/implementing/developing/introduction/aem-technologies.md)
       + [API-referensmaterial](/help/implementing/developing/reference-materials.md)
       + [OpenAPI-baserade API:er](/help/implementing/developing/open-api-based-apis.md)
@@ -1321,11 +1321,11 @@ ht-degree: 2%
          + [Skapa ett program](/help/implementing/developing/extending/app-builder/videos/create.md)
          + [Åtgärder](/help/implementing/developing/extending/app-builder/videos/actions.md)
          + [Lagringsbibliotek](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
-         + [Händelsestyrda program](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
+         + [Event-driven applications](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
          + [Front-end-applikationer](/help/implementing/developing/extending/app-builder/videos/front-end-applications.md)
          + [Dokumentskydd](/help/implementing/developing/extending/app-builder/videos/security.md)
-         + [Deploy applications](/help/implementing/developing/extending/app-builder/videos/deploy.md)
-         + [Publish applications](/help/implementing/developing/extending/app-builder/videos/publish.md)
+         + [Distribuera program](/help/implementing/developing/extending/app-builder/videos/deploy.md)
+         + [Publish-program](/help/implementing/developing/extending/app-builder/videos/publish.md)
       + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
       + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
       + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
