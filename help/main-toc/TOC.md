@@ -1017,6 +1017,8 @@ ht-degree: 2%
          + [Regex-uttryck för validering](/help/edge/docs/forms/regex-forms.md)
          + [Visa ett anpassat tackmeddelande efter att formuläret har skickats](/help/edge/docs/forms/thank-you-page-form.md)
          + [Använd Forms inskickningstjänst](/help/forms/forms-submission-service.md)
+      + WYSIWYG {#universal-editor}
+         + [Overview - Universal Editor for Edge Delivery Services for Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
       + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
