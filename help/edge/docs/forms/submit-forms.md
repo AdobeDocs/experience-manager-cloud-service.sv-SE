@@ -4,9 +4,9 @@ description: Skapa kraftfulla formulär snabbare med kalkylblad och anpassade Fo
 feature: Edge Delivery Services
 exl-id: 0643aee5-3a7f-449f-b086-ed637ae53b5a
 role: Admin, Architect, Developer
-source-git-commit: ae31df22c723c58addd13485259e92abb4d4ad54
+source-git-commit: 552779d9d1cee2ae9f233cabc2405eb6416c41bc
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,6 @@ När du har [skapat och förhandsgranskat formuläret](/help/edge/docs/forms/cre
 >[!VIDEO](https://video.tv.adobe.com/v/3427489?quality=12&learn=on)
 
 -->
-
-Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-submission-service-manually) eller [konfigurera Forms Submission Service med API](#configuring-the-forms-submission-service-using-api).
-
 
 ## Aktivera kalkylbladet manuellt för att ta emot data
 
