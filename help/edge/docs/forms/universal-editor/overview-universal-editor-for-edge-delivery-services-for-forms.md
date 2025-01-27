@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 9d5950793f5b3e3c3d6229b9de9d5c020a164dd7
+source-git-commit: ef6f00203241c12fce08cf81495b36f47e64613e
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,7 @@ Universell redigerare innehåller följande formulärkomponenter:
 <table>
   <thead>
     <tr>
-      <th>Underbar</th> 
+      <th></th> 
       <th>Formulärkomponenter</th>
       <th>Beskrivning</th>
     </tr>
