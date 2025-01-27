@@ -5,7 +5,7 @@ Keywords: Use form submission service, Submit form using form submission service
 feature: Edge Delivery Services
 Role: User, Developer
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: 4f2dcb02c3ad00ef9735679d8bd4cce568bfabb5
+source-git-commit: ae31df22c723c58addd13485259e92abb4d4ad54
 workflow-type: tm+mt
 source-wordcount: '835'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Du kan också skicka en **POST**-begäran till formuläret för att uppdatera `i
 > * Dela bladet `incoming` med Adobe Experience Manager `forms@adobe.com` och ge redigeringsåtkomst.
 > * Förhandsgranska och publicera `incoming`-bladet i sidosparken.
 
-Mer information om hur du formaterar begäran om POST för att konfigurera bladet finns i [API-dokumentationen](https://main--afb--adobe.hlx.page/docs/index.html#/paths/~1%7Bid%7D/post). Du kan titta på exemplet nedan:
+Mer information om hur du formaterar begäran om POST för att konfigurera bladet finns i [API-dokumentationen](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/references/aem-forms-submission-service/). Du kan titta på exemplet nedan:
 
 Du kan använda verktyg som curl eller Postman för att utföra den här begäran om POST, vilket visas nedan.
 
