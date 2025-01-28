@@ -5,9 +5,9 @@ exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
+source-git-commit: 8b15b203d0d6a5947a80c9bd217c7fdcdb8f494c
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
@@ -33,15 +33,15 @@ Beroende på organisationens rättigheter kan du se [ytterligare alternativ](#op
 
 1. I *programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
 
-1. Välj **`Set up for production`** under **Programmål**.
+1. Under **Programmål** väljer du ![Global ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Globe_18_N.svg)**Konfigurera för produktion**.
 
    ![Skapar programguiden](assets/create-production-program.png)
 
 1. (Valfritt) Gör något av följande i det nedre högra hörnet i dialogrutan för guiden:
 
-   * Dra och släpp en bildfil till målet **Lägg till en programbild**.
-   * Klicka på **Lägg till en programbild** och välj sedan en bild i en filläsare.
-   * Klicka på papperskorgsikonen för att ta bort en bild som du har lagt till.
+   * Dra och släpp en bildfil till ![bildikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Image_18_N.svg) **Lägg till ett programbildsmål** .
+   * Klicka på ![Bildikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Image_18_N.svg) **Lägg till en programbild** och välj sedan en bild i en filläsare.
+   * Klicka på ikonen ![Ta bort](https://spectrum.adobe.com/static/icons/workflow_18/Smock_DeleteOutline_18_N.svg) för att ta bort en bild som du har lagt till.
 
 1. Klicka på **Fortsätt**.
 
@@ -52,13 +52,13 @@ Beroende på organisationens rättigheter kan du se [ytterligare alternativ](#op
    * Välj **Edge Deliver Services** för en fullständigt hanterad CDN-lösning som optimerar digitala upplevelser. Se [Använda Edge Delivery Services för att leverera ditt Cloud Manager-projekt](#edge-overview)
    * Om du valde alternativet **[Aktivera förbättrat skydd](#security)** kan du bara välja så många lösningar som det finns tillgängliga HIPAA-berättiganden för.
 
-   ![Välj lösningar](/help/implementing/cloud-manager/assets/add-production-program-with-edge.png)
+     ![Välj lösningar](/help/implementing/cloud-manager/assets/add-production-program-with-edge.png)
 
-1. Klicka på nedtryckningen till vänster om ett lösningens namn för att visa valfria tillägg, till exempel alternativet **Commerce** under **Webbplatser**.
+   * Klicka på ikonen ![Sparrstorlek 300](https://spectrum.adobe.com/static/icons/ui_18/ChevronSize300.svg) till vänster om ett lösningens namn för att visa valfria tillägg, till exempel alternativet **Commerce** under **Platser**.
 
    ![Välj tillägg](assets/setup-prod-commerce.png)
 
-1. Välj lösningar och tillägg och klicka på **Fortsätt**.
+1. När du är klar med att välja lösningar och tillägg klickar du på **Fortsätt**.
 
 1. På fliken **Go-Live Date** anger du det datum då du vill att ditt produktionsprogram ska vara live.
 
@@ -69,7 +69,7 @@ Beroende på organisationens rättigheter kan du se [ytterligare alternativ](#op
 
 1. Klicka på **Skapa**. Cloud Manager skapar programmet och visar det på landningssidan för markering.
 
-![Översikt över molnhanteraren](assets/navigate-cm.png)
+   ![Översikt över molnhanteraren](assets/navigate-cm.png)
 
 ## Fler alternativ för produktionsprogram {#options}
 
@@ -98,7 +98,7 @@ Om du har de nödvändiga rättigheterna visas fliken **SLA** som den andra elle
 
 ![SLA-alternativ](assets/create-production-program-sla.png)
 
-AEM Sites och Forms erbjuder 99,9 % standardavtal för servicenivå (SLA). Alternativet **99,99 % servicenivåavtal** ger en procentandel på minst 99,99 % aktiv tid för produktionsmiljöerna för Sites och/eller Forms.
+AEM Sites och Forms erbjuder 99,9 % service level agreement (SLA) som standard. Med alternativet **99,99% Service level agreement** får du en procentandel på minst 99,99 % aktiv tid för produktionsmiljöerna för Sites och/eller Forms.
 
 99,99 % av SLA har fördelar, bland annat högre tillgänglighet och lägre latens, och kräver att ytterligare [en publiceringsregion](/help/implementing/cloud-manager/manage-environments.md#multiple-regions) används i produktionsmiljön i programmet.
 
