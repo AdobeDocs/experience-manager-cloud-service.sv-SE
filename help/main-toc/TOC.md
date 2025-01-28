@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: ae31df22c723c58addd13485259e92abb4d4ad54
+source-git-commit: b9364394f683fa8af5d28723e5f10b20b001ea37
 workflow-type: tm+mt
-source-wordcount: '5993'
+source-wordcount: '5998'
 ht-degree: 2%
 
 ---
@@ -533,7 +533,7 @@ ht-degree: 2%
       + [Hantera PDF-dokument](/help/assets/manage-pdf-documents.md)
    + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
       + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
-      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
+      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
       + [Folder metadata schema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
@@ -655,7 +655,7 @@ ht-degree: 2%
       + [Återbearbetning](/help/assets/reprocessing-assets-view.md)
       + [Hantera taggar](/help/assets/tagging-management-assets-view.md)
       + [Content Credentials](/help/assets/content-credentials.md)
-      + [Publish Assets to AEM and Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+      + [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
       + [Utbyggbarhet för användargränssnittet i AEM Assets View](/help/assets/aem-assets-view-ui-extensibility.md)
    + Content Hub {#content-hub}
       + [Ökning](/help/assets/product-overview.md)
@@ -771,14 +771,15 @@ ht-degree: 2%
             + [Jämför adaptiv Forms](/help/forms/compare-forms.md)
             + [Skapa anpassad skickaåtgärd](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
             + [Konvertera adaptiva Forms-baserade på baskomponenter till Core Component-baserade formulär med verktyget för migrering](/help/forms/migration-utility-tool-for-af-core-components.md)
+            + [E-postmallar i Adaptiv Forms](/help/forms/html-email-templates-in-adaptive-forms.md)
             + Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter {#rule-editor-core-components}
                + [Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
                + [Regelredigerarens användargränssnitt för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md)
                + [Skillnad mellan redigerare för grundregel och redigerare för grundkomponentregel](/help/forms/rule-editor-core-components-difference-tables.md)
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
-               + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
-               + [Invoke Service enhancements in the Visual Rule Editor for forms based on Core Components](/help/forms/invoke-service-enhancements-rule-editor.md)
+               + [Using asynchronous functions in an Adaptive Form](/help/forms/using-async-funct-in-rule-editor.md)
+               + [Anropa tjänstförbättringar i Visual Rule Editor för formulär som baseras på kärnkomponenter](/help/forms/invoke-service-enhancements-rule-editor.md)
             + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
                + [Skapa och använda en anpassad funktion för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/custom-function-core-component-create-function.md)
@@ -1079,7 +1080,7 @@ ht-degree: 2%
    + [Stöd för innehållsfragment i Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
       + [Behörigheter](/help/headless/security/permissions.md)
-      + [Authentication](/help/headless/security/authentication.md)
+      + [Autentisering](/help/headless/security/authentication.md)
    + Distribution {#deployment}
       + [Arkitektur](/help/headless/deployment/architecture.md)
       + [Dispatcher - slutpunkter](/help/headless/deployment/dispatcher.md)
@@ -1199,8 +1200,8 @@ ht-degree: 2%
          + [Introduktion till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
          + [Lägg till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
          + [Använd och ta bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
-         + [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
-      + [License Dashboard](/help/implementing/cloud-manager/license-dashboard.md)
+         + [Manage IP Allow Lists](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
+      + [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard.md)
       + [Förstå förfrågningar om Cloud Service](/help/implementing/cloud-manager/content-requests.md)
       + [Kontrollpanel för CDN-prestanda](/help/implementing/cloud-manager/cdn-performance.md)
       + [Vanliga frågor om Cloud Manager](/help/implementing/cloud-manager/faqs.md)
@@ -1320,8 +1321,8 @@ ht-degree: 2%
          + [SDK och CLI](/help/implementing/developing/extending/app-builder/videos/sdks-and-cli.md)
          + [Skapa ett program](/help/implementing/developing/extending/app-builder/videos/create.md)
          + [Åtgärder](/help/implementing/developing/extending/app-builder/videos/actions.md)
-         + [Lagringsbibliotek](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
-         + [Event-driven applications](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
+         + [Storage libraries](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
+         + [Händelsestyrda program](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
          + [Front-end-applikationer](/help/implementing/developing/extending/app-builder/videos/front-end-applications.md)
          + [Dokumentskydd](/help/implementing/developing/extending/app-builder/videos/security.md)
          + [Distribuera program](/help/implementing/developing/extending/app-builder/videos/deploy.md)
