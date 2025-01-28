@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0723d7a3166650d10f8af0210f24bb9b6c5cf325
+source-git-commit: 7098f8aacf42e84f40b266ecae2c6fe28c84b0d3
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -84,6 +84,12 @@ Om du vill gå över till att bygga med Java 21 eller Java 17 måste du först u
 
 När du migrerar ditt program till en ny Java-version och runtime-version bör du noggrant testa i miljö med dev och stage innan du distribuerar till produktion.
 
+Vi rekommenderar följande distributionsstrategi:
+
+1. Kör ditt lokala SDK med Java 21, som du kan ladda ned från https://experience.adobe.com/#/downloads, distribuera programmet till det och validera dess funktioner. Kontrollera loggarna att det inte finns några fel som tyder på problem med klassinläsning eller byte-kodweaving.
+1. Konfigurera en gren i din Cloud Manager-databas för att använda Java 21 som Java-version vid byggtid, konfigurera en DEV-pipeline för att använda den här grenen och köra pipelinen. Kör dina valideringstester.
+1. Om det ser bra ut kan du konfigurera din stage/prod-pipeline så att den använder Java 21 som Java-version för byggtid och köra pipelinen.
+
 ##### Om vissa översättningsfunktioner {#translation-features}
 
 Följande funktioner kanske inte fungerar som de ska när du bygger med Java 21 eller Java 17, och Adobe räknar med att kunna åtgärda dem i början av 2025:
@@ -93,7 +99,7 @@ Följande funktioner kanske inte fungerar som de ska när du bygger med Java 21 
 
 #### Körningskrav {#runtime-requirements}
 
-Java 21-miljön används för byggen med Java 21 och Java 17, och den kommer gradvis att tillämpas även på Java 11-byggen (se anmärkningen nedan). För att säkerställa kompatibilitet krävs följande justeringar.
+Java 21-miljön används för byggen med Java 21 och Java 17, och den kommer gradvis att tillämpas även på Java 11-byggen (se anmärkningen nedan). En miljö måste vara i AEM version 17098 eller senare för att Java 21-uppdateringen ska kunna tas emot. För att säkerställa kompatibilitet krävs följande justeringar.
 
 Biblioteksuppdateringar kan användas när som helst eftersom de är kompatibla med äldre Java-versioner.
 
