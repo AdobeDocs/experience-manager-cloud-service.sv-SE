@@ -4,9 +4,9 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 6e91ad839de6094d7f6abd47881dabc6357a80ff
+source-git-commit: 9c258e2906c37ee9b91d2faa78f7dfdaa5956dc2
 workflow-type: tm+mt
-source-wordcount: '1975'
+source-wordcount: '1985'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Kunder som har en licens hos en loggningsleverantör eller som är värd för en
 * HTTPS
 * Splunk
 
-Loggvidarebefordran konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och distribueras via Cloud Manager Config Pipeline till typerna RDE, dev, stage och production i produktionsprogram (ej sandbox).
+Vidarebefordran av loggar konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och kan distribueras via Cloud Manager konfigurationspipelines för utvecklings-, scen- och produktionsmiljötyper. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
 Det finns ett alternativ för att dirigera loggarna AEM och Apache/Dispatcher via AEM avancerad nätverksinfrastruktur, som dedikerad IP-adress för utgångar.
 
