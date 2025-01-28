@@ -5,7 +5,7 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: 4cfdabaae23f0dcd1737c73e5edd644bbec6014e
+source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
 workflow-type: tm+mt
 source-wordcount: '6292'
 ht-degree: 0%
@@ -14,7 +14,9 @@ ht-degree: 0%
 
 # Lägga till regler i ett adaptivt formulär {#adaptive-forms-rule-editor}
 
-<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+>[!NOTE]
+>
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -31,7 +33,7 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 * Visa eller gömma ett objekt
 * Aktivera eller inaktivera ett objekt
 * Ange ett värde för ett objekt
-* Verifiera värdet för ett objekt
+* Validera värdet för ett objekt
 * Köra funktioner för att beräkna värdet för ett objekt
 * Anropa en tjänst för formulärdatamodell och utföra en åtgärd
 * Ange ett objekts egenskap
@@ -109,7 +111,7 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 ### [!UICONTROL When] {#whenruletype}
 
-Regeltypen **[!UICONTROL When]** följer regelkonstruktionen condition-action-alternate **action**, eller ibland bara condition-action-konstruktionen ****. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen When kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck.](#nestedexpressions)
+Regeltypen **[!UICONTROL When]** följer regelkonstruktionen villkor-åtgärd-alternativ **åtgärd**, eller ibland bara villkor-åtgärdskonstruktionen ****. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen När kan du använda flera AND- och OR-operatorer](#nestedexpressions) för att skapa [kapslade uttryck.
 
 Med hjälp av regeltypen När kan du utvärdera ett villkor för ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
@@ -123,13 +125,13 @@ I klartext är en typisk When-regel strukturerad på följande sätt:
 
 Åtgärd 2 om objekt B;
 OCH
-Åtgärd 3 om objekt C;
+Åtgärd 3 om objekt C.
 
 _
 
 När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
-En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När du skapar regeln hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen enligt följande:
+En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När du skapar regeln hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen på följande sätt:
 
 ![Visningsalternativ för flera värden](assets/multivaluefcdisplaysoptions1.png)
 
@@ -207,7 +209,7 @@ Med regeltypen **[!UICONTROL Set Value of]** kan du ange värdet för ett formul
 
 Regeltypen **Ange värdet för** är inte tillgänglig för alla formulärobjekt, till exempel paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
 
-Ange värdet för objekt A till:
+Ange värdet för Objekt A till:
 
 (sträng ABC) ELLER
 (objektegenskap X för objekt C) ELLER
@@ -219,7 +221,7 @@ När (valfritt):
 
 (Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
 
-I följande exempel används värdet i fältet som indata och fältets värde `Relation` anges till utdata från `Relation` argumentet `getDependent` i `dependentid` tjänsten Form Data Model.
+I följande exempel används värdet i fältet som indata och fältets värde `Relation` anges till utdata från `Relation` argumentet i `dependentid` `getDependent` tjänsten Form Data Model.
 
 ![Set-value-web-service](assets/set-value-web-service1.png)
 

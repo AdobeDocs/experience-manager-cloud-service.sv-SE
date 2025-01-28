@@ -4,7 +4,7 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
 workflow-type: tm+mt
 source-wordcount: '4030'
 ht-degree: 0%
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 # Generera arkivdokument för adaptiv Forms
 
-<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+>[!NOTE]
+>
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
@@ -512,7 +514,7 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. Forms as a 
 ### Använd en anpassad XCI-fil i den lokala Forms as a Cloud Service utvecklingsmiljö
 
 1. Överför XCI-filen till den lokala utvecklingsmiljön.
-1. Öppna konfigurationshanteraren för Cloud Service SDK. Standardwebbadressen är: <http://localhost:4502/system/console/configMgr>.
+1. Öppna SDK konfigurationshanterare för Cloud Service. Standardwebbadressen är: <http://localhost:4502/system/console/configMgr>.
 1. Leta reda på och öppna **[!UICONTROL Adaptive Forms and Interactive Communication Web Channel]**-konfigurationen.
 1. Ange sökvägen till XCI-filen och klicka på **[!UICONTROL Save]**.
 

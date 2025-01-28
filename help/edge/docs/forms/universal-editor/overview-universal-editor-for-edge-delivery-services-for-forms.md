@@ -5,25 +5,22 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: eb2c451019e1c9d6f48558154ee58598bd1f2e02
+source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
 
 # Universal Editor for Edge Delivery Services for Forms (EDS Forms Block)
 
+Universell redigerare revolutionerar formulärframtagningen för Adobe Edge Delivery Services (EDS) genom att erbjuda ett enkelt, visuellt och intuitivt What You See Is What You Get-gränssnitt (WYSIWYG). Det är utformat för innehållsskapare och formulärförfattare och eliminerar komplexiteten i traditionella formulärgenereringsprocesser, vilket gör det tillgängligt även för icke-tekniska användare.
 
-Den universella redigeraren är utformad för att hjälpa skribenter och formulärförfattare att enkelt skapa, hantera och redigera formulär. Det ger en enkel, visuell och effektiv redigeringsupplevelse som fokuserar på Edge Delivery Services (EDS).
+Med den universella redigeraren kan du snabbt skapa responsiva, interaktiva formulär med färdiga komponenter som textfält, kryssrutor och alternativknappar. Dess robusta funktionsuppsättning har stöd för dynamiska regler, smidig dataintegrering och avancerad personalisering, vilket säkerställer att alla formulär är skräddarsydda efter era behov.
 
-Med den universella redigeraren kan användare använda formulärelement (som textfält, kryssrutor och alternativknappar) för att skapa formulär i ett What You See Is What You Get-gränssnitt (WYSIWYG). Med WYSIWYG metod är det enkelt att skapa formulär intuitivt och tillgängligt, även för dem som saknar teknisk expertis.
+Den universella redigeraren är en smidig lösning för att skapa och hantera formulär, oavsett om du hanterar enkel rendering på klientsidan, ser till att webbläsaren är kompatibel eller följer strikta tillgänglighetsstandarder.
 
-Universal Editor fokuserar särskilt på Edge Delivery Services. Den kraftfulla universella redigeraren bygger på de robusta funktionerna som innefattar avancerade funktioner för att skapa blanketter, dynamisk regelredigering och smidig integrering med olika datakällor. Användarna kan snabbt skapa responsiva formulär med färdiga komponenter, anpassningsbara mallar och ett omfattande bibliotek med formulärelement.
-
-![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=50%, align-center}
-
-Funktionerna i den universella redigeraren är noga utformade för att bibehålla den lätta renderingen på klientsidan, kompatibiliteten mellan olika webbläsare och strikt överensstämmelse med tillgänglighetsstandarder.
+![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=80%, align-center} —>
 
 ## Key Features of Universal Editor for EDS Forms
 
@@ -36,65 +33,65 @@ Funktionerna i den universella redigeraren är noga utformade för att bibehåll
  </p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/rule-editor.svg" alt="WYSIWYG Interface" alt="Regelredigeraren">
+    <img src="/help/edge/docs/forms/universal-editor/assets/rule-editor.svg" alt="Regelredigeraren">
     <h3>Regelredigeraren</h3>
     <p>Med regelredigeraren kan användare skapa dynamiska formulärinteraktioner med händelsestyrda regler, omedelbar validering och felhantering via lättviktiga JavaScript och JSON.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/responsive.svg" alt="WYSIWYG Interface" alt="Responsivt läge">
+    <img src="/help/edge/docs/forms/universal-editor/assets/responsive.svg" alt="Responsivt läge">
     <h3>Responsivt läge </h3>
     <p>Skapa formulär som smidigt kan anpassas till olika enheter (datorer, surfplattor och mobila enheter). Använd responsivt läge för att förhandsgranska och testa formulär för olika skärmstorlekar.</p>
   </div>
 </div>
 <div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/personalization.svg" alt="WYSIWYG Interface alt=" WYSIWYG Interface"> 
+    <img src="/help/edge/docs/forms/universal-editor/assets/personalization.svg" alt="Personalization"> 
     <h3>Personalization</h3>
     <p>Personalization använder användardata för att leverera skräddarsydda formulärupplevelser och dynamiskt justera innehåll, layout eller alternativ baserat på användarpreferenser.</p>
   </div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg" alt="WYSIWYG Interface" alt="Regelredigeraren">
-    <h3>A/B-testning</h3>
-    <p>A/B-tester (experiment) gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna.</p>
-  </div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/adobe-workfront.svg" alt="WYSIWYG Interface" alt="Integrering med Adobe Workfront">
-    <h3> Aktivitetshantering </h3>
-    <p>Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll och få smidiga arbetsflöden.</p>
-  </div>
-</div>
-
-<div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/prefill-services.svg" alt="WYSIWYG Interface" alt="Förifyll tjänster">
+    <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
+    <img src="/help/edge/docs/forms/universal-editor/assets/prefill-services.svg" alt="Förifyll tjänster">
     <h3>Förifyll tjänster</h3>
     <p>I förifyllda tjänster fylls formulärfält automatiskt i med relevanta användardata från olika källor, vilket minskar behovet av manuell inmatning och förbättrar användarupplevelsen.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/data-binding.svg" alt="WYSIWYG Interface" alt="Databindning">
-    <h3>Databindning</h3>
-    <p>Databindning möjliggör direkta kopplingar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning för strukturerad datalagring för klagomål.</p>
-  </div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg" alt="WYSIWYG Interface" alt="Internationalisering/lokalisering">
-    <h3>Publicering/avpublicering</h3>
-    <p>Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick, så att du dynamiskt kan hantera tillgänglighet, användaråtkomst och innehållsuppdateringar i realtid och säkerställa att formulären alltid är aktuella och tillgängliga efter behov.</p>
+    <img src="/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg" alt="Regelredigeraren">
+    <h3>A/B-testning</h3>
+    <p>A/B-tester (experiment) gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna.</p>
   </div>
 </div>
 
 <div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg" alt="WYSIWYG Interface" alt="Analys och uppföljning">
+    <img src="/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg" alt="Analys och uppföljning">
     <h3>Analys och uppföljning</h3>
     <p>Få insikter om användarbeteende, formulärinteraktioner och överföringshastighet med inbyggda analyser och spårning för att möjliggöra datadriven optimering av formulär.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/submit-actions.svg" alt="WYSIWYG Interface" alt="Skicka funktionsmakron">
+    <img src="/help/edge/docs/forms/universal-editor/assets/adobe-workfront.svg" alt="Integrering med Adobe Workfront">
+    <h3> Aktivitetshantering </h3>
+    <p>Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll och få smidiga arbetsflöden.</p>
+  </div>
+  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
+    <img src="/help/edge/docs/forms/universal-editor/assets/data-binding.svg" alt="Databindning">
+    <h3>Databindning</h3>
+    <p>Databindning möjliggör direkta kopplingar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning för strukturerad datalagring för klagomål.</p>
+  </div>
+</div>
+
+<div>
+  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
+    <img src="/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg" alt="Internationalisering/lokalisering">
+    <h3>Publicering/avpublicering</h3>
+    <p>Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick, så att ni dynamiskt kan hantera tillgänglighet och innehållsuppdateringar i realtid.</p>
+  </div>
+  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
+    <img src="/help/edge/docs/forms/universal-editor/assets/submit-actions.svg" alt="Skicka funktionsmakron">
     <h3>Skicka funktionsmakron</h3>
     <p>Skicka funktionsmakron har stöd för serverdelsintegrering, logik för villkorlig inskickning, säkra slutpunkter och preprocessorer, vilket effektiviserar inskickningsarbetsflödena.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/custom-components.svg" alt="WYSIWYG Interface" alt="Aktivitetshantering">
+    <img src="/help/edge/docs/forms/universal-editor/assets/custom-components.svg" alt="Aktivitetshantering">
     <h3>Anpassade komponenter</h3>
     <p>Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen.</p>
   </div>
@@ -102,17 +99,17 @@ Funktionerna i den universella redigeraren är noga utformade för att bibehåll
 
 <div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/editor-customization.svg" alt="WYSIWYG Interface" alt="Anpassning av redigerare">
+    <img src="/help/edge/docs/forms/universal-editor/assets/editor-customization.svg" alt="Anpassning av redigerare">
     <h3>Anpassning av redigerare</h3>
     <p>Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg" alt="WYSIWYG Interface" alt="Bädda in Forms">
+    <img src="/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg" alt="Bädda in Forms">
     <h3>Bädda in Forms</h3>
     <p>Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor för en smidig användarupplevelse.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/thank-you.svg" alt="WYSIWYG Interface" alt="Anpassade komponenter">
+    <img src="/help/edge/docs/forms/universal-editor/assets/thank-you.svg" alt="Anpassade komponenter">
     <h3>Tack</h3>
     <p>Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats.
     </p>
@@ -284,8 +281,28 @@ In-addtion to pre-built form components, the Universal editor also provides supp
 
 ## Onboarding
 
-Om du vill aktivera den universella redigeraren och regelredigeraren för din miljö eller begära ytterligare funktioner som Forms Portal, Document of Record, Adobe Sign-integrering eller stöd för höger-till-vänster-språk skickar du ett e-postmeddelande till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från din officiella adress.
+Om du vill aktivera den universella redigeraren och dess avancerade funktioner som regelredigeraren kan du skriva till oss på aem-forms-ea@adobe.com från ditt officiella e-post-id. Adobe-teamet är här för att hjälpa er att förändra upplevelsen av att skapa formulär.
 
+## Vanliga frågor och svar
+
+**Q. Vem kan använda den universella redigeraren?**
+Universell redigerare är utformad för en bred publik, inklusive:
+
+* Innehållsutvecklare som vill skapa visuellt tilltalande formulär.
+* Utvecklare som behöver avancerade anpassnings- och integreringsfunktioner.
+* Organisationer som vill ha skalbara, säkra och kompatibla lösningar för blanketter.
+
+**F: Kan jag integrera formulär som skapats med den universella redigeraren i mina befintliga system?**
+Absolut. Den universella redigeraren stöder smidig databindning med backend-system, vilket möjliggör uppdateringar i realtid och avancerad datamappning. Den kan även integreras med verktyg som Adobe Workfront för uppgiftshantering och har stöd för säkra slutpunkter för arbetsflöden för inlämning av data.
+
+**F: Går det att anpassa formulärkomponenterna?**
+Ja, i Universell redigerare kan utvecklare skapa anpassade komponenter som är anpassade efter specifika organisatoriska behov. Dessutom kan du utöka redigerarens funktionalitet med hjälp av UI-tillägg och anpassade arbetsflöden.
+
+**F: Hur hanterar den universella redigeraren tillgängligheten?**
+Den universella redigeraren följer standarderna för tillgänglighet, inklusive WCAG (Web Content Accessibility Guidelines). Detta garanterar att formulären kan användas av personer med funktionshinder, vilket ger en heltäckande upplevelse.
+
+**F: Vilken typ av analys kan jag få från formulären?**
+Den universella redigeraren innehåller inbyggda analys- och spårningsverktyg för att övervaka användarinteraktioner, formuläröverföringshastighet och konverteringsstatistik. Dessa insikter hjälper er att optimera era formulär för bättre prestanda.
 
 
 ## Börja skapa formulär

@@ -4,7 +4,7 @@ description: AEM Forms innehåller exempel på adaptiva formulärteman, mallar o
 feature: Adaptive Forms, Foundation Components
 exl-id: 81588759-22da-4123-92fe-5ca97e97f1e4
 role: User, Developer, Admin
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 0%
@@ -19,7 +19,9 @@ ht-degree: 0%
 | Adaptiv form baserad på kärnkomponenter | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) |
 | Adaptiv form baserad på grundläggande komponenter | Den här artikeln |
 
-<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+>[!NOTE]
+>
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 AEM Forms as a Cloud Service har flera referensteman, mallar och formulärdatamodell (FDM) som hjälper dig att snabbt komma igång med att skapa Adaptiv Forms. Du kan hämta [referensinnehållspaketet från programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) och använda [Package Manager](/help/implementing/developing/tools/package-manager.md) för att installera [referensinnehållspaketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip) i din produktions-, utvecklings- eller lokala utvecklingsmiljö för att hämta referensresurserna till din miljö.
 
@@ -115,19 +117,19 @@ Med den grundläggande mallen kan du snabbt skapa ett registreringsformulär. Du
 
 ## FDM (Reference Form Data Model) {#reference-models}
 
-Den adaptiva Forms kan sedan interagera med Microsoft Dynamics 365- och Salesforce-servrar för att möjliggöra affärsarbetsflöden. Till exempel:
+Den adaptiva Forms kan sedan interagera med Microsoft Dynamics 365- och Salesforce-servrar för att möjliggöra arbetsflöden. Till exempel:
 
-* Skriv in data i Microsoft Dynamics 365 och Salesforce när ni skickar adaptiva formulär.
+* Skriv data i Microsoft Dynamics 365 och Salesforce när ni skickar in adaptiva blanketter.
 * Skriv data i Microsoft Dynamics 365 och Salesforce via anpassade entiteter som definierats i formulärdatamodellen (FDM) och omvänt.
-* Fråga Microsoft Dynamics 365- och Salesforce-servern efter data och fyll i adaptiva Forms i förväg.
-* Läs data från Microsoft Dynamics 365- och Salesforce-servern.
+* Fråga Microsoft Dynamics 365- och Salesforce-servern efter data och fylla i Adaptive Forms i förväg.
+* Läs data från Microsoft Dynamics 365 och Salesforce-servern.
 
 Du kan hämta följande formulärdatamodell (FDM) genom att installera [referensinnehållspaketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?package=/content/software-distribution/en/details.html/content/dam/aemcloud/public/aem-forms-reference-content.ui.content-2.1.0.zip):
 
 * Microsoft® Dynamics 365
 * Salesforce
 
-Information om hur du använder de här modellerna finns i [Konfigurera molntjänsterna för Microsoft Dynamics 365 och Salesforce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en#configure-dynamics-cloud-service)
+Information om hur du använder dessa modeller finns i [Konfigurera molntjänsterna Microsoft Dynamics 365 och Salesforce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=en#configure-dynamics-cloud-service)
 
 
 ## Se även {#see-also}
