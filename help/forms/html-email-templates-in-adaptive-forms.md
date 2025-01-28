@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: ef6f00203241c12fce08cf81495b36f47e64613e
+source-git-commit: eb2c451019e1c9d6f48558154ee58598bd1f2e02
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Här följer en kort översikt över de olika stegen:
 
 ## Konfigurera en HTML-mall för ett anpassat formulär
 
-Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med åtgärden [**Skicka e-post**](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en HTML-mall:
+Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden ](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en HTML-mall:
 
 ### Alternativ 1: Markera en fil som innehåller HTML-mallen
 
@@ -43,10 +43,13 @@ Innan du fortsätter kontrollerar du att du har överfört HTML-mallen till din 
 1. Öppna det adaptiva formuläret för redigering.
 1. Gå till **Content Browser**, markera **Guide Container** och tryck på egenskapsikonen. En dialogruta med titeln `Adaptive Form Container` visas.
 1. Gå till fliken **Skicka** och välj åtgärden **Skicka e-post**.
+
+   ![Åtgärden Skicka e-post](/help/forms/assets/send-email-action.png)
+
 1. Aktivera alternativet **Använd extern mall**.
 1. Aktivera alternativet **Använd HTML-mall**.
 1. Klicka på mappikonen för alternativet Extern mallsökväg och bläddra för att välja mallen för HTML.
-1. Klicka på Klar för att spara konfigurationen.
+1. Klicka på **Klar** för att spara konfigurationen.
 
 Din HTML-mall har nu konfigurerats för det anpassade formuläret.
 
@@ -55,14 +58,13 @@ Din HTML-mall har nu konfigurerats för det anpassade formuläret.
 1. Öppna det adaptiva formuläret för redigering.
 1. Gå till **Content Browser**, markera **Guide Container** och tryck på egenskapsikonen. En dialogruta med titeln `Adaptive Form Container` visas.
 1. Gå till fliken **Skicka** och välj åtgärden **Skicka e-post**.
-1. Aktivera alternativet **Använd extern mall**.
 1. Aktivera alternativet **Använd HTML-mall**.
 1. Skriv eller klistra in HTML-koden direkt i rutan **E-postmall** .
 
 
 ## Konfigurera en vanlig textmall för ett anpassat formulär
 
-Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med åtgärden [**Skicka e-post**](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en oformaterad textmall:
+Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden ](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en oformaterad textmall:
 
 ### Alternativ 1: Välj en fil som innehåller mallen
 
@@ -149,8 +151,6 @@ Här är ett exempel på en e-postmall med oformaterad text:
     Best regards,
     Your Team
 ```
-
-Ersätt platshållarna (${name}, ${email} osv.) med motsvarande formulärfältsnamn i ditt adaptiva formulär.
 
 ## Bästa praxis för e-postmallar för HTML
 

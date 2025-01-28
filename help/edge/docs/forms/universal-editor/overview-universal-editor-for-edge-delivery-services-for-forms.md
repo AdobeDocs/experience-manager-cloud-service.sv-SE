@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: ef6f00203241c12fce08cf81495b36f47e64613e
+source-git-commit: eb2c451019e1c9d6f48558154ee58598bd1f2e02
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Funktionerna i den universella redigeraren är noga utformade för att bibehåll
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg" alt="WYSIWYG Interface" alt="Internationalisering/lokalisering">
     <h3>Publicering/avpublicering</h3>
-    <p>Styr enkelt formulärens synlighet - publicera eller avpublicera dem med bara några klick för att dynamiskt hantera tillgänglighet och innehållsuppdateringar.</p>
+    <p>Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick, så att du dynamiskt kan hantera tillgänglighet, användaråtkomst och innehållsuppdateringar i realtid och säkerställa att formulären alltid är aktuella och tillgängliga efter behov.</p>
   </div>
 </div>
 
@@ -104,7 +104,7 @@ Funktionerna i den universella redigeraren är noga utformade för att bibehåll
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/editor-customization.svg" alt="WYSIWYG Interface" alt="Anpassning av redigerare">
     <h3>Anpassning av redigerare</h3>
-    <p>Utvecklare kan utöka funktionaliteten i den universella redigeraren genom UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov.</p>
+    <p>Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov.</p>
   </div>
   <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
     <img src="/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg" alt="WYSIWYG Interface" alt="Bädda in Forms">
