@@ -5,9 +5,9 @@ role: User, Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 28ba98828cfa34933a2ec4f5d9b7d9681d42fa5a
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1594'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,53 @@ Om du har Dynamic Media med OpenAPI-funktioner tilldelade för din miljö, gener
 
    >[!VIDEO](https://video.tv.adobe.com/v/342495)
 
+
+
+### Ange godkännandemål {#set-approval-target}
+
+I Assets-vyn kan du publicera godkända resurser till Dynamic Media med OpenAPI-funktioner, Content Hub eller båda, baserat på det värde som du anger i fältet **Godkännandemål** på sidan Resursinformation.
+
+Så här anger du godkännandemål:
+
+1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
+
+1. Välj resursstatus i listrutan **[!UICONTROL Status]** på fliken **[!UICONTROL Basic]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
+
+1. Om du väljer **Godkänd** i steg 2 väljer du ett godkännandemål. Exempel på möjliga värden är Delivery och Content Hub.
+
+   * **Leverans** är det standardalternativ som valts i listrutan och som publicerar resursen till både [Dynamic Media med OpenAPI](/help/assets/dynamic-media-open-apis-overview.md) och [Content Hub](/help/assets/product-overview.md), om båda är aktiverade för Experience Manager Assets.
+
+   * Om du väljer **Content Hub** publiceras resursen bara till Content Hub. Content Hub visas bara som ett alternativ om det är aktiverat för Experience Manager Assets.
+
+   * Om du inte väljer något alternativ i listrutan används standardalternativet som är aktiverat för din AEM as a Cloud Service-miljö automatiskt på resursen.
+
+
+   Mer information om de tillgängliga alternativen finns i [Standardmål för godkännande och publiceringsmål för godkända resurser](#default-approval-target-options-publish-destinations).
+
+   >[!NOTE]
+   >
+   >Att ange ett godkännandemål är en begränsad tillgänglighetsfunktion. Du kan aktivera eller inaktivera det genom att skapa en supportanmälan. Om du har aktiverat Dynamic Media med OpenAPI är det aktiverat som standard.
+
+   ![Godkännandestatus](/help/assets/assets/approval-status-delivery.png)
+
+1. Ange andra resursegenskaper och klicka på **[!UICONTROL Save]**.
+
+Några andra punkter att notera är:
+
+* När du inte använder standardformuläret för metadata och inte kan visa fältet **[!UICONTROL Approval Target]**, [redigerar du metadataformuläret](/help/assets/metadata-assets-view.md#metadata-forms) och drar fältet **[!UICONTROL Approval for]** från de tillgängliga komponenterna till metadataformuläret. Klicka sedan på **[!UICONTROL Save]**.
+
+* När du väljer godkännandemålet som `Content Hub` med hjälp av vyn Assets blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation.
+
+#### Standardgodkännandemål och publicera destinationer för godkända resurser {#default-approval-target-options-publish-destinations}
+
+Följande tabell visar förutsättningarna för att visa listrutan `Approval Target` och standardmålet för godkännande baserat på aktiveringen av DM med OpenAPI och Content Hub i din AEM as a Cloud Service-miljö:
+
+| Dynamic Media med OpenAPI | Content Hub | Listrutan Godkännandemål visas? | Standardgodkännandemål för godkända tillgångar | Publish destination |
+| --- | --- | --- | --- |---|
+| Aktiverad | Aktiverad | Ja | Leverans | Dynamic Media med OpenAPI och Content Hub |
+| Ej aktiverad | Aktiverad | Ja | Content Hub | Content Hub |
+| Aktiverad | Ej aktiverad | Ja | Leverans | Dynamic Media med OpenAPI |
+| Ej aktiverad | Ej aktiverad | Nej | Ej tillämpligt | Ej tillämpligt |
 
 ### Ange förfallodatum för tillgång {#set-asset-expiration-date}
 

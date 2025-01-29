@@ -3,9 +3,9 @@ title: Godkänn resurser i Experience Manager
 description: Lär dig godkänna resurser i  [!DNL Experience Manager].
 role: User
 exl-id: fe61a0f1-94d3-409a-acb9-195979668c25
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: 28ba98828cfa34933a2ec4f5d9b7d9681d42fa5a
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '1001'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,19 @@ Du måste göra en engångsuppdatering av det tillämpliga metadataschemat i adm
 1. Välj det tillämpliga metadataschemat och klicka på **[!UICONTROL Edit]**. <br>**[!UICONTROL Metadata Schema Form Editor]** öppnas med fliken **[!UICONTROL Basic]** markerad.
 1. Rulla ned och klicka på **[!UICONTROL Review Status]**.
 1. Klicka på fliken **[!UICONTROL Rules]** på den högra panelen.
-1. Avmarkera **[!UICONTROL Disable edit]** och klicka på **[!UICONTROL Save]**.
+1. Avmarkera **[!UICONTROL Disable edit]**.
 Om du behöver visa egenskapen som fältet **[!UICONTROL Review Status]** är mappat till går du till fliken **[!UICONTROL Settings]** och visar värdet `./jcr:content/metadata/dam:status` i fältet **[!UICONTROL Map to property]**.
+1. Dra och släpp ett **[!UICONTROL Dropdown]**-fält från avsnittet **[!UICONTROL Build Form]** på höger sida till avsnittet Metadata i formuläret.
+1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
+   1. Ändra **[!UICONTROL Field Label]** till _Godkännandemål_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:activationTarget_.
+   1. Lägg till alternativen med `contenthub` och `delivery` som alternativvärden.
+
+   >[!NOTE]
+   >
+   När du väljer granskningsmålet som Content Hub i Assets-vyn blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation. När du väljer Godkännandemål som Leverans är resurserna tillgängliga för alla användare.
+
+1. Klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
@@ -74,6 +85,15 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
    1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:status_.
    1. Ändra standardvärdet till _godkänt_.
 
+1. Dra och släpp ett **[!UICONTROL Dropdown]**-fält från avsnittet **[!UICONTROL Build Form]** på höger sida till avsnittet Metadata i formuläret.
+1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
+   1. Ändra **[!UICONTROL Field Label]** till _Godkännandemål_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:activationTarget_.
+   1. Lägg till alternativen med `contenthub` och `delivery` som alternativvärden.
+
+   >[!NOTE]
+   >
+   När du väljer granskningsmålet som Content Hub i Assets-vyn blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation. När du väljer Godkännandemål som Leverans är resurserna tillgängliga för alla användare.
 1. Klicka på **[!UICONTROL Save]**.
 1. På sidan **[!UICONTROL Metadata Profiles]** väljer du den nya metadataprofilen.
 1. Klicka på **[!UICONTROL Apply Metadata Profile to Folder(s)]** i det övre åtgärdsfältet.
@@ -91,6 +111,19 @@ På samma sätt kan du gruppgodkänna resurser i en mapp i Assets-vyn:
 1. Markera resurserna och klicka på **[!UICONTROL Bulk Metadata Edit]**.
 
 1. Välj **[!UICONTROL Approved]** i fältet **[!UICONTROL Status]** som är tillgängligt i avsnittet [!UICONTROL Properties] i den högra rutan.
+
+   Om du väljer status som `Approved` och om [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) eller [Content Hub](/help/assets/product-overview.md), eller båda är aktiverade för din Experience Manager Assets, kan du visa `Delivery` - och `Content Hub`-alternativ som är tillgängliga i fältet **[!UICONTROL Approval Target]**.
+
+   * Välj **[!UICONTROL Delivery]** om du vill göra resurserna tillgängliga för både Dynamic Media med OpenAPI-funktioner och Content Hub. Om du inte har Content Hub aktiverat kan du bara göra resurserna tillgängliga för Dynamic Media med OpenAPI-funktioner genom att välja det här alternativet.
+   * Välj **[!UICONTROL Content Hub]** om du vill göra resurserna tillgängliga för Content Hub.
+
+   ![Godkännandestatus](/help/assets/assets/approval-status-delivery.png)
+
+   Om du inte använder standardformuläret för metadata och inte kan visa fältet **[!UICONTROL Approval Target]**, [redigerar du metadataformuläret](/help/assets/metadata-assets-view.md#metadata-forms) och drar fältet **[!UICONTROL Approval for]** från de tillgängliga komponenterna till metadataformuläret. Klicka sedan på **[!UICONTROL Save]**.
+
+   >[!NOTE]
+   >
+   Om du väljer godkännandemålet som `Content Hub` med hjälp av Assets-vyn i en organisation blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation.
 
 1. Klicka på **[!UICONTROL Save]**.
 
