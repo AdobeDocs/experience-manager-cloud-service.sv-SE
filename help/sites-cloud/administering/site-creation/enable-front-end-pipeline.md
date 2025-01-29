@@ -5,9 +5,9 @@ feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
 solution: Experience Manager Sites
-source-git-commit: d6ecdae8dd78c3c93a410ca2c8b80322340f439e
+source-git-commit: a5661b6b75180dd77eb794eb5d215fd2e1d5eed0
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -66,3 +66,14 @@ Nu är webbplatsen redo att använda frontendriet. Om du vill veta mer om fronte
 * [Använda webbplatsservern för att hantera ditt webbplatstema](site-rail.md)
 * [Snabbresa för att skapa webbplats](/help/journey-sites/quick-site/overview.md) - Den här dokumentationsresan ger dig och en heltäckande översikt över processen att snabbt distribuera en webbplats med hjälp av frontendspipelinen och verktyget Skapa snabbwebbplats.
 * [CI/CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) - Det här dokumentet beskriver frontendpipelinen i kontexten för hela stacken och på webbskiktet.
+
+## Front-End Pipeline och anpassade domäner {#custom-domains}
+
+Så som beskrivs i avsnittet [Teknisk information](#technical-details) skapar en `SiteConfig` - och `HtmlPageItemsConfig` -nod under `/conf/<site-name>/sling:configs` om du aktiverar funktionen för frontpipeline för en webbplats. 
+
+Om du vill använda [Cloud Manager-funktionen för anpassade domäner](/help/implementing/cloud-manager/custom-domain-names/introduction.md) för din webbplats tillsammans med frontdelslinjen, måste ytterligare egenskaper läggas till i de här noderna.
+
+1. Ange egenskapen `customFrontendPrefix` i `SiteConfig` för platsen.
+1. Detta uppdaterar värdet `prefixPath` för `HtmlPageItemsConfig` med den anpassade domänen.
+
+Sidorna för webbplatsen refererar sedan till temaartefakter från den uppdaterade URL:en.
