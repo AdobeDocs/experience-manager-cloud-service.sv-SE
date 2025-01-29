@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 18d19acfedce57a3ae52020d36785689b715ed08
+source-git-commit: f57d90078b5fc0e0c8a79ca60cbc19e7b37323cd
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | URL för att kunderna ska kunna övervaka sina Cloud Service | Exkluderad | Adobe rekommenderar att du använder URL:en för att övervaka tillgänglighets- eller hälsokontrollen externt.<br><br>`/system/probes/health` |
 | AEM as a Cloud Service Pod Warm-up Service | Exkluderad |
 | Agent: skyline-service-warmup/1.* |
-| Välkända sökmotorer, sociala nätverk och HTTP-bibliotek (taggade med Fastly) | Exkluderad | Välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst:<br><br>Exempel:<br> ・ AddSearchBot<br> ・ AhrefsBot<br> ・ Applebot<br> ・ Ask Jeeves Corporate Spider<br> ・ Bingbot<br> ・ BingPreview<br> ・ BLEXBot<br> ‡ BuiltWith<br> pider<br> ;CrawlerKengo<br> avslutning Facebookexternalhit<br> avslutning Google AdsBot<br> avslutning Google AdsBot Mobile<br> avslutad Googlebot<br> avslutad Googlebot Mobile<br> avslutad lspider<br> avslutad LucidWorks<br> avslutning <br> avslutning <br>  avslutande Pinterest<br> `MJ12bot`<br> avslutningsprisBot  avslutad SiteImimprove  avslutad StashBot <br> avslutad StatusCake <br> avslutad YandexBot <br> avslutad Claudebot |
+| Välkända sökmotorer, sociala nätverk och HTTP-bibliotek (taggade med Fastly) | Exkluderad | Välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst:<br><br>Exempel:<br> ・ AddSearchBot<br> ・ AhrefsBot<br> ・ Applebot<br> ・ Ask Jeeves Corporate Spider<br> ・ Bingbot<br> ・ BingPreview<br> ・ BLEXBot<br> ‡ BuiltWith<br> pider<br> ;CrawlerKengo<br> avslutning Facebookexternalhit<br> avslutning Google AdsBot<br> avslutning Google AdsBot Mobile<br> avslutad Googlebot<br> avslutad Googlebot Mobile<br> avslutad lspider<br> avslutad LucidWorks<br> avslutning <br> avslutning <br>  avslutande Pinterest<br> `MJ12bot`<br> avslutningsprisBot  avslutad SiteImimprove  avslutad StashBot <br> avslutad StatusCake <br> avslutad YandexBot <br> pigg ContentKing <br> avslutad Claudebot |
 | Uteslut Commerce integrationa frameworkar | Exkluderad | Begäranden som görs till AEM som vidarebefordras till Commerce integrationa frameworken - URL:en börjar med `/api/graphql` - för att undvika dubbelräkning kan de inte faktureras för Cloud Service. |
 | Uteslut `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på en dator eller mobiltelefon. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
 | Uteslut `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON har vissa scenarier, som SAML-autentiseringsflöden, observerats returnera favoritikoner som HTML. Därför exkluderas favoritikoner uttryckligen från antalet. |
