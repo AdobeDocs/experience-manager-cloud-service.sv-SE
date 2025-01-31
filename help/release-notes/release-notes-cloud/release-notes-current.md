@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 190e68ebcd3c2a7ba7b995690c802a04728e6962
+source-git-commit: 20db0990c506aeb473b71132813cec053009275f
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1750'
 ht-degree: 0%
 
 ---
@@ -126,13 +126,21 @@ AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intell
 
 ### Nya funktioner i AEM Forms {#forms-new-features}
 
-* **Hantera publikation**: Du kan använda arbetsflödet Hantera publikation för att publicera eller avpublicera formulär i olika miljöer, vanligtvis från författarinstansen till publicerings- och förhandsgranskningsinstanserna. Användarna kan publicera, avpublicera eller schemalägga publiceringen på ett smidigt sätt.
+#### Hantera publikation
 
-* **[Spara ett utkast automatiskt för Core Components-baserade Adaptive Forms](/help/forms/save-core-component-based-form-as-draft.md)**: Användare kan nu dra nytta av en autosparfunktion som sparar ett delvis ifyllt formulär som ett utkast automatiskt. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
+Du kan använda arbetsflödet Hantera publikation för att publicera eller avpublicera formulär i olika miljöer, vanligtvis från författarinstansen till publicerings- och förhandsgranskningsinstanserna. Användarna kan publicera, avpublicera eller schemalägga publiceringen på ett smidigt sätt.
 
-* **[Förbättringar av regelredigeraren](/help/forms/invoke-service-enhancements-rule-editor.md)**: För adaptiv Forms baserat på kärnkomponenter kan du använda utdata från Invoke Service för att fylla i nedrullningsbara alternativ och ange repeterbara eller enskilda paneler. Dessutom kan dessa utdata användas för att validera andra fält.
+#### Autospara ett utkast för Core Components based Adaptive Forms
 
-* **[Förbättra användarupplevelsen med navigeringsknappar i panellayouter](/help/forms/rule-editor-core-components-usecases.md#navigating-among-panels-using-button)**: Nu kan du lägga till navigeringsknappar i panellayouterna, till exempel Vågräta flikar, Lodräta flikar, Dragspel eller Guide. Dessa knappar förbättrar användarupplevelsen genom att förenkla övergångar mellan paneler och fokusera på den valda panelen.
+Användare kan nu dra nytta av en [funktion för att spara automatiskt](/help/forms/save-core-component-based-form-as-draft.md) som ett delvis ifyllt formulär som ett utkast. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
+
+#### Förbättrad regelredigerare
+
+För Adaptiv Forms baserat på kärnkomponenter kan du använda [utdata från Invoke Service för att fylla i nedrullningsbara alternativ och ange repeterbara eller individuella paneler](/help/forms/invoke-service-enhancements-rule-editor.md). Dessutom kan dessa utdata användas för att validera andra fält.
+
+#### Förbättra användarupplevelsen med navigeringsknappar i panellayouter
+
+Nu kan du lägga till navigeringsknappar i panellayouterna, till exempel Vågräta flikar, Lodräta flikar, Dragspel eller Guide. Dessa knappar [förbättrar användarupplevelsen genom att förenkla övergångar mellan paneler och fokusera på den valda panelen](/help/forms/rule-editor-core-components-usecases.md#navigating-among-panels-using-button).
 
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
@@ -141,15 +149,15 @@ Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exk
 
 Den här versionsinformationen innehåller en lista över de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
 
-#### [HTML-e-postmallar i Adaptiv Forms](/help/forms/html-email-templates-in-adaptive-forms.md)
+#### HTML e-postmallar i Adaptiv Forms
 
-Med adaptiv Forms kan du använda HTML e-postmallar. Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+Med adaptiv Forms kan du använda [HTML e-postmallar](/help/forms/html-email-templates-in-adaptive-forms.md). Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
 
 ![HTML e-postmallar](/help/forms/assets/html-email.png)
 
 #### Förbättrat molnlagringsstöd: Direktöverföring från PDF till Azure Blob Storage
 
-AEM Forms API:er för dokumentgenerering har nu stöd för direktöverföring av genererade PDF-dokument till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
+AEM Forms API:er för dokumentgenerering gör nu att du kan [överföra genererade PDF-dokument direkt till Azure Blob Storage](/help/forms/early-access-ea-features.md#doc-generation-api). Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
