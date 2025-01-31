@@ -5,9 +5,9 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
+source-git-commit: f0cf9fa7da7e89d42ab90dee0e8400b26f004574
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i sidans övre vänstra hörn för att visa sidomenyn.
 1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
-1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst till höger på raden med det kundhanterade certifikat som du vill uppdatera och klicka sedan på **Visa och uppdatera**.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst till höger på raden för det kundhanterade certifikat som du vill uppdatera och klicka sedan på **Visa och uppdatera**.
 
    ![Uppdatera en kundhanterad SSL-certifiering som upphört att gälla](/help/implementing/cloud-manager/assets/ssl/ssl-cert-update.png)
 
@@ -62,7 +62,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 >[!NOTE]
 >
->Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, och om domänen täcks av ett certifikat och det andra uppdateras, installeras det senare för domänen.
+>Om två eller flera SAN-certifikat täcker samma SAN-domänpost och ett av dem uppdateras, installeras det uppdaterade certifikatet för domänen.
 >
 >Mer information finns i [Felsöka SSL-certifikatproblem](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md#wrong-san-cert).
 

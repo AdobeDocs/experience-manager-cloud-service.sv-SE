@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
+source-git-commit: a078d45f81fc7081012ebf24fa8f46dc1a218cd7
 workflow-type: tm+mt
-source-wordcount: '2357'
+source-wordcount: '2367'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ Lär dig mer om vilka typer av miljöer du kan skapa och hur du skapar dem för 
 
 En användare med nödvändig behörighet kan skapa följande miljötyper (inom gränserna för vad som är tillgängligt för den specifika klientorganisationen).
 
-* **Produktion + stadium** - Produktions- och stagningsmiljöerna är tillgängliga som par och används för produktions- respektive testningsändamål. Utför prestanda- och säkerhetstester på scenmiljön. Den har samma storlek som produktionen.
+| Miljötyp | Beskrivning |
+| --- | --- |
+| **Produktion + scen** | Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål. Utför prestanda- och säkerhetstester på scenmiljön. Den har samma storlek som produktionen. |
+| **Utveckling** | En utvecklingsmiljö kan skapas för utvecklings- och testningsändamål och kan endast kopplas till icke-produktionsrörledningar. Utvecklingsmiljöer har inte samma storlek som fas och produktion och bör inte användas för att utföra prestanda- och säkerhetstester. |
+| **Snabb utveckling** | Med en Rapid Development Environment (RDE) kan utvecklare snabbt driftsätta och granska ändringar. Detta minskar tiden som krävs för att testa funktioner som redan har validerats i en lokal utvecklingsmiljö. Mer information om hur du använder en RDE finns i [dokumentationen för den snabba utvecklingsmiljön](/help/implementing/developing/introduction/rapid-development-environments.md). |
 
-* **Utveckling** - En utvecklingsmiljö kan skapas för utvecklings- och testningssyften och kan endast associeras med icke-produktionspipelines.  Utvecklingsmiljöer har inte samma storlek som fas och produktion och bör inte användas för att utföra prestanda- och säkerhetstester.
-
-* **Snabb utveckling** - Med en snabb utvecklingsmiljö (RDE) kan utvecklare snabbt distribuera och granska ändringar, vilket minimerar den tid som krävs för att testa funktioner som har visat sig fungera i en lokal utvecklingsmiljö. Mer information om hur du använder en RDE finns i [dokumentationen för den snabba utvecklingsmiljön](/help/implementing/developing/introduction/rapid-development-environments.md).
-
-Funktionerna i enskilda miljöer beror på vilka lösningar som är aktiverade i [programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) i miljön.
+Funktionerna i enskilda miljöer beror på vilka lösningar som har aktiverats i [programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) i miljön.
 
 * [Sites](/help/overview/introduction.md)
 * [Assets](/help/assets/overview.md)
@@ -36,43 +36,43 @@ Funktionerna i enskilda miljöer beror på vilka lösningar som är aktiverade i
 
 >[!NOTE]
 >
->Produktions- och mellanlagringsmiljöer skapas endast som par. Du kan inte skapa enbart en staging eller bara en produktionsmiljö.
+>Produktions- och mellanlagringsmiljöer skapas endast som par. Du kan inte skapa en miljö som bara är för produktion eller endast för staging.
 
 ## Lägga till en miljö {#adding-environments}
 
 Om du vill lägga till eller redigera en miljö måste användaren vara medlem i rollen **Affärsägare**.
 
+**Så här lägger du till en miljö:**
+
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på programmet som du vill lägga till en miljö för.
 
-1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på **Lägg till miljö** på **miljökortet** för att lägga till en miljö.
+1. Gör något av följande:
+
+   Om alternativet **Lägg till miljö** är nedtonat (inaktiverat) kan det bero på att behörigheter saknas eller att de är beroende av de licensierade resurserna.
+
+   * På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på **Lägg till miljö** på **miljökortet**.
 
    ![Miljökort](assets/no-environments.png)
 
-   * Alternativet **Lägg till miljö** finns också på fliken ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö** .
+   * Klicka på ![dataikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljöer** på den vänstra panelen och klicka sedan på **Lägg till miljö** på sidan Miljöer, i det övre högra hörnet.
 
      ![Fliken Miljö](assets/environments-tab.png)
 
-   * Alternativet **Lägg till miljö** kan vara inaktiverat på grund av bristande behörighet eller beroende på de licensierade resurserna.
+1. Gör följande i dialogrutan **Lägg till miljö**:
 
-1. I dialogrutan **Lägg till miljö**:
-
-   * Välj en [**miljötyp**](#environment-types).
-      * Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypsnamnet.
-   * Ange miljön **Namn**.
-      * Miljönamnet kan inte ändras när miljön har skapats.
-   * Ange miljön **Beskrivning**.
+   * Välj en [**miljötyp**](#environment-types). Antalet tillgängliga/använda miljöer visas inom parentes bakom miljötypsnamnet.
+   * Ange miljön **Namn**. Miljönamnet kan inte ändras efter att miljön har skapats.
+   * Ange en valfri **beskrivning** för miljön.
    * Om du lägger till en **Produktion + Stage**-miljö måste du ange ett miljönamn och en beskrivning för både din produktions- och mellanlagringsmiljö.
-   * Välj en **primär region** i listrutan.
-      * Den primära regionen kan inte ändras efter att den har skapats.
-      * Beroende på dina tillgängliga berättiganden kan du kanske konfigurera [flera regioner](#multiple-regions).
+   * Välj en **primär region** i listrutan. Den primära regionen kan inte ändras efter att den har skapats. Beroende på vilka berättiganden du har kan du konfigurera [flera regioner](#multiple-regions).
 
    ![Dialogrutan Lägg till miljö](assets/add-environment2.png)
 
-1. Klicka på **Spara** för att lägga till den angivna miljön.
+1. Klicka på **Spara**.
 
-Skärmen **Översikt** visar nu din nya miljö på kortet **Miljöer**. Nu kan du ställa in rörledningar för din nya miljö.
+Sidan **Översikt** visar nu din nya miljö på kortet **Miljöer**. Nu kan du ställa in rörledningar för din nya miljö.
 
 ## Flera publiceringsregioner {#multiple-regions}
 
@@ -109,7 +109,7 @@ Om du inte angav några ytterligare regioner från början kan du göra det efte
 
 Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga till eller ta bort regioner i en transaktion. Om du måste lägga till en region och ta bort en region, ska du först lägga till, spara ändringen och sedan ta bort (eller omvänt).
 
-1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg för din produktionsmiljö i programöversiktskonsolen och välj **Redigera** på menyn.
+1. Klicka på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för produktionsmiljön i programöversiktskonsolen och välj **Redigera** på menyn.
 
    ![Redigeringsmiljö](assets/select-edit-environment.png)
 
@@ -123,35 +123,38 @@ Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga t
 
 De ändringar som görs i produktionsmiljön gäller både produktions- och stagningsmiljöer. Ändringar i flera publiceringsregioner kan bara redigeras i produktionsmiljön.
 
-Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet rekommenderar vi att den här etableringen görs innan du lägger till ytterligare publiceringsregioner i miljöerna. Annars går trafiken i de extra publiceringsregionerna igenom den primära regionens proxy.
+Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet rekommenderar vi att den här etableringen görs innan du lägger till ytterligare publiceringsregioner i miljöerna. I annat fall går trafiken för de extra publiceringsregionerna igenom den primära regionens proxy.
 
-## Miljöinformation {#viewing-environment}
+## Information om åtkomstmiljö {#viewing-environment}
 
-På sidan **Översikt** kan du komma åt en miljös detaljer på två sätt.
 
-1. På sidan **Översikt** klickar du på fliken **Miljö** på den vänstra menyn.
+1. Gör något av följande för att få åtkomst till miljöinformationen:
+
+   * På sidan **Översikt** klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö** på den vänstra menyn.
 
    ![Fliken Miljö](assets/environments-tab2.png)
 
-   * Du kan också klicka på knappen **Visa alla** på kortet **Miljöer** om du vill gå direkt till fliken **Miljöer**.
+   * Klicka på ikonen ![Arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Visa alla** på **miljökortet**.
 
      ![Visa alla alternativ](assets/environment-showall.png)
 
-1. **Miljöerna** öppnas och alla miljöer för programmet visas.
+   Sidan **Miljö** öppnas och alla miljöer för programmet visas.
 
    ![Miljöfliken](assets/environments-tab2.png)
 
-1. Klicka på en miljö i listan så att du kan visa informationen om den.
+1. Gör något av följande på sidan Miljöer:
+
+   * Klicka på en miljö i listan för att visa informationen om den.
 
    ![Miljöinformation](assets/environ-preview1.png)
 
-Du kan också klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg och sedan välja **Visa detaljer**.
+   * Klicka på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för miljön som du vill använda och klicka sedan på **Visa detaljer**.
 
-![Visa miljöinformation](assets/view-environment-details.png)
+   ![Visa miljöinformation](assets/view-environment-details.png)
 
 >[!NOTE]
 >
->Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** så som beskrivits ovan om du vill se alla miljöer i programmet.
+>Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet om du vill visa alla miljöer i programmet.
 
 ### Öppna förhandsgranskningstjänsten {#access-preview-service}
 
@@ -165,15 +168,15 @@ När förhandsgranskningstjänsten skapas används en standard-IP-tillåtelselis
 
 En användare med nödvändig behörighet måste utföra följande steg innan du kan dela URL:en för förhandsvisningstjänsten för att se till att den är tillgänglig.
 
-1. Skapa en lämplig IP-tillåtelselista, använd den för förhandsgranskningstjänsten och ta omedelbart bort tillåtelselista `Preview Default [<envId>]`.
+1. Skapa en lämplig IP-Tillåtelselista, använd den för förhandsgranskningstjänsten och ta omedelbart bort tillåtelselista `Preview Default [<envId>]`.
 
-   * Mer information finns i [Använda och ta bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md).
+   Mer information finns i [Använd och ta bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md).
 
-1. Använd arbetsflödet för uppdatering **IP Tillåtelselista** för att ta bort standard-IP och lägga till IP-adresser efter behov. Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md).
+1. Använd uppdateringsarbetsflödet **IP Tillåtelselista** för att ta bort standard-IP och lägga till nödvändiga IP-adresser. Mer information finns i [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md).
 
-När åtkomsten till förhandsgranskningstjänsten har låsts upp visas inte längre låsikonen framför namnet på förhandsgranskningstjänsten.
+När åtkomsten till förhandsvisningstjänsten har låsts upp visas inte längre låsikonen framför namnet på förhandsgranskningstjänsten.
 
-När det är aktiverat kan du publicera innehåll till förhandsgranskningstjänsten med hjälp av gränssnittet Hantera publikation i AEM. Mer information finns i [Förhandsgranska innehåll](/help/sites-cloud/authoring/sites-console/previewing-content.md).
+När det är aktiverat kan du publicera innehåll till förhandsgranskningstjänsten med hjälp av användargränssnittet **`Manage Publication`** i AEM. Mer information finns i [Förhandsgranska innehåll](/help/sites-cloud/authoring/sites-console/previewing-content.md).
 
 >[!NOTE]
 >
@@ -185,7 +188,7 @@ Om du har aktiverat ytterligare publiceringsregioner kan du kontrollera statusen
 
 1. På sidan **Översikt** letar du reda på kortet **Miljöer**.
 
-1. Kolumnen **Status** på kortet **Environment** visar om det finns några problem med de konfigurerade ytterligare publiceringsregionerna. Klicka på ikonen **Info** om du vill ha information om regionerna.
+1. På **miljökortet** visar kolumnen **Status** om det finns några problem med de konfigurerade ytterligare publiceringsregionerna. Klicka på ikonen **Info** om du vill ha information om regionerna.
 
    ![Ytterligare statusinformation om publiceringsregioner på miljökortet](assets/additional-publish-region-status-environments-card.png)
 
@@ -202,18 +205,15 @@ Du kan även få tillgång till samma information från fliken **Miljö**.
 
    ![Ytterligare statusinformation om publiceringsregioner på fliken Miljö](assets/additional-publish-region-status-environments-tab.png)
 
-Om några problem har rapporterats med ytterligare publiceringsregioner:
-
-1. Var tålmodiga. Cloud Manager försöker ständigt återskapa regionen och den kan bli tillgänglig när som helst.
-1. Om problemet kvarstår efter flera timmar kan du ta bort den extra publiceringsregionen och lägga till den igen (antingen samma region eller en annan region) för att utlösa en fullständig distribution.
+Om några problem rapporteras med ytterligare publiceringsregioner ska du vara tålmodig. Cloud Manager försöker ständigt återskapa regionen och den kan bli tillgänglig när som helst. Om problemet kvarstår efter flera timmar kan du ta bort den extra publiceringsregionen och lägga till den igen (antingen samma region eller en annan region) för att utlösa en fullständig distribution.
 
 Hur länge du väntar på att systemet ska återställas fristående innan du vidtar ytterligare åtgärder beror på hur svårt det är för dina system.
 
-I vilket fall som helst dirigeras [trafik alltid till den andra närmaste regionen som är online](/help/operations/additional-publish-regions.md). Kontakta Adobe kundtjänst om du fortsätter att se problem.
+Oavsett vilket dirigeras [trafik alltid till den närmaste regionen som är online](/help/operations/additional-publish-regions.md). Kontakta Adobe kundtjänst om du fortsätter att se problem.
 
 ## Uppdatera miljöer {#updating-dev-environment}
 
-Som molnbaserad tjänst hanteras uppdateringar av din utvecklings-, staging- och produktionsmiljö i produktionsprogrammen automatiskt av Adobe.
+Som molnbaserad tjänst hanterar Adobe automatiskt uppdateringar för utvecklings-, staging- och produktionsmiljöer inom produktionsprogrammen.
 
 Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. När en sådan miljö inte kör den senaste allmänt tillgängliga AEM visar statusen på kortet **Miljöer** på skärmen **Översikt** i programmet **Uppdatering tillgänglig**.
 
@@ -223,7 +223,7 @@ Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. När en
 
 Pipelines är det enda sättet att [distribuera kod till AEM as a Cloud Service](deploy-code.md)-miljöer. Därför är varje pipeline kopplad till en viss AEM.
 
-Om Cloud Manager upptäcker att det finns en nyare version av AEM än den som senast distribuerades med pipeline, visas statusen **Uppdatera tillgänglig** för miljön.
+När Cloud Manager identifierar en nyare version av AEM än den som senast distribuerades med pipelinen visas statusen **Uppdatering tillgänglig** för miljön.
 
 Uppdateringsprocessen är därför en tvåstegsprocess:
 
@@ -235,11 +235,11 @@ Uppdateringsprocessen är därför en tvåstegsprocess:
 >[!NOTE]
 > 2024 uppdateras redan utvecklingsinstanser och vissa sandlådeprogram automatiskt, så det finns inget behov av att hantera uppdateringar manuellt. Som ett resultat av den här övergången kanske alternativet att uppdatera miljön manuellt för utvecklingsinstanser inte är tillgängligt för _vissa_ av dina program.
 
-Alternativet **Update** är tillgängligt från kortet **Environmental** för vissa utvecklingsmiljöer och miljöer i sandlådeprogram genom att klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg.
+Alternativet **Update** är tillgängligt på kortet **Environmental** för specifika utvecklings- och sandlådemiljöer. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid miljön för att komma åt **Uppdatering**.
 
 ![Uppdateringsalternativ från miljökort](assets/environ-update2.png)
 
-Det här alternativet är också tillgängligt genom att klicka på fliken **Miljö** i programmet och sedan på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg.
+Det här alternativet är också tillgängligt genom att klicka på fliken **Miljö** i programmet och sedan på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i miljön.
 
 ![Uppdateringsalternativ på fliken Miljö](assets/environ-update3.png)
 
@@ -247,23 +247,25 @@ En användare med rollen **Distributionshanteraren** eller **Affärsägare** kan
 
 När pipeline-versionen har uppdaterats till den senaste allmänt tillgängliga AEM-versionen uppmanas användaren att köra den associerade pipelinen för att distribuera den senaste versionen till miljön.
 
-![Uppmana att köra pipeline för att uppdatera miljön](assets/update-run-pipeline.png)
+![Exempel på uppmaningen att köra pipelinen för att uppdatera miljön](assets/update-run-pipeline.png)
 
 Beteendet för alternativet **Uppdatera** varierar beroende på programmets konfiguration och aktuella tillstånd.
 
-* Om pipeline redan har uppdaterats uppmanas användaren att köra pipelinen med alternativet **Uppdatera**.
-* Om pipeline redan uppdateras informerar alternativet **Uppdatera** användaren om att en uppdatering redan körs.
-* Om det inte finns någon lämplig pipeline uppmanas användaren att skapa en i alternativet **Uppdatera** .
+| Läge | Uppdateringsalternativet.. |
+| --- | --- |
+| Pipelinen har redan uppdaterats | uppmanar användaren att köra pipelinen. |
+| Pipelinen uppdateras redan | informerar användaren om att en uppdatering redan körs. |
+| Pipelinen finns inte | uppmanar användaren att skapa en. |
 
 ## Ta bort utvecklingsmiljöer {#deleting-environment}
 
 En användare med rollen **Distributionshanteraren** eller **Affärsägare** kan ta bort en utvecklingsmiljö.
 
-På skärmen **Översikt** i programmet på **miljökortet** klickar du på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg för den utvecklingsmiljö du vill ta bort.
+På skärmen **Översikt** i programmet på kortet **Miljöer** klickar du på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i den utvecklingsmiljö som du vill ta bort.
 
 ![Alternativet Ta bort](assets/environ-delete.png)
 
-Alternativet Ta bort är också tillgängligt på fliken **Miljö** i programfönstret **Översikt** . Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg och välj **Ta bort**.
+Alternativet **Ta bort** är också tillgängligt på fliken **Miljö** i programfönstrets **Översikt** . Klicka på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i miljön och välj **Ta bort**.
 
 ![Alternativet Ta bort på fliken Miljö](assets/environ-delete2.png)
 
@@ -280,29 +282,33 @@ Välj **Hantera åtkomst** på menyn Ellips i miljön på kortet **Miljöer**. D
 
 >[!TIP]
 >
->Se [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till licensierade Adobe-lösningar.
+>Läs [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) om du vill veta hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till licensierade Adobe-lösningar.
 
 ## Gå till Developer Console {#accessing-developer-console}
 
-Välj **Developer Console** på menyn Ellips i miljön på kortet **Miljöer**. En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console**.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och sedan på **Developer Console**.
+
+En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console**.
 
 ![Logga in på Developer Console](assets/environ-devconsole.png)
 
 Endast en användare med rollen **Utvecklare** har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html#hibernation).
+Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
 
-Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ellipsmenyn i en enskild miljö.
+Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i en enskild miljö.
 
 ## Logga in lokalt {#login-locally}
 
-Välj **Lokal inloggning** på menyn Ellips i miljön på **miljökortet** om du vill logga in lokalt på Adobe Experience Manager.
+1. Gör något av följande:
 
-![Logga in lokalt](assets/environ-login-locally.png)
+   * Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och klicka sedan på **Lokal inloggning**.
 
-Du kan även logga in lokalt från fliken **Miljö** på sidan **Översikt** .
+     ![Logga in lokalt](assets/environ-login-locally.png)
 
-![Logga in lokalt från miljöfliken](assets/environ-login-locally-2.png)
+   * Klicka på **Miljö** på den vänstra panelen. På sidan **Miljö** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Lokal inloggning**.
+
+     ![Logga in lokalt från miljöfliken](assets/environ-login-locally-2.png)
 
 ## Hantera anpassade domännamn {#manage-cdn}
 
@@ -314,13 +320,13 @@ Anpassade domännamn stöds i Cloud Manager for Sites-program för både publice
 
 ## Hantera IP-Tillåtelselista {#manage-ip-allow-lists}
 
-IP tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskning av Sites-program.
+Ett IP-Tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskning av Sites-program.
 
-Om du vill hantera IP-tillåtelselista går du till fliken **Miljö** på sidan **Översikt** i ditt program. Klicka på en enskild miljö så att du kan hantera informationen om den.
+Om du vill hantera IP Tillåtelselista går du till fliken **Miljö** på sidan **Översikt** i ditt program. Klicka på en enskild miljö så att du kan hantera informationen om den.
 
 ### Använd en IP-Tillåtelselista {#apply-ip-allow-list}
 
-När du använder en IP-tillåtelselista kopplas alla IP-intervall som ingår i definitionen av tillåtelselista till en författare eller publiceringstjänst i en miljö.
+När du använder en IP Tillåtelselista länkas alla definierade IP-intervall till en författare eller publiceringstjänst i miljön.
 
 >[!TIP]
 >

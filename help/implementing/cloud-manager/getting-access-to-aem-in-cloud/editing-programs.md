@@ -5,9 +5,9 @@ exl-id: 819e4a6e-f77a-4594-a402-a300dcbdf510
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
+source-git-commit: f0cf9fa7da7e89d42ab90dee0e8400b26f004574
 workflow-type: tm+mt
-source-wordcount: '427'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,12 @@ I **programöversikten** kan användare med nödvändig behörighet redigera [pr
 
 * Lägg till Sites-lösning i ett befintligt program med Assets och omvänt.
 * Ta bort Sites eller Assets från ett befintligt program med både Sites och Assets.
-* Lägg till ett andra, oanvänt lösningsberättigande, antingen till ett befintligt program eller som ett nytt program.
+* Lägg till ett lösningsberättigande som inte används i ett befintligt program eller skapa ett nytt program.
 * Ta bort sandlådeprogram.
 
 ## Behörigheter {#permissions}
 
-Du måste vara medlem i rollen **Affärsägare** för att kunna redigera program eller ta bort sandlådeprogram och få åtkomst till licensinstrumentpanelen.
+Du måste ha rollen **Affärsägare** för att kunna redigera program, ta bort sandlådeprogram och komma åt licensinstrumentpanelen.
 
 ## Redigera ett program {#editing}
 
@@ -46,7 +46,7 @@ Varje gång ett program redigeras, som att lägga till eller ta bort en lösning
 
    ![Fliken Allmänt](assets/edit-program-prod1.png)
 
-1. De alternativ som är tillgängliga för redigering av programmet är desamma som när du skapar programmet.
+1. De alternativ som är tillgängliga för redigering av programmet är samma alternativ för att skapa program.
    * Mer information om de enskilda alternativen finns i [Skapa produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md) och [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md).
    * [Ytterligare alternativ](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#options) kan vara tillgängliga för ditt produktionsprogram beroende på organisationens rättigheter.
 
@@ -70,7 +70,7 @@ Om du tar bort ett sandlådeprogram tas alla miljöer och rörledningar som är 
 
    ![Ta bort programalternativ](assets/delete-sandbox1.png)
 
-Du kan också klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg på programmets kort på Cloud Manager översiktssida och välja **Ta bort program**.
+Du kan också klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på programkortet på Cloud Manager översiktssida och välja **Ta bort program**.
 
 ![Ta bort sandlådan från programkortet](assets/delete-sandbox2.png)
 

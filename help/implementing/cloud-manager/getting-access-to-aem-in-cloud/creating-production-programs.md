@@ -5,9 +5,9 @@ exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8b15b203d0d6a5947a80c9bd217c7fdcdb8f494c
+source-git-commit: a078d45f81fc7081012ebf24fa8f46dc1a218cd7
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Utöver de obligatoriska rättigheterna har 99,99 % av SLA ytterligare krav för
 
 ## Få åtkomst till ditt program {#accessing}
 
-1. När du ser ditt programkort på landningssidan klickar du på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg för att visa de menyalternativ som är tillgängliga för dig.
+1. När du ser ditt programkort på landningssidan klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) för att visa de menyalternativ som är tillgängliga för dig.
 
    ![Programöversikt](assets/program-overview.png)
 

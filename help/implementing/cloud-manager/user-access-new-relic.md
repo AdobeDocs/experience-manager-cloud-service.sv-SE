@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8f8662360d23926df91e91881e78dadea33504f0
+source-git-commit: a078d45f81fc7081012ebf24fa8f46dc1a218cd7
 workflow-type: tm+mt
-source-wordcount: '1809'
+source-wordcount: '1815'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ För ett nytt program skapas ett New Relic One-underkonto åt dig. Du måste doc
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program som du vill hantera dina New Relic One-användare för.
 
-1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst ned på **Environmental**-kortet på programöversiktssidan och välj **Aktivera New Relic**.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och välj **Aktivera New Relic** längst ned på **miljökortet** på programöversiktssidan.
 
    ![Hantera användare](assets/newrelic-activate-sub-account.png)
 
@@ -71,7 +71,7 @@ Följ de här stegen för att definiera användare för ditt New Relic One-under
 
 1. Klicka på det program som du vill hantera dina New Relic One-användare för.
 
-1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst ned på **miljökortet** på programöversiktssidan och välj **Hantera användare**.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och välj **Hantera användare** längst ned på **miljökortet** på programöversiktssidan.
 
    ![Hantera användare](assets/newrelic-manage-users.png)
 
@@ -121,7 +121,7 @@ När du har [aktiverat ditt New Relic-konto](#activate-account) kan du komma åt
 
 1. Klicka på det program som du vill använda New Relic One för.
 
-1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg längst ned på **miljökortet** på programöversiktssidan och välj **Öppna New Relic**.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst ned på **miljökortet** på programöversiktssidan och välj **Öppna New Relic**.
 
    ![Hantera användare](assets/newrelic-access.png)
 

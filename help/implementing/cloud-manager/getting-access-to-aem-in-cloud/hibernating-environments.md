@@ -5,9 +5,9 @@ exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 88b4864da30fbf201dbd5bde1ac17d3be977648f
+source-git-commit: f0cf9fa7da7e89d42ab90dee0e8400b26f004574
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Viloläge kan antingen inträffa automatiskt eller manuellt.
 
 Det kan ta upp till några minuter för sandlådeprogrammiljöer att övergå i viloläge. Data bevaras under viloläge.
 
-### Navigera manuellt i en sandlådeprogrammiljö {#using-manual-hibernation}
+### Dölja en sandlådeprogrammiljö manuellt {#using-manual-hibernation}
 
 Du kan manuellt förvara ditt sandlådeprogram från Developer Console. Alla användare av Cloud Manager har tillgång till Developer Console för ett sandlådeprogram.
 
-**Så här förskjuter du en sandlådeprogrammiljö manuellt:**
+**Så här förlägger du en sandlådeprogrammiljö manuellt:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -60,7 +60,7 @@ I Developer Console klickar du på länken **Miljöer** i kolumnerna ovanför li
 
 ![Lista över miljöer som ska försättas i viloläge](assets/hibernate-1b.png)
 
-## Frigör manuellt ett sandlådeprogram från Developer Console {#de-hibernation-introduction}
+## Avplacera ett sandlådeprogram från Developer Console manuellt {#de-hibernation-introduction}
 
 Du kan manuellt förvara ditt sandlådeprogram från Developer Console.
 
@@ -68,13 +68,13 @@ Du kan manuellt förvara ditt sandlådeprogram från Developer Console.
 >
 >En användare med en **utvecklarroll** kan avplacera en sandlådeprogrammiljö.
 
-**Så här tar du manuellt bort viloläget för ett sandlådeprogram från Developer Console:**
+**Om du vill avaktivera ett sandlådeprogram från Developer Console manuellt:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program du vill avvisa för att visa information om det.
 
-1. Klicka på https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg på **Miljökortet** och klicka på **Developer Console**.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och klicka på **Developer Console**.
 
    * Mer information om Developer Console finns i [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console).
 

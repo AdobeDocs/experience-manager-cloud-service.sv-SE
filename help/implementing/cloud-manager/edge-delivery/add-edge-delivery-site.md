@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt prod
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 17e842c9-599a-4877-9834-1e7220f508a8
-source-git-commit: db661281831dcb07491dca16e73e835b487814a6
+source-git-commit: a078d45f81fc7081012ebf24fa8f46dc1a218cd7
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -48,12 +48,12 @@ Klicka på **Lägg till plats** i sidans övre högra hörn.
 
    | Stegnummer | Beskrivning |
    | - | - |
-   | **1** | Lägg till en fil med sökvägen och namnet `well-known/adobe/cloudmanager-challenge.txt` i Git-databasens `main`-gren som visas i fältet **Databas-URL**. Lägg *inte* till en punkt i början av platssökvägen.<br>Om det behövs klickar du på ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera sökvägen till Urklipp. |
-   | **2** | Lägg till koden som visas i textfältet i steg 2 i filen som du just skapade i steg 1.<br>Klicka vid behov på ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera koden till Urklipp. |
+   | **1** | Lägg till en fil med sökvägen och namnet `well-known/adobe/cloudmanager-challenge.txt` i Git-databasens `main`-gren som visas i fältet **Databas-URL**. Lägg *inte* till en punkt i början av platssökvägen.<br>Om det behövs klickar du på ikonen ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera sökvägen till Urklipp. |
+   | **2** | Lägg till koden som visas i textfältet i steg 2 i filen som du just skapade i steg 1.<br>Om det behövs klickar du på ikonen ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera koden till Urklipp. |
    | **3** | Skapa en pull-begäran i Git-databasen för de ändringar som du nyss skapade och sammanfoga den sedan till `main` för att bekräfta koden. |
 
 1. Klicka på **Verifiera**.
 
 När databasen har verifierats uppdateras dess status i Edge Delivery platstabell. En grön cirkel med en vit bock inuti visar statusen.
 
-I samma tabell klickar du på ![Information om Edge Delivery webbplats](https://spectrum.adobe.com/static/icons/workflow_18/Smock_InfoOutline_18_N.svg) för att visa webbplatsinformation. Den här informationen innehåller den verifierade databas-URL:en samt URL:er för förhandsvisnings- och produktionswebbplatsen.
+I samma tabell klickar du på ![Information om Edge Delivery platsikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_InfoOutline_18_N.svg) för att visa webbplatsinformation. Den här informationen innehåller den verifierade databas-URL:en samt URL:er för förhandsvisnings- och produktionswebbplatsen.
