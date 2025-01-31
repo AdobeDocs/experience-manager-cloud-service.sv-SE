@@ -5,7 +5,7 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a5661b6b75180dd77eb794eb5d215fd2e1d5eed0
+source-git-commit: 2724eaaaade94be89d33da5eecec4444cf851bd0
 workflow-type: tm+mt
 source-wordcount: '720'
 ht-degree: 1%
@@ -75,7 +75,7 @@ Det finns flera begränsningar för hur du använder anpassade domännamn med AE
 * Det går bara att lägga till ett domännamn åt gången.
 * AEM as a Cloud Service stöder inte jokerdomäner som `*.example.com`.
 * Innan du lägger till ett anpassat domännamn måste ett giltigt SSL-certifikat som innehåller det anpassade domännamnet (jokerteckenscertifikat är giltiga) installeras för programmet.
-* Ytterligare konfigurationssteg krävs för att använda ett anpassat domännamn med funktionen [Front-End Pipeline.](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md#custom-domains)
+* Ytterligare konfigurationssteg krävs för att använda ett anpassat domännamn med funktionen [Front-End Pipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md#custom-domains).
 
 ## Kom igång {#get-started}
 
