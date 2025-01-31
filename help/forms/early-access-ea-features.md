@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: b4ed1039e199f520a1d7b44ae9af11ecdf52f5c3
+source-git-commit: 3bd7b574b34d09b3a205cf72b307d459efc00eab
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1998'
 ht-degree: 0%
 
 ---
@@ -109,6 +109,11 @@ Vill du börja? I följande artiklar finns detaljerade anvisningar om hur innova
 
 ## Ytterligare innovationer för tidig åtkomst
 
+### HTML e-postmallar i Adaptiv Forms
+
+Med adaptiv Forms kan du använda HTML e-postmallar. Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+
+
 ### Stöd för höger-till-vänster-språk (RTL)
 
 Anpassad Forms kan nu visas på höger-till-vänster-språk, vilket ger en mer omfattande användarupplevelse och användarvänlighet.
@@ -170,6 +175,20 @@ Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan ock
 * **Dataextrahering och import**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
 
 * **Dataverifiering**:: Verifiera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
+
+### API för dokumentgenerering
+
+API:t för dokumentgenerering innehåller en valfri funktion som tillåter direktöverföring av genererad PDF till Azure Blob Storage. Några viktiga fördelar med att överföra PDF direkt till Azure Blob Storage med hjälp av dokumentgenererings-API är:
+
+* **Smidig integrering med molnlagring**:
+Direktöverföring av genererad PDF till Azure Blob Storage eliminerar behovet av ytterligare manuella eller programmatiska steg för att överföra filer, effektivisera arbetsflödena och öka effektiviteten.
+
+* **Centraliserad dokumenthantering**:
+Genom att lagra PDF i Azure Blob Storage kan man centralisera hanteringen av dokument, vilket gör det enklare att organisera, hämta och hantera genererade filer för olika användningsområden.
+
+* **Förbättrad säkerhet**: Genom att utnyttja Azure inbyggda säkerhetsfunktioner, som kryptering i vila och rollbaserad åtkomstkontroll (RBAC), förblir känsliga dokument skyddade under lagring.
+
+* **Anpassningsbara lagringssökvägar**: Möjligheten att definiera anpassade katalogsökvägar säkerställer att genererad PDF lagras på välorganiserade och programspecifika platser, vilket förbättrar filhanteringen.
 
 ## Se även
 
