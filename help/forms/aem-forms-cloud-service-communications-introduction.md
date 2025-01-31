@@ -5,9 +5,9 @@ Keywords: How to generate document?, Generate PDF document, Manipulation PDF doc
 feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 13c1febf55c9b15eab49d356fc1ba3f3d91ad055
+source-git-commit: 52c3c780802025e0895bacc675ba60e97fdce4c5
 workflow-type: tm+mt
-source-wordcount: '2365'
+source-wordcount: '2426'
 ht-degree: 1%
 
 ---
@@ -62,9 +62,16 @@ Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument
 ![Skapa PDF-dokument](assets/outPutPDF_popup.png)
 Bild: Vanligt arbetsflöde för att skapa ett PDF-dokument
 
+API:t för dokumentgenerering returnerar det genererade PDF-dokumentet. Du kan även överföra det genererade PDF till Azure Blob Storage.
+
+<span class="preview"> Överför det genererade PDF med hjälp av dokumentgenererings-API:t till Azure Blob Storage-funktionen under [Tidigt Adobe-program](/help/forms/early-access-ea-features.md). Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+
+
 ### Skapa dokument för PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) {#create-PS-PCL-ZPL-documents}
 
 Du kan använda API:er för dokumentgenerering för att skapa dokument i formaten PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) som baseras på en XDP-formulärdesign eller ett PDF-dokument. Dessa API:er hjälper till att sammanfoga en formulärdesign med formulärdata för att generera ett dokument. Du kan spara dokumentet i en fil och utveckla en anpassad process för att skicka det till en skrivare.
+
+
 
 <!-- ### Processing batch data to create multiple documents
 

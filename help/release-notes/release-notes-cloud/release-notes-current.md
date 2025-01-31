@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 3b7a77fd77226f79510b61f9bb20ad9477b6654e
+source-git-commit: 52c3c780802025e0895bacc675ba60e97fdce4c5
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1750'
 ht-degree: 0%
 
 ---
@@ -150,12 +150,6 @@ Med adaptiv Forms kan du använda HTML e-postmallar. Med HTML e-postmallar kan d
 #### Förbättrat molnlagringsstöd: Direktöverföring från PDF till Azure Blob Storage
 
 AEM Forms API:er för dokumentgenerering har nu stöd för direktöverföring av genererade PDF-dokument till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
-
-* **[Base64-kodad sträng stöds för bifogad fil](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab)**: Komponenten för bifogad fil i adaptiv Forms baserad på kärnkomponenter innehåller nu ett alternativ för att skicka bifogade filer som Base64-kodade strängar.
-
->[!IMPORTANT]
->
-> Är du intresserad av att delta i programmet för tidig åtkomst för något av Forms innovationer? Skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner som du är intresserad av.## CIF tillägg {#cloud-services-cif}
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
