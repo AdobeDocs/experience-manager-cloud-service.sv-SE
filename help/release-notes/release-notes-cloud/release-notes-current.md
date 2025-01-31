@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 52c3c780802025e0895bacc675ba60e97fdce4c5
+source-git-commit: 190e68ebcd3c2a7ba7b995690c802a04728e6962
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1749'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ De redigerare som rekommenderas för att hantera innehåll utan rubriker i AEM �
 
 #### PWA-funktioner {#pwa-features}
 
-[Funktionerna för det progressiva webbprogrammet (PWA) ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites är nu inaktuella för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
+[Funktionerna för det progressiva webbprogrammet (PWA) ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites har tagits bort för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 

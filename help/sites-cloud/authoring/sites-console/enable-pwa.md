@@ -5,9 +5,9 @@ exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 190e68ebcd3c2a7ba7b995690c802a04728e6962
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1926'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,12 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 >* Support från ditt utvecklingsteam
 >
 >Innan du använder den här funktionen rekommenderar Adobe att du diskuterar detta med ditt utvecklingsteam för att definiera det bästa sättet att använda den i ditt projekt.
+
+>[!IMPORTANT]
+>
+>Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [har tagits bort.](/help/release-notes/release-notes-cloud/release-notes-current.md#pwa-features)
+>
+>Befintliga projekt som använder den här funktionen stöds fortfarande, men nya projekt bör inte använda den här funktionen.
 
 ## Introduktion {#introduction}
 
