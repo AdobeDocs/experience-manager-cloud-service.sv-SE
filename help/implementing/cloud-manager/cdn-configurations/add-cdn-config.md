@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
+source-git-commit: 70ee0ca9e7bb37abc6b82413fc02e37347893011
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ För CDN som hanteras av Adobe tillåts bara platser med ACME-validering när et
 >[!IMPORTANT]
 >
 >Har du [lagt till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) och [lagt till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)? Annars måste du utföra dessa två åtgärder innan du kan lägga till en CDN-konfiguration.
+
+Se även [Hanterad CDN för Adobe](https://www.aem.live/docs/byo-cdn-adobe-managed).
 
 **Så här lägger du till en CDN-konfiguration:**
 
