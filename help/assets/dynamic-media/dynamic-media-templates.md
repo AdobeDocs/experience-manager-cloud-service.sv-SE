@@ -4,9 +4,9 @@ description: Lär dig hur du skapar Dynamic Media-mallar med en mallredigerare i
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: ea903daafedb420602700f4b1b4a3ad6bd8ede97
+source-git-commit: f5fa8f1f23d35d239f7bb0e22e104627f9f84317
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2639'
 ht-degree: 0%
 
 ---
@@ -62,13 +62,13 @@ Så här skapar du en tom arbetsyta:
 
 1. Navigera till Assets-vyn och klicka på **[!UICONTROL Dynamic Media Assets]** i den vänstra panelen.
 
-   ![](/help/assets/assets/dm-templates/DM-Assets1.png)
+   ![Dynamic Media-mallar](/help/assets/assets/dm-templates/DM-Assets1.png)
 
 1. Klicka på **[!UICONTROL Create Template]** om du vill spara mallen under Dynamic Media Assets eller navigera till en mapp och klicka på **[!UICONTROL Create Template]** om du vill spara mallen i den mappen. Dialogrutan **[!UICONTROL New Template]** visas.
-   ![](/help/assets/assets/dm-templates/new-template.png)
+   ![Så här skapar du dynamiska mallar som kan anpassas i realtid](/help/assets/assets/dm-templates/new-template.png)
 Om du vill [ skapa en mapp ](/help/assets/add-delete-assets-view.md) under **[!UICONTROL Dynamic Media Assets]** skapar du en mapp under **[!UICONTROL Assets]** . Mappträdet under **[!UICONTROL Assets]** replikeras under **[!UICONTROL Dynamic Media Assets]**.
 1. Ange ett mallnamn, definiera arbetsytans bredd och höjd och klicka på **[!UICONTROL Create]**. En tom arbetsyta visas med menyalternativ på båda sidor som du kan använda för att skapa mallen. Håll muspekaren över menyalternativen för att se deras verktygstips.
-   ![](/help/assets/assets/dm-templates/blank-canvas-page.png)
+   ![anpassningsbar mall i realtid](/help/assets/assets/dm-templates/blank-canvas-page.png)
 
 >[!NOTE]
 >
@@ -76,22 +76,22 @@ Om du vill [ skapa en mapp ](/help/assets/add-delete-assets-view.md) under **[!U
 
 **Menyalternativ i den högra rutan:** Använd dessa alternativ för att lägga till nödvändiga bilder och textlager på arbetsytan.
 
-* ![](/help/assets/assets/dm-templates/add-image.svg): Klicka för att lägga till bilder på arbetsytan.
-* ![](/help/assets/assets/dm-templates/add-text.svg): Klicka för att lägga till text på arbetsytan.
-* ![](/help/assets/assets/dm-templates/show-layers-list.svg): Klicka för att visa en lista över alla lager (bild och text) på arbetsytan. Alla bilder och all text som läggs till på arbetsytan representeras som separata lager.
+* ![DM-mallar](/help/assets/assets/dm-templates/add-image.svg): Klicka för att lägga till bilder på arbetsytan.
+* ![anpassningsbara mallar](/help/assets/assets/dm-templates/add-text.svg): Klicka för att lägga till text på arbetsytan.
+* ![anpassningsbara mallar](/help/assets/assets/dm-templates/show-layers-list.svg): Klicka för att visa listan över alla lager (bild och text) på arbetsytan. Alla bilder och all text som läggs till på arbetsytan representeras som separata lager.
 
 **Menyalternativ i den vänstra rutan:** Använd dessa alternativ för vanliga redigeringsåtgärder som anges nedan.
 
-* ![](/help/assets/assets/dm-templates/layer-selector.svg): Välj ett lager.
-* ![](/help/assets/assets/dm-templates/bring-forward.svg): Klicka för att föra ett markerat lager framåt eller tryck på **Ctrl** + **]** (Windows) eller **Cmd** + **]** (Mac).
-* ![](/help/assets/assets/dm-templates/send-backward.svg): Klicka för att skicka ett markerat lager bakåt eller tryck på **Ctrl** + **[** (Windows) eller **Cmd** + **[** (Mac).
-* ![](/help/assets/assets/dm-templates/undo.svg): Klicka för att ångra den senaste åtgärden eller tryck på **Ctrl** + **Z** (Windows) eller **Cmd** + **Z** (Mac).
-* ![](/help/assets/assets/dm-templates/redo.svg): Klicka för att göra om den senaste åtgärden eller tryck på **Ctrl** + **Y** (Windows) eller **Cmd** + **Y** (Mac).
-* ![](/help/assets/assets/dm-templates/zoomin.svg): Klicka för att zooma in arbetsytan eller tryck på **Ctrl** + **+** (Windows) eller Cmd + **+** (Mac).
-* ![](/help/assets/assets/dm-templates/zoomout.svg): Klicka för att zooma ut arbetsytan eller tryck på **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac).
+* ![DM-mallar](/help/assets/assets/dm-templates/layer-selector.svg): Välj ett lager.
+* ![mallar som stöder anpassning](/help/assets/assets/dm-templates/bring-forward.svg): Klicka för att föra ett markerat lager framåt eller tryck på **Ctrl** + **]** (Windows) eller **Cmd** + **]** (Mac).
+* ![Så här skapar du en mall som enkelt kan anpassas](/help/assets/assets/dm-templates/send-backward.svg): Klicka för att skicka ett markerat lager bakåt eller tryck på **Ctrl** + **[** (Windows) eller **Cmd** + **[** (Mac).
+* ![skapa en mall som kan anpassas direkt](/help/assets/assets/dm-templates/undo.svg): Klicka för att ångra den senaste åtgärden eller tryck på **Ctrl** + **Z** (Windows) eller **Cmd** + **Z** (Mac).
+* ![mall för att skapa banners snabbt](/help/assets/assets/dm-templates/redo.svg): Klicka för att göra om den senaste åtgärden eller tryck på **Ctrl** + **Y** (Windows) eller **Cmd** + **Y** (Mac).
+* ![mall för att snabbt skapa flygblad](/help/assets/assets/dm-templates/zoomin.svg): Klicka för att zooma in arbetsytan eller tryck på **Ctrl** + **+** (Windows) eller Cmd + **+** (Mac).
+* ![mall för att skapa banners snabbt](/help/assets/assets/dm-templates/zoomout.svg): Klicka för att zooma ut arbetsytan eller tryck på **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac).
 * Tryck på **Backsteg** eller **delete** för att ta bort det markerade lagret om ingen text eller egenskap redigeras.
 
-Klicka på ![](/help/assets/assets/dm-templates/show-layers-list.svg) **>** fler alternativ (![](/help/assets/assets/dm-templates/three-dots.svg)) på arbetsytans lager för att redigera arbetsytans mått när som helst när du skapar mallen.
+Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/dm-templates/show-layers-list.svg) **>** fler alternativ (![](/help/assets/assets/dm-templates/three-dots.svg)) på lagret Canvas om du vill redigera arbetsytans dimensioner när du skapar mallen.
 ![](/help/assets/assets/dm-templates/edit-canvas1.png)
 
 >[!NOTE]
@@ -102,19 +102,19 @@ Klicka på ![](/help/assets/assets/dm-templates/show-layers-list.svg) **>** fler
 
 Gör så här för att lägga till bilder på arbetsytan:
 
-1. Klicka på ![](/help/assets/assets/dm-templates/add-image.svg) för att visa panelen [Resursväljare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector). På panelen visas de bilder i din AEM Assets-instans som synkroniseras med Dynamic Media.
+1. Klicka på ![skapa en banderoll på nolltid](/help/assets/assets/dm-templates/add-image.svg) för att visa panelen [Resursväljare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector). På panelen visas de bilder i din AEM Assets-instans som synkroniseras med Dynamic Media.
 1. Bläddra i panelen eller använd nyckelord i sökfältet för att hitta en viss bild.
 1. Dra och släpp en bild på arbetsytan för att använda den. Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att ändra storlek på eller flytta ett lager på arbetsytan.
-   ![](/help/assets/assets/dm-templates/add-image-to-canvas.png)
+   ![skapa en banderoll inom några sekunder](/help/assets/assets/dm-templates/add-image-to-canvas.png)
 
 ### Lägga till textlager på arbetsytan{#add-text-to-the-canvas}
 
 Gör så här för att lägga till textlager på arbetsytan:
 
-1. Klicka på ![](/help/assets/assets/dm-templates/add-text.svg) om du vill lägga till ett textlager på arbetsytan och öppna panelen Egenskaper.
+1. Klicka på ![skapa nya banderoller snabbt](/help/assets/assets/dm-templates/add-text.svg) för att lägga till ett textlager på arbetsytan och öppna panelen Egenskaper.
 1. Markera lagret och klicka på texten för att uppdatera den.
 1. Aktivera **[!UICONTROL Smart Text Resize]** på egenskapspanelen om du vill justera textlängden och teckensnittsstorleken automatiskt så att de passar i det avsedda området optimalt.
-   ![](/help/assets/assets/dm-templates/add-text-layer.png)
+   ![bästa anpassningsbara banners](/help/assets/assets/dm-templates/add-text-layer.png)
 
 Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen.
 
@@ -126,22 +126,22 @@ Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för a
 
 Så här redigerar eller tar du bort ett lager på arbetsytan:
 
-1. Klicka på ![](/help/assets/assets/dm-templates/show-layers-list.svg) och markera lagret antingen på arbetsytan eller i listan Lager.
-1. Klicka på **fler alternativ** (![](/help/assets/assets/dm-templates/three-dots.svg)) om du vill redigera eller ta bort lagret.
+1. Klicka på ![mallar med stöd för dynamiska uppdateringar](/help/assets/assets/dm-templates/show-layers-list.svg) och markera lagret antingen på arbetsytan eller i listan Lager.
+1. Klicka på **fler alternativ** (![mallar med stöd för realtidsuppdateringar](/help/assets/assets/dm-templates/three-dots.svg)) om du vill redigera eller ta bort lagret.
 1. Klicka på **[!UICONTROL Delete]** för att ta bort lagret.
 1. Klicka på **[!UICONTROL Edit]** om du vill redigera lagret med [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer).
-   ![](/help/assets/assets/dm-templates/edit-delete-layer.png)
+   ![skapa banner snabbt](/help/assets/assets/dm-templates/edit-delete-layer.png)
 
 ### Egenskapspanelen{#properties-panel}
 
 Navigera till ett lagers egenskapspanel:
 
-1. Klicka på ![](/help/assets/assets/dm-templates/show-layers-list.svg).
+1. Klicka på ![Skapa snabbt innehåll](/help/assets/assets/dm-templates/show-layers-list.svg).
 1. Markera lagret i listan.
 
 På den här panelen visas positionen för lagrets mittpunkt på arbetsytans plan (X- och Y-värden) och lagrets mått (bredd och höjd) tillsammans med textformateringsalternativ.
 
-![](/help/assets/assets/dm-templates/properties-panel.png)
+![skapa snabbt innehåll](/help/assets/assets/dm-templates/properties-panel.png)
 
 Gå till egenskapspanelen för ett lager och markera ett annat lager på arbetsytan för att navigera till egenskapspanelen.
 
@@ -160,7 +160,7 @@ Se de här vanliga redigeringsåtgärderna för lager när du vill redigera text
 Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen.
 
 **[!UICONTROL Smart Text Resize]** Se till att inkludera **[!UICONTROL Smart Text Resize]** ([Textpassning](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/r-copy-fitting)) så att all text i det avsedda området passar optimalt genom att justera teckensnittsstorleken och längden smart. Den här funktionen förhindrar att texten flödar över eller minimerar extra blanksteg längst ned i texten.
-![](/help/assets/assets/dm-templates/smart-text-resize.png)
+![Skapa innehåll på nolltid](/help/assets/assets/dm-templates/smart-text-resize.png)
 
 ### Parameterlager {#parameterise-a-layer}
 
@@ -168,11 +168,11 @@ När du har skapat en mall med flera lager med bilder och texter, parametriseras
 
 Så här parameteriserar du ett lager:
 
-1. klicka på ![](/help/assets/assets/dm-templates/show-layers-list.svg), markera ett lager och klicka på **[!UICONTROL Parameters]**. Panelen **[!UICONTROL Parameters]** visas.
+1. klicka på ![Skapa innehåll direkt](/help/assets/assets/dm-templates/show-layers-list.svg), markera ett lager och klicka på **[!UICONTROL Parameters]**. Panelen **[!UICONTROL Parameters]** visas.
 1. Växla **[!UICONTROL Include Parameter]** för att parameterisera en egenskap. Mer information om egenskapens beteende efter parametrisering finns i [this](#parameterisation-options-or-allowed-parameters).
 1. **Valfritt:** Byt namn på parametern. Ett parameternamn har ett lagernamn följt av ett suffix. Alla parametriserade egenskaper för ett markerat lager delar samma lagernamn följt av ett varierande suffix. Byt namn på lagret genom att följa den semantiska namnkonventionen, så att när du tar med parametern i URL:en, förklarar parameternamnet själva lagrets innehåll eller dess syfte.
 1. Klicka på **[!UICONTROL Save]**.
-   ![](/help/assets/assets/dm-templates/parameterise-a-layer.png)
+   ![skapa innehåll direkt](/help/assets/assets/dm-templates/parameterise-a-layer.png)
 Om du vill växla mellan parameterpanelen för ett bild- och textlager markerar du lagret på arbetsytan och klickar på **[!UICONTROL Parameters]** .
 
 #### Alternativet Parameterpanel {#parameterisation-options-or-allowed-parameters}
@@ -201,7 +201,7 @@ Ta med parametrarna nedan om du vill redigera texten, teckensnittet, färgen och
 
 Ett annat sätt att göra mallarna flexibla är att använda ett enda parameternamn för att styra flera lager. Den här strategin är användbar för parametern visibility (hide or show layers) för att uppdatera designen eller grafiken från en enda mall.
 
-Följ de här stegen för att tilldela samma namn till parametrarna för dölj (![](/help/assets/assets/dm-templates/Visibility-icon.svg)) för flera lager, så att du kan dölja eller visa dem samtidigt.
+Följ de här stegen för att tilldela samma namn till parametrarna för att dölja (![skapa snabbt innehåll](/help/assets/assets/dm-templates/Visibility-icon.svg)) för flera lager, så att du kan dölja eller visa dem samtidigt.
 
 1. Navigera till [**[!UICONTROL Properties Panel]**](#parameterise-a-layer) för ett lager.
 1. Växla parametern **[!UICONTROL Hide]** om den inte är parameteriserad tidigare.
@@ -219,13 +219,13 @@ Utför dessa steg för att förhandsgranska och publicera mallen och kopiera lev
 1. Klicka på **[!UICONTROL Preview]** på arbetsytans sida. Du kan också navigera till **[!UICONTROL Assets View]** **>** **[!UICONTROL Dynamic Media Assets]** **>** och välja mallen **>**, klicka **[!UICONTROL Edit Template]** **>** och klicka **[!UICONTROL Preview]**. Förhandsgranskningssidan visar mallen, dess parametrar (parametriserade lager och egenskaper), publiceringsstatus och alternativet **[!UICONTROL Publish]**.
 1. Välj parametrar på panelen **[!UICONTROL Template Parameters]** om du vill redigera deras värden och omedelbart uppdatera innehåll, storlek, position eller textformatering för motsvarande mallager i förhandsgranskningen. Till exempel:
    1. Markera ett textlager och redigera texten eller
-   1. Markera ett bildlager, klicka på ![](/help/assets/assets/dm-templates/add-image.svg), markera en bild i resursväljaren och klicka på **[!UICONTROL Refresh]**.
+   1. Markera ett bildlager, klicka på ![skapa innehåll när du vill](/help/assets/assets/dm-templates/add-image.svg), markera en bild i resursväljaren och klicka på **[!UICONTROL Refresh]**.
 
    Mallen uppdateras omedelbart, visar den redigerade texten och ersätter den tidigare bilden med den nya. Dessutom återspeglar bildparametervärdet den nya bildsökvägen. På samma sätt kan du ändra storlek på ett lager genom att justera dess värden, och ändringarna tillämpas på mallen i realtid.
 1. Välj parametern hide för [grupperade lager](#group-layers) i listan om du vill visa eller dölja dem tillsammans i mallen.
 1. **Valfritt:** Ändra parametervärdet **[!UICONTROL Hide]** mellan 0 och 1 och klicka på **[!UICONTROL Refresh]** för att se ändringarna. Lager med samma dolda parameter döljs eller visas tillsammans. På samma sätt kan du styra lagrens synlighet från URL-adressen.
 
-   ![](/help/assets/assets/dm-templates-publish-status.png)
+   ![skapar innehåll i farten](/help/assets/assets/dm-templates-publish-status.png)
 Du kan också växla **[!UICONTROL Include all parameters]** för att redigera alla parametervärden som visas och se uppdateringarna i mallförhandsvisningen.
    <br>
 1. Om du vill publicera mallen på förhandsgranskningssidan klickar du på **[!UICONTROL Publish]** och bekräftar att du vill publicera. Meddelandet Publish Complete visas och publiceringsstatusen uppdateras till Publicerad.
