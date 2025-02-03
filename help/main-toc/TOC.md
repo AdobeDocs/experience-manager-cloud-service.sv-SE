@@ -32,6 +32,7 @@ ht-degree: 2%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
+         + [Release Notes for 2024.11.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
@@ -706,6 +707,7 @@ ht-degree: 2%
       + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
+      +  [Publish Adaptive Forms using Manage Publication](/help/forms/manage-publication.md)
    + Komma igång {#getting-started-forms}
       + [Användningsmiljö och installationsutvecklingsmiljö](/help/forms/create-adaptive-form-tutorial-getting-started.md)
       + [Skapa låneansökningsformuläret](/help/forms/create-adaptive-form-tutorial.md)
@@ -1020,6 +1022,8 @@ ht-degree: 2%
          + [Använd Forms inskickningstjänst](/help/forms/forms-submission-service.md)
       + WYSIWYG {#universal-editor}
          + [Översikt - Universell redigerare för Edge Delivery Services för Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
+         + [Getting Started](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+         + [Add rules to using Rule Editor](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md) 
       + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
