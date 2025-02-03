@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a078d45f81fc7081012ebf24fa8f46dc1a218cd7
+source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2374'
 ht-degree: 0%
 
 ---
@@ -194,9 +194,9 @@ Om du har aktiverat ytterligare publiceringsregioner kan du kontrollera statusen
 
 Du kan även få tillgång till samma information från fliken **Miljö**.
 
-1. Välj fliken **Miljö** på sidan **Översikt**.
+1. På sidan **Översikt** klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**.
 
-1. På fliken **Miljö** väljer du den miljö som du vill fråga på den vänstra menyn.
+1. På sidan **Miljö** väljer du den miljö som du vill fråga på den vänstra menyn.
 
 1. När en miljö har valts:
 
@@ -306,7 +306,7 @@ Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret
 
      ![Logga in lokalt](assets/environ-login-locally.png)
 
-   * Klicka på **Miljö** på den vänstra panelen. På sidan **Miljö** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Lokal inloggning**.
+   * Klicka på ikonen ![Data](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö** från den vänstra panelen. På sidan **Miljö** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Lokal inloggning**.
 
      ![Logga in lokalt från miljöfliken](assets/environ-login-locally-2.png)
 
@@ -322,7 +322,7 @@ Anpassade domännamn stöds i Cloud Manager for Sites-program för både publice
 
 Ett IP-Tillåtelselista stöds i Cloud Manager för författare, publicering och förhandsgranskning av Sites-program.
 
-Om du vill hantera IP Tillåtelselista går du till fliken **Miljö** på sidan **Översikt** i ditt program. Klicka på en enskild miljö så att du kan hantera informationen om den.
+Om du vill hantera IP Tillåtelselista går du till sidan ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö** på sidan **Översikt** i programmet. Klicka på en enskild miljö så att du kan hantera informationen om den.
 
 ### Använd en IP-Tillåtelselista {#apply-ip-allow-list}
 

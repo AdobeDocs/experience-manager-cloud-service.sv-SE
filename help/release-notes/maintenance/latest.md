@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: a091dd6b1b69d77f9eeb50065e8946af0133f4f9
+source-git-commit: a3c414f9b5e575856a942e02661e8c70a7083495
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '541'
 ht-degree: 1%
 
 ---
@@ -55,14 +55,24 @@ Ingen.
 
 ### Föråldrade funktioner och API:er {#deprecated-19149}
 
+Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
+
+#### Ändringar i synkronisering av användargrupp och produktprofil
+
 När du använder Adobe Admin Console för behörighetshantering FÅR följande grupper INTE användas eftersom de inte längre kommer att synkroniseras med AEM:
 * AEM som slutar med _GROUP_NAME_SUFFIX.
 * Produktprofiler från andra miljöer, program eller produkter.
 
 Mer information finns i [Ändringar i användargruppen och produktprofilssynkroniseringen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/changes-in-user-group-and-product-profile-synchronization).
 
+#### Borttagning av SPA {#deprecate-spa-editor}
 
-Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
+[SPA redigerare](/help/implementing/developing/hybrid/introduction.md) har tagits bort för nya projekt från och med version 2025.1.0. SPA Editor stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt.
+
+De redigerare som rekommenderas för att hantera innehåll utan AEM är:
+
+* [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering.
+* [Innehållsfragmentsredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering.
 
 ### Säkerhetskorrigeringar {#security-19149}
 

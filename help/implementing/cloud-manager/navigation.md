@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
+source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -133,7 +133,7 @@ Ett produktionsprogram kan märkas om du vill visa ytterligare funktioner som du
 
 * ![WAF-DDOS-märke](assets/waf-ddos-protection.png) [WAF-DDOS-skydd](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#security)
 
-* [99,99 % SLA (servicenivåavtal)](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla)
+* [99,99 % SLA (Service level agreement)](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla)
 
 Informationsikonen ger dig även snabb åtkomst till ytterligare information om programmet (användbart i listvyn).
 
@@ -215,7 +215,7 @@ Varje program har flera alternativ och data kopplade till sig. Dessa alternativ 
 * ![Ikon för webbsidor](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) [Edge Delivery Sites](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md) - Hantera Edge Delivery webbplatser
 * ![Ikon för inställningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Settings_18_N.svg) [Domäninställningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md) - Hantera anpassade domännamn för programmet
 * ![Lås stängd ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md) - Hantera SSL-certifikat för programmet
-* ![Ikon för sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) [CDN-konfigurationer](/help/implementing/cloud-manager/custom-domain-names/introduction.md) - Hantera CDN-konfigurationer
+* ![Ikon för sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) [Domänmappningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md) - Hantera domänmappningar
 * ![Ikon för uppgiftslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) - Definiera tillåtelselista för vissa IP-adresser
 * ![Ruteikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) [Innehållsuppsättningar](/help/implementing/developing/tools/content-copy.md) - Innehållsuppsättningar som skapats i kopieringssyfte
 * ![Ikonen Historik](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) [Kopiera innehållsaktivitet](/help/implementing/developing/tools/content-copy.md) - aktiviteter för innehållskopiering
@@ -243,7 +243,7 @@ För ett live-program, status för den senaste distributionen med länkar för i
 
 Kortet **Environment** ger dig en översikt över dina miljöer och länkar för snabba åtgärder.
 
-Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** om du vill visa alla miljöer i programmet.
+Kortet **Environment** innehåller endast tre miljöer. Klicka på ikonen ![Arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Visa alla** om du vill visa alla miljöer i programmet.
 
 Se även [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md).
 
@@ -251,7 +251,7 @@ Se även [Hantera miljöer](/help/implementing/cloud-manager/manage-environments
 
 Kortet **Pipelines** ger dig en översikt över dina pipelines och länkar för snabba åtgärder.
 
-Kortet **Pipelines** innehåller endast tre pipelines. Klicka på **Visa alla** om du vill visa alla rörledningar för programmet.
+Kortet **Pipelines** innehåller endast tre pipelines. Klicka på ikonen ![Arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Visa alla** om du vill visa alla rörledningar för programmet.
 
 Se även [Hantera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) för mer information om hur du hanterar dina pipelines.
 

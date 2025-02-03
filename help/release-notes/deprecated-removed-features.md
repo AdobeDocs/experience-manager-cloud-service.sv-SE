@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: b0bc2eb4298a88c6dc421390dd9527e181386b5d
+source-git-commit: 32cc525d5443f455f1579ef027c08796ffc209e7
 workflow-type: tm+mt
-source-wordcount: '2513'
+source-wordcount: '2543'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Funktioner | Inaktuell funktion | Ersättning |
 | ------------ | ------------------ | ----------- |
+| Sites | [Funktioner i PWA](/help/sites-cloud/authoring/sites-console/enable-pwa.md) | Ingen |
+| Sites | [SPA Editor](/help/implementing/developing/hybrid/introduction.md) | De redigerare som rekommenderas för hantering av headless-innehåll i AEM är:<br>- [Universell redigerare](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering.<br>- [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering. |
 | [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api) |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen är planerad att tas bort snart. |
 | [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md). |

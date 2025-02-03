@@ -4,9 +4,9 @@ description: Lär dig hur du använder det AEM-hanterade CDN och hur du pekar di
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 6600f5c1861e496ae8ee3b6d631ed8c033c4b7ef
+source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1729'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ För att förbereda dig för innehållsleverans med AEM inbyggt CDN via Cloud Ma
 * [EDGE DELIVERY SERVICES i CLOUD MANAGER](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
 * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
 * [Introduktion till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md)
-* [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
+* [Konfigurera ett CDN](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
 
 **Begränsa trafik**
 
@@ -150,13 +150,13 @@ I Windows:
 curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -v --header "X-Forwarded-Host: example.com" --header "X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>" --header "x-aem-debug: edge=true"
 ```
 
-Detta återspeglar vissa egenskaper som används i begäran i svarshuvudet `x-aem-debug`. Till exempel:
+Den här processen speglar vissa egenskaper som används i begäran i svarshuvudet `x-aem-debug`. Till exempel:
 
 ```
 x-aem-debug: byocdn=true,edge=true,edge-auth=edge-auth,edge-key=edgeKey1,X-AEM-Edge-Key=set,host=publish-p87058-e257304-cmstg.adobeaemcloud.com,x-forwarded-host=wknd.site,adobe_unlocked_byocdn=true
 ```
 
-Om du använder den här metoden kan du till exempel verifiera värden för värden, om edge-autentiseringen är konfigurerad, samt det x-vidarebefordrade host-värdet, om en edge-nyckel är inställd och vilken nyckel som används (om en nyckel matchar).
+Den här processen gör att du kan verifiera information som värdvärden, edge-autentiseringskonfiguration och det x-forward-host-rubrikvärdet. Den identifierar också om en kantnyckel är inställd och vilken tangent som används om det finns en matchning.
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 
@@ -187,8 +187,7 @@ När en begäran tar emot ett 403 ej tillåtet svar betyder det att begäran sak
 
 **Fel 421 Feldirigerad omdirigering**
 
-När en begäran tar emot ett 421-fel med en brödtext runt `Requested host does not match any Subject Alternative Names (SANs) on TLS certificate` anger det att HTTP `Host`-uppsättningen inte matchar några värdar i värddatorns certifikat. Detta indikerar vanligtvis att antingen `Host` eller SNI-inställningen är fel. Kontrollera att både inställningarna för `Host` och SNI pekar på publish-p&lt;PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com värd.
-
+Ett 421-fel med meddelandet `Requested host does not match any Subject Alternative Names (SANs) on TLS certificate` anger att HTTP `Host` inte matchar några värdar som finns i certifikatet. Det här problemet indikerar vanligtvis att antingen `Host` eller SNI-inställningen är fel. Kontrollera att både `Host`- och SNI-inställningarna pekar på värden för publish-p&lt;PROGRAM_ID>-e.adobeaemcloud.com.
 
 **För många omdirigeringsslinga**
 

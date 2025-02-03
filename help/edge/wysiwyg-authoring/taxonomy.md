@@ -4,12 +4,13 @@ description: Lär dig hur du hanterar taxonomidata för att använda taggar med 
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 017982e4-a4c8-4097-8751-9619cc4639d0
-source-git-commit: 01966d837391d13577956a733c2ee7dc02f88103
+source-git-commit: 701a7c08d591d9a3ffabfe041745748194c923b2
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
+
 
 # Hantera taxonomidata {#managing-taxonomy-data}
 
@@ -77,7 +78,7 @@ Du börjar redigera en taxonomisida precis som andra sidor i AEM.
 
 Sidan som visas i sidredigeraren är skrivskyddad eftersom innehållet i taxonomin genereras automatiskt från de markerade taggarna och namnutrymmena. De fungerar som en typ av filter som automatiskt genererar innehållet i taxonomin. Därför finns det ingen anledning att redigera sidan direkt i redigeraren.
 
-AEM uppdaterar automatiskt innehållet på taxonomisidan när du uppdaterar underliggande taggar och namnutrymmen. Du måste [publicera taxonomin](#publishing) igen efter en ändring för att göra ändringarna tillgängliga för dina användare.
+AEM uppdaterar automatiskt innehållet på taxonomisidan när du uppdaterar underliggande taggar och namnutrymmen. Du måste [publicera taxonomin](#publishing) igen efter en ändring för att ändringarna ska bli tillgängliga för användarna.
 
 ## Uppdatera paths.json för taxonomipublikation {#paths-json}
 
@@ -155,6 +156,10 @@ Använd `<taxonomy-json-name>` som du definierade när du [mappar taxonomin till
       "title": "Translate"
     }
   ],
+  "columns": [
+    "tag",
+    "title"
+  ],
   ":type": "sheet"
 }
 ```
@@ -162,3 +167,47 @@ Använd `<taxonomy-json-name>` som du definierade när du [mappar taxonomin till
 Dessa JSON-data uppdateras automatiskt när du uppdaterar taxonomin och publicerar den på nytt. Ditt program kan programmässigt komma åt den här informationen för dina användare.
 
 [Om du behåller taggar på flera språk ](/help/sites-cloud/administering/tags.md#managing-tags-in-different-languages) kan du komma åt dessa språk genom att skicka ISO2-språkkoden som värdet för en `sheet=` -parameter.
+
+## Exponera ytterligare taggegenskaper {#additional-properties}
+
+Som standard innehåller din taxonomi `tag`- och `title`-värden enligt [ i föregående exempel.](#accessing) Du kan konfigurera taxonomin så att ytterligare taggegenskaper visas. I det här exemplet visar vi taggbeskrivningen.
+
+1. Använd Sites-konsolen för att välja den taxonomi du skapade.
+1. Tryck eller klicka på ikonen **Egenskaper** i verktygsfältet.
+1. I avsnittet **Ytterligare egenskaper** trycker eller klickar du på **Lägg till** för att lägga till ett fält.
+1. I det nya fältet anger du JRC-egenskapens namn som ska visas. I det här fallet anger du `jcr:description` som taggbeskrivning.
+1. Tryck eller klicka på **Spara och stäng**.
+1. Ha taxonomin markerad och tryck eller klicka på **Snabba Publish** i verktygsfältet.
+
+Nu [när du kommer åt din taxonomi](#accessing) inkluderas taggbeskrivningen (eller den egenskap du väljer att visa) i JSON.
+
+```json
+{
+  "total": 3,
+  "offset": 0,
+  "limit": 3,
+  "data": [
+    {
+      "tag": "default:",
+      "title": "Standard Tags",
+      "jcr:description": "These are the standard tags"
+    },
+    {
+      "tag": "do-not-translate",
+      "title": "Do Not Translate",
+      "jcr:description": "Tag to mark pages that should not be translated"
+    },
+    {
+      "tag": "translate",
+      "title": "Translate",
+      "jcr:description": "Tag to mark pages that should be translated"
+    }
+  ],
+  "columns": [
+    "tag",
+    "title",
+    "jcr:description"
+  ],
+  ":type": "sheet"
+}
+```
