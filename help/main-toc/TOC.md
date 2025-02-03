@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: b9364394f683fa8af5d28723e5f10b20b001ea37
+source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
 workflow-type: tm+mt
-source-wordcount: '5998'
+source-wordcount: '6020'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
-         + [Release Notes for 2024.11.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-11-0.md)
+         + [Versionsinformation för 2024.11.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
@@ -110,9 +110,9 @@ ht-degree: 2%
          + [Underhållsinformation för 2023.6.0](/help/release-notes/maintenance/2023/2023-6-0.md)
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
-         + [Maintenance Release Notes for 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
-   + Versionsinformation för Cloud Manager {#cloud-manager}
-      + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
+         + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
+   + {#cloud-manager}
+      + [Current Release Notes](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
          + [Versionsinformation för 2024.12.0](/help/implementing/cloud-manager/release-notes/2024/2024-12-0.md)
          + [Versionsinformation för 2024.11.0](/help/implementing/cloud-manager/release-notes/2024/2024-11-0.md)
@@ -534,8 +534,8 @@ ht-degree: 2%
       + [Hantera PDF-dokument](/help/assets/manage-pdf-documents.md)
    + Konfigurera, administrera och utöka [!DNL Assets] {#admin}
       + [Identifiera duplicerade resurser](/help/assets/detect-duplicate-assets.md)
-      + [Developer docs and APIs references](/help/assets/developer-reference-material-apis.md)
-      + [Folder metadata schema](/help/assets/folder-metadata-schema.md)
+      + [Dokumentreferenser för utvecklare och API:er](/help/assets/developer-reference-material-apis.md)
+      + [Mappmetadatamatchschema](/help/assets/folder-metadata-schema.md)
       + [Arbeta med bild- och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md)
       + [Konfigurera transkription för ljud- och videomaterial](/help/assets/configure-transcription.md)
       + [Översätta resurser](/help/assets/translate-assets.md)
@@ -576,6 +576,7 @@ ht-degree: 2%
       + [Dynamic Media nyhetsbrevarkiv från Experience League](/help/assets/dynamic-media/dynamic-media-newsletter.md)
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/administering-dynamic-media.md)
       + [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md)
+      + [Dynamic Media-mallar](/help/assets/dynamic-media/dynamic-media-templates.md)
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/config-dm.md)
       + [Valfritt - Konfigurera Dynamic Media, allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md)
       + [Valfritt - Konfigurera Dynamic Media, Publish Setup](/help/assets/dynamic-media/dm-publish-settings.md)
@@ -707,7 +708,7 @@ ht-degree: 2%
       + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
-      +  [Publish Adaptive Forms using Manage Publication](/help/forms/manage-publication.md)
+      + [Publish Adaptive Forms using Manage Publication](/help/forms/manage-publication.md)
    + Komma igång {#getting-started-forms}
       + [Användningsmiljö och installationsutvecklingsmiljö](/help/forms/create-adaptive-form-tutorial-getting-started.md)
       + [Skapa låneansökningsformuläret](/help/forms/create-adaptive-form-tutorial.md)
@@ -780,7 +781,7 @@ ht-degree: 2%
                + [Skillnad mellan redigerare för grundregel och redigerare för grundkomponentregel](/help/forms/rule-editor-core-components-difference-tables.md)
                + [Operatorer och händelsetyper som är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-events-operators.md)
                + [Exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md)
-               + [Using asynchronous functions in an Adaptive Form](/help/forms/using-async-funct-in-rule-editor.md)
+               + [Använda asynkrona funktioner i ett adaptivt formulär](/help/forms/using-async-funct-in-rule-editor.md)
                + [Anropa tjänstförbättringar i Visual Rule Editor för formulär som baseras på kärnkomponenter](/help/forms/invoke-service-enhancements-rule-editor.md)
             + Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter {#create-and-use-custom-function-core-component}
                + [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md)
@@ -1022,8 +1023,8 @@ ht-degree: 2%
          + [Använd Forms inskickningstjänst](/help/forms/forms-submission-service.md)
       + WYSIWYG {#universal-editor}
          + [Översikt - Universell redigerare för Edge Delivery Services för Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
-         + [Getting Started](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
-         + [Add rules to using Rule Editor](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md) 
+         + [Komma igång](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+         + [Lägg till regler i med Regelredigeraren](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
       + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
@@ -1197,14 +1198,14 @@ ht-degree: 2%
          + [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
          + [Felsöka SSL-certifikatfel](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md)
          + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
-      + CDN-konfigurationer {#cdn-configurations}
-         + [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
-         + [Hantera CDN-konfigurationer](/help/implementing/cloud-manager/cdn-configurations/manage-cdn-config.md)
+      + Domänmappningar {#cdn-configurations}
+         + [Lägga till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
+         + [Hantera domänmappningar](/help/implementing/cloud-manager/cdn-configurations/manage-cdn-config.md)
       + IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
          + [Lägg till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
          + [Använd och ta bort tillämpning av IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md)
-         + [Manage IP Allow Lists](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
+         + [Hantera IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/managing-ip-allow-lists.md)
       + [Licensieringspanel](/help/implementing/cloud-manager/license-dashboard.md)
       + [Förstå förfrågningar om Cloud Service](/help/implementing/cloud-manager/content-requests.md)
       + [Kontrollpanel för CDN-prestanda](/help/implementing/cloud-manager/cdn-performance.md)
@@ -1323,9 +1324,9 @@ ht-degree: 2%
          + [Introduktion till App Builder](/help/implementing/developing/extending/app-builder/videos/introduction.md)
          + [Adobe Developer Console](/help/implementing/developing/extending/app-builder/videos/adobe-developer-console.md)
          + [SDK och CLI](/help/implementing/developing/extending/app-builder/videos/sdks-and-cli.md)
-         + [Skapa ett program](/help/implementing/developing/extending/app-builder/videos/create.md)
+         + [Create an application](/help/implementing/developing/extending/app-builder/videos/create.md)
          + [Åtgärder](/help/implementing/developing/extending/app-builder/videos/actions.md)
-         + [Storage libraries](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
+         + [Lagringsbibliotek](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
          + [Händelsestyrda program](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
          + [Front-end-applikationer](/help/implementing/developing/extending/app-builder/videos/front-end-applications.md)
          + [Dokumentskydd](/help/implementing/developing/extending/app-builder/videos/security.md)
