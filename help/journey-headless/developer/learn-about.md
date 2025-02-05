@@ -5,7 +5,7 @@ exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1626'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Läs om CMS Headless Development {#learn-about}
 
-I den här delen av den [AEM Headless Developer Journey ](overview.md) får du lära dig mer om headless-teknik och varför du skulle använda den.
+I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig mer om headless-teknik och varför du skulle använda den.
 
 ## Syfte {#objective}
 
@@ -26,11 +26,11 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras o
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
-Ända sedan de lättanvända, storskaliga CMS:erna (Content Management System) började användas har organisationer använt dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
+Ända sedan de lättanvända, storskaliga CMS:erna (Content Management System) började användas har organisationer använt dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Genom att använda CMS som en central punkt för att administrera upplevelser blir ni effektivare eftersom ni slipper utföra samma uppgifter i olika system.
 
-![Klassisk CMS i full hög](assets/full-stack.png)
+![Den klassiska högklassiga CMS](assets/full-stack.png)
 
-I ett CMS-system i full hög finns funktionen för att hantera ditt innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
+I en CMS i full hög finns funktioner för att hantera ditt innehåll i CMS. Systemfunktionerna består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
 
 * Du har ett system att underhålla.
 * Innehållet hanteras centralt.
@@ -47,7 +47,7 @@ Komplexiteten i beroendena i högen blir snabbt tydlig eftersom du ser att andra
 
 Det helstatiska arbetssättet skapar en silo där alla upplevelser finns i ett system. Ändringar eller tillägg i en komponent i silon kräver ändringar i andra komponenter, vilket kan göra ändringar som är tidskrävande och kostsamma.
 
-Detta gäller särskilt presentationssystemet, som i traditionella uppsättningar ofta är nära knutet till CMS-systemet. Alla nya kanaler innebär vanligtvis en uppdatering av presentationssystemet, vilket kan påverka alla andra kanaler.
+Detta gäller särskilt presentationssystemet, som i traditionell form ofta är starkt knutet till CMS. Alla nya kanaler innebär vanligtvis en uppdatering av presentationssystemet, vilket kan påverka alla andra kanaler.
 
 ![Komplexiteten ökar när kanaler läggs till i en hög](assets/presentation-complexity.png)
 
@@ -61,13 +61,13 @@ Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i 
 
 En headless-server sitter till exempel förmodligen i ett rack i ett serverrum någonstans och har ingen övervakare ansluten. För att få tillgång till den måste du fjärransluta till den. I det här fallet är monitorn huvudet när den tar hand om återgivningen av serverns utdata. Du som kund för tjänsten kan ge dig ett eget huvud (bildskärmen) när du fjärransluter till den.
 
-När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Om **content** endast levereras på ett standardiserat sätt utesluter dock ett headless CMS den slutliga utdatarenderingen och **presentationen** av innehållet lämnas till den förbrukande tjänsten.
+När vi talar om ett headless CMS hanterar CMS innehållet och fortsätter att leverera det till konsumenterna. Men om **content** endast levereras på ett standardiserat sätt utesluter ett headless CMS den slutliga utdatarenderingen, vilket innebär att **presentationen** av innehållet lämnas till den förbrukande tjänsten.
 
 ![Headless CMS](assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från den headless CMS och erbjuder sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
-Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
+Om du utelämnar huvudet förenklas CMS genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
 ## Frikoppling {#decoupling}
 
@@ -89,7 +89,7 @@ Huvudlös innehållsleverans använder ofta GraphQL API:er. GraphQL tillåter en
 
 Oavsett vilket API du väljer kan du, genom att definiera ett headless-system baserat på gemensamma API:er, använda den senaste webbläsaren och andra webbtekniker som progressiva webbappar (PWA). API:er skapar ett standardgränssnitt som är enkelt att utöka och anpassa.
 
-Normalt återges innehållet på klientsidan. Detta innebär normalt att någon anropar ditt innehåll på en mobil enhet, att ditt CMS-system skickar innehållet och att den mobila enheten (klienten) sedan ansvarar för återgivningen av det innehåll som du betjänade. Om enheten är gammal eller långsam på något annat sätt är den digitala upplevelsen också långsam.
+Normalt återges innehållet på klientsidan. Detta innebär normalt att någon anropar ditt innehåll på en mobil enhet, att CMS levererar innehållet och att den mobila enheten (klienten) sedan ansvarar för återgivningen av det innehåll som du betjänade. Om enheten är gammal eller långsam på något annat sätt är den digitala upplevelsen också långsam.
 
 Att frigöra innehåll från presentation innebär att det kan finnas mer kontroll över sådana prestandaproblem på klientsidan. SSR-återgivning (Server-side rendering) överför ansvaret för återgivningen av innehållet från klientens webbläsare till servern. På så sätt kan ni som innehållsleverantör erbjuda en garanterad prestandanivå för er målgrupp om det är vad som krävs.
 
@@ -127,9 +127,9 @@ Bygg vidare på den här kunskapen och fortsätt din AEM resa utan trassel genom
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Komma igång med AEM Headless-as a Cloud Service](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
+Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
 
 * [En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Förstå AEM as a Cloud Service struktur
-* En [introduktion till AEM som ett headless CMS](/help/headless/introduction.md)
+* En [introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd de här praktiska självstudiekurserna för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som är rätt för dig.

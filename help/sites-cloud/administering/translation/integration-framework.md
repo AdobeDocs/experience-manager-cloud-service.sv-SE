@@ -5,7 +5,7 @@ feature: Language Copy
 role: Admin
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
 solution: Experience Manager Sites
-source-git-commit: c4cb466bf6a9b6f8f4a28943d28bdb524610f5ad
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1447'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM. Det handlar om tre grundläggande steg.
 
-1. [Anslut till översättningstjänsten.](#connecting-to-a-translation-service-provider)
-1. [Skapa en konfiguration för Translation Integration Framework.](#creating-a-translation-integration-configuration)
-1. [Associera molnkonfigurationerna med sidorna.](#configuring-pages-for-translation)
+1. [Anslut till översättningstjänsten](#connecting-to-a-translation-service-provider).
+1. [Skapa en konfiguration för översättningsintegreringsramverket](#creating-a-translation-integration-configuration).
+1. [Associera molnkonfigurationerna med dina sidor](#configuring-pages-for-translation).
 
 En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
 
@@ -58,7 +58,7 @@ När du har konfigurerat ett ramverk för översättningsintegrering kan du [ass
 
 En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en översättningskonfiguration:
 
-1. I den [globala navigeringsmenyn ](/help/sites-cloud/authoring/basic-handling.md#global-navigation) väljer du **Verktyg > Cloud Service och översättningsmeny**.
+1. På den [globala navigeringsmenyn](/help/sites-cloud/authoring/basic-handling.md#global-navigation) väljer du **Verktyg > Cloud Service och översättningsmeny**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.
 1. Ange följande information i fälten och välj sedan **Skapa**:
    1. Välj **Konfigurationstyp** i listrutan.

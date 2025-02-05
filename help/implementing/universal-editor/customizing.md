@@ -4,7 +4,7 @@ description: Lär dig mer om de olika tilläggspunkterna och andra funktioner so
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: afcb3cbc2b0868de7bac9446eb07ae30c033de66
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 0%
@@ -45,9 +45,9 @@ Du kan begränsa vilka komponenter som tillåts per behållare i den universella
 
 ### Visa och dölj komponenter villkorligt på egenskapspanelen {#conditionally-hide}
 
-Även om en eller flera komponenter i allmänhet är tillgängliga för författarna, kan det finnas situationer där det inte passar. I så fall kan du dölja komponenter på egenskapspanelen genom att lägga till ett `condition`-attribut i [fälten i komponentmodellen.](/help/implementing/universal-editor/field-types.md#fields)
+Även om en eller flera komponenter i allmänhet är tillgängliga för författarna, kan det finnas situationer där det inte passar. I så fall kan du dölja komponenter på egenskapspanelen genom att lägga till ett `condition`-attribut i [fälten i komponentmodellen](/help/implementing/universal-editor/field-types.md#fields).
 
-Villkoren kan definieras med hjälp av [JsonLogic-schema.](https://jsonlogic.com/) Om villkoret är sant visas fältet. Om villkoret är falskt döljs fältet.
+Villkoren kan definieras med [JsonLogic-schema](https://jsonlogic.com/). Om villkoret är true visas fältet. Om villkoret är falskt döljs fältet.
 
 >[!BEGINTABS]
 
@@ -86,9 +86,9 @@ Villkoren kan definieras med hjälp av [JsonLogic-schema.](https://jsonlogic.com
 
 ### URL för anpassad förhandsvisning {#custom-preview-urls}
 
-Du kan ange en anpassad URL för förhandsgranskning via en `urn:adobe:aue:config:preview`-metakonfiguration, som öppnas när du klickar på knappen **Öppna sida** i [redigerarens övre högra verktygsfält.](/help/sites-cloud/authoring/universal-editor/navigation.md#universal-editor-toolbar)
+Du kan ange en anpassad URL för förhandsgranskning via en `urn:adobe:aue:config:preview`-metakonfiguration, som öppnas när du klickar på knappen **Öppna sida** i [redigerarens övre högra verktygsfält](/help/sites-cloud/authoring/universal-editor/navigation.md#universal-editor-toolbar).
 
-Detta är särskilt användbart för program med särskilda förhandsgranskningskrav, till exempel de [som använder Edge Delivery Services med WYSIWYG-redigering.](/help/edge/wysiwyg-authoring/authoring.md)
+Detta är särskilt användbart för program med särskilda förhandsgranskningskrav, till exempel de [som använder Edge Delivery Services med WYSIWYG ](/help/edge/wysiwyg-authoring/authoring.md).
 
 Det gör du genom att helt enkelt ta med önskad URL för förhandsgranskning i en meta-tagg för det instrumenterade programmet, som i följande exempel.
 
@@ -110,6 +110,6 @@ Om du vill utforska de här möjligheterna kan du läsa följande resurser:
 
 >[!TIP]
 >
->Om du föredrar att lära dig som exempel kan du läsa självstudiekursen [AEM UI extensibility.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview) Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för implementering av ett UI-tillägg i den universella redigeraren desamma.
+>Om du föredrar att lära dig som exempel kan du läsa självstudiekursen [AEM UI extensibility ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
 
 [Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) kan du aktivera eller inaktivera tillägg per instans, få åtkomst till tillägg från första Adobe, inklusive tillägg för den universella redigeraren, och mycket annat.

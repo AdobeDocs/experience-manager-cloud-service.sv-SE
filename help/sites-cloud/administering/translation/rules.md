@@ -5,7 +5,7 @@ feature: Language Copy
 role: Admin
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1288'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Innehållsfragment och översättningsregler {#content-fragments}
 
-Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om alternativet **Aktivera innehållsmodellfält för översättning** inte har aktiverats på [konfigurationsnivån för översättningsramverket.](integration-framework.md#assets-configuration-properties)
+Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om alternativet **Aktivera innehållsmodellfält för översättning** inte har aktiverats på [konfigurationsnivån för översättningsramverket](integration-framework.md#assets-configuration-properties).
 
 Om alternativet **Aktivera fält för innehållsmodell för översättning** är aktivt använder AEM fältet **Översättningsbart** i [modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
 

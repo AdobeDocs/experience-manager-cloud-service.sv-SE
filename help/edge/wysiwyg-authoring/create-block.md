@@ -4,7 +4,7 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 384f8a1301ea488e0b2aa493389d090896fe3b33
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%
@@ -22,9 +22,9 @@ Den här guiden innehåller stegvisa instruktioner för hur du skapar block som 
 
 Den här guiden kräver kunskaper om WYSIWYG framtagning av Edge Delivery Services och den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
 
-* Du har slutfört självstudiekursen [Edge Delivery Service.](/help/edge/developer/tutorial.md)
-* Du har åtkomst till en [AEM Cloud Service-sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
-* Du har [aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
+* Du har slutfört [självstudiekursen om Edge Delivery-tjänster](/help/edge/developer/tutorial.md).
+* Du har åtkomst till en [AEM Cloud Service-sandlåda](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
+* Du har [aktiverat den universella redigeraren i samma sandlådemiljö](/help/implementing/universal-editor/getting-started.md).
 * Du har slutfört guiden [Komma igång för utvecklare för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 
 Den här guiden bygger vidare på det arbete som gjorts i guiden [Komma igång för utvecklare för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) .
@@ -155,7 +155,7 @@ Följande exempel på offertblock följer den här metoden.
 
 Nu när det grundläggande offertblocket är definierat och implementerat i exempelprojektet kan du lägga till ett offertblock på en befintlig sida.
 
-1. Logga in på AEM as a Cloud Service i en webbläsare. [Använd webbplatskonsolen och](/help/sites-cloud/authoring/basic-handling.md) navigera till webbplatsen som du skapade i [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och markera en sida.
+1. Logga in på AEM as a Cloud Service i en webbläsare. [Använd webbplatskonsolen](/help/sites-cloud/authoring/basic-handling.md) för att navigera till webbplatsen som du skapade i guiden [Komma igång för utvecklare för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och markera en sida.
 
    * I det här fallet används `index` för illustrativa syften.
 
@@ -281,7 +281,7 @@ Grattis! Du har nu ett fullt fungerande och formaterat citattecken. Du kan anvä
 
 ### Blockalternativ {#block-options}
 
-Om du behöver ett block som ska se ut eller bete dig lite annorlunda baserat på vissa omständigheter, men inte tillräckligt annorlunda för att bli ett nytt block i sig, kan du låta författarna välja mellan [blockalternativen.](content-modeling.md#type-inference)
+Om du behöver ett block som ska se ut eller bete dig lite annorlunda baserat på vissa omständigheter, men inte tillräckligt annorlunda för att bli ett nytt block i sig, kan du låta författarna välja mellan [blockalternativen](content-modeling.md#type-inference).
 
 Genom att lägga till en `classes`-egenskap i blocket återges egenskapen i tabellhuvudet för enkla block eller som värdelista för objekt i ett behållarblock.
 
@@ -343,4 +343,4 @@ Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery).

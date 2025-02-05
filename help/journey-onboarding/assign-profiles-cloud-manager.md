@@ -4,7 +4,7 @@ description: Följ den här sidan för att lära dig hur du tilldelar teammedlem
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 555688e5-f937-462c-9fcc-b90685f1882b
-source-git-commit: 8ed477ec0c54bb0913562b9581e699c0bdc973ec
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1520'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Tilldela teammedlemmar till Cloud Manager produktprofiler {#assign-team-members}
 
-I den här delen av [introduktionsresan ](overview.md) får du lära dig hur du tilldelar teammedlemmar till Cloud Manager produktprofiler.
+I den här delen av [introduktionsresan](overview.md) får du lära dig hur du tilldelar teammedlemmar till Cloud Manager produktprofiler.
 
 ## Syfte {#objective}
 
-I det föregående steget på den här resan, [Åtkomst till Admin Console,](admin-console.md), lärde du dig att logga in på Admin Console och verifiera dina behörigheter som systemadministratör. Nu kan du ge dina teammedlemmar tillgång till Cloud Manager. Det gör du genom att tilldela produktprofiler.
+I det föregående steget i den här resan, [Åtkomst till Admin Console](admin-console.md), lärde du dig att logga in på Admin Console och verifiera dina behörigheter som systemadministratör. Nu kan du ge dina teammedlemmar tillgång till Cloud Manager. Det gör du genom att tilldela produktprofiler.
 
 När du ger användare åtkomst till en Adobe-lösning behöver du inte nödvändigtvis ge dem full åtkomst. Med produktprofiler kan varje lösning ha en egen uppsättning användarbehörigheter. Du använder Admin Console för att tilldela produktprofiler.
 
@@ -177,7 +177,7 @@ Under den här delen av introduktionsresan lärde du dig att tilldela teammedlem
 * Lär dig de tre viktiga Cloud Manager-produktprofilerna: **Business Owner**, **Deployment Manager** och **Developer**.
 * Du kan tilldela teammedlemmar till Cloud Manager produktprofiler.
 
-Du kan nu fortsätta din introduktionsresa genom att nästa gång granska dokumentet [Access Cloud Manager](cloud-manager.md) där du får lära dig hur du kommer åt Cloud Manager och skapar dina projektresurser.
+Du kan nu fortsätta din introduktionsresa genom att nästa gång granska dokumentet [Åtkomst till Cloud Manager](cloud-manager.md) där du får lära dig hur du kommer åt Cloud Manager och skapar dina projektresurser.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2414'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Varje utrullningskonfiguration använder en utlösare som gör att utrullningen 
 
 I följande tabell visas de utrullningskonfigurationer som medföljer AEM. Tabellen innehåller utlösar- och synkroniseringsåtgärderna för varje utrullningskonfiguration.
 
-Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav kan du [skapa en rollout-konfiguration.](#creating-a-rollout-configuration)
+Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav kan du [skapa en rollout-konfiguration](#creating-a-rollout-configuration).
 
 | Namn | Beskrivning | Utlösare | [Synkroniseringsåtgärder](#synchronization-actions) |
 |---|---|---|---|
@@ -61,7 +61,7 @@ Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav k
 
 I följande tabell visas de synkroniseringsåtgärder som medföljer AEM.
 
-Om de installerade åtgärderna inte uppfyller dina krav kan du [skapa en ny synkroniseringsåtgärd.](/help/implementing/developing/extending/msm.md#creating-a-new-synchronization-action)
+Om de installerade åtgärderna inte uppfyller dina krav kan du [skapa en ny synkroniseringsåtgärd](/help/implementing/developing/extending/msm.md#creating-a-new-synchronization-action).
 
 | Åtgärdsnamn | Beskrivning | Egenskaper |
 |---|---|---|
@@ -88,7 +88,7 @@ Om de installerade åtgärderna inte uppfyller dina krav kan du [skapa en ny syn
 Du kan [skapa en utrullningskonfiguration](/help/implementing/developing/extending/msm.md#creating-a-new-rollout-configuration) när de installerade utrullningskonfigurationerna inte uppfyller dina programkrav genom att utföra följande steg.
 
 1. [Skapa utrullningskonfiguration-](/help/implementing/developing/extending/msm.md#create-the-rollout-configuration)
-1. [Lägg till synkroniseringsåtgärder i utrullningskonfigurationen.](/help/implementing/developing/extending/msm.md#add-synchronization-actions-to-the-rollout-configuration)
+1. [Lägg till synkroniseringsåtgärder i utrullningskonfigurationen](/help/implementing/developing/extending/msm.md#add-synchronization-actions-to-the-rollout-configuration).
 
 Den nya rollout-konfigurationen är sedan tillgänglig för dig när du konfigurerar rollout-konfigurationer på en plan- eller Live Copy-sida.
 

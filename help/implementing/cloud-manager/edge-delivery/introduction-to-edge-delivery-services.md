@@ -4,7 +4,7 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med hjälp 
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0fb5476b4cff9e26971696bd8352181a71e7b3e4
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '766'
 ht-degree: 1%
@@ -69,7 +69,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 
 **Edge Delivery att göra-listan** i Cloud Manager är en boardinguppgiftschecklista som är avsedd att vägleda dig genom introduktionen och hantera din Edge Delivery-webbplats hela vägen till [Go-Live](/help/journey-onboarding/go-live-checklist.md).
 
-![Edge Delivery-lista med att göra-uppgifter för webbplatser i Cloud Manager](/help/implementing/cloud-manager/assets/cm-eds-todo-list.png)
+![Edge Delivery-lista med att göra-uppgifter för webbplatser i Cloud Manager.](/help/implementing/cloud-manager/assets/cm-eds-todo-list.png)
 
 |   | Uppgift | Beskrivning |
 | --- | --- | --- |

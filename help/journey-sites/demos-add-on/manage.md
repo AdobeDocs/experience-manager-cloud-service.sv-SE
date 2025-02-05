@@ -4,7 +4,7 @@ description: Lär dig mer om de verktyg du kan använda för att hantera demoweb
 exl-id: 988c6e09-c43e-415f-8d61-998c294c5a11
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -17,13 +17,13 @@ Lär dig mer om de verktyg du kan använda för att hantera demowebbplatser och 
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet för AEM Reference Demos Add-On-resan [Create Site](create-site.md) skapade du en ny demowebbplats baserad på mallarna för Reference Demo Add-On. Nu bör du:
+I det föregående dokumentet för AEM Reference Demos Add-On-resan, [Create Site](create-site.md), skapade du en ny demowebbplats baserat på mallarna för Reference Demo Add-On. Nu bör du:
 
 * Lär dig hur du kommer åt AEM.
 * Lär dig hur du skapar en webbplats baserad på en mall.
 * Förstå grunderna för navigering i webbplatsstrukturen och redigering av en sida.
 
-Om du även [har aktiverat AEM Screens för din demowebbplats](screens.md) bör du också:
+Om du även [har aktiverat AEM Screens för din demowebbplats](screens.md) bör du även:
 
 * Lär dig grunderna i AEM Screens.
 * Förstå demoinnehållet för We.Cafe.
@@ -55,7 +55,7 @@ Självbetjäningsdemoverktyg har flera verktyg.
 
 * **Ta bort platser** - Markera den plats du vill ta bort i den här Adobe Experience Manager-instansen. Tänk på att detta är en destruktiv åtgärd som inte kan ångras när den väl har initierats.
 * **Ta bort webbplatsmallar** - Markera den platsmall som du vill ta bort i den här Adobe Experience Manager-instansen. Innan du tar bort en platsmall kontrollerar du att även alla webbplatser som refererar till mallen tas bort. Tänk på att detta är en destruktiv åtgärd som inte kan ångras när den väl har initierats.
-* **Cache för primär författare** - Detta hämtar flera resurser i Adobe Experience Manager-instansen, vilket snabbar upp hämtningstiden. Det kan ta flera sekunder.
+* **Prime Author Cache** - Detta hämtar flera resurser i Adobe Experience Manager-instansen, vilket snabbar upp hämtningstiden. Det kan ta flera sekunder.
 * **Android App** - verktyg för att installera och starta demonstrationsappen för Android. Skapa en webbplats baserad på **WKND-appen för en sida** för att fylla i den här sidan. Använd från en Android-enhet, emulator eller Bluestacks.
 * **Användarinställningar** - Inaktivera dialogrutor för självstudiekurser.
 * **Konfigurera GraphQL** - Konfigurera snabbt den globala GraphQL-slutpunkten.

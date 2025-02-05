@@ -4,7 +4,7 @@ description: Lär dig hur du aktiverar AEM Screens as a Cloud Service upplevelse
 exl-id: 369eea9f-2e81-4b87-841c-188b67657bab
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2666'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Lär dig de steg som möjliggör AEM Screens fullständiga as a Cloud Service up
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet för AEM Reference Demos Add-on skapade du [Skapa demowebbplats](create-site.md) med hjälp av mallarna för Reference Demo Add-on. Nu bör du:
+I det föregående dokumentet för AEM Reference Demos Add-on, [Create Demo Site](create-site.md), skapade du en demowebbplats baserat på mallarna för Reference Demo Add-on. Nu bör du:
 
 * Lär dig hur du kommer åt AEM.
 * Lär dig hur du skapar en webbplats baserad på en mall.
@@ -104,8 +104,8 @@ När guiden har slutförts hittar du innehållet som har distribuerats under Web
 
 Nu när du har demoinnehåll från We.Cafe kan du välja hur du vill testa AEM Screens:
 
-* Om du bara vill utforska innehållet i AEM Sites-konsolen kan du börja utforska och upptäcka mer i avsnittet [Ytterligare resurser](#additional-resources)! ingen mer åtgärd krävs.
-* Om du vill använda de fullständiga dynamiska funktionerna i AEM Screens fortsätter du till nästa avsnitt, [Ändra Screens-innehåll dynamiskt.](#dynamically-change)
+* Om du bara vill utforska innehållet i AEM Sites-konsolen kan du börja utforska och upptäcka mer i avsnittet [Ytterligare resurser](#additional-resources) - ingen mer åtgärd krävs.
+* Om du vill använda de fullständiga dynamiska funktionerna i AEM Screens fortsätter du till nästa avsnitt, [Ändra Screens-innehåll dynamiskt](#dynamically-change).
 
 ## Ändra Screens-innehåll dynamiskt {#dynamically-change}
 

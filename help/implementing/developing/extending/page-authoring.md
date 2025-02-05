@@ -4,7 +4,7 @@ description: Läs mer om de mekanismer som AEM as a Cloud Service har för att a
 exl-id: 98d3c7ab-46d2-4e8d-b0da-5c8a7b398135
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 0%
@@ -54,7 +54,7 @@ MSM-lagerdefinitionen (som referens) finns i:
 
 Detta är ett exempelpaket som visar hur du skapar ett lager (läge) för MSM-vyn.
 
-Du hittar koden för den här sidan på [GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
+Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode).
 
 ## Lägg till ny markeringskategori i resursläsaren {#add-new-selection-category-to-asset-browser}
 
@@ -64,7 +64,7 @@ Resursläsaren visar resurser av olika typer/kategorier (till exempel bilder och
 
 `aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en grupp i tillgångssökaren. Det här exemplet ansluter till [Flickr](https://www.flickr.com)s allmänna ström och visar dem på sidopanelen.
 
-Du hittar koden för den här sidan på [GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr)
+Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-assetfinder-flickr).
 
 ## Filtreringsresurser {#filtering-resources}
 
@@ -75,7 +75,7 @@ För att hålla listan i en rimlig storlek och även relevant för användningsf
 * Implementera det anpassade predikatet genom att implementera gränssnittet [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/predicate/package-summary.html).
 * Ange ett namn för predikatet och referera det namnet när du använder `pathbrowser`.
 
-Mer information om hur du skapar ett anpassat predikat finns i [den här artikeln.](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
+Mer information om hur du skapar ett anpassat predikat finns i [den här artikeln](/help/implementing/developing/introduction/query-builder-custom-predicate.md).
 
 ## Lägg till ny åtgärd i ett komponentverktygsfält {#add-new-action-to-a-component-toolbar}
 
@@ -85,7 +85,7 @@ Varje komponent har vanligtvis ett verktygsfält som ger tillgång till en rad �
 
 `aem-authoring-extension-toolbar-screenshot` är ett exempelpaket som visar hur du skapar en anpassad verktygsfältåtgärd för att återge komponenter.
 
-Du hittar koden för den här sidan på [GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
+Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot).
 
 ## Lägg till ny lokal redigerare {#add-new-in-place-editor}
 
@@ -156,7 +156,7 @@ Så här implementerar du en ny redigerare på plats (i klientlib):
 
 `aem-authoring-extension-inplace-editor` är ett exempelpaket som visar hur du skapar en redigerare på plats i AEM.
 
-Du hittar koden för den här sidan på [GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor)
+Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor).
 
 ## Lägg till en ny sidåtgärd {#add-a-new-page-action}
 
@@ -166,7 +166,7 @@ Om du vill lägga till en ny sidåtgärd i sidverktygsfältet, till exempel en *
 
 `aem-authoring-extension-header-backtosites` är ett exempelpaket som visar hur du skapar en anpassad huvudfältåtgärd för att hoppa tillbaka till webbplatskonsolen.
 
-Du hittar koden för den här sidan på [GitHub.](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites)
+Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-header-backtosites).
 
 ## Anpassa arbetsflödet för begäran om aktivering {#customizing-the-request-for-activation-workflow}
 

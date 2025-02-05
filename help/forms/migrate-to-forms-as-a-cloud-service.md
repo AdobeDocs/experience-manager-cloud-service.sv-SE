@@ -9,7 +9,7 @@ role: User, Developer
 level: Intermediate
 topic: Migration
 exl-id: 090e77ff-62ec-40cb-8263-58720f3b7558
-source-git-commit: 1c6ab84a7fadb543cc8e28424efe634627923e70
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 0%
@@ -67,7 +67,7 @@ För att övergången från AEM Forms 6.5 till AEM as a Cloud Service ska bli s�
 * I en Cloud Service-miljö fungerar migreringsverktyget tillsammans med verktyget Innehållsöverföring. Migreringsverktyget gör [!DNL AEM Forms]-resurser kompatibla med Cloud Service och innehållsöverföringsverktyget migrerar innehållet från din [!DNL AEM Forms]-miljö till en [!DNL AEM] as a Cloud Service miljö. Läs om processen för att [flytta till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/home.html) innan du använder migreringsverktyget. Processen använder följande verktyg:
    * [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?#cloud-migration): Med verktyget Innehållsöverföring kan du förbereda och överföra innehåll från en befintlig miljö till en Cloud Service. Det hjälper användarna att enkelt uppgradera från AEM Forms till molnmiljön.
 * Konton med administratörsbehörighet för [!DNL AEM Forms] as a Cloud Service och din lokala [!DNL AEM Forms]-miljö.
-* Hämta och installera Best Practice Analyzer, Content Transfer Tool och [!DNL AEM Forms] Migration Utility från [Software Distribution Portal.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* Hämta och installera Best Practice Analyzer, Content Transfer Tool och [!DNL AEM Forms] Migration Utility från [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html).
 
 * Kör verktyget [Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=en#cloud-migration) och åtgärda det rapporterade problemet. Information om möjliga problem med migrering från Adobe Experience Manager Forms till Adobe Experience Manager Forms as a Cloud Service finns i [AEM Mönsteridentifiering för Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html?lang=en#viewing-report).
 

@@ -4,7 +4,7 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: bc5dbee5b5accc747288638fd8e22ed8f2d12fd5
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '4049'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programla
 
 På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
-Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med Cloud Manager [config pipelines.](/help/operations/config-pipeline.md) Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
+Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
 
 ## Föreslagen process {#suggested-process}
 
@@ -105,11 +105,11 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 
 1. Om WAF-regler är licensierade bör du aktivera funktionen i Cloud Manager enligt beskrivningen nedan för både nya och befintliga programscenarier.
 
-   1. Om du vill konfigurera WAF för ett nytt program markerar du kryssrutan **WAF-DDOS Protection** på fliken **Säkerhet** när du [lägger till ett produktionsprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md)
+   1. Om du vill konfigurera WAF för ett nytt program markerar du kryssrutan **WAF-DDOS Protection** på fliken **Säkerhet** när du [lägger till ett produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
    1. Om du vill konfigurera WAF för ett befintligt program [redigerar du programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) och avmarkerar eller markerar alternativet **WAF-DDOS** när som helst på fliken **Säkerhet** .
 
-1. Skapa en config pipeline i Cloud Manager, enligt beskrivningen i [Konfigurera pipelineartikeln.](/help/operations/config-pipeline.md#managing-in-cloud-manager) Pipelinen kommer att referera till en `config`-mapp på den översta nivån där filen `cdn.yaml` placeras någonstans under, se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
+1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i [konfigurationsförsäljningsartikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager). Pipelinen kommer att referera till en `config`-mapp på den översta nivån där filen `cdn.yaml` placeras någonstans under. Mer information finns i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
 ## Syntax för trafikfilterregler {#rules-syntax}
 

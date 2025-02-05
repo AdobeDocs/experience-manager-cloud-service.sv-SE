@@ -4,7 +4,7 @@ description: ContextHub JavaScript API är tillgängligt för skript när Contex
 exl-id: ec35bef5-610c-4e85-a43a-d4201b5eb03e
 feature: Developing, Personalization
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '4602'
 ht-degree: 0%
@@ -483,7 +483,7 @@ Matchar den angivna parametern.
 
 ## ContextHub.Store.PersistedJSONPStore {#contexthub-store-persistedjsonpstore}
 
-`ContextHub.Store.PersistedJSONPStore` utökar [ ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen:](adding-contexthub.md#persistence-modes))
+`ContextHub.Store.PersistedJSONPStore` utökar [ ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen](adding-contexthub.md#persistence-modes))
 
 ## ContextHub.Store.PersistedStore {#contexthub-store-persistedstore}
 
@@ -1033,7 +1033,7 @@ ContextHub.Utils.JSON.tree.sanitizeKey(key)
 
 #### setItem(tree, key, value) {#setitem-tree-key-value}
 
-Lägger till ett nyckel/värde-par i dataträdet för en kopia av ett objekt. Mer information om dataträd finns i [Persistence.](contexthub.md#persistence)
+Lägger till ett nyckel/värde-par i dataträdet för en kopia av ett objekt. Mer information om dataträd finns i [Persistence](contexthub.md#persistence).
 
 ##### Parametrar {#parameters-setitem-2}
 

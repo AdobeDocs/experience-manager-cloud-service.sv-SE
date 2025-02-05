@@ -5,7 +5,7 @@ exl-id: 3bfbf186-d684-4742-8c5c-34c34ff3adb5
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2120'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Du får ett meddelande om att projektet har skapats.
 
 >[!NOTE]
 >
->Det antas att den nödvändiga språkstrukturen för översättningsspråken redan har skapats som en del av [-definitionen för innehållsstrukturen.](getting-started.md#content-structure) Detta bör göras i samarbete med innehållsarkitekten.
+>Det antas att den nödvändiga språkstrukturen för översättningsspråken redan har skapats som en del av [definitionen av innehållsstrukturen](getting-started.md#content-structure). Detta bör göras i samarbete med innehållsarkitekten.
 >
 >Om språkmapparna inte skapas i förväg kommer du inte att kunna skapa språkkopior enligt beskrivningen i föregående steg.
 
@@ -187,7 +187,7 @@ Så här lägger du till innehåll i ett översättningsjobb:
 >
 >Sökvägsläsaren är ett kraftfullt verktyg med vilket du kan söka efter, filtrera och navigera i innehållet. Markera knappen **Endast innehåll/filter** för att växla sidopanelen och visa avancerade filter som **Ändrat den** eller **Översättningsstatus**.
 >
->Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser.](#additional-resources)
+>Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser](#additional-resources).
 
 Du kan använda de föregående stegen för att lägga till nödvändigt innehåll till alla språk (jobb) för projektet. När du har markerat allt innehåll kan du starta översättningen.
 
@@ -205,7 +205,7 @@ Maskinöversättningar returneras automatiskt med tillståndet **Godkänd**. Öv
 
 ## Granskning av översatt innehåll {#reviewing}
 
-[Som vi tidigare sett flödar ](#using-translation-project) maskinöversatt innehåll tillbaka till AEM med statusen **Godkänd** eftersom antagandet är att det inte krävs någon mänsklig åtgärd eftersom maskinöversättning används. Det går dock fortfarande att granska det översatta innehållet.
+[Som tidigare visats](#using-translation-project) flödas maskinöversatt innehåll tillbaka till AEM med statusen **Godkänd** eftersom antagandet är att det inte krävs någon mänsklig åtgärd eftersom maskinöversättning används. Det går dock fortfarande att granska det översatta innehållet.
 
 Gå bara till det slutförda översättningsjobbet och markera ett radobjekt genom att trycka eller klicka i kryssrutan. Ikonen **Visa i innehållsfragment** visas i verktygsfältet.
 

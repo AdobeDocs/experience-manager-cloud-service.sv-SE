@@ -4,7 +4,7 @@ description: Förstå JSON-kontraktet mellan komponentdefinitionen och den unive
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: e1bb1a54-50c0-412a-a8fd-8167c6f47d2b
-source-git-commit: 384f8a1301ea488e0b2aa493389d090896fe3b33
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Filen `component-definition.json` definierar de komponenter som är tillgänglig
 
 >[!TIP]
 >
->En översikt över innehållsmodelleringsprocessen finns i dokumentet [Innehållsmodellering för WYSIWYG Authoring with Edge Delivery Services Projects.](/help/edge/wysiwyg-authoring/content-modeling.md)
+>En översikt över innehållsmodelleringsprocessen finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services ](/help/edge/wysiwyg-authoring/content-modeling.md).
 
 >[!TIP]
 >
@@ -67,7 +67,7 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 
 ## `groups` {#groups}
 
-`groups` definierar de grupper av komponenter som författaren ser i den universella redigeraren när han klickar på ikonen **Lägg till** på egenskapspanelen i redigeraren för att [lägga till en ny komponent på en sida.](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components) grupper hjälper dig att ordna komponenterna. Vanliga grupper kan vara **Allmänna komponenter** och **Avancerade komponenter**.
+`groups` definierar de grupper av komponenter som författaren ser i den universella redigeraren när han klickar på ikonen **Lägg till** på egenskapspanelen i redigeraren för att [lägga till en ny komponent på en sida](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components). Med grupper kan du ordna komponenterna. Vanliga grupper kan vara **Allmänna komponenter** och **Avancerade komponenter**.
 
 * `title` definierar den textbeskrivning av gruppen som visas i redigerarens användargränssnitt.
 * `id` identifierar gruppen unikt.
@@ -94,7 +94,7 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 När `plugin` har definierats måste du ange om den är sidrelaterad eller fragmentrelaterad.
 
 * `page` anger att komponenten är innehåll på den aktuella sidan.
-* `cf` anger att komponenten är relaterad till innehåll i ett [innehållsfragment.](/help/assets/content-fragments/content-fragments.md)
+* `cf` anger att komponenten är relaterad till innehåll i ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md).
 
 ### `page` {#page}
 

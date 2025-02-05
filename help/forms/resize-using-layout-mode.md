@@ -5,7 +5,7 @@ role: User, Developer
 level: Intermediate
 feature: Adaptive Forms, Foundation Components
 exl-id: 53896a8e-4568-460b-bca7-994baea0c8eb
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 0%
@@ -127,7 +127,7 @@ Du kan inaktivera layoutläget för formulär med äldre responsiv layout genom 
 Utför följande steg för att inaktivera layoutläget:
 
 1. Välj **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Templates]** och öppna mallen som används i formuläret i **[!UICONTROL Edit]**-läge.
-1. Markera formulärbehållaren i den vänstra rutan och välj **[!UICONTROL Policy.]**
+1. Markera formulärbehållaren i den vänstra rutan och välj **[!UICONTROL Policy]**.
 
    ![Inaktivera layoutläge](assets/policy_disable_layout_mode.png)
 

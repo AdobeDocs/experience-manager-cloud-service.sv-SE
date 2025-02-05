@@ -4,7 +4,7 @@ description: AEM har omfattande och kraftfulla API:er som du kan använda för d
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 4182374ea9d603ed53e75511d34fdfcf69829200
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 1%
@@ -22,8 +22,8 @@ Följande API:er är viktiga för AEM.
 | API | Beskrivning |
 |---|---|
 | [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden och så vidare. |
-| [Bevilja användargränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe&#39;s Open Web stack, med olika viktiga komponenter (6.5 Granite-materialet gäller AEMaaCS) |
-| [Coral UI](https://opensource.adobe.com/coral-spectrum/documentation/) | Adobe visuella stil för molngränssnitt som är utformade för att ge en konsekvent användarupplevelse |
+| [Bevilja användargränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe Open Web stack, med olika viktiga komponenter (6.5 Granite-materialet gäller AEMaaCS) |
+| [Coral UI](https://opensource.adobe.com/coral-spectrum/documentation/) | Adobe användargränssnittsstil för molnet, utformad för att ge en enhetlig användarupplevelse |
 
 <!---
 |Editor core JavaScript API reference|Provides all the base objects and concepts to support authoring of content resources|
@@ -59,7 +59,7 @@ Om ett API tillhandahålls av AEM bör du föredra det framför Sling, JCR och O
 
 >[!TIP]
 >
->Mer information om de här riktlinjerna finns i dokumentet [Förstå Java API-metodtips.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+>Mer information om de här riktlinjerna finns i dokumentet [Förstå Java API-metodtips](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html).
 
 ## AEM Delivery and Content Management Services and APIs {#delivery-apis}
 

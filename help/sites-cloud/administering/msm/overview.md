@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2721'
 ht-degree: 0%
@@ -122,7 +122,7 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 * **Skapa Live-kopia** (**Webbplatser**)
 
-   * Med MSM kan du [skapa en tillfällig (engångs) Live-kopia av en enskild sida eller underavdelning på en webbplats.](creating-live-copies.md#creating-a-live-copy-of-a-page) Du kan till exempel duplicera en undergren för att få information om en ny/uppdaterad version av en produkt. Skapa en Live-kopia på följande sätt:
+   * Med MSM kan du [skapa en tillfällig (engångs) Live-kopia av en enskild sida eller underavdelning till en webbplats](creating-live-copies.md#creating-a-live-copy-of-a-page). Du kan till exempel duplicera en underavdelning för att få information om en ny/uppdaterad version av en produkt. Skapa en Live-kopia på följande sätt:
       * Skapar en tillfällig Live Copy (ingen plantryckskonfiguration krävs).
       * Kan användas för att (omedelbart) skapa en Live-kopia av valfri sida/gren.
       * Kräver **Synkronisera** (knappen **Utrullning** finns inte).
@@ -137,11 +137,11 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 * **Översikt över Live-kopia** (**Webbplatser**)
 
-   * Med den här konsolen kan du [visa och hantera din plan och dess Live-kopior.](live-copy-overview.md)
+   * Med den här konsolen kan du [visa och hantera din plan och dess Live-kopior](live-copy-overview.md).
 
 * **Utskrifter** (**Verktyg** - **Webbplatser**)
 
-   * Med den här konsolen kan du [skapa och hantera dina ritningskonfigurationer.](creating-live-copies.md#creating-a-blueprint-configuration)
+   * Med den här konsolen kan du [skapa och hantera dina ritningskonfigurationer](creating-live-copies.md#creating-a-blueprint-configuration).
 
 >[!NOTE]
 >
@@ -293,7 +293,7 @@ Utrullningskonfigurationer kan återanvändas så att fler än en Live Copy kan 
 
 ### utrullningskonflikter {#rollout-conflicts}
 
-Utrullningar kan bli komplicerade, särskilt när författare redigerar innehåll i både källan och Live-kopian. Det är därför praktiskt att veta hur AEM hanterar eventuella [konflikter som kan uppstå under utrullning.](rollout-conflicts.md)
+Utrullningar kan bli komplicerade, särskilt när författare redigerar innehåll i både källan och Live-kopian. Det är därför användbart att vara medveten om hur AEM hanterar eventuella [konflikter som kan uppstå under utrullning](rollout-conflicts.md).
 
 ### Inaktivera och avbryta arv och synkronisering {#suspending-and-cancelling-inheritance-and-synchronization}
 
@@ -329,7 +329,7 @@ Följande steg beskriver standardproceduren för att använda MSM för att åter
 
 1. Bestäm var du behöver [ange de rollout-konfigurationer som ska användas](live-copy-sync-config.md#specifying-the-rollout-configurations-to-use) och konfigurera efter behov.
 1. Om det behövs kan du [skapa en designkonfiguration](creating-live-copies.md#creating-a-blueprint-configuration) som identifierar källinnehållet i Live-kopian.
-1. [Skapa en Live-kopia.](creating-live-copies.md#creating-a-live-copy)
+1. [Skapa en Live-kopia](creating-live-copies.md#creating-a-live-copy).
 1. Ändra källinnehållet efter behov. Ni bör använda den normala process för granskning och godkännande av innehåll som er organisation har etablerat.
 1. [Rulla ut](creating-live-copies.md#rolling-out-a-blueprint) ritningen eller [synkronisera Live-kopian](creating-live-copies.md#synchronizing-a-live-copy) med ändringarna.
 

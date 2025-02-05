@@ -4,7 +4,7 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer
-source-git-commit: 2e4c9a7d30b954045082baf242737ac2f7426c70
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Tänk dig en användare som börjar fylla i ett formulär men behöver göra en 
 
 ## Krav
 
-* [Aktivera adaptiva Forms Core-komponenter för din miljö.](/help/forms/enable-adaptive-forms-core-components.md)
+* [Aktivera adaptiva Forms Core-komponenter för din miljö](/help/forms/enable-adaptive-forms-core-components.md).
 
   När du har distribuerat de senaste Core-komponenterna till din miljö blir Forms Portal-komponenterna tillgängliga i din redigeringsmiljö.
 

@@ -5,7 +5,7 @@ exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 41abdfcf142a3f39854978c5acf0e5d28872b3c4
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '4415'
 ht-degree: 5%
@@ -23,7 +23,7 @@ När en författare skapar en sida måste han eller hon välja en mall som anvä
 
 >[!NOTE]
 >
->[Mallar är också tillgängliga för att skapa sidor som kan redigeras med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/templates.md)
+>[Mallar är också tillgängliga för att skapa sidor som kan redigeras med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/templates.md).
 
 Med **mallredigeraren** är det inte bara utvecklaraktiviteten att skapa och underhålla mallar. En typ av avancerade användare, som kallas **mallskapare**, kan skapa mallar. Utvecklare måste konfigurera miljön, skapa klientbibliotek och skapa de komponenter som ska användas, men när de här grunderna är på plats kan **mallskaparen** skapa och konfigurera mallar utan att behöva ta hjälp av en utvecklare.
 
@@ -95,7 +95,7 @@ När du skapar en redigerbar mall:
 >
 >Ange aldrig någon information som måste vara [internationaliserad](/help/implementing/developing/extending/i18n/dev.md) i en mall.
 >
->Använd [lokaliseringsfunktionerna i kärnkomponenterna för mallelement som sidhuvuden och sidfötter som måste lokaliseras.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html)
+>Använd [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) för mallelement som sidhuvuden och sidfötter som måste lokaliseras.
 
 ### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
@@ -210,7 +210,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 Eftersom mallen refereras när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
-Publish-mallar med **[Mallkonsolen.](/help/sites-cloud/administering/templates-console.md)**
+Publish-mallar med **[Mallkonsolen](/help/sites-cloud/administering/templates-console.md)**.
 
 ## Redigera mallar - mallskapare {#editing-templates-template-authors}
 
@@ -305,7 +305,7 @@ När de lagts till markeras varje komponent med:
 
 >[!NOTE]
 >
->Även om det inte är identiskt har tillägg av komponenter och resurser i en mall många likheter med liknande åtgärder vid redigering av [sidor.](/help/sites-cloud/authoring/page-editor/edit-content.md)
+>Även om det inte är identiskt har tillägg av komponenter och resurser i en mall många likheter med liknande åtgärder när [du redigerar sidan](/help/sites-cloud/authoring/page-editor/edit-content.md).
 
 #### Komponentåtgärder {#component-actions}
 
@@ -647,4 +647,4 @@ När du skapar mallar bör du tänka på följande:
    >AEM ger uttryckliga varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
 
 1. [Skapar egna mappar](#creating-a-template-folder-admin) för dina platsspecifika mallar.
-1. [Publish dina mallar](#publishing-a-template-template-author) från konsolen **[Mallar.]**(/help/sites-cloud/administering/templates-console.md)
+1. [Publish dina mallar](#publishing-a-template-template-author) från **[Mallkonsolen]**(/help/sites-cloud/administering/templates-console.md).

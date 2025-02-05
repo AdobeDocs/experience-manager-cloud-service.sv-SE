@@ -5,9 +5,9 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1413'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -99,7 +99,7 @@ Mer information finns i [Översätta innehåll för flerspråkiga platser](/help
 * **Om du flyttar** sidor i en plan kommer **inte** att resultera i att motsvarande sidor flyttas i Live-kopior efter utrullning med standardkonfiguration:
    * Orsaken till detta är att en sidflyttning implicit inkluderar en sidborttagning. Detta kan potentiellt leda till oväntat beteende vid publicering, eftersom borttagning av sidor på författaren automatiskt inaktiverar motsvarande innehåll vid publicering. Detta kan också ha en extra effekt på relaterade objekt som länkar, bokmärken och andra.
       * Innehållsarv på respektive Live Copy-sidor uppdateras för att återspegla den nya platsen för deras källor i planen.
-      * Om du vill att en sida ska flyttas från en plan till Live-kopior bör du överväga [sidflyttningstekniken.](#page-move)
+      * Om du vill att en sida ska flyttas från en plan till Live-kopior bör du överväga [sidflyttningen ].(#page-move)
 
 ### Sidflyttning - bästa praxis {#page-move}
 

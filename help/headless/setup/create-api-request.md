@@ -4,7 +4,7 @@ description: Lär dig hur du använder GraphQL API för headless-leverans av Con
 exl-id: 2b72f222-2ba5-4a21-86e4-40c763679c32
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lär dig hur du använder GraphQL API för headless-leverans av Content Fragment
 
 ## Vad är GraphQL och Assets REST API:er? {#what-are-the-apis}
 
-[Nu när du har skapat några innehållsfragment ](create-content-fragment.md) kan du använda AEM API:er för att leverera dem utan problem.
+[Nu när du har skapat några innehållsfragment](create-content-fragment.md) kan du använda AEM API:er för att leverera dem utan problem.
 
 * [Med GraphQL-API:t](/help/headless/graphql-api/content-fragments.md) kan du skapa begäranden om åtkomst till och leverans av innehållsfragment. API:t erbjuder den mest robusta uppsättningen funktioner för att fråga efter och konsumera innehåll i innehållsfragment.
    * Om du vill använda API:t [definierar och aktiverar du slutpunkter i AEM](/help/headless/graphql-api/graphql-endpoint.md) och om det behövs [GraphiQL-gränssnittet som är installerat](/help/headless/graphql-api/graphiql-ide.md).

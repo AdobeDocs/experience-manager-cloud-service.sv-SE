@@ -4,7 +4,7 @@ description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring 
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 384f8a1301ea488e0b2aa493389d090896fe3b33
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2195'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Deli
 
 ## Förutsättningar {#prerequisites}
 
-Projekt som använder WYSIWYG Authoring med Edge Delivery Services ärver merparten av mekanismerna i andra Edge Delivery Services-projekt, oberoende av innehållskällan eller [redigeringsmetoden.](/help/edge/wysiwyg-authoring/authoring.md)
+Projekt som använder WYSIWYG Authoring med Edge Delivery Services ärver merparten av mekanismerna i andra Edge Delivery Services-projekt, oberoende av innehållskällan eller [redigeringsmetoden](/help/edge/wysiwyg-authoring/authoring.md).
 
 Innan du börjar modellera innehåll för projektet bör du först läsa följande dokumentation.
 
@@ -39,7 +39,7 @@ I AEM implementeras det här innehållet som komponenter med mycket enkla, förd
 * **Bild**: Source, beskrivning
 * **Knapp**: Text, rubrik, url, typ (standard, primär, sekundär)
 
-Modellen för de här komponenterna ingår i [mallsidan för WYSIWYG-redigering med Edge Delivery Services.](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-models.json#L2-L112)
+Modellen för de här komponenterna är en del av [mallsidan för WYSIWYG-redigering med Edge Delivery Services](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-models.json#L2-L112).
 
 ## Block {#blocks}
 
@@ -111,9 +111,9 @@ För varje block gäller följande:
 * Resurstypen `core/franklin/components/block/v1/block` måste användas, den allmänna implementeringen av blocklogiken i AEM.
 * Blocknamnet måste definieras, som ska återges i blockets tabellrubrik.
    * Blocknamnet används för att hämta rätt format och skript för att dekorera blocket.
-* Kan definiera ett [modell-ID.](/help/implementing/universal-editor/field-types.md#model-structure)
+* Kan definiera ett [modell-ID](/help/implementing/universal-editor/field-types.md#model-structure).
    * Modell-ID är en referens till komponentens modell, som definierar de fält som är tillgängliga för författaren på egenskapspanelen.
-* Kan definiera ett [filter-ID.](/help/implementing/universal-editor/filtering.md)
+* Kan definiera ett [filter-ID](/help/implementing/universal-editor/filtering.md).
    * Filter-ID är en referens till komponentens filter, som gör att du kan ändra redigeringsbeteendet, till exempel genom att begränsa vilka underordnade som kan läggas till i blocket eller avsnittet eller vilka RTE-funktioner som är aktiverade.
 
 All den här informationen lagras i AEM när ett block läggs till på en sida. Om resurstypen eller blocknamnet saknas återges inte blocket på sidan.
@@ -181,7 +181,7 @@ I följande exempel definieras bilden först i modellen och sedan i textsekunden
 
 >[!ENDTABS]
 
-Du kan lägga märke till att vissa typer av värden tillåter semikolonisering i markeringen, och egenskaper kombineras i enskilda celler. Det här beteendet beskrivs i avsnittet [Typhärledning.](#type-inference)
+Du kan lägga märke till att vissa typer av värden tillåter semikolonisering i markeringen, och egenskaper kombineras i enskilda celler. Det här beteendet beskrivs i avsnittet [Typhärledning](#type-inference).
 
 #### Nyckelvärdesblock {#key-value}
 
@@ -189,7 +189,7 @@ I många fall rekommenderar vi att du dekorerar den renderade semantiska koden, 
 
 I andra fall läses dock blocket som en konfiguration som påminner om nyckelvärdepar.
 
-Ett exempel på detta är metadata för avsnittet [.](/help/edge/developer/markup-sections-blocks.md#sections) I det här fallet kan blocket konfigureras att återges som nyckelvärdepar-tabell. Mer information finns i avsnittet [Avsnitt och Avsnittsmetadata](#sections-metadata).
+Ett exempel på detta är [avsnittsmetadata](/help/edge/developer/markup-sections-blocks.md#sections). I det här fallet kan blocket konfigureras att återges som nyckelvärdepar-tabell. Mer information finns i avsnittet [Avsnitt och Avsnittsmetadata](#sections-metadata).
 
 >[!BEGINTABS]
 
@@ -322,9 +322,9 @@ I följande exempel accepterar ett block en lista med länkade ikoner som undero
 
 ### Skapa semantiska innehållsmodeller för block {#creating-content-models}
 
-Med [mekanismerna i blockstrukturen förklarad ](#block-structure) går det att skapa en innehållsmodell som mappar innehåll som bevaras i AEM en till en till leveransnivån.
+Med [mekanismerna i blockstrukturen förklarad](#block-structure) är det möjligt att skapa en innehållsmodell som mappar innehåll som finns beständigt i AEM 1:1 till leveransnivån.
 
-Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmänna riktlinjer finns i [David&#39;s Model (ta 2).](https://www.aem.live/docs/davidsmodel) Mer specifikt innehåller [blocksamlingen](/help/edge/developer/block-collection.md) en omfattande uppsättning innehållsmodeller för specifika användningsområden för vanliga användargränssnittsmönster.
+Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmän vägledning finns i [David&#39;s Model (Take 2)](https://www.aem.live/docs/davidsmodel). Mer specifikt innehåller [blocksamlingen](/help/edge/developer/block-collection.md) en omfattande uppsättning innehållsmodeller för specifika användningsfall för vanliga användargränssnittsmönster.
 
 För WYSIWYG-redigering med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen skapas med formulär som består av flera fält istället för att man redigerar semantiska markeringar i sitt sammanhang som RTF.
 
@@ -345,7 +345,7 @@ För vissa värden kan den semantiska innebörden härledas från själva värde
 * **Bilder** - Om en referens till en resurs i AEM är en resurs med en MIME-typ som börjar med `image/` återges referensen som `<picture><img src="${reference}"></picture>`.
 * **Länkar** - Om det finns en referens i AEM och inte är en bild, eller om värdet börjar med `https?://` eller `#`, återges referensen som `<a href="${reference}">${reference}</a>` .
 * **RTF** - Om ett trimmat värde börjar med ett stycke (`p`, `ul`, `ol`, `h1`-`h6` osv.) återges värdet som RTF-text.
-* **Klassnamn** - Egenskapen `classes` behandlas som [blockalternativ](/help/edge/developer/markup-sections-blocks.md#block-options) och återges i tabellhuvudet för [enkla block](#simple) eller som värdelista för objekt i ett [ behållarblock.](#container) Det är användbart om du vill [formatera ett block på ett annat sätt,](/help/edge/wysiwyg-authoring/create-block.md#block-options), men inte behöver skapa ett helt nytt block.
+* **Klassnamn** - Egenskapen `classes` behandlas som [blockalternativ](/help/edge/developer/markup-sections-blocks.md#block-options) och återges i tabellhuvudet för [enkla block](#simple), eller som värdelista för objekt i ett [behållarblock](#container). Det är användbart om du vill [formatera ett block annorlunda](/help/edge/wysiwyg-authoring/create-block.md#block-options), men inte behöver skapa ett helt nytt block.
 * **Värdelistor** - Om ett värde är en flervärdesegenskap och det första värdet inte är något av de föregående, sammanfogas alla värden som kommaavgränsade listor.
 
 Allt annat återges som oformaterad text.
@@ -532,11 +532,11 @@ Elementgruppering använder en namnkonvention där gruppnamnet separeras från v
 
 ## Avsnittsmetadata {#sections-metadata}
 
-På samma sätt som en utvecklare kan definiera och modellera flera [block,](#blocks) kan de definiera olika avsnitt.
+På samma sätt som en utvecklare kan definiera och modellera flera [block](#blocks) kan de definiera olika avsnitt.
 
 Innehållsmodellen för Edge Delivery Services tillåter avsiktligt bara en enda kapslingsnivå, vilket är vilket standardinnehåll eller -block som finns i ett avsnitt. Detta innebär att om du vill ha mer komplexa visuella komponenter som kan innehålla andra komponenter måste de modelleras som sektioner och kombineras med hjälp av en autoblockerande klientsida. Typiska exempel på detta är tabbar och komprimerbara avsnitt som dragspelspaneler.
 
-Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och ett [filter-ID,](/help/implementing/universal-editor/filtering.md), som endast används av [Universal Editor](/help/implementing/universal-editor/introduction.md), samt ett [modell-ID,](/help/implementing/universal-editor/field-types.md#model-structure), som används för att återge avsnittsmetadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
+Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och ett [filter-ID](/help/implementing/universal-editor/filtering.md) som endast används av [Universell redigerare](/help/implementing/universal-editor/introduction.md) samt ett [modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) som används för att återge avsnittets metadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
 
 [modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) och [filter-ID](/help/implementing/universal-editor/filtering.md) för standardavsnittet är `section`. Den kan användas för att ändra standardavsnittets beteende. I följande exempel läggs vissa format och en bakgrundsbild till i avsnittets metadatamodell.
 
@@ -595,7 +595,7 @@ I följande exempel definieras ett tabbavsnitt, som kan användas för att skapa
 
 ## Sidmetadata {#page-metadata}
 
-Dokument kan ha ett [metadatablock ](https://www.aem.live/developer/block-collection/metadata) som används för att definiera vilka `<meta>` element som ska återges i `<head>` på en sida. Sidegenskaperna för sidorna i AEM as a Cloud Service är mappade till de som är tillgängliga direkt för Edge Delivery Services, som `title`, `description`, `keywords` osv.
+Dokument kan ha ett [metadatablock](https://www.aem.live/developer/block-collection/metadata) som används för att definiera vilka `<meta>` -element som ska återges i `<head>` på en sida. Sidegenskaperna för sidorna i AEM as a Cloud Service är mappade till de som är tillgängliga direkt för Edge Delivery Services, som `title`, `description`, `keywords` osv.
 
 Innan du kan utforska hur du definierar egna metadata bör du läsa följande dokument för att först förstå begreppet sidmetadata.
 
@@ -645,5 +645,5 @@ Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhan
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery).
 

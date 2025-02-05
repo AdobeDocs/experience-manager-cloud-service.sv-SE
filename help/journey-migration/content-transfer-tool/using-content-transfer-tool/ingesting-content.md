@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 67b04abfc0213ac175afca34b9424dafbe150a25
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '3412'
+source-wordcount: '3411'
 ht-degree: 1%
 
 ---
@@ -182,7 +182,7 @@ Om&quot;AEM versionsuppdateringar&quot; är aktiv (d.v.s. uppdateringar körs el
 
 I sällsynta fall kan det uppstå oväntade problem i Cloud Servicens målmiljö. Detta resulterar i att intaget misslyckas eftersom miljön inte är i det förväntade tillståndet klar. Kontrollera matningsloggen för att visa mer information om det feltillstånd som påträffats.
 
-Se till att författarmiljön är tillgänglig och vänta några minuter innan du försöker göra om importen. Om problemet kvarstår kontaktar du kundsupporten och får feltillståndet.
+Se till att författarmiljön är tillgänglig och vänta några minuter innan du försöker göra om importen. Om problemet kvarstår kan du kontakta kundsupport och få hjälp med felstatus.
 
 ### Inmatningsfel i toppklass på grund av Unikhetsbegränsningsöverträdelse {#top-up-ingestion-failure-due-to-uniqueness-constraint-violation}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du återställer AEM as a Cloud Service-innehåll frå
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
 feature: Operations
 role: Admin
-source-git-commit: c7488b9a10704570c64eccb85b34f61664738b4e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ I båda fallen ändras inte versionen av den anpassade koden och AEM.
 
 >[!TIP]
 >
->Det går också att återställa säkerhetskopior [med det offentliga API:t.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
+>Det går också att återställa säkerhetskopior [med det offentliga API:t ](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
 >[!WARNING]
 >
@@ -43,10 +43,10 @@ I båda fallen ändras inte versionen av den anpassade koden och AEM.
 
 Innan du återställer till en fullständig innehållsåterställning bör du överväga dessa alternativ för att enklare återställa ditt innehåll.
 
-* Om det finns ett paket för den borttagna sökvägen installerar du paketet igen med hjälp av [pakethanteraren.](/help/implementing/developing/tools/package-manager.md)
-* Om den borttagna sökvägen var en sida i Sites använder du funktionen [Återställ träd.](/help/sites-cloud/authoring/sites-console/page-versions.md)
-* Om den borttagna sökvägen var en resursmapp och de ursprungliga filerna är tillgängliga, kan du överföra dem igen via [Assets-konsolen.](/help/assets/add-assets.md)
-* Om det borttagna innehållet var resurser bör du överväga att [återställa tidigare versioner av resurserna.](/help/assets/manage-digital-assets.md)
+* Om det finns ett paket för den borttagna sökvägen installerar du paketet igen med hjälp av [pakethanteraren](/help/implementing/developing/tools/package-manager.md).
+* Om den borttagna sökvägen var en sida i Sites använder du funktionen [Återställ träd](/help/sites-cloud/authoring/sites-console/page-versions.md).
+* Om den borttagna sökvägen var en resursmapp och de ursprungliga filerna är tillgängliga, kan du överföra dem igen via [Assets-konsolen](/help/assets/add-assets.md).
+* Om det borttagna innehållet var resurser bör du överväga att [återställa tidigare versioner av resurserna](/help/assets/manage-digital-assets.md).
 
 Om inget av ovanstående alternativ fungerar och innehållet i den borttagna banan är viktigt, utför du en innehållsåterställning enligt anvisningarna i följande avsnitt.
 
@@ -93,7 +93,7 @@ Bestäm först tidsramen för innehållet som du vill återställa. Utför sedan
 
    ![Säkerhetskopior tillgängliga](assets/backup-available.png)
 
-1. Hitta den säkerhetskopia som du vill återställa genom att använda informationsikonen för att visa information om vilken version av koden och AEM som ingår i säkerhetskopian och ta hänsyn till konsekvenserna av en återställning när du [väljer en säkerhetskopia.](#choosing-the-right-backup)
+1. Hitta den säkerhetskopia som du vill återställa genom att använda informationsikonen för att visa information om vilken version av koden och AEM som ingår i säkerhetskopian och ta hänsyn till konsekvenserna av en återställning när du [väljer säkerhetskopian](#choosing-the-right-backup).
 
    ![Säkerhetskopieringsinformation](assets/backup-info.png)
 

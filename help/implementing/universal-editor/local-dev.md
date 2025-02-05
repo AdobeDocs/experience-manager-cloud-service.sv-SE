@@ -4,7 +4,7 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: ccdb43c31e3ba1365a514bff696c9ec11dbbc21e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Lär dig hur du kan köra din egen Universal Editor-tjänst för lokal utvecklin
 Universal Editor-tjänsten är den som binder Universal Editor och serverdelssystemet. Om du vill kunna utveckla lokalt för den universella redigeraren måste du köra en lokal kopia av den universella redigeringstjänsten. Detta beror på:
 
 * Adobe officiella universell redigeringstjänst finns på en global värdserver och din lokala AEM måste vara exponerad för Internet.
-* När du utvecklar med en lokal AEM SDK går det inte att komma åt Adobe universella redigeringstjänst från Internet.
+* När du utvecklar med en lokal AEM SDK går det inte att komma åt Adobe Universal Editor-tjänsten från Internet.
 * Om din AEM har IP-begränsningar och Adobe Universal Editor-tjänsten inte har ett definierat IP-intervall kan du själv vara värd för den.
 
 ## Användningsexempel {#use-cases}
@@ -101,7 +101,7 @@ Följande tabell innehåller information om dessa och ytterligare värden.
 | `UES_SPLUNK_TOKEN` | Ja | Ingen | Splunk-token |
 | `UES_SPLUNK_INDEX` | Ja | Ingen | Index att skriva loggar till |
 | `UES_SPLUNK_SOURCE` | Ja | `universal-editor-service` | Namnet på källan i skräppostloggarna |
-| `UES_CORS_PRIVATE_NETWORK` | Ja | `false` | Aktivera sändning av CORS-huvuden för att tillåta [privat nätverk.](https://wicg.github.io/private-network-access/#private-network-request) krävs för användare av Chrome version 130+ |
+| `UES_CORS_PRIVATE_NETWORK` | Ja | `false` | Aktivera sändning av CORS-huvuden för att tillåta [privat nätverk](https://wicg.github.io/private-network-access/#private-network-request). Krävs för användare av Chrome version 130+ |
 
 >[!NOTE]
 >
@@ -155,6 +155,6 @@ När den är inställd ska du se alla anrop om innehållsuppdatering gå till `h
 Med den [universella redigeringstjänsten som körs lokalt](#running-ue) och [innehållssidan som är instrumenterad för att använda den lokala tjänsten](#using-loca-ue) kan du nu starta redigeraren.
 
 1. Öppna webbläsaren på `https://localhost:8000/ping`.
-1. Be webbläsaren acceptera [ditt självsignerade certifikat.](#ue-https)
+1. Be webbläsaren godkänna [ditt självsignerade certifikat](#ue-https).
 1. När det självsignerade certifikatet är betrott kan du redigera sidan med din lokala Universal Editor-tjänst.
 

@@ -4,7 +4,7 @@ description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och 
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 9c684e3a82353c9e241efc9ee1f3bed694d8635a
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 0%
@@ -183,7 +183,7 @@ På lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt, vilket sk
 >
 
 >[!NOTE]
->Vissa kunder kan testa en omgjord upplevelse för AEM Cloud Service Developer Console. Mer information finns i [den här artikeln](/help/implementing/developing/introduction/aem-developer-console.md).]
+>Vissa kunder kan testa en omgjord upplevelse för AEM Cloud Service Developer Console. Mer information finns i [den här artikeln](/help/implementing/developing/introduction/aem-developer-console.md).
 
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att uppstå fel.
 

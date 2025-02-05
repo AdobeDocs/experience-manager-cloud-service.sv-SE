@@ -4,7 +4,7 @@ description: Läs om hur Cloud Manager stöder AEM genom program, miljöer och r
 exl-id: b743f126-b34e-4f48-a3f0-5dbd4e1ac34e
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Din systemadministratör ansvarar för att konfigurera ditt Cloud Manager-team, 
 
 Följ de här stegen för att navigera till Cloud Manager.
 
-1. Gå till Cloud Manager inloggningssida på [`https://my.cloudmanager.adobe.com`.](https://my.cloudmanager.adobe.com/).
+1. Gå till Cloud Manager inloggningssida på [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/).
 
 1. Välj programmet på Cloud Manager **Program- och produktsida** för att öppna sidan **Översikt** .
 
@@ -67,7 +67,7 @@ Du kan även navigera till Cloud Manager hemsida för program och produkter frå
 
 ## Cloud Manager-program {#cloud-manager-programs}
 
-Cloud Manager är en uppsättning Cloud Manager-miljöer som stöder logiska grupperingar av affärsinitiativ. Dessa grupperingar motsvarar vanligtvis ett köpt servicenivåavtal (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja en organisations offentliga webbplats, medan ett annat program representerar en intern DAM.
+Cloud Manager är en uppsättning Cloud Manager-miljöer som stöder logiska grupperingar av affärsinitiativ. Dessa grupperingar motsvarar vanligtvis en inköpt Service level agreement (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja en organisations offentliga webbplats, medan ett annat program representerar en intern DAM.
 
 
 Titta på den här [videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html) om du vill veta mer om hur du använder Cloud Manager-program.

@@ -5,7 +5,7 @@ exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 190e68ebcd3c2a7ba7b995690c802a04728e6962
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 
 >[!IMPORTANT]
 >
->Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [har tagits bort.](/help/release-notes/release-notes-cloud/release-notes-current.md#pwa-features)
+>Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [har tagits bort](/help/release-notes/release-notes-cloud/release-notes-current.md#pwa-features).
 >
 >Befintliga projekt som använder den här funktionen stöds fortfarande, men nya projekt bör inte använda den här funktionen.
 
@@ -46,7 +46,7 @@ Med PWA har användaren en lokal kopia av webbplatsen, vilket ger en appliknande
 
 >[!NOTE]
 >
->Progressiva webbprogram är en teknik som utvecklas och stöd för installation av lokala appar och andra funktioner som [beror på vilken webbläsare du använder.](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs#summary)
+>Progressiva webbprogram är en teknik som utvecklas och stöd för installation av lokala appar och andra funktioner som [är beroende av vilken webbläsare du använder](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs#summary).
 
 ## Förutsättningar {#prerequisites}
 
@@ -63,9 +63,9 @@ Core Components version 2.15.0 och senare har fullt stöd för PWA-funktionerna 
 
 >[!NOTE]
 >
->Adobe rekommenderar inte att du använder PWA-funktionerna i anpassade komponenter eller komponenter som inte [har utökats från kärnkomponenterna.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html)
+>Adobe rekommenderar inte att du använder PWA-funktionerna i anpassade komponenter eller komponenter som inte [har utökats från kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html).
 <!--
-Your components need to include the [manifest files](https://developer.mozilla.org/en-US/docs/Web/Manifest) and [service worker,](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) which supports the PWA features.
+Your components need to include the [manifest files](https://developer.mozilla.org/en-US/docs/Web/Manifest) and [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), which supports the PWA features.
 
  To do this, the developer adds the following link to the `customheaderlibs.html` file of your page component.
 
@@ -108,7 +108,7 @@ RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.webmanifest)$
 
 ## Aktivera PWA för din webbplats {#enabling-pwa-for-your-site}
 
-När [förutsättningarna](#prerequisites) är uppfyllda är det enkelt för en innehållsförfattare att aktivera PWA-funktioner för en webbplats. Här följer en grundläggande beskrivning av hur du gör detta. Enskilda alternativ beskrivs i avsnittet [Detaljerade alternativ.](#detailed-options)
+När [förutsättningarna](#prerequisites) är uppfyllda är det enkelt för en innehållsförfattare att aktivera PWA-funktioner för en webbplats. Här följer en grundläggande beskrivning av hur du gör detta. Enskilda alternativ beskrivs i avsnittet [Detaljerade alternativ](#detailed-options).
 
 1. Logga in i AEM.
 1. Välj **Navigering** > **Webbplatser** på huvudmenyn.
@@ -134,7 +134,7 @@ När [förutsättningarna](#prerequisites) är uppfyllda är det enkelt för en 
 
 1. Välj **Spara och stäng**.
 
-Platsen har konfigurerats och du kan [installera den som en lokal app.](#using-pwa-enabled-site)
+Din plats har nu konfigurerats och du kan [installera den som en lokal app](#using-pwa-enabled-site).
 
 ## Använda din PWA-aktiverade webbplats {#using-pwa-enabled-site}
 
@@ -149,7 +149,7 @@ Nu när du har [konfigurerat din webbplats så att den stöder PWA](#enabling-pw
 
 ## Detaljerade alternativ {#detailed-options}
 
-Följande avsnitt innehåller mer information om de alternativ som är tillgängliga när [du konfigurerar platsen för PWA.](#enabling-pwa-for-your-site)
+Följande avsnitt innehåller mer information om de alternativ som är tillgängliga när [du konfigurerar platsen för PWA](#enabling-pwa-for-your-site).
 
 ### Konfigurera installerbar upplevelse {#configure-installable-experience}
 

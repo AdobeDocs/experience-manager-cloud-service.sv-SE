@@ -4,7 +4,7 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 2e22a2570a11df8d5f82037414f689f20b6fdb94
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1343'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Det här dokumentet innehåller en översikt över en modelldefinition och över
 
 >[!TIP]
 >
->Om du inte känner till hur du kan mäta upp din app för den universella redigeraren kan du läsa dokumentet [Universal Editor Overview för AEMutvecklare.](/help/implementing/universal-editor/developer-overview.md)
+>Om du inte känner till hur du kan mäta upp din app för den universella redigeraren läser du dokumentet [Universal Editor Overview for AEM Developers](/help/implementing/universal-editor/developer-overview.md).
 
 ## Modelldefinitionsstruktur {#model-structure}
 
@@ -139,7 +139,7 @@ En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att
 
 #### AEM {#aem-content}
 
-En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att välja valfri AEM. Till skillnad från referenskomponenten [,](#reference) som bara kan markera resurser, kan komponenten AEM referera till valfritt AEM. Den erbjuder en extra valideringstyp.
+En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att välja valfri AEM. Till skillnad från [referenskomponenten](#reference), som bara kan markera resurser, kan AEM innehållskomponenten referera till vilket AEM som helst. Den erbjuder en extra valideringstyp.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -646,7 +646,7 @@ En alternativgruppskomponenttyp tillåter en ömsesidigt uteslutande markering a
 
 #### Referens {#reference}
 
-En referenskomponenttyp aktiverar en AEM tillgångsväljare, som kan användas för att välja en AEM resurs att referera till. Till skillnad från innehållskomponenten [AEM,](#aem-content), som kan välja en AEM resurs, kan referenskomponenten bara referera till resurser. Den erbjuder en extra valideringstyp.
+En referenskomponenttyp aktiverar en AEM tillgångsväljare, som kan användas för att välja en AEM resurs att referera till. Till skillnad från innehållskomponenten [AEM](#aem-content), som kan välja vilken AEM som helst, kan referenskomponenten bara referera till resurser. Den erbjuder en extra valideringstyp.
 
 En referenskomponenttyp tillåter en referens till ett annat dataobjekt från det aktuella objektet.
 

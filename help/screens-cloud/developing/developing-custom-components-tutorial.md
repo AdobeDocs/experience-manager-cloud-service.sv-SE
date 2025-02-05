@@ -4,7 +4,7 @@ description: I följande självstudiekurs går du igenom stegen för att skapa e
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
 feature: Developing Screens
 role: Admin, Developer, User
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Du behöver följande för att kunna slutföra den här självstudiekursen:
 
 1. Lokal utvecklingsmiljö
 
-Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en IDE för att utveckla [med AEM finns här.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html)
+Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en IDE för att utveckla [med AEM finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html).
 
 
 ## Projektinställningar {#project-setup}

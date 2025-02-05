@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar ett nytt program och en ny pipeline f�
 exl-id: 06287618-0328-40b1-bba8-84002283f23f
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du konfigurerar ett nytt program och en ny pipeline för att distri
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om tillägget Adobe Experience Manager (AEM) Reference Demos [Förstå installationen av tillägget för referensdemo](installation.md) lärde du dig hur installationsprocessen för tillägget för referensdemos fungerar, och visar hur de olika delarna fungerar tillsammans. Nu bör du:
+I det föregående dokumentet om tillägget Adobe Experience Manager (AEM) Reference Demos, [Understanding Reference Demo Add-on Installation](installation.md), fick du veta hur installationsprocessen för tillägget Reference Demos fungerar och visar hur de olika delarna fungerar tillsammans. Nu bör du:
 
 * Få en grundläggande förståelse för Cloud Manager.
 * Förstå hur rörledningar levererar innehåll och konfigurationer till AEM.

@@ -4,7 +4,7 @@ description: RemotePage-komponenten är en anpassad sidkomponent för redigering
 exl-id: d3465592-0392-49b0-b49d-de93983c1d6e
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -41,9 +41,9 @@ Mer information om redigerbar, extern SPA i AEM finns i artikeln [Redigera en ex
 
 ## Begränsningar {#limitations}
 
-* RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [ som finns här.](https://github.com/shellscape/webpack-manifest-plugin) RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
+* RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett resursmanifest som den [som finns här](https://github.com/shellscape/webpack-manifest-plugin). RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
 * Intern CSS som är definierad i programmets rotfil och infogad CSS på DOM-rotnoden är inte tillgänglig vid fjärråtergivning i AEM.
 
 ## Teknisk information {#technical-details}
 
-Precis som resten av AEM SPA är RemotePage-komponenten öppen källkod. Fullständig teknisk information om RemotePage-komponenten finns i [GitHub-databasen.](https://github.com/adobe/aem-spa-project-core/tree/master/ui.apps/src/main/content/jcr_root/apps/spa-project-core/components/remotepage)
+Precis som resten av AEM SPA är RemotePage-komponenten öppen källkod. Fullständig teknisk information om RemotePage-komponenten finns i [GitHub-databasen](https://github.com/adobe/aem-spa-project-core/tree/master/ui.apps/src/main/content/jcr_root/apps/spa-project-core/components/remotepage).

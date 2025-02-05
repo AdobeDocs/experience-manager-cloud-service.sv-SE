@@ -5,7 +5,7 @@ exl-id: eb8d1152-ed37-47ca-86a8-6a66c010ee62
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1359'
 ht-degree: 0%
@@ -119,7 +119,7 @@ Ett nytt jobbkort har lagts till i projektet. I det här exemplet har en annan s
 
 Du kan lägga märke till att statistiken på det nya kortet (antal tillgångar och innehållsfragment) är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som måste översättas. Detta inkluderar omöversättning av uppdaterat innehåll och förstagångsöversättning av nytt innehåll.
 
-Från och med nu [startar och hanterar du översättningsjobbet precis som du gjorde originalet.](translate-content.md#using-translation-project)
+Från och med nu [startar och hanterar du ditt översättningsjobb på samma sätt som du gjorde det ursprungliga](translate-content.md#using-translation-project).
 
 ### Uppdatera ett manuellt skapat översättningsprojekt {#updating-manual-project}
 
@@ -141,15 +141,15 @@ Om du vill uppdatera en översättning kan du lägga till ett nytt jobb i ditt b
    ![Välj målspråk](assets/select-target-language.png)
 
 1. När det nya översättningsjobbets målspråk är inställt väljer du ellipsknappen längst ned på jobbkortet för att visa information om jobbet.
-1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [på samma sätt som du gjorde innan du skapade översättningsprojektet.](translate-content.md##manually-creating)
+1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [ på samma sätt som när du ursprungligen skapade översättningsprojektet](translate-content.md##manually-creating).
 
 >[!TIP]
 >
 >Banwebbläsarens kraftfulla filter kan vara användbara för att hitta just det innehåll som har uppdaterats.
 >
->Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser.](#additional-resources)
+>Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser](#additional-resources).
 
-Från och med nu [startar och hanterar du översättningsjobbet precis som du gjorde originalet.](translate-content.md#using-translation-project)
+Från och med nu [startar och hanterar du ditt översättningsjobb på samma sätt som du gjorde det ursprungliga](translate-content.md#using-translation-project).
 
 ## Slut på resan? {#end-of-journey}
 

@@ -4,9 +4,9 @@ description: Läs om stödet för innehållsfragment i Assets HTTP API, en vikti
 feature: Content Fragments, Assets HTTP API
 exl-id: d72cc0c0-0641-4fd6-9f87-745af5f2c232
 role: User, Admin
-source-git-commit: 7386298ee83eef5693ce00077659bbc4a1a70d24
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1827'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Läs om stödet för innehållsfragment i Assets HTTP API, en viktig del av Adob
 
 >[!NOTE]
 >
->Den senaste informationen om Experience Manager API:er finns även på [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
+>Den senaste informationen om Experience Manager API:er finns på [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
 
 Med [Assets REST API](/help/assets/mac-api-assets.md) kan utvecklare av Adobe Experience Manager as a Cloud Service komma åt innehåll (som lagras i AEM) direkt via HTTP-API:t via CRUD-åtgärder (Create, Read, Update, Delete).
 

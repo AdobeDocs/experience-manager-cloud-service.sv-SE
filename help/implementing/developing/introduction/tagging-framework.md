@@ -4,7 +4,7 @@ description: Tagga innehåll och använd infrastrukturen för AEM taggar för at
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 0%
@@ -24,9 +24,9 @@ Den här artikeln fokuserar på det underliggande ramverket som stöder taggning
 
 Så här taggar du innehåll och använder infrastrukturen för AEM taggar:
 
-* Taggen måste finnas som en nod av typen [`cq:Tag`](#cq-tag-node-type) under rotnoden [taxonomy.](#taxonomy-root-node)
+* Taggen måste finnas som en nod av typen [`cq:Tag`](#cq-tag-node-type) under [taxonomirotnoden](#taxonomy-root-node).
 * Den taggade innehållsnodens `NodeType` måste innehålla [`cq:Taggable`](#taggable-content-cq-taggable-mixin)-blandningen.
-* [`TagID`](#tagid) läggs till i innehållsnodens [`cq:tags`](#cq-tags-property)-egenskap och löses till en nod av typen [`cq:Tag`.](#cq-tag-node-type)
+* [`TagID`](#tagid) läggs till i innehållsnodens [`cq:tags`](#cq-tags-property)-egenskap och löses till en nod av typen [`cq:Tag`](#cq-tag-node-type).
 
 ## cq:Tag Node Type {#cq-tag-node-type}
 
@@ -41,18 +41,18 @@ Ramverket för taggning begränsar också författare och besökare till att end
 ### Märkordsegenskaper {#tag-characteristics}
 
 * Nodtypen är `cq:Tag`.
-* Nodnamnet är en komponent i [`TagID`.](#tagid)
-* [`TagID`](#tagid) innehåller alltid ett [namnutrymme.](#tag-namespace)
+* Nodnamnet är en komponent i [`TagID`](#tagid).
+* [`TagID`](#tagid) innehåller alltid ett [namnutrymme](#tag-namespace).
 * Egenskapen `jcr:title` (den titel som ska visas i användargränssnittet) är valfri.
 * Egenskapen `jcr:description` är valfri.
-* När de innehåller underordnade noder kallas det en [behållartagg.](#container-tags)
-* Taggen lagras i databasen under en bassökväg som kallas [taxonomirotnod.](#taxonomy-root-node)
+* När de innehåller underordnade noder kallas det en [behållartagg](#container-tags).
+* Taggen lagras i databasen under en bassökväg som kallas [taxonomirotnod](#taxonomy-root-node).
 
 ### TaggID {#tagid}
 
 En `TagID` identifierar en sökväg som tolkas till en taggnod i databasen.
 
-Vanligtvis är `TagID` en förkortning `TagID` som börjar med namnutrymmet eller så kan det vara en absolut `TagID` som börjar med rotnoden [ taxonomi.](#taxonomy-root-node)
+Vanligtvis är `TagID` en förkortning `TagID` som börjar med namnutrymmet eller så kan det vara en absolut `TagID` som börjar med [taxonomirotnoden](#taxonomy-root-node).
 
 Om innehållet är taggat och inte finns ännu, läggs egenskapen [`cq:tags`](#cq-tags-property) till i innehållsnoden och `TagID` läggs till i egenskapens `String`-arrayvärde.
 
@@ -68,7 +68,7 @@ I AEM är bassökvägen `/content/cq:tags` och rotnoden är av typen `cq:Folder`
 
 Med namnutrymmen kan du gruppera saker. Det vanligaste är att ha ett namnutrymme per plats (till exempel public kontra internal) eller per större program (till exempel Sites eller Assets), men namnutrymmen kan användas för olika andra behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen med taggar (d.v.s. taggar för ett visst namnutrymme) som kan användas för det aktuella innehållet.
 
-Taggens namnområde är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnoden.](#taxonomy-root-node) Ett namnområde är en nod av typen `cq:Tag` vars överordnade nod inte är en `cq:Tag`-nodtyp.
+Taggens namnområde är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnoden](#taxonomy-root-node). Ett namnområde är en nod av typen `cq:Tag` vars överordnade nod inte är en `cq:Tag`-nodtyp.
 
 Alla taggar har ett namnutrymme. Om inget namnutrymme anges tilldelas taggen standardnamnutrymmet, som är `TagID` `default`, d.v.s. `/content/cq:tags/default`. Titeln är som standard `Standard Tags`.
 
@@ -107,7 +107,7 @@ Mer information finns i följande:
 
 ### Åtkomstkontroll {#access-control}
 
-Taggar finns som noder i databasen under rotnoden [taxonomy.](#taxonomy-root-node) Det går att tillåta eller neka författare och webbplatsbesökare att skapa taggar i ett givet namnområde genom att ange lämpliga åtkomstkontrollistor i databasen.
+Taggar finns som noder i databasen under [taxonomirotnoden](#taxonomy-root-node). Du kan skapa taggar i ett givet namnutrymme genom att ange lämpliga åtkomstkontrollistor i databasen, så att författare och besökare kan neka eller neka åtkomst.
 
 Genom att neka läsbehörighet för vissa taggar eller namnutrymmen kan du styra möjligheten att använda taggar för visst innehåll.
 

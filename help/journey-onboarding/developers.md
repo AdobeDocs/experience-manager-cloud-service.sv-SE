@@ -4,7 +4,7 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: f57a856b-0932-4e8f-be59-a19fe692e2ab
-source-git-commit: a3e79441d46fa961fcd05ea54e84957754890d69
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1397'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Uppgifter för utvecklare och distributionsansvarig {#developer-deployment-manager}
 
-I den här valfria delen av [introduktionsresan ](overview.md) får du lära dig hur utvecklare och distributionsansvariga kan komma åt Git för att utveckla program och använda rörledningar för att distribuera dem.
+I den här valfria delen av [introduktionsresan](overview.md) får du lära dig hur utvecklare och distributionsansvariga kan komma åt Git för att utveckla program och använda rörledningar för att distribuera dem.
 
 ## Story hittills {#story-so-far}
 
-Du har kommit långt på din startresa! Grattis! Systemadministratören har slutfört introduktionsresan genom att konfigurera nödvändiga molnresurser och bevilja åtkomst i dokumentet [Tilldela AEM produktprofiler.](assign-profiles-aem.md)
+Du har kommit långt på din startresa! Grattis! Systemadministratören har slutfört introduktionsresan genom att konfigurera nödvändiga molnresurser och bevilja åtkomst i dokumentet [Tilldela AEM produktprofiler](assign-profiles-aem.md).
 
 Nu kan utvecklare och distributionsansvariga börja skapa egna program medan AEM kan börja skapa innehåll. I det här fallet är introduktionen klar och nu är det dags att använda ditt nya AEM as a Cloud Service-system, som det här dokumentet visar.
 
@@ -136,7 +136,7 @@ Nu när du har läst det här dokumentet bör du:
 
 Du har kommit igång som utvecklare eller driftsättningshanterare och inte bara har kunskap om Cloud Manager utan även om arbetsmiljöer, databaser och rörledningar! Men det finns mer att lära sig om AEM as a Cloud Service kraftfulla verktyg för CI/CD. Mer information finns i avsnittet [Ytterligare resurser](#additional-resources).
 
-Om du är intresserad av hur innehållsförfattare får åtkomst till och använder AEM som en molntjänst kan du fortsätta till den sista delen av introduktionsresan, [AEM Användaruppgifter.](aem-users.md)
+Om du är intresserad av hur innehållsförfattare får åtkomst till och använder AEM som en molntjänst kan du fortsätta till den sista delen av introduktionsresan, [AEM Användaruppgifter](aem-users.md).
 
 >[!TIP]
 >
@@ -148,7 +148,7 @@ Här följer ytterligare, valfria resurser om du vill gå längre än vad som in
 
 * [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md) - Lär dig hur du får åtkomst till och hanterar din Git-databas med hjälp av Git-kontohantering för självbetjäning från Cloud Manager.
 * [Använda Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md) - Lär dig hur du använder Cloud Manager Git-databaser och hur du integrerar din egen kundhanterade Git-databas med Cloud Manager.
-* [Installation av lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) - I den här självstudien får du hjälp med att konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager (AEM) med AEM as a Cloud Service SDK.
+* [Lokal utvecklingsmiljö - konfigurera](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) - I den här självstudiekursen får du hjälp med att konfigurera en lokal utvecklingsmiljö för Adobe Experience Manager (AEM) med AEM as a Cloud Service SDK.
 * [Komma igång med AEM Sites - WKND-självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) - Den här självstudiekursen i flera delar är utformad för utvecklare som är nybörjare i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 * [Komma igång med SPA i AEM med Reagera](/help/implementing/developing/hybrid/getting-started-react.md) - I den här artikeln visas ett exempel SPA programmet, hur det sätts ihop och hur du snabbt kommer igång med ditt eget SPA med React Framework.
 * [Komma igång med SPA i AEM med Angular](/help/implementing/developing/hybrid/getting-started-angular.md) - I den här artikeln visas ett exempel SPA programmet, hur det är sammansatt och hur du snabbt kommer igång med ditt eget SPA med hjälp av Angularnas ramverk.

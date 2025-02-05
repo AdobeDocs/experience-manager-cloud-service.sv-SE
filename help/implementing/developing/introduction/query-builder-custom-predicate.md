@@ -4,7 +4,7 @@ description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fr
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -101,7 +101,7 @@ Genom att gruppera metadata för replikering med en anpassad predikatutvärderar
 
 >[!TIP]
 >
->Inställningen av nya AEM, inklusive att använda maven, förklaras i detalj i [WKND-självstudiekursen.](develop-wknd-tutorial.md)
+>Inställningen av nya AEM, inklusive att använda maven, förklaras i detalj i [WKND-självstudiekursen](develop-wknd-tutorial.md).
 
 Först måste du uppdatera Maven-beroendena för ditt projekt. `PredicateEvaluator` är en del av `cq-search`-artefakten, så den måste läggas till i din Maven-pom-fil.
 

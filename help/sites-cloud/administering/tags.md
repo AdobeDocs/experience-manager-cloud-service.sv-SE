@@ -5,7 +5,7 @@ exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
 solution: Experience Manager Sites
 feature: Workflow
 role: Admin
-source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2200'
 ht-degree: 0%
@@ -75,8 +75,8 @@ Så här kommer du åt taggningskonsolen:
 Det finns flera steg för att skapa och använda taggar för att ordna ditt innehåll.
 
 1. [Skapa ett namnutrymme för taggarna](#creating-namespaces) (eller välj ett befintligt som du vill återanvända).
-1. [Skapa en ny tagg.](#creating-tags)
-1. [Publish taggen.](#publishing-tags)
+1. [Skapa en ny tagg](#creating-tags).
+1. [Publish the tag](#publishing-tags).
 
 ### Skapa namnutrymmen {#creating-namespaces}
 
@@ -96,7 +96,7 @@ Ett namnutrymme används för att ordna andra taggar. Den kan ses som den lägst
 
 Namnutrymmet skapas. I taggningskonsolen finns namnutrymmena på den lägsta nivån (längst till vänster i konsolen) och representeras av mappikoner, som visar deras karaktär som en&quot;behållare&quot; eller gruppering av andra taggar.
 
-Du kan nu [skapa nya taggar](#creating-tags) i det här namnutrymmet eller [hantera befintliga taggar.](#managing-tags)
+Du kan nu [skapa nya taggar](#creating-tags) i det här namnutrymmet eller [hantera befintliga taggar](#managing-tags).
 
 Ett namnutrymme får inte innehålla några undertaggar. Eftersom ett namnutrymme i sig är en tagg kan det användas för att ordna ditt innehåll som vilken annan tagg som helst. Om du vill fortsätta att skapa en strukturerad taggningstaxonomi kan du [skapa undertaggar](#creating-tags) i det namnutrymmet baserat på dina projektkrav.
 
@@ -104,7 +104,7 @@ Ett namnutrymme får inte innehålla några undertaggar. Eftersom ett namnutrymm
 
 Taggar läggs vanligtvis till i namnutrymmen.
 
-1. Om du vill skapa en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill skapa en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera det namnutrymme där du vill skapa taggen. Du kan också markera en annan tagg och skapa en undertagg under den.
 
@@ -132,7 +132,7 @@ Taggar gör det möjligt att skapa en egen taxonomi som är anpassad efter organ
 
 Precis som när du skapar annat innehåll i AEM finns det bara i redigeringsmiljön när du har skapat en tagg (eller namnutrymme). För att dina taggar ska vara tillgängliga för användarna måste du publicera taggarna.
 
-1. Om du vill publicera en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill publicera en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen eller taggarna som du vill publicera och välj **Publish** i verktygsfältet.
 
@@ -176,7 +176,7 @@ När en enskild tagg, ett namnutrymme eller en annan tagg markeras i taggningsko
 
 Du kan visa mer information om taggen, inklusive vem som senast publicerade den och när, genom att växla konsolen till vyn **Egenskaper** .
 
-1. Om du vill visa egenskaperna för en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill visa egenskaperna för en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen vars egenskaper du vill visa och välj **Egenskaper** i den vänstra listen.
 
@@ -192,7 +192,7 @@ Mer information om hur du väljer visningslägen och skenor finns i [Grundlägga
 
 Taggar och namnutrymmen kan redigeras när de har skapats.
 
-1. Om du vill redigera en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill redigera en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen som du vill redigera och välj **Redigera** i verktygsfältet.
 
@@ -206,13 +206,13 @@ Taggar och namnutrymmen kan redigeras när de har skapats.
 
 Mer information om hur du lägger till språköversättningar finns i avsnittet [Hantera taggar på olika språk](#managing-tags-in-different-languages).
 
-Om de ändringar du gjorde gällde en redan publicerad tagg kan du [publicera den igen.](#publishing-tags)
+Om de ändringar du gjorde gällde en redan publicerad tagg kanske du vill [publicera den igen](#publishing-tags).
 
 ### Avpublicerar taggar {#unpublishing-tags}
 
 Om du vill inaktivera taggen på författarinstansen och ta bort den från publiceringsinstansen kan du avpublicera den.
 
-1. Om du vill avpublicera en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill avpublicera en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen eller taggarna som du vill avpublicera och välj **Avpublicera** i verktygsfältet.
 
@@ -232,7 +232,7 @@ De markerade taggarna är köade för borttagning av publicering. Om den markera
 
 Det kan vara praktiskt att se vilket innehåll en viss tagg används på. Du kan göra detta med vyn **Referenser** i taggningskonsolen.
 
-1. Om du vill visa referenserna för en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill visa referenserna för en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen vars referenser du vill visa och välj **Referenser** i den vänstra listen.
 
@@ -258,7 +258,7 @@ Du kan behöva rensa upp eller på annat sätt ordna om taggningen genom att fly
 >
 >Det är god praxis att endast administratörer får flytta och byta namn på taggar.
 
-1. Om du vill flytta eller byta namn på en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill flytta eller byta namn på en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen som du vill flytta eller byta namn på och välj **Flytta** i verktygsfältet.
 
@@ -281,7 +281,7 @@ Taggens namn ändras och/eller flyttas till den nya platsen. När den markerade 
 
 Om taggningstaxonomin innehåller dubbletter eller liknande taggar kan det vara bra att sammanfoga de taggarna. När taggen `A` sammanfogas med taggen `B` blir alla sidor som taggats med taggen `A` taggade med taggen `B` och taggen `A` inte längre tillgängliga för författare.
 
-1. Om du vill sammanfoga två taggar öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill sammanfoga två taggar öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen som du vill sammanfoga i en annan tagg och välj sedan **Sammanfoga** i verktygsfältet.
 
@@ -297,7 +297,7 @@ Den tagg som valts i konsolen sammanfogas med taggen som anges i dialogrutan. N�
 
 Om taxonomin för taggning ändras och en tagg eller ett namnutrymme inte behövs kan den tas bort.
 
-1. Om du vill ta bort en tagg öppnar du [taggningskonsolen.](#tagging-console)
+1. Om du vill ta bort en tagg öppnar du [taggningskonsolen](#tagging-console).
 
 1. Markera taggen som du vill ta bort och välj sedan **Ta bort** i verktygsfältet.
 
@@ -358,7 +358,7 @@ Egenskapen `title` för en tagg kan översättas till flera språk. När taggtit
 
 Låt oss anta att vi har en tagg med namnet `Animals` som vi vill översätta till tyska och franska.
 
-1. Öppna [taggningskonsolen.](#tagging-console)
+1. Öppna [taggningskonsolen](#tagging-console).
 
 1. Markera taggen som du vill översätta och välj sedan **Redigera** i verktygsfältet.
 

@@ -5,7 +5,7 @@ topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
 feature: Operations
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3088'
 ht-degree: 0%
@@ -30,7 +30,7 @@ När du utformar en taxonomi är det dessutom viktigt att tänka på om det är 
 
 ### Frågor i komponenter {#queries-in-components}
 
-Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i ett AEM är det en bra idé att undvika dem i dina komponenter. Om flera frågor körs varje gång en sida återges kan det ofta försämra systemets prestanda. Det finns två strategier som kan användas för att undvika att köra frågor vid återgivning av komponenter: **[gå igenom noder](#traversing-nodes)** och **[förhämta resultat.](#prefetching-results)**
+Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i ett AEM är det en bra idé att undvika dem i dina komponenter. Om flera frågor körs varje gång en sida återges kan det ofta försämra systemets prestanda. Det finns två strategier som kan användas för att undvika att köra frågor vid återgivning av komponenter: **[gå igenom noder](#traversing-nodes)** och **[förhämta resultat](#prefetching-results)**.
 
 ### Går igenom noder {#traversing-nodes}
 
@@ -62,14 +62,14 @@ En liknande strategi kan användas för att behålla resultatet i en minnescache
 
 ## Optimera frågor {#optimizing-queries}
 
-I Oak-dokumentationen finns en [översikt över hur frågor körs.](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-processing) Detta utgör grunden för alla optimeringsaktiviteter som beskrivs i det här dokumentet.
+I Oak-dokumentationen finns en [översikt över hur frågor körs](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-processing). Detta utgör grunden för alla optimeringsaktiviteter som beskrivs i det här dokumentet.
 
 AEM as a Cloud Service tillhandahåller [frågeprestandaverktyget](#query-performance-tool) som är utformat för att ge stöd åt implementering av effektiva frågor.
 
 * Här visas redan utförda frågor med relevanta prestandaegenskaper och frågeplanen.
 * Det gör det möjligt att utföra ad hoc-frågor på olika nivåer, från att bara visa frågeplanen tills den fullständiga frågan körs.
 
-Det går att nå frågeprestandaverktyget via [Developer Console i Cloud Manager.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries) AEM as a Cloud Service Query Performance Tool innehåller mer information om frågekörningen jämfört med AEM 6.x-versionen.
+Det går att nå frågeprestandaverktyget via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries). AEM as a Cloud Service Query Performance Tool innehåller mer information om hur frågan körs jämfört med AEM 6.x-versionen.
 
 I det här diagrammet visas det allmänna flödet för att använda verktyget Frågeprestanda för att optimera frågor.
 

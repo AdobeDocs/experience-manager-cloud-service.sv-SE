@@ -4,7 +4,7 @@ description: Innan du loggar in på AEMaaCS är det praktiskt att förstå en de
 exl-id: d02776a7-836a-4894-a5d5-ae88cc7e4e76
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # AEM as a Cloud Service Terminologi {#terminology}
 
-I den här delen av [introduktionsresan ](overview.md) lär du dig en del av terminologin i AEM as a Cloud Service och dess grundläggande struktur.
+I den här delen av [introduktionsresan](overview.md) lär du dig en del av terminologin för AEM as a Cloud Service och dess grundläggande struktur.
 
 ## Syfte {#objective}
 
-Nu när du förstår vad som har lett till introduktionsprocessen genom att läsa dokumentet [Förberedelse för introduktion](preparation.md) kan det vara bra att förstå en del av terminologin i systemet och dess grundläggande struktur innan du loggar in.
+Nu när du förstår vad som har lett till introduktionsprocessen genom att läsa dokumentet [Förberedelser för introduktion](preparation.md) kan det vara bra att förstå en del av terminologin i systemet och dess grundläggande struktur innan du loggar in.
 
 AEM as a Cloud Service är ett kraftfullt och flexibelt verktyg och för att kunna använda det bör du känna till hur det är organiserat och vilka termer och språk som används i det. I det här dokumentet sammanfattas några viktiga termer som du behöver förstå innan du börjar använda systemet.
 

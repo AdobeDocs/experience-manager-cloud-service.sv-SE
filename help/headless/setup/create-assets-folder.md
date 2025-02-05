@@ -4,7 +4,7 @@ description: Använd AEM Content Fragment Models för att definiera strukturen f
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
@@ -38,7 +38,7 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
    ![Skapa mapp](../assets/assets-folder-create.png)
 1. Markera mappen som du skapade genom att hålla markeringen nedtryckt och trycka på den. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommandot](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md)).
 1. I fönstret **Egenskaper** väljer du fliken **Cloud Service** .
-1. För **molnkonfigurationen** väljer du den [konfiguration du skapade tidigare.](create-configuration.md)
+1. För **molnkonfigurationen** väljer du den [konfiguration du skapade tidigare](create-configuration.md).
    ![Konfigurera resursmappen](../assets/assets-folder-configure.png)
 1. Välj **Spara och stäng**.
 1. Välj **OK** i bekräftelsefönstret.

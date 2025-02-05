@@ -8,7 +8,7 @@ exl-id: 3db2ff19-dc24-47b6-aa56-2ee2305fe045
 solution: Experience Manager Sites
 feature: Translation
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 1%
@@ -25,7 +25,7 @@ AEM Sites är en kraftfull verktygslåda för att skapa och hantera digitala upp
 
 AEM har lika kraftfulla verktyg för att översätta ert innehåll så att ni kan leverera det så snabbt som möjligt till era målgrupper i andra regioner eller på andra platser. Den här dokumentationsresan presenterar redigeringsverktygen så att du förstår hur innehåll skapas och hanteras i AEM och sedan drar nytta av det du behöver veta för att hantera ditt eget översättningsprojekt.
 
-Om du redan är bekant med AEM Sites och dina översättningskrav kan det hända att du redan har grundläggande kunskaper om den här resan. Om så är fallet kan du läsa vår tekniska dokumentation som är länkad under avsnittet [ytterligare resurser nedan.](#additional-resources)
+Om du redan är bekant med AEM Sites och dina översättningskrav kan det hända att du redan har grundläggande kunskaper om den här resan. Om så är fallet kan du läsa vår tekniska dokumentation som är länkad under avsnittet [ytterligare resurser nedan](#additional-resources).
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
@@ -39,7 +39,7 @@ Om du vill veta hur Adobe rekommenderar hur man löser webbplatsaffärsärenden 
 
 Den här resan är utformad för översättningsspecialistpersonal, som ofta kallas översättningsprojektledare eller TPM. Den här resan innehåller krav, steg och tillvägagångssätt för att översätta AEM Sites-innehåll. Resan kan definiera ytterligare personligheter som översättningsspecialisten måste interagera med, men utgångspunkten för resan är översättningsspecialistens.
 
-På den här resan förutsätts det att läsaren har erfarenhet av att översätta innehåll i ett stort CMS-system, men det förutsätts att läsaren inte har någon kunskap om AEM.
+På den här resan förutsätts det att läsaren har erfarenhet av att översätta innehåll i ett stort CMS-system, men det förutsätts inte ha någon kunskap om AEM.
 
 Följande personer interagerar på den här resan.
 

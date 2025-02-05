@@ -5,7 +5,7 @@ exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras, 
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
-Ända sedan de lättanvända, storskaliga CMS:erna (Content Management System) började användas har organisationer använt dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Att använda CMS som en central punkt för att administrera upplevelser har förbättrat effektiviteten genom att eliminera behovet av att duplicera uppgifter i olika system.
+Ända sedan de lättanvända, storskaliga CMS:erna (Content Management System) började användas har organisationer använt dem som en central plats för att hantera meddelanden, varumärken och kommunikation. Genom att använda CMS som en central punkt för att administrera upplevelser blir ni effektivare eftersom ni slipper utföra samma uppgifter i olika system.
 
-![Klassisk CMS i full hög](/help/journey-headless/developer/assets/full-stack.png)
+![Den klassiska högklassiga CMS](/help/journey-headless/developer/assets/full-stack.png)
 
-I ett CMS-system i full hög finns funktionen för att hantera innehåll i CMS-systemet. Systemets funktioner består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
+I en CMS i full hög finns funktionen för att hantera innehåll i CMS. Systemfunktionerna består av olika komponenter i CMS-stacken. Lösningen i full hög har många fördelar.
 
 * Det finns ett system att underhålla.
 * Innehållet hanteras centralt.
@@ -46,13 +46,13 @@ Men komplexiteten i beroendena i högen blir snabbt uppenbar eftersom andra obje
 
 Huvudet för alla system är vanligtvis systemets utdatarenderare, vanligtvis i form av ett grafiskt gränssnitt eller andra grafiska utdata.
 
-När vi talar om ett headless CMS hanterar CMS-systemet innehållet och fortsätter att leverera det till konsumenterna. Om **content** endast levereras på ett standardiserat sätt utesluter dock ett headless CMS den slutliga utdatarenderingen och **presentationen** av innehållet lämnas till den förbrukande tjänsten.
+När vi talar om ett headless CMS hanterar CMS innehållet och fortsätter att leverera det till konsumenterna. Men om **content** endast levereras på ett standardiserat sätt utesluter ett headless CMS den slutliga utdatarenderingen, vilket innebär att **presentationen** av innehållet lämnas till den förbrukande tjänsten.
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webbutik, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS-systemet och tillhandahåller sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webbutik, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från CMS utan rubrik och erbjuder sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
-Om du utelämnar huvudet förenklas CMS-systemet genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
+Om du utelämnar huvudet förenklas CMS genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
 ## Översätta rubrikfritt innehåll i AEM {#translating-in-aem}
 
@@ -81,5 +81,5 @@ Bygg vidare på den här kunskapen och fortsätt din AEM översättningsresa uta
 Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Kom igång med AEM headless-översättning](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
 
 * [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om hur du AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
-* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

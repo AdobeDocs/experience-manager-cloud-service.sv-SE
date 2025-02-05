@@ -6,7 +6,7 @@ google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 keywords: Använd AEM arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrivet steg, generera icke-interaktiva utdata från PDF
 feature: Adaptive Forms, Workflow
 role: Admin, User
-source-git-commit: 81951a9507ec3420cbadb258209bdc8e2b5e2942
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '6730'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     -->
 
 * **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange den metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
-* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela ett arbetsflöde dynamiskt till användarna](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&amp;CID=RedirectAEMCommunityKautuk)
+* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela ett arbetsflöde dynamiskt till användarna](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&amp;CID=RedirectAEMCommunityKautuk).
 
 * **[!UICONTROL Participants]**: Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** har valts i fältet **[!UICONTROL Participant Chooser]**. I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 

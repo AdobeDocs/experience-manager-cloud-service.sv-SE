@@ -4,7 +4,7 @@ description: Lär dig hur du får tillgång till Cloud Manager så att du kan ko
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
 feature: Onboarding
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Använd Cloud Manager {#cloud-resources}
 
-I den här delen av [introduktionsresan ](overview.md) får du lära dig hur du kommer åt Cloud Manager så att du kan konfigurera dina projektresurser.
+I den här delen av [introduktionsresan](overview.md) får du lära dig hur du kommer åt Cloud Manager så att du kan konfigurera dina projektresurser.
 
 ## Syfte {#objective}
 
@@ -40,7 +40,7 @@ Innan teammedlemmarna som du tilldelade rollen **Business Owner** kan komma åt 
 
 1. Kontrollera att du som systemadministratör har rollen **Affärsägare** tilldelad.
 
-   * Återgå till föregående steg i den här resan, [Tilldela teammedlemmar till Cloud Manager produktprofiler](assign-profiles-cloud-manager.md) om du vill ha mer information om hur du tilldelar systemadministratören rollen **Affärsägare**.
+   * Återgå till föregående steg i den här resan, [Tilldela teammedlemmar till Cloud Manager produktprofiler](assign-profiles-cloud-manager.md), om du vill ha mer information om hur du tilldelar systemadministratören rollen **Affärsägare**.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och få den normala startsidan.
 

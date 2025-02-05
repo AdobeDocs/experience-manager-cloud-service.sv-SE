@@ -5,7 +5,7 @@ contentOwner: KK
 exl-id: 4759fa8c-10c7-4446-a135-3104b9beaee8
 feature: Asset Processing
 role: User, Leader, Developer
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -87,7 +87,7 @@ Läs mer om [Återbearbetar metadataprofiler](https://experienceleague.adobe.com
 
 ### Bearbeta Dynamic Media-resurser igen i en mapp {#reprocessing-dynamic-media}
 
-Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat. Mer information finns i [bearbeta om Dynamic Media-resurser i en mapp.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en)
+Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat. Mer information finns i [bearbeta om Dynamic Media-resurser i en mapp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en).
 
 >[!NOTE]
 >

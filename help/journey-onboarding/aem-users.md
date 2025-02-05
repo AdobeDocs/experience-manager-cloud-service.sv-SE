@@ -4,7 +4,7 @@ description: När systemadministratören har konfigurerat de molnresurser som be
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 86700cce-139f-451e-9c21-b38b6332f773
-source-git-commit: bbd845079cb688dc3e62e2cf6b1a63c49a92f6b4
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # AEM användaruppgifter {#aem-user-tasks}
 
-I den här valfria delen av [introduktionsresan ](overview.md) får du lära dig hur AEM kan få åtkomst till AEM as a Cloud Service för att skapa innehåll.
+I den här valfria delen av [introduktionsresan](overview.md) får du lära dig hur AEM kan få åtkomst till AEM as a Cloud Service för att skapa innehåll.
 
 ## Story hittills {#story-so-far}
 
-Du har kommit långt på din startresa! Grattis! Systemadministratören har slutfört introduktionsresan genom att konfigurera nödvändiga molnresurser och bevilja åtkomst i dokumentet [Tilldela AEM produktprofiler.](assign-profiles-aem.md)
+Du har kommit långt på din startresa! Grattis! Systemadministratören har slutfört introduktionsresan genom att konfigurera nödvändiga molnresurser och bevilja åtkomst i dokumentet [Tilldela AEM produktprofiler](assign-profiles-aem.md).
 
 Nu kan AEM börja skapa innehåll. I det här sammanhanget är introduktionen klar och nu är det dags att använda ditt nya AEM as a Cloud Service-system, som det här dokumentet visar.
 
@@ -48,9 +48,9 @@ Innan du påbörjar de uppgifter som beskrivs som AEM användare i det här doku
 
 Som AEM måste du logga in AEM för att börja skapa innehåll.
 
-1. Gå till Cloud Manager inloggningssida på [`https://my.cloudmanager.adobe.com`.](https://my.cloudmanager.adobe.com/)
+1. Gå till Cloud Manager inloggningssida på [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/).
 
-1. Välj lämpligt program på Cloud Manager **Program- och produktsida** för att öppna sidan **Översikt** . Fråga systemadministratören om du är osäker på vilket program du ska använda.
+1. Välj lämpligt program på sidan **Program och produkter** i Cloud Manager för att öppna sidan **Översikt**. Fråga systemadministratören om du är osäker på vilket program du ska använda.
 
 1. På sidan **Översikt** i Cloud Manager klickar du på författarlänken på **miljökortet** .
 
@@ -64,7 +64,7 @@ Grattis! Du har nu loggat in på Författare.
 >
 >Skapa ett bokmärke för länken till AEM författarinstans så kan du öppna den direkt i stället för att gå igenom Cloud Manager varje gång.
 
-## What’s Next {#whats-next}
+## What&#39;s Next {#whats-next}
 
 Nu när du har läst det här dokumentet bör du veta hur man gör:
 
@@ -73,7 +73,7 @@ Nu när du har läst det här dokumentet bör du veta hur man gör:
 
 Grattis! Du är nu redo att skapa och publicera AEM. Avsnittet [Ytterligare resurser](#additional-resources) innehåller mer information om hur du skapar innehåll i AEM och hur du administrerar det.
 
-Om du är intresserad av hur utvecklare och distributionsansvariga skapar och hanterar anpassade program för AEM som en molntjänst kan du fortsätta med den andra valfria delen av introduktionsresan, [AEM Developer Tasks.](developers.md)
+Om du är intresserad av hur utvecklare och distributionsansvariga skapar och hanterar anpassade program för AEM som en molntjänst kan du fortsätta med den andra valfria delen av introduktionsresan, [AEM Developer Tasks](developers.md).
 
 >[!TIP]
 >

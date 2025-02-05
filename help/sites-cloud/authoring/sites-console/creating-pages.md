@@ -5,7 +5,7 @@ exl-id: 77264562-e76a-40c8-9878-847a8878fb8e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: dbe4cd619f4dc680e6fc4826f6a4fea92bab9707
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Lär dig hur du skapar nya sidor för din webbplats med konsolen **Platser**.
 
 >[!TIP]
 >
->Innan du börjar skapa nya sidor bör du känna till [hur sidorna är ordnade i AEM.](/help/sites-cloud/authoring/sites-console/organizing-pages.md)
+>Innan du börjar skapa nya sidor bör du känna till [hur sidorna är ordnade i AEM](/help/sites-cloud/authoring/sites-console/organizing-pages.md).
 
 ## Åtkomstbehörigheter {#access-privileges}
 
@@ -31,7 +31,7 @@ Kontakta systemadministratören om du råkar ut för problem.
 
 Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida innan du kan börja skapa innehåll:
 
-1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md).
 1. Navigera till den plats där du vill skapa den nya sidan.
 1. Öppna den nedrullningsbara väljaren med **Skapa** i verktygsfältet och välj sedan **Sida** i listan:
 
@@ -40,7 +40,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
 1. I det första steget i guiden kan du antingen:
 
    * Välj den mall som du vill använda för att skapa den nya sidan och välj sedan **Nästa** för att fortsätta eller **Avbryt** för att avbryta processen.
-   * Mallar stöds både för [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och för [den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/templates.md)
+   * Mallar stöds både för [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och för den [universella redigeraren](/help/sites-cloud/authoring/universal-editor/templates.md).
 
    ![Välja en mall för en ny sida](/help/sites-cloud/authoring/assets/organizing-create-page-template.png)
 

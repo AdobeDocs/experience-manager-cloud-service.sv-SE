@@ -5,7 +5,7 @@ exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
 solution: Experience Manager Sites
 feature: Authoring, Content Fragments
 role: User
-source-git-commit: b2b38a3163925fdc2bd4c5f78aaddb44ae716601
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 0%
@@ -129,8 +129,8 @@ Detta gör att du kan lägga till extra innehåll [däremellan (det vill säga m
 
 För mellanliggande innehåll kan du:
 
-* Lägg till komponenter från [komponentwebbläsaren.](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser)
-* Lägg till resurser från webbläsaren [Assets.](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser)
+* Lägg till komponenter från [komponentwebbläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser)
+* Lägg till resurser från [Assets-webbläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser)
 * Använd [Associerat innehåll](#using-associated-content) som källa för mellanliggande innehåll.
 
 >[!CAUTION]

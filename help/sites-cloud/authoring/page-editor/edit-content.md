@@ -5,7 +5,7 @@ exl-id: eacfda02-ff53-42ed-b5b2-88be3879a5e9
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 2%
@@ -44,7 +44,7 @@ Komponentplatshållaren är en indikator som visar var en komponent placeras nä
 
   ![Platshållare när en ny komponent läggs till på en sida](assets/edit-content-component-placeholder.png)
 
-* När [flyttar en befintlig komponent ](#movging-components) visas den som en blå kvadrat.
+* När [flyttar en befintlig komponent](#movging-components) visas den som en blå kvadrat.
 
   ![Platshållare när en befintlig komponent flyttas på en sida](assets/edit-content-move-placeholder.png)
 
@@ -54,8 +54,8 @@ I båda fallen visas det markerade målet som en blå kontur under komponenten s
 
 Du kan lägga till en ny komponent med [komponentwebbläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser). [komponentplatshållaren](#component-placeholder) visar var du placerar komponenten.
 
-1. Kontrollera att sidredigeraren är i läget [**Redigera**.](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector)
-1. Öppna [komponentwebbläsaren.](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser)
+1. Kontrollera att sidredigeraren är i [**redigeringsläget**](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector).
+1. Öppna [komponentwebbläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser).
 1. Dra den nödvändiga komponenten till den [obligatoriska positionen](#component-placeholder) och släpp.
 1. [Redigera](#edit-content) den nya komponenten.
 
@@ -67,7 +67,7 @@ Du kan lägga till en ny komponent med [komponentwebbläsaren](/help/sites-cloud
 
 Du kan lägga till en ny komponent genom att använda platshållaren **Dra komponenter här** i styckesystemet:
 
-1. Kontrollera att sidredigeraren är i läget [**Redigera**.](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector)
+1. Kontrollera att sidredigeraren är i [**redigeringsläget**](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector).
 1. Det finns två sätt att markera och lägga till en ny komponent från styckesystemet:
 
    * Välj alternativet **Infoga komponent** (+) antingen i verktygsfältet för en befintlig komponent eller i rutan **Dra komponenter hit** .
@@ -87,13 +87,13 @@ Du kan lägga till en ny komponent genom att använda platshållaren **Dra kompo
 
 ## Lägga till en resurs {#adding-asset}
 
-Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [resursläsaren.](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser) Detta skapar automatiskt en komponent av lämplig typ (och som innehåller resursen).
+Du kan också lägga till en ny komponent på sidan genom att dra en resurs från [resursläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser). Då skapas automatiskt en komponent av lämplig typ (och som innehåller resursen).
 
 Det här beteendet kan konfigureras för din installation. Mer information finns i [referenshandboken för komponenter](/help/implementing/developing/components/reference.md#component-placeholders) i dokumentet.
 
 Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
-1. Kontrollera att sidan är i läget [**Redigera**.](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector)
+1. Kontrollera att sidan är i [**redigeringsläge**](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector).
 1. Öppna [resursläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#assets-browser).
 1. Dra den önskade resursen till önskad position. [komponentplatshållaren](#component-placeholder) visar var komponenten är placerad och ett mål visas där den kommer att infogas.
 1. Släpp resursen på målet. En lämplig komponent för resurstypen skapas på den önskade plats som innehåller den valda resursen.
@@ -133,7 +133,7 @@ De åtgärder som är tillgängliga i komponentverktygsfältet är lämpliga fö
 
   ![Ta bort-knapp](assets/edit-content-delete.png)
 
-* **Infoga komponent** öppnar dialogrutan för att [lägga till en ny komponent.](#adding-a-component-from-the-paragraph-system)
+* **Infoga komponent** öppnar dialogrutan för att [lägga till en ny komponent](#adding-a-component-from-the-paragraph-system).
 
   ![Infoga-knapp](assets/edit-content-insert-component.png)
 
@@ -219,7 +219,7 @@ I stället för att växla från redigeringsläge till [layoutläge](/help/sites
 
    ![Layoutknappen i komponentverktygsfältet](assets/edit-content-layout.png)
 
-1. När Layout-åtgärden är markerad kan du ändra komponentens layout på samma sätt som i [layoutläget.](/help/sites-cloud/authoring/page-editor/responsive-layout.md#defining-layouts-layout-mode)
+1. När Layout-åtgärden är markerad kan du ändra komponentens layout på samma sätt som i [layoutläget](/help/sites-cloud/authoring/page-editor/responsive-layout.md#defining-layouts-layout-mode).
 
    * Storlekshandtagen för komponentvisningen.
    * Emulatorverktygsfältet visas högst upp på skärmen.

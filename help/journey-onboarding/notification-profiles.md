@@ -4,7 +4,7 @@ description: Lär dig hur du skapar användarprofiler i Admin Console för att h
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: 4edecfcd-6301-4a46-98c7-eb5665f48995
-source-git-commit: 53a3a4c47becf58f8874083e2878fa3458d6cad7
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1130'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Adobe kontaktar då och då användare av AEM as a Cloud Service. Förutom medde
 * **Incidentmeddelande** - Dessa meddelanden skickas under en incident eller när Adobe har identifierat ett potentiellt tillgänglighetsproblem i din AEM as a Cloud Service-miljö.
 * **Proaktiv avisering** - Dessa aviseringar skickas när en medlem i Adobe support vill ge vägledning om en eventuell optimering eller rekommendation som kan vara till nytta för din AEM as a Cloud Service-miljö.
 
-Användarna kan också få dessa meddelanden för specifika program baserat på deras [anpassade gruppbehörigheter.](/help/implementing/cloud-manager/custom-permissions.md)
+Användarna kan också få dessa meddelanden för specifika program baserat på deras [anpassade gruppbehörigheter](/help/implementing/cloud-manager/custom-permissions.md).
 
 Dessutom stöds det att tilldela grupper till proaktiva meddelanden, och användare och grupper kan tilldelas produktprofiler direkt.
 
@@ -43,7 +43,7 @@ Eftersom användarprofiler skapas och underhålls i Admin Console måste du gör
 
 Skapa två användarprofiler för att konfigurera mottagning av meddelanden på rätt sätt. De här stegen utförs bara en gång.
 
-1. Logga in i Admin Console på [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
+1. Logga in på Admin Console på [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
 1. Se till att du är i rätt organisation.
 
@@ -103,7 +103,7 @@ Följ de här stegen för att lägga till användare för vilka Federated ID än
 
    ![Användare](assets/product_services.png)
 
-1. Om det federerade ID:t för dina teammedlemmar ännu inte har konfigurerats väljer du fliken **Användare** i den översta navigeringen och sedan **Lägg till användare**. Hoppa annars till avsnittet [Lägg till befintliga användare i profiler.](#existing-users)
+1. Om det federerade ID:t för dina teammedlemmar ännu inte har konfigurerats väljer du fliken **Användare** i den översta navigeringen och sedan **Lägg till användare**. Hoppa annars till avsnittet [Lägg till befintliga användare i profiler](#existing-users).
 
    ![Användare](assets/cloud_manager_add_user.png)
 
@@ -136,7 +136,7 @@ Följ de här stegen för att lägga till användare för vilka det redan finns 
 
 1. Välj fliken **Användare** i den övre navigeringen.
 
-1. Om det federerade ID:t redan finns för den teammedlem som du vill lägga till i en meddelandeprofil letar du reda på användaren i listan och klickar på den. Hoppa annars till avsnittet [Lägg till nya användare i profiler.](#add-user)
+1. Om det federerade ID:t redan finns för den teammedlem som du vill lägga till i en meddelandeprofil letar du reda på användaren i listan och klickar på den. Hoppa annars till avsnittet [Lägg till nya användare i profiler](#add-user).
 
 1. Klicka på ellipsknappen i avsnittet **Produkter** i fönstret med användarinformation och välj sedan **Redigera**.
 

@@ -4,7 +4,7 @@ description: Lär dig hur du utökar funktionerna i Multi Site Manager.
 exl-id: 4b7a23c3-65d1-4784-9dea-32fcceca37d1
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2337'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Det här dokumentet hjälper dig att förstå hur du kan utöka funktionaliteten
 
 >[!TIP]
 >
->Den här sidan är lättare att förstå i sammanhanget för dokumentet [Återanvända innehåll: Multi Site Manager.](/help/sites-cloud/administering/msm/overview.md)
+>Den här sidan är lättare att förstå i kontexten för dokumentet [Återanvända innehåll: Multi Site Manager](/help/sites-cloud/administering/msm/overview.md).
 
 >[!CAUTION]
 >
@@ -255,7 +255,7 @@ Följande procedur kräver att du har lagt till profilen `adobe-public` i Maven-
    * **`artifactName`**: `MyLiveActionFactory package`
    * **`packageGroup`**: `myPackages`
 
-1. Starta Eclipse och [importera Maven-projektet.](/help/implementing/developing/tools/eclipse.md#import-the-maven-project-into-eclipse)
+1. Starta Eclipse och [importera Maven-projektet](/help/implementing/developing/tools/eclipse.md#import-the-maven-project-into-eclipse).
 
 ### Lägg till beroenden till POM-filen {#add-dependencies-to-the-pom-file}
 

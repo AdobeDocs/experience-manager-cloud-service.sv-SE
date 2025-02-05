@@ -4,7 +4,7 @@ description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Ecl
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 0%
@@ -62,7 +62,7 @@ När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-progr
 
 ## AEM {#the-aem-perspective}
 
-I Eclipse avgör ett perspektiv vilka åtgärder och vyer som finns tillgängliga i ett fönster och aktiverar uppgiftsorienterad interaktion med resurser i Eclipse. Mer information om perspektiv finns i [Eclipse-dokumentationen.](https://help.eclipse.org/latest/index.jsp)
+I Eclipse avgör ett perspektiv vilka åtgärder och vyer som finns tillgängliga i ett fönster och aktiverar uppgiftsorienterad interaktion med resurser i Eclipse. Mer information om perspektiv finns i [Eclipse-dokumentationen](https://help.eclipse.org/latest/index.jsp).
 
 _Experience Manager Development Tools for Eclipse_ har ett AEM perspektiv som ger dig full kontroll över dina AEM projekt och instanser. Så här öppnar du AEM perspektiv:
 

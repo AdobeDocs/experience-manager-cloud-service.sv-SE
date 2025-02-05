@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Välj **Hämta temakällor** om du vill hämta en lokal kopia av webbplatstemat 
 
 ## Hämtar mallresurser {#downloading-template-resources}
 
-[Webbplatsmallar](site-templates.md) kan innehålla information utöver webbplatsens innehållsstruktur och [webbplatstemat.](site-themes.md) Platsmallar kan till exempel innehålla trådramsdesign eller andra platsrelaterade filer.
+[Webbplatsmallar](site-templates.md) kan innehålla information utöver webbplatsens innehållsstruktur och [webbplatstemat](site-themes.md). Platsmallar kan till exempel innehålla trådramsdesign eller andra platsrelaterade filer.
 
 Om webbplatsen är baserad på en platsmall, där platspanelen visas i platskonsolen, markerar du platsens rot för att visa temainformation om platsen, inklusive ytterligare webbplatsresurser.
 
@@ -84,4 +84,4 @@ När platspanelen visas i platskonsolen markerar du platsens rot för att visa t
 
 ![Aktiverar frontendpipeline](/help/sites-cloud/administering/assets/enable-fep.png)
 
-Mer information finns i dokumentet [Aktivera frontdelspipelinen.](enable-front-end-pipeline.md)
+Mer information finns i dokumentet [Aktivera frontdelspipelinen](enable-front-end-pipeline.md).

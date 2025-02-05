@@ -4,7 +4,7 @@ description: Infrastruktur och serviceövervakning i AEM as a Cloud Service
 exl-id: 82432c11-37ec-48ac-a52b-487abdc859fa
 feature: Operations
 role: Admin
-source-git-commit: c7488b9a10704570c64eccb85b34f61664738b4e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%
@@ -37,13 +37,13 @@ Med anpassad övervakning kan kunderna välja att tillhandahålla upp till fem o
 
 >[!NOTE]
 >
-> Den här funktionen erbjuds endast för produktionsmiljöer och kunder med [avancerad molnsupport.](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons) Kontakta ditt Adobe-kontoteam om du har några frågor.
+> Den här funktionen erbjuds endast för produktionsmiljöer och kunder med [avancerad molnsupport](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons). Kontakta ditt Adobe-kontoteam om du har några frågor.
 
 ## Intern modulövervakning {#module-monitoring}
 
 Den externa tillgängligheten fokuseras på slutanvändarövervakning, medan intern modulövervakning observerar om delsystemen i arkitekturen fungerar nominellt utan någon funktion eller prestandaförsämring. Om ett problem uppstår utlöses varningar så att reparationer kan utföras antingen automatiskt eller genom att ledningsgruppen är inblandad, i syfte att förhindra kompromisslös tillgänglighet. Det finns olika kategorier av övervakare, som beskrivs nedan är några exempelkontroller:
 
-* CPU-procentandelen för inaktivitet överstiger inte ett visst tröskelvärde.
+* Procentandelen för CPU-inlåning överstiger inte ett visst tröskelvärde.
 * Instansomdistributioner överstiger inte en viss frekvens.
 * Diskanvändningen är under ett visst tröskelvärde.
 * Författarens databasstorlek är inom vissa gränser.

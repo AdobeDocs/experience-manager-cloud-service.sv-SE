@@ -5,7 +5,7 @@ exl-id: 0d77d1a6-98f3-4961-9283-f52c1b5b2a7b
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '949'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Skapa en pipeline för frontend för att hantera anpassningen av webbplatsens te
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från AEM snabbwebbplats [Skapa webbplats från mall](create-site.md) lärde du dig att använda en webbplatsmall för att snabbt skapa en AEM webbplats som kan anpassas ytterligare med hjälp av verktygen i gränssnittet. Nu bör du:
+I det föregående dokumentet från den AEM snabbwebbplatsgenereringsresan, [Skapa webbplats från mall](create-site.md), lärde du dig att använda en webbplatsmall för att snabbt skapa en AEM webbplats som kan anpassas ytterligare med hjälp av slutverktygen och nu bör du:
 
 * Lär dig hur du hämtar AEM webbplatsmallar.
 * Lär dig hur du skapar en plats med hjälp av en mall.

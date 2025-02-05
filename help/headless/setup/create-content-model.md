@@ -4,7 +4,7 @@ description: Definiera strukturen för det innehåll du ska skapa och tjäna med
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Definiera strukturen för det innehåll du ska skapa och tjäna med AEM headless
 
 ## Vad är Content Fragment Models? {#what-are-content-fragment-models}
 
-[Nu när du har skapat en konfiguration ](create-configuration.md) kan du använda den för att skapa modeller för innehållsfragment.
+[Nu när du har skapat en konfiguration](create-configuration.md) kan du använda den för att skapa modeller för innehållsfragment.
 
 Modeller för innehållsfragment definierar strukturen för data och innehåll som du skapar och hanterar i AEM. De fungerar som en sorts ställningar för ert innehåll. När du väljer att skapa innehåll väljer författarna bland de modeller för innehållsfragment som du definierar, som vägleder dem när de skapar innehåll.
 
@@ -67,8 +67,8 @@ Du kan skapa flera modeller. Modeller kan referera till andra innehållsfragment
 
 ## Nästa steg {#next-steps}
 
-Nu när du har definierat strukturerna för dina innehållsfragment genom att skapa modeller kan du gå vidare till den tredje delen av guiden Komma igång och [skapa mappar där du lagrar fragmenten själva.](create-assets-folder.md)
+Nu när du har definierat strukturerna för dina innehållsfragment genom att skapa modeller kan du gå vidare till den tredje delen av guiden Komma igång och [skapa mappar där du själva sparar fragmenten](create-assets-folder.md).
 
 >[!TIP]
 >
->Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+>Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md).

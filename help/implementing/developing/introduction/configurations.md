@@ -4,7 +4,7 @@ description: Förstå Adobe Experience Manager (AEM)-konfigurationer och hur de 
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
 
    * **Rubriken** ska vara beskrivande.
    * **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](naming-conventions.md)
+      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](naming-conventions.md).
       * Den kan vid behov justeras.
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
@@ -200,7 +200,7 @@ AEM har en arv- och reservmekanism i följande prioritetsordning för att stödj
 
 Konfigurationer i AEM baseras på Sling Context-Aware Configurations. Sling-paketen innehåller ett tjänst-API som kan användas för att få kontextmedvetna konfigurationer. Kontextmedvetna konfigurationer är konfigurationer som är relaterade till en innehållsresurs eller ett resursträd, vilket beskrevs i [föregående exempel](#developer-example).
 
-Mer information om kontextmedvetna konfigurationer, exempel och hur du använder dem finns i [Sling-dokumentationen.](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html).
+Mer information om Context-Aware Configurations, exempel och hur du använder dem finns i [Sling-dokumentationen](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html).
 
 ### ConfMgr-webbkonsol {#confmgr-web-console}
 

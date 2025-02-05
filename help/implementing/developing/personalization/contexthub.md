@@ -4,7 +4,7 @@ description: ContextHub är ett ramverk för att lagra, ändra och presentera ko
 exl-id: 604477c6-d96a-441f-b5fc-5def93832478
 feature: Developing, Personalization
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Med JavaScript-API:t på klientsidan kan du komma åt data för att anpassa inne
 
 ## Presentation {#presentation}
 
-Verktygsfältet [ContextHub](/help/sites-cloud/authoring/personalization/contexthub.md) gör att marknadsförare och författare kan se och ändra lagringsdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med gränssnittsmoduler som ger åtkomst till [ContextHub-arkiv](#persistence) som innehåller ContextHub-data på klienten.
+Verktygsfältet [ContextHub](/help/sites-cloud/authoring/personalization/contexthub.md) gör att marknadsförare och författare kan se och ändra lagringsdata för att simulera användarupplevelsen när de skapar sidor. Verktygsfältet består av grupper med gränssnittsmoduler som ger åtkomst till [ContextHub-butiker](#persistence), som innehåller ContextHub-data på klienten.
 
 Varje ContextHub-gränssnittsmodul är en instans av en fördefinierad modultyp:
 

@@ -4,7 +4,7 @@ description: Lär dig mer om de olika händelser som den universella redigeraren
 exl-id: c9f7c284-f378-4725-a4e6-e4799f0f8175
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Alla händelser följer en namngivningskonvention.
 
 Till exempel `aue:content-update` och `aue:ui-select`
 
-Händelser inkluderar nyttolasten för begäran och svaret och aktiveras när motsvarande anrop lyckas. Mer information om samtal och exempel på deras nyttolaster finns i dokumentet [Universal Editor Call.](/help/implementing/universal-editor/calls.md)
+Händelser inkluderar nyttolasten för begäran och svaret och aktiveras när motsvarande anrop lyckas. Mer information om samtal och exempel på deras nyttolaster finns i dokumentet [Universal Editor Call](/help/implementing/universal-editor/calls.md).
 
 ## Händelser för innehållsuppdatering {#content-events}
 

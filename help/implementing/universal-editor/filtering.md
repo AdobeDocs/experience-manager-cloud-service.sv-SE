@@ -3,13 +3,13 @@ title: Filtrera komponenter
 description: Lär dig hur du kan begränsa vilka komponenter som tillåts per behållare i Universal Editor med hjälp av komponentfilter.
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 48c1a109c060db4ce19bf645723357008d51c572
+exl-id: eeae8d7c-c563-4d9b-8c54-1098a4e98c18
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
 
 ---
-
 
 # Filtrera komponenter {#filtering-components}
 
@@ -53,4 +53,4 @@ Om attributet `components` i en filterdefinition anges till `null` tillåts alla
 
 >[!TIP]
 >
->Lär dig mer om andra anpassnings- och tilläggsalternativ som är tillgängliga för den universella redigeraren i dokumentet [Anpassa och utöka den universella redigeraren.](/help/implementing/universal-editor/customizing.md)
+>Lär dig mer om andra anpassnings- och tilläggsalternativ som är tillgängliga för den universella redigeraren i dokumentet [Anpassa och utöka den universella redigeraren](/help/implementing/universal-editor/customizing.md).

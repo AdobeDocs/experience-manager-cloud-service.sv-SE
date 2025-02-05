@@ -4,7 +4,7 @@ description: Lär dig hur du använder DocuSign med ett adaptivt formulär för 
 exl-id: fb2e75d6-e454-4999-a079-f663af79051f
 feature: Adaptive Forms, Acrobat Sign
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1413'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Så här skapar du ett signeringsaktiverat adaptivt formulär:
 
    - Om du inte har någon anpassad formulärmall väljer du alternativet **[!UICONTROL Generate Document of Record]**. När du använder alternativet visas alla fält i det adaptiva formuläret i det dokument som skickas för signering.
 
-1. Välj **[!UICONTROL Create.]** Ett signeringsaktiverat anpassat formulär skapas. Du kan lägga till dina [!DNL DocuSign]-fält i formuläret och skicka det för signering.
+1. Välj **[!UICONTROL Create]**. Ett signeringsaktiverat anpassat formulär skapas. Du kan lägga till dina [!DNL DocuSign]-fält i formuläret och skicka det för signering.
 1. Öppna det adaptiva formuläret i redigeringsläge. Markera **[!UICONTROL Form Container]** på fliken **[!UICONTROL Content]** och välj ![Konfigurera](assets/configure-icon.svg).
 
 1. I avsnittet **[!UICONTROL Submission]** väljer du **[!UICONTROL Submit with DocuSign electronic signatures]** i listrutan **[!UICONTROL Submit Action]**.

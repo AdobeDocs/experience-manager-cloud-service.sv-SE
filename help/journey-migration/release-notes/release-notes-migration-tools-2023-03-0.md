@@ -4,7 +4,7 @@ description: Versionsinformation för migreringsverktyg i AEM as a Cloud Service
 feature: Release Information
 exl-id: cdc57cca-e10a-4b0d-b803-910ccc9350a6
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 1%
@@ -38,8 +38,8 @@ Releasedatum för Content Transfer Tool v 2.0.16 är 8 mars 2023.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Användarmappningen har effektiviserats och integrerats i innehållsextraheringssteget. Ingen konfiguration behövs, och som standard görs användarmappningen automatiskt när användaren startar innehållsextraheringen. Användaren har möjlighet att inaktivera användarmappning vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/user-mapping-and-migration.html#user-mapping-detail)
-* Precopy-steget med [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) har integrerats med verktyget Innehållsöverföring för att avsevärt snabba upp extraheringen av innehåll. Precopy konfigureras och installeras automatiskt när den här versionen av CTT installeras. När extraheringen initieras körs som standard precopy automatiskt för migreringsuppsättningar som är större än 200 GB. Användaren har möjlighet att inaktivera det vid behov. Läs mer [här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)
+* Användarmappningen har effektiviserats och integrerats i innehållsextraheringssteget. Ingen konfiguration behövs, och som standard görs användarmappningen automatiskt när användaren startar innehållsextraheringen. Användaren har möjlighet att inaktivera användarmappning vid behov. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/user-mapping-and-migration.html#user-mapping-detail).
+* Precopy-steget med [AzCopy](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) har integrerats med verktyget Innehållsöverföring för att avsevärt snabba upp extraheringen av innehåll. Precopy konfigureras och installeras automatiskt när den här versionen av CTT installeras. När extraheringen initieras körs som standard precopy automatiskt för migreringsuppsättningar som är större än 200 GB. Användaren har möjlighet att inaktivera det vid behov. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/handling-large-content-repositories.html).
 * CTT kan nu användas på Windows-servrar.
 
 ### Felkorrigeringar {#bug-fixes-ctt}

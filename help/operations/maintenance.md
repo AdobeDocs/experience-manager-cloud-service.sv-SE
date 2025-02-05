@@ -4,7 +4,7 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: 3692cf1b14fda80f35eb34583fbbf6b256a89917
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2043'
 ht-degree: 0%
@@ -267,7 +267,7 @@ Kom ihåg att för att konfigurationen ska vara giltig:
 * alla egenskaper måste definieras. Det finns inga ärvda standardvärden.
 * Typerna (heltal, strängar, booleska värden etc.) i egenskapstabellen nedan måste respekteras.
 
-**4** - Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i artikeln [för konfigurationspipeline.](/help/operations/config-pipeline.md#managing-in-cloud-manager)
+**4** - Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i [konfigurationspipeline-artikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
 ### Rensa version {#version-purge}
 

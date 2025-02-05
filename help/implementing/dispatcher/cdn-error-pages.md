@@ -4,7 +4,7 @@ description: Lär dig hur du åsidosätter standardfelsidan genom att lagra stat
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
-source-git-commit: 137ea509de353f9f800f0b64bb8f2f6375e7d83d
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera CDN-felsidor {#cdn-error-pages}
 
-Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM ursprung, visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med Cloud Manager [config pipeline.](/help/operations/config-pipeline.md#managing-in-cloud-manager)
+Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM ursprung, visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med Cloud Manager [config pipeline](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
 ## Inställningar {#setup}
 

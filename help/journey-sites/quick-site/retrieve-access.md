@@ -5,7 +5,7 @@ exl-id: 3ef1cf86-6da4-4c09-9cfc-acafc8f6dd5c
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '874'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Läs om hur frontendutvecklaren använder Cloud Manager för att få åtkomst ti
 
 Om du är en frontendutvecklare som bara ansvarar för anpassning av webbplatstemat behöver du inte veta hur AEM konfigurerades och kan hoppa till avsnittet [Mål](#objective) i det här dokumentet.
 
-Om du även är Cloud Manager eller AEM administratör och gränssnittsutvecklare lärde du dig i det tidigare dokumentet på den AEM snabbplatsgenereringsresan, [Bevilja åtkomst till frontendutvecklaren](grant-access.md) hur du kan ta med frontendutvecklaren så att de har tillgång till Git-databasen, och du bör nu veta:
+Om du även är Cloud Manager eller AEM administratör och gränssnittsutvecklare lärde du dig i det tidigare dokumentet på den AEM snabbplatsgenereringsresan, [Bevilja åtkomst till frontendutvecklaren](grant-access.md), hur du kan ta med frontutvecklaren så att de har tillgång till Git-databasen, och du bör nu veta:
 
 * Så här lägger du till en frontendutvecklare som användare.
 * Så här tilldelar du de roller som krävs till frontendutvecklaren.

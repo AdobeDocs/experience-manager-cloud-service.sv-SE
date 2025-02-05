@@ -6,7 +6,7 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Intermediate
 exl-id: cde9523e-5409-4edd-af0f-2c2575cc22ea
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3071'
 ht-degree: 0%
@@ -93,7 +93,7 @@ Så här skapar du ett signeringsaktiverat adaptivt formulär:
 
    * Om du inte har någon anpassad formulärmall väljer du alternativet **[!UICONTROL Generate Document of Record]**. När du använder alternativet visas alla fält i det adaptiva formuläret i det dokument som skickas för signering.
 
-1. Välj **[!UICONTROL Create.]** Ett signeringsaktiverat anpassat formulär skapas. Du kan lägga till dina [!DNL Adobe Sign]-fält i formuläret och skicka det för signering.
+1. Välj **[!UICONTROL Create]**. Ett signeringsaktiverat anpassat formulär skapas. Du kan lägga till dina [!DNL Adobe Sign]-fält i formuläret och skicka det för signering.
 
 #### Aktivera [!DNL Adobe Sign] för ett anpassat formulär {#editafsign}
 

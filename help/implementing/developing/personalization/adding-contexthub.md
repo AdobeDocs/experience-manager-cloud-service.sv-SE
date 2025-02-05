@@ -4,7 +4,7 @@ description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funk
 exl-id: 8bfe2cff-3944-4e86-a95c-ebf1cb13913c
 feature: Developing, Personalization
 role: Admin, Architect, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 0%
@@ -145,7 +145,7 @@ De regler som används för att lösa dessa segment sammanfattas enligt följand
 
 ## Debugging ContextHub {#debugging-contexthub}
 
-Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub.](configuring-contexthub.md#logging-debug-messages-for-contexthub)
+Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub ](configuring-contexthub.md#logging-debug-messages-for-contexthub).
 
 ## Se en översikt över ContextHub Framework {#see-an-overview-of-the-contexthub-framework}
 

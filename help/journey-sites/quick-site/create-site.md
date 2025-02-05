@@ -5,7 +5,7 @@ exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1485'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet på AEM snabbwebbplats [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) lärde du dig mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser. Nu bör du:
+I det föregående dokumentet på AEM snabbwebbplats [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) fick du veta mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser. Nu bör du:
 
 * Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta framtagningen
 * Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
@@ -54,7 +54,7 @@ Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt
 
 ## Hämta en webbplatsmall {#obtaining-template}
 
-Det enklaste sättet att komma igång är att [hämta den senaste versionen av AEM standardwebbplatsmall från dess GitHub-databas.](https://github.com/adobe/aem-site-template-standard/releases)
+Det enklaste sättet att komma igång är att [hämta den senaste versionen av AEM standardwebbplatsmall från dess GitHub-databas](https://github.com/adobe/aem-site-template-standard/releases).
 
 När du har laddat ned den kan du ladda upp den till AEM på samma sätt som andra paket. Mer information om hur du arbetar med paket finns i avsnittet [Ytterligare resurser](#additional-resources) om du behöver mer information om det här avsnittet.
 
@@ -177,7 +177,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att gå igenom dokumentet [Konfigurera din pipeline](pipeline-setup.md), där du skapar en pipeline för att hantera anpassningen av webbplatsens tema.
+Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM snabbwebbplats genom att gå igenom dokumentet [Konfigurera din pipeline](pipeline-setup.md), där du skapar en pipeline i gränssnittet för att hantera anpassningen av webbplatsens tema.
 
 ## Ytterligare resurser {#additional-resources}
 

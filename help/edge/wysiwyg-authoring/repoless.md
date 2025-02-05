@@ -4,7 +4,7 @@ description: Om du har många liknande webbplatser som oftast ser ut och beter s
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: a6bc0f35-9e76-4b5a-8747-b64e144c08c4
-source-git-commit: e7f7c169e7394536fc2968ecf1418cd095177679
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '971'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Som standard är AEM nära knuten till din koddatabas, som uppfyller de flesta a
 
 I stället för att skapa flera GitHub-databaser och köra varje plats från en dedikerad GitHub-databas samtidigt som de är synkroniserade stöder AEM att du kör flera webbplatser från samma kodbas.
 
-Den här förenklade konfigurationen, som eliminerar behovet av kodreplikering, kallas även [&quot;repless&quot;,](https://www.aem.live/docs/repoless) eftersom alla utom den första platsen inte behöver en egen GitHub-databas.
+Den här förenklade konfigurationen, som eliminerar behovet av kodreplikering, kallas även [&quot;repless&quot; ](https://www.aem.live/docs/repoless) eftersom alla utom den första platsen inte behöver en egen GitHub-databas.
 
 Om ditt projekt kräver den flexibilitet som krävs för att återanvända kod mellan olika webbplatser kan du aktivera funktionen.
 
@@ -31,7 +31,7 @@ Oavsett hur många webbplatser du vill skapa på ett oförglömligt sätt måste
 
 Om du vill använda den här funktionen måste du göra följande.
 
-* Din webbplats är redan helt konfigurerad genom att följa dokumentet [Guiden Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services.](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md)
+* Din webbplats är redan helt konfigurerad genom att följa dokumentet [Guiden Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 * Du kör minst AEM as a Cloud Service 2024.08.
 
 Du måste också be Adobe att konfigurera följande objekt. Nå ut via din Slack-kanal eller ta upp ett supportproblem och be Adobe att göra dessa ändringar:
@@ -70,7 +70,7 @@ När du har en åtkomsttoken kan den skickas i huvudet för cURL-begäranden i f
 
 Du måste skapa en platskonfiguration och lägga till den i sökvägsmappningen.
 
-1. Skapa en ny sida i platsens rot och välj mallen [**Konfiguration**.](/help/edge/wysiwyg-authoring/tabular-data.md#other)
+1. Skapa en ny sida i platsens rot och välj mallen [**Konfiguration**](/help/edge/wysiwyg-authoring/tabular-data.md#other).
    * Du kan lämna konfigurationen tom med endast de fördefinierade kolumnerna `key` och `value`. Du behöver bara skapa den.
 1. Skapa en mappning i den offentliga konfigurationen till platskonfigurationen med ett cURL-kommando som liknar följande.
 

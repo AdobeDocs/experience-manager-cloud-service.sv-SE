@@ -4,9 +4,9 @@ description: Den här guiden hjälper dig att komma igång med en ny Adobe Exper
 feature: Edge Delivery Services
 exl-id: a71184a7-c954-442e-b276-99edc6d2acd8
 role: Admin, Architect, Developer
-source-git-commit: 01966d837391d13577956a733c2ee7dc02f88103
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Den här guiden hjälper dig att komma igång med en ny Adobe Experience Manager
 
 Innan du börjar den här guiden bör du känna till grunderna i och ha tillgång till Edge Delivery Services som:
 
-* Du har slutfört självstudiekursen [Edge Delivery Service.](/help/edge/developer/tutorial.md)
-* Du har åtkomst till en [AEM Cloud Service-sandlåda.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
-* Du har [aktiverat den universella redigeraren i samma sandlådemiljö.](/help/implementing/universal-editor/getting-started.md)
+* Du har slutfört [självstudiekursen om Edge Delivery-tjänster](/help/edge/developer/tutorial.md).
+* Du har åtkomst till en [AEM Cloud Service-sandlåda](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
+* Du har [aktiverat den universella redigeraren i samma sandlådemiljö](/help/implementing/universal-editor/getting-started.md).
 
 ## Grundbegrepp vid utveckling för Edge Delivery Services {#core-concepts}
 
@@ -52,7 +52,7 @@ Webbplatser skapas automatiskt för var och en av dina grenar, från förhandsgr
 
 ## Komma igång med WYSIWYG Authoring och Edge Delivery Services {#getting-started}
 
-När du har uppfyllt [villkoren](#prerequisites) och gjort [till ett val att använda Universell redigerare](#editor-choice) kan du komma igång med ditt eget projekt.
+När du har uppfyllt [villkoren](#prerequisites) och har gjort [till ett val att använda den universella redigeraren](#editor-choice) kan du komma igång med ditt eget projekt.
 
 ### Skapa ditt GitHub-projekt {#create-github-project}
 
@@ -116,7 +116,7 @@ Först måste du skapa ett nytt projekt på GitHub, baserat på mallen Adobe.
 
 >[!TIP]
 >
->Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services.](/help/edge/wysiwyg-authoring/path-mapping.md)
+>Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services](/help/edge/wysiwyg-authoring/path-mapping.md).
 
 ### Skapa och redigera en ny AEM {#create-aem-site}
 
@@ -128,7 +128,7 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 
 1. Hämta den senaste WYSIWYG-redigeringen med webbplatsmallen för Edge Delivery Services från GitHub på [`https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases`](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 
-1. Logga in på din AEM as a Cloud Service-redigeringsinstans och navigera till webbplatskonsolen och tryck eller klicka på **Skapa** -> **Plats från mall**.
+1. Logga in på din AEM as a Cloud Service-redigeringsinstans och navigera till webbplatskonsolen och klicka på **Skapa** > **Plats från mall**.
 
    ![Skapa en ny plats från konsolen](assets/edge-dev-getting-started/create-site-console.png)
 
@@ -140,23 +140,23 @@ Nu när du har ett GitHub-projekt måste du skapa en ny AEM som projektet kan an
 
    * Mallen får bara överföras en gång. När den har överförts kan den återanvändas för att skapa ytterligare webbplatser.
 
-1. När mallen har importerats visas den i guiden. Tryck eller klicka för att markera den och tryck eller klicka sedan på **Nästa**.
+1. När mallen har importerats visas den i guiden. Klicka för att markera den och sedan på **Nästa**.
 
    ![Välj mall](assets/edge-dev-getting-started/select-template.png)
 
 1. Ange följande fält och tryck eller klicka på **Skapa**.
 
    * **Platstitel** - Lägg till en beskrivande titel för webbplatsen.
-   * **Platstitel** - Använd `<site-name>` som du definierade i [föregående steg.](#create-github-project)
+   * **Platstitel** - Använd `<site-name>` som du definierade i [föregående steg](#create-github-project).
    * **GitHub-URL** - Använd URL:en för GitHub-projektet som du skapade i föregående steg.
 
    ![Webbplatsinformation](assets/edge-dev-getting-started/create-site-details.png)
 
-1. AEM bekräftar att webbplatsen har skapats med en dialogruta. Tryck eller klicka på **OK** för att stänga.
+1. AEM bekräftar att webbplatsen har skapats med en dialogruta. Klicka på **OK** för att stänga.
 
    ![Bekräftelse av webbplatsskapande](assets/edge-dev-getting-started/site-creation-confirmation.png)
 
-1. På webbplatskonsolen går du till `index.html` för den nyligen skapade webbplatsen och trycker eller klickar på **Redigera** i verktygsfältet.
+1. På webbplatskonsolen går du till `index.html` för den nyligen skapade webbplatsen och klickar på **Redigera** i verktygsfältet.
 
    ![Redigerar den nya platsen](assets/edge-dev-getting-started/new-site.png)
 
@@ -194,4 +194,4 @@ Mer information finns i guiden [Skapa block som är instrumenterade för använd
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM.](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery)
+>En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery).

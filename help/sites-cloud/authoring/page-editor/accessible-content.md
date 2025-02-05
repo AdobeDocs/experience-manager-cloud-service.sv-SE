@@ -5,7 +5,7 @@ exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '13685'
 ht-degree: 2%
@@ -50,11 +50,11 @@ I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/
 
 ## Princip 1: Förutsägbar {#principle-perceivable}
 
-[Princip 1: Perfekt - Information och användargränssnittskomponenter måste vara presenterbara för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG/#perceivable)
+[Princip 1: Perfekt - Information och användargränssnittskomponenter måste vara presenterbara för användarna på ett sätt som de kan uppfatta](https://www.w3.org/TR/WCAG/#perceivable).
 
 ### Textalternativ (1.1) {#text-alternatives}
 
-[Riktlinje 1.1 Textalternativ: Ange textalternativ för allt icke-textinnehåll så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk.](https://www.w3.org/TR/WCAG/#text-alternatives)
+[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk ](https://www.w3.org/TR/WCAG/#text-alternatives).
 
 ### Innehåll som inte är text (1.1.1) {#non-text-content}
 
@@ -117,9 +117,9 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 #### Mer information - Innehåll som inte är text (1.1.1) {#more-information-non-text-content}
 
-* [Förstå villkor 1.1.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)
-* [Så här uppfyller du kriterierna 1.1.1](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content)
-* [W3C-förklaring och alternativ till CAPTCHA](https://www.w3.org/TR/turingtest/)
+* [Förstå villkor 1.1.1](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html).
+* [Så här uppfyller du kriterierna 1.1.1](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content).
+* [W3C-förklaring och alternativ till CAPTCHA](https://www.w3.org/TR/turingtest/).
 
 <!--
 * [W3C: HTML5 Techniques for providing useful text alternatives (draft)](https://dev.w3.org/html5/alt-techniques/)
@@ -127,7 +127,7 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 ### Tidsbaserade media (1.2) {#time-based-media}
 
-[Riktlinje 1.2 Tidsbaserat media: Ange alternativ för tidsbaserade media.](https://www.w3.org/TR/WCAG/#time-based-media)
+[Riktlinje 1.2 Tidsbaserat media: Ange alternativ för tidsbaserade media](https://www.w3.org/TR/WCAG/#time-based-media).
 
 Detta gäller webbinnehåll som är *tidsbaserat*. Detta omfattar innehåll som användaren kan spela upp (t.ex. video, ljud och animerat innehåll) och som kan spelas in i förväg eller i en liveström.
 
@@ -173,8 +173,8 @@ Att infoga multimedia i dina AEM webbsidor påminner om att infoga en bild. Men 
 
 #### Mer information - endast ljud och endast video (inspelat i förväg) (1.2.1) {#more-information-audio-only-and-video-only-prerecorded}
 
-* [Förstå villkor 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html)
-* [Så här uppfyller du kriterierna 1.2.1](https://www.w3.org/WAI/WCAG21/quickref/#audio-only-and-video-only-prerecorded)
+* [Förstå villkor 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html).
+* [Så här uppfyller du kriterierna 1.2.1](https://www.w3.org/WAI/WCAG21/quickref/#audio-only-and-video-only-prerecorded).
 
 ### Bildtexter (inspelade i förväg) (1.2.2) {#captions-prerecorded}
 
@@ -195,18 +195,18 @@ Bildtexter kan antingen vara:
 
 Använd undertexter där det är möjligt, eftersom det ger användarna möjlighet att välja om de vill visa undertexter eller inte.
 
-För undertexter måste du skapa och tillhandahålla en synkroniserad bildtextfil i ett lämpligt format (till exempel [SMIL](https://www.w3.org/AudioVideo/)) tillsammans med videofilen (information om hur du gör detta ligger utanför den här handbokens räckvidd, men det finns länkar till vissa självstudier under [Mer information - Bildtexter (inspelade i förväg) (1.2.2)](#more-information-captions-prerecorded). Se till att du anger en anteckning, eller aktivera bildtextfunktionen i videospelaren, så att användarna vet att bildtexter är tillgängliga för videon.
+För undertexter måste du skapa och tillhandahålla en synkroniserad bildtextfil i ett lämpligt format (till exempel [SMIL](https://www.w3.org/AudioVideo/)) tillsammans med videofilen (information om hur du gör detta ligger utanför den här handbokens räckvidd, men det finns länkar till vissa självstudier under [Mer information - Bildtexter (inspelade i förväg) (1.2.2)](#more-information-captions-prerecorded)). Se till att du anger en anteckning, eller aktivera bildtextfunktionen i videospelaren, så att användarna vet att bildtexter är tillgängliga för videon.
 
 Om du måste använda öppna bildtexter bäddar du in texten i videospåret. Detta kan du göra med videoredigeringsprogram som tillåter att titlar läggs över i videon.
 
 #### Mer information - bildtexter (inspelade i förväg) (1.2.2) {#more-information-captions-prerecorded}
 
-* [Förstå villkor 1.2.2](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html)
-* [Så här uppfyller du kriterierna 1.2.2](https://www.w3.org/WAI/WCAG21/quickref/#captions-prerecorded)
+* [Förstå villkor 1.2.2](https://www.w3.org/WAI/WCAG21/Understanding/captions-prerecorded.html).
+* [Så här uppfyller du kriterierna 1.2.2](https://www.w3.org/WAI/WCAG21/quickref/#captions-prerecorded).
 
 c
-* [W3C: Synkroniserad multimedia](https://www.w3.org/AudioVideo/)
-* [Beskrivningar, transkript och ljudbeskrivningar - av WebAIM](https://webaim.org/techniques/captions/)
+* [W3C: Synkroniserad multimedia](https://www.w3.org/AudioVideo/).
+* [Beskrivningar, transkript och ljudbeskrivningar - av WebAIM](https://webaim.org/techniques/captions/).
 —>
 
 ### Ljudbeskrivning eller mediaalternativ (inspelat i förväg) (1.2.3) {#audio-description-or-media-alternative-prerecorded}
@@ -235,8 +235,8 @@ Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här ha
 
 #### Mer information - Ljudbeskrivning eller mediealternativ (inspelat i förväg) (1.2.3) {#more-information-audio-description-or-media-alternative-prerecorded}
 
-* [Förstå villkor 1.2.3](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html)
-* [Så här uppfyller du kriterierna 1.2.3](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-or-media-alternative-prerecorded)
+* [Förstå villkor 1.2.3](https://www.w3.org/WAI/WCAG21/Understanding/audio-description-or-media-alternative-prerecorded.html).
+* [Så här uppfyller du kriterierna 1.2.3](https://www.w3.org/WAI/WCAG21/quickref/#audio-description-or-media-alternative-prerecorded).
 
 <!--
 * [Adobe Encore](https://www.adobe.com/products/encore.html) - a DVD authoring software tool
@@ -288,7 +288,7 @@ Följ anvisningarna för [Ljudbeskrivning eller mediealternativ (inspelat i för
 
 ### Anpassningsbar (1.3) {#adaptable}
 
-[Riktlinje 1.3 Anpassningsbar: Skapa innehåll som kan presenteras på olika sätt (till exempel enklare layout) utan att förlora information eller struktur.](https://www.w3.org/TR/WCAG/#adaptable)
+[Riktlinje 1.3 Anpassningsbar: Skapa innehåll som kan presenteras på olika sätt (till exempel enklare layout) utan att förlora information eller struktur](https://www.w3.org/TR/WCAG/#adaptable).
 
 Denna riktlinje omfattar de krav som är nödvändiga för att stödja personer som
 
@@ -454,12 +454,12 @@ Se till att all information som bygger på visuella egenskaper för sidinnehåll
 
 #### Mer information - Sensoriska egenskaper (1.3.3) {#more-information-sensory-characteristics}
 
-* [Förstå villkor 1.3.3](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
-* [Så här uppfyller du kriterierna 1.3.3](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)
+* [Förstå villkor 1.3.3](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html).
+* [Så här uppfyller du kriterierna 1.3.3](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics).
 
 ### Skiljbar (1.4) {#distinguishable}
 
-[Riktlinje 1.4 Skiljbar: Gör det enklare för användare att se och höra innehåll, inklusive att separera förgrunden från bakgrunden.](https://www.w3.org/TR/WCAG/#distinguishable)
+[Riktlinje 1.4 Skiljbar: Gör det enklare för användare att se och höra innehåll, inklusive att separera förgrunden från bakgrunden](https://www.w3.org/TR/WCAG/#distinguishable).
 
 ### Användning av färg (1.4.1)  {#use-of-color}
 
@@ -491,8 +491,8 @@ Om färg används som en referenspunkt för att ge information bör du ange en e
 
 #### Mer information - Färganvändning (1.4.1) {#more-information-use-of-color}
 
-* [Förstå villkor 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
-* [Så här uppfyller du kriterierna 1.4.1](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
+* [Förstå villkor 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html).
+* [Så här uppfyller du kriterierna 1.4.1](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color).
 
 ### Ljudkontroll (1.4.2)  {#audio-control}
 
@@ -516,8 +516,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna 1.4.2](https://www.w
 
 #### Mer information - Ljudkontroll (1.4.2) {#more-information-audio-control}
 
-* [Förstå villkor 1.4.2](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html)
-* [Så här uppfyller du kriterierna 1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control)
+* [Förstå villkor 1.4.2](https://www.w3.org/WAI/WCAG21/Understanding/audio-control.html).
+* [Så här uppfyller du kriterierna 1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control).
 
 ### Kontrast (minimal) (1.4.3) {#contrast-minimum}
 
@@ -573,8 +573,8 @@ Om det inte går att följa de rekommenderade kontrastnivåerna måste du skapa 
 
 #### Mer information - Kontrast (minimum) (1.4.3) {#more-information-contrast-minimum}
 
-* [Förstå villkor 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
-* [Så här uppfyller du kriterierna 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)
+* [Förstå villkor 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html).
+* [Så här uppfyller du kriterierna 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum).
 
 ### Ändra storlek på text (1.4.4)  {#resize-text}
 
@@ -592,8 +592,8 @@ Förutom att följa riktlinjerna under [Så här uppfyller du villkoren 1.4.4](h
 
 #### Mer information - Ändra textstorlek (1.4.4) {#more-information-resize-text}
 
-* [Förstå villkor 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
-* [Så här uppfyller du kriterierna 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)
+* [Förstå villkor 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html).
+* [Så här uppfyller du kriterierna 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text).
 
 ### Bilder av text (1.4.5) {#images-of-text}
 
@@ -617,16 +617,16 @@ Om bilder av text måste användas, använder du CSS för att ersätta bilder av
 
 #### Mer information - Textbilder (1.4.5) {#more-information-images-of-text}
 
-* [Förstå villkor 1.4.5](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html)
-* [Så här uppfyller du kriterierna 1.4.5](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text)
+* [Förstå villkor 1.4.5](https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html).
+* [Så här uppfyller du kriterierna 1.4.5](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text).
 
 ## Princip 2: Användbar {#principle-operable}
 
-[Princip 2: Operable - Användargränssnittskomponenter och navigering måste vara operabla.](https://www.w3.org/TR/WCAG/#operable)
+[Princip 2: Användbar - Användargränssnittskomponenter och navigering måste vara användbara](https://www.w3.org/TR/WCAG/#operable).
 
 ### Tangentbord tillgängligt (2.1) {#keyboard-accessible}
 
-[Riktlinje 2.1-tangentbord tillgänglig: Gör alla funktioner tillgängliga från ett tangentbord.](https://www.w3.org/TR/WCAG/#keyboard-accessible)
+[Riktlinje 2.1 Tangentbord tillgängligt: Gör alla funktioner tillgängliga från ett tangentbord](https://www.w3.org/TR/WCAG/#keyboard-accessible).
 
 Det handlar om att se till att användarna har tillgång till alla funktioner via ett tangentbord.
 
@@ -646,8 +646,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 2.1.
 
 #### Mer information - Tangentbord (2.1.1) {#more-information-keyboard}
 
-* [Förstå villkor för slutförande 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-* [Så här uppfyller du kriterierna för lyckade försök 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard)
+* [Förstå villkor för slutförande 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html).
+* [Så här uppfyller du kriterierna för lyckade resultat 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard).
 
 ### Ingen tangentbordssvällning (2.1.2)  {#no-keyboard-trap}
 
@@ -667,12 +667,12 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 2.1.
 
 #### Mer information - Ingen tangentbordssvällning (2.1.2) {#more-information-no-keyboard-trap}
 
-* [Förstå villkor för slutförande 2.1.2](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-* [Så här uppfyller du kriterierna för lyckade försök 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap)
+* [Förstå villkor för slutförande 2.1.2](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html).
+* [Så här uppfyller du kriterierna för lyckade resultat 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap).
 
 ### Tillräcklig tid (2.2) {#enough-time}
 
-[Riktlinje 2.2 Tillräcklig tid: Ge användarna tillräckligt med tid för att läsa och använda innehåll.](https://www.w3.org/TR/WCAG/#enough-time)
+[Riktlinje 2.2 Tillräcklig tid: Ge användarna tillräckligt med tid för att läsa och använda innehåll](https://www.w3.org/TR/WCAG/#enough-time).
 
 Det handlar om att se till att användarna har tillräckligt med tid att läsa och agera.
 
@@ -692,8 +692,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 2.2.
 
 #### Mer information - Tidsjustering (2.2.1) {#more-information-timing-adjustable}
 
-* [Förstå villkor för slutförande 2.2.1](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
-* [Så här uppfyller du kriterierna för lyckade resultat {2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable)
+* [Förstå villkor för slutförande 2.2.1](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html).
+* [Så här uppfyller du kriterierna för lyckade resultat 2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable).
 
 ### Pausa, Stoppa, Dölj (2.2.2)  {#pause-stop-hide}
 
@@ -726,12 +726,12 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 
 #### Mer information - Pausa, Stoppa, Dölj (2.2.2) {#more-information-pause-stop-hide}
 
-* [Förstå villkor 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
-* [Så här uppfyller du kriterium 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
+* [Förstå villkor 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html).
+* [Så här uppfyller du kriterium 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide).
 
 ### Kramper och fysiska reaktioner (2.3) {#seizures-and-physcial-reactions}
 
-[Riktlinje 2.3 Kramper: Utforma inte innehåll på ett sätt som är känt för att orsaka kramper eller fysiska reaktioner.](https://www.w3.org/TR/WCAG/#seizures-and-physical-reactions)
+[Riktlinje 2.3 Kramper: Utforma inte innehåll på ett sätt som är känt för att orsaka kramper eller fysiska reaktioner](https://www.w3.org/TR/WCAG/#seizures-and-physical-reactions).
 
 ### Tre Flashar eller under tröskelvärdet (2.3.1) {#three-flashes-or-below-threshold}
 
@@ -756,12 +756,12 @@ Se till att följande tekniker används:
 
 #### Mer information - tre Flashar eller under tröskelvärde (2.3.1) {#more-information-three-flashes-or-below-threshold}
 
-* [Förstå villkor för slutförande 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)
-* [Så här uppfyller du villkor för att lyckas {2.3.1](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)
+* [Förstå villkor för slutförande 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html).
+* [Så här uppfyller du kriterium 2.3.1](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold).
 
 ### Navigeringsbar (2.4) {#navigable}
 
-[Riktlinje 2.4 Navigeringsbar: Tillhandahåller sätt att hjälpa användare navigera, hitta innehåll och avgöra var de är.](https://www.w3.org/TR/WCAG/#navigable)
+[Riktlinje 2.4 Navigeringsbar: Tillhandahåller sätt att hjälpa användare navigera, hitta innehåll och avgöra var de är](https://www.w3.org/TR/WCAG/#navigable).
 
 Det handlar om att se till att innehållet är enkelt och enkelt att navigera i.
 
@@ -781,8 +781,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4
 
 #### Mer information - Kringgå block (2.4.1) {#more-information-bypass-blocks}
 
-* [Förstå villkor för slutförande 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
-* [Så här uppfyller du kriterierna för lyckade försök 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)
+* [Förstå villkor för slutförande 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html).
+* [Så här uppfyller du kriterierna för lyckade resultat 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks).
 
 ### Sida med rubriker (2.4.2)  {#page-titled}
 
@@ -802,8 +802,8 @@ Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via 
 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
-* [Förstå villkor 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-* [Så här uppfyller du kriterium 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* [Förstå villkor 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html).
+* [Så här uppfyller du kriterium 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled).
 
 ### Fokusordning (2.4.3)  {#focus-order}
 
@@ -821,8 +821,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4
 
 #### Mer information - Fokusordning (2.4.3) {#more-information-focus-order}
 
-* [Förstå villkor för slutförande 2.4.3](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
-* [Så här uppfyller du kriterierna för lyckade försök 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)
+* [Förstå villkor för slutförande 2.4.3](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html).
+* [Så här uppfyller du kriterierna för lyckade försök 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order).
 
 ### Länksyfte (i sitt sammanhang) (2.4.4)  {#link-purpose-in-context}
 
@@ -884,8 +884,8 @@ Du kan också använda skript så att en liten del av texten anges i själva lä
 
 #### Mer information - Länksyfte (i sammanhang) (2.4.4) {#more-information-link-purpose-in-context}
 
-* [Förstå villkor för slutförande 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
-* [Så här uppfyller du kriterium 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context)
+* [Förstå villkor för slutförande 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html).
+* [Så här uppfyller du kriterium 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
 
 <!--
 * [C7: Using CSS to hide a portion of the link text](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C7)
@@ -909,8 +909,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4
 
 #### Mer information - Flera sätt (2.4.5) {#more-information-multiple-ways}
 
-* [Förstå villkor för slutförande 2.4.5](https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html)
-* [Så här uppfyller du kriterierna för att lyckas {2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways)
+* [Förstå villkor för slutförande 2.4.5](https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html).
+* [Så här uppfyller du kriterierna för lyckade försök 2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways).
 
 ### Rubriker och etiketter (2.4.6)  {#headings-and-labels}
 
@@ -928,8 +928,8 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4
 
 #### Mer information - Rubriker och etiketter (2.4.6) {#more-information-headings-and-labels}
 
-* [Förstå villkor för slutförande 2.4.6](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
-* [Så här uppfyller du kriterierna för lyckade försök 2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels)
+* [Förstå villkor för slutförande 2.4.6](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html).
+* [Så här uppfyller du kriterierna för lyckade resultat {2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
 
 ### Synligt fokus (2.4.7)  {#focus-visible}
 
@@ -956,11 +956,11 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4
 
 ## Princip 3: Förstå {#principle-understandable}
 
-[Princip 3: Förstå - Information och hur användargränssnittet fungerar måste vara begriplig.](https://www.w3.org/TR/WCAG/#understandable)
+[Princip 3: Förstå - Information och hur användargränssnittet fungerar måste vara begriplig](https://www.w3.org/TR/WCAG/#understandable).
 
 ### Gör textinnehåll läsbart och begripligt (3.1) {#make-text-content-readable-and-understandable}
 
-[Riktlinje 3.1 läsbar: Gör textinnehållet läsbart och begripligt.](https://www.w3.org/TR/WCAG/#readable)
+[Riktlinje 3.1 läsbar: Gör textinnehållet läsbart och begripligt](https://www.w3.org/TR/WCAG/#readable).
 
 ### Sidans språk (3.1.1) {#language-of-page}
 
@@ -1043,7 +1043,7 @@ Om du vill lägga till intervallelementet med ett lämpligt språk kan du redige
 
 ### Förutsägbar (3.2) {#predictable}
 
-[Riktlinje 3.2 Förutsägbar: Gör så att webbsidor visas och fungerar på förutsägbara sätt.](https://www.w3.org/TR/WCAG/#predictable)
+[Riktlinje 3.2 Förutsägbar: Gör så att webbsidor visas och fungerar på förutsägbara sätt](https://www.w3.org/TR/WCAG/#predictable).
 
 Det handlar om att säkerställa att webbsidorna ser likadana ut och fungerar som de ska.
 
@@ -1141,7 +1141,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas ](ht
 
 ### Ingångsstöd (3.3) {#input-assistance}
 
-[Riktlinje 3.3 Hjälp med inmatning: Hjälp användarna att undvika och rätta till misstag.](https://www.w3.org/TR/WCAG/#input-assistance)
+[Riktlinje 3.3 Indatshjälp: Hjälp användarna att undvika och rätta till misstag](https://www.w3.org/TR/WCAG/#input-assistance).
 
 ### Felidentifiering (3.3.1)  {#error-identification}
 
@@ -1275,11 +1275,11 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {3.3
 
 ## Princip 4: Robust {#principle-robust}
 
-[Princip 4: Robust - Innehållet måste vara tillräckligt robust så att det kan tolkas av ett stort antal användaragenter, inklusive hjälpmedelstekniker.](https://www.w3.org/TR/WCAG/#robust)
+[Princip 4: Robust - Innehållet måste vara tillräckligt robust så att det kan tolkas av ett stort antal användaragenter, inklusive hjälpmedelstekniker](https://www.w3.org/TR/WCAG/#robust).
 
 ### Kompatibel (4.1) {#compatible}
 
-[Riktlinje 4.1 Kompatibel: Maximera kompatibiliteten med nuvarande och framtida användaragenter, inklusive hjälpmedelstekniker.](https://www.w3.org/TR/WCAG/#compatible)
+[Riktlinje 4.1 Kompatibel: Maximera kompatibiliteten med nuvarande och framtida användaragenter, inklusive hjälpmedelstekniker](https://www.w3.org/TR/WCAG/#compatible).
 
 Maximera kompatibiliteten med nuvarande och framtida användaragenter, inklusive hjälpmedelstekniker.
 

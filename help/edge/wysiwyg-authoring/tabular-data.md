@@ -4,7 +4,7 @@ description: Lär dig hur du använder kalkylblad för att hantera tabelldata f�
 feature: Edge Delivery Services
 exl-id: 26d4db90-3e4b-4957-bf21-343c76322cdc
 role: Admin, Architect, Developer
-source-git-commit: 4e4234c1aaf0a410cb419140e9e353348ce118c1
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -34,11 +34,11 @@ I det här dokumentet används exemplet med omdirigeringar för att illustrera h
 
 >[!TIP]
 >
->Mer information om hur kalkylblad i allmänhet fungerar med Edge Delivery Services finns i dokumentet [Kalkylblad och JSON.](/help/edge/developer/spreadsheets.md)
+>Mer information om hur kalkylblad i allmänhet fungerar med Edge Delivery Services finns i dokumentet [Kalkylblad och JSON](/help/edge/developer/spreadsheets.md).
 
 >[!TIP]
 >
->Kalkylblad bör endast användas för att underhålla tabelldata. Om du vill lagra strukturerade data ska du [kontrollera AEM rubrikfria funktioner.](/help/headless/introduction.md)
+>Kalkylblad bör endast användas för att underhålla tabelldata. [AEM rubrikfria funktioner](/help/headless/introduction.md) för lagring av strukturerade data.
 
 ## Förutsättningar {#prerequisites}
 
@@ -150,7 +150,7 @@ För att AEM ska kunna publicera data i ditt kalkylblad måste du dessutom uppda
 
    >[!NOTE]
    >
-   >Den här `paths.json`-posten baseras på exemplet med att skapa omdirigeringar med tabelldata. Uppdatera sökvägen som passar den [typ av kalkylblad som du skapar.](#other)
+   >Den här `paths.json`-posten baseras på exemplet med att skapa omdirigeringar med tabelldata. Uppdatera sökvägen som passar den [typ av kalkylblad du skapar](#other).
 
 1. Klicka på **Verkställ ändringar..** om du vill spara ändringarna i `main`.
 
@@ -174,7 +174,7 @@ Kalkylbladet för omdirigering är nu publicerat och tillgängligt för alla.
 
 >[!TIP]
 >
->Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services.](/help/edge/wysiwyg-authoring/path-mapping.md)
+>Mer information om sökvägsmappningar finns i dokumentet [Sökvägsmappning för Edge Delivery Services](/help/edge/wysiwyg-authoring/path-mapping.md).
 
 ## Andra kalkylbladstyper {#other}
 
@@ -205,7 +205,7 @@ Dessutom kan du [skapa ett eget kalkylblad](#own-spreadsheet) med godtyckliga ko
 
 ## Skapa ett eget kalkylblad {#own-spreadsheet}
 
-1. Följ samma steg i avsnittet [Skapa kalkylblad.](#spreadsheet)
+1. Följ samma steg i avsnittet [Skapa kalkylblad](#spreadsheet).
 
 1. Välj **Kalkylblad** när du väljer mallen.
 

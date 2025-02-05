@@ -4,10 +4,10 @@ description: Adobe Experience Manager optimerar prestanda genom att asynkront sl
 exl-id: 9c5c4604-1290-4dea-a14d-08f3ab3ef829
 feature: Operations
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '799'
-ht-degree: 65%
+ht-degree: 63%
 
 ---
 
@@ -85,7 +85,7 @@ AEM kör ett rensningsjobb varje dag klockan 01:00 för att ta bort slutförda a
 
 Du kan ändra schemat för rensningen och hur länge information om slutförda jobb behålls innan den tas bort. Du kan också konfigurera det maximala antalet slutförda jobb för vilka information sparas vid någon tidpunkt.
 
-1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Logga in på AEM SDK Quickstart Jars AEM webbkonsol på `https://<host>:<port>/system/console` som adminanvändare.
 1. Navigera till **OSGi** > **Konfiguration**
 1. Öppna jobbet **[!UICONTROL Adobe Granite Async Jobs Purge Scheduled Job]**.
 1. Ange:
@@ -101,9 +101,9 @@ Du kan ändra schemat för rensningen och hur länge information om slutförda j
 
 Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utförs borttagningen asynkront.
 
-1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Logga in på AEM SDK Quickstart Jars AEM webbkonsol på `https://<host>:<port>/system/console` som adminanvändare.
 1. Navigera till **OSGi** > **Konfiguration**
-1. Öppna **[!UICONTROL Async Process Default Queue Configuration.]** via webbkonsolen
+1. Öppna **[!UICONTROL Async Process Default Queue Configuration]** från webbkonsolen.
 1. I rutan **[!UICONTROL Threshold number of assets]** ska du ange gränsvärdet för antal resurser/mappar gällande asynkron bearbetning av borttagningar.
 
    ![Gränsvärde för borttagning av resurser](assets/async-delete-threshold.png)
@@ -115,9 +115,9 @@ Om antalet resurser eller mappar som ska tas bort överstiger gränsvärdet utf�
 
 Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsvärdet utförs flytten asynkront.
 
-1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Logga in på AEM SDK Quickstart Jars AEM webbkonsol på `https://<host>:<port>/system/console` som adminanvändare.
 1. Navigera till **OSGi** > **Konfiguration**
-1. Öppna **[!UICONTROL Async Move Operation Job Processing Configuration.]** via webbkonsolen
+1. Öppna **[!UICONTROL Async Move Operation Job Processing Configuration]** från webbkonsolen.
 1. I rutan **[!UICONTROL Threshold number of assets/references]** ska du ange gränsvärdet för antal resurser/mappar eller referenser gällande asynkron bearbetning av flyttningar.
 
    ![Gränsvärde för resursflyttning](assets/async-move-threshold.png)
@@ -127,9 +127,9 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 
 ### Konfigurera asynkrona MSM-åtgärder {#configuring-asynchronous-msm-operations}
 
-1. Logga in på AEM SDK Quickstart Jars AEM Web console på `https://<host>:<port>/system/console` som admin-användare.
+1. Logga in på AEM SDK Quickstart Jars AEM webbkonsol på `https://<host>:<port>/system/console` som adminanvändare.
 1. Navigera till **OSGi** > **Konfiguration**
-1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration.]** via webbkonsolen
+1. Öppna **[!UICONTROL Async Page Move Operation Job Processing Configuration]** från webbkonsolen.
 1. Markera alternativet **Enable email notification** för att få e-postmeddelanden för den här jobbstatusen. Lyckades, misslyckades till exempel.
 
    ![MSM-konfiguration](assets/async-msm.png)

@@ -5,9 +5,9 @@ exl-id: b666e62a-c3dc-4be3-8932-d5fe67b178d6
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -45,7 +45,7 @@ Vilka alternativ som visas beror på den aktuella konsolen. I **Webbplatser** ka
 
 ![Exempel på sidpanelsväljare](assets/sites-console-side-panel-selector.png)
 
-Mer information om sidopanelen finns i dokumentet [Platskonsolens sidopanel.](/help/sites-cloud/authoring/sites-console/console-side-panel.md)
+Mer information om sidopanelen finns i [Platskonsolens sidopanel](/help/sites-cloud/authoring/sites-console/console-side-panel.md).
 
 ### Breadcrumbs {#breadcrumbs}
 
@@ -194,7 +194,7 @@ Listvyn innehåller information för varje resurs på den aktuella nivån i en l
 ![Listvy](assets/sites-console-list-view.png)
 
 * Du kan navigera genom trädet genom att trycka/klicka på resursnamnet och säkerhetskopiera genom att använda [breadcrumbs i rubriken](#the-header).
-* Om du enkelt vill markera alla objekt i listan använder du kryssrutan [**Markera alla** i verktygsfältet.](#select-all)
+* Om du enkelt vill markera alla objekt i listan använder du kryssrutan [**Markera alla** i verktygsfältet](#select-all).
 
 * Markera de kolumner som ska visas med alternativet **Visa inställningar** som finns under knappen Vyer. Följande kolumner är tillgängliga för visning:
 

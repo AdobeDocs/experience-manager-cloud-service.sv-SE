@@ -8,7 +8,7 @@ exl-id: d1a3eb42-e9e4-4118-9ff7-7aab5519cf0d
 solution: Experience Manager Sites
 feature: Translation
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Om du väljer en annan provider måste administratören installera kopplingspake
 >
 >Om du använder den färdiga Microsoft Translator i AEM behöver du inte göra ytterligare inställningar och fungerar som det ska utan ytterligare anslutningskonfiguration.
 >
->Om du väljer att använda Microsoft Translator-kopplingen för testning behöver du inte utföra stegen i de följande två avsnitten: [Skapa en konfiguration för översättningsintegrering](#create-config) och [Koppla konfigurationen till ditt innehåll.](#associate) Du bör dock läsa dem så att du känner till stegen för när du behöver konfigurera den önskade anslutningen.
+>Om du väljer att använda Microsoft Translator-kopplingen för testning behöver du inte utföra stegen i de följande två avsnitten: [Skapa en konfiguration för översättningsintegrering](#create-config) och [Koppla konfigurationen till ditt innehåll](#associate). Du bör dock läsa dem så att du vet hur du gör när du behöver konfigurera den önskade anslutningen.
 >
 >Testversionen av Microsoft Translator Connector är inte avsedd för produktion och om du bestämmer dig för att licensiera den måste systemadministratören följa stegen som beskrivs i avsnittet [Ytterligare resurser](#additional-resources) i slutet av det här dokumentet för att konfigurera licensen.
 
@@ -123,7 +123,7 @@ Det gör du genom att navigera till innehållets språkrot. I våra exempel är 
 1. Gå till den globala navigeringen och gå till **Navigering** > **Assets** > **Filer**.
 1. I resurskonsolen väljer du den språkrot som ska konfigureras och väljer **Egenskaper**.
 1. Markera fliken **Cloud Service**.
-1. Välj din koppling under **Konfigurationskonfigurationer** i listrutan **Lägg till Cloud Service**. Den ska visas i listrutan när du har installerat paketet som [beskrivet tidigare.](#connect-translation-provider)
+1. Välj din koppling under **Konfigurationskonfigurationer** i listrutan **Lägg till Cloud Service**. Den ska visas i listrutan när du har installerat paketet som [beskrivet tidigare](#connect-translation-provider).
 1. Under **Konfigurationskonfigurationer** i listrutan **Lägg till Cloud Service** väljer du även din konfiguration.
 1. Välj **Spara och stäng**.
 
@@ -136,7 +136,7 @@ Nu när du är klar med den här delen av AEM Sites översättningsresa ska du:
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM Sites-översättningsresa genom att gå igenom dokumentet [Konfigurera översättningsregler](translation-rules.md) där du får lära dig hur du definierar vilket innehåll som ska översättas.
+Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sites genom att gå igenom dokumentet [Konfigurera översättningsregler](translation-rules.md), där du får lära dig hur du definierar vilket innehåll som ska översättas.
 
 ## Ytterligare resurser {#additional-resources}
 

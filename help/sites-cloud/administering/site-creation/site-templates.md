@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 42eec922-b02e-4f2c-8107-7336192919c7
 solution: Experience Manager Sites
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Lär dig hur AEM webbplatsmallar kan användas för att fördefiniera webbplatss
 
 Det är bekvämt att ha fördefinierade strukturer tillgängliga för att snabbt kunna driftsätta en ny webbplats baserat på en uppsättning befintliga standarder. Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket.
 
-Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur- och webbplatsformat, så kallat [webbplatstemat](site-themes.md), för att snabbt komma igång med en ny webbplats. Administratörer väljer en webbplatsmall som webbplatsen [ ska baseras på när webbplatsen skapas.](create-site.md)
+Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur- och webbplatsformat, så kallat [webbplatstemat](site-themes.md), för att snabbt komma igång med en ny webbplats. Administratörer väljer en webbplatsmall som webbplatsen [ ska baseras på när webbplatsen skapas ](create-site.md).
 
 Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
 
@@ -67,7 +67,7 @@ Webbplatsmallar är helt enkelt paket med en logisk struktur som tydligt återsp
 
 ## Standardmall för webbplats {#standard-site-template}
 
-Adobe tillhandahåller en referensmall som du kan använda som utgångspunkt för att skapa egna mallar. [Standardwebbplatsmallen är tillgänglig på GitHub.](https://github.com/adobe/aem-site-template-standard)
+Adobe tillhandahåller en referensmall som du kan använda som utgångspunkt för att skapa egna mallar. [Standardwebbplatsmallen är tillgänglig på GitHub](https://github.com/adobe/aem-site-template-standard).
 
 [Den senaste versionen av standardwebbplatsmallen](https://github.com/adobe/aem-site-template-standard/releases) kan hämtas och användas direkt för [att skapa nya webbplatser](create-site.md).
 

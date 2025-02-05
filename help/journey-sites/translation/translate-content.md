@@ -8,7 +8,7 @@ exl-id: b8ab2525-3f15-4844-866c-da47bfc7518c
 solution: Experience Manager Sites
 feature: Translation
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2526'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Du får ett meddelande om att projektet har skapats.
 
 >[!NOTE]
 >
->Det antas att den nödvändiga språkstrukturen för översättningsspråken redan har skapats som en del av [-definitionen för innehållsstrukturen.](getting-started.md#content-structure) Detta bör göras i samarbete med innehållsarkitekten.
+>Det antas att den nödvändiga språkstrukturen för översättningsspråken redan har skapats som en del av [definitionen av innehållsstrukturen](getting-started.md#content-structure). Detta bör göras i samarbete med innehållsarkitekten.
 >
 >Om språkmapparna inte skapas i förväg kommer du inte att kunna skapa språkkopior enligt beskrivningen i föregående steg.
 
@@ -126,7 +126,7 @@ Projektet är uppdelat i flera kort.
 
 * **Sammanfattning** - Det här kortet visar grundläggande huvudinformation för projektet, inklusive ägare, språk och översättningsleverantör.
 * **Översättningsjobb** - Kortet eller korten ger en översikt över det faktiska översättningsjobbet inklusive status, antal resurser och så vidare. Vanligtvis finns det ett jobb per språk med ISO-2-språkkoden tillagd till jobbnamnet.
-   * När [automatiskt skapar översättningsjobb skapas jobben asynkront i ](#automatically-creating) AEM och de kanske inte visas direkt i projektet.
+   * När [automatiskt skapar översättningsjobb](#automatically-creating) skapar AEM jobben asynkront och kanske inte visas direkt i projektet.
 * **Team** - Det här kortet visar vilka användare som samarbetar i det här översättningsprojektet. Den här resan täcker inte det här ämnet.
 * **Uppgifter** - Ytterligare uppgifter som är kopplade till översättning av innehåll, t.ex. att göra objekt eller arbetsflödesobjekt. Den här resan täcker inte det här ämnet.
 
@@ -175,7 +175,7 @@ Maskinöversättningar returneras automatiskt med tillståndet **Godkänd**. Öv
 
 >[!NOTE]
 >
->Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt, [ visas ](#using-translation-project) översatta objekt med läget **Borttagen**. Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
+>Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt](#using-translation-project) visas översatta objekt med läget **Borttagen**. [ Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
 >Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill veta mer om hur AEM bearbetar översättningar läser du avsnittet [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
 
@@ -213,7 +213,7 @@ Så här lägger du till innehåll i ett översättningsjobb:
 >
 >Sökvägsläsaren är ett kraftfullt verktyg med vilket du kan söka efter, filtrera och navigera i innehållet. Markera knappen **Endast innehåll/filter** för att växla sidopanelen och visa avancerade filter som **Ändrat den** eller **Översättningsstatus**.
 >
->Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser.](#additional-resources)
+>Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser](#additional-resources).
 
 Du kan använda de föregående stegen för att lägga till nödvändigt innehåll till alla språk (jobb) för projektet. När du har markerat allt innehåll kan du starta översättningen.
 
@@ -235,13 +235,13 @@ Maskinöversättningar returneras automatiskt med tillståndet **Godkänd**. Öv
 
 >[!NOTE]
 >
->Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt, [ visas ](#using-translation-project) översatta objekt med läget **Borttagen**. Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
+>Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt](#using-translation-project) visas översatta objekt med läget **Borttagen**. [ Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
 >Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill veta mer om hur AEM bearbetar översättningar läser du avsnittet [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
 
 ## Granskning av översatt innehåll {#reviewing}
 
-[Som vi tidigare sett flödar ](#using-translation-project) maskinöversatt innehåll tillbaka till AEM med statusen **Godkänd** eftersom antagandet är att det inte krävs någon mänsklig åtgärd eftersom maskinöversättning används. Det går dock fortfarande att granska det översatta innehållet.
+[Som tidigare visats](#using-translation-project) flödas maskinöversatt innehåll tillbaka till AEM med statusen **Godkänd** eftersom antagandet är att det inte krävs någon mänsklig åtgärd eftersom maskinöversättning används. Det går dock fortfarande att granska det översatta innehållet.
 
 Gå bara till det slutförda översättningsjobbet och markera ett radobjekt genom att trycka eller klicka i kryssrutan. Ikonen **Förhandsgranska på platser** visas i verktygsfältet.
 
@@ -285,7 +285,7 @@ Bygg vidare på den här kunskapen och fortsätt din översättning till AEM Sit
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av översättningsresan genom att granska dokumentet [Publish översatt innehåll](publish-content.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
+Vi rekommenderar att du går vidare till nästa del av översättningsresan genom att granska dokumentet [Publish-översatt innehåll](publish-content.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
 
 * [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Lär dig mer om översättningsprojekt och andra funktioner som mänskliga översättningsarbetsflöden och flerspråkiga projekt.
 * [Redigeringsmiljö och redigeringsverktyg](/help/sites-cloud/authoring/path-selection.md#path-selection) - AEM innehåller olika sätt att ordna och redigera ditt innehåll, inklusive en robust sökvägsläsare.

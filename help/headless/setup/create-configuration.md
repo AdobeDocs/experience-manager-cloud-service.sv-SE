@@ -4,7 +4,7 @@ description: Skapa en konfiguration som ett första steg i arbetet med headless 
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -21,7 +21,7 @@ I Configuration Browser finns ett allmänt konfigurations-API, innehållsstruktu
 
 När det gäller headless content management i AEM kan du tänka på en konfiguration som en arbetsplats i AEM där du kan skapa dina innehållsmodeller, som definierar strukturen för ditt framtida innehåll och innehållsfragment. Du kan ha flera konfigurationer för att separera dessa modeller.
 
-Om du är bekant med [sidmallar i en AEM-implementering i en hel hög ](/help/sites-cloud/authoring/page-editor/templates.md) är användningen av konfigurationer för hantering av innehållsmodeller likartad.
+Om du är bekant med [sidmallar i en fullstals AEM implementering](/help/sites-cloud/authoring/page-editor/templates.md) är användningen av konfigurationer för hantering av innehållsmodeller likartad.
 
 ## Så här skapar du en konfiguration {#how-to-create-a-configuration}
 
@@ -49,7 +49,7 @@ Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också ka
 
 ## Nästa steg {#next-steps}
 
-Med den här konfigurationen kan du nu gå vidare till den andra delen av guiden Komma igång och [skapa modeller för innehållsfragment.](create-content-model.md)
+Med den här konfigurationen kan du nu gå vidare till den andra delen av guiden Komma igång och [skapa modeller för innehållsfragment](create-content-model.md).
 
 >[!TIP]
 >

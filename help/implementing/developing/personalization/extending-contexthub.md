@@ -4,7 +4,7 @@ description: Definiera nya typer av ContextHub-butiker och moduler när de angiv
 exl-id: ba817c18-f8bd-485d-b043-87593a6a93b5
 feature: Developing, Personalization
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-I de flesta fall är endast en kandidat nödvändig och prioriteten kan anges till `0`, men om du är intresserad kan du lära dig mer om [mer avancerade registreringar,](contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) som gör att en av få butiksimplementeringar kan väljas baserat på javascript-villkor (`applies`) och kandidatprioritet.
+I de flesta fall är bara en kandidat nödvändig och prioriteten kan anges till `0`, men om du är intresserad kan du lära dig mer om [mer avancerade registreringar](contexthub-api.md#registerstorecandidate-store-storetype-priority-applies), som gör att en av få butiksimplementeringar kan väljas baserat på javascript-villkor (`applies`) och kandidatprioritet.
 
 ## Skapar gränssnittsmodultyper för ContextHub {#creating-contexthub-ui-module-types}
 

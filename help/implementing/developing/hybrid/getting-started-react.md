@@ -4,7 +4,7 @@ description: I den här artikeln visas ett exempel SPA programmet, hur det sätt
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 0%
@@ -182,7 +182,7 @@ MapTo('my-react-app/components/structure/page')(withComponentMappingContext(AppP
 
 I det här exemplet utökar klassen `AppPage` `Page`, som innehåller de interna innehållsmetoderna som sedan kan användas.
 
-`Page` importerar JSON-representationen av sidmodellen och bearbetar innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA utkast.](blueprint.md)
+`Page` importerar JSON-representationen av sidmodellen och bearbetar innehållet för att kapsla in/dekorera varje element på sidan. Mer information om `Page` finns i dokumentet [SPA Blueprint](blueprint.md).
 
 ### Image.js {#image-js}
 

@@ -4,7 +4,7 @@ description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för 
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 0%
@@ -42,7 +42,7 @@ CRXDE Lite användargränssnitt har många delar och många funktioner.
 
 ### Övre växlingsfält {#top-switcher-bar}
 
-Med det övre växlingsfältet kan du snabbt växla mellan CRXDE Lite och [pakethanteraren.](package-manager.md)
+Med det övre växlingsfältet kan du snabbt växla mellan CRXDE Lite och [pakethanteraren](package-manager.md).
 
 ### Nodsökväg, widget {#node-path-widget}
 
@@ -201,7 +201,7 @@ Valideringen av om den skapade noden tillåts av den överordnade nodens nodtyp 
 Så här skapar du en egenskap med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. I [**Utforskarpanelen** ](#explorer-pane) markerar du den nod där du vill lägga till den nya egenskapen.
+1. I [**Utforskarrutan**](#explorer-pane) väljer du den nod där du vill lägga till den nya egenskapen.
 1. Ange **Namn**, **Typ** och **Värde** på fliken [**Egenskaper**](#properties-tab) i den nedre rutan.
 1. Klicka på **Lägg till**.
 1. Klicka på knappen [**Spara alla**](#save-all-button) för att spara ändringarna på servern.
@@ -214,7 +214,7 @@ Så här skapar du en fil med CRXDE Lite:
 1. Högerklicka på komponenten där du vill skapa filen i [**Utforskarrutan**](#explorer-pane), välj **Skapa** och sedan **Skapa fil**.
 1. Ange filen **Namn** med filnamnstillägget.
 1. Klicka på **OK**.
-1. Den nya filen öppnas som en flik i [**redigeringsfönstret**.](#edit-pane)
+1. Den nya filen öppnas som en flik i [**redigeringsfönstret**](#edit-pane).
 1. Redigera filen.
 1. Klicka på knappen [**Spara alla**](#save-all-button) för att spara ändringarna.
 

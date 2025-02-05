@@ -4,9 +4,9 @@ description: Utnyttja åtgärdscentret för att enkelt hantera incidenter och an
 exl-id: d5a95ac4-aa88-44d5-ba02-7c9702050208
 feature: Operations
 role: Admin
-source-git-commit: 1bfa9ff24d3515a450216f3569b1e8b0b1e31ecc
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ I följande tabell visas de meddelandetyper som för närvarande stöds i Åtgä
 | Ogiltig beständig GraphQL-fråga | Incident | Åtgärda den ogiltiga GraphQL-frågan genom att referera till [Persisted GraphQL queries felsökningsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries-troubleshoot.html) |
 | Trafikrydda vid ursprung | Incident | Protect ditt ursprung genom att konfigurera regler för hastighetsbegränsning för trafikfilter som utlöser vid lägre tröskelvärden än standardtrafikspiken vid ursprungsvarningen.  Se avsnittet [Blockera DoS- och DDoS-attacker med trafikregler](/help/security/traffic-filter-rules-including-waf.md#blocking-dos-and-ddos-attacks-using-traffic-filter-rules) i dokumentationen för trafikfilterregler, som refererar till en självstudiekurs. |
 | Regler för CDN-trafikfilter har utlösts | Incident | Om den matchande trafikfilterregeln reflekterar en attack, och din plats inte blockerar trafiken, skyddar du din plats genom att konfigurera en trafikfilterregel i blockeringsläge. Se avsnittet [Skydda webbplatser med trafikfilterregler (inklusive WAF-regler)](/help/security/traffic-filter-rules-including-waf.md#tutorial-protecting-websites) i dokumentationen om trafikfilterregler, som refererar till en självstudiekurs. |
-| Vidarebefordringsfel för skräppostloggen | Incident | Kontrollera att Splunk-slutpunkten fungerar och kan nås från AEM Cloud Service-miljön. Mer information om vidarebefordran av loggar finns i [vidarebefordringsdokumentationen för skräppost](/help/implementing/developing/introduction/logging.md#splunk-logs). Om du behöver hjälp med felsökning, eller behöver göra ändringar i loggningskonfigurationen, ber vi dig kontakta Adobe. |
+| Vidarebefordringsfel för skräppostloggen | Incident | Kontrollera att Splunk-slutpunkten fungerar och kan nås från AEM Cloud Service-miljön. Mer information om vidarebefordran av loggar finns i [vidarebefordringsdokumentationen för skräppost](/help/implementing/developing/introduction/logging.md#splunk-logs). Om du behöver hjälp med felsökning eller behöver göra ändringar i loggningskonfigurationen kontaktar du Adobe. |
 | Sidorna innehåller ett stort antal noder | Proaktiv | Minska det totala antalet noder på en sida. Läs [Dokumentation om sidkomplexitet](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/pcx) | |
 | Stort antal arbetsflödesinstanser som körs | Proaktiv | Avsluta pågående arbetsflöden som inte längre behövs. Lär dig hur du [konfigurerar ett rensningsjobb](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) |               |
 | S2S-certifikatet förfaller | Proaktiv | Lär dig hur du uppdaterar en autentiseringsuppgift i [Genererar åtkomsttoken för API:er på serversidan](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md#refresh-credentials) | Högt antal anslutningar | Proaktiv | Lär dig mer om anslutningspoolning i [Anslutningspoolning tillsammans med dokumentationen för avancerat nätverk](/help/security/configuring-advanced-networking.md#connection-pooling-advanced-networking) |

@@ -4,7 +4,7 @@ description: Predikatreferens för Query Builder API i AEM as a Cloud Service.
 exl-id: 77118ef7-4d29-470d-9c4b-20537a408940
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2270'
 ht-degree: 0%
@@ -171,7 +171,7 @@ Det stöder inte facetextrahering.
 
 ### hasPermission {#haspermission}
 
-Detta predikat begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna.](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges)
+Detta predikat begränsar resultatet till objekt där den aktuella sessionen har de angivna [JCR-behörigheterna](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html#16.2.3%20Standard%20Privileges).
 
 Ett predikat som bara kan filtreras och som inte kan använda ett sökindex. Det stöder inte facetextrahering.
 

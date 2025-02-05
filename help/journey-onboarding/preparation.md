@@ -4,7 +4,7 @@ description: Innan introduktionsprocessen börjar finns det ett antal eller för
 exl-id: 86139b1a-c22a-4716-a0f9-cf142cbc6c53
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Förberedelse för introduktion {#onboarding-preparation}
 
-Nu när du vet vad som finns i butik för dig i introduktionsprocessen genom att ha läst artikeln [AEM as a Cloud Service introduktion om introduktion till introduktionsresan ](overview.md) är du troligen redo att hoppa in. Innan introduktionsprocessen börjar finns det dock ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
+Nu när du vet vad som finns i butik för dig i introduktionsprocessen genom att ha läst artikeln [AEM as a Cloud Service introduktion om introduktion på introduktionsresan](overview.md) är du troligen redo att hoppa in. Innan introduktionsprocessen börjar finns det dock ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 
 ## Syfte {#objective}
 

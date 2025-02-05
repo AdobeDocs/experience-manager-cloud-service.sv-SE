@@ -5,7 +5,7 @@ exl-id: da7d5933-f6c9-4937-a483-ec4352fba86b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1431'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # AEM sidredigeraren {#editing-page-content}
 
-När sidan har skapats i konsolen [**Platser** kan du](/help/sites-cloud/authoring/sites-console/introduction.md) redigera sidans innehåll med hjälp av AEM sidredigerare, ett kraftfullt verktyg för att skapa ditt innehåll.
+När sidan har skapats i [**webbplatskonsolen**](/help/sites-cloud/authoring/sites-console/introduction.md) kan du redigera innehållet på sidan med hjälp av AEM sidredigerare, ett kraftfullt verktyg för att skapa innehåll.
 
 >[!NOTE]
 >
->När du redigerar en sida i konsolen [**Platser** ](/help/sites-cloud/authoring/sites-console/introduction.md) öppnar konsolen den redigerare som är lämplig för sidans [mall:](/help/sites-cloud/authoring/page-editor/templates.md) antingen den sidredigerare som beskrivs i det här dokumentet eller [den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
+>När du redigerar en sida i konsolen [**Platser**](/help/sites-cloud/authoring/sites-console/introduction.md) öppnar konsolen den redigerare som är lämplig för sidans [mall](/help/sites-cloud/authoring/page-editor/templates.md), antingen den sidredigerare som beskrivs i det här dokumentet eller [den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md).
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Sidans verktygsfält ger åtkomst till sammanhangsberoende funktioner beroende p
 
 #### Side Panel {#side-panel-button}
 
-Då öppnas/stängs panelen [på sidan,](/help/sites-cloud/authoring/page-editor/editor-side-panel.md) som innehåller Resursläsaren, Komponentbläddraren och Innehållsträdet.
+Då öppnas/stängs panelen [på sidan](/help/sites-cloud/authoring/page-editor/editor-side-panel.md) som innehåller Resursläsaren, Komponentbläddraren och Innehållsträdet.
 
 ![Växla sidopanel](assets/page-editor-side-panel-toggle.png)
 
@@ -78,7 +78,7 @@ Detta växlar verktygsfältet [emulator](/help/sites-cloud/authoring/page-editor
 
 #### ContextHub {#context-hub}
 
-Då öppnas [ContextHub.](/help/sites-cloud/authoring/personalization/contexthub.md) Den är bara tillgänglig i **förhandsgranskningsläge**.
+Då öppnas [ContextHub](/help/sites-cloud/authoring/personalization/contexthub.md). Den är bara tillgänglig i **förhandsgranskningsläget**.
 
 ![Kontextnavknappen](assets/page-editor-context-hub.png)
 
@@ -114,7 +114,7 @@ Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 
 #### Förhandsgranska {#preview}
 
-Knappen **Förhandsgranska** aktiverar [förhandsvisningsläget.](#preview-mode), visar sidan så som den kommer att visas när den publiceras.
+Knappen **Förhandsgranska** aktiverar [förhandsgranskningsläget](#preview-mode) och visar sidan så som den kommer att visas när den publiceras.
 
 ![Knappen Förhandsgranska](assets/page-editor-preview.png)
 

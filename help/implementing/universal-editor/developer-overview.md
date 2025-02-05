@@ -4,9 +4,9 @@ description: Om du är en AEM utvecklare som är intresserad av hur den universe
 exl-id: d6f9ed78-f63f-445a-b354-f10ea37b0e9b
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: d82a88e5b7337e9d81a91e812f6a90237e80b1ea
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '3160'
+source-wordcount: '3179'
 ht-degree: 0%
 
 ---
@@ -33,17 +33,17 @@ Den gör detta genom att ta ett standardexempel som de flesta AEM utvecklare kä
 Du behöver följande för att kunna följa med i den här översikten.
 
 * [En lokal utvecklingsinstans av AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
-   * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html)
-   * [WKND-demowebbplatsen måste vara installerad.](https://github.com/adobe/aem-guides-wknd)
-* [Åtkomst till den universella redigeraren](/help/implementing/universal-editor/getting-started.md#onboarding)
-* [En lokal Universal Editor-tjänst](/help/implementing/universal-editor/local-dev.md) som körs i utvecklingssyfte
-   * Se till att du dirigerar webbläsaren till [acceptera det självsignerade certifikatet för lokala tjänster.](/help/implementing/universal-editor/local-dev.md#editing)
+   * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html).
+   * [WKND-demowebbplatsen måste vara installerad](https://github.com/adobe/aem-guides-wknd).
+* [Åtkomst till Universal Editor](/help/implementing/universal-editor/getting-started.md#onboarding).
+* [En lokal Universal Editor-tjänst](/help/implementing/universal-editor/local-dev.md) som körs i utvecklingssyfte.
+   * Ange att webbläsaren ska [acceptera det självsignerade certifikatet för lokala tjänster](/help/implementing/universal-editor/local-dev.md#editing).
 
-Förutom att man är allmänt bekant med webbutveckling utgår man i det här dokumentet från att man är van vid AEM. Om du inte är van vid AEM kan du överväga att granska [WKND-självstudiekursen innan du fortsätter.](/help/implementing/developing/introduction/develop-wknd-tutorial.md)
+Förutom att man är allmänt bekant med webbutveckling utgår man i det här dokumentet från att man är van vid AEM. Om du inte är van vid AEM kan du överväga att granska [WKND-självstudiekursen innan du fortsätter](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 ## Starta AEM och logga in i den universella redigeraren {#sign-in}
 
-Om du inte redan har det måste du ha den lokala AEM utvecklingsinstansen installerad med WKND och HTTPS aktiverad som [enligt villkoren.](#prerequisites) Den här översikten förutsätter att din instans körs vid `https://localhost:8443`.
+Om du inte redan har det måste du ha den lokala AEM utvecklingsinstansen installerad med WKND och HTTPS aktiverad som [enligt villkoren](#prerequisites). Den här översikten förutsätter att din instans körs på `https://localhost:8443`.
 
 1. Öppna mallsidan för WKND English i AEM Editor.
 
@@ -189,7 +189,7 @@ Du har dock troligen lagt märke till att du inte kan interagera med sidan i Uni
    <meta name="urn:adobe:aue:system:aem" content="aem:https://localhost:8443">
    ```
 
-   * Den senaste versionen av biblioteket rekommenderas alltid. Om du behöver en tidigare version läser du dokumentet [Komma igång med den universella redigeraren i AEM.](/help/implementing/universal-editor/getting-started.md#alternative)
+   * Den senaste versionen av biblioteket rekommenderas alltid. Om du behöver en tidigare version läser du dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md#alternative).
 
 1. Lägg till de metadata som behövs för anslutningen till den lokala Universal Editor-tjänsten i slutet av filen.
 
@@ -572,21 +572,21 @@ Grattis! Nu kan du instrumentera dina egna AEM program så att de fungerar tills
 
 När du börjar instrumentera ditt eget program bör du tänka på de grundläggande steg du utförde i det här exemplet.
 
-1. [Du konfigurerar utvecklingsmiljön.](#prerequisites)
+1. [Du konfigurerar utvecklingsmiljön](#prerequisites).
    * AEM körs lokalt på HTTPS med WKND installerat
    * Universell redigeringstjänst som körs lokalt på HTTPS
 1. Du har AEM OSGi-inställningarna så att innehållet kan läsas in på fjärrbasis.
    * [`org.apache.sling.engine.impl.SlingMainServlet`](#sameorigin)
    * [`com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`](#samesite-cookies)
-1. [Du har lagt till ](#ue-connect-remote-frame)
-1. [Du har definierat en anslutning för att behålla ändringarna i ](#connection)
+1. [Du har lagt till biblioteket `universal-editor-embedded.js` i filen `customheaderlibs.html` för sidkomponenten i appen ](#ue-connect-remote-frame).
+1. [Du har definierat en anslutning som ska innehålla ändringar i `customheaderlibs.html`-filen för sidkomponenten i appen ](#connection).
    * Du definierade en anslutning till den lokala AEM utvecklingsinstansen.
    * Du har även definierat en anslutning till den lokala tjänsten Universal Editor.
-1. [Du instrumenterade teaserkomponenten.](#instrumenting-components)
-1. [Du instrumenterade underkomponenterna i teaser.](#subcomponents)
-1. [Du har definierat ett anpassat autentiseringshuvud så att du kan spara ändringar med den lokala tjänsten Universal Editor.](#auth-header)
-1. [Du instrumenterade programmet för att använda egenskapspanelen.](#properties-rail)
-1. [Du instrumenterade teaserkomponenten för att använda egenskapspanelen.](#properties-rail-component)
+1. [Du har instrumenterat teaserkomponenten](#instrumenting-components).
+1. [Du har instrumenterat underkomponenterna för teaser](#subcomponents).
+1. [Du har definierat ett anpassat autentiseringshuvud så att du kan spara ändringar med den lokala universella redigeringstjänsten](#auth-header).
+1. [Du instrumenterade programmet för att använda egenskapspanelen](#properties-rail).
+1. [Du instrumenterade teaserkomponenten för att använda egenskapspanelen](#properties-rail-component).
 
 Du kan följa dessa steg för att mäta hur din egen app kan användas med den universella redigeraren. Alla egenskaper i JCR kan visas för den universella redigeraren.
 

@@ -4,7 +4,7 @@ description: I det här dokumentet beskrivs det allmänna ramverksoberoende kont
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Sidmodellen använder JSON-modellens exporterare, som i sin tur är baserad på 
 * `:itemsOrder`: Ordnad lista över underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
 * `:path`: Innehållssökväg för ett objekt (finns i objekt som representerar en sida)
 
-Se även [Komma igång med AEM innehållstjänster.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+Se även [Komma igång med AEM innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html).
 
 ### Ramverksspecifik modul {#framework-specific-module}
 

@@ -4,7 +4,7 @@ description: Versionsinformation för version 2023.4.0 av  [!DNL Adobe Experienc
 exl-id: c34aedee-e45a-4e2a-ae7f-930bc0cc026f
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 * Förbättrad användbarhet för färgsökningsaspekten - Indatafältet för färgvärden kan nu redigeras och sökresultaten uppdateras endast när du avslutar färgväljaren.
 
 * Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
-   * Adaptiv strömning (DASH/HLS) ger en bättre användarupplevelse för videor
+   * Adaptiv direktuppspelning (DASH/HLS) ger en bättre användarupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
    * Tillgängligt i alla regioner, för att aktiveras via supportanmälan
 
@@ -122,7 +122,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 ## Cloud Manager {#cloud-manager}
 
-Du hittar en fullständig lista över månadsutgåvor av Cloud Manager [här.](/help/implementing/cloud-manager/release-notes/current.md)
+Du hittar en fullständig lista över månadsutgåvor av Cloud Manager [här](/help/implementing/cloud-manager/release-notes/current.md).
 
 ## Migreringsverktyg {#migration-tools}
 

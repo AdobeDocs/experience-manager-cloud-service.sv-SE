@@ -5,7 +5,7 @@ exl-id: 7f2571d6-b847-4cce-8e94-94ba0d2e04a5
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 1%
@@ -108,11 +108,11 @@ Välj lämplig referenstyp för mer information. I vissa situationer är ytterli
 
 ## Plats {#site}
 
-I vyn **Plats** på sidpanelen visas information om platser [som skapats med en webbplatsmall.](/help/sites-cloud/administering/site-creation/create-site.md)
+I vyn **Plats** på sidpanelen visas information om platser [som skapats med en webbplatsmall](/help/sites-cloud/administering/site-creation/create-site.md).
 
 ![Platspanelen](assets/console-side-panel-site-paenl.png)
 
-Mer information om hur du kan använda panelen för att hantera [temat för din plats finns i dokumentet ](/help/sites-cloud/administering/site-creation/site-rail.md) [Hantera ditt platstema på panelen Plats.](/help/sites-cloud/administering/site-creation/site-themes.md).
+Mer information om hur du kan använda panelen för att hantera [temat för din plats](/help/sites-cloud/administering/site-creation/site-themes.md) finns i dokumentet [Hantera ditt platstema på panelen Plats](/help/sites-cloud/administering/site-creation/site-rail.md).
 
 Om du ännu inte har konfigurerat frontendinje för att kunna skapa temabaserade webbplatser kommer sidopanelen att erbjuda det alternativet.
 
@@ -120,7 +120,7 @@ Om du ännu inte har konfigurerat frontendinje för att kunna skapa temabaserade
 
 >[!TIP]
 >
->En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns i [snabbwebbplatsgenereringsresan.](/help/journey-sites/quick-site/overview.md)
+>En fullständig beskrivning av processen att skapa en webbplats från en mall och anpassa dess tema finns på [snabbwebbplatsresan](/help/journey-sites/quick-site/overview.md).
 
 ## Filter {#filter}
 

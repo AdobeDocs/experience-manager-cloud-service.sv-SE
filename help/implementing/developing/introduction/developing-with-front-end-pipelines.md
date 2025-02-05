@@ -4,7 +4,7 @@ description: Med den integrerade utvecklingsmiljön får utvecklarna större obe
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Developing Sites with the Front-End Pipeline {#developing-site-with-front-end-pipeline}
 
-[Med frontdelsrörledningen får ](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) fler oberoende till gränssnittsutvecklarna, och utvecklingsprocessen kan bli avsevärt snabbare. I det här dokumentet beskrivs hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om så att du kan utnyttja hela potentialen i den här processen.
+[Med frontdelspipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end) får frontendoututvecklarna mer oberoende och utvecklingsprocessen kan gå mycket snabbare. I det här dokumentet beskrivs hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om så att du kan utnyttja hela potentialen i den här processen.
 
 >[!TIP]
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Front-End Build Contract {#front-end-build-contract}
 
-Precis som för byggmiljön [för hela stacken ](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) har frontendpipelinen en egen miljö. Utvecklarna har viss flexibilitet när det gäller att använda denna pipeline så länge som följande avtal för front-end-bygge följs.
+Ungefär som i [fullständig stackbyggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md) har frontendpipeline en egen miljö. Utvecklarna har viss flexibilitet när det gäller att använda denna pipeline så länge som följande avtal för front-end-bygge följs.
 
 Front-end-pipeline kräver att front-end-Node.js-projektet använder skriptdirektivet `build` för att generera det bygge som det distribuerar. Detta beror på att Cloud Manager använder kommandot `npm run build` för att generera det distribuerbara projektet för frontendbygget.
 

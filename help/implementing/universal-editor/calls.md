@@ -4,7 +4,7 @@ description: Lär dig mer om de olika typer av samtal som görs till appen av de
 exl-id: 00d66e59-e445-4b5c-a5b1-c0a9f032ebd9
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -150,7 +150,7 @@ Ett `add`-anrop inträffar när du placerar en ny komponent i appen med den univ
 
 Dess nyttolast innehåller ett `path`-objekt som innehåller var innehållet ska läggas till.
 
-Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [ för varje plugin-program.](/help/implementing/universal-editor/architecture.md) Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
+Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [ för varje plugin](/help/implementing/universal-editor/architecture.md). Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
 
 >[!BEGINTABS]
 

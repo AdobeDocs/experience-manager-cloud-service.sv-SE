@@ -4,7 +4,7 @@ description: Lär dig rekommendationer om hur du skapar ett projekt på ett smid
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: f6b861ed-18e4-4c81-92d2-49fadfe4669a
-source-git-commit: 5715a07dc3e90e3781afa8d837394533ba419483
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1261'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Ni kan använda MSM för att skapa en hel innehållsstruktur för ert varumärke
 Om du vill konfigurera MSM i ett problemfritt fall måste du först utföra ett antal uppgifter.
 
 * I det här dokumentet förutsätts att du redan har skapat en webbplats för ditt projekt baserat på guiden [Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
-* Du måste redan ha [aktiverat den svarslösa funktionen för ditt projekt.](/help/edge/wysiwyg-authoring/repoless.md)
+* Du måste redan ha [aktiverat den svarslösa funktionen för ditt projekt](/help/edge/wysiwyg-authoring/repoless.md).
 
 ## Användningsfall {#use-case}
 
@@ -55,9 +55,9 @@ Innehåll i `language-masters` är källan till Live-kopior för de lokaliserade
 
 Det finns flera steg för att konfigurera MSM-användningsexemplet utan problem.
 
-1. [Uppdatera AEM platskonfigurationer.](#update-aem-configurations)
-1. [Skapa nya Edge Delivery Services för lokaliserade sidor.](#create-edge-sites)
-1. [Uppdatera molnkonfigurationen i AEM för dina lokaliserade platser.](#update-cloud-configurations)
+1. [Uppdatera AEM platskonfigurationer](#update-aem-configurations).
+1. [Skapa nya Edge Delivery Services för dina lokaliserade sidor](#create-edge-sites).
+1. [Uppdatera molnkonfigurationen i AEM för dina lokaliserade platser](#update-cloud-configurations).
 
 ### Uppdatera AEM webbplatskonfigurationer {#update-aem-configurations}
 

@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '4270'
 ht-degree: 0%
@@ -348,7 +348,7 @@ Om du vill ändra Live Copy-innehåll kan du:
 
 Du kan när som helst lägga till komponenter på en Live Copy-sida. Live Copy-objektets arvsstatus och dess styckesystem styr inte möjligheten att lägga till komponenter.
 
-När Live Copy-sidan synkroniseras med källsidan ändras inte de tillagda komponenterna. Se även [Ändra ordning på komponenter på en Live-kopieringssida.](#changing-the-order-of-components-on-a-live-copy-page)
+När Live Copy-sidan synkroniseras med källsidan ändras inte de tillagda komponenterna. Se även [Ändra ordning på komponenter på en Live-kopieringssida](#changing-the-order-of-components-on-a-live-copy-page).
 
 >[!TIP]
 >

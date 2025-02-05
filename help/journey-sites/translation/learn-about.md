@@ -8,7 +8,7 @@ exl-id: 1e5e739a-1fbd-49cf-b529-335696d7e2f4
 solution: Experience Manager Sites
 feature: Translation
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Det här dokumentet hjälper dig att förstå hur AEM Sites innehåll skapas och
 
 ## AEM Sites - översikt {#aem-sites}
 
-AEM Sites är en heltäckande plattform för att skapa, hantera och leverera digitala upplevelser. Innehållsförfattare använder enkla, WYSIWYG-dra-och-släpp-verktyg för att skapa sidor i en intuitiv redigerare som återger innehållet precis som målgruppen kommer att konsumera det.
+AEM Sites är en heltäckande plattform för att skapa, hantera och leverera digitala upplevelser. Innehållsförfattare använder enkla dra-och-släpp-verktyg från WYSIWYG för att skapa sidor i en intuitiv redigerare, som återger innehållet precis som läsarna vill ha det.
 
 De sidor som utgör din upplevelse är enkla att hantera i webbplatskonsolen, vilket ger dig en överblick över innehållet i en hierarki som gör det enkelt att ordna om, kopiera och publicera innehållet.
 

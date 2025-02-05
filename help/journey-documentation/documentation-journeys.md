@@ -5,7 +5,7 @@ exl-id: aab346b8-26dc-4d5b-88bb-720cf634e0a2
 hidefromtoc: true
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation g
 
 En dokumentationsresa knyter ihop många olika och komplexa ämnen och funktioner genom att tillhandahålla en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
 
-Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Dokumentationsresor som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
+Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Dokumentationsresor som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html).
 
 ### Learning by Narrative {#narrative}
 

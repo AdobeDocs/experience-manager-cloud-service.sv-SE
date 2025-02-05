@@ -6,7 +6,7 @@ exl-id: d14a1e30-dd04-49a8-8cda-27c80a4bb0f5
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 1%
@@ -63,7 +63,7 @@ Vi kommer att ta upp många ämnen på den här resan, som kommer att ge dig gru
 | # | Artikel | Beskrivning |
 |---|---|---|
 | 0 | AEM Headless Developer Journey | Det här dokumentet |
-| 1 | [Läs mer om CMS Headless Development](learn-about.md) | Läs mer om Headless Technology och när du ska använda den. |
+| 1 | [Läs om CMS Headless Development](learn-about.md) | Läs mer om Headless Technology och när du ska använda den. |
 | 2 | [Komma igång med AEM Headless as a Cloud Service](getting-started.md) | Läs om AEM Headless-krav |
 | 3 | [Sökväg till din första upplevelse med AEM Headless](path-to-first-experience.md) | Konfigurera utvecklingsmiljön och lär dig hur du integrerar en enkel app med AEM Headless |
 | 4 | [Så här modellerar du innehåll](model-your-content.md) | Lär dig modellera innehållsstrukturen. |
@@ -77,7 +77,7 @@ Vi kommer att ta upp många ämnen på den här resan, som kommer att ge dig gru
 
 ## What&#39;s Next {#what-is-next}
 
-Kom igång genom att checka ut nästa artikel: [Lär dig mer om CMS Headless Development.](learn-about.md)
+Kom igång genom att checka ut nästa artikel: [Läs mer om CMS Headless Development](learn-about.md),
 
 ### Välj din egen Adventure {#choose-your-path}
 
@@ -98,4 +98,4 @@ Se de här extra resorna för mer information om hur AEM kraftfulla funktioner f
 * [Headless Authoring Journey](/help/journey-headless/author/overview.md) - Börja här för en guidad resa med de kraftfulla och flexibla headlessfunktionerna i AEM, deras funktioner och hur du modellerar ditt innehåll i ditt första headless-projekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt.
 * [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM och headless-teknik kan du läsa våra detaljerade tekniska dokument.
-   * [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+   * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)

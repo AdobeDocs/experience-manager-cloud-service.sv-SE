@@ -5,7 +5,7 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: f0d60086-e92e-4492-ad50-bef84fed2a82
-source-git-commit: 92da26452438f2b56cdec1aecc76587d4982f00e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Lär dig hur du skapar mallar som kan användas för att skapa sidor som kan red
 
 >[!NOTE]
 >
->[Mallar är också tillgängliga för att skapa sidor som kan redigeras med sidredigeraren.](/help/sites-cloud/authoring/page-editor/templates.md)
+>[Mallar är också tillgängliga för att skapa sidor som kan redigeras med sidredigeraren](/help/sites-cloud/authoring/page-editor/templates.md).
 
 ## Vad är sidmallar? {#what-are}
 
@@ -33,17 +33,17 @@ Om du vill använda mallar för att skapa sidor som är redigerbara med den univ
 
 Aktivera först redigerbara mallar för platsens konfiguration.
 
-1. Använd konsolen **Platser** och [välj platsroten.](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources)
+1. Använd konsolen **Platser** och [välj platsroten](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources).
 1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
 1. På fliken **Avancerat** i egenskapsdialogrutan kan du notera värdet i fältet **Cloud-konfiguration**.
 1. I huvudnavigeringen väljer du **Verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
-1. I **[Configuration Browser](/help/implementing/developing/introduction/configurations.md)** markerar du den konfiguration du angav i föregående steg och trycker eller klickar på **Properties** i verktygsfältet.
+1. I **[Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md)** markerar du den konfiguration du angav i föregående steg och trycker eller klickar på **Egenskaper** i verktygsfältet.
 1. I fönstret **Konfigurationsegenskaper** markerar du alternativet **Redigerbara mallar**.
 1. Tryck eller klicka på **Spara och stäng**.
 
 När konfigurationen är aktiverad måste du tillåta mallar för platsen.
 
-1. Använd konsolen **Platser** och [välj platsroten.](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources)
+1. Använd konsolen **Platser** och [välj platsroten](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources).
 1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
 1. Tryck eller klicka på knappen **Lägg till** på fliken **Avancerat** i dialogrutan för egenskaper under avsnittet **Mallinställningar** .
 1. Lägg till sökvägen `/conf/<site>/settings/wcm/templates/.*` i det nya, tomma fältet som visas under **Tillåtna mallar**.
@@ -67,7 +67,7 @@ Den nya sidan kan nu användas som mall när nya sidor skapas.
 
 ## Skapa en sida från en mall {#creating-from-template}
 
-Att skapa en sida från en mall som kan redigeras med den universella redigeraren är samma arbetsflöde som att [skapa andra sidor.](/help/sites-cloud/authoring/sites-console/creating-pages.md)
+Att skapa en sida från en mall som kan redigeras med den universella redigeraren är samma arbetsflöde som att [skapa en annan sida](/help/sites-cloud/authoring/sites-console/creating-pages.md).
 
 1. Använd konsolen **Platser** för att [navigera till platsen](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources) där du vill skapa den nya sidan.
 
@@ -87,6 +87,6 @@ Sidmallar definierar bara sidornas ursprungliga innehåll. Sidorna är sedan hel
 
 ## Redigerbara mallar {#editable-templates}
 
-Sidor som skapas med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) kan också baseras på mallar. Mallar som används för att skapa sidor för den universella redigeraren och sidredigeraren använder båda AEM [redigerbara mallar.](/help/implementing/developing/components/templates.md)
+Sidor som skapas med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) kan också baseras på mallar. Mallar som används för att skapa sidor för den universella redigeraren och sidredigeraren använder båda AEM [redigerbara mallar](/help/implementing/developing/components/templates.md).
 
 Mallar som används för att skapa sidor som kan redigeras med sidredigeraren använder alla funktioner i redigerbara mallar. Mallar som används för att skapa sidor som kan redigeras med den universella redigeraren använder bara den ursprungliga innehållsfunktionen.

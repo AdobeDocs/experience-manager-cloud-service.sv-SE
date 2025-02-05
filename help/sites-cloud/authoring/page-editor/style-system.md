@@ -5,7 +5,7 @@ exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
 Core Components version 2 och senare är helt aktiverade för att utnyttja Style System och kräver ingen ytterligare konfiguration.
 
-Följande steg är bara nödvändiga för att aktivera Style System för dina egna anpassade komponenter eller för att [aktivera fliken Format i dialogrutan Redigera.](#enable-styles-tab-edit)
+Följande steg är bara nödvändiga för att aktivera Style System för dina egna anpassade komponenter eller för att [aktivera den valfria fliken Format i dialogrutan Redigera](#enable-styles-tab-edit).
 
 ### Aktivera fliken Format i designdialogrutan {#enable-styles-tab-design}
 

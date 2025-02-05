@@ -4,13 +4,13 @@ description: Läs om hur den universella redigeraren stöder innehållsarv för 
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 773ce75975f4dcc2c5310422bcc377b487ebec25
+exl-id: 2a1b87c2-29b9-4689-9a15-e17942439160
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
-
 
 # Innehållsarv i den universella redigeraren {#inheritance}
 
@@ -42,7 +42,7 @@ Om du vill ändra en del av innehållet i kopiorna bryter författarna arvet fö
 
 När en sida är en del av ett flerlägesobjekt eller en Launch-sida och innehållet redigeras med den universella redigeraren, inaktiveras automatiskt arv för alla ändringar som görs av författare på den sidan, vilket säkerställer att det ändrade innehållet behålls när uppdateringarna synkroniseras från planen.
 
-Författaren behöver inte klicka på en knapp eller på något annat sätt vidta några andra åtgärder för att inaktivera arv innan han eller hon gör lokala redigeringar. Så snart en ändring har gjorts avbryts arvet implicit. Detta står i kontrast till [sidredigeraren.](/help/sites-cloud/authoring/page-editor/edit-content.md#inherited-components)
+Författaren behöver inte klicka på en knapp eller på något annat sätt vidta några andra åtgärder för att inaktivera arv innan han eller hon gör lokala redigeringar. Så snart en ändring har gjorts avbryts arvet implicit. Det här arbetsflödet står i kontrast till [sidredigeraren](/help/sites-cloud/authoring/page-editor/edit-content.md#inherited-components).
 
 Den universella redigeraren påverkar inte den underliggande arvsmekanismen. Mer information om hur arv fungerar finns i följande dokumentation.
 
@@ -55,6 +55,6 @@ Den universella redigeraren påverkar inte den underliggande arvsmekanismen. Mer
    * Arv kan bara återställas för hela sidan via
       * [Konsolen Live-kopia - översikt](/help/sites-cloud/administering/msm/live-copy-overview.md)
       * [Startar konsolen](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)
-      * Använda knappen **Återställ** på fliken **Live-kopia** i fönstret [sidegenskaper.](/help/sites-cloud/authoring/sites-console/page-properties.md)
+      * Använda knappen **Återställ** på fliken **Live-kopia** i fönstret [sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md).
 * Författare har ingen visuell feedback för att se vilka komponenter som har sitt arv inaktiverat och vilka som fortfarande har det bevarat.
 * Dessa funktioner är för närvarande begränsade till komponenter på sidor och gäller ännu inte för [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md), trots att de också har MSM- och Launch-funktioner.

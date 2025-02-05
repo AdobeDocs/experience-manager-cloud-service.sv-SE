@@ -5,7 +5,7 @@ exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
 role: User, Admin, Architect
 solution: Experience Manager Sites
-source-git-commit: 862a1f67782775cc1b2ee6e3d3d66ae5560a15ab
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3120'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
-Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment, ](/help/assets/content-fragments/content-fragments.md) som en grund för ditt headless-innehåll.
+Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md), vilket är grunden för ditt headless-innehåll.
 
 Så här använder du modeller för innehållsfragment:
 

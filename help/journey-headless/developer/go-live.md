@@ -5,7 +5,7 @@ exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -129,7 +129,7 @@ Antingen har du redan startat ditt första AEM Headless-projekt eller så har du
 
 De headless butikerna i AEM behöver inte stanna här. I delen [Komma igång](getting-started.md#integration-levels) diskuterades kanske en kort stund om hur AEM inte bara stöder headless-leverans och traditionella modeller med full stack, utan även stöder hybridmodeller som kombinerar fördelarna med båda.
 
-Om den här typen av flexibilitet är något du behöver för ditt projekt kan du fortsätta med den valfria, extra delen av resan, [Skapa enkelsidiga program (SPA) med AEM.](create-spa.md)
+Om den här typen av flexibilitet är något du behöver för ditt projekt kan du fortsätta med den valfria, extra delen av resan, [Skapa enkelsidiga program (SPA) med AEM](create-spa.md).
 
 ## Ytterligare resurser {#additional-resources}
 

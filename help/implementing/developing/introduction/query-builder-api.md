@@ -4,7 +4,7 @@ description: Funktionerna i Asset Share Query Builder visas via Java&trade; API 
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 0%
@@ -487,7 +487,7 @@ Använd felsökningsprogrammet AEM Query Builder för att generera en förklarli
 >
 >Loggarnas konfiguration beskrivs i dokumentet [Loggning](/help/implementing/developing/introduction/logging.md).
 
-Loggutdata (INFO-nivå) för frågebyggarimplementeringen när frågan som beskrivs i föregående avsnitt kördes [Testing och felsökning:](#testing-and-debugging)
+Loggutdata (INFO-nivå) för frågebyggarimplementeringen när frågan som beskrivs i föregående avsnitt kördes [Testing och felsökning](#testing-and-debugging)
 
 ```xml
 com.day.cq.search.impl.builder.QueryImpl executing query (predicate tree):

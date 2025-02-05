@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Med utrullningshanteraren kan du aktivera eller inaktivera konflikthantering.
 
 Detta görs med [OSGi-konfiguration](/help/implementing/deploying/configuring-osgi.md) av **Day CQ WCM Rollout Manager**. Ange värdet **Hantera konflikt med manuellt skapade sidor** ( `rolloutmgr.conflicthandling.enabled`) till true om rollout-hanteraren ska hantera konflikter från en sida som skapats i Live Copy med ett namn som finns i planen.
 
-AEM har [fördefinierat beteende när konflikthantering har inaktiverats.](#behavior-when-conflict-handling-deactivated)
+AEM har [fördefinierat beteende när konflikthantering har inaktiverats](#behavior-when-conflict-handling-deactivated).
 
 ## Konflikthanterare {#conflict-handlers}
 
@@ -118,7 +118,7 @@ Anpassade konflikthanterare kan:
 
 ### Beteende när Konflikthantering är inaktiverat {#behavior-when-conflict-handling-deactivated}
 
-Om du [inaktiverar konflikthantering manuellt utför ](#rollout-manager-and-conflict-handling) AEM ingen åtgärd på sidor som är i konflikt. Sidor som inte är i konflikt rullas ut som förväntat.
+Om du [inaktiverar konflikthantering](#rollout-manager-and-conflict-handling) manuellt utför AEM ingen åtgärd på sidor som är i konflikt. Sidor som inte är i konflikt rullas ut som förväntat.
 
 >[!CAUTION]
 >

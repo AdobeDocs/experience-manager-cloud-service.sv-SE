@@ -5,7 +5,7 @@ exl-id: a9cb9745-8140-4795-a5f9-fb3a1a299bd8
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, fly
    * Ange anteckningstexten.
    * Skapa en skiss (linjer och former) för att markera ett område i komponenten.
 
-     ![Anteckningens Sketch-knapp](/help/sites-cloud/authoring/assets/annotation-sketch.png)
+     ![Anteckningsknappen Skiss](/help/sites-cloud/authoring/assets/annotation-sketch.png)
 
      Markören ändras till ett hårkors när du skapar en skiss. Du kan rita flera distinkta linjer. Skisslinjen återspeglar anteckningsfärgen och kan vara en pil, cirkel eller oval.
 
@@ -83,7 +83,7 @@ Förutom att visa anteckningarna kan du i anteckningsläget skapa, redigera, fly
 
 1. När du är klar med redigeringen av en viss anteckning kan du:
 
-   * Markera textmarkören för att öppna anteckningen. När du har öppnat den fullständiga texten kan du göra ändringar eller [ta bort anteckningen.](#deleting-annotations)
+   * Markera textmarkören för att öppna anteckningen. När du har öppnat den fullständiga texten kan du göra ändringar eller [ta bort anteckningen](#deleting-annotations).
    * Flytta textmarkören.
    * Markera en skisslinje för att markera skissen och dra den till önskad plats.
    * Flytta eller kopiera en komponent

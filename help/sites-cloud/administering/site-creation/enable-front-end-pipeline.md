@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
 solution: Experience Manager Sites
-source-git-commit: a5661b6b75180dd77eb794eb5d215fd2e1d5eed0
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '625'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du kan aktivera frontend-flödet för befintliga webbplatser så at
 
 ## Ökning {#overview}
 
-Framsidespipelinen är en mekanism som snabbt kan distribuera endast startkoden för dina webbplatser baserat på [webbplatsteman](site-themes.md) och [webbplatsmallar.](site-templates.md)
+Framsidespipelinen är en mekanism som snabbt kan distribuera endast frontkodsidan för dina webbplatser baserat på [webbplatsteman](site-themes.md) och [webbplatsmallar](site-templates.md).
 
 Detta tillvägagångssätt hanterar endast klientkod, vilket gör distributionsprocessen snabbare än distributioner i fullstackar. Det gör att gränssnittsutvecklare enkelt kan anpassa din webbplats utan att behöva känna till AEM.
 
@@ -44,7 +44,7 @@ När du aktiverar frontend-flödet för en webbplats gör AEM följande ändring
 
 ## Krav {#requirements}
 
-AEM kan automatiskt anpassa din befintliga webbplats så att den använder frontendriet. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component i Core Components.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/page)
+AEM kan automatiskt anpassa din befintliga webbplats så att den använder frontendriet. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component (Sidkomponent) i Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/page).
 
 ## Aktivera frontendspipeline {#enabling}
 

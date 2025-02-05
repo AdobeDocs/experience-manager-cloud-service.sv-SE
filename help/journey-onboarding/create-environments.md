@@ -4,7 +4,7 @@ description: Lär dig hur du använder Cloud Manager för att skapa dina första
 role: Admin, User, Developer
 exl-id: 31940e1e-fe27-4c5f-b67f-41affebea63a
 feature: Onboarding
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Skapa miljöer {#create-environments}
 
-I den här delen av [introduktionsresan ](overview.md) får du lära dig hur du använder Cloud Manager för att skapa dina första miljöer.
+I den här delen av [introduktionsresan](overview.md) får du lära dig hur du använder Cloud Manager för att skapa dina första miljöer.
 
 ## Syfte {#objective}
 
-När du har läst det föregående dokumentet på den här introduktionsresan [Skapar program](create-program.md) har du nu ett eget Cloud Manager-program. Nu kan du lära dig att använda Cloud Manager för att skapa din första miljö för det programmet.
+När du har läst det föregående dokumentet på den här introduktionsresan, [Skapa program](create-program.md), har du nu ett eget Cloud Manager-program. Nu kan du lära dig att använda Cloud Manager för att skapa din första miljö för det programmet.
 
 När du har läst det här dokumentet kommer du att:
 

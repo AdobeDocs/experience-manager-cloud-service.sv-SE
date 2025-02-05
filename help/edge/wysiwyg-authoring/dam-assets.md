@@ -3,13 +3,13 @@ title: Publicera sidor med DAM Assets med Edge Delivery Services
 description: Lär dig vilka inställningar som krävs för att säkerställa att dina DAM-resurser för dina sidor publiceras smidigt till Edge Delivery Services.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 65a3b4d923a91702e7ea9b13356802836fa4ce0b
+exl-id: 160f0474-a72d-4183-a2b2-2f8ba177605d
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
 
 ---
-
 
 # Publicera sidor med DAM Assets med Edge Delivery Services {#dam-assets}
 
@@ -21,8 +21,8 @@ När du redigerar innehåll för den universella redigeraren kan du förstås v�
 
 För att detta ska fungera smidigt måste AEM och Edge Delivery Services ha tillgång till DAM för att kunna publicera. Detta omfattar följande:
 
-* [Kontrollera att resursmappar är tillgängliga.](#accessible)
-* [Kontrollera att resursmappen har rätt konfiguration (om det behövs).](#configuration)
+* [Kontrollera att resursmappar är tillgängliga](#accessible).
+* [Kontrollera att resursmappen har tilldelats rätt konfiguration (efter behov)](#configuration).
 
 ## Kontrollera att Assets-mappar är tillgängliga {#accessible}
 

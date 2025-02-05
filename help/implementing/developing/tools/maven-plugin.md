@@ -4,7 +4,7 @@ description: Använd plugin-programmet Content Package Maven för att distribuer
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: d757c94475f257ee4b05092671ae5e6384b8342e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Använd pluginen Adobe Content Package Maven för att integrera paketets driftsättnings- och hanteringsuppgifter i dina Maven-projekt.
 
-Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet Maven för innehållspaket för Adobe och möjliggör automatisering av åtgärder som normalt utförs med AEM [Package Manager:](/help/implementing/developing/tools/package-manager.md)
+Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet Maven för innehållspaket för Adobe och möjliggör automatisering av åtgärder som normalt utförs med AEM [Package Manager](/help/implementing/developing/tools/package-manager.md)
 
 * Skapa nya paket från filer i filsystemet.
 * Installera och avinstallera paket på AEM.
@@ -23,7 +23,7 @@ Distributionen av de konstruerade paketen till AEM utförs av plugin-programmet 
 * Hämta en lista med paket som är installerade på AEM.
 * Ta bort ett paket från AEM.
 
-I det här dokumentet beskrivs hur du använder Maven för att hantera dessa uppgifter. Men det är också viktigt att förstå [hur AEM projekt och deras paket är strukturerade.](#aem-project-structure)
+I det här dokumentet beskrivs hur du använder Maven för att hantera dessa uppgifter. Men det är också viktigt att förstå [hur AEM projekt och deras paket är strukturerade](#aem-project-structure).
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ I det här dokumentet beskrivs hur du använder Maven för att hantera dessa upp
 
 >[!NOTE]
 >
->Paketet **creation** ägs nu av plugin-programmet [Apache Jackrabbit FileVault Package Maven.](https://jackrabbit.apache.org/filevault-package-maven-plugin/)
+>Paketet **creation** ägs nu av plugin-programmet [Apache Jackrabbit FileVault Package Maven](https://jackrabbit.apache.org/filevault-package-maven-plugin/).
 >
 >I den här artikeln beskrivs **distributionen** för de konstruerade paket som ska AEM enligt Adobe Content Package Maven plugin.
 
@@ -45,7 +45,7 @@ AEM as a Cloud Service följer de senaste metoderna för pakethantering och proj
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
-Plugin-programmet är tillgängligt från [Maven Central Repository.](https://mvnrepository.com/artifact/com.day.jcr.vault/content-package-maven-plugin?repo=adobe-public)
+Plugin-programmet är tillgängligt från [Maven Central Repository](https://mvnrepository.com/artifact/com.day.jcr.vault/content-package-maven-plugin?repo=adobe-public).
 
 ## Innehållspaket Maven Plugin - mål och parametrar
 

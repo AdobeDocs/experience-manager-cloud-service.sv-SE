@@ -4,7 +4,7 @@ description: Läs om grunderna och de bästa sätten att distribuera till AEM as
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 role: Admin
-source-git-commit: 1ad144fb630eca51f2004300c71d75f627cf9977
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3440'
 ht-degree: 0%
@@ -112,7 +112,7 @@ Efter övergång till en ny version av programmet:
    * Kontextmedveten konfiguration (allt under `/conf`) (lägg till, ändra, ta bort)
    * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbit-dokumentation för fillevault](https://jackrabbit.apache.org/filevault/installhooks.html) om hur du installerar kopplingar. AEM CS använder för närvarande Fireworks version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
 
-Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
+Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html).
 
 >[!NOTE]
 >Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en miljö kräver manuell installation med hjälp av [Package Manager](/help/implementing/developing/tools/package-manager.md).
@@ -121,7 +121,7 @@ Det finns inte heller någon mekanism för att återställa ändringar i det än
 
 Alla inkluderade tredjepartspaket måste valideras som AEM as a Cloud Service-kompatibla, annars leder inkludering till ett distributionsfel.
 
-Som nämnts ovan bör kunder med befintliga kodbaser följa den databasomstrukturering som behövs för de ändringar i 6.5-databasen som beskrivs i [AEM 6.5-dokumentationen.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html)
+Som nämnts ovan bör kunder med befintliga kodbaser följa den databasomstrukturering som behövs för de ändringar i 6.5-databasen som beskrivs i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html).
 
 ## Repoinit {#repoinit}
 

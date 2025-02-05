@@ -4,7 +4,7 @@ description: Introduktion till arkitekturen i Adobe Experience Manager as a Clou
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
 feature: Release Information
 role: Admin
-source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2713'
 ht-degree: 7%
@@ -70,7 +70,7 @@ Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environ
 
 Ett AEM program kan även konfigureras med [Edge Delivery Servicens](/help/edge/overview.md).
 
-När AEM har konfigurerats kan de referera till GitHub-koddatabaser som används för att skapa upplevelser med Edge Delivery Services. Därför blir nya konfigurationsalternativ tillgängliga för de associerade upplevelserna. Det kan vara att konfigurera CDN som hanteras i Adobe och få tillgång till licensstatistik och SLA-rapporter.
+När AEM har konfigurerats kan de referera till GitHub-koddatabaser som används för att skapa upplevelser med Edge Delivery Services. Därför blir nya konfigurationsalternativ tillgängliga för de associerade upplevelserna. Det kan handla om att konfigurera CDN som hanteras av Adobe och få tillgång till licensstatistik eller SLA-rapporter.
 
 ## Tjänstarkitektur {#service-architecture}
 
@@ -87,7 +87,7 @@ Innehåller ett webbaserat gränssnitt (med tillhörande API:er) för hantering 
 * Dokumentbaserad redigeringsnivå:
 Gör att du kan skapa innehåll med hjälp av standardprogram, som:
    * Microsoft Word och Excel - via SharePoint
-   * Google Docs and Sheets - via Google Drive
+   * Google Docs och ark - via Google Drive
 
 När det gäller upplevelseleverans finns det också två huvuduppsättningar tjänster, som inte är ömsesidigt uteslutande och som körs under ett delat Adobe-hanterat CDN (Content Delivery Network) som har olika ursprung:
 
@@ -180,7 +180,7 @@ Koden och konfigurationen för AEM-projekt lagras i en koddatabas från vilken d
    * För lagring av Java-kod och OSGI-konfigurationer på serversidan för AEM författare och publiceringsnivåer.
 * AEM på framsidan:
    * För lagring av JS-, CSS- och HTML-kod på klientsidan för AEM författare- och publiceringsnivåer.
-Mer information om klientbibliotek finns i [Använda klientbibliotek på AEM as a Cloud Service.](/help/implementing/developing/introduction/clientlibs.md)
+Mer information om klientbibliotek finns i [Använda klientbibliotek på AEM as a Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
 * AEM webbnivå:
    * Lagrar dispatcherkonfigurationsfilerna för AEM publiceringsnivå.
 * AEM:

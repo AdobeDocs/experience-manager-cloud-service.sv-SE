@@ -5,7 +5,7 @@ exl-id: b8218232-0298-4b16-9dab-fa59be592a24
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Genom att eliminera all utvecklarkunskap för att skapa webbplatser, eliminera A
 
 ## Videoöversikt {#video-overview}
 
-Om du vill få en snabb översikt över den här funktionen i praktiken [kan du se den här fem minuter långa introduktionen.](https://www.youtube.com/watch?v=NQeQ1jZ7ZBw)
+[Du kan se den här fem minuter långa introduktionen](https://www.youtube.com/watch?v=NQeQ1jZ7ZBw) om du vill få en snabb översikt av den här funktionen.
 
 Den här dokumentationsresan tar dig igenom alla funktioner i videon steg för steg och i detalj så att du förstår arbetsflödet och kan återskapa processen i din egen miljö.
 
@@ -70,7 +70,7 @@ Du är nu redo att komma igång med din Adobe-resa för att skapa snabbwebbplats
 
 * Om du är AEM- eller Cloud Manager-administratör, eller om du har både avancerade utvecklings- och administratörsroller, eller om du bara vill förstå hela processen i AEM, börjar du i början av resan med [Förstå Cloud Manager](cloud-manager.md) enligt nedan.
 * Om du bara ansvarar för frontendutvecklingen och kommer att interagera med AEM- och Cloud Manager-administratörer kan du hoppa direkt till [Hämta Git-databasåtkomstinformation](retrieve-access.md) för att få åtkomst till AEM Git-databasen och börja anpassa.
-* Om du redan är insatt i att AEM Sites och Cloud Manager arbetar tillsammans och vill börja direkt med konfigurationen, kan du [hoppa direkt till att skapa en webbplats från en mall.](create-site.md)
+* Om du redan är insatt i att AEM Sites och Cloud Manager arbetar tillsammans och vill börja direkt med konfigurationen, kan du [hoppa direkt till att skapa en webbplats från en mall](create-site.md).
 
 ## Ytterligare resurser {#additional-resources}
 

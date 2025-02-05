@@ -3,9 +3,9 @@ title: Begränsa leverans av resurser med Dynamic Media med OpenAPI-funktioner
 description: Lär dig hur du begränsar materialdistributionen med OpenAPI-funktioner.
 role: User
 exl-id: 3fa0b75d-c8f5-4913-8be3-816b7fb73353
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -88,7 +88,7 @@ På AEM Cloud Service författartjänster och resursväljare genereras och anvä
 
 >[!NOTE]
 >
-Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM resursväljarbaserade integreringar kontaktar du Enterprise Support
+Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM resursväljarbaserade integreringar kan du kontakta Enterprise Support
 
 1. För upplevelser som inte baseras på tillgångsväljare har AEM as a Cloud Service och Dynamic Media med OpenAPI-funktioner stöd för API-integreringar på serversidan och kan generera IMS Bearer-tokens.
    * Följ anvisningarna [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#the-server-to-server-flow) för att utföra service-to-server-API-integreringar som kan hämta IMS Bearer-tokens via [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console)

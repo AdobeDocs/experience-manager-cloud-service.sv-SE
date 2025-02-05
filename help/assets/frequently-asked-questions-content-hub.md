@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: a509cb6b2d6fea0d8c53c570c46b1feef2a15191
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1105'
 ht-degree: 0%
 
 ---

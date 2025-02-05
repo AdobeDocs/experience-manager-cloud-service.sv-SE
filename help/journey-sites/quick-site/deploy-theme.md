@@ -5,7 +5,7 @@ exl-id: fe065972-39db-4074-a802-85895c701efd
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: a5179851af8ec88e23d79a74265b10cbce2d50f1
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du distribuerar webbplatstemat med hjälp av pipeline.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet på AEM snabbwebbplats [Anpassa webbplatstemat](customize-theme.md) lärde du dig hur temat är skapat, hur du anpassar det och hur du testar det med AEM. Nu bör du:
+I det föregående dokumentet från den AEM snabbwebbplatsskaparresan [Anpassa webbplatstemat](customize-theme.md) lärde du dig hur temat är skapat, hur det kan anpassas och hur du testar det med AEM innehåll, och du bör nu:
 
 * Förstå webbplatsens grundläggande struktur och hur du redigerar den.
 * Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokala utkast.
@@ -78,7 +78,7 @@ Du kan när som helst kontrollera status för pipeline för att se hur långt f�
 När pipelinen är klar kan du informera administratören om att validera ändringarna. Administratören kommer då att
 
 1. Öppna AEM redigeringsmiljö.
-1. Navigera till [platsen som administratören skapade tidigare.](create-site.md)
+1. Navigera till [platsen som administratören skapade](create-site.md) tidigare.
 1. Redigera en av innehållssidorna.
 1. Se ändringarna.
 

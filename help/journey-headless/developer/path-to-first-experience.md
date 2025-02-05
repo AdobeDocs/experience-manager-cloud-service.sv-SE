@@ -5,7 +5,7 @@ exl-id: 172ad8d8-5067-4452-bf91-1eea9a39a7bc
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Vägen till din första upplevelse med AEM utan headless {#path-to-first-experience}
 
-I den här delen av [AEM Headless Developer Journey](overview.md) får du en förståelse för hur du implementerar din första headless-upplevelse när det gäller AEM, inklusive planeringsöverväganden, och du får även lära dig bästa praxis för att göra din väg så smidig som möjligt.
+I den här delen av den [AEM Headless Developer Journey](overview.md) får du en förståelse för hur du implementerar din första headless-upplevelse när det gäller AEM med planeringsöverväganden, och du får även lära dig bästa praxis för att göra din väg så smidig som möjligt.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan huvud, [Getting Started with AEM Headless as a Cloud Service](getting-started.md), lärde du dig den grundläggande teorin om vad ett headless CMS är och du bör nu:
+I det föregående dokumentet om den AEM resan utan headless lärde du dig [Komma igång med AEM Headless as a Cloud Service](getting-started.md) grundläggande teori om vad en headless CMS är och du bör nu:
 
 * Förstå grunderna i AEM headless-funktioner.
 * Lär dig grunderna för AEM headless-funktioner.
@@ -71,13 +71,13 @@ Under utvecklingsfasen rekommenderar vi att du arbetar med en utvecklings- och s
 
 ### Samarbete mellan utvecklare och innehållsförfattare {#cooperation}
 
-Utvecklarna behöver en AEM utvecklingsmiljö som är anpassad efter de populära innehållsmodellerna. Utvecklaren utvecklar klienten som konsumerar innehåll från AEM headless eftersom innehållsförfattarna fortfarande skapar innehållet. Därför är API-definitionerna mycket viktiga. Genom att använda AEM SDK kan utvecklaren skapa en testkrok så att klient- och enhetstester kan skapas för att säkerställa att klienten kan återge innehållet på rätt sätt.
+Utvecklarna behöver en AEM utvecklingsmiljö som är anpassad efter de populära innehållsmodellerna. Utvecklaren utvecklar klienten som konsumerar innehåll från AEM headless eftersom innehållsförfattarna fortfarande skapar innehållet. Därför är API-definitionerna mycket viktiga. Med hjälp av AEM SDK kan utvecklaren skapa en testkrok så att klient- och enhetstester kan skapas för att säkerställa att klienten kan återge innehållet på rätt sätt.
 
 Innehållsförfattare skapar innehåll baserat på de innehållsmodeller som har definierats i mellanlagringsmiljön. Med hjälp av utvecklingsverktyget för innehållsfragment kan författaren skapa ett innehållsfragment eller redigera ett befintligt innehållsfragment. Innan den publiceras kan författaren förhandsgranska hur den kommer att se ut i klienten genom att arbeta med utvecklaren för att överföra innehållsmodellen till utveckling eller konfigurera en utvecklingsmiljö enbart för att författarna ska kunna se hur den skulle se ut i klienten.
 
 ## Inställningar {#setup}
 
-Innan du börjar använda headless i AEM måste du se till att alla nödvändiga funktioner är aktiverade. I det här avsnittet beskrivs vad som krävs. De faktiska stegen för att utföra dessa steg beskrivs senare i [AEM Headless Developer Journey.](#overview.md)
+Innan du börjar använda headless i AEM måste du se till att alla nödvändiga funktioner är aktiverade. I det här avsnittet beskrivs vad som krävs. De faktiska stegen för att utföra dessa steg beskrivs senare i [AEM Headless Developer Journey](#overview.md).
 
 Du kan även se [ytterligare resurser](#additional-resources) om du vill ha mer information om de enskilda ämnena.
 

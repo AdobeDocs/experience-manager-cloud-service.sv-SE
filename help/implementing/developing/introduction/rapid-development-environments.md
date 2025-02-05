@@ -4,7 +4,7 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 24c34daebf7d45d9262181890310eb196c58a7db
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '4990'
 ht-degree: 0%
@@ -1062,7 +1062,7 @@ Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvst
 
 ### Så här skaffar du den senaste AEM för en befintlig RDE {#get-latest-aem-version}
 
-När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). En [RDE-återställning,](#reset-rde), som kan utföras med Cloud Manager eller kommandot `aio aem:rde:reset`, går igenom RDE-filen och anger den till den senast tillgängliga AEM.
+När de skapas ställs de lokala utvecklingsmiljöerna in på den senast tillgängliga Adobe Experience Manager-versionen (AEM). En [RDE-återställning](#reset-rde), som kan utföras med Cloud Manager eller kommandot `aio aem:rde:reset`, går igenom RDE-filen och anger den till den senast tillgängliga AEM.
 
 ## felsökning av plugin-program för aio RDE {#aio-rde-plugin-troubleshooting}
 

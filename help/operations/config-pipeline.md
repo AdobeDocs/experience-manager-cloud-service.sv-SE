@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 5e96d5d71abf78a0dba179cb37cad0322688351b
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 
 ## Skapa och hantera konfigurationsförlopp {#creating-and-managing}
 
-Mer information om hur du skapar och konfigurerar rörledningar finns i dokumentet [CI/CD Pipelines.](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline)
+Mer information om hur du skapar och konfigurerar pipelines finns i [CI/CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline).
 
 När du skapar en konfigurationspipeline i Cloud Manager måste du välja en **riktad distribution** i stället för **fullständig stackkod** när du konfigurerar pipeline.
 
@@ -95,7 +95,7 @@ eller
     cdn.yaml
 ```
 
-Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde.](#configurations)
+Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde ](#configurations).
 
 Konfigurationer distribueras vanligtvis till alla miljöer. Om alla egenskapsvärden är identiska för varje miljö räcker det med en YAML-fil. Det är dock vanligt att egenskapsvärden skiljer sig åt mellan olika miljöer, till exempel när en lägre miljö testas.
 

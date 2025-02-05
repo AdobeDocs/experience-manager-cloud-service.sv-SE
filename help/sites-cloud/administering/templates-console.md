@@ -4,13 +4,13 @@ description: Lär dig hur mallkonsolen fungerar som en central plats för att vi
 solution: Experience Manager Sites
 feature: Administering
 role: User
-source-git-commit: 993f81e0ff2b71ce2edf59a2c74398db3abe8f06
+exl-id: d11d7176-dd35-4855-9dcd-dd40ff096510
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%
 
 ---
-
 
 # Mallkonsolen {#templates-console}
 
@@ -20,7 +20,7 @@ Lär dig hur mallkonsolen fungerar som en central plats för att visa och hanter
 
 När du skapar en sida måste du välja en mall. Sidmallen används som bas för den nya sidan. [AEM redigerbara mallar](/help/implementing/developing/components/templates.md) kan definiera strukturen för den resulterande sidan, allt ursprungligt innehåll och de komponenter som kan användas (designegenskaper).
 
-Innehållsförfattare får ett urval av tillgängliga mallar när de [skapar nya sidor i webbplatskonsolen.](/help/sites-cloud/authoring/sites-console/creating-pages.md)-mallar kan användas för att skapa sidor som kan redigeras med:
+Innehållsförfattare får ett urval av tillgängliga mallar när de [skapar nya sidor i webbplatskonsolen](/help/sites-cloud/authoring/sites-console/creating-pages.md). Mallar kan användas för att skapa sidor som kan redigeras med:
 
 * [Sidredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) eller
 * [Universell redigerare](/help/sites-cloud/authoring/universal-editor/templates.md)
@@ -73,7 +73,7 @@ Om en författare startar en mall som har skapats med mallredigeraren och som re
 
 ## Egenskaper {#properties}
 
-Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper.Mallegenskaperna för ](/help/sites-cloud/authoring/sites-console/page-properties.md) innehåller:
+Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md).Mallegenskaper omfattar:
 
 * Malltitel
 * Beskrivning
@@ -135,6 +135,6 @@ Markera mallen och tryck eller klicka på **Ta bort** för att ta bort den.
 
 ## Skapa mallar {#create}
 
-Använd knappen **Skapa** i konsolen för att skapa en ny mall på den aktuella platsen. Mer information om hur du skapar en mall finns i dokumentet [Mallar för att skapa sidor som kan redigeras med sidredigeraren.](/help/sites-cloud/authoring/page-editor/templates.md)
+Använd knappen **Skapa** i konsolen för att skapa en ny mall på den aktuella platsen. Mer information om hur du skapar en mall finns i dokumentet [Mallar för att skapa sidor som kan redigeras med sidredigeraren](/help/sites-cloud/authoring/page-editor/templates.md).
 
 Knappen **Skapa** används bara för att skapa mallar som kan redigeras med sidredigeraren. Gå till dokumentet [Mallar för att skapa sidor som är redigerbara med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/templates.md) om du vill veta mer om hur du skapar mallar baserat på sidor som skapats med den universella redigeraren.

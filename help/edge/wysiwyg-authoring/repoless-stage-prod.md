@@ -4,7 +4,7 @@ description: Lär dig hur du skapar separata sajter för staging- och produktion
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 701bd9bc-30e8-4654-8248-a06d441d1504
-source-git-commit: 5715a07dc3e90e3781afa8d837394533ba419483
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lär dig hur du skapar separata sajter för staging- och produktionsmiljöer som
 
 ## Ökning {#overview}
 
-Du kanske vill konfigurera en plats för din produktionsmiljö som är separat från din staging-miljö. Att konfigurera en andra plats för en separat staging- och produktionsinställning liknar konfigurationen för [som krävs för hantering av flera platser.](/help/edge/wysiwyg-authoring/repoless-msm.md) Den kan faktiskt kombineras med MSM-webbplatsstrukturer om det behövs.
+Du kanske vill konfigurera en plats för din produktionsmiljö som är separat från din staging-miljö. Att konfigurera en andra plats för en separat staging- och produktionsinställning liknar [inställningen som krävs för hantering av flera platser](/help/edge/wysiwyg-authoring/repoless-msm.md). Den kan faktiskt kombineras med MSM-webbplatsstrukturer om det behövs.
 
 Det här dokumentet använder det typiska exemplet med separata miljöer för staging och produktion. Du kan skapa separata miljöer för de miljöer du vill.
 
@@ -33,8 +33,8 @@ I det här exemplet antar vi att en produktionsplats redan har skapats för proj
 
 Det finns två steg för att konfigurera en separat produktionsplats.
 
-1. [Skapa nya Edge Delivery Services för produktionsmiljön.](#create-edge-site)
-1. [Uppdatera molnkonfigurationen i AEM för produktionsplatsen.](#update-cloud-configuration)
+1. [Skapa nya Edge Delivery Services för produktionsmiljön](#create-edge-site).
+1. [Uppdatera molnkonfigurationen i AEM för produktionsplatsen](#update-cloud-configuration).
 
 ### Skapa nya Edge Delivery Services för produktionsmiljön {#create-edge-site}
 

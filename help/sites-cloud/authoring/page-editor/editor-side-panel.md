@@ -5,7 +5,7 @@ exl-id: 5f025828-f2ca-4cbb-9cdf-a199e9e90cc7
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 0%
@@ -79,7 +79,7 @@ Om du vill ha en mer detaljerad beskrivning av komponenten kan du välja informa
 
 ![Information om komponentwebbläsare](assets/editor-side-panel-component-description.png)
 
-Mer detaljerad information om de komponenter som är tillgängliga finns i [Komponentkonsolen.](/help/sites-cloud/authoring/components-console.md)
+Mer detaljerad information om de komponenter som är tillgängliga finns i [komponentkonsolen](/help/sites-cloud/authoring/components-console.md)
 
 ## Assets Browser {#assets-browser}
 
@@ -182,4 +182,4 @@ En sida som är en del av en [livecopy](/help/sites-cloud/administering/msm/over
 
 ## Associerad innehållsläsare {#associated-content-browser}
 
-Om sidan innehåller innehållsfragment har du även åtkomst till [webbläsaren för associerat innehåll.](/help/sites-cloud/authoring/fragments/content-fragments.md#using-associated-content)
+Om sidan innehåller innehållsfragment har du även åtkomst till [webbläsaren för associerat innehåll](/help/sites-cloud/authoring/fragments/content-fragments.md#using-associated-content).

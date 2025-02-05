@@ -5,7 +5,7 @@ exl-id: 58e95c92-b859-4bb9-aa62-7766510486fd
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Anlita gränssnittsutvecklarna i Cloud Manager så att de får tillgång till er
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet för den AEM snabbwebbplatsgenereringsresan [Konfigurera din pipeline](pipeline-setup.md) lärde du dig att skapa en frontendpipeline för att hantera anpassningen av webbplatsens tema, och du bör nu:
+I det föregående dokumentet från den AEM snabbwebbplatsskaparresan, [Konfigurera din pipeline](pipeline-setup.md), lärde du dig att skapa en frontendpipeline för att hantera anpassningen av webbplatsens tema, och du bör nu:
 
 * Förstå vad en rörledning är.
 * Ta reda på hur man lägger upp en rörledning i Cloud Manager.
@@ -101,7 +101,7 @@ Nu när du har slutfört den här delen av AEM snabbwebbplats bör du känna til
 * Så här lägger du till en frontendutvecklare som användare.
 * Så här tilldelar du de roller som krävs till frontendutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att nästa gång läsa dokumentet [Hämta information om Git-databasåtkomst](retrieve-access.md) som endast ändrar perspektiv till den främsta utvecklaren och förklarar hur den främre utvecklaranvändaren Cloud Manager får åtkomst till Git-databasinformation.
+Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att nästa gång läsa dokumentet [Hämta information om Git-databasåtkomst](retrieve-access.md), som endast växlar perspektiv till slututvecklaren och förklarar hur gränssnittsutvecklare som använder Cloud Manager får åtkomst till Git-databasinformation.
 
 ## Ytterligare resurser {#additional-resources}
 

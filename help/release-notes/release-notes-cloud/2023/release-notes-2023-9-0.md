@@ -4,7 +4,7 @@ description: Versionsinformation för version 2023.9.0 av  [!DNL Adobe Experienc
 exl-id: d747f58b-8d6c-418d-9d2b-ec3ae4b6dc03
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 0%
@@ -118,9 +118,9 @@ Nu kan du tilldela metadataformulär till en viss mapp i distributionen. Alla re
 
 ### Nytt CDN-cachningsbeteende för kampanjrelaterade URL-parametrar {#cache-url-params}
 
-I nya miljöer tar CDN bort marknadsföringsrelaterade frågeparametrar som standard, vilket ökar marknadsföringskampanjens prestanda och cachelagrar träfffrekvenser. Befintliga miljöer påverkas inte. [Läs mer.](/help/implementing/dispatcher/caching.md#marketing-parameters)
+I nya miljöer tar CDN bort marknadsföringsrelaterade frågeparametrar som standard, vilket ökar marknadsföringskampanjens prestanda och cachelagrar träfffrekvenser. Befintliga miljöer påverkas inte. [Läs mer](/help/implementing/dispatcher/caching.md#marketing-parameters).
 
-### Trafikfilterregler (inklusive WAF-regler) program för tidig användning {#waf-early-adopter}
+### Program för tidig användning av trafikfilterregler (inklusive WAF Rules) {#waf-early-adopter}
 
 Filtrera trafiken vid CDN baserat på:
 

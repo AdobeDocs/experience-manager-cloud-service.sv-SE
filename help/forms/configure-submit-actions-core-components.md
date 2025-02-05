@@ -5,9 +5,9 @@ keywords: hur man väljer en inskickningsåtgärd för ett tilläggsformulär, k
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
 role: User, Developer
-source-git-commit: 6266da34305bc5d8b2bbb0d336028f4fede6c165
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,12 @@ Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett a
 Du kan [utöka standardåtgärderna för att skicka in](custom-submit-action-form.md). Du kan också anpassa Skicka-åtgärder för organisationsspecifika krav.
 
 Använd dialogrutan Konfigurera för en **adaptiv formulärbehållare** om du vill definiera en Skicka-åtgärd för en anpassad formulärbehållare. Konfigurationsdialogrutan för en **adaptiv formulärbehållare** innehåller:
+
 * Fliken Grundläggande
 * Fliken Formulärdatamodell
 * Fliken Skicka
 
-Du kan definiera egenskaperna för formulärbehållaren i dialogrutan Konfigurera. [Klicka här om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html)
+Du kan definiera egenskaperna för formulärbehållaren i dialogrutan Konfigurera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html) om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.
 
 ## Välj och konfigurera en Skicka-åtgärd för ett anpassat formulär {#select-and-configure-submit-action}
 
@@ -74,7 +75,7 @@ Mer information om följande Skicka-åtgärder finns i:
 Du kan även skicka ett adaptivt formulär till andra lagringskonfigurationer:
 
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
-* [Ansluta ett anpassat formulär till Microsoft® Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)
+* [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
 * [Ansluta ett adaptivt formulär till Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 
 Du kan [anpassa standardåtgärderna för att skicka ](custom-submit-action-form.md). Dessutom kan du anpassa Skicka-åtgärder så att de passar specifika organisatoriska krav.
@@ -104,23 +105,23 @@ Refer to [configure the send email submit action for an Adaptive Form](/help/for
 >
 >If you [prefill](prepopulate-adaptive-form-fields.md) a form template, a Form Data Model (FDM) or schema based Adaptive Form with XML or JSON data complaint to a schema (XML schema, JSON schema, or form data model(FDM)) that does not contain &lt;afData&gt;, &lt;afBoundData&gt;, and &lt;/afUnboundData&gt; tags, then the data of unbounded fields (Unbounded fields are Adaptive Form fields without [bindref](prepopulate-adaptive-form-fields.md) property) of the Adaptive Form is lost.
 
-## Submit to Microsoft® SharePoint {#submit-to-sharedrive}
+## Submit to Microsoft&reg; SharePoint {#submit-to-sharedrive}
 
 The **[!UICONTROL Submit to SharePoint]** Submit Action connects an Adaptive Form with a Microsoft&reg; SharePoint Storage. You can submit the form data files, attachments, or Document of Record to the connected Microsoft&reg; Sharepoint Storage. 
 
-Integration of AEM Adaptive Form with Microsoft® SharePoint enables the submission, retrieval, or storage of data, files, and other relevant information within the SharePoint storage. To learn how to configure submit to SharePoint submit action for an Adaptive Form, [click here.](/help/forms/configure-submit-action-sharepoint.md) 
+Integration of AEM Adaptive Form with Microsoft&reg; SharePoint enables the submission, retrieval, or storage of data, files, and other relevant information within the SharePoint storage. To learn how to configure submit to SharePoint submit action for an Adaptive Form, [click here](/help/forms/configure-submit-action-sharepoint.md). 
 
 ## Submit using Form Data Model (FDM) {#submit-using-form-data-model}
 
 The **[!UICONTROL Submit using Form Data Model (FDM)]** Submit Action writes submitted Adaptive Form data for the specified data model object in a Form Data Model (FDM) to its data source. When configuring the Submit Action, you can choose a data model object whose submitted data you want to write back to its data source.
 
-When a user submits a form based on a form data model (FDM), you can [configure the form to write the submitted data to the data sources associated with the data model object.](/help/forms/using-form-data-model.md#write-submitted-adaptive-form-data-into-data-sources-write-af)
+When a user submits a form based on a form data model (FDM), you can [configure the form to write the submitted data to the data sources associated with the data model object](/help/forms/using-form-data-model.md#write-submitted-adaptive-form-data-into-data-sources-write-af).
 
 ## Submit to REST endpoint {#submit-to-rest-endpoint}
 
 The **[!UICONTROL Submit to REST Endpoint]** submit action sends the submitted data to a REST URL. This URL can be either an internal server (the server where the form is displayed) or an external server. The data of an Adaptive Form is submitted to a REST URL using the **[!UICONTROL Submit to REST endpoint]** Submit Action.
 
-For a comprehensive guide on the detailed steps to post or submit data to a REST URL, refer to [configure submit to REST Endpoint submit action for Adaptive Forms.](/help/forms/configure-submit-action-restpoint.md)
+For a comprehensive guide on the detailed steps to post or submit data to a REST URL, refer to [configure submit to REST Endpoint submit action for Adaptive Forms](/help/forms/configure-submit-action-restpoint.md).
 
 ## Invoke an AEM Workflow {#invoke-an-aem-workflow}
 
@@ -132,11 +133,11 @@ The **[!UICONTROL Invoke an AEM Workflow]** Submit Action integrates an Adaptive
 
 The **[!UICONTROL Submit to OneDrive]** Submit Action connects an Adaptive Form with a Microsoft&reg; OneDrive. You can submit the form data, files, attachments, or Document of Record to the connected Microsoft&reg; OneDrive Storage. 
 
-AEM Forms Cloud Service with Microsoft® OneDrive helps in optimize data submission. Explore the steps of [integrating OneDrive with AEM Forms](/help/forms/configure-submit-action-onedrive.md) for streamlined and secure storage.
+AEM Forms Cloud Service with Microsoft&reg; OneDrive helps in optimize data submission. Explore the steps of [integrating OneDrive with AEM Forms](/help/forms/configure-submit-action-onedrive.md) for streamlined and secure storage.
 
 ## Submit to Azure Blob Storage {#submit-to-azure-blob-storage}
 
-The **[!UICONTROL Submit to Azure Blob Storage]** Submit Action connects an Adaptive Form with a Microsoft® Azure portal and allows you to submit various elements such as form data, files, attachments, or Document of Record to the associated Azure Storage containers.
+The **[!UICONTROL Submit to Azure Blob Storage]** Submit Action connects an Adaptive Form with a Microsoft&reg; Azure portal and allows you to submit various elements such as form data, files, attachments, or Document of Record to the associated Azure Storage containers.
 
 AEM as a Cloud Service allows submitting data to Azure Storage from AEM Adaptive Forms. Learn how to [create and use Azure Blob Storage configuration in AEM Forms](/help/forms/configure-submit-action-azure-blob-storage.md) for efficient data storage. 
 

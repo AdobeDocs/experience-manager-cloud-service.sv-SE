@@ -5,7 +5,7 @@ exl-id: 878ffd5d-0f10-4990-9779-bdf55cd95fac
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
@@ -79,7 +79,7 @@ I användargränssnittet för **översättningskonfiguration** finns det flera t
 1. Markera kontexten som du skapade och välj sedan **Redigera**. Då öppnas **Redigeraren för översättningsregler** för att konfigurera egenskaperna.
    ![Redigerare för översättningsregler](assets/translation-rules-editor.png)
 1. Som standard ärvs alla konfigurationer från den överordnade sökvägen, i det här fallet `/content/dam`. Avmarkera alternativet **Ärv från`/content/dam`** så att du kan lägga till fler fält i konfigurationen.
-1. Om du inte markerar det här alternativet, under avsnittet **Allmänt** i listan, lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [tidigare identifierade som fält för översättning.](getting-started.md#content-models)
+1. Om du inte markerar det här alternativet, under avsnittet **Allmänt** i listan, lägger du till egenskapsnamnen för de innehållsfragmentmodeller som du [tidigare identifierade som fält för översättning](getting-started.md#content-models).
    1. Ange egenskapsnamnet i fältet **Ny egenskap**. Observera att alternativen **Översätt** och **Ärv** kontrolleras automatiskt.
    1. Välj **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.

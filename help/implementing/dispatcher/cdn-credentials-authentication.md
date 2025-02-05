@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: d6484393410d32f348648e13ad176ef5136752f2
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera CDN-autentiseringsuppgifter och autentisering {#cdn-credentials-authentication}
 
-CDN som tillhandahålls av Adobe har flera funktioner och tjänster, varav vissa förlitar sig på autentiseringsuppgifter och autentisering för att säkerställa en lämplig nivå av företagssäkerhet. Genom att deklarera regler i en konfigurationsfil som distribuerats med hjälp av Cloud Manager [config-pipeline kan ](/help/operations/config-pipeline.md)-kunder konfigurera följande på ett självbetjäningssätt:
+CDN som tillhandahålls av Adobe har flera funktioner och tjänster, varav vissa förlitar sig på autentiseringsuppgifter och autentisering för att säkerställa en lämplig nivå av företagssäkerhet. Genom att deklarera regler i en konfigurationsfil som distribuerats med hjälp av Cloud Manager [config pipeline](/help/operations/config-pipeline.md) kan kunderna på ett självbetjäningssätt konfigurera följande:
 
 * HTTP-huvudvärdet X-AEM-Edge-Key som används av Adobe CDN för att validera begäranden som kommer från ett kundhanterat CDN.
 * Den API-token som används för att rensa resurser i CDN-cachen.

@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: 2a7d46e91bbd6ca96bd8b7fd5d4d84cf69bdee36
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '5524'
 ht-degree: 0%
@@ -18,7 +18,7 @@ I den här artikeln beskrivs de olika avancerade nätverksfunktionerna i AEM as 
 
 >[!TIP]
 >
->Förutom den här dokumentationen finns det också en serie självstudiekurser som hjälper dig igenom de avancerade nätverksalternativen på den här [platsen.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/advanced-networking)
+>Förutom den här dokumentationen finns det också en serie självstudiekurser som hjälper dig igenom de avancerade nätverksalternativen på den här [platsen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/advanced-networking).
 
 ## Ökning {#overview}
 
@@ -41,7 +41,7 @@ I den här artikeln beskrivs dessa alternativ i detalj och varför du kan använ
 När avancerade nätverksfunktioner konfigureras gäller följande begränsningar.
 
 * Ett program kan tillhandahålla ett enda avancerat nätverksalternativ (flexibel portutgång, dedikerad IP-adress för utgångar eller VPN).
-* Avancerade nätverk är inte tillgängliga för [sandlådeprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
+* Avancerade nätverk är inte tillgängliga för [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 * En användare i måste ha rollen **Administratör** för att lägga till och konfigurera nätverksinfrastruktur i ditt program.
 * Produktionsmiljön måste skapas innan nätverksinfrastrukturen kan läggas till i programmet.
 * Nätverksinfrastrukturen måste finnas i samma region som produktionsmiljöns primära region.
@@ -54,8 +54,8 @@ När avancerade nätverksfunktioner konfigureras gäller följande begränsninga
 
 För avancerade nätverksfunktioner krävs två steg:
 
-1. Konfigurationen av det avancerade nätverksalternativet, oavsett om [flexibel portutgång,](#flexible-port-egress) [dedikerad IP-adress,](#dedicated-egress-ip-address) eller [VPN,](#vpn) måste först utföras på programnivå.
-1. För att det avancerade nätverksalternativet ska kunna användas måste det sedan vara [aktiverat på miljönivå.](#enabling)
+1. Konfigurationen av det avancerade nätverksalternativet, oavsett om det är [flexibel portutgång](#flexible-port-egress), [dedikerad IP-adress](#dedicated-egress-ip-address) eller [VPN](#vpn), måste först göras på programnivå.
+1. Om du vill använda det avancerade nätverksalternativet måste du [aktivera på miljönivå](#enabling).
 
 Båda stegen kan utföras med Cloud Manager-gränssnittet eller Cloud Manager-API:t.
 
@@ -109,7 +109,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 >[!TIP]
 >
->Hela uppsättningen parametrar, exakt syntax och viktig information som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
+>Hela uppsättningen parametrar, exakt syntax och viktig information, som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
 ### Trafikroutning {#flexible-port-egress-traffic-routing}
 
@@ -220,7 +220,7 @@ Samma dedikerade IP-adress används för alla miljöer i ett program och gäller
 
 Utan den dedikerade IP-adressfunktionen aktiverad flödar trafik från AEM as a Cloud Service via en uppsättning IP-adresser som delas med andra kunder i AEM as a Cloud Service.
 
-Konfigurationen av den dedikerade IP-adressen för utgångar liknar den för [flexibel portutgång.](#flexible-port-egress) Den största skillnaden är att efter konfigurationen kommer trafiken alltid att gå från en dedikerad, unik IP-adress. Om du vill hitta IP-adressen använder du en DNS-matchare för att identifiera IP-adressen som är associerad med `p{PROGRAM_ID}.external.adobeaemcloud.com`. IP-adressen förväntas inte ändras, men om den måste ändras visas ett avancerat meddelande.
+Konfigurationen av IP-adressen för den dedikerade IP-adressen liknar [den flexibla porten](#flexible-port-egress). Den största skillnaden är att efter konfigurationen kommer trafiken alltid att gå från en dedikerad, unik IP-adress. Om du vill hitta IP-adressen använder du en DNS-matchare för att identifiera IP-adressen som är associerad med `p{PROGRAM_ID}.external.adobeaemcloud.com`. IP-adressen förväntas inte ändras, men om den måste ändras visas ett avancerat meddelande.
 
 >[!TIP]
 >
@@ -270,7 +270,7 @@ När nätverksinfrastrukturen väl har anropats tar det oftast ca 15 minuter inn
 
 >[!TIP]
 >
->Hela uppsättningen parametrar, exakt syntax och viktig information som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
+>Hela uppsättningen parametrar, exakt syntax och viktig information, som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
 ### Trafikroutning {#dedicated-egress-ip-traffic-routing}
 
@@ -400,7 +400,7 @@ Kontrollera loggarna i måltjänsten om de är tillgängliga för att verifiera 
 
 Med ett VPN kan du ansluta till en lokal infrastruktur eller ett datacenter från författaren, publiceringen eller förhandsgranskningsinstanserna. Detta kan till exempel vara användbart för att skydda åtkomsten till en databas. Det gör det även möjligt att ansluta till SaaS-leverantörer, t.ex. en CRM-leverantör som stöder VPN.
 
-De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i kolumnen **RouteBased configuration instructions** i [den här listan över enheter.](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable) Konfigurera enheten enligt beskrivningen i tabellen.
+De flesta VPN-enheter med IPSec-teknik stöds. Läs informationen i kolumnen **RouteBased configuration instructions** i [den här listan över enheter](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices#devicetable). Konfigurera enheten enligt beskrivningen i tabellen.
 
 >[!NOTE]
 >
@@ -465,7 +465,7 @@ När den anropats tar det oftast från 45 till 60 minuter innan nätverksinfrast
 
 >[!TIP]
 >
->Hela uppsättningen parametrar, exakt syntax och viktig information som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
+>Hela uppsättningen parametrar, exakt syntax och viktig information, som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
 ### Trafikroutning {#vpn-traffic-routing}
 
@@ -653,11 +653,11 @@ Dedikerad IP-adress för utgångar och avancerade VPN-nätverkstyper har stöd f
 
 >[!TIP]
 >
->Hela uppsättningen parametrar, exakt syntax och viktig information som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
+>Hela uppsättningen parametrar, exakt syntax och viktig information, som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
 ## Redigera och ta bort avancerade nätverkskonfigurationer i miljöer {#editing-deleting-environments}
 
-När [du har aktiverat avancerade nätverkskonfigurationer för miljöer](#enabling) kan du uppdatera informationen om dessa konfigurationer eller ta bort dem.
+När du har [aktiverat avancerade nätverkskonfigurationer för miljöer](#enabling) kan du uppdatera informationen om dessa konfigurationer eller ta bort dem.
 
 >[!NOTE]
 >
@@ -675,7 +675,7 @@ När [du har aktiverat avancerade nätverkskonfigurationer för miljöer](#enabl
 
 1. Välj antingen **Redigera** eller **Ta bort** på ellipsmenyn.
 
-   * Om du väljer **Redigera** ska du uppdatera informationen enligt stegen som beskrivs i föregående avsnitt, [Aktivera med användargränssnittet](#enabling-ui) och klicka på **Spara**.
+   * Om du väljer **Redigera** ska du uppdatera informationen enligt stegen som beskrivs i föregående avsnitt, [Aktivera med användargränssnittet](#enabling-ui), och klicka på **Spara**.
    * Om du väljer **Ta bort** bekräftar du borttagningen i dialogrutan **Ta bort nätverkskonfiguration** med **Ta bort** eller avbryter med **Avbryt**.
 
 Ändringarna återspeglas på fliken **Miljö**.
@@ -686,7 +686,7 @@ Anropa `DELETE [/program/{programId}/environment/{environmentId}/advancedNetwork
 
 >[!TIP]
 >
->Hela uppsättningen parametrar, exakt syntax och viktig information som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen.](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure)
+>Hela uppsättningen parametrar, exakt syntax och viktig information, som vilka parametrar som inte kan ändras senare, [kan refereras i API-dokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/createNetworkInfrastructure).
 
 ## Redigera och ta bort nätverksinfrastruktur för ett program {#editing-deleting-program}
 
@@ -729,10 +729,10 @@ Det är bara möjligt att ha en typ av avancerad nätverksinfrastruktur konfigur
 
 Om du bestämmer dig för att du behöver en annan avancerad nätverksinfrastrukturtyp än den du redan har konfigurerat, tar du bort den befintliga och skapar en annan. Gör följande:
 
-1. [Ta bort avancerade nätverk i alla miljöer.](#editing-deleting-environments)
-1. [Ta bort den avancerade nätverksinfrastrukturen.](#editing-deleting-program)
-1. Skapa den avancerade nätverksinfrastrukturtyp som du nu behöver, antingen [flexibel portutgång,](#flexible-port-egress) [dedikerad IP-adress,](#dedicated-egress-ip-address) eller [VPN.](#vpn)
-1. [Återaktivera avancerade nätverk på miljönivå.](#enabling)
+1. [Ta bort avancerade nätverk i alla miljöer](#editing-deleting-environments).
+1. [Ta bort den avancerade nätverksinfrastrukturen](#editing-deleting-program).
+1. Skapa den avancerade nätverksinfrastrukturtyp som du nu behöver, antingen [flexibel portutgång](#flexible-port-egress), [dedikerad IP-adress](#dedicated-egress-ip-address) eller [VPN](#vpn).
+1. [Återaktivera avancerat nätverk på miljönivå](#enabling).
 
 >[!WARNING]
 >

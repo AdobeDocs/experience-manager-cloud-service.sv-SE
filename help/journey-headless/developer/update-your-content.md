@@ -5,7 +5,7 @@ exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Så här uppdaterar du innehåll via AEM Assets API:er {#update-your-content}
 
-I den här delen av [AEM Headless Developer Journey ](overview.md) får du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
+I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 
 ## Story hittills {#story-so-far}
 
@@ -57,7 +57,7 @@ Assets HTTP API omfattar:
 
 Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen **REST** och gör att du kan komma åt innehåll (som lagras i AEM) via **CRUD**-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
-Med de här åtgärderna kan du med API:t köra Adobe Experience Manager as a Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla innehållstjänster till ett JavaScript front end-program. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
+Med dessa åtgärder kan du med API:t köra Adobe Experience Manager as a Cloud Service som ett headless CMS (Content Management System) genom att tillhandahålla innehållstjänster till ett JavaScript front end-program. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
 
 <!--
 >[!NOTE]
@@ -335,7 +335,7 @@ Du bör fortsätta den AEM resan utan att behöva lämna synpunkter nästa gång
 * [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [CORS/AEM har förklarats](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
-* [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+* [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 * OpenAPI:erna [Content Fragment och Content Fragment Model](/help/headless/content-fragment-openapis.md) är också tillgängliga.

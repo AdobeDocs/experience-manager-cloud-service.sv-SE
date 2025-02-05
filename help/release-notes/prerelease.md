@@ -4,7 +4,7 @@ description: Lär dig hur du använder betaversionskanalen för att få en förh
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1264'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du använder betaversionskanalen för att få en förhandsvisning a
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager as a Cloud Service tillhandahåller nya funktioner på en regelbunden cadence enligt [Experience Manager-releasernas färdplan.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
+Adobe Experience Manager as a Cloud Service tillhandahåller nya funktioner på en regelbunden cadence enligt [Experience Manager-releasernas färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service).
 
 Om du vill bekanta dig med de funktioner som är schemalagda att användas i följande funktionsrelease kan du prenumerera på betaversionskanalen, som du kommer åt genom att konfigurera dina utvecklingsmiljöer eller andra sandlådemiljöer. Du kan förhandsgranska ändringar som är tillgängliga via det AEM användargränssnittet och skapa kod mot alla nya prerelease-API:er.
 
@@ -50,7 +50,7 @@ För att utnyttja prerelease-kanalen effektivt krävs fyra steg.
 
 ## Markera dina kalendrar {#mark-calendars}
 
-Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleaser publiceras på [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
+Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleasen publiceras på [Adobe Experience League](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service).
 
 Notera releasedatumen så att du kan planera tiden för granskning och test av kommande funktioner.
 
@@ -83,7 +83,7 @@ Om du vill uppdatera en molnmiljö så att den använder förhandsversionen mås
 
 1. Välj den miljö där du vill aktivera förhandsversionen och få åtkomst till konfigurationen via **Program** > **Miljö** > **Miljökonfiguration**.
 
-1. Lägg till en ny [miljövariabel:](../implementing/cloud-manager/environment-variables.md)
+1. Lägg till en ny [miljövariabel](../implementing/cloud-manager/environment-variables.md)
 
    | Namn | Värde | Tjänsten används | Typ |
    |------|-------|-----------------|------|
@@ -97,7 +97,7 @@ Om du vill uppdatera en molnmiljö så att den använder förhandsversionen mås
 
 Du kan också använda Cloud Manager API och CLI för att uppdatera miljövariablerna.
 
-* Med [Cloud Manager API:ts miljövariabelslutpunkt anger ](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchEnvironmentVariables) miljövariabeln `AEM_RELEASE_CHANNEL` till värdet `prerelease`.
+* Använd [Cloud Manager API:ts miljövariabelslutpunkt ](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchEnvironmentVariables) och ange miljövariabeln `AEM_RELEASE_CHANNEL` till värdet `prerelease`.
 
   ```text
   PATCH /program/{programId}/environment/{environmentId}/variables
@@ -120,21 +120,21 @@ Variabeln kan tas bort eller återställas till ett annat värde om du vill att 
 
 ### Lokal SDK {#local-sdk}
 
-Du kan se nya funktioner i Sites-konsolen i den lokala QuickStart SDK och koda mot nya API:er i prerelease genom att konfigurera ditt Maven-projekt så att det refererar till prerelease `API Jar` som finns i Maven Central. Du kan också se dessa prerelease-funktioner i den lokala utvecklingsmiljön genom att starta den vanliga QuickStart SDK i förhandsversionsläge.
+Du kan se nya funktioner i Sites-konsolen i den lokala Quickstart SDK och koda mot nya API:er i prerelease genom att konfigurera ditt Maven-projekt så att det refererar till prerelease `API Jar` som finns i Maven Central. Du kan också se dessa prerelease-funktioner i den lokala utvecklingsmiljön genom att starta den vanliga snabbstarten av SDK i förhandsversionsläge.
 
 #### Starta Quickstart SDK i förhandsversionsläge {#prerelease-mode}
 
-1. Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Öppna AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
-1. Inkludera argumentet `-r prerelease` när du startar SDK QuickStart.
+1. Hämta SDK från programdistributionsportalen och installera enligt beskrivningen i [Åtkomst till AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
+1. Ta med argumentet `-r prerelease` när du startar SDK Quickstart.
 
 Värdet är fästigt så att det bara kan markeras vid första starten. Installera om SDK om du vill ändra kommandoradsalternativet.
 
-Eftersom det kan finnas flera AEM underhållsreleaser mellan de olika månadsvisa funktionsreleaserna kan du ladda ned dessa nya SDK och hänvisa till de nya Jar-versionerna av SDK API i större projekt. Underhållsreleaserna kommer inte att innehålla ytterligare förhandsversionsfunktioner, men kan innehålla andra mindre ändringar som felkorrigeringar, säkerhetskorrigeringar och prestandaförbättringar.
+Eftersom det kan finnas flera AEM underhållsutgåvor mellan de olika månadsversionerna kan du ladda ned dessa nya SDK:er och hänvisa till de nya SDK API Jar-versionerna i Maven-projekt. Underhållsreleaserna kommer inte att innehålla ytterligare förhandsversionsfunktioner, men kan innehålla andra mindre ändringar som felkorrigeringar, säkerhetskorrigeringar och prestandaförbättringar.
 Javadocs publiceras i Maven Central.
 
 #### Bygg mot prerelease SDK {#build-sdk}
 
-1. Ändra maven-projektets `pom.xml` så att den refererar till en separat prerelease SDK API jar som publiceras i Maven Central. Den innehåller alla nya Java API:er för prerelease-funktionerna och är beroende av SDK API jar. Den har samma version.
+1. Ändra maven-projektets `pom.xml` så att den refererar till en separat prerelease SDK API jar som publiceras i Maven Central. Den innehåller ett nytt Java-API för prerelease-funktionerna och är beroende av SDK API jar. Den har samma version.
 
    Här är ett exempel på ett utdrag från det överordnade elevens beroendehanteringsavsnitt som refererar till den vanliga API-behållaren:
 
@@ -159,7 +159,7 @@ Javadocs publiceras i Maven Central.
      </dependency>
    ```
 
-   Om du vill ändra till SDK för prerelease ändrar du bara beroendet från `com.adobe.aem:aem-sdk-api` till `com.adobe.aem:aem-prerelease-sdk-api` enligt vad som anges nedan:
+   Om du vill ändra till prerelease SDK ändrar du bara beroendet från `com.adobe.aem:aem-sdk-api` till `com.adobe.aem:aem-prerelease-sdk-api` enligt vad som anges nedan:
 
    ```
    <dependencyManagement>
@@ -187,7 +187,7 @@ Javadocs publiceras i Maven Central.
 > 
 > ArtefactId `aem-prerelease-sdk-api` får aldrig användas vid distribution till scenen eller produktionen. Använd alltid `aem-sdk-api` när du distribuerar via produktionsflödet. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionsflödet.
 
-[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analyseraren hittar den kommer den att använda SDK-API:t för prerelease för att analysera projektet.
+[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
 
 ## Utbilda dina användare {#train-users}
 

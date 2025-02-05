@@ -4,7 +4,7 @@ description: För Adaptiv Forms kan du lägga till språkområden för fler spr�
 feature: Adaptive Forms, Foundation Components
 exl-id: 4c7d6caa-1adb-4663-933f-b09129b9baef
 role: User, Developer
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Så här lägger du till stöd för en ny språkinställning i den adaptiva Form
 #### 1. Klona databasen {#clone-the-repository}
 
 1. Navigera från kommandoraden till den plats där du vill klona Forms Cloud Service-databasen.
-1. Kör det kommando som du [ har hämtat från Cloud Manager.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git) liknar `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`.
+1. Kör kommandot som du [hämtade från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git). Det liknar `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`.
 1. Använd Git-användarnamnet och -lösenordet för att klona databasen.
 1. Öppna den klonade Forms Cloud Service-databasmappen i det redigeringsprogram du föredrar.
 

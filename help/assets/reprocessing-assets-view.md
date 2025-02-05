@@ -2,7 +2,8 @@
 title: Bearbetar digitala resurser
 description: Läs om olika metoder för att bearbeta digitalt material
 role: User, Leader, Developer
-source-git-commit: b041aa680b65ba4da0d7bf90fcb849a6388a9838
+exl-id: 19ca5278-929e-438b-9436-928f6c9f87d5
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '667'
 ht-degree: 0%
@@ -81,7 +82,7 @@ Läs mer om [Återbearbetar metadataprofiler](https://experienceleague.adobe.com
 
 ### Bearbeta Dynamic Media-resurser igen i en mapp {#reprocessing-dynamic-media}
 
-Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat. Mer information finns i [bearbeta om Dynamic Media-resurser i en mapp.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en)
+Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat. Mer information finns i [bearbeta om Dynamic Media-resurser i en mapp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en).
 
 >[!NOTE]
 >

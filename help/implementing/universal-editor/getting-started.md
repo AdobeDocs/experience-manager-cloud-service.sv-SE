@@ -4,7 +4,7 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 75acf37e7804d665e38e9510cd976adc872f58dd
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du får tillgång till den universella redigeraren och hur du börj
 
 >[!TIP]
 >
->Om du hellre vill dyka rakt in i ett exempel kan du granska [Universal Editor-exempelappen på GitHub.](https://github.com/adobe/universal-editor-sample-editable-app)
+>Om du hellre vill dyka rakt in i ett exempel kan du granska [Universal Editor-exempelappen på GitHub](https://github.com/adobe/universal-editor-sample-editable-app).
 
 Även om den universella redigeraren kan redigera innehåll från valfri källa, kommer det här dokumentet att använda ett AEM program som exempel. Det här dokumentet vägleder dig genom de här stegen.
 
@@ -122,7 +122,7 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 
 ## Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas. (Valfritt) {#content-paths}
 
-Om du har ett befintligt AEM med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) när innehållsförfattare redigerar sidor öppnas sidorna automatiskt med sidredigeraren. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna eller `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
+Om du har ett befintligt AEM med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) öppnas sidorna automatiskt med sidredigeraren när innehållsförfattaren redigerar sidor. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna eller `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
 
 1. Öppna Configuration Manager.
 

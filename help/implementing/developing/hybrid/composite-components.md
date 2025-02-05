@@ -4,7 +4,7 @@ description: Lär dig hur du skapar egna sammansatta komponenter, komponenter so
 exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: e06766160009eaa1bbc41bbf7cfad967a5195e71
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -30,16 +30,16 @@ I den här artikeln används den vanliga kortkomponenten som exempel på hur den
 Följande modeller för stöd av användning av sammansatta komponenter kräver följande krav.
 
 * Din AEM-utvecklingsinstans körs lokalt på port 4502 med ett exempelprojekt.
-* Du har en fungerande extern React-app [aktiverad för redigering i AEM.](editing-external-spa.md)
-* Appen React läses in i AEM redigerare [med hjälp av komponenten RemotePage.](remote-page.md)
+* Du har en fungerande extern React-app [aktiverad för redigering i AEM](editing-external-spa.md).
+* Appen React läses in i AEM redigerare [med hjälp av RemotePage-komponenten](remote-page.md).
 
 ## Lägga till sammansatta komponenter i en SPA {#adding-composite-components}
 
 Det finns tre olika modeller för implementering av den sammansatta komponenten beroende på SPA implementering i AEM.
 
-* [Komponenten finns inte i ditt AEM.](#component-does-not-exist)
-* [Komponenten finns i ditt AEM men det obligatoriska innehållet gör det inte.](#content-does-not-exist)
-* [Komponenten och dess obligatoriska innehåll finns båda i AEM.](#both-exist)
+* [Komponenten finns inte i ditt AEM ](#component-does-not-exist).
+* [Komponenten finns i ditt AEM-projekt, men det obligatoriska innehållet gör inte ](#content-does-not-exist).
+* [Komponenten och dess obligatoriska innehåll finns båda i ditt AEM ](#both-exist).
 
 I följande avsnitt ges exempel på hur du implementerar varje fall med kortkomponenten som exempel.
 
@@ -134,7 +134,7 @@ I det här fallet har kortkomponenten redan skapats i ditt AEM med titel- och bi
 
 Sedan kan du lägga till den i SPA och hämta dess innehåll.
 
-1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående exempel [.](#component-does-not-exist)
+1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående fall [ ](#component-does-not-exist).
 
    ```javascript
    import React from 'react';
@@ -178,4 +178,4 @@ Om innehållet finns i AEM kan det inkluderas direkt i SPA genom att ange sökv�
 
 ![Sammansatt sökväg i nodstruktur](assets/composite-path.png)
 
-Komponenten `AEMCard` är densamma som definierad [ i det föregående användningsfallet.](#content-does-not-exist) Här ingår det innehåll som definieras på den här platsen i AEM projekt i SPA.
+Komponenten `AEMCard` är densamma som definierad [ i föregående användningsfall ](#content-does-not-exist). Här inkluderas det innehåll som definieras på ovanstående plats i AEM projekt i SPA.

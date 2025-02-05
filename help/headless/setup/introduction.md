@@ -4,7 +4,7 @@ description: Med den här snabbstartsguiden lär du dig grunderna i AEM as a Clo
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
 feature: Headless
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -44,4 +44,4 @@ I en produktionssituation utförs uppgifterna dock av olika personer, olika mån
 
 ## Nästa steg {#next-step}
 
-Vill du lära dig mer? Kom sedan igång genom att läsa den första delen av Headless Setup: [Skapa en konfiguration.](create-configuration.md)
+Vill du lära dig mer? Kom sedan igång genom att läsa den första delen av Headless Setup: [Skapa en konfiguration](create-configuration.md).

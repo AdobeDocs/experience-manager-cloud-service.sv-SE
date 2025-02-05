@@ -4,7 +4,7 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
 role: User, Developer
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '4030'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Innan du börjar lära dig mer och förbereder de resurser som krävs för ett d
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
 1. Välj **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla XFA-mallar (XDP-filer) som är tillgängliga på datorn. Välj lämplig fil. Se även till att samma schema (dataschema) används för Adaptivt formulär och vald XFA-mall (XDP-fil).
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka på **[!UICONTROL Done]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall för postdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
 
@@ -68,7 +68,7 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
 1. Välj **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla Acrobat PDF (Acrobat) som är tillgängliga på datorn. Välj lämplig fil.
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka på **[!UICONTROL Done]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en Acrobat som mall för arkivdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
 
@@ -89,7 +89,7 @@ Så här konfigurerar du ett anpassat formulär så att det automatiskt generera
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
 1. Välj **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Generera postdokument** i avsnittet Dokumentmall på fliken Formulärmodell.
-1. Klicka på **[!UICONTROL Done.]**
+1. Klicka på **[!UICONTROL Done]**
 
 ## Bind adaptiva formulärkomponenter till mallfält {#bind-adaptive-form-components-with-template-fields}
 

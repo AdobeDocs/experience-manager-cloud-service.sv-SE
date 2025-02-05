@@ -4,7 +4,7 @@ description: Läs om Cloud Manager och hur det används för att installera till
 exl-id: 9418aac6-a8c4-43f7-b329-b02149fe2d53
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Nu när du har slutfört den här delen av AEM Reference Demos Add-on:
 * Förstå hur rörledningar levererar innehåll och konfigurationer till AEM.
 * Se hur mallarna kan skapa webbplatser med demomaterial med bara några klick.
 
-Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att granska [Skapa ett program och en pipeline](create-program.md) där du får lära dig hur du konfigurerar ett nytt program och en pipeline för att distribuera tillägget.
+Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att granska [Skapa ett program och en pipeline](create-program.md), där du får lära dig hur du konfigurerar ett nytt program och en pipeline för att distribuera tillägget.
 
 ## Ytterligare resurser {#additional-resources}
 

@@ -4,7 +4,7 @@ description: AEM Content Services är utformat för att generera beskrivning och
 exl-id: d3ddffb7-cef9-4c86-aa31-175f13f9b4a5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
   >[!NOTE]
   >
-  >Även om det inte är en standardimplementering stöds [flera väljare, ](enabling-json-exporter.md#multiple-selectors) men `model` måste vara den första.
+  >Även om det inte är en standardimplementering stöds [flera väljare](enabling-json-exporter.md#multiple-selectors), men `model` måste vara den första.
 
 ### Ytterligare information {#further-information}
 

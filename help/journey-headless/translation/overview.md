@@ -5,7 +5,7 @@ exl-id: b677f691-5257-43c3-a4b9-c34932577b31
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Den här guiden leder dig igenom de viktigaste rubrikfria översättningsämnena
 
 Målet är att ge er en bred förståelse för headless-teknik, hur AEM tjänar headless-innehåll och hur ni kan översätta det. Om du inte är bekant med något av dessa ämnen är detta den idealiska platsen att börja på.
 
-Om du redan är bekant med AEM, headless och translation kanske du redan har grundläggande kunskaper om den här resan. Överväg att referera till vår tekniska dokumentation som är länkad under avsnittet [ytterligare resurser nedan.](#additional-resources)
+Om du redan är bekant med AEM, headless och translation kanske du redan har grundläggande kunskaper om den här resan. Titta på vår tekniska dokumentation som är länkad under avsnittet [ytterligare resurser nedan](#additional-resources).
 
 ## AEM dokumentationsresor {#documentation-journeys}
 
@@ -45,7 +45,7 @@ Om du vill veta hur Adobe rekommenderar att du löser vanliga affärsärenden me
 
 Den här resan är utformad för översättningsspecialistpersonal, som ofta kallas översättningsprojektledare eller TPM. Den här resan innehåller krav, steg och tillvägagångssätt för att översätta headless-innehåll i AEM. Resan kan definiera ytterligare personligheter som översättningsspecialisten måste interagera med, men utgångspunkten för resan är översättningsspecialistens.
 
-På den här resan förutsätts det att läsaren har erfarenhet av att översätta innehåll i ett stort CMS-system, men man utgår inte från någon kunskap om headless-teknik eller -AEM.
+På den här resan förutsätts att läsaren har erfarenhet av att översätta innehåll i ett stort CMS-system, men man förutsätter inte att man har någon kunskap om headless-teknik eller -AEM.
 
 Följande personer interagerar på den här resan.
 
@@ -87,6 +87,6 @@ Som sådana resor är utformade för att stå på egen hand. Flera av dem kan do
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt.
 * [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du använder dem i ditt första utvecklingsprojekt.
 * [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM och headless-teknik kan det vara bra att läsa våra tekniska dokument direkt.
-   * [Introduktion till AEM som headless CMS](/help/headless/introduction.md)
+   * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar hur du skapar och använder program som är byggda AEM Headless.

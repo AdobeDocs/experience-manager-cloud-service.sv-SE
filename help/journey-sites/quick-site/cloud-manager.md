@@ -5,7 +5,7 @@ exl-id: 5d264078-e552-48ca-8d82-294a646e6b1f
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: d6ecdae8dd78c3c93a410ca2c8b80322340f439e
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -31,7 +31,7 @@ I det här dokumentet får du hjälp att förstå hur verktyget AEM skapa snabbw
 
 Det här dokumentet fokuserar på att förstå de här grundläggande delarna av lösningen för att skapa snabbwebbplatser innan du går vidare till nästa steg i kundresan där du börjar konfigurera.
 
-Vi rekommenderar att du går igenom den här resan steg för steg, men om du redan förstår att AEM Sites och Cloud Manager arbetar tillsammans och vill börja direkt med konfigurationen kan du [hoppa till nästa steg i resan.](create-site.md)
+Vi rekommenderar att du går igenom den här resan steg för steg, men om du redan förstår att AEM Sites och Cloud Manager arbetar tillsammans och vill börja direkt med konfigurationen kan du [hoppa till nästa steg på resan](create-site.md).
 
 ## Ansvarig roll {#responsible-role}
 
@@ -122,7 +122,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta framtagningen
 * Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa för att skapa snabbwebbplatser genom att gå igenom dokumentet [Skapa webbplats från mall](create-site.md) där du får lära dig hur du snabbt skapar en ny AEM med hjälp av en mall.
+Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM snabbwebbplats genom att gå igenom dokumentet [Skapa webbplats från mall](create-site.md), där du får lära dig hur du snabbt skapar en ny AEM med hjälp av en mall.
 
 ## Ytterligare resurser {#additional-resources}
 

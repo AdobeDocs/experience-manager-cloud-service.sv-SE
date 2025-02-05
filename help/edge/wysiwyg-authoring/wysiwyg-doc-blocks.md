@@ -3,13 +3,13 @@ title: Block för WYSIWYG och dokumentbaserad redigering
 description: Lär dig hur du kan skapa block som kan användas både för WYSIWYG-redigering och dokumentbaserad redigering.
 feature: Edge Delivery Services
 role: User
-source-git-commit: 3419fa943eb865d87467443527ea97fcd64909c2
+exl-id: f039c70a-e1a0-4fcc-8f42-dfa0f8bb3764
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
-
 
 # Block för WYSIWYG och dokumentbaserad redigering {#wysiwyg-and-doc-blocks}
 
@@ -17,7 +17,7 @@ Lär dig hur du kan skapa block som kan användas både för WYSIWYG-redigering 
 
 ## Ökning {#overview}
 
-I vissa projekt kanske du vill ha stöd för både [WYSIWYG-redigering med den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) och [dokumentbaserad redigering.](/help/edge/docs/authoring.md) Om du vill minimera utvecklingstiden och säkerställa samma webbplatsupplevelse kan du skapa en uppsättning block som har stöd för båda användningsfallen.
+I vissa projekt kanske du vill ha stöd för både [WYSIWYG-redigering med den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) och [dokumentbaserad redigering](/help/edge/docs/authoring.md). För att minimera utvecklingstiden och säkerställa samma webbplatsupplevelse kan du skapa en uppsättning block som har stöd för båda användningsfallen.
 
 För att göra detta måste du använda samma innehållsmodelleringsmetod för både WYSIWYG-redigeringsprogrammet och dokumentbaserade redigeringsprogram.
 

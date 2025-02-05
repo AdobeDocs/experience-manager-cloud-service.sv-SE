@@ -4,7 +4,7 @@ description: Med responsiv design kan samma upplevelser visas effektivt på fler
 exl-id: be645062-d6d6-45a2-97dc-d8aa235539b8
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 0%
@@ -73,7 +73,7 @@ I [WKND-självstudien](develop-wknd-tutorial.md) används den här strategin fö
 
 ### Använda mediefrågor med AEM sidor {#using-media-queries-with-aem-pages}
 
-[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html), som inkluderar klientlibs via sidprincipen.
+[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html), som innehåller klientlibs via sidprincipen.
 
 Om din egen sidkomponent inte är baserad på Page Core-komponenten kan du även inkludera klientbiblioteksmappen i HTML- eller JSP-skriptet för den. Om du gör det genereras och refereras CSS-filen med de mediefrågor som behövs för att det responsiva rutnätet ska fungera.
 

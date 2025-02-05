@@ -4,7 +4,7 @@ description: Läs om hur Adobe Experience Manager (AEM) as a Cloud Service anvä
 feature: Deploying
 exl-id: 36989913-69db-4f4d-8302-57c60f387d3d
 role: Admin
-source-git-commit: 73fac04561f43a4053e1694da9e096a2ecbc1484
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '997'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Om du råkar ut för ett problem som rör regression ska du skicka in ett suppor
 
 ## Sammansatt nodarkiv {#composite-node-store}
 
-Vanligtvis har uppdateringarna inga driftavbrott, inklusive för redigeringsinstansen, som är ett kluster med noder. Rullande uppdateringar är möjliga på grund av [funktionen för lagring av sammansatta noder i Oak.](https://jackrabbit.apache.org/oak/docs/nodestore/compositens.html)
+Vanligtvis har uppdateringarna inga driftavbrott, inklusive för redigeringsinstansen, som är ett kluster med noder. Rullande uppdateringar är möjliga på grund av [funktionen för lagring av sammansatta noder i Oak](https://jackrabbit.apache.org/oak/docs/nodestore/compositens.html).
 
 Med den här funktionen kan AEM referera till flera databaser samtidigt. I en [rullande distribution](/help/implementing/deploying/overview.md#how-rolling-deployments-work) innehåller den nya AEM en egen `/libs` (den TjärMK-baserade oföränderliga databasen). Den skiljer sig från den äldre AEM versionen, även om båda refererar till en delad DocumentMK-baserad ändringsbar databas som innehåller områden som `/content`, `/conf` och `/etc` med flera.
 

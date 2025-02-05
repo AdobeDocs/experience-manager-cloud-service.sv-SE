@@ -4,7 +4,7 @@ description: En referenshandbok för utvecklare som beskriver komponenterna och 
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3481'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Komponenterna utgör kärnan i AEM. [Kärnkomponenterna](https://experienceleagu
 
 >[!TIP]
 >
->Innan du refererar till det här dokumentet måste du kontrollera att du har slutfört [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och därför är bekant med [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+>Innan du refererar till det här dokumentet bör du kontrollera att du har slutfört [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och därför känner till [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 Eftersom WKND-självstudiekursen täcker de flesta användningsfall är det här dokumentet endast avsett som komplement till dessa resurser. Den innehåller detaljerade tekniska detaljer om hur komponenterna är strukturerade och konfigurerade i AEM och är inte avsedd som en guide för att komma igång.
 
@@ -92,7 +92,7 @@ Detta är en abstraktion som hjälper till att se till att avsikten stannar kvar
 
 Definitionen av en komponent kan delas upp enligt följande:
 
-* AEM baseras på [Sling.](https://sling.apache.org/documentation.html)
+* AEM baseras på [Sling](https://sling.apache.org/documentation.html).
 * AEM finns under `/libs/core/wcm/components`.
 * Projekt-/platsspecifika komponenter finns under `/apps/<myApp>/components`.
 * AEM standardkomponenter definieras som `cq:Component` och har nyckelelementen:
@@ -105,32 +105,32 @@ Definitionen av en komponent kan delas upp enligt följande:
 * **Rotnod**:
    * `<mycomponent> (cq:Component)` - Komponentens hierarkiska nod.
 * **Viktiga egenskaper**:
-   * `jcr:title` - Komponenttitel, som till exempel används som etikett när komponenten visas i [komponentwebbläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser) och [komponentkonsolen](/help/sites-cloud/authoring/components-console.md)
-   * `jcr:description` - Beskrivning för komponenten. Används som muspekningstecken i komponentwebbläsaren och komponentkonsolen
-   * Mer information finns i avsnittet [Komponentikon](#component-icon)
+   * `jcr:title` - Komponenttitel, som till exempel används som etikett när komponenten visas i [komponentbläddraren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser) och [komponentkonsolen](/help/sites-cloud/authoring/components-console.md).
+   * `jcr:description` - Beskrivning för komponenten. Används som muspekningstecken i komponentwebbläsaren och komponentkonsolen.
+   * Mer information finns i avsnittet [Komponentikon](#component-icon).
 * **Viktiga underordnade noder**:
-   * `cq:editConfig (cq:EditConfig)` - Definierar redigeringsegenskaperna för komponenten och aktiverar komponenten att visas i komponentwebbläsaren
+   * `cq:editConfig (cq:EditConfig)` - Definierar redigeringsegenskaperna för komponenten och aktiverar komponenten att visas i komponentwebbläsaren.
       * Om komponenten har en dialogruta visas den automatiskt i komponentwebbläsaren eller Sidekick, även om cq:editConfig inte finns.
    * `cq:childEditConfig (cq:EditConfig)` - Styr gränssnittsaspekter för författare för underordnade komponenter som inte definierar sina egna `cq:editConfig`.
    * `cq:dialog (nt:unstructured)` - Dialog för den här komponenten. Definierar gränssnittet som tillåter användaren att konfigurera komponenten och/eller redigera innehåll.
-   * `cq:design_dialog (nt:unstructured)` - Designredigering för den här komponenten
+   * `cq:design_dialog (nt:unstructured)` - Designredigering för komponenten.
 
 #### Komponentikon {#component-icon}
 
 Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna för komponenten när komponenten skapas av utvecklaren. Dessa egenskaper utvärderas i följande ordning och den första giltiga egenskapen som hittas används.
 
-1. `cq:icon` - Strängegenskapen pekar på en standardikon i [Coral UI-biblioteket](https://opensource.adobe.com/coral-spectrum/examples/#icon) som ska visas i komponentwebbläsaren
+1. `cq:icon` - Strängegenskapen pekar på en standardikon i [Coral UI-biblioteket](https://opensource.adobe.com/coral-spectrum/examples/#icon) som ska visas i komponentwebbläsaren.
    * Använd värdet för HTML-attributet för ikonen Koral.
-1. `abbreviation` - Strängegenskapen för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren
+1. `abbreviation` - Strängegenskapen för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren.
    * Förkortningen ska vara begränsad till två tecken.
    * Om du anger en tom sträng byggs förkortningen av de två första tecknen i egenskapen `jcr:title`.
-      * Exempel: &quot;Im&quot; för &quot;Bild&quot;
+      * Exempel: &quot;Im&quot; för &quot;Bild&quot;.
       * Den lokaliserade titeln används för att skapa förkortningen.
    * Förkortningen översätts bara om komponenten har en `abbreviation_commentI18n`-egenskap, som sedan används som översättningstips.
-1. `cq:icon.png` eller `cq:icon.svg` - Ikon för den här komponenten, som visas i komponentwebbläsaren
+1. `cq:icon.png` eller `cq:icon.svg` - Ikon för den här komponenten, som visas i komponentwebbläsaren.
    * 20 x 20 pixlar är storleken på ikonerna för standardkomponenter.
       * Storleken på större ikoner ändras (klientsidan).
-   * Den rekommenderade färgen är rgb(112, 112, 112) > #707070
+   * Den rekommenderade färgen är rgb(112, 112, 112) > #707070.
    * Bakgrunden för standardkomponentikoner är genomskinlig.
    * Endast `.png`- och `.svg`-filer stöds.
    * Om du importerar från filsystemet via Eclipse-plugin-programmet måste filnamnen escape-konverteras till exempel som `_cq_icon.png` eller `_cq_icon.svg`.
@@ -172,7 +172,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
 | `cq:isContainer` | `Boolean` | Detta anger om komponenten är en behållarkomponent och kan därför innehålla andra komponenter, till exempel ett styckesystem. |
 | `cq:dialog` | `nt:unstructured` | Detta är definitionen av komponentens redigeringsdialogruta. |
 | `cq:design_dialog` | `nt:unstructured` | Detta är definitionen av komponentens designdialogruta. |
-| `cq:editConfig` | `cq:EditConfig` | Detta definierar komponentens [redigeringskonfiguration.](#edit-behavior) |
+| `cq:editConfig` | `cq:EditConfig` | Detta definierar [redigeringskonfigurationen för komponenten](#edit-behavior). |
 | `cq:htmlTag` | `nt:unstructured` | Detta returnerar ytterligare taggattribut som läggs till i den omgivande HTML-taggen. Möjliggör tillägg av attribut till de automatiskt genererade diven. |
 | `cq:noDecoration` | `Boolean` | Om true återges inte komponenten med automatiskt genererade div- och css-klasser. |
 | `cq:template` | `nt:unstructured` | Om den hittas används den här noden som en innehållsmall när komponenten läggs till från komponentwebbläsaren. |
@@ -256,7 +256,7 @@ Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du �
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använda i dialogrutor, eller mer allmänt i [formulär.](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)
+Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använda i dialogrutor, eller mer allmänt i [formulär](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html).
 
 När du har skapat resurstypen kan du instansiera fältet genom att lägga till en ny nod i dialogrutan, där egenskapen `sling:resourceType` refererar till den resurstyp som du just har introducerat.
 
@@ -339,7 +339,7 @@ Det typiska HTL-skriptet som återger platshållaren HTML är följande:
 
 I föregående exempel är `isEmpty` en variabel som bara är true när komponenten inte har något innehåll och är osynlig för författaren.
 
-För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare, [som den som finns i Core Components.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare, [som den som finns i Core Components](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html).
 
 Mallen i den föregående länken används sedan med följande rad i HTML:
 
@@ -350,7 +350,7 @@ Mallen i den föregående länken används sedan med följande rad i HTML:
 
 I det föregående exemplet är `model.text` variabeln som är sann bara när innehållet har innehåll och är synligt.
 
-Ett exempel på hur den här mallen används visas i kärnkomponenterna, [t.ex. i titelkomponenten.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
+Ett exempel på hur den här mallen används visas i kärnkomponenterna, [, till exempel i titelkomponenten ](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27).
 
 ### Konfigurera med cq:EditConfig-underordnade noder {#configuring-with-cq-editconfig-child-nodes}
 

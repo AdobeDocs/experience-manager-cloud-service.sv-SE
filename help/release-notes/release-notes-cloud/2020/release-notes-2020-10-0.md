@@ -1,10 +1,10 @@
 ---
 title: Versionsinformation för version 2020.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.10.0."
+description: '[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.10.0.'
 exl-id: ac741744-5b47-47a4-b5af-e1089e92c3f0
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1103'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Följande version (2020.11.0) kommer att vara den 1 december 2020.
 
 * **[Core Components 2.12.0](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)**: Adobe Experience Manager as a Cloud Service drar nytta av automatiska uppdateringar av den senaste versionen av Core Components. Version 2.12.0 innehåller de senaste förbättringarna från communityn. Bland förbättringarna finns [en ny formulärhanterare för POST;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/forms/form-container.html#post-data) möjlighet att inkludera anpassade CSS-, JavaScript- och metadata [-taggar via kontextmedveten konfiguration;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html#context-aware-loading) och ett [`DataLayerBuilder`](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html#enabling-custom-components)-verktyg för att förenkla integreringen av Adobe Data Layer i anpassade komponenter. Se [listan över ändringar](https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.12.0) i 2.12.0.
 
-* **[Project Archetype 24](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)**: Den rekommenderade grunden för att starta ett nytt Experience Manager-projekt har förbättrats. Nu ingår det nya [Adobe-klientdatalagret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html), alternativet att [leverera webbplatsen i AMP,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html) och nya [tilläggspunkter för att lägga till projekt-CSS/JS.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html#context-aware-loading)
+* **[Project Archetype 24](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)**: Den rekommenderade grunden för att starta ett nytt Experience Manager-projekt har förbättrats. Nu ingår det nya [Adobe-klientdatalagret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html), alternativet att [leverera webbplatsen i AMP](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html) och nya [tilläggspunkter för att lägga till projekt-CSS/JS](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html#context-aware-loading).
 
 * **[ContextHub-mappar](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md#organizing-segments)**: Möjlighet att skapa målgruppsmappar för att enkelt ordna, hitta och välja målgruppssegment som ska användas för målinriktningsfunktioner för ContextHub-erbjudanden.
 

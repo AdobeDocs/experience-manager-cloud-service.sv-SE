@@ -4,7 +4,7 @@ description: Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonf
 exl-id: e76fd283-12b2-4139-9e71-2e145b9620b1
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Skapa en demowebbplats i AEM baserat på ett bibliotek med förkonfigurerade mal
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om AEM Reference Demos Add-On-resan [Create Program](create-program.md) tog du det första konfigurationssteget för att skapa ett program för testningsändamål och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
+I det föregående dokumentet om AEM Reference Demos Add-On-resan, [Create Program](create-program.md), tog du det första konfigurationssteget för att skapa ett program för testningsändamål och använde en pipeline för att distribuera tilläggsinnehållet. Nu bör du:
 
 * Lär dig hur du använder Cloud Manager för att skapa ett program.
 * Lär dig hur du aktiverar tillägget Referensdemonstrationer för det nya programmet.
@@ -105,8 +105,8 @@ Nu när du har slutfört den här delen av AEM Reference Demo Add-On-resan bör 
 
 Nu kan du testa funktionerna i AEM med tilläggsinnehåll. Du har två alternativ för att fortsätta din resa:
 
-* Om du vill demonstrera och testa AEM Screens-innehåll till fullo kontrollerar du att du har distribuerat en webbplats baserad på webbplatsmallen **We.Cafe** enligt beskrivningen ovan och fortsätter med [Aktivera AEM Screens för din demowebbplats.](screens.md)
-* Om du bara använder för att demonstrera webbplatsinnehåll kan du fortsätta med [Hantera dina demowebbplatser](manage.md) där du kan lära dig mer om de verktyg som finns för att hantera dina demowebbplatser och hur du tar bort dem.
+* Om du vill demonstrera och testa AEM Screens-innehåll till fullo kontrollerar du att du har distribuerat en webbplats baserad på webbplatsmallen **We.Cafe** enligt beskrivningen ovan och fortsätter med [Aktivera AEM Screens för din demowebbplats](screens.md).
+* Om du bara använder för att demonstrera webbplatsinnehåll kan du fortsätta med [Hantera dina demowebbplatser](manage.md), där du får lära dig mer om de verktyg som finns för att hantera dina demowebbplatser och hur du tar bort dem.
 
 ## Ytterligare resurser {#additional-resources}
 

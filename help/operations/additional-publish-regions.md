@@ -4,7 +4,7 @@ description: Läs om hur AEM as a Cloud Service stöder ytterligare publicerings
 exl-id: b9ac3c6a-eb8b-461d-8f1d-a0356046a3f9
 feature: Operations
 role: Admin
-source-git-commit: c7362a77fd929d812db3cd40bf01763ed3bef02c
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Organisationer kan licensiera upp till tre ytterligare publiceringsregioner.
 >[!NOTE]
 >
 >* Den här funktionen är tillgänglig för Sites och Forms.
->* Den här funktionen kan inte tillämpas på [sandlådeprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md)
+>* Den här funktionen kan inte tillämpas på [sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
 >* Den här funktionen kräver att ditt program uppdateras till AEM version 12142 eller senare.
 
 ## Användningsexempel {#use-cases}

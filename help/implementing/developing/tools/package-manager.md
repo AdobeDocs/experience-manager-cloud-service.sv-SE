@@ -4,7 +4,7 @@ description: Lär dig grunderna i AE; pakethantering med Package Manager.
 feature: Administering, Developing
 role: Admin
 exl-id: b5fef273-912d-41f6-a698-0231eedb2b92
-source-git-commit: 7fdb4e3da7172e3a94f105c8b2a46ef77a565532
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 0%
@@ -197,7 +197,7 @@ När du skapar regler definierar du ett reguljärt uttryck (kallas även regex, 
 | include | Inkludera kommer att inkludera alla filer och mappar i den angivna katalogen som matchar det reguljära uttrycket. Inkludera **inkluderar inte** andra filer eller mappar från den angivna rotsökvägen. |
 | exclude | Uteslut exkluderar alla filer och mappar som matchar det reguljära uttrycket. |
 
-Paketfilter definieras oftast när du först [skapar paketet.](#creating-a-new-package) De kan dock även redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
+Paketfilter definieras oftast när du först [skapar paketet](#creating-a-new-package). De kan emellertid också redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
 
 >[!TIP]
 >
@@ -242,7 +242,7 @@ Det finns många åtgärder som kan utföras på ett paket.
 
 ### Skapa ett paket {#creating-a-new-package}
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Klicka på **Skapa paket**.
 
@@ -266,7 +266,7 @@ Det finns många åtgärder som kan utföras på ett paket.
 
    ![Nytt paket](assets/new-package.png)
 
-1. Klicka på **Redigera** för att definiera innehållet i [paketet.](#package-contents) Klicka på **Spara** när du har redigerat inställningarna.
+1. Klicka på **Redigera** för att definiera innehållet i [paketet](#package-contents). Klicka på **Spara** när du har redigerat inställningarna.
 
 1. Du kan nu [bygga](#building-a-package) ditt paket.
 
@@ -274,13 +274,13 @@ Det är inte obligatoriskt att omedelbart skapa paketet efter att det har skapat
 
 >[!TIP]
 >
->För att undvika timeout rekommenderar Adobe [att inte skapa stora paket.](#package-size)
+>Adobe rekommenderar att [inte skapar stora paket](#package-size) för att undvika timeout.
 
 ### Skapa ett paket {#building-a-package}
 
 Ett paket byggs ofta samtidigt som du [skapar paketet](#creating-a-new-package), men du kan gå tillbaka vid ett senare tillfälle för att antingen skapa eller återskapa paketet. Detta kan vara användbart om innehållet i databasen har ändrats eller om paketfiltren har ändrats.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -290,13 +290,13 @@ Ett paket byggs ofta samtidigt som du [skapar paketet](#creating-a-new-package),
 
 >[!TIP]
 >
->För att undvika timeout rekommenderar Adobe [att inte skapa stora paket.](#package-size)
+>Adobe rekommenderar att [inte skapar stora paket](#package-size) för att undvika timeout.
 
 ### Redigera ett paket {#edit-package}
 
 När ett paket har överförts till AEM kan du ändra dess inställningar.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -310,7 +310,7 @@ Du kan behöva [återskapa paketet](#building-a-package) för att uppdatera inne
 
 När ett paket har byggts kan det paketeras om. När du gör om en paketering ändras paketinformationen utan miniatyrbild, beskrivning och så vidare, utan att paketinnehållet ändras.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -324,7 +324,7 @@ När ett paket har byggts kan det paketeras om. När du gör om en paketering ä
 
 Eftersom alla versioner av ett paket visas i listan som alla andra paket, kan pakethanteraren hitta andra versioner av ett valt paket.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -334,7 +334,7 @@ Eftersom alla versioner av ett paket visas i listan som alla andra paket, kan pa
 
 När du har skapat ett paket kan du visa innehållet.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -348,7 +348,7 @@ När du har skapat ett paket kan du visa innehållet.
 
 ### Hämtar paket till filsystemet {#downloading-packages-to-your-file-system}
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -358,11 +358,11 @@ När du har skapat ett paket kan du visa innehållet.
 
 >[!TIP]
 >
->För att undvika timeout rekommenderar Adobe [att inte skapa stora paket.](#package-size)
+>Adobe rekommenderar att [inte skapar stora paket](#package-size) för att undvika timeout.
 
 ### Överför paket från filsystemet {#uploading-packages-from-your-file-system}
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Välj den gruppmapp som du vill att paketet ska överföras till.
 
@@ -370,7 +370,7 @@ När du har skapat ett paket kan du visa innehållet.
 
 1. Ange nödvändig information om det överförda paketet.
 
-   ![Dialogrutan Paketöverföring](assets/package-upload-dialog.png)
+   ![Dialogrutan Paketöverföring.](assets/package-upload-dialog.png)
 
    * **Paket** - Använd knappen **Bläddra..** för att välja det paket som krävs från det lokala filsystemet.
    * **Tvinga överföring** - Om det redan finns ett paket med det här namnet framtvingar det här alternativet överföringen och skriver över det befintliga paketet.
@@ -381,7 +381,7 @@ Paketinnehållet finns nu på AEM, men för att göra innehållet tillgängligt 
 
 >[!TIP]
 >
->För att undvika timeout rekommenderar Adobe [att inte skapa stora paket.](#package-size)
+>Adobe rekommenderar att [inte skapar stora paket](#package-size) för att undvika timeout.
 
 ### Verifierar paket {#validating-packages}
 
@@ -471,14 +471,14 @@ Med hjälp av den information som valideringen ger kan de påverkade noderna gra
 
 Paketvalidering kan göras på två olika sätt:
 
-* [Via pakethanterarens gränssnitt](#via-package-manager)
-* [Via HTTP-POST-begäran, till exempel med cURL](#via-post-request)
+* [Via pakethanterarens gränssnitt](#via-package-manager).
+* [Via HTTP-POST-begäran, till exempel med cURL](#via-post-request).
 
 Validering ska alltid ske efter att paketet har överförts, men innan det installeras.
 
 ##### Paketvalidering via Package Manager {#via-package-manager}
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -516,7 +516,7 @@ Vid validering via POST skickas svaret tillbaka som ett JSON-objekt.
 
 Paket definieras av sina filter. Du kan låta Pakethanteraren tillämpa filter från ett paket på det befintliga databasinnehållet för att visa vilket innehåll i databasen som omfattas av paketets filterdefinition.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
@@ -534,7 +534,7 @@ När du överför ett paket läggs bara paketinnehållet till i databasen, men d
 
 Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller det överskrivna innehållet automatiskt i Package Manager. Den här ögonblicksbilden installeras om du avinstallerar paketet.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen för det paket som du vill installera från paketlistan genom att klicka på paketnamnet.
 
@@ -556,7 +556,7 @@ När installationen är klar och slutförd uppdateras paketlistan och ordet **In
 
 ### Paket installeras om {#reinstalling-packages}
 
-När du installerar om paket utförs samma steg på ett redan installerat paket som bearbetas när [paketet installeras.](#installing-packages)
+När du installerar om paket utförs samma steg på ett redan installerat paket som bearbetas när [paketet](#installing-packages) först installeras.
 
 ### Filsystembaserad överföring och installation {#file-system-based-upload-and-installation}
 
@@ -576,7 +576,7 @@ Om instansen inte körs installeras paket som placeras i mappen `install` vid st
 
 När du avinstallerar paketet återställs innehållet i databasen till ögonblicksbilden som gjorts automatiskt av Package Manager före installationen.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen för det paket som du vill avinstallera från paketlistan genom att klicka på paketnamnet.
 
@@ -590,7 +590,7 @@ När du avinstallerar paketet återställs innehållet i databasen till ögonbli
 
 Om du tar bort ett paket tas endast dess information bort från Pakethanteraren. Om det här paketet redan har installerats tas det installerade innehållet inte bort.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen för det paket som du vill ta bort från paketlistan genom att klicka på paketnamnet.
 
@@ -602,7 +602,7 @@ Om du tar bort ett paket tas endast dess information bort från Pakethanteraren.
 
 Replikera innehållet i ett paket för att installera det på publiceringsinstansen.
 
-1. [Åtkomst till pakethanteraren.](#accessing)
+1. [Åtkomst till pakethanteraren](#accessing).
 
 1. Öppna paketinformationen för det paket som du vill replikera från paketlistan genom att klicka på paketnamnet.
 
@@ -614,6 +614,6 @@ Replikera innehållet i ett paket för att installera det på publiceringsinstan
 
 AEM kan användas för att skapa och dela innehåll i AEMaaCS-miljöer.
 
-[Programvarudistribution](https://downloads.experiencecloud.adobe.com) innehåller AEM paket som kan användas på den lokala utvecklingen AEM SDK. AEM som tillhandahålls vid programvarudistribution får inte installeras i AEMaaCS-molnmiljöer om inte Adobe Support uttryckligen har godkänt detta.
+[Programvarudistribution](https://downloads.experiencecloud.adobe.com) innehåller AEM paket för den lokala utvecklingen AEM SDK. AEM som tillhandahålls vid programvarudistribution får inte installeras i AEMaaCS-molnmiljöer om inte Adobe Support uttryckligen har godkänt detta.
 
-Mer information finns i [dokumentationen för programdistribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+Mer information finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).

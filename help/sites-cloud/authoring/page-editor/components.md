@@ -5,7 +5,7 @@ exl-id: a8118329-1330-49b0-a3f8-a27774f1c5df
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 0%
@@ -26,7 +26,7 @@ AEM innehåller en mängd färdiga komponenter som ger omfattande funktionalitet
 
 ## Allmän användning {#general-usage}
 
-Komponenterna är tillgängliga på fliken **Komponenter** på sidpanelen i sidredigeraren när du [redigerar en sida.](/help/sites-cloud/authoring/page-editor/edit-content.md)
+Komponenterna är tillgängliga på fliken **Komponenter** på sidpanelen i sidredigeraren när du [redigerar en sida](/help/sites-cloud/authoring/page-editor/edit-content.md).
 
 Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sedan redigera den med:
 
@@ -34,7 +34,7 @@ Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sed
 * [Redigera innehåll](/help/sites-cloud/authoring/page-editor/edit-content.md)
 * [Redigera innehåll - helskärmsläge](/help/sites-cloud/authoring/page-editor/edit-content.md#edit-content-full-screen-mode)
 
-Mer information om hur du lägger till komponenter på en sida finns i [Redigera sidinnehåll.](/help/sites-cloud/authoring/page-editor/edit-content.md)
+Mer information om hur du lägger till komponenter på en sida finns i [Redigera sidinnehåll](/help/sites-cloud/authoring/page-editor/edit-content.md).
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 

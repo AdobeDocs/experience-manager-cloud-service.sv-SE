@@ -8,13 +8,13 @@ feature: Adaptive Forms
 role: User
 hide: true
 hidefromtoc: true
-source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
+exl-id: 9496e4f5-ed74-4b40-b8f9-17153170af66
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 0%
 
 ---
-
 
 # Publicera och avpublicera formulär och dokument{#publishing-and-unpublishing-forms-and-documents}
 
@@ -122,7 +122,7 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 
 ## Automatisera publicering och avpublicering för Forms &amp; Documents {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
-I [!DNL AEM Forms] kan du schemalägga publicering och avpublicering av resurser för Forms &amp; Documents. Du kan ange schemat i metadataredigeraren. Mer information om hur du hanterar metadata för formulär finns i [Hantera metadata för formulär.](manage-form-metadata.md)
+I [!DNL AEM Forms] kan du schemalägga publicering och avpublicering av resurser för Forms &amp; Documents. Du kan ange schemat i metadataredigeraren. Mer information om hur du hanterar metadata för formulär finns i [Hantera metadata för formulär](manage-form-metadata.md).
 
 Följ de här stegen för att schemalägga datum och tid för publicering och avpublicering av Forms- och dokumentresurser:
 

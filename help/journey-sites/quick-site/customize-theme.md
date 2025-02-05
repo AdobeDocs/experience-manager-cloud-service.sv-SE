@@ -5,7 +5,7 @@ exl-id: b561bee0-3a64-4dd3-acb8-996f0ca5bfab
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '954'
 ht-degree: 0%
@@ -111,7 +111,7 @@ Du kan fortsätta att anpassa temat baserat på de krav som du har fått från A
 När anpassningarna är klara kan du implementera dem i AEM Git-databasen. Först måste du klona databasen till din lokala dator.
 
 1. Navigera från kommandoraden till den plats där du vill klona svaret.
-1. Kör det kommando som du [ tidigare har hämtat från Cloud Manager.](retrieve-access.md) Det ska likna `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`. Använd Git-användarnamnet och lösenordet som [du hämtade i föregående del av den här resan.](retrieve-access.md)
+1. Kör kommandot som du [tidigare har hämtat från Cloud Manager](retrieve-access.md). Det ska likna `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`. Använd Git-användarnamnet och lösenordet som [du hämtade i den tidigare delen av den här resan](retrieve-access.md).
 
    ![Klona repo](assets/clone-repo.png)
 
@@ -138,7 +138,7 @@ Nu när du är klar med den här delen av AEM snabbwebbplats:
 * Se hur du testar dina temaanpassningar med verkligt AEM innehåll via lokala utkast.
 * Lär dig hur du implementerar dina ändringar i AEM Git-databasen.
 
-Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM snabbwebbplats genom att gå igenom dokumentet [Distribuera ditt anpassade tema](deploy-theme.md) där du får lära dig hur du distribuerar temat med hjälp av frontendpipeline.
+Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM snabbwebbplats genom att gå igenom dokumentet [Distribuera ditt anpassade tema](deploy-theme.md), där du får lära dig hur du distribuerar temat med hjälp av frontendpipeline.
 
 ## Ytterligare resurser {#additional-resources}
 

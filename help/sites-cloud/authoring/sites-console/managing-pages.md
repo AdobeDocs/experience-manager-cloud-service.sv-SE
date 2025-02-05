@@ -5,7 +5,7 @@ exl-id: 355b60c5-a82e-4bbb-98ea-bfcc0126b7fd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1271'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du hanterar webbplatsens sidor i AEM, inklusive flyttning, kopierin
 
 >[!TIP]
 >
->Innan du börjar hantera sidorna bör du känna till [hur sidorna är ordnade i AEM.](/help/sites-cloud/authoring/sites-console/organizing-pages.md)
+>Innan du börjar hantera sidorna bör du bekanta dig med [hur sidorna är ordnade i AEM](/help/sites-cloud/authoring/sites-console/organizing-pages.md).
 
 >[!TIP]
 >
@@ -32,9 +32,9 @@ Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministrat
 
 ## Öppna en sida för redigering {#opening-a-page-for-editing}
 
-När du har [skapat en sida](/help/sites-cloud/authoring/sites-console/creating-pages.md) eller navigerat till en befintlig sida med [konsolen **Platser** ](/help/sites-cloud/authoring/sites-console/introduction.md) kan du öppna den för redigering.
+När du har [skapat en sida](/help/sites-cloud/authoring/sites-console/creating-pages.md) eller navigerat till en befintlig sida med [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md) kan du öppna den för redigering.
 
-1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md).
 1. Navigera till sidan som du vill redigera.
 1. Välj sida genom att använda något av följande:
 
@@ -53,7 +53,7 @@ När du har [skapat en sida](/help/sites-cloud/authoring/sites-console/creating-
 
 Du kan kopiera en sida och alla dess undersidor till en ny plats:
 
-1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md).
 1. Navigera till sidan som du vill kopiera.
 1. Välj sida med hjälp av:
 
@@ -95,7 +95,7 @@ Proceduren för att flytta eller byta namn på en sida är i princip densamma oc
 
 I AEM finns funktioner för att uppdatera interna länkar som refererar till sidan som byter namn/flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
-1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md).
 1. Navigera till sidan som du vill flytta.
 1. Välj sida med hjälp av:
 
@@ -181,7 +181,7 @@ Status för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs St
 
 ### Ta bort en sida {#deleting-a-page}
 
-1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md).
 1. Navigera till sidan som du vill ta bort.
 1. Använd [markeringsläget](/help/sites-cloud/authoring/basic-handling.md#viewing-and-selecting-resources) för att markera önskad sida och använd sedan **Ta bort** i verktygsfältet:
 
@@ -213,7 +213,7 @@ Du kan [låsa/låsa upp en sida](/help/sites-cloud/authoring/page-editor/edit-co
 
 Du kan skapa mappar som hjälper dig att ordna dina filer och sidor.
 
-1. Öppna [konsolen **Platser**.](/help/sites-cloud/authoring/sites-console/introduction.md)
+1. Öppna [konsolen **Platser**](/help/sites-cloud/authoring/sites-console/introduction.md).
 1. Navigera till önskad plats.
 1. Välj **Skapa** i verktygsfältet för att öppna alternativlistan
 1. Välj **Mapp** för att öppna dialogrutan. Här kan du ange **Namn** och **Titel**:

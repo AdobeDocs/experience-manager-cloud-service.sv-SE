@@ -3,13 +3,13 @@ title: Välja en redigeringsmetod
 description: Lär dig viktiga saker när du bestämmer hur du ska skapa innehåll i AEM för att hjälpa dig att fatta det bästa beslutet för innehållsförfattarna.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 15eef2d3790d1c0cf5414ca55b191de5b644fed0
+exl-id: a75e7051-e5ec-4d2a-848a-a66989e2f30b
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
 
 ---
-
 
 # Välja en redigeringsmetod {#authoring-methods}
 
@@ -54,7 +54,7 @@ Det första du bör tänka på är hur du vill leverera ditt innehåll. Edge Del
 Detta kan hjälpa dig att avgöra om du behöver:
 
 * [AEM som headless CMS](/help/headless/introduction.md) med Content Fragment Editor och/eller Universal Editor.
-* AEM Edge Delivery Services som använder [dokumentbaserad redigering](/help/edge/docs/authoring.md) eller [WYSIWYG-redigering med den universella redigeraren.](/help/edge/wysiwyg-authoring/authoring.md)
+* AEM Edge Delivery Services med [dokumentbaserad redigering](/help/edge/docs/authoring.md) eller [WYSIWYG med den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md).
 
 ## Inställningar för innehållsredigering {#content-authoring}
 
@@ -64,8 +64,8 @@ Du bör tänka på hur du vill skapa ditt innehåll. Följande beslutsträd kan 
 
 Detta kan hjälpa dig att avgöra om du behöver:
 
-* AEM Edge Delivery Services med den [dokumentbaserade redigeringen.](/help/edge/docs/authoring.md)
-* [WYSIWYG-redigering med den universella redigeraren.](/help/edge/wysiwyg-authoring/authoring.md)
+* AEM Edge Delivery Services med [dokumentbaserad redigering](/help/edge/docs/authoring.md).
+* [WYSIWYG-redigering med Universal Editor](/help/edge/wysiwyg-authoring/authoring.md).
 
 ## Projektmål {#project-goals}
 
@@ -73,7 +73,7 @@ Hur ser framgångarna ut för dig? Hur definierar man framgången för projektet
 
 * Du kanske behöver kunna ge fler personer möjlighet att skapa innehåll, men du vill undvika utbildning i en ny verktygsuppsättning. (Tänk dokumentbaserad redigering.)
 * Du kanske behöver öka mängden innehåll du genererar. (Tänk dokumentbaserad redigering.)
-* Du kanske behöver fokusera på den visuella innehållslayouten, men minimera behovet av att kunna koda. (Tänk WYSIWYG-redigering.)
+* Du kanske behöver fokusera på den visuella innehållslayouten, men minimera behovet av att kunna koda. (Tänk dig WYSIWYG.)
 
 Tydliga projektmål i början av implementeringen hjälper er att fatta ett välgrundat beslut om er utvecklingsmetod.
 
@@ -81,6 +81,6 @@ Tydliga projektmål i början av implementeringen hjälper er att fatta ett väl
 
 Ta till sist hänsyn till de specifika utmaningar du står inför idag när du skapar ditt innehåll.
 
-* Du kanske råkar ut för duplicerat arbete med innehåll som skapats utanför CMS-systemet, som sedan måste importeras eller kopieras och klistras in. (Tänk dokumentbaserad redigering.)
-* Kanske behöver du korta ned tiden för skribenter som behöver utbildning i hur man använder ett CMS. (Tänk dokumentbaserad redigering.)
-* Dina författare kanske ofta behöver redigera den visuella layouten för ditt innehåll, vilket kräver konstant utvecklarstöd. (Tänk WYSIWYG-redigering.)
+* Du kanske råkar ut för duplicerat arbete med innehåll som skapats utanför CMS, som sedan måste importeras eller kopieras och klistras in. (Tänk dokumentbaserad redigering.)
+* Du kanske behöver korta ned tiden för skribenter i utbildning om hur man använder CMS. (Tänk dokumentbaserad redigering.)
+* Dina författare kanske ofta behöver redigera den visuella layouten för ditt innehåll, vilket kräver konstant utvecklarstöd. (Tänk dig WYSIWYG.)

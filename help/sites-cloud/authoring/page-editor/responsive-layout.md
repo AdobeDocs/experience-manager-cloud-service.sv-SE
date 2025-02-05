@@ -5,7 +5,7 @@ exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1740'
 ht-degree: 5%
@@ -137,7 +137,7 @@ En **layoutbehållare** är ett styckesystem som:
 
 >[!NOTE]
 >
->Om den inte redan är tillgänglig måste **layoutbehållaren** uttryckligen [aktiveras för ett styckesystem/en styckesida.](/help/sites-cloud/administering/responsive-layout.md)
+>Om den inte redan är tillgänglig måste **layoutbehållaren** uttryckligen [aktiveras för ett styckesystem/en sida](/help/sites-cloud/administering/responsive-layout.md).
 
 1. **Layoutbehållaren** är tillgänglig som en standardkomponent i [komponentläsaren](/help/sites-cloud/authoring/page-editor/editor-side-panel.md#components-browser). Härifrån kan du dra den till önskad plats på sidan efter vilken du kan se platshållaren **Dra komponenter hit**.
 1. Du kan sedan lägga till komponenter i layoutbehållaren. De här komponenterna innehåller det faktiska innehållet:
@@ -184,7 +184,7 @@ Om du vill konfigurera layouten för ett responsivt rutnät som implementeras me
 * Genom att använda [lägesmenyn i verktygsfältet](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector) och välja **layoutläget**
    * Välj **layoutläget** på samma sätt som du växlar till **redigeringsläget** eller **målinriktningsläget**.
    * **Layoutläget** är beständigt och du lämnar inte **layoutläget** förrän du väljer ett annat läge med lägesväljaren.
-* När [redigerar en enskild komponent.](/help/sites-cloud/authoring/page-editor/edit-content.md#editing-component-layout)
+* När [redigerar en enskild komponent](/help/sites-cloud/authoring/page-editor/edit-content.md#editing-component-layout).
    * Genom att använda alternativet **Layout** i snabbåtgärdsmenyn för komponenten kan du växla till **Layout** -läget.
    * Läget **Layout** kvarstår när komponenten redigeras och återgår till läget **Redigera** när fokus har ändrats till en annan komponent.
 

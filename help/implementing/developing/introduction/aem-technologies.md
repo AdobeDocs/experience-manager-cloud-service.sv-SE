@@ -4,7 +4,7 @@ description: En översikt över den tekniska grunden för AEM, inklusive hur AEM
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -17,7 +17,7 @@ AEM är en stabil plattform som bygger på beprövade, skalbara och flexibla tek
 
 >[!TIP]
 >
->Adobe rekommenderar att du slutför självstudiekursen [Komma igång med att utveckla AEM Sites - WKND innan du börjar använda de viktigaste teknikerna i AEM.](develop-wknd-tutorial.md)
+>Adobe rekommenderar att du slutför självstudiekursen [Komma igång med att utveckla AEM Sites - WKND](develop-wknd-tutorial.md) innan du börjar använda AEM kärnteknik.
 
 ## Grundläggande {#fundamentals}
 

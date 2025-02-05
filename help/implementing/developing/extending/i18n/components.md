@@ -5,7 +5,8 @@ topic-tags: components
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: b55f7260628f759de2718290624cdc82da7a2961
+exl-id: 0276b310-b9a9-44b6-b295-06c51ef17208
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -20,7 +21,7 @@ Internationalisera dina komponenter och dialogrutor så att deras gränssnittsst
 
 Använd följande process för att internationalisera dina komponenter och ange användargränssnittet på olika språk:
 
-1. [Implementera dina komponenter med kod som internationaliserar strängar.](/help/implementing/developing/extending/i18n/dev.md) Koden identifierar strängarna som ska översättas och väljer språket som ska användas vid körning.
+1. [Implementera dina komponenter med kod som internationaliserar strängar](/help/implementing/developing/extending/i18n/dev.md). Koden identifierar de strängar som ska översättas och väljer vilket språk som ska användas vid körningen.
 1. Skapa ordlistor och lägg till de engelska strängarna som ska översättas.
 1. Exportera ordlistan till XLIFF-format, översätt strängarna och importera sedan XLIFF-filerna tillbaka till AEM.
 1. Lägg in ordboken i processen för versionshantering av ditt program.

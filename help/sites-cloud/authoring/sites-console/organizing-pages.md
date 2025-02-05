@@ -5,7 +5,7 @@ exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '799'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 # Ordna sidor {#creating-and-organizing-pages}
 
-Lär dig hur du organiserar din webbplats med AEM. När du har förstått hur du behöver ordna sidorna kan du [skapa nya sidor](/help/sites-cloud/authoring/sites-console/creating-pages.md) och [hantera befintliga sidor.](/help/sites-cloud/authoring/sites-console/managing-pages.md)
+Lär dig hur du organiserar din webbplats med AEM. När du har förstått hur du behöver ordna sidorna kan du [skapa nya sidor](/help/sites-cloud/authoring/sites-console/creating-pages.md) och [hantera befintliga sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md).
 
 {{edge-delivery-authoring}}
 
@@ -51,7 +51,7 @@ I följande exempel visas ett exempel från webbplatsen [WKND Tutorial](https://
    /...
 ```
 
-Den här strukturen kan visas i konsolen [**Platser**,](/help/sites-cloud/authoring/sites-console/introduction.md) där du kan navigera bland sidorna på webbplatsen och utföra åtgärder på sidorna.
+Den här strukturen kan visas från [**webbplatskonsolen**](/help/sites-cloud/authoring/sites-console/introduction.md), där du kan navigera bland sidorna på webbplatsen och utföra åtgärder på sidorna.
 
 ## Konventioner för sidnamngivning {#page-naming-conventions}
 
@@ -130,7 +130,7 @@ AEM innehåller flera färdiga mallar. Vilka mallar som är tillgängliga beror 
 
 ## Komponenter {#components}
 
-[Komponenter](/help/implementing/developing/components/overview.md) är de element som AEM tillhandahåller, så att du kan lägga till specifika typer av innehåll. AEM levereras med en rad färdiga komponenter, som kallas [kärnkomponenterna](/help/implementing/developing/components/overview.md#core-components), som innehåller omfattande funktioner. Några exempel på komponenterna är:
+[Komponenter](/help/implementing/developing/components/overview.md) är de element som AEM tillhandahåller, så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad färdiga komponenter, som kallas [kärnkomponenter](/help/implementing/developing/components/overview.md#core-components), som innehåller omfattande funktioner. Några exempel på komponenterna är:
 
 * Text
 * Bild

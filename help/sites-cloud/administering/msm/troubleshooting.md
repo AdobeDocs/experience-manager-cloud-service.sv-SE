@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 50f02f4f-a347-4619-ac90-b3136a7b1782
 solution: Experience Manager Sites
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -91,4 +91,4 @@ Om en fristående sida hittas väljer MSM att byta namn på sidan och skapar en 
 
 En sådan fristående sida i ett Live Copy-underträd är vanligtvis resultatet av en **Koppla loss** -åtgärd, eller så togs den tidigare Live Copy-sidan bort manuellt av en författare och återskapades med samma namn.
 
-Du undviker detta genom att använda funktionen **Gör uppehåll** i Live-kopian i stället för **Koppla loss**. Mer information om åtgärden **Koppla loss** finns i [den här artikeln.](creating-live-copies.md)
+Du undviker detta genom att använda funktionen **Gör uppehåll** i Live-kopian i stället för **Koppla loss**. Mer information om åtgärden **Koppla loss** finns i [den här artikeln](creating-live-copies.md).

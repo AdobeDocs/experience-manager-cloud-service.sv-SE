@@ -4,7 +4,7 @@ description: Läs om hur du söker efter och identifierar resurser i AEM Assets-
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1936'
 ht-degree: 0%
@@ -142,7 +142,7 @@ Så här skapar du nya resurser med [!DNL Adobe Firefly]:
 
    ![Integrering med Firefly](assets/firefly-integration.png)
 
-   De nya resurserna har genererats. Du kan dessutom ändra bildbeskrivningen genom att skriva den nya textrutan i beskrivningsrutan. [Lär dig hur du skriver en bra AI-prompt för att generera extraordinärt och relevant innehåll.](https://helpx.adobe.com/in/firefly/using/tips-and-tricks.html) Du kan även [redigera bilder med olika funktioner, som att ändra format, bilddimensioner och mycket annat.](https://helpx.adobe.com/in/firefly/using/text-to-image.html)
+   De nya resurserna har genererats. Du kan dessutom ändra bildbeskrivningen genom att skriva den nya textrutan i beskrivningsrutan. [Lär dig hur du skriver en bra AI-uppmaning för att generera extraordinärt och relevant innehåll](https://helpx.adobe.com/in/firefly/using/tips-and-tricks.html). Du kan även [redigera bilden med olika andra funktioner, som att ändra format, bilddimensioner och mer](https://helpx.adobe.com/in/firefly/using/text-to-image.html).
 
    ![Integrering med Firefly](assets/bugatti-type-57.png)
 

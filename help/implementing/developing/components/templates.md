@@ -4,7 +4,7 @@ description: Lär dig hur redigerbara mallar används när du skapar en sida, de
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 33eb71b2828314ee2c75206ef7034313e2638360
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '3443'
 ht-degree: 0%
@@ -225,7 +225,7 @@ Om du vill skapa en mapp kan du göra det här:
 
 >[!NOTE]
 >
->I [Konfigurationsläsaren ](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) kan du redigera den globala mappen och aktivera alternativet **Redigerbara mallar** om du vill skapa mallar i den här mappen, men det är inte den bästa metoden.
+>I [Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md#using-configuration-browser) kan du redigera den globala mappen och aktivera alternativet **Redigerbara mallar** om du vill skapa mallar i den här mappen, men detta är inte den bästa metoden.
 
 ### Behörighetslistor och grupper {#acls-and-groups}
 
@@ -467,7 +467,7 @@ Definierar det ursprungliga innehåll som en ny sida kommer att ha när den skap
 
 ### Layout {#layout}
 
-När du [redigerar en mall kan du definiera layouten](/help/sites-cloud/authoring/page-editor/templates.md), använder detta [responsiv standardlayout,](/help/sites-cloud/administering/responsive-layout.md) som kan [konfigureras på sidan av innehållsförfattaren.](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
+När du [redigerar en mall kan du definiera layouten](/help/sites-cloud/authoring/page-editor/templates.md), använder detta [den responsiva standardlayouten](/help/sites-cloud/administering/responsive-layout.md) som kan [konfigureras på sidan av innehållsförfattaren](/help/sites-cloud/authoring/page-editor/responsive-layout.md).
 
 ### Innehållsprinciper {#content-policies}
 

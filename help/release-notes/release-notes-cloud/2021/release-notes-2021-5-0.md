@@ -4,7 +4,7 @@ description: Versionsinformation för version 2021.5.0 av  [!DNL Adobe Experienc
 exl-id: 3f9d7339-7e37-4702-821e-f2b03cd7e224
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1355'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Följande version (2021.6.0) kommer att vara den 28 juni 2021.
 
 #### Nyheter i Dynamic Media {#what-is-new-dm}
 
-* Med DPR (Smart Imaging DPR) (Device Pixel Ratio) och optimering av nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) och [Bildoptimering med nästa generations bildformat WebP och AVIF.](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+* Med DPR (Smart Imaging DPR) (Device Pixel Ratio) och optimering av nätverksbandbredd kan du leverera bilder av högsta kvalitet effektivt på enheter med högupplösta skärmar och begränsad nätverksbandbredd. Mer information finns i [Vanliga frågor om smart bildbehandling](/help/assets/dynamic-media/imaging-faq.md) och [Bildoptimering med nästa generationens bildformat WebP och AVIF](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4).
 * Introducerat stöd för nästa generationens AVIF-bildformat i Dynamic Media-leverans (fmt URL-modifierare).
 
 ## [!DNL Adobe Experience Manager Forms] som en [!DNL Cloud Service] {#forms}

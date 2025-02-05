@@ -4,13 +4,13 @@ description: Förstå hur Edge Delivery Services utvidgar redigerings- och publi
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: b3497f87446ca4c1c71d48f29aebcaa882feb898
+exl-id: 7747d6f7-18e4-4713-baea-bcfa94f54934
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # AEM Sites och Edge Delivery Services {#sites-and-edge}
 
@@ -22,7 +22,7 @@ Förutom all den kraft och alla funktioner i [AEM Sites as a Cloud Service](/hel
 
 ## Vad är Edge Delivery Services? {#what-is-edge}
 
-Edge Delivery Servicens levererar exceptionella upplevelser som skapar engagemang och konverteringar genom att leverera slagkraftiga upplevelser som är snabba att skapa och utveckla. Det är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Läs mer om Edge Delivery Services i dokumentet [Översikt över Edge Delivery Services.](/help/edge/overview.md)
+Edge Delivery Servicens levererar exceptionella upplevelser som skapar engagemang och konverteringar genom att leverera slagkraftiga upplevelser som är snabba att skapa och utveckla. Det är en sammanslagen uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera och publicera och nya webbplatser snabbt lanseras. Läs mer om Edge Delivery Services i dokumentet [Översikt över Edge Delivery Services](/help/edge/overview.md).
 
 Med Edge Delivery Services och AEM Sites as a Cloud Service kan dina projekt dra nytta av följande:
 
@@ -51,9 +51,9 @@ Edge Delivery Services gör det också snabbare att skapa innehåll genom nya re
 
 ### Universell redigerare {#universal-editor}
 
-Universal Editor erbjuder en smidig, WYSIWYG-redigeringsfunktion som kan användas för att skapa valfritt innehåll.
+Universell redigerare erbjuder en smidig redigeringsfunktion för vad-du-se-is-what-you-get (WYSIWYG) som kan användas för att skapa vilket innehåll som helst.
 
-Läs dokumentet [WYSIWYG Content Authoring for Edge Delivery Services](/help/edge/wysiwyg-authoring/authoring.md) om du vill veta mer om innehållsredigering i den universella redigeraren.
+Läs dokumentet [WYSIWYG Content Authoring for Edge Delivery Services](/help/edge/wysiwyg-authoring/authoring.md) om du vill veta mer om hur du skapar innehåll med den universella redigeraren.
 
 ### Dokumentbaserad redigering {#document-authoring}
 

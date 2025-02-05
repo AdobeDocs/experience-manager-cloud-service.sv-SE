@@ -4,7 +4,7 @@ description: Lär dig mer om den universella redigeraren med praktiska erfarenhe
 exl-id: 97e1395f-b51e-4cee-b1d0-2466a08f96af
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -24,12 +24,12 @@ Lär dig mer om den universella redigeraren med praktiska erfarenheter med Secur
 
 Installationen av SecurBank-appen är enkel, men eftersom den berör många delar av AEM as a Cloud Service finns det ett antal steg. Här följer en översikt över de viktigaste stegen.
 
-1. [Skapa ett sandlådeprogram i Cloud Manager.](#create-sandbox-program)
-1. [Klona programmets Git-databas och uppdatera med SecurBank-AEM projektinnehåll.](#clone-and-update)
-1. [Kör pipelinen för att distribuera SecurBank-AEM.](#run-pipeline)
-1. [Hämta Cloud Manager-autentiseringsuppgifter för lokal webbappsutveckling.](#retrieve-credentials)
-1. [Hämta och konfigurera SecurBanks webbapp.](#download-web-app)
-1. [Kör webbappen SecurBank.](#run-web-app)
+1. [Skapa ett sandlådeprogram i Cloud Manager](#create-sandbox-program).
+1. [Klona programmets Git-databas och uppdatera med SecurBank-AEM projektinnehåll](#clone-and-update).
+1. [Kör pipelinen för att distribuera SecurBank-AEM](#run-pipeline).
+1. [Hämta Cloud Manager-autentiseringsuppgifter för lokal webbprogramsutveckling](#retrieve-credentials).
+1. [Hämta och konfigurera SecurBanks webbprogram](#download-web-app).
+1. [Kör SecurBank-webbprogrammet](#run-web-app).
 
 I följande avsnitt beskrivs de enskilda uppgifter som krävs.
 
@@ -42,13 +42,13 @@ Du behöver ett nytt Cloud Manager-program där du kan installera SecurBank.
 1. Skapa ett nytt sandlådeprogram för programmet SecurBank.
 
    * Använd standardalternativen när du väljer **Lösningar och tillägg**.
-   * Mer information om hur du skapar ett sandlådeprogram finns i dokumentet [Skapa sandlådeprogram.](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md)
+   * Mer information om hur du skapar ett sandlådeprogram finns i dokumentet [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md).
 
 ### Klona programmets Git-databas och uppdatera med SecurBank-AEM projektinnehåll. {#clone-and-update}
 
 1. När programmet har skapats öppnar du det och på fliken **Databaser** trycker eller klickar på knappen **Åtkomst till replikinformation** för att öppna dialogrutan **Databasinformation** och visar de inloggningsuppgifter som krävs för åtkomst till Git-databasen för sandlådemiljön.
 
-   * Mer information om hur du får åtkomst till din databasinformation finns i dokumentet [Åtkomst till databaser.](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
+   * Mer information om hur du får åtkomst till din databasinformation finns i dokumentet [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
 1. Klona databasen på den lokala datorn med hjälp av inloggningsuppgifterna i dialogrutan **Databasinformation**.
 
@@ -71,7 +71,7 @@ Med det AEM projektet för SecurBank för sandlådedatabasen kan det distribuera
 1. Gå tillbaka till fliken **Översikt** i ditt sandlådeprogram i Cloud Manager och kör pipelinen för icke-produktion i helhög.
 
    * Avmarkera alla alternativ för pipeline-körningen.
-   * Mer information om att köra rörledningar finns i dokumentet [Hantera rörledningar.](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines)
+   * Mer information om att köra rörledningar finns i dokumentet [Hantera rörledningar](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines).
 
 ### Hämta Cloud Manager-autentiseringsuppgifter för lokal webbappsutveckling. {#retrieve-credentials}
 

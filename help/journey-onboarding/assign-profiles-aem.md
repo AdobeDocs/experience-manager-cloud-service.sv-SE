@@ -4,7 +4,7 @@ description: När du har konfigurerat dina molnresurser kan du ge ditt team åtk
 feature: Onboarding
 role: Admin, User, Developer
 exl-id: c00f5d28-85af-4bd3-a50c-913d1342241c
-source-git-commit: bc3c054e781789aa2a2b94f77b0616caec15e2ff
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 >title="Tilldela AEM produktprofiler"
 >abstract="Du har inte rätt att använda Experience Manager Assets. Kontakta administratören."
 
-I den här delen av [introduktionsresan ](overview.md) får du lära dig att ge ditt team åtkomst till AEM med hjälp av AEM produktprofiler.
+I den här delen av [introduktionsresan](overview.md) får du lära dig att ge ditt team åtkomst till AEM med hjälp av AEM produktprofiler.
 
 ## Syfte {#objective}
 
-När du har läst det föregående dokumentet på den här introduktionsresan, [Skapa miljöer](create-environments.md) och har konfigurerat dina molnresurser, kan du ge ditt team åtkomst till AEM med AEM produktprofiler. Som systemadministratör gör du detta genom att tilldela AEM produktprofiler.
+När du har läst det föregående dokumentet på den här introduktionsresan, [Skapa miljöer](create-environments.md), och har konfigurerat dina molnresurser, kan du ge ditt team åtkomst till AEM med hjälp av AEM produktprofiler. Som systemadministratör gör du detta genom att tilldela AEM produktprofiler.
 
 När du har läst det här dokumentet bör du förstå:
 
@@ -64,7 +64,7 @@ Innan du börjar läsa det här avsnittet bör du ha tillgång till följande in
 
 Följ de här stegen för att se de AEM produktprofilerna från Admin Console.
 
-1. Logga in i Admin Console på [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
+1. Logga in på Admin Console på [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
 1. På sidan **Översikt** väljer du **Adobe Experience Manager as a Cloud Service** från kortet **Produkter och tjänster**.
 

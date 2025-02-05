@@ -4,7 +4,7 @@ description: AEM innehåller biblioteksmappar på klientsidan, som gör att du k
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2497'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Använda bibliotek på klientsidan i AEM as a Cloud Service {#using-client-side-libraries}
 
-Digitala upplevelser är till stor del beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Med AEM-bibliotek (klientbibliotek) kan du ordna och centralt lagra dessa klientbibliotek i databasen. I kombination med [front end-byggprocessen i AEM Project-arkitypen ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) blir det enkelt att hantera din front end-kod för ditt AEM.
+Digitala upplevelser är till stor del beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Med AEM-bibliotek (klientbibliotek) kan du ordna och centralt lagra dessa klientbibliotek i databasen. I kombination med [front end-byggprocessen i AEM Project-arkitypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) blir det enkelt att hantera din front end-kod för ditt AEM.
 
 Fördelarna med att använda klienter i AEM är bland annat:
 
@@ -27,7 +27,7 @@ Clientlibs är den inbyggda lösningen för CSS och JavaScript från AEM.
 
 >[!TIP]
 >
->Utvecklare som skapar CSS och JavaScript för AEM-projekt bör också bekanta sig med [AEM Project Archetype och dess automatiserade front end-byggprocess.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
+>Utvecklare som skapar CSS och JavaScript för AEM-projekt bör också bekanta sig med [AEM Project Archetype och dess automatiserade front-end-byggprocess](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
 ## Vad är klientbibliotek? {#what-are-clientlibs}
 
@@ -37,7 +37,7 @@ AEM samlar in webbplatsens CSS och JavaScript i en enda fil, på en central plat
 
 ## Front-End Development for AEM as a Cloud Service {#fed-for-aemaacs}
 
-Alla JavaScript-, CSS- och andra frontresurser ska bevaras i modulen [ui.front i AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) Med den flexibla arkitekturen kan du använda dina moderna webbverktyg för att skapa och hantera de här resurserna.
+Alla JavaScript-, CSS- och andra frontresurser ska bevaras i modulen [ui.front i AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html). Tack vare den flexibla arkitekturen kan du använda dina moderna webbverktyg för att skapa och hantera dessa resurser.
 
 Arketypen kan sedan kompilera resurserna till en enda CSS- och JS-fil, och bädda in dem automatiskt i en `cq:clientLibraryFolder` i databasen.
 
@@ -92,7 +92,7 @@ En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås.
 1. Om du behöver hantera statiska resurser skapar du en undermapp med namnet `resources` under klientbiblioteksmappen.
    * Om du lagrar statiska resurser var som helst utom under mappen `resources` kan de inte refereras till på en publiceringsinstans.
 1. Lägg till källfiler i biblioteksmappen.
-   * Detta görs vanligtvis i den inledande byggprocessen för [AEM Project Archetype.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)
+   * Detta görs vanligtvis i den inledande byggprocessen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
    * Du kan ordna källfiler i undermappar om du vill.
 1. Markera klientbiblioteksmappen och klicka på **Skapa > Skapa fil**.
 1. Skriv något av följande filnamn i rutan Filnamn och klicka på OK:
@@ -109,7 +109,7 @@ En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås.
 
 ## Serverar bibliotek på klientsidan {#serving-clientlibs}
 
-När klientbiblioteksmappen har [konfigurerats enligt behov](#creating-clientlib-folders) kan dina klienter begäras via proxy. Exempel:
+När klientbiblioteksmappen har [konfigurerats enligt ](#creating-clientlib-folders) kan dina klienter begäras via proxy. Exempel:
 
 * Du har ett klientlib i `/apps/myproject/clientlibs/foo`
 * Du har en statisk bild i `/apps/myprojects/clientlibs/foo/resources/icon.png`
@@ -137,7 +137,7 @@ This is possible. Still need detail.
 
 ## Klientbibliotek på författare jämfört med Publish {#clientlibs-author-publish}
 
-De flesta klientlibs krävs i AEM publiceringsinstans. Det vill säga att de flesta kundens syften är att skapa en användarupplevelse av innehållet. För klientbibliotek på publiceringsinstanser kan [klientbyggverktygen](#fed-for-aemaacs) användas och distribueras via [klientbiblioteksmappar enligt beskrivningen ovan.](#creating-clientlib-folders)
+De flesta klientlibs krävs i AEM publiceringsinstans. Det vill säga att de flesta kundens syften är att skapa en användarupplevelse av innehållet. För klientbibliotek på publiceringsinstanser kan [klientbyggverktygen](#fed-for-aemaacs) användas och distribueras via [klientbiblioteksmappar enligt beskrivningen ovan](#creating-clientlib-folders).
 
 Det finns dock tillfällen då klientbibliotek kan behövas för att anpassa redigeringsupplevelsen. Om du till exempel anpassar en dialogruta kan det krävas att du distribuerar små bitar av CSS eller JS till AEM.
 

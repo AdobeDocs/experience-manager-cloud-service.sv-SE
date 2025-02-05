@@ -5,7 +5,7 @@ feature: Language Copy
 role: Admin
 exl-id: ca3c50f9-005e-4871-8606-0cfd3ed21936
 solution: Experience Manager Sites
-source-git-commit: 2314ad30ea31b49d832ce0fdf729420e0ee70e0c
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%

@@ -8,7 +8,7 @@ exl-id: 081167dd-da4c-48d2-a6d3-f95e873be3e9
 solution: Experience Manager Sites
 feature: Translation
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Lär dig hur du publicerar översatt innehåll och uppdaterar översättningarna
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från AEM Sites översättningsresa [Översätt innehåll](configure-connector.md) lärde du dig att använda AEM översättningsprojekt för att översätta ditt innehåll. Nu bör du:
+I det tidigare dokumentet om AEM Sites översättningsresa, [Översätt innehåll](configure-connector.md), lärde du dig att använda AEM översättningsprojekt för att översätta ditt innehåll. Nu bör du:
 
 * Förstå vad ett översättningsprojekt är.
 * Skapa nya översättningsprojekt.
@@ -122,7 +122,7 @@ Ett nytt jobbkort har lagts till i projektet. I det här exemplet har en annan s
 
 Du kan lägga märke till att statistiken på det nya kortet är annorlunda. Det beror på att AEM känner igen vad som har ändrats sedan den senaste översättningen och bara inkluderar det innehåll som måste översättas. Detta inkluderar omöversättning av uppdaterat innehåll och förstagångsöversättning av nytt innehåll.
 
-Från och med nu [startar och hanterar du översättningsjobbet precis som du gjorde originalet.](translate-content.md#using-translation-project)
+Från och med nu [startar och hanterar du ditt översättningsjobb på samma sätt som du gjorde det ursprungliga](translate-content.md#using-translation-project).
 
 ### Uppdatera ett manuellt skapat översättningsprojekt {#updating-manual-project}
 
@@ -144,15 +144,15 @@ Om du vill uppdatera en översättning kan du lägga till ett nytt jobb i ditt b
    ![Välj målspråk](assets/select-target-language.png)
 
 1. När det nya översättningsjobbets målspråk är inställt väljer du ellipsknappen längst ned på jobbkortet för att visa information om jobbet.
-1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [på samma sätt som du gjorde innan du skapade översättningsprojektet.](translate-content.md##manually-creating)
+1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [ på samma sätt som när du ursprungligen skapade översättningsprojektet](translate-content.md##manually-creating).
 
 >[!TIP]
 >
 >Banwebbläsarens kraftfulla filter kan vara användbara för att hitta just det innehåll som har uppdaterats.
 >
->Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser.](#additional-resources)
+>Du kan läsa mer om sökvägsläsaren i avsnittet [ytterligare resurser](#additional-resources).
 
-Från och med nu [startar och hanterar du översättningsjobbet precis som du gjorde originalet.](translate-content.md#using-translation-project)
+Från och med nu [startar och hanterar du ditt översättningsjobb på samma sätt som du gjorde det ursprungliga](translate-content.md#using-translation-project).
 
 ## Slut på resan? {#end-of-journey}
 

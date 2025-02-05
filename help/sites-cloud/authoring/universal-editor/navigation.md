@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,8 @@ För att göra detta har den universella redigeraren ett intuitivt användargrä
 
 >[!TIP]
 >
->* Mer information om hur du redigerar med den universella redigeraren finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md)
->* En mer detaljerad introduktion till Universal Editor finns i dokumentet [Universal Editor Introduction.](/help/implementing/universal-editor/introduction.md)
+>* Mer information om hur du redigerar med den universella redigeraren finns i dokumentet [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md).
+>* En mer detaljerad introduktion till den universella redigeraren finns i [Introduktion till den universella redigeraren](/help/implementing/universal-editor/introduction.md).
 
 ## Förbered appen {#prepare-app}
 
@@ -48,13 +48,13 @@ När appen har instrumenterats för att fungera med den universella redigeraren 
 
 >[!NOTE]
 >
->När du redigerar en sida i konsolen [**Platser** ](/help/sites-cloud/authoring/sites-console/introduction.md) öppnar konsolen den redigerare som passar sidans [mall:](/help/sites-cloud/authoring/page-editor/templates.md) antingen den universella redigeraren som beskrivs i det här dokumentet eller [sidredigeraren.](/help/sites-cloud/authoring/page-editor/introduction.md)
+>När du redigerar en sida i konsolen [**Platser**](/help/sites-cloud/authoring/sites-console/introduction.md) öppnar konsolen den redigerare som är lämplig för sidans [mall](/help/sites-cloud/authoring/page-editor/templates.md), antingen den universella redigeraren som beskrivs i det här dokumentet eller [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md).
 
 ### Direkt åtkomst {#accessing-directly}
 
-1. Logga in i den universella redigeraren. Du behöver en Adobe ID för att logga in och [har tillgång till den universella redigeraren.](/help/implementing/universal-editor/getting-started.md#request-access)
+1. Logga in i den universella redigeraren. Du behöver en Adobe ID för att logga in och [har tillgång till den universella redigeraren](/help/implementing/universal-editor/getting-started.md#request-access).
 
-1. När du har loggat in anger du URL-adressen till sidan som du vill redigera i [platsfältet.](#location-bar) så att du kan börja redigera innehåll som textinnehåll eller mediainnehåll.
+1. När du har loggat in anger du URL-adressen till sidan som du vill redigera i [platsfältet](#location-bar) så att du kan börja redigera innehåll som textinnehåll eller mediainnehåll.
 
 ## Förstå användargränssnittet {#ui}
 
@@ -75,7 +75,7 @@ Sidhuvudet Experience Cloud finns alltid längst upp på skärmen. Det är en an
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager,](/help/onboarding/cloud-manager-introduction.md) [Cloud Acceleration Manager,](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+Klicka på länken Adobe Experience Cloud till vänster om rubriken om du vill navigera till roten för din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -99,7 +99,7 @@ Hjälpikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
 
 #### Meddelanden {#notifications}
 
-Den här ikonen är märkt med antalet för närvarande tilldelade ofullständiga [meddelanden.](/help/implementing/cloud-manager/notifications.md)
+Den här ikonen är märkt med antalet för närvarande tilldelade ofullständiga [meddelanden](/help/implementing/cloud-manager/notifications.md).
 
 ![Meddelanden](assets/notifications.png)
 
@@ -111,7 +111,7 @@ Välj den ikon som representerar användaren för att få åtkomst till dina anv
 
 ### Verktygsfältet för den universella redigeraren {#universal-editor-toolbar}
 
-Verktygsfältet för den universella redigeraren visas alltid längst upp på skärmen precis under [Experience Cloud.](#experience-cloud-header) Du får snabb åtkomst för att navigera till en annan sida för att redigera och publicera den aktuella sidan.
+Verktygsfältet för den universella redigeraren visas alltid längst upp på skärmen precis under [Experience Cloud-rubriken](#experience-cloud-header). Du får snabb åtkomst för att navigera till en annan sida för att redigera och publicera den aktuella sidan.
 
 ![Verktygsfältet Universal Editor](assets/universal-editor-toolbar.png)
 
@@ -127,7 +127,7 @@ På startsidan anger du URL-adressen till den webbplats som du vill redigera med
 
 >[!NOTE]
 >
->Alla sidor som du vill redigera med den universella redigeraren måste vara [instrumenterade för att stödja den universella redigeraren.](/help/implementing/universal-editor/getting-started.md)
+>Alla sidor som du vill redigera med den universella redigeraren måste vara [instrumenterade för att stödja den universella redigeraren](/help/implementing/universal-editor/getting-started.md).
 
 #### Platsfält {#location-bar}
 
@@ -141,11 +141,11 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 
 >[!NOTE]
 >
->Alla sidor som du vill redigera med den universella redigeraren måste vara [instrumenterade för att stödja den universella redigeraren.](/help/implementing/universal-editor/getting-started.md)
+>Alla sidor som du vill redigera med den universella redigeraren måste vara [instrumenterade för att stödja den universella redigeraren](/help/implementing/universal-editor/getting-started.md).
 
 #### Inställningar för autentiseringshuvud {#authentication-settings}
 
-Välj ikonen med inställningar för autentiseringshuvudet om du behöver [ange ett anpassat autentiseringshuvud för lokala utvecklingssyften.](/help/implementing/universal-editor/developer-overview.md#auth-header)
+Välj ikonen med inställningar för autentiseringshuvudet om du behöver [ange ett anpassat autentiseringshuvud för lokal utveckling](/help/implementing/universal-editor/developer-overview.md#auth-header).
 
 ![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
 
@@ -189,7 +189,7 @@ Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan 
 
 >[!TIP]
 >
->URL:en för förhandsgranskning för din app [kan anpassas.](/help/implementing/universal-editor/customizing.md#custom-preview-urls)
+>URL:en för förhandsgranskning för din app [kan anpassas](/help/implementing/universal-editor/customizing.md#custom-preview-urls).
 
 #### Publish {#publish}
 
@@ -213,8 +213,8 @@ Du kan till exempel avpublicera en sida (d.v.s. invertera åtgärden för knappe
 
 Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar i verktygsfältet har den universella redigeraren utökats.
 
-* Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren.](/help/implementing/universal-editor/customizing.md)
-* Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/)
+* Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren](/help/implementing/universal-editor/customizing.md).
+* Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/).
 
 ### Redigeraren {#editor}
 
@@ -222,7 +222,7 @@ Redigeraren tar upp större delen av fönstret och är där sidan som anges i [p
 
 ![Redigeraren](assets/editor.png)
 
-Om redigeraren är i [förhandsgranskningsläge](#preview-mode) kan innehållet navigeras och du kan följa länkar, men du kan inte redigera innehållet.
+Om redigeraren är i [förhandsgranskningsläget](#preview-mode) kan innehållet navigeras och du kan följa länkar, men du kan inte redigera innehållet.
 
 ### Egenskapspanelen {#properties-rail}
 
@@ -280,7 +280,7 @@ Om du väljer en behållarkomponent i innehållsträdet eller i redigeraren visa
 
 ![Lägg till ikon](assets/ue-add-component-icon.png)
 
-Om du trycker eller klickar på knappen Lägg till öppnas en listruta med komponenter som är tillgängliga för att [lägga till i den valda behållaren.](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components)
+Om du trycker eller klickar på knappen Lägg till öppnas en listruta med komponenter som är tillgängliga för att [lägga till i den markerade behållaren](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components).
 
 ![Lägg till snabbmeny](assets/add-context-menu.png)
 
@@ -294,7 +294,7 @@ Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet
 
 ![Duplicera ikon](assets/duplicate.png)
 
-Om du trycker eller klickar på den duplicerade knappen [dupliceras den markerade komponenten.](/help/sites-cloud/authoring/universal-editor/authoring.md#duplicating-components)
+Om du trycker eller klickar på den duplicerade knappen [dupliceras den markerade komponenten](/help/sites-cloud/authoring/universal-editor/authoring.md#duplicating-components).
 
 ##### Ta bort {#delete}
 
@@ -302,7 +302,7 @@ Om du markerar en komponent i en behållarkomponent antingen i innehållsträdet
 
 ![Ta bort ikon](assets/ue-delete-component-icon.png)
 
-Om du trycker på eller klickar på borttagningsknappen [tas komponenten bort.](/help/sites-cloud/authoring/universal-editor/authoring.md#deleting-components)
+Om du trycker på eller klickar på borttagningsknappen [tas komponenten](/help/sites-cloud/authoring/universal-editor/authoring.md#deleting-components) bort.
 
 >[!TIP]
 >
@@ -312,9 +312,9 @@ Om du trycker på eller klickar på borttagningsknappen [tas komponenten bort.](
 
 Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar på egenskapspanelen har den universella redigeraren utökats.
 
-* Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren.](/help/implementing/universal-editor/customizing.md)
-* Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/)
+* Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren](/help/implementing/universal-editor/customizing.md).
+* Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/).
 
 ## Nästa steg {#next-steps}
 
-Nu när du vet hur du kommer åt och navigerar i den universella redigeraren kan du [redigera innehåll med den.](/help/sites-cloud/authoring/universal-editor/authoring.md)
+Nu när du vet hur du kommer åt och navigerar i den universella redigeraren är du redo att [redigera innehåll med hjälp av den](/help/sites-cloud/authoring/universal-editor/authoring.md).

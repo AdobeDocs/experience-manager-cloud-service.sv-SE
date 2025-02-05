@@ -4,13 +4,13 @@ description: Du kan använda teman för att utforma och ge en visuell identitet 
 keywords: grundläggande komponenter i adaptiv formulärformatering. använda tema i Core Components, utforma adaptiv form, anpassa teman
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: 076ee3616ad56b4d463d93e407a9e7e67e54b4ac
+exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 0%
 
 ---
-
 
 # Använd teman för att utforma Core Components-baserade Adaptive Forms{#themes-for-af-using-core-components}
 
@@ -65,7 +65,7 @@ Att anpassa ett tema avser processen att ändra, formatera och anpassa ett temas
 
 * Bekanta dig med att [konfigurera en pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline) och att ha grundläggande kunskaper om hur du konfigurerar en pipeline hjälper dig att hantera och distribuera dina temaanpassningar på ett effektivt sätt.
 * Lär dig hur du [konfigurerar en användare med rollen som medarbetare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html). Genom att förstå hur du konfigurerar en användare med rollen Medarbetare kan du ge de behörigheter som krävs för att anpassa temat.
-* Installera den senaste versionen av [Apache Maven.](https://maven.apache.org/download.cgi) Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
+* Installera den senaste versionen av [Apache Maven](https://maven.apache.org/download.cgi). Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
 * Installera en vanlig textredigerare. Exempel: Microsoft® Visual Studio Code. Med en vanlig textredigerare som Microsoft® Visual Studio Code får du en användarvänlig miljö där du kan redigera och ändra temafiler.
 
 ### Konfigurera din miljö
@@ -373,7 +373,7 @@ Nu kan du överföra ändringarna till temadeatalogen för din AEM Forms-Cloud S
 
 ##### 5.3 Köra frontlinjen {#run-a-frontend-pipeline}
 
-Temat distribueras med [front-end-pipeline.](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html). Så här distribuerar du temat:
+Temat distribueras med [front-end-pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html). Så här distribuerar du temat:
 
 1. Logga in på din AEM Cloud Manager-databas.
 1. Klicka på knappen **[!UICONTROL Add]** i avsnittet **[!UICONTROL Pipelines]**.

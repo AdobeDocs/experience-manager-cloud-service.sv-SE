@@ -4,7 +4,7 @@ description: Lär dig mer om de viktigaste användningsexemplen i Universal Edit
 exl-id: 398ad0e2-c299-4c49-9784-05c84c67bec2
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a7b48559e5bf60c86fecd73a8bcef6c9aaa03b80
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Universal Editor fungerar på följande sätt.
 1. Innehållsförfattaren redigerar sidinnehållet i ett intuitivt WYSIWYG-gränssnitt och redigerar det på plats.
 1. Den universella redigeraren återställer automatiskt ändringarna till datakällan.
 
-Om du vill veta mer om arkitekturen för Universal Editor kan du läsa dokumentet [Universal Editor Architecture.](/help/implementing/universal-editor/architecture.md)
+Om du vill veta mer om arkitekturen för den universella redigeraren kan du läsa dokumentet [Universal Editor Architecture](/help/implementing/universal-editor/architecture.md).
 
 ## Universal Editor Concepts {#concepts}
 

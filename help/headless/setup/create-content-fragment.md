@@ -4,7 +4,7 @@ description: Lär dig hur du använder AEM innehållsfragment för att utforma, 
 exl-id: a227ae2c-f710-4968-8a00-bfe48aa66145
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Innehållsförfattare skapar valfritt antal innehållsfragment som representerar
 
 1. Logga in i AEM as a Cloud Service och välj **Navigering** > **Innehållsfragment** på huvudmenyn.
 
-1. Markera mappen [som du skapade tidigare.](create-assets-folder.md)
+1. Markera mappen [som du skapade tidigare](create-assets-folder.md).
 1. Välj **Skapa**.
 1. Skapandet av ett innehållsfragment visas som en dialogruta.
 Välj den plats och modell som du vill använda för att skapa ditt innehållsfragment.
@@ -49,8 +49,8 @@ Innehållsfragment kan också referera till andra resurser i AEM. [Resurserna m�
 
 ## Nästa steg {#next-steps}
 
-Nu när du har skapat ett innehållsfragment kan du gå vidare till den sista delen av guiden Komma igång och [skapa API-begäranden för att komma åt och leverera innehållsfragment.](create-api-request.md)
+Nu när du har skapat ett innehållsfragment kan du gå vidare till den sista delen av guiden Komma igång och [skapa API-begäranden för att komma åt och leverera innehållsfragment](create-api-request.md).
 
 >[!TIP]
 >
->Fullständig information om hur du hanterar innehållsfragment finns i [dokumentationen för innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
+>Fullständig information om hur du hanterar innehållsfragment finns i [dokumentationen för innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md).

@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: c57fba06f23fa57fbf26796e747bb76f6a7a4203
+source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 0%
@@ -25,7 +25,7 @@ CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken tr
 
 Om CDN inte kan kontakta sitt ursprung kan du dessutom skriva en regel som refererar till en egen felsida (som sedan återges). Läs mer om detta i artikeln [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md).
 
-Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med hjälp av konfigurationsflödet för Cloud Manager [.](/help/operations/config-pipeline.md) Observera att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
+Alla dessa regler, som deklareras i en konfigurationsfil i källkontrollen, distribueras med Cloud Manager [config-pipeline](/help/operations/config-pipeline.md). Tänk på att den kumulativa storleken på konfigurationsfilen, inklusive trafikfilterregler, inte får överstiga 100 kB.
 
 ## Utvärderingsordning {#order-of-evaluation}
 
