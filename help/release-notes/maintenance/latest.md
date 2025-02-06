@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: f7aa50d8a2fa80489c56571caa9a75bc50715368
+source-git-commit: 636183e0597bed24b3e437ed53a35c9e64ac0504
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,11 @@ Funktionsaktiveringen i 2025.2.0 kommer att innehålla alla funktioner som finns
 
 ### Åtgärdade problem {#fixed-issues-19352}
 
+* CQ-4356756: Do not translate support for related assets.
+* CQ-4358206: Repeat Translation Scheduler fungerar inte för översättningsprojekt.
+* CQ-4358126: Det går inte att välja konfigureringsundermappen i översättningsmolntjänsten.
+* FORMS-18098, FORMS-17954: Adaptiv Forms kan inte läsas in i Internet Explorer-läge i Microsoft Edge webbläsare.
+* FORMS-17162: Publicering av en resurs leder till att OTB-frågor körs, vilket försämrade publiceringsprestanda.
 * SITES-28415: Edge Delivery med Universal Editor: Knappen Korrigera öppna egenskaper för kalkylblad.
 * SITES-26669: Edge Delivery med Universal Editor: Korrigera problem vid överföring av CSV-filer kodade i UTF-8 med en BOM som kalkylblad.
 * SITES-26543: Edge Delivery med Universal Editor: Korrigera tomma block utan att modellåterge felaktig kod.
@@ -85,8 +90,6 @@ Funktionsaktiveringen i 2025.2.0 kommer att innehålla alla funktioner som finns
 * SITES-26660: Versionsjämförelsen för innehållsfragment kan brytas när @ContentType är av strängtyp.
 * SITES-26626: customErrorMessage saknas i numeriska och booleska fält.
 * SITES-26268: Felaktig statuskod returnerades om en referens är ogiltig när ett fragment skapades.
-* FORMS-18098, FORMS-17954: Adaptiv Forms kan inte läsas in i Internet Explorer-läge i Microsoft Edge webbläsare.
-* FORMS-17162: Publicering av en resurs leder till att OTB-frågor körs, vilket försämrade publiceringsprestanda.
 
 ### Kända fel {#known-issues-19352}
 
