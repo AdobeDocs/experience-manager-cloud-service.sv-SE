@@ -854,6 +854,10 @@ ht-degree: 2%
          + [Skapa och hantera granskningar för ett adaptivt formulär](/help/forms/review-adaptiveforms-in-sites-page.md)
       + [Nyckelord för adaptiva formulär](/help/forms/adaptive-forms-keywords.md)
       + [Förhandsgranska ett formulär](/help/forms/previewing-forms.md)
+   + Interactive Communication {#interactive-communocation}
+      + [Introduction to interactive communication](/help/forms/introduction-to-interactive-communication.md)
+      + [Create your first Interactive Communication](/help/forms/create-your-first-communication.md)
+      + [Frequently Asked Questions](/help/forms/interactive-communications-faq.md)
    + Forms-centrerade arbetsflöden {#create-form-centric-workflows}
       + [Introduktion till Forms-centrerade arbetsflöden](/help/forms/aem-forms-workflow.md)
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
