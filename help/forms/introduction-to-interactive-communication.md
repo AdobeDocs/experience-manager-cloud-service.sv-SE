@@ -3,12 +3,9 @@ title: Introduktion till interaktiv kommunikation
 description: Designa dynamisk, datadriven kommunikation enkelt med AEM Forms Interactive Communications
 feature: Release Information
 role: Admin
-hide: true
-hidefromtoc: true
-exl-id: 7656d6fb-8727-491d-8216-7770b78ff854
-source-git-commit: 32558fc6cd0e325132230b09f7f00a0dfaf7af0d
+source-git-commit: 2f4fd0c380c612042cfe5d755b0b1e5ddc7e7c88
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -21,12 +18,12 @@ Med vårt intuitiva grafiska designverktyg (Interactive Communications Editor) k
 
 Interactive Communications är det självklara verktyget för att enkelt och effektivt ta fram högklassig, säker och lagenligt korrespondens - från finansinstitut som tar fram kontoutdrag till myndigheter som effektiviserar förmånsmeddelanden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444094/)
+
+[!VIDEO](https://video.tv.adobe.com/v/3444094/)
 
 <!-- ![Interactive Communication Editor](/help/assets/ic-editor.png)
 
 -->
-
 ## Kärnfunktioner
 
 Kärnfunktionerna i Interactive Communications Editor är:
@@ -45,22 +42,11 @@ Kärnfunktionerna i Interactive Communications Editor är:
 | **Molnintegrering** | Redigera dokument direkt i AEM Forms as a Cloud Service |
 
 
-## Onboarding
+## Komma igång
 
 1. **Begär åtkomst**: E-post [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från din officiella adress
 2. **Administratörsinstallation**: Adobe aktiverar åtkomst och ger administratörsbehörighet
 3. **Börja skapa**: Börja med din första korrespondens med vår [intuitiva redigerare](https://video.tv.adobe.com/v/3444094/).
-
-## Frågor och svar
-
-**F: Kan jag importera en befintlig XDP till Interactive Communications Editor?**
-Ja, du kan importera en befintlig XDP och använda den som utgångspunkt. Alla funktioner som inte stöds markeras under importprocessen.
-
-**F: Är Interactive Communications-redigeraren tillgänglig för lokala distributioner?**
-Nej, redigeraren är bara tillgänglig för Forms as a Cloud Service-distributioner.
-
-
-
 
 
 
