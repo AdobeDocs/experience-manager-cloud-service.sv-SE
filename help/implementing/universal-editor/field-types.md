@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: a27da2d6d675d68d69071d0b393ad5e0f82bb7ae
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1353'
 ht-degree: 1%
 
 ---
@@ -305,11 +305,13 @@ En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en ex
 
 #### Innehållsfragment {#content-fragment}
 
-Du kan använda väljaren för innehållsfragment för att välja ett [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder ytterligare konfiguration och validering.
+Du kan använda väljaren för innehållsfragment för att välja ett [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
 | `variationName` | `string` | Variabelnamn för att lagra den valda varianten. Om värdet är odefinierat visas ingen variantväljare | Nej |
+
+Den erbjuder även en ytterligare valideringstyp.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -444,11 +446,13 @@ Den erbjuder även en ytterligare valideringstyp.
 
 #### Experience Fragment {#experience-fragment}
 
-Experience Fragment-väljaren kan användas för att välja ett [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder ytterligare konfiguration och validering.
+Experience Fragment-väljaren kan användas för att välja ett [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) och dess variationer (om det behövs). Den erbjuder en extra konfiguration.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
 | `variationName` | `string` | Variabelnamn för att lagra den valda varianten. Om värdet är odefinierat visas ingen variantväljare | Nej |
+
+Den erbjuder även en ytterligare valideringstyp.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
