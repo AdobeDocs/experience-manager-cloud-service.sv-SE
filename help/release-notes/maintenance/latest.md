@@ -4,9 +4,9 @@ description: Aktuell underhållsversionsinformation för  [!DNL Adobe Experience
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 77d8ebeaa3914f4a91d2cf27ccc5b048e64d6b38
+source-git-commit: f7aa50d8a2fa80489c56571caa9a75bc50715368
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -85,6 +85,8 @@ Funktionsaktiveringen i 2025.2.0 kommer att innehålla alla funktioner som finns
 * SITES-26660: Versionsjämförelsen för innehållsfragment kan brytas när @ContentType är av strängtyp.
 * SITES-26626: customErrorMessage saknas i numeriska och booleska fält.
 * SITES-26268: Felaktig statuskod returnerades om en referens är ogiltig när ett fragment skapades.
+* FORMS-18098, FORMS-17954: Adaptiv Forms kan inte läsas in i Internet Explorer-läge i Microsoft Edge webbläsare.
+* FORMS-17162: Publicering av en resurs leder till att OTB-frågor körs, vilket försämrade publiceringsprestanda.
 
 ### Kända fel {#known-issues-19352}
 

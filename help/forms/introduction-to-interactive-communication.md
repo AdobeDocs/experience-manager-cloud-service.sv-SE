@@ -3,7 +3,7 @@ title: Introduktion till interaktiv kommunikation
 description: Designa dynamisk, datadriven kommunikation enkelt med AEM Forms Interactive Communications
 feature: Release Information
 role: Admin
-source-git-commit: 2f4fd0c380c612042cfe5d755b0b1e5ddc7e7c88
+source-git-commit: f7aa50d8a2fa80489c56571caa9a75bc50715368
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -18,12 +18,12 @@ Med vårt intuitiva grafiska designverktyg (Interactive Communications Editor) k
 
 Interactive Communications är det självklara verktyget för att enkelt och effektivt ta fram högklassig, säker och lagenligt korrespondens - från finansinstitut som tar fram kontoutdrag till myndigheter som effektiviserar förmånsmeddelanden.
 
-
-[!VIDEO](https://video.tv.adobe.com/v/3444094/)
+>[!VIDEO](https://video.tv.adobe.com/v/3444094/)
 
 <!-- ![Interactive Communication Editor](/help/assets/ic-editor.png)
 
 -->
+
 ## Kärnfunktioner
 
 Kärnfunktionerna i Interactive Communications Editor är:
