@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 3bd7b574b34d09b3a205cf72b307d459efc00eab
+source-git-commit: ae64d8acac3dee938db8ecbc1c8f5c9149b70365
 workflow-type: tm+mt
-source-wordcount: '1998'
+source-wordcount: '2056'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,19 @@ Vill du börja? I följande artiklar finns detaljerade anvisningar om hur innova
 
 ### HTML e-postmallar i Adaptiv Forms
 
-Med adaptiv Forms kan du använda HTML e-postmallar. Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+
+Med adaptiv Forms kan du använda [HTML e-postmallar](/help/forms/html-email-templates-in-adaptive-forms.md). Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+
+![HTML e-postmallar](/help/forms/assets/html-email.png)
+
+### RESTful Web Services Submit Action
+
+Adaptiv Forms kan nu skicka inhämtade data till autentiserade externa REST-slutpunkter med den nya RESTful Web Services Submit Action:
+
+* Stöder standarder: Swagger 2.0 och 3.0 för enkel API-integrering
+* Säker autentisering: OAuth 2.0, grundläggande autentisering, API-nyckel och anpassad autentisering
+* Flexibla dataformat: Formulärdata för flera delar, JSON- och URL-kodade (nyckelvärdepar)
+
 
 
 ### Stöd för höger-till-vänster-språk (RTL)
