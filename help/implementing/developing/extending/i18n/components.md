@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
 exl-id: 0276b310-b9a9-44b6-b295-06c51ef17208
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 401685af02c720994d72cd95d36f0cfcdf15d198
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '355'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Internationalisera dina komponenter och dialogrutor så att deras gränssnittsst
 
 Använd följande process för att internationalisera dina komponenter och ange användargränssnittet på olika språk:
 
-1. [Implementera dina komponenter med kod som internationaliserar strängar](/help/implementing/developing/extending/i18n/dev.md). Koden identifierar de strängar som ska översättas och väljer vilket språk som ska användas vid körningen.
-1. Skapa ordlistor och lägg till de engelska strängarna som ska översättas.
-1. Exportera ordlistan till XLIFF-format, översätt strängarna och importera sedan XLIFF-filerna tillbaka till AEM.
+1. [Implementera dina komponenter med kod som internationaliserar strängar.](/help/implementing/developing/extending/i18n/dev.md) Koden identifierar strängarna som ska översättas och väljer språket som ska användas vid körning.
+1. [Skapa ordlistor](/help/implementing/developing/extending/i18n/translator.md#creating-a-dictionary).
+1. [Exportera](/help/implementing/developing/extending/i18n/translator.md#exporting-a-dictionary) lexikonet till XLIFF-format, översätt strängarna och importera sedan XLIFF-filerna tillbaka till AEM.
 1. Lägg in ordboken i processen för versionshantering av ditt program.
 
 >[!NOTE]
@@ -37,10 +37,11 @@ I det AEM internationaliseringsramverket används ordlistor i databasen för att
 * Koden är lätt att läsa.
 * Standardspråket är alltid tillgängligt.
 
-Översättningsändringar måste komma från Git via [CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) i AEM som en molntjänst.
+Med [översättningsverktyget](/help/implementing/developing/extending/i18n/translator.md) kan du hantera alla ordlistor från en central plats.
 
 ![i18n-components-2](/help/implementing/developing/extending/assets/i18n-comp2.png)
 
+Översättningsändringar måste komma från Git via [CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) i AEM som en molntjänst.
 
 ### Ersätta strängar i systemordlistor {#overlaying-strings-in-system-dictionaries}
 

@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
+source-git-commit: 17489f3f65a71c6fc0f805af37cb233ab1c5470a
 workflow-type: tm+mt
-source-wordcount: '6020'
+source-wordcount: '6039'
 ht-degree: 2%
 
 ---
@@ -111,8 +111,8 @@ ht-degree: 2%
          + [Underhållsinformation för 2023.4.0](/help/release-notes/maintenance/2023/2023-4-0.md)
          + [Underhållsinformation för 2023.2.0](/help/release-notes/maintenance/2023/2023-2-0.md)
          + [Underhållsinformation för 2023.1.0](/help/release-notes/maintenance/2023/2023-1-0.md)
-   + {#cloud-manager}
-      + [Current Release Notes](/help/implementing/cloud-manager/release-notes/current.md)
+   + Versionsinformation för Cloud Manager {#cloud-manager}
+      + [Aktuell versionsinformation](/help/implementing/cloud-manager/release-notes/current.md)
       + 2024 {#2024}
          + [Versionsinformation för 2024.12.0](/help/implementing/cloud-manager/release-notes/2024/2024-12-0.md)
          + [Versionsinformation för 2024.11.0](/help/implementing/cloud-manager/release-notes/2024/2024-11-0.md)
@@ -854,10 +854,10 @@ ht-degree: 2%
          + [Skapa och hantera granskningar för ett adaptivt formulär](/help/forms/review-adaptiveforms-in-sites-page.md)
       + [Nyckelord för adaptiva formulär](/help/forms/adaptive-forms-keywords.md)
       + [Förhandsgranska ett formulär](/help/forms/previewing-forms.md)
-   + Interactive Communication {#interactive-communocation}
-      + [Introduction to interactive communication](/help/forms/introduction-to-interactive-communication.md)
-      + [Create your first Interactive Communication](/help/forms/create-your-first-communication.md)
-      + [Frequently Asked Questions](/help/forms/interactive-communications-faq.md)
+   + Interaktiv kommunikation {#interactive-communocation}
+      + [Introduktion till interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md)
+      + [Skapa din första interaktiva kommunikation](/help/forms/create-your-first-communication.md)
+      + [Vanliga frågor](/help/forms/interactive-communications-faq.md)
    + Forms-centrerade arbetsflöden {#create-form-centric-workflows}
       + [Introduktion till Forms-centrerade arbetsflöden](/help/forms/aem-forms-workflow.md)
       + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
@@ -1328,7 +1328,7 @@ ht-degree: 2%
          + [Introduktion till App Builder](/help/implementing/developing/extending/app-builder/videos/introduction.md)
          + [Adobe Developer Console](/help/implementing/developing/extending/app-builder/videos/adobe-developer-console.md)
          + [SDK och CLI](/help/implementing/developing/extending/app-builder/videos/sdks-and-cli.md)
-         + [Create an application](/help/implementing/developing/extending/app-builder/videos/create.md)
+         + [Skapa ett program](/help/implementing/developing/extending/app-builder/videos/create.md)
          + [Åtgärder](/help/implementing/developing/extending/app-builder/videos/actions.md)
          + [Lagringsbibliotek](/help/implementing/developing/extending/app-builder/videos/storage-libraries.md)
          + [Händelsestyrda program](/help/implementing/developing/extending/app-builder/videos/event-driven-applications.md)
@@ -1354,6 +1354,7 @@ ht-degree: 2%
       + Internationalisering{#internationalization}
          + [Internationalisering av komponenter](/help/implementing/developing/extending/i18n/components.md)
          + [Internationaliserar gränssnittssträngar](/help/implementing/developing/extending/i18n/dev.md)
+         + [Använda översättare för att hantera ordlistor](/help/implementing/developing/extending/i18n/translator.md)
          + [Extraherar strängar för översättning](/help/implementing/developing/extending/i18n/extract.md)
    + Distribuera till AEM as a Cloud Service {#deploying}
       + [Distribuera till AEM as a Cloud Service](/help/implementing/deploying/overview.md)

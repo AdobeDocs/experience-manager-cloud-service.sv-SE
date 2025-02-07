@@ -5,9 +5,9 @@ feature: Language Copy
 role: Admin
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 17489f3f65a71c6fc0f805af37cb233ab1c5470a
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4129'
 ht-degree: 0%
 
 ---
@@ -275,6 +275,28 @@ Du kan lägga till sidor, resurser eller taggar i översättningsjobbet för öv
 >[!TIP]
 >
 >Den här metoden lägger till sidor/resurser och deras underordnade sidor i projektet. Välj **Resurs/sida (utan underordnade)** om du bara vill lägga till överordnade objekt.
+
+### Lägga till i18n-ordlistor i ett översättningsjobb {#adding-i-n-dictionaries-to-a-translation-job}
+
+Du kan lägga till sidor, resurser, taggar eller i18n-ordlistor i översättningsjobbet för översättningsprojektet. Så här lägger du till en i18n-ordlista:
+
+1. Klicka på ellipsen längst ned i översättningsjobbpanelen i översättningsprojektet.
+
+   ![Översättningsjobbpanel](../assets/translation-job.png)
+
+1. Klicka på Lägg till och I18N-ordlista.
+
+   ![Lägg till i18n-ordlista](../assets/add-i18n.png)
+
+1. Markera **rotkatalogen** och ordlistan (om det behövs) som du vill lägga till och välj sedan **Lägg till**.
+
+   ![Välj i18N-ordlista](../assets/select-i18n.png)
+
+Din ordlista är nu i ditt översättningsjobb och översättningsprocessen kan sedan startas för att skapa ordlistespråkskopior på `/content/cq:i18n` och för att skicka dessa ordlistespråkskopior för översättning.
+
+>[!NOTE]
+>
+>Mer information om i18n-ordlistor finns i [Hantera ordlistor med hjälp av översättaren](/help/implementing/developing/extending/i18n/translator.md).
 
 ### Lägga till taggar i ett översättningsjobb {#adding-tags-to-a-translation-job}
 
