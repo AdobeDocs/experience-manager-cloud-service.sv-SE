@@ -5,9 +5,9 @@ feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: 6266da34305bc5d8b2bbb0d336028f4fede6c165
+source-git-commit: c20b8909bb884f14bd7fe59f190de3cd375a7111
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '2144'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,10 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 ## Konfigurera RESTful-webbtjänster {#configure-restful-web-services}
 
-RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i en [!DNL Swagger] -definitionsfil. Om du vill konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service måste du ha antingen filen [!DNL Swagger] ([Swagger Version 2.0](https://swagger.io/specification/v2/)) eller filen [!DNL Swagger] ([Swagger Version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller den URL där filen finns.
+RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i en [!DNL Swagger] definitionsfil eller en Service Endpoint.
+
+>[!NOTE]
+> Om du vill konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service måste du ha antingen filen [!DNL Swagger] ([Swagger Version 2.0](https://swagger.io/specification/v2/)) eller filen [!DNL Swagger] ([Swagger Version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller den URL där filen finns.
 
 ### Konfigurera RESTful-tjänster för Open API Specification version 2.0 {#configure-restful-services-open-api-2.0}
 
@@ -177,6 +180,31 @@ En del åtgärder som inte stöds av RESTful services Open API Specification ver
 * Olika begärande organ för olika MIME-typer för en enda operation
 
 Mer information finns i [OpenAPI 3.0-specifikationen](https://swagger.io/specification/v3/).
+
+### Konfigurera RESTful-tjänster med hjälp av tjänstslutpunkten {#configure-restful-services-service-endpoint}
+
+<span class="preview"> Funktionen för tjänstslutpunkt finns i programmet för tidig Adobe-åtgärd och kan endast användas för kärnkomponenter. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+
+1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
+
+   Mer information om hur du skapar och konfigurerar en mapp för molntjänstkonfigurationer finns i [Konfigurera mapp för molntjänstkonfigurationer](configure-data-sources.md#cloud-folder).
+
+1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**.
+
+1. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
+
+1. På nästa sida väljer du **[!UICONTROL Service Endpoint]** från **[!UICONTROL RESTful Service dropdown]**.
+
+   ![Tjänstslutpunkt](/help/forms/assets/select-service-endpoint.png)
+
+1. Ange **[!UICONTROL Service Endpoint URL]**.
+
+   >[!NOTE]
+   > Som standard är metodtypen POST.
+1. Välj en innehållstyp som du vill välja i listrutan. Innehållstyper är formulärdata med flera delar, JSON och URL-kodade (Key-Value Pair).
+1. Nu väljer du någon av autentiseringstyperna OAuth 2.0, Basic Authentication, API Key, Custom Authentication i listrutan.
+   ![Autentiseringstyp för tjänstslutpunkt](/help/forms/assets/service-endpoint-authtype.png)
+1. Klicka på Skapa.
 
 ### HTTP-klientkonfiguration för formulärdatamodell (FDM) för optimering av prestanda {#fdm-http-client-configuration}
 

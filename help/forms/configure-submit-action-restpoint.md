@@ -3,12 +3,11 @@ Title: How to configure submit to Rest Endpoint submit action for an Adaptive Fo
 Description: Discover the steps to set up Rest Endpoint when submitting an Adaptive Form.
 keywords: AEM Forms REST Endpoint, Submit to REST Endpoint, Post Data to REST URL, Configure REST Endpoint Action
 feature: Adaptive Forms, Core Components
-exl-id: 58c63ba6-aec5-4961-a70a-265990ab9cc8
-title: "Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?"
+title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: c20b8909bb884f14bd7fe59f190de3cd375a7111
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '669'
 ht-degree: 1%
 
 ---
@@ -30,7 +29,7 @@ Några av fördelarna med att konfigurera **[!UICONTROL Submit to REST endpoint]
 
 ## Konfigurera åtgärden Skicka till REST-slutpunkt {#steps-to-configure-submit-to-restendpoint-submit-action}
 
-Så här konfigurerar du åtgärden skicka:
+Så här konfigurerar du en skicka-åtgärd baserat på Swagger Open API-specifikationen:
 
 1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
 1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
@@ -68,6 +67,20 @@ Så här konfigurerar du åtgärden skicka:
    Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
 1. Klicka på **[!UICONTROL Done]**.
+
+### Konfigurera skicka-åtgärd baserat på tjänstens återställningsslutpunkt {#config-service-endpoint-auth}
+
+<span class="preview"> Funktionen för tjänstslutpunkt finns i programmet för tidig Adobe-åtgärd och kan endast användas för kärnkomponenter. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
+1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Submit to Rest endpoint]**.
+1. Aktivera begäran om POST.
+1. Ange REST-slutpunkts-URL.
+1. Välj den konfiguration du har skapat för tjänstens autentiseringstyp för återställningsslutpunkt och innehållstyper. Mer information om autentiseringstyp och innehållstyper finns på [Konfigurera datakällor](/help/forms/configure-data-sources.md#configure-restful-services-using-service-endpoint-configure-restful-services-service-endpoint).
+   ![Konfigurerar resterande slutpunkt](assets/rest-service-endpoint-config.png)
+1. Klicka på Klar.
 
 ## Bästa praxis
 
