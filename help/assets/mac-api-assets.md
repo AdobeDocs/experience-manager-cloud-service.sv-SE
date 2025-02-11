@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Assets HTTP API
 role: Developer, Architect, Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 2f4c5db2b40d55e2e46e14cb5309754969b5bdea
+source-git-commit: 3143ca304ec7ff56d45502a3fd5e49b3b9ed6ce4
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ ht-degree: 0%
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
-## Ökning {#overview}
+## Kom igång med AEM [!DNL Assets] HTTP API {#overview}
 
-HTTP-API:t för AEM [!DNL Assets] aktiverar CRUD-åtgärder (skapa, läsa, uppdatera och ta bort) för digitala resurser via ett REST-gränssnitt på /`api/assets`. De här åtgärderna gäller metadata för resurser, återgivningar och kommentarer. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
+HTTP-API:t för AEM [!DNL Assets] aktiverar CRUD-åtgärder (skapa, läsa, uppdatera och ta bort) för digitala resurser via ett REST-gränssnitt som finns på /`api/assets`. De här åtgärderna gäller metadata för resurser, återgivningar och kommentarer. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-
 >
 >Alla API-anrop som rör överföring eller uppdatering av resurser eller binära filer i allmänhet (som återgivningar) är föråldrade för [!DNL Experience Manager] som en [!DNL Cloud Service]-distribution. Om du vill överföra binära filer använder du [API:er för direkt binär överföring](developer-reference-material-apis.md#asset-upload) i stället.
 
-## Innehållsfragment {#content-fragments}
+## Hantera innehållsfragment {#content-fragments}
 
 Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en strukturerad resurs som lagrar text, siffror och datum. Eftersom det finns flera skillnader mellan `standard`-resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
@@ -53,7 +53,7 @@ Mer information finns i [Stöd för innehållsfragment i  [!DNL Experience Manag
 >
 >OpenAPI:erna [Content Fragment och Content Fragment Model](/help/headless/content-fragment-openapis.md) är också tillgängliga.
 
-## Datamodell {#data-model}
+## Undersök datamodellen {#data-model}
 
 HTTP-API:t [!DNL Assets] visar i första hand två element: mappar och standardresurser. Den innehåller även detaljerade element för anpassade datamodeller som används i innehållsfragment. Mer information finns i Datamodeller för innehållsfragment. Mer information finns i [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments).
 
@@ -61,7 +61,7 @@ HTTP-API:t [!DNL Assets] visar i första hand två element: mappar och standardr
 >
 >OpenAPI:erna [Content Fragment och Content Fragment Model](/help/headless/content-fragment-openapis.md) är också tillgängliga.
 
-### Mappar {#folders}
+### Hantera mappar {#folders}
 
 Mappar är som kataloger som i de traditionella filsystemen. Mappar kan innehålla resurser, undermappar eller både och. Mappar har följande komponenter:
 
@@ -82,7 +82,7 @@ Mappar är som kataloger som i de traditionella filsystemen. Mappar kan innehål
 * `parent`: En länk till den överordnade mappen.
 * `thumbnail` (Valfritt): En länk till en mappminiatyrbild.
 
-### Assets {#assets}
+### Hantera resurser {#assets}
 
 I [!DNL Experience Manager] innehåller en resurs följande element:
 
@@ -103,7 +103,7 @@ I [!DNL Experience Manager] har en mapp följande komponenter:
 * Egenskaper.
 * Länkar.
 
-## Tillgängliga funktioner {#available-features}
+## Utforska tillgängliga API-åtgärder {#available-features}
 
 HTTP-API:t [!DNL Assets] innehåller följande funktioner:
 
@@ -293,7 +293,7 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 * 412 - PRECONDITION MISSLYCKADES - om rotsamlingen inte kan hittas eller nås.
 * 500 - INTERNT SERVERFEL - Om något annat går fel.
 
-## Tips, metodtips och begränsningar {#tips-limitations}
+## Följ vedertagna standarder och anteckningsbegränsningar {#tips-limitations}
 
 * Assets och deras återgivningar blir otillgängliga via webbgränssnittet [!DNL Assets] och HTTP API när [!UICONTROL Off Time] nås. API:t returnerar ett 404-fel om [!UICONTROL On Time] finns i framtiden eller om [!UICONTROL Off Time] redan finns.
 
@@ -301,7 +301,7 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 
 * Vissa egenskaper för mapp eller resurs mappas till ett annat prefix när de uppdateras med API:er. Prefixet `jcr` för `jcr:title`, `jcr:description` och `jcr:language` ersätts med prefixet `dc`. I den returnerade JSON innehåller därför `dc:title` och `dc:description` värdena för `jcr:title` respektive `jcr:description`.
 
-**Se även**
+**Utforska relaterade resurser**
 
 * [Översätt Assets](translate-assets.md)
 * [Filformat som stöds av Assets](file-format-support.md)
