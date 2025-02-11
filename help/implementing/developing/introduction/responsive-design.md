@@ -4,14 +4,26 @@ description: Med responsiv design kan samma upplevelser visas effektivt på fler
 exl-id: be645062-d6d6-45a2-97dc-d8aa235539b8
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 70a35cfeb163967b0f627d3ac6495f112d922974
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
 
+
 # Responsiv design {#responsive-design}
+
+Med responsiv design kan samma upplevelser visas effektivt på flera enheter i flera olika orienteringar.
+
+>[!TIP]
+>
+>Det här dokumentet ger en översikt över responsiv design för utvecklare och hur funktioner implementeras i AEM. Ytterligare resurser finns:
+>
+>* Information om hur du använder responsiva designfunktioner på en innehållssida finns i dokumentet [Responsiv layout.](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
+>* Information om hur du konfigurerar layoutbehållaren för dina platser för webbplatsadministratörer finns i [Konfigurera dokumentet Layoutbehållare och Layoutläge.](/help/sites-cloud/administering/responsive-layout.md)
+
+## Ökning {#overview}
 
 Utforma era upplevelser så att de anpassar sig till den kundvisningsruta där de visas. Med responsiv design kan samma sidor visas effektivt på flera enheter i båda riktningarna. I följande bild visas några sätt på vilka en sida kan reagera på ändringar i visningsrutans storlek:
 
@@ -41,7 +53,7 @@ När du designar kan du använda verktygsfältet **Emulator** för att förhands
 
 ## Innan du utvecklar {#before-you-develop}
 
-Innan du utvecklar det AEM programmet som stöder dina webbsidor bör du fatta flera designbeslut. Du måste till exempel ha följande information:
+Innan du utvecklar ett AEM-program som har stöd för dina webbsidor bör du fatta flera designbeslut. Du måste till exempel ha följande information:
 
 * De enheter ni riktar er mot
 * Storleken på målvisningsrutan
@@ -49,14 +61,14 @@ Innan du utvecklar det AEM programmet som stöder dina webbsidor bör du fatta f
 
 ### Programstruktur {#application-structure}
 
-Den typiska AEM programstrukturen har stöd för alla responsiva designimplementeringar:
+Den typiska AEM-programstrukturen har stöd för alla responsiva designimplementeringar:
 
 * Sidkomponenter finns under `/apps/<application_name>/components`
 * Mallar finns under `/apps/<application_name>/templates`
 
 ## Använda mediefrågor {#using-media-queries}
 
-Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM utvecklingsverktyg och funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
+Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM utvecklingsverktyg och -funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
 
 W3C-gruppen tillhandahåller rekommendationen [Mediefrågor](https://www.w3.org/TR/css3-mediaqueries/) som beskriver den här CSS3-funktionen och syntaxen.
 
@@ -71,7 +83,7 @@ I CSS-filen definierar du mediefrågor baserat på egenskaperna för de enheter 
 
 I [WKND-självstudien](develop-wknd-tutorial.md) används den här strategin för att definiera format i webbplatsdesignen. CSS-filen som används av WKND finns på `/apps/wknd/clientlibs/clientlib-grid/less/grid.less`.
 
-### Använda mediefrågor med AEM sidor {#using-media-queries-with-aem-pages}
+### Använda mediefrågor med AEM Pages {#using-media-queries-with-aem-pages}
 
 [WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html), som innehåller klientlibs via sidprincipen.
 
@@ -130,6 +142,67 @@ Responsiva sidor anpassar sig dynamiskt till den enhet som de återges på, vilk
 
 ## Layoutbehållaren {#layout-container}
 
-Med AEM Layout Container kan du effektivt implementera responsiv layout för att anpassa sidans dimensioner till klientens visningsruta.
+Med AEM Layout Container kan du effektivt och effektivt implementera responsiv layout för att anpassa sidans dimensioner till klientens visningsruta.
 
-Se dokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-cloud/administering/responsive-layout.md) för mer information om hur layoutbehållaren fungerar och hur du aktiverar responsiva layouter för ditt innehåll.
+>[GitHub-dokumentationen](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) för det responsiva rutnätet är en referens som kan ges till gränssnittsutvecklare så att de kan använda AEM-rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM-webbplats.
+
+>[!TIP]
+>
+>Se dokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-cloud/administering/responsive-layout.md) för mer information om hur layoutbehållaren fungerar och hur du aktiverar responsiva layouter för ditt innehåll.
+
+## Kapslade responsiva stödraster {#nested-responsive-grids}
+
+Det kan finnas tillfällen då du tycker att det är nödvändigt att kapsla in responsiva rutnät för att tillgodose ditt projekts behov. Tänk dock på att Adobe rekommenderade metod är att hålla strukturen så platt som möjligt.
+
+När du inte kan undvika att använda kapslade responsiva stödraster bör du kontrollera följande:
+
+* Alla behållare (behållare, flikar, dragspelspaneler osv.) har egenskapen `layout = responsiveGrid`.
+* Blanda inte egenskapen `layout = simple` i behållarhierarkin.
+
+Detta inkluderar alla strukturella behållare från sidmallen.
+
+Kolumnnumret för den inre behållaren får aldrig vara större än det för den yttre behållaren. Följande exempel uppfyller det här villkoret. Medan kolumnnumret för den yttre behållaren är 8 för standardskärmen (skrivbordet) är kolumnnumret för den inre behållaren 4.
+
+>[!BEGINTABS]
+
+>[!TAB Exempel på nodstruktur]
+
+```text
+container
+  @layout = responsiveGrid
+  cq:responsive
+    default
+      @offset = 0
+      @width = 8
+  container
+  @layout = responsiveGrid
+    cq:responsive
+      default
+        @offset = 0
+        @width = 4
+    text
+      @text =" Text Column 1"
+```
+
+>[!TAB Exempelresultat för HTML]
+
+```html
+<div class="container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--default--0">
+  <div id="container-c9955c233c" class="cmp-container">
+    <div class="aem-Grid aem-Grid--8 aem-Grid--default--8 ">
+      <div class="container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+        <div id="container-8414e95866" class="cmp-container">
+          <div class="aem-Grid aem-Grid--4 aem-Grid--default--4 ">
+            <div class="text aem-GridColumn aem-GridColumn--default--4">
+              <div data-cmp-data-layer="..." id="text-1234567890" class="cmp-text">
+                <p>Text Column 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+>[!ENDTABS]

@@ -5,18 +5,30 @@ exl-id: 469e8151-8231-4ccc-b7f6-855545f87440
 solution: Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 70a35cfeb163967b0f627d3ac6495f112d922974
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1377'
 ht-degree: 0%
 
 ---
 
+
 # Konfigurera layoutbehållaren och layoutläget {#configuring-layout-container-and-layout-mode}
 
-[Responsiv layout](/help/sites-cloud/authoring/page-editor/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). Detta gör att innehållsförfattaren kan skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
+Lär dig hur du konfigurerar layoutbehållare och layoutläge för att aktivera responsiva layouter för innehållsförfattare.
 
-AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
+>[!TIP]
+>
+>I det här dokumentet beskrivs hur en webbplatsadministratör kan konfigurera layoutbehållaren så att den stöder responsiv webbdesign. Ytterligare resurser finns:
+>
+>* Information om hur du använder responsiva designfunktioner på en innehållssida finns i dokumentet [Responsiv layout.](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
+>* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet ](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
+
+## Ökning {#overview}
+
+Responsiv layout är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). Detta gör att innehållsförfattaren kan skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
+
+AEM implementerar en responsiv layout för dina sidor med en kombination av mekanismer:
 
 * **[Layoutbehållare](/help/sites-cloud/authoring/page-editor/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)** - Den här komponenten innehåller ett rutnätsstyckesystem där du kan lägga till och placera komponenter i ett responsivt rutnät.
    * Den kan användas som standardparsyta för sidan och/eller göras tillgänglig för författare i komponentwebbläsaren.
@@ -76,7 +88,7 @@ På grund av arv behöver du bara göra detta för innehållets rotsida.
 
 #### Konfigurera brytpunkter med CRXDE Lite {#configuring-breakpoints-using-crxde-lite}
 
-1. Navigera med CRXDE Lite till något av följande:
+1. Använd CRXDE Lite för att navigera till:
 
    * Din malldefinition.
    * Sidans `jcr:content`-nod.
@@ -146,7 +158,7 @@ I följande två exempel illustreras definitionen:
 
 #### CSS för brytpunkter med LESS {#css-for-breakpoints-using-less}
 
-AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste inkluderas i dina projekt.
+AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste ingå i dina projekt.
 
 Du måste skapa ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) för att kunna tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta som du måste lägga till i projektet:
 
@@ -229,3 +241,9 @@ Om du vill att författare ska kunna lägga till fler responsiva rutnät på inn
 ### Konfigurera stödrastret för layoutbehållaren {#configure-the-grid-of-the-layout-container}
 
 Du kan konfigurera antalet kolumner som är tillgängliga för varje instans av layoutbehållaren [genom att redigera sidmallarna](/help/sites-cloud/authoring/page-editor/templates.md).
+
+### Kapslade responsiva stödraster {#nested-responsive-grids}
+
+Adobe rekommenderade metod är att hålla strukturen så platt som möjligt.
+
+Om du inte kan undvika att använda kapslade responsiva rutnät läser du i utvecklardokumentet [Responsiv design.](/help/implementing/developing/introduction/responsive-design.md#nested-responsive-grids)

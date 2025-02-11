@@ -5,16 +5,16 @@ contentOwner: AG
 feature: Assets HTTP API
 role: Developer, Architect, Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 4cec40947f1b50dd627321cabfbe43033a224f8b
+source-git-commit: 2f4c5db2b40d55e2e46e14cb5309754969b5bdea
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1687'
 ht-degree: 0%
 
 ---
 
-# [!DNL Adobe Experience Manager Assets] HTTP API {#assets-http-api}
+# Hantera digitala resurser med HTTP-API:t [!DNL Adobe Experience Manager Assets]{#assets-http-api}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
 
 | Version | Artikellänk |
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-HTTP-API:t [!DNL Assets] tillåter åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på digitala resurser, inklusive metadata, återgivningar och kommentarer, samt strukturerat innehåll med [!DNL Experience Manager] innehållsfragment. Den exponeras vid `/api/assets` och implementeras som REST API. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
+HTTP-API:t för AEM [!DNL Assets] aktiverar CRUD-åtgärder (skapa, läsa, uppdatera och ta bort) för digitala resurser via ett REST-gränssnitt på /`api/assets`. De här åtgärderna gäller metadata för resurser, återgivningar och kommentarer. Den innehåller [stöd för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ Så här kommer du åt API:
 1. Öppna API-tjänstdokumentet på `https://[hostname]:[port]/api.json`.
 1. Följ tjänstlänkens radavstånd för [!DNL Assets] till `https://[hostname]:[server]/api/assets.json`.
 
-API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt för exempelvis PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
+API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-typer. JSON-svaret är valfritt och kanske inte är tillgängligt, till exempel för PDF-filer. Använd svarskoden för ytterligare analyser eller åtgärder.
 
 >[!NOTE]
 >
@@ -43,19 +43,19 @@ API-svaret är en JSON-fil för vissa MIME-typer och en svarskod för alla MIME-
 
 ## Innehållsfragment {#content-fragments}
 
-Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en särskild typ av resurs. Den kan användas för att komma åt strukturerade data, t.ex. texter, siffror och datum. Eftersom det finns flera skillnader mellan `standard`-resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
+Ett [innehållsfragment](/help/assets/content-fragments/content-fragments.md) är en strukturerad resurs som lagrar text, siffror och datum. Eftersom det finns flera skillnader mellan `standard`-resurser (t.ex. bilder eller dokument) gäller vissa ytterligare regler för hantering av innehållsfragment.
 
 Mer information finns i [Stöd för innehållsfragment i  [!DNL Experience Manager Assets] HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
 >[!NOTE]
 >
->Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de berörda begreppen.
+>Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de koncept som ingår.
 >
 >OpenAPI:erna [Content Fragment och Content Fragment Model](/help/headless/content-fragment-openapis.md) är också tillgängliga.
 
 ## Datamodell {#data-model}
 
-HTTP-API:t [!DNL Assets] visar två huvudelement, mappar och resurser (för standardresurser). Dessutom visas mer detaljerade element för anpassade datamodeller som beskriver strukturerat innehåll i innehållsfragment. Mer information finns i [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments).
+HTTP-API:t [!DNL Assets] visar i första hand två element: mappar och standardresurser. Den innehåller även detaljerade element för anpassade datamodeller som används i innehållsfragment. Mer information finns i Datamodeller för innehållsfragment. Mer information finns i [Datamodeller för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md#content-models-and-content-fragments).
 
 >[!NOTE]
 >
@@ -63,14 +63,14 @@ HTTP-API:t [!DNL Assets] visar två huvudelement, mappar och resurser (för stan
 
 ### Mappar {#folders}
 
-Mappar är som kataloger som i de traditionella filsystemen. Mappen kan bara innehålla resurser, bara mappar, eller mappar och resurser. Mappar har följande komponenter:
+Mappar är som kataloger som i de traditionella filsystemen. Mappar kan innehålla resurser, undermappar eller både och. Mappar har följande komponenter:
 
 **Entiteter**: Enheterna i en mapp är dess underordnade element, som kan vara mappar och resurser.
 
 **Egenskaper**:
 
-* `name` är namnet på mappen. Detta är samma som det sista segmentet i URL-sökvägen utan tillägget.
-* `title` är en valfri rubrik för mappen som kan visas i stället för dess namn.
+* `name`: Mappens namn (det sista segmentet i URL-sökvägen, utan tillägget).
+* `title`: En valfri titel visas i stället för mappnamnet.
 
 >[!NOTE]
 >
@@ -78,18 +78,18 @@ Mappar är som kataloger som i de traditionella filsystemen. Mappen kan bara inn
 
 **Länkar**-mappar visar tre länkar:
 
-* `self`: Länka till sig själv.
-* `parent`: Länk till den överordnade mappen.
-* `thumbnail`: (Valfritt) länk till en mappminiatyrbild.
+* `self`: En länk till själva mappen.
+* `parent`: En länk till den överordnade mappen.
+* `thumbnail` (Valfritt): En länk till en mappminiatyrbild.
 
 ### Assets {#assets}
 
 I [!DNL Experience Manager] innehåller en resurs följande element:
 
-* Resursens egenskaper och metadata.
-* Ursprungligen överförd binär fil för resursen.
-* Flera renderingar enligt konfigurationen. Det kan vara bilder med olika storlek, videoklipp med olika kodningar eller extraherade sidor från PDF eller [!DNL Adobe InDesign]-filer.
-* Valfria kommentarer.
+* **Egenskaper och metadata:** Beskrivande information om resursen.
+* **Binär fil:** Den ursprungligen överförda filen.
+* **Återgivningar:** Flera konfigurerade återgivningar (till exempel bilder i olika storlekar, olika videokodningar eller extraherade sidor från PDF-filer/Adobe InDesign-filer).
+* **Kommentarer (valfritt):** Kommentarer från användaren.
 
 Mer information om element i innehållsfragment finns i [Stöd för innehållsfragment i Experience Manager Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md).
 
@@ -173,7 +173,7 @@ Ett API-anrop misslyckas med en `500`-svarskod om den överordnade noden för de
 
 ## Skapa en resurs {#create-an-asset}
 
-Mer information om hur du skapar en resurs finns i [överföring av resurser](developer-reference-material-apis.md). Du kan inte skapa en resurs med HTTP API.
+Det går inte att skapa resurser via detta HTTP-API. Använd API:t för [överföring av resurser](developer-reference-material-apis.md) för att skapa resurser.
 
 ## Uppdatera en resurbinär {#update-asset-binary}
 
@@ -181,7 +181,7 @@ Mer information om hur du uppdaterar resursbinärfiler finns i [Överför resurs
 
 ## Uppdatera metadata för en resurs {#update-asset-metadata}
 
-Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i namnutrymmet `dc:` uppdaterar API:t samma egenskap i namnutrymmet `jcr`. API:t synkroniserar inte egenskaperna under de två namnutrymmena.
+Den här åtgärden uppdaterar resursens metadata. När egenskaper uppdateras i namnutrymmet `dc:` uppdateras motsvarande `jcr:`-egenskap. API:t synkroniserar dock inte egenskaperna under de två namnutrymmena.
 
 **Begäran**: `PUT /api/assets/myfolder/myAsset.png -H"Content-Type: application/json" -d '{"class":"asset", "properties":{"dc:title":"My Asset"}}'`
 
@@ -196,7 +196,10 @@ Uppdaterar egenskaperna för resursmetadata. Om du uppdaterar någon egenskap i 
 
 Skapa en återgivning för en resurs. Om parameternamnet för begäran inte anges används filnamnet som återgivningsnamn.
 
-**Parametrar**: Parametrarna är `name` för återgivningens namn och `file` som en filreferens.
+**Parametrar**: Parametrarna är:
+
+`name`: för återgivningsnamnet.
+`file`: Den binära filen för återgivningen som referens.
 
 **Begäran**
 
@@ -292,9 +295,9 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 
 ## Tips, metodtips och begränsningar {#tips-limitations}
 
-* Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via webbgränssnittet [!DNL Assets] och via HTTP-API:t. API:t returnerar 404-felmeddelande om [!UICONTROL On Time] ligger i framtiden eller om [!UICONTROL Off Time] redan finns.
+* Assets och deras återgivningar blir otillgängliga via webbgränssnittet [!DNL Assets] och HTTP API när [!UICONTROL Off Time] nås. API:t returnerar ett 404-fel om [!UICONTROL On Time] finns i framtiden eller om [!UICONTROL Off Time] redan finns.
 
-* Assets HTTP API returnerar inte alla metadata. Namnutrymmena är hårdkodade och endast dessa namnutrymmen returneras. Fullständiga metadata finns i resurssökvägen `/jcr_content/metadata.json`.
+* Assets HTTP API returnerar bara en delmängd av metadata. Namnutrymmena är hårdkodade och endast dessa namnutrymmen returneras. Fullständiga metadata finns i resurssökvägen `/jcr_content/metadata.json`.
 
 * Vissa egenskaper för mapp eller resurs mappas till ett annat prefix när de uppdateras med API:er. Prefixet `jcr` för `jcr:title`, `jcr:description` och `jcr:language` ersätts med prefixet `dc`. I den returnerade JSON innehåller därför `dc:title` och `dc:description` värdena för `jcr:title` respektive `jcr:description`.
 
@@ -311,7 +314,7 @@ Tar bort en resurs (-tree) vid den angivna sökvägen.
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >

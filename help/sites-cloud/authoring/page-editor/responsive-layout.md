@@ -1,22 +1,32 @@
 ---
 title: Responsiv layout
-description: AEM kan du förverkliga en responsiv layout för dina sidor
+description: Med AEM kan du förverkliga en responsiv layout för dina sidor med komponenten Layoutbehållare.
 exl-id: 87202742-5bed-4e87-a427-456a1a0e72cc
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 70a35cfeb163967b0f627d3ac6495f112d922974
 workflow-type: tm+mt
-source-wordcount: '1740'
-ht-degree: 5%
+source-wordcount: '1789'
+ht-degree: 4%
 
 ---
 
+
 # Responsiv layout {#responsive-layout}
 
-Med AEM kan du ha en responsiv layout för sidorna med komponenten **Layoutbehållare**.
+Med AEM kan du ha en responsiv layout för dina sidor med komponenten **Layoutbehållare**.
 
-Detta ger ett styckesystem där du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**layoutläget**](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector) som gör att du kan skapa och redigera den responsiva layouten beroende på enhet.
+>[!TIP]
+>
+>Det här dokumentet innehåller en översikt över de funktioner i layoutbehållaren som är tillgängliga för innehållsförfattare. Ytterligare resurser finns:
+>
+>* Information om hur du konfigurerar layoutbehållaren för dina platser för webbplatsadministratörer finns i [Konfigurera dokumentet Layoutbehållare och Layoutläge.](/help/sites-cloud/administering/responsive-layout.md)
+>* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet ](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
+
+## Ökning {#overview}
+
+Komponenten **Layoutbehållare** innehåller ett styckesystem där du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med [**layoutläget**](/help/sites-cloud/authoring/page-editor/introduction.md#mode-selector) som gör att du kan skapa och redigera den responsiva layouten beroende på enhet.
 
 Layoutbehållaren:
 
@@ -27,7 +37,7 @@ Layoutbehållaren:
 
 Användaren kan sedan se hur innehållet återges för specifika enheter med emulatorn.
 
-AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
+AEM implementerar en responsiv layout för dina sidor med en kombination av mekanismer:
 
 * [**Layoutbehållare**](#adding-a-layout-container-and-its-content-edit-mode)-komponent
 
@@ -49,10 +59,6 @@ Med dessa responsiva rutnätsmekanismer kan du:
 * Uppnå kolumnkontroll.
 
 Beroende på vilket projekt du arbetar med kan Layoutbehållaren användas som standardstyckesystem för sidorna eller som en komponent som kan läggas till på sidan via komponentwebbläsaren (eller båda).
-
->[!TIP]
->
->Adobe tillhandahåller [GitHub-dokumentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) för den responsiva layouten som en referens som kan ges till gränssnittsutvecklare så att de kan använda det AEM rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM.
 
 >[!NOTE]
 >
