@@ -1,11 +1,11 @@
 ---
 title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 20db0990c506aeb473b71132813cec053009275f
+source-git-commit: cdf1a62ca7c8d25b146cb7b6c1329f064e42df56
 workflow-type: tm+mt
 source-wordcount: '1750'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för funktionen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Om du vill få ett månatligt e-postmeddelande om uppdateringar av versionsinformation för Experience Cloud, prenumererar du på [produktuppdateringen för Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html).
+>Om du vill få ett månatligt e-postmeddelande om uppdateringar av Experience Cloud versionsinformation prenumererar du på [Adobe Priority Product Update](https://www.adobe.com/subscription/priority-product-update.html).
 
 ## Releasedatum {#release-date}
 
@@ -48,7 +48,7 @@ Have a look at the January 2025 Release Overview video for a summary of the feat
 
 **Kommentarer för innehållsfragmentredigeraren är nu allmänt tillgängliga**
 
-Samarbeta enkelt med kollegor när AEM skapar innehållsfragment med den nya och moderniserade kommentarstjänsten i AEM Content Fragment Editor.
+Samarbeta enkelt med kollegor när du skapar AEM Content Fragments med den nya och moderniserade kommentarstjänsten i AEM Content Fragment Editor.
 [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/authoring?#commenting-on-your-fragment).
 
 **Innehållsfragmentsredigeraren och administratörens användargränssnitt, uppdaterat stöd för AEM as a Cloud Service-versioner**
@@ -63,46 +63,46 @@ Förbättrad referens för [innehållsfragment med unika ID-baserade referenser]
 
 **AEM REST OpenAPI för leverans av innehållsfragment**
 
-[AEM REST OpenAPI för Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ### Föråldrade funktioner {#sites-deprecated}
 
-#### SPA {#spa-editor}
+#### SPA Editor {#spa-editor}
 
-[SPA redigerare](/help/implementing/developing/hybrid/introduction.md) har tagits bort för nya projekt från och med version 2025.1.0. SPA Editor stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt.
+[SPA-redigeraren](/help/implementing/developing/hybrid/introduction.md) har tagits bort för nya projekt från och med version 2025.1.0. SPA-redigeraren stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt.
 
-De redigerare som rekommenderas för att hantera innehåll utan rubriker i AEM är nu:
+De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 
 * [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering.
 * [Innehållsfragmentsredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering.
 
-#### PWA-funktioner {#pwa-features}
+#### PWA Features {#pwa-features}
 
-[Funktionerna för det progressiva webbprogrammet (PWA) ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites har tagits bort för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
+[Funktionerna för det progressiva webbprogrammet (PWA) ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites är föråldrade för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i AEM Assets {#new-features-assets}
 
-**Dynamic Media-mallar**
+**Dynamiska mediamallar**
 
-Anpassa bild- och textbanners direkt med en lättanvänd mallredigerare för WYSIWYG Dynamic Media genom att bädda in webbadressen i valfritt program från första eller tredje part för att skapa engagerande upplevelser med uppdateringar av bannerinnehåll i realtid.
+Anpassa bild- och textbanners direkt med en lättanvänd WYSIWYG Dynamic Media Template Editor, genom att bädda in webbadressen i valfritt program från första eller tredje part, för att skapa engagerande upplevelser med uppdateringar av bannerinnehåll i realtid.
 
 ![dynamiska återgivningar](/help/assets/assets/dm-templates-smart-text-resize.png)
 
-**Leveransrapporter för Dynamic Media**
+**Leveransrapporter för dynamiska media**
 
-Få leveransinsikter om mediefiler som levereras via Dynamic Media, inklusive leveransantal på tillgångsnivå, referensinformation, resurssökvägar i AEM Assets och unika tillgångs-ID. Generera rapporter för alla resurser i AEM Assets-databasen eller specifika mapphierarkier. Med dessa insikter kan ni mäta avkastningen på levererade resurser, utvärdera kanalernas prestanda och fatta välgrundade beslut för resurshantering.
+Få leveransinsikter om mediefiler som levereras via Dynamic Media, inklusive leveransantal på tillgångsnivå, referensinformation, resurssökvägar i AEM Assets och unika medie-ID:n. Generera rapporter för alla resurser i AEM Assets-databasen eller specifika mapphierarkier. Med dessa insikter kan ni mäta avkastningen på levererade resurser, utvärdera kanalernas prestanda och fatta välgrundade beslut för resurshantering.
 
 ![dynamiska återgivningar](/help/assets/assets/referrer.png)
 
 **Dynamic Media Multi-audio och caption**
 
-[Stöd för flera bildtexter och flerljudspår för videofilmer i Dynamic Media](/help/assets/dynamic-media/video.md#about-msma) - Nu kan du enkelt lägga till flera bildtexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för en global publik. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
+[Stöd för flera bildtexter och flerljudspår för videofilmer i dynamiska media](/help/assets/dynamic-media/video.md#about-msma) - Nu kan du enkelt lägga till flera bildtexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för en global publik. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
 
 **Dynamisk adaptiv strömning över HTTP-stöd**
 
-Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
+Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media-leverans (med CMAF aktiverat):
 
 * Adaptiv direktuppspelning (DASH/HLS) ger en bättre användarupplevelse för videor.
 
@@ -155,7 +155,7 @@ Med adaptiv Forms kan du använda [HTML e-postmallar](/help/forms/html-email-tem
 
 ![HTML e-postmallar](/help/forms/assets/html-email.png)
 
-#### Förbättrat molnlagringsstöd: Direktöverföring från PDF till Azure Blob Storage
+#### Förbättrat molnlagringsstöd: Direktöverföring av PDF till Azure Blob Storage
 
 AEM Forms API:er för dokumentgenerering gör nu att du kan [överföra genererade PDF-dokument direkt till Azure Blob Storage](/help/forms/early-access-ea-features.md#doc-generation-api). Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
 
@@ -179,9 +179,9 @@ Sandlådeprogram har nu stöd för konfigureringspipelines, som kan konfigureras
 
 ### OpenAPI-baserade API:er - tidigt Adobe-program {#open-apis-earlyadopter}
 
-Utvecklarna kan integrera AEM som Cloud Service i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
+Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
 
-Lär dig mer om [OpenAPI-baserade AEM-API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
+Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
 
 De API-slutpunkter som anges nedan är tillgängliga som en del av ett program för tidig användning. Om du är intresserad kan du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av hur du tänker använda dem.
 
@@ -192,9 +192,9 @@ De API-slutpunkter som anges nedan är tillgängliga som en del av ett program f
 
 ### Edge Computing - Request for Feedback! {#edge-computing-feedback}
 
-Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Adobe vill gärna veta om du tycker att den här tekniken är användbar för projekt AEM Publish Delivery och Edge Delivery Services. Dessutom kan du tala om för oss vad du tänkt dig när du använder den som indata i produktfärdplanen. Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
+Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Adobe vill gärna veta om du tycker att den här tekniken är användbar för AEM Publish Delivery och Edge Delivery Services. Dessutom kan du tala om för oss vad du tänkt dig när du använder den som indata i produktfärdplanen. Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
 
-### New AEM Developer Console (Public Beta) {#aem-developer-console-beta}
+### Nya AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 
 Prova en omgjord [AEM Developer Console](/help/implementing/developing/introduction/aem-developer-console.md) som erbjuder en mer interaktiv upplevelse för felsökning av kod i molnmiljöer.
 
@@ -202,7 +202,7 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-release/2410-0-release/whats-new-2024-10-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 

@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2024.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2024.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2024.10.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2024.10.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 7a63f04f-10f0-4879-bd06-4182bb288a9b
-source-git-commit: c3beecaab03c3721ad2fb70658a335d17f9a66d0
+source-git-commit: bf3ccd88bc29db136ff5445f76e196b6ac8c52c7
 workflow-type: tm+mt
 source-wordcount: '1664'
 ht-degree: 0%
@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.10.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Om du vill få ett månatligt e-postmeddelande om uppdateringar av versionsinformation för Experience Cloud, prenumererar du på [produktuppdateringen för Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html).
+>Om du vill få ett månatligt e-postmeddelande om uppdateringar av Experience Cloud versionsinformation prenumererar du på [Adobe Priority Product Update](https://www.adobe.com/subscription/priority-product-update.html).
 
 ## Releasedatum {#release-date}
 
@@ -52,21 +52,21 @@ Följande AEM Sites-sidhändelser är nu tillgängliga som externt konsumerbara 
 
 **Generera variationer**
 
-Utnyttja GenAI genom att AEM nya funktioner, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ert Adobe-kontoteam för att ta del av detta i programmet.
+Utnyttja GenAI genom AEM nya funktion, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ditt Adobe-kontoteam och ta del av ditt bidrag i programmet.
 
 **AEM REST OpenAPI för leverans av innehållsfragment**
 
-[AEM REST OpenAPI för Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Tidig åtkomst i Dynamic Media {#dm-early-access}
+### Funktion för tidig åtkomst i Dynamic Media {#dm-early-access}
 
 **AI-genererade videobeskrivningar**
 
 AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter i realtid. AI analyserar videons ljudspår för att transkribera tal och skapa bildtexter som kan redigeras för precision eller anpassning. Dessa bildtexter uppfyller tillgänglighetskraven och förbättrar engagemanget för videoklipp som förlitar sig på eller föredrar textbaserat videostöd.
 
-[Skapa och skicka ett kundsupportärende](/help/assets/dynamic-media/video.md##enable-dash) om du vill få snabb tillgång till stöd för AI-genererade bildtexter på ditt Dynamic Media-konto.
+[Skapa och skicka ett Adobe kundsupportärende](/help/assets/dynamic-media/video.md##enable-dash) om du vill få tidig åtkomst till AI-genererade bildtexter på ditt Dynamic Media-konto.
 
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
@@ -126,9 +126,9 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 De genererande AI-funktionerna är:
 
-* **AI-assistenten för produktfrågor**: Få svar på dina AEM formulärrelaterade frågor direkt. AI-assistenten fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
+* **AI-assistenten för produktfrågor**: Få svar på dina formulärrelaterade frågor om AEM. AI-assistenten fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
 
-* **Skapa anpassade formulär**: Skapa enkelt fullfjädrade formulär med generativa AI-uppmaningar. Adobe generative AI genererar automatiskt användarvänliga formulär som minskar bortfall och personaliserar upplevelsen.
+* **Skapa anpassade formulär**: Skapa enkelt fullfjädrade formulär med generativa AI-uppmaningar. Adobe generativa AI genererar automatiskt användarvänliga formulär som minskar antalet avhopp och personaliserar upplevelsen.
 
 * **Panelgenerering för Forms**: Generera formuläravsnitt som är anpassade efter specifika datainsamlingsbehov. Generera t.ex. avsnitt för insamling av betalningsinformation, kundpreferenser eller reseinformation.
 
@@ -140,7 +140,7 @@ De genererande AI-funktionerna är:
 >
 > Är du intresserad av att delta i programmet för tidig åtkomst för något av Forms innovationer? Skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner som du är intresserad av.
 
-## CIF {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Felkorrigeringar {#bug-fixes-cif}
 
@@ -151,7 +151,7 @@ De genererande AI-funktionerna är:
 
 ### Konfiguration för att styra formuläröverföringar {#configuration-submissions}
 
-För att styra formulärinskickade formulär för Coral- eller Foundation-formulär på specifika platser har AEM introducerat en ny konfiguration: `com.adobe.granite.ui.components.FormRestrict`. Den här konfigurationen består av två fält:
+För att styra formulärinskickade formulär för Coral- eller Foundation-formulär på specifika platser har AEM infört en ny konfiguration: `com.adobe.granite.ui.components.FormRestrict`. Den här konfigurationen består av två fält:
 
 1. **Lägg till tillåtna sökvägar**: Anger sökvägarna där formuläråtgärder tillåts.
 1. **Begränsa beteende**: Anger beteendet för begränsade sökvägar (sökvägar som inte ingår i tillåtelselista). Du kan välja mellan två alternativ:
@@ -164,13 +164,13 @@ För att styra formulärinskickade formulär för Coral- eller Foundation-formul
 
 ### Självbetjänad loggvidarebefordran med alternativet Avancerat nätverk {#log-forwarding}
 
-Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av ](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
+Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av ](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM-loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
 
 Den här funktionen konfigureras av användare på ett självbetjäningssätt och distribueras med [konfigurationspipeline](/help/operations/config-pipeline.md).
 
 ### Pipeline-fria URL-omdirigeringar för företagsanvändare {#pipeline-free-redirects}
 
-Omdirigeringar på webbläsarsidan är användbara när en webbsida har tagits ned eller flyttats, eller i andra scenarier. Med [Pipeline-fria URL-omdirigeringar](/help/implementing/dispatcher/pipeline-free-url-redirects.md) kan du placera en Apache-omskrivningsfil på en AEM publiceringsplats, där den läses in automatiskt - du behöver inte implementera filen i källkontrollen eller initiera en Cloud Manager-pipeline.
+Omdirigeringar på webbläsarsidan är användbara när en webbsida har tagits ned eller flyttats, eller i andra scenarier. Med [Pipeline-fria URL-omdirigeringar](/help/implementing/dispatcher/pipeline-free-url-redirects.md) kan du montera en Apache-omskrivningsfil på en publiceringsplats i AEM, där den läses in automatiskt - du behöver inte implementera filen i en källkontroll eller initiera en Cloud Manager-pipeline.
 
 Du kan publicera filen som ska skrivas om genom att överföra den som en resurs, använda ACS Commons Rewrite Map Manager eller genom att interagera med ett anpassat användargränssnitt.
 
@@ -180,21 +180,21 @@ Snabba utvecklingsmiljöer är ett kraftfullt verktyg för att snabbt distribuer
 
 ### Nya produktprofiler {#new-product-profiles}
 
-När en ny AEM skapas visas produktprofiler automatiskt i Adobe Admin Console, vilket gör att administratörer kan tilldela åtkomst till licensierade lösningar och funktioner.
+När en ny AEM-miljö skapas visas produktprofiler automatiskt i Adobe Admin Console så att administratörer kan tilldela åtkomst till licensierade lösningar och funktioner.
 
 Nya miljöer innehåller nu en uppdaterad uppsättning produktprofiler, vilket gör dem kompatibla med framtida funktioner, inklusive generering av API-autentiseringsuppgifter i Adobe Developer Console. Befintliga miljöer kommer att kunna uppdatera sina produktprofiler i en kommande version. [Läs mer](/help/onboarding/aem-cs-team-product-profiles.md).
 
-### New AEM Developer Console (Public Beta) {#aem-developer-console-beta}
+### Nya AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 
 Prova en omgjord [AEM Developer Console](/help/implementing/developing/introduction/aem-developer-console.md) som erbjuder en mer interaktiv upplevelse för felsökning av kod i molnmiljöer.
 
-Vem som helst kan komma åt den offentliga betaversionen genom att klicka på knappen *Ny konsol tillgänglig* i den aktuella AEM Developer Console. Adobe välkomnar feedback, som du kan skicka via e-post till **<aemcs-new-devconsole-ui-beta@adobe.com>**.
+Vem som helst kan komma åt den offentliga betaversionen genom att klicka på knappen *Ny konsol tillgänglig* i den aktuella AEM Developer Console. Adobe tar gärna emot feedback, som du kan skicka med e-post till **<aemcs-new-devconsole-ui-beta@adobe.com>**.
 
 ![OSGi Bundles-skärm i AEM Developer Console](/help/implementing/developing/introduction/assets/osgi-bundles.png)
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-0-release/whats-new-2024-10-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 

@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2024.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2024.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2024.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2024.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 3fd6482e-66f0-48ee-983c-4cb6b7742dcd
-source-git-commit: 71865aca9483e059a7f9bb0e98d4c50381ceee96
+source-git-commit: aafa51c246ee67f9fed014a39ecfb4605ac6152f
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.11.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Om du vill få ett månatligt e-postmeddelande om uppdateringar av versionsinformation för Experience Cloud, prenumererar du på [produktuppdateringen för Adobe Priority](https://www.adobe.com/subscription/priority-product-update.html).
+>Om du vill få ett månatligt e-postmeddelande om uppdateringar av Experience Cloud versionsinformation prenumererar du på [Adobe Priority Product Update](https://www.adobe.com/subscription/priority-product-update.html).
 
 ## Releasedatum {#release-date}
 
@@ -45,7 +45,7 @@ Titta på videon med versionsöversikten för november 2024 om du vill se en sam
 
 Gör snabbt om en Edge Delivery-sida till en sidmall. På så sätt kan du starta en ny sida med en fördefinierad struktur och innehåll i stället för en tom sida. [Läs mer](/help/sites-cloud/authoring/universal-editor/templates.md).
 
-**[!DNL Edge Delivery Services]CSV-importerare för publicering via en AEM**
+**[!DNL Edge Delivery Services]CSV-importerare för publicering via en AEM-instans**
 
 Hantera dina Edge Delivery-kalkylbladsdata (t.ex. omdirigeringar) effektivt i ditt kalkylbladsverktyg och ladda upp dem till AEM via den nya CSV-importeraren. [Läs mer](/help/edge/wysiwyg-authoring/tabular-data.md#importing).
 
@@ -57,29 +57,29 @@ Förbättrade [Content Fragment-referenser med unika ID-baserade referenser](/he
 
 **AEM REST OpenAPI för leverans av innehållsfragment**
 
-[AEM REST OpenAPI för Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Tidiga åtkomstfunktioner i Dynamic Media {#dm-early-access}
+### Funktioner för tidig åtkomst i Dynamic Media {#dm-early-access}
 
 **AI-genererade videobeskrivningar**
 
 AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter i realtid. AI analyserar videons ljudspår för att transkribera tal och skapa bildtexter som kan redigeras för precision eller anpassning. Dessa bildtexter uppfyller tillgänglighetskraven och förbättrar engagemanget för videoklipp som förlitar sig på eller föredrar textbaserat videostöd.
 
-[Skapa och skicka ett kundsupportärende](/help/assets/dynamic-media/video.md##enable-dash) om du vill få snabb tillgång till stöd för AI-genererade bildtexter på ditt Dynamic Media-konto.
+[Skapa och skicka ett Adobe kundsupportärende](/help/assets/dynamic-media/video.md##enable-dash) om du vill få tidig åtkomst till AI-genererade bildtexter på ditt Dynamic Media-konto.
 
-**Dynamic Media leveransrapport**
+**Rapport om leverans av dynamiska media**
 
 Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leveransantal på tillgångsnivå, referensinformation, resurssökväg i AEM Assets och unikt resurs-ID. Rapporter kan genereras för alla resurser som levereras via Dynamic Media för AEM Assets-databasen eller för en viss mapphierarki i AEM Assets. Insikter hjälper till att mäta avkastningen på levererade tillgångar, mäta kanalernas prestanda och ta hjälp av välgrundade resurshanteringsåtgärder för tillgångar.
 
-[Skapa och skicka ett kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tidig åtkomst till Dynamic Media-leveransrapporten för ditt Dynamic Media-konto.
+Om du vill få tidig åtkomst till Dynamic Media Delivery Report på ditt Dynamic Media-konto kan du [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
-**Panelen Dynamic Media**
+**Panelen Dynamiska media**
 
-I Assets-vyn kan du nu komma åt Dynamic Media och Dynamic Media med OpenAPI-renderingar från en separat panel som du har tillgång till. Du kan välja att kopiera leverans-URL:en eller hämta återgivningarna baserat på resurs- och återgivningstyp. Mer information finns i [Dynamic Media-renderingar](/help/assets/renditions.md#dynamic-media-renditions) och [Dynamic Media med OpenAPI-funktionsåtergivningar](/help/assets/renditions.md#dm-with-openapi-renditions).
+I Assets-vyn kan du nu komma åt dynamiska media och dynamiska media med OpenAPI-renderingar från en separat panel som du har tillgång till. Du kan välja att kopiera leverans-URL:en eller hämta återgivningarna baserat på resurs- och återgivningstyp. Mer information finns i [Dynamiska medierenderingar](/help/assets/renditions.md#dynamic-media-renditions) och [Dynamiska media med OpenAPI-funktionsåtergivningar](/help/assets/renditions.md#dm-with-openapi-renditions).
 
 ![dynamiska återgivningar](/help/assets/assets/dm-scene7-renditions.png)
 
@@ -110,13 +110,13 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 #### Integreringar
 
-* **[Integrera adaptiv Forms med Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)**: AEM Forms as a Cloud Service innehåller nu ett lättanvänt alternativ för att ansluta adaptiv Forms med Adobe Marketo Engage. Tack vare den här integreringen kan du skapa Adaptiv Forms direkt med Marketo Engage lead-hämtning och relaterade anpassade objekt. Nu kan ni förifylla formulärfält med data från Marketo Engage och skicka tillbaka data för att automatisera arbetsflöden som smarta kampanjer och automatisering av e-post. Du kan också koppla ett adaptivt formulär till Munchkin-biblioteket för att spåra antalet besök, klick och inskickade formulär.
+* **[Integrera adaptiv Forms med Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)**: AEM Forms as a Cloud Service har nu ett lättanvänt alternativ för att ansluta adaptiv Forms med Adobe Marketo Engage. Tack vare den här integreringen kan du skapa Adaptiv Forms direkt med Marketo Engage lead capture and related custom objects. Nu kan ni förifylla formulärfält med data från Marketo Engage och skicka tillbaka data för att automatisera arbetsflöden som smarta kampanjer och automatisering av e-post. Du kan också koppla ett adaptivt formulär till Munchkin-biblioteket för att spåra antalet besök, klick och inskickade formulär.
 
 #### Adaptiv Forms och HTML5 Forms
 
 * **[Skapa adaptiv Forms baserat på befintlig XFA-mall](/help/forms/create-adaptive-form-using-xfa-templates.md)**: Nu kan du skapa Core Component-baserad Adaptiv Forms med XFA-formulärmallar (*.XDP-filer). Detta underlättar för AEM Forms On-Premise-kunder med befintliga investeringar i XFA-teknik att använda AEM Forms as a Cloud Service.
 
-* **HTML5 Forms (XFA-baserade webbformulär)**: Nu kan AEM Forms On-Premise-kunder som använder XFA-teknik enkelt gå över till AEM Forms as a Cloud Service samtidigt som de behåller sin befintliga användarupplevelse med HTML5 Forms (XFA-baserade webbformulär). Denna funktion gör att XFA-formulärmallar kan återges i HTML5-format, vilket gör att formulär blir tillgängliga på enheter som inte stöder XFA-baserad PDF forms.
+* **HTML5 Forms (XFA-baserade webbformulär)**: Nu kan AEM Forms On-Premise-kunder som använder XFA-teknik enkelt gå över till AEM Forms as a Cloud Service samtidigt som de behåller sin befintliga användarupplevelse med HTML5 Forms (XFA-baserade webbformulär). Denna funktion gör att XFA-formulärmallar kan återges i HTML5-format, vilket gör att formulär blir tillgängliga på enheter som inte stöder XFA-baserade PDF forms.
 
   ![HTML Forms (XFA-baserade webbformulär)](/help/forms/assets/html-forms-xfa-based-web-forms.png)
 
@@ -130,7 +130,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
   ![Interaktiv kommunikationsredigerare](/help/forms/assets/ic-editor.png)
 
 
-* **[Kompatibilitetsförbättringar för PDF/A](/help/forms/aem-forms-cloud-service-communications-introduction.md#convert-to-and-validate-pdfa-compliant-documents)**: Nu kan du använda kommunikations-API:er för att konvertera PDF-dokument till PDF/A-format (1a, 2a, 3a) i arkiveringssyfte samtidigt som du säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
+* **[PDF/A-kompatibilitetsförbättringar](/help/forms/aem-forms-cloud-service-communications-introduction.md#convert-to-and-validate-pdfa-compliant-documents)**: Nu kan du använda kommunikations-API:er för att konvertera PDF-dokument till PDF/A-format (1a, 2a, 3a) för arkiveringsändamål samtidigt som du säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
 
 
 * **[Signatur-API (Document Assurance)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance)**: Ett nytt RESTful-API i kommunikations-API:er gör det enkelt att hantera PDF-signaturer. Den stöder åtgärder som:
@@ -145,15 +145,15 @@ intuitive and improving the mobile form-filling experience.
 
 -->
 
-## Tjänsten Automated forms conversion
+## Automatisk formulärkonverteringstjänst
 
-* **[Konvertera PDF forms till Core Components-baserade adaptiva Forms](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms)**: nu kan du använda Automated forms conversion-tjänsten för att omvandla PDF forms-, AcroForms- eller XFA-baserade formulär till Core Components-baserade adaptiva Forms.
+* **[Konvertera PDF forms till Core Components-baserade adaptiva Forms](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms)**: nu kan du använda automatisk formulärkonverteringstjänst för att omvandla PDF forms-, AcroForms- eller XFA-baserade formulär till Core Components-baserade adaptiva Forms.
 
 >[!IMPORTANT]
 >
-> Är du intresserad av att delta i programmet för tidig åtkomst för något av Forms innovationer? Skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner som du är intresserad av.## CIF tillägg {#cloud-services-cif}
+> Är du intresserad av att delta i programmet för tidig åtkomst för något av Forms innovationer? Skicka ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med en lista över funktioner som du är intresserad av.## CIF Add-on {#cloud-services-cif}
 
-## CIF {#cif}
+## CIF Add-on {#cif}
 
 ### Felkorrigeringar {#bug-fixes-cif}
 
@@ -162,15 +162,15 @@ intuitive and improving the mobile form-filling experience.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### Förbättrad trädreplikeringsprestanda (och borttagning av Publish Content Tree Workflow) {#tree-replication-performance}
+### Förbättrad trädreplikeringsprestanda (och borttagning av arbetsflödet Publicera innehållsträd) {#tree-replication-performance}
 
-[Arbetsflödessteget för trädaktivering](/help/operations/replication.md#tree-activation) är ett nytt arbetsflödesmodellsteg som rekommenderas för replikering av hierarkier med djupgående innehåll. Observera att oberoende replikeringar (t.ex. genom snabb publicering eller hantering av publicering) kan fortsätta parallellt med arbetsflödet för trädreplikering. Detta är särskilt användbart om du behöver publicera tidskänsligt innehåll medan en gruppreplikering fortfarande pågår. Trädreplikeringssteget ersätter Publish Content Tree Workflow och dess relaterade arbetsflödessteg, som nu är inaktuellt.
+[Arbetsflödessteget för trädaktivering](/help/operations/replication.md#tree-activation) är ett nytt arbetsflödesmodellsteg som rekommenderas för replikering av hierarkier med djupgående innehåll. Observera att oberoende replikeringar (t.ex. genom snabb publicering eller hantering av publicering) kan fortsätta parallellt med arbetsflödet för trädreplikering. Detta är särskilt användbart om du behöver publicera tidskänsligt innehåll medan en gruppreplikering fortfarande pågår. Trädreplikeringssteget ersätter arbetsflödet för publiceringsinnehållsträdet och dess relaterade arbetsflödessteg, som nu är inaktuellt.
 
 ### OpenAPI-baserade API:er - tidigt Adobe-program {#open-apis-earlyadopter}
 
-Utvecklarna kan integrera AEM som Cloud Service i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
+Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
 
-Lär dig mer om [OpenAPI-baserade AEM-API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
+Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
 
 De API-slutpunkter som anges nedan är tillgängliga som en del av ett program för tidig användning. Om du är intresserad kan du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av hur du tänker använda dem.
 * [API:er för innehållsfragment för webbplatser](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)
@@ -180,9 +180,9 @@ De API-slutpunkter som anges nedan är tillgängliga som en del av ett program f
 
 ### Edge Computing - Request for Feedback! {#edge-computing-feedback}
 
-Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Vi vill gärna veta om du tycker att den här tekniken är användbar i projekt AEM Publish Delivery och Edge Delivery Services och vad du tänker använda den till. Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
+Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Vi vill gärna veta om du tycker att den här tekniken är användbar för AEM Publish Delivery och Edge Delivery Services och vad du planerar att använda den till. Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
 
-### New AEM Developer Console (Public Beta) {#aem-developer-console-beta}
+### Nya AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 
 Prova en omgjord [AEM Developer Console](/help/implementing/developing/introduction/aem-developer-console.md) som erbjuder en mer interaktiv upplevelse för felsökning av kod i molnmiljöer.
 
@@ -190,7 +190,7 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-release/2410-0-release/whats-new-2024-10-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
