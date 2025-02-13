@@ -3,7 +3,7 @@ title: Hur konfigurerar jag Microsoft Dynamics 365 ur kartongen med formulärdat
 description: Lär dig hur du integrerar Microsoft Dynamics 365 med Adaptive Forms.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
-source-git-commit: fadbe44e0dba4e7dcbad230c286d6126e68910bc
+source-git-commit: 25284474793742a1af28e3c81976a3061d9eaf3e
 workflow-type: tm+mt
 source-wordcount: '869'
 ht-degree: 0%
@@ -69,7 +69,8 @@ Skapa ett konto i **Power Platform Admin Center** för att:
 När du har konfigurerat ovanstående krav kan du fortsätta integrera Adaptive Forms med Microsoft® Dynamics 365. Så här skickar du data till Microsoft® Dynamics 365 när du skickar in formulär:
 
 [1. Konfigurera molntjänstkonfiguration för Microsoft Dynamics](#1-configure-cloud-service-configuration-for-microsoft-dynamics)
-[ 2. Skapa formulärdatamodell (FDM)](#2-create-form-data-model-fdm)
+
+[2. Skapa FDM (Form Data Model)](#2-create-form-data-model-fdm)
 
 ### 1. Konfigurera molntjänstkonfiguration för Microsoft Dynamics
 
