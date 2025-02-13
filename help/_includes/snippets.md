@@ -1,7 +1,7 @@
 ---
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 3a12fff170f521f6051f0c24a4eb28a12439eec1
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -11,30 +11,30 @@ ht-degree: 0%
 
 [![Lär känna vår headless CMS med 30-dagars testversion](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=en)
 
-## Redigering av Edge Delivery Services {#edge-delivery-authoring}
+## Edge Delivery Services Authoring {#edge-delivery-authoring}
 
-[!BADGE Klicka här om du vill skapa AEM innehåll för Edge Delivery Services.]{type=Positive url="/help/edge/overview.md" tooltip="Skapa AEM innehåll för Edge Delivery Services"}
+[!BADGE Klicka här om du vill skapa AEM-innehåll för Edge Delivery Services.]{type=Positive url="/help/edge/overview.md" tooltip="Skapa AEM-material för Edge Delivery Services"}
 
 ## Se även {#see-also}
 
-* [Skapa ett AEM anpassat formulär](/help/forms/creating-adaptive-form-core-components.md)
-* [Lägg till ett AEM anpassat formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
-* [Använda teman i ett AEM anpassat formulär](/help/forms/using-themes-in-core-components.md)
-* [Lägg till komponenter i ett AEM anpassat formulär](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#components)
-* [Använd CAPTCHA i en AEM anpassad form](/help/forms/captcha-adaptive-forms-core-components.md)
-* [Generera en PDF-version (DoR) av ett AEM adaptivt formulär](/help/forms/generate-document-of-record-core-components.md)
-* [Översätt en AEM adaptiv form](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
+* [Skapa ett anpassat AEM-formulär](/help/forms/creating-adaptive-form-core-components.md)
+* [Lägg till ett anpassat AEM-formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
+* [Använda teman i ett anpassat AEM-formulär](/help/forms/using-themes-in-core-components.md)
+* [Lägg till komponenter i ett anpassat AEM-formulär](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#components)
+* [Använd CAPTCHA i ett anpassat AEM-formulär](/help/forms/captcha-adaptive-forms-core-components.md)
+* [Generera en PDF-version (DoR) av ett anpassat AEM-formulär](/help/forms/generate-document-of-record-core-components.md)
+* [Översätt ett anpassat AEM-formulär](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
 * [Aktivera Adobe Analytics för ett adaptivt formulär för att spåra formuläranvändning](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md)
 * [Ansluta anpassat formulär till Microsoft SharePoint](/help/forms/configure-submit-actions-core-components.md#submit-to-sharedrive)
 * [Ansluta anpassat formulär till Microsoft Power Automate](/help/forms/configure-submit-actions-core-components.md#microsoft-power-automate)
 * [Ansluta anpassat formulär till Microsoft OneDrive](/help/forms/configure-submit-actions-core-components.md#create-a-onedrive-configuration)
 * [Ansluta anpassat formulär till Microsoft Azure Blob Storage](/help/forms/configure-submit-actions-core-components.md#azure-blob-storage)
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
-* [Använda Adobe Sign i en AEM anpassad form](/help/forms/working-with-adobe-sign.md)
+* [Använd Adobe Sign i ett anpassat AEM-formulär](/help/forms/working-with-adobe-sign.md)
 * [Lägga till en ny språkinställning för ett adaptivt formulär](/help/forms/supporting-new-language-localization-core-components.md)
 * [Skicka adaptiva formulärdata till en databas](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/data-integration)
 * [Skicka data för anpassat formulär till en REST-slutpunkt](/help/forms/configure-submit-actions-core-components.md#submit-to-rest-endpoint)
-* [Skicka anpassade formulärdata till AEM arbetsflöde](/help/forms/configure-submit-actions-core-components.md#invoke-an-aem-workflow)
+* [Skicka anpassade formulärdata till AEM Workflow](/help/forms/configure-submit-actions-core-components.md#invoke-an-aem-workflow)
 * [Använd Forms Portal för att lista AEM Adaptive Forms på en AEM webbplats](/help/forms/configure-forms-portal.md)
 * [Lägga till versioner, kommentarer och anteckningar i ett adaptivt formulär](/help/forms/add-comments-annotations-versioning-adaptive-form-core-components.md)
 * [Jämför adaptiv Forms](/help/forms/compare-forms.md)
@@ -43,16 +43,17 @@ ht-degree: 0%
 ## Inlämningsåtgärder för anpassningsbara formulär {#af-submit-action}
 
 * [Skicka e-post](/help/forms/configure-submit-action-send-email.md)
-* [Skicka till SharePoint](/help/forms/configure-submit-action-sharepoint.md)
+* [Skicka till SharePoint Document Library](/help/forms/connect-forms-to-sharepoint-document-library.md)
+* [Skicka till SharePoint List](/help/forms/connect-forms-to-sharepoint-list.md)
 * [Skicka med formulärdatamodell](/help/forms/using-form-data-model.md#write-submitted-adaptive-form-data-into-data-sources-write-af)
 * [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
 * [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
 * [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
-* [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
+* [Starta ett AEM-arbetsflöde](/help/forms/configure-submit-action-workflow.md)
 * [Skicka till Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
 * [Skicka till Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
-* [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
+* [Ansluta ett adaptivt formulär till Microsoft](/help/forms/configure-msdynamics.md)
 * [Ansluta ett adaptivt formulär till Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 * [Skapa anpassad skickaåtgärd](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
 
@@ -61,7 +62,7 @@ ht-degree: 0%
 * [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/tutorial.md)
 * [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
 * [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
-* [Publish formulär och börja samla in data](/help/edge/docs/forms/publish-forms.md)
+* [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
 * [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
@@ -152,7 +153,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 
 * [Integrera Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
 * [Konfigurera ett nytt formulär som ska integreras med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
-* [Konfigurera Marketo Engage-datakälla för befintlig adaptiv Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
+* [Konfigurera Marketo Engage-datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
 * [Konfigurera skicka-åtgärden till Marketo Engage för befintliga formulär](/help/forms/submit-adaptive-form-to-marketo-engage.md)
 
 ## Cloud Manager IP Tillåtelselista och rörledningar för frontendjur {#allowlist-frontend-pipeline}
@@ -197,17 +198,17 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 
 >[!TIP]
 >
->Är du ny i Dynamic Media? En snabb översikt på hög nivå av Dynamic Media finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
+>Är du nybörjare på Dynamic Media? En snabb översikt på hög nivå av Dynamic Media finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
 
 ## Se även för Dynamic Media {#see-also-dm}
 
 >[!NOTE]
 >
->* Är du ny i Dynamic Media? En snabb översikt på hög nivå av Dynamic Media finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
+>* Är du nybörjare på Dynamic Media? En snabb översikt på hög nivå av Dynamic Media finns i [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md).
 >
->* Följ [Dynamic Media bästa praxis](/help/assets/dynamic-media/dm-best-practices.md) för att få ut det mesta av ditt arbete.
+>* Följ [Bästa praxis för dynamiska media](/help/assets/dynamic-media/dm-best-practices.md) för att få ut det mesta av materialet.
 >
->* Prova Dynamic Media bildfunktioner med verktyget [Ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
+>* Prova Dynamic Media-bildfunktioner med verktyget [Ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
 >
 >* Se till att videouppspelningen blir jämn med [adaptiv video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-dash).
 >
@@ -216,7 +217,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >* Automatisera beskärning av [videor med Smart beskärning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video).
 >
 >* Leverera en [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
->* Annan [Dynamic Media-resursbank](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).
+>* Annan [resursbank för dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).
 
 ## Logga en supportanmälan {#support-ticket}
 
@@ -237,7 +238,7 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
 
 >[!IMPORTANT]
 >
->SPA [har tagits bort](/help/release-notes/release-notes-cloud/release-notes-current.md#sites-deprecated) för nya projekt. Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för att hantera innehåll utan rubriker i AEM är nu:
+>SPA-redigeraren [har tagits bort](/help/release-notes/release-notes-cloud/release-notes-current.md#sites-deprecated) för nya projekt. Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 >
 >* [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering av headless-innehåll.
 >* [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering av rubrikfritt innehåll.

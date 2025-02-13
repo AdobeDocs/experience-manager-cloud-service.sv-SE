@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: ec3a9982494df35faf1df9f49416197dc96f1b4a
+source-git-commit: 12ac8fd43d56fb95bf63b2ce92d1ec1a776e464a
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1658'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ I dagens digitala samhälle är det viktigt för alla företag att skapa använd
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med Adaptivt Forms-block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-projekt](#add-adaptive-forms-block-to-your-existing-aem-project).
+AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med Adaptivt Forms-block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) <!--or [add the Adaptive Forms Block to an existing AEM project](#add-adaptive-forms-block-to-your-existing-aem-project)-->.
 
 Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt.
 
@@ -262,49 +262,48 @@ Produktion: `https://<branch>--<repo>--<owner>.aem.live/`
 Grattis! Du har konfigurerat den lokala utvecklingsmiljön och distribuerat ändringarna.
 
 
-
-## Lägg till adaptiv Forms Block i ditt befintliga AEM-projekt
+<!--
+## Add Adaptive Forms Block to your existing AEM project
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427789)
 
-Om du har ett befintligt AEM-projekt kan du integrera det adaptiva Forms-blocket i ditt nuvarande projekt för att komma igång med att skapa formulär.
+If you have an existing AEM Project, you can integrate the Adaptive Forms Block into your current project to get started on form creation. 
 
 >[!NOTE]
 >
 >
-> Det här steget gäller projekt som skapats med [AEM-standardmallen](https://github.com/adobe/aem-boilerplate). Om du har skapat ditt AEM-projekt med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
+> This step applies to projects built with the [AEM Boilerplate](https://github.com/adobe/aem-boilerplate). If you created your AEM project using the [AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms), you can skip this step.
 
-Integrera:
+To Integrate:
 
-1. **Lägg till nödvändiga filer och mappar**
-   1. Kopiera och klistra in följande mappar och filer från [AEM Forms-originalet](https://github.com/adobe-rnd/aem-boilerplate-forms) i ditt AEM-projekt:
+1. **Add required files and folders**
+   1. Copy and paste the following folders and files from the [AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms) into your AEM Project:
 
-      * Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
-      * Mappen [form-common](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-common)
-      * Mappen [form-components](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-components)
-      * filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
-      * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
+      * [form block](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)  folder
+       * [form-common](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-common)  folder
+       * [form-components](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-components) folder
+       * [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js) file
+       * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) file
 
-1. **Uppdatera komponentdefinitioner och modellfiler**
-   1. Navigera till filen `../models/_component-definition.json` i ditt AEM-projekt och uppdatera den med ändringarna från filen [_component-definition.json i AEM Forms-mallen ](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-definition.json#L39-L48).
+1. **Update component definitions and models files**
+    1. Navigate to the `../models/_component-definition.json` file in your AEM Project and update it with the changes from the [_component-definition.json file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-definition.json#L39-L48).
+    
+    1. Navigate to the `../models/_component-models.json` file in your AEM Project and update it with the changes from the [_component-models.json file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-models.json#L24-L26)
 
-   1. Navigera till filen `../models/_component-models.json` i ditt AEM-projekt och uppdatera den med ändringarna från filen [_component-models.json i AEM Forms-mallen ](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-models.json#L24-L26)
+1. **Add Form Editor in editor script**
+    1. Navigate to the `../scripts/editor-support.js` file in your AEM Project and update it with the changes from the [editor-support.js file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js#L105-L106)
+1. **Update ESLint configuration file**
+    1. Navigate to the `../.eslintignore` file in your AEM Project and add the following line of codes to prevent errors related to the Form Block rule engine:
+        ```
+            blocks/form/rules/formula/*
+            blocks/form/rules/model/*
+        ```
 
-1. **Lägg till formulärredigerare i redigeringsskript**
-   1. Navigera till filen `../scripts/editor-support.js` i AEM Project och uppdatera den med ändringarna från filen [editor-support.js i AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js#L105-L106)
-1. **Uppdatera ESLint-konfigurationsfilen**
-   1. Navigera till filen `../.eslintignore` i ditt AEM-projekt och lägg till följande kodrad för att förhindra fel relaterade till regelmotorn för formulärblockering:
+1. Commit and push these changes to your AEM Project repository on GitHub.
 
-      ```
-          blocks/form/rules/formula/*
-          blocks/form/rules/model/*
-      ```
-
-1. Genomför och skicka dessa ändringar till AEM Project-databasen på GitHub.
-
-Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM-projekt. Du kan börja skapa och lägga till formulär på dina AEM-sidor.
-
+That's it! The Adaptive Forms Block is now part of your AEM project. You can start creating and adding forms to your AEM pages.
+-->
 
 ## Felsökning av byggproblem med GitHub
 

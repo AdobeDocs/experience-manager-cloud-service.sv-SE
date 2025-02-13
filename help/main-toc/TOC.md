@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 901172d201e968ec00eb8c988107a6a9fb7a5e7b
+source-git-commit: 3ab46e78581893591f56793bc0561aea4f2fbef5
 workflow-type: tm+mt
-source-wordcount: '6058'
+source-wordcount: '6077'
 ht-degree: 2%
 
 ---
@@ -737,7 +737,8 @@ ht-degree: 2%
          + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
          + [Ansluta anpassat formulär till Salesforce-program med OAuth 2.0-klientens autentiseringsflöde](/help/forms/aem-forms-salesforce-integration.md)
          + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
-         + [Konfigurera [!DNL Microsoft Dynamics 365] och [!DNL Salesforce] molntjänster](/help/forms/configure-msdynamics-salesforce.md)
+         + [Konfigurera  [!DNL Microsoft Dynamics 365] molntjänster](/help/forms/configure-msdynamics.md)
+         + [Konfigurera Salesforce molntjänster](/help/forms/configure-salesforce.md)
          + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
@@ -761,8 +762,11 @@ ht-degree: 2%
             + [Konfigurera åtgärden Skicka för ett anpassat formulär](/help/forms/configure-submit-actions-core-components.md)
             + [Skicka ett anpassat formulär till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
             + [Skicka ett anpassat formulär till Microsoft](/help/forms/configure-submit-action-onedrive.md)
-            + [Ansluta ett adaptivt formulär till Microsoft](/help/forms/configure-submit-action-sharepoint.md)
-            + [Konfigurera SharePoint Site med begränsad åtkomst med hjälp av behörighetsomfattning](/help/forms/configure-sharepoint-site-limited-access.md)
+            + Ansluta ett anpassat formulär till Microsoft® SharePoint{#connect-to-sharepoint}
+               + [Ansluta ett adaptivt formulär till Microsoft](/help/forms/configure-submit-action-sharepoint.md)
+               + [Skicka till SharePoint Document Library](/help/forms/connect-forms-to-sharepoint-document-library.md)
+               + [Skicka till SharePoint List](/help/forms/connect-forms-to-sharepoint-list.md)
+               + [Konfigurera SharePoint Site med begränsad åtkomst med hjälp av behörighetsomfattning](/help/forms/configure-sharepoint-site-limited-access.md)
             + [Integrera AEM adaptiva blanketter med AEM Workflow](/help/forms/configure-submit-action-workflow.md)
             + [Konfigurera Skicka till REST-slutpunktsåtgärd för adaptiv Forms](/help/forms/configure-submit-action-restpoint.md)
             + [Konfigurera åtgärden Skicka e-post för ett anpassat formulär](/help/forms/configure-submit-action-send-email.md)
