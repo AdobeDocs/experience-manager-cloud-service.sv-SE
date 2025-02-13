@@ -1,54 +1,41 @@
 ---
-title: Versionsinformation för Cloud Manager 2025.1.0 i Adobe Experience Manager as a Cloud Service
-description: Läs om Cloud Manager 2025.1.0 i AEM as a Cloud Service.
+title: Versionsinformation för Cloud Manager 2025.2.0 i Adobe Experience Manager as a Cloud Service
+description: Läs om Cloud Manager 2025.2.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: c2a0961cae6d36d8ea3116c6e7982889257f90c8
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '720'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Cloud Manager 2025.1.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2025.2.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
 <!-- https://wiki.corp.adobe.com/pages/viewpage.action?pageId=3389843928 -->
 
-Läs om Cloud Manager 2025.1.0 i AEM (Adobe Experience Manager) as a Cloud Service.
+Läs om Cloud Manager 2025.2.0 i AEM (Adobe Experience Manager) as a Cloud Service.
 
->[!NOTE]
->
->Se [aktuell versionsinformation för Adobe Experience Manager as a Cloud Service](/help/release-notes/release-notes-cloud/release-notes-current.md).
+
+Se även [aktuell versionsinformation för Adobe Experience Manager as a Cloud Service](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager 2025.1.0 i AEM as a Cloud Service är onsdagen den 22 januari 2025.
+Lanseringsdatumet för Cloud Manager 2025.2.0 i AEM as a Cloud Service är torsdagen den 13 februari 2025.
 
-Nästa planerade version är torsdagen den 13 februari 2025.
-
+Nästa planerade version är torsdagen den 13 mars 2025.
 
 ## Nyheter {#what-is-new}
 
-* **Kodkvalitetsregler - SonarQube Server Upgrade:** Cloud Manager Code Quality step kommer att börja använda SonarQube Server 9.9 med Cloud Manager 2025.2.0, som är planerad till torsdagen den 13 februari 2025.
+* **Uppdatera till regler för kodkvalitet.**
+Från och med torsdagen den 13 februari 2025 använder Cloud Manager-kodkvalitetssteget nu en uppgraderad SonarQube-version 9.9.5.90363.
 
-  Uppdaterade SonarQube-regler finns nu tillgängliga på [Kodkvalitetsregler](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules) för att förbereda.
+  De uppdaterade reglerna, som är tillgängliga för Cloud Manager på AEM as a Cloud Service på [den här länken](/help/implementing/cloud-manager/code-quality-testing.md#understanding-code-quality-rules), avgör säkerhetspoängen och kodkvaliteten för Cloud Manager-pipelines. Den här uppdateringen kan påverka dina kvalitetsportar och kan eventuellt blockera distributioner.
 
-  Du kan kontrollera de nya reglerna tidigt genom att ange följande textvariabel för pipeline:
+* **Stöd för Java 17 och Java 21.**
 
-  `CM_BUILD_IMAGE_OVERRIDE` = `self-service-build:sonar-99-upgrade-java17or21`
-
-  Ange dessutom följande variabel för att säkerställa att kodkvalitetssteget körs för samma implementering (som normalt hoppas över för samma `commitId`):
-
-  `CM_DISABLE_BUILD_REUSE` = `true`
-
-![Konfigurationssida för variabler](/help/implementing/cloud-manager/release-notes/assets/variables-config.png)
-
->[!NOTE]
->
->Adobe rekommenderar att du skapar en ny CI/CD Code Quality-pipeline som är konfigurerad till samma gren som huvudproduktionsflödet. Ställ in lämpliga variabler *före* den 13 februari 2025 för att verifiera att de nya tvingande reglerna inte inför blockerare.
-
-* Stöd för **Java 17 och Java 21:** Kunder kan nu bygga med Java 17 eller Java 21 och få tillgång till prestandaförbättringar och nya språkfunktioner. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). När build-versionen är inställd på Java 17 eller Java 21 är den distribuerade miljön Java 21.
+  Kunderna kan nu bygga med Java 17 eller Java 21 och få tillgång till prestandaförbättringar och nya språkfunktioner. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). När build-versionen är inställd på Java 17 eller Java 21 är den distribuerade miljön Java 21.
 
    * **Funktionsaktivering**
       * Den här funktionen kommer att aktiveras för alla kunder torsdagen den 13 februari 2025, vilket sammanfaller med den förvalda lanseringen av den nya SonarQube-versionen.
@@ -59,52 +46,46 @@ Nästa planerade version är torsdagen den 13 februari 2025.
       * Den gradvisa lanseringen av alla Cloud Manager-miljöer börjar i februari för sandlådor och utvecklingsmiljöer och omfattar även produktionsmiljöer i april.
       * Kunder som bygger med Java 11 och som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
 
-* **&quot;CDN-konfigurationer&quot; har bytt namn till &quot;Domänmappningar&quot;:** Som en del av förbättringarna av användargränssnittet i AEM Cloud Manager har etiketten &quot;CDN-konfigurationer&quot; nu bytt namn till &quot;Domänmappningar&quot;. Den här ändringen förbättrar terminologisk justering med funktioner. <!-- CMGR-64738 -->
+* **99,99 % drifttidsrapportering för Edge Delivery Services.**
+99,99 % av drifttiden är nu tillgänglig för berättigande Edge Delivery Services-program. För att den här funktionen ska kunna användas måste man kunna lägga upp Edge Delivery Services webbplatser och använda 99,99 % Service level agreement (SLA) i Cloud Manager.
 
-  ![&quot;CDN Configurations&quot; bytte namn till &quot;Domain Mappings&quot; i användargränssnittet ](/help/implementing/cloud-manager/release-notes/assets/domain-mappings.png)
+  Se även [SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla).
 
-* **Tillhandahåller en Edge Delivery-webbplats med ett klick:** Cloud Manager tillåter nu användare med rätt behörigheter och licenser att skapa en exempelwebbplats för Edge Delivery Services med bara ett klick. Denna smidiga process erbjuder följande automatiska funktioner:
+* **Förbättrad användarinbjudan för Edge Delivery Services.**
+Upplevelsen med att bjuda in användare till innehållsarkivet som är kopplat till Edge Delivery Services har förbättrats. <!-- CMGR-65331 -->
 
-   * **GitHub-integrering** - Skapar automatiskt en GitHub-databas inom en befintlig organisation, förkonfigurerad med en standardmall för Edge Delivery Services.
-   * **AEM Installation av appen för kodsynkronisering** - Installerar programmet för AEM kodsynkronisering i databasen, vilket garanterar smidig synkronisering och distribution.
-   * **Innehåll Collaboration Setup** - Länkar en angiven Google Drive-mapp för innehållslagring, vilket ger en samarbetsmiljö för innehållshantering.
-   * **Innehållspublicering** - Nu kan användare publicera innehåll för tilldelade webbplatser direkt från Cloud Manager användargränssnitt, vilket förenklar arbetsflödena och förbättrar effektiviteten.
-   * **Förbättrad Collaboration** - Med den här plattformen kan användare lägga till flera medarbetare i Google Drive-innehållslagringsmappen, vilket underlättar teamarbete och innehållsinsatser.
+* **Skapa administratörsprofiler automatiskt på publiceringsinstanser.**
+Tidigare tillät Cloud Manager att administrationsprofiler skapades manuellt på publiceringsinstanser, men hade inte stöd för automatisk generering som standard. Med den här uppdateringen skapas nu administratörsprofiler automatiskt för publiceringsinstanser, vilket förbättrar användbarheten och minskar installationstiden för kunderna.
 
-  Dessa förbättringar syftar till att förbättra automatiseringen, förenkla installationsprocesserna och förbättra samarbetet för Edge Delivery Services. <!-- CMGR-59362 -->
+  Mer information finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
 
-  ![Etablerar en Edge Delivery-webbplats](/help/implementing/cloud-manager/release-notes/assets/eds-one-click-60.png)
+  ![Filtrering av pipeline-aktiviteter](/help/implementing/cloud-manager/release-notes/assets/product-profiles.png)
 
-  ![Dialogrutan etablerar Edge Delivery-webbplats](/help/implementing/cloud-manager/release-notes/assets/eds-provision-60.png)
+* **Övergång till OAuth för Cloud Service-miljöer.**
+Nya Cloud Service-miljöer använder nu OAuth-baserad tjänst-till-tjänst-autentisering för Adobe Developer Console-integrationsprojekt i stället för den tidigare använda JWT-autentiseringsmetoden. JWT-autentisering är föråldrat och planeras att upphöra i juni 2025.
 
-* **Utökat stöd för Edge Delivery Services:** Cloud Manager har nu stöd för nyanställda på webbplatser för de senaste Edge Delivery Servicens. Uppdateringen innehåller en omfattande omfaktorisering av CDN och leveransstack, vilket ger ökad tillförlitlighet och underhållbarhet.
+* **Stöd för privata nycklar för EC (Elliptisk kurva) (secp384r1).**
+Cloud Manager har nu stöd för privata nycklar för `secp384r1` Elliptic Curve (EC), vilket ger förbättrad säkerhet och bättre överensstämmelse för kundhanterade OV/EV SSL-certifikat.
+Mer information finns i [Krav för kundhanterade OV/EV SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md). <!-- CMGR-63636 -->
 
-* **Avancerade filtreringsalternativ för pipelines:** Cloud Manager har nu avancerade filtreringsalternativ på sidan för pipelines, vilket gör att du snabbt kan komma åt relevanta data och förbättra driftsättningseffektiviteten. Några av de viktigaste funktionerna är:
+<!--
+## Early adoption program {#early-adoption}
 
-   * **Flervillkorsfiltrering:** Förfina sökresultaten med filter som pipeline-namn, miljö och distribuera kod.
-   * **Smidig Pipeline-sökning:** Hitta enkelt specifika pipelines för snabbare navigering och förbättrad arbetsflödeshantering.
-
-  Tillsammans gör dessa förbättringar att hanteringen och driftsättningen av rörledningar blir effektivare och användarvänligare.
-
-  ![Funktionen Pipelinefilter](/help/implementing/cloud-manager/release-notes/assets/pipeline-filters.png)
-
-* **Självbetjäning-CDN-konfiguration för Edge Delivery-tjänst:** Nya användare av Edge Delivery Service kan nu konfigurera sitt CDN separat via Cloud Manager. Den här uppdateringen utökar stödet från `.hlx.page/live` till nya `.aem.page/live`, vilket ger större flexibilitet och effektiviserad konfiguration för användare.
-
-## Program för tidigt antagande {#early-adoption}
-
-Bli en del av Cloud Manager program för tidig användning och få möjlighet att testa kommande funktioner.
-
-* **Tidig uppdatering av Adobe-program - PR-valideringsstöd för Bitbucket och GitLab:** Cloud Manager har nu stöd för Pull Request (PR)-validering för både Cloud och självhanterade versioner av Bitbucket och GitLab. Med den här funktionen kan kunderna testa sina kodändringar mot kvalitetströsklar för Adobe innan de sammanfogar en PR. Genom att säkerställa högre kodkvalitet före sammanslagningen förbättras kodsändringar i produktionspipelinerna avsevärt, vilket minskar time to market och effektiviserar utvecklingsarbetsflödena.
-
-  Mer information om&quot;Bring Your Own Git&quot; - nu med stöd för GitLab och Bitbucket - och om hur du registrerar dig som tidig Adobe finns i [Versionsinformation för Cloud Manager oktober 2024](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md##gitlab-bitbucket).
-
-* **Avancerad testmiljö:** En specialbyggd lösning som överbryggar klyftan mellan utveckling och produktion. Miljön är skräddarsydd för företagsbehov och replikerar specifikationer på produktionsnivå för att ge stöd för korrekt testning av användaracceptans (UAT) och grundliga prestandautvärderingar.
-
-  Om du är intresserad av att delta i programmet för tidig Adobe [slutför du det här formuläret](https://nam04.safelinks.protection.outlook.com/?url=https%3A%2F%2Furldefense.com%2Fv3%2F__https%3A%2Fwww.feedbackprogram.adobe.com%2Fh%2Fs%2F6N425LYG1jQ1Nc0F20Zllt__%3B!!OgNkHJCYlf_CHg!fIp-QrZ9si3kcUIjRCniEzqAAa8FcU1iN34SGQFtlcQ36eUQXOZWbDHP7oZajqddgpuOMO AVL5CQpkZ6ths76Qks8%24&amp;data=05%7C02%7Cpanchapa%40adobe.com%7Cf81bcaa4b20544f1818b08dccd07c7 8c%7Cfa7b1b5a7b34438794aed2c178decee1%7C0%7C0%7C638610680502164019%7CUnknown%7CTU WFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C0%7C%7C%7C%7C%7C 7C&amp;sdata=aGo6zz2ldPrta4lpvo3CLNENR5ghHDDCPbG1adUaNZQ%3D&amp;reserved=0) och skickar ett e-postmeddelande till [earlyadopter_cs_advtestenvironment@adobe.com](mailto:earlyadopter_cs_advtestenvironment@adobe.com) med ditt `OrgID`.
+Be a part of Cloud Manager's early adoption program and have a chance to test upcoming features. -->
 
 
+## Felkorrigeringar
 
-<!-- ## Bug fixes -->
+* **(UI) Ett problem som förhindrar CDN-konfiguration för domäner i Cloud Manager har korrigerats.**
+Kunder som försöker lägga till en CDN-konfiguration i Cloud Manager påträffade ett skärmfel när de valde en domän i listrutan. Detta användargränssnittsfel förhindrade domänmappning i produktionsmiljöer och blockerade konfigurationsprocessen.
+
+  Dessutom var vissa domäner oåtkomliga i serverdelen, trots att de togs bort från användargränssnittet. Detta problem ledde till konflikter med befintliga CDN-konfigurationer.
+
+  Med den här korrigeringen kan du nu välja en domän i listrutan utan utan att stöta på något fel. Inkonsekvenser i bakgrunden som hindrade omkonfigurering av domäner har åtgärdats. Slutligen säkerställer den förbättrade valideringen nu att motstridiga domäner tas bort korrekt innan de läggs till igen.<!-- CMGR-64888 -->
+* **(Backend) Korrigerade ett problem som medförde att SSL-förfallomeddelanden skickades flera gånger.**
+Ett fel identifierades där SSL-schemaläggaren för förfallomeddelanden, som är avsedd att köras en gång dagligen vid midnatt, felaktigt utlöstes två gånger per dag vid midnatt och en gång till kl. 12.30. Detta problem medförde att flera redundanta meddelanden skickades om att SSL-certifikat skulle upphöra att gälla.
+
+  Schemaläggaren för meddelanden körs nu korrekt bara en gång per dag som det ska. Du får inte längre några dubbletter av meddelanden om att SSL-förfallodatum. <!-- CMGR-64748 -->
 
 
 
