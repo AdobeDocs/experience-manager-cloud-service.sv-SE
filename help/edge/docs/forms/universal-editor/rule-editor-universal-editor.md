@@ -6,14 +6,14 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: 0410e1d16ad26d3169c01cca3ad9040e3c4bfc9f
+source-git-commit: 1244bafe1263c52a584b587845c1a12b9ddfd333
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '2111'
 ht-degree: 0%
 
 ---
 
-# Introduktion till regelredigeraren i den universella redigeraren
+# Introduktion till regelredigeraren i WYSIWYG Authoring
 
 Du kan lägga till dynamiskt formulärbeteende med regelredigeraren, som du kan använda för att skapa regler. Dessa regler möjliggör synlighet för villkorliga fält, automatiserar beräkningar baserat på användarindata och förbättrar den övergripande användarupplevelsen. Regelredigeraren effektiviserar ifyllningsprocessen och ser till att både noggrannheten och effektiviteten är hög.
 
@@ -41,21 +41,23 @@ Detaljerade stegvisa instruktioner finns i [Lägg till en villkorsregel](#2-add-
 
 ## Hur aktiverar jag tillägget Regelredigerare?
 
-Regelredigeraren är inte aktiverad som standard i Universellt redigeringsprogram. Om du vill aktivera regelredigeringstillägget för din miljö skickar du ett e-postmeddelande från din officiella adress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med din begäran.
+Tillägget Regelredigerare är inte aktiverat som standard i Universellt redigeringsprogram. Om du vill aktivera tillägget Regelredigerare skriver du till oss på [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från ditt officiella e-post-id.
 
 När regelredigeringstillägget har aktiverats för din miljö visas ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) i det övre högra hörnet av redigeraren.
 
 ![Regelredigeraren Universal Editor](/help/edge/docs/forms/assets/universal-editor-rule-editor.png)
 
-Markera det formulärobjekt som du vill skriva en regel för och klicka på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Användargränssnittet för Regelredigeraren visas.
+Markera den formulärkomponent som du vill skriva en regel för och klicka på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Användargränssnittet för Regelredigeraren visas.
 
 ![Användargränssnittet i regelredigeraren](/help/edge/docs/forms/assets/rule-editor-for-field.png)
+
+I den här artikeln används `form object` och `form component` omväxlande.
 
 Nu kan du börja skriva regler eller affärslogik för det markerade formulärfältet med [tillgängliga regeltyper i regelredigeraren](#available-rule-types-in-rule-editor).
 
 ## Förstå användargränssnittet i regelredigeraren
 
-Den visuella redigeraren för regelredigeraren öppnas när du klickar på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) :
+Regelredigeraren öppnas när du klickar på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) :
 
 ![Användargränssnitt för regelredigeraren](/help/edge/docs/forms/assets/rule-editor-interface.png)
 
@@ -68,20 +70,20 @@ Den visuella redigeraren för regelredigeraren öppnas när du klickar på ikone
   </thead>
   <tbody>
     <tr>
-      <td>1. Visning av komponentregel</td>
-      <td>Visar rubriken på det formulärobjekt genom vilket du startade regelredigeraren och den regeltyp som är vald.</td>
+      <td>1. Titel</td>
+      <td>Visar formulärkomponentens rubrik och den valda regeltypen. Till exempel är 'Ange bruttolön' en textrutekomponent som regeltypen 'När' är markerad för. </td>
     </tr>
     <tr>
       <td>2. Formulärobjekt och funktioner</td>
-      <td>På fliken <b>Forms-objekt</b> visas en hierarkisk vy över alla objekt som finns i formuläret. Fliken <b>Funktioner</b> innehåller en uppsättning inbyggda funktioner.</td>
+      <td>På fliken <b>Forms-objekt</b> visas en hierarkisk vy över alla komponenter som finns i formuläret. Fliken <b>Funktioner</b> innehåller en uppsättning inbyggda funktioner i regelredigeraren.</td>
     </tr>
     <tr>
       <td>3. Växla mellan formulärobjekt och funktioner</td>
-      <td>När användaren knackar på knappen växlar knappen formulärobjekt och funktionsruta.</td>
+      <td>Växlingsknappen visar eller döljer alternativt formulärobjekten och funktionsrutan. </td>
     </tr>
     <tr>
       <td>4. Visuell regelredigerare</td>
-      <td>Den visuella regelredigeraren är det område i det visuella redigeringsläget i användargränssnittet för regelredigeraren där du skriver regler.</td>
+      <td>Den visuella regelredigeraren är gränssnittet där du kan skapa regler för formulärkomponenterna.</td>
     </tr>
     <tr>
       <td>5. Knapparna Klar och Avbryt</td>
@@ -90,7 +92,7 @@ Den visuella redigeraren för regelredigeraren öppnas när du klickar på ikone
   </tbody>
 </table>
 
-Alla befintliga regler för ett formulärobjekt visas när du markerar objektet. Du kan visa titeln och en förhandsgranskning av regelsammanfattningen i den visuella regelredigeraren. Dessutom kan du ändra ordningen på regler, redigera regler, aktivera/inaktivera regler eller ta bort regler.
+Alla befintliga regler för en formulärkomponent visas när du markerar komponenten. Du kan visa titeln och en förhandsgranskning av regelsammanfattningen i regelredigeraren. Dessutom kan du ändra ordningen på regler, redigera regler, aktivera/inaktivera regler eller ta bort regler.
 
 ![visa tillgängliga regler för formulärobjekt](/help/edge/docs/forms/assets/rule-editor15.png)
 
@@ -108,51 +110,55 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
   <tbody>
     <tr>
       <td>Ange värdet för</td>
-      <td>Anger värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte.</td>
+      <td>Anger värdet för en formulärkomponent beroende på om det angivna villkoret är uppfyllt eller inte.</td>
     </tr>
     <tr>
       <td>Radera värdet för</td>
-      <td>Rensar värdet för det angivna objektet.</td>
+      <td>Rensar värdet för den angivna formulärkomponenten.</td>
     </tr>
     <tr>
       <td>Dölj/visa</td>
-      <td>Döljer eller visar ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte.</td>
+      <td>Döljer eller visar en formulärkomponent baserat på om ett villkor är uppfyllt eller inte.</td>
     </tr>
     <tr>
       <td>Aktivera/inaktivera</td>
-      <td>Aktiverar eller inaktiverar ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte.</td>
+      <td>Aktiverar eller inaktiverar en formulärkomponent baserat på om ett villkor är uppfyllt eller inte.</td>
     </tr>
     <tr>
       <td>Validera</td>
-      <td>Validerar formuläret eller ett angivet objekt.</td>
+      <td>Kontrollerar formulärkomponenten baserat på ett villkor och visar ett fel om villkoret inte uppfylls. </td>
     </tr>
     <tr>
       <td>När</td>
-      <td>Följer <i>condition-action-alternate</i>-åtgärdsregelns konstruktion eller <i>condition-action</i>-regelns konstruktion. Det anger ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt.</td>
+      <td>Det anger ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt. Det följer på <i>condition-action-alternate</i>-åtgärdsregelkonstruktionen eller <i>condition-action</i>-regelkonstruktionen. </td>
     </tr>
     <tr>
       <td>Format</td>
-      <td>Formaterar ett formulärobjekt baserat på en funktion eller reguljära uttryck.</td>
+      <td> Ändrar formulärkomponentens visningsvärde med det angivna uttrycket när dess värde ändras.</td>
     </tr>
     <tr>
       <td>Anropa tjänst</td>
-      <td>Anropar en tjänst som konfigurerats i en formulärdatamodell (FDM).</td>
+      <td>Anropar en tjänst som konfigurerats med externa API:er, formulärdatamodell eller RESTful-webbtjänster.</td>
     </tr>
     <tr>
       <td>Ange egenskap</td>
-      <td>Anger värdet för en egenskap för det angivna objektet baserat på ett villkor.</td>
+      <td>Anger värdet för en egenskap för den angivna formulärkomponenten baserat på ett villkor.</td>
     </tr>
     <tr>
       <td>Ange fokus</td>
-      <td>Ställer in fokus på det angivna objektet.</td>
+      <td>Ställer in fokus på den angivna formulärkomponenten.</td>
     </tr>
     <tr>
       <td>Spara formulär</td>
-      <td>Sparar formuläret.</td>
+      <td>Det gör att användaren kan spara formuläret som ett utkast med hjälp av Forms Portal-komponenten Utkast och överföringar. </td>
     </tr>
     <tr>
-      <td>Skicka/återställ formulär</td>
-      <td>Skickar eller återställer formuläret.</td>
+      <td>Skicka formulär</td>
+      <td>Skickar formuläret.</td>
+    </tr>
+    <tr>
+      <td>Återställ formulär</td>
+      <td>Återställer formuläret.</td>
     </tr>
     <tr>
       <td>Lägg till/ta bort instans</td>
@@ -208,10 +214,10 @@ Så här skapar du ett formulär i Universal Editor:
 1. Öppna ett formulär i Universal Editor för redigering.
 1. Lägg till följande formulärkomponenter:
    * Momsberäkningsformulär (rubrik)
-   * Bruttolön (textinmatning)
-   * Ytterligare avdrag (textinmatning)
-   * Skattepliktig inkomst (textinmatning)
-   * Skatteskuld (textinmatning)
+   * Bruttolön (talindata)
+   * Ytterligare avdrag (talindata)
+   * Skattepliktig inkomst (talindata)
+   * Skattepliktig (antal indata)
    * Skicka (Skicka-knapp)
 1. Dölj formulärfältet `Additional Deduction` genom att öppna dess `Properties`.
 
@@ -221,11 +227,10 @@ Så här skapar du ett formulär i Universal Editor:
 
 När du har skrivit formuläret kan du bara skriva den första regeln för att visa fältet `Additional Deduction` om bruttolönen överstiger 50 000 USD. Så här lägger du till en villkorsregel:
 
-1. Öppna ett formulär i Universal Editor för redigering.
-1. Markera **[!UICONTROL Gross Salary]**-komponenten i innehållsträdet och välj ![edit-rules](/help/forms/assets/edit-rules-icon.svg).
+1. Öppna ett formulär i Universal Editor för redigering och markera fältet **[!UICONTROL Gross Salary]** i innehållsträdet och välj ![edit-rules](/help/forms/assets/edit-rules-icon.svg). Du kan också välja fältet **[!UICONTROL Gross Salary]** direkt från rutan **[!UICONTROL Forms Object]**.
    ![Exempel på regelredigerare1](/help/edge/docs/forms/assets/rule-editor3.png)
 Gränssnittet för den visuella regelredigeraren visas.
-1. Klicka på **[!UICONTROL Create]** för att starta regelredigeraren.
+1. Klicka på **[!UICONTROL Create]** om du vill skapa regler.
    ![Exempel på regelredigerare2](/help/edge/docs/forms/assets/rule-editor4.png)
 Regeltypen `Set Value Of` är som standard markerad. Du kan inte ändra eller ändra det markerade objektet, men du kan använda listrutan Regel för att välja en annan regeltyp.\
    ![Exempel på regelredigerare3](/help/edge/docs/forms/assets/rule-editor5.png)
@@ -258,7 +263,8 @@ Regeln visas så här i Regelredigeraren.
 
 Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden mellan `Gross Salary` och `Additional Deduction` (om tillämpligt). Så här lägger du till beräkningsregel i fältet **[!UICONTROL Taxable Income]**:
 
-1. I redigeringsläget markerar du fältet **[!UICONTROL Taxable Income]** och väljer ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Välj sedan **[!UICONTROL Create]** för att starta regelredigeraren.
+1. I redigeringsläget markerar du fältet **[!UICONTROL Taxable Income]** och väljer ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Du kan också välja fältet **[!UICONTROL Taxable Income]** direkt från rutan **[!UICONTROL Forms Object]**.
+1. Välj sedan **[!UICONTROL Create]** för att skapa regeln.
    ![Exempel på regelredigerare13](/help/edge/docs/forms/assets/rule-editor16.png)
 1. Välj **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
    ![Regelredigeraren, exempel14](/help/edge/docs/forms/assets/rule-editor17.png)
@@ -276,7 +282,7 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
 
    Lägg nu till en regel för fältet `Tax Payable `, som bestäms genom att multiplicera den beskattningsbara inkomsten med skattesatsen. För enkelhetens skull bör du anta en fast momssats på `10%`.
 
-1. I redigeringsläget markerar du fältet **[!UICONTROL Tax Payable]** och väljer ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Välj sedan **[!UICONTROL Create]** för att starta regelredigeraren.
+1. I redigeringsläget markerar du fältet **[!UICONTROL Tax Payable]** och väljer ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Välj sedan **[!UICONTROL Create]** för att skapa regler.
    ![Regelredigeraren, exempel16](/help/edge/docs/forms/assets/rule-editor19.png)
 1. Välj **[!UICONTROL Select Option]** och välj **[!UICONTROL Mathematical Expression]**. Ett fält som skriver matematiskt uttryck öppnas.
    ![Regelredigeraren, exempel17](/help/edge/docs/forms/assets/rule-editor20.png)
@@ -304,7 +310,7 @@ Förutom användningsklara funktioner som Summa, Medel som visas under Funktione
 
 ## Egen funktion i regelredigeraren
 
-Edge Delivery Services som Forms stöder anpassade funktioner, som gör att användare kan definiera JavaScript-funktioner för implementering av komplexa affärsregler. Med de anpassade funktionerna kan man bättre hantera blanketterna genom att underlätta hanteringen och bearbetningen av inmatade data.
+Edge Delivery Services Forms har stöd för anpassade funktioner som gör att man kan definiera JavaScript-funktioner för att implementera komplexa affärsregler. Med de anpassade funktionerna kan man bättre hantera blanketterna genom att underlätta hanteringen och bearbetningen av inmatade data.
 
 ### Skapa en anpassad funktion
 
@@ -366,7 +372,13 @@ Så här använder du den anpassade funktionen i Regelredigeraren:
 
 1. **Förhandsgranska formuläret**: Förhandsgranska formuläret med den nyligen implementerade funktionen.
 
-## Relaterade artiklar
+## Ytterligare information
+
+>[!NOTE]
+>
+> I Universal Editor stöds inte statiska och dynamiska importer i anpassade funktionsskript. Du måste lägga till den fullständiga koden i filen `../[blocks]/form/functions.js`.
+
+I den här artikeln finns begränsad information om regelredigeraren som är tillgänglig i den universella redigeraren. Mer information om regelredigeraren och anpassade funktioner finns i följande artiklar:
 
 {{see-also-rule-editor}}
 
@@ -375,7 +387,7 @@ Så här använder du den anpassade funktionen i Regelredigeraren:
 * [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/tutorial.md)
 * [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
 * [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
-* [Publish formulär och börja samla in data](/help/edge/docs/forms/publish-forms.md)
+* [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
 * [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
 * [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
 * [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)

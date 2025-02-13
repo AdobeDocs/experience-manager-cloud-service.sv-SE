@@ -4,7 +4,7 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 508265c72f458b062e1667fd42403743fa293586
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 <span class="preview"> Den här artikeln innehåller innehåll om funktionen **Utkast** , en förhandsversionsfunktion. Förhandsversionen är bara tillgänglig via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).</span>
 
-Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM komponenten **Utkast och inskickat material** från portalen, som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
+Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM Forms Portal-komponenten **Utkast och inskickat material** som finns i kartongen och som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
 
 ![Ikonen Utkast](assets/drafts-component.png)
 
@@ -30,7 +30,7 @@ Tänk dig en användare som börjar fylla i ett formulär men behöver göra en 
 
 ### Konfigurera Azure Storage och Unified Storage Connector för Forms Portal-komponenten för utkast och överföringar
 
-Komponenten **Utkast och överföringar** behöver en lagringskonfiguration för att kunna spara och visa utkast på AEM Sites-sidan. Enhetlig lagringskontakt erbjuder ett ramverk för att länka AEM till extern lagring. Om du vill spara formuläret som ett utkast måste du se till att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till lagringskontot [!DNL Azure]. När du har ett Azure-lagringskonto och åtkomstnyckeln gör du följande för att skapa en Azure Storage-konfiguration:
+Komponenten **Utkast och överföringar** behöver en lagringskonfiguration för att kunna spara och visa utkast på AEM Sites-sidan. Unified Storage Connector erbjuder ett ramverk för att länka AEM till extern lagring. Om du vill spara formuläret som ett utkast måste du se till att du har ett Azure-lagringskonto och en åtkomstnyckel för att auktorisera åtkomst till lagringskontot [!DNL Azure]. När du har ett Azure-lagringskonto och åtkomstnyckeln gör du följande för att skapa en Azure Storage-konfiguration:
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Azure Storage]**.
 
@@ -80,7 +80,7 @@ Du kan använda färdiga Forms Portal-komponenter för att lista utkast och insk
 1. Gå till **[!UICONTROL Page Information]** > **[!UICONTROL Edit Template]**
    ![Redigera mallprincip](/help/forms/assets/save-form-as-draft-edit-template.png)
 
-1. Klicka på **[!UICONTROL Policy]** och markera kryssrutan **[!UICONTROL Drafts & Submissions]** under **[AEM Archetype Project Name] - Forms and Communications Portal**.
+1. Klicka på **[!UICONTROL Policy]** och markera kryssrutan **[!UICONTROL Drafts & Submissions]** under **[Projektnamn för AEM-arkityp] - Forms och kommunikationsportal**.
 
    ![Principval](/help/forms/assets/save-form-as-draft-enable-policy.png)
 

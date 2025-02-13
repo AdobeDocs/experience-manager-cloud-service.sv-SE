@@ -1,23 +1,23 @@
 ---
 title: Komma igång med Edge Delivery Services för AEM Forms - självstudiekurs för utvecklare
-description: Den här självstudiekursen hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat egna formulär.
+description: Den här självstudien hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat egna formulär.
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: cb914f76b0b785a89b20ef5eaacbc36e8217944b
+source-git-commit: ec3a9982494df35faf1df9f49416197dc96f1b4a
 workflow-type: tm+mt
-source-wordcount: '1803'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
 
 # Komma igång - självstudiekurs för utvecklare
 
-I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med Edge Delivery Services för AEM Forms (EDS) kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
+I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med Edge Delivery Services for AEM Forms (EDS) kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med adaptivt Forms-block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](#add-adaptive-forms-block-to-your-existing-aem-project) -projekt.
+AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med Adaptivt Forms-block](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-projekt](#add-adaptive-forms-block-to-your-existing-aem-project).
 
 Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgranska och publicera egna anpassade formulär med ett nytt Adobe Experience Manager (AEM) Forms-projekt.
 
@@ -31,13 +31,13 @@ Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgrans
 **Upp med huvudet!** I den här självstudien används macOS, Chrome och Visual Studio Code. Stegen kan anpassas för andra inställningar, men skärmbilderna och specifika gränssnittselement kan skilja sig åt beroende på vilket operativsystem, vilken webbläsare och vilken kodredigerare du har valt.
 
 
-## Skapa ett nytt AEM projekt förkonfigurerat med Adaptive Forms Block
+## Skapa ett nytt AEM-projekt förkonfigurerat med Adaptive Forms Block
 
-Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som är förkonfigurerat med det adaptiva Forms-blocket. Det är det snabbaste och enklaste sättet att följa AEM bästa praxis och börja skapa formulär.
+Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som är förkonfigurerat med Adaptive Forms Block. Det är det snabbaste och enklaste sättet att följa AEM bästa praxis och börja skapa formulär.
 
 ### Kom igång med AEM Forms mall för standarddatabas
 
-1. Skapa en GitHub-databas för ditt AEM. Så här skapar du databas:
+1. Skapa en GitHub-databas för ditt AEM-projekt. Så här skapar du databas:
    1. Gå till [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms).
 
       ![AEM Forms-mallsida](/help/edge/assets/aem-forms-boilerplate.png)
@@ -50,9 +50,9 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
    ![Ställ in databasen på public](/help/edge/assets/create-a-new-repo-keep-it-public.png)
 
 
-1. Installera AEM Code Sync GitHub App på din databas. Installera:
+1. Installera AEM Code Sync GitHub App i din databas. Installera:
    1. Gå till [https://github.com/apps/aem-code-sync/installations/new](https://github.com/apps/aem-code-sync/installations/new).
-   1. På skärmen Install AEM Code Sync väljer du alternativet **Only select Repositories** och väljer din nya databas. Klicka på Spara.
+   1. På skärmen Installera AEM Code Sync väljer du alternativet **Only select Repositories** och väljer din nya databas. Klicka på Spara.
 
    ![Ställ in databasen på public](/help/edge/assets/install-aem-code-sync-app-for-your-repo.png)
 
@@ -78,20 +78,20 @@ Med AEM Forms-mallen för mallar kommer du snabbt igång med ett AEM projekt som
 
 Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar din GitHub-databas mot din egen innehållsmapp:
 
-1. Skapa en ny mapp specifikt för ditt AEM innehåll i Google Drive eller Microsoft SharePoint. I det här dokumentet används en mapp som har skapats i Microsoft SharePoint.
+1. Skapa en ny mapp specifikt för ditt AEM-innehåll i Google Drive eller Microsoft SharePoint. I det här dokumentet används en mapp som har skapats i Microsoft SharePoint.
 
 1. Dela mappen med Adobe Experience Manager-användaren (forms@adobe.com).
 
-   ![Använd alternativet Hantera åtkomst för att dela mappen med AEM användare - SharePoint](/help/edge/assets/share-folder-with-aem-user.png)
+   ![Använd alternativet Hantera åtkomst för att dela mapp med AEM-användare - SharePoint](/help/edge/assets/share-folder-with-aem-user.png)
 
-   ![Använd alternativet Hantera åtkomst för att dela mappen med AEM användare - Google Drive](/help/edge/assets/share-google-drive-folder.png)
+   ![Använd alternativet Hantera åtkomst för att dela mapp med AEM-användare - Google Drive](/help/edge/assets/share-google-drive-folder.png)
 
 
    Se till att du har gett Adobe Experience Manager-användaren redigeringsbehörighet för mappen.
 
-   ![Dela mapp med AEM användare, ange redigeringsbehörighet-SharePoint](/help/edge/assets/share-folder-with-aem-user-provide-editing-access.png){width=50%}
+   ![Dela mapp med AEM-användare, ange redigeringsbehörighet-SharePoint](/help/edge/assets/share-folder-with-aem-user-provide-editing-access.png){width=50%}
 
-   ![Dela mapp med AEM användare, ange redigeringsbehörighet - Google Drive](/help/edge/assets/add-aem-user-google-folder.png){width=50%}
+   ![Dela mapp med AEM-användare, ange redigeringsbehörighet - Google Drive](/help/edge/assets/add-aem-user-google-folder.png){width=50%}
 
 1. Kopiera [exempelinnehållet](/help/edge/assets/wefinance1.zip) till din mapp. Kopiera:
 
@@ -99,7 +99,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 
       ![Hämta exempelinnehåll](/help/edge/assets/download-sample-content.png)
 
-      Filerna `nav` och `footer` definierar den grundläggande layouten för dina sidor och ändras sällan i ett projekt. De har också en särskild struktur som skiljer sig från de flesta andra innehållsfiler. Genom att undersöka dessa filer får du en känsla för hur innehållet är organiserat i AEM projekt.
+      Filerna `nav` och `footer` definierar den grundläggande layouten för dina sidor och ändras sällan i ett projekt. De har också en särskild struktur som skiljer sig från de flesta andra innehållsfiler. Genom att undersöka dessa filer får du en känsla för hur innehållet är organiserat i AEM Projects.
 
 
    1. Överför dessa filer till Microsoft SharePoint eller Google Drive-mappen.
@@ -112,7 +112,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 
    1. Gå till GitHub-databasen som du skapade tidigare med AEM Forms Boilerplate.
    1. Öppna `fstab.yaml` för redigering.
-   1. Ersätt den befintliga referensen med sökvägen till mappen som du delade med AEM användare (forms@adobe.com).
+   1. Ersätt den befintliga referensen med sökvägen till mappen som du delade med AEM-användaren (forms@adobe.com).
 
       ![Exempelinnehåll på Google Drive](/help/edge/assets/replace-path-in-fstab-yaml-with-your-content-folder.png)
 
@@ -129,7 +129,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
       https://adobe.SharePoint.com/sites/wkndforms/Shared%20Documents/wefinance
       ```
 
-      Mer information om hur du hanterar filer med Microsoft SharePoint finns i [Så här använder du Adobe SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
+      Mer information om hur du hanterar filer med Microsoft SharePoint finns i [Använda Adobe SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
    1. Genomför den uppdaterade `fsatb.yaml`-filen när du har uppdaterat referensen och allt ser bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
@@ -154,7 +154,7 @@ Så här förhandsgranskar du opublicerat innehåll:
 
    ![Fäst AEM Sidekick](/help/edge/assets/pin-aem-sidekick.png)
 
-1. Om du vill konfigurera tillägget Sidekick Chrome går du till den tidigare delade Google Drive- eller Microsoft SharePoint-mappen och högerklickar på tilläggsikonen i webbläsarens verktygsfält och väljer `Add this project`.
+1. Om du vill konfigurera Sidekick Chrome-tillägget går du till den tidigare delade Google Drive- eller Microsoft SharePoint-mappen och högerklickar på tilläggsikonen i webbläsarens verktygsfält och väljer `Add this project`.
 
    ![AEM Sidekick - Lägg till ett projekt](/help/edge/assets/aem-sidekick-add-a-project.png)
 
@@ -164,7 +164,7 @@ Så här förhandsgranskar du opublicerat innehåll:
 
    ![Markera alla filer](/help/edge/assets/select-all-files.png)
 
-1. Klicka på AEM Sidekick-ikonen som är fäst i Chrome tilläggsfält. Ett verktygsfält visas på skärmen. Du kan välja att förhandsgranska eller publicera ditt innehåll.
+1. Klicka på AEM Sidekick-ikonen som är fäst i ditt tilläggsfält för Chrome. Ett verktygsfält visas på skärmen. Du kan välja att förhandsgranska eller publicera ditt innehåll.
 
    Om du kopierade över `index`-, `nav`-, `footer`- och `enquiry`-filer är alla dessa separata dokument med sina egna förhandsgransknings- och publiceringscykler, så se till att du förhandsgranskar (och publicerar) alla dem.
 
@@ -231,7 +231,7 @@ Mer information om hur du skapar och publicerar ett nytt formulär finns i handb
 ### Börja utveckla format och funktionalitet
 
 
-För att komma igång med en lokal AEM utvecklingsmiljö på nolltid:
+För att komma igång med en lokal utvecklingsmiljö från AEM på nolltid:
 
 1. Installera AEM CLI: AEM CLI förenklar utvecklingsuppgifter. Låt oss installera det globalt med npm:
 
@@ -245,7 +245,7 @@ För att komma igång med en lokal AEM utvecklingsmiljö på nolltid:
    git clone https://github.com/<owner>/<repo>
    ```
 
-1. Starta din lokala miljö: Navigera till din projektkatalog och starta den lokala AEM med ett enda kommando:
+1. Starta din lokala miljö: Navigera till din projektkatalog och starta den lokala AEM-instansen med ett enda kommando:
 
    ```
    cd <repo>
@@ -263,28 +263,47 @@ Grattis! Du har konfigurerat den lokala utvecklingsmiljön och distribuerat änd
 
 
 
-## Lägg till adaptiv Forms Block i ditt befintliga AEM
+## Lägg till adaptiv Forms Block i ditt befintliga AEM-projekt
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427789)
 
-Om du har ett befintligt AEM kan du integrera det adaptiva Forms-blocket i ditt aktuella projekt för att komma igång med att skapa formulär.
+Om du har ett befintligt AEM-projekt kan du integrera det adaptiva Forms-blocket i ditt nuvarande projekt för att komma igång med att skapa formulär.
 
 >[!NOTE]
 >
 >
-> Det här steget gäller projekt som skapats med [AEM-standardmallen](https://github.com/adobe/aem-boilerplate). Om du har skapat ditt AEM med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
+> Det här steget gäller projekt som skapats med [AEM-standardmallen](https://github.com/adobe/aem-boilerplate). Om du har skapat ditt AEM-projekt med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
 
 Integrera:
 
-1. Klona det adaptiva Forms-blockarkivet: [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms) till din dator.
+1. **Lägg till nödvändiga filer och mappar**
+   1. Kopiera och klistra in följande mappar och filer från [AEM Forms-originalet](https://github.com/adobe-rnd/aem-boilerplate-forms) i ditt AEM-projekt:
 
-1. I den hämtade mappen hittar du mappen `blocks/form`. Kopiera mappen. Navigera till det lokala `blocks`-mappen för ditt AEM och klistra in den kopierade formulärmappen här.
+      * Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
+      * Mappen [form-common](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-common)
+      * Mappen [form-components](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-components)
+      * filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
+      * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
 
-1. Verkställ och skicka dessa ändringar till ditt AEM på GitHub.
+1. **Uppdatera komponentdefinitioner och modellfiler**
+   1. Navigera till filen `../models/_component-definition.json` i ditt AEM-projekt och uppdatera den med ändringarna från filen [_component-definition.json i AEM Forms-mallen ](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-definition.json#L39-L48).
 
+   1. Navigera till filen `../models/_component-models.json` i ditt AEM-projekt och uppdatera den med ändringarna från filen [_component-models.json i AEM Forms-mallen ](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-models.json#L24-L26)
 
-Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM. Du kan börja skapa och lägga till formulär på dina AEM sidor.
+1. **Lägg till formulärredigerare i redigeringsskript**
+   1. Navigera till filen `../scripts/editor-support.js` i AEM Project och uppdatera den med ändringarna från filen [editor-support.js i AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js#L105-L106)
+1. **Uppdatera ESLint-konfigurationsfilen**
+   1. Navigera till filen `../.eslintignore` i ditt AEM-projekt och lägg till följande kodrad för att förhindra fel relaterade till regelmotorn för formulärblockering:
+
+      ```
+          blocks/form/rules/formula/*
+          blocks/form/rules/model/*
+      ```
+
+1. Genomför och skicka dessa ändringar till AEM Project-databasen på GitHub.
+
+Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM-projekt. Du kan börja skapa och lägga till formulär på dina AEM-sidor.
 
 
 ## Felsökning av byggproblem med GitHub
