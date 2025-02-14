@@ -6,7 +6,7 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: ac780399-34fe-457d-aaf4-b675656c024d
-source-git-commit: 4fc312fe8a52b7c5733a68014136e297479ab2a0
+source-git-commit: d09dce45efb7d8d881420cf724de493837b6ae71
 workflow-type: tm+mt
 source-wordcount: '1843'
 ht-degree: 0%
@@ -53,8 +53,7 @@ Adaptive Forms Block har en standardiserad HTML-struktur som förenklar processe
 * **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera `/blocks/form/form.css file`. Den här filen innehåller omfattande formatering för ett formulär med stöd för guideformulär i flera steg. Det är viktigt att du använder anpassade CSS-variabler för enkel anpassning, underhåll och enhetlig formatering i olika formulär. &lt;!—Instruktioner om hur du lägger till det adaptiva Forms-blocket i ditt projekt finns i [Skapa ett formulär](/help/edge/docs/forms/create-forms.md).
 
 * **CSS-format för Forms**: Om du vill vara säker på att dina format används på rätt sätt kapslar du in din formulärspecifika CSS i `main .form form` -väljaren. På så sätt kan du vara säker på att formaten bara är avsedda för formulärelementen i huvudinnehållsområdet, vilket förhindrar konflikter med andra delar av webbplatsen.
-
-  Exempel:
+Exempel:
 
   ```css
   main .form form input {
@@ -68,8 +67,7 @@ Adaptive Forms Block har en standardiserad HTML-struktur som förenklar processe
   main .form form label {
     /* Add styles specific to labels inside the form */
   }
-  ```
-
+  
 ## Komponentstruktur
 
 Det adaptiva Forms-blocket erbjuder en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
