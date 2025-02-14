@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: e25b08e824ba5f0ba6d60b334ebb50d13442f590
+source-git-commit: 770cbea467128ce00465a4094efe3a07fc59eca8
 workflow-type: tm+mt
-source-wordcount: '6077'
+source-wordcount: '6071'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,6 @@ ht-degree: 2%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2024 {#2024}
-         + [Versionsinformation för 2024.11.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
@@ -578,7 +577,6 @@ ht-degree: 2%
       + [Dynamic Media Newsletter archive av Experience League](/help/assets/dynamic-media/dynamic-media-newsletter.md)
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/administering-dynamic-media.md)
       + [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md)
-      + [Dynamiska mediamallar](/help/assets/dynamic-media/dynamic-media-templates.md)
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/config-dm.md)
       + [Valfritt - Konfigurera dynamiska media, allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md)
       + [Valfritt - Konfigurera Dynamic Media, Publiceringsinställningar](/help/assets/dynamic-media/dm-publish-settings.md)
@@ -710,7 +708,6 @@ ht-degree: 2%
       + [Migrera från [!DNL AEM 6.5 Forms] eller tidigare till [!DNL AEM Forms] as a Cloud Service](/help/forms/migrate-to-forms-as-a-cloud-service.md)
       + [Grupper och behörigheter](/help/forms/forms-groups-privileges-tasks.md)
       + [Importera, exportera och ordna anpassningsbara Forms-, PDF forms- och andra resurser](/help/forms/import-export-forms-templates.md)
-      + [Publicera adaptiv Forms med Hantera publikation](/help/forms/manage-publication.md)
    + Komma igång {#getting-started-forms}
       + [Användningsmiljö och installationsutvecklingsmiljö](/help/forms/create-adaptive-form-tutorial-getting-started.md)
       + [Skapa låneansökningsformuläret](/help/forms/create-adaptive-form-tutorial.md)
@@ -1038,6 +1035,9 @@ ht-degree: 2%
          + [Lägga till regler i med Regelredigeraren](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
          + [Skapa anpassade komponenter](/help/edge/docs/forms/universal-editor/create-custom-component.md)
          + [Använd reCAPTCHA i formulär](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
+         + [Skicka funktionsmakron](/help/edge/docs/forms/universal-editor/submit-action.md)
+         + [Publicera Forms](/help/edge/docs/forms/universal-editor/publish-forms.md)
+         + [Anpassa formulärformatering](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
       + Funktioner {#advanced-features-edge-delivery-services-forms}
          + [Använd formulärfragment](/help/edge/docs/forms/form-fragments.md)
          + [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
@@ -1211,9 +1211,9 @@ ht-degree: 2%
          + [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md)
          + [Felsöka SSL-certifikatfel](/help/implementing/cloud-manager/managing-ssl-certifications/troubleshoot-ssl-cert.md)
          + [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md)
-      + Domänmappningar {#cdn-configurations}
-         + [Lägga till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
-         + [Hantera domänmappningar](/help/implementing/cloud-manager/cdn-configurations/manage-cdn-config.md)
+      + CDN-konfigurationer {#cdn-configurations}
+         + [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
+         + [Hantera CDN-konfigurationer](/help/implementing/cloud-manager/cdn-configurations/manage-cdn-config.md)
       + IP-Tillåtelselista {#ip-allow-lists}
          + [Introduktion till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md)
          + [Lägg till en IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md)
