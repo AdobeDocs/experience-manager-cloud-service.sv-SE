@@ -4,7 +4,7 @@ description: Läs om hur du i Universell redigerare kan redigera vad du vill - s
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: b8d56873b7bc23295fefc35a826b8047c626649e
+source-git-commit: 2947c4cb1fad7e1c7635a0e423a4adfe23013f79
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -20,9 +20,9 @@ Universal Editor är en mångsidig visuell editor som ingår i Adobe Experience 
 
 Universell redigerare ger en effektiv och intuitiv kontextredigeringsfunktion som kräver minimal utbildning. Med det kan författare hantera sitt innehåll direkt i webbupplevelsen, precis så som det kommer att se ut för besökarna. Eftersom den är en riktig redigerare som en tjänst och generellt sett mer flexibel kommer den att ersätta sidredigeraren.
 
-Den universella redigeraren har stor flexibilitet eftersom den har stöd för samma visuella redigering för alla typer av AEM: redigering på plats och layoutdisposition är möjlig både för innehållsfragment och sidkomponenter. De två typerna av innehåll kan till och med redigeras när de visas sida vid sida i en webbupplevelse, utan att författarna behöver ändra sitt sammanhang. Detta är en enorm förbättring jämfört med tidigare redigerare i AEM som bara stöder en viss typ av innehåll.
+Den universella redigeraren har stor flexibilitet eftersom den har stöd för samma visuella redigering för alla typer av AEM-innehåll: redigering på plats och layoutdisposition är möjlig både för innehållsfragment och sidkomponenter. De två typerna av innehåll kan till och med redigeras när de visas sida vid sida i en webbupplevelse, utan att författarna behöver ändra sitt sammanhang. Detta är en enorm förbättring jämfört med tidigare redigerare i AEM som bara hade stöd för en viss typ av innehåll.
 
-Utvecklarna drar nytta av universella redigerares mångsidighet eftersom den även stöder en sann frikoppling av implementeringen. Det gör att utvecklare kan använda praktiskt taget vilket ramverk eller vilken arkitektur de vill, utan att införa några begränsningar för SDK eller teknik. Den här flexibiliteten gör det även enkelt att instrumentera befintliga webbprogram för den universella redigeraren utan att behöva arkitekturera om dem.
+Utvecklarna drar nytta av universella redigerares mångsidighet eftersom den även stöder en sann frikoppling av implementeringen. Det gör att utvecklare kan utnyttja praktiskt taget vilket ramverk eller vilken arkitektur de vill utan att införa några begränsningar för SDK eller teknik. Den här flexibiliteten gör det även enkelt att instrumentera befintliga webbprogram för den universella redigeraren utan att behöva arkitekturera om dem.
 
 ## Helt universell {#universal}
 
@@ -39,16 +39,16 @@ Användare tror ofta att en headless-implementering begränsar författarens mö
 Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och stöder följande:
 
 * **Valfri arkitektur** - Återgivning på serversidan, edge-side-återgivning, rendering på klientsidan osv.
-* **Alla ramverk** - Vanilla-AEM eller andra tredjepartsramverk som React, Next.js, Angular och så vidare.
+* **Alla ramverk** - Vanilla AEM eller andra ramverk från tredje part som React, Next.js, Angular osv.
 * **Valfri värdtjänst** - Kan lagras lokalt på AEM eller på en fjärrdomän
 
 ### Allt innehåll {#any-content}
 
-En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som den AEM sidredigeraren. Men den universella redigeraren tillåter innehållsförfattare att redigera **vilket**-innehåll som helst visuellt och i sitt sammanhang och stöder:
+En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som tidigare AEM sidredigerare. Men den universella redigeraren tillåter innehållsförfattare att redigera **vilket**-innehåll som helst visuellt och i sitt sammanhang och stöder:
 
 * **AEM sidstrukturer** - kapslade `cq:Components` av `cq:Pages`, inklusive Experience Fragments
-* **AEM Innehållsfragment** - Redigera innehåll från innehållsfragment så som de visas i sammanhanget för upplevelsen.
-* **Dokument** - Konceptkorrektur har visat att även Word-, Excel-, Google-dokument eller Markup-dokument kan redigeras på samma sätt (detta är Pågående arbete).
+* **AEM Content Fragments** - Redigera innehåll från innehållsfragment så som de visas i sitt sammanhang.
+* **Dokument** - Proof of concepts har visat att även Word-, Excel-, Google Docs- och Markdown-dokument kan redigeras på samma sätt (det här är Pågående arbete).
 
 ### Alla proportioner {#any-aspect}
 
@@ -86,11 +86,11 @@ En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i e
 
 När du utforskar den universella redigeraren och fortsätter implementera den i dina egna projekt bör du tänka på följande begränsningar.
 
-* Högst 25 AEM (innehållsfragment, sidor, Experience Fragments, Assets osv.) får vara referenser som instrument på en enda sida.
-* AEM as a Cloud Service och [AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) är de enda AEM som stöds.
+* Högst 25 AEM-resurser (Content Fragments, pages, Experience Fragments, Assets, etc.) får vara referenser som instrument på en enda sida.
+* AEM as a Cloud Service och [AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) är de enda AEM-backends som stöds.
 * AEM as a Cloud Service version `2023.8.13099` eller senare krävs.
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
-* Som en del av AEM har Universal Editor stöd för samma webbläsare som AEM.
+* Som en del av AEM stöder den universella redigeraren [samma webbläsare som AEM.](/help/overview/supported-platforms.md)
    * Mobilversioner av dessa webbläsare stöds inte.
 
 {{ue-ip-allow-lists}}
