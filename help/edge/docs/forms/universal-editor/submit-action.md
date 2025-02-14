@@ -5,13 +5,13 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: ac005e5bc143c35eb29ba177a26aa6cc33897db4
+exl-id: beee9be7-8215-496b-9fb9-61fba000a055
+source-git-commit: ba38294710553145a670ea42dd2b7571fa4eba7b
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
-
 
 # Inlämningsåtgärd för anpassat formulär
 
@@ -44,7 +44,7 @@ Så här konfigurerar du en REST-slutpunkt:
 1. Ange REST-slutpunkts-URL.
 1. Du kan också **aktivera POST-begäran** och ange en URL för att skicka begäran.
 
-{width=50%,height=50%}![Aktivera efterbegäran för anpassningsbara formulär](/help/forms/assets/enable-post-request-ue.png)
+![Aktivera efterbegäran för anpassningsbara formulär](/help/forms/assets/enable-post-request-ue.png)
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Med Skicka e-poståtgärd kan du skicka ett e-postmeddelande till en eller flera
 1. Det effektiviserar arbetsflödet genom att direkt integrera inskickade formulär i e-postmeddelanden.
 1. Det hjälper organisationer att anpassa e-postinnehållet och på så sätt göra det lämpligt för specifika kommunikationsbehov.
 
-{width=50%,height=50%}![Adaptiva formuläregenskaper i Universell redigerare](/help/forms/assets/submit-actions-ue.png)
+![Adaptiva formuläregenskaper i Universell redigerare](/help/forms/assets/submit-actions-ue.png)
 
 
 Så här konfigurerar du en skicka-åtgärd som en e-postadress för att skicka formulär:
@@ -140,5 +140,3 @@ Med alternativet Vid sändning kan du konfigurera ett Skicka-åtgärdsmeddelande
 1. När du klickar visas följande alternativ:
    * **[!UICONTROL On Submit]**: Vid sändning kan du anpassa ett meddelande som ska visas när ett formulär skickas. Som standard visas ett anpassat meddelande&quot;Tack för att du skickat in formuläret&quot; för användaren när ett formulär har skickats.
 Du kan också anpassa tackmeddelandet när du skickar in formulär genom att välja alternativet **[!UICONTROL Show message]** och lägga till/redigera meddelandet i **RTF-redigeraren**.
-
-
