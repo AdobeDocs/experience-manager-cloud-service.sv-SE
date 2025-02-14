@@ -6,9 +6,9 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: beee9be7-8215-496b-9fb9-61fba000a055
-source-git-commit: ba38294710553145a670ea42dd2b7571fa4eba7b
+source-git-commit: da2f673319dd5cec764408b4517698a9d39031bb
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '709'
 ht-degree: 0%
 
 ---
@@ -140,3 +140,8 @@ Med alternativet Vid sändning kan du konfigurera ett Skicka-åtgärdsmeddelande
 1. När du klickar visas följande alternativ:
    * **[!UICONTROL On Submit]**: Vid sändning kan du anpassa ett meddelande som ska visas när ett formulär skickas. Som standard visas ett anpassat meddelande&quot;Tack för att du skickat in formuläret&quot; för användaren när ett formulär har skickats.
 Du kan också anpassa tackmeddelandet när du skickar in formulär genom att välja alternativet **[!UICONTROL Show message]** och lägga till/redigera meddelandet i **RTF-redigeraren**.
+
+
+## Se även
+
+{{see-more-forms-eds}}
