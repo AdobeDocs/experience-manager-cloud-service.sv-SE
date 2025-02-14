@@ -1,24 +1,24 @@
 ---
-title: Infoga innehåll i Cloud Service
-description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en instans av en Cloud Service.
+title: Inmatning av innehåll i Cloud Service
+description: Lär dig hur du använder Cloud Acceleration Manager för att importera innehåll från din migreringsuppsättning till en Cloud Service-målinstans.
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 01c2bda6b688bb85a214991f7594585f87850ec2
 workflow-type: tm+mt
-source-wordcount: '3411'
+source-wordcount: '3441'
 ht-degree: 1%
 
 ---
 
-# Infoga innehåll i Cloud Service {#ingesting-content}
+# Inmatning av innehåll i Cloud Service {#ingesting-content}
 
 ## Inmatningsprocess i Cloud Acceleration Manager {#ingestion-process}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
->abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till målinstansen för Cloud Service. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
+>abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till Cloud Service-målinstansen. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content#top-up-extraction-process" text="Extrahering uppifrån"
 
 Följ stegen nedan för att importera din migreringsuppsättning med Cloud Acceleration Manager:
@@ -43,7 +43,7 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
       * Inställningarna stöder inte mål av typen Rapid Development Environment (RDE) eller Preview, och de visas inte som ett möjligt målval, även om användaren har tillgång till det.
       * En migreringsuppsättning kan importeras till flera destinationer samtidigt, men målet kan vara att bara ha ett som kör eller väntar på inmatning åt gången.
 
-   * **Nivå:** Välj nivån. (Författare/Publish).
+   * **Nivå:** Välj nivån. (Författare/Publicera).
       * Om källan var `Author` rekommenderar vi att du importerar den till `Author`-nivån på målet. Om källan var `Publish` bör målet också vara `Publish`.
 
    >[!NOTE]
@@ -58,14 +58,14 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
       * Icke-rensningsfrågor är särskilt utformade för att användas i det övre intaget. Dessa förslag är avsedda att innehålla en stegvis mängd nytt innehåll som har ändrats sedan det senaste intaget i en befintlig migreringsuppsättning. Genomgående av icke-rensningsfrågor utanför detta användningsfall kan leda till mycket lång intag.
 
    >[!IMPORTANT]
-   > Om inställningen **Rensa** är aktiverad för den aktuella inmatningen återställs hela den befintliga databasen, inklusive användarbehörigheterna för målinstansen av Cloud Servicen. Den här återställningen gäller även för en admin-användare som har lagts till i gruppen **administratörer** och den användaren måste läggas till i gruppen Administratörer igen för att kunna starta ett inlägg.
+   > Om inställningen **Rensa** är aktiverad för den aktuella importen återställs hela den befintliga databasen, inklusive användarbehörigheterna för Cloud Service-målinstansen. Den här återställningen gäller även för en admin-användare som har lagts till i gruppen **administratörer** och den användaren måste läggas till i gruppen Administratörer igen för att kunna starta ett inlägg.
 
    * **Förkopia:** Välj värdet `Pre-copy`
       * Du kan köra det valfria förkopieringssteget för att avsevärt snabba upp intaget. Mer information finns i [Ingesting with AzCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#ingesting-azcopy).
       * Om konsumtion med förkopia används (för S3 eller Azure Data Store) bör du endast köra `Author`-intagning. Om du gör det går det snabbare att få tillgång till `Publish` när det körs senare.
 
    >[!IMPORTANT]
-   > Du kan bara initiera en inmatning till målmiljön om du tillhör den lokala gruppen **AEM administratörer** i målserverns författartjänst. Om du inte kan påbörja ett inlägg kan du läsa [Det går inte att påbörja inmatningen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
+   > Du kan bara initiera en inmatning till målmiljön om du tillhör den lokala gruppen **AEM-administratörer** i Cloud Service-målförfattartjänsten. Om du inte kan påbörja ett inlägg kan du läsa [Det går inte att påbörja inmatningen](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#unable-to-start-ingestion) för mer information.
 
 1. När du har valt ett alternativ för intag kan en uppskattning av dess varaktighet visas. Detta är en uppskattning av bästa möjliga insats baserad på historiska data om liknande inmatningar.
 
@@ -98,13 +98,13 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_ingestion_topup"
 >title="Övre inmatning"
->abstract="Använd den övre funktionen för att flytta innehåll som ändrats sedan föregående innehållsöverföringsaktivitet. Kontrollera loggarna efter eventuella fel eller varningar när Ingeset är klart. Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att kontakta Adobe kundtjänst."
+>abstract="Använd den övre funktionen för att flytta innehåll som ändrats sedan föregående innehållsöverföringsaktivitet. Kontrollera loggarna efter eventuella fel eller varningar när Ingeset är klart. Felen ska åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att kontakta Adobe kundtjänst."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs" text="Visa loggar"
 
 Verktyget Innehållsöverföring har en funktion som tillåter extrahering av differentiellt innehåll genom att utföra en *top-up* av migreringsuppsättningen. Detta gör att migreringsuppsättningen kan ändras så att endast innehåll som har ändrats sedan den föregående extraheringen tas med, utan att allt innehåll behöver extraheras igen.
 
 >[!NOTE]
->Efter den initiala innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du publicerar på Cloud Servicen. Om du har använt steget före kopiering för det första intaget kan du hoppa över förkopiering för efterföljande toppkopieringsförslag (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
+>Efter den initiala innehållsöverföringen bör du göra regelbundna tillägg av differentiellt innehåll för att förkorta innehållets frysningsperiod för den slutliga differentiella innehållsöverföringen innan du publicerar på Cloud Service. Om du har använt steget före kopiering för det första intaget kan du hoppa över förkopiering för efterföljande toppkopieringsförslag (om den övre migreringsuppsättningsstorleken är mindre än 200 GB). Orsaken är att det kan lägga till tid i hela processen.
 
 Om du vill importera differentiellt innehåll efter att en del inmatningsfrågor är slutförda måste du köra en [extrahering uppifrån](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/extracting-content.md#top-up-extraction-process) och sedan använda inmatningsmetoden med alternativet **Rensa** **inaktiverat**. Läs förklaringen **Rensa** ovan för att undvika att innehåll som redan finns på målet går förlorat.
 
@@ -122,7 +122,7 @@ Börja med att skapa ett matningsjobb och se till att **Rensa** är inaktiverat 
 
 ### CAM kan inte hämta migreringstoken {#cam-unable-to-retrieve-the-migration-token}
 
-Den automatiska hämtningen av migreringstoken kan misslyckas av olika orsaker, bland annat [att konfigurera ett IP-tillåtelselista via Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) i målservermiljön. I sådana fall visas följande dialogruta när du försöker starta ett intag:
+Den automatiska hämtningen av migreringstoken kan misslyckas av olika orsaker, bland annat [att konfigurera ett IP-tillåtelselista via Cloud Manager](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) i Cloud Service-målmiljön. I sådana fall visas följande dialogruta när du försöker starta ett intag:
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/troubleshooting-token.png)
 
@@ -130,17 +130,17 @@ Hämta migreringstoken manuellt genom att klicka på länken Hämta token i dial
 
 >[!NOTE]
 >
->Token är tillgänglig för användare som tillhör den lokala gruppen **AEM administratörer** i Cloud Servicens författartjänst.
+>Token är tillgänglig för användare som tillhör den lokala gruppen **AEM-administratörer** i Cloud Service-målförfattartjänsten.
 
 ### Det går inte att starta matning {#unable-to-start-ingestion}
 
-Du kan bara initiera en inmatning till målmiljön om du tillhör den lokala gruppen **AEM administratörer** i målserverns författartjänst. Om du inte tillhör gruppen AEM administratörer visas ett fel som visas nedan när du försöker starta ett intag. Du kan antingen be din administratör att lägga till dig i de lokala **AEM administratörerna** eller be om själva token, som du sedan kan klistra in i fältet **Migreringstokenindata**.
+Du kan bara initiera en inmatning till målmiljön om du tillhör den lokala gruppen **AEM-administratörer** i Cloud Service-målförfattartjänsten. Om du inte tillhör AEM administratörsgrupp visas ett fel som visas nedan när du försöker starta ett intag. Du kan antingen be din administratör att lägga till dig i de lokala **AEM-administratörerna** eller be om själva token, som du sedan kan klistra in i fältet **Migreringstokenindata**.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_nonadmin_ingestion.png)
 
 ### Det gick inte att nå migreringstjänsten {#unable-to-reach-migration-service}
 
-Efter att ett matningsförslag har begärts kan ett meddelande som följande visas för användaren: &quot;Migreringstjänsten i målmiljön är inte tillgänglig. Om så är fallet, försök igen senare eller kontakta supporten för Adobe.&quot;
+Efter att ett matningsförslag har begärts kan ett meddelande som följande visas för användaren: &quot;Migreringstjänsten i målmiljön är inte tillgänglig. Om så är fallet, försök igen senare eller kontakta Adobe support.&quot;
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_cannot_reach_migser.png)
 
@@ -151,25 +151,25 @@ Det här meddelandet anger att Cloud Acceleration Manager inte kunde nå målmil
 > Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om token anges och meddelandet fortfarande visas, var det inte problemet att hämta token.
 
 * AEM as a Cloud Service underhåller miljötillståndet och måste ibland starta om migreringstjänsten av olika vanliga orsaker. Om tjänsten startas om kan den inte nås, men är tillgänglig så småningom.
-* Det är möjligt att en annan process körs på instansen. Om till exempel [AEM versionsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. När den processen är klar kan ett nytt försök att starta intaget göras.
+* Det är möjligt att en annan process körs på instansen. Om [AEM-versionsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) till exempel tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. När den processen är klar kan ett nytt försök att starta intaget göras.
 * Om ett [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockeras Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista under importen och indexeringen.
 * Det kan finnas andra skäl till att en utredning behöver göras. Om det fortfarande inte går att få tillgång till produkten eller indexeringen kontaktar du Adobe kundtjänst.
 
-### AEM och förslag {#aem-version-updates-and-ingestions}
+### Uppdateringar och förslag för AEM-versioner {#aem-version-updates-and-ingestions}
 
-[AEM Versionsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) används automatiskt i miljöer för att hålla dem uppdaterade med den senaste AEM as a Cloud Service-versionen. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön.
+[AEM-versionsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) används automatiskt i miljöer för att de ska vara uppdaterade med den senaste AEM as a Cloud Service-versionen. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön.
 
-Om&quot;AEM versionsuppdateringar&quot; introduceras i målprogrammet försöker den att inaktivera kön innan den startar. När inmatningen är klar återställs versionsuppdaterarens tillstånd till det som var innan inmatningen startade.
-
->[!NOTE]
->
-> Du behöver inte längre logga en supportanmälan för att inaktivera AEM versionsuppdateringar.
-
-Om&quot;AEM versionsuppdateringar&quot; är aktiv (d.v.s. uppdateringar körs eller köas för att köras), kommer importen inte att börja och följande meddelande visas i användargränssnittet. När uppdateringarna är klara kan intaget startas. Cloud Manager kan användas för att se aktuell status för programmets rörledningar.
+Om&quot;AEM-versionsuppdateringar&quot; introduceras i målprogrammet försöker den inaktivera kön innan den startas. När inmatningen är klar återställs versionsuppdaterarens tillstånd till det som var innan inmatningen startade.
 
 >[!NOTE]
 >
-> &quot;AEM versionsuppdateringar&quot; körs i miljöns pipeline och väntar tills pipeline är klar. Om uppdateringar köas längre än förväntat kontrollerar du att ett anpassat arbetsflöde inte har pipeline oavsiktligt låst.
+> Du behöver inte längre logga en supportanmälan för att inaktivera&quot;AEM Version Updates&quot;.
+
+Om&quot;AEM Version Updates&quot; är aktiv (d.v.s. uppdateringar körs eller köas för att köras), kommer importen inte att börja och följande meddelande visas i användargränssnittet. När uppdateringarna är klara kan intaget startas. Cloud Manager kan användas för att se aktuell status för programmets rörledningar.
+
+>[!NOTE]
+>
+> &quot;AEM Version Updates&quot; körs i miljön och väntar tills pipeline är klar. Om uppdateringar köas längre än förväntat kontrollerar du att ett anpassat arbetsflöde inte har pipeline oavsiktligt låst.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/error_releaseorchestrator_active.png)
 
@@ -180,7 +180,7 @@ Om&quot;AEM versionsuppdateringar&quot; är aktiv (d.v.s. uppdateringar körs el
 >title="Molnmiljön är inte i tillståndet Ready"
 >abstract="I sällsynta fall kan det uppstå oväntade problem i målmolnmiljön, vilket kan leda till att importen misslyckas."
 
-I sällsynta fall kan det uppstå oväntade problem i Cloud Servicens målmiljö. Detta resulterar i att intaget misslyckas eftersom miljön inte är i det förväntade tillståndet klar. Kontrollera matningsloggen för att visa mer information om det feltillstånd som påträffats.
+I sällsynta fall kan målmiljön i Cloud Service ha oväntade problem. Detta resulterar i att intaget misslyckas eftersom miljön inte är i det förväntade tillståndet klar. Kontrollera matningsloggen för att visa mer information om det feltillstånd som påträffats.
 
 Se till att författarmiljön är tillgänglig och vänta några minuter innan du försöker göra om importen. Om problemet kvarstår kan du kontakta kundsupport och få hjälp med felstatus.
 
@@ -239,7 +239,7 @@ Detta är en MongoDB-begränsning.
 
 Mer information finns i `Node property value in MongoDB`-anteckningen i [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md). Där finns också en länk till ett Oak-verktyg som kan hjälpa dig att hitta alla stora noder. När alla noder med stora storlekar har åtgärdats kör du extraheringen och intaget igen.
 
-Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) på AEM källinstans och granska resultatet som visas, särskilt [&quot;Repository Structure som inte stöds&quot; (URS)](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/urs) -mönstret.
+Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) på AEM-källinstansen och granska resultatet som den visar, särskilt [&quot;Repository Structure som inte stöds&quot; (URS)](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/urs) -mönstret.
 
 >[!NOTE]
 >
@@ -258,6 +258,7 @@ Ibland kan oväntade problem ge upphov till misslyckade frågor där det enda s�
 
 * `Atlas prescale timeout error` - Inmatningsfasen försöker förskala målmolndatabasen till en lämplig storlek som passar storleken på det migreringsuppsättningsinnehåll som importeras. Oftast slutförs inte den här åtgärden inom den förväntade tidsramen.
 * `Exhausted mongo restore retries` - Ett försök att återställa en lokal dump av innehållet i den inkapslade migreringsuppsättningen till molndatabasen har gjorts. Detta tyder på ett övergripande hälso-/nätverksproblem med MongoDB, som ofta läker av sig själv efter några minuter.
+* `Mongo network error` - Ibland kan det misslyckas med att upprätta en anslutning till MongoDB, vilket gör att intagsprocessen avslutas tidigt och rapporterar att den misslyckades. Ett enkelt försök att återanvända intaget bör göras.
 
 ### Inmatningen har avbrutits {#ingestion-rescinded}
 
@@ -272,12 +273,12 @@ Ett intag som skapades med en pågående extrahering när dess källmigreringsup
 
 I allmänhet rekommenderas inte att du ändrar molnmiljödata mellan de olika förslagen.
 
-När en resurs tas bort från Cloud Servicens mål med Assets Touch-gränssnittet tas noddata bort, men resursens blob med bilden tas inte bort omedelbart. Den är markerad för borttagning så att den inte längre visas i användargränssnittet. Den finns dock kvar i datalagret tills skräpinsamlingen sker och blobben tas bort.
+När en resurs tas bort från Cloud Service-målet med Assets Touch-gränssnittet tas noddata bort, men resursens blob med bilden tas inte bort omedelbart. Den är markerad för borttagning så att den inte längre visas i användargränssnittet. Den finns dock kvar i datalagret tills skräpinsamlingen sker och blobben tas bort.
 
 Om en tidigare migrerad resurs tas bort och nästa inmatning körs innan skräpinsamlaren har slutfört borttagningen av resursen, återställs inte den borttagna resursen om samma migreringsuppsättning används. När intaget kontrolleras i molnmiljön för resursen finns det inga noddata. Inmatningen kopierar därför noddata till molnmiljön. När den kontrollerar blobbutiken ser den dock att blobben finns och hoppar över kopieringen av blobben. Det är därför som metadata förekommer när du tittar på resursen från Touch-gränssnittet, men bilden är inte det. Kom ihåg att migreringsuppsättningar och innehåll inte har utformats för att hantera det här fallet. De vill lägga till nytt innehåll i molnmiljön och inte återställa tidigare migrerat innehåll.
 
 ## What&#39;s Next {#whats-next}
 
-När importen är klar AEM indexeringen startas automatiskt. Mer information finns i [Indexera efter att du har migrerat innehåll](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/indexing-content.md).
+När importen är klar startas AEM-indexeringen automatiskt. Mer information finns i [Indexera efter att du har migrerat innehåll](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/indexing-content.md).
 
-När du har slutfört Inkludering av innehåll i Cloud Servicen kan du visa loggar för varje steg (extrahering och förtäring) och leta efter fel. Mer information finns i [Visa loggar för en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/viewing-logs.md).
+När du har slutfört Inkludering av innehåll i Cloud Service kan du visa loggar för varje steg (extrahering och förtäring) och söka efter fel. Mer information finns i [Visa loggar för en migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/viewing-logs.md).
