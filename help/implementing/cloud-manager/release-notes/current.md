@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.2.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: ee7a99c5bf08b39a743d4b326ac23cc8546c512e
+source-git-commit: aaef376b733c10643e44205e55a0921c22008990
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Nästa planerade version är torsdagen den 13 mars 2025.
 * **Stöd för privata nycklar för EC (Elliptisk kurva) (secp384r1)**
 
   Cloud Manager har nu stöd för `secp384r1` privata nycklar för elliptiska kurvor (EC), vilket ger förbättrad säkerhet och efterlevnad för kundhanterade OV/EV SSL-certifikat.
-Mer information finns i [Krav för kundhanterade OV/EV SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md). <!-- CMGR-63636 -->
+Mer information finns i [Krav för kundhanterade OV/EV SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements). <!-- CMGR-63636 -->
 
 * **Specialiserade testmiljöer**
 
