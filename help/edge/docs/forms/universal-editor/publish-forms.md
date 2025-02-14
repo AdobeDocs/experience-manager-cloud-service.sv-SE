@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a765af62628d8b6308d6f712f450a5a1e62640d9
+source-git-commit: ac005e5bc143c35eb29ba177a26aa6cc33897db4
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Du kan publicera **EDS-baserade adaptiva formulär** till Edge Delivery genom at
 1. Om du vill kontrollera formulärets publiceringsstatus klickar du på **Publicera** igen.
    ![Publiceringsstatus](/help/forms/assets/publish-status.png)
 
-1. Om du vill **avpublicera** ett formulär öppnar du det i redigeraren, klickar på menyn med tre punkter i det övre högra hörnet och väljer **Avpublicera**.
+1. Om du vill **avpublicera** ett formulär öppnar du det i redigeraren, klickar på menyn med tre punkter i det övre högra hörnet och klickar på **Avpublicera**.
    ![Avpublicera](/help/forms/assets/unpublish--form.png)
 
 ## Aktivera inskickning av formulär på Edge Delivery genom att konfigurera ett referensfilter för AEM Publisher

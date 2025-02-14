@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 2cb18eb1bf755df48e2d9d10fabf3cdb95e79e57
+source-git-commit: 1336e42c0632761daccca40f3c9709bbcfbed6c9
 workflow-type: tm+mt
 source-wordcount: '1843'
 ht-degree: 0%
@@ -45,48 +45,6 @@ Att förstå [grundläggande CSS-koncept](https://www.w3schools.com/css/css_intr
 * [Rutmodell](https://www.w3schools.com/css/css_boxmodel.asp): CSS-rutmodellen beskriver strukturen för HTML-element som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
 * Flexbox/Grid: CSS [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) och [Grid layouts](https://www.w3schools.com/css/css_grid.asp) är kraftfulla verktyg för att skapa responsiva och flexibla designer.
 
-<!--
-## Styling a form for Adaptive Forms Block
-
-The Adaptive Forms Block offers a standardized HTML structure, simplifying the process of selecting and styling form components:
-
-* **Update default styles**: You can modify the default styles of a form by editing the `/blocks/form/form.css file`. This file provides comprehensive styling for a form, supporting multi-step wizard forms. It emphasizes using custom CSS variables for easy customization, maintenance, and uniform styling across forms. <!--For instructions on adding the Adaptive Forms Block to your project, refer to [create a form](/help/edge/docs/forms/create-forms.md).
-
-* **CSS Styling for Forms**: To ensure that your styles are applied correctly, wrap your form-specific CSS within the `main .form form` selector. This ensures that your styles target only the form elements within the main content area, avoiding conflicts with other parts of the website.
-
-  Example:
-  ```css
-  main .form form input {
-    /* Add styles specific to input fields inside the form */
-  }
-
-  main .form form button {
-    /* Add styles specific to buttons inside the form */
-  }
-
-  main .form form label {
-    /* Add styles specific to labels inside the form */
-  }
-  ```
-
-<!--**Customization**: Use the default `forms.css` as a base and customize it to modify the look and feel of your form components, making it visually appealing and user-friendly. The file's structure encourages organization and maintains styles for forms, promoting consistent designs across your website.-->
-
-<!--
-## Breakdown of forms.css's structure
-
-* **Global variables:** Defined at the `:root` level, these variables (`--variable-name`) store values used throughout the style sheet for consistency and ease of updates. These variables define colors, font sizes, padding, and other properties. You can declare your own Global variables or modify existing ones to change the form's style.
-
-* **Universal selector styles:** The `*` selector matches every element in the form, ensuring styles are applied to all components by default, including setting the `box-sizing` property to `border-box`.
-
-* **Form styling:** This section focuses on styling form components using selectors to target specific HTML elements. It defines styles for input fields, text areas, checkboxes, radio buttons, file inputs, form labels, and descriptions.
-
-* **Wizard styling (if applicable):** This section is dedicated to styling the wizard layout, a multi-step form where each step is displayed one at a time. It defines styles for the wizard container, fieldsets, legends, navigation buttons, and responsive layouts.
-
-* **Media queries:** These provide styles for different screen sizes, adjusting layout and styling accordingly.
-
-* **Miscellaneous styling:**: This section covers styles for success or error messages, file upload areas, and other elements you might encounter in a form.
-
--->
 
 ## Komponentstruktur
 
@@ -891,3 +849,57 @@ Den här CSS-koden har alla indataelement som finns i ett element som har klasse
 ## Se även
 
 {{see-more-forms-eds}}
+
+
+<!--
+
+## Styling a form for Adaptive Forms Block
+
+The Adaptive Forms Block offers a standardized HTML structure, simplifying the process of selecting and styling form components:
+
+* **Update default styles**: You can modify the default styles of a form by editing the `/blocks/form/form.css file`. This file provides comprehensive styling for a form, supporting multi-step wizard forms. It emphasizes using custom CSS variables for easy customization, maintenance, and uniform styling across forms. <!--For instructions on adding the Adaptive Forms Block to your project, refer to [create a form](/help/edge/docs/forms/create-forms.md).
+
+* **CSS Styling for Forms**: To ensure that your styles are applied correctly, wrap your form-specific CSS within the `main .form form` selector. This ensures that your styles target only the form elements within the main content area, avoiding conflicts with other parts of the website.
+
+  Example:
+  ```css
+  main .form form input {
+    /* Add styles specific to input fields inside the form */
+  }
+
+  main .form form button {
+    /* Add styles specific to buttons inside the form */
+  }
+
+  main .form form label {
+    /* Add styles specific to labels inside the form */
+  }
+  ```
+
+-->
+
+<!--
+
+**Customization**: Use the default `forms.css` as a base and customize it to modify the look and feel of your form components, making it visually appealing and user-friendly. The file's structure encourages organization and maintains styles for forms, promoting consistent designs across your website.
+
+-->
+
+<!--
+
+## Breakdown of forms.css's structure
+
+* **Global variables:** Defined at the `:root` level, these variables (`--variable-name`) store values used throughout the style sheet for consistency and ease of updates. These variables define colors, font sizes, padding, and other properties. You can declare your own Global variables or modify existing ones to change the form's style.
+
+* **Universal selector styles:** The `*` selector matches every element in the form, ensuring styles are applied to all components by default, including setting the `box-sizing` property to `border-box`.
+
+* **Form styling:** This section focuses on styling form components using selectors to target specific HTML elements. It defines styles for input fields, text areas, checkboxes, radio buttons, file inputs, form labels, and descriptions.
+
+* **Wizard styling (if applicable):** This section is dedicated to styling the wizard layout, a multi-step form where each step is displayed one at a time. It defines styles for the wizard container, fieldsets, legends, navigation buttons, and responsive layouts.
+
+* **Media queries:** These provide styles for different screen sizes, adjusting layout and styling accordingly.
+
+* **Miscellaneous styling:**: This section covers styles for success or error messages, file upload areas, and other elements you might encounter in a form.
+
+-->
+
+

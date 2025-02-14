@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 2cb18eb1bf755df48e2d9d10fabf3cdb95e79e57
+source-git-commit: ac005e5bc143c35eb29ba177a26aa6cc33897db4
 workflow-type: tm+mt
 source-wordcount: '713'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Så här konfigurerar du en REST-slutpunkt:
 
 {width=50%,height=50%}![Aktivera efterbegäran för anpassningsbara formulär](/help/forms/assets/enable-post-request-ue.png)
 
->
+>[!NOTE]
 >
 > * Ange sökvägen till resursen om du vill skicka data till en intern server. Data bokförs på resursens sökväg. Exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
 > * Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POST-begäran anonymt.
