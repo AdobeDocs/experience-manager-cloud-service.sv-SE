@@ -5,13 +5,13 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: d71c5d6488935de4a02c8d3828f287542b979d0f
+exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
+source-git-commit: ee5171e36c24526f331b3722fcd9bd7a1c72072b
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1736'
 ht-degree: 0%
 
 ---
-
 
 # Skapa anpassad komponent i WYSIWYG Authoring
 
@@ -173,24 +173,25 @@ I det här exemplet lägger vi till Stegvärde som en anpassad egenskap i interv
 
 Lägg till den anpassade egenskapen Stegvärde genom att lägga till komponentmodellen med följande kodrader i filen ` _<component>.json`:
 
-```javascript
+    &quot;javascript
     {
-    "component": "number",
-    "name": "stepValue",
-    "label": "Step Value",
-    "valueType": "number"
+    &quot;component&quot;: &quot;number&quot;,
+    &quot;name&quot;: &quot;stepValue&quot;,
+    &quot;label&quot;: &quot;Step Value&quot;,
+    &quot;valueType&quot;: &quot;number&quot;
     }
-    ```
-The JSON snippet defines a custom property called **Step Value** for a **Range** component. Below is a breakdown of each field:
+    &quot;
 
-* **component**: Specifies the type of input field used in the Property dialog. In this case, `number` indicates that the field accepts numeric values.
-* **name**: The identifier for the property, used to reference it in the component’s logic. Here, the `stepValue` represents the step value setting for the range.
-* **label**: The display name of the property as seen in the Property dialog. 
-* **valueType**: Defines the data type expected for the property. The `number` ensures that only numeric inputs are allowed.
+JSON-fragmentet definierar en anpassad egenskap med namnet **Stegvärde** för en **Intervall** -komponent. Nedan visas en beskrivning av varje fält:
 
-You can now use `stepValue` as a custom property in the JSON properties of `range.js` and implement dynamic behavior based on its value at runtime.
+* **komponent**: Anger typen av indatafält som används i egenskapsdialogrutan. I det här fallet anger `number` att numeriska värden accepteras i fältet.
+* **name**: Identifieraren för egenskapen, som används för att referera till den i komponentens logik. Här representerar `stepValue` stegvärdesinställningen för intervallet.
+* **label**: Egenskapens visningsnamn som det visas i egenskapsdialogrutan.
+* **valueType**: Definierar den datatyp som förväntas för egenskapen. `number` säkerställer att endast numeriska indata tillåts.
 
-Hence, the final `_range.json` file, after adding the component definition, component model and custom properties, is as follows:
+Du kan nu använda `stepValue` som en anpassad egenskap i JSON-egenskaperna för `range.js` och implementera dynamiskt beteende baserat på dess värde vid körning.
+
+Därför är den sista `_range.json`-filen, efter att du har lagt till komponentdefinitionen, komponentmodellen och anpassade egenskaper, följande:
 
 ```javascript
  {
@@ -322,6 +323,10 @@ const OOTBComponentDecorators = ['file-input',
 När du har slutfört stegen ovan visas den anpassade komponenten i formulärets komponentlista i Universalläsaren. Du kan sedan dra och släppa det i formuläravsnittet.
 
 ![intervallkomponent](/help/edge/docs/forms/universal-editor/assets/custom-component-range.png)
+
+Skärmbilden nedan visar egenskaperna för komponenten `range` som lagts till i komponentmodellen, som anger egenskaperna som formulärförfattaren kan konfigurera:
+
+![Egenskaper för intervallkomponenten](/help/edge/docs/forms/universal-editor/assets/range-properties.png)
 
 Nu kan du definiera runtime-beteendet för den anpassade komponenten genom att lägga till format och funktioner.
 
