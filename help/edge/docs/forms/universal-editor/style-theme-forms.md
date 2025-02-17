@@ -6,9 +6,9 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: ac780399-34fe-457d-aaf4-b675656c024d
-source-git-commit: d09dce45efb7d8d881420cf724de493837b6ae71
+source-git-commit: 3b901af3283263e7ded0424e8557130ee49fa4cc
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1844'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,7 @@ Att förstå [grundläggande CSS-koncept](https://www.w3schools.com/css/css_intr
 * [Egenskaper](https://www.w3schools.com/css/css_syntax.asp): CSS-egenskaper definierar elementens visuella utseende. Vanliga egenskaper för formatformulärfält är bland annat färg, bakgrundsfärg, kant, utfyllnad, marginal.
 * [Rutmodell](https://www.w3schools.com/css/css_boxmodel.asp): CSS-rutmodellen beskriver strukturen för HTML-element som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
 * Flexbox/Grid: CSS [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) och [Grid layouts](https://www.w3schools.com/css/css_grid.asp) är kraftfulla verktyg för att skapa responsiva och flexibla designer.
+
 
 ## Formatera ett formulär för Adaptive Forms Block
 
