@@ -1,10 +1,10 @@
 ---
-title: Anpassa tema och stil för en Edge Delivery Services för AEM Forms
-description: Anpassa tema och stil för en Edge Delivery Services för AEM Forms
+title: Anpassa tema och stil för en Edge Delivery Services for AEM Forms
+description: Anpassa tema och stil för en Edge Delivery Services for AEM Forms
 feature: Edge Delivery Services
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 3b6ffd391b36f2f0d09fe054140b08bca6f0c941
 workflow-type: tm+mt
 source-wordcount: '2016'
 ht-degree: 0%
@@ -41,14 +41,14 @@ Innan vi börjar dyka upp i en formatmall ska vi granska den gemensamma formulä
 
 Att förstå [grundläggande CSS-koncept](https://www.w3schools.com/css/css_intro.asp) är avgörande innan du formaterar specifika formulärfält:
 
-* [Väljare](https://www.w3schools.com/css/css_selectors.asp): Med CSS-väljare kan du ange specifika HTML-element för formatering som mål. Du kan använda elementväljare, klassväljare eller ID-väljare.
+* [Väljare](https://www.w3schools.com/css/css_selectors.asp): Med CSS-väljare kan du ange specifika HTML-element som mål för formateringen. Du kan använda elementväljare, klassväljare eller ID-väljare.
 * [Egenskaper](https://www.w3schools.com/css/css_syntax.asp): CSS-egenskaper definierar elementens visuella utseende. Vanliga egenskaper för formatformulärfält är bland annat färg, bakgrundsfärg, kant, utfyllnad, marginal.
-* [Rutmodell](https://www.w3schools.com/css/css_boxmodel.asp): CSS-rutmodellen beskriver strukturen för element i HTML som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
+* [Rutmodell](https://www.w3schools.com/css/css_boxmodel.asp): CSS-rutmodellen beskriver strukturen för HTML-element som ett innehållsområde omgivet av utfyllnad, kanter och marginaler.
 * Flexbox/Grid: CSS [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) och [Grid layouts](https://www.w3schools.com/css/css_grid.asp) är kraftfulla verktyg för att skapa responsiva och flexibla designer.
 
 ## Formatera ett formulär för Adaptive Forms Block
 
-Det adaptiva Forms-blocket har en standardiserad HTML-struktur som förenklar processen att markera och formatera formulärkomponenter:
+Adaptive Forms Block har en standardiserad HTML-struktur som förenklar processen att välja ut och formatera formulärkomponenter:
 
 * **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera `/blocks/form/form.css file`. Den här filen innehåller omfattande formatering för ett formulär med stöd för guideformulär i flera steg. Det är viktigt att du använder anpassade CSS-variabler för enkel anpassning, underhåll och enhetlig formatering i olika formulär. Instruktioner om hur du lägger till det adaptiva Forms-blocket i ditt projekt finns i [Skapa ett formulär](/help/edge/docs/forms/create-forms.md).
 
@@ -60,7 +60,7 @@ Det adaptiva Forms-blocket har en standardiserad HTML-struktur som förenklar pr
 
 * **Universella väljarformat:** `*` Väljaren matchar alla element i formuläret och ser till att format tillämpas på alla komponenter som standard, inklusive inställning av egenskapen `box-sizing` till `border-box`.
 
-* **Formulärformat:** Det här avsnittet fokuserar på att formatera formulärkomponenter med väljare för att ange specifika HTML-element. Här definieras format för inmatningsfält, textområden, kryssrutor, alternativknappar, filinmatningar, formuläretiketter och beskrivningar.
+* **Formulärformat:** Det här avsnittet fokuserar på att formatera formulärkomponenter med väljare för att ange specifika HTML-element som mål. Här definieras format för inmatningsfält, textområden, kryssrutor, alternativknappar, filinmatningar, formuläretiketter och beskrivningar.
 
 * **Ställning av guiden (om tillämpligt):** Det här avsnittet används för att utforma guidelayouten, ett flerstegsformulär där varje steg visas ett i taget. Den definierar format för guidebehållaren, fältuppsättningar, teckenförklaringar, navigeringsknappar och responsiva layouter.
 
@@ -71,13 +71,13 @@ Det adaptiva Forms-blocket har en standardiserad HTML-struktur som förenklar pr
 
 ## Komponentstruktur
 
-Det adaptiva Forms-blocket har en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
+Det adaptiva Forms-blocket erbjuder en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
 
 ### Allmänna komponenter (utom listrutor, alternativknappar och kryssrutegrupper):
 
 Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har följande HTML-struktur:
 
-+++ HTML Struktur för allmänna komponenter
++++ HTML-struktur för allmänna komponenter
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -173,7 +173,7 @@ I listrutor används elementet `select` i stället för ett `input`-element:
 
 
 
-+++ HTML Struktur för den nedrullningsbara komponenten
++++ HTML-struktur för nedrullningskomponent
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={required}>
@@ -262,9 +262,9 @@ Följande CSS visar några exempel på CSS-väljare för nedrullningsbara kompon
 
 ### Alternativgrupper
 
-Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, ungefär som i listrutekomponenter:
+Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, precis som komponenter i listrutor:
 
-+++ Radiogruppens struktur i HTML
++++ HTML Structure of Radio Group
 
 ```HTML
 <fieldset class="radio-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -336,7 +336,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 ### Kryssrutegrupper
 
-+++ HTML Struktur för kryssrutegrupp
++++ HTML Structure of Checkbox Group
 
 ```HTML
 <fieldset class="checkbox-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -462,7 +462,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 ### Panel-/behållarkomponenter
 
-+++ HTML Struktur för paneler/behållarkomponenter
++++ HTML-struktur för paneler/behållarkomponenter
 
 ```HTML
 <fieldset class="panel-wrapper field-{PanelName} field-wrapper">
@@ -572,7 +572,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 
 ### Repeterbar panel
 
-+++ HTML Struktur för en upprepningsbar panel
++++ HTML-struktur för en upprepningsbar panel
 
 ```HTML
 <fieldset class="panel-wrapper field-{PanelName} field-wrapper">
@@ -678,7 +678,7 @@ Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vi
 
 ### Bifogad fil
 
-+++ HTML Struktur för bifogad fil
++++ HTML-struktur för bifogad fil
 
 ```HTML
 <div class="file-wrapper field-{FileName} field-wrapper">
@@ -800,7 +800,7 @@ Du kan formatera formulärfält baserat på deras specifika typ (`{Type}-wrapper
 
 Du kan använda CSS-väljare för att ange specifika fälttyper och använda format på ett konsekvent sätt.
 
-+++ HTML struktur
++++ HTML Structure
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -863,7 +863,7 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 
 Du kan också ange enskilda fält som mål efter namn för att använda unika format.
 
-+++ HTML struktur
++++ HTML Structure
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
