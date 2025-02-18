@@ -6,9 +6,9 @@ hide: true
 hidefromtoc: true
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: ee5171e36c24526f331b3722fcd9bd7a1c72072b
+source-git-commit: bf70adcb95ddf88d0ea9a496efe3ae47f71f6a1d
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1725'
 ht-degree: 0%
 
 ---
@@ -173,14 +173,14 @@ I det här exemplet lägger vi till Stegvärde som en anpassad egenskap i interv
 
 Lägg till den anpassade egenskapen Stegvärde genom att lägga till komponentmodellen med följande kodrader i filen ` _<component>.json`:
 
-    &quot;javascript
-    {
-    &quot;component&quot;: &quot;number&quot;,
-    &quot;name&quot;: &quot;stepValue&quot;,
-    &quot;label&quot;: &quot;Step Value&quot;,
-    &quot;valueType&quot;: &quot;number&quot;
-    }
-    &quot;
+```javascript
+      {
+      "component": "number",
+      "name": "stepValue",
+      "label": "Step Value",
+      "valueType": "number"
+      }
+```
 
 JSON-fragmentet definierar en anpassad egenskap med namnet **Stegvärde** för en **Intervall** -komponent. Nedan visas en beskrivning av varje fält:
 

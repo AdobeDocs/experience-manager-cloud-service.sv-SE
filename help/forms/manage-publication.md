@@ -1,13 +1,13 @@
 ---
 title: Hur publicerar eller avpublicerar man blanketter i förhandsgransknings- eller publiceringssammanhang?
-description: Lär dig publicera och avpublicera formulär från AEM redigeringsmiljö för att förhandsgranska eller publicera instanser. Vare sig du testar formulären i en staging-miljö eller distribuerar dem live för slutanvändare har AEM smidiga verktyg för effektiv hantering.
+description: Lär dig publicera och avpublicera formulär från AEM redigeringsmiljö för att förhandsgranska eller publicera instanser. Oavsett om du testar formulären i en staging-miljö eller distribuerar dem live för slutanvändare, har AEM smidiga verktyg för effektiv hantering av processen.
 Keywords: Manage publication, Forms Manage publication, AF Manage publication, Adaptive Forms Manage publication, Cloud Manage publication
 feature: Adaptive Forms
 feature-set: Experience Manager Assets,Experience Manager Sites,Experience Manager, Experience Manager Forms, Experience Manager Cloud Manager
 role: User, Developer
 level: Intermediate
 exl-id: 6ade40f1-bad5-4f5e-aa0e-84b7c6a82e02
-source-git-commit: 64f4e62201c590e5da2f3b1f7e570a018dc8135c
+source-git-commit: dab2b94d1e456622f061741ba1b5192c9163c295
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 0%
@@ -16,35 +16,35 @@ ht-degree: 0%
 
 # &#x200B; Hantera publikation i Experience Manager Forms
 
-Som Adobe Experience Manager (AEM) Forms-administratör kan du publicera formulär från författarinstansen till Experience Manager Forms. Du kan också schemalägga publiceringen av ett formulär eller en mapp för ett senare datum eller en senare tidpunkt. Efter publiceringen kan användarna öppna och fylla i formulären.
+Som administratör för Adobe Experience Manager (AEM) Forms kan du publicera formulär från författarinstansen till Experience Manager Forms. Du kan också schemalägga publiceringen av ett formulär eller en mapp för ett senare datum eller en senare tidpunkt. Efter publiceringen kan användarna öppna och fylla i formulären.
 
 I Experience Manager Forms kan du publicera ett formulär på något av följande sätt:
-* [Publish-alternativ](#publish-forms-using-the-publish-option)
+* [Publiceringsalternativ](#publish-forms-using-the-publish-option)
 * [Hantera publikation, alternativ](#publish-forms-using-the-manage-publication-option)
 
 ## Tänk på
 
 * Endast medlemmar i gruppen `forms-users` kan använda alternativet **Hantera publikation** för att publicera formulären.
-* Ändringar som görs i formulär eller mappar i Experience Manager Forms visas inte i **Publish**-instansen förrän den publiceras igen. Detta säkerställer att pågående uppdateringar inte är tillgängliga i **Publish** -instansen. Endast ändringar som publicerats explicit av en administratör återspeglas i **Publish**-instansen.
+* Ändringar som görs i formulär eller mappar i Experience Manager Forms visas inte i instansen **Publish** förrän den publiceras på nytt. Detta garanterar att pågående uppdateringar inte är tillgängliga i instansen **Publish**. Endast ändringar som publicerats explicit av en administratör återspeglas i instansen **Publish**.
 
-## Publish-blanketter med Publish
+## Publicera formulär med alternativet Publicera
 
-Med alternativet **Publish** kan du publicera ett formulär direkt. Om du vill publicera ett Experience Manager-formulär med knappen **Publish** i verktygsfältet. Så här publicerar du formulär med alternativet Publish:
+Med alternativet **Publicera** kan du publicera ett formulär direkt. Om du vill publicera ett Experience Manager-formulär med knappen **Publicera** i verktygsfältet. Så här publicerar du formulär med alternativet Publicera:
 
 1. I Experience Manager Forms-konsolen går du till den överordnade mappen och väljer ett formulär som du vill publicera.
-1. Klicka på alternativet **Publish** i verktygsfältet och ta en titt på alla referensresurser som skulle publiceras med formuläret.
+1. Klicka på alternativet **Publicera** i verktygsfältet och ta en titt på alla referensresurser som skulle publiceras med formuläret.
 1. Klicka på **[!UICONTROL Publish]**.
 
-   ![Publish och Unpublish form](/help/edge/docs/forms/assets/publish-form-option.png)
+   ![Publicera och avpublicera formulär](/help/edge/docs/forms/assets/publish-form-option.png)
 
    När formuläret och dess relaterade resurser har publicerats visas en dialogruta **Slutfört**.
 1. Klicka på **Stäng**.
 
-   ![Dialogrutan Slutfört](/help/forms/assets/publish-success.png)
+   ![Dialogrutan Slutfört](/help/forms/assets/publish-success1.png)
 
 ### Avpublicera formuläret
 
-När du har publicerat formuläret med alternativet **Publish** och tillhörande resurser kan du även avpublicera det med knappen **[!UICONTROL Unpublish]** som finns i verktygsfältet. Så här avpublicerar du formuläret:
+När du har publicerat formuläret med alternativet **Publicera** och dess relaterade resurser kan du även avpublicera det med knappen **[!UICONTROL Unpublish]** i verktygsfältet. Så här avpublicerar du formuläret:
 
 1. Om du vill avpublicera formuläret och dess relaterade resurser markerar du formuläret och klickar på **[!UICONTROL Unpublish]** i verktygsfältet
 
@@ -58,7 +58,7 @@ När du har publicerat formuläret med alternativet **Publish** och tillhörande
 
    ![avpubliceringen lyckades](/help/forms/assets/unpublishing-start.png)
 
-## Publish-formulär med alternativet Hantera publikation
+## Publicera formulär med alternativet Hantera publikation
 
 Med Hantera publikation kan du publicera eller avpublicera innehåll till och från det valda målet, lägga till innehåll i publiceringslistan från hela mappen `forms&documents`, välja referenser att publicera och schemalägga publicering till ett senare datum eller en senare tidpunkt.  Så här publicerar du formulär med alternativet **Hantera publikation**:
 
@@ -75,18 +75,18 @@ Med Hantera publikation kan du publicera eller avpublicera innehåll till och fr
 
    * **Åtgärder**
 
-      * **Publish**: Publish-formulär till det valda målet
+      * **Publicera**: Publicera formulär till det valda målet
       * **Avpublicera**: Avpublicera formulär från målet
 
    * **Mål**
 
-      * **Publish**: Publish skickar formulär till Publish-instansen Experience Manager Forms (AEM).
-      * **Förhandsgranska**: Publish-formulär till instansen Experience Manager Forms (AEM) Preview.
+      * **Publicera**: Publicera formulär till publiceringsinstansen Experience Manager Forms (AEM).
+      * **Förhandsgranska**: Publicera formulär till förhandsgranskningsinstansen för Experience Manager Forms (AEM).
 
    * **Schemaläggning**
 
-      * **Nu**: Publish-formulär omedelbart
-      * **Senare**: Publish-formulär baserade på **aktiveringsdatum** eller -tid
+      * **Nu**: Publicera formulär direkt
+      * **Senare**: Publicera formulär baserat på **aktiveringsdatum** eller tid
 
 1. Klicka på **Nästa** för att fortsätta.
 1. (Valfritt) Använd alternativet [Lägg till innehåll](#add-content) på fliken **Omfång** för att lägga till mer innehåll för publicering. Du kan t.ex. lägga till fler Forms- eller dokumentfiler.
@@ -143,7 +143,7 @@ By default, publishing a folder to Experience Manager Forms publishes all the as
         * -->
 
 
-### Publish eller avpublicera ett formulär senare
+### Publicera eller avpublicera ett formulär senare
 
 Förutom att du kan publicera eller avpublicera formulär vid ett senare datum och vid ett senare tillfälle kan du även konfigurera ett arbetsflöde med alternativet Publicera eller avpublicera senare. Formulären publiceras eller publiceras inte när arbetsflödet har slutförts.
 
@@ -154,10 +154,10 @@ Så här schemalägger du ett formulär för publicering eller avpublicering:
 
    ![Hantera publikation](/help/forms/assets/manage-publication.png)
 
-1. Klicka på **Publish** eller **Avpublicera** från **[!UICONTROL Action]**.
+1. Klicka på **Publicera** eller **Avpublicera** från **[!UICONTROL Action]**.
 1. Välj den **[!UICONTROL Destination]** där du vill publicera eller avpublicera innehållet.
    * **Förhandsgranska**: Använd alternativet **Förhandsgranska** om du vill publicera eller avpublicera i en Experience Manager Forms-förhandsvisningsmiljö. Experience Manager Forms förhandsvisningsmiljöer används för att testa under utvecklingsformulär.
-   * **Publish**: Använd alternativet Experience Manager Forms **Publish** för att skicka formuläret till Experience Manager Forms publiceringsmiljö när formuläret är klart att användas i en produktionsmiljö.
+   * **Publicera**: Använd alternativet Experience Manager Forms **Publicera** för att skicka formuläret till Experience Manager Forms publiceringsmiljö när formuläret är klart att användas i en produktionsmiljö.
 
 1. Välj **[!UICONTROL Later]** från **Schemaläggning**.
 

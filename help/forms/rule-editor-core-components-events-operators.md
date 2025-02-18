@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: ac85ff04-25dc-4566-a986-90ae374bf383
-source-git-commit: 7acbf2099a2b47b5f42885e8f9a9e1727a8112b5
+source-git-commit: dab2b94d1e456622f061741ba1b5192c9163c295
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2096'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 * **är inte tom**
 * **Har markerat:** Returnerar true när användaren väljer ett visst alternativ för en kryssruta, nedrullningsbar alternativknapp.
 * **Är initierad (händelse):** Returnerar true när ett formulärobjekt återges i webbläsaren.
-* **Is Changed (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
+* **Har ändrats (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
 
 <!--
 * **Navigation(event):** Returns true when the user clicks a navigation object. Navigation objects are used to move between panels. 
@@ -46,7 +46,7 @@ Regelredigeraren innehåller följande logiska operatorer och händelser som du 
 
 ### Tillgängliga regeltyper i regelredigeraren {#available-rule-types-in-rule-editor}
 
-Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler. Nu ska vi titta närmare på varje regeltyp. Mer information om hur du skriver regler i regelredigeraren finns i [Skriv regler](/help/forms/rule-editor-core-components-user-interface.md#write-rules).
+Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler. Vi tittar närmare på varje regeltyp. Mer information om hur du skriver regler i regelredigeraren finns i [Skriv regler](/help/forms/rule-editor-core-components-user-interface.md#write-rules).
 
 #### [!UICONTROL When] {#whenruletype}
 
@@ -68,24 +68,23 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Else, do the following:`
 
-`Action 2 on Object C;`
-_
+`Action 2 on Object C;`_
 
-När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
+När du har en komponent med flera värden, till exempel alternativknappar eller lista, hämtas alternativen automatiskt när du skapar en regel för den komponenten och görs tillgängliga för regelskaparen. Du behöver inte ange alternativvärdena igen.
 
 En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
 ![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Rensa värde för. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Om du har Clear Value of som ett alternativ i -instruktionen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-satsen för att lägga till ytterligare villkor
+När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-instruktionen för att lägga till ytterligare villkor
 
-![Rensa värdet för ](assets/clearvalueof.png)
+![Tydligt värde för](assets/clearvalueof.png)
 
 >[!NOTE]
 >
-> När regeltypen bara har stöd för enkla then-else-satser.
+> När regeltypen endast stöder then-else-instruktioner på en nivå.
 
-##### Tillåtna flera fält i [!UICONTROL When] {#allowed-multiple-fields}
+##### Tillåtna Flera fält i [!UICONTROL When] {#allowed-multiple-fields}
 
 I villkoret **När** har du möjlighet att lägga till andra fält förutom det fält som regeln tillämpas på.
 
@@ -105,13 +104,13 @@ Gör sedan följande:
 
 _
 
-![Tillåtna flera fält i När](/help/forms/assets/allowed-multiple-field-when.png)
+![Tillåtna Flera fält i När](/help/forms/assets/allowed-multiple-field-when.png)
 
-**Att tänka på när du använder tillåtna flera fält i villkorsfunktionen**
+**Att tänka på när du använder funktionen Tillåtna flera fält i När-villkorsfunktionen**
 
-* Se till att kärnkomponenten är inställd på [version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
-* Om regler tillämpas på olika fält i When-villkoret utlöses regeln även om bara ett av dessa fält ändras.
-
+* Kontrollera att kärnkomponenten [är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
+* Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
+* Du kan bara lägga till flera fält i villkoret **När för en** AND-regel ****. Det går inte att använda en **OR**-regel.
 
 <!--
 * It is not possible to add multiple fields in the When condition while applying rules to a button.
@@ -167,16 +166,16 @@ Regeltypen **[!UICONTROL Set Property]** gör att du kan ange värdet för en eg
 * label.visible (Boolean)
 * description (String)
 * enabled (Boolean)
-* readOnly (boolesk)
-* obligatoriskt (booleskt)
-* screenReaderText (sträng)
-* giltig (boolesk)
+* readOnly (Boolean)
+* required (Boolean)
+* screenReaderText (String)
+* valid (Boolean)
 * errorMessage (String)
 * default (Number, String, Date)
 * enumNames (String[])
 * chartType (String)
 
-Du kan till exempel definiera regler som visar textrutan när någon klickar på en knapp. Du kan använda en anpassad funktion, ett formulärobjekt, en objektegenskap eller en tjänstutdata för att definiera en regel.
+Det gör att du till exempel kan definiera regler för att visa textrutan när du klickar på en knapp. Du kan använda en anpassad funktion, ett formulärobjekt, en objektegenskap eller utdata från en tjänst för att definiera en regel.
 
 ![Ange egenskap](assets/set_property_rule_new.png)
 
@@ -186,15 +185,15 @@ Om du vill definiera en regel baserat på ett formulärobjekt väljer du **[!UIC
 
 Med en regel för att ange egenskap som baseras på en objektegenskap kan du göra textrutan synlig i ett adaptivt formulär baserat på en annan objektegenskap som ingår i det adaptiva formuläret.
 
-I bilden nedan visas ett exempel på hur kryssrutan kan aktiveras dynamiskt baserat på att en textruta döljs eller visas i ett adaptivt formulär:
+I följande bild visas ett exempel på hur kryssrutan aktiveras dynamiskt baserat på om en textruta döljs eller visas i ett anpassat formulär:
 
 ![Objektegenskap](assets/object_property_set_property_new.png)
 
-**[!UICONTROL Clear Value Of]** Rensar värdet för det angivna objektet.
+**[!UICONTROL Clear Value Of]** Tar bort det angivna objektets värde.
 
-**[!UICONTROL Set Focus]** Ställer in fokus på det angivna objektet.
+**[!UICONTROL Set Focus]** anger fokus på det angivna objektet.
 
-**[!UICONTROL Submit Form]** Skickar formuläret.
+**[!UICONTROL Submit Form]** skickar formuläret.
 
 **[!UICONTROL Reset]** Återställer formuläret eller det angivna objektet.
 
@@ -208,27 +207,27 @@ I bilden nedan visas ett exempel på hur kryssrutan kan aktiveras dynamiskt base
 
 **[!UICONTROL Navigate to]** Navigera till andra adaptiva Forms, andra resurser som bilder eller dokumentfragment eller en extern URL. <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
-**[!UICONTROL Dispatch Event]** utlöser specifika åtgärder eller beteenden baserat på fördefinierade villkor eller händelser.
+**[!UICONTROL Dispatch Event]** Utlöser specifika åtgärder eller beteenden baserat på fördefinierade villkor eller händelser.
 
 #### [!UICONTROL Set Value of] {#set-value-of}
 
-Med regeltypen **[!UICONTROL Set Value of]** kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en Form Data Model-tjänst. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
+Med **[!UICONTROL Set Value of]** regeltypen kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en litteral sträng, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap i ett annat objekt eller utdata från en formulärdatamodelltjänst. På samma sätt kan du söka efter ett villkor för en komponent, sträng, egenskap eller värden som härleds från en funktion eller ett matematiskt uttryck.
 
-Regeltypen **Ange värdet för** är inte tillgänglig för alla formulärobjekt, till exempel paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
+Regeltypen **Ange värde** för är inte tillgänglig för alla formulärobjekt, t.ex. paneler och knappar i verktygsfältet. En standarduppsättningsvärde för regel har följande struktur:
 
 Ange värdet för objekt A till:
 
-(sträng ABC) ELLER
-(objektegenskap X för objekt C) ELLER
-(värde från en funktion) ELLER
-(värde från ett matematiskt uttryck) ELLER
-(utdatavärde för en datamodelltjänst);
+(String ABC) ELLER
+(objektegenskap X för objekt C) OR
+(värde från en funktion) OR
+(värde från ett matematiskt uttryck) OR
+(datavärde för en datamodelltjänst),
 
 När (valfritt):
 
 (Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
 
-I följande exempel väljs värdet för `Question2` som `True` och värdet för `Result` anges som `correct`.
+I följande exempel väljs värdet `Question2` för as `True` och värdet för as `Result` `correct`.
 
 ![Set-value-web-service](assets/set-value-web-service.png)
 
@@ -382,7 +381,7 @@ To define a rule based on a form data model:
 
 ## Nästa steg
 
-Låt oss nu förstå olika [exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md).
+Låt oss nu förstå olika [exempel för en regelredigerare för ett anpassat formulär baserat på kärnkomponenter](/help/forms/rule-editor-core-components-usecases.md).
 
 ## Se även
 
