@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2054.01.16
-description: Detta är versionsinformationen för version 2025.01.16 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.02.17
+description: Detta är versionsinformationen för version 2025.02.17 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: af04ad7e3f89247580c48c276cb371d78ac56a49
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.01.16 {#release-notes}
+# Versionsinformation om Universal Editor 2025.02.17 {#release-notes}
 
-Det här är versionsinformationen för den 16 januari 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 17 februari 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,15 +22,14 @@ Det här är versionsinformationen för den 16 januari 2025-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* **Borttagning av CORS-bibliotek &lt; 3.0.0** - För att framtida kompatibilitet ska kunna garanteras och säkerheten förbättras stöder nu den universella redigeraren endast version 3.0.0 eller högre av
-  `@Adobe Express/universal-editor-cors`-bibliotek.
-   * Biblioteket levereras nu endast via [`universal-editor-service.adobe.io/cors.js`](http://universal-editor-service.adobe.io/cors.js).
-   * Ett meddelande om borttagning visas för användare när de öppnar en sida som använder äldre versioner av CORS-biblioteket och uppmanar dem att uppdatera.
-* **Tilläggspunkt för landningssida** - [En ny tilläggspunkt](/help/implementing/universal-editor/customizing.md#extending) har introducerats för att tillägg ska visas på sidospåret på den universella redigerarens startsida.
-   * Nu kan utvecklare ange om tillägg ska gälla för redigeraren, landningssidan eller båda, vilket ger större anpassning och användbarhet.
+* **Publicera för förhandsgranskning** - När du publicerar (eller avpublicerar) innehållet med den universella redigeraren kan du nu välja om du vill publicera i förhandsvisningsmiljön utöver publiceringsmiljön
+   * På så sätt kan du granska innehållet före publicering.
+* **Modell och filter kan definieras i komponentdefinitionen** - Du kan nu definiera vilken modell och vilket filter en komponent använder i komponentdefinitionen.
+   * Denna information kan behållas centralt i definitionen och behöver inte anges för instrumenteringen.
+   * På så sätt kan du flytta komponenter mellan behållare.
+* **Underordnade element i behållare betraktas implicit som komponenter** - Om ett objekt med en `data-aue-resource` placeras som direkt underordnad till en behållare betraktas det som en komponent och kan flyttas utan att du behöver ange `data-aue-behavior="component"`.
 
 ## Andra förbättringar {#other-improvements}
 
-* **Ogiltiga URL:er i de senaste objekten på landningssidan** har korrigerats där URL:er som visas i listan Senaste på den universella redigerarens startsida har brutits.
-* **Temasynkronisering i Unified Shell** - Den universella redigeraren synkroniserar nu temat dynamiskt med systemets Unified Shell-inställningar och justerar automatiskt mellan ljust och mörkt läge.
-   * Detta ger ett konsekvent visuellt utseende över mikrofrontender, inklusive fragment- och resursväljare.
+* **AEM 6.5 Resursväljare** - 6.5-resursväljaren öppnas nu korrekt när du kör den universella redigeraren med AEM 6.5.
+
