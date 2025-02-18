@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: ae962d89b842b0708c1ac8633bb49c86cb2edfda
+source-git-commit: 693576c9da99d3cc74b7cec8a7c7ea08120ae5bb
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6092'
 ht-degree: 2%
 
 ---
@@ -782,6 +782,7 @@ ht-degree: 2%
             + [Skapa anpassad skickaåtgärd](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
             + [Konvertera adaptiva Forms-baserade på baskomponenter till Core Component-baserade formulär med verktyget för migrering](/help/forms/migration-utility-tool-for-af-core-components.md)
             + [E-postmallar i Adaptiv Forms](/help/forms/html-email-templates-in-adaptive-forms.md)
+            + [&#x200B; Hantera publikation i Experience Manager Forms](/help/forms/manage-publication.md)
             + Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter {#rule-editor-core-components}
                + [Introduktion till regelredigeraren för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components.md)
                + [Regelredigerarens användargränssnitt för adaptiv Forms baserat på kärnkomponenter](/help/forms/rule-editor-core-components-user-interface.md)
