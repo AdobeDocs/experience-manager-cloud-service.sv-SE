@@ -4,9 +4,9 @@ description: Förstå JSON-kontraktet mellan komponentdefinitionen och den unive
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: e1bb1a54-50c0-412a-a8fd-8167c6f47d2b
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 0053c874e6e7a2782e03a37fe3928baa9cd5bdba
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Filen `component-definition.json` definierar de komponenter som är tillgänglig
 
 >[!TIP]
 >
->En översikt över innehållsmodelleringsprocessen finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services ](/help/edge/wysiwyg-authoring/content-modeling.md).
+>En översikt över innehållsmodelleringsprocessen finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services-projekt](/help/edge/wysiwyg-authoring/content-modeling.md).
 
 >[!TIP]
 >
@@ -33,35 +33,42 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 
 ```json
 {
-  "groups": [
+  "groups":[
     {
-      "title": "General Components",
-      "id": "general",
-      "components": [
+      "title":"General Components",
+      "id":"general",
+      "components":[
         {
-          "title": "Text",
-          "id": "text",
-          "plugins": {
-            "aem": {
-              "page": {
-                "resourceType": "wknd/components/text",
-                "template": {
-                  "text": "Default Text"
+          "title":"Text",
+          "id":"text",
+          "plugins":{
+            "aem":{
+              "page":{
+                "resourceType":"wknd/components/text",
+                "template":{
+                  "text":"Default Text",
+                  "name":"Text",
+                  "model":"text",
+                  "filter":"texts"
                 }
               }
             },
-            "aem65": {
-              "page": {
-                "resourceType": "wknd/components/text",
-                "template": {
-                  "text": "Default Text"
+            "aem65":{
+              "page":{
+                "resourceType":"wknd/components/text",
+                "template":{
+                  "text":"Default Text",
+                  "name":"Text",
+                  "model":"text",
+                  "filter":"texts"
                 }
               }
             }
           }
-        },
-      }
-   ]
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -100,11 +107,18 @@ När `plugin` har definierats måste du ange om den är sidrelaterad eller fragm
 
 Om komponenten är innehåll på sidan kan du ange följande information.
 
-* `name` definierar ett valfritt namn som har sparats i JCR för den nyskapade komponenten.
-   * Endast informativ och visas vanligtvis inte i användargränssnittet som `title` är.
 * `resourceType` definierar [Sling](/help/implementing/developing/introduction/sling-cheatsheet.md) `resourceType` som används för återgivning av komponenten.
-* `template` definierar valfria nycklar/värden som automatiskt ska skrivas till den nyskapade komponenten.
+* `template` definierar valfria nycklar/värden som ska skrivas automatiskt till den nyskapade komponenten och definierar vilket filter och/eller vilken modell som ska användas på komponenten.
    * Användbart för förklarande text, exempeltext eller platshållartext.
+
+#### `template` {#template}
+
+Genom att tillhandahålla valfria nyckel-/värdepar kan `template` automatiskt skriva dessa till den nya komponenten. Dessutom kan följande valfria värden anges.
+
+* `model` definierar vilken [modell](/help/implementing/universal-editor/field-types.md#model-structure) som används med komponenten.
+   * Modellen underhålls därför centralt i komponentdefinitionen och behöver inte vara [specificerad i instrumenteringen.](/help/implementing/universal-editor/field-types.md#instrumentation)
+   * På så sätt kan du flytta komponenter mellan behållare.
+* `filter` definierar vilket [filter](/help/implementing/universal-editor/filtering.md) som ska användas med komponenten.
 
 ### `cf` {#cf}
 

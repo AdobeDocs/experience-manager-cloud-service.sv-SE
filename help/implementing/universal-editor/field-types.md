@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a27da2d6d675d68d69071d0b393ad5e0f82bb7ae
+source-git-commit: 0053c874e6e7a2782e03a37fe3928baa9cd5bdba
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1496'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Det här dokumentet innehåller en översikt över en modelldefinition och över
 
 >[!TIP]
 >
->Om du inte känner till hur du kan mäta upp din app för den universella redigeraren läser du dokumentet [Universal Editor Overview for AEM Developers](/help/implementing/universal-editor/developer-overview.md).
+>Om du inte känner till hur du kan mäta upp din app för den universella redigeraren kan du läsa dokumentet [Universal Editor Overview för AEM-utvecklare](/help/implementing/universal-editor/developer-overview.md).
 
 ## Modelldefinitionsstruktur {#model-structure}
 
@@ -43,11 +43,41 @@ Modelldefinitionen är en JSON-struktur som börjar med en array med modeller.
 
 Mer information om hur du definierar `fields`-arrayen finns i avsnittet **[Fält](#fields)** i det här dokumentet.
 
+Du kan länka en modell till en komponent på två sätt: med [komponentdefinitionen](#component-definition) eller [via instrumenteringen.](#instrumentation)
+
+### Länka med komponentdefinitionen {#component-definition}
+
+Det här är den metod som rekommenderas för att länka modellen till komponenten. På så sätt kan du behålla länken centralt i komponentdefinitionen och dra komponenter över behållare.
+
+Inkludera bara egenskapen `model` i direktivet `template` i filen component-definition.json.
+
+```json
+...
+"template":{
+                  "text":"Default Text",
+                  "name":"Text",
+                  "model":"text",
+                  ...
+           }
+...
+```
+
+Mer information finns i dokumentet [Komponentdefinition.](/help/implementing/universal-editor/component-definition.md)
+
+### Länkning med Instrumentation {#instrumentation}
+
 Om du vill använda modelldefinitionen med en komponent kan attributet `data-aue-model` användas.
 
 ```html
 <div data-aue-resource="urn:datasource:/content/path" data-aue-type="component"  data-aue-model="model-id">Click me</div>
 ```
+
+>[!NOTE]
+>
+>Den universella redigeraren kontrollerar först om en modell är länkad via instrumentet och använder den innan komponentdefinitionen kontrolleras. Detta innebär:
+>
+>* Projekt som har implementerat länken till modellen via instrumenteringen fortsätter att fungera som de ska utan att behöva ändras.
+>* Om du definierar modellen i både [komponentdefinitionen](#component-definition) och i instrumenteringen används alltid instrumenteringen.
 
 ## Läsa in en modelldefinition {#loading-model}
 
@@ -93,7 +123,7 @@ Följande komponenttyper kan användas för återgivningsfält.
 | Beskrivning | Komponenttyp |
 |---|---|
 | [AEM-tagg](#aem-tag) | `aem-tag` |
-| [AEM innehåll](#aem-content) | `aem-content` |
+| [AEM Content](#aem-content) | `aem-content` |
 | [Boolean](#boolean) | `boolean` |
 | [Kryssrutegrupp](#checkbox-group) | `checkbox-group` |
 | [Behållare](#container) | `container` |
@@ -109,9 +139,9 @@ Följande komponenttyper kan användas för återgivningsfält.
 | [Tabb](#tab) | `tab` |
 | [Text](#text) | `text` |
 
-#### AEM {#aem-tag}
+#### AEM-tagg {#aem-tag}
 
-En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att bifoga taggar till komponenten.
+En taggkomponenttyp i AEM aktiverar en AEM-taggväljare som kan användas för att bifoga taggar till komponenten.
 
 >[!BEGINTABS]
 
@@ -133,17 +163,17 @@ En AEM taggkomponenttyp aktiverar en AEM taggväljare som kan användas för att
 
 >[!TAB Skärmbild]
 
-![Skärmbild av AEM taggkomponenttyp](assets/component-types/aem-tag-picker.png)
+![Skärmbild av AEM-taggkomponenttyp](assets/component-types/aem-tag-picker.png)
 
 >[!ENDTABS]
 
-#### AEM {#aem-content}
+#### AEM Content {#aem-content}
 
-En AEM innehållskomponenttyp aktiverar en AEM innehållsväljare som kan användas för att välja valfri AEM. Till skillnad från [referenskomponenten](#reference), som bara kan markera resurser, kan AEM innehållskomponenten referera till vilket AEM som helst. Den erbjuder en extra valideringstyp.
+En AEM-innehållskomponenttyp aktiverar en AEM-innehållsväljare som kan användas för att välja valfri AEM-resurs. Till skillnad från [referenskomponenten](#reference), som bara kan markera resurser, kan AEM-innehållskomponenten referera till allt AEM-innehåll. Den erbjuder en extra valideringstyp.
 
 | Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
-| `rootPath` | `string` | Sökväg som innehållsväljaren öppnas så att användaren kan välja AEM innehåll och begränsa urvalet till den katalogen och underkatalogerna | Nej |
+| `rootPath` | `string` | Sökväg som innehållsväljaren öppnas för att användaren ska kunna välja AEM-innehåll och begränsa urvalet till den katalogen och underkatalogerna | Nej |
 
 >[!BEGINTABS]
 
@@ -650,7 +680,7 @@ En alternativgruppskomponenttyp tillåter en ömsesidigt uteslutande markering a
 
 #### Referens {#reference}
 
-En referenskomponenttyp aktiverar en AEM tillgångsväljare, som kan användas för att välja en AEM resurs att referera till. Till skillnad från innehållskomponenten [AEM](#aem-content), som kan välja vilken AEM som helst, kan referenskomponenten bara referera till resurser. Den erbjuder en extra valideringstyp.
+En referenskomponenttyp aktiverar en AEM-resursväljare som kan användas för att välja en AEM-resurs som ska refereras. Till skillnad från [AEM-innehållskomponenten](#aem-content), som kan välja vilken AEM-resurs som helst, kan referenskomponenten bara referera till resurser. Den erbjuder en extra valideringstyp.
 
 En referenskomponenttyp tillåter en referens till ett annat dataobjekt från det aktuella objektet.
 

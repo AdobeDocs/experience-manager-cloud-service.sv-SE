@@ -5,9 +5,9 @@ exl-id: aee34469-37c2-4571-806b-06c439a7524a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 73b1a318325e7641ee0fd7a76a3a73a7299c8b91
+source-git-commit: 64c257adc7e1f22531c0fe45b44b27ab4e0badb8
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,46 @@ ht-degree: 0%
 
 Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 
-## Publicera innehåll som författare {#publishing-content}
-
-När du som innehållsförfattare är redo att publicera ditt innehåll behöver du bara trycka eller klicka på ikonen [Publicera **i den universella redigerarens verktygsfält.](/help/sites-cloud/authoring/universal-editor/navigation.md#publish)**
-
-Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll.
-
->[!NOTE]
+>[!TIP]
 >
->Den universella redigeraren stöder [tillägg och UI-utökningsmöjligheter](/help/implementing/universal-editor/extending.md) så att arbetsflöden kan stödja publiceringsprocessen.
+>Den publiceringsprocess som beskrivs här är standardfunktionen i den universella redigeraren.
+>
+>Den universella redigeraren har också stöd för [tillägg och UI-utökningsmöjligheter](/help/implementing/universal-editor/extending.md) så att arbetsflöden kan stödja publiceringsprocessen, vilket kan ge olika publiceringsflöden.
 
-## Likheter med AEM {#similarities}
+## Publicera innehåll från den universella redigeraren {#publishing-content}
 
-För användare av AEM fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författarnivån till publiceringsnivån.
+När du som innehållsförfattare är redo att publicera ditt innehåll behöver du bara trycka eller klicka på ikonen **Publicera** i den universella redigerarens verktygsfält.
+
+![Publicerar sidor](assets/publish-menu.png)
+
+1. Tryck eller klicka på ikonen **Publicera** i den universella redigerarens verktygsfält.](/help/sites-cloud/authoring/universal-editor/navigation.md#publish)[
+1. Om du har en [förhandsgranskningstjänst](/help/sites-cloud/authoring/sites-console/previewing-content.md) tillgänglig kan du välja var du vill publicera ditt innehåll, antingen till **Förhandsgranska** eller **Publicera**.
+1. I avsnittet **Objekt** visas innehållet som ingår i publikationen, inklusive:
+   * **Nya** objekt som ännu inte har publicerats.
+   * **Ändrat** innehåll som har publicerats, men ändrats sedan den senaste publikationen.
+   * **Publicerat** innehåll som har publicerats och inte ändrats sedan den publiceringen.
+
+   Tryck eller klicka på kryssrutorna bredvid dessa objekt för att inkludera/exkludera dem från publiceringen efter behov. Tryck eller klicka på **Utöka** om du vill visa enskilda objekt som ingår i summorna för de tre kategorierna och kunna in/exkludera dem individuellt.
+
+   ![Publicera objekt](assets/publish-items.png)
+
+   Tryck eller klicka på bakåtpilen bredvid rubriken **Items** för att återgå till översikten.
+
+1. Tryck eller klicka på **Publicera** för att publicera eller **Avbryt** för att avbryta.
+
+## Avpublicera innehåll från den universella redigeraren {#unpublishing-content}
+
+Att avpublicera innehåll fungerar på ungefär samma sätt som att publicera innehåll. När du som innehållsförfattare är redo att ta bort innehåll från publikationen trycker eller klickar du på ellipsikonen i den universella redigerarens verktygsfält och sedan **Avpublicera**.
+
+Du har sedan samma alternativ för att avpublicera innehåll som du gjorde när du publicerade [innehåll.](#publishing-content) inkluderar avpublicering från en förhandsgranskningsinstans om sådan finns och vilka objekt som ska tas med i avpubliceringen.
+
+## Publicera och avpublicera från Sites Console {#publishing-sites-console}
+
+Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
+
+## Likheter med sidredigeraren {#similarities}
+
+För användare av [AEM Page Editor](/help/sites-cloud/authoring/page-editor/introduction.md) fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författarnivån till publiceringsnivån.
 
 ## Skillnader {#differences}
 

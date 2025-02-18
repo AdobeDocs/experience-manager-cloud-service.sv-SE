@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 9daa4ea54e87694c297a42748aa8705eb712d182
+source-git-commit: e87447922b856d4cbbd09fb4dcd4ae2b5da6ff50
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
@@ -193,7 +193,7 @@ Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan 
 
 #### Publicera {#publish}
 
-Välj publiceringsknappen så att du kan publicera ändringarna i innehållet live för att användas av läsarna.
+Välj publiceringsknappen så att du kan publicera ändringarna i innehållet live för att användas av läsarna eller i en förhandsvisningsmiljö för granskning.
 
 ![Knappen Publicera](assets/publish.png)
 

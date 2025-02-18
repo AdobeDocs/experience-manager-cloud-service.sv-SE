@@ -1,10 +1,10 @@
 ---
 title: Komma igång med Universal Editor i AEM
-description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM-program.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 0ee6689460ac0ecc5c025fb6a940d69a16699c85
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Komma igång med Universal Editor i AEM {#getting-started}
 
-Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM-program.
 
 >[!TIP]
 >
 >Om du hellre vill dyka rakt in i ett exempel kan du granska [Universal Editor-exempelappen på GitHub](https://github.com/adobe/universal-editor-sample-editable-app).
 
-Även om den universella redigeraren kan redigera innehåll från valfri källa, kommer det här dokumentet att använda ett AEM program som exempel. Det här dokumentet vägleder dig genom de här stegen.
+Även om den universella redigeraren kan redigera innehåll från valfri källa kommer det här dokumentet att använda ett AEM-program som exempel. Det här dokumentet vägleder dig genom de här stegen.
 
 ## Instrument för sidan {#instrument-page}
 
@@ -60,7 +60,7 @@ data-aue-resource="urn:<referenceName>:<resource>"
 ```
 
 * `<referenceName>` - Det här är den namngivna referensen som nämns i `<meta>` -taggen. T.ex. `aemconnection`
-* `<resource>` - Detta är en pekare till resursen i målsystemet. Till exempel en AEM innehållssökväg som `/content/page/jcr:content`
+* `<resource>` - Detta är en pekare till resursen i målsystemet. Exempel: en AEM-innehållssökväg som `/content/page/jcr:content`
 
 >[!TIP]
 >
@@ -102,7 +102,7 @@ data-aue-resource="urn:<referenceName>:<resource>"
 
 Du kan använda prefixet `config` i anslutnings-URN för att ange tjänste- och tilläggsslutpunkter om det behövs.
 
-Om du inte vill använda Universal Editor, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som tillhandahålls av Universal Editor anger du en egen tjänstslutpunkt:
+Om du inte vill använda den universella redigeringstjänsten, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som tillhandahålls av Universal Editor anger du en egen tjänstslutpunkt:
 
 * Meta name - `urn:adobe:aue:config:service`
 * Metainnehåll - `content="https://adobe.com"` (exempel)
@@ -122,7 +122,7 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 
 ## Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas. (Valfritt) {#content-paths}
 
-Om du har ett befintligt AEM med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) öppnas sidorna automatiskt med sidredigeraren när innehållsförfattaren redigerar sidor. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna eller `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
+Om du har ett befintligt AEM-projekt med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) öppnas sidorna automatiskt med sidredigeraren när innehållsförfattaren redigerar sidor. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna för `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
 
 1. Öppna Configuration Manager.
 
@@ -137,11 +137,11 @@ Om du har ett befintligt AEM med [sidredigeraren](/help/sites-cloud/authoring/pa
 
 1. Klicka på **Spara**.
 
-AEM kommer att öppna Universal Editor för sidor som baseras på den här konfigurationen i följande ordning.
+AEM öppnar Universell redigerare för sidor som baseras på den här konfigurationen i följande ordning.
 
 1. AEM kontrollerar mappningarna under `Universal Editor Opening Mapping` och om innehållet finns under sökvägar som definierats där öppnas Universell redigerare för det.
-1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping` kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes, som ska öppnas av Universal Editor**, och om innehållet matchar någon av dessa typer, öppnas Universell redigerare för det på `${author}${path}.html`.
-1. I annat fall AEM sidredigeraren.
+1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping`, kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes, som ska öppnas av Universal Editor**, och om innehållet matchar någon av dessa typer, öppnas Universell redigerare för det på `${author}${path}.html`.
+1. I annat fall öppnas sidredigeraren.
 
 Följande variabler är tillgängliga för att definiera dina mappningar i fältet **Öppna mappning för Universal Editor**.
 
@@ -155,7 +155,7 @@ Följande variabler är tillgängliga för att definiera dina mappningar i fält
 
 ### Exempelmappningar {#example-mappings}
 
-* Öppna alla sidor under `/content/foo` på AEM författare:
+* Öppna alla sidor under `/content/foo` på AEM Author:
 
    * `/content/foo:${author}${path}.html?login-token=${token}`
    * Detta resulterar i att `https://localhost:4502/content/foo/x.html?login-token=<token>` öppnas
@@ -177,7 +177,7 @@ Mer information om Universal Editor finns i de här dokumenten.
 
 * [Introduktion till universell redigering](introduction.md) - Lär dig hur den universella redigeraren kan redigera alla delar av innehåll i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
 * [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) - Lär dig hur enkelt och intuitivt det är för innehållsförfattare att skapa innehåll med den universella redigeraren.
-* [Publicera innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+* [Publicera innehåll med den universella redigeraren](/help/implementing/universal-editor/publishing.md) - Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
 * [Universell redigeringsarkitektur](architecture.md) - Lär dig mer om arkitekturen för den universella redigeraren och hur data flödar mellan dess tjänster och lager.
 * [Attribut och typer](attributes-types.md) - Lär dig mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](authentication.md) - Lär dig hur den universella redigeraren autentiseras.
