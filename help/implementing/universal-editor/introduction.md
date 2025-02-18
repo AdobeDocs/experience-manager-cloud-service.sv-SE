@@ -1,12 +1,12 @@
 ---
 title: Introduktion till Universal Editor
-description: Läs om hur du i Universell redigerare kan redigera vad du vill - se - vad du får (WYSIWYG) oavsett vilken headlessupplevelse du har. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser, öka innehållets hastighet och hur det ger en toppmodern utvecklarupplevelse.
+description: Universal Editor är ett modernt visuellt redigeringsverktyg som ger er möjlighet att skapa slagkraftiga webbupplevelser.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 2947c4cb1fad7e1c7635a0e423a4adfe23013f79
+source-git-commit: ae962d89b842b0708c1ac8633bb49c86cb2edfda
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -14,57 +14,71 @@ ht-degree: 0%
 
 # Introduktion till Universal Editor {#introduction}
 
-Universal Editor är en mångsidig visuell editor som ingår i Adobe Experience Manager Sites. Man kan redigera det man redan gjort - se-is-what-you-get (WYSIWYG) - oavsett om det handlar om headless eller headful experience. Förstå hur det kan hjälpa innehållsförfattare att leverera enastående upplevelser och hur det erbjuder oöverträffad frihet för utvecklare.
+Universal Editor är ett modernt visuellt redigeringsverktyg som ger er möjlighet att skapa slagkraftiga webbupplevelser.
 
-## Bakgrund {#background}
+## Ökning {#overview}
 
-Universell redigerare ger en effektiv och intuitiv kontextredigeringsfunktion som kräver minimal utbildning. Med det kan författare hantera sitt innehåll direkt i webbupplevelsen, precis så som det kommer att se ut för besökarna. Eftersom den är en riktig redigerare som en tjänst och generellt sett mer flexibel kommer den att ersätta sidredigeraren.
+Universal Editor är en mångsidig visuell editor som ingår i Adobe Experience Manager Sites. Man kan redigera det man redan gjort i WYSIWYG utan att behöva ta del av en massa rubriker. Det erbjuder:
 
-Den universella redigeraren har stor flexibilitet eftersom den har stöd för samma visuella redigering för alla typer av AEM-innehåll: redigering på plats och layoutdisposition är möjlig både för innehållsfragment och sidkomponenter. De två typerna av innehåll kan till och med redigeras när de visas sida vid sida i en webbupplevelse, utan att författarna behöver ändra sitt sammanhang. Detta är en enorm förbättring jämfört med tidigare redigerare i AEM som bara hade stöd för en viss typ av innehåll.
+* **Direktredigering**: Författare kan redigera innehåll direkt i förhandsgranskningen, vilket eliminerar behovet av att hitta och navigera till enskilda innehållskällor.
+* **Visuell redigering**: När författare gör ändringar ser de direkt hur de påverkar besökarupplevelsen, vilket minimerar friktionen.
+* **Alternativ som kan upptäckas**: Alternativ med tydliga etiketter och ett intuitivt användargränssnitt gör det enkelt för författare att konfigurera metadata och skapa layouter.
+* **Icke-teknisk**: Ingen specialexpertis krävs för att göra ändringar, medan företagets varumärkesriktlinjer tillämpas automatiskt, vilket underlättar skalningen av innehållsuppgifter i hela organisationen.
+* **Integrering och utbyggbarhet**: Integrerat med AEM, den universella redigerarens flexibla [utökningspunkter](#extensibility), gör att alla nödvändiga verktyg kan förenas i ett enda, sammanhängande gränssnitt. Med allt från AI-baserade funktioner till anpassade tillägg som är skräddarsydda för just era affärsbehov kan teamen smidigt effektivisera arbetsflödena och enkelt förbättra produktiviteten.
 
-Utvecklarna drar nytta av universella redigerares mångsidighet eftersom den även stöder en sann frikoppling av implementeringen. Det gör att utvecklare kan utnyttja praktiskt taget vilket ramverk eller vilken arkitektur de vill utan att införa några begränsningar för SDK eller teknik. Den här flexibiliteten gör det även enkelt att instrumentera befintliga webbprogram för den universella redigeraren utan att behöva arkitekturera om dem.
+Sammanfattning:
 
-## Helt universell {#universal}
+* **Författare har nytta** av den universella redigerarens flexibilitet eftersom den har stöd för samma enhetliga visuella redigering för alla former av AEM-innehåll.
+* **Utvecklare** drar nytta av den universella redigerarens mångsidighet eftersom den stöder en sann frikoppling av implementeringen.
 
-Den universella redigeraren kan användas för alla implementeringar, för vilket innehåll som helst och för alla delar av innehållet.
+Den universella redigeraren är en riktig redigerare som en tjänst och är generellt mer flexibel. Den kommer till slut att ersätta [sidredigeraren.](/help/sites-cloud/authoring/page-editor/introduction.md)
 
-![Vad gör den universell](assets/universal.png)
+## Arkitekturer som stöds {#supported-architectures}
 
-### Alla implementeringar {#any-implementation}
+Universal Editor stöder följande två primära AEM-inställningar:
 
-Eftersom upplevelser kan byggas på många olika sätt kan alla implementeringar använda den universella redigeraren så att författare kan redigera i sitt sammanhang.
+1. **[Edge Delivery Services](/help/edge/overview.md)**: Det här är det rekommenderade tillvägagångssättet för enkelhet, snabbare time-to-value och förbättrade prestanda.
+1. **[Headless-implementeringar](/help/headless/introduction.md)**: Om du har ett headless-projekt eller specifika krav för frikopplad återgivning tillåter den universella redigeraren visuell redigering i företagsklass utan att du behöver omforma hela projektet. Den är kompatibel med praktiskt taget alla arkitekturer (SSR, CSR), webbramverk (Next.js, React, Astro osv.) och värdmodeller (&quot;ta med din egen app&quot;).
 
-Användare tror ofta att en headless-implementering begränsar författarens möjlighet att redigera allt innehåll i ett formulärbaserat användargränssnitt, men så är inte fallet med den universella redigeraren
+>[!TIP]
+>
+>Mer information om vilka arkitekturer som stöds finns i dokumentet [Universal Editor Use Case and Learning Paths](/help/implementing/universal-editor/use-cases.md).
 
-Kraven för en implementering som ska använda den universella redigeraren är raka framifrån och stöder följande:
+## AEM-versioner som stöds {#aem-versions}
 
-* **Valfri arkitektur** - Återgivning på serversidan, edge-side-återgivning, rendering på klientsidan osv.
-* **Alla ramverk** - Vanilla AEM eller andra ramverk från tredje part som React, Next.js, Angular osv.
-* **Valfri värdtjänst** - Kan lagras lokalt på AEM eller på en fjärrdomän
+Universal Editor stöds av:
 
-### Allt innehåll {#any-content}
+* AEM as a Cloud Service (version `2023.8.13099` eller senare)
+* AEM 6.5 (Service Pack 21 eller 22 plus ett funktionspaket)
 
-En innehållsförfattare bör ha samma kraftfulla redigeringsupplevelse som tidigare AEM sidredigerare. Men den universella redigeraren tillåter innehållsförfattare att redigera **vilket**-innehåll som helst visuellt och i sitt sammanhang och stöder:
+Den här dokumentationen används för Universal Editor med AEM as a Cloud Service. Om du vill använda den universella redigeraren med AEM 6.5 [läser du dokumentationen för AEM 6.5.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction?lang=en)
 
-* **AEM sidstrukturer** - kapslade `cq:Components` av `cq:Pages`, inklusive Experience Fragments
-* **AEM Content Fragments** - Redigera innehåll från innehållsfragment så som de visas i sitt sammanhang.
-* **Dokument** - Proof of concepts har visat att även Word-, Excel-, Google Docs- och Markdown-dokument kan redigeras på samma sätt (det här är Pågående arbete).
+## Funktioner {#features}
 
-### Alla proportioner {#any-aspect}
+Den universella redigeraren har många funktioner som kan användas i många olika syften för effektiv innehållshantering.
 
-Innehållet handlar inte bara om informationen som finns, utan även om hur det återges och tas emot. Innehållet innehåller ytterligare metadata och instrumenteringsregler som den universella redigeraren kan förstå och redigera, inklusive:
+* **[WYSIWYG](/help/sites-cloud/authoring/universal-editor/authoring.md)**: Utför vad-du-see-is-what-you-get-redigering av alla typer av webbinnehåll, inklusive oformaterad text, formaterad text, media och metadata.
+* **[Disposition](/help/sites-cloud/authoring/universal-editor/authoring.md#editing-content)**: Skapa, redigera, ordna om, kapsla in eller ta bort innehållsblock av olika typer (titlar, knappar, tassar, avsnitt, bädda in osv.).
+* **[Layout](/help/sites-cloud/authoring/universal-editor/templates.md)**: Använd sidmallar, använd visuella format och komponera layouter med block som kolumner, carousel och dragspelspaneler.
+* **[Enhetssimulering](/help/sites-cloud/authoring/universal-editor/navigation.md#emulator)**: Förhandsgranska och optimera innehåll för olika besökarenheter under redigering.
+* **Omnichannel**: Återanvänd både strukturerat och ostrukturerat innehåll i flera kanaler.
+* **[Lokalisering](/help/sites-cloud/authoring/universal-editor/inheritance.md)**: Effektivisera arbetsflödena för översättning av innehåll och hantera effektivt översatt innehåll med Multi-Site Manager.
+* **Konsekvens**: Säkerställ överensstämmelse med varumärkesriktlinjerna och bibehåll enhetligheten i allt innehåll.
+* **Säkerhet**: [Använd åtkomstkontroll](/help/implementing/universal-editor/authentication.md), skydda innehållets integritet och spåra ändringar med [robust versionshantering.](/help/sites-cloud/authoring/sites-console/page-versions.md)
+* **[Publicering](/help/sites-cloud/authoring/universal-editor/publishing.md)**: Integrera arbetsflöden för granskning, godkännande och publicering direkt i redigeraren.
+* **Enhetlig**: Integreras fullt ut med AEM-verktyg som [Sites Console,](/help/sites-cloud/authoring/sites-console/introduction.md) [Content Fragment Editor,](/help/sites-cloud/administering/content-fragments/overview.md) och många andra, vilket ger en sammanhängande redigeringsupplevelse.
 
-* **Använda layout och format** - Genom att använda ett formatsystem kan marknadsföraren och innehållsförfattaren tillämpa olika format på sitt innehåll och skapa olika layouter för innehåll som kolumner, karuseller, flikar, dragspel och så vidare.
+## Utbyggbarhet {#extensibility}
 
-## Värde {#value}
+Den universella redigeraren har inte bara funktioner som är klara att användas direkt, utan erbjuder ett antal utbyggnadsmöjligheter.
 
-Genom att frikoppla redigeringsupplevelsen från ett visst innehållsleveranssystem blir redigeraren helt universell och flexibel så att innehållsförfattaren kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
+* **Tillägg** är många och färdiga för att uppfylla krav som stöd för arbetsflöden, generering av variationer och experimenterande.
+* **Med ett utökningsbart användargränssnitt** kan du skapa egna tillägg med samma underliggande ramverk som de färdiga tilläggen utnyttjar, vilket ger optimal flexibilitet att anpassa sig efter dina projektbehov.
+* **Tilläggspunkter**, t.ex. block, anpassade datatyper och händelser, möjliggör smidig integrering av anpassade affärskrav utanför användargränssnittet.
 
-![Värdet för den universella redigeraren](assets/value.png)
-
-* **Leverera exceptionella upplevelser** - För att yrkesverksamma ska kunna skapa en övertygande upplevelse för besökare kan de yrkesverksamma i den universella redigeraren skapa och redigera innehållet i förhandsvisningssammanhang. På så sätt kan de skapa innehåll som passar upplevelsens design och som utgör en meningsfull resa för besökarna.
-* **Öka innehållshastigheten** - För att effektivisera administrationsarbetsflödet för granskare tillåter den universella redigeraren redigering av innehåll i förhandsgranskningen som vägledning för användarna genom att endast visa de alternativ som är relevanta för det sammanhanget och gör arbetsflödet oberoende av innehållskällorna.
-* **Den senaste utvecklarupplevelsen** - För att stödja heterogena programlandskap i verkligheten är den universella redigeraren helt fristående och teknikberoende, vilket gör att utvecklare kan använda den teknologi de föredrar för att implementera upplevelsen.
+>[!TIP]
+>
+>Mer information om den universella redigerarens utbyggbarhet finns i dokumentet [Utöka den universella redigeraren.](/help/implementing/universal-editor/extending.md)
 
 ## Universal Editor och Content Fragment Editor {#universal-editor-content-fragment-editor}
 
@@ -88,7 +102,7 @@ När du utforskar den universella redigeraren och fortsätter implementera den i
 
 * Högst 25 AEM-resurser (Content Fragments, pages, Experience Fragments, Assets, etc.) får vara referenser som instrument på en enda sida.
 * AEM as a Cloud Service och [AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) är de enda AEM-backends som stöds.
-* AEM as a Cloud Service version `2023.8.13099` eller senare krävs.
+* Versionen `2023.8.13099` eller senare krävs för AEM as a Cloud Service.
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
 * Som en del av AEM stöder den universella redigeraren [samma webbläsare som AEM.](/help/overview/supported-platforms.md)
    * Mobilversioner av dessa webbläsare stöds inte.

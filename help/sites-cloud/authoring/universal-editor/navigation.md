@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 9daa4ea54e87694c297a42748aa8705eb712d182
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1616'
 ht-degree: 0%
 
 ---
@@ -33,11 +33,11 @@ Om du vill skapa innehåll för ett program med den universella redigeraren mås
 
 >[!TIP]
 >
->Se [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md) för ett exempel på hur du konfigurerar en AEM för att fungera med den universella redigeraren.
+>Se [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md) för ett exempel på hur du konfigurerar en AEM-app så att den fungerar med den universella redigeraren.
 
 ## Åtkomst till den universella redigeraren {#accessing}
 
-När appen har instrumenterats för att fungera med den universella redigeraren kan den ha åtkomst både i AEM as a Cloud Service och direkt utan att ha tillgång till AEM.
+När appen har fått ett verktyg som fungerar tillsammans med den universella redigeraren kan den ha åtkomst både inifrån AEM as a Cloud Service och direkt utan att kunna använda AEM.
 
 ### Åtkomst inom AEM as a Cloud Service {#accessing-aem}
 
@@ -60,22 +60,22 @@ När appen har instrumenterats för att fungera med den universella redigeraren 
 
 Gränssnittet är indelat i dessa huvudområden.
 
-* [Rubriken Experience Cloud](#experience-cloud-header)
+* [Experience Cloud header](#experience-cloud-header)
 * [Verktygsfältet för den universella redigeraren](#universal-editor-toolbar)
 * [Redigeraren](#editor)
 * [Egenskapspanelen](#properties-rail)
 
 ![Gränssnittet i den universella redigeraren](assets/ui.png)
 
-### Sidhuvudet Experience Cloud {#experience-cloud-header}
+### Experience Cloud Header {#experience-cloud-header}
 
-Sidhuvudet Experience Cloud finns alltid längst upp på skärmen. Det är en ankarpunkt som talar om var du befinner dig i Experience Cloud och som hjälper dig att navigera till andra program i Experience Cloud.
+Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en ankarpunkt som talar om var du befinner dig inom Experience Cloud och som hjälper dig att navigera till andra Experience Cloud-program.
 
-![Experience Cloud-huvudet](assets/experience-cloud-header.png)
+![Experience Cloud-rubriken](assets/experience-cloud-header.png)
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken om du vill navigera till roten för din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -191,11 +191,11 @@ Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan 
 >
 >URL:en för förhandsgranskning för din app [kan anpassas](/help/implementing/universal-editor/customizing.md#custom-preview-urls).
 
-#### Publish {#publish}
+#### Publicera {#publish}
 
 Välj publiceringsknappen så att du kan publicera ändringarna i innehållet live för att användas av läsarna.
 
-![Publish-knapp](assets/publish.png)
+![Knappen Publicera](assets/publish.png)
 
 >[!TIP]
 >
@@ -207,13 +207,13 @@ Dessutom kan du komma åt standardalternativen med ellipsknappen.
 
 ![Ellipsknapp](assets/ellipsis.png)
 
-Du kan till exempel avpublicera en sida (d.v.s. invertera åtgärden för knappen [**Publish**](#publish)) via ellipsknappen.
+Du kan till exempel avpublicera en sida (d.v.s. invertera åtgärden för knappen [**Publicera**](#publish)) via ellipsknappen.
 
 #### Ytterligare knappar {#additional-toolbar-buttons}
 
 Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar i verktygsfältet har den universella redigeraren utökats.
 
-* Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren](/help/implementing/universal-editor/customizing.md).
+* Mer information om tilläggsmöjligheter finns i [Utöka den universella redigeraren](/help/implementing/universal-editor/extending.md).
 * Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/).
 
 ### Redigeraren {#editor}
@@ -308,9 +308,9 @@ Om du trycker på eller klickar på borttagningsknappen [tas komponenten](/help/
 >
 >Använd snabbtangenten `Shift+Backspace` för att ta bort en markerad komponent från en behållare.
 
-#### Ytterligare knappar {#additional-properties-rail-buttons}
+## Ytterligare funktioner {#additional-features}
 
-Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar på egenskapspanelen har den universella redigeraren utökats.
+Universal Editor ger en anpassningsbar och utbyggbar redigeringsmiljö. Om du ser ytterligare knappar eller alternativ på egenskapspanelen eller i verktygsfältet har den universella redigeraren utökats.
 
 * Mer information om tilläggsmöjligheter finns i [Anpassa och utöka den universella redigeraren](/help/implementing/universal-editor/customizing.md).
 * Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/).
