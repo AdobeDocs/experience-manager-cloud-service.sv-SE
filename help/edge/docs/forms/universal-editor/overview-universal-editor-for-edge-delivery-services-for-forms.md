@@ -6,9 +6,9 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 35834ba89d20d719a40b930ca672ec242d81d376
+source-git-commit: 4828e1965514a5ce5cd6d8528c72af33b7b748ea
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1116'
 ht-degree: 0%
 
 ---
@@ -26,109 +26,33 @@ Den universella redigeraren är en smidig lösning för att skapa och hantera fo
 ## Key Features of Universal Editor for EDS Forms
 
 
-<div>
- <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/universal-editor-user-interface" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/generate-forms.svg" alt="WYSIWYG Interface"> 
-    <h3>WYSIWYG Interface</h3>
-    <p>Universell redigerare har ett WYSIWYG-gränssnitt för formulärdesign med ett färdigbyggt komponentbibliotek, responsiv design, mallbaserad framtagning och fältändringar i realtid.</p>
-  </div>
-</a>
-<a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/rule-editor-universal-editor" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/rule-editor.svg" alt="Regelredigeraren">
-    <h3>Regelredigeraren</h3>
-    <p>Med regelredigeraren kan användare skapa dynamiska formulärinteraktioner med händelsestyrda regler, omedelbar validering och felhantering via lättviktiga JavaScript och JSON.</p>
-  </div>
-</a>
-<a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/submit-action" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/submit-actions.svg" alt="Skicka funktionsmakron">
-    <h3>Skicka funktionsmakron</h3>
-    <p>Skicka funktionsmakron har stöd för serverdelsintegrering, logik för villkorlig inskickning, säkra slutpunkter och preprocessorer, vilket effektiviserar inskickningsarbetsflödena.</p>
-  </div>
-</a>
-<div>
-<a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/publish-forms" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg" alt="Publicering/avpublicering">
-    <h3>Publicering/avpublicering</h3>
-    <p>Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick, så att ni dynamiskt kan hantera tillgänglighet och innehållsuppdateringar i realtid.</p>
-  </div>
-</a>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/responsive.svg" alt="Responsivt läge">
-    <h3>Responsivt läge </h3>
-    <p>Skapa formulär som smidigt kan anpassas till olika enheter (datorer, surfplattor och mobila enheter). Använd responsivt läge för att förhandsgranska och testa formulär för olika skärmstorlekar.</p>
-  </div>
-<a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/create-custom-component" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/custom-components.svg" alt="Anpassade komponenter">
-    <h3>Anpassade komponenter</h3>
-    <p>Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen.</p>
-  </div>
-</a>
-</div>
-<a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/style-theme-forms" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/personalization.svg" alt="Stilar">
-    <h3>Stilar</h3>
-    <p>Med formatering med CSS kan utvecklare anpassa utseendet på formulärelement och skapa en visuellt tilltalande design som passar ihop med webbplatsens estetik.</p>
-  </div>
-</a>
-    <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/prefill-services.svg" alt="Förifyll tjänster">
-    <h3>Förifyll tjänster</h3>
-    <p>I förifyllda tjänster fylls formulärfält automatiskt i med relevanta användardata från olika källor, vilket minskar behovet av manuell inmatning och förbättrar användarupplevelsen.</p>
-  </div>
-  <a href="https://github.com/adobe/aem-experimentation/blob/main/documentation/experiments.md" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg" alt="A/B-testning">
-    <h3>A/B-testning</h3>
-    <p>A/B-tester (experiment) gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna.</p>
-  </div>
-</a>
-</div>
-<div>
-  <a href="https://www.aem.live/developer/martech-integration" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg" alt="Analys och uppföljning">
-    <h3>Analys och uppföljning</h3>
-    <p>Få insikter om användarbeteende, formulärinteraktioner och överföringshastighet med inbyggda analyser och spårning för att möjliggöra datadriven optimering av formulär.</p>
-  </div>
-</a>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/adobe-workfront.svg" alt="Integrering med Adobe Workfront">
-    <h3> Aktivitetshantering </h3>
-    <p>Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll och få smidiga arbetsflöden.</p>
-  </div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/data-binding.svg" alt="Databindning">
-    <h3>Databindning</h3>
-    <p>Databindning möjliggör direkta kopplingar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning för strukturerad datalagring för klagomål.</p>
-  </div>
-</div>
 
-<div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/editor-customization.svg" alt="Anpassning av redigerare">
-    <h3>Anpassning av redigerare</h3>
-    <p>Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov.</p>
-  </div>
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg" alt="Bädda in Forms">
-    <h3>Bädda in Forms</h3>
-    <p>Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor för en smidig användarupplevelse.</p>
-  </div>
-  <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/submit-action#submit-action-message-ue" target="_blank" style="text-decoration: none; color: inherit;">
-  <div class="card" style="display: inline-block; width: calc(30% - 20px); margin: 10px; border: 1px solid #ccc; padding: 10px; text-align: center; cursor: pointer;">
-    <img src="/help/edge/docs/forms/universal-editor/assets/thank-you.svg" alt="Tack">
-    <h3>Tack</h3>
-    <p>Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats.</p>
-  </div>
-</a>
-</div>
-</div>
+Här är layouten med likbreddskort (med kolumner med fast bredd):
+
+| ![WYSIWYG-gränssnitt](/help/edge/docs/forms/universal-editor/assets/generate-forms.svg) | ![Regelredigeraren](/help/edge/docs/forms/universal-editor/assets/rule-editor.svg) | ![Skicka åtgärder](/help/edge/docs/forms/universal-editor/assets/submit-actions.svg) |
+|:-------------:|:-------------:|:-------------:|
+| [**WYSIWYG-gränssnitt**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/universal-editor-user-interface) | [**Regelredigeraren**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/rule-editor-universal-editor) | [**Skicka åtgärder**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/submit-action) |
+| Universell redigerare har ett WYSIWYG-gränssnitt för formulärdesign med ett färdigbyggt komponentbibliotek, responsiv design, mallbaserad framtagning och fältändringar i realtid. | Med regelredigeraren kan användare skapa dynamiska formulärinteraktioner med händelsestyrda regler, omedelbar validering och felhantering via lättviktiga JavaScript och JSON. | Skicka funktionsmakron har stöd för serverdelsintegrering, logik för villkorlig inskickning, säkra slutpunkter och preprocessorer, vilket effektiviserar inskickningsarbetsflödena. |
+
+| ![Publicerar/avpublicerar](/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg) | ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/responsive.svg) | ![Anpassade komponenter](/help/edge/docs/forms/universal-editor/assets/custom-components.svg) |
+|:-------------:|:-------------:|:-------------:|
+| [**Publicerar/avpublicerar**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/publish-forms) | **Responsivt läge** | [**Anpassade komponenter**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/create-custom-component) |
+| Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick. | Skapa formulär som smidigt kan anpassas till olika enheter (datorer, surfplattor och mobila enheter). Använd responsivt läge för att förhandsgranska och testa formulär för olika skärmstorlekar. | Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen. |
+
+| ![Formatering](/help/edge/docs/forms/universal-editor/assets/personalization.svg) | ![Tjänster för förifyllnad](/help/edge/docs/forms/universal-editor/assets/prefill-services.svg) | ![A/B-testning](/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg) |
+|:-------------:|:-------------:|:-------------:|
+| [**Formatering**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/style-theme-forms) | **Förfyll tjänster** (kommer snart) | [**A/B-testning**](https://github.com/adobe/aem-experimentation/blob/main/documentation/experiments.md) |
+| Med formatering med CSS kan utvecklare anpassa utseendet på formulärelement och skapa en visuellt tilltalande design som passar ihop med webbplatsens estetik. | I förifyllda tjänster fylls formulärfält automatiskt i med relevanta användardata från olika källor, vilket minskar behovet av manuell inmatning och förbättrar användarupplevelsen. | A/B-tester gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna. |
+
+| ![Analys och spårning](/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg) | ![Aktivitetshantering](/help/edge/docs/forms/universal-editor/assets/adobe-workfront.svg) | ![Databindning](/help/edge/docs/forms/universal-editor/assets/data-binding.svg) |
+|:-------------:|:-------------:|:-------------:|
+| [**Analys och spårning**](https://www.aem.live/developer/martech-integration) | **Aktivitetshantering** | **Databindning** |
+| Få insikter om användarbeteende, formulärinteraktioner och överföringshastighet med inbyggda analyser och spårning för att möjliggöra datadriven optimering av formulär. | Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll och få smidiga arbetsflöden. | Databindning möjliggör direkta anslutningar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning. |
+
+| ![Anpassning av redigerare](/help/edge/docs/forms/universal-editor/assets/editor-customization.svg) | ![Bädda in Forms](/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg) | ![Tack!](/help/edge/docs/forms/universal-editor/assets/thank-you.svg) |
+|:-------------:|:-------------:|:-------------:|
+| **Anpassning av redigerare** | **Bädda in Forms** | [**Tack!**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/submit-action#submit-action-message-ue) |
+| Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov. | Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor. | Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats. |
 
 
 <!-- ![Universal Editor](/help/edge/docs/forms/universal-editor/assets/generate-forms.svg)  **WYSIWYG interface for Form creation**: Universal Editor provides a WYSIWYG interface for form design. It provides pre-built component library, responsive design support, and template-based form creation. You can instantly add or remove form fields and modify field properties (like label, data binding, validation). You can also plugin custom form components to Universal Editor.
