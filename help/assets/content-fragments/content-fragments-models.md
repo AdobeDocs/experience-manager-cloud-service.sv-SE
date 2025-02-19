@@ -1,11 +1,11 @@
 ---
 title: Content Fragment Models (Assets - Content Fragments)
-description: Läs om hur Content Fragment Models fungerar som en grund för ditt headless-innehåll i AEM, så att du kan skapa Content Fragments med strukturerat innehåll.
+description: Läs om hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM, så att du kan skapa Content Fragments med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
 role: User, Admin, Architect
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 883eadc8ce2c84eba526b081ef90c678845989aa
 workflow-type: tm+mt
 source-wordcount: '3120'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
-Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md), vilket är grunden för ditt headless-innehåll.
+Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment](/help/assets/content-fragments/content-fragments.md), vilket utgör grunden för ditt headless-innehåll.
 
 Så här använder du modeller för innehållsfragment:
 
@@ -150,7 +150,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
-      * För att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
+      * Om du vill att AEM ska kunna lagra direkt JSON som du har kopierat/klistrat in från en annan tjänst.
       * JSON skickas och skrivs ut som JSON i GraphQL.
       * Innehåller JSON-syntaxmarkering, automatisk komplettering och felmarkering i Content Fragment Editor.
 
@@ -161,7 +161,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
      >[!NOTE]
      >
-     Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schema.
+     Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schemat.
 
 ## Egenskaper {#properties}
 
@@ -261,6 +261,7 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 * **[Fragmentreferens](#fragment-reference-nested-fragments)** (kapslade fragment)
    * Refererar till andra fragment, beroende på vilka specifika modeller som anges.
    * Gör att du kan ta med/hämta strukturerade data.
+
      >[!NOTE]
      >
      Den här metoden är av särskilt intresse i samband med [leverans av Headless-innehåll med hjälp av innehållsfragment med GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
@@ -434,9 +435,10 @@ Så här konfigurerar du **principer** för **Tillåtna modeller för innehålls
 1. **Spara** eventuella ändringar.
 
 De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
+
 * **Profiler** för **Tillåtna modeller för innehållsfragment**.
 * Om den är tom kan du försöka identifiera principen med arvsreglerna.
-* Om arvskedjan inte ger något resultat ska du titta på konfigurationen **Cloud Services** för den mappen (också först direkt och sedan via arv).
+* Om arvskedjan inte ger något resultat ska du titta på konfigurationen **Cloud Services** för den mappen (även först direkt och sedan via arv).
 * Om inget av ovanstående ger några resultat finns det inga tillåtna modeller för den mappen.
 
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
@@ -465,7 +467,7 @@ Så här publicerar du en innehållsfragmentmodell:
 1. Navigera till **Verktyg**, **Allmänt** och öppna sedan **Modeller för innehållsfragment**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Välj en modell, följt av **Publish** i verktygsfältet.
+1. Välj en modell, följt av **Publicera** i verktygsfältet.
 Publiceringsstatusen anges i konsolen.
 
    >[!NOTE]
@@ -500,7 +502,7 @@ Den här funktionen tillhandahåller styrning för publicerade modeller för inn
 
 * Content Fragment Models bestämmer schemat för GraphQL-frågor i AEM.
 
-   * AEM GraphQL-scheman skapas så snart en innehållsfragmentmodell skapas, och de kan finnas både i författar- och publiceringsmiljöer.
+   * AEM GraphQL-scheman skapas så snart en Content Fragment Model skapas, och de kan finnas både i skribent- och publiceringsmiljöer.
 
    * Publiceringsscheman är de viktigaste eftersom de utgör grunden för leverans av innehåll i innehållsfragment i JSON-format.
 
@@ -510,7 +512,7 @@ Den här funktionen tillhandahåller styrning för publicerade modeller för inn
 
 ### Krav {#the-requirements}
 
-* Att göra användarna medvetna om riskerna vid redigering av modeller som redan används för leverans av direktsänt innehåll, med andra ord, modeller som har publicerats).
+* Att göra användarna medvetna om riskerna vid redigering av modeller som redan används för leverans av direktsänt innehåll, med andra ord, modeller som har publicerats.
 
 * För att undvika oönskade ändringar.
 
