@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du förhandsgranskar formulär med
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
-source-git-commit: ae0ec8135c7f7f644e2116be9177e7d7677b8dc7
+source-git-commit: 1abc1092872d4a3e0253ddf0388d23e39a6c2de9
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -23,16 +23,16 @@ Med det responsiva läget kan utvecklare utforma layouter som automatiskt anpass
 
 ## Förhandsgranska Forms i responsivt läge för olika enheter
 
-Den universella redigeraren har en **emulatorikon** ![Emulatorikon](/help/edge/docs/forms/universal-editor/assets/emulator.png){height-3%,width=3%} som finns i skärmens övre högra hörn. Du kan förhandsgranska sidor i olika enhetsstorlekar och testa hur den responsiva designen fungerar för att få en bättre användarupplevelse.
+Den universella redigeraren har en **emulatorikon** som finns i skärmens övre högra hörn. Du kan förhandsgranska sidor i olika enhetsstorlekar och testa hur responsiv design fungerar för att få en bättre användarupplevelse.
 
 Så här visar du hur Universal Editor återger formulär i olika skärmstorlekar:
 
 1. Öppna formuläret i Universell redigerare för redigering.
-1. Välj ikonen ![Emulator](/help/edge/docs/forms/universal-editor/assets/emulator.png){height=3%,width=3%} i verktygsfältet för den universella redigeraren och klicka på emulatorikonen för att visa alternativet.
+2. Välj ikonen ![Emulator](/help/edge/docs/forms/universal-editor/assets/emulator.png){height=2%,width=2%} som finns i verktygsfältet för den universella redigeraren och klicka på emulatorikonen för att visa alternativet.
 
    ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/universal-editor-emulator.png)
 
-1. Välj alternativet att emulera en mobil enhet i Universell redigerare
+3. Välj alternativet att emulera en mobil enhet i Universell redigerare
 
    ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/ue-responsivemode.png){width=40%,height=40%}
 
@@ -47,19 +47,19 @@ Universal Editor har olika emulatorer för att förhandsgranska formulär på ol
     </tr>
     <tr>
         <td>Skrivbord</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-desktop.png" alt="Desktop Emulator"></td>
+        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-desktop.png" alt="Desktop Emulator" style="width: auto; height: auto"></td>
     </tr>
     <tr>
         <td>Tablet</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-tab.png" alt="Tablettemulator"></td>
+        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-tab.png" alt="Tablettemulator" style="width: auto; height: auto"></td>
     </tr>
     <tr>
         <td>Mobil</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-mobile.png" alt="Mobile Emulator" "></td>
+        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-mobile.png" alt="Mobile Emulator" style="width: auto; height: auto"></td>
     </tr>
     <tr>
         <td>Egen enhet</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-custom.png" alt="Emulator för anpassad enhet"></td>
+        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-custom.png" alt="Emulator för anpassad enhet" style="width: auto; height: auto"></td>
     </tr>
 </table>
 
