@@ -4,7 +4,7 @@ description: Använd adaptiva formulärteman för att utforma och ge en visuell 
 feature: Adaptive Forms, Foundation Components
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
 role: User, Developer, Admin
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 449ff970f3b1e4479309e52d16aacf0979a0ec41
 workflow-type: tm+mt
 source-wordcount: '5421'
 ht-degree: 0%
@@ -43,13 +43,13 @@ En guide för att skapa ett tema startas.
 
 1. Ange ett formulär som du vill förhandsgranska temat i fältet **[!UICONTROL Default Preview for this Theme]**. Klicka på **[!UICONTROL Use Default]** om du vill använda standardformuläret för att förhandsgranska temat.
 
-1. Ange en **[!UICONTROL Configuration Container]**. Du kan välja en **[!UICONTROL Configuration Container]** som innehåller konfigurationsinformation om Adobe-teckensnitt för ditt konto. Du kan också lämna alternativet tomt för tillfället och ange informationen senare från [temaegenskaperna](#metadata-of-a-theme).
+1. Ange en **[!UICONTROL Configuration Container]**. Du kan välja en **[!UICONTROL Configuration Container]** som innehåller konfigurationsinformation om Adobe Font för ditt konto. Du kan också lämna alternativet tomt för tillfället och ange informationen senare från [temaegenskaperna](#metadata-of-a-theme).
 
 1. Klicka på **[!UICONTROL Create]** och sedan på **[!UICONTROL Edit]** för att öppna temat i temeredigeraren, eller klicka på **[!UICONTROL Done]** för att återgå till temasidan.
 
 ### Skillnad från teman i Experience Manager 6.5 Forms och tidigare versioner {#difference-in-themes}
 
-Teman som skapats för en Cloud Service-instans:
+Teman som skapats i en Cloud Service-instans:
 
 * Har versionsnummer 2.
 
@@ -59,7 +59,7 @@ Teman som skapats för en Cloud Service-instans:
 
 * Har inte behörighet att skriva och uppdatera på /apps-platsen (Forms-användargruppen har inte behörighet att skriva och uppdatera på /apps-platsen).
 
-* Innan du överför ett tema som skapats på [!DNL Experience Manager Forms] 6.5 eller tidigare versioner till en Cloud Service-instans måste du se till att klientbiblioteksplatsen är inställd på `etc/clientlibs/fd/themes`. Om klientbiblioteket inte finns i mappen `etc` uppdaterar du platsen manuellt till `etc/clientlibs/fd/themes`.  Du kan göra ändringen på instansen [!DNL Experience Manager Forms] 6.5 eller tidigare versioner. När du har angett platsen för klientbiblioteket kan en administratör överföra teman till Cloud Servicen eller använda verktyget Innehållsöverföring för att migrera teman från 6.5 eller tidigare versioner till Cloud Servicen.
+* Innan du överför ett tema som skapats [!DNL Experience Manager Forms] 6.5 eller tidigare versioner till en Cloud Service-instans måste du kontrollera att klientbiblioteksplatsen är inställd på `etc/clientlibs/fd/themes`. Om klientbiblioteket inte finns i mappen `etc` uppdaterar du platsen manuellt till `etc/clientlibs/fd/themes`.  Du kan göra ändringen på instansen [!DNL Experience Manager Forms] 6.5 eller tidigare versioner. När du har angett platsen för klientbiblioteket kan en administratör överföra teman till Cloud Service-instansen eller använda verktyget Innehållsöverföring för att migrera teman från 6.5 eller tidigare versioner till Cloud Service-instansen.
 
   Ändra också namnet på kategorin. Om namnet inte ändras kan felet `theme with same category name exists` uppstå. När du ändrar kategorinamnet påverkas inte den adaptiva Forms som använder temat.
 
@@ -149,13 +149,13 @@ Lista med metaegenskaper för ett tema (finns på egenskapssidan för ett tema).
   </tr>
   <tr>
    <td>8.</td>
-   <td>Publish i tid</td>
+   <td>Publicera i tid</td>
    <td>Ja</td>
    <td>Det är dags att automatiskt publicera temat.</td>
   </tr>
   <tr>
    <td>9.</td>
-   <td>Publish off Time</td>
+   <td>Publicera utanför tid</td>
    <td>Ja</td>
    <td>Det är dags att automatiskt avpublicera temat.</td>
   </tr>
@@ -228,7 +228,7 @@ En specifik komponent påverkar objekt i den specifika kategorin. När du format
      När du anpassar alla fältkomponenter med en viss bakgrundsfärg ärver alla fält, som ålder, namn och adress, bakgrundsfärgen. När du markerar en numerisk ruta, till exempel age, och minskar bredden på den, minskas bredden på alla numeriska rutor, till exempel ålder, antalet personer i en familj. Bredden på textrutor ändras inte.
 
    * **Läge:** Gör att du kan anpassa format för ett objekt i ett visst läge. Du kan till exempel ange ett objekts utseende när det är i standardläge, fokusläge, inaktiverat läge, hovring eller felläge.
-   * **Egenskapskategorier:** Formateringsegenskaper delas in i olika kategorier. Exempel: Dimension och placering, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
+   * **Egenskapskategorier:** Formateringsegenskaper delas in i olika kategorier. Exempel: Dimension &amp; Position, Text, Bakgrund, Kant och Effekter. Under varje kategori anger du formatinformation. Under Bakgrund kan du till exempel ange Bakgrundsfärg och Bild och övertoning.
 
    * **Avancerat:** Gör att du kan lägga till anpassad CSS till ett objekt, vilket åsidosätter de egenskaper som används för att definiera om det finns en överlappning.
 
@@ -400,7 +400,7 @@ Alternativen för att anpassa lägesformat varierar för olika komponenter.
    <td><strong>Använd</strong></td>
   </tr>
   <tr>
-   <td><p>Dimensioner och position</p> </td>
+   <td><p>Mått och position</p> </td>
    <td><p>Gör att du kan formatera justering, storlek, placering och placering av komponenter i temat. </p> <p>Du kan välja mellan visningsinställningar, utfyllnad, marginal, bredd, höjd och Z-index.</p> <p>Du kan också använda layoutläget för att definiera komponenternas bredd med ett enkelt dra och släpp-gränssnitt. Mer information finns i <a href="resize-using-layout-mode.md">Använda layoutläget för att ändra storlek på komponenter</a>.</p> </td>
   </tr>
   <tr>
@@ -495,7 +495,7 @@ Du kan nu använda teckensnitt som är tillgängliga i en webbtjänst i det adap
 
 Så här konfigurerar du Adobe Fonts i Experience Manager:
 
-1. Klicka på ![Adobe Experience Manager ](assets/adobeexperiencemanager.png)**[!UICONTROL Adobe Experience Manager]**>**[!UICONTROL Tools]**![hammer](assets/hammer.png) >**[!UICONTROL Deployment]**>**[!UICONTROL Cloud Services]**i författarinstansen.
+1. Klicka på ![Adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** i författarinstansen.
 1. Navigera till och öppna alternativet **[!UICONTROL Adobe Fonts]** på sidan **[!UICONTROL Cloud Services]**. Öppna konfigurationsmappen och klicka på **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en rubrik för konfigurationen och klickar på **[!UICONTROL Create]**.
 
@@ -606,7 +606,7 @@ När du har anpassat temat kan du använda det i formuläret <!-- or interactive
 
 ## Inverkan på andra användningsområden för anpassade formulär {#impact-on-other-adaptive-form-use-cases}
 
-* **Publish/unpublish a form:** Vid publicering av ett formulär publiceras även det tema som använts på (om det inte redan är publicerat)
+* **Publicera/avpublicera ett formulär:** Vid publicering av ett formulär publiceras även det tema som används för (om det inte redan är publicerat)
 * **Importera/exportera ett formulär:** När du importerar eller exporterar ett formulär importeras eller exporteras även det associerade temat automatiskt.
 * **Referenser till ett formulär:** Avsnittet Referenser i formulärreferenser innehåller en extra post för temat.
 * **Senaste ändringsdatum för ett formulär:** Uppdaterades när det associerade temat ändrades.
