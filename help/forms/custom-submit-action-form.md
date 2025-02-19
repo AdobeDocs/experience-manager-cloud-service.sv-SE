@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Intermediate
 exl-id: 77131cc2-9cb1-4a00-bbc4-65b1a66e76f5
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 914139a6340f15ee77024793bf42fa30c913931e
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1700'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,8 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/customize-aem-forms/custom-submit-action-form.html) |
-| AEM as a Cloud Service | Den här artikeln |
+| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/custom-submit-action-for-adaptive-forms-based-on-core-components) |
+| AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 
 Ett anpassat formulär innehåller flera färdiga inskickningsåtgärder (OTB). En Skicka-åtgärd specificerar vilka åtgärder som ska utföras på data som samlats in via det adaptiva formuläret. Du kan till exempel skicka data via ett e-postmeddelande.
 
@@ -73,7 +74,7 @@ for (Map.Entry<String, RequestParameter[]> param : requestParameterMap.entrySet(
 
 När du bifogar filer till det adaptiva formuläret validerar servern de bifogade filerna efter att det adaptiva formuläret skickats in och returnerar ett felmeddelande om:
 
-* Bifogade filer innehåller ett filnamn som börjar med (.) tecken, innehåller \ / : * ? &quot; &lt; > | ; % $-tecken, eller innehåller speciella filnamn som är reserverade för Windows-operativsystem som `nul`, `prn`, `con`, `lpt` eller `com`.
+* Bifogade filer innehåller ett filnamn som börjar med tecknet (.), som innehåller \ / : * ? &quot; &lt; > | ; % $-tecken, eller innehåller speciella filnamn som är reserverade för Windows-operativsystem som `nul`, `prn`, `con`, `lpt` eller `com`.
 
 * Storleken på den bifogade filen är 0 byte.
 
@@ -89,7 +90,7 @@ Om åtgärden inte har någon framåtriktad sökväg dirigeras webbläsaren om m
 >
 >En författare tillhandahåller en omdirigerings-URL (med hjälp av Tack-sidkonfigurationen). [OTB-överföringsåtgärder](configuring-submit-actions.md) använder omdirigerings-URL:en för att dirigera om webbläsaren från resursen som den framåtriktade sökvägen refererar till.
 >
->Du kan skriva en anpassad Skicka-åtgärd som vidarebefordrar en begäran till en resurs eller server. Adobe rekommenderar att skriptet som utför resurshantering för den framåtriktade sökvägen omdirigerar begäran till omdirigerings-URL:en när bearbetningen är klar.
+>Du kan skriva en anpassad Skicka-åtgärd som vidarebefordrar en begäran till en resurs eller server. Adobe rekommenderar att det skript som utför resurshantering för vidarebefordringssökvägen omdirigerar begäran till omdirigerings-URL:en när bearbetningen är klar.
 
 ## Skicka åtgärd {#submit-action}
 
@@ -108,25 +109,29 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 ## Skapa en anpassad skickaåtgärd {#creating-a-custom-submit-action}
 
-Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller OTB-innehållet för att skicka Action Store-innehåll (borttaget) som sparar data i CRX-databasen. Dessutom innehåller AEM ett [Mail](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/mailer/package-summary.html)-API som kan användas för att skicka e-postmeddelanden. Konfigurera tjänsten Day CQ Mail via systemkonsolen innan du använder e-post-API:t. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (föråldrat) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
+>[!NOTE]
+>
+> Mer information om hur du skapar en anpassad skickaåtgärd för kärnkomponenter finns i [Skapa en anpassad sändningsåtgärd för adaptiva Forms (kärnkomponenter)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/custom-submit-action-for-adaptive-forms-based-on-core-components).
+
+Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller OTB-innehållet för att skicka Action Store-innehåll (borttaget) som sparar data i CRX-databasen. Dessutom har AEM ett [Mail](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/mailer/package-summary.html)-API som kan användas för att skicka e-postmeddelanden. Konfigurera tjänsten Day CQ Mail via systemkonsolen innan du använder e-post-API:t. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (föråldrat) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
 1. Logga in på CRXDE Lite på adressen https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 
    ![Skärmbild som avbildar skapandet av en nod med egenskapen sling:Folder](assets/step1.png)
 
-1. **Ange obligatoriska konfigurationsfält.**
+2. **Ange obligatoriska konfigurationsfält.**
 
    Lägg till den konfiguration som krävs för Store-åtgärden. Kopiera noden **cq:dialog** för Store-åtgärden från /libs/fd/af/components/guideSubittype/store till åtgärdsmappen på /apps/custom_submit_action/store_and_email.
 
    ![Skärmbild som visar kopiering av dialognoden till åtgärdsmappen](assets/step2.png)
 
-1. **Ange konfigurationsfält för att fråga författaren om e-postkonfiguration.**
+3. **Ange konfigurationsfält för att fråga författaren om e-postkonfiguration.**
 
    Det adaptiva formuläret innehåller även en e-poståtgärd som skickar e-post till användarna. Anpassa den här åtgärden baserat på dina behov. Gå till /libs/fd/af/components/guideSubmitType/email/dialog. Kopiera noderna i cq:dialog-noden till cq:dialog-noden i din Submit-åtgärd (/apps/custom_submit_action/store_and_email/dialog).
 
    ![Anpassa e-poståtgärden](assets/step3.png)
 
-1. **Gör åtgärden tillgänglig i dialogrutan Redigera anpassat formulär.**
+4. **Gör åtgärden tillgänglig i dialogrutan Redigera anpassat formulär.**
 
    Lägg till följande egenskaper i noden store_and_email:
 
@@ -138,15 +143,15 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
    * **submitService** av typen **String** och värdet **Store och Email**. Mer information finns i [Schemalägg sändning av anpassat formulär för anpassade åtgärder](#schedule-adaptive-form-submission).
 
-1. Öppna ett anpassat formulär. Klicka på knappen **Redigera** bredvid **Start** för att öppna dialogrutan **Redigera** i behållaren för anpassat formulär. Den nya åtgärden visas på fliken **Skicka åtgärder**. Om du väljer åtgärd **Store och e-post** visas konfigurationen som lagts till i noden dialog.
+5. Öppna ett anpassat formulär. Klicka på knappen **Redigera** bredvid **Start** för att öppna dialogrutan **Redigera** i behållaren för anpassat formulär. Den nya åtgärden visas på fliken **Skicka åtgärder**. Om du väljer åtgärd **Store och e-post** visas konfigurationen som lagts till i noden dialog.
 
    ![Dialogrutan Skicka åtgärd ](assets/store_and_email_submit_action_dialog.jpg)
 
-1. **Använd åtgärden för att slutföra en uppgift.**
+6. **Använd åtgärden för att slutföra en uppgift.**
 
    Lägg till skriptet post.POST.jsp i åtgärden. (/apps/custom_submit_action/store_and_mail/).
 
-   Kör åtgärden OTB Store (skriptet post.POST.jsp). Använd [FormsHelper.runAction](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction-java.lang.String-java.lang.String-org.apache.sling.api.resource.Resource-org.apache.sling.api.SlingHttpServletRequest-org.apache.sling.api.SlingHttpServletResponse-)(java.lang.String, java.lang.String, org.apache.sling.api.resource.Resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServlet Svar)) API som CQ tillhandahåller i koden för att köra Store-åtgärden. Lägg till följande kod i JSP-filen:
+   Kör åtgärden OTB Store (skriptet post.POST.jsp). Använd [FormsHelper.runAction](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/forms/FormsHelper.html#runAction-java.lang.String-java.lang.String-org.apache.sling.api.resource.Resource-org.apache.sling.api.SlingHttpServletRequest-org.apache.sling.api.SlingHttpServletResponse-)&#x200B;(java.lang.String, java.lang.String, org.apache.sling.api.resource.Resource, org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServlet Svar)) API som CQ tillhandahåller i koden för att köra Store-åtgärden. Lägg till följande kod i JSP-filen:
 
    `FormsHelper.runAction("/libs/fd/af/components/guidesubmittype/store", "post", resource, slingRequest, slingResponse);`
 

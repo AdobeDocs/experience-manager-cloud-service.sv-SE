@@ -1,13 +1,13 @@
 ---
 title: Hur skapar man en FDM (Form Data Model)?
-description: Lär dig skapa en formulärdatamodell (FDM) och skicka eller hämta data till en datakälla med hjälp av ett adaptivt formulär eller ett AEM arbetsflöde.
+description: Lär dig skapa en formulärdatamodell (FDM) och skicka eller hämta data till en datakälla med hjälp av ett adaptivt formulär eller ett AEM-arbetsflöde.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: b17b7441-912c-44c7-a835-809f014a8c86
-source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
+source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -110,7 +110,7 @@ Så här aktiverar du distributionsspecifika molnkonfigurationer i [!UICONTROL F
 1. Integrera molnkonfigurationen i [!DNL Experience Manager]-arkitekturprojektet.
    1. Zippa upp det hämtade paketet.
    1. Kopiera mappen `jcr_root` och placera den i mappen `ui.content` > `src` > `main` > `content`.
-   1. Uppdatera `ui.content` > `src` > `main` > `content` > `META-INF` > `vault` > `filter.xml` för att innehålla filtret `/conf/{foldername}/settings/cloudconfigs/fdm`. Mer information finns i [ui.content-modulen AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html). När detta arkivtypsprojekt distribueras via CM-pipeline installeras samma molnkonfiguration i alla miljöer (eller körningslägen). Om du vill ändra värdet för fält (t.ex. URL) för molnkonfigurationer baserat på miljö använder du OSGi-konfigurationen som beskrivs i följande steg.
+   1. Uppdatera `ui.content` > `src` > `main` > `content` > `META-INF` > `vault` > `filter.xml` för att innehålla filtret `/conf/{foldername}/settings/cloudconfigs/fdm`. Mer information finns i [ui.content-modulen i AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html). När detta arkivtypsprojekt distribueras via CM-pipeline installeras samma molnkonfiguration i alla miljöer (eller körningslägen). Om du vill ändra värdet för fält (t.ex. URL) för molnkonfigurationer baserat på miljö använder du OSGi-konfigurationen som beskrivs i följande steg.
 
 1. Skapa en kontextmedveten konfiguration för Apache Sling. Så här skapar du OSGi-konfigurationen:
    1. **Konfigurera OSGi-konfigurationsfiler i [!DNL Experience Manager] Archetype-projekt.**
@@ -123,14 +123,15 @@ Skapa OSGi Factory Configuration-filer med PID `org.apache.sling.caconfig.impl.o
       1. Under overrides anger du fält som behöver ändras baserat på miljön vid sling override syntax. Mer information finns i [Kontextmedveten konfiguration för Apache Sling - Åsidosätt](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration-override.html#override-syntax). Exempel: `cloudconfigs/fdm/{configName}/url="newURL"`.
 Du kan lägga till flera åsidosättningar genom att välja **[!UICONTROL +]**.
       1. Välj **[!UICONTROL Save]**.
-      1. Följ stegen i [Generera OSGi-konfigurationer med AEM SDK QuickStart](/help/implementing/deploying/configuring-osgi.md#generating-osgi-configurations-using-the-aem-sdk-quickstart) för att hämta OSGi Configuration JSON.
+      1. Följ stegen i [Generera OSGi-konfigurationer med AEM SDK Quickstart](/help/implementing/deploying/configuring-osgi.md#generating-osgi-configurations-using-the-aem-sdk-quickstart) för att få OSGi Configuration JSON.
       1. Placera JSON i OSGi Factory Configuration Files som skapades i föregående steg.
       1. Ändra värdet för `newURL` baserat på miljö (eller körläge).
       1. Om du vill ändra ett hemligt värde baserat på körningsläge kan du skapa en hemlig variabel med hjälp av [molnhanterings-API:t](/help/implementing/deploying/configuring-osgi.md#cloud-manager-api-format-for-setting-properties) och senare kan refereras i [OSGi-konfigurationen](/help/implementing/deploying/configuring-osgi.md#secret-configuration-values).
 När det här arketype-projektet distribueras via CM-pipeline, kommer åsidosättning att ge olika värden i olika miljöer (eller körningsläge).
+
       >[!NOTE]
       >
-      >[!DNL Adobe Managed Service]-användare kan kryptera de hemliga värdena med krypteringsstöd (mer information finns i [krypteringsstöd för konfigurationsegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encryption-support-for-configuration-properties.html#enabling-encryption-support) och placera krypterad text i värdet efter att [kontextmedvetna konfigurationer är tillgängliga i Service Pack 6.5.13.0](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html#runmode-specific-context-aware-config).
+      >[!DNL Adobe Managed Service]-användare kan kryptera de hemliga värdena med krypteringsstöd för mer information, se [krypteringsstöd för konfigurationsegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encryption-support-for-configuration-properties.html#enabling-encryption-support) och placera krypterad text i värdet efter att [kontextmedvetna konfigurationer är tillgängliga i Service Pack 6.5.13.0](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html#runmode-specific-context-aware-config).
 
 1. Uppdatera datakälldefinitionerna med alternativet att uppdatera datakälldefinitionerna i [redigeraren för formulärdatamodell](#data-sources) för att uppdatera FDM-cachen via FDM-gränssnittet och få den senaste konfigurationen.
 

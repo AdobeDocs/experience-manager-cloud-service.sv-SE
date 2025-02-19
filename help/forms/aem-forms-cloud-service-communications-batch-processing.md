@@ -1,17 +1,17 @@
 ---
-title: Skapa PDF i batch utan ansträngning - Lär dig mer om konsten med batchbearbetning - Självhjälp för att generera miljontals PDF-dokument!
+title: Skapa enkelt PDF i batch - Lär dig mer om konsten med batchbearbetning - Självhjälp för generering av miljontals PDF-dokument!
 description: Hur skapar man varumärkesorienterad och personaliserad kommunikation?
 feature: Adaptive Forms, APIs & Integrations
 role: Admin, Developer, User
 exl-id: 542c8480-c1a7-492e-9265-11cb0288ce98
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 0%
 
 ---
 
-# AEM Forms as a Cloud Service Communications Batch Processing
+# Batchbearbetning i AEM Forms as a Cloud Service Communications
 
 Med kommunikation kan ni skapa, sammanställa och leverera varumärkesorienterad och personaliserad kommunikation som affärskontakter, dokument, kontoutdrag, kravbrev, förmånsmeddelanden, månadsräkningar och välkomstpaket. Du kan använda API:er för kommunikation för att kombinera en mall (XFA eller PDF) med kunddata för att generera dokument i formaten PDF, PS, PCL, DPL, IPL och ZPL.
 
@@ -76,11 +76,12 @@ Innan du använder en gruppåtgärd:
 * Överför kunddata (XML-filer) till Microsoft Azure Blob Storage
 * Skapa en molnkonfiguration
 * Skapa konfiguration för batchdatalager
-* Överför mallar och annat material till Experience Manager Forms Cloud Service
+* Överför mallar och annat material till din Experience Manager Forms Cloud Service-instans
 
-### Överför kunddata (XML-filer) till Azure Storage {#upload-customer-data-to-Azure-Storage}
+### Överför kunddata (XML-filer) till Azure Storage
 
 Skapa [containers](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs) och [överför kunddata (XML)](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage-explorer-blobs#managing-blobs-in-a-blob-container) till [folders](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal) inuti behållarna på din Microsoft Azure-lagring.
+
 >[!NOTE]
 >
 >Du kan konfigurera Microsoft Azure-lagring så att indatamappen rensas automatiskt eller så att innehåll i utdatamappen flyttas till en annan plats vid schemalagda intervall. Se dock till att mapparna inte rensas när en gruppåtgärd som refererar till mapparna fortfarande körs.
@@ -89,12 +90,12 @@ Skapa [containers](https://docs.microsoft.com/en-us/azure/vs-azure-tools-storage
 
 Molnkonfigurationen ansluter din Experience Manager-instans till Microsoft Azure Storage. Så här skapar du en molnkonfiguration:
 
-1. Gå till Verktyg > Cloud Service > Azure Storage
+1. Gå till Verktyg > Molntjänster > Azure Storage
 1. Öppna en mapp som är värd för konfigurationen och klicka på Skapa. Du använder mappen Global eller skapar en mapp.
 1. Ange namnet på konfigurationen och autentiseringsuppgifterna som ska anslutas till tjänsten. Du kan [hämta dessa autentiseringsuppgifter från din Microsoft Azure-lagringsportal](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 1. Klicka på Skapa.
 
-Din Experience Manager-instans är nu redo att ansluta till Microsoft Azure Storage och använda den för att lagra och läsa innehåll, när det behövs.
+Din Experience Manager-instans är nu klar att ansluta till Microsoft Azure Storage och använda den för att lagra och läsa innehåll, när det behövs.
 
 ### Skapa konfiguration för batchdatalager {#create-batch-data-store-configuration}
 
@@ -112,11 +113,11 @@ Så här skapar du konfigurationen:
 
 Din Experience Manager-instans är nu ansluten till Microsoft Azure Storage och konfigurerad att hämta och skicka data till specifika platser på Microsoft Azure Storage.
 
-### Överför mallar och andra resurser till din Experience Manager-instans {#upload-templates-and-other-assets-to-your-AEM-instance}
+### Överför mallar och annat material till din Experience Manager-instans {#upload-templates-and-other-assets-to-your-AEM-instance}
 
 En organisation har vanligtvis flera mallar. Till exempel en mall var för kreditkortskontoutdrag, förmånskontoutdrag och ansökningar. Överför alla sådana XDP- och PDF-mallar till din Experience Manager-instans. Så här överför du en mall:
 
-1. Öppna instansen Experience Manager.
+1. Öppna Experience Manager.
 1. Gå till Forms > Forms och dokument
 1. Klicka på Skapa > Mapp och skapa en mapp. Öppna mappen.
 1. Klicka på Skapa > Filöverföring och överför mallarna.
@@ -164,7 +165,7 @@ Svaret på statusbegäran innehåller statusavsnittet. Den innehåller informati
 
 När jobbet är klart lagras de genererade dokumenten i mappen `success` på den målplats som anges i konfigurationen för batchdatalagret. Om det finns några fel skapar tjänsten en `failure`-mapp. Här finns information om typ och orsak till fel.
 
-Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Målplatsen innehåller sedan två undermappar, `pdf` och `pcl`, en för var och en av utdatatyperna. Låt oss anta att genereringen av PDF har slutförts. `pdf`-undermappen innehåller `success`-undermappen som i sin tur innehåller det faktiska genererade PDF-dokumentet `record1.pdf`. Anta att PCL-genereringen misslyckades. Undermappen `pcl` innehåller en `failure`-undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Målplatsen innehåller också en temporär mapp med namnet `__tmp__` som innehåller vissa filer som krävs under gruppkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
+Låt oss förstå med hjälp av ett exempel: Anta att det finns en indatafil `record1.xml` och två utdatatyper: `PDF` och `PCL`. Målplatsen innehåller sedan två undermappar, `pdf` och `pcl`, en för var och en av utdatatyperna. Låt oss anta att PDF-genereringen har slutförts. `pdf`-undermappen innehåller undermappen `success` som i sin tur innehåller det genererade PDF-dokumentet `record1.pdf`. Anta att PCL-genereringen misslyckades. Undermappen `pcl` innehåller en `failure`-undermapp som i sin tur innehåller en felfil `record1.error.txt` som innehåller information om felet. Målplatsen innehåller också en temporär mapp med namnet `__tmp__` som innehåller vissa filer som krävs under gruppkörning. Den här mappen kan tas bort när det inte finns några aktiva batchkörningar som refererar till målmappen.
 
 >[!NOTE]
 >

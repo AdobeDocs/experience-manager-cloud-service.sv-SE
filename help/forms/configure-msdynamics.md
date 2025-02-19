@@ -3,7 +3,8 @@ title: Hur konfigurerar jag Microsoft Dynamics 365 ur kartongen med formulärdat
 description: Lär dig hur du integrerar Microsoft Dynamics 365 med Adaptive Forms.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
-source-git-commit: 25284474793742a1af28e3c81976a3061d9eaf3e
+exl-id: 29ee324c-cd4c-403b-bb3d-b1eda8e8ad88
+source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
 workflow-type: tm+mt
 source-wordcount: '869'
 ht-degree: 0%
@@ -51,6 +52,7 @@ Skapa ett konto i **Power Platform Admin Center** för att:
    * Aktivera Microsoft Dynamics 365-program
 
    Följ stegen i videon för att skapa ett konto i Power Platform Admin Center. I den här videon har ett provkonto skapats i demonstrationssyfte.
+
    >[!VIDEO](https://video.tv.adobe.com/v/3444388)
 
 1. **Registrera ett program för [!DNL Microsoft® Dynamics 365] i Azure Active Directory**

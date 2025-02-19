@@ -1,11 +1,11 @@
 ---
-title: Hur man använder Turnstile i en AEM adaptiv form?
+title: Hur använder man Turnstile i en AEM Adaptiv form?
 description: Förbättra säkerheten i blanketterna med problemfri hantering. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: 644c351b-a167-4d18-8b99-b7cae6be48d5
-source-git-commit: 36832b02ac12c1ade70fb81b2cb2c267b5eebdfe
+source-git-commit: 914139a6340f15ee77024793bf42fa30c913931e
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Om du vill konfigurera Turnstile för AEM Forms måste du hämta [Turnstile site
 ### Steg för att konfigurera Turnstile för AEM Forms{#steps-to-configure-turnstile}
 
 1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service-miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en konfigurationsbehållare för att ansluta din AEM Forms-miljö till Turnstle:
-   1. Öppna din AEM Forms as a Cloud Service-instans.
+   1. Öppna AEM Forms as a Cloud Service-instansen.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. I Configuration Browser kan du välja en befintlig mapp eller skapa en mapp. Du kan skapa en mapp och aktivera alternativet Cloud Configurations för den eller aktivera alternativet Cloud Configurations för en befintlig mapp:
 
@@ -50,14 +50,14 @@ Om du vill konfigurera Turnstile för AEM Forms måste du hämta [Turnstile site
          1. Aktivera **[!UICONTROL Cloud Configurations]** i dialogrutan Konfiguration.
          1. Välj **[!UICONTROL Save & Close]** om du vill spara konfigurationen och stänga dialogrutan.
 
-1. Konfigurera Cloud Servicen:
-   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** och välj **[!UICONTROL Turnstile]** i AEM författarinstans.
+1. Konfigurera Cloud Service:
+   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** och välj **[!UICONTROL Turnstile]** i AEM-författarinstansen.
       ![Turnstile in ui](assets/turnstile-in-ui.png)
    1. Välj en konfigurationsbehållare, skapad eller uppdaterad, enligt beskrivningen i föregående avsnitt. Välj **[!UICONTROL Create]**.
       ![Konfigurationsomvandling](assets/config-hcaptcha.png)
    1. Ange **[!UICONTROL Widget Type]** som hanterad, widgettypen kan ändras beroende på vilken nyckel som hämtas i förutsättningen **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för den färdiga tjänsten [ som hämtas i förutsättning ](#prerequisite). Välj **[!UICONTROL Create]**.
 
-      ![Konfigurera Cloud Servicen för att ansluta din AEM Forms-miljö till Turnestle](assets/config-turntstile.png)
+      ![Konfigurera Cloud Service för att ansluta din AEM Forms-miljö till Turnestle](assets/config-turntstile.png)
 
 >[!NOTE]
 > Användare behöver inte ändra validerings-URL:en på klientsidan och validerings-URL:en på serversidan eftersom de redan är förifyllda för aktiveringsvalidering.
@@ -66,7 +66,7 @@ När Turnstile Captcha-tjänsten har konfigurerats kan den användas i en adapti
 
 ## Använd Turnstile i anpassad form{#using-turnstile-foundation-components}
 
-1. Öppna din AEM Forms as a Cloud Service-instans.
+1. Öppna AEM Forms as a Cloud Service-instansen.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
 1. Välj ett anpassat formulär och välj **[!UICONTROL Properties]**. För alternativet **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller den molnkonfiguration som ansluter AEM Forms med Turnstle och väljer **[!UICONTROL Save & Close]**.
 
@@ -89,8 +89,10 @@ När Turnstile Captcha-tjänsten har konfigurerats kan den användas i en adapti
       * Vid en användaråtgärd.
    * **[!UICONTROL Captcha Service]:** Välj din Captcha-tjänst, här väljer du tjänsten Cloudfare Turnstile Captcha.
    * **[!UICONTROL Captcha Configuration]:** Välj en molnkonfiguration som har konfigurerats för Turnstle. här väljer du till exempel den **hanterade nyckeln**.
+
      >[!NOTE]
-     >Du kan ha flera molnkonfigurationer i din miljö i liknande syfte. Välj tjänsten noggrant. Om ingen tjänst visas läser du [Ansluta AEM Forms-miljön med Turnstile](#connect-your-forms-environment-with-turnstile-service) för att lära dig hur du skapar en Cloud Service som ansluter AEM Forms-miljön till den färdiga tjänsten.
+     >
+     > Du kan ha flera molnkonfigurationer i din miljö i liknande syfte. Välj tjänsten noggrant. Om ingen tjänst visas läser du [Ansluta AEM Forms-miljön med Turnstile](#connect-your-forms-environment-with-turnstile-service) för att lära dig hur du skapar en Cloud Service som ansluter din AEM Forms-miljö till den färdiga tjänsten.
 
    * **Felmeddelande:** Ange felmeddelandet som ska visas för användaren när Captcha-överföringen misslyckas.
    * **Captcha-storlek:** Du väljer visningsstorlek för den interaktiva utmaningsdialogrutan. Använd alternativet **[!UICONTROL Compact]** om du vill visa en liten storlek och alternativet **[!UICONTROL Normal]** om du vill visa en dialogruta med relativt stor vändbarhet.

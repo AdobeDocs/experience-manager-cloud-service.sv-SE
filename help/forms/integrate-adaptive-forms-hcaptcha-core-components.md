@@ -1,12 +1,12 @@
 ---
-title: Hur man använder hCaptcha&reg; i en AEM adaptiv Form Core Components?
+title: Hur använder man hCaptcha&reg; i en AEM Adaptive Form Core Components?
 description: Förbättra formulärsäkerheten med Captcha&reg; service utan problem. Stegvisa anvisningar inifrån!
 topic-tags: Adaptive Forms, author
 keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot Prevention, Core Components, formuläröverföringssäkerhet, förhindrande av skräppost
 feature: Adaptive Forms, Core Components
 exl-id: 6c559df2-7b6a-42fe-b44c-29a782570a0c
 role: User, Developer
-source-git-commit: 553f456f0eab43cee11fb9e66ce9e1dbacdc2b5c
+source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
 workflow-type: tm+mt
 source-wordcount: '909'
 ht-degree: 0%
@@ -28,7 +28,7 @@ AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
 
 Med tjänsten Captcha® kan du skydda dina formulär från stötar, skräppost och automatiskt missbruk. Det utgör en utmaning för kryssrutewidgeten och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med formuläret. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga aktiviteter publiceras.
 
-AEM Forms as a Cloud Service stöder hCaptcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
+AEM Forms as a Cloud Service har stöd för Captcha® i adaptiva Forms Core-komponenter. Du kan använda den för att visa en kryssrutewidget när formulär skickas.
 
 <!-- ![hCaptcha&reg;](assets/hCaptcha&reg;-challenge.png)-->
 
@@ -42,7 +42,7 @@ Om du vill konfigurera hCaptcha® med AEM Forms måste du hämta sitekey och hem
 Så här integrerar du AEM Forms med tjänsten Captcha®:
 
 1. Skapa en konfigurationsbehållare i din AEM Forms as a Cloud Service-miljö. En konfigurationsbehållare innehåller molnkonfigurationer som används för att ansluta AEM till externa tjänster. Så här skapar och konfigurerar du en konfigurationsbehållare för att ansluta din AEM Forms-miljö till hCaptcha®:
-   1. Öppna din AEM Forms as a Cloud Service-instans.
+   1. Öppna AEM Forms as a Cloud Service-instansen.
    1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
    1. I Configuration Browser kan du välja en befintlig mapp eller skapa en mapp. Du kan skapa en mapp och aktivera alternativet Cloud Configurations för den eller Aktivera alternativet Cloud Configurations för en befintlig mapp:
 
@@ -55,14 +55,14 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
          1. Aktivera **[!UICONTROL Cloud Configurations]** i dialogrutan Konfiguration.
          1. Välj **[!UICONTROL Save & Close]** om du vill spara konfigurationen och stänga dialogrutan.
 
-1. Konfigurera Cloud Servicen:
-   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** och välj **[!UICONTROL hCaptcha®]** i AEM författarinstans.
+1. Konfigurera Cloud Service:
+   1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** och välj **[!UICONTROL hCaptcha®]** i AEM-författarinstansen.
       ![hCaptcha® i ui](assets/hcaptcha-in-ui.png)
    1. Välj en konfigurationsbehållare, skapad eller uppdaterad, enligt beskrivningen i föregående avsnitt. Välj **[!UICONTROL Create]**.
       ![Configuration Captcha®](assets/config-hcaptcha.png)
    1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för hCaptcha®-tjänsten [ som hämtas i Krav](#prerequisite). Välj **[!UICONTROL Create]**.
 
-      ![Konfigurera Cloud Servicen för att ansluta din AEM Forms-miljö med hCaptcha®](assets/create-hcaptcha-config.png)
+      ![Konfigurera Cloud Service för att ansluta din AEM Forms-miljö till Captcha®](assets/create-hcaptcha-config.png)
 
    >[!NOTE]
    > Användarna behöver inte ändra [Verifierings-URL:en för klientsidan ](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Verifierings-URL:en för serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering.
@@ -71,7 +71,7 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
 
 ## Använd hCaptcha® i en anpassad Forms Core-komponent {#using-hCaptcha®-core-components}
 
-1. Öppna din AEM Forms as a Cloud Service-instans.
+1. Öppna AEM Forms as a Cloud Service-instansen.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
 1. Välj ett anpassat formulär och välj **[!UICONTROL Properties]**. För alternativet **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller den molnkonfiguration som ansluter AEM Forms med hCaptcha® och väljer **[!UICONTROL Save & Close]**.
 
@@ -91,9 +91,11 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
    * **Captcha-storlek:** Du kan välja visningsstorlek för utmaningsdialogrutan hCaptcha®. Använd alternativet **[!UICONTROL Compact]** om du vill visa en liten storlek och alternativet **[!UICONTROL Normal]** om du vill visa en relativt stor hCaptcha®-utmaningsdialogruta.<!-- or **[!UICONTROL Invisible]** to validate hCaptcha&reg; without explicitly rendering the checkbox widget on the user interface. -->
    * **[!UICONTROL Validation Message]:** Ange ett valideringsmeddelande för din Captcha-validering när formulär skickas.
    * **[!UICONTROL Script Validation Message]** - Med det här alternativet kan du ange ett meddelande som ska visas om skriptvalideringen misslyckas.
+
      >[!NOTE]
      >Du kan ha flera molnkonfigurationer i din miljö i liknande syfte. Välj tjänsten noggrant. Om ingen tjänst finns med i listan kan du läsa [Koppla din AEM Forms-miljö till hCaptcha®](#connect-your-forms-environment-with-hcaptcha-service) för att lära dig hur du skapar en Cloud Service som ansluter din AEM Forms-miljö till hCaptcha®-tjänsten.
-     <!--* **Error Message:** Provide the error message to display to the user when the Captcha submission fails.-->
+
+   <!--* **Error Message:** Provide the error message to display to the user when the Captcha submission fails.-->
 
 1. Välj **[!UICONTROL Done]**.
 

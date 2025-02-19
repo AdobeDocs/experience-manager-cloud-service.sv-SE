@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 7c65208b948345ea185032a04595ffe65e95876d
+source-git-commit: f81e8434029ade26dd2c30b249537699971e9a4b
 workflow-type: tm+mt
 source-wordcount: '1750'
 ht-degree: 0%
@@ -128,7 +128,7 @@ AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intell
 
 #### Hantera publikation
 
-Du kan använda arbetsflödet Hantera publikation för att publicera eller avpublicera formulär i olika miljöer, vanligtvis från författarinstansen till publicerings- och förhandsgranskningsinstanserna. Användarna kan publicera, avpublicera eller schemalägga publiceringen på ett smidigt sätt.
+Du kan använda arbetsflödet [Hantera publikation](/help/forms/manage-publication.md#publish-forms-using-the-manage-publication-option) för att publicera eller avpublicera formulär i olika miljöer, vanligtvis från författarinstansen till publicerings- och förhandsgranskningsinstanserna. Användarna kan publicera, avpublicera eller schemalägga publiceringen på ett smidigt sätt.
 
 #### Autospara ett utkast för Core Components based Adaptive Forms
 

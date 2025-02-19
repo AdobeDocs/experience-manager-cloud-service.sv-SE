@@ -4,7 +4,7 @@ description: Lär dig att skapa upprepningsbara avsnitt eller fält i en adaptiv
 role: Architect, Developer, Admin, User
 feature: Adaptive Forms, Core Components
 exl-id: 02521bf3-83c1-40a0-8fe6-23af240727e9
-source-git-commit: f28f212574dda0ece2cedb56a714d381e5bd7d3c
+source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
 workflow-type: tm+mt
 source-wordcount: '1258'
 ht-degree: 0%
@@ -98,6 +98,7 @@ Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bor
    * Om du vill skapa en knapp för borttagningspanelen anger du `this.panel.instanceManager.removeInstance(this.panel.instanceIndex)`
 
    Klicka på **Klar**.
+
 >[!VIDEO](https://video.tv.adobe.com/v/3421620/adaptive-forms-repeatable-sections)
 
 >[!NOTE]
