@@ -4,7 +4,7 @@ description: Förstå JSON-kontraktet mellan komponentdefinitionen och den unive
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: e1bb1a54-50c0-412a-a8fd-8167c6f47d2b
-source-git-commit: 0053c874e6e7a2782e03a37fe3928baa9cd5bdba
+source-git-commit: afb59345b48b39376b62a13cce8910bc9bc42c38
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -41,15 +41,15 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
         {
           "title":"Text",
           "id":"text",
+          "model": "text",
+          "filter": "texts",
           "plugins":{
             "aem":{
               "page":{
                 "resourceType":"wknd/components/text",
                 "template":{
                   "text":"Default Text",
-                  "name":"Text",
-                  "model":"text",
-                  "filter":"texts"
+                  "name":"Text"
                 }
               }
             },
@@ -58,9 +58,7 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
                 "resourceType":"wknd/components/text",
                 "template":{
                   "text":"Default Text",
-                  "name":"Text",
-                  "model":"text",
-                  "filter":"texts"
+                  "name":"Text"
                 }
               }
             }
@@ -87,6 +85,10 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 * `id` identifierar komponenten unikt.
    * [komponentmodellen](/help/implementing/universal-editor/field-types.md#model-structure) för samma `id` definierar komponentens fält.
    * Eftersom den är unik kan den till exempel användas i en [filterdefinition](/help/implementing/universal-editor/filtering.md) för att avgöra vilka komponenter som kan läggas till i en behållare.
+* `model` definierar vilken [modell](/help/implementing/universal-editor/field-types.md#model-structure) som används med komponenten.
+   * Modellen underhålls därför centralt i komponentdefinitionen och behöver inte vara [specificerad i instrumenteringen.](/help/implementing/universal-editor/field-types.md#instrumentation)
+   * På så sätt kan du flytta komponenter mellan behållare.
+* `filter` definierar vilket [filter](/help/implementing/universal-editor/filtering.md) som ska användas med komponenten.
 
 ## `plugins` {#plugins}
 
@@ -114,11 +116,6 @@ Om komponenten är innehåll på sidan kan du ange följande information.
 #### `template` {#template}
 
 Genom att tillhandahålla valfria nyckel-/värdepar kan `template` automatiskt skriva dessa till den nya komponenten. Dessutom kan följande valfria värden anges.
-
-* `model` definierar vilken [modell](/help/implementing/universal-editor/field-types.md#model-structure) som används med komponenten.
-   * Modellen underhålls därför centralt i komponentdefinitionen och behöver inte vara [specificerad i instrumenteringen.](/help/implementing/universal-editor/field-types.md#instrumentation)
-   * På så sätt kan du flytta komponenter mellan behållare.
-* `filter` definierar vilket [filter](/help/implementing/universal-editor/filtering.md) som ska användas med komponenten.
 
 ### `cf` {#cf}
 
