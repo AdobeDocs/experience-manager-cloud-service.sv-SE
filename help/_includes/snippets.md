@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3a12fff170f521f6051f0c24a4eb28a12439eec1
+source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1392'
 ht-degree: 0%
 
 ---
@@ -56,6 +56,17 @@ ht-degree: 0%
 * [Ansluta ett adaptivt formulär till Microsoft](/help/forms/configure-msdynamics.md)
 * [Ansluta ett adaptivt formulär till Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 * [Skapa anpassad skickaåtgärd](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md)
+
+## Universal Editor{#universal-editor-see-also}
+
+* [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+* [Publicera formuläret](/help/edge/docs/forms/universal-editor/publish-forms.md)
+* [Skicka in formuläret](/help/edge/docs/forms/universal-editor/submit-action.md)
+* [Anpassa utseendet på formulären](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
+* [Skapa regler för ditt formulär](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
+* [Använd reCAPTCHA i formuläret](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
+* [Skapa en anpassad komponent för formuläret](/help/edge/docs/forms/universal-editor/create-custom-component.md)
+* [Förhandsgranska formulär i svarsläge](/help/edge/docs/forms/universal-editor/responsive-layout.md)
 
 ## Se även {#see-more-forms-eds}
 
@@ -165,7 +176,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >Om du vill undvika avbrott i körningen av frontendpipelinen kontrollerar du att det här IP-Tillåtelselista har lagts till i Cloud Manager *innan* du aktiverar pipelinen.
 >
 >**Cloud Manager IP Tillåtelselista**
->52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28,52.254.106.0/28,4.152.211.251
+>52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28},52.254.106.0/28,4.152.211.251
 >   
 
 ## Lägg till en Cloud Manager IP Tillåtelselista och rörledning för frontendsupport {#add-cm-allowlist-frontend-pipeline}

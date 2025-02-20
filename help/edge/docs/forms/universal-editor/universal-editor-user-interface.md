@@ -4,13 +4,13 @@ description: Den här självstudiekursen hjälper dig att komma igång med Unive
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
-source-git-commit: f62bccacd3252422899a35d2b431450c919982de
+exl-id: 90321e81-bb55-48b2-b329-4944bf926309
+source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
-
 
 # Exploring the Universal Editor (WYSIWYG) Interface
 
@@ -233,14 +233,4 @@ Med redigeraren kan du redigera formuläret, och formuläret som anges i platsf�
 
 ## Se även
 
-* [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/tutorial.md)
-* [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
-* [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
-* [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
-* [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
-* [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
-* [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
-* [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
-* [Övervakning av faktisk användning](https://www.aem.live/developer/rum#authentication)
-
-
+{{universal-editor-see-also}}

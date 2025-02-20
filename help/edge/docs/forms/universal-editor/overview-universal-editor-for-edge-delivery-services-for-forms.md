@@ -6,9 +6,9 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 7a868ddc3d13eaf3b5352e130b2026db64a02723
+source-git-commit: 7d0b735b367189852e4897702738eefc1e87d892
 workflow-type: tm+mt
-source-wordcount: '1108'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -36,8 +36,7 @@ Här är layouten med likbreddskort (med kolumner med fast bredd):
 
 | ![Publicerar/avpublicerar](/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg) | ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/responsive.svg) | ![Anpassade komponenter](/help/edge/docs/forms/universal-editor/assets/custom-components.svg) |
 |:-------------:|:-------------:|:-------------:|
-
-| [**Publicerar/avpublicerar**](/help/edge/docs/forms/universal-editor/publish-forms.md) | [**Responsivt läge**](/help/edge/docs/forms/universal-editor/responsive-layout.md) | [**Egna komponenter**](/help/edge/docs/forms/universal-editor/create-custom-component.md) |
+| [**Publicerar/avpublicerar**](/help/edge/docs/forms/universal-editor/publish-forms.md) | [**Responsivt läge**](/help/edge/docs/forms/universal-editor/responsive-layout.md) | [**Anpassade komponenter**](/help/edge/docs/forms/universal-editor/create-custom-component.md) |
 | Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick. | Skapa formulär som smidigt kan anpassas till olika enheter (datorer, surfplattor och mobila enheter). Använd responsivt läge för att förhandsgranska och testa formulär för olika skärmstorlekar. | Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen. |
 
 | ![Formatering](/help/edge/docs/forms/universal-editor/assets/personalization.svg) | ![Tjänster för förifyllnad](/help/edge/docs/forms/universal-editor/assets/prefill-services.svg) | ![A/B-testning](/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg) |
@@ -52,7 +51,6 @@ Här är layouten med likbreddskort (med kolumner med fast bredd):
 
 | ![CAPTCHA](/help/edge/docs/forms/universal-editor/assets/captcha.svg) | ![Bädda in Forms](/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg) | ![Tack!](/help/edge/docs/forms/universal-editor/assets/thank-you.svg) |
 |:-------------:|:-------------:|:-------------:|
-
 | **Anpassning av redigerare** | **Bädda in Forms** | [**Tack!**](/help/edge/docs/forms/universal-editor/submit-action.md#show-a-custom-thank-you-message-on-adaptive-form-submission-submit-action-message-ue) |
 | Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov. | Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor. | Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats. |
 
@@ -246,13 +244,5 @@ Den universella redigeraren innehåller inbyggda analys- och spårningsverktyg f
 
 ## Börja skapa formulär
 
-* [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/tutorial.md)
-* [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
-* [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
-* [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
-* [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
-* [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
-* [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
-* [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
-* [Övervakning av faktisk användning](https://www.aem.live/developer/rum#authentication)
+{{universal-editor-see-also}}
 
