@@ -6,9 +6,9 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 4828e1965514a5ce5cd6d8528c72af33b7b748ea
+source-git-commit: 5680e2381f5826a48e731906aa8aab9d06a0e944
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1109'
 ht-degree: 0%
 
 ---
@@ -31,17 +31,17 @@ Här är layouten med likbreddskort (med kolumner med fast bredd):
 
 | ![WYSIWYG-gränssnitt](/help/edge/docs/forms/universal-editor/assets/generate-forms.svg) | ![Regelredigeraren](/help/edge/docs/forms/universal-editor/assets/rule-editor.svg) | ![Skicka åtgärder](/help/edge/docs/forms/universal-editor/assets/submit-actions.svg) |
 |:-------------:|:-------------:|:-------------:|
-| [**WYSIWYG-gränssnitt**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/universal-editor-user-interface) | [**Regelredigeraren**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/rule-editor-universal-editor) | [**Skicka åtgärder**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/submit-action) |
+| [**WYSIWYG-gränssnitt**](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md) | [**Regelredigeraren**](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md) | [**Skicka åtgärder**](/help/edge/docs/forms/universal-editor/submit-action.md) |
 | Universell redigerare har ett WYSIWYG-gränssnitt för formulärdesign med ett färdigbyggt komponentbibliotek, responsiv design, mallbaserad framtagning och fältändringar i realtid. | Med regelredigeraren kan användare skapa dynamiska formulärinteraktioner med händelsestyrda regler, omedelbar validering och felhantering via lättviktiga JavaScript och JSON. | Skicka funktionsmakron har stöd för serverdelsintegrering, logik för villkorlig inskickning, säkra slutpunkter och preprocessorer, vilket effektiviserar inskickningsarbetsflödena. |
 
 | ![Publicerar/avpublicerar](/help/edge/docs/forms/universal-editor/assets/publish-unpublish.svg) | ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/responsive.svg) | ![Anpassade komponenter](/help/edge/docs/forms/universal-editor/assets/custom-components.svg) |
 |:-------------:|:-------------:|:-------------:|
-| [**Publicerar/avpublicerar**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/publish-forms) | **Responsivt läge** | [**Anpassade komponenter**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/create-custom-component) |
+| [**Publicerar/avpublicerar**](/help/edge/docs/forms/universal-editor/publish-forms.md) | [**Responsivt läge**](/help/edge/docs/forms/universal-editor/responsive-layout.md) | [**Anpassade komponenter**](/help/edge/docs/forms/universal-editor/create-custom-component.md) |
 | Styr enkelt formulärens synlighet - publicera eller avpublicera dem direkt från redigeraren med bara några klick. | Skapa formulär som smidigt kan anpassas till olika enheter (datorer, surfplattor och mobila enheter). Använd responsivt läge för att förhandsgranska och testa formulär för olika skärmstorlekar. | Med anpassade komponenter kan utvecklare utöka formulärfunktionerna genom att skapa unika element som är anpassade till specifika användningsfall inom organisationen. |
 
 | ![Formatering](/help/edge/docs/forms/universal-editor/assets/personalization.svg) | ![Tjänster för förifyllnad](/help/edge/docs/forms/universal-editor/assets/prefill-services.svg) | ![A/B-testning](/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg) |
 |:-------------:|:-------------:|:-------------:|
-| [**Formatering**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/style-theme-forms) | **Förfyll tjänster** (kommer snart) | [**A/B-testning**](https://github.com/adobe/aem-experimentation/blob/main/documentation/experiments.md) |
+| [**Formatering**](/help/edge/docs/forms/universal-editor/style-theme-forms.md) | **Förfyll tjänster** (kommer snart) | [**A/B-testning**](https://github.com/adobe/aem-experimentation/blob/main/documentation/experiments.md) |
 | Med formatering med CSS kan utvecklare anpassa utseendet på formulärelement och skapa en visuellt tilltalande design som passar ihop med webbplatsens estetik. | I förifyllda tjänster fylls formulärfält automatiskt i med relevanta användardata från olika källor, vilket minskar behovet av manuell inmatning och förbättrar användarupplevelsen. | A/B-tester gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna. |
 
 | ![Analys och spårning](/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg) | ![Aktivitetshantering](/help/edge/docs/forms/universal-editor/assets/adobe-workfront.svg) | ![Databindning](/help/edge/docs/forms/universal-editor/assets/data-binding.svg) |
@@ -51,7 +51,7 @@ Här är layouten med likbreddskort (med kolumner med fast bredd):
 
 | ![Anpassning av redigerare](/help/edge/docs/forms/universal-editor/assets/editor-customization.svg) | ![Bädda in Forms](/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg) | ![Tack!](/help/edge/docs/forms/universal-editor/assets/thank-you.svg) |
 |:-------------:|:-------------:|:-------------:|
-| **Anpassning av redigerare** | **Bädda in Forms** | [**Tack!**](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/universal-editor/submit-action#submit-action-message-ue) |
+| **Anpassning av redigerare** | **Bädda in Forms** | [**Tack!**](/help/edge/docs/forms/universal-editor/submit-action.md#show-a-custom-thank-you-message-on-adaptive-form-submission-submit-action-message-ue) |
 | Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov. | Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor. | Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats. |
 
 
