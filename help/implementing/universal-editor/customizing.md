@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: cdad4954b13f5582bebfd604220da90529231ccd
+source-git-commit: 98879fe30482e042da05a390e75d11c0adf7dba9
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,16 @@ Knappen **Publicera** kan därför ignoreras helt i ett program genom att följa
 
 ```html
 <meta name="urn:adobe:aue:config:disable" content="publish"/>
+```
+
+## Inaktiverar publicering till förhandsgranskning {#publish-preview}
+
+Vissa redigeringsarbetsflöden kan utesluta publiceringen till [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) (om den är tillgänglig).
+
+Alternativet **Förhandsgranska** i publiceringsfönstret kan därför ignoreras helt i ett program genom att följande metadata läggs till.
+
+```html
+<meta name="urn:adobe:aue:config:disable" content="publish-preview"/>
 ```
 
 ## Filtrera komponenter {#filtering-components}

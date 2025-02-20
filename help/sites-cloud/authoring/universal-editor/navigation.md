@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: e87447922b856d4cbbd09fb4dcd4ae2b5da6ff50
+source-git-commit: 98879fe30482e042da05a390e75d11c0adf7dba9
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1660'
 ht-degree: 0%
 
 ---
@@ -66,6 +66,10 @@ Gränssnittet är indelat i dessa huvudområden.
 * [Egenskapspanelen](#properties-rail)
 
 ![Gränssnittet i den universella redigeraren](assets/ui.png)
+
+>[!TIP]
+>
+>Den universella redigeraren erbjuder ett antal [anpassningsalternativ](/help/implementing/universal-editor/customizing.md) och [utökningspunkter](/help/implementing/universal-editor/extending.md) som kan ändra och lägga till i redigerarens funktioner. Av den anledningen kan du se andra alternativ än de som beskrivs här.
 
 ### Experience Cloud Header {#experience-cloud-header}
 
