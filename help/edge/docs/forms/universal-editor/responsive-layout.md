@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du förhandsgranskar formulär med
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
-source-git-commit: 1abc1092872d4a3e0253ddf0388d23e39a6c2de9
+source-git-commit: 222ee977f6ee76908fecf9cb3171287fddba8790
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Den universella redigeraren har en **emulatorikon** som finns i skärmens övre 
 Så här visar du hur Universal Editor återger formulär i olika skärmstorlekar:
 
 1. Öppna formuläret i Universell redigerare för redigering.
-2. Välj ikonen ![Emulator](/help/edge/docs/forms/universal-editor/assets/emulator.png){height=2%,width=2%} som finns i verktygsfältet för den universella redigeraren och klicka på emulatorikonen för att visa alternativet.
+1. Välj ikonen ![Emulator](/help/edge/docs/forms/universal-editor/assets/emulator.png){height=2%,width=2%} som finns i verktygsfältet för den universella redigeraren och klicka på emulatorikonen för att visa alternativet.
 
    ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/universal-editor-emulator.png)
 
-3. Välj alternativet att emulera en mobil enhet i Universell redigerare
+1. Välj ett alternativ för att emulera ett formulär i Universal Editor på en vald enhet: Skrivbord, Surfplatta, Mobil.
 
    ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/ue-responsivemode.png){width=40%,height=40%}
 
@@ -42,24 +42,24 @@ Universal Editor har olika emulatorer för att förhandsgranska formulär på ol
 
 <table border="1" style="text-align:" left; border-collapse: collapse;">
     <tr>
-        <th>Typ av emulator</th>
-        <th>Enhetsbild</th>
+        <th style="width: 20%">Typ av emulator</th>
+        <th style="width: 80%">Enhetsbild</th>
     </tr>
     <tr>
-        <td>Skrivbord</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-desktop.png" alt="Desktop Emulator" style="width: auto; height: auto"></td>
+        <td style="width: 20%">Skrivbord</td>
+        <td style="width: 80%"><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-desktop.png" alt="Desktop Emulator" style="width: auto; height: auto"></td>
     </tr>
     <tr>
-        <td>Tablet</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-tab.png" alt="Tablettemulator" style="width: auto; height: auto"></td>
+        <td style="width: 20%">Tablet</td>
+        <td style="width: 80%"><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-tab.png" alt="Tablettemulator" style="width: auto; height: auto"></td>
     </tr>
     <tr>
-        <td>Mobil</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-mobile.png" alt="Mobile Emulator" style="width: auto; height: auto"></td>
+        <td style="width: 20%">Mobil</td>
+        <td style="width: 80%"><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-mobile.png" alt="Mobile Emulator" style="width: auto; height: auto"></td>
     </tr>
     <tr>
-        <td>Egen enhet</td>
-        <td><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-custom.png" alt="Emulator för anpassad enhet" style="width: auto; height: auto"></td>
+        <td style="width: 20%">Egen enhet</td>
+        <td style="width: 80%"><img src="/help/edge/docs/forms/universal-editor/assets/universal-editor-custom.png" alt="Emulator för anpassad enhet" style="width: auto; height: auto"></td>
     </tr>
 </table>
 
