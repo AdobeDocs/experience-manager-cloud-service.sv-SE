@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: cdf15df0b8b288895db4db0032137c38994f4faf
 workflow-type: tm+mt
-source-wordcount: '4049'
+source-wordcount: '4215'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Trafikfilterregler kan driftsättas via Cloud Manager konfigureringsrörledninga
 [Följ igenom en självstudiekurs](#tutorial) för att snabbt bygga upp konkreta expertkunskaper om den här funktionen.
 
 >[!NOTE]
->Mer information om hur du konfigurerar trafik på CDN, inklusive redigering av begäran/svar, deklarering av omdirigeringar och proxering till ett icke-AEM ursprung, finns i artikeln [Konfigurera trafik på CDN](/help/implementing/dispatcher/cdn-configuring-traffic.md) .
+>Mer information om hur du konfigurerar trafik på CDN, inklusive redigering av begäran/svar, deklarering av omdirigeringar och proxering till ett icke-AEM-ursprung, finns i artikeln [Konfigurera trafik på CDN](/help/implementing/dispatcher/cdn-configuring-traffic.md) .
 
 
 ## Hur den här artikeln ordnas {#how-organized}
@@ -49,15 +49,15 @@ Den här artikeln är indelad i följande avsnitt:
 * **Rekommenderade startregler:** En uppsättning regler att komma igång med.
 * **Självstudiekurs:** Praktiska kunskaper om funktionen, inklusive hur du använder instrumentpanelsverktyg för att deklarera rätt regler.
 
-Adobe bjuder in dig att ge feedback eller ställa frågor om trafikfilterregler genom att skicka ett e-postmeddelande till **aemcs-waf-adopter@adobe.com**.
+Adobe inbjuder dig att ge feedback eller ställa frågor om trafikfilterregler genom att skicka ett e-postmeddelande till **aemcs-waf-adopter@adobe.com**.
 
 ## Trafikskydd - översikt {#traffic-protection-overview}
 
-I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Adobe inser hur allvarlig risken är och erbjuder flera strategier för att skydda kundtillämpningar och mildra attacker när de inträffar.
+I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Adobe inser hur allvarlig risken är och erbjuder flera olika strategier för att skydda kundtillämpningar och mildra attacker när de inträffar.
 
-Vid kanten absorberar det hanterade CDN-nätverket DoS-attacker i nätverkslagret (lager 3 och 4), inklusive översvämnings- och reflektions-/amplifieringsattacker.
+I utkanten absorberar Adobe Managed CDN DoS-attacker i nätverkslagret (lager 3 och 4), inklusive översvämnings- och speglings-/amplifieringsattacker.
 
-Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämringar på grund av oväntat höga trafikökningar över ett visst tröskelvärde. Om det inträffar en DoS-attack som påverkar webbplatsens tillgänglighet larmas Adobe ledningsgrupper och vidtar åtgärder för att minska risken.
+Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring på grund av oväntat höga trafikanter över ett visst tröskelvärde. Om det inträffar en DoS-attack som påverkar webbplatsens tillgänglighet får Adobe ledningsgrupper varningar och vidtar åtgärder för att minska risken.
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
@@ -206,7 +206,7 @@ En grupp villkor består av flera enkla och/eller gruppvillkor.
 
 **Anteckningar**
 
-* Egenskapen `clientIp` för begäran kan bara användas med följande predikat: `equals`, `doesNotEqual`, `in`, `notIn`. `clientIp` kan också jämföras med IP-intervall när predikaten `in` och `notIn` används. I följande exempel implementeras ett villkor för att utvärdera om en klient-IP ligger i IP-intervallet 192.168.0.0/24 (från 192.168.0.0 till 192.168.0.255):
+* Egenskapen `clientIp` för begäran kan bara användas med följande predikat: `equals`, `doesNotEqual`, `in`, `notIn`. `clientIp` kan också jämföras med IP-intervall när predikaten `in` och `notIn` används. I följande exempel implementeras ett villkor för att utvärdera om en klient-IP ligger i IP-intervallet 192.168.0.0/24 (så från 192.168.0.0 till 192.168.0.255):
 
 ```
 when:
@@ -214,7 +214,7 @@ when:
   in: [ "192.168.0.0/24" ]
 ```
 
-* Adobe rekommenderar att du använder [regex101](https://regex101.com/) och [Snabbt sidindelning](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan också lära dig mer om hur Snabbt hanterar regex från [snabb dokumentation - Reguljära uttryck i Fastly VCL](https://www.fastly.com/documentation/reference/vcl/regex/#best-practices-and-common-mistakes).
+* Adobe rekommenderar att du använder [regex101](https://regex101.com/) och [Fast Fiddle](https://fiddle.fastly.dev/) när du arbetar med regex. Du kan också lära dig mer om hur Snabbt hanterar regex från [snabb dokumentation - Reguljära uttryck i Fastly VCL](https://www.fastly.com/documentation/reference/vcl/regex/#best-practices-and-common-mistakes).
 
 
 ### Åtgärdsstruktur {#action-structure}
@@ -235,34 +235,51 @@ En `action` kan antingen vara en sträng som anger åtgärden (allow, block elle
 
 Egenskapen `wafFlags`, som kan användas i de licensbara WAF-trafikfilterreglerna, kan referera till följande:
 
+#### Skadlig trafik
+
 | **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
 |---|---|---|
+| ATTACK | Attackera | Flagga för att identifiera begäranden som innehåller en eller flera typer av attacker som anges i tabellen |
+| ATTACK-FROM-BAD-IP | Attackera från felaktig IP | Flagga för att identifiera begäranden som kommer från `BAD-IP` och som innehåller en eller flera typer av attacker som listas i tabellen |
 | SQLI | SQL-inmatning | SQL Injection är ett försök att få åtkomst till ett program eller få privilegierad information genom att köra godtyckliga databasfrågor. |
 | BAKDOOR | Bakdörr | En bakdörrssignal är en begäran som försöker avgöra om det finns en gemensam bakdörrsfil i systemet. |
 | CMDEXE | Kommandokörning | Kommandokörning är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga systemkommandon med hjälp av användarindata. |
-| CMDEXE-NO-BIN | Kommandokörning förutom på `/bin/` | Ange samma skyddsnivå som `CMDEXE` när falskt positivt på `/bin` inaktiveras på grund av AEM arkitektur. |
+| CMDEXE-NO-BIN | Kommandokörning förutom på `/bin/` | Tillhandahåll samma skyddsnivå som `CMDEXE` samtidigt som falskt positivt inaktiveras på `/bin` på grund av AEM-arkitektur. |
 | XSS | Skript för flera webbplatser | Korsskriptning mellan webbplatser är ett försök att kapa en användares konto eller webbläsarsession via skadlig JavaScript-kod. |
 | TRAVERSAL | Kataloggenomgång | Directory Traversal är ett försök att navigera i behöriga mappar i ett system för att kunna hämta känslig information. |
 | USERAGENT | Attackverktyg | Attack Tooling är användning av automatiserad programvara för att identifiera säkerhetsproblem eller för att försöka utnyttja en upptäckt säkerhetslucka. |
 | LOG4J-JNDI | Log4J JNDI | Log4J JNDI-attacker försöker utnyttja [Log4Shell-sårbarheten](https://en.wikipedia.org/wiki/Log4Shell) som fanns i Log4J-versioner tidigare än 2.16.0 |
+| CVE | CVE | Flagga som identifierar en CVE. Kombineras alltid med flaggan `CVE-<CVE Number>`. Kontakta Adobe om du vill veta mer om vilka CVE-program Adobe kommer att skydda dig mot. |
+
+#### Misstänkt trafik
+
+| **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
+|---|---|---|
+| ABNORMALPATH | Onormal bana | Onormal sökväg anger att den ursprungliga sökvägen skiljer sig från den normaliserade sökvägen (till exempel normaliseras `/foo/./bar` till `/foo/bar`) |
+| BAD-IP | Felaktig IP | Flagga som identifierar begäran från IP-adresser identifierar som felaktig, antingen eftersom det finns identifierare som skadliga källor (`SANS`, `TORNODE`) eller eftersom de har identifierats som dåliga av WAF efter att de skickat för många skadliga begäranden |
 | BHH | Felaktiga Hop-huvuden | Felaktiga Hop-huvuden anger ett försök till HTTP-smuggling via en felformaterad Transfer-Encoding (TE) eller Content-Length (CL)-rubrik, eller en korrekt formaterad TE- och CL-rubrik |
 | KODEINJEKTION | Kodinmatning | Kodinjektion är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga programkodkommandon som användaren anger. |
-| ABNORMALPATH | Onormal bana | Onormal sökväg anger att den ursprungliga sökvägen skiljer sig från den normaliserade sökvägen (till exempel normaliseras `/foo/./bar` till `/foo/bar`) |
-| DUBBELKODNING | Dubbel kodning | Dubbel kodning används för att kontrollera om HTML-tecken med dubbel kodning kan användas |
+| KOMPRIMERAD | Komprimering upptäcktes | POST-begärandetexten är komprimerad och kan inte inspekteras. Om till exempel ett `Content-Encoding: gzip`-begärandehuvud har angetts och POST-brödtexten inte är oformaterad text. |
+| RESPONSESPLIST | HTTP-svarsdelning | Identifierar när CRLF-tecken skickas som indata till programmet för att mata in rubriker i HTTP-svaret |
 | NOTUTF8 | Ogiltig kodning | Ogiltig kodning kan göra att servern översätter skadliga tecken från en begäran till ett svar, vilket kan orsaka denial of service eller XSS |
-| JSON-ERROR | JSON-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehåller JSON i begärandehuvudet för Content-Type men som innehåller JSON-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
-| MALFORMED-DATA | Felformaterade data i begärandetexten | En begärandetext för POST, PUT eller PATCH som har fel format enligt begärandehuvudet Content-Type. Om en begäranderubrik av typen&quot;Content-Type: application/x-www-form-urlencoded&quot; anges och innehåller en POST som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
+| MALFORMED-DATA | Felformaterade data i begärandetexten | En POST-, PUT- eller PATCH-begärandetext som har felaktigt format enligt begärandehuvudet Content-Type. Om en begäranderubrik av typen&quot;Content-Type: application/x-www-form-urlencoded&quot; anges och innehåller en POST-brödtext som är json. Detta är ofta ett programmeringsfel, en automatiserad eller skadlig begäran. Kräver agent 3.2 eller högre. |
 | SANS | Skadlig IP-trafik | [SANS Internet Storm Center](https://isc.sans.edu/) - lista över rapporterade IP-adresser som har varit inblandade i skadlig aktivitet. |
 | INNEHÅLLSTYP | Begäranhuvudet Content-Type saknas | En POST-, PUT- eller PATCH-begäran som inte har någon Content-Type-begäranderubrik. Som standard ska programservrar anta&quot;Content-Type: text/plain; charset=us-ascii&quot; i det här fallet. Många automatiska och skadliga förfrågningar kanske saknar&quot;Innehållstyp&quot;. |
 | NOUA | Ingen användaragent | Anger att en begäran inte innehöll någon &quot;User-Agent&quot;-rubrik eller att rubrikvärdet inte har angetts. |
-| TORNODE | Tor Traffic | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
 | NULLBYTE | Null byte | Null-byte visas normalt inte i en begäran och anger att begäran är felformaterad och potentiellt skadlig. |
+| OOB-DOMÄN | Utanför band-domän | Utanför intervall-domäner används vanligtvis vid penetrationstestning för att identifiera sårbarheter där nätverksåtkomst är tillåten. |
 | PRIVATEFILE | Privata filer | Privata filer är konfidentiella, till exempel en Apache `.htaccess`-fil eller en konfigurationsfil som kan läcka känslig information |
 | SKANNER | Skanner | Identifierar vanliga skanningstjänster och verktyg |
-| RESPONSESPLIST | HTTP-svarsdelning | Identifierar när CRLF-tecken skickas som indata till programmet för att mata in rubriker i HTTP-svaret |
-| XML-FEL | XML-kodningsfel | En begärandetext för POST, PUT eller PATCH som har angetts som innehållande XML i begärandehuvudet för Content-Type men som innehåller XML-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
-| DATACENTER | Datacenter | Identifierar att begäran kommer från en känd värdtjänstleverantör. Den här typen av trafik är vanligtvis inte kopplad till en riktig slutanvändare. |
 
+#### Diverse trafik
+
+| **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
+|---|---|---|
+| DATACENTER | Datacenter | Identifierar att begäran kommer från en känd värdtjänstleverantör. Den här typen av trafik är vanligtvis inte kopplad till en riktig slutanvändare. |
+| DUBBELKODNING | Dubbel kodning | Dubbel kodning används för att kontrollera om HTML-tecken med dubbel kodning kan användas |
+| JSON-ERROR | JSON-kodningsfel | En POST-, PUT- eller PATCH-begärandetext som har angetts som innehåller JSON i begärandehuvudet för Content-Type men som innehåller JSON-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
+| TORNODE | Tor Traffic | Tor är programvara som döljer en användares identitet. En spik i Tor-trafiken kan indikera en angripare som försöker maskera sin plats. |
+| XML-FEL | XML-kodningsfel | En POST-, PUT- eller PATCH-begärandetext som har angetts som innehållande XML i begärandehuvudet&quot;Content-Type&quot; men som innehåller XML-tolkningsfel. Detta beror ofta på ett programmeringsfel eller en automatiserad eller skadlig begäran. |
 
 ## Överväganden {#considerations}
 
@@ -282,7 +299,7 @@ Vissa regelexempel följer. Se avsnittet [tariffgräns](#rate-limit-rules) läng
 
 **Exempel 1**
 
-Den här regeln blockerar begäranden från **IP 192.168.1.1**:
+Den här regeln blockerar begäranden från **IP192.168.1.1**:
 
 ```
 kind: "CDN"
@@ -477,7 +494,7 @@ data:
 
 ## CVE-regler {#cve-rules}
 
-Om WAF har licens tillämpar Adobe automatiskt blockeringsregler för att skydda mot många kända CVE-nummer (Common Vulnerabilities and Exposure), och nya CVE-nummer kan läggas till snart de har upptäckts. Kunder bör inte och behöver inte konfigurera själva CVE-reglerna.
+Om WAF är licensierat tillämpar Adobe automatiskt blockeringsregler för att skydda mot många kända CVE-nummer (Common Vulnerabilities and Exposure), och nya CVE-nummer kan läggas till snart de upptäckts. Kunder bör inte och behöver inte konfigurera själva CVE-reglerna.
 
 Om en trafikbegäran matchar en CVE-fil visas den i motsvarande CDN-loggpost.
 
@@ -516,7 +533,7 @@ data:
 
 Ett e-postmeddelande från [Åtgärdscenter](/help/operations/actions-center.md) skickas när en stor mängd trafik skickas till ursprungsläget, där ett högt tröskelvärde för begäranden kommer från samma IP-adress, vilket tyder på en DDoS-attack.
 
-Om detta undantag uppfylls blockerar Adobe trafiken från den IP-adressen, men vi rekommenderar att du vidtar ytterligare åtgärder för att skydda ditt ursprung, inklusive att konfigurera trafikfilterregler för hastighetsbegränsning så att trafiktoppar vid lägre tröskelvärden blockeras. Se självstudiekursen [Blockera DoS- och DDoS-attacker med trafikregler](#tutorial-blocking-DDoS-with-rules) för en guidad genomgång.
+Om detta villkor uppfylls blockerar Adobe trafik från den IP-adressen, men vi rekommenderar att du vidtar ytterligare åtgärder för att skydda ditt ursprung, inklusive konfigurering av trafikfiltreringsregler för hastighetsbegränsning för att blockera trafiktoppar vid lägre tröskelvärden. Se självstudiekursen [Blockera DoS- och DDoS-attacker med trafikregler](#tutorial-blocking-DDoS-with-rules) för en guidad genomgång.
 
 Den här varningen är aktiverad som standard, men kan inaktiveras med egenskapen *defaultTrafficAlerts* inställd på false. När varningen har utlösts kommer den inte att utlösas igen förrän nästa dag (UTC).
 
@@ -532,7 +549,7 @@ data:
 
 ## CDN-loggar {#cdn-logs}
 
-AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara för fall som till exempel optimering av träffar i cache och konfigurering av trafikfilterregler. CDN-loggar visas i dialogrutan **Hämta loggar** i Cloud Manager när du väljer tjänsten Författare eller Publish.
+AEM as a Cloud Service ger åtkomst till CDN-loggar, som är användbara för fall som till exempel optimering av träffar i cache och konfigurering av trafikfilterregler. CDN-loggar visas i dialogrutan Cloud Manager **Hämta loggar** när du väljer författaren eller publiceringstjänsten.
 
 CDN-loggar kan fördröjas upp till fem minuter.
 
@@ -632,7 +649,7 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 | *req_ua* | Användaragenten som ansvarar för att göra en given HTTP-begäran. |
 | *värd* | Den myndighet som begäran avser. |
 | *url* | Den fullständiga sökvägen, inklusive frågeparametrar. |
-| *metod* | HTTP-metod som skickas av klienten, till exempel &quot;GET&quot; eller &quot;POST&quot;. |
+| *metod* | HTTP-metod som skickas av klienten, till exempel&quot;GET&quot; eller&quot;POST&quot;. |
 | *res_type* | Den innehållstyp som används för att ange resursens ursprungliga medietyp. |
 | *cache* | Status för cachen. Möjliga värden är HIT, MISS eller PASS |
 | *status* | HTTP-statuskoden som ett heltalsvärde. |
@@ -642,11 +659,11 @@ Nedan finns en lista med de fältnamn som används i CDN-loggar, tillsammans med
 
 ## Verktyg för instrumentpanel {#dashboard-tooling}
 
-Adobe tillhandahåller en mekanism för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler.
+Adobe har en funktion för att hämta instrumentpanelsverktyg till din dator för att importera CDN-loggar som hämtats via Cloud Manager. Med den här verktygen kan du analysera trafiken för att hitta rätt trafikfilterregler som ska deklareras, inklusive WAF-regler.
 
 Instrumentpanelsverktygen kan klonas direkt från GitHub-databasen [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling).
 
-[Tutorials](#tutorial) finns för konkreta instruktioner om hur du använder instrumentpanelsverktygen.
+[Självstudiekurser](#tutorial) finns tillgängliga för konkreta anvisningar om hur du använder instrumentpanelsverktygen.
 
 ## Rekommenderade startregler {#recommended-starter-rules}
 
