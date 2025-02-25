@@ -4,19 +4,20 @@ description: I den här artikeln beskrivs hur du förhandsgranskar formulär med
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
-source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
+hidefromtoc: true
+source-git-commit: 0d28009332feccb4552e2cc42d7b1a8da43d579c
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%
 
 ---
 
-
 # Responsivt läge i WYSIWYG Authoring
 
 Med [Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) kan du förhandsgranska Edge Delivery Services Forms med olika emulatorer för att se hur formuläret ser ut och känns vid redigeringen.
 
 Med det responsiva läget kan utvecklare utforma layouter som automatiskt anpassar sig till olika skärmstorlekar, inklusive stationära datorer, surfplattor och mobila enheter. Universal Editor stöder emulatorer för datorer, surfplattor och mobila enheter. Du kan ange höjd och bredd enligt skärmstorleken och utföra följande åtgärder:
+
 * Ange orientering
 * Ange bredd och höjd
 * Ändra orientering
@@ -68,6 +69,3 @@ Du kan använda ikonen **Skärmrotator** för att växla mellan stående och lig
 ## Se även
 
 {{universal-editor-see-also}}
-
-
-

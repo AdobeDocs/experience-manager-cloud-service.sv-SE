@@ -4,8 +4,9 @@ description: Den här självstudiekursen hjälper dig att komma igång med Unive
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
+hidefromtoc: true
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
+source-git-commit: 0d28009332feccb4552e2cc42d7b1a8da43d579c
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 0%
