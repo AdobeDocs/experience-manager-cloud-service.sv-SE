@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 81e3ce8cdceee37a22e76e74008452f88b6bf003
+source-git-commit: 6de7743992e65225d557775cbedde0ae3889b2c3
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '189'
 ht-degree: 3%
 
 ---
@@ -16,33 +16,33 @@ ht-degree: 3%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 19586 {#19586}
+## Utgåva 19687 {#19687}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 19586, som offentliggjordes den 19 februari 2025. Den tidigare underhållsutgåvan släpptes 19567.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 19687, som offentliggjordes den 26 februari 2025. Den tidigare underhållsutgåvan släpptes 19586.
 
 Funktionsaktiveringen i 2025.2.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-19586}
+### Förbättringar {#enhancements-19687}
 
 Ingen.
 
-### Åtgärdade problem {#fixed-issues-19586}
+### Åtgärdade problem {#fixed-issues-19687}
 
-* SITES-29314: GraphQL-slutpunkter kan generera InvalidSchemaException för giltiga begäranden.
+* SKYOPS-97524: Funktionens växlingstillstånd kan ibland vara felaktigt och påverka olika AEM-funktioner.
 
-### Kända fel {#known-issues-19586}
+### Kända fel {#known-issues-19687}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-19586}
+### Föråldrade funktioner och API:er {#deprecated-19687}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-19586}
+### Säkerhetskorrigeringar {#security-19687}
 
 Ingen.
 
-### Inbäddade tekniker {#embedded-tech-19586}
+### Inbäddade tekniker {#embedded-tech-19687}
 
 | Teknik | Version | Länk |
 |---|--------------|-------------------------------------------------------------------------------------------------------------------|
