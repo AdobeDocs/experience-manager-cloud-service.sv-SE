@@ -4,7 +4,7 @@ description: Framtidsförloppet ökar utvecklarnas oberoende och snabbar upp utv
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 635fd7736d26b95acc4389c519edf495694b1a94
+source-git-commit: 8bda36d7aa86bd6b26ecaff9831f29d9e847837f
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 0%
@@ -95,5 +95,6 @@ Följande steg rekommenderas i allmänhet när du ändrar HTML- eller JSON-utdat
 * Adobe tillhandahåller en AEM Site Theme Builder som en uppsättning skript för att skapa nya webbplatsteman.
 
   Se [AEM Site Theme Builder](https://github.com/adobe/aem-site-theme-builder)
+
 
 
