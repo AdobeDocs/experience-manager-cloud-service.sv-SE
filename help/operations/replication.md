@@ -4,16 +4,16 @@ description: Läs om distribution och felsökning av replikering i AEM as a Clou
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
 feature: Operations
 role: Admin
-source-git-commit: 4e57908ceebc820b64ce0ec5f8e5ba01ee6f5eb2
+source-git-commit: 68b21abbc00b6c766fc33bf70e259c8ad9fc8e59
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
 
 # Replikering {#replication}
 
-Adobe Experience Manager as a Cloud Service använder funktionen [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) för att flytta innehållet som ska replikeras till en pipeline-tjänst som körs på Adobe Developer och som ligger utanför AEM.
+Adobe Experience Manager as a Cloud Service använder funktionen [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) för att flytta innehållet som ska replikeras till en pipeline-tjänst som körs på Adobe Developer utanför AEM-miljön.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Adobe Experience Manager as a Cloud Service använder funktionen [Sling Content 
 >Om du måste anpassa av någon anledning kan du utlösa ett arbetsflöde med det här steget genom att använda befintliga arbetsflödes-API:er.
 >Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflöden med arbetsflödessteget Trädaktivering.
 
-### Quick Un/Publish - Planerad UN/Publish {#publish-unpublish}
+### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
 Med den här funktionen kan du publicera de valda sidorna direkt, utan de ytterligare alternativ som är möjliga via Hantera publikation.
 
@@ -44,9 +44,9 @@ Aktivera **Automatisk replikering** i [OSGi-konfigurationen](/help/implementing/
 
 ### Hantera publikation {#manage-publication}
 
-Med Hantera publikation får du fler alternativ än med Quick Publish, där du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden och erbjuda möjlighet att publicera senare.
+Med Hantera publikation får du fler alternativ än Snabbpublicering, så att du kan inkludera underordnade sidor, anpassa referenserna och starta tillämpliga arbetsflöden och erbjuda möjlighet att publicera senare.
 
-Om du tar med en mapps underordnade objekt för alternativet&quot;publicera senare&quot; anropas arbetsflödet för Publish Content Tree, som beskrivs i den här artikeln.
+Om du tar med en mapps underordnade objekt för alternativet Publicera senare, anropas arbetsflödet Publicera innehållsträd, som beskrivs i den här artikeln.
 
 Mer detaljerad information om Hantera publikation finns i [Dokumentationen om grunderna för publicering](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication).
 
@@ -98,7 +98,7 @@ Skapa en arbetsflödesmodell som använder processsteget `TreeActivation`:
 
 | Namn | description |
 | ------------- | ------------------------------------------- |
-| onlyModified | Noder som ändrats sedan den senaste publiceringen |
+| onlyModified | Noder (nya och befintliga) som har ändrats sedan den senaste publiceringen |
 | onlyActivated | Noder som publicerats tidigare |
 
 
@@ -120,7 +120,7 @@ Arbetsflödet bearbetar innehåll i segment, som representerar en delmängd av d
 
 
 
-### Publish Content Tree Workflow {#publish-content-tree-workflow}
+### Publicera arbetsflöde för innehållsträd {#publish-content-tree-workflow}
 
 >[!NOTE]
 >
@@ -129,9 +129,9 @@ Arbetsflödet bearbetar innehåll i segment, som representerar en delmängd av d
 <details>
 <summary>Klicka här om du vill veta mer om den här borttagna funktionen.</summary>
 
-Du kan utlösa en trädreplikering genom att välja **Verktyg - Arbetsflöde - Modeller** och kopiera arbetsflödesmodellen **Publish Content Tree** som är körklar, vilket visas nedan:
+Du kan utlösa en trädreplikering genom att välja **Verktyg - Arbetsflöde - Modeller** och kopiera arbetsflödesmodellen **Publicera innehållsträd** som är körklar, vilket visas nedan:
 
-![Arbetsflödeskortet för Publish Content Tree](/help/operations/assets/publishcontenttreeworkflow.png)
+![Arbetsflödeskortet för publiceringsinnehållsträdet](/help/operations/assets/publishcontenttreeworkflow.png)
 
 Anropa inte den ursprungliga modellen. Kontrollera i stället att först kopiera modellen och anropa kopian.
 
@@ -269,9 +269,9 @@ Storleken på innehållet som skickas per replikeringsanrop får inte överstiga
 
 ## Felsökning {#troubleshooting}
 
-Om du vill felsöka replikering går du till replikeringsköerna i webbgränssnittet för AEM författartjänst:
+Om du vill felsöka replikering går du till Replikeringsköer i webbgränssnittet för AEM Author Service:
 
-1. Gå till **Verktyg** > **Distribution** > **Distribution** från AEM Start-meny.
+1. Gå till **Verktyg** > **Distribution** > **Distribution** på Start-menyn i AEM.
 1. Välj kortet **publicera**
 
    ![Status](assets/publish-status.png "Status")
@@ -282,6 +282,6 @@ Om du vill felsöka replikering går du till replikeringsköerna i webbgränssni
 
 ![Loggar](assets/publish-logs.png "Loggar")
 
-Om det inte gick att publicera innehållet återställs hela publikationen från AEM Publish-tjänst.
+Om innehållet inte kunde publiceras återställs hela publikationen från AEM Publish Service.
 
 I så fall visar den huvudsakliga, redigerbara kön en röd status och bör granskas för att identifiera vilka objekt som gjorde att publiceringen avbröts. Genom att klicka på den kön visas de väntande objekten, från vilka ett eller alla objekt kan rensas vid behov.
