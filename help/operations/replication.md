@@ -4,9 +4,9 @@ description: Läs om distribution och felsökning av replikering i AEM as a Clou
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
 feature: Operations
 role: Admin
-source-git-commit: 68b21abbc00b6c766fc33bf70e259c8ad9fc8e59
+source-git-commit: 9dac0b63fec56bede7db9331d47ef479b29e67d0
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1711'
 ht-degree: 0%
 
 ---
@@ -96,10 +96,10 @@ Skapa en arbetsflödesmodell som använder processsteget `TreeActivation`:
 
 **Supportfilter**
 
-| Namn | description |
+| Namn | Beskrivning |
 | ------------- | ------------------------------------------- |
-| onlyModified | Noder (nya och befintliga) som har ändrats sedan den senaste publiceringen |
-| onlyActivated | Noder som publicerats tidigare |
+| onlyModified | Noder: både nya och befintliga som har ändrats sedan den senaste publiceringen |
+| onlyActivated | Noder: som har publicerats före den senaste publiceringen |
 
 
 **Återuppta support**
