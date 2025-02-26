@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 1e4e07d2690bcbd44ffe994a571ffc0a8ae7eb50
+source-git-commit: 3a3713cdf2910492385b96b89038095c3642a2ec
 workflow-type: tm+mt
-source-wordcount: '6091'
+source-wordcount: '6094'
 ht-degree: 2%
 
 ---
@@ -990,10 +990,11 @@ ht-degree: 2%
       + [Hantera taxonomidata](/help/edge/wysiwyg-authoring/taxonomy.md)
       + [WYSIWYG och dokumentbaserade block](/help/edge/wysiwyg-authoring/wysiwyg-doc-blocks.md)
       + [Sidor med DAM Assets](/help/edge/wysiwyg-authoring/dam-assets.md)
-      + [Funktioner för WIP-platser](/help/edge/wysiwyg-authoring/wip-features.md)
       + [Återanvända kod över flera platser](/help/edge/wysiwyg-authoring/repoless.md)
       + [Tillförlitlig hantering av flera platser](/help/edge/wysiwyg-authoring/repoless-msm.md)
       + [Repoless Stage- och Prod-miljöer](/help/edge/wysiwyg-authoring/repoless-stage-prod.md)
+      + [Konfigurerar webbplatsautentisering](/help/edge/wysiwyg-authoring/site-authentication.md)
+      + [Funktioner för WIP-platser](/help/edge/wysiwyg-authoring/wip-features.md)
    + Dokumentbaserad redigering {#document-authoring}
       + [Redigering](/help/edge/docs/authoring.md)
       + [Massmetadata](/help/edge/docs/bulk-metadata.md)

@@ -4,9 +4,9 @@ description: Om du har många liknande webbplatser som oftast ser ut och beter s
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: a6bc0f35-9e76-4b5a-8747-b64e144c08c4
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: c9d0d3cd7e18b56db36a379b63f8fb48e18a40db
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Om du har många liknande webbplatser som oftast ser ut och beter sig på samma 
 
 ## En kodbas för flera platser {#one-codebase}
 
-Som standard är AEM nära knuten till din koddatabas, som uppfyller de flesta användningsfall. Du kan dock ha flera webbplatser som skiljer sig mest åt i innehållet, men som kan utnyttja samma kodbas.
+Som standard är AEM nära knutet till din koddatabas, som uppfyller de flesta användningsfall. Du kan dock ha flera webbplatser som skiljer sig mest åt i innehållet, men som kan utnyttja samma kodbas.
 
 I stället för att skapa flera GitHub-databaser och köra varje plats från en dedikerad GitHub-databas samtidigt som de är synkroniserade stöder AEM att du kör flera webbplatser från samma kodbas.
 
@@ -37,7 +37,7 @@ Om du vill använda den här funktionen måste du göra följande.
 Du måste också be Adobe att konfigurera följande objekt. Nå ut via din Slack-kanal eller ta upp ett supportproblem och be Adobe att göra dessa ändringar:
 
 * Be om att få aktivera konfigurationstjänsten [aem.live](https://www.aem.live/docs/config-service-setup#prerequisites) för din miljö och att du är konfigurerad som administratör.
-* Be Adobe att aktivera den obestridliga funktionen för ditt program.
+* Be om att få aktivera den trådlösa funktionen för ditt program från Adobe.
 * Be Adobe att skapa organisationen åt dig.
 
 ## Aktivera funktion för svarslös {#activate}
@@ -47,7 +47,7 @@ Det finns flera steg för att aktivera felfria funktioner för ditt projekt.
 1. [Hämta åtkomsttoken](#access-token)
 1. [Konfigurera konfigurationstjänsten](#config-service)
 1. [Lägg till platskonfiguration och tekniskt konto](#access-control)
-1. [Uppdatera AEM](#update-aem)
+1. [Uppdatera AEM-konfiguration](#update-aem)
 1. [Autentisera webbplats](#authenticate-site)
 
 I de här stegen används webbplatsen `https://wknd.site` som exempel. Ersätt dina egna på lämpligt sätt.
@@ -56,7 +56,7 @@ I de här stegen används webbplatsen `https://wknd.site` som exempel. Ersätt d
 
 Du måste först ha en åtkomsttoken för att kunna använda konfigurationstjänsten och konfigurera den för ett svarslöst användningsfall.
 
-1. Gå till `https://admin.hlx.page/login` och använd adressen `login_adobe` för att logga in hos identitetsleverantören Adobe.
+1. Gå till `https://admin.hlx.page/login` och använd adressen `login_adobe` för att logga in hos identitetsleverantören för Adobe.
 1. Du vidarebefordras till `https://admin.hlx.page/profile`.
 1. Kopiera värdet för `x-auth-token` från JSON-webbtokencookien som `admin.hlx.page`-sidan anger med hjälp av webbläsarens utvecklarverktyg.
 
@@ -157,13 +157,13 @@ Eftersom du nu använder konfigurationstjänsten kan du ta bort `fstab.yaml` och
 
 När AEM har konfigurerats för felfri användning måste du använda konfigurationstjänsten och ange en giltig `config.json` med sökvägsmappningen.
 
-### Uppdatera AEM {#update-aem}
+### Uppdatera AEM-konfiguration {#update-aem}
 
-Nu är du redo att göra nödvändiga ändringar i dina Edge Delivery Services i AEM.
+Nu är du redo att göra nödvändiga ändringar i din Edge Delivery Services i AEM.
 
-1. Logga in på AEM författarinstans och gå till **Verktyg** -> **Cloud Service** -> **Konfiguration av Edge Delivery Services** och markera den konfiguration som skapades automatiskt för platsen. Tryck eller klicka på **Egenskaper** i verktygsfältet.
-1. I fönstret **Konfiguration av Edge Delivery Services** ändrar du projekttypen till **aem.live med konfigurationskonfiguration utan replik** och trycker eller klickar på **Spara och stäng**.
-   ![Konfiguration av Edge Delivery Services](/help/edge/wysiwyg-authoring/assets/repoless/edge-delivery-services-configuration.png)
+1. Logga in på AEM-författarinstansen och gå till **Verktyg** -> **Cloud-tjänster** -> **Edge Delivery Services-konfiguration** och välj den konfiguration som skapades automatiskt för platsen. Tryck eller klicka på **Egenskaper** i verktygsfältet.
+1. I fönstret **Edge Delivery Services Configuration** ändrar du projekttypen till **aem.live med konfigurationsinställningarna för repoless-konfiguration** och trycker eller klickar på **Save &amp; Close** (Spara och stäng).
+   ![Edge Delivery Services-konfiguration](/help/edge/wysiwyg-authoring/assets/repoless/edge-delivery-services-configuration.png)
 1. Gå tillbaka till webbplatsen med Universal Editor och kontrollera att den fortfarande återges korrekt.
 1. Ändra en del av innehållet och återpublicera det.
 1. Besök din publicerade webbplats på `https://main--<your-aem-project>--<your-github-org>.aem.page/` och kontrollera att ändringarna återspeglas korrekt.
@@ -176,6 +176,7 @@ Nu när baswebbplatsen är konfigurerad för snabb användning kan du skapa ytte
 
 * [Tillförlitlig hantering av flera platser](/help/edge/wysiwyg-authoring/repoless-msm.md)
 * [Repoless Stage- och Prod-miljöer](/help/edge/wysiwyg-authoring/repoless-stage-prod.md)
+* [Webbplatsautentisering för innehållsredigering](/help/edge/wysiwyg-authoring/site-authentication.md)
 
 ## Felsökning {#troubleshooting}
 
@@ -183,7 +184,7 @@ Det vanligaste problemet som uppstår efter att du har konfigurerat det obestrid
 
 * Visa den återgivna sidans källa.
    * Är det något som återges (korrigera HTML head med `scripts.js`, `aem.js` och redigeringsrelaterade JSON-filer)?
-* Kontrollera AEM `error.log` för författarinstansen för undantag.
+* Kontrollera om det finns några undantag i författarinstansens AEM `error.log`.
    * Det vanligaste problemet är att sidkomponenten misslyckas med 404 fel.
    * `config.json or paths.json` kan inte läsas in
    * `component-definition.json` osv. kan inte läsas in
