@@ -5,9 +5,9 @@ exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a078d45f81fc7081012ebf24fa8f46dc1a218cd7
+source-git-commit: cb9707e4f53e32ed6e5aec244b1ef2240fcf376c
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1098'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,14 @@ ht-degree: 0%
 
 # Skapa produktionsprogram {#create-production-program}
 
-Ett produktionsprogram är avsett för användare som är bekanta med AEM och Cloud Manager, som är redo att skriva, bygga och testa kod, med målet att distribuera den för att hantera livstrafiken.
+Ett produktionsprogram är avsett för användare som är bekanta med Adobe Experience Manager (AEM) och Cloud Manager, som är redo att skriva, bygga och testa kod, med målet att distribuera den för att hantera livatrafik.
 
 Läs mer om programtyper i dokumentet [Om program- och programtyper](program-types.md).
 
 ## Skapa ett produktionsprogram {#create}
 
-Beroende på organisationens rättigheter kan du se [ytterligare alternativ](#options) när du lägger till ditt program.
+Beroende på organisationens rättigheter kan ytterligare alternativ för produktionsprogram visas när du lägger till programmet.
+Se [Fler alternativ för produktionsprogram](#options).
 
 **Så här skapar du ett produktionsprogram:**
 
@@ -31,7 +32,7 @@ Beroende på organisationens rättigheter kan du se [ytterligare alternativ](#op
 
    ![Cloud Manager landningssida](assets/log-in.png)
 
-1. I *programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
+1. I *Programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
 
 1. Under **Programmål** väljer du ![Global ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Globe_18_N.svg)**Konfigurera för produktion**.
 
@@ -73,7 +74,7 @@ Beroende på organisationens rättigheter kan du se [ytterligare alternativ](#op
 
 ## Fler alternativ för produktionsprogram {#options}
 
-Beroende på vilka berättiganden som är tillgängliga för din organisation kan du ha ytterligare alternativ tillgängliga när du skapar ett produktionsprogram.
+Beroende på vilka berättiganden som är tillgängliga för din organisation kan du ha tillgång till följande alternativ när du skapar ett produktionsprogram.
 
 ### Dokumentskydd {#security}
 
@@ -83,10 +84,10 @@ Om du har de nödvändiga rättigheterna visas fliken **Säkerhet** som den för
 
 Fliken **Säkerhet** innehåller alternativ för att aktivera **HIPAA**, **WAF-DDOS-skydd**, eller båda, för ditt produktionsprogram.
 
-Adobe HIPAA-kompatibel och WAF-DDOS (Web Application Firewall - Distributed Denial of Service) underlättar molnbaserad säkerhet som en del av en flernivåstrategi för att skydda mot sårbarheter.
+Adobe HIPAA-kompatibel och WAF-DDOS (Web Application Firewall - Distributed Denial of Service) underlättar molnbaserad säkerhet som en del av en lösning med flera nivåer för att skydda mot sårbarheter.
 
-* **HIPAA** - Med det här alternativet aktiveras en Adobe HIPPA-klar lösningsimplementering.
-   * [Läs mer](https://www.adobe.com/trust/compliance/hipaa-ready.html) om implementering av Adobe HIPAA-klar lösning.
+* **HIPAA** - Det här alternativet aktiverar Adobe HIPPA-förberedda lösningsimplementering.
+   * [Läs mer](https://www.adobe.com/trust/compliance/hipaa-ready.html) om Adobe HIPAA-förberedda implementering av lösningar.
    * HIPAA kan inte aktiveras eller inaktiveras efter att programmet har skapats.
 * **WAF-DDOS-skydd** - Med det här alternativet aktiveras Brandväggen för webbaserade program som regler för att skydda ditt program.
    * När detta har aktiverats kan WAF-DDOS-skyddet sedan konfigureras genom att en [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) konfigureras.
@@ -98,23 +99,25 @@ Om du har de nödvändiga rättigheterna visas fliken **SLA** som den andra elle
 
 ![SLA-alternativ](assets/create-production-program-sla.png)
 
-AEM Sites och Forms erbjuder 99,9 % service level agreement (SLA) som standard. Med alternativet **99,99% Service level agreement** får du en procentandel på minst 99,99 % aktiv tid för produktionsmiljöerna för Sites och/eller Forms.
+Webbplatser och Forms erbjuder 99,9 % service level agreement (SLA) som standard. Med alternativet **99,99 % Service level agreement** garanteras en drifttid på minst 99,99 % för produktionsmiljöerna, oavsett om det gäller Sites, Forms, Edge Delivery Services eller alla tre.
 
-99,99 % av SLA har fördelar, bland annat högre tillgänglighet och lägre latens, och kräver att ytterligare [en publiceringsregion](/help/implementing/cloud-manager/manage-environments.md#multiple-regions) används i produktionsmiljön i programmet.
+99,99 % av SLA erbjuder fördelar, inklusive högre tillgänglighet och lägre latens.
 
-När [kraven](#sla-requirements) för aktivering av 99,99 % SLA uppfylls måste du köra en [fullständig stackpipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för att aktivera den.
+För Sites- och Forms-program kräver 99,99 % SLA att en ytterligare [publiceringsregion](/help/implementing/cloud-manager/manage-environments.md#multiple-regions) används i produktionsmiljön i programmet. När [kraven](#sla-requirements) för aktivering av 99,99 % SLA uppfylls måste du köra en [fullständig stackpipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för att aktivera den.
+
+För Edge Delivery Services finns det *inga* krav förutom att konfigurera SLA-licensen på 99,99 % i programmet.
 
 #### Krav för 99,99 % SLA {#sla-requirements}
 
-Utöver de obligatoriska rättigheterna har 99,99 % av SLA ytterligare krav för användning.
+Utöver de rättigheter som krävs har SLA 99,99 % för Sites eller Forms följande ytterligare krav:
 
 * Organisationen måste ha 99,99 % SLA och ytterligare rättigheter för publiceringsregioner tillgängliga när 99,99 % SLA tillämpas på programmet.
 * Cloud Manager verifierar att ett oanvänt [ytterligare tillstånd för publiceringsregionen](/help/implementing/cloud-manager/manage-environments.md#multiple-regions) är tillgängligt innan 99,99 % SLA har tillämpats på programmet.
 * När du redigerar ett program och det redan innehåller en produktionsmiljö med minst en extra publiceringsregion, kontrollerar Cloud Manager endast om det finns ett berättigande för 99,99 % SLA.
 * För aktivering av 99,99 % SLA och rapportering måste [produktions-/scenmiljön](/help/implementing/cloud-manager/manage-environments.md#adding-environments) ha skapats och minst en ytterligare publiceringsregion måste ha tillämpats på produktions-/scenmiljön.
-   * Om du använder [avancerat nätverk](/help/security/configuring-advanced-networking.md) bör du kontrollera om dokumentet [Lägga till flera Publish-regioner i en ny miljö](/help/implementing/cloud-manager/manage-environments.md#adding-regions) innehåller rekommendationer så att anslutningen upprätthålls om det uppstår ett regionalt fel.
-* Minst en ytterligare publiceringsområde måste finnas kvar i ditt 99,99 % SLA-program. Användare får inte ta bort den sista extra publiceringsregionen från ditt 99,99 % SLA-program.
-* 99,99 % SLA stöds för produktionsprogram där Sites eller Forms är aktiverat.
+   * Om du använder [avancerat nätverk](/help/security/configuring-advanced-networking.md) bör du kontrollera om dokumentet [Lägga till flera publiceringsregioner i en ny miljö](/help/implementing/cloud-manager/manage-environments.md#adding-regions) innehåller rekommendationer så att anslutningen upprätthålls om det uppstår ett regionalt fel.
+* Ditt 99,99 % SLA-program måste alltid innehålla minst en extra publiceringsregion. Användare får inte ta bort den sista återstående ytterligare publiceringsområdet från programmet.
+* Din SLA på 99,99 % stöds för produktionsprogram där Sites eller Forms är aktiverat.
 * Kör en [fullständig stackpipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för att aktivera eller - när du redigerar ett program - inaktivera SLA 99,99 %.
 
 ## Få åtkomst till ditt program {#accessing}
