@@ -4,18 +4,19 @@ description: Använd Google reCAPTCHA i ett formulär för Edge Delivery Service
 feature: Edge Delivery Services
 keywords: reCAPTCHA in forms, Using reCAPTCHA in Universal Editor, Add reCAPTCHA in forms
 role: Admin, Architect, Developer
-hide: true
-hidefromtoc: true
 exl-id: 1f28bd13-133f-487e-8b01-334be7c08a3f
-source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
+source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
 
 
 # Använd reCAPTCHA i WYSIWYG Authoring
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett populärt verktyg som används för att skydda webbplatser från bedrägliga aktiviteter, skräppost och missbruk.
 

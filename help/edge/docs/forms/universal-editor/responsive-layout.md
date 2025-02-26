@@ -3,16 +3,17 @@ title: Förstå universell redigerare - responsivt läge
 description: I den här artikeln beskrivs hur du förhandsgranskar formulär med olika emulatorer i den universella redigeraren för att se hur de ser ut och känns under utvecklingen.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 0d28009332feccb4552e2cc42d7b1a8da43d579c
+source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
 
 # Responsivt läge i WYSIWYG Authoring
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
 
 Med [Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) kan du förhandsgranska Edge Delivery Services Forms med olika emulatorer för att se hur formuläret ser ut och känns vid redigeringen.
 

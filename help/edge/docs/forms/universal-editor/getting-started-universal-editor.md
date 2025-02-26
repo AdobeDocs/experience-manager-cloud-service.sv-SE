@@ -3,18 +3,19 @@ title: Komma igång med Edge Delivery Services för AEM Forms i Universal Editor
 description: Den här självstudien hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat en egen Edge Delivery Services Forms i Universal Editor.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-hide: true
-hidefromtoc: true
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
+source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1821'
 ht-degree: 0%
 
 ---
 
 
 # Komma igång med Edge Delivery Services för AEM Forms med Universal Editor (WYSIWYG)
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
 
 I dagens digitala ålder är användarvänliga formulär oumbärliga för alla organisationer. Edge Delivery Services Forms skapas med Universal Editor, som har WYSIWYG-funktioner (what-you-see-is-what-you-get). Det har ett modernt, intuitivt gränssnitt för effektiv formulärutveckling.
 

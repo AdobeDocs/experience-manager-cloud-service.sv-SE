@@ -2,18 +2,19 @@
 title: Skapa anpassade komponenter för ett EDS-formulär
 description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
-hide: true
-hidefromtoc: true
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: d5ba87ec6199522f026d572d1bdb1bfbeb9849ee
+source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
 workflow-type: tm+mt
-source-wordcount: '1725'
+source-wordcount: '1773'
 ht-degree: 0%
 
 ---
 
 # Skapa anpassad komponent i WYSIWYG Authoring
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
 
 Edge Delivery Services Forms erbjuder anpassning så att gränssnittsutvecklare kan skapa skräddarsydda blankettkomponenter. Dessa anpassade komponenter integreras smidigt i WYSIWYG redigeringsmiljö, vilket gör det enkelt för formulärförfattare att lägga till, konfigurera och hantera dem i formulärredigeraren. Med anpassade komponenter kan man förbättra funktionaliteten samtidigt som man får en smidig och intuitiv redigeringsprocess.
 

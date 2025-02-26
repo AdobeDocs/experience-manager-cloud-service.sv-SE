@@ -3,18 +3,19 @@ title: Hur använder man regelredigeraren för att tillämpa regler på formulä
 description: Med regelredigeraren i Universal Editor kan du lägga till dynamiskt beteende och bygga in komplex logik i formulär utan kodning eller skript.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-hide: true
-hidefromtoc: true
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
+source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
 workflow-type: tm+mt
-source-wordcount: '2041'
+source-wordcount: '2089'
 ht-degree: 0%
 
 ---
 
 
 # Introduktion till regelredigeraren i WYSIWYG Authoring
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
 
 Du kan lägga till dynamiskt formulärbeteende med regelredigeraren, som du kan använda för att skapa regler. Dessa regler möjliggör synlighet för villkorliga fält, automatiserar beräkningar baserat på användarindata och förbättrar den övergripande användarupplevelsen. Regelredigeraren effektiviserar ifyllningsprocessen och ser till att både noggrannheten och effektiviteten är hög.
 
