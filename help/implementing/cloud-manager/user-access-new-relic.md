@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 26a80ce68c5f6eee032ded355a8e5747ad6449a7
+source-git-commit: 428c722ae65342a52339effe7c97fd6de10a4f58
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1834'
 ht-degree: 0%
 
 ---
@@ -175,11 +175,11 @@ Följande begränsningar gäller när du lägger till användare i New Relic One
 
 * Högst 30 användare kan läggas till. Om det maximala antalet användare har uppnåtts tar du bort användare för att kunna lägga till nya användare.
 * Användare som läggs till i New Relic har typen **Begränsat**. Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/introduction-managing-users/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change).
-* AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
+* AEM as a Cloud Service har bara lösningen **New Relic One APM** och har inte stöd för infrastrukturövervakning, varningar, loggning eller API-integreringar.
 
 >[!NOTE]
 >
->Om ingen aktivitet identifieras i ditt New Relic One-underkonto under 30 dagar eller mer stoppas APM-agenten.
+>Om ingen **användarinloggning**-aktivitet identifieras i ditt New Relic One-underkonto i 30 dagar eller mer, stoppas APM-agenten och data skickas inte från AEM Cloud-tjänsten till New Relic.  **Data skickas inte igen förrän ditt underkonto har återaktiverats.**
 >
 >Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
 
@@ -187,7 +187,7 @@ Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för
 
 ## Frågor och svar {#faqs}
 
-+++**Vad övervakar Adobe med New Relic One?** {#adobe-monitor}
++++**Vad övervakar Adobe med New Relic One?**
 
 Adobe övervakar AEM as a Cloud Service författare, publicerar och förhandsgranskar (där de är tillgängliga) tjänster via New Relic One Java-plugin. Adobe möjliggör anpassad New Relic One APM-telemetri och övervakning i AEM as a Cloud Service-miljöer som inte är i produktion och produktion.
 
@@ -205,22 +205,22 @@ Obs!
 
 +++
 
-+++**Skickar Adobe varningsmeddelanden från New Relic One?** {#alerting-new-relic}
++++**Skickar Adobe varningsmeddelanden från New Relic One?**
 
 Adobe ger åtkomst till New Relic One endast i observationssyfte och använder det inte för kundvarningar eller interna varningar. Meddelanden om eventuella incidenter skickas med [användarmeddelandeprofiler](/help/journey-onboarding/notification-profiles.md).
 +++
 
-+++**Vem har åtkomst till New Relic One molntjänstdata?** {#access-new-relic-cloud}
++++**Vem har åtkomst till New Relic One molntjänstdata?**
 
 Upp till 30 medlemmar i ditt team har full läsbehörighet. Läsåtkomst innefattar alla APM-värden som samlats in av New Relic One Agent.
 +++
 
-+++**Stöds anpassad enkel inloggning?** {#custom-sso}
++++**Stöds anpassad enkel inloggning?**
 
 Anpassad SSO-konfiguration stöds inte för det New Relic One-konto som tillhandahålls av Adobe.
 +++
 
-+++**Vad händer om jag redan har en lokal New Relic-prenumeration?** {#new-relic-subscription}
++++**Vad händer om jag redan har en lokal New Relic-prenumeration?**
 
 New Relic One är den nya plattformen för observerbarhet från New Relic och gör det möjligt för Adobe support och era team att observera, övervaka och se mätvärden och händelser, allt på ett och samma ställe.
 
@@ -234,7 +234,7 @@ Adobe support övervakar AEM as a Cloud Service med New Relic One och andra verk
 
 +++
 
-+++**APM-agenten för mitt New Relic One-konto har stoppats. Vad hände?** {#deactivated}
++++**APM-agenten för mitt New Relic One-konto har stoppats. Vad hände?**
 
 [APM-agenter stoppas](#limitations) om ingen aktivitet identifieras på 30 dagar eller mer. Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
 +++
