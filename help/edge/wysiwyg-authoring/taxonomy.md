@@ -1,12 +1,12 @@
 ---
 title: Hantera taxonomidata
-description: Lär dig hur du hanterar taxonomidata för att använda taggar med dina AEM med Edge Delivery Services.
+description: Lär dig hur du hanterar taxonomidata för att använda taggar med dina AEM-webbplatser med Edge Delivery Services.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 017982e4-a4c8-4097-8751-9619cc4639d0
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: d0a037090e4b31f18deb0a9bd3238cab0a8d185e
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,19 @@ ht-degree: 0%
 
 # Hantera taxonomidata {#managing-taxonomy-data}
 
-Lär dig hur du hanterar taxonomidata för att använda taggar med dina AEM med Edge Delivery Services.
+Lär dig hur du hanterar taxonomidata för att använda taggar med dina AEM-webbplatser med Edge Delivery Services.
 
 ## Introduktion {#introduction}
 
-Taggning är en viktig funktion som hjälper dig att ordna och hantera dina sidor. [Med taggningskonsolen](/help/sites-cloud/administering/tags.md#tagging-console) i AEM kan du skapa en omfattande taxonomi med taggar för att ordna sidorna.
+Taggning är en viktig funktion som hjälper dig att ordna och hantera dina sidor. [Med taggningskonsolen](/help/sites-cloud/administering/tags.md#tagging-console) i AEM kan du skapa en omfattande taxonomi med taggar för att ordna dina sidor.
 
 Dessa taggar är användbara inte bara för dig och dina författare när du organiserar ditt innehåll, utan kan även vara till för dina läsare. Taggar och deras taxonomi kan användas i komponenter på sidan för att hjälpa läsarna navigera i innehållet.
 
 Universal Editor fungerar bara med ID:n för dina taggar. Genom att skapa en taxonomisida för ditt innehåll visar du beskrivningarna av taggarna på alla språk för den universella redigeraren så att den kan använda den informationen när du återger innehåll.
+
+>[!TIP]
+>
+>I dokumentet [Model Definitions, Fields, and Component Type](/help/implementing/universal-editor/field-types.md) finns mer information om AEM Tag-fältet som är tillgängligt för den universella redigeraren som kan arbeta med din taxonomi.
 
 ## Skapa en taxonomisida {#creating}
 
@@ -52,7 +56,7 @@ Observera det resulterande sidnamnet på taxonomisidan som kan användas i följ
 
 ## Redigera en taxonomisida {#editing}
 
-Du börjar redigera en taxonomisida precis som andra sidor i AEM.
+Du börjar redigera en taxonomisida precis som vilken annan sida som helst i AEM.
 
 1. Navigera till [**webbplatskonsolen**](/help/sites-cloud/authoring/sites-console/introduction.md).
 
@@ -118,7 +122,7 @@ Den här processen behöver bara göras en gång per taxonomisida. När du är k
 
 En taxonomi är inte tillgänglig för Universal Editor eller dina användare förrän den publiceras.
 
-Taxonomisidor publiceras på samma sätt som andra sidor av [med hjälp av ikonerna **Quick Publish** eller **Manage Publication** i verktygsfältet](/help/sites-cloud/authoring/sites-console/publishing-pages.md).
+Taxonomisidor publiceras på samma sätt som andra sidor av [med ikonerna **Snabbpublicering** eller **Hantera publikation** i verktygsfältet](/help/sites-cloud/authoring/sites-console/publishing-pages.md).
 
 Du måste publicera taxonomisidan igen varje gång du:
 
@@ -177,7 +181,7 @@ Som standard innehåller din taxonomi `tag`- och `title`-värden enligt [ i för
 1. I avsnittet **Ytterligare egenskaper** trycker eller klickar du på **Lägg till** för att lägga till ett fält.
 1. I det nya fältet anger du JRC-egenskapens namn som ska visas. I det här fallet anger du `jcr:description` som taggbeskrivning.
 1. Tryck eller klicka på **Spara och stäng**.
-1. Ha taxonomin markerad och tryck eller klicka på **Snabba Publish** i verktygsfältet.
+1. Ha taxonomin markerad och tryck eller klicka på **Snabbpublicering** i verktygsfältet.
 
 Nu [när du kommer åt din taxonomi](#accessing) inkluderas taggbeskrivningen (eller den egenskap du väljer att visa) i JSON.
 
