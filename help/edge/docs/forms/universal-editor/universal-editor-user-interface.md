@@ -4,16 +4,16 @@ description: Den här självstudiekursen hjälper dig att komma igång med Unive
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
+source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
 
 # Exploring the Universal Editor (WYSIWYG) Interface
 
-[Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) har ett enkelt, visuellt och intuitivt What You See Is What You Get-gränssnitt (WYSIWYG) för Adobe Edge Delivery Services (EDS) Forms. Det har ett modernt gränssnitt med dra-och-släpp-funktioner för effektiv formulärutveckling.
+[Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) har ett enkelt, visuellt och intuitivt What You See Is What You Get-gränssnitt (WYSIWYG) för Adobe Edge Delivery Services Forms. Det har ett modernt gränssnitt med dra-och-släpp-funktioner för effektiv formulärutveckling.
 
 ![Användargränssnitt för Universal Editor](/help/edge/docs/forms/universal-editor/assets/universal-editor-interface.png)
 

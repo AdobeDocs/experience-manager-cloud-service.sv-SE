@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
+source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
 workflow-type: tm+mt
-source-wordcount: '6193'
+source-wordcount: '6195'
 ht-degree: 2%
 
 ---
@@ -1024,6 +1024,7 @@ ht-degree: 2%
    + Skapar Forms {#build-forms}
       + [Ökning](/help/edge/docs/forms/overview.md)
       + [Hur fungerar Edge Delivery Services Forms?](/help/edge/docs/forms/universal-editor/edge-delivery-services-form.md)
+      + [Vanliga frågor](/help/edge/docs/forms/adapttive-forms-for-edge-delivery-services-faq.md)
       + Dokumentbaserad redigering {#getting-started-edge-delivery-services-forms}
          + [Skapa ditt första formulär: Snabbstartsguide med Google Sheets och Excel](/help/edge/docs/forms/tutorial.md)
          + [Så här skapar du Forms med Google-blad eller Excel: Stegvisa handböcker](/help/edge/docs/forms/create-forms.md)
@@ -1043,7 +1044,7 @@ ht-degree: 2%
          + [Skapa anpassade formulärkomponenter: Utvecklarhandbok](/help/edge/docs/forms/custom-components-forms.md)
          + [Övervaka formulärprestanda: Övervakningshandbok för riktig användning](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
          + [Installera Forms på Edge: Publiceringshandbok för Edge Delivery Services](/help/edge/docs/forms/publishing-forms.md)
-      + WYSIWYG {#universal-editor}
+      + WYSIWYG Authoring {#universal-editor}
          + [Introduktion till Forms Universal Editor för Edge Delivery Services - komplett guide](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
          + [Skapa ditt första formulär med en universell redigerare - steg för steg självstudiekurs](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
          + [Guide till gränssnittet för Universal Editor: Verktyg, Funktioner och Navigering - förklaras](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md)

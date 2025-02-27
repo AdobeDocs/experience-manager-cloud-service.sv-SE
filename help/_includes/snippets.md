@@ -1,7 +1,7 @@
 ---
-source-git-commit: ba42a99e6138616ab6a7564c4bf58400844bdcc4
+source-git-commit: d06399fd63d38738e7aff8503aec9a72a2081b5c
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -59,14 +59,13 @@ ht-degree: 0%
 
 ## Universal Editor{#universal-editor-see-also}
 
-* [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
-* [Publicera formuläret](/help/edge/docs/forms/universal-editor/publish-forms.md)
-* [Skicka in formuläret](/help/edge/docs/forms/universal-editor/submit-action.md)
-* [Anpassa utseendet på formulären](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
-* [Skapa regler för ditt formulär](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
-* [Använd reCAPTCHA i formuläret](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
-* [Skapa en anpassad komponent för formuläret](/help/edge/docs/forms/universal-editor/create-custom-component.md)
-* [Förhandsgranska formulär i svarsläge](/help/edge/docs/forms/universal-editor/responsive-layout.md)
+* [Skapa ditt första formulär med den universella redigeraren](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+* [Lägg till dynamiskt beteende i Forms](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
+* [Konfigurera och anpassa formuläröverföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md)
+* [Publicera och distribuera Forms](/help/edge/docs/forms/universal-editor/publish-forms.md)
+* [Design Beautiful Forms: Styling and Theming Guide](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
+* [Skapa anpassade formulärkomponenter](/help/edge/docs/forms/universal-editor/create-custom-component.md)
+* [Skydda din Forms mot skräppost: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
 
 ## Se även {#see-more-forms-eds}
 

@@ -1,24 +1,24 @@
 ---
-title: Universal Editor för Edge Delivery Services for Forms (EDS Forms Block)
-description: Använd Universell redigerare för Edge Delivery Services for Forms (EDS Forms Block) för att skapa Adaptiv Forms.
+title: Universal Editor för Edge Delivery Services for Forms
+description: Använd Universell redigerare för Edge Delivery Services for Forms för att skapa Adaptiv Forms.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
+source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1077'
 ht-degree: 0%
 
 ---
 
 
-# Universal Editor för Edge Delivery Services for Forms (EDS Forms Block)
+# Universal Editor för Edge Delivery Services for Forms
 
 <span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
-Universal Editor revolutionerar formulärframtagningen för Adobe Edge Delivery Services (EDS) genom att erbjuda ett enkelt, visuellt och intuitivt What You See Is What You Get-gränssnitt (WYSIWYG). Det är utformat för innehållsskapare och formulärförfattare och eliminerar komplexiteten i traditionella formulärgenereringsprocesser, vilket gör det tillgängligt även för icke-tekniska användare.
+Den universella redigeraren revolutionerar formulärframtagningen för Adobe Edge Delivery Services genom att erbjuda ett enkelt, visuellt och intuitivt What You See Is What You Get-gränssnitt (WYSIWYG). Det är utformat för innehållsskapare och formulärförfattare och eliminerar komplexiteten i traditionella formulärgenereringsprocesser, vilket gör det tillgängligt även för icke-tekniska användare.
 
 Med den universella redigeraren kan du snabbt skapa responsiva, interaktiva formulär med färdiga komponenter som textfält, kryssrutor och alternativknappar. Dess robusta funktionsuppsättning har stöd för dynamiska regler, smidig dataintegrering och avancerad personalisering, vilket säkerställer att alla formulär är skräddarsydda efter era behov.
 
@@ -26,7 +26,7 @@ Den universella redigeraren är en smidig lösning för att skapa och hantera fo
 
 ![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=80%, align-center} —>
 
-## Key Features of Universal Editor for EDS Forms
+## Viktiga funktioner i Universal Editor för Edge Delivery Services for Forms
 
 
 
@@ -49,13 +49,13 @@ Här är layouten med likbreddskort (med kolumner med fast bredd):
 
 | ![Analys och spårning](/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg) | ![Aktivitetshantering](/help/edge/docs/forms/universal-editor/assets/adobe-workfront.svg) | ![Databindning](/help/edge/docs/forms/universal-editor/assets/data-binding.svg) |
 |:-------------:|:-------------:|:-------------:|
-| [**Analys och spårning**](https://www.aem.live/developer/martech-integration) | **Aktivitetshantering** | **Databindning** |
+| [**Analys och spårning**](https://www.aem.live/developer/martech-integration) | **Aktivitetshantering** (kommer snart) | **Databindning** (kommer snart) |
 | Få insikter om användarbeteende, formulärinteraktioner och överföringshastighet med inbyggda analyser och spårning för att möjliggöra datadriven optimering av formulär. | Integreringen med Adobe Workfront gör att man kan hantera blankettarbete och underhåll och få smidiga arbetsflöden. | Databindning möjliggör direkta anslutningar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning. |
 
 | ![CAPTCHA](/help/edge/docs/forms/universal-editor/assets/captcha.svg) | ![Bädda in Forms](/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg) | ![Tack!](/help/edge/docs/forms/universal-editor/assets/thank-you.svg) |
 |:-------------:|:-------------:|:-------------:|
-| **Anpassning av redigerare** | **Bädda in Forms** | [**Tack!**](/help/edge/docs/forms/universal-editor/submit-action.md#show-a-custom-thank-you-message-on-adaptive-form-submission-submit-action-message-ue) |
-| Utvecklare kan utöka redigerarens funktionalitet med hjälp av UI-tillägg, vilket möjliggör skräddarsydda lösningar som passar specifika organisatoriska behov. | Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor. | Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats. |
+| [**CAPTCHA**](/help/edge/docs/forms/universal-editor/recaptcha-forms.md) | **Bädda in Forms** | [**Tack!**](/help/edge/docs/forms/universal-editor/submit-action.md#show-a-custom-thank-you-message-on-adaptive-form-submission-submit-action-message-ue) |
+| Använd reCAPTCHA för att skydda formulär från automatiserade portar och säkerställa säker och tillförlitlig datainsamling. | Bädda in formulär direkt på Edge Delivery Services Sites-sidor med den inbyggda inbäddningskomponenten i Universal Editor. | Anpassa enkelt bekräftelsemeddelandet eller sidan som visas för användarna när formuläret har skickats. |
 
 
 <!-- ![Universal Editor](/help/edge/docs/forms/universal-editor/assets/generate-forms.svg)  **WYSIWYG interface for Form creation**: Universal Editor provides a WYSIWYG interface for form design. It provides pre-built component library, responsive design support, and template-based form creation. You can instantly add or remove form fields and modify field properties (like label, data binding, validation). You can also plugin custom form components to Universal Editor.

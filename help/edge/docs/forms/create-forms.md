@@ -4,9 +4,9 @@ description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery dokum
 feature: Edge Delivery Services
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
 role: Admin, Architect, Developer
-source-git-commit: cb914f76b0b785a89b20ef5eaacbc36e8217944b
+source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427881?quality=12&learn=on)
 
-AEM Forms Edge Delivery har ett block, Adaptive Forms Block, som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM projekt förkonfigurerat med adaptivt Forms-block](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) -projekt.
+AEM Forms Edge Delivery har ett block, Adaptive Forms Block, som hjälper dig att enkelt skapa formulär för att hämta in och lagra inhämtade data. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med Adaptivt Forms-block](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-projekt](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project).
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
@@ -26,7 +26,7 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) [lade till Adaptivt Forms-block i ditt befintliga AEM ](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på den lokala datorn.
+* Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) [lade till Adaptivt Forms-block i ditt befintliga AEM-projekt](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
 <!--In this document, the local folder of your Edge Delivery Services (EDS) project is referred as `[EDS Project repository]`.  -->
 * Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Använda SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
@@ -70,13 +70,13 @@ Ta till exempel följande kalkylblad, där rader anger fälten för ett [fråget
 
 Så här fortsätter du med att skapa formulär:
 
-1. Gå till din projektmapp AEM Edge Delivery på Microsoft SharePoint eller Google Drive.
+1. Gå till projektmappen för AEM Edge Delivery på Microsoft SharePoint eller Google Drive.
 
-1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` AEM Edge Delivery projektkatalog på Google Drive.
+1. Skapa en Microsoft Excel-arbetsbok eller ett Google-blad var som helst i AEM Edge Delivery projektkatalog. Skapa till exempel ett kalkylblad med namnet `enquiry` i projektkatalogen för AEM Edge Delivery på Google Drive.
 
    <!-- ![Sample Content on Google Drive](/help/edge/assets/upload-sample-files-to-your-content-folder.png)-->
 
-1. Kontrollera att bladet delas med rätt AEM (till exempel `forms@adobe.com`) [ enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
+1. Se till att kalkylbladet delas med lämplig AEM-användare (till exempel `forms@adobe.com`) [enligt de konfigurationer som har angetts för ditt projekt](https://www.aem.live/docs/setup-customer-sharepoint). Ge användaren redigeringsbehörighet för bladet.
 
 1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-aem&quot;.
 
@@ -113,12 +113,12 @@ Så här fortsätter du med att skapa formulär:
 
 +++
 
-+++ Steg 2: Förhandsgranska formuläret på EDS-sidan (Edge Delivery Services).
++++ Steg 2: Förhandsgranska formuläret på din Edge Delivery Services-sida.
 
 
 Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska formuläret:
 
-1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din AEM Edge Delivery projektkatalog.
+1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till din projektkatalog för AEM Edge Delivery.
 
 
 

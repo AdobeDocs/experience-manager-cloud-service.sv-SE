@@ -4,16 +4,16 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: 12ac8fd43d56fb95bf63b2ce92d1ec1a776e464a
+source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1656'
 ht-degree: 0%
 
 ---
 
 # Komma igång - självstudiekurs för utvecklare
 
-I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med Edge Delivery Services for AEM Forms (EDS) kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
+I dagens digitala samhälle är det viktigt för alla företag att skapa användarvänliga formulär. Med Edge Delivery Services för AEM Forms kan du skapa formulär med välbekanta verktyg som Google Docs och Microsoft Office.
 
 Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets-fil, vilket gör att du kan använda aktiva ekosystem och stabila API:er för Google Sheets, Microsoft Excel och Microsoft SharePoint för att enkelt bearbeta inlämnade data eller starta ett befintligt arbetsflöde.
 
