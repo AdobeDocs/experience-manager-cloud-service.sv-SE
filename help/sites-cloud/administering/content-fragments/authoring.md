@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 84e329e893ead1d67a3a0f651d0d2d4b24021b12
+source-git-commit: def1b808be7e90b4cba79ccbfa81da936be58c54
 workflow-type: tm+mt
-source-wordcount: '2851'
+source-wordcount: '2657'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Den här redigeraren innehåller:
 * [Inline-överföring av resurser som innehållsreferenser](#reference-images), utan att först behöva överföra dem till resursens DAM.
 * [Generera variationer](#generate-variations-ai) om du vill använda den generativa AI-filen för att snabba upp innehållsskapandet baserat på uppmaningar.
 * [Förhandsgranska](#preview-content-fragment) av den återgivna upplevelsen som levereras av innehållsfragmentet.
-* Möjlighet att [Publish](#publish-content-fragment) och [avpublicera](#unpublish-content-fragment) från redigeraren.
+* Möjlighet att [publicera](#publish-content-fragment) och [avpublicera](#unpublish-content-fragment) från redigeraren.
 * Möjlighet att [visa och öppna associerade språkkopior](#view-language-copies) i redigeraren.
 * Möjlighet att [visa versionsinformation](#view-version-history) i redigeraren. Du kan också återgå till en vald version.
 * Möjlighet att [visa och öppna överordnade referenser](#view-parent-references).
@@ -41,7 +41,7 @@ Den här redigeraren innehåller:
 
 >[!WARNING]
 >
->Redigeraren som beskrivs i det här avsnittet är *endast* tillgänglig i *online* Adobe Experience Manager-as a Cloud Service (AEM).
+>Redigeraren som beskrivs i det här avsnittet är *endast* tillgänglig i *online* Adobe Experience Manager (AEM) as a Cloud Service.
 
 ## Innehållsfragmentsredigerare {#content-fragment-editor}
 
@@ -51,7 +51,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
    * länkar till [Förhandsgranska (om URL-mönstret för standardförhandsvisning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-fragment-model-properties)
-   * [Publish](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) åtgärder
+   * [Publicera](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) åtgärder
    * ett alternativ för att visa alla **överordnade referenser** (länkikon)
    * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och den senast sparade informationen
    * växla till den ursprungliga (Assets-baserade) redigeraren
@@ -95,7 +95,7 @@ I den vänstra panelen ser du:
 
 * listan med **[Variationer](#variations)** som har skapats för det här fragmentet:
    * **Main** är variationen som finns när innehållsfragmentet skapas, du kan lägga till andra senare
-   * Du kan använda Generate Variations(#generate-variations) för att använda en promptbaserad mall som Adobe har skapat för ett visst användningsfall.
+   * Du kan använda Generera variationer(#generate-variationer) för att använda en promptbaserad mall som Adobe har skapat för ett visst ändamål.
    * du kan även [skapa en variant](#create-variation)
 * **Fält** i fragmentet och dess varianter:
    * ikonen anger [datatypen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
@@ -126,7 +126,7 @@ För varje uppdatering som du gör sparas innehållsfragmentet automatiskt. Den 
 
 ## Variationer {#variations}
 
-[Variationer](/help/sites-cloud/administering/content-fragments/overview.md#main-and-variations) är en viktig funktion för att AEM innehållsfragment. Med dem kan du skapa och redigera kopior av **Main** -innehållet som ska användas i vissa kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
+[Variationer](/help/sites-cloud/administering/content-fragments/overview.md#main-and-variations) är en viktig funktion i AEM innehållsfragment. Med dem kan du skapa och redigera kopior av **Main** -innehållet som ska användas i vissa kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
 
 Från redigeraren kan du:
 
@@ -174,40 +174,9 @@ Så här byter du namn på en **variation**:
 
 Använd Generative Variations för att utnyttja generativ AI för att snabba upp framtagningen av innehåll.
 
-Så här använder du de generativa variationerna i redigeraren för innehållsfragment:
+Öppna Content Fragment Editor för att hitta startpunkten till Generera variationer.
 
-1. Öppna Content Fragment Editor. I rubriken hittar du startpunkten till Generera variationer:
-
-   ![Generera variationer i redigeraren för innehållsfragment](assets/cfm-generate-variations1.png)
-
-1. Generera varianter öppnas på en ny flik. I den vänstra listen kan du se AEM Cloud-instansen och det innehållsfragment som du skapar innehåll för. Välj den fråga du vill använda eller skapa en ny fråga.
-
-   >[!NOTE]
-   >
-   >De tillgängliga mallarna för uppmaningsmeddelanden för Adobe är nu begränsade, men fler kommer att läggas till i framtida versioner.
-
-   ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations2.png)
-
-1. Generera innehåll genom att fylla i uppmaningarna. Innehållsmodellen från fragmentet används automatiskt för att generera innehåll med GenAI.
-
-   >[!NOTE]
-   >
-   >Vi stöder för närvarande bara textfält.
-
-   ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations3.png)
-
-1. Välj den variant som du vill ha och välj &quot;exportvariant&quot;. Bekräfta namnet på varianten av innehållsfragmentet och välj antingen:
-
-   * **Exportera**: exportera variation till innehållsfragment och stanna i programmet Generera variation.
-   * **Exportera och öppna**: Exportera variation till innehållsfragment och öppna en ny flik som visar innehållsfragment med den nya varianten från GenAI.
-
-     ![Exportera för att generera variationer i innehållsfragment](assets/cfm-generate-variations4.png)
-
-1. Variationer som genereras visas i redigeraren för huvudinnehållsfragment.
-
-   ![Visa Generera variationer i innehållsfragment](assets/cfm-generate-variations5.png)
-
-Mer information finns i [Generera variationer](/help/generative-ai/generate-variations.md).
+Mer information finns i [Generera variationer - Integrerat i AEM Editors](/help/generative-ai/generate-variations-integrated-editor.md).
 
 ### Ta bort en variant {#delete-variation}
 
@@ -339,7 +308,7 @@ Du kan också [välja **Skapa nytt fragment** för att öppna dialogrutan **Skap
 
 ### Innehållsreferenser {#content-references}
 
-[Innehållsreferenser](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference) används för att referera till andra AEM innehållstyper, som bilder, sidor och Experience Fragments.
+[Innehållsreferenser](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference) används för att referera till andra AEM-innehållstyper, som bilder, sidor och Experience Fragments.
 
 #### Referensbilder {#reference-images}
 
@@ -364,7 +333,7 @@ Du kan antingen lägga till en resurs:
 
 #### Referenssidor {#reference-pages}
 
-Så här lägger du till referenser till AEM sidor, Experience Fragments eller andra sådana innehållstyper:
+Så här lägger du till referenser till AEM-sidor, Experience Fragments eller andra sådana innehållstyper:
 
 1. Välj **Lägg till innehållssökväg**.
 
@@ -506,12 +475,12 @@ Om du vill använda den här funktionen måste du först:
 
 När URL:en har definierats är knappen **Förhandsgranska** aktiv. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
 
-## Publish ditt fragment {#publish-content-fragment}
+## Publicera fragment {#publish-content-fragment}
 
-Du kan **Publish** ditt fragment till antingen din:
+Du kan **publicera** ditt fragment till antingen din:
 
 * Förhandsgranska instans
-* Publish, instans
+* Publicera instans
 
 Du kan publicera fragmentet antingen från redigeraren eller konsolen. Mer information finns i [Publicera och förhandsgranska ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment).
 
@@ -520,7 +489,7 @@ Du kan publicera fragmentet antingen från redigeraren eller konsolen. Mer infor
 Du kan även **Avpublicera** ditt fragment från antingen din:
 
 * Förhandsgranska instans
-* Publish, instans
+* Publicera instans
 
 Du kan avpublicera fragmentet från antingen redigeraren eller konsolen. Mer information finns i [Avpublicera ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#unpublishing-a-fragment).
 

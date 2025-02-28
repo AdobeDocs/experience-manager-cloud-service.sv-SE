@@ -4,9 +4,9 @@ description: Läs mer om Generera variationer, som kan hämtas från AEM as a Cl
 exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
 feature: Generate Variations
 role: Admin, Architect, Developer
-source-git-commit: bbc51796c610af02b5260c063213cde2ef610ba2
+source-git-commit: def1b808be7e90b4cba79ccbfa81da936be58c54
 workflow-type: tm+mt
-source-wordcount: '3262'
+source-wordcount: '3272'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Generera variationer {#generate-variations}
 
-Om du letar efter ett sätt att optimera de digitala kanalerna och snabba upp innehållsskapandet kan du använda Generera variationer. Generate Variations (Generate Variations) använder generativ artificiell intelligens (AI) för att skapa innehållsvariationer baserat på uppmaningar. Dessa uppmaningar tillhandahålls antingen av Adobe eller skapas, och hanteras av användare. När du har skapat varianter kan du använda innehållet på webbplatsen och även mäta hur de fungerar med funktionen [Experimentera](https://www.aem.live/docs/experimentation) i [Edge Delivery Services](/help/edge/overview.md).
+Om du letar efter ett sätt att optimera de digitala kanalerna och snabba upp innehållsskapandet kan du använda Generera variationer. Generate Variations (Generate Variations) använder generativ artificiell intelligens (AI) för att skapa innehållsvariationer baserat på uppmaningar. Dessa uppmaningar tillhandahålls antingen av Adobe eller skapas, och hanteras av användare. När du har skapat varianter kan du använda innehållet på webbplatsen och även mäta hur de fungerar med funktionen [Experimentation](https://www.aem.live/docs/experimentation) i [Edge Delivery Services](/help/edge/overview.md).
 
 Du kan [komma åt Generera variationer](#access-generate-variations) från:
 
@@ -26,6 +26,10 @@ Du kan [komma åt Generera variationer](#access-generate-variations) från:
 >
 >För att kunna använda Generate Variations måste du se till att [åtkomstkraven](#access-prerequisites) uppfylls.
 
+>[!NOTE]
+>
+>Du har även åtkomst till [Generera variationer som är integrerade i AEM-redigerare](/help/generative-ai/generate-variations-integrated-editor.md).
+
 Då kan du:
 
 * [Kom igång](#get-started) med en promptmall som Adobe har skapat för ett visst användningsfall.
@@ -35,7 +39,7 @@ Då kan du:
    * [Få åtkomst till och använd delade uppmaningar](#select-prompt) från hela organisationen
 * Definiera de [målgruppssegment](#audiences) som ska användas i prompten när [genererar anpassat målgruppsspecifikt innehåll](#generate-copy).
 * Förhandsgranska utdata tillsammans med prompten, innan du gör ändringar och finjusterar resultatet om det behövs.
-* Använd [Adobe Express för att generera bilder](#generate-image) baserat på kopieringsvariationerna. Detta använder de generativa AI-funktionerna i Firefly.
+* Använd [Adobe Express för att generera bilder](#generate-image) baserat på kopieringsvariationerna. Detta använder Firefly Generative AI-funktioner.
 * Välj innehåll som du vill använda på webbplatsen eller i ett experiment.
 
 ## Juridisk information och bruksanvisning {#legal-usage-note}
@@ -63,7 +67,7 @@ När du öppnar Generera variationer (och expanderar den vänstra panelen) ser d
    * Till vänster om **Generera variationer** finns det ett alternativ (med tre streck-menyn) för att expandera eller dölja den vänstra navigeringspanelen.
    * **Frågemallar**:
       * Visar länkar till de olika uppmaningarna. Dessa kan innehålla uppmaningar:
-         * Tillhandahålls av Adobe för att hjälpa dig att generera innehåll. Flaggas med ikonen Adobe.
+         * Tillhandahålls av Adobe för att hjälpa dig att generera innehåll, flaggat med Adobe-ikonen.
          * Skapad av dig själv.
          * Skapat i din IMS-organisation; flaggat med en ikon som visar flera huvuden.
       * Inkluderar länken [Ny fråga](#create-prompt) för att skapa en egen fråga.
@@ -88,7 +92,7 @@ På huvudpanelen kan du välja:
 
 Så här differentierar du:
 
-* De meddelanden som visas i Adobe är flaggade med ikonen Adobe
+* De uppmaningar som tillhandahålls av Adobe är flaggade med Adobe-ikonen
 * Fråga som är tillgängliga i hela IMS-organisationen markeras med en huvudikon.
 * Dina privata uppmaningar flaggas inte specifikt.
 
@@ -107,7 +111,7 @@ Det finns flera inmatningsfält som är gemensamma för flera uppmaningar (vissa
    * Beroende på uppmaningen kan det här ha en av flera olika etiketter, till exempel Antal variationer, Antal Ideas med flera.
 * **Målgrupp Source**/**Målgrupp**
    * Hjälper till att generera personaliserat innehåll till en viss målgrupp.
-   * Adobe tillhandahåller standardmålgrupper, eller så kan du ange ytterligare målgrupper, se [Publiker](#audiences).
+   * Adobe tillhandahåller standardmålgrupper, eller så kan du ange ytterligare målgrupper, se [Målgrupper](#audiences).
 * **Ytterligare kontext**
    * Infoga relevant innehåll som hjälper generativ AI att skapa bättre respons baserat på indata. Om du till exempel skapar en webbanderoll för en viss sida eller produkt kanske du vill inkludera information om sidan/produkten.
 * **Temperatur**
@@ -146,25 +150,25 @@ Ovanför varje variantuppsättning finns uppmaningen som skapade dem, tillsamman
 
 ### Generera bild {#generate-image}
 
-När du har genererat textvariationer kan du generera bilder i Adobe Express med hjälp av Firefly generativa AI-funktioner.
+När du har genererat textvarianter kan du generera bilder i Adobe Express med hjälp av Firefly generativa AI-funktioner.
 
 >[!NOTE]
 >
->**Generera bild** är bara tillgängligt om du har ett tillstånd för Adobe Express som en del av din IMS-organisation och åtkomst beviljas dig i Admin Console.
+>**Generera bild** är bara tillgängligt om du har ett Adobe Express-berättigande som en del av din IMS-organisation och åtkomst som beviljas dig i Admin Console.
 
-Markera en variant, följt av **Generera bild**, om du vill öppna **Text till bild** direkt i [Adobe Express](https://www.adobe.com/express/). Frågorna fylls i automatiskt baserat på ditt val av variant och bilderna genereras automatiskt enligt uppmaningen.
+Välj en variant, följt av **Generera bild**, som ska öppnas direkt i **Text till bild** i [Adobe Express](https://www.adobe.com/express/). Frågorna fylls i automatiskt baserat på ditt val av variant och bilderna genereras automatiskt enligt uppmaningen.
 
 ![Generera variationer - expressbilder](assets/generate-variations-express-images.png)
 
 Du kan göra ytterligare ändringar:
 
-* [skriv din egen fråga i Adobe Express](https://helpx.adobe.com/firefly/using/tips-and-tricks.html) genom att beskriva vad du vill se,
+* [skriv din egen uppmaning i Adobe Express](https://helpx.adobe.com/firefly/using/tips-and-tricks.html) genom att beskriva vad du vill se,
 * justera alternativen för **text till bild**,
 * **Uppdatera** de genererade bilderna.
 
 Du kan också använda **Utforska mer** om du vill ha fler möjligheter.
 
-När du är klar markerar du bilden och **Spara** för att stänga Adobe Expressen. Bilden returneras och sparas med variationen.
+När du är klar markerar du bilden och **Spara** för att stänga Adobe Express. Bilden returneras och sparas med variationen.
 
 ![Generera variationer - expressbild sparad](assets/generate-variations-express-image-saved.png)
 
@@ -177,7 +181,7 @@ Här kan du visa åtgärdsobjekt för:
 
 >[!NOTE]
 >
->[](https://helpx.adobe.com/creative-cloud/help/content-credentials.html) bevaras inte när de används i dokumentbaserad redigering.
+>[Innehållsautentiseringsuppgifterna](https://helpx.adobe.com/creative-cloud/help/content-credentials.html) bevaras inte när de används i dokumentbaserad redigering.
 
 ### Använd innehåll {#use-content}
 
@@ -321,7 +325,7 @@ När du väljer det här alternativet öppnas dialogrutan **Spara fråga**:
 
 ## Målgrupper {#audiences}
 
-För att generera personaliserat innehåll måste den generativa AI ha en förståelse för publiken. Adobe har ett antal standardmålgrupper, eller så kan du lägga till en egen.
+För att generera personaliserat innehåll måste den generativa AI ha en förståelse för publiken. Adobe tillhandahåller ett antal standardmålgrupper, eller så kan du lägga till en egen.
 
 När du lägger till en målgrupp bör du beskriva målgruppen på det naturliga språket. Till exempel:
 
@@ -371,7 +375,7 @@ Adobe har ett antal målgrupper att använda.
 
 #### Lägg till målgrupps-CSV-fil {#add-audience-csv-file}
 
-Du kan lägga till en CSV-fil från olika plattformar (till exempel Google Drive, Dropbox, Sharepoint) som kan ange en URL till filen när den blir tillgänglig för allmänheten.
+Du kan lägga till en CSV-fil från olika plattformar (till exempel Google Drive, Dropbox, Sharepoint) som kan tillhandahålla en URL till filen när den är tillgänglig för allmänheten.
 
 >[!NOTE]
 >
@@ -382,7 +386,7 @@ Så här lägger du till en målgrupp från en fil på Google Drive:
 1. Skapa en kalkylbladsfil med två kolumner i Google Drive:
    1. Den första kolumnen visas i listrutan.
    1. Den andra kolumnen blir målgruppsbeskrivningen.
-1. Publish filen:
+1. Publicera filen:
    1. File -> Share -> publish to web -> CSV
 1. Kopiera URL-adressen till den publicerade filen.
 1. Gå till Generera variationer.
@@ -403,7 +407,7 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
 * Generera variationer
 
-  En generation av en kopieringsvariant motsvarar en generativ åtgärd. Som kund har ni ett visst antal generativa åtgärder som följer med er AEM licens. När basberättigandet har förbrukats kan du köpa ytterligare åtgärder.
+  En generation av en kopieringsvariant motsvarar en generativ åtgärd. Som kund har ni ett visst antal generativa åtgärder som följer med er AEM-licens. När basberättigandet har förbrukats kan du köpa ytterligare åtgärder.
 
   >[!NOTE]
   >
@@ -411,11 +415,11 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
 * Adobe Express
 
-  Bildgenereringsanvändningen hanteras via Adobe Expresser och [generativa krediter](https://helpx.adobe.com/firefly/using/generative-credits-faq.html).
+  Bildgenereringsanvändningen hanteras via Adobe Express-berättiganden och [generativa krediter](https://helpx.adobe.com/firefly/using/generative-credits-faq.html).
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 
-När du har uppfyllt kraven får du tillgång till Generera variationer från AEM as a Cloud Service eller Sidekick i Edge Delivery Servicens.
+När du har uppfyllt kraven kan du få tillgång till Generera variationer från AEM as a Cloud Service eller Sidekick från Edge Delivery Services.
 
 ### Åtkomstkrav {#access-prerequisites}
 
@@ -425,11 +429,11 @@ Om du vill använda Generera variationer måste du se till att villkoren är upp
 
 #### Tillgång till Experience Manager as a Cloud Service med Edge Delivery Services{#access-to-aemaacs-with-edge-delivery-services}
 
-Användare som behöver åtkomst till Generate Variations måste ha rätt till en Experience Manager as a Cloud Service-miljö med Edge Delivery Services.
+Användare som behöver ha tillgång till Generate Variations måste ha rätt till en Experience Manager as a Cloud Service-miljö med Edge Delivery Services.
 
 >[!NOTE]
 >
->Om ditt avtal för AEM Sites as a Cloud Service inte innehåller några Edge Delivery Services måste du signera ett nytt kontrakt för att få åtkomst.
+>Om ditt avtal för AEM Sites as a Cloud Service inte innehåller Edge Delivery Services måste du teckna ett nytt kontrakt för att få åtkomst.
 >
 >Kontakta er kontogrupp för att diskutera hur ni kan gå över till AEM Sites as a Cloud Service med Edge Delivery Services.
 
@@ -445,9 +449,9 @@ Du kan komma åt Generera variationer på [navigeringspanelen](/help/sites-cloud
 
 En del konfiguration krävs innan du kan komma åt Generera variationer från Sidekick (i Edge Delivery Services).
 
-1. Se dokumentet [Installera AEM Sidekick](https://www.aem.live/docs/sidekick-extension) för att få information om hur du installerar och konfigurerar Sidekick.
+1. Läs dokumentet [Installera AEM Sidekick](https://www.aem.live/docs/sidekick-extension) om du vill veta hur du installerar och konfigurerar Sidekick.
 
-1. Om du vill använda Generera variationer i Sidekick (av Edge Delivery Services) inkluderar du följande konfiguration i dina Edge Delivery Services under:
+1. Om du vill använda Generera variationer i Sidekick (i Edge Delivery Services) inkluderar du följande konfiguration i dina Edge Delivery Services-projekt under:
 
    * `tools/sidekick/config.json`
 
@@ -473,9 +477,9 @@ En del konfiguration krävs innan du kan komma åt Generera variationer från Si
    }
    ```
 
-1. Du kan då behöva se till att användare har [åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services](#access-to-aemaacs-with-edge-delivery-services).
+1. Du kan då behöva kontrollera att användarna har [åtkomst till Experience Manager as a Cloud Service med Edge Delivery Services](#access-to-aemaacs-with-edge-delivery-services).
 
-1. Du kan sedan komma åt funktionen genom att välja **Generera variationer** i verktygsfältet på Sidekick:
+1. Du kan sedan komma åt funktionen genom att välja **Generera variationer** i verktygsfältet i Sidekick:
 
    ![Generera variationer - åtkomst från AEM Sidekicj](assets/generate-variations-sidekick-toolbar.png)
 
@@ -484,7 +488,7 @@ En del konfiguration krävs innan du kan komma åt Generera variationer från Si
 Du kan även läsa mer om:
 
 * [GenAI Generera variationer på GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
-* [Experimentation för Edge Delivery Services](https://www.aem.live/docs/experimentation)
+* [Edge Delivery Services Experimentation](https://www.aem.live/docs/experimentation)
 
 ## Vanliga frågor {#faqs}
 

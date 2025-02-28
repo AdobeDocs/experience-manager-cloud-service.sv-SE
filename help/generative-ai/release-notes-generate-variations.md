@@ -4,9 +4,9 @@ description: Versionsinformation för Generera variationer, tillgänglig från A
 exl-id: caf85bae-3cce-4083-ab6e-e2637ff5afce
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: def1b808be7e90b4cba79ccbfa81da936be58c54
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '266'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,19 @@ På den här sidan visas versionsinformation för Generate Variations, som du ko
 
 ## Viktiga versionsmarkeringar {#release-highlights}
 
-Den aktuella versionen är version 2.2.0.
+Den aktuella versionen är version 3.0.0.
+
+### 3.0.0 {#release-notes-3-0-0}
+
+Du kan [komma åt Generera variationer](/help/generative-ai/generate-variations-integrated-editor.md#access-generate-variations) från följande redigerare ([när de har konfigurerats](#access-generate-variations)):
+
+* [inom Sidekick för AEM Edge Delivery Services, för dokumentbaserad framtagning](/help/generative-ai/generate-variations-integrated-editor.md#access-aem-sidekick)
+* [i Universal Editor](/help/generative-ai/generate-variations-integrated-editor.md#access-aem-universal-editor)
+* [i Content Fragments Editor](/help/generative-ai/generate-variations-integrated-editor.md#access-aem-content-fragment-editor)
+
+>[!NOTE]
+>
+>Den tidigare versionen av [Generate Variations kan fortfarande nås direkt](/help/generative-ai/generate-variations.md).
 
 ### 2.2.0 {#release-notes-2-2-0}
 
@@ -37,7 +49,7 @@ Den aktuella versionen är version 2.2.0.
    * Målgrupper kan läsas direkt från Adobe Target
    * Uppdaterade metoder för att lägga till CSV-filer
 * Dialogruta med alternativ för Spara fråga
-* När du genererar bilder är uppmaningen i Adobe Expressen ifylld i förväg
+* När du genererar bilder är uppmaningen i Adobe Express förifylld
 * Frågekort (på startsidan) innehåller extra information och kan tas bort
 
 ## Kända fel {#known-issues}
