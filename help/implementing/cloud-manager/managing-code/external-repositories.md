@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en extern databas i Cloud Manager. Clo
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: befb092169e2278a9e84c183d342003ef325c71e
+source-git-commit: bd05433bb4d92a4120b19ad99d211a4a5e1f06ca
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -49,8 +49,8 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
    | Fält | Beskrivning |
    | --- | --- |
    | **Databasnamn** | Obligatoriskt. Ett uttrycksfullt namn för din nya databas. |
-   | **Databas-URL** | Obligatoriskt. Databasens URL.<br><br> Om du använder en GitHub-värdbaserad databas måste sökvägen sluta i `.git`.<br>Till exempel *`https://github.com/org-name/repo-name.git`* (URL-sökvägen är endast avsedd som illustration).<br><br>Om du använder en extern databas måste den använda följande URL-sökvägsformat:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> eller<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Och matcha Git-leverantören. |
-   | Välj **Databastyp** | Obligatoriskt. Välj den databastyp som du använder: **GitHub**, **GitLab** eller **BitBucket**. Om databasens URL-sökväg ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald. |
+   | **Databas-URL** | Obligatoriskt. Databasens URL.<br><br>Om du använder en GitHub-värdbaserad databas måste sökvägen sluta i `.git`.<br>Till exempel *`https://github.com/org-name/repo-name.git`* (URL-sökvägen är endast avsedd som illustration).<br><br>Om du använder en extern databas måste den använda följande URL-sökvägsformat:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> eller<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Och matcha Git-leverantören. |
+   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder: **GitHub**, **GitLab** eller **BitBucket**. Om databasens URL-sökväg ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald. |
    | **Beskrivning** | Valfritt. En detaljerad beskrivning av databasen. |
 
 1. Välj **Spara** för att lägga till databasen.
@@ -64,7 +64,7 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
    | --- | --- |
    | **Använd befintlig åtkomsttoken** | Om du redan har angett en åtkomsttoken för databasen för din organisation och har tillgång till flera databaser kan du välja en befintlig token. Använd listrutan **Tokennamn** för att välja den token som du vill använda för databasen. I annat fall lägger du till en ny åtkomsttoken. |
    | **Lägg till ny åtkomsttoken** | **Databastyp: GitHub**<br> ・ Ange ett namn för åtkomsttoken som du skapar i textfältet **Token Name**.<br> ・ Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitHub-dokumentationen](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<br> ・ behörigheter krävs:<br>  ・ `Read access to metadata`<br>  ・ `Read and write access to code and pull requests`.<br> ・ Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
-   |  | **Databastyp: GitLab**<br> ・ Ange ett namn för åtkomsttoken som du skapar i textfältet **Token Name**.<br> ・ Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html).<br> ・ behörigheter krävs:<br>  ・ `api`<br>  ・ `read_api`<br>  ・ `read_repository`<br>  ・ `write_repository`<br> ・ Klistra in den token du just skapade i fältet **Åtkomsttoken** . |
+   |  | **Databastyp: GitLab**<br> ・ Ange ett namn för åtkomsttoken som du skapar i textfältet **Token Name**.<br> ・ Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<br> ・ behörigheter krävs:<br>  ・ `api`<br>  ・ `read_api`<br>  ・ `read_repository`<br>  ・ `write_repository`<br> ・ Klistra in den token du just skapade i fältet **Åtkomsttoken** . |
    |  | **Databastyp: Bitbucket**<br> ・ I textfältet **Token Name** anger du ett namn för åtkomsttoken som du skapar.<br> ・ Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<br> ・ behörigheter krävs:<br>  ・ `Read and write access to code and pull requests` |
 
    >[!NOTE]
@@ -99,7 +99,9 @@ Efter valideringen är den externa databasen klar att användas och länkas till
 
 ## Begränsningar
 
-Externa databaser kan inte länkas till konfigurationspipelines.
+* Externa databaser kan inte länkas till konfigurationspipelines.
+* Pipeliner med externa databaser (som inte finns på GitHub) och utlösaren On Git Changes startar inte automatiskt. De kan bara initieras manuellt.
+
 
 <!-- THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY>
 * Pipelines using external repositories (excluding GitHub-hosted repositories) and the **Deployment Trigger** option [!UICONTROL **On Git Changes**], triggers are not automatically started. They must be manually started. -->

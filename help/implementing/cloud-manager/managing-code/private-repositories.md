@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2fa4abca9823bbc62900023d637429f3fbfd894d
+source-git-commit: bd05433bb4d92a4120b19ad99d211a4a5e1f06ca
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Lägga till en privat GitHub-databas i Cloud Manager {#private-repositories}
 
-Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-databaser kan du validera koden direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att synkronisera din kod regelbundet med Adobe-databasen.
+Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-databaser kan du validera koden direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att synkronisera koden regelbundet med Adobe-databasen.
 
 <!-- CONSIDER ADDING MORE DETAIL... THE WHY. Some key points about this capability include the following:
 
@@ -73,7 +73,7 @@ Nu kan du [verifiera ägarskapet för den privata databasen](#validate-ownership
 
 ### Validera ägarskap för en privat GitHub-databas {#validate-ownership}
 
-Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande åtkomst till den. Om du vill bevilja åtkomst måste du installera appen Adobe GitHub och verifiera att du äger den angivna databasen.
+Cloud Manager känner nu till din GitHub-databas, men den behöver fortfarande åtkomst till den. Om du vill bevilja åtkomst måste du installera Adobe GitHub-appen och verifiera att du äger den angivna databasen.
 
 **Så här verifierar du ägarskap för en privat GitHub-databas:**
 
@@ -148,8 +148,8 @@ Vissa begränsningar gäller när du använder privata databaser med Cloud Manag
 
 * Rörledningar för webbnivå och konfiguration stöds inte i privata databaser.
 * Ingen Git-tagg skapas och skickas när privata databaser används i produktion av rörledningar i en hel hög.
-* Om appen Adobe GitHub tas bort från din GitHub-organisation tas funktionen för pull-begärandevalidering bort för alla databaser.
-* Pipeliner som använder privata databaser och utlösaren för bygge vid implementering startas inte automatiskt när en ny implementering överförs till den valda grenen.
+* Om Adobe GitHub-appen tas bort från din GitHub-organisation tas funktionen för pull-begärandevalidering bort för alla databaser.
+* Pipeliner som använder privata databaser och utlösaren för att implementera startas inte automatiskt när en ny implementering överförs till den valda grenen.
 * [Återanvändning av felaktigheter](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) gäller inte för privata databaser.
 * Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager.
 Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.
