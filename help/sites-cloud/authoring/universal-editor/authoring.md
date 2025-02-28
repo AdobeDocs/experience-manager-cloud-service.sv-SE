@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: fced4707e781242132a018d28d4dd121960469eb
 workflow-type: tm+mt
-source-wordcount: '1370'
+source-wordcount: '1410'
 ht-degree: 0%
 
 ---
@@ -178,6 +178,14 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 >
 >Komponenter kan inte flyttas mellan behållare om ett annat [komponentfilter](/help/implementing/universal-editor/filtering.md) har angetts mellan käll- och målbehållarna.
 
+### Skapa variationer med GenAI med Generera variationer {#generate-variations-ai}
+
+Använd Generative Variations för att utnyttja generativ AI för att snabba upp framtagningen av innehåll.
+
+Öppna Universal Editor för att hitta startpunkten till Generera variationer.
+
+Mer information finns i [Generera variationer - Integrerat i AEM Editors](/help/generative-ai/generate-variations-integrated-editor.md).
+
 ## Förhandsgranska innehåll {#previewing-content}
 
 När du är klar med redigeringen av innehållet vill du ofta navigera i det och se hur det ser ut i innehållet på andra sidor. I [förhandsgranskningsläget](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode) kan du klicka på länkar för att navigera i ditt innehåll som en läsare skulle kunna. Innehållet återges i redigeraren på samma sätt som det publiceras.
@@ -193,7 +201,7 @@ Läs det här dokumentet om du vill lära dig hur du publicerar innehåll med de
 Mer information om de tekniska detaljerna i Universal Editor finns i dessa utvecklardokument.
 
 * [Introduktion till universell redigering](/help/implementing/universal-editor/introduction.md) - Lär dig hur den universella redigeraren kan redigera alla delar av innehåll i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
-* [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM.
+* [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM-program.
 * [Universell redigeringsarkitektur](/help/implementing/universal-editor/architecture.md) - Lär dig mer om arkitekturen för den universella redigeraren och hur data flödar mellan dess tjänster och lager.
 * [Attribut och typer](/help/implementing/universal-editor/attributes-types.md) - Lär dig mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md) - Lär dig hur den universella redigeraren autentiseras.
