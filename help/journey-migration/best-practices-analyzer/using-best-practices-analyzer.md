@@ -4,9 +4,9 @@ description: Lär dig hur du använder Best Practices Analyzer för att förstå
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
 feature: Migration
 role: Admin
-source-git-commit: 3a0576e62518240b89290a75752386128b1ab082
+source-git-commit: e1089810b3bf3db0cc440bb397e5549ade6eac37
 workflow-type: tm+mt
-source-wordcount: '2724'
+source-wordcount: '2796'
 ht-degree: 30%
 
 ---
@@ -27,7 +27,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best 
 
 * BPA kan bara köras av användaren **admin** eller en användare i gruppen **administratörer**.
 
-* BPA stöds på AEM med version 6.1 och senare.
+* BPA stöds på AEM-instanser med version 6.1 och senare.
 
   >[!NOTE]
   >Se [Installera på AEM 6.1](#installing-on-aem61) för särskilda krav för installation av BPA på AEM 6.1.
@@ -55,7 +55,7 @@ Best Practices Analyzer kan laddas ned som en zip-fil från portalen för progra
 
 ## Source Environment Connectivity {#source-environment-connectivity}
 
-Källinstansen AEM kanske köras bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. Om du automatiskt vill överföra den BPA-genererade rapporten till Cloud Acceleration Manager måste följande slutpunkter vara tillgängliga från den instans som körs AEM:
+Källinstansen av AEM kanske körs bakom en brandvägg där den bara kan nå vissa värdar som har lagts till i Tillåtelselista. För att automatiskt överföra den BPA-genererade rapporten till Cloud Acceleration Manager måste följande slutpunkter vara tillgängliga från instansen som kör AEM:
 
 * Azure-blobblagringstjänsten: `casstorageprod.blob.core.windows.net`
 
@@ -78,6 +78,20 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 1. Klicka på **Generera rapport** för att köra Best Practices Analyzer.
 
    ![Generera rapport](/help/journey-migration/best-practices-analyzer/assets/BPA_pic2.png)
+
+>[!NOTE]
+> Från och med BPA-version 2.1.54 har en ny funktion introducerats för att hämta Lightroom-bakgrundsmusiken.
+1. När du har klickat på **Generera rapport** visas ett popup-fönster med en begäran om AEM Public Site URL för Lightroom-bakgrundsmusiken. Användaren måste ange en giltig URL i det angivna fältet.
+
+   ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa_popup_url.png)
+
+   1. Om URL:en är giltig visas ett meddelande om att åtgärden lyckades.
+
+      ![bild](/help/journey-migration/best-practices-analyzer/assets/valid_url.png)
+
+   1. Om URL:en är ogiltig visas ett felmeddelande.
+
+      ![bild](/help/journey-migration/best-practices-analyzer/assets/invalid_url.png)
 
 1. Ange BPA-överföringsnyckeln för att automatiskt överföra den genererade BPA-rapporten till [Cloud Acceleration Manager (CAM)](/help/journey-migration/cloud-acceleration-manager/introduction/benefits-cam.md). Navigera till [Best Practices Analysis i CAM](/help/journey-migration/cloud-acceleration-manager/using-cam/cam-readiness-phase.md#best-practices-analysis) om du vill hämta överföringsnyckeln.
 
@@ -149,11 +163,11 @@ For Adobe Experience Manager 6.1, the tool is not functional and only the HTTP i
 >[!CONTEXTUALHELP]
 >id="aemcloud_bpa_interpreting"
 >title="Tolka rapporten Best Practices Analyzer"
->abstract="Det finns två alternativ för att visa BPA-rapportutdata: UI och CSV. När verktyget Best Practices Analyzer körs i AEM visas UI-rapporten som resultat i verktygsfönstret. CSV-formatet för rapporten innehåller information som genereras från utdata för Mönsteravkännare, sorterat och organiserat efter kategorityp, undertyp och prioritetsnivå."
+>abstract="Det finns två alternativ för att visa BPA-rapportutdata: UI och CSV. När verktyget Best Practices Analyzer körs i AEM-instansen visas UI-rapporten som resultat i verktygsfönstret. CSV-formatet för rapporten innehåller information som genereras från utdata för Mönsteravkännare, sorterat och organiserat efter kategorityp, undertyp och prioritetsnivå."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#analysis-report" text="Analysrapport om metodtips för granskning"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html" text="Om rapportkategorier i Best Practices Analyzer"
 
-När verktyget Best Practices Analyzer körs i AEM visas rapporten som resultat i verktygsfönstret.
+När verktyget Best Practices Analyzer körs i AEM-instansen visas rapporten som resultat i verktygsfönstret.
 
 Rapportens format är:
 
@@ -162,7 +176,7 @@ Rapportens format är:
    * **Expiration Time**: När cachen för rapportinnehållet upphör att gälla.
    * **Generation Time Period**: Den tid det tog att generera rapportinnehållet.
    * **Finding Count**: Det totala antalet resultat som ingår i rapporten.
-* **Systemöversikt**: Information om det AEM systemet som BPA kördes på.
+* **Systemöversikt**: Information om det AEM-system som BPA kördes på.
 * **Finding Categories**: Flera avsnitt som vart och ett handlar om ett eller flera resultat i samma kategori. Varje avsnitt innehåller följande: kategorinamn, undertyper, antal resultat och viktighetsgrad, sammanfattning, länk till kategoridokumentation och information om enskilda resultat.
 
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
@@ -181,7 +195,7 @@ Läs tabellen nedan för mer information om viktighetsgrad:
 
 ## Tolka CSV-rapporten för Best Practices Analyzer {#cra-csv-report}
 
-När du klickar på alternativet **CSV** från din AEM skapas CSV-formatet för Best Practices Analyzer-rapporten från innehållscachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas den här rapporten automatiskt som en fil med standardnamnet `results.csv`.
+När du klickar på alternativet **CSV** från din AEM-instans skapas CSV-formatet för Best Practices Analyzer-rapporten från innehållscachen och returneras till webbläsaren. Beroende på inställningarna i webbläsaren hämtas den här rapporten automatiskt som en fil med standardnamnet `results.csv`.
 
 Om cacheminnet har upphört att gälla genereras rapporten om innan CSV-filen skapas och hämtas.
 
@@ -259,7 +273,7 @@ Följande svarsvärden är möjliga:
 
 ### Cache-livstidsjustering {#cache-adjustment}
 
-Standardlivstiden för BPA-cache är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM och HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för BPA. Om rapportgenereringstiden är särskilt lång för AEM kan det vara bra att justera cachelivstiden för att minimera omgenereringen av rapporten.
+Standardlivstiden för BPA-cache är 24 timmar. Med alternativet att uppdatera en rapport och återskapa cachen, både i AEM-instansen och i HTTP-gränssnittet, är det här standardvärdet troligtvis lämpligt för de flesta användningsområden för BPA. Om rapportgenereringstiden är särskilt lång för din AEM-instans kanske du vill justera cachelivstiden för att minimera omgenereringen av rapporten.
 
 Livslängdsvärdet för cacheminnet lagras som egenskapen `maxCacheAge` på följande databasnod:
 `/apps/best-practices-analyzer/content/BestPracticesReport/jcr:content`
@@ -274,4 +288,4 @@ BPA använder ett användarkonto för systemtjänsten med namnet `repository-rea
 
 2. Följ instruktionerna i [Hantera användare och grupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#managing-users-and-groups). Särskilt instruktionerna för hur man lägger till användare i en grupp för att lägga till `repository-reader-service`-användaren i `administrators`-gruppen.
 
-3. Installera BPA-paketet via Package Manager på AEM. (Detta lägger till den nödvändiga konfigurationsändringen i konfigurationen ServiceUserMapper för `repository-reader-service`-systemtjänstanvändaren.)
+3. Installera BPA-paketet via Package Manager på AEM-källinstansen. (Detta lägger till den nödvändiga konfigurationsändringen i konfigurationen ServiceUserMapper för `repository-reader-service`-systemtjänstanvändaren.)

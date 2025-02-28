@@ -4,7 +4,7 @@ description: Använd verktyget Innehållsöverföring för att validera innehål
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
 feature: Migration
 role: Admin
-source-git-commit: b7e485e3b7ce6f2d2fa7fe9b2953d2296186871d
+source-git-commit: e1089810b3bf3db0cc440bb397e5549ade6eac37
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 0%
@@ -20,9 +20,9 @@ Användarna kan på ett tillförlitligt sätt avgöra om allt innehåll som extr
 
 >[!INFO]
 >
->Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). AEM Cloud Service målmiljö måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att köra [pre-copy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns i [Hantera stora innehållsdatabaser - Konfigurera en azcopy.config-fil](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
+>Den här funktionen är tillgänglig från och med version 1.8.x av verktyget för innehållsöverföring (CTT). Målmiljön för AEM Cloud-tjänsten måste köra minst version 6158 eller senare. Källmiljön måste också vara konfigurerad för att köra [pre-copy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#setting-up-pre-copy-step). Valideringsfunktionen söker efter filen azcopy.config i källan. Om filen inte hittas körs inte valideringen. Mer information om hur du konfigurerar en azcopy.config-fil finns i [Hantera stora innehållsdatabaser - Konfigurera en azcopy.config-fil](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md#configure-azcopy-config-file).
 
-Det är valfritt att validera en innehållsöverföring. Om du aktiverar den här funktionen ökar både tiden det tar att utföra en extrahering och ett intag. Om du vill använda funktionen aktiverar du den i systemkonsolen för AEM genom att följa dessa steg:
+Det är valfritt att validera en innehållsöverföring. Om du aktiverar den här funktionen ökar både tiden det tar att utföra en extrahering och ett intag. Om du vill använda funktionen aktiverar du den i systemkonsolen för AEM-källmiljön genom att följa de här stegen:
 
 1. Gå till Adobe Experience Manager Web Console på din källinstans genom att gå till **Verktyg - Åtgärder - Webbkonsol** eller direkt till URL:en på *https://serveraddress:serverport/system/console/configMgr*
 1. Sök efter **Konfiguration av extraheringstjänst för innehållsöverföringsverktyg**
@@ -31,7 +31,7 @@ Det är valfritt att validera en innehållsöverföring. Om du aktiverar den hä
 
    ![bild](/help/journey-migration/content-transfer-tool/assets/CTTvalidation1.png)
 
-När den här inställningen är aktiverad och målmiljön i AEM Cloud Service kör en kompatibel version, kommer migreringsvalideringen att utföras under all extrahering och de efterföljande förslagen.
+När den här inställningen är aktiverad och målmiljön för AEM Cloud-tjänster kör en kompatibel version, valideras migreringen under all extrahering och de efterföljande förslagen.
 
 Mer information om hur du installerar verktyget Innehållsöverföring finns i [Komma igång med verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/getting-started-content-transfer-tool.md).
 
@@ -47,7 +47,7 @@ En grafisk illustration av detta finns i följande exempel:
 
 * **Extrahering (skriv över)**
 
-  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-01.png)
+  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/example1-extraction.png)
 
 * **Inmatning (svepning)**
 
@@ -61,7 +61,7 @@ En grafisk illustration av detta finns i följande exempel:
 
 * **Extrahering**
 
-  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/validation-03.png)
+  ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/example2-extraction.png)
 
 * **Inmatning**
 
