@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bd05433bb4d92a4120b19ad99d211a4a5e1f06ca
+source-git-commit: 7097ec755ff41d5440de62a757bf036ae336de67
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,9 @@ Konfigurationen av en privat GitHub-databas i Cloud Manager består av två steg
 1. [Lägg till en privat GitHub-databas](#add-repo) i ett valt program.
 1. [validera sedan ägarskapet för den privata GitHub-databasen](#validate-ownership).
 
+>[!NOTE]
+>Cloud Manager har endast stöd för privata databaser i GitHub Cloud (github.com). <!-- As per request in https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=DMSArchitecture&title=%5B2025%5D+Cloud+Manager+-+Bring+Your+Own+Git+-+Pull+Request+validator+for+multiple+vendors -->
+
 ### Lägga till en privat GitHub-databas i ett program {#add-repo}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
@@ -68,7 +71,6 @@ Nu kan du [verifiera ägarskapet för den privata databasen](#validate-ownership
 >[!TIP]
 >
 >Mer information om hur du hanterar databaser i Cloud Manager finns i [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md).
-
 
 
 ### Validera ägarskap för en privat GitHub-databas {#validate-ownership}
