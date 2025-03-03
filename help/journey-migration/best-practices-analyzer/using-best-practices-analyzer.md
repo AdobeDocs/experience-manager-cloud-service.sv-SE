@@ -4,7 +4,7 @@ description: Lär dig hur du använder Best Practices Analyzer för att förstå
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
 feature: Migration
 role: Admin
-source-git-commit: e1089810b3bf3db0cc440bb397e5549ade6eac37
+source-git-commit: 951f7fb56d1d8a3285973fda945cbc21f310925f
 workflow-type: tm+mt
 source-wordcount: '2796'
 ht-degree: 30%
@@ -81,6 +81,8 @@ Följ det här avsnittet för att lära dig hur du visar rapporten Best Practice
 
 >[!NOTE]
 > Från och med BPA-version 2.1.54 har en ny funktion introducerats för att hämta Lightroom-bakgrundsmusiken.
+
+
 1. När du har klickat på **Generera rapport** visas ett popup-fönster med en begäran om AEM Public Site URL för Lightroom-bakgrundsmusiken. Användaren måste ange en giltig URL i det angivna fältet.
 
    ![bild](/help/journey-migration/best-practices-analyzer/assets/bpa_popup_url.png)
