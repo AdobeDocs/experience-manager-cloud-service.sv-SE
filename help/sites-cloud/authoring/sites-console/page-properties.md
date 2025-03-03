@@ -1,13 +1,13 @@
 ---
 title: Redigera sidegenskaper
-description: Lär dig hur du definierar de egenskaper som krävs för att hantera en sida i AEM.
+description: Lär dig definiera de egenskaper som krävs för att hantera en sida i AEM.
 exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 8d4d60a2105915108393cc295949491e59e5fc2b
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2296'
 ht-degree: 2%
 
 ---
@@ -47,9 +47,9 @@ Egenskaperna fördelas på flera flikar.
       * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
          * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
 
-* **HTML-ID**
+* **HTML ID**
 
-   * **ID** - HTML-ID som ska användas för komponenten.
+   * **ID** - HTML-id som ska användas för komponenten.
 
 * **Fler rubriker och beskrivning**
 
@@ -101,13 +101,13 @@ Egenskaperna fördelas på flera flikar.
 
    * **Språk** - Sidspråket
    * **Språkrot** - Måste kontrolleras om sidan är roten för en språkkopia
-   * **Omdirigering** - Anger den sida som den här sidan automatiskt ska omdirigeras till med statusen HTML `302 Found`.
-      * **Permanent omdirigering** - När det här alternativet är markerat dirigeras sidan om till den angivna målsökvägen med statusen HTML `301 Moved Permanently`.
+   * **Omdirigering** - Anger sidan som den här sidan automatiskt ska omdirigeras till med statusen HTML `302 Found`.
+      * **Permanent omdirigering** - När det här alternativet är markerat dirigeras sidan om till den angivna målsökvägen tillsammans med HTML `301 Moved Permanently` -statusen.
    * **Design** - Anger om sidan visas eller döljs i sidnavigeringen för den slutliga webbplatsen
    * **Alias** - Anger ett alias som ska användas för den här sidan
       * Om du till exempel definierar aliaset `private` för sidan `/content/wknd/us/en/magazine/members-only` kan den här sidan också nås via `/content/wknd/us/en/magazine/private`
       * Om du skapar ett alias anges egenskapen `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
-      * Sidor som används av alias i redigeraren kan inte publiceras. [Publish-alternativ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+      * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
       * Se [Lokaliserade sidnamn under SEO och Bästa praxis för URL-hantering](/help/overview/seo-and-url-management.md#localized-page-names).
 
 * **Konfiguration**
@@ -119,6 +119,8 @@ Egenskaperna fördelas på flera flikar.
 * **Mallinställningar**
 
    * **Tillåtna mallar** - [Definierar listan med mallar som är tillgängliga](/help/sites-cloud/authoring/page-editor/templates.md#enabling-and-allowing-a-template-template-author) i den här undergrenen
+   * **Använd sidan som mall** - [Skapa en ny mall baserad på den aktuella sidan.](/help/sites-cloud/authoring/universal-editor/templates.md)
+      * Gäller endast för sidor som skapats för användning med den universella redigeraren som använder Edge Delivery Services.
 
 * **Autentiseringskrav**
 
@@ -169,9 +171,9 @@ Egenskaperna fördelas på flera flikar.
    * **Välj bild** - Välj en befintlig resurs som du vill använda som miniatyrbild
    * **Återställ** - Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
-### Cloud Service {#cloud-services}
+### Molntjänster {#cloud-services}
 
-* **Cloud Service Configurations** - Definiera egenskaper för molntjänster
+* **Cloud Service-konfigurationer** - Definiera egenskaper för molntjänster
 
 ### Personalization {#personalization}
 
@@ -236,7 +238,7 @@ När en förhandsvisningsmiljö är aktiverad ser du följande:
 
 ### Progressiv webbapp {#progressive-web-app}
 
-Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiva webbappsfunktioner (PWA) för upplevelser som skapats i AEM Sites.
+Genom en enkel konfiguration kan en innehållsförfattare nu aktivera funktioner för progressiva webbprogram (PWA) för upplevelser som skapats i AEM Sites.
 
 >[!NOTE]
 >
@@ -244,7 +246,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 
 * **Konfigurera installerbar upplevelse**
 
-   * **Aktivera PWA** - aktivera/inaktivera funktionen; tillåter användare att installera webbplatsen som PWA
+   * **Aktivera PWA** - aktivera/inaktivera funktionen; tillåter användare att installera webbplatsen som en PWA
    * **StartupURL** - den rekommenderade startadressen
    * **Visningsläge** - hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten
    * **Skärmorientering** - hur PWA hanterar enhetsorienteringar
@@ -254,7 +256,7 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 
 * **Cachehantering (avancerat)**
 
-   * **Cachelagringsstrategi och frekvens för innehållsuppdatering** - definierar cachningsmodellen för PWA
+   * **Cachningsstrategi och frekvens för innehållsuppdatering** - definierar cachelagringsmodellen för din PWA
    * **Filer att cachelagra för offlineanvändning**
       * **Filförcachelagring (teknisk förhandsgranskning)** - filer som lagras på AEM sparas i den lokala webbläsarcachen när tjänstarbetaren installeras och innan den används
       * **Bibliotek på klientsidan** - bibliotek på klientsidan som ska cachelagras för offlineupplevelse
