@@ -5,7 +5,7 @@ exl-id: 1552a4ce-137a-4208-b7f6-2fc06db8dc39
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: dfa378e6ff8d0295a1e59cbf2cc71ca1a3eae9cb
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Aktivera progressiva webbprogramfunktioner {#enabling-pwa}
 
-Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiva webbappsfunktioner (PWA) för upplevelser som skapats i AEM Sites.
+Genom en enkel konfiguration kan en innehållsförfattare nu aktivera funktioner för progressiva webbprogram (PWA) för upplevelser som skapats i AEM Sites.
 
 >[!CAUTION]
 >
@@ -29,20 +29,20 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera progressiv
 
 >[!IMPORTANT]
 >
->Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [har tagits bort](/help/release-notes/release-notes-cloud/release-notes-current.md#pwa-features).
+>Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [ har tagits bort](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md#pwa-features).
 >
 >Befintliga projekt som använder den här funktionen stöds fortfarande, men nya projekt bör inte använda den här funktionen.
 
 ## Introduktion {#introduction}
 
-[Progressiva webbprogram (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) möjliggör engagerande appliknande upplevelser för AEM webbplatser genom att tillåta att de lagras lokalt på användarens dator och är tillgängliga offline. Användaren kan surfa på en webbplats när han/hon är på språng även om han/hon förlorar en internetanslutning. PWA ger en sömlös upplevelse även om nätverket förloras eller blir instabilt.
+[Progressiva webbappar (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) möjliggör engagerande appliknande upplevelser för AEM-webbplatser genom att de kan lagras lokalt på användarens dator och vara tillgängliga offline. Användaren kan surfa på en webbplats när han/hon är på språng även om han/hon förlorar en internetanslutning. PWA ger en sömlös upplevelse även om nätverket förloras eller är instabilt.
 
-I stället för att kräva någon kodning av webbplatsen kan en innehållsförfattare konfigurera PWA-egenskaper som en extra flik i [sidegenskaperna](/help/sites-cloud/authoring/sites-console/page-properties.md) för en plats.
+I stället för att kräva någon kodning av webbplatsen kan en innehållsförfattare konfigurera PWA-egenskaper som en extra flik i [sidegenskaperna](/help/sites-cloud/authoring/sites-console/page-properties.md) för en webbplats.
 
-* När konfigurationen sparas eller publiceras utlöses en händelsehanterare som skriver ut [manifestfilerna](https://developer.mozilla.org/en-US/docs/Web/Manifest) och en [servicearbetare](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) som aktiverar PWA-funktioner på platsen.
+* När konfigurationen sparas eller publiceras utlöses en händelsehanterare som skriver ut [manifestfilerna](https://developer.mozilla.org/en-US/docs/Web/Manifest) och en [servicearbetare](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API) som aktiverar PWA-funktioner på webbplatsen.
 * Samlingsmappningar upprätthålls också för att säkerställa att servicearbetaren hanteras från programmets rot för att aktivera proxinginnehåll som tillåter offlinefunktioner i appen.
 
-Med PWA har användaren en lokal kopia av webbplatsen, vilket ger en appliknande upplevelse även utan internetanslutning.
+Med PWA har användaren en lokal kopia av sajten, vilket ger en appliknande upplevelse även utan internetanslutning.
 
 >[!NOTE]
 >
@@ -59,7 +59,7 @@ Detta är tekniska steg som författaren måste samordna med utvecklingsteamet. 
 
 ### Använd kärnkomponenter {#adjust-components}
 
-Core Components version 2.15.0 och senare har fullt stöd för PWA-funktionerna i AEM. Eftersom AEMaaCS alltid innehåller den senaste versionen av de centrala komponenterna kan du använda PWA-funktioner direkt. Ditt AEMaaCS-projekt uppfyller automatiskt detta krav.
+Core Components version 2.15.0 och senare har fullt stöd för PWA funktioner på AEM-sajter. Eftersom AEMaaCS alltid innehåller den senaste versionen av de centrala komponenterna kan du använda PWA-funktionerna direkt. Ditt AEMaaCS-projekt uppfyller automatiskt detta krav.
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ The developer also adds the following link to the `customfooterlibs.html` file o
 
 ### Justera din Dispatcher {#adjust-dispatcher}
 
-Funktionen PWA genererar och använder `/content/<sitename>/manifest.webmanifest` filer. Som standard [visas inte sådana filer i Dispatcher](/help/implementing/dispatcher/overview.md). För att dessa filer ska kunna visas måste utvecklaren lägga till följande konfiguration i platsprojektet.
+PWA-funktionen genererar och använder `/content/<sitename>/manifest.webmanifest` filer. Som standard [visas inte sådana filer i Dispatcher](/help/implementing/dispatcher/overview.md). För att dessa filer ska kunna visas måste utvecklaren lägga till följande konfiguration i platsprojektet.
 
 ```text
 File location: [project directory]/dispatcher/src/conf.dispatcher.d/filters/filters.any >
@@ -110,11 +110,11 @@ RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.webmanifest)$
 
 När [förutsättningarna](#prerequisites) är uppfyllda är det enkelt för en innehållsförfattare att aktivera PWA-funktioner för en webbplats. Här följer en grundläggande beskrivning av hur du gör detta. Enskilda alternativ beskrivs i avsnittet [Detaljerade alternativ](#detailed-options).
 
-1. Logga in i AEM.
+1. Logga in på AEM.
 1. Välj **Navigering** > **Webbplatser** på huvudmenyn.
 1. Välj ditt webbplatsprojekt och välj [**Egenskaper**](/help/sites-cloud/authoring/sites-console/page-properties.md) eller använd snabbtangenten `p`.
 1. Välj fliken **Progressiv webbapp** och konfigurera tillämpliga egenskaper. Du vill åtminstone:
-   1. Markera alternativet **Aktivera PWA**.
+   1. Välj alternativet **Aktivera PWA**.
    1. Definiera **Start-URL**.
 
       ![Aktivera PWA](../assets/pwa-enable.png)
@@ -149,7 +149,7 @@ Nu när du har [konfigurerat din webbplats så att den stöder PWA](#enabling-pw
 
 ## Detaljerade alternativ {#detailed-options}
 
-Följande avsnitt innehåller mer information om de alternativ som är tillgängliga när [du konfigurerar platsen för PWA](#enabling-pwa-for-your-site).
+Följande avsnitt innehåller mer information om de alternativ som är tillgängliga när [du konfigurerar webbplatsen för PWA](#enabling-pwa-for-your-site).
 
 ### Konfigurera installerbar upplevelse {#configure-installable-experience}
 
@@ -162,7 +162,7 @@ Med de här inställningarna kan din webbplats bete sig som ett systemspecifikt 
    * Om den här URL:en är relativ används manifest-URL:en som bas-URL:en för att matcha den.
    * När funktionen är tom används adressen till den webbsida som appen installerades från.
    * Vi rekommenderar att du anger ett värde.
-* **Visningsläge** - En PWA-aktiverad app är fortfarande en AEM webbplats som levereras via en webbläsare. [Dessa visningsalternativ](https://developer.mozilla.org/en-US/docs/Web/Manifest/display) definierar hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten.
+* **Visningsläge** - En PWA-aktiverad app är fortfarande en AEM-webbplats som levereras via en webbläsare. [Dessa visningsalternativ](https://developer.mozilla.org/en-US/docs/Web/Manifest/display) definierar hur webbläsaren ska döljas eller på annat sätt visas för användaren på den lokala enheten.
    * **Fristående** - Webbläsaren är dold för användaren och den ser ut som en intern app. Det här är standardvärdet.
       * Med det här alternativet måste appnavigering vara möjlig helt och hållet via ditt innehåll med hjälp av länkar och komponenter på webbplatsens sidor, utan att webbläsarens navigeringskontroller används.
    * **Webbläsare** - Webbläsaren visas som vanligt när du besöker webbplatsen.
@@ -175,10 +175,10 @@ Med de här inställningarna kan din webbplats bete sig som ett systemspecifikt 
    * **Liggande** - Detta tvingar programmet att öppnas i liggande format oavsett orientering för användarens enhet.
 * **Temafärg** - Detta definierar den [färg i programmet](https://developer.mozilla.org/en-US/docs/Web/Manifest/theme_color) som påverkar hur den lokala användarens operativsystem visar det inbyggda verktygsfältet och navigeringskontrollerna i användargränssnittet. Beroende på webbläsaren kan det påverka andra presentationselement i programmet.
    * Använd popup-fönstret för färgpaletter för att välja en färg.
-   * Färgen kan också definieras med hex- eller RGB-värde.
+   * Färgen kan också definieras med hex- eller RGB-värden.
 * **Bakgrundsfärg** - Detta definierar [bakgrundsfärgen för appen](https://developer.mozilla.org/en-US/docs/Web/Manifest/background_color), som visas när appen läses in.
    * Använd popup-fönstret för färgpaletter för att välja en färg.
-   * Färgen kan också definieras med hex- eller RGB-värde.
+   * Färgen kan också definieras med hex- eller RGB-värden.
    * I vissa webbläsare [byggs en välkomstskärm automatiskt](https://developer.mozilla.org/en-US/docs/Web/Manifest#Splash_screens) från programnamnet, bakgrundsfärgen och ikonen.
 * **Ikon** - Detta definierar [ikonen](https://developer.mozilla.org/en-US/docs/Web/Manifest/icons) som representerar appen på användarens enhet.
    * Ikonen måste vara en PNG-fil med storleken 512x512 pixlar.
@@ -188,7 +188,7 @@ Med de här inställningarna kan din webbplats bete sig som ett systemspecifikt 
 
 Dessa inställningar gör delar av den här webbplatsen tillgängliga offline och lokalt på besökarens enhet. På så sätt kan du styra cacheminnet för webbprogrammet för att optimera nätverksförfrågningar och stödja offlineupplevelser.
 
-* **Cachelagringsstrategi och frekvens för innehållsuppdatering** - Den här inställningen definierar cachningsmodellen för PWA.
+* **Cachelagringsstrategi och frekvens för innehållsuppdatering** - Den här inställningen definierar cachelagringsmodellen för din PWA.
    * **Måttligt** - [Den här inställningen](https://web.dev/stale-while-revalidate/) gäller för de flesta webbplatser och är standardvärdet.
       * Med den här inställningen läses det innehåll som först visas av användaren in från cacheminnet, och medan användaren konsumerar det innehållet valideras resten av innehållet i cacheminnet.
    * **Ofta** - Detta gäller webbplatser som behöver uppdateras snabbt, till exempel auktionslokaler.
@@ -203,7 +203,7 @@ Dessa inställningar gör delar av den här webbplatsen tillgängliga offline oc
 >
 >Utvecklarteamet har troligen värdefulla synpunkter på hur offlinekonfigurationen ska konfigureras.
 
-## Begränsningar och Recommendations {#limitations-recommendations}
+## Begränsningar och rekommendationer {#limitations-recommendations}
 
 Alla PWA-funktioner är inte tillgängliga för AEM Sites. Det här är några tydliga begränsningar.
 
@@ -218,16 +218,16 @@ Adobe rekommenderar att du begränsar antalet sidor som ska förcachas.
 * Bädda in bibliotek så att du kan minska antalet poster som ska hanteras vid förcachelagring.
 * Begränsa antalet bildvariationer till förcache.
 
-### Aktivera PWA efter att projektskript och formatmallar har stabiliserats. {#pwa-stabilized}
+### Aktivera PWA när du har stabiliserat projektskript och formatmallar. {#pwa-stabilized}
 
-Klientbibliotek levereras med en cacheväljare som observerar följande mönster `lc-<checksumHash>-lc`. Varje gång en av filerna (och beroenden) som utgör ett bibliotek ändras den här väljaren. Om du har listat ett klientbibliotek som ska cachas i förväg av servicechef och vill referera till en ny version, hämtar och uppdaterar du posten manuellt. Därför rekommenderar Adobe att du konfigurerar platsen till PWA efter att projektskripten och formatmallarna har stabiliserats.
+Klientbibliotek levereras med en cacheväljare som observerar följande mönster `lc-<checksumHash>-lc`. Varje gång en av filerna (och beroenden) som utgör ett bibliotek ändras den här väljaren. Om du har listat ett klientbibliotek som ska cachas i förväg av servicechef och vill referera till en ny version, hämtar och uppdaterar du posten manuellt. Därför rekommenderar Adobe att du konfigurerar din webbplats till en PWA efter att projektskripten och formatmallarna har stabiliserats.
 
 ### Minimera antalet bildvariationer. {#minimize-variations}
 
-Bildkomponenten för AEM Core Components avgör den översta delen av den bästa återgivningen som ska hämtas. Den här mekanismen innehåller också en tidsstämpel som motsvarar den senaste ändringstiden för resursen. Den här mekanismen komplicerar konfigurationen av förcache-minnet för PWA.
+Image Component (Bildkomponenten) för AEM Core Components (Core-komponenterna) avgör vilken frontdel som är den bästa renderingen att hämta. Den här mekanismen innehåller också en tidsstämpel som motsvarar den senaste ändringstiden för resursen. Den här mekanismen komplicerar konfigurationen av PWA-förcache.
 
 När användaren konfigurerar pre-cache måste han/hon visa alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi rekommenderar att du minskar antalet av dessa variationer till högst tre - liten, medel, stor. Det kan du göra via dialogrutan för innehållsprinciper i [bildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html).
 
-Om den inte konfigureras noggrant kan minnes- och nätverkskonsumtionen påverka PWA prestanda negativt. Om du tänker skapa t.ex. 50 bilder framför varandra och har tre bredder per bild, måste användaren som underhåller webbplatsen ha en lista med upp till 150 poster i PWA-avsnittet för förhandscache i sidegenskaperna.
+Om den inte konfigureras noggrant kan minnes- och nätverkskonsumtionen påverka PWA prestanda negativt. Om du tänker skapa t.ex. 50 bilder framför varandra och har tre bredder per bild, måste användaren som underhåller webbplatsen ha en lista med upp till 150 poster i förhandscacheavsnittet för PWA i sidegenskaperna.
 
-Adobe rekommenderar också att du konfigurerar webbplatsen till PWA efter att projektanvändningen av bilder har stabiliserats.
+Adobe rekommenderar även att du konfigurerar webbplatsen till en PWA när projektanvändningen av bilder har stabiliserats.

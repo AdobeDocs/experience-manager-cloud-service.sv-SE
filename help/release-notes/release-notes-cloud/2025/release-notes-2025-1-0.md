@@ -1,20 +1,18 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+title: Versionsinformation om 2025.1.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2025.1.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 1105fedcf17cb74c9abec9de68485e1ef714ebbe
+source-git-commit: f899398182f9d0991123828ca217379653a4e397
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2025.1.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.1.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.2.0) är 4 mars 2025. Nästa version (2025.3.0) är planerad till 27 mars 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.1.0) är 30 januari 2025. Nästa version (2025.2.0) är planerad till 4 mars 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -38,7 +36,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 ## Release Video {#release-video}
 
-Have a look at the February 2025 Release Overview video for a summary of the features added in the 2025.2.0 release:
+Have a look at the January 2025 Release Overview video for a summary of the features added in the 2025.1.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
@@ -46,60 +44,72 @@ Have a look at the February 2025 Release Overview video for a summary of the fea
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
+**Kommentarer för innehållsfragmentredigeraren är nu allmänt tillgängliga**
 
-### Nya funktioner i AEM Sites {#new-features-sites}
+Samarbeta enkelt med kollegor när du skapar AEM Content Fragments med den nya och moderniserade kommentarstjänsten i AEM Content Fragment Editor.
+[Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/authoring?#commenting-on-your-fragment).
 
-** Automatisk taggning av innehållsfragment **
+**Innehållsfragmentsredigeraren och administratörens användargränssnitt, uppdaterat stöd för AEM as a Cloud Service-versioner**
 
-När du skapar innehållsfragment kan du nu automatiskt ärva taggar som har tilldelats innehållsmodellen. Detta möjliggör kraftfull automatisk klassificering av innehåll som lagras i innehållsfragment.
+Den lägsta AEM as a Cloud Service-version som stöds för nya användargränssnitt för Content Fragment Admin och Editor är nu 2023.8.13099. Tidigare versioner från före den allmänna tillgänglighetsversionen av de nya användargränssnitten stöds inte längre
 
-** UUID-stöd för innehållsfragment **
+### Tidiga Adobe-program {#sites-early-adopter}
 
-Stöd för Content Fragment UUID är nu GA. Den nya funktionen ändrar inte det banbaserade beteendet för åtgärder i AEM, till exempel move, rename, rollout, där banorna automatiskt justeras, men det kan göra det enklare och stabilare att använda externa innehållsfragment, särskilt när du använder GraphQL-frågor som direkt riktar in enskilda fragment med ByPath-frågor. Sådana frågor kan brytas om en fragmentsökväg ändras. När du använder den nya ById-frågetypen är frågan nu stabil eftersom UUID för ett fragment inte ändras i fall där sökvägar gör det.
+**Förbättrade innehållsfragment**
 
-** Dynamiska medier med stöd för OpenAPI i Content Fragment Editor och GraphQL **
+Förbättrad referens för [innehållsfragment med unika ID-baserade referenser](/help/headless/graphql-api/uuid-reference-upgrade.md), vilket gör att GraphQL-frågor för enskilda innehållsfragment kan förbli stabila även om fragmentet har flyttats till en annan plats. Detta är nu möjligt med ByID-frågor. Banor kan ändras och kan eventuellt bryta ByPath-frågor, men UUID:n är stabila. De nya ID:n kan också returneras som egenskaper i frågor eller andra tillämpliga API-begäranden. Aktuell begränsning (2025.1): Sidreferenser stöds ännu inte med unika ID:n. Om det finns referenser till sidor i innehållsfragment bör den här funktionen inte användas. Begränsningen planeras att tas bort i nästa version av AEM as a Cloud Service.
 
-Assets som lagras i andra AEM as a Cloud Service-program än Content Fragments, och som aktiveras med nya Dynamic Media med OpenAPI-funktioner, kan nu användas i Content Fragments. Bildväljaren i den nya Content Fragment Editor tillåter nu att du väljer &quot;fjärrdatabaser&quot; som källa för bildresurser som ska refereras i fragmentet. När sådana innehållsfragment levereras med AEM GraphQL, innehåller JSON-svaret nu nödvändiga egenskaper för fjärrresurser (assetId, databaseId) så att klientapplikationer kan skapa respektive Dynamic Media med OpenAPI-URL:er för att hämta bilden.
+**AEM REST OpenAPI för leverans av innehållsfragment**
 
-** HTTP API för översättning **
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
 
-AEM Translation HTTP REST API som har varit i läget tidig adopter ett tag är nu GA. Dokumentation finns [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/translation/). API:t gör det möjligt att automatisera nödvändiga steg i översättningshanteringsprocessen för innehåll i AEM.
+### Föråldrade funktioner {#sites-deprecated}
 
+#### SPA Editor {#spa-editor}
+
+[SPA-redigeraren](/help/implementing/developing/hybrid/introduction.md) har tagits bort för nya projekt från och med version 2025.1.0. SPA-redigeraren stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt.
+
+De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
+
+* [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering.
+* [Innehållsfragmentsredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering.
+
+#### PWA Features {#pwa-features}
+
+[Funktionerna för det progressiva webbprogrammet (PWA) ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites är nu inaktuella för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i AEM Assets {#new-features-assets}
-
-**Dynamic Media - ny paketeringsstruktur**
-
-Nu finns en uppdaterad paketeringsstruktur för dynamiska media som bättre motsvarar marknadens förväntningar och ger support. Den nya förpackningsstrukturen omfattar
-
-* Dynamic Media Prime, som innehåller Dynamic Media med OpenAPI:er och video för bättre leverans.
-
-* Dynamic Media Ultimate har dessutom funktioner för leverans och omvandling för att klara tyngre användningsbehov.
-
-Du måste ha Assets as a Cloud Service Prime eller Ultimate för att kunna dra nytta av den nya paketeringsstrukturen.
-
-**AI-genererade videobeskrivningar**
-
-AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter. Bildtexter genereras från det ursprungliga ljudet, eventuella ytterligare ljudspår eller extra bildtexter finns på fliken Bildtexter och ljud på videoegenskapssidan. Med stöd för över 60 språk kan bildtexter granskas och förhandsgranskas innan videon publiceras.
+### Nya funktioner i vyn AEM Assets {#new-features-assets}
 
 **Anpassa sökfilter**
 
 Med anpassade sökfilter blir det enklare att hitta relevant information. Det gör det möjligt att göra mer skräddarsydda sökningar och filtrera data efter specifika attribut som märke, produkt, kategori eller andra nyckelidentifierare. Detta förbättrar organisationen, minskar tiden för att gå miste om irrelevanta resultat och möjliggör snabbare beslutsfattande. Det har också stöd för skalbarhet eftersom stora datauppsättningar blir enklare att navigera i och analysera.
 
-![anpassa sökfilter](/help/assets/assets/custom-search-filters.png)
+![anpassade sökfilter](/help/assets/assets/custom-search-filters.png)
 
+### Nya funktioner i Content Hub {#new-features-content-hub}
 
-### Tidig åtkomst-funktioner i Content Hub {#early-access-content-hub}
+Beskrivning
 
-I Content Hub kan du nu visa och hämta dynamiska och smarta beskärningsrenderingar utöver de befintliga statiska renderingarna. Som Content Hub-administratör kan du även konfigurera tillgängligheten för dessa återgivningar för användare med användargränssnittet för konfiguration.
+### Tidig åtkomst-funktioner i AEM Assets {#early-access-features-assets}
 
-![dynamiska återgivningar](/help/assets/assets/download-single-asset-renditions-dynamic.png)
+**AI-genererade videobeskrivningar**
 
-
+AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter i realtid. Bildtexter genereras från det ursprungliga ljudet, eventuella ytterligare ljudspår eller extra bildtexter som finns på fliken Bildtexter och ljud på videoegenskapssidan. Med stöd för över 60 språk kan bildtexter granskas och förhandsgranskas innan videon publiceras.
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
+
+### Nya funktioner i AEM Forms {#forms-new-features}
+
+* **Hantera publikation**: Du kan använda arbetsflödet [Hantera publikation](/help/forms/manage-publication.md#publish-forms-using-the-manage-publication-option)) för att publicera eller avpublicera formulär i olika miljöer, vanligtvis från författarinstansen till publicerings- och förhandsgranskningsinstanserna. Användarna kan publicera, avpublicera eller schemalägga publiceringen på ett smidigt sätt.
+
+* **[Spara ett utkast automatiskt för Core Components-baserade Adaptive Forms](/help/forms/save-core-component-based-form-as-draft.md)**: Användare kan nu dra nytta av en autosparfunktion som sparar ett delvis ifyllt formulär som ett utkast automatiskt. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
+
+* **[Förbättringar av regelredigeraren](/help/forms/invoke-service-enhancements-rule-editor.md)**: För adaptiv Forms baserat på kärnkomponenter kan du använda utdata från Invoke Service för att fylla i nedrullningsbara alternativ och ange repeterbara eller enskilda paneler. Dessutom kan dessa utdata användas för att validera andra fält.
+
+* **[Förbättra användarupplevelsen med navigeringsknappar i panellayouter](/help/forms/rule-editor-core-components-usecases.md#navigating-among-panels-using-button)**: Nu kan du lägga till navigeringsknappar i panellayouterna, till exempel Vågräta flikar, Lodräta flikar, Dragspel eller Guide. Dessa knappar förbättrar användarupplevelsen genom att förenkla övergångar mellan paneler och fokusera på den valda panelen.
+
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
@@ -107,16 +117,15 @@ Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exk
 
 Den här versionsinformationen innehåller en lista över de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
 
-#### HTML e-postmallar i adaptiv Forms
+#### [HTML e-postmallar i Adaptiv Forms](/help/forms/html-email-templates-in-adaptive-forms.md)
 
-Med adaptiv Forms kan du använda [HTML e-postmallar](/help/forms/html-email-templates-in-adaptive-forms.md). Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+Med anpassningsbara Forms kan du använda HTML e-postmallar. Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
 
 ![HTML e-postmallar](/help/forms/assets/html-email.png)
 
 #### Förbättrat molnlagringsstöd: Direktöverföring av PDF till Azure Blob Storage
 
-AEM Forms API:er för dokumentgenerering gör nu att du kan [överföra genererade PDF-dokument](/help/forms/early-access-ea-features.md#doc-generation-api) direkt till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
-
+AEM Forms API:er för dokumentgenerering stöder nu direktöverföring av genererade PDF-dokument till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
