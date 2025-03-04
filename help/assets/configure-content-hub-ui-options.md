@@ -2,16 +2,16 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 323fe1ba95b027f3c0d625e122b1885723e94b0f
+source-git-commit: e0c459ce360837fa0031278804d8e7b46b15d0e5
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1582'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Content Hub användargränssnitt {#configure-content-hub-user-interface}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
 
 >[!CONTEXTUALHELP]
@@ -229,19 +229,17 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
-Content Hub tillåter hämtning av statiska återgivningar. Statiska återgivningar är olika representationer av en resurs ursprungliga fil som genereras internt. Exempel är miniatyrbilder eller mobiloptimerade renderingar. Administratörer kan hantera och kontrollera tillgängligheten för resursrenderingar och hantera om du kan hämta originalresurser eller inte.
-
 Gör så här:
 
 Klicka på **[!UICONTROL Renditions]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub). Följande alternativ är tillgängliga:
 
-* Aktivera växlingsknappen [!UICONTROL Enable availability of static renditions] för att göra alla statiska återgivningar synliga på Content Hub.
+* Aktivera växlingsknappen [!UICONTROL Enable availability of renditions] för att göra alla återgivningar synliga på Content Hub.
 
 * Aktivera eller inaktivera **[!UICONTROL Allow users to download original assets]** för att kontrollera tillgängligheten för hämtning av originalresurser.
 
   ![Konfigurera renderingar på Content Hub](assets/config-renditions.png)
 
-Mer information om hur du visar och hämtar statiska återgivningar i Content Hub finns i [Hämta resurser i Content Hub](/help/assets/download-assets-content-hub.md).
+Mer information om hur du visar och hämtar återgivningar i Content Hub finns i [Hämta resurser i Content Hub](/help/assets/download-assets-content-hub.md).
 
 ### Anpassade länkar {#configure-custom-links-content-hub}
 
