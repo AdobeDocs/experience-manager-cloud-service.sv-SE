@@ -3,9 +3,9 @@ title: Hämta resurser från Content Hub
 description: Lär dig hur du hämtar resurser från Content Hub-portalen
 role: User
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: 07d533962ae2922c8a467924361fdfefc5c594eb
+source-git-commit: 523ba2ae59bfc0d35cca350a8daf3e20ac9e5332
 workflow-type: tm+mt
-source-wordcount: '734'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -128,7 +128,7 @@ Läs mer om att [visa och hantera återgivningar i Experience Manager Assets](/h
 
 >[!NOTE]
 > 
-* [Skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tidig åtkomst till Dynamic Media-kontot.
+* Funktionen för dynamiska och smarta beskärningsåtergivningar är i tidiga Adobe-faser. [Skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tillgång till funktionen.
 * Nya kunder som har anslutit till [Dynamic Media Open API-tjänster](/help/assets/dynamic-media-open-apis-overview.md) måste ändra sina befintliga bildförinställningar för godkännande.
 
 
