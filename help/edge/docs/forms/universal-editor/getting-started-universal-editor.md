@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
+source-git-commit: 964fd32a7dbcb97190d40cb42100d0d66e69a0c4
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1841'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,8 @@ ht-degree: 0%
 I dagens digitala ålder är användarvänliga formulär oumbärliga för alla organisationer. Edge Delivery Services Forms skapas med Universal Editor, som har WYSIWYG-funktioner (what-you-see-is-what-you-get). Det har ett modernt, intuitivt gränssnitt för effektiv formulärutveckling.
 
 AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och lagring. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-projekt](#add-adaptive-forms-block-to-your-existing-aem-project).
+
+![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png)
 
 Den här självstudiekursen vägleder dig genom att skapa, förhandsgranska och publicera ditt eget formulär med ett nytt eller befintligt Adobe Experience Manager Site-projekt med hjälp av Universal Editors WYSIWYG-redigering.
 
@@ -252,6 +254,10 @@ På skärmbilden nedan visas det formulär som skapats i AEM Project med WYSIWYG
    ![indexsida](/help/edge/docs/forms/assets/publish-index-page.png)
 
 Du kan formatera Edge Delivery Services Forms genom att redigera `.css`- och `.js`-filerna i det adaptiva Forms-blocket och [konfigurera en lokal AEM-utvecklingsmiljö](#set-up-local-aem-development-environment) så att du ser ändringarna direkt i webbläsaren.
+
+>[!NOTE]
+>
+> Du kan också [skapa ett fristående formulär i Universal Editor och publicera det på Edge Delivery Services](/help/edge/docs/forms/universal-editor/create-forms.md).
 
 ## Konfigurera lokal AEM-utvecklingsmiljö
 

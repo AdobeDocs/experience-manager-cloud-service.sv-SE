@@ -7,7 +7,7 @@ Role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: db58ce85-139a-4cc1-8e18-73da76357299
-source-git-commit: 320ab86bc73e874705d985b927e90eec3cad1cf9
+source-git-commit: bb01a76ae2bfd78ae648e91545f34f20fabebd10
 workflow-type: tm+mt
 source-wordcount: '1040'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Adobe Experience Manager erbjuder och stöder flera redigerare för att skapa et
 
 Universell redigerare är en mångsidig visuell redigerare som har en funktion för vad du ser och vad du får (WYSIWYG) som ger en intuitiv upplevelse när du skapar formulär. Vi rekommenderar att du använder den universella redigeraren när du skapar nya formulär, eftersom den har en modern, användarvänlig design och ett bekvämt dra-och-släpp-gränssnitt.
 
-För att skapa formulär med Universal Editor används Edge Delivery Services-mallar som finns i AEM-miljön. De här formulären har samma utseende och känsla som konfigurationerna i Edge Delivery Services GitHub-databasen. [En anslutning mellan din AEM-miljö och Edge Delivery Services GitHub-databasen ](/help/edge/docs/forms/publishing-forms.md) har upprättats för att aktivera publicering av dessa formulär på Edge Delivery Services.
+För att skapa formulär med Universal Editor används Edge Delivery Services-mallar som finns i AEM-miljön. De här formulären har samma utseende och känsla som konfigurationerna i Edge Delivery Services GitHub-databasen. [En anslutning mellan din AEM-miljö och Edge Delivery Services GitHub-databasen ](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md) har upprättats för att aktivera publicering av dessa formulär på Edge Delivery Services.
 
 Detaljerade anvisningar om hur du skapar med den universella redigeraren finns i artikeln [Skapa innehåll med den universella redigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/universal-editor/authoring).
 

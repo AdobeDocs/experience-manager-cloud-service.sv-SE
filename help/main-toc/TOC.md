@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 0a30591ba4ad1c73e5e6ca794dc7b84fd050c456
+source-git-commit: 27270875d9f66a3613ac042a450347439bb3baab
 workflow-type: tm+mt
-source-wordcount: '6208'
+source-wordcount: '6205'
 ht-degree: 2%
 
 ---
@@ -1045,10 +1045,10 @@ ht-degree: 2%
          + [Skydda din Forms: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/recaptacha-forms.md)
          + [Skapa anpassade formulärkomponenter: Utvecklarhandbok](/help/edge/docs/forms/custom-components-forms.md)
          + [Övervaka formulärprestanda: Övervakningshandbok för riktig användning](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
-         + [Installera Forms på Edge: Publiceringshandbok för Edge Delivery Services](/help/edge/docs/forms/publishing-forms.md)
       + WYSIWYG Authoring {#universal-editor}
          + [Introduktion till Forms Universal Editor för Edge Delivery Services - komplett guide](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
-         + [Skapa ditt första formulär med en universell redigerare - steg för steg självstudiekurs](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+         + [Så här startar du redigering med Universal Editor - steg för steg-självstudiekurs](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+         + [Skapa ditt första formulär med en universell redigerare](/help/edge/docs/forms/universal-editor/create-forms.md)
          + [Guide till gränssnittet för Universal Editor: Verktyg, Funktioner och Navigering - förklaras](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md)
          + [Gör din Forms mobilvänlig: responsiv design i Universal Editor](/help/edge/docs/forms/universal-editor/responsive-layout.md)
          + [Design Beautiful Forms: Styling and Theming Guide for Universal Editor](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
