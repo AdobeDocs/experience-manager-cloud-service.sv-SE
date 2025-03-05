@@ -4,9 +4,9 @@ description: Universal Editor är ett modernt visuellt redigeringsverktyg som ge
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: c88aa13c6bc75c8f9cd624d00ef768290981c840
+source-git-commit: 8d608d1ba00764613fbf4a5c1e1a0fcdc603283c
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ Universal Editor stöds av:
 
 * AEM as a Cloud Service (version `2023.8.13099` eller senare)
 * AEM 6.5 (Service Pack 21 eller 22 plus ett funktionspaket)
+   * Både lokala värdtjänster och AMS-värdtjänster stöds.
 
 Den här dokumentationen används för Universal Editor med AEM as a Cloud Service. Om du vill använda den universella redigeraren med AEM 6.5 [läser du dokumentationen för AEM 6.5.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
 
