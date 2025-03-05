@@ -1,14 +1,14 @@
 ---
-title: Aktuella funktioner för tidig åtkomst för  [!DNL Adobe Experience Manager Forms] as a Cloud Service.
-description: Aktuella funktioner för tidig åtkomst för  [!DNL Adobe Experience Manager Forms] as a Cloud Service.
+title: Aktuella funktioner för tidig åtkomst i  [!DNL Adobe Experience Manager Forms] as a Cloud Service.
+description: Aktuella funktioner för tidig åtkomst i  [!DNL Adobe Experience Manager Forms] as a Cloud Service.
 Feature: Introduction
 Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: ae64d8acac3dee938db8ecbc1c8f5c9149b70365
+source-git-commit: 85d788eeb5017b99ea4962105b63b20c487f363f
 workflow-type: tm+mt
-source-wordcount: '2056'
+source-wordcount: '2155'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Generativ AI för Adaptive Forms ger en helt ny nivå av kraft och enkelhet i er
 
 De genererande AI-funktionerna som erbjuds via AEM Forms AI Assistant är:
 
-* **AI-assistenten för produktfrågor**: Få svar på dina AEM formulärrelaterade frågor direkt. Vår AI-assistent fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
+* **AI-assistenten för produktfrågor**: Få svar på dina formulärrelaterade frågor om AEM. Vår AI-assistent fungerar som din egen personliga kunskapsbas och ger insiktsfull vägledning och rekommendationer direkt inom plattformen.
 
 * **Skapa anpassade formulär**: Skapa enkelt fullfjädrade formulär med generativa AI-frågor. Vår generativa AI genererar automatiskt användarvänliga formulär som minskar bortfall och personaliserar upplevelsen.
 
@@ -94,7 +94,7 @@ WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive F
 
 När någon skickar ett formulär på din webbplats som skapats med AEM Adaptive Forms ser kopplingen till att skickade data automatiskt skickas till Marketo. Detta eliminerar behovet av manuell datainmatning och minskar risken för fel.
 
-![AEM formulär - Marketo Connector](/help/forms/assets/aem-forms-marketo-connector.jpeg)
+![AEM-formulär - Marketo Connector](/help/forms/assets/aem-forms-marketo-connector.jpeg)
 
 Genom att effektivisera dataöverföringsprocessen kan kopplingen hjälpa dig att förbättra konverteringsgraden på webbplatsen. Genom att automatiskt skicka leaddata till Marketo kan ni se till att kvalificerade leads snabbt läggs in i era vårdsprogram.
 
@@ -106,6 +106,28 @@ Vill du börja? I följande artiklar finns detaljerade anvisningar om hur innova
 * [Integrera ett anpassat formulär med Marketo Engage](/help/forms/integrate-adaptive-form-with-marketo-engage.md)
 * [Konfigurera Marketo Engage och datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
 * [Skicka ett befintligt anpassat formulär till Marketo Engage](/help/forms/submit-adaptive-form-to-marketo-engage.md)
+
+### Instrumentpanel för värdeåterställning
+
+Spåra och analysera formulärens prestanda med Value Realization Dashboard. Detta analysverktyg hjälper er att fatta datadrivna beslut för att optimera er formulärstrategi.
+
+![Instrumentpanel för Forms-användningsinformation](/help/forms/assets/forms-usage-insights.png)
+
+**Viktiga funktioner:**
+
+* Övervaka inskickade formulär, dokumentåtergivningar och data för att skapa/publicera formulär
+* Spåra formulärfragmentanvändning och återanvändning i hela organisationen
+* Identifiera trender, högtider och förbättringsmöjligheter
+
+Instrumentpanelen ger insikter i två huvudavsnitt:
+
+* **Formulär- och dokumentaktivitet över tid**: Spåra inskickat material, återgivningar och skapande/publicering av formulär
+* **Fragmentanvändning**: Övervakar fragmentanvändning och återanvändning
+
+Detaljerad information:
+
+* [Förstå kontrollpanelen för värderealisering](/help/forms/aem-forms-value-realization-dashboard.md)
+* [Tolka användningsinformation för formulär och dokument](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md)
 
 ## Ytterligare innovationer för tidig åtkomst
 
@@ -165,15 +187,15 @@ AEM Forms Doc Assurance API:er är en uppsättning verktyg i AEM Forms Cloud Ser
 
 Här följer en beskrivning av vad Doc Assurance API:er kan göra:
 
-* **Kryptera och dekryptera dokument**: Protect dina dokument genom att göra deras innehåll oläsligt med kryptering. Du har kontroll över vilka delar av PDF som krypteras, inklusive hela dokumentet, visst innehåll, metadata eller bifogade filer.
+* **Kryptera och dekryptera dokument**: Skydda dina dokument genom att göra deras innehåll oläsligt med kryptering. Du har kontroll över vilka delar av PDF som krypteras, inklusive hela dokumentet, visst innehåll, metadata eller bilagor.
 
 * **Signera dokument digitalt**: Lägg till digitala signaturer i dina dokument för validering och manipuleringssäker verifiering. Detta kan användas för certifiering eller för att säkerställa dokumentens integritet
 
-* **Reader Utöka dina dokument (Använd eller redigera användningsbehörighet för PDF-dokument)**: Gör det möjligt för din organisation att enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten för Adobe Reader med ytterligare användningsbehörighet.
+* **Reader Utöka dina dokument (Använd eller redigera användningsbehörighet för PDF-dokument)**: Gör det möjligt för din organisation att enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användningsbehörighet.
 
-  API:erna för Reader-tillägg (användningsrättigheter) lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Tredjepartsanvändare behöver inte ytterligare programvara eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument.
+  API:erna för Reader Extension (användningsrättigheter) lägger till användarrättigheter i ett PDF-dokument. Den här åtgärden aktiverar funktioner som normalt inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, t.ex. för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Tredjepartsanvändare behöver inte ytterligare programvara eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument.
 
-  När PDF-dokument har rätt användarbehörighet kan mottagarna göra aktiverade aktiviteter inifrån Adobe Reader.
+  När rätt användarbehörighet har lagts till för PDF-dokument kan mottagarna aktivera aktiviteter inifrån Adobe Reader.
 
 [Doc Assurance API:er](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/references/docassurance/) hjälper dig att förbättra dokumentsäkerheten och kompatibiliteten genom att lägga till ett extra kontrolllager.
 
@@ -182,31 +204,31 @@ Här följer en beskrivning av vad Doc Assurance API:er kan göra:
 
 Forms-tjänsten genererar interaktiv PDF forms för datainhämtning. Den kan också användas för att importera/exportera data till/från ett befintligt interaktivt PDF-formulär och validera skickade data. Här är en beskrivning av funktionaliteten:
 
-* **Återger Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
+* **Återge Forms**: Generera ett interaktivt PDF-formulär från en mall som skapats med AEM Forms Designer och, eventuellt, XML-data. Detta skapar i stort sett ett ifyllbart PDF-formulär som kan fyllas i med data.
 
-* **Dataextrahering och import**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (kallas även AcroForms) stöder dessutom FDF- och XFDF-data.
+* **Dataextrahering och import**: Importera data till ett befintligt PDF-formulär och extrahera data från ett ifyllt PDF-formulär. Både XDP- och XML-dataformat stöds, och import till icke-XFA PDF forms (även kallat AcroForms) stöder dessutom FDF- och XFDF-data.
 
 * **Dataverifiering**:: Verifiera skickade data i XDP- eller XML-format mot en mall som skapats med AEM Forms Designer.
 
 ### API för dokumentgenerering
 
-API:t för dokumentgenerering innehåller en valfri funktion som tillåter direktöverföring av genererad PDF till Azure Blob Storage. Några viktiga fördelar med att överföra PDF direkt till Azure Blob Storage med hjälp av dokumentgenererings-API är:
+API:t för dokumentgenerering innehåller en valfri funktion som tillåter direkt överföring av genererade PDF-filer till Azure Blob Storage. Några viktiga fördelar med att överföra PDF-filer direkt till Azure Blob Storage med hjälp av dokumentgenererings-API:t är:
 
 * **Smidig integrering med molnlagring**:
-Direktöverföring av genererad PDF till Azure Blob Storage eliminerar behovet av ytterligare manuella eller programmatiska steg för att överföra filer, effektivisera arbetsflödena och öka effektiviteten.
+Direktöverföring av genererade PDF:er till Azure Blob Storage eliminerar behovet av ytterligare manuella eller programmatiska steg för att överföra filer, effektivisera arbetsflödena och öka effektiviteten.
 
 * **Centraliserad dokumenthantering**:
-Genom att lagra PDF i Azure Blob Storage kan man centralisera hanteringen av dokument, vilket gör det enklare att organisera, hämta och hantera genererade filer för olika användningsområden.
+Genom att lagra PDF-filer i Azure Blob Storage kan man centralisera hanteringen av dokument, vilket gör det enklare att ordna, hämta och hantera genererade filer i olika användningsfall.
 
 * **Förbättrad säkerhet**: Genom att utnyttja Azure inbyggda säkerhetsfunktioner, som kryptering i vila och rollbaserad åtkomstkontroll (RBAC), förblir känsliga dokument skyddade under lagring.
 
-* **Anpassningsbara lagringssökvägar**: Möjligheten att definiera anpassade katalogsökvägar säkerställer att genererad PDF lagras på välorganiserade och programspecifika platser, vilket förbättrar filhanteringen.
+* **Anpassningsbara lagringssökvägar**: Möjligheten att definiera anpassade katalogsökvägar säkerställer att genererade PDF-filer lagras på välorganiserade och programspecifika platser, vilket förbättrar filhanteringen.
 
 ## Se även
 
 * [De senaste innovationerna i AEM Forms](/help/forms/latest-innovations.md)
 
-* [AEM Forms som Cloud Service](/help/forms/home.md)
+* [Funktioner i AEM Forms som molntjänster](/help/forms/home.md)
 
-* [Skillnad mellan AEM 6.5 Forms (AMS och lokal) och AEM Forms som Cloud Service (AEM CS Forms)](/help/forms/notable-changes.md)
+* [Skillnad mellan AEM 6.5 Forms (AMS och lokal) och AEM Forms som molntjänster (AEM CS Forms)](/help/forms/notable-changes.md)
 

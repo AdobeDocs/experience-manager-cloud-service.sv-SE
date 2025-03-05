@@ -5,35 +5,45 @@ feature: Adaptive Forms, Foundation Components, Core Components
 role: Admin, Developer, Leader, User
 hide: true
 hidefromtoc: true
-exl-id: 2c071f3c-b74a-4efc-808d-6aba9f294663
-source-git-commit: cd106c1970bf26eb590a418e3e6b79e3d3d9b5fe
+source-git-commit: 85d788eeb5017b99ea4962105b63b20c487f363f
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '512'
 ht-degree: 0%
 
 ---
 
-# Förstå din Value Realization Dashboard: Making the Most Your Forms {#value-realization-dashboard}
+
+# Förstå kontrollpanelen för värderealisering
+
+![Kontrollpanel för värderealisering](/help/edge/docs/forms/universal-editor/assets/forms-insights-banner.svg)
+
 
 <span class="preview"> Den här funktionen är en betafunktion som bara är aktiverad för ett fåtal utvalda kunder. </span>
 
 Välkommen till er heltidsbutik för att förstå vilket värde era formulär ger! Den här instrumentpanelen ger dig värdefulla insikter för att optimera formulär, effektivisera arbetsflöden och i slutänden uppnå dina mål snabbare.
 
-## Vad finns på Dashboard? {#content-of-dashboard}
+Den här artikeln innehåller en konceptuell översikt över instrumentpanelen för värdealisering och dess fördelar. Detaljerade användningsinstruktioner och metrisk tolkning finns i [Tolka insikter om formuläranvändning med kontrollpanelen Värdeåteralisering](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md).
+
+
+Kontrollpanel för ![värderealisering](/help/forms/assets/forms-usage-insights.png)
+
+## Vad finns på instrumentpanelen? {#content-of-dashboard}
 
 Den här instrumentpanelen är ditt fönster mot hur formuläret används. Här följer en beskrivning av de viktigaste avsnitten:
 
-### Formuläraktivitet över tid:
+### Formulär- och dokumentaktivitet över tid
 
 * **Skicka formulär**: Se trender för hur ofta formulären fylls i.
 * **Dokumentåtergivningar**: Spåra antalet dokument som återges över tid.
 * **Forms har skapats och publicerats**: Övervaka hastigheten med vilken nya formulär skapas och distribueras.
 * **Tider för att skapa och publicera formulär**: Analysera den genomsnittliga tiden för att skapa och publicera formulär för att identifiera områden som ska förbättras.
 
-### Fragmentanvändning:
+### Fragmentanvändning
 
 * **Antal formulärfragment som används**: Se hur många återanvändbara formuläravsnitt som för närvarande är inbyggda i aktiva formulär.
-* **Antal återanvända formulärfragment**: Mät hur ofta dessa fragment används i olika formulär.
+* **Återanvändning av formulärfragment**: Mät hur ofta dessa fragment används i olika formulär.
+
+
 
 
 ## Hur tjänar det här dig? {#benefits-to-you}
@@ -55,10 +65,14 @@ Låt oss omvandla dessa upptäckter till konkreta åtgärder!
 
 Genom att analysera dessa trender kan ni skapa bättre formulär, spara tid på att skapa och utnyttja återanvändbara komponenter. Detta innebär ett smidigare arbetsflöde, nöjdare användare och i slutändan en större avkastning på er investering.
 
-## Ytterligare tips {#additional-tips}
+## Fler tips {#additional-tips}
 
 * **Ange mål:** Avgör vad du vill uppnå med formulären. Ökad datainsamling, snabbare leadgenerering eller nöjdare kunder? När du vet vilka mål du har får du hjälp med att analysera kontrollpanelen.
 * **Regelbunden granskning:** Schemalägg regelbundna incheckningar med kontrollpanelen för att spåra förloppet och identifiera nya områden som ska förbättras.
 * **Experimentera och förfina:** Var inte rädd för att experimentera med olika formulärdesigner och fragmentanvändning. Kontrollpanelen hjälper dig att mäta effekten av dina ändringar.
 
 Kom ihåg att den här instrumentpanelen är din allierade! Genom att använda det effektivt kan ni omvandla era formulär från enkla datainsamlingsverktyg till strategiska resurser som leder till framgång för er och ert företag.
+
+## Se även
+
+* [Tolka användningsinformation](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md)
