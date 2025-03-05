@@ -5,31 +5,33 @@ feature: Adaptive Forms, Foundation Components, Core Components
 role: Admin, Developer, Leader, User
 hide: true
 hidefromtoc: true
-source-git-commit: 85d788eeb5017b99ea4962105b63b20c487f363f
+exl-id: 9405ebd4-ae40-4edd-8f74-58eb421ab1b9
+source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
-
 
 # Förstå kontrollpanelen för värderealisering
 
 ![Kontrollpanel för värderealisering](/help/edge/docs/forms/universal-editor/assets/forms-insights-banner.svg)
 
 
-<span class="preview"> Den här funktionen är en betafunktion som bara är aktiverad för ett fåtal utvalda kunder. </span>
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com. <span>
+
 
 Välkommen till er heltidsbutik för att förstå vilket värde era formulär ger! Den här instrumentpanelen ger dig värdefulla insikter för att optimera formulär, effektivisera arbetsflöden och i slutänden uppnå dina mål snabbare.
 
-Den här artikeln innehåller en konceptuell översikt över instrumentpanelen för värdealisering och dess fördelar. Detaljerade användningsinstruktioner och metrisk tolkning finns i [Tolka insikter om formuläranvändning med kontrollpanelen Värdeåteralisering](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md).
+Den här artikeln innehåller en konceptuell översikt över instrumentpanelen för värdealisering och dess fördelar. Detaljerade användningsinstruktioner och metrisk tolkning finns i [Tolka insikter om formuläranvändning med kontrollpanelen Värdeåteralisering](/help/forms/using-the-value-realization-dashboard.md).
 
 
-Kontrollpanel för ![värderealisering](/help/forms/assets/forms-usage-insights.png)
+
 
 ## Vad finns på instrumentpanelen? {#content-of-dashboard}
 
 Den här instrumentpanelen är ditt fönster mot hur formuläret används. Här följer en beskrivning av de viktigaste avsnitten:
+
 
 ### Formulär- och dokumentaktivitet över tid
 
@@ -44,8 +46,6 @@ Den här instrumentpanelen är ditt fönster mot hur formuläret används. Här 
 * **Återanvändning av formulärfragment**: Mät hur ofta dessa fragment används i olika formulär.
 
 
-
-
 ## Hur tjänar det här dig? {#benefits-to-you}
 
 Med denna kontrollpanel kan ni fatta datadrivna beslut om era formulär. Så här:
@@ -53,6 +53,8 @@ Med denna kontrollpanel kan ni fatta datadrivna beslut om era formulär. Så hä
 * **Identifiera populära Forms**: Höga överföringshastigheter indikerar värdefulla formulär. Analysera dessa för att hitta de bästa metoderna att återskapa i andra.
 * **Optimera skapandet av formulär**: Minska tiden det tar att skapa formulär genom att identifiera flaskhalsar. Utforska färdiga mallar eller effektiva arbetsflöden.
 * **Öka återanvändning av fragment**: Uppmuntra samarbete och upptäckbarhet av återanvändbara fragment. Välorganiserade fragmentbibliotek kan öka effektiviteten avsevärt.
+
+  Kontrollpanel för ![värderealisering](/help/forms/assets/forms-usage-insights.png)
 
 
 ## Förvandla insikter till handling {#turning-insights-into-actions}
@@ -75,4 +77,4 @@ Kom ihåg att den här instrumentpanelen är din allierade! Genom att använda d
 
 ## Se även
 
-* [Tolka användningsinformation](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md)
+* [Använda kontrollpanelen för att analysera användningsmönster för Forms och dokument](/help/forms/using-the-value-realization-dashboard.md)

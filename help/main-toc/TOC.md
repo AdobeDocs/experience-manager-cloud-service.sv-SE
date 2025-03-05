@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: babddee34b486960536ce7075684bbe660b6e120
+source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
 workflow-type: tm+mt
-source-wordcount: '6220'
+source-wordcount: '6228'
 ht-degree: 2%
 
 ---
@@ -894,7 +894,7 @@ ht-degree: 2%
       + [Registrera en transaktion för en anpassad implementering](/help/forms/record-transaction-custom-implementation.md)
    + Instrumentpanel för värdeberäkning {#vr-dashboard}
       + [Förstå kontrollpanelen för värderealisering](/help/forms/aem-forms-value-realization-dashboard.md)
-      + [Tolka användningsinformation](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md)
+      + [Använda kontrollpanelen för värdeberäkning för att analysera användningsmönster för formulär och dokument](/help/forms/using-the-value-realization-dashboard.md)
    + API-referens för utvecklare {#aem-forms-developer-api-reference}
       + [Adaptiv API-referens för Forms](https://developer-stage.adobe.com/experience-cloud/experience-manager-apis/api/stable/forms/)
       + [API-referens för AEM Forms Cloud Service Communications](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)

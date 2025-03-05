@@ -6,7 +6,7 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: babddee34b486960536ce7075684bbe660b6e120
+source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
 workflow-type: tm+mt
 source-wordcount: '2289'
 ht-degree: 0%
@@ -147,7 +147,7 @@ Instrumentpanelen ger insikter i två huvudavsnitt:
 Detaljerad information:
 
 * [Förstå kontrollpanelen för värderealisering](/help/forms/aem-forms-value-realization-dashboard.md)
-* [Tolka användningsinformation för formulär och dokument](/help/forms/interpreting-form-usage-insights-from-your-vr-dashboard.md)
+* [Tolka användningsinformation för formulär och dokument](/help/forms/using-the-value-realization-dashboard.md)
 
 ## Ytterligare innovationer för tidig åtkomst
 
