@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: def1b808be7e90b4cba79ccbfa81da936be58c54
+source-git-commit: 39a85c865c6c23043d77f5756a71764dc83be534
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2847'
 ht-degree: 0%
 
 ---
@@ -312,10 +312,11 @@ Du kan också [välja **Skapa nytt fragment** för att öppna dialogrutan **Skap
 
 #### Referensbilder {#reference-images}
 
-I fälten **Innehållsreferens** kan du båda:
+I fälten för **innehållsreferens** kan du:
 
-* referensresurser som redan finns i databasen
-* ladda upp dem direkt till fältet. På så sätt slipper du använda konsolen **Assets** för att ladda upp dem
+* referensresurser som redan finns i din lokala databas
+* referensresurser som finns i en fjärrdatabas
+* överför resurser direkt till fältet. Detta gör att du inte behöver använda **Assets**-konsolen för att överföra
 
   >[!NOTE]
   >
@@ -324,12 +325,48 @@ I fälten **Innehållsreferens** kan du båda:
   >* har en **rotsökväg** definierad (i [Content Fragment Model](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-reference)). Detta anger var bilden ska sparas.
   >* ta med **Bild** i listan över godkända innehållstyper
 
-Du kan antingen lägga till en resurs:
+##### Reference Local Assets {#reference-local-assets}
+
+Du kan antingen referera till en lokal resurs:
 
 * dra och släpp den nya resursfilen direkt (till exempel från filsystemet) till fältet **Innehållsreferens**
 * Använd åtgärden **Lägg till resurs** och välj sedan antingen **Bläddra i Assets** eller **Överför** för att öppna den väljare som du vill använda:
 
   ![Innehållsfragmentredigeraren - Lägg till resursalternativ](assets/cf-authoring-add-asset-options.png)
+
+##### Referera till fjärr-Assets {#reference-remote-assets}
+
+Så här refererar du till fjärrresurser:
+
+1. Ange fjärrdatabasen **Repository** när du bläddrar efter resurser:
+
+   ![Innehållsfragmentredigeraren - Välj resurs från fjärrkontrollen](assets/cf-authoring-remote-asset-01.png)
+
+2. När du har valt plats kan du se den i resursinformationen:
+
+   ![Innehållsfragmentredigeraren - resurs från fjärrdatabas](assets/cf-authoring-remote-asset-02.png)
+
+###### Fjärranslutna Assets - Begränsningar {#remote-assets-limitations}
+
+Det finns vissa begränsningar när du refererar till fjärrresurser:
+
+* Endast [Godkända](/help/assets/approve-assets.md) resurser är tillgängliga för referens från en fjärrdatabas.
+
+* Om en refererad resurs tas bort från fjärrdatabasen resulterar detta i en trasig innehållsreferens.
+
+* Alla tillgångsdatabaser som användaren har åtkomst till är tillgängliga för val. Listan kan inte begränsas.
+
+* Både AEM-instansen och fjärrresurslagringsplatsen måste ha samma version.
+
+* Inga tillgångsmetadata visas antingen via hanterings-API:t eller leverans-API:t. Du måste använda API:t för tillgångsmetadata för att hämta information om objektmetadata:
+
+   * metadata för enskilda resurser: [https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetMetadata](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetMetadata)
+
+   * hämta massmetadatainformation med hjälp av söknings-API (experimentellt): [https://adobe-aem-assets-delivery-experimental.redoc.ly/#operation/search](https://adobe-aem-assets-delivery-experimental.redoc.ly/#operation/search)
+
+>[!NOTE]
+>
+>Se även [AEM GraphQL API för användning med innehållsfragment - stöd för dynamiska media för OpenAPI-resurser (Remote Assets)](/help/headless/graphql-api/content-fragments.md#dynamic-media-for-openapi-asset-support)
 
 #### Referenssidor {#reference-pages}
 

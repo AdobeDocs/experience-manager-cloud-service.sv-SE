@@ -4,9 +4,9 @@ description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll
 feature: Headless, Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
 role: Admin, Developer
-source-git-commit: 83bc4e09cc7b6c420eee64091fab773ee1dcbd85
+source-git-commit: bc578aca8e07b010194143062322d9fd8820b408
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1972'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Lär dig använda GraphQL med AEM så att du kan leverera innehåll utan problem
 >* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 
-Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan det vara bra att se några praktiska exempel.
+Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM Content Fragments kan det vara bra att se några praktiska exempel.
 
 Mer information finns i:
 
@@ -1873,7 +1873,7 @@ Den här frågan förhör:
 } 
 ```
 
-## Exempelfrågor för DAM och Dynamic Media Assets {#sample-queries-delivery-DAM-DM}
+## Exempelfrågor för leverans av DAM och Dynamic Media Assets {#sample-queries-delivery-DAM-DM}
 
 För webboptimerad bildleverans (av DAM-resurser):
 
@@ -1883,9 +1883,13 @@ För webboptimerad bildleverans (av DAM-resurser):
 
 För leverans av URL:en till en Dynamic Media-resurs
 
-* Se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Bildreferens](/help/headless/graphql-api/content-fragments.md#sample-query-dynamic-media-asset-delivery-by-url-imageref)
+* Se [Exempelfråga för leverans av dynamiska medieresurser via URL - Bildreferens](/help/headless/graphql-api/content-fragments.md#sample-query-dynamic-media-asset-delivery-by-url-imageref)
 
-* Se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - flera referenser](/help/headless/graphql-api/content-fragments.md#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
+* Se [Exempelfråga för leverans av dynamiska mediefiler via URL - flera referenser](/help/headless/graphql-api/content-fragments.md#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
+
+För leverans av fjärrresurser som inte är lokala till den aktuella AEM-instansen från Content Fragment Editor.
+
+* Se [Exempelfråga för Dynamic Media för OpenAPI-objektstöd (Remote Assets)](/help/headless/graphql-api/content-fragments.md#sample-query-dynamic-media-for-openapi-asset-support)
 
 ## Exempel på struktur för innehållsfragment (används med GraphQL) {#content-fragment-structure-graphql}
 

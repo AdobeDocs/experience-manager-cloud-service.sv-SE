@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: b1b28cdc5fd1b697a2c2cd2893340d3c6afc8562
+source-git-commit: bc578aca8e07b010194143062322d9fd8820b408
 workflow-type: tm+mt
-source-wordcount: '5814'
+source-wordcount: '6021'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as
 
 AEM as a Cloud Service GraphQL API som används med innehållsfragment är till stor del baserat på GraphQL-API:t med öppen källkod.
 
-Genom att använda GraphQL API i AEM kan du effektivt leverera innehållsfragment till JavaScript-klienter i headless CMS-implementeringar:
+Med GraphQL API i AEM kan du effektivt leverera innehållsfragment till JavaScript-klienter i headless CMS-implementeringar:
 
 * Undvika iterativa API-begäranden som REST,
 * se till att leveransen begränsas till de specifika kraven,
@@ -34,12 +34,12 @@ Genom att använda GraphQL API i AEM kan du effektivt leverera innehållsfragmen
 >
 >GraphQL används för närvarande i två (separata) scenarier i Adobe Experience Manager (AEM) as a Cloud Service:
 >
->* [AEM Commerce använder data från en Commerce-plattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
->* AEM Content Fragments fungerar tillsammans med det AEM GraphQL-API:t (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
+>* [AEM Commerce förbrukar data från en Commerce-plattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
+>* AEM Content Fragments fungerar tillsammans med AEM GraphQL API (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
 
 >[!NOTE]
 >
->Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de berörda begreppen.
+>Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de koncept som ingår.
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ GraphQL är:
 
   Se [Utforska GraphQL](https://www.graphql.com).
 
-* *&quot;... ett datamfrågespråk och en specifikation som utvecklats internt av Facebook 2012 innan det publicerades 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktion av hundratals organisationer av alla storlekar..&quot;*
+* *&quot;... ett datamfrågespråk och en specifikation utvecklades internt av Facebook 2012 innan Facebook öppnades offentligt 2015. Det är ett alternativ till REST-baserade arkitekturer i syfte att öka utvecklarnas produktivitet och minimera mängden data som överförs. GraphQL används i produktion av hundratals organisationer av alla storlekar..&quot;*
 
   Se [GraphQL Foundation](https://foundation.graphql.org/).
 
@@ -77,7 +77,7 @@ Mer information om GraphQL API finns i följande avsnitt (bland annat på engels
 
    * [Stödlinjer](https://www.graphql.com/guides/)
 
-   * [Tutorials](https://www.graphql.com/tutorials/)
+   * [Självstudiekurser](https://www.graphql.com/tutorials/)
 
    * [Fallstudier](https://www.graphql.com/case-studies/)
 
@@ -96,7 +96,7 @@ GraphQL använder följande:
 * **[Scheman och typer](https://graphql.org/learn/schema/)**:
 
    * Scheman genereras av AEM baserat på modeller för innehållsfragment.
-   * Med hjälp av dina scheman kan GraphQL presentera de typer och åtgärder som är tillåtna för implementeringen av GraphQL AEM.
+   * Med hjälp av dina scheman kan GraphQL presentera de typer och åtgärder som är tillåtna för implementeringen av GraphQL för AEM.
 
 * **[Fält](https://graphql.org/learn/queries/#fields)**
 
@@ -128,15 +128,15 @@ AEM innehåller funktioner för att konvertera frågor (båda typerna) till [bes
 >
 >Vanligtvis finns det ingen dispatcher/CDN på författaren, så det är ingen fördel att använda beständiga frågor där, förutom att testa dem.
 
-GraphQL-frågor som använder förfrågningar om POST rekommenderas inte eftersom de inte cachelagras, så i en standardinstans är Dispatcher konfigurerat att blockera sådana frågor.
+GraphQL-frågor som använder POST-begäranden rekommenderas inte eftersom de inte cachelagras, så i en standardinstans är Dispatcher konfigurerat att blockera sådana frågor.
 
-Även om GraphQL har stöd för GET-förfrågningar kan dessa få träffgränser (t.ex. längden på URL:en) som kan undvikas med beständiga frågor.
+GraphQL stöder även GET-förfrågningar, men dessa kan få träffgränser (till exempel längden på URL:en) som kan undvikas med hjälp av beständiga frågor.
 
 Mer information finns i [Aktivera cachelagring av beständiga frågor](/help/headless/deployment/dispatcher-caching.md).
 
 >[!NOTE]
 >
->Om du vill tillåta direkta och/eller POST frågor i Dispatcher kan du be systemadministratören att:
+>Om du vill tillåta direkta och/eller POST-frågor i Dispatcher kan du be systemadministratören att:
 >
 >* Skapa en [Cloud Manager-miljövariabel ](/help/implementing/cloud-manager/environment-variables.md) med namnet `ENABLE_GRAPHQL_ENDPOINT`
 >* med värdet `true`
@@ -149,15 +149,15 @@ Mer information finns i [Aktivera cachelagring av beständiga frågor](/help/hea
 
 Du kan testa och felsöka GraphQL-frågor med [GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md).
 
-## Använd exempel för författare, förhandsgranskning och Publish {#use-cases-author-preview-publish}
+## Använd exempel för författare, förhandsgranskning och publicering {#use-cases-author-preview-publish}
 
 Användningsexemplen kan bero på vilken typ av AEM as a Cloud Service-miljö det är:
 
-* Publish-miljö; används för att:
+* Publiceringsmiljö; används för att:
    * Frågedata för JS-program (standardfall)
 
 * Förhandsgranskningsmiljö; används för att:
-   * Förhandsgranska frågor innan du distribuerar i Publish-miljön
+   * Förhandsgranska frågor innan de distribueras i publiceringsmiljön
       * Frågedata för JS-program (standardfall)
 
 * Författarmiljö, används för att:
@@ -169,7 +169,7 @@ Användningsexemplen kan bero på vilken typ av AEM as a Cloud Service-miljö de
 
 Behörigheterna är de som krävs för åtkomst till Assets.
 
-GraphQL-frågor körs med tillstånd från den AEM användaren av den underliggande begäran. Om användaren inte har läsåtkomst till vissa fragment (som lagras som Assets) blir de inte en del av resultatuppsättningen.
+GraphQL-frågor körs med tillstånd från AEM-användaren av den underliggande begäran. Om användaren inte har läsåtkomst till vissa fragment (som lagras som Assets) blir de inte en del av resultatuppsättningen.
 
 Användaren måste också ha tillgång till en GraphQL-slutpunkt för att kunna köra GraphQL-frågor.
 
@@ -238,7 +238,7 @@ När innehållsfragment är kapslade kan det hända att en överordnad Content F
 
 >[!NOTE]
 >
->Gränssnittet AEM förhindrar detta, men om publiceringen görs programmatiskt eller med innehållspaket kan det ske.
+>AEM gränssnitt förhindrar detta, men om publiceringen görs programmatiskt eller med innehållspaket kan det ske.
 
 När detta inträffar genererar AEM ett *ofullständigt*-schema för den överordnade innehållsfragmentmodellen. Det innebär att fragmentreferensen, som är beroende av den opublicerade modellen, tas bort från schemat.
 
@@ -282,7 +282,7 @@ Dessa [hjälpfält](#helper-fields) är markerade med en `_` som föregår vad s
 
 #### Bana {#path}
 
-Sökvägsfältet används som en identifierare i AEM GraphQL. Den representerar sökvägen till Content Fragment-resursen i AEM. Vi har valt detta som identifierare för ett innehållsfragment eftersom det:
+Sökvägsfältet används som en identifierare i AEM GraphQL. Den representerar sökvägen till Content Fragment-resursen i AEM-databasen. Vi har valt detta som identifierare för ett innehållsfragment eftersom det:
 
 * är unikt inom AEM,
 * kan enkelt hämtas.
@@ -317,7 +317,7 @@ Se [Exempelfråga - Ett enskilt specifikt stadsfragment](/help/headless/graphql-
 
 #### ID (UUID) {#id-uuid}
 
-ID-fältet används också som identifierare i AEM GraphQL. Den representerar sökvägen till Content Fragment-resursen i AEM, men i stället för att innehålla den faktiska sökvägen innehåller den ett UUID som representerar resursen. Vi har valt detta som identifierare för ett innehållsfragment eftersom det:
+ID-fältet används också som identifierare i AEM GraphQL. Den representerar sökvägen till Content Fragment-resursen i AEM-databasen, men i stället för att innehålla den faktiska sökvägen finns det ett UUID som representerar resursen. Vi har valt detta som identifierare för ett innehållsfragment eftersom det:
 
 * är unikt inom AEM,
 * kan enkelt hämtas,
@@ -338,7 +338,7 @@ UUID för ett innehållsfragment och för ett refererat innehållsfragment, elle
 
 #### Metadata {#metadata}
 
-Via GraphQL visar AEM också metadata för ett innehållsfragment. Metadata är den information som beskriver ett innehållsfragment, till exempel titeln på ett innehållsfragment, miniatyrsökvägen, beskrivningen av ett innehållsfragment och datumet då det skapades, bland annat.
+Via GraphQL visar AEM även metadata för ett innehållsfragment. Metadata är den information som beskriver ett innehållsfragment, till exempel titeln på ett innehållsfragment, miniatyrsökvägen, beskrivningen av ett innehållsfragment och datumet då det skapades, bland annat.
 
 Eftersom metadata genereras via Schemaredigeraren och därför inte har någon specifik struktur, implementerades GraphQL-typen `TypedMetaData` för att visa metadata för ett innehållsfragment. `TypedMetaData` visar information grupperad efter följande skalärtyper:
 
@@ -590,7 +590,7 @@ Du kan även filtrera efter kapslade fält, men det rekommenderas inte eftersom 
 
 Ytterligare exempel finns i:
 
-* information om [GraphQL för AEM](#graphql-extensions)
+* information om [GraphQL för AEM-tillägg](#graphql-extensions)
 
 * [Exempelfrågor med detta exempelinnehåll och -struktur](/help/headless/graphql-api/sample-queries.md#graphql-sample-queries-sample-content-fragment-structure)
 
@@ -759,11 +759,11 @@ Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
 * Returnera URL:en som en del av JSON-leveransen
 
-Du kan använda AEM för att:
+Med AEM kan du
 
 * Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) till GraphQL-frågor.
 
-Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar vid GET-begäranden för dessa bilder.
+Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar på GET-begäranden för dessa bilder.
 
 På så sätt kan du dynamiskt skapa bildåtergivningar för JSON-leverans, vilket innebär att du slipper skapa och lagra dessa återgivningar manuellt i databasen.
 
@@ -777,9 +777,9 @@ Lösningen i GraphQL innebär att man kan
 >
 >En **innehållsreferens** kan användas för både DAM-resurser och Dynamic Media-resurser. När du hämtar rätt URL används olika parametrar:
 >* `_dynamicUrl` : en DAM-resurs
->* `_dmS7Url` : en Dynamic Media-resurs
+>* `_dmS7Url` : en dynamisk mediaresurs
 > 
->Om resursen som refereras är en DAM-resurs blir värdet för `_dmS7Url` `null`. Se [Leverans av Dynamic Media-mediefiler via URL i GraphQL-frågor](#dynamic-media-asset-delivery-by-url).
+>Om resursen som refereras är en DAM-resurs blir värdet för `_dmS7Url` `null`. Se [Leverans av dynamiska mediefiler via URL i GraphQL-frågor](#dynamic-media-asset-delivery-by-url).
 
 ### Omformningsbegärans struktur {#structure-transformation-request}
 
@@ -955,26 +955,26 @@ Följande begränsningar finns:
    * Ingen cachelagring av författare
    * Cachelagring vid publicering - max 10 minuters ålder (kan inte ändras av klienten)
 
-## Leverans av Dynamic Media-resurser via URL i GraphQL-frågor{#dynamic-media-asset-delivery-by-url}
+## Dynamisk leverans av medieresurser via URL i GraphQL-frågor{#dynamic-media-asset-delivery-by-url}
 
-Med GraphQL for AEM Content Fragments kan du begära en URL till en AEM Dynamic Media-resurs (Scene7) (som refereras av en **Content Reference**).
+Med GraphQL for AEM Content Fragments kan du begära en URL till en AEM Dynamic Media-resurs (Scene7) (som refereras av **Content Reference**).
 
 Lösningen i GraphQL innebär att man kan
 
 * använd `_dmS7Url` på referensen `ImageRef`
-   * se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Bildreferens](#sample-query-dynamic-media-asset-delivery-by-url-imageref)
+   * se [Exempelfråga för leverans av dynamiska medieresurser via URL - Bildreferens](#sample-query-dynamic-media-asset-delivery-by-url-imageref)
 * använd `_dmS7Url` på flera referenser; `ImageRef`, `MultimediaRef` och `DocumentRef`
-   * se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Flera referenser](#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
+   * se [Exempelfråga för leverans av dynamiska medieresurser via URL - flera referenser](#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
 
 * använd `_dmS7Url` med funktionen SmartCrop
 
    * Egenskapen `_smartCrops` visar de Smart Crop-konfigurationer som är tillgängliga för en viss resurs
 
-   * se [Exempelfråga för leverans av Dynamic Media-resurser via URL - med smart beskärning](#sample-query-dynamic-media-asset-delivery-by-url-smart-crop)
+   * se [Exempelfråga för leverans av dynamiska medieresurser via URL - med smart beskärning](#sample-query-dynamic-media-asset-delivery-by-url-smart-crop)
 
 >[!NOTE]
 >
->För detta måste du ha en [Dynamic Media Cloud-konfiguration](/help/assets/dynamic-media/config-dm.md).
+>Därför måste du ha en [dynamisk konfiguration för Media Cloud](/help/assets/dynamic-media/config-dm.md).
 >
 >Detta lägger till attributen `dam:scene7File` och `dam:scene7Domain` i resursens metadata när den skapas.
 
@@ -982,12 +982,12 @@ Lösningen i GraphQL innebär att man kan
 >
 >En **innehållsreferens** kan användas för både DAM-resurser och Dynamic Media-resurser. När du hämtar rätt URL används olika parametrar:
 >
->* `_dmS7Url` : en Dynamic Media-resurs
+>* `_dmS7Url` : en dynamisk mediaresurs
 >* `_dynamicUrl` : en DAM-resurs
 > 
->Om den refererade resursen är en Dynamic Media-resurs blir värdet för `_dynamicURL` `null`. Se [webboptimerad bildleverans i GraphQL-frågor](#web-optimized-image-delivery-in-graphql-queries).
+>Om resursen som refereras är en Dynamic Media-resurs blir värdet för `_dynamicURL` `null`. Se [webboptimerad bildleverans i GraphQL-frågor](#web-optimized-image-delivery-in-graphql-queries).
 
-### Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Bildreferens{#sample-query-dynamic-media-asset-delivery-by-url-imageref}
+### Exempelfråga för leverans av Dynamic Media-resurser via URL - Bildreferens{#sample-query-dynamic-media-asset-delivery-by-url-imageref}
 
 Här följer ett exempel på en fråga:
 * för flera innehållsfragment av typen `team` och `person`, returnerar `ImageRef`
@@ -1014,7 +1014,7 @@ query allTeams {
 } 
 ```
 
-### Exempelfråga för leverans av Dynamic Media-mediefiler via URL - Flera referenser{#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs}
+### Exempelfråga för leverans av Dynamic Media-resurser via URL - Flera referenser{#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs}
 
 Här följer ett exempel på en fråga:
 * för flera innehållsfragment av typen `team` och `person`, returnerar `ImageRef`, `MultimediaRef` och `DocumentRef`:
@@ -1055,7 +1055,7 @@ query allTeams {
 }
 ```
 
-### Exempelfråga för leverans av Dynamic Media-resurser via URL - med Smart Crop {#sample-query-dynamic-media-asset-delivery-by-url-smart-crop}
+### Exempelfråga för leverans av dynamiska medieresurser via URL - med Smart Crop {#sample-query-dynamic-media-asset-delivery-by-url-smart-crop}
 
 Här följer ett exempel på en fråga:
 
@@ -1085,9 +1085,113 @@ query allTeams {
 } 
 ```
 
+## Stöd för dynamiska media för OpenAPI-resurser (Remote Assets) {#dynamic-media-for-openapi-asset-support}
+
+Integreringen av [Fjärrresurser](/help/sites-cloud/administering/content-fragments/authoring.md#reference-remote-assets) gör att du kan referera till Assets, som inte är lokala för den aktuella AEM-instansen, från redigeraren för innehållsfragment. Det implementeras av stödet för OpenAPI-resurser i Content Fragment Editor och GraphQL JSON.
+
+### Exempelfråga för Dynamic Media för OpenAPI-resurser (Remote Assets) {#sample-query-dynamic-media-for-openapi-asset-support}
+
+Här följer ett exempel på en förfrågan:
+
+* för att illustrera konceptet med att referera till fjärrresurser
+
+  ```graphql
+  {
+    testModelList {
+      items {
+        remoteasset {
+          ... on RemoteRef {
+              repositoryId
+                  assetId
+          }
+        }
+        multiplecontent {
+          ... on ImageRef {
+            _path
+            _authorUrl
+            _publishUrl
+          }
+          ... on RemoteRef {
+              repositoryId
+              assetId
+          }
+        }
+      }
+      _references {
+        ... on ImageRef {
+            _path
+            _authorUrl
+            _publishUrl
+          }
+          ... on RemoteRef {
+              repositoryId
+              assetId
+          }
+      }
+    }
+  }
+  ```
+
+* svaret
+
+  ```graphql
+  {
+    "data": {
+      "testModelList": {
+        "items": [
+          {
+            "remoteasset": {
+              "repositoryId": "delivery-p123456-e123456.adobeaemcloud.com",
+              "assetId": "urn:aaid:aem:1fb05fe4-c12b-4f85-b1ca-aa92cdbd6a62"
+            },
+            "multiplecontent": [
+              {
+                "repositoryId": "delivery-p123456-e123456.adobeaemcloud.com",
+                "assetId": "urn:aaid:aem:1fb05fe4-c12b-4f85-b1ca-aa92cdbd6a62"
+              },
+              {
+                "_path": "/content/dam/test-folder/test.jpg",
+                "_authorUrl": "http://localhost:4502/content/dam/test-folder/test.jpg",
+                "_publishUrl": "http://localhost:4503/content/dam/test-folder/test.jpg"
+              }
+            ]
+          }
+        ],
+        "_references": [
+          {
+            "repositoryId": "delivery-p123456-e123456.adobeaemcloud.com",
+            "assetId": "urn:aaid:aem:1fb05fe4-c12b-4f85-b1ca-aa92cdbd6a62"
+          },
+          {
+            "_path": "/content/dam/test-folder/test.jpg",
+            "_authorUrl": "http://localhost:4502/content/dam/test-folder/test.jpg",
+            "_publishUrl": "http://localhost:4503/content/dam/test-folder/test.jpg"
+          }
+        ]
+      }
+    }
+  }  
+  ```
+
+**Begränsningar**
+
+De nuvarande begränsningarna är:
+
+* GraphQL-leverans stöder endast `repositoryId` och `assetId` (andra metadata för resursen returneras inte)
+
+  >[!NOTE]
+  >
+  >Den fullständiga URL:en måste sedan skapas på klientsidan, baserat på [API:t för resursleverans](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetSeoFormat).
+
+* Endast *Godkända* resurser är tillgängliga för referens från fjärrdatabaserna
+* Om en resurs som refereras tas bort från fjärrdatabasen resulterar detta i en trasig referens för innehållsfragmentresurser.
+* Alla tillgångsdatabaser som användaren har åtkomst till kommer att vara tillgängliga för val. Listan kan inte begränsas.
+* Både AEM-instansen och fjärrresurslagringsplatsen måste ha samma version.
+* Inga resursmetadata visas via [hanterings-API:t](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/) och [leverans-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/). Du måste använda API:t för tillgångsmetadata för att hämta information om objektets metadata.
+
 ## GraphQL for AEM - i korthet {#graphql-extensions}
 
-Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. För GraphQL-frågor med AEM finns det några tillägg:
+Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL standardspecifikation. Det finns några tillägg för GraphQL-frågor med AEM:
 
 * Om du behöver ett enda resultat:
    * använd modellnamnet, till exempel ort
@@ -1164,8 +1268,8 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
    * För bildleverans:
 
-      * `_authorURL`: den fullständiga URL:en till bildresursen AEM författaren
-      * `_publishURL`: den fullständiga URL:en till bildresursen på AEM Publish
+      * `_authorURL`: den fullständiga URL:en till bildresursen på AEM Author
+      * `_publishURL`: den fullständiga URL:en till bildresursen i AEM Publish
 
       * För [webboptimerad bildleverans](#web-optimized-image-delivery-in-graphql-queries) (av DAM-resurser):
 
@@ -1185,9 +1289,9 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
 
       * `_dmS7Url`: på referensen `ImageRef` för leverans av URL:en till en [Dynamic Media-resurs](#dynamic-media-asset-delivery-by-url)
 
-         * Se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - ImageRef](#sample-query-dynamic-media-asset-delivery-by-url-imageref)
+         * Se [Exempelfråga för leverans av dynamiska mediefiler via URL - ImageRef](#sample-query-dynamic-media-asset-delivery-by-url-imageref)
 
-         * Se [Exempelfråga för leverans av Dynamic Media-mediefiler via URL - flera referenser](#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
+         * Se [Exempelfråga för leverans av dynamiska mediefiler via URL - flera referenser](#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs)
 
    * `_tags`: om du vill visa ID:n för innehållsfragment eller variationer som innehåller taggar, är detta en array med `cq:tags` identifierare.
 
@@ -1230,7 +1334,7 @@ Om du vill komma åt GraphQL-slutpunkten från en extern webbplats måste du kon
 
 ## Autentisering {#authentication}
 
-Se [Autentisering för AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md).
+Se [Autentisering för AEM GraphQL-fjärrfrågor om innehållsfragment](/help/headless/security/authentication.md).
 
 ## Automatiserad testning {#automated-testing}
 
@@ -1281,8 +1385,8 @@ Frågor som har uppstått:
 
    * **A**:
 &quot;*AEM GraphQL API ger total kontroll över JSON-utdata och är en branschstandard för att fråga efter innehåll.
-AEM planerar att investera i det AEM GraphQL-API:t.*&quot;
+AEM planerar att investera i AEM GraphQL API.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med hjälp av AEM GraphQL API:er och som används av en extern app, i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
