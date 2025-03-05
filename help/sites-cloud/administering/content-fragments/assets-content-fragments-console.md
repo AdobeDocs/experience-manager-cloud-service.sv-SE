@@ -1,22 +1,35 @@
 ---
 title: Visa och hantera Assets i konsolen för innehållsfragment
-description: Läs om hur du visar och hanterar Assets i **Content Fragments Console** i Adobe Experience Manager as a Cloud Service.
+description: Lär dig hur du visar och hanterar Assets i konsolen för innehållsfragment i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 865e1fa8-2956-45cf-9dd7-034d491808fe
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 175a7c069f57069b7a5ff1f0e5785147d9a4f6c9
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 0%
+source-wordcount: '277'
+ht-degree: 1%
 
 ---
 
 # Visa och hantera Assets i konsolen för innehållsfragment {#viewing-managing-assets-content-fragments-console}
 
-Som standard visas dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) i Adobe Experience Manager as a Cloud Service.
+Som standard visas dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) i Adobe Experience Manager as a Cloud Service.
 
 Du kan även visa och hantera alla andra typer av **Assets** i den här **konsolen för innehållsfragment**.
+
+>[!IMPORTANT]
+>
+>Olika funktioner i Content Fragment Console är tillgängliga via Early Adobe Program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
+
+>[!NOTE]
+>
+>Den här sidan beskriver den del av konsolen som (endast) visar Assets. För andra paneler, se:
+>
+>* [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)
+>* [Hantera modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 
 >[!NOTE]
 >
@@ -42,6 +55,7 @@ I vyn **Assets** i konsolen Innehållsfragment kan du:
 * [Skapa en mapp](/help/assets/manage-digital-assets.md#creating-folders)
 * [Ladda upp Assets](/help/assets/add-delete-assets-view.md)
 * Konfigurera vytypen (Lista, Stödraster, Galleri, Vattenfall) och, när det är lämpligt, de kolumner som visas
+* Det finns ett urval av [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md) som kan användas i den här konsolen
 
 Du kan också vidta åtgärder för en eller flera av de valda Assets-programmen:
 

@@ -1,11 +1,11 @@
 ---
 title: Lär dig grunderna i innehållsmodellering
-description: Lär dig grunderna i att modellera innehåll för headless CMS med hjälp av innehållsfragment.
+description: Lär dig grunderna i att modellera innehåll för Headless CMS med hjälp av Content Fragments.
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Architect Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande koncept och terminologi som är relevant för att modellera innehåll för headless.
+I början av [AEM Headless Content Architect Journey](overview.md) innehöll [Introduktion](introduction.md) grundläggande koncept och terminologi som är relevant för att modellera innehåll för headless.
 
-Den här artikeln bygger på dessa så att du förstår hur du modellerar innehåll för AEM headless-projekt.
+Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du modellerar ditt innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
@@ -31,7 +31,7 @@ Modellering av innehåll (data) är en uppsättning etablerade tekniker som ofta
 
 ### Varför? {#why}
 
-För att ditt program ska kunna begära och ta emot nödvändigt innehåll från AEM på ett konsekvent och effektivt sätt måste det här innehållet struktureras.
+För att säkerställa att programmet konsekvent och effektivt kan begära och ta emot önskat innehåll från AEM måste det här innehållet struktureras.
 
 Detta innebär att din ansökan i förväg vet vilken form av svar det är och därför hur den ska behandlas. Detta är mycket enklare än att ta emot frihandsinnehåll, som måste analyseras för att avgöra vad det innehåller och därför hur det kan användas.
 
@@ -46,9 +46,9 @@ Innehållsmodellens struktur är:
 
 >[!NOTE]
 >
->Modellerna för innehållsfragment används också som bas för de AEM GraphQL-scheman som används för att hämta ditt innehåll - mer om det på Developer Journey.
+>Modellerna för innehållsfragment används också som bas för AEM GraphQL Schemas, som används för att hämta ditt innehåll - mer om det på Developer Journey.
 
-Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM-API:t för GraphQL kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
+Begäranden om ditt innehåll görs med AEM GraphQL API, en anpassad implementering av GraphQL standard-API. Med AEM GraphQL API kan program utföra (komplexa) frågor på dina innehållsfragment, där varje fråga anpassas efter en viss modelltyp.
 
 Det returnerade innehållet kan sedan användas av dina program.
 
@@ -78,7 +78,7 @@ Till exempel:
 
 ## Datatyper {#data-types}
 
-AEM innehåller följande datatyper som du kan använda för att modellera ditt innehåll:
+AEM tillhandahåller följande datatyper som du kan använda för att utforma ditt innehåll:
 
 * Enkelradig text
 * Flerradstext
@@ -148,11 +148,11 @@ Att representera dessa inbördes relationer kan uppnås med Fragmentreferenser, 
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om att skapa modeller för innehållsfragment i AEM](model-structure.md). Här presenteras och behandlas de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med fragmentreferenserna - en viktig del av modelleringen för headless.
+Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om att skapa innehållsfragmentmodeller i AEM](model-structure.md). Här presenteras och behandlas de olika referenser som finns tillgängliga och hur du skapar strukturnivåer med fragmentreferenserna - en viktig del av modelleringen för headless.
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 
    * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
 

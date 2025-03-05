@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: f5523968ef4548c287ec939b63db1cf914c7fbeb
+source-git-commit: 3789904b4aa1ffa4a039e6b84af64f03f06a3206
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2629'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,18 @@ ht-degree: 0%
 
 Lär dig hur du hanterar dina **innehållsfragment** i Adobe Experience Manager (AEM) as a Cloud Service från den dedikerade [konsolen för innehållsfragment](#content-fragments-console) och [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor). Dessa innehållsfragment kan användas som bas för rubrikfritt innehåll eller för att skapa sidor.
 
+>[!IMPORTANT]
+>
+>Olika funktioner i Content Fragment Console är tillgängliga via Early Adobe Program.
+>
+>Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
+
 >[!NOTE]
 >
->Ditt projektteam kan anpassa konsolen och redigeraren om det behövs. Mer information finns i [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md).
+>Den här sidan täcker den del av konsolen som (endast) visar innehållsfragment. För andra paneler, se:
+>
+>* [Hantera modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
+>* [Visa och hantera Assets i konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md)
 
 När du har definierat dina [modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för att:
 
@@ -45,41 +54,13 @@ När du har definierat dina [modeller för innehållsfragment](#creating-a-conte
 >
 >Innehållsfragment lagras som **Assets**. De hanteras huvudsakligen från konsolen **Innehållsfragment**, men kan även hanteras från konsolen [Assets](/help/assets/content-fragments/content-fragments-managing.md).
 
-## Konsolen Innehållsfragment {#content-fragments-console}
+## Grundläggande struktur och hantering av innehållsfragment i konsolen {#basic-structure-handling-content-fragments-console}
 
-Konsolen Innehållsfragment är avsedd för hantering, sökning och skapande av innehållsfragment. Den har optimerats för användning i ett Headless-sammanhang, men används även när innehållsfragment skapas för att användas vid sidredigering.
+Du kan använda panelen längst till vänster i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) för att välja **Innehållsfragment** som resurstyp för att visa, bläddra och hantera:
 
-Konsolen för innehållsfragment ger direktåtkomst till dina fragment och relaterade uppgifter. Konsolen kan nås direkt från den översta nivån i Global Navigation.
-
-![Global navigering - konsolen för innehållsfragment](assets/cf-managing-global-navigation.png)
-
-Mer information finns i:
-
-* [Grundläggande struktur och hantering av konsolen för innehållsfragment](#basic-structure-handling-content-fragments-console)
-
-* [Information om dina innehållsfragment](#information-content-fragments)
-
-* [Åtgärder för ett innehållsfragment i konsolen för innehållsfragment](#actions-selected-content-fragment)
-
-* [Markera kolumner som visas i konsolen](#select-columns-console)
-
-* [Söka och filtrera i konsolen för innehållsfragment](#filtering-fragments)
-
-* Det finns ett urval av [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md) som kan användas i den här konsolen
-
->[!NOTE]
->
->Den här konsolen visar bara innehållsfragment. Den visar inte andra resurstyper, t.ex. bilder och videoklipp.
-
->[!CAUTION]
->
->Konsolen är *endast* tillgänglig i Adobe Experience Manager (AEM) as a Cloud Service online.
-
-### Konsolens grundläggande struktur och hantering {#basic-structure-handling-content-fragments-console}
+![Konsolen för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-navigation.png)
 
 Om du väljer **Innehållsfragment** öppnas konsolen på en ny flik.
-
-<!-- CQDOC-21349: screenshot -->
 
 ![Konsolen för innehållsfragment - översikt](assets/cf-managing-console-overview.png)
 
@@ -90,10 +71,11 @@ Här ser du att det finns tre huvudområden:
    * Visar även din IMS-organisation
    * Tillhandahåller olika [åtgärder](#actions-unselected)
 * Den vänstra panelen
+   * Här kan du komprimera, eller utöka, länkar till panelerna
    * Här kan du dölja eller visa mappträdet
    * Du kan välja en viss gren av trädet
    * Storleken kan ändras så att kapslade mappar visas
-   * Du kan välja mellan att visa innehållsfragment eller [Assets](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md)
+   * Förutom innehållsfragment kan du visa [modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) eller [Assets](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md). Du kan även komprimera, eller expandera, länkar till panelerna
 * Den högra panelen - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
       * Innehållsfragment från den markerade mappen och alla underordnade mappar visas:
@@ -105,7 +87,7 @@ Här ser du att det finns tre huvudområden:
          * Visa information om referenser
          * Visa information om språkversioner av fragmentet
       * [Vissa andra fält med information](#information-content-fragments) om ett innehållsfragment kan användas för [Snabb filtrering](#fast-filtering):
-         * Markera ett värde i kolumnen och tillämpas omedelbart som ett filter
+         * Markera ett värde i kolumnen så tillämpas det omedelbart som ett filter
          * Snabb filtrering stöds för kolumnerna **Model**, **Status**, **Modified By**, **Tags** och **Published By By**.
       * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du:
          * Sortera - välj lämplig åtgärd för antingen stigande eller fallande
@@ -114,58 +96,9 @@ Då sorteras hela tabellen efter den kolumnen. Sortering är bara tillgängligt 
       * Välj ett eller flera fragment för ytterligare [åtgärd](#actions-selected-content-fragment)
    * Använd rutan [Sök](#searching-fragments)
    * Öppna [filterpanelen](#filtering-fragments)
+   * Det finns ett urval av [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md) som kan användas i den här konsolen
 
-### Åtgärder {#actions}
-
-I konsolen finns ett antal åtgärder som du kan använda, antingen direkt eller efter att du har valt ett visst fragment:
-
-* Olika åtgärder är direkt [tillgängliga från konsolen](#actions-unselected)
-* Du kan [markera ett eller flera innehållsfragment för att visa lämpliga åtgärder](#actions-selected-content-fragment)
-
-#### Åtgärder (omarkerade) {#actions-unselected}
-
-Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja ett visst innehållsfragment:
-
-* **[Skapa](#creating-a-content-fragment)** ett nytt innehållsfragment
-* [Filtrera](#filtering-fragments) innehållsfragment enligt ett urval predikat och spara filtret för framtida bruk
-* [Sök](#searching-fragments) i innehållsfragment
-* [Anpassa tabellvyn för att visa markerade kolumner med information](#select-columns-console)
-* Använd **Öppna i Assets** för att öppna den aktuella platsen direkt i **Assets**-konsolen
-
-  >[!NOTE]
-  >
-  >**Assets**-konsolen används för att komma åt resurser, till exempel bilder, videor och så vidare.  Konsolen kan nås:
-  >
-  >* med länken **Öppna i Assets** (i konsolen för innehållsfragment)
-  >* direkt från den globala **navigeringsrutan**
-
-#### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
-
-Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
-
-<!-- CQDOC-21349: screenshot -->
-
-![Konsolen för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
-
-* **[Öppna i ny redigerare](#editing-the-content-of-your-fragment)**
-* **[Öppna](/help/assets/content-fragments/content-fragments-variations.md)** (i originalredigeraren)
-* **[Publicera](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
-* **[Hantera taggar](#manage-tags)**
-* **[Kopiera](/help/assets/manage-digital-assets.md)**
-* **[Flytta](/help/assets/manage-digital-assets.md)**
-* **[Byt namn](/help/assets/manage-digital-assets.md)**
-* **[Ta bort](#deleting-a-fragment)**
-* **[Ersätt](#find-and-replace)**
-
->[!NOTE]
->
->Använd **Öppna** för att öppna det markerade fragmentet i *originalredigeraren*.
-
->[!NOTE]
->
->Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn och Kopiera utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via användargränssnittet för AEM Async Jobs.
-
-### Information om dina innehållsfragment {#information-content-fragments}
+## Information om dina innehållsfragment {#information-content-fragments}
 
 Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad information om dina innehållsfragment. Vissa objekt har också direkta länkar till ytterligare åtgärder och/eller information:
 
@@ -214,6 +147,53 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
      ![Konsolen för innehållsfragment - dialogrutan Språk](assets/cf-managing-console-languages-dialog.png)
 
+## Åtgärder {#actions}
+
+I konsolen finns ett antal åtgärder som du kan använda, antingen direkt eller efter att du har valt ett visst fragment:
+
+* Olika åtgärder är direkt [tillgängliga från konsolen](#actions-unselected)
+* Du kan [markera ett eller flera innehållsfragment för att visa lämpliga åtgärder](#actions-selected-content-fragment)
+
+### Åtgärder (omarkerade) {#actions-unselected}
+
+Vissa åtgärder är tillgängliga från konsolen - utan att du behöver välja ett visst innehållsfragment:
+
+* **[Skapa](#creating-a-content-fragment)** ett nytt innehållsfragment
+* [Filtrera](#filtering-fragments) innehållsfragment enligt ett urval predikat och spara filtret för framtida bruk
+* [Sök](#searching-fragments) i innehållsfragment
+* [Anpassa tabellvyn för att visa markerade kolumner med information](#select-columns-console)
+* Använd **Öppna i Assets** för att öppna den aktuella platsen direkt i **Assets**-konsolen
+
+  >[!NOTE]
+  >
+  >**Assets**-konsolen används för att komma åt resurser, till exempel bilder, videor och så vidare.  Konsolen kan nås:
+  >
+  >* med länken **Öppna i Assets** (i konsolen för innehållsfragment)
+  >* direkt från den globala **navigeringsrutan**
+
+### Åtgärder för ett (markerat) innehållsfragment {#actions-selected-content-fragment}
+
+Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för det fragmentet. Du kan också markera flera fragment. Markeringen av funktionsmakron justeras därefter.
+
+![Konsolen för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
+
+* **[Öppna i ny redigerare](#editing-the-content-of-your-fragment)**
+* **[Öppna](/help/assets/content-fragments/content-fragments-variations.md)** (i originalredigeraren)
+* **[Publicera](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
+* **[Hantera taggar](#manage-tags)**
+* **[Kopiera](/help/assets/manage-digital-assets.md)**
+* **[Flytta](/help/assets/manage-digital-assets.md)**
+* **[Byt namn](/help/assets/manage-digital-assets.md)**
+* **[Ta bort](#deleting-a-fragment)**
+* **[Ersätt](#find-and-replace)**
+
+>[!NOTE]
+>
+>Använd **Öppna** för att öppna det markerade fragmentet i *originalredigeraren*.
+
+>[!NOTE]
+>
+>Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn och Kopiera utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via användargränssnittet för AEM Async Jobs.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -221,7 +201,7 @@ Innan du skapar ditt innehållsfragment måste den underliggande modellen för i
 
 ### Skapa en innehållsmodell {#creating-a-content-model}
 
-[Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) måste aktiveras och skapas innan du kan skapa innehållsfragment med strukturerat innehåll.
+[Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) måste aktiveras och skapas innan du kan skapa innehållsfragment med strukturerat innehåll.
 
 ### Skapa ett innehållsfragment {#creating-a-content-fragment}
 
@@ -248,7 +228,7 @@ Så här skapar du ett innehållsfragment:
 
 ## Status för innehållsfragment {#statuses-content-fragments}
 
-Under dess existens kan ett innehållsfragment ha flera statusvärden, vilket visas i [konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) och [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md):
+Under dess existens kan ett innehållsfragment ha flera statusvärden, vilket visas i [konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) och [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md):
 
 * **Nytt** (grått)
 Ett nytt innehållsfragment har skapats, men har inget innehåll som aldrig har redigerats, eller öppnats, i redigeraren för innehållsfragment.
@@ -319,7 +299,7 @@ Du kan publicera dina innehållsfragment till:
 
 >[!CAUTION]
 >
->Om fragmentet är baserat på en modell bör du kontrollera att modellen [har publicerats](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#publishing-a-content-fragment-model).
+>Om fragmentet är baserat på en modell bör du kontrollera att modellen [har publicerats](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#publishing-a-content-fragment-model).
 >
 >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
@@ -382,8 +362,6 @@ När dialogrutan öppnas kan du välja rätt tjänst:
 
 ## Sök och ersätt {#find-and-replace}
 
-<!-- CQDOC-21349: screenshot -->
-
 Åtgärden **Ersätt** är tillgänglig (i det övre verktygsfältet) för att söka efter och ersätta angiven text i de valda innehållsfragmenten.
 
 ![Sök och ersätt](assets/cf-managing-find-replace.png)
@@ -395,8 +373,6 @@ Innan du ersätter en produkt kontrolleras valideringskriterierna och du informe
 >Åtgärden Sök och ersätt kan bara utföras på högst 20 markerade innehållsfragment (i taget).
 >
 >Om du väljer fler än 20 innehållsfragment visas meddelandet **Det går inte att söka efter och ersätta**.
-
-<!-- CQDOC-21349: screenshot -->
 
 ![Bekräfta ersättning](assets/cf-managing-confirm-replace.png)
 
@@ -464,8 +440,6 @@ På panelen Filter finns:
 
 När du har valt alternativet **Filtrera efter** visas alternativen (under sökrutan). De kan avmarkeras därifrån. Till exempel:
 
-<!-- CQDOC-21349: screenshot -->
-
 ![Konsolen för innehållsfragment - filtrering](assets/cf-managing-console-filter.png)
 
 ### Snabb filtrering {#fast-filtering}
@@ -488,13 +462,9 @@ När du har valt det här alternativet visas det som ett filterpredikat och list
 
 I sökrutan går det att söka i heltext. Ange dina söktermer i sökrutan:
 
-<!-- CQDOC-21349: screenshot -->
-
 ![Konsolen för innehållsfragment - söker](assets/cf-managing-console-search-specification.png)
 
 Ger de valda resultaten:
-
-<!-- CQDOC-21349: screenshot -->
 
 ![Konsolen för innehållsfragment - sökresultat](assets/cf-managing-console-search-results.png)
 

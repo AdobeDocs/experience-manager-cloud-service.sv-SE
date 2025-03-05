@@ -1,10 +1,10 @@
 ---
 title: Skapa modeller för innehållsfragment - Headless-konfiguration
-description: Definiera strukturen för det innehåll du ska skapa och tjäna med AEM headless-funktioner genom att använda Content Fragment-modeller.
+description: Definiera strukturen för det innehåll du ska skapa och tjäna med AEM headless-funktioner genom att använda Content Fragment Models.
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: b76898409291fef85733e75405e65152424e2d41
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Skapa modeller för innehållsfragment - Headless-konfiguration {#creating-content-fragment-models}
 
-Definiera strukturen för det innehåll du ska skapa och tjäna med AEM headless-funktioner genom att använda Content Fragment-modeller.
+Definiera strukturen för det innehåll du ska skapa och tjäna med AEM headless-funktioner genom att använda Content Fragment Models.
 
 ## Vad är Content Fragment Models? {#what-are-content-fragment-models}
 
@@ -71,4 +71,4 @@ Nu när du har definierat strukturerna för dina innehållsfragment genom att sk
 
 >[!TIP]
 >
->Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md).
+>Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md).

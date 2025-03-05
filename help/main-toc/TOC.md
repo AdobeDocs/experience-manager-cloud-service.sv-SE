@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 3f656e592a4a7a46a1f868f8400f22fb47bcd160
+source-git-commit: 3789904b4aa1ffa4a039e6b84af64f03f06a3206
 workflow-type: tm+mt
-source-wordcount: '6211'
+source-wordcount: '6216'
 ht-degree: 2%
 
 ---
@@ -419,7 +419,8 @@ ht-degree: 2%
          + [Översikt och begrepp](/help/sites-cloud/administering/content-fragments/overview.md)
          + [Headless Delivery with GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md)
          + [Inställningar för innehållsfragment](/help/sites-cloud/administering/content-fragments/setup.md)
-         + [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+         + [Hantera modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
+         + [Definiera modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
          + [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md)
          + [Skapa fragmentinnehåll](/help/sites-cloud/administering/content-fragments/authoring.md)
          + [Markering](/help/sites-cloud/administering/content-fragments/markdown.md)

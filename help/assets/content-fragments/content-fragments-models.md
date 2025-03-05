@@ -5,9 +5,9 @@ exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
 role: User, Admin, Architect
 solution: Experience Manager Sites
-source-git-commit: 883eadc8ce2c84eba526b081ef90c678845989aa
+source-git-commit: 00b4fa64a2f5d7ddf7ea7af7350374a1f1bcb768
 workflow-type: tm+mt
-source-wordcount: '3120'
+source-wordcount: '3175'
 ht-degree: 2%
 
 ---
@@ -22,6 +22,12 @@ Så här använder du modeller för innehållsfragment:
 1. [Skapa](#creating-a-content-fragment-model) och [konfigurera](#defining-your-content-fragment-model), dina modeller för innehållsfragment
 1. [Aktivera dina modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment
 1. [Tillåt dina modeller för innehållsfragment i de nödvändiga Assets-mapparna](#allowing-content-fragment-models-assets-folder) genom att konfigurera **Profiler**.
+
+>[!NOTE]
+>
+>Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
+>
+>Innehållsfragment och modeller för innehållsfragment hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)** , även om innehållsfragment fortfarande kan hanteras från konsolen **Assets** och modeller för innehållsfragment från konsolen **Verktyg** . I det här avsnittet beskrivs hantering från konsolerna **Assets** och **Verktyg** .
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 

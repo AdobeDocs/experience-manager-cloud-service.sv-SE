@@ -4,7 +4,7 @@ description: Förstå Adobe Experience Manager (AEM)-konfigurationer och hur de 
 exl-id: 0ade04df-03a9-4976-a4b7-c01b4748474d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 46b0af152d5f297419e7d1fa372975aded803bc7
 workflow-type: tm+mt
 source-wordcount: '1482'
 ht-degree: 0%
@@ -24,19 +24,19 @@ En konfiguration kan övervägas från två olika vypunkter.
 
 Sammanfattningsvis: ur administratörens synvinkel är konfigurationer hur du skapar arbetsytor för att hantera inställningar i AEM, medan utvecklaren bör förstå hur AEM använder och hanterar dessa konfigurationer i databasen.
 
-Oavsett perspektiv har konfigurationerna två huvudsyften AEM:
+Oavsett perspektiv har konfigurationerna två huvudsyften i AEM:
 
 * Konfigurationer möjliggör vissa funktioner för vissa användargrupper.
 * Konfigurationer definierar åtkomsträttigheter för dessa funktioner.
 
 ## Konfigurationer som administratör {#configurations-administrator}
 
-AEM administratör och författare kan betrakta konfigurationer som arbetsytor. De här arbetsytorna kan användas för att samla in grupper med inställningar och tillhörande innehåll för organisatoriska syften genom att implementera åtkomsträttigheter för dessa funktioner.
+AEM-administratören och författarna kan betrakta konfigurationer som arbetsytor. De här arbetsytorna kan användas för att samla in grupper med inställningar och tillhörande innehåll för organisatoriska syften genom att implementera åtkomsträttigheter för dessa funktioner.
 
 Du kan skapa konfigurationer för många olika funktioner i AEM.
 
 * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 * [Redigerbara mallar](/help/sites-cloud/authoring/page-editor/templates.md)
 * olika molnkonfigurationer
 
@@ -68,7 +68,7 @@ Med Configuration Browser kan en administratör enkelt skapa, hantera och konfig
 
 #### Skapa en konfiguration {#creating-a-configuration}
 
-Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Browser.
+Det är enkelt att skapa en konfiguration i AEM med Configuration Browser.
 
 1. Logga in på AEM as a Cloud Service och välj **Verktyg** > **Allmänt** > **Konfigurationsläsaren** på huvudmenyn.
 1. Välj **Skapa**.
@@ -82,7 +82,7 @@ Det är enkelt att skapa en konfiguration i AEM med hjälp av Configuration Brow
       * Den kan vid behov justeras.
 1. Kontrollera vilken typ av konfigurationer du vill tillåta.
    * [Kontextnavsegment](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md)
-   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
    * [Redigerbara mallar](/help/sites-cloud/authoring/page-editor/templates.md)
    * olika molnkonfigurationer
 1. Välj **Skapa**.
@@ -191,8 +191,8 @@ AEM har en arv- och reservmekanism i följande prioritetsordning för att stödj
    * Korrigerat med programdistribution
    * Skrivskyddad vid körning
 1. `/libs`
-   * AEM
-   * Endast ändringsbar av Adobe, projektåtkomst tillåts inte
+   * Standardinställningar för AEM
+   * Endast ändringsbart av Adobe, projektåtkomst tillåts inte
    * Korrigerat med programdistribution
    * Skrivskyddad vid körning
 

@@ -1,11 +1,11 @@
 ---
 title: Komma igång med AEM Headless as a Cloud Service
-description: I den här delen av AEM Headless Developer Journey kan du läsa om AEM Headless-krav.
+description: I den här delen av AEM Headless Developer Journey kan du lära dig mer om AEM Headless-kraven.
 exl-id: 9661e17b-fa9f-4689-900c-412b068e942c
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 46b0af152d5f297419e7d1fa372975aded803bc7
 workflow-type: tm+mt
 source-wordcount: '3068'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Komma igång med AEM Headless as a Cloud Service {#getting-started}
 
-I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig mer om vad som krävs för att få ditt eget projekt att börja med AEM Headless.
+I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära dig mer om vad som krävs för att du ska kunna komma igång med ditt eget projekt med AEM Headless.
 
 ## Story hittills {#story-so-far}
 
-I det tidigare dokumentet om den AEM resan utan headless kan du [Lär dig mer om CMS Headless Development](learn-about.md). Du har lärt dig den grundläggande teorin om vad ett headless CMS är och du bör nu:
+I det tidigare dokumentet om AEM resa utan rubriker [Lär dig mer om CMS Headless Development](learn-about.md) lärde du dig grunderna i vad ett headless CMS är och du bör nu:
 
 * Förstå de grundläggande begreppen och terminologin för leverans av headless-innehåll
 * Förstå varför och när headless krävs
 * Lär dig på en hög nivå hur headless-koncept används och hur de fungerar ihop
 
-Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du kan använda AEM för att implementera en headless-lösning.
+Den här artikeln bygger vidare på dessa grunder så att du förstår hur du kan använda AEM för att implementera en headless-lösning.
 
 ## Syfte {#objective}
 
@@ -32,12 +32,12 @@ Det här dokumentet hjälper dig att förstå AEM Headless i ditt projekt. När 
 
 * Förstå grunderna i AEM headless-funktioner.
 * Lär dig grunderna för AEM headless-funktioner.
-* Var uppmärksam på AEM integrationsnivåer utan motstycke.
+* Var medveten om AEM avancerade integrationsnivåer.
 * Du kan definiera projektet utifrån dess omfång.
 
 ## AEM Basics {#aem-basics}
 
-Innan du kan definiera ett headless-projekt i AEM är det viktigt att du förstår några grundläggande AEM.
+Innan du kan definiera ett headless-projekt i AEM är det viktigt att du förstår några grundläggande AEM-koncept.
 
 ### Författarinstans {#author}
 
@@ -45,31 +45,31 @@ AEM består av en författarinstans och en [publiceringsinstans](#publish) som f
 
 Innehållet börjar på författarinstansen. Här skapar innehållsförfattare sitt innehåll. I författarmiljön finns olika verktyg som författare kan använda för att skapa, ordna och återanvända sitt innehåll.
 
-### Publish Instance {#publish}
+### Publiceringsinstans {#publish}
 
 När innehållet har skapats i författarinstansen måste det publiceras för att vara tillgängligt för andra tjänster att använda. En publiceringsinstans innehåller allt innehåll som har publicerats.
 
 ### Förhandsgranskningstjänst {#preview}
 
-Innan du publicerar till Publish-instansen kan du även publicera ditt innehållsfragment till **förhandsgranskningstjänsten** för testning och granskning. Detta görs från konsolen **Innehållsfragment**.
+Innan du publicerar till publiceringsinstansen kan du även publicera ditt innehållsfragment till **förhandsgranskningstjänsten** för testning och granskning. Detta görs från konsolen **Innehållsfragment**.
 
 ### Replikering {#replication}
 
-Replikering innebär att överföra innehåll från författarinstansen till publiceringsinstansen. Detta görs automatiskt av AEM när en författare eller annan användare med lämplig behörighet publicerar innehåll.
+Replikering innebär att överföra innehåll från författarinstansen till publiceringsinstansen. Detta görs automatiskt av AEM när en författare eller annan användare med rätt behörighet publicerar innehåll.
 
-### Sammanfattning av AEM {#aem-basics-summary}
+### AEM Basics Summary {#aem-basics-summary}
 
-På den enklaste nivån krävs följande steg för att skapa digitala AEM:
+På den enklaste nivån krävs följande steg för att skapa digitala upplevelser i AEM:
 
 1. Dina innehållsförfattare skapar ditt headless-innehåll i författarinstansen.
 1. När innehållet är klart replikeras det till publiceringsinstansen.
 1. API:er kan sedan anropas för att hämta det här innehållet.
 
-AEM Headless bygger vidare på denna tekniska grund genom att erbjuda kraftfulla verktyg för att hantera headless-innehåll, som [beskrivs i nästa avsnitt](#aem-headless-basics).
+AEM Headless bygger vidare på denna tekniska grund genom kraftfulla verktyg för att hantera headless-innehåll, som [beskrivs i nästa avsnitt](#aem-headless-basics).
 
-## AEM utan rubriker - Grunderna {#aem-headless-basics}
+## Grundläggande om AEM Headless {#aem-headless-basics}
 
-De headless-funktionerna i AEM bygger på några viktiga funktioner. Dessa förklaras i detalj i senare delar av resan. Det är nu bara viktigt att veta vad de gör och vad de kallas.
+AEM headless-funktioner bygger på några viktiga funktioner. Dessa förklaras i detalj i senare delar av resan. Det är nu bara viktigt att veta vad de gör och vad de kallas.
 
 ### Modeller för innehållsfragment {#content-fragment-models}
 
@@ -83,62 +83,62 @@ Innehållsfragment innehåller strukturerat innehåll och kan levereras i JSON-f
 
 ### API:er för GraphQL och REST {#apis}
 
-AEM erbjuder två kraftfulla API:er för att ändra ert innehåll utan problem.
+AEM erbjuder två robusta API:er för att ändra ert innehåll utan problem.
 
 * Med GraphQL API kan du skapa förfrågningar om åtkomst till och leverans av innehållsfragment.
 * Med Assets REST API kan du skapa och ändra innehållsfragment (och andra resurser).
 
-Du lär dig mer om dessa API:er och hur du kan använda dem i en senare del av den AEM resan. Du kan också läsa avsnittet [ytterligare resurser](#additional-resources) nedan om du vill ha mer information.
+Du lär dig mer om dessa API:er och hur du använder dem i en senare del av AEM resa utan att behöva ta hjälp av resurser. Du kan också läsa avsnittet [ytterligare resurser](#additional-resources) nedan om du vill ha mer information.
 
 ## Headless Integration Levels {#integration-levels}
 
-AEM klarar både den fullständiga headless-modellen och den traditionella fullstacksmodellen eller headful-modellen i en CMS. AEM erbjuder inte bara dessa två exklusiva alternativ, utan även möjligheten att stödja hybridmodeller som kombinerar fördelarna med båda, vilket ger unik flexibilitet för ditt headless-projekt.
+AEM har stöd för både den fullständiga headless-modellen och den traditionella fullstacksmodellen eller headful-modellen i en CMS. AEM erbjuder dock inte bara dessa två exklusiva alternativ, utan även möjligheten att stödja hybridmodeller som kombinerar fördelarna med båda, vilket ger unik flexibilitet för ditt headless-projekt.
 
-För att du ska få en förståelse för headless-koncept fokuserar den här AEM Headless Developer Journey på den rena headless-modellen så att du kommer igång så fort som möjligt utan att behöva skriva någon kod i AEM.
+För att du ska förstå headless-koncept fokuserar AEM Headless Developer Journey på den rena headless-modellen så att du kommer igång så fort som möjligt utan kodning i AEM.
 
-Du bör dock vara medveten om de extra hybridmöjligheterna som är öppna för dig när du väl förstår AEM headless-funktioner. Dessa fall beskrivs nedan för att du ska vara medveten om dem. I slutet av resan introduceras dessa koncept i detalj om en sådan flexibilitet krävs för ditt projekt.
+Du bör dock vara medveten om de extra hybridmöjligheterna som är öppna för dig när du väl har förstått AEM headless-funktioner. Dessa fall beskrivs nedan för att du ska vara medveten om dem. I slutet av resan introduceras dessa koncept i detalj om en sådan flexibilitet krävs för ditt projekt.
 
-### Du har redan en extern förbrukning av headless-innehåll som ett program med en enda sida (SPA). {#already-have-a-spa}
+### Du har redan en extern förbrukning av headless-innehåll som ett SPA-program (Single page application). {#already-have-a-spa}
 
 Låt oss anta att ditt grundläggande krav är åtminstone att leverera innehåll från AEM till en befintlig, extern tjänst.
 
 #### Nivå 1: Integrering av innehållsfragment - traditionell Headless-modell {#level-1}
 
-Den här integreringsnivån är den traditionella headless-modellen och gör det möjligt för innehållsförfattare att skapa innehåll i AEM och leverera det helhjärtat till ett valfritt antal externa tjänster med GraphQL eller redigera dem från externa tjänster med Assets API. Ingen kodning krävs i AEM.
+Den här integreringsnivån är den traditionella headless-modellen, som gör att skribenterna kan skapa innehåll i AEM och leverera det utan problem till valfritt antal externa tjänster med GraphQL eller redigera det från externa tjänster med Assets API. Ingen kodning krävs i AEM.
 
-I den här modellen används AEM bara för att skapa och leverera innehåll med AEM innehållsfragment. Återgivning och interaktion med innehållet delegeras till det uppladdande externa programmet, ofta ett ensidigt program (SPA).
+I den här modellen används AEM bara för att skapa och leverera innehåll med AEM Content Fragments. Återgivning och interaktion med innehållet delegeras till det uppladdande externa programmet, ofta ett SPA-program (single page application).
 
 #### Nivå 2: Bädda in SPA i AEM - hybridmodell {#level-2}
 
 Den här integreringsnivån bygger på den första nivån, men tillåter även att det externa programmet (SPA) bäddas in i AEM så att innehållsförfattarna kan visa innehållet i det externa programmet i AEM. Programmet har även stöd för begränsad redigering av det externa programmet i AEM.
 
-Den här nivån har fördelen att innehållsförfattare kan skapa innehåll på ett flexibelt sätt i AEM med sitt innehåll som presenteras i sitt sammanhang med en inbäddad extern SPA, samtidigt som innehållet levereras utan problem.
+Denna nivå har fördelen att man på ett flexibelt sätt kan skapa innehåll i AEM med sitt innehåll presenterat i sitt sammanhang med en inbyggd extern SPA, samtidigt som innehållet fortfarande levereras utan problem.
 
 #### Nivå 3: Bädda in och aktivera SPA fullständigt i AEM - hybridmodell {#level-3}
 
-Denna nivå av integration bygger på nivå två genom att göra det möjligt att redigera det mesta innehållet i det externa SPA i AEM.
+Denna nivå av integration bygger på nivå två genom att göra det möjligt att redigera det mesta av det externa SPA-innehållet inom AEM.
 
-### Du har ännu inte någon extern konsument av det Headless-innehåll som ett program med en enda sida (SPA). {#do-not-have-a-spa}
+### Du har ännu inte någon extern konsument av det Headless-innehåll som ett SPA-program (single page application). {#do-not-have-a-spa}
 
-Om målet är att skapa en SPA som konsumerar innehåll från AEM utan krångel kan du använda funktioner som Content Fragments för att hantera ditt headless-innehåll och även skapa en SPA med AEM SPA Editor-ramverk.
+Om målet är att skapa en SPA som konsumerar innehåll i bakgrunden från AEM kan du använda funktioner som Content Fragments för att hantera ditt headless-innehåll och även skapa en SPA med AEM SPA Editor-ramverk.
 
-Med SPA Editor konsumerar SPA inte bara innehåll från AEM, utan kan även redigeras i AEM av innehållsförfattarna, vilket ger dig både flexibiliteten med headless-leverans och kontextredigering inom AEM.
+Med SPA Editor konsumerar SPA inte bara innehåll från AEM, utan kan även redigeras fullt ut i AEM av innehållsförfattarna, vilket ger dig både flexibiliteten med headlessleverans och kontextredigering i AEM.
 
 ## Krav och krav {#requirements-prerequisites}
 
-Det finns flera krav innan du börjar ditt AEM.
+Det finns flera krav innan du börjar ditt headless AEM-projekt.
 
 ### Kunskap {#knowledge}
 
 * GraphQL
 * Utvecklingserfarenhet som skapar SPA med React- eller Angular-ramverk
-* Grundläggande AEM att skapa innehållsfragment och använda redigeraren
+* AEM grundläggande kunskaper i att skapa innehållsfragment och använda redigeraren
 
 ### verktyg {#tools}
 
 * Sandlådeåtkomst för testning av driftsättning av ditt projekt
 * Lokal utvecklingsinstans för datamodellering och -testning
-* Befintliga externa SPA eller andra kunder av ditt AEM innehåll utan huvud
+* Befintlig extern SPA eller annan konsument av ditt headless AEM-innehåll
 
 ## Definiera ditt projekt {#defining-your-project}
 
@@ -148,11 +148,11 @@ För varje framgångsrikt projekt är det viktigt att tydligt definiera inte bar
 
 Det är viktigt att ha ett tydligt definierat utrymme för projektet. Med Omfång får du information om acceptanskriterier och du kan definiera det du gjort.
 
-Den första frågan du måste ställa är&quot;Vad försöker jag uppnå med AEM Headless?&quot; Svaret bör i allmänhet vara att du har eller kommer att ha i framtiden ett upplevelseprogram som du har skapat med dina egna utvecklingsverktyg, inte med AEM. Det här upplevelseprogrammet kan vara en mobilapp, en webbplats eller någon annan kundupplevelseapplikation som vänder sig till slutanvändaren. Målet med AEM Headless är att mata in ditt upplevelseprogram med innehåll som skapas, lagras och hanteras i AEM med avancerade API:er som anropar AEM Headless för att hämta innehåll eller till och med fullständigt CRUD-innehåll direkt från ditt upplevelseprogram. Om detta inte är vad du vill göra, vill du antagligen [gå tillbaka till AEM ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) och hitta det avsnitt som passar bättre för det du vill uppnå.
+Den första frågan du måste ställa är&quot;Vad försöker jag uppnå med AEM Headless?&quot; Svaret bör i allmänhet vara att du har eller kommer att ha i framtiden ett upplevelseprogram som du har skapat med dina egna utvecklingsverktyg, inte med AEM. Det här upplevelseprogrammet kan vara en mobilapp, en webbplats eller någon annan kundupplevelseapplikation som vänder sig till slutanvändaren. Målet med AEM Headless är att förse ditt upplevelseprogram med innehåll som skapas, lagras och hanteras i AEM med toppmoderna API:er som anropar AEM Headless för att hämta innehåll eller till och med fullständigt CRUD-innehåll direkt från ditt upplevelseprogram. Om detta inte är vad du vill göra, vill du antagligen [gå tillbaka till AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) och hitta det avsnitt som passar bättre för det du vill uppnå.
 
 ### Roller och ansvarsområden {#roles-responsibilities}
 
-Rollerna för enskilda projekt varierar, men viktiga är de som ska beaktas i innehållet AEM headless Development:
+Rollerna för enskilda projekt varierar, men det är viktigt att tänka på följande när det gäller innehållet i AEM headless Development:
 
 * [Administratör](#administrator)
 * [Innehållsförfattare](#content-author)
@@ -161,15 +161,15 @@ Rollerna för enskilda projekt varierar, men viktiga är de som ska beaktas i in
 
 #### Administratör {#administrator}
 
-Administratören ansvarar för systemets grundkonfiguration och konfiguration. Administratören kan t.ex. konfigurera din organisation i användarhanteringssystemet Adobe, som det hänvisas till Identity Management System (IMS). Administratören är den första användaren i organisationen som får en e-postinbjudan från Adobe när din organisation har skapats av Adobe i IMS. Administratören kan logga in på IMS och lägga till användare från andra profiler.
+Administratören ansvarar för systemets grundkonfiguration och konfiguration. Administratören kan t.ex. konfigurera din organisation i Adobe användarhanteringssystem, som det hänvisas till Identity Management System (IMS). Administratören är den första användaren i organisationen som får en e-postinbjudan från Adobe när din organisation har skapats av Adobe i IMS. Administratören kan logga in på IMS och lägga till användare från andra profiler.
 
-När användarna har konfigurerats av administratören får de behörighet att komma åt alla AEM resurser för att utföra sitt arbete som medarbetare på att leverera upplevelseprogrammet med AEM Headless.
+När användarna har konfigurerats av administratören får de behörighet att få tillgång till alla AEM-resurser för att kunna utföra sitt arbete som medarbetare på att leverera upplevelseprogrammet med AEM Headless.
 
 Administratören ska vara den användare som konfigurerar AEM och förbereder körningsmiljön så att [innehållsförfattare](#content-author) kan skapa och uppdatera innehåll, och [utvecklare](#developer) kan använda API:er som hämtar eller ändrar innehåll för sina upplevelseprogram.
 
 #### Innehållsförfattare {#content-author}
 
-Innehållsförfattare skapar och hanterar innehåll som levereras utan problem av AEM. Innehållsförfattare använder AEM funktioner som Content Fragment Editor och olika konsoler för att hantera sitt innehåll.
+Innehållsförfattare skapar och hanterar det material som levereras headless av AEM. Innehållsförfattare använder AEM-funktioner som redigeraren för innehållsfragment och olika konsoler för att hantera sitt innehåll.
 
 Innehållsförfattare bör ha följande i åtanke:
 
@@ -182,11 +182,11 @@ Skapa en plan för vilken innehållsöversättning du behöver.
 * Behöver ni olika språk eller språk för att anpassa er till regionala särdrag?
 * Behöver multimediematerial som bilder och videor vara olika för olika språkområden?
 
-Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden användas för att automatisera den här processen?
+Var tydlig med arbetsflödet för innehållsuppdatering. Vilken godkännandeprocess måste systemet stödja? Kan AEM arbetsflöden användas för att automatisera denna process?
 
 Din [innehållshierarki](#content-hierarchy) kan användas för att göra översättningen enklare.
 
-I avsnittet [ytterligare resurser](#additional-resources) finns ytterligare dokumentation om AEM arbetsflöden och översättningsverktyg, inklusive länkar till den AEM Headless Translation Journey.
+I avsnittet [ytterligare resurser](#additional-resources) finns mer information om AEM-arbetsflöden och översättningsverktyg, inklusive länkar till AEM Headless Translation Journey.
 
 ##### Utnyttja innehållshierarkin {#content-hierarchy}
 
@@ -195,7 +195,7 @@ Mapphierarkin kan hantera två viktiga problem när det gäller innehållshanter
 * [Översättning](#translation) - AEM hanterar översättning av innehåll genom att underhålla kopior av innehåll i språkspecifika mappar.
 * Organisation - Mappar används för att definiera en innehållshierarki som krävs för översättningsbehov och för att logiskt hantera innehållsfragment.
 
-AEM ger en flexibel innehållsstruktur och en hierarki kan vara godtyckligt stor. Det är dock viktigt att komma ihåg att ändringar i mappstrukturen kan få oönskade konsekvenser för befintliga frågor som [är beroende av innehållssökvägen](#developer). Därför kan en väldefinierad hierarki som är tydligt angiven i förväg vara till hjälp för innehållsförfattarna.
+AEM möjliggör en flexibel innehållsstruktur och en hierarki kan vara godtyckligt stor. Det är dock viktigt att komma ihåg att ändringar i mappstrukturen kan få oönskade konsekvenser för befintliga frågor som [är beroende av innehållssökvägen](#developer). Därför kan en väldefinierad hierarki som är tydligt angiven i förväg vara till hjälp för innehållsförfattarna.
 
 Mappar kan även begränsas till att endast tillåta vissa typer av innehåll (baserat på modeller för innehållsfragment). Vi rekommenderar att du alltid uttryckligen anger vilka modeller som tillåts för alla mappar i hierarkin. Ange tillåtet innehåll för en viss mapp:
 
@@ -211,7 +211,7 @@ Namn på innehållsfragment måste vara beskrivande för innehållsförfattare. 
 * Felaktigt namn: `cta_btn_1`
 * Bra namn: `Call To Action Button`
 
-I avsnittet [ytterligare resurser](#additional-resources) finns mer information om namnkonventioner AEM sidor.
+Mer information om namngivningskonventioner för AEM-sidor finns i avsnittet [ytterligare resurser](#additional-resources).
 
 ##### Öka inte innehållets kapsling {#content-nesting}
 
@@ -229,19 +229,19 @@ Eftersom innehållsförfattarna interagerar med modellerna kontinuerligt när de
 
 #### Developer {#developer}
 
-Utvecklarna ansvarar för att sammanfoga det material som skapas direkt AEM till konsumenten, som ofta kan vara ett ensidigt program (SPA), ett progressivt webbprogram (PWA), en webbshop eller en annan tjänst som inte är AEM.
+Utvecklarna ansvarar för att sammanfoga det material som skapas direkt i AEM med konsumenten, som ofta kan vara ett SPA-program (single page application), progressiv webbapp (PWA), webshop eller någon annan tjänst utanför AEM.
 
-GraphQL fungerar som ett&quot;glimt&quot; mellan AEM och konsumenterna av headless-innehåll. GraphQL är det språk som AEM efter det nödvändiga innehållet.
+GraphQL är&quot;limmet&quot; mellan AEM och konsumenterna av headless-innehåll. GraphQL är det språk som används för att fråga AEM om nödvändigt innehåll.
 
 Utvecklare bör tänka på några grundläggande rekommendationer när de planerar sina frågor:
 
 * Frågor ska inte förlita sig på en fast sökväg (`ByPath`) för att hämta innehållsfragment.
    * [Innehållsförfattare har fullständig kontroll över innehållets fragmenthierarki](#content-hierarchy) och kan göra ändringar som skulle bryta en sådan fråga.
    * Frågor ska i stället välja om innehållsfragmentmodellreferenser med dynamiska frågeparametrar ska filtrera resultaten för att generera önskad nyttolast.
-* Använd alltid beständiga frågor i AEM för bästa frågeprestanda. Dessa diskuteras senare under resan.
+* Använd alltid beständiga frågor i AEM för bästa resultat. Dessa diskuteras senare under resan.
 * GraphQL är deklarativt och följer motto&quot;Fråga efter exakt det du behöver och få exakt det&quot;. Det innebär att du alltid undviker `select *`-typfrågor som du kan skapa i en relationsdatabas när du skapar GraphQL-frågor.
 
-För en [vanlig headless-implementering med AEM](#level-1) kräver utvecklaren ingen kodkunskap om AEM.
+För en [vanlig headless-implementering med AEM](#level-1) behöver utvecklaren ingen kodkunskap om AEM.
 
 ### Prestandakrav {#performance-requirements}
 
@@ -269,33 +269,33 @@ Olika delar av upplevelsen har ofta olika frekvens för innehållsuppdateringar.
 
 ## What&#39;s Next {#what-is-next}
 
-Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
+Nu när du är klar med den här delen av AEM Headless Developer Journey bör du:
 
 * Förstå grunderna i AEM headless-funktioner.
 * Lär dig grunderna för AEM headless-funktioner.
-* Var uppmärksam på AEM integrationsnivåer utan motstycke.
+* Var medveten om AEM avancerade integrationsnivåer.
 * Du kan definiera projektet utifrån dess omfång.
 
-Du bör fortsätta din AEM resa utan att behöva lämna synpunkter nästa gång du granskar dokumentet [Sökväg till din första upplevelse med AEM Headless](path-to-first-experience.md) där du får lära dig hur du konfigurerar nödvändiga verktyg och hur du börjar fundera på att modellera data i AEM.
+Du bör fortsätta din resa utan AEM genom att nästa gång granska dokumentet [Path to Your First Experience Using AEM Headless](path-to-first-experience.md) där du får lära dig hur du konfigurerar de verktyg som behövs och hur du börjar fundera på att modellera data i AEM.
 
 ## Ytterligare resurser {#additional-resources}
 
 Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentets [sökväg till din första upplevelse med AEM Headless](path-to-first-experience.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
 
-* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger dig en bred förståelse för headless-teknik, hur AEM hanterar headless-innehåll och hur du kan översätta det.
+* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger dig en bred förståelse för headless-teknik, hur AEM fungerar som headless-innehåll och hur du kan översätta det.
 * [En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Förstå AEM as a Cloud Service struktur
 * En [introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd de här praktiska självstudiekurserna för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som är rätt för dig.
-* [Headless Content Management Using GraphQL APIs](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för en översikt över det GraphQL API som implementerats i AEM. Autentisering via AdobeID krävs.
-* [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram som AEM GraphQL API:er.
+* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd de här praktiska självstudiekurserna för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja det som passar dig bäst.
+* [Headless Content Management Using GraphQL API:er](https://experienceleague.adobe.com/?Solution=Experience+Manager&amp;Solution=Experience+Manager+Sites&amp;Solution=Experience+Manager+Forms&amp;Solution=Experience+Manager+Screens&amp;launch=ExperienceManager-D-1-2020.1.headless#courses) - Följ den här kursen för en översikt över GraphQL API:t som implementerats i AEM. Autentisering via AdobeID krävs.
+* [AEM Guides WKND - GraphQL](https://github.com/adobe/aem-guides-wknd-graphql) - Det här GitHub-projektet innehåller exempelprogram som framhäver AEM GraphQL API:er.
 * [Authoring Concepts](/help/sites-cloud/authoring/author-publish.md) - Teknisk dokumentation för redigeringsmiljön i AEM inklusive information om konfiguration för författarpublicering
 * [Publicera sidor](/help/sites-cloud/authoring/sites-console/publishing-pages.md) - teknisk dokumentation för publicering av innehåll på AEM
-* [Namngivningskonventioner](/help/implementing/developing/introduction/naming-conventions.md) - Teknisk dokumentation om namngivningsbegränsningar i AEM
+* [Namngivningskonventioner](/help/implementing/developing/introduction/naming-conventions.md) - Teknisk dokumentation om sidnamnsbegränsningar i AEM
 * [Multi Site Manager och Translation](/help/sites-cloud/administering/msm-and-translation.md) - teknisk dokumentation om AEM kraftfulla översättningsfunktioner
-* [AEM arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md) - teknisk dokumentation om hur du automatiserar arbetsflöden i AEM
+* [AEM-arbetsflöden](/help/sites-cloud/authoring/workflows/overview.md) - teknisk dokumentation om hur du automatiserar arbetsflöden i AEM
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) - teknisk dokumentation för innehållsfragment.
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) - teknisk dokumentation för modeller för innehållsfragment.
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) - teknisk dokumentation för modeller för innehållsfragment.
 * [GraphQL tekniska dokumentation](https://graphql.org) - GraphQL-definitionen (extern länk)
 * [GraphQL API](/help/headless/graphql-api/content-fragments.md) - teknisk dokumentation som förklarar hur du skapar begäranden om åtkomst och leverans av innehållsfragment
 * [Assets REST API](/help/assets/content-fragments/assets-api-content-fragments.md) - Teknisk dokumentation som förklarar hur du skapar och ändrar innehållsfragment (och andra resurser)

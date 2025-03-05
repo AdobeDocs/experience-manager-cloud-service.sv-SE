@@ -5,7 +5,7 @@ exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
 solution: Experience Manager Sites
 feature: Authoring, Content Fragments
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 46b0af152d5f297419e7d1fa372975aded803bc7
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 # Innehållsfragment {#content-fragments}
 
-Innehållsfragment i Adobe Experience Manager (AEM)-as a Cloud Service [skapas och hanteras som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/overview.md), vilket gör att du kan skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) varianter. Du kan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
+Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service [skapas och hanteras som sidoberoende resurser](/help/sites-cloud/administering/content-fragments/overview.md), vilket gör att du kan skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) varianter. Du kan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
 >[!CAUTION]
 >
->Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och begrepp, tillsammans med information om hur du skapar och hanterar fragment och levererar strukturerade innehållsfragment till andra kanaler än AEM sidor.
+>Den här sidan måste läsas tillsammans med [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) (och relaterade sidor) eftersom den innehåller grundläggande terminologi och begrepp, tillsammans med information om hur du skapar och hanterar fragment och levererar strukturerade innehållsfragment till andra kanaler än AEM-sidor.
 
 >[!NOTE]
 >
 >Innehållsfragment är en **webbplatsfunktion**, men lagras som **Assets**.
 >
->De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **[Assets](/help/assets/content-fragments/content-fragments-managing.md)**.
+>De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **[Assets](/help/assets/content-fragments/content-fragments-managing.md)**.
 >
 >Det finns två redigerare för att skapa innehållsfragment:
 >
@@ -48,14 +48,14 @@ Innehållsfragmenten aktiverar:
 * **Creative Pro**
    * Spåra kreativa resurser via samlingar som är kopplade till innehållsfragment.
 * **Kopiera författare**
-   * Skriv i AEM innehållsfragmentredigerare.
+   * Skriv i AEM Content Frment Editor.
    * Kan skapa innehållsvariationer.
    * Kan associera relevant innehåll med innehållsfragmentet.
    * Kan använda versionshantering/arbetsflöde.
    * Kan dela innehållsfragment.
    * Kan hantera översättningar centralt.
 * **Producenter och reseansvariga**
-   * Välj bland fördefinierade fragment och variationer med AEM.
+   * Välj bland fördefinierade fragment och variationer med redigering i AEM.
    * Kan förlita sig på att fragment och tillhörande innehåll alltid är uppdaterade när kopieringsförfattare och kreatörer uppdaterar centralt hanterade fragment och resurser.
    * Kan lita på att tillhörande medieinnehåll kurateras för relevans.
    * Kan skapa tillfälliga innehållsvariationer direkt samtidigt som dessa variationer förblir centralt hanterade i fragmentet.
@@ -111,7 +111,7 @@ I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland a
 
 * **ID**
 
-   * **HTML ID**-attribut som ska användas för komponenten.
+   * **HTML ID**-attribut som ska tillämpas på komponenten.
 
 ### Snabb anslutning till Fragment Editor {#quick-connection-to-fragment-editor}
 

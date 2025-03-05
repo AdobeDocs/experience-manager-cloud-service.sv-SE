@@ -5,7 +5,7 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 39a85c865c6c23043d77f5756a71764dc83be534
+source-git-commit: 3789904b4aa1ffa4a039e6b84af64f03f06a3206
 workflow-type: tm+mt
 source-wordcount: '2847'
 ht-degree: 0%
@@ -50,7 +50,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
 * övre verktygsfältet: för nyckelinformation och åtgärder
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
-   * länkar till [Förhandsgranska (om URL-mönstret för standardförhandsvisning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#content-fragment-model-properties)
+   * länkar till [Förhandsgranska (om URL-mönstret för standardförhandsvisning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#model-properties)
    * [Publicera](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) åtgärder
    * ett alternativ för att visa alla **överordnade referenser** (länkikon)
    * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och den senast sparade informationen
@@ -508,7 +508,7 @@ Med redigeraren för innehållsfragment kan författare förhandsgranska sina re
 Om du vill använda den här funktionen måste du först:
 
 * Samarbeta med IT-avdelningen och skapa ett externt klientprogram som återger innehållsfragmentet genom att använda JSON-utdata.
-* När det externa klientprogrammet har konfigurerats måste URL-mönstret **Standardförhandsgranskning** definieras som en [egenskap för rätt innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties).
+* När det externa klientprogrammet har konfigurerats måste URL-mönstret **Standardförhandsgranskning** definieras som en [egenskap för rätt innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#model-properties).
 
 När URL:en har definierats är knappen **Förhandsgranska** aktiv. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
 

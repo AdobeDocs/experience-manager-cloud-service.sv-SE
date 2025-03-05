@@ -4,7 +4,7 @@ description: Komponenter kan anpassas för att generera JSON-export av deras inn
 exl-id: e9be5c0c-618e-4b56-a365-fcdd185ae808
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
 workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Först måste en segmentmodell definieras för komponenten.
 
 >[!NOTE]
 >
->Ett exempel på hur du använder delningsmodeller finns i artikeln [Developing Sling Model Exporters in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
+>Ett exempel på hur du använder segmentmodeller finns i artikeln [Developing Sling Model Exporters in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
 Implementeringsklassen för Sling-modellen måste kommenteras med följande:
 
@@ -79,6 +79,6 @@ Ett exempel finns i Sling Model-implementeringen av Image Core-komponenten och d
 ## Relaterad dokumentation {#related-documentation}
 
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
-* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och komponenten [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)

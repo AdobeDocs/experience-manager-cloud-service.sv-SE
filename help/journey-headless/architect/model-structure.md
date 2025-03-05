@@ -1,29 +1,29 @@
 ---
-title: Läs om hur du skapar modeller för innehållsfragment i AEM
-description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
+title: Läs om hur du skapar innehållsfragmentmodeller i AEM
+description: Lär dig mer om koncepten och mekanismerna i att modellera innehåll för din Headless CMS med Content Fragments Models.
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
 workflow-type: tm+mt
-source-wordcount: '686'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
 
-# Läs om hur du skapar modeller för innehållsfragment i AEM {#architect-headless-content-fragment-models}
+# Läs om hur du skapar innehållsfragmentmodeller i AEM {#architect-headless-content-fragment-models}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering för headless.
+I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
 
-Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
+Den här artikeln bygger vidare på detta så att du förstår hur du skapar egna Content Fragment Models för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: koncept och mekanismer för att modellera innehåll för det Headless CMS med hjälp av modeller för innehållsfragment.
+* **Mål**: koncept och mekanismer för att modellera innehåll för ditt Headless CMS med Content Fragments Models.
 
 <!-- which persona does this? -->
 <!-- and who allows the configuration on the folders? -->
@@ -117,21 +117,21 @@ Nu när du har lärt dig grunderna är nästa steg att börja skapa egna modelle
 
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 
-   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 
-      * [Definiera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#defining-your-content-fragment-model)
+      * [Definiera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 
-      * [Aktivera eller inaktivera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#enabling-disabling-a-content-fragment-model)
+      * [Aktivera eller inaktivera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#enabling-disabling-a-content-fragment-model)
 
-      * [Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
+      * [Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#allowing-content-fragment-models-assets-folder)
 
-      * [Ta bort en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#deleting-a-content-fragment-model)
+      * [Ta bort en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#deleting-a-content-fragment-model)
 
-      * [Publicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#publishing-a-content-fragment-model)
+      * [Publicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#publishing-a-content-fragment-model)
 
-      * [Avpublicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#unpublishing-a-content-fragment-model)
+      * [Avpublicera en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#unpublishing-a-content-fragment-model)
 
-      * [Låsta (publicerade) modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#locked-published-content-fragment-models)
+      * [Låsta modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#locked-content-fragment-models)
 
 * Komma igång-guider
 

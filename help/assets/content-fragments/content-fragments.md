@@ -1,20 +1,20 @@
 ---
 title: Arbeta med innehållsfragment (Assets - innehållsfragment)
-description: Lär dig hur du med Content Fragments in Adobe Experience Manager (AEM) as a Cloud Service kan utforma, skapa, strukturera och använda innehåll, idealiskt för sidredigering och rubrikfri leverans.
+description: Läs om hur du med Content Fragments i Adobe Experience Manager (AEM) as a Cloud Service kan utforma, skapa, strukturera och använda innehåll, idealiskt för sidredigering och headless-leverans.
 exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 86a2c5f35d82010c84b74b6b5f0da09fd87c2b7a
+source-git-commit: 5054b843a8bb6053bb6617e9efdfc16dd1eac6ca
 workflow-type: tm+mt
-source-wordcount: '2231'
+source-wordcount: '2247'
 ht-degree: 2%
 
 ---
 
 # Arbeta med innehållsfragment {#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) as a Cloud Service kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fragments/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler, idealiskt för headless-leverans. De kan också användas tillsammans med [Multi-Site Management så att du kan återanvända ditt innehåll](#reusing-content-fragments-with-msm).
+Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragments utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-cloud/authoring/fragments/content-fragments.md). Med dem kan du förbereda innehåll som är klart för användning på flera platser/i flera kanaler, idealiskt för headless-leverans. De kan också användas tillsammans med [Multi-Site Management så att du kan återanvända ditt innehåll](#reusing-content-fragments-with-msm).
 
 Innehållsfragment innehåller strukturerat innehåll:
 
@@ -30,7 +30,7 @@ Innehållsfragment innehåller strukturerat innehåll:
       * De tillgängliga referensdatatyperna gör att du kan kapsla ditt innehåll.
       * Tender som ska användas för leverans till ditt program.
 
-Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i Sling Model (JSON) AEM kärnkomponenterna. Leveranssätt:
+Innehållsfragment kan också levereras i JSON-format med exportfunktionerna för Sling Model (JSON) i AEM kärnkomponenter. Leveranssätt:
 
 * gör att du kan använda komponenten för att hantera vilka element i ett fragment som ska levereras
 * tillåter massleverans genom att lägga till flera kärnkomponenter för innehållsfragment på sidan som används för API-leverans
@@ -39,7 +39,7 @@ Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i S
 >
 >Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
->De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **Assets**. I det här avsnittet beskrivs hantering från **Assets**-konsolen.
+>Innehållsfragment och modeller för innehållsfragment hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)** , även om innehållsfragment fortfarande kan hanteras från konsolen **Assets** och modeller för innehållsfragment från konsolen **Verktyg** . I det här avsnittet beskrivs hantering från konsolerna **Assets** och **Verktyg** .
 >
 >Det finns två redigerare för att skapa innehållsfragment. Även om de grundläggande funktionerna är desamma finns det vissa skillnader. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**). Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
 
@@ -96,19 +96,19 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
-AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor.
+AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM utöver fokus på webbsidor.
 
 De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
 
 * Enkelsidiga program
 * Inbyggda mobilprogram
-* andra kanaler och kontaktpunkter externt för AEM
+* andra kanaler och kontaktpunkter utanför AEM
 
 Leveransen görs i JSON-format med JSON-exporteraren.
 
-AEM kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper, bland annat text, numeriska data, booleska värden, datum och tid.
+AEM Content Fragments kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper, bland annat text, numeriska data, booleska värden, datum och tid.
 
-Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM till andra kanaler än AEM.
+Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM-innehåll till andra kanaler än AEM-sidor.
 
 >[!NOTE]
 >

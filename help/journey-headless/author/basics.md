@@ -5,45 +5,45 @@ exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
 
 ---
 
-# Grundläggande om redigering för Headless med AEM {#author-headless-basics}
+# Grundläggande om redigering för headless med AEM {#author-headless-basics}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande begrepp och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduktion](introduction.md) grundläggande begrepp och terminologi som är relevanta för redigering utan rubrik.
 
-Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
+Den här artikeln bygger vidare på detta så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: Introducera grunderna för Headless CMS-redigering:
+* **Mål**: Introducera grunderna för Headless CMS Authoring:
    * Introduktion till utveckling med AEMaaCS
    * Introduktion till innehållsfragment
 
 ## Grundläggande hantering {#basic-handling}
 
-Innan du får grepp om innehållsfragment finns det en (mycket) snabb introduktion till AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
+Innan du får grepp om innehållsfragment är det här en snabb introduktion till AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
 
-### Författare, Förhandsgranska och Publish {#author-preview-publish}
+### Skapa, förhandsgranska och publicera {#author-preview-publish}
 
-En AEM brukar bestå av tre miljöer:
+En AEM-installation består vanligtvis av tre miljöer:
 
 * Författare
-* Publish
+* Publicera
 * Förhandsgranska
 
 Du loggar in på och använder redigeringsmiljön för att generera ditt innehåll. När det är klart publicerar du sedan innehållet så att det blir allmänt tillgängligt. För hemlösa är detta för andra program, för webbsidor är det för läsare på webben.
 
 Mer information finns i Authoring Concepts.
 
-Från konsolen **Innehållsfragment** kan du även publicera till **förhandsgranskningstjänsten**, för testning och förhandsgranskning, före Publish. Se Publicera och förhandsgranska ett fragment.
+Från konsolen **Innehållsfragment** kan du även publicera till **förhandsgranskningstjänsten**, för testning och förhandsgranskning, före publicering. Se Publicera och förhandsgranska ett fragment.
 
 ### Loggar in {#signing-in}
 
@@ -53,15 +53,15 @@ Precis som med de flesta system måste du logga in. Som författare får du:
 * Lösenord
 * Länk till inloggningsskärmen
 
-Ditt konto har konfigurerats med de privilegier du behöver. Om du har några problem rekommenderar Adobe att du kontaktar ditt interna projektsupportteam.
+Ditt konto har konfigurerats med de privilegier du behöver. Om du har problem rekommenderar Adobe att du kontaktar ditt interna projektsupportteam.
 
 ### Navigering {#navigation}
 
 Första gången du loggar in i en liten onlinekurs kommer några av huvudfunktionerna i användargränssnittet att markeras.
 
-Du kan sedan använda navigeringspanelen för att komma åt AEM nyckelområden. För innehållsfragment använder du konsolen **Innehållsfragment** (för vissa åtgärder använder du även konsolen **Assets**).
+Du kan sedan använda navigeringspanelen för att komma åt nyckelområden i AEM. För innehållsfragment använder du konsolen **Innehållsfragment** (för vissa åtgärder använder du även konsolen **Assets**).
 
-Du kan öppna navigeringspanelen genom att markera ikonen Adobe i det övre vänstra hörnet följt av den lilla kompasikonen.
+Du kan öppna navigeringspanelen genom att markera ikonen Adobe längst upp till vänster och sedan välja den lilla kompassymbolen.
 
 <!--
 The Navigation Panel can be opened by selecting Adobe icon at the top left, followed by the small compass icon:
@@ -70,7 +70,7 @@ The Navigation Panel can be opened by selecting Adobe icon at the top left, foll
 -->
 
 >[!NOTE]
->Innehållsfragment är en funktion i AEM **Webbplatser**, men de sparas som **Assets**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
+>Innehållsfragment är en funktion i AEM **Sites**, men de sparas som **Assets**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
 
 I konsolen kan du välja mappar i den vänstra panelen för att navigera till ditt innehållsfragment. Du kan också filtrera och/eller söka.
 
@@ -92,7 +92,7 @@ När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
 <!-- ![Console actions - fragment selected](assets/cfm-managing-cf-console-selected-01.png) -->
 
 * **Öppna**
-* **Publish** (och **Avpublicera**)
+* **Publicera** (och **Avpublicera**)
 * **Kopiera**
 * **Flytta**
 * **Byt namn**
@@ -100,7 +100,7 @@ När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
 
 >[!NOTE]
 >
->Åtgärder som Publish, Unpublish, Delete, Move, Rename, Copy, trigger an asynchronous job. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
+>Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn, Kopiera, utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via användargränssnittet för AEM Async Jobs.
 
 <!--
 The **Assets** console has dedicated **Action Toolbars**, and **Quick Actions** that you can use after selecting a resource (for example, a folder or content fragment).
@@ -124,7 +124,7 @@ You can view additional information about items using the Rail Selector. This al
 
 ## Skapa innehållsfragment {#authoring-content-fragments}
 
-Det var en mycket snabb introduktion till AEM användargränssnitt, men du har förhoppningsvis haft en chans att testa det. Nu kommer vi till ditt verkliga intresse - innehållsfragment för Headless.
+Det var en mycket snabb introduktion till AEM användargränssnitt, men du har förhoppningsvis haft en chans att prova det. Nu kommer vi till ditt verkliga intresse - innehållsfragment för Headless.
 
 Vi måste gå igenom allt från början till slut, men din instans kanske redan har mappar och/eller fragment skapade, och dessa kan finnas på olika platser. Principerna är desamma.
 
@@ -158,11 +158,11 @@ När du har skapat mappen kan du öppna mappen **Egenskaper**. Här finns olika 
 
 Du navigerar sedan genom de här mapparna för att skapa och redigera dina innehållsfragment.
 
-#### Precis in case - Konfiguration av mappkonfiguration {#cloud-services-folder}
+#### Precis in case - Folder Cloud Services Configuration {#cloud-services-folder}
 
 Bara om..
 
-Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
+Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta intresserar dig förmodligen inte, men om det behövs kan du kontrollera **konfigurationen** i **molntjänsterna** i mappen **Egenskaper**:
 
 ![Skapa mappegenskaper - Konfiguration](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
@@ -205,7 +205,7 @@ När redigeraren öppnas ser du:
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
    * länkar till förhandsgranskning, om standardmönstret för URL för förhandsgranskning har konfigurerats för modellen
-   * Publish och Unpublish actions
+   * Åtgärder för publicering och avpublicering
    * ett alternativ för att visa alla **överordnade referenser** (länkikon)
    * fragmentet **Status** och den senast sparade informationen
    * växla till den ursprungliga (Assets-baserade) redigeraren
@@ -248,13 +248,13 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
   >[!NOTE]
   >
-  >Om du vill veta mer kan du läsa den AEM Headless Content Architect Journey.
+  >Om du vill veta mer kan du läsa AEM Headless Content Architect Journey.
 
 ### Publicering {#publishing}
 
 <!-- needs more details -->
 
-När du har slutfört fragmentet kan du **Publish** så att det blir tillgängligt för de headless-program som använder det.
+När du har slutfört fragmentet kan du **Publicera** det så att det blir tillgängligt för de Headless-program som använder det.
 
 Publiceringsåtgärderna är tillgängliga i redigeraren:
 
@@ -300,7 +300,7 @@ Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om referens
 
       * Från redigeraren eller **Assets**-konsolen
 
-         * [Snabb Publish](/help/assets/manage-publication.md#quick-publish)
+         * [Snabbpublicering](/help/assets/manage-publication.md#quick-publish)
 
          * [Hantera publikation](/help/assets/manage-publication.md#manage-publication)
 
@@ -308,13 +308,13 @@ Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om referens
 
          * [Publicera och förhandsgranska ett innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#publishing-and-previewing-a-fragment)
 
-   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+   * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 
       * [Modeller för innehållsfragment - datatyper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
 
       * [Modeller för innehållsfragment - egenskaper](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties)
 
-      * [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#allowing-content-fragment-models-assets-folder)
+      * [Modeller för innehållsfragment - Tillåt modeller för innehållsfragment i din Assets-mapp](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#allowing-content-fragment-models-assets-folder)
 
 * [Content Fragments - original editor, from Assets Console](/help/assets/content-fragments/content-fragments-variations.md)
 
@@ -323,4 +323,4 @@ Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om referens
 
 * AEM Headless Content Architect Journey
 
-* AEM översättningsresa utan rubrik
+* AEM Headless Translation Journey
