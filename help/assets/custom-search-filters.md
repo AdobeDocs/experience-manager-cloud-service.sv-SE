@@ -3,9 +3,9 @@ title: Egna sökfilter
 description: Läs om hur du anpassar sökfilterformulär
 role: User, Leader, Developer
 exl-id: 383e8165-439e-447b-a19d-d5446238a13f
-source-git-commit: 8d3059f9cb92dc6c65eec33dcc69eed76b61546c
+source-git-commit: 0484b8ac158f0590d5ada7536cf8b547c71ab686
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1254'
 ht-degree: 2%
 
 ---
@@ -376,7 +376,7 @@ Varje filterelement är associerat med en uppsättning egenskaper. Följande ege
         <ul>
         <li>Klicka på <b>lägg till</b> om du vill lägga till ett nytt värde. 
         <li>Klicka på <span> ✎</span> för att redigera etiketten. 
-        <li>Klicka på <img src="assets/do-not-localize/delete-icon.png"> om du vill ta bort alternativvärdet. 
+        <li>Klicka på <span>??</span> om du vill ta bort alternativvärdet. 
         <li>Klicka på <b>Redigera</b> om du vill ändra redigeringsalternativen. 
         <li>Du kan också ändra alternativsekvensen genom att hålla ned dem.
         </td>
