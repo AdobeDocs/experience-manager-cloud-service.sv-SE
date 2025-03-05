@@ -1,13 +1,13 @@
 ---
 title: Hantera innehållsfragment
-description: Lär dig hur du hanterar AEM innehållsfragment från konsolen och redigeraren, skapar innehåll som bas för rubriklöst innehåll eller skapar sidor.
+description: Lär dig hur du hanterar dina AEM Content Fragments från konsolen och redigeraren, skapar innehåll som bas för ditt headless-innehåll eller skapar sidor.
 feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: 2daddd852f4cfcbcd6b1d4aea9cd96e045c93ca0
+source-git-commit: f5523968ef4548c287ec939b63db1cf914c7fbeb
 workflow-type: tm+mt
-source-wordcount: '2661'
+source-wordcount: '2686'
 ht-degree: 0%
 
 ---
@@ -73,7 +73,7 @@ Mer information finns i:
 
 >[!CAUTION]
 >
->Den här konsolen är *endast* tillgänglig i Adobe Experience Manager-as a Cloud Service (AEM) online.
+>Konsolen är *endast* tillgänglig i Adobe Experience Manager (AEM) as a Cloud Service online.
 
 ### Konsolens grundläggande struktur och hantering {#basic-structure-handling-content-fragments-console}
 
@@ -86,7 +86,7 @@ Om du väljer **Innehållsfragment** öppnas konsolen på en ny flik.
 Här ser du att det finns tre huvudområden:
 
 * Det övre verktygsfältet
-   * Tillhandahåller AEM
+   * Tillhandahåller AEM standardfunktioner
    * Visar även din IMS-organisation
    * Tillhandahåller olika [åtgärder](#actions-unselected)
 * Den vänstra panelen
@@ -149,7 +149,7 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 
 * **[Öppna i ny redigerare](#editing-the-content-of-your-fragment)**
 * **[Öppna](/help/assets/content-fragments/content-fragments-variations.md)** (i originalredigeraren)
-* **[Publish](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
+* **[Publicera](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
 * **[Hantera taggar](#manage-tags)**
 * **[Kopiera](/help/assets/manage-digital-assets.md)**
 * **[Flytta](/help/assets/manage-digital-assets.md)**
@@ -163,7 +163,7 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 
 >[!NOTE]
 >
->Åtgärder som Publish, Unpublish, Delete, Move, Rename och Copy utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via gränssnittet AEM asynkrona jobb.
+>Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn och Kopiera utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via användargränssnittet för AEM Async Jobs.
 
 ### Information om dina innehållsfragment {#information-content-fragments}
 
@@ -183,7 +183,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Förhandsgranska**
    * Endast information:
       * **In sync**: Content Fragment is in-sync on the **Author** and **Preview** services.
-      * **Osynkroniserad**: Innehållsfragmentet är inte synkroniserat på tjänsterna **Författare** och **Förhandsgranska**. Du måste **Publish** till **Preview** för att se till att de två instanserna synkroniseras igen.
+      * **Osynkroniserad**: Innehållsfragmentet är inte synkroniserat på tjänsterna **Författare** och **Förhandsgranska**. Du måste **Publicera** till **Förhandsgranska** för att se till att de två instanserna synkroniseras igen.
       * blank: Innehållsfragmentet finns inte i tjänsten **Preview**.
 * **Ändrad**
    * Endast information.
@@ -237,6 +237,7 @@ Så här skapar du ett innehållsfragment:
 
    * **Plats** - Automatiskt slutförd med den aktuella platsen, men du kan välja en annan plats om det behövs.
    * **Modell för innehållsfragment** - Välj den modell som ska användas som bas för fragmentet i listrutan.
+   * **Automatisk tagg** - När du väljer det här alternativet ärvs alla taggar som tilldelats innehållsfragmentmodellen av och läggs till i det nya innehållsfragmentet.
    * **Titel**
    * **Namn** - Kompletteras automatiskt baserat på **Titel**, men du kan redigera det om det behövs.
    * **Beskrivning**
@@ -304,13 +305,13 @@ Du kan visa och redigera egenskaperna (metadata) för ett fragment på fliken [E
 
 Du kan publicera dina innehållsfragment till:
 
-* **[Publish-tjänsten](/help/headless/deployment/architecture.md)** - för fullständig, offentlig åtkomst
+* **[Publiceringstjänst](/help/headless/deployment/architecture.md)** - för fullständig, offentlig åtkomst
 
 * **[Förhandsgranskningstjänsten](/help/headless/deployment/architecture.md)** - för att förhandsgranska innehållet innan det är fullständigt tillgängligt
 
   >[!CAUTION]
   >
-  >Publicering av innehållsfragment till **förhandsgranskningstjänsten** är bara tillgängligt från konsolen för innehållsfragment, med åtgärden **Publish** .
+  >Publicering av innehållsfragment till **förhandsgranskningstjänsten** är bara tillgängligt från konsolen för innehållsfragment, med åtgärden **Publicera** .
 
   >[!NOTE]
   >
@@ -324,7 +325,7 @@ Du kan publicera dina innehållsfragment till:
 
 ### Publicering {#publishing}
 
-Du kan publicera dina innehållsfragment med alternativet **Publish** från antingen:
+Du kan publicera dina innehållsfragment med alternativet **Publicera** från något av följande:
 
 * verktygsfältet i konsolen [Innehållsfragment](#actions-selected-content-fragment)
 
@@ -332,16 +333,16 @@ Du kan publicera dina innehållsfragment med alternativet **Publish** från anti
 
 * verktygsfältet i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md#content-fragment-editor)
 
-När du har valt åtgärden **Publish**:
+När du har valt åtgärden **Publicera**:
 
 1. Välj något av följande alternativ för att öppna rätt dialogruta:
 
-   * **Nu** - välj antingen **Publish-tjänsten** eller **förhandsgranskningstjänsten**. Efter bekräftelse publiceras fragmentet omedelbart
+   * **Nu** - välj antingen **Publiceringstjänst** eller **Förhandsgranskningstjänst**. Efter bekräftelse publiceras fragmentet omedelbart
    * **Schema** - förutom den tjänst som krävs kan du även välja datum och tid när fragmentet ska publiceras
 
 1. Ange all information i dialogrutan. För en schemalagd publiceringsbegäran:
 
-   ![Dialogrutan Publish](assets/cf-managing-publish-dialog.png)
+   ![Dialogrutan Publicera](assets/cf-managing-publish-dialog.png)
 
    >[!NOTE]
    >
