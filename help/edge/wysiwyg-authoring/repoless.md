@@ -4,9 +4,9 @@ description: Om du har många liknande webbplatser som oftast ser ut och beter s
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: a6bc0f35-9e76-4b5a-8747-b64e144c08c4
-source-git-commit: c9d0d3cd7e18b56db36a379b63f8fb48e18a40db
+source-git-commit: 7b46af35b202446fdea67e4125d74c3965d302d9
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -99,30 +99,14 @@ Du måste skapa en platskonfiguration och lägga till den i sökvägsmappningen.
 
 När platskonfigurationen har mappats kan du konfigurera åtkomstkontrollen genom att definiera ditt tekniska konto så att det har behörighet att publicera.
 
-1. I webbläsaren kan du hämta det tekniska kontot som svar på följande länk.
+1. Logga in på AEM-författarinstansen och gå till **Verktyg** -> **Cloud-tjänster** -> **Edge Delivery Services-konfiguration** och välj den konfiguration som skapades automatiskt för platsen. Tryck eller klicka på **Egenskaper** i verktygsfältet.
 
-   ```text
-   https://author-p<programID>-e<envionmentID>.adobeaemcloud.com/bin/franklin.delivery/<your-github-org>/<your-aem-project>/main/.helix/config.json
-   ```
+1. I fönstret **Edge Delivery Services-konfiguration** väljer du fliken **Autentisering** och kopierar värdet för **ID:t för det tekniska kontot**.
 
-1. Svaret liknar följande:
+   * Det ser ut ungefär som `<tech-account-id>@techacct.adobe.com`
+   * Det tekniska kontot är detsamma för alla webbplatser i en och samma AEM-miljö.
 
-   ```json
-   {
-     "total": 1,
-     "offset": 0,
-     "limit": 1,
-     "data": [
-       {
-         "key": "admin.role.publish",
-         "value": "<tech-account-id>@techacct.adobe.com"
-       }
-     ],
-     ":type": "sheet"
-   }
-   ```
-
-1. Ange det tekniska kontot i konfigurationen med ett cURL-kommando som liknar följande.
+1. Ange det tekniska kontot för den portabla konfigurationen med ett cURL-kommando som liknar följande, med det tekniska konto-ID som du kopierade.
 
    * Anpassa `admin`-blocket för att definiera de användare som ska ha fullständig administrativ åtkomst till platsen.
       * Det är en matris med e-postadresser.

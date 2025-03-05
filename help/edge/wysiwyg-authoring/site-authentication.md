@@ -3,13 +3,13 @@ title: Konfigurera webbplatsautentisering för innehållsredigering
 description: Läs om hur AEM Live har stöd för tokenbaserad autentisering och hur du kan konfigurera AEM att använda autentisering med WYSIWYG-redigering.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 6d28b831fb902173bb5fbadd4aa2a52ba58e0a3b
+exl-id: b2838da2-79c7-49b1-a101-15c21e80197e
+source-git-commit: 7b46af35b202446fdea67e4125d74c3965d302d9
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera webbplatsautentisering för innehållsredigering {#site-authentication}
 
@@ -46,11 +46,13 @@ Dessa objekt krävs för att slutföra konfigurationen av webbplatsautentisering
 När webbplatsautentiseringen har konfigurerats kan du aktivera den i AEM redigeringsmiljö.
 
 1. Logga in på AEM-författarinstansen och gå till **Verktyg** -> **Cloud-tjänster** -> **Edge Delivery Services-konfiguration** och välj den konfiguration som skapades automatiskt för platsen. Tryck eller klicka på **Egenskaper** i verktygsfältet.
-1. I fönstret **Edge Delivery Services Configuration** väljer du fliken **Authentication** och anger följande värden, som du noterade när du konfigurerade platsautentisering.
-
-   * **ID för det tekniska kontot**
-   * **Webbplatsautentiseringstoken**
+1. I fönstret **Edge Delivery Services Configuration** väljer du fliken **Authentication** och anger **Site Authentication-token** som du kopierade tidigare.
 
    ![Edge Delivery Services-konfiguration](/help/edge/wysiwyg-authoring/assets/site-authentication/configure-aem-author.png)
+
+1. Kontrollera att **ID:t för det tekniska kontot** matchar det som du kopierade tidigare.
+
+   * Det här fältet är skrivskyddat och fördefinierat.
+   * Det tekniska kontot är detsamma för alla webbplatser i en och samma AEM-miljö.
 
 1. Tryck eller klicka på **Spara och stäng**.
