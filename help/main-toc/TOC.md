@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 85d788eeb5017b99ea4962105b63b20c487f363f
+source-git-commit: babddee34b486960536ce7075684bbe660b6e120
 workflow-type: tm+mt
-source-wordcount: '6222'
+source-wordcount: '6220'
 ht-degree: 2%
 
 ---
@@ -1032,9 +1032,22 @@ ht-degree: 2%
       + [Ökning](/help/edge/docs/forms/overview.md)
       + [Hur fungerar Edge Delivery Services Forms?](/help/edge/docs/forms/universal-editor/edge-delivery-services-form.md)
       + [Vanliga frågor](/help/edge/docs/forms/adapttive-forms-for-edge-delivery-services-faq.md)
+      + WYSIWYG Authoring {#universal-editor}
+         + [Introduktion till Forms Universal Editor för Edge Delivery Services - komplett guide](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
+         + [Så här startar du redigering med Universal Editor - steg för steg-självstudiekurs](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+         + [Skapa ditt första formulär med en universell redigerare](/help/edge/docs/forms/universal-editor/create-forms.md)
+         + [Guide till gränssnittet för Universal Editor: Verktyg, Funktioner och Navigering - förklaras](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md)
+         + [Gör din Forms mobilvänlig: responsiv design i Universal Editor](/help/edge/docs/forms/universal-editor/responsive-layout.md)
+         + [Design Beautiful Forms: Styling and Theming Guide for Universal Editor](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
+         + [Lägg till dynamiskt beteende i Forms: Fullständig guide till regelredigeraren](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
+         + [Handbok för inskickning av formulär: Konfigurera och anpassa åtgärder för att skicka formulär](/help/edge/docs/forms/universal-editor/submit-action.md)
+         + [Skydda din Forms mot skräppost: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
+         + [Publicera och distribuera Forms: Universal Editor Publishing Guide](/help/edge/docs/forms/universal-editor/publish-forms.md)
+         + [Skapa anpassade formulärkomponenter: Utvecklarhandbok för Universell redigerare](/help/edge/docs/forms/universal-editor/create-custom-component.md)
       + Dokumentbaserad redigering {#getting-started-edge-delivery-services-forms}
          + [Skapa ditt första formulär: Snabbstartsguide med Google Sheets och Excel](/help/edge/docs/forms/tutorial.md)
          + [Så här skapar du Forms med Google-blad eller Excel: Stegvisa handböcker](/help/edge/docs/forms/create-forms.md)
+         + [Olika komponenter i block med adaptiv form](/help/edge/docs/forms/form-components.md)
          + [Koppla ditt formulär till Google-blad: Inställningsguide för datainsamling](/help/edge/docs/forms/submit-forms.md)
          + [Gör formuläret tillgängligt: Publicera och samla in data](/help/edge/docs/forms/publish-forms.md)
          + [Validering av formulärfält: Lägg till felkontroller i din Forms](/help/edge/docs/forms/validate-forms.md)
@@ -1049,21 +1062,7 @@ ht-degree: 2%
          + [Gör formuläret globalt: Formuläröversättningsguide](/help/edge/docs/forms/translate-forms.md)
          + [Skydda din Forms: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/recaptacha-forms.md)
          + [Skapa anpassade formulärkomponenter: Utvecklarhandbok](/help/edge/docs/forms/custom-components-forms.md)
-         + [Övervaka formulärprestanda: Övervakningshandbok för riktig användning](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
-      + WYSIWYG Authoring {#universal-editor}
-         + [Introduktion till Forms Universal Editor för Edge Delivery Services - komplett guide](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
-         + [Så här startar du redigering med Universal Editor - steg för steg-självstudiekurs](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
-         + [Skapa ditt första formulär med en universell redigerare](/help/edge/docs/forms/universal-editor/create-forms.md)
-         + [Guide till gränssnittet för Universal Editor: Verktyg, Funktioner och Navigering - förklaras](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md)
-         + [Gör din Forms mobilvänlig: responsiv design i Universal Editor](/help/edge/docs/forms/universal-editor/responsive-layout.md)
-         + [Design Beautiful Forms: Styling and Theming Guide for Universal Editor](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
-         + [Lägg till dynamiskt beteende i Forms: Fullständig guide till regelredigeraren](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
-         + [Handbok för inskickning av formulär: Konfigurera och anpassa åtgärder för att skicka formulär](/help/edge/docs/forms/universal-editor/submit-action.md)
-         + [Skydda din Forms mot skräppost: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
-         + [Publicera och distribuera Forms: Universal Editor Publishing Guide](/help/edge/docs/forms/universal-editor/publish-forms.md)
-         + [Skapa anpassade formulärkomponenter: Utvecklarhandbok för Universell redigerare](/help/edge/docs/forms/universal-editor/create-custom-component.md)
-      + Referenser {#forms-references}
-         + [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
+         + [Övervaka formulärprestanda: Övervakningshandböcker för faktisk användning](/help/edge/docs/forms/real-use-monitoring-for-forms.md)
    + Edge Delivery-resurser {#resources}
       + Sidekick {#sidekick}
          + [Använda Sidekick](/help/edge/docs/sidekick.md)

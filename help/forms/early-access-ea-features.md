@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 85d788eeb5017b99ea4962105b63b20c487f363f
+source-git-commit: babddee34b486960536ce7075684bbe660b6e120
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2289'
 ht-degree: 0%
 
 ---
@@ -74,9 +74,9 @@ Det här är mer konversationskritiska Forms ger:
 Forms är mer än bara ett nytt utseende - de förändrar användarupplevelsen.  Öka engagemanget, minska antalet blanketter som läggs ned och gör interaktionen med er webbplats roligare för alla.
 
 
-### WYSIWYG Authoring for Edge Delivery Services
+### WYSIWYG Authoring (Universal Editor) for Edge Delivery Services for Forms
 
-WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive Forms Editor) för att skapa och publicera anpassningsbara formulär till Edge Delivery Services. WYSIWYG Authoring har alla funktioner som finns i [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
+Universal Editor har ett kraftfullt WYSIWYG-gränssnitt för att skapa och publicera [anpassningsbara formulär till Edge Delivery Services](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) som kombinerar visuell designenkelhet med avancerade funktioner. WYSIWYG Authoring har alla funktioner som finns i [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md), plus en mängd andra funktioner:
 
 * Avancerad regelredigerare för avancerad logik.
 * Utbyggbarhet på serversidan för anpassade funktioner.
@@ -86,6 +86,26 @@ WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive F
 * Integrering med olika datakällor för förifyllande av formulär och inlämning av data.
 * Form Data Model (FDM) för att definiera datastrukturen och interaktionen med olika datakällor.
 * Möjlighet att välja bland flera olika åtgärder för att skicka in formulär, inklusive att skicka data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics och många andra datakällor.
+
+![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png)
+
+**Fördelar:**
+
+* **Accelerated Time-to-Value (TTV)**: Starta formulär snabbare med intuitiv visuell redigering som eliminerar komplexa kodningskrav.
+* **Minskade utvecklingskostnader**: Minska den totala ägandekostnaden genom att göra det möjligt för företagsanvändare att skapa och ändra formulär med minimal IT-inblandning.
+* **Förenklad utveckling**: Skapa anpassade komponenter med endast HTML, CSS och JavaScript - ingen specialkunskap om ramverket behövs.
+* **Modern Web Stack**: Bygger på webbstandarder och moderna tekniker som är välbekanta för gränssnittsutvecklare.
+* **Snabba prototyper**: Bygg och testa snabbt formulärkoncept innan du investerar i fullständig utveckling
+
+
+**Läs mer i dokumentationen:**
+
+| | | |
+|:----------------------:|:---------------------:|:----------------------:|
+| [**Viktiga funktioner**](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md#key-features-of-universal-editor-for-edge-delivery-services-for-forms) | [**Använd responsiva layouter**](/help/edge/docs/forms/universal-editor/responsive-layout.md) | [**Konfigurera skicka-åtgärder**](/help/edge/docs/forms/universal-editor/submit-action.md) |
+| [**Kom igång med Universal Editor för Adaptive Forms**](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md) | [**Formatera formulären**](/help/edge/docs/forms/universal-editor/style-theme-forms.md) | [**Lägg till reCAPTCHA-säkerhet**](/help/edge/docs/forms/universal-editor/recaptcha-forms.md) |
+| [**Skapa ditt första formulär**](/help/edge/docs/forms/universal-editor/create-forms.md) | [**Använd regelredigeraren**](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md) | [**Publicera formulär**](/help/edge/docs/forms/universal-editor/publish-forms.md) |
+| [**Förstå användargränssnittet**](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md) | | [**Skapa anpassade komponenter**](/help/edge/docs/forms/universal-editor/create-custom-component.md) |
 
 
 ### AEM Forms till Marketo Connector

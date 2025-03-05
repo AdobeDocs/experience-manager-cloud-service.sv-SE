@@ -4,9 +4,9 @@ description: Använd Universell redigerare för Edge Delivery Services for Forms
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 6b7ff166467a399502b63fd13b1f836213b7839b
+source-git-commit: babddee34b486960536ce7075684bbe660b6e120
 workflow-type: tm+mt
-source-wordcount: '1087'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,11 @@ Med den universella redigeraren kan du snabbt skapa responsiva, interaktiva form
 
 Den universella redigeraren är en smidig lösning för att skapa och hantera formulär, oavsett om du hanterar enkel rendering på klientsidan, ser till att webbläsaren är kompatibel eller följer strikta tillgänglighetsstandarder.
 
-![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=80%, align-center} —>
+![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=80%, align-center}
 
 ## Viktiga funktioner i Universal Editor för Edge Delivery Services for Forms
 
 
-
-Här är layouten med likbreddskort (med kolumner med fast bredd):
 
 | ![WYSIWYG-gränssnitt](/help/edge/docs/forms/universal-editor/assets/generate-forms.svg) | ![Regelredigeraren](/help/edge/docs/forms/universal-editor/assets/rule-editor.svg) | ![Skicka åtgärder](/help/edge/docs/forms/universal-editor/assets/submit-actions.svg) |
 |:-------------:|:-------------:|:-------------:|

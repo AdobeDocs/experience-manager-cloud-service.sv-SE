@@ -1,15 +1,16 @@
 ---
-title: Understanding Universal Editor - Developer Tutorial
+title: Förstå universell redigerare
 description: Den här självstudiekursen hjälper dig att komma igång med Universal Editor-gränssnittet. Det vägleder dig att förstå användargränssnittet för att skapa egna Edge Delivery Services-formulär i Universell redigerare.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
+source-git-commit: babddee34b486960536ce7075684bbe660b6e120
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1706'
 ht-degree: 0%
 
 ---
+
 
 # Exploring the Universal Editor (WYSIWYG) Interface
 
@@ -17,9 +18,18 @@ ht-degree: 0%
 
 ![Användargränssnitt för Universal Editor](/help/edge/docs/forms/universal-editor/assets/universal-editor-interface.png)
 
-## Understanding Universal Editor Interface
+## Vad du kommer att lära dig
 
-När formulärförfattaren redigerar formuläret med Universal Editor, öppnar konsolen ett interaktivt WYSIWYG-gränssnitt där användaren kan börja redigera formuläret.
+I slutet av den här självstudiekursen ska du:
+
+- Förstå huvudkomponenterna i Universella redigeringsgränssnittet
+- Navigera säkert mellan de olika gränssnittsavsnitten
+- Lär dig använda de verktyg du behöver för att skapa formulär
+- Bekanta dig med kortkommandon som ökar produktiviteten
+
+## Förstå det universella redigeringsgränssnittet
+
+När du redigerar ett formulär med Universal Editor öppnar konsolen ett interaktivt WYSIWYG-gränssnitt där du kan börja redigera direkt. Det här gränssnittet ger visuell feedback i realtid när du arbetar och visar exakt hur formuläret kommer att se ut för användarna.
 
 >[!NOTE]
 >
@@ -27,209 +37,233 @@ När formulärförfattaren redigerar formuläret med Universal Editor, öppnar k
 
 ![Användargränssnitt för Universal Editor](/help/edge/docs/forms/universal-editor/assets/universal-editor-interface1.png)
 
-Gränssnittet för Universal Editor är uppdelat i fyra delar:
+Gränssnittet för Universal Editor är uppdelat i fyra logiska delar:
 
-* **[A: Experience Cloud Header](#experience-cloud-header)**
-* **[B: Verktygsfältet Universal Editor](#universal-editor-toolbar)**
-* **[C: Egenskapspanelen](#properties-panel)**
-* **[D: Redigeraren](#editor)**
+- **[A: Experience Cloud Header](#experience-cloud-header)**
+- **[B: Verktygsfältet Universal Editor](#universal-editor-toolbar)**
+- **[C: Egenskapspanelen](#properties-panel)**
+- **[D: Redigeraren](#editor)**
+
+Låt oss utforska varje avsnitt i detalj.
 
 ### Experience Cloud Header
 
-Experience Cloud-rubriken finns högst upp i konsolen. Här finns information om den aktuella platsen inom Experience Cloud. Du kan även navigera till andra Experience Cloud-program.
+Experience Cloud Header visas högst upp i konsolen och ger navigeringsmöjligheter i det större Adobe Experience Cloud-ekosystemet. Här ser du var du befinner dig och du får snabb tillgång till andra Experience Cloud-program.
 
 ![Universal Editor Experience Cloud Header](/help/edge/docs/forms/universal-editor/assets/universal-editor-experience-manager-header.png)
 
+Låt oss granska varje komponent:
 
-Låt oss förstå var och en av komponenterna.
+- **Adobe Experience Cloud**
 
-* **Adobe Experience Cloud**
+  Om du klickar på länken **Adobe Experience Cloud** till vänster på skärmen kan du navigera till roten på Experience Manager-lösningen. Därifrån har du tillgång till andra verktyg som Experience Manager Sites, Experience Manager Assets och Experience Manager Guides.
 
-  Du kan klicka på länken **Adobe Experience Cloud** till vänster på skärmen för att navigera till roten i Experience Manager-lösningen och komma åt verktyg som Experience Manager Sites, Experience Manager Assets och Experience Manager Guides.
+  ![Adobe Experience Manager](/help/edge/docs/forms/universal-editor/assets/universal-editor-experience-manager.png)
 
-  ![Adobe Experience Manager](/help/edge/docs/forms/universal-editor/assets/universal-editor-experience-manager.png){width=50%,height=50%}
+- **Organisationsnamn**
 
-* **Organisationsnamn**
+  **Organisationsnamn** visar namnet på den Identity Management System-organisation (IMS) som du är inloggad på. Om du har tillgång till flera organisationer kan du växla mellan dem med den här listrutan. I skärmbilden är till exempel den IMS-organisation som är vald för tillfället&quot;AEM Forms Internal01&quot;.
 
-  **Organisationsnamnet** visar namnet på den IMS-organisation du är inloggad på. Du kan växla till en annan IMS-organisation om de har tillgång till andra organisationer genom att välja i listrutan. Det aktuella IMS-organisationsnamnet är till exempel `AEM Forms Internal01`.
+  ![Organisation](/help/edge/docs/forms/universal-editor/assets/universal-editor-organization.png)
 
-  ![Organisation](/help/edge/docs/forms/universal-editor/assets/universal-editor-organization.png){width=50%,height=50%}
+- **Hjälp**
 
+  Ikonen Hjälp ger snabb åtkomst till utbildningsresurser och supportresurser. Detta är särskilt värdefullt när du stöter på problem eller behöver hjälp med specifika funktioner. Du kan även skicka feedback genom det här avsnittet.
 
-* **Hjälp**
+  ![Hjälp](/help/edge/docs/forms/universal-editor/assets/ue-help.png)
 
-  Hjälpikonen ger snabb åtkomst till utbildningsresurser och supportresurser. Formulärets författare kan även lägga till feedback i avsnittet **Hjälp**.
-  ![Hjälp](/help/edge/docs/forms/universal-editor/assets/ue-help.png){width=50%,height=50%}
+- **Meddelanden**
 
+  Avsnittet **Meddelanden** visar antalet för närvarande tilldelade ofullständiga meddelanden, förfrågningar och aktuella uppgifter i IMS-organisationen. Genom att hålla ett öga på det här avsnittet kan du hålla dig à jour med ditt arbetsflöde.
 
-* **Meddelanden**
+  ![Meddelande](/help/edge/docs/forms/universal-editor/assets/ue-notification.png)
 
-  Avsnittet **Meddelande** visar antalet för närvarande tilldelade ofullständiga meddelanden, förfrågningar och aktuella uppgifter i IMS-organisationen.
+- **Lösningar**
 
-  ![Meddelande](/help/edge/docs/forms/universal-editor/assets/ue-notification.png){width=50%,height=50%}
+  På menyn **Lösningar** kan du växla till andra Adobe Experience Cloud-lösningar, vilket gör det enkelt att växla mellan olika verktyg i arbetsflödet.
 
+  ![Lösningar](/help/edge/docs/forms/universal-editor/assets/ue-solutions.png)
 
-* **Lösningar**
+- **Användarprofil**
 
-  Du kan växla till andra Experience Cloud-lösningar via länken **Lösningar** .
-  ![Lösningar](/help/edge/docs/forms/universal-editor/assets/ue-solutions.png){width=50%,height=50%}
+  Den här ikonen visar din profilinformation tillsammans med namnet på den IMS-organisation som du är inloggad på just nu. Klicka på den här ikonen för att komma åt kontoinställningar och utloggningsalternativ.
 
-
-* **Författare**
-Ikonen visar information om formulärförfattaren tillsammans med namnet på den IMS-organisation där författaren är inloggad.
-  ![Författare](/help/edge/docs/forms/universal-editor/assets/ue-author.png){width=50%,height=50%}
+  ![Författare](/help/edge/docs/forms/universal-editor/assets/ue-author.png)
 
 ### Verktygsfältet Universell redigerare
 
-I verktygsfältet kan du navigera till och redigera andra formulär. De kan också publicera eller avpublicera formuläret, redigera formulärets egenskaper och öppna regelredigeraren.
+Verktygsfältet innehåller viktiga verktyg för navigering och redigering. Med den kan du gå mellan formulär, publicera eller avpublicera formulär, redigera formuläregenskaper och komma åt regelredigeraren för att lägga till dynamiska beteenden.
+
 ![Verktygsfältet Universal Editor](/help/edge/docs/forms/universal-editor/assets/ue-toolbar.png)
 
-Låt oss förstå var och en av komponenterna.
+Det här erbjuder varje komponent:
 
-* **Hemknapp**
-Med hemknappen kan du navigera till startsidan i Universella redigeringsprogram. Du kan också ange URL:en till det formulär som du vill redigera direkt i den universella redigeraren.
+- **Hemknapp**
+
+  Med hemknappen kommer du tillbaka till startsidan för Universal Editor. Detta är användbart när du behöver börja arbeta med ett annat formulär. Du kan också ange en URL direkt i platsfältet för att navigera till ett formulär som du vill redigera.
+
   ![Startsida för Universal Editor](/help/edge/docs/forms/universal-editor/assets/ue-home.png)
 
+- **Platsfält**
 
+  **Platsfältet** visar adressen till det formulär som du redigerar just nu. Om du vill växla till ett annat formulär klickar du bara på platsfältet och anger dess URL. Kortkommandot för att fokusera på platsfältet är `l`.
 
-* **Platsfält**
-I **platsfältet** visas adressen till det formulär som författaren redigerar. Du kan också ange en annan formulär-URL genom att klicka på platsfältet. Kortkommandon för att öppna platsfältet är tangent `l`.
-  ![Platsfält](/help/edge/docs/forms/universal-editor/assets/ue-locationbar.png){width=50%,height=50%}
+  ![Platsfält](/help/edge/docs/forms/universal-editor/assets/ue-locationbar.png)
 
+- **Regelredigeraren**
 
-
-* **Regelredigeraren**
-
-  **Regelredigeraren** erbjuder ett intuitivt visuellt gränssnitt för att skapa och hantera regler. Du kan lägga till dynamiskt formulärbeteende med regelredigeraren.
+  Med **regelredigeraren** kan du lägga till dynamiska beteenden i formulär via ett intuitivt visuellt gränssnitt. Med det kan du skapa villkor, valideringar och åtgärder som svarar på användarens inmatningar, vilket gör formulären interaktiva och intelligenta.
 
   ![Regelredigeraren](/help/edge/docs/forms/universal-editor/assets/ue-ruleeditor.png)
 
   >[!NOTE]
   >
-  > * Tillägget Regelredigerare är inte aktiverat som standard i Universellt redigeringsprogram. Om du vill aktivera tillägget Regelredigerare skriver du till oss på [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från ditt officiella e-post-id.
-  > * Mer information om hur du skapar regler finns i artikeln [Introduktion till regelredigeraren i WYSIWYG Authoring](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md).
+  > - Tillägget Regelredigeraren är inte aktiverat som standard i Universell redigerare. Om du vill aktivera den här kraftfulla funktionen kan du kontakta oss på [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från din officiella e-postadress.
+  > - Mer information om hur du skapar och hanterar regler finns i artikeln [Introduktion till regelredigeraren i WYSIWYG Authoring](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md).
 
-* **Redigera formuläregenskaper**
-Du kan redigera formuläregenskaperna, till exempel formulärdatamodellen och publiceringsdatumet, genom att klicka på alternativet **Redigera formuläregenskaper** .
+- **Redigera formuläregenskaper**
+
+  Med alternativet **Redigera formuläregenskaper** kan du konfigurera viktiga formulärinställningar, till exempel formulärdatamodellen (FDM) och publiceringsdatumet. Dessa egenskaper påverkar hur formuläret fungerar och integreras med datasystemen.
+
   ![Redigera formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/ue-formproperties.png)
 
+- **Inställningar för autentiseringshuvud**
 
+  Med alternativet **Inställningar för autentiseringshuvud** kan du ange anpassade autentiseringshuvuden för lokal utveckling. Detta är särskilt användbart när du testar formulär som kräver inloggningsuppgifter.
 
-* **Inställningar för autentiseringshuvud**
-Med inställningarna för **autentiseringshuvudet** kan författaren ange en anpassad autentiseringshuvud för lokal utveckling.
-  ![autentiseringsrubrik](/help/edge/docs/forms/universal-editor/assets/ue-authenticationheader.png){width=50%,height=50%}
+  ![Autentiseringshuvud](/help/edge/docs/forms/universal-editor/assets/ue-authenticationheader.png)
 
+- **Responsivt läge**
 
+  Med funktionen **Responsivt läge** kan du testa hur formuläret kommer att visas på olika enheter. Som standard öppnas redigeraren i skrivbordslayout, men du kan växla till mobilvyn så att formuläret förblir användbart och tilltalande på mindre skärmar.
 
-* **Responsivt läge**
-  Med alternativet **Responsivt läge** kan du definiera hur Universal Editor ska återge formuläret. Som standard öppnas redigeraren i en skrivbordslayout där höjd och bredd bestäms automatiskt av webbläsaren. Du kan också välja att emulera en mobil enhet och kontrollera hur formuläret visas på mobila enheter.
+  ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/ue-responsivemode.png)
 
-  ![Responsivt läge](/help/edge/docs/forms/universal-editor/assets/ue-responsivemode.png){width=50%,height=50%}
+- **Förhandsgranskningsläge**
 
+  **Förhandsgranskningsläge** visar formuläret exakt som det kommer att se ut när det publiceras. På så sätt kan du interagera med formuläret genom att klicka på länkar och knappar, precis som användarna skulle göra. Detta är ett viktigt steg innan publicering för att kontrollera att allt fungerar som det ska. Växla mellan redigerings- och förhandsgranskningslägena med kortkommandot `p`.
 
-* **Förhandsgranskningsläge**
-I förhandsgranskningsläget visas formuläret i redigeraren exakt som det publiceras. Detta gör att författaren kan navigera i formuläret genom att klicka på länkar och knappar. När författaren är nöjd med redigeringarna kan han eller hon publicera formuläret för användare. Kortkommandon för att växla mellan redigerings- och förhandsgranskningsläge är `p`.
   ![Förhandsgranska](/help/edge/docs/forms/universal-editor/assets/ue-preview.png)
 
-* **Öppna sida**
-Med alternativet **Öppna sida** öppnas formuläret på en ny flik för förhandsgranskning. Kortkommandot för att öppna formuläret i förhandsgranskningsläge på en ny flik är `o`.
+- **Öppna sida**
+
+  Knappen **Öppna sida** öppnar formuläret på en ny webbläsarflik för förhandsgranskning. Detta ger en helskärmsvy av formuläret utan redigeringsgränssnittet. Kortkommandot för den här åtgärden är `o`.
+
   ![Öppna sida](/help/edge/docs/forms/universal-editor/assets/ue-openpage.png)
 
-* **Publicera**
+- **Publicera**
 
-  Med knappen **Publicera** kan du göra formuläret tillgängligt för användare i realtid.
-  ![Publicera](/help/edge/docs/forms/universal-editor/assets/ue-publish.png){width=50%,height=50%}
+  När formuläret är klart för användare gör knappen **Publicera** det tillgängligt för läsarna. Det här är det sista steget i arbetsflödet för att skapa formulär.
 
-* **Ellips**
-När författaren klickar på ellipsalternativet (..) visas alternativet **Avpublicera** . Du kan avpublicera ett formulär med alternativet **Avpublicera**.
-  ![Ellips](/help/edge/docs/forms/universal-editor/assets/ue-ellipsis.png){width=50%,height=50%}
+  ![Publicera](/help/edge/docs/forms/universal-editor/assets/ue-publish.png)
+
+- **Ellips-menyn**
+
+  Om du klickar på ellipsen (..) visas ytterligare alternativ, bland annat möjligheten att **Avpublicera** ett formulär som för närvarande är aktivt. Detta är användbart när du tillfälligt behöver ta bort ett formulär från den offentliga åtkomsten eller ersätta det med en uppdaterad version.
+
+  ![Ellips](/help/edge/docs/forms/universal-editor/assets/ue-ellipsis.png)
 
 ### Egenskapspanelen
 
-Panelen **Egenskaper** finns till höger om redigeraren. Här visas information om komponenten som är markerad i formulärets hierarki. Det är standardstrukturen när ingen komponent är markerad.
-![panelen Nyansegenskaper](/help/edge/docs/forms/universal-editor/assets/ue-properties-panel.png){width=50%,height=50%}
+**Egenskapspanelen** visas till höger i gränssnittet och sammanhangsberoende information visas baserat på vad du har valt i formuläret. När ingen komponent är markerad visas den övergripande formulärstrukturen.
 
+![Egenskapspanelen](/help/edge/docs/forms/universal-editor/assets/ue-properties-panel.png)
 
-Låt oss förstå var och en av komponenterna.
+Låt oss utforska de viktigaste komponenterna:
 
+- **Egenskapsläge**
 
-* **Egenskapsläge**
-I alternativet **Egenskaper** visas egenskaperna för den markerade komponenten i redigeraren. Bilden visar till exempel egenskaperna för den valda talindatakomponenten. Du kan ändra komponentens egenskaper med det här alternativet. Kortkommandot för att öppna komponentens egenskaper är `d`.
+  I **egenskapsläget** visas inställningar och alternativ för den markerade komponenten. Här kan du anpassa enskilda element i formuläret efter dina specifika behov. Kortkommandot för att öppna egenskaper för en markerad komponent är `d`.
 
-  ![ue-properties](/help/edge/docs/forms/universal-editor/assets/ue-properties.png){width=50%,height=50%}
+  ![Egenskaper](/help/edge/docs/forms/universal-editor/assets/ue-properties.png)
 
+- **Innehållsträd**
 
-* **Innehållsträd**
-Alternativet **Innehållsträd** visar formulärets hierarki. När författaren klickar på ett objekt i innehållsträdet markeras det och rullas till den komponenten. Kortkommandon för att växla mellan vyn för innehållsträdet är tangenten `f`.
+  **Innehållsträdet** visar formulärets hierarkiska struktur. Den här visuella representationen hjälper dig att förstå hur komponenterna är kapslade i varandra. Om du klickar på ett objekt i trädet markeras det i redigeraren och rullas till dess plats. Detta är särskilt användbart i komplexa formulär. Växla vyn för innehållsträdet med kortkommandot `f`.
 
-  ![Innehållsträdet](/help/edge/docs/forms/universal-editor/assets/ue-contenttree.png){width=50%,height=50%}
+  ![Innehållsträdet](/help/edge/docs/forms/universal-editor/assets/ue-contenttree.png)
 
+- **Generera variationer**
 
-* **Generera variationer**
-  **Generera variationer** använder artificiell intelligens för att skapa olika versioner av formulär baserat på specifika uppmaningar. Dessa instruktioner kan antingen tillhandahållas av Adobe eller utformas och hanteras av formulärförfattaren.
+  Funktionen **Generera variationer** använder artificiell intelligens för att skapa olika versioner av ditt formulär baserat på specifika uppmaningar. Det gör att du kan experimentera med olika metoder och utformningar utan att behöva skapa varje enskild variation manuellt. Frågorna kan tillhandahållas av Adobe eller anpassas av dig.
 
-  ![variation](/help/edge/docs/forms/universal-editor/assets/ue-variations.png){width=50%,height=50%}
-
+  ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
   >[!NOTE]
   >
-  > Instruktioner om hur du använder Generera variationer för formulär finns i artikeln [Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+  > Detaljerade instruktioner om hur du använder Generera variationer för formulär finns i artikeln [Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations).
 
-* **Experimentation**:
+- **Experimentation**
 
-  **Experimentation** avser tekniker som används för att testa olika variationer av formulär och layout för att optimera användarupplevelsen och prestandan.
-  ![experimenterande](/help/edge/docs/forms/universal-editor/assets/ue-experimentation.png){width=50%,height=50%}
+  Med funktionen **Experimentation** kan du köra kontrollerade tester som jämför olika formulärdesigner och layouter. Genom att analysera hur användarna interagerar med varje variant kan ni fatta datadrivna beslut för att optimera konverteringsgraden och användarupplevelsen.
 
+  ![Experimentation](/help/edge/docs/forms/universal-editor/assets/ue-experimentation.png)
 
-* **Personalization**
-Alternativet **Personalization** konfigurerar inställningarna för att upprätta en anslutning mellan formulären och Adobe Experience Platform (AEP) som är en del av Adobe ekosystem eller externa program.
-  ![Personalization](/help/edge/docs/forms/universal-editor/assets/ue-personalizaton.png){width=50%,height=50%}
+- **Personalization**
 
+  Med inställningarna för **Personalization** kan du ansluta dina formulär med Adobe Experience Platform (AEP) eller externa program. Med den här anslutningen kan ni skapa skräddarsydda formulärupplevelser baserat på användardata och beteenden, vilket ökar relevansen och engagemanget.
 
-* **A/B-testning**:
-  **A/B-testning** avser tekniker som används för att testa olika varianter av formulär och layout för att optimera användarupplevelsen och prestandan.
-  ![A/B-testning](/help/edge/docs/forms/universal-editor/assets/ue-abtesting.png){width=50%,height=50%}
+  ![Personalization](/help/edge/docs/forms/universal-editor/assets/ue-personalizaton.png)
 
+- **A/B-testning**
 
+  **A/B-testning** hjälper dig att jämföra specifika varianter av formuläret för att avgöra vilka som fungerar bäst. Till skillnad från bredare experiment fokuserar A/B-tester vanligtvis på att jämföra specifika element eller ändringar för att identifiera det mest effektiva alternativet.
 
-* **Aktivitetshantering**:
-Med funktionen **Uppgiftshantering** kan du effektivisera arbetsflöden och förbättra samarbetet genom att låta team hantera, spåra och utföra uppgifter som rör anpassning och optimering av formulär
-  ![aktivitetshantering](/help/edge/docs/forms/universal-editor/assets/ue-taskmanagement.png){width=50%,height=50%}
+  ![A/B-testning](/help/edge/docs/forms/universal-editor/assets/ue-abtesting.png)
 
-.
-* **Innehållsutkast**
+- **Aktivitetshantering**
 
-  Med alternativet **Innehållsutkast** kan du skapa utkast för RTF-element. Du kan skapa utkast med befintlig formulärtext eller från grunden. Du kan redigera eller ta bort utkast efter behov. Som standard visas bara tre utkast, men om du klickar på **Visa alla** visas resten.
+  Funktionen **Aktivitetshantering** effektiviserar samarbetet genom att hjälpa ditt team att organisera, spåra och slutföra uppgifter som rör skapande och optimering av formulär. Detta gör att projekten kan utvecklas effektivt med tydlig ansvarsskyldighet.
 
-  ![aktivitetshantering](/help/edge/docs/forms/universal-editor/assets/ue-contentdraft.png){width=50%,height=50%}
+  ![Aktivitetshantering](/help/edge/docs/forms/universal-editor/assets/ue-taskmanagement.png)
 
+- **Innehållsutkast**
 
-* **Data Source**
+  Med funktionen **Innehållsutkast** kan du skapa och spara preliminära versioner av textelement i formuläret. Du kan skapa utkast med befintlig formulärtext eller börja från början och sedan redigera eller ta bort dem efter behov. Som standard visas tre utkast, men om du klickar på **Visa alla** visas ytterligare utkast.
 
-  Med alternativet **Data Source** kan du konfigurera datakällor och välja dem när du skapar en formulärdatamodell (FDM). Den gör alla datamodellsobjekt, egenskaper och tjänster från de valda datakällorna tillgängliga för användning i formulärdatamodellen.
-  ![Data Source](/help/edge/docs/forms/universal-editor/assets/ue-datasource.png){width=50%,height=50%}
+  ![Innehållsutkast](/help/edge/docs/forms/universal-editor/assets/ue-contentdraft.png)
 
-* **Lägg till**
+- **Data Source**
 
-  Alternativet **Lägg till** öppnar en listruta med komponenter som kan läggas till i den valda behållaren. I ett adaptivt formulär visas t.ex. de tillgängliga komponenter som kan läggas till i ett formulär i listan. Kortkommandot för att öppna komponentlistan är `a`.
-  ![Lägg till ikon](/help/edge/docs/forms/universal-editor/assets/ue-add.png){width=50%,height=50%}
+  Med alternativet **Data Source** kan du konfigurera och välja datakällor för din formulärdatamodell (FDM). Den här integreringen gör alla datamodellsobjekt, egenskaper och tjänster från de valda källorna tillgängliga för användning i formuläret, vilket möjliggör dynamisk hämtning och överföring av data.
 
-* **Duplicera**
+  ![Data Source](/help/edge/docs/forms/universal-editor/assets/ue-datasource.png)
 
-  Alternativet **Duplicera** skapar en kopia av komponenten, som är markerad antingen i innehållsträdet eller i redigeraren.
-  ![Duplicera ikon](/help/edge/docs/forms/universal-editor/assets/ue-duplicate.png){width=50%,height=50%}
+- **Lägg till**
 
+  Knappen **Lägg till** visar en listruta med komponenter som kan läggas till i den markerade behållaren. Om du t.ex. markerar ett avsnitt med adaptiva formulär visas alla komponenter som kan läggas till i det avsnittet. Kortkommandot för att öppna komponentlistan är `a`.
 
-* **Ta bort**
-Med alternativet **Ta bort** tar du bort en komponent som är markerad i innehållsträdet eller redigeraren.
+  ![Lägg till ikon](/help/edge/docs/forms/universal-editor/assets/ue-add.png)
 
-  ![Ta bort](/help/edge/docs/forms/universal-editor/assets/ue-delete.png){width=50%,height=50%}
+- **Duplicera**
+
+  Med alternativet **Duplicera** skapas en exakt kopia av den markerade komponenten. Detta sparar tid när du behöver flera liknande element, eftersom du kan duplicera och sedan ändra i stället för att skapa från början.
+
+  ![Duplicera ikon](/help/edge/docs/forms/universal-editor/assets/ue-duplicate.png)
+
+- **Ta bort**
+
+  Alternativet **Ta bort** tar bort den markerade komponenten från formuläret. Var försiktig när du använder det här alternativet eftersom elementet omedelbart tas bort utan att någon bekräftelsefråga visas.
+
+  ![Ta bort](/help/edge/docs/forms/universal-editor/assets/ue-delete.png)
 
 ### Redigerare
 
-Med redigeraren kan du redigera formuläret, och formuläret som anges i platsfältet återges i redigeringsområdet. Om redigeraren är i förhandsgranskningsläge kan du navigera i formuläret med de tillgängliga knapparna och länkarna.
-![Redigeraren](/help/edge/docs/forms/universal-editor/assets/ue-editor.png){width=50%,height=50%}
+Redigeraren är den centrala arbetsytan där du skapar och ändrar formuläret. Formuläret som har angetts i platsfältet visas och en WYSIWYG-upplevelse visar exakt hur formuläret kommer att se ut för användarna. I förhandsgranskningsläget kan du interagera med formuläret på samma sätt som användarna gör och testa navigeringen med knappar och länkar.
 
-## Se även
+![Redigeraren](/help/edge/docs/forms/universal-editor/assets/ue-editor.png)
 
-{{universal-editor-see-also}}
+Det är i redigeraren som du tillbringar mycket tid med att lägga till komponenter, konfigurera deras egenskaper och ordna dem för att skapa en intuitiv och effektiv formulärupplevelse.
+
+## Sammanfattning av kortkommandon
+
+Kom ihåg följande viktiga kortkommandon för att öka produktiviteten:
+
+- `l` - Fokusera på platsfältet
+- `p` - Växla mellan redigerings- och förhandsgranskningslägen
+- `o` - Öppna formuläret på en ny flik
+- `d` - Öppna egenskaper för den markerade komponenten
+- `f` - Växla vyn för innehållsträdet
+- `a` - Öppna listan över komponenter som ska läggas till
+
+

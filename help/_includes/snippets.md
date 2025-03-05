@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3f656e592a4a7a46a1f868f8400f22fb47bcd160
+source-git-commit: babddee34b486960536ce7075684bbe660b6e120
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -252,3 +252,25 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
 >
 >* [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering av headless-innehåll.
 >* [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering av rubrikfritt innehåll.
+
+## Universal Editor{#ue-see-also}
+
+* [Skapa ditt första formulär med den universella redigeraren](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
+* [Lägg till dynamiskt beteende i Forms](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
+* [Konfigurera och anpassa formuläröverföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md)
+* [Publicera och distribuera Forms](/help/edge/docs/forms/universal-editor/publish-forms.md)
+* [Design Beautiful Forms: Styling and Theming Guide](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
+* [Skapa anpassade formulärkomponenter](/help/edge/docs/forms/universal-editor/create-custom-component.md)
+* [Skydda din Forms mot skräppost: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
+
+## Se även {#see-more-eds-forms}
+
+* [Kom igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/tutorial.md)
+* [Skapa ett formulär med Google eller Microsoft Excel](/help/edge/docs/forms/create-forms.md)
+* [Konfigurera dina Google-blad eller Microsoft Excel-filer så att du kan börja ta emot &#x200B;](/help/edge/docs/forms/submit-forms.md)
+* [Publicera formuläret och börja samla in data](/help/edge/docs/forms/publish-forms.md)
+* [Anpassa utseendet på &#x200B;](/help/edge/docs/forms/style-theme-forms.md)
+* [Lägga till repeterbara avsnitt i ett &#x200B;](/help/edge/docs/forms/repeatable-forms.md)
+* [Visa ett anpassat tackmeddelande efter att formuläret har skickats &#x200B;](/help/edge/docs/forms/thank-you-page-form.md)
+* [Komponenter för adaptiva formulärblock och deras egenskaper](/help/edge/docs/forms/form-components.md)
+* [Använda tjänsten Skicka formulär](/help/forms/forms-submission-service.md)

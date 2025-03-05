@@ -5,14 +5,17 @@ Keywords: Use form submission service, Submit form using form submission service
 feature: Edge Delivery Services
 Role: User, Developer
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: ae31df22c723c58addd13485259e92abb4d4ad54
+source-git-commit: babddee34b486960536ce7075684bbe660b6e120
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
-# Forms inlämningstjänst med Edge Delivery Services Forms
+# Forms Submission Service med Edge Delivery Services Forms
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
 
 Med tjänsten Forms Submission kan du lagra data från de inskickade formulären i alla kalkylblad, t.ex. OneDrive, SharePoint eller Google Sheets, så att du enkelt kan komma åt och hantera formulärdata på den kalkylbladsplattform du föredrar.
 
@@ -30,12 +33,12 @@ Några fördelar med att använda Forms Submission Service med kalkylblad är:
 
 Nedan visas förutsättningarna för att använda Forms Submission-tjänsten:
 
-* Kontrollera att ditt AEM har det senaste adaptiva formulärblocket.
+* Kontrollera att ditt AEM-projekt har det senaste adaptiva formulärblocket.
 * Se till att din Git-databas har lagts till på tillåtelselista för att använda Forms inskickningstjänst. [mailto:aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med ditt GitHub-organisationsnamn och databasnamn om du vill att de ska läggas till i tillåtelselista för att använda Forms överföringstjänst.
 
 ## Konfigurera tjänsten Forms Submit
 
-Skapa ett nytt AEM projekt som konfigurerats med Adaptiv Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
+Skapa ett nytt AEM-projekt som har konfigurerats med Adaptive Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM-projekt. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
 
 Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-submission-service-manually) eller [konfigurera Forms Submission Service med API](#configuring-the-forms-submission-service-using-api).
 
@@ -84,7 +87,7 @@ Så här konfigurerar du Forms Submission-tjänsten med Google Sheets eller Micr
 
    ![Länka ett kalkylblad](/help/forms/assets/form-submission-sheet-linking.png)
 
-1. Förhandsgranska och publicera bladet med hjälp av [AEM Sidekick](https://www.aem.live/docs/sidekick) med den uppdaterade tjänsten för inskickning av formulär.
+1. Förhandsgranska och publicera bladet med [AEM Sidekick](https://www.aem.live/docs/sidekick) med den uppdaterade tjänsten för formuläröverföring.
 
 >[!NOTE]
 >
@@ -100,9 +103,9 @@ Du kan också skicka en **POST**-begäran till formuläret för att uppdatera `i
 > * Dela bladet `incoming` med Adobe Experience Manager `forms@adobe.com` och ge redigeringsåtkomst.
 > * Förhandsgranska och publicera `incoming`-bladet i sidosparken.
 
-Mer information om hur du formaterar begäran om POST för att konfigurera bladet finns i [API-dokumentationen](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/references/aem-forms-submission-service/). Du kan titta på exemplet nedan:
+Mer information om hur du formaterar POST-begäran för att konfigurera bladet finns i [API-dokumentationen](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/references/aem-forms-submission-service/). Du kan titta på exemplet nedan:
 
-Du kan använda verktyg som curl eller Postman för att utföra den här begäran om POST, vilket visas nedan.
+Du kan använda verktyg som curl eller Postman för att utföra denna POST-begäran, vilket visas nedan.
 
 * **Använda Postman**:
 
@@ -181,7 +184,7 @@ Kör till exempel följande kommando i terminal eller kommandotolk när du har e
 
 >[!ENDTABS]
 
-Ovannämnda begäran om POST uppdaterar bladet `incoming` med följande svar:
+Ovannämnda POST-begäran uppdaterar `incoming`-bladet med följande svar:
 
 ```json
     < HTTP/1.1 201 Created
