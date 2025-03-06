@@ -1,12 +1,12 @@
 ---
-title: Versionsinformation för version 2023.2.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2023.2.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2023.2.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2023.2.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 671056e6-84cc-4c2c-bca3-fde68d5cc835
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: b4ffcddddfcd990c359380071f19b5442dee9eb2
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.2.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2021, 2022 och så vidare.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -46,10 +46,9 @@ Titta på videon med versionsöversikten från februari 2023 om du vill se en sa
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Stöd för nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
-   * Adaptiv strömning (DASH/HLS) ger en bättre användarupplevelse för videor
+* Stöd för nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) har startats för adaptiv strömning i Dynamic Media Video Delivery (med CMAF aktiverat):
+   * Adaptiv direktuppspelning (DASH/HLS) ger en bättre användarupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
-   * Finns i NA, att aktiveras via supportanmälan, kommer snart i APAC, EMEA
 
 * Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktioner för smarta taggar och smart beskärning stöds nu även för dessa filer.
 

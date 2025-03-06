@@ -1,12 +1,12 @@
 ---
-title: Versionsinformation för version 2023.4.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2023.4.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2023.4.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2023.4.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: c34aedee-e45a-4e2a-ae7f-930bc0cc026f
 feature: Release Information
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: b4ffcddddfcd990c359380071f19b5442dee9eb2
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1112'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.4.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -44,15 +44,15 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Nya funktioner i förhandsversionen av [!DNL Experience Manager Sites] {#prerelease-sites}
 
-* Innehållsfragment och deras referenser kan nu publiceras till [AEM förhandsvisningstjänsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html#access-preview-service) med [Content Fragment Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html), vilket gör att användarna kan förhandsgranska slutresultatet i ett fristående förhandsgranskningsprogram innan de publiceras.
+* Innehållsfragment och deras referenser kan nu publiceras till [AEM Preview Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html#access-preview-service) med [Content Fragment Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) så att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publiceras.
 * Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
-* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html) kan nu skrivas ut till JSON med hjälp av det AEM GraphQL-innehållsleverans-API:t.
+* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html) kan nu skrivas ut till JSON med AEM GraphQL-innehållets leverans-API.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktionen Smarta taggar stöds nu även för dessa filer. Dynamic Media-funktioner stöds inte för WebP som indataformat.
+* Stöd för WebP-bilder som automatiskt extraherar metadata, genererar miniatyrbilder och anpassade renderingar. Funktionen Smarta taggar stöds nu även för dessa filer. Dynamiska mediefunktioner stöds inte för WebP som indataformat.
 
 * [Förbättringar av sökupplevelsen](/help/assets/search-assets.md#aftersearch) - Nu kan du snabbt utföra följande åtgärder på resurserna som visas i sökresultaten:
 
@@ -64,16 +64,15 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 * Förbättrad användbarhet för färgsökningsaspekten - Indatafältet för färgvärden kan nu redigeras och sökresultaten uppdateras endast när du avslutar färgväljaren.
 
-* Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media (med CMAF aktiverat):
+* Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media-leverans (med CMAF aktiverat):
    * Adaptiv direktuppspelning (DASH/HLS) ger en bättre användarupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
-   * Tillgängligt i alla regioner, för att aktiveras via supportanmälan
 
-* Dynamic Media _Snapshot_ - Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare och utvärdera smarta bildoptimeringar för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och Device Pixel Ratio. Se [Dynamic Media-ögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+* Dynamic Media _Snapshot_ - Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika bildmodifierare och utvärdera optimeringarna av smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och enhetspixelproportioner. Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
 
 ### Funktion i förhandsversionen av [!DNL Assets] {#prerelease-feature-assets}
 
-* Dynamic Media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html#crop-options).
+* Dynamiska media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html#crop-options).
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -83,7 +82,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Funktioner i förhandsversionen av [!DNL Forms] {#prerelease-features-forms}
 
-* [Adaptiv Forms i AEM sidredigeraren](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md): Nu kan du använda AEM sidredigeraren för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
+* [Adaptiv Forms i AEM sidredigerare](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md): Nu kan du använda AEM sidredigerare för att snabbt skapa och lägga till flera formulär på webbplatsens sidor. Med den här funktionen kan skribenter skapa sömlösa datainhämtningsmöjligheter på webbplatssidor med hjälp av kraften i adaptiva formulärkomponenter, inklusive dynamiskt beteende, validering, dataintegrering, generering av dokument för post- och affärsprocessautomatisering. Du kan:
 
    * Skapa ett anpassat formulär genom att dra och släppa formulärkomponenter i den adaptiva Forms Container-komponenten i AEM Sites Editor eller Experience Fragments.
    * Använd Adaptive Forms Wizard i AEM Sites Editor för att skapa formulär oberoende av sajtsidor, vilket ger dig frihet att återanvända sådana formulär på flera sidor.
@@ -93,7 +92,7 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 * [Adobe Acrobat Sign Solutions för offentlig sektor](/help/forms/adobe-sign-integration-adaptive-forms.md): AEM Forms kan nu integreras med Adobe Acrobat Sign Solutions för offentlig sektor. Integreringen ger en avancerad nivå av regelefterlevnad och säkerhet för e-signaturer med inskickade adaptiva formulär för myndighetskonton (myndigheter och myndigheter).
 
-  Integrationen med Adobe Acrobat Sign for Government gör det möjligt för Adobe och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate-kompatibiliteten, vilket ger Adobe myndighetskunder sinnesro.
+  Integreringen med Adobe Acrobat Sign for Government gör det möjligt för Adobe partners och myndighetskunder att använda elektroniska signaturer i Adaptive Forms för några av de mest verksamhetskritiska och känsliga verksamhetsområdena. Detta extra säkerhetsskikt säkerställer att alla e-signaturer är helt kompatibla med FedRAMP Moderate och ger Adobe myndighetskunder sinnesro.
 
 * Förbättrad felhantering med anpassade felhanterare i regelredigeraren: Du kan nu anropa en anpassad funktion (med Klientbibliotek) som svar på ett fel som returnerats av en extern tjänst och ge ett skräddarsytt svar till slutanvändarna. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten inte fungerar.
 
@@ -114,7 +113,7 @@ Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från dit
 
 ### Nyheter {#what-is-new-foundation}
 
-* Ytterligare Publish-regioner: Webbplatskunder kan licensiera upp till tre publiceringsregioner utöver den primära regionen. Trafiken dirigeras till ytterligare publiceringsanläggningar, vilket leder till minskad fördröjning för vissa förfrågningar och ökad motståndskraft mot regionala avbrott. Kontakta kontohanteraren för Adobe om du vill ha information om hur du licensierar [ytterligare Publish-regioner](/help/operations/additional-publish-regions.md) för dina program.
+* Ytterligare publiceringsregioner: Webbplatskunder kan licensiera upp till tre publiceringsregioner utöver den primära regionen. Trafiken dirigeras till ytterligare publiceringsanläggningar, vilket leder till minskad fördröjning för vissa förfrågningar och ökad motståndskraft mot regionala avbrott. Kontakta din kontohanterare för Adobe för information om licensiering av [ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) för dina program.
 
 ## Versionsinformation om underhåll {#maintenance}
 
