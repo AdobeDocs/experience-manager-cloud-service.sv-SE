@@ -4,9 +4,9 @@ description: Lär dig mer om de olika händelser som den universella redigeraren
 exl-id: c9f7c284-f378-4725-a4e6-e4799f0f8175
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: fefbb01c786cc00a31602c4646ca8b015e16ed98
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -180,29 +180,6 @@ Svarsnyttolast
 
 ## UI-händelser {#ui-events}
 
-### aue:ui-publish {#ui-publish}
-
-Händelsen `aue:ui-publish` aktiveras när innehåll publiceras (med anrop på `BODY`-nivå).
-
-Nyttolasten är en lista över artikel-ID:n och deras publiceringsstatus.
-
-### aue:ui-select {#ui-select}
-
-Händelsen `aue:ui-select` utlöses när en komponent väljs.
-
-Nyttolasten är objekt-ID, objektegenskaper och objekttyp för den valda komponenten.
-
-```json
-{
-    details: {
-        resource: string;       // resource of the selected
-        prop: string;           // prop of the selected
-        type: string;           // type of the selected
-        selected: boolean;      // was selected or unselected
-    }
-}
-```
-
 ### aue:ui-preview {#ui-preview}
 
 Händelsen `aue:ui-preview` aktiveras när sidans redigeringsläge ändras till **Förhandsgranska**.
@@ -271,10 +248,9 @@ Nyttolasten är tom för den här händelsen.
 
 | Händelse | Beteende |
 |---|---|
-| `aue:ui-publish` | Gör ingenting |
 | `aue:ui-select` | Bläddra till det markerade elementet |
-| `aue:ui-preview` | Lägg till `class="adobe-ue-preview"` i taggen HTML |
-| `aue:ui-edit` | Lägg till `class=adobe-ue-edit"` i taggen HTML |
+| `aue:ui-preview` | Lägg till `class="adobe-ue-preview"` i HTML-tagg |
+| `aue:ui-edit` | Lägg till `class=adobe-ue-edit"` i HTML-tagg |
 | `aue:ui-viewport-change` | Gör ingenting |
 | `aue:initialized` | Gör ingenting |
 
