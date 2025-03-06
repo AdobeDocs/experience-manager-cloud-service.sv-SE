@@ -6,20 +6,18 @@ level: Intermediate
 feature: Adaptive Forms, Foundation Components, Core Components
 hide: true
 hidefromtoc: true
-source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
+source-git-commit: 08db35af78d46db42e6e2b373f7278753529c37e
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 0%
 
 ---
 
-
 # Använda kontrollpanelen för värdeberäkning för att analysera användningsmönster för formulär och dokument
 
 <span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com. <span>
 
-![Kontrollpanel för värdeberäkning](/help/edge/docs/forms/universal-editor/assets/forms-insights-banner.svg)
-
+![Instrumentpanel för värdeutjämning](/help/edge/docs/forms/universal-editor/assets/forms-insights-banner.svg)
 
 Genom att regelbundet övervaka mätvärdena som presenteras på kontrollpanelen&quot;Forms Usage Insights&quot; kan ni få värdefulla insikter om hur era formulär, dokument och formulärfragment fungerar. Använd dessa data för att fatta välgrundade beslut om formulärdesign, fragmenthantering och övergripande formulärstrategi.
 
@@ -33,7 +31,7 @@ Så här kommer du åt kontrollpanelen Forms Usage Insights:
 1. Navigera till **Forms** > **Forms och dokument**
 1. Klicka på **Insights Dashboard**. Kontrollpanelen öppnas i ett nytt fönster.
 
-   ![Kontrollpanel för värdeberäkning](/help/forms/assets/forms-usage-insights.png)
+   ![Instrumentpanel för värdeutjämning](/help/forms/assets/forms-usage-insights.png)
 
 ## Ökning
 
