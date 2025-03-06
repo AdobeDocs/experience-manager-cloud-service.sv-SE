@@ -3,7 +3,7 @@ title: Dynamic Media Prime och Ultimate
 description: Läs mer om Dynamic Media Prime och Ultimate, deras fördelar och skillnader mellan de båda.
 role: User
 exl-id: fd049d9c-7940-4638-a17a-21d1f85e9c52
-source-git-commit: 0c0d33b3e022ff0265220bf3106b888b83e8af99
+source-git-commit: 6ec63a4d1a1c0af71e597b18d5a52d0a53c94c8c
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 5%
@@ -28,13 +28,9 @@ Om du behöver Dynamic Media Basic-funktioner samt avancerade funktioner och til
 Några andra viktiga fördelar med Dynamic Media Prime:
 
 * Centraliserad hantering av digitala resurser
-
 * Realtidsuppdateringar som återspeglas i leverans-URL:er
-
 * Enhetliga varumärken
-
 * Webboptimerad bildleverans
-
 * Adaptiv videoströmning
 
 ### Förutsättningar {#pre-requisites-dm-prime}
@@ -57,9 +53,7 @@ Förutom Dynamic Media Prime-funktioner som AEM Assets-integrering med Adobe ell
 * [Dynamisk medielösning i AEM as a Cloud Service](/help/assets/dynamic-media/dynamic-media.md) som även innehåller följande nyckelfunktioner:
 
    * [Dynamiska mediamallar](/help/assets/dynamic-media/dynamic-media-templates.md)
-
    * [Grundläggande om mallar](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
-
    * [Visuell konfiguration](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
 
 ### Förutsättningar {#pre-requisites-dm-ultimate}
@@ -71,4 +65,3 @@ Förutom Dynamic Media Prime-funktioner som AEM Assets-integrering med Adobe ell
 Mer information om alla funktioner finns i [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) och [Arbeta med dynamiska media](/help/assets/dynamic-media/dynamic-media.md).
 
 Information om hur du aktiverar Dynamic Media Prime och Ultimate för din AEM as a Cloud Service-miljö finns i [Aktivera Dynamic Media Prime och Ultimate](/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md).
-

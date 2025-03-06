@@ -4,7 +4,7 @@ description: Lär dig hur du aktiverar  [!DNL Dynamic Media] Prime- och Ultimate
 feature: Asset Management
 role: User, Admin
 exl-id: 0ee161f5-bf44-41f1-928e-c07574fd43cc
-source-git-commit: 3962b687a7d0d3f5551b23fbe5c2ee2c21bd1d89
+source-git-commit: 6ec63a4d1a1c0af71e597b18d5a52d0a53c94c8c
 workflow-type: tm+mt
 source-wordcount: '978'
 ht-degree: 0%
@@ -28,9 +28,11 @@ Utför följande steg i molntjänstmiljön för att aktivera [!DNL Dynamic Media
 1. [Konfigurera [!DNL Dynamic Media] lösningar](#configure-dynamic-media-solutions)
 1. [Skapa och lista [!DNL Dynamic Media] företag](#create-and-list-dynamic-media-companies)
 1. [Konfigurera anpassad domän i leveransnivå](#configure-custom-domain-in-delivery-tier)
+
 <!--
 1. [Onboard API keys using the [!DNL AEM] [!DNL Dynamic Media] API card](#onboarding-api-keys)
 -->
+
 Om du behöver aktivera [!DNL Dynamic Media Prime] läser du snabblänkarna i [Aktivera [!DNL Dynamic Media Prime]](#enable-dynamic-media-prime).
 
 ### Aktivera [!DNL Dynamic Media with OpenAPI] {#activate-dynamic-media-with-openapi}
