@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 1105fedcf17cb74c9abec9de68485e1ef714ebbe
+source-git-commit: edfec41a9e33fbe818cb19f878ac42d435d62419
 workflow-type: tm+mt
-source-wordcount: '1393'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -122,19 +122,27 @@ AEM Forms API:er för dokumentgenerering gör nu att du kan [överföra generera
 
 ### Stöd för Java 21 {#java21}
 
-Nu kan du skapa kod med Java 21, som innehåller nya funktioner (t.ex. mönstermatchning för switch-satser, fasta klasser) och prestandaförbättringar. Java 17-byggen stöds också nyligen. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i artikeln [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support).
+Som nämndes i versionsinformationen för januari kan du nu skapa kod med Java 21, som innehåller nya funktioner (t.ex. mönstermatchning för switch-satser, fasta klasser) och prestandaförbättringar. Java 17-byggen stöds också nyligen. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i artikeln [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support).
 
 Den mer prestandaanpassade Java 21 **runtime** distribueras automatiskt när en Java 17- eller 21-version upptäcks. Vi rekommenderar dock att du går med i Java 21-miljön för miljöer som byggts med Java 11 genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com). Läs mer om [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
 
 >[!IMPORTANT]
 >
-> Java 21 **runtime** distribueras gradvis till **alla** -miljöer (förutom de som redan byggts med Java 17 eller 21, som redan har Java 21-körning), med början från sandlådor och dev/RDE i februari och sedan fas/produktion i april.
+> I februari distribuerades Java 21 **runtime** till dev-/RDE-miljöer (utöver de som redan byggts med Java 17 eller 21, som redan har Java 21-runtime). Java 21 kommer att användas i scen-/produktionsmiljöer i april.
 
-### Sandlådeprogram har stöd för konfigureringspipelines {#sandbox-config-pipelines}
+### Edge Computing - Request for Feedback! {#edge-computing-feedback}
 
-Sandlådeprogram har nu stöd för konfigureringspipelines, som kan konfigureras i Cloud Manager för att distribuera AML-filer som finns i Git.
+Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Adobe vill gärna veta om du tycker att den här tekniken är användbar för AEM Publish Delivery och Edge Delivery Services. Dessutom kan du tala om för oss vad du tänkt dig när du använder den som indata i produktfärdplanen.
 
-[Läs mer](/help/operations/config-pipeline.md) om konfigureringspipelines, som gör det möjligt att konfigurera CDN, vidarebefordra loggar och rensa/granska loggtömningsunderhållsaktiviteter.
+Några möjliga användningsexempel:
+* Autentisering med en IdP för att ge åtkomst till innehåll
+* Återge dynamiskt (personaliserat, lokaliserat) innehåll baserat på geopositionering, enhetstyp, användarattribut osv.
+* Avancerad bildbehandling
+* Mittprogram mellan CDN och ett ursprung
+* Ett lager mellan webbläsaren och ett tredjeparts-API, kanske för att formatera om API-svaret
+* Samla in data från flera källor för att göra det enklare för klientwebbläsaren att återge dem
+
+Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
 
 ### OpenAPI-baserade API:er - tidigt Adobe-program {#open-apis-earlyadopter}
 
@@ -148,10 +156,6 @@ De API-slutpunkter som anges nedan är tillgängliga som en del av ett program f
 * [Assets API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)
 * [Webbplatser och API:er för Assets-mappar](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)
 * [Forms Communications API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)
-
-### Edge Computing - Request for Feedback! {#edge-computing-feedback}
-
-Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Adobe vill gärna veta om du tycker att den här tekniken är användbar för AEM Publish Delivery och Edge Delivery Services. Dessutom kan du tala om för oss vad du tänkt dig när du använder den som indata i produktfärdplanen. Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
 
 ### Nya AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 
