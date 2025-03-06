@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
+source-git-commit: 6a907b3d3241010e152669a70dec405215fbc6b1
 workflow-type: tm+mt
-source-wordcount: '6228'
+source-wordcount: '6239'
 ht-degree: 2%
 
 ---
@@ -586,6 +586,8 @@ ht-degree: 2%
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/administering-dynamic-media.md)
       + [Arbeta med Dynamic Media](/help/assets/dynamic-media/dynamic-media.md)
       + [Konfigurera Dynamic Media](/help/assets/dynamic-media/config-dm.md)
+      + [Dynamic Media Prime och Ultimate](/help/assets/dynamic-media/dm-prime-ultimate.md)
+      + [Aktivera Dynamic Media Prime och Ultimate](/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md)
       + [Valfritt - Konfigurera dynamiska media, allmänna inställningar](/help/assets/dynamic-media/dm-general-settings.md)
       + [Valfritt - Konfigurera Dynamic Media, Publiceringsinställningar](/help/assets/dynamic-media/dm-publish-settings.md)
       + [Felsöka dynamiska media](/help/assets/dynamic-media/troubleshoot-dm.md)
@@ -892,7 +894,7 @@ ht-degree: 2%
    + Transaktionsrapporter {#using-communications}
       + [Fakturerbara API:er för transaktionsrapporter](/help/forms/transaction-reports-billable-apis.md)
       + [Registrera en transaktion för en anpassad implementering](/help/forms/record-transaction-custom-implementation.md)
-   + Instrumentpanel för värdeberäkning {#vr-dashboard}
+   + Instrumentpanel för värdeåterställning {#vr-dashboard}
       + [Förstå kontrollpanelen för värderealisering](/help/forms/aem-forms-value-realization-dashboard.md)
       + [Använda kontrollpanelen för värdeberäkning för att analysera användningsmönster för formulär och dokument](/help/forms/using-the-value-realization-dashboard.md)
    + API-referens för utvecklare {#aem-forms-developer-api-reference}
