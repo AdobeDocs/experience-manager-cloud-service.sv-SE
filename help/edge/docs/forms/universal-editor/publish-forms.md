@@ -4,7 +4,7 @@ description: Publicera dina Edge Delivery Services-formulär snabbt och smidigt.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: ba1c608d-36e9-4ca1-b87b-0d1094d978db
-source-git-commit: 744f505c8e97b6ca6947b685ddb1eba41b370cfa
+source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Publicera ditt adaptiva formulär på Edge Delivery Services
 
-<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
 
 När formuläret är klart och klart kan du publicera det för att göra det tillgängligt för dina kunder för datainsamling och inlämning. Publiceringen säkerställer att formuläret är tillgängligt i Edge Delivery, så att användarna kan interagera med det smidigt. Detta gör att kunderna kan fylla i och skicka in formuläret i realtid, vilket ger effektiv datainhämtning och smidig behandling.
