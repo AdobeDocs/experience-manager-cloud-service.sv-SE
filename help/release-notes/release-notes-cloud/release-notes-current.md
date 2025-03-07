@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: edfec41a9e33fbe818cb19f878ac42d435d62419
+source-git-commit: 896a2927c0f5733ab23ca9f6c9e975f8388daff9
 workflow-type: tm+mt
 source-wordcount: '1419'
 ht-degree: 0%
@@ -46,25 +46,23 @@ Have a look at the February 2025 Release Overview video for a summary of the fea
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
-
 ### Nya funktioner i AEM Sites {#new-features-sites}
 
-** Automatisk taggning av innehållsfragment **
+**Automatisk taggning för innehållsfragment**
 
 När du skapar innehållsfragment kan du nu automatiskt ärva taggar som har tilldelats innehållsmodellen. Detta möjliggör kraftfull automatisk klassificering av innehåll som lagras i innehållsfragment.
 
-** UUID-stöd för innehållsfragment **
+**Stöd för UUID för innehållsfragment**
 
 Stöd för Content Fragment UUID är nu GA. Den nya funktionen ändrar inte det banbaserade beteendet för åtgärder i AEM, till exempel move, rename, rollout, där banorna automatiskt justeras, men det kan göra det enklare och stabilare att använda externa innehållsfragment, särskilt när du använder GraphQL-frågor som direkt riktar in enskilda fragment med ByPath-frågor. Sådana frågor kan brytas om en fragmentsökväg ändras. När du använder den nya ById-frågetypen är frågan nu stabil eftersom UUID för ett fragment inte ändras i fall där sökvägar gör det.
 
-** Dynamiska medier med stöd för OpenAPI i Content Fragment Editor och GraphQL **
+**Dynamiska media med stöd för OpenAPI i Content Fragment Editor och GraphQL**
 
 Assets som lagras i andra AEM as a Cloud Service-program än Content Fragments, och som aktiveras med nya Dynamic Media med OpenAPI-funktioner, kan nu användas i Content Fragments. Bildväljaren i den nya Content Fragment Editor tillåter nu att du väljer &quot;fjärrdatabaser&quot; som källa för bildresurser som ska refereras i fragmentet. När sådana innehållsfragment levereras med AEM GraphQL, innehåller JSON-svaret nu nödvändiga egenskaper för fjärrresurser (assetId, databaseId) så att klientapplikationer kan skapa respektive Dynamic Media med OpenAPI-URL:er för att hämta bilden.
 
-** HTTP API för översättning **
+**Översättnings-HTTP API**
 
 AEM Translation HTTP REST API som har varit i läget tidig adopter ett tag är nu GA. Dokumentation finns [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/translation/). API:t gör det möjligt att automatisera nödvändiga steg i översättningshanteringsprocessen för innehåll i AEM.
-
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
