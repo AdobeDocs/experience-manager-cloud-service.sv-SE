@@ -6,9 +6,9 @@ role: Admin, Developer, Leader, User
 hide: true
 hidefromtoc: true
 exl-id: 9405ebd4-ae40-4edd-8f74-58eb421ab1b9
-source-git-commit: 08db35af78d46db42e6e2b373f7278753529c37e
+source-git-commit: 09d383638d6caba596d22a7c6b544768de5245a0
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '511'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,6 @@ Den här instrumentpanelen är ditt fönster mot hur formuläret används. Här 
 * **Skicka formulär**: Se trender för hur ofta formulären fylls i.
 * **Dokumentåtergivningar**: Spåra antalet dokument som återges över tid.
 * **Forms har skapats och publicerats**: Övervaka hastigheten med vilken nya formulär skapas och distribueras.
-* **Tider för att skapa och publicera formulär**: Analysera den genomsnittliga tiden för att skapa och publicera formulär för att identifiera områden som ska förbättras.
 
 ### Fragmentanvändning
 
