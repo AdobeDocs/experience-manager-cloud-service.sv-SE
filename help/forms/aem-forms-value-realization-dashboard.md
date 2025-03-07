@@ -1,14 +1,14 @@
 ---
-title: AEM Forms värdeberäkningspanel
-description: Övervaka enkelt formulärinlämningar på dina AEM Forms-instanser med vår intuitiva kontrollpanel.
+title: Kontrollpanel för AEM Forms Value Realization
+description: Övervaka enkelt formulärinlämningar i AEM Forms-instanser med en intuitiv kontrollpanel.
 feature: Adaptive Forms, Foundation Components, Core Components
 role: Admin, Developer, Leader, User
 hide: true
 hidefromtoc: true
 exl-id: 9405ebd4-ae40-4edd-8f74-58eb421ab1b9
-source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
+source-git-commit: 08db35af78d46db42e6e2b373f7278753529c37e
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,7 @@ ht-degree: 0%
 
 Välkommen till er heltidsbutik för att förstå vilket värde era formulär ger! Den här instrumentpanelen ger dig värdefulla insikter för att optimera formulär, effektivisera arbetsflöden och i slutänden uppnå dina mål snabbare.
 
-Den här artikeln innehåller en konceptuell översikt över instrumentpanelen för värdealisering och dess fördelar. Detaljerade användningsinstruktioner och metrisk tolkning finns i [Tolka insikter om formuläranvändning med kontrollpanelen Värdeåteralisering](/help/forms/using-the-value-realization-dashboard.md).
-
-
+Den här artikeln innehåller en konceptuell översikt över instrumentpanelen för värdealisering och dess fördelar. Detaljerade användningsinstruktioner och metrisk tolkning finns i [Använda kontrollpanelen för värdeberäkning för att analysera användningsmönster för formulär och dokument](/help/forms/using-the-value-realization-dashboard.md).
 
 
 ## Vad finns på instrumentpanelen? {#content-of-dashboard}
@@ -50,7 +48,7 @@ Den här instrumentpanelen är ditt fönster mot hur formuläret används. Här 
 
 Med denna kontrollpanel kan ni fatta datadrivna beslut om era formulär. Så här:
 
-* **Identifiera populära Forms**: Höga överföringshastigheter indikerar värdefulla formulär. Analysera dessa för att hitta de bästa metoderna att återskapa i andra.
+* **Identifiera populära Forms**: Höga överföringshastigheter indikerar värdefulla formulär. Analysera de här formulären för att hitta de bästa metoderna att återge i andra.
 * **Optimera skapandet av formulär**: Minska tiden det tar att skapa formulär genom att identifiera flaskhalsar. Utforska färdiga mallar eller effektiva arbetsflöden.
 * **Öka återanvändning av fragment**: Uppmuntra samarbete och upptäckbarhet av återanvändbara fragment. Välorganiserade fragmentbibliotek kan öka effektiviteten avsevärt.
 
@@ -77,4 +75,4 @@ Kom ihåg att den här instrumentpanelen är din allierade! Genom att använda d
 
 ## Se även
 
-* [Använda kontrollpanelen för att analysera användningsmönster för Forms och dokument](/help/forms/using-the-value-realization-dashboard.md)
+* [Analysera användningsmönster för Forms och dokument med hjälp av kontrollpanelen](/help/forms/using-the-value-realization-dashboard.md)
