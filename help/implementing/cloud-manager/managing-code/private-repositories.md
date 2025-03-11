@@ -4,16 +4,26 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 7097ec755ff41d5440de62a757bf036ae336de67
+source-git-commit: 7ce39020870943243e2d48aa66370f2cca9c2ac0
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
-# Lägga till en privat GitHub-databas i Cloud Manager {#private-repositories}
+# Lägg till en privat GitHub Cloud-databas i Cloud Manager {#private-repositories}
 
-Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-databaser kan du validera koden direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att synkronisera koden regelbundet med Adobe-databasen.
+Genom att konfigurera Cloud Manager för integrering med ditt privata GitHub-moln (databaser på `github.com`) kan du validera din kod direkt i GitHub med Cloud Manager. Den här konfigurationen eliminerar behovet av att synkronisera koden regelbundet med Adobe-databasen.
+
+>[!NOTE]
+>
+>Du kan även lägga till följande typer av databaser med webbhooks:
+>
+>* GitHub Enterprise Server-databaser (värdbaserad version av GitHub)
+>* GitLab-databaser (både `gitlab.com` och självhanterade versioner av GitLab)
+>* Bitbucket-databaser (både `bitbucket.org` och Bitbucket Server, den självhanterade versionen av BitBucket)
+>
+>Se [Lägg till externa databaser i Cloud Manager - begränsad betaversion](/help/implementing/cloud-manager/managing-code/external-repositories.md).
 
 <!-- CONSIDER ADDING MORE DETAIL... THE WHY. Some key points about this capability include the following:
 
@@ -25,23 +35,22 @@ Genom att konfigurera Cloud Manager för integrering med dina privata GitHub-dat
 
 * **CI/CD Pipelines**: Teams can still benefit from Adobe Cloud Manager's automated build, test, and deployment processes, as the integration allows the CI/CD pipelines to pull code from the organization's own GitHub repository.
 
-In essence, a "Build your own GitHub" in Adobe Cloud Manager empowers teams to manage their own GitHub repositories while still using the robust deployment and validation capabilities of Cloud Manager. -->
+In essence, a "Build your own GitHub" in Adobe Cloud Manager empowers teams to manage their own GitHub repositories while still using the robust deployment and validation capabilities of Cloud Manager.
 
 >[!NOTE]
 >
->Den här funktionen är exklusiv för public GitHub. Det finns inget stöd för GitHub som är självvärd.
+>This feature is exclusive to public GitHub. Support for self-hosted GitHub is not available. -->
 
 ## Konfiguration {#configuration}
 
-Konfigurationen av en privat GitHub-databas i Cloud Manager består av två steg:
+Konfigurationen av en privat GitHub Cloud-databas i Cloud Manager består av två steg:
 
-1. [Lägg till en privat GitHub-databas](#add-repo) i ett valt program.
-1. [validera sedan ägarskapet för den privata GitHub-databasen](#validate-ownership).
+1. [Lägg till en privat GitHub-molndatabas](#add-repo) i ett valt program.
+1. [validera sedan ägarskapet för den privata GitHub-molndatabasen](#validate-ownership).
 
->[!NOTE]
->Cloud Manager har endast stöd för privata databaser i GitHub Cloud (github.com). <!-- As per request in https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=DMSArchitecture&title=%5B2025%5D+Cloud+Manager+-+Bring+Your+Own+Git+-+Pull+Request+validator+for+multiple+vendors -->
 
-### Lägga till en privat GitHub-databas i ett program {#add-repo}
+
+### Lägg till en privat GitHub Cloud-databas i ett program {#add-repo}
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -110,11 +119,11 @@ Om du behöver gå tillbaka till databasen senare för att slutföra valideringe
 
 
 
-## Använd privata GitHub-databaser med Cloud Manager {#using}
+## Använd privata GitHub Cloud-databaser med Cloud Manager {#using}
 
 När GitHub-databasen har validerats i Cloud Manager är integreringen klar. Du kan använda databasen med Cloud Manager.
 
-**Så här använder du privata databaser med Cloud Manager:**
+**Så här använder du privata GitHub Cloud-databaser med Cloud Manager:**
 
 1. När du skapar en pull-begäran startas en GitHub-kontroll automatiskt.
 
@@ -138,7 +147,7 @@ När pull-begäran sammanfogas eller stängs, tas den fullständiga stackkodens 
 
 
 
-## Associera privata databaser med rörledningar {#pipelines}
+## Associera privata GitHub Cloud-databaser med rörledningar {#pipelines}
 
 Validerade privata databaser kan associeras med [rörledningar i full hög och i framtend](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
@@ -146,12 +155,12 @@ Validerade privata databaser kan associeras med [rörledningar i full hög och i
 
 ## Begränsningar {#limitations}
 
-Vissa begränsningar gäller när du använder privata databaser med Cloud Manager.
+Vissa begränsningar gäller när du använder privata GitHub Cloud-databaser med Cloud Manager.
 
 * Rörledningar för webbnivå och konfiguration stöds inte i privata databaser.
 * Ingen Git-tagg skapas och skickas när privata databaser används i produktion av rörledningar i en hel hög.
 * Om Adobe GitHub-appen tas bort från din GitHub-organisation tas funktionen för pull-begärandevalidering bort för alla databaser.
-* Pipeliner som använder privata databaser och utlösaren för att implementera startas inte automatiskt när en ny implementering överförs till den valda grenen.
+* Pipeliner som använder privata GitHub Cloud-databaser och utlösaren för att implementera startas inte automatiskt när en ny implementering överförs till den valda grenen.
 * [Återanvändning av felaktigheter](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) gäller inte för privata databaser.
 * Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager.
 Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.
