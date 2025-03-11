@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en extern databas i Cloud Manager. Clo
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: 7ce39020870943243e2d48aa66370f2cca9c2ac0
+source-git-commit: bfa059ed4e3f04ae6ee1e07910edc62635b03e5a
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -136,6 +136,9 @@ Klistra in URL:en i en vanlig textfil. Den kopierade URL:en krävs för din Git-
 Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs för din Git-leverantörs webkrok-inställningar.
 1. Klicka på **Stäng**.
 1. Navigera till din Git-leverantörslösning (GitHub Enterprise, GitLab eller Bitbucket).
+
+   All information om webbkrokkonfigurationen och de händelser som krävs för varje leverantör finns i [Lägg till en extern databas](#add-ext-repo). Se tabellen under steg 8.
+
 1. Leta upp lösningsavsnittet **Webkrok** Settings.
 1. Klistra in webkroks-URL:en som du kopierade tidigare i URL-textfältet.
    1. Ersätt frågeparametern `api_key` i webkrok-URL:en med din egen riktiga API-nyckel.
@@ -145,11 +148,6 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
 1. Klistra in webbkrokhemligheten som du kopierade tidigare i textfältet **Hemlig** (eller **Hemlig nyckel** eller **Hemlig token**).
 1. Konfigurera webkroken så att rätt händelser skickas som Cloud Manager förväntar.
 
-   All information om webkroskonfigurationen och de händelser som krävs för varje leverantör finns på följande plats:
-
-   * [Konfigurera webbhooks för GitHub Enterprise Server](https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/create-new-github-pat?id=webhook-events).
-   * [Konfigurera webbhooks för GitLab](https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/create-new-gitlab-pat?id=webhook-events).
-   * [Konfigurera webhooks för Bitbucket](https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/create-new-bitbucket-pat?id=webhook-events).
 
 ### Validering av pull-begäranden med webhooks
 
