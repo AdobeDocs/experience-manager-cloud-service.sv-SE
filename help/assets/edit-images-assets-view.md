@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Redigera bilder i [!DNL Assets view] {#edit-images-in-assets-view}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
 
-Assets vygränssnitt möjliggör grundläggande bildredigering som bygger på Adobe Express och är integrerad i användargränssnittet. Den här redigeringen inkluderar storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format. Dessutom går det att redigera Adobe Expressen avancerat via användargränssnittet i Assets-vyn.
+Assets vygränssnitt möjliggör grundläggande bildredigering med Adobe Express i botten, integrerad i användargränssnittet. Den här redigeringen inkluderar storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG- och PNG-format. Dessutom går det att redigera i Adobe Express-gränssnittet Inbäddat i Assets-visningsgränssnittet.
 
 När du har redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga resursen senare om det behövs. Om du vill redigera en bild [öppnar du förhandsvisningen](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klickar på **Redigera bild**.
 
@@ -38,13 +38,13 @@ Ytterligare referensinformation finns i - [Kom igång med Adobe Experience Manag
 
 ### Redigera bild i Assets View med Adobe Express {#edit-image-on-assets-view-using-adobe-express}
 
-Klicka på **Assets**, markera en bild och sedan på **Redigera** i den övre listen när du har navigerat till Assets-vyn. På den nya skärmen visas de tillgängliga redigeringsalternativen som bygger på Adobe Express, bland annat storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG och PNG-format.
+Klicka på **Assets**, markera en bild och sedan på **Redigera** i den övre listen när du har navigerat till Assets-vyn. På den nya skärmen visas de tillgängliga redigeringsalternativen som bygger på Adobe Express, bland annat storleksändring, borttagning av bakgrund, beskärning och konvertering mellan JPEG- och PNG-format.
 
 #### Ändra bildstorlek {#resize-image-using-express}
 
 Att ändra storlek på en bild till en viss storlek är ett vanligt användningsexempel. I Assets View kan du snabbt ändra storlek på bilder så att de passar de vanliga fotostorlekarna genom att tillhandahålla förberäknade nya upplösningar för specifika fotostorlekar. Följ stegen nedan om du vill ändra storlek på bilden med Assets View:
 
-1. Klicka på **Ändra storlek på bild** i den vänstra rutan. I en dialogruta visas hur du ändrar storlek på bilder baserat på Adobe Express.
+1. Klicka på **Ändra storlek på bild** i den vänstra rutan. I en dialogruta visas hur du ändrar storlek på bilder med Adobe Express.
 1. Välj lämplig plattform för sociala medier i listrutan Ändra storlek och välj bildstorlek bland de alternativ som visas.
 1. Skala bilden, om det behövs, med fältet **Bildskala**.
 1. Klicka på **[!UICONTROL Apply]** för att tillämpa ändringarna.
@@ -75,7 +75,7 @@ Den beskurna bilden kan hämtas. Du kan antingen spara den redigerade resursen s
 
 #### Konvertera JPEG till PNG {#convert-image-types-using-express}
 
-Du kan snabbt konvertera mellan bildformaten JPEG och PNG med Adobe Express. Utför följande steg:
+Du kan snabbt konvertera mellan JPEG- och PNG-bildformat med Adobe Express. Utför följande steg:
 
 1. Klicka på **JPEG till PNG** eller **PNG till JPEG** i den vänstra rutan.
    <!--![Convert to PNG with Adobe Express](/help/using/assets/adobe-express-convert-image.png)-->
@@ -86,7 +86,7 @@ Du kan snabbt konvertera mellan bildformaten JPEG och PNG med Adobe Express. Utf
 * Bildupplösning som stöds: Minimal - 50 pixlar, Maximal - 6 000 pixlar per dimension.
 * Största filstorlek som stöds: 17 MB.
 
-### Redigera bilder i Adobe Expressens inbäddade redigerare {#edit-images-in-adobe-express-embedded-editor}
+### Redigera bilder i Adobe Express inbäddade redigerare {#edit-images-in-adobe-express-embedded-editor}
 
 Användare med Express-berättigande kan använda den inbäddade Express-redigeraren inifrån Assets View för att enkelt redigera innehåll och skapa nytt innehåll med GenAI från Adobe Firefly. Den här funktionen förbättrar återanvändning av innehåll och snabbar upp innehållets hastighet. Du kan också använda fördefinierade element för att få dina resurser att se fantastiska ut eller utföra snabba åtgärder för att redigera bilden med bara några klick.
 
@@ -124,7 +124,7 @@ Följ stegen nedan om du vill redigera bilder med den inbäddade [!DNL Adobe Exp
 
 Med [!DNL Assets view] kan du skapa en ny mall från grunden med den inbäddade [!DNL Adobe Express]-redigeraren. Så här skapar du en ny resurs med [!DNL Adobe Express]:
 
-1. Navigera till **[!UICONTROL My Workspace]** och klicka på **[!UICONTROL Create]** i Adobe Expressens banderoll som visas högst upp. [!DNL Adobe Express] tom arbetsyta visas i användargränssnittet för [!DNL Assets view].
+1. Navigera till **[!UICONTROL My Workspace]** och klicka på **[!UICONTROL Create]** i den Adobe Express-banderoll som visas högst upp. [!DNL Adobe Express] tom arbetsyta visas i användargränssnittet för [!DNL Assets view].
 1. Skapa ditt innehåll med [Mallar](https://helpx.adobe.com/in/express/using/work-with-templates.html). I annat fall går du till **[!UICONTROL Your Stuff]** för att ändra befintligt innehåll.
 1. Klicka på **[!UICONTROL Save]** när du är klar med redigeringen.
 1. Ange målsökväg för den skapade resursen och klicka på **[!UICONTROL Save as new asset]**.
@@ -203,5 +203,5 @@ TBD: Insert a video of the available social media options.
 
 >[!MORELIKETHIS]
 >
->* [Snabbåtgärder i Adobe Expressen](https://helpx.adobe.com/in/express/using/resize-image.html)
+>* [Snabbåtgärder i Adobe Express](https://helpx.adobe.com/in/express/using/resize-image.html)
 >* [Visa versionshistorik för en resurs](navigate-assets-view.md)

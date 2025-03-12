@@ -19,12 +19,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app"
 >title="Anpassa innehåll i en exempelapp för React"
->abstract="Din AEM headless-testversion är integrerad med en React-app som du kan anpassa."
+>abstract="Din AEM headless-testversion är integrerad med en React-exempelapp som du kan anpassa."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app_guide"
 >title="Starta redigeraren för innehållsfragment"
->abstract="Nu ska vi utforska hur headless content authoring fungerar. Din AEM headless-testversion är integrerad med en React-app så att du kan se hur enkelt det är för alla att hantera innehåll utan utvecklingstid.<br><br>Starta den här modulen på en ny flik genom att klicka nedan och följ sedan den här guiden."
+>abstract="Nu ska vi utforska hur headless content authoring fungerar. Din AEM headless-testversion är integrerad med ett exempel på React-app så att du kan se hur enkelt det är för alla att hantera innehåll utan utvecklingstid.<br><br>Starta den här modulen på en ny flik genom att klicka nedan och följ sedan den här guiden."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_react_app_guide_footer"
@@ -33,7 +33,7 @@ ht-degree: 0%
 
 ## Förhandsgranska appen {#preview}
 
-Du börjar i Content Fragment-redigeraren med exempelappen som medföljer AEM Headless-testversion redan inläst. Exempelappen drivs av innehållsfragment som levereras via GraphQL. Använd Content Fragment-redigeraren för att bekanta dig med redigeraren genom att förhandsgranska exempelappen.
+Du börjar i Content Fragment-redigeraren med exempelappen som medföljer din AEM Headless-testversion inläst. Exempelappen drivs av innehållsfragment som levereras via GraphQL. Använd Content Fragment-redigeraren för att bekanta dig med redigeraren genom att förhandsgranska exempelappen.
 
 1. Välj knappen **Förhandsgranska** längst upp till höger på redigeringsskärmen.
 
@@ -63,7 +63,7 @@ Innehållsfragmentsredigeraren visar programmets grundläggande layout som ett s
 
    ![Förhandsgranskning av demoapp](assets/do-not-localize/edit-header-5-6.png)
 
-Så enkelt är det att uppdatera innehåll i en React-app när den är integrerad i AEM headless CMS.
+Så enkelt är det att uppdatera innehåll i en React-app när den är integrerad i AEM Headless CMS.
 
 ## Växla en bild i appen {#change-image}
 
@@ -91,7 +91,7 @@ Nu när du har ändrat en rubrik i appen kan du prova att ändra en bild.
 
 1. Välj **Förhandsgranska** längst upp till höger i fönstret för att se ändringarna. Förhandsgranskningen av demoappen öppnas på en ny flik. Klicka på Uppdatera i webbläsaren så ser du din nya bikerbild med gula kortkommandon i appen.
 
-Det är så enkelt att uppdatera bilder och resurser i apparna med AEM headless CMS.
+Det är så enkelt att uppdatera bilder och resurser i dina appar med AEM Headless CMS.
 
 ## Lägg till en referens till ett nytt innehållsfragment i appen {#create-moment}
 

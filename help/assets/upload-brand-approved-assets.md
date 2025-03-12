@@ -15,9 +15,9 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="upload_assets_content_hub"
 >title="Överför varumärkesgodkända mediefiler till Content Hub"
->abstract="Lägg till godkända resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från datakällorna OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett mappstrukturen, för att förbättra sökfunktionerna."
+>abstract="Lägg till godkända mediefiler i Content Hub antingen från det lokala filsystemet eller importera mediefiler från OneDrive eller Dropbox datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett mappstrukturen, för att förbättra sökfunktionerna."
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
+| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
 | ------------- | --------------------------- |---------|----|-----|
 
 >[!AVAILABILITY]
@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
-[Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från datakällor i OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna OneDrive och Dropbox för att förbättra sökfunktionerna.
+[Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från OneDrive eller Dropbox-datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna i OneDrive och Dropbox, vilket förbättrar sökfunktionerna.
 
 Resurserna som markerats som `Approved` i Assets as a Cloud Service är automatiskt tillgängliga i Content Hub. Mer information finns i [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md).
 
@@ -63,7 +63,7 @@ Så här lägger du till resurser i Content Hub:
 
 1. Definiera namnet på din överföring med fältet **[!UICONTROL Campaign name]**. Du kan använda ett befintligt namn eller skapa ett nytt. I Content Hub finns fler alternativ när du skriver namnet. <!--You can define multiple Campaign names for your upload. While you are typing a name, either click anywhere else within the dialog box or press the `,` (Comma) key to register the name.-->
 
-   Som en god praxis rekommenderar Adobe att du anger värden i resten av fälten, liksom att du får en förbättrad sökupplevelse för dina överförda resurser.
+   Adobe rekommenderar att du anger värden i resten av fälten och skapar en förbättrad sökupplevelse för dina överförda resurser.
 
 1. Definiera värden för fälten **[!UICONTROL Keywords]**, **[!UICONTROL Channels]**, **[!UICONTROL Timeframe]** och **[!UICONTROL Region]**. Genom att tagga och gruppera resurser efter nyckelord, kanaler och plats kan alla som använder ditt godkända företagsinnehåll hitta och ordna mediefilerna.
 
@@ -76,11 +76,11 @@ Administratörer kan också konfigurera obligatoriska och valfria fält som visa
 
 ## Lägga till resurser i Content Hub från datakällor i OneDrive eller Dropbox {#add-assets-onedrive-dropbox}
 
-Så här lägger du till resurser i Content Hub från datakällor i OneDrive eller Dropbox:
+Så här lägger du till resurser till Content Hub från datakällor i OneDrive eller Dropbox:
 
 1. Klicka på **[!UICONTROL Add Assets]** om du vill visa dialogrutan **[!UICONTROL Add your approved assets]** där du kan importera resurser från OneDrive eller Dropbox.
 
-1. Klicka på **[!UICONTROL OneDrive]** eller **[!UICONTROL Dropbox]** för att starta importprocessen. Content Hub uppmanar dig att logga in på ditt OneDrive- eller Dropbox-konto och visar sedan mappstrukturen OneDrive eller Dropbox i den vänstra rutan.
+1. Klicka på **[!UICONTROL OneDrive]** eller **[!UICONTROL Dropbox]** för att starta importprocessen. Content Hub uppmanar dig att logga in på ditt OneDrive- eller Dropbox-konto och visar sedan mappstrukturen för OneDrive eller Dropbox i den vänstra rutan.
 
 1. Klicka på ikonen + bredvid filen eller mappnamnet för att visa objektet i listan med valda objekt. När du har valt alla filer som du behöver lägga till i Content Hub-portalen upprepar du steg 3 till 6 i [Lägg till resurser i Content Hub från det lokala filsystemet](#add-assets-local-file-system) för att slutföra överföringsprocessen.
 
@@ -90,7 +90,7 @@ Administratörer kan också konfigurera obligatoriska och valfria fält som visa
 
 ## Hantera resurser som överförts med Content Hub {#manage-assets-uploaded-using-content-hub}
 
-[Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan [lägga till resurser i Content Hub](/help/assets/upload-brand-approved-assets.md) antingen från det lokala filsystemet eller importera resurser från datakällor i OneDrive eller Dropbox. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna OneDrive och Dropbox för att förbättra sökfunktionerna.
+[Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan [lägga till resurser i Content Hub](/help/assets/upload-brand-approved-assets.md) antingen från det lokala filsystemet eller importera resurser från OneDrive eller Dropbox-datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna i OneDrive och Dropbox, vilket förbättrar sökfunktionerna.
 
 Visningen av resurser som överförts med Content Hub beror på om du har [aktiverat alternativet för automatiskt godkännande](/help/assets/configure-content-hub-ui-options.md#configure-import-options-content-hub):
 

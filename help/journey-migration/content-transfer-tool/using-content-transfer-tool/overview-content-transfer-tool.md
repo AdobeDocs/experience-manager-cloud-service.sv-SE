@@ -1,6 +1,6 @@
 ---
 title: Översikt över Content Transfer Tool
-description: Lär dig hur du använder verktyget Innehållsöverföring för att överföra innehåll från en lokal AEM till AEM as a Cloud Service
+description: Lär dig använda verktyget Innehållsöverföring för att överföra innehåll från en lokal AEM-instans till AEM as a Cloud Service
 exl-id: cfc0366a-2139-4d9d-b5bc-0b65bef4013c
 feature: Migration
 role: Admin
@@ -17,10 +17,10 @@ ht-degree: 29%
 >[!CONTEXTUALHELP]
 >id="aemcloud_ctt_overview"
 >title="Ökning"
->abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen. Detta verktyg överför också grupper automatiskt."
+>abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM-källinstans (lokalt eller AMS) till AEM Cloud Service-målinstansen. Detta verktyg överför också grupper automatiskt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Riktlinjer och bästa praxis"
 
-Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM (lokalt eller AMS) till AEM Cloud Service-målinstansen.
+Innehållsöverföringsverktyget är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM-källinstans (lokalt eller AMS) till AEM Cloud Service-målinstansen.
 
 Detta verktyg överför också grupper automatiskt.  Mer information finns i [Gruppmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/group-migration.md).
 
@@ -79,4 +79,4 @@ En migreringsuppsättnings förfallodatum kan övervakas på raden Migreringsupp
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig om verktyget Innehållsöverföring och dess översikt som beskriver det här verktyget kan användas för att flytta befintligt innehåll från en AEM (lokalt eller AMS) till målinstansen av AEM Cloud Service, måste du granska [Förutsättningar för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md).
+När du har lärt dig om verktyget Innehållsöverföring och dess översikt som beskriver det här verktyget kan användas för att flytta befintligt innehåll från en AEM-källinstans (lokalt eller AMS) till AEM Cloud Service-målinstansen, måste du granska [Förutsättningar för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md).

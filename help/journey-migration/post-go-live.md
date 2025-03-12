@@ -15,8 +15,8 @@ ht-degree: 4%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_troubleshooting"
->title="AEM"
->abstract="Granska metodtips för kontinuerlig utveckling och hantering av loggar. Läs om verktyg som Developer Console och CRXDE Lite för att hjälpa till med felsökning av AEM."
+>title="Felsökning av AEM"
+>abstract="Granska metodtips för kontinuerlig utveckling och hantering av loggar. Läs om verktyg som Developer Console och CRXDE Lite som hjälper dig att felsöka problem med AEM."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs" text="Åtkomst till och hantering av loggar"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
 
@@ -47,7 +47,7 @@ Som användare har du åtkomst till CRXDE Lite i utvecklingsmiljön, men inte ti
 >[!IMPORTANT]
 >Skrivning till oföränderliga databaser, som `/libs` och `/apps` vid körning, resulterar i fel. Du har inte heller tillgång till utvecklarverktyg för staging- och produktionsmiljöer.
 
-Se [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md) om du vill ha mer information om hur du utvecklar AEM med CRXDE Lite.
+Mer information om hur du utvecklar AEM-program med CRXDE Lite finns i [Utveckla med CRXDE Lite](/help/implementing/developing/tools/crxde.md).
 
 ## Hantera loggar {#managing-logs}
 
@@ -60,10 +60,10 @@ Mer information om hur du får åtkomst till och hanterar loggar finns i [Åtkom
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_support"
 >title="Hjälp och support"
->abstract="Kontakta Adobe AEM supportteam för att få klargöranden eller ta itu med eventuella problem."
+>abstract="Kontakta Adobe AEM Support-team för att få klargöranden eller för att ta itu med eventuella problem."
 >additional-url="https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html" text="Stöd för Experience Cloud"
 
-Om du har frågor om åtkomst till Cloud Service kan du kontakta din Adobe-representant eller [supporten för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information.
+Om du har frågor om Cloud Service kontaktar du Adobe eller [Support för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information.
 
 ## Dokumentinlärning {#document-learnings}
 
@@ -71,7 +71,7 @@ När migreringen är klar dokumenterar du de kunskaper som förvärvats under de
 
 * Vad fungerade bra och vad gjorde det inte?
 * Vilka var de största smärtorna?
-* Recommendations om det finns en framtida migrering.
+* Rekommendationer om det finns en framtida migrering.
 
 Dela med dig av detta material till intressenter och team inom organisationen.
 

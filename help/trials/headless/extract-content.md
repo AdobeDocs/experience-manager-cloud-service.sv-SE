@@ -24,11 +24,11 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_graphql_guide"
 >title="Starta GraphQL Explorer"
->abstract="GraphQL tillhandahåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs, med hjälp av ett enda API-anrop. Följ den här modulen för att lära dig hur du kör två olika typer av frågor. Lär dig sedan hur du hämtar innehållet från det innehållsfragment som du skapade i föregående modul.<br><br>Starta den här modulen på en ny flik genom att klicka nedan."
+>abstract="GraphQL tillhandahåller ett frågebaserat API som tillåter externa klientprogram att fråga AEM efter endast det innehåll som behövs, med ett enda API-anrop. Följ den här modulen för att lära dig hur du kör två olika typer av frågor. Lär dig sedan hur du hämtar innehållet från det innehållsfragment som du skapade i föregående modul.<br><br>Starta den här modulen på en ny flik genom att klicka nedan."
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_trial_admin_content_fragments_graphql_guide_footer"
->title="Snyggt jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Du förstår nu hur du använder AEM GraphQL API för att skapa effektiva frågor som levererar innehåll i ett format som du förväntar dig av appen."
+>title="Snyggt jobbat! Du har lärt dig mer om de två grundläggande typerna av frågor och hur du ställer frågor till ditt eget innehåll. Nu förstår du hur du använder AEM GraphQL API för att skapa effektiva frågor som levererar innehåll i ett format som du förväntar dig av appen."
 >abstract=""
 
 ## Fråga efter en lista med exempelinnehåll {#list-query}
@@ -37,7 +37,7 @@ Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera f
 
 1. Din AEM headless-testversion innehåller en förinläst slutpunkt med innehållsfragment som du kan extrahera innehåll från för testning. Kontrollera att slutpunkten **AEM Demo Assets** är markerad i listrutan **Slutpunkt** längst upp till höger i redigeraren.
 
-1. Kopiera följande kodfragment för en listfråga för den förinlästa **AEM Demo Assets** -slutpunkten. En listfråga returnerar en lista med allt innehåll som använder en viss modell för innehållsfragment. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
+1. Kopiera följande kodfragment för en listfråga för den förinlästa slutpunkten för **AEM Demo Assets** . En listfråga returnerar en lista med allt innehåll som använder en viss modell för innehållsfragment. Lagersidor och kategorisidor använder vanligtvis det här frågeformatet.
 
    ```text
    {
@@ -68,13 +68,13 @@ Du börjar med GraphQL Explorer på en ny flik. Här kan du skapa och validera f
 
    ![Listfråga](assets/do-not-localize/list-query-1-3-4-5.png)
 
-Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapas i AEM.
+Du har just validerat en listfråga för en fullständig lista över alla innehållsfragment. Den här processen bidrar till att säkerställa att svaret blir vad din app förväntar sig, med resultat som visar hur dina appar och webbplatser kommer att hämta innehåll som skapats i AEM.
 
 ## Fråga efter en viss del av exempelinnehållet {#bypath-query}
 
 Genom att köra en byPath-fråga kan du hämta innehåll för ett visst innehållsfragment. Produktinformationssidor och sidor som fokuserar på en viss uppsättning innehåll kräver vanligtvis den här typen av fråga.
 
-1. Kopiera följande kodfragment för en byPath-fråga för den förinlästa **AEM Demo Assets** -slutpunkten.
+1. Kopiera följande kodfragment för en byPath-fråga för den förinlästa slutpunkten för **AEM Demo Assets** .
 
    ```text
     {
@@ -185,7 +185,7 @@ Du skapar en beständig fråga som innehåller data som du vill använda från k
 
 1. Frågan bevaras så som den bekräftas av ett banderollmeddelande längst ned på skärmen. Frågan visas även i den vänstra panelen med beständiga frågor i fönstret.
 
-1. För att den beständiga frågan ska vara tillgänglig för allmänheten måste den publiceras, på ungefär samma sätt som dina innehållsfragment måste publiceras. Klicka på **Publish** längst upp till höger i frågeredigeraren för att publicera frågan.
+1. För att den beständiga frågan ska vara tillgänglig för allmänheten måste den publiceras, på ungefär samma sätt som dina innehållsfragment måste publiceras. Klicka på **Publicera** längst upp till höger i frågeredigeraren för att publicera frågan.
 
 1. Publiceringen bekräftas av ett banderollmeddelande.
 

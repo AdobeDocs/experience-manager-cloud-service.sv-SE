@@ -16,10 +16,10 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_cam_benefits"
 >title="Fördelar med att använda Cloud Acceleration Manager"
->abstract="Cloud Acceleration Manager (CAM) förser era team med guidade upplevelser med bästa praxis och metoder som rekommenderas av Adobe för att hjälpa era team att planera, implementera och, administrera Adobe Go Live utan problem."
+>abstract="Cloud Acceleration Manager (CAM) förser era team med guidade upplevelser med de bästa metoder och metoder som Adobe rekommenderar och som hjälper era team att planera, implementera och, administrera Adobe Go Live utan problem."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html" text="Kom igång med Cloud Acceleration Manager"
 
-Med ett stort antal affärskrav och anpassningar kan en övergång till molnet vara ett engagerande projekt. Cloud Acceleration Manager (CAM) förser era team med guidade upplevelser med bästa praxis och metoder som rekommenderas av Adobe för att hjälpa era team att planera, implementera och, administrera Adobe Go Live utan problem.
+Med ett stort antal affärskrav och anpassningar kan en övergång till molnet vara ett engagerande projekt. Cloud Acceleration Manager (CAM) förser era team med guidade upplevelser med de bästa metoder och metoder som Adobe rekommenderar och som hjälper era team att planera, implementera och, administrera Adobe Go Live utan problem.
 
 Fördelarna med att använda Cloud Acceleration Manager är:
 
@@ -37,7 +37,7 @@ Fördelarna med att använda Cloud Acceleration Manager är:
 
 1. Optimera arbetet:
 
-   Få tillgång till bästa praxis och automatiseringsverktyg som rekommenderas av Adobe för att snabba upp migreringsarbetet och få tillgång till verktyg som minimerar migreringstiden.
+   Få tillgång till bästa praxis och automatiseringsverktyg som rekommenderas av Adobe och hjälp till att snabba upp migreringsarbetet och få tillgång till verktyg som minimerar migreringstiden.
 
 ## What’s Next {#whats-next}
 

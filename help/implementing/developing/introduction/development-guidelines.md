@@ -1,6 +1,6 @@
 ---
 title: AEM as a Cloud Service riktlinjer för utveckling
-description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt att skilja den från AEM på plats och AEM i AMS.
+description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt som skiljer sig från AEM på lokal nivå och AEM i AMS.
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
 feature: Developing
 role: Admin, Architect, Developer
@@ -16,10 +16,10 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="development_guidelines"
 >title="AEM as a Cloud Service riktlinjer för utveckling"
->abstract="Lär dig riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt att skilja den från AEM på plats och AEM i AMS."
+>abstract="Lär dig riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt som skiljer sig från AEM på lokal nivå och AEM i AMS."
 >additional-url="https://video.tv.adobe.com/v/330555/" text="Demo av paketstruktur"
 
-I det här dokumentet presenteras riktlinjer för utveckling på AEM as a Cloud Service och viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
+I det här dokumentet presenteras riktlinjer för hur du utvecklar på AEM as a Cloud Service och viktiga sätt som skiljer sig från AEM på plats och AEM i AMS.
 
 ## Koden måste vara klustermedveten {#cluster-aware}
 
@@ -37,7 +37,7 @@ Tillståndet får inte sparas i minnet utan sparas i databasen. Annars kan det h
 
 Använd inte instansens filsystem i AEM as a Cloud Service. Disken är tillfällig och kasseras när instanser återvinns. Det är möjligt att använda filsystemet i begränsad omfattning för tillfällig lagring i samband med behandling av enstaka begäranden, men det bör inte missbrukas för stora filer. Detta beror på att det kan ha en negativ inverkan på resursanvändningskvoten och leda till diskbegränsningar.
 
-Som ett exempel där det inte finns stöd för filsystemsanvändning bör Publish-nivån se till att alla data som måste vara beständiga skickas iväg till en extern tjänst för längre lagringstid.
+Som ett exempel där filsystemsanvändningen inte stöds bör publiceringsskiktet se till att alla data som måste vara beständiga skickas till en extern tjänst för längre lagringstid.
 
 ## Observera {#observation}
 
@@ -51,13 +51,13 @@ För att minimera problemet bör långvariga jobb om möjligt undvikas, och de b
 
 Använd inte Sling Commons Scheduler för schemaläggning eftersom körning inte kan garanteras. Det är troligare att det är planerat.
 
-På samma sätt kan man inte garantera att allt som sker asynkront, som att agera på observationshändelser (som JCR-händelser eller Sling-resurshändelser), utförs och därför måste användas med försiktighet. Detta gäller redan för AEM distributioner i det här läget.
+På samma sätt kan man inte garantera att allt som sker asynkront, som att agera på observationshändelser (som JCR-händelser eller Sling-resurshändelser), utförs och därför måste användas med försiktighet. Detta gäller redan för AEM-distributioner i nuläget.
 
 ## Utgående HTTP-anslutningar {#outgoing-http-connections}
 
 Vi rekommenderar starkt att alla utgående HTTP-anslutningar anger rimliga anslutnings- och lästimeout. Föreslagna värden är 1 sekund för anslutningstimeout och 5 sekunder för lästimeout. De exakta numren måste bestämmas utifrån hur väl serverdelssystemet hanterar dessa begäranden.
 
-För kod som inte tillämpar dessa tidsgränser kommer AEM som körs på AEM as a Cloud Service att tillämpa en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar.
+För kod som inte tillämpar dessa tidsgränser tillämpar AEM-instanser som körs på AEM as a Cloud Service en global tidsgräns. Dessa timeoutvärden är 10 sekunder för anslutningsanrop och 60 sekunder för läsanrop för anslutningar.
 
 Adobe rekommenderar att du använder det tillhandahållna [Apache HttpComponents Client 4.x-biblioteket](https://hc.apache.org/httpcomponents-client-ga/) för att skapa HTTP-anslutningar.
 
@@ -71,7 +71,7 @@ Förutom att tillhandahålla timeout bör även en korrekt hantering av sådana 
 
 ## Hantera hastighetsbegränsningar för begäranden {#rate-limit-handling}
 
-När antalet inkommande begäranden som ska AEM överstiger felfria nivåer, svarar AEM på nya begäranden med HTTP-felkod 429. Program som anropar programmatiska AEM kan överväga att koda på ett defensivt sätt och försöka igen efter några sekunder med en exponentiell bakåtstrategi. Före mitten av augusti 2023 svarade AEM på samma villkor med HTTP-felkod 503.
+När hastigheten för inkommande begäranden till AEM överskrider felnivåerna, svarar AEM på nya begäranden med HTTP-felkod 429. Program som anropar AEM programmatiskt kan överväga att koda på ett defensivt sätt och sedan försöka igen efter några sekunder med en exponentiell bakgrundsstrategi. Före mitten av augusti 2023 svarade AEM på samma villkor med HTTP-felkod 503.
 
 ## Inga klassiska gränssnittsanpassningar {#no-classic-ui-customizations}
 
@@ -85,17 +85,17 @@ Koden bör inte heller försöka hämta inbyggda binära filer eller inbyggda Ja
 
 ## Inga bindningar för direktuppspelning via AEM as a Cloud Service {#no-streaming-binaries}
 
-Binärfiler bör nås via CDN, som kommer att betjäna binärfiler utanför de centrala AEM.
+Binärfiler bör nås via CDN, som kan användas för binärfiler utanför AEM centrala tjänster.
 
-Använd t.ex. inte `asset.getOriginal().getStream()`, vilket utlöser hämtning av en binär fil till AEM.
+Använd t.ex. inte `asset.getOriginal().getStream()`, som utlöser hämtning av en binärfil till AEM-tjänstens tillfälliga disk.
 
 ## Inga omvända replikeringsagenter {#no-reverse-replication-agents}
 
-Omvänd replikering från Publish till författare stöds inte i AEM as a Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan servergruppen med Publish-instanser och potentiellt Author-klustret.
+Omvänd replikering från Publicera till Författare stöds inte i AEM as a Cloud Service. Om en sådan strategi behövs kan du använda ett externt beständigt arkiv som delas mellan gruppen med publiceringsinstanser och eventuellt klustret Författare.
 
 ## Vidarebefordra replikeringsagenter kan behöva porteras {#forward-replication-agents}
 
-Innehållet replikeras från författare till Publish via en pub-sub-mekanism. Anpassade replikeringsagenter stöds inte.
+Innehållet replikeras från författare till publicering via en pub-sub-mekanism. Anpassade replikeringsagenter stöds inte.
 
 ## Inga överbelastade utvecklingsmiljöer {#overloading-dev-envs}
 
@@ -142,7 +142,7 @@ Ange till exempel `/apps/<example>/config/org.apache.sling.commons.log.LogManage
 
 Lämna inte loggen på DEBUG-loggnivån längre än nödvändigt eftersom detta genererar många poster.
 
-Separata loggnivåer kan anges för olika AEM miljöer med hjälp av körlägesbaserad OSGi-konfigurationsinriktning om det är önskvärt att alltid logga på `DEBUG` under utvecklingen. Till exempel:
+Du kan ange diskreta loggnivåer för olika AEM-miljöer med hjälp av körlägesbaserad OSGi-konfigurationsinriktning om det är önskvärt att alltid logga på `DEBUG` under utvecklingen. Till exempel:
 
 | Miljö | OSGi-konfigurationsplats via körningsläge | Egenskapsvärdet `org.apache.sling.commons.log.level` |
 | - | - | - |
@@ -166,13 +166,13 @@ Loggnivåerna är följande:
 
 ### Trådbitar {#thread-dumps}
 
-Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM om det behövs tråddumpar för att felsöka ett problem och ange exakt tidsfönster.
+Tråddumpar i molnmiljöer samlas in kontinuerligt, men kan för närvarande inte hämtas på ett självbetjäningssätt. Under tiden kontaktar du AEM support om tråddumpar behövs för att felsöka ett problem och ange exakt tidsfönster.
 
 ## CRX/DE Lite och AEM as a Cloud Service Developer Console {#crxde-lite-and-developer-console}
 
 ### Lokal utveckling {#local-development}
 
-För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/crx/de`) och AEM webbkonsol (`/system/console`).
+För lokal utveckling har utvecklare fullständig åtkomst till CRXDE Lite (`/crx/de`) och AEM Web Console (`/system/console`).
 
 På lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt, vilket skiljer sig från molnmiljöer där mapparna på den översta nivån inte kan ändras.
 
@@ -183,13 +183,13 @@ På lokal utveckling (med SDK) kan `/apps` och `/libs` skrivas direkt, vilket sk
 >
 
 >[!NOTE]
->Vissa kunder kan testa en omgjord upplevelse för AEM Cloud Service Developer Console. Mer information finns i [den här artikeln](/help/implementing/developing/introduction/aem-developer-console.md).
+>Vissa kunder kan testa en omgjord upplevelse av AEM Cloud-tjänsten Developer Console. Mer information finns i [den här artikeln](/help/implementing/developing/introduction/aem-developer-console.md).
 
 Kunderna har tillgång till CRXDE-klassen i utvecklingsmiljön, men inte i fas eller produktion. Det går inte att skriva till den oföränderliga databasen (`/libs`, `/apps`) vid körning, så om du försöker göra det kommer det att uppstå fel.
 
 I stället kan databasläsaren startas från AEM as a Cloud Service Developer Console, vilket ger en skrivskyddad vy i databasen för alla miljöer på författarnivå, publicerings- och förhandsgranskningsnivå. Mer information finns i [Databasläsaren](/help/implementing/developing/tools/repository-browser.md).
 
-En uppsättning verktyg för felsökning av AEM as a Cloud Service utvecklingsmiljöer finns i AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller Publish tjänste-URL:er enligt följande:
+En uppsättning verktyg för felsökning av AEM as a Cloud Service utvecklingsmiljöer finns i AEM as a Cloud Service Developer Console för RDE-, dev-, stage- och produktionsmiljöer. URL:en kan bestämmas genom att ändra författarens eller publiceringstjänstens URL:er enligt följande:
 
 `https://dev-console-<namespace>.<cluster>.dev.adobeaemcloud.com`
 
@@ -215,11 +215,11 @@ AEM as a Cloud Service Developer Console är också användbart vid felsökning 
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - utvecklarroll&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM användare eller AEM administratörer för både författare och publiceringstjänster för att kunna visa data från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
+För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM Users eller AEM Administrators för både författare och publiceringstjänster för att visa data från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### Prestandaövervakning {#performance-monitoring}
 
-Adobe övervakar programmets prestanda och vidtar åtgärder för att hantera om en försämring observeras. För närvarande kan inte tillämpningsmetrierna följas.
+Adobe övervakar programprestanda och vidtar åtgärder för att åtgärda eventuella försämringar. För närvarande kan inte tillämpningsmetrierna följas.
 
 ## Skickar e-post {#sending-email}
 
