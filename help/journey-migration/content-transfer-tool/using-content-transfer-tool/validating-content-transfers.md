@@ -4,9 +4,9 @@ description: Använd verktyget Innehållsöverföring för att validera innehål
 exl-id: a12059c3-c15a-4b6d-b2f4-df128ed0eea5
 feature: Migration
 role: Admin
-source-git-commit: e1089810b3bf3db0cc440bb397e5549ade6eac37
+source-git-commit: 9b05ed38e8eb337b3a07ee2051c6a0d530088af2
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1220'
 ht-degree: 0%
 
 ---
@@ -145,13 +145,14 @@ Om du vill se den här informationen går du till Cloud Acceleration Manager. Kl
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-action.png)
 
-En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Klicka på knappen **Hämta rapport** om du vill hämta den fullständiga kommaavgränsade (CSV) rapporten.  Observera också att i slutet av den här rapporten finns användarrapporten som kan användas för användarhantering efter migrering.
+En dialogruta med den sammanfattande informationen visas. Använd hjälpikonerna för att läsa en mer fullständig beskrivning. Om du vill hämta den fullständiga kommaavgränsade (CSV) huvudmigreringsrapporten väljer du **Huvudmigreringsrapport** i listrutan under **Hämta en fil..** och klickar på knappen **Hämta** . Observera också att i slutet av den här rapporten finns användarrapporten som kan användas för användarhantering efter migrering.
 
 ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/ingestion-principal-dialog.png)
 
 Övergångsrapporten ska innehålla följande:
 
 * Varje grupp har migrerats och den första innehållssökvägen som utlöste den gruppen för migrering. Gruppen kan också finnas på andra sökvägar, men endast den första som hittas för en viss grupp rapporteras. Den rapporterar också om den hittades i en ACL- eller CUG-policy.
+* Varje grupp som migreras som en lokal grupp får ordet &quot;lokal&quot; angivet på gruppens rad.
 * Varje grupp migrerades inte och orsaken till varför den inte migrerades.  Vanligtvis är det en av följande orsaker:
    * Det är en inbyggd grupp
    * Det finns redan i målsystemet
