@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Administering
 role: User
 exl-id: d11d7176-dd35-4855-9dcd-dd40ff096510
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 7201cc90c0f698454d8ccda0eb83e433a330c1eb
 workflow-type: tm+mt
-source-wordcount: '863'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Välj en mall för att visa de alternativ som är tillgängliga i verktygsfälte
 * [Redigera](#edit-edit)
 * [Egenskaper](#properties)
 * [Inaktivera/aktivera](#enable-disable)
-* [Publish](#publish)
+* [Publicera](#publish)
 * [Kopiera](#copy)
 * [Ta bort](#delete)
 
@@ -95,12 +95,12 @@ När en mall skapas är den som standard antingen i läget **Utkast** (för mall
 
 En mall måste aktiveras innan den kan användas av innehållsförfattare för att skapa sidor. Om en mall inte längre behövs kan den inaktiveras så att den inte längre visas i guiden Skapa sida.
 
-* Markera mallen och klicka eller tryck på **Inaktivera** för att inaktivera mallen.
-* Markera mallen och klicka eller tryck på **Aktivera** för att aktivera mallen.
+* Markera mallen och klicka på **Inaktivera** för att inaktivera mallen.
+* Markera mallen och klicka på **Aktivera** för att aktivera mallen.
 
 ## Publicering {#publish}
 
-En mall som skapas med mallredigeraren kan bara användas när den har publicerats. Markera mallen och klicka eller tryck på **Publish** för att publicera.
+En mall som skapas med mallredigeraren kan bara användas när den har publicerats. Markera mallen och klicka på **Publicera** för att publicera.
 
 Mallar som skapats med Universal Editor behöver inte publiceras för att kunna användas.
 
@@ -117,7 +117,7 @@ När du har klistrat in kan du:
 * [Redigera mallen](#edit) och justera den efter behov.
 * [Använd egenskapsfönstret](#properties) för att uppdatera malltiteln.
 * [Aktivera mallen](#enable-disable) så att den kan användas för att skapa sidan.
-* [Publish mallen](#publish) om det behövs.
+* [Publicera mallen](#publish) om det behövs.
 
 >[!TIP]
 >
