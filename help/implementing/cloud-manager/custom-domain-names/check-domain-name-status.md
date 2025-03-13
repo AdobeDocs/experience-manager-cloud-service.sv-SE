@@ -5,9 +5,9 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 41a67b0747ed665291631de4faa7fb7bb50aa9b9
+source-git-commit: 5d35610b204cc2e06fefa93e048c16940cf1c47c
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Statusinformationen visas. Din anpassade domän är klar att användas när stat
 
 >[!NOTE]
 >
->Om du använder ett *Adobe-hanterat (DV) SSL-certifikat* med domänen utlöser Cloud Manager automatiskt verifiering när du klickar på **Verifiera** i dialogrutan Verifiera domän när [du lägger till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+>Om du använder ett *Adobe-hanterat (DV) SSL-certifikat* med domänen utlöser Cloud Manager automatiskt verifiering när du klickar på **Verifiera** i dialogrutan Verifiera domän när du [lägger till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
 >
 >Om du planerar att använda ett **kundhanterat (OV/EV) SSL-certifikat** verifieras din domän *efter* att du [lagt till OV/EV SSL-certifikatet](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
 
@@ -50,7 +50,7 @@ Cloud Manager verifierar domänägarskap via det kundhanterade (OV/EV) SSL-certi
 | --- | --- |
 | Domänverifieringen misslyckades | EV/OV-certifikatet som hanteras av kunden saknas eller identifieras med fel.<br> Följ instruktionerna i statusmeddelandet för att lösa problemet. När du är klar måste du markera ikonen **Verifiera igen** bredvid statusen. |
 | Domänverifiering pågår | Verifiering pågår.<br>Den här statusen visas vanligtvis när du har valt ikonen **Verifiera igen** bredvid statusen. DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning. |
-| Verifierad - distributionen misslyckades | Verifieringen av EV/OV-certifikatet lyckades, men CDN-distributionen misslyckades.<br>Kontakta din Adobe-representant i sådana fall. |
+| Verifierad - distributionen misslyckades | Verifieringen av EV/OV-certifikatet lyckades, men CDN-distributionen misslyckades.<br>Kontakta i så fall din Adobe-representant. |
 | Domänen har verifierats och distribuerats | Den här statusen anger att ditt anpassade domännamn är klart att användas.<br>Nu är ditt anpassade domännamn klart för testning och ska peka på Cloud Manager domännamn. Mer information finns i [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | Tar bort | Borttagningen av ett anpassat domännamn pågår. |
 | Borttagningen misslyckades | Borttagningen av ett anpassat domännamn misslyckades och måste göras om.<br>Mer information finns i [Hantera anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/managing-custom-domain-names.md). |
@@ -76,7 +76,7 @@ Felet är åtgärdat på följande sätt:
 
 * Använd det här alternativet om du vill länka apex-domänen och alla underdomäner till AEM as a Cloud Service Fast-kontot. Mer information finns i [Arbeta med domäner i Snabbt-dokumentationen](https://docs.fastly.com/en/guides/working-with-domains).
 
-* Om din API-domän har flera underdomäner för AEM as a Cloud Service och andra webbplatser än AEM som behöver länka till olika Snabbt-konton försöker du installera domänen i Cloud Manager. Den här processen hjälper till att hantera underdomänsanslutningar mellan olika snabbkonton. Om domäninstallationen misslyckas skapar du en kundsupportbiljett med Fastly så att Adobe kan följa upp med Fastly å dina vägnar.
+* Om din huvuddomän har flera underdomäner för AEM as a Cloud Service- och icke-AEM-webbplatser som måste länka till olika Snabbt-konton, försöker du installera domänen i Cloud Manager. Den här processen hjälper till att hantera underdomänsanslutningar mellan olika snabbkonton. Om domäninstallationen misslyckas skapar du en kundsupportbiljett med Snabbt så att Adobe kan följa upp med Fastly å dina vägnar.
 
 >[!TIP]
 >
@@ -88,7 +88,7 @@ Felet är åtgärdat på följande sätt:
 
 ## Befintliga CDN-konfigurationer för anpassade domännamn {#pre-existing-cdn}
 
-Om du redan har en CDN-konfiguration för dina anpassade domännamn visas ett informativt meddelande på sidorna **Anpassade domännamn** och **Miljö**. Det uppmuntrar dig att lägga till dessa konfigurationer via användargränssnittet så att de kan hanteras och visas inom Cloud Manager.
+Om du redan har en CDN-konfiguration (Content Delivery Network) för dina anpassade domännamn visas ett informativt meddelande på sidorna **Anpassade domännamn** och **Miljö**. Det uppmuntrar dig att lägga till dessa konfigurationer via användargränssnittet så att de kan hanteras och visas inom Cloud Manager.
 
 Meddelandet försvinner när alla befintliga miljökonfigurationer har migrerats med användargränssnittet. Det kan ta 1-2 arbetsdagar innan meddelandet försvinner.
 
