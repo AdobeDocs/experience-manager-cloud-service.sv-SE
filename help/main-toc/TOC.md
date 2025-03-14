@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: d4b8e0700f325b43f9142608641a75f9870c7784
+source-git-commit: f4b079837dee960401a16073293969954cad3e77
 workflow-type: tm+mt
-source-wordcount: '6064'
+source-wordcount: '6065'
 ht-degree: 2%
 
 ---
@@ -697,16 +697,14 @@ ht-degree: 2%
       + [Ta bort externa beroenden för befintliga installationer](/help/assets/remove-external-dependencies.md)
       + [Konfigurera [!DNL enhanced connector] för [!DNL Workfront]](/help/assets/workfront-connector-configure.md)
       + [Uppdatering  [!DNL Workfront for Experience Manager enhanced connector]](/help/assets/update-workfront-enhanced-connector.md)
-
    + Integrering med Adobe Express {#integration-adobe-express}
       + [Inbyggd integrering med Adobe Express](/help/assets/native-integration-adobe-express.md)
-
    + Integrering med Creative Cloud {#integration-creative-cloud}
       + [Anslut AEM Assets till Creative Cloud](/help/assets/connect-assets-with-creative-cloud.md)
-
 + Forms {#forms}
    + Översikt {#forms-overview}
       + [Introduktion](/help/forms/home.md)
+      + [Introduktion](/help/forms/home2.md)
       + [De viktigaste nyheterna i Adobe Experience Manager Forms](/help/forms/latest-innovations.md)
       + [Funktioner för tidig åtkomst (EA)](/help/forms/early-access-ea-features.md)
       + [Betydande ändringar](/help/forms/notable-changes.md)
