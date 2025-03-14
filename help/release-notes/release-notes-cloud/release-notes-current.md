@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 896a2927c0f5733ab23ca9f6c9e975f8388daff9
+source-git-commit: a2f26e7befe4aa23350cfdca6a2c342500a909db
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,10 @@ Stöd för Content Fragment UUID är nu GA. Den nya funktionen ändrar inte det 
 **Dynamiska media med stöd för OpenAPI i Content Fragment Editor och GraphQL**
 
 Assets som lagras i andra AEM as a Cloud Service-program än Content Fragments, och som aktiveras med nya Dynamic Media med OpenAPI-funktioner, kan nu användas i Content Fragments. Bildväljaren i den nya Content Fragment Editor tillåter nu att du väljer &quot;fjärrdatabaser&quot; som källa för bildresurser som ska refereras i fragmentet. När sådana innehållsfragment levereras med AEM GraphQL, innehåller JSON-svaret nu nödvändiga egenskaper för fjärrresurser (assetId, databaseId) så att klientapplikationer kan skapa respektive Dynamic Media med OpenAPI-URL:er för att hämta bilden.
+
+**Utrullning av innehållsfragmentredigerare**
+
+Vi fortsätter att aktivera den nya gränssnittsbaserade redigeraren för innehållsfragment i AEM as a Cloud Service. Efter att ha blivit standard för alla Cloud Service Developer-miljöer i november 2024 kommer den att anges som standard för alla scenmiljöer den 1 april 2025 och för alla produktionsmiljöer den 1 maj 2025. I samtliga fall har användarna fortfarande möjlighet att återgå till den traditionella redigeraren för innehållsfragment i AEM Touch-gränssnittet.
 
 **Översättnings-HTTP API**
 
