@@ -4,9 +4,9 @@ description: Framtidsförloppet ökar utvecklarnas oberoende och snabbar upp utv
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 8d21437b56af1d337e20b25b53fdd00ecb856bf1
+source-git-commit: 5983c8579dd8606bc8bedfe6fa2a3838493452cd
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Det resulterande innehållet i mappen `dist` är det som distribueras av Cloud M
 
 Klientmiljön stöder följande `Node.js`-versioner:
 
-<!-- * 23
+* 23
 * 22
-* 20 -->
+* 20
 * 18
 * 16
 * 14 (standard)

@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f37795b99f7c79aa73615748a0a7df61f9afbdb7
+source-git-commit: 83def24319831c3f14f396f2f6b92b053a9d46a9
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Cloud Manager bygger och testar koden i en specialiserad byggmiljö.
 
 >[!NOTE]
 >
->Även om Cloud Manager inte definierar någon specifik version av `jacoco-maven-plugin` måste den version som används vara minst `0.7.5.201505241946`.
+>Cloud Manager anger ingen specifik version av `jacoco-maven-plugin`, men den version som krävs beror på projektets Java-version. För Java 8 måste plugin-programversionen vara minst `0.7.5.201505241946`, medan nyare Java-versioner kan kräva en nyare version.
 
 ## HTTPS Maven-databaser {#https-maven}
 
@@ -88,11 +88,11 @@ Om du vill gå över till att bygga med Java 21 eller Java 17 måste du först u
 
 När du migrerar ditt program till en ny Java-version och runtime-version bör du noggrant testa i miljö med dev och stage innan du distribuerar till produktion.
 
-Vi rekommenderar följande distributionsstrategi:
+Adobe rekommenderar följande distributionsstrategi:
 
-1. Kör ditt lokala SDK med Java 21, som du kan ladda ned från https://experience.adobe.com/#/downloads, distribuera programmet till det och validera dess funktioner. Kontrollera loggarna att det inte finns några fel som tyder på problem med klassinläsning eller byte-kodweaving.
-1. Konfigurera en gren i din Cloud Manager-databas för att använda Java 21 som Java-version vid byggtid, konfigurera en DEV-pipeline för att använda den här grenen och köra pipelinen. Kör dina valideringstester.
-1. Om det ser bra ut kan du konfigurera din stage/prod-pipeline så att den använder Java 21 som Java-version för byggtid och köra pipelinen.
+1. Kör ditt lokala SDK med Java 21, som du kan ladda ned från https://experience.adobe.com/#/downloads, distribuera programmet till det och validera dess funktioner. Kontrollera loggarna att det inte finns några fel, vilket tyder på problem med inläsning av klass eller byte-kod.
+1. Konfigurera en gren i din Cloud Manager-databas att använda Java 21 som Java-version vid byggtid, konfigurera en DEV-pipeline att använda den här grenen och kör pipeline. Kör dina valideringstester.
+1. Om det ser bra ut kan du konfigurera din stage/prod-pipeline så att den använder Java 21 som Java-version vid byggtiden och köra pipeline.
 
 ##### Om vissa översättningsfunktioner {#translation-features}
 
@@ -118,7 +118,7 @@ Uppdatera användningen av Java-paketen `org.apache.groovy` eller `org.codehaus.
 * **Minimiversion av Aries SPIFly:**
 Uppdatera användningen av Java-paketet `org.apache.aries.spifly.dynamic.bundle` till version 1.3.6 eller senare för att säkerställa stöd för nyare JVM-miljöer.
 
-AEM Cloud-tjänsten SDK är kompatibel med Java 21 och kan användas för att validera kompatibiliteten mellan ditt projekt och Java 21 innan du kör en Cloud Manager-pipeline.
+AEM Cloud-tjänsten SDK har stöd för Java 21 och gör att du kan kontrollera om ditt projekt är kompatibelt med Java 21 innan du kör en Cloud Manager-pipeline.
 
 * **Redigera en körningsparameter:**
 När AEM körs lokalt med Java 21 misslyckas startskripten (`crx-quickstart/bin/start` eller `crx-quickstart/bin/start.bat`) på grund av parametern `MaxPermSize` . Ta bort `-XX:MaxPermSize=256M` från skriptet eller definiera miljövariabeln `CQ_JVM_OPTS` genom att ange den som `-Xmx1024m -Djava.awt.headless=true`.
@@ -127,7 +127,7 @@ När AEM körs lokalt med Java 21 misslyckas startskripten (`crx-quickstart/bin/
 
 >[!IMPORTANT]
 >
->När `.cloudmanager/java-version` är inställt på `21` eller `17` distribueras Java 21-miljön. Java 21-miljön är planerad att gradvis lanseras i alla miljöer (inte bara de miljöer vars kod byggts med Java 11) med början tisdagen den 4 februari 2025. Lanseringen börjar med sandlådor och utvecklingsmiljöer och börjar sedan i april 2025 på alla produktionsmiljöer. Kunder som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
+>När `.cloudmanager/java-version` är inställt på `21` eller `17` distribueras Java 21-miljön. Java 21-miljön är planerad att gradvis lanseras i alla miljöer (inte bara de miljöer vars kod byggts med Java 11) med början tisdagen den 4 februari 2025. Utgångarna börjar med sandlådor och utvecklingsmiljöer, som följs av alla produktionsmiljöer i april 2025. Kunder som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
 
 
 #### Krav för byggtid {#build-time-reqs}
