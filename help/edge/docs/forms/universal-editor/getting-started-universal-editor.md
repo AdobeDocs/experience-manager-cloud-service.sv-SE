@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
+source-git-commit: 882e3e1340a6faaec8b4a8e26ff50007458b244a
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1853'
 ht-degree: 0%
 
 ---
@@ -14,14 +14,19 @@ ht-degree: 0%
 
 # Komma igång med Edge Delivery Services för AEM Forms med Universal Editor (WYSIWYG)
 
-<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| Universell redigeringsbaserad redigering | Den här artikeln |
+| Dokumentbaserad redigering | [Klicka här](/help/edge/docs/forms/tutorial.md) |
 
+
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
 I dagens digitala ålder är användarvänliga formulär oumbärliga för alla organisationer. Edge Delivery Services Forms skapas med Universal Editor, som har WYSIWYG-funktioner (what-you-see-is-what-you-get). Det har ett modernt, intuitivt gränssnitt för effektiv formulärutveckling.
 
 AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och lagring. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-projekt](#add-adaptive-forms-block-to-your-existing-aem-project).
 
-![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png)
+![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png){width="50%" align="center" height="50%"}
 
 Den här självstudiekursen vägleder dig genom att skapa, förhandsgranska och publicera ditt eget formulär med ett nytt eller befintligt Adobe Experience Manager Site-projekt med hjälp av Universal Editors WYSIWYG-redigering.
 

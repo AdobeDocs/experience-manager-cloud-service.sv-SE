@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 6d6b857bf36771b92b8f11db5ce6608023d1fac0
+source-git-commit: 86c5ab645df0d94d4f9d538e8044b9ee7433a61b
 workflow-type: tm+mt
-source-wordcount: '6067'
+source-wordcount: '6082'
 ht-degree: 2%
 
 ---
@@ -1037,7 +1037,7 @@ ht-degree: 2%
       + WYSIWYG Authoring {#universal-editor}
          + [Introduktion till Forms Universal Editor för Edge Delivery Services - komplett guide](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
          + [Så här startar du redigering med Universal Editor - steg för steg-självstudiekurs](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
-         + [Skapa ditt första formulär med en universell redigerare](/help/edge/docs/forms/universal-editor/create-forms.md)
+         + [Skapa ditt första formulär med en universell redigerare - steg för steg självstudiekurs](/help/edge/docs/forms/universal-editor/create-forms.md)
          + [Guide till gränssnittet för Universal Editor: Verktyg, Funktioner och Navigering - förklaras](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md)
          + [Gör din Forms mobilvänlig: responsiv design i Universal Editor](/help/edge/docs/forms/universal-editor/responsive-layout.md)
          + [Design Beautiful Forms: Styling and Theming Guide for Universal Editor](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
@@ -1046,6 +1046,7 @@ ht-degree: 2%
          + [Skydda din Forms mot skräppost: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
          + [Publicera och distribuera Forms: Universal Editor Publishing Guide](/help/edge/docs/forms/universal-editor/publish-forms.md)
          + [Skapa anpassade formulärkomponenter: Utvecklarhandbok för Universell redigerare](/help/edge/docs/forms/universal-editor/create-custom-component.md)
+         + [Integrering av formulärdatamodell: Integrerar Forms med formulärdatamodellen](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md)
       + Dokumentbaserad redigering {#getting-started-edge-delivery-services-forms}
          + [Skapa ditt första formulär: Snabbstartsguide med Google Sheets och Excel](/help/edge/docs/forms/tutorial.md)
          + [Så här skapar du Forms med Google-blad eller Excel: Stegvisa handböcker](/help/edge/docs/forms/create-forms.md)

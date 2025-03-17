@@ -6,9 +6,9 @@ role: User
 hide: true
 hidefromtoc: true
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
+source-git-commit: a95b0d4dd6db92e68bdb7059bdd4e0e5be936195
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1046'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,13 @@ Så här skapar du ett fristående adaptivt formulär med Universal Editor:
 
       ![Skapa EDS Forms](/help/edge/assets/create-eds-forms.png)
 
+
+      När du väljer en Edge Delivery Services-baserad mall aktiveras knappen **[!UICONTROL Create]**.
+   1. (Valfritt) På flikarna **[!UICONTROL Data Source]** eller **[!UICONTROL Submission]** kan du välja en datakälla eller skicka-åtgärd.
+   1. (Valfritt) På fliken **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett adaptivt formulär.
+
    1. Klicka på **[!UICONTROL Create]** så visas guiden **Skapa formulär**.
+   1. Ange **Namn** och **Titel**.
    1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en:
       `https://github.com/wkndforms/edsforms`
    1. Klicka på **[!UICONTROL Create]**.

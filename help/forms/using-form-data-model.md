@@ -5,7 +5,7 @@ feature: Adaptive Forms, Form Data Model
 role: Admin, User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: 7b31a2ea016567979288c7a8e55ed5bf8dfc181d
+source-git-commit: 7c30c56ca7a4d8dbdadb2e54a1b7320477556fa5
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 0%
@@ -34,7 +34,7 @@ En formulärdatamodell (FDM) är ett tillägg till JSON-schema som du kan använ
 * [Skapa anpassningsbara Forms och fragment](#create-af)
   <!--* [Create interactive communications and building blocks like text, list, and condition fragments](#create-ic)-->
 * [Förhandsgranska med exempeldata](#preview-ic)
-* [använder datamodelltjänst för formulär](#prefill)
+* [Använda tjänsten för formulärdatamodell](#prefill)
 * [Skriv data i anpassat formulär tillbaka till datakällor](#write-af)
 * [Anropa tjänster med hjälp av regler för adaptiva formulär](#invoke-services)
 
@@ -165,7 +165,7 @@ Du kan dessutom använda API:t `guidelib.dataIntegrationUtils.executeOperation` 
 
 Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner ](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
 
-1. Gå till webbkonsolen Experience Manager på `https://server:host/system/console/configMgr`.
+1. Gå till Experience Manager webbkonsol på `https://server:host/system/console/configMgr`.
 1. Sök efter **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
 1. Klicka på ikonen ![plus ](/help/forms/assets/Smock_Add_18_N.svg) för att lägga till konfigurationen.
 1. Lägg till **[!UICONTROL Content path pattern]** för att ange platsen för din adaptiva Forms.  Som standard är värdet `/content/forms/af/(.*)`, som innehåller alla adaptiva Forms. Du kan också ange sökvägen för ett visst anpassat formulär.
@@ -178,7 +178,7 @@ Den tillagda konfigurationen sparas under alternativet **[!UICONTROL Adaptive Fo
 
 >[!NOTE]
 >
-> Så här anropar du en formulärdatamodell (FDM) från regelredigeraren med anpassade funktioner via ett AEM arkivtypsprojekt:
+> Så här anropar du en formulärdatamodell (FDM) från regelredigeraren med anpassade funktioner via ett AEM-arkivtypsprojekt:
 >
 >1. [Skapa en konfigurationsfil](https://github.com/adobe/aem-core-forms-components/blob/master/it/config/src/main/content/jcr_root/apps/system/config/com.adobe.aemds.guide.factory.impl.AdaptiveFormFDMConfigurationFactoryImpl~core-components-it.cfg.json).
 >1. Ange egenskaper för getContentPathPattern och getFormDataModelPathPattern.
