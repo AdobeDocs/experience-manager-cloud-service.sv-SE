@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: fced4707e781242132a018d28d4dd121960469eb
+source-git-commit: 08bcf9a65854478d2ce057e31b4c27690d1bf240
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Den markerade komponenten har tagits bort.
 >
 >Använd snabbtangenten `Shift+Backspace` för att ta bort den markerade komponenten från dess behållare.
 
-### Ändra ordning på komponenter i behållare {#reordering-components}
+### Ändra ordning på komponenter {#reordering-components}
 
 1. Om det inte redan är i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) växlar du till det.
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
@@ -176,7 +176,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 
 >[!NOTE]
 >
->Komponenter kan inte flyttas mellan behållare om ett annat [komponentfilter](/help/implementing/universal-editor/filtering.md) har angetts mellan käll- och målbehållarna.
+>Komponenter kan bara flyttas mellan behållare om målbehållarna [komponentfiltret](/help/implementing/universal-editor/filtering.md) tillåter den valda komponenten.
 
 ### Skapa variationer med GenAI med Generera variationer {#generate-variations-ai}
 
