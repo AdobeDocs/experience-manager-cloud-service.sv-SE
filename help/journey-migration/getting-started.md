@@ -4,7 +4,7 @@ description: Börja din migreringsresa genom att bekanta dig med grunderna i att
 exl-id: e1a79630-56c1-4648-aa11-3348c3b37541
 feature: Migration
 role: Admin
-source-git-commit: 913b1beceb974243f0aa7486ddd195998d5e9439
+source-git-commit: 08da72724fb8c6e8760ae8013dcf739585ac6903
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 6%
@@ -56,7 +56,7 @@ Du kan även se bilden nedan för en mer detaljerad bild av migreringsresan.
 
 Förutom de steg som beskrivs på den här resan erbjuder Adobe Cloud Acceleration Manager, en molnbaserad applikation som är utformad för att vägleda dina IT-team genom hela övergångsprocessen från planering till publicering på Cloud Service. Konfigurera era team för en lyckad migrering med de bästa metoder, tips, dokumentation och verktyg som Adobe rekommenderar för att hjälpa till under varje fas av resan till AEM som Cloud Service.
 
-Du kan läsa [Cloud Acceleration Manager-dokumentationen](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) eller titta på en [introduktionsvideo](https://experienceleague.adobe.com/?launch=ExperienceManager-A-1-2021.1.migration&amp;recommended=ExperienceManager-A-1-2021.1.migration&amp;lang=en#dashboard/learning) för att starta din migreringsresa.
+Du kan läsa [Cloud Acceleration Manager-dokumentationen](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) eller titta på en [introduktionsvideo](https://experienceleague.adobe.com/en/playlists/experience-manager-all-move-to-cloud-service#dashboard/learning) för att starta din migreringsresa.
 
 ## What&#39;s Next {#what-is-next}
 
