@@ -1,17 +1,17 @@
 ---
-title: Hur skapar man en formulärdatamodell (FDM) för ett formulär i den universella redigeraren?
+title: Hur integrerar man FDM (Form Data Model) för ett formulär i den universella redigeraren?
 description: Lär dig skapa formulär baserade på en formulärdatamodell (FDM). Generera och redigera exempeldata för datamodellsobjekt i FDM.
 feature: Edge Delivery Services, Form Data Model
 role: Admin, User
 hide: true
 hidefromtoc: true
-source-git-commit: e2259e542df5a12748705af901d073e4486292c4
+exl-id: 9ce51223-57d0-47d8-8868-84b37d4e8e3e
+source-git-commit: 381aad580762fe957e1dc1d5824e4d35098f1ca4
 workflow-type: tm+mt
 source-wordcount: '1004'
 ht-degree: 0%
 
 ---
-
 
 # Integrera formulär med formulärdatamodellen i den universella redigeraren
 
@@ -128,7 +128,7 @@ När du skapar ett icke schemabaserat formulär konfigureras ingen datakälla. D
 
    ![Skapa formulär](/help/edge/docs/forms/universal-editor/assets/non-schema-form.png)
 
-   Du kan också lägga till databindning manuellt i ett formulärelement genom att ange den i egenskaperna **Bindningsreferens** för formulärelementet.
+   Du måste lägga till databindning manuellt till ett formulärelement genom att ange den i egenskaperna **Bindningsreferens** för formulärelementet.
 Låt oss till exempel lägga till en databindningsreferens i textrutan **Pet Name** som redan finns i formuläret:
 
    ![Lägg till dataindrag manuellt för ett formulärfält](/help/edge/docs/forms/universal-editor/assets/non-schema-add-data-binding.png)

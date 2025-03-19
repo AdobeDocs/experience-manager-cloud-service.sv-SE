@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 882e3e1340a6faaec8b4a8e26ff50007458b244a
+source-git-commit: 3db311812f6c4521baf1364523a0e0b1134fee65
 workflow-type: tm+mt
-source-wordcount: '1853'
+source-wordcount: '1852'
 ht-degree: 0%
 
 ---
@@ -195,7 +195,7 @@ Integrera:
 
 Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM-projekt. Du kan [börja skapa och lägga till formulär i ditt AEM-projekt](#add-edge-delivery-services-forms-to-aem-site-project).
 
-## Skapa AEM Forms med WYSIWYG
+## Skapa Forms med WYSIWYG
 
 Du kan öppna ditt AEM-projekt i den universella redigeraren för WYSIWYG där du kan redigera projektet och lägga till sektionen Adaptiv form för att inkludera Edge Delivery Services-formulär på AEM Project-sidor.
 

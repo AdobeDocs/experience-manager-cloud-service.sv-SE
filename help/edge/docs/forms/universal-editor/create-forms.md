@@ -6,9 +6,9 @@ role: User
 hide: true
 hidefromtoc: true
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: a95b0d4dd6db92e68bdb7059bdd4e0e5be936195
+source-git-commit: 3db311812f6c4521baf1364523a0e0b1134fee65
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1186'
 ht-degree: 0%
 
 ---
@@ -52,8 +52,9 @@ Så här skapar du ett fristående adaptivt formulär med Universal Editor:
 
 1. **Skapa ett adaptivt formulär i AEM Forms-författarinstans**
 
-   1. Öppna AEM Forms as a Cloud Service Author Instance.
-   1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
+   1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
+   1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+   1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
    1. På fliken **Source** väljer du en Edge Delivery Services-baserad formulärmall:
 
       ![Skapa EDS Forms](/help/edge/assets/create-eds-forms.png)
@@ -150,6 +151,63 @@ Så här kommer du åt formuläret på Edge Delivery Services:
 URL-strukturen är densamma för både testversioner och liveversioner. Innehållet som du ser skiljer sig dock åt beroende på sammanhanget:
 
 ![Visa publicerat formulär](/help/edge/assets/eds-view-publish-form.png)
+
+## Hantera formulär
+
+Du kan utföra flera åtgärder på formulär med AEM Forms användargränssnitt.
+
+1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
+1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+
+1. Markera ett formulär så visas följande åtgärder som du kan utföra på det markerade formuläret i verktygsfältet.
+
+<table>
+ <tbody>
+  <tr>
+   <td><p><strong>Åtgärd</strong></p> </td>
+   <td><p><strong>Beskrivning</strong></p> </td>
+  </tr>
+  <tr>
+   <td><p>Redigera</p> </td>
+   <td><p>Öppnar formuläret i redigeringsläge.<br /> <br /> </p> </td>
+  </tr>
+    <tr>
+   <td><p>Egenskaper</p> </td>
+   <td><p>Tillhandahåller alternativ för att ändra egenskaperna för formuläret.<br /> <br /> </p> </td>
+  </tr>
+  <td><p>Kopiera</p> </td>
+   <td><p> Innehåller alternativ för att kopiera formuläret och klistra in det på önskad plats. <br /> <br /> </p> </td>
+  </tr>
+   <tr>
+   <td><p>Förhandsgranska</p> </td>
+   <td><p>Innehåller alternativ för att förhandsgranska formuläret som HTML eller utföra en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med formuläret. <br /> </p> </td>
+  </tr>
+  <tr>
+   <td><p>Ladda ned</p> </td>
+   <td><p>Hämtar det markerade formuläret.<br /> <br /> </p> </td>
+  </tr>
+  <tr>
+   <td><p>Starta granskning/hantera granskning</p> </td>
+   <td><p>Tillåter initiering och hantering av en granskning av det valda formuläret.<br /> <br /> </p> </td>
+  </tr>
+  <!--<tr>
+   <td><p>Add Dictionary</p> </td>
+   <td><p>Generates a dictionary for localizing the selected fragment. For more information, see <a>Localizing Adaptive Forms</a>.<br /> <br /> </p> </td>
+  </tr>-->
+  <tr>
+   <td><p>Publicera/avpublicera</p> </td>
+   <td><p>Publicerar/avpublicerar det markerade formuläret.<br /> <br /> </p> </td>
+  </tr>
+  <tr>
+   <td><p>Ta bort</p> </td>
+   <td><p>Tar bort det markerade formuläret.<br /> <br /> </p> </td>
+  </tr>
+  <tr>
+   <td><p>Jämför</p> </td>
+   <td><p>Jämför två olika former för förhandsgranskning.<br /> <br /> </p> </td>
+  </tr>
+ </tbody>
+</table>
 
 ## Felsökning
 

@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: c4b4bc50fc9530d0e1ed982185c38716299abbb0
+source-git-commit: 381aad580762fe957e1dc1d5824e4d35098f1ca4
 workflow-type: tm+mt
-source-wordcount: '6086'
+source-wordcount: '6098'
 ht-degree: 2%
 
 ---
@@ -1047,7 +1047,8 @@ ht-degree: 2%
          + [Skydda din Forms mot skräppost: lägga till reCAPTCHA-säkerhet](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
          + [Publicera och distribuera Forms: Universal Editor Publishing Guide](/help/edge/docs/forms/universal-editor/publish-forms.md)
          + [Skapa anpassade formulärkomponenter: Utvecklarhandbok för Universell redigerare](/help/edge/docs/forms/universal-editor/create-custom-component.md)
-         + [Integrering av formulärdatamodell: Integrerar Forms med formulärdatamodellen](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md)
+         + [Integrering av formulärdatamodell: Integrera Forms med formulärdatamodellen](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md)
+         + [Återanvändbara, modulära och fristående segment: Skapa och använda formulärfragment i formulär](/help/edge/docs/forms/universal-editor/creating-form-fragments.md)
       + Dokumentbaserad redigering {#getting-started-edge-delivery-services-forms}
          + [Skapa ditt första formulär: Snabbstartsguide med Google Sheets och Excel](/help/edge/docs/forms/tutorial.md)
          + [Så här skapar du Forms med Google-blad eller Excel: Stegvisa handböcker](/help/edge/docs/forms/create-forms.md)
