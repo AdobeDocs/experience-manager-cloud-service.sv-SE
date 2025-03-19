@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.3.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 5983c8579dd8606bc8bedfe6fa2a3838493452cd
+source-git-commit: 663234640f16e6aa653251399751abf5daa17f82
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '329'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,8 @@ Nästa planerade version är torsdagen den 10 april 2025.
   Möjligheten att köra flera rörledningar samtidigt har introducerats på sidan Pipelines. Användarna måste välja minst en pipeline men högst tio. Klicka på **Kör markerat (x)** i det övre högra hörnet på sidan för pipeline. En modal dialogruta visas med en lista över alla rörledningar som inte kan startas. Klicka på **Kör** om du vill initiera alla giltiga pipelines.
 
   ![Dialogrutan Kör markerade pipelines](/help/implementing/cloud-manager/release-notes/assets/run-selected-pipelines.png)
+
+  Se även [Kör flera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#run-multiple-pipelines)
 
 * **Stöd utökat till Node.js-versioner**
 
