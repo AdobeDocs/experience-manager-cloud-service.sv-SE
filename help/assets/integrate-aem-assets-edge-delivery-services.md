@@ -2,9 +2,9 @@
 title: Integrera AEM Assets vid framtagning av material för Edge Delivery Services
 description: Lär dig integrera AEM Assets med Edge Delivery Services. Tack vare integreringen kan du integrera AEM Assets med Microsoft Word och Google Docs, integrera AEM Assets med Universal Editor, integrera Dynamic Media med OpenAPI-funktioner med Universal Editor och integrera Dynamic Media med OpenAPI-funktioner med Microsoft Word och Google Docs.
 exl-id: e58db2ce-a55a-49b3-ae8e-709b5ea8d095
-source-git-commit: 38d4ad078233fcb22422b8c771e7e553cc082c41
+source-git-commit: e4a71d1a513bebed67b9571a483871dc16c36daa
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -18,21 +18,21 @@ ht-degree: 0%
 Du kan redigera innehåll i:
 
 * [Microsoft Word eller Google Docs](#integrate-aem-assets-with-document-based-authoring-tools)
-* [Universal Editor](#integrate-aem-assets-with-universal-editor)
+* [Universal Editor](#integrate-aem-assets-with-UE-universal-editor)
 
 När du har redigerat innehållet kan du publicera det på Edge Delivery Services.
 
 ## Integrera AEM Assets med dokumentbaserade redigeringsflöden för Edge Delivery Services {#integrate-aem-assets-with-document-based-authoring-tools}
 
-AEM Assets integration med dokumentbaserade redigeringsverktyg som Microsoft Word och Google Docs ger dig en resursväljare direkt i redigeraren. Använd den här resursväljaren för att komma åt AEM Assets och infoga godkända resurser i dokumentet.
-
-Om du redan har en Edge Delivery Services-webbplats kan du läsa [AEM Assets plugin](https://github.com/adobe-rnd/aem-assets-plugin/blob/main/README.md) för att integrera AEM Assets med ditt befintliga AEM-projekt. Om du inte har någon Edge Delivery Services-webbplats kan du läsa avsnitten [Förutsättningar](#integrate-aem-assets-with-microsoft-word-and-google-docs) och [Integrera AEM Assets med dokumentbaserad redigeringsmiljö](#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs) nedan.
+När AEM Assets är integrerat med dokumentbaserade redigeringsverktyg som Microsoft Word eller Google Docs finns det en resursväljare i redigeraren. Använd den här resursväljaren för att komma åt AEM Assets och infoga godkända resurser i dokumentet.
+Om du redan har en Edge Delivery Services-webbplats kan du läsa dokumentet [AEM Assets plugin](https://github.com/adobe-rnd/aem-assets-plugin/blob/main/README.md) och lära dig hur du integrerar AEM Assets med ditt befintliga AEM-projekt.
+Följ följande [Förutsättningar](#integrate-aem-assets-with-microsoft-word-and-google-docs) och [Integrera AEM Assets med dokumentbaserad redigeringsmiljö](#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs) om du inte har någon Edge Delivery Services-webbplats där du kan publicera AEM Assets-inkluderande innehåll som har skapats i dokumentbaserade redigeringsverktyg.
 
 ### Förutsättningar{#integrate-aem-assets-with-microsoft-word-and-google-docs}
 
 Innan du börjar ser du till att den dokumentbaserade redigeringsmiljön är klar:
 
-* Integrera AEM med ett dokumentbaserat redigeringsverktyg för att skapa redigeringsmiljön. Se [Komma igång - självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) för att konfigurera redigeringsmiljön.
+* Integrera AEM med ett dokumentbaserat redigeringsverktyg för att skapa redigeringsmiljön. Se [Komma igång - självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) om du vill veta mer om hur du konfigurerar redigeringsmiljön.
 
 ### Integrera AEM Assets med dokumentbaserad redigeringsmiljö{#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs}
 
@@ -65,23 +65,23 @@ Om du vill använda resursreferens måste du ha:
 
 ### Använd material som levereras med Dynamic Media med OpenAPI-funktioner{#how-to-use-Dynamic-Media-with-OpenAPI-assets}
 
-Information om hur du använder resurser som levereras med Dynamic Media med OpenAPI-funktioner när du redigerar innehåll finns i:
+Välj följande länkar för att lära dig hur du använder Dynamic Media med OpenAPI-funktioner för att leverera bilder, videor och andra resurstyper i ditt innehåll:
 
-* [Använda bildreferenser](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-image-references-when-authoring-content)
-* [Använda videoreferenser](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-video-references-when-authoring-content)
-* [Använda resursreferenser för icke-bild- och videomaterial som PDF, ZIP-filer och mycket annat](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-asset-references-for-pdf-zip-etc-when-authoring-content)
+* [Lägg till bilder i ditt innehåll](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-image-references-when-authoring-content)
+* [Lägg till videofilmer i ditt innehåll](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-video-references-when-authoring-content)
+* [Lägg till icke-bild- och videomaterial som PDF, Zip-filer med mera i ditt innehåll](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-asset-references-for-pdf-zip-etc-when-authoring-content)
 
-I den här videon får du lära dig hur du levererar resurser med Dynamic Media med OpenAPI-funktioner.
+I den här videon får du lära dig hur du levererar resurser i ditt innehåll med hjälp av Dynamic Media med OpenAPI-funktioner.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441155)
 
 ## Exempel på Edge Delivery Services webbplats{#example-of-an-Edge-Delivery-Services-site}
 
-Se [WKND Travel](http://bit.ly/3DExLnf). Den här webbplatsen har byggts med hjälp av de dokumentbaserade redigeringsfunktionerna i Edge Delivery Services. Webbplatsens innehåll skapas i [Google Docs](https://drive.google.com/drive/folders/1HCCHRWp4HJIXW_cUv5cRDQ5DzzqiZsXT) med hjälp av Dynamic Media med OpenAPI-funktioner för leverans av resurser. När innehållet har skapats publiceras det direkt från dokumentet. För den här dokumentbaserade redigeringsinställningen lagras alla viktiga filer, mappar, konfigurationer, webbplatsens format och funktionskoder i den här [Git-databasen](https://github.com/hlxsites/franklin-assets-selector/tree/aem-dynamicmedia-demo/blocks).
+Se [WKND Travel](http://bit.ly/3DExLnf), en webbplats som har skapats med de dokumentbaserade redigeringsfunktionerna i Edge Delivery Services. Webbplatsens innehåll skapas i [Google Docs](https://drive.google.com/drive/folders/1HCCHRWp4HJIXW_cUv5cRDQ5DzzqiZsXT) och Dynamic Media med OpenAPI-funktioner används för att leverera resurser i innehållet. Efter redigeringen publiceras innehållet direkt från dokumentet. Utforska denna [Git-databas](https://github.com/hlxsites/franklin-assets-selector/tree/aem-dynamicmedia-demo/blocks) för att få information om alla viktiga filer, mappar, konfigurationer, webbplatsens format och funktionskoder som används för att skapa den dokumentbaserade redigeringsinställningen för den här Edge Delivery Services-webbplatsen (EDS).
 
-## Integrera AEM Assets med universella redigeringsbaserade redigeringsflöden för Edge Delivery Services {#integrate-aem-assets-with-universal-editor}
+## Integrera AEM Assets med universella redigeringsbaserade redigeringsflöden för Edge Delivery Services {#integrate-aem-assets-with-UE-universal-editor}
 
 Konfigurera Universal Editor för integrering med AEM Assets. Tack vare den här integreringen kan du använda Dynamic Media med OpenAPI-funktioner för att leverera resurser.
 
-* Se [Konfiguration i Edge Delivery Site](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site) om du vill lägga till en anpassad resursväljarfunktion i Universal Editor. Med den anpassade resursväljaren kan du infoga resurser direkt i det universella redigeringsinnehållet.
+* Läs [Konfiguration i Edge Delivery Site](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site) om du vill veta mer om hur du lägger till en anpassad resursväljarfunktion i Universal Editor. Med den anpassade resursväljaren kan du infoga resurser direkt i det universella redigeringsinnehållet.
 * Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill lära dig hur du får åtkomst till AEM Assets och infogar resurser när du redigerar i Universell redigerare.
