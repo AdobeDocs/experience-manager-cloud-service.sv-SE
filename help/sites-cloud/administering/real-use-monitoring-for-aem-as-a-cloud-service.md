@@ -4,9 +4,9 @@ description: Läs om Real Use Monitoring (RUM), en automatiserad tjänst som gö
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: fbc3358f1be3ae7ce3142cdc84815d304a2d6c38
+source-git-commit: e6a610c56b9ad7a684ea9f5ef72199d3bed28cc0
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->Övervakning på klientsidan fungerar bara för kunder med Cloud Servicen AEM (Adobe Experience Manager) version **2024.5.16461** och senare.
+>Övervakning på klientsidan fungerar bara för kunder med AEM (Adobe Experience Manager) Cloud Service version **2024.5.16461** och senare.
 
 ## Ökning {#overview}
 
@@ -27,11 +27,11 @@ Tjänsten RUM (Real Use Monitoring) är en teknik för prestandaövervakning som
 
 ## Vem kan utnyttja en tjänst för övervakning av verkligt bruk? {#who-can-benefit-from-rum-service}
 
-Övervakning av faktisk användning hjälper kunder och Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Real Use Monitoring (Övervakning av verklig användning) diagnostiserar prestandaproblem och mäter effekten av experiment. Övervakning av faktisk användning bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
+Real Use Monitoring (Reell Use Monitoring) hjälper kunder och Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Real Use Monitoring (Övervakning av verklig användning) diagnostiserar prestandaproblem och mäter effekten av experiment. Övervakning av faktisk användning bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
 
 ## Övervakningstjänst och sekretess för användning i realtid {#rum-service-and-privacy}
 
-Tjänsten för övervakning av verkligt bruk i AEM bevarar besökarnas integritet och minimerar datainsamlingen. Som besökare innebär det att den webbplats som du besöker eller som är tillgänglig för Adobe inte samlar in några personuppgifter.
+Tjänsten för övervakning av användning i AEM bevarar besökarnas integritet och minimerar datainsamlingen. Som besökare innebär det att den webbplats som du besöker eller gör tillgänglig för Adobe inte samlar in några personuppgifter.
 
 Som webbplatsoperatör krävs inget ytterligare deltagande för att aktivera övervakning via den här funktionen. Det finns inga ytterligare popup-formulär eller medgivandeformulär som slutanvändarna kan godkänna för aktivering av RUM.
 
@@ -55,7 +55,7 @@ Tjänsten för övervakning av faktisk användning är utformad för att förhin
 * Kontrollpunkten, eller namnet, för en viss händelse i den sekvens då sidan läses in. Eller interagera med det som besökare
 * Källan, eller identifieraren, för det DOM-element som användaren interagerar med för den kontrollpunkt som nämns ovan. Det kan till exempel vara en bild
 * Målet, eller länken till en extern sida eller resurs som användaren interagerar med för den kontrollpunkt som nämns ovan. Till exempel: `https://blog.adobe.com/jp/publish/2022/06/29/media_162fb947c7219d0537cce36adf22315d64fb86e94.png`
-* Prestandamätningarna Core Web Vitals (CWV), inklusive LCP (Störst Contentful Paint), FID (First Input Delay), CLS (Cumulative Layout Shift) och TTFB (Time To First Byte) som beskriver besökarens upplevelsekvalitet.
+* Prestandamätningarna [Core Web Vitals (CWV)](https://web.dev/articles/lcp) [Störst Contentful Paint (LCP)](https://web.dev/articles/lcp), [Interaction to Next Paint (INP)](https://web.dev/articles/inp) och [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls) som beskriver besökarens upplevelsekvalitet.
 
 ## Så fungerar övervakning av riktig användning för en kund {#how-rum-works-for-a-customer}
 
@@ -99,7 +99,7 @@ Here are key considerations for customers to keep in mind when interpreting thei
 
 1. **Sökvägen `/.rum` blockeras på min webbplats, hur ska jag åtgärda den?**
 
-   Sökvägen `/.rum` krävs för att RUM-samlingen ska fungera. Om du använder ett CDN framför Adobe AEM as a Cloud Service måste du se till att sökvägen `/.rum` går till samma AEM som ditt andra AEM. Och se till att den inte justeras på något sätt.
+   Sökvägen `/.rum` krävs för att RUM-samlingen ska fungera. Om du använder ett CDN framför Adobe AEM as a Cloud Service kontrollerar du att sökvägen `/.rum` går till samma AEM-ursprung som ditt andra AEM-innehåll. Och se till att den inte justeras på något sätt.
 
 1. **Räknas RUM-samlingen med innehållsförfrågningar för kontraktssyften?**
 
@@ -107,6 +107,6 @@ Here are key considerations for customers to keep in mind when interpreting thei
 
 1. **Hur avanmäler jag mig?**
 
-   Adobe rekommenderar att man använder Real Use Monitoring (RUM) på grund av dess stora fördelar och att det kommer att göra det möjligt för Adobe att optimera de digitala upplevelserna genom att förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
+   Adobe rekommenderar att du använder Real Use Monitoring (RUM) på grund av dess stora fördelar och att det kommer att göra det möjligt för Adobe att optimera dina digitala upplevelser genom att förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
 
    Om du väljer bort detta kan det innebära att du missar en chans att förbättra trafikengagemanget på din webbplats. Om du råkar ut för några problem kontaktar du Adobe Support.
