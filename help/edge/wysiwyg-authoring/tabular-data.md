@@ -1,12 +1,12 @@
 ---
 title: Hantera tabelldata med kalkylblad
-description: Lär dig hur du använder kalkylblad för att hantera tabelldata för olika värden, som metadata och omdirigeringar för AEM med Edge Delivery Services.
+description: Lär dig hur du använder kalkylblad för att hantera tabelldata för olika värden, som metadata och omdirigeringar för din AEM med Edge Delivery Services-webbplats.
 feature: Edge Delivery Services
 exl-id: 26d4db90-3e4b-4957-bf21-343c76322cdc
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: fcbe7d79958301c39c8f894ff03ad39af6aded5b
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Hantera tabelldata med kalkylblad {#tabular-data}
 
-Lär dig hur du använder kalkylblad för att hantera tabelldata för olika värden, som metadata och omdirigeringar för AEM med Edge Delivery Services.
+Lär dig hur du använder kalkylblad för att hantera tabelldata för olika värden, som metadata och omdirigeringar för din AEM med Edge Delivery Services-webbplats.
 
 ## Användningsexempel {#use-cases}
 
-För alla AEM med Edge Delivery Services måste du ha en lista över tabelldata, t.ex. för nyckelvärdesmappningar. De kan vara listor med många olika värden, som metadata och omdirigeringar. Med Edge Deliver Services kan du underhålla sådana tabelllistor med ett intuitivt verktyg: kalkylbladet. AEM översätter dessa kalkylblad till JSON-filer som enkelt kan användas av webbplatsen eller webbprogrammet.
+För alla AEM-webbplatser med Edge Delivery Services finns det ett behov av att underhålla listor med tabelldata, t.ex. för nyckelvärdesmappningar. De kan vara listor med många olika värden, som metadata och omdirigeringar. Med Edge Deliver Services kan du underhålla sådana tabelllistor med ett intuitivt verktyg: kalkylbladet. AEM översätter dessa kalkylblad till JSON-filer som enkelt kan användas av din webbplats eller ditt webbprogram.
 
 Exempel på vanliga användningsområden:
 
@@ -30,7 +30,7 @@ Exempel på vanliga användningsområden:
 
 Dessutom kan du [skapa dina kalkylblad](#own-spreadsheet) av vilken struktur som helst för att lagra mappningar för dina egna syften.
 
-I det här dokumentet används exemplet med omdirigeringar för att illustrera hur du skapar sådana kalkylblad. Mer information om de olika användningsfallen finns i de tidigare länkade avsnitten i Edge Delivery Servicens dokumentation.
+I det här dokumentet används exemplet med omdirigeringar för att illustrera hur du skapar sådana kalkylblad. I de tidigare länkade avsnitten i Edge Delivery Services-dokumentationen finns mer information om respektive användningsfall.
 
 >[!TIP]
 >
@@ -38,17 +38,17 @@ I det här dokumentet används exemplet med omdirigeringar för att illustrera h
 
 >[!TIP]
 >
->Kalkylblad bör endast användas för att underhålla tabelldata. [AEM rubrikfria funktioner](/help/headless/introduction.md) för lagring av strukturerade data.
+>Kalkylblad bör endast användas för att underhålla tabelldata. Om du vill lagra strukturerade data ska du [kontrollera AEM headless-funktioner](/help/headless/introduction.md).
 
 ## Förutsättningar {#prerequisites}
 
-Om du vill skapa mappningar med kalkylblad i AEM med Edge Delivery Services måste du ha skapat webbplatsen med den senaste webbplatsmallen.
+Om du vill skapa mappningar med kalkylblad i ditt AEM med Edge Delivery Services-projekt måste du ha skapat webbplatsen med den senaste webbplatsmallen.
 
 Mer information finns i dokumentet [Utvecklarhandbok om att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 
 ## Skapa ett kalkylblad {#spreadsheet}
 
-I det här exemplet skapar du ett kalkylblad för att hantera omdirigeringar för AEM med Edge Delivery Services. Samma steg gäller för [andra kalkylbladstyper](#other) som du vill skapa.
+I det här exemplet skapar du ett kalkylblad för att hantera omdirigeringar för din AEM med Edge Delivery Services-webbplats. Samma steg gäller för [andra kalkylbladstyper](#other) som du vill skapa.
 
 1. Logga in på din AEM as a Cloud Service-redigeringsinstans, gå till konsolen **Platser** och navigera till roten på platsen som kräver ett kalkylblad. Tryck eller klicka på **Skapa** -> **Sida**.
 
@@ -85,7 +85,7 @@ I det här exemplet skapar du ett kalkylblad för att hantera omdirigeringar fö
 
 Förutom att redigera kalkylblad i AEM Page Editor kan du även importera data från en CSV-fil.
 
-1. När du redigerar kalkylbladet i AEM trycker du på eller klickar på knappen **Överför** längst upp till vänster på skärmen.
+1. Tryck eller klicka på knappen **Överför** längst upp till vänster på skärmen när du redigerar kalkylbladet i AEM.
 1. I listrutan väljer du hur du vill importera dina data.
    * **Ersätt dokument** om du vill ersätta innehållet i hela kalkylbladet med innehållet i den CSV-fil som du ska överföra.
    * **Bifoga till dokument** om du vill bifoga data från CSV-filen som du överför till det befintliga kalkylbladsinnehållet.
@@ -158,11 +158,11 @@ För att AEM ska kunna publicera data i ditt kalkylblad måste du dessutom uppda
 
 1. När du har definierat omdirigeringarna och uppdaterat sökvägsmappningen går du tillbaka till konsolen **Platser**.
 
-1. Tryck eller klicka för att markera det omdirigerade kalkylbladet som du skapade i konsolen och tryck eller klicka sedan på **Snabba Publish** i åtgärdsfältet för att publicera kalkylbladet.
+1. Tryck eller klicka för att välja det omdirigerade kalkylbladet som du skapade i konsolen och tryck eller klicka sedan på **Snabbpublicering** i åtgärdsfältet för att publicera kalkylbladet.
 
    ![Markera kalkylbladet i webbplatskonsolen](assets/tabular-data/tabular-data-select-publish.png)
 
-1. I dialogrutan **Snabb Publish** trycker eller klickar du på **Publish**.
+1. I dialogrutan **Snabbpublicering** trycker eller klickar du på **Publicera**.
 
    ![Bekräfta publicering](assets/tabular-data/tabular-data-quick-publish.png)
 
@@ -180,10 +180,10 @@ Kalkylbladet för omdirigering är nu publicerat och tillgängligt för alla.
 
 Nu när du vet hur man skapar omdirigerade kalkylblad kan du skapa vilken annan standardtyp av kalkylblad som helst:
 
-* Platshållare
-* Metadata
-* Sidhuvuden
-* Konfiguration
+* [Platshållare](https://www.aem.live/docs/placeholders)
+* [Metadata](https://www.aem.live/docs/bulk-metadata)
+* [Sidhuvuden](https://www.aem.live/docs/custom-headers)
+* [Konfiguration](https://www.aem.live/docs/configuration) - Till exempel för [cacheogiltigförklaring](https://www.aem.live/docs/byo-cdn-adobe-managed#setup-push-invalidation)
 * [Taxonomi](/help/edge/wysiwyg-authoring/taxonomy.md)
 
 Följ bara samma steg i avsnitten [Skapa kalkylblad](#spreadsheet) och [Uppdatera sökvägar.json](#paths-json), välj lämplig mall och uppdatera `paths.json`-filen på lämpligt sätt.
@@ -199,7 +199,7 @@ Dessutom kan du [skapa ett eget kalkylblad](#own-spreadsheet) med godtyckliga ko
 
 >[!NOTE]
 >
->Du behöver inte skapa ett kalkylblad för att hantera indexering för AEM as a Cloud Service med Edge Delivery Services.
+>Du behöver inte skapa något kalkylblad för att hantera indexering för AEM as a Cloud Service med Edge Delivery Services-projekt.
 >
 >Om du vill skapa egna index [följer du den här dokumentationen](https://www.aem.live/developer/indexing#setting-up-more-index-configurations) och skapar en egen `helix-query.yaml`-fil.
 
