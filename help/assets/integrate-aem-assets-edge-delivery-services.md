@@ -1,71 +1,71 @@
 ---
-title: Integrera AEM Assets vid framtagning av material för Edge Delivery Services
-description: Lär dig integrera AEM Assets med Edge Delivery Services. Tack vare integreringen kan du integrera AEM Assets med Microsoft Word och Google Docs, integrera AEM Assets med Universal Editor, integrera Dynamic Media med OpenAPI-funktioner med Universal Editor och integrera Dynamic Media med OpenAPI-funktioner med Microsoft Word och Google Docs.
+title: Integrera [!DNL AEM Assets] när du redigerar innehåll för [!DNL Edge Delivery Services]
+description: Lär dig integrera [!DNL AEM Assets] med [!DNL Edge Delivery Services]. This integration enables you to integrate [!DNL AEM Assets] med [!DNL Microsoft Word] och [!DNL Google Docs], integrate [!DNL AEM Assets] med [!DNL Universal Editor], integrate [!DNL Dynamic Media with OpenAPI capabilities] med [!DNL Universal Editor] och integrera [!DNL Dynamic Media with OpenAPI capabilities] med [!DNL Microsoft Word] och [!DNL Google Docs].
 exl-id: e58db2ce-a55a-49b3-ae8e-709b5ea8d095
-source-git-commit: e4a71d1a513bebed67b9571a483871dc16c36daa
+source-git-commit: 491ba10214c704a4e0004df36142e270a49f65e0
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
 
-# Integrera AEM Assets vid framtagning av material för Edge Delivery Services {#integrate-aem-assets-while-authoring-for-edge-delivery-services}
+# Integrera [!DNL AEM Assets] när du redigerar innehåll för [!DNL Edge Delivery Services] {#integrate-aem-assets-while-authoring-for-edge-delivery-services}
 
 ![AEM-resurser med UE](/help/assets/assets/EDS2.png)
 
-[Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar och levererar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](/help/sites-cloud/authoring/author-publish.md) och [WYSIWYG-redigering med den universella redigeraren samt dokumentbaserad redigering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring).
+[[!DNL Edge Delivery Services]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet i hur du skapar och levererar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](/help/sites-cloud/authoring/author-publish.md) och [WYSIWYG med  [!DNL Universal Editor]  samt dokumentbaserad redigering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring).
 
 Du kan redigera innehåll i:
 
-* [Microsoft Word eller Google Docs](#integrate-aem-assets-with-document-based-authoring-tools)
-* [Universal Editor](#integrate-aem-assets-with-UE-universal-editor)
+* [[!DNL Microsoft Word] eller [!DNL Google Docs]](#integrate-aem-assets-with-document-based-authoring-tools)
+* [[!DNL Universal Editor]](#integrate-aem-assets-with-UE-universal-editor)
 
 När du har redigerat innehållet kan du publicera det på Edge Delivery Services.
 
-## Integrera AEM Assets med dokumentbaserade redigeringsflöden för Edge Delivery Services {#integrate-aem-assets-with-document-based-authoring-tools}
+## Integrerar [!DNL AEM Assets] med dokumentbaserade redigeringsflöden för [!DNL Edge Delivery Services] {#integrate-aem-assets-with-document-based-authoring-tools}
 
-När AEM Assets är integrerat med dokumentbaserade redigeringsverktyg som Microsoft Word eller Google Docs finns det en resursväljare i redigeraren. Använd den här resursväljaren för att komma åt AEM Assets och infoga godkända resurser i dokumentet.
-Om du redan har en Edge Delivery Services-webbplats kan du läsa dokumentet [AEM Assets plugin](https://github.com/adobe-rnd/aem-assets-plugin/blob/main/README.md) och lära dig hur du integrerar AEM Assets med ditt befintliga AEM-projekt.
-Följ följande [Förutsättningar](#integrate-aem-assets-with-microsoft-word-and-google-docs) och [Integrera AEM Assets med dokumentbaserad redigeringsmiljö](#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs) om du inte har någon Edge Delivery Services-webbplats där du kan publicera AEM Assets-inkluderande innehåll som har skapats i dokumentbaserade redigeringsverktyg.
+När [!DNL AEM Assets] är integrerat med de dokumentbaserade redigeringsverktygen, till exempel [!DNL Microsoft Word] eller [!DNL Google Docs], finns det en resursväljare i redigeraren. Använd den här resursväljaren för att komma åt [!DNL AEM Assets] och infoga godkända resurser i dokumentet.
+Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL AEM Assets] plugin](https://github.com/adobe-rnd/aem-assets-plugin/blob/main/README.md)-dokumentationen och lära dig hur du integrerar [!DNL AEM Assets] med ditt befintliga [!DNL AEM]-projekt.
+Följ följande avsnitt i [Förutsättningar](#integrate-aem-assets-with-microsoft-word-and-google-docs) och [Integrera [!DNL AEM Assets]  med dokumentbaserad redigeringsmiljö](#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs) om du inte har någon [!DNL Edge Delivery Services]-webbplats för att publicera [!DNL AEM Assets] inkluderande innehåll som har skapats i dokumentbaserade redigeringsverktyg.
 
 ### Förutsättningar{#integrate-aem-assets-with-microsoft-word-and-google-docs}
 
 Innan du börjar ser du till att den dokumentbaserade redigeringsmiljön är klar:
 
-* Integrera AEM med ett dokumentbaserat redigeringsverktyg för att skapa redigeringsmiljön. Se [Komma igång - självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) om du vill veta mer om hur du konfigurerar redigeringsmiljön.
+* Integrera [!DNL AEM] med ett dokumentbaserat redigeringsverktyg för att konfigurera redigeringsmiljön. Se [Komma igång - självstudiekurs för utvecklare](https://www.aem.live/developer/tutorial) om du vill veta mer om hur du konfigurerar redigeringsmiljön.
 
-### Integrera AEM Assets med dokumentbaserad redigeringsmiljö{#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs}
+### Integrerar [!DNL AEM Assets] med dokumentbaserad redigeringsmiljö{#integrate-aem-assets-with-microsoft-word-or-google-docs-to-use-aem-assets-with-microsoft-word-or-google-docs}
 
-Konfigurera plugin-programmet AEM Assets Sidekick så att du kan använda resurser när du redigerar innehåll i Microsoft Word eller Google Docs.
+Konfigurera Sidekick-plugin-programmet [!DNL AEM Assets] så att det använder resurser när du redigerar innehåll i [!DNL Microsoft Word] eller [!DNL Google Docs].
 
-* Se [Adobe Experience Manager Assets Sidekick Plugin](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-experience-manager-assets-for-website-authors) om du vill veta mer om hur du kommer åt och använder AEM Assets i Microsoft Word eller Google Docs.
-* Mer konfigurationsinformation finns i [Konfigurera Adobe Experience Manager Assets Sidekick-plugin](https://www.aem.live/developer/configuring-aem-assets-sidekick-plugin).
+* Läs [[!DNL Adobe Experience Manager Assets Sidekick Plugin]](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-experience-manager-assets-for-website-authors) om du vill veta mer om hur du kommer åt och använder AEM Assets i Microsoft Word eller Google Docs.
+* Mer konfigurationsinformation finns i [Konfigurera [!DNL Adobe Experience Manager Assets Sidekick Plugin]](https://www.aem.live/developer/configuring-aem-assets-sidekick-plugin).
   ![använd dynamiska media med openAPI-funktioner i MS Word- och Google-dokument](/help/assets/assets/my-assets-sidebar.png)
 
-## Leverera material med Dynamic Media med OpenAPI-funktioner {#integrate-Dynamic-Media-with-OpenAPI-capabilities-with-Microsoft-Word-Google-Docs-and-universal-editor}
+## Leverera resurser med [!DNL Dynamic Media with OpenAPI capabilities] {#integrate-Dynamic-Media-with-OpenAPI-capabilities-with-Microsoft-Word-Google-Docs-and-universal-editor}
 
-Du kan också använda resurser som levereras via DM med OpenAPI-funktioner. Det ger många fördelar:
+Du kan också använda resurser som levereras med [!DNL Dynamic Media with OpenAPI capabilities]. Det ger många fördelar:
 
-* Tillgång till varumärkesgodkända mediefiler (bilder, videor, PDF-filer och andra typer av mediefiler) från AEM Assets Cloud Services.
+* Åtkomst till endast varumärkesgodkända resurser (bilder, videor, PDF-filer och andra resurstyper) från [!DNL AEM Assets Cloud Services].
 * Styrning (referenser jämfört med kopior av resursen), som hjälper till med automatisk spridning av livscykelhändelser för resurser, som förfallodatum, borttagning och uppdateringar.
 * Dynamiska bildåtergivningar och smart beskärning.
 * Optimering och leverans av multimedia, som adaptiv direktuppspelad video, och ursprunglig materialleverans för PDF-filer.
 * Resultatnivårapport ([begränsad tillgänglighet](/help/assets/manage-reports-assets-view.md#dynamic-media-delivery-reports)).
 
-Mer information om funktionerna finns i dokumentationen för [Dynamiska media med OpenAPI-funktioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/dynamic-media-open-apis-overview).
+Mer information om funktionerna finns i dokumentationen för [[!DNL Dynamic Media with OpenAPI capabilities]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/dynamic-media-open-apis-overview).
 
 ### Förutsättningar {#prerequisites-for-dm-with-openapi-capabilities-to-use-aem-assets}
 
 Om du vill använda resursreferens måste du ha:
 
-* Tillstånd till en Assets Cloud Service-miljö där Dynamic Media med Open API-funktioner är aktiverat.
-* En Dynamic Media-licens.
-* AEM Assets-pluginen för sidspark har aktiverats med kopieringsreferens för bildresurser. Mer information finns i [this](https://www.aem.live/developer/configuring-aem-assets-sidekick-plugin#copymode) för dokumentbaserad redigering och i [this](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) för Universal Editor-baserad redigering.
+* Tillstånd till en Assets Cloud Service-miljö där [!DNL Dynamic Media with Open API capabilities] är aktiverat.
+* En [!DNL Dynamic Media]-licens.
+* [!DNL AEM Assets sidekick plugin] har aktiverats med kopieringsreferens för bildresurser aktiverat. Mer information finns i [this](https://www.aem.live/developer/configuring-aem-assets-sidekick-plugin#copymode) för dokumentbaserad redigering och i [this](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) för Universal Editor-baserad redigering.
 * Assets som godkänts. Godkända resurser har `dam:status=Approved` via Assets Cloud Services-backend eller gränssnittsåtgärder.
 
-### Använd material som levereras med Dynamic Media med OpenAPI-funktioner{#how-to-use-Dynamic-Media-with-OpenAPI-assets}
+### Använd resurser som levereras med [!DNL Dynamic Media with OpenAPI capabilities]{#how-to-use-Dynamic-Media-with-OpenAPI-assets}
 
-Välj följande länkar för att lära dig hur du använder Dynamic Media med OpenAPI-funktioner för att leverera bilder, videor och andra resurstyper i ditt innehåll:
+Välj följande länkar om du vill lära dig hur du använder [!DNL Dynamic Media with OpenAPI capabilities] för att leverera bilder, videoklipp och andra resurstyper i ditt innehåll:
 
 * [Lägg till bilder i ditt innehåll](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-image-references-when-authoring-content)
 * [Lägg till videofilmer i ditt innehåll](https://www.aem.live/docs/aem-assets-sidekick-plugin#using-video-references-when-authoring-content)
@@ -75,13 +75,13 @@ I den här videon får du lära dig hur du levererar resurser i ditt innehåll m
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441155)
 
-## Exempel på Edge Delivery Services webbplats{#example-of-an-Edge-Delivery-Services-site}
+## Exempel på [!DNL Edge Delivery Services]-plats{#example-of-an-Edge-Delivery-Services-site}
 
-Se [WKND Travel](http://bit.ly/3DExLnf), en webbplats som har skapats med de dokumentbaserade redigeringsfunktionerna i Edge Delivery Services. Webbplatsens innehåll skapas i [Google Docs](https://drive.google.com/drive/folders/1HCCHRWp4HJIXW_cUv5cRDQ5DzzqiZsXT) och Dynamic Media med OpenAPI-funktioner används för att leverera resurser i innehållet. Efter redigeringen publiceras innehållet direkt från dokumentet. Utforska denna [Git-databas](https://github.com/hlxsites/franklin-assets-selector/tree/aem-dynamicmedia-demo/blocks) för att få information om alla viktiga filer, mappar, konfigurationer, webbplatsens format och funktionskoder som används för att skapa den dokumentbaserade redigeringsinställningen för den här Edge Delivery Services-webbplatsen (EDS).
+Se [WKND Travel](http://bit.ly/3DExLnf), en webbplats som har skapats med dokumentbaserade redigeringsfunktioner i [!DNL Edge Delivery Services]. Webbplatsens innehåll skapas i [Google Docs](https://drive.google.com/drive/folders/1HCCHRWp4HJIXW_cUv5cRDQ5DzzqiZsXT) och [!DNL Dynamic Media with OpenAPI capabilities] används för att leverera resurser i innehållet. Efter redigeringen publiceras innehållet direkt från dokumentet. Utforska denna [Git-databas](https://github.com/hlxsites/franklin-assets-selector/tree/aem-dynamicmedia-demo/blocks) för att få information om alla viktiga filer, mappar, konfigurationer, webbplatsens format och funktionskoder som används för att skapa den dokumentbaserade redigeringsinställningen för den här [!DNL Edge Delivery Services (EDS)] -platsen.
 
-## Integrera AEM Assets med universella redigeringsbaserade redigeringsflöden för Edge Delivery Services {#integrate-aem-assets-with-UE-universal-editor}
+## Integrerar [!DNL AEM Assets] med [!DNL Universal Editor]-baserade redigeringsflöden för [!DNL Edge Delivery Services] {#integrate-aem-assets-with-UE-universal-editor}
 
-Konfigurera Universal Editor för integrering med AEM Assets. Tack vare den här integreringen kan du använda Dynamic Media med OpenAPI-funktioner för att leverera resurser.
+Konfigurera [!DNL Universal Editor] för integrering med [!DNL AEM Assets]. Med den här integreringen kan du använda [!DNL Dynamic Media with OpenAPI capabilities] för att leverera resurser.
 
-* Läs [Konfiguration i Edge Delivery Site](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site) om du vill veta mer om hur du lägger till en anpassad resursväljarfunktion i Universal Editor. Med den anpassade resursväljaren kan du infoga resurser direkt i det universella redigeringsinnehållet.
-* Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill lära dig hur du får åtkomst till AEM Assets och infogar resurser när du redigerar i Universell redigerare.
+* Mer information om hur du lägger till en anpassad resursväljarfunktion i [!DNL Universal Editor] finns i [Konfiguration i [!DNL Edge Delivery] Plats](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site). Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
+* Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill veta hur du får åtkomst till [!DNL AEM Assets] och infogar resurserna när du redigerar i [!DNL Universal Editor].
