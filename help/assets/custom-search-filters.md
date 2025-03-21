@@ -3,9 +3,9 @@ title: Egna sökfilter
 description: Läs om hur du anpassar sökfilterformulär
 role: User, Leader, Developer
 exl-id: 383e8165-439e-447b-a19d-d5446238a13f
-source-git-commit: 0484b8ac158f0590d5ada7536cf8b547c71ab686
+source-git-commit: 859254142976f15f92df400f6d62cc0d89eaabb8
 workflow-type: tm+mt
-source-wordcount: '1254'
+source-wordcount: '1268'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 Med sökfilter kan du förfina sökresultaten baserat på olika parametrar som datum, filtyp, taggar och relevans, vilket förbättrar precisionen i sökfrågor. Genom att använda filter kan du snabbt gå igenom de mest relevanta resultaten effektivt. Detta sparar inte bara tid utan förbättrar också den övergripande sökupplevelsen genom att skräddarsy resultaten efter specifika inställningar och behov.
 Se mer om [sökning](search-assets-view.md).
 
-Anpassade sökfilter kan bara mappas till poster i det sökbara egenskapsindexet. Se till att alla anpassade metadata inkluderas innan du konfigurerar din anpassade filterupplevelse. [!DNL Assets view] hjälper till att anpassa sökfilter för att effektivisera sökprocessen. Så här anpassar du sökfiltermallen:
+Anpassa sökfilter AEM Assets kan bara mappas till poster i ditt sökbara egenskapsindex. Se till att alla anpassade metadata inkluderas innan du konfigurerar din anpassade filterupplevelse. [!DNL Assets view] hjälper till att anpassa sökfilter för att effektivisera sökprocessen. Så här anpassar du AEM Assets anpassade sökfilter:
 
 1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
 1. Gå till fliken **[!UICONTROL Search]**. Klicka på **[!UICONTROL Customize]** om du vill konfigurera sökformuläret.
@@ -39,7 +39,7 @@ I Assets-vyn finns följande anpassade filter som kan konfigureras om efter beho
 
 ### Filterelement {#filter-elements}
 
-Du kan använda en samling filterelement på din anpassade sökfilterarbetsyta. Dessa element kan konfigureras om baserat på användbarheten för sökegenskapsattribut. Du kan dock anpassa [filteregenskaperna](#filter-properties) efter dina behov. Följande filterelement är tillgängliga i [!DNL Assets view]:
+Egna filter Med AEM Assets kan du använda en samling filterelement på arbetsytan för anpassade sökfilter. Dessa element kan konfigureras om baserat på användbarheten för sökegenskapsattribut. Du kan dock anpassa [filteregenskaperna](#filter-properties) efter dina behov. Följande filterelement är tillgängliga i [!DNL Assets view]:
 
 <table>
     <tr>
@@ -328,7 +328,7 @@ De förkonfigurerade filtren är förinställda inställningar som gör att du k
 
 #### Filteregenskaper {#filter-properties}
 
-Varje filterelement är associerat med en uppsättning egenskaper. Följande egenskaper används i filtret och förkonfigurerade element:
+Varje filterelement är associerat med en uppsättning egenskaper. AEM Assets anpassade sökfilter använder följande egenskaper i filtret och förkonfigurerade element:
 
 <table>
     <tr>
