@@ -5,23 +5,57 @@ contentOwner: AG
 feature: Asset Compute Microservices, Asset Processing, Asset Management
 role: Architect, Admin
 exl-id: 7e01ee39-416c-4e6f-8c29-72f5f063e428
-source-git-commit: 55ee7f866bcfc4ecc2e203102872af9752240019
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '2846'
+source-wordcount: '2874'
 ht-degree: 0%
 
 ---
 
 # Använda mikrotjänster och bearbetningsprofiler {#get-started-using-asset-microservices}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-Resursmikrotjänster ger skalbar och flexibel bearbetning av resurser med molnbaserade program (kallas även arbetare). Adobe hanterar tjänsterna för optimal hantering av olika tillgångstyper och bearbetningsalternativ.
+Resursmikrotjänster ger skalbar och flexibel bearbetning av resurser med molnbaserade program (kallas även arbetare). Adobe hanterar tjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ.
 
-Med tillgångsmikrotjänster kan du bearbeta ett [brett urval av filtyper](/help/assets/file-format-support.md) som omfattar fler format som är körklara än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Miniatyrbildextrahering av PSD och PSB-format är nu möjligt men tidigare krävda tredjepartslösningar som [!DNL ImageMagick].
+Med tillgångsmikrotjänster kan du bearbeta ett [brett urval av filtyper](/help/assets/file-format-support.md) som omfattar fler format som är körklara än vad som är möjligt med tidigare versioner av [!DNL Experience Manager]. Miniatyrbildsextrahering av PSD- och PSB-format är nu möjligt men tidigare krävda tredjepartslösningar som [!DNL ImageMagick].
 
-Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**. Experience Manager har en grundläggande standardinställning och ger administratörer möjlighet att lägga till mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa, underhålla och ändra konfigurationerna för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflödena kan utvecklarna utöka standarderbjudandet.
+Resursbearbetningen beror på konfigurationen i **[!UICONTROL Processing Profiles]**. Experience Manager har en grundläggande standardkonfiguration och ger administratörer möjlighet att lägga till mer specifik konfiguration för bearbetning av resurser. Administratörer kan skapa, underhålla och ändra konfigurationerna för efterbehandlingsarbetsflöden, inklusive valfri anpassning. Genom att anpassa arbetsflödena kan utvecklarna utöka standarderbjudandet.
 
 <!-- Proposed DRAFT diagram for asset microservices flow - see section "asset-microservices-flow.png (asset-microservices-configure-and-use.md)" in the PPTX deck
 
@@ -70,7 +104,7 @@ Med standardkonfigurationen konfigureras bara den mest grundläggande bearbetnin
 
 * **Särskild FPO-återgivning**: När stora resurser från [!DNL Experience Manager] monteras i [!DNL Adobe InDesign] -dokument väntar en kreatör en avsevärd tid efter att de [har placerat ut en resurs](https://helpx.adobe.com/indesign/using/placing-graphics.html). Under tiden har användaren blockerats från att använda [!DNL InDesign]. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små återgivningar i [!DNL InDesign]-dokument till att börja med, vilket kan ersättas med högupplösta resurser på begäran senare. [!DNL Experience Manager] innehåller återgivningar som bara används för placering. Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
 
-Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Läs [!DNL Adobe Asset Link] [dokumentationen](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil. Mer information finns i den fullständiga dokumentationen för [Adobe-resurslänken](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Läs [!DNL Adobe Asset Link] [dokumentationen](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil. Mer information finns i [den fullständiga dokumentationen för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
 
 ### Skapa en standardprofil {#create-standard-profile}
 
@@ -82,7 +116,7 @@ Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering).
    * Filnamn för varje återgivning.
    * Filformat (PNG, JPEG, GIF eller WebP) för varje återgivning.
    * Bredd och höjd i pixlar för varje återgivning. Om värdena inte anges används den ursprungliga bildens fullständiga pixelstorlek.
-   * Kvalitet i procent av varje JPEG- och WebP-återgivning.
+   * Kvalitet i procent av varje JPEG- och WebP-rendering.
    * Inkluderade och exkluderade MIME-typer för att definiera en profils tillämplighet.
 
    ![processing-profiles-adding](assets/processing-profiles-image.png)
@@ -144,7 +178,7 @@ De anpassade programmen är headless [Project App Builder](https://developer.ado
 
 För att illustrera hur den anpassade profilen används ska vi överväga ett användningsexempel för att använda anpassad text på kampanjbilder. Du kan skapa en bearbetningsprofil som använder Photoshop API för att redigera bilderna.
 
-Integrering med Asset Compute Service gör att Experience Manager kan skicka dessa parametrar till det anpassade programmet med hjälp av fältet [!UICONTROL Service Parameters]. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
+Tack vare integreringen med Asset Compute-tjänsten kan Experience Manager skicka dessa parametrar till det anpassade programmet med hjälp av fältet [!UICONTROL Service Parameters]. Det anpassade programmet anropar sedan Photoshop API och skickar dessa värden till API:t. Du kan till exempel skicka teckensnittsnamn, textfärg, textvikt och textstorlek för att lägga till den anpassade texten i kampanjbilder.
 
 <!-- TBD: Check screenshot against the interface. -->
 
@@ -172,7 +206,7 @@ När en bearbetningsprofil har tillämpats på en mapp bearbetas alla nya resurs
 
 >[!NOTE]
 >
->En bearbetningsprofil som tillämpas på en mapp fungerar för hela trädet, men kan åsidosättas av en annan profil som tillämpas på en undermapp. När resurser överförs till en mapp kontrollerar Experience Manager egenskaperna för den innehållande mappen för att hitta en bearbetningsprofil. Om ingen används kontrolleras en överordnad mapp i hierarkin för att en bearbetningsprofil ska användas.
+>En bearbetningsprofil som tillämpas på en mapp fungerar för hela trädet, men kan åsidosättas av en annan profil som tillämpas på en undermapp. När resurser överförs till en mapp kontrollerar Experience Manager om det finns en bearbetningsprofil för den innehållande mappens egenskaper. Om ingen används kontrolleras en överordnad mapp i hierarkin för att en bearbetningsprofil ska användas.
 
 Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade återgivningarna i vyn [!UICONTROL Renditions] i den vänstra listen. Öppna förhandsgranskningen av resursen och öppna den vänstra listen för att komma åt vyn **[!UICONTROL Renditions]**. De specifika återgivningarna i bearbetningsprofilen, för vilka den specifika resursens typ matchar reglerna för MIME-typinkludering, bör vara synliga och tillgängliga.
 
@@ -205,7 +239,7 @@ Arbetsflödesmodeller för efterbearbetning är vanliga [!DNL Experience Manager
 
 Bearbetningsstegen läggs till efter behov. Du kan använda både de steg som stöds och alla anpassade arbetsflödessteg som är tillgängliga.
 
-Kontrollera att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. I det sista steget ser du till att Experience Manager tar reda på när behandlingen av tillgångar är slutförd.
+Kontrollera att det sista steget i varje efterbearbetningsarbetsflöde är `DAM Update Asset Workflow Completed Process`. Det sista steget är att se till att Experience Manager känner igen när mediebearbetningen är klar.
 
 ### Konfigurera arbetsflödeskörning efter bearbetning {#configure-post-processing-workflow-execution}
 
@@ -279,11 +313,11 @@ Följ stegen som beskrivs i [tillämpa en arbetsflödesmodell på en mapp](#appl
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
->* [Introduktion till tjänsten Asset Compute](https://experienceleague.adobe.com/en/docs/asset-compute/using/introduction).
+>* [Introduktion till Asset Compute-tjänsten](https://experienceleague.adobe.com/en/docs/asset-compute/using/introduction).
 >* [Förstå utökningsmöjligheterna och när de ska användas](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/understand-extensibility).
 >* [Skapa anpassade program](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/develop-custom-application).
 >* [MIME-typer som stöds för olika användningsfall](/help/assets/file-format-support.md).

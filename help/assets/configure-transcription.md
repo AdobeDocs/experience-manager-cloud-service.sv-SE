@@ -9,22 +9,56 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
 
 # Konfigurera transkription i [!DNL Experience Manager Assets] {#configure-transcription-service}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Transkription är processen att översätta ljudet från en ljud- eller videofil till text (tal till text) med hjälp av taligenkänningstekniken.
 [!DNL Adobe Experience Manager Assets] har konfigurerats med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-format (.vtt). När en ljud- eller videoresurs bearbetas i [!DNL Experience Manager Assets] genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i Assets-databasen där den ursprungliga resursen finns. Med transkriberingstjänsten [!DNL Experience Manager Assets] kan marknadsförarna effektivt hantera sitt ljud- och videoinnehåll med ökad identifiering av textinnehållet och öka avkastningen på dessa resurser genom stöd för hjälpmedel och lokalisering.
 
-Transskript är textversioner av talat innehåll. Ett exempel är en film som du ser på alla OTT-plattformar, som ofta innehåller bildtexter som hjälper till med tillgänglighet eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription som tillåter storskalig bearbetning av ljud- och videoresurserna och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. Tillsammans med Assets stöds även transkriberingsfunktionen i Dynamic Media.
+Transskript är textversioner av talat innehåll. Ett exempel är en film som du ser på alla OTT-plattformar, som ofta innehåller bildtexter som hjälper till med tillgänglighet eller som konsumerar innehållet på andra språk. Eller alla ljud- och videofiler som används i marknadsförings-, utbildnings- eller underhållningssyfte. De här upplevelserna börjar med en transkription som sedan formateras eller översätts på lämpligt sätt. Att transkribera ljud eller video är en tidskrävande och felbenägen process när den utförs manuellt. Det är också en utmaning att skala den manuella processen, med tanke på det ständigt ökande behovet av ljud- och videoinnehåll. [!DNL Experience Manager Assets] använder Azure:s AI-baserade transkription som tillåter storskalig bearbetning av ljud- och videoresurserna och genererar texttranskriberingarna (.vtt-filer) tillsammans med tidsstämpelsinformationen. I kombination med Assets stöds även transkriberingsfunktionen med Dynamic Media.
 
 transkriberingsfunktionen är tillgänglig utan kostnad i [!DNL Experience Manager Assets]. Administratörerna kräver dock användarens Azure-autentiseringsuppgifter för att konfigurera transkriberingstjänsten i [!DNL Experience Manager Assets]. Du kan också [hämta autentiseringsuppgifterna för utvärderingsversionen](https://azure.microsoft.com/en-us/pricing/details/media-services/) direkt från Microsoft® för att få en upplevelse av ljud- eller videotranskriberingsfunktionen i Assets.
 
@@ -123,12 +157,12 @@ För närvarande stöder inte Experience Manager förhandsgranskning av eller re
 
 ## Använda transkription i Dynamic Media {#using-transcription-in-dynamic-media}
 
-Om du har [konfigurerat Dynamic Media](/help/assets/dynamic-media/config-dm.md) i din Experience Manager Assets-instans kan du publicera resursen (ljud- eller videofilen) och dess transkript (.vtt-fil) till Dynamic Media. På så sätt publiceras den ursprungliga resursen (ljud- eller videofilen) och dess transkriberade återgivning (.vtt-filen) till Dynamic Media i samma mapp. Dynamic Media-administratören kan [aktivera CC Closed Caption](/help/assets/dynamic-media/video.md#adding-captions-to-video) för ljud- eller videofilen med hjälp av transkriptrenderingen (.vtt-filen).
+Om du har [konfigurerat Dynamic Media](/help/assets/dynamic-media/config-dm.md) i din Experience Manager Assets-instans kan du publicera resursen (ljud- eller videofilen) och dess transkript (.vtt-fil) till Dynamic Media. På så sätt publiceras den ursprungliga resursen (ljud- eller videofilen) och dess transkriberade återgivning (.vtt-filen) till Dynamic Media i samma mapp. Administratören för dynamiska media kan [aktivera CC Closed Caption](/help/assets/dynamic-media/video.md#adding-captions-to-video) för ljud- eller videofilen med hjälp av transkriptrenderingen (.vtt-filen).
 
 Se även:
 
-* [Videosjälvstudiekurs om hur du lägger till CC-undertexter i Dynamic Media-video](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html#add-cc-closed-captioning-to-dynamic-media-video)
-* [Publish Dynamic Media-videor till YouTube](/help/assets/dynamic-media/video.md#publishing-videos-to-youtube)
+* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html#add-cc-closed-captioning-to-dynamic-media-video)
+* [Publicera Dynamic Media-videor till YouTube](/help/assets/dynamic-media/video.md#publishing-videos-to-youtube)
 
 I följande bild återspeglar webbadressen bildtextdelen som refererar till utskriften (.vtt-filen). Videon visar det talade språket (transkriberad text) som **[!UICONTROL Closed Caption]** vid den angivna tidsstämpeln i videon. Användaren kan aktivera eller inaktivera bildtexten med knappen **[!UICONTROL CC]**.
 
@@ -182,4 +216,4 @@ Logga in på ditt [!DNL Azure Media Services]-konto med samma autentiseringsuppg
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

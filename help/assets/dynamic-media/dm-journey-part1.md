@@ -1,6 +1,6 @@
 ---
 title: Dynamic Media Journey, del I
-description: Dynamic Media Journey beskriver grunderna i Dynamic Media, hur det fungerar, vad det kan göra för dig och vilket värde det ger både ditt arbete och dina kunder.
+description: Dynamic Media Journey täcker grunderna i Dynamic Media, hur det fungerar, vad det kan göra för dig och vilket värde det ger både ditt arbete och dina kunder.
 contentOwner: Rick Brough
 products: Experience Manager as a Cloud Service
 topic-tags: introduction,administering
@@ -11,20 +11,57 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: 74172fe7fcf9a22837645a154f2e85fd6fa6b40e
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '3612'
+source-wordcount: '3658'
 ht-degree: 0%
 
 ---
 
 # Dynamic Media Journey: The Basics, Part I {#dm-journey-part1}
 
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
+
 {{see-also-dm}}
 
 Välkommen till Dynamic Media Journey.
 
-Den här resan handlar om grunderna i Dynamic Media, hur det fungerar, vad det kan göra för er och vilket värde det ger ert arbete och era kunder.
+Den här resan handlar om grunderna i Dynamic Media, hur det fungerar, vad det kan göra för dig och vilket värde det ger ditt arbete och dina kunder.
 
 **_Förutsättningar_**
 
@@ -39,16 +76,16 @@ _Del I_
 
 * Vad är Dynamic Media och hur kan det hjälpa dig?
 * Användningsexempel för Dynamic Media
-* Hur en mediefil flödar genom Dynamic Media-systemet
+* Hur en mediefil flödar genom det dynamiska mediasystemet
 
 _Del II_
 
-* Anatomi av en Dynamic Media-URL och hur Dynamic Media levererar innehåll
+* Anatomi av en dynamisk medie-URL och hur Dynamic Media levererar innehåll
 * Grundläggande om att skapa bildförinställningar för att återge resurser
 * Bilduppsättningar, snurpuppsättningar och blandade medieuppsättningar
 
 **_Målgrupp_**
-Den målgrupp som bäst passar läsarna på den här resan är följande som är nya för Dynamic Media på Experience Manager:
+Den målgrupp som passar bäst för läsarna på den här resan är följande som är nya för Dynamic Media i Experience Manager:
 
 * Administratör
 * Affärsanalytiker
@@ -61,21 +98,21 @@ Den målgrupp som bäst passar läsarna på den här resan är följande som är
 
 >[!TIP]
 >
->För bästa resultat rekommenderar Adobe att du läser och visar den här Dynamic Media-resan på en stationär dator.
+>För bästa resultat rekommenderar Adobe att du läser och visar den här dynamiska medierundturen på en stationär dator.
 
 ## Vad är Dynamic Media och hur kan det hjälpa dig? {#dm-journey-a}
 
-Dynamic Media hjälper er att leverera visuella marknadsförings- och marknadsföringsresurser on demand. Det hjälper dig också att skapa och leverera interaktiva visningsupplevelser som zoomning, 360-graders rotation och video. Dina resurser skalas dynamiskt för konsumtion på webben, mobiler och sociala webbplatser. Med hjälp av en uppsättning primära källresurser - som bilder, video och 3D - genererar och levererar Dynamic Media flera varianter av det här innehållsrika innehållet i realtid via sitt globala, skalbara, prestandaoptimerade CDN (Content Delivery Network).
+Med Dynamic Media kan ni leverera visuella marknadsförings- och marknadsföringsresurser on demand. Det hjälper dig också att skapa och leverera interaktiva visningsupplevelser som zoomning, 360-graders rotation och video. Dina resurser skalas dynamiskt för konsumtion på webben, mobiler och sociala webbplatser. Med hjälp av en uppsättning primära källresurser - som bilder, video och 3D - genererar och levererar Dynamic Media flera varianter av detta multimediematerial i realtid via en global, skalbar, prestandaoptimerad CDN (Content Delivery Network).
 
-Dynamic Media införlivar arbetsflödena i Adobe Experience Manager Assets digitala resurshanteringslösning för att förenkla och effektivisera hanteringen av digitala kampanjer.
+Dynamic Media innehåller arbetsflödena i Adobe Experience Manager Assets digitala resurshanteringslösning för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
 ### En fil med oändliga möjligheter
 
-En av de viktigaste punkterna att förstå om Dynamic Media är konceptet för _en primär resursfil med oändliga möjligheter_.
+En av de viktigaste punkterna att förstå om Dynamic Media är konceptet med _en primär resursfil med oändliga möjligheter_.
 
 För att förstå detta koncept bättre bör du tänka på hur du traditionellt arbetar med en enda resurs, till exempel en bild eller en video. Du skapar vanligtvis en primär resurs. Sedan skapar du manuellt versioner av samma material för alla upplevelser, enheter som behövs, alla webbsidor och alla egenskaper där de används. Med tiden kan den enskilda resursen växa till 20, 30 eller fler versioner utan versionshistorik kopplad till sig. Tänk dig att göra det för alla bilder och filmer du har. Antalet versioner skulle snabbt bli överväldigande för att underhålla och uppdatera, för att inte tala om ökningen av lagringskostnaderna.
 
-Dynamic Media skiljer sig dock i grunden från andra system eftersom du använder det för att leverera dina medier _dynamiskt_ från enskilda, primära resurser och URL-anrop. De URL-sökvägar för Dynamic Media som du begär innehåller instruktioner som talar om för Adobe-publiceringsservern hur resursen visas när den levereras till en kunds skärm. Om du till exempel använder samma primära resurs kan du få den direkt i obegränsat antal renderingar och ändra storlek, format, upplösning, vikt, färg, beskärning och effekter som en zoomvy.
+Dynamic Media skiljer sig dock i grunden från andra system eftersom du använder det för att leverera dina medier _dynamiskt_ från enskilda, primära resurser och URL-anrop. De URL-sökvägar för dynamiska media som du begär innehåller instruktioner som talar om för Adobe publiceringsserver hur resursen ska visas när den levereras till en kunds skärm. Om du till exempel använder samma primära resurs kan du få den direkt i obegränsat antal renderingar och ändra storlek, format, upplösning, vikt, färg, beskärning och effekter som en zoomvy.
 
 Denna unika leveransmetod säkerställer att enhetliga kvalitetsupplevelser skickas till alla skärmar, oavsett storlek och bandbredd. Filmer i fullstorlek optimeras också för alla skärmtyper och strömmas på ett adaptivt sätt för att säkerställa en konsekvent och högkvalitativ användarupplevelse.
 
@@ -88,7 +125,7 @@ När du läser vidare kommer du att lära dig mer om varför konceptet&quot;en p
 
 ### The Content Delivery Network
 
-När du är redo att publicera med en bildresurs eller en videoresurs stöds den av Dynamic Media ryggrad som består av ett kraftfullt leveransnätverk i toppskiktet. Nätverket betjänar hundratals klienter runt om i världen varje dag. Resurserna distribueras via Content Delivery Network - eller CDN - som Akamai är värd för. CDN är ett system med datortjänster som fungerar ihop och som på ett öppet sätt samarbetar för att leverera innehåll, särskilt omfattande mediematerial, till slutanvändarna.
+När du är redo att publicera med en bildresurs eller en videoresurs stöds den av Dynamic Medias stamnät som består av ett kraftfullt leveransnätverk i toppskiktet. Nätverket betjänar hundratals klienter runt om i världen varje dag. Resurserna distribueras via Content Delivery Network - eller CDN - som Akamai är värd för. CDN är ett system med datortjänster som fungerar ihop och som på ett öppet sätt samarbetar för att leverera innehåll, särskilt omfattande mediematerial, till slutanvändarna.
 
 I CDN-systemet lagras webbinnehåll i webbcacheminnen över Internet. Sedan levereras den från webbcachen till slutanvändarna för snabbare leverans. Så första gången någon hämtar en webbsida levereras de resurser som visas till ett CDN-cache. De lagras på servern så att nästa gång någon i samma område öppnar webbsidan, levereras samma cachelagrade innehåll snabbare. Innehållet levereras snabbare eftersom det ligger närmare användaren. Ett CDN ger snabbare visning av webbsidor och ändå minskar behovet av bandbredd på den centrala servern eftersom innehållet levereras från ett cachenätverk, inte från en central server i varje instans. Detta optimerade flöde innebär en bättre användarupplevelse, vilket leder till ökad försäljning.
 
@@ -98,9 +135,9 @@ Historiskt sett levererar CDN 3,5 petabyte trafik till kunderna varje månad. Sy
 
 ### Smart bildbehandling
 
-Dynamic Media har redan gjort ett bra jobb med att optimera resurser och se till att varje resurs läses in snabbt på mobiler och datorer med CDN. För att detta ska hända används bildförinställningar i Dynamic Media för att definiera bildkvaliteten. De definierar också vilken typ av bild du skickar, dess skärpa och andra delar för olika delar av upplevelsen eller sidorna.
+Dynamic Media har redan ett bra jobb med att optimera resurser och se till att varje resurs läses in snabbt i mobilsystem och datorsystem via CDN. För att detta ska hända används bildförinställningar i Dynamic Media för att definiera bildkvaliteten. De definierar också vilken typ av bild du skickar, dess skärpa och andra delar för olika delar av upplevelsen eller sidorna.
 
-Men om du vill lägga till ytterligare värde i Dynamic Media utöver bildförinställningar finns det _Smart bildbehandling_.
+Men för att ytterligare lägga till värde i Dynamic Media utöver bildförinställningar finns det _Smart bildbehandling_.
 
 Smart Imaging ger ännu bättre prestanda vid leverans av bildresurser genom att automatiskt optimera bildens format och filstorlek baserat på kundens webbläsarkapacitet. Det fungerar med dina befintliga bildförinställningar (förinställningar beskrivs i del II av den här resan) och använder intelligens vid leverans.
 
@@ -115,7 +152,7 @@ Med smart bildbehandling kan du totalt sett förvänta dig en prestandaförbätt
 ![Smart bildbehandling](/help/assets/dynamic-media/assets/dm-smart-imaging.png)
 _Smart Imaging optimerar automatiskt bildens format och filstorlek baserat på kundens webbläsarkapacitet och nätverkshastighet._
 
-Smart bildbehandling är inte aktiverat som standard eftersom det kräver en samordnad insats mellan dig och Adobe Dynamic Media tekniska support. För att du ska kunna aktivera Smart Imaging måste du dessutom rensa CDN-cachen fullständigt, som sedan fylls på med tid. Om du är intresserad av att använda Smart Imaging kan du med Adobe aktivera det genom att skicka in en teknisk supportanmälan. Teknisk support ger dig sedan en URL-parameter som gör att du kan testa smarta bilder i förväg. Du kan testa det på alla dina webbsidor eller bilder så att du kan se prestanda och besparingarna. Du kan sedan aktivera smart bildåtergivning för hela webbplatsen.
+Smart bildbehandling är inte aktiverat som standard eftersom det kräver en samordnad insats mellan dig och Adobe Dynamic Media teknisk support. För att du ska kunna aktivera Smart Imaging måste du dessutom rensa CDN-cachen fullständigt, som sedan fylls på med tid. Om du är intresserad av att använda Smart Imaging kan du med Adobe aktivera det genom att skicka in en teknisk supportanmälan. Teknisk support ger dig sedan en URL-parameter som gör att du kan testa smarta bilder i förväg. Du kan testa det på alla dina webbsidor eller bilder så att du kan se prestanda och besparingarna. Du kan sedan aktivera smart bildåtergivning för hela webbplatsen.
 
 ### Adaptiva videouppsättningar
 
@@ -125,7 +162,7 @@ För att lösa det här problemet ger Dynamic Media dig möjlighet att skapa _ad
 
 En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format.
 
-Du börjar med den ursprungliga primära videon som du överför till systemet. Dynamic Media ändrar automatiskt storlek på videon, eller _omkodar_, till flera videoklipp. När filmen levereras avgör den sedan på ett smart sätt vilken videoskärm, vilken kvalitet och vilket format som ska användas och skickar den till telefonen, surfplattan eller datorn.
+Du börjar med den ursprungliga primära videon som du överför till systemet. Dynamic Media ändrar automatiskt storlek, eller _omkodar_, på videon till flera videoklipp. När filmen levereras avgör den sedan på ett smart sätt vilken videoskärm, vilken kvalitet och vilket format som ska användas och skickar den till telefonen, surfplattan eller datorn.
 
 På en mobilenhet från iOS upptäcker den till exempel en bandbredd som 4G, 5G eller Wi-Fi. Sedan väljs automatiskt rätt kodad video bland de olika videobithastigheterna i den adaptiva videouppsättningen. Videon strömmas till mobila enheter, surfplattor och datorer.
 
@@ -135,7 +172,7 @@ Med adaptiva videouppsättningar får du en jämn, högkvalitativ uppspelning f�
 
 ## Användningsexempel för Dynamic Media {#dm-journey-b}
 
-Nedan följer några vanliga användningsproblem och lösningar som Dynamic Media kan hjälpa er med att skapa ett positivt kundengagemang, lojalitet, konvertering och ökad avkastning.
+Här följer några vanliga användningsproblem och lösningar som Dynamic Media kan hjälpa er med för att öka kundengagemanget, kundlojaliteten, konverteringsgraden och avkastningen.
 
 ### Användningsfall: Primär filhantering
 
@@ -151,9 +188,9 @@ De återstående 10 % är HTML, CSS-kod och specifika taggar. Du vill optimera 9
 ![Primär filhantering](/help/assets/dynamic-media/assets/dm-onefile.png)
 _Den bevakade filen är en primär resursfil, men med flera återgivningar av den - inte kopior - skapas direkt._
 
-Låt oss titta närmare på de problem som Dynamic Media löser med den enda filen och några av lösningarna på den metoden.
+Låt oss titta närmare på de problem som Dynamic Media löser med en enda fil och några av lösningarna på den metoden.
 
-| **Utgåva** | **Dynamic Media-lösning** |
+| **Utgåva** | **Dynamisk medielösning** |
 |---|---|
 | Skapa och lagra alla resurser. | Använd en enda bildfil och skapa automatiskt de återgivningar som krävs endast i samband med leveransen. |
 | Höga lagringskostnader. | Eliminerar behovet av att skapa och lagra flera kopior av en mediefil. |
@@ -168,16 +205,16 @@ Sedan måste du se till att rätt bild används och det kan påverka din förmå
 
 Med Dynamic Media kan du skapa varianter av bilder direkt från den startbilden. Du kan vara kreativ med den primära resursen och inte behöva gå fram och tillbaka med din grafiska designer eller fotostudio för att skapa ytterligare innehåll. Och det är pengar och tid sparat.
 
-Med en enda filmetod använder du en enda primär fil. Skapa sedan de versioner eller renderingar som krävs på alla era webbplatser, samt egenskaper och upplevelser, endast när de levereras eller ses av en kund. Effektiviteten kan avsevärt minska mängden lagringsutrymme som krävs för dina resurser och minska arbetsflödets totala komplexitet. Och med Dynamic Media leveranssystem garanterar det att alla bilder och filmer är optimerade, laddas snabbt och ser bra ut på alla skärmar och enheter.
+Med en enda filmetod använder du en enda primär fil. Skapa sedan de versioner eller renderingar som krävs på alla era webbplatser, samt egenskaper och upplevelser, endast när de levereras eller ses av en kund. Effektiviteten kan avsevärt minska mängden lagringsutrymme som krävs för dina resurser och minska arbetsflödets totala komplexitet. Och med Dynamic Medias leveranssystem garanterar det att alla bilder och filmer är optimerade, läses in snabbt och ser bra ut på alla skärmar och enheter.
 
 ### Användningsfall: Video
 
 Ett annat användningsfall som Dynamic Media löser är video. Video är komplex. Det är svårt att hantera. Videofiler är svåra att lagra och flytta runt på grund av deras inbyggda filstorlek.
 
-| **Utgåva** | **Dynamic Media-lösning** |
+| **Utgåva** | **Dynamisk medielösning** |
 |---|---|
 | Svårt att hantera och leverera video som är optimerad för olika enheter. | Använd en enda video som automatiskt storleksändras för alla enheter. |
-| Videorna stannar kvar eller spelas upp med låg kvalitet på grund av användarens tillgängliga bandbredd. | Leverera video via en HTML-spelare som automatiskt hittar tillgänglig bandbredd och anpassar kvaliteten för att säkerställa hög återgivning och jämn uppspelning. |
+| Videorna stannar kvar eller spelas upp med låg kvalitet på grund av användarens tillgängliga bandbredd. | Leverera video via en HTML-spelare som automatiskt hittar tillgänglig bandbredd och anpassar kvaliteten för att säkerställa hög återgivning och smidig uppspelning. |
 | Omöjligt och tidsödande att manuellt skapa alla versioner av en video för att säkerställa bra visning och uppspelning på alla enheter. | Eliminera timtals av mödosamt transkodningsarbete med ett förenklat arbetsflöde. |
 | | Frigör tid för mer värdefullt arbete. |
 
@@ -185,13 +222,13 @@ Kunder kommer till Dynamic Media med följande problem som de hoppas kunna lösa
 
 &quot;_Mitt företag har videon och avdelningen spenderade mycket pengar på att skapa den, men slet bort från att placera den på sidor eller leverera den. Orsaken var att videons kvalitet inte kunde garanteras genom testning, eller ens om den faktiskt skulle spelas upp. Det påverkar dessutom företagets varumärke och eventuellt dess roll för konvertering._&quot;
 
-Dynamic Media lösning är att ta den här primära videofilen och låta Dynamic Media göra alla storlekar genom sin transkodningsprocess. Koppla sedan ihop det med Dynamic Media intelligenta videospelare. Detta arbetsflöde garanterar att videon, oavsett om du använder den på landningssidan eller på en kategori- eller produktinformationssida, är konsekvent hela tiden och levereras med hög kvalitet.
+Dynamic Medias lösning är att ta den primära videofilen och låta Dynamic Media göra alla storlekar genom sin transkodningsprocess. Koppla sedan ihop det med Dynamic Medias intelligenta videospelare. Detta arbetsflöde garanterar att videon, oavsett om du använder den på landningssidan eller på en kategori- eller produktinformationssida, är konsekvent hela tiden och levereras med hög kvalitet.
 
 Här är några fler användningsområden att tänka på.
 
 ### Användningsfall: En enda källa till sanning
 
-| **Utgåva** | **Dynamic Media-lösning** |
+| **Utgåva** | **Dynamisk medielösning** |
 |---|---|
 | Digitalt material som är utspridt i hela organisationen, isolerat i olika team eller affärsenheter. | Lagra och hantera alla digitala resurser på en central plats. |
 | Teammedlemmar kan hämta och skapa lokala versioner. | Teammedlemmar använder en enda primär fil för att skapa _och_ leverera alla nödvändiga versioner för olika skärmstorlekar och enheter. |
@@ -199,58 +236,58 @@ Här är några fler användningsområden att tänka på.
 
 ### Användningsexempel: AI-baserad smart beskärning för multimedia
 
-| **Utgåva** | **Dynamic Media-lösning** |
+| **Utgåva** | **Dynamisk medielösning** |
 |---|---|
-| Tidsödande och arbetskrävande att manuellt rita, mäta och klippa bilder eller videor för att markera fokalpunkten och visa på rätt sätt på alla skärmstorlekar och enheter. | Använder Smart Crop i Dynamic Media, en AI-funktion från Adobe Sensei, för att automatiskt identifiera fokalpunkten i bilder och videoklipp och beskära för att behålla den. |
+| Tidsödande och arbetskrävande att manuellt rita, mäta och klippa bilder eller videor för att markera fokalpunkten och visa på rätt sätt på alla skärmstorlekar och enheter. | Använder Smart Crop i Dynamic Media, en Adobe Sensei AI-funktion, för att automatiskt identifiera fokalpunkten i bilder och videoklipp och beskära för att behålla den. |
 | Förlorad tid som skulle kunna användas bättre för att skapa slagkraftiga upplevelser. | Fångar den avsedda intressepunkten oavsett skärmstorlek. |
 | Enkelt använda resurser som skapats för alla upplevelser och enheter. | Eliminerar långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla slags enheter och skärmar. |
 
 ### Användningsexempel: Interaktiv medieredigering
 
-| **Utgåva** | **Dynamic Media-lösning** |
+| **Utgåva** | **Dynamisk medielösning** |
 |---|---|
 | Plattformade och statiska kundupplevelser som inte engagerar, engagerar lojalitet eller driver konverteringsgraden. | Gör det möjligt för icke-tekniska användare att enkelt och smidigt lägga till interaktiva element som aktiveringspunkter, karuseller och snurra för mer dynamiska och engagerande upplevelser. |
 | Begränsad avkastning på investeringar från digitala resurser och kluriga kundupplevelser. | Ökar konverteringsgraden och avkastningen på investeringar från multimedieupplevelser. |
 
-## Hur en mediefil flödar genom Dynamic Media-systemet {#dm-journey-c}
+## Hur en mediefil flödar genom det dynamiska mediasystemet {#dm-journey-c}
 
 Nedan visas ett typiskt arbetsflöde för Dynamic Media.
 
-![Dynamic Media-arbetsflöde](/help/assets/dynamic-media/assets/dm-workflow.png)
-_Hur en resurs flödar genom Dynamic Media._
+![Dynamiskt mediaarbetsflöde](/help/assets/dynamic-media/assets/dm-workflow.png)
+_Hur en resurs flödar genom det dynamiska mediesystemet._
 
-Du börjar med att skapa fasen med huvudmålet att ha den primära resursen i slutet. Dessa resurser kan komma från foton, från videoutvecklare eller vara några ljudfiler som du har skapat. Du kan använda Adobe Creative Suite-program som Adobe InDesign, Adobe Photoshop och Adobe Illustrator för att få hjälp med att lösa innehållet.
+Du börjar med att skapa fasen med huvudmålet att ha den primära resursen i slutet. Dessa resurser kan komma från foton, från videoutvecklare eller vara några ljudfiler som du har skapat. Du kan använda Adobe Creative Suite-program som Adobe InDesign, Adobe Photoshop och Adobe Illustrator när du vill arbeta med innehållet.
 
 När delen är klar placerar du resursen i redigeringslösningen genom att överföra resursen till Dynamic Media. I Dynamic Media ser du till att du har rätt bildförinställningar och visningsprogram för dina olika webbsidor på din webbplats.
 
-Och slutligen optimerar ni allt detta innehåll och publicerar det på Dynamic Media-servrar så att det blir tillgängligt för webben, utskrift, e-post, datorer och mobila enheter.
+Och slutligen optimerar ni allt detta innehåll och publicerar det på dynamiska mediaservrar så att det blir tillgängligt för webben, utskrift, e-post, datorer och mobila enheter.
 
 ### Överföra resurser till Dynamic Media
 
-När du är klar med att skapa en primär resurs överför du den till Dynamic Media. Den typ av fil som du överför samt filens format och storlek är viktiga attribut för Dynamic Media. Det är när överföringen görs som du vill vara säker på att du får ut maximalt värde av filstödet.
+När du är klar med att skapa en primär resurs överför du den till Dynamic Media. Vilken typ av fil du överför, och filens format och storlek, är viktiga attribut för Dynamic Media. Det är när överföringen görs som du vill vara säker på att du får ut maximalt värde av filstödet.
 
 Den bevakade bilden nedan är till exempel 4 560 x 3 020 pixlar. Och även om du aldrig använder en bild med den storleken kan du ändå överföra den. Ju större bild, desto bättre kvalitet kan Dynamic Media leverera, även till miniatyrrenderingar. Kom ihåg: du kan enkelt _minska_ upplösningen för en befintlig bild. Men om du försöker _öka_ upplösningen för en bild kommer resultatet troligen att bli otillfredsställande.
 
-![Rekommenderade format att överföra till Dynamic Media](/help/assets/dynamic-media/assets/dm-upload-formats.png)
+![Rekommenderade format att överföra till dynamiska media](/help/assets/dynamic-media/assets/dm-upload-formats.png)
 _Att tänka på vid överföringar av resurser._
 
-Adobe rekommenderar att du överför resurser i ett förlustfritt format. I allmänhet är det bäst att undvika JPEG eftersom du, när du levererar JPEG eller när du fortsätter att spara JPEG, börjar tappa bildkvaliteten med tiden. Du vill börja med bilder med den högsta upplösningen i ett förlustfritt format som du kan använda. Formatet är vanligtvis en TIFF- eller PNG-fil.
+Adobe rekommenderar att du överför resurser i ett förlustfritt format. I allmänhet är det bäst att undvika JPEG, eftersom du när du levererar JPEG eller när du fortsätter att spara JPEG börjar tappa bildkvaliteten med tiden. Du vill börja med bilder med den högsta upplösningen i ett förlustfritt format som du kan använda. Formatet är vanligtvis en TIFF- eller PNG-fil.
 
 När du tänker på en digital kanal eller webbvy kanske du tänker på RGB (röd, grön, blå).
 
 De flesta skulle aldrig tänka på att leverera något i CMYK eller varför du kanske till och med vill leverera i CMYK. Orsaken är att den färgrymden oftast används för att leverera utskrivna objekt. Men Dynamic Media kan leverera i båda färgrymderna.
 
-Det finns många kunder som fortfarande gör utskrifter, till exempel detaljhandelsklubbar. Och det finns matbutiker som ofta skriver ut flygblad varje vecka. Dessa kunder kräver att deras bilder finns i båda färgrymderna. Det brukar kräva två olika bilder: en i RGB och en i CMYK. Du kan dock överföra CMYK-resurser direkt till Dynamic Media och låta Dynamic Media leverera RGB-resurser automatiskt via en bildförinställning eller via en färgprofil. Det finns ingen anledning att skapa flera versioner av en fil, vilket betyder att konceptet _en primär resursfil med oändliga möjligheter_ bevaras.
+Det finns många kunder som fortfarande gör utskrifter, till exempel detaljhandelsklubbar. Och det finns matbutiker som ofta skriver ut flygblad varje vecka. Dessa kunder kräver att deras bilder finns i båda färgrymderna. Det brukar kräva två olika bilder: en i RGB och en i CMYK. Du kan dock överföra CMYK-resurser direkt till Dynamic Media och låta Dynamic Media leverera RGB-resurser automatiskt via en bildförinställning eller en färgprofil. Det finns ingen anledning att skapa flera versioner av en fil, vilket betyder att konceptet _en primär resursfil med oändliga möjligheter_ bevaras.
 
 <!-- **The Value of Renditioning??? or Demo portion** -->
 
-### Publish och förhandsgranska material
+### Publicera och förhandsgranska resurser
 
-När du har överfört resurser till Dynamic Media är det en god vana att _publicera_ dem genom att markera resurserna och sedan klicka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]** i Dynamic Media. Det är nödvändigt att publicera resurser om du tänker använda dem i någon upplevelse. När resurserna har publicerats är de tillgängliga för dig så att du kan inkludera dem på en webbsida med en Dynamic Media-genererad URL som du kopierar, eller genom att bädda in kod på sidan.
+När du har överfört resurser till Dynamic Media är det en god vana att _publicera_ dem genom att markera resurserna och sedan klicka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]** i Dynamic Media. Det är nödvändigt att publicera resurser om du tänker använda dem i någon upplevelse. När resurserna har publicerats är de tillgängliga för dig så att du kan inkludera dem på en webbsida med hjälp av en URL som genererats av Dynamic Media och som du kopierar, eller genom att bädda in kod på sidan.
 
-Förutom att publicera resurser manuellt kan du konfigurera Dynamic Media så att du omedelbart publicerar resurser - utan att behöva göra något - när överföringen görs.
+Förutom att publicera resurser manuellt kan du konfigurera Dynamic Media så att du omedelbart publicerar resurser - utan användaråtgärder - när överföringen görs.
 
-Efter överföring finns det olika sätt att förhandsgranska en resurs renderingar i Dynamic Media. Genom att förhandsgranska renderingar får du en uppfattning om vad en kund ser. En vanlig förhandsvisningsmetod är att markera en resurs och sedan visa återgivningarna genom att välja en _bildförinställning_ enligt följande.
+Efter överföring finns det olika sätt att förhandsgranska en medias återgivningar i Dynamic Media. Genom att förhandsgranska renderingar får du en uppfattning om vad en kund ser. En vanlig förhandsvisningsmetod är att markera en resurs och sedan visa återgivningarna genom att välja en _bildförinställning_ enligt följande.
 
 ![Förhandsgranska en återgivning av en resurs baserat på förinställningen för stor bild](/help/assets/dynamic-media/assets/dm-image-preset-with-url.png)
 _Förhandsgranska en återgivning av en resurs baserat på den valda förinställningen för&quot;stor&quot; bild. Klicka på URL-knappen. Den resulterande URL-sökvägen innehåller förinställningsnamnet &quot;Large&quot; och kan användas på en webbsida._
@@ -266,7 +303,7 @@ _Förhandsgranska en resurs baserat på den valda visningsförinställningen fö
 
 ## Valfritt - Läs mer
 
-Del I av denna resa gällde grunderna i olika Dynamic Media-frågor. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [Framtiden i den här Dynamic Media-resan](#whats-next).
+Del I av denna resa omfattade grunderna i olika Dynamic Media-teman. Om du vill veta mer om vad du läser kan du använda materialet nedan för att utforska koncept i detalj. Annars kan du fortsätta med del II av resan. Se [Vad kommer härnäst i den här dynamiska medierundturen](#whats-next).
 
 <!--
 _Dynamic Media Help topics_
@@ -282,18 +319,18 @@ _Dynamic Media Help topics_
 * [How to publish assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md)
 * [Work with Selective Publish in Dynamic Media](/help/assets/dynamic-media/selective-publishing.md) -->
 
-_Dynamic Media självstudiekurser_
+_Självstudiekurser för dynamiska media_
 
-* [Använd Dynamic Media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
-* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamic Media_)
+* [Använd dynamiska media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
+* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamiska media_)
 
-_Dynamic Media-visningsprogram_
+_Dynamiska medievisningsprogram_
 
 * [Live-demonstrationer](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html) för varje visningsprogram
 
-## What&#39;s next in this Dynamic Media Journey {#whats-next}
+## Vad kommer härnäst i Dynamic Media Journey {#whats-next}
 
-I del II på den här resan undersöker du Dynamic Media URL:er närmare för att få en bättre förståelse för vad som händer när en mediefil levereras. Du kan också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
+I del II av den här resan undersöker ni noga Dynamic Media-URL:er för att bättre förstå vad som händer när en mediefil levereras. Du kan också lära dig mer om grunderna bakom hur du skapar bildförinställningar för att återge resurser, och om bilduppsättningar, snurra uppsättningar och blandade medieuppsättningar samt hur de skapas.
 
 Ta mig till [Dynamic Media Journey: The Basics, Part II](/help/assets/dynamic-media/dm-journey-part2.md#dm-journey-d).
 

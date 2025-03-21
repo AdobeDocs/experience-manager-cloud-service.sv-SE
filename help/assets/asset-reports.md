@@ -5,17 +5,51 @@ contentOwner: AG
 feature: Asset Reports, Asset Management
 role: Admin, User
 exl-id: ef617b01-0019-4379-8d58-c03215d7e28f
-source-git-commit: 6a03eb1a4ac8284299c1ffcf27d6a6c8a8b9abc4
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '970'
 ht-degree: 3%
 
 ---
 
 # Resursrapporter {#asset-reports}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -40,7 +74,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 * Ladda ned
 * Förfallotid
 * Ändring
-* Publish
+* Publicera
 * [!DNL Brand Portal] publicera
 * Diskanvändning
 * Filer
@@ -69,7 +103,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    >[!NOTE]
    >
-   >Ange dig själv till en **AEM administratörsproduktprofil** för att skapa en **hämtningsrapport**. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM administratörsproduktprofil.
+   >Ange dig själv till en **AEM Administrator-produktprofil** för att skapa en **Download**-rapport. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM Administrator-produktprofil.
 
    ![Välj rapporttyp](assets/choose_report.png)
 
@@ -121,7 +155,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    >[!NOTE]
    >
-   >Du kan generera rapporter baserat på händelser som har genererats under de senaste 360 dagarna. Experience Manager behåller användar-ID-data i 30 dagar.
+   >Du kan generera rapporter baserat på händelser som har genererats under de senaste 360 dagarna. Experience Manager sparar användar-ID-data i 30 dagar.
 
 ## Lägga till anpassade kolumner i rapporter {#add-custom-columns}
 
@@ -140,7 +174,7 @@ Du kan lägga till anpassade kolumner i följande rapporter om du vill visa mer 
 * Överför
 * Förfallotid
 * Ändring
-* Publish
+* Publicera
 * [!DNL Brand Portal] publicera
 * Filer
 
@@ -212,4 +246,4 @@ TBD: How do enable this in CS now? Is it done using some OSGi config now?
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

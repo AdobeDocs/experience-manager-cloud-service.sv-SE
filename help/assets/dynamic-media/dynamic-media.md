@@ -1,22 +1,59 @@
 ---
 title: Arbeta med Dynamic Media
-description: Läs mer om vad Dynamic Media är och du kan använda Dynamic Media för att leverera material för webben, mobiler och sociala medier.
+description: Läs mer om vad Dynamic Media är och hur ni kan använda Dynamic Media för att leverera material för webben, mobiler och sociala medier.
 contentOwner: Rick Brough
 feature: Dynamic Media,Asset Management
 role: Admin,User
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
-source-git-commit: 57fb7a011cb2da853cdca4f3233cd56775f4a459
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '700'
 ht-degree: 1%
 
 ---
 
 # Arbeta med Dynamic Media {#working-with-dynamic-media}
 
-[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) hjälper till att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimedieinnehåll i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-Dynamic Media visar interaktivt material som zoomning, 360-gradersrotation och video. Dynamic Media införlivar smidigt arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
+[Dynamic Media](https://business.adobe.com/products/experience-manager/assets/dynamic-media.html) hjälper till att leverera visuella marknadsförings- och marknadsföringsresurser on demand, som automatiskt skalas för konsumtion på webben, mobiler och sociala medier. Med hjälp av en uppsättning primära källresurser genererar och levererar Dynamic Media flera varianter av multimediematerial i realtid via sitt globala, skalbara, prestandaoptimerade nätverk.
+
+Dynamic Media levererar interaktiva visningsupplevelser som zoomning, 360-gradersrotation och video. Dynamic Media införlivar arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
 <!-- >[!NOTE]
 >
@@ -24,17 +61,17 @@ Dynamic Media visar interaktivt material som zoomning, 360-gradersrotation och v
 
 ## Vad är Dynamic Media?
 
-Dynamic Media i Adobe Experience Manager (AEM) as a Cloud Service är en kraftfull lösning som hjälper dig att hantera, leverera och optimera mediematerial som bilder och videor för olika digitala plattformar. Det omvandlar statiska medier till dynamiska, engagerande upplevelser genom att tillåta realtidsändringar, som storleksändring, beskärning och kvalitetsjustering baserat på användarens enhet eller skärmstorlek. Med Dynamic Media anpassar ni era resurser automatiskt så att ni får den bästa visuella upplevelsen, oavsett om användarna arbetar på en dator, mobil eller surfplatta.
+Dynamic Media i Adobe Experience Manager (AEM) as a Cloud Service är en kraftfull lösning som hjälper dig att hantera, leverera och optimera mediematerial som bilder och videor för olika digitala plattformar. Det omvandlar statiska medier till dynamiska, engagerande upplevelser genom att tillåta realtidsändringar, som storleksändring, beskärning och kvalitetsjustering baserat på användarens enhet eller skärmstorlek. Med Dynamic Media anpassar sig materialet automatiskt för att ge den bästa visuella upplevelsen, oavsett om användarna arbetar på en dator, mobil eller surfplatta.
 
-En stor fördel med Dynamic Media är att det kan effektivisera mediehanteringen. Du behöver inte skapa flera versioner av bilder eller videor - Dynamic Media hanterar allt genom att leverera det format som passar bäst för varje situation. E-handelsföretag kan till exempel dra nytta av 360-graders produktvisningar eller zoombara bilder för att skapa interaktiva upplevelser, medan innehållsintensiva webbplatser kan säkerställa snabb, högkvalitativ videoströmning. Detta ger snabbare laddningstider och mer engagerande användarupplevelser, vilket i slutänden leder till bättre kundnöjdhet och bättre konverteringsgrader.
+En stor fördel med Dynamic Media är möjligheten att effektivisera mediehanteringen. Du behöver inte skapa flera versioner av bilder eller videor - Dynamic Media hanterar allt genom att leverera det format som passar bäst för varje situation. E-handelsföretag kan till exempel dra nytta av 360-graders produktvisningar eller zoombara bilder för att skapa interaktiva upplevelser, medan innehållsintensiva webbplatser kan säkerställa snabb, högkvalitativ videoströmning. Detta ger snabbare laddningstider och mer engagerande användarupplevelser, vilket i slutänden leder till bättre kundnöjdhet och bättre konverteringsgrader.
 
-Dynamic Media integreras smidigt med ert digitala resurshanteringssystem i AEM, vilket ger er en gemensam plattform för att lagra, ordna och driftsätta era medier. Detta centraliserade tillvägagångssätt förenklar samarbetet mellan team och ger realtidsinsikter om resursprestanda. Oavsett om ni fokuserar på att leverera engagerande bilder eller förbättra mediadriven användarinteraktion hjälper Dynamic Media er att optimera ert innehåll för alla kanaler, vilket gör det till ett oumbärligt verktyg för företag som vill höja sin digitala närvaro.
+Dynamic Media kan integreras smidigt med ditt DAM-system (Digital Asset Management) i AEM, vilket ger en gemensam plattform för att lagra, ordna och driftsätta medierna. Detta centraliserade tillvägagångssätt förenklar samarbetet mellan team och ger realtidsinsikter om resursprestanda. Oavsett om ni fokuserar på att leverera engagerande bilder eller förbättra mediadriven användarinteraktion hjälper Dynamic Media er att optimera ert innehåll för alla kanaler, vilket gör det till ett oumbärligt verktyg för företag som vill höja sin digitala närvaro.
 
 ## Vad du kan göra med Dynamic Media {#what-you-can-do-with-dynamic-media}
 
 Med Dynamic Media kan du hantera dina resurser innan du publicerar dem. Hur du arbetar med resurser i allmänhet beskrivs i detalj i [Arbeta med Digital Assets](/help/assets/manage-digital-assets.md). Allmänna ämnen är bland annat att ladda upp, ladda ned, redigera och publicera resurser, visa och redigera egenskaper och söka efter resurser.
 
-Dynamic Media har följande funktioner:
+Funktioner som bara är dynamiska media inkluderar följande:
 
 * [Carousel Banners](carousel-banners.md)
 * [Bilduppsättningar](image-sets.md)
@@ -48,7 +85,7 @@ Dynamic Media har följande funktioner:
 * [Hantera Assets](managing-assets.md)
 * [Använda snabbvyer för att skapa anpassade popup-fönster](custom-pop-ups.md)
 
-Se även [Konfigurera Dynamic Media](administering-dynamic-media.md).
+Se även [Konfigurera dynamiska media](administering-dynamic-media.md).
 
 <!-- 
 
@@ -59,15 +96,15 @@ OBSOLETE UNTIL INTEGRATING SCENE7 TOPIC GETS A MAJOR UPDATE
 
 -->
 
-## Dynamic Media-aktiverat jämfört med Dynamic Media inaktiverat {#dynamic-media-on-versus-dynamic-media-off}
+## Dynamiska media aktiverat jämfört med Dynamic Media inaktiverat {#dynamic-media-on-versus-dynamic-media-off}
 
-Du kan se om Dynamic Media är aktiverat (aktiverat) enligt följande:
+Du kan se om Dynamic Media är aktiverat (aktiverat) av följande egenskaper:
 
 * Dynamiska återgivningar är tillgängliga när du hämtar eller förhandsgranskar resurser.
 * Bilduppsättningar, snurruppsättningar, blandade medieuppsättningar är tillgängliga.
 * PTIFF-återgivningar skapas.
 
-När du klickar på en bildresurs ser resursen annorlunda ut med Dynamic Media aktiverat. Dynamic Media använder on-demand-visningsprogrammen för HTML 5.
+När du klickar på en bildresurs ser resursen annorlunda ut med Dynamic Media aktiverat. Dynamic Media använder on-demand-visningsprogrammen från HTML5.
 
 ### Dynamiska renderingar {#dynamic-renditions}
 
@@ -75,24 +112,24 @@ Dynamiska återgivningar som bild- och visningsförinställningar (under **[!UIC
 
 ![chlimage_1-358](assets/chlimage_1-358.png)
 
-### Dynamic Media-bilduppsättningar, snurruppsättningar, blandade medieuppsättningar {#image-sets-spins-sets-mixed-media-sets}
+### Dynamiska medieuppsättningar, snurruppsättningar, blandade medieuppsättningar {#image-sets-spins-sets-mixed-media-sets}
 
-Uppsättningar med bilder, snurra och blandade medieuppsättningar är tillgängliga om Dynamic Media är aktiverat.
+Bilduppsättningar, snurruppsättningar och blandade medieuppsättningar är tillgängliga om Dynamic Media är aktiverat.
 
 ![chlimage_1-359](assets/chlimage_1-359.png)
 
-### Dynamic Media-aktiverade PTIFF-renderingar {#ptiff-renditions}
+### PTIFF-renderingar aktiverade för dynamiska media {#ptiff-renditions}
 
-Dynamic Media-aktiverade resurser innehåller `pyramid.tiffs`.
+Dynamiska mediaaktiverade resurser innehåller `pyramid.tiffs`.
 
 ![chlimage_1-360](assets/chlimage_1-360.png)
 
-### Ändringar i resursvyn för Dynamic Media {#asset-views-change}
+### Vyerna för dynamiska medieresurser ändras {#asset-views-change}
 
-När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på knapparna `+` och `-`. Du kan också välja att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamic Media-aktiverade ser ut så här:
+När Dynamic Media är aktiverat kan du zooma in och ut genom att klicka på knapparna `+` och `-`. Du kan också välja att zooma in i ett visst område. Med Återställ återgår du till den ursprungliga versionen och du kan göra bilden i helskärmsläge genom att klicka på de diagonala pilarna. Dynamiska media som är aktiverat ser ut så här:
 
 ![chlimage_1-361](assets/chlimage_1-361.png)
 
-Med Dynamic Media inaktiverat kan du zooma in och ut och återställa till den ursprungliga storleken:
+När Dynamic Media är inaktiverat kan du zooma in och ut och återgå till den ursprungliga storleken:
 
 ![chlimage_1-362](assets/chlimage_1-362.png)

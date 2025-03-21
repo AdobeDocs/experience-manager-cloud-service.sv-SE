@@ -5,16 +5,53 @@ contentOwner: Rick Brough
 feature: Dynamic Media,Configuration,FAQ
 role: Admin,User
 exl-id: 0a8a5fd8-a341-4e7f-84a5-409e2de97efe
-source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
 
 # HTTP2 Delivery of Content FAQ{#http-delivery-of-content-faq}
 
-Adobe är glada över att kunna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 ökar prestanda totalt.
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
+
+Adobe vill gärna meddela att HTTP/2-leverans av innehåll är tillgänglig. När du använder HTTP/2 ökar prestanda totalt.
 
 >[!NOTE]
 >
@@ -30,7 +67,7 @@ Webbplatsartikeln [Det du måste känna till om HTTP/2](https://www.engadget.com
 
 Prestandaförbättringen varierar mycket eftersom den baseras på olika faktorer. Till exempel webbplatsens kod, hur du använder Dynamic Media, konsumentens enhet, skärm och plats.
 
-Adobe testning gav följande resultat:
+Adobe egen testning gav följande resultat:
 
 * För bilder har svarstiden förbättrats med 7 %-28 % beroende på enhet och webbläsare. De mest betydande prestandavinster gjordes på iOS-enheter.
 * För tittarna har lästiden förbättrats med 15 %.
@@ -44,7 +81,7 @@ I följande exempel visas skillnaden mellan HTTP/1 och HTTP/2-inläsning:
 Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 * Använd säker HTTPS för multimedieförfrågningar.
-* Använd det Adobe-paketerade CDN (Content Delivery Network) som en del av din Dynamic Media Classic-licens.
+* Använd Adobe CDN (Content Delivery Network) som en del av din Dynamic Media Classic-licens.
 * Använd en dedikerad domän (d.v.s. `images.company.com` eller `mycompany.scene7.com`), inte en generisk Dynamic Media-domän (d.v.s. `s7d1.scene7.com`, `s7d2.scene7.com` eller `s7d13.scene7.com`).
 
   Om du vill hitta dina domäner öppnar du [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och loggar sedan in på ditt konto.
@@ -53,7 +90,7 @@ Om du vill använda HTTP/2 måste du uppfylla följande krav:
 
 ## Hur aktiverar jag HTTP/2 för mitt Dynamic Media-konto? {#what-is-the-process-for-enabling-http-for-my-dm-account}
 
-[Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och begära att gå över till HTTP/2. Det görs inte automatiskt för dig.
+[Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) och begära att gå över till HTTP/2. Det görs inte automatiskt åt dig.
 
 1. Ange följande information i ditt supportärende:
 
@@ -88,7 +125,7 @@ Förfrågningar behandlas i den ordning som de tas emot av kundsupporten.
 
 Övergången till HTTP/2 tar bort ditt cacheminne vid CDN eftersom det handlar om att gå över till en ny CDN-konfiguration.
 
-Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera några kundövergångar i taget. Med den här metoden säkerställs att godtagbara prestanda upprätthålls när begäranden dras från ursprungsläget.
+Det icke-cachelagrade innehållet träffar direkt på Adobe ursprungliga servrar tills cachen återskapas. På grund av detta planerar Adobe att hantera några kundövergångar i taget. Med den här metoden säkerställs att godtagbara prestanda upprätthålls när begäranden dras från ursprungsläget.
 
 ## Hur kan du verifiera om en URL eller webbplats är aktiverad med HTTP/2? {#how-can-you-verify-whether-a-url-or-website-is-activated-with-http}
 

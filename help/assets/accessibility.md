@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Accessibility, Asset Management
 role: User, Architect, Leader
 exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1950'
 ht-degree: 0%
 
 ---
@@ -30,8 +30,42 @@ Possible topics to cover in this article are below.
 
 # Hjälpmedelsfunktioner i [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] {#accessibility-in-aem-assets}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Med [!DNL Adobe Experience Manager] kan innehållsskapare och utgivare leverera enastående upplevelser på webben. Adobe strävar efter att inkludera skapare med funktionshinder genom att förbättra tillgängligheten för [!DNL Experience Manager]. Programmen har ständigt förbättrats för att uppfylla behoven hos alla typer av användare och följer världsstandarden som omfattar personer med nedsatt syn, hörsel, mobilitet eller andra funktionshinder.
 
@@ -213,7 +247,7 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 
 ## Tillgänglig dokumentation {#accessible-docs}
 
-[!DNL Experience Manager] innehåller hjälpmedelsanpassad dokumentation som kan användas av personer med funktionshinder. Följande hjälper till att göra innehåll tillgängligt för tillfället, medan Adobe fortsätter att förbättra mallen och innehållet:
+[!DNL Experience Manager] innehåller hjälpmedelsanpassad dokumentation som kan användas av personer med funktionshinder. Följande hjälper till att göra innehållet tillgängligt för tillfället, medan Adobe fortsätter att förbättra mallen och innehållet:
 
 * Skärmläsare kan läsa texten.
 * Bilder och illustrationer har alternativ text tillgänglig.
@@ -234,7 +268,7 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 ## Ge feedback {#a11y-feedback}
 
@@ -247,4 +281,4 @@ Om du vill ge feedback, ställa frågor och begära produktförbättringar som r
 >
 >* [Versionsinformation om förbättringar som gjorts i varje release](/help/release-notes/release-notes-cloud/release-notes-current.md).
 >* [[!DNL Adobe Experience Manager] hjälpmedelsvägledning](/help/compliance/accessibility/web-accessibility.md).
->* [Överensstämmelserapporter (ACR) och VPAT-lista för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
+>* [Överensanderapporter (ACR) och VPAT-listor för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).

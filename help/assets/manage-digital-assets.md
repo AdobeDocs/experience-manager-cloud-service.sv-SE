@@ -6,17 +6,51 @@ mini-toc-levels: 3
 feature: Asset Management, Publishing,Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '4147'
-ht-degree: 8%
+source-wordcount: '4175'
+ht-degree: 7%
 
 ---
 
 # Hantera resurser {#manage-assets}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -237,7 +271,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    Du kan konfigurera dimensionerna för den återgivning som du vill ska visas på informationssidan för en bild- eller videoresurs. Beroende på de dimensioner du anger visas återgivningen med de exakta eller närmaste måtten i Assets.
 
-   Du kan inte skapa återgivningar med följande prefix eftersom de är interna för Adobe:
+   Du kan inte skapa återgivningar med följande prefix eftersom dessa är interna för Adobe:
 
    * cq5
 
@@ -255,7 +289,7 @@ Några attribut som är unika för en viss kopia av en tillgång överförs inte
 
    >[!NOTE]
    >
-   >Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Beroende på webbläsaren stöds dessutom olika videoformat. Men MXF-videoformatet stöds ännu inte med videoanteckningar.
+   >Videoanteckningar stöds endast i webbläsare med HTML5-kompatibla videoformat. Beroende på webbläsaren stöds dessutom olika videoformat. Men MXF-videoformatet stöds ännu inte med videoanteckningar.
 
 ## Ta bort resurser {#delete-assets}
 
@@ -287,7 +321,7 @@ Du kan även inaktivera Tvinga borttagningsknappen med hjälp av en övertäckni
 
 Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-assets-from-aem.md).
 
-## Publish eller avpublicera resurser {#publish-assets}
+## Publicera eller avpublicera resurser {#publish-assets}
 
 1. Navigera till platsen för resursen eller resursmappen som du vill publicera eller som du vill ta bort från publiceringsmiljön (avpublicera).
 
@@ -296,7 +330,7 @@ Se [hämta resurser från [!DNL Experience Manager]](/help/assets/download-asset
 1. Välj alternativet **[!UICONTROL Publish]** eller **[!UICONTROL Unpublish]** efter behov.
 
    ![Avpubliceringsåtgärd](assets/unpublish_action.png)
-   *Bild: Publish, avpubliceringsalternativ och schemaläggningsalternativ.*
+   *Figur: Alternativ för publicering och avpublicering samt schemaläggning.*
 
 1. Välj **[!UICONTROL Now]** om du vill agera på resursen direkt eller välj **[!UICONTROL Later]** om du vill schemalägga åtgärden. Välj ett datum och en tid om du väljer alternativet **[!UICONTROL Later]**. Klicka på **[!UICONTROL Next]**.
 
@@ -330,7 +364,7 @@ CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan ocks
    >
    >Om du inte anger sökvägen till en inloggningssida visar [!DNL Experience Manager] standardinloggningssidan i publiceringsinstansen.
 
-1. Publish mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
+1. Publicera mappen och försök sedan komma åt den från publiceringsinstansen. En inloggningsskärm visas.
 1. Om du är CUG-medlem anger du dina säkerhetsuppgifter. Mappen visas när [!DNL Experience Manager] har autentiserat dig.
 
 ## Sök resurser {#search-assets}
@@ -484,7 +518,7 @@ Du kan bara visa en anteckning åt gången.
 >
 >Om du markerar flera anteckningar visas den senaste anteckningen i användargränssnittet.
 >
->Flerval stöds bara för utskrift av kommenterade objekt som PDF.
+>Flerval stöds endast för utskrift av kommenterade objekt som PDF.
 
 1. Om du vill visa sparade anteckningar för en resurs går du till resursens plats och öppnar resurssidan för resursen.
 
@@ -510,7 +544,7 @@ Du kan också välja att bara skriva ut anteckningarna eller granskningsstatusen
 
 >[!NOTE]
 >
->Du kan markera flera anteckningar när du skriver ut den kommenterade resursen som PDF.
+>Du kan välja flera anteckningar när du skriver ut den kommenterade resursen som PDF.
 
 Om du vill skriva ut anteckningarna och granskningsstatusen väljer du ikonen **[!UICONTROL Print]** och följer instruktionerna i guiden. Ikonen **[!UICONTROL Print]** visas bara i verktygsfältet när resursen har tilldelats minst en antecknings- eller granskningsstatus.
 
@@ -532,7 +566,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen väljer du ikonen **
 
    <!--![chlimage_1-244](assets/chlimage_1-244.png)-->
 
-1. I dialogrutan Skriv ut väljer du den position du vill att anteckningarna/granskningsstatusen ska visas på PDF. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Övre vänstra**. Det är markerat som standard.
+1. I dialogrutan Skriv ut väljer du den plats där du vill att anteckningarna/granskningsstatusen ska visas på PDF. Om du till exempel vill att anteckningarna/statusen ska skrivas ut längst upp till höger på sidan som innehåller den utskrivna bilden använder du inställningen **Övre vänstra**. Det är markerat som standard.
 
    <!--![chlimage_1-245](assets/chlimage_1-245.png)-->
 
@@ -542,13 +576,13 @@ Om du vill skriva ut anteckningarna och granskningsstatusen väljer du ikonen **
 
    <!--![chlimage_1-246](assets/chlimage_1-246.png)-->
 
-1. Hämta eller skriv ut PDF med alternativen längst upp till höger.
+1. Ladda ned eller skriv ut PDF med alternativen längst upp till höger.
 
    <!--![chlimage_1-247](assets/chlimage_1-247.png)-->
 
    Om du vill ändra utseendet på den återgivna PDF-filen, till exempel teckensnittsfärg, storlek och format, bakgrundsfärg för kommentarer och statusvärden, öppnar du **[!UICONTROL Annotation PDF configuration]** i Configuration Manager och ändrar önskade alternativ. Om du till exempel vill ändra visningsfärgen för den godkända statusen ändrar du färgkoden i motsvarande fält. Mer information om hur du ändrar teckenfärg i anteckningar finns i [Anteckning](/help/assets/manage-digital-assets.md#annotating).
 
-   Återgå till den återgivna PDF-filen och uppdatera den. Det uppdaterade PDF återspeglar de ändringar du gjorde.
+   Återgå till den återgivna PDF-filen och uppdatera den. Den uppdaterade PDF-versionen återspeglar de ändringar du gjort.
 
 ## Resursversionshantering {#asset-versioning}
 
@@ -678,4 +712,4 @@ Om du vill ha mer information kan du läsa om hur du [bläddrar bland DAM-resurs
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

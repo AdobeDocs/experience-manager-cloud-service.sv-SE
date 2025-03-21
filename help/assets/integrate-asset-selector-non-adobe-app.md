@@ -1,25 +1,59 @@
 ---
 title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
-description: Integrera resursväljare med olika program från Adobe, andra än Adobe och andra tillverkare.
+description: Integrera resursväljare med olika program från Adobe, andra företag än Adobe och tredje part.
 role: Admin, User
 exl-id: 55848de0-aff2-42a0-b959-c771235d9425
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
 
-# Integrering med ett program som inte är Adobe {#integrate-asset-selector-non-adobe-app}
+# Integrering med andra program än Adobe {#integrate-asset-selector-non-adobe-app}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-Med Resursväljaren kan du integrera med olika program från andra tillverkare än Adobe eller från tredje part så att de kan fungera tillsammans sömlöst.
+Med Resursväljaren kan du integrera med olika program från andra företag än Adobe eller tredje part så att de kan fungera tillsammans sömlöst.
 
 ## Förutsättningar {#prereqs-non-adobe-app}
 
-Använd följande förutsättningar om du integrerar resursväljare med ett program som inte är Adobe:
+Använd följande krav om du integrerar resursväljare med ett program som inte är från Adobe:
 
 * [Kommunikationsmetoder](/help/assets/overview-asset-selector.md#prereqs)
 * imsClientId
@@ -28,11 +62,11 @@ Använd följande förutsättningar om du integrerar resursväljare med ett prog
 * imsOrg
 * apikey
 
-Resursväljaren stöder autentisering till databasen [!DNL Experience Manager Assets] med hjälp av Identity Management System-egenskaper (IMS) som `imsScope` eller `imsClientID` när du integrerar den med ett program som inte är Adobe.
+Resursväljaren stöder autentisering till databasen [!DNL Experience Manager Assets] med hjälp av Identity Management System-egenskaper (IMS) som `imsScope` eller `imsClientID` när du integrerar den med ett program som inte kommer från Adobe.
 
-## Konfigurera resursväljare för ett program som inte är Adobe {#configure-non-adobe-app}
+## Konfigurera resursväljare för ett icke-Adobe-program {#configure-non-adobe-app}
 
-Om du vill konfigurera resursväljaren för ett program som inte är Adobe måste du först logga en supportanmälan för etablering följt av integrationsstegen.
+Om du vill konfigurera resursväljaren för ett program som inte kommer från Adobe måste du först logga en supportanmälan för etablering följt av integrationsstegen.
 
 ### Logga en supportanmälan {#log-a-support-ticket}
 
@@ -47,7 +81,7 @@ Steg för att logga en supportanmälan via Admin Console:
 
 ## Integreringssteg {#non-adobe-app-integration-steps}
 
-Använd den här exempelfilen `index.html` för autentisering när resursväljaren integreras med ett program som inte är Adobe.
+Använd den här exempelfilen `index.html` för autentisering när resursväljaren integreras med ett program som inte är från Adobe.
 
 Gå till resursväljarpaketet med taggen `Script`, som visas på *rad 9* till *rad 11* i exempelfilen `index.html`.
 
@@ -55,7 +89,7 @@ Gå till resursväljarpaketet med taggen `Script`, som visas på *rad 9* till *r
 
 Eftersom du inte har skapat någon `imsToken` använder du funktionerna `registerAssetsSelectorsAuthService` och `renderAssetSelectorWithAuthFlow`, vilket visas på rad 40 till rad 50 i exempelfilen `index.html`. Använd funktionen `registerAssetsSelectorsAuthService` före `renderAssetSelectorWithAuthFlow` för att registrera `imsToken` med resursväljaren. [!DNL Adobe] rekommenderar att `registerAssetsSelectorsAuthService` anropas när du instansierar komponenten.
 
-Definiera autentiseringen och andra Assets as a Cloud Service åtkomstrelaterade egenskaper i avsnittet `const props`, vilket visas på *rad 54* till *rad 60* i exempelfilen `index.html`.
+Definiera autentiseringen och andra åtkomstrelaterade egenskaper för Assets as a Cloud Service i avsnittet `const props`, vilket visas på *rad 54* till *rad 60* i exempelfilen `index.html`.
 
 Den globala variabeln `PureJSSelectors`, som omnämns i *rad 65*, används för att återge resursväljaren i webbläsaren.
 
@@ -148,5 +182,5 @@ Resursväljaren återges på behållarelementet `<div>`, vilket anges på *rad 7
 >
 >* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
 >* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
->* [Integrera resursväljare med Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+>* [Integrera resursväljare med dynamiska media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
 >* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)

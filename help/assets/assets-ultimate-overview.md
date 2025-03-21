@@ -1,55 +1,87 @@
 ---
 title: Assets Ultimate
-description: Läs mer om viktiga aspekter av Assets Ultimate, som viktiga fördelar, användartyper och deras behörigheter.
+description: Läs mer om viktiga aspekter av Assets Ultimate, t.ex. viktiga fördelar, användartyper och behörigheter.
 feature: Asset Management
 role: User, Admin
-source-git-commit: f033efd954ea7f9d27a891bfb9c0226e9d9c1432
+exl-id: 3ae96cd2-e0ac-43a5-a0bf-bebb1a028b10
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
 
 # [!DNL Assets] as a Cloud Service Ultimate {#assets-ultimate-user-types-privileges}
 
-| [Bästa praxis vid sökning](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 ![Assets as a Cloud Service Ultimate](/help/assets/assets/aem-assets-ultimate-banner.png)
 
-Assets as a Cloud Service Ultimate offers advanced DAM capabilities. AEM Assets Ultimate har utvecklats för att hantera komplexa leverantörskedjor för innehåll, så att varje del av innehållet fungerar bra i alla kanaler.
+Assets as a Cloud Service Ultimate har avancerade DAM-funktioner. AEM Assets Ultimate har tagits fram för att hantera komplexa innehållsförsörjningskedjor och säkerställa att allt innehåll fungerar bra i alla kanaler.
 
-## Why Assets Ultimate? {#why-ultimate-existing-new-users}
+## Varför Assets Ultimate? {#why-ultimate-existing-new-users}
 
-Assets as a Cloud Service Ultimate offers various key benefits that help manage your organization&#39;s asset needs effectively, such as:
+Assets as a Cloud Service Ultimate har flera viktiga fördelar som hjälper er att effektivt hantera era behov av mediefiler, till exempel:
 
-* Greater flexibility with more user types and privileges associated with those user types, such as Collaborator users, Power users, and Limited users.
+* Större flexibilitet med fler användartyper och behörigheter som är kopplade till dessa användartyper, som medarbetare, Power-användare och Limited-användare.
 
-* Seamless asset distribution with Content Hub.
+* Smidig mediedistribution med Content Hub.
 
-* AI-drivet skapande och remixning av innehåll med hjälp av Adobe Express med Firefly.
+* Skapa och mixa med AI-baserat material med Adobe Express och Firefly.
 
-* Smidigare introduktions- eller uppgraderingsupplevelse för nya och befintliga användare.
+* Smidigare start- och uppgraderingsupplevelser för nya och befintliga användare.
 
 ## Viktiga funktioner i Assets Ultimate {#capabilities-assets-ultimate}
 
-Med Assets as a Cloud Service Ultimate kan du hantera digitala resurser på olika sätt, till exempel:
+Med Assets as a Cloud Service Ultimate kan du utföra olika viktiga åtgärder för hantering av digitala resurser, som:
 
-* **Resurshantering och bibliotekstjänster**: Verktyg som gör det möjligt för användare att hämta, lagra, katalogisera, kontrollera, hantera och styra ett varumärkes digitala resurser i ett centralt arkiv
+* **Resurshantering och bibliotekstjänster** &#x200B;: Verktyg som gör det möjligt för användare att importera, lagra, katalogisera, styra, hantera och styra ett varumärkes digitala resurser i ett centralt arkiv
 
-* **Sökning, identifiering och samarbete**: Verktyg som gör det möjligt för användare att bläddra bland, upptäcka, dela och samarbeta om resurser som de behöver för att skapa avancerade kundupplevelser.
+* **Sök, identifiera och Collaboration**: Verktyg som gör att användare kan bläddra bland, upptäcka, dela och samarbeta med resurser som de behöver för att skapa avancerade kundupplevelser.
 
 * **Säkerhet och Rights Management**: Verktyg för att hantera åtkomst, behörigheter, rättigheter och säkerhet för att säkerställa regelefterlevnad, konsekvens och varumärkesintegritet.
 
 * **Creative Cloud Connections**: Verktyg som gör att marknadsförings- och kreativa team kan samarbeta med enklare åtkomst, kommentarer, granskningar och anteckningar för att uppdatera eller slutföra digitala resurser.
 
-* **Experience Cloud-anslutningar**: Verktyg som stöder inbyggd åtkomst till digitala resurser från andra program och tjänster från Experience Cloud.
+* **Experience Cloud Connections**: Verktyg som stöder inbyggd åtkomst till digitala resurser från andra Experience Cloud-program och -tjänster.
 
-* **Distribution Portal Experience (Content Hub):** Verktyg för att utöka åtkomsten till ett varumärkes godkända digitala tillgångar till utökade intressenter för att säkerställa användning och varumärkeskonsekvens.
+* **Distribution Portal Experience (Content Hub)**: Verktyg för att utöka åtkomsten till ett varumärkes godkända digitala resurser till externa intressenter för att säkerställa enhetlig användning och varumärkesexponering.
 
-* **Integreringar**: integreringar med andra Adobe- och icke-Adobe-program.
+* **Integrationer**: integreringar med andra program från Adobe och andra program än Adobe.
 
-* **Dynamic Media (tillägg)**: Verktyg för att omvandla och leverera bilder, videor och annat framväxande innehåll för interaktiva multimedieupplevelser för alla typer av enheter i stor skala.
+* **Dynamiska media (tillägg)**: Verktyg för att omvandla och leverera bilder, videor och annat framväxande innehåll för interaktiva multimedieupplevelser för alla typer av enheter i stor skala.
 
 * **Anpassning**: Verktyg för att anpassa DAM-användargränssnittets åtkomst till API:er för vidare utveckling.
 
@@ -60,9 +92,9 @@ Med Assets as a Cloud Service Ultimate kan du hantera digitala resurser på olik
 Vilka åtgärder du kan utföra i Assets as a Cloud Service beror på vilken användartyp du har. Mer information finns i [Tillgängliga användartyper](#available-user-types).
 
 
-## Vilka är tillgängliga användartyper och privilegier? {#available-user-types}
+## Vilka är tillgängliga användartyper och behörigheter? {#available-user-types}
 
-Assets as a Cloud Service erbjuder fyra användartyper. Varje användartyp ger en annan uppsättning behörigheter. Användartyperna är:
+Assets as a Cloud Service har fyra typer av användare. Varje användartyp har olika behörighetsgrupper. Användartyperna är:
 
 * **Administratör**: Standardadministratörsanvändaren som konfigurerar de andra tre användartyperna i organisationen.
 
@@ -70,41 +102,41 @@ Assets as a Cloud Service erbjuder fyra användartyper. Varje användartyp ger e
 
 * **Medarbetare-användare**: Som medarbetare kan du:
 
-   * Arbeta med resurser från Experience Manager via integreringar av resurser som är tillgängliga för din organisation i andra Adobe-produkter och program som inte kommer från Adobe.
+   * Arbeta med material från Experience Manager via integreringar av Assets som är tillgängliga för er organisation i andra Adobe-produkter och program från andra företag än Adobe.
 
-   * Skapa och redigera resurser med inbyggda Adobe Express och Firefly med hjälp av professionellt utformade mallar, varumärkespaket, Adobe Stock-mediefiler och så vidare.
+   * Skapa och redigera material med inbyggda Adobe Express och Firefly och använd professionellt designade mallar, märkespaket, Adobe Stock-material med mera.
 
-   * Få åtkomst till och utnyttja godkända resurser från din organisation med hjälp av AEM Assets Content Hub-portalen.
+   * Få åtkomst till och utnyttja godkänt material från er organisation via AEM Assets Content Hub portal.
 
-* **Privilegierade användare**: Som privilegierad användare kan du:
+* **Kraftfulla användare**: Som Power-användare kan du:
 
-   * Få tillgång till alla AEM Assets-funktioner, inklusive hantering av resurser, metadata och den övergripande styrningen och automatiseringen av digitala resurser.
+   * Få tillgång till alla AEM Assets-funktioner, inklusive hantering av resurser, metadata och övergripande styrning och automatisering av digitala resurser.
 
-   * Arbeta med resurser från Experience Manager via integreringar med Assets som är tillgängliga för er organisation i andra Adobe-program och andra program än Adobe.
+   * Arbeta med resurser från Experience Manager via integreringar med Assets som är tillgängliga för din organisation i andra Adobe- och icke-Adobe-program.
 
-   * Skapa och redigera mediefiler med hjälp av inbyggda Adobe Express- och Firefly-funktioner som använder professionellt utformade mallar, varumärkeskit, Adobe Stock-mediefiler och så vidare.
+   * Skapa och redigera material med inbyggda Adobe Express och Firefly och använd professionellt designade mallar, märkespaket, Adobe Stock-material med mera.
 
-   * Få tillgång till och utnyttja godkända resurser från din organisation via AEM Assets Content Hub-portalen.
+   * Få åtkomst till och utnyttja godkänt material från er organisation via AEM Assets Content Hub portal.
 
-  ![as a Cloud Service privilegierad användare för resurser](/help/assets/assets/assets-cs-power-users.png)
+  ![Assets as a Cloud Service Power user](/help/assets/assets/assets-cs-power-users.png)
 
-I följande tabell sammanfattas de tillgängliga AEM Assets-användartyperna, de behörigheter de har och de produktprofiler som krävs för att få dessa behörigheter:
+I följande tabell sammanfattas tillgängliga AEM Assets-användartyper, vilka behörigheter de har och vilka produktprofiler som krävs för att få dessa behörigheter:
 
 
-| Användarroll | Begränsade användare | Användare av samarbetspartners | Privilegierade användare | Administratörer |
+| Användarroll | Begränsade användare | Medarbetare | Kraftfulla användare | Administratörer |
 |---------------|----------|----------|-------------------------|---|
 | **Funktioner** |
-| Få åtkomst till varumärkesgodkända tillgångar på Content Hub-portalen | ✓ | ✓ | ✓ | ✓ |
-| Skapa och redigera resurser med inbyggda Adobe Express och Firefly | - | ✓ | ✓ | ✓ |
-| Integrering av mediefiler i organisationen med program i och utanför Adobe Adobe | - | ✓ | ✓ | ✓ |
-| Få tillgång till alla AEM Assets-funktioner, som hantering av resurser, metadata och övergripande styrning och automatisering | - | − | ✓ | ✓ |
-| Manage permissions on content in AEM Assets author environment | − | − | − | ✓ |
-| **Användaren måste finnas i de här produktprofilerna (Admin Console)** |
-| AEM > Leveransinstans > AEM Assets Limited-användare | ✓ | ✓ | ✓ | ✓ |
-| AEM > Production Author-instans > AEM Assets-samarbetspartneranvändare | − | ✓ | - | - |
+| Få tillgång till varumärkesgodkända resurser på Content Hub-portalen | ✓ | ✓ | ✓ | ✓ |
+| Skapa och redigera material med inbyggda Adobe Express och Firefly | - | ✓ | ✓ | ✓ |
+| Integrering av resurser inom organisationen med Adobe och andra program än Adobe | - | ✓ | ✓ | ✓ |
+| Få tillgång till alla AEM Assets-funktioner, som hantering av resurser, metadata och övergripande styrning och automatisering | - | - | ✓ | ✓ |
+| Hantera behörigheter för innehåll i AEM Assets redigeringsmiljö | - | - | - | ✓ |
+| **Användaren måste finnas i dessa produktprofiler (Admin Console)** |
+| AEM > Delivery instance > AEM Assets Limited Users | ✓ | ✓ | ✓ | ✓ |
+| AEM > Production Author instance > AEM Assets Collaborator Users | - | ✓ | - | - |
 | AEM > Production Author instance > AEM Assets Power Users | - | - | ✓ | - |
-| AEM > Production Author instance > AEM Administrators | - | - | − | ✓ |
-| **Mer information** | Se [Aktivera Content Hub](/help/assets/enable-assets-ultimate.md##enable-assets-ultimate-new-users) | Se [Användare som samarbetar internt](/help/assets/enable-assets-ultimate.md#onboard-collaborator-users) | Se [inbyggda privilegierade användare](/help/assets/enable-assets-ultimate.md#onboard-power-users) | - |
+| AEM > Production Author instance > AEM Administrators | - | - | - | ✓ |
+| **Mer information** | Se [Aktivera Content Hub](/help/assets/enable-assets-ultimate.md##enable-assets-ultimate-new-users) | Se [Användare som samarbetar internt](/help/assets/enable-assets-ultimate.md#onboard-collaborator-users) | Se [Onboard Power Users](/help/assets/enable-assets-ultimate.md#onboard-power-users) | - |
 
 Information om hur du kommer igång med Assets Ultimate finns i [Aktivera AEM Assets Ultimate](/help/assets/enable-assets-ultimate.md).
 

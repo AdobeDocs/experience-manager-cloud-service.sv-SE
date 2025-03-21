@@ -5,17 +5,51 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1325'
+source-wordcount: '1353'
 ht-degree: 0%
 
 ---
 
 # Hämta resurser från [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -43,7 +77,7 @@ Du kan hämta resurser från Experience Manager på följande sätt:
 
 ## Hämta resurser med gränssnittet [!DNL Experience Manager] {#download-assets}
 
-Experience Manager optimerar nedladdningen baserat på resurskvantitet och storlek. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] hämtar direkt enskilda resursbegäranden för den ursprungliga filen i stället för att bifoga enskilda resurser i ett ZIP-arkiv för snabbare nedladdningar. Experience Manager stöder stora nedladdningar med asynkrona begäranden. Hämtningsbegäranden som är större än 100 GB delas upp i flera ZIP-arkiv med en maximal storlek på 100 MB vardera.
+Experience Manager optimerar nedladdningen baserat på materialets kvantitet och storlek. Mindre filer hämtas från användargränssnittet i realtid. [!DNL Experience Manager] hämtar direkt enskilda resursbegäranden för den ursprungliga filen i stället för att bifoga enskilda resurser i ett ZIP-arkiv för snabbare nedladdningar. Experience Manager stöder stora nedladdningar med asynkrona begäranden. Hämtningsbegäranden som är större än 100 GB delas upp i flera ZIP-arkiv med en maximal storlek på 100 MB vardera.
 
 Som standard utlöser [!DNL Experience Manager] ett meddelande i [[!DNL Experience Manager] Inkorgen](/help/sites-cloud/authoring/inbox.md) när ett hämtningsarkiv skapas.
 
@@ -58,7 +92,7 @@ Asynkrona nedladdningar aktiveras i följande fall:
 * Om hämtningsstorleken är större än 100 MB
 * Om nedladdningen tar mer än 30 sekunder att förbereda
 
-Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Utöver meddelanden i inkorgen för Experience Manager kan Experience Manager skicka e-post för att meddela användaren när hämtningen är klar. Om du vill aktivera den här funktionen kan administratörerna konfigurera e-posttjänsten genom att [konfigurera en SMTP-serveranslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Förutom Experience Manager inkorgsmeddelanden kan Experience Manager skicka e-post för att meddela användaren när nedladdningen är klar. Om du vill aktivera den här funktionen kan administratörerna konfigurera e-posttjänsten genom att [konfigurera en SMTP-serveranslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
 När e-posttjänsten har konfigurerats kan administratörer och användare aktivera e-postmeddelanden från Experience Manager-gränssnittet.
 
@@ -113,7 +147,7 @@ När användare hämtar resurser från delade länkar använder [!DNL Assets] en
 
 Med standardservleten i [!DNL Experience Manager] kan autentiserade användare utfärda godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser. Förberedelsen kan påverka prestanda eller till och med överbelasta servern och nätverket. För att minska sådana potentiella DoS-liknande risker som orsakas av den här funktionen är `AssetDownloadServlet` OSGi-komponenten inaktiverad för publiceringsinstanser. Om du inte behöver nedladdningsfunktionen för författarinstanser inaktiverar du den som skapade den.
 
-Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar den dagliga hämtningen. Ett högt värde kan påverka prestandan.
+Om du vill tillåta hämtning av resurser från DAM, till exempel när du använder Assets Share Commons eller någon annan portalliknande implementering, aktiverar du servleten manuellt via en OSGi-konfiguration. Adobe rekommenderar att du anger en så låg hämtningsstorlek som möjligt utan att det påverkar kraven för den dagliga hämtningen. Ett högt värde kan påverka prestandan.
 
 1. Skapa en mapp med en namnkonvention som anger publiceringskörningsläget som mål, det vill säga `config.publish`:
 
@@ -161,10 +195,10 @@ Mer information om hur du lägger till en tom OSGi-konfiguration finns i den hä
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
->* [Hämta resurser med datorprogrammet Experience Manager på Windows- eller Mac-skrivbordet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [Hämta resurser med Experience Manager-datorprogrammet på Windows- eller Mac-skrivbordet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
 >* [Hämta resurser med Adobe Assets Link från de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)

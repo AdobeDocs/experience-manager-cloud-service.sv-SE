@@ -4,19 +4,53 @@ description: Betydande ändringar av  [!DNL Adobe Experience Manager Assets] in 
 feature: Release Information
 role: User, Leader, Architect, Admin
 exl-id: 93e7dbcd-016e-4ef2-a1cd-c554efb5ad34
-source-git-commit: 979c4accca8b271ba2ff0ba176985c94b6d469c7
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
 
 # Nollbara ändringar av [!DNL Experience Manager Assets] som [!DNL Cloud Service] {#notable-changes}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-[!DNL Adobe Experience Manager] som [!DNL Cloud Service] har många nya funktioner och möjligheter att hantera dina Experience Manager-projekt. Det finns många skillnader mellan [!DNL Experience Manager Assets] lokal eller värdbaserad som hanterad Adobe-tjänst jämfört med [!DNL Experience Manager] som en [!DNL Cloud Service]. I den här artikeln beskrivs de viktiga skillnaderna för [!DNL Assets]-funktioner.
+[!DNL Adobe Experience Manager] som [!DNL Cloud Service] har många nya funktioner och möjligheter att hantera dina Experience Manager-projekt. Det finns många skillnader mellan [!DNL Experience Manager Assets] lokal eller värdbaserad som Adobe Managed Service jämfört med [!DNL Experience Manager] som en [!DNL Cloud Service]. I den här artikeln beskrivs de viktiga skillnaderna för [!DNL Assets]-funktioner.
 
 De största skillnaderna jämfört med [!DNL Experience Manager] 6.5 är inom följande områden:
 
@@ -42,7 +76,7 @@ Standardåtergivningarna som genereras med tillgångsmikrotjänster lagras på e
 
 ## Utveckla och testa mikrotjänster {#asset-microservices}
 
-Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av återgivningsverktyg och -metoder från tredje part (som [!DNL ImageMagick]) och förenkla konfigurationer, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper. Du kan nu bearbeta ett [brett urval av filtyper](/help/assets/file-format-support.md) som täcker fler format som är klara att användas än vad som är möjligt med tidigare versioner av Experience Manager. Miniatyrbildextrahering av PSD och PSB-format är nu möjligt eftersom tidigare krävda tredjepartslösningar som [!DNL ImageMagick]. Du kan inte använda de komplexa konfigurationerna för [!DNL ImageMagick] för konfigurationen [!UICONTROL Processing Profiles]. Använd [!DNL Dynamic Media] för avancerad MPEG-omkodning av videofilmer och använd bearbetningsprofiler för [grundläggande omkodning av MP4-videofilmer](/help/assets/manage-video-assets.md#transcode-video).
+Resursmikrotjänsterna erbjuder en skalbar och flexibel bearbetning av resurser med hjälp av molntjänster. Adobe hanterar molntjänsterna för optimal hantering av olika resurstyper och bearbetningsalternativ. Resursmikrotjänster hjälper till att undvika behovet av återgivningsverktyg och -metoder från tredje part (som [!DNL ImageMagick]) och förenkla konfigurationer, samtidigt som de tillhandahåller färdiga funktioner för vanliga filtyper. Du kan nu bearbeta ett [brett urval av filtyper](/help/assets/file-format-support.md) som täcker fler format som är klara att användas än vad som är möjligt med tidigare versioner av Experience Manager. Miniatyrbildextrahering av PSD- och PSB-format är nu möjligt om det tidigare krävdes tredjepartslösningar som [!DNL ImageMagick]. Du kan inte använda de komplexa konfigurationerna för [!DNL ImageMagick] för konfigurationen [!UICONTROL Processing Profiles]. Använd [!DNL Dynamic Media] för avancerad MPEG-omkodning av videofilmer och använd bearbetningsprofiler för [grundläggande omkodning av MP4-videofilmer](/help/assets/manage-video-assets.md#transcode-video).
 
 Resursmikrotjänster är en molnbaserad tjänst som automatiskt etableras och ansluts till [!DNL Experience Manager] i kundprogram och miljöer som hanteras i Cloud Manager. För att utöka eller anpassa [!DNL Experience Manager] kan utvecklare använda befintligt innehåll eller befintliga resurser med återgivningar som genererats i en molnmiljö. Detta gör att de kan testa och validera sin kod genom att använda, visa och hämta resurser.
 
@@ -59,12 +93,12 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 | Tillbakaskrivning av metadata | Detta fungerar annorlunda | Inaktiverad som standard. Aktivera motsvarande startprogram för arbetsflödet om det behövs. Resursmikrotjänsterna hanterar tillbakaskrivningen. |
 | Bearbetning av resurser som överförts med hjälp av Package Manager | Detta kräver manuell åtgärd | Bearbeta manuellt med åtgärden **[!UICONTROL Reprocess Asset]**. |
 | MIME-typdetektering | Stöds inte. | Om du överför en digital resurs utan ett tillägg eller med ett felaktigt tillägg kanske den inte bearbetas som du vill. Användarna kan fortfarande lagra de binära filerna utan filnamnstillägg i DAM. Se [MIME-typdetektering i [!DNL Experience Manager]  6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/detect-asset-mime-type-with-tika). |
-| Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsexempel som anteckningar kanske inte uppfylls. Se [Skapa underresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/managing/managing-linked-subassets#generate-subassets). Förhandsgranskning i PDF av vissa filtyper är tillgänglig från och med [2021.7.0-utgåvan](/help/release-notes/release-notes-cloud/release-notes-current.md). |
+| Generering av deltillgångar för sammansatta tillgångar | Stöds inte. | Beroende användningsexempel som anteckningar kanske inte uppfylls. Se [Skapa underresurser i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/managing/managing-linked-subassets#generate-subassets). PDF förhandsgranskning av vissa filtyper är tillgänglig från och med [2021.7.0-utgåvan](/help/release-notes/release-notes-cloud/release-notes-current.md). |
 | Redigera bilder | Stöds inte | Det går inte att redigera resurser i Experience Manager as a Cloud Service. Se [hur det fungerade i Experience Manager 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/managing/manage-assets#editing-images). |
 | Startsida | Stöds inte | Se [[!DNL Assets] Startsidan i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/using/assets-home-page) |
 | Extrahera resurser från ZIP-arkiv | Stöds inte | Se [ZIP-extrahering i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/managing/manage-assets#extractzip). |
 | Assets betyg | Stöds inte | Värderingswidgeten i metadataramedigeraren stöds inte. |
-| filtret Innehållsdisposition | Stöds inte | Ett vanligt användningsexempel för `ContentDispositionFilter` är att låta administratörer konfigurera [!DNL Experience Manager] så att HTML-filer kan hanteras och PDF-filer öppnas infogat i stället för att de kan hämtas. På publiceringsinstanserna kan du hantera dispositionen med Dispatcher-konfigurationen. I redigeringsinstanserna rekommenderar inte Adobe att du ändrar Content Disposition-huvudet. Se [Filtret Innehållsförskjutning i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/content-disposition-filter). |
+| filtret Innehållsdisposition | Stöds inte | Ett vanligt användningsexempel för `ContentDispositionFilter` är att låta administratörer konfigurera [!DNL Experience Manager] så att HTML-filer kan hanteras och PDF-filer öppnas online i stället för att de kan hämtas. På publiceringsinstanserna kan du hantera dispositionen med Dispatcher-konfigurationen. I redigeringsinstanserna rekommenderar inte Adobe att du ändrar Content Disposition-huvudet. Se [Filtret Innehållsförskjutning i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/content-disposition-filter). |
 | Produktfotografimall | Stöds inte | Se [produktfotofotografimall i [!DNL Experience Manager] 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/managing-product-information). |
 | Smart översättning | Stöds inte | Smart översättning stöds inte i [!DNL Experience Manager] som [!DNL Cloud Service]. |
 | WebDAV | Stöds inte | Mer information om alternativ finns i [[!DNL Creative Cloud] integration](/help/assets/aem-cc-integration-best-practices.md) eller [referensmaterial för utvecklare](/help/assets/developer-reference-material-apis.md). |
@@ -84,7 +118,7 @@ Om du vill göra en fullständig validering av koden och processen, inklusive ti
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >

@@ -4,23 +4,57 @@ description: Använd uppgifterna i rapportavsnittet i Assets-vyn för att utvär
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
 feature: Asset Insights, Asset Reports
 role: User, Admin, Developer
-source-git-commit: c92fc95d7f2774b24664b457bf785120945fc966
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1525'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
 
 # Hantera rapporter {#manage-reports}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Med tillgångsrapportering kan administratörer se vilka aktiviteter Adobe Experience Manager Assets View-miljön har. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare har tillgång till Insikter-kontrollpanelen och de som har tilldelats administratörens produktprofil kan skapa användardefinierade rapporter.
 
 ## Åtkomstrapporter {#access-reports}
 
-Alla användare som är tilldelade till AEM administratörsproduktprofil kan komma åt kontrollpanelen för insikter eller skapa användardefinierade rapporter i Assets-vyn.
+Alla användare som har tilldelats AEM administratörsproduktprofil har tillgång till kontrollpanelen Insights eller kan skapa användardefinierade rapporter i Assets-vyn.
 
 Navigera till **[!UICONTROL Reports]** under **[!UICONTROL Settings]** för att få åtkomst till rapporter.
 
@@ -48,7 +82,7 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
 
    **På fliken Konfiguration:**
 
-   1. **Typ av rapportering:** Välj bland typerna [!UICONTROL upload], [!UICONTROL download] eller [Dynamic Media-leveransrapport](#dynamic-media-delivery-reports).
+   1. **Typ av rapportering:** Välj bland typerna [!UICONTROL upload], [!UICONTROL download] eller [Dynamisk medieleveransrapport](#dynamic-media-delivery-reports).
    1. **Titel:** Lägg till en titel i rapporten.
    1. **Beskrivning:** Lägg till en valfri beskrivning i rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera rapporten med överförda och hämtade resurser i den specifika mappen. Om du till exempel behöver rapporten med resurser som överförts till en mapp anger du sökvägen till den mappen.
@@ -138,7 +172,7 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
 
 ## Dynamic Media Delivery Reports {#dynamic-media-delivery-reports}
 
-Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leveransantal på tillgångsnivå, referensinformation, resurssökväg i AEM Assets och unikt resurs-ID. Rapporter kan genereras för alla resurser som levereras via Dynamic Media för AEM Assets eller för en viss mapphierarki i AEM Assets. Dessutom kan Dynamic Media Delivery Reports hjälpa till att mäta avkastningen på levererade tillgångar, mäta kanalernas prestanda och ta hjälp av välgrundade resurshanteringsåtgärder.
+Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leveransantal på tillgångsnivå, referensinformation, resurssökväg i AEM Assets och unikt resurs-ID. Rapporter kan genereras för alla resurser som levereras via databasen Dynamic Media for AEM Assets eller för en viss mapphierarki i AEM Assets. Dessutom hjälper Dynamic Media Delivery Reports till att mäta avkastningen på levererade mediefiler, mäta kanalernas prestanda och ta hjälp av välunderbyggda resurshanteringsåtgärder.
 
 <!--
 >[!NOTE]
@@ -152,17 +186,17 @@ Du bör ha en Dynamic Media-licens för att skapa och använda den här rapporte
 
 >[!IMPORTANT]
 > 
->* Det finns rapporter om mediefiler som levereras via Dynamic Media.
+>* Rapporter tillhandahålls för resurser som levereras via Dynamic Media.
 >* Rapporterna genereras för de första 1 miljon raderna. Om du vill hämta alla filer inom den här gränsen bör du överväga att ta med refererarkolumnen för mindre mappar.
 >* Rapporterna kan bara genereras för de senaste tre månaderna.
 
-### Skapa en leveransrapport för Dynamic Media{#create-dynamic-media-delivery-report}
+### Skapa en Dynamic Media Delivery Report{#create-dynamic-media-delivery-report}
 
-1. Skapa en Dynamic Media-leveransrapport med hjälp av stegen som beskrivs i [Skapa en rapport](#create-report).
+1. Skapa en rapport för leverans av dynamiska media med hjälp av stegen som beskrivs i [Skapa en rapport](#create-report).
 
 1. Välj **[!UICONTROL Dynamic Media Delivery]** i listrutan **[!UICONTROL Report type]**.
 
-   ![Listrutan Dynamic Media-leveransrapport](assets/dynamic-media-delivery-report-option.png)
+   ![Listrutan Dynamisk medieleveransrapport](assets/dynamic-media-delivery-report-option.png)
 
 
 1. På fliken **[!UICONTROL Columns]** kan du markera kolumnen **[!UICONTROL Referrer]** som ska ingå i rapporten.
@@ -171,7 +205,7 @@ Du bör ha en Dynamic Media-licens för att skapa och använda den här rapporte
 
    Alla kolumner i den hämtade rapporten är skrivskyddade, förutom kolumnen **Referent** som du kan ändra för att inkludera eller exkludera från rapporten. <!--Choosing a referrer displays the number of visitors received from each referred report that directs traffic to the site. It offers insights into the sources of traffic and the origin of the visitors. Such insights help measure ROI of delivered assets, measure channel performance, and help take informed asset management tasks for assets.-->
 
-### Åtgärder som utförts i Dynamic Media Delivery Report {#actions-performed-dynamic-media-delivery-reports}
+### Åtgärder som utförts i rapporten Dynamic Media Delivery {#actions-performed-dynamic-media-delivery-reports}
 
 När du har skapat rapporten kan du utföra följande åtgärder:
 
@@ -181,9 +215,9 @@ När du har skapat rapporten kan du utföra följande åtgärder:
 
    * **I kolumnen** visas antalet gånger som resursen levereras (leveransantal).
 
-Information om hur du tar bort eller hämtar Dynamic Media-leveransrapporten som CSV finns i [Visa och hämta befintlig rapport](#View-and-download-existing-report).
+Information om hur du tar bort eller hämtar Dynamic Media Delivery Report som CSV finns i [Visa och hämta befintlig rapport](#View-and-download-existing-report).
 
-![Hämtad CSV på Dynamic Media-leveransrapport](assets/csv-dynamic-media-delivery-report.png)
+![Hämtade CSV-fil på Dynamic Media Delivery Report](assets/csv-dynamic-media-delivery-report.png)
 
 
 ## Visa och hämta befintlig rapport {#View-and-download-existing-report}
@@ -207,7 +241,7 @@ Följ stegen nedan för att schemalägga en rapport:
    1. Växla **Schemarapport:** Växla för att schemalägga rapporten senare eller för dess upprepade förekomst.
       ![schemarapport](/help/assets/assets/schedule-reports1.svg)
 
-   1. **Välj frekvens:** Ange intervallet för att generera rapporten (till exempel dagligen, veckovis, månadsvis, årsvis eller en gång) och ange datum och tid för att köra rapporten tillsammans med slutdatumet för upprepning. För en engångsrapport väljer du datumintervallet för rapporten om den valda aktivitetstypen i AEM. Om du till exempel behöver en rapport om hämtade resurser från den 10 till den 29 (framtida datum) för en viss månad, väljer du dessa datum i fältet **Välj datumintervall**.
+   1. **Välj frekvens:** Ange intervallet för att generera rapporten (till exempel dagligen, veckovis, månadsvis, årsvis eller en gång) och ange datum och tid för att köra rapporten tillsammans med slutdatumet för upprepning. För en engångsrapport väljer du datumintervall för rapporten om den valda aktivitetstypen i AEM-miljön. Om du till exempel behöver en rapport om hämtade resurser från den 10 till den 29 (framtida datum) för en viss månad, väljer du dessa datum i fältet **Välj datumintervall**.
 
    >[!NOTE]
    >

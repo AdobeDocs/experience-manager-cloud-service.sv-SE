@@ -1,47 +1,81 @@
 ---
-title: Integrering av
-description: som är integrerade i AEM Assets och som finns i Assets View kan erbjuda kontext i en tillgångs historia, inklusive hur den har skapats och vem som har deltagit i skapandet av den. Like a nutrition label for digital content, Content Credentials can help increase transparency and build trust with audiences.
+title: Integrering med Content Credentials
+description: Content Credentials, som är integrerat i AEM Assets och finns i Assets View, kan erbjuda kontext i en tillgångs historia, inklusive hur den har skapats och vem som har deltagit i skapandet av den. Som en näringsetikett för digitalt innehåll kan Content Credentials bidra till att öka transparensen och bygga förtroende hos målgrupperna.
 role: User
 exl-id: 27c25ae0-4477-40c3-85c8-3e0aa725aba7
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
 
 # Content Credentials {#content-credentials}
 
-| [Bästa praxis för sökning](/help/assets/search-best-practices.md) | [Bästa praxis för metadata](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets utvecklardokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-Varumärken bryr sig mer än någonsin om innehållstransparens, AI-avslöjande och att förhindra manipulering av resurser. CAI (Content Authenticity Initiative) på Adobe bygger verktyg som är med den [Koalitionen för innehållets ursprung och äkthet](https://c2pa.org/specifications/specifications/1.1/specs/C2PA_Specification.html#_trust_model) (C2PA). , som är en ny typ av krypterade, manipuleringssäkra metadata, kan hjälpa tittarna att förstå innehållets härkomst och säkerställa varumärkestillgångarnas integritet. De kan innehålla ett brett urval av härkomstdata som ger insikter i en digital resursers historia.
+Varumärken är mer oroade än någonsin över innehållets transparens, AI-exponering och förhindrande av manipulering av tillgångar. CAI (Content Authenticity Initiative) på Adobe bygger verktyg som är kompatibla med den tekniska standarden [Coalition for Content Provenance and Authenticity](https://c2pa.org/specifications/specifications/1.1/specs/C2PA_Specification.html#_trust_model) (C2PA). Content Credentials, som är en ny typ av krypterade, manipuleringssäkra metadata, kan hjälpa tittarna att förstå innehållet och säkerställa varumärkesmaterialets integritet. De kan innehålla ett brett urval av härkomstdata som ger insikter i en digital resursers historia.
 
 Denna information kan omfatta
 
 * **Utfärdare eller signerare:** Information om enheten eller företaget som utfärdade den digitala signaturen för att certifiera eller signera resursen.
-* **Utgivningsdatum:** Datumet då Content Credential tillämpades på resursen.
-* **Kredit och användning:** Information om resursens tillverkare, inklusive namn, referenser till sociala medier eller annan identitetsrelaterad information.
-* **Process:** Poster för redigeringar eller ändringar som gjorts i resursen.
-* **Enhetsinformation:** Information om appen eller enheten som användes för att skapa eller redigera resursen.
-* **AI-verktyg som används:** Om generativ AI användes för att redigera eller skapa resursen kan namnet på den modell som användes inkluderas.
-* **Annan relevant information:** Ytterligare data kan också inkluderas för att ge mer kontext om en resurs historik.
+* **Utgivningsdatum:** Det datum då Content Credential tillämpades på tillgången.
+* **Kredit och användning:** Information om tillverkaren av resursen, inklusive namn, handtag för sociala medier eller annan identitetsrelaterad information.
+* **Process:** Registrerar ändringar som gjorts i resursen.
+* **Enhetsinformation:** Information om programmet eller enheten som används för att skapa eller redigera resursen.
+* **AI-verktyg som används:** Om generativ AI användes för att redigera eller skapa resursen kan namnet på den modell som används inkluderas.
+* **Annan relevant information:** Ytterligare data kan också inkluderas för att ge mer kontext om en tillgångs historik.
 
-Om du vill visa en fullständig bild kan [Verify](https://contentcredentials.org/verify) ge en mer omfattande inblick i resurshistoriken.
+För en fullständig vy kan [Verifiera](https://contentcredentials.org/verify) ge en mer heltäckande inblick i resurshistoriken.
 
-Adobe Experience Manager Assets har nu stöd för , vilket gör att användare kan se  direkt i Assets-vyn av AEM. När du tittar på resursinformationen visas manifestinformationen på en dedikerad panel i en bild med  (till exempel de som skapats med GenAI-tjänster). Om resursen hämtas, publiceras eller delas förblir  intakta med resursen.
+Adobe Experience Manager Assets har nu stöd för Content Credentials så att användare kan se Content Credentials direkt i Assets-vyn i AEM. När du tittar på resursinformationen visar alla bilder med Content Credentials (till exempel de som har skapats med GenAI-tjänster) manifestinformationen i en dedikerad panel. Om resursen hämtas, publiceras eller delas förblir Content Credentials intakt med resursen.
 
 ![resurser](/help/assets/assets/content-credentials.png)
 
-## Åtkomst till  {#access-content-credentials}
+## Använd Content Credentials {#access-content-credentials}
 
-1. Gå till gränssnittet för Assets View och klicka på **Assets** i den vänstra rutan.
-1. Navigate to a folder, and select the desired asset.
-1. Klicka på **Information** och välj `Cr pin` i rutan längst till höger. The Content Credentials tab displays the following information about the asset.
-   1. **Genererad avbildning:** Datum och tid då  tillämpades.
-   1. **Innehållssammanfattning:** Anger om resursen delvis eller helt genereras av AI eller hur den redigerades.
-      ![](/help/assets/assets/content-credentials1.png)
-   1. **Process:** Information om programmet, enheten och AI-verktyget (t.ex. Adobe Firefly) som användes för att generera resursen, samt om ändringar som gjordes senare.
+1. Gå till användargränssnittet för Assets-vyn och klicka på **Assets** i den vänstra rutan.
+1. Navigera till en mapp och markera önskad resurs.
+1. Klicka på **Detaljer** och välj `Cr pin` i rutan längst till höger. På fliken Content Credentials visas följande information om resursen.
+   1. **Genererad bild:** Datum och tid då Content Credentials tillämpades.
+   1. **Innehållssammanfattning:** Anger om resursen har genererats delvis eller helt av AI, eller hur den har redigerats.
+      ![innehållsautentiseringsuppgifter](/help/assets/assets/content-credentials1.png)
+   1. **Process:** Anger vilket program, vilken enhet och vilket AI-verktyg (till exempel Adobe Firefly) som används för att generera resursen samt vilka ändringar som görs senare.
       ![process](/help/assets/assets/CR-Process.png)
-   1. **Om de här :** Utfärdarens namn tillsammans med datum och tid för utfärdande.
+   1. **Om denna Content Credentials:** Utfärdarens namn tillsammans med datum och tid för utfärdande.
       ![utfärdare](/help/assets/assets/CR-issuer.png)

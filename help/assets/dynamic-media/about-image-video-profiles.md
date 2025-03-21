@@ -1,31 +1,68 @@
 ---
-title: Om Dynamic Media bildprofiler och videoprofiler
-description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för de videoresurser från Dynamic Media som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
+title: Om dynamiska mediebildprofiler och videoprofiler
+description: En bildprofil eller en videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för de dynamiska medieresurser som du överför. Eller vilken bildprofil som ska användas för dynamiska mediebildresurser för att de ska beskäras ordentligt.
 contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Video Profiles
 role: Admin,User
 exl-id: 8c8f0a57-13f5-4903-8d76-bfb6ee83323c
-source-git-commit: 34038d954802b7f8e31441d5c5e4ea90380e7a20
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1385'
 ht-degree: 0%
 
 ---
 
-# Om Dynamic Media bildprofiler och videoprofiler{#about-dm-image-video-profiles}
+# Om dynamiska mediebildprofiler och videoprofiler{#about-dm-image-video-profiles}
 
-En bildprofil eller videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för de videoresurser från Dynamic Media som du överför. Eller vilken bildprofil som ska användas för Dynamic Media bildresurser för att de ska beskäras ordentligt.
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
+
+En bildprofil eller videoprofil är ett recept på vilka alternativ som ska användas för resurser som du överför till en mapp. Du kan till exempel ange vilken videokodning som ska användas för de dynamiska medieresurser som du överför. Eller vilken bildprofil som ska användas för dynamiska mediebildresurser för att de ska beskäras ordentligt.
 
 I Dynamic Media kan du skapa två typer av profiler som beskrivs närmare på följande länkar:
 
-* [Dynamic Media Image-profiler](/help/assets/dynamic-media/image-profiles.md)
-* [Dynamic Media videoprofiler](/help/assets/dynamic-media/video-profiles.md)
+* [Dynamiska mediebildprofiler](/help/assets/dynamic-media/image-profiles.md)
+* [Dynamiska videoprofiler för media](/help/assets/dynamic-media/video-profiles.md)
 
 Se även [Metadataprofiler](/help/assets/metadata-profiles.md).
 
-Du måste ha administratörsbehörighet för att skapa, redigera och ta bort Dynamic Media-bildprofiler eller Dynamic Media-videoprofiler.
+Du måste ha administratörsbehörighet för att skapa, redigera och ta bort dynamiska mediebildprofiler eller dynamiska medievideoprofiler.
 
-När du har skapat din bildprofil eller videoprofil tilldelar du den till en eller flera mappar som du använder för nyligen överförda Dynamic Media-resurser.
+När du har skapat din bildprofil eller videoprofil tilldelar du den till en eller flera mappar som du använder för nyligen överförda dynamiska medieresurser.
 
 Se även [Bästa metoder för att ordna din digitala Assets för att använda Bearbeta profiler](/help/assets/organize-assets.md).
 
@@ -36,23 +73,23 @@ Se även [Bästa metoder för att ordna din digitala Assets för att använda Be
 >
 >Detsamma gäller även när du flyttar resurser mellan två mappar som har samma profil tilldelad.
 
-## Bearbeta Dynamic Media-resurser igen i en mapp {#reprocessing-assets}
+## Bearbeta dynamiskt mediematerial i en mapp igen {#reprocessing-assets}
 
-Du kan bearbeta om resurser i en mapp som redan har en Dynamic Media Image Profile eller en Dynamic Media Video Profile som du senare har ändrat.
+Du kan bearbeta om resurser i en mapp som redan har en befintlig Dynamic Media Image Profile eller en Dynamic Media Video-profil som du senare ändrade.
 
-Anta att du har skapat en Dynamic Media-bildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu behöva markera och överföra resurserna till mappen igen kör du arbetsflödet *Dynamic Media Reprocess*.
+Anta till exempel att du har skapat en dynamisk mediebildprofil och tilldelat den till en mapp. Bildprofiler som du överförde till mappen tillämpades automatiskt på resurserna. Men senare bestämmer du dig för att lägga till en ny smart beskärningsproportion i bildprofilen. I stället för att nu behöva välja och överföra resurserna till mappen igen kör du arbetsflödet *Dynamisk medieombearbetning*.
 
 Du kan köra arbetsflödet för ombearbetning på en resurs som bearbetningen misslyckades för första gången. Även om du inte har redigerat en bildprofil eller videoprofil, eller redan har använt en bildprofil eller videoprofil, kan du köra arbetsflödet för ombearbetning på en mapp med resurser när som helst.
 
-Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör arbetsflödet _Dynamic Media Reprocess_ på en mapp grupperas resurserna i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen [!DNL Adobe Experience Manager]. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
+Du kan också justera batchstorleken för arbetsflödet för ombearbetning från standardvärdet 50 resurser upp till 1 000 resurser. När du kör arbetsflödet _Dynamisk medieombearbetning_ på en mapp grupperas resurserna i grupper och skickas sedan till Dynamic Media-servern för bearbetning. Efter bearbetning uppdateras metadata för varje resurs i hela gruppuppsättningen [!DNL Adobe Experience Manager]. Om gruppstorleken är stor kan bearbetningen fördröjas. Om gruppstorleken är för liten kan det orsaka för många rundningar till Dynamic Media-servern.
 
 Se [Justera gruppstorleken för arbetsflödet för ombearbetning](#adjusting-load).
 
 >[!NOTE]
 >
->Om du utför en massmigrering av resurser från Dynamic Media Classic till [!DNL Experience Manager] aktiverar du migreringsreplikeringsagenten på Dynamic Media-servern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
+>Om du utför en massmigrering av resurser från Dynamic Media Classic till [!DNL Experience Manager] aktiverar du migreringsreplikeringsagenten på den dynamiska medieservern. När migreringen är klar kontrollerar du att agenten är inaktiverad.
 >
->Migreringens publiceringsagent måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
+>Publiceringsagenten för migrering måste inaktiveras på Dynamic Media-servern så att arbetsflödet för ombearbetning fungerar som förväntat.
 
 <!-- LEAVE IN PLACE, MAY BE USED IN THE FUTURE
 
@@ -60,9 +97,9 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 -->
 
-**Så här bearbetar du om Dynamic Media-resurser i en mapp:**
+**Så här bearbetar du om dynamiska medieresurser i en mapp:**
 
-1. I [!DNL Experience Manager] navigerar du från Assets-sidan till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill tillämpa arbetsflödet för **Dynamic Media-ombearbetning**.
+1. I [!DNL Experience Manager] navigerar du från Assets-sidan till en resursmapp som har en bildprofil eller en videoprofil tilldelad och för vilken du vill tillämpa arbetsflödet för **Dynamisk medieombearbetning**.
 
    Mappar som har tilldelats en bildprofil eller videoprofil visas med profilens namn direkt under mappnamnet i kortvyn.
 
@@ -75,13 +112,13 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 1. I den nedrullningsbara listan i det övre vänstra hörnet av sidan väljer du **[!UICONTROL Timeline]**.
 1. I närheten av sidans nedre vänstra hörn, till höger om fältet [!UICONTROL Comment], väljer du karikonen ( **^** ).
 
-   ![Skärmbild av Assets i Experience Manager som visar en markerad mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om kommentarsfältet är också markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
+   ![Skärmbild av Assets i Experience Manager med en vald mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om fältet Kommentar markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
 
 1. Välj **[!UICONTROL Start Workflow]**.
 1. Välj **[!UICONTROL Dynamic Media Reprocess]** i listrutan **[!UICONTROL Start Workflow]**.
 1. (Valfritt) Ange ett namn för arbetsflödet i textfältet **Ange arbetsflödets namn**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
-   ![Skärmbild av användargränssnittet i tidslinjen med &quot;Dynamic Media Reprocess&quot; markerat i listrutan Starta arbetsflöde och knappen Start markerad](/help/assets/dynamic-media/assets/reprocess-assets2.png).
+   ![Skärmbild av tidslinjens användargränssnitt med &quot;Dynamisk medieombearbetning&quot; markerat i listrutan Starta arbetsflöde och knappen Start markerad](/help/assets/dynamic-media/assets/reprocess-assets2.png).
 
 1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Confirm]**.
 
@@ -89,7 +126,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
 ### Justera batchstorleken för arbetsflödet för ombearbetning (valfritt) {#adjusting-load}
 
-(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen är alltså kvar på [!DNL Experience Manager] resurser under en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, bör du öka värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals megabyte rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
+(Valfritt) Standardbatchstorleken i ombearbetningsarbetsflödet är 50 resurser per jobb. Den optimala batchstorleken styrs av den genomsnittliga tillgångsstorleken och de MIME-typer av resurser som ombearbetningen körs på. Ett högre värde innebär att du har många filer i ett och samma ombearbetningsjobb. Bearbetningsbanderollen är alltså kvar på [!DNL Experience Manager] resurser under en längre tid. Om den genomsnittliga filstorleken är liten, 1 MB eller mindre, rekommenderar Adobe att du ökar värdet till flera 100, men aldrig mer än 1 000. Om den genomsnittliga filstorleken är hundratals MB rekommenderar Adobe att du minskar gruppstorleken med upp till 10.
 
 **Om du vill justera gruppstorleken för arbetsflödet för ombearbetning:**
 
@@ -98,9 +135,9 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 
    ![Skärmbild av sidan Arbetsflödesmodeller med arbetsflödet &quot;Dynamic Media Reprocess&quot; markerat i kortvyn i Experience Manager](/help/assets/dynamic-media/assets/reprocess-assets7.png).
 
-1. Välj **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar sidan Dynamic Media arbetsflödesmodell för ombearbetning.
-1. På sidan Dynamic Media Reprocess workflow (Återbearbeta arbetsflöde), i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
-1. I arbetsflödet väljer du Scene7 Batch Upload-komponenten för att öppna verktygsfältet och väljer sedan **[!UICONTROL Configure]** i verktygsfältet.
+1. Välj **[!UICONTROL Edit]** i verktygsfältet. En ny flik i webbläsaren öppnar sidan Dynamisk medieombearbetning.
+1. På sidan Dynamic Media Reprocess workflow, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
+1. I arbetsflödet väljer du komponenten Scene7 Batch Upload för att öppna verktygsfältet och väljer sedan **[!UICONTROL Configure]** i verktygsfältet.
 
    ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; ](/help/assets/dynamic-media/assets/reprocess-assets8.png).
 
@@ -112,15 +149,15 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    * I **[!UICONTROL Batch field]** anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en Dynamic Media-server.
    * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
 
-   ![Skärmbild av sidan&quot;Batch Upload to Scene7 - Step Properties&quot; ](/help/assets/dynamic-media/assets/reprocess-assets3.png).
+   ![Skärmbild av sidan &quot;Gruppöverföring till scen7 - Stegegenskaper&quot; ](/help/assets/dynamic-media/assets/reprocess-assets3.png).
 
 1. Välj **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
 
-1. Markera **[!UICONTROL Sync]** i det övre högra hörnet på sidan för arbetsflödesmodellen för Dynamic Media Reprocess. När du ser **[!UICONTROL Synced]** synkroniseras arbetsflödets körningsmodell och kan bearbeta resurser i en mapp igen.
+1. Välj **[!UICONTROL Sync]** i det övre högra hörnet på sidan för arbetsflödesmodellen för ombearbetning av dynamiska media. När du ser **[!UICONTROL Synced]** synkroniseras arbetsflödets körningsmodell och kan bearbeta resurser i en mapp igen.
 
-   ![Skärmbild av Assets i Experience Manager som visar en markerad mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om kommentarsfältet är också markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
+   ![Skärmbild av Assets i Experience Manager med en vald mapp med resurser, listrutan Tidslinje markerad, knappen Starta arbetsflöde markerad och karikonen till höger om fältet Kommentar markerad](/help/assets/dynamic-media/assets/reprocess-assets1.png).
 
-1. Stäng webbläsarfliken som visar arbetsflödesmodellen Dynamic Media Reprocess.
+1. Stäng webbläsarfliken som visar arbetsflödesmodellen för dynamisk medieombearbetning.
 
 <!-- MAY BE NEEDED IN THE FUTURE
 

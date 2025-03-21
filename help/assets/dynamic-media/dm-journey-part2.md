@@ -1,6 +1,6 @@
 ---
 title: Resa till Dynamic Media, del II
-description: Dynamic Media Journey beskriver grunderna i Dynamic Media, hur det fungerar, vad det kan göra för dig och vilket värde det ger både ditt arbete och dina kunder.
+description: Dynamic Media Journey täcker grunderna i Dynamic Media, hur det fungerar, vad det kan göra för dig och vilket värde det ger både ditt arbete och dina kunder.
 contentOwner: Rick Brough
 products: Experience Manager as a Cloud Service
 topic-tags: introduction,administering
@@ -11,20 +11,57 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: cdca41ad-a2cd-4f68-aaa4-5eec33c30f0b
-source-git-commit: 74172fe7fcf9a22837645a154f2e85fd6fa6b40e
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2637'
 ht-degree: 0%
 
 ---
 
 # Dynamic Media Journey: The Basics, del II  {#dm-journey-part2}
 
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
+
 {{see-also-dm}}
 
-Välkommen till Dynamic Media Journey: The Basics, Part II, där du kan förvänta dig följande:
+Välkommen till Dynamic Media Journey: The Basics, Part II där du kan förvänta dig följande:
 
-* Analys av en Dynamic Media-URL och hur Dynamic Media levererar innehåll.
+* Anatomi av en dynamisk medie-URL och hur Dynamic Media levererar innehåll.
 * Grundläggande om att skapa bildförinställningar för att återge resurser.
 * Bilduppsättningar, snurruppsättningar och blandade medieuppsättningar.
 
@@ -32,26 +69,26 @@ Se även [Dynamic Media Journey; The Basics, Part I](/help/assets/dynamic-media/
 
 >[!TIP]
 >
->För bästa resultat rekommenderar Adobe att du läser och visar den här Dynamic Media-resan på en stationär dator.
+>För bästa resultat rekommenderar Adobe att du läser och visar den här dynamiska medierundturen på en stationär dator.
 
-## Anatomi av en Dynamic Media-URL och hur Dynamic Media levererar innehåll {#dm-journey-d}
+## Anatomi av en dynamisk medie-URL och hur Dynamic Media levererar innehåll {#dm-journey-d}
 
-När dina Dynamic Media-resurser har överförts och publicerats kan du kopiera resursens genererade URL och klistra in den i webbläsaren för att se hur resursen kommer att se ut för kunden. Följande kopierade URL-adress för en bevakad bild bryts ned efter färg så att den blir lättare att läsa och förstå.
+När dina Dynamic Media-resurser har överförts och publicerats kan du kopiera en medias genererade URL och klistra in den i webbläsaren för att se hur resursen kommer att se ut för kunden. Följande kopierade URL-adress för en bevakad bild bryts ned efter färg så att den blir lättare att läsa och förstå.
 
-![Anatomi en Dynamic Media URL](/help/assets/dynamic-media/assets/dm-colored-url.png)
-_Anatomi av en Dynamic Media-URL._
+![Anatomi för en dynamisk medie-URL](/help/assets/dynamic-media/assets/dm-colored-url.png)
+_Anatomi för en dynamisk medie-URL._
 
-Den första delen av URL:en i rött refererar till själva serverdomänen. I det här fallet körs Dynamic Media på en allmän serverdomän, som är `https://s7d1.scene7.com/is/image/`. Det är enkelt att ta en titt på en uppsättning bilder och förstå om de hanteras av Dynamic Media bara genom att titta på serverdomänen. URL:en kommer att vara ganska konsekvent. Det finns dock vissa Dynamic Media-kunder som har bytt till en dedikerad serverdomän där den kan vara `name-of-your-company.scene7.com`. En dedikerad serverdomän krävs för Smart Imaging.
+Den första delen av URL:en i rött refererar till själva serverdomänen. I det här fallet körs Dynamic Media på en allmän serverdomän, som är `https://s7d1.scene7.com/is/image/`. Det är enkelt att titta på en uppsättning bilder och förstå om de hanteras av Dynamic Media bara genom att titta på serverdomänen. URL:en kommer att vara ganska konsekvent. Det finns dock några Dynamic Media-kunder som har växlat till en dedikerad serverdomän där det kan vara `name-of-your-company.scene7.com`. En dedikerad serverdomän krävs för Smart Imaging.
 
 Kontonamnet är delen i lila. I det här fallet kallas kontot `jpearldemo`.
 
-Resurs-ID:t eller namnet `AdobeStock_28563982` är grönt. Observera att resursen har filtillägget _no_ som `.png` eller `.jpg`. När resurser hämtas till Dynamic Media tas filtillägget bort och en annan typ av fil skapas: en pyramid-TIFF-fil. Med Pyramic-TIFF kan Dynamic Media snabbt skapa renderingar direkt.
+Resurs-ID:t eller namnet `AdobeStock_28563982` är grönt. Observera att resursen har filtillägget _no_ som `.png` eller `.jpg`. När resurser hämtas in till Dynamic Media tas filtillägget bort och en annan typ av fil skapas: en pyramid-TIFF-fil. Med pyramic-TIFF kan Dynamic Media snabbt skapa renderingar direkt.
 
 Slutligen finns det några bildbehandlingsparametrar, `?wid=1000&fmt=jpeg&qlt=85`, som visas i gult på slutet.
 
 Hela URL-sökvägen är aktiv. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock_28563982?wid=1000&amp;fmt=jpeg&amp;qlt=85){target="_blank"}.
 
-Låt webbläsarfönstret fortfarande vara öppet för Dynamic Media URL och den bevakade bilden. Vi tittar närmare på hur du kan skapa återgivningar av bilden bara genom att ändra URL:en.
+Låt oss titta närmare på hur du kan skapa återgivningar av bilden genom att bara ändra URL:en.
 
 ### Återge den bevakade bilden via URL:en
 
@@ -70,13 +107,13 @@ Prova att lägga till en rotationsparameter till den bevakade bilden. Och slutet
 
 Klockan är fortfarande något skev till vänster. Ändra rotationsvärdet för `90` till `92` och tryck sedan på **[!UICONTROL Enter]**. [Prova](https://s7d1.scene7.com/is/image/jpearldemo/AdobeStock%5F28563982?wid=1000&amp;rotate=9){target="_blank"}.
 
-När du trycker på **[!UICONTROL Enter]** genereras en ny återgivning av klockan nästan omedelbart. Du kan se vilken typ av prestanda du får, vilket förklarar varför Dynamic Media kan leverera fler än 800 000 bildbegäranden, _per sekund_, under en hektisk helg eller en stor semester.
+När du trycker på **[!UICONTROL Enter]** genereras en ny återgivning av klockan nästan omedelbart. Du kan se vilken typ av prestanda du får, vilket förklarar varför Dynamic Media kan leverera mer än 800 000 bildbegäranden, _per sekund_, under en hektisk helg eller en stor semester.
 
 Även om det går att ändra bildbehandlingsparametrar i en URL-adress bild för bild är det inte en effektiv metod, särskilt om du har tiotusentals bilder som utgör webbplatsen. Ett mycket bättre sätt är att använda bildförinställningar.
 
 ## Grundläggande om att skapa bildförinställningar för att återge resurser {#dm-journey-e}
 
-Det finns flera sätt och platser där du vill skapa en bild eller ha en bild tillgänglig. Traditionellt sett går en Creative-användare in i Adobe Photoshop och sparar alla dessa olika renderingar som statiska bilder.
+Det finns flera sätt och platser där du vill skapa en bild eller ha en bild tillgänglig. Traditionellt sett går en Creative in i Adobe Photoshop och sparar alla dessa olika renderingar som statiska bilder.
 
 ![Statiska bilder](/help/assets/dynamic-media/assets/dm-static-images.png)
 _Bra: statiska bilder som skapats manuellt._
@@ -87,7 +124,7 @@ _&quot;Jag ville verkligen ha den här bilden så att den stora handen pekar på
 
 Alla nya statiska bilder måste fotograferas igen.
 
-Men om du har olika bildförinställningar i Dynamic Media kan du använda dessa bilder var du vill. Bildförinställningarna följer standarder.
+Men med Dynamic Media kan du använda de bilderna var du vill om du har olika bildförinställningar. Bildförinställningarna följer standarder.
 
 ![Primär filhantering](/help/assets/dynamic-media/assets/dm-onefile.png)
 _Bäst: en fil med flera återgivningar skapade i farten med hjälp av bildförinställningar, som `Search_Grid` och `Thumbnail` ._
@@ -107,7 +144,7 @@ Alla ställen där du behöver en viss typ av bild, till exempel
 
 Du vill att den bilden ska levereras med samma parametrar oavsett var de kommer att användas.
 
-Låt oss nu titta på hur en bildförinställning skapas i Dynamic Media.
+Låt oss titta lite på hur en bildförinställning skapas i Dynamic Media.
 
 ![Skapa en bildförinställning med början på fliken Grundläggande](/help/assets/dynamic-media/assets/dm-image-preset-basictab.png)
 _Skapa en bildförinställning som börjar med fliken Grundläggande._
@@ -116,12 +153,12 @@ I exemplet ovan ser du att en ny bildförinställning skapades med namnet _Mediu
 
 Bildförinställningen _Medium_ har en bredd på 500 pixlar och en höjd på 800 pixlar. I del I av den här resan läser du om hur du levererar resurser i olika format. I listrutan **[!UICONTROL Format]** kan du välja att leverera resurser i JPEG, PNG, TIFF eller flera andra format. Här har du flexibilitet.
 
-Om du väljer fliken **[!UICONTROL Advanced]** får du alternativ för resursens färgrymd. Beroende på vilket format du valde på fliken **[!UICONTROL Basic]** - i exemplet ovan markerades JPEG - kan du leverera resurser i RGB, gråskala eller CMYK. I listrutan **[!UICONTROL Color Profile]** kan du välja hur en CMYK-bildresurs ska levereras för utskrift. Observera också att det finns ytterligare parametrar som du kan använda för att göra bilderna skarpare. I det här fallet tillämpades **[!UICONTROL Unsharp Mask]**.
+Om du väljer fliken **[!UICONTROL Advanced]** får du alternativ för resursens färgrymd. Beroende på vilket format du har valt på fliken **[!UICONTROL Basic]** - i exemplet ovan har JPEG valts - kan du leverera resurser i RGB, Gråskala eller CMYK. I listrutan **[!UICONTROL Color Profile]** kan du välja hur en CMYK-bildresurs ska levereras för utskrift. Observera också att det finns ytterligare parametrar som du kan använda för att göra bilderna skarpare. I det här fallet tillämpades **[!UICONTROL Unsharp Mask]**.
 
 ![Skapa en bildförinställning genom att välja alternativ på fliken Avancerat](/help/assets/dynamic-media/assets/dm-image-preset-advancedtab.png)
 _Skapa en bildförinställning genom att välja alternativ på fliken Avancerat._
 
-Du kommer ihåg i [Anatomi av en Dynamic Media URL](#dm-journey-d) tidigare att du läste om Dynamic Media URL och hur den skapades. I textrutan **[!UICONTROL Image Modifier]** kan du ange ytterligare bildbehandlingsparametrar som du vill använda. Parametrarna tas med i förinställningsnamnet för URL:en när bilderna levereras med hjälp av förinställningen. I skärmbilden ovan lades parametern `bgc=451B15` till. Det vill säga, en mörkbrun bakgrundsfärg lades till.
+Du kommer ihåg i [anatomi av en dynamisk medie-URL](#dm-journey-d) tidigare att du läste om den dynamiska medie-URL:en och hur den skapades. I textrutan **[!UICONTROL Image Modifier]** kan du ange ytterligare bildbehandlingsparametrar som du vill använda. Parametrarna tas med i förinställningsnamnet för URL:en när bilderna levereras med hjälp av förinställningen. I skärmbilden ovan lades parametern `bgc=451B15` till. Det vill säga, en mörkbrun bakgrundsfärg lades till.
 
 Du kan tänka dig en bildförinställning som ett recept för dina bilder. Den kommer att leverera alla bilder som använder förinställningen, konsekvent, varje gång; den kommer att vara densamma. Parametern `&op_brightness=+10` lades också till för att öka intensiteten något.
 
@@ -134,7 +171,7 @@ Du kopierar URL-adressen och klistrar sedan in den i webbläsaren för att kontr
 
 Lägg märke till namnet på bildförinställningen _Medium_ i den fullständiga URL-sökvägen i webbläsaren.
 
-Du kan se vilken typ av skärpa som visas i bilden. Kvaliteten beror delvis på hur chokladskålen filmades. Dessutom beror det delvis på att du med Dynamic Media kan lagra större bilder än vad som levereras till de digitala kanalerna.
+Du kan se vilken typ av skärpa som visas i bilden. Kvaliteten beror delvis på hur chokladskålen filmades. Dessutom beror det delvis på att du med Dynamic Media kan lagra större bilder än vad som levereras till digitala kanaler.
 
 Om allt ser bra ut för chokladskålen, klistrar du in URL-adressen på webbsidorna där du vill att bilden ska visas på webbplatsen.
 
@@ -156,7 +193,7 @@ En del av de vanligaste användningsområdena för Dynamic Media är möjlighete
 
 Bilduppsättningar består vanligtvis av en serie bildresurser som presenteras som en enda enhet. Den här typen av uppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du presentera alternativa vyer av något och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant. [Visa en bilduppsättning med namnet&quot;Körs&quot; som använder visningsprogrammet ](https://s7d1.scene7.com/s7viewers/html5/FlyoutViewer.html?asset=jpearldemo/Running).
 
-Här i Dynamic Media ser du flera bilder på skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation, en Image-uppsättning.
+Här i Dynamic Media ser du flera bilder av skor. Det är en produktserie som försäljning och marknadsföring vill att kunderna ska se som en enda presentation, en Image-uppsättning.
 
 ![Skapa en bilduppsättning](/help/assets/dynamic-media/assets/dm-create-image-set.png)
 _Början av att skapa en bilduppsättning._
@@ -210,7 +247,7 @@ Du läser bara om bilduppsättningar och visningsprogram. Låt oss titta på ett
 
 ## Valfritt - Läs mer
 
-Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. Annars är din Dynamic Media Journey klar!
+Om du vill veta mer om vad du just läste kan du använda materialet nedan för att utforska koncept i detalj. I annat fall är din Dynamic Media Journey klar!
 
 <!--
 _Dynamic Media Help topics_
@@ -223,12 +260,12 @@ _Dynamic Media Help topics_
 * [How to create Spin sets](/help/assets/dynamic-media/spin-sets.md)
 * [How to create Mixed Media sets](/help/assets/dynamic-media/mixed-media-sets.md) -->
 
-_Dynamic Media självstudiekurser_
+_Självstudiekurser för dynamiska media_
 
-* [Använd Dynamic Media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
-* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamic Media_)
+* [Använd dynamiska media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
+* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamiska media_)
 
-_Dynamic Media-visningsprogram_
+_Dynamiska medievisningsprogram_
 
 * [Live-demonstrationer](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html) för varje visningsprogram
 

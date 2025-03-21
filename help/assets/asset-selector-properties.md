@@ -3,26 +3,60 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: cd5ec1de-36b0-48a5-95c9-9bd22fac9719
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1323'
 ht-degree: 0%
 
 ---
 
 # Egenskaper för resursväljare {#asset-selector-properties}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Du kan använda egenskaperna för resursväljaren för att anpassa hur resursväljaren återges. I följande tabell visas de egenskaper som du kan använda för att anpassa och använda resursväljaren.
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |---|---|---|---|---|
 | *järnväg* | Boolean | Nej | Falskt | Om den är markerad som `true` återges resursväljaren i en vänsterrälsvy. Om den är markerad som `false` återges resursväljaren i modal vy. |
-| *imsOrg* | Sträng | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
+| *imsOrg* | Sträng | Ja | | Adobe Identity Management System (IMS) ID som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
 | *imsToken* | Sträng | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett [!DNL Adobe]-program för integreringen. |
-| *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
+| *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM Discovery-tjänsten. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
 | *filterSchema* | Array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
 | *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. För! Exempel: MIME-typ JPG, PNG, GIF. |
 | *selectedAssets* | Matris `<Object>` | Nej |                 | Ange valt Assets när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste till exempel vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du även ett värde för egenskapen `path`. |
@@ -30,7 +64,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade, lokaliserade värden via `i18nSymbols`-proppen. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna. Om du vill utföra åsidosättningen måste du skicka ett giltigt [Message Descriptor](https://formatjs.io/docs/react-intl/api/#message-descriptor)-objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *intl* | Objekt | Nej | | Resursväljaren innehåller OOTB-standardöversättningar. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale`-utkastet. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ ISO 639 - Koder ](https://www.iso.org/iso-639-language-codes.html) för att representera namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 | *databaseId* | Sträng | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
-| *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
+| *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM-databaser. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
 | *hideTreeNav* | Boolean | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
 | *onDrop* | Funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
 | *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
@@ -54,7 +88,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *onMetadataFormChange* | Återanropsfunktion | Nej | | Det består av `property` och `value`. `Property` är lika med *mapToProperty* för fältet som skickas från *metadataSchema* vars värde uppdateras. `value` är lika med det nya värdet som anges som indata. |
 | *targetUploadPath* | Sträng |  | `"/content/dam"` | Målets överföringssökväg för de filer som har standardvärdet root of the assets database. |
 | *hideUploadButton* | Boolean | | Falskt | Den ser till att den interna överföringsknappen döljs eller inte. |
-| *onUploadStart* | Funktion | Nej |  | Det är en callback-funktion som används för att skicka överföringskällan mellan Dropbox, OneDrive eller lokal. Syntaxen är `(uploadInfo: UploadInfo) => void` |
+| *onUploadStart* | Funktion | Nej |  | Det är en callback-funktion som används för att skicka överföringskällan till Dropbox, OneDrive eller lokal. Syntaxen är `(uploadInfo: UploadInfo) => void` |
 | *importSettings* | Funktion | | | Det aktiverar stöd för import av resurser från tredje parts källa. `sourceTypes` använder en array med de importkällor som du vill aktivera. Källorna som stöds är Onedrive och Dropbox. Syntaxen är `{ sourceTypes?: ImportSourceType[]; apiKey?: string; }` |
 | *onUploadComplete* | Funktion | Nej | | Det är en återanropsfunktion som används för att skicka filöverföringsstatus bland lyckade, misslyckade eller duplicerade filer. Syntaxen är `(uploadStats: UploadStats) => void` |
 | *onFilesChange* | Funktion | Nej | | Det är en återanropsfunktion som används för att visa hur överföringen fungerar när en fil ändras. Den skickar den nya arrayen med filer som väntar på överföring och källtypen för överföringen. Source-typen kan vara null om fel uppstår. Syntaxen är `(newFiles: File[], uploadType: UploadType) => void` |

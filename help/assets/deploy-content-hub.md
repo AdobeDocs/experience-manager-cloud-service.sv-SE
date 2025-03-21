@@ -3,17 +3,51 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1590'
 ht-degree: 0%
 
 ---
 
 # Distribuera Content Hub {#deploy-content-hub}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 ![Distribuera Content Hub](assets/deploy-content-hub.png)
 
@@ -23,9 +57,9 @@ ht-degree: 0%
 >
 >[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
-Content Hub ingår som en del av Experience Manager Assets as a Cloud Service för att demokratisera tillgången till varumärkesinnehåll för organisationer och deras affärspartners.
+Content Hub ingår i Experience Manager Assets as a Cloud Service för att demokratisera tillgången till varumärkesinnehåll för organisationer och deras affärspartners.
 
-Resurserna som är markerade Godkänd på Experience Manager Assets as a Cloud Service är tillgängliga för mediedistribution på Content Hub.
+Resurserna som är markerade Godkänd på Experience Manager Assets as a Cloud Service kan distribueras på Content Hub.
 
 Den här artikeln innehåller ett komplett arbetsflöde för att ge Content Hub åtkomst till användare, inklusive variationer av behörigheter baserat på deras behov.
 
@@ -33,11 +67,11 @@ De olika behörigheterna för Content Hub omfattar:
 
 * [Content Hub-användare](#onboard-content-hub-users): Få åtkomst till varumärkesgodkända resurser på Content Hub-portalen.
 
-* [Content Hub-administratörer](#onboard-content-hub-administrator): Åtkomst till [användargränssnittet för konfiguration](/help/assets/configure-content-hub-ui-options.md) på Content Hub, förutom åtkomst till varumärkesgodkända resurser, överföring av resurser till Content Hub, Adobe Express-integrering för redigering av bilder (om du har Adobe Expresser).
+* [Content Hub-administratörer](#onboard-content-hub-administrator): Åtkomst till [användargränssnittet för konfiguration](/help/assets/configure-content-hub-ui-options.md) på Content Hub förutom åtkomst till varumärkesgodkända resurser, överföring av resurser till Content Hub, Adobe Express-integrering för redigering av bilder (om du har Adobe Express-berättiganden).
 
 * [Content Hub-användare med behörighet att lägga till resurser](#onboard-content-hub-users-add-assets): Möjlighet att [överföra resurser till Content Hub](/help/assets/upload-brand-approved-assets.md) utöver åtkomst till varumärkesgodkända resurser på Content Hub-portalen.
 
-* [Content Hub-användare med behörighet att mixa om resurser till nya varianter](#onboard-content-hub-users-remix-assets): [Adobe Express Integration](/help/assets/edit-images-content-hub.md) (om du har Adobe Express) förutom att få tillgång till varumärkesgodkända resurser på Content Hub-portalen.
+* [Content Hub-användare med behörighet att mixa om resurser till nya varianter](#onboard-content-hub-users-remix-assets): [Adobe Express Integration](/help/assets/edit-images-content-hub.md) (om du har Adobe Express-berättiganden) förutom tillgång till varumärkesgodkända resurser på Content Hub-portalen.
 
 * [Experience Manager Assets-användare](#experience-manager-assets-users): Möjlighet att godkänna resurser på Experience Manager Assets as a Cloud Service för att göra dessa resurser tillgängliga på Content Hub.
 
@@ -50,7 +84,7 @@ I följande tabell sammanfattas tillgängliga Content Hub-användartyper, vilka 
 | Överför resurser från Content Hub Portal | - | ✓ | ✓ | ✓ |
 | Använd Adobe Express-integrering för att redigera bilder | - | - | ✓ | - |
 | Åtkomst till Content Hub konfigurationsgränssnitt | - | - | - | ✓ |
-| **Användaren måste finnas i de här produktprofilerna (Admin Console)** |
+| **Användaren måste finnas i dessa produktprofiler (Admin Console)** |
 | AEM > Delivery instance > AEM Assets Limited Users | ✓ | ✓ | ✓ | ✓ |
 | AEM > Production Author instance > AEM Users | - | ✓ | ✓ | - |
 | AEM > Production Author instance > AEM Administrators | - | - | - | ✓ |
@@ -67,7 +101,7 @@ För att få tillgång till Content Hub-portalen måste administratörer först 
 
 1. Logga in på Cloud Manager. Se till att du väljer rätt organisation när du loggar in. Cloud Manager listar alla program.
 
-1. Navigera till Experience Manager Assets as a Cloud Service program, klicka på ikonen Fler alternativ (..) och välj **[!UICONTROL Edit Program]**.
+1. Gå till Experience Manager Assets as a Cloud Service, klicka på ikonen Fler alternativ (..) och välj **[!UICONTROL Edit Program]**.
 
    ![Redigera program i Cloud Manager](assets/edit-program-cloud-manager.png)
 
@@ -86,14 +120,14 @@ Content Hub är nu aktiverat för Experience Manager Assets as a Cloud Service. 
 
 >[!NOTE]
 >
-Du har tillgång till och kan använda Content Hub med upp till 250 Content Hub-användare. Kontakta din Adobe-representant om du har ytterligare frågor.
+Du har tillgång till och kan använda Content Hub med upp till 250 Content Hub-användare. Kontakta Adobe om du har ytterligare frågor.
 
 
 Om du inte har använt Experience Manager Assets tidigare klickar du på **[!UICONTROL Add Program]**, anger programinformation (Programnamn, konfigurera för produktion) och klickar på **[!UICONTROL Continue]**. Du kan sedan välja **[!UICONTROL Assets]** och **[!UICONTROL Content Hub]** på fliken **[!UICONTROL Solutions & Add-ons]**.
 
 ### Content Hub instans och produktprofil på Admin Console{#content-hub-instance-product-profile}
 
-När du har [aktiverat Content Hub för Assets as a Cloud Service med Cloud Manager](#enable-content-hub) skapas en ny instans i AEM Assets as a Cloud Service Admin Console med suffixet `delivery`:
+När du har [aktiverat Content Hub för Assets as a Cloud Service med Cloud Manager](#enable-content-hub) skapas en ny instans i AEM Assets as a Cloud Service på Admin Console med suffixet `delivery`:
 
 ![Ny instans för Content Hub](assets/new-instance-content-hub.png)
 
@@ -113,7 +147,7 @@ Om du har etablerat Content Hub före den 14 augusti 2024 har Content Hub produk
 
 ## Steg 2: Integrera Content Hub-administratören {#onboard-content-hub-administrator}
 
-Content Hub-administratörer har tillgång till [användargränssnittet för konfiguration](/help/assets/configure-content-hub-ui-options.md) på Content Hub, förutom tillgång till resurser som godkänts av varumärket, överföring av resurser till Content Hub, integrering av Adobe Expresser för att redigera bilder (om du har Adobe Expresser).
+Content Hub-administratörer har tillgång till [användargränssnittet för konfiguration](/help/assets/configure-content-hub-ui-options.md) på Content Hub, förutom tillgång till resurser som godkänts av varumärket, överföring av resurser till Content Hub, Adobe Express-integrering för redigering av bilder (om du har Adobe Express-berättiganden).
 
 Så här skaffar du Content Hub-administratören:
 
@@ -123,7 +157,7 @@ Så här skaffar du Content Hub-administratören:
 
 1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 
-1. När du har lagt till användaren i Content Hub produktprofil kan du få tillgång till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
+1. När du har lagt till användaren i Content Hub produktprofil kan du få tillgång till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan för Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
@@ -181,7 +215,7 @@ Content Hub-användare med behörighet att lägga till resurser kan [överföra 
 
 Så här integrerar du Content Hub-användare med rättigheter att lägga till användare:
 
-1. [När du har lagt till användaren i Content Hub produktprofil](#onboard-content-hub-users) får du tillgång till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
+1. [När du har lagt till användaren i Content Hub produktprofil](#onboard-content-hub-users) får du tillgång till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan för Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
@@ -194,11 +228,11 @@ Så här integrerar du Content Hub-användare med rättigheter att lägga till a
 
 ## Steg 4: Införliva Content Hub-användare med rätt att mixa om resurser till nya varianter (valfritt) {#onboard-content-hub-users-remix-assets}
 
-Content Hub-användare med behörighet att mixa om resurser till nya varianter kan [ändra befintliga resurser med Adobe Express och spara resursen i databasen](/help/assets/edit-images-content-hub.md). Det går bara att redigera resurser med Adobe Express om användaren har Adobe Express.
+Content Hub-användare med behörighet att mixa om resurser till nya varianter kan [ändra befintliga resurser med Adobe Express och spara resursen i databasen](/help/assets/edit-images-content-hub.md). Det går bara att redigera resurser med Adobe Express om användaren har behörighet för Adobe Express.
 
 Så här integrerar du Content Hub-användare med rättigheter att mixa om resurser till nya varianter:
 
-1. [När du har lagt till användaren i Content Hub produktprofil](#onboard-content-hub-users) får du tillgång till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
+1. [När du har lagt till användaren i Content Hub produktprofil](#onboard-content-hub-users) får du tillgång till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan för Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
@@ -215,7 +249,7 @@ Experience Manager Assets-användare kan godkänna mediefiler på AEM as a Cloud
 
 Så här konfigurerar du Experience Manager Assets-användare:
 
-1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
+1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan i Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)

@@ -3,17 +3,51 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: e22e4e530c2d023724b360c488cab2b59ec22fc4
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1347'
 ht-degree: 0%
 
 ---
 
 # Mikrofrontsväljare för mediefiler {#Overview}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Micro-Frontend Asset Selector har ett användargränssnitt som enkelt kan integreras med [!DNL Experience Manager Assets]-databasen så att du kan bläddra bland eller söka efter digitala resurser som är tillgängliga i databasen och använda dem i programutvecklingen.
 
@@ -56,13 +90,13 @@ Använd ovanstående krav om du behöver arbetsflödet för IMS-autentisering f�
 **Se mer**
 
 * [Integrera resursväljaren med en Adobe-app](/help/assets/integrate-asset-selector-adobe-app.md)
-* [Integrera resursväljaren med en app som inte är Adobe](/help/assets/integrate-asset-selector-non-adobe-app.md)
+* [Integrera resursväljare med andra program än Adobe](/help/assets/integrate-asset-selector-non-adobe-app.md)
 * [Integrera API:er för att öppna dynamiska media i resursväljaren](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
 
 
 >[!IMPORTANT]
 >
-> Denna databas är avsedd att fungera som kompletterande dokumentation som beskriver tillgängliga API:er och användningsexempel för integrering av resursväljare. Innan du försöker installera eller använda resursväljaren måste du se till att din organisation har fått tillgång till resursväljaren som en del av Experience Manager Assets as a Cloud Service profil. Om du inte har etablerats kan du inte integrera eller använda dessa komponenter. Om du vill begära etablering bör din programadministratör skaffa en supportbiljett som är markerad som P2 från Admin Console och innehålla följande information:
+> Denna databas är avsedd att fungera som kompletterande dokumentation som beskriver tillgängliga API:er och användningsexempel för integrering av resursväljare. Innan du försöker installera eller använda resursväljaren måste du se till att din organisation har fått tillgång till resursväljaren som en del av Experience Manager Assets as a Cloud Service-profilen. Om du inte har etablerats kan du inte integrera eller använda dessa komponenter. För att begära etablering bör programadministratören skaffa en supportanmälan som är markerad som P2 från Admin Console och innehålla följande information:
 >
 >* Domännamn där det integrerande programmet finns.
 >* Efter etableringen kommer din organisation att få `imsClientId`, `imsScope` och en `redirectUrl` som motsvarar de miljöer som efterfrågas och som är nödvändiga för konfigurationen av resursväljaren. Utan dessa giltiga egenskaper kan du inte köra installationsstegen.
@@ -179,7 +213,7 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
         </p>
      </td>
     <td>
-        <img src="assets/with-adobe-app.gif" width="70px" height="70px" alt="Integrera resursväljaren med Adobe-programgrafik"><br/>
+        <img src="assets/with-adobe-app.gif" width="70px" height="70px" alt="Integrera resursväljaren med grafik i Adobe-program"><br/>
         <a href="integrate-asset-selector.md"> Integrera resursväljare med Adobe-program </a>
         <p>
         <em>Upptäck hur du integrerar resursväljare med olika Adobe-program.</em>
@@ -189,14 +223,14 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
         <img src="assets/third-party-app.gif" width="70px" height="70px" alt="Integrera resursväljargrafik"><br/>
         <a href="integrate-asset-selector.md"> Integrera resursväljare med program från tredje part </a>
         <p>
-        <em>Öka möjligheterna att integrera resursväljare med program som inte är Adobe.</em>
+        <em>Öka möjligheterna att integrera resursväljare med andra program än Adobe.</em>
         </p>
     </td>
     <td>
         <img src="assets/with-dynamic-media-open-api.gif" width="70px" height="70px" alt="Integrera resursväljargrafik"><br/>
-        <a href="integrate-asset-selector.md"> Integrera resursväljare med Dynamic Media Open API:er </a>
+        <a href="integrate-asset-selector.md"> Integrera resursväljare med API:er för Dynamic Media Open </a>
         <p>
-        <em>Förstå hur du integrerar resursväljare med Dynamic Media Open API:er.</em>
+        <em>Förstå hur du integrerar resursväljare med API:er för dynamiska mediaöppningar.</em>
         </p>
      </td>
      <td>
@@ -246,4 +280,4 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
 >* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)
 >* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
 >* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
->* [Integrera resursväljare med Dynamic Media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+>* [Integrera resursväljare med dynamiska media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)

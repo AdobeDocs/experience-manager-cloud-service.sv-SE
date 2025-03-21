@@ -1,26 +1,60 @@
 ---
 title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
-description: Integrera resursväljare med olika program från Adobe, andra än Adobe och andra tillverkare.
+description: Integrera resursväljare med olika program från Adobe, andra företag än Adobe och tredje part.
 role: Admin, User
 exl-id: b01097f3-982f-4b2d-85e5-92efabe7094d
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
 
 # Integrering av Dynamic Media med OpenAPI-funktioner {#integrate-asset-selector-dynamic-media-open-apis}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Med resursväljaren kan du integrera med olika Adobe-program så att de kan fungera tillsammans sömlöst.
 
 
 ## Förutsättningar {#prereqs-polaris}
 
-Använd följande förutsättningar om du integrerar resursväljare med Dynamic Media med OpenAPI-funktioner:
+Använd följande krav om du integrerar resursväljare med dynamiska media med OpenAPI-funktioner:
 
 * [Kommunikationsmetoder](/help/assets/overview-asset-selector.md#prereqs)
 * För att få tillgång till Dynamic Media med OpenAPI-funktioner måste du ha licenser för:
@@ -30,9 +64,9 @@ Använd följande förutsättningar om du integrerar resursväljare med Dynamic 
 
 ## Integrering av Dynamic Media med OpenAPI-funktioner {#adobe-app-integration-polaris}
 
-Integreringen av resursväljaren med Dynamic Media OpenAPI-processen omfattar olika steg som skapar en anpassad URL för dynamiska media eller är klar att välja URL för dynamiska media osv.
+Integrering av resursväljare med Dynamic Media OpenAPI-process omfattar olika steg som skapar en anpassad dynamisk medie-URL eller är klar att välja dynamisk medie-URL, osv.
 
-### Integrera resursväljare för Dynamic Media med OpenAPI-funktioner {#integrate-dynamic-media}
+### Integrera resursväljare för dynamiska media med OpenAPI-funktioner {#integrate-dynamic-media}
 
 Egenskaperna `rootPath` och `path` ska inte ingå i Dynamic Media med OpenAPI-funktioner. I stället kan du konfigurera egenskapen `aemTierType`. Här följer syntaxen för konfiguration:
 
@@ -107,8 +141,8 @@ Nedan visas två sätt att gå igenom JSON-objektet:
 
 ![Dynamisk leverans-URL](assets/dynamic-delivery-url.png)
 
-* **Miniatyrbild:** Miniatyrbilder kan vara bilder och resurser kan vara PDF, video, bilder och så vidare. Även om du kan använda attributen height och width för en resurs miniatyrbild som dynamisk leveransåtergivning.
-Följande uppsättning återgivningar kan användas för resurser av typen PDF:
+* **Miniatyrbild:** Miniatyrbilder kan vara bilder och resurser som PDF, video, bilder och så vidare. Även om du kan använda attributen height och width för en resurs miniatyrbild som dynamisk leveransåtergivning.
+Följande uppsättning återgivningar kan användas för PDF-typresurser:
 När du har valt en PDF-fil i en sidospark visas nedanstående information i urvalssammanhanget. Här nedan beskrivs hur du går igenom JSON-objektet:
 
   <!--![Thumbnail dynamic delivery url](image-1.png)-->
@@ -124,7 +158,7 @@ När du har valt en PDF-fil i en sidospark visas nedanstående information i urv
   } 
   ```
 
-På skärmbilden ovan måste leveransadressen för den ursprungliga återgivningen i PDF införlivas i målupplevelsen om PDF krävs och inte i miniatyrbilden. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
+På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgivningen införlivas i målversionen om PDF krävs och inte i dess miniatyrbild. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
 
 * **Video:** Du kan använda videospelarens URL för videomaterialet som använder en inbäddad iFrame. Du kan använda följande arrayåtergivningar i målupplevelsen:
   <!--![Video dynamic delivery url](image.png)-->
@@ -140,7 +174,7 @@ På skärmbilden ovan måste leveransadressen för den ursprungliga återgivning
 
   Du kan referera till `selection[0].....selection[4]` för arrayen med återgivningslänk från skärmbilden ovan. Nyckelegenskaperna för en av miniatyrbildsrenderingarna är till exempel:
 
-  Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
+  Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som en HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
 
   I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play?accept-experimental=1`
 
@@ -154,15 +188,15 @@ Med resursväljaren för Dynamic Media med OpenAPI-funktioner kan du konfigurera
 
 Egenskaper som definieras på `jcr:content/metadata/`-nivå visas som `metadata.<metadata bucket>.<property name>.` för de filter som du vill konfigurera för konfigurationen.
 
-I Resursväljaren för Dynamic Media med OpenAPI-funktioner konverteras till exempel en egenskap på `asset jcr:content/metadata/client_name:market` till `metadata.embedded.client_name:market` för filterkonfiguration.
+I Resursväljaren för dynamiska media med OpenAPI-funktioner konverteras till exempel en egenskap på `asset jcr:content/metadata/client_name:market` till `metadata.embedded.client_name:market` för filterkonfiguration.
 
 En engångsaktivitet måste göras för att hämta namnet. Gör ett söknings-API-anrop för resursen och hämta egenskapsnamnet (i stort sett).
 
 ### Användargränssnitt för resursväljare för Dynamic Media med OpenAPI-funktioner {#interface-dynamic-media-open-api}
 
-Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resursstrukturen för alla godkända resurser som är tillgängliga i resurskatalogen för Experience Manager.
+Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resursstrukturen för alla godkända resurser som är tillgängliga i Experience Manager resurskatalog.
 
-![Dynamic Media med OpenAPI-funktioner, användargränssnitt](assets/polaris-ui.png)
+![Dynamiska media med OpenAPI-funktioner, användargränssnitt](assets/polaris-ui.png)
 
 * **A**: [Visa/Göm panel](#hide-show-panel)
 * **B**: [Assets](#repository)

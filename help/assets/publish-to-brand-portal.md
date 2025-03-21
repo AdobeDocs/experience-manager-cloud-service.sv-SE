@@ -5,17 +5,51 @@ contentOwner: Adobe
 feature: Brand Portal, Asset Distribution, Configuration
 role: User
 exl-id: 1cc438bc-8cad-4421-af03-c1f6d750e0a8
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 78%
+source-wordcount: '1200'
+ht-degree: 77%
 
 ---
 
-# Publish-material till Brand Portal {#publish-assets-to-brand-portal}
+# Publicera material i Brand Portal {#publish-assets-to-brand-portal}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -28,9 +62,9 @@ Du måste dock först konfigurera AEM Assets med varumärkesportalen. Mer inform
 
 Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen i AEM Assets återspeglas inte ändringarna i varumärkesportalen förrän du publicerar resursen, mappen eller samlingen på nytt från AEM Assets. Funktionen säkerställer att pågående ändringar inte finns i varumärkesportalen. Endast godkända ändringar som publiceras av en administratör finns i varumärkesportalen.
 
-* [Publish-material till Brand Portal](#publish-assets-to-bp)
-* [Publish-mappar till Brand Portal](#publish-folders-to-brand-portal)
-* [Publish-samlingar till Brand Portal](#publish-collections-to-brand-portal)
+* [Publicera material i Brand Portal](#publish-assets-to-bp)
+* [Publicera mappar i Brand Portal](#publish-folders-to-brand-portal)
+* [Publicera samlingar på Brand Portal](#publish-collections-to-brand-portal)
 
 >[!NOTE]
 >
@@ -38,7 +72,7 @@ Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen
 >Assets bör publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
 > För [!DNL Experience Manager Assets] som [!DNL Cloud Service] är överföringshastigheten som observeras under labbvillkoret 1 000 resurser per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
 
-## Publish-material till Brand Portal {#publish-assets-to-bp}
+## Publicera material i Brand Portal {#publish-assets-to-bp}
 
 Så här publicerar du resurser från AEM Assets till varumärkesportalen:
 
@@ -50,7 +84,7 @@ Så här publicerar du resurser från AEM Assets till varumärkesportalen:
    * [Publicera nu](#publish-to-bp-now) (publicera resurser direkt)
    * [Publicera senare](#publish-to-bp-later) (schemalägg publicering av resurser)
 
-### Publish-resurser nu {#publish-to-bp-now}
+### Publicera resurser nu {#publish-to-bp-now}
 
 Gör något av följande för att publicera de markerade resurserna på varumärkesportalen:
 
@@ -68,7 +102,7 @@ Gör något av följande för att publicera de markerade resurserna på varumär
 
 Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna.
 
-### Publish-resurser senare {#publish-to-bp-later}
+### Publicera resurser senare {#publish-to-bp-later}
 
 Gör så här för att schemalägga publicering av resurser på varumärkesportalen till ett senare datum eller en senare tid:
 
@@ -103,11 +137,11 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 >`/content : jcr:read, crx:replicate`
 >`/content/dam/ : jcr:read,modify, crx:replicate`
 
-## Publish-mappar till Brand Portal {#publish-folders-to-brand-portal}
+## Publicera mappar i Brand Portal {#publish-folders-to-brand-portal}
 
 Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgärden till ett senare datum eller en senare tid.
 
-### Publish-mappar till Brand Portal {#publish-folders-to-bp}
+### Publicera mappar i Brand Portal {#publish-folders-to-bp}
 
 1. Markera mapparna som du vill publicera från Assets-konsolen och klicka på **[!UICONTROL Quick Publish]**-alternativet i verktygsfältet.
 
@@ -133,7 +167,7 @@ Du kan publicera eller avpublicera resursmappar direkt eller schemalägga åtgä
 
    Ett meddelande visas som anger att mappen har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa den publicerade resursen.
 
-1. **Publish-mappar senare**
+1. **Publicera mappar senare**
 Så här schemalägger du publiceringen av resursmapparna till ett senare datum eller en senare tidpunkt:
 
    1. Välj de mappar som du vill schemalägga för publicering och välj sedan **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
@@ -213,7 +247,7 @@ Gör så här för att avpublicerar resursmappar från varumärkesportalen:
 
       ![unpublishworkflows](assets/unpublishworkflows.png)
 
-## Publish-samlingar till Brand Portal {#publish-collections-to-brand-portal}
+## Publicera samlingar på Brand Portal {#publish-collections-to-brand-portal}
 
 Du kan publicera eller avpublicera samlingar från molninstansen AEM Assets.
 
@@ -223,7 +257,7 @@ Du kan publicera eller avpublicera samlingar från molninstansen AEM Assets.
 >
 >Om samlingar som innehåller innehållsfragment publiceras från AEM Assets till varumärkesportalen, replikeras allt innehåll i mappen förutom innehållsfragmenten till varumärkesportalens gränssnitt.
 
-### Publish-samlingar {#publish-collections}
+### Publicera samlingar {#publish-collections}
 
 Gör så här för att publicera samlingar från AEM Assets till varumärkesportalen:
 
@@ -294,4 +328,4 @@ Mer information finns i [dokumentationen till varumärkesportalen](https://exper
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

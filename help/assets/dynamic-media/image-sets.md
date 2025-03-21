@@ -5,14 +5,51 @@ contentOwner: Rick Brough
 feature: Image Sets
 role: User
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2124'
 ht-degree: 3%
 
 ---
 
 # Bilduppsättningar {#image-sets}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Bilduppsättningar ger användarna en integrerad visningsupplevelse, där användarna kan se olika vyer av ett objekt genom att klicka på en miniatyrbild. Med bilduppsättningar kan du visa alternativa vyer av ett objekt och visningsprogrammet har zoomverktyg som gör att du kan granska bilder noggrant.
 
@@ -37,7 +74,7 @@ När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och t
 | Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
 | Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
-Se även [Dynamic Media-begränsningar](/help/assets/dynamic-media/limitations.md).
+Se även [Dynamiska mediebegränsningar](/help/assets/dynamic-media/limitations.md).
 
 ## Snabbstart: Bilduppsättningar {#quick-start-image-sets}
 
@@ -55,7 +92,7 @@ Så här kommer du igång snabbt:
 
    Överför bilderna till dina bilduppsättningar. Kom ihåg att användare kan zooma in bilder i bilduppsättningsvisningsprogrammet. Därför bör du vara noggrann när du väljer bilder. Se till att bilderna har en största storlek på minst 2 000 pixlar.
 
-   Se [Dynamic Media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av bilduppsättningar.
+   Se [Dynamiska media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av bilduppsättningar.
 
 1. [Skapa bilduppsättningar](#creating-image-sets).
 
@@ -78,7 +115,7 @@ Så här kommer du igång snabbt:
 
    Markera bilduppsättningen och du kan förhandsgranska den. Markera miniatyrbildikonerna om du vill undersöka bilduppsättningen i det valda visningsprogrammet. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan med spår.
 
-1. [Publish-bilduppsättningar](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+1. [Publicera bilduppsättningar](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
    När du publicerar en bilduppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera alla anpassade visningsprogramförinställningar](/help/assets/dynamic-media/managing-viewer-presets.md) som du har skapat. Visningsförinställningarna som är färdiga för leverans har redan publicerats.
 
@@ -92,7 +129,7 @@ Så här kommer du igång snabbt:
 
 Mer information om hur du redigerar bilduppsättningar finns i [Redigera bilduppsättningar](#editing-image-sets). Dessutom kan du visa och redigera [bilduppsättningsegenskaper](/help/assets/manage-digital-assets.md#editing-properties).
 
-Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md#images-and-sets).
+Om du har problem med att skapa uppsättningar kan du läsa Bilder och uppsättningar i [Felsöka dynamiska media](/help/assets/dynamic-media/troubleshoot-dm.md#images-and-sets).
 
 ## Överför resurser för bilduppsättningar {#uploading-assets-in-image-sets}
 
@@ -100,7 +137,7 @@ Börja med att ladda upp bildresurserna för dina bilduppsättningar. Kom ihåg 
 
 <!-- Image Sets supports many image file formats, but lossless TIFF, PNG, and EPS images are recommended. -->
 
-Se [Dynamic Media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av bilduppsättningar.
+Se [Dynamiska media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av bilduppsättningar.
 
 Du kan överföra bilder för bilduppsättningar på samma sätt som du [överför andra resurser i Assets](/help/assets/manage-digital-assets.md#uploading-assets).
 
@@ -110,7 +147,7 @@ Innan du skapar bilduppsättningar bör du kontrollera att bilderna har rätt st
 
 Om du vill skapa en bilduppsättning med flera vyer behöver du bilder som visar ett objekt från olika vypunkter eller visar olika aspekter av samma objekt. Målet är att framhäva de viktiga funktionerna i ett objekt så att läsarna får en fullständig bild av hur det ser ut eller vad det gör.
 
-Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bilderna har minst 2 000 pixlar stor storlek. Experience Manager Assets har stöd för många bildfilsformat, men förlustfria bilder i TIFF, PNG och EPS rekommenderas.
+Eftersom användare kan zooma bilder i bilduppsättningar bör du se till att bilderna har minst 2 000 pixlar stor storlek. Experience Manager Assets har stöd för många bildfilsformat, men förlustfria TIFF-, PNG- och EPS-bilder rekommenderas.
 
 >[!NOTE]
 >
@@ -143,11 +180,11 @@ När du skapar en bilduppsättning rekommenderar Adobe följande metodtips och t
 | Antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
 | Maximalt antal bilder per uppsättning | 5-10 bilder per uppsättning | 1000 |
 
-Se även [Dynamic Media-begränsningar](/help/assets/dynamic-media/limitations.md).
+Se även [Dynamiska mediebegränsningar](/help/assets/dynamic-media/limitations.md).
 
 **Så här skapar du bilduppsättningar:**
 
-1. I Adobe Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen.
+1. I Adobe Experience Manager väljer du Experience Manager logotyp för att komma åt den globala navigeringskonsolen.
 1. Välj **[!UICONTROL Navigation]** > **[!UICONTROL Assets]**. Navigera till den plats där du vill skapa en bilduppsättning och gå sedan till **[!UICONTROL Create]** > **[!UICONTROL Image Set]** för att öppna sidan Bilduppsättningsredigerare.
 
    Du kan också skapa uppsättningen inifrån en mapp som innehåller dina resurser.
@@ -188,7 +225,7 @@ Se även [Dynamic Media-begränsningar](/help/assets/dynamic-media/limitations.m
 
    >[!NOTE]
    >
-   >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen. Du kan också låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i bilduppsättningen. Om du vill välja en miniatyrbild väljer du **[!UICONTROL Change thumbnail]** ovanför fältet Titel på sidan Bilduppsättningsredigerare. Markera sedan en bild (du kan navigera till andra mappar om du även vill söka efter bilder). Om du markerade en miniatyrbild och sedan vill att Experience Manager ska generera en från bilduppsättningen väljer du **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail]**.
+   >När du skapar bilduppsättningen kan du ändra miniatyrbilden för bilduppsättningen. Du kan också låta Experience Manager välja miniatyrbilden automatiskt baserat på resurserna i bilduppsättningen. Om du vill välja en miniatyrbild väljer du **[!UICONTROL Change thumbnail]** ovanför fältet Titel på sidan Bilduppsättningsredigerare. Markera sedan en bild (du kan navigera till andra mappar om du även vill söka efter bilder). Om du har valt en miniatyrbild och sedan vill att Experience Manager ska generera en från bilduppsättningen väljer du **[!UICONTROL Switch to]** **[!UICONTROL Automatic thumbnail]**.
 
 1. Klicka på **[!UICONTROL Save]**. Den skapade bilduppsättningen visas i den mapp du skapade den i.
 
@@ -212,7 +249,7 @@ Uppsättningar som skapats med gruppuppsättningsförinställningar visas *inte*
 
 * Från sökningen kan du välja **[!UICONTROL Filter]**, sedan expandera **[!UICONTROL Dynamic Media]** och välja **[!UICONTROL Sets]**.
 
-  Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiska uppsättningar utförs sökfrågan med&quot;Börjar med&quot;. Det här sökvillkoret skiljer sig från Experience Manager, som bygger på &quot;Contains&quot;. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]**.
+  Sökningen returnerar matchande uppsättningar som skapats manuellt i användargränssnittet eller automatiskt skapats med gruppuppsättningsförinställningar. För automatiska uppsättningar utförs sökfrågan med&quot;Börjar med&quot;. Detta sökvillkor skiljer sig från Experience Manager, som bygger på &quot;Contains&quot;. Det enda sättet att söka efter automatiska uppsättningar är att ställa in filtret på **[!UICONTROL Sets]**.
 
   ![chlimage_1-134](assets/chlimage_1-134.png)
 
@@ -263,4 +300,4 @@ Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md).
 
 ## Publicera bilduppsättningar {#publishing-image-sets}
 
-Se [Publish Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+Se [Publicera Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).

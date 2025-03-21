@@ -4,17 +4,51 @@ description: Lär dig hur du importerar resurser satsvis med det nya användargr
 exl-id: 10f9d679-7579-4650-9379-bc8287cb2ff1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1719'
+source-wordcount: '1747'
 ht-degree: 0%
 
 ---
 
 # Importera resurser gruppvis i Assets-vyn  {#bulk-import-assets-view}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Vyn Importera satsvis i AEM Assets ger administratörer möjlighet att importera ett stort antal resurser från en datakälla till AEM Assets. Administratörerna behöver inte längre överföra enskilda resurser eller mappar till AEM Assets.
 
@@ -37,14 +71,14 @@ Du kan importera resurser från följande datakällor:
 | Azure | <ul> <li>Azure Storage-konto </li> <li> Azure Blob Container <li> Azure Access Key eller SAS-token baserat på autentiseringsläge </li></ul> |
 | AWS | <ul> <li>AWS </li> <li> AWS Bucket <li> AWS Access Key </li><li> AWS Access Secret </li></ul> |
 | Google Cloud | <ul> <li>GCP Bucket </li> <li> E-postadress för GCP-tjänstkonto <li> Privat nyckel för GCP-tjänstkonto</li></ul> |
-| Dropbox | <ul> <li>Klient-ID för Dropbox (programnyckel) </li> <li> Dropbox Client Secret (apphemlighet)</li></ul> |
+| Dropbox | <ul> <li>Dropbox klient-ID (programnyckel) </li> <li> Dropbox Client Secret (apphemlighet)</li></ul> |
 | OneDrive | <ul> <li>Klient-ID för OneDrive  </li> <li> OneDrive-klient-ID</li><li> OneDrive-klienthemlighet</li></ul> |
 
 Förutom dessa krav som baseras på datakällan måste du vara medveten om källmappsnamnet som finns i datakällan och som innehåller alla resurser som behöver importeras till AEM Assets.
 
-## Konfigurera utvecklarprogrammet Dropbox {#dropbox-developer-application}
+## Konfigurera Dropbox utvecklarprogram {#dropbox-developer-application}
 
-Skapa och konfigurera utvecklarprogrammet för Dropbox innan du importerar resurser från ditt Dropbox-konto till AEM Assets.
+Skapa och konfigurera Dropbox-utvecklarprogrammet innan du importerar resurser från ditt Dropbox-konto till AEM Assets.
 
 Utför följande steg:
 
@@ -54,7 +88,7 @@ Utför följande steg:
 
 1. Välj något av följande alternativ i avsnittet **[!UICONTROL Choose the type of access you need]**:
 
-   * Välj **[!UICONTROL App folder]** om du behöver åtkomst till en enda mapp som skapats i programmet i ditt Dropbox-konto.
+   * Välj **[!UICONTROL App folder]** om du behöver åtkomst till en enda mapp som skapats i ditt program i ditt Dropbox-konto.
 
    * Välj **[!UICONTROL Full Dropbox]** om du behöver åtkomst till alla filer och mappar på ditt Dropbox-konto.
 
@@ -125,8 +159,8 @@ Utför följande steg för att skapa en bulkimportkonfiguration i [!DNL Experien
    >[!NOTE]
    >
    >Om du använder Dropbox som datakälla anger du källmappens sökväg baserat på följande regler:
-   >* Om du väljer **Fullt Dropbox** när du skapar programmet Dropbox och den mapp som innehåller resurserna finns på `https://www.dropbox.com/home/bulkimport-assets` anger du `bulkimport-assets` i fältet **[!UICONTROL Source Folder]**.
-   >* Om du väljer **App-mapp** när du skapar programmet Dropbox och den mapp som innehåller resurserna finns på `https://www.dropbox.com/home/Apps/BulkImportAppFolderScope/bulkimport-assets` anger du `bulkimport-assets` i fältet **[!UICONTROL Source Folder]** där `BulkImportAppFolderScope` refererar till programmets namn. `Apps` läggs automatiskt till efter `home` i det här fallet.
+   >* Om du väljer **Fullständig Dropbox** när du skapar Dropbox-programmet och den mapp som innehåller resurserna finns på `https://www.dropbox.com/home/bulkimport-assets` anger du `bulkimport-assets` i fältet **[!UICONTROL Source Folder]**.
+   >* Om du väljer **App-mapp** när du skapar Dropbox-programmet och den mapp som innehåller resurserna finns på `https://www.dropbox.com/home/Apps/BulkImportAppFolderScope/bulkimport-assets` anger du `bulkimport-assets` i fältet **[!UICONTROL Source Folder]** där `BulkImportAppFolderScope` refererar till programmets namn. `Apps` läggs automatiskt till efter `home` i det här fallet.
 
    >[!NOTE]
    >

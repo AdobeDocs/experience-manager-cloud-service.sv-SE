@@ -1,25 +1,59 @@
 ---
-title: Vanliga frågor om Dynamic Media med OpenAPI-funktioner
-description: Vanliga frågor om Dynamic Media med OpenAPI-funktioner
+title: Dynamic Media med OpenAPI-funktioner - frågor och svar
+description: Dynamic Media med OpenAPI-funktioner - frågor och svar
 role: User
 exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
-source-git-commit: ed7331647ea2227e6047e42e21444b743ee5ce6d
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1558'
 ht-degree: 0%
 
 ---
 
-# Vanliga frågor om Dynamic Media med OpenAPI-funktioner {#new-dynaminc-media-apis-frequently-asked-questions}
+# Dynamic Media med OpenAPI-funktioner - frågor och svar {#new-dynaminc-media-apis-frequently-asked-questions}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 >[!AVAILABILITY]
 >
 >Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
 >
->[!BADGE Dynamic Media med OpenAPI-funktionshandboken PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
+>[!BADGE Dynamiska media med OpenAPI-funktioner - guide för PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
 +++**Är alla resurser i Experience Manager Assets as a Cloud Service-databasen tillgängliga för sökning och leverans med Dynamic Media med OpenAPI-funktioner?**
 
@@ -89,9 +123,9 @@ På samma sätt kan du godkänna flera resurser samtidigt i en mapp i Assets-vyn
 
 +++
 
-+++**Hur kan jag skydda resursleveransen och söka efter Dynamic Media OpenAPI:er?**
++++**Hur skyddar jag leveransen av mediefiler och söker efter Dynamic Media OpenAPI:er?**
 
-Med central resursstyrning i Experience Manager kan DAM-administratörer eller varumärkesansvariga hantera åtkomst till resurser. De kan begränsa åtkomsten genom att konfigurera roller eller genom att ställa in aktiverings- och inaktiveringstid för godkända mediefiler på redigeringssidan, särskilt på AEM as a Cloud Service författarinstans.
+Med central resursstyrning i Experience Manager kan DAM-administratörer och varumärkesansvariga hantera åtkomst till resurser. De kan begränsa åtkomsten genom att konfigurera roller eller genom att ställa in aktiverings- och inaktiveringstid för godkända mediefiler på redigeringssidan, särskilt på AEM as a Cloud Service författarinstans.
 
 Slutanvändare som söker efter eller använder leverans-URL:er kan få åtkomst till begränsade resurser när auktoriseringsprocessen har slutförts.
 
@@ -109,39 +143,39 @@ Som DAM-användare kanske du inte har behörighet att [godkänna resurser](appro
 
 Dynamic Media med OpenAPI-funktioner och Dynamic Media representerar distinkta lösningar som alla har specialfunktioner för leverans. Det är av största vikt att du noggrant granskar dina specifika krav för att fastställa den lämpligaste lösningen som passar dina behov.
 
-Allmän vägledning från Adobe är att utnyttja Dynamic Media med OpenAPI-stacken för alla integreringsanvändningsfall (program från första eller tredje part). Om det redan finns en integrering med Dynamic Media-stacken bör du inte ändra den eftersom URL:er för OpenAPI-stacken är olika i strukturen. Använd OpenAPI-stacken endast för nya integreringsfall. Om ditt användningsfall kräver avancerade modifieringar som inte är tillgängliga med OpenAPI-stacken bör du undvika OpenAPI-stacken tills Adobe överbryggar luckan. Även för grundläggande inbyggda leveranser från AEM Assets-Cloud Service kan OpenAPI-stacken utvärderas så länge ditt användningsfall täcks av modifieringarna som finns i OpenAPI-stacken. Sammanfattningsvis kan Dynamic Media och Dynamic Media med OpenAPI-stacken finnas samtidigt, beroende på vilken typ av användning du har.
+Allmän vägledning från Adobe är att utnyttja Dynamic Media med OpenAPI-stacken för alla integreringsanvändningsfall (program från första eller tredje part). Om det redan finns en integrering med Dynamic Media-stacken bör du inte ändra den eftersom URL:er för OpenAPI-stacken är olika i strukturen. Använd OpenAPI-stacken endast för nya integreringsfall. Om ditt användningsfall kräver avancerade modifieringar som inte är tillgängliga med OpenAPI-stacken bör du undvika OpenAPI-stacken tills Adobe överbryggar luckan. Även för grundläggande inbyggd leverans från AEM Assets Cloud Services kan OpenAPI-stacken utvärderas så länge ditt användningsfall täcks av modifieringarna som finns i OpenAPI-stacken. Sammanfattningsvis kan Dynamic Media och Dynamic Media med OpenAPI-stacken finnas samtidigt, beroende på vilken typ av användning du har.
 
 Nedan följer några av de viktigaste skillnaderna mellan Dynamic Media med OpenAPI-funktioner och Dynamic Media:
 
-| Dynamic Media med OpenAPI-funktioner | Dynamic Media |
+| Dynamic Media med OpenAPI-funktioner | Dynamiska medier |
 |---|---|
-| [Endast tillgängligt med Assets as a Cloud Service](/help/assets/dynamic-media-open-apis-overview.md#prerequisites-dynaminc-media-open-apis) | Finns även för Managed Services på plats eller Adobe med ytterligare konfigurations- och provisioneringsåtgärder. |
+| [Endast tillgängligt med Assets as a Cloud Service](/help/assets/dynamic-media-open-apis-overview.md#prerequisites-dynaminc-media-open-apis) | Finns även i On-Local eller Adobe Managed Services med ytterligare konfigurations- och provisioneringsåtgärder. |
 | [Begränsad uppsättning bildmodifierare som stöds, till exempel bredd, höjd, rotering, vänd, kvalitet och format](/help/assets/deliver-assets-apis.md) | En mängd tillgängliga bildmodifierare |
 | [Begränsad leverans av resurser baserat på användare, roller, datum och tid](/help/assets/restrict-assets-delivery.md) | Assets som publiceras på Dynamic Media är tillgängliga för alla användare |
 | De flesta utvecklare är bekanta med OpenAPI-specifikationer. AEM Assets utbyggbarhet blir mycket enkelt genom att använda [Micro-Front Asset Selector](/help/assets/overview-asset-selector.md). | SOAP-baserade API:er, som blir ett hinder när man utvecklar integrationsanpassningar. |
 | Ändringar som görs i godkända resurser i DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i leverans-URL:erna. Med ett kort TTL-värde (Time-to-Live) på 10 minuter konfigurerat för Dynamic Media med OpenAPI-funktioner via CDN blir uppdateringarna synliga i alla redigerings- och publiceringsgränssnitt på mindre än 10 minuter. | Rekommenderad CDN TTL på 10 timmar. Du kan åsidosätta TTL-värdet med åtgärden för cacheogiltigförklaring. |
-| Endast godkända mediefiler finns tillgängliga för leverans av mediefiler till applikationer längre fram i kedjan, vilket möjliggör för varumärken som godkänner mediefiler i digitala upplevelser. | Alla uppdateringar av en Dynamic Media-publicerad mediefil publiceras automatiskt utan något arbetsflöde för godkännande, vilket inte säkerställer att det inte finns något varumärkesgodkänt material i digitala upplevelser. |
+| Endast godkända mediefiler finns tillgängliga för leverans av mediefiler till applikationer längre fram i kedjan, vilket möjliggör för varumärken som godkänner mediefiler i digitala upplevelser. | Alla uppdateringar av en publicerad resurs i Dynamic Media publiceras automatiskt utan något arbetsflöde för godkännande, vilket inte säkerställer att det finns varumärkesgodkända resurser i digitala upplevelser. |
 | Användningsrapporter baserade på antalet levererade resurser. Den här funktionen kommer snart att vara tillgänglig. | Användningsrapporter är inte tillgängliga. Den här funktionen kommer snart att vara tillgänglig. |
-| Assets som har markerats som Utgånget i Assets as a Cloud Service-databasen är inte längre tillgängliga för program längre fram i kedjan. | Inga interna tillgångar förfaller. En resurs förblir offentlig tills den tas bort från AEM as a Cloud Service-databasen. |
+| Assets som har markerats som Förfallen på Assets as a Cloud Service-databasen är inte längre tillgängliga för program längre fram i kedjan. | Inga interna tillgångar förfaller. En resurs förblir offentlig tills den tas bort från AEM as a Cloud Service-databasen. |
 | Stöder inte förinställningar för bilder och videomaterial för smart beskärning. | Stöder bildförinställningar och videofunktioner för smart beskärning. |
 | Dynamiska videokodar som säkerställer att bästa kodning hanteras baserat på indatavideon. Ingen inställning krävs för inbyggd videoleverans. | Standard 3 kodar oberoende av videoingång (kan påverka videoleveransprestanda). Du måste ställa in olika kodningar manuellt för olika videobithastigheter. |
 | Det är svårt att gissa vilken resurs-UID-baserade URL:er är (gör att URL-adresser kan döljas), men SEO-optimering används. | URL-döljning är bara tillgänglig för URL-frågeparametrar. Assets-id:n (resursnamn) i URL:er är identifierbara. |
 
 +++
 
-+++**Hur Dynamic Media med OpenAPI-funktioner åtgärdar begränsningarna i funktionen Connected Assets?**
++++**Hur fungerar Dynamic Media med OpenAPI-funktioner för att åtgärda begränsningarna i funktionen för anslutna Assets?**
 
 Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 
 | Dynamic Media med OpenAPI-funktioner | Uppkopplad Assets |
 |---|---|
-| Assets på fjärrdistributionen av DAM är tillgängligt på AEM as a Cloud Service. | Assets på fjärrdistributionen av DAM är tillgängligt på AEM as a Cloud Service eller Adobe Managed Services. |
+| Assets på fjärrdistributionen av DAM är tillgängligt på AEM as a Cloud Service. | Assets på fjärrdistributionen av DAM kan vara tillgängligt på AEM as a Cloud Service eller Adobe Managed Services. |
 | Resursbinärfiler kopieras inte när resurser på en fjärr-DAM-distribution är tillgängliga i en AEM Sites-instans. | Resursbinärfiler kopieras när resurser på en fjärr-DAM-distribution är tillgängliga på en AEM Sites-instans. |
 | Stöd för alla format som stöds av AEM Assets. | Inget stöd för videor. |
-| Du kan använda Dynamic Media på den lokala platsdistributionen när du hämtar resurser från fjärr-DAM-distribution. | Dynamic Media på lokal platsdistribution är skrivskyddat. |
+| Du kan använda Dynamic Media på den lokala platsdistributionen när du hämtar resurser från fjärr-DAM-distribution. | Dynamiska medier på lokala platser är skrivskyddade. |
 | Inga begränsningar för antalet AEM Sites-instanser som är anslutna till en fjärr-DAM-distribution. Du kan [begränsa åtkomsten till resurser på platsinstansen genom att konfigurera roller](/help/assets/restrict-assets-delivery.md) för godkända resurser på fjärr-DAM. | Begränsning för att ansluta högst fyra AEM Sites-instanser till fjärr-DAM-distributionen. Ökat antal kräver ytterligare testning. |
 | Både resursväljaren och Dynamic Media med OpenAPI-funktioner kan utökas för att tillåta anpassade integreringar. | Anslutna Assets-API:er kan inte utökas för att tillåta anpassade integreringar. |
-| Alla ändringar som görs i godkända resurser som är tillgängliga vid fjärdistributionen av DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i Sites-instansen inom ett kort TTL-värde på 10 minuter. | Resursuppdateringar för fjärrdistribution av DAM hanteras automatiskt via livscykelhändelser, men tar mycket längre tid jämfört med Dynamic Media med OpenAPI-funktioner. |
+| Alla ändringar som görs i godkända resurser som är tillgängliga vid fjärdistributionen av DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i Sites-instansen inom ett kort TTL-värde på 10 minuter. | Resursuppdateringar för fjärrdistribution av DAM hanteras automatiskt via livscykelhändelser, men tar mycket mer tid jämfört med Dynamic Media med OpenAPI-funktioner. |
 | Resursmetadata på fjärr-DAM är även tillgängliga på AEM Sites-instanser. | Resursmetadata på fjärr-DAM är inte tillgängliga på AEM Sites-instansen. |
 
 +++

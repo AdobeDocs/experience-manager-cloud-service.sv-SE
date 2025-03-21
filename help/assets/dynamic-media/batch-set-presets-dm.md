@@ -1,18 +1,55 @@
 ---
 title: Förinställningar för gruppuppsättning
-description: Lär dig automatisera framtagning av bilduppsättningar och snurra uppsättningar med hjälp av gruppuppsättningsförinställningar i Dynamic Media.
+description: Lär dig hur du automatiserar skapande av bilduppsättningar och snurruppsättningar med hjälp av gruppuppsättningsförinställningar i Dynamic Media.
 contentOwner: Rick Brough
 feature: Image Presets,Viewer Presets
 role: User
 exl-id: 022ee347-54ec-4cec-b808-9eb3a9e51424
-source-git-commit: 24a4a43cef9a579f9f2992a41c582f4a6c775bf3
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '3192'
+source-wordcount: '3238'
 ht-degree: 0%
 
 ---
 
 # Om förinställningar för gruppuppsättning {#about-bsp}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Använd **[!UICONTROL Batch Set Presets]** om du vill skapa och ordna flera resurser i en bilduppsättning eller snurra uppsättningar när du överför resursfiler till en mapp, antingen individuellt eller med massinläsning. Du kan låta förinställningen köras tillsammans med de resursimporteringsjobb som du schemalägger i [!DNL Dynamic Media]. Varje förinställning är en unikt namngiven, självständig uppsättning instruktioner som definierar hur bilduppsättningen eller rotationsuppsättningen ska skapas med bilder som matchar de definierade namnkonventionerna i förinställningsreceptet.
 
@@ -27,7 +64,7 @@ Använd **[!UICONTROL Batch Set Presets]** om du vill skapa och ordna flera resu
 1. Använd gruppuppsättningsförinställningen på resursmappen. Se [Om att använda gruppuppsättningsförinställningar på mappar](#apply-bsp).
 1. Överför bilder till resursmappen. Se [Överför resurser för bilduppsättningar](/help/assets/dynamic-media/image-sets.md#uploading-assets-in-image-sets), [Överför resurser för snurpuppsättningar](/help/assets/dynamic-media/spin-sets.md#uploading-assets-for-spin-sets) eller [Lägg till digitala resurser i Adobe Experience Manager](/help/assets/add-assets.md#add-assets-to-experience-manager).
 1. Bilduppsättningen eller rotationsuppsättningen genereras automatiskt i den önskade mappen.
-1. Publish din bilduppsättning eller snurra. Se [Publish Dynamic Media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
+1. Publicera din bilduppsättning eller snurra. Se [Publicera dynamiska media Assets](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 ## Skapa en förinställning för gruppuppsättning för en bilduppsättning eller en snurruppsättning {#creating-bsp}
 
@@ -66,7 +103,7 @@ När du är klar med att skapa en gruppuppsättningsförinställning använder d
 
 **Så här skapar du en gruppuppsättningsförinställning för en bilduppsättning eller en rotationsuppsättning:**
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 
    ![bsp-create1.png](/help/assets/assets-dm/bsp-create1.png)
 
@@ -109,7 +146,7 @@ Se [Skapa en förinställning för gruppuppsättning för en bilduppsättning el
 | --- | --- |
 | Förinställningsnamn | Skrivskyddad. Det namn du angav när du skapade gruppuppsättningen. Om du måste byta namn på förinställningen kan du kopiera den befintliga förinställningen för gruppuppsättning och ange ett nytt namn. Se [Kopiera en befintlig gruppuppsättningsförinställning](#copy-bsp). |
 | Typ | Skrivskyddad. Typen angavs när du först skapade gruppuppsättningen. Om du kopierar en befintlig gruppuppsättningsförinställning kan du inte ändra dess [!UICONTROL Type]. Du måste skapa en förinställning i stället. |
-| Inkludera härledd Assets | Valfritt. Om du vill att [!DNL Dynamic Media]s IPS (Image Production System) ska innehålla genererade eller&quot;härledda&quot; bilder i din snurruppsättning eller bilduppsättning väljer du **[!UICONTROL Yes]** (standard). En härledd resurs är en bild som inte har överförts direkt av en användare. I stället producerades resursen av IPS när en huvudresurs överfördes. En bildresurs som IPS genererade från en sida i PDF när PDF överfördes i [!DNL Dynamic Media] betraktas till exempel som en härledd resurs. |
+| Inkludera härledd Assets | Valfritt. Om du vill att [!DNL Dynamic Media]s IPS (Image Production System) ska innehålla genererade eller &quot;härledda&quot; bilder med din snurruppsättning eller bilduppsättning väljer du **[!UICONTROL Yes]** (standard). En härledd resurs är en bild som inte har överförts direkt av en användare. I stället producerades resursen av IPS när en huvudresurs överfördes. En bildresurs som IPS genererade från en sida i en PDF när PDF överfördes i [!DNL Dynamic Media] betraktas till exempel som en härledd resurs. |
 | Målmapp | Valfritt. Om du definierar ett stort antal bilduppsättningar eller snurruppsättningar bör du hålla uppsättningarna åtskilda från de mappar som innehåller själva resurserna. Överväg därför att skapa en mapp för bilduppsättningar eller snurruppsättningar och dirigera om programmet så att gruppuppsättningsgenererade uppsättningar placeras här.<br>I så fall anger du vilken mapp i mappstrukturen för Experience Manager Assets (`/content/dam`) som har gruppuppsättningsförinställningen aktiv. Kontrollera att mappen är aktiverad för synkronisering av [!DNL Dynamic Media] så att den kan användas som målmapp. Se [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder).<br>Mer än en mapp kan ha tilldelats en angiven gruppuppsättningsförinställning om du använder förinställningen via mappens **[!UICONTROL Properties]**. Se [Använda gruppuppsättningsförinställningar från egenskapssidan för en resursmapp](#apply-bsp-to-folders-via-properties).<br>Om du inte anger en mapp skapas den gruppuppsättningsförinställning som genereras eller rotationsuppsättningen i samma mapp som den resursmapp du överförde till. |
 | **[!UICONTROL Set Naming Convention]** |  |
 | Prefix<br>eller<br>suffix | Valfritt. Ange antingen ett prefix, suffix eller båda i respektive fält.<br>Med prefix- och suffixfälten kan du skapa många gruppuppsättningsförinställningar med hjälp av en alternativ, anpassad namnkonvention för en viss uppsättning innehåll. Den här metoden är särskilt användbar om det finns ett undantag från ett företags definierade standardnamngivningsschema.<br>Prefixet eller suffixet läggs till i **[!UICONTROL Base Name]** som du definierar i området **[!UICONTROL Asset Naming Convention]** . Genom att lägga till ett prefix eller suffix försäkrar du dig om att din bilduppsättning eller rotationsuppsättning skapas exklusivt och oberoende av andra resurser. Den kan också hjälpa andra att identifiera filtyper ytterligare. Om du till exempel vill ta reda på vilket färgläge som används kan du lägga till som prefix eller suffix `rgb` eller `cmyk`.<br>När du anger en namnkonvention för uppsättning behöver du inte använda funktionen för gruppuppsättningsförinställningar, bör du använda namnkonventionen för uppsättning. Med den här metoden kan du definiera så många element i namnkonventionen som du vill gruppera i en uppsättning för att effektivisera skapandet av gruppuppsättningar. |
@@ -142,7 +179,7 @@ Bearbeta resurser i en mapp på nytt om du upplever något av följande två sce
 
 ### Använda gruppuppsättningsförinställningar på resursmappar från sidan Gruppera förinställningar {#apply-bsp-to-folders-via-bsp-page}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för varje gruppuppsättningsförinställning som du vill tillämpa på mappar.
 1. Välj **[!UICONTROL Apply Batch Preset to Folders]** i verktygsfältet.
 1. På sidan **[!UICONTROL Select Folders]** markerar du kryssrutan för varje mapp som du vill använda gruppuppsättningsförinställningarna på.
@@ -150,7 +187,7 @@ Bearbeta resurser i en mapp på nytt om du upplever något av följande två sce
 
 ### Använda gruppuppsättningsförinställningar från egenskapssidan för en resursmapp {#apply-bsp-to-folders-via-properties}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Navigera till en mapp där du vill använda en eller flera gruppuppsättningsförinställningar.
 1. Markera kryssrutan för en mapp på sidan till vänster om kolumnen **[!UICONTROL Name]**.
 1. Välj **[!UICONTROL Properties]** i verktygsfältet.
@@ -178,7 +215,7 @@ Om du vill att den nyligen redigerade förinställningen ska tillämpas på de b
 
 **Så här redigerar du en gruppuppsättningsförinställning:**
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, kontrollerar du den förinställning för gruppuppsättning som du vill ändra.
 1. Välj **[!UICONTROL Edit Batch Set Preset]** i verktygsfältet.
 1. Redigera förinställningen efter behov.
@@ -192,7 +229,7 @@ Om du kopierar en befintlig förinställning som är en referens från resursmap
 
 **Kopiera en befintlig gruppuppsättningsförinställning:**
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för den gruppuppsättningsförinställning som du vill kopiera.
 1. Välj **[!UICONTROL Copy]** i verktygsfältet.
 1. Skriv ett nytt namn på förinställningen i textrutan **[!UICONTROL Title]** i dialogrutan **[!UICONTROL Copy Batch Set Preset]**.
@@ -214,7 +251,7 @@ Det finns två metoder som du kan använda för att ta bort gruppuppsättningsf�
 
 ### Ta bort gruppuppsättningsförinställningar från mappar via sidan Gruppuppsättningsförinställning {#remove-bsp-from-folders-via-bsp-page}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för en eller flera gruppuppsättningsförinställningar som du vill ta bort från en eller flera mappar.
 1. Välj **[!UICONTROL Remove Batch Preset from Folders]** i verktygsfältet.
 
@@ -227,7 +264,7 @@ Det finns två metoder som du kan använda för att ta bort gruppuppsättningsf�
 
 ### Ta bort gruppuppsättningsförinställningar från en mapps egenskapssida {#remove-bsp-from-folders-via-properties}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Navigera till en mapp där du vill ta bort en eller flera gruppuppsättningsförinställningar.
 1. Markera kryssrutan för en mapp på sidan till vänster om kolumnen **[!UICONTROL Name]**.
 1. Välj **[!UICONTROL Properties]** i verktygsfältet.
@@ -249,7 +286,7 @@ Om du vill *ta bort* förinställningar från mappar i stället läser du [Ta bo
 
 **Så här tar du bort gruppuppsättningsförinställningar:**
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Batch Set Presets]**.
 1. På sidan **[!UICONTROL Batch Set Presets]**, till vänster om kolumnen **[!UICONTROL Preset Name]**, markerar du kryssrutan för en eller flera förinställningar för gruppuppsättning som du vill ta bort.
 1. Välj **[!UICONTROL Delete Batch Set Presets]** i verktygsfältet.
 
@@ -265,5 +302,5 @@ Om du vill *ta bort* förinställningar från mappar i stället läser du [Ta bo
 >
 >* [Bilduppsättningar](/help/assets/dynamic-media/image-sets.md)
 >* [Snurrande uppsättningar](/help/assets/dynamic-media/spin-sets.md)
->* [Konfigurera selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder) - Se Synkroniseringsläge i avsnittet om du vill veta mer om synkronisering av en enskild mapp till [!DNL Dynamic Media].
->* [Skapa en Dynamic Media-konfiguration i Cloud Service](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services) - Se Synkroniseringsläge för Dynamic Media i avsnittet om du vill veta mer om hur du synkroniserar alla mappar till [!DNL Dynamic Media].
+>* [Konfigurera selektiv publicering på mappnivå i dynamiska media](/help/assets/dynamic-media/selective-publishing.md#selective-publish-configure-folder) - Se Synkroniseringsläge i avsnittet om du vill veta mer om synkronisering av en enskild mapp till [!DNL Dynamic Media].
+>* [Skapa en dynamisk mediekonfiguration i molntjänster](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services) - Se Synkroniseringsläget för dynamiska media i avsnittet om du vill veta mer om hur du synkroniserar alla mappar till [!DNL Dynamic Media].

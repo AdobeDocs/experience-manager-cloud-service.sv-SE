@@ -5,17 +5,51 @@ contentOwner: AG
 feature: Asset Management, Publishing, Collaboration, Video
 role: User
 exl-id: 91edce4a-dfa0-4eca-aba7-d41ac907b81e
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '4661'
+source-wordcount: '4689'
 ht-degree: 5%
 
 ---
 
 # Hantera videomaterial {#manage-video-assets}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -57,19 +91,19 @@ För befintliga videoresurser i [!DNL Experience Manager Assets] måste du **[!U
 * MXF-filer visar inte videoförhandsvisningar trots att återgivningen genereras.
 * WebM-filer genererar inte förhandsvisningsåtergivningar eftersom de kan spelas upp i webbläsare.
 
-## Publish videoresurser {#publish-video-assets}
+## Publicera videomaterial {#publish-video-assets}
 
 Efter publiceringen kan du inkludera videomaterialet på en webbsida som en URL eller bädda in resurserna direkt. Mer information finns i [publicera [!DNL Dynamic Media] resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
-## Publish videor till YouTube {#publishing-videos-to-youtube}
+## Publicera videor på YouTube {#publishing-videos-to-youtube}
 
 Du kan publicera videoresurser som hanteras i Experience Manager Assets direkt till en YouTube-kanal som du tidigare har skapat.
 
-Om du vill publicera videoresurser på YouTube taggar du videoresurser i Experience Manager Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om videoresursens tagg matchar taggen för en YouTube-kanal publiceras videon till YouTube. Publish till YouTube sker tillsammans med en normal publicering av videon så länge en associerad tagg används.
+Om du vill publicera videoresurser på YouTube taggar du videoresurser i Experience Manager Assets med taggar. Du kopplar dessa taggar till en YouTube-kanal. Om videoresursens tagg matchar taggen för en YouTube-kanal publiceras videon till YouTube. Publicera till YouTube sker tillsammans med en normal publicering av videon så länge en associerad tagg används.
 
-YouTube gör sin egen kodning. Det innebär att den ursprungliga videofilen som överfördes till Experience Manager publiceras till YouTube i stället för den videoåtergivning som Dynamic Media kodning har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media förväntas de göra det om en visningsförinställning behövs för uppspelning.
+YouTube gör sin egen kodning. Den ursprungliga videofilen som överfördes till Experience Manager publiceras till YouTube i stället för den videoåtergivning som Dynamic Medias kodning har skapat. Även om det inte krävs för att bearbeta videofilmer med Dynamic Media, förväntas de göra det om en visningsförinställning behövs för uppspelning.
 
-När du åsidosätter videobearbetningsprofilen och publicerar direkt till YouTube innebär det helt enkelt att videomaterialet i Experience Manager Asset inte får någon miniatyrbild som kan visas. Det innebär också att videoklipp som inte är kodade inte fungerar med någon av Dynamic Media resurstyper.
+När du åsidosätter videobearbetningsprofilen och publicerar direkt till YouTube innebär det helt enkelt att videomaterialet i Experience Manager Asset inte får någon miniatyrbild som kan visas. Det innebär också att videoklipp som inte är kodade inte fungerar med någon av resurstyperna för dynamiska media.
 
 När du publicerar videomaterial till YouTube-servrar utför du följande uppgifter för att säkerställa säker server-till-server-verifiering med YouTube:
 
@@ -78,7 +112,7 @@ När du publicerar videomaterial till YouTube-servrar utför du följande uppgif
 1. [Lägga till taggar för publicering](#adding-tags-for-publishing)
 1. [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem)
 1. [(Valfritt) Automatisera inställningen av YouTube standardegenskaper för överförda videofilmer](#optional-automating-the-setting-of-default-youtube-properties-for-your-uploaded-videos)
-1. [Publish videor till din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
+1. [Publicera videor i din YouTube-kanal](#publishing-videos-to-your-youtube-channel)
 1. [(Valfritt) Verifiera den publicerade videon på YouTube](/help/assets/dynamic-media/video.md#optional-verifying-the-published-video-on-youtube)
 1. [Länka YouTube URL:er till ditt webbprogram](#linking-youtube-urls-to-your-web-application)
 
@@ -200,13 +234,13 @@ Du måste ha en eller flera kanaler för att kunna publicera videofilmer på You
 
 ### Lägga till taggar för publicering {#adding-tags-for-publishing}
 
-Om du vill publicera till dina videofilmer på YouTube associerar Experience Manager taggar till en eller flera YouTube-kanaler. Mer information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-cloud/authoring/sites-console/tags.md).
+Experience Manager kopplar taggar till en eller flera YouTube-kanaler för att publicera dem till dina videofilmer på YouTube. Mer information om hur du lägger till taggar för publicering finns i [Administrera taggar](/help/sites-cloud/authoring/sites-console/tags.md).
 
 Om du tänker använda standardtaggarna i Experience Manager kan du hoppa över den här uppgiften och gå till [Konfigurera YouTube i Experience Manager](#setting-up-youtube-in-aem).
 
 >[!NOTE]
 >
->När Cloud Servicen har konfigurerats krävs ingen annan konfiguration för att aktivera replikeringsagenten för YouTube Publish just nu. Orsaken är att den aktiverades när Cloud Servicens konfiguration sparades.
+>När Cloud Service har konfigurerats krävs ingen annan konfiguration för att aktivera YouTube Publish-replikeringsagenten. Orsaken är att den aktiverades när Cloud Service-konfigurationen sparades.
 
 <!-- ### Enabling the YouTube Publish replication agent {#enabling-the-youtube-publish-replication-agent}
 
@@ -222,13 +256,13 @@ After you enable the YouTube Publish replication agent, if you want to test the 
 
 Från och med Experience Manager 6.4 introducerades en ny pekgränssnittsmetod för att konfigurera YouTube-publicering i Experience Manager. Baserat på den installerade instansen av Experience Manager som du använder gör du något av följande:
 
-* Mer information om hur du konfigurerar YouTube i Experience Manager före 6.4 finns i [Konfigurera YouTube i Experience Manager före 6.4](/help/assets/dynamic-media/video.md#setting-up-youtube-in-aem-before).
+* Information om hur du konfigurerar YouTube i Experience Manager före 6.4 finns i [Konfigurera YouTube i Experience Manager före 6.4](/help/assets/dynamic-media/video.md#setting-up-youtube-in-aem-before).
 * Information om hur du konfigurerar YouTube i Experience Manager 6.4 eller senare finns i [Konfigurera YouTube i Experience Manager 6.4 och senare](#setting-up-youtube-in-aem-and-later).
 
 #### Konfigurera YouTube i Experience Manager 6.4 och senare {#setting-up-youtube-in-aem-and-later}
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
-1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager och navigerar sedan till **[!UICONTROL Tools]**(hammikon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]** i den vänstra listen.
+1. I det övre vänstra hörnet av Experience Manager väljer du Experience Manager logotyp och navigerar sedan till **[!UICONTROL Tools]**(hammikon) > **[!UICONTROL Cloud Services]** > **[!UICONTROL YouTube Publishing Configuration]** i den vänstra listen.
 1. Välj **[!UICONTROL global]** (markera inte det).
 
 1. Välj **[!UICONTROL Create]** i det övre högra hörnet på den globala sidan.
@@ -262,7 +296,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen. Du kommer tillbaka till den om 
 
    Konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - På sidan Cloud Service > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
+1. **[!UICONTROL Setting up tags for publishing]** - På sidan Molntjänster > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
 1. Om du vill visa en lista med tillgängliga taggar i Experience Manager väljer du listruteikonen (cirkumflex upp och ned).
 1. Om du vill lägga till dem markerar du en eller flera taggar.
 
@@ -276,7 +310,7 @@ Lämna sidan Skapa YouTube-konfiguration öppen. Du kommer tillbaka till den om 
 
 1. Se till att du loggar in på din instans av Dynamic Media som administratör.
 
-1. I det övre vänstra hörnet av Experience Manager väljer du logotypen för Experience Manager och navigerar sedan till **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** i den vänstra listen.
+1. I det övre vänstra hörnet av Experience Manager väljer du Experience Manager logotyp och navigerar sedan till **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** i den vänstra listen.
 1. Välj **[!UICONTROL Configure now]** under Tredjepartstjänster, under YouTube.
 1. I dialogrutan Skapa konfiguration anger du en rubrik (obligatoriskt) och ett namn (valfritt) i respektive fält.
 1. Välj **[!UICONTROL Create]**.
@@ -308,7 +342,7 @@ Lämna dialogrutan YouTube Kontoinställning öppen. Du kommer tillbaka till den
 
    Konfigurera taggar för publicering.
 
-1. **[!UICONTROL Setting up tags for publishing]** - På sidan Cloud Service > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
+1. **[!UICONTROL Setting up tags for publishing]** - På sidan Molntjänster > YouTube väljer du pennikonen för att redigera listan med taggar som du vill använda.
 1. Om du vill visa en lista med tillgängliga taggar i Experience Manager väljer du listruteikonen (cirkumflex upp och ned).
 1. Om du vill lägga till dem markerar du en eller flera taggar.
 
@@ -326,7 +360,7 @@ Om du vill skapa en profil för metadatabearbetning kopierar du först värden f
 
 **Så här automatiserar du inställningen av YouTube standardegenskaper för dina överförda videofilmer:**
 
-1. I det övre vänstra hörnet av Experience Manager väljer du logotypen för Experience Manager och navigerar sedan till **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i den vänstra listen.
+1. I det övre vänstra hörnet av Experience Manager väljer du Experience Manager logotyp och navigerar sedan till **[!UICONTROL Tools]** (hammarikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Schemas]** i den vänstra listen.
 1. Välj **[!UICONTROL default]**. (Lägg inte till en bockmarkering i markeringsrutan till vänster om &quot;standard&quot;.)
 1. Markera rutan till vänster om **[!UICONTROL video]** på sidan **[!UICONTROL default]** och välj sedan **[!UICONTROL Edit]**.
 1. Välj fliken **[!UICONTROL Advanced]** på sidan Redigerare för metadatamodeller.
@@ -349,7 +383,7 @@ Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det h�
 Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det här värdet senare när du skapar din metadatabearbetningsprofil. Låt textredigeraren vara öppen.
 
 1. Välj **[!UICONTROL Cancel]** i det övre högra hörnet på sidan för redigeringsprogram för metadatamatchning.
-1. I det övre vänstra hörnet av Experience Manager väljer du logotypen Experience Manager och sedan väljer du **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]** i den vänstra listen.
+1. I det övre vänstra hörnet av Experience Manager väljer du Experience Manager logotyp och sedan väljer du **[!UICONTROL Tools]** (hammikon) > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]** i den vänstra listen.
 
 1. Välj **[!UICONTROL Create]** på sidan Metadataprofiler, i det övre högra hörnet på sidan.
 1. I dialogrutan Lägg till metadataprofil anger du namnet `YouTube Video` i textfältet **[!UICONTROL Profile title]** och väljer sedan **[!UICONTROL Create]**.
@@ -381,19 +415,19 @@ Klistra in det kopierade värdet i textredigeraren. Du kommer att behöva det h�
 
    Se [Metadataprofiler](/help/assets/metadata-profiles.md) och [Videoprofiler](/help/assets/dynamic-media/video-profiles.md).
 
-### Publish videor till din YouTube-kanal {#publishing-videos-to-your-youtube-channel}
+### Publicera videor i din YouTube-kanal {#publishing-videos-to-your-youtube-channel}
 
-Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sätt kan Experience Manager veta vilka mediefiler som ska publiceras i din YouTube-kanal.
+Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sätt får Experience Manager veta vilka mediefiler som ska publiceras i din YouTube-kanal.
 
 >[!NOTE]
 >
->Publish publicerar inte automatiskt till YouTube. När Dynamic Media har konfigurerats finns det två publiceringsalternativ att välja mellan, **[!UICONTROL Immediately]** och **[!UICONTROL Upon Activation]**.
+>Publicera direkt publicerar inte automatiskt till YouTube. När Dynamic Media har konfigurerats finns det två publiceringsalternativ att välja mellan, **[!UICONTROL Immediately]** och **[!UICONTROL Upon Activation]**.
 >
 >**[!UICONTROL Publish Immediately]** betyder att den överförda resursen, efter att den har synkroniserats med IPS-versionen, automatiskt publiceras till leveranssystemet. Det gäller Dynamic Media, men inte YouTube. Om du vill publicera till YouTube måste du publicera via Experience Manager Author.
 
 >[!NOTE]
 >
->För att publicera innehåll från YouTube används arbetsflödet **[!UICONTROL Publish to YouTube]** i Experience Manager, vilket gör att du kan övervaka förloppet och visa felinformation.
+>Experience Manager använder arbetsflödet **[!UICONTROL Publish to YouTube]** för att publicera innehåll från YouTube, vilket gör att du kan övervaka förloppet och visa felinformation.
 >
 >Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 >
@@ -451,11 +485,11 @@ När du avpublicerar en videoresurs i Experience Manager tas videon bort från Y
 
 >[!CAUTION]
 >
->Om du tar bort en video direkt från YouTube är Experience Manager inte medveten om det och fortsätter att bete sig som om videon fortfarande publiceras till YouTube. Avpublicera alltid en videoresurs från YouTube via Experience Manager.
+>Om du tar bort en video direkt från YouTube är Experience Manager inte medveten om det och fortsätter att uppföra sig som om videon fortfarande publicerats till YouTube. Avpublicera alltid en videoresurs från YouTube via Experience Manager.
 
 >[!NOTE]
 >
->Om du vill ta bort innehåll från YouTube använder Experience Manager arbetsflödet **[!UICONTROL Unpublish from YouTube]**, som gör att du kan övervaka förloppet och visa felinformation.
+>Experience Manager använder arbetsflödet **[!UICONTROL Unpublish from YouTube]** för att ta bort innehåll från YouTube, vilket gör att du kan övervaka förloppet och visa felinformation.
 >
 >Se [Övervaka videokodning och YouTube publiceringsförlopp](#monitoring-video-encoding-and-youtube-publishing-progress).
 
@@ -501,7 +535,7 @@ Du kan övervaka förloppet, inklusive misslyckad kodning/YouTube-publicering.
    >Det kan ta lång tid innan fel-/felmeddelanden slutligen spelas in på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
    >
    >* Konfiguration av Apache Sling-jobbkö
-   >* Adobe Granite Workflow External Process Job Handler
+   >* Extern processhanterare för Adobe Granite-arbetsflöde
    >* Timeoutkö för Granite-arbetsflöde
    >
    >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
@@ -533,7 +567,7 @@ Du kan övervaka förloppet, inklusive misslyckad kodning/YouTube-publicering.
    >Det kan ta lång tid innan felmeddelandet slutligen spelas in på grund av flera arbetsflödeskonfigurationer på **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** från [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr), till exempel:
    >
    >* Konfiguration av Apache Sling-jobbkö
-   >* Adobe Granite Workflow External Process Job Handler
+   >* Extern processhanterare för Adobe Granite-arbetsflöde
    >* Timeoutkö för Granite-arbetsflöde
    >
    >Du kan justera egenskaperna **[!UICONTROL retries]**, **[!UICONTROL retry delay]** och **[!UICONTROL timeout]** i dessa konfigurationer.
@@ -649,9 +683,9 @@ Du kan lägga till anteckningar i videoresurser. När du kommenterar videoklipp 
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >
->* [Dynamic Media videodokumentation](/help/assets/dynamic-media/video.md).
+>* [Videodokumentation för dynamiska media](/help/assets/dynamic-media/video.md).
 >* [Mer information om användning, typer och konfiguration av bearbetningsprofiler](/help/assets/asset-microservices-configure-and-use.md).

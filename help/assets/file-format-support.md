@@ -5,17 +5,51 @@ contentOwner: AG
 feature: Asset Management, Renditions
 role: User, Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 02caeb490ad99d8417eb2b5c91850c4ab822f57d
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1458'
 ht-degree: 0%
 
 ---
 
 # Filformat som stöds av [!DNL Assets] {#supported-file-formats}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 [!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för grundläggande innehållshanteringsfunktioner - lagring, hantering av metadata online, versionshantering, överföring och hämtning och så vidare - för alla binära filer, oavsett format. [!DNL Adobe Experience Manager Assets] har stöd för ett stort antal filformat och varje produktfunktion har olika stöd för olika format.
 
@@ -23,9 +57,9 @@ Dessutom har [!DNL Experience Manager Assets] utökat stöd för att generera f�
 
 Några av de viktigaste funktionerna för resurskonvertering är följande:
 
-* Viktiga [filformat för Adobe](#adobe-formats) som skapats av program och tjänster från Adobe, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension] och [!DNL Adobe Acrobat] eller PDF.
+* Viktiga [Adobe-filformat](#adobe-formats) som skapats av Adobe program och tjänster, inklusive [!DNL Adobe Photoshop], [!DNL Adobe InDesign], [!DNL Adobe Illustrator], [!DNL Adobe XD], [!DNL Adobe Dimension] och [!DNL Adobe Acrobat] eller PDF.
 * Viktiga [bildfilformat](#image-formats).
-* [Camera Raw filformat](#camera-raw-formats) för ett stort antal kameror, bland annat Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
+* [Camera Raw-filformat](#camera-raw-formats) för en mängd olika kameror, bland annat Canon, Nikon, Fujifilm, Olympus och andra tillverkare (med Adobe Camera Raw i botten).
 * Vanliga [dokumentformat](#document-formats), inklusive Microsoft® Office- och Open Document-format.
 * Ett brett urval av formaten [video](#video-formats) och [audio](#audio-formats).
 
@@ -76,9 +110,9 @@ I följande förklaring beskrivs stödnivån för varje format.
 
 Följande 3D-format stöds.
 
-Se även [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
+Se även [Arbeta med 3D-resurser i dynamiska media](/help/assets/dynamic-media/assets-3d.md).
 
-| Format | Lagring | Versioner | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Leverans till Dynamic Media |
+| Format | Lagring | Versioner | Arbetsflöde | Publicering | Åtkomstkontroll | Förhandsvisning av miniatyrbilder | Förhandsgranska 3D | Dynamisk medieleverans |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | DN | ✓ | ✓ | ✓ | - | ✓ | ✓ | - | - |
 | gLB | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
@@ -178,7 +212,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ## Ljudformat {#audio-formats}
 
-[!DNL Assets] som [!DNL Cloud Service] har stöd XMP metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
+[!DNL Assets] som [!DNL Cloud Service] har stöd för XMP-metadataextrahering för ljudformaten AIF, ASF, M4A, MP3, WAV och WMA.
 
 ## Indataformat som stöds för ljud- och videotranskription {#audio-video-transcription-formats}
 
@@ -197,7 +231,7 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 * För närvarande är filstorleksgränsen för metadataextrahering ungefär 15 GB. När du överför stora resurser misslyckas ibland metadataextraheringen.
 
-## Dynamic Media - Videoformat som stöds för transkodning {#video-dynamic-media-transcoding}
+## Dynamiska media - Videoformat som stöds för transkodning {#video-dynamic-media-transcoding}
 
 | Videofiltillägg | Behållare | Rekommenderade videokodekar | Videokodekar som inte stöds |
 | --- | --- | --- | --- |
@@ -215,19 +249,19 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 ‡ Det här videoformatet stöds ännu inte för interaktiva videoklipp i Dynamic Media eller för användning med anteckningar i Experience Manager Assets.
 
-## Dynamic Media - dokumentformat som stöds {#document-support-dynamic-media}
+## Dynamiska media - dokumentformat som stöds {#document-support-dynamic-media}
 
 | Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning |
 | ------ | --------------------- | ----------------------------------- | ------------------------- | ------------------------- | -------------------------- |
 | AI | ✓ | - | - | - | - |
 | INDD | ✓ | - | - | - | - |
-| PDF (se anmärkning nedan) | ✓ | ✓ | ✓ | ✓ | ✓ |
+| PDF (se anm. nedan) | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 >[!NOTE]
 >
->För säker PDF stöds bara överföring.
+>För säkra PDF-filer stöds endast överföring.
 
-## Dynamic Media - Rasterbildformat som stöds {#image-support-dynamic-media}
+## Dynamic Media - rasterbildformat som stöds {#image-support-dynamic-media}
 
 | Format | Överför (indataformat) | Skapa bildförinställning (utdataformat) | Förhandsgranska dynamisk återgivning | Leverera dynamisk återgivning | Hämta dynamisk återgivning | Ange typer som stöder det här formatet |
 |---|:---:|:---:|:---:|:---:|:---:| --- |
@@ -245,9 +279,9 @@ Följande dokumentformat stöds för filhanteringsfunktioner.
 
 <!-- AVIF, HEIC, and WebP added to table above on March 4, 2024 based on CQDOC-21294 -->
 
-‡ Den sammanfogade bilden extraheras från filen PSD. Det är en bild som genereras av [!DNL Adobe Photoshop] och ingår i filen PSD. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
+‡ Den sammanfogade bilden extraheras från PSD-filen. Det är en bild som genereras av [!DNL Adobe Photoshop] och ingår i PSD-filen. Beroende på inställningarna kan den sammanfogade bilden vara den faktiska bilden eller inte.
 
-## Dynamic Media - Rasterbildformat som inte stöds {#unsupported-raster-image-formats-dm}
+## Dynamiska media - rasterbildformat som inte stöds {#unsupported-raster-image-formats-dm}
 
 Följande undertyper av rasterbildfilformat som *inte* stöds i [!DNL Dynamic Media]:
 
@@ -258,7 +292,7 @@ Följande undertyper av rasterbildfilformat som *inte* stöds i [!DNL Dynamic Me
 * TIFF-filer med flyttalsdata.
 * TIFF-filer med Lab-färgrymd.
 
-## Dynamic Media - 3D-filformat som stöds {#support-3d-formats-dynamic-media}
+## Dynamiska media - 3D-filformat som stöds {#support-3d-formats-dynamic-media}
 
 Se även [3D-format som stöds](/help/assets/file-format-support.md#support-3d-formats)
 
@@ -282,7 +316,7 @@ Se även [3D-format som stöds](/help/assets/file-format-support.md#support-3d-f
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >

@@ -3,25 +3,60 @@ title: Aktivera Assets Ultimate
 description: Lär dig hur du aktiverar Assets Ultimate för nya och befintliga kunder.
 feature: Asset Management
 role: User, Admin
-source-git-commit: 16ce83409044ad54140754112eb4d35b97883b44
+exl-id: 45cd8ccd-e5cf-42cd-aa7f-4ae59d0587f7
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1408'
 ht-degree: 0%
 
 ---
 
 # Aktivera [!DNL Assets] as a Cloud Service Ultimate {#enable-assets-cloud-service-ultimate}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-![Uppgradera till Asset Cloud Service Ultimate](/help/assets/assets/upgrade-assets-cs-ultimate-package-banner.png)
+![Uppgradera till Cloud Service Ultimate](/help/assets/assets/upgrade-assets-cs-ultimate-package-banner.png)
 
-Med Assets as a Cloud Service Ultimate kan du utföra olika viktiga DAM-funktioner, t.ex. resurshantering och bibliotekstjänster, säkerhets- och rättighetshantering, anslutningar för Creative och Experience Cloud, UI-utbyggbarhet, API-driven automatisering, integrering med program från Adobe och utanför Adobe, anpassad koddriftsättning och mycket annat. En fullständig lista finns i [Assets as a Cloud Service Ultimate Overview](/help/assets/assets-ultimate-overview.md).
+Med Assets as a Cloud Service Ultimate kan du utföra olika viktiga DAM-funktioner, t.ex. resurshantering och bibliotekstjänster, säkerhets- och rättighetshantering, Creative- och Experience Cloud-anslutningar, UI-utbyggbarhet, API-driven automatisering, integrering med Adobe- och andra program, anpassad koddriftsättning och mycket annat. En fullständig lista finns i [Assets as a Cloud Service Ultimate Overview](/help/assets/assets-ultimate-overview.md).
 
 ## Aktivera Assets Ultimate {#enable-assets-ultimate}
 
-Nya Assets as a Cloud Service kunder måste först aktivera Assets Ultimate genom att skapa ett nytt program med Cloud Manager.
+Nya Assets as a Cloud Service-kunder måste först aktivera Assets Ultimate genom att skapa ett nytt program med Cloud Manager.
 
 Utför följande steg:
 
@@ -39,13 +74,13 @@ Utför följande steg:
 
 1. Klicka på **[!UICONTROL Create]** för att skapa programmet. Assets Ultimate är nu aktiverat för Experience Manager Assets as a Cloud Service.
 
-Systemadministratören är automatiskt berättigad som AEM på Assets Ultimate och får ett e-postmeddelande om att navigera till Admin Console för att hantera de tillgängliga produktprofilerna.
+Systemadministratören är automatiskt berättigad som AEM-administratör för Assets Ultimate och får ett e-postmeddelande där man kan navigera till Admin Console för att hantera de tillgängliga produktprofilerna.
 
 Din AEM as a Cloud Service-instans på Admin Console innehåller följande produktprofiler:
 
-* AEM administratörer
+* AEM-administratörer
 
-* AEM
+* AEM-användare
 
 * [Användare av AEM Assets Collaborator](#onboard-collaborator-users)
 
@@ -53,7 +88,7 @@ Din AEM as a Cloud Service-instans på Admin Console innehåller följande produ
 
   ![AEM Assets produktprofiler](assets/aem-assets-product-profiles.png)
 
-Om du har aktiverat Content Hub för Assets as a Cloud Service skapas en ny instans i AEM Assets as a Cloud Service Admin Console med `delivery` som suffix:
+Om du har aktiverat Content Hub för Assets as a Cloud Service skapas en ny instans i AEM Assets as a Cloud Service på Admin Console med suffixet `delivery`:
 
 ![Ny instans för Content Hub](assets/new-instance-content-hub.png)
 
@@ -75,7 +110,7 @@ Du kan börja lägga till användare eller användargrupper i den här produktpr
 
 ## Aktivera Assets Ultimate för befintliga kunder {#enable-assets-ultimate-existing-customers}
 
-Befintliga as a Cloud Service Assets-kunder kan uppgradera till Assets Ultimate genom att utföra två enkla steg. Du kan navigera till Assets as a Cloud Service program i Cloud Manager och se uppgraderingsstatus på programkortet baserat på tillgängligheten för Assets Ultimate-krediter. Om det finns tillräckligt med krediter för att uppgradera till Assets Ultimate kan du se statusen som `Assets license upgrade required`, vilket visas i följande bild:
+Befintliga Assets as a Cloud Service-kunder kan uppgradera till Assets Ultimate i två enkla steg. Du kan navigera till Assets as a Cloud Service i Cloud Manager och se uppgraderingsstatus på programkortet baserat på tillgängligheten av Assets Ultimate-krediter. Om det finns tillräckligt med krediter för att uppgradera till Assets Ultimate kan du se statusen som `Assets license upgrade required`, enligt bilden nedan:
 
 ![AEM Assets-uppgradering till Assets Ultimate](assets/aem-assets-upgrade-status-ultimate.png)
 
@@ -83,13 +118,13 @@ Om en befintlig kund köper en ny licens för Assets Ultimate visas uppgradering
 
 ### Krav för uppgradering {#prerequisites-assets-upgrade}
 
-Alla miljöer måste uppgraderas till den senaste versionen av AEM as a Cloud Service eller minst `2024.10.18175`-versionen. Om du inte uppfyller minimikraven kontaktar du Adobe för att gå över till AEM version.
+Alla miljöer måste uppgraderas till den senaste versionen av AEM as a Cloud Service eller minst `2024.10.18175`-versionen. Om du inte uppfyller minimikraven kontaktar du Adobe för att gå över till den version av AEM som krävs.
 
 ### Uppgradera till Assets Ultimate {#upgrade-assets-ultimate}
 
 Utför följande steg:
 
-1. När du har växlat till minimikraven för den AEM versionen klickar du på programnamnet. Ett uppgraderingskort visas precis ovanför **[!UICONTROL Environments]**-avsnittet, vilket visas i följande bild:
+1. När du har växlat till minimikraven för AEM-versionen klickar du på programnamnet. Ett uppgraderingskort visas precis ovanför **[!UICONTROL Environments]**-avsnittet, vilket visas i följande bild:
 
    ![AEM Assets-uppgradering till Assets Ultimate](assets/aem-assets-upgrade-card.png)
 
@@ -115,15 +150,15 @@ Utför följande steg:
 
    ![Senaste steget i uppgraderingsprocessen](assets/aem-assets-upgrade-button.png)
 
-   Uppgraderingsprocessen är klar och du har uppgraderat din Assets as a Cloud Service till Assets Ultimate. Status för programmet visar `Assets Ultimate`.
+   Uppgraderingen är klar och du har uppgraderat Assets as a Cloud Service till Assets Ultimate. Status för programmet visar `Assets Ultimate`.
 
    ![Programstatus efter uppgradering](assets/program-status-post-upgrade.png)
 
 Din AEM as a Cloud Service-instans på Admin Console innehåller nu följande produktprofiler:
 
-* AEM administratörer
+* AEM-administratörer
 
-* AEM
+* AEM-användare
 
 * [Användare av AEM Assets Collaborator](#onboard-collaborator-users)
 
@@ -131,7 +166,7 @@ Din AEM as a Cloud Service-instans på Admin Console innehåller nu följande pr
 
 ![AEM Assets produktprofiler](assets/aem-assets-product-profiles.png)
 
-Om du behöver aktivera Content Hub klickar du på ikonen Fler alternativ (..) på programnamnet i Cloud Manager och väljer **[!UICONTROL Edit Program]**. Expandera **[!UICONTROL Assets Ultimate]** och klicka på **[!UICONTROL Content Hub]**. Detta steg möjliggör Content Hub för Assets Ultimate. En ny instans har skapats i AEM Assets as a Cloud Service Admin Console med suffixet `delivery`:
+Om du behöver aktivera Content Hub klickar du på ikonen Fler alternativ (..) på programnamnet i Cloud Manager och väljer **[!UICONTROL Edit Program]**. Expandera **[!UICONTROL Assets Ultimate]** och klicka på **[!UICONTROL Content Hub]**. Detta steg aktiverar Content Hub för Assets Ultimate. En ny instans har skapats i AEM Assets as a Cloud Service på Admin Console med suffixet `delivery`:
 
 ![Ny instans för Content Hub](assets/new-instance-content-hub.png)
 
@@ -153,11 +188,11 @@ Du kan börja lägga till användare eller användargrupper i den här produktpr
 
 ## Anlita användare av AEM Assets Collaborator {#onboard-collaborator-users}
 
-AEM Assets Collaborator-användare kan arbeta med resurser från Experience Manager via integreringar av Assets som är tillgängliga för din organisation i andra Adobe-produkter och andra program än Adobe, skapa och redigera resurser med inbyggd Adobe Express och Firefly genom att utnyttja professionellt utformade mallar, märkeskit, Adobe Stock-resurser och så vidare, och få tillgång till och utnyttja godkända resurser från din organisation via AEM Assets Content Hub portal.
+AEM Assets Collaborator-användare kan arbeta med resurser från Experience Manager via integreringar av Assets som är tillgängliga för din organisation i andra Adobe-produkter och program som inte kommer från Adobe, skapa och redigera resurser med hjälp av inbyggda Adobe Express- och Firefly-mallar, varumärkeskit, Adobe Stock-resurser och så vidare, och få tillgång till och utnyttja godkända resurser från din organisation via AEM Assets Content Hub portal.
 
 Anlita medarbetare:
 
-1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
+1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan i Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
@@ -175,16 +210,16 @@ Du kan även komma åt och visa de tjänster som tilldelats till Collaborator-an
 
 >[!NOTE]
 >
->Du kan stänga av och aktivera för att aktivera eller inaktivera tillgängliga tjänster, enligt dina krav, men Adobe rekommenderar att du använder standardtjänsterna som är aktiverade för produktprofilerna.
+>Du kan stänga av och aktivera för att aktivera eller inaktivera tillgängliga tjänster enligt dina krav, men Adobe rekommenderar att du använder standardtjänsterna som är aktiverade för produktprofilerna.
 
 
 ## Införliva AEM Assets Power-användare {#onboard-power-users}
 
-AEM Assets Power-användare har tillgång till alla AEM Assets-funktioner, inklusive hantering av resurser, behörigheter, metadata och övergripande styrning och automatisering av digitala resurser, kan arbeta med resurser från Experience Manager via integreringar av Assets som är tillgängliga för din organisation i andra Adobe- och icke-Adobe-program, skapa och redigera resurser med hjälp av inbyggd Adobe Express och Firefly, och utnyttja professionellt utformade mallar, varumärkeskit, Adobe Stock-resurser och så vidare, samt få tillgång till och utnyttja godkända resurser från din organisation via Content Hub portal.
+AEM Assets Power-användare har tillgång till alla AEM Assets-funktioner, inklusive hantering av resurser, behörigheter, metadata och övergripande styrning och automatisering av digitalt material, kan arbeta med resurser från Experience Manager via integreringar av Assets som är tillgängliga för din organisation i andra Adobe- och icke-Adobe-program, skapa och redigera resurser med hjälp av inbyggda Adobe Express- och Firefly-mallar, varumärkeskit, Adobe Stock-resurser och så vidare, samt få tillgång till och utnyttja godkända resurser från din organisation via AEM Assets Content Hub portal.
 
 Så här skaffar du Power-användare:
 
-1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan på Admin Console.
+1. Gå till Experience Manager Assets produktprofiler genom att klicka på AEM as a Cloud Service produktnamn i produktlistan i Admin Console.
 
 1. Klicka på författarinstansen för AEM as a Cloud Service:
    ![Produktprofiler för AEM as a Cloud Service](assets/aem-cloud-service-instances.png)
@@ -202,4 +237,4 @@ Du kan även få åtkomst till och visa de tjänster som tilldelats till Power-a
 
 >[!NOTE]
 >
->Du kan stänga av och aktivera för att aktivera eller inaktivera tillgängliga tjänster, enligt dina krav, men Adobe rekommenderar att du använder standardtjänsterna som är aktiverade för produktprofilerna.
+>Du kan stänga av och aktivera för att aktivera eller inaktivera tillgängliga tjänster enligt dina krav, men Adobe rekommenderar att du använder standardtjänsterna som är aktiverade för produktprofilerna.

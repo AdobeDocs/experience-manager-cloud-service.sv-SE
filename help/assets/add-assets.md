@@ -4,23 +4,57 @@ description: Lägg till dina digitala resurser i [!DNL Adobe Experience Manager]
 feature: Asset Ingestion, Asset Management, Asset Processing, Upload
 role: User, Admin
 exl-id: 0e624245-f52e-4082-be21-13cc29869b64
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '3089'
+source-wordcount: '3117'
 ht-degree: 0%
 
 ---
 
 # Lägg till digitala resurser i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] [!DNL Assets] {#add-assets-to-experience-manager}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 [!DNL Adobe Experience Manager Assets] accepterar många typer av digitala resurser från många källor. Den lagrar binärfiler och skapade renderingar, kan hantera resurser med olika arbetsflöden och [!DNL Adobe Sensei]-tjänster, vilket möjliggör distribution via många kanaler över många ytor.
 
 [!DNL Adobe Experience Manager] förbättrar det binära innehållet i de överförda digitala filerna med omfattande metadata, smarta taggar, återgivningar och andra DAM-tjänster (Digital Asset Management). Du kan överföra olika typer av filer, till exempel bilder, dokument och råbildsfiler, från den lokala mappen eller en nätverksenhet till [!DNL Experience Manager Assets].
 
-Förutom den vanligaste webbläsaröverföringen finns det andra metoder för att lägga till resurser i databasen [!DNL Experience Manager]. De här andra metoderna omfattar skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager]-datorprogrammet, överförings- och förtäringsskript som kunder skulle skapa samt automatiserade importen som lagts till som [!DNL Experience Manager] -tillägg.
+Förutom den vanligaste webbläsaröverföringen finns det andra metoder för att lägga till resurser i databasen [!DNL Experience Manager]. De här andra metoderna omfattar skrivbordsklienter, som Adobe Asset Link eller [!DNL Experience Manager]-datorprogrammet, överförings- och förtäringsskript som kunder skulle skapa samt automatiserade ingångsintegreringar som lagts till som [!DNL Experience Manager] -tillägg.
 
 Du kan överföra och hantera binära filer i [!DNL Experience Manager], men de vanligaste filformaten har stöd för ytterligare tjänster, som metadataextrahering eller generering av förhandsgranskning/återgivning. Mer information finns i [filformat som stöds](file-format-support.md).
 
@@ -33,7 +67,7 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 | [Assets Console-användargränssnitt](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra många resurser. | Alla användare |
 | [Överför API](#upload-using-apis) | För dynamiska beslut under överföring. | Developer |
 | [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Intag av resurser med låg volym, men inte för migrering. | Administratör, marknadsförare |
-| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Kreativ, Marketer |
+| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Creative, Marketer |
 | [Massinklistring av resurser](#asset-bulk-ingestor) | Rekommenderas för storskalig migrering och ibland även för bulkimport. Endast för datalager som stöds. | Administratör, utvecklare |
 
 ## Överför resurser {#upload-assets}
@@ -67,7 +101,7 @@ Om du vill överföra en fil (eller flera filer) kan du antingen markera dem på
 >
 >Assets som du överför till Experience Manager och som har ett filnamn som är längre än 100 tecken får ett kortare namn när de används i Dynamic Media.
 >
->De första 100 tecknen i filnamnet används som de är. Alla återstående tecken ersätts med en alfanumerisk sträng. Den här namnbytesmetoden ger ett unikt namn när resursen används i Dynamic Media. Den är också avsedd att rymma den maximala längden för filnamn i Dynamic Media.
+>De första 100 tecknen i filnamnet används som de är. Alla återstående tecken ersätts med en alfanumerisk sträng. Den här namnbytesmetoden ger ett unikt namn när resursen används i Dynamic Media. Den är också avsedd att rymma den maximala längden för filnamn som tillåts i Dynamic Media.
 
 
 1. Navigera till den plats där du vill lägga till digitala resurser i användargränssnittet [!DNL Assets].
@@ -335,7 +369,7 @@ När [du har konfigurerat verktyget för massimport](#configure-bulk-ingestor-to
 
 Om du vill starta processen för massimport går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Bulk Import]**, markerar [konfigurationen för massimport](#configure-bulk-ingestor-tool) och klickar sedan på **[!UICONTROL Run]**. Bekräfta genom att klicka på **[!UICONTROL Run]** igen.
 
-Experience Manager uppdaterar statusen för jobbet till **Bearbetning** och till **Slutförd** när jobbet har slutförts. Om du vill visa de importerade resurserna i Experience Manager klickar du på **Visa Assets**.
+Experience Manager uppdaterar statusen för jobbet till **Bearbetning** och till **Slutförd** när jobbet har slutförts. Klicka på **Visa Assets** om du vill visa de importerade resurserna i Experience Manager.
 
 När jobbet pågår kan du även välja konfigurationen och klicka på **Stopp** för att stoppa massinläsningsprocessen. Klicka på **Kör** igen för att återuppta processen. Du kan också klicka på **Torr körning** om du vill veta mer om de resurser som fortfarande väntar på import.
 
@@ -354,7 +388,7 @@ Experience Manager visar jobbhistoriken. På historiksidan för massimportjobb k
 
 Förutom webbläsargränssnittet stöder [!DNL Experience Manager] andra klienter på skrivbordet. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i skrivbordsprogrammen Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från användargränssnittet Adobe Asset Link från dessa skrivbordsprogram.
+* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i skrivbordsprogrammen Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa skrivbordsprogram.
 * [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) gör det enklare att arbeta med resurser på skrivbordet, oberoende av filtyp eller vilket program som hanterar dem. Det är användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Bearbeta resurser när de överförs {#process-when-uploaded}
@@ -381,7 +415,7 @@ För mappar som har en tilldelad bearbetningsprofil visas profilnamnet på minia
 
 ## Överför eller importera resurser med API:er {#upload-using-apis}
 
-Teknisk information om överförings-API:er och protokoll samt länkar till öppen källkod-SDK och exempelklienter finns i avsnittet [Överför resurser](developer-reference-material-apis.md#asset-upload) i utvecklarreferensen.
+Teknisk information om överförings-API:er och protokoll samt länkar till SDK och exempelklienter med öppen källkod finns i avsnittet [Överför resurser](developer-reference-material-apis.md#asset-upload) i utvecklarreferensen.
 
 ## Tips, metodtips och begränsningar {#tips-limitations}
 
@@ -415,7 +449,7 @@ Teknisk information om överförings-API:er och protokoll samt länkar till öpp
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
 
 >[!MORELIKETHIS]
 >

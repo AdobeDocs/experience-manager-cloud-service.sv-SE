@@ -5,14 +5,51 @@ contentOwner: KK
 feature: Selectors
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: 81aacb0c616490eed4589cb8927ea1316ca1670e
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '5318'
+source-wordcount: '5364'
 ht-degree: 0%
 
 ---
 
 # Mikrofrontsväljare för mediefiler {#Overview}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Micro-Frontend Asset Selector har ett användargränssnitt som enkelt kan integreras med [!DNL Experience Manager Assets]-databasen så att du kan bläddra bland eller söka efter digitala resurser som är tillgängliga i databasen och använda dem i programutvecklingen.
 
@@ -54,7 +91,7 @@ Använd ovanstående krav om du behöver arbetsflöde för IMS-autentisering fö
 
 >[!IMPORTANT]
 >
-> Denna databas är avsedd att fungera som kompletterande dokumentation som beskriver tillgängliga API:er och användningsexempel för integrering av resursväljare. Innan du försöker installera eller använda resursväljaren måste du se till att din organisation har fått tillgång till resursväljaren som en del av Experience Manager Assets as a Cloud Service profil. Om du inte har etablerats kan du inte integrera eller använda dessa komponenter. Om du vill begära etablering bör din programadministratör skaffa en supportbiljett som är markerad som P2 från Admin Console och innehålla följande information:
+> Denna databas är avsedd att fungera som kompletterande dokumentation som beskriver tillgängliga API:er och användningsexempel för integrering av resursväljare. Innan du försöker installera eller använda resursväljaren måste du se till att din organisation har fått tillgång till resursväljaren som en del av Experience Manager Assets as a Cloud Service-profilen. Om du inte har etablerats kan du inte integrera eller använda dessa komponenter. Om du vill begära etablering bör din programadministratör skaffa ett supportärende som är markerat som P2 från Admin Console och innehålla följande information:
 >
 >* Domännamn där det integrerande programmet finns.
 >* Efter etableringen kommer din organisation att få `imsClientId`, `imsScope` och en `redirectUrl` som motsvarar de miljöer som efterfrågas och som är nödvändiga för konfigurationen av resursväljaren. Utan dessa giltiga egenskaper kan du inte köra installationsstegen.
@@ -89,12 +126,12 @@ import { AssetSelector } from 'https://experience.adobe.com/solutions/CQ-assets-
 
 ## Integrera resursväljare med Vanilla JS {#integration-using-vanilla-js}
 
-Du kan integrera alla [!DNL Adobe]- och andra program än Adobe med [!DNL Experience Manager Assets]-databasen och välja resurser inifrån programmet. Se [Integrering av resursväljare med olika program](#asset-selector-integration-with-apps).
+Du kan integrera alla [!DNL Adobe]- eller icke-Adobe-program med [!DNL Experience Manager Assets]-databaser och välja resurser inifrån programmet. Se [Integrering av resursväljare med olika program](#asset-selector-integration-with-apps).
 
-Integreringen görs genom att du importerar resursväljarpaketet och ansluter till Assets as a Cloud Service med hjälp av Vanilla JavaScript-biblioteket. Redigera en `index.html` eller en lämplig fil i programmet till:
+Integreringen görs genom att du importerar resursväljarpaketet och ansluter till Assets as a Cloud Service med Vanilla JavaScript-biblioteket. Redigera en `index.html` eller en lämplig fil i programmet till:
 
 * Definiera autentiseringsinformationen
-* Åtkomst till Assets as a Cloud Service-databasen
+* Öppna Assets as a Cloud Service-arkivet
 * Konfigurera visningsegenskaperna för resursväljaren
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
@@ -257,13 +294,13 @@ onErrorReceived: (type, msg) => {
 
 <!--Integration with non-Adobe application content starts here-->
 
->[!TAB Integrering med ett program som inte är Adobe]
+>[!TAB Integration med andra program än Adobe]
 
 <!--### Integrate Asset Selector with a [!DNL non-Adobe] application {#adobe-non-app-integration}-->
 
 ### Förutsättningar {#prereqs-non-adobe-app}
 
-Använd följande förutsättningar om du integrerar resursväljare med ett program som inte är Adobe:
+Använd följande krav om du integrerar resursväljare med ett program som inte är från Adobe:
 
 * [Kommunikationsmetoder](#prereqs)
 * imsClientId
@@ -272,10 +309,10 @@ Använd följande förutsättningar om du integrerar resursväljare med ett prog
 * imsOrg
 * apikey
 
-Resursväljaren stöder autentisering till databasen [!DNL Experience Manager Assets] med hjälp av Identity Management System-egenskaper (IMS) som `imsScope` eller `imsClientID` när du integrerar den med ett program som inte är Adobe.
+Resursväljaren stöder autentisering till databasen [!DNL Experience Manager Assets] med hjälp av Identity Management System-egenskaper (IMS) som `imsScope` eller `imsClientID` när du integrerar den med ett program som inte kommer från Adobe.
 
 +++**Konfigurera resursväljare för ett program som inte är Adobe**
-Om du vill konfigurera resursväljaren för ett program som inte är Adobe måste du först logga en supportanmälan för etablering följt av integrationsstegen.
+Om du vill konfigurera resursväljaren för ett program som inte kommer från Adobe måste du först logga en supportanmälan för etablering följt av integrationsstegen.
 
 **Loggar en supportanmälan**
 Steg för att logga en supportanmälan via Admin Console:
@@ -289,7 +326,7 @@ Steg för att logga en supportanmälan via Admin Console:
 +++
 
 +++**Integreringssteg**
-Använd den här `index.html` -exempelfilen för autentisering när resursväljaren integreras med ett program som inte är Adobe.
+Använd den här exempelfilen `index.html` för autentisering när du integrerar resursväljare med ett program som inte är från Adobe.
 
 Gå till resursväljarpaketet med taggen `Script`, som visas på *rad 9* till *rad 11* i exempelfilen `index.html`.
 
@@ -297,7 +334,7 @@ Gå till resursväljarpaketet med taggen `Script`, som visas på *rad 9* till *r
 
 Eftersom du inte har skapat någon `imsToken` använder du funktionerna `registerAssetsSelectorsAuthService` och `renderAssetSelectorWithAuthFlow`, vilket visas på rad 40 till rad 50 i exempelfilen `index.html`. Använd funktionen `registerAssetsSelectorsAuthService` före `renderAssetSelectorWithAuthFlow` för att registrera `imsToken` med resursväljaren. [!DNL Adobe] rekommenderar att `registerAssetsSelectorsAuthService` anropas när du instansierar komponenten.
 
-Definiera autentiseringen och andra Assets as a Cloud Service åtkomstrelaterade egenskaper i avsnittet `const props`, vilket visas på *rad 54* till *rad 60* i exempelfilen `index.html`.
+Definiera autentiseringen och andra åtkomstrelaterade egenskaper för Assets as a Cloud Service i avsnittet `const props`, vilket visas på *rad 54* till *rad 60* i exempelfilen `index.html`.
 
 Den globala variabeln `PureJSSelectors`, som omnämns i *rad 65*, används för att återge resursväljaren i webbläsaren.
 
@@ -396,7 +433,7 @@ Resursväljaren återges på behållarelementet `<div>`, vilket anges på *rad 7
 
 ### Förutsättningar {#prereqs-polaris}
 
-Använd följande förutsättningar om du integrerar resursväljare med Dynamic Media med OpenAPI-funktioner:
+Använd följande krav om du integrerar resursväljare med dynamiska media med OpenAPI-funktioner:
 
 * [Kommunikationsmetoder](#prereqs)
 * För att få tillgång till Dynamic Media med OpenAPI-funktioner måste du ha licenser för:
@@ -406,9 +443,9 @@ Använd följande förutsättningar om du integrerar resursväljare med Dynamic 
 
 ### Integrering av Dynamic Media med OpenAPI-funktioner{#adobe-app-integration-polaris}
 
-Integreringen av resursväljaren med Dynamic Media OpenAPI-processen omfattar olika steg som skapar en anpassad URL för dynamiska media eller är klar att välja URL för dynamiska media osv.
+Integrering av resursväljare med Dynamic Media OpenAPI-process omfattar olika steg som skapar en anpassad dynamisk medie-URL eller är klar att välja dynamisk medie-URL, osv.
 
-+++**Integrera resursväljare för Dynamic Media med OpenAPI-funktioner**
++++**Integrera resursväljare för dynamiska media med OpenAPI-funktioner**
 
 Egenskaperna `rootPath` och `path` ska inte ingå i Dynamic Media med OpenAPI-funktioner. I stället kan du konfigurera egenskapen `aemTierType`. Här följer syntaxen för konfiguration:
 
@@ -484,8 +521,8 @@ Nedan visas två sätt att gå igenom JSON-objektet:
 
 ![Dynamisk leverans-URL](assets/dynamic-delivery-url.png)
 
-* **Miniatyrbild:** Miniatyrbilder kan vara bilder och resurser kan vara PDF, video, bilder och så vidare. Även om du kan använda attributen height och width för en resurs miniatyrbild som dynamisk leveransåtergivning.
-Följande uppsättning återgivningar kan användas för resurser av typen PDF:
+* **Miniatyrbild:** Miniatyrbilder kan vara bilder och resurser som PDF, video, bilder och så vidare. Även om du kan använda attributen height och width för en resurs miniatyrbild som dynamisk leveransåtergivning.
+Följande uppsättning återgivningar kan användas för PDF-typresurser:
 När du har valt en PDF-fil i en sidospark visas nedanstående information i urvalssammanhanget. Här nedan beskrivs hur du går igenom JSON-objektet:
 
   <!--![Thumbnail dynamic delivery url](image-1.png)-->
@@ -501,7 +538,7 @@ När du har valt en PDF-fil i en sidospark visas nedanstående information i urv
   } 
   ```
 
-På skärmbilden ovan måste leveransadressen för den ursprungliga återgivningen i PDF införlivas i målupplevelsen om PDF krävs och inte i miniatyrbilden. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
+På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgivningen införlivas i målversionen om PDF krävs och inte i dess miniatyrbild. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
 
 * **Video:** Du kan använda videospelarens URL för videomaterialet som använder en inbäddad iFrame. Du kan använda följande arrayåtergivningar i målupplevelsen:
   <!--![Video dynamic delivery url](image.png)-->
@@ -517,15 +554,15 @@ På skärmbilden ovan måste leveransadressen för den ursprungliga återgivning
 
   Du kan referera till `selection[0].....selection[4]` för arrayen med återgivningslänk från skärmbilden ovan. Nyckelegenskaperna för en av miniatyrbildsrenderingarna är till exempel:
 
-  Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
+  Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som en HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
 
   I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play?accept-experimental=1`
 
-+++**Användargränssnittet Resursväljare för Dynamic Media med OpenAPI-funktioner**
++++**Användargränssnittet Resursväljare för dynamiska media med OpenAPI-funktioner**
 
-Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resursstrukturen för alla godkända resurser som är tillgängliga i resurskatalogen för Experience Manager.
+Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resursstrukturen för alla godkända resurser som är tillgängliga i Experience Manager resurskatalog.
 
-![Dynamic Media med OpenAPI-funktioner, användargränssnitt](assets/polaris-ui.png)
+![Dynamiska media med OpenAPI-funktioner, användargränssnitt](assets/polaris-ui.png)
 
 * **A**: [Visa/Göm panel](#hide-show-panel)
 * **B**: [Assets](#repository)
@@ -547,7 +584,7 @@ Med resursväljaren för Dynamic Media med OpenAPI-funktioner kan du konfigurera
 
 Egenskaper som definieras på `jcr:content/metadata/`-nivå visas som `metadata.<metadata bucket>.<property name>.` för de filter som du vill konfigurera för konfigurationen.
 
-I Resursväljaren för Dynamic Media med OpenAPI-funktioner konverteras till exempel en egenskap på `asset jcr:content/metadata/client_name:market` till `metadata.embedded.client_name:market` för filterkonfiguration.
+I Resursväljaren för dynamiska media med OpenAPI-funktioner konverteras till exempel en egenskap på `asset jcr:content/metadata/client_name:market` till `metadata.embedded.client_name:market` för filterkonfiguration.
 
 En engångsaktivitet måste göras för att hämta namnet. Gör ett sök-API-anrop för resursen och hämta egenskapsnamnet (i huvudsak haken).
 
@@ -562,9 +599,9 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |---|---|---|---|---|
 | *järnväg* | Boolean | Nej | Falskt | Om den är markerad som `true` återges resursväljaren i en vänsterrälsvy. Om den är markerad som `false` återges resursväljaren i modal vy. |
-| *imsOrg* | Sträng | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
+| *imsOrg* | Sträng | Ja | | Adobe Identity Management System (IMS) ID som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
 | *imsToken* | Sträng | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett [!DNL Adobe]-program för integreringen. |
-| *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
+| *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM Discovery-tjänsten. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
 | *filterSchema* | Array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
 | *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. För! Exempel: MIME-typ JPG, PNG, GIF. |
 | *selectedAssets* | Matris `<Object>` | Nej |                 | Ange valt Assets när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste till exempel vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du även ett värde för egenskapen `path`. |
@@ -572,7 +609,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade, lokaliserade värden via `i18nSymbols`-proppen. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna. Om du vill utföra åsidosättningen måste du skicka ett giltigt [Message Descriptor](https://formatjs.io/docs/react-intl/api/#message-descriptor)-objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
 | *intl* | Objekt | Nej | | Resursväljaren innehåller OOTB-standardöversättningar. Du kan välja översättningsspråk genom att ange en giltig språksträng via `intl.locale`-utkastet. Till exempel: `intl={{ locale: "es-es" }}` </br></br> De språksträngar som stöds följer [ ISO 639 - Koder ](https://www.iso.org/iso-639-language-codes.html) för att representera namn på språkstandarder. </br></br> Lista över språk som stöds: engelska - en-us (standard) spanska - es-es&#39; German - de-de&#39; French - fr-fr&#39; Italian - it-it&#39; Japanese - ja-jp&#39; Korean - ko-kr&#39; Portuguese - pt-br&#39; Chinese (Traditional) - zh-cn&#39; Chinese (Taiwan) - zh-tw |
 | *databaseId* | Sträng | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
-| *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
+| *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM-databaser. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
 | *hideTreeNav* | Boolean | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
 | *onDrop* | Funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
 | *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
@@ -800,7 +837,7 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda res
 | *repo:createDate* | string | Datum och tid då tillgången skapades. |
 | *repo:modifiedBy* | string | Den användare eller det system som senast ändrade resursen. |
 | *repo:modifyDate* | string | Datum och tid då tillgången senast ändrades. |
-| *dc:format* | string | Resursens format, till exempel filtypen (till exempel JPEG, PNG och så vidare). |
+| *dc:format* | string | Resursens format, t.ex. filtyp (t.ex. JPEG, PNG och så vidare). |
 | *tiff:imageWidth* | tal | Bredden på en resurs. |
 | *tiff:imageLength* | tal | En tillgångs höjd. |
 | *computedMetadata* | `Record<string, any>` | Ett objekt som representerar en bucket för alla resursens metadata av alla slag (databas, program eller inbäddade metadata). |

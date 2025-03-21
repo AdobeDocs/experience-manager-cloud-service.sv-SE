@@ -5,25 +5,56 @@ contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
 feature: Best Practices
 role: User
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2480'
 ht-degree: 0%
 
 ---
 
 # AEM Assets Search - metodtips
 
-| [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 [!DNL Adobe Experience Manager Assets] innehåller robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Ibland kan det vara besvärligt och tidskrävande att hitta rätt mediefil. Därför är sökresurser i [!DNL Adobe Experience Manager Assets] centrala för användningen av ett digitalt resurshanteringssystem, oavsett om det är till för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
-Det här hjälpdokumentet innehåller AEM bästa praxis för sökning med hjälp av olika scenarier för att hjälpa AEM att utföra grundläggande till avancerad sökning.
+Det här hjälpdokumentet innehåller AEM bästa praxis för sökning med hjälp av olika scenarier som hjälper AEM-användare att utföra grundläggande till avancerad sökning.
 
 ## Åtkomst till Experience Manager Search {#access-experience-manager-search}
 
-Här följer några grundläggande steg som du kan utföra i Experience Manager innan du börjar söka:
+Här följer några grundläggande steg som du måste utföra i Experience Manager innan du börjar söka:
 
 * I **administratörsvyn** går du till Assets > Filer i Experience Manager och klickar på sökikonen i det övre fältet. Du kan också använda ett snedstreck (/) för att öppna Omni Search-fältet.
 I **Assets-vyn** visas sökfältet högst upp och du kan komma åt det direkt.
@@ -94,7 +125,7 @@ När du vill vara specifik med sökresultaten och vill ha ett alternativ i sökr
 
 ### NOT, operator {#not-operator}
 
-När du vill hämta resultat utan vissa nyckelord kan du använda operatorn NOT. Operatorn NOT använder bindestreck (-) för att styra AEM söka efter det som ska uteslutas från sökresultatet. Sökfrågan `car - classic` som anger metadata som innehåller `car` men inte `classic`.
+När du vill hämta resultat utan vissa nyckelord kan du använda operatorn NOT. Operatorn NOT använder bindestreck (-) för att instruera AEM att söka efter det som ska uteslutas från sökresultatet. Sökfrågan `car - classic` som anger metadata som innehåller `car` men inte `classic`.
 
 ![Sök med operatorn NOT](assets/not-operator.png)
 
@@ -110,7 +141,7 @@ Jokertecken används för att ersätta ett eller flera tecken i sökningen. Om d
 
 ### Frågetecken (?) {#question-mark}
 
-Frågeteckensymbolen kan användas som villkorsoperator för att underlätta sökningen i Experience Manager.
+Frågetecknet kan användas som villkorsoperator för att underlätta sökningen i Experience Manager.
 
 * `car?`-frågan matchar ordet med ett tecken efter bilen. Exempel: kundvagn.
 * `?car`-frågan matchar ordet med ett tecken före car. Till exempel ärr.
@@ -160,7 +191,7 @@ To perform a search on such a requirement, type 'classic car' in the search bar.
 ![Filter example 1](assets/filter-1.png)
 -->
 
-**Scenario 4: Sök efter opublicerade PDF-filtypsdokument med nyckelordet `classic car` i det.**
+**Scenario 4: Sök efter opublicerade PDF-filtypsdokument med nyckelordet `classic car` i.**
 
 Utför följande steg i **[!UICONTROL Admin view]**:
 
@@ -196,7 +227,7 @@ Följ stegen nedan om du vill söka efter resurser med det angivna scenariot i *
 
 ## Avancerad sökning {#advanced-search}
 
-Med AEM sökning kan du enklare skapa komplexa sökfrågor. Här följer de olika exemplen som hjälper dig att skapa komplexa sökfrågor:
+Med AEM Search kan du enklare skapa komplexa sökfrågor. Här följer de olika exemplen som hjälper dig att skapa komplexa sökfrågor:
 
 **Scenario 6: Sök efter alla dokument i Experience Manager-databasen med `classic car` i deras metadata. Innehållet i dokumentet måste innehålla `classic car`-nyckelord.**
 
@@ -212,7 +243,7 @@ Så här söker du efter scenario 6:
 
 Scenario 6 kan inte köras i **[!UICONTROL Assets view]** eftersom det inte stöder användningen av jokertecken.
 
-**Scenario 7: Sök efter alla dokument i databasen Experience Manager där dokumentinnehållet måste innehålla `car` men exkludera `classic`. Samma villkor gäller för metadata för en resurs.**
+**Scenario 7: Sök efter alla dokument i Experience Manager-databasen där dokumentets innehåll måste innehålla `car` men inte `classic`. Samma villkor gäller för metadata för en resurs.**
 
 Så här söker du efter scenario 7:
 
@@ -252,7 +283,7 @@ Sökningen visar liknande resultat om du även arbetar i **[!UICONTROL Assets vi
 
 **Scenario 9: Sök efter liknande matchningar för röd färgbil**
 
-När du gör en sökning på AEM kan du filtrera resultatet genom att visa resurser som liknar de valda. Du kan använda alternativet **Sök liknande** om du vill begränsa sökningen till exakt eller liknande matchning av den sökta resursen. Det gör det lättare att hitta resurser som har liknande smarta taggar som den valda resursen. Om du till exempel vill söka efter lika resurser utför du följande steg:
+När du söker i AEM kan du filtrera resultatet genom att visa resurser som liknar de valda. Du kan använda alternativet **Sök liknande** om du vill begränsa sökningen till exakt eller liknande matchning av den sökta resursen. Det gör det lättare att hitta resurser som har liknande smarta taggar som den valda resursen. Om du till exempel vill söka efter lika resurser utför du följande steg:
 
 1. Sök efter resursen efter dina behov.
 1. Hovra över resursen > klicka på ellips > välj [!UICONTROL Find Similar].
@@ -360,13 +391,13 @@ The newly added assets are not indexed.
         <td> 
             Följande alternativ stöds:
             <ul>
-            <li> Publish
+            <li> Publicera
             <li> Publiceringsdatum
             <li> Senast publicerad av
             <li> Godkännande 
             <li> Utcheckning
             <li> Förfaller
-            <li> Dynamic Media
+            <li> Dynamiska medier
             </ul>
         </td>
         <td>

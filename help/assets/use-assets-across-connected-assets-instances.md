@@ -6,9 +6,9 @@ mini-toc-levels: 2
 feature: Asset Management, Connected Assets, Asset Distribution
 role: Admin, User, Architect
 exl-id: 2346f72d-a383-4202-849e-c5a91634617a
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '3774'
+source-wordcount: '3802'
 ht-degree: 12%
 
 ---
@@ -16,8 +16,42 @@ ht-degree: 12%
 
 # Använd ansluten Assets för att dela DAM-resurser i [!DNL Experience Manager Sites] {#use-connected-assets-to-share-dam-assets-in-aem-sites}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -38,7 +72,7 @@ Ansluten Assets-funktionalitet stöder ovanstående användningsfall genom integ
 
 ## Översikt över uppkopplade Assets {#overview-of-connected-assets}
 
-När du redigerar sidor i [!UICONTROL Page Editor] som målmål kan författarna enkelt söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets]-distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites]-funktioner med en annan distribution av [!DNL Experience Manager] med [!DNL Assets]-funktioner. Du kan också använda Dynamic Media-bilder på webbplatsens webbsidor via uppkopplade Assets och använda Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
+När du redigerar sidor i [!UICONTROL Page Editor] som målmål kan författarna enkelt söka efter, bläddra bland och bädda in resurser från en annan [!DNL Assets]-distribution som fungerar som en källa för resurser. Administratörerna skapar en engångsintegrering av en distribution av [!DNL Experience Manager] med [!DNL Sites]-funktioner med en annan distribution av [!DNL Experience Manager] med [!DNL Assets]-funktioner. Du kan också använda Dynamic Media-bilder på webbplatsens webbsidor via anslutna Assets och använda Dynamic Media-funktionerna, till exempel smarta beskärnings- och bildförinställningar.
 
 För författarna till [!DNL Sites] är fjärrresurserna tillgängliga som skrivskyddade lokala resurser. Funktionen stöder smidig sökning och åtkomst till fjärrresurser i Site Editor. För andra användningsområden där det kan krävas att hela resursen är tillgänglig på Sites bör du överväga att migrera resurserna satsvis i stället för att använda anslutna Assets.
 
@@ -80,7 +114,7 @@ De olika roller som är involverade i konfigureringen och funktionen och deras m
 
 Med Experience Manager kan du ansluta en fjärr-DAM-distribution som en källa till flera Experience Manager [!DNL Sites]-distributioner. Du kan dock ansluta en [!DNL Sites]-distribution med endast en fjärr-DAM-distribution.
 
-Utvärdera det optimala antalet Sites-instanser som ska anslutas till en fjärr-DAM-distribution. Adobe rekommenderar att du stegvis ansluter platsinstanser till distributionen och testar att det inte finns någon prestandapåverkan på fjärr-DAM, eftersom varje ansluten platsinstans bidrar till datatrafiken på fjärr-DAM.
+Utvärdera det optimala antalet Sites-instanser som ska anslutas till en fjärr-DAM-distribution. Adobe rekommenderar att du stegvis ansluter platsinstanser till distributionen och testar att det inte påverkar prestandan på fjärr-DAM, eftersom varje ansluten Sites-instans bidrar till datatrafiken på fjärr-DAM.
 
 Följande diagram visar vilka scenarier som stöds:
 
@@ -148,7 +182,7 @@ Du kan kontrollera anslutningen mellan de konfigurerade [!DNL Sites]-distributio
 
 <!-- TBD: Check if Launchers are to be disabled on CS instances. Is this option even available to the users on CS? -->
 
-## Använda Dynamic Media-resurser {#dynamic-media-assets}
+## Använd dynamiska medieresurser {#dynamic-media-assets}
 
 
 Med Connected Assets kan du använda bildresurser som bearbetats av [!DNL Dynamic Media] från fjärr-DAM-distributionen på Sites-sidor och använda Dynamic Media-funktioner, som smarta beskärnings- och bildförinställningar.
@@ -157,7 +191,7 @@ Så här använder du [!DNL Dynamic Media] med anslutna Assets:
 
 1. Konfigurera [!DNL Dynamic Media] på fjärr-DAM-distribution med synkroniseringsläge aktiverat.
 1. Konfigurera [anslutna Assets](#configure-a-connection-between-sites-and-assets-deployments).
-1. Konfigurera [!DNL Dynamic Media] på Sites-instansen med samma företagsnamn som konfigurerats på fjärr-DAM. Webbplatsdistributionen måste ha skrivskyddad åtkomst till Dynamic Media-kontot för att kunna arbeta med anslutna resurser. Se därför till att inaktivera synkroniseringsläget i Dynamic Media-konfigurationen på platsinstansen.
+1. Konfigurera [!DNL Dynamic Media] på Sites-instansen med samma företagsnamn som konfigurerats på fjärr-DAM. Webbplatsdistributionen måste ha skrivskyddad åtkomst till det dynamiska mediekontot för att kunna arbeta med anslutna resurser. Se därför till att inaktivera synkroniseringsläget i Dynamic Media-konfigurationen på platsinstansen.
 
 >[!CAUTION]
 >
@@ -253,9 +287,9 @@ När du flyttar en resurs från en plats till en annan måste du [justera refere
 
 Du kan också uppdatera metadataegenskaperna för en resurs på en fjärr-DAM och ändringarna är tillgängliga i den lokala platsdistributionen.
 
-Webbplatsförfattare kan förhandsgranska de tillgängliga uppdateringarna i webbplatsdistributionen och sedan publicera ändringarna igen för att göra dem tillgängliga på den AEM publiceringsinstansen.
+Webbplatsförfattare kan förhandsgranska de tillgängliga uppdateringarna i webbplatsdistributionen och sedan publicera ändringarna igen för att göra dem tillgängliga i AEM publiceringsinstans.
 
-Experience Manager visar en `expired`-statusindikator på resurser i Assets Content Finder för fjärrhantering så att webbplatsförfattare inte kan använda resursen på en webbplatssida. Om du använder en resurs med statusen `expired` på en Sites-sida kan resursen inte visas på publiceringsinstansen i Experience Manager.
+Experience Manager visar en `expired`-statusindikator för resurser i Assets Content Finder för fjärrhantering så att webbplatsförfattare inte kan använda resursen på en webbplatssida. Om du använder en resurs med statusen `expired` på en Sites-sida visas inte resursen i Experience Manager publiceringsinstans.
 
 ## Vanliga frågor {#frequently-asked-questions}
 
@@ -283,9 +317,9 @@ Du kan ansluta en fjärr-DAM-distribution till en [!DNL Sites]-distribution efte
 
 +++
 
-+++**Kan du använda Dynamic Media-resurser från din [!DNL Sites]-distribution efter att du har konfigurerat den anslutna Assets?**
++++**Kan du använda dynamiska medieresurser från din [!DNL Sites]-distribution efter att du har konfigurerat anslutna Assets?**
 
-När du har konfigurerat anslutna Assets är [!DNL Dynamic Media] resurser tillgängliga för [!DNL Sites]-distributionen i skrivskyddat läge. Därför kan du inte använda [!DNL Dynamic Media] för att bearbeta resurser i distributionen [!DNL Sites]. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
+När du har konfigurerat anslutna Assets är [!DNL Dynamic Media] resurser tillgängliga för [!DNL Sites]-distributionen i skrivskyddat läge. Därför kan du inte använda [!DNL Dynamic Media] för att bearbeta resurser i distributionen [!DNL Sites]. Mer information finns i [Konfigurera en anslutning mellan platser och distributioner av dynamiska media](#dynamic-media-assets).
 
 +++
 
@@ -301,9 +335,9 @@ Nej, du kan inte använda innehållsfragment och videoresurser från fjärr-DAM-
 
 +++
 
-+++**Kan du använda Dynamic Media-resurser från fjärr-DAM-distributionen på [!DNL Sites]-distributionen efter att du har konfigurerat den anslutna Assets?**
++++**Kan du använda dynamiska medieresurser från fjärr-DAM-distributionen på distributionen [!DNL Sites] efter att du har konfigurerat anslutna Assets?**
 
-Ja, du kan konfigurera och använda Dynamic Media-bildresurser från fjärr-DAM-distributionen på distributionen [!DNL Sites] efter att du har konfigurerat den anslutna Assets. Mer information finns i [Konfigurera en anslutning mellan platser och Dynamic Media-distributioner](#dynamic-media-assets).
+Ja, du kan konfigurera och använda Dynamic Media-bildresurser från fjärr-DAM-distributionen på distributionen [!DNL Sites] efter att du har konfigurerat anslutna Assets. Mer information finns i [Konfigurera en anslutning mellan platser och distributioner av dynamiska media](#dynamic-media-assets).
 
 +++
 
@@ -384,4 +418,4 @@ Följ de här stegen för att felsöka vanliga fel:
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

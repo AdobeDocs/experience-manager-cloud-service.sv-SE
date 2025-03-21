@@ -1,42 +1,76 @@
 ---
 title: XMP metadata
-description: Läs mer om metadatastandarden XMP (Extensible Metadata Platform) för metadatahantering. Det används av Experience Manager som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
+description: Läs om metadatastandarden för metadatahantering i XMP (Extensible Metadata Platform). Det används av Experience Manager som ett standardiserat format för att skapa, bearbeta och utbyta metadata.
 contentOwner: AG
 feature: Metadata
 role: Admin, User
 exl-id: fd9af408-d2a3-4c7a-9423-c4b69166f873
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1057'
 ht-degree: 12%
 
 ---
 
 # XMP metadata {#xmp-metadata}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/xmp-writeback.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-XMP (Extensible Metadata Platform) är den metadatastandard som används av Experience Manager Assets för all metadatahantering. XMP har ett standardformat för att skapa, bearbeta och utbyta metadata för en mängd olika program.
+XMP (Extensible Metadata Platform) är den metadatastandard som används av Experience Manager Assets för all metadatahantering. XMP har ett standardformat för framtagning, bearbetning och utbyte av metadata i en mängd olika program.
 
-Förutom universell metadatakodning som kan bäddas in i alla filformat, innehåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och [stöds av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
+Förutom universell metadatakodning som kan bäddas in i alla filformat, tillhandahåller XMP en omfattande [innehållsmodell](#xmp-core-concepts) och stöds [av Adobe](#advantages-of-xmp) och andra företag, så att användare av XMP i kombination med [!DNL Assets] har en kraftfull plattform att bygga vidare på.
 
 ## Översikt över XMP och ekosystem {#xmp-ecosystem}
 
 [!DNL Assets] stöder XMP metadatastandard. XMP är en standard för bearbetning och lagring av standardiserade och egna metadata i digitala resurser. XMP är en standard som gör att flera program kan arbeta effektivt med metadata.
 
-Produktionsproffs kan t.ex. använda det inbyggda XMP-stödet i Adobe-program för att skicka information till flera filformat. Databasen [!DNL Assets] extraherar XMP metadata och använder den för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
+Produktionsproffs använder t.ex. det inbyggda stödet för XMP i Adobe program för att skicka information till olika filformat. Databasen [!DNL Assets] extraherar XMP-metadata och använder dem för att hantera innehållets livscykel och ger möjlighet att skapa automatiserade arbetsflöden.
 
 XMP standardiserar hur metadata definieras, skapas och bearbetas genom att tillhandahålla en datamodell, en lagringsmodell och scheman. Alla dessa begrepp beskrivs i detta avsnitt.
 
 Alla äldre metadata från EXIF, ID3 eller Microsoft Office översätts automatiskt till XMP, som kan utökas för att stödja kundspecifika metadatamatchningar, som produktkataloger.
 
-Metadata i XMP består av en uppsättning egenskaper. De här egenskaperna är alltid kopplade till en specifik entitet som kallas en resurs, d.v.s. egenskaperna är&quot;om&quot; resursen. När det gäller XMP är resursen alltid resursen.
+Metadata i XMP består av en uppsättning egenskaper. De här egenskaperna är alltid kopplade till en specifik entitet som kallas en resurs, d.v.s. egenskaperna är&quot;om&quot; resursen. För XMP är resursen alltid resursen.
 
 XMP definierar en [metadatamodell](https://sv.wikipedia.org/wiki/Metadata) som kan användas med alla definierade metadataobjekt. XMP definierar också särskilda [scheman](https://en.wikipedia.org/wiki/XML_schema) för grundläggande egenskaper som är användbara för att logga en resurs historik genom olika bearbetningssteg – från fotografering, [skanning](https://sv.wikipedia.org/wiki/Bildl%C3%A4sare) och textredigering via fotoredigeringssteg (som [beskärning](https://sv.wikipedia.org/wiki/Bildbesk%C3%A4rning) eller färgjustering) till den slutliga bilden. Med XMP kan alla program och enheter längs vägen lägga till egen information i en digital resurs, som sedan sparas i den slutliga digitala filen.
 
@@ -46,42 +80,42 @@ XMP serialiseras och lagras oftast med en underuppsättning av [W3C](https://sv.
 
 XMP har följande fördelar jämfört med andra kodningsstandarder och -scheman:
 
-* XMP metadata är mycket kraftfulla och detaljerade.
-* XMP kan du ha flera värden för en egenskap.
-* XMP har standardiserad kodning, vilket gör det enkelt att utbyta metadata.
-* XMP kan utökas. Du kan lägga till ytterligare information i dina resurser.
+* XMP-baserade metadata är mycket kraftfulla och detaljerade.
+* Med XMP kan du ha flera värden för en egenskap.
+* XMP har standardiserad kodning som gör att du enkelt kan utbyta metadata.
+* XMP är utbyggbart. Du kan lägga till ytterligare information i dina resurser.
 
-XMP är utformad för att vara utökningsbar, så att du kan lägga till anpassade typer av metadata i XMP. EXIF har däremot inte det, utan en fast lista över egenskaper som inte kan utökas.
+XMP-standarden är utformad för att vara utbyggbar så att du kan lägga till anpassade typer av metadata i XMP-data. EXIF har däremot inte det, utan en fast lista över egenskaper som inte kan utökas.
 
 >[!NOTE]
 >
 >XMP tillåter vanligtvis inte att binära datatyper bäddas in. Om du vill ha binära data i XMP, till exempel miniatyrbilder, måste de kodas i ett XML-anpassat format som `Base64`.
 
-### XMP grundläggande begrepp {#xmp-core-concepts}
+### XMP centrala koncept {#xmp-core-concepts}
 
 **Namnutrymmen och scheman**
 
-Ett XMP är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller
+Ett XMP-schema är en uppsättning egenskapsnamn i ett vanligt XML-namnutrymme som innehåller
 datatypen och beskrivande information. Ett XMP-schema identifieras av dess XML-namnområdes-URI. Om du använder namnutrymmen förhindras konflikter mellan egenskaper i olika scheman som har samma namn men en annan betydelse.
 
 Egenskapen **Creator** i två oberoende utformade scheman kan till exempel betyda den person som skapade resursen eller det program som skapade resursen (till exempel Adobe Photoshop).
 
-**XMP egenskaper och värden**
+**XMP-egenskaper och -värden**
 
 XMP kan innehålla egenskaper från ett eller flera av scheman. En vanlig delmängd som används av många Adobe-program kan till exempel vara följande:
 
 * Dublin Core-schema: `dc:title`, `dc:creator`, `dc:subject`, `dc:format`, `dc:rights`
 * XMP grundläggande schema: `xmp:CreateDate`, `xmp:CreatorTool`, `xmp:ModifyDate`, `xmp:metadataDate`
-* XMP för rättighetshantering: `xmpRights:WebStatement`, `xmpRights:Marked`
+* XMP Rights Management-schema: `xmpRights:WebStatement`, `xmpRights:Marked`
 * XMP mediahanteringsschema: `xmpMM:DocumentID`
 
 **Språkalternativ**
 
-XMP ger dig möjlighet att lägga till en `xml:lang`-egenskap i textegenskaper för att ange textens språk.
+I XMP kan du lägga till en `xml:lang`-egenskap i textegenskaper för att ange textens språk.
 
-## XMP till återgivning {#xmp-writeback-to-renditions}
+## XMP-tillbakaskrivning till återgivningar {#xmp-writeback-to-renditions}
 
-Den här XMP återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen.
+Den här XMP-återskrivningsfunktionen i [!DNL Adobe Experience Manager Assets] replikerar metadataändringarna till återgivningarna av den ursprungliga resursen.
 När du ändrar metadata för en resurs från [!DNL Assets] eller när du överför resursen, lagras ändringarna först i metadatanoden i resurshierarkin. Med återskrivningsfunktionen kan du sprida metadataändringarna till alla eller vissa återgivningar av resursen. Funktionen skriver bara tillbaka de metadataegenskaper som använder `jcr`-namnutrymmet, det vill säga en egenskap med namnet `dc:title` skrivs tillbaka, men egenskapen `mytitle` skrivs inte tillbaka.
 
 Ta till exempel ett scenario där du ändrar egenskapen [!UICONTROL Title] för resursen med namnet `Classic Leather` till `Nylon`.
@@ -96,7 +130,7 @@ I det här fallet sparar [!DNL Assets] ändringarna av egenskapen **[!UICONTROL 
 >
 >Återskrivningsfunktionen är inte aktiverad som standard i [!DNL Assets]. Se hur du [aktiverar återskrivning av metadata](#enable-xmp-writeback). MSM för digitala resurser fungerar inte när återkoppling av metadata är aktiverat. Vid tillbakaskrivning avbryts arvet.
 
-### Aktivera XMP tillbakaskrivning {#enable-xmp-writeback}
+### Aktivera tillbakaskrivning av XMP {#enable-xmp-writeback}
 
 [!UICONTROL DAM Metadata Writeback]-arbetsflödet används för att skriva tillbaka metadata för en resurs. Gör något av följande om du vill aktivera tillbakaskrivning:
 
@@ -163,4 +197,4 @@ The metadata changes are propagated to the renditions renditions thumbnail.140.1
 * [Sök efter ansikten](search-facets.md)
 * [Hantera samlingar](manage-collections.md)
 * [Import av massmetadata](metadata-import-export.md)
-* [Publish Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
+* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)

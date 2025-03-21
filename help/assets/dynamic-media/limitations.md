@@ -1,5 +1,5 @@
 ---
-title: Dynamic Media begränsningar
+title: Begränsningar för dynamiska media
 description: Lär dig mer om de effektivaste strategierna och de tvingande gränserna när du skapar en bilduppsättning eller en snurruppsättning, eller överför en PDF. Läs också om webbläsarkombinationer och operativsystemkombinationer som inte stöds för Dynamic Media.
 contentOwner: Rick Brough
 content-type: reference
@@ -8,25 +8,62 @@ geptopics: SG_SCENESEVENONDEMAND_PK/categories/ecatalogs
 feature: Dynamic Media Classic,Asset Management,Image Sets,Spin Sets,eCatalog
 role: User
 exl-id: fb63e2d4-2c8c-48dd-a0dc-fdfbbfb57b30
-source-git-commit: 973cec704b5e8f34e3b2c448fc10e09226ffa933
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
 
-# Dynamic Media-begränsningar
+# Dynamiska mediebegränsningar
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 I följande avsnitt beskrivs begränsningar i Dynamic Media.
 
 Det här avsnittet innehåller följande avsnitt:
 
-* [Dynamic Media bästa praxis och tvingande begränsningar för tillgångstyper](#best-practice-enforced-limits)
-* [Webbläsare och operativsystem som inte stöds för Dynamic Media](#unsupported-browser-os)
+* [Bästa praxis och tvingande begränsningar av resurstyper från Dynamic Media](#best-practice-enforced-limits)
+* [Webbläsare- och operativsystemkombinationer som inte stöds för Dynamic Media](#unsupported-browser-os)
 
-## Dynamic Media bästa praxis och tvingande begränsningar för tillgångstyper {#best-practice-enforced-limits}
+## Bästa praxis och tvingande begränsningar av resurstyper från Dynamic Media {#best-practice-enforced-limits}
 
-När du skapar en snurra uppsättning eller en bilduppsättning, eller överför PDF för sidextrahering, rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
+När du skapar en snurra uppsättning eller en bilduppsättning, eller överför PDF-filer för sidextrahering, rekommenderar Adobe följande metodtips och tillämpar följande begränsningar:
 
 | Resurs - begränsningstyp | Bästa praxis | Begränsning har införts |
 | --- | --- | --- |
@@ -34,11 +71,11 @@ När du skapar en snurra uppsättning eller en bilduppsättning, eller överför
 | **Alla uppsättningar** - antal dubblettresurser per uppsättning | Inga dubbletter | 20 |
 | **Alla uppsättningar** - Maximalt antal resurser per uppsättning | 5-10 bilder per uppsättning | 1000 |
 | **Snurra uppsättning** - Maximalt antal rader/kolumner per 2D-uppsättning | 12-18 bilder per uppsättning | 1000 |
-| **PDF** - Maximalt antal sidor för en PDF som ska tas i beaktande för extrahering |  | 100 (för alla PDF) |
+| **PDF** - Maximalt antal sidor för en PDF som ska användas för extrahering |  | 100 (för alla PDF-filer) |
 
 <!-- See also [Dynamic Media limitations](/help/assets/limitations.md). -->
 
-## Webbläsare och operativsystem som inte stöds för Dynamic Media {#unsupported-browser-os}
+## Webbläsare- och operativsystemkombinationer som inte stöds för Dynamic Media {#unsupported-browser-os}
 
 Dynamic Media stöder inte följande kombinationer av webbläsare och operativsystem.
 
@@ -57,7 +94,7 @@ Dynamic Media stöder inte följande kombinationer av webbläsare och operativsy
 <!-- CQDOC-19433 (original ticket)
 and CQDOC-19792 (removed as per this ticket December 5, 2022) -->
 
-Från och med den 30 april 2024 upphör Adobe Dynamic Media med stödet för följande:
+Från och med 30 april 2024 upphör stödet för Adobe Dynamic Media för följande:
 
 * SSL (Secure Socket Layer) 2.0
 * SSL 3.0

@@ -5,14 +5,51 @@ contentOwner: Rick Brough
 feature: Mixed Media Sets
 role: User
 exl-id: 7ccde741-38d2-44c9-9378-f2721384aab7
-source-git-commit: 2d4ffd5518d671a55e45a1ab6f1fc41ac021fd80
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1478'
 ht-degree: 11%
 
 ---
 
 # Blandade medieuppsättningar{#mixed-media-sets}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Med blandade medieuppsättningar kan du skapa en blandning av bilder, bilduppsättningar, snurruppsättningar och videoklipp i en presentation.
 
@@ -32,7 +69,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandade medier. Om det behövs kan du skapa [bilduppsättningar](/help/assets/dynamic-media/image-sets.md) och [rotationsuppsättningar](/help/assets/dynamic-media/spin-sets.md). Eftersom användare kan zooma in bilder i visningsprogrammet för den blandade medieuppsättningen måste du ta hänsyn till zoomningen när du väljer bilder. Se till att bilderna har en största storlek på minst 2 000 pixlar.
 
-   Se [Dynamic Media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av blandade medieuppsättningar.
+   Se [Dynamiska media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av blandade medieuppsättningar.
 
 1. [Skapa blandade medieuppsättningar](#creating-mixed-media-sets).
 
@@ -52,7 +89,7 @@ Följ de här stegen för att komma igång snabbt med blandade medieuppsättning
 
    Markera den blandade medieuppsättningen och du kan förhandsgranska den. Om du vill undersöka den blandade medieuppsättningen i det valda visningsprogrammet markerar du miniatyrbildikonerna. Du kan välja olika visningsprogram på menyn **[!UICONTROL Viewers]**, som finns i den vänstra listrutan.
 
-1. [Publish blandade medieuppsättningar](#publishing-mixed-media-sets).
+1. [Publicera blandade medieuppsättningar](#publishing-mixed-media-sets).
 
    När du publicerar en blandad medieuppsättning aktiveras URL-adressen och strängen Embed. Dessutom måste du [publicera visningsförinställningen](/help/assets/dynamic-media/managing-viewer-presets.md#publishing-viewer-presets).
 
@@ -68,7 +105,7 @@ Om det behövs kan du redigera [Blandade medieuppsättningar](#editing-mixed-med
 
 >[!NOTE]
 >
->Om du har problem med att skapa uppsättningar kan du läsa [Felsöka Dynamic Media](/help/assets/dynamic-media/troubleshoot-dm.md).
+>Om du har problem med att skapa uppsättningar kan du läsa [Felsöka dynamiska media](/help/assets/dynamic-media/troubleshoot-dm.md).
 
 ## Överför resurser {#uploading-assets}
 
@@ -76,7 +113,7 @@ Börja med att ladda upp bilder och videoklipp för uppsättningarna med blandad
 
 Om du dessutom vill lägga till snurrsuppsättningar eller bilduppsättningar i den blandade medieuppsättningen skapar du även dem.
 
-Se [Dynamic Media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av blandade medieuppsättningar.
+Se [Dynamiska media - Rasterbildformat som stöds](/help/assets/file-format-support.md#image-support-dynamic-media) för en lista över format som stöds av blandade medieuppsättningar.
 
 ## Skapa blandade medieuppsättningar {#creating-mixed-media-sets}
 
@@ -158,7 +195,7 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
    >[!NOTE]
    >
-   >* Om du vill redigera resurserna i en uppsättning med blandade media navigerar du till den blandade medieuppsättningen. Markera (markera inte) uppsättningen så att du kan öppna den på sidan Förhandsvisa Experience Manager. I den vänstra listen markerar du nedåtpilen för att öppna listrutan och väljer sedan **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och välj sedan **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
+   >* Om du vill redigera resurserna i en uppsättning med blandade media navigerar du till den blandade medieuppsättningen. Markera (markera inte) uppsättningen så att du kan öppna den på Experience Manager Set Preview-sidan. I den vänstra listen markerar du nedåtpilen för att öppna listrutan och väljer sedan **[!UICONTROL Set Members]**. Håll markören över en resurs på sidan Ange medlemmar och välj sedan **[!UICONTROL Edit]** (pennikon) för att öppna redigeringssidan.
    >
    >* Om du vill ta bort en hel uppsättning med blandade media - I valfritt visningsläge (som kortvyn eller kolumnvyn) går du till den blandade medieuppsättningen. Håll markören över uppsättningen och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). Tryck på **[!UICONTROL Backspace]** på tangentbordet eller välj **[!UICONTROL More]** (rad om tre punkter) och välj sedan **[!UICONTROL Delete]**.
 
@@ -166,9 +203,9 @@ Du kan utföra olika redigeringsåtgärder för resurser i blandade medieuppsät
 
 Se [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md) för mer information om hur du förhandsvisar blandade medieuppsättningar.
 
-## Publish Mixed Media Sets {#publishing-mixed-media-sets}
+## Publicera blandade medieuppsättningar {#publishing-mixed-media-sets}
 
-Mer information om hur du publicerar blandade medieuppsättningar finns i [Publish-resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md) .
+Mer information om hur du publicerar blandade medieuppsättningar finns i [Publicera resurser](/help/assets/dynamic-media/publishing-dynamicmedia-assets.md).
 
 >[!NOTE]
 >

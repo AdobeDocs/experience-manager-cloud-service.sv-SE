@@ -1,20 +1,57 @@
 ---
 title: Länka URL:er till ditt webbprogram
-description: Lär dig hur du länkar URL-adresser till webbprogram i Dynamic Media.
+description: Lär dig hur du länkar URL:er till ditt webbprogram i Dynamic Media.
 contentOwner: Rick Brough
 feature: Publishing,Upload,Viewer Presets,Image Presets,Video
 role: User
 exl-id: 3cd3f4d5-ebf0-4318-9a0d-1ea69453d57b
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1263'
 ht-degree: 3%
 
 ---
 
 # Länka URL:er till ditt webbprogram {#linking-urls-to-your-web-application}
 
-Dina webbplatser och tillämpningar har åtkomst till Dynamic Media tjänster via URL-samtal. När du har publicerat en resurs aktiverar Dynamic Media en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
+
+Dina webbplatser och tillämpningar har åtkomst till Dynamic Media-tjänster via URL-samtal. När du har publicerat en resurs aktiveras en URL-sträng som refererar till resursen. Du kan klistra in dessa URL:er i en webbläsare för testning.
 
 Du länkar bara till URL:er om du *inte* använder Adobe Experience Manager som WCM-fil. Länkning - och inte inbäddning - används när du vill leverera en videospelare som ett popup-fönster eller modalt fönster. Om du använder Experience Manager som WCM-fil [lägger du till resurserna direkt på sidan](adding-dynamic-media-assets-to-pages.md).
 
@@ -40,11 +77,11 @@ Du kan hämta en URL-sträng som genereras av en bildförinställning eller en v
 >
 >URL:en är inte tillgänglig för kopiering förrän du har publicerat den valda resursen. Dessutom måste du även publicera visningsförinställningen eller bildförinställningen.
 >
->Se [Publish Assets](publishing-dynamicmedia-assets.md).
+>Se [Publicera Assets](publishing-dynamicmedia-assets.md).
 >
->Se [Förinställningar för Publish Viewer](managing-viewer-presets.md#publishing-viewer-presets).
+>Se [Publicera visningsförinställningar](managing-viewer-presets.md#publishing-viewer-presets).
 >
->Se [Publish bildförinställningar](managing-image-presets.md#publishing-image-presets).
+>Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
 Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara en metod som du kan använda.
 
@@ -54,11 +91,11 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
    Kom ihåg att URL:er endast går att kopiera *efter* att du har *publicerat* resurserna. Dessutom måste visningsförinställningen eller bildförinställningen också publiceras.
 
-   Se [Publish Assets](publishing-dynamicmedia-assets.md).
+   Se [Publicera Assets](publishing-dynamicmedia-assets.md).
 
-   Se [Förinställningar för Publish Viewer](managing-viewer-presets.md#publishing-viewer-presets).
+   Se [Publicera visningsförinställningar](managing-viewer-presets.md#publishing-viewer-presets).
 
-   Se [Publish bildförinställningar](managing-image-presets.md#publishing-image-presets).
+   Se [Publicera bildförinställningar](managing-image-presets.md#publishing-image-presets).
 
 1. Gör något av följande beroende på vilken resurs du har valt:
 
@@ -84,7 +121,7 @@ Du kan hämta en URL-sträng på flera olika sätt. Stegen nedan visar dock bara
 
 ## Hämta en URL för en statisk resurs {#obtaining-a-url-for-a-static-asset}
 
-Dynamic Media stöder leverans av statiskt material, vilket är annat än bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
+Dynamic Media har stöd för leverans av statiska resurser, vilket är andra resurser än bara bilder och video. Statiska medieformat som stöds för leverans är bland annat följande:
 
 * 3D-filer
 * Animerad GIF
@@ -118,7 +155,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 ## Hämta en video-URL för en publicerad videoåtergivning {#obtaining-a-video-url-for-a-published-video-rendition}
 
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]** i Experience Manager.
+1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
 1. Bläddra nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** på sidan **[!UICONTROL Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** markerar du namnet på konfigurationen som du vill använda.
 
@@ -134,7 +171,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    Om registrerings-ID till exempel är `87654321|MyCompany` blir kundnamnet `MyCompany`.
 
-1. I närheten av det övre vänstra hörnet av sidan väljer du **[!UICONTROL Cloud Services]**, markerar ikonen Experience Manager och går till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. I närheten av sidans övre vänstra hörn väljer du **[!UICONTROL Cloud Services]**, sedan Experience Manager-ikonen och går till **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Kopiera ned hela videouppdateringssökvägen från JCR (Java™ Content Repository).
 
    Videons återgivningssökväg kan till exempel se ut ungefär så här:
@@ -155,7 +192,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
 ## Hämta en video-URL för strömning med adaptiv bithastighet (HLS) {#obtaining-a-video-url-for-adaptive-streaming-hls}
 
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]** i Experience Manager.
+1. I Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud]** > **[!UICONTROL Cloud Services]**.
 1. Bläddra nedåt till rubriken **[!UICONTROL Dynamic Media Cloud Services]** på sidan **[!UICONTROL Cloud Services]** och välj sedan **[!UICONTROL Show Configurations]**.
 1. Under **[!UICONTROL Available Configurations]** markerar du namnet på konfigurationen som du vill använda.
 1. Gör följande på sidan **[!UICONTROL Dynamic Media Cloud Services Settings]**:
@@ -189,7 +226,7 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
     </tbody>
    </table>
 
-1. Kopiera den fullständiga sökvägen för videoresurser i Experience Manager, enligt Dynamic Media bearbetning. Du behöver den här kopierade videoresurssökvägen senare i dessa steg.
+1. Kopiera den fullständiga sökvägen för videoresurser i Experience Manager, som bearbetats av Dynamic Media. Du behöver den här kopierade videoresurssökvägen senare i dessa steg.
 
    Till exempel:
 
@@ -207,8 +244,8 @@ Dynamic Media stöder leverans av statiskt material, vilket är annat än bara b
 
    `https://gateway-na.assetsadobe.com/DMGateway/public-ssl/demoCo/content/dam/marketing/MyVideo.mp4.m3u8`
 
-## Använd HTTP/2 för att leverera dina Dynamic Media-resurser {#using-http-to-deliver-your-dynamic-media-assets}
+## Använd HTTP/2 för att leverera dina dynamiska medieresurser {#using-http-to-deliver-your-dynamic-media-assets}
 
 HTTP/2 är det nya, uppdaterade webbprotokollet som förbättrar kommunikationen mellan webbläsare och servrar. Det ger snabbare överföring av information och minskar mängden processorkraft som behövs. Dynamic Media-material kan nu levereras via HTTP/2 vilket ger bättre respons och laddningstider.
 
-Se [HTTP2 Delivery of Content](http2faq.md) för fullständig information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto.
+Mer information om hur du kommer igång med HTTP/2 med ditt Dynamic Media-konto finns i [HTTP2 Delivery of Content](http2faq.md).

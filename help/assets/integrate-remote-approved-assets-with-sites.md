@@ -2,25 +2,59 @@
 title: Integrera fjärr-AEM Assets med AEM Sites
 description: Lär dig hur du konfigurerar och ansluter AEM webbplatser med Godkänd AEM Assets.
 exl-id: 382e6166-3ad9-4d8f-be5c-55a7694508fa
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1004'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
 
 # Integrera fjärr-AEM Assets med AEM Sites  {#integrate-approved-assets}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 >[!AVAILABILITY]
 >
 >Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
 >
->[!BADGE Dynamic Media med OpenAPI-funktionshandboken PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
+>[!BADGE Dynamiska media med OpenAPI-funktioner - guide för PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
-Effektiv hantering av digitala resurser är avgörande för att ni ska kunna leverera engagerande och enhetliga varumärkesupplevelser på olika onlineplattformar. Dynamic Media med OpenAPI-funktioner förbättrar den digitala resurshanteringen genom smidig integrering mellan AEM Sites och AEM Assets as a Cloud Service. Med den här innovativa funktionen kan ni enkelt dela och hantera olika typer av godkända digitala resurser i flera AEM miljöer, vilket effektiviserar arbetsflödena för webbplatsförfattare och redaktörer.
+Effektiv hantering av digitala resurser är avgörande för att ni ska kunna leverera engagerande och enhetliga varumärkesupplevelser på olika onlineplattformar. Dynamic Media med OpenAPI-funktioner förbättrar hanteringen av digitala resurser genom smidig integrering mellan AEM Sites och AEM Assets as a Cloud Service. Med den här innovativa funktionen kan du enkelt dela och hantera olika typer av godkänt digitalt material i olika AEM-miljöer, vilket effektiviserar arbetsflödena för webbplatsförfattare och redaktörer.
 
 Med Dynamic Media med OpenAPI-funktioner kan webbplatsförfattare använda resurser från fjärr-DAM direkt i AEM Page Editor och [Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments.html) vilket förenklar processerna för att skapa och hantera innehåll.
 
@@ -48,14 +82,14 @@ Stöd för fjärrresurser med Dynamic Media med OpenAPI-funktioner kräver:
 
   Variablerna ställs in med Cloud Manager användargränssnitt i AEM as a Cloud Service-miljön som fungerar som din lokala Sites-instans.
 
-   * ASSET_DELIVERY_IMS_CLIENT= [IMSClientId]: Du måste skicka en Adobe-supportbiljett för att hämta IMS-klient-ID:t.
+   * ASSET_DELIVERY_IMS_CLIENT= [IMSClientId]: Du måste skicka en Adobe-supportbiljett för att få ID:t för IMS-klienten.
 
      eller konfigurera [OSGi-inställningarna](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/configuring-osgi.html) för AEM 6.5 i AEM Sites-instansen genom att följa dessa steg:
 
    1. Logga in på konsolen och klicka på **[!UICONTROL OSGi]>** eller
 använd den direkta URL:en, till exempel: `https://localhost:4502/system/console/configMgr`
 
-   1. Konfigurera OSGi-konfigurationen **Nästa generation av Dynamic Media Config** (`NextGenDynamicMediaConfigImpl`) enligt följande och ersätt värdena med värdena i din fjärrmiljö för resurser.
+   1. Konfigurera OSGi-konfigurationen för **nästa generations dynamiska mediekonfiguration** (`NextGenDynamicMediaConfigImpl`) enligt följande och ersätt värdena med värdena i din fjärrmiljö.
 
       ```text
         imsClient="<ims-client-ID>"
@@ -69,7 +103,7 @@ använd den direkta URL:en, till exempel: `https://localhost:4502/system/console
 där `pXXXX` refererar till program-ID
       `eYYYY` refererar till miljö-ID
 
-      ![Nästa generations konfigurationsfönster för Dynamic Media Config OSGi](/help/assets/assets/remote-assets-osgi.png)
+      ![Nästa generations OSGi-konfigurationsfönster för Dynamic Media Config](/help/assets/assets/remote-assets-osgi.png)
 
   Läs mer om [IMS-autentisering](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/ims-config-and-admin-console.html).
 
@@ -84,17 +118,17 @@ där `pXXXX` refererar till program-ID
 
 ## Konfigurera HTTPS {#https}
 
-Det rekommenderas i allmänhet att du kör alla dina produktions- AEM instanser med HTTP. Dina lokala utvecklingsmiljöer kanske inte konfigureras som sådana. Fjärrresurser som använder Dynamic Media med OpenAPI kräver dock HTTPS för att fungera.
+Vi rekommenderar att du kör alla dina AEM-produktioner med HTTP. Dina lokala utvecklingsmiljöer kanske inte konfigureras som sådana. Fjärrresurser som använder Dynamic Media med OpenAPI kräver dock HTTPS för att fungera.
 
 [Använd den här guiden](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) för att konfigurera HTTPS var du vill använda fjärrresurser, inklusive utvecklingsmiljöer.
 
 ## Få åtkomst till resurser från fjärr-DAM {#fetch-assets}
 
-Med Dynamic Media med OpenAPI-funktioner kan du komma åt resurser som är tillgängliga i din Remote DAM-instans på den lokala AEM Sites Page Editor och AEM Content Fragment.
+Med Dynamic Media med OpenAPI-funktioner kan du komma åt resurser som finns i din Remote DAM-instans på den lokala AEM Sites Page Editor och AEM Content Fragment.
 
 ![bild](/help/assets/assets/open-APIs.png)
 
-### Åtkomst till fjärrresurser i AEM Page Editor {#access-assets-page-editor}
+### Få åtkomst till fjärrresurser i AEM Page Editor {#access-assets-page-editor}
 
 Följ stegen nedan för att använda fjärrresurser i AEM Page Editor på din AEM Sites-instans. Du kan göra detta genom att integrera AEM as a Cloud Service och AEM 6.5.
 
@@ -111,15 +145,15 @@ Följ stegen nedan för att använda fjärrresurser i AEM Page Editor på din AE
 1. Lägg till en alternativ text och klicka på **[!UICONTROL Done]**.
    <br> Fjärrresursen visas i bildkomponenten. Du kan också verifiera resursens leverans-URL när den läses in på sidan eller genom att använda fliken Förhandsgranska. Leverans-URL:en anger att resursen fjärransluts.
 
-Du har bara åtkomst till fjärranslutna resurser i AEM redigeringsprogram direkt för Image Core Component v3 och Teaser Core Component v2. För andra komponenter, inklusive anpassade komponenter, krävs anpassningar för att integrera resursväljaren med dessa komponenter.
+Du har bara tillgång till fjärranslutna resurser i AEM sidredigerare direkt för Image Core Component v3 och Teaser Core Component v2. För andra komponenter, inklusive anpassade komponenter, krävs anpassningar för att integrera resursväljaren med dessa komponenter.
 
-#### Video: Få åtkomst till fjärrresurser AEM sidredigeraren
+#### Video: Få åtkomst till fjärrresurser i AEM Page Editor
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427666)
 
-### Få åtkomst till fjärrresurser i AEM innehållsfragment {#access-assets-content-fragment}
+### Få åtkomst till fjärrresurser i AEM Content Fragment {#access-assets-content-fragment}
 
-Följ stegen nedan för att använda fjärrresurser i AEM innehållsfragment på din AEM Sites-instans. Du kan göra den här integreringen i AEM 6.5 och inte i AEM as a Cloud Service.
+Följ stegen nedan för att använda fjärrresurser i AEM Content Fragment på din AEM Sites-instans. Du kan göra detta i AEM 6.5 och inte i AEM as a Cloud Service.
 
 1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Files]**.
 1. Välj resursmapp där innehållsfragmentet finns.
@@ -127,7 +161,7 @@ Följ stegen nedan för att använda fjärrresurser i AEM innehållsfragment på
 
    >[!NOTE]
    >
-   Om du inte har AEM Content Fragment-modell kan du behöva [skapa en](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html?lang=en).
+   Om du inte har någon AEM Content Fragment-modell kan du behöva [skapa en](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html?lang=en).
 
 1. Klicka på ikonen ![bock](/help/assets/assets/do-not-localize/checkmark-icon.svg) bredvid textkomponenten.
 1. Välj **[!UICONTROL Remote]** om du vill hämta resursen från fjärr-DAM. <br>
@@ -138,10 +172,10 @@ Du uppmanas att logga in.
 1. Välj resursen och klicka på **[!UICONTROL Select]**.
    <br> URL:en för fjärrresursen visas i textkomponenten.
 
-#### Video: Få åtkomst till fjärrresurser i AEM innehållsfragment
+#### Video: Få åtkomst till fjärrresurser i AEM Content Fragment
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427667)
 
 ### Få åtkomst till fjärrresurser i Edge Delivery Services {#access-assets-eds}
 
-Du kan även komma åt fjärrresurser i Edge Delivery Services. Mer information finns i [Använda resurser från Assets as a Cloud Service som levererats med Dynamic Media med OpenAPI-funktioner](https://www.aem.live/docs/aem-assets-sidekick-plugin#utilizing-assets-from-assets-cloud-services-delivered-via-dynamic-media-with-openapi).
+Du kan även komma åt fjärrresurser i Edge Delivery Services. Mer information finns i [Använda resurser från Assets as a Cloud Service som levereras med Dynamic Media med OpenAPI-funktioner](https://www.aem.live/docs/aem-assets-sidekick-plugin#utilizing-assets-from-assets-cloud-services-delivered-via-dynamic-media-with-openapi).

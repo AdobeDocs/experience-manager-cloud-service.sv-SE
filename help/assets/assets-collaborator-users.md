@@ -1,29 +1,64 @@
 ---
-title: Användare i AEM Assets Collaborator
-description: Lär dig hantera användare i AEM Assets Collaborator och deras behörigheter.
+title: Användare av AEM Assets Collaborator
+description: Lär dig hur du hanterar användare av AEM Assets Collaborator och deras behörigheter.
 feature: Asset Management
 role: User, Admin
-source-git-commit: 16ce83409044ad54140754112eb4d35b97883b44
+exl-id: b0be28b8-821c-46a0-9437-2b2fccee95ee
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
-# Användare i AEM Assets Collaborator {#assets-collaborator-users}
+# Användare av AEM Assets Collaborator {#assets-collaborator-users}
 
-| [Bästa praxis vid sökning](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Innehållsnav](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets utvecklardokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
-![AEM Assets Collaborator-användarbanner](/help/assets/assets/aem-assets-collaborator-users-banner.png)
+![Banderoll för AEM Assets Collaborator-användare](/help/assets/assets/aem-assets-collaborator-users-banner.png)
 
-I Experience Manager Assets ingår användartypen Medarbetare. Administratörer kan enkelt lägga till användare eller användargrupper till användartypen med hjälp av Admin Console. Mer information finns i [Användare av inbyggt samarbete](/help/assets/enable-assets-ultimate.md#onboard-collaborator-users).
+Experience Manager Assets har en användartyp i Collaborator och administratörer kan enkelt lägga till användare eller användargrupper i den här användartypen med Admin Console. Mer information finns i [Användare som arbetar med samarbete](/help/assets/enable-assets-ultimate.md#onboard-collaborator-users).
 
-Som medarbetare kan du:
+Som medarbetare kan du
 
-* Arbeta med mediefiler från Experience Manager via integreringar av mediefiler som är tillgängliga för ditt företag i andra Adobe-produkter och program som inte kommer från Adobe.
+* Arbeta med material från Experience Manager via integreringar av Assets som är tillgängliga för er organisation i andra Adobe-produkter och program från andra företag än Adobe.
 
-* Skapa och redigera mediefiler med hjälp av inbyggda Adobe Express- och Firefly-funktioner som använder professionellt utformade mallar, varumärkeskit, Adobe Stock-mediefiler och så vidare.
+* Skapa och redigera material med inbyggda Adobe Express och Firefly och använd professionellt designade mallar, märkespaket, Adobe Stock-material med mera.
 
 
-Om din administratör har konfigurerat innehållsnavet för organisationen kan du dessutom komma åt och använda godkända resurser från organisationen via AEM Assets innehållsnavportal. Mer information om funktioner i innehållsnav finns i [Översikt över innehållsnav](/help/assets/product-overview.md).
+Om administratören har konfigurerat Content Hub för din organisation kan du dessutom få åtkomst till och utnyttja godkända resurser från din organisation via AEM Assets Content Hub portal. Mer information om Content Hub-funktioner finns i [Content Hub Overview](/help/assets/product-overview.md).

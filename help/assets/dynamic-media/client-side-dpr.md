@@ -5,14 +5,51 @@ contentOwner: Rick Brough
 feature: Device Pixel Ratio,Smart Imaging
 role: Admin,User
 exl-id: 556710c7-133c-487a-8cd9-009a5912e94c
-source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
 # Om Smart Imaging med enhetspixelproportioner på klientsidan (DPR) {#client-side-dpr}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Den aktuella lösningen för Smart Imaging använder användaragentsträngar för att avgöra vilken typ av enhet (dator, surfplatta, mobil och så vidare) som används.
 
@@ -26,15 +63,15 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
 
 **Återgivna appar på serversidan**
 
-1. Läs in tjänstarbetarens init (`srvinit.js`) genom att inkludera följande skript i sidhuvudsavsnittet på HTML-sidan:
+1. Läs in servicearbetarens init (`srvinit.js`) genom att inkludera följande skript i sidhuvudsavsnittet på din HTML-sida:
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
    ```
 
-   Adobe rekommenderar att du läser in det här skriptet _före_ andra skript så att servicearbetaren börjar initiera omedelbart.
+   Adobe rekommenderar att du läser in det här skriptet _före_ andra skript så att servicearbetaren påbörjar initieringen direkt.
 
-1. Inkludera följande DPR-bildtagg överst i brödavsnittet på HTML-sidan:
+1. Inkludera följande DPR-bildtagg överst i brödavsnittet på din HTML-sida:
 
    ```html
    <img src="aem_dm_dpr_1x.jpg" style="width:1px;height:1px;display:none"
@@ -45,11 +82,11 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
        aem_dm_dpr_5x.jpg 5x">
    ```
 
-   Du måste inkludera den här DPR-bildtaggen _före_ för alla statiska bilder på HTML-sidan.
+   Du måste inkludera den här DPR-bildtaggen _före_ för alla statiska bilder på din HTML-sida.
 
 **Återgivna appar på klientsidan**
 
-1. Inkludera följande DPR-skript i sidhuvudet på HTML-sidan:
+1. Inkludera följande DPR-skript i sidhuvudet på din HTML-sida:
 
    ```javascript
    <script type="text/javascript" src="srvinit.js"></script>
@@ -59,7 +96,7 @@ DPR på klientsidan ger helt korrekta värden och fungerar för alla enheter, oa
    Du kan kombinera båda DPR-skripten till ett för att undvika flera nätverksbegäranden.
 
    Adobe rekommenderar att du läser in dessa _före_ eventuella andra skript på HTML-sidan.
-Adobe rekommenderar också att du Bootstrap under taggen diff HTML i stället för ett body-element i appen. Orsaken är att `dprImageInjection.js` dynamiskt infogar bildtaggen högst upp i brödavsnittet på HTML-sidan.
+Adobe rekommenderar också att du använder Bootstrap under HTML-taggen diff i stället för som ett body-element. Orsaken är att `dprImageInjection.js` dynamiskt infogar bildtaggen högst upp i brödavsnittet på HTML-sidan.
 
 ## Nedladdning av JavaScript-filer {#client-side-dpr-script}
 

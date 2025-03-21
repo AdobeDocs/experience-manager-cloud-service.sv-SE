@@ -4,14 +4,51 @@ description: Versionsinformation för  [!DNL Workfront for Experience Manager en
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
 feature: Release Information
 role: Admin
-source-git-commit: 346f36a476a11dc7fe022df8b7b8df7aff06a2ba
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
 
 # Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector] {#release-notes-enhanced-connector-workfront}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Workfront for Experience Manager enhanced connector].
 
@@ -25,7 +62,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!NOTE]
 >
->AEM 6.4 har nått slutet på det utökade stödet. Se våra [tekniska supportperioder](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=en).
+>AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=en).
 
 >[!IMPORTANT]
 >
@@ -33,7 +70,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 ## Kända fel {#known-issues}
 
-* När du konfigurerar projektlänkade mappar med AEM 6.4, sparar Experience Manager inte värdena för fälten **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]**. Värdet för fältet **[!UICONTROL sub-folders]** uppdateras till **[!UICONTROL undefined]** och värdet för fältet **[!UICONTROL Create linked folder in projects with portfolio]** uppdateras automatiskt till **[!UICONTROL Default Portfolio]** när konfigurationen har sparats.
+* När projektlänkade mappar konfigureras med AEM 6.4 sparar Experience Manager inte värdena för fälten **[!UICONTROL sub-folders]** och **[!UICONTROL Create linked folder in projects with portfolio]**. Värdet för fältet **[!UICONTROL sub-folders]** uppdateras till **[!UICONTROL undefined]** och värdet för fältet **[!UICONTROL Create linked folder in projects with portfolio]** uppdateras automatiskt till **[!UICONTROL Default Portfolio]** när konfigurationen har sparats.
 
 * När du använder den klassiska Workfront-upplevelsen tillåter inte alternativet **[!UICONTROL Send to]** i listrutan **[!UICONTROL More]** att du väljer måldestinationen i Experience Manager. Alternativet **[!UICONTROL Send to]** fungerar korrekt med listrutan **[!UICONTROL Document Actions]**. Alternativet **[!UICONTROL Send to]** fungerar korrekt för listrutan **[!UICONTROL More]** och listrutan **[!UICONTROL Document Actions]** som är tillgänglig i den nya Workfront-upplevelsen.
 
@@ -47,13 +84,13 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 ### Mars 2024-utgåvan {#march-2024-release}
 
 * Problem uppstår vid bearbetning av överföringar av flera resurser från Workfront.
-* Det går inte att lägga till avslutande citattecken när du använder Workfront för att söka efter mappar i Experience Manager i `SERVER_ERROR`.
+* Det går inte att lägga till avslutande citattecken när du använder Workfront för att söka efter mappar i Experience Manager resultat i `SERVER_ERROR`.
 
 ### Februari 2024-utgåvan {#february-2024-release}
 
 * Aktivera växlingsfunktionen så att AEM Cloud-kunder kan konfigurera och konfigurera en anslutning.
 
-* Om du stänger `resourceResolver` utan att uttryckligen stänga den underliggande sessionen orsakar det sessionsläckor i AEM instanser. Det är viktigt att du uttryckligen stänger sessionen, eftersom det inte innebär att sessionen stängs implicit när Resurslösaren stängs automatiskt.
+* Om du stänger `resourceResolver` utan att uttryckligen stänga den underliggande sessionen orsakar det sessionsläckor i AEM-instanser. Det är viktigt att du uttryckligen stänger sessionen, eftersom det inte innebär att sessionen stängs implicit när Resurslösaren stängs automatiskt.
 
 ### Januariversion 2024 {#january-2024-release}
 
@@ -69,38 +106,38 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * Om du tar bort kommentarer om länkade mappresurser på Workfront går det inte att hitta den länkade mappsökvägen på AEM.
 
-* Otillräckligt stöd för stora filresurser i AEM orsakar ett problem med 4 byte-storlek.
+* Otillräckligt stöd för stora filresurser i AEM resulterar i ett problem med 4 byte-storlek.
 
 * Ingen begärandetidsbearbetning för kritiska flöden i länkad mapp, dokumentuppdatering och anteckningsuppdatering.
 
 ### November 2023-utgåvan {#nov-2023-release}
 
-* När du visar listan med AEM mappar tar det mer än en minut att läsa in dialogrutan.
+* När du visar listan över AEM-mappar tar det mer än en minut att läsa in dialogrutan.
 * Autentiserade [!DNL Workfront]-användare får upprepade gånger felloggar för autentiseringsfel.
 
 ### Oktober 2023-versionen {#october-2023-release}
 
-* När händelseprenumerationer är inaktiverade under Avancerade inställningar kan du fortfarande välja alternativen **Prenumerera på dokumentuppdateringshändelser för att uppdatera AEM metadata för resurser**, **Publish alla projektresurser till Brand Portal när projektet har slutförts** och **Aktivera kommentarsynkronisering**.
+* När händelseprenumerationer är inaktiverade under Avancerade inställningar kan du fortfarande välja alternativ för **Prenumerera på dokumentuppdateringshändelser för att uppdatera metadata för AEM-resurser**, **Publicera alla projektresurser till Brand Portal när projektet har slutförts** och **Aktivera kommentarsynkronisering**.
 
-* Vissa av resurserna som lagras i Experience Manager återges inte korrekt när du förhandsgranskar dem i Workfront.
+* Vissa av de mediefiler som lagras i Experience Manager återges inte korrekt när du förhandsgranskar dem i Workfront.
 
-* Vid omkonfigurering av Experience Manager-anslutning med Workfront skapas inte händelseprenumerationer som uppdatering av kommentarsynkronisering, borttagning och dokumentuppdatering.
+* När Experience Manager-anslutningen med Workfront konfigureras om skapas inte händelseprenumerationer som uppdatering av kommentarsynkronisering, borttagning och dokumentuppdatering.
 
 * Större prestandaförbättringar i API för att skapa länkade mappar, uppdatera, aktivera länkade mappar, aktivera och inaktivera kommentarsynkronisering, spara avancerade inställningar på koppling.
 
 ### September 2023-utgåvan {#september-2023-release}
 
-* Med den förbättrade kopplingen för Experience Manager hämtas alla händelseprenumerationer från Workfront samtidigt som en händelseprenumeration för ett projekt tas bort, vilket kan påverka programmets prestanda.
+* Experience Manager förbättrade Connector hämtar alla händelseprenumerationer från Workfront samtidigt som en händelseprenumeration för ett projekt tas bort, vilket kan påverka programmets prestanda.
 
 * När en resurs skickas från Workfront till Experience Manager är resursens MIME-typ inte inställd på attributet `dc:format` i Experience Manager.
 
-* Workfront projekt-ID:n som lagras på den utökade anslutningen Experience Manager innehåller dubbletter.
+* Workfront projekt-ID:n som lagras på Experience Manager utökade anslutning innehåller dubbletter.
 
 ### Augustiversionen 2023 {#august-2023-release}
 
 * Det går inte att skapa länkade mappar i Experience Manager eftersom det inte finns något användarkonto kopplat till den länkade mappen.
 
-* Ansiktsförhållanden under metadatauppdateringar för en resurs i Experience Manager.
+* Ansiktsvillkor under metadatauppdateringar för en resurs i Experience Manager.
 
 ### Juniversion 2023 {#june-2023-release}
 
@@ -129,7 +166,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 * Kommentarsborttagningar i Workfront visas nu i Experience Manager.
 
-* Möjlighet att hantera blockerande nya kunder på Experience Manager as a Cloud Service genom att konfigurera anslutningsprogrammet.
+* Möjlighet att hantera blockerande nya kunder på Experience Manager as a Cloud Service från att konfigurera anslutningsprogrammet.
 
 ### Januariversion 2023 {#january-2022-release}
 
@@ -163,9 +200,9 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 [!DNL Workfront for Experience Manager enhanced connector] version 1.9.5, släppt den 11 november, innehåller följande uppdateringar:
 
-* När du bara definierar ett värde för ett fält med flera värden i Workfront mappas fältvärdet inte korrekt till Experience Manager.
+* När du bara definierar ett värde för ett flervärdesfält i Workfront mappas fältvärdet inte korrekt till Experience Manager.
 
-* Experience Manager visar `SERVER_ERROR` på skärmen **[!UICONTROL Link External Files and Folders]** när resursmapparna öppnas på grund av ogiltig behörighet på `/content/dam/collections`.
+* Experience Manager visar `SERVER_ERROR` på skärmen **[!UICONTROL Link External Files and Folders]** när resursmapparna öppnas på grund av ogiltig behörighet för `/content/dam/collections`.
 
 * Om du aktiverar alternativet **[!UICONTROL Publish Assets to Brand Portal]** på konfigurationssidan för Workfront Enhanced Connector skapas en felaktig händelse. Händelsen tas inte bort även sedan alternativet inaktiverats.
 
@@ -214,11 +251,11 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 [!DNL Workfront for Experience Manager enhanced connector] version 1.9.3, släppt den 16 september, innehåller följande uppdateringar:
 
 * Det går inte att överföra en fil som är större än 8 GB.
-* Problem vid automatisk publicering av resurser som skickas från Workfront till AEM.
+* Problem vid automatisk publicering av material som skickas från Workfront till AEM.
 * Fältet Rotsökväg är inte tillgängligt för fältet Taggar när du redigerar ett standardformulär för metadataschema.
 * Problem med att lägga till nya versioner i Workfront med AEM arbetsflöden.
-* När du utför en AEM sökning efter resurser som är tillgängliga i Workfront visas ett felmeddelande AEM.
-* När du skapar ett AEM arbetsflöde för att skapa uppgifter från en resurs och inte definierar något överordnat aktivitetsnamn, skapas inte uppgiften i Workfront.
+* När du utför en sökning i AEM efter resurser som är tillgängliga i Workfront visas ett felmeddelande i AEM.
+* När du skapar ett AEM-arbetsflöde för att skapa uppgifter från en resurs och inte definierar något överordnat uppgiftsnamn, skapas inte uppgiften i Workfront.
 
 ### Version från augusti 2022 {#august-2022-release}
 

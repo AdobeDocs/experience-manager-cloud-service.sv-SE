@@ -1,24 +1,61 @@
 ---
-title: Dynamic Media bildprofiler
-description: Lär dig hur du skapar Dynamic Media-bildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller båda. Använd sedan profilen på en mapp med bildresurser.
+title: Dynamiska mediebildprofiler
+description: Lär dig hur du skapar dynamiska mediebildprofiler som innehåller inställningar för oskarp mask och smart beskärning eller smarta färgrutor, eller båda. Använd sedan profilen på en mapp med bildresurser.
 contentOwner: Rick Brough
 feature: Asset Management,Image Profiles,Renditions,Best Practices
 role: User
 exl-id: 0856f8a1-e0a9-4994-b338-14016d2d67bd
-source-git-commit: 0ad506fc72cb73d3a6a8cdd9eee50f213b52665e
+source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
 workflow-type: tm+mt
-source-wordcount: '3372'
+source-wordcount: '3418'
 ht-degree: 0%
 
 ---
 
-# Dynamic Media bildprofiler {#image-profiles}
+# Dynamiska mediebildprofiler {#image-profiles}
+
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 När du överför bilder kan du beskära bilden automatiskt vid överföring genom att tillämpa en bildprofil på mappen.
 
 >[!IMPORTANT]
 >
->Bildprofiler kan inte användas för PDF-, animerade GIF- eller INDD-filer (Adobe InDesign).
+>Bildprofiler gäller inte för PDF-, GIF- eller INDD-filer (Adobe InDesign).
 
 ## Oskarp mask, alternativ {#unsharp-mask}
 
@@ -61,16 +98,16 @@ När du implementerar smart beskärning på bilder rekommenderar Adobe följande
 | --- | --- | --- |
 | **Bild** - antal smarta beskärningar per bild | 5 | 100 |
 
-Se även [Dynamic Media-begränsningar](/help/assets/dynamic-media/limitations.md).
+Se även [Dynamiska mediebegränsningar](/help/assets/dynamic-media/limitations.md).
 
 <!-- CQDOC-16069 for the paragraph directly below -->
 
 Smarta beskärningskoordinater är proportionella. För inställningarna för smart beskärning i en bildprofil skickas samma proportioner till Dynamic Media om proportionerna är desamma för de tillagda dimensionerna i bildprofilen. Adobe rekommenderar att du använder samma beskärningsområde. Om du gör det ser du till att de olika måtten som används i bildprofilen inte påverkas.
 
-Varje smart beskärningsgenerering som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom smart beskärning kan användas på mappnivå rekommenderar Adobe att endast använda den för mappar där det behövs.
+Varje smart beskärningsgenerering som du skapar kräver extra bearbetning. Om du till exempel lägger till mer än fem proportioner för smart beskärning kan det leda till en långsam intag av resurser. Det kan också ge ökad belastning på systemen. Eftersom smart beskärning kan användas på mappnivå rekommenderar Adobe att du bara använder den för mappar där det behövs.
 
 **Riktlinjer för att definiera smart beskärning i en bildprofil**
-För att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar rekommenderar Adobe följande riktlinjer och tips:
+Adobe rekommenderar följande riktlinjer och tips för att behålla kontrollen över användningen av Smart Crop och för att optimera bearbetningstiden och lagringen av beskärningar:
 
 * Bildresurser som ska ha en smart beskärning måste vara minst 50 x 50 pixlar eller större.
 * Helst bör du ha 10-15 smarta beskärningar per bild som optimerar för skärmproportioner och bearbetningstid.
@@ -90,7 +127,7 @@ Du kan välja mellan två bildbeskärningsalternativ: pixelbeskärning och smart
 | --- | --- | --- |
 | **[!UICONTROL Pixel Crop]** | Beskär bilder i grupp endast baserat på dimensioner. | I listrutan **[!UICONTROL Cropping Options]** väljer du **[!UICONTROL Pixel Crop]**.<br>Om du vill beskära från sidorna av en bild anger du antalet pixlar som ska beskäras från valfri sida eller från varje sida av bilden. Hur mycket av bilden som beskärs beror på bildfilens ppi-inställning (pixlar per tum).<br>En bildprofils pixelbeskärning återges på följande sätt:<br> ・ är Överkant, Underkant, Vänster och Höger.<br> ・ uppe till vänster räknas som `0,0` och pixelbeskärningen beräknas därifrån.<br> ・ startpunkt för beskärning: Vänster är X och Överkant är Y<br> ・ Vågrät beräkning: vågrät pixelstorlek för originalbilden minus Vänster och sedan minus Höger.<br> ・ Lodrät beräkning: lodrät pixelhöjd minus Överkant och sedan minus Underkant.<br>Anta till exempel att du har en bild på 4 000 x 3 000 pixlar. Använd värden: Top=250, Bottom=500, Left=300, Right=700.<br>Från övre vänstra (300,250) beskär med fyllningsutrymmet (4000-300-700, 3000-250-500 eller 3000,2250). |
 | **[!UICONTROL Smart Crop]** | Massbeskär bilder baserat på deras visuella fokalpunkt. | Smart Crop använder intelligensen i Adobe Sensei för att automatisera beskärningen av bilder snabbt och enkelt. Smart Crop identifierar och beskär automatiskt bilder till fokuspunkten i alla bilder för att uppnå den avsedda intressepunkten, oavsett skärmstorlek.<br>Välj **[!UICONTROL Smart Crop]** i listrutan **[!UICONTROL Cropping Options]** och aktivera sedan funktionen till höger om **[!UICONTROL Responsive Image Crop]**.<br>Standardbrytpunktsstorlekarna (**[!UICONTROL Large]**, **[!UICONTROL Medium]**, **[!UICONTROL Small]**) täcker alla storlekar som används i de flesta bilder på mobila enheter och surfplattor, datorer och banderoller. Om du vill kan du redigera standardnamnen Stora, Medium och Små.<br>Om du vill lägga till fler brytpunkter väljer du **[!UICONTROL Add Crop]**. Om du vill ta bort en beskärning väljer du ikonen Skräpburk. |
-| **[!UICONTROL Color and Image Swatch]** | Med Massor genereras en färgruta för varje bild. | **Obs!**: Smarta färgrutor stöds inte i Dynamic Media Classic.<br>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller struktur.<br>Välj **[!UICONTROL Smart Crop]** i listrutan **[!UICONTROL Cropping Options]**. Aktivera funktionen till höger om **[!UICONTROL Color and Image Swatch]**. Ange ett pixelvärde i textrutorna **[!UICONTROL Width]** och **[!UICONTROL Height]**.<br>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara med funktionen **[!UICONTROL Copy URL]** . Använd en egen visningskomponent för att återge färgrutan på webbplatsen. Undantaget till den här regeln är Carousel banners. Dynamic Media tillhandahåller visningskomponenten för den färgruta som används i karusellbanderoller.<br><br>**Använda färgrutor för bilder**<br> URL:en för färgrutor för bilder är enkel:<br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>Där `:Swatch` läggs till i resursbegäran.<br><br>**Använda färgrutor**<br> Om du vill använda färgrutor gör du en `req=userdata`-förfrågan med följande:<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>Följande är till exempel en färgruteresurs i Dynamic Media Classic:<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>Och här är färgruteresursens motsvarande `req=userdata` URL:<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br>Svaret `req=userdata` är följande:<br>`SmartCropDef=Swatch`<br>`SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br>Du kan även begära ett `req=userdata`-svar i antingen XML- eller JSON-format, som i följande: respektive URL-exempel:<br> ・`https://my.company.com</code>:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br> ・`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**Obs!** Du måste skapa en egen WCM-komponent för att begära en färgruta och tolka attributet `SmartSwatchColor` , som representeras av ett 24-bitars RGB hexadecimalt värde.<br>Se även [`userdata`](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/req/r-userdata) i referenshandboken för visningsprogram. |
+| **[!UICONTROL Color and Image Swatch]** | Med Massor genereras en färgruta för varje bild. | **Obs!**: Smarta färgrutor stöds inte i Dynamic Media Classic.<br>Hitta och generera högkvalitativa färgrutor automatiskt från produktbilder som visar färg eller struktur.<br>Välj **[!UICONTROL Smart Crop]** i listrutan **[!UICONTROL Cropping Options]**. Aktivera funktionen till höger om **[!UICONTROL Color and Image Swatch]**. Ange ett pixelvärde i textrutorna **[!UICONTROL Width]** och **[!UICONTROL Height]**.<br>Alla bildbeskärningar är tillgängliga från renderingslisten, men färgrutor används bara med funktionen **[!UICONTROL Copy URL]** . Använd en egen visningskomponent för att återge färgrutan på webbplatsen. Undantaget till den här regeln är Carousel banners. Dynamic Media är visningskomponenten för den färgruta som används i karusellbanderoller.<br><br>**Använda färgrutor för bilder**<br> URL:en för färgrutor för bilder är enkel:<br>`/is/image/company/&lt;asset_name&gt;:Swatch`<br>Där `:Swatch` läggs till i resursbegäran.<br><br>**Använda färgrutor**<br> Om du vill använda färgrutor gör du en `req=userdata`-förfrågan med följande:<br>`/is/image/&lt;company_name&gt;/&lt;swatch_asset_name&gt;:Swatch?req=userdata`<br><br>Följande är till exempel en färgruteresurs i Dynamic Media Classic:<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch`<br>Och här är färgruteresursens motsvarande `req=userdata` URL:<br>`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata`<br>Svaret `req=userdata` är följande:<br>`SmartCropDef=Swatch`<br>`SmartCropHeight=200.0`<br>`SmartCropRect=0.421671,0.389815,0.0848564,0.0592593,200,200`<br>`SmartCropType=Swatch`<br>`SmartCropWidth=200.0`<br>`SmartSwatchColor=0xA56DB2`<br>Du kan även begära ett `req=userdata`-svar i antingen XML- eller JSON-format, som i följande: respektive URL-exempel:<br> ・`https://my.company.com</code>:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,json`<br> ・`https://my.company.com:8080/is/image/DemoCo/Sleek:Swatch?req=userdata,xml`<br><br>**Obs!** Du måste skapa en egen WCM-komponent för att begära en färgruta och tolka attributet `SmartSwatchColor` , som representeras av ett 24-bitars hexadecimalt RGB-värde.<br>Se även [`userdata`](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/req/r-userdata) i referenshandboken för visningsprogram. |
 | **[!UICONTROL Preserve crop content across target resolutions]** | Bevara beskärningsinnehåll i samma proportioner | Använd när du skapar en smart beskärningsprofil.<br>Om du vill generera nytt beskärningsinnehåll - samtidigt som fokalpunkten behålls - för en given proportion i olika upplösningar avmarkerar du det här alternativet <br>Om du avmarkerar den här rutan kontrollerar du att den ursprungliga bildupplösningen är högre än de upplösningar som du anger för den smarta beskärningsprofilen.<br><br>Anta att du har angett proportionerna 600 x 600 (stor), 400 x 400 (Medium) och 300 x 300 (liten).<br>När alternativet **[!UICONTROL Preserve crop content across target resolutions]** är *markerat* ser du samma beskärning i alla tre upplösningarna, som i följande exempelutdata för bilder (endast i illustrativa syften):<br>![Alternativet markerat](/help/assets/dynamic-media/assets/preserve-checked.png)<br><br>När alternativet **[!UICONTROL Preserve crop content across target resolutions]** är *avmarkerat* är beskärningsinnehållet nytt för alla tre upplösningarna, som i följande exempelutdata för bilder (endast i illustrativa syften):<br>![Alternativet avmarkerat ](/help/assets/dynamic-media/assets/preserve-unchecked.png) |
 
 ### Bildfilformat som stöds för Smart Beskärning och Färgrutor
@@ -106,7 +143,7 @@ Den maximala upplösningen för indatafilens storlek som stöds är 16 kB.
 | BMP | `.bmp` | image/bmp | sRGB | 4 GB | Ja |
 | CMYK | | | | | Ja |
 | EPS | | | | | Nej |
-| GIF | `.gif` | image/gif | sRGB | 15 GB | Ja. Den första bildrutan i det animerade GIF används för återgivningen. Du kan inte konfigurera eller ändra den första bildrutan. |
+| GIF | `.gif` | image/gif | sRGB | 15 GB | Ja. Den första bildrutan i den animerade GIF används för återgivningen. Du kan inte konfigurera eller ändra den första bildrutan. |
 | JPEG | `.jpg` och `.jpeg` | image/jpeg | sRGB | 15 GB | Ja |
 | PNG | `.png` | bild/png | sRGB | 15 GB | Ja |
 | PSD | `.psd` | image/vnd.adobe.photoshop | sRGB<br>CMYK | 2 GB | Ja |
@@ -114,15 +151,15 @@ Den maximala upplösningen för indatafilens storlek som stöds är 16 kB.
 | TIFF | `.tif` och `.tiff` | bild/tiff | sRGB<br>CMYK | 4 GB | Ja |
 | WebP/Animerad WebP | | | | | Nej |
 
-## Skapa Dynamic Media-bildprofiler {#creating-image-profiles}
+## Skapa dynamiska mediebildprofiler {#creating-image-profiles}
 
 Mer information om hur du definierar avancerade bearbetningsparametrar för andra resurstyper finns i [Konfigurera resursbearbetning](config-dm.md#configuring-asset-processing).
 
-Se [Om Dynamic Media bildprofiler och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md).
+Se [Om dynamiska mediebildprofiler och videoprofiler](/help/assets/dynamic-media/about-image-video-profiles.md).
 
 Se även [Bästa metoder för att ordna din digitala Assets för att använda Bearbeta profiler](/help/assets/organize-assets.md).
 
-**Så här skapar du Dynamic Media-bildprofiler:**
+**Så här skapar du dynamiska medieavbildningsprofiler:**
 
 1. Välj Adobe Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Om du vill lägga till en bildprofil väljer du **[!UICONTROL Create]**.
@@ -138,16 +175,16 @@ Se även [Bästa metoder för att ordna din digitala Assets för att använda Be
 
 1. Välj **[!UICONTROL Save]**. Den skapade profilen visas i listan med tillgängliga profiler.
 
-## Redigera eller ta bort Dynamic Media bildprofiler {#editing-or-deleting-image-profiles}
+## Redigera eller ta bort dynamiska mediebildprofiler {#editing-or-deleting-image-profiles}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Markera den bildprofil som du vill redigera eller ta bort. Om du vill redigera den väljer du **[!UICONTROL Edit Image Processing Profile]**. Om du vill ta bort den väljer du **[!UICONTROL Delete Image Processing Profile]**.
 
    ![chlimage_1-254](assets/chlimage_1-254.png)
 
 1. Spara ändringarna om du redigerar dem. Bekräfta att du vill ta bort profilen om du tar bort den.
 
-## Använd en Dynamic Media-bildprofil på mappar {#applying-an-image-profile-to-folders}
+## Använd en dynamisk mediebildprofil för mappar {#applying-an-image-profile-to-folders}
 
 När du tilldelar en bildprofil till en mapp ärver alla undermappar automatiskt profilen från den överordnade mappen. Därför kan du bara tilldela en bildprofil till en mapp. Fundera därför noga över mappstrukturen för var du överför, lagrar, använder och arkiverar resurser.
 
@@ -161,7 +198,7 @@ Du kan tillämpa bildprofiler på specifika mappar eller globalt på alla resurs
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig bildprofil som du senare ändrade. Se [Bearbeta resurser i en mapp igen när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-### Använd Dynamic Media-bildprofiler på specifika mappar {#applying-image-profiles-to-specific-folders}
+### Använd dynamiska mediebildprofiler på specifika mappar {#applying-image-profiles-to-specific-folders}
 
 Du kan tillämpa en bildprofil på en mapp från menyn **[!UICONTROL Tools]** eller från **[!UICONTROL Properties]** om du är i mappen.
 
@@ -169,18 +206,18 @@ Mappar med en tilldelad profil visar profilens namn direkt under mappnamnet.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp igen när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-#### Använd Dynamic Media-bildprofiler på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
+#### Använd dynamiska mediebildprofiler på mappar från användargränssnittet för profiler {#applying-image-profiles-to-folders-from-profiles-user-interface}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Välj den bildprofil som du vill använda för en eller flera mappar.
 
    ![chlimage_1-255](assets/chlimage_1-255.png)
 
 1. Markera **[!UICONTROL Apply Processing Profile to Folders]** och markera den eller de mappar som du vill använda för att ta emot de nyligen överförda resurserna och välj **[!UICONTROL Apply]**. Mappar med en tilldelad profil visar profilens namn direkt under mappnamnet.
 
-#### Använd Dynamic Media-bildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
+#### Använd dynamiska mediebildprofiler på mappar från Egenskaper {#applying-image-profiles-to-folders-from-properties}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Assets]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Assets]**.
 1. Navigera till en *mapp* (inte en resurs) som du vill tillämpa en bildprofil på.
 1. Beroende på vilken vy du befinner dig i gör du något av följande:
    * Håll pekaren över mappen i kortvyn och markera den sedan.
@@ -192,13 +229,13 @@ Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du
 
    ![chlimage_1-256](assets/chlimage_1-256.png)
 
-### Använd en Dynamic Media-bildprofil globalt {#applying-an-image-profile-globally}
+### Använd en dynamisk mediebildprofil globalt {#applying-an-image-profile-globally}
 
 Förutom att tillämpa en profil på en mapp kan du även tillämpa en profil globalt. Den valda profilen används för allt innehåll som överförs till Experience Manager Assets i alla mappar.
 
 Du kan bearbeta resurser i en mapp som redan har en befintlig videoprofil som du senare ändrade. Se [Bearbeta resurser i en mapp igen när du har redigerat dess bearbetningsprofil](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
-**Så här använder du en Dynamic Media-bildprofil globalt:**
+**Så här använder du en dynamisk mediabildprofil globalt:**
 
 1. Gör något av följande:
 
@@ -225,7 +262,7 @@ När du har redigerat en smart beskärning och sparat sprids ändringen överall
 >[!IMPORTANT]
 >
 >När du justerar det smarta beskärningsfönstret för en resurs sparas ändringarna. Dessa redigeringar förblir intakta även om du bearbetar om resursen senare. Om du däremot redigerar bredd, höjd eller både och i området **[!UICONTROL Responsive Image Crop]** i bildprofilen kan resursen bearbetas om.
->Se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+>Se [Bearbeta dynamiska medieresurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
 Kör om smart beskärning för att generera ytterligare beskärningar om det behövs.
 
@@ -233,7 +270,7 @@ Se även [Redigera den smarta beskärningen eller den smarta färgrutan för fle
 
 **Så här redigerar du den smarta beskärningen eller den smarta färgrutan för en enskild bild:**
 
-1. Markera Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till den mapp där en smart beskärningsbildprofil eller en smart färgrutebildprofil används.
+1. Markera Experience Manager-logotypen och navigera till **[!UICONTROL Assets]**, och sedan till den mapp där en smart beskärning eller en smart färgrutebildprofil används.
 1. Markera mappen om du vill öppna dess innehåll.
 1. Markera den bild vars smarta beskärning eller smarta färgruta du vill justera.
 1. Välj **[!UICONTROL Smart Crop]** i verktygsfältet.
@@ -265,13 +302,13 @@ När du har redigerat en smart beskärning och sparat sprids ändringen överall
 >[!IMPORTANT]
 >
 >När du manuellt justerar det smarta beskärningsfönstret för flera resurser sparas ändringarna. Dessa redigeringar förblir intakta även om du bearbetar om materialet senare. Om du däremot redigerar bredd, höjd eller både och i området **[!UICONTROL Responsive Image Crop]** i bildprofilen, bearbetas dessa resurser om.
->Se [Bearbeta Dynamic Media-resurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
+>Se [Bearbeta dynamiska medieresurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
 Kör om smart beskärning för att generera ytterligare beskärningar om det behövs.
 
 **Så här redigerar du den smarta beskärningen eller den smarta färgrutan för flera bilder:**
 
-1. Markera Experience Manager-logotypen och navigera till **[!UICONTROL Assets]** och sedan till en mapp där en smart beskärningsbildprofil eller en smart färgrutebildprofil används.
+1. Markera Experience Manager-logotypen och navigera till **[!UICONTROL Assets]**, och sedan till en mapp där en smart beskärningsbildprofil eller en smart färgrutebildprofil används.
 1. I mappen väljer du ikonen **[!UICONTROL More Actions]** (..) och sedan **[!UICONTROL Smart Crop]**.
 
 1. Gör något av följande på sidan **[!UICONTROL Edit Smart Crops]**:
@@ -316,15 +353,15 @@ När du tar bort en bildprofil från en mapp ärver alla undermappar automatiskt
 
 Du kan ta bort en bildprofil från en mapp från menyn **[!UICONTROL Tools]** eller från **[!UICONTROL Properties]** om du är i mappen.
 
-### Ta bort Dynamic Media Image Profiles från mappar via användargränssnittet Profiles {#removing-image-profiles-from-folders-via-profiles-user-interface}
+### Ta bort dynamiska mediebildprofiler från mappar via profilanvändargränssnittet {#removing-image-profiles-from-folders-via-profiles-user-interface}
 
-1. Markera Experience Manager-logotypen och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
+1. Välj Experience Manager logotyp och gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Profiles]**.
 1. Markera den bildprofil som du vill ta bort från en eller flera mappar.
 1. Markera **[!UICONTROL Remove Processing Profile from Folders]** och markera den eller de mappar som du vill använda för att ta bort profilen från och välj **[!UICONTROL Remove]**.
 
    Du kan bekräfta att bildprofilen inte längre används för en mapp eftersom namnet inte längre visas under mappnamnet.
 
-### Ta bort Dynamic Media-bildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
+### Ta bort dynamiska mediebildprofiler från mappar via Egenskaper {#removing-image-profiles-from-folders-via-properties}
 
 1. Markera Experience Manager-logotypen, navigera till **[!UICONTROL Assets]** och sedan till den mapp som du vill ta bort en bildprofil från.
 1. Markera kryssmarkeringen för att markera mappen i mappen och välj sedan **[!UICONTROL Properties]**.

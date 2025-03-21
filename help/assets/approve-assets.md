@@ -3,23 +3,57 @@ title: Godkänn resurser i Experience Manager
 description: Lär dig godkänna resurser i  [!DNL Experience Manager].
 role: User
 exl-id: fe61a0f1-94d3-409a-acb9-195979668c25
-source-git-commit: 28ba98828cfa34933a2ec4f5d9b7d9681d42fa5a
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
 
 # Godkänn resurser i [!DNL Experience Manager]
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 >[!AVAILABILITY]
 >
 >Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
 >
->[!BADGE Dynamic Media med OpenAPI-funktionshandboken PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
+>[!BADGE Dynamiska media med OpenAPI-funktioner - guide för PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
 Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkestillgångarna. Det är bara en godkänd och den senaste versionen av resursen som är tillgänglig för användning, vilket garanterar ett enhetligt varumärke i alla kanaler och tillämpningar.
 
@@ -27,7 +61,7 @@ Ni kan godkänna mediefiler i AEM Assets för att effektivisera resurshanteringe
 
 ## Innan du börjar {#pre-requisites}
 
-Du måste ha åtkomst till AEM Assets as a Cloud Service och behörighet för att redigera egenskapen **[!UICONTROL Review Status]** för en resurs.
+Du måste ha tillgång till AEM Assets as a Cloud Service och behörighet att redigera egenskapen **[!UICONTROL Review Status]** för en resurs.
 
 ## Konfiguration
 
@@ -74,7 +108,7 @@ Så här godkänner du resurser i [!DNL Experience Manager Admin view]:
 Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt. Du kan massgodkänna resurser för att snabba upp godkännandeprocessen, spara tid och öka produktiviteten.
 <br>Följ de här stegen för att godkänna gruppresurser i [!DNL Experience Manager Admin view]:
 
-1. Skapa en mapp i författarmiljön (https://author-pXXX-eYYY.adobeaemcloud.com). Ersätt _XXX_ med ditt program-ID och _YY_ med miljö-ID från Experience Manager.
+1. Skapa en mapp i författarmiljön (https://author-pXXX-eYYY.adobeaemcloud.com). Ersätt _XXX_ med ditt program-ID och _YYY_ med miljö-ID från Experience Manager.
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Metadata Profiles]**.
 1. Klicka på **[!UICONTROL Create]** överst till höger på sidan.
 1. Lägg till en profiltitel och klicka på **[!UICONTROL Create]**. Metadataprofilen har skapats.
@@ -112,9 +146,9 @@ På samma sätt kan du gruppgodkänna resurser i en mapp i Assets-vyn:
 
 1. Välj **[!UICONTROL Approved]** i fältet **[!UICONTROL Status]** som är tillgängligt i avsnittet [!UICONTROL Properties] i den högra rutan.
 
-   Om du väljer status som `Approved` och om [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) eller [Content Hub](/help/assets/product-overview.md), eller båda är aktiverade för din Experience Manager Assets, kan du visa `Delivery` - och `Content Hub`-alternativ som är tillgängliga i fältet **[!UICONTROL Approval Target]**.
+   Om du väljer status som `Approved` och om [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) eller [Content Hub](/help/assets/product-overview.md), eller båda är aktiverade för din Experience Manager Assets, kan du visa `Delivery` - och `Content Hub`-alternativ som är tillgängliga i fältet **[!UICONTROL Approval Target]**.
 
-   * Välj **[!UICONTROL Delivery]** om du vill göra resurserna tillgängliga för både Dynamic Media med OpenAPI-funktioner och Content Hub. Om du inte har Content Hub aktiverat kan du bara göra resurserna tillgängliga för Dynamic Media med OpenAPI-funktioner genom att välja det här alternativet.
+   * Välj **[!UICONTROL Delivery]** om du vill göra resurserna tillgängliga för både Dynamic Media med OpenAPI-funktioner och Content Hub. Om du inte har Content Hub aktiverat kan du bara välja det här alternativet för att göra resurserna tillgängliga för Dynamic Media med OpenAPI-funktioner.
    * Välj **[!UICONTROL Content Hub]** om du vill göra resurserna tillgängliga för Content Hub.
 
    ![Godkännandestatus](/help/assets/assets/approval-status-delivery.png)
@@ -146,4 +180,4 @@ Så här kopierar du en leverans-URL för en godkänd resurs i databasen:
    >
    Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
 
-Mer information om andra återgivningar som visas på panelen Dynamic Media finns i [Visa och hämta Dynamic Media-återgivningar](/help/assets/renditions.md#view-download-dm-renditions).
+Mer information om andra återgivningar som visas i panelen Dynamiska media finns i [Visa och hämta dynamiska medieåtergivningar](/help/assets/renditions.md#view-download-dm-renditions).

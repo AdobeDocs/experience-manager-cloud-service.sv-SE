@@ -1,41 +1,75 @@
 ---
 title: Hantera publikation
-description: Publish eller avpublicera material till Experience Manager Assets, Dynamic Media och Brand Portal
+description: Publicera eller avpublicera material på Experience Manager Assets, Dynamic Media och Brand Portal
 mini-toc-levels: 1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User, Architect, Admin
 exl-id: 691a0925-0061-4c62-85ac-8257b96dddf2
-source-git-commit: e3fd0fe2ee5bad2863812ede2a294dd63864f3e2
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1500'
 ht-degree: 1%
 
 ---
 
 # Hantera publicering i Experience Manager Assets {#manage-publication-in-aem}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Som [!DNL Adobe Experience Manager Assets]-administratör kan du publicera resurser och mappar som innehåller resurser från författarinstansen till [!DNL Experience Manager Assets], [!DNL Dynamic Media] och [!DNL Brand Portal]. Du kan även schemalägga publicering av en resurs eller mapp vid ett senare datum eller tid. När de har publicerats kan användarna komma åt och distribuera resurserna vidare till andra användare. Som standard kan du publicera resurser och mappar till [!DNL Experience Manager Assets]. Du kan dock konfigurera [!DNL Experience Manager Assets] så att publicering till [[!DNL Dynamic Media]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/config-dm.html) och [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html) aktiveras.
 
 Du kan publicera eller avpublicera resurser på resurs- eller mappnivå med något av alternativen **[!UICONTROL Quick Publish]** eller **[!UICONTROL Manage Publication]** i [!DNL Experience Manager Assets]-gränssnittet. Om du gör senare ändringar i den ursprungliga resursen eller mappen i [!DNL Experience Manager Assets] återspeglas inte ändringarna i publiceringsinstansen förrän du publicerar om från [!DNL Experience Manager Assets]. Det ser till att ändringar som pågår inte är tillgängliga i publiceringsinstansen. Endast godkända ändringar som publiceras av en administratör är tillgängliga i publiceringsinstansen.
 
-* [Publish-resurser med Quick Publish](#quick-publish)
-* [Publish-resurser med Hantera publikation](#manage-publication)
-* [Publish-resurser senare](#publish-assets-later)
-* [Publish-material till Dynamic Media](#publish-assets-to-dynamic-media)
-* [Publish-material till Brand Portal](#publish-assets-to-brand-portal)
+* [Publicera resurser med Snabbpublicering](#quick-publish)
+* [Publicera resurser med Hantera publikation](#manage-publication)
+* [Publicera resurser senare](#publish-assets-later)
+* [Publicera material till Dynamic Media](#publish-assets-to-dynamic-media)
+* [Publicera material i Brand Portal](#publish-assets-to-brand-portal)
 * [Begär publikation](#request-publication)
 * [Begränsningar och tips](#limitations-and-tips)
 
-## Publish-resurser med Quick Publish {#quick-publish}
+## Publicera resurser med Snabbpublicering {#quick-publish}
 
 Med Snabb publicering kan du publicera innehåll direkt på det valda målet. Navigera från konsolen [!DNL Experience Manager Assets] till den överordnade mappen och markera alla resurser eller mappar som du vill publicera. Klicka på alternativet **[!UICONTROL Quick Publish]** i verktygsfältet och välj mål i listrutan där du vill publicera resurserna.
 
-![Snabb Publish](assets/quick-publish-to-aem.png)
+![Snabbpublicering](assets/quick-publish-to-aem.png)
 
-## Publish-resurser med Hantera publikation {#manage-publication}
+## Publicera resurser med Hantera publikation {#manage-publication}
 
 Med Hantera publicering kan du publicera eller avpublicera innehåll till och från det valda målet, [lägga till innehåll](#add-content) i publiceringslistan från hela DAM-databasen, [inkludera mappinställningar](#include-folder-settings) för att publicera innehåll från de valda mapparna och använda filter samt [schemalägga publicering](#publish-assets-later) för ett senare datum eller en senare tidpunkt.
 
@@ -46,17 +80,17 @@ Navigera från konsolen [!DNL Experience Manager Assets] till den överordnade m
 Följande alternativ är tillgängliga i gränssnittet [!UICONTROL Manage Publication]:
 
 * [!UICONTROL Actions]
-   * `Publish`: Publish-resurser och -mappar till det valda målet
+   * `Publish`: Publicera resurser och mappar till det valda målet
    * `Unpublish`: Avpublicera resurser och mappar från målet
 
 * [!UICONTROL Destination]
-   * `Publish`: Publish-resurser och -mappar till [!DNL Experience Manager Assets] (`AEM`)
-   * `Dynamic Media`: Publish-resurser till [!DNL Dynamic Media]
-   * `Brand Portal`: Publish resurser och mappar till [!DNL Brand Portal]
+   * `Publish`: Publicera resurser och mappar till [!DNL Experience Manager Assets] (`AEM`)
+   * `Dynamic Media`: Publicera resurser på [!DNL Dynamic Media]
+   * `Brand Portal`: Publicera resurser och mappar till [!DNL Brand Portal]
 
 * [!UICONTROL Scheduling]
-   * `Now`: Publish-resurser omedelbart
-   * `Later`: Publish-resurser baserade på `Activation`-datum eller -tid
+   * `Now`: Publicera resurser omedelbart
+   * `Later`: Publicera resurser baserat på `Activation`-datum eller -tid
 
 Klicka på **[!UICONTROL Next]** om du vill fortsätta. Baserat på markeringen visar fliken **[!UICONTROL Scope]** olika alternativ. Alternativen för **[!UICONTROL Add Content]** och **[!UICONTROL Include Folder Settings]** är bara tillgängliga för publicering av resurser och mappar till [!DNL Experience Manager Assets] (`Destination: Publish`).
 
@@ -95,7 +129,7 @@ Only the selected folder content and references are published.
 
 När du har använt filtren klickar du på **[!UICONTROL OK]** och sedan på **[!UICONTROL Publish]**. När du klickar på knappen Publicera visas ett bekräftelsemeddelande `Resource(s) have been scheduled for publication`. De markerade resurserna och (eller) mapparna publiceras till det definierade målet baserat på schemaläggaren (`Now` eller `Later`). Logga in på din publiceringsinstans för att verifiera att resurserna och (eller) mapparna har publicerats.
 
-![Publish till AEM](assets/manage-publication-publish-aem.png)
+![Publicera till AEM](assets/manage-publication-publish-aem.png)
 
 I bilden ovan kan du se olika värden för attributet **[!UICONTROL Publish Target]**. Låt oss komma ihåg att du har valt att publicera till [!DNL Experience Manager Assets] (`Destination: Publish`). Varför visas då bara en mapp och en resurs som publiceras till `AEM` och de andra två resurserna publiceras till både `AEM` och `Dynamic Media`?
 
@@ -105,12 +139,12 @@ I följande tabell förklaras hur publikationen publiceras beroende på definier
 
 | [!UICONTROL Destination] | [!UICONTROL Dynamic Media Publish mode] | [!UICONTROL Publish Target] | Tillåtet innehåll |
 | --- | --- | --- | --- |
-| Publish | Selektiv Publish | `AEM` | Assets och(eller) mappar |
-| Publish | Omedelbar | `AEM` och `Dynamic Media` | Assets och(eller) mappar |
-| Publish | Vid aktivering | `AEM` och `Dynamic Media` | Assets och(eller) mappar |
-| Dynamic Media | Selektiv Publish | `Dynamic Media` | Assets |
-| Dynamic Media | Omedelbar | `None` | Det går inte att publicera resurserna |
-| Dynamic Media | Vid aktivering | `None` | Det går inte att publicera resurserna |
+| Publicera | Selektiv publicering | `AEM` | Assets och(eller) mappar |
+| Publicera | Omedelbar | `AEM` och `Dynamic Media` | Assets och(eller) mappar |
+| Publicera | Vid aktivering | `AEM` och `Dynamic Media` | Assets och(eller) mappar |
+| Dynamiska medier | Selektiv publicering | `Dynamic Media` | Assets |
+| Dynamiska medier | Omedelbar | `None` | Det går inte att publicera resurserna |
+| Dynamiska medier | Vid aktivering | `None` | Det går inte att publicera resurserna |
 
 >[!NOTE]
 >
@@ -123,7 +157,7 @@ I följande tabell förklaras hur publikationen publiceras beroende på definier
 
 Låt oss nu ändra **[!UICONTROL Destination]** i användningsfallet ovan till **[!UICONTROL Dynamic Media]** och verifiera resultatet. På så sätt publiceras bara resursen i mappen `Selective Publish` till [!DNL Dynamic Media]. Resurserna i mapparna `Immediate` och `Upon Activation` publiceras inte, utan återspeglas i `None`.
 
-![Publish till Dynamic Media](assets/manage-publication-dynamic-media.png)
+![Publicera till dynamiska media](assets/manage-publication-dynamic-media.png)
 
 >[!NOTE]
 >
@@ -137,7 +171,7 @@ Låt oss nu ändra **[!UICONTROL Destination]** i användningsfallet ovan till *
 >
 >Du kan dock ta bort den befintliga anpassningen och använda de nya [!DNL Manager Publication]-funktionerna.
 
-## Publish-resurser senare {#publish-assets-later}
+## Publicera resurser senare {#publish-assets-later}
 
 Så här schemalägger du publiceringsarbetsflödet för resurser till ett senare datum eller en senare tid:
 
@@ -156,7 +190,7 @@ Så här schemalägger du publiceringsarbetsflödet för resurser till ett senar
 
    Logga in på målinstansen för att verifiera de publicerade resurserna (beroende på schemalagt datum eller tid).
 
-## Publish-material till Dynamic Media {#publish-assets-to-dynamic-media}
+## Publicera material till Dynamic Media {#publish-assets-to-dynamic-media}
 
 Endast resurser publiceras till [!DNL Dynamic Media]. Publiceringsbeteendet skiljer sig dock åt beroende på mappegenskaperna. En mapp kan ha **[!UICONTROL Dynamic Media Publish mode]** konfigurerad för selektiv publicering, vilket kan vara något av följande:
 
@@ -167,11 +201,11 @@ Endast resurser publiceras till [!DNL Dynamic Media]. Publiceringsbeteendet skil
 Publiceringsprocessen för läget **[!UICONTROL Immediate]** och **[!UICONTROL Upon Activation]** är konsekvent, men skiljer sig åt för **[!UICONTROL Selective Publish]**. Se [Konfigurera selektiv publicering på mappnivå i Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html). När du har konfigurerat selektiv publicering i en mapp kan du göra något av följande:
 
 * [Publicera utvalda resurser på Dynamic Media eller Experience Manager med Hantera publikation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html?lang=en#selective-publish-manage-publication)
-* [Avpublicera valfritt material från Dynamic Media eller Experience Manager med Hantera publikation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html?lang=en#selective-unpublish-manage-publication)
-* [Publish-resurser till Dynamic Media eller Experience Manager med hjälp av Quick Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html?lang=en#quick-publish-aem-dm)
+* [Avpublicera selektivt resurser från Dynamic Media eller Experience Manager med Hantera publikation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html?lang=en#selective-unpublish-manage-publication)
+* [Publicera resurser på Dynamic Media eller Experience Manager med Snabbpublicering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html?lang=en#quick-publish-aem-dm)
 * [Publicera eller avpublicera resurser selektivt via sökresultat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/selective-publishing.html?lang=en#selective-publish-unpublish-search-results)
 
-## Publish-material till Brand Portal {#publish-assets-to-brand-portal}
+## Publicera material i Brand Portal {#publish-assets-to-brand-portal}
 
 Du kan publicera resurser, mappar och samlingar till instansen [!DNL Experience Manager Assets Brand Portal].
 

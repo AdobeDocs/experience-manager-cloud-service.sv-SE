@@ -5,17 +5,51 @@ role: User, Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 28ba98828cfa34933a2ec4f5d9b7d9681d42fa5a
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1594'
+source-wordcount: '1622'
 ht-degree: 0%
 
 ---
 
 # Hantera resurser {#manage-assets}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Du kan enkelt utföra olika DAM-åtgärder (Digital Asset Management) med det användarvänliga gränssnittet i [!DNL Assets view]. När du har lagt till resurserna kan du söka efter, hämta, flytta, kopiera, byta namn på, ta bort, uppdatera och redigera dina resurser.
 
@@ -37,7 +71,7 @@ Använd [!DNL Assets view] för att utföra följande resurshanteringsåtgärder
 
 * ![Fäst resursikonen](assets/do-not-localize/pin-quick-access.svg) Fäst en resurs för snabbare åtkomst när du behöver den senare. Alla fästa objekt visas i avsnittet **Snabbåtkomst** i Min Workspace.
 
-* ![redigera i Express-ikon](assets/do-not-localize/edit-e.svg) Redigera en bild i den integrerade Adobe Expressen i Adobe Experience Manager Assets.
+* ![redigera i Express-ikon](assets/do-not-localize/edit-e.svg) Redigera en bild i den integrerade Adobe Express-filen i Adobe Experience Manager Assets.
 
 * ![redigera resursikon](assets/do-not-localize/edit-e.svg) Redigera bilden med Adobe Express.
 
@@ -72,7 +106,7 @@ Du kan visa samma alternativ för miniatyrbilder av resurser.
 
 ![Verktygsfältsalternativ när du väljer en resurs](assets/toolbar-pdf-selected.png)
 
-*Bild: Alternativ i verktygsfältet för en markerad PDF-fil.*
+*Bild: Alternativ i verktygsfältet för en vald PDF-fil.*
 
 ## Hämta och distribuera resurser {#download}
 
@@ -134,7 +168,7 @@ Så här anger du resursstatus:
 1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
 
 1. Välj resursstatus i listrutan **[!UICONTROL Status]** på fliken **[!UICONTROL Basic]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
-Om du har Dynamic Media med OpenAPI-funktioner tilldelade för din miljö, genererar Experience Manager Assets en offentlig URL så fort du markerar resursen som `Approved`.
+Om du har aktiverat Dynamic Media med OpenAPI-funktioner för din miljö, genererar Experience Manager Assets en offentlig URL så fort du markerar resursen som `Approved`.
 
    >[!VIDEO](https://video.tv.adobe.com/v/342495)
 
@@ -142,7 +176,7 @@ Om du har Dynamic Media med OpenAPI-funktioner tilldelade för din miljö, gener
 
 ### Ange godkännandemål {#set-approval-target}
 
-I Assets-vyn kan du publicera godkända resurser till Dynamic Media med OpenAPI-funktioner, Content Hub eller båda, baserat på det värde som du anger i fältet **Godkännandemål** på sidan Resursinformation.
+I Assets-vyn kan du publicera godkända mediefiler till Dynamic Media med OpenAPI-funktioner, Content Hub, eller båda, baserat på det värde som du anger i fältet **Godkännandemål** på sidan Resursinformation.
 
 Så här anger du godkännandemål:
 
@@ -152,7 +186,7 @@ Så här anger du godkännandemål:
 
 1. Om du väljer **Godkänd** i steg 2 väljer du ett godkännandemål. Exempel på möjliga värden är Delivery och Content Hub.
 
-   * **Leverans** är det standardalternativ som valts i listrutan och som publicerar resursen till både [Dynamic Media med OpenAPI](/help/assets/dynamic-media-open-apis-overview.md) och [Content Hub](/help/assets/product-overview.md), om båda är aktiverade för Experience Manager Assets.
+   * **Leverans** är det standardalternativ som valts i listrutan och som publicerar resursen till både [Dynamiska media med OpenAPI](/help/assets/dynamic-media-open-apis-overview.md) och [Content Hub](/help/assets/product-overview.md), om båda är aktiverade för Experience Manager Assets.
 
    * Om du väljer **Content Hub** publiceras resursen bara till Content Hub. Content Hub visas bara som ett alternativ om det är aktiverat för Experience Manager Assets.
 
@@ -179,11 +213,11 @@ Några andra punkter att notera är:
 
 Följande tabell visar förutsättningarna för att visa listrutan `Approval Target` och standardmålet för godkännande baserat på aktiveringen av DM med OpenAPI och Content Hub i din AEM as a Cloud Service-miljö:
 
-| Dynamic Media med OpenAPI | Content Hub | Listrutan Godkännandemål visas? | Standardgodkännandemål för godkända tillgångar | Publish destination |
+| Dynamiska medier med OpenAPI | Content Hub | Listrutan Godkännandemål visas? | Standardgodkännandemål för godkända tillgångar | Publiceringsmål |
 | --- | --- | --- | --- |---|
 | Aktiverad | Aktiverad | Ja | Leverans | Dynamic Media med OpenAPI och Content Hub |
 | Ej aktiverad | Aktiverad | Ja | Content Hub | Content Hub |
-| Aktiverad | Ej aktiverad | Ja | Leverans | Dynamic Media med OpenAPI |
+| Aktiverad | Ej aktiverad | Ja | Leverans | Dynamiska medier med OpenAPI |
 | Ej aktiverad | Ej aktiverad | Nej | Ej tillämpligt | Ej tillämpligt |
 
 ### Ange förfallodatum för tillgång {#set-asset-expiration-date}

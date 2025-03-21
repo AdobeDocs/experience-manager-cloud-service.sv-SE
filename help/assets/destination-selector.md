@@ -5,17 +5,51 @@ contentOwner: Adobe
 role: Admin, User
 exl-id: 7e7bc1ee-d580-4c88-b550-273e8b0620ba
 feature: Selectors
-source-git-commit: e22e4e530c2d023724b360c488cab2b59ec22fc4
+source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1933'
 ht-degree: 0%
 
 ---
 
 # Micro-FrontEnd-målväljare {#Overview}
 
-| [Sök efter bästa praxis](/help/assets/search-best-practices.md) | [Metadata - bästa praxis](/help/assets/metadata-best-practices.md) | [Content Hub](/help/assets/product-overview.md) | [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) | [AEM Assets-dokumentation för utvecklare](https://developer.adobe.com/experience-cloud/experience-manager-apis/) |
-| ------------- | --------------------------- |---------|----|-----|
+<table>
+    <tr>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+        </td>
+        <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+        </td>
+          <td>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+        </td>
+        <td>
+            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+        </td>
+        <td>
+            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+        </td>
+    </tr>
+</table>
 
 Micro-FrontEnd-målväljaren har ett användargränssnitt i programmet som enkelt kan integreras med [!DNL Experience Manager Assets as a Cloud Service]-databasen. Du kan söka efter eller bläddra till rätt mapp i [!DNL Experience Manager Assets as a Cloud Service]-databasen och överföra resurser från ditt program.
 
@@ -25,7 +59,7 @@ Användargränssnittet Micro-FrontEnd är tillgängligt i programupplevelsen med
 
 Målväljaren har många fördelar, till exempel:
 
-* Enkel integrering med alla Adobe- och andra program som inte använder Adobe med Vanilla JavaScript-biblioteket.
+* Enkel integrering med alla Adobe- eller icke-Adobe-program som använder Vanilla JavaScript-biblioteket.
 * Enkelt att underhålla när uppdateringar av målväljarpaketet automatiskt distribueras till målväljaren som är tillgänglig för ditt program. Det finns inga uppdateringar som behövs i programmet för att läsa in de senaste ändringarna.
 * Det är enkelt att anpassa eftersom det finns tillgängliga egenskaper som styr hur målväljaren visas i programmet.
 * Fulltextsökning för att snabbt navigera till mappar för att överföra resurser från ditt program.
@@ -41,12 +75,12 @@ Utför följande uppgifter för att integrera och använda målväljaren med din
 
 ## Integrera målväljaren med Vanilla JS {#integration-with-vanilla-js}
 
-Du kan integrera ett [!DNL Adobe]- eller ett icke-Adobe-program med [!DNL Experience Manager Assets] som en [!DNL Cloud Service]-databas och välja resurser inifrån programmet.
+Du kan integrera ett [!DNL Adobe]- eller icke-Adobe-program med [!DNL Experience Manager Assets] som en [!DNL Cloud Service]-databas och välja resurser inifrån programmet.
 
-Integreringen görs genom att importera målväljarpaketet och ansluta till Assets as a Cloud Service med Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet för att kunna -
+Integreringen görs genom att du importerar målväljarpaketet och ansluter till Assets as a Cloud Service med Vanilla JavaScript-biblioteket. Du måste redigera en `index.html` eller en lämplig fil i programmet för att kunna -
 
 * Definiera autentiseringsinformationen
-* Åtkomst till Assets as a Cloud Service-databasen
+* Öppna Assets as a Cloud Service-arkivet
 * Konfigurera visningsegenskaperna för målväljaren
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
@@ -193,9 +227,9 @@ Du kan använda egenskaperna för målväljaren för att anpassa hur målväljar
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |---|---|---|---|---|
-| *imsOrg* | string | Ja | | IMS-ID (Adobe Identity Management System) som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
+| *imsOrg* | string | Ja | | Adobe Identity Management System (IMS) ID som tilldelas när [!DNL Adobe Experience Manager] etableras som [!DNL Cloud Service] för din organisation. Nyckeln `imsOrg` krävs för att autentisera om organisationen du försöker få åtkomst till är under Adobe IMS eller inte. |
 | *imsToken* | string | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs inte om du använder SUSI-flödet. Det är dock nödvändigt om du använder ett icke-SUSI-flöde. |
-| *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM. `apiKey` krävs inte om du använder SUSI-flödet. Det krävs dock i icke-SUSI-flöden. |
+| *apiKey* | string | Nej | | API-nyckel som används för åtkomst till AEM Discovery-tjänsten. `apiKey` krävs inte om du använder SUSI-flödet. Det krävs dock i icke-SUSI-flöden. |
 | *rootPath* | string | Nej | /content/dam/ | Mappsökväg som målväljaren visar dina resurser från. `rootPath` kan också användas som inkapsling. Med följande sökväg, `/content/dam/marketing/subfolder/`, tillåter målväljaren inte att du går igenom någon överordnad mapp, utan bara de underordnade mapparna. |
 | *hasMore* | boolesk | Nej | | När programmet har mer innehåll att visa kan du använda den här egenskapen för att lägga till en inläsare som läser in innehållet för att göra det synligt i programmet. Det är en indikator som anger att inläsning av innehåll pågår. |
 | *orgName* | boolesk | Nej | | Det är namnet på organisationen (troligtvis orgID) som är associerad med AEM |
@@ -257,7 +291,7 @@ Du kan sortera resurser i målväljaren efter namn, dimension eller storlek för
 
 ### Assets Repository {#assets-repo}
 
-Med målväljaren kan du även visa valfria databasdata i AEM. Du kan använda egenskapen `repositoryID` för att initiera sökvägen till målmappen som du vill visa vid den första instansen av målväljaren.
+Med målväljaren kan du även visa valfria databasdata som finns i AEM. Du kan använda egenskapen `repositoryID` för att initiera sökvägen till målmappen som du vill visa vid den första instansen av målväljaren.
 
 ### Lägg till suffix eller prefix {#add-suffix-or-prefix}
 
