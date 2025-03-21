@@ -5,9 +5,9 @@ exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
+source-git-commit: 6306ad88b889197aff377dc0a72ea232cd76ff9c
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 I början av [AEM Headless Content Architect Journey](overview.md) innehöll [Introduktion](introduction.md) grundläggande koncept och terminologi som är relevant för att modellera innehåll för headless.
 
-Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du modellerar ditt innehåll för AEM headless-projekt.
+Den här artikeln bygger på dessa principer så att du förstår hur du modellerar ditt innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
@@ -87,9 +87,12 @@ AEM tillhandahåller följande datatyper som du kan använda för att utforma di
 * Datum och tid
 * Uppräkning
 * Taggar
-* Innehållsreferens
 * Fragmentreferens
+* Fragmentreferens (UUID)
+* Innehållsreferens
+* Innehållsreferens (UUID)
 * JSON-objekt
+* Platshållare för flik
 
 >[!NOTE]
 >
@@ -99,11 +102,11 @@ AEM tillhandahåller följande datatyper som du kan använda för att utforma di
 
 Två datatyper ger referenser till innehåll utanför ett visst fragment:
 
-* **Innehållsreferens**
+* **Innehållsreferens**/**Innehållsreferens (UUID)**
 Detta ger en enkel referens till annat innehåll av valfri typ.
 Du kan till exempel referera till en bild på en viss plats.
 
-* **Fragmentreferens**
+* **Fragmentreferens**/**Fragmentreferens (UUID)**
 Detta innehåller referenser till andra innehållsfragment.
 Den här typen av referens används för att skapa kapslat innehåll, vilket introducerar de relationer som behövs för att modellera innehållet.
 Datatypen kan konfigureras så att fragmentförfattare kan:
@@ -113,6 +116,10 @@ Datatypen kan konfigureras så att fragmentförfattare kan:
 >[!NOTE]
 >
 >Du kan också skapa improviserade referenser genom att använda länkar i textblock.
+
+>[!NOTE]
+>
+>I redigeraren anger UUID-referenserna sökvägen till den refererade resursen. Sådana referenser lagras internt som UUID (Universal Unique ID) som refererar till resurserna.
 
 ## Strukturnivåer (kapslade fragment) {#levels-of-structure-nested-fragments}
 

@@ -5,9 +5,9 @@ exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
+source-git-commit: 6306ad88b889197aff377dc0a72ea232cd76ff9c
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
 
-Den här artikeln bygger vidare på detta så att du förstår hur du skapar egna Content Fragment Models för AEM headless-projekt.
+Den här artikeln bygger på dessa principer så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 
 ## Syfte {#objective}
 
@@ -42,17 +42,33 @@ At the very start you need to enable Content Fragment Models for your site, this
 
 ## Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen.
 
-![Modeller för innehållsfragment i verktyg](assets/cfm-tools.png)
+1. På konsolen Innehållsfragment väljer du panelen för modeller för innehållsfragment.
 
-När du har valt detta navigerar du till modellens plats och väljer **Skapa**. Här kan du ange olika nyckeldetaljer.
+1. Navigera till den mapp som passar din konfiguration eller underkonfiguration.
 
-Alternativet **Aktivera modell** är aktiverat som standard. Det innebär att din modell är tillgänglig för användning (när du skapar innehållsfragment) så snart du har sparat den. Du kan inaktivera detta om du vill - det finns möjligheter att senare aktivera (eller inaktivera) en befintlig modell.
+1. Använd **Skapa** för att öppna dialogrutan **Ny modell för innehållsfragment**.
 
-![Skapa innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/assets/cfm-models-02.png)
+   ![Titel och beskrivning](/help/sites-cloud/administering/content-fragments/assets/cf-managing-content-fragment-models-create.png)
 
-Bekräfta med **Skapa** och du kan sedan **Öppna** din modell för att börja definiera strukturen.
+1. Fyll i informationen
+
+1. Använd **Skapa** om du vill spara den tomma modellen eller **Skapa och öppna**.
+
+<!--
+Then the Content Fragments Models can be created and the structure defined. This can be done under **Tools** > **General** > **Content Fragment Models**. 
+
+![Content Fragment Models in Tools](assets/cfm-tools.png)
+
+After selecting this you navigate to the location for your model and select **Create**. Here you can enter various key details.
+
+The option **Enable model** is activated by default. This means that your model is available for use (in creating Content Fragments) as soon as you have saved it. You can deactivate this if you want - there are opportunities later to enable (or disable) an existing model.
+
+![Create Content Fragment Model](/help/sites-cloud/administering/content-fragments/assets/cfm-models-02.png)
+
+Confirm with **Create** and you can then **Open** your model to start defining the structure.
+-->
 
 ## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
@@ -66,7 +82,7 @@ Du kan dra instanser av **datatyperna** till vänster - du definierar redan mode
 
 ![Definierar fält](/help/sites-cloud/administering/content-fragments/assets/cfm-models-04.png)
 
-När du har lagt till en datatyp måste du definiera **egenskaperna** för det fältet. De beror på vilken typ som används. Till exempel:
+När du har lagt till en datatyp måste du definiera **egenskaperna** för det fältet. Dessa egenskaper beror på vilken typ som används. Till exempel:
 
 ![Dataegenskaper](/help/sites-cloud/administering/content-fragments/assets/cfm-models-05.png)
 
