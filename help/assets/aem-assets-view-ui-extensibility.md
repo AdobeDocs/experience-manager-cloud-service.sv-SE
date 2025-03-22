@@ -4,7 +4,7 @@ description: Lär dig mer om UI-utökningsfunktionen i  [!DNL AEM Assets View]. 
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: 2de6352363959f4258c0786910eaef7babe68f15
+source-git-commit: 1927a1147e4b33d6173f08953d64b5a91d3473d7
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%
@@ -48,7 +48,7 @@ ht-degree: 0%
 </table>
 
 [!DNL AEM Assets View] har stöd för UI-utbyggbarhet, vilket gör att du kan lägga till anpassade UI-komponenter i [!DNL Assets View]-gränssnittet för specifika arbetsflöden och affärskrav som inte uppfylls av de körklara funktionerna i [!DNL AEM Assets View]. Den här utökningsfunktionen för användargränssnitt i [!DNL AEM Assets View] förbättrar flexibiliteten och gör det möjligt för organisationer att anpassa gränssnittet för specifika arbetsflöden och krav.\
-Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**. Det tillagda tillägget visas på en dedikerad panel på sidan **Resurs**, **Samling** eller **Mapp** **[!UICONTROL Details]**.
+Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**. Det tillagda tillägget visas på en dedikerad panel på sidan **Resurs**, **Samling** eller **Mapp** **[!UICONTROL Details]** .
 
 >[!IMPORTANT]
 >
