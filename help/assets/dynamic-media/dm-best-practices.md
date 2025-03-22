@@ -9,9 +9,9 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
+source-git-commit: a495178529a0a4229095ea3a11f52b376c81715b
 workflow-type: tm+mt
-source-wordcount: '4117'
+source-wordcount: '4095'
 ht-degree: 0%
 
 ---
@@ -399,7 +399,7 @@ Internationalisering av videor för flerspråkig konsumtion är nödvändigt fö
    * Ordna, bläddra bland och sök videomaterial i AEM.
    * Förhandsgranska och publicera videomaterial.
    * Visa källvideon och dess kodade återgivningar tillsammans med tillhörande miniatyrbilder.
-   * Redigera videoegenskaper som titel, beskrivning och taggar2.
+   * Redigera videoegenskaper, till exempel titel, beskrivning och taggar2.
 
 * **Lokalisering:**
    * Skapa ljudspår och undertexter för varje målområde/språk.
@@ -410,7 +410,7 @@ Internationalisering av videor för flerspråkig konsumtion är nödvändigt fö
    * Om du använder AEM som WCM-system (Web Content Management) kan du lägga till videofilmer direkt på dina webbsidor.
    * Om du använder ett WCM-system från tredje part kan du länka eller bädda in videor på dina webbsidor med hjälp av URL:er eller inbäddningskoder.
 
-Vill du veta mer? Gå till [Om stöd för flera bildtexter och ljudspår för videofilmer i dynamiska media](/help/assets/dynamic-media/video.md#about-msma) eller se [Lägga till flera bildtexter och ljudspår i en video](https://delivery-p106302-e1008131.adobeaemcloud.com/adobe/assets/urn:aaid:aem:daf9a222-9f7f-4333-b167-98cb4c63a1f8/play) (1 minut, 41 sekunder).
+Vill du veta mer? Gå till [Om stöd för flera bildtexter och ljudspår för videofilmer i dynamiska media](/help/assets/dynamic-media/video.md#about-msma).
 
 
 ## Leverera resurser till kunder
