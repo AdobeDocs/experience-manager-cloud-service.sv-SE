@@ -1,8 +1,8 @@
 ---
-title: AEM-CIF kärnkomponenter och integrering med Adobe Experience Platform
-description: Lär dig hur du skickar händelsedata för butiker från en AEM produktsida till Experience Platform med hjälp av CIF - Experience Platform Connector.
+title: AEM-CIF kärnkomponenter och Adobe Experience Platform-integrering
+description: Lär dig hur du skickar händelsedata från en AEM-återgiven produktsida till Experience Platform med CIF - Experience Platform Connector.
 sub-product: Commerce
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 activity: setup
 feature: Commerce Integration Framework
 topic: Commerce
@@ -11,7 +11,7 @@ level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 1bd36e584d956c5ae8da7b1d618e155da86a74f5
 workflow-type: tm+mt
 source-wordcount: '1868'
 ht-degree: 0%
@@ -19,41 +19,41 @@ ht-degree: 0%
 ---
 
 
-# AEM-CIF kärnkomponenter och integrering med Adobe Experience Platform {#aem-cif-aep-integration}
+# AEM-CIF kärnkomponenter och Adobe Experience Platform-integrering {#aem-cif-aep-integration}
 
-Kärnkomponenterna [Commerce integration framework (CIF)](https://github.com/adobe/aem-core-cif-components) är smidigt integrerade med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=en) för att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan, som __lägg till i kundvagnen__.
+Kärnkomponenterna [Commerce integration framework (CIF)](https://github.com/adobe/aem-core-cif-components) erbjuder sömlös integrering med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=en) för att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan, som __lägg till i kundvagnen__.
 
-Projektet [AEM Core Components](https://github.com/adobe/aem-core-cif-components) innehåller ett JavaScript-bibliotek med namnet [Adobe Experience Platform Connector för Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) som samlar in händelsedata från Commerce Store. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteende på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
+Projektet [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) innehåller ett JavaScript-bibliotek med namnet [Adobe Experience Platform Connector för Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) som samlar in händelsedata från din Commerce-butik. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteende på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
 
-Läs mer om [Experience Platform datainsamling](https://experienceleague.adobe.com/docs/experience-platform/collection/home.html) med tekniker som gör att du kan samla in kundupplevelsedata från källor på klientsidan.
+Läs mer om [Experience Platform Data Collection](https://experienceleague.adobe.com/docs/experience-platform/collection/home.html) med tekniker som gör att du kan samla in kundupplevelsedata från källor på klientsidan.
 
 ## Skicka händelsedata för `addToCart` till Experience Platform {#send-addtocart-to-aep}
 
-I följande steg visas hur du skickar händelsedata för `addToCart` från AEM produktsidor till Experience Platform med hjälp av CIF-Experience Platform-kopplingen. Genom att använda webbläsartillägget Adobe Experience Platform Debugger kan du testa och granska skickade data.
+Följande steg visar hur du skickar händelsedata för `addToCart` från AEM-återgivna produktsidor till Experience Platform med CIF - Experience Platform Connector. Genom att använda Adobe Experience Platform Debugger webbläsartillägg kan du testa och granska skickade data.
 
-![Granska addToCart-händelsedata i Adobe Experience Platform Debugger](../assets/aep-integration/EventData-AEM-AEP.png)
+![Granska händelsedata för addToCart i Adobe Experience Platform Debugger](../assets/aep-integration/EventData-AEM-AEP.png)
 
 ## Förutsättningar {#prerequisites}
 
-Använd en lokal utvecklingsmiljö för att slutföra denna demo. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för [konfigurera lokal utveckling med AEM as a Cloud Service SDK](../develop.md).
+Använd en lokal utvecklingsmiljö för att slutföra denna demo. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för att [konfigurera lokal utveckling med AEM as a Cloud Service SDK](../develop.md).
 
 Du behöver även åtkomst till [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-ui/ui-guide.html) och behörigheter för att skapa schema, datamängd och datastreams för datainsamling. Mer information finns i [Behörighetshantering](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
-## AEM Commerce as a Cloud Service {#aem-setup}
+## Installation av AEM Commerce as a Cloud Service {#aem-setup}
 
-Om du vill ha en fungerande __AEM Commerce as a Cloud Service__ lokal miljö med den kod och konfiguration som krävs utför du följande steg.
+Om du vill ha en fungerande lokal miljö i __AEM Commerce as a Cloud Service__ med den kod och konfiguration som krävs utför du följande steg.
 
 ### Lokal installation
 
-Följ stegen för [Lokal konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/develop.html?#local-setup) så att du kan ha en fungerande AEM Commerce as a Cloud Service-miljö.
+Följ stegen i [Lokal konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/develop.html?#local-setup) så att du kan ha en fungerande AEM Commerce as a Cloud Service-miljö.
 
 ### Projektinställningar
 
-Följ stegen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/develop.html?#project) så att du kan skapa ett helt nytt AEM Commerce (CIF)-projekt.
+Följ [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/developing/develop.html?#project) så kan du skapa ett helt nytt AEM Commerce-projekt (CIF).
 
 >[!TIP]
 >
->I följande exempel har det AEM Commerce-projektet namnet: `My Demo Storefront`, men du kan välja ett eget projektnamn.
+>I följande exempel heter AEM Commerce-projektet `My Demo Storefront`, men du kan välja ett eget projektnamn.
 
 ![AEM Commerce Project](../assets/aep-integration/aem-project-with-commerce.png)
 
@@ -66,11 +66,11 @@ $ mvn clean install -PautoInstallSinglePackage
 
 Den lokalt distribuerade e-handelswebbplatsen `My Demo StoreFront` med standardkod och standardinnehåll ser ut så här:
 
-![Standard AEM Commerce Site](../assets/aep-integration/demo-aem-storefront.png)
+![AEM Commerce standardwebbplats](../assets/aep-integration/demo-aem-storefront.png)
 
 ### Installera anslutningsberoenden för Premiere och CIF-AEP
 
-Om du vill samla in och skicka händelsedata från kategori- och produktsidorna på den här AEM Commerce-webbplatsen installerar du nyckelpaketen `npm` i modulen `ui.frontend` i AEM Commerce-projekt.
+Om du vill samla in och skicka händelsedata från kategori- och produktsidorna på den här AEM Commerce-webbplatsen installerar du nyckelpaketen `npm` i modulen `ui.frontend` i AEM Commerce-projektet.
 
 Navigera till modulen `ui.frontend` och installera de nödvändiga paketen genom att köra följande kommandon från kommandoraden.
 
@@ -149,7 +149,7 @@ Navigera till modulen `ui.frontend` och uppdatera filen `webpack.common.js` så 
 
 [Apollo-klienten](https://www.apollographql.com/docs/react/) används för att hantera både lokala data och fjärrdata med GraphQL. Resultaten av GraphQL-frågor lagras också i en lokal, normaliserad cache i minnet.
 
-Du behöver en `possibleTypes.js`-fil för att [`InMemoryCache`](https://www.apollographql.com/docs/react/caching/cache-configuration/) ska fungera effektivt. Mer information om hur du skapar den här filen finns i [Generera possibleTypes automatiskt](https://www.apollographql.com/docs/react/data/fragments/#generating-possibletypes-automatically). Se även referensimplementeringen [PWA Studio](https://github.com/magento/pwa-studio/blob/1977f38305ff6c0e2b23a9da7beb0b2f69758bed/packages/pwa-buildpack/lib/Utilities/graphQL.js#L106-L120) och ett exempel på en [`possibleTypes.js`](../assets/aep-integration/possibleTypes.js)-fil.
+Du behöver en `possibleTypes.js`-fil för att [`InMemoryCache`](https://www.apollographql.com/docs/react/caching/cache-configuration/) ska fungera effektivt. Mer information om hur du skapar den här filen finns i [Generera possibleTypes automatiskt](https://www.apollographql.com/docs/react/data/fragments/#generating-possibletypes-automatically). Se även [PWA Studio referensimplementering](https://github.com/magento/pwa-studio/blob/1977f38305ff6c0e2b23a9da7beb0b2f69758bed/packages/pwa-buildpack/lib/Utilities/graphQL.js#L106-L120) och ett exempel på en [`possibleTypes.js`](../assets/aep-integration/possibleTypes.js)-fil.
 
 
 1. Navigera till modulen `ui.frontend` och spara filen som `./src/main/possibleTypes.js`
@@ -171,9 +171,9 @@ Du behöver en `possibleTypes.js`-fil för att [`InMemoryCache`](https://www.apo
    ]
    ```
 
-### Initiera Peregrine och CIF kärnkomponenter
+### Initiera kärnkomponenterna Peregrine och CIF
 
-Skapa den konfiguration och de JavaScript-filer som krävs för att initiera den React-baserade Premiere och CIF kärnkomponenter.
+Om du vill initiera React-baserade Premiere-komponenter och CIF kärnkomponenter skapar du den konfiguration och de JavaScript-filer som behövs.
 
 1. Navigera till modulen `ui.frontend` och skapa följande mapp: `src/main/webpack/components/commerce/App`
 
@@ -228,7 +228,7 @@ Skapa den konfiguration och de JavaScript-filer som krävs för att initiera den
    >
    >Du kanske redan känner till filen [`config.js`](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.frontend/src/main/components/App/config.js) från __AEM Guides - CIF Venia Project__, men du måste göra några ändringar i filen. Granska först eventuella __TODO__-kommentarer. I egenskapen `eventsCollector` kan du sedan hitta objektet `eventsCollector > aep` och uppdatera egenskaperna `orgId` och `datastreamId` till rätt värden. [Läs mer](./aep.md#add-aep-values-to-aem).
 
-1. Skapa en `App.js`-fil med följande innehåll. Den här filen liknar en vanlig React-startpunktsfil och innehåller React- och anpassade kopplingar samt React Context-användning som underlättar integreringen mellan Experience Platform.
+1. Skapa en `App.js`-fil med följande innehåll. Den här filen liknar en vanlig React-startpunktsfil och innehåller React och egna kopplingar samt React Context-användning som underlättar Experience Platform-integreringen.
 
    ```javascript
    import config from './config';
@@ -327,17 +327,17 @@ Skapa den konfiguration och de JavaScript-filer som krävs för att initiera den
 
    - läser in biblioteket commerce-events-sdk och commerce-events-collector,
    - initierar dem med en viss konfiguration för Experience Platform och/eller ACDS
-   - prenumererar på alla händelser från Premiere och vidarebefordrar dem till SDK:n
+   - prenumererar på alla evenemang från Premiere och vidarebefordrar dem till händelserna SDK
 
    Du kan granska implementeringsinformationen för `EventCollectorContext`. Se [aem-core-cif-components i GitHub](https://github.com/adobe/aem-core-cif-components/blob/3d4e44d81fff2f398fd2376d24f7b7019f20b31b/extensions/experience-platform-connector/src/events-collector/EventCollectorContext.js).
 
-### Bygg och distribuera det uppdaterade AEM projektet
+### Bygg och driftsätt det uppdaterade AEM-projektet
 
 För att se till att ovanstående paketinstallation, kodändringar och konfigurationsändringar är korrekta återskapar och distribuerar du det uppdaterade AEM Commerce-projektet med följande Maven-kommando: `$ mvn clean install -PautoInstallSinglePackage`.
 
-## Inställningar för Experience Platform {#aep-setup}
+## Experience Platform {#aep-setup}
 
-Så här tar du emot och lagrar händelsedata från de AEM Commerce-sidorna, t.ex. kategori och produkt:
+Så här tar du emot och lagrar händelsedata från AEM Commerce-sidor, t.ex. kategorier och produkter:
 
 >[!AVAILABILITY]
 >
@@ -351,7 +351,7 @@ Om du vill definiera strukturen för e-handelshändelsedata måste du skapa ett 
 
 1. Leta upp menyn __Scheman__ i det vänstra navigeringsavsnittet, klicka på knappen __Skapa schema__ i det övre högra avsnittet och välj __XDM ExperienceEvent__.
 
-   ![Skapa schema i AEP](../assets/aep-integration/AEP-Schema-EventSchema-1.png)
+   ![AEP Create Schema](../assets/aep-integration/AEP-Schema-EventSchema-1.png)
 
 1. Namnge schemat med hjälp av fältet __Schemaegenskaper > Visningsnamn__ och lägg till fältgrupper med knappen __Disposition > Fältgrupper > Lägg till__.
 
@@ -374,19 +374,19 @@ Om du vill lagra händelsedata måste du skapa en datauppsättning som överenss
 
 1. Leta reda på menyn __Datauppsättningar__ i det vänstra navigeringsavsnittet och klicka på knappen __Skapa datauppsättning__ i det övre högra avsnittet.
 
-   ![AEP Skapa datauppsättningar](../assets/aep-integration/AEP-Datasets-Create.png)
+   ![Skapa datauppsättningar i AEP](../assets/aep-integration/AEP-Datasets-Create.png)
 
 1. På den nya sidan väljer du __Skapa datauppsättning från schemakort__.
 
-   ![Schemaalternativ för AEP-skapa datauppsättningar](../assets/aep-integration/AEP-Datasets-Schema-Option.png)
+   ![AEP Skapa datauppsättningsschema, alternativ](../assets/aep-integration/AEP-Datasets-Schema-Option.png)
 
    På den nya sidan __söker och väljer__ det schema du skapade i föregående steg och klickar på knappen __Nästa__.
 
-   ![AEP Skapa datauppsättningar Välj schema](../assets/aep-integration/AEP-Datasets-Select-Schema.png)
+   ![AEP Create Datasets Select Schema](../assets/aep-integration/AEP-Datasets-Select-Schema.png)
 
 1. Namnge datauppsättningen med hjälp av fältet __Konfigurera datauppsättning > Namn__ och klicka på knappen __Slutför__ .
 
-   ![AEP - skapa datauppsättningsnamn](../assets/aep-integration/AEP-Datasets-Name.png)
+   ![AEP Skapa datauppsättningsnamn](../assets/aep-integration/AEP-Datasets-Name.png)
 
 >[!TIP]
 >
@@ -395,13 +395,13 @@ Om du vill lagra händelsedata måste du skapa en datauppsättning som överenss
 
 ### Skapa dataström
 
-Följ de här stegen för att skapa en dataström i Experience Platform.
+Följ de här stegen för att skapa ett dataflöde i Experience Platform.
 
 1. Gå till startsidan för __Adobe Experience Platform__-produkten i webbläsaren. Exempel: <https://experience.adobe.com/#/@YOUR-ORG-NAME/sname:prod/platform/home>.
 
 1. Leta reda på menyn __Datastreams__ i det vänstra navigeringsavsnittet och klicka på knappen __Ny datastream__ i det övre högra avsnittet.
 
-   ![AEP Skapa datastreams](../assets/aep-integration/AEP-Datastream-Create.png)
+   ![AEP Create Datastreams](../assets/aep-integration/AEP-Datastream-Create.png)
 
 1. Namnge ditt datastream med det obligatoriska fältet __Namn__. Under fältet __Händelseschema__ markerar du det skapade schemat och klickar på __Spara__.
 
@@ -413,28 +413,28 @@ Följ de här stegen för att skapa en dataström i Experience Platform.
 
 1. Under fältet __Tjänst__ väljer du alternativet __Adobe Experience Platform__ . Under fältet __Händelsedatauppsättning__ markerar du datauppsättningsnamnet från föregående steg och klickar på __Spara__.
 
-   ![AEP-datastreams, lägg till serviceinformation](../assets/aep-integration/AEP-Datastream-Add-Service-Define.png)
+   ![AEP Datastreams Add Service Details](../assets/aep-integration/AEP-Datastream-Add-Service-Define.png)
 
 >[!TIP]
 >
 >Mer information finns i [Datastream-översikten](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html).
 
-## Lägg till datastream-värde i AEM Commerce-konfiguration {#add-aep-values-to-aem}
+## Lägg till datastream-värde i AEM Commerce-konfigurationen {#add-aep-values-to-aem}
 
-När du är klar med konfigurationen ovan för Experience Platform bör du ha `datastreamId` i den vänstra listen i dataströmsinformationen och `orgId` i det övre högra hörnet av __profilbilden > Kontoinformation > Användarinformation__ modal.
+När du är klar med ovanstående Experience Platform-konfiguration bör du ha `datastreamId` i den vänstra listen i dataströmsinformationen och `orgId` i det övre högra hörnet av __profilbilden > Kontoinformation > Användarinformation__ modal.
 
-![AEP-datastreams-ID](../assets/aep-integration/AEP-Datastream-ID.png)
+![AEP Datastreams-ID](../assets/aep-integration/AEP-Datastream-ID.png)
 
-1. Uppdatera `config.js`-filen och `eventsCollector > aep` -objektegenskaperna i AEM Commerce-projektmodulen `ui.frontend`.
+1. Uppdatera filen `config.js` och särskilt objektegenskaperna `eventsCollector > aep` i AEM Commerce-projektets `ui.frontend`-modul.
 
 1. Bygg och driftsätt det uppdaterade AEM Commerce-projektet
 
 
 ## Utlös händelsen `addToCart` och verifiera datainsamling {#event-trigger-verify}
 
-Ovanstående steg avslutar installationen av AEM Commerce och Experience Platform. Nu kan du utlösa en `addToCart`-händelse och verifiera datainsamling med Google Chrome-tillägget _Snöpflödesinspektören_ och datamängden __Metrisk och grafer__ växlar i produktgränssnittet.
+Följ stegen ovan för att installera AEM Commerce och Experience Platform. Nu kan du utlösa en `addToCart`-händelse och verifiera datainsamling med Google Chrome-tillägget _Snöpflödesinspektören_ och datamängden __Metrisk och grafer__ växlar i produktgränssnittet.
 
-Om du vill utlösa händelsen kan du använda AEM författare eller publiceringstjänsten från din lokala konfiguration. I det här exemplet använder du AEM författare genom att logga in på ditt konto.
+Du kan använda AEM-författaren eller publiceringstjänsten från din lokala konfiguration för att utlösa händelsen. I det här exemplet använder du AEM författare genom att logga in på ditt konto.
 
 1. Välj sidan __My Demo StoreFront > us > en__ på sidan Sites och klicka på __Edit__ i det övre åtgärdsfältet.
 
@@ -446,15 +446,15 @@ Om du vill utlösa händelsen kan du använda AEM författare eller publicerings
 1. Öppna tillägget __Snowplow Inspector__ från webbläsarens tilläggspanel och välj __Experience Platform Wed SDK__ i den vänstra listen.
 
 
-1. Gå tillbaka till __produktsidan__ och klicka på __Lägg till i kundvagnen__. Detta skickar data till Experience Platform. Tillägget __Adobe Experience Platform Debugger__ visar information om händelsen.
+1. Gå tillbaka till __produktsidan__ och klicka på __Lägg till i kundvagnen__. Detta skickar data till Experience Platform. Händelseinformationen visas i tillägget __Adobe Experience Platform Debugger__.
 
    ![AEP Debugger Add-To-Cart Event-Data](../assets/aep-integration/AEP-Debugger-AddToCart-EventData.png)
 
 
 
-1. Gå till __Datauppsättningar > My Demo StoreFront__ på fliken __Datauppsättningsaktivitet__ i produktgränssnittet för Experience Platform. Om __Mått och diagram__ är aktiverade visas händelsedatastatistik.
+1. I Experience Platform produktgränssnitt går du till __Datauppsättningar > My Demo StoreFront__, under fliken __Datauppsättningsaktivitet__. Om __Mått och diagram__ är aktiverade visas händelsedatastatistik.
 
-   ![Datauppsättningsstatistik för Experience Platform](../assets/aep-integration/AEP-Dataset-AddToCart-EventData.png)
+   ![Datastatus för Experience Platform-datauppsättning](../assets/aep-integration/AEP-Dataset-AddToCart-EventData.png)
 
 
 
@@ -462,7 +462,7 @@ Om du vill utlösa händelsen kan du använda AEM författare eller publicerings
 
 [CIF Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) byggs ovanpå [dataanslutningen för Adobe Commerce](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html), som ingår i [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/) -projektet.
 
-Med PWA Studio-projektet kan du skapa Progressive Web Application (PWA) butiker med Adobe Commerce eller Magento Open Source. Projektet innehåller också ett komponentbibliotek med namnet [Premiere](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) som du kan använda för att lägga till logik i visuella komponenter. [Peregrin-biblioteket](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) innehåller även anpassade React-kopplingar som används av [CIF Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att integreras med Experience Platform utan skarvar.
+Med PWA Studio-projektet kan du skapa Progressive Web Application-butiker (PWA) med Adobe Commerce eller Magento Open Source i botten. Projektet innehåller också ett komponentbibliotek med namnet [Premiere](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) som du kan använda för att lägga till logik i visuella komponenter. [Premiere-biblioteket](https://developer.adobe.com/commerce/pwa-studio/api/peregrine/) innehåller även anpassade React-kopplingar som används av [CIF Experience Platform Connector](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) för att integreras med Experience Platform sömlöst.
 
 
 ## Händelser som stöds {#supported-events}
@@ -474,10 +474,10 @@ __Upplev XDM-händelser:__
 1. Lägg i kundvagnen (AEM)
 1. Visa sida (AEM)
 1. Visa produkt (AEM)
-1. Skickad sökbegäran (AEM)
-1. Söklösningen togs emot (AEM)
+1. Sökning har skickats (AEM)
+1. Söklösningar mottagna (AEM)
 
-När [Premiere-komponenter](https://developer.adobe.com/commerce/pwa-studio/guides/packages/peregrine/) återanvänds i AEM Commerce-projekt:
+När [Premiere-komponenter](https://developer.adobe.com/commerce/pwa-studio/guides/packages/peregrine/) återanvänds i AEM Commerce-projektet:
 
 __Upplev XDM-händelser:__
 
