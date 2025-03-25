@@ -1,5 +1,5 @@
 ---
-source-git-commit: babddee34b486960536ce7075684bbe660b6e120
+source-git-commit: e4ceba6510992f82b97effca27a98f442fff8f5c
 workflow-type: tm+mt
 source-wordcount: '1505'
 ht-degree: 0%
@@ -248,7 +248,7 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
 
 >[!IMPORTANT]
 >
->SPA-redigeraren [har tagits bort](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md#spa-editor) för nya projekt. Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
+>SPA-redigeraren [har tagits bort](/help/implementing/developing/hybrid/spa-editor-deprecation.md) för nya projekt. Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 >
 >* [Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering av headless-innehåll.
 >* [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering av rubrikfritt innehåll.
