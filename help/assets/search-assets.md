@@ -6,12 +6,13 @@ mini-toc-levels: 1
 feature: Selectors, Adobe Stock, Asset Distribution, Asset Management, Asset Processing
 role: User, Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 07cfbb643785127a45a1c7712a9f4ff81767b7e1
 workflow-type: tm+mt
-source-wordcount: '5483'
+source-wordcount: '5862'
 ht-degree: 3%
 
 ---
+
 
 # Söka efter resurser i AEM {#search-assets-in-aem}
 
@@ -313,7 +314,7 @@ Författare kan använda Content Finder för att söka i DAM-databasen efter rel
 
 ## Resursväljare {#asset-picker}
 
-Med resursväljaren (kallas resursväljare i tidigare versioner av [!DNL Adobe Experience Manager]) kan du söka efter, filtrera och bläddra bland DAM-resurserna på ett speciellt sätt. Resursväljaren är tillgänglig på `https://[aem_server]:[port]/aem/assetpicker.html`. Du kan hämta metadata för resurser som du väljer med resursväljaren. Du kan starta det med begärandeparametrar som stöds, till exempel resurstyp (bild, video, text) och markeringsläge (enstaka eller flera markeringar). De här parametrarna anger kontexten för resursväljaren för en viss sökinstans och förblir intakta genom hela markeringen.
+Med [AEM Resursväljare](/help/assets/overview-asset-selector.md) (kallas resursväljare i tidigare versioner av [!DNL Adobe Experience Manager]) kan du söka efter, filtrera och bläddra bland DAM-resurser på ett speciellt sätt. Resursväljaren är tillgänglig på `https://[aem_server]:[port]/aem/assetpicker.html`. Du kan hämta metadata för resurser som du väljer med resursväljaren. Du kan starta det med begärandeparametrar som stöds, till exempel resurstyp (bild, video, text) och markeringsläge (enstaka eller flera markeringar). De här parametrarna anger kontexten för resursväljaren för en viss sökinstans och förblir intakta genom hela markeringen.
 
 Resursväljaren använder HTML5 `Window.postMessage`-meddelandet för att skicka data för den valda resursen till mottagaren. Det fungerar bara i bläddringsläget och endast med omsökningsresultatsidan.
 
@@ -370,6 +371,8 @@ Sökfunktionen kan ha prestandabegränsningar i följande scenarier:
 
 * **Indexering**: Endast indexerade metadata och resurser returneras i sökresultaten. För bättre täckning och prestanda bör du se till att indexeringen är korrekt och följa bästa praxis. Se [indexering](#searchindex).
 
+Se fler [Bästa praxis för sökning](search-best-practices.md).
+
 ## Några exempel som illustrerar sökning {#samples}
 
 Använd citattecken runt nyckelord för att hitta resurser som innehåller den exakta frasen i exakt den ordning som anges av användaren.
@@ -407,62 +410,56 @@ Använd citattecken runt nyckelord för att hitta resurser som innehåller den e
 
 *Bild: Användning av bindestreck för att söka efter resurser som inte innehåller ett exkluderat nyckelord.*
 
-<!--
-## Configuration and administration tasks related to search functionality {#configadmin}
+## Konfigurations- och administrationsuppgifter som rör sökfunktioner {#configadmin}
 
-### Search index configurations {#searchindex}
+### Sök i indexkonfigurationer {#searchindex}
 
-Asset discovery relies on indexing of DAM contents, including the metadata. Faster and accurate asset discovery relies on optimized indexing and appropriate configurations. See [indexing](/help/operations/indexing.md).
--->
+Resursidentifiering bygger på indexering av DAM-innehåll, inklusive metadata. Snabbare och exaktare tillgångsidentifiering bygger på optimerad indexering och lämpliga konfigurationer. Se [indexering](/help/operations/indexing.md).
 
-<!--
-### Visual or similarity search {#configvisualsearch}
+### Visuell sökning eller likhetssökning {#configvisualsearch}
 
-Visual search uses Smart Tags. After configuring smart tagging functionality, follow these steps.
+Visuell sökning använder smarta taggar. Följ de här stegen när du har konfigurerat funktionen för smart taggning.
 
-1. In [!DNL Experience Manager] CRXDE, in `/oak:index/lucene` node, add the following properties and values and save the changes.
+1. I [!DNL Experience Manager] CRXDE, i noden `/oak:index/lucene`, lägger du till följande egenskaper och värden och sparar ändringarna.
 
-    * `costPerEntry` property of type `Double` with the value `10`.
+   * Egenskapen `costPerEntry` av typen `Double` med värdet `10`.
 
-    * `costPerExecution` property of type `Double` with the value `2`.
+   * Egenskapen `costPerExecution` av typen `Double` med värdet `2`.
 
-    * `refresh` property of type `Boolean` with the value `true`.
+   * Egenskapen `refresh` av typen `Boolean` med värdet `true`.
 
-   This configuration allows searches from the appropriate index.
+   Den här konfigurationen tillåter sökningar från lämpligt index.
 
-1. To create Lucene index, in CRXDE, at `/oak:index/damAssetLucene/indexRules/dam:Asset/properties`, create node named `imageFeatures` of type `nt-unstructured`. In `imageFeatures` node,
+1. Skapa en nod med namnet `imageFeatures` av typen `nt-unstructured` i CRXDE vid `/oak:index/damAssetLucene/indexRules/dam:Asset/properties` om du vill skapa Lucene-index. I noden `imageFeatures`,
 
-    * Add `name` property of type `String` with the value `jcr:content/metadata/imageFeatures/haystack0`.
+   * Lägg till egenskapen `name` av typen `String` med värdet `jcr:content/metadata/imageFeatures/haystack0`.
 
-    * Add `nodeScopeIndex` property of type `Boolean` with the value of `true`.
+   * Lägg till egenskapen `nodeScopeIndex` av typen `Boolean` med värdet `true`.
 
-    * Add `propertyIndex` property of type `Boolean` with the value of `true`.
+   * Lägg till egenskapen `propertyIndex` av typen `Boolean` med värdet `true`.
 
-    * Add `useInSimilarity` property of type `Boolean` with the value `true`.
+   * Lägg till egenskapen `useInSimilarity` av typen `Boolean` med värdet `true`.
 
-   Save the changes.
+   Spara ändringarna.
 
-1. Access `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` and add `similarityTags` property of type `Boolean` with the value of `true`.
-1. Apply Smart Tags to the assets in your [!DNL Experience Manager] repository. See [how to configure smart tags](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring).
-1. In CRXDE, in `/oak-index/damAssetLucene` node, set the `reindex` property to `true`. Save the changes.
-1. (Optional) If you have customized search form then copy the `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` node to `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Save the changes.
+1. Få åtkomst till `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` och lägg till egenskapen `similarityTags` av typen `Boolean` med värdet `true`.
+1. Använd smarta taggar för resurserna i din [!DNL Experience Manager]-databas. Se [Konfigurera smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html#configuring).
+1. I CRXDE, i noden `/oak-index/damAssetLucene`, ställer du in egenskapen `reindex` på `true`. Spara ändringarna.
+1. (Valfritt) Om du har anpassat sökformulär kopierar du noden `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara ändringarna.
 
-For related information, see [understand smart tags in Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html) and [how to manage smart tags](/help/assets/smart-tags.md).
--->
+Mer information finns i [Mer information om smarta taggar i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html) och [hur du hanterar smarta taggar](/help/assets/smart-tags.md).
 
-<!--
-### Mandatory metadata {#mandatorymetadata}
+### Obligatoriska metadata {#mandatorymetadata}
 
-Business users, administrators, or DAM librarians can define some metadata as mandatory metadata that is a must for the business processes to work. For various reasons, some assets may be missing this metadata, such as legacy assets or assets migrated in bulk. Assets with missing or invalid metadata are detected and reported based on the indexed metadata property. To configure it, see [mandatory metadata](/help/assets/metadata-schemas.md#defining-mandatory-metadata).
+Affärsanvändare, administratörer och DAM-bibliotek kan definiera vissa metadata som obligatoriska metadata som är ett måste för att affärsprocesserna ska fungera. Av olika anledningar kan vissa resurser sakna dessa metadata, t.ex. äldre resurser eller resurser som migrerats i grupp. Assets med saknade eller ogiltiga metadata identifieras och rapporteras baserat på den indexerade metadataegenskapen. Mer information om hur du konfigurerar den finns i [obligatoriska metadata](/help/assets/metadata-schemas.md#defining-mandatory-metadata).
 
-### Modify search facets {#searchfacets}
+### Ändra sökfaktorer {#searchfacets}
 
-To improve the speed of discovery, [!DNL Experience Manager Assets] offers search facets using which you can filter the search results. The Filters panel includes a few standard facets by default. Administrators can customize the Filters panel to modify the default facets using the in-built predicates. [!DNL Experience Manager] provides a good collection of in-built predicates and an editor to customize the facets. See [search facets](/help/assets/search-facets.md).
+[!DNL Experience Manager Assets] erbjuder sökfaktorer som du kan använda för att filtrera sökresultaten, vilket förbättrar upptäcktens hastighet. Panelen Filter innehåller som standard några standardaspekter. Administratörer kan anpassa filterpanelen för att ändra standardmetoderna med hjälp av inbyggda predikat. [!DNL Experience Manager] innehåller en bra samling inbyggda predikat och en redigerare för att anpassa ansiktena. Se [sökfaktorer](/help/assets/search-facets.md).
 
-### Extract text when uploading assets {#extracttextupload}
+### Extrahera text när du överför resurser {#extracttextupload}
 
-You can configure [!DNL Experience Manager] to extract the text from the assets when users upload assets, such as PSD or PDF files. [!DNL Experience Manager] indexes the extracted text and helps users search these assets based on the extracted text. See [upload assets](/help/assets/manage-digital-assets.md#uploading-assets).
--->
+Du kan konfigurera [!DNL Experience Manager] så att texten extraheras från resurserna när användare överför resurser, till exempel PSD- eller PDF-filer. [!DNL Experience Manager] indexerar den extraherade texten och hjälper användarna att söka efter dessa resurser baserat på den extraherade texten. Se [Överför resurser](/help/assets/manage-digital-assets.md#uploading-assets).
 
 ### Anpassade predikat för att filtrera sökresultat {#custompredicates}
 
@@ -507,7 +504,7 @@ Sortera sökresultaten för att hitta de resurser som behövs snabbare. Du kan s
 
 I listvyn kan du sortera sökresultaten på samma sätt som du kan sortera resurser i valfri mapp. Sortering fungerar för de här kolumnerna - Namn, Titel, Status, Dimensioner, Storlek, Klassificering, Användning, Skapad (Datum), Ändrad (Datum), Publicerad, Arbetsflöde och Utcheckad.
 
-Information om begränsningar för sorteringsfunktioner finns i [begränsningar](#limitations).
+<!--For limitations of sort functionality, see [limitations](#limitations).-->
 
 ### Kontrollera detaljerad information om en resurs {#checkinfo}
 
@@ -523,13 +520,13 @@ Om du vill kontrollera kommentarerna för en resurs eller versionshistoriken fö
 
 ### Hämta sökbara resurser {#download}
 
-Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som du hämtar vanliga resurser från mappar. Välj en eller flera resurser från sökresultaten och klicka på **[!UICONTROL Download]** i verktygsfältet.
+Du kan hämta de sökda resurserna och deras återgivningar på samma sätt som du hämtar vanliga resurser från mappar. Välj en eller flera resurser från sökresultaten och klicka på **[!UICONTROL Download]** i verktygsfältet. Se [hämta resurser](/help/assets/download-assets-from-aem.md)
 
 ### Uppdatera metadataegenskaper gruppvis {#metadata-updates}
 
 Det går att göra satsvisa uppdateringar av de gemensamma metadatafälten för flera resurser. Välj en eller flera resurser från sökresultaten. Klicka på **[!UICONTROL Properties]** i verktygsfältet och uppdatera metadata efter behov. Klicka på **[!UICONTROL Save and Close]** när du är klar. De befintliga metadata i de uppdaterade fälten skrivs över.
 
-För resurser som är tillgängliga i en enda mapp eller en samling är det enklare att [uppdatera metadata i grupp](/help/assets/manage-metadata.md#manage-assets-metadata) utan att använda sökfunktionen. För resurser som är tillgängliga i olika mappar eller matchar ett gemensamt villkor är det snabbare att uppdatera metadata i grupp via sökning.
+För resurser som är tillgängliga i en enda mapp eller en samling är det enklare att [uppdatera metadata i grupp](/help/assets/bulk-metadata-edit.md) utan att använda sökfunktionen. För resurser som är tillgängliga i olika mappar eller matchar ett gemensamt villkor är det snabbare att uppdatera metadata i grupp via sökning.
 
 ### Smarta samlingar {#smart-collections}
 
@@ -578,7 +575,6 @@ Navigera till mapplatsen för resurser som visas i sökresultaten. Markera resur
 
 * [Söka efter bästa praxis](search-best-practices.md)
 * [Översätt Assets](translate-assets.md)
-* [ASSETS HTTP API](mac-api-assets.md)
 * [Filformat som stöds av Assets](file-format-support.md)
 * [Anslutna resurser](use-assets-across-connected-assets-instances.md)
 * [Resursrapporter](asset-reports.md)
