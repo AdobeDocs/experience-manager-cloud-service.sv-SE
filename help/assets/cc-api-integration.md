@@ -5,9 +5,9 @@ contentOwner: AG
 feature: Upload, Asset Processing, Publishing, Asset Compute Microservices
 role: User, Admin
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 1d8136b761528fe927b467320ebc7363de0d8a37
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -137,6 +137,8 @@ Om du vill bearbeta befintliga resurser markerar du resurserna, väljer alternat
 
 * [!DNL Experience Manager] begränsar resursbearbetningen till 300 begäranden per minut och miljö och 700 begäranden per minut per organisation.
 * Filstorleken är begränsad till 4 GB för [!DNL Adobe Photoshop] API-åtgärder och 1 GB för [!DNL Adobe Lightroom]-åtgärder.
+* PDF-återgivningar av Microsoft Office-dokument (&quot;.docx&quot;, &quot;.doc&quot;, &quot;.ppt&quot;, &quot;.pptx&quot;, &quot;.xls&quot;, &quot;.xlsx&quot;) är begränsade till filer som är högst 100 MB.
+* Videoomkodning är begränsad till indatafiler på 15 GB eller mindre.
 
 **Se även**
 
