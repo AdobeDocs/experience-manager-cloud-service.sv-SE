@@ -1,10 +1,10 @@
 ---
-title: Redigera massvis med metadata i [DNL! Assets View]
+title: Redigera flera metadata i  [!DNL Assets View]
 description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [DNL! Assets View] samtidigt.
 exl-id: f5fee1b3-2855-4010-ae4a-216beb20920d
-source-git-commit: 9b5191bd05bfb06fb4eb1a9b710b98cc132ffeda
+source-git-commit: 46d64c089ff22492bc871ead36e8c08d683043b1
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
