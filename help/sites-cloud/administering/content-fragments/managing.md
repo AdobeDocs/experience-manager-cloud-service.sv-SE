@@ -5,7 +5,7 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: 3789904b4aa1ffa4a039e6b84af64f03f06a3206
+source-git-commit: b8a56b73f8178c432941b50821be91777f203dec
 workflow-type: tm+mt
 source-wordcount: '2629'
 ht-degree: 0%
@@ -58,7 +58,7 @@ När du har definierat dina [modeller för innehållsfragment](#creating-a-conte
 
 Du kan använda panelen längst till vänster i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) för att välja **Innehållsfragment** som resurstyp för att visa, bläddra och hantera:
 
-![Konsolen för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-navigation.png)
+![Konsolen för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-fragments-navigation.png)
 
 Om du väljer **Innehållsfragment** öppnas konsolen på en ny flik.
 

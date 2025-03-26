@@ -4,9 +4,10 @@ description: Lär dig hur du hanterar modeller för innehållsfragment. Dessa fu
 feature: Content Fragments
 role: User, Developer, Architect
 solution: Experience Manager Sites
-source-git-commit: 175a7c069f57069b7a5ff1f0e5785147d9a4f6c9
+exl-id: f94f75c2-12fa-47c0-a71b-327f4210077d
+source-git-commit: b8a56b73f8178c432941b50821be91777f203dec
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2288'
 ht-degree: 0%
 
 ---
@@ -49,7 +50,7 @@ En mycket snabb översikt om hur du arbetar med Content Fragment Models:
 
 Du kan använda panelen längst till vänster i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) för att välja **Modeller för innehållsfragment** som resurstyp för att visa, bläddra och hantera:
 
-![Konsolen för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-assets-navigation.png)
+![Konsolen för innehållsfragment - navigering](/help/sites-cloud/administering/content-fragments/assets/cf-console-models-navigation.png)
 
 Då öppnas vyn för Content Fragment Models:
 
@@ -62,7 +63,7 @@ Här ser du att det finns tre huvudområden:
    * Visar även din IMS-organisation
    * Tillhandahåller olika [åtgärder](#actions-unselected)
 * Den vänstra panelen
-   * Visar alla [konfigurationer](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) som listas som mappar
+   * Visar [sökvägarna till alla konfigurationer](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) som listas som mappar
    * Här kan du dölja eller visa mappträdet
    * Du kan välja en specifik mapp i trädet
    * Storleken kan ändras för att visa kapslade mappar (underkonfigurationer)
@@ -75,7 +76,7 @@ Här ser du att det finns tre huvudområden:
          * [Du kan välja vilka kolumner som ska visas](#select-columns-console)
       * [Olika fält med information](#information-content-fragment-models) om en modell för innehållsfragment innehåller länkar. Beroende på fältet kan dessa:
          * Öppna lämplig modell i redigeraren
-         * Visa information om konfigurationen
+         * Visa information om sökvägen till konfigurationen
          * Visa information om modellens status
       * [Vissa andra fält med information](#information-content-fragments) om en innehållsfragmentmodell kan användas för [Snabb filtrering](#fast-filtering):
          * Markera ett värde i kolumnen så tillämpas det omedelbart som ett filter
@@ -96,8 +97,8 @@ Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad inform
    * Tillhandahåller en länk för att öppna modellen i redigeraren.
 * Låst
    * När modellen är låst visas den med en hänglåsikon.
-* **Konfiguration**
-   * Tillhandahåller en länk för att öppna konfigurationen i konsolen.
+* **Sökväg**
+   * Anger sökvägen som en länk för att öppna konfigurationen i konsolen.
 Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Status**
    * Endast information.
@@ -123,7 +124,7 @@ När du väljer en viss modell visas modellens egenskaper (som de definieras nä
 
 ![Konsolen för innehållsfragment - Information för en vald modell för innehållsfragment](assets/cf-managing-content-fragment-models-selected.png)
 
-* **[Konfiguration](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser)**
+* **[Sökväg](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser)**
 * **[Status](#enabling-a-content-fragment-model)**
 * **Titel**
 * **Taggar**
@@ -233,7 +234,7 @@ Välj till exempel **Aktiverad** i kolumnen **Status**. När du har valt det hä
    >* Om [användningen av Content Fragment Models har aktiverats](/help/sites-cloud/administering/content-fragments/setup.md)
    >* när du har valt den mapp där du vill skapa modellen.
 
-1. Välj **Konfiguration** och ange **Namn**.
+1. Markera **sökvägen** till konfigurationen och ange **namnet**.
 
    >[!NOTE]
    >
