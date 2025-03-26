@@ -3,9 +3,10 @@ title: Versionsinformation om 2025.1.0-utgåvan av  [!DNL Adobe Experience Manag
 description: Versionsinformation om 2025.1.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: f899398182f9d0991123828ca217379653a4e397
+exl-id: 085629bf-fb24-4511-af6c-bbbeedcb6b98
+source-git-commit: 3b6b11a325246fe5e86ae37e95351d7701716491
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1716'
 ht-degree: 0%
 
 ---
@@ -80,17 +81,33 @@ De redigerare som rekommenderas för hantering av headless-innehåll i AEM är n
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i vyn AEM Assets {#new-features-assets}
+### Nya funktioner i AEM Assets {#new-features-assets}
 
-**Anpassa sökfilter**
+**Leveransrapporter för dynamiska media**
 
-Med anpassade sökfilter blir det enklare att hitta relevant information. Det gör det möjligt att göra mer skräddarsydda sökningar och filtrera data efter specifika attribut som märke, produkt, kategori eller andra nyckelidentifierare. Detta förbättrar organisationen, minskar tiden för att gå miste om irrelevanta resultat och möjliggör snabbare beslutsfattande. Det har också stöd för skalbarhet eftersom stora datauppsättningar blir enklare att navigera i och analysera.
+Få leveransinsikter om mediefiler som levereras via Dynamic Media, inklusive leveransantal på tillgångsnivå, referensinformation, resurssökvägar i AEM Assets och unika medie-ID:n. Generera rapporter för alla resurser i AEM Assets-databasen eller specifika mapphierarkier. Med dessa insikter kan ni mäta avkastningen på levererade resurser, utvärdera kanalernas prestanda och fatta välgrundade beslut för resurshantering.
 
-![anpassade sökfilter](/help/assets/assets/custom-search-filters.png)
+![dynamiska återgivningar](/help/assets/assets/referrer.png)
 
-### Nya funktioner i Content Hub {#new-features-content-hub}
+**Dynamic Media Multi-audio och caption**
 
-Beskrivning
+[Stöd för flera bildtexter och flerljudspår för videofilmer i dynamiska media](/help/assets/dynamic-media/video.md#about-msma) - Nu kan du enkelt lägga till flera bildtexter och flera ljudspår i en primär video. Detta innebär att videoklippen är tillgängliga för en global publik. Du kan anpassa en enda publicerad primär video till en global publik på flera språk och följa riktlinjer för tillgänglighet för olika geografiska regioner. Författare kan också hantera beskrivningar och ljudspår från en enda flik i användargränssnittet.
+
+**Dynamisk adaptiv strömning över HTTP-stöd**
+
+Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) för adaptiv strömning i Dynamic Media-leverans (med CMAF aktiverat):
+
+* Adaptiv direktuppspelning (DASH/HLS) ger en bättre användarupplevelse för videor.
+
+* DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
+
+**Resursrelationer**
+
+Assets View har nu stöd för att visa och redigera resursrelationer på en förenklad resurspanel. Lägg enkelt in relationer som Source och Derivative i materialet så att användarna kan hitta relevant hjälteinnehåll effektivare.
+
+**Bearbeta resurser igen**
+
+Assets-vyn har nu stöd för återbearbetning av resurser som finns i en mapp. Du kan välja att antingen använda alternativet **Fullständig process** eller använda avancerade alternativ, som till exempel standardåtergivningar för förhandsgranskning, metadata, arbetsflöde för efterbearbetning och bearbetningsprofil.
 
 ### Tidig åtkomst-funktioner i AEM Assets {#early-access-features-assets}
 
