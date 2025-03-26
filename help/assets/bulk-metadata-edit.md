@@ -2,9 +2,9 @@
 title: Redigera flera metadata i  [!DNL Assets View]
 description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [DNL! Assets View] samtidigt.
 exl-id: f5fee1b3-2855-4010-ae4a-216beb20920d
-source-git-commit: 46d64c089ff22492bc871ead36e8c08d683043b1
+source-git-commit: 19c5155363ef3f5083d36af880727a33c7224e84
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 0%
     </tr>
 </table>
 
-Funktionen **[!DNL Bulk Metadata Edit]** i [!DNL Assets View] gör att du kan redigera en fördefinierad uppsättning med standardmetadatafält för flera resursfiler samtidigt. Välj flera resurser och uppdatera deras fördefinierade standarduppsättning med standardmetadata samtidigt i stället för att uppdatera standardmetadata för varje resurs separat. Den här möjligheten att redigera standarduppsättningen med metadataegenskaper för flera resurser samtidigt bevarar effektiviteten, enhetligheten och exaktheten i dessa standardegenskaper för alla de stora resurserna, vilket förbättrar sökbarheten och organiseringen av dessa resurser.
+Funktionen **[!DNL Bulk Metadata Edit]** i [!DNL Assets View] gör att du kan redigera en fördefinierad uppsättning med standardmetadatafält för flera resursfiler samtidigt. Välj flera resurser och uppdatera deras fördefinierade standarduppsättning med standardmetadata samtidigt i stället för att uppdatera standardmetadata för varje resurs separat. Denna funktion bibehåller effektiviteten, enhetligheten och exaktheten hos standardegenskaperna för metadata i de stora materialuppsättningarna, vilket förbättrar sökbarheten och organisationen för dessa resurser.
 
 ## Redigera metadata för resurser gruppvis {#how-to-bulk-edit-the-metadata-of-multiple-assets-on-assets-view}
 
