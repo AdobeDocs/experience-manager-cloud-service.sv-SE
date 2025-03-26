@@ -1,35 +1,25 @@
 ---
-title: Hur skapar man fristående Adaptiv Forms med Universal Editor?
-description: I den här artikeln beskrivs hur du skapar adaptiva Forms med hjälp av guiden Skapa formulär i AEM-författarinstansen och publicerar formulär till AEM Edge Delivery Services.
+title: Hur skapar man fristående blanketter som bygger på Edge Delivery Services-mallar med Universal Editor?
+description: I den här artikeln beskrivs hur du använder den universella redigeraren för att skapa formulär genom att välja en Edge Delivery Services-baserad mall i guiden Skapa formulär. Du kan även publicera formulären på AEM Edge Delivery Services.
 feature: Edge Delivery Services
 role: User
 hide: true
 hidefromtoc: true
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: 3db311812f6c4521baf1364523a0e0b1134fee65
+source-git-commit: 979aad24ebbd0ef1d4d1fc92d402fca20bc27a44
 workflow-type: tm+mt
-source-wordcount: '1186'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
 
-# Skapa fristående blanketter med Universal Editor (WYSIWYG)
+# Steg-för-steg-guide för att skapa fristående formulär i Universal Editor
 
 <span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
-I den här artikeln får du hjälp med att skapa de fristående formulären med Universal Editor genom att välja en Edge Delivery Services-baserad mall i guiden Skapa formulär. Du kan även publicera de skapade formulären med Universal Editor till AEM Edge Delivery Services.
+I den här artikeln får du hjälp med att skapa och redigera fristående formulär med den universella redigeraren genom att välja en Edge Delivery Services-baserad mall i guiden Skapa formulär. Du kan även publicera de skapade formulären med Universal Editor till AEM Edge Delivery Services.
 
-<!--To publish forms to Edge Delivery Services, you must first establish a connection between your AEM environment and your GitHub repository. Once connected, you can author the forms using the Universal Editor, which follows a WYSIWYG (What You See Is What You Get) approach for a seamless and consistent user experience with Sites.-->
-
-Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan använda:
-
-* [Edge Delivery Services för AEM Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) är en sammansättningsbar uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare kan uppdatera, publicera och starta nya formulär snabbt med den universella redigeraren. Den universella redigeraren förenklar framtagningen av formulär för Adobe Edge Delivery Services med ett användarvänligt, visuellt WYSIWYG-gränssnitt.
-
-* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Du kan besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) om du vill visa tillgängliga kärnkomponenter i praktiken **Adobe rekommenderar att du använder dessa moderna och utbyggbara komponenter för att utveckla adaptiva Forms**.
-
-* [Adaptiva Forms Foundation-komponenter](/help/forms/creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar nya formulär rekommenderar Adobe att du använder [adaptiva Forms Core-komponenter för att skapa en adaptiv Forms](#create-an-adaptive-form-core-components).
-
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och lagring. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-webbplatsprojekt](#add-adaptive-forms-block-to-your-existing-aem-project).
+AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och lagring. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-webbplatsprojekt](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project).
 
 ![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png)
 
@@ -40,67 +30,70 @@ AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edg
 * Instansen AEM Forms Author innehåller en mall baserad på Edge Delivery Services. Kontrollera att den [senaste versionen av Core Components](https://github.com/adobe/aem-core-forms-components) är installerad i din miljö.
 * Ha URL:en till din AEM Forms as a Cloud Service-författarinstans och din GitHub-databas till hands.
 
-## Skapa ett adaptivt formulär med Universal Editor
+## Arbeta med formulär i den universella redigeraren
 
-Med den universella redigeraren kan du enkelt skapa responsiva och interaktiva fristående formulär med färdiga komponenter som textfält, kryssrutor och alternativknappar. Den har kraftfulla funktioner som dynamiska regler, smidig dataintegrering och anpassningsalternativ, så att du kan skapa formulär efter dina exakta behov.
+Med den universella redigeraren kan du enkelt skapa responsiva och interaktiva fristående formulär med färdiga komponenter som textfält, kryssrutor och alternativknappar. Den har kraftfulla funktioner som dynamiska regler, smidig dataintegrering och anpassningsalternativ, så att du kan skapa formulär efter dina exakta behov. Du kan även publicera formulären på AEM Edge Delivery Services. Du kan utföra följande åtgärder på formulär i Universell redigerare:
+* [Skapa ett formulär](#create-a-form)
+* [Skapa ett formulär](#author-a-form)
+* [Publicera ett formulär](#publish-a-form)
+* [Hantera ett formulär](#manage-a-form)
 
 >[!NOTE]
 >
 > Du kan även [skapa ett formulär på AEM Site med Edge Delivery Services Site-mallen i Universal Editor och publicera det på Edge Delivery Services](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#create-a-new-aem-project).
 
-Så här skapar du ett fristående adaptivt formulär med Universal Editor:
 
-1. **Skapa ett adaptivt formulär i AEM Forms-författarinstans**
+### Skapa ett formulär
 
-   1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
-   1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-   1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
-   1. På fliken **Source** väljer du en Edge Delivery Services-baserad formulärmall:
+1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
+1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
+1. På fliken **Source** väljer du en Edge Delivery Services-baserad formulärmall:
 
-      ![Skapa EDS Forms](/help/edge/assets/create-eds-forms.png)
+   ![Skapa EDS Forms](/help/edge/assets/create-eds-forms.png)
 
 
-      När du väljer en Edge Delivery Services-baserad mall aktiveras knappen **[!UICONTROL Create]**.
-   1. (Valfritt) På flikarna **[!UICONTROL Data Source]** eller **[!UICONTROL Submission]** kan du välja en datakälla eller skicka-åtgärd.
-   1. (Valfritt) På fliken **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett adaptivt formulär.
+   När du väljer en Edge Delivery Services-baserad mall aktiveras knappen **[!UICONTROL Create]**.
+1. (Valfritt) På flikarna **[!UICONTROL Data Source]** eller **[!UICONTROL Submission]** kan du välja en datakälla eller skicka-åtgärd.
+1. (Valfritt) På fliken **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett formulär.
 
-   1. Klicka på **[!UICONTROL Create]** så visas guiden **Skapa formulär**.
-   1. Ange **Namn** och **Titel**.
-   1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en:
-      `https://github.com/wkndforms/edsforms`
-   1. Klicka på **[!UICONTROL Create]**.
+1. Klicka på **[!UICONTROL Create]** så visas guiden **Skapa formulär**.
+1. Ange **Namn** och **Titel**.
+1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en:
+   `https://github.com/wkndforms/edsforms`
+1. Klicka på **[!UICONTROL Create]**.
 
-      ![Guiden Skapa formulär](/help/edge/assets/create-form-wizard.png)
+   ![Guiden Skapa formulär](/help/edge/assets/create-form-wizard.png)
 
-      När du klickar på **[!UICONTROL Create]** öppnas formuläret i Universell redigerare för redigering.
+   När du klickar på **[!UICONTROL Create]** öppnas formuläret i Universell redigerare för redigering.
 
-      ![författare till formuläret](/help/edge/assets/author-form.png)
+   ![författare till formuläret](/help/edge/assets/author-form.png)
 
-      <!-- >[!NOTE]
+   <!-- >[!NOTE]
         >
         > The Edge Delivery Services configuration for the forms based on Edge Delivery Services template is created automatically at the form's configuration container.-->
 
-      När du klickar på **[!UICONTROL Create]** öppnas formuläret i den universella redigeraren för redigering.
+   När du klickar på **[!UICONTROL Create]** öppnas formuläret i den universella redigeraren för redigering.
 
-1. **Skapa formuläret i den universella redigeraren**
+### Skapa ett formulär
 
-   1. Öppna innehållsläsaren och navigera till komponenten **[!UICONTROL Adaptive Form]** i **innehållsträdet**.
+1. Öppna innehållsläsaren och navigera till komponenten **[!UICONTROL Adaptive Form]** i **innehållsträdet**.
 
-      ![innehållsträd](/help/edge/assets/content-tree.png)
+   ![innehållsträd](/help/edge/assets/content-tree.png)
 
-   1. Klicka på ikonen **[!UICONTROL Add]** och lägg till de önskade komponenterna från listan **Adaptiva formulärkomponenter**.
+1. Klicka på ikonen **[!UICONTROL Add]** och lägg till de önskade komponenterna från listan **Adaptiva formulärkomponenter**.
 
-      ![lägg till komponent](/help/edge/assets/add-component.png)
+   ![lägg till komponent](/help/edge/assets/add-component.png)
 
-   1. Markera den tillagda adaptiva formulärkomponenten och uppdatera dess egenskaper med **[!UICONTROL Properties]**.
+1. Markera den tillagda adaptiva formulärkomponenten och uppdatera dess egenskaper med **[!UICONTROL Properties]**.
 
-      ![öppna egenskaper](/help/edge/assets/component-properties.png)
+   ![öppna egenskaper](/help/edge/assets/component-properties.png)
 
-      På skärmbilden nedan visas det enkla `Registration Form`-formuläret som har skapats i Universella redigerare:
+   På skärmbilden nedan visas det enkla `Registration Form`-formuläret som har skapats i Universella redigerare:
 
-      ![kontakta oss](/help/edge/assets/contact-us.png)
+   ![kontakta oss](/help/edge/assets/contact-us.png)
 
-      Nu kan du [konfigurera och anpassa formuläröverföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md).
+   Nu kan du [konfigurera och anpassa formuläröverföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md).
 
 
 <!--
@@ -122,7 +115,7 @@ Så här skapar du ett fristående adaptivt formulär med Universal Editor:
 
    1. Click **[!UICONTROL Save and Close]**. The configuration is saved. -->
 
-## Publicera formuläret
+### Publicera ett formulär
 
 Publicera det fristående formuläret till Edge Delivery Services genom att klicka på knappen **[!UICONTROL Publish]** i det övre högra hörnet av Universell redigerare.
 
@@ -152,7 +145,7 @@ URL-strukturen är densamma för både testversioner och liveversioner. Innehål
 
 ![Visa publicerat formulär](/help/edge/assets/eds-view-publish-form.png)
 
-## Hantera formulär
+### Hantera ett formulär
 
 Du kan utföra flera åtgärder på formulär med AEM Forms användargränssnitt.
 
