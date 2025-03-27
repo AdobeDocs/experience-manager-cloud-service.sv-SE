@@ -2,9 +2,9 @@
 title: Integrera fjärr-AEM Assets med AEM Sites
 description: Lär dig hur du konfigurerar och ansluter AEM webbplatser med Godkänd AEM Assets.
 exl-id: 382e6166-3ad9-4d8f-be5c-55a7694508fa
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 2ec0b4125aa0990b6e022350a1f861fe394e6b1f
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1061'
 ht-degree: 0%
 
 ---
@@ -178,4 +178,4 @@ Du uppmanas att logga in.
 
 ### Få åtkomst till fjärrresurser i Edge Delivery Services {#access-assets-eds}
 
-Du kan även komma åt fjärrresurser i Edge Delivery Services. Mer information finns i [Använda resurser från Assets as a Cloud Service som levereras med Dynamic Media med OpenAPI-funktioner](https://www.aem.live/docs/aem-assets-sidekick-plugin#utilizing-assets-from-assets-cloud-services-delivered-via-dynamic-media-with-openapi).
+Du kan få åtkomst till fjärrresurser när du redigerar innehåll i Microsoft Word, Google Docs eller Universal Editor och sedan publicera innehållet till Edge Delivery Services. Ni kan också använda Dynamic Media med OpenAPI för att leverera varumärkesgodkända mediefiler och utnyttja många andra fördelar som det erbjuder. Mer information finns i [Integrera AEM Assets när du redigerar innehåll för Edge Delivery Services](/help/assets/integrate-aem-assets-edge-delivery-services.md).
