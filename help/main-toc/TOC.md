@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 6bce8f33f6588b49fc9165eeeedc8f4057222eb0
+source-git-commit: fc5983b42ee60971ace54a8fb54fdef29de5374d
 workflow-type: tm+mt
-source-wordcount: '6106'
+source-wordcount: '6108'
 ht-degree: 2%
 
 ---
@@ -1430,6 +1430,7 @@ ht-degree: 2%
    + [Använda konfigurationsförlopp](/help/operations/config-pipeline.md)
    + [Borttagning av det generiska lucenindexet](/help/operations/removal-generic-lucene-index.md)
    + [Bästa praxis för frågor och indexering](/help/operations/query-and-indexing-best-practices.md)
+   + [Länkkontroll](/help/operations/link-checker.md)
 + Kompatibilitet {#compliance}
    + [Efterlevnad av AEM as a Cloud Service](/help/compliance/home.md)
    + Kompatibilitet med dataintegritet och dataskydd {#data-privacy}
