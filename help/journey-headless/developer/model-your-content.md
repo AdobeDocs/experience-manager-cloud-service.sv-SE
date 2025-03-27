@@ -5,9 +5,9 @@ exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
+source-git-commit: 22876fb2c74c705c3a03e81f7f87a5c2392d8ff4
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1830'
 ht-degree: 0%
 
 ---
@@ -184,9 +184,10 @@ AEM tillhandahåller följande datatyper som du kan använda för att utforma di
 * Datum och tid
 * Uppräkning
 * Taggar
-* Innehållsreferens
-* Fragmentreferens
+* UUID för fragmentreferens/fragmentreferens
+* Innehållsreferens/UUID för innehållsreferens
 * JSON-objekt
+* Platshållare för flik
 
 ### Referenser och kapslat innehåll {#references-nested-content}
 
@@ -213,7 +214,9 @@ Först måste du aktivera Content Fragment Models för webbplatsen. Detta görs 
 >
 >Se Ytterligare resurser - Innehållsfragment i Configuration Browser
 
-Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Detta kan du göra under **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**. Till exempel:
+Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen. Allt detta kan du göra på konsolen för innehållsfragment. På konsolen väljer du panelen för modeller för innehållsfragment, navigerar till rätt mapp och använder sedan **Skapa** för att öppna dialogrutan **Ny modell för innehållsfragment**.
+
+När du har skapat modellen kan du redigera den. Till exempel:
 
 ![Modell för innehållsfragment](assets/cfm-model.png)
 
@@ -227,9 +230,7 @@ Innehållsfragment baseras alltid på en innehållsfragmentmodell. Modellen inne
 
 ### Välja lämplig modell {#select-model}
 
-Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med Skapa > Innehållsfragment i den obligatoriska mappen under Assets > Filer. Guiden vägleder dig genom stegen.
-
-Ett innehållsfragment baseras på en viss innehållsfragmentmodell som du väljer som första steg i skapandet.
+Det första steget till att skapa innehåll är att skapa ett innehållsfragment. Detta görs med **Skapa** från fliken **Innehållsfragment** i konsolen Innehållsfragment.
 
 ### Skapa och redigera strukturerat innehåll {#create-edit-structured-content}
 
@@ -247,7 +248,7 @@ När fragmentet har skapats kan du öppna det i redigeraren för innehållsfragm
 
 När du har valt lämplig modell öppnas ett innehållsfragment för redigering i redigeraren för innehållsfragment:
 
-![Innehållsfragmentsredigeraren](assets/cfm-editor.png)
+![Innehållsfragmentredigeraren - översikt](/help/sites-cloud/administering/content-fragments/assets/cf-authoring-overview.png)
 
 >[!NOTE]
 >

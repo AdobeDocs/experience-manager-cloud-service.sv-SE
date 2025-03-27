@@ -5,9 +5,9 @@ exl-id: 1adecc69-5f92-4007-8a2a-65bf1e960645
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 46b0af152d5f297419e7d1fa372975aded803bc7
+source-git-commit: 22876fb2c74c705c3a03e81f7f87a5c2392d8ff4
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -132,19 +132,21 @@ Dessa modeller för innehållsfragment:
 
 ### Fragmentreferenser {#fragment-references}
 
-**Fragmentreferens**:
+**Fragmentreferens** och **UUID för fragmentreferens**:
 
-* Är en specifik datatyp tillgänglig när du definierar en innehållsfragmentmodell.
+* Är specifika datatyper tillgängliga när du definierar en innehållsfragmentmodell.
 * Refererar till ett annat fragment, beroende på en viss innehållsfragmentmodell.
 * Gör att du kan skapa och sedan hämta strukturerade data.
 
    * När det definieras som en **multifeed** kan flera delfragment refereras (hämtas) av det primära fragmentet.
 
+<!--
 ### JSON Preview {#json-preview}
 
-Om du vill ha hjälp med att designa och utveckla dina modeller för innehållsfragment kan du förhandsgranska JSON-utdata i redigeraren för innehållsfragment.
+To help with designing and developing your Content Fragment Models, you can preview JSON output in the Content Fragment Editor.
 
 ![JSON Preview](assets/cfm-model-json-preview.png "JSON Preview")
+-->
 
 <!--
 ## GraphQL Schema Generation from Content Fragments {#graphql-schema-generation-content-fragments}
