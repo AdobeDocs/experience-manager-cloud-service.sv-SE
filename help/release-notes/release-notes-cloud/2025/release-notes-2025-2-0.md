@@ -1,20 +1,18 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+title: Versionsinformation om 2025.2.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2025.2.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 1964d4a40d1272baf661473641381ace900407d1
+source-git-commit: 43a9b29132aca8f5231634b845c55538b59f5ee4
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2025.2.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.2.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.3.0) är 27 mars 2025. Nästa funktionsversion (2025.4.0) är planerad till 24 april 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.2.0) är 4 mars 2025. Nästa version (2025.3.0) är planerad till 27 mars 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -44,20 +42,59 @@ Have a look at the February 2025 Release Overview video for a summary of the fea
 
 -->
 
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
+
+### Nya funktioner i AEM Sites {#new-features-sites}
+
+**Automatisk taggning för innehållsfragment**
+
+När du skapar innehållsfragment kan du nu automatiskt ärva taggar som har tilldelats innehållsmodellen. Detta möjliggör kraftfull automatisk klassificering av innehåll som lagras i innehållsfragment.
+
+**Stöd för UUID för innehållsfragment**
+
+Stöd för Content Fragment UUID är nu GA. Den nya funktionen ändrar inte det banbaserade beteendet för åtgärder i AEM, till exempel move, rename, rollout, där banorna automatiskt justeras, men det kan göra det enklare och stabilare att använda externa innehållsfragment, särskilt när du använder GraphQL-frågor som direkt riktar in enskilda fragment med ByPath-frågor. Sådana frågor kan brytas om en fragmentsökväg ändras. När du använder den nya ById-frågetypen är frågan nu stabil eftersom UUID för ett fragment inte ändras i fall där sökvägar gör det.
+
+**Dynamiska media med stöd för OpenAPI i Content Fragment Editor och GraphQL**
+
+Assets som lagras i andra AEM as a Cloud Service-program än Content Fragments, och som aktiveras med nya Dynamic Media med OpenAPI-funktioner, kan nu användas i Content Fragments. Bildväljaren i den nya Content Fragment Editor tillåter nu att du väljer &quot;fjärrdatabaser&quot; som källa för bildresurser som ska refereras i fragmentet. När sådana innehållsfragment levereras med AEM GraphQL, innehåller JSON-svaret nu nödvändiga egenskaper för fjärrresurser (assetId, databaseId) så att klientapplikationer kan skapa respektive Dynamic Media med OpenAPI-URL:er för att hämta bilden.
+
+**Utrullning av innehållsfragmentredigerare**
+
+Vi fortsätter att aktivera den nya gränssnittsbaserade redigeraren för innehållsfragment i AEM as a Cloud Service. Efter att ha blivit standard för alla Cloud Service Developer-miljöer i november 2024 kommer den att anges som standard för alla scenmiljöer den 1 april 2025 och för alla produktionsmiljöer den 1 maj 2025. I samtliga fall har användarna fortfarande möjlighet att återgå till den traditionella redigeraren för innehållsfragment i AEM Touch-gränssnittet.
+
+**Översättnings-HTTP API**
+
+AEM Translation HTTP REST API som har varit i läget tidig adopter ett tag är nu GA. Dokumentation finns [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/translation/). API:t gör det möjligt att automatisera nödvändiga steg i översättningshanteringsprocessen för innehåll i AEM.
+
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i Dynamic Media {#new-features-dynamic-media}
+### Nya funktioner i AEM Assets {#new-features-assets}
 
-**Stöd för långa formulär för videor som levereras med Dynamic Media med Open API**
+**Dynamic Media - ny paketeringsstruktur**
 
-Dynamic Media med OpenAPI har nu stöd för videor med långa format. Videor med långa format har stöd för upp till 50 GB och 2 timmar.
+Nu finns en uppdaterad paketeringsstruktur för dynamiska media som bättre motsvarar marknadens förväntningar och ger support. Den nya förpackningsstrukturen omfattar
 
-### Nya funktioner i vyn Assets {#new-features-assets-view}
+* Dynamic Media Prime, som innehåller Dynamic Media med OpenAPI:er och video för bättre leverans.
 
+* Dynamic Media Ultimate har dessutom funktioner för leverans och omvandling för att klara tyngre användningsbehov.
 
-**Stöd för rottaggar**
+Du måste ha Assets as a Cloud Service Prime eller Ultimate för att kunna dra nytta av den nya paketeringsstrukturen.
 
-AEM Assets har nu stöd för att mappa en taggegenskap i ett metadataformulär till anpassade metadata. Som administratör kan du dessutom begränsa tillgängligheten för taggar till användare genom att begränsa åtkomsten till en viss rottagg och de taggar som finns under rottaggen.
+**AI-genererade videobeskrivningar**
+
+AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter. Bildtexter genereras från det ursprungliga ljudet, eventuella ytterligare ljudspår eller extra bildtexter finns på fliken Bildtexter och ljud på videoegenskapssidan. Med stöd för över 60 språk kan bildtexter granskas och förhandsgranskas innan videon publiceras.
+
+**Anpassa sökfilter**
+
+Med anpassade sökfilter blir det enklare att hitta relevant information. Det gör det möjligt att göra mer skräddarsydda sökningar och filtrera data efter specifika attribut som märke, produkt, kategori eller andra nyckelidentifierare. Detta förbättrar organisationen, minskar tiden för att gå miste om irrelevanta resultat och möjliggör snabbare beslutsfattande. Det har också stöd för skalbarhet eftersom stora datauppsättningar blir enklare att navigera i och analysera.
+
+![anpassa sökfilter](/help/assets/assets/custom-search-filters.png)
+
+### Tidig åtkomst-funktioner i Content Hub {#early-access-content-hub}
+
+I Content Hub kan du nu visa och hämta dynamiska och smarta beskärningsrenderingar utöver de befintliga statiska renderingarna. Som Content Hub-administratör kan du även konfigurera tillgängligheten för dessa återgivningar för användare med användargränssnittet för konfiguration.
+
+![dynamiska återgivningar](/help/assets/assets/download-single-asset-renditions-dynamic.png)
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -87,15 +124,7 @@ Den mer prestandaanpassade Java 21 **runtime** distribueras automatiskt när en 
 
 >[!IMPORTANT]
 >
-> Java 21 **runtime** distribuerades till dina dev/RDE-miljöer i februari. Den kommer att användas i dina scen-/produktionsmiljöer den 28 och 29 april **.** Observera att **byggkoden** med Java 21 (eller Java 17) är oberoende av Java 21-miljön - du måste vidta åtgärder explicit för att skapa kod med Java 21 (eller Java 17).
-
-### AEM Log-Forwarding till fler destinationer - Beta Program {#log-forwarding-earlyadopter}
-
-I betaversionen kan du nu vidarebefordra AEM-loggar till New Relic (med HTTPS), Amazon S3 och Sumo Logic. Observera att AEM-loggar (inklusive Apache/Dispatcher) stöds, men inte CDN-loggar. E-post [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) för åtkomst.
-
-Medan loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har redan stöd för (GA) AEM- och CDN-loggvidarebefordran till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. Den här funktionen är konfigurerad på ett självbetjäningssätt och distribueras med Config Pipeline.
-
-Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementing/developing/introduction/log-forwarding.md).
+> I februari distribuerades Java 21 **runtime** till dev-/RDE-miljöer (utöver de som redan byggts med Java 17 eller 21, som redan har Java 21-runtime). Java 21 kommer att användas i scen-/produktionsmiljöer i april.
 
 ### Edge Computing - Request for Feedback! {#edge-computing-feedback}
 
