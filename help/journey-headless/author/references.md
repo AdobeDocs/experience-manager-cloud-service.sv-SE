@@ -5,9 +5,9 @@ exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
+source-git-commit: 2c74a3a42dd21e2eaf71c1922931d5fa5149f7c5
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
@@ -44,6 +44,13 @@ Vissa referenser har särskilda datatyper (till exempel Innehållsreferenser och
 
 Innehållsreferenser gör just det - de gör det möjligt att referera till annat innehåll. Då öppnas en webbläsare där du kan välja innehållsobjektet.
 
+Det finns två typer:
+
+* **Innehållsreferens**
+   * anger sökvägen till den refererade resursen
+* **Innehållsreferens (UUID)**
+   * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
+
 ## Resurs-/mediereferenser {#assets-media-references}
 
 Assets (till exempel bilder eller media) kan refereras inom ett textblock med alternativet **Infoga resurs**. Då öppnas en webbläsare där du kan välja resursen.
@@ -75,6 +82,13 @@ Och det är bara till att börja med. Beroende på komplexiteten kan en utmärke
 Att representera dessa inbördes relationer kan uppnås med Fragmentreferenser, så som de tolkas både av dig (författaren) och av rubrikfria program.
 
 Som författare ansvarar du inte för att definiera de här relationerna (det vill säga görs av innehållsarkitekten när du skapar innehållsfragmentmodellen), men du måste veta hur referenserna ska identifieras och redigeras.
+
+Det finns två sorters:
+
+* **Fragmentreferens**
+   * anger sökvägen till den refererade resursen
+* **Fragmentreferens (UUID)**
+   * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
 
 <!--
 ![Content Modeling with Content Fragments](/help/journey-headless/developer/assets/headless-modeling-01.png "Content Modeling with Content Fragments")
