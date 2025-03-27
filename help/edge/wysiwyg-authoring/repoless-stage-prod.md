@@ -4,9 +4,9 @@ description: Lär dig hur du skapar separata sajter för staging- och produktion
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 701bd9bc-30e8-4654-8248-a06d441d1504
-source-git-commit: c9d0d3cd7e18b56db36a379b63f8fb48e18a40db
+source-git-commit: beda1168323d511cd7b89bb5d0a6eccb742de36f
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
@@ -141,3 +141,9 @@ Nu när du har gjort alla nödvändiga konfigurationsändringar kontrollerar du 
 1. Besök din nya Edge Delivery Services-webbplats för den sidan på `https://main--wknd-prod--<your-github-org>.aem.page`.
 
 Om du ser ändringarna som du har gjort fungerar inställningarna för den separata produktionsplatsen som de ska.
+
+## Användning {#usage}
+
+När du har konfigurerat ditt projekt med effektiva staging- och produktionsmiljöer kan du hantera koden för dem oberoende av varandra. I följande diagram visas förhållandet mellan innehåll i olika miljöer i AEM, Edge Delivery Services webbplatser och dina GitHub-databaser.
+
+![Illustration av AEM-miljöer och problemfria prod-/scenmiljöer](assets/repoless/aem-edge-github.png)
