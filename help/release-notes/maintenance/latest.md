@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 30b5d5838087a35a457939cdbaa13c5735df144e
+source-git-commit: 67b9a5f73f1f8c599e902a0ac0d8efbc614c7f75
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '517'
 ht-degree: 1%
 
 ---
@@ -16,47 +16,61 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 19823 {#19823}
+## Utgåva X {#X}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 19823, som offentliggjordes den 4 mars 2025. Den tidigare underhållsutgåvan släpptes 19687.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva X, som offentliggjordes den 1 april 2025. Den tidigare underhållsutgåvan släpptes 19823.
 
-Funktionsaktiveringen i 2025.3.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-19823}
+### Förbättringar {#enhancements-X}
 
-* ASSETS-46491: OSGI-händelsehanterare för statusändring för bearbetning av resurser.
-* ASSETS-45613: Skicka avpubliceringshändelser när resurser tas bort eller flyttas.
-* ASSETS-45131: Stöd för anpassade taggegenskaper i Content Hub.
+FORMS-19068: Stöd har lagts till för AEP Connector-åtgärder i Forms Manager-API:er för att förbättra integreringsfunktionerna för formulärdata.
 
-### Åtgärdade problem {#fixed-issues-19823}
+FORMS-18513: Implementerat stöd för dataträdsomvandling i AEP Connector för att förbättra guidefunktioner och datahanteringsfunktioner.
 
-* ASSETS-20433: Dynamic Media-problem med lösenordsskyddade PDF-filer.
-* ASSETS-24675: Bildbearbetningsalternativ visas inte för bilder med enbart färgrutor.
-* ASSETS-41257: Versionsjämförelse återger resurs med felaktiga proportioner. Resursversioner visas i fel ordning på tidslinjen.
-* ASSETS-44894: Det är inte säkert att bokmärken i Assets-vyn kan klickas.
-* ASSETS-45015: Smart beskärningsbredd och -höjd har angetts som noll om det inte går att hitta resurshandtaget för smart beskärning.
-* ASSETS-45192: Minska frekvensen för pulsförfrågningar.
-* ASSETS-45724: Kontrollera att DM-överföringen görs om om överföringsjobbet inte har tilldelats.
-* ASSETS-46425: Adobe Stock integreringssökningsproblem.
-* ASSETS-27400: Generatorn för mappförhandsvisning kan försöka öppna originalet.
-* CQ-4358722: Hantera olika språkkoder i Java 11 och Java 17.
-* SITES-29369: Page Published/Unpublished Events triggered on Asset activation/deactivation.
-* SITES-24074: Korrigera tangentbordstillgänglighet med ett enhetligt skal.
-* SITES-28058: Assets-mapptiteln överförs inte till live-kopian.
+FORMS-18432: Implementerad formulärspecifik (regex-baserad) konfiguration av förifyllning på klientsidan för att möjliggöra selektiv förifyllning utan ändringar på OSGI-nivå.
 
-### Kända fel {#known-issues-19823}
+FORMS-17551: Stöd för DoR (Document of Record) för SharePoint listintegreringar.
+
+### Åtgärdade problem {#fixed-issues-X}
+
+FORMS-19028: Förifyllningsfunktionen på klientsidan bryter hanteringen av formulärhändelser, vilket förhindrar Value commit- och DOMContentLoaded-händelser från att aktiveras korrekt vid formulärinläsning.
+
+FORMS-18360: Förbättrad SharePoint listomfattningshantering för gruppwebbplatser i Forms Document Management för att förbättra dataorganisationen och åtkomstkontrollen.
+
+FORMS-18325: Adobe Experience Platform (AEP) Cloud-konfiguration har lagts till för att förbättra integrationen av formulärdata och bearbetningskapaciteten.
+
+FORMS-18213: Implementerad funktion för att dölja/exkludera inaktiverade fält från DoR (Document of Record) för att förbättra dokumentets tydlighet och användarupplevelsen.
+
+FORMS-18189: Anpassad funktionshantering som förhindrar felloggning för tomma klientbibliotek och förbättrar felvisningen i användargränssnittet.
+
+FORMS-18426: SharePoint listsökningsfunktion misslyckas när listnamn innehåller specialtecken (till exempel &#39;-&#39;), vilket påverkar formulärintegrationen med SharePoint-listor.
+
+FORMS-18375: Formulär som baseras på Foundation-komponenter markerar felaktigt reaptcha-konfigurationer från mappen `conf/global` när ingen specifik konfigurationsbehållare har valts.
+
+FORMS-18304: PDF/A-1b-dokument som godkänts i Acrobat och LiveCycle ES4 flaggas felaktigt som icke-kompatibla i AEM 6.5 Forms på grund av enhetsberoende färgfel.
+
+FORMS-18271: Forms Theme Editor visar olokaliserade felmeddelanden som påverkar användarupplevelsen när det gäller formulärkonfiguration och temaanpassning.
+
+FORMS-18068: Fet textåtergivningsproblem i DoR (Document of Record) för alternativknappar och kryssrutegrupper med hjälp av RTF-fält.
+
+FORMS-7016: Tangentbordsfokusordningen i formulärredigeraren följer inte logisk navigering.
+
+FORMS-6950: Nödvändiga ARIA-roller och attribut har lagts till i komponenter för filsystemets navigatortreeview för att förbättra skärmläsarens tillgänglighet och uppfylla WCAG 4.1.2-standarden Namn, roll, värde (nivå A).
+
+### Kända fel {#known-issues-X}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-19823}
+### Föråldrade funktioner och API:er {#deprecated-X}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-19823}
+### Säkerhetskorrigeringar {#security-X}
 
-AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar sex identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
+AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar X-identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-19823}
+### Inbäddade tekniker {#embedded-tech-X}
 
 | Teknik | Version | Länk |
 |---|---|---|
