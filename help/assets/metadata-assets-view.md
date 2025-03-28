@@ -5,9 +5,9 @@ role: User, Leader, Admin, Architect, Developer
 contentOwner: AG
 exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
 feature: Metadata
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 6d729c8e7f84dccce9c11f1ca13553763d0547f8
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '2048'
 ht-degree: 0%
 
 ---
@@ -217,6 +217,39 @@ Följ stegen nedan för att använda länkkomponenten i metadataformuläret:
    * Klicka på ikonen ![kopiera](assets/do-not-localize/copy.svg) för att kopiera URL:en.
    * Klicka på ![redigeringsikonen](assets/do-not-localize/edit.svg) om du vill redigera URL-adressen.
 1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
+
+
+### Arbeta med taggkomponenten i metadataformulär {#tag-component-metadata-form}
+
+Rotelementet representerar trädstrukturen för de taggar som du kan associera med resurserna, vilket hjälper till att identifiera resursen baserat på taggen som tilldelats den. Dessutom kan du begränsa åtkomsten till en viss taxonomi när du konfigurerar metadataformuläret i metadataredigeraren.
+
+#### Konfiguration av taggkomponent {#tags-component-configuration}
+
+Konfigurera taggkomponenten genom att utföra följande steg:
+
+1. Gå till metadataredigeraren och navigera till **[!UICONTROL Tags]** och placera den på arbetsytan.
+1. Byt namn på komponenten på arbetsytan. Det gör du genom att gå till **[!UICONTROL Label]** under [!UICONTROL Metadata property] på inställningspanelen och lägga till texten för identifieringen.
+1. Under [!UICONTROL Metadata property] på inställningspanelen söker du efter metadataegenskapen som du vill tilldela komponenten.
+1. Klicka på **[!UICONTROL Restrict to specific taxonomy]** om du vill begränsa taxonomins rotsökväg. Det gör du genom att bläddra bland taggarna och välja taxonomin till den specifika sökvägen.
+1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
+
+   ![Konfiguration av rottaggar](assets/root-tag-config.png)
+
+1. [Tilldela metadata till mappar](#assign-metadata-form-folder).
+
+<!--
+#### Mapping between assets and taxonomy {#asset-taxonomy-mapping}
+
+See [Assign metadata form to folders](#assign-metadata-form-folder). Follow the steps below to perform mapping between folder and taxonomy:
+
+1. Go back to the Settings and click **[!UICONTROL Metadata forms]** 
+1. Select a Metadata form that needs mapping. 
+1. Click **[!UICONTROL Assign to folder(s)]**. **[!UICONTROL Select Folder(s)]** screen appears. 
+1. Navigate to the folder that you want to assign to the metadata form. You can select multiple folders.
+1. Click **[!UICONTROL Assign]**.
+-->
+
+Om du vill visa de konfigurerade rottaggarna går du till objektets informationssida där mappningen mellan metadataformuläret och rottaggarna utförs.
 
 ## Nästa steg {#next-steps}
 
