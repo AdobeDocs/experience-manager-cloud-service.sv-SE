@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: c5bf8f4f0ffa250bee9743bf1810abcf171f24d3
+source-git-commit: 5a1c951813e026806aa3b5b23a912a48681f4505
 workflow-type: tm+mt
 source-wordcount: '1072'
 ht-degree: 0%
@@ -28,7 +28,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.4.0) är 24 april 2025. Nästa funktionsversion (2025.5.0) är planerad till 29 maj 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.3.0) är 27 mars 2025. Nästa funktionsversion (2025.4.0) är planerad till 24 april 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
