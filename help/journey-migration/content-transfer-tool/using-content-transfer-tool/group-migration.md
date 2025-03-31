@@ -2,9 +2,9 @@
 title: Gruppmigrering
 description: Översikt över gruppmigrering i AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: c3a13f75757a478996918c6868a172d75158aafe
+source-git-commit: 50c8dd725e20cbd372a7d7858fc67b0f53a8d6d4
 workflow-type: tm+mt
-source-wordcount: '1914'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ De flesta migrerade grupper är konfigurerade att hanteras av IMS.  Detta inneb�
 
 Observera att migrerade grupper inte längre betraktas som&quot;lokala AEM-grupper&quot;. De är IMS-klara grupper i AEM även om de ännu inte finns i IMS.  De måste återskapas separat i IMS så att de kan synkroniseras mellan AEM och IMS.  Grupper kan skapas i IMS via Admin Console, bland annat på egen hand eller gruppvis.  Mer information om hur du skapar grupper individuellt eller gruppvis i Admin Console finns i [Hantera användargrupper](https://helpx.adobe.com/enterprise/using/user-groups.html).
 
-Undantaget för den här IMS-konfigurationen gäller grupper som skapats av Assets Collections. När en samling skapas på AEM skapas grupper för åtkomst till den samlingen. Sådana grupper migreras till molnsystemet, men de är inte konfigurerade för att hanteras av IMS.  Om du vill lägga till IMS-användare i dessa grupper måste de läggas till på sidan Gruppegenskaper i Assets-gränssnittet, antingen individuellt eller tillsammans som en del av en annan IMS-grupp.
+Undantaget för den här IMS-konfigurationen gäller grupper som har skapats av Assets Collections och Privata mappar. När en samling eller en privat mapp skapas på AEM skapas grupper för åtkomst till det innehållet. Sådana grupper migreras till molnsystemet, men de är inte konfigurerade att hanteras av IMS.  Om du vill lägga till IMS-användare i dessa grupper måste de läggas till på sidan Gruppegenskaper i Assets-gränssnittet, antingen individuellt eller tillsammans som en del av en annan IMS-grupp.
 
 
 ## Avanmäl dig från gruppmigrering {#group-migration-option}
