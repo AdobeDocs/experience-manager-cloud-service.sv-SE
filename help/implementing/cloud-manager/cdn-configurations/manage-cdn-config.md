@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 2ec16c91-0195-4732-a26d-ac223e10afb9
-source-git-commit: 41155a724f48ad28a12aac615a3e9a13bb3afa26
+source-git-commit: e3a8afaee6c3baeb593eb69a46648b0a8d2a069f
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -67,31 +67,33 @@ Stegen för att redigera en CDN-konfiguration från sidan **Miljö** är nästan
 
 1. Klicka på **Uppdatera**.
 
-<!-- 
-## Go live readiness: Configure DNS settings for a custom domain {#go-live-readiness} 
 
-Before a custom domain can serve traffic in Adobe Cloud Manager, you must complete DNS configuration with your DNS provider. After deploying a domain mapping and clicking **Go live**, Cloud Manager displays a dialog box that guides you through the DNS record setup process. You have the option to go live by adding either a CNAME record type or an A record type representing Fastly's IPs, simplifying domain routing. This ability eliminates the restriction of relying solely on CNAME records for domain setup with Fastly.
+## Gör dig redo live: Konfigurera DNS-inställningar för en anpassad domän {#go-live-readiness}
 
-MAYBE There is support for A record types to improve Go Live readiness for domains using CDN configurations in AEM Cloud Manager. MAYBE
+Innan en anpassad domän kan hantera trafik måste du slutföra DNS-konfigurationen med din DNS-leverantör. När du har distribuerat en domänmappning och klickat på **Go live** visar Cloud Manager en dialogruta som hjälper dig genom DNS-postkonfigurationen. Du kan välja att publicera genom att lägga till antingen en CNAME-posttyp eller en A-posttyp.
 
-See also [APEX record](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md#adobe-managed-cert-cname-record#adobe-managed-cert-apex-record) and [CNAME record](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md#adobe-managed-cert-cname-record).
+<!-- See also [APEX record](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md#adobe-managed-cert-cname-record#adobe-managed-cert-apex-record) and [CNAME record](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md#adobe-managed-cert-cname-record). -->
 
-**To configure Go live readiness:**
+**Så här konfigurerar du Go live-beredskap:**
 
-1. Log into Cloud Manager at [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) and select the appropriate organization and program.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
+1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **Domänmappningar** på den vänstra menyn under **Tjänster**.
+1. I tabellen Domänmappningar klickar du på **Gå live** i slutet av en rad som motsvarar ett CDN vars live-beredskap du vill konfigurera.
 
-1. In the left side menu, under **Services**, click ![Social network icon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **Domain Mappings**.
+   ![Dialogrutan Gå live-beredskap](/help/implementing/cloud-manager/assets/domain-mappings-go-live-readiness.png)
 
-1. In the Domain Mappings table, click **Go live** near the end of a row that corresponds to a CDN whose Go Live readiness you want to configure. 
+1. Gör något av följande i dialogrutan **Go live readiness** :
 
-1. In the Go live readiness dialog box, do one of the following:
+   | Alternativ | Steg |
+   | --- | --- |
+   | Konfigurera EN POST | Rekommenderas för rotdomäner som `example.com`<br><ol><li>Logga in på din DNS-tjänstleverantörs portal.<li>Gå till avsnittet DNS-poster.<li>Skapa en A-post för att peka på alla IP-adresser som visas.</li></ol> |
+   | Konfigurera CNAME | Rekommenderas för anpassade domäner som `www.example.com`<br><ol><li>Logga in på DMS-tjänsteleverantörens portal.<li>Gå till avsnittet DNS-poster.<li>Mappa [cdn.adobeaemcloud.com](https://cdn.adobeaemcloud.com/) (CNAME-post) i DNS-posten för DNS-tjänstleverantören (din anpassade domän). Denna mappning säkerställer att begäranden som tas emot på den anpassade domänen dirigeras om till Adobe CDN.</li></ol> |
 
-    | Configure  | Steps |
-    | --- | --- |
-    | A RECORD | Recommended for root domains like `example.com`<br><ol><li>Log in to your DNS service provider's portal.<li>Go to the DNS Records section.<li>Create an A record to point to all the listed IP addresses.<li>In the Go live readiness dialog box, click **OK**.<li>In the Domain Mappings table, under the **Status** column, click ![Refresh icon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Refresh_18_N.svg).<br>The status is updated to **Verified** when the resolution is complete.</li></ol> |
-    | CNAME | Recommended for custom domains like `www.example.com`<br><ol><li>Log in to your DMS service provider's portal.<li>Go to the DNS Records section.<li>Map [cdn.adobeaemcloud.com](http://cdn.adobeaemcloud.com/) (CNAME record) in the DNS record of the DNS service provider (your custom domain). This mapping ensures that requests received at the custom domain are redirected to Adobe's CDN.<li>In the **Go live readiness** dialog box, click **OK** to save the record.<br>Wait for DNS propogation (may take several minutes to a few hours). When the **[!UICONTROL Status]** column in the Domamin Mappings table updates to **[!UICONTROL Verified]**, the custom domain is ready to use. You may need to click ![Refresh icon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Refresh_18_N.svg) to refresh the status.</li></ol> | 
-    
--->
+1. Klicka på **OK** i dialogrutan **Gå live-beredskap** för att spara posten.
+
+   Vänta på DNS-spridning. Det kan ta flera minuter till några timmar.
+
+   När kolumnen **[!UICONTROL Status]** i tabellen Domänmappningar uppdateras till **[!UICONTROL Verified]** är den anpassade domänen klar att användas. Du kan behöva klicka på ikonen ![Uppdatera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Refresh_18_N.svg) för att uppdatera statusen.
 
 ## Ta bort en CDN-konfiguration {#delete-cdn}
 
