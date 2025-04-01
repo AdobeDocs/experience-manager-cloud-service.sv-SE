@@ -4,9 +4,9 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 3727dc18b34f7a2eb307703c94fbc3a6ffe17437
+source-git-commit: d25c4aa5801d1ef2b746fc207d9c64ddf381bb8e
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 Kunder som har en licens hos en loggningsleverantör eller som är värd för en loggningsprodukt kan få AEM-loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till det associerade loggningsmålet. AEM as a Cloud Service stöder följande loggningsmål:
 
-* Amazon S3 (privat beta, se [^1])
+* Amazon S3 (privat beta, se anm. nedan)
 * Azure Blob Storage
 * Datadog
 * Elasticsearch eller OpenSearch
 * HTTPS
 * Splunk
-* Sumologik (privat beta, se [^1])
+* Sumo Logic (privat beta, se anm. nedan)
 
 Vidarebefordran av loggar konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och kan distribueras via Cloud Manager konfigurationspipelines för utvecklings-, scen- och produktionsmiljötyper. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
@@ -33,7 +33,9 @@ Det finns ett alternativ för att dirigera loggarna för AEM och Apache/Dispatch
 
 Observera att den nätverksbandbredd som är associerad med loggar som skickas till loggningsmålet räknas som en del av organisationens I/O-användning i nätverket.
 
-[^1] Amazon S3 och Sumo Logic finns i Private Beta och stöder endast AEM-loggar (inklusive Apache/Dispatcher).  New Relic via HTTPS är också i en privat betaversion. E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
+>[!NOTE]
+>
+>Amazon S3 och Sumo Logic finns i Private Beta och stöder endast AEM-loggar (inklusive Apache/Dispatcher).  New Relic via HTTPS är också i en privat betaversion. E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
 
 ## Hur den här artikeln ordnas {#how-organized}
 
@@ -192,6 +194,7 @@ Konfigurationer för loggningsmål som stöds listas nedan tillsammans med event
 
 ### Amazon S3 {#amazons3}
 
+>[!NOTE]
 >
 >Loggar som skrivs till S3 periodvis, var 10:e minut för varje loggfilstyp.  Detta kan resultera i en inledande fördröjning för loggar som skrivs till S3 när funktionen har växlats.  Mer information om varför det här beteendet finns [här](https://docs.fluentbit.io/manual/pipeline/outputs/s3#differences-between-s3-and-other-fluent-bit-outputs).
 
@@ -384,7 +387,7 @@ Att tänka på:
 
 E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
 
->
+>[!NOTE]
 >New Relic tillhandahåller regionspecifika slutpunkter baserat på var ditt New Relic-konto är etablerat.  Mer information om New Relic finns i [här](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/#endpoint).
 
 #### HTTPS CDN-loggar {#https-cdn}
@@ -459,7 +462,7 @@ data:
       index: "aem-logs"
 ```
 
->
+>[!NOTE]
 > Du måste ha en Sumo Logic Enterprise-prenumeration för att kunna utnyttja funktionen för indexfält.  Loggarna för icke-företagsprenumerationer dirigeras till partitionen `sumologic_default` som standard.  Mer information finns i [Dokumentation för sumologisk partitionering](https://help.sumologic.com/docs/search/optimize-search-partitions/).
 
 ## Loggpostformat {#log-formats}
