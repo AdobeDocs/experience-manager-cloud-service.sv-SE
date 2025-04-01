@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 solution: Experience Manager Sites
 exl-id: f94f75c2-12fa-47c0-a71b-327f4210077d
-source-git-commit: b8a56b73f8178c432941b50821be91777f203dec
+source-git-commit: 3e4775df58a03136e925be73dab6faf673e7215e
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2290'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ Här ser du att det finns tre huvudområden:
          * Visa information om modellens status
       * [Vissa andra fält med information](#information-content-fragments) om en innehållsfragmentmodell kan användas för [Snabb filtrering](#fast-filtering):
          * Markera ett värde i kolumnen så tillämpas det omedelbart som ett filter
-         * Snabb filtrering stöds för kolumnerna **Ändrad av**, **Publicerad av** och **Status**.s
+         * Snabb filtrering stöds för kolumnerna **Ändrad av**, **Publicerad av** och **Status**.
       * Genom att använda musen på kolumnrubrikerna visas en listruta med åtgärdsväljare och breddreglage. Med dessa kan du:
          * Sortera - välj lämplig åtgärd för antingen stigande eller fallande
 Då sorteras hela tabellen efter den kolumnen. Sortering är bara tillgängligt för lämpliga kolumner.
@@ -95,7 +95,7 @@ Huvudpanelen/den högra panelen (tabellvyn) i konsolen innehåller en rad inform
 
 * **Namn**
    * Tillhandahåller en länk för att öppna modellen i redigeraren.
-* Låst
+* **Låst** (hänglåsikon)
    * När modellen är låst visas den med en hänglåsikon.
 * **Sökväg**
    * Anger sökvägen som en länk för att öppna konfigurationen i konsolen.
