@@ -4,9 +4,9 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 9c258e2906c37ee9b91d2faa78f7dfdaa5956dc2
+source-git-commit: 3727dc18b34f7a2eb307703c94fbc3a6ffe17437
 workflow-type: tm+mt
-source-wordcount: '1985'
+source-wordcount: '2275'
 ht-degree: 0%
 
 ---
@@ -15,21 +15,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Loggvidarebefordran är nu konfigurerat på självbetjäningssätt, vilket skiljer sig från den gamla metoden, som kräver att du skickar en Adobe Support-biljett. Se avsnittet [Migrerar](#legacy-migration) om din vidarebefordran av loggen har konfigurerats av Adobe.
+>Loggvidarebefordran är nu konfigurerat på självbetjäningssätt, vilket skiljer sig från den gamla metoden, som kräver att en Adobe Support-biljett skickas. Se avsnittet [Migrerar](#legacy-migration) om din vidarebefordran av loggen har konfigurerats av Adobe.
 
-Kunder som har en licens hos en loggningsleverantör eller som är värd för en loggningsprodukt kan få AEM loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till den associerade loggningsdestinationen. AEM as a Cloud Service stöder följande loggningsmål:
+Kunder som har en licens hos en loggningsleverantör eller som är värd för en loggningsprodukt kan få AEM-loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till det associerade loggningsmålet. AEM as a Cloud Service stöder följande loggningsmål:
 
+* Amazon S3 (privat beta, se [^1])
 * Azure Blob Storage
 * Datadog
 * Elasticsearch eller OpenSearch
 * HTTPS
 * Splunk
+* Sumologik (privat beta, se [^1])
 
 Vidarebefordran av loggar konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och kan distribueras via Cloud Manager konfigurationspipelines för utvecklings-, scen- och produktionsmiljötyper. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
-Det finns ett alternativ för att dirigera loggarna AEM och Apache/Dispatcher via AEM avancerad nätverksinfrastruktur, som dedikerad IP-adress för utgångar.
+Det finns ett alternativ för att dirigera loggarna för AEM och Apache/Dispatcher via AEM avancerade nätverksinfrastruktur, till exempel dedikerad IP-adress för utgångar.
 
 Observera att den nätverksbandbredd som är associerad med loggar som skickas till loggningsmålet räknas som en del av organisationens I/O-användning i nätverket.
+
+[^1] Amazon S3 och Sumo Logic finns i Private Beta och stöder endast AEM-loggar (inklusive Apache/Dispatcher).  New Relic via HTTPS är också i en privat betaversion. E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
 
 ## Hur den här artikeln ordnas {#how-organized}
 
@@ -39,7 +43,7 @@ Den här artikeln är organiserad på följande sätt:
 * Transport och avancerat nätverk - hänsyn bör tas till nätverksinställningarna innan loggningskonfigurationen skapas
 * Målkonfigurationer för loggning - varje mål har ett något annorlunda format
 * Loggpostformat - information om loggpostformat
-* Migrera från äldre vidarebefordran av loggar - gå från vidarebefordran av loggfiler som tidigare konfigurerats av Adobe till självbetjäningsmetoden
+* Migrera från äldre vidarebefordring av loggar - gå från vidarebefordran av loggfiler som tidigare konfigurerats av Adobe till självbetjäning
 
 ## Inställningar {#setup}
 
@@ -67,7 +71,7 @@ Den här artikeln är organiserad på följande sätt:
 
 Tokens i konfigurationen (till exempel `${{SPLUNK_TOKEN}}`) representerar hemligheter som inte ska lagras i Git. Deklarera dem i stället som Cloud Manager [Hemliga miljövariabler](/help/operations/config-pipeline.md#secret-env-vars). Välj **Alla** som listvärde för fältet Tjänst används, så att loggarna kan vidarebefordras till författare, publicering och förhandsgranskningsnivåer.
 
-Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Dispatcher) genom att inkludera ytterligare ett **cdn**- och/eller **aem** -block efter **default** -blocket, där egenskaper kan åsidosätta de som definieras i **default** -blocket. Det krävs bara den aktiverade egenskapen. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
+Det går att ange olika värden mellan CDN-loggar och AEM-loggar (inklusive Apache/Dispatcher) genom att inkludera ytterligare ett **cdn**- och/eller **aem** -block efter **default** -blocket, där egenskaper kan åsidosätta dem som definieras i **default** -blocket; endast den aktiverade egenskapen krävs. Ett möjligt användningsexempel kan vara att använda ett annat Splunk-index för CDN-loggar, vilket visas i exemplet nedan.
 
 ```yaml
    kind: "LogForwarding"
@@ -87,7 +91,7 @@ Det går att ange olika värden mellan CDN-loggar och AEM (inklusive Apache/Disp
          index: "AEMaaCS_CDN"   
 ```
 
-Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM (inklusive Apache/Dispatcher). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
+Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM-loggar (inklusive Apache/Dispatcher). Om du till exempel bara vill vidarebefordra CDN-loggarna kan du konfigurera följande:
 
 ```yaml
    kind: "LogForwarding"
@@ -156,7 +160,7 @@ table, th, td {
 >
 > Den avancerade nätverkskonfigurationen är en [tvåstegsprocess](/help/security/configuring-advanced-networking.md#configuring-and-enabling-advanced-networking-configuring-enabling) som kräver aktivering på program- och miljönivå.
 
-Om du har konfigurerat [Avancerat nätverk](/help/security/configuring-advanced-networking.md) för AEM (inklusive Apache/Dispatcher) kan du använda egenskapen `aem.advancedNetworking` för att vidarebefordra dem från en dedikerad IP-adress eller via ett VPN.
+Om du har konfigurerat [Avancerat nätverk](/help/security/configuring-advanced-networking.md) för AEM-loggar (inklusive Apache/Dispatcher) kan du använda egenskapen `aem.advancedNetworking` för att vidarebefordra dem från en dedikerad IP-adress eller via ett VPN.
 
 I exemplet nedan visas hur du konfigurerar loggning på en vanlig HTTPS-port med avancerade nätverk.
 
@@ -177,14 +181,51 @@ data:
       advancedNetworking: true
 ```
 
-För CDN-loggar kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till en https-server eller (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en känd IP-server till den slutliga målplatsen.
+För CDN-loggar kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till en https-server eller (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en känd IP-adress till deras slutliga mål.
 
 >[!NOTE]
->Det går inte att visa CDN-loggar från samma IP-adress som dina AEM loggar visas från. Detta beror på att loggarna skickas direkt från Fastly och inte från AEM Cloud Service.
+>Det går inte att visa CDN-loggar från samma IP-adress som dina AEM-loggar kommer från. Det beror på att loggarna skickas direkt från Fast och inte från AEM Cloud Service.
 
 ## Konfiguration för loggningsmål {#logging-destinations}
 
 Konfigurationer för loggningsmål som stöds listas nedan tillsammans med eventuella särskilda överväganden.
+
+### Amazon S3 {#amazons3}
+
+>
+>Loggar som skrivs till S3 periodvis, var 10:e minut för varje loggfilstyp.  Detta kan resultera i en inledande fördröjning för loggar som skrivs till S3 när funktionen har växlats.  Mer information om varför det här beteendet finns [här](https://docs.fluentbit.io/manual/pipeline/outputs/s3#differences-between-s3-and-other-fluent-bit-outputs).
+
+```yaml
+kind: "LogForwarding"
+version: "1.0"
+data:
+  awsS3:
+    default:
+      enabled: true
+      region: "your-bucket-region"
+      bucket: "your_bucket_name"
+      accessKey: "${{AWS_S3_ACCESS_KEY}}"
+      secretAccessKey: "${{AWS_S3_SECRET_ACCESS_KEY}}"
+```
+
+Om du vill använda S3 Log Forwarder måste du förkonfigurera en AWS IAM-användare med lämplig profil för att få åtkomst till S3-bucket.  Se [här](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) för hur du skapar IAM-användarautentiseringsuppgifter.
+
+IAM-principen bör tillåta användaren att använda `s3:putObject`.  Till exempel:
+
+```json
+{
+   "Version": "2012-10-17",
+   "Statement": [{
+       "Effect": "Allow",
+       "Action": [
+           "s3:PutObject"
+       ],
+       "Resource": "arn:aws:s3:::your_bucket_name/*"
+   }]
+}
+```
+
+Mer information om implementering av AWS Bucket Policy finns [här](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html).
 
 ### Azure Blob Storage {#azureblob}
 
@@ -241,9 +282,9 @@ aemcdn/
 
 Varje fil innehåller flera json-loggposter, var och en på en separat rad. Loggpostformaten beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md) och varje loggpost innehåller även de ytterligare egenskaper som anges i avsnittet [Loggpostformat](#log-formats) nedan.
 
-#### Loggar för Azure Blob Storage-AEM {#azureblob-aem}
+#### Azure Blob Storage AEM-loggar {#azureblob-aem}
 
-AEM (inklusive Apache/Dispatcher) visas under en mapp med följande namnkonvention:
+AEM-loggar (inklusive Apache/Dispatcher) visas under en mapp med följande namnkonvention:
 
 * aemaccess
 * aemerror
@@ -279,7 +320,7 @@ Att tänka på:
 
 * Skapa en API-nyckel, utan någon integrering med en viss molnleverantör.
 * Taggegenskapen är valfri
-* För AEM loggar är datakälltaggen för DataDig inställd på något av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
+* För AEM-loggar anges datakälltaggen för DataDig till någon av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
 * För CDN-loggar är datakällkoden `aemcdn` angiven för Datadog
 * Datadoggens servicemärke är inställd på `adobeaemcloud`, men du kan skriva över den i taggavsnittet
 * Om din pipeline för dataöverföring använder datadaggar för att fastställa lämpligt index för vidarebefordringsloggar kontrollerar du att dessa taggar är korrekt konfigurerade i YAML-filen för loggvidarebefordran. Taggar som saknas kan förhindra att loggen kan tas in om pipeline är beroende av dem.
@@ -308,8 +349,8 @@ Att tänka på:
 
 ![Elastic deployment credentials](/help/implementing/developing/introduction/assets/ec-creds.png)
 
-* För AEM loggar är `index` inställt på något av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
-* Den valfria pipeline-egenskapen ska anges till namnet på importflödet för Elasticsearch eller OpenSearch, som kan konfigureras för att dirigera loggposten till rätt index. Pipelinens processortyp måste anges till *script* och skriptspråket ska anges till *smärtfritt*. Här följer ett exempel på ett skriptfragment som dirigerar loggposter till ett index som aemaccess_dev_26_06_2024:
+* För AEM-loggar är `index` inställt på något av `aemaccess`, `aemerror`, `aemrequest`, `aemdispatcher`, `aemhttpdaccess` eller `aemhttpderror`
+* Den valfria pipeline-egenskapen ska anges till namnet på Elasticsearch- eller OpenSearch-importflödet, som kan konfigureras för att dirigera loggposten till lämpligt index. Pipelinens processortyp måste anges till *script* och skriptspråket ska anges till *smärtfritt*. Här följer ett exempel på ett skriptfragment som dirigerar loggposter till ett index som aemaccess_dev_26_06_2024:
 
 ```text
 def envType = ctx.aem_env_type != null ? ctx.aem_env_type : 'unknown';
@@ -339,6 +380,13 @@ Att tänka på:
 * URL-strängen måste innehålla **https://**, annars misslyckas valideringen.
 * URL:en kan innehålla en port. Exempel: `https://example.com:8443/aem_logs/aem`. Om ingen port ingår i URL-strängen antas port 443 (standard-HTTPS-port).
 
+#### New Relic Log API {#newrelic-https}
+
+E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
+
+>
+>New Relic tillhandahåller regionspecifika slutpunkter baserat på var ditt New Relic-konto är etablerat.  Mer information om New Relic finns i [här](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/#endpoint).
+
 #### HTTPS CDN-loggar {#https-cdn}
 
 Webbförfrågningar (POST) skickas kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med loggpostformatet som beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md#cdn-log). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-formats) nedan.
@@ -349,9 +397,9 @@ Det finns också en egenskap med namnet `sourcetype` som är inställd på värd
 >
 > Innan den första CDN-loggposten skickas måste HTTP-servern slutföra en engångskontroll: en begäran som skickas till sökvägen ``/.well-known/fastly/logging/challenge`` måste svara med en asterisk ``*`` i brödtexten och 200-statuskoden.
 
-#### HTTPS-AEM {#https-aem}
+#### HTTPS AEM-loggar {#https-aem}
 
-För AEM (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med de olika loggpostformaten som beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-formats) nedan.
+För AEM-loggar (inklusive apache/disacher) skickas webbförfrågningar (POST) kontinuerligt, med en JSON-nyttolast som är en matris med loggposter, med de olika loggpostformaten som beskrivs under [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md). Ytterligare egenskaper anges i avsnittet [Loggpostformat](#log-formats) nedan.
 
 Det finns också en egenskap med namnet `Source-Type` som är inställd på något av följande värden:
 
@@ -389,28 +437,34 @@ Att tänka på:
 >
 > [Om du migrerar](#legacy-migration) från äldre loggvidarebefordran till den här självbetjäningsmodellen kan värdena i fältet `sourcetype` som skickas till ditt Splunk-index ha ändrats, så justera därefter.
 
-<!--
-### Sumo Logic {#sumologic}
+### Sumologik {#sumologic}
 
-   ```yaml
-   kind: "LogForwarding"
-   version: "1"
-   metadata:
-     envTypes: ["dev"]
-   data:
-     splunk:
-       default:
-         enabled: true
-         host: "https://collectors.de.sumologic.com"
-         uri: "/receiver/v1/http"
-         privateKey: "${{SomeOtherToken}}"
-   
-   ```   
--->
+När du konfigurerar Sumo Logic för datainmatning visas en&quot;HTTP Source Address&quot; som tillhandahåller värddatorn, receiverURI och den privata nyckeln i en enda sträng.  Till exempel:
+
+`https://collectors.de.sumologic.com/receiver/v1/http/ZaVnC...`
+
+Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [ CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [ Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
+
+```yaml
+kind: "LogForwarding"
+version: "1"
+metadata:
+  envTypes: ["dev"]
+data:
+  sumologic:
+    default:
+      enabled: true
+      collectorURL: "https://collectors.de.sumologic.com/receiver/v1/http"
+      privateKey: "${{SUMOLOGIC_PRIVATE_KEY}}"
+      index: "aem-logs"
+```
+
+>
+> Du måste ha en Sumo Logic Enterprise-prenumeration för att kunna utnyttja funktionen för indexfält.  Loggarna för icke-företagsprenumerationer dirigeras till partitionen `sumologic_default` som standard.  Mer information finns i [Dokumentation för sumologisk partitionering](https://help.sumologic.com/docs/search/optimize-search-partitions/).
 
 ## Loggpostformat {#log-formats}
 
-Se [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md) för formatet för respektive loggtyp (CDN-loggar och AEM loggar inklusive Apache/Dispatcher).
+Se [Loggning för AEM as a Cloud Service](/help/implementing/developing/introduction/logging.md) för formatet för respektive loggtyp (CDN-loggar och AEM-loggar inklusive Apache/Dispatcher).
 
 Eftersom loggar från flera program och miljöer kan vidarebefordras till samma loggningsmål, förutom de utdata som beskrivs i loggningsartikeln, kommer följande egenskaper att finnas i varje loggpost:
 
@@ -432,11 +486,11 @@ aem_tier: author
 
 Innan konfigurationen av loggvidarebefordran gjordes via en självbetjäningsmodell ombads kunderna att öppna supportärenden, där Adobe initierade integreringen.
 
-Kunder som har konfigurerats på det sättet av Adobe får gärna anpassa sig till självbetjäningsmodellen när det passar. Det finns flera skäl till att göra den här övergången:
+Kunder som har konfigurerats på detta sätt av Adobe får gärna anpassa sig till självbetjäningsmodellen när det passar. Det finns flera skäl till att göra den här övergången:
 
 * En ny miljö (t.ex. en ny dev-miljö eller RDE) har etablerats.
 * Ändrar din befintliga Splunk-slutpunkt eller autentiseringsuppgifter.
-* Adobe hade konfigurerat vidarebefordran av loggar innan CDN-loggarna var tillgängliga och du vill få CDN-loggar.
+* Adobe konfigurerade din loggvidarebefordran innan CDN-loggar var tillgängliga och du vill få CDN-loggar.
 * Ett medvetet beslut att aktivt anpassa sig till den självbetjäningsmodellen så att organisationen har kunskapen redan innan en tidskänslig förändring är nödvändig.
 
 När du är redo att migrera konfigurerar du bara YAML-filen enligt beskrivningen i de föregående avsnitten. Använd Cloud Manager konfigurationsflöde för att distribuera till var och en av de miljöer där konfigurationen ska användas.
