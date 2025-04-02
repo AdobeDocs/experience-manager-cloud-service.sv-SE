@@ -5,9 +5,9 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9645ee21bc8c44020d5bb7cdd513d67429353c7d
+source-git-commit: bf903736e256bb9275bad6c0271b31b8dbdec625
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du lägger till ett eget SSL-certifikat eller ett Adobe-hanterat DV
 >
 >Om du använder ett kundhanterat (OV/EV) SSL-certifikat och en kundhanterad CDN-leverantör kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
 
-Det kan ta flera dagar att etablera ett certifikat. Därför rekommenderar Adobe att du etablerar ditt eget certifikat långt före en deadline eller ett leveransdatum för att undvika förseningar.
+Det kan ta flera dagar att etablera ett certifikat. Därför rekommenderar Adobe att du etablerar ditt eget certifikat långt före ett visst datum för deadline eller en viss tid för att undvika förseningar.
 
 Mer information om hur du uppdaterar och hanterar dina SSL-certifikat i Cloud Manager finns i [Hantera SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/managing-certificates.md).
 
@@ -35,12 +35,12 @@ Om du har problem med att lägga till eller hantera certifikat kan du läsa [Fel
 
 ## Välja vilket SSL-certifikat som ska läggas till {#which-ssl-to-add}
 
-När du har [lagt till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) i AEM Cloud Manager beror nästa steg på om du väljer att använda ett SSL-certifikat som hanteras med Adobe (DV) (rekommenderas) eller ett SSL-certifikat som hanteras av kund (OV/EV).
+När du har [lagt till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) i AEM Cloud Manager beror nästa steg på om du väljer att använda ett Adobe-hanterat (DV) SSL-certifikat (rekommenderas) eller ett kundhanterat (OV/EV) SSL-certifikat.
 
 * **För ett SSL-certifikat som hanteras av Adobe (DV):**
    * Domänvalideringsprocessen utförs när den anpassade domänen har lagts till och verifierats i Cloud Manager.
    * Nu måste du [lägga till ett Adobe-hanterat (DV) SSL-certifikat](#add-adobe-managed-ssl-cert).
-När du har lagt till DV i Cloud Manager väntar du tills Adobe har utfärdat och installerat DV SSL-certifikatet åt dig.
+När du har lagt till det i Cloud Manager väntar du tills Adobe har utfärdat och installerat DV SSL-certifikatet åt dig.
    * När certifikatet är aktivt är din anpassade domän klar att användas.
 
 * **För ett SSL-certifikat som hanteras av en kund (OV/EV):**
@@ -57,7 +57,7 @@ Se även [Introduktion till SSL-certifikat](/help/implementing/cloud-manager/man
 
 Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-certifikat (rekommenderas) eller ett kundhanterat SSL-certifikat med din domän? Se [Välja vilket SSL-certifikat som ska läggas till](#which-ssl-to-add)
 
-**Så här lägger du till ett SSL-certifikat som hanteras med Adobe (DV):**
+**Så här lägger du till ett Adobe-hanterat (DV) SSL-certifikat:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
@@ -69,7 +69,7 @@ Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-cer
 
 1. Klicka på **Lägg till SSL-certifikat** i det övre högra hörnet på sidan SSL-certifikat.
 
-1. I dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](#which-ssl-to-add), väljer du **Hanterad Adobe (DV)**.
+1. I dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](#which-ssl-to-add), väljer du **Adobe Managed (DV)**.
 
    ![Lägg till ett DV-certifikat](/help/implementing/cloud-manager/assets/ssl/add-dv-certificate.png)
 
@@ -92,6 +92,10 @@ Du kan nu lägga till en [CDN-konfiguration](/help/implementing/cloud-manager/cd
 <!-- IF THIS TOPIC GET UPDATED, REMEMBER TO UPDATE THE STEPS ALSO IN THE "MANAGE SSL CERTIFICATES TOPIC TOO -->
 
 Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-certifikat (rekommenderas) eller ett kundhanterat SSL-certifikat med din domän? Se [Välja vilket SSL-certifikat som ska läggas till](#which-ssl-to-add)
+
+>[!IMPORTANT]
+>
+>När du lägger till eller uppdaterar ett SSL-certifikat ska du inte ta med det nya certifikatet i certifikatkedjan. Den förhindrar att överföringen slutförs korrekt.
 
 **Så här lägger du till ett kundhanterat (OV/EV) SSL-certifikat:**
 

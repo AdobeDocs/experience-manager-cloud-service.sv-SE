@@ -1,19 +1,19 @@
 ---
 title: Lägg till externa databaser i Cloud Manager - begränsad betaversion
-description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise Server-, GitLab- och Bitbucket-databaser.
+description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: e18368b1f16033790c91038d746c96d04a05ba21
+source-git-commit: 4667a00a156b3a2f66ed87c64763f93397aad946
 workflow-type: tm+mt
-source-wordcount: '1928'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
 
 # Lägga till externa databaser i Cloud Manager - begränsad betaversion {#external-repositories}
 
-Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise Server-, GitLab- och Bitbucket-databaser.
+Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
 
 >[!NOTE]
 >
@@ -26,6 +26,7 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
 1. [Lägg till en extern databas](#add-external-repo) till ett valt program.
 1. Ange en åtkomsttoken för den externa databasen.
 1. Validera ägarskap för den privata GitHub-databasen.
+1. [Konfigurera en webkrok](#configure-webhook) till en extern databas.
 
 
 
@@ -51,7 +52,7 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
    | --- | --- |
    | **Databasnamn** | Obligatoriskt. Ett uttrycksfullt namn för din nya databas. |
    | **Databas-URL** | Obligatoriskt. Databasens URL.<br><br>Om du använder en GitHub-värdbaserad databas måste sökvägen sluta i `.git`.<br>Till exempel *`https://github.com/org-name/repo-name.git`* (URL-sökvägen är endast avsedd som illustration).<br><br>Om du använder en extern databas måste den använda följande URL-sökvägsformat:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> eller<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Och matcha Git-leverantören. |
-   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder:<ul><li>**GitHub** (GitHub Enterprise Server och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (både `bitbucket.org` och Bitbucket Server samt den självhanterade versionen av Bitbucket)</li></ul>Om databasens URL-sökväg ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald. |
+   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder:<ul><li>**GitHub** (GitHub Enterprise och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (både `bitbucket.org`- och Bitbucket-servern samt den självhanterade versionen av Bitbucket)</li></ul>Om databasens URL-sökväg ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald. |
    | **Beskrivning** | Valfritt. En detaljerad beskrivning av databasen. |
 
 1. Välj **Spara** för att lägga till databasen.
@@ -64,9 +65,9 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
    | Tokentyp | Beskrivning |
    | --- | --- |
    | **Använd befintlig åtkomsttoken** | Om du redan har angett en åtkomsttoken för databasen för din organisation och har tillgång till flera databaser kan du välja en befintlig token. Använd listrutan **Tokennamn** för att välja den token som du vill använda för databasen. I annat fall lägger du till en ny åtkomsttoken. |
-   | **Lägg till ny åtkomsttoken** | **Databastyp: GitHub**<br><ul><li> Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitHub-dokumentationen](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Ange följande för nödvändiga behörigheter:<ul><li>**Nödvändig behörighet för GitHub PAT-token (Personal Access Token)**<br> Dessa behörigheter säkerställer att Cloud Manager kan validera pull-begäranden, hantera implementeringsstatuskontroller och få tillgång till nödvändig repo-information.<br>När du genererar en personlig åtkomsttoken (PAT) i GitHub kontrollerar du att den innehåller följande databasbehörigheter:<ul><li>Pull-begäran (läs och skriv)<li>Bekräfta status (läs och skriv)<li>Databasmetadata (skrivskyddade)</li></li></ul><li>**Nödvändiga webbokrohändelser (för GitHub-värdbaserade databaser)**<br> Dessa händelser gör att Cloud Manager kan svara på GitHub-aktivitet, som pull-begärandevalidering, push-baserade utlösare för pipelines eller Edge Delivery Services-kodsynkronisering.<br>När du konfigurerar en GitHub-webkrok manuellt måste du se till att webkroken är konfigurerad för att aktiveras för följande obligatoriska webkrockhändelser:<ul><li>Dra in begäranden<li>Penslar<li>Skicka kommentarer</li></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
-   | | **Databastyp: GitLab**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Ange följande för nödvändiga behörigheter:<ul><li>**Nödvändig behörighet för GitLab Personal Access Token (PAT)**<br> Dessa scope ger Cloud Manager åtkomst till databasdata och användarinformation efter behov för validering och webkrok-integrering.<br>När du skapar en personlig åtkomsttoken i GitLab måste du se till att den innehåller följande tokenomfång:<ul><li>api<li>read_user</li></li></ul><li>**Nödvändiga webkrofhändelser (för GitLab-värdbaserade databaser)**<br> Med dessa webkrofthändelser kan Cloud Manager utlösa rörledningar när kod skickas eller när en sammanfogningsbegäran skickas. De spårar även kommentarer som rör validering av pull-begäran (via anteckningshändelser).<br>När du konfigurerar en webkrok i GitLab manuellt måste du ta med följande nödvändiga webkrochhändelser:<ul><li>Push-händelser<li>Sammanfoga begäranhändelser<li>Anteckningshändelser</li></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
-   | | **Databastyp: Bitbucket**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Ange följande för nödvändiga behörigheter:<ul><li>**Behörigheter som krävs för Bitbucket Personal Access Token (PAT)**<br> Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webboks-händelser.<br>När du skapar applösenordet i Bitbucket måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Databas (skrivskyddad)<li>Hämta begäranden (läsa och skriva)<li>Webhooks (läs och skriv)</li></li></ul><li>**Nödvändiga webbokrohändelser (för Bitbucket-värdbaserade databaser)**<br> Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på kodpushar och interagera med kommentarer för pipeline-koordinering.<br>Om du konfigurerar webkroken manuellt i Bitbucket konfigurerar du den så att den aktiveras för följande obligatoriska webkrockhändelser:<ul><li>Dragningsbegäran: Skapad<li>Pull-begäran: Uppdaterad<li>Dragningsbegäranden: Sammanfogade<li>Pull-begäran: Kommentar<li>Databas: Tryck</li></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | **Lägg till ny åtkomsttoken** | **Databastyp: GitHub Enterprise**<br><ul><li> Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitHub-dokumentationen](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Behörigheter som krävs för GitHub Enterprise Personal Access Token (PAT)<br>Dessa behörigheter säkerställer att Cloud Manager kan validera pull-begäranden, hantera implementeringsstatuskontroller och få tillgång till nödvändig repo-information.<br>När du genererar PAT i GitHub Enterprise måste du se till att det innehåller följande databasbehörigheter:<ul><li>Pull-begäran (läs och skriv)<li>Bekräfta status (läs och skriv)<li>Databasmetadata (skrivskyddade)</li></li></ul></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | | **Databastyp: GitLab**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Behörigheter som krävs för GitLab Personal Access Token (PAT)<br>Dessa scope ger Cloud Manager åtkomst till databasdata och användarinformation som behövs för validering och webkrok-integrering.<br>När du genererar PAT i GitLab ska du kontrollera att det innehåller följande tokenomfång:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | | **Databastyp: Bitbucket**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Behörigheter som krävs för Bitbucket Personal Access Token (PAT)<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webboks-händelser.<br>När du skapar applösenordet i Bitbucket måste det innehålla följande lösenordsbehörigheter:<ul><li>Databas (skrivskyddad)<li>Hämta begäranden (läsa och skriva)<li>Webhooks (läs och skriv)</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
 
    >[!NOTE]
    >
@@ -108,7 +109,8 @@ Med webbhooks kan Cloud Manager till exempel utlösa åtgärder som baseras på 
 * Kommentarsbaserade åtgärder - Möjliggör arbetsflöden, t.ex. direktdistribution från en PR, till en Rapid Development Environment (RDE).
 
 Webkrok-konfiguration krävs inte för databaser på `GitHub.com` eftersom Cloud Manager integreras direkt via GitHub-appen.
-För alla andra externa databaser som är inbyggda med en åtkomsttoken, som GitHub Enterprise Server, GitLab och Bitbucket, är webkrok-konfigurationen tillgänglig och måste konfigureras manuellt.
+
+För alla andra externa databaser som är inbyggda med en åtkomsttoken, som GitHub Enterprise, GitLab och Bitbucket, är webkrok-konfigurationen tillgänglig och måste konfigureras manuellt.
 
 **Så här konfigurerar du en webkrok för en extern databas:**
 
@@ -146,8 +148,13 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
       Om du vill generera en API-nyckel måste du skapa ett integreringsprojekt i Adobe Developer Console. Mer information finns i [Skapa ett API-integreringsprojekt](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
 
 1. Klistra in webbkrokhemligheten som du kopierade tidigare i textfältet **Hemlig** (eller **Hemlig nyckel** eller **Hemlig token**).
-1. Konfigurera webkroken så att rätt händelser skickas som Cloud Manager förväntar.
+1. Konfigurera webkroken för att skicka de händelser som Cloud Manager förväntar sig.
 
+   | Databas | Nödvändiga webbkrokhändelser |
+   | --- | --- |
+   | GitHub Enterprise | Dessa händelser gör att Cloud Manager kan svara på GitHub-aktivitet, som pull-begäran-validering, push-baserade utlösare för pipelines eller Edge Delivery Services-kodsynkronisering.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrockshändelser:<ul><li>Dra in begäranden<li>Penslar<li>Skicka kommentarer</li></li></li></ul></ul></ul> |
+   | GitLab | Dessa webkrofshändelser gör att Cloud Manager kan utlösa rörledningar när kod skickas eller när en sammanfogningsbegäran skickas. De spårar även kommentarer som rör validering av pull-begäran (via anteckningshändelser).<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Push-händelser<li>Sammanfoga begäranhändelser<li>Anteckningshändelser</li></li></li></ul></ul></ul> |
+   | Bitbucket | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Dragningsbegäran: Skapad<li>Pull-begäran: Uppdaterad<li>Dragningsbegäranden: Sammanfogade<li>Pull-begäran: Kommentar<li>Databas: Tryck</li></li></li></ul></ul></ul> |
 
 ### Validering av pull-begäranden med webhooks
 
@@ -155,11 +162,11 @@ När webbhookar har konfigurerats korrekt utlöser Cloud Manager automatiskt pip
 
 Följande beteenden gäller:
 
-* **GitHub Enterprise Server**
+* **GitHub Enterprise**
 
-  När kontrollen skapas ser den ut som följande skärmbild nedan. Den största skillnaden från `GitHub.com` är att `GitHub.com` använder en kontrollkörning, medan GitHub Enterprise Server (med personliga åtkomsttoken) genererar en implementeringsstatus:
+  När kontrollen skapas ser den ut som följande skärmbild nedan. Den största skillnaden från `GitHub.com` är att `GitHub.com` använder en kontrollkörning, medan GitHub Enterprise (med personliga åtkomsttoken) genererar en implementeringsstatus:
 
-  ![Bekräfta status för att ange PR-valideringsprocess på GitHub Enterprise Server](/help/implementing/cloud-manager/managing-code/assets/repository-webhook-github-pr-validation.png)
+  ![Bekräfta status för att ange PR-valideringsprocess för GitHub Enterprise](/help/implementing/cloud-manager/managing-code/assets/repository-webhook-github-pr-validation.png)
 
 * **Bitbucket**
 

@@ -5,9 +5,9 @@ exl-id: ad6170f4-93bd-4bac-9c54-63c35a0d4f06
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f0cf9fa7da7e89d42ab90dee0e8400b26f004574
+source-git-commit: bf903736e256bb9275bad6c0271b31b8dbdec625
 workflow-type: tm+mt
-source-wordcount: '1023'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -40,6 +40,10 @@ När ett kundhanterat certifikat upphör att gälla fungerar inte längre domän
 
 En användare måste vara medlem i rollen **Affärsägare** eller **Distributionshanterare** för att den här aktiviteten ska kunna slutföras.
 
+>[!IMPORTANT]
+>
+>När du lägger till eller uppdaterar ett SSL-certifikat ska du inte ta med det nya certifikatet i certifikatkedjan. Den förhindrar att överföringen slutförs korrekt.
+
 **Så här uppdaterar du ett kundhanterat SSL-certifikat som upphört att gälla:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
@@ -70,7 +74,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 Följ de steg som beskrivs i [Uppdatera ett SSL-certifikat som har upphört att gälla](#update-ssl-certificate) och ersätt ett kundhanterat SSL-certifikat som har upphört att gälla.
 
-## Byta namn på ett SSL-certifikat som hanteras av Adobe (#rename-an-ssl-certificate)
+## Byta namn på ett Adobe-hanterat SSL-certifikat (#rename-an-ssl-certificate)
 
 Nedan följer några skäl till att du kanske vill byta namn på ett SSL-certifikat:
 
@@ -78,7 +82,7 @@ Nedan följer några skäl till att du kanske vill byta namn på ett SSL-certifi
 * **Undvik förvirring**: Om du hanterar flera certifikat kan ett tydligt och beskrivande namn hjälpa till att förhindra misstag, som att tillämpa fel certifikat på fel domän.
 * **Efterlevnad och granskning**: Det kan vara enklare att spåra certifikat med rätt namn av säkerhets- och granskningsskäl.
 
-**Så här byter du namn på ett SSL-certifikat som hanteras av Adobe:**
+**Så här byter du namn på ett Adobe-hanterat SSL-certifikat:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
 
@@ -88,7 +92,7 @@ Nedan följer några skäl till att du kanske vill byta namn på ett SSL-certifi
 
 1. Under rubriken **Tjänster** klickar du på ![Lås stängda ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) **SSL-certifikat**.
 
-1. På sidan **SSL-certifikat** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars **Adobe-hanterade** SSL-certifikat du vill byta namn på.
+1. På sidan **SSL-certifikat** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars **Adobe hanterade** SSL-certifikat du vill byta namn på.
 
 1. Klicka på **Byt namn** i listrutan.
 
@@ -99,7 +103,7 @@ Nedan följer några skäl till att du kanske vill byta namn på ett SSL-certifi
 
 ## Ta bort ett SSL-certifikat {#deleting-an-ssl-certificate}
 
-Att ta bort SSL-certifikat som hanteras av Adobe eller hanteras av kund från Cloud Manager är en permanent åtgärd som inte kan ångras. Som en god praxis rekommenderar Adobe att du sparar SSL-filer lokalt innan du tar bort dem i Cloud Manager.
+Att ta bort Adobe hanterade eller kundhanterade SSL-certifikat från Cloud Manager är en permanent åtgärd som inte kan ångras. Som en god praxis rekommenderar Adobe att du sparar SSL-filer lokalt innan du tar bort dem i Cloud Manager.
 
 >[!NOTE]
 >
