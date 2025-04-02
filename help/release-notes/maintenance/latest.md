@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 7d93af706d8b0556e9e26282d339794447eb0a41
+source-git-commit: 96084c84c45af54b1f152e22b8331f85dc6b583f
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1501'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 ### Förbättringar {#enhancements-20133}
 
 * ASSETS-47850: Begränsa möjligheten att lägga till Scene7-konfigurationer om AEM CS är aktiverat.
-* CQ-4359547: Fullständig borttagning av Guava från https://git.corp.adobe.com/target-sdk/tsdk-core.
+* CQ-4359547: Fullständig borttagning av Guava från Git-databasen.
 * FORMS-17551: Stöd för DoR (Document of Record) för SharePoint listintegreringar.
 * FORMS-18432: Implementerad formulärspecifik (regex-baserad) konfiguration av förifyllning på klientsidan för att möjliggöra selektiv förifyllning utan ändringar på OSGI-nivå.
 * FORMS-18513: Implementerat stöd för dataträdsomvandling i AEP Connector för att förbättra guidefunktioner och datahanteringsfunktioner.
@@ -57,16 +57,16 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 * SITES-28549: Skapa `/cf/domains` för att returnera domän-ID baserat på AEM-nivå.
 * SITES-29026: En valfri parameter som anger språkinställningen för innehållsfragmentet har lagts till med hjälp av språk- och landskoden.
 * SITES-29031: Förbättrad logik för PATCH-fragment, vilket ger bättre prestanda.
-* SITES-29169: Alla publicerade resurser (oavsett om de har statusen PUBLISHED eller MODIFIED) publiceras på nytt om de refererar till en resurs som har flyttats, bytt namn eller tagits bort.
+* SITES-29169: Resurser med statusen PUBLICERAD publiceras om om de refererar till en resurs som har flyttats, fått ett nytt namn eller tagits bort.
 * SITES-29376: Add Code toggle to validation of published resource delete.
-* SITES-29417: Uppdatera /libs/cq/Page/proxy.jsp för att vidarebefordra begäran till jcr:content-noden i stället för att inkludera.
+* SITES-29417: Uppdatera `/libs/cq/Page/proxy.jsp` för att vidarebefordra begäran till jcr:content-noden i stället för att inkludera.
 * SITES-2947: Skapa/ändra visualisering för banor för att jämföra publiceringsraser.
 * SITES-29733: Förbättrade prestanda för modellsökning med taggar för innehållsfragment.
 * SITES-8316: Content Policies: Cache the ContentPolicyManager.
-* SITES-24906: Edge Delivery med Universal Editor: Stöd för kalkylblad som skapats av upphovsmannen utan mappning (tidig åtkomst)
-* SITES-24907: Edge Delivery with Universal Editor: Support publishing Assets to multiple sites for MSM use case (tidig åtkomst)
-* SITES-27956: Edge Delivery med Universal Editor: Förbättra publiceringsflödet (tidig åtkomst)
-* SITES-27956: Edge Delivery med Universal Editor: Förbättra felhanteringen vid publicering till Edge Delivery Services (tidig åtkomst)
+* SITES-24906: Edge Delivery med Universal Editor: Stöd för kalkylblad som skapats av upphovsmannen utan mappning (tidig åtkomst).
+* SITES-24907: Edge Delivery with Universal Editor: Support publishing Assets to multiple sites for MSM use case (tidig åtkomst).
+* SITES-27956: Edge Delivery med Universal Editor: Förbättra publiceringsflödet (tidig åtkomst).
+* SITES-27956: Edge Delivery med Universal Editor: Förbättra felhanteringen vid publicering till Edge Delivery Services (tidig åtkomst).
 
 ### Åtgärdade problem {#fixed-issues-20133}
 
