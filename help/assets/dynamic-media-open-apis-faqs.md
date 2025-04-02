@@ -3,9 +3,9 @@ title: Dynamic Media med OpenAPI-funktioner - frågor och svar
 description: Dynamic Media med OpenAPI-funktioner - frågor och svar
 role: User
 exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: c36938e80d0b159c5f89d450aaa228c37c4f5276
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1584'
 ht-degree: 0%
 
 ---
@@ -136,6 +136,12 @@ Mer information finns i [Begränsa åtkomst till resurser i Experience Manager](
 +++**Hur får du behörighet att redigera godkännandestatusen för en resurs?**
 
 Som DAM-användare kanske du inte har behörighet att [godkänna resurser](approve-assets.md#approve-assets). Om du vill ha behörighet att redigera godkännandestatusen för en resurs kan administratören redigera standardmetadataschemat eller något annat metadataschema som används i resursmappen och ge redigeringsbehörighet till fältet **[!UICONTROL Review Status]**. Mer information finns i [Så här inaktiverar du redigering för fältet Granskningsstatus](approve-assets.md#configuration).
+
++++
+
++++**Vilken filstorlek stöds för videoklipp?**
+
+Dynamic Media med OpenAPI-funktioner har stöd för videor med lång form. Videorna har stöd för upp till 50 GB och 2 timmar.
 
 +++
 

@@ -3,9 +3,9 @@ title: Leverans-API:er
 description: Lär dig hur du använder leverans-API:erna.
 role: User
 exl-id: 806ca38f-2323-4335-bfd8-a6c79f6f15fb
-source-git-commit: 2ec0b4125aa0990b6e022350a1f861fe394e6b1f
+source-git-commit: c36938e80d0b159c5f89d450aaa228c37c4f5276
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -74,6 +74,8 @@ I följande tabell visas hur de olika tillgängliga leverans-API:erna används:
 | [Resursmetadata](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetMetadata) | Returnerar egenskaperna som är kopplade till en resurs, till exempel titel, beskrivning, CreateDate, ModifyDate och så vidare. |
 | [Spelarbehållare för videoresursen](https://adobe-aem-assets-delivery.redoc.ly/#operation/videoPlayerDelivery) | Returnerar videoresursens spelarbehållare. Du kan bädda in spelaren i i ett iframe HTML-element och spela upp videon. |
 | [Uppspelningsmanifest i det valda utdataformatet](https://adobe-aem-assets-delivery.redoc.ly/#operation/videoManifestDelivery) | Returnerar uppspelningsmanifestfilen för den angivna videoresursen i det valda utdataformatet. Du måste skapa en anpassad spelare som kan hantera adaptiv strömning via HLS- eller DASH-protokoll för att kunna hämta uppspelningsmanifestfilen och spela upp videon. |
+
+Dynamic Media med OpenAPI-funktioner har också stöd för videor med lång form. Videorna har stöd för upp till 50 GB och 2 timmar.
 
 Information om tillgängliga Dynamic Media-erbjudanden och deras funktioner finns i [Dynamic Media Prime och Ultimate](/help/assets/dynamic-media/dm-prime-ultimate.md).
 

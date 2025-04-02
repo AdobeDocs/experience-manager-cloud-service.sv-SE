@@ -4,9 +4,9 @@ description: Lär dig hur du aktiverar  [!DNL Dynamic Media] Prime- och Ultimate
 feature: Asset Management
 role: User, Admin
 exl-id: 0ee161f5-bf44-41f1-928e-c07574fd43cc
-source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
+source-git-commit: c36938e80d0b159c5f89d450aaa228c37c4f5276
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Den här artikeln innehåller ett komplett arbetsflöde för att aktivera Prime-
 
 ## Aktivera [!DNL Dynamic Media] Ultimate {#enable-dynamic-media-ultimate}
 
-Utför följande steg i molntjänstmiljön för att aktivera [!DNL Dynamic Media] Ultimate:
+Så här aktiverar du [!DNL Dynamic Media] Ultimate:
 
 1. [Aktivera [!DNL Dynamic Media with OpenAPI]](#activate-dynamic-media-with-openapi)
 1. [Konfigurera [!DNL Dynamic Media] lösningar](#configure-dynamic-media-solutions)
@@ -186,11 +186,14 @@ Om det inte går att skapa företaget [!DNL Dynamic Media] utför du följande s
 
 1. Om **[!UICONTROL Status]** väntar tar du upp problemet för kundsupport för att åtgärda det.
 
-   ![väntande status](/help/assets/assets/company-creation-pending-status.png){width="350" align="left"}
+
+   ![väntande status](/help/assets/assets/company-creation-pending-status.png){width="350" align="center"}
+
+
 
 1. Om **[!UICONTROL Status]** misslyckas försöker du igen baserat på orsaken till felet.
 
-   ![misslyckades status](/help/assets/assets/company-creation-failure-status.png){width="380" align="left"}
+   ![misslyckades status](/help/assets/assets/company-creation-failure-status.png){width="380" align="center"}
 
 ### Valfritt: Konfigurera anpassad domän i leveransnivå {#configure-custom-domain-in-delivery-tier}
 
@@ -303,7 +306,7 @@ TBD: Wiki in progress..
 
 ## Aktivera [!DNL Dynamic Media] Prime {#enable-dynamic-media-prime}
 
-Utför följande steg i molntjänstmiljön för att aktivera [!DNL Dynamic Media] Prime:
+Så här aktiverar du [!DNL Dynamic Media] Prime:
 
 1. [Aktivera dynamiska media med OpenAPI](#activate-dynamic-media-with-openapi)
 1. [Valfritt: Konfigurera anpassad domän i leveransnivå](#configure-custom-domain-in-delivery-tier)
