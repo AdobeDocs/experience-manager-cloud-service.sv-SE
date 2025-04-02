@@ -2,13 +2,13 @@
 title: Egenskaper för väljaren för innehållsfragment i mikrofon för Adobe Experience Manager as a Cloud Service
 description: Egenskaper för att konfigurera Micro-Frontend Content Fragment Selector för att söka, hitta och hämta innehållsfragment från programmet.
 role: Admin, User
-source-git-commit: 32e1b3cef768b420f32b70202ddadc80db2b74e8
+exl-id: c81b5256-09fb-41ce-9581-f6d1ad316ca4
+source-git-commit: a3d8961b6006903c42d983c82debb63ce8abe9ad
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
-
 
 # Innehållsfragmentväljare - relaterade egenskaper {#content-fragment-selector-related-properties}
 
@@ -28,10 +28,10 @@ Du kan använda följande egenskaper för att anpassa hur väljaren för innehå
 | `filters` | FragmentFilter | Nej | | Filter som ska användas för listan med innehållsfragment. Som standard visas fragment under `/content/dam`. Standardvärde: `{ folder: "/content/dam" }` |
 | `isOpen` | boolesk | Ja | `false` | Flagga som utlöser öppning eller stängning av väljaren. |
 | `onDismiss` | () => void | Ja | | Funktion som ska anropas när **Dismiss** har valts. |
-| `onSubmit` | ({ contentFragments: `{id: string, path: string}[]`, domainNames: `string[]` }) => void | Funktion som ska anropas när **Select** används efter att ett eller flera innehållsfragment har markerats. <br><br>Funktionen får:<br><ul><li> de markerade innehållsfragmenten med `id` och `path` fält</li><li>och domännamn relaterade till databasens program-ID och miljö-ID, som har status `ready` och `tier` Publish</li></ul><br>Om det inte finns några domännamn kommer den att användas som en reservdomän. |
-| `theme` | &quot;light&quot; | &quot;mörk&quot; | Nej | | Temat för väljaren för innehållsfragment. Standardtemat är inställt på temat för UnifiedShell-miljön. |
-| `selectionType` | &quot;single&quot; | &quot;multiple&quot; | Nej | `single` | Markeringstyp som kan användas för att begränsa markering för FragmentSelector. |
-| `dialogSize` | &quot;fullscreen&quot; | &quot;fullscreenTakeover&quot; | Nej | `fullscreen` | Valfri egenskap som styr dialogstorleken. |
+| `onSubmit` | ({ contentFragments: `{id: string, path: string}[]`, domainNames: `string[]` }) => void | Ja | | Funktion som ska anropas när **Select** används efter att ett eller flera innehållsfragment har markerats. <br><br>Funktionen får:<br><ul><li> de markerade innehållsfragmenten med `id` och `path` fält</li><li>och domännamn relaterade till databasens program-ID och miljö-ID, som har status `ready` och `tier` Publish</li></ul><br>Om det inte finns några domännamn kommer den att användas som en reservdomän. |
+| `theme` | &quot;light&quot; eller &quot;dark&quot; | Nej | | Temat för väljaren för innehållsfragment. Standardtemat är inställt på temat för UnifiedShell-miljön. |
+| `selectionType` | &quot;single&quot; eller &quot;multiple&quot; | Nej | `single` | Markeringstyp som kan användas för att begränsa markering för FragmentSelector. |
+| `dialogSize` | &quot;fullscreen&quot; eller &quot;fullscreenTakeover&quot; | Nej | `fullscreen` | Valfri egenskap som styr dialogstorleken. |
 | `waitForImsToken` | boolesk | Nej | `false` | Anger om väljaren för innehållsfragment återges i kontexten för SUSI-flödet och måste vänta tills `imsToken` är klar. |
 | `imsAuthInfo` | ImsAuthInfo | Nej | | Objekt som innehåller IMS-autentiseringsinformation för den inloggade användaren. |
 | `runningInUnifiedShell` | boolesk | Nej | | Anger om väljaren för innehållsfragment körs under UnifiedShell eller fristående. |
