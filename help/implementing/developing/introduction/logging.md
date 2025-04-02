@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: e1ac26b56623994dfbb5636993712844db9dae64
+source-git-commit: 60bf6c6077ecfc6700ed9284834cf13e3772e25a
 workflow-type: tm+mt
-source-wordcount: '2376'
+source-wordcount: '2364'
 ht-degree: 0%
 
 ---
@@ -15,32 +15,32 @@ ht-degree: 0%
 
 AEM as a Cloud Service är en plattform där kunderna kan inkludera anpassad kod för att skapa unika upplevelser för sina kunder. Med detta i åtanke är loggningstjänsten en viktig funktion för att felsöka och förstå hur kod körs på lokal utveckling och i molnmiljöer, särskilt i AEM as a Cloud Service Dev-miljöer.
 
-AEM as a Cloud Service loggningsinställningar och loggnivåer hanteras i konfigurationsfiler som lagras som en del av det AEM projektet i Git och distribueras som en del av det AEM projektet via Cloud Manager. Inloggning i AEM as a Cloud Service kan delas in i tre logiska uppsättningar:
+AEM as a Cloud Service loggningsinställningar och loggnivåer hanteras i konfigurationsfiler som lagras som en del av AEM-projektet i Git och distribueras som en del av AEM-projektet via Cloud Manager. Inloggning i AEM as a Cloud Service kan delas in i tre logiska uppsättningar:
 
-* AEM loggning, som utför loggning på AEM programnivå
-* Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på Publish-nivå.
-* CDN-loggning, som enligt namnet, utför loggning på CDN. Den här funktionen lanseras gradvis för kunderna i början av september.
+* AEM-loggning, som utför loggning på AEM programnivå
+* Apache HTTPD Web Server/Dispatcher-loggning, som utför loggning av webbservern och Dispatcher på publiceringsnivån.
+* CDN-loggning, som enligt namnet, utför loggning på CDN.
 
-## AEM loggning {#aem-logging}
+## AEM Logging {#aem-logging}
 
-Loggning på AEM programnivå hanteras av tre loggar:
+Loggning på AEM-programnivå hanteras av tre loggar:
 
-1. AEM Java-loggar, som återger Java-loggningsprogramsatser för det AEM programmet.
-1. HTTP-begärandeloggar, som loggar information om HTTP-begäranden och deras svar som AEM
+1. AEM Java-loggar, som återger Java-loggningsprogramsatser för AEM-programmet.
+1. HTTP Request-loggar, som loggar information om HTTP-begäranden och deras svar som hanteras av AEM
 1. HTTP Access-loggar, som loggar sammanfattad information och HTTP-begäranden som hanteras av AEM
 
 >[!NOTE]
 >
->HTTP-begäranden som opereras från Dispatcher-cachen eller CDN för uppströms i Publish-nivån återspeglas inte i dessa loggar.
+>HTTP-begäranden som opereras från publiceringsskiktets Dispatcher-cache eller CDN för uppströms återspeglas inte i dessa loggar.
 
-## AEM Java-loggning {#aem-java-logging}
+## AEM Java Logging {#aem-java-logging}
 
 AEM as a Cloud Service ger åtkomst till Java-loggsatser. Utvecklare av program för AEM bör följa allmänna bästa praxis för Java-loggning, logga relevanta satser om exekvering av anpassad kod på följande loggnivåer:
 
 <table>
 <tr>
 <td>
-<b>AEM miljö</b></td>
+<b>AEM-miljö</b></td>
 <td>
 <b>Loggnivå</b></td>
 <td>
@@ -97,7 +97,7 @@ När FELloggning är aktiv loggas bara programsatser som anger fel. FELloggsatse
 
 Java-loggning stöder flera andra nivåer av loggningsgranularitet, men AEM as a Cloud Service rekommenderar att du använder de tre nivåer som beskrivs ovan.
 
-AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur är implementerade i Git och distribueras via Cloud Manager till AEM as a Cloud Service. På grund av detta är det bäst att hålla loggsatserna konsekventa och välkända för miljötyper för att säkerställa att loggarna som är tillgängliga via AEM eftersom Cloud Service är tillgänglig på optimal loggnivå utan att programmet behöver distribueras om med den uppdaterade loggnivåkonfigurationen.
+AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur är implementerade i Git och distribueras via Cloud Manager till AEM as a Cloud Service. På grund av detta är det bäst att hålla loggsatserna konsekventa och välkända för miljötyper för att säkerställa att loggarna som är tillgängliga via AEM eftersom Cloud Service är tillgängliga på optimal loggnivå utan att programmet behöver distribueras om med den uppdaterade loggnivåkonfigurationen.
 
 **Exempel på loggutdata**
 
@@ -135,7 +135,7 @@ AEM loggnivåer ställs in per miljötyp via OSGi-konfiguration, som i sin tur �
 </tr>
 <tr>
 <td>Loggmeddelande</td>
-<td>Ingen angiven godkännare, standard är [ Creative Approvers user group ]</td>
+<td>Ingen angiven godkännare, standardvärdet är [ Creative Approvers user group ]</td>
 </tr>
 </tbody>
 </table>
@@ -194,7 +194,7 @@ Följande är exempel på de rekommenderade loggningskonfigurationerna (med plat
 
 ## Loggning av AEM HTTP-begäran {#aem-http-request-logging}
 
-AEM as a Cloud Service loggning av HTTP-begäran ger insikt i HTTP-begäranden som gjorts till AEM och deras HTTP-svar i tidsordning. Loggen är användbar för att förstå HTTP-begäranden som gjorts till AEM och i vilken ordning de bearbetas och besvaras.
+AEM as a Cloud Service loggning av HTTP-begäran ger insikt i HTTP-begäranden som görs till AEM och deras HTTP-svar i tidsordning. Loggen är användbar för att förstå HTTP-begäranden som gjorts till AEM och i vilken ordning de bearbetas och besvaras.
 
 Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och svarspar med deras ID:n, som anges med det numeriska värdet inom hakparenteser. Förfrågningar och deras motsvarande svar har ofta andra HTTP-förfrågningar och svar som skickas mellan dem i loggen.
 
@@ -244,13 +244,13 @@ Nyckeln till att förstå den här loggen är att mappa HTTP-begärande- och sva
 
 ### Konfigurera loggen {#configuring-the-log}
 
-Loggen för AEM HTTP-begäran kan inte konfigureras i AEM as a Cloud Service.
+AEM HTTP Request Log kan inte konfigureras i AEM as a Cloud Service.
 
 ## Loggning av AEM HTTP-åtkomst {#aem-http-access-logging}
 
-AEM när HTTP-åtkomstloggning för Cloud Service visar HTTP-begäranden i tidsordning. Varje loggpost representerar den HTTP-begäran som AEM åtkomst till.
+AEM som Cloud Service HTTP-åtkomstloggning visar HTTP-begäranden i tidsordning. Varje loggpost representerar HTTP-begäran som har åtkomst till AEM.
 
-Den här loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs till AEM, om de lyckas genom att titta på den tillhörande HTTP-svarsstatuskoden och hur lång tid det tog att slutföra HTTP-begäran. Den här loggen kan också vara användbar om du vill felsöka en viss användares aktivitet genom att filtrera loggposter efter användare.
+Loggen är användbar för att snabbt förstå vilka HTTP-begäranden som görs till AEM, om de lyckas genom att titta på den tillhörande HTTP-svarsstatuskoden och hur lång tid det tog att slutföra HTTP-begäran. Den här loggen kan också vara användbar om du vill felsöka en viss användares aktivitet genom att filtrera loggposter efter användare.
 
 **Exempel på loggutdata**
 
@@ -279,19 +279,19 @@ HTTP-åtkomstloggen kan inte konfigureras i AEM as a Cloud Service.
 
 ## Apache Web Server och Dispatcher Logging {#apache-web-server-and-dispatcher-logging}
 
-AEM as a Cloud Service tillhandahåller tre loggar för Apache Web Servers- och Dispatcher-lagret på Publish:
+I AEM as a Cloud Service finns tre loggar för Apache Web Servers- och Dispatcher-lagret i Publicera:
 
 * Åtkomstlogg för Apache HTTPD-webbserver
 * Fellogg för Apache HTTPD-webbserver
 * Dispatcher-logg
 
-Loggarna är bara tillgängliga för Publish.
+Dessa loggar är bara tillgängliga för publiceringsnivån.
 
-Den här uppsättningen loggar ger insikter i HTTP-begäranden till AEM as a Cloud Service Publish-nivån innan dessa begäranden når AEM. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till Publish-skiktservrar betjänas av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher, och som aldrig når själva AEM. Därför finns det inga loggsatser för dessa begäranden i AEM Java-, Request- eller Access-loggar.
+Den här uppsättningen loggar ger insikter i HTTP-begäranden till AEM as a Cloud Service Publish-nivån innan förfrågningarna når AEM-programmet. Detta är viktigt att förstå eftersom de flesta HTTP-begäranden till publiceringsskiktsservrar betjänas av innehåll som cachas av Apache HTTPD-webbservern och AEM Dispatcher och aldrig når AEM-programmet. Därför finns det inga loggsatser för dessa begäranden i AEM Java-, Request- eller Access-loggar.
 
 ### Åtkomstlogg för Apache HTTPD-webbserver {#apache-httpd-web-server-access-log}
 
-Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når Publish-skiktets webbserver/Dispatcher. Begäranden som hanteras från ett CDN-uppströms återspeglas inte i dessa loggar.
+Åtkomstloggen för Apache HTTP Web Server innehåller programsatser för varje HTTP-begäran som når publiceringsskiktets webbserver/Dispatcher. Begäranden som hanteras från ett CDN-uppströms återspeglas inte i dessa loggar.
 
 Mer information om felloggformatet finns i [den officiella dokumentationen för apache](https://httpd.apache.org/docs/2.4/logs.html#accesslog).
 
@@ -546,7 +546,7 @@ CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer et
 | *req_ua* | Användaragenten som ansvarar för att göra en given HTTP-begäran. |
 | *värd* | Den myndighet som begäran avser. |
 | *url* | Den fullständiga sökvägen, inklusive frågeparametrar. |
-| *metod* | HTTP-metod som skickas av klienten, till exempel &quot;GET&quot; eller &quot;POST&quot;. |
+| *metod* | HTTP-metod som skickas av klienten, till exempel&quot;GET&quot; eller&quot;POST&quot;. |
 | *res_type* | Den innehållstyp som används för att ange resursens ursprungliga medietyp. |
 | *cache* | Status för cachen. Möjliga värden är HIT, MISS eller PASS |
 | *status* | HTTP-statuskoden som ett heltalsvärde. |
@@ -559,13 +559,13 @@ CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer et
 
 ### Molnmiljöer {#cloud-environments}
 
-Du kan komma åt AEM as a Cloud Service-loggar för molntjänster antingen genom att hämta via Cloud Manager gränssnitt eller genom att svepa loggar på kommandoraden med kommandoradsgränssnittet i Adobe I/O. Mer information finns i [Cloud Manager loggningsdokumentation](/help/implementing/cloud-manager/manage-logs.md).
+Du kan komma åt AEM as a Cloud Service-loggar för molntjänster antingen genom att hämta via Cloud Manager gränssnitt eller genom att svepa loggar på kommandoraden med hjälp av Adobe I/O kommandoradsgränssnitt. Mer information finns i [Cloud Manager loggningsdokumentation](/help/implementing/cloud-manager/manage-logs.md).
 
-### Loggar för ytterligare Publish-regioner {#logs-for-additional-publish-regions}
+### Loggar för ytterligare publiceringsregioner {#logs-for-additional-publish-regions}
 
 Om ytterligare publiceringsregioner är aktiverade för en viss miljö, kommer loggar för varje region att vara tillgängliga för hämtning från Cloud Manager, vilket nämns ovan.
 
-AEM loggar och dispatcherloggar för de ytterligare publiceringsregionerna anger regionen i de tre första bokstäverna efter miljö-ID, enligt exemplet **nld2** nedan, som refererar till en ytterligare AEM publiceringsinstans som finns i Nederländerna:
+AEM loggar och dispatcherloggar för de ytterligare publiceringsregionerna anger regionen i de tre första bokstäverna efter miljö-id:t, vilket visas av **nld2** i exemplet nedan, som hänvisar till ytterligare en publiceringsinstans i AEM som finns i Nederländerna:
 
 ```
 cm-p7613-e12700-nld2-aem-publish-bcbb77549-5qmmt 127.0.0.1 - 07/Nov/2023:23:57:11 +0000 "HEAD /libs/granite/security/currentuser.json HTTP/1.1" 200 - "-" "Java/11.0.19"
@@ -575,11 +575,11 @@ cm-p7613-e12700-nld2-aem-publish-bcbb77549-5qmmt 127.0.0.1 - 07/Nov/2023:23:57:1
 
 AEM as a Cloud Service SDK innehåller loggfiler som kan användas för lokal utveckling.
 
-AEM loggar finns i mappen `crx-quickstart/logs`, där följande loggar kan visas:
+AEM-loggar finns i mappen `crx-quickstart/logs`, där följande loggar kan visas:
 
 * AEM Java-logg: `error.log`
 * AEM HTTP-begärandelogg: `request.log`
-* AEM HTTP-åtkomstlogg: `access.log`
+* AEM HTTP Access-logg: `access.log`
 
 Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
 
@@ -589,7 +589,7 @@ Så här hämtar du loggarna:
 1. Om du vill logga in i behållaren skriver du `docker exec -it <container> /bin/sh`, där `<container>` är avsändarbehållar-ID:t från föregående steg
 1. Navigera till cacheroten under `/mnt/var/www/html`
 1. Loggarna är under `/etc/httpd/logs`
-1. Loggarna i Inspect: de finns i mappen XYZ, där följande loggar kan visas:
+1. Granska loggarna: de kan nås under mappen XYZ, där följande loggar kan visas:
    * Åtkomstlogg för Apache HTTPD-webbserver - `httpd_access.log`
    * Felloggar för Apache HTTPD-webbserver - `httpd_error.log`
    * Dispatcher-loggar - `dispatcher.log`
