@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 97e0124303001757caef6420042b2652bb1593e0
+source-git-commit: 457a5715c9f8a51e2806bcc83f55a88c69fae91b
 workflow-type: tm+mt
-source-wordcount: '6132'
+source-wordcount: '6127'
 ht-degree: 2%
 
 ---
@@ -390,7 +390,6 @@ ht-degree: 2%
       + Fragment {#fragments}
          + [Innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
          + [Upplevelsefragment](/help/sites-cloud/authoring/fragments/experience-fragments.md)
-         + [Författarresa för Headless Content Author](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/author/overview.html)
       + Projekt {#projects}
          + [Arbeta med projekt](/help/sites-cloud/authoring/projects/overview.md)
          + [Hantera projekt](/help/sites-cloud/authoring/projects/managing.md)
