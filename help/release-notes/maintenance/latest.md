@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: cd19612597d8f1841062bbc8de253ee7271adce3
+source-git-commit: 7d93af706d8b0556e9e26282d339794447eb0a41
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1514'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,11 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 * SITES-25433: Stöd för helsidesrendering vid jämförelse av gamla versioner.
 * SITES-25923: LinkInfoStorageImpl kan blockera när inga URL:er längre lagras.
 * SITES-26208: Om du tar bort ett innehållsfragment via arbetsflöde kan du nu välja att uppdatera referensresurser genom att ta bort det nyligen borttagna fragmentet.
-* SITES-26400: Lägre hinder för användning av Edge Delivery Service genom att förbättra, förenkla och förstärka korsningen
 * SITES-26500: Lägger till alternativet att flytta innehållsfragment via arbetsflöde - `move-fragments`.
 * SITES-26711: Rollout Trigger - Länkarna uppdateras inte.
 * SITES-27583: Upplev att fragment förlorar versionshistorik när de har flyttats.
 * SITES-27618: Om du söker efter referenser för ett fragment på sidor returneras inte alla resultat.
 * SITES-27781: Implementerad validering på modellnivå för Content Fragment-referenser, som tillåter validering av refererade fragment mot deras modellbegränsningar och obligatoriska taggar.
-* SITES-27782: Build Crosswalk specific Publisher &amp; Subscriber Agent.
 * SITES-27784: Uppdatera SQL-frågegenerering så att PATH-funktionen används i stället för `jcr:path`.
 * SITES-28040: Adobe Target ExperienceFragmentsReplicationListener har brutits.
 * SITES-28051: Hämta den aktuella användarens behörigheter för ett innehållsfragment: GET /cf/fragments/{fragmentId}/permissions.
@@ -65,6 +63,10 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 * SITES-2947: Skapa/ändra visualisering för banor för att jämföra publiceringsraser.
 * SITES-29733: Förbättrade prestanda för modellsökning med taggar för innehållsfragment.
 * SITES-8316: Content Policies: Cache the ContentPolicyManager.
+* SITES-24906: Edge Delivery med Universal Editor: Stöd för kalkylblad som skapats av upphovsmannen utan mappning (tidig åtkomst)
+* SITES-24907: Edge Delivery with Universal Editor: Support publishing Assets to multiple sites for MSM use case (tidig åtkomst)
+* SITES-27956: Edge Delivery med Universal Editor: Förbättra publiceringsflödet (tidig åtkomst)
+* SITES-27956: Edge Delivery med Universal Editor: Förbättra felhanteringen vid publicering till Edge Delivery Services (tidig åtkomst)
 
 ### Åtgärdade problem {#fixed-issues-20133}
 
@@ -90,7 +92,7 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 * SITES-26881: AEMaaCS Accessibility Bug - Incorrect Role is provided for the &quot;Three dots&quot; Icon which side comment input field.
 * SITES-26956: Följ upp på SITES-24920 Det går inte att flytta sidan i produktionsmiljön.
 * SITES-27707: Content Finder-tillgångslista misslyckas på grund av problem med resursnamn (6.5 SP22-regression).
-* SITES-27757: Ikonen skriver inte om korrekt med helix-html-pipeline.
+* SITES-27757: Edge Delivery med Universal Editor: Rewrite icons enligt helix-html-pipeline-semantik.
 * SITES-27780: Oväntad &lt;br>-tagg visas i RTE med Plaintext DefaultPasteMode i SP22.
 * SITES-27958: Länkkontroll ger felmeddelanden om att sessionen har stängts.
 * SITES-28149: Custom ExperienceFragmentLinkRewriterProvider utlöses inte vid XF-export till mål.
