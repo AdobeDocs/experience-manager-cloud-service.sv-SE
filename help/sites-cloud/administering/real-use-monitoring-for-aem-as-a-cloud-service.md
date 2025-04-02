@@ -4,9 +4,9 @@ description: Läs om Real Use Monitoring (RUM), en automatiserad tjänst som gö
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: e6a610c56b9ad7a684ea9f5ef72199d3bed28cc0
+source-git-commit: f3091a3868ac57150afd6f1640709ce3e9566bac
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,7 @@ Tjänsten RUM (Real Use Monitoring) är en teknik för prestandaövervakning som
 
 ## Vem kan utnyttja en tjänst för övervakning av verkligt bruk? {#who-can-benefit-from-rum-service}
 
-Real Use Monitoring (Reell Use Monitoring) hjälper kunder och Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Real Use Monitoring (Övervakning av verklig användning) diagnostiserar prestandaproblem och mäter effekten av experiment. Övervakning av faktisk användning bevarar besökarnas integritet genom stickprov - endast en liten del av alla sidvisningar övervakas - och ingen personligt identifierbar information samlas in.
-
-## Övervakningstjänst och sekretess för användning i realtid {#rum-service-and-privacy}
-
-Tjänsten för övervakning av användning i AEM bevarar besökarnas integritet och minimerar datainsamlingen. Som besökare innebär det att den webbplats som du besöker eller gör tillgänglig för Adobe inte samlar in några personuppgifter.
-
-Som webbplatsoperatör krävs inget ytterligare deltagande för att aktivera övervakning via den här funktionen. Det finns inga ytterligare popup-formulär eller medgivandeformulär som slutanvändarna kan godkänna för aktivering av RUM.
+Real Use Monitoring (Reell Use Monitoring) hjälper kunder och Adobe att förstå hur slutanvändarna interagerar med AEM webbplatser. Övervakning av riktig användning bevarar besökarnas integritet genom begränsad datainsamling och sampling - endast en liten del av alla sidvisningar övervakas.
 
 ## Datainsamling för övervakning av realanvändning {#rum-service-data-sampling}
 
@@ -43,7 +37,7 @@ När man beslutar om uppgifterna ska samlas in, görs det i sidvy per sida och d
 
 ## Vilka data samlas in? {#what-data-is-being-collected}
 
-Tjänsten för övervakning av faktisk användning är utformad för att förhindra insamling av personligt identifierbar information. Den fullständiga uppsättningen information som samlas in av RUM anges nedan:
+Tjänsten för övervakning av faktisk användning är utformad för att minimera datainsamling. Den fullständiga uppsättningen information som samlas in av RUM anges nedan:
 
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttypen och det operativsystem som används för att visa sidan, till exempel: `desktop:windows` eller `mobile:ios`
@@ -105,7 +99,7 @@ Here are key considerations for customers to keep in mind when interpreting thei
 
    RUM-biblioteket och RUM-samlingen räknas inte som innehållsbegäranden och ökar inte antalet rapporterade sidvisningar eller API-anrop. Dessutom är [samling på serversidan](#serverside-collection) grunden för innehållsförfrågningar för kunder som använder det färdiga CDN-nätverket med AEM as a Cloud Service.
 
-1. **Hur avanmäler jag mig?**
+1. **Hur inaktiverar jag RUM?**
 
    Adobe rekommenderar att du använder Real Use Monitoring (RUM) på grund av dess stora fördelar och att det kommer att göra det möjligt för Adobe att optimera dina digitala upplevelser genom att förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
 
