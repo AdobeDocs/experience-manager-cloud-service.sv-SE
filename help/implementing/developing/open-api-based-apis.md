@@ -4,9 +4,9 @@ description: Läs om AEM as a Cloud Service stöd för OpenAPI-baserade API:er
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 4aeafba9-8f9e-4ecb-9e37-8d048b0474cc
-source-git-commit: bb125c5a20dad8afcada0e4325e4d757bfcabd7c
+source-git-commit: e735f7d2a39e3165907969d2e27565639499a636
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Nyare AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och producerar därmed konsekventa, väldokumenterade och användarvänliga API:er. Detaljerad information finns på följande sidor:
 
-* En [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) om hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er.
+* En [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) om hur du konfigurerar och anropar OpenAPI-baserade AEM-API:er med server-till-server-autentisering.
 * Informativa [guider](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/), inklusive [API-koncept och syntax](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/how-to/).
 * API-slutpunktens [referensdokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/), där vissa API:er är OpenAPI-baserade, till exempel [den här webbplats-API:n](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/). Referensdokumentationen innehåller också en API-spelningsbakgrund, som gör det enkelt att testa en slutpunkt med en innehavartoken som genererats med Adobe Developer Console.
 
-Ett vanligt API-exempel omfattar integrering med system som CRM eller PIM, där AEM API anropas för att hämta eller behålla data. Som en del av integreringsimplementeringen kan program prenumerera på [AEM-utsända händelser](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-eventing/overview) som kan utlösa affärslogik i Adobe App Builder eller annan infrastruktur.
+Ett vanligt användningsexempel för API är integrering med system som CRM eller PIM, där AEM API:er anropas för att hämta eller behålla data. Som en del av integreringsimplementeringen kan program prenumerera på [händelser som skickas från AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-eventing/overview), vilket kan utlösa affärslogik i Adobe App Builder eller annan infrastruktur.
 
 De API-autentiseringstyper som stöds skiljer sig åt beroende på slutpunkten, men kan vara OAuth Server-to-Server, OAuth Web App och OAuth Single Page App (SPA).
 
@@ -34,16 +34,18 @@ De API-autentiseringstyper som stöds skiljer sig åt beroende på slutpunkten, 
 
 ## Konfigurera API-åtkomst {#configuring-api-access}
 
-Många OpenAPI-baserade AEM-API:er kräver autentisering, vilket kräver att autentiseringsuppgifter genereras med [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/). Konfiguration omfattar följande steg, som visas i självstudiekursen:
+Många OpenAPI-baserade AEM-API:er kräver autentisering, vilket kräver att autentiseringsuppgifter genereras med [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/). Konfiguration omfattar följande steg:
 
-1. Se till att ditt AEM [produktprofiler uppdateras](/help/onboarding/aem-cs-team-product-profiles.md#aem-product-profiles) och att en lämplig tjänst är aktiverad för att komma åt det önskade API:t.
+1. Kontrollera att [produktprofilerna för ditt AEM-program har uppdaterats](/help/onboarding/aem-cs-team-product-profiles.md#aem-product-profiles) och att en lämplig tjänst har aktiverats för att komma åt det önskade API:t.
 1. Skapa ett nytt projekt i Adobe Developer Console och lägg till önskade API:er i projektet, och välj även lämplig autentiseringstyp.
-1. Generera autentiseringsuppgifterna, som senare kommer att användas för utbyte av en innehavartoken när API anropas.
+1. Generera autentiseringsuppgifterna, som senare kommer att användas för utbyte mot en innehavartoken när API anropas.
 1. Registrera klient-ID:t i miljön genom att konfigurera en YAML-fil som distribueras med Config Pipeline (eller kommandorad för RDE:er).
+
+Se självstudiekursen [Konfigurera OpenAPI-baserade API:er](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/setup) för stegvisa instruktioner.
 
 ## Registrera ett klient-ID {#registering-a-client-id}
 
-Klient-ID:n omfattar åtkomstpunkten i ett Adobe Developer Console-projekt för specifika AEM. Detta uppnås på följande sätt:
+Klient-ID:n omfattar åtkomstpunkten i ett Adobe Developer Console-projekt för specifika AEM-miljöer. Detta uppnås på följande sätt:
 
 1. Skapa en fil med namnet `api.yaml` eller liknande med en konfiguration som fragmentet nedan, inklusive önskade nivåer (författare, publicering, förhandsgranskning). `Client_id` värden ska komma från dina Adobe Developer Console API-projekt.
 
