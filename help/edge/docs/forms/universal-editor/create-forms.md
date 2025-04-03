@@ -6,22 +6,24 @@ role: User
 hide: true
 hidefromtoc: true
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: c81698c2d424d39688d1c9fad6c085223f5854a5
+source-git-commit: b0cedf31a8759cdf403e1e7d6aadcab3bba03bab
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
 
-# Steg-för-steg-guide för att skapa fristående formulär i Universal Editor
+# Skapa adaptiv Forms med Universal Editor
 
 <span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
-I den här artikeln får du hjälp med att skapa och redigera fristående formulär med den universella redigeraren genom att välja en Edge Delivery Services-baserad mall i guiden Skapa formulär. Du kan även publicera de skapade formulären med Universal Editor till AEM Edge Delivery Services.
+Universell redigerare är en mångsidig visuell redigerare som ger dig en upplevelse som heter What-you-see-is-what-you-get (WYSIWYG) när du redigerar formulär. Det gör det enklare att skapa responsiva och användarvänliga formulär med dra-och-släpp-funktionen, med hjälp av tillgängliga adaptiva Forms-komponenter som textrutor, alternativknappar och kryssrutor.
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och lagring. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-webbplatsprojekt](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project).
+AEM har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och datalagring med Universal Editor. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-webbplatsprojekt](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project).
 
-![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png){width=50%}
+![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png)
+
+I den här artikeln får du hjälp med att skapa och redigera fristående formulär med den universella redigeraren genom att välja en Edge Delivery Services-baserad mall i guiden Skapa formulär.
 
 ## Krav
 
@@ -32,7 +34,7 @@ AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edg
 
 ## Arbeta med formulär i den universella redigeraren
 
-Med den universella redigeraren kan du enkelt skapa responsiva och interaktiva fristående formulär med färdiga komponenter som textfält, kryssrutor och alternativknappar. Den har kraftfulla funktioner som dynamiska regler, smidig dataintegrering och anpassningsalternativ, så att du kan skapa formulär efter dina exakta behov. Du kan även publicera formulären på AEM Edge Delivery Services. Du kan utföra följande åtgärder på formulär i Universell redigerare:
+Med den universella redigeraren kan du enkelt skapa responsiva och interaktiva fristående formulär. Du kan utföra följande åtgärder på formulär i Universell redigerare:
 * [Skapa ett formulär](#create-a-form)
 * [Skapa ett formulär](#author-a-form)
 * [Publicera ett formulär](#publish-a-form)
@@ -93,7 +95,7 @@ Med den universella redigeraren kan du enkelt skapa responsiva och interaktiva f
 
    ![kontakta oss](/help/edge/assets/contact-us.png)
 
-   Nu kan du [konfigurera och anpassa formuläröverföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md).
+   Nu kan du [konfigurera och anpassa Skicka-åtgärder för formulär](/help/edge/docs/forms/universal-editor/submit-action.md).
 
 
 <!--
