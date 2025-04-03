@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en extern databas i Cloud Manager. Clo
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: 4667a00a156b3a2f66ed87c64763f93397aad946
+source-git-commit: cc307e8fbe71b65e25c7184b0b720708bcb6405f
 workflow-type: tm+mt
-source-wordcount: '1890'
+source-wordcount: '1866'
 ht-degree: 0%
 
 ---
@@ -206,16 +206,9 @@ Följande beteenden gäller:
 * Om PR-validering eller utlösare för pipeline inte fungerar kontrollerar du att webkrockhemligheten är uppdaterad både i Cloud Manager och i din Git-leverantör.
 
 
-
-
-
-
-
-
-## Begränsningar
+## Begränsning
 
 * Externa databaser kan inte länkas till konfigurationspipelines.
-* Pipeliner med externa databaser (som inte finns på GitHub) och utlösaren On Git Changes startar inte automatiskt. De kan bara initieras manuellt.
 
 
 <!-- THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY>
