@@ -5,10 +5,10 @@ exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: cc007536d14bd0464879b30d6303c24ccf15d2d0
+source-git-commit: 9ddda040eda85b29c86a4940cb656f26073b0f12
 workflow-type: tm+mt
-source-wordcount: '897'
-ht-degree: 4%
+source-wordcount: '957'
+ht-degree: 3%
 
 ---
 
@@ -16,7 +16,9 @@ ht-degree: 4%
 
 Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 
-En startsida skapas så att du kan göra ändringar redo för framtida publicering (samtidigt som du behåller dina aktuella sidor). När du har redigerat och uppdaterat startsidorna befordrar du dem tillbaka till källan och aktiverar sedan källsidorna (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
+En *Launch* skapas så att du kan göra ändringar inför framtida publicering, samtidigt som du behåller de aktuella sidorna. Det innebär att du redigerar två versioner samtidigt: sidor som för närvarande är publicerade och en version av dessa sidor, som ska publiceras i taget i framtiden. När tiden är inne kan du ersätta originalsidorna och publicera den nya versionen.
+
+Du skapar en *Launch* och när du har redigerat och uppdaterat dina *Launch* -sidor *höjer du* dem tillbaka till *Source*. Du kan sedan aktivera dessa *Source*-sidor (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
 
 Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras kvartalsvis så att de aktuella produkterna passar den aktuella säsongen. Om du vill förbereda dig för nästa kvartalsvisa uppdatering kan du skapa en startsida med lämpliga webbsidor. Under hela kvartalet ackumuleras följande ändringar i startversionen:
 
@@ -62,7 +64,7 @@ Med Launes kan du:
 * Du kan befordra och publicera innehållet antingen manuellt eller automatiskt:
    * Manuellt:
       * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart för publicering.
-      * Publish innehållet från källsidorna (efter att de har befordrats).
+      * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
    * Automatiskt - det innebär följande:
       * Fältet **Starta**(**Live**) **date**: detta kan anges när du skapar eller redigerar en start.
