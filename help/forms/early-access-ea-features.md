@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: ef6c113721ca6f84374ecd01df790a0b37d00192
+source-git-commit: 664aa2091a3853fdcea792ba5015d685c9285764
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2286'
 ht-degree: 0%
 
 ---
@@ -74,9 +74,9 @@ Det här är mer konversationskritiska Forms ger:
 Forms är mer än bara ett nytt utseende - de förändrar användarupplevelsen.  Öka engagemanget, minska antalet blanketter som läggs ned och gör interaktionen med er webbplats roligare för alla.
 
 
-### WYSIWYG Authoring (Universal Editor) for Edge Delivery Services for Forms
+### WYSIWYG Authoring for Edge Delivery Services
 
-Universal Editor har ett kraftfullt WYSIWYG-gränssnitt för att skapa och publicera [anpassningsbara formulär till Edge Delivery Services](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) som kombinerar visuell designenkelhet med avancerade funktioner. WYSIWYG Authoring har alla funktioner som finns i [Dokumentbaserad redigering](/help/edge/docs/forms/create-forms.md), plus en mängd andra funktioner:
+WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive Forms Editor) för att skapa och publicera anpassningsbara formulär till Edge Delivery Services. WYSIWYG Authoring har alla funktioner som finns i [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
 
 * Avancerad regelredigerare för avancerad logik.
 * Utbyggbarhet på serversidan för anpassade funktioner.
@@ -86,26 +86,6 @@ Universal Editor har ett kraftfullt WYSIWYG-gränssnitt för att skapa och publi
 * Integrering med olika datakällor för förifyllande av formulär och inlämning av data.
 * Form Data Model (FDM) för att definiera datastrukturen och interaktionen med olika datakällor.
 * Möjlighet att välja bland flera olika åtgärder för att skicka in formulär, inklusive att skicka data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics och många andra datakällor.
-
-![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png)
-
-**Fördelar:**
-
-* **Accelerated Time-to-Value (TTV)**: Starta formulär snabbare med intuitiv visuell redigering som eliminerar komplexa kodningskrav.
-* **Minskade utvecklingskostnader**: Minska den totala ägandekostnaden genom att göra det möjligt för företagsanvändare att skapa och ändra formulär med minimal IT-inblandning.
-* **Förenklad utveckling**: Skapa anpassade komponenter med endast HTML, CSS och JavaScript - ingen specialkunskap om ramverket behövs.
-* **Modern Web Stack**: Bygger på webbstandarder och moderna tekniker som är välbekanta för gränssnittsutvecklare.
-* **Snabba prototyper**: Bygg och testa snabbt formulärkoncept innan du investerar i fullständig utveckling
-
-
-**Läs mer i dokumentationen:**
-
-| | | |
-|:----------------------:|:---------------------:|:----------------------:|
-| [**Viktiga funktioner**](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md#key-features-of-universal-editor-for-edge-delivery-services-for-forms) | [**Använd responsiva layouter**](/help/edge/docs/forms/universal-editor/responsive-layout.md) | [**Konfigurera skicka-åtgärder**](/help/edge/docs/forms/universal-editor/submit-action.md) |
-| [**Kom igång med Universal Editor för Adaptive Forms**](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md) | [**Formatera formulären**](/help/edge/docs/forms/universal-editor/style-theme-forms.md) | [**Lägg till reCAPTCHA-säkerhet**](/help/edge/docs/forms/universal-editor/recaptcha-forms.md) |
-| [**Skapa ditt första formulär**](/help/edge/docs/forms/universal-editor/create-forms.md) | [**Använd regelredigeraren**](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md) | [**Publicera formulär**](/help/edge/docs/forms/universal-editor/publish-forms.md) |
-| [**Förstå användargränssnittet**](/help/edge/docs/forms/universal-editor/universal-editor-user-interface.md) | | [**Skapa anpassade komponenter**](/help/edge/docs/forms/universal-editor/create-custom-component.md) |
 
 
 ### AEM Forms till Marketo Connector
@@ -127,27 +107,38 @@ Vill du börja? I följande artiklar finns detaljerade anvisningar om hur innova
 * [Konfigurera Marketo Engage och datakälla för befintliga adaptiva Forms](/help/forms/use-marketo-engage-data-source-in-form.md)
 * [Skicka ett befintligt anpassat formulär till Marketo Engage](/help/forms/submit-adaptive-form-to-marketo-engage.md)
 
-### Instrumentpanel för värdeåterställning
+### Interaktiv kommunikation i molnet
 
-Spåra och analysera formulärens prestanda med Value Realization Dashboard. Detta analysverktyg hjälper er att fatta datadrivna beslut för att optimera er formulärstrategi.
+Interactive Communications on Cloud är en kraftfull lösning för att skapa, hantera och leverera datadrivna interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, räkningar och välkomstpaket.
 
-![Instrumentpanel för Forms-användningsinformation](/help/forms/assets/forms-usage-insights.png)
+![Interaktiv kommunikationsredigerare](/help/forms/assets/ic-editor.png)
 
-**Viktiga funktioner:**
+#### Viktiga funktioner:
 
-* Övervaka inskickade formulär, dokumentåtergivningar och data för att skapa/publicera formulär
-* Spåra formulärfragmentanvändning och återanvändning i hela organisationen
-* Identifiera trender, högtider och förbättringsmöjligheter
+* **Molnbaserad redigerare**: Till skillnad från AEM Forms Desktop Designer, som bara kan installeras på Windows-datorer, körs den interaktiva kommunikationsredigeraren i alla moderna webbläsare utan någon installation. Detta molnbaserade tillvägagångssätt eliminerar installationsproblem, ger tillgänglighet över flera plattformar och möjliggör samarbete var som helst med internetåtkomst.
 
-Instrumentpanelen ger insikter i två huvudavsnitt:
+* **Användarvänlig design**: Intuitivt musstyrt gränssnitt som kräver minimal teknisk kunskap.
 
-* **Formulär- och dokumentaktivitet över tid**: Spåra inskickat material, återgivningar och skapande/publicering av formulär
-* **Fragmentanvändning**: Övervakar fragmentanvändning och återanvändning
+* **Dataintegrering**: Anslut till scheman, databaser och webbtjänster för generering av dynamiskt innehåll.
 
-Detaljerad information:
+* **Multimedia**: Lägg in text, bilder och interaktiva element utan problem.
 
-* [Förstå kontrollpanelen för värderealisering](/help/forms/aem-forms-value-realization-dashboard.md)
-* [Tolka användningsinformation för formulär och dokument](/help/forms/using-the-value-realization-dashboard.md)
+* **Dokumentfragment**: Återanvänd modulära innehållsblock i flera dokument för enhetlighet och effektivitet.
+
+* **Flerkanalsutdata**: Skapa enhetliga upplevelser i tryck- och digitalformat enligt gällande regelverk.
+
+* **Dynamiskt innehåll**: Generera anpassat innehåll med hjälp av affärslogik och databindning.
+
+* **Formatflexibilitet**: Utdata i formaten PDF, HTML, PCL, PostScript® och ZPL.
+
+#### Användningsexempel:
+
+* Finansiella institut som genererar kontoutdrag
+* Myndigheter som effektiviserar sina förmånsmeddelanden
+* Skapa högkvalitativ, säker och juridiskt bindande korrespondens
+* Hantera framtagning, sammanställning och leverans av datadrivna interaktiva korrespondenser
+
+Vill du börja? Interactive Communications Editor finns under Tidig åtkomst-programmet för Forms as a Cloud Service-distributioner. Om du vill begära åtkomst skickar du ditt organisations-ID och programinformation till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från din officiella adress.
 
 ## Ytterligare innovationer för tidig åtkomst
 
