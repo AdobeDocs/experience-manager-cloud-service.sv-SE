@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: dd7b09dc208f556a08d4a8960d9c71ec3c6e7651
+source-git-commit: 61992513d7c965d1c0b1f3d1134d35cc53bebe2f
 workflow-type: tm+mt
-source-wordcount: '6127'
+source-wordcount: '6132'
 ht-degree: 2%
 
 ---
@@ -36,6 +36,7 @@ ht-degree: 2%
          + [Versionsinformation för 2025.2.0](/help/release-notes/release-notes-cloud/2025/release-notes-2025-2-0.md)
          + [Versionsinformation för 2025.1.0](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md)
       + 2024 {#2024}
+         + [Versionsinformation för 2024.11.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-11-0.md)
          + [Versionsinformation för 2024.10.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-10-0.md)
          + [Versionsinformation för 2024.9.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-9-0.md)
          + [Versionsinformation för 2024.8.0](/help/release-notes/release-notes-cloud/2024/release-notes-2024-8-0.md)
@@ -205,7 +206,7 @@ ht-degree: 2%
          + [Versionsinformation för 2022.5.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-05-0.md)
          + [Versionsinformation för 2022.4.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-04-0.md)
          + [Versionsinformation för 2022.3.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-03-0.md)
-         + [Versionsinformation för 2022.2.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-02-0.md)
+         + [Uppdateringsinformation för 2022.2.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-02-0.md)
          + [Versionsinformation för 2022.1.0](/help/journey-migration/release-notes/release-notes-migration-tools-2022-01-0.md)
       + 2021 {#2021}
          + [Versionsinformation för 2021.12.0](/help/journey-migration/release-notes/release-notes-migration-tools-2021-12-0.md)
@@ -288,7 +289,7 @@ ht-degree: 2%
 + AEM as a Cloud Service migreringsresa {#migration-journey}
    + [Komma igång med att flytta AEM as a Cloud Service](/help/journey-migration/getting-started.md)
    + [Beredskapsfas](/help/journey-migration/readiness.md)
-   + [Implementeringsfas](/help/journey-migration/implementation.md)
+   + [Genomförandefasen](/help/journey-migration/implementation.md)
    + [Go Live](/help/journey-migration/go-live.md)
    + [Post Go Live](/help/journey-migration/post-go-live.md)
    + [Migreringshandbok för Experience Manager as a Cloud Service for Partners](/help/journey-migration/getting-started-partners.md)
@@ -325,7 +326,7 @@ ht-degree: 2%
          + [Köra verktyget Innehållsöverföring på en publiceringsinstans](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/running-content-transfer-tool-publish-instance.md)
          + [Hantera huvudkonton efter migrering](/help/journey-migration/managing-principals-after-migration.md)
          + [Massöverföring av huvudkonton till IMS efter migrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/bulk-principal-uploading.md)
-         + [Felsöka verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/troubleshooting-content-transfer-tool.md)
+         + [Felsöka verktyget för innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/troubleshooting-content-transfer-tool.md)
          + Äldre användarmappningsverktyg (äldre){#legacy-user-mapping-tool}
             + [Ökning](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/overview-user-mapping-tool-legacy.md)
             + [Viktiga överväganden](/help/journey-migration/content-transfer-tool/user-mapping-tool-legacy/considerations-user-mapping-tool-legacy.md)
@@ -407,9 +408,9 @@ ht-degree: 2%
          + [Använda arbetsflöden på sidor](/help/sites-cloud/authoring/workflows/applying.md)
          + [Delta i arbetsflöden](/help/sites-cloud/authoring/workflows/participating.md)
       + Personanpassning {#personalization}
-         + [Personalization - översikt](/help/sites-cloud/authoring/personalization/overview.md)
+         + [Översikt över personalisering](/help/sites-cloud/authoring/personalization/overview.md)
          + [Förhandsgranska sidor med ContextHub-data](/help/sites-cloud/authoring/personalization/contexthub.md)
-         + [Skapa riktat innehåll med målläge](/help/sites-cloud/authoring/personalization/targeted-content.md)
+         + [Skapa målinriktat innehåll med målinriktningsläge](/help/sites-cloud/authoring/personalization/targeted-content.md)
          + [Arbeta med riktat innehåll på flera webbplatser](/help/sites-cloud/authoring/personalization/multisite-targeted-content.md)
          + [Hur hantering av flera webbplatser för riktat innehåll är strukturerad](/help/sites-cloud/authoring/personalization/multisite-structure.md)
          + [Hantera aktiviteter](/help/sites-cloud/authoring/personalization/activities.md)
@@ -627,9 +628,9 @@ ht-degree: 2%
       + [Integrera dynamiska mediavisare med taggar från Adobe Analytics och Adobe Experience Platform](/help/assets/dynamic-media/tags.md)
       + [Skapa anpassade popup-fönster med snabbvyn](/help/assets/dynamic-media/custom-pop-ups.md)
       + [Leverera optimerade bilder för en responsiv webbplats](/help/assets/dynamic-media/responsive-site.md)
-      + [Förhandsgranska dynamiska medieresurser](/help/assets/dynamic-media/previewing-assets.md)
-      + [Lägga till dynamiska medieresurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
-      + [Bädda in Dynamic Video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md)
+      + [Förhandsgranska Dynamic Media-resurser](/help/assets/dynamic-media/previewing-assets.md)
+      + [Lägga till Dynamic Media-resurser på sidor](/help/assets/dynamic-media/adding-dynamic-media-assets-to-pages.md)
+      + [Bädda in visningsprogrammet för dynamisk video eller bild på en webbsida](/help/assets/dynamic-media/embed-code.md)
       + [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md)
       + [Begär felrapport för misslyckade leverans-URL:er](/help/assets/dynamic-media/reporting-dm.md)
       + [Använd regeluppsättningar för att omforma URL:er](/help/assets/dynamic-media/using-rulesets-to-transform-urls.md)
@@ -748,8 +749,8 @@ ht-degree: 2%
          + [Konfigurera [!DNL Microsoft Dynamics] OData](/help/forms/ms-dynamics-odata-configuration.md)
          + [Ansluta anpassat formulär till Salesforce-program med OAuth 2.0-klientens autentiseringsflöde](/help/forms/aem-forms-salesforce-integration.md)
          + [Konfigurera [!DNL Azure] lagring](/help/forms/configure-azure-storage.md)
-         + [Konfigurera  [!DNL Microsoft Dynamics 365] molntjänster](/help/forms/configure-msdynamics.md)
-         + [Konfigurera Salesforce molntjänster](/help/forms/configure-salesforce.md)
+         + [Konfigurera [!DNL Microsoft Dynamics 365] molntjänster](/help/forms/configure-msdynamics.md)
+         + [Konfigurera Salesforce-molntjänster](/help/forms/configure-salesforce.md)
          + [Skapa formulärdatamodell](/help/forms/create-form-data-models.md)
          + [Arbeta med formulärdatamodell](/help/forms/work-with-form-data-model.md)
          + [Använd formulärdatamodell](/help/forms/using-form-data-model.md)
@@ -831,16 +832,16 @@ ht-degree: 2%
             + [Publicera och avpublicera formulär och dokument](/help/forms/publishing-unpublishing-forms.md)
          + Lägg till komponenter i ett adaptivt formulär {#add-components-to-an-adaptive-form}
             + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
-            + [Använd Captcha i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha.md)
-            + [Använd Turnstile CAPTCHA i adaptiv form](/help/forms/integrate-adaptive-forms-turnstile.md)
-            + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-            + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
+            + [Använda hCaptcha i ett adaptivt formulär](/help/forms/integrate-adaptive-forms-hcaptcha.md)
+            + [Använd vändkors CAPTCHA i ett adaptivt formulär](/help/forms/integrate-adaptive-forms-turnstile.md)
+            + [Använda kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+            + [Använd Handskriftssignatur](/help/forms/signing-forms-using-scribble.md)
             + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)
             + [Stöd för att lägga till fotnoter i ett anpassat formulär](/help/forms/footnotes-richtextsupport.md)
          + Konfigurera layout och tillämpa format på ett anpassat formulär {#configure-layout-of-an-adaptive-form}
             + [Ange layout för ett adaptivt formulär](/help/forms/layout-capabilities-adaptive-forms.md)
             + [Använd layoutläget för att ändra storlek på komponenter](/help/forms/resize-using-layout-mode.md)
-            + [Skapa datainhämtning i flera steg](/help/forms/introduction-form-sequence.md)
+            + [Skapa datainsamling i flera steg](/help/forms/introduction-form-sequence.md)
             + [Formateringskonstruktioner för Adaptive Forms](/help/forms/styling-constructs-adaptive-forms.md)
             + [Använda infogade CSS-format på enskilda adaptiva formulärkomponenter](/help/forms/inline-style-adaptive-forms.md)
             + [Hur använder man Separator-komponenten i Adaptive Forms?](/help/forms/separator-component-in-adaptive-forms.md)
@@ -868,9 +869,9 @@ ht-degree: 2%
          + Förbättra tillgängligheten för ett anpassat formulär {#accessible-adaptive-forms}
             + [Skapa ett tillgängligt adaptivt formulär](/help/forms/creating-accessible-adaptive-forms.md)
          + [Skapa och hantera granskningar](/help/forms/create-reviews-forms.md)
-         + [Associera granskare med ett formulär](/help/forms/adding-reviewers-form.md)
+         + [Associera inskickade granskare med ett formulär](/help/forms/adding-reviewers-form.md)
          + [Skapa och hantera granskningar för ett adaptivt formulär](/help/forms/review-adaptiveforms-in-sites-page.md)
-      + [Nyckelord för adaptiva formulär](/help/forms/adaptive-forms-keywords.md)
+      + [Nyckelord för anpassningsbara formulär](/help/forms/adaptive-forms-keywords.md)
       + [Förhandsgranska ett formulär](/help/forms/previewing-forms.md)
    + Interaktiv kommunikation {#interactive-communocation}
       + [Introduktion till interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md)
@@ -951,16 +952,16 @@ ht-degree: 2%
    + [Observerbara ändringar av AEM-innehåll och Commerce as a Cloud Service](/help/commerce-cloud/changes.md)
    + Commerce Journeys {#journeys}
       + Innehållsförfattarresa {#author}
-         + [AEM Content and Commerce Content Author Journey](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/overview.md)
-         + [Komma igång med CIF Authoring](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)
-         + [Hantera sidor och mallar för produktkataloger](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/catalog-templates.md)
-         + [Bygger testversioner av produktkataloger](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/staged-catalog.md)
+         + [AEM innehålls- och handelsinnehållsförfattarresa](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/overview.md)
+         + [Komma igång med CIF-redigering](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/getting-started.md)
+         + [Hantera produktkatalogsidor och mall](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/catalog-templates.md)
+         + [Skapa upplevelser i form av en iscensatt produktkatalog](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/staged-catalog.md)
          + [Bygga produktupplevelser](/help/commerce-cloud/commerce-journeys/aem-commerce-content-author/product-experience-management.md)
    + Integrationer {#integrations}
       + [Adobe Commerce](/help/commerce-cloud/integrating/magento.md)
       + [Live Search - CIF-komponent](/help/commerce-cloud/integrating/live-search-plp.md)
-      + [Live Search-potens, CIF-komponent](/help/commerce-cloud/integrating/live-search-popover.md)
-      + [Commerce Solution från tredje part](/help/commerce-cloud/integrating/third-party.md)
+      + [CIF-komponent för popover för livesökning](/help/commerce-cloud/integrating/live-search-popover.md)
+      + [Handelslösning från tredje part](/help/commerce-cloud/integrating/third-party.md)
       + [Experience Platform](/help/commerce-cloud/integrating/aep.md)
    + AEM Storefront {#storefront}
       + [Komma igång](/help/commerce-cloud/getting-started.md)
@@ -1291,10 +1292,10 @@ ht-degree: 2%
             + [Bildredigeraren](/help/implementing/developing/components/image-editor.md)
             + [Dekoration-taggar](/help/implementing/developing/components/decoration-tag.md)
             + [Använda Dölj villkor](/help/implementing/developing/components/hide-conditions.md)
-            + [Referenshandbok för komponenter](/help/implementing/developing/components/reference.md)
+            + [Referensguide för komponenter](/help/implementing/developing/components/reference.md)
          + [AEM Tagging Framework](/help/implementing/developing/introduction/tagging-framework.md)
-         + [Bygga taggar i AEM-program](/help/implementing/developing/introduction/tagging-applications.md)
-         + Sök {#search}
+         + [Bygga in taggning i AEM program](/help/implementing/developing/introduction/tagging-applications.md)
+         + Söka {#search}
             + [Query Builder API](/help/implementing/developing/introduction/query-builder-api.md)
             + [Predikatreferens för Query Builder](/help/implementing/developing/introduction/query-builder-predicates.md)
             + [Implementera en anpassad predikatutvärderare](/help/implementing/developing/introduction/query-builder-custom-predicate.md)
@@ -1376,9 +1377,9 @@ ht-degree: 2%
          + [Publicera program](/help/implementing/developing/extending/app-builder/videos/publish.md)
       + [Utöka upplevelsefragment](/help/implementing/developing/extending/experience-fragments.md)
       + [Anpassa och utöka innehållsfragment](/help/implementing/developing/extending/content-fragments-customizing.md)
-      + [Innehållsfragment Konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
+      + [Innehållsfragment konfigurera komponenter för återgivning](/help/implementing/developing/extending/content-fragments-configuring-components-rendering.md)
       + [Anpassa konsolen och redigeraren för innehållsfragment](/help/implementing/developing/extending/content-fragments-console-and-editor.md)
-      + Hantera sökning i Forms {#manage-search-forms}
+      + Hantera sökformulär {#manage-search-forms}
          + [Konfigurera Sök i Forms](/help/implementing/developing/extending/search-forms.md)
          + [Konfigurera sökfilter för Inkorgen](/help/implementing/developing/extending/configure-inbox-search-rail.md)
       + [Konfigurera RTF-redigerare](/help/implementing/developing/extending/rich-text-editor.md)
@@ -1412,7 +1413,7 @@ ht-degree: 2%
       + [CDN i AEM AS A CLOUD SERVICE](/help/implementing/dispatcher/cdn.md)
       + [Konfigurera trafik vid leveransnätverket](/help/implementing/dispatcher/cdn-configuring-traffic.md)
       + [Pipeline-fria URL-omdirigeringar](/help/implementing/dispatcher/pipeline-free-url-redirects.md)
-      + [Edge Side Includes](/help/implementing/dispatcher/edge-side-includes.md)
+      + [Kantsidan inkluderar](/help/implementing/dispatcher/edge-side-includes.md)
       + [Konfigurera CDN-autentiseringsuppgifter och autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md)
       + [Konfigurera CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md)
       + [Rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md)
