@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd funktioner för att anpassa resursväljaren i programmet.
 role: Admin, User
 exl-id: 0fd0a9f7-8c7a-4c21-9578-7c49409df609
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 97a432270c0063d16f2144d76beb437f7af2895a
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 0%
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
         </td>
         <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Ny</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
         </td>
         <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Ny</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>utökningsbarhet för användargränssnittet</b></a>
         </td>
           <td>
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
@@ -32,7 +32,7 @@ ht-degree: 0%
     </tr>
     <tr>
         <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+            <a href="/help/assets/search-best-practices.md"><b>Bästa praxis för sökning</b></a>
         </td>
         <td>
             <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
@@ -57,6 +57,7 @@ Med Resursväljaren kan du anpassa olika komponenter efter inställningar, krav 
 * [Val av Assets](#selection-of-assets)
 * [Anpassa utgångna resurser](#customize-expired-assets)
 * [Sammanhangsberoende anropsfilter](#contextual-invocation-filter)
+* [dragOptions, egenskap](#drag-options-property)
 
 Du måste definiera förutsättningarna i filen **index.html** eller en liknande fil i programimplementeringen för att definiera autentiseringsinformationen för att få åtkomst till databasen [!DNL Experience Manager Assets]. När du är klar kan du lägga till kodfragment efter dina behov.
 
@@ -161,9 +162,9 @@ const data = JSON.parse(e.dataTransfer.getData('collectionviewdata'));
 
 ## Val av Assets {#selection-of-assets}
 
-Den valda resurstypen är en array med objekt som innehåller resursinformationen när funktionerna `handleSelection`, `handleAssetSelection` och `onDrop` används.
+Vald tillgångstyp är en matris med objekt som innehåller tillgångsinformation när du använder `handleSelection`funktionerna , `handleAssetSelection`och `onDrop` .
 
-Utför följande steg för att konfigurera valet av en eller flera resurser:
+Utför följande steg för att konfigurera valet av en eller flera tillgångar:
 
 ```
 acvConfig: {
@@ -202,21 +203,21 @@ interface SelectedAsset {
 }
 ```
 
-I följande tabell beskrivs några av de viktiga egenskaperna för det valda resursobjektet.
+I följande tabell beskrivs några av de viktiga egenskaperna för det valda tillgångsobjektet.
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
-| *repo:databaseId* | string | Unik identifierare för databasen där resursen lagras. |
-| *repo:id* | string | Unik identifierare för tillgången. |
+| *repo:databaseId* | sträng | Unik identifierare för databasen där resursen lagras. |
+| *lagringsplats:id* | string | Unik identifierare för tillgången. |
 | *repo:assetClass* | string | Klassificeringen av resursen (till exempel bild eller video, dokument). |
-| *repo:name* | string | Namnet på resursen, inklusive filtillägget. |
-| *repo:size* | tal | Resursens storlek i byte. |
+| *repo:name* | sträng | Namnet på tillgången, inklusive filtillägget. |
+| *lagringsplats:storlek* | nummer | Storleken på tillgången i byte. |
 | *repo:path* | string | Platsen för resursen i databasen. |
-| *repo:överordnade* | `Array<string>` | En array med överordnade objekt för resursen i databasen. |
-| *repo:state* | string | Aktuellt läge för resursen i databasen (t.ex. aktiv, borttagen och så vidare). |
+| *lagringsplats:förfäder* | `Array<string>` | En matris med överordnade objekt för resursen i databasen. |
+| *lagringsplats:tillstånd* | string | Aktuellt läge för resursen i databasen (t.ex. aktiv, borttagen och så vidare). |
 | *repo:createdBy* | string | Användaren eller systemet som skapade resursen. |
-| *repo:createDate* | string | Datum och tid då tillgången skapades. |
-| *repo:modifiedBy* | string | Den användare eller det system som senast ändrade resursen. |
+| *repo:createDate* | sträng | Datum och tid då tillgången skapades. |
+| *rerepository:modifiedBy* | sträng | Den användare eller det system som senast ändrade tillgången. |
 | *repo:modifyDate* | string | Datum och tid då tillgången senast ändrades. |
 | *dc:format* | string | Resursens format, t.ex. filtyp (t.ex. JPEG, PNG och så vidare). |
 | *tiff:imageWidth* | tal | Bredden på en resurs. |
@@ -226,9 +227,9 @@ I följande tabell beskrivs några av de viktiga egenskaperna för det valda res
 | *`_links.<https://ns.adobe.com/adobecloud/rel/rendition>`* | `Array<Object>` | En array med objekt som innehåller information om återgivningar av resursen. |
 | *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].href>`* | string | URI:n till återgivningen. |
 | *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].type>`* | string | Återgivningens MIME-typ. |
-| *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].repo:size>`* | tal | Återgivningens storlek i byte. |
-| *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].width>`* | tal | Återgivningens bredd. |
-| *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].height>`* | tal | Återgivningens höjd. |
+| *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].repo:size>`* | nummer | Storleken på återgivningen i byte. |
+| *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].width>`* | nummer | Återgivningens bredd. |
+| *`_links.<https://ns.adobe.com/adobecloud/rel/rendition[].height>`* | nummer | Återgivningens höjd. |
 
 ### Hantera urval av Assets med objektschema {#handling-selection}
 
@@ -263,13 +264,13 @@ Syntaxen för inaktiverad markering är följande:
 
 >[!NOTE]
 >
-> Om det gäller en resurs är kryssrutan select dold, men om det gäller en mapp går det inte att markera mappen, men navigeringen för den aktuella mappen visas fortfarande.
+> Om det gäller en tillgång är kryssrutan för att välja dold, medan det inte går att markera mappen om det finns en mapp, men navigeringen för den nämnda mappen visas fortfarande.
 
 <!--For a complete list of properties and detailed example, visit [Asset Selector Code Example](https://github.com/adobe/aem-assets-selectors-mfe-examples).-->
 
 ## Anpassa utgångna resurser {#customize-expired-assets}
 
-Med Resursväljaren kan du styra hur en resurs som har gått ut används. Du kan anpassa den utgångna resursen med märket **Förfaller snart** som kan hjälpa dig att i förväg få reda på vilka resurser som kommer att förfalla inom 30 dagar från dagens datum. Dessutom kan detta anpassas efter behov. Du kan också välja en resurs som har gått ut på arbetsytan eller vice versa. Du kan anpassa en resurs som har gått ut med hjälp av vissa kodfragment på olika sätt:
+Med resursväljaren kan du styra användningen av en resurs som har upphört att gälla. Du kan anpassa den utgångna tillgången med ett **märke som upphör att gälla snart** som kan hjälpa dig att veta i förväg om de tillgångar som kommer att upphöra att gälla inom 30 dagar från det aktuella datumet. Dessutom kan detta anpassas enligt kravet. Du kan också tillåta att en resurs som har upphört att gälla på arbetsytan eller tvärtom. Anpassningen av en utgången tillgång kan göras med hjälp av vissa kodfragment på olika sätt:
 
 <!--{
     getExpiryStatus: function, // to control Expired/Expiring soon badges of the asset
@@ -284,7 +285,7 @@ expiryOptions: {
 
 ### Val av utgången tillgång {#selection-of-expired-asset}
 
-Du kan anpassa användningen av en resurs som har gått ut så att den antingen kan markeras eller inte kan markeras. Du kan anpassa om du vill tillåta att en resurs dras och släpps på arbetsytan Resursväljaren eller inte. Om du vill göra det använder du följande parametrar för att göra en resurs omarkerbar på arbetsytan:
+Du kan anpassa användningen av en resurs som har gått ut så att den antingen kan markeras eller inte kan markeras. Du kan anpassa om du vill tillåta att en resurs dras och släpps på arbetsytan Resursväljaren eller inte. Det gör du genom att använda följande parametrar för att göra en resurs ovalbar på arbetsytan:
 
 ```
 expiryOptions:{
@@ -296,9 +297,9 @@ Additionally, To do this, navigate to **[!UICONTROL Disable default expiry behav
 
 ![Disable default expiry behavior](assets/disable-default-expiry-behavior.png)-->
 
-### Ange varaktigheten för en utgången tillgång {#set-duration-of-expired-asset}
+### Ange varaktighet för en resurs som har upphört att gälla {#set-duration-of-expired-asset}
 
-Följande kodfragment hjälper dig att ange märket **Förfaller snart** för de resurser som förfaller inom fem dagar: <!--The `expirationDate` property is used to set the expiration duration of an asset. Refer to the code snippet below:-->
+Följande kodfragment hjälper dig att ange märket Upphör snart **att gälla** för de tillgångar som upphör att gälla inom de närmaste fem dagarna:<!--The `expirationDate` property is used to set the expiration duration of an asset. Refer to the code snippet below:-->
 
 ```
 /**
@@ -345,9 +346,9 @@ Syntax:
 }
 ```
 
-Standardtidsgränsen är 500 millisekunder. Du kan ändra den efter behov. Om du dessutom skickar värdet `timeout: 0` förblir popup öppen tills du klickar på kryssknappen.
+Standardtidsgränsen är 500 millisekunder. Du kan ändra den efter behov. Om du skickar värdet `timeout: 0` hålls dessutom rostat bröd öppet tills du klickar på kryssknappen.
 
-Nedan visas ett exempel som visar ett popup-meddelande när det krävs för att inte tillåta val för en mapp och visa ett motsvarande meddelande:
+Nedan visas ett exempel på hur du visar ett popup-meddelande när det krävs att du inte väljer en mapp och visar ett motsvarande meddelande:
 
 ```
 const showToast = {
@@ -357,7 +358,7 @@ const showToast = {
 }
 ```
 
-Använd följande kodutdrag för att visa popup-meddelanden om hur en resurs som har gått ut används:
+Använd följande kodfragment för att visa popup-meddelande för användningen av en utgången tillgång:
 
 ```
 (args) => {
@@ -388,7 +389,7 @@ Använd följande kodutdrag för att visa popup-meddelanden om hur en resurs som
 }
 ```
 
-## Sammanhangsberoende anropsfilter{#contextual-invocation-filter}
+## Kontextuellt anropsfilter{#contextual-invocation-filter}
 
 Med resursväljaren kan du lägga till ett taggväljarfilter. Den har stöd för en tagggrupp som kombinerar alla relevanta taggar till en viss tagggrupp. Dessutom kan du välja ytterligare taggar som motsvarar den resurs du söker efter. Dessutom kan du ange standardtagggrupper under det kontextuella anropsfiltret som du använder mest så att de är tillgängliga oavsett var du är.
 
@@ -641,6 +642,18 @@ const ControlledUploadExample = () => {
         </Flex>
     )
 }
+```
+
+### dragOptions, egenskap {#drag-options-property}
+
+```
+dragOptions: {
+            allowList: {
+                '*': true,          // allow all types to be dragged
+                'folder': false,    // except those explicitly set to disallow
+                'image/jpeg': false // or those with specific mimeTypes
+            },
+         }
 ```
 
 >[!MORELIKETHIS]

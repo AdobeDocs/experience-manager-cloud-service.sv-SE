@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 97a432270c0063d16f2144d76beb437f7af2895a
 workflow-type: tm+mt
-source-wordcount: '1347'
+source-wordcount: '1414'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,11 @@ Resursväljaren har många fördelar, till exempel:
 
 Du måste se till att följande kommunikationsmetoder används:
 
-* Programmet körs på HTTPS.
+* Värdprogrammet körs på HTTPS.
+* Du kan inte köra programmet på `localhost`. Om du vill integrera resursväljaren på den lokala datorn måste du skapa en anpassad domän, till exempel `[https://<your_campany>.localhost.com:<port_number>]`, och lägga till den anpassade domänen i `redirectUrl list`.
+* Du kan konfigurera och lägga till `ADOBE_PROVIDED_CLIENT_ID` i AEM Cloud-tjänstmiljövariabeln med respektive `imsClientId`.
+  ![Klient-ID för IMS-klient för resursväljare](assets/asset-selector-ims-client-id-env.png)
+* Listan med IMS-scope måste definieras i miljökonfigurationen.
 * Programmets URL finns i IMS-klientens tillåtelselista i omdirigerings-URL:er.
 * Inloggningsflödet för IMS konfigureras och återges med hjälp av en popup-meny i webbläsaren. Därför bör popup-fönster vara aktiverade eller tillåtna i målwebbläsaren.
 
@@ -91,7 +95,7 @@ Använd ovanstående krav om du behöver arbetsflödet för IMS-autentisering f�
 
 * [Integrera resursväljaren med en Adobe-app](/help/assets/integrate-asset-selector-adobe-app.md)
 * [Integrera resursväljare med andra program än Adobe](/help/assets/integrate-asset-selector-non-adobe-app.md)
-* [Integrera API:er för att öppna dynamiska media i resursväljaren](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+* [Integrera API:er för att öppna mediefiler med medieväljare](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
 
 
 >[!IMPORTANT]
@@ -197,9 +201,6 @@ Med Resursväljaren kan du visa resursen i fyra olika vyer:
 * ![stödrastervy](assets/do-not-localize/grid-view.png) [!UICONTROL **Stödrastervy**] Stödrastervyn visar rullningsbara filer och mappar i ett stödraster med rader och kolumner.
 * ![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL **Gallerivy**] Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
 * ![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL **Vattenfall** Visa] I vattenfallsvyn visas filer eller mappar i form av en Bridge.
-
-**Översiktsgrafik**
-
 
 ## Läs mer om de viktigaste funktionerna {#key-capabilities-asset-selector}
 
