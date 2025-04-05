@@ -4,9 +4,9 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 300dc71969e8e1da32d4f86f0a987b7e2777ccf5
 workflow-type: tm+mt
-source-wordcount: '932'
+source-wordcount: '950'
 ht-degree: 0%
 
 ---
@@ -16,36 +16,40 @@ ht-degree: 0%
 
 Lär dig hur du kan köra din egen Universal Editor-tjänst för lokal utveckling eller som en del av din egen infrastruktur.
 
+>[!NOTE]
+>
+>Lokala universella redigeringstjänster är inte obligatoriska eller stöds inte för projekt som använder AEM-redigering med Edge Delivery Services.
+
 ## Ökning {#overview}
 
 Universal Editor-tjänsten är den som binder Universal Editor och serverdelssystemet. Om du vill kunna utveckla lokalt för den universella redigeraren måste du köra en lokal kopia av den universella redigeringstjänsten. Detta beror på:
 
-* Adobe officiella universell redigeringstjänst finns på en global värdserver och din lokala AEM måste vara exponerad för Internet.
+* Adobe officiella Universal Editor-tjänst är global värd och din lokala AEM-instans måste vara ansluten till internet.
 * När du utvecklar med en lokal AEM SDK går det inte att komma åt Adobe Universal Editor-tjänsten från Internet.
-* Om din AEM har IP-begränsningar och Adobe Universal Editor-tjänsten inte har ett definierat IP-intervall kan du själv vara värd för den.
+* Om din AEM-instans har IP-begränsningar och Adobe Universal Editor-tjänsten inte ligger inom ett definierat IP-intervall kan du själv vara värd för den.
 
 ## Användningsexempel {#use-cases}
 
 Din egen kopia av Universal Editor-tjänsten är användbar om du vill:
 
-* Utveckla lokalt på AEM för användning med den universella redigeraren.
-* Kör din egen universella redigeringstjänst som en del av din egen infrastruktur, oberoende av Adobe universella redigeringstjänst.
+* Utveckla lokalt på AEM för användning med Universal Editor.
+* Kör din egen Universal Editor-tjänst som en del av din egen infrastruktur, oberoende av Adobe Universal Editor-tjänst.
 
-Båda användningsfallen stöds. I det här dokumentet förklaras hur du kör AEM i HTTPS tillsammans med en lokal kopia av den universella redigeringstjänsten.
+Båda användningsfallen stöds. I det här dokumentet förklaras hur du kör AEM i HTTPS tillsammans med en lokal kopia av Universal Editor-tjänsten.
 
 Om du vill köra din egen Universal Editor-tjänst som en del av din egen infrastruktur följer du samma steg som det lokala utvecklingsexemplet.
 
-## Konfigurera AEM som ska köras på HTTPS {#aem-https}
+## Konfigurera AEM för att köras på HTTPS {#aem-https}
 
-I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-ram. Tjänsten Universal Editor körs på HTTPS och därför måste AEM eller andra fjärrsidor också köras på HTTPS.
+I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-ram. Tjänsten Universal Editor körs på HTTPS och därför måste AEM eller någon annan fjärrsida också köras på HTTPS.
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS, inklusive ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
-Den universella redigeringstjänsten är inte en fullständig kopia av den universella redigeraren, utan bara en delmängd av dess funktioner för att säkerställa att samtal från den lokala AEM inte dirigeras över Internet, utan från en definierad slutpunkt som du kontrollerar.
+Universell redigeringstjänst är inte en fullständig kopia av Universell redigerare, utan bara en delmängd av dess funktioner för att säkerställa att samtal från din lokala AEM-miljö inte dirigeras via Internet, utan från en definierad slutpunkt som du kontrollerar.
 
 [NodeJS version 20](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 

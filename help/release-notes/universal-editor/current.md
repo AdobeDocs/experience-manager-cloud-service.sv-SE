@@ -4,10 +4,10 @@ description: Det här är versionsinformationen för version 2025.03.10 av Unive
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: b3c98f5e41dbc5e1714d0ed418a317199c735b73
+source-git-commit: beab4f94dc6d78c2b1ad87a02b9fe46dd0438bcc
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 1%
+source-wordcount: '295'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +25,15 @@ Detta är versionsinformationen för den 10 mars 2025-utgåvan av Universal Edit
 * **Flytta komponenter:** [Om du flyttar komponenter mellan behållare](/help/sites-cloud/authoring/universal-editor/authoring.md#reordering-components) observeras nu komponentfiltret för målbehållaren.  
    * Det finns inte längre något krav på att ha samma [filterdefinition](/help/implementing/universal-editor/filtering.md) för både mål- och målbehållare för att komponenten ska kunna flyttas mellan behållarna.
 * **Låsta sidor:** Universal Editor-tjänsten observerar [låsstatusen för en sida](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) och skriver bara till sidor som inte är låsta eller som är låsta av användaren.
+
+## Nya tillägg för Universal Editor {#extensions}
+
+Ett antal nya tillägg har släppts på [Extension Manager](https://developer.adobe.com/uix/docs/extension-manager/) för den universella redigeraren, vilket förbättrar redigeringsupplevelsen.
+
+* **MSM-tillägg**: Du kan nu bryta och återskapa arv av komponenter/block med det här tillägget.
+* **Tillägg för sidegenskaper**: Gå till sidegenskapsfönstret för sidan direkt från den universella redigeraren med det här tillägget.
+* **Arbetsflödestillägg**: Använd arbetsflöden på sidor och innehållsfragment som är instrumenterade på sidan med det här tillägget.
+* **Sidlåsningstillägg**: Använd det här tillägget om du vill låsa och låsa upp en sida direkt från den universella redigeraren.
 
 ## Andra förbättringar {#other-improvements}
 
