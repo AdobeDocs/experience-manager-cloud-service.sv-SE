@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Adobe Stock
 role: Admin, User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: deab7ac707527e62f7a0fa3581080171e499cd32
+source-git-commit: 3d95dd29cf1b7d6c7056c91e062a5f7eb48cc322
 workflow-type: tm+mt
-source-wordcount: '2068'
+source-wordcount: '2083'
 ht-degree: 1%
 
 ---
@@ -51,12 +51,11 @@ ht-degree: 1%
     </tr>
 </table>
 
-<!--
-| Version | Article link |
+| Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5  |    [Click here](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=en)                  |
-| AEM as a Cloud Service     | This article         |
--->
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=en) |
+| AEM as a Cloud Service | Den här artikeln |
+
 [!DNL Adobe Stock]-tjänsten ger designer och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
 
 [!DNL Adobe Stock] för Enterprise-erbjudandet innehåller som standard delningsrättigheter i hela organisationen. När en mediefil har hämtats av en användare i organisationen kan andra användare i organisationen identifiera, hämta och använda den här mediefilen utan att behöva licensiera den igen. När en mediefil har licensierats av din organisation är rätten att använda den evig.
