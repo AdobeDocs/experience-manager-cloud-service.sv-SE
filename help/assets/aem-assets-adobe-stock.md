@@ -5,9 +5,9 @@ contentOwner: Vishabh Gupta
 feature: Adobe Stock
 role: Admin, User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: 3d95dd29cf1b7d6c7056c91e062a5f7eb48cc322
+source-git-commit: 33ab5edf6531d56158f3887fbd61c76c69d05bdf
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2064'
 ht-degree: 1%
 
 ---
@@ -68,16 +68,16 @@ Organisationer kan integrera sin [!DNL Adobe Stock]-företagsplan med [!DNL Expe
 
 Uppfyll följande krav för att aktivera den här integreringen:
 
-* En [!DNL Experience Manager Assets]-instans som körs och körs som [!DNL Cloud Service]
-* En [Enterprise [!DNL Adobe Stock] plan](https://stockenterprise.adobe.com/)
-* En användare med behörigheter i [!DNL Admin Console] till standardproduktprofilen för Stock
-* En användare med behörighet till [!DNL Developer Access profile] för att skapa integration i [!DNL Adobe Developer Console]
+* En [!DNL Experience Manager Assets] som körs som en [!DNL Cloud Service]-instans.
+* En [!DNL Adobe Stock]-företagsplan.
+* En användare med behörighet i [!DNL Admin Console] till standardproduktprofilen för Stock.
+* En användare med behörighet till [!DNL Developer Access profile] för att skapa integrering i [!DNL Adobe Developer Console].
 
 En [!DNL Adobe Stock]-företagsplan,
 
-* Tillhandahåller produktberättigande för [!DNL Adobe Stock] (Stock som är anslutna till Experience Manager)
-* Krediter som köpts in i [!DNL Adobe Admin Console] för ditt aktieberättigande
-* Aktiverar hantering av krediter och licenser globalt inifrån [!DNL Adobe Admin Console]
+* Tillhandahåller produktberättigande för [!DNL Adobe Stock] (Stock som är anslutna till Experience Manager).
+* Krediter som köpts in i [!DNL Adobe Admin Console] för ditt Stock-berättigande.
+* Gör det möjligt att hantera krediter och licenser globalt inifrån [!DNL Adobe Admin Console].
 
 I berättigandet finns en standardproduktprofil för [!DNL Adobe Stock] i [!DNL Admin Console]. Det går att skapa flera profiler, och de här profilerna avgör vem som kan licensiera Stock-mediefiler. En användare som har direktåtkomst till produktprofilen har åtkomst till [https://stock.adobe.com/](https://stock.adobe.com/) och kan licensiera Stock-mediefiler. Det finns ett annat sätt att använda Developer Access för att skapa en integrering (API). Integrationen autentiserar kommunikationen mellan [!DNL Experience Manager Assets] och [!DNL Adobe Stock].
 
@@ -268,10 +268,13 @@ Utför följande steg för att konfigurera en ny [!DNL Adobe Stock IMS configura
    * **[!UICONTROL Cloud Solution]**: Välj **[!UICONTROL Adobe Stock]**.
    * **[!UICONTROL Title]**: Ange ett namn för den här integreringen.
    * **[!UICONTROL Authorization Server]**: Lägg till [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) som auktoriseringsserver.
-   * **[!UICONTROL Client ID]**: Navigera till sidan **[!UICONTROL OAuth Server-to-Server credential details]** i ditt projekt och kopiera **[!UICONTROL Client ID]** och klistra in den här (se steg 7 i avsnittet [Konfigurera ett program i Developer Console](#set-up-a-program-in-developer-console)).
-   * **[!UICONTROL Client Secret]**: Navigera till sidan **[!UICONTROL OAuth Server-to-Server credential details]** i ditt projekt och klicka på **[!UICONTROL Retrieve Client Secret]**, kopiera **[!UICONTROL client secret]** och klistra in den här (se steg 7 i [Konfigurera ett program i Developer Console](#set-up-a-program-in-developer-console) -avsnittet).
-   * **[!UICONTROL Scope]**: Navigera till sidan **[!UICONTROL OAuth Server-to-Server credential details]** i ditt projekt, kopiera **[!UICONTROL Scope]** och klistra in den här (se steg 7 i avsnittet [Konfigurera ett program i Developer Console](#set-up-a-program-in-developer-console)).
-   * **[!UICONTROL Org ID]**: Navigera till sidan **[!UICONTROL OAuth Server-to-Server credential details]** i ditt projekt, kopiera **[!UICONTROL Organization ID]** och klistra in den här (se steg 7 i avsnittet [Konfigurera ett program i Developer Console](#set-up-a-program-in-developer-console)).
+   * **[!UICONTROL Client ID]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Client ID]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
+
+   * **[!UICONTROL Client Secret]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, klicka på **[!UICONTROL Retrieve Client Secret]**, kopiera **[!UICONTROL client secret]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
+
+   * **[!UICONTROL Scope]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Scope]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
+
+   * **[!UICONTROL Org ID]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Organization ID]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
      ![aem assets and adobe stock](/help/assets/assets/adobe-ims-technical-account-configuration.png)
 1. Klicka på **[!UICONTROL Create]** så öppnas sidan **[!UICONTROL Adobe IMS Configurations]** och visar den [!DNL Adobe Stock]-integrering som du har skapat.
 
@@ -283,9 +286,9 @@ Utför följande steg för att lägga till molnkonfigurationen för att ansluta 
 1. Klicka på ![aem assets och adobe stock](/help/assets/assets/Hammer.svg), välj **[!UICONTROL Cloud Services]**, bläddra och välj **[!UICONTROL Adobe Stock]**.
    ![använder Adobe Stock med aem](/help/assets/assets/adding-cloud-config-to-adobe-stock.png)
 1. Klicka på **[!UICONTROL Create]** så visas flera fält på sidan **[!UICONTROL Adobe Stock Configuration]**. Följ de här instruktionerna för att ange information i dessa fält:
-   * **[!UICONTROL Title]**: Ange samma titelnamn som används på sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** när [du konfigurerar Adobe Stock IMS i AEM författarinstans](#set-up-adobe-stock-ims-configuration-in-aem-author-instance).
+   * **[!UICONTROL Title]**: Navigera till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** (se [steg 3](#set-up-adobe-stock-ims-configuration-in-aem-author-instance)), kopiera titeln och klistra in den här.
    * **[!UICONTROL Associated Adobe IMS Configuration]**: Välj den [!DNL Adobe Stock]-integrering som du skapade.
-   * **[!UICONTROL Locale]**: Välj **[!UICONTROL  English (United States)]**.
+   * **[!UICONTROL Locale]**: Välj **[!UICONTROL English (United States)]**.
 1. Klicka på **[!UICONTROL Save & Close]**.
    ![använder Adobe Stock med aem](/help/assets/assets/adobe-stock-config-page.png)
 
