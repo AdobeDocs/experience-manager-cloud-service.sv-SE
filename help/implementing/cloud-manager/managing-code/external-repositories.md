@@ -1,23 +1,23 @@
 ---
-title: Lägg till externa databaser i Cloud Manager - begränsad betaversion
+title: Lägg till externa databaser i Cloud Manager - begränsad Beta
 description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: cc307e8fbe71b65e25c7184b0b720708bcb6405f
+source-git-commit: 9807e59dedd0be0655a5cb73e61233b4a2ba7a4c
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1870'
 ht-degree: 0%
 
 ---
 
 # Lägga till externa databaser i Cloud Manager - begränsad betaversion {#external-repositories}
 
-Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
+Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager har stöd för integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
 
 >[!NOTE]
 >
->Den här funktionen är endast tillgänglig genom det tidiga adoptionsprogrammet. Mer information och information om hur du registrerar dig som tidig användare finns i [Bring Your Own Git - now with support for GitLab and Bitbucket](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md#gitlab-bitbucket).
+>Den här funktionen är endast tillgänglig via programmet för tidig implementering. Mer information och information om hur du registrerar dig som tidig användare finns i [Bring Your Own Git - now with support for GitLab and Bitbucket](/help/implementing/cloud-manager/release-notes/2024/2024-10-0.md#gitlab-bitbucket).
 
 ## Konfigurera en extern databas
 
@@ -52,7 +52,7 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
    | --- | --- |
    | **Databasnamn** | Obligatoriskt. Ett uttrycksfullt namn för din nya databas. |
    | **Databas-URL** | Obligatoriskt. Databasens URL.<br><br>Om du använder en GitHub-värdbaserad databas måste sökvägen sluta i `.git`.<br>Till exempel *`https://github.com/org-name/repo-name.git`* (URL-sökvägen är endast avsedd som illustration).<br><br>Om du använder en extern databas måste den använda följande URL-sökvägsformat:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> eller<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Och matcha Git-leverantören. |
-   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder:<ul><li>**GitHub** (GitHub Enterprise och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (både `bitbucket.org`- och Bitbucket-servern samt den självhanterade versionen av Bitbucket)</li></ul>Om databasens URL-sökväg ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald. |
+   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder:<ul><li>**** GitHub (GitHub Enterprise och den lokalt installerade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhostade versionen av GitLab) </li><li>**Bitbucket** (endast `bitbucket.org` (molnversion) stöds. Den lokalt installerade versionen av Bitbucket blev inaktuell från och med den 15 februari 2024.)</li></ul>Om sökvägen till lagringsplatsens URL ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är lagringsplatstypen redan förvald åt dig. |
    | **Beskrivning** | Valfritt. En detaljerad beskrivning av databasen. |
 
 1. Välj **Spara** för att lägga till databasen.
@@ -65,8 +65,8 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
    | Tokentyp | Beskrivning |
    | --- | --- |
    | **Använd befintlig åtkomsttoken** | Om du redan har angett en åtkomsttoken för databasen för din organisation och har tillgång till flera databaser kan du välja en befintlig token. Använd listrutan **Tokennamn** för att välja den token som du vill använda för databasen. I annat fall lägger du till en ny åtkomsttoken. |
-   | **Lägg till ny åtkomsttoken** | **Databastyp: GitHub Enterprise**<br><ul><li> Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitHub-dokumentationen](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Behörigheter som krävs för GitHub Enterprise Personal Access Token (PAT)<br>Dessa behörigheter säkerställer att Cloud Manager kan validera pull-begäranden, hantera implementeringsstatuskontroller och få tillgång till nödvändig repo-information.<br>När du genererar PAT i GitHub Enterprise måste du se till att det innehåller följande databasbehörigheter:<ul><li>Pull-begäran (läs och skriv)<li>Bekräfta status (läs och skriv)<li>Databasmetadata (skrivskyddade)</li></li></ul></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
-   | | **Databastyp: GitLab**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Behörigheter som krävs för GitLab Personal Access Token (PAT)<br>Dessa scope ger Cloud Manager åtkomst till databasdata och användarinformation som behövs för validering och webkrok-integrering.<br>När du genererar PAT i GitLab ska du kontrollera att det innehåller följande tokenomfång:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | **Lägg till ny åtkomsttoken** | **Typ av lagringsplats: GitHub Enterprise**<br><ul><li> **I textfältet Tokennamn** skriver du ett namn för den åtkomsttoken som du skapar.<li>Skapa en personlig åtkomsttoken genom att följa anvisningarna i GitHub-dokumentationen[](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Behörigheter som krävs för GitHub Enterprise Personal Access Token (PAT)<br>Dessa behörigheter säkerställer att Cloud Manager kan validera pull-begäranden, hantera incheckningsstatuskontroller och få tillgång till nödvändig lagringsplatsinformation.<br>När du genererar PAT i GitHub Enterprise måste du se till att det innehåller följande databasbehörigheter:<ul><li>Pull-begäran (läs och skriv)<li>Bekräfta status (läs och skriv)<li>Databasmetadata (skrivskyddade)</li></li></ul></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | | **Databastyp: GitLab**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Behörigheter som krävs för GitLab Personal Access Token (PAT)<br>Dessa scope ger Cloud Manager åtkomst till databasdata och användarinformation som behövs för validering och webkrok-integrering.<br>När du genererar PAT i GitLab ska du kontrollera att det innehåller följande tokenomfång:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>**I fältet Åtkomsttoken** klistrar du in den token som du just skapade. |
    | | **Databastyp: Bitbucket**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Behörigheter som krävs för Bitbucket Personal Access Token (PAT)<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webboks-händelser.<br>När du skapar applösenordet i Bitbucket måste det innehålla följande lösenordsbehörigheter:<ul><li>Databas (skrivskyddad)<li>Hämta begäranden (läsa och skriva)<li>Webhooks (läs och skriv)</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
 
    >[!NOTE]
@@ -132,10 +132,10 @@ För alla andra externa databaser som är inbyggda med en åtkomsttoken, som Git
 
 1. Gör följande i dialogrutan **Konfigurera webkrok**:
 
-   1. Klicka på ikonen ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) bredvid fältet **Webkroks-URL**.
-Klistra in URL:en i en vanlig textfil. Den kopierade URL:en krävs för din Git-leverantörs webkrok-inställningar.
-   1. Klicka på **Generera** bredvid fältet **Webkrockhemlighet** och sedan på ![Kopiera-ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs för din Git-leverantörs webkrok-inställningar.
+   1. Bredvid **fältet Webhook-URL** klickar du på ![Kopiera ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
+Klistra in URL:en i en vanlig textfil. Den kopierade URL:en krävs för Git-leverantörens Webhook-inställningar.
+   1. Bredvid **fältet Webhook Secret** token/nyckel klickar du på **Generera** och sedan på ![Kopiera ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
+Klistra in hemligheten i en oformaterad textfil. Den kopierade hemligheten krävs för Git-leverantörens Webhook-inställningar.
 1. Klicka på **Stäng**.
 1. Navigera till din Git-leverantörslösning (GitHub Enterprise, GitLab eller Bitbucket).
 
@@ -152,7 +152,7 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
 
    | Databas | Nödvändiga webbkrokhändelser |
    | --- | --- |
-   | GitHub Enterprise | Dessa händelser gör att Cloud Manager kan svara på GitHub-aktivitet, som pull-begäran-validering, push-baserade utlösare för pipelines eller Edge Delivery Services-kodsynkronisering.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrockshändelser:<ul><li>Dra in begäranden<li>Penslar<li>Skicka kommentarer</li></li></li></ul></ul></ul> |
+   | GitHub Företag | Dessa händelser gör att Cloud Manager kan svara på GitHub-aktivitet, som pull-begäran-validering, push-baserade utlösare för pipelines eller Edge Delivery Services-kodsynkronisering.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrockshändelser:<ul><li>Dra in begäranden<li>Penslar<li>Skicka kommentarer</li></li></li></ul></ul></ul> |
    | GitLab | Dessa webkrofshändelser gör att Cloud Manager kan utlösa rörledningar när kod skickas eller när en sammanfogningsbegäran skickas. De spårar även kommentarer som rör validering av pull-begäran (via anteckningshändelser).<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Push-händelser<li>Sammanfoga begäranhändelser<li>Anteckningshändelser</li></li></li></ul></ul></ul> |
    | Bitbucket | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Dragningsbegäran: Skapad<li>Pull-begäran: Uppdaterad<li>Dragningsbegäranden: Sammanfogade<li>Pull-begäran: Kommentar<li>Databas: Tryck</li></li></li></ul></ul></ul> |
 
@@ -202,13 +202,13 @@ Följande beteenden gäller:
 ## Felsöka webkrockproblem
 
 * Kontrollera att webboks-URL:en innehåller en giltig API-nyckel.
-* Kontrollera att webbhothändelser är korrekt konfigurerade i Git-leverantörsinställningarna.
-* Om PR-validering eller utlösare för pipeline inte fungerar kontrollerar du att webkrockhemligheten är uppdaterad både i Cloud Manager och i din Git-leverantör.
+* Kontrollera att webhook-händelser är korrekt konfigurerade i inställningarna för Git-leverantören.
+* Om PR-validering eller pipeline-utlösare inte fungerar kontrollerar du att Webhook-hemligheten är uppdaterad i både Cloud Manager och Git-leverantören.
 
 
 ## Begränsning
 
-* Externa databaser kan inte länkas till konfigurationspipelines.
+* Externa lagringsplatser kan inte länkas till konfigurationspipelines.
 
 
 <!-- THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY>
