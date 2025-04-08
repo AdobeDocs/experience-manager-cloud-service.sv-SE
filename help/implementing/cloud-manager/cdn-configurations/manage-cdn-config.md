@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 2ec16c91-0195-4732-a26d-ac223e10afb9
-source-git-commit: e3a8afaee6c3baeb593eb69a46648b0a8d2a069f
+source-git-commit: a764a9d1e7d9fcd0be6abf9e2fb409346dc0f549
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Innan en anpassad domän kan hantera trafik måste du slutföra DNS-konfiguratio
    | Alternativ | Steg |
    | --- | --- |
    | Konfigurera EN POST | Rekommenderas för rotdomäner som `example.com`<br><ol><li>Logga in på din DNS-tjänstleverantörs portal.<li>Gå till avsnittet DNS-poster.<li>Skapa en A-post för att peka på alla IP-adresser som visas.</li></ol> |
-   | Konfigurera CNAME | Rekommenderas för anpassade domäner som `www.example.com`<br><ol><li>Logga in på DMS-tjänsteleverantörens portal.<li>Gå till avsnittet DNS-poster.<li>Mappa [cdn.adobeaemcloud.com](https://cdn.adobeaemcloud.com/) (CNAME-post) i DNS-posten för DNS-tjänstleverantören (din anpassade domän). Denna mappning säkerställer att begäranden som tas emot på den anpassade domänen dirigeras om till Adobe CDN.</li></ol> |
+   | Konfigurera CNAME | Rekommenderas för anpassade domäner som `www.example.com`<br><ol><li>Logga in på DMS-tjänsteleverantörens portal.<li>Gå till avsnittet DNS-poster.<li>Mappa `cdn.adobeaemcloud.com` (CNAME-post) i DNS-posten för DNS-tjänstleverantören (din anpassade domän). Denna mappning säkerställer att begäranden som tas emot på den anpassade domänen dirigeras om till Adobe CDN.</li></ol> |
 
 1. Klicka på **OK** i dialogrutan **Gå live-beredskap** för att spara posten.
 
