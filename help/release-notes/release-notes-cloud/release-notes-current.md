@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 5a1c951813e026806aa3b5b23a912a48681f4505
+source-git-commit: bbf66195593032eb2ccf073ec78685c9d9726235
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
@@ -50,9 +50,18 @@ Have a look at the February 2025 Release Overview video for a summary of the fea
 
 **Stöd för långa formulär för videor som levereras med Dynamic Media med Open API**
 
-Dynamic Media med OpenAPI har nu stöd för videor med långa format. Videor med långa format har stöd för upp till 50 GB och 2 timmar.
+Dynamic Media med OpenAPI har nu stöd för videor med långa format. The long form videos can support up to 50GB and 2 hours.
 
-### Nya funktioner i vyn Assets {#new-features-assets-view}
+### Dynamic Media Classic {#dmc}
+
+<!-- CARRY OVER TO APRIL 2025 RELEASE NOTES -->
+
+Fliken Bandbredd i Dynamic Media Classic rapportkontrollpanel stöds inte längre från och med april 2025.
+
+Se [Bandbredd och lagring, rapporttyper](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/setup/administration-setup#types-of-reports).
+
+
+## Nya funktioner i vyn Assets {#new-features-assets-view}
 
 
 **Stöd för rottaggar**
@@ -75,15 +84,15 @@ Med adaptiv Forms kan du använda [HTML e-postmallar](/help/forms/html-email-tem
 
 #### Förbättrat molnlagringsstöd: Direktöverföring av PDF till Azure Blob Storage
 
-AEM Forms API:er för dokumentgenerering gör nu att du kan [överföra genererade PDF-dokument](/help/forms/early-access-ea-features.md#doc-generation-api) direkt till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
+Med API:er för AEM Forms-dokumentgenerering kan du nu [överföra genererade PDF-dokument](/help/forms/early-access-ea-features.md#doc-generation-api) direkt till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
 ### Stöd för Java 21 {#java21}
 
-Som nämndes i versionsinformationen för januari kan du nu skapa kod med Java 21, som innehåller nya funktioner (t.ex. mönstermatchning för switch-satser, fasta klasser) och prestandaförbättringar. Java 17-byggen stöds också nyligen. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i artikeln [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support).
+As of the January release, you can build code with Java 21 and Java 17. You gain access to new features like pattern matching, sealed classes, and various performance improvements. For configuration steps, including updating your Maven project and library versions, see the [Build Environment](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support) article.
 
-Den mer prestandaanpassade Java 21 **runtime** distribueras automatiskt när en Java 17- eller 21-version upptäcks. Vi rekommenderar dock att du går med i Java 21-miljön för miljöer som byggts med Java 11 genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com). Läs mer om [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
+The more performant Java 21 **runtime** is automatically deployed when a Java 17 or 21 build is detected. Adobe rekommenderar dock att du går med i Java 21-miljön för miljöer som byggts med Java 11 genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com). Läs mer om [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
 
 >[!IMPORTANT]
 >
@@ -102,6 +111,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.a. kortare svarstider. Adobe vill gärna veta om du tycker att den här tekniken är användbar för AEM Publish Delivery och Edge Delivery Services. Dessutom kan du tala om för oss vad du tänkt dig när du använder den som indata i produktfärdplanen.
 
 Några möjliga användningsexempel:
+
 * Autentisering med en IdP för att ge åtkomst till innehåll
 * Återge dynamiskt (personaliserat, lokaliserat) innehåll baserat på geopositionering, enhetstyp, användarattribut osv.
 * Avancerad bildbehandling
@@ -115,7 +125,7 @@ Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@a
 
 Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
 
-Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
+Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
 
 De API-slutpunkter som anges nedan är tillgängliga som en del av ett program för tidig användning. Om du är intresserad kan du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av hur du tänker använda dem.
 
@@ -132,7 +142,10 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-release/2410-0-release/whats-new-2024-10-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2025-releases/2502-release/whats-new-2025-02-0).
+
+<!-- THE FOLLOWING URL WAS USED ABOVE BUT IT WAS 404. IT WAS REPLACED WITH THE URL ABOVE 
+(https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-release/2410-0-release/whats-new-2024-10-0). -->
 
 ## Cloud Manager {#cloud-manager}
 
