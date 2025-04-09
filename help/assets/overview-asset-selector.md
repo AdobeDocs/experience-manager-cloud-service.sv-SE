@@ -3,9 +3,9 @@ title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud 
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: 62b0b857-068f-45b7-9018-9c59fde01dc3
-source-git-commit: 97a432270c0063d16f2144d76beb437f7af2895a
+source-git-commit: f78d0242a3cf681ab827c785b6f02565887f392d
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1409'
 ht-degree: 0%
 
 ---
@@ -83,8 +83,9 @@ Du måste se till att följande kommunikationsmetoder används:
 
 * Värdprogrammet körs på HTTPS.
 * Du kan inte köra programmet på `localhost`. Om du vill integrera resursväljaren på den lokala datorn måste du skapa en anpassad domän, till exempel `[https://<your_campany>.localhost.com:<port_number>]`, och lägga till den anpassade domänen i `redirectUrl list`.
-* Du kan konfigurera och lägga till `ADOBE_PROVIDED_CLIENT_ID` i AEM Cloud-tjänstmiljövariabeln med respektive `imsClientId`.
-  ![Klient-ID för IMS-klient för resursväljare](assets/asset-selector-ims-client-id-env.png)
+* Du kan konfigurera och lägga till clientID i AEM Cloud-tjänstmiljövariabeln med respektive `imsClientId`.
+<!--* You can configure and add `ADOBE_PROVIDED_CLIENT_ID` into the AEM Cloud Service environment variable with the respective `imsClientId`.
+![Asset Selector IMS Client id environment](assets/asset-selector-ims-client-id-env.png)-->
 * Listan med IMS-scope måste definieras i miljökonfigurationen.
 * Programmets URL finns i IMS-klientens tillåtelselista i omdirigerings-URL:er.
 * Inloggningsflödet för IMS konfigureras och återges med hjälp av en popup-meny i webbläsaren. Därför bör popup-fönster vara aktiverade eller tillåtna i målwebbläsaren.
