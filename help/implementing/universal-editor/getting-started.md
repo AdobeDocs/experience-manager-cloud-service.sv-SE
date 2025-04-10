@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 07a8ad6083dbb7cf69148773d266b33e8cf32a38
+source-git-commit: 722d9a14ccac2f9f1c6dd32455935bafc4897a68
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -124,9 +124,7 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 
 Om du har ett befintligt AEM-projekt med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) öppnas sidorna automatiskt med sidredigeraren när innehållsförfattaren redigerar sidor. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna för `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
 
-1. Om du vill använda den här konfigurationsfunktionen kontaktar du Adobe kundtjänst för att aktivera åtkomst till den universella redigerings-URL-tjänsten för ditt program.
-
-1. När kundtjänst har aktiverat åtkomsten till Universell redigerings-URL-tjänsten öppnar du Configuration Manager.
+1. Öppna Configuration Manager.
 
    `http://<host>:<port>/system/console/configMgr`
 
