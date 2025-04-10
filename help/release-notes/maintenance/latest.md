@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 96084c84c45af54b1f152e22b8331f85dc6b583f
+source-git-commit: 3fb9e633da6269b5b9847a825951746ddeb532f9
 workflow-type: tm+mt
-source-wordcount: '1501'
+source-wordcount: '1589'
 ht-degree: 0%
 
 ---
@@ -67,6 +67,10 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 * SITES-24907: Edge Delivery with Universal Editor: Support publishing Assets to multiple sites for MSM use case (tidig åtkomst).
 * SITES-27956: Edge Delivery med Universal Editor: Förbättra publiceringsflödet (tidig åtkomst).
 * SITES-27956: Edge Delivery med Universal Editor: Förbättra felhanteringen vid publicering till Edge Delivery Services (tidig åtkomst).
+* SITES-29602: CIF: Borttagning av Guava-användning i core-cif-components-core.
+* SITES-25785: CIF: Lägger till val av produktvariant för CIF produktreferenstyp.
+* SITES-26392: CIF[Experimentell]: JSON+LD i CIF Core Components i PDP:er.
+* SITES-21278: CIF[Experimentell]: CIF möjlighet att rensa cache.
 
 ### Åtgärdade problem {#fixed-issues-20133}
 
@@ -111,10 +115,13 @@ Funktionsaktiveringen i 2025.4.0 kommer att innehålla alla funktioner som finns
 * SITES-29363: Knappen Återställ live-kopia fungerar inte för kapslad innehållshierarki för live-kopia.
 * SITES-29369: Assets Event Issue in AIO | Felaktigt utlösa publicerade/opublicerade händelser för sida.
 * SITES-29972: Åtgärder för att ta bort och byta namn resulterar ibland i felaktiga arbetsflödeskommentarer.
+* SITES-24631: CIF: Search issue on product field.
+* SITES-24902: CIF: Produkt-URL-formatet fungerar inte som förväntat för #variant_sku.
+* SITES-29191: CIF: Det går inte att lägga till fler än 20 SKU:er i produktlistkomponenten.
 
 ### Kända fel {#known-issues-20133}
 
-Ingen.
+* SITES-30727: Det går eventuellt inte att dra och släppa underkomponenter i AEM Editor.
 
 ### Föråldrade funktioner och API:er {#deprecated-20133}
 
