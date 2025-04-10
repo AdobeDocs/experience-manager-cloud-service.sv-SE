@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.4.0 i AEM as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 75afe77aa52c4c308dc1a611e4ce544a9c9c3da2
+source-git-commit: 6dc92a0f824ca9bc3726b48581ace232302691e5
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 0%
@@ -73,7 +73,6 @@ Om du är intresserad av att testa den nya funktionen och dela med dig av dina s
 * Den roll som bäst passar din profil: Innehållsförfattare, Utvecklare, Affärsägare, Administratör eller Annan (ange en beskrivning).
 * Din primära AEM-åtkomstyta: AEM Sites, AEM Assets, AEM Forms, Cloud Manager eller annan (ange en beskrivning).
 
-
 ## Felkorrigeringar
 
 * **Problem med certifikat som saknar fält för eget namn (CN)**
@@ -90,3 +89,4 @@ Om du är intresserad av att testa den nya funktionen och dela med dig av dina s
 
 
 <!-- ## Known issues {#known-issues} -->
+
