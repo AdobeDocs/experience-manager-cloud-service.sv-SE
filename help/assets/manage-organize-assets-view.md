@@ -5,9 +5,9 @@ role: User, Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: b7f8b4886372e2210ca8899260b3eb11b75ee798
 workflow-type: tm+mt
-source-wordcount: '1622'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -135,17 +135,37 @@ TBD: query for engineering: How many versions are maintained. What happens when 
 
   ![Alternativ för att överföra en ny version av en resurs från versionshistoriken](assets/view-asset-versions2.png)
 
-### Visa versioner av en resurs {#view-versions}
+### Visa och jämföra versioner av en resurs {#view-and-compare-versions}
 
-När du överför en duplicerad kopia eller en modifierad kopia av en resurs kan du skapa dess versioner. Med versionshantering kan du granska historiska resurser och återgå till en tidigare version om det behövs.
+Överför en kopia eller en ändrad kopia av en resurs för att skapa dess versioner. Med versionshantering kan du spåra ändringar i en resurs över tid och återställa en tidigare version om det behövs.
 
-Om du vill visa versioner öppnar du förhandsgranskningen av en resurs och klickar på **[!UICONTROL Versions]** ![Versionsikonen](assets/do-not-localize/versions-clock-icon.png) i den högra sidofältet. Om du vill förhandsgranska en viss version markerar du den. Klicka på **[!UICONTROL Make Latest]** om du vill återgå till den.
+Så här visar och jämför du versioner:
 
-Du kan också skapa versioner från tidslinjen för versionerna. Välj den senaste versionen, klicka på **[!UICONTROL New Version]** och överför en ny kopia av resursen från det lokala filsystemet.
+1. Navigera till resursens informationssida.
+1. Klicka på ![Versioner](/help/assets/assets/Clock.svg) i den högra rutan för att visa panelen **[!UICONTROL Versions]**. Miniatyrbilderna för den ursprungliga resursen och dess överförda versioner visas på den här panelen.
+1. Välj en version på panelen om du vill förhandsgranska den i förhandsvisningsområdet.
+1. Välj en annan version än den senaste och klicka på **[!UICONTROL Make Latest]** för att ange den som den senaste versionen.
+1. Dra skjutreglaget i förhandsvisningen åt vänster och höger för att snabbt se den valda versionen av en bild och dess senaste version i en enda förhandsvisning. På så sätt kan du snabbt jämföra den valda versionen av bilden med den senaste versionen.
 
-![Visa versioner av en resurs](assets/view-asset-versions1.png)
+   >[!NOTE]
+   >
+   > Versionsjämförelse är bara aktiverat för bildresurser.
 
-*Figur: Visa versioner av en resurs, återgå till en tidigare version eller överför en annan ny version.*
+   ![jämför versioner av resurs](/help/assets/assets/version-compare2.png)
+
+<!-- old content
+To view versions, open an asset's preview and click **[!UICONTROL Versions]** ![Versions icon](assets/do-not-localize/versions-clock-icon.png) from the right sidebar. To preview a specific version, select it. To revert to it, click **[!UICONTROL Make Latest]**. 
+-->
+
+Välj den senaste versionen och klicka på **[!UICONTROL New Version]** för att överföra en ny kopia av resursen från det lokala filsystemet och skapa en resursversion.
+
+<!-- old content
+You can also create versions from the versions timeline. Select the latest version, click **[!UICONTROL New Version]**, and upload a new copy of the asset from your local file system.
+
+![View versions of an asset](assets/view-asset-versions1.png)
+
+*Figure: View versions of an asset, revert to a previous version, or upload another new version.* 
+-->
 
 ## Hantera resursstatus {#manage-asset-status}
 

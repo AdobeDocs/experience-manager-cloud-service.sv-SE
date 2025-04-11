@@ -4,7 +4,7 @@ description: Förstå användargränssnittet för och navigering i  [!DNL Assets
 role: User
 exl-id: 1e71ea7d-fee7-4ed0-bb80-d537b57fc823
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: f4d0364439d704d4f5611b5fa2f46428048005b0
 workflow-type: tm+mt
 source-wordcount: '1009'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Om du vill förhandsgranska en resurs markerar du den och klickar på [!UICONTRO
 
 ![Förhandsgranska en resurs](/help/assets/assets/navigate-file-folder-dm.png)
 
-**A**: Återgå till den aktuella mappen eller det aktuella sökresultatet i databasen **B**: Namn och format för filen som du förhandsgranskar **C**: Tilldela uppgifter **D**: Avancerade metadata **E**: Nyckelord och smarta taggar **F**: Kommentera och kommentera **G** : Visa uppgifter som rör den valda resursen **H**: Visa och hantera versioner **I**: Visa återgivningar av bilden **J**: Redigera bild **K**: Visa dynamiska medieåtergivningar som Smart Crop och Dynamic Media med OpenAPI-funktionsåtergivningar. **L**: Grundläggande metadata **M**: Avancerade metadata **N**: Nyckelord och smarta taggar **O**: Gå till föregående eller nästa resurs i den aktuella mappen utan att gå tillbaka till mappen **P**: Förhandsgranska närmare. Zooma, helskärmsläge och andra alternativ.
+**A**: Återgå till den aktuella mappen eller det aktuella sökresultatet i databasen **B**: Namn och format för filen som du förhandsgranskar **C**: Tilldela uppgifter **D**: Avancerade metadata **E**: Nyckelord och smarta taggar **F**: Kommentera och kommentera **G** : Visa uppgifter om den valda resursen **H**: [Visa och hantera versioner](/help/assets/manage-organize-assets-view.md#versions-of-assets) **I**: Visa återgivningar av bilden **J**: Redigera bild **K**: Visa dynamiska medierenderingar som Smart Crop och Dynamic Media med OpenMedia API-funktionsåtergivningar. **L**: Grundläggande metadata **M**: Avancerade metadata **N**: Nyckelord och smarta taggar **O**: Gå till föregående eller nästa resurs i den aktuella mappen utan att gå tillbaka till mappen **P**: Förhandsgranska närmare. Zooma, helskärmsläge och andra alternativ.
 
 Du kan också förhandsgranska videoklipp.
 
