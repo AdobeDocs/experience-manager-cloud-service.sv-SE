@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 428c722ae65342a52339effe7c97fd6de10a4f58
+source-git-commit: 3323da83584c4511b15145c0106031df4597891c
 workflow-type: tm+mt
-source-wordcount: '1834'
+source-wordcount: '1830'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ För ett nytt program skapas ett New Relic One-underkonto åt dig. Du måste doc
 
 1. [Kör en pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines) för samma miljö för att slutföra aktiveringen av underkontot.
 
-När underkontot inaktiveras finns det inget databehov.
+När underkontot är inaktiverat sker ingen datainmatning.
 
 ## Hantera New Relic One-användare {#manage-users}
 
@@ -93,23 +93,23 @@ När användarna har definierats skickar New Relic ett bekräftelsemeddelande vi
 
 ## Aktivera ditt New Relic One-användarkonto {#activate-user-account}
 
-När ett New Relic One-användarkonto har skapats, enligt beskrivningen i förhandsvisningsavsnittet [Hantera New Relic One-användare](#manage-users), skickar New Relic ett bekräftelsemeddelande via e-post till den angivna adressen. För att kunna använda dessa konton måste användarna först aktivera sina konton hos New Relic genom att återställa sina lösenord.
+När ett New Relic One-användarkonto har skapats enligt beskrivningen i förhandsgranskningsavsnittet [Hantera New Relic One-användare](#manage-users), skickar New Relic ett bekräftelsemail till den angivna adressen till dessa användare. För att använda dessa konton måste användare först aktivera sina konton med New Relic genom att återställa sina lösenord.
 
 **Så här aktiverar du ditt New Relic One-användarkonto:**
 
 1. Klicka på länken i mejlet från New Relic.
 
-1. Klicka på **Har du glömt ditt lösenord på inloggningssidan för New Relic?**
+1. På inloggningssidan för New Relic klickar du på **Har du glömt ditt lösenord?**
 
-   ![New Relic-inloggning](/help/implementing/cloud-manager/assets/new-relic/newrelic-1.png)
+   ![Inloggning till New Relic](/help/implementing/cloud-manager/assets/new-relic/newrelic-1.png)
 
-1. Ange den e-postadress där du fick bekräftelsemeddelandet och välj **Skicka min återställningslänk**.
+1. Ange e-postadressen där du fick bekräftelsemeddelandet och välj **Skicka min återställningslänk**.
 
    ![Ange e-postadress](/help/implementing/cloud-manager/assets/new-relic/newrelic-2.png)
 
 1. New Relic skickar ett e-postmeddelande till dig med en länk för att bekräfta kontot.
 
-Om du inte får något bekräftelsemeddelande från New Relic kan du läsa [felsökningsavsnittet](#troubshooting).
+Om du inte får en bekräftelse via e-post från New Relic, se felsökningsavsnittet[](#troubshooting).
 
 ## Använd New Relic One {#accessing-new-relic}
 
@@ -161,7 +161,7 @@ Om du har lagts till som en New Relic One-användare, enligt beskrivningen i [Ha
 
 1. New Relic skickar ett e-postmeddelande till dig med en länk för att bekräfta kontot.
 
-Om du har slutfört registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden i e-post eller lösenord loggar du en supportanmälan via [Admin Console](https://adminconsole.adobe.com/).
+Om du slutför registreringsprocessen och inte kan logga in på ditt konto på grund av felmeddelanden via e-post eller lösenord kan du logga ett supportärende via administratörskonsolen[](https://adminconsole.adobe.com/).
 
 Om du inte får något e-postmeddelande från New Relic gör du följande:
 
@@ -174,8 +174,8 @@ Om du inte får något e-postmeddelande från New Relic gör du följande:
 Följande begränsningar gäller när du lägger till användare i New Relic One:
 
 * Högst 30 användare kan läggas till. Om det maximala antalet användare har uppnåtts tar du bort användare för att kunna lägga till nya användare.
-* Användare som läggs till i New Relic har typen **Begränsat**. Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/introduction-managing-users/#:~:text=In%20general%2C%20Admins%20take%20responsibility,Restricted%20Users%20can%20use%20them.&amp;text=One%20or%20more%20individuals%20vem,change).
-* AEM as a Cloud Service har bara lösningen **New Relic One APM** och har inte stöd för infrastrukturövervakning, varningar, loggning eller API-integreringar.
+* Användare som läggs till i New Relic är av typen **Basic**. Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/user-type/).
+* AEM as a Cloud Service har bara New Relic One APM-lösning och har inte stöd för varningar, loggning eller API-integreringar.
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för
 
 +++**Vad övervakar Adobe med New Relic One?**
 
-Adobe övervakar AEM as a Cloud Service författare, publicerar och förhandsgranskar (där de är tillgängliga) tjänster via New Relic One Java-plugin. Adobe möjliggör anpassad New Relic One APM-telemetri och övervakning i AEM as a Cloud Service-miljöer som inte är i produktion och produktion.
+Adobe övervakar AEM as a Cloud Service tjänster för att skapa, publicera och förhandsgranska (där det är tillgängligt) via New Relic Ones Java-plugin. Adobe möjliggör anpassad New Relic One APM-telemetri och övervakning i AEM as a Cloud Service-miljöer som inte är i produktion och produktion.
 
 Ditt New Relic One-konto är kopplat till ett primärt Adobe-underhållet konto och har flera program som rapporterar till det; tre per AEM as a Cloud Service-miljö.
 
@@ -200,8 +200,8 @@ Ditt New Relic One-konto är kopplat till ett primärt Adobe-underhållet konto 
 Obs!
 
 * Varje program använder en licensnyckel.
-* AEM as a Cloud Service-miljöer rapporterar till endast ett New Relic One-konto.
-* Full övervakning av mätvärden och händelser för båda New Relic One bevaras i tre månader.
+* AEM as a Cloud Service miljöer rapporterar endast till ett New Relic One-konto.
+* Fullständiga övervakningsmått och händelser för både New Relic One behålls i tre månader.
 
 +++
 
@@ -210,14 +210,14 @@ Obs!
 Adobe ger åtkomst till New Relic One endast i observationssyfte och använder det inte för kundvarningar eller interna varningar. Meddelanden om eventuella incidenter skickas med [användarmeddelandeprofiler](/help/journey-onboarding/notification-profiles.md).
 +++
 
-+++**Vem har åtkomst till New Relic One molntjänstdata?**
++++**Vem kan komma åt data från molntjänsten New Relic One?**
 
-Upp till 30 medlemmar i ditt team har full läsbehörighet. Läsåtkomst innefattar alla APM-värden som samlats in av New Relic One Agent.
+Fullständig läsbehörighet beviljas för upp till 30 medlemmar i ditt team. Läsåtkomst inkluderar alla APM-mätvärden som samlas in av New Relic One-agenten.
 +++
 
-+++**Stöds anpassad enkel inloggning?**
++++**Stöds anpassad SSO-konfiguration?**
 
-Anpassad SSO-konfiguration stöds inte för det New Relic One-konto som tillhandahålls av Adobe.
+Anpassad SSO-konfiguration stöds inte för New Relic One-kontot som tillhandahålls av Adobe.
 +++
 
 +++**Vad händer om jag redan har en lokal New Relic-prenumeration?**
