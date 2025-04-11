@@ -4,7 +4,7 @@ description: Lär dig hur du skapar dynamiska mediamallar med hjälp av en WYSIW
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 362bbcf872a37781dfa849b703425f49c30660ac
+source-git-commit: 7bb15e0b8aa24f9737f70f86c78dc09be1ea4750
 workflow-type: tm+mt
 source-wordcount: '2930'
 ht-degree: 0%
@@ -314,7 +314,7 @@ Omvandla en bild eller ett textlager i din Dynamic Media-mall till en hyperlänk
 1. Markera mallagret och [navigera till egenskapspanelen](#edit-or-delete-a-layer) för att lägga till en CTA-länk till det.
 1. Välj **[!UICONTROL Add CTA]** på egenskapspanelen, ange mål-URL:en i fältet **[!UICONTROL URL]** och klicka på **[!UICONTROL Save]**.
 
-![lägg till CTA](/help/assets/assets/add-cta.png)
+   ![lägg till CTA](/help/assets/assets/add-cta.png)
 
 1. Klicka på **[!UICONTROL Preview]** om du vill förhandsgranska mallen och se de definierade parametrarna.
 1. Klicka på **[!UICONTROL Publish]** och välj **[!UICONTROL Yes]** för att publicera mallen, om den inte har publicerats tidigare.
@@ -327,7 +327,7 @@ Omvandla en bild eller ett textlager i din Dynamic Media-mall till en hyperlänk
 
    ```json
     <div class="adobe-dynamicmedia-template-embed-container">
-    <img id="adobe-dynamicmedia-template-image" src="http://s7ap1.scene7.com/is/image/abcd/dm-template-cta-v2?wid=800&hei=300&qlt=100&fit=constrain&cache=off" alt="adobe dynamicmedia template" usemap="#adobe-dynamicmedia-template-map" width="800" height="300">
+    <img id="<Image ID>>" src="<Image Source>>" alt="adobe dynamicmedia template" usemap="#adobe-dynamicmedia-template-map" width="800" height="300">
     <map name="adobe-dynamicmedia-template-map">
     <area shape="rect" coords="417,-60,817,340" href="https://business.adobe.com/products.html" alt="Layer with CTA" title="https://business.adobe.com/products.html" target="_blank">
     <area shape="rect" coords="6,206.57,129,231.43" href="https://business.adobe.com/products.html" alt="Layer with CTA" title="https://business.adobe.com/products.html" target="_blank">
