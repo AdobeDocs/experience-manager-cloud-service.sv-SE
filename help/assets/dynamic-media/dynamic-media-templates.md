@@ -4,9 +4,9 @@ description: Lär dig hur du skapar dynamiska mediamallar med hjälp av en WYSIW
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
+source-git-commit: a5626c531c4a21b9d88272e2c866721ee7be9aed
 workflow-type: tm+mt
-source-wordcount: '2729'
+source-wordcount: '2930'
 ht-degree: 0%
 
 ---
@@ -305,6 +305,41 @@ Redigera mallen genom att följa de här stegen:
 2. Navigera till mallplatsen.
 3. Markera mallen.
 4. Klicka på **[!UICONTROL Edit Template]**. Mallens arbetsyta visar mallen och listan över alla dess lager på panelen Lager. Börja redigera mallen efter dina behov.
+
+## Lägg till länken Anrop till åtgärd i mallagret{#add-CTA-in-dynamic-media-templates}
+
+Omvandla en bild eller ett textlager i din Dynamic Media-mall till en hyperlänk genom att lägga till en CTA-länk som dirigerar användarna till en målsida. Så här lägger du till en CTA-länk till ett lager:
+
+1. Navigera till mallplatsen, markera mallen och klicka på ![redigera](/help/assets/assets/edit-pen-icon.svg) **[!UICONTROL Edit Template]**. Mallen visas på arbetsytan.
+1. Markera mallagret och [navigera till egenskapspanelen](#edit-or-delete-a-layer) för att lägga till en CTA-länk till det.
+1. Välj **[!UICONTROL Add CTA]** på egenskapspanelen, ange mål-URL:en i fältet **[!UICONTROL URL]** och klicka på **[!UICONTROL Save]**.
+   ![lägg till CTA](/help/assets/assets/add-cta.png){width="300" align="center"}
+1. Klicka på **[!UICONTROL Preview]** om du vill förhandsgranska mallen och se de definierade parametrarna.
+1. Klicka på **[!UICONTROL Publish]** och välj **[!UICONTROL Yes]** för att publicera mallen, om den inte har publicerats tidigare.
+1. Navigera till mappen där mallen sparas, markera den här mallen och klicka på ![informationssidan](/help/assets/assets/details-page-icon.svg) **[!UICONTROL Details]**.
+1. Klicka på **[!UICONTROL Copy Options]** och välj **[!UICONTROL Copy Embed Code]**.
+
+   ![kopiera inbäddningskod](/help/assets/assets/copy-options1.png){width="300" align="center"}
+
+   Här följer ett exempel på den inbäddade koden:
+
+   ```
+    <div class="adobe-dynamicmedia-template-embed-container">
+    <img id="adobe-dynamicmedia-template-image" src="http://s7ap1.scene7.com/is/image/abcd/dm-template-cta-v2?wid=800&hei=300&qlt=100&fit=constrain&cache=off" alt="adobe dynamicmedia template" usemap="#adobe-dynamicmedia-template-map" width="800" height="300">
+    <map name="adobe-dynamicmedia-template-map">
+    <area shape="rect" coords="417,-60,817,340" href="https://business.adobe.com/products.html" alt="Layer with CTA" title="https://business.adobe.com/products.html" target="_blank">
+    <area shape="rect" coords="6,206.57,129,231.43" href="https://business.adobe.com/products.html" alt="Layer with CTA" title="https://business.adobe.com/products.html" target="_blank">
+    </map>
+    </div>
+   ```
+
+1. Lägg till den kopierade inbäddningskoden i webbplatsens HTML-fil och kör den i webbläsaren för att visa mallen.
+
+Klicka på CTA-elementet i mallen för att navigera till målsidan.
+
+I den här stegvideon lär du dig hur du lägger till en CTA-länk i ett mallager.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3457577)
 
 ## Viktiga punkter att notera {#important-points-to-note}
 
