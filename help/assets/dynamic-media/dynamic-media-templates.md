@@ -4,7 +4,7 @@ description: Lär dig hur du skapar dynamiska mediamallar med hjälp av en WYSIW
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 3d0e3430b886cefb9b18188641483d23ce66d442
+source-git-commit: 362bbcf872a37781dfa849b703425f49c30660ac
 workflow-type: tm+mt
 source-wordcount: '2930'
 ht-degree: 0%
@@ -313,13 +313,15 @@ Omvandla en bild eller ett textlager i din Dynamic Media-mall till en hyperlänk
 1. Navigera till mallplatsen, markera mallen och klicka på ![redigera](/help/assets/assets/edit-pen-icon.svg) **[!UICONTROL Edit Template]**. Mallen visas på arbetsytan.
 1. Markera mallagret och [navigera till egenskapspanelen](#edit-or-delete-a-layer) för att lägga till en CTA-länk till det.
 1. Välj **[!UICONTROL Add CTA]** på egenskapspanelen, ange mål-URL:en i fältet **[!UICONTROL URL]** och klicka på **[!UICONTROL Save]**.
-   ![lägg till CTA](/help/assets/assets/add-cta.png){width="300" align="center"}
+
+![lägg till CTA](/help/assets/assets/add-cta.png)
+
 1. Klicka på **[!UICONTROL Preview]** om du vill förhandsgranska mallen och se de definierade parametrarna.
 1. Klicka på **[!UICONTROL Publish]** och välj **[!UICONTROL Yes]** för att publicera mallen, om den inte har publicerats tidigare.
 1. Navigera till mappen där mallen sparas, markera den här mallen och klicka på ![informationssidan](/help/assets/assets/details-page-icon.svg) **[!UICONTROL Details]**.
 1. Klicka på **[!UICONTROL Copy Options]** och välj **[!UICONTROL Copy Embed Code]**.
 
-   ![kopiera inbäddningskod](/help/assets/assets/copy-options1.png){width="300" align="center"}
+   ![kopiera inbäddningskod](/help/assets/assets/copy-options1.png)
 
    Här följer ett exempel på den inbäddade koden:
 
