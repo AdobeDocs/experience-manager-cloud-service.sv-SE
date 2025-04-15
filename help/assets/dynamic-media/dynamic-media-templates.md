@@ -4,9 +4,9 @@ description: Lär dig hur du skapar dynamiska mediamallar med hjälp av en WYSIW
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 808ee16dbda140fe5bf64ecae249712b17f957db
+source-git-commit: c9b007626fc9ed8518ae6be054fc147be88c6a3c
 workflow-type: tm+mt
-source-wordcount: '2951'
+source-wordcount: '2952'
 ht-degree: 0%
 
 ---
@@ -283,7 +283,7 @@ Så här kopierar du URL:en för den publicerade mallen som visas i förhandsgra
 1. Använd den här URL:en för snabb försäljning av produkter och tjänster. Du kan dela den här URL:en med dina kunder eller integrera den på din webbplats eller i ett tredjepartsprogram för att visa banderollen och göra uppdateringar i realtid för den så att den speglar de pågående erbjudandena.
 
 Lär dig skapa en mall för dynamiska media steg för steg i den här videon.
->[!VIDEO](https://video.tv.adobe.com/v/3457616)
+>[!VIDEO](https://video.tv.adobe.com/v/3443281)
 
 ## Uppdatera mallen i realtid från URL:en{#update-the-template-from-the-url}
 
@@ -307,7 +307,7 @@ Redigera mallen genom att följa de här stegen:
 3. Markera mallen.
 4. Klicka på **[!UICONTROL Edit Template]**. Mallens arbetsyta visar mallen och listan över alla dess lager på panelen Lager. Börja redigera mallen efter dina behov.
 
-## Lägg till länken Anrop till åtgärd i mallagret{#add-CTA-in-dynamic-media-templates}
+## Lägg till länken Call to Action (CTA) i mallagret{#add-CTA-in-dynamic-media-templates}
 
 Omvandla en bild eller ett textlager i din Dynamic Media-mall till en hyperlänk genom att lägga till en CTA-länk som dirigerar användarna till en målsida. Så här lägger du till en CTA-länk till ett lager:
 
@@ -342,7 +342,7 @@ Klicka på CTA-elementet i mallen för att navigera till målsidan.
 
 I den här stegvideon lär du dig hur du lägger till en CTA-länk i ett mallager.
 
->[!VIDEO](https://video.tv.adobe.com/v/3457577)
+>[!VIDEO](https://video.tv.adobe.com/v/3457616)
 
 ## Viktiga punkter att notera {#important-points-to-note}
 
