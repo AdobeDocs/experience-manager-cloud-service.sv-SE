@@ -4,9 +4,9 @@ description: Lär dig hur du skapar dynamiska mediamallar med hjälp av en WYSIW
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 7bb15e0b8aa24f9737f70f86c78dc09be1ea4750
+source-git-commit: 808ee16dbda140fe5bf64ecae249712b17f957db
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2951'
 ht-degree: 0%
 
 ---
@@ -87,6 +87,7 @@ Om du vill skapa en mall för dynamiska media måste du ha:
 
 Så här skapar du en DM-mall:
 
+1. Navigera till din [!DNL AEM Assets]-hemsida och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) för att använda dem för att skapa mallen.
 1. [Skapa en tom arbetsyta](#create-a-canvas)
 1. [Lägga till bilder på arbetsytan](#add-images-to-the-canvas)
 1. [Lägga till textlager på arbetsytan](#add-text-to-the-canvas)
@@ -282,7 +283,7 @@ Så här kopierar du URL:en för den publicerade mallen som visas i förhandsgra
 1. Använd den här URL:en för snabb försäljning av produkter och tjänster. Du kan dela den här URL:en med dina kunder eller integrera den på din webbplats eller i ett tredjepartsprogram för att visa banderollen och göra uppdateringar i realtid för den så att den speglar de pågående erbjudandena.
 
 Lär dig skapa en mall för dynamiska media steg för steg i den här videon.
->[!VIDEO](https://video.tv.adobe.com/v/3443281)
+>[!VIDEO](https://video.tv.adobe.com/v/3457616)
 
 ## Uppdatera mallen i realtid från URL:en{#update-the-template-from-the-url}
 
