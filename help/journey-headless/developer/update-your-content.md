@@ -5,9 +5,9 @@ exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
 solution: Experience Manager
 feature: Headless, Content Fragments, GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: d8e4fdc4f79e40a43a6845ab083dc231444b9c99
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 
 Adobe Experience Manager (AEM) as a Cloud Service erbjuder flera API:er för både leverans av strukturerat innehåll från Content Fragments och Content Fragment Management. Mer information om specifika API:er finns på de enskilda sidorna.
 
-* AEM REST OpenAPI for Content Fragment Delivery
+* AEM Content Fragment Delivery with OpenAPI
    * Detta API skapar JSON-svar för att leverera strukturerat innehåll från innehållsfragment i AEM.
    * En bana till ett innehållsfragment används som slutpunkt.
    * Detta API är REST-baserat.
@@ -67,7 +67,7 @@ Du bör fortsätta din resa utan AEM genom att nästa gång granska dokumentet [
 
 * [Adobe Experience Manager as a Cloud Service API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/)
 * [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md)
-* [AEM REST OpenAPI for Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md)
+* [AEM Content Fragment Delivery with OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)
 * [AEM GraphQL API for Content Fragment delivery](/help/headless/graphql-api/content-fragments.md)
 * [Content Fragments och Content Fragment Models OpenAPIs](/help/headless/content-fragment-openapis.md)
 * [Stöd för innehållsfragment i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)

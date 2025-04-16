@@ -1,21 +1,21 @@
 ---
-title: AEM-API:er för strukturerad innehållsleverans och hantering av innehållsfragment
+title: AEM API:er för strukturerad innehållsleverans och hantering av innehållsfragment
 description: Läs mer om API:erna för strukturerad innehållsleverans och hantering av innehållsfragment
 feature: Headless, Content Fragments, Edge Delivery Services
 role: Admin, Developer
-source-git-commit: 21599676916068f3529976410a93951b02f750b0
+exl-id: 95aecd30-566a-42a9-b97a-7efe45fd389c
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
 
-
-# AEM-API:er för leverans och hantering av strukturerat innehåll {#aem-apis-structured-content-delivery-and-management}
+# AEM API:er för leverans och hantering av strukturerat innehåll {#aem-apis-structured-content-delivery-and-management}
 
 Adobe Experience Manager (AEM) as a Cloud Service erbjuder flera API:er för både leverans av strukturerat innehåll från Content Fragments och Content Fragment Management. Mer information om specifika API:er finns på de enskilda sidorna.
 
-* [AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md)
+* [AEM Content Fragment Delivery with OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)
    * Detta API skapar JSON-svar för att leverera strukturerat innehåll från innehållsfragment i AEM.
    * En bana till ett innehållsfragment används som slutpunkt.
    * Detta API är REST-baserat.
@@ -32,7 +32,7 @@ Adobe Experience Manager (AEM) as a Cloud Service erbjuder flera API:er för bå
       * Även om det är robust och bevisat levererar detta API inte *fullständigt hydrerade* JSON-utdata. Referenser genereras bara som sökvägar, vilket kräver sekundära API-begäranden för att hämta ytterligare innehåll.
    * Assets HTTP API kan också användas för att hantera innehållsfragment och modeller för innehållsfragment (CRUD).
    * Detta API är REST-baserat.
-   * Stöd för innehållsfragment i Assets HTTP API kommer att bli inaktuellt i framtiden eftersom det genomförs av Edge Delivery Servicens JSON REST API. Tidsskalan har inte fastställts än.
+   * Stöd för innehållsfragment i Assets HTTP API kommer att bli inaktuellt i framtiden eftersom det följs av Edge Delivery Services JSON REST API. Tidsskalan har inte fastställts än.
 
 <!--
 ## JSON vs HTML {#json-vs-HTML}
@@ -71,7 +71,7 @@ Många jämförelser finns tillgängliga online, men några av de viktigaste fö
 
 * Cachning
 
-   * JSON-svar på REST `GET`-begäranden är i sig tillgängliga. GraphQL `POST`-begäranden är inte tillgängliga om de inte görs, till exempel genom att använda AEM beständiga frågor som är lagrade på servern och begärda med REST-liknande `GET`-begäranden.
+   * JSON-svar på REST `GET`-begäranden är i sig tillgängliga. GraphQL `POST`-begäranden är inte tillgängliga om de inte har gjorts. Det kan till exempel gälla AEM Persisted Queries som är lagrade på servern och begärda med REST-liknande `GET`-begäranden.
 
 Några fördelar med GraphQL:
 

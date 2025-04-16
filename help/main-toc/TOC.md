@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 24ca1417c07747b310d3a33b018756862c076313
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
-source-wordcount: '6146'
+source-wordcount: '6152'
 ht-degree: 1%
 
 ---
@@ -1122,7 +1122,7 @@ ht-degree: 1%
       + [Uppgradera dina innehållsfragment för UUID-referenser](/help/headless/graphql-api/uuid-reference-upgrade.md)
       + [Exempel på GraphQL-frågor](/help/headless/graphql-api/sample-queries.md)
       + [Felsöka GraphQL-frågor](/help/headless/graphql-api/persisted-queries-troubleshoot.md)
-   + [AEM REST OpenAPI for Content Fragment Delivery](/help/headless/aem-rest-openapi-content-fragment-delivery.md)
+   + [AEM Content Fragment Delivery with OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)
    + [Content Fragments and Models OpenAPIs](/help/headless/content-fragment-openapis.md)
    + [Stöd för innehållsfragment i Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
@@ -1308,6 +1308,7 @@ ht-degree: 1%
       + Universal Editor {#universal-editor}
          + [Introduktion](/help/implementing/universal-editor/introduction.md)
          + [Användningsexempel](/help/implementing/universal-editor/use-cases.md)
+         + [Universell redigerare och Sites Editor](/help/implementing/universal-editor/page-editor-universal-editor.md)
          + [Attribut och objekttyper](/help/implementing/universal-editor/attributes-types.md)
          + [Komponentdefinition](/help/implementing/universal-editor/component-definition.md)
          + [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md)

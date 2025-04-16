@@ -4,7 +4,7 @@ description: Versionsinformation om 2025.1.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 085629bf-fb24-4511-af6c-bbbeedcb6b98
-source-git-commit: 7cc979148f6699cfbd4aaae228beb83527709fa1
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
 source-wordcount: '1740'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Förbättrad referens för [innehållsfragment med unika ID-baserade referenser]
 
 **AEM REST OpenAPI för leverans av innehållsfragment**
 
-[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-content-fragment-delivery-with-openapi.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ### Föråldrade funktioner {#sites-deprecated}
 

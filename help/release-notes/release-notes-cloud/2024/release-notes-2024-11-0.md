@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.11.0-utgåvan av  [!DNL Adobe Experienc
 feature: Release Information
 role: Admin
 exl-id: 3fd6482e-66f0-48ee-983c-4cb6b7742dcd
-source-git-commit: aafa51c246ee67f9fed014a39ecfb4605ac6152f
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
 source-wordcount: '1809'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Förbättrade [Content Fragment-referenser med unika ID-baserade referenser](/he
 
 **AEM REST OpenAPI för leverans av innehållsfragment**
 
-[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-content-fragment-delivery-with-openapi.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 

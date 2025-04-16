@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.10.0-utgåvan av  [!DNL Adobe Experienc
 feature: Release Information
 role: Admin
 exl-id: 7a63f04f-10f0-4879-bd06-4182bb288a9b
-source-git-commit: bf3ccd88bc29db136ff5445f76e196b6ac8c52c7
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
 source-wordcount: '1664'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Utnyttja GenAI genom AEM nya funktion, [generera varianter](/help/generative-ai/
 
 **AEM REST OpenAPI för leverans av innehållsfragment**
 
-[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) är nu tillgängligt för AEM as a Cloud Service.
+[AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-content-fragment-delivery-with-openapi.md) är nu tillgängligt för AEM as a Cloud Service.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 

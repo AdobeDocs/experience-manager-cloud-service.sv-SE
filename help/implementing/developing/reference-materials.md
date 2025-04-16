@@ -4,16 +4,16 @@ description: AEM har omfattande och kraftfulla API:er som du kan använda för d
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
 
 # API-referensmaterial {#api-reference-materials}
 
-Adobe Experience Manager (AEM) innehåller många API:er för utveckling av program och utökning av AEM. AEM bygger på flera öppen källkod-tekniker som också kan användas.
+Adobe Experience Manager (AEM) innehåller många API:er för att utveckla program och utöka AEM. AEM bygger på flera öppen källkod-tekniker som också kan användas.
 
 ## AEM Core API:er {#core-aem-apis}
 
@@ -22,8 +22,8 @@ Följande API:er är viktiga för AEM.
 | API | Beskrivning |
 |---|---|
 | [Adobe Experience Manager as a Cloud Service](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html) | Produktabstraktioner som sidor, resurser, arbetsflöden och så vidare. |
-| [Bevilja användargränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe Open Web stack, med olika viktiga komponenter (6.5 Granite-materialet gäller AEMaaCS) |
-| [Coral UI](https://opensource.adobe.com/coral-spectrum/documentation/) | Adobe användargränssnittsstil för molnet, utformad för att ge en enhetlig användarupplevelse |
+| [Bevilja användargränssnitt](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/index.html#) | Adobe Open Web-stacken med olika viktiga komponenter (6.5 Granite-materialet gäller AEMaaCS) |
+| [Coral UI](https://opensource.adobe.com/coral-spectrum/documentation/) | Adobe visuella stil för molngränssnitt som är utformade för att ge en enhetlig användarupplevelse |
 
 <!---
 |Editor core JavaScript API reference|Provides all the base objects and concepts to support authoring of content resources|
@@ -35,7 +35,7 @@ Följande API:er är viktiga för AEM.
 
 ## Ytterligare ramar {#additional-apis}
 
-AEM använder flera andra API:er med öppen källkod.
+AEM förlitar sig på flera andra API:er med öppen källkod.
 
 | API | Beskrivning |
 |---|---|
@@ -55,7 +55,7 @@ AEM bygger på följande fyra primära Java API-uppsättningar i fallande priori
 | 3 | [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/oak_api/overview.html) | Data- och innehållsabstraktioner som nod, egenskaper och sessioner. |
 | 4 | [Apache Felix](https://felix.apache.org/) | OSSGi-programbehållarabstraktioner som tjänster och OSGi-komponenter. |
 
-Om ett API tillhandahålls av AEM bör du föredra det framför Sling, JCR och OSGi. Om AEM inte har något API bör du välja Sling framför JCR och OSGi.
+Om ett API tillhandahålls av AEM bör du föredra det framför Sling, JCR och OSGi. Om AEM inte har något API rekommenderar vi Sling framför JCR och OSGi.
 
 >[!TIP]
 >
@@ -68,10 +68,10 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 | Funktion | Beskrivning |
 |---|---|
 | [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | Standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser |
-| [JSON-exporterare](/help/implementing/developing/components/json-exporter.md) | Leverera innehåll från alla AEM sidor i JSON-datamodellformat |
+| [JSON-exporterare](/help/implementing/developing/components/json-exporter.md) | Leverera innehållet på alla AEM-sidor i JSON-datamodellformat |
 | [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md) | Generera JSON-export av komponentinnehåll baserat på ett modellramverk |
 | [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) | OpenAPI:er för innehållsfragment och innehållsfragmentmodell |
-| [AEM REST OpenAPI för leverans av innehållsfragment](/help/headless/aem-rest-openapi-content-fragment-delivery.md) | Ett HTTP REST API på AEM Edge Delivery Services, utformat för att leverera strukturerat innehåll från innehållsfragment i JSON-format. |
+| [AEM Content Fragment Delivery with OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md) | Ett HTTP REST API på AEM Edge Delivery Services, utformat för att leverera strukturerat innehåll från innehållsfragment i JSON-format. |
 | [GraphQL API för innehållsfragment](/help/headless/graphql-api/content-fragments.md) | Effektiv leverans av innehållsfragment till JavaScript-klienter i headless CMS-implementeringar |
 |  |  |
 | [Assets API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
@@ -80,19 +80,19 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 
 >[!NOTE]
 >
->Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de berörda begreppen.
+>Se [AEM API:er för leverans och hantering av strukturerat innehåll](/help/headless/apis-headless-and-content-fragments.md) för en översikt över de olika tillgängliga API:erna och en jämförelse av några av de koncept som ingår.
 
 ## SPA-specifika API:er {#spa-apis}
 
-AEM Single-Page Application (SPA) Editor SDK-ramverket innehåller specifika JavaScript API-referenser.
+AEM SPA-redigerare (Single-Page Application) SDK-ramverket innehåller specifika JavaScript API-referenser.
 
 | API | Beskrivning |
 |---|---|
-| [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping) | Ett sätt för Single Page-programmet att mappa klientkomponenter till Adobe Experience Manager-resurstyper (AEM komponenter) |
+| [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping) | Ett sätt att mappa klientkomponenter till Adobe Experience Manager-resurstyper (AEM-komponenter) med hjälp av programmet för en sida |
 | [Sidmodellhanteraren](https://www.npmjs.com/package/@adobe/aem-spa-page-model-manager) | En tolk mellan Adobe Experience Manager Editor och Adobe Experience Manager Single Page Application (SPA) Editor |
 | [Reagera på redigerbara komponenter](https://www.npmjs.com/package/@adobe/aem-react-editable-components) | Innehåller React-komponenter och integreringslager som hjälper dig att komma igång med Adobe Experience Manager Site Editor |
-| [Redigerbara komponenter för Angular](https://www.npmjs.com/package/@adobe/aem-angular-editable-components) | Innehåller komponenterna i Angularna och integreringslagret som hjälper dig att komma igång med Adobe Experience Manager Site Editor |
+| [Redigerbara Angular-komponenter](https://www.npmjs.com/package/@adobe/aem-angular-editable-components) | Innehåller komponenter och integreringslager från Angular som hjälper dig att komma igång med Adobe Experience Manager Site Editor |
 
 >[!TIP]
 >
->Läs [SPA Introduction and Walkthrough](/help/implementing/developing/hybrid/introduction.md) om du vill ha mer information om enkelsidiga program.
+>Läs [SPA-introduktionen och genomgången](/help/implementing/developing/hybrid/introduction.md) om du vill ha mer information om enkelsidiga program.
