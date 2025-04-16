@@ -5,9 +5,9 @@ exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 500e1b78fb9688601848fc17f312fc23be83bcb0
+source-git-commit: 328ae6d1866a7089fb291d4872d27dc5fa1d4caa
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,3 @@ När du [lägger till IP-adressen Tillåtelselista](/help/implementing/cloud-man
 För att undvika avbrott i frontledningens körning bör du se till att detta Cloud Manager IP Tillåtelselista läggs till. Tillämpa sedan listan på redigeringsmiljön *innan* du aktiverar pipelinen.
 
 Mer information finns i [Använd IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) och [Aktivera frontendpipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md).
-
-### Universal Editor och IP Tillåtelselista {#universal-editor}
-
-{{ip-allow-lists-ue}}

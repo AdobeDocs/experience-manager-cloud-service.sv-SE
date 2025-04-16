@@ -4,9 +4,9 @@ description: Detta är versionsinformationen för version 2025.04.04 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: e8e2563fc8536bd6ebd4239569c03b2287fc1fb6
+source-git-commit: a016213f4bfb7826113317b2a5c7ac9ef92474c1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '126'
 ht-degree: 1%
 
 ---
@@ -23,6 +23,7 @@ Detta är versionsinformationen för den 4 april 2025-versionen av Universal Edi
 ## Nyheter {#what-is-new}
 
 * **Dynamiska media med OpenAPI-stöd** - [Resursväljaren](/help/assets/overview-asset-selector.md#repository-switcher) i Universal Editor har nu stöd för [Dynamiska media med OpenAPI och fjärrresurser](/help/assets/integrate-remote-approved-assets-with-sites.md)
+* **Lista över tillåtna IP-adresser** - Den universella redigeraren har nu stöd för [IP tillåtelselista.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) Du kan kontrollera IP-adresserna för den universella redigeringstjänsten med [den här slutpunkten.](http://universal-editor-service.adobe.io/ip-ranges)
 
 ## Andra förbättringar {#other-improvements}
 
