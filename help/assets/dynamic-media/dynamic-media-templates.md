@@ -4,9 +4,9 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 6223937acc317ea57a7e91c90bac36f1b1d4be67
+source-git-commit: 946f943dd02bb6832674ed7e37830ddeb592e548
 workflow-type: tm+mt
-source-wordcount: '2886'
+source-wordcount: '2882'
 ht-degree: 0%
 
 ---
@@ -87,8 +87,8 @@ Om du vill skapa en [!DNL Dynamic Media]-mall måste du ha:
 
 Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
-1. Navigera till din [!DNL Assets View] och [skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i **[!UICONTROL Assets]**. Mappträdet i **[!UICONTROL Assets]** replikeras i **[!UICONTROL Dynamic Media Assets]**. Använd den här [!UICONTROL Dynamic Media Assets]-mappen om du vill spara [!DNL Dynamic Media]-mallen senare.
-1. Välj **[!UICONTROL Assets]** och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) för att använda dem för att skapa mallen.
+1. Navigera till din [!DNL Assets View] och [skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. Mappträdet i ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replikeras i **[!UICONTROL Dynamic Media Assets]**. Spara mallen [!DNL Dynamic Media] i den här [!UICONTROL Dynamic Media Assets]-mappen.
+1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) om du vill använda dem för att skapa mallen.
 1. [Skapa en tom arbetsyta](#create-a-canvas)
 1. [Lägga till bilder på arbetsytan](#add-images-to-the-canvas)
 1. [Lägga till textlager på arbetsytan](#add-text-to-the-canvas)
@@ -99,13 +99,15 @@ Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
 Så här skapar du en tom arbetsyta:
 
-1. Navigera till [!DNL Assets View] och markera **[!UICONTROL Dynamic Media Assets]** som finns i den vänstra panelen.
+1. Navigera till [!DNL Assets View], markera **[!UICONTROL Dynamic Media Assets]** i den vänstra panelen och navigera till din mapp för att spara mallen i den mappen.
 
    ![Dynamiska mediamallar](/help/assets/assets/DM-Assets1.png)
 
-1. Välj **[!UICONTROL Create Template]** på den här sidan eller navigera till mappen **[!UICONTROL Dynamic Media Assets]** och välj **[!UICONTROL Create Template]**. Mallen sparas på den plats där du skapar den, antingen i rotmappen, till exempel **[!UICONTROL Dynamic Media Assets]**, eller i en mapp i roten. När du har valt **[!UICONTROL Create Template]** visas dialogrutan **[!UICONTROL New Template]**.
+1. Välj **[!UICONTROL Create Template]**. Dialogrutan **[!UICONTROL New Template]** visas.
    ![Så här skapar du dynamiska mallar som kan anpassas i realtid](/help/assets/assets/new-template.png)
-
+   >[!NOTE]
+   >
+   >  Mallen sparas på den plats där du skapar den. På startsidan för [!DNL Assets View] väljer du **[!UICONTROL Dynamic Media Assets]** och klickar på **[!UICONTROL Create Template]** för att spara mallen i rotmappen för **[!UICONTROL Dynamic Media Assets]**.
 1. Ange ett mallnamn, definiera arbetsytans bredd och höjd och klicka på **[!UICONTROL Create]**. En tom arbetsyta visas med menyalternativ på båda sidor som du kan använda för att skapa mallen. Håll muspekaren över menyalternativen för att se deras verktygstips.
    ![anpassningsbar mall i realtid](/help/assets/assets/blank-canvas-page.png)
 
@@ -267,7 +269,7 @@ Utför dessa steg för att förhandsgranska och publicera mallen och kopiera lev
    ![skapar innehåll i farten](/help/assets/assets/dm-templates-publish-status.png)
 Du kan också växla **[!UICONTROL Include all parameters]** för att redigera alla parametervärden som visas och se uppdateringarna i mallförhandsvisningen.
    <br>
-1. Om du vill publicera mallen på förhandsgranskningssidan klickar du på **[!UICONTROL Publish]** och bekräftar att du vill publicera. Meddelandet Publicera färdigt visas och publiceringsstatusen uppdateras till Publicerat.
+1. Om du vill publicera mallen på förhandsgranskningssidan klickar du på **[!UICONTROL Publish]** och bekräftar att du vill publicera. **[!UICONTROL Publish Complete]**-meddelandet visas och publiceringsstatusen uppdateras till **[!UICONTROL Published]**.
 
 >[!NOTE]
 >
