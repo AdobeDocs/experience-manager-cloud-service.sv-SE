@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.8.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: dd1d4b8f-8331-4e97-a754-37e720974db6
-source-git-commit: 61b40acf4f51c16a694b7c3b13ee1c480670ee3f
+source-git-commit: 4b8086920bc3e3b9c5ed2a74934645fbc69acf71
 workflow-type: tm+mt
 source-wordcount: '1173'
 ht-degree: 0%
@@ -48,18 +48,18 @@ Titta på videon Augustiversionen 2024 med en sammanfattning av funktioner som l
 Befintliga [arv](/help/sites-cloud/authoring/universal-editor/inheritance.md)-funktioner för platser stöds nu:
 
 * [AEM Launches](/help/sites-cloud/authoring/launches/overview.md)
-* [MSM](/help/sites-cloud/administering/msm/overview.md) på sidnivå
+* [MSM](/help/sites-cloud/administering/msm/overview.md) at the page level
 
-Dessutom stöds nu följande sidhanteringsfunktioner:
+In addition, the following page management features are now supported:
 
-* [AEM-taggar](/help/sites-cloud/authoring/sites-console/tags.md) kan exporteras som en [taxonomi](/help/edge/wysiwyg-authoring/taxonomy.md) till Edge Delivery Services.
-* [Mallar](/help/sites-cloud/authoring/universal-editor/templates.md) för Edge Delivery Services kommer snart!
+* [AEM Tags](/help/sites-cloud/authoring/sites-console/tags.md) can be exported as a [taxonomy](/help/edge/wysiwyg-authoring/taxonomy.md) to Edge Delivery Services.
+* [Templates](/help/sites-cloud/authoring/universal-editor/templates.md) for Edge Delivery Services are coming soon!
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
 **Generera variationer**
 
-Utnyttja GenAI genom AEM nya funktion, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ditt Adobe-kontoteam och ta del av ditt bidrag i programmet.
+Leverage GenAI through AEM&#39;s new feature, [generate variations](/help/generative-ai/generate-variations.md), accessible now in Cloud Service. Generate variations helps you generate and scale content creation through the use of generative AI. Kontakta ditt Adobe-kontoteam och ta del av ditt bidrag i programmet.
 
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
@@ -76,7 +76,7 @@ Assets as a Cloud Service använder nu den senaste widgeten från Firefly som g�
 
 Assets as a Cloud Service har nu stöd för Photoshop stora dokument (PSB-filer) utöver det befintliga stödet för PSD-filer.
 
-### Nya förbättringar i Content Hub {#content-hub-new-enhancements}
+### New enhancements in Content Hub {#content-hub-new-enhancements}
 
 * Bättre hantering av långa filnamn, enkel utökning av hela namnet med verktygstips.
 * Förbättrade miniatyrbilder som bättre passar innehållets proportioner och täcker större innehållsområden.
@@ -134,9 +134,9 @@ Mejla **<aemcs-cdn-config-adopter@adobe.com>** som anger vilket av de tidiga ado
 
 Skydda vissa innehållsresurser genom att öppna en enkel dialogruta för autentisering som kräver ett användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord som hanteras via en konfigurationsfil i Git som distribueras via Configuration Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
 
-#### Omdirigeringar på klientsidan (tidigt Adobe-program) {#client-side-redirects-early-adopter}
+#### Serveromdirigeringar (tidig Adobe-program) {#server-side-redirects-early-adopter}
 
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
+Konfigurera 301/302 serveromdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
 
 #### Affärsanvändare kan deklarera omdirigeringar utanför Git (tidig Adobe-program) {#apache-rewritemaps-early-adopter}
 

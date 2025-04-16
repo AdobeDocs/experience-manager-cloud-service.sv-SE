@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.4.0-utgåvan av  [!DNL Adobe Experience
 exl-id: 153a3172-676f-4434-94d4-12fab8e17734
 feature: Release Information
 role: Admin
-source-git-commit: bc0ae042c378f24b88da84768cdcc9573926ac89
+source-git-commit: 7069ee2453b0c589f92f9899db0b8307e4133756
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -186,9 +186,9 @@ Om det osannolika skulle inträffa att leveransnätverket inte kan dirigera traf
 
 ### Tidiga Adobe-program {#foundation-early-adopter}
 
-#### Omdirigeringar på klientsidan (tidig Adobe-program) {#client-side-redirects-early-adopter}
+#### Omdirigeringar på serversidan (tidig Adobe-program) {#server-side-redirects-early-adopter}
 
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) och gå med i det tidiga adopterprogrammet genom att skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>**.
+Konfigurera 301/302 serveromdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors) och gå med i det tidiga adopterprogrammet genom att skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>**.
 
 #### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
 

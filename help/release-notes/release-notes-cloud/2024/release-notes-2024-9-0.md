@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.9.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 75ecd154-112a-4468-9962-de50bb1f4cd0
-source-git-commit: b0208964fc193e0e839bccaaf8245c86f280767d
+source-git-commit: 1481983bde41bda51e725930bae492aa599b6c93
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 0%
@@ -136,9 +136,9 @@ Adobe hanterade CDN har nu stöd för [Edge Side Includes (ESI)](/help/implement
 
 Skydda vissa innehållsresurser genom att öppna en enkel dialogruta för autentisering som kräver ett användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord hanteras via en konfigurationsfil i Git som distribueras via Config Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
 
-### Omdirigeringar på klientsidan {#client-side-redirects}
+### Serveromdirigeringar {#server-side-redirects}
 
-Deklarera [omdirigering av webbläsare](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors) i en konfigurationsfil som distribueras till och utvärderas vid CDN. Detta kan vara användbart för scenarier som borttagning av sidor, ändrad webbplatsstruktur och SEO-optimering.
+Deklarera [omdirigering av webbläsare](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors) i en konfigurationsfil som distribueras till och utvärderas vid CDN. Detta kan vara användbart för scenarier som borttagning av sidor, ändrad webbplatsstruktur och SEO-optimering.
 
 ### Nya AEM Developer Console (Public Beta) {#aem-developer-console-beta}
 

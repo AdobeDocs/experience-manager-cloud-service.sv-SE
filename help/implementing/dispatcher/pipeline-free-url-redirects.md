@@ -4,7 +4,7 @@ description: Lär dig hur du deklarerar 301- eller 302-omdirigeringar utan åtko
 feature: Dispatcher
 role: Admin
 exl-id: dacb1eda-79e0-4e76-926a-92b33bc784de
-source-git-commit: aee0aef912fd4c94c06251aa4424200a6ffd7ebc
+source-git-commit: 7a543c8fe63166ef34999f23ce9b05de8e8b0e9f
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Scenarier:
 * En ny HTML-sida.
 * SEO-optimering.
 
-AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirection) för att implementera omdirigeringar på klientsidan, men den strategi som beskrivs i den här artikeln, omdirigeringar utan pipeline, är ett bra val när:
+AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirection) för att implementera omdirigeringar på serversidan, men den strategi som beskrivs i den här artikeln, omdirigeringar utan pipeline, är ett bra val när:
 
 * De som underhåller omdirigeringarna är företagsanvändare som inte har den behörighet som krävs för att genomföra filändringar i källkontrollen eller möjligheten att utföra en konfigurationspipeline på Cloud Manager webbnivå.
 * Antalet omdirigeringar varierar från några till tiotusentals.

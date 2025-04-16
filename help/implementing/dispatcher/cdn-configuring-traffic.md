@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: a43fdc3f9b9ef502eb0af232b1c6aedbab159f1f
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Konfigurera trafik vid leveransnätverket {#cdn-configuring-cloud}
 
-AEM as a Cloud Service erbjuder en samling funktioner som kan konfigureras i det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn)-lagret och som ändrar typen av inkommande eller utgående svar. Följande regler, som beskrivs i detalj på den här sidan, kan deklareras för att uppnå följande beteende:
+AEM as a Cloud Service erbjuder en samling funktioner som kan konfigureras på lagret [Adobe-hanterad CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) som ändrar typen av inkommande eller utgående svar. Följande regler, som beskrivs i detalj på den här sidan, kan deklareras för att uppnå följande beteende:
 
 * [Begär omformningar](#request-transformations) - ändra aspekter av inkommande begäranden, inklusive huvuden, sökvägar och parametrar.
 * [Svarsomvandlingar](#response-transformations) - ändra huvuden som är på väg tillbaka till klienten (till exempel en webbläsare).
-* [Omdirigering på klientsidan](#client-side-redirectors) - utlöser en omdirigering av webbläsaren.
+* [Omdirigering på serversidan](#server-side-redirectors) - utlöser en omdirigering av webbläsaren.
 * [Ursprungsväljare](#origin-selectors) - proxy till en annan ursprunglig serverdel.
 
 CDN kan även konfigurera trafikfilterregler (inklusive WAF), som styr vilken trafik som tillåts eller nekas av CDN. Den här funktionen har redan släppts och du kan läsa mer om den på sidan [Trafikfilterregler, inklusive WAF-regler](/help/security/traffic-filter-rules-including-waf.md).
@@ -306,7 +306,7 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 ## Väljare för ursprung {#origin-selectors}
 
-Du kan använda det AEM CDN för att dirigera trafik till olika serverdelar, inklusive program som inte kommer från Adobe (kanske per sökväg eller underdomän).
+Du kan använda AEM CDN för att dirigera trafik till olika serverdelar, inklusive program som inte kommer från Adobe (kanske per sökväg eller underdomän).
 
 Konfigurationsexempel:
 
@@ -357,12 +357,12 @@ Anslutningar till originalen är endast SSL och använder port 443.
 | **forwardAuthorization** (valfritt, standardvärdet är false) | Om värdet är true skickas auktoriseringshuvudet från klientbegäran till serverdelen, annars tas auktoriseringshuvudet bort. |
 | **timeout** (valfritt, i sekunder är standardvärdet 60) | Antal sekunder som CDN ska vänta på att en backend-server ska leverera den första byten av en HTTP-svarstext. Det här värdet används också som en tidsgräns mellan byte till serverdelsservern. |
 
-### Proxyserver för Edge Delivery Services {#proxying-to-edge-delivery}
+### Proxyserver till Edge Delivery Services {#proxying-to-edge-delivery}
 
-Det finns scenarier där ursprungsväljare ska användas för att dirigera trafik genom AEM Publish till AEM Edge Delivery Services:
+Det finns scenarier där ursprungsväljare ska användas för att dirigera trafik via AEM Publish till AEM Edge Delivery Services:
 
 * Visst innehåll levereras av en domän som hanteras av AEM Publish, medan annat innehåll från samma domän levereras av Edge Delivery Services
-* Innehåll som levereras av Edge Delivery Services skulle kunna utnyttja regler som distribueras via konfigurationsflödet, inklusive trafikfilterregler eller begäran-/svarsomvandlingar
+* Innehåll som levereras av Edge Delivery Services kan utnyttja regler som distribueras via konfigurationsflödet, inklusive trafikfilterregler eller begäran-/svarsomvandlingar
 
 Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
 
@@ -390,10 +390,10 @@ data:
 ```
 
 >[!NOTE]
-> Eftersom Hanterat CDN i Adobe används måste du konfigurera push-ogiltigförklaring i **hanterat**-läge genom att följa Edge Delivery Servicens [Konfigurera push-ogiltigförklaring](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
+> Eftersom det hanterade CDN-nätverket för Adobe används, måste du konfigurera push-ogiltigförklaring i **hanterat** läge genom att följa Edge Delivery Services [Setup invalidation documentation](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
 
 
-## Omdirigeringar på klientsidan {#client-side-redirectors}
+## Serveromdirigeringar {#server-side-redirectors}
 
 Du kan använda omdirigeringsregler på klientsidan för 301, 302 och liknande omdirigeringar på klientsidan. Om en regel matchar svarar CDN med en statusrad som innehåller statuskoden och meddelandet (till exempel HTTP/1.1 301 Flyttad permanent), samt platshuvuduppsättningen.
 

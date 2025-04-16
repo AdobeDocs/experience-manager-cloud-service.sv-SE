@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.6.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 4033abf4-7094-4ce4-ba93-c936062667e3
-source-git-commit: 6d548f10caa32bb5a7a6b0afe762f60058eca2fe
+source-git-commit: 650014d0c093b9e7c1947a8fe870a5452f3083e5
 workflow-type: tm+mt
 source-wordcount: '1972'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Titta på videon med versionsöversikten för juni 2024 om du vill se en sammanf
 
 ### Ny funktion i Experience Manager Sites {#new-feature-sites}
 
-**Datatjänsten för övervakning av faktisk användning (RUM)** {#real-use-monitoring}
+**Data Service för övervakning av faktisk användning (RUM)** {#real-use-monitoring}
 
 Datatjänsten [Real Use Monitoring (RUM) ](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md) är nu allmänt tillgänglig, vilket möjliggör datainsamling på klientsidan för AEM as a Cloud Service. Den här tjänsten ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det ger kunderna avancerade insikter om sidtrafik och prestanda, vilket utgör en värdefull möjlighet att förstå och förbättra sidprestanda.
 
@@ -211,9 +211,9 @@ Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som kr
 
 <!-- Email **<aemcs-cdn-config-adopter@adobe.com>** with a request to be an early adopter. -->
 
-#### Omdirigeringar på klientsidan (tidigt Adobe-program) {#client-side-redirects-early-adopter}
+#### Serveromdirigeringar (tidig Adobe-program) {#server-side-redirects-early-adopter}
 
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
+Konfigurera 301/302 serveromdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
 
 #### Varningar om trafikfilterregler (tidig Adobe-program) {#traffic-filter-rules-alerts-early-adopter}
 

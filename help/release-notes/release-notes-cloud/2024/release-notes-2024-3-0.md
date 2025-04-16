@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2024.3.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2024.3.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2024.3.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2024.3.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: b3816929-2c0a-4d6a-b583-c928d2182ecd
 feature: Release Information
 role: Admin
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 7f63f66cb1753fc32996e4672214eccc33ca8d92
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.3.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -43,19 +43,19 @@ Titta på videon med versionsöversikten för mars 2024 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
 
-**AEM Redigering för Edge Delivery Services**
+**AEM Authoring for Edge Delivery Services**
 
-AEM Sites kan nu användas som innehållskälla för Edge Delivery Services. Författarna hanterar sina webbplatser i AEM med den nya universella redigeraren med sammanhangsberoende webbverktyg. På så sätt kan företag bygga högpresterande webbsidor med Edge Delivery Services och samtidigt utnyttja AEM kraftfulla funktioner för innehållshantering.
+AEM Sites kan nu användas som innehållskälla för Edge Delivery Services. Man kan hantera webbplatser i AEM med den nya universella redigeraren med sammanhangsberoende webbverktyg. På så sätt kan företag skapa högpresterande webbsidor med Edge Delivery Services och samtidigt utnyttja AEM kraftfulla funktioner för innehållshantering.
 
-![AEM redigering](/help/edge/assets/universal_editor_edge_delivery_services.png)
+![AEM Authoring](/help/edge/assets/universal_editor_edge_delivery_services.png)
 
-Mer information finns i [dokumentationen](/help/edge/overview.md) och i [AEM Gems - Getting started with AEM Authoring and Edge Delivery Services](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-gems-getting-started-with-aem-authoring-and-edge-delivery/m-p/652694#M43905) (Komma igång med redigering och ).
+Mer information finns i [dokumentationen](/help/edge/overview.md) och i [AEM Gems - Komma igång med AEM Authoring och Edge Delivery Services](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-gems-getting-started-with-aem-authoring-and-edge-delivery/m-p/652694#M43905)
 
 **Universell redigerare för Headless-implementeringar**
 
 Med Universell redigerare kan även fristående webbprogram använda samma intuitiva kontextbaserade WYSIWYG-redigering som tidigare bara fanns på traditionella webbplatser. Innehållsskapare kan nu visuellt komponera layouter med Content Fragments på samma sätt som komponenter på sidor.
 
-Det som skiljer den universella redigeraren åt är dess förmåga att anpassa sig till olika webbarkitekturer, anpassa sig till både server- och klientåtergivning, bibehålla ramverksagnostiken och eliminera behovet av AEM. Det är enkelt att integrera befintliga webbprogram med den universella redigeringsfunktionen för redigering av innehåll, vilket i första hand kräver att utvecklarna lägger in specifika dataattribut i sina markeringar.
+Det som skiljer den universella redigeraren åt är dess anpassningsbarhet till olika webbarkitekturer, anpassning av rendering på både server- och klientsidan, bibehållen ramverksagnostikering och eliminering av behovet av AEM värdtjänster. Det är enkelt att integrera befintliga webbprogram med den universella redigeringsfunktionen för redigering av innehåll, vilket i första hand kräver att utvecklarna lägger in specifika dataattribut i sina markeringar.
 
 Med den funktionen får den universella redigeraren en konsekvent redigeringsupplevelse, oavsett innehållsstruktur eller underliggande teknologi. Mer information finns i [Introduktion till den universella redigeraren](/help/implementing/universal-editor/introduction.md).
 
@@ -75,7 +75,7 @@ Med den nya Content Fragment Editor kan innehållsförfattare jämföra och visa
 
 **Generera variationer**
 
-Utnyttja GenAI genom att AEM nya funktioner, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ert Adobe-kontoteam för att ta del av detta i programmet.
+Utnyttja GenAI genom AEM nya funktion, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ditt Adobe-kontoteam och ta del av ditt bidrag i programmet.
 
 **Resurssökning i Content Fragment Console**
 
@@ -91,7 +91,7 @@ Innehållsförfattare kan nu bläddra bland, visa och vidta åtgärder för bild
 
 **Inbyggd integrering med Adobe Express**
 
-AEM Assets kan integreras direkt med Adobe Express, vilket gör att du kan komma åt material som lagras i AEM Assets direkt inifrån användargränssnittet i Adobe Expressen. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
+AEM Assets är integrerat med Adobe Express, som gör att du kan komma åt material som lagras i AEM Assets direkt inifrån Adobe Express användargränssnitt. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
 
 ![Inkludera resurser från Assets-tillägg](/help/assets/assets/adobe-express-native-integration.png)
 
@@ -116,7 +116,7 @@ Med Assets Essentials kan administratörer hantera åtkomstnivåer för privata 
 
 ### Nya funktioner för AEM Forms {#forms-new-features}
 
-* **[Adobe Experience Manager Forms-Edge Delivery Services](/help/edge/docs/forms/overview.md)**: Edge Delivery Services för AEM Forms är en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
+* **[Adobe Experience Manager Forms Edge Delivery Services](/help/edge/docs/forms/overview.md)**: Edge Delivery Services för AEM Forms är en sammansatt uppsättning tjänster som möjliggör en snabb utvecklingsmiljö där författare snabbt kan uppdatera, publicera och öppna nya formulär. Dessa tjänster ger enastående och slagkraftiga formulärupplevelser som skapar engagemang och konverteringar. Dessa blankettupplevelser är enkla att skapa och utveckla.
 
   ![EDS Forms Features](/help/edge/assets/eds-forms-features.png)
 
@@ -167,7 +167,7 @@ Med de här tjänsterna kan du:
    * Förbättrad kontrast gör att alla kontroller i den klotbaserade signaturen är lätta att urskilja.
    * Knappen OK/bock visar nu när den är inaktiv.
 
-  **Signaturfeedback för Reader:**
+  **Signaturfeedback för skärmläsare:**
    * När en signatur skrivs kan skärmläsaranvändare höra texten som användes för att skapa signaturen.
 
 Denna uppdatering ger en mer heltäckande upplevelse för användare med funktionshinder genom att förbättra navigering, klarhet och feedback för komponenten Klottsignatur.
@@ -178,18 +178,18 @@ Denna uppdatering ger en mer heltäckande upplevelse för användare med funktio
 
   <br/> ![Adobe Workfront](/help/forms/assets/adobe-workfront.png) <br/> Med Adobe Workfront Fusion Connector kan du utforma arbetsflöden som aktiveras automatiskt när ett anpassat formulär skickas. Du kan till exempel förutse ett scenario där ett arbetsflöde initieras för att tilldela en viss person uppgiften att granska inskickade data, vilket gör det möjligt att godkänna eller avvisa en ansökan baserat på den information som hämtas via det anpassade formuläret. Denna smidiga integrering ökar effektiviteten och ger en ny nivå av automatisering i arbetsflödesprocesserna.|
 
-* **Reader Extension Service**: AEM Forms Communication API:er har tagit med sig Reader Extension Service så att du kan lägga till funktioner som formulärifyllning och kommentarer i vanliga PDF, vilket gör dem interaktiva för användare med kostnadsfria Adobe Reader.
+* **Reader Extension Service**: AEM Forms Communication API:er innehåller Reader Extension Service som gör att du kan lägga till funktioner som formulärifyllning och kommentarer i vanliga PDF-filer, vilket gör dem interaktiva för användare med kostnadsfria Adobe Reader.
 
 * [Stöd för höger till vänster-språk](/help/forms/supporting-new-language-localization-core-components.md): Adaptiv Forms som bygger på kärnkomponenter kan nu presenteras på ett höger till vänster-språk (RTL) som arabiska, persiska och urdu. RTL-språken talas av över 2 miljarder människor globalt. Genom att använda ett formulär på RTL-språk kan ni utöka räckvidden för era adaptiva formulär så att de kan anpassas till dessa olika målgrupper och väljas ut på RTL-marknader. I vissa regioner är det också ett juridiskt mandat att tillhandahålla formulär på det lokala språket. Genom att ta hand om lokala språk kan ni inte bara öppna dörrar för en bredare publik utan också säkerställa att relevanta lagar och bestämmelser följs.
 
-* **[Protect dina dokument med DocAssurance-API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med DocAssurance-API:erna kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
+* **[Skydda dina dokument med DocAssurance-API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med DocAssurance-API:erna kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
   Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
 
 * **[Du kan utnyttja RUM-datatjänsten](/help/implementing/cloud-manager/content-requests.md#real-user-monitoring-for-aem-as-a-cloud-service)** för att aktivera klientsidessamling för AEM as a Cloud Service.
-Real Use Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe-hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
+Real Use Monitoring (RUM) Data Service ger en mer exakt återgivning av användarinteraktioner och säkerställer ett tillförlitligt mått på webbplatsengagemanget. Det är en utmärkt möjlighet att få avancerade insikter om hur sidan fungerar. Detta är fördelaktigt för kunder som använder antingen Adobe-hanterat CDN eller icke-Adobe-hanterat CDN. För kunder som använder ett icke-Adobe hanterat CDN kan nu dessutom automatiserad trafikrapportering aktiveras för dem, vilket eliminerar behovet av att dela trafikrapporter med Adobe.
 
-  Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com` tillsammans med ditt domännamn för varje miljö som du vill aktivera RUM för från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam kommer sedan att aktivera datatjänsten för övervakning av verkligt bruk (RUM) åt dig.
+  Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `aemcs-rum-adopter@adobe.com` tillsammans med ditt domännamn för varje miljö som du vill aktivera RUM för från din e-postadress som är kopplad till din Adobe ID. Adobe produktteam aktiverar sedan datatjänsten Real Use Monitoring (RUM) åt dig.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
@@ -205,19 +205,19 @@ Nu kan du skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com
 
 Förutom de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria brandväggsreglerna för webbprogram (WAF), finns det en möjlighet att använda konfigurationsflödet för att deklarera och distribuera andra typer av CDN-konfigurationer. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md) och gå med i det tidiga adopterprogrammet genom att skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>** för att få tillgång till:
 
-* 301/302 klientomdirigeringar
-* skicka förfrågningar till godtyckliga ursprung (t.ex. program som inte är AEM)
+* 301/302 serveromdirigeringar
+* skicka förfrågningar till godtyckliga ursprung (t.ex. program från andra tillverkare än AEM)
 * URL-omformningar
 * ange eller ändra begärande- eller svarshuvuden
 * anpassade felsidor när CDN inte kan nå AEM
 
 #### Apache/Dispatcher Runtime Ing of Rewrite Maps (Early Adobe Program) {#apache-rewritemaps-early-adopter}
 
-Ungefär som AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor som placerats på en viss plats i publiceringsdatabasen och läsa in dem, utan att någon pipeline-körning för webbnivån krävs. Detta öppnar möjligheter för en affärsanvändare att deklarera omdirigeringar med ett användargränssnitt, som det som finns i ACS Commons Redirect Map Manager. Kontakta **<aemcs-cdn-config-adopter@adobe.com>** om du vill ha mer information.
+På liknande sätt som i AEM 6.5, kommer Apache/dispatcher att importera omskrivningskartor som placerats på en viss plats i publiceringsdatabasen och läsa in dem, utan att någon implementering av en pipeline på webbnivå krävs. Detta öppnar möjligheter för en affärsanvändare att deklarera omdirigeringar med ett användargränssnitt, som det som finns i ACS Commons Redirect Map Manager. Kontakta **<aemcs-cdn-config-adopter@adobe.com>** om du vill ha mer information.
 
 #### Edge Side Includes (ESI) for Loading Dynamic Content (Early Adobe Program) {#esi-early-adopter}
 
-Hanterad CDN i Adobe har nu stöd för Edge Side Includes (ESI), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på edge-nivå. Genom att ta med ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, medan du oftare hämtar mindre avsnitt från ursprungsläget som kräver högre uppdateringsintervall (nedre TTL-värden). Kontakta **<aemcs-cdn-config-adopter@adobe.com>** om du vill ha mer information.
+Adobe hanterade CDN har nu stöd för Edge Side Includes (ESI), ett markeringsspråk för dynamisk sammanställning av webbinnehåll på edge-nivå. Genom att inkludera ESI-fragment kan du cachelagra hela HTML-sidan vid CDN med högre TTL-värden, samtidigt som du oftare hämtar de mindre avsnitt som kräver högre uppdateringsfrekvens (lägre TTL-värden) från ursprungsläget. Kontakta **<aemcs-cdn-config-adopter@adobe.com>** om du vill ha mer information.
 
 #### RDE-stöd för Front-End-kod med hjälp av Site Themes och Site Templates (Early Adopter Program) {#rde-frontend-early-adopter}
 

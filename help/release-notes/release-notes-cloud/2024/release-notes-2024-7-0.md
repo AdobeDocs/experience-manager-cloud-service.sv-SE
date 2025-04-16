@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.7.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 6194df9d-8c3c-4c7f-be59-099b970a565a
-source-git-commit: ce6b0db34488a49d15d4c1197bdee80c63a2e0fa
+source-git-commit: 47b6d7871201cd7dbc1db77620879e69bce4ad3a
 workflow-type: tm+mt
 source-wordcount: '1626'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.7.0
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2024.7.0) är 25 juli 2024. Nästa version (2024.8.0) är planerad till 29 augusti 2024.
+The release date of [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] current feature release (2024.7.0) is July 25, 2024. The next feature release (2024.8.0) is planned for August 29, 2024.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -35,7 +35,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 ## Släpp video {#release-video}
 
-Titta på videon med versionsöversikten för juli 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.7.0:
+Have a look at the July 2024 Release Overview video for a summary of the features added in the 2024.7.0 release:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3431707?quality=12)
 
@@ -102,7 +102,7 @@ When looking at the asset details, any image with content credentials added, suc
 
 #### Förbättrad Visual Rule Editor för Core Component Based Adaptive Forms
 
-Med hjälp av anpassade formulärförfattare kan man skapa komplex affärslogik i blanketter utan att behöva anpassa eller ge support från utvecklarna.
+Adaptive form authors can use repeatable form fields and out-of-the-box visual rule editor functions to create complex business logic in forms without needing customization or support from the development team.
 
 ### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
 
@@ -130,7 +130,7 @@ Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att ba
 * Flera URL-adresser som använder en tagg
 * Rensa fullständigt CDN-cache
 
-### Självserverkonfiguration av X-AEM-Edge-nyckel för kundhanterad CDN {#customermanaged-keys}
+### Self-Serve Configuration of X-AEM-Edge-Key for Customer-Managed CDN {#customermanaged-keys}
 
 Tidigare krävdes en supportanmälan för att generera den X-AEM-Edge-Key som krävs för att konfigurera ett kundhanterat CDN. Det här arbetsflödet är nu självbetjäning genom att deklarera nyckelvärdet i en konfigurationsfil som distribueras med Configuration Pipeline, vilket tar bort eventuella förseningar när det gäller att starta en ny miljö. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#CDN-HTTP-value).
 
@@ -148,9 +148,9 @@ Mejla **<aemcs-cdn-config-adopter@adobe.com>** som anger vilket av de tidiga ado
 
 Skydda vissa innehållsresurser genom att öppna en enkel dialogruta för autentisering som kräver ett användarnamn och lösenord. Den här funktionen riktar sig främst till användarvänliga fall av autentisering, som affärsintressenter som granskar innehåll, i stället för att fungera som en heltäckande lösning för slutanvändarnas åtkomsträttigheter. Listan över användarnamn och lösenord som hanteras via en konfigurationsfil i Git som distribueras via Configuration Pipeline, med en referens till Cloud Manager-miljövariabler av hemlig typ. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md#basic-auth).
 
-#### Omdirigeringar på klientsidan (tidigt Adobe-program) {#client-side-redirects-early-adopter}
+#### Serveromdirigeringar (tidig Adobe-program) {#server-side-redirects-early-adopter}
 
-Konfigurera 301/302 klientomdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#client-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
+Konfigurera 301/302 serveromdirigeringar i källkontroll och distribuera till CDN. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors).<!-- and join the early adopter program by emailing **<aemcs-cdn-config-adopter@adobe.com>**. --> Observera att det redan finns flera andra funktioner för [CDN-konfiguration](/help/implementing/dispatcher/cdn-configuring-traffic.md), bland annat omvandlingar av begäranden och svar samt routning av trafik till platser utanför AEM.
 
 #### Affärsanvändare kan deklarera omdirigeringar utanför Git (tidig Adobe-program) {#apache-rewritemaps-early-adopter}
 
