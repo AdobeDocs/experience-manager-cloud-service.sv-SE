@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.03.10
-description: Det här är versionsinformationen för version 2025.03.10 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.04.04
+description: Detta är versionsinformationen för version 2025.04.04 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: beab4f94dc6d78c2b1ad87a02b9fe46dd0438bcc
+source-git-commit: e8e2563fc8536bd6ebd4239569c03b2287fc1fb6
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '101'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.03.10 {#release-notes}
+# Versionsinformation om Universal Editor 2025.04.04 {#release-notes}
 
-Detta är versionsinformationen för den 10 mars 2025-utgåvan av Universal Editor.
+Detta är versionsinformationen för den 4 april 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,26 +22,10 @@ Detta är versionsinformationen för den 10 mars 2025-utgåvan av Universal Edit
 
 ## Nyheter {#what-is-new}
 
-* **Flytta komponenter:** [Om du flyttar komponenter mellan behållare](/help/sites-cloud/authoring/universal-editor/authoring.md#reordering-components) observeras nu komponentfiltret för målbehållaren.  
-   * Det finns inte längre något krav på att ha samma [filterdefinition](/help/implementing/universal-editor/filtering.md) för både mål- och målbehållare för att komponenten ska kunna flyttas mellan behållarna.
-* **Låsta sidor:** Universal Editor-tjänsten observerar [låsstatusen för en sida](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) och skriver bara till sidor som inte är låsta eller som är låsta av användaren.
-
-## Nya tillägg för Universal Editor {#extensions}
-
-Ett antal nya tillägg har släppts på [Extension Manager](https://developer.adobe.com/uix/docs/extension-manager/) för den universella redigeraren, vilket förbättrar redigeringsupplevelsen.
-
-* **MSM-tillägg**: Du kan nu bryta och återskapa arv av komponenter/block med det här tillägget.
-* **Tillägg för sidegenskaper**: Gå till sidegenskapsfönstret för sidan direkt från den universella redigeraren med det här tillägget.
-* **Arbetsflödestillägg**: Använd arbetsflöden på sidor och innehållsfragment som är instrumenterade på sidan med det här tillägget.
-* **Sidlåsningstillägg**: Använd det här tillägget om du vill låsa och låsa upp en sida direkt från den universella redigeraren.
+* **Dynamiska media med OpenAPI-stöd** - [Resursväljaren](/help/assets/overview-asset-selector.md#repository-switcher) i Universal Editor har nu stöd för [Dynamiska media med OpenAPI och fjärrresurser](/help/assets/integrate-remote-approved-assets-with-sites.md)
 
 ## Andra förbättringar {#other-improvements}
 
-* Korrigeringar gjordes för att korrigera valideringen för arbetsytan utan huvud.
-
-## Föråldring {#deprecation}
-
-* Biblioteket `universal-editor-cors` som tillhandahålls via npm eller `https://unviersal-editor-service.experiencecloud.live/corslib/*` ska inte längre användas.
-   * En skripttagg som pekar på `https://universal-editor-service.adobe.io/cors.js` ska användas i stället.
-   * Se [Universal Editor Overview for AEM Developers](/help/implementing/universal-editor/developer-overview.md) för mer information om hur du kan mäta upp sidan för användning med Universal Editor.
-   * Användarna ser ett borttagningsmeddelande en gång om dagen om fel metod används.
+* Ta bort layoutkontext har åtgärdats.
+* e2e-testningen har förbättrats.
+* Beroendeuppdateringar och kodrensning utfördes.
