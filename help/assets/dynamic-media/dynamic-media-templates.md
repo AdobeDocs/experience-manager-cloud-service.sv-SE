@@ -4,9 +4,9 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 946f943dd02bb6832674ed7e37830ddeb592e548
+source-git-commit: 184149144d1f8d204241fcc477f937fa7c225895
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2962'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ ht-degree: 0%
     </tr>
 </table>
 
-Skapa anpassningsbara mallar i realtid för banners och flygblad med hjälp av [!DNL Dynamic Media]-mallar, en WYSIWYG-mallredigerare. Använd din [!DNL Dynamic Media]-mall i underordnade program. En [!DNL Dynamic Media]-mall innehåller bild- och textlager. Lägg till parametrar i bild- och textlagren i mallen och använd [[!DNL Dynamic Media] URL:er](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/wysiwyg/storage/catalog-urls-dynamic-media) för att flytta och ändra storlek på lagret och uppdatera innehållet i realtid.
+Skapa anpassningsbara mallar i realtid för banners och flygblad med hjälp av [!DNL Dynamic Media]-mallar, en WYSIWYG-mallredigerare. Publicera din [!DNL Dynamic Media]-mall och använd den i program längre fram i kedjan. En [!DNL Dynamic Media]-mall innehåller bild- och textlager. Lägg till parametrar i bild- och textlagren i mallen och använd [[!DNL Dynamic Media] URL:er](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/wysiwyg/storage/catalog-urls-dynamic-media) för att flytta och ändra storlek på lagret och uppdatera innehållet i realtid.
 
 Några av de viktigaste funktionerna:
 
@@ -88,7 +88,7 @@ Om du vill skapa en [!DNL Dynamic Media]-mall måste du ha:
 Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
 1. Navigera till din [!DNL Assets View] och [skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. Mappträdet i ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replikeras i **[!UICONTROL Dynamic Media Assets]**. Spara mallen [!DNL Dynamic Media] i den här [!UICONTROL Dynamic Media Assets]-mappen.
-1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) om du vill använda dem för att skapa mallen.
+1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) om du vill använda dem för att skapa mallen. Du måste publicera bilder för att kunna generera mallens leverans-URL, som kan användas i program längre fram i kedjan.
 1. [Skapa en tom arbetsyta](#create-a-canvas)
 1. [Lägga till bilder på arbetsytan](#add-images-to-the-canvas)
 1. [Lägga till textlager på arbetsytan](#add-text-to-the-canvas)
@@ -108,6 +108,7 @@ Så här skapar du en tom arbetsyta:
    >[!NOTE]
    >
    >  Mallen sparas på den plats där du skapar den. På startsidan för [!DNL Assets View] väljer du **[!UICONTROL Dynamic Media Assets]** och klickar på **[!UICONTROL Create Template]** för att spara mallen i rotmappen för **[!UICONTROL Dynamic Media Assets]**.
+
 1. Ange ett mallnamn, definiera arbetsytans bredd och höjd och klicka på **[!UICONTROL Create]**. En tom arbetsyta visas med menyalternativ på båda sidor som du kan använda för att skapa mallen. Håll muspekaren över menyalternativen för att se deras verktygstips.
    ![anpassningsbar mall i realtid](/help/assets/assets/blank-canvas-page.png)
 
@@ -121,18 +122,18 @@ Så här skapar du en tom arbetsyta:
 * ![anpassningsbara mallar](/help/assets/assets/add-text.svg): Klicka för att lägga till text på arbetsytan.
 * ![anpassningsbara mallar](/help/assets/assets/show-layers-list.svg): Klicka för att visa listan över alla lager (bild och text) på arbetsytan. Alla bilder och all text som läggs till på arbetsytan representeras som separata lager.
 
-**Menyalternativ i den vänstra rutan:** Använd dessa alternativ för vanliga redigeringsåtgärder som anges nedan.
+**Menyalternativ i den vänstra rutan:** Använd dessa alternativ för följande vanliga redigeringsåtgärder.
 
-* ![DM-mallar](/help/assets/assets/layer-selector.svg): Välj ett lager.
-* ![mallar som stöder anpassning](/help/assets/assets/bring-forward.svg): Klicka för att föra ett markerat lager framåt eller tryck på **Ctrl** + **]** (Windows) eller **Cmd** + **]** (Mac).
-* ![Så här skapar du en mall som enkelt kan anpassas](/help/assets/assets/send-backward.svg): Klicka för att skicka ett markerat lager bakåt eller tryck på **Ctrl** + **[** (Windows) eller **Cmd** + **[** (Mac).
-* ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg): Klicka för att ångra den senaste åtgärden eller tryck på **Ctrl** + **Z** (Windows) eller **Cmd** + **Z** (Mac).
-* ![mall för att skapa banners snabbt](/help/assets/assets/redo.svg): Klicka för att göra om den senaste åtgärden eller tryck på **Ctrl** + **Y** (Windows) eller **Cmd** + **Y** (Mac).
-* ![mall för att snabbt skapa flygblad](/help/assets/assets/zoom-in.svg): Klicka för att zooma in arbetsytan eller tryck på **Ctrl** + **+** (Windows) eller Cmd + **+** (Mac).
-* ![mall för att skapa banners snabbt](/help/assets/assets/Zoom-out.svg): Klicka för att zooma ut arbetsytan eller tryck på **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac).
+* ![DM-mallar](/help/assets/assets/layer-selector.svg): Välj ![DM-mallar](/help/assets/assets/layer-selector.svg) och klicka på ett lager på arbetsytan för att markera det.
+* ![mallar som stöder anpassning](/help/assets/assets/bring-forward.svg): Klicka på ![mallar som stöder anpassning](/help/assets/assets/bring-forward.svg) eller använd kortkommando, **Ctrl** + **]** (Windows) eller **Cmd** + **]** (Mac) för att föra ett markerat lager framåt.
+* ![Så här skapar du en mall som enkelt kan anpassas](/help/assets/assets/send-backward.svg): Klicka på ![Skapa en mall som enkelt kan anpassas](/help/assets/assets/send-backward.svg) eller använd kortkommando, **Ctrl** + **[** (Windows) eller **Cmd** + **[** (Mac) för att skicka ett markerat lager bakåt.
+* ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg): Klicka på ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg) eller använd kortkommando, **Ctrl** + **Z** (Windows) eller **Cmd** + **Z** (Mac) för att ångra den senaste åtgärden.
+* ![mall för att skapa banners snabbt](/help/assets/assets/redo.svg): Klicka på mallen ![om du vill skapa banners snabbt](/help/assets/assets/redo.svg) eller använd kortkommando, **Ctrl** + **Y** (Windows) eller **Cmd** + **Y** (Mac) om du vill göra om den senaste åtgärden.
+* ![mall för att snabbt skapa flygblad](/help/assets/assets/zoom-in.svg): Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/zoom-in.svg) eller använd kortkommando, **Ctrl** + **+** (Windows) eller **Cmd** + **+** (Mac) om du vill zooma in arbetsytan.
+* ![mall för att skapa banners snabbt](/help/assets/assets/Zoom-out.svg): Klicka på mallen ![ om du vill skapa banners snabbt](/help/assets/assets/Zoom-out.svg) eller använd kortkommando, **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac) om du vill zooma ut arbetsytan.
 * Tryck på **Backsteg** eller **delete** för att ta bort det markerade lagret om ingen text eller egenskap redigeras.
 
-Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/show-layers-list.svg) **>** fler alternativ (![](/help/assets/assets/three-dots.svg)) på lagret Canvas om du vill redigera arbetsytans dimensioner när du skapar mallen.
+Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/show-layers-list.svg) och välja fler alternativ (![](/help/assets/assets/three-dots.svg)) på lagret Canvas om du vill redigera arbetsytans dimensioner när du skapar mallen.
 ![](/help/assets/assets/edit-canvas1.png)
 
 >[!NOTE]
@@ -143,7 +144,7 @@ Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/show-l
 
 Gör så här för att lägga till bilder på arbetsytan:
 
-1. Klicka på ![skapa en banderoll på nolltid](/help/assets/assets/add-image.svg) för att visa panelen [Resursväljare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector). På panelen visas de bilder i din AEM Assets-instans som synkroniseras med [!DNL Dynamic Media].
+1. Klicka på ![skapa en banderoll på nolltid](/help/assets/assets/add-image.svg) för att öppna panelen [Resursväljare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector). På panelen visas de bilder i din AEM Assets-instans som synkroniseras med [!DNL Dynamic Media].
 1. Bläddra i panelen eller använd nyckelord i sökfältet för att hitta en viss bild.
 1. Dra och släpp en bild på arbetsytan för att använda den. Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att ändra storlek på eller flytta ett lager på arbetsytan.
    ![skapa en banderoll inom några sekunder](/help/assets/assets/add-image-to-canvas.png)
