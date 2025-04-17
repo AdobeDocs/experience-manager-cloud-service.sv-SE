@@ -4,13 +4,13 @@ description: Asynkrona funktionsanrop i den visuella regelredigeraren
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
-source-git-commit: f6e1de0c2cc2c056b3bfcea6ce5d7aaed041f6f8
+exl-id: a240ba26-a6d8-4643-8acb-1d8812dac61f
+source-git-commit: 2cae8bb1050bc4538f4645d9f064b227fb947d75
 workflow-type: tm+mt
-source-wordcount: '1366'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
-
 
 # Använda asynkrona funktioner i ett adaptivt formulär som bygger på kärnkomponenter
 
@@ -38,8 +38,6 @@ Du kan implementera asynkrona funktioner för Adaptiv Forms med följande regelt
 * [Funktionsutdata](#how-to-use-function-output-rule-type)
 
 ## Hur använder man regeltypen Async Function Call?
-
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Du kan skriva [anpassade funktioner](/help/forms/custom-function-core-component-create-function.md) för asynkrona åtgärder och konfigurera asynkrona funktioner med regeltypen **[!UICONTROL Async Function Call]** i regelredigeraren.
 
@@ -217,7 +215,7 @@ För att se hur den fungerar lägger vi till en knapp och skapar en regel för k
 
 ![skapar regel för asynkron funktion](/help/forms/assets/rule-for-async-funct.png){width=50%}
 
-Titta på skärmbilden i konsolfönstret nedan för att visa att när användaren klickar på knappen `Fetch` anropas den anpassade funktionen `callAsyncFunction`, som i sin tur anropar en asynkron funktion `asyncFunction`. Inspect i konsolfönstret för att visa svaret på knappen:
+Titta på skärmbilden i konsolfönstret nedan för att visa att när användaren klickar på knappen `Fetch` anropas den anpassade funktionen `callAsyncFunction`, som i sin tur anropar en asynkron funktion `asyncFunction`. Kontrollera konsolfönstret för att se svaret på knappen genom att klicka:
 
 ![Konsolfönstret](/help/forms/assets/async-custom-funct-console.png)
 

@@ -4,9 +4,9 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer
-source-git-commit: 508265c72f458b062e1667fd42403743fa293586
+source-git-commit: b0c2523a6ca8b097cb7cc101b71162c06e424e52
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1299'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spara formulär som utkast och lista dem på sidan Webbplatser
 
-<span class="preview"> Den här artikeln innehåller innehåll om funktionen **Utkast** , en förhandsversionsfunktion. Förhandsversionen är bara tillgänglig via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features).</span>
+<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
 
 Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM Forms Portal-komponenten **Utkast och inskickat material** som finns i kartongen och som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
 

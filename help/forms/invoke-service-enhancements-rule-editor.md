@@ -6,16 +6,14 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 10de700e5e4b352051b8b77dfd0825bb9b6e0219
+source-git-commit: 2cae8bb1050bc4538f4645d9f064b227fb947d75
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
 
 # Använda Invoke Service i Visual Rule Editor för formulär baserade på kärnkomponenter
-
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Visuell regelredigerare i ett adaptivt formulär har stöd för funktionen **Anropa tjänst** som gör att du kan välja en tjänst i listan över formulärdatamodeller (FDM) som är konfigurerade för din instans. Du kan mappa formulärfält direkt till tjänstens indataparametrar. Om du vill mappa formulärfält till utdataparametrarna använder du händelsens nyttolastalternativ för den angivna formulärdatamodellstjänsten. Dessutom kan du med redigeraren för visuella regler skapa regler för hanterare för lyckade och misslyckade åtgärder för **Invoke Service** -åtgärder baserat på dess utdataresvar. Hanterare för lyckade åtgärder hanterar den lyckade körningen av åtgärden **Anropa tjänst**, medan felhanterare åtgärdar eventuella fel som inträffar.
 
@@ -47,7 +45,7 @@ När du klickar på **[!UICONTROL Add Success Handler]** visas regelredigeraren 
 
 Du kan lägga till flera regler för att hantera lyckade svar för åtgärden **Anropa tjänst**:
 
-![Hanterare för flera lyckade åtgärder](/help/forms/assets/invoke-service-multiple-success-handlers.png){width=50%, height=50%}
+![Hanteraren för flera lyckade åtgärder](/help/forms/assets/invoke-service-multiple-success-handlers.png){width=50%, height=50%}
 
 På samma sätt kan du lägga till regler för att hantera **Invoke Service** -utdataresvaret när åtgärden inte lyckas. Bilden nedan visar regelredigeraren **[!UICONTROL Invoke Service Failure Handler]**:
 

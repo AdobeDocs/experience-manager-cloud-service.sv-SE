@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Adaptive Forms, Core Components
 exl-id: 84b95a19-c804-41ad-8f4b-5868c8444cc0
 role: User, Developer, Admin
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 2cae8bb1050bc4538f4645d9f064b227fb947d75
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,6 @@ ht-degree: 0%
 https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components).-->
 
 <!--Adaptive Form Core Components facilitates to add versionings, comments, and annotations to a form. These features helps form authors and users to enhance the form development process where they can create multiple versions of a form, collaborate and add their comments to a form, and add annotations to form components.-->
-
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
-
 
 Med adaptiva Form Core Components kan man lägga in versionshantering, kommentarer och anteckningar i blanketterna. Dessa funktioner effektiviserar formulärutvecklingsprocessen genom att användarna kan skapa och hantera flera versioner av ett formulär, delta i samverkansdiskussioner via kommentarer och bifoga anteckningar till specifika formulärkomponenter, vilket förbättrar den övergripande formuläruppbyggnadsupplevelsen.
 
@@ -34,7 +31,7 @@ Med anpassad formulärversionshantering kan du lägga till versioner i ett formu
 Så här skapar du en version av ett formulär:
 
 1. Skapa ett formulär eller använd ett befintligt formulär.
-1. I AEM går du till **[!UICONTROL Form]**>>**[!UICONTROL Forms & Documents]** och väljer ditt **formulär**.
+1. I AEM-användargränssnittet går du till **[!UICONTROL Form]**>>**[!UICONTROL Forms & Documents]** och väljer ditt **formulär**.
 1. Välj **[!UICONTROL Versions]** i listrutan till vänster.
    ![Välj ett formulär](select-a-form.png)
 1. Klicka på de **tre punkterna** som finns på den nedre panelen till vänster och klicka på **[!UICONTROL Save as Version]**.
