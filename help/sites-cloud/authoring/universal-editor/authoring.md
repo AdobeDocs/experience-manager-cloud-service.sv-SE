@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 08bcf9a65854478d2ce057e31b4c27690d1bf240
+source-git-commit: da14ed18b786c1f19d76926ed027d13a53275af3
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1395'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Se hur enkelt och intuitivt det är för skribenter att skapa innehåll med den 
 
 ## Introduktion {#introduction}
 
-Med den universella redigeraren kan du redigera alla delar av innehållet i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
+Med den universella redigeraren kan du redigera alla delar av innehållet i alla implementeringar, så att du kan leverera enastående upplevelser och öka innehållets hastighet.
 
 För att göra detta har den universella redigeraren ett intuitivt användargränssnitt som kräver minimal utbildning för att man ska kunna börja redigera material. I det här dokumentet beskrivs hur du skapar i Universell redigerare.
 
@@ -200,7 +200,7 @@ Läs det här dokumentet om du vill lära dig hur du publicerar innehåll med de
 
 Mer information om de tekniska detaljerna i Universal Editor finns i dessa utvecklardokument.
 
-* [Introduktion till universell redigering](/help/implementing/universal-editor/introduction.md) - Lär dig hur den universella redigeraren kan redigera alla delar av innehåll i alla implementeringar så att du kan leverera enastående upplevelser, öka innehållets hastighet och skapa en toppmodern utvecklarupplevelse.
+* [Introduktion till universell redigering](/help/implementing/universal-editor/introduction.md) - Lär dig hur den universella redigeraren kan redigera alla delar av innehåll i alla implementeringar så att du kan leverera enastående upplevelser och öka innehållets hastighet.
 * [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md) - Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM-program.
 * [Universell redigeringsarkitektur](/help/implementing/universal-editor/architecture.md) - Lär dig mer om arkitekturen för den universella redigeraren och hur data flödar mellan dess tjänster och lager.
 * [Attribut och typer](/help/implementing/universal-editor/attributes-types.md) - Lär dig mer om de dataattribut och datatyper som krävs för den universella redigeraren.
