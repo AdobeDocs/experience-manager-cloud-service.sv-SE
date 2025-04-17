@@ -5,9 +5,9 @@ exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 328ae6d1866a7089fb291d4872d27dc5fa1d4caa
+source-git-commit: e7c38b4103c3de4b794da3a6dfa26c6204e1c0c6
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -36,11 +36,7 @@ När du har lagt till [IP-Tillåtelselista kan det användas eller tas bort ](/h
 >
 >Om IP Tillåtelselista inte används tillåts som standard alla IP-adresser. När ett IP-Tillåtelselista används tillåts inga IP-adresser förutom adresser på IP-Tillåtelselista.
 
-## Begränsningar {#limitations}
-
-Innan du använder IP Tillåtelselista bör du vara medveten om följande begränsningar vad gäller funktioner, användning och effekt på andra funktioner.
-
-### Allmänna begränsningar för IP Tillåtelselista {#general}
+## Användningsinformation {#usage-notes}
 
 * Högst 50 IP-Tillåtelselista kan läggas till i programmet.
 * Högst 50 IP/CIDR-adresser kan läggas till i varje IP-Tillåtelselista.

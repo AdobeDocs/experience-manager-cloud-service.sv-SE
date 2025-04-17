@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda Git-undermoduler för att sammanfoga i
 exl-id: fa5b0f49-4b87-4f39-ad50-7e62094d85f4
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: dc4008a33f6a786884a9aad30096ff4f0561346c
+source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -68,14 +68,12 @@ Resultatet är en `.gitmodules`-fil som liknar följande:
 
 Se även [Git-referenshandboken](https://git-scm.com/book/en/v2/Git-Tools-Submodules) för mer information om Git-undermoduler.
 
-## Begränsningar och rekommendationer {#limitations-recommendations}
-
-Tänk på följande begränsningar när du använder Git-undermoduler med databaser som hanteras av Adobe.
+## Användningsinformation {#usage-notes}
 
 * Git-URL:en måste vara exakt i den syntax som beskrivs i föregående avsnitt.
 * Det finns bara stöd för undermoduler i roten av förgreningen.
 * Av säkerhetsskäl ska du inte bädda in autentiseringsuppgifter i Git-URL:er.
-* Om du inte behöver något annat rekommenderar Adobe att du använder tunna undermoduler genom att köra följande:
+* Om inget annat är nödvändigt rekommenderar Adobe att du använder korta undermoduler genom att köra följande:
   `git config -f .gitmodules submodule.<submodule path>.shallow true` för varje undermodul.
 * Git-undermodulreferenser lagras för specifika Git-implementeringar. Detta innebär att när ändringar görs i undermodulens databas måste implementeringen som refereras uppdateras.
 Du kan till exempel använda följande:
@@ -84,7 +82,7 @@ Du kan till exempel använda följande:
 
 ## Stöd för Git-undermodul för privata databaser {#private-repositories}
 
-Stöd för Git-undermoduler i [privata databaser](private-repositories.md) liknar vanligtvis deras användning i Adobe-databaser.
+Stöd för Git-undermoduler i [privata databaser](private-repositories.md) liknar vanligtvis deras användning med Adobe-databaser.
 
 När du har konfigurerat din `pom.xml`-fil och kört `git submodule`-kommandona måste du lägga till en `.gitmodules`-fil i rotkatalogen i aggregeringsdatabasen för att Cloud Manager ska känna igen undermodulens konfiguration.
 
@@ -92,10 +90,8 @@ När du har konfigurerat din `pom.xml`-fil och kört `git submodule`-kommandona 
 
 ![Aggregator](assets/aggregator.png)
 
-### Begränsningar och rekommendationer {#limitations-recommendations-private-repos}
+### Användningsinformation {#usage-notes-recommendations-private-repos}
 
-När du använder Git-undermoduler med privata databaser bör du tänka på följande begränsningar:
-
-* Git-URL:er för delmodulen kan vara i HTTPS- eller SSH-format, men måste peka på en GitHub.com. Det går inte att lägga till en undermodul för databaser i Adobe i en GitHub-aggregeringsdatabas eller det motsatta.
+* Git-URL:er för delmodulen kan vara i HTTPS- eller SSH-format, men måste peka på en GitHub.com. Det går inte att lägga till en Adobe-databasundermodul i en GitHub-aggregeringsdatabas eller den omvända.
 * GitHub-undermoduler måste vara tillgängliga för Adobe GitHub-appen.
-* [Begränsningarna för att använda Git-undermoduler med databaser som hanteras med Adobe ](#limitations-recommendations) gäller också.
+* [Begränsningarna med att använda Git-undermoduler med Adobe-hanterade databaser ](#limitations-recommendations) gäller också.

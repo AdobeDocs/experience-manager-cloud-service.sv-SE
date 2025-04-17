@@ -5,9 +5,9 @@ exl-id: 167da985-7f19-45b3-90a3-884817907da2
 solution: Experience Manager
 feature: Security, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d6d3374f2dd95728b2d3ed0cf6fab4092f73568
+source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1492'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Lär dig hur du kan använda anpassade behörigheter för att skapa anpassade be
 
 ## Introduktion {#introduction}
 
-Cloud Manager har en uppsättning fördefinierade roller som styr åtkomsten till olika funktioner i molnhanteraren:
+Cloud Manager har en uppsättning fördefinierade roller som styr åtkomsten till olika funktioner i Cloud Manager:
 
 * Business Owner
 * Program Manager
@@ -44,7 +44,7 @@ I det här avsnittet beskrivs dessa steg. Det kan vara praktiskt att se avsnitte
 
 >[!NOTE]
 >
->Du måste ha produktadministratörsbehörighet i Admin Console för att Adobe Experience Manager as a Cloud Service ska kunna skapa profiler och hantera behörigheter för Cloud Manager.
+>Du måste ha produktadministratörsbehörighet i Admin Console för Adobe Experience Manager as a Cloud Service för att kunna skapa profiler och hantera behörigheter för Cloud Manager.
 
 ### Skapa en ny produktprofil {#create}
 
@@ -56,7 +56,7 @@ Skapa först en produktprofil som du kan tilldela anpassade behörigheter till.
 
 ![Knappen Hantera åtkomst](assets/manage-access.png)
 
-1. Du omdirigeras till fliken **Produkter** på Admin Console, där du kan hantera användare och behörigheter för molnhanteraren. I Admin Console väljer du knappen **Ny profil** .
+1. Du omdirigeras till fliken **Produkter** i Admin Console, där du kan hantera användare och behörigheter för Cloud Manager. I Admin Console väljer du knappen **Ny profil** .
 
 ![Knappen Ny profil](assets/admin-console-new-profile.png)
 
@@ -65,11 +65,11 @@ Skapa först en produktprofil som du kan tilldela anpassade behörigheter till.
    * **Produktprofilnamn** - Ett beskrivande namn för profilen
    * **Visningsnamn** - Ett förkortat namn som visas i gränssnittet (alternativ)
    * **Beskrivning** - En informativ beskrivning av profilen som förklarar dess syfte (valfritt)
-   * **Meddela användare via e-post** - När du väljer det här alternativet meddelas användarna via e-post när de läggs till eller tas bort från profilen.
+   * **Meddela användare via e-post** - Användare får ett e-postmeddelande när de läggs till eller tas bort från den här profilen.
 
 1. Välj **Spara** när du är klar.
 
-Den nya produktprofilen sparas och visas i listan över produktprofiler på Admin Console.
+Den nya produktprofilen sparas och visas i listan över produktprofiler i Admin Console.
 
 ### Tilldela anpassade behörigheter till profil {#assign-permissions}
 
@@ -117,35 +117,35 @@ Mer information om hur du använder Admin Console finns i avsnittet **Lägg till
 Följande behörigheter är tillgängliga för att skapa anpassade profiler.
 
 | Behörighet | Beskrivning |
-|---|---|
-| Skapa program | Tillåt användare att skapa ett program |
-| Programåtkomst | Ge användarna åtkomst till program |
-| Programredigering | Tillåt användare att redigera program |
-| Miljöskapande | Tillåt användare att skapa en miljö |
-| Miljöredigering | Tillåt användare att uppdatera och redigera miljöer |
-| Miljöloggar Läs | Tillåt användare att läsa miljöloggar |
-| Hantera miljövariabler | Tillåt användare att skapa/redigera/ta bort miljökonfigurationer |
-| Miljöåterställning - skapa | Tillåt användare att skapa miljöåterställning |
-| Snabb återställning av utvecklingsmiljö | Tillåt användare att återställa snabb utvecklingsmiljö |
-| Hantera innehållskopia | Tillåt användare att hantera kopieringsåtgärder för innehåll |
-| Skapa pipeline | Tillåt användare att skapa rörledningar |
-| Ta bort pipeline | Tillåt användare att ta bort rörledningar |
-| Redigera pipeline | Tillåt användare att redigera rörledningar |
-| Godkänn/avvisa produktionsdistributioner | Tillåt användare att godkänna eller avvisa ett produktionsdistributionssteg |
-| Avbryt körning av pipeline | Tillåt användare att avbryta pipeline-körningar |
-| Körningsstart för pipeline | Tillåt användare att starta en ny pipeline-körning |
-| Åsidosätt/avvisa viktiga måttfel | Tillåt användare att åsidosätta/ignorera viktiga mätfel |
-| Produktionsdistributionsschema | Tillåt användare att schemalägga ett produktionsdistributionssteg |
-| Datainformationsåtkomst | Tillåt användare att komma åt databasinformation och generera lösenord för åtkomst |
-| Skapa databas | Tillåt användare att skapa Git-databaser |
-| Radera databas | Tillåt användare att ta bort Git-databaser |
-| Databasredigering | Tillåt användare att redigera Git-databaser |
-| Generera databaskod | Tillåt användare att generera projekt från arkityp |
-| Domännamnshantering | Tillåt användare att skapa/redigera/ta bort domännamn |
-| Hantera IP Tillåtelselista | Tillåt användare att skapa/redigera/ta bort IP tillåtelselista och IP tillåtelselista-bindning |
-| Hantera nätverksinfrastruktur | Tillåt användare att skapa/redigera/ta bort nätverksinfrastruktur |
-| SSL-certifikatshantering | Tillåt användare att skapa/redigera/ta bort SSL-certifikat |
-| New Relic Sub Account User Manage | Tillåt användare att läsa/redigera New Relic-underkontoanvändare |
+| --- | --- |
+| Skapa program | Låt användarna skapa ett program. |
+| Programåtkomst | Ge användarna tillgång till programmen. |
+| Programredigering | Låt användarna redigera program. |
+| Miljöskapande | Låt användarna skapa en miljö. |
+| Miljöredigering | Låt användare uppdatera och redigera miljöer. |
+| Miljöloggar Läs | Låt användarna läsa miljöloggar. |
+| Hantera miljövariabler | Låt användare skapa/redigera/ta bort miljökonfigurationer. |
+| Miljöåterställning - skapa | Låter användarna skapa en miljöåterställning. |
+| Återställning av snabb utvecklingsmiljö | Låt användarna återställa RDE (Rapid Development Environment). |
+| Hantera innehållskopia | Låt användarna hantera kopieringsåtgärder. |
+| Skapa pipeline | Låt användarna skapa rörledningar. |
+| Ta bort pipeline | Låt användarna ta bort rörledningar. |
+| Redigera pipeline | Låt användarna redigera rörledningar. |
+| Godkänn/avvisa produktionsdistributioner | Låt användare godkänna eller avvisa ett produktionsdistributionssteg. |
+| Avbryt körning av pipeline | Låt användarna avbryta pipeline-körningar. |
+| Körningsstart för pipeline | Låt användarna starta en ny pipeline-körning. |
+| Åsidosätt/avvisa viktiga måttfel | Låt användare åsidosätta/ignorera viktiga mätfel. |
+| Produktionsdistributionsschema | Låt användarna schemalägga ett produktionsdistributionssteg. |
+| Datainformationsåtkomst | Ge användarna åtkomst till databasinformation och generera ett lösenord för åtkomst. |
+| Skapa databas | Låt användarna skapa Git-databaser. |
+| Radera databas | Låt användarna ta bort Git-databaser. |
+| Databasredigering | Låt användarna redigera Git-databaser. |
+| Generera databaskod | Låt användarna generera ett projekt av typen arkiv. |
+| Domännamnshantering | Låt användare skapa, redigera och ta bort domännamn. |
+| Hantera IP Tillåtelselista | Gör att användare kan skapa/redigera/ta bort IP tillåtelselista och IP tillåtelselista-bindning. |
+| Hantera nätverksinfrastruktur | Låt användare skapa, redigera och ta bort nätverksinfrastruktur. |
+| SSL-certifikatshantering | Låt användare skapa, redigera eller ta bort SSL-certifikat. |
+| New Relic Sub Account User Manage | Låt användare läsa/redigera New Relic-underkontoanvändare. |
 
 ### Behörigheter på organisationsnivå {#organization-level}
 
@@ -154,8 +154,8 @@ Behörigheter på organisationsnivå avser behörigheter som alltid ges i alla p
 Följande behörigheter är behörigheter på organisationsnivå:
 
 * **Skapa program** - Med den här behörigheten kan användare skapa ett program i organisationen.
-* **Åtkomst till databasinformation** Med den här innehavar-/organisationsnivån kan användare generera användarnamn, lösenord och databas-URL för åtkomst och bidra till kundprojekt.
-   * Användarnamn och lösenord för databasåtkomst är gemensamma för alla rapporter i organisationen, men databasens URL är unik för varje program.
+* **Åtkomst till databasinformation** Med den här innehavar-/organisationsnivån kan användare generera användarnamn, lösenord och databas-URL för åtkomst och bidrag till ett kundprojekt.
+   * Användarnamnet och lösenordet för databasåtkomst är gemensamma för alla databaser i organisationen. Databas-URL:en är dock unik för varje program.
    * Mer information finns i [Åtkomst till databaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
 ## Villkor {#terms}
@@ -163,29 +163,27 @@ Följande behörigheter är behörigheter på organisationsnivå:
 Följande termer används för att skapa och hantera anpassade behörigheter och fördefinierade roller.
 
 | Term | Beskrivning |
-|---|---|
+| --- | --- |
 | Fördefinierade behörigheter | Fördefinierade roller som **Business Owner** och **Deployment Manager** som styr olika funktioner i Cloud Manager. Mer information om fördefinierade roller finns i [AEM as a Cloud Service Team och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md). |
-| Anpassade behörigheter | Med funktionerna i Cloud Manager kan användare skapa behörighetsprofiler för att definiera roller som styr funktioner som stöds i Cloud Manager |
-| Produktprofil | Skapat i Admin Console för att hantera konfigurerbara behörigheter som är tillämpliga för användare som är en del av behörighetsprofilen |
-| Konfigurerbar behörighet | Cloud Manager-behörigheter som kan konfigureras i behörighetsprofilen |
-| Behörighetsobjekt | Ett program, en miljö eller en pipeline-resurs där en behörighet kan tillämpas |
+| Anpassade behörigheter | Med funktionerna i Cloud Manager kan användare skapa behörighetsprofiler för att definiera roller som styr de funktioner som stöds i Cloud Manager. |
+| Produktprofil | Skapat i Admin Console för att hantera konfigurerbara behörigheter som gäller för användare som ingår i behörighetsprofilen. |
+| Konfigurerbar behörighet | Cloud Manager-behörigheter som du kan konfigurera i behörighetsprofilen. |
+| Behörighetsobjekt | Ett program, en miljö eller en pipeline-resurs som en behörighet kan tillämpas på. |
 
 Behörighetsobjekt avser det område där behörigheten tillämpas. Vanligtvis är det något av följande.
 
 | Typ av behörighetsobjekt | Exempel | Beskrivning |
-|---|---|---|
+| --- | --- | --- |
 | Organisation | organisation:företagA | Alla tillämpliga resurser i en organisation. En resurs kan vara ett program, en miljö eller en pipeline. Om användaren lägger till en organisation för någon behörighet har alla nya resurser i den organisationen också den behörigheten. |
-| Program | Program A | Alla tillämpliga resurser i ett program |
-| Miljö | Program A: miljö | Tillämpligt på en viss miljö |
-| Pipeline | Program A: Pipeline | Gäller för en viss rörledning |
+| Program | Program A | Alla tillämpliga resurser i ett program. |
+| Miljö | Program A: miljö | Gäller en viss miljö. |
+| Pipeline | Program A: Pipeline | Gäller en viss rörledning. |
 
-## Begränsningar {#limitations}
+## Användningsinformation {#usage-notes}
 
-Tänk på följande begränsningar när du använder anpassade behörigheter.
-
-* Anpassad behörighetsprofil listar även AMS-program, -miljöer och -pipelines när behörigheter konfigureras.
-* Resurser som program, miljö och pipeline som skapats i Cloud Manager kan ta upp till två minuter att visa i Admin Console för behörighetskonfigurationen.
-* I sällsynta fall där anpassade behörighetstjänster inte svarar är fördefinierade profiler fortfarande tillgängliga och användare i fördefinierade profiler fortfarande har lämplig åtkomst.
+* En anpassad behörighetsprofil visar även AMS-program, -miljöer och -pipelines när behörigheter konfigureras.
+* Resurser som program, miljö och pipeline som skapats i Cloud Manager kan ta upp till två minuter att visa i Admin Console för behörighetskonfiguration.
+* I sällsynta fall där en anpassad behörighetstjänst inte svarar är fördefinierade profiler fortfarande tillgängliga och användare i fördefinierade profiler fortfarande har lämplig åtkomst.
 
 ## Vanliga frågor {#faq}
 
@@ -200,7 +198,7 @@ Mer information om fördefinierade roller finns i [AEM as a Cloud Service Team o
 
 ### Vad händer med fördefinierade behörighetsprofiler med introduktion till anpassade profiler?
 
-Standardproduktprofiler och molnhanterarroller fungerar fortfarande på samma sätt som tidigare.
+Standardproduktprofiler och Cloud Manager-roller fungerar fortfarande på samma sätt som tidigare.
 
 ### Kan jag redigera fördefinierade behörighetsprofiler?
 

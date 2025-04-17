@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 7ce39020870943243e2d48aa66370f2cca9c2ac0
+source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -153,9 +153,7 @@ Validerade privata databaser kan associeras med [rörledningar i full hög och i
 
 
 
-## Begränsningar {#limitations}
-
-Vissa begränsningar gäller när du använder privata GitHub Cloud-databaser med Cloud Manager.
+## Användningsinformation {#usage-notes}
 
 * Rörledningar för webbnivå och konfiguration stöds inte i privata databaser.
 * Ingen Git-tagg skapas och skickas när privata databaser används i produktion av rörledningar i en hel hög.

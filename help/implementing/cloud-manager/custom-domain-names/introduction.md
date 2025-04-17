@@ -5,9 +5,9 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2724eaaaade94be89d33da5eecec4444cf851bd0
+source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -38,14 +38,14 @@ Du kan köpa ett domännamn från en domännamnsregistrator, ett företag eller 
 
 ## Anpassade domännamn och ta med dina egna CDN:er {#byo-cdn}
 
-AEM as a Cloud Service har en inbyggd CDN-tjänst (Content Delivery Network) som även gör att du kan använda ditt eget CDN tillsammans med AEM. Anpassade domäner kan installeras antingen i det AEM CDN eller i ett CDN som du hanterar.
+AEM as a Cloud Service har en inbyggd CDN-tjänst (Content Delivery Network) som även gör att du kan använda ditt eget CDN tillsammans med AEM. Anpassade domäner kan installeras antingen i det CDN som hanteras av AEM eller i ett CDN som du hanterar.
 
-* Cloud Manager hanterar anpassade domännamn och certifikat som installeras i det AEM hanterade CDN.
+* Cloud Manager hanterar anpassade domännamn och certifikat som installeras i det AEM-hanterade CDN.
 * Anpassade domännamn och certifikat som installeras i ett BYO CDN hanteras direkt i det CDN:et.
 
-**Domäner som hanteras i ditt eget CDN kräver inte installation via Cloud Manager**. De blir tillgängliga för AEM via X-Forwarded-Host och matchar de värdar som definierats i Dispatcher. Se [CDN-dokumentationen](/help/implementing/dispatcher/cdn.md).
+**Domäner som hanteras i ditt eget CDN kräver inte installation via Cloud Manager**. De görs tillgängliga för AEM via X-Forwarded-Host och matchar de värdar som definierats i Dispatcher. Se [CDN-dokumentationen](/help/implementing/dispatcher/cdn.md).
 
-I en miljö kan du ha båda domänerna installerade i det AEM hanterade CDN och installerade i ett BYO CDN.
+I en miljö kan du ha båda domänerna installerade i det AEM-hanterade CDN och installerade i ett BYO CDN.
 
 ## Arbetsflöde {#workflow}
 
@@ -63,9 +63,7 @@ Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Ma
 >
 >Att konfigurera anpassade domännamn med AEM som en molntjänst är vanligtvis en enkel process. Ibland kan dock problem med domändelegering uppstå som kan ta 1-2 arbetsdagar att lösa. Därför rekommenderar vi att du installerar domänerna långt innan de blir aktiva. Mer information finns i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
-## Begränsningar {#limitations}
-
-Det finns flera begränsningar för hur du använder anpassade domännamn med AEMaaCS.
+## Användningsinformation {#usage-notes}
 
 * Anpassade domännamn stöds i Cloud Manager endast för publicerings- och förhandsgranskningstjänster för Sites-program.
    * Anpassade domäner för författartjänster stöds inte.

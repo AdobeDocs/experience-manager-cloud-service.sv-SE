@@ -5,9 +5,9 @@ exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
+source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
 workflow-type: tm+mt
-source-wordcount: '1184'
+source-wordcount: '1185'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ _Det är bara pipeline-typen Full Stack Code som har stöd för kodskanning, fun
 
 ## Distributionsprocess {#deployment-process}
 
-Alla driftsättningar av Cloud Service följer en rullande process för att säkerställa noll driftavbrott. Mer information finns i [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work).
+Alla Cloud Service-installationer följer en rullande process för att säkerställa noll driftavbrott. Mer information finns i [Hur rullande distributioner fungerar](/help/implementing/deploying/overview.md#how-rolling-deployments-work).
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ När du har [konfigurerat produktionsflödet](/help/implementing/cloud-manager/c
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program som du vill distribuera kod för.
 
-1. Klicka på **Distribuera** på sidan **Översikt** i åtgärdsområdet.
+1. Klicka på **Distribuera** i call-to-action-området på sidan **Översikt**.
 
    ![CTA](assets/deploy-code1.png)
 
@@ -89,16 +89,16 @@ Fas **Scentestning** omfattar följande steg:
 
 ### Produktionsdistributionsfas {#production-deployment}
 
-Processen för att distribuera till produktionstopologier skiljer sig något för att minimera påverkan på besökare på en AEM.
+Processen för att distribuera till produktionstopologier skiljer sig något för att minimera effekten för besökare på en AEM-webbplats.
 
 Produktionsinstallationer följer i allmänhet samma steg som tidigare, men på ett rullande sätt. Följande steg ingår:
 
-1. Distribuera AEM som ska författas.
+1. Distribuera AEM-paket till författaren.
 1. Koppla loss `dispatcher1` från belastningsutjämnaren.
-1. Distribuera AEM till `publish1` och Dispatcher-paketet till `dispatcher1`, rensa Dispatcher-cachen.
+1. Distribuera AEM-paket till `publish1` och Dispatcher-paketet till `dispatcher1`, rensa Dispatcher-cachen.
 1. Placera `dispatcher1` i belastningsutjämnaren igen.
 1. Koppla loss `dispatcher2` från belastningsutjämnaren när `dispatcher1` är tillbaka i tjänsten.
-1. Distribuera AEM till `publish2` och Dispatcher-paketet till `dispatcher2`, rensa Dispatcher-cachen.
+1. Distribuera AEM-paket till `publish2` och Dispatcher-paketet till `dispatcher2`, rensa Dispatcher-cachen.
 1. Placera `dispatcher2` i belastningsutjämnaren igen.
 
 Den här processen fortsätter tills distributionen har nått alla utgivare och utgivare i topologin.
@@ -134,7 +134,7 @@ I sådana fall där en omkörning är möjlig visas statussidan för produktions
 >
 >I en omkörning markeras byggsteget i användargränssnittet för att reflektera att det är kopieringsartefakter och inte återskapande.
 
-### Begränsningar {#limitations}
+### Användningsinformation {#usage-notes}
 
 * Det går bara att köra produktionsdistributionssteget på nytt för den senaste körningen.
 * Omkörning är inte tillgängligt för push-uppdateringskörningar. Om den senaste körningen är en push-uppdateringskörning går det inte att utföra om.
@@ -190,7 +190,7 @@ Den här länken är bara tillgänglig för produktionsdistributionssteget.
 
 Syntaxen för HAL-länkens href-värde är bara ett exempel. Det faktiska värdet ska alltid läsas från HAL-länken och inte genereras.
 
-Om du skickar en PUT-begäran till den här slutpunkten får du ett svar från 2010 om det lyckas, och svarstexten är representationen av den nya körningen. Det här arbetsflödet liknar att starta en vanlig körning via API:t.
+Om en PUT-begäran skickas till den här slutpunkten genereras ett 201-svar om det lyckas, och svarsbrödtexten är representationen av den nya körningen. Det här arbetsflödet liknar att starta en vanlig körning via API:t.
 
 #### Identifiera en körning på nytt {#identify-reexecution}
 

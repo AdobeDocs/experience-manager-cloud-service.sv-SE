@@ -5,9 +5,9 @@ exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 17306cf0877513d1412ffba311bd5d601edec062
+source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ I sandlådeprogram skapas automatiskt. När du [skapar ett sandlådeprogram](/he
 
 Ett sandlådeprogram har bara en utvecklingsmiljö.
 
-## Begränsningar och villkor {#limitations}
+## Användningsnoteringar och villkor {#usage-notes-conditions}
 
 Eftersom de inte är avsedda för direkttrafik har sandlådeprogram vissa begränsningar och villkor för användningen, vilket skiljer dem från produktionsprogrammen.
 
@@ -49,6 +49,6 @@ Eftersom de inte är avsedda för direkttrafik har sandlådeprogram vissa begrä
 | Inga ytterligare publiceringsregioner | [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) är inte tillgängliga i sandlådeprogram. |
 | 99,99 % SLA | [99.99% SLA](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md#sla) gäller inte för sandlådeprogram. |
 | Inga avancerade nätverk | [Avancerade nätverksfunktioner](/help/security/configuring-advanced-networking.md) (t.ex. självbetjäning för VPN, portar som inte är standard, dedikerade IP-adresser för utgångar och så vidare) är inte tillgängliga i sandlådeprogram. |
-| Inga automatiska AEM | AEM uppdateras inte automatiskt i sandlådeprogram, men kan tillämpas manuellt i miljöer i ditt sandlådeprogram.<br> ・ En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.<br> ・ En manuell uppdatering av antingen en produktions- eller staging-miljö uppdaterar automatiskt den andra. Miljöuppsättningen Production+Stage måste finnas i samma AEM.<br>Mer information finns i [AEM versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).<br>Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment). |
+| Inga automatiska AEM-uppdateringar | AEM-uppdateringar skickas inte automatiskt till sandlådeprogram, men kan tillämpas manuellt i miljöer i ditt sandlådeprogram.<br> ・ En manuell uppdatering kan bara köras när målmiljön har en korrekt konfigurerad pipeline.<br> ・ En manuell uppdatering av antingen en produktions- eller staging-miljö uppdaterar automatiskt den andra. Miljöuppsättningen Production+Stage måste finnas i samma AEM-release.<br>Mer information finns i [AEM-versionsuppdateringar](/help/implementing/deploying/aem-version-updates.md).<br>Mer information om hur du uppdaterar en miljö finns i [Uppdatera miljö](/help/implementing/cloud-manager/manage-environments.md#updating-dev-environment). |
 | Ingen teknisk support | Eftersom ett sandlådeprogram vanligtvis skapas för att användas i utbildningssyfte, för att köra demos, aktivering eller POC (konceptbevis), är teknisk support inte tillgänglig för problem som uppstår i ett sandlådeprogram.<br>Om du får problem med att skapa och hantera dina sandlådeprogram omfattas de här problemen av teknisk support. |
 | Viloläge och borttagning | Miljöer i ett sandlådeprogram försätts automatiskt i viloläge efter åtta timmars inaktivitet. Sandlådemiljöer tas bort efter sex sammanhängande månader i viloläge.<br>Se [Vilolägen och Fristående sandlådemiljöer](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/hibernating-environments.md) för mer information om hur du frigör miljöer och tar bort sandlådor automatiskt. |

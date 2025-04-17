@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
+source-git-commit: e470244d2b6e039f47d06c332a0fb98cff1b0433
 workflow-type: tm+mt
 source-wordcount: '6152'
 ht-degree: 1%
@@ -1193,7 +1193,7 @@ ht-degree: 1%
          + [Hantera databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/managing-repositories.md)
          + [Lägg till en Adobe-databas](/help/implementing/cloud-manager/managing-code/adobe-repositories.md)
          + [Lägg till en privat databas](/help/implementing/cloud-manager/managing-code/private-repositories.md)
-         + [Lägg till en extern databas (begränsad Beta)](/help/implementing/cloud-manager/managing-code/external-repositories.md)
+         + [Lägg till en extern databas (tidig Adobe)](/help/implementing/cloud-manager/managing-code/external-repositories.md)
          + [Åtkomstdatabaser](/help/implementing/cloud-manager/managing-code/accessing-repos.md)
          + [Stöd för Git-undermodul](/help/implementing/cloud-manager/managing-code/git-submodules.md)
          + [Använd Git med Cloud Manager](/help/implementing/cloud-manager/managing-code/integrating-with-git.md)
