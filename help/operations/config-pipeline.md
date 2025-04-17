@@ -1,19 +1,19 @@
 ---
 title: Använda konfigurationsförlopp
-description: Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer av AEM as a Cloud Service, t.ex. inställningar för vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
+description: Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer i AEM as a Cloud Service, till exempel inställningar för vidarebefordran av loggfiler, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 0b4ed7a99400bb5f91f513bbcd01862cdced03c5
+source-git-commit: 4c166193ec464bb66fe00ff648c2c449ab5b3eab
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '1024'
 ht-degree: 0%
 
 ---
 
 # Använda konfigurationsförlopp {#config-pipelines}
 
-Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer av AEM as a Cloud Service, t.ex. inställningar för vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
+Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer i AEM as a Cloud Service, till exempel inställningar för vidarebefordran av loggfiler, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
 
 ## Ökning {#overview}
 
@@ -46,7 +46,8 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 | [Grundläggande autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#basic-auth) | `CDN` | Deklarera användarnamn och lösenord för en grundläggande autentiseringsdialogruta som skyddar vissa URL:er. |
 | [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM-databasen genom att deklarera regler för när innehållsversioner ska rensas |
 | [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att ange regler för när loggarna ska rensas |
-| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, DataDig, HTTPS, Elasticsearch, Splunk) |
+| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, Datadog, HTTPS, Elasticsearch, Splunk |
+| [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Detta krävs för användning av OpenAPI-baserade API:er som kräver autentisering |
 
 ## Skapa och hantera konfigurationsförlopp {#creating-and-managing}
 
