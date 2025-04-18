@@ -1,5 +1,5 @@
 ---
-title: Om AEM Launchpad &ndash; tidig Adobe
+title: Om AEM Launchpad
 description: Läs mer om Adobe Experience Manager Launchpad.
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -7,18 +7,19 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: 1bfa47e1-fb2f-4b68-ac69-4618a9e4a5f4
-source-git-commit: 9368fb64b1dd9ce83094117e184b532119ce22e4
+source-git-commit: c389e136b315c8361d5b8c78bddba09968f68541
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
-# Om AEM Launchpad - tidig Adobe {#aem-launchpad}
+# Om AEM Launchpad {#aem-launchpad}
 
 AEM Launchpad är en central startpunkt för hantering av innehåll, resurser och webbplatser i Adobe Experience Manager. AEM Launchpad är utformat för att leverera en personaliserad upplevelse och låter dig navigera i AEM ekosystem sömlöst efter dina roller och mål. Det är en guide som ger viktiga insikter och rekommenderade åtgärder som hjälper er att uppnå era mål på ett effektivt sätt. AEM Launchpad har en tydlig och personlig layout och ger snabb åtkomst till viktiga verktyg, vilket ger en smidig och effektiv upplevelse för alla AEM-funktioner.
 
-AEM Launchpad är tillgängligt för användare som är tidiga och har en optimerad upplevelse som fokuserar på att förbättra arbetsflöden, prioritera mål och leverera resultat. Om du väljer att delta kan du påverka utvecklingen av AEM Launchpad genom att ge feedback som hjälper till att forma framtiden och som ökar värdet för hela AEM-communityn.
+<!--
+Available to early adopters, AEM Launchpad offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence AEM Launchpad's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
 
 ## AEM Launchpad - stäng {#aem-launchpad-about}
 

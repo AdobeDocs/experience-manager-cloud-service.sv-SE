@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en extern databas i Cloud Manager. Clo
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: 186c4cfc11bcab38b0b9b74143cabbd2af317a81
+source-git-commit: a01bda5218b7cba488c490b6c29e5f5a535416d5
 workflow-type: tm+mt
-source-wordcount: '2307'
+source-wordcount: '1866'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,6 @@ Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
 1. Ange en åtkomsttoken för den externa databasen.
 1. Validera ägarskap för den privata GitHub-databasen.
 1. [Konfigurera en webkrok](#configure-webhook) till en extern databas.
-
 
 
 ## Lägga till en extern databas {#add-ext-repo}
@@ -212,90 +211,5 @@ Följande beteenden gäller:
 * Kontrollera att webboks-URL:en innehåller en giltig API-nyckel.
 * Kontrollera att webbhothändelser är korrekt konfigurerade i Git-leverantörsinställningarna.
 * Om PR-validering eller utlösare för pipeline inte fungerar kontrollerar du att webkrockhemligheten är uppdaterad både i Cloud Manager och i din Git-leverantör.
-
-
-## Distribuera till en snabb utvecklingsmiljö från externa Git-leverantörer {#deploy-to-rde}
-
->[!NOTE]
->
->Den här funktionen är tillgänglig via programmet Tidig Adobe. Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [CloudManager_BYOG@adobe.com](mailto:cloudmanager_byog@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
-
-Cloud Manager har stöd för att distribuera kod till Rapid Development Environment (RDE) direkt från externa Git-leverantörer när du använder [Bring Your Own Git (BYOG)-konfigurationen](/help/implementing/cloud-manager/managing-code/external-repositories.md).
-
-Distribuering till RDE från en extern Git-databas kräver följande:
-
-* Användning av en extern Git-databas som är integrerad med Cloud Manager (BYOG-konfiguration).
-* Ditt projekt måste ha en eller flera RDE-miljöer tilldelade.
-* Om du använder `github.com` måste du granska och godkänna den uppdaterade GitHub-appinstallationen för att kunna ge de nya behörigheter som krävs.
-
-**Användningsinformation**
-
-* Distribution till RDE stöds för närvarande bara för AEM-innehåll och Dispatcher-paket.
-* Distribution av andra pakettyper (till exempel fullständiga AEM-programpaket) stöds ännu inte.
-* Det går inte att återställa en RDE-miljö med hjälp av en kommentar. Kunderna måste använda de befintliga AIO CLI-kommandona, som [beskrivs här](/help/implementing/developing/introduction/rapid-development-environments.md).
-
-**Så här fungerar det**
-
-1. **Meddelande om validering av kodkvalitet.**
-
-   När en pull-begäran (PR) utlöser en körning av en pipeline för kodkvalitet visar valideringsresultaten om distributionen kan fortsätta till en RDE-miljö.
-
-   Så här ser det ut på GitHub Enterprise:
-   ![Meddelande om validering av kodkvalitet på GitHub Enterprise](/help/implementing/cloud-manager/managing-code/assets/rde-github-enterprise-code-quality-validation-message.png)
-
-   Så här ser det ut på GitLab:
-   ![Meddelande om validering av kodkvalitet på GitLab](/help/implementing/cloud-manager/managing-code/assets/rde-gitlab-code-quality-validation-message.png)
-
-   Så här ser det ut på Bitbucket:
-   ![Meddelande om validering av kodkvalitet på Bitbucket](/help/implementing/cloud-manager/managing-code/assets/rde-bitbucket-code-quality-validation-message.png)
-
-1. **Utlös distributionen med en kommentar.**
-
-   Om du vill initiera distributionen lägger du till en kommentar i PR i följande format: `deploy on rde-environment-<envName>`
-
-   ![Utlös distributionen med en kommentar](/help/implementing/cloud-manager/managing-code/assets/rde-trigger-deployment-using-comment.png)
-
-   `<envName>` måste matcha namnet på en befintlig RDE-miljö. Om namnet inte hittas returneras en kommentar som anger att miljön är ogiltig.
-
-   Om miljöstatusen inte är klar får du följande kommentar:
-
-   ![Miljön är inte klar att distribueras](/help/implementing/cloud-manager/managing-code/assets/rde-environment-not-ready.png)
-
-
-
-
-1. **Miljökontroll och artefaktdistribution.**
-
-   Om den lokala utvecklingsmiljön är klar lägger Cloud Manager ut en ny check till PR.
-
-   Så här ser det ut på GitHub Enterprise:
-
-   ![Status för miljön på GitHub](/help/implementing/cloud-manager/managing-code/assets/rde-github-environment-status-is-ready.png)
-
-   Så här ser det ut på GitLab:
-
-   ![Miljöstatus på GitLab](/help/implementing/cloud-manager/managing-code/assets/rde-gitlab-deployment-1.png)
-
-   Så här ser det ut på Bitbucket:
-
-   ![Status för miljön på Bitbucket](/help/implementing/cloud-manager/managing-code/assets/rde-bitbucket-deployment-1.png)
-
-
-1. **Distributionsmeddelandet har slutförts.**
-
-   När distributionen är klar skickar Cloud Manager ett meddelande med en sammanfattning av de artefakter som distribuerats till målmiljön.
-
-   Så här ser det ut på GitHub Enterprise:
-
-   ![Distributionsstatus för miljön på GitHub](/help/implementing/cloud-manager/managing-code/assets/rde-github-environment-deployed-artifacts.png)
-
-   Så här ser det ut på GitLab:
-
-   ![Distributionsstatus för miljön på GitLab](/help/implementing/cloud-manager/managing-code/assets/rde-gitlab-deployment-2.png)
-
-   Så här ser det ut på Bitbucket:
-
-   ![Distributionsstatus för miljön på Bitbucket](/help/implementing/cloud-manager/managing-code/assets/rde-bitbucket-deployment-2.png)
-
 
 
