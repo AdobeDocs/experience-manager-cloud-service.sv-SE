@@ -4,15 +4,20 @@ description: Läs mer om Generera variationer, som kan hämtas från AEM as a Cl
 exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
 feature: Generate Variations
 role: Admin, Architect, Developer
-source-git-commit: def1b808be7e90b4cba79ccbfa81da936be58c54
+source-git-commit: 85489b9d2c774af2f82efe4cde406d6d33057d4e
 workflow-type: tm+mt
-source-wordcount: '3272'
+source-wordcount: '3287'
 ht-degree: 0%
 
 ---
 
 
 # Generera variationer {#generate-variations}
+
+
+>[!NOTE]
+>
+>Vi rekommenderar att du använder [Generera variationer som är integrerade i AEM-redigerare](/help/generative-ai/generate-variations-integrated-editor.md) eftersom den version som beskrivs på den här sidan kommer att bli inaktuell i framtiden.
 
 Om du letar efter ett sätt att optimera de digitala kanalerna och snabba upp innehållsskapandet kan du använda Generera variationer. Generate Variations (Generate Variations) använder generativ artificiell intelligens (AI) för att skapa innehållsvariationer baserat på uppmaningar. Dessa uppmaningar tillhandahålls antingen av Adobe eller skapas, och hanteras av användare. När du har skapat varianter kan du använda innehållet på webbplatsen och även mäta hur de fungerar med funktionen [Experimentation](https://www.aem.live/docs/experimentation) i [Edge Delivery Services](/help/edge/overview.md).
 
@@ -25,10 +30,6 @@ Du kan [komma åt Generera variationer](#access-generate-variations) från:
 >[!NOTE]
 >
 >För att kunna använda Generate Variations måste du se till att [åtkomstkraven](#access-prerequisites) uppfylls.
-
->[!NOTE]
->
->Du har även åtkomst till [Generera variationer som är integrerade i AEM-redigerare](/help/generative-ai/generate-variations-integrated-editor.md).
 
 Då kan du:
 

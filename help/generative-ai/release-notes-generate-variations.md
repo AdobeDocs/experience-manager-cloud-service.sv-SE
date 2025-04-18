@@ -4,9 +4,9 @@ description: Versionsinformation för Generera variationer, tillgänglig från A
 exl-id: caf85bae-3cce-4083-ab6e-e2637ff5afce
 feature: Release Information
 role: Admin
-source-git-commit: def1b808be7e90b4cba79ccbfa81da936be58c54
+source-git-commit: 85489b9d2c774af2f82efe4cde406d6d33057d4e
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Du kan [komma åt Generera variationer](/help/generative-ai/generate-variations-
 
 >[!NOTE]
 >
->Den tidigare versionen av [Generate Variations kan fortfarande nås direkt](/help/generative-ai/generate-variations.md).
+>Vi rekommenderar att du använder version 3.0.0, eftersom den tidigare versionen av [Generate Variations fortfarande kan nås direkt](/help/generative-ai/generate-variations.md), även om den kommer att bli inaktuell i framtiden.
 
 ### 2.2.0 {#release-notes-2-2-0}
 
