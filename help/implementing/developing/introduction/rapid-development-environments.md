@@ -4,9 +4,9 @@ description: Lär dig hur du använder miljöer för snabb utveckling för snabb
 exl-id: 1e9824f2-d28a-46de-b7b3-9fe2789d9c68
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: bd0c83098f19f8cf7cad41233f043c608be39a0c
+source-git-commit: 68937e844712ad639a495e87363d49a8bef25e05
 workflow-type: tm+mt
-source-wordcount: '5390'
+source-wordcount: '5392'
 ht-degree: 0%
 
 ---
@@ -81,18 +81,18 @@ När du har lagt till en RDE för programmet med Cloud Manager kan du interagera
 
 >[!IMPORTANT]
 >
->Kontrollera att version 20 av [Node och NPM är installerade](https://nodejs.org/en/download/) så att Adobe I/O CLI och relaterade plugin-program fungerar som de ska.
+>Kontrollera att version 20 av [Node och NPM är installerade](https://nodejs.org/en/download/) så att Adobe I/O (AIO) CLI och relaterade plugin-program fungerar som de ska.
 
 
-1. Installera Adobe I/O CLI-verktygen enligt den här [proceduren](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/).
-1. Installera Adobe I/O CLI tools AEM RDE plugin:
+1. Installera AIO CLI-verktygen enligt den här [proceduren](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/).
+1. Installera AIO CLI-verktygen för AEM RDE-plugin:
 
    ```
    aio plugins:install @adobe/aio-cli-plugin-aem-rde
    aio plugins:update
    ```
 
-1. Logga in med AIR-klienten.
+1. Logga in med Adobe I/O-klienten (AIO).
 
    ```
    aio login
@@ -473,6 +473,60 @@ Logs:
 >
 >Om du skapade din RDE före april 2023 och stöter på `UNEXPECTED_API_ERROR` när du använder funktionen för frontend för första gången kan det bero på en inaktuell konfiguration. Åtgärda problemet genom att ta bort miljön och skapa en ny.
 
+### Kontrollera RDE-status {#checking-rde-status}
+
+Du kan använda RDE CLI för att kontrollera om miljön är klar att distribueras till, som vilka distributioner som har gjorts via RDE-pluginen.
+
+Kör följande:
+
+`aio aem:rde:status`
+
+Returnerar med följande:
+
+```
+Info for cm-p12345-e987654
+Environment: Ready
+- Bundles Author:
+ com.adobe.granite.sample.demo-1.0.0.SNAPSHOT
+- Bundles Publish:
+ com.adobe.granite.sample.demo-1.0.0.SNAPSHOT
+- Configurations Author:
+ com.adobe.granite.demo.MyServlet
+- Configurations Publish:
+ com.adobe.granite.demo.MyServlet
+```
+
+Om kommandot returnerar en anteckning om instanser som distribueras kan du fortsätta och utföra nästa uppdatering, men den senaste uppdateringen kanske inte visas på instansen än.
+
+### Visa distributionshistorik {#show-deployment-history}
+
+Du kan kontrollera historiken för distributioner som gjorts till RDE genom att köra:
+
+`aio aem:rde:history`
+
+som returnerar ett svar i form av:
+
+`#1: deploy completed for content-package aem-guides-wknd.all-2.1.0.zip on author,publish - done by 029039A55D4DE16A0A494025@AdobeID at 2022-09-12T14:41:55.393Z`
+
+### Ta bort från RDE {#deleting-from-rde}
+
+Du kan använda CLI-verktygen för att ta bort konfigurationer och paket som du tidigare distribuerat till RDE. Använd kommandot `status` om du vill se en lista över vad som kan tas bort, som innehåller `bsn` för paket och `pid` om det finns konfigurationer att referera till i kommandot delete.
+
+Om till exempel `com.adobe.granite.demo.MyServlet.cfg.json` har installerats är `bsn` bara `com.adobe.granite.demo.MyServlet`, utan suffixet **cfg.json**.
+
+Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem återställer du den lokala lagringsplatsen, som återgår till standardläget.
+
+Se exemplet nedan för mer information:
+
+```
+aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
+#13: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on author - done by karl at 2022-09-12T22:01:01.955Z
+#14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
+```
+
+Mer information och demonstration finns i videosjälvstudien [om hur du använder RDE-kommandon (10:01)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use).
+
+
 ## Distribuera till en RDE från externa Git-leverantörer {#deploy-to-rde}
 
 >[!NOTE]
@@ -491,7 +545,7 @@ Distribuering till RDE från en extern Git-databas kräver följande:
 
 * Distribution till RDE stöds för närvarande bara för AEM-innehåll och Dispatcher-paket.
 * Distribution av andra pakettyper (till exempel fullständiga AEM-programpaket) stöds ännu inte.
-* Det går inte att återställa en RDE-miljö med hjälp av en kommentar. Kunderna måste använda de befintliga AIO CLI-kommandona, som [beskrivs här](/help/implementing/developing/introduction/rapid-development-environments.md).
+* Det går inte att återställa en RDE-miljö med hjälp av en kommentar. I stället måste du använda det befintliga AIO CLI-återställningskommandot, som [beskrivs här](/help/implementing/developing/introduction/rapid-development-environments.md#reset-the-rde-command-line).
 
 **Så här fungerar det**
 
@@ -553,58 +607,7 @@ Distribuering till RDE från en extern Git-databas kräver följande:
    ![Distributionsstatus för miljön på Bitbucket](/help/implementing/developing/introduction/assets/rde-bitbucket-deployment-2.png)
 
 
-### Kontrollera RDE-status {#checking-rde-status}
 
-Du kan använda RDE CLI för att kontrollera om miljön är klar att distribueras till, som vilka distributioner som har gjorts via RDE-pluginen.
-
-Kör följande:
-
-`aio aem:rde:status`
-
-Returnerar med följande:
-
-```
-Info for cm-p12345-e987654
-Environment: Ready
-- Bundles Author:
- com.adobe.granite.sample.demo-1.0.0.SNAPSHOT
-- Bundles Publish:
- com.adobe.granite.sample.demo-1.0.0.SNAPSHOT
-- Configurations Author:
- com.adobe.granite.demo.MyServlet
-- Configurations Publish:
- com.adobe.granite.demo.MyServlet
-```
-
-Om kommandot returnerar en anteckning om instanser som distribueras kan du fortsätta och utföra nästa uppdatering, men den senaste uppdateringen kanske inte visas på instansen än.
-
-### Visa distributionshistorik {#show-deployment-history}
-
-Du kan kontrollera historiken för distributioner som gjorts till RDE genom att köra:
-
-`aio aem:rde:history`
-
-som returnerar ett svar i form av:
-
-`#1: deploy completed for content-package aem-guides-wknd.all-2.1.0.zip on author,publish - done by 029039A55D4DE16A0A494025@AdobeID at 2022-09-12T14:41:55.393Z`
-
-### Tar bort från RDE {#deleting-from-rde}
-
-Du kan använda CLI-verktygen för att ta bort konfigurationer och paket som du tidigare distribuerat till RDE. Använd kommandot `status` om du vill se en lista över vad som kan tas bort, som innehåller `bsn` för paket och `pid` om det finns konfigurationer att referera till i kommandot delete.
-
-Om till exempel `com.adobe.granite.demo.MyServlet.cfg.json` har installerats är `bsn` bara `com.adobe.granite.demo.MyServlet`, utan suffixet **cfg.json**.
-
-Det går inte att ta bort innehållspaket eller innehållsfiler. Om du vill ta bort dem återställer du den lokala lagringsplatsen, som återgår till standardläget.
-
-Se exemplet nedan för mer information:
-
-```
-aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
-#13: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on author - done by karl at 2022-09-12T22:01:01.955Z
-#14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
-```
-
-Mer information och demonstration finns i videosjälvstudien [om hur du använder RDE-kommandon (10:01)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use).
 
 ## Loggar {#rde-logging}
 
