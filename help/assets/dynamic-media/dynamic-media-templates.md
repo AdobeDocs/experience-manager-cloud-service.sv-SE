@@ -4,9 +4,9 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 184149144d1f8d204241fcc477f937fa7c225895
+source-git-commit: c9a4a361561cb03b17e0b931b8946116791c62e1
 workflow-type: tm+mt
-source-wordcount: '2962'
+source-wordcount: '3026'
 ht-degree: 0%
 
 ---
@@ -83,12 +83,13 @@ Om du vill skapa en [!DNL Dynamic Media]-mall måste du ha:
    * **[!UICONTROL [!DNL Dynamic Media] sync mode]** som är inställd på **[!UICONTROL Disabled by default]** på **[!UICONTROL Edit [!DNL Dynamic Media] Configuration page]** används inte på alla AEM-mappar (**[!UICONTROL Sync all content]** är avmarkerad). Mer information finns i [Konfigurera Dynamic Media Cloud Service](/help/assets/dynamic-media/config-dm.md).
    * **[!UICONTROL [!DNL Dynamic Media] sync mode]** är inställt på **[!UICONTROL Enable for subfolders]** för målmappen eller undermappen där du vill spara mallen när den har skapats. Mer information finns i [Konfigurera [!DNL Dynamic Media] Cloud Service](/help/assets/dynamic-media/config-dm.md).
 
-## Skapa mallen [!DNL Dynamic Media] WYSIWYG{#how-to-create-dynamic-media-wysiwyg-template}
+## Skapa mallen [!DNL Dynamic Media]{#how-to-create-dynamic-media-template}
 
 Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
 1. Navigera till din [!DNL Assets View] och [skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. Mappträdet i ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replikeras i **[!UICONTROL Dynamic Media Assets]**. Spara mallen [!DNL Dynamic Media] i den här [!UICONTROL Dynamic Media Assets]-mappen.
-1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) om du vill använda dem för att skapa mallen. Du måste publicera bilder för att kunna generera mallens leverans-URL, som kan användas i program längre fram i kedjan.
+1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) för att använda dem när du skapar mallen. Du måste publicera bilder för att kunna generera mallens leverans-URL när du har skapat mallen, som kan användas i program längre fram i kedjan.
+1. [Utför överföringen och publiceringen av resursen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) för att överföra och publicera teckensnittsfilen samtidigt till AEM och Dynamic Media för att använda ett annat teckensnitt än standardteckensnittsfamiljen Adobe Sans F2 i textlagret. [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se till att [bearbeta om](/help/assets/reprocessing-assets-view.md) de äldre teckensnitten (på startsidan för [!DNL Assets View] klickar du på ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigerar till teckensnittsfilens plats, markerar teckensnittsfilen åt gången och klickar på ![Bearbeta igen](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**) för att använda dem när du skapar mallen. Mer information om teckensnitt finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).
 1. [Skapa en tom arbetsyta](#create-a-canvas)
 1. [Lägga till bilder på arbetsytan](#add-images-to-the-canvas)
 1. [Lägga till textlager på arbetsytan](#add-text-to-the-canvas)
@@ -158,11 +159,7 @@ Gör så här för att lägga till textlager på arbetsytan:
 1. Välj **[!UICONTROL Smart Text Resize]** på egenskapspanelen om du automatiskt vill justera textlängden och teckenstorleken så att den passar i det angivna området.
    ![bästa anpassningsbara banners](/help/assets/assets/add-text-layer.png)
 
-Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen.
-
->[!NOTE]
->
-> Om du vill använda ett annat teckensnitt än standardteckensnittsfamiljen Adobe Sans F2 måste du överföra och publicera teckensnittsfilen till [!AEM Assets] och [!DNL Dynamic Media]. Om du har några gamla teckensnitt i din instans måste du [bearbeta om](/help/assets/reprocessing-assets-view.md) för att kunna visa dem i mallredigeraren.
+Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen. Se [steg 3 i avsnittet Skapa [!DNL Dynamic Media] mall](#how-to-create-dynamic-media-template) för teckensnittsrelaterad information.
 
 ### Redigera eller ta bort ett lager {#edit-or-delete-a-layer}
 
@@ -361,3 +358,5 @@ I den här stegvideon lär du dig hur du lägger till en CTA-länk i ett mallage
 
 1. Utforska [[!DNL Dynamic Media] och dess funktioner](/help/assets/dynamic-media/dynamic-media.md)
 1. Utforska [[!DNL Dynamic Media] med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md)
+
+
