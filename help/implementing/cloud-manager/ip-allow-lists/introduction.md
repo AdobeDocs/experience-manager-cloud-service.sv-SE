@@ -5,9 +5,9 @@ exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: e7c38b4103c3de4b794da3a6dfa26c6204e1c0c6
+source-git-commit: 593b8c704c5b016bb55ae6a25420b577044b4126
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -77,3 +77,13 @@ När du [lägger till IP-adressen Tillåtelselista](/help/implementing/cloud-man
 För att undvika avbrott i frontledningens körning bör du se till att detta Cloud Manager IP Tillåtelselista läggs till. Tillämpa sedan listan på redigeringsmiljön *innan* du aktiverar pipelinen.
 
 Mer information finns i [Använd IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) och [Aktivera frontendpipeline](/help/sites-cloud/administering/site-creation/enable-front-end-pipeline.md).
+
+### Universell redigerare och IP Tillåtelselista {#universal-editor}
+
+Om du tänker använda den universella redigeraren för att skapa ditt innehåll måste du lägga till de IP-adresser som den universella redigeringstjänsten använder för ett Tillåtelselista och använda det.
+
+1. Hämta IP-adresserna som används av Universal Editor-tjänsten från följande API-slutpunkt: `http://universal-editor-service.adobe.io/ip-ranges`.
+1. Skapa en tillåtelselista med dessa IP-adresser och ge den namnet `Universal Editor Service` eller liknande.
+1. Använd tillåtelselista `Universal Editor Service`.
+
+Listan över IP-adresser som används av Universal Editor-tjänsten kan ändras och du måste uppdatera tillåtelselista i enlighet med detta.

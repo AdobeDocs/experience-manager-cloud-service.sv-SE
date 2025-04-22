@@ -1,7 +1,7 @@
 ---
-source-git-commit: 92ad3ce6c880664e42fce761ab52b21b94a25a5c
+source-git-commit: 593b8c704c5b016bb55ae6a25420b577044b4126
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1459'
 ht-degree: 0%
 
 ---
@@ -187,20 +187,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 
 >[!IMPORTANT]
 >
->[Den universella redigeraren](/help/implementing/universal-editor/introduction.md) är inte kompatibel med IP tillåtelselista.
->
->Om du vill använda Universal Editor får IP tillåtelselista inte vara aktiverat.
-
-## Universal Editor och IP Tillåtelselista {#ue-ip-allow-lists}
-
->[!IMPORTANT]
->
->Den universella redigeraren är inte kompatibel med [IP tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
->
->Om du vill använda den universella redigeraren måste du antingen:
->
->* IP-Tillåtelselista är inte aktiverat.
->* [Kör din egen instans av Universal Editor-tjänsten](/help/implementing/universal-editor/local-dev.md).
+>Om du använder [Universell redigerare för innehållsredigering](/help/implementing/universal-editor/introduction.md) måste du också [lägga till och använda ett tillåtelselista med IP-adresserna för den universella redigeringstjänsten.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#univeral-editor)
 
 ## Arbeta med Dynamic Media {#work-with-dynamic-media}
 

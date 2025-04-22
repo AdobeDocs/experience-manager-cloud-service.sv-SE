@@ -4,7 +4,7 @@ description: Universal Editor är ett modernt visuellt redigeringsverktyg som ge
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 8d608d1ba00764613fbf4a5c1e1a0fcdc603283c
+source-git-commit: ae59b00e7e8149477a87d0b0b63493a6c2cfebe7
 workflow-type: tm+mt
 source-wordcount: '956'
 ht-degree: 0%
@@ -108,7 +108,7 @@ När du utforskar den universella redigeraren och fortsätter implementera den i
 * Som en del av AEM stöder den universella redigeraren [samma webbläsare som AEM.](/help/overview/supported-platforms.md)
    * Mobilversioner av dessa webbläsare stöds inte.
 
-{{ue-ip-allow-lists}}
+{{ip-allow-lists-ue}}
 
 ## Nästa steg {#next-steps}
 
