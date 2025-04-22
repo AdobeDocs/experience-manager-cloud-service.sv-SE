@@ -4,9 +4,9 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: c9a4a361561cb03b17e0b931b8946116791c62e1
+source-git-commit: 95873c3079efe91aedb049252435487a7ae646c8
 workflow-type: tm+mt
-source-wordcount: '3026'
+source-wordcount: '3040'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
 1. Navigera till din [!DNL Assets View] och [skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. Mappträdet i ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replikeras i **[!UICONTROL Dynamic Media Assets]**. Spara mallen [!DNL Dynamic Media] i den här [!UICONTROL Dynamic Media Assets]-mappen.
 1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) för att använda dem när du skapar mallen. Du måste publicera bilder för att kunna generera mallens leverans-URL när du har skapat mallen, som kan användas i program längre fram i kedjan.
-1. [Utför överföringen och publiceringen av resursen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) för att överföra och publicera teckensnittsfilen samtidigt till AEM och Dynamic Media för att använda ett annat teckensnitt än standardteckensnittsfamiljen Adobe Sans F2 i textlagret. [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se till att [bearbeta om](/help/assets/reprocessing-assets-view.md) de äldre teckensnitten (på startsidan för [!DNL Assets View] klickar du på ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigerar till teckensnittsfilens plats, markerar teckensnittsfilen åt gången och klickar på ![Bearbeta igen](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**) för att använda dem när du skapar mallen. Mer information om teckensnitt finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).
+1. [Utför de här överförings- och publiceringsstegen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) för att överföra och publicera en teckensnittsfil samtidigt till AEM och Dynamic Media för att använda den när du skapar mallen. [!UICONTROL Adobe Sans F2] är det enda standardteckensnittet som finns i textlagret. [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se till att [bearbeta om](/help/assets/reprocessing-assets-view.md) befintliga teckensnitt så att de kan användas när du skapar mallen (klicka på ![ Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**på startsidan för [!DNL Assets View], navigera till teckensnittsfilens plats, markera teckensnittsfilen i taget och klicka på ![Bearbeta igen](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**). Mer information om teckensnitt finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).
 1. [Skapa en tom arbetsyta](#create-a-canvas)
 1. [Lägga till bilder på arbetsytan](#add-images-to-the-canvas)
 1. [Lägga till textlager på arbetsytan](#add-text-to-the-canvas)
@@ -159,7 +159,7 @@ Gör så här för att lägga till textlager på arbetsytan:
 1. Välj **[!UICONTROL Smart Text Resize]** på egenskapspanelen om du automatiskt vill justera textlängden och teckenstorleken så att den passar i det angivna området.
    ![bästa anpassningsbara banners](/help/assets/assets/add-text-layer.png)
 
-Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen. Se [steg 3 i avsnittet Skapa [!DNL Dynamic Media] mall](#how-to-create-dynamic-media-template) för teckensnittsrelaterad information.
+Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen. Fältet **[!UICONTROL Font Family]** visar de ombearbetade befintliga teckensnitten samt de nyöverförda och publicerade teckensnitten. Mer information finns i [steg 3 i avsnittet Skapa [!DNL Dynamic Media] mall](#how-to-create-dynamic-media-template) ovan.
 
 ### Redigera eller ta bort ett lager {#edit-or-delete-a-layer}
 
