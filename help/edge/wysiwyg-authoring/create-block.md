@@ -4,7 +4,10 @@ description: Lär dig hur du skapar block som är instrumenterade för användni
 exl-id: 65a5600a-8d16-4943-b3cd-fe2eee1b4abf
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+index: false
+hide: true
+hidefromtoc: true
+source-git-commit: 17c14a78c2cfa262e25c6196fa73c6c4b17e200a
 workflow-type: tm+mt
 source-wordcount: '1415'
 ht-degree: 0%
@@ -18,12 +21,12 @@ Lär dig hur du skapar block som är instrumenterade för användning med Univer
 
 ## Förutsättningar {#prerequisites}
 
-Den här guiden innehåller stegvisa instruktioner för hur du skapar block som är avsedda för den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services-projekt. Det handlar om att lägga till komponenter, läsa in komponentdefinitioner i den universella redigeraren, publicera sidor, implementera blockdekoration och format, göra ändringar i produktionen och verifiera dem. När du är klar med den här guiden kan du skapa och distribuera ett nytt block för ditt eget projekt.
+Den här guiden innehåller stegvisa instruktioner för hur du skapar block som är instrumenterade för den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services-projekt. Det handlar om att lägga till komponenter, läsa in komponentdefinitioner i den universella redigeraren, publicera sidor, implementera blockdekoration och format, göra ändringar i produktionen och verifiera dem. När du är klar med den här guiden kan du skapa och distribuera ett nytt block för ditt eget projekt.
 
-Den här guiden kräver kunskaper om WYSIWYG framtagning av Edge Delivery Services och den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
+Den här guiden kräver kunskaper om WYSIWYG framtagning av Edge Delivery Services-projekt liksom den universella redigeraren. Innan du börjar den här guiden bör du ha tillgång till Edge Delivery Services och känna till grunderna i den:
 
 * Du har slutfört [självstudiekursen om Edge Delivery-tjänster](/help/edge/developer/tutorial.md).
-* Du har åtkomst till en [AEM Cloud Service-sandlåda](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
+* Du har åtkomst till en [AEM Cloud-tjänstsandlåda](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-sandbox-programs.md).
 * Du har [aktiverat den universella redigeraren i samma sandlådemiljö](/help/implementing/universal-editor/getting-started.md).
 * Du har slutfört guiden [Komma igång för utvecklare för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md).
 
@@ -45,7 +48,7 @@ Följande exempel på offertblock följer den här metoden.
 
 ### Skapa blockdefinition och modell {#create-block-model}
 
-1\. Klona GitHub-projektet lokalt som du skapade i guiden [Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och öppna det i en valfri redigerare.
+1\. Klona GitHub-projektet lokalt som du skapade i [Utvecklarhandboken för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) och öppna det i en valfri redigerare.
 
 * Microsoft Code används här för illustrativa ändamål.
 
@@ -85,7 +88,7 @@ Följande exempel på offertblock följer den här metoden.
 
 3\. Redigera filen `component-models.json` i projektets rot och lägg till följande [modelldefinition](/help/implementing/universal-editor/field-types.md#model-structure) för det nya offertblocket och spara filen.
 
-* Mer information om vad som är viktigt att tänka på när du skapar innehållsmodeller finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services ](/help/edge/wysiwyg-authoring/content-modeling.md) .
+* I dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) finns mer information om vad som är viktigt att tänka på när du skapar innehållsmodeller.
 
 >[!BEGINTABS]
 
@@ -163,7 +166,7 @@ Nu när det grundläggande offertblocket är definierat och implementerat i exem
 
 1. Tryck eller klicka på **Redigera** i verktygsfältet på konsolen så öppnas Universell redigerare.
 
-   * Om du vill läsa in sidan kan du behöva trycka på eller klicka på **Logga in med Adobe** för att autentisera AEM i Universella redigeraren.
+   * Om du vill läsa in sidan kan du behöva trycka på eller klicka på **Logga in med Adobe** för att autentisera till AEM i Universella redigeraren.
 
 1. Markera ett avsnitt i Universella redigeringsprogram. I egenskapspanelen trycker eller klickar du på ikonen **Lägg till** och väljer sedan det nya **offert**-blocket på menyn.
 
@@ -180,7 +183,7 @@ Nu när det grundläggande offertblocket är definierat och implementerat i exem
 
    ![Sidan med det nya offertblocket i det markerade avsnittet](assets/create-block/quote-added.png)
 
-1. När du är nöjd med offertens innehåll kan du publicera sidan genom att trycka på eller klicka på knappen **Publish** i verktygsfältet i den universella redigeraren.
+1. När du är nöjd med offertens innehåll kan du publicera sidan genom att trycka på eller klicka på knappen **Publicera** i verktygsfältet i den universella redigeraren.
 
 1. Kontrollera att innehållet har publicerats genom att gå till den publicerade sidan. Länken liknar `https://<branch>--<repo>--<owner>.aem.page`
 
@@ -339,8 +342,8 @@ Mer information finns i dokumentet [Block för WYSIWYG och dokumentbaserad redig
 
 Nu när du vet hur man skapar block är det viktigt att förstå hur man modellerar innehåll på ett semantiskt sätt för att uppnå en smidig utvecklarupplevelse.
 
-Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services ](/help/edge/wysiwyg-authoring/content-modeling.md) om du vill veta hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Delivery Services.
+Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) om du vill veta hur innehållsmodellering fungerar för WYSIWYG-redigering med Edge Delivery Services-projekt.
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery).
+>En genomgång av hur du skapar ett nytt Edge Delivery Services-projekt som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här AEM GEM-webbinariet](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery).

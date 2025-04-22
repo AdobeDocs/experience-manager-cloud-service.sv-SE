@@ -1,10 +1,13 @@
 ---
-title: Innehållsmodellering för WYSIWYG Authoring with Edge Delivery Services Projects
-description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Delivery Services och hur du skapar eget innehåll.
+title: Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services-projekt
+description: Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Delivery Services-projekt och hur du skapar eget innehåll.
 exl-id: e68b09c5-4778-4932-8c40-84693db892fd
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+index: false
+hide: true
+hidefromtoc: true
+source-git-commit: 17c14a78c2cfa262e25c6196fa73c6c4b17e200a
 workflow-type: tm+mt
 source-wordcount: '2195'
 ht-degree: 0%
@@ -12,9 +15,9 @@ ht-degree: 0%
 ---
 
 
-# Innehållsmodellering för WYSIWYG Authoring with Edge Delivery Services Projects {#content-modeling}
+# Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services-projekt {#content-modeling}
 
-Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Delivery Services och hur du skapar eget innehåll.
+Lär dig hur innehållsmodellering fungerar för WYSIWYG Authoring med Edge Delivery Services-projekt och hur du skapar eget innehåll.
 
 ## Förutsättningar {#prerequisites}
 
@@ -120,9 +123,9 @@ All den här informationen lagras i AEM när ett block läggs till på en sida. 
 
 >[!WARNING]
 >
->Det är inte nödvändigt eller rekommenderat att implementera anpassade AEM. Komponenterna för Edge Delivery Services som tillhandahålls av AEM är tillräckliga och erbjuder vissa skyddsräcken för att underlätta utvecklingen.
+>Om det är möjligt är det inte nödvändigt eller rekommenderat att implementera anpassade AEM-komponenter. De komponenter för Edge Delivery Services som tillhandahålls av AEM är tillräckliga och erbjuder vissa skyddsräcken för att underlätta utvecklingen.
 >
->Komponenterna som tillhandahålls av AEM återger en kod som kan användas av [helix-html2md](https://github.com/adobe/helix-html2md) vid publicering till Edge Delivery Services och av [aem.js](https://github.com/adobe/aem-boilerplate/blob/main/scripts/aem.js) vid inläsning av en sida i den universella redigeraren. Markeringen är det stabila kontraktet mellan AEM och andra delar av systemet och tillåter inte anpassningar. Därför får projekt inte ändra komponenterna och inte använda anpassade komponenter.
+>Komponenterna som tillhandahålls av AEM återger en kod som kan användas av [helix-html2md](https://github.com/adobe/helix-html2md) vid publicering till Edge Delivery Services och av [aem.js](https://github.com/adobe/aem-boilerplate/blob/main/scripts/aem.js) vid inläsning av en sida i den universella redigeraren. Markeringen är ett stabilt kontrakt mellan AEM och de andra delarna av systemet och tillåter inte anpassningar. Därför får projekt inte ändra komponenterna och inte använda anpassade komponenter.
 
 ### Blockstruktur {#block-structure}
 
@@ -322,11 +325,11 @@ I följande exempel accepterar ett block en lista med länkade ikoner som undero
 
 ### Skapa semantiska innehållsmodeller för block {#creating-content-models}
 
-Med [mekanismerna i blockstrukturen förklarad](#block-structure) är det möjligt att skapa en innehållsmodell som mappar innehåll som finns beständigt i AEM 1:1 till leveransnivån.
+Med [mekanismerna i blockstrukturen förklarad](#block-structure) är det möjligt att skapa en innehållsmodell som mappar innehåll som finns beständigt i AEM en-till-en till leveransnivån.
 
 Tidigt i varje projekt måste man tänka på en innehållsmodell för varje block. Den måste vara agnostisk mot innehållskällan och redigeringsmiljön för att författare ska kunna växla eller kombinera dem när blockimplementeringar och format återanvänds. Mer information och allmän vägledning finns i [David&#39;s Model (Take 2)](https://www.aem.live/docs/davidsmodel). Mer specifikt innehåller [blocksamlingen](/help/edge/developer/block-collection.md) en omfattande uppsättning innehållsmodeller för specifika användningsfall för vanliga användargränssnittsmönster.
 
-För WYSIWYG-redigering med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen skapas med formulär som består av flera fält istället för att man redigerar semantiska markeringar i sitt sammanhang som RTF.
+För WYSIWYG-redigering med Edge Delivery Services ställer det här en fråga om hur en övertygande semantisk innehållsmodell ska användas när informationen har skapats med formulär som består av flera fält istället för att man redigerar semantiska markeringar i sitt sammanhang som RTF.
 
 För att lösa det här problemet finns det tre metoder som gör det enklare att skapa en övertygande innehållsmodell:
 
@@ -336,14 +339,14 @@ För att lösa det här problemet finns det tre metoder som gör det enklare att
 
 >[!NOTE]
 >
->Blockimplementeringar kan dekonstruera innehållet och ersätta blocket med en DOM som renderas på klientsidan. Även om detta är möjligt och intuitivt för en utvecklare är det inte bästa sättet för Edge Delivery Services.
+>Blockimplementeringar kan dekonstruera innehållet och ersätta blocket med en DOM som renderas på klientsidan. Även om detta är möjligt och intuitivt för en utvecklare är det inte den bästa metoden för Edge Delivery Services.
 
 #### Textpåverkan {#type-inference}
 
 För vissa värden kan den semantiska innebörden härledas från själva värdena. Sådana värden är:
 
 * **Bilder** - Om en referens till en resurs i AEM är en resurs med en MIME-typ som börjar med `image/` återges referensen som `<picture><img src="${reference}"></picture>`.
-* **Länkar** - Om det finns en referens i AEM och inte är en bild, eller om värdet börjar med `https?://` eller `#`, återges referensen som `<a href="${reference}">${reference}</a>` .
+* **Länkar** - Om det finns en referens i AEM som inte är en bild, eller om värdet börjar med `https?://` eller `#`, återges referensen som `<a href="${reference}">${reference}</a>` .
 * **RTF** - Om ett trimmat värde börjar med ett stycke (`p`, `ul`, `ol`, `h1`-`h6` osv.) återges värdet som RTF-text.
 * **Klassnamn** - Egenskapen `classes` behandlas som [blockalternativ](/help/edge/developer/markup-sections-blocks.md#block-options) och återges i tabellhuvudet för [enkla block](#simple), eller som värdelista för objekt i ett [behållarblock](#container). Det är användbart om du vill [formatera ett block annorlunda](/help/edge/wysiwyg-authoring/create-block.md#block-options), men inte behöver skapa ett helt nytt block.
 * **Värdelistor** - Om ett värde är en flervärdesegenskap och det första värdet inte är något av de föregående, sammanfogas alla värden som kommaavgränsade listor.
@@ -463,7 +466,7 @@ _[adobe.com](https://www.adobe.com "Navigate to adobe.com")_
 
 Medan [fältkomprimering](#field-collapse) handlar om att kombinera flera egenskaper till ett enda semantiskt element, handlar elementgruppering om att sammanfoga flera semantiska element till en enda cell. Detta är särskilt användbart när det gäller användningsfall där författaren bör begränsas i den typ och det antal element som de kan skapa.
 
-En teaser-komponent kan t.ex. tillåta författaren att endast skapa en underrubrik, rubrik och en enda styckebeskrivning kombinerat med högst två knappar för att anropa till åtgärd. När du grupperar dessa element tillsammans skapas en semantisk kod som kan formateras utan ytterligare åtgärd.
+En teaser-komponent kan t.ex. tillåta att författaren bara skapar en underrubrik, rubrik och en enda styckebeskrivning kombinerat med högst två call-to-action-knappar. När du grupperar dessa element tillsammans skapas en semantisk kod som kan formateras utan ytterligare åtgärd.
 
 Elementgruppering använder en namnkonvention där gruppnamnet separeras från varje egenskap i gruppen med ett understreck. Fältkomprimering av egenskaperna i en grupp fungerar som tidigare beskrivits.
 
@@ -534,7 +537,7 @@ Elementgruppering använder en namnkonvention där gruppnamnet separeras från v
 
 På samma sätt som en utvecklare kan definiera och modellera flera [block](#blocks) kan de definiera olika avsnitt.
 
-Innehållsmodellen för Edge Delivery Services tillåter avsiktligt bara en enda kapslingsnivå, vilket är vilket standardinnehåll eller -block som finns i ett avsnitt. Detta innebär att om du vill ha mer komplexa visuella komponenter som kan innehålla andra komponenter måste de modelleras som sektioner och kombineras med hjälp av en autoblockerande klientsida. Typiska exempel på detta är tabbar och komprimerbara avsnitt som dragspelspaneler.
+Innehållsmodellen i Edge Delivery Services tillåter avsiktligt bara en enda kapslingsnivå, vilket är vilket standardinnehåll eller -block som finns i ett avsnitt. Detta innebär att om du vill ha mer komplexa visuella komponenter som kan innehålla andra komponenter måste de modelleras som sektioner och kombineras med hjälp av en autoblockerande klientsida. Typiska exempel på detta är tabbar och komprimerbara avsnitt som dragspelspaneler.
 
 Ett avsnitt kan definieras på samma sätt som ett block, men med resurstypen `core/franklin/components/section/v1/section`. Avsnitt kan ha ett namn och ett [filter-ID](/help/implementing/universal-editor/filtering.md) som endast används av [Universell redigerare](/help/implementing/universal-editor/introduction.md) samt ett [modell-ID](/help/implementing/universal-editor/field-types.md#model-structure) som används för att återge avsnittets metadata. Modellen är på det här sättet modellen för avsnittets metadatablocket, som automatiskt läggs till i ett avsnitt som nyckelvärdesblock om det inte är tomt.
 
@@ -637,13 +640,13 @@ Om du vill göra det skapar du en komponentmodell med ID:t `page-metadata`.
 
 ## Nästa steg {#next-steps}
 
-Nu när du vet hur man modellerar innehåll kan du skapa block för egna Edge Delivery Services med WYSIWYG redigeringsprojekt.
+Nu när du vet hur man modellerar innehåll kan du skapa block för din egen Edge Delivery Services med WYSIWYG-projekt.
 
 Läs dokumentet [Skapa block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) om du vill veta hur du skapar block som är instrumenterade för användning med den universella redigeraren i WYSIWYG-redigering med Edge Delivery Services-projekt.
 
-Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhandbok för att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) för att komma igång med en ny Adobe Experience Manager-webbplats med Edge Delivery Services och Universal Editor för innehållsredigering.
+Om du redan är bekant med att skapa block kan du läsa dokumentet [Utvecklarhandbok om att komma igång med WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) för att komma igång med en ny Adobe Experience Manager-webbplats med Edge Delivery Services och Universal Editor för innehållsutveckling.
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett projekt för nya Edge Delivery Services som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här webbinariet för AEM](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery).
+>En genomgång av hur du skapar ett nytt Edge Delivery Services-projekt som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här AEM GEM-webbinariet](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/wysiwyg-authoring-and-edge-delivery).
 

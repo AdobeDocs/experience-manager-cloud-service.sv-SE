@@ -1,10 +1,13 @@
 ---
-description: '**OBS**: För projekt där Adobe’s Sharepoint (&lt;https://adobe.sharepoint.com&gt;) används, fortsätt här.'
+description: '**OBS**: För projekt där Adobe Sharepoint (&lt;https://adobe.sharepoint.com&gt;) används ska du fortsätta här.'
 title: Så här använder du Sharepoint
 feature: Edge Delivery Services
 exl-id: c0feb7bc-5418-4f93-bcfc-072cfe2e97bd
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+index: false
+hide: true
+hidefromtoc: true
+source-git-commit: 1e69fd3abf8dad01886007bc16b2ed0d0df0777c
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%

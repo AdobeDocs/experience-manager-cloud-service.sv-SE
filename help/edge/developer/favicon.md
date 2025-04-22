@@ -1,10 +1,13 @@
 ---
-description: "Om du lägger till en favoritikonbild på webbplatsen får den ett professionellt utseende i besökarens webbläsare:"
+description: 'Om du lägger till en favoritikonbild på webbplatsen får den ett professionellt utseende i besökarens webbläsare:'
 title: Favicon
 feature: Edge Delivery Services
 exl-id: e5225611-8bc7-4239-96db-83f7819410d7
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+index: false
+hide: true
+hidefromtoc: true
+source-git-commit: 1e69fd3abf8dad01886007bc16b2ed0d0df0777c
 workflow-type: tm+mt
 source-wordcount: '17'
 ht-degree: 0%

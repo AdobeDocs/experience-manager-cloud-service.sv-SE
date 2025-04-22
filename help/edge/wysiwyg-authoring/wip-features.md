@@ -1,28 +1,31 @@
 ---
-title: Funktioner för pågående webbplatser för Edge Delivery Services
+title: Workin-progress Sites Features for Edge Delivery Services
 description: Ta reda på vilka AEM Sites-funktioner och användningsexempel som är ett pågående arbete och upptäck alternativa lösningar när du använder Edge Delivery Services.
 solution: Experience Manager Sites
 feature: Edge Delivery Services
 role: User
 exl-id: 21745f53-a7ef-4eec-9170-b267c2f4314e
-source-git-commit: 92da26452438f2b56cdec1aecc76587d4982f00e
+index: false
+hide: true
+hidefromtoc: true
+source-git-commit: 17c14a78c2cfa262e25c6196fa73c6c4b17e200a
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
-# Funktioner för pågående webbplatser för Edge Delivery Services {#wip-sites-features}
+# Workin-progress Sites Features for Edge Delivery Services {#wip-sites-features}
 
 Ta reda på vilka AEM Sites-funktioner och användningsexempel som är ett pågående arbete och upptäck alternativa lösningar när du använder Edge Delivery Services.
 
 >[!TIP]
 >
->Det pågående arbetet innebär inte slutet på vägen. Om du behöver en funktion eller ett användningsfall som anges som pågående arbete i det här dokumentet kan du kontakta din Adobe-representant. Ni och Adobe kan samarbeta för att förstå era särskilda behov och hitta alternativa lösningar.
+>Det pågående arbetet innebär inte slutet på vägen. Om du behöver en funktion eller ett användningsfall som är listat som pågående arbete i det här dokumentet kan du kontakta Adobe. Du och Adobe kan samarbeta för att förstå dina särskilda behov och hitta alternativa lösningar.
 
 ## Funktioner för pågående arbete {#wip-features}
 
-De flesta webbplatsfunktionerna är tillgängliga när du använder Edge Delivery Services med AEM Sites. Nästan alla åtgärder som är tillgängliga i [Platskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) gäller till exempel för Edge Delivery Services.
+De flesta webbplatsfunktionerna är tillgängliga när du använder Edge Delivery Services med AEM Sites. Nästan alla åtgärder som är tillgängliga i [Platskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) gäller till exempel Edge Delivery Services.
 
 Vissa funktioner är dock under arbete. Pågående arbete-funktioner är funktioner i webbplatskonsolen som inte är tillgängliga för Edge Delivery Services med AEM Sites eller som bara är delvis tillgängliga. Av den anledningen kan PIA-funktioner presenteras på ett annat sätt än deras motsvarigheter på Sites eller så kan det finnas alternativa lösningar för användningsfallet.
 
@@ -43,7 +46,7 @@ I följande lista visas sådana PIA-funktioner och alternativa lösningar. Om di
 
 ## Användningsexempel - pågående arbete {#wip-use-cases}
 
-Eftersom Edge Delivery Servicens bygger på en helt ny och modern teknologi är följande användningsområden i AEM Sites ännu inte helt täckta och håller på att utvecklas. Om ditt projekt kräver en PIA-lösning kan du kontakta Adobe för att få en förståelse för projektets behov.
+Eftersom Edge Delivery Services bygger på en helt ny och modern teknologi är följande användningsfall för AEM Sites ännu inte helt överträffade och håller på att utvecklas. Om ditt projekt kräver en PIA-lösning kontaktar du Adobe för att få en förståelse för projektets behov.
 
 | Användningsfall för webbplatser | Information |
 |---|---|
