@@ -1,19 +1,19 @@
 ---
 title: Page Editor och Universal Editor
-description: Sidredigeraren stöds fortfarande av Adobe, men den universella redigeraren ger dig fler möjligheter till dina nya projekt.
+description: Sidredigeraren stöds fortfarande av Adobe, men den universella redigeraren ger nya projekt spännande möjligheter.
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 9fdc24600c9dd4ebf6a3d12462eb9bd387815360
+exl-id: 0a13fb52-623e-4aff-b254-186d8d117e4d
+source-git-commit: 4956552ca93351a7b319bc808e0c5ec930bcbe28
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
 
 ---
 
-
 # Page Editor och Universal Editor {#page-editor-universal-editor}
 
-Sidredigeraren stöds fortfarande av Adobe, men den universella redigeraren ger dig fler möjligheter till dina nya projekt.
+Sidredigeraren stöds fortfarande av Adobe, men den universella redigeraren ger nya projekt spännande möjligheter.
 
 ## Bakgrund {#background}
 
@@ -46,17 +46,17 @@ Eftersom luckan mellan de två redigerarna ständigt krymper bör du läsa versi
 
 ### Persistence {#persistence}
 
-|  | Page Editor | Anteckning | Universal Editor | Anteckningar |
+|  | Page Editor | Anteckningar | Universal Editor | Anteckningar |
 |---|---|---|---|---|
 | Redigera sidkomponenter | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | Redigera [innehållsfragment](/help/assets/content-fragments/content-fragments.md) | [!BADGE Inte tillgänglig]{type=Negative} |  | [!BADGE Tillgänglig]{type=Positive} | Inkludera infogning av nya och sortering av fragment |
 
 ### Funktioner {#capabilities}
 
-|  | Page Editor | Anteckning | Universal Editor | Anteckningar |
+|  | Page Editor | Anteckningar | Universal Editor | Anteckningar |
 |---|---|---|---|---|
 | Sidmallar | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Universal Editor känner inte av vilket mallsystem som används. Det typiska implementeringsmönstret prioriterar dock mallar som definierats av utvecklare, eftersom moderna frontend-verktyg gör det mycket enklare för utvecklare att definiera och underhålla malllogik direkt i koden. |
-| WYSIWYG Editing | [!BADGE Tillgängligt]{type=Positive} Begränsat till sidor |  | [!BADGE Tillgänglig]{type=Positive} | Stödsidor och innehållsfragment |
+| WYSIWYG Editing | [!BADGE Tillgänglig]{type=Positive} | Begränsat till sidor | [!BADGE Tillgänglig]{type=Positive} | Stödsidor och innehållsfragment |
 | [Generera variationer](/help/generative-ai/generate-variations.md) | [!BADGE Inte tillgänglig]{type=Negative} |  | [!BADGE Tillgänglig]{type=Positive} | [Tillgängligt som tillägg](/help/implementing/universal-editor/extending.md) |
 | Infoga nytt block | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | Ordna om block | [!BADGE Tillgänglig]{type=Positive} | Möjligt med dra-och-släpp i sitt sammanhang, men inte i sidopanelen i trädvyn | [!BADGE Tillgänglig]{type=Positive} | Möjligt via dra-och-släpp i sidopanelen &quot;Trädvy&quot;, men inte i sitt sammanhang (planerat) |
