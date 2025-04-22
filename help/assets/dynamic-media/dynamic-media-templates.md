@@ -4,9 +4,9 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 95873c3079efe91aedb049252435487a7ae646c8
+source-git-commit: b877c4385d68778d31f0174aa1d3d87548c6016a
 workflow-type: tm+mt
-source-wordcount: '3040'
+source-wordcount: '3068'
 ht-degree: 0%
 
 ---
@@ -88,8 +88,8 @@ Om du vill skapa en [!DNL Dynamic Media]-mall måste du ha:
 Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
 1. Navigera till din [!DNL Assets View] och [skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. Mappträdet i ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replikeras i **[!UICONTROL Dynamic Media Assets]**. Spara mallen [!DNL Dynamic Media] i den här [!UICONTROL Dynamic Media Assets]-mappen.
-1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) för att använda dem när du skapar mallen. Du måste publicera bilder för att kunna generera mallens leverans-URL när du har skapat mallen, som kan användas i program längre fram i kedjan.
-1. [Utför de här överförings- och publiceringsstegen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) för att överföra och publicera en teckensnittsfil samtidigt till AEM och Dynamic Media för att använda den när du skapar mallen. [!UICONTROL Adobe Sans F2] är det enda standardteckensnittet som finns i textlagret. [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se till att [bearbeta om](/help/assets/reprocessing-assets-view.md) befintliga teckensnitt så att de kan användas när du skapar mallen (klicka på ![ Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**på startsidan för [!DNL Assets View], navigera till teckensnittsfilens plats, markera teckensnittsfilen i taget och klicka på ![Bearbeta igen](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**). Mer information om teckensnitt finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).
+1. Välj ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**och [överför och publicera dina bilder till  [!DNL AEM] och [!DNL Dynamic Media] samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) för att använda dem när du skapar mallen. Du måste publicera bilder för att kunna generera mallens leverans-URL när du har skapat mallen. Leverans-URL:en kan användas i program längre fram i kedjan.
+1. [Utför de här överförings- och publiceringsstegen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) för att överföra och publicera en teckensnittsfil till AEM och Dynamic Media samtidigt för att använda den när du skapar mallen. [!UICONTROL Adobe Sans F2] är det enda standardteckensnittet som finns i textlagret. [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se till att [bearbeta om](/help/assets/reprocessing-assets-view.md) befintliga teckensnitt så att de kan användas när du skapar mallen (klicka på ![ Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**på startsidan för [!DNL Assets View], navigera till teckensnittsfilens plats, markera teckensnittsfilen i taget och klicka på ![Bearbeta igen](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**). Mer information om teckensnitt finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).
 1. [Skapa en tom arbetsyta](#create-a-canvas)
 1. [Lägga till bilder på arbetsytan](#add-images-to-the-canvas)
 1. [Lägga till textlager på arbetsytan](#add-text-to-the-canvas)
@@ -159,7 +159,7 @@ Gör så här för att lägga till textlager på arbetsytan:
 1. Välj **[!UICONTROL Smart Text Resize]** på egenskapspanelen om du automatiskt vill justera textlängden och teckenstorleken så att den passar i det angivna området.
    ![bästa anpassningsbara banners](/help/assets/assets/add-text-layer.png)
 
-Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen. Fältet **[!UICONTROL Font Family]** visar de ombearbetade befintliga teckensnitten samt de nyöverförda och publicerade teckensnitten. Mer information finns i [steg 3 i avsnittet Skapa [!DNL Dynamic Media] mall](#how-to-create-dynamic-media-template) ovan.
+Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att flytta, ändra storlek på, rotera eller ta bort lagret. Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under **[!UICONTROL Text]**-delen av panelen. Fältet **[!UICONTROL Font Family]** innehåller [!UICONTROL Adobe Sans F2] standardteckensnitt, de ombearbetade befintliga teckensnitten samt de nyligen överförda och publicerade teckensnitten. Mer information finns i [steg 3 i avsnittet Skapa [!DNL Dynamic Media] mall](#how-to-create-dynamic-media-template) ovan.
 
 ### Redigera eller ta bort ett lager {#edit-or-delete-a-layer}
 
@@ -267,17 +267,19 @@ Utför dessa steg för att förhandsgranska och publicera mallen och kopiera lev
    ![skapar innehåll i farten](/help/assets/assets/dm-templates-publish-status.png)
 Du kan också växla **[!UICONTROL Include all parameters]** för att redigera alla parametervärden som visas och se uppdateringarna i mallförhandsvisningen.
    <br>
-1. Om du vill publicera mallen på förhandsgranskningssidan klickar du på **[!UICONTROL Publish]** och bekräftar att du vill publicera. **[!UICONTROL Publish Complete]**-meddelandet visas och publiceringsstatusen uppdateras till **[!UICONTROL Published]**.
+1. Om du vill publicera mallen från förhandsgranskningssidan klickar du på **[!UICONTROL Publish]** och bekräftar att du vill publicera. Ett **[!UICONTROL Publish Complete]**-meddelande visas och publiceringsstatusen uppdateras till **[!UICONTROL Published]**.
 
->[!NOTE]
->
->När du publicerar mallen måste mallbilderna publiceras först.
+   >[!NOTE]
+   >
+   >När du publicerar mallen måste mallbilderna publiceras först.
 
 ### Kopiera leverans-URL
 
 De valda parametrarna på sidan **[!UICONTROL Preview]** blir URL-parametrar i mall-URL:en.
 
-Så här kopierar du URL:en för den publicerade mallen som visas i förhandsgranskningen:
+Kontrollera att bilderna i mallen publiceras på AEM och Dynamic Media för att generera en leverans-URL för den publicerade mallen.
+
+Utför följande steg för att kopiera mallens leverans-URL:
 
 1. Klicka på **[!UICONTROL Copy URL]**. Dialogrutan **[!UICONTROL Copy URL]** visas. Markera och kopiera den URL som visas. Den första parametern i URL:en startar efter ett frågetecken **([!UICONTROL ?])** och ett nyckelvärdepar börjar med **[!UICONTROL $]** och slutar med **[!UICONTROL &]**. Nyckeln och värdet avgränsas med ett likhetstecken **([!UICONTROL =])**, med tangenten till vänster och värdet till höger.
 1. Klistra in den här URL-adressen på webbläsarfliken och se den aktiva mallen. Anpassa mallen i realtid genom att uppdatera den obligatoriska parameterns värde (Key-värdet) i URL:en direkt, vilket visas i [steg 2](#preview-and-publish-template-and-copy-template-deliver-url) i avsnittet **Förhandsgranska och publicera** .
