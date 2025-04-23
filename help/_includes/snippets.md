@@ -1,7 +1,7 @@
 ---
-source-git-commit: 593b8c704c5b016bb55ae6a25420b577044b4126
+source-git-commit: a3c3ee1b3c5944ca9f5178209adc2cc0b2e5f7ff
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1467'
 ht-degree: 0%
 
 ---
@@ -187,7 +187,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 
 >[!IMPORTANT]
 >
->Om du använder [Universell redigerare för innehållsredigering](/help/implementing/universal-editor/introduction.md) måste du också [lägga till och använda ett tillåtelselista med IP-adresserna för den universella redigeringstjänsten.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#univeral-editor)
+>Om du använder [Universell redigerare för innehållsredigering](/help/implementing/universal-editor/introduction.md) och även vill använda [IP tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) måste du också [lägga till och använda en tillåtelselista med IP-adresserna för den universella redigeringstjänsten.](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#univeral-editor)
 
 ## Arbeta med Dynamic Media {#work-with-dynamic-media}
 
