@@ -4,21 +4,15 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: 3789904b4aa1ffa4a039e6b84af64f03f06a3206
+source-git-commit: 4f58a52c5ccc8178e768f9072e7b2047cbe3fb20
 workflow-type: tm+mt
-source-wordcount: '6021'
+source-wordcount: '5993'
 ht-degree: 0%
 
 ---
 
 
 # AEM GraphQL API för användning med innehållsfragment {#graphql-api-for-use-with-content-fragments}
-
->[!IMPORTANT]
->
->Olika funktioner i GraphQL API för användning med innehållsfragment är tillgängliga via Tidiga Adobe-program.
->
->Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 Lär dig hur du använder innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service med AEM GraphQL API för leverans av headless-innehåll.
 
@@ -1187,7 +1181,7 @@ De nuvarande begränsningarna är:
 * Om en resurs som refereras tas bort från fjärrdatabasen resulterar detta i en trasig referens för innehållsfragmentresurser.
 * Alla tillgångsdatabaser som användaren har åtkomst till kommer att vara tillgängliga för val. Listan kan inte begränsas.
 * Både AEM-instansen och fjärrresurslagringsplatsen måste ha samma version.
-* Inga resursmetadata visas via [hanterings-API:t](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/) och [leverans-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/). Du måste använda API:t för tillgångsmetadata för att hämta information om objektets metadata.
+* Inga resursmetadata visas via [API:t för hanteringswebbplatser](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/) och [AEM Content Fragment Delivery med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentfragments/delivery/). Du måste använda API:t för tillgångsmetadata för att hämta information om objektets metadata.
 
 ## GraphQL for AEM - i korthet {#graphql-extensions}
 
