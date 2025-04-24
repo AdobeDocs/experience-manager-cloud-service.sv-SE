@@ -4,9 +4,9 @@ description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
 feature: Migration
 role: Admin
-source-git-commit: ccd96892ccce0ed896cd01978f07e2a556c18527
+source-git-commit: 4dcfc36167a40b59e251750bb112b073beddc52f
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1642'
 ht-degree: 2%
 
 ---
@@ -95,11 +95,13 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    Följande dialogruta visas. Observera att ett migreringsuppsättning upphör att gälla efter en längre inaktivitetsperiod. När varningar visas på projektkortet och migreringsjobbtabellsraderna för en tidsperiod, kommer migreringsuppsättningen att upphöra att gälla och dess data kommer inte längre att vara tillgängliga. Granska [migreringsuppsättningen upphör](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry) om du vill ha mer information.
 
+   När du skapar en migreringsuppsättning kan du välja det geografiska område där data för den tillfälliga migreringen ska lagras.  Vi rekommenderar att du väljer den region som ligger närmast din målmolnmiljö för att få optimala prestanda vid inmatning.  Regionen kan inte ändras efter att en migreringsuppsättning har skapats. Om du vill använda en annan region måste du skapa en ny migreringsuppsättning.
+
    ![bild](/help/journey-migration/content-transfer-tool/assets-ctt/cttcam3.png)
 
    >[!NOTE]
    >
-   >Namnet måste följa samma konventioner för en AEM-nod så det får inte innehålla något av följande tecken: . / : [ ] | *
+   >Namnet måste följa samma konventioner för en AEM-nod och får inte innehålla något av följande tecken: `. / : [ ] | * &lt; > ^ ? { } % # &quot;och inga ovanliga symboler eller känslolägesikoner.
 
 1. Nu bör du se din migreringslista i listvyn. Markera symbolen med tre punkter (**..**) för att öppna listrutan och välj **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
 
