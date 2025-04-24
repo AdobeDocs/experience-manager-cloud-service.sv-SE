@@ -5,9 +5,9 @@ role: User, Leader
 contentOwner: AG
 exl-id: 2459d482-828b-4410-810c-ac55ef0a2119
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: b7f8b4886372e2210ca8899260b3eb11b75ee798
+source-git-commit: 89c47db38bf26f8c5984278e49ad7727a8ec03e5
 workflow-type: tm+mt
-source-wordcount: '1695'
+source-wordcount: '1661'
 ht-degree: 0%
 
 ---
@@ -214,10 +214,6 @@ Så här anger du godkännandemål:
 
 
    Mer information om de tillgängliga alternativen finns i [Standardmål för godkännande och publiceringsmål för godkända resurser](#default-approval-target-options-publish-destinations).
-
-   >[!NOTE]
-   >
-   >Att ange ett godkännandemål är en begränsad tillgänglighetsfunktion. Du kan aktivera eller inaktivera det genom att skapa en supportanmälan. Om du har aktiverat Dynamic Media med OpenAPI är det aktiverat som standard.
 
    ![Godkännandestatus](/help/assets/assets/approval-status-delivery.png)
 
