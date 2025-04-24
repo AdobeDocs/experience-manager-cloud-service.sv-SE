@@ -4,9 +4,9 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: 5bdbd0c7273a1e8a650a87a7d0b0c9749f5e1030
+source-git-commit: f3dea4724f757090a504c3144e17fca7075acc52
 workflow-type: tm+mt
-source-wordcount: '3026'
+source-wordcount: '3016'
 ht-degree: 0%
 
 ---
@@ -322,8 +322,7 @@ Så här lägger du till en CTA-länk till ett lager:
 
    ![lägg till CTA](/help/assets/assets/add-cta.png)
 
-1. Klicka på **[!UICONTROL Preview]** om du vill förhandsgranska mallen och se de definierade parametrarna.
-1. Klicka på **[!UICONTROL Publish]** och välj **[!UICONTROL Yes]** för att publicera mallen, om den inte har publicerats tidigare.
+1. Klicka på **[!UICONTROL Preview]** och välj **[!UICONTROL Publish]** för att publicera mallen, om den inte har publicerats tidigare.
 1. Navigera till mappen där mallen sparas, markera den här mallen och klicka på ![informationssidan](/help/assets/assets/details-page-icon.svg) **[!UICONTROL Details]**.
 1. Klicka på **[!UICONTROL Copy Options]** och välj **[!UICONTROL Copy Embed Code]**. Se till att publicera mallbilderna på [!DNL AEM and Dynamic Media] för att kopiera inbäddningskoden.
 
