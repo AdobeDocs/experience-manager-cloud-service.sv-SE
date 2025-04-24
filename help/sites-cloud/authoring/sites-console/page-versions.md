@@ -5,9 +5,9 @@ exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: b39c455c9bd4b50eb3777cd1a4bdbada48786d62
 workflow-type: tm+mt
-source-wordcount: '1516'
+source-wordcount: '1574'
 ht-degree: 2%
 
 ---
@@ -25,6 +25,13 @@ Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med
 * Jämför den aktuella versionen av en sida med en tidigare version.
    * Skillnader i text och bilder markeras.
 * Timewarp använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
+
+>[!NOTE]
+>
+>Endast innehåll versionshanteras i AEM-databasen. Dynamiska resurser som kod, CSS och JavaScript är inte versionshanterade.
+>
+>* När du visar versioner visas innehållet med den aktuella koden, CSS och JavaScript för databasen.
+>* När du återställer versioner återställs endast innehållet och den aktuella koden, CSS och JavaScript för databasen tillämpas på det.
 
 ## Skapa en ny version {#creating-a-new-version}
 
@@ -226,7 +233,7 @@ Timewarp är ett [läge](/help/sites-cloud/authoring/page-editor/introduction.md
 
 ### Begränsningar för Timewarp {#timewarp-limitations}
 
-Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i den kontinuerliga redigeringen av innehåll i AEM går det dock inte alltid att återge detta. Tänk på dessa begränsningar när du använder Timewarp.
+Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss tidpunkt. På grund av komplexiteten i det kontinuerliga skapandet av innehåll i AEM är dock detta inte alltid möjligt. Tänk på dessa begränsningar när du använder Timewarp.
 
 * **Timewarp fungerar baserat på publicerade sidor** - Timewarp fungerar bara helt om du tidigare har publicerat sidan. Om inte, visar Timewarp den aktuella sidan i författarmiljön.
 * **Timewarp använder sidversioner** - Om du navigerar till en sida som har tagits bort/tagits bort från databasen återges den korrekt om gamla versioner av sidan fortfarande är tillgängliga i databasen.
