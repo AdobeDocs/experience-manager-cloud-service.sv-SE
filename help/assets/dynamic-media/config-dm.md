@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Configuration,Dynamic Media
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: 2ca425f9a142432a5d3bcce8ce522c97e4c2cf2d
 workflow-type: tm+mt
-source-wordcount: '3404'
+source-wordcount: '3500'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,17 @@ ht-degree: 1%
 
 Om du använder Adobe Experience Manager as a Cloud Service för olika miljöer, som utveckling, testning och liveproduktion, konfigurerar du Dynamic Media Cloud Services för var och en av dessa miljöer.
 
-Se även [Konfigurera ett företagskonto för Dynamic Media](/help/assets/dynamic-media/dm-alias-account.md)
+Se även [Konfigurera ett Dynamic Media Company-alias](/help/assets/dynamic-media/dm-alias-account.md)
+
+>[!IMPORTANT]
+>
+>**Dynamiska media (Scene7) stöds inte i Förbättrade säkerhetsmiljöer**
+>
+>Dynamic Media (Scene7) på AEM as a Cloud Service är inte HIPAA-klart och kan inte användas i AEM-miljöer där Förbättrat skydd är aktiverat.
+>
+>Från och med AEM as a Cloud Service-versionen från april 2025 förhindrar en teknisk begränsning att Dynamic Media (Scene7) konfigureras i miljöer med förbättrat skydd. Därför är kortet **Dynamisk mediekonfiguration** under **Verktyg** > **Molntjänster** inte längre synligt i dessa miljöer.
+>
+>Dessutom bör kunder som använder AEM 6.5 vara medvetna om att stacken Dynamic Media (Scene7) inte är HIPAA-klar.
 
 ## Arkitektur för Dynamic Media {#architecture-diagram-of-dynamic-media}
 
@@ -95,11 +105,11 @@ To migrate any custom viewer presets and configurations that you have created fr
 
    | Egenskap | Beskrivning |
    |---|---|
-   | Företag | Namnet på Dynamic Media-kontot.<br>**Viktigt**: Endast en dynamisk mediekonfiguration i molntjänster stöds i en instans av Experience Manager. Lägg inte till mer än en konfiguration. Flera dynamiska mediekonfigurationer i en Experience Manager-instans stöds _inte_ eller rekommenderas av Adobe.<!-- CQDOC-19579 and CQDOC-19612 --><br>Se även [Konfigurera ett företagskonto för Dynamic Media](/help/assets/dynamic-media/dm-alias-account.md). |
+   | Företag | Namnet på Dynamic Media-kontot.<br>**Viktigt**: Endast en dynamisk mediekonfiguration i molntjänster stöds i en instans av Experience Manager. Lägg inte till mer än en konfiguration. Adobe stöder *inte* eller rekommenderar att du konfigurerar flera dynamiska mediekonfigurationer på en enda Experience Manager-instans.<!-- CQDOC-19579 and CQDOC-19612 --><br>Se även [Konfigurera ett Dynamic Media Company-alias](/help/assets/dynamic-media/dm-alias-account.md). |
    | Företagets rotmappsökväg | Företagets rotmappsökväg. |
-   | Publicera Assets | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**- När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL On Activation]** - Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**- Assets publiceras automatiskt endast för säker förhandsvisning. De kan också publiceras explicit på Experience Manager as a Cloud Service utan att publiceras på DMS7 för att levereras offentligt. I framtiden har detta alternativ till syfte att publicera material till Experience Manager as a Cloud Service och publicera material till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Eller så kan du publicera resurser exklusivt i Experience Manager as a Cloud Service för förhandsgranskning. Samma resurser publiceras inte i DMS7 för att distribueras offentligt. |
-   | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har skapats kan Experience Manager as a Cloud Service på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till Experience Manager as a Cloud Service-instansen).<br>Om du inte har en särskild överenskommelse om hur du ska använda företagets server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven. |
-   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**- Konfigurationen tillämpas som standard på alla mappar, såvida du inte markerar en mapp specifikt för undantag.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.<br>Om du vill markera en markerad mapp för synkronisering till dynamiska media markerar du en resursmapp och väljer **[!UICONTROL Properties]** i verktygsfältet. På fliken **[!UICONTROL Details]** i listrutan **[!UICONTROL Dynamic Media sync mode]** väljer du bland följande tre alternativ. Välj **[!UICONTROL Save]** när du är klar. _Kom ihåg: dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare._ Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).<br>**[!UICONTROL Inherited]**- Det finns inget explicit synkroniseringsvärde för mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering till dynamiska media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**- Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
+   | Publicera Assets | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**- När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL On Activation]** - Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**- Assets publiceras automatiskt endast för säker förhandsvisning. De kan också publiceras explicit på Experience Manager as a Cloud Service utan att publiceras på DMS7 för att levereras offentligt. I framtiden har detta alternativ till syfte att publicera material till Experience Manager as a Cloud Service och publicera material till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i Experience Manager as a Cloud Service för förhandsgranskning. Samma resurser publiceras inte i DMS7 för att distribueras offentligt. |
+   | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har skapats kan AEM as a Cloud Service på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till Experience Manager as a Cloud Service-instansen).<br>Om du inte har en särskild överenskommelse om hur du ska använda företagets server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven. |
+   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera vissa resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**- Konfigurationen tillämpas som standard på alla mappar, såvida du inte markerar en mapp speciellt för undantag.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.<br>Om du vill markera en markerad mapp för synkronisering till dynamiska media markerar du en resursmapp och väljer **[!UICONTROL Properties]** i verktygsfältet. På fliken **[!UICONTROL Details]** i listrutan **[!UICONTROL Dynamic Media sync mode]** väljer du bland följande tre alternativ. Välj **[!UICONTROL Save]** när du är klar. _Kom ihåg: dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare._ Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).<br>**[!UICONTROL Inherited]**- Det finns inget explicit synkroniseringsvärde för mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering till dynamiska media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**- Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
 
    >[!NOTE]
    >
@@ -120,7 +130,7 @@ To migrate any custom viewer presets and configurations that you have created fr
    >Det här inkorgsmeddelandet informerar dig om konfigurationen lyckades eller inte.
    > Mer information finns i [Felsöka en ny konfiguration för dynamiska media](#troubleshoot-dm-config) och [Inkorgen](/help/sites-cloud/authoring/inbox.md).
 
-1. För att på ett säkert sätt förhandsgranska dynamiskt medieinnehåll innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering och Experience Manager Author förhandsgranskar alltså Dynamic Media-innehåll som standard. Du kan dock *tillåtslista* ytterligare IP-adresser för att ge användarna åtkomst till säkert förhandsgranskningsinnehåll. Information om hur du konfigurerar den här åtgärden i Experience Manager as a Cloud Service finns i [Konfigurera inställningar för dynamisk mediepublicering för bildserver - säkerhetsflik](/help/assets/dynamic-media/dm-publish-settings.md#security-tab). <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
+1. För att förhandsgranska dynamiskt mediematerial säkert innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering och Experience Manager Author förhandsgranskar därför dynamiskt mediematerial som standard. Du kan *tillåtslista* ytterligare IP-adresser om du vill ge användarna åtkomst till förhandsgranskningsinnehållet på ett säkert sätt. Information om hur du konfigurerar den här åtgärden i Experience Manager as a Cloud Service finns i [Konfigurera inställningar för dynamisk mediepublicering för bildserver - säkerhet](/help/assets/dynamic-media/dm-publish-settings.md#security-tab). <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
 
 <!--
     * Open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account. Your credentials and sign-in details were provided by Adobe at the time of provisioning. If you do not have this information, contact Adobe Customer Support.
@@ -132,7 +142,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 Du är nu klar med den grundläggande konfigurationen. Du är redo att använda Dynamic Media.
 
-Om du vill anpassa konfigurationen ytterligare, t.ex. aktivera åtkomstkontrollistor (ACL), kan du utföra alla åtgärder under [Konfigurera avancerade inställningar i dynamiska media](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+Om du vill anpassa konfigurationen ytterligare, t.ex. aktivera åtkomstkontrollistan (ACL), kan du utföra alla åtgärder under [Konfigurera avancerade inställningar i dynamiska media](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 ### Felsöka en ny konfiguration för dynamiska media {#troubleshoot-dm-config}
 
@@ -265,7 +275,7 @@ Se [Konfigurera bildförinställningar](/help/assets/dynamic-media/managing-imag
 
 Så här konfigurerar du standardfärgegenskaperna för aktivering av färgkorrigering när du begär bilder:
 
-1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
 1. Gå till **[!UICONTROL Setup > Application Setup]**.
 1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till egenskapen som du måste ändra, till exempel en egenskap i området **[!UICONTROL Color Management Attributes]**.
@@ -292,7 +302,7 @@ Om du gör det gör du så här:
 
 #### Redigera MIME-typer för format som stöds {#editing-mime-types-for-supported-formats}
 
-Du kan definiera vilka resurstyper som ska bearbetas av Dynamic Media och anpassa avancerade parametrar för resurshantering. Du kan till exempel ange parametrar för tillgångsbearbetning för att göra följande:
+Du kan ange de resurstyper som Dynamic Media behandlar och anpassa de avancerade parametrarna för materialbearbetning. Du kan till exempel ange parametrar för tillgångsbearbetning för att göra följande:
 
 * Konvertera en Adobe PDF till en eCatalog-resurs.
 * Konvertera ett Adobe Photoshop-dokument (.PSD) till en bannermallsresurs för personalisering.
@@ -329,7 +339,7 @@ Se [Överför resurser](/help/assets/add-assets.md).
 
 #### Lägg till MIME-typer för format som inte stöds {#adding-mime-types-for-unsupported-formats}
 
-Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Om du vill vara säker på att alla nya noder som du lägger till i CRXDE Lite inte tas bort av Experience Manager, flyttar du MIME-typen före `image_`. Kontrollera också att dess aktiverade värde är **[!UICONTROL false]**.
+Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience Manager Assets. Om du inte vill att Experience Manager ska kunna ta bort nya noder som du lägger till i CRXDE Lite flyttar du MIME-typen före `image_`. Kontrollera också att dess aktiverade värde är **[!UICONTROL false]**.
 
 **Så här lägger du till MIME-typer för format som inte stöds:**
 
@@ -342,7 +352,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
    ![2019-08-02_16-17-29](assets/2019-08-02_16-17-29.png)
 
-1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7 Asset MIME type Service* enligt följande skärmbild. Till höger om namnet väljer du pennikonen **[!UICONTROL Edit the configuration values]**.
+1. På sidan bläddrar du nedåt till namnet *Adobe CQ Scene7-resursens MIME-typtjänst*, vilket visas på följande skärmbild. Till höger om namnet väljer du pennikonen **[!UICONTROL Edit the configuration values]**.
 
    ![Redigera konfigurationsvärdena](assets/2019-08-02_16-44-56.png)
 
@@ -384,7 +394,7 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 
 ### (Valfritt) Justera prestanda för Dynamic Media {#optional-tuning-the-performance-of-dynamic-media-scene-mode}
 
-Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet om du vill att Dynamic Media <!--(with `dynamicmedia_scene7` run mode)--> ska fortsätta fungera smidigt:
+Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media ska fungera smidigt:
 
 * [Uppdatera de fördefinierade jobbparametrarna för bearbetning av olika filformat](#update-job-para).
 * [Uppdatera de fördefinierade arbetsflödeskontakterna för Granite-arbetsflöden (videoresurser)](#update-granite-workflow-queue-worker-threads-video)
@@ -415,7 +425,7 @@ Se även [Lägga till MIME-typer för format som inte stöds](#adding-mime-types
 
 #### Uppdatera de fördefinierade arbetsflödeskontakterna för Granite-arbetsflöden (videoresurser) {#update-granite-workflow-queue-worker-threads-video}
 
-Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media brukade den bearbeta video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
+Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media används den för att bearbeta video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
 
 >[!NOTE]
 >
@@ -460,7 +470,7 @@ Bevilja transittjänstens arbetsflödeskö används för arbetsflödet **[!UICON
 
 1. Ändra talet till det önskade värdet i fältet **[!UICONTROL Maximum Parallel Jobs]**.
 
-   Du kan öka **[!UICONTROL Maximum Parallel Jobs]** om du vill ha tillräckligt stöd för stor överföring av filer till Dynamic Media. Det exakta värdet beror på maskinvarukapaciteten. I vissa scenarier, t.ex. en inledande migrering eller en massöverföring som görs en gång, kan du använda ett stort värde. Tänk dock på att användning av ett stort värde (till exempel två gånger antalet kärnor) kan ha negativa effekter på andra samtidiga aktiviteter. Testa och justera värdet utifrån ditt specifika användningsfall.
+   Du kan öka **[!UICONTROL Maximum Parallel Jobs]** för att stödja tillräckligt stor överföring av filer till Dynamic Media. Det exakta värdet beror på maskinvarukapaciteten. I vissa scenarier, t.ex. en inledande migrering eller en massöverföring som görs en gång, kan du använda ett stort värde. Tänk dock på att användning av ett stort värde (till exempel två gånger antalet kärnor) kan ha negativa effekter på andra samtidiga aktiviteter. Testa och justera värdet utifrån ditt specifika användningsfall.
 
 <!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
@@ -485,7 +495,7 @@ Inställningen Dynamic Media Classic (Scene7) Upload Connection synkroniserar Ex
 
    Inställningen **[!UICONTROL Number of connections]** styr det maximala antalet HTTP-anslutningar som tillåts för överföring av Experience Manager till dynamiska media. Det fördefinierade värdet för tio anslutningar är vanligtvis tillräckligt.
 
-   Inställningen **[!UICONTROL Active job timeout]** avgör väntetiden för överförda Dynamic Media-resurser som ska publiceras på leveransservern. Det här värdet är som standard 2 100 sekunder eller 35 minuter.
+   Inställningen **[!UICONTROL Active job timeout]** definierar hur länge systemet väntar på att leveransservern ska publicera överförda dynamiska medieresurser. Det här värdet är som standard 2 100 sekunder eller 35 minuter.
 
    I de flesta fall räcker det med inställningen 2 100.
 
