@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: a43fdc3f9b9ef502eb0af232b1c6aedbab159f1f
+source-git-commit: 9e0217a4cbbbca1816b47f74a9f327add3a8882d
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -106,7 +106,6 @@ data:
         actions:
           - type: unset
             reqHeader: x-some-header
-
       - name: unset-matching-query-params-rule
         when:
           reqProperty: path
@@ -114,7 +113,6 @@ data:
         actions:
           - type: unset
             queryParamMatch: ^removeMe_.*$
-
       - name: unset-all-query-params-except-exact-two-rule
         when:
           reqProperty: path
@@ -122,7 +120,6 @@ data:
         actions:
           - type: unset
             queryParamMatch: ^(?!leaveMe$|leaveMeToo$).*$
-
       - name: multi-action
         when:
           reqProperty: path
@@ -134,7 +131,6 @@ data:
           - type: set
             reqHeader: x-header2
             value: '201'
-
       - name: replace-html
         when:
           reqProperty: path
@@ -145,6 +141,13 @@ data:
             op: replace
             match: \.html$
             replacement: ""
+      - name: log-on-request
+        when: "*"
+        actions:
+          - type: set
+            logProperty: forwarded_host
+            value:
+              reqHeader: x-forwarded-host
 ```
 
 **Åtgärder**
@@ -153,12 +156,20 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **uppsättning** | (reqProperty eller reqHeader eller queryParam eller reqCookie), värde | Anger en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde, som kan vara en stränglitteral eller begärandeparameter. |
-|     | var, värde | Ställer in en angiven request-egenskap på ett givet värde. |
-| **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen path stöds), eller begäranhuvud, frågeparameter eller cookie, till ett givet värde, som kan vara en stränglitteral eller begäranparameter. |
-|         | var | Tar bort en angiven variabel. |
-|         | queryParamMatch | Tar bort alla frågeparametrar som matchar ett angivet reguljärt uttryck. |
-|         | queryParamDoesNotMatch | Tar bort alla frågeparametrar som inte matchar ett angivet reguljärt uttryck. |
+| **uppsättning** | reqProperty, värde | Anger en angiven begärandeparameter (endast egenskapen &quot;path&quot; stöds) |
+|     | reqHeader, värde | Anger ett angivet begärandehuvud till ett angivet värde. |
+|     | queryParam, värde | Ställer in en angiven frågeparameter på ett givet värde. |
+|     | reqCookie, värde | Anger en angiven begärandecookie till ett angivet värde. |
+|     | logProperty, värde | Ställer in en angiven CDN-loggegenskap på ett givet värde. |
+|     | var, värde | Ställer in en angiven variabel på ett givet värde. |
+| **unset** | reqProperty | Tar bort en angiven begärandeparameter (endast egenskapen &quot;path&quot; stöds) |
+|     | reqHeader, värde | Tar bort ett angivet begärandehuvud. |
+|     | queryParam, värde | Tar bort en angiven frågeparameter. |
+|     | reqCookie, värde | Tar bort en angiven cookie. |
+|     | logProperty, värde | Tar bort en angiven CDN-loggegenskap. |
+|     | var | Tar bort en angiven variabel. |
+|     | queryParamMatch | Tar bort alla frågeparametrar som matchar ett angivet reguljärt uttryck. |
+|     | queryParamDoesNotMatch | Tar bort alla frågeparametrar som inte matchar ett angivet reguljärt uttryck. |
 | **omforma** | op:replace, (reqProperty eller reqHeader eller queryParam eller reqCookie eller var), match, replace | Ersätter en del av parametern request (endast egenskapen path stöds), huvudet request, parametern query, cookie, eller variabeln med ett nytt värde. |
 |              | op:tolower, (reqProperty eller reqHeader eller queryParam eller reqCookie eller var) | Ställer in parametern request (endast egenskapen path stöds), huvudet request, parametern query, cookie, eller variabeln till dess gemener. |
 
@@ -240,9 +251,60 @@ data:
             value: some header value
 ```
 
+### Egenskapen Log {#logproperty}
+
+Du kan lägga till egna loggegenskaper i CDN-loggarna med hjälp av omvandlingar av begäranden och svar.
+
+Konfigurationsexempel:
+
+```
+requestTransformations:
+  rules:
+    - name: log-on-request
+      when: "*"
+      actions:
+        - type: set
+          logProperty: forwarded_host
+          value:
+            reqHeader: x-forwarded-host
+responseTransformations:
+  rules:
+    - name: log-on-response
+      when: '*'
+      actions:
+        - type: set
+          logProperty: cache_control
+          value:
+            respHeader: cache-control
+```
+
+Exempel på logg:
+
+```
+{
+"timestamp": "2025-03-26T09:20:01+0000",
+"ttfb": 19,
+"cli_ip": "147.160.230.112",
+"cli_country": "CH",
+"rid": "974e67f6",
+"req_ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15",
+"host": "example.com",
+"url": "/content/hello.png",
+"method": "GET",
+"res_ctype": "image/png",
+"cache": "PASS",
+"status": 200,
+"res_age": 0,
+"pop": "PAR",
+"rules": "",
+"forwarded_host": "example.com",
+"cache_control": "max-age=300"
+}
+```
+
 ## Svarsomvandlingar {#response-transformations}
 
-Med reglerna för svarsomvandling kan du ange och ta bort rubriker för CDN:ens utgående svar. Se även exemplet ovan för att referera till en variabel som tidigare angetts i en omformningsregel för begäran. Svarets statuskod kan också anges.
+Med reglerna för svarsomvandling kan du ange och ta bort rubriker, cookies och status för CDN:ens utgående svar. Se även exemplet ovan för att referera till en variabel som tidigare angetts i en omformningsregel för begäran.
 
 Konfigurationsexempel:
 
@@ -262,7 +324,6 @@ data:
           - type: set
             value: value-set-by-resp-rule
             respHeader: x-resp-header
-
       - name: unset-response-header-rule
         when:
           reqProperty: path
@@ -270,8 +331,6 @@ data:
         actions:
           - type: unset
             respHeader: x-header1
-
-      # Example: Multi-action on response header
       - name: multi-action-response-header-rule
         when:
           reqProperty: path
@@ -283,7 +342,6 @@ data:
           - type: set
             respHeader: x-resp-header-2
             value: value-set-by-resp-rule-2
-      # Example: setting status code
       - name: status-code-rule
         when:
           reqProperty: path
@@ -291,7 +349,25 @@ data:
         actions:
           - type: set
             respProperty: status
-            value: '410'        
+            value: '410'
+      - name: set-response-cookie-with-attributes-as-object
+        when: '*'
+        actions:
+          - type: set
+            respCookie: first-name
+            value: first-value
+            attributes:
+              expires: '2025-08-29T10:00:00'
+              domain: example.com
+              path: /some-path
+              secure: true
+              httpOnly: true
+              extension: ANYTHING
+      - name: unset-response-cookie
+        when: '*'
+        actions:
+          - type: unset
+            respCookie: third-name
 ```
 
 **Åtgärder**
@@ -300,9 +376,15 @@ I tabellen nedan beskrivs de tillgängliga åtgärderna.
 
 | Namn | Egenskaper | Betydelse |
 |-----------|--------------------------|-------------|
-| **uppsättning** | reqHeader, värde | Ställer in en angiven rubrik på ett givet värde i svaret. |
-|          | respProperty, värde | Anger en svarsegenskap. Stöder bara egenskapen &quot;status&quot; för att ange statuskoden. |
+| **uppsättning** | respProperty, värde | Anger en svarsegenskap. Stöder bara egenskapen &quot;status&quot; för att ange statuskoden. |
+|     | respHeader, värde | Anger ett angivet svarshuvud till ett angivet värde. |
+|     | respCookie, attribut (förfaller, domän, sökväg, säker, httpOnly, tillägg), värde | Ställer in en angiven begärandecookie med specifika attribut för ett givet värde. |
+|     | logProperty, värde | Ställer in en angiven CDN-loggegenskap på ett givet värde. |
+|     | var, värde | Ställer in en angiven variabel på ett givet värde. |
 | **unset** | respHeader | Tar bort en angiven rubrik från svaret. |
+|     | respCookie, värde | Tar bort en angiven cookie. |
+|     | logProperty, värde | Tar bort en angiven CDN-loggegenskap. |
+|     | var | Tar bort en angiven variabel. |
 
 ## Väljare för ursprung {#origin-selectors}
 

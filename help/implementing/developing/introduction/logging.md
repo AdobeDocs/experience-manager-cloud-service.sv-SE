@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 60bf6c6077ecfc6700ed9284834cf13e3772e25a
+source-git-commit: 7efbdecdddb66611cbde0dc23928a61044cc96d5
 workflow-type: tm+mt
-source-wordcount: '2364'
+source-wordcount: '2377'
 ht-degree: 0%
 
 ---
@@ -411,7 +411,7 @@ Om du vill ange loggnivån per miljö använder du lämplig villkorsgren i filen
 
 ```
 Define REWRITE_LOG_LEVEL debug
-  
+
 <IfDefine ENVIRONMENT_STAGE>
   ...
   Define REWRITE_LOG_LEVEL warn
@@ -489,7 +489,7 @@ Om du vill ställa in loggnivån per miljö använder du lämplig villkorsgren i
 
 ```
 Define DISP_LOG_LEVEL debug
-  
+
 <IfDefine ENVIRONMENT_STAGE>
   ...
   Define DISP_LOG_LEVEL warn
@@ -554,6 +554,7 @@ CDN-loggarna skiljer sig från de andra loggarna på så sätt att de följer et
 | *pop* | Datacenter för CDN-cacheservern. |
 | *regler* | Namnen på matchande [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md) och WAF-flaggor, som även anger om matchningen resulterade i ett block. Tom om inga regler matchade. |
 
+CDN-loggarna kan utökas med egna egenskaper med hjälp av [request/response-omformningar](/help/implementing/dispatcher/cdn-configuring-traffic.md#logproperty).
 
 ## Åtkomst till loggar {#how-to-access-logs}
 
@@ -581,7 +582,7 @@ AEM-loggar finns i mappen `crx-quickstart/logs`, där följande loggar kan visas
 * AEM HTTP-begärandelogg: `request.log`
 * AEM HTTP Access-logg: `access.log`
 
-Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html).
+Lagerloggarna för Apache, inklusive dispatchern, finns i Docker-behållaren som innehåller Dispatcher. Mer information om hur du startar Dispatcher finns i [Dispatcher-dokumentationen](/help/implementing/dispatcher/disp-overview.md).
 
 Så här hämtar du loggarna:
 
