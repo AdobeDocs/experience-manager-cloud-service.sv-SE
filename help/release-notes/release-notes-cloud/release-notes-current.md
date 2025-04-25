@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 11d019e10dc9246e5560f7fe27472d047cdc7caa
+source-git-commit: 32aaabb3f47d2352245ab69f68a6ac98b9828449
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -162,6 +162,20 @@ Den mer prestandaanpassade Java 21 **runtime** distribueras automatiskt när en 
 >[!IMPORTANT]
 >
 > Java 21 **runtime** distribuerades till dina dev/RDE-miljöer i februari. Den kommer att användas i dina scen-/produktionsmiljöer den 28 och 29 april **.** Observera att **byggkoden** med Java 21 (eller Java 17) är oberoende av Java 21-miljön - du måste vidta åtgärder explicit för att skapa kod med Java 21 (eller Java 17).
+
+### Tillämpning av AEM konfigurationsprincip för loggning {#logconfig-policy}
+
+För att säkerställa effektiv övervakning av kundmiljöer måste AEM Java-loggarna ha ett konsekvent format och bör inte åsidosättas av anpassade konfigurationer. Loggutdata måste vara dirigerade till standardfilerna. För AEM-produktkod måste standardloggnivåer bevaras. Du kan dock justera loggnivåerna för kundutvecklad kod.
+
+Därför bör ändringar inte göras i följande OSGi-egenskaper:
+* **Konfiguration av Apache Sling-logg** (PID: `org.apache.sling.commons.log.LogManager`) — *alla egenskaper*
+* **Konfiguration av loggningsloggare för Apache Sling** (Factory PID: `org.apache.sling.commons.log.LogManager.factory.config`):
+   * `org.apache.sling.commons.log.file`
+   * `org.apache.sling.commons.log.pattern`
+
+I mitten av maj kommer AEM att tillämpa en policy där anpassade ändringar av dessa egenskaper ignoreras. Granska och justera processerna i efterföljande led. Om du till exempel använder funktionen för vidarebefordran av loggar:
+* Om loggningsmålet förväntar sig ett anpassat (icke-standard) loggformat, kan du behöva uppdatera dina regler för inmatning.
+* Om ändringar i loggnivåer minskar loggens utförlighet bör du vara medveten om att standardloggnivåerna kan leda till en avsevärd ökning av loggvolymen.
 
 ### AEM Log Forwarding to More Destinations - Beta Program {#log-forwarding-earlyadopter}
 
