@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: bbf66195593032eb2ccf073ec78685c9d9726235
+source-git-commit: 11d019e10dc9246e5560f7fe27472d047cdc7caa
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1551'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.3.0) är 27 mars 2025. Nästa funktionsversion (2025.4.0) är planerad till 24 april 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.4.0) är 24 april 2025. Nästa funktionsversion (2025.5.0) är planerad till 29 maj 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -44,61 +44,126 @@ Have a look at the February 2025 Release Overview video for a summary of the fea
 
 -->
 
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
+
+### Nya funktioner i Experience Manager Sites {#enhancements-sites}
+
+**Nytt gränssnitt för administratör för innehållsfragmentmodell**
+
+När du sedan fyller i listan över nya användargränssnitt på klientsidan när du arbetar med AEM Content Fragments finns nu ett nytt administratörsgränssnitt tillgängligt för innehållsfragmentmodeller. Det nya användargränssnittet ger en ren och modern listvy som gör det möjligt att söka efter modeller med filter, och som visar modelltaggar och vilka innehållsfragment som finns och som baseras på en viss modell. Dokumentation finns [här](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md).
+
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i Dynamic Media {#new-features-dynamic-media}
+### Dynamiska media (Scene7) {#dynamic-media-scene7}
 
-**Stöd för långa formulär för videor som levereras med Dynamic Media med Open API**
+**Dynamiska media (Scene7) stöds inte i Förbättrade säkerhetsmiljöer**
 
-Dynamic Media med OpenAPI har nu stöd för videor med långa format. The long form videos can support up to 50GB and 2 hours.
+Dynamic Media (Scene7) på AEM as a Cloud Service är inte HIPAA-klart och kan inte användas i AEM-miljöer där Förbättrat skydd är aktiverat.
 
-### Dynamic Media Classic {#dmc}
+Från och med AEM as a Cloud Service-versionen från april 2025 förhindrar en teknisk begränsning att Dynamic Media (Scene7) konfigureras i miljöer med förbättrat skydd. Därför är kortet **Dynamisk mediekonfiguration** under **Verktyg** > **Molntjänster** inte längre synligt i dessa miljöer.
 
-<!-- CARRY OVER TO APRIL 2025 RELEASE NOTES -->
+Dessutom bör kunder som använder AEM 6.5 vara medvetna om att stacken Dynamic Media (Scene7) inte är HIPAA-klar.
+
+### Dynamic Media Classic {#dynamic-media-classic}
+
+**Rapportering**
 
 Fliken Bandbredd i Dynamic Media Classic rapportkontrollpanel stöds inte längre från och med april 2025.
 
 Se [Bandbredd och lagring, rapporttyper](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/setup/administration-setup#types-of-reports).
 
 
-## Nya funktioner i vyn Assets {#new-features-assets-view}
+## Nya funktioner i Assets View {#new-features-assets-view}
 
+**Resursrelationer**
 
-**Stöd för rottaggar**
+Assets View har nu stöd för att visa och redigera resursrelationer på en förenklad resurspanel. Lägg enkelt in relationer som Source och Derivative i materialet så att användarna kan hitta relevant hjälteinnehåll effektivare.
 
-AEM Assets har nu stöd för att mappa en taggegenskap i ett metadataformulär till anpassade metadata. Som administratör kan du dessutom begränsa tillgängligheten för taggar till användare genom att begränsa åtkomsten till en viss rottagg och de taggar som finns under rottaggen.
+![Exempel på Assets-relation](/help/assets/assets/asset-relations-example.png)
+
+**Jämför versioner av en resurs**
+
+Nu kan du snabbt välja och jämföra vilken version av en mediefil som helst med den senaste versionen i Assets-vyn.
+
+![jämför versioner av resurs](/help/assets/assets/version-compare2.png)
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-### Tidig åtkomst-funktioner i AEM Forms {#forms-new-early-access-features}
+### Funktioner för förhandsversioner
+
+* [Universell redigerare - Formulärfragment](/help/edge/docs/forms/universal-editor/creating-form-fragments.md): Nu kan du skapa och återanvända formulärfragment för adaptiv Forms med den universella redigeraren. Dessa fragment är återanvändbara formuläravsnitt (t.ex. kontaktuppgifter, tillståndsfält) som kan byggas en gång och tillämpas på flera formulär. Den här funktionen effektiviserar formulärframtagningen, säkerställer enhetlighet och förbättrar redigeringseffektiviteten.
+
+* [SharePoint-dokumentbibliotek - Spara bifogade filer med originalfilnamn](/help/forms/connect-forms-to-sharepoint-document-library.md#connect-an-adaptive-form-to-microsoft-sharepoint-document-library): Du kan nu välja att spara bifogade filer med sina ursprungliga filnamn när du lagrar dem i ett SharePoint-dokumentbibliotek. Den här förbättringen gör det enklare att identifiera och hantera överförda filer.
+
+* **Regelredigeraren**:
+   * [Binärt villkor med klickningshändelse i &quot;When&quot;-sats](/help/forms/rule-editor-core-components-events-operators.md#available-operator-types-and-events-in-rule-editor): Regelredigeraren tillåter nu att en knappklickningshändelse (_Är klickad_) kombineras med andra villkor i &quot;When&quot;-satsen. Detta ger mer exakt kontroll över regelkörningen baserat på användarinteraktion och andra faktorer. Obs! Om du använder flera villkor måste klickhändelsen vara det första villkoret som anges.
+   * [Valideringsvillkor för fält och paneler](/help/forms/rule-editor-core-components-usecases.md): Regelredigeraren innehåller nu villkoren _IsValid_ och _IsNotValid_ . Med dessa kan du kontrollera valideringsstatusen för specifika fält eller hela paneler (inklusive layouter som Vågräta flikar, Lodräta flikar, Dragspel och Guider), vilket underlättar formulärnavigering och användarupplevelse baserat på valideringsresultat.
+* **Förbättrad scopehantering för SharePoint-listor**: SharePoint-webbplatser har nu stöd för alla hanterade sökvägar, till exempel /sites och /teams. Den här förbättringen möjliggör en bredare integrering över olika SharePoint webbplatsstrukturer, vilket ger större flexibilitet när det gäller att ansluta till organisationsinnehåll.
+* **Stöd för att spara postdokument i SharePoint-lista**: Forms som har skapats med en SharePoint listbaserad formulärdatamodell (FDM) kan nu spara postdokumentet (DoR) i SharePoint-listor genom att konfigurera fältegenskapen Dokumentreferens för postbindning. Den här förbättringen möjliggör smidig integrering av formulärdata och dokument som stöds med SharePoint-lagring.
+
+### Tidiga åtkomstfunktioner i AEM Forms {#forms-new-early-access-features}
 
 Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna och hjälper dig att utveckla dem.
 
 Den här versionsinformationen innehåller en lista över de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
 
-#### HTML e-postmallar i adaptiv Forms
+#### Adobe Experience Platform (AEP)-integrering med Forms
 
-Med adaptiv Forms kan du använda [HTML e-postmallar](/help/forms/html-email-templates-in-adaptive-forms.md). Med HTML e-postmallar kan du skicka snygga, personliga och visuellt tilltalande e-postmeddelanden när ett formulär skickas. Dessa e-postmeddelanden kan anpassas med formulärdata och förbättras med olika e-posttaggar, som bilder och länkar. Med Adaptive Forms kan du antingen ladda upp en fil som innehåller en HTML-mall eller använda en vanlig textredigerare för att skapa mallarna.
+Integreringsfunktioner mellan Forms och AEP finns nu tillgängliga för användare som är tidiga.
 
-![HTML e-postmallar](/help/forms/assets/html-email.png)
+## CIF Add-on {#cloud-services-cif}
 
-#### Förbättrat molnlagringsstöd: Direktöverföring av PDF till Azure Blob Storage
+### Förbättringar {#enhancements-cif}
 
-Med API:er för AEM Forms-dokumentgenerering kan du nu [överföra genererade PDF-dokument](/help/forms/early-access-ea-features.md#doc-generation-api) direkt till Azure Blob Storage. Den här förbättringen effektiviserar lagring och hämtning, vilket förbättrar effektiviteten och integreringen med molnarbetsflöden.
+* Lägga till val av produktvariant för CIF produktreferenstyp
+* [Experimentell]: JSON+LD i CIF Core Components i PDP:er
+* [Experimentell]: CIF möjlighet att rensa cache
+
+### Felkorrigeringar {#bug-fixes-cif}
+
+* Åtgärda sökproblem i produktfält
+* Produkt-URL-formatet fungerar inte som förväntat för #variant_sku
+* Det går inte att lägga till fler än 20 SKU:er i produktlistekomponenten
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
+### OpenAPI-baserade API:er {#open-apis}
+
+Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att skapa Adobe Developer Console-projekt och ha stöd för OAuth Server-to-Server, Web App och Single Page App (SPA).
+
+[Se den fullständiga listan](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) med OpenAPI-baserade API:er, [läs mer](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
+
+I den här videon får du lära dig hur du konfigurerar ett autentiserat API för senare användning:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
+
+### CDN-konfigurationsrelaterade förbättringar {#cdn-enhancements}
+
+Adobe-hanterad CDN erbjuder flexibla konfigurationsalternativ, vilket beskrivs i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#configurations). Här är några nya funktioner:
+
+#### Inkludera ytterligare egenskaper i CDN-loggar {#props-in-cdnlogs}
+
+Detta är användbart för scenarier som felsökning och dataanalys. Du kan inkludera mer information i CDN-loggarna utöver standardegenskaperna genom att ange åtgärden `logProperty` i [begäran- och svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations).
+
+#### Region, Kontinent och Organisationsegenskaper som Matchningsvillkor {#matching-conditions}
+
+CDN-reglerna kan nu matchas baserat på region, kontinent och organisation för användning som blockerar trafik och omdirigeringar. `clientRegion` och `clientContinent` utökar det `clientCountry` som redan stöds för att matcha baserat på geografi, medan `clientAsName` och `clientAsNumber` matchar autonoma system för att identifiera stora Internet-leverantörer, företag eller molnleverantörer. Läs mer om de här [nyexponerade begäranegenskaperna](/help/security/traffic-filter-rules-including-waf.md#condition-structure).
+
+#### Ange cookie-värde {#cookie-attributes}
+
+Du kan ange cookie-attribut i [svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations).
+
 ### Stöd för Java 21 {#java21}
 
-As of the January release, you can build code with Java 21 and Java 17. You gain access to new features like pattern matching, sealed classes, and various performance improvements. For configuration steps, including updating your Maven project and library versions, see the [Build Environment](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support) article.
+Från och med januariversionen kan du skapa kod med Java 21 och Java 17. Du får tillgång till nya funktioner som mönstermatchning, fasta klasser och olika prestandaförbättringar. Konfigurationssteg, inklusive uppdatering av projekt- och biblioteksversioner för Maven, finns i artikeln [Byggmiljö](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#using-java-support).
 
-The more performant Java 21 **runtime** is automatically deployed when a Java 17 or 21 build is detected. Adobe rekommenderar dock att du går med i Java 21-miljön för miljöer som byggts med Java 11 genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com). Läs mer om [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
+Den mer prestandaanpassade Java 21 **runtime** distribueras automatiskt när en Java 17- eller 21-version upptäcks. Adobe rekommenderar dock att du går med i Java 21-miljön för miljöer som byggts med Java 11 genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com). Läs mer om [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
 
 >[!IMPORTANT]
 >
 > Java 21 **runtime** distribuerades till dina dev/RDE-miljöer i februari. Den kommer att användas i dina scen-/produktionsmiljöer den 28 och 29 april **.** Observera att **byggkoden** med Java 21 (eller Java 17) är oberoende av Java 21-miljön - du måste vidta åtgärder explicit för att skapa kod med Java 21 (eller Java 17).
 
-### AEM Log-Forwarding till fler destinationer - Beta Program {#log-forwarding-earlyadopter}
+### AEM Log Forwarding to More Destinations - Beta Program {#log-forwarding-earlyadopter}
 
 I betaversionen kan du nu vidarebefordra AEM-loggar till New Relic (med HTTPS), Amazon S3 och Sumo Logic. Observera att AEM-loggar (inklusive Apache/Dispatcher) stöds, men inte CDN-loggar. E-post [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) för åtkomst.
 
@@ -113,7 +178,7 @@ Edge datoranvändning för databearbetning närmare webbläsaren, vilket har bl.
 Några möjliga användningsexempel:
 
 * Autentisering med en IdP för att ge åtkomst till innehåll
-* Återge dynamiskt (personaliserat, lokaliserat) innehåll baserat på geopositionering, enhetstyp, användarattribut osv.
+* Personalization genom att återge dynamiskt innehåll baserat på geopositionering, enhetstyp, användarattribut osv.
 * Avancerad bildbehandling
 * Mittprogram mellan CDN och ett ursprung
 * Ett lager mellan webbläsaren och ett tredjeparts-API, kanske för att formatera om API-svaret
@@ -121,31 +186,9 @@ Några möjliga användningsexempel:
 
 Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med frågor och kommentarer!
 
-### OpenAPI-baserade API:er - tidigt Adobe-program {#open-apis-earlyadopter}
-
-Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
-
-Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
-
-De API-slutpunkter som anges nedan är tillgängliga som en del av ett program för tidig användning. Om du är intresserad kan du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av hur du tänker använda dem.
-
-* [API:er för innehållsfragment för webbplatser](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)
-* [Assets API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)
-* [Webbplatser och API:er för Assets-mappar](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/)
-* [Forms Communications API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/)
-
-### Nya AEM Developer Console (Public Beta) {#aem-developer-console-beta}
-
-Prova en omgjord [AEM Developer Console](/help/implementing/developing/introduction/aem-developer-console.md) som erbjuder en mer interaktiv upplevelse för felsökning av kod i molnmiljöer.
-
-Vem som helst kan komma åt den offentliga betaversionen genom att klicka på knappen *Ny konsol tillgänglig* i den aktuella AEM Developer Console. Adobe tar gärna emot feedback, som du kan skicka med e-post till [aemcs-new-devconsole-ui-beta@adobe.com](mailto:aemcs-new-devconsole-ui-beta@adobe.com)
-
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2025-releases/2502-release/whats-new-2025-02-0).
-
-<!-- THE FOLLOWING URL WAS USED ABOVE BUT IT WAS 404. IT WAS REPLACED WITH THE URL ABOVE 
-(https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2024-releases/2410-release/2410-0-release/whats-new-2024-10-0). -->
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 

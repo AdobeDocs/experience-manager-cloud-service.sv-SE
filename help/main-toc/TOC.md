@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: e302cb6c85937755b7c9324dc1ee6c60a7562b80
+source-git-commit: 2f79251471d9ec3f586f838c737cde3533874b02
 workflow-type: tm+mt
-source-wordcount: '6135'
+source-wordcount: '6134'
 ht-degree: 1%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 1%
    + Versionsinformation om AEMaaCS-funktioner {#release-notes}
       + [Aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md)
       + 2025 {#2025}
+         + [Versionsinformation för 2025.3.0](/help/release-notes/release-notes-cloud/2025/release-notes-2025-3-0.md)
          + [Versionsinformation för 2025.2.0](/help/release-notes/release-notes-cloud/2025/release-notes-2025-2-0.md)
          + [Versionsinformation för 2025.1.0](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md)
       + 2024 {#2024}
@@ -1039,7 +1040,6 @@ ht-degree: 1%
       + [Omdirigeringar](/help/edge/docs/redirects.md)
    + Building Forms {#build-forms}
       + [Ökning](/help/edge/docs/forms/overview.md)
-      + [Hur fungerar Edge Delivery Services Forms?](/help/edge/docs/forms/universal-editor/edge-delivery-services-form.md)
       + [Vanliga frågor](/help/edge/docs/forms/adapttive-forms-for-edge-delivery-services-faq.md)
       + WYSIWYG Authoring {#universal-editor}
          + [Introduktion till Forms Universal Editor för Edge Delivery Services - komplett guide](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)

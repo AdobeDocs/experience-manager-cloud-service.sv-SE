@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 2637adfbac0e266abe5a023b9253e7e702884709
 workflow-type: tm+mt
-source-wordcount: '3029'
+source-wordcount: '3044'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Om du vill skapa ett dokument med poster sammanfogas en XFA- eller Acrobat-baser
 Du kan:
 
 * [Generera ett XFA-baserat arkivdokument](#generate-an-XFA-based-document-of-record)
-* [Generera ett Acrobat-baserat (Acrobat Form PDF) arkivdokument](#generate-an-Acroform-based-document-of-record)
+* [Skapa ett Acrobat-baserat (Acrobat Form PDF) arkivdokument](#generate-an-Acroform-based-document-of-record)
 * [Generera ett postdokument automatiskt](#auto-generate-a-document-of-record)
 
 ## Innan du börjar {#components-to-automatically-generate-a-document-of-record}
@@ -39,7 +39,7 @@ Innan du börjar lära dig mer och förbereder de resurser som krävs för ett d
 
 Överför din XFA-mall (XDP-fil) till din AEM Forms-instans. Utför följande steg för att konfigurera ett adaptivt formulär så att XFA-mallen (XDP-filen) används som mall för postdokument:
 
-1. Klicka på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]i författarinstansen Experience Manager.**
+1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
 1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
@@ -50,13 +50,13 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 
 ## Generera ett Acrobat-baserat arkivdokument {#generate-an-Acroform-based-document-of-record}
 
-Överför Adobe Acrobat PDF (Acrobat) till din AEM Forms-instans. Utför följande steg för att konfigurera ett adaptivt formulär så att det använder Adobe Acrobat PDF (Acrobat) som mall för arkivdokument:
+Överför din Adobe Acrobat PDF (Acrobat) till din AEM Forms-instans. Följ de här stegen för att konfigurera ett adaptivt formulär så att det använder Adobe Acrobat PDF (Acrobat) som mall för arkivdokument:
 
-1. Klicka på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]i författarinstansen Experience Manager.**
+1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller **[!UICONTROL Create an Adaptive Form]** och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
 1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
-1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla Acrobat-PDF (Acrobat) som är tillgängliga på datorn. Markera den Acrobat som du vill använda.
+1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla Acrobat PDF (Acrobat) som är tillgängliga på datorn. Markera den Acrobat som du vill använda.
 1. Klicka på **[!UICONTROL Done]**
 
 Ditt adaptiva formulär är nu konfigurerat att använda en Acrobat som mall för arkivdokument. Nästa steg är att [binda adaptiva formulärkomponenter till motsvarande mallfält](#bind-adaptive-form-components-with-template-fields).
@@ -73,7 +73,7 @@ När ett anpassat formulär konfigureras för att automatiskt generera ett dokum
 
 Så här konfigurerar du ett anpassat formulär så att det automatiskt genererar ett postdokument:
 
-1. Klicka på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]i författarinstansen Experience Manager.**
+1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
 1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
@@ -99,10 +99,13 @@ Bind adaptiva formulärfält med mallfält för att visa hämtade formulärdata 
 In the following video, Adaptive Form components are bound with corresponding Acroform template fields and the Document of Record is sent as an email attachment.
 -->
 
-Du kan använda Skicka-åtgärder som&quot;Skicka e-post&quot;,&quot;Anropa ett AEM&quot;,&quot;Anropa ett Power Automate-flöde&quot; och andra [Skicka-åtgärder](configuring-submit-actions.md) för att ta emot ett arkivdokument.
+Du kan använda Skicka-åtgärder som&quot;Skicka e-post&quot;,&quot;Anropa ett AEM-arbetsflöde&quot;,&quot;Anropa ett Power Automate-flöde&quot; och andra [Skicka-åtgärder](configuring-submit-actions.md) för att ta emot ett registreringsdokument.
 ![Överföringsåtgärder för bilder](/help/forms/assets/submit-actions-img.png)
 
 
+>[!NOTE]
+>
+> Du kan spara postdokumentet för alla formulärdatamodeller med egenskapen **[!UICONTROL Document of Record Bind Reference field]**.
 
 ## Inkrementella uppdateringar av dokumentmallen {#document-of-record-template-incremental-updates}
 
@@ -326,12 +329,12 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
    1. **Grundläggande egenskaper**:
       * **Mall**: Om du vill välja en anpassad mall bläddrar du och väljer en XDP-fil på [!DNL AEM Forms]-servern. Om du vill använda en mall som inte är tillgänglig på din [!DNL AEM Forms]-server bör du först överföra XDP-filen till din [!DNL AEM Forms]-server.
-      * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i postens PDF-dokument.
-      * **Teckensnittsfamilj**: Teckensnittsfamilj för texten i PDF för dokument för post.
+      * **Dekorfärg**: Den färg i vilken rubriktext och avgränsningslinjer återges i det dokument som innehåller posten PDF.
+      * **Teckensnittsfamilj**: Teckensnittsfamilj för texten i PDF Document of Record.
 
         >[!NOTE]
         >
-        > AEM Forms har en mängd inbyggda teckensnitt som är helt integrerade med PDF filer. [Klicka här](/help/forms/supported-out-of-the-box-fonts.md) om du vill visa en lista över teckensnitt som stöds.
+        > AEM Forms har en mängd inbyggda teckensnitt som är sömlöst integrerade med PDF-filer. [Klicka här](/help/forms/supported-out-of-the-box-fonts.md) om du vill visa en lista över teckensnitt som stöds.
 
       * **Inkludera formulärobjekt som inte är bundna till datamodell**: Om du anger egenskapen inkluderas obundna fält från schemabaserat anpassat formulär i postdokumentet.
 
@@ -381,7 +384,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
 ## Tabell- och kolumnlayouter för paneler i dokumentformat {#table-and-column-layouts-for-panels-in-document-of-record}
 
-Det anpassade formuläret kan vara långt och innehålla flera formulärfält. Du kanske inte vill spara ett postdokument som en exakt kopia av det anpassade formuläret. Nu kan du välja en tabell- eller kolumnlayout för att spara en eller flera adaptiva formulärpaneler på PDF i Dokumentformat.
+Det anpassade formuläret kan vara långt och innehålla flera formulärfält. Du kanske inte vill spara ett postdokument som en exakt kopia av det anpassade formuläret. Nu kan du välja en tabell- eller kolumnlayout för att spara en eller flera adaptiva formulärpaneler i PDF Document of Record.
 
 Innan du genererar ett postdokument väljer du Layout för postdokumentet för den panelen som Tabell eller Kolumn i inställningarna för en panel. Fälten i panelen ordnas därefter i postdokumentet.
 

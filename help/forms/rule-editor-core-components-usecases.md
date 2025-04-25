@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 8191e113-f768-4b1e-a191-e3c722f19054
-source-git-commit: e5f22d925f9b9ec3a5f80f9506353e42e8879da3
+source-git-commit: bcf8f9e5273819eaee09875ec81251fe4330701c
 workflow-type: tm+mt
-source-wordcount: '1373'
+source-wordcount: '1550'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,21 @@ ht-degree: 0%
 Artikeln innehåller detaljerade exempel på en regelredigerare för ett adaptivt formulär baserat på kärnkomponenter och ger insikter i hur det implementeras för olika scenarier. Regelredigeraren låter utvecklare definiera och hantera logiken som styr formulärens beteende.
 Låt oss nu diskutera olika implementeringar för en regelredigerare.
 
+## Ange fokus till en annan panel vid knappklickning om den första panelen är giltig
+
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+
+Med regelredigeraren kan du validera en panellayout, t.ex. Vågräta flikar, Lodräta flikar, Dragspel eller Guiden när du klickar på en knapp och ställer in fokus på ett formulärobjekt i en annan panel. Du kan använda den här funktionen för att förbättra formulärnavigeringen och användarupplevelsen.
+
+Föreställ dig ett flerstegsansökningsformulär med en guidelayout. Du måste slutföra panelen `Personal Information` innan du går till `Employment Details`. När du klickar på knappen `Next` validerar regelredigeraren panelen `Personal Information`. Om alla obligatoriska fält är korrekt ifyllda flyttas fokus automatiskt till panelen `Employment Details`. I annat fall visas ett felmeddelande där användaren uppmanas att fylla i de saknade fälten.
+
+Du kan skapa en regel på knappen `Next` för att validera den första panelen:
+
+![Regel för knappen Nästa](/help/forms/assets/next-rule.png){width=50%}
+
+När du klickar på knappen **Nästa** valideras panelen **Personlig information** . Om den angivna informationen är korrekt flyttas fokus till panelen **Kontosäkerhet**. I annat fall uppmanas du att fylla i den saknade informationen i ett felmeddelande.
+
+<!--![Video]()-->
 
 ## Navigera mellan paneler med knappen
 
@@ -28,7 +43,7 @@ Varje panel innehåller relevanta fält och alternativ för att uppdatera specif
 
 Du kan använda regeln `Navigate among the panels` för att skapa navigeringsregler för knappar som tillåter växling mellan olika paneler.  Markera attributet `Shift focus to the next item` om du vill flytta fokus till nästa panel i layouten.
 
-![Regel för nästa panel](/help/forms/assets/rule-editor-navigate-in-panel-next.png){width=50%}
+![Nästa panelregel](/help/forms/assets/rule-editor-navigate-in-panel-next.png){width=50%}
 
 När du klickar på knappen `Next` flyttas fokus till efterföljande panel i layouten.
 

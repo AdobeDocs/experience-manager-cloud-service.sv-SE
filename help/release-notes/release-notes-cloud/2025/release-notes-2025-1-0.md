@@ -4,9 +4,9 @@ description: Versionsinformation om 2025.1.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 085629bf-fb24-4511-af6c-bbbeedcb6b98
-source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
+source-git-commit: e178672b51ede70b10bb57f0d7ffb4d39279a84e
 workflow-type: tm+mt
-source-wordcount: '1740'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
@@ -97,9 +97,6 @@ Nytt protokollstöd har startats (DASH - Dynamic Adaptive Streaming over HTTP) f
 
 * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
 
-**Resursrelationer**
-
-Assets View har nu stöd för att visa och redigera resursrelationer på en förenklad resurspanel. Lägg enkelt in relationer som Source och Derivative i materialet så att användarna kan hitta relevant hjälteinnehåll effektivare.
 
 **Bearbeta resurser igen**
 

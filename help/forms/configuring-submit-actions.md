@@ -4,9 +4,9 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 feature: Adaptive Forms, Foundation Components
 exl-id: a4ebedeb-920a-4ed4-98b3-2c4aad8e5f78
 role: User, Developer
-source-git-commit: db0487ab11f48690cb36b410b895324e0d4cf684
+source-git-commit: 1dddba99c5871d01bf51c335747363af1889738d
 workflow-type: tm+mt
-source-wordcount: '3725'
+source-wordcount: '3753'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 **Gäller för**: ✔️ adaptiva formulärets Foundation-komponenter. ❌ [Kärnkomponenter för adaptiv form](/help/forms/configure-submit-actions-core-components.md). Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](create-or-add-an-adaptive-form-to-aem-sites-page.md) eller för att [skapa fristående adaptiv Forms](creating-adaptive-form-core-components.md).
 
-En Skicka-åtgärd utlöses när en användare klickar på knappen **[!UICONTROL Submit]** i ett anpassat formulär. Forms as a Cloud Service tillhandahåller följande Skicka-åtgärder direkt.
+En Skicka-åtgärd utlöses när en användare klickar på knappen **[!UICONTROL Submit]** i ett anpassat formulär. Forms as a Cloud Service innehåller följande inskickningsåtgärder.
 
 * [Skicka till REST-slutpunkt](#submit-to-rest-endpoint)
 * [Skicka e-post](#send-email)
 * [Skicka med FDM (Form Data Mode)](#submit-using-form-data-model)
-* [Anropa ett AEM](#invoke-an-aem-workflow)
+* [Starta ett AEM-arbetsflöde](#invoke-an-aem-workflow)
 * [Skicka till SharePoint](#submit-to-sharedrive)
 * [Skicka till OneDrive](#submit-to-onedrive)
 * [Skicka till Azure Blob Storage](#azure-blob-storage)
@@ -67,7 +67,7 @@ Använd åtgärden **[!UICONTROL Submit to REST Endpoint]** för att skicka skic
 
 Om du vill skicka data till en intern server anger du sökvägen till resursen. Data bokförs som resurssökväg. Till exempel /content/restEndPoint. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
 
-Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POSTENS begäran anonymt.
+Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POST-begäran anonymt.
 
 ![Mappning för fältvärden skickas som parametrar för Tack-sidan](assets/post-enabled-actionconfig.png)
 
@@ -92,7 +92,7 @@ Som visas i bilden nedan skickas `param1` och `param2` som parametrar med värde
 
 ![Konfigurerar åtgärden Skicka för resterande slutpunkt](assets/action-config.png)
 
-Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM servern som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
+Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
 >[!NOTE]
 >
@@ -153,9 +153,9 @@ The **Forms Portal Submit Action** option makes form data available through an [
 
 For more information about the Forms Portal and Submit Action, see [Drafts and submissions component](draft-submission-component.md). -->
 
-## Anropa ett AEM {#invoke-an-aem-workflow}
+## Starta ett AEM-arbetsflöde {#invoke-an-aem-workflow}
 
-Åtgärden **[!UICONTROL Invoke an AEM Workflow]** Skicka associerar ett anpassat formulär med ett [AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument på arbetsflödets nyttolastplats eller i en variabel. Om arbetsflödet är markerat för extern datalagring och konfigurerat för en extern datalagring är endast variabelalternativet tillgängligt. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
+Åtgärden **[!UICONTROL Invoke an AEM Workflow]** Skicka associerar ett anpassat formulär med ett [AEM-arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument på arbetsflödets nyttolastplats eller i en variabel. Om arbetsflödet är markerat för extern datalagring och konfigurerat för en extern datalagring är endast variabelalternativet tillgängligt. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
 
 Åtgärden Skicka placerar följande på arbetsflödets nyttolastplats, eller variabeln om arbetsflödet har markerats för extern datalagring:
 
@@ -167,7 +167,7 @@ For more information about the Forms Portal and Submit Action, see [Drafts and s
 
 Innan du använder åtgärden **[!UICONTROL Invoke an AEM Workflow]** Skicka ska du konfigurera följande för konfigurationen **[!UICONTROL AEM DS settings service]**:
 
-* **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet aktiveras. Detta kan vara samma som URL:en för AEM författarinstans eller en annan server.
+* **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet aktiveras. Detta kan vara samma som URL:en för AEM-författarinstansen eller en annan server.
 
 * **[!UICONTROL Processing Server User Name]**: Användarnamn för arbetsflöde
 
@@ -239,6 +239,11 @@ Du kan använda den skapade SharePoint Document Library-konfigurationen i ett ad
 När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen.
 Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
 
+>[!NOTE]
+>
+> Bifogade filer lagras också i katalogen `/folder_name/form_name/year/month/date/submission_id/data`. Om du väljer **Spara bifogade filer med ursprungligt namn** lagras de bifogade filerna i mappen med sina ursprungliga filnamn.
+> ![bild](/help/forms/assets/sp-doc-attachment-af1.png){height=50%,width=50%}
+
 ### Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424820/connect-aem-adaptive-form-to-sharepointlist/?quality=12&learn=on)
@@ -274,7 +279,7 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 
 Du kan använda den skapade SharePoint List-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint List. Utför följande steg om du vill använda en lagringskonfiguration i SharePoint List i en anpassad form:
 
-1. [Skapa en formulärdatamodell (FDM) med Microsoft® SharePoint List configuration](/help/forms/create-form-data-models.md)
+1. [Skapa en formulärdatamodell (FDM) med Microsoft](/help/forms/create-form-data-models.md)
 1. [Konfigurera FDM (Form Data Model) för att hämta och skicka data](/help/forms/work-with-form-data-model.md#configure-services)
 1. [Skapa ett adaptivt formulär](/help/forms/creating-adaptive-form.md)
 1. [Konfigurera åtgärden Skicka med en formulärdatamodell (FDM)](/help/forms/configuring-submit-actions.md#submit-using-form-data-model)
@@ -392,7 +397,7 @@ Du kan använda den skapade Azure Storage-behållarkonfigurationen i ett adaptiv
 När du skickar formuläret sparas data i den angivna Azure Storage-behållarkonfigurationen.
 Mappstrukturen som data ska sparas i är `/configuration_container/form_name/year/month/date/submission_id/data`.
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 
 ## Skicka till Power Automate {#microsoft-power-automate}
@@ -404,7 +409,7 @@ Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power
 * Utför komplexa beräkningar på inhämtade data
 * Spara adaptiva Forms-data i lagringssystemen enligt ett fördefinierat schema
 
-Den adaptiva Forms-redigeraren tillhandahåller **Anropa ett Microsoft® Power Automate-flöde** för att skicka adaptiva formulärdata, bilagor och arkivdokument som skickas till Power Automate Cloud Flow. Om du vill använda åtgärden Skicka för att skicka hämtade data till Microsoft® Power Automate [ansluter du Forms as a Cloud Service-instansen till Microsoft® Power Automate](forms-microsoft-power-automate-integration.md)
+Den adaptiva Forms-redigeraren tillhandahåller **Anropa ett Microsoft® Power Automate-flöde** för att skicka adaptiva formulärdata, bilagor och arkivdokument som skickas till Power Automate Cloud Flow. [Anslut din Forms as a Cloud Service-instans med Microsoft® Power Automate](forms-microsoft-power-automate-integration.md) om du vill använda åtgärden Skicka för att skicka hämtade data till Microsoft® Power Automate.
 
 När konfigurationen är klar kan du använda åtgärden [Anropa ett Microsoft® Power Automate-flöde](forms-microsoft-power-automate-integration.md#use-the-invoke-a-microsoft&reg;-power-automate-flow-submit-action-to-send-data-to-a-power-automate-flow-use-the-invoke-microsoft-power-automate-flow-submit-action) för att skicka data till ett Power Automate-flöde.
 
@@ -450,11 +455,11 @@ Om slutanvändaren åsidosätter dessa valideringar och skickar formulären utf�
 
 >[!NOTE]
 >
->Validering på serversidan validerar formulärmodellen. Du rekommenderas att skapa ett separat klientbibliotek för validering och inte blanda det med andra saker som formatering av HTML och DOM-manipulering i samma klientbibliotek.
+>Validering på serversidan validerar formulärmodellen. Du rekommenderas att skapa ett separat klientbibliotek för validering och inte blanda det med andra saker som HTML-formatering och DOM-manipulering i samma klientbibliotek.
 
 ### Stöd för anpassade funktioner i valideringsuttryck {#supporting-custom-functions-in-validation-expressions-br}
 
-Om det finns **komplexa valideringsregler** finns ibland det exakta valideringsskriptet i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt vid validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek på fliken **[!UICONTROL Basic]** i egenskaperna för adaptiv formulärbehållare enligt nedan.
+Om det finns **komplexa valideringsregler** finns ibland det exakta valideringsskriptet i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt när du utför validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek på fliken **[!UICONTROL Basic]** i egenskaper för adaptiv formulärbehållare enligt nedan.
 
 ![Stöd för anpassade funktioner i valideringsuttryck](assets/clientlib-cat.png)
 
@@ -464,7 +469,7 @@ Författaren kan konfigurera customJavaScript-bibliotek per adaptiv form. I bibl
 
 ## Felhantering vid Skicka-åtgärd {#error-handling-on-submit-action}
 
-Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på Publish-noden. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
+Konfigurera anpassade felsidor som 400.jsp, 404.jsp och 500.jsp som en del av AEM riktlinjer för säkerhet och skärpning. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
 
 När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-dataklagomål till ett schema som inte innehåller `<afData>` -, `<afBoundData>` - och `</afUnboundData>` -taggar, förloras data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan egenskapen `bindref`.
 

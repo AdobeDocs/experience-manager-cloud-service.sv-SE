@@ -4,13 +4,13 @@ Description: This article explains how to send data from your Adaptive Form to a
 keywords: Ansluta SharePoint dokumentbibliotek till ett tilläggsformulär, Skicka till SharePoint, Skapa en SharePoint Document Library-konfiguration, Använd åtgärden Skicka till SharePoint i ett adaptivt formulär, AEM Forms Data Model SharePoint Document Library, Forms Data Model SharePoint Document Library, Integrate Forms Data Model för att SharePoint dokumentbiblioteket
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: 55e8f142e242f5f4010653a155a241ffcf801470
+exl-id: a00b4a93-2324-4c2a-824f-49146dc057b0
+source-git-commit: 1dddba99c5871d01bf51c335747363af1889738d
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
-
 
 # Ansluta ett anpassat formulär till Microsoft® SharePoint Document Library {#connect-af-sharepoint-doc-library}
 
@@ -75,8 +75,14 @@ Du kan använda den skapade SharePoint Document Library-konfigurationen i ett ad
 1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
 1. Klicka på **[!UICONTROL Save]** om du vill spara Skicka-inställningarna.
 
-När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen.
-Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+>[!NOTE]
+>
+> När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen. Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+
+>[!NOTE]
+>
+> Bifogade filer lagras också i katalogen `/folder_name/form_name/year/month/date/submission_id/data`. Om du väljer **Spara bifogade filer med ursprungligt namn** lagras de bifogade filerna i mappen med sina ursprungliga filnamn.
+> ![bild](/help/forms/assets/sp-doc-attachment-af2.png){height=50%,width=50%}
 
 ## Relaterade artiklar
 

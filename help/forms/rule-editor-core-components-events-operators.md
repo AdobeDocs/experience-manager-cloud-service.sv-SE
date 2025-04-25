@@ -1,13 +1,13 @@
 ---
-title: Vilka operatortyper och händelser finns tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenterna?
-description: Anpassad regelredigerare för Forms stöder olika operatortyper och händelser.
+title: Vilka olika operatorer, typer och händelser är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter?
+description: Adaptiv regelredigerare i Forms har stöd för olika typer av operatorer och händelser.
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: ac85ff04-25dc-4566-a986-90ae374bf383
-source-git-commit: dab2b94d1e456622f061741ba1b5192c9163c295
+source-git-commit: 321116ce8d6da53c431f68f437cbf7c0050a47e8
 workflow-type: tm+mt
-source-wordcount: '2096'
+source-wordcount: '2258'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ I AEM Forms som moln innehåller regelredigeraren olika typer av operatorer och 
 
 Operatortyperna som är tillgängliga i regelredigeraren för ett adaptivt formulär ger ett robust ramverk för att skapa exakta villkor. De gör det möjligt för er att hantera data, utföra beräkningar och kombinera olika villkor på ett logiskt och sammanhängande sätt. Oavsett om du jämför värden, utför aritmetiska operationer eller manipulerar strängar ser de här operatorerna till att reglerna är både flexibla och kraftfulla.
 
-Händelser i regelredigeraren fungerar som utlösare som aktiverar reglerna. De definierar de specifika åtgärder som inträffar när vissa villkor uppfylls. Genom att utnyttja olika typer av händelser kan du automatisera svar på en mängd olika scenarier, till exempel användarinteraktioner, schemalagda tider, dataändringar och systemtillstånd. Med möjlighet att ange dessa utlösare kan du skapa dynamiska och responsiva regler som uppfyller dina specifika krav.
+Händelser i regelredigeraren fungerar som utlösare som aktiverar reglerna. De definierar de specifika åtgärder som inträffar när vissa villkor är uppfyllda. Genom att utnyttja olika typer av händelser kan du automatisera svar på en mängd olika scenarier, till exempel användarinteraktioner, schemalagda tider, ändringar i data och systemtillstånd. Med möjligheten att ange dessa utlösare kan du skapa dynamiska och responsiva regler som tillgodoser dina specifika krav.
 
 Genom att förstå och använda tillgängliga operatortyper och händelser kan du utnyttja regelredigerarens fulla potential, som gör att du kan skapa effektiva regler som uppfyller dina unika behov och förbättra den övergripande systemfunktionaliteten.
 
@@ -26,17 +26,21 @@ Genom att förstå och använda tillgängliga operatortyper och händelser kan d
 
 Regelredigeraren innehåller följande logiska operatorer och händelser som du kan använda för att skapa regler.
 
-* **är lika med**
-* **är inte lika med**
-* **Börjar med**
-* **Slutar med**
-* **Innehåller**
-* **Innehåller inte**
-* **är tom**
-* **är inte tom**
-* **Har markerat:** Returnerar true när användaren väljer ett visst alternativ för en kryssruta, nedrullningsbar alternativknapp.
-* **Är initierad (händelse):** Returnerar true när ett formulärobjekt återges i webbläsaren.
-* **Har ändrats (händelse):** Returnerar true när användaren ändrar det angivna värdet eller det valda alternativet för ett formulärobjekt.
+* **Är lika med** - Kontrollerar om ett formulärobjekt matchar ett angivet värde.
+* **Är inte lika med** - Kontrollerar om ett formulärobjekt inte matchar ett angivet värde.
+* **Börjar med** - Kontrollerar om ett formulärobjekt börjar med en angiven sträng.
+* **Slutar med** - Kontrollerar om ett formulärobjekt avslutas med en angiven sträng.
+* **Innehåller** - Kontrollerar om ett formulärobjekt innehåller en angiven delsträng.
+* **Innehåller inte** - Kontrollerar om ett formulärobjekt inte innehåller någon angiven delsträng.
+* **Är tom** - Kontrollerar om ett formulärobjekt är tomt eller inte har angetts.
+* **Är inte tom** - Kontrollerar om ett formulärobjekt finns och inte är tomt.
+* **Har markerat** - Returnerar true när en användare markerar en viss kryssruta, listruta eller alternativknappsalternativ.
+* **Är initierad (händelse)** - Returnerar true när ett formulärobjekt återges i webbläsaren.
+* **Har ändrats (händelse)** - Returnerar true när en användare ändrar värdet eller markeringen för ett formulärobjekt.
+* **Klickas (händelse)** - Returnerar true när en användare klickar på ett formulärobjekt, till exempel en knapp. En användare kan [lägga till flera villkor för knappklickningen](/help/forms/rule-editor-core-components-usecases.md#set-focus-to-another-panel-on-button-click-if-the-first-panel-is-valid).
+* **Är giltig** - Kontrollerar om ett formulärobjekt uppfyller valideringskriterierna.
+* **Är inte giltig** - Kontrollerar om ett formulärobjekt inte uppfyller valideringskriterierna.
+
 
 <!--
 * **Navigation(event):** Returns true when the user clicks a navigation object. Navigation objects are used to move between panels. 
@@ -68,15 +72,16 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Else, do the following:`
 
-`Action 2 on Object C;`_
+`Action 2 on Object C;`
+_
 
-När du har en komponent med flera värden, till exempel alternativknappar eller lista, hämtas alternativen automatiskt när du skapar en regel för den komponenten och görs tillgängliga för regelskaparen. Du behöver inte ange alternativvärdena igen.
+När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
 En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
 ![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-instruktionen för att lägga till ytterligare villkor
+När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-satsen för att lägga till ytterligare villkor
 
 ![Tydligt värde för](assets/clearvalueof.png)
 
@@ -104,13 +109,17 @@ Gör sedan följande:
 
 _
 
-![Tillåtna Flera fält i När](/help/forms/assets/allowed-multiple-field-when.png)
+![Tillåtna flera fält i När](/help/forms/assets/allowed-multiple-field-when.png)
 
-**Att tänka på när du använder funktionen Tillåtna flera fält i När-villkorsfunktionen**
+**Att tänka på när du använder tillåtna flera fält i villkorsfunktionen**
 
 * Kontrollera att kärnkomponenten [är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
 * Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
-* Du kan bara lägga till flera fält i villkoret **När för en** AND-regel ****. Det går inte att använda en **OR**-regel.
+* Du kan bara lägga till flera fält i villkoret **När för en** AND-regel ****. Det är inte möjligt för en **OR-regel** .
+
+>[!NOTE]
+>
+> Om du vill lägga till flera villkor som innehåller ett knappklick ser du till att knappklickningshändelsen placeras som det första villkoret. Är till exempel `When button is clicked AND text input equals '5'` giltig, medan `When text input equals '5' AND button is clicked` det inte stöds.
 
 <!--
 * It is not possible to add multiple fields in the When condition while applying rules to a button.
@@ -175,7 +184,7 @@ Regeltypen **[!UICONTROL Set Property]** gör att du kan ange värdet för en eg
 * enumNames (String[])
 * chartType (String)
 
-Det gör att du till exempel kan definiera regler för att visa textrutan när du klickar på en knapp. Du kan använda en anpassad funktion, ett formulärobjekt, en objektegenskap eller utdata från en tjänst för att definiera en regel.
+Du kan till exempel definiera regler som visar textrutan när någon klickar på en knapp. Du kan använda en anpassad funktion, ett formulärobjekt, en objektegenskap eller en tjänstutdata för att definiera en regel.
 
 ![Ange egenskap](assets/set_property_rule_new.png)
 
@@ -207,21 +216,21 @@ I följande bild visas ett exempel på hur kryssrutan aktiveras dynamiskt basera
 
 **[!UICONTROL Navigate to]** Navigera till andra adaptiva Forms, andra resurser som bilder eller dokumentfragment eller en extern URL. <!-- For more information, see [Add button to the Interactive Communication](create-interactive-communication.md#addbuttontothewebchannel). -->
 
-**[!UICONTROL Dispatch Event]** Utlöser specifika åtgärder eller beteenden baserat på fördefinierade villkor eller händelser.
+**[!UICONTROL Dispatch Event]** utlöser specifika åtgärder eller beteenden baserat på fördefinierade villkor eller händelser.
 
 #### [!UICONTROL Set Value of] {#set-value-of}
 
-Med **[!UICONTROL Set Value of]** regeltypen kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en litteral sträng, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap i ett annat objekt eller utdata från en formulärdatamodelltjänst. På samma sätt kan du söka efter ett villkor för en komponent, sträng, egenskap eller värden som härleds från en funktion eller ett matematiskt uttryck.
+Med regeltypen **[!UICONTROL Set Value of]** kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en Form Data Model-tjänst. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
 
-Regeltypen **Ange värde** för är inte tillgänglig för alla formulärobjekt, t.ex. paneler och knappar i verktygsfältet. En standarduppsättningsvärde för regel har följande struktur:
+Regeltypen **Ange värdet för** är inte tillgänglig för alla formulärobjekt, till exempel paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
 
 Ange värdet för objekt A till:
 
-(String ABC) ELLER
-(objektegenskap X för objekt C) OR
-(värde från en funktion) OR
-(värde från ett matematiskt uttryck) OR
-(datavärde för en datamodelltjänst),
+(sträng ABC) ELLER
+(objektegenskap X för objekt C) ELLER
+(värde från en funktion) ELLER
+(värde från ett matematiskt uttryck) ELLER
+(utdatavärde för en datamodelltjänst);
 
 När (valfritt):
 
@@ -237,7 +246,7 @@ Exempel på Ange värderegel med tjänsten Formulärdatamodell.
 
 Med regeltypen **[!UICONTROL Show]** kan du skriva en regel som visar eller döljer ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Visa utlöser även åtgärden Dölj om villkoret inte uppfylls eller returnerar `False`.
 
-En vanlig Visa-regel är strukturerad på följande sätt:
+En typisk Show-regel är strukturerad på följande sätt:
 
 `Show Object A;`
 
@@ -251,7 +260,7 @@ En vanlig Visa-regel är strukturerad på följande sätt:
 
 #### [!UICONTROL Hide] {#hide}
 
-På liknande sätt som med regeltypen Visa kan du använda regeltypen **[!UICONTROL Hide]** för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Dölj regeltyp utlöser även åtgärden Visa om villkoret inte uppfylls eller returnerar `False`.
+På samma sätt som med regeltypen Visa kan du använda regeltypen **[!UICONTROL Hide]** för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Dölj utlöser också åtgärden Visa om villkoret inte uppfylls eller returneras `False`.
 
 En vanlig Dölj-regel är strukturerad på följande sätt:
 

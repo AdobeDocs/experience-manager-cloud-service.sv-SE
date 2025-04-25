@@ -3,17 +3,19 @@ title: Skapa formulärfragment för WYSIWYG-baserad redigering
 description: Lär dig hur du skapar formulärfragment i den universella redigeraren och lägger till dem i formulär.
 feature: Edge Delivery Services
 role: Admin, User, Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 62c58ceb2d2d659bad591b3eba1bfd924f2a848b
+exl-id: 7b0d4c7f-f82f-407b-8e25-b725108f8455
+source-git-commit: 28a8ce3b3afbdc80d06b50bf4824d52cb81954fe
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
 
+# Skapa formulärfragment i Universal Editor
 
-# Skapa och använda Edge Delivery Services-formulärfragment i Universal Editor
+<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Forms innehåller ofta vanliga avsnitt som kontaktinformation, identifikationsinformation eller godkännandeavtal. Formulärutvecklarna skapar dessa avsnitt varje gång de skapar ett nytt formulär som är upprepande och tidskrävande.
 För att slippa detta dubbelarbete erbjuder Universal Editor ett sätt att skapa återanvändbara formulärsegment, t.ex. paneler eller fältgrupper, bara en gång och återanvända dem i olika formulär. Dessa återanvändbara, modulära och fristående segment kallas för formulärfragment. Samma kontaktfragment för nödsituationer kan till exempel användas i olika avsnitt av ett formulär, till exempel för kontaktinformation för medarbetare och ansvarig.
@@ -23,7 +25,11 @@ I slutet av artikeln får du lära dig att skapa och använda fragment i formul�
 ## Funktioner för Edge Delivery Services-formulärfragment
 
 * **Bevara konsekvens med formulärfragment**
-Du kan integrera fragment i olika formulär, vilket gör att du kan upprätthålla enhetliga layouter och standardiserat innehåll. Med metoden&quot;ändra en gång, spegla överallt&quot; tillämpas automatiskt alla uppdateringar som görs i ett fragment på alla formulär.
+Du kan integrera fragment i olika formulär, vilket gör att du kan upprätthålla enhetliga layouter och standardiserat innehåll.
+
+  >[!NOTE]
+  >
+  > Med metoden&quot;ändra en gång, spegla överallt&quot; tillämpas automatiskt alla uppdateringar som görs i ett fragment på alla formulär i förhandsgranskningsläget. I publiceringsläget måste du dock publicera fragmentet eller publicera formuläret på nytt för att ändringarna ska återspeglas.
 
 * **Lägger till formulärfragment flera gånger i formuläret**
 Du kan lägga till ett formulärfragment flera gånger i ett formulär och konfigurera dess databindningsegenskaper till datakällor eller scheman.
@@ -38,13 +44,13 @@ Du kan skapa kapslade formulärfragment, vilket betyder att du kan lägga till e
 ## Att tänka på när du använder Edge Delivery Services-formulärfragment
 
 * Du måste lägga till samma GitHub-URL i både fragmentet och formuläret där du tänker använda fragmentet.
-* Du kan inte redigera ett formulärfragment som infogas med referens i ett formulär. Ändra det fristående formulärfragmentet om du vill redigera det.
+* Du kan inte redigera ett formulärfragment i ett formulär. Om du vill göra ändringar ändrar du det fristående formulärfragmentet.
 
-## Krav för att skapa Edge Delivery Services-formulärfragment
+## Förutsättningar
 
 * [Konfigurera din GitHub-databas](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#get-started-with-the-aem-forms-boilerplate-repository-template) för att upprätta en anslutning mellan din AEM-miljö och GitHub-databasen.
 * Om du redan använder Edge Delivery Services lägger du till den senaste versionen av [Adaptive Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project) i din GitHub-databas.
-* Instansen AEM Forms Author innehåller en mall baserad på Edge Delivery Services. Kontrollera att den [senaste versionen av Core Components](https://github.com/adobe/aem-core-forms-components) är installerad i din miljö.
+* Instansen AEM Forms Author innehåller en mall baserad på Edge Delivery Services.
 * Ha URL:en till din AEM Forms as a Cloud Service-författarinstans och din GitHub-databas till hands.
 
 ## Arbeta med Edge Delivery Services-formulärfragment
@@ -132,7 +138,7 @@ Låt oss skapa ett enkelt `Employee Details`-formulär som innehåller informati
 
 1. Klicka på **[!UICONTROL Select]**.
 
-   Formulärfragmentet läggs till med referens till formuläret och förblir synkroniserat med det fristående formulärfragmentet. Det innebär att alla ändringar som görs i fragmentet speglas i alla instanser där fragmentet är inbyggt i formulären.
+   Formulärfragmentet läggs till med referens till formuläret och förblir synkroniserat med det fristående formulärfragmentet.
 
    ![Fragment i formulär](/help/edge/docs/forms/universal-editor/assets/fragment-in-form.png)
 
