@@ -3,9 +3,9 @@ title: Hämta resurser från Content Hub
 description: Lär dig hur du hämtar resurser från Content Hub-portalen
 role: User
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: e108d25f3cdc025e0fbe8010854f245f62786baf
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
@@ -74,8 +74,8 @@ Så här hämtar du en resurs och dess återgivningar:
 
    >[!NOTE]
    >
-   * Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [Konfiguration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) .
-   * Du kan hämta alla [statiska, dynamiska och smarta beskärningsåtergivningar](#types-of-renditions) när du hämtar en resurs.
+   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [Konfiguration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) .
+   >* Du kan hämta alla [statiska, dynamiska och smarta beskärningsåtergivningar](#types-of-renditions) när du hämtar en resurs.
 
 1. Markera en eller flera återgivningar och klicka på **[!UICONTROL Download]**.
 
@@ -86,7 +86,7 @@ Om du hämtar en licensierad resurs väljer du **[!UICONTROL I have read and acc
 
 >[!NOTE]
 >
-De användare som har tillgång till [Dynamiska medier med Open API-funktioner](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsrenderingar.
+> De användare som har tillgång till [Dynamiska medier med Open API-funktioner](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsrenderingar.
 
 ## Hämta flera resurser och deras återgivningar {#download-multiple-assets-renditions}
 
@@ -103,8 +103,8 @@ Så här hämtar du flera resurser och deras återgivningar:
 
      >[!NOTE]
      >
-     * Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [Konfiguration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) .
-     * Du kan bara hämta [statiska återgivningar](#types-of-renditions) när du hämtar flera resurser.
+     >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [Konfiguration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) .
+     >* Du kan bara hämta [statiska återgivningar](#types-of-renditions) när du hämtar flera resurser.
 
    Om någon av de markerade resurserna är en licensierad resurs klickar du på licensen för resursen i den vänstra rutan för att se förhandsvisningen, vilket gör att du kan välja **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** och sedan klicka på **[!UICONTROL Download]**. Förhandsgranskningen av licensen visas bara om resursen har godkänts i Assets as a Cloud Service-redigeringsmiljön. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
@@ -153,17 +153,35 @@ Läs mer om att [visa och hantera återgivningar i Experience Manager Assets](/h
 
 * [Statiska återgivningar](/help/assets/renditions.md#static-renditions): Statiska återgivningar är förskapade versioner av digitala resurser, som vanligtvis genereras vid tillgångsintag eller ändring. De är optimerade för specifika användningsområden och plattformar, som webbminiatyrer, mobilvänliga format för responsiv design eller högupplösta filer för utskrift, vilket ger en smidig och enhetlig upplevelse.
 
-* [Dynamiska återgivningar](/help/assets/renditions.md#dynamic-renditions): Dynamiska återgivningar är anpassade versioner av resurser i realtid som utför olika åtgärder, till exempel att ändra storlek på bilder för olika enhetsupplösningar eller beskära för att passa olika proportioner. Med dessa renderingar kan ni erbjuda personaliserade och optimerade upplevelser för större behov. Dynamiska återgivningar av resurser skapas i [!DNL Adobe Experience Manager Assets]-redigeringsmiljön.
+* [Dynamiska återgivningar](/help/assets/renditions.md#dynamic-renditions): Dynamiska återgivningar är anpassade versioner av resurser i realtid som utför olika åtgärder, till exempel att ändra storlek på bilder för olika enhetsupplösningar eller beskära för att passa olika proportioner. Med dessa renderingar kan ni erbjuda personaliserade och optimerade upplevelser för större behov. Dynamiska återgivningar av resurser skapas i [!DNL Adobe Experience Manager Assets]-redigeringsmiljön. Mer information om steg som krävs för att aktivera dynamiska renderingar finns i [Aktivera dynamiska renderingar](#enable-dynamic-media-renditions).
 
 * [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic media smart crop for utnyttjar artificiell intelligens som drivs av Adobe Sensei för att spåra intressepunkten och säkerställa att våra resurser ser ut som de bästa på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
 
+  Smart Crop-renderingar visas och är bara tillgängliga för hämtning om du har tillgång till [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md). Återgivningar för smart beskärning är bara tillgängliga för bildresurser.
+
   ![Återgivningstyper](/help/assets/assets/renditions-types.png)
 
+### Aktivera dynamiska återgivningar {#enable-dynamic-media-renditions}
 
->[!NOTE]
-> 
-* Funktionen för dynamiska och smarta beskärningsåtergivningar är i tidiga Adobe-faser. [Skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få tillgång till funktionen.
-* Nya kunder som har anslutit till [Dynamic Media Open API-tjänster](/help/assets/dynamic-media-open-apis-overview.md) måste ändra sina befintliga bildförinställningar för godkännande.
+Så här aktiverar du dynamiska återgivningar:
+
+1. Kontrollera att du har tillgång till [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md).
+
+   När du har tillgång till Dynamic Media med OpenAPI-funktioner är alla resurser som markerats som `Approved` tillgängliga för offentlig leverans med Dynamic Media.
+
+1. Ange [godkännandemålet för resursen](/help/assets/approve-assets-content-hub.md#set-approval-target) till Content Hub för att godkänna resurser enbart för Content Hub.
+
+1. Aktivera växeln **[!UICONTROL Enable availability of renditions]** som finns på fliken **[!UICONTROL Renditions]** i användargränssnittet [Configuration](/help/assets/configure-content-hub-ui-options.md#access-configuration-options-content-hub).
+
+1. Spara om de befintliga bildförinställningarna så att de blir tillgängliga i Content Hub. Det gäller endast om du nyligen har anslutit till Dynamic Media med OpenAPI.
+
+   Om du vill spara om de befintliga bildförinställningarna går du till administratörsvyn och väljer **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**. Välj en förinställning, klicka på **[!UICONTROL Edit]** och sedan på **[!UICONTROL Save]**.
+
+
+
+   >[!NOTE]
+   > 
+   > Dynamiska återgivningar är bara tillgängliga för bildresurser.
 
 
 
