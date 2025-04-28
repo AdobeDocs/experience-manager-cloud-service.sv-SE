@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 8191e113-f768-4b1e-a191-e3c722f19054
-source-git-commit: bcf8f9e5273819eaee09875ec81251fe4330701c
+source-git-commit: e10451553692b6ad957421783e176409b36b642b
 workflow-type: tm+mt
 source-wordcount: '1550'
 ht-degree: 0%
@@ -31,7 +31,8 @@ Du kan skapa en regel på knappen `Next` för att validera den första panelen:
 
 När du klickar på knappen **Nästa** valideras panelen **Personlig information** . Om den angivna informationen är korrekt flyttas fokus till panelen **Kontosäkerhet**. I annat fall uppmanas du att fylla i den saknade informationen i ett felmeddelande.
 
-<!--![Video]()-->
+>[!VIDEO](https://video.tv.adobe.com/v/3457767)
+
 
 ## Navigera mellan paneler med knappen
 
