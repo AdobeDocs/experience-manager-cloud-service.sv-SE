@@ -4,10 +4,10 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: d0a037090e4b31f18deb0a9bd3238cab0a8d185e
+source-git-commit: 3583c8dad2ad8dce941845003dbf850ea0b8ad2a
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -703,12 +703,7 @@ En referenskomponenttyp tillåter en referens till ett annat dataobjekt från de
 
 #### RTF {#rich-text}
 
-RTF ger möjlighet till RTF-inmatning med flera rader. Det erbjuder ytterligare valideringstyper.
-
-| Valideringstyp | Värdetyp | Beskrivning | Obligatoriskt |
-|---|---|---|---|
-| `maxSize` | `number` | Högsta tillåtna antal tecken | Nej |
-| `customErrorMsg` | `string` | Meddelande som visas om `maxSize` överskrids | Nej |
+RTF ger möjlighet till RTF-inmatning med flera rader.
 
 >[!BEGINTABS]
 
@@ -723,26 +718,6 @@ RTF ger möjlighet till RTF-inmatning med flera rader. Det erbjuder ytterligare 
       "name": "rte",
       "label": "Rich Text",
       "valueType": "string"
-    }
-  ]
-}
-```
-
->[!TAB Exempel 2]
-
-```json
-{
-  "id": "another-richtext",
-  "fields": [
-    {
-      "component": "richtext",
-      "name": "rte",
-      "label": "Rich Text",
-      "valueType": "string",
-      "validation": {
-        "maxSize": 1000,
-        "customErrorMsg": "That's about as funny as a screen door on a battleship."
-      }
     }
   ]
 }
