@@ -4,7 +4,7 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: f3dea4724f757090a504c3144e17fca7075acc52
+source-git-commit: e1c571c4798152732d78b8a2c823d5da9664cb9e
 workflow-type: tm+mt
 source-wordcount: '3016'
 ht-degree: 0%
@@ -72,6 +72,9 @@ Några av de största fördelarna med mallar i [!DNL Dynamic Media] är:
 >[!NOTE]
 >
 >Kunder som prenumererar på SKU:n Förbättrade skyddsinställningar kan inte använda några [!DNL Dynamic Media]-funktioner, inklusive [!DNL Dynamic Media]-mallar, i det molntjänstprogrammet.
+
+Lär dig att skapa en [!DNL Dynamic Media]-mall steg för steg i den här videon.
+>[!VIDEO](https://video.tv.adobe.com/v/3443281)
 
 ## Innan du börjar{#prerequisites-for-dynamic-media-wysiwyg-template}
 
@@ -284,9 +287,6 @@ Utför följande steg för att kopiera mallens leverans-URL:
 1. Klicka på **[!UICONTROL Copy URL]**. Dialogrutan **[!UICONTROL Copy URL]** visas. Markera och kopiera den URL som visas. Den första parametern i URL:en startar efter ett frågetecken **([!UICONTROL ?])** och ett nyckelvärdepar börjar med **[!UICONTROL $]** och slutar med **[!UICONTROL &]**. Nyckeln och värdet avgränsas med ett likhetstecken **([!UICONTROL =])**, med tangenten till vänster och värdet till höger.
 1. Klistra in den här URL-adressen på webbläsarfliken och se den aktiva mallen. Anpassa mallen i realtid genom att uppdatera den obligatoriska parameterns värde (Key-värdet) i URL:en direkt, vilket visas i [steg 2](#preview-and-publish-template-and-copy-template-deliver-url) i avsnittet **Förhandsgranska och publicera** .
 1. Använd den här URL:en för snabb försäljning av produkter och tjänster. Du kan dela den här URL:en med dina kunder eller integrera den på din webbplats eller i ett tredjepartsprogram för att visa banderollen och göra uppdateringar i realtid för den så att den speglar de pågående erbjudandena.
-
-Lär dig att skapa en [!DNL Dynamic Media]-mall steg för steg i den här videon.
->[!VIDEO](https://video.tv.adobe.com/v/3443281)
 
 ## Uppdatera mallen i realtid från URL:en{#update-the-template-from-the-url}
 
