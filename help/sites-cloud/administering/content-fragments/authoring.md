@@ -5,20 +5,14 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 3789904b4aa1ffa4a039e6b84af64f03f06a3206
+source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
 workflow-type: tm+mt
-source-wordcount: '2847'
+source-wordcount: '2817'
 ht-degree: 0%
 
 ---
 
 # Skapa innehållsfragment {#authoring-content-fragments}
-
->[!IMPORTANT]
->
->Du kan få tillgång till olika funktioner i Content Fragment Editor via Early Adobe Program.
->
->Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 Att skapa innehållsfragment är inriktat på både headless-leverans och framtagning av sidor.
 

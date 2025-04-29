@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 865e1fa8-2956-45cf-9dd7-034d491808fe
 solution: Experience Manager Sites
-source-git-commit: 175a7c069f57069b7a5ff1f0e5785147d9a4f6c9
+source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '247'
 ht-degree: 1%
 
 ---
@@ -17,12 +17,6 @@ ht-degree: 1%
 Som standard visas dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) i Adobe Experience Manager as a Cloud Service.
 
 Du kan även visa och hantera alla andra typer av **Assets** i den här **konsolen för innehållsfragment**.
-
->[!IMPORTANT]
->
->Olika funktioner i Content Fragment Console är tillgängliga via Early Adobe Program.
->
->Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 >[!NOTE]
 >

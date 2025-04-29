@@ -4,20 +4,14 @@ description: Lär dig hur du uppgraderar dina innehållsfragment för optimerade
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
 exl-id: 004d1340-8e3a-4e9a-82dc-fa013cea45a7
-source-git-commit: f740301df609e534f1ef770921ea9431de17f846
+source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1123'
 ht-degree: 0%
 
 ---
 
 # Uppgradera dina innehållsfragment för UUID-referenser {#upgrade-content-fragments-for-UUID-references}
-
->[!IMPORTANT]
->
->Olika funktioner i GraphQL API för användning med innehållsfragment är tillgängliga via Tidiga Adobe-program.
->
->Kontrollera [Versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) om du vill se status och hur du tillämpar den om du är intresserad.
 
 För att optimera stabiliteten hos dina GraphQL-filter kan du uppgradera innehålls- och fragmentreferenserna i dina innehållsfragment så att de använder UUID (Universally Unique Identiters).
 
@@ -123,12 +117,12 @@ Innehållsuppgraderingen kan hanteras med slutpunkten: `/libs/dam/cfm/maintenanc
 | åtgärd | `start` | |
 | serviceTypeId | `uuidUpgradeService` | Tjänsttyps-ID (fördefinierat, fast värde). |
 |  segmentSize | `1000` | Antalet innehållsfragment eller modeller som ska uppgraderas i ett segment (batch). |
-| basePath | `/conf` | Ange antingen:<ul><li>roten `/conf` om du vill uppgradera alla AEM konfigurationer</li><li>en vald AEM konfigurationssökväg. som innehållsuppgraderingen körs för<br>Till exempel: `/conf/wknd-shared` uppgraderar endast en innehavare `wknd-shared`</li></ul> |
+| basePath | `/conf` | Ange antingen:<ul><li>roten `/conf` om du vill uppgradera alla AEM-konfigurationer</li><li>en vald konfigurationssökväg för AEM. som innehållsuppgraderingen körs för<br>Till exempel: `/conf/wknd-shared` uppgraderar endast en innehavare `wknd-shared`</li></ul> |
 | intervall | `10` | Intervall i sekunder efter vilket nästa segment av innehållsfragment eller modeller uppgraderas. |
-| läge | `replicate`, `noReplicate` | <ul><li>`replicate`: replikerar samma jobb på alla AEM Publish-instanser</li><li>`noReplicate`: kör bara jobbet AEM författarinstanser</li></ul> |
+| läge | `replicate`, `noReplicate` | <ul><li>`replicate`: replikerar samma jobb på alla AEM Publish-instanser</li><li>`noReplicate`: kör bara jobbet på AEM Author-instanser</li></ul> |
 | dryRun |  `true`, `false` | <ul><li>`false`: simulera innehållsuppgraderingen, utan att spara några innehållsändringar</li><li>`true`: utför innehållsuppgraderingen och sparar innehållsändringar</li></ul> |
 | **Svarsinformation** | **Värde** | |
-| jobId | `UUID` |  ID:t för det jobb som kör innehållsuppgraderingen.<ul><li>Detta ID krävs i alla efterföljande anrop som rör den här körningen.</li><li>Om värdet `mode` är `replicate` måste körningen AEM Publish-instanser också vara under samma `jobId`.</li></ul> |
+| jobId | `UUID` |  ID:t för det jobb som kör innehållsuppgraderingen.<ul><li>Detta ID krävs i alla efterföljande anrop som rör den här körningen.</li><li>Om värdet `mode` är `replicate` måste körningen på AEM Publish-instanser också vara under samma `jobId`.</li></ul> |
 | parameters | Parametrarna för innehållsuppgradering | Detta inkluderar de initiala parametrarna som finns för att starta innehållsuppgraderingen och vissa interna standardinställningar. |
 
 
@@ -268,7 +262,7 @@ Content-Length: 1116
 
 +++Exempelloggfiler
 
-Förutom statusen för en innehållsuppgradering som körs från HTTP-slutpunkten, innehåller AEM detaljerad information om förloppet på innehållsnivån. Till exempel:
+Förutom statusen för en innehållsuppgradering som körs från HTTP-slutpunkten, innehåller AEM loggar detaljerad information om förloppet på innehållsnivån. Till exempel:
 
 ```xml
 #Successful model upgrade
