@@ -3,12 +3,10 @@ title: Skapa fristående blanketter baserade på mallar från Core Component ell
 description: I den här artikeln beskrivs hur du skapar adaptiv Forms genom att välja en Core Component-baserad eller Edge Delivery Services-baserad mall i guiden Skapa formulär. Du kan även publicera formulären på AEM Edge Delivery Services.
 feature: Edge Delivery Services
 role: User
-hide: true
-hidefromtoc: true
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: 1e5711a1b671663653fe22ee08bc01f584655d76
+source-git-commit: c68e98cfe442d0b5a928fde596e193073d5cac21
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -43,276 +41,276 @@ Innan du börjar skapa formulär i AEM och publicerar dem via Edge Delivery Serv
    * Om du har en databas lägger du till det adaptiva Forms-blocket i din befintliga databas. Detaljerade instruktioner finns i [Komma igång med Edge Delivery Services för AEM Forms](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project).
 * Upprätta en anslutning mellan din AEM-miljö och GitHub-databasen. [Hur gör jag?](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#get-started-with-the-aem-forms-boilerplate-repository-template)
 
-<!--A decision flow diagram to guide the setup and publishing of Adaptive Forms:
+Ett beslutsflödesdiagram som vägleder installationen och publiceringen av Adaptive Forms:
 
-![Github Repository Workflow](/help/forms/assets/repo-workflow.png){width=auto}
+![Github-databasarbetsflöde](/help/forms/assets/repo-workflow.png){width=auto}
 
-## Authoring forms in AEM and publishing them to Edge Delivery Services
+## Skapa formulär i AEM och publicera dem i Edge Delivery Services
 
-Follow these steps to author forms in AEM and publish them on Edge Delivery Services:
+Följ de här stegen för att skapa formulär i AEM och publicera dem på Edge Delivery Services:
 
-[1. Choose a template and create the form](#choose-a-template-and-create-the-form)
+[1. Välj en mall och skapa formuläret](#choose-a-template-and-create-the-form)
 
-[2. Author the form](#author-the-form)
+[2. Skriv formuläret](#author-the-form)
 
-[3. Publish a form](#publish-a-form)
+[3. Publicera ett formulär](#publish-a-form)
 
-### Choose a template and create the form 
+### Välj en mall och skapa formuläret
 
-You can create forms on an AEM instance for publishing to Edge Delivery Services using:
+Du kan skapa formulär på en AEM-instans för publicering till Edge Delivery Services med:
 
 >[!BEGINTABS]
 
->[!TAB Edge Delivery Services-based template]
+>[!TAB Edge Delivery Services-baserad mall]
 
-Perform the following steps to choose the template and create the form:
+Gör så här för att välja mallen och skapa formuläret:
 
-1. Login in to your AEM Forms as a Cloud Service author instance.
-1. Select **[!UICONTROL Adobe Experience Manager]** &gt; **[!UICONTROL Forms]** &gt; **[!UICONTROL Forms & Documents]**.
-1. Select **[!UICONTROL Create]**  &gt; **[!UICONTROL Adaptive Forms]**. The Wizard opens.
-1. In the **Source** tab, select an **Edge Delivery Services-based template**:
+1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
+1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
+1. På fliken **Source** väljer du en **Edge Delivery Services-baserad mall**:
 
-      ![Create EDS Forms](/help/edge/assets/create-eds-forms.png)
+   ![Skapa EDS Forms](/help/edge/assets/create-eds-forms.png)
 
-      When you select an **Edge Delivery Services-based template**, the **[!UICONTROL Create]** button is enabled. 
-1. (Optional) In the **[!UICONTROL Data Source]** or **[!UICONTROL Submission]** tabs, you can select a data source or submit action.
-1. (Optional) In the **[!UICONTROL Delivery]** tab, you can specify a publishing or unpublishing date for a form. 
-1. Click **[!UICONTROL Create]** and the **Create Form** wizard appears:
-   
-    1. Specify the **Name** and **Title**. 
-    1. Specify the **GitHub URL**. For example, if your GitHub repository is named `edsforms`, it is located under the account `wkndforms`,the URL is:
-    `https://github.com/wkndforms/edsforms`
+   När du väljer en **Edge Delivery Services-baserad mall** aktiveras knappen **[!UICONTROL Create]** .
+1. (Valfritt) På flikarna **[!UICONTROL Data Source]** eller **[!UICONTROL Submission]** kan du välja en datakälla eller skicka-åtgärd.
+1. (Valfritt) På fliken **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett formulär.
+1. Klicka på **[!UICONTROL Create]** så visas guiden **Skapa formulär**:
 
-    ![Create Form wizard](/help/edge/assets/create-form-wizard.png)
+   1. Ange **Namn** och **Titel**.
+   1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en:
+      `https://github.com/wkndforms/edsforms`
 
-    When you click **[!UICONTROL Create]**, the form opens in the Universal Editor for authoring.
+   ![Guiden Skapa formulär](/help/edge/assets/create-form-wizard.png)
 
-    ![author the form](/help/edge/assets/author-form.png)
-1. Click **[!UICONTROL Create]** to create the form. Now, you can [author the form using the Universal Editor](#author-the-form).
+   När du klickar på **[!UICONTROL Create]** öppnas formuläret i den universella redigeraren för redigering.
 
->[!TAB Core Component-based template]
+   ![författare till formuläret](/help/edge/assets/author-form.png)
+1. Klicka på **[!UICONTROL Create]** för att skapa formuläret. Nu kan du [skapa formuläret med den universella redigeraren](#author-the-form).
 
-Perform the following steps to choose the template and create the form:
+>[!TAB Kärnkomponentbaserad mall]
 
-1. Login in to your AEM Forms as a Cloud Service author instance.
-1. Select **[!UICONTROL Adobe Experience Manager]** &gt; **[!UICONTROL Forms]** &gt; **[!UICONTROL Forms & Documents]**.
-1. Select **[!UICONTROL Create]**  &gt; **[!UICONTROL Adaptive Forms]**. The Wizard opens.
-1. In the **Source** tab, select a **Core Component based template** and a **theme**, the **[!UICONTROL Create]** button is enabled.:
-          
-  ![Core Component based template](/help/forms/assets/core-component-based-template.png)
+Gör så här för att välja mallen och skapa formuläret:
 
-1. (Optional) In the **[!UICONTROL Data Source]** or **[!UICONTROL Submission]** tabs, you can select a data source or submit action.
-1. (Optional) In the **[!UICONTROL Delivery]** tab, you can specify a publishing or unpublishing date for a form. 
-1. Click **[!UICONTROL Create]** and the **Create Form** wizard appears for:
-     1. Specify the **Name** and **Title**.
-     2. Specify the location in the **Path** field where the Adaptive Form is to be saved.
-          
-      ![Create Form Wizard](/help/forms/assets/create-cc-form.png)
+1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
+1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
+1. På fliken **Source** väljer du en **Core Component-baserad mall** och ett **tema**. Knappen **[!UICONTROL Create]** aktiveras:
 
-      When you click **[!UICONTROL Create]**, the form opens in the Adaptive Form Editor for authoring. 
+![Kärnkomponentbaserad mall](/help/forms/assets/core-component-based-template.png)
 
-      ![Adaptive Form Editor](/help/forms/assets/af-editor-form.png)
+1. (Valfritt) På flikarna **[!UICONTROL Data Source]** eller **[!UICONTROL Submission]** kan du välja en datakälla eller skicka-åtgärd.
+1. (Valfritt) På fliken **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett formulär.
+1. Klicka på **[!UICONTROL Create]** så visas guiden **Skapa formulär** för:
+   1. Ange **Namn** och **Titel**.
+   2. Ange platsen i fältet **Sökväg** där det adaptiva formuläret ska sparas.
 
-1. Click **[!UICONTROL Create]** to create the form. Now, you can [author the form using the Adaptive Form Editor](#author-the-form).
+   ![Guiden Skapa formulär](/help/forms/assets/create-cc-form.png)
+
+   När du klickar på **[!UICONTROL Create]** öppnas formuläret i den adaptiva formulärredigeraren för redigering.
+
+   ![Adaptiv formulärredigerare](/help/forms/assets/af-editor-form.png)
+
+1. Klicka på **[!UICONTROL Create]** för att skapa formuläret. Nu kan du [skapa formuläret med den adaptiva formulärredigeraren](#author-the-form).
 
 >[!ENDTABS]
 
-### Author the form
+### Författare till formuläret
 
-The forms created using the Edge Delivery Services-based template open in the [Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) for authoring. However, the forms created using the Core Component-based template open in the Adaptive Form Editor for authoring.
+De formulär som skapas med den Edge Delivery Services-baserade mallen öppnas i [Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) för redigering. Formulär som skapats med den Core Component-baserade mallen öppnas dock i den adaptiva formulärredigeraren för redigering.
 
-Perform the following steps to author forms using the Universal Editor for Edge Delivery Services-based template or using Adaptive Form Editor for  Core Component based template:
+Utför följande steg för att skapa formulär med den universella redigeraren för en Edge Delivery Services-baserad mall eller med den adaptiva formulärredigeraren för den kärnkomponentbaserade mallen:
 
 >[!BEGINTABS]
 
->[!TAB Edge Delivery Services-based template]
-  
+>[!TAB Edge Delivery Services-baserad mall]
 
- 1. Open the Content browser, and navigate to the **[!UICONTROL Adaptive Form]** component in the **Content tree**.
 
-    ![content tree](/help/edge/assets/content-tree.png)
+1. Öppna innehållsläsaren och navigera till komponenten **[!UICONTROL Adaptive Form]** i **innehållsträdet**.
 
- 1. Click the **[!UICONTROL Add]** icon and add the desired components from the **Adaptive Form Components** list. 
-    ![add component](/help/edge/assets/add-component.png)
+   ![innehållsträd](/help/edge/assets/content-tree.png)
 
-     The screenshot below displays the `Registration Form` authored in the Universal Editor:
+1. Klicka på ikonen **[!UICONTROL Add]** och lägg till de önskade komponenterna från listan **Adaptiva formulärkomponenter**.
+   ![lägg till komponent](/help/edge/assets/add-component.png)
 
-     ![contact us form](/help/edge/assets/contact-us.png)
+   På skärmbilden nedan visas `Registration Form` som har skapats i Universella redigerare:
 
-  >[!NOTE]
-  >
-  > For detailed instructions on authoring an Adaptive Form using the Universal Editor, [click here](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#author-forms-using-wysiwyg).
+   ![kontakta oss](/help/edge/assets/contact-us.png)
 
-  Now you can [configure and customize the submit actions for forms](/help/edge/docs/forms/universal-editor/submit-action.md).
+>[!NOTE]
+>
+> [Klicka här](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#author-forms-using-wysiwyg) om du vill ha detaljerade anvisningar om hur du skapar ett adaptivt formulär med den universella redigeraren.
 
->[!TAB Core Component-based template]
+Nu kan du [konfigurera och anpassa Skicka-åtgärder för formulär](/help/edge/docs/forms/universal-editor/submit-action.md).
 
-  1. Click **[!UICONTROL Insert component]** in the **Drag components here** section.
+>[!TAB Kärnkomponentbaserad mall]
 
-     ![Drag components here](/help/forms/assets/drag-components-af-editor.png)
+1. Klicka på **[!UICONTROL Insert component]** i avsnittet **Dra komponenter hit**.
 
-  1. Add the desired components from the **Adaptive Form Components** list. 
+   ![Dra komponenter hit](/help/forms/assets/drag-components-af-editor.png)
 
-     ![Add components](/help/forms/assets/add-component-af.png)
+1. Lägg till önskade komponenter från listan **Adaptiva formulärkomponenter**.
 
-   The screenshot below displays the `Enrollment Form` authored in the Adaptive Form Editor:
+   ![Lägg till komponenter](/help/forms/assets/add-component-af.png)
 
-   ![Adaptive Form Editor](/help/forms/assets/af-editor-form.png)
+På skärmbilden nedan visas `Enrollment Form` som har skapats i redigeraren för anpassade formulär:
 
-  >[!NOTE]
-  >
-  > For detailed guidance on creating an Adaptive Form based on the Core Component template, [click here](/help/forms/creating-adaptive-form-core-components.md).
+![Adaptiv formulärredigerare](/help/forms/assets/af-editor-form.png)
 
-  Now you can [configure the submit actions for forms](/help/forms/configure-submit-actions-core-components.md).
+>[!NOTE]
+>
+> [Klicka här](/help/forms/creating-adaptive-form-core-components.md) om du vill ha mer information om hur du skapar ett adaptivt formulär baserat på mallen för kärnkomponenten.
+
+Nu kan du [konfigurera Skicka-åtgärder för formulär](/help/forms/configure-submit-actions-core-components.md).
 
 >[!ENDTABS]
 
-### Publish the Form
+### Publicera formuläret
 
-To publish an Adaptive Form on Edge Delivery Services, you need to [create an Edge Delivery Services Configuration on an AEM](#create-an-edge-delivery-services-configuration) instance. 
+Om du vill publicera ett adaptivt formulär på Edge Delivery Services måste du [skapa en Edge Delivery Services-konfiguration på en AEM](#create-an-edge-delivery-services-configuration)-instans.
 
-#### Create an Edge Delivery Services Configuration
+#### Skapa en Edge Delivery Services-konfiguration
 
-Perform the following steps to create the Edge Delivery Services Configuration:
+Så här skapar du Edge Delivery Services-konfigurationen:
 
 >[!BEGINTABS]
->[!TAB For forms created using the Edge Delivery Services-based template]
+>[!TAB För formulär som skapats med den Edge Delivery Services-baserade mallen]
 
 
-  The Edge Delivery Services configuration for forms based on the Edge Delivery Services-based template is created automatically in the form's configuration container.
+Edge Delivery Services-konfigurationen för formulär som är baserade på den Edge Delivery Services-baserade mallen skapas automatiskt i formulärets konfigurationsbehållare.
 
-  ![Edge Delivery Services Configuration](/help/edge/assets/aem-instance-eds-configuration.png)
+![Edge Delivery Services-konfiguration](/help/edge/assets/aem-instance-eds-configuration.png)
 
->[!TAB For forms created using the Core Component-based template]
+>[!TAB För formulär som skapats med den Core Component-baserade mallen]
 
-  1. Navigate to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Edge Delivery Services Configuration]** on your AEM Forms as a Cloud Service author instance.
+1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Edge Delivery Services Configuration]** på din AEM Forms as a Cloud Service-författarinstans.
 
-     ![Select Edge Delivery Services Configuration](/help/edge/assets/select-eds-conf.png)
+   ![Välj Edge Delivery Services-konfiguration](/help/edge/assets/select-eds-conf.png)
 
-  1. Select the folder that matches the form's name. For example, if your form is called `enrollment-form`, choose the folder `forms/enrollment-form` and click **[!UICONTROL Create]** > **[!UICONTROL Configuration]**:
+1. Välj den mapp som matchar formulärets namn. Om ditt formulär till exempel heter `enrollment-form` väljer du mappen `forms/enrollment-form` och klickar på **[!UICONTROL Create]** > **[!UICONTROL Configuration]**:
 
-     ![Edge Delivery Services Configuration](/help/forms/assets/create-eds-conf.png)
+   ![Edge Delivery Services-konfiguration](/help/forms/assets/create-eds-conf.png)
 
-  1. Click the **[!UICONTROL Edge Delivery Services Configuration]** and click **[!UICONTROL Properties]** to open the properties:   
-     
-     ![Automatically created configuration](/help/forms/assets/eds-conf.png)
+1. Klicka på **[!UICONTROL Edge Delivery Services Configuration]** och klicka på **[!UICONTROL Properties]** för att öppna egenskaperna:
 
-     The Edge Delivery Services Configuration appears.
+   ![Automatiskt skapad konfiguration](/help/forms/assets/eds-conf.png)
 
-  1. Specify the following in the Edge Delivery Services Configuration:
+   Edge Delivery Services Configuration visas.
 
-     * **Organization**: Specify your GitHub organization name.
+1. Ange följande i Edge Delivery Services-konfigurationen:
 
-     * **Site Name**: Specify your GitHub repository name.
-     * **Branch**: Specify the branch name. Leave the textbox empty if using the main branch.
-     * **(Optional) Edge Host**: Leave the Edge Host option as it is. The form is published to both preview (.page) and live (.live) environments.
-     * **(Optional) Site Authentication Token**: Use the Site Authentication Token to securely authenticate requests between your AEM instance and Edge Delivery Services.
+   * **Organisation**: Ange ditt GitHub-organisationsnamn.
 
-  1. Click **[!UICONTROL Save and Close]**. The configuration is created.
+   * **Platsnamn**: Ange ditt GitHub-databasnamn.
+   * **Förgrening**: Ange förgreningsnamnet. Lämna textrutan tom om du använder huvudgrenen.
+   * **(Valfritt) Edge Host**: Låt alternativet Edge Host vara. Formuläret publiceras i både förhandsgransknings- (.page) och livemiljön (.live).
+   * **(Valfritt) Webbplatsautentiseringstoken**: Använd webbplatsautentiseringstoken för att autentisera begäranden mellan din AEM-instans och Edge Delivery Services på ett säkert sätt.
+
+1. Klicka på **[!UICONTROL Save and Close]**. Konfigurationen skapas.
 
 >[!ENDTABS]
 
-#### Access the form on Edge Delivery Services
+#### Få åtkomst till formuläret i Edge Delivery Services
 
-To access the form on Edge Delivery Services, it is mandatory to publish the form. Perform the following steps to publish the form:
+För att få åtkomst till formuläret på Edge Delivery Services är det obligatoriskt att publicera formuläret. Utför följande steg för att publicera formuläret:
 
 >[!BEGINTABS]
->[!TAB On Universal Editor]
+>[!TAB I Universal Editor]
 
-   1. Publish the form by clicking the **[!UICONTROL Publish]** button in the upper-right corner of the Universal Editor.
+1. Publicera formuläret genom att klicka på knappen **[!UICONTROL Publish]** i det övre högra hörnet av Universella redigerare.
 
-  ![publish form](/help/edge/assets/publish-form.png)
+![publicera formulär](/help/edge/assets/publish-form.png)
 
-   >[!NOTE]
-   >
-   > Refer to the [Publish and Deploy](/help/edge/docs/forms/universal-editor/publish-forms.md) article to learn how to publish a form to Edge Delivery Services.
+>[!NOTE]
+>
+> Läs artikeln [Publicera och distribuera](/help/edge/docs/forms/universal-editor/publish-forms.md) om du vill veta mer om hur du publicerar ett formulär till Edge Delivery Services.
 
->[!TAB On Adaptive Form Editor]
+>[!TAB I anpassad formulärredigerare]
 
-  1. From the Experience Manager Forms console, navigate to the parent folder and select a form that you want to publish.
+1. I Experience Manager Forms-konsolen går du till den överordnade mappen och väljer ett formulär som du vill publicera.
 
-  1. Click **[!UICONTROL Publish]**  option from the toolbar, take a look at all the reference assets that would be published with form.
+1. Klicka på alternativet **[!UICONTROL Publish]** i verktygsfältet och ta en titt på alla referensresurser som skulle publiceras med formuläret.
 
-  ![Publish Form on Adaptive Form Editor](/help/forms/assets/publish-af-editor.png)
+![Publicera formulär i anpassad formulärredigerare](/help/forms/assets/publish-af-editor.png)
 
-  >[!NOTE]
-  >
-  > Refer to the [Manage Publication in Experience Manager Forms](/help/forms/manage-publication.md) article to learn how to publish a form on Adaptive Form Editor.
+>[!NOTE]
+>
+> Läs artikeln [Hantera publikation i Experience Manager Forms](/help/forms/manage-publication.md) om du vill veta hur du publicerar ett formulär i den adaptiva formulärredigeraren.
 
 >[!ENDTABS]
 
-* **Staged Version (for testing)**: The staged version displays the unpublished, working version of the form for testing purposes. Use the following URL format to preview the form before it goes live:
+* **Mellanlagrad version (för testning)**: Den mellanlagrade versionen visar den opublicerade, fungerande versionen av formuläret för testning. Använd följande URL-format för att förhandsgranska formuläret innan det publiceras:
 
-    `https://<branch>--<repo>--<owner>.aem.page/content/forms/af/<form_name>`
+  `https://<branch>--<repo>--<owner>.aem.page/content/forms/af/<form_name>`
 
-    
 
-* **Live Version (published form)**:   The live version displays the most recently published version of the form, accessible to end users. Use the following URL format to access the published, live version of the form:
 
-    `https://<branch>--<repo>--<owner>.aem.live/content/forms/af/<form_name>`
+* **Live-version (publicerat formulär)**:   Den aktiva versionen visar den senast publicerade versionen av formuläret, som är tillgänglig för slutanvändarna. Använd följande URL-format för att komma åt den publicerade, aktiva versionen av formuläret:
 
-     The URL structure remains the same for both staged and live versions. However, the content you see differs based on the context.
+  `https://<branch>--<repo>--<owner>.aem.live/content/forms/af/<form_name>`
 
-The below screenshots compares staged and live form URLs and visual previews for forms created using Edge Delivery Services-based and Core Component-based templates:
+  URL-strukturen är densamma för både testversioner och liveversioner. Innehållet som du ser skiljer sig dock åt beroende på sammanhanget.
+
+I skärmbilderna nedan jämförs testformulärs- och Live-formulärs-URL:er och förhandsgranskningar av formulär som skapats med Edge Delivery Services-baserade och Core Component-baserade mallar:
 
 >[!BEGINTABS]
->[!TAB Accessing forms created using Edge Delivery Services-based Template]
+>[!TAB Åtkomst till formulär som skapats med en Edge Delivery Services-baserad mall]
 
-  <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
     <thead>
     <tr>
       <th style="width: 20%;"><strong>Version</strong></th>
-      <th style="width: 80%;"><strong>Image</strong></th>
+      <th style="width: 80%;"><strong>Bild</strong></th>
     </tr>
     </thead>
     <tbody>
     <tr>
-      <td>Staged Version</td>
-      <td><img src="/help/forms/assets/registration-form-staged-version.png" alt="Staged version of registration form" style="width: 100%; height: auto;" /></td>
+      <td>Mellanlagrad version</td>
+      <td><img src="/help/forms/assets/registration-form-staged-version.png" alt="Mellanlagrad version av registreringsformulär" style="width: 100%; height: auto;" /></td>
     </tr>
     <tr>
-      <td>Live Version</td>
-      <td><img src="/help/forms/assets/registration-form-live-version.png" alt="Live version of registration form" style="width: 100%; height: auto;" /></td>
+      <td>Live-version</td>
+      <td><img src="/help/forms/assets/registration-form-live-version.png" alt="Live-version av registreringsformulär" style="width: 100%; height: auto;" /></td>
     </tr>
     </tbody>
   </table>
 
->[!TAB Accessing forms created using Core Component-based Template]
+>[!TAB Åtkomst till formulär som skapats med Core Component-baserad mall]
 
-  <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
   <thead>
     <tr>
       <th style="width: 20%;"><strong>Version</strong></th>
-      <th style="width: 80%;"><strong>Image</strong></th>
+      <th style="width: 80%;"><strong>Bild</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Staged Version</td>
-      <td><img src="/help/forms/assets/enrollment-form-staged-version.png" alt="Staged version of enrollment form" style="width: 100%; height: auto;" /></td>
+      <td>Mellanlagrad version</td>
+      <td><img src="/help/forms/assets/enrollment-form-staged-version.png" alt="Mellanlagrad version av registreringsformulär" style="width: 100%; height: auto;" /></td>
     </tr>
     <tr>
-      <td>Live Version</td>
-      <td><img src="/help/forms/assets/enrollment-form-live-version.png" alt="Live version of enrollment form" style="width: 100%; height: auto;" /></td>
+      <td>Live-version</td>
+      <td><img src="/help/forms/assets/enrollment-form-live-version.png" alt="Live-version av anmälningsformulär" style="width: 100%; height: auto;" /></td>
     </tr>
   </tbody>
   </table>
 
 >[!ENDTABS]
 
-## Troubleshooting 
+## Felsökning
 
-Having trouble loading your form? Here are some common issues and how to fix them:
+Har du problem med att läsa in formuläret? Här är några vanliga problem och hur du åtgärdar dem:
 
-* **Form URL**: Double-check that your form's URL doesn't include the ".html" extension at the end. Edge Deliver Service does not require this extension.
+* **Formulär-URL**: Dubbelkontrollera att formulärets URL inte innehåller tillägget .html i slutet. Edge-tjänsten för leverans kräver inte det här tillägget.
 
-* **AEM Author UR**L: Make sure the AEM Author URL listed in your `fstab.yaml` file is formatted correctly. It should include the following details:
+* **AEM Author UR** L: Kontrollera att den URL för AEM Author som anges i `fstab.yaml` -filen är korrekt formaterad. Den ska innehålla följande uppgifter:
 
-    * The correct GitHub owner
-    * The correct repository name
-    * The specific branch that you're using for Edge Delivery Services
+   * Rätt GitHub-ägare
+   * Rätt databasnamn
+   * Den specifika gren som du använder för Edge Delivery Services
 
-## Start creating forms
+## Börja skapa formulär
 
 {{universal-editor-see-also}}
 

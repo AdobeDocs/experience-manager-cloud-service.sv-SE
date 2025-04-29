@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 05c34d45e27a8ef22c1ebca72d362529669339fa
+source-git-commit: 31fac8e421e58146977222d699bac1c7cf3ee4e5
 workflow-type: tm+mt
 source-wordcount: '1713'
 ht-degree: 0%
@@ -98,8 +98,8 @@ Nu kan du snabbt välja och jämföra vilken version av en mediefil som helst me
 * **Regelredigeraren**:
    * [Binärt villkor med klickningshändelse i &quot;When&quot;-sats](/help/forms/rule-editor-core-components-events-operators.md#available-operator-types-and-events-in-rule-editor): Regelredigeraren tillåter nu att en knappklickningshändelse (_Är klickad_) kombineras med andra villkor i &quot;When&quot;-satsen. Detta ger mer exakt kontroll över regelkörningen baserat på användarinteraktion och andra faktorer. Obs! Om du använder flera villkor måste klickhändelsen vara det första villkoret som anges.
    * [Valideringsvillkor för fält och paneler](/help/forms/rule-editor-core-components-usecases.md): Regelredigeraren innehåller nu villkoren _IsValid_ och _IsNotValid_ . Med dessa kan du kontrollera valideringsstatusen för specifika fält eller hela paneler (inklusive layouter som Vågräta flikar, Lodräta flikar, Dragspel och Guider), vilket underlättar formulärnavigering och användarupplevelse baserat på valideringsresultat.
-* **Förbättrad scopehantering för SharePoint-listor**: SharePoint-webbplatser har nu stöd för alla hanterade sökvägar, till exempel /sites och /teams. Den här förbättringen möjliggör en bredare integrering över olika SharePoint webbplatsstrukturer, vilket ger större flexibilitet när det gäller att ansluta till organisationsinnehåll.
-* **Stöd för att spara postdokument i SharePoint-lista**: Forms som har skapats med en SharePoint listbaserad formulärdatamodell (FDM) kan nu spara postdokumentet (DoR) i SharePoint-listor genom att konfigurera fältegenskapen Dokumentreferens för postbindning. Den här förbättringen möjliggör smidig integrering av formulärdata och dokument som stöds med SharePoint-lagring.
+* [Förbättrad scopehantering för SharePoint-listor](/help/forms/connect-forms-to-sharepoint-list.md): SharePoint-webbplatser har nu stöd för alla hanterade sökvägar, till exempel /sites och /teams. Den här förbättringen möjliggör en bredare integrering över olika SharePoint webbplatsstrukturer, vilket ger större flexibilitet när det gäller att ansluta till organisationsinnehåll.
+* [Stöd för att spara postdokument i SharePoint-lista](/help/forms/generate-document-of-record-core-components.md#bind-adaptive-form-components-with-template-fields): Forms som har skapats med en SharePoint listbaserad formulärdatamodell (FDM) kan nu spara postdokumentet (DoR) i SharePoint-listor genom att konfigurera fältegenskapen Dokumentreferens för postbindning. Den här förbättringen möjliggör smidig integrering av formulärdata och dokument som stöds med SharePoint-lagring.
 
 ### Tidiga åtkomstfunktioner i AEM Forms {#forms-new-early-access-features}
 
