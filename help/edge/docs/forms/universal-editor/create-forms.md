@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar adaptiv Forms genom att 
 feature: Edge Delivery Services
 role: User
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: c68e98cfe442d0b5a928fde596e193073d5cac21
+source-git-commit: e2ea802856a2fbab90d4ddb1ecf7280ce789d59c
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -97,13 +97,13 @@ Gör så här för att välja mallen och skapa formuläret:
 1. Välj **[!UICONTROL Create]** > **[!UICONTROL Adaptive Forms]**. Guiden öppnas.
 1. På fliken **Source** väljer du en **Core Component-baserad mall** och ett **tema**. Knappen **[!UICONTROL Create]** aktiveras:
 
-![Kärnkomponentbaserad mall](/help/forms/assets/core-component-based-template.png)
+   ![Kärnkomponentbaserad mall](/help/forms/assets/core-component-based-template.png)
 
 1. (Valfritt) På flikarna **[!UICONTROL Data Source]** eller **[!UICONTROL Submission]** kan du välja en datakälla eller skicka-åtgärd.
 1. (Valfritt) På fliken **[!UICONTROL Delivery]** kan du ange ett publicerings- eller avpubliceringsdatum för ett formulär.
 1. Klicka på **[!UICONTROL Create]** så visas guiden **Skapa formulär** för:
    1. Ange **Namn** och **Titel**.
-   2. Ange platsen i fältet **Sökväg** där det adaptiva formuläret ska sparas.
+   1. Ange platsen i fältet **Sökväg** där det adaptiva formuläret ska sparas.
 
    ![Guiden Skapa formulär](/help/forms/assets/create-cc-form.png)
 
@@ -174,30 +174,30 @@ Om du vill publicera ett adaptivt formulär på Edge Delivery Services måste du
 Så här skapar du Edge Delivery Services-konfigurationen:
 
 >[!BEGINTABS]
->[!TAB För formulär som skapats med den Edge Delivery Services-baserade mallen]
+>[!TAB Edge Delivery Services-baserad mall]
 
 
 Edge Delivery Services-konfigurationen för formulär som är baserade på den Edge Delivery Services-baserade mallen skapas automatiskt i formulärets konfigurationsbehållare.
 
 ![Edge Delivery Services-konfiguration](/help/edge/assets/aem-instance-eds-configuration.png)
 
->[!TAB För formulär som skapats med den Core Component-baserade mallen]
+>[!TAB Kärnkomponentbaserad mall]
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Edge Delivery Services Configuration]** på din AEM Forms as a Cloud Service-författarinstans.
 
    ![Välj Edge Delivery Services-konfiguration](/help/edge/assets/select-eds-conf.png)
 
-1. Välj den mapp som matchar formulärets namn. Om ditt formulär till exempel heter `enrollment-form` väljer du mappen `forms/enrollment-form` och klickar på **[!UICONTROL Create]** > **[!UICONTROL Configuration]**:
+2. Välj den mapp som matchar formulärets namn. Om ditt formulär till exempel heter `enrollment-form` väljer du mappen `forms/enrollment-form` och klickar på **[!UICONTROL Create]** > **[!UICONTROL Configuration]**:
 
    ![Edge Delivery Services-konfiguration](/help/forms/assets/create-eds-conf.png)
 
-1. Klicka på **[!UICONTROL Edge Delivery Services Configuration]** och klicka på **[!UICONTROL Properties]** för att öppna egenskaperna:
+3. Klicka på **[!UICONTROL Edge Delivery Services Configuration]** och klicka på **[!UICONTROL Properties]** för att öppna egenskaperna:
 
    ![Automatiskt skapad konfiguration](/help/forms/assets/eds-conf.png)
 
    Edge Delivery Services Configuration visas.
 
-1. Ange följande i Edge Delivery Services-konfigurationen:
+4. Ange följande i Edge Delivery Services-konfigurationen:
 
    * **Organisation**: Ange ditt GitHub-organisationsnamn.
 
@@ -206,7 +206,7 @@ Edge Delivery Services-konfigurationen för formulär som är baserade på den E
    * **(Valfritt) Edge Host**: Låt alternativet Edge Host vara. Formuläret publiceras i både förhandsgransknings- (.page) och livemiljön (.live).
    * **(Valfritt) Webbplatsautentiseringstoken**: Använd webbplatsautentiseringstoken för att autentisera begäranden mellan din AEM-instans och Edge Delivery Services på ett säkert sätt.
 
-1. Klicka på **[!UICONTROL Save and Close]**. Konfigurationen skapas.
+5. Klicka på **[!UICONTROL Save and Close]**. Konfigurationen skapas.
 
 >[!ENDTABS]
 
@@ -254,7 +254,7 @@ För att få åtkomst till formuläret på Edge Delivery Services är det obliga
 I skärmbilderna nedan jämförs testformulärs- och Live-formulärs-URL:er och förhandsgranskningar av formulär som skapats med Edge Delivery Services-baserade och Core Component-baserade mallar:
 
 >[!BEGINTABS]
->[!TAB Åtkomst till formulär som skapats med en Edge Delivery Services-baserad mall]
+>[!TAB Edge Delivery Services-baserad mall]
 
 <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
     <thead>
@@ -275,7 +275,7 @@ I skärmbilderna nedan jämförs testformulärs- och Live-formulärs-URL:er och 
     </tbody>
   </table>
 
->[!TAB Åtkomst till formulär som skapats med Core Component-baserad mall]
+>[!TAB Kärnkomponentbaserad mall]
 
 <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
   <thead>
