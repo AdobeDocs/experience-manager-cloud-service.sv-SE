@@ -5,9 +5,9 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: ad74d7a68bfb1be9e72cc7faec4808c36fa0af03
+source-git-commit: 46d3c18f04f8cfb3daef48688f9fbe197fa0ea9a
 workflow-type: tm+mt
-source-wordcount: '1871'
+source-wordcount: '1872'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager st
 
 ## Konfigurera en extern databas
 
-Konfigurationen av en extern lagringsplats i Cloud Manager består av tre steg:
+Konfigurationen av en extern databas i Cloud Manager består av följande steg:
 
 1. [Lägg till en extern databas](#add-external-repo) till ett valt program.
 1. Ange en åtkomsttoken för den externa databasen.
