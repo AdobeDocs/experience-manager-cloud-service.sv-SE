@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 2f79251471d9ec3f586f838c737cde3533874b02
+source-git-commit: 4144c726a6f8551df9497732c2ca95b8eec5c63a
 workflow-type: tm+mt
-source-wordcount: '6134'
+source-wordcount: '6142'
 ht-degree: 1%
 
 ---
@@ -742,6 +742,7 @@ ht-degree: 1%
          + [Integrera ett adaptivt formulär med Microsoft Power Automate](/help/forms/forms-microsoft-power-automate-integration.md)
          + [Bädda in en adaptiv Forms på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md)
          + [Bädda in anpassningsbara formulär baserade på kärnkomponenter på en extern webbsida](/help/forms/embed-adaptive-form-core-components-external-web-page.md)
+         + [AEM Forms-integrering med Adobe Experience Platform (AEP)](/help/forms/aem-forms-aep-connector.md)
          + [Bädda in anpassat formulär baserat på Foundation Components på en extern webbsida](/help/forms/embed-adaptive-form-external-web-page.md)
          + Integrera adaptiv Forms med Adobe Marketo Engage{#integrate-adaptive-form-with-market-engage}
             + [Integrera Adobe Marketo Engage med AEM Forms](/help/forms/integrate-form-to-marketo-engage.md)
