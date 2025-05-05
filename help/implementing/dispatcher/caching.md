@@ -26,8 +26,8 @@ Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer 
 
 Cachenyckeln för CDN-resurser innehåller den fullständiga begäran-URL:en, inklusive frågeparametrar, så varje enskild frågeparameter skapar en annan cachepost. Överväg att ta bort oönskade frågeparametrar. [se nedan](#marketing-parameters) för att förbättra träffkvoten för cachen.
 
-Ursprungliga svar som innehåller `private`, `no-cache` eller `no-store` i `Cache-Control` cachas inte av AEM as a Cloud Service CDN (se [Så här inaktiverar du CDN-cachelagring
-](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/disable-caching) om du vill ha mer information).  Svaren som anger cookies, d.v.s. har ett `Set-Cookie`-svarshuvud, cachelagras inte av CDN.
+Ursprungliga svar som innehåller `private`, `no-cache` eller `no-store` i `Cache-Control` cachas inte av AEM as a Cloud Service CDN (se [&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/disable-caching)Så här inaktiverar du CDN-cachelagring
+ om du vill ha mer information).  Svaren som anger cookies, d.v.s. har ett `Set-Cookie`-svarshuvud, cachelagras inte av CDN.
 
 ### HTML/Text {#html-text}
 

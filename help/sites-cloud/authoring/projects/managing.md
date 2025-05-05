@@ -138,7 +138,7 @@ Så här gör du ett projekt inaktivt (eller aktivt):
 
    >[!NOTE]
    >
-   Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
+   >Du kan behöva lägga till den här panelen om den inte redan finns i ditt projekt. Se [Lägga till rutor](#adding-items-to-a-tile).
 
 1. Välj **Redigera**.
 1. Ändra väljaren från **Aktiv** till **Inaktiv** (eller omvänt).

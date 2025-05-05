@@ -134,7 +134,7 @@ I det här fallet har kortkomponenten redan skapats i ditt AEM med titel- och bi
 
 Sedan kan du lägga till den i SPA och hämta dess innehåll.
 
-1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående fall [ ](#component-does-not-exist).
+1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM resurstyper i det SPA projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående fall [&#128279;](#component-does-not-exist).
 
    ```javascript
    import React from 'react';

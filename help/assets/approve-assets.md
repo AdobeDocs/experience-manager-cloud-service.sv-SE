@@ -81,13 +81,13 @@ Om du behöver visa egenskapen som fältet **[!UICONTROL Review Status]** är ma
 
    >[!NOTE]
    >
-   När du väljer granskningsmålet som Content Hub i Assets-vyn blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation. När du väljer Godkännandemål som Leverans är resurserna tillgängliga för alla användare.
+   >När du väljer granskningsmålet som Content Hub i Assets-vyn blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation. När du väljer Godkännandemål som Leverans är resurserna tillgängliga för alla användare.
 
 1. Klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
-Om dina resurser eller mappar har ett annat standardschema måste du uppdatera i det aktuella schemat.
+>Om dina resurser eller mappar har ett annat standardschema måste du uppdatera i det aktuella schemat.
 
 ## Godkänn resurser {#approve-assets}
 
@@ -127,7 +127,7 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
 
    >[!NOTE]
    >
-   När du väljer granskningsmålet som Content Hub i Assets-vyn blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation. När du väljer Godkännandemål som Leverans är resurserna tillgängliga för alla användare.
+   >När du väljer granskningsmålet som Content Hub i Assets-vyn blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation. När du väljer Godkännandemål som Leverans är resurserna tillgängliga för alla användare.
 1. Klicka på **[!UICONTROL Save]**.
 1. På sidan **[!UICONTROL Metadata Profiles]** väljer du den nya metadataprofilen.
 1. Klicka på **[!UICONTROL Apply Metadata Profile to Folder(s)]** i det övre åtgärdsfältet.
@@ -138,7 +138,7 @@ Effektivisera arbetsflödet genom att snabbt godkänna flera resurser samtidigt.
 
 >[!NOTE]
 > 
-Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt. <br> Du kan också använda alternativet **[!UICONTROL Reprocess]** för att tillämpa ändringarna från metadataprofilen på äldre resurser.
+>Detta tillvägagångssätt godkänner de nya resurserna i mappen. För befintliga resurser i mappen måste du välja och godkänna dem manuellt. <br> Du kan också använda alternativet **[!UICONTROL Reprocess]** för att tillämpa ändringarna från metadataprofilen på äldre resurser.
 
 På samma sätt kan du gruppgodkänna resurser i en mapp i Assets-vyn:
 
@@ -157,7 +157,7 @@ På samma sätt kan du gruppgodkänna resurser i en mapp i Assets-vyn:
 
    >[!NOTE]
    >
-   Om du väljer godkännandemålet som `Content Hub` med hjälp av Assets-vyn i en organisation blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation.
+   >Om du väljer godkännandemålet som `Content Hub` med hjälp av Assets-vyn i en organisation blir resurserna tillgängliga i Content Hub för användare som tillhör samma organisation.
 
 1. Klicka på **[!UICONTROL Save]**.
 
@@ -178,6 +178,6 @@ Så här kopierar du en leverans-URL för en godkänd resurs i databasen:
 
    >[!NOTE]
    >
-   Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
+   >Alternativet att kopiera leverans-URL för godkända mediefiler är bara tillgängligt i Assets-vyn.
 
 Mer information om andra återgivningar som visas i panelen Dynamiska media finns i [Visa och hämta dynamiska medieåtergivningar](/help/assets/renditions.md#view-download-dm-renditions).

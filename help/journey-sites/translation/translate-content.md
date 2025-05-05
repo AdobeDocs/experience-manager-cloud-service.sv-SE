@@ -175,7 +175,7 @@ Maskinöversättningar returneras automatiskt med tillståndet **Godkänd**. Öv
 
 >[!NOTE]
 >
->Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt](#using-translation-project) visas översatta objekt med läget **Borttagen**. [ Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
+>Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt[&#128279;](#using-translation-project) visas översatta objekt med läget **Borttagen**.  Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
 >Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill veta mer om hur AEM bearbetar översättningar läser du avsnittet [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
 
@@ -235,7 +235,7 @@ Maskinöversättningar returneras automatiskt med tillståndet **Godkänd**. Öv
 
 >[!NOTE]
 >
->Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt](#using-translation-project) visas översatta objekt med läget **Borttagen**. [ Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
+>Om du inte inaktiverade projektalternativet **Ta bort start efter befordran** enligt beskrivningen i föregående avsnitt[&#128279;](#using-translation-project) visas översatta objekt med läget **Borttagen**.  Detta är normalt eftersom AEM automatiskt tar bort översättningsposterna när de översatta objekten kommer fram. De översatta objekten har importerats som språkkopior, men bara översättningsposterna har tagits bort eftersom de inte längre behövs.
 >
 >Oroa dig inte om det här är oklart. Det här är ingående detaljer om hur AEM fungerar och påverkar inte din förståelse av resan. Om du vill veta mer om hur AEM bearbetar översättningar läser du avsnittet [ytterligare resurser](#additional-resources) i slutet av den här artikeln.
 

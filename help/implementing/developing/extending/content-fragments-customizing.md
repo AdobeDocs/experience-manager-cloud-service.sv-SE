@@ -63,6 +63,7 @@ Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en 
 * Allt innehåll lagras under resursens `jcr:content/data`-nod:
 
    * Elementdata lagras under huvudundernoden:
+
      `jcr:content/data/master`
 
    * Variationer lagras under en undernod som har variantens namn:

@@ -64,7 +64,7 @@ Tillstånd att få åtkomst till Adobe Express- och [Content Hub-användare med 
 
 >[!NOTE]
 >
-Du kan redigera bilder av filtyperna PNG och JPG/JPEG med [!DNL Adobe Express].
+>Du kan redigera bilder av filtyperna PNG och JPG/JPEG med [!DNL Adobe Express].
 
 ## Redigera bilder med [!DNL Adobe Express] {#edit-images-using-content-hub}
 

@@ -183,14 +183,17 @@ Så här skapar du en utrullningskonfiguration:
 1. Lägg till följande egenskaper i den här noden:
 
    * **Namn**: `jcr:title`
+
      **Typ**: `String`
      **Värde**: En identifierande titel som visas i användargränssnittet
 
    * **Namn**: `jcr:description`
+
      **Typ**: `String`
      **Värde**: En valfri beskrivning.
 
    * **Namn**: `cq:trigger`
+
      **Typ**: `String`
      **Värde**: [Utlösaren för utrullning](/help/sites-cloud/administering/msm/live-copy-sync-config.md#rollout-triggers) ska användas
       * `rollout`
@@ -636,6 +639,7 @@ Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dia
       * **Typ**: `String`
       * **Värde**: Innehåller namnet på den aktuella egenskapen och är jämförbart med värdet för egenskapen `name`
          * Se till exempel
+
            `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 När `cq-msm-lockable` har definierats interagerar kedjan med MSM på följande sätt om kedjan bryts/stängs:

@@ -74,7 +74,7 @@ Du kan begränsa leveransen av resurser inom [!DNL Experience Manager] baserat p
 
 >[!NOTE]
 >
-Den här funktionen är för närvarande inte självbetjäning. Om du vill begränsa resursleveransen för IMS [Users](https://helpx.adobe.com/in/enterprise/using/manage-directory-users.html) och [Groups](https://helpx.adobe.com/in/enterprise/using/user-groups.html) kan du kontakta ditt Enterprise Support-team för att få hjälp med hur du hämtar den information som krävs för att begränsa åtkomst från [Adobe Admin Console](https://adminconsole.adobe.com/)-portalen och hur du konfigurerar åtkomst i AEM as a Cloud Service författartjänst.
+>Den här funktionen är för närvarande inte självbetjäning. Om du vill begränsa resursleveransen för IMS [Users](https://helpx.adobe.com/in/enterprise/using/manage-directory-users.html) och [Groups](https://helpx.adobe.com/in/enterprise/using/user-groups.html) kan du kontakta ditt Enterprise Support-team för att få hjälp med hur du hämtar den information som krävs för att begränsa åtkomst från [Adobe Admin Console](https://adminconsole.adobe.com/)-portalen och hur du konfigurerar åtkomst i AEM as a Cloud Service författartjänst.
 
 ### Begränsa leverans av resurser med På- och Av-datum och tid {#restrict-delivery-assets-date-time}
 
@@ -122,7 +122,7 @@ På både AEM Cloud-tjänstens författartjänster och resursväljare genereras 
 
 >[!NOTE]
 >
-Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM Asset Selector-baserade integreringar kan du kontakta Enterprise Support
+>Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM Asset Selector-baserade integreringar kan du kontakta Enterprise Support
 
 1. För icke-resursväljarbaserade upplevelser stöder AEM as a Cloud Service och Dynamic Media med OpenAPI-funktioner för närvarande API-integreringar på serversidan och kan generera IMS Bearer-tokens.
    * Följ anvisningarna [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#the-server-to-server-flow) för att utföra service-to-server-API-integreringar som kan hämta IMS Bearer-tokens via [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console)

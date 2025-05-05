@@ -94,6 +94,7 @@ Du måste skapa en platskonfiguration och lägga till den i sökvägsmappningen.
        }
    }'
    ```
+
 1. Verifiera att den offentliga konfigurationen har ställts in och är tillgänglig med ett cURL-kommando som liknar följande:
 
    ```text

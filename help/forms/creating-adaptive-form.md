@@ -114,7 +114,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Välj en sändningsåtgärd på fliken **[!UICONTROL Submission]**:
 
-   * När du väljer en mall markeras åtgärden Skicka som anges i mallen automatiskt. Du kan välja en annan skickaåtgärd på fliken Skicka. Fliken **[!UICONTROL  Submission]** visar alla tillgängliga skicka-åtgärder.
+   * När du väljer en mall markeras åtgärden Skicka som anges i mallen automatiskt. Du kan välja en annan skickaåtgärd på fliken Skicka. Fliken **[!UICONTROL &#x200B; Submission]** visar alla tillgängliga skicka-åtgärder.
 
    * När den valda mallen inte anger någon skicka-åtgärd kan du använda fliken **[!UICONTROL Submission]** för att välja en skicka-åtgärd
 

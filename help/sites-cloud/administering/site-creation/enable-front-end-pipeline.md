@@ -102,7 +102,7 @@ Sidorna för webbplatsen refererar sedan till temaartefakter från den uppdatera
 
 Om du behöver utveckla och testa front-end-resurser lokalt innan du distribuerar via Front-End Pipeline bör du tänka på följande:
 
-* Använd proxyläget ](https://github.com/adobe/aem-site-theme-builder?tab=readme-ov-file#proxy) i [Site Theme Builder för att åsidosätta temaartefakter lokalt för testning.
+* Använd proxyläget [&#128279;](https://github.com/adobe/aem-site-theme-builder?tab=readme-ov-file#proxy) i Site Theme Builder för att åsidosätta temaartefakter lokalt för testning.
 * Hantera dina temafiler manuellt från en lokal utvecklingsserver och uppdatera `prefixPath` i `HtmlPageItemsConfig` så att de matchar den lokala serveradressen.
 * Kontrollera att webbläsarcachelagring är inaktiverat under testning för att se liveuppdateringar.
 

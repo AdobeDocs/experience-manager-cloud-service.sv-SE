@@ -33,17 +33,21 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 1. **Arbetsflöden som körs** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **pågående arbetsflöden** och **Status** för AEM:
 
    * **Status: Felfri**
+
      ![status-hälsosam](/help/sites-cloud/administering/assets/status-healthy.png)
 
    * **Status: Ohälsosamt**
+
      ![statusfelfri](/help/sites-cloud/administering/assets/status-unhealthy.png)
 
 1. Om du vill ha **statusinformation** för arbetsflödesinstanser klickar du på **Information** för att visa **antalet arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. Nedan visas till exempel de bilder som visar **statusinformation** med:
 
    * **Statusinformation: Felfri**
+
      ![status-details-hälsosam](/help/sites-cloud/administering/assets/status-details-healthy.png)
 
    * **Statusinformation: Ohälsosam**
+
      ![status-details-unsafe](/help/sites-cloud/administering/assets/status-details-unhealthy.png)
 
    >[!NOTE]
@@ -112,7 +116,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Fel** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
 
 * **Felinformation**
-Öppnar ett fönster för att visa **Felmeddelande**, **Steg och **Felhög** .
+Öppnar ett fönster för att visa **Felmeddelande**, **Steg och &#x200B;** Felhög** .
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.

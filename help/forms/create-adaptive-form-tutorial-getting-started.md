@@ -87,7 +87,7 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
    1. Lägg till AEM Forms-tilläggsfilen (.far) i mappen `AEM SDK/crx-quickstart/install`,
    1. Starta om AEM SDK.
 
-+++
+   +++
 
 1. [Konfigurera användarbehörigheter](/help/forms/setup-local-development-environment.md#configure-users-and-permissions): Skapa användare med utvecklings-, redigerings- och andra behörigheter och lägg till dessa användare i fördefinierade formulärgrupper.
 
@@ -116,7 +116,7 @@ Lokal utveckling med AEM SDK sparar tid och förenklar utvecklingsprocessen
 
    När du har distribuerat AEM kan du se adaptiva Forms-mallar i din miljö.
 
-+++
+   +++
 
 
 Detaljerade instruktioner och stegvisa anvisningar om hur du konfigurerar din lokala AEM Forms-utvecklingsmiljö finns i artikeln [Konfigurera lokal utvecklingsmiljö för AEM Forms](/help/forms/setup-local-development-environment.md) .

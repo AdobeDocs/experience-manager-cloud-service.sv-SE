@@ -67,6 +67,6 @@ Adobe Micro-Frontend Asset Selector har ett användargränssnitt som enkelt kan 
 
 >[!MORELIKETHIS]
 >
-* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
-* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
-* [Anpassning av resursväljare](/help/assets/asset-selector-customization.md)
+>* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
+>* [Egenskaper för resursväljare](/help/assets/asset-selector-properties.md)
+>* [Anpassning av resursväljare](/help/assets/asset-selector-customization.md)

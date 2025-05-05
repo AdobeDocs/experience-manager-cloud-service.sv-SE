@@ -79,6 +79,7 @@ Gör så här för att välja mallen och skapa formuläret:
 
    1. Ange **Namn** och **Titel**.
    1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en:
+
       `https://github.com/wkndforms/edsforms`
 
    ![Guiden Skapa formulär](/help/edge/assets/create-form-wizard.png)

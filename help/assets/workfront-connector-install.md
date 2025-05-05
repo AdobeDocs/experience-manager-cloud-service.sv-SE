@@ -89,7 +89,7 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
    >
    >    ```
    >    dscacheutil -q host -a name p{PROGRAM_ID}.external.adobeaemcloud.com
-   >
+   >    
    >    ```
 
 1. Kontrollera att följande övertäckningar inte finns i databasen [!DNL Experience Manager]. Om du har befintliga övertäckningar på de här banorna måste du antingen ta bort övertäckningarna eller sammanfoga ändringarna mellan dem:

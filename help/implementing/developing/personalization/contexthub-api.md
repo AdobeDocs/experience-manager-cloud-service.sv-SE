@@ -385,7 +385,7 @@ Konfigurerar informationen för anslutning till den JSONP-tjänst som det här o
 
 * **`serviceConfig`:** Ett objekt som innehåller följande egenskaper:
    * `host`: (String) Servernamnet eller IP-adressen.
-   * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true är {callback: &quot;ContextHub.Callbacks.Objektet *Object.name* läggs till i objektet service.params.
+   * `jsonp`: (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true är &lbrace;callback: &quot;ContextHub.Callbacks.Objektet *Object.name* läggs till i objektet service.params.
    * `params`: (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
    * `path`: (String) Sökvägen till tjänsten.
    * `port`: (Number) Tjänstens portnummer.
@@ -412,7 +412,7 @@ Hämtar tjänstobjektet för det här ContextHub.Store.JSONPStore-objektet. Tjä
 Ett objekt med följande egenskaper:
 
 * **`host`:** (String) Servernamnet eller IP-adressen.
-* **`jsonp`:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true är {callback: &quot;ContextHub.Callbacks.Objektet *Object.name* läggs till i objektet service.params.
+* **`jsonp`:** (Boolean) Värdet true anger att tjänsten är en JSONP-tjänst, annars false. När värdet är true är &lbrace;callback: &quot;ContextHub.Callbacks.Objektet *Object.name* läggs till i objektet service.params.
 * **`params`:** (Objekt) URL-parametrar representeras som objektegenskaper. Parameternamn är egenskapsnamn och parametervärden är egenskapsvärden.
 * **`path`:** (String) Sökvägen till tjänsten.
 * **`port`:** (Number) Tjänstens portnummer.

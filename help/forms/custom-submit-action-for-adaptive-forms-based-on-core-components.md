@@ -44,6 +44,7 @@ I bilden nedan visas stegen för att skapa en anpassad skickaåtgärd för ett a
    ```
    git clone https://git.cloudmanager.adobe.com/<organization-name>/<app-id>/
    ```
+
    **Var hittar du den här informationen?**
 
    Stegvisa instruktioner om hur du hittar dessa uppgifter finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
@@ -67,6 +68,7 @@ I bilden nedan visas stegen för att skapa en anpassad skickaåtgärd för ett a
    ```
    /ui.apps/src/main/content/jcr_root/apps/<app-id>/
    ```
+
    **Viktigt**: Ersätt `<app-id>` med ditt faktiska program-ID.
 
 1. Skapa en ny mapp för din anpassade sändningsåtgärd och ge den ett namn du väljer. Ge till exempel mappen namnet `customsubmitaction`.
@@ -79,7 +81,7 @@ I bilden nedan visas stegen för att skapa en anpassad skickaåtgärd för ett a
 
    `/ui.apps/src/main/content/jcr_root/apps/<app-id>/customsubmitaction/`
 
-   `Important`: Ersätt <app-id> med ditt faktiska program-ID.
+   `Important`: Ersätt &lt;app-id> med ditt faktiska program-ID.
 
 1. Skapa ny konfigurationsfil.
 Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
@@ -117,6 +119,7 @@ Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
    ```
    <filter root="/apps/<app-id>/[customsubmitaction-folder]"/>
    ```
+
    Lägg till exempel till följande kodrad för att lägga till mappen `customsubmitaction` i filen `filter.xml`:
 
    ```
@@ -131,7 +134,7 @@ Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
 
 1. Navigera till följande katalog i din `[AEMaaCS project directory]`:
    `/core/src/main/java/com/<app-id>/core/service/`
-   `Important`: Ersätt <app-id> med ditt faktiska program-ID.
+   `Important`: Ersätt &lt;app-id> med ditt faktiska program-ID.
 1. Skapa en ny Java-fil för att implementera tjänsten för den tillagda sändningsåtgärden. Lägg till exempel till en ny Java-fil som `CustomSubmitService.java`.
 
    ![Anpassad mapp för överföringsåtgärd](/help/forms/assets/custom-submit-action-custom-submit-folder.png)
@@ -198,6 +201,7 @@ Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
       ```
       mvn -PautoInstallPackage clean install
       ```
+
       ![Lokal distribution](/help/forms/assets/custom-submit-action-local-deployment.png)
 
 **Distribuera koden för Cloud Servicen**

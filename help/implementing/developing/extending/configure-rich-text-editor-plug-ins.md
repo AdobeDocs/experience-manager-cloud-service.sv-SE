@@ -394,7 +394,7 @@ Styckeformat blir tillgängliga för markering av:
 
 >[!CAUTION]
 >
-Om du definierar anpassade format tas standardformaten (`<p>`, `<h1>`, `<h2>` och `<h3>`) bort. Återskapa formatet `<p>` eftersom det är standardformatet.
+>Om du definierar anpassade format tas standardformaten (`<p>`, `<h1>`, `<h2>` och `<h3>`) bort. Återskapa formatet `<p>` eftersom det är standardformatet.
 
 ## Konfigurera specialtecken {#spchar}
 
@@ -404,7 +404,7 @@ Du kan konfigurera textredigeraren så att ditt val av tecken blir tillgängligt
 
 >[!CAUTION]
 >
-Om du lägger till specialtecken åsidosätts standardvalet. Om det behövs definierar du om de här tecknen i markeringen.
+>Om du lägger till specialtecken åsidosätts standardvalet. Om det behövs definierar du om de här tecknen i markeringen.
 
 ### Definiera ett enskilt tecken {#definesinglechar}
 
@@ -455,10 +455,12 @@ I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemple
 1. Lägg till följande två egenskaper under den här noden (namngivna enligt ditt teckenintervall):
 
    * **Namn** `rangeStart`
+
      **Typ** `Long`
      **Värde** för [Unicode](https://unicode.org/)-representationen (decimal) av det första tecknet i intervallet
 
    * **Namn** `rangeEnd`
+
      **Typ** `Long`
      **Värde** för [Unicode](https://unicode.org/)-representationen (decimal) av det sista tecknet i intervallet
 
@@ -478,11 +480,11 @@ Format används vanligtvis på text, men du kan också använda separata formatm
 
 >[!NOTE]
 >
-Du kan endast definiera format för tabeller och celler för det klassiska användargränssnittet.
+>Du kan endast definiera format för tabeller och celler för det klassiska användargränssnittet.
 
 >[!NOTE]
 >
-Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläsarberoende. Det stöds inte i alla webbläsare. Du kan få olika resultat beroende på tabellstruktur och webbläsare. Om du till exempel kopierar och klistrar in en tabell i en RTE-komponent i Mozilla Firefox i Classic UI och Touch UI, bevaras inte tabellens layout.
+>Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläsarberoende. Det stöds inte i alla webbläsare. Du kan få olika resultat beroende på tabellstruktur och webbläsare. Om du till exempel kopierar och klistrar in en tabell i en RTE-komponent i Mozilla Firefox i Classic UI och Touch UI, bevaras inte tabellens layout.
 
 1. Gå till noden `<rtePlugins-node>/table` i komponenten. Skapa noderna om noderna inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
 1. Skapa egenskapen `features` på noden `table`:
@@ -493,13 +495,13 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
 
    >[!NOTE]
    >
-   Om du inte vill aktivera alla tabellfunktioner kan du skapa egenskapen `features` som:
+   >Om du inte vill aktivera alla tabellfunktioner kan du skapa egenskapen `features` som:
    >
-   * **Typ** `String[]`
+   >* **Typ** `String[]`
    >
-   * **Värde**, eller båda, av följande, efter behov:
-   * `table` om du vill tillåta redigering av tabellegenskaper, inklusive format.
-   * `cellprops` om du vill tillåta redigering av cellegenskaper, inklusive format.
+   >* **Värde**, eller båda, av följande, efter behov:
+   >* `table` om du vill tillåta redigering av tabellegenskaper, inklusive format.
+   >* `cellprops` om du vill tillåta redigering av cellegenskaper, inklusive format.
 
 1. Definiera platsen för CSS-formatmallar för att referera till dem. Se [Ange platsen för formatmallen](#locationofstylesheet) eftersom detta är samma som när du definierar [format för text](#textstyles). Platsen kan definieras om du har definierat andra format.
 1. Skapa följande noder under noden `table` efter behov:
@@ -561,7 +563,7 @@ När plugin-programmet för stavningskontroll är aktiverat används lexikon fö
 
 >[!NOTE]
 >
-Meddelandet&quot;Stavningskontrollen misslyckades.&quot; visas om en kontroll görs för ett språk som inte är installerat.
+>Meddelandet&quot;Stavningskontrollen misslyckades.&quot; visas om en kontroll görs för ett språk som inte är installerat.
 
 En standardinstallation i Experience Manager innehåller ordlistor för:
 
@@ -570,7 +572,7 @@ En standardinstallation i Experience Manager innehåller ordlistor för:
 
 >[!NOTE]
 >
-Standardordlistorna finns på `/libs/cq/spellchecker/dictionaries` tillsammans med rätt ReadMe-filer. Ändra inte filerna.
+>Standardordlistorna finns på `/libs/cq/spellchecker/dictionaries` tillsammans med rätt ReadMe-filer. Ändra inte filerna.
 
 Följ de här stegen om du vill lägga till fler ordlistor, om det behövs.
 
@@ -579,18 +581,18 @@ Följ de här stegen om du vill lägga till fler ordlistor, om det behövs.
 
    >[!CAUTION]
    >
-   Endast ordlistor i formatet `MySpell` för OpenOffice.org v2.0.1 eller tidigare stöds. Eftersom ordlistorna nu är arkivfiler rekommenderar vi att du kontrollerar arkivet efter nedladdningen.
+   >Endast ordlistor i formatet `MySpell` för OpenOffice.org v2.0.1 eller tidigare stöds. Eftersom ordlistorna nu är arkivfiler rekommenderar vi att du kontrollerar arkivet efter nedladdningen.
 
 1. Leta reda på .aff- och .dic-filerna. Behåll filnamnet med gemener. Till exempel `de_de.aff` och `de_de.dic`.
 1. Läs in .aff- och .dic-filerna i databasen på `/apps/cq/spellchecker/dictionaries`.
 
 >[!NOTE]
 >
-Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text.
+>Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text.
 >
-Om du vill stavningskontrollera väljer du stavningskontrollknappen i verktygsfältet. RTE kontrollerar stavningen av ord och markerar felstavade ord.
+>Om du vill stavningskontrollera väljer du stavningskontrollknappen i verktygsfältet. RTE kontrollerar stavningen av ord och markerar felstavade ord.
 >
-Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill stavningskontrollera väljer du stavningskontrollknappen igen.
+>Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill stavningskontrollera väljer du stavningskontrollknappen igen.
 
 ## Konfigurera historikstorlek för ångra- och gör om-åtgärder {#undohistory}
 
@@ -626,7 +628,7 @@ När indrag är aktiverat (standard) kan du definiera storleken på indraget:
 
 >[!NOTE]
 >
-Den här indragsstorleken används bara för stycken (block) i text. Den påverkar inte indraget för verkliga listor.
+>Den här indragsstorleken används bara för stycken (block) i text. Den påverkar inte indraget för verkliga listor.
 
 1. Gå till noden `<rtePlugins-node>/lists` i komponenten. Skapa de här noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
 1. Skapa parametern `identSize` på noden `lists`:
@@ -659,13 +661,13 @@ När du lägger till länkar i [!DNL Experience Manager] kan du definiera de CSS
 
    >[!NOTE]
    >
-   Noden `../items/text` har egenskapen:
+   >Noden `../items/text` har egenskapen:
    >
-   * **Namn** `xtype`
-   * **Typ** `String`
-   * **Värde** `richtext`
+   >* **Namn** `xtype`
+   >* **Typ** `String`
+   >* **Värde** `richtext`
    >
-   Platsen för noden `../items/text` kan variera beroende på strukturen i dialogrutan. Två exempel är `/apps/myProject>/components/text/dialog/items/text` och `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
+   >Platsen för noden `../items/text` kan variera beroende på strukturen i dialogrutan. Två exempel är `/apps/myProject>/components/text/dialog/items/text` och `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
 
 1. Skapa en nod under `htmlRules`.
 

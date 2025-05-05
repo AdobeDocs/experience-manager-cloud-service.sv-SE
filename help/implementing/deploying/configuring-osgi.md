@@ -322,6 +322,7 @@ Om en OSGi-egenskap kräver olika värden för författare jämfört med publice
 * Separata `config.author`- och `config.publish` OSGi-mappar måste användas, vilket beskrivs i avsnittet [Lösning för körningsläge](#runmode-resolution).
 * Det finns två alternativ för att skapa de oberoende variabelnamnen som ska användas:
    * det första alternativet, som rekommenderas: Använd samma variabelnamn i alla OSGi-mappar (som `config.author` och `config.publish`) som deklarerats för att definiera olika värden. Till exempel
+
      `$[env:ENV_VAR_NAME;default=<value>]`, där standardvärdet motsvarar standardvärdet för den nivån (författare eller publicering). När du ställer in miljövariabeln via [Cloud Manager API](#cloud-manager-api-format-for-setting-properties) eller via en klient, skiljer du mellan skikten med parametern&quot;service&quot; som beskrivs i [Cloud Manager API-referensdokumentationen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/). Parametern service binder variabelns värde till rätt OSGi-nivå. Det kan vara&quot;författare&quot;,&quot;publicera&quot; eller&quot;förhandsgranska&quot;.
    * det andra alternativet, som är att deklarera distinkta variabler med ett prefix som `author_<samevariablename>` och `publish_<samevariablename>`
 
@@ -348,11 +349,11 @@ config
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1": "val",
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -362,11 +363,11 @@ config.dev
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1" : "$[env:my_var1]"
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -391,11 +392,11 @@ config.stage
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1": "val1",
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -405,11 +406,11 @@ config.prod
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1": "val2",
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -419,11 +420,11 @@ config.dev
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1" : "$[env:my_var1]"
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -448,11 +449,11 @@ config
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1": "val1",
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -462,11 +463,11 @@ config.dev
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1" : "$[env:my_var1]"
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -489,11 +490,11 @@ config
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1": "val1",
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>
@@ -503,11 +504,11 @@ config.dev
 </td>
 <td>
 <pre>
-{ 
+&lbrace; 
  "my_var1": "$[env:my_var1;default=val1]"
  "my_var2": "abc",
  "my_var3": 500
-}
+&rbrace;
 </pre>
 </td>
 </tr>

@@ -119,7 +119,7 @@ AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i et
 
 ### Övriga {#others-foundation}
 
-Den nya syntaxen ](/help/implementing/dispatcher/disp-overview.md#local-validation) för [&quot;httpd -t&quot; kontrollerar om det finns apache- och dispatcherkonfigurationer som körs under Cloud Manager-bygget, som också kan köras med AEM as a Cloud Service SDK:s Dispatcher-verktyg.
+Den nya syntaxen [&#128279;](/help/implementing/dispatcher/disp-overview.md#local-validation) för &quot;httpd -t&quot; kontrollerar om det finns apache- och dispatcherkonfigurationer som körs under Cloud Manager-bygget, som också kan köras med AEM as a Cloud Service SDK:s Dispatcher-verktyg.
 
 ## Verktyget Innehållsöverföring {#content-transfer-tool}
 

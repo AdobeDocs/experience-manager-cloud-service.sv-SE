@@ -215,6 +215,7 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 1. Mappen visas i segmentlistan.
    * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
    * Du kan välja kolumnrubrikerna för att justera sorteringen.
+
      ![Den nya mappen](../assets/contexthub-folder.png)
 
 ### Ändra befintliga mappar {#modify-folders}

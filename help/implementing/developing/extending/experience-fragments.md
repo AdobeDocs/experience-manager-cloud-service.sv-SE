@@ -87,9 +87,11 @@ Om du vill skapa en Experience Fragment-mall som identifieras av guiden **Skapa 
 1. Båda:
 
    1. Mallens resurstyp (den inledande noden) måste ärva från:
+
       `cq/experience-fragments/components/xfpage`
 
    1. Och mallens namn måste börja med:
+
       `experience-fragments`
 Med det här mönstret kan användare skapa upplevelsefragment i /content/experience-fragments eftersom egenskapen `cq:allowedTemplates` i den här mappen innehåller alla mallar som har namn som börjar med `experience-fragment` . Kunder kan uppdatera den här egenskapen så att den omfattar sina egna namngivningsscheman eller mallplatser.
 

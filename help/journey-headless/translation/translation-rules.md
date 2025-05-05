@@ -84,6 +84,7 @@ I användargränssnittet för **översättningskonfiguration** finns det flera t
    1. Välj **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.
    1. Välj **Spara**.
+
       ![Lägg till egenskap](assets/add-property.png)
 
 Du har nu konfigurerat dina översättningsregler.

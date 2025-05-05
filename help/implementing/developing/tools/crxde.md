@@ -91,7 +91,7 @@ Behörigheterna är indelade i följande kategorier.
 
 >[!NOTE]
 >
-För att kunna se åtkomstkontrollsinformation måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa ACL-poster.
+>För att kunna se åtkomstkontrollsinformation måste användaren som är inloggad på CRXDE Lite ha behörighet att läsa ACL-poster.
 
 ### Fliken Replikering {#replication-tab}
 
@@ -192,9 +192,9 @@ Nu kan du anpassa noden efter dina behov genom att ändra egenskaper eller skapa
 
 >[!NOTE]
 >
-De flesta redigeringsåtgärderna, inklusive **Skapa nod**, sparar alla ändringar i minnet och lagrar dem bara i databasen när de sparas (med knappen [**Spara alla**](#save-all-button)). Vissa åtgärder, till exempel move, sparas dock automatiskt.
+>De flesta redigeringsåtgärderna, inklusive **Skapa nod**, sparar alla ändringar i minnet och lagrar dem bara i databasen när de sparas (med knappen [**Spara alla**](#save-all-button)). Vissa åtgärder, till exempel move, sparas dock automatiskt.
 >
-Valideringen av om den skapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured`-nod som underordnad `nt:folder`-nod).
+>Valideringen av om den skapade noden tillåts av den överordnade nodens nodtyp utförs även av databasen när ändringar sparas. Om du får ett felmeddelande när du sparar en nod kontrollerar du om innehållsstrukturen är giltig (du kan till exempel inte skapa en `nt:unstructured`-nod som underordnad `nt:folder`-nod).
 
 ## Skapa en egenskap {#creating-a-property}
 

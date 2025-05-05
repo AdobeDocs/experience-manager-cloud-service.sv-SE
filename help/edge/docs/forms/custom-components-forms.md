@@ -206,6 +206,7 @@ Så här lägger du till format för en komponent i CSS-filen:
    float: right;
    }
    ```
+
 1. Spara ändringarna.
 
 ### Distribuera filerna och bygg projektet

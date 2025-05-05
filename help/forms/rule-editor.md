@@ -111,7 +111,7 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 ### [!UICONTROL When] {#whenruletype}
 
-Regeltypen **[!UICONTROL When]** följer regelkonstruktionen villkor-åtgärd-alternativ **åtgärd**, eller ibland bara villkor-åtgärdskonstruktionen ****. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen När kan du använda flera AND- och OR-operatorer](#nestedexpressions) för att skapa [kapslade uttryck.
+Regeltypen **[!UICONTROL When]** följer regelkonstruktionen villkor-åtgärd-alternativ **åtgärd**, eller ibland bara villkor-åtgärdskonstruktionen **&#x200B;**. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen När kan du använda flera AND- och OR-operatorer[&#128279;](#nestedexpressions) för att skapa kapslade uttryck.
 
 Med hjälp av regeltypen När kan du utvärdera ett villkor för ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
@@ -435,7 +435,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
-   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen ****- respektive ****-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
+   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen **&#x200B;**- respektive **&#x200B;**-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
 
    ![Värden för alternativknappar från regelredigeraren](assets/radio-button-values.png)
 

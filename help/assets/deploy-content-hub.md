@@ -93,7 +93,7 @@ I följande tabell sammanfattas tillgängliga Content Hub-användartyper, vilka 
 
 >[!NOTE]
 >
-[Experience Manager Assets-användare](#experience-manager-assets-users) kan godkänna resurser i en Experience Manager Assets as a Cloud Service-miljö och göra dessa resurser tillgängliga i Content Hub. Dessa användare måste läggas till i AEM > Production Author instance > AEM Users produktprofil med Admin Console.
+>[Experience Manager Assets-användare](#experience-manager-assets-users) kan godkänna resurser i en Experience Manager Assets as a Cloud Service-miljö och göra dessa resurser tillgängliga i Content Hub. Dessa användare måste läggas till i AEM > Production Author instance > AEM Users produktprofil med Admin Console.
 
 ## Steg 1: Aktivera Content Hub för Experience Manager Assets med Cloud Manager {#enable-content-hub}
 
@@ -112,7 +112,7 @@ För att få tillgång till Content Hub-portalen måste administratörer först 
 
    >[!NOTE]
    >
-   Om **[!UICONTROL Update]** inte har aktiverats för dig när du har valt Content Hub kontrollerar du att du har angett Go-Live-inställningar för programmet.
+   >Om **[!UICONTROL Update]** inte har aktiverats för dig när du har valt Content Hub kontrollerar du att du har angett Go-Live-inställningar för programmet.
 
 1. Klicka på **[!UICONTROL Update]**.
 
@@ -120,7 +120,7 @@ Content Hub är nu aktiverat för Experience Manager Assets as a Cloud Service. 
 
 >[!NOTE]
 >
-Du har tillgång till och kan använda Content Hub med upp till 250 Content Hub-användare. Kontakta Adobe om du har ytterligare frågor.
+>Du har tillgång till och kan använda Content Hub med upp till 250 Content Hub-användare. Kontakta Adobe om du har ytterligare frågor.
 
 
 Om du inte har använt Experience Manager Assets tidigare klickar du på **[!UICONTROL Add Program]**, anger programinformation (Programnamn, konfigurera för produktion) och klickar på **[!UICONTROL Continue]**. Du kan sedan välja **[!UICONTROL Assets]** och **[!UICONTROL Content Hub]** på fliken **[!UICONTROL Solutions & Add-ons]**.
@@ -133,7 +133,7 @@ När du har [aktiverat Content Hub för Assets as a Cloud Service med Cloud Mana
 
 >[!NOTE]
 >
-Om du har etablerat Content Hub före 14 augusti 2024 skapas den nya instansen med `contenthub` som suffix.
+>Om du har etablerat Content Hub före 14 augusti 2024 skapas den nya instansen med `contenthub` som suffix.
 
 Observera att det inte finns någon `author` eller `publish` i instansnamnet för Content Hub.
 
@@ -143,7 +143,7 @@ Klicka på instansnamnet för att visa Content Hub produktprofil.
 
 >[!NOTE]
 >
-Om du har etablerat Content Hub före den 14 augusti 2024 har Content Hub produktprofil `contenthub` omnämns efter `Limited Users` i stället för `delivery`.
+>Om du har etablerat Content Hub före den 14 augusti 2024 har Content Hub produktprofil `contenthub` omnämns efter `Limited Users` i stället för `delivery`.
 
 ## Steg 2: Integrera Content Hub-administratören {#onboard-content-hub-administrator}
 
@@ -184,7 +184,7 @@ Dessa användare har nu tillgång till de resurser som finns på Content Hub-por
 
 >[!NOTE]
 >
-Du kan använda alla avancerade företagsfunktioner som synkronisering med externa identitetsleverantörer.
+>Du kan använda alla avancerade företagsfunktioner som synkronisering med externa identitetsleverantörer.
 
 ### Hur kommer jag åt Content Hub? {#access-content-hub}
 
@@ -262,4 +262,4 @@ Så här konfigurerar du Experience Manager Assets-användare:
 
    >[!NOTE]
    >
-   Du behöver inte läggas till i [Content Hub-produktprofilen](#onboard-content-hub-users) för Experience Manager Assets-användare.
+   >Du behöver inte läggas till i [Content Hub-produktprofilen](#onboard-content-hub-users) för Experience Manager Assets-användare.

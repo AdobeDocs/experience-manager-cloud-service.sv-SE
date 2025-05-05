@@ -41,7 +41,7 @@ Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta gö
 
 Du kan också konfigurera fälten som är tillgängliga genom att konfigurera dialogrutan för sidkomponenten och använda lämpliga nodegenskaper.
 
-Som standard visar guiden **](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page)[** Skapa sida de fält som är grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
+Som standard visar guiden **[&#128279;](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page)** Skapa sida de fält som är grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
 
 1. Skapa sidkomponenten under `/apps`.
 1. Skapa en åsidosättning (med *dialog diff* från [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md)) för `basic`-delen av sidkomponenten, till exempel:

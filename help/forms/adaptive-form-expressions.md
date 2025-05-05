@@ -219,7 +219,7 @@ GuideBridge är en samling API:er som kan användas för att interagera med Adap
 
 * Om du vill återställa formulärfält kan du aktivera `guideBridge.reset()`-API:t i klickuttrycket för en knapp. På samma sätt finns det ett API för att skicka som kan anropas som ett klickuttryck `guideBridge.submit()`**.**
 
-* Du kan använda API:t `setFocus()` för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus()`innehåller en mängd alternativ för navigering, till exempel navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda:`guideBridge.setFocus(this.panel.somExpression, &#39;nextItem&#39;).
+* Du kan använda API:t `setFocus()` för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus()`innehåller en mängd alternativ för navigering, till exempel navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda:&grave;guideBridge.setFocus(this.panel.somExpression, &#39;nextItem&#39;).
 
 * Använd `guideBridge.validate(errorList, somExpression).` om du vill validera ett adaptivt formulär eller dess specifika paneler
 

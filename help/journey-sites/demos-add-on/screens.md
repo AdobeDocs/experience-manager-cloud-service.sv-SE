@@ -17,7 +17,7 @@ Lär dig de steg som möjliggör AEM Screens fullständiga as a Cloud Service up
 
 >[!NOTE]
 >
->AEM Screens Demo kräver att Screens Add-on läggs till i Cloud Manager Program. Lär dig hur du lägger till Screens som ett tillägg till ett nytt program i Cloud Manager](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md) med [Lägga till det.
+>AEM Screens Demo kräver att Screens Add-on läggs till i Cloud Manager Program. Lär dig hur du lägger till Screens som ett tillägg till ett nytt program i Cloud Manager[&#128279;](/help/screens-cloud/onboarding-screens-cloud/add-on-new-program-screens-cloud.md) med Lägga till det.
 
 ## Story hittills {#story-so-far}
 

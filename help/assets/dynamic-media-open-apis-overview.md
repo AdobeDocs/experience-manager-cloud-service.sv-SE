@@ -102,7 +102,7 @@ Om du vill aktivera Dynamic Media med OpenAPI-funktioner på AEM as a Cloud Serv
 
   >[!NOTE]
   >
-  Om du vill integrera med andra program än Adobe anger du domännamn i tillåtelselista där programmet finns.
+  >Om du vill integrera med andra program än Adobe anger du domännamn i tillåtelselista där programmet finns.
 
 * Information om viktiga kundkontakter i integrationsprojektet.
 
@@ -112,7 +112,7 @@ När du har skickat in supportanmälan aktiverar Adobe Dynamic Media med OpenAPI
 
 >[!NOTE]
 >
-Undanta `/conf/global/settings/dam/assets-configurations/assetdelivery` från alla innehållspaket för att undvika inaktivering av dynamiska media med OpenAPI-funktioner.
+>Undanta `/conf/global/settings/dam/assets-configurations/assetdelivery` från alla innehållspaket för att undvika inaktivering av dynamiska media med OpenAPI-funktioner.
 
 ## Fördjupa dig i nyckelfunktionerna {#learn-more-key-capabilities}
 

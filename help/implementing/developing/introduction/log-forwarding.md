@@ -116,14 +116,14 @@ Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM-lo
 Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av loggningsdestinationerna, andra kanske behöver använda andra portar än HTTPS (443).  I så fall måste [Avancerat nätverk](/help/security/configuring-advanced-networking.md) konfigureras innan konfigurationen för vidarebefordran av loggar distribueras.
 
 Använd tabellen nedan för att se vad som krävs för konfigurationen av avancerat nätverk och loggning baserat på om du använder port 443 eller inte och om du behöver visa loggarna från en fast IP-adress eller inte.
-<html>
-<style>
-table, th, td {
+&lt;html>
+&lt;style>
+table, th, td &lbrace;
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
-}
-</style>
+&rbrace;
+&lt;/style>
 <table>
   <tbody>
     <tr>
@@ -155,7 +155,7 @@ table, th, td {
       <td>Ja</td>
   </tbody>
 </table>
-</html>
+&lt;/html>
 
 >[!NOTE]
 >Om loggarna visas från en enda IP-adress avgörs av ditt val av avancerad nätverkskonfiguration.  Dedikerade urkor måste användas för att underlätta detta.

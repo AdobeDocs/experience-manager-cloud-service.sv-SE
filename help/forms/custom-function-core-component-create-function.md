@@ -109,6 +109,7 @@ Lägg till följande i den tillagda klientbiblioteksmappen:
          #base=js
        function.js
    ```
+
 1. Lägg till javascript-filen som `function.js` i mappen `js` som innehåller de anpassade funktionerna:
 
    ```javascript
@@ -133,6 +134,7 @@ Lägg till följande i den tillagda klientbiblioteksmappen:
     return age;
     }
    ```
+
 1. Spara filerna.
 
 ![anpassad struktur för funktionsmapp](/help/forms/assets/custom-function-added-files.png)

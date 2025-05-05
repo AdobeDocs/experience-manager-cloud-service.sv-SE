@@ -48,6 +48,7 @@ Här följer några allmänna tips om hur du skapar URL:er för SEO:
    * När du använder väljare på en sida är det bäst att använda väljare som har ett semantiskt värde.
    * Om en användare inte kan läsa URL:en kan inte en sökmotor heller göra det.
    * Till exempel:
+
      `mybrand.com/products/product-detail.product-category.product-name.html`
 är att föredra framför `mybrand.com/products/product-detail.1234.html`
 
@@ -252,6 +253,7 @@ Det finns dock ett enklare sätt att hantera det här på:
    Du kan konfigurera Sling Resource Resolver med webbkonsolen (till exempel localhost:4502/system/console/configMgr):
 
    * **Apache Sling Resource Resolver Factory**
+
      `(org.apache.sling.jcr.resource.internal.JcrResourceResolverFactoryImpl)`.
 
    Vi rekommenderar att du skapar de mappningar som krävs för att korta ned URL:er som reguljära uttryck och sedan definierar konfigurationerna under en OSGi-konfigurationsnod, `config.publish`, som ingår i bygget.

@@ -223,15 +223,15 @@ URL-omskrivningar kan också göras med hjälp av AEM Dispatcher HTTP-server med
 
 Som vi nämnt innan du väljer ett av de tillgängliga standardformaten, eller till och med implementerar ett anpassat format, beror i hög grad på butikens behov och krav. Följande förslag kan hjälpa dig att fatta ett väl underbyggt beslut.
 
-_**Använd ett URL-format för en produktsida som innehåller SKU:n.**_
+_&#x200B;**Använd ett URL-format för en produktsida som innehåller SKU:n.**&#x200B;_
 
 CIF Core Components använder SKU:n som primär identifierare i alla komponenter. Om produktsidans URL-format inte innehåller SKU:n måste du ha en GraphQL-fråga för att kunna lösa det. Den här upplösningen kan påverka tiden till första byten. Det kan också vara önskvärt att kunderna kan hitta produkter genom SKU med sökmotorer.
 
-_**Använd ett URL-format för en produktsida som innehåller kategorikontexten.**_
+_&#x200B;**Använd ett URL-format för en produktsida som innehåller kategorikontexten.**&#x200B;_
 
 Vissa funktioner i CIF URL Provider är bara tillgängliga när du använder produkts-URL-format, som kodar kategorikontexten, till exempel kategorin `url_key` eller kategorin `url_path`. Även om dessa funktioner kanske inte behövs för en ny butik kan du minska migreringsansträngningarna i framtiden genom att använda något av de här URL-formaten i början.
 
-_**Balans mellan URL-längd och kodad information.**_
+_&#x200B;**Balans mellan URL-längd och kodad information.**&#x200B;_
 
 Beroende på katalogstorleken, särskilt kategoriträdets storlek och djup, är det inte säkert att det går att koda hela `url_path` kategorier till URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` inkluderas i stället. Den här metoden stöder de flesta av de funktioner som är tillgängliga när du använder kategorin `url_path`.
 

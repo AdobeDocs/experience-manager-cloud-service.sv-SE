@@ -47,6 +47,7 @@ data:
       cssUrl: https://www.example.com/error.css
       jsUrl: https://www.example.com/error.js
 ```
+
 Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför datanoden. Egenskapsvärdet för sort ska vara *CDN* och egenskapen `version` ska vara *1*.
 
 

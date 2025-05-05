@@ -28,6 +28,7 @@ Du kan navigera i startstrukturen från:
 * Sidredigeraren:
 
    * Välj **Navigera** för att öppna strukturen för Launch i konsolen:
+
      ![Navigera från sidredigeraren](/help/sites-cloud/authoring/assets/launches-navigate-page-editor.png)
 
      >[!NOTE]

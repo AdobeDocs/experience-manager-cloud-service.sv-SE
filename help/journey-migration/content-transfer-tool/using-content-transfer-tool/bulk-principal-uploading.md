@@ -54,6 +54,7 @@ Så här använder du Admin Console funktion för gruppöverföring när du har 
       * _Användargruppnamn_ - Gruppnamnet är obligatoriskt och får innehålla högst 255 tecken.  Gruppnamnet måste vara detsamma i IMS och AEM
       * _Beskrivning_ - Det här fältet är valfritt och får innehålla högst 255 tecken
       * _Administratörer för användargrupp_ - minst en gruppadministratör måste inkluderas i det här fältet. Du kan tilldela flera administratörer genom att separera varje administratör med ett kommatecken och omsluta listan inom citattecken. Posten för varje administratör måste innehålla användarens identitetstyp, följt av ett bindestreck och sedan e-postadressen.  Till exempel
+
         `"Adobe ID-myAdmin@example.com,Adobe ID-myOtherAdmin@example.com"`. Ta inte med ett blanksteg efter kommatecknet som avgränsar administratörer. Du kan inte inkludera användare (som administratörer) som för närvarande inte ingår i organisationen i Admin Console
       * _Tilldelade produktprofiler_ - Det här fältet är valfritt. Du kan tilldela flera produktprofiler genom att separera varje profil med kommatecken och omsluta listan inom citattecken. Produktprofilerna som du inkluderar måste dock redan vara konfigurerade för organisationen. Se till att du anger produktprofilens namn och inte produktnamnet.  Medlemskap i produktprofiler som tilldelats en grupp ärvs av alla användare som placerats i gruppen.  Så här hittar du en produktprofil:
 

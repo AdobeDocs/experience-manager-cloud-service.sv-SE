@@ -29,7 +29,7 @@ När du som innehållsförfattare är redo att publicera ditt innehåll behöver
 
 ![Publicerar sidor](assets/publish-menu.png)
 
-1. Tryck eller klicka på ikonen **Publicera** i den universella redigerarens verktygsfält.](/help/sites-cloud/authoring/universal-editor/navigation.md#publish)[
+1. Tryck eller klicka på ikonen **Publicera** i den universella redigerarens verktygsfält.[&#128279;](/help/sites-cloud/authoring/universal-editor/navigation.md#publish)
 1. Om du har en [förhandsgranskningstjänst](/help/sites-cloud/authoring/sites-console/previewing-content.md) tillgänglig kan du välja var du vill publicera ditt innehåll, antingen till **Förhandsgranska** eller **Publicera**.
 1. I avsnittet **Objekt** visas innehållet som ingår i publikationen, inklusive:
    * **Nya** objekt som ännu inte har publicerats.

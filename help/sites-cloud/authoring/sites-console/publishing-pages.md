@@ -310,7 +310,7 @@ Du kan ange en sidas publiceringsstatus:
 
   Publikationsstatusen visas i [kort](/help/sites-cloud/authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/basic-handling.md#column-view)- och [list](/help/sites-cloud/authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
-* På tidslinjen [](/help/sites-cloud/authoring/basic-handling.md#timeline)
+* På tidslinjen [&#128279;](/help/sites-cloud/authoring/basic-handling.md#timeline)
 
   ![Publiceringsstatus i tidslinjevyn](/help/sites-cloud/authoring/assets/publishing-status-timeline.png)
 

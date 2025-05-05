@@ -1,6 +1,6 @@
 ---
 title: Redigera flera metadata i  [!DNL Assets View]
-description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [DNL! Assets View] samtidigt.
+description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [!DNL ! Assets View] samtidigt.
 exl-id: f5fee1b3-2855-4010-ae4a-216beb20920d
 source-git-commit: 19c5155363ef3f5083d36af880727a33c7224e84
 workflow-type: tm+mt
@@ -65,6 +65,7 @@ Utför de här stegen för att massredigera metadata för flera resurser samtidi
    * **[!UICONTROL Keywords]:** Lägg till specifika termer eller textsträngar som ger högnivåinformation om resurserna för att förbättra deras upptäckbarhet. Lägg till ett nyckelord och tryck på **Retur** eller **return** för att lägga till ytterligare ett nyckelord i listan.
    * **[!UICONTROL Tags]:** Klicka på ![redigera massmetadata](/help/assets/assets/tags-icon.svg) för att välja taggar bland de tillgängliga alternativen. Taggar ger mer specifik information om resurserna och gör det lättare att hitta dem. Taggar som redan används för de markerade resurserna visas på panelen **[!UICONTROL Properties]**. Om du inte hittar de relevanta taggarna skapar du dem och tilldelar till de valda resurserna. Mer information om hur du skapar och tilldelar taggar till resurser finns i [Hantera taggar i [!DNL Assets view]](/help/assets/tagging-management-assets-view.md).
    * Klicka på **[!UICONTROL Save]** om du vill använda metadatauppdateringarna ovan på de markerade resurserna. När informationen har sparats läggs **[!UICONTROL Keywords]** och **[!UICONTROL Tags]** till medan den uppdaterade informationen för **[!UICONTROL Status]**, **[!UICONTROL Expiration date]** och **[!UICONTROL Author]** åsidosätter den befintliga informationen.
+
      ![save-bulk-metadata-edit-properties](/help/assets/assets/save-bulk-metadata-edit-properties2.png)
 
      >[!NOTE]

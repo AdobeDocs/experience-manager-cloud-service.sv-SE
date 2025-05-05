@@ -476,7 +476,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 ```
 
 * Fältuppsättningselementet fungerar som panelbehållare med klassens panelwrapper och ytterligare klasser för formatering baserat på panelnamnet (fältinloggning).
-* Förklaringselementet (<legend>) fungerar som panelrubrik med texten&quot;Inloggningsinformation&quot; och klassens fältetikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
+* Förklaringselementet (&lt;legend>) fungerar som panelrubrik med texten&quot;Inloggningsinformation&quot; och klassens fältetikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
 * I fältuppsättningen, multipel .{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
 * Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
 
@@ -637,6 +637,7 @@ Väljaren formaterar alla paneler som kan upprepas, vilket ger ett konsekvent ut
   margin-bottom: 10px;
 }
 ```
+
 Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vilket ger ett konsekvent avstånd mellan fälten.
 
 * Ange specifika fält som mål (inom en panel):

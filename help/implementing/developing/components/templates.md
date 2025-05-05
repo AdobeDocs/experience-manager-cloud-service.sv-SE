@@ -501,6 +501,7 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
    * Anger egenskapen status för noden `jcr:content`.
 
       * På:
+
         `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * Definiera egenskapen:
@@ -513,6 +514,7 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
    * [Definiera tillåtna mallsökvägar på **Sidegenskaper**](/help/sites-cloud/authoring/page-editor/templates.md#allowing-a-template-author) för rätt sida eller rotsida i en underavdelning.
    * Ange egenskapen:
+
      `cq:allowedTemplates`
 På noden `jcr:content` för den begärda grenen.
 

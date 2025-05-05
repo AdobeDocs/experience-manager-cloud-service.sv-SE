@@ -35,7 +35,7 @@ AEM Forms as a Cloud Service har stöd för Captcha® i adaptiva Forms Core-komp
 
 ### Förutsättningar för att integrera AEM Forms-miljön med Captcha® {#prerequisite}
 
-Om du vill konfigurera hCaptcha® med AEM Forms måste du hämta sitekey och hemlig nyckel ](https://docs.hcaptcha.com/switch/#get-your-hcaptcha-sitekey-and-secret-key) för [hCaptcha® från webbplatsen hCaptcha®.
+Om du vill konfigurera hCaptcha® med AEM Forms måste du hämta sitekey och hemlig nyckel [&#128279;](https://docs.hcaptcha.com/switch/#get-your-hcaptcha-sitekey-and-secret-key) för hCaptcha® från webbplatsen hCaptcha®.
 
 ### Konfigurera hCaptcha® {#steps-to-configure-hcaptcha}
 
@@ -57,8 +57,10 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
 
 1. Konfigurera Cloud Service:
    1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** och välj **[!UICONTROL hCaptcha®]** i AEM-författarinstansen.
+
       ![hCaptcha® i ui](assets/hcaptcha-in-ui.png)
    1. Välj en konfigurationsbehållare, skapad eller uppdaterad, enligt beskrivningen i föregående avsnitt. Välj **[!UICONTROL Create]**.
+
       ![Configuration Captcha®](assets/config-hcaptcha.png)
    1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för hCaptcha®-tjänsten [ som hämtas i Krav](#prerequisite). Välj **[!UICONTROL Create]**.
 

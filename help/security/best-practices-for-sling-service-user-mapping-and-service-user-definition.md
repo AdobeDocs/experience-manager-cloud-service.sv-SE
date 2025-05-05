@@ -77,7 +77,7 @@ Sekvensen för att hämta en tjänst `Session/ResourceResolver` fungerar så hä
 
 1. Hämta huvudnamn från `ServiceUserMapper` =>-databasinloggning före autentisering enligt beskrivningen nedan
 1. Hämta användar-ID från `ServiceUserMapper`
-1. Kontrollera om 1ServiceUserConfiguration` är inaktuellt användar-ID
+1. Kontrollera om 1ServiceUserConfiguration&grave; är inaktuellt användar-ID
 1. Standardinloggning för Sling-tjänsten med användar-ID (t.ex. en sekvens av `createAdministrativeSession` och personifiering för användar-ID)
 
 Den nya mappningen med huvudnamn resulterar i följande förenklade databasinloggning:

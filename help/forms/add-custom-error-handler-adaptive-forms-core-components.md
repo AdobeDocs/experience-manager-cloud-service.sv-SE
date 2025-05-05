@@ -256,6 +256,7 @@ Låt oss lägga till följande kod i JavaScript-filen för att visa svar och rub
        return true; // true - call default error handler, false - don't call default error handler.
    }
    ```
+
    I koden ovan anropar `return true` automatiskt standardfelhanteraren. Inkludera `return false` om du vill förhindra att standardfelhanteraren anropas som standard.
 
    >[!NOTE]

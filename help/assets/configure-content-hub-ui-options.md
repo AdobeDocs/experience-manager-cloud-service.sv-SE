@@ -156,7 +156,7 @@ I Content Hub kan administratörer konfigurera filter som visas när de söker e
 
    >[!NOTE]
    >
-   Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
+   >Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgängligt filter, för att redigera etiketterna eller klicka på ikonen Ta bort för att ta bort befintliga filter. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
 

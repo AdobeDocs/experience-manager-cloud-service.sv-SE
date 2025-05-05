@@ -137,8 +137,8 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
-   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger URL] till definitionsfilen [!DNL  Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på indata från [!DNL  Swagger] Source är följande fält förifyllda med värden:
+   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger URL] till definitionsfilen [!DNL &#x200B; Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
+   * Baserat på indata från [!DNL &#x200B; Swagger] Source är följande fält förifyllda med värden:
 
       * Schema: De överföringsprotokoll som används av REST API. Antalet schematyper som visas i den nedrullningsbara listan beror på scheman som definierats i källan [!DNL Swagger].
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
@@ -162,8 +162,8 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
-   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger 3.0 URL] till definitionsfilen [!DNL  Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på indata från [!DNL  Swagger] Source visas anslutningsinformationen med målservern.
+   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger 3.0 URL] till definitionsfilen [!DNL &#x200B; Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
+   * Baserat på indata från [!DNL &#x200B; Swagger] Source visas anslutningsinformationen med målservern.
    * Välj autentiseringstypen - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** som autentiseringstyp anger du värdet för API-nyckeln. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj något av dessa alternativ i listrutan **[!UICONTROL Location]** och ange namnet på huvudet eller frågeparametern i fältet **[!UICONTROL Parameter Name]** i enlighet med detta.

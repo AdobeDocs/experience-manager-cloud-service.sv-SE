@@ -69,7 +69,7 @@ Om du vill visa metadata för en resurs bläddrar du till resursen eller söker 
 
 ![Visa metadata för en resurs](assets/metadata-view.png)
 
-*Figur: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklickar på resursen.*
+*Figur: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**&#x200B;i verktygsfältet eller dubbelklickar på resursen.*
 
 Grundläggande metadata som titel, beskrivning och överföringsdatum är tillgängliga på fliken [!UICONTROL Basic]. Fliken [!UICONTROL Advanced] innehåller mer avancerade metadata som kameramodell, objektivinformation och geotaggar. Fliken [!UICONTROL Tags] innehåller automatiskt tillämpade taggar baserat på bildens innehåll.
 
@@ -85,7 +85,7 @@ De smarta taggarna används nästan i realtid och genereras baserat på bildens 
 
 ![Visa smarta taggar för en resurs](assets/metadata-view-tags.png)
 
-*Figur: Om du vill visa smarta taggar för en resurs klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklickar på resursen.*
+*Figur: Om du vill visa smarta taggar för en resurs klickar du på&#x200B;**[!UICONTROL Details]**&#x200B;i verktygsfältet eller dubbelklickar på resursen.*
 
 Smarta taggar innehåller också ett konfidensintervall som ett procenttal. Det anger förtroendet som är kopplat till den tillämpade taggen. Du kan moderera de automatiskt tillämpade smarta taggarna.
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Konfigurera lokal utvecklingsmiljö för AEM Forms {#overview}
 
-När du konfigurerar och konfigurerar en [!DNL  Adobe Experience Manager Forms] som en [!DNL  Cloud Service]-miljö konfigurerar du utvecklings-, staging- och produktionsmiljöer i molnet. Dessutom kan du konfigurera och konfigurera en lokal utvecklingsmiljö.
+När du konfigurerar och konfigurerar en [!DNL &#x200B; Adobe Experience Manager Forms] som en [!DNL &#x200B; Cloud Service]-miljö konfigurerar du utvecklings-, staging- och produktionsmiljöer i molnet. Dessutom kan du konfigurera och konfigurera en lokal utvecklingsmiljö.
 
 Du kan använda den lokala utvecklingsmiljön för att utföra följande åtgärder utan att logga in i molnutvecklingsmiljön:
 

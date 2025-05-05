@@ -57,6 +57,7 @@ För att formuläret ska kunna skickas på ett säkert sätt måste du konfigure
 ```js
 export const submitBaseUrl = 'https://publish-p120-e12.adobeaemcloud.com';
 ```
+
 **För lokal utveckling:**
 
 ```js
@@ -79,6 +80,7 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 # Franklin Live
 SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.live$)#" CORSTrusted=true
 ```
+
 Lokal utveckling beskrivs i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter) för att aktivera CORS från URL:en för **utvecklingsgränssnittets värd**.
 
 ### Konfigurera referensfiltret

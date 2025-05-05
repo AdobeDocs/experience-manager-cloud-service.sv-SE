@@ -39,7 +39,7 @@ Du kan hämta referensdokumentation för Java™ API från [!DNL Maven Central R
    1. Öppna filen index.html för att visa API-referensdokumentationen.
 
 * **Var kan jag få [!DNL JavaScript™] API-referens för Adaptiv Forms?**
-Du kan hämta [!DNL JavaScript™] API-referensdokumentation från [!DNL  Maven Central Repository]. Så här hämtar du:
+Du kan hämta [!DNL JavaScript™] API-referensdokumentation från [!DNL &#x200B; Maven Central Repository]. Så här hämtar du:
    1. Öppna [[!DNL Maven Central Repository]](https://mvnrepository.com/artifact/com.adobe.aem/aem-forms-sdk-api).
    1. Leta upp och öppna sidan som innehåller den senaste versionen av [!DNL Experience Manager Forms] SDK.
    1. Klicka på alternativet Visa alla om du vill visa alla filer.

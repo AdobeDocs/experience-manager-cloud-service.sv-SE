@@ -68,7 +68,7 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Action 2 on Object B;`
 `AND`
-`Åtgärd 3 på objekt C;
+&grave;Åtgärd 3 på objekt C;
 
 `Else, do the following:`
 
@@ -115,7 +115,7 @@ _
 
 * Kontrollera att kärnkomponenten [är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
 * Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
-* Du kan bara lägga till flera fält i villkoret **När för en** AND-regel ****. Det är inte möjligt för en **OR-regel** .
+* Du kan bara lägga till flera fält i villkoret **När för en** AND-regel **&#x200B;**. Det är inte möjligt för en **OR-regel** .
 
 >[!NOTE]
 >
