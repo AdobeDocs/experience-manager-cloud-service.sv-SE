@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2024 Release Overview video for a summary of the features added in the 2024.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3431707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3432544?quality=12&captions=swe)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 

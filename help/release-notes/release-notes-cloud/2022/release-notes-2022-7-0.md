@@ -33,7 +33,7 @@ Nästa version (2022.8.0) är planerad till 1 september 2022.
 
 Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanfattning av funktioner som lagts till i version 202.7.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/345409/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3454200/?quality=12&captions=swe)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 

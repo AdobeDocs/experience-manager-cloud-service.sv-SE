@@ -32,7 +32,7 @@ Var inte orolig om du inte känner till alla termer som används på den här si
 
 I den här videon sammanfattas den introduktionsprocess som beskrivs under resan och är avsedd som en alternativöversikt. Alla ämnen i videon presenteras i detalj under resan.
 
->[!VIDEO](https://video.tv.adobe.com/v/336959/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431505/?quality=12&learn=on&captions=swe)
 
 ## Ditt kontrakt {#contract}
 
