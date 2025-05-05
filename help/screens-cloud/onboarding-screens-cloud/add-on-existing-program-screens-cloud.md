@@ -16,7 +16,7 @@ ht-degree: 0%
 I det här avsnittet beskrivs hur du lägger till Screens som ett tillägg till ett befintligt program i Cloud Manager.
 
 >[!NOTE]
->Mer information om Cloud Manager-program finns i [Förstå program och programtyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/program-types.html).
+>Mer information om Cloud Manager-program finns i [Förstå program och programtyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/program-types.html?lang=sv-SE).
 
 ## Syfte {#objective}
 
@@ -29,7 +29,7 @@ Följ stegen nedan för att lägga till Screens som tillägg till ett befintligt
 1. Navigera till [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
    >[!NOTE]
-   >Mer information om Cloud Manager finns i [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager.html).
+   >Mer information om Cloud Manager finns i [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager.html?lang=sv-SE).
 
 1. Navigera till ditt projekt och klicka på alternativet **Redigera program** på sidan **Översikt** i Cloud Manager.
 

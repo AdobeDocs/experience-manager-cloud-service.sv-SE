@@ -76,7 +76,7 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 * [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 * [Nu kommer Assets as a Cloud Service](/help/assets/overview.md)
-* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
+* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=sv-SE)
 
 >[!TIP]
 >

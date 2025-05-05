@@ -167,7 +167,7 @@ Så här tar du bort taggar:
 
 ## Lägg till taggar i metadataformuläret {#add-tags-to-metadata-form}
 
-Taggkomponenten läggs automatiskt till i metadataformuläret `default`. Du kan utforma ett [metadataformulär](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/metadata.html?lang=en#metadata-forms) antingen med en mall eller från början. Om du inte använder någon befintlig metadatamall kan du ändra metadataformuläret och lägga till taggkomponenten. Mappningen av metadataegenskaper fylls i automatiskt och kan inte ändras just nu. [!DNL Assets as a Cloud Service]-användare kan uppdatera mappningen för att lagra taggvärden med anpassade namnutrymmen och endast visa deluppsättningar av hierarkier med hjälp av rotsökvägar.
+Taggkomponenten läggs automatiskt till i metadataformuläret `default`. Du kan utforma ett [metadataformulär](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/metadata.html?lang=sv-SE#metadata-forms) antingen med en mall eller från början. Om du inte använder någon befintlig metadatamall kan du ändra metadataformuläret och lägga till taggkomponenten. Mappningen av metadataegenskaper fylls i automatiskt och kan inte ändras just nu. [!DNL Assets as a Cloud Service]-användare kan uppdatera mappningen för att lagra taggvärden med anpassade namnutrymmen och endast visa deluppsättningar av hierarkier med hjälp av rotsökvägar.
 
 I den här snabbvideon ser du hur du lägger till taggkomponenten i metadataformuläret:
 

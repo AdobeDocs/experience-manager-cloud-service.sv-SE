@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.1.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner, till exempel för versionerna 2021, 2022 och så vidare.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -66,7 +66,7 @@ Titta på videon med versionsöversikten från januari 2023 om du vill se en sam
 
 ### Nya funktioner i förhandsversionen av [!DNL Forms] {#prerelease-features-forms}
 
-* **[Använd kärnkomponenter för datainhämtning för att skapa adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)**: [Använd den adaptiva Forms-redigeraren](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
+* **[Använd kärnkomponenter för datainhämtning för att skapa adaptiva Forms](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE)**: [Använd den adaptiva Forms-redigeraren](/help/forms/creating-adaptive-form-core-components.md) för att skapa formulär baserade på standardiserade datainhämtningskomponenter (kärnkomponenter). Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser.
 * **[Stöd för frontend-pipeline för att utforma kärnkomponentbaserade adaptiva Forms](/help/forms/using-themes-in-core-components.md)**: Använd enkelt anpassningsbara BEM-baserade teman för Core Components-baserade Adaptive Forms genom att distribuera dem med Frontend Deployment Pipeline för att förbättra utseendet och känslan i formulären.
 * **[Generera arkivdokument för huvudkomponentbaserade adaptiva Forms](/help/forms/generate-document-of-record-core-components.md)**: Skapa en post för huvudkomponentbaserade adaptiva formulär när de skickas för långtidsarkivering, i utskrift eller i dokumentformat.
 

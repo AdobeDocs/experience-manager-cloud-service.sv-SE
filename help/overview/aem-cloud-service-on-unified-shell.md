@@ -60,7 +60,7 @@ Om du vill ändra till det mörka temat klickar du på din profilikon. Den här 
 
 ## Identifiera AEM as a Cloud Service-miljön {#identify-aemaacs-environment}
 
-AEM as a Cloud Service har tre typer av miljöer: produktion, scen och utveckling. Mer information finns i [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html). I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
+AEM as a Cloud Service har tre typer av miljöer: produktion, scen och utveckling. Mer information finns i [Miljötyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE). I och med den här integreringen med Unified Shell visas den typ av miljö som användaren är inloggad på tjänsten Författare i det övre huvudet via en etikett som visas nedan.
 
 ![bild](/help/overview/assets/unifiedshell_header_label.png)
 

@@ -32,7 +32,7 @@ Följande version (2021.1.0) är 28 januari 2021.
 
 * [!DNL Dynamic Media]-funktioner är nu tillgängliga via AEM [!DNL Sites] bildbaserade kärnkomponenter. Man kan snabbt konfigurera komponenter så att de använder bildförinställningar, smart beskärning och bildmodifierare när man skapar webbsidor. Se [Core Components 2.13.0 release](https://github.com/adobe/aem-core-wcm-components/releases/tag/core.wcm.components.reactor-2.13.0).
 
-* Med skrivbordsappen [!DNL Experience Manager] kan användare överföra filer och mappar genom att dra filerna från Utforskaren i Windows eller Mac Finder i skrivbordsappens gränssnitt. Se [lägga till resurser med datorprogrammet](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/using#upload-and-add-new-assets-to-aem).
+* Med skrivbordsappen [!DNL Experience Manager] kan användare överföra filer och mappar genom att dra filerna från Utforskaren i Windows eller Mac Finder i skrivbordsappens gränssnitt. Se [lägga till resurser med datorprogrammet](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/using#upload-and-add-new-assets-to-aem).
 
 ## Adobe Experience Manager Commerce as a Cloud Service {#cloud-services-commerce}
 
@@ -66,7 +66,7 @@ Releasedatum för Cloud Manager i Adobe Experience Manager (AEM) as a Cloud Serv
 
 ### Nyheter i [!DNL Code Refactoring Tools] {#what-is-new-crt}
 
-* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av denna plugin innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Se [Enhetlig upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/unified-experience#benefits) där du kan lära dig mer om det här plugin-programmet.
+* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av denna plugin innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Se [Enhetlig upplevelse](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/unified-experience#benefits) där du kan lära dig mer om det här plugin-programmet.
 
 * Indexkonverteraren är ett verktyg som kan användas för att omvandla en kunds anpassade Oak-indexdefinitioner till AEM as a Cloud Service-kompatibla Oak-indexdefinitioner. Mer information finns i [Indexkonverteraren](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter).
 

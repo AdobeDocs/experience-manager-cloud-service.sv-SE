@@ -49,11 +49,11 @@ Följ stegen nedan för att konfigurera Screens Services Provider:
 1. Klicka på **Spara** för att ansluta till Screens innehållsleverantör.
 
 1. Om du har konfigurerat den AEM publiceringsinstansen så att den bara tillåter åtkomst till betrodda IP-adresser via funktionen Cloud Manager IP Tillåtelselista, måste du konfigurera en rubrik med ett nyckelvärde i dialogrutan med inställningar som visas nedan.
-De IP-adresser som behöver vitlistas måste också flyttas till konfigurationsfilen och måste vara [otillämpade](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list) från Cloud Manager-inställningarna.
+De IP-adresser som behöver vitlistas måste också flyttas till konfigurationsfilen och måste vara [otillämpade](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list) från Cloud Manager-inställningarna.
 
    ![bild](/help/screens-cloud/assets/configure/configure-screens20b.png)
-Samma nyckel måste konfigureras AEM CDN-konfigurationen.  Du bör inte placera rubrikvärdet direkt i GITHub och använda en [hemlig referens](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication#rotating-secrets).
-Nedan visas ett exempel på [CDN-konfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf):
+Samma nyckel måste konfigureras AEM CDN-konfigurationen.  Du bör inte placera rubrikvärdet direkt i GITHub och använda en [hemlig referens](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication#rotating-secrets).
+Nedan visas ett exempel på [CDN-konfiguration](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf):
 
    ```kind: "CDN"
        version: "1"
@@ -98,4 +98,4 @@ Nedan visas ett exempel på [CDN-konfiguration](https://experienceleague.adobe.c
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du konfigurerar Screens Services Provider går du till [Använda Screens Content Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html#screens-content-provider) för mer information.
+När du har lärt dig hur du konfigurerar Screens Services Provider går du till [Använda Screens Content Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=sv-SE#screens-content-provider) för mer information.

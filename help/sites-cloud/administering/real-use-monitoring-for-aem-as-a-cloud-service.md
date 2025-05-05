@@ -42,7 +42,7 @@ Tjänsten för övervakning av faktisk användning är utformad för att minimer
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttypen och det operativsystem som används för att visa sidan, till exempel: `desktop:windows` eller `mobile:ios`
 * Tidpunkten för datainsamlingen, till exempel: `2021-06-26 06:00:02.596000 UTC (in order to preserve privacy, we round all minutes to the previous hour, so that only seconds and milliseconds are tracked)`
-* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs`
+* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs?lang=sv-SE`
 * Referens-URL (URL:en för sidan som länkade till den aktuella sidan, om användaren följde en länk)
 * Ett slumpmässigt genererat ID för sidvyn i ett format som liknar: `2Ac6`
 * Samplingsfrekvensen, t.ex. `100`, har samma vikt eller inverterad. Det betyder att bara en av hundra sidvisningar spelas in

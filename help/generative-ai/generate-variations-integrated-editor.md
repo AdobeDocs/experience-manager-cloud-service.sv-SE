@@ -172,7 +172,7 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
   >[!NOTE]
   >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 

@@ -38,7 +38,7 @@ Det finns grundläggande skillnader mellan dessa tidigare metoder och AEM as a C
 
 >[!NOTE]
 >
->Mer information om versionerna av On-Premise och Managed Service finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65.html) .
+>Mer information om versionerna av On-Premise och Managed Service finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=sv-SE) .
 
 ## Arkitektur {#architecture}
 
@@ -230,7 +230,7 @@ AEM as a Cloud Service stöds också av en ny infrastruktur för övervakning, r
 
 En stor förändring i AEM as a Cloud Service är den helt integrerade användningen av Adobe ID:n för åtkomst till redigeringsmiljön.
 
-Det innebär att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) måste användas för att hantera användare och användargrupper. Med användarkonton kan användarna få tillgång till Adobes produkter och tjänster eftersom användarprofilinformationen centraliseras i Adobe Identity Management System (IMS) och delas över alla Cloud Services. När användarkonton fått åtkomst till AEM, refereras de i AEM as a Cloud Service (som tidigare); till exempel för att definiera roller och behörigheter via användargränssnitten i AEM Security.
+Det innebär att [Adobe Admin Console](https://helpx.adobe.com/se/enterprise/using/admin-console.html) måste användas för att hantera användare och användargrupper. Med användarkonton kan användarna få tillgång till Adobes produkter och tjänster eftersom användarprofilinformationen centraliseras i Adobe Identity Management System (IMS) och delas över alla Cloud Services. När användarkonton fått åtkomst till AEM, refereras de i AEM as a Cloud Service (som tidigare); till exempel för att definiera roller och behörigheter via användargränssnitten i AEM Security.
 
 Det kombinerar fördelarna med:
 
@@ -272,7 +272,7 @@ Mer information finns i:
 * [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
 * [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 * [Nu kommer AEM Assets as a Cloud Service](/help/assets/overview.md)
-* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
+* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=sv-SE)
 
 >[!TIP]
 >

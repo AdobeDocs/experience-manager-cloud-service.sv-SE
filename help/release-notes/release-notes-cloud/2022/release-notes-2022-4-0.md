@@ -21,7 +21,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.4.0
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -68,7 +68,7 @@ En ny analyserare har nyligen lagts till:
 
 * `content-packages-validation` - validerar för korrekt formaterad innehållssyntax och struktur för paket som installeras under distributionen
 
-Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste versionen av analyseraren eller inkluderar analyseraren om du inte redan har gjort det. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html).
+Vi rekommenderar starkt att du uppdaterar ditt maven-projekt med den senaste versionen av analyseraren eller inkluderar analyseraren om du inte redan har gjort det. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=sv-SE).
 
 ## [!DNL Experience Manager] som [!DNL Cloud Service] Foundation Security {#foundation-security}
 

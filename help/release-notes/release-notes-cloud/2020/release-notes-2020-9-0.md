@@ -36,7 +36,7 @@ Releasedatum för [!DNL Adobe Experience Manager] as a Cloud Service 2020.9.0 ä
    * Selektiv Publish - Nu kan ett marknadsföringsteam få tillgång till [!DNL Dynamic Media] smarta beskärningsbilder och dynamiska återgivningar som synkroniseras med [!DNL Dynamic Media] så att de kan skapa marknadsföringsmaterial, utan att behöva publicera dessa resurser på [!DNL Dynamic Media] för global leverans. Publiceringen av [!DNL Experience Manager] och [!DNL Dynamic Media] är fristående och kan ske separat för att uppnå detta. Se [selektiv publicering](/help/assets/dynamic-media/selective-publishing.md).
    * Administratörer kan nu återställa lösenordet för Cloud Servicen [!DNL Dynamic Media] som tas emot vid etablering. Återställningen kan göras i användargränssnittet för [!DNL Experience Manager] utan att du behöver använda skrivbordsappen [!DNL Dynamic Media Classic].
 
-* Mer information om följande förbättringar finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
+* Mer information om följande förbättringar finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE).
 
    * Förbättrad förhandsgranskning av PDF med integrering av Adobe Document Cloud View SDK.
    * Ladda ned med ett klick.

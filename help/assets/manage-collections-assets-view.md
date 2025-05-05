@@ -229,15 +229,15 @@ Så här tar du bort en samling:
 
 ## Hantera behörigheter för en privat samling{#manage-permissions-private-collection}
 
-Du kan tillåta administratörer att hantera [åtkomstnivåer](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions) för privata samlingar som är tillgängliga i databasen. Du kan tilldela användargrupperna eller användarna behörigheter som `Can View` och `Can Edit`. Du kan även delegera behörighetshanteringsbehörigheter till användargrupper. De användare som skapar privata samlingar är ägare av dessa samlingar. De kan använda åtgärden [!UICONTROL Manage Permissions] för att bevilja åtkomst till de andra användarna. Administratörer kan dessutom visa och hantera behörigheter för de privata samlingarna i databasen [!DNL Experience Manager].
+Du kan tillåta administratörer att hantera [åtkomstnivåer](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions) för privata samlingar som är tillgängliga i databasen. Du kan tilldela användargrupperna eller användarna behörigheter som `Can View` och `Can Edit`. Du kan även delegera behörighetshanteringsbehörigheter till användargrupper. De användare som skapar privata samlingar är ägare av dessa samlingar. De kan använda åtgärden [!UICONTROL Manage Permissions] för att bevilja åtkomst till de andra användarna. Administratörer kan dessutom visa och hantera behörigheter för de privata samlingarna i databasen [!DNL Experience Manager].
 <!--
 >[!NOTE]
 >
 >Adobe does not recommend to assign permissions to users.
 -->
-Mer information om hur du tilldelar tillgängliga behörigheter till användargrupper finns i [Lägga till behörigheter till användargrupper](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Mer information om hur du tilldelar tillgängliga behörigheter till användargrupper finns i [Lägga till behörigheter till användargrupper](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
-Mer information om arbetsflödet från början till slut finns i [Hantera behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Mer information om arbetsflödet från början till slut finns i [Hantera behörigheter](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Nästa steg {#next-steps}
 
@@ -245,4 +245,4 @@ Mer information om arbetsflödet från början till slut finns i [Hantera behör
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)

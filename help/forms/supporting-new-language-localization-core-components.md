@@ -117,7 +117,7 @@ Följ de här stegen för att lägga till stöd för nya språkområden i ett ad
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa uppgifter finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa uppgifter finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
 
    **Projektet är klart!**
 
@@ -373,9 +373,9 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 
    1. Distribuera den uppdaterade koden:
 
-      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline). Detta skapar och distribuerar automatiskt den uppdaterade koden med det nya språkstödet.
+      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline). Detta skapar och distribuerar automatiskt den uppdaterade koden med det nya språkstödet.
 
-      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
+      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
 
 
 ## Förhandsgranska ett anpassat formulär med nyligen tillagda språk
@@ -394,7 +394,7 @@ Med de här stegen får du hjälp att förhandsgranska ett adaptivt formulär me
 ## De bästa sätten att stödja ny lokalisering {#best-practices}
 
 * Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär. Detta effektiviserar lokaliseringsprocessen.
-* När komponenterna Numerisk ruta och Datumväljare översätts till ett visst språkområde kan det uppstå formateringsproblem. För att minska detta har ett **Language**-alternativ integrerats i dialogrutan Konfigurera för [datumväljarkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-picker#format-tab) och [Numeric Box-komponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/numeric-box#formats-configure-tab).
+* När komponenterna Numerisk ruta och Datumväljare översätts till ett visst språkområde kan det uppstå formateringsproblem. För att minska detta har ett **Language**-alternativ integrerats i dialogrutan Konfigurera för [datumväljarkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-picker#format-tab) och [Numeric Box-komponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/numeric-box#formats-configure-tab).
 
 
 * Hantera nya fält:

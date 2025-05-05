@@ -616,4 +616,4 @@ AEM kan användas för att skapa och dela innehåll i AEMaaCS-miljöer.
 
 [Programvarudistribution](https://downloads.experiencecloud.adobe.com) innehåller AEM paket för den lokala utvecklingen AEM SDK. AEM som tillhandahålls vid programvarudistribution får inte installeras i AEMaaCS-molnmiljöer om inte Adobe Support uttryckligen har godkänt detta.
 
-Mer information finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+Mer information finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).

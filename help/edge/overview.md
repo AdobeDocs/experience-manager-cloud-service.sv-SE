@@ -46,7 +46,7 @@ Genom att fokusera på värdet för era författare kan era Edge Delivery Servic
 
 ## Flexibla redigeringsverktyg för kreatörer {#overview}
 
-Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/author-publish) och WYSIWYG-redigering med [den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) samt [dokumentbaserad redigering](https://www.aem.live/docs/authoring).
+Edge Delivery Services är en sammanslagen uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/author-publish) och WYSIWYG-redigering med [den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) samt [dokumentbaserad redigering](https://www.aem.live/docs/authoring).
 
 Följande diagram visar hur du kan redigera innehåll i Microsoft Word (dokumentbaserad redigering) och publicera till Edge Delivery Services. Här visas även WYSIWYG redigering med Universal Editor.
 
@@ -104,7 +104,7 @@ Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Deli
 
 Läs [Utvecklarhandboken Komma igång för WYSIWYG med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) om du vill veta hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
 
-Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home).
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home).
 
 ## Kom igång med Edge Delivery Services {#getting-started}
 

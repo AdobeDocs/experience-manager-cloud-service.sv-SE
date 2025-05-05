@@ -22,7 +22,7 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/adaptive-form-fragments-core-components.md) |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html?lang=sv-SE) |
 
 Även om varje formulär är utformat för ett specifikt syfte, finns det några vanliga segment i de flesta formulär, till exempel att tillhandahålla personlig information som namn och adress, familjeuppgifter, inkomstuppgifter och så vidare. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas. Adaptiv Forms är en praktisk mekanism för att skapa formulärsegment som en panel eller en grupp fält bara en gång och återanvända dem i Adaptive Forms. Dessa återanvändbara och fristående segment kallas adaptiva formulärfragment.
 

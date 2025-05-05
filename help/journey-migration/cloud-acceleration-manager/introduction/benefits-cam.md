@@ -17,7 +17,7 @@ ht-degree: 0%
 >id="aemcloud_cam_benefits"
 >title="Fördelar med att använda Cloud Acceleration Manager"
 >abstract="Cloud Acceleration Manager (CAM) förser era team med guidade upplevelser med de bästa metoder och metoder som Adobe rekommenderar och som hjälper era team att planera, implementera och, administrera Adobe Go Live utan problem."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html" text="Kom igång med Cloud Acceleration Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=sv-SE" text="Kom igång med Cloud Acceleration Manager"
 
 Med ett stort antal affärskrav och anpassningar kan en övergång till molnet vara ett engagerande projekt. Cloud Acceleration Manager (CAM) förser era team med guidade upplevelser med de bästa metoder och metoder som Adobe rekommenderar och som hjälper era team att planera, implementera och, administrera Adobe Go Live utan problem.
 
@@ -41,4 +41,4 @@ Fördelarna med att använda Cloud Acceleration Manager är:
 
 ## What’s Next {#whats-next}
 
-När du har lärt dig vad som är Cloud Acceleration Manager är du nu redo att använda och [Kom igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html).
+När du har lärt dig vad som är Cloud Acceleration Manager är du nu redo att använda och [Kom igång med Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=sv-SE).

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Komma igång med AEM Commerce as a Cloud Service {#start}
 
-För att komma igång med Adobe Experience Manager (AEM) Commerce as a Cloud Service måste din Experience Manager Cloud Service etableras med tillägget Commerce integration framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/home.html).
+För att komma igång med Adobe Experience Manager (AEM) Commerce as a Cloud Service måste din Experience Manager Cloud Service etableras med tillägget Commerce integration framework (CIF). CIF-tillägget är en extra modul ovanpå [AEM Sites as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/home.html?lang=sv-SE).
 
 ## Onboarding {#onboarding}
 
@@ -29,7 +29,7 @@ Introduktionen till AEM Commerce as a Cloud Service är en tvåstegsprocess:
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
-När du har etablerat dig med CIF-tillägget används det för alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html).
+När du har etablerat dig med CIF-tillägget används det för alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett. Mer information finns i [Konfigurera ditt program](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html?lang=sv-SE).
 
 Det andra steget är självbetjäning för varje AEM as a Cloud Service-miljö. Det finns ytterligare konfigurationer som du måste göra efter den första etableringen av CIF-tillägget.
 
@@ -70,7 +70,7 @@ Så här ansluter du AEM till en e-handelslösning via Adobe I/O CLI:
 
 1. Skaffa Adobe I/O CLI med Cloud Manager plugin
 
-   Läs [Adobe Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI-plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+   Läs [Adobe Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI-plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 2. Autentisera Adobe I/O CLI med AEM as a Cloud Service
 

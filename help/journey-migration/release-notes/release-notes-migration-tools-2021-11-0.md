@@ -27,6 +27,6 @@ Releasedatum för innehållsöverföringsverktyget v1.7.2 är 1 november 2021.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)-steg som lagts till för användning med verktyget Innehållsöverföring när AEM har konfigurerats för att använda File Data Store för att avsevärt snabba upp extraheringsfasen.
+* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=sv-SE)-steg som lagts till för användning med verktyget Innehållsöverföring när AEM har konfigurerats för att använda File Data Store för att avsevärt snabba upp extraheringsfasen.
 
 * Ytterligare beskrivande meddelanden som lagts till i inmatningsfasen i användargränssnittet för verktyget Innehållsöverföring för att ange när indexering och mongo-återställningssteg pågår.

@@ -25,9 +25,9 @@ Mellanlagrade produktdata inkluderar eventuell mutation i framtiden, t.ex. nya k
 
 ## Konfiguration {#configuration}
 
-Produktkataloger måste konfigureras i AEM. Mer information finns i [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html#catalog).
+Produktkataloger måste konfigureras i AEM. Mer information finns i [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html?lang=sv-SE#catalog).
 
-Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html).
+Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html?lang=sv-SE).
 
 >[!NOTE]
 >

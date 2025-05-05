@@ -39,7 +39,7 @@ Följ stegen nedan för att navigera till beredskapsfasen:
 >id="aemcloud_cam_bpa"
 >title="Analysrapport för bästa praxis"
 >abstract="BPA-rapporten kan laddas upp till CAM för att ge en analys av den med avseende på migrering till AEM as a Cloud Service."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer" text="Använda Best Practices Analyzer"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer" text="Använda Best Practices Analyzer"
 
 1. Klicka på **Granska** på kortet **Best Practices Analysis**.
 
@@ -53,7 +53,7 @@ Följ stegen nedan för att navigera till beredskapsfasen:
    1. Navigera till portalen [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=best*) och hämta Best Practices Analyzer som en zip-fil.
 
       >[!NOTE]
-      >Granska [Använda Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html#imp-considerations) för att lära dig hur du kör BPA.
+      >Granska [Använda Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html?lang=sv-SE#imp-considerations) för att lära dig hur du kör BPA.
 
 1. I CAM klickar du på **Hämta överföringsnyckel** så att du kan hämta nyckeln som används för att konfigurera systemet så att BPA-rapporter automatiskt överförs till CAM.
 
@@ -161,7 +161,7 @@ Du kan filtrera rapporten baserat på prioritet, undertyp eller antal.
 ![Rapportfilter](/help/journey-migration/cloud-acceleration-manager/assets/report-overview3.png)
 
 >[!NOTE]
->Läs [Tolka rapporten om Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html) om du vill veta mer om kategorier och prioritetsnivåer.
+>Läs [Tolka rapporten om Best Practices Analyzer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/using-best-practices-analyzer.html?lang=sv-SE) om du vill veta mer om kategorier och prioritetsnivåer.
 
 #### Utvärdering av bästa praxis {#best-practices-assessment}
 
@@ -222,4 +222,4 @@ Du kan granska följande information på den här fliken:
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg i [implementeringsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html).
+När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du skapar ett projekt är du nu redo att gå vidare till nästa steg i [implementeringsfasen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-implementation-phase.html?lang=sv-SE).

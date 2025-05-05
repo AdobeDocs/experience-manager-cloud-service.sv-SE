@@ -70,7 +70,7 @@ Du kan även navigera till Cloud Manager hemsida för program och produkter frå
 Cloud Manager är en uppsättning Cloud Manager-miljöer som stöder logiska grupperingar av affärsinitiativ. Dessa grupperingar motsvarar vanligtvis en inköpt Service level agreement (SLA). Ett program kan t.ex. representera de AEM resurserna för att stödja en organisations offentliga webbplats, medan ett annat program representerar en intern DAM.
 
 
-Titta på den här [videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html) om du vill veta mer om hur du använder Cloud Manager-program.
+Titta på den här [videon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=sv-SE) om du vill veta mer om hur du använder Cloud Manager-program.
 
 En användare kan skapa en **sandlåda** eller ett **Production**-program.
 
@@ -92,7 +92,7 @@ Dina molnmiljöer skapas, öppnas och visas via Cloud Manager. Dessa miljöer ka
 
 >[!TIP]
 >
-> Se videon [Använda Adobe Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html) med en översikt över tillgängliga miljöer.
+> Se videon [Använda Adobe Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=sv-SE) med en översikt över tillgängliga miljöer.
 >
 >Läs [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) om du vill veta mer om vilka typer av miljöer en användare kan skapa och hur användaren kan skapa en miljö.
 

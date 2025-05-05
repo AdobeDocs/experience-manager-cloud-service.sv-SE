@@ -24,7 +24,7 @@ I den här videon utforskas hur en AEM är integrerad med Experience Platform Ta
 
 ## Krav
 
-Automatiseringsinställningarna är utformade för att fungera direkt med en AEM webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverat. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
+Automatiseringsinställningarna är utformade för att fungera direkt med en AEM webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE) aktiverat. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -51,7 +51,7 @@ Miljön bör nu vara redo för Experience Cloud Setup Automation.
 1. Välj knappen **Integrera analys** .
 1. Ange ett namn för **Report Suite-ID** i den dialogruta som visas.
 
-   Den här strängen används för att skapa ett [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
+   Den här strängen används för att skapa ett [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=sv-SE) i Adobe Analytics som datalager för analysdata för den valda AEM. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
 
 1. Uppdatera sidan och panelen och välj **Kontrollera integreringsstatus** för att kontrollera automatiseringsstatus.
 

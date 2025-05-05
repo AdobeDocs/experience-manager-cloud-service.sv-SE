@@ -29,7 +29,7 @@ Konfigurationsstrukturen för Dispatcher skiljer sig åt mellan Managed Services
 ## Konvertera en AMS till en AEM som en Dispatcher-konfiguration för molntjänster
 
 I följande avsnitt ges stegvisa instruktioner för hur du konverterar en AMS-konfiguration. Det förutsätter
-att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html)
+att du har ett arkiv med en struktur som liknar den som beskrivs i [Cloud Manager Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/dispatcher-configurations.html?lang=sv-SE)
 
 ### Extrahera arkivet och ta bort ett eventuellt prefix
 

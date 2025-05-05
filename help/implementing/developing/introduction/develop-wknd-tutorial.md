@@ -23,15 +23,15 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 ![WKND](assets/wknd-tutorial-homepage.png)
 
-[WKND Developer Tutorial är tillgänglig här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av de senaste teknikerna och bästa metoderna.
+[WKND Developer Tutorial är tillgänglig här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE) och vägleder dig genom att skapa ett AEM projekt med hjälp av de senaste teknikerna och bästa metoderna.
 
 ## Kärnbegrepp {#core-concepts}
 
 I självstudiekursen används många kraftfulla funktioner i AEM. Webbplatsen implementeras med:
 
-* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html)
+* [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
+* [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html?lang=sv-SE)
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
-* [Redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
+* [Redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=sv-SE)
+* [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=sv-SE)

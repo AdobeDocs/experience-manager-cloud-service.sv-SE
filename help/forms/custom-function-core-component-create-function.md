@@ -42,7 +42,7 @@ Innan du börjar lägga till en anpassad funktion i din adaptiva Forms måste du
 
 ## Skapa en anpassad funktion
 
-Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
+Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=sv-SE#developing).
 
 Steg för att skapa anpassade funktioner är:
 1. [Skapa ett klientbibliotek](#create-client-library)
@@ -54,7 +54,7 @@ Du kan lägga till anpassade funktioner genom att lägga till ett klientbibliote
 
 **Klona databasen**
 
-Klona din [AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git):
+Klona din [AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git):
 
 1. Öppna kommandoraden eller terminalfönstret.
 
@@ -168,7 +168,7 @@ Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud S
 
    1. Utlösa en distribution av koden via den befintliga pipeline-funktionen för hela stackar. Detta skapar och distribuerar automatiskt den uppdaterade koden.
 
-Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
+Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
 
 När pipeline har körts blir den anpassade funktion som lagts till i klientbiblioteket tillgänglig i regelredigeraren [Adaptiv form](/help/forms/rule-editor-core-components.md).
 
@@ -228,7 +228,7 @@ Låt oss förhandsgranska formuläret för att se hur de anpassade funktionerna 
 
 >[!NOTE]
 >
-> Du kan referera till följande [anpassade funktionsmapp](/help/forms/assets//customfunctions.zip). Hämta och installera den här mappen i AEM med hjälp av [Package Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+> Du kan referera till följande [anpassade funktionsmapp](/help/forms/assets//customfunctions.zip). Hämta och installera den här mappen i AEM med hjälp av [Package Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
 ## Funktioner för anpassade funktioner
 

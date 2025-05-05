@@ -16,7 +16,7 @@ ht-degree: 1%
 I det här avsnittet beskrivs hur du skapar en miljö för ditt program i Cloud Manager.
 
 >[!NOTE]
->Mer information om hur användaren kan skapa en miljö finns i [Hantera miljöer i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
+>Mer information om hur användaren kan skapa en miljö finns i [Hantera miljöer i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
 
 ## Syfte {#objective}
 

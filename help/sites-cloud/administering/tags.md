@@ -36,7 +36,7 @@ Taggar har robusta funktioner för att ordna och hantera innehåll.
    * Dessa taxonomier är globala i hela AEM.
 * Taggar kan användas av författare och av webbplatsbesökare.
 * Oavsett vem som skapat dem blir alla typer av taggar tillgängliga för markering, både när du tilldelar till en sida och när du söker.
-* Taggar används av [List Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html) för att generera dynamiska listor baserat på de markerade taggarna.
+* Taggar används av [List Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=sv-SE) för att generera dynamiska listor baserat på de markerade taggarna.
 
 ## Märkordskrav {#requirements}
 

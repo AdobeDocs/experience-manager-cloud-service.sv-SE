@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager (AEM) as a Cloud Service. Mer information finns i [Bästa metoder för SEO- och URL-hantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html).
+> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager (AEM) as a Cloud Service. Mer information finns i [Bästa metoder för SEO- och URL-hantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=sv-SE).
 
 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar tjänsten `UrlProvider` och funktionerna i [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
@@ -256,5 +256,5 @@ Projektet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia) 
 ## Ytterligare resurser {#additional}
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM-resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
+* [AEM-resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html?lang=sv-SE)
 * [Kopplingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)

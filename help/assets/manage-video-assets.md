@@ -53,7 +53,7 @@ ht-degree: 5%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-video-assets.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/managing-video-assets.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Videoformatet är en viktig del av ett företags digitala resurser. [!DNL Adobe Experience Manager] erbjuder mogna erbjudanden och funktioner för att hantera hela livscykeln för dina videoresurser efter att de har skapats.
@@ -447,7 +447,7 @@ Nu kopplar du taggarna som du lade till tidigare till videoresurser. På så sä
 1. Välj **[!UICONTROL Save and Close]** i det övre högra hörnet på videons egenskapssida.
 1. Välj **[!UICONTROL Quick Publish]** i verktygsfältet.
 
-   Se även [Använd publikationshantering med Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html#page-authoring).
+   Se även [Använd publikationshantering med Experience Manager Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/publication-management-feature-video-use.html?lang=sv-SE#page-authoring).
 
    Du kan även verifiera den publicerade videon på din YouTube-kanal.
 

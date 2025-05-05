@@ -21,7 +21,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.6.0
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -43,7 +43,7 @@ Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanf
 
   ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
 
-* Den nya [innehållsförteckningskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/tableofcontents.html) fungerar inte bara med kärnkomponenterna utan med alla komponenter, så att ToCS återges automatiskt på innehållssidor. Och eftersom den renderas på serversidan och cachas fullständigt av dispatchern är det också effektivt att läsa in den.
+* Den nya [innehållsförteckningskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/tableofcontents.html?lang=sv-SE) fungerar inte bara med kärnkomponenterna utan med alla komponenter, så att ToCS återges automatiskt på innehållssidor. Och eftersom den renderas på serversidan och cachas fullständigt av dispatchern är det också effektivt att läsa in den.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 

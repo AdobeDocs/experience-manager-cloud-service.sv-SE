@@ -35,7 +35,7 @@ Förutom innovationshastigheten ger [!DNL Adobe Experience Manager] as a Cloud S
 
 Så här förbereder du en release:
 
-1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager releases-färdplanen](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
+1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager releases-färdplanen](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 1. Granska versionsinformationen: Läs [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för att få information om releasefunktionerna och förhandsversionsfunktionerna.
 1. Få åtkomst till och försök med nya funktioner: Aktivera [prerelease-kanalen](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa funktionerna i dina anpassade miljöer.
 1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och bli bättre på de nya funktionerna.

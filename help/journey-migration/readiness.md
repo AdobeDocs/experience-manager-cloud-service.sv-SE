@@ -17,7 +17,7 @@ ht-degree: 1%
 >id="aemcloud_cam_planning"
 >title="Planera övergången"
 >abstract="Innan du börjar din övergångsresa till Cloud Service bör du bekanta dig med AEM as a Cloud Service. Granska de ändringar som gjorts och de funktioner som ersatts eller ersatts."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html" text="Best Practices Analyzer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/best-practices-analyzer/overview-best-practices-analyzer.html?lang=sv-SE" text="Best Practices Analyzer"
 
 I den här fasen av AEM as a Cloud Service migreringsresa bekanta du dig med AEM as a Cloud Service. Du kan granska de ändringar som gjorts och förstå vad som krävs för att planera en lyckad migrering till molnet.
 
@@ -51,7 +51,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
 <tbody>
   <tr>
     <td>Separera muterbara och oföränderliga filter i motsvarande paket</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html">AEM as a Cloud Service Notable Changes</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html#mutable-vs-immutable">AEM Project Structure för AEM as a Cloud Service</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html?lang=sv-SE">AEM as a Cloud Service Notable Changes</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE#mutable-vs-immutable">AEM Project Structure för AEM as a Cloud Service</a></td>
     <td>Ett enskilt paket som kan distribueras till AEM as a Cloud Service kan ha underpaket, främst för att innehålla muterbart och oföränderligt innehåll separerat till sina egna paket.</td>
   </tr>
   <tr>
@@ -91,12 +91,12 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Växla till asynkrona åtgärder</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/asynchronous-jobs.html#configuring-asynchronous-msm-operations">Konfigurera asynkrona åtgärder</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/asynchronous-jobs.html?lang=sv-SE#configuring-asynchronous-msm-operations">Konfigurera asynkrona åtgärder</a></td>
     <td>För att förbättra övergripande prestanda i dina miljöer körs vissa åtgärder i asynkront läge. De asynkrona jobben köas och körs när systemresurser är tillgängliga.</td>
   </tr>
   <tr>
     <td>Tokenbaserad autentisering och integreringsstrategier</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#the-server-to-server-flow">Genererar åtkomsttoken för serversides-API:er</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html#authentication">Token-based Authentication Tutorial</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=sv-SE#the-server-to-server-flow">Genererar åtkomsttoken för serversides-API:er</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE#authentication">Token-based Authentication Tutorial</a></td>
     <td>Det är vanligt att system utanför AEM försöker utföra HTTP-åtgärder i AEM.<br>Vi rekommenderar att du implementerar de strategier som beskrivs här i stället för att förlita dig på att skapa lokala användarnamn med lösenord i AEM.</td>
   </tr>
   <tr>
@@ -106,32 +106,32 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>DAM - uppdatera resursarbetsflöde</td>
-    <td><a href="https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html">Asset Compute Service</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/asset-compute/using/introduction.html?lang=sv-SE">Asset Compute Service</a></td>
     <td>Mediebearbetningsstegen som ingår i arbetsflödet för DAM-uppdatering av resurser ersätts nu av Asset Compute-tjänsten</td>
   </tr>
   <tr>
     <td>Metoder för överföring av resurser och processteg i arbetsflödet som stöds i AEM as a Cloud Service</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis.html#post-processing-workflows-steps">Överför API-jämförelser och WF-processsteg som stöds</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis.html?lang=sv-SE#post-processing-workflows-steps">Överför API-jämförelser och WF-processsteg som stöds</a></td>
     <td>I AEM as a Cloud Service direktuppspelas resursen i eller utanför binärlagringen under överföring eller hämtning av en resurs. <br>Alla arbetsflödesprocessteg stöds inte i AEMaaCS.</td>
   </tr>
   <tr>
     <td>Arbetsflödeskörare</td>
     <td></td>
-    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av resurshanteringstjänsten. Anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html#post-processing-workflows"> Efterbearbetningsarbetsflöden </a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
+    <td>Ta bort alla arbetsflödeskörare som utlöser ett körklart eller anpassat arbetsflöde för DAM Update Asset från koden. <br>Alla resurser som överförs till AEM as a Cloud Service kommer att bearbetas av resurshanteringstjänsten. Anpassade steg finns i <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=sv-SE#post-processing-workflows"> Efterbearbetningsarbetsflöden </a> om hur du konfigurerar och konfigurerar efterbearbetningsarbetsflöden.</td>
   </tr>
   <tr>
     <td>Anpassade återgivningssteg</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html">Bearbetar profiler</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use.html?lang=sv-SE">Bearbetar profiler</a></td>
     <td>Alla anpassade återgivningsgenereringar, bildkonverteringar och videokodningar måste avlastas till resurshanteringstjänsten genom att motsvarande bearbetningsprofiler skapas.</td>
   </tr>
   <tr>
     <td>Innehållssökning och indexering</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html">Innehållssökning och indexeringsändringar</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE">Innehållssökning och indexeringsändringar</a></td>
     <td>Den underliggande bearbetningen av index förändras avsevärt och när den börjar spelas in.<br>Fullständig förståelse för och omfaktorisering av Oak-index innan de hanteras i koden som du distribuerar.</td>
   </tr>
   <tr>
     <td>Alla underhållsaktiviteter är inte konfigurerbara</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/maintenance.html">Underhållsuppgifter för AEM as a Cloud Service</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/maintenance.html?lang=sv-SE">Underhållsuppgifter för AEM as a Cloud Service</a></td>
     <td>Du kan bara konfigurera vissa underhållsuppgifter med AEM as a Cloud Service.</td>
   </tr>
   <tr>
@@ -141,17 +141,17 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
   </tr>
   <tr>
     <td>Dispatcher Configurations and Caching</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content">Cachehantering<br></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=sv-SE">Dispatcher i molnet</a><br><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#other-content">Cachehantering<br></td>
     <td>Dispatcher-konfigurationerna måste följa en specifik struktur.<br>Konfigurationerna måste hanteras som en del av koden och distribueras via Cloud Manager pipeline.</td>
   </tr>
   <tr>
     <td>Säkerhetskopiera och återställa</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/backup.html">AEM as a Cloud Service Säkerhetskopiering och återställning</a></td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/backup.html?lang=sv-SE">AEM as a Cloud Service Säkerhetskopiering och återställning</a></td>
     <td></td>
   </tr>
   <tr>
     <td>Ändringar i autentisering</td>
-    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html">IMS-stöd för AEM as a Cloud Service</td>
+    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=sv-SE">IMS-stöd för AEM as a Cloud Service</td>
     <td>Om du tidigare har använt SAML 2.0-integrering på både författare och publicering innan du går över till Cloud Service är den största förändringen att AEM as a Cloud Service Author bara integreras med Adobe IMS. AEM as a Cloud Service Publish-nivån kan dock fortfarande använda SAML eller andra autentiseringsintegreringar. AEM as a Cloud Service har endast stöd för IMS-autentisering för författare, administratörer och utvecklare. IMS-autentiseringen ger inte stöd för externa slutanvändare på kundsajter som webbplatsbesökare.</td>
   </tr>
 </tbody>
@@ -161,7 +161,7 @@ Listan med objekt i tabellen nedan är delmängden av de ändringar som är mest
 
 Adobe utvärderar ständigt produktfunktioner för att så småningom förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid med noggrant övervägande av bakåtkompatibilitet.
 
-Adobe rekommenderar att du använder [Funktioner som inte längre används](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features.html#deprecated-features) för att bekanta dig med funktioner som markerats som borttagna i Experience Manager as a Cloud Service. Se vilken påverkan AEM har.
+Adobe rekommenderar att du använder [Funktioner som inte längre används](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features.html?lang=sv-SE#deprecated-features) för att bekanta dig med funktioner som markerats som borttagna i Experience Manager as a Cloud Service. Se vilken påverkan AEM har.
 
 ## Planera för en granskning av din AEM-installation {#review-planning}
 
@@ -210,7 +210,7 @@ När du har uppskattat den nivå av arbete som krävs för att gå över till Cl
 
 Om du inte har fastställt nyckeltal (KPI) tidigare rekommenderar vi att du skapar nyckeltal för din AEM-implementering så att ditt team kan fokusera på det som är viktigast.
 
-Se [Utveckla nyckeltal](https://experienceleague.adobe.com/welcome/aem/part6.html) så att du kan lära dig hur du väljer rätt nyckeltal för dina affärsmål.
+Se [Utveckla nyckeltal](https://experienceleague.adobe.com/welcome/aem/part6.html?lang=sv-SE) så att du kan lära dig hur du väljer rätt nyckeltal för dina affärsmål.
 
 ## What&#39;s Next {#what-is-next}
 
@@ -219,7 +219,7 @@ När du har förstått omfattningen av de ändringar som krävs för att gå öv
 ## Ytterligare resurser {#additional-resources}
 
 * [Komma igång med Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) - En omfattande guide om hur du använder Cloud Acceleration Manager för att snabba upp din övergång till molnet.
-* [AEM as a Cloud Service: Introduktion, arkitektur och andra tankar](https://experienceleague.adobe.com/?launch=ExperienceManager-D-1-2021.1.migration&amp;recommended=ExperienceManager-D-1-2021.1.migration&amp;lang=en#dashboard/learning)
+* [AEM as a Cloud Service: Introduktion, arkitektur och andra tankar](https://experienceleague.adobe.com/sv?launch=ExperienceManager-D-1-2021.1.migration&amp;recommended=ExperienceManager-D-1-2021.1.migration&amp;lang=en#dashboard/learning)
 * [AEM a Cloud Service Home](/help/overview/introduction.md) - Här kan du få en översikt över dokumentationen för Experience Manager as a Cloud Service.
 * [AEM as a Cloud Service-översikt](/help/overview/introduction.md) - Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi och arkitektur.
 * [Onboarding Journey](/help/journey-onboarding/overview.md) - Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och konfigurerar ditt team.

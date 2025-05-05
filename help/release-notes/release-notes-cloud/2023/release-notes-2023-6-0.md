@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.6.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -43,8 +43,8 @@ Titta på videon om versionsöversikten för juni 2023 om du vill se en sammanfa
 
 ![Förhandsgranska i konsolen för innehållsfragment](/help/assets/content-fragments-console-preview.png)
 
-* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
-* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html) kan nu skrivas ut till JSON med hjälp av det AEM GraphQL-innehållsleverans-API:t.
+* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=sv-SE#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
+* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html?lang=sv-SE) kan nu skrivas ut till JSON med hjälp av det AEM GraphQL-innehållsleverans-API:t.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
@@ -70,7 +70,7 @@ Experience Manager Assets ger dig nu möjlighet att göra mer med sökresultatgr
 
 **Dynamic Media: Uppdaterade fält relaterade till smart beskärning i bildprofilen**
 
-Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html#crop-options).
+Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=sv-SE#crop-options).
 
 ### Nya funktioner i vyn Assets {#assets-view-features}
 
@@ -128,7 +128,7 @@ I Assets-vyn kan du nu [lägga till text med flera värden och egenskapskomponen
 
 * [Förbättrade autentiseringsmetoder för formulärdatamodell](/help/forms/configure-data-sources.md): Förbättrad säkerhet tack vare introduktionen av klientautentiseringsuppgifter för anslutning av AEM Forms med kompatibla datakällor. Den här förbättringen eliminerar behovet av personifiering eller användarinloggning, vilket stärker skyddet av dina data.
 
-* [Adaptiv Forms med repeterbara avsnitt](/help/forms/create-forms-repeatable-sections.md): Nu kan du skapa [dragspels](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html)-, [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html)-, [panel](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel)- och [horisontella flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html)-komponenter i en huvudkomponentbaserad adaptiv form för att skapa repeterbara avsnitt.
+* [Adaptiv Forms med repeterbara avsnitt](/help/forms/create-forms-repeatable-sections.md): Nu kan du skapa [dragspels](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html?lang=sv-SE)-, [guide](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html?lang=sv-SE)-, [panel](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel)- och [horisontella flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html?lang=sv-SE)-komponenter i en huvudkomponentbaserad adaptiv form för att skapa repeterbara avsnitt.
 
   >[!VIDEO](https://video.tv.adobe.com/v/3421052/adaptive-forms-repeatable-sections-repeat-sections/?quality=12&learn=on)
 
@@ -138,7 +138,7 @@ I Assets-vyn kan du nu [lägga till text med flera värden och egenskapskomponen
 
 ### Headless Adaptive Forms early adopter {#forms-early-adopter}
 
-Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) om du vill att utvecklarna ska kunna skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
+Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE) om du vill att utvecklarna ska kunna skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 
 * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
 * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer

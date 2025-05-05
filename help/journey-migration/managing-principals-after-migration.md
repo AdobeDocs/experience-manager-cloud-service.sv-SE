@@ -59,4 +59,4 @@ Eftersom de här grupperna inte finns i IMS kan inte verktyget för massöverfö
 * Lägg till (eller massöverföring) användare i de nya grupperna i Admin Console.
 * När användaren loggar in för första gången skapas IMS-användaren i AEM och bör ha tillgång till de nya grupperna och därmed till den ursprungliga samlingen eller privata mappgrupper.
 
-Obs! För grupptilldelning av användare måste ovanstående steg användas för att skapa användare i IMS. Användare som redan finns i IMS kan inte skapas igen via massöverföring, men massredigeraren kan användas för att göra den typen av ändringar (Se [Admin Console Bulk User Upload](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html) under **Redigera användarinformation**).
+Obs! För grupptilldelning av användare måste ovanstående steg användas för att skapa användare i IMS. Användare som redan finns i IMS kan inte skapas igen via massöverföring, men massredigeraren kan användas för att göra den typen av ändringar (Se [Admin Console Bulk User Upload](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html) under **Redigera användarinformation**).

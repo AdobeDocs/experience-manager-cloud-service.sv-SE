@@ -161,7 +161,7 @@ Om du har [konfigurerat Dynamic Media](/help/assets/dynamic-media/config-dm.md) 
 
 Se även:
 
-* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html#add-cc-closed-captioning-to-dynamic-media-video)
+* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html?lang=sv-SE#add-cc-closed-captioning-to-dynamic-media-video)
 * [Publicera Dynamic Media-videor till YouTube](/help/assets/dynamic-media/video.md#publishing-videos-to-youtube)
 
 I följande bild återspeglar webbadressen bildtextdelen som refererar till utskriften (.vtt-filen). Videon visar det talade språket (transkriberad text) som **[!UICONTROL Closed Caption]** vid den angivna tidsstämpeln i videon. Användaren kan aktivera eller inaktivera bildtexten med knappen **[!UICONTROL CC]**.

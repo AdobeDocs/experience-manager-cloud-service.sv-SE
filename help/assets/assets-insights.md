@@ -53,7 +53,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-insights.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-insights.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Med Assets Insights-funktionen kan ni spåra användarbetyg och användningsstatistik för bilder som används på tredjepartswebbplatser, marknadsföringskampanjer och Adobe kreativa lösningar. Det ger insikter om bildens prestanda och popularitet.
@@ -155,7 +155,7 @@ Assets Insights fetches usage data for assets from Adobe Analytics report suites
 
 1. Klicka på **[!UICONTROL Done]** när [!DNL Experience Manager] har konfigurerat rapportsviten.
 
-Mer information finns i [Adobe Analytics webbtjänster](https://experienceleague.adobe.com/docs/analytics/admin/company-settings/web-services-admin.html#api-access-information).
+Mer information finns i [Adobe Analytics webbtjänster](https://experienceleague.adobe.com/docs/analytics/admin/company-settings/web-services-admin.html?lang=sv-SE#api-access-information).
 
 ### Sidspårare {#page-tracker}
 

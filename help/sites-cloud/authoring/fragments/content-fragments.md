@@ -38,7 +38,7 @@ Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service [skapas o
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
 
 Innehållsfragmenten aktiverar:
 
@@ -88,7 +88,7 @@ Innehållsfragmenten aktiverar:
 
 >[!NOTE]
 >
->Se även [kärnkomponenter, komponenten Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+>Se även [kärnkomponenter, komponenten Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=sv-SE)
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 

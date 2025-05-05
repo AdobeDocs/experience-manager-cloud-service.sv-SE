@@ -63,4 +63,4 @@ Det här scenariot anropar Analytics API via REST-anrop från en analystjänst i
 Analyshändelser lagras offline i indexedDB och sedan i chunked-läge och skickas till molnet.
 
 >[!NOTE]
->Mer information om sekvensering och standarddatamodell för händelser finns i [Konfigurera Adobe Analytics för AEM Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/administering/analytics-integration/configuring-adobe-analytics-aem-screens.html).
+>Mer information om sekvensering och standarddatamodell för händelser finns i [Konfigurera Adobe Analytics för AEM Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/administering/analytics-integration/configuring-adobe-analytics-aem-screens.html?lang=sv-SE).

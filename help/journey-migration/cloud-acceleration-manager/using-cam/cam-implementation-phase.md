@@ -107,9 +107,9 @@ Följ det här avsnittet för att utforska aktivitetskortet för innehållsöver
    >Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod. Mer information finns i [Förfallotid för migreringsuppsättning](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md#migration-set-expiry).
 
    >[!NOTE]
-   >Se [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html) och [bästa praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) innan du använder verktyget Innehållsöverföring.
+   >Se [förutsättningarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html?lang=sv-SE) och [bästa praxis och riktlinjer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=sv-SE) innan du använder verktyget Innehållsöverföring.
 
-1. Hämta och installera verktyget Innehållsöverföring för att fylla i migreringsuppsättningen och slutföra extraheringsfasen av innehållsöverföringen. Granska [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html) om du vill veta mer om hur du använder verktyget Innehållsöverföring.
+1. Hämta och installera verktyget Innehållsöverföring för att fylla i migreringsuppsättningen och slutföra extraheringsfasen av innehållsöverföringen. Granska [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=sv-SE) om du vill veta mer om hur du använder verktyget Innehållsöverföring.
 
 1. Om du vill importera innehåll från migreringsuppsättningen till en miljö på AEM as a Cloud Service måste du påbörja ett intag. Navigera till **Inmatningsjobb** och klicka på **Nytt intag**. Granska [Inkluderande innehåll i mål](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md) så att du kan lära dig hur du slutför innehållsöverföringsfasen.
 
@@ -130,4 +130,4 @@ You can also estimate the size of specific repository paths by using the `path` 
 
 ## What&#39;s Next {#whats-next}
 
-När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du använder implementeringsfasen är du redo att gå vidare till nästa steg i [Go Live Phase](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-golive-phase.html).
+När du har lärt dig hur du loggar in på Cloud Acceleration Manager och hur du använder implementeringsfasen är du redo att gå vidare till nästa steg i [Go Live Phase](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-golive-phase.html?lang=sv-SE).

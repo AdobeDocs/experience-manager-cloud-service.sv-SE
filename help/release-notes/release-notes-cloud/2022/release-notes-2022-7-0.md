@@ -21,7 +21,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.7.0
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -41,7 +41,7 @@ Titta på videon med versionsöversikten för juli 2022 om du vill se en sammanf
 
 * [Konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#content-fragments-console) har nu stöd för [kortkommandon](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
-* AEM som Cloud Servicens [webboptimerade bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) kan förbättra sidhastigheten avsevärt genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. I alla versioner av [kärnbildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
+* AEM som Cloud Servicens [webboptimerade bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) kan förbättra sidhastigheten avsevärt genom att leverera format som WebP. Den här nya tjänsten erbjuder också flexiblare alternativ för storleksändring och omformning av bilder. I alla versioner av [kärnbildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE) kan du använda den här tjänsten och leverera bilder som WebP genom att klicka på ett alternativ i bildkomponentens profil.
 
 * AEM personaliseringsaktiviteter kan nu använda upplevelsefragment i stället för våra gamla erbjudanden. Den här funktionen:
    * möjliggör en migreringsväg där AEM innehåll skulle främja upplevelsefragmenterbjudanden i stället för äldre bibliotekserbjudanden för att tillhandahålla lämpligt formaterat innehåll som passar personaliseringen i stor skala framåt.
@@ -118,7 +118,7 @@ Du kan nu konfigurera Adobe Experience Manager Assets att [begränsa vilken typ 
 
 ## Adobe Learning Manager Connectors {#learn-manage}
 
-* Nya Adobe Learning Manager har kontakter till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Adobe Learning Manager användarhandbok](https://helpx.adobe.com/learning-manager/user-guide.html).
+* Nya Adobe Learning Manager har kontakter till Adobe Experience Manager Sites, Marketo Engage och Adobe Commerce. Mer information finns i: [Adobe Learning Manager användarhandbok](https://helpx.adobe.com/se/learning-manager/user-guide.html).
 
 ## Cloud Manager {#cloud-manager}
 

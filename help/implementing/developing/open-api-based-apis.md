@@ -17,11 +17,11 @@ Nyare AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och erbjuder
 
 >[!NOTE]
 >
-> En [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) rekommenderas för att lära dig hur du konfigurerar och anropar OpenAPI-baserade AEM API:er.
+> En [heltäckande självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) rekommenderas för att lära dig hur du konfigurerar och anropar OpenAPI-baserade AEM API:er.
 
 För slutpunkter som kräver autentisering skiljer sig autentiseringsmetoden från slutpunkten, men kan använda OAuth Server-to-Server, OAuth Web App eller OAuth Single Page App (SPA). Autentiseringsuppgifter konfigureras via projekt i [Adobe Developer Console](https://developer.adobe.com/developer-console/).
 
-Vanliga API-användningsfall omfattar integreringar med system som CRM eller PIM, där AEM API:er anropas för att hämta eller behålla data. Som en del av integreringsimplementeringen kan program prenumerera på [händelser som skickas från AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-eventing/overview), vilket kan utlösa affärslogik i Adobe App Builder eller annan infrastruktur.
+Vanliga API-användningsfall omfattar integreringar med system som CRM eller PIM, där AEM API:er anropas för att hämta eller behålla data. Som en del av integreringsimplementeringen kan program prenumerera på [händelser som skickas från AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-eventing/overview), vilket kan utlösa affärslogik i Adobe App Builder eller annan infrastruktur.
 
 Det här dokumentet fungerar som en översikt, men mer ingående dokumentation finns på följande sidor:
 
@@ -29,11 +29,11 @@ Det här dokumentet fungerar som en översikt, men mer ingående dokumentation f
 
 * Informativa [guider](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/), inklusive [API-koncept och syntax](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/how-to/).
 
-* En självstudiekurs på den översta nivån som beskriver [autentiseringsmetoder](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/overview#authentication-support) och andra koncept.
+* En självstudiekurs på den översta nivån som beskriver [autentiseringsmetoder](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/openapis/overview#authentication-support) och andra koncept.
 
-* En självstudiekurs med video som fokuserar på [hur du konfigurerar OpenAPI-baserade API:er](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup).
+* En självstudiekurs med video som fokuserar på [hur du konfigurerar OpenAPI-baserade API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup).
 
-* [En självstudiekurs från början till slut](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) om hur du konfigurerar och anropar OpenAPI:er med autentiseringsstrategin server-till-server. Liknande självstudiekurser finns också för autentiseringsmetoderna Web App och Single Page Application.
+* [En självstudiekurs från början till slut](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) om hur du konfigurerar och anropar OpenAPI:er med autentiseringsstrategin server-till-server. Liknande självstudiekurser finns också för autentiseringsmetoderna Web App och Single Page Application.
 
 ## Konfigurera API-åtkomst {#configuring-api-access}
 
@@ -45,7 +45,7 @@ Vissa OpenAPI-baserade AEM-API:er behöver autentiseras, vilket kräver att aute
 1. Konfigurera ADC-projektet. Detta genererar autentiseringsuppgifter som ska användas senare för utbyte mot en innehavartoken när API anropas.
 1. Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation. Detta innebär att registrera klient-ID:t i miljön genom att konfigurera och distribuera en YAML-fil, vilket beskrivs i avsnittet [Registrera ett klient-ID](#registering-a-client-id) nedan.
 
-Detaljerade stegvisa instruktioner finns i självstudiekursen [Konfigurera OpenAPI-baserade API:er](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup).
+Detaljerade stegvisa instruktioner finns i självstudiekursen [Konfigurera OpenAPI-baserade API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup).
 
 ### Registrera ett klient-ID {#registering-a-client-id}
 

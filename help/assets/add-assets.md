@@ -66,8 +66,8 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 |---------------------|----------------|-----------------|
 | [Assets Console-användargränssnitt](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra många resurser. | Alla användare |
 | [Överför API](#upload-using-apis) | För dynamiska beslut under överföring. | Developer |
-| [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) | Intag av resurser med låg volym, men inte för migrering. | Administratör, marknadsförare |
-| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Creative, Marketer |
+| [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE) | Intag av resurser med låg volym, men inte för migrering. | Administratör, marknadsförare |
+| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Creative, Marketer |
 | [Massinklistring av resurser](#asset-bulk-ingestor) | Rekommenderas för storskalig migrering och ibland även för bulkimport. Endast för datalager som stöds. | Administratör, utvecklare |
 
 ## Överför resurser {#upload-assets}
@@ -178,7 +178,7 @@ Inspelaren av gruppresurser kan hantera många resurser effektivt. Men ett stors
 Om du vill överföra fler filer använder du någon av följande metoder. Se även [användningsexempel och metoder](#upload-methods-comparison)
 
 * [API:er för överföring av resurser](developer-reference-material-apis.md#asset-upload): Använd ett anpassat överföringsskript eller verktyg som använder API:er för att lägga till ytterligare hantering av resurser (till exempel översätt metadata eller byt namn på filer), om det behövs.
-* [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
+* [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE): Användbart för kreatörer och marknadsförare som överför resurser från det lokala filsystemet. Använd den för att överföra kapslade mappar som är tillgängliga lokalt.
 * [Verktyget Massintag](#asset-bulk-ingestor): Används för konsumtion av stora mängder resurser, antingen då och då eller när [!DNL Experience Manager] distribueras.
 
 ### Verktyget Importera flera resurser {#asset-bulk-ingestor}
@@ -234,7 +234,7 @@ Så här konfigurerar du verktyget för massimport:
 
 1. Om du vill definiera en plats i DAM där resurser ska importeras med fältet **[!UICONTROL Assets Target Folder]** anger du en sökväg. Exempel: `/content/dam/imported_assets`.
 
-1. (Valfritt) Ange den metadatafil som ska importeras i CSV-format i fältet **[!UICONTROL Metadata File]**. Ange CSV-filen på blobbplatsen för källan och referera till sökvägen när verktyget för massimport konfigureras. CSV-filformatet som det här fältet refererar till är samma som CSV-filformatet när du [importerar och exporterar resursmetadata satsvis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/metadata-import-export.html). Om du väljer alternativet **Ta bort källfil efter import** kan du filtrera CSV-filer antingen med fälten **Uteslut** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil**. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
+1. (Valfritt) Ange den metadatafil som ska importeras i CSV-format i fältet **[!UICONTROL Metadata File]**. Ange CSV-filen på blobbplatsen för källan och referera till sökvägen när verktyget för massimport konfigureras. CSV-filformatet som det här fältet refererar till är samma som CSV-filformatet när du [importerar och exporterar resursmetadata satsvis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/metadata-import-export.html?lang=sv-SE). Om du väljer alternativet **Ta bort källfil efter import** kan du filtrera CSV-filer antingen med fälten **Uteslut** eller **Inkludera MIME-typ** eller **Filtrera efter sökväg/fil**. Du kan använda ett reguljärt uttryck för att filtrera CSV-filer i dessa fält.
 
 1. Klicka på **[!UICONTROL Save]** för att spara konfigurationen.
 
@@ -388,8 +388,8 @@ Experience Manager visar jobbhistoriken. På historiksidan för massimportjobb k
 
 Förutom webbläsargränssnittet stöder [!DNL Experience Manager] andra klienter på skrivbordet. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i skrivbordsprogrammen Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa skrivbordsprogram.
-* [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html) gör det enklare att arbeta med resurser på skrivbordet, oberoende av filtyp eller vilket program som hanterar dem. Det är användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
+* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i skrivbordsprogrammen Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa skrivbordsprogram.
+* [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE) gör det enklare att arbeta med resurser på skrivbordet, oberoende av filtyp eller vilket program som hanterar dem. Det är användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Bearbeta resurser när de överförs {#process-when-uploaded}
 
@@ -453,7 +453,7 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Adobe Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
+>* [[!DNL Adobe Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE)
 >* [Om [!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
->* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av resurser](developer-reference-material-apis.md#asset-upload)

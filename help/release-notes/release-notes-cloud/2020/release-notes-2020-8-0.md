@@ -42,9 +42,9 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * Använd en bearbetningsprofil för att generera anpassade metadata med hjälp av beräkningstjänsten. Se [Anpassade metadata med bearbetningsprofilen](/help/assets/manage-metadata.md#metadata-compute-service).
 
-* En enklare nedladdningsupplevelse för Brand Portal-användare som administratörer kan konfigurera. Se [översikt över nedladdningsfunktionen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html#download-configurations).
+* En enklare nedladdningsupplevelse för Brand Portal-användare som administratörer kan konfigurera. Se [översikt över nedladdningsfunktionen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE#download-configurations).
 
-* Inbyggda förhandsvisningar och förhandsgranskningar av originaltrogna PDF är nu tillgängliga i Brand Portal. Se [översikt över dokumentvisningsprogrammet](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
+* Inbyggda förhandsvisningar och förhandsgranskningar av originaltrogna PDF är nu tillgängliga i Brand Portal. Se [översikt över dokumentvisningsprogrammet](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE#doc-viewer).
 
 * Du kan nu göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] i AEM as a Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Se [Cacheminnet för CDN har inte verifierats med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
 

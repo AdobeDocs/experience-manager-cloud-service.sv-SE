@@ -18,7 +18,7 @@ Lär dig hur du använder betaversionskanalen för att få en förhandsvisning a
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager as a Cloud Service tillhandahåller nya funktioner på en regelbunden cadence enligt [Experience Manager-releasernas färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service).
+Adobe Experience Manager as a Cloud Service tillhandahåller nya funktioner på en regelbunden cadence enligt [Experience Manager-releasernas färdplan](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service).
 
 Om du vill bekanta dig med de funktioner som är schemalagda att användas i följande funktionsrelease kan du prenumerera på betaversionskanalen, som du kommer åt genom att konfigurera dina utvecklingsmiljöer eller andra sandlådemiljöer. Du kan förhandsgranska ändringar som är tillgängliga via det AEM användargränssnittet och skapa kod mot alla nya prerelease-API:er.
 
@@ -50,7 +50,7 @@ För att utnyttja prerelease-kanalen effektivt krävs fyra steg.
 
 ## Markera dina kalendrar {#mark-calendars}
 
-Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleasen publiceras på [Adobe Experience League](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service).
+Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleasen publiceras på [Adobe Experience League](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service).
 
 Notera releasedatumen så att du kan planera tiden för granskning och test av kommande funktioner.
 
@@ -187,7 +187,7 @@ Javadocs publiceras i Maven Central.
 > 
 > ArtefactId `aem-prerelease-sdk-api` får aldrig användas vid distribution till scenen eller produktionen. Använd alltid `aem-sdk-api` när du distribuerar via produktionsflödet. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionsflödet.
 
-[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
+[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=sv-SE#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
 
 ## Utbilda dina användare {#train-users}
 
@@ -195,8 +195,8 @@ När du har testat de nya funktionerna i betaversionskanalen och har bestämt di
 
 Adobe Experience League erbjuder massor av resurser för att lära sig AEMaaCS.
 
-* [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
-* [Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
+* [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE)
+* [Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html?lang=sv-SE)
 * [Den månatliga översiktsvideon ](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
 
 ## Överväganden {#considerations}

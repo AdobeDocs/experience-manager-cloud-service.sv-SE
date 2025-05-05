@@ -18,7 +18,7 @@ ht-degree: 29%
 >id="aemcloud_ctt_overview"
 >title="Ökning"
 >abstract="Verktyget Innehållsöverföring är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM-källinstans (lokalt eller AMS) till AEM Cloud Service-målinstansen. Detta verktyg överför också grupper automatiskt."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Riktlinjer och bästa praxis"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html?lang=sv-SE" text="Riktlinjer och bästa praxis"
 
 Innehållsöverföringsverktyget är ett verktyg som utvecklats av Adobe och som kan användas för att initiera migreringen av befintligt innehåll från en AEM-källinstans (lokalt eller AMS) till AEM Cloud Service-målinstansen.
 

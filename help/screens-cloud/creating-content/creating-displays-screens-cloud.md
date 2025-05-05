@@ -135,4 +135,4 @@ Alla mappåtgärder är tillgängliga via markeringsåtgärdsfältet i lagervyn.
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig hur du skapar och hanterar bildskärmar för ditt projekt bör du fortsätta din as a Cloud Service Screens-resa genom att nästa gång du granskar dokumentet [Tilldela kanal till en bildskärm i Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html).
+Nu när du har lärt dig hur du skapar och hanterar bildskärmar för ditt projekt bör du fortsätta din as a Cloud Service Screens-resa genom att nästa gång du granskar dokumentet [Tilldela kanal till en bildskärm i Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/create-content/assigning-channels-to-display.html?lang=sv-SE).

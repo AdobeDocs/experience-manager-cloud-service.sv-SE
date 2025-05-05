@@ -25,7 +25,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Nyheter {#whats-new-2020.6.0}
 
-Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites inklusive:
+Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är nu tillgänglig som en del av AEM Sites inklusive:
 
 * Integrering mellan [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer) och Core Components
 * Konfigurerbara HTML ID-attribut för alla komponenter
@@ -62,11 +62,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen *Affärsägare* i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller från programmet.
 
-  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
+  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html?lang=sv-SE).
 
 * En användare av sandlådeprogrammet i rollen *Business Owner* eller *Deployment Manager* i Cloud Manager kan nu ta bort sin produktions- och scenmiljö som angetts via Cloud Manager användargränssnitt. Alternativet Ta bort är nu tillgängligt både från miljökortet på sidan **Programöversikt** och på sidan **Miljö**. Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
 
-  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
+  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html?lang=sv-SE).
 
 * Tips på landningssidan som informerar och instruerar användaren om grundläggande navigering.
 
@@ -78,11 +78,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller och behörigheter till Cloud Manager kan hanteras med ett enda klick. En **Hantera åtkomst**-knapp är nu tillgänglig på landningssidan bredvid knappen **Lägg till program** .
 
-  Mer information finns i [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks).
+  Mer information finns i [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=sv-SE#sysadmin-tasks).
 
 * En användare i rollen SysAdmin har nu tillgång till författarinstansen med ett enda klick direkt från Cloud Manager.
 
-  Mer information finns i [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem).
+  Mer information finns i [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=sv-SE#manage-access-aem).
 
 * Build-loggen innehåller nu en lista över identifierade artefakter, inklusive överhoppade innehållspaket.
 
@@ -119,7 +119,7 @@ Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan 
 
 **Stöd för Adobe Asset Link för Adobe XD**
 
-I den senaste versionen stöder [!DNL Experience Manager Assets] ett nytt [!DNL Adobe Asset Link]-plugin-program som släpps med [!DNL Adobe XD] v29.3. Tack vare integreringen kan designers komma åt och använda resurser från [!DNL Experience Manager] i sin design, utan att behöva lämna [!DNL Adobe XD] -programmet. Se [Adobe Asset Link för Adobe XD-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link-for-xd.html).
+I den senaste versionen stöder [!DNL Experience Manager Assets] ett nytt [!DNL Adobe Asset Link]-plugin-program som släpps med [!DNL Adobe XD] v29.3. Tack vare integreringen kan designers komma åt och använda resurser från [!DNL Experience Manager] i sin design, utan att behöva lämna [!DNL Adobe XD] -programmet. Se [Adobe Asset Link för Adobe XD-dokumentation](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link-for-xd.html).
 
 I den här versionen kan kreativa användare och designers nu arbeta med resurser som hanteras i [!DNL AEM Assets] med hjälp av [!DNL Adobe Asset Link] i ett antal datorprogram i Creative Cloud, inklusive [!DNL Adobe XD], [!DNL Photoshop], [!DNL Illustrator] och [!DNL InDesign].
 

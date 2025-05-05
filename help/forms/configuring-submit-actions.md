@@ -15,7 +15,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
 | AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 
@@ -120,7 +120,7 @@ Du kan använda åtgärden **[!UICONTROL Send Email]** Skicka för att skicka et
 >[!NOTE]
 >
 > * Alla formulärfält måste ha olika elementnamn, även om fälten placeras på olika paneler i ett anpassat formulär.
-> * AEM as a Cloud Service kräver att utgående e-post krypteras. Som standard är utgående e-post inaktiverad. Om du vill aktivera den skickar du en supportanmälan till [Begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
+> * AEM as a Cloud Service kräver att utgående e-post krypteras. Som standard är utgående e-post inaktiverad. Om du vill aktivera den skickar du en supportanmälan till [Begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email).
 
 Du kan även bifoga bilagor och ett DoR-dokument (Document of Record) till e-postmeddelandet. Om du vill aktivera alternativet **[!UICONTROL Attach Document of Record]** konfigurerar du det adaptiva formuläret så att det skapar ett dokument för post (DoR). Du kan aktivera alternativet att generera ett postdokument från egenskaper för anpassat formulär.
 
@@ -155,7 +155,7 @@ For more information about the Forms Portal and Submit Action, see [Drafts and s
 
 ## Starta ett AEM-arbetsflöde {#invoke-an-aem-workflow}
 
-Åtgärden **[!UICONTROL Invoke an AEM Workflow]** Skicka associerar ett anpassat formulär med ett [AEM-arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument på arbetsflödets nyttolastplats eller i en variabel. Om arbetsflödet är markerat för extern datalagring och konfigurerat för en extern datalagring är endast variabelalternativet tillgängligt. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
+Åtgärden **[!UICONTROL Invoke an AEM Workflow]** Skicka associerar ett anpassat formulär med ett [AEM-arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem). När ett formulär skickas startar det associerade arbetsflödet automatiskt på författarinstansen. Du kan spara datafilen, bifogade filer och postdokument på arbetsflödets nyttolastplats eller i en variabel. Om arbetsflödet är markerat för extern datalagring och konfigurerat för en extern datalagring är endast variabelalternativet tillgängligt. Du kan välja i listan över variabler som är tillgängliga för arbetsflödesmodellen. Om arbetsflödet markeras för extern datalagring i ett senare skede och inte när arbetsflödet skapas, kontrollerar du att de variabelkonfigurationer som krävs finns på plats.
 
 Åtgärden Skicka placerar följande på arbetsflödets nyttolastplats, eller variabeln om arbetsflödet har markerats för extern datalagring:
 
@@ -397,7 +397,7 @@ Du kan använda den skapade Azure Storage-behållarkonfigurationen i ett adaptiv
 När du skickar formuläret sparas data i den angivna Azure Storage-behållarkonfigurationen.
 Mappstrukturen som data ska sparas i är `/configuration_container/form_name/year/month/date/submission_id/data`.
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 
 ## Skicka till Power Automate {#microsoft-power-automate}

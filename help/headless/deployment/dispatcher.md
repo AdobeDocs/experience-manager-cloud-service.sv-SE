@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Dispatcher - slutpunktskonfiguration med AEM Headless
 
-[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer ingår som standard för att öppna GraphQL-slutpunkter för headless-program.
+[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) är ett cachnings- och säkerhetslager framför Adobe Experience Manager Publish-miljöer. Flera konfigurationer ingår som standard för att öppna GraphQL-slutpunkter för headless-program.
 
 >[!NOTE]
 >
->Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
+>Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE).
 
-Som en del i ett AEM Project ingår en Dispatcher-modul som innehåller konfigurationer för Dispatcher. Nyligen genererade projekt från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) inkluderar automatiskt [filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?#defining-a-filter) som aktiverar GraphQL-slutpunkter.
+Som en del i ett AEM Project ingår en Dispatcher-modul som innehåller konfigurationer för Dispatcher. Nyligen genererade projekt från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) inkluderar automatiskt [filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE&#defining-a-filter) som aktiverar GraphQL-slutpunkter.
 
 ## GraphQL Endpoints
 

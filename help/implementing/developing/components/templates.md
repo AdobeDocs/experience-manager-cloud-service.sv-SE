@@ -128,7 +128,7 @@ När du skapar en redigerbar mall:
 
 >[!TIP]
 >
->Ange aldrig någon information som måste internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
+>Ange aldrig någon information som måste internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE).
 
 >[!NOTE]
 >

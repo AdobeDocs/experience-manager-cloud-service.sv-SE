@@ -62,5 +62,5 @@ Du är nu redo att komma igång med din AEM Reference Demo Add-on-resa.
 
 Här finns mer information om hur AEM kraftfulla funktioner fungerar tillsammans.
 
-* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager.html) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
-* [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM kan det vara bra att läsa de detaljerade tekniska dokumenten direkt.
+* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager.html?lang=sv-SE) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
+* [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE) - Om du redan har en god förståelse för AEM kan det vara bra att läsa de detaljerade tekniska dokumenten direkt.

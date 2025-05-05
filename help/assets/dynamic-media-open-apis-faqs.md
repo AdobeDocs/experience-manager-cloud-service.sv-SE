@@ -97,7 +97,7 @@ På samma sätt anger Experience Manager Assets statusen Avvisat i Assets-vyn me
 
 +++**Hur kan du få användar- eller grupp-ID:t för Adobe IMS (Adobe Identity Management Services) att användas för att ställa in rollerna för resurser i Experience Manager Admin-vyn, för att säkra leverans- och sökupplevelsen?**
 
-Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=en).
+Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=sv-SE).
 
 +++
 

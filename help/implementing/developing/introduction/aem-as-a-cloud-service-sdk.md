@@ -31,7 +31,7 @@ Vissa kunder som tidigare har distribuerats med AEM 6.5 eller tidigare använder
 
 ## Building for the SDK {#building-for-the-sdk}
 
-AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod. Se [dokumentationen för AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using). På en hög nivå utförs följande steg:
+AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod. Se [dokumentationen för AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/using). På en hög nivå utförs följande steg:
 
 * **Kompileringskod** - Source-koden kompileras och de resulterande innehållspaketen genereras.
 * **Skapa artefakter** - Artefakter skapas under den här processen.

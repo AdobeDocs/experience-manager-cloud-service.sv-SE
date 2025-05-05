@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->  Lär dig hur du [skapar en arbetsflödesmodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för att definiera serien med steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
+>  Lär dig hur du [skapar en arbetsflödesmodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem) för att definiera serien med steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
 
 AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
@@ -44,7 +44,7 @@ Before using the **[!UICONTROL Invoke an AEM Workflow]** Submit Action configure
 
 ## Integrera AEM arbetsflöde med adaptiv Forms {#steps-to-integrate-workflow-with-af}
 
-Så här konfigurerar du en automatiserad process med [AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för ett adaptivt formulär:
+Så här konfigurerar du en automatiserad process med [AEM arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem) för ett adaptivt formulär:
 
 1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
 1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.

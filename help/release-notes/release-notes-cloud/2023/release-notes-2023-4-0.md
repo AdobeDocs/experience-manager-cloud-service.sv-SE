@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.4.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -44,9 +44,9 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
 
 ### Nya funktioner i förhandsversionen av [!DNL Experience Manager Sites] {#prerelease-sites}
 
-* Innehållsfragment och deras referenser kan nu publiceras till [AEM Preview Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html#access-preview-service) med [Content Fragment Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) så att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publiceras.
-* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
-* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html) kan nu skrivas ut till JSON med AEM GraphQL-innehållets leverans-API.
+* Innehållsfragment och deras referenser kan nu publiceras till [AEM Preview Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE#access-preview-service) med [Content Fragment Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=sv-SE) så att användarna kan förhandsgranska slutresultatet i ett fristående förhandsvisningsprogram innan de publiceras.
+* Bilderna kan nu optimeras dynamiskt för webbleverans i headless-scenarier med AEM GraphQL. [Frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/images.html?lang=sv-SE#query-variables) kan definieras i GraphQL-frågor för att tillåta att fristående klientprogram begär optimerade bilder från AEM.
+* Taggar på [Variationer för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/content-fragments/content-fragments-variations.html?lang=sv-SE) kan nu skrivas ut till JSON med AEM GraphQL-innehållets leverans-API.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
@@ -68,11 +68,11 @@ Titta på videon med versionsöversikten för april 2023 om du vill se en samman
    * Adaptiv direktuppspelning (DASH/HLS) ger en bättre användarupplevelse för videor
    * DASH är det internationella standardprotokollet för strömning av adaptiv video och används ofta i branschen
 
-* Dynamic Media _Snapshot_ - Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika bildmodifierare och utvärdera optimeringarna av smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och enhetspixelproportioner. Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+* Dynamic Media _Snapshot_ - Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika bildmodifierare och utvärdera optimeringarna av smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och enhetspixelproportioner. Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=sv-SE).
 
 ### Funktion i förhandsversionen av [!DNL Assets] {#prerelease-feature-assets}
 
-* Dynamiska media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html#crop-options).
+* Dynamiska media - Användargränssnittet för vissa Smart Crop-relaterade fält i en bildprofil har nu uppdaterats för att återspegla de aktuella riktlinjerna för att definiera en smart beskärning. Se [Beskärningsalternativ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/image-profiles.html?lang=sv-SE#crop-options).
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 

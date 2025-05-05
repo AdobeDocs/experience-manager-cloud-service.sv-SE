@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->En detaljerad översikt över CORS-resursdelningsprincipen i AEM finns i [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html#understand-cross-origin-resource-sharing-(cors)).
+>En detaljerad översikt över CORS-resursdelningsprincipen i AEM finns i [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=sv-SE#understand-cross-origin-resource-sharing-(cors)).
 
 För att få åtkomst till GraphQL-slutpunkten måste en CORS-princip konfigureras och läggas till i ett AEM som [distribueras till AEM via Cloud Manager](/help/implementing/cloud-manager/deploy-code.md). Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna. Flera CORS-konfigurationer kan skapas och distribueras till olika miljöer. Exempel finns i [WKND-referenswebbplatsen](https://github.com/adobe/aem-guides-wknd/tree/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig)
 

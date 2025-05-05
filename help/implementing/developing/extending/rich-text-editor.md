@@ -154,7 +154,7 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [Så här aktiverar oc
 <!-- TBD ENGREVIEW: To confirm if the sample works in CS or not?
 **Sample**: Download [this sample configuration](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) that illustrates how to configure RTE. In this package all the features are enabled. -->
 
-Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
+Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html?lang=sv-SE).
 
 >I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
 >
@@ -228,7 +228,7 @@ De tillgängliga alternativen i textredigeraren flödar nedåt från användargr
 * Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
-Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
+Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE#the-text-component-and-the-rich-text-editor).
 
 ## Anpassa mappningen mellan verktygsfältsikoner och kommandon {#iconstoolbar}
 

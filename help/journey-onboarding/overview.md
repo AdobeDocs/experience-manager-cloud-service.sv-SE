@@ -19,7 +19,7 @@ Grattis till att du har valt AEM as a Cloud Service! Det här dokumentet är utg
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extrem innehållshastighet och levererar enastående upplevelser. Lär dig hur du kommer igång med Edge Delivery Services genom att läsa [Översikt över Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview). Mer information om hur du använder Edge Delivery Services finns på sidan [Utvecklarsjälvstudiekurs](https://www.aem.live/developer/tutorial).
+Adobe Experience Manager är en kraftfull uppsättning sammanställningsbara innehållstjänster som snabbt levererar mycket slagkraftiga, personaliserade upplevelser över alla kanaler och frigör innehåll från alla kanaler. **Edge Delivery Services** är den senaste innovationen i Adobe Experience Manager som möjliggör extrem innehållshastighet och levererar enastående upplevelser. Lär dig hur du kommer igång med Edge Delivery Services genom att läsa [Översikt över Edge Delivery Services](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/overview). Mer information om hur du använder Edge Delivery Services finns på sidan [Utvecklarsjälvstudiekurs](https://www.aem.live/developer/tutorial).
 
 Onboarding är den process under vilken en systemadministratör konfigurerar AEM as a Cloud Service för din organisation. I den här processen ingår inledande etablering av molnresurser och tilldelning av användare till roller baserat på deras jobbansvar. Därför kan varje medlem logga in och komma åt sin resurs på AEM as a Cloud Service.
 
@@ -105,4 +105,4 @@ Börja här om du vill veta vad Adobe rekommenderar om hur du får ditt team att
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [Introduktion till AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/onboarding) - I den här korta videon visas en översikt över processen för att komma igång med Cloud Service för AEM.
+* [Introduktion till AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/onboarding) - I den här korta videon visas en översikt över processen för att komma igång med Cloud Service för AEM.

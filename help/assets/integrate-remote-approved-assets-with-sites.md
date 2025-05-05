@@ -56,7 +56,7 @@ ht-degree: 0%
 
 Effektiv hantering av digitala resurser är avgörande för att ni ska kunna leverera engagerande och enhetliga varumärkesupplevelser på olika onlineplattformar. Dynamic Media med OpenAPI-funktioner förbättrar hanteringen av digitala resurser genom smidig integrering mellan AEM Sites och AEM Assets as a Cloud Service. Med den här innovativa funktionen kan du enkelt dela och hantera olika typer av godkänt digitalt material i olika AEM-miljöer, vilket effektiviserar arbetsflödena för webbplatsförfattare och redaktörer.
 
-Med Dynamic Media med OpenAPI-funktioner kan webbplatsförfattare använda resurser från fjärr-DAM direkt i AEM Page Editor och [Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments.html) vilket förenklar processerna för att skapa och hantera innehåll.
+Med Dynamic Media med OpenAPI-funktioner kan webbplatsförfattare använda resurser från fjärr-DAM direkt i AEM Page Editor och [Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments.html?lang=sv-SE) vilket förenklar processerna för att skapa och hantera innehåll.
 
 Användare kan ansluta flera AEM Sites-instanser, utan begränsningar av det högsta antalet, till en DAM-fjärrdistribution, vilket är en betydande fördel jämfört med funktionen [Ansluten Assets](use-assets-across-connected-assets-instances.md).
 
@@ -85,7 +85,7 @@ Stöd för fjärrresurser med Dynamic Media med OpenAPI-funktioner kräver:
 
    * ASSET_DELIVERY_IMS_CLIENT= [IMSClientId]: Du måste skicka en Adobe-supportbiljett för att få ID:t för IMS-klienten.
 
-     eller konfigurera [OSGi-inställningarna](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/configuring-osgi.html) för AEM 6.5 i AEM Sites-instansen genom att följa dessa steg:
+     eller konfigurera [OSGi-inställningarna](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/configuring/configuring-osgi.html?lang=sv-SE) för AEM 6.5 i AEM Sites-instansen genom att följa dessa steg:
 
    1. Logga in på konsolen och klicka på **[!UICONTROL OSGi]>** eller
 använd den direkta URL:en, till exempel: `https://localhost:4502/system/console/configMgr`
@@ -106,12 +106,12 @@ där `pXXXX` refererar till program-ID
 
       ![Nästa generations OSGi-konfigurationsfönster för Dynamic Media Config](/help/assets/assets/remote-assets-osgi.png)
 
-  Läs mer om [IMS-autentisering](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/ims-config-and-admin-console.html).
+  Läs mer om [IMS-autentisering](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/ims-config-and-admin-console.html?lang=sv-SE).
 
   Mer information om hur du konfigurerar OSGi finns i följande dokument:
 
-   * [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html) för AEM as a Cloud Service
-   * [Konfigurerar OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html) för AEM 6.5
+   * [Konfigurera OSGi för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE) för AEM as a Cloud Service
+   * [Konfigurerar OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=sv-SE) för AEM 6.5
 
 * IMS-åtkomst för att logga in på en DAM AEM as a Cloud Service-fjärrinstans. Det avser den webbplatsförfattare som har IMS-åtkomst till den fjärranslutna DAM-miljön.
 
@@ -121,7 +121,7 @@ där `pXXXX` refererar till program-ID
 
 Vi rekommenderar att du kör alla dina AEM-produktioner med HTTP. Dina lokala utvecklingsmiljöer kanske inte konfigureras som sådana. Fjärrresurser som använder Dynamic Media med OpenAPI kräver dock HTTPS för att fungera.
 
-[Använd den här guiden](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) för att konfigurera HTTPS var du vill använda fjärrresurser, inklusive utvecklingsmiljöer.
+[Använd den här guiden](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE) för att konfigurera HTTPS var du vill använda fjärrresurser, inklusive utvecklingsmiljöer.
 
 ## Få åtkomst till resurser från fjärr-DAM {#fetch-assets}
 
@@ -162,7 +162,7 @@ Följ stegen nedan för att använda fjärrresurser i AEM Content Fragment på d
 
    >[!NOTE]
    >
-   >Om du inte har någon AEM Content Fragment-modell kan du behöva [skapa en](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html?lang=en).
+   >Om du inte har någon AEM Content Fragment-modell kan du behöva [skapa en](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/content-fragments/content-fragments-models.html?lang=sv-SE).
 
 1. Klicka på ikonen ![bock](/help/assets/assets/do-not-localize/checkmark-icon.svg) bredvid textkomponenten.
 1. Välj **[!UICONTROL Remote]** om du vill hämta resursen från fjärr-DAM. <br>

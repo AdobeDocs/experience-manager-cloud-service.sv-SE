@@ -185,5 +185,5 @@ Vi rekommenderar att du fortsätter med introduktionsresan enligt beskrivningen 
 
 * [Cloud Manager Introduktion](/help/onboarding/cloud-manager-introduction.md) - Läs mer om Cloud Manager, Cloud Manager-program och miljöer.
 * [Cloud Manager produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig mer om AEM as a Cloud Service team och produktprofiler.
-* [Identitetstyper på Adobe Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/identity.ug.html) - Med identitetshanteringssystemet i Adobe kan administratörer skapa och hantera användarnas åtkomst till program och tjänster. Adobe erbjuder dessa identitetstyper eller konton för att autentisera och auktorisera användare.
+* [Identitetstyper på Adobe Admin Console](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/identity.ug.html) - Med identitetshanteringssystemet i Adobe kan administratörer skapa och hantera användarnas åtkomst till program och tjänster. Adobe erbjuder dessa identitetstyper eller konton för att autentisera och auktorisera användare.
 

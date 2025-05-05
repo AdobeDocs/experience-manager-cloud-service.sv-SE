@@ -99,6 +99,6 @@ Se [AEM Sites beredskap för dataskydd och dataintegritet](/help/compliance/data
 Integreringar av Adobe Experience Manager as a Cloud Service med Adobe Target och Adobe Analytics implementeras med tjänster som är klara för dataskydd och sekretess (till exempel GDPR). Inga personuppgifter från Adobe Target eller Adobe Analytics lagras i AEM i samband med integreringarna.
 Mer information finns i:
 
-* [Adobe Target - Integritetsöversikt](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html)
+* [Adobe Target - Integritetsöversikt](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=sv-SE)
 
-* [Adobe Analytics arbetsflöde för datasekretess](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html)
+* [Adobe Analytics arbetsflöde för datasekretess](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=sv-SE)

@@ -37,14 +37,14 @@ När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat sys
 >Var försiktig när du använder regeluppsättningar. De kan förhindra att dynamiskt medieinnehåll visas på webbplatsen.
 
 Det finns exempelregeluppsättningar som kan hjälpa dig att skapa en egen regeluppsättning.
-Se [Referens för regeluppsättning](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference).
+Se [Referens för regeluppsättning](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference).
 
 Precis som när du skapar alla regeluppsättningar måste du se till att XML-filen är giltig innan du överför den med ett XML-valideringsprogram som xmlvalid.
 
 Kontrollera också först att du testar regeluppsättningen i en staging-miljö som inte påverkar produktionsmiljön.
 Produktionsmiljöer och staging-miljöer kräver normalt olika inloggningar.
 
-Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out).
+Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/getting-started/signing-out).
 
 <!-- OBSOLETE CONTENT * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
@@ -54,7 +54,7 @@ Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](htt
 
 ## Distribuera XML-regler {#deploy-xml-rule-sets}
 
-1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out) och logga sedan in på ditt konto.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/getting-started/signing-out) och logga sedan in på ditt konto.
 
    Dina inloggningsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Kontakta kundsupport om du inte har den här informationen.
 

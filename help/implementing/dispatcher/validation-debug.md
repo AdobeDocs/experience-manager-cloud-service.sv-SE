@@ -636,7 +636,7 @@ $ docker exec d75fbd23b29 httpd-test
 
 ## Migrera från äldre läge till flexibelt läge {#migrating}
 
-Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller senare, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Den tar bort tidigare begränsningar för det [äldre läget](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet filer och filstorleken, vilket även gör att SDK och miljön validerar och distribuerar konfigurationen på ett förbättrat sätt. Om din Dispatcher-konfiguration inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
+Med Cloud Manager 2021.7.0 genererar nya Cloud Manager-program maven-projektstrukturer med [AEM 28](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) eller senare, som innehåller filen **opt-in/USE_SOURCES_DIRECTLY**. Den tar bort tidigare begränsningar för det [äldre läget](/help/implementing/dispatcher/validation-debug-legacy.md) runt antalet filer och filstorleken, vilket även gör att SDK och miljön validerar och distribuerar konfigurationen på ett förbättrat sätt. Om din Dispatcher-konfiguration inte har den här filen rekommenderar vi att du migrerar. Följ de här stegen för att säkerställa en säker övergång:
 
 1. **Local testing.** Lägg till mappen och filen `opt-in/USE_SOURCES_DIRECTLY` med de senaste SDK-verktygen för Dispatcher. Följ instruktionerna för lokal validering i den här artikeln så att du kan testa att Dispatcher fungerar lokalt.
 1. **Molnutvecklingstest:**

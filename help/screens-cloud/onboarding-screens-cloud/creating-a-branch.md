@@ -16,7 +16,7 @@ ht-degree: 1%
 I det här avsnittet beskrivs hur du skapar en gren för ditt program i Cloud Manager.
 
 >[!NOTE]
->Mer information om hur du skapar ett AEM programprojekt i Cloud Manager med hjälp av guiden finns i [Använda guiden i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/using-the-wizard.html) .
+>Mer information om hur du skapar ett AEM programprojekt i Cloud Manager med hjälp av guiden finns i [Använda guiden i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/using-the-wizard.html?lang=sv-SE) .
 
 ## Syfte {#objective}
 

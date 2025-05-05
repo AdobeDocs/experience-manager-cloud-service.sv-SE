@@ -30,7 +30,7 @@ Aktivera alternativet **[!UICONTROL Forms]**:
 1. Välj alternativet **[!UICONTROL Forms]** och klicka på **[!UICONTROL Save]**.
 
    ![Välj alternativet Forms](assets/installation-configuration-select-forms-option.png)
-1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) både produktions- och icke-produktionspipelines.
+1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=sv-SE#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE) både produktions- och icke-produktionspipelines.
 
 När pipelinen har skapats och distribuerats är alternativet **[!UICONTROL Forms]** på sidan **[!UICONTROL Navigation]**.
 

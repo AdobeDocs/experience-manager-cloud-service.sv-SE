@@ -27,7 +27,7 @@ Följ stegen nedan för att skapa videoåtergivningar i Screens as a Cloud Servi
 1. Navigera till kanalen i Screens Content Provider.
 
    >[!NOTE]
-   >Mer information finns i [Använda Screens Content Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html#screens-content-provider).
+   >Mer information finns i [Använda Screens Content Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=sv-SE#screens-content-provider).
 
 1. Klicka på Verktyg i det vänstra navigeringsfältet, klicka på **Assets** och sedan på **Bearbeta profiler**.
 

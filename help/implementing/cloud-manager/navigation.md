@@ -119,7 +119,7 @@ Ett kort (eller en rad i en tabell) representerar alla program och ger en övers
 * Namn som tilldelats programmet. I bilden ovan visas&quot;SecurBank Sample&quot; som programnamn.
 * Tjänsttyp:
    * **Experience Manager Cloud** - för AEM as a Cloud Service-program
-   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
+   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction)
 * [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md):
    * Sandbox
    * Produktion

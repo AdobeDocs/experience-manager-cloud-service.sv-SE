@@ -17,7 +17,7 @@ ht-degree: 1%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | Den här artikeln |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/installing-configuring-designer.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/installing-configuring-designer.html?lang=sv-SE) |
 
 Designer är ett lättanvänt grafiskt formulärdesignverktyg som gör det enklare att skapa XDP- och PDF-formulärmallar. Du kan utforma en formulärmall, definiera dess logik och uppfylla strikta lagstadgade krav. Ett XDP- och PDF-formulär fungerar som en dokumentmall i ett adaptivt format. Dessa formulärmallar skiljer sig från [adaptiva formulärmallar](template-editor.md).
 

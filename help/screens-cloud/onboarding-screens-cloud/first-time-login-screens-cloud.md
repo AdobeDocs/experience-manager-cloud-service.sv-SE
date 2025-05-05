@@ -20,7 +20,7 @@ När avtalet har undertecknats startar Adobe Managed Services (AMS) kundintroduk
 
 ## Lägga till användare i Adobe Admin Console {#admin-console}
 
-När du har etablerats med ett organisations-ID för Adobe Identity Management (IMS) kan du nu komma åt [Adobe Admin Console](https://adminconsole.adobe.com/). Mer information om hur du lägger till användare i Admin Console finns i [Adobe Admin Console-användare](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/users.ug.html).
+När du har etablerats med ett organisations-ID för Adobe Identity Management (IMS) kan du nu komma åt [Adobe Admin Console](https://adminconsole.adobe.com/). Mer information om hur du lägger till användare i Admin Console finns i [Adobe Admin Console-användare](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/users.ug.html).
 
 >[!NOTE]
 >Användarna har tillgång till AEM Cloud Service produktprofil så att de kan logga in på AEM med Adobe ID eller Federated ID.

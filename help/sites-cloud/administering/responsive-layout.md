@@ -54,7 +54,7 @@ Med dessa responsiva rutnätsmekanismer kan du:
 
 ## Aktivera emulatorn {#enabling-emulator}
 
-[Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och [Standard Site Template](/help/sites-cloud/administering/site-creation/site-templates.md#standard-site-template) har redan aktiverats för att använda emulatorn. Om du har utvecklat ditt eget innehåll som inte är baserat på kärnkomponenterna eller arkitekturen kan du läsa dokumentet [Responsiv design](/help/implementing/developing/introduction/responsive-design.md) för mer information om hur du utvecklar dina komponenter samtidigt som du utnyttjar dessa funktioner.
+[Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) och [Standard Site Template](/help/sites-cloud/administering/site-creation/site-templates.md#standard-site-template) har redan aktiverats för att använda emulatorn. Om du har utvecklat ditt eget innehåll som inte är baserat på kärnkomponenterna eller arkitekturen kan du läsa dokumentet [Responsiv design](/help/implementing/developing/introduction/responsive-design.md) för mer information om hur du utvecklar dina komponenter samtidigt som du utnyttjar dessa funktioner.
 
 ## Aktivera layoutläge för webbplatsen {#activate-layout-mode-for-your-site}
 

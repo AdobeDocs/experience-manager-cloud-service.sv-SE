@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -62,11 +62,11 @@ Titta på videon [Versionsöversikt från augusti 2021](https://video.tv.adobe.c
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* Tjänsten Automated forms conversion kan [konvertera PDF forms på italienska och portugisiska](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?#language-specific-meta-model) till Adaptiv Forms.
+* Tjänsten Automated forms conversion kan [konvertera PDF forms på italienska och portugisiska](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=sv-SE&#language-specific-meta-model) till Adaptiv Forms.
 
-* **Acroform-based Document of Record**: AEM Forms as a Cloud Service stöder användning av [Adobe Acrobat Form PDF (Acroform PDF)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som mall för arkivhandlingar förutom XFA-baserad formulärmall.
+* **Acroform-based Document of Record**: AEM Forms as a Cloud Service stöder användning av [Adobe Acrobat Form PDF (Acroform PDF)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) som mall för arkivhandlingar förutom XFA-baserad formulärmall.
 
-* **Microsoft® Azure-datalageranslutning**: Nu kan du [ansluta formulärdatamodellen till Microsoft® Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata i Microsoft® Azure Storage som en BLOB.
+* **Microsoft® Azure-datalageranslutning**: Nu kan du [ansluta formulärdatamodellen till Microsoft® Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html?lang=sv-SE). Med den kan du hämta och lagra adaptiva formulärdata i Microsoft® Azure Storage som en BLOB.
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#prerelease-features-forms}
 
@@ -98,7 +98,7 @@ Nästa version är planerad till 9 september 2021.
 ### Nyheter {#what-is-new-aug}
 
 * Cloud Service kan nu visa serviceavtalsrapporter (SLA) i Cloud Manager. Detta kommer att göras tillgängligt successivt under de närmaste månaderna.
-Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/sla-reporting.html).
+Se [SLA-rapportering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/sla-reporting.html?lang=sv-SE).
 
 * Typen och allvarlighetsgraden för kvalitetsreglerna IndexType och `IndexDamAssetLucene` har ändrats. De här felen är nu båda Buggar med blockerarens *allvarlighetsgrad*.
 

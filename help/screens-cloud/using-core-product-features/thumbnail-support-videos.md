@@ -40,7 +40,7 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 1. Navigera till en befintlig Screens-kanal eller skapa en kanal.
 
    >[!NOTE]
-   >Mer information om hur du skapar en kanal och lägger till innehåll i en kanal finns i [Skapa och hantera en kanal i Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html).
+   >Mer information om hur du skapar en kanal och lägger till innehåll i en kanal finns i [Skapa och hantera en kanal i Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-channels-screens-cloud.html?lang=sv-SE).
 
 1. Markera kanalen. Klicka på **Redigera** i åtgärdsfältet för att öppna redigeraren.
 

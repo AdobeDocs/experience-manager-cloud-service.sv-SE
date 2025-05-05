@@ -20,7 +20,7 @@ Klicka på ditt projektkort för att öppna projektstartsidan och navigera till 
 ![Go Live](/help/journey-migration/cloud-acceleration-manager/assets/golive-1.png)
 
 >[!NOTE]
->Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html#create-project).
+>Mer information finns i [Skapa och hantera ett projekt i Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=sv-SE#create-project).
 
 
 ## Använda Go Live Activity Card {#go-live}

@@ -52,16 +52,16 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/link-sharing.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/link-sharing.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Med [!DNL Adobe Experience Manager Assets] kan du dela resurser, mappar och samlingar med medlemmar i din organisation och externa entiteter, inklusive partners och leverantörer. Använd följande metoder för att dela resurser från [!DNL Experience Manager Assets] som en [!DNL Cloud Service]:
 
 * [Dela som länk](#sharelink).
 * [Hämta resurser](/help/assets/download-assets-from-aem.md) och dela separat.
-* Dela med [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html).
+* Dela med [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE).
 * Dela med [[!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html).
-* Dela med [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html).
+* Dela med [[!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html?lang=sv-SE).
 
 ## Förutsättningar {#prerequisites}
 
@@ -87,7 +87,7 @@ I [!DNL Experience Manager Assets] kan du konfigurera standardinställningarna f
 1. **[!UICONTROL Link share]**-knapp i åtgärdsfältet:
    * Alla användare med `jcr:modifyAccessControl` behörigheter kan visa alternativet [!UICONTROL Link share]. Den är synlig som standard för alla administratörer. Knappen [!UICONTROL Link share] är som standard synlig för alla. Du kan konfigurera så att det här alternativet endast visas för de definierade grupperna eller så kan du även neka det här alternativet från specifika grupper. Välj `Allow only for groups` om du vill tillåta att specifika grupper kan visa alternativet `Share Link`. Välj `Deny from groups` om du vill neka alternativet `Share Link` från specifika grupper. När du har valt något av dessa alternativ anger du gruppnamnen med fältet `Select Groups` för att lägga till gruppnamnen som du måste tillåta eller neka.
 
-Information om inställningar för e-postkonfiguration finns på [Dokumentation för e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html)
+Information om inställningar för e-postkonfiguration finns på [Dokumentation för e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/email-service.html?lang=sv-SE)
 
 ![Konfigurera e-posttjänst](/help/assets/assets/config-email-service.png)
 
@@ -284,7 +284,7 @@ Användare kan hämta de nödvändiga resurserna och dela dem utanför [!DNL Exp
 
 Marknadsförare och andra användare kan enkelt dela godkänt material med sina kreatörer genom att
 
-* **Experience Manager-datorprogrammet**: Programmet fungerar i Windows och Mac. Se [Översikt över datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager-användare, till exempel genom att överföra nya bilder. Se [Överför resurser med ett skrivbordsprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#upload-and-add-new-assets-to-aem).
+* **Experience Manager-datorprogrammet**: Programmet fungerar i Windows och Mac. Se [Översikt över datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE). Om du vill veta hur en auktoriserad skrivbordsanvändare enkelt kan komma åt de delade resurserna läser du [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#browse-search-preview-assets). Skrivbordsanvändare kan skapa resurser och dela dem med sina motsvarigheter som är Experience Manager-användare, till exempel genom att överföra nya bilder. Se [Överför resurser med ett skrivbordsprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#upload-and-add-new-assets-to-aem).
 
 * **Adobe Asset Link**: Kreatörer kan söka efter och använda resurser direkt inifrån [!DNL Adobe InDesign], [!DNL Adobe Illustrator] och [!DNL Adobe Photoshop].
 
@@ -333,7 +333,7 @@ Add content or link about how to configure sharing via BP, DA, AAL, etc.
 
 ### Aktivera skrivbordsåtgärder som ska användas med skrivbordsappen {#desktop-actions}
 
-I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i skrivbordsprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem, se [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnittet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#desktopactions-v2).
+I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resursplatserna eller checka ut och öppna resursen för redigering i skrivbordsprogrammet. Dessa alternativ kallas skrivbordsåtgärder och för att aktivera dem, se [aktivera skrivbordsåtgärder i [!DNL Assets] webbgränssnittet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#desktopactions-v2).
 
 ![Aktivera skrivbordsåtgärder som ska användas som genväg när du arbetar med skrivbordsappen](assets/enable_desktop_actions.png)
 
@@ -341,7 +341,7 @@ I [!DNL Assets]-användargränssnittet i en webbläsare kan du utforska resurspl
 
 Adobe Asset Link effektiviserar samarbetet mellan kreatörer och marknadsförare vid framtagningen av innehåll. Den ansluter [!DNL Adobe Experience Manager Assets] till [!DNL Creative Cloud] skrivbordsappar, [!DNL Adobe InDesign], [!DNL Adobe Photoshop] och [!DNL Adobe Illustrator]. På panelen [!DNL Adobe Asset Link] kan användare få tillgång till och ändra innehåll som lagras i [!DNL Assets] utan att lämna de kreativa program de är mest bekanta med.
 
-Se [hur du konfigurerar [!DNL Assets] att använda det med [!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
+Se [hur du konfigurerar [!DNL Assets] att använda det med [!DNL Adobe Asset Link]](https://helpx.adobe.com/se/enterprise/using/configure-aem-assets-for-asset-link.html).
 
 ## Bästa praxis och felsökning {#bestpractices}
 

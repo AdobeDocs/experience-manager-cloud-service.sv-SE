@@ -26,7 +26,7 @@ Granska den här listan över aktiviteter för att säkerställa att du kan geno
 * Utför den slutliga innehållsuppsättningen.
 * Validera Dispatcher-konfigurationer.
    * Använd en lokal Dispatcher-validerare som gör det lättare att konfigurera, validera och simulera Dispatcher lokalt
-      * [Konfigurera lokala Dispatcher-verktyg](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools#prerequisites).
+      * [Konfigurera lokala Dispatcher-verktyg](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools#prerequisites).
    * Granska konfigurationen av det virtuella värdsystemet noggrant.
       * Den enklaste (och standardlösningen) är att inkludera `ServerAlias *` i din virtuella värdfil i `/dispatcher/src/conf.d/available_vhostsfolder`. På så sätt kan värdalias som används i produktfunktionstester, ogiltigförklaring av Dispatcher cache och kloner fungera.
       * Om `ServerAlias *` inte är godtagbart måste minst följande `ServerAlias`-poster vara tillåtna utöver dina anpassade domäner:

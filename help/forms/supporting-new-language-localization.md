@@ -15,12 +15,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html?lang=sv-SE) |
 | Kärnkomponenter | [Klicka här](supporting-new-language-localization-core-components.md) |
 | Foundation Components | Den här artikeln |
 
@@ -56,7 +56,7 @@ Så här lägger du till stöd för en ny språkinställning i den adaptiva Form
 #### 1. Klona databasen {#clone-the-repository}
 
 1. Navigera från kommandoraden till den plats där du vill klona Forms Cloud Service-databasen.
-1. Kör kommandot som du [hämtade från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git). Det liknar `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`.
+1. Kör kommandot som du [hämtade från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git). Det liknar `git clone https://git.cloudmanager.adobe.com/<my-org>/<my-program>/`.
 1. Använd Git-användarnamnet och -lösenordet för att klona databasen.
 1. Öppna den klonade Forms Cloud Service-databasmappen i det redigeringsprogram du föredrar.
 
@@ -115,11 +115,11 @@ Utför bara det här steget om `<locale>` som du lägger till inte finns bland `
    <filter root="/etc/languages"/>
    ```
 
-Innan du implementerar ändringarna i AEM Git-databasen måste du komma åt [Git-databasinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git).
+Innan du implementerar ändringarna i AEM Git-databasen måste du komma åt [Git-databasinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
 
 #### 5. Genomför ändringarna i databasen och distribuera pipelinen {#commit-changes-in-repo-deploy-pipeline}
 
-Genomför ändringarna i GIT-databasen när du har lagt till stöd för nationella inställningar. Distribuera koden med hela stackpipeline. Lär dig [hur du konfigurerar en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline) för att lägga till stöd för nya språk.
+Genomför ändringarna i GIT-databasen när du har lagt till stöd för nationella inställningar. Distribuera koden med hela stackpipeline. Lär dig [hur du konfigurerar en pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline) för att lägga till stöd för nya språk.
 När pipeline är klar visas den nya språkinställningen i AEM.
 
 ### Använd tillagda nationella inställningar i Adaptiv Forms {#use-added-locale-in-af}

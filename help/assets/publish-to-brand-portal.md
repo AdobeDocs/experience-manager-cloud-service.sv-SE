@@ -53,7 +53,7 @@ ht-degree: 77%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/brandportal/brand-portal-publish-assets) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/brandportal/brand-portal-publish-assets) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Som administratör för Adobe Experience Manager (AEM) Assets kan du publicera resurser, mappar och samlingar på varumärkesportalinstansen för AEM Assets. Du kan även schemalägga publiceringsarbetsflödet för en resurs eller mapp till ett senare datum eller en senare tid. Efter publiceringen kan varumärkesportalens användare komma åt och vidaredistribuera resurser, mappar och samlingar till andra användare.
@@ -197,7 +197,7 @@ Så här schemalägger du publiceringen av resursmapparna till ett senare datum 
 
 1. Växla till listvyn ![listvyn](assets/list-view.svg) om du vill visa resursens aktuella publiceringsstatus.
 
-<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
 
 ![genererad rapportstatus](assets/report-status.JPG)
 
@@ -295,11 +295,11 @@ Gör så här för att avpublicera en samling:
 
 Förutom ovanstående kan du även publicera metadatascheman, bildförinställningar, sökfasetter och taggar från AEM Assets till varumärkesportalen.
 
-* [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
-* [Publicera taggar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
+* [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html?lang=sv-SE)
+* [Publicera taggar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html?lang=sv-SE)
 
 
-Mer information finns i [dokumentationen till varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html).
+Mer information finns i [dokumentationen till varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=sv-SE).
 
 
 <!--

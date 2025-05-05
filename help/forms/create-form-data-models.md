@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -93,7 +93,7 @@ Gör följande för att lägga till eller uppdatera datakällor till en befintli
 
 ## Kontextmedvetna konfigurationer för specifika körningslägen {#runmode-specific-context-aware-config}
 
-[!UICONTROL Form Data Model (FDM)] använder [Sling-kontextmedvetna konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/context-aware-configs.html) för att stödja olika datakällparametrar för att ansluta till datakällor för olika [!DNL Experience Manager]-körningslägen.
+[!UICONTROL Form Data Model (FDM)] använder [Sling-kontextmedvetna konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/context-aware-configs.html?lang=sv-SE) för att stödja olika datakällparametrar för att ansluta till datakällor för olika [!DNL Experience Manager]-körningslägen.
 
 När [!UICONTROL Form Data Model (FDM)] använder molnkonfigurationer för att lagra parametrar, som när de checkas in och distribueras via källkontroll (Cloud-Manager GIT-databas) skapar molnkonfiguration med samma parametrar för alla körningslägen (utveckling, scen och produktion). I de fall där det finns behov av olika datauppsättningar för test- och produktionsmiljöer använder vi datakällparametrar (till exempel datakällans URL) för olika [!DNL Experience Manager]-körningslägen.
 
@@ -110,7 +110,7 @@ Så här aktiverar du distributionsspecifika molnkonfigurationer i [!UICONTROL F
 1. Integrera molnkonfigurationen i [!DNL Experience Manager]-arkitekturprojektet.
    1. Zippa upp det hämtade paketet.
    1. Kopiera mappen `jcr_root` och placera den i mappen `ui.content` > `src` > `main` > `content`.
-   1. Uppdatera `ui.content` > `src` > `main` > `content` > `META-INF` > `vault` > `filter.xml` för att innehålla filtret `/conf/{foldername}/settings/cloudconfigs/fdm`. Mer information finns i [ui.content-modulen i AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html). När detta arkivtypsprojekt distribueras via CM-pipeline installeras samma molnkonfiguration i alla miljöer (eller körningslägen). Om du vill ändra värdet för fält (t.ex. URL) för molnkonfigurationer baserat på miljö använder du OSGi-konfigurationen som beskrivs i följande steg.
+   1. Uppdatera `ui.content` > `src` > `main` > `content` > `META-INF` > `vault` > `filter.xml` för att innehålla filtret `/conf/{foldername}/settings/cloudconfigs/fdm`. Mer information finns i [ui.content-modulen i AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html?lang=sv-SE). När detta arkivtypsprojekt distribueras via CM-pipeline installeras samma molnkonfiguration i alla miljöer (eller körningslägen). Om du vill ändra värdet för fält (t.ex. URL) för molnkonfigurationer baserat på miljö använder du OSGi-konfigurationen som beskrivs i följande steg.
 
 1. Skapa en kontextmedveten konfiguration för Apache Sling. Så här skapar du OSGi-konfigurationen:
    1. **Konfigurera OSGi-konfigurationsfiler i [!DNL Experience Manager] Archetype-projekt.**
@@ -131,7 +131,7 @@ När det här arketype-projektet distribueras via CM-pipeline, kommer åsidosät
 
       >[!NOTE]
       >
-      >[!DNL Adobe Managed Service]-användare kan kryptera de hemliga värdena med krypteringsstöd för mer information, se [krypteringsstöd för konfigurationsegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encryption-support-for-configuration-properties.html#enabling-encryption-support) och placera krypterad text i värdet efter att [kontextmedvetna konfigurationer är tillgängliga i Service Pack 6.5.13.0](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html#runmode-specific-context-aware-config).
+      >[!DNL Adobe Managed Service]-användare kan kryptera de hemliga värdena med krypteringsstöd för mer information, se [krypteringsstöd för konfigurationsegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encryption-support-for-configuration-properties.html?lang=sv-SE#enabling-encryption-support) och placera krypterad text i värdet efter att [kontextmedvetna konfigurationer är tillgängliga i Service Pack 6.5.13.0](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE#runmode-specific-context-aware-config).
 
 1. Uppdatera datakälldefinitionerna med alternativet att uppdatera datakälldefinitionerna i [redigeraren för formulärdatamodell](#data-sources) för att uppdatera FDM-cachen via FDM-gränssnittet och få den senaste konfigurationen.
 

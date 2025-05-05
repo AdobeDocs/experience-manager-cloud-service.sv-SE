@@ -57,13 +57,13 @@ Följande version (2021.3.0) kommer att vara den 25 mars 2021.
 
 * Assets kan hämtas med [!DNL Experience Manager Assets Brand Portal]. Det hjälper er att skaffa resurser från byråanvändarna för nya marknadsföringskampanjer, fotografier och projekt.
 
-* [!DNL Experience Manager Assets] som [!DNL Cloud Service] har rätt att ha en förkonfigurerad [!DNL Brand Portal]-instans. [!DNL Cloud Manager]-användaren kan aktivera [!DNL Brand Portal] på [!DNL Experience Manager Assets] som [!DNL Cloud Service]. Se [aktivera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/brand-portal/configure-aem-assets-with-brand-portal.html).
+* [!DNL Experience Manager Assets] som [!DNL Cloud Service] har rätt att ha en förkonfigurerad [!DNL Brand Portal]-instans. [!DNL Cloud Manager]-användaren kan aktivera [!DNL Brand Portal] på [!DNL Experience Manager Assets] som [!DNL Cloud Service]. Se [aktivera Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=sv-SE).
 
-* Företag kan nu hämta resurser med [!DNL Brand Portal]. Funktionen för resurskälla använder [!DNL Brand Portal] för att hjälpa kunder att interagera med byråanvändare för att hämta resurser för nya marknadsföringskampanjer, foton och projekt. Se [Resurshantering i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html).
+* Företag kan nu hämta resurser med [!DNL Brand Portal]. Funktionen för resurskälla använder [!DNL Brand Portal] för att hjälpa kunder att interagera med byråanvändare för att hämta resurser för nya marknadsföringskampanjer, foton och projekt. Se [Resurshantering i [!DNL Brand Portal]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=sv-SE).
 
-* Användningsrapporten för [!DNL Brand Portal] visar nu endast de aktiva användarna. De inaktiva användarna visas inte nu. Aktiva användare är de vars konto har tilldelats en produktprofil i [!DNL Admin Console]. Se [[!DNL Brand Portal] rapporter](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/admin-tools/brand-portal-reports.html).
+* Användningsrapporten för [!DNL Brand Portal] visar nu endast de aktiva användarna. De inaktiva användarna visas inte nu. Aktiva användare är de vars konto har tilldelats en produktprofil i [!DNL Admin Console]. Se [[!DNL Brand Portal] rapporter](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/admin-tools/brand-portal-reports.html?lang=sv-SE).
 
-* I [!DNL Brand Portal] introduceras en ny hämtningsinställning som gör att du kan skapa separata mappar för varje resurs när du hämtar mappar, samlingar och så vidare. Se [hämtningsinställningar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html).
+* I [!DNL Brand Portal] introduceras en ny hämtningsinställning som gör att du kan skapa separata mappar för varje resurs när du hämtar mappar, samlingar och så vidare. Se [hämtningsinställningar](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/download/brand-portal-download-assets.html?lang=sv-SE).
 
 ## Felkorrigeringar i [!DNL Assets] {#bug-fixes-assets}
 
@@ -138,7 +138,7 @@ Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 ### Nyheter i verktyget Innehållsöverföring {#what-is-new-ctt}
 
 * Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten.
-Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
+Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=sv-SE).
 * Verktyget Innehållsöverföring migrerar nu alla grupper och användare som det hänvisas till i migreringsuppsättningen, inklusive underordnade.
 * Användare kan välja vissa sökvägar under `/etc` när de skapar migreringsuppsättningar.
 
@@ -161,7 +161,7 @@ Releasedatum för Best Practices Analyzer v2.1.2 är 18 februari 2021.
 ### Nyheter i verktygen för kodkorrigering {#what-is-new-crt}
 
 * Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller flera felkorrigeringar för Repository Modernizer.
-Mer information om det här plugin-programmet finns i [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html#benefits).
+Mer information om det här plugin-programmet finns i [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=sv-SE#benefits).
 
 ### Felkorrigeringar {#bug-fixes-crt}
 

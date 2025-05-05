@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -155,7 +155,7 @@ Releasedatum för AEM Screens as a Cloud Service är 24 juni 2021.
 ### Nyheter {#what-is-new-screens-june}
 
 >[!NOTE]
->Se [AEM Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/home.html) Guide för grundläggande kunskaper som krävs för att installera, konfigurera och köra Screens as a Cloud Service samt länka till detaljerad teknisk dokumentation om koncept.
+>Se [AEM Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/home.html?lang=sv-SE) Guide för grundläggande kunskaper som krävs för att installera, konfigurera och köra Screens as a Cloud Service samt länka till detaljerad teknisk dokumentation om koncept.
 
 * Registreringshantering för flera enheter innebär att det går snabbare och effektivare att etablera stora mängder spelarenheter.
 
@@ -184,7 +184,7 @@ Releasedatum för Content Transfer Tool v1.5.4 är 28 juni 2021.
 
 ### Nyheter {#what-is-new-ctt-latest}
 
-* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)-steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
+* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=sv-SE)-steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
 
 * Guardrail har lagts till i CTT för att förhindra användare från att stoppa ett intag och eventuellt skada data när det har nått den kritiska punkten under intagningsfasen.
 

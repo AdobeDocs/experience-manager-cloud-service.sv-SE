@@ -129,4 +129,4 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [SPA Översikt över redigeraren](/help/implementing/developing/hybrid/editor-overview.md) - Information om hur SPA redigeraren fungerar
 * [SPA Referensdokument](/help/implementing/developing/hybrid/reference-materials.md) - JavaScript API-referenser och länkar till öppna AEM SPA GitHub-projekt
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md#creating-content-fragments) - Skapa innehållsfragment
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats
+* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats

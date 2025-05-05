@@ -30,12 +30,12 @@ Du behöver följande för att kunna slutföra den här självstudiekursen:
 
 1. Lokal utvecklingsmiljö
 
-Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en IDE för att utveckla [med AEM finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html).
+Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en IDE för att utveckla [med AEM finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=sv-SE).
 
 
 ## Projektinställningar {#project-setup}
 
-Ett Screens-projekts källkod hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om hur du skapar ett projekt med Maven AEM Project Archetype finns i [Projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html).
+Ett Screens-projekts källkod hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om hur du skapar ett projekt med Maven AEM Project Archetype finns i [Projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=sv-SE).
 
 1. Hämta och installera följande paket med [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp):
 
@@ -131,7 +131,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    <sly data-sly-test="${!production}" data-sly-include="edit.html" />
    ```
 
-   Screens-komponenter kräver två olika återgivningar beroende på vilket [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html#page-modes) som används:
+   Screens-komponenter kräver två olika återgivningar beroende på vilket [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html?lang=sv-SE#page-modes) som används:
 
    1. **Produktion**: Förhandsgranska eller Publish-läge (wcmmode=disabled)
    1. **Redigera**: används för alla andra redigeringslägen, d.v.s. redigering, design, ställningar, utvecklare...
@@ -378,7 +378,7 @@ En tredje klientbibliotekskategori: `cq.screens.components.edit` kan användas f
 
 ## Skapa en designsida {#design-page}
 
-AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html) och [designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
+AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html?lang=sv-SE) och [designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html?lang=sv-SE) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
 
 En sida för att köra webb.butik skapas nedan som lagrar alla konfigurationer som är specifika för Web.Retail Run-projektet.
 

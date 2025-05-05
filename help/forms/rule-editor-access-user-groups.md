@@ -54,5 +54,5 @@ Med [!DNL Experience Manager Forms] kan du begränsa regelredigeringsåtkomst f�
 
    Komponentverktygsfältet så synligt som det är för en användare utan regelredigeringsåtkomst
 
-   Instruktioner om hur du lägger till användare i grupper finns i [Användaradministration och -säkerhet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+   Instruktioner om hur du lägger till användare i grupper finns i [Användaradministration och -säkerhet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE).
 

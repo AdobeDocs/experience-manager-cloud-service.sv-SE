@@ -53,7 +53,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/organize-assets.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/organize-assets.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Alla digitala resurser, metadata och innehåll i Microsoft® Office- och PDF-dokument extraheras och blir sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar helt rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.

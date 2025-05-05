@@ -60,7 +60,7 @@ Med användargrupper kan du associera olika uppsättningar av granskare med olik
 Innan du utför följande steg ska du läsa [Förutsättning](adding-reviewers-form.md#prerequisite).
 
 Om du vill skapa en grupp och lägga till medlemmar i den går du till **Verktyg** > **Åtgärder** > **Säkerhet** > **Grupper**.
-Mer information finns i [Användaradministration och -tjänster](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+Mer information finns i [Användaradministration och -tjänster](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE).
 Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **forms-submission-reviewers**. Den här användargruppen levereras med [!DNL AEM Forms] och ser till att användare läggs till som granskare för överföring.
 
 Så här associerar du användargrupper med ett anpassat formulär:

@@ -66,7 +66,7 @@ export const submitBaseUrl = 'http://localhost:4503';
 
 ### Ändra CORS-konfigurationen
 
-Justera **CORS-inställningarna** för att tillåta formuläröverföringsbegäranden från Edge Delivery-domäner. Mer information finns i [CORS konfigurationsguide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
+Justera **CORS-inställningarna** för att tillåta formuläröverföringsbegäranden från Edge Delivery-domäner. Mer information finns i [CORS konfigurationsguide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
 
 **Exempel på CORS-konfiguration:**
 
@@ -81,11 +81,11 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.live$)#" CORSTrusted=true
 ```
 
-Lokal utveckling beskrivs i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter) för att aktivera CORS från URL:en för **utvecklingsgränssnittets värd**.
+Lokal utveckling beskrivs i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter) för att aktivera CORS från URL:en för **utvecklingsgränssnittets värd**.
 
 ### Konfigurera referensfiltret
 
-Konfigurera **referensfiltret** i AEM Cloud-tjänsten via Cloud Manager. [Mer information](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing) om hur du konfigurerar referensfiltret för en AEM Cloud Service-instans med en molnhanterare.
+Konfigurera **referensfiltret** i AEM Cloud-tjänsten via Cloud Manager. [Mer information](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing) om hur du konfigurerar referensfiltret för en AEM Cloud Service-instans med en molnhanterare.
 
 **JSON-konfiguration för referensfiltret:**
 

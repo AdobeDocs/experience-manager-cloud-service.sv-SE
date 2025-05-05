@@ -52,7 +52,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-install.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-install.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] installerar den utökade anslutningen. Granska plattformsstödet och andra [krav för anslutningen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience) innan du installerar.
@@ -75,9 +75,9 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
 
 1. Om ditt AEM as a Cloud Service-program har konfigurerat Advanced Networking och aktiverat IP Allow-Listing måste du lägga till Workfront IP-adresser i denna allow-list för att tillåta att händelseprenumerationer och olika API-anrop skickas till AEM.
 
-   * [IP-adresser för Workfront-kluster](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=en#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Om du vill känna till IP-klustret i [!DNL Workfront] går du till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
+   * [IP-adresser för Workfront-kluster](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=sv-SE#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Om du vill känna till IP-klustret i [!DNL Workfront] går du till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
 
-   * [API:er för Workfront Event Subscription ](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html)
+   * [API:er för Workfront Event Subscription ](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html?lang=sv-SE)
 
    >[!IMPORTANT]
    >
@@ -103,14 +103,14 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
 
 1. Den här installationen kräver kunskap för att ställa in ett Maven-projekt i [!DNL Experience Manager] som [!DNL Cloud Service]. Använd följande resurser för att lära dig hur du inkluderar ett tredjepartspaket i ditt Maven-projekt:
 
-   * [Inkludera paket från tredje part i ditt Maven-projekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#including-third-party).
-   * [Distribuera med  [!DNL Cloud Manager]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html).
+   * [Inkludera paket från tredje part i ditt Maven-projekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#including-third-party).
+   * [Distribuera med  [!DNL Cloud Manager]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
 
 Så här installerar du tillägget i [!DNL Experience Manager] som en [!DNL Cloud Service]:
 
 1. Hämta den utökade kopplingen från [Adobe Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
 
-1. [Åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/accessing-repos.html?lang=en) och klona din AEM as a Cloud Service-databas från Cloud Manager.
+1. [Åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/accessing-repos.html?lang=sv-SE) och klona din AEM as a Cloud Service-databas från Cloud Manager.
 
 1. Öppna den klonade AEM as a Cloud Service-databasen med valfri integrerad utvecklingsmiljö.
 
@@ -173,7 +173,7 @@ Så här installerar du tillägget i [!DNL Experience Manager] som en [!DNL Clou
 
 1. Överför ändringarna till databasen.
 
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
 
 1. Om du vill skapa en systemanvändarkonfiguration skapar du `wf-workfront-users` i [!DNL Experience Manager] Användargrupp och tilldelar behörigheten `jcr:all` till `/content/dam`. En systemanvändare `workfront-tools` skapas automatiskt och de behörigheter som krävs hanteras automatiskt. Alla användare från [!DNL Workfront] som använder den utökade kopplingen läggs automatiskt till som en del av den här gruppen.
 

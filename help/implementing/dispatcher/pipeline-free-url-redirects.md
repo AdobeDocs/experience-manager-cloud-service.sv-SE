@@ -21,7 +21,7 @@ Scenarier:
 * En ny HTML-sida.
 * SEO-optimering.
 
-AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirection) för att implementera omdirigeringar på serversidan, men den strategi som beskrivs i den här artikeln, omdirigeringar utan pipeline, är ett bra val när:
+AEM as a Cloud Service erbjuder [flera strategier](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/administration/url-redirection) för att implementera omdirigeringar på serversidan, men den strategi som beskrivs i den här artikeln, omdirigeringar utan pipeline, är ett bra val när:
 
 * De som underhåller omdirigeringarna är företagsanvändare som inte har den behörighet som krävs för att genomföra filändringar i källkontrollen eller möjligheten att utföra en konfigurationspipeline på Cloud Manager webbnivå.
 * Antalet omdirigeringar varierar från några till tiotusentals.
@@ -40,7 +40,7 @@ Kärnan i den här funktionen är möjligheten för AEM Apache/Dispatcher att l�
 >[!NOTE]
 > Funktionens användning av Redirect Map Manager kräver ACS Commons version **6.7.0 eller senare** medan användningen av Redirect Manager kräver version **6.10.0 eller senare**.
 
-En detaljerad implementeringsguide steg för steg finns i självstudiekursen [Implementera URL-omdirigeringar utan pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects).
+En detaljerad implementeringsguide steg för steg finns i självstudiekursen [Implementera URL-omdirigeringar utan pipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects).
 
 ## Mappen för omskrivning {#rewrite-map}
 
@@ -87,5 +87,5 @@ Tänk på följande:
 
 ## Självstudiekurser {#tutorials}
 
-1. [Implementerar URL-omdirigeringar som är fria från pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects)
-1. [URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirection)
+1. [Implementerar URL-omdirigeringar som är fria från pipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/administration/implementing-pipeline-free-url-redirects)
+1. [URL-omdirigeringar](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/administration/url-redirection)

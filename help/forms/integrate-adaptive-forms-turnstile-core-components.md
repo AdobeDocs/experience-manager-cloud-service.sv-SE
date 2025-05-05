@@ -70,7 +70,7 @@ Så här integrerar du AEM Forms med den färdiga tjänsten:
    >
    > Användare behöver inte ändra validerings-URL:en på klientsidan och validerings-URL:en på serversidan eftersom de redan är förifyllda för aktiveringsvalidering.
 
-   När Turnstile Captcha-tjänsten har konfigurerats är den tillgänglig för användning i ett [adaptivt formulär baserat på kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction).
+   När Turnstile Captcha-tjänsten har konfigurerats är den tillgänglig för användning i ett [adaptivt formulär baserat på kärnkomponenter](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction).
 
 ## Använd Turnstile i anpassad form {#using-turnstile-core-components}
 

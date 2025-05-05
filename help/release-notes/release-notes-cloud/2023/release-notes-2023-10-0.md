@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.10.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -88,7 +88,7 @@ Titta på videon med versionsöversikten för oktober 2023 om du vill se en samm
 
 [Filtrera trafik på det hanterade CDN-nätverket i Adobe](/help/security/traffic-filter-rules-including-waf.md) genom att deklarera regler som matchar webbplatstrafiken efter egenskaper, inklusive URL, IP-adress och användaragent, eller ange anpassade trafikhastighetsgränser för att skydda mot DoS-attacker. Kunderna kan även licensiera en uppsättning avancerade regler för Web Application Firewall (WAF) för extra skydd mot avancerade hot mot webbplatser.
 
-Vi rekommenderar att du lär dig mer om trafikfilterregler genom att [testa en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)! Här får du hjälp med att konfigurera en ny Cloud Manager Configuration Pipeline, deklarera regler i en konfigurationsfil och analysera CDN-loggar för skadlig trafik.
+Vi rekommenderar att du lär dig mer om trafikfilterregler genom att [testa en självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html?lang=sv-SE)! Här får du hjälp med att konfigurera en ny Cloud Manager Configuration Pipeline, deklarera regler i en konfigurationsfil och analysera CDN-loggar för skadlig trafik.
 
 Trafikfilterregler finns nu tillgängliga i dev-miljöer, med en gradvis utrullning till scen- och prodmiljöer i november. Du kan begära tidigare åtkomst på scenen och produkten genom att skicka ett e-postmeddelande till **aemcs-waf-adopter@adobe.com**.
 

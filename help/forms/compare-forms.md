@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Jämför adaptiv Forms {#compare-two-forms}
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
 
 När formulärförfattare behöver jämföra två olika formulär baserat på fält, innehåll och formulärkomponenter, jämför de de två formulären. Formulärets författare måste se till att de två formulären finns i samma katalog eller mapp för att kunna jämföra dem. Utför följande steg för att jämföra två olika adaptiva formulär:
 

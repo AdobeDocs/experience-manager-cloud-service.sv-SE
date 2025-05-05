@@ -36,7 +36,7 @@ Länkkontrollen verifierar både [interna länkar](#internal) och [externa länk
 Interna länkar är länkar till annat innehåll i din AEM-databas. Du kan lägga till interna länkar med hjälp av sökvägsväljaren, textredigeraren eller en anpassad komponent. Till exempel:
 
 * Du skapar sidan `/content/wknd/us/en/adventures/ski-touring`
-* Den sidan innehåller en länk till `/content/wknd/us/en/adventures/extreme-ironing` i en [textkomponent.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
+* Den sidan innehåller en länk till `/content/wknd/us/en/adventures/extreme-ironing` i en [textkomponent.](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/text)
 
 Interna länkar valideras så snart innehållsförfattaren lägger till en sådan länk på en sida. Om länken blir ogiltig:
 
@@ -52,7 +52,7 @@ Interna länkar valideras så snart innehållsförfattaren lägger till en såda
 Externa länkar är länkar till innehåll utanför din AEM-databas. Externa länkar kan läggas till med RTF-redigeraren eller med en anpassad komponent. Till exempel:
 
 * Du skapar sidan `/content/wknd/us/en/adventures/ski-touring`
-* Den sidan innehåller en länk till `https://bunwarmerthermalunderwear.com` i en [textkomponent.](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/text)
+* Den sidan innehåller en länk till `https://bunwarmerthermalunderwear.com` i en [textkomponent.](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/text)
 
 Externa länkar valideras för syntax och genom att deras tillgänglighet kontrolleras. Den här kontrollen utförs asynkront med ett konfigurerbart intervall. Om länkkontrollen hittar en ogiltig extern länk:
 

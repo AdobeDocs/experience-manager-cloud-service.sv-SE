@@ -27,7 +27,7 @@ Det här dokumentet hjälper dig att förstå hur du hanterar produktkatalogsupp
 
 >[!NOTE]
 >
->Den här funktionen är endast tillgänglig med Adobe Commerce eller Cloud Edition och tredjepartsanslutningar som stöder tokenbaserad autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html).
+>Den här funktionen är endast tillgänglig med Adobe Commerce eller Cloud Edition och tredjepartsanslutningar som stöder tokenbaserad autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/storefront/getting-started.html?lang=sv-SE).
 
 Först ska vi se hur författare kan få åtkomst till testade produktdata med CIF.
 

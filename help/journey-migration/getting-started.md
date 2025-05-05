@@ -51,12 +51,12 @@ Du kan även se bilden nedan för en mer detaljerad bild av migreringsresan.
 >id="aemcloud_cam_overview"
 >title="Om Cloud Acceleration Manager"
 >abstract="Cloud Acceleration Manager är en molnbaserad applikation som utformats för att vägleda era IT-team under hela övergångsperioden, från planering till live på Cloud Service."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/getting-started#aem-moving-to-aem-guide" text="Flyttar till AEM as a Cloud Service"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/sites-cloud-changes.html" text="Betydande förändringar i AEM Sites as a Cloud Service"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/getting-started#aem-moving-to-aem-guide" text="Flyttar till AEM as a Cloud Service"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/sites-cloud-changes.html?lang=sv-SE" text="Betydande förändringar i AEM Sites as a Cloud Service"
 
 Förutom de steg som beskrivs på den här resan erbjuder Adobe Cloud Acceleration Manager, en molnbaserad applikation som är utformad för att vägleda dina IT-team genom hela övergångsprocessen från planering till publicering på Cloud Service. Konfigurera era team för en lyckad migrering med de bästa metoder, tips, dokumentation och verktyg som Adobe rekommenderar för att hjälpa till under varje fas av resan till AEM som Cloud Service.
 
-Du kan läsa [Cloud Acceleration Manager-dokumentationen](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) eller titta på en [introduktionsvideo](https://experienceleague.adobe.com/en/playlists/experience-manager-all-move-to-cloud-service#dashboard/learning) för att starta din migreringsresa.
+Du kan läsa [Cloud Acceleration Manager-dokumentationen](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) eller titta på en [introduktionsvideo](https://experienceleague.adobe.com/sv/playlists/experience-manager-all-move-to-cloud-service#dashboard/learning) för att starta din migreringsresa.
 
 ## What&#39;s Next {#what-is-next}
 

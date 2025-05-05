@@ -27,7 +27,7 @@ Releasedatum för Cloud Acceleration Manager är 25 oktober 2021.
 
 ### Nyheter {#what-is-new-cam}
 
-Cloud Acceleration Manager ger nu användare möjlighet att visa historiska BPA-rapporter i en trendlinjerapport. Med den här rapporten kan man se hur arbetet fortskrider i en grafisk representation som är enkel att ta del av. Mer information finns i [Använda Visa trendlinje](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#trendline-view-cam).
+Cloud Acceleration Manager ger nu användare möjlighet att visa historiska BPA-rapporter i en trendlinjerapport. Med den här rapporten kan man se hur arbetet fortskrider i en grafisk representation som är enkel att ta del av. Mer information finns i [Använda Visa trendlinje](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=sv-SE#trendline-view-cam).
 
 ### Releasedatum {#release-date-october-cam}
 
@@ -35,7 +35,7 @@ Releasedatum för Cloud Acceleration Manager är 4 oktober 2021.
 
 ### Nyheter {#what-is-new-cam-oct}
 
-Cloud Acceleration Manager ger nu användare möjlighet att visa BPA-rapporterna i en förhandsgranskning som går att skriva ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela dem. Se Steg 6 och 7 i [Använda analyskort för metodtips](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#best-practices-analysis).
+Cloud Acceleration Manager ger nu användare möjlighet att visa BPA-rapporterna i en förhandsgranskning som går att skriva ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela dem. Se Steg 6 och 7 i [Använda analyskort för metodtips](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=sv-SE#best-practices-analysis).
 
 
 ## Verktyget Innehållsöverföring {#ctt-release}
@@ -46,12 +46,12 @@ Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
 
 ### Nyheter {#what-is-new-ctt-oct}
 
-* Förbättrat verktyg för användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/using-user-mapping-tool-legacy.html).
+* Förbättrat verktyg för användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/using-user-mapping-tool-legacy.html?lang=sv-SE).
    * Testa anslutningen till API:t för användarhantering innan du kör användarmappningen
    * Hoppa över fel utan problem och fortsätt med aktiviteten Användarmappning
    * Användarmappning misslyckas inte längre om **åtkomsttoken** upphör att gälla efter 24 timmar. Användarmappning kan köras igen från den plats där den senast stoppades.
 
-* Om du vill öka tillförlitligheten för verktyget Innehållsöverföring kan du importera innehåll till antingen Author-instansen eller Publish-instansen åt gången. Mer information finns i [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html).
+* Om du vill öka tillförlitligheten för verktyget Innehållsöverföring kan du importera innehåll till antingen Author-instansen eller Publish-instansen åt gången. Mer information finns i [Komma igång med verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=sv-SE).
 
 * När versioner inkluderas inkluderas sökvägen `/var/audit` automatiskt för att migrera granskningshändelser.
 

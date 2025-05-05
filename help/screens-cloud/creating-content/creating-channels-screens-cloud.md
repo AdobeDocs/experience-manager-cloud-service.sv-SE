@@ -22,7 +22,7 @@ Det här dokumentet hjälper dig att skapa och hantera kanaler för ditt AEM Scr
 
 * förstå hur man skapar kanaler till Screens Content Provider
 * hantera och redigera innehåll i era kanaler
-* hantera tilldelning och aktiveringsschema för dina kanaler i [Screens tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
+* hantera tilldelning och aktiveringsschema för dina kanaler i [Screens tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=sv-SE)
 
 ## Steg för att skapa en ny sekvenskanal i Screens as a Cloud Service {#create-new-channel}
 

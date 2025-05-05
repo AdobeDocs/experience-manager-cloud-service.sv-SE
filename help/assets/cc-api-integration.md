@@ -97,7 +97,7 @@ Så här aktiverar du tillägget för innehållsautomatisering för AEM as a Clo
 1. Klicka på **[!UICONTROL Continue]**.
 1. Expandera **[!UICONTROL Assets]** och välj **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Create]**.
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
 
 Om du behöver lägga till tillägget för innehållsautomatisering i ett befintligt AEM as a Cloud Service-program i Cloud Manager:
 
@@ -107,7 +107,7 @@ Om du behöver lägga till tillägget för innehållsautomatisering i ett befint
 
 1. Expandera **[!UICONTROL Assets]** och välj **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Update]**.
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
 
 ## Använd en bearbetningsprofil för att redigera flera kreativa resurser samtidigt {#process-assets}
 

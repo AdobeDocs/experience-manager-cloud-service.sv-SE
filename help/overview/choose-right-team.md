@@ -17,8 +17,8 @@ ht-degree: 0%
 >id="aemcloud_chooseteam"
 >title="Välj rätt team"
 >abstract="Rätt personer i rätt jobb för att hjälpa er driftsättning av Adobe Experience Manager att lyckas."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html" text="Justera KPI:er"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/assessing-kpis.html" text="Utvärderar nyckeltal"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=sv-SE" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/assessing-kpis.html?lang=sv-SE" text="Utvärderar nyckeltal"
 
 Det finns en chans att olika avdelningar inom organisationen har olika aspekter av den digitala upplevelsen. Utan styre är steget klart för en oändlig debatt, konflikter och förvirring.
 
@@ -51,7 +51,7 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 ![Granska roller för implementering](assets/team_involvement.png)
 
-**Granska den här listan med ditt implementeringsteam** och se till att du har personer med relevanta kvalifikationer i varje roll. Teammedlemmar som är mindre bekanta med Adobe Experience Cloud kan använda [Experience League](https://experienceleague.adobe.com/#recommended/solutions/experience-manager) utbildningsresurser för att bli certifierade via [Adobe Digital Learning](https://learning.adobe.com/certification.html).
+**Granska den här listan med ditt implementeringsteam** och se till att du har personer med relevanta kvalifikationer i varje roll. Teammedlemmar som är mindre bekanta med Adobe Experience Cloud kan använda [Experience League](https://experienceleague.adobe.com/sv#recommended/solutions/experience-manager) utbildningsresurser för att bli certifierade via [Adobe Digital Learning](https://learning.adobe.com/certification.html).
 
 ## **Nyckelroller för AEM Experience Manager Assets**
 
@@ -80,4 +80,4 @@ Nu när du vet vilka roller som krävs kan du titta på tabellen nedan för att 
 
 >[!TIP]
 >
-> Läs mer om Adobe Experience Cloud och använd resurser på [Experience League](https://experienceleague.adobe.com/#recommended/solutions/experience-manager) och bli certifierad genom [Adobe Digital Learning](https://learning.adobe.com/certification.html).
+> Läs mer om Adobe Experience Cloud och använd resurser på [Experience League](https://experienceleague.adobe.com/sv#recommended/solutions/experience-manager) och bli certifierad genom [Adobe Digital Learning](https://learning.adobe.com/certification.html).

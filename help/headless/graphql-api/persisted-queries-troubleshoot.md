@@ -48,7 +48,7 @@ Mönstret ska vara `/graphql/execute.json/thePath`.
 
 I så fall returnerar frågan felkoden `405`.
 
-Ett sådant fel är inte specifikt för GraphQL. Se KB-artikeln [405 Fel tillåts inte](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-20824).
+Ett sådant fel är inte specifikt för GraphQL. Se KB-artikeln [405 Fel tillåts inte](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-20824).
 
 ## Spärrad av avsändare {#blocked-dispatcher}
 

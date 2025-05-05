@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Skapa och hantera granskningar för ett adaptivt formulär {#review-step-forms-aem-sites-page}
 
-Med hjälp av [Tilldela steg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html#assign-task-step) i AEM arbetsflöde granskar granskaren det skickade formuläret och utför en åtgärd på det. Följ de här stegen för att granska det skickade formuläret i steget Tilldela:
+Med hjälp av [Tilldela steg](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-form-centric-workflows/aem-forms-workflow-step-reference.html?lang=sv-SE#assign-task-step) i AEM arbetsflöde granskar granskaren det skickade formuläret och utför en åtgärd på det. Följ de här stegen för att granska det skickade formuläret i steget Tilldela:
 
 1. [Skapa ett AEM arbetsflöde](#create-an-aem-workflow)
 1. [Konfigurera åtgärden skicka för den adaptiva formulärbehållaren](#configure-submit-action)
@@ -46,7 +46,7 @@ Konfigurera nu åtgärden Skicka för en komponent med adaptiv formulärbehålla
 
 1. Gå till webbplatsens sida.
 1. Välj ![settings_icon](assets/settings_icon.png) för en adaptiv formulärbehållare. Dialogrutan **[!UICONTROL Adaptive Form Container]** öppnas.
-1. Öppna fliken **[!UICONTROL Submission]** och ange **[!UICONTROL Submit Action]** för att [Anropa ett AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=en#invoke-an-aem-workflow)
+1. Öppna fliken **[!UICONTROL Submission]** och ange **[!UICONTROL Submit Action]** för att [Anropa ett AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=sv-SE#invoke-an-aem-workflow)
 
 1. Klicka på [Klar] för att spara inställningarna.
 

@@ -95,7 +95,7 @@ När du skapar en redigerbar mall:
 >
 >Ange aldrig någon information som måste vara [internationaliserad](/help/implementing/developing/extending/i18n/dev.md) i en mall.
 >
->Använd [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) för mallelement som sidhuvuden och sidfötter som måste lokaliseras.
+>Använd [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE) för mallelement som sidhuvuden och sidfötter som måste lokaliseras.
 
 ### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
@@ -518,7 +518,7 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 >
 >Ursprungligt innehåll är avsett för att förbereda komponenter och den sidlayout som fungerar som en startpunkt för att skapa innehållet. Det är inte avsett att vara det faktiska innehåll som skulle förbli som det är. Därför går det inte att översätta det ursprungliga innehållet.
 >
->Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
+>Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE).
 
 ### Redigera en mall - Layout - mallskapare {#editing-a-template-layout-template-author}
 

@@ -86,7 +86,7 @@ Därför bör du fortsätta din introduktionsresa genom att gå igenom dokumente
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
 * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md) - Lär dig mer om de typer av miljöer som du kan skapa och hur du skapar dem för ditt Cloud Manager-projekt
-* [Med Adobe Cloud Manager - miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html) - består Cloud Manager-miljöer av AEM, publicering och Dispatcher-tjänster. Lär dig hur olika miljöer stöder roller och kan användas med olika CI/CD-pipeline.
+* [Med Adobe Cloud Manager - miljöer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=sv-SE) - består Cloud Manager-miljöer av AEM, publicering och Dispatcher-tjänster. Lär dig hur olika miljöer stöder roller och kan användas med olika CI/CD-pipeline.
 * [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md) - I den här dokumentationen finns mer information om hur du använder en RDE
 <!-- ERROR: Not Found (HTTP error 404) * [AEM Champion Tips and Tricks - Cloud Manager Environment Types](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/aem-champions/environment-types.md) - Watch this video for an overview of Cloud Manager environment types from an AEM champion. -->
 

@@ -86,7 +86,7 @@ Med dessa renderingar kan organisationer leverera personaliserade och optimerade
    * [Bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md)
 
   Du kan [växla vyn](/help/assets/assets-view-introduction.md#how-to-access-assets-view) senare för att förhandsgranska dynamiska återgivningar i vyn Assets.
-* Publicera material på Dynamic Media för att göra Dynamic Media-renderingar tillgängliga i Assets-vyn. Mer information finns i [Publicera Assets till AEM och Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm).
+* Publicera material på Dynamic Media för att göra Dynamic Media-renderingar tillgängliga i Assets-vyn. Mer information finns i [Publicera Assets till AEM och Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm).
 
 
 ### Visa och hämta dynamiska medierenderingar {#view-download-dm-renditions}

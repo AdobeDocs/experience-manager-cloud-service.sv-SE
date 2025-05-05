@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -66,11 +66,11 @@ CQ-4328183 was not reported on CS so not documented here.
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms-sep-2021}
 
-* **Använd Adobe Sign-roller i ett adaptivt formulär** - Med Adobe Sign för företags- och företagsnivåer kan du utöka rollerna för avtalsmottagare, utöver bara signeraren, för att bättre matcha deras arbetsflödesbehov. Du kan nu [aktivera varje mottagare av avtalet att konfigurera sin roll i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html#addsignerstoanadaptiveform) med signerare som standardroll.
+* **Använd Adobe Sign-roller i ett adaptivt formulär** - Med Adobe Sign för företags- och företagsnivåer kan du utöka rollerna för avtalsmottagare, utöver bara signeraren, för att bättre matcha deras arbetsflödesbehov. Du kan nu [aktivera varje mottagare av avtalet att konfigurera sin roll i ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/use-adobe-sign/working-with-adobe-sign.html?lang=sv-SE#addsignerstoanadaptiveform) med signerare som standardroll.
 
 * **Analytics for Adaptive Forms** - Nu kan du hämta in och spåra slutanvändarbeteende med Adobe Analytics for Adaptive Forms för att samla in slutanvändarinsikter. Det hjälper er att fatta välgrundade beslut baserat på data för att förbättra slutanvändarens upplevelse.
 
-* **Anslut enkelt Adobe Experience Manager (AEM) Forms till Microsoft® Dynamics och Salesforce** - Tjänsten tillhandahåller färdig datakällkonfiguration och datamodeller för Microsoft® Dynamics och Salesforce. Detta gör det [snabbare och enklare för utvecklare att konfigurera Microsoft® Dynamics och Salesforce som datakällor för ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html).
+* **Anslut enkelt Adobe Experience Manager (AEM) Forms till Microsoft® Dynamics och Salesforce** - Tjänsten tillhandahåller färdig datakällkonfiguration och datamodeller för Microsoft® Dynamics och Salesforce. Detta gör det [snabbare och enklare för utvecklare att konfigurera Microsoft® Dynamics och Salesforce som datakällor för ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-msdynamics-salesforce.html?lang=sv-SE).
 
 * **E-signera ett anpassat formulär med DocuSign** - Du kan använda DocuSign för att e-signera ett anpassat formulär. Tjänsten tillhandahåller en anpassad skickaåtgärd för att använda DocuSign med ett adaptivt formulär. Du kan installera det paket som är tillgängligt på Programvarudistribution för att importera sändningsåtgärden.
 
@@ -80,7 +80,7 @@ CQ-4328183 was not reported on CS so not documented here.
    * Möjliggör Forms Portals funktioner för att spara och återuppta samt lagra adaptiva blankettutkast i ett kundhanterat datalager.
    * Lagra AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga personuppgifter (SPD) i en kundhanterad databas.
 
-* **[!DNL AEM Forms as a Cloud Service - Communications]** - [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL AEM Forms as a Cloud Service - Communications]** - [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html?lang=sv-SE) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
    * Generera PDF-filer från ett XFA-formulär i PDF och Adobe Acrobat-formulär.
@@ -114,10 +114,10 @@ Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för bet
 ### Nyheter {#what-is-new-screens}
 
 * Screens as a Cloud Service har nu stöd för grundläggande uppspelningsövervakning. Spelaren rapporterar nu olika uppspelningsmått för varje ping (standardvärdet är 30 sekunder). Baserat på mätvärden kan programmet identifiera olika kantfall (fastnålade upplevelser, tom skärm, schemaläggningsproblem osv.). Med den här funktionen kan teamet fjärrövervaka om en spelare spelar upp innehåll på rätt sätt. Det förbättrar reaktiviteten till tomma skärmar eller trasiga upplevelser på fältet och minskar risken för att användaren får en trasig upplevelse.
-Mer information finns i [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html#playback-monitoring).
+Mer information finns i [Grundläggande uppspelningsövervakning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/manage-player-registration/installing-screens-cloud-player.html?lang=sv-SE#playback-monitoring).
 
 * Miniatyrbildsstöd för videor i stöds nu i Screens as a Cloud Service. Innehållsförfattaren kan definiera en miniatyrbild för videoklipp så att bilden används som platshållare och testar uppspelning och målgruppsanpassning av innehållet medan videon färdigställs av rätt team. Bilden kan också användas om videouppspelningen misslyckas.
-Mer information finns i [Stöd för miniatyrbilder för videoklipp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/core-product-features/thumbnail-support-videos.html).
+Mer information finns i [Stöd för miniatyrbilder för videoklipp](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/core-product-features/thumbnail-support-videos.html?lang=sv-SE).
 
 ### Felkorrigeringar {#bug-fixes-screens}
 
@@ -184,7 +184,7 @@ Releasedatum för Cloud Acceleration Manager är 4 oktober 2021.
 
 ### Nyheter {#what-is-new-cam}
 
-* Cloud Acceleration Manager ger nu användare möjlighet att visa BPA-rapporterna i en förhandsgranskning som går att skriva ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela dem. Se steg 6 och 7 i [Använda analysverktyget för bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#best-practices-analysis).
+* Cloud Acceleration Manager ger nu användare möjlighet att visa BPA-rapporterna i en förhandsgranskning som går att skriva ut, vilket gör det enkelt att skriva ut eller skriva ut till PDF för att det ska vara enkelt att dela dem. Se steg 6 och 7 i [Använda analysverktyget för bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=sv-SE#best-practices-analysis).
 
 ## Verktyget Innehållsöverföring {#content-transfer-tool}
 
@@ -194,7 +194,7 @@ Releasedatum för innehållsöverföringsverktyget v1.6.0 är 4 oktober 2021.
 
 ### Nyheter {#what-is-new-ctt}
 
-* Förbättrad användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/using-user-mapping-tool-legacy.html#using-user-mapping-tool).
+* Förbättrad användarmappning med en förenklad användarupplevelse, inklusive följande funktioner som listas nedan. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/using-user-mapping-tool-legacy.html?lang=sv-SE#using-user-mapping-tool).
    * Testa anslutningen till API:t för användarhantering innan du kör användarmappningen
    * Hoppa över fel utan problem och fortsätt med aktiviteten Användarmappning
    * Användarmappning misslyckas inte längre om åtkomsttoken upphör att gälla (efter 24 timmar). Användarmappning kan köras igen från den plats där den senast stoppades.

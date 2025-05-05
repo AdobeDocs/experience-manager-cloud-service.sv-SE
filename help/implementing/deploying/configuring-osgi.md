@@ -48,7 +48,7 @@ följer konfigurationsformatet `cfg.json` OSGi.
 
 >[!NOTE]
 >
->OSGi-konfigurationerna lagras inte under /apps som vanliga AEM i molnet som lagras på en extern plats. Checka in Cloud Manager [Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#configurations) om du vill visa OSGi-konfigurationerna.
+>OSGi-konfigurationerna lagras inte under /apps som vanliga AEM i molnet som lagras på en extern plats. Checka in Cloud Manager [Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#configurations) om du vill visa OSGi-konfigurationerna.
 
 ## Upplösning för körningsläge {#runmode-resolution}
 
@@ -84,7 +84,7 @@ AEM as a Cloud Service runmodes är väldefinierade baserat på miljötyp och tj
 
 OSGi-konfigurationsvärden som anges av körningsläget kan verifieras av:
 
-1. Öppnar AEM som en Cloud Service-miljöns [Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html)
+1. Öppnar AEM som en Cloud Service-miljöns [Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE)
 1. Välja vilka tjänstnivåer som ska inspekteras med hjälp av listrutan __Pod__
 1. Välja fliken __Status__
 1. Välj __Konfigurationer__ i listrutan __Statusdump__

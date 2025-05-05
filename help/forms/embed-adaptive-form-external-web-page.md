@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/embed-adaptive-form-aem-sites.md) eller på en webbsida som är värd utanför AEM. Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
@@ -159,8 +159,8 @@ Tänk på följande när du bäddar in ett anpassat formulär på en webbsida:
 
 * Kontrollera att formateringsreglerna som definieras i webbsidans CSS inte är i konflikt med formulärobjektets CSS. För att undvika konflikterna kan du återanvända webbsidans CSS i det adaptiva formulärtemat med hjälp av AEM klientbibliotek. Mer information om hur du använder klientbiblioteket i adaptiva formulärteman finns i [Teman i AEM Forms](/help/forms/themes.md).
 * Låt formulärbehållaren på webbsidan använda hela fönsterbredden. Det ser till att CSS-reglerna som konfigurerats för mobila enheter fungerar utan ändringar. Om formulärbehållaren inte får hela fönsterbredden måste du skriva anpassad CSS för att formuläret ska kunna anpassas till olika mobila enheter.
-* Använd `[getData](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/GuideBridge.html)` API för att hämta XML- eller JSON-representationen av formulärdata i klienten.
-* Använd `[unloadAdaptiveForm](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/GuideBridge.html)` API för att ta bort det adaptiva formuläret från HTML DOM.
+* Använd `[getData](https://helpx.adobe.com/se/experience-manager/6-5/forms/javascript-api/GuideBridge.html)` API för att hämta XML- eller JSON-representationen av formulärdata i klienten.
+* Använd `[unloadAdaptiveForm](https://helpx.adobe.com/se/experience-manager/6-5/forms/javascript-api/GuideBridge.html)` API för att ta bort det adaptiva formuläret från HTML DOM.
 * Ange huvudet för åtkomstkontrollens ursprung när du skickar ett svar från en AEM server.
 
 ## Möjliggör för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats {#cross-site}

@@ -110,6 +110,6 @@ Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM geno
 
 Vi rekommenderar att du går vidare till nästa del av processen Skapa snabbwebbplats genom att granska [Skapa ett program och en pipeline](create-program.md), men följande är ytterligare, valfria resurser. Dessa resurser tar en djupdykning i de begrepp som nämns i det här dokumentet. De behöver dock inte fortsätta resan.
 
-* [Förstå program och programtyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/program-types.html) - Börja här för att förstå skillnaderna mellan live- och sandlådeprogram.
+* [Förstå program och programtyper](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/program-types.html?lang=sv-SE) - Börja här för att förstå skillnaderna mellan live- och sandlådeprogram.
 * [Webbplatsmallar](/help/sites-cloud/administering/site-creation/site-templates.md) - Om du vill veta mer om strukturen för webbplatsmallar och hur de används för att skapa webbplatser läser du det här dokumentet.
-* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
+* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=sv-SE) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.

@@ -28,7 +28,7 @@ Dynamiska medieresurser cachas av CDN (Content Delivery Network) för snabb leve
 
 **Så här gör du CDN-cachen ogiltig via Dynamic Media Classic:**
 
-1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started) och logga sedan in på ditt konto.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=sv-SE#getting-started) och logga sedan in på ditt konto.
 
    Dina inloggningsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Kontakta kundsupport om du inte har den här informationen.
 

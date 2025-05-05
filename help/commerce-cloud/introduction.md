@@ -61,7 +61,7 @@ Kraftfulla CIF i AEM gör det möjligt för innehållsskapare att snabbt skapa k
 
 ### Tid till värde (TTV) {#ttv}
 
-Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless content &amp; commerce).
+Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) och integreringsmönster för PWA (Headless content &amp; commerce).
 
 CIF har tagits fram för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger kunden tillgång till nya och förbättrade funktioner.
 

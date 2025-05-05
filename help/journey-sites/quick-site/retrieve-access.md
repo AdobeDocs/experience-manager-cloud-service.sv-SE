@@ -120,4 +120,4 @@ Bygg vidare på den här kunskapen och fortsätt din AEM resa för att skapa sna
 
 Vi rekommenderar att du går vidare till nästa del av snabbwebbplatsskapandeprocessen genom att granska dokumentet [Anpassa webbplatstemat](customize-theme.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
 
-* [Adobe Experience Manager Cloud Manager Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) - Utforska Cloud Manager-dokumentationen och få fullständig information om dess funktioner.
+* [Adobe Experience Manager Cloud Manager Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=sv-SE) - Utforska Cloud Manager-dokumentationen och få fullständig information om dess funktioner.

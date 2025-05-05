@@ -20,7 +20,7 @@ ht-degree: 0%
 >id="aemcloud_cug_migration"
 >title="Migrering av stängda användargrupper"
 >abstract="För migrering av stängda användargrupper (CUG) krävs för närvarande några kontroller och steg för att den ska fungera efter en migrering."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html" text="Stängda användargrupper i AEM"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html?lang=sv-SE" text="Stängda användargrupper i AEM"
 
 För närvarande behöver stängda användargrupper (CUG) några ytterligare steg för att fungera i målmiljön för en migrering. I det här dokumentet förklaras scenariot och de steg som krävs för att skydda noderna på det avsedda sättet.
 
@@ -36,4 +36,4 @@ Om du vill aktivera CUG-beteenden på Publish-instansen
 1. Sidorna som skyddas med CUG-profiler måste sedan publiceras (vilket gör att Publish-instansen kan användas och profilerna kan spåras).
 1. När alla sidor har publicerats kontrollerar du funktionerna för varje CUG-skyddad sida.
 
-Mer information finns i [Stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html).
+Mer information finns i [Stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/closed-user-groups.html?lang=sv-SE).

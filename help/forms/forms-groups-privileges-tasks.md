@@ -15,10 +15,10 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Du kan [skapa grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) och tilldela profiler och [användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) till grupperna. Dessa profiler styr behörigheter för de användare som ingår i gruppen.
+Du kan [skapa grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=sv-SE#accessing) och tilldela profiler och [användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=sv-SE#accessing) till grupperna. Dessa profiler styr behörigheter för de användare som ingår i gruppen.
 
 När du har konfigurerat [!DNL AEM Forms] as a Cloud Service är grupperna som listas i tabellen nedan, som [!DNL forms-users] och formulär-power-user, automatiskt tillgängliga för tilldelning:
 

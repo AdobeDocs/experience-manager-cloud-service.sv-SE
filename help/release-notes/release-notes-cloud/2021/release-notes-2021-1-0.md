@@ -76,7 +76,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.1.0 är 14 januari
 
 ### Nyheter i [!DNL Code Refactoring Tools] {#what-is-new-crt}
 
-* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Mer information om det här plugin-programmet finns i [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html#benefits).
+* Ny version av AIO-CLI-plugin släppt. Den senaste versionen av det här plugin-programmet innehåller felkorrigeringar för AEM Dispatcher Converter och Repository Modernizer och har även stöd för ett nytt verktyg - Index Converter. Mer information om det här plugin-programmet finns i [Enhetlig upplevelse](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/unified-experience.html?lang=sv-SE#benefits).
 
 * Indexkonverteraren är ett verktyg som kan användas för att omvandla en kunds anpassade OAK-indexdefinitioner till AEM as a Cloud Service-kompatibla OAK-indexdefinitioner. Mer information finns i [Indexkonverteraren](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/index-converter).
 
@@ -90,7 +90,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.1.0 är 14 januari
 
 ### Nyheter {#what-is-new-foundation}
 
-* Autentiserade API-anrop från server till server - Generera lämpliga åtkomsttoken för att göra autentiserade server-till-server-API-anrop mellan externa program och AEM as a Cloud Service-miljöer. Läs mer genom att läsa [dokumentationen](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md) eller genom att konsultera [självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html#authentication).
+* Autentiserade API-anrop från server till server - Generera lämpliga åtkomsttoken för att göra autentiserade server-till-server-API-anrop mellan externa program och AEM as a Cloud Service-miljöer. Läs mer genom att läsa [dokumentationen](/help/implementing/developing/introduction/generating-access-tokens-for-server-side-apis.md) eller genom att konsultera [självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE#authentication).
 
 ### SDK Build Analyzers {#sdk-build-analyzers}
 
@@ -101,7 +101,7 @@ Två nya analytiker har lagts till för den här versionen:
 * repoinit analyzer
 * bundle-nativecode
 
-Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing).
+Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=sv-SE#developing).
 
 ## Verktyg för molnövergång {#code-transition-tools}
 
@@ -111,6 +111,6 @@ Releasedatum för innehållsöverföringsverktyget v1.2.2 är 1 februari 2021.
 
 ### Nyheter i [!DNL Content Transfer Tool] {#what-is-new-ctt}
 
-* Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html).
+* Ny funktion och nytt användargränssnitt har lagts till i verktyget Innehållsöverföring - verktyget för användarmappning. Den här funktionen mappar automatiskt befintliga användare och grupper till deras Adobe Identity Management-system-ID som en del av innehållsmigreringsaktiviteten. Mer information finns i [Använda verktyget för användarmappning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-user-mapping-tool.html?lang=sv-SE).
 * Verktyget Innehållsöverföring migrerar nu alla grupper och användare som det hänvisas till i migreringsuppsättningen, inklusive underordnade.
 * Användare kan välja vissa sökvägar under `/etc` när de skapar migreringsuppsättningar.

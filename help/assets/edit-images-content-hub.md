@@ -72,7 +72,7 @@ Så här redigerar du bilder med Content Hub:
 
 1. Klicka på **[!DNL Open in Adobe Express]** på resurskortet för bilden som du vill redigera. Du kan också klicka på bilden för att öppna informationen och sedan klicka på logotypen [!DNL Adobe Express]. Den inbäddade redigeraren för Adobe Express läses sedan in utan att någonsin behöva lämna Content Hub.
 
-   Du kan använda funktionen [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, till exempel [ändra storlek på bild](https://helpx.adobe.com/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/express/using/crop-image.html), kombinera bilden med AI-genererad bild eller text och mycket annat.
+   Du kan använda funktionen [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, till exempel [ändra storlek på bild](https://helpx.adobe.com/se/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/se/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/se/express/using/crop-image.html), kombinera bilden med AI-genererad bild eller text och mycket annat.
 
 1. Utför ändringarna och klicka på **[!UICONTROL Save]** för att spara den redigerade resursen i någon av formattyperna:
 

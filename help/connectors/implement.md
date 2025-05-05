@@ -64,7 +64,7 @@ Kopplingar bör följa de här riktlinjerna för paketering, som beskrivs under 
 
 Dessutom bör bara Adobe skriva kod till `/libs`, där kunder och partners skriver till `/apps`.
 
-Befintliga anslutningar kan också behöva omarbetas för att flytta en konfiguration som en gång har placerats `/etc` till andra mappar på den översta nivån, till exempel `/conf`. Omstruktureringen gjordes som en del av AEM 6.5 och beskrivs i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/restructuring/repository-restructuring).
+Befintliga anslutningar kan också behöva omarbetas för att flytta en konfiguration som en gång har placerats `/etc` till andra mappar på den översta nivån, till exempel `/conf`. Omstruktureringen gjordes som en del av AEM 6.5 och beskrivs i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/restructuring/repository-restructuring).
 
 Adobe rekommenderar att du placerar större delen av kopplingskoden under `/apps/connectors/<vendor>` för att behålla en ren databasstruktur, särskilt för kunder som använder flera anslutningar.
 

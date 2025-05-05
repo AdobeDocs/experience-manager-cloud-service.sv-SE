@@ -31,7 +31,7 @@ Alla rensningsvariationer har följande gemensamt:
 >[!CAUTION]
 >Tömning av CDN-cachen, särskilt med den hårda flaggan, ökar trafiken vid källan och kan leda till ett driftstopp om det inte körs som det ska.
 
-Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
+Du kan referera till [en självstudie](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
 ## Rensa en URL {#single-purge}
 

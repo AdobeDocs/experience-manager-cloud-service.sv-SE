@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/work-with-form-data-model.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/work-with-form-data-model.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -196,7 +196,7 @@ Använd attributet request för att hämta associerade egenskaper från datakäl
 
 1. Välj **[!UICONTROL Request Attribute]** i listrutan **[!UICONTROL Binding To]** och ange attributnamnet i fältet **[!UICONTROL Binding Value]**.
 
-1. Skapa en [övertäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/overlays.html?lang=en#developing) för head.jsp. Om du vill skapa övertäckningen öppnar du CRX DE och kopierar filen `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
+1. Skapa en [övertäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/overlays.html?lang=sv-SE#developing) för head.jsp. Om du vill skapa övertäckningen öppnar du CRX DE och kopierar filen `https://<server-name>:<port number>/crx/de/index.jsp#/libs/fd/af/components/page2/afStaticTemplatePage/head.jsp` till `https://<server-name>:<port number>/crx/de/index.jsp#/apps/fd/af/components/page2/afStaticTemplatePage/head.jsp`
 
    >[!NOTE]
    >

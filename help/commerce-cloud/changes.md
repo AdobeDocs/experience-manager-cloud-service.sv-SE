@@ -40,12 +40,12 @@ Slutpunkten konfigureras och uppdateras antingen via Cloud Manager UI eller dess
 
 ## Driftsättning CIF Veniaprojektet
 
-Projektet är tillgängligt i [Cloud Manager Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/integrating-with-git.html) och distributionen görs via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
+Projektet är tillgängligt i [Cloud Manager Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/integrating-with-git.html?lang=sv-SE) och distributionen görs via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=sv-SE)
 
 **Tidigare CIF versioner**
 
 * CIF Classic: Genom att AEM
-* CIF öppen källkod: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* CIF öppen källkod: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE)
 
 ## Produktkatalogdata
 

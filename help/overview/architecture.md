@@ -239,4 +239,4 @@ I den senaste arkitekturen för AEM as a Cloud Service introduceras några grund
 * Edge Delivery Services:
    * [AEM as a Cloud Service - översikt - med Edge Delivery Services](/help/edge/overview.md)
    * [Använda Edge Delivery Services](/help/edge/using.md)
-   * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)
+   * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=sv-SE)

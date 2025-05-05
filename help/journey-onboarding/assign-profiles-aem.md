@@ -115,5 +115,5 @@ Här följer ytterligare, valfria resurser om du vill gå längre än vad som in
 
 * [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md) - Lär dig hur AEM as a Cloud Service team och produktprofiler kan ge och begränsa åtkomst till licensierade Adobe-lösningar.
 * [Hantera produkter och användaråtkomst i Admin Console](/help/security/ims-support.md#managing-products-and-user-access-in-admin-console) - Lär dig hur du använder Admin Console för att hantera användaråtkomst.
-* [Konfigurerar åtkomst till AEM-genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html) - Kolla in den här förkortade genomgången om du vill veta mer om hur du konfigurerar Adobe IMS-användare, användargrupper och produktprofiler i Admin Console.
+* [Konfigurerar åtkomst till AEM-genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/walk-through.html?lang=sv-SE) - Kolla in den här förkortade genomgången om du vill veta mer om hur du konfigurerar Adobe IMS-användare, användargrupper och produktprofiler i Admin Console.
 

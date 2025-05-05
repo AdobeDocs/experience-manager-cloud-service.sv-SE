@@ -37,7 +37,7 @@ Med anpassad övervakning kan kunderna välja att tillhandahålla upp till fem o
 
 >[!NOTE]
 >
-> Den här funktionen erbjuds endast för produktionsmiljöer och kunder med [avancerad molnsupport](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html#support-add-ons). Kontakta ditt Adobe-kontoteam om du har några frågor.
+> Den här funktionen erbjuds endast för produktionsmiljöer och kunder med [avancerad molnsupport](https://experienceleague.adobe.com/docs/support-resources/data-sheets/overview.html?lang=sv-SE#support-add-ons). Kontakta ditt Adobe-kontoteam om du har några frågor.
 
 ## Intern modulövervakning {#module-monitoring}
 
@@ -55,10 +55,10 @@ Ytterligare kontroller läggs till i miljöer som tillhandahålls för Forms. Ko
 
 ## Kundobserverbarhet {#customer-observability}
 
-Kunderna kan använda programprestandaövervakningen [New Relic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html) som innehåller prestandadata i realtid som samlats in och diagram för analys och felsökning. Genom att använda övervakningssviten kan kunderna direkt observera olika mätvärden som JVM-prestandamått, transaktionstid för Java™, externa bakgrundsanrop och databasanrop.
+Kunderna kan använda programprestandaövervakningen [New Relic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html?lang=sv-SE) som innehåller prestandadata i realtid som samlats in och diagram för analys och felsökning. Genom att använda övervakningssviten kan kunderna direkt observera olika mätvärden som JVM-prestandamått, transaktionstid för Java™, externa bakgrundsanrop och databasanrop.
 
 ## Ytterligare resurser {#resources}
 
-* [Prestandaövervakning för New Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html)
-* [Loggar för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html)
-* [Övervaka miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html)
+* [Prestandaövervakning för New Relic-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic.html?lang=sv-SE)
+* [Loggar för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=sv-SE)
+* [Övervaka miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html?lang=sv-SE)

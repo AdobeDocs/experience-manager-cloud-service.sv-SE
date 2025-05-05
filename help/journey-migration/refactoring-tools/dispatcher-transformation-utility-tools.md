@@ -27,13 +27,13 @@ Dispatcher är Adobe Experience Manager-cachning, eller belastningsutjämningsve
 >[!NOTE]
 >Det vanligaste användningsområdet för Dispatcher är att cachelagra svar från en **AEM-publiceringsinstans** för att minska svarstiden och öka säkerheten för den externt adresserade publicerade webbplatsen.
 
-Se [Dispatcher-översikt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) om du vill veta hur Dispatcher utför cachelagring, returnerar dokument och utför belastningsutjämning.
+Se [Dispatcher-översikt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) om du vill veta hur Dispatcher utför cachelagring, returnerar dokument och utför belastningsutjämning.
 
 ### Konfiguration och testning av Apache och Dispatcher {#dispatcher-configurations-cloud}
 
 Lär dig strukturera konfigurationerna för AEM as a Cloud Service Apache och Dispatcher och hur du validerar och kör dem lokalt innan du distribuerar dem till molnmiljöer.
 
-Mer information finns i [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html).
+Mer information finns i [Dispatcher i molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=sv-SE).
 
 ## AEM Dispatcher Converter {#aem-dispatcher-converter}
 

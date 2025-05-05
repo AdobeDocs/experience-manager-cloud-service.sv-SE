@@ -73,8 +73,8 @@ Börja med att titta på dokumentationen som beskriver de grundläggande verktyg
 
 
 * Under planeringen är det en god idé att ha en lista över områden som måste omarbetas för att vara kompatibla med AEM as a Cloud Service. Du kan läsa [Utvecklingsriktlinjer](/help/implementing/developing/introduction/development-guidelines.md) om du vill ha mer information om hur du omformar och optimerar kod för Cloud Service.
-* Läs om hur du [hanterar konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/configurations.html#what-is-a-configuration) i AEM as a Cloud Service.
-* Lär dig hur du konfigurerar en lokal utvecklingsmiljö genom att hämta [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html)
+* Läs om hur du [hanterar konfigurationer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/configurations.html?lang=sv-SE#what-is-a-configuration) i AEM as a Cloud Service.
+* Lär dig hur du konfigurerar en lokal utvecklingsmiljö genom att hämta [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE)
 * Slutligen bör du bekanta dig med [AEM as a Cloud Service Java API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/index.html).
 
 Du kan också:
@@ -106,8 +106,8 @@ I Adobe finns flera verktyg som hjälper dig att snabba upp vissa av dina åtgä
 
 * [Resursarbetsflödesmigrering](/help/journey-migration/moving-to-aem-assets/asset-workflow-migration-tool.md), ett verktyg som används för att automatiskt migrera arbetsflöden för resursbearbetning
 * [Dispatcher Converter](/help/journey-migration/refactoring-tools/dispatcher-transformation-utility-tools.md), ett verktyg som konverterar dina befintliga Dispatcher-konfigurationer till ett format som är klart för AEM as a Cloud Service.
-* [Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/repo-modernizer.html), ett verktyg som tar ett AEM flerlägesprojekt som indata och konverterar det till ett AEM as a Cloud Service-projekt
-* [Indexkonverteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/index-converter.html), ett verktyg som konverterar index till ett formulär som är kompatibelt med AEM as a Cloud Service
+* [Databasmodernisering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/repo-modernizer.html?lang=sv-SE), ett verktyg som tar ett AEM flerlägesprojekt som indata och konverterar det till ett AEM as a Cloud Service-projekt
+* [Indexkonverteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/moving/refactoring-tools/index-converter.html?lang=sv-SE), ett verktyg som konverterar index till ett formulär som är kompatibelt med AEM as a Cloud Service
 * [Moderniseringsverktyg](/help/journey-migration/refactoring-tools/aem-modernization-tools.md), en uppsättning verktyg som kan användas för att konvertera äldre AEM till de moderna och stödda funktionerna i AEM as a Cloud Service.
 
 När du har konfigurerat den lokala utvecklingsmiljön kan du bekanta dig med AEM as a Cloud Service SDK genom att läsa [dokumentationen](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md).
@@ -132,9 +132,9 @@ Följ god praxis i dokumenten nedan när det gäller kvalitetstestning av kod:
 
 ## Förbereder för GoLive {#preparing-for-go-live}
 
-När du förbereder källsystemet för migrering måste du utföra åtgärder på system- och AEM-nivå. Du kan börja med att verifiera att innehållsdatabasen är i ett väl underhållet tillstånd genom att kontrollera aktivitetsstatusen för [revisionsrensningen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [datalagrets skräpinsamling](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html). Om du kör AEM version 6.3 (eftersom verktyget Innehållsöverföring är kompatibelt från version 6.3 och framåt) bör du utföra offlinekomprimering följt av skräpinsamlingen i datalagret.
+När du förbereder källsystemet för migrering måste du utföra åtgärder på system- och AEM-nivå. Du kan börja med att verifiera att innehållsdatabasen är i ett väl underhållet tillstånd genom att kontrollera aktivitetsstatusen för [revisionsrensningen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=sv-SE) och [datalagrets skräpinsamling](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html?lang=sv-SE). Om du kör AEM version 6.3 (eftersom verktyget Innehållsöverföring är kompatibelt från version 6.3 och framåt) bör du utföra offlinekomprimering följt av skräpinsamlingen i datalagret.
 
-[Datakonsekvenskontroll](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/consistency-check.html) rekommenderas för alla AEM versioner för att säkerställa att innehållsdatabasen är i ett bra läge för att initiera migreringsaktiviteter.
+[Datakonsekvenskontroll](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/consistency-check.html?lang=sv-SE) rekommenderas för alla AEM versioner för att säkerställa att innehållsdatabasen är i ett bra läge för att initiera migreringsaktiviteter.
 
 Åtkomst på systemadministratörsnivå krävs för att installera och konfigurera [AZCopy](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/handling-large-content-repositories.md)
 

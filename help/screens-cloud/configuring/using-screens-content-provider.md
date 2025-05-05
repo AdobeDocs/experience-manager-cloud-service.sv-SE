@@ -19,13 +19,13 @@ ht-degree: 0%
 
 ## Syfte {#objective}
 
-I följande avsnitt beskrivs hur du skapar kanaler i Screens Content Provider när du har konfigurerat [Screens Services Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=en).
+I följande avsnitt beskrivs hur du skapar kanaler i Screens Content Provider när du har konfigurerat [Screens Services Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/using-screens-content-provider.html?lang=sv-SE).
 
 ## Använda Screens Content Provider {#screens-content-provider}
 
 >[!NOTE]
 >**Förutsättning**
->Innan du börjar läsa det här avsnittet ska du läsa [Konfigurera Screens Services Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html) för att lära dig hur du navigerar till det här användargränssnittet från Screens Services Provider.
+>Innan du börjar läsa det här avsnittet ska du läsa [Konfigurera Screens Services Provider](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=sv-SE) för att lära dig hur du navigerar till det här användargränssnittet från Screens Services Provider.
 
 Följ stegen nedan för att logga in på Screens Content Provider:
 
@@ -42,7 +42,7 @@ Följ stegen nedan för att logga in på Screens Content Provider:
    ![Ikonen för Cloud Manager-översiktssidan visas längst till vänster i ett verktygsfält.](/help/screens-cloud/assets/configure/screens-cp-1.png)
 
    >[!NOTE]
-   >Om du inte har skapat något program läser du [Första gången du loggar in på Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html). Du får hjälp med att lägga till ett program för Screens as a Cloud Service i Cloud Manager.
+   >Om du inte har skapat något program läser du [Första gången du loggar in på Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/onboarding-screens-cloud/first-time-login-screens-cloud.html?lang=sv-SE). Du får hjälp med att lägga till ett program för Screens as a Cloud Service i Cloud Manager.
 
 1. Markera länken på **miljökortet** så att du kan komma åt Screens Content Provider.
 
@@ -58,4 +58,4 @@ Följ stegen nedan för att logga in på Screens Content Provider:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig navigera till Screens Content Provider kan du fortsätta din Screens as a Cloud Service resa genom att granska dokumentet [Skapa och hantera ett projekt i Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html).
+Nu när du har lärt dig navigera till Screens Content Provider kan du fortsätta din Screens as a Cloud Service resa genom att granska dokumentet [Skapa och hantera ett projekt i Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/create-content/creating-projects-screens-cloud.html?lang=sv-SE).

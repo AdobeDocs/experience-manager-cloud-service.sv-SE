@@ -191,7 +191,7 @@ Låt oss utforska de viktigaste komponenterna:
 
   >[!NOTE]
   >
-  > Detaljerade instruktioner om hur du använder Generera variationer för formulär finns i artikeln [Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations).
+  > Detaljerade instruktioner om hur du använder Generera variationer för formulär finns i artikeln [Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations).
 
 - **Experimentation**
 

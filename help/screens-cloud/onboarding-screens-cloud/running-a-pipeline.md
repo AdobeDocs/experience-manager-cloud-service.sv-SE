@@ -16,7 +16,7 @@ ht-degree: 2%
 I det här avsnittet beskrivs hur du kör pipeline och distribuerar koden för ditt program i Cloud Manager.
 
 >[!NOTE]
->Se [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html) och [Distribuera din kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html) för att lära dig hur du kan köra pipeline för ditt program i Cloud Manager.
+>Se [Konfigurera CI-CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=sv-SE) och [Distribuera din kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE) för att lära dig hur du kan köra pipeline för ditt program i Cloud Manager.
 
 ## Syfte {#objective}
 
@@ -37,14 +37,14 @@ I följande avsnitt beskrivs hur du konfigurerar CI/CD-flödet och distribuerar 
 1. Välj dina alternativ i guiden **Konfigurera pipeline**. Klicka på **Spara**.
 
    >[!NOTE]
-   >Mer information om alternativen i guiden Konfigurera pipeline finns i [Konfigurera förloppsinställningarna från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html).
+   >Mer information om alternativen i guiden Konfigurera pipeline finns i [Konfigurera förloppsinställningarna från Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=sv-SE).
 
    ![bild](/help/screens-cloud/assets/onboarding/run-pipeline2-a.png)
 
 1. När installationen är klar uppdateras åtgärdskortet.
 
    >[!NOTE]
-   >Mer information om faserna i distributionen i Cloud Manager finns i [Distribuera din kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
+   >Mer information om faserna i distributionen i Cloud Manager finns i [Distribuera din kod](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
 
    ![bild](/help/screens-cloud/assets/onboarding/run-pipeline3.png)
 

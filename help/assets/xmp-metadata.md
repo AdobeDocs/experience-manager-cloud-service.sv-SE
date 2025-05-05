@@ -53,7 +53,7 @@ ht-degree: 12%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/xmp-writeback.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/xmp-writeback.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 XMP (Extensible Metadata Platform) är den metadatastandard som används av Experience Manager Assets för all metadatahantering. XMP har ett standardformat för framtagning, bearbetning och utbyte av metadata i en mängd olika program.

@@ -19,7 +19,7 @@ ht-degree: 8%
 >id="aemcloud_ctt_extraction"
 >title="Innehållsextrahering"
 >abstract="Extrahering avser att extrahera innehåll från Adobe Experience Manager-källinstansen (AEM) till ett tillfälligt område som kallas migreringsuppsättning. En migreringsuppsättning är ett molnlagringsutrymme som tillhandahålls av Adobe för att tillfälligt lagra det överförda innehållet mellan AEM-källinstansen och Cloud Service AEM-instansen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#top-up-extraction-process" text="Extrahering uppifrån"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=sv-SE#top-up-extraction-process" text="Extrahering uppifrån"
 
 
 Följ stegen nedan för att extrahera migreringsuppsättningen från Content Transfer Tool:

@@ -23,7 +23,7 @@ I författartjänsten kan interna användare skapa, hantera och publicera inneh�
 
 Som en god praxis bör behörigheter anges för grupper i AEM. Dessa grupper kallas även lokala grupper och kan hanteras i AEM redigeringsmiljö.
 
-Det enklaste sättet att hantera gruppmedlemskap är att använda Adobe Identity Management System-grupper (IMS) och tilldela [IMS-grupper till lokala AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#managing-permissions-in-aem).
+Det enklaste sättet att hantera gruppmedlemskap är att använda Adobe Identity Management System-grupper (IMS) och tilldela [IMS-grupper till lokala AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=sv-SE#managing-permissions-in-aem).
 
 ![Behörighetsflöde för Admin Console](assets/admin-console-aem-group-permissions.png)
 
@@ -37,7 +37,7 @@ På en hög nivå är processen:
 
 >[!TIP]
 >
->En detaljerad videogenomgång av hur du hanterar IMS och AEM användare och grupper finns i [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html).
+>En detaljerad videogenomgång av hur du hanterar IMS och AEM användare och grupper finns i [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=sv-SE).
 
 Om du vill hantera **grupper** i AEM går du till **Verktyg** > **Dokumentskydd** > **Grupper**.
 
@@ -80,7 +80,7 @@ Som standard är innehåll som visas via AEM Publish-tjänstens GraphQL-slutpunk
 
 ### Innehållsbehörigheter
 
-Innehåll som exponeras via AEM GraphQL API:er kan begränsas med [Stängda användargrupper (CUG)](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html) inställda på resursmappar, som anger vilka AEM användargrupper (och deras medlemmar) som kan komma åt innehållet i Assets-mapparna.
+Innehåll som exponeras via AEM GraphQL API:er kan begränsas med [Stängda användargrupper (CUG)](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html?lang=sv-SE) inställda på resursmappar, som anger vilka AEM användargrupper (och deras medlemmar) som kan komma åt innehållet i Assets-mapparna.
 
 Assets CUGs arbetar med:
 

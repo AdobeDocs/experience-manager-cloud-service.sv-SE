@@ -44,7 +44,7 @@ När du aktiverar frontendsflödet för en webbplats gör AEM följande ändring
 
 ## Krav {#requirements}
 
-AEM kan automatiskt anpassa din befintliga webbplats så att den kan användas i pipeline för frontservrar. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component (Sidkomponent) i Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/page).
+AEM kan automatiskt anpassa din befintliga webbplats så att den kan användas i pipeline för frontservrar. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component (Sidkomponent) i Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/page).
 
 ## Aktivera frontendspipeline {#enabling}
 
@@ -75,7 +75,7 @@ Front-End Pipeline kan användas med funktionen [Cloud Manager anpassade domäne
 
 Statiska front-end-resurser som distribueras via Front-End Pipeline hanteras som standard från Adobe fördefinierade statiska domän.
 
-Om du behöver en anpassad domän för klientresurser kan du installera en anpassad domän på publiceringsskiktet och konfigurera Dispatcher så att specifika sökvägar (till exempel `/static/`) dirigeras till Adobe statiska värdplats. Den här metoden kräver att [Dispatcher-reglerna](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher) uppdateras för att begäranden om statiska resurser ska kunna vidarebefordras och cachelagras korrekt.
+Om du behöver en anpassad domän för klientresurser kan du installera en anpassad domän på publiceringsskiktet och konfigurera Dispatcher så att specifika sökvägar (till exempel `/static/`) dirigeras till Adobe statiska värdplats. Den här metoden kräver att [Dispatcher-reglerna](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/dispatcher) uppdateras för att begäranden om statiska resurser ska kunna vidarebefordras och cachelagras korrekt.
 
 När du har konfigurerat din anpassade domän och dispatcher kan du konfigurera AEM så att dina frontendresurser hanteras från den statiska domänen.
 

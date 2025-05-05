@@ -19,7 +19,7 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/rule-editor.md) |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=sv-SE) |
 
 I ett adaptivt formulär baserat på kärnkomponenter ger regelredigeringsfunktionen både företagsanvändare och utvecklare möjlighet att skriva regler för adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Detta gör att man kan effektivisera ifyllandet ytterligare och säkerställa både precision och hastighet.
 

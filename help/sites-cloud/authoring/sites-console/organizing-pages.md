@@ -30,7 +30,7 @@ Du kan också använda [mappar](#creating-a-new-folder) för att ordna ditt inne
 
 Strukturen på en webbplats kan ses som ett träd som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan rubrikerna visas när sidinnehållet visas.
 
-I följande exempel visas ett exempel från webbplatsen [WKND Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) där du kan få tillgång till en artikel om skateparker (`la-skateparks`):
+I följande exempel visas ett exempel från webbplatsen [WKND Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE) där du kan få tillgång till en artikel om skateparker (`la-skateparks`):
 
 `http://<host>:<port>/editor.html/content/wknd/en/sports/la-skateparks.html`
 

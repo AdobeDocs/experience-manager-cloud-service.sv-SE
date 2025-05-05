@@ -97,7 +97,7 @@ Verktyget för användarmappning är integrerat i verktyget Innehållsöverföri
 
    >[!IMPORTANT]
    >
-   >* När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka på **Innehållsöverföring** så att du kan skapa en migreringsuppsättning för att köra extraheringen. Mer information finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#running-tool).
+   >* När användarmappningen är klar kan du gå tillbaka till sidan Innehållsmigrering med hjälp av den synliga sökvägen. Kortet för användarmappning visar status och tidsstämpel. Klicka på **Innehållsöverföring** så att du kan skapa en migreringsuppsättning för att köra extraheringen. Mer information finns i [Köra verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=sv-SE#running-tool).
 
 ### Återuppta användarmappningsprocessen {#resume-user-mapping-process}
 

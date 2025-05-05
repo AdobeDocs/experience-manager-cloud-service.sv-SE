@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -85,21 +85,21 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* Du kan nu använda tjänsten Automated forms conversion för att [konvertera PDF forms på franska, tyska och spanska ](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?#language-specific-meta-model) till anpassningsbara formulär.
+* Du kan nu använda tjänsten Automated forms conversion för att [konvertera PDF forms på franska, tyska och spanska ](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=sv-SE&#language-specific-meta-model) till anpassningsbara formulär.
 * En separat panel har lagts till i mallredigeraren för att visa fel som rör adaptiva formulärkomponenter. Det bidrar till att konsolidera alla adaptiva formulärfel på en plats och minskar upplösningstiden.
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#beta-features-forms}
 
-* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/using-communications/aem-forms-cloud-service-communications.html?lang=sv-SE) hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera dokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
    * Generera PDF-filer från ett XFA-formulär i PDF och Adobe Acrobat-formulär.
 
 * **Variable Data Externalizer**: Du kan spara data AEM arbetsflödesvariabler i ett externt lagringssystem som hanteras av din organisation.
 
-* **Acrobat-baserat postdokument**: Du kan även [använda Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) som en mall för postdokument förutom XFA-baserad formulärmall.
+* **Acrobat-baserat postdokument**: Du kan även [använda Adobe Acrobat Form PDF (Acrobat PDF)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) som en mall för postdokument förutom XFA-baserad formulärmall.
 
-* **Microsoft® Azure-datalageranslutning**: Nu kan du [ansluta formulärdatamodellen till Microsoft® Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html). Med den kan du hämta och lagra adaptiva formulärdata i Microsoft® Azure Storage som en BLOB.
+* **Microsoft® Azure-datalageranslutning**: Nu kan du [ansluta formulärdatamodellen till Microsoft® Azure Storage](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/configure-azure-storage.html?lang=sv-SE). Med den kan du hämta och lagra adaptiva formulärdata i Microsoft® Azure Storage som en BLOB.
 
 ## CIF {#cloud-services-cif}
 
@@ -191,7 +191,7 @@ Releasedatum för Cloud Acceleration Manager är 15 juli 2021.
 
 ### Nyheter {#what-is-new-cam}
 
-Cloud Acceleration Manager är en molnbaserad applikation som utformats för att vägleda era IT-team under hela övergångsperioden, från planering till Cloud Service. Konfigurera teamet för en lyckad migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa till att AEM som Cloud Service under hela kundresan. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html).
+Cloud Acceleration Manager är en molnbaserad applikation som utformats för att vägleda era IT-team under hela övergångsperioden, från planering till Cloud Service. Konfigurera teamet för en lyckad migrering med bästa praxis, tips, dokumentation och verktyg som rekommenderas av Adobe för att hjälpa till att AEM som Cloud Service under hela kundresan. Läs mer [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html?lang=sv-SE).
 
 >[!NOTE]
 >

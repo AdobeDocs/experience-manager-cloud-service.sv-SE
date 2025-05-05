@@ -27,7 +27,7 @@ Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher
 
 >[!NOTE]
 >
->Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
+>Detaljerad dokumentation om Dispatcher finns i [Dispatcher Guide](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE).
 
 ## Aktivera cachelagring av beständiga frågor {#enable-caching-persisted-queries}
 
@@ -52,7 +52,7 @@ Om du vill aktivera cachelagring av beständiga frågor definierar du Dispatcher
 
 >[!NOTE]
 >
->För att uppfylla [Dispatcher-kraven för dokument som kan cachas](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html#how-does-the-dispatcher-return-documents%3F) lägger Dispatcher till suffixet `.json` i alla beständiga fråge-URL:er, så att resultatet kan cachas.
+>För att uppfylla [Dispatcher-kraven för dokument som kan cachas](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/troubleshooting/dispatcher-faq.html?lang=sv-SE#how-does-the-dispatcher-return-documents%3F) lägger Dispatcher till suffixet `.json` i alla beständiga fråge-URL:er, så att resultatet kan cachas.
 >
 >Det här suffixet läggs till av en omskrivningsregel när den beständiga frågecachelagringen är aktiverad.
 

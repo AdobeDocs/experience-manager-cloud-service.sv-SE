@@ -21,7 +21,7 @@ ht-degree: 25%
 
 >[!TIP]
 >
->Se [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS till AEM as a Cloud Service. Läs också om hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner och funktioner. Adobe ID krävs.
+>Se [Konfigurera åtkomst till AEM för administratörer](https://experienceleague.adobe.com/?lang=sv&recommended=ExperienceManager-A-1-2020.1.aem) för en introduktion till hur användare autentiserar med Adobe IMS till AEM as a Cloud Service. Läs också om hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner och funktioner. Adobe ID krävs.
 
 ## Viktiga högdagrar {#key-highlights}
 
@@ -46,7 +46,7 @@ Användarens inloggningsflöde visas nedan, användaren omdirigeras till IMS och
 
 Kunden måste registreras för Adobe Admin Console för att kunna använda Adobe IMS för AEM-autentisering.
 
-Som ett första steg måste kunderna ha en organisation som är etablerad i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Det här området är den portal som Adobe-kunder använder för att hantera sina produkträttigheter för användare och grupper.
+Som ett första steg måste kunderna ha en organisation som är etablerad i Adobe IMS. Adobe Enterprise-kunder representeras som IMS-organisationer i [Adobe Admin Console](https://helpx.adobe.com/se/enterprise/using/admin-console.html). Det här området är den portal som Adobe-kunder använder för att hantera sina produkträttigheter för användare och grupper.
 
 AEM bör redan ha en organisation som är etablerad, och som en del av IMS-etableringen är kundinstanserna tillgängliga i Admin Console för hantering av användarrättigheter och åtkomst.
 
@@ -60,9 +60,9 @@ När en kund finns som IMS-organisation måste han/hon konfigurera sitt system e
 1. Systemadministratören gör IDP-konfiguration i Admin Console för att konfigurera enkel inloggning.
 1. AEM-administratören hanterar lokala grupper samt behörigheter och privilegier som vanligt.
 
-Grundläggande om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs under [Konfigurera identitet och enkel inloggning](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
+Grundläggande om Adobe Identity Management, inklusive IDP-konfiguration, beskrivs under [Konfigurera identitet och enkel inloggning](https://helpx.adobe.com/se/enterprise/using/set-up-identity.html).
 
-Företagsadministration och Admin Console-användning beskrivs i [Välkommen till administratörshandboken för företag och team](https://helpx.adobe.com/enterprise/admin-guide.html).
+Företagsadministration och Admin Console-användning beskrivs i [Välkommen till administratörshandboken för företag och team](https://helpx.adobe.com/se/enterprise/admin-guide.html).
 
 ### Onboarding-användare i Admin Console {#onboarding-users-in-admin-console}
 
@@ -217,7 +217,7 @@ För att få tillgång till Cloud Manager eller miljöer i AEM as a Cloud Servic
 Se Rolldefinitioner om du vill veta mer om roller för användare som styr tillgängligheten för specifika funktioner i Cloud Manager.
 
 >[!NOTE]
->Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de olika rollerna med specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions).
+>Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. Om du vill veta mer om de olika rollerna med specifika behörigheter, förkonfigurerade uppgifter eller behörigheter som är kopplade till varje roll kan du läsa [Rollbaserade behörigheter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions).
 
 **Steg för att lägga till en användare**
 

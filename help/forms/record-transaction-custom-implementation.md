@@ -15,14 +15,14 @@ ht-degree: 2%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/transaction-reports/transaction-reports-osgi/record-transaction-custom-implementation) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/transaction-reports/transaction-reports-osgi/record-transaction-custom-implementation) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Använd TransactionRecorder-API:t för att registrera åtgärder som inte räknas som transaktioner automatiskt.
 
 Du kan använda anpassad kod för att skicka ett PDF-formulär. Eller så skickar du ett formulär med egna metoder i stället för att använda de skicka-metoder som finns i AEM Forms. Alla tidigare nämnda åtgärder och anpassade implementeringar av AEM Forms API:er räknas inte som transaktioner. AEM Forms tillhandahåller ett API, [TransactionRecorder](https://javadoc.io/doc/com.adobe.aem/aem-forms-sdk-api/latest/com/adobe/aem/transaction/core/ITransactionRecorder.html), för att registrera sådana åtgärder som transaktioner.
 
-Om du vill spela in en transaktion skriver du [standardservern ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=en) och anropar servern från en klient för att registrera en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
+Om du vill spela in en transaktion skriver du [standardservern ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/store-and-retrieve-af-with-2fa/create-servlet.html?lang=sv-SE) och anropar servern från en klient för att registrera en transaktion. Du kan anropa servleten med AJAX eller någon annan standardmetod.
 
 ## Exempel på kod på serversidan {#sample-server-sided-code}
 

@@ -22,7 +22,7 @@ ht-degree: 11%
 >id="aemcloud_ctt_guidelines"
 >title="Guidelines and Best Practices"
 >abstract="Review guidelines and best practices to use the Content Transfer tool including revision cleanup tasks, Disk space considerations and more."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html" text="Important Considerations for using Content Transfer Tool"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=sv-SE" text="Important Considerations for using Content Transfer Tool"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/group-migration.md#important-considerations" text="Important Considerations when Migrating Groups" 
 
 -->
@@ -38,7 +38,7 @@ Versioner som är tidigare än 2.0.0 stöds inte och du bör använda den senast
 
 Följande riktlinjer och bästa praxis gäller för den nya versionen av verktyget Innehållsöverföring:
 
-* Kör [Konsekvenskontroll av revideringsrensning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html) och [datalagret](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16550.html) på **source**-databasen så att du kan identifiera potentiella problem och minska storleken på databasen.
+* Kör [Konsekvenskontroll av revideringsrensning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=sv-SE) och [datalagret](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16550.html?lang=sv-SE) på **source**-databasen så att du kan identifiera potentiella problem och minska storleken på databasen.
 
 * I inmatningsfasen rekommenderar Adobe att du kör inmatningen med läget *svep* aktiverat där den befintliga databasen (författare eller Publish) i målmiljön för Adobe Experience Manager (AEM) tas bort. Uppdatera sedan med data för migreringsuppsättningen. Det här läget är snabbare än icke-svepningsläget, där migreringsuppsättningen används ovanpå det aktuella innehållet.
 
@@ -74,7 +74,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Extraheringsnyckeln gäller i 14 dagar från den tidpunkt då den skapades eller förnyades. Den kan förnyas när som helst. Om extraheringsnyckeln har upphört att gälla kan du inte utföra en extrahering.
 
-* Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en Publish-miljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. En användare kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Adobe rekommenderar att CTT installeras på källförfattarinstansen när innehåll flyttas till en Production-instans för att flytta innehållet till målförfattarinstansen. Du kan även installera CTT på Publish-källinstansen för att flytta innehåll till Publish-målinstansen. Mer information finns i [Köra verktyget Innehållsöverföring på en Publish-instans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#running-tool).
+* Innehållsöverföringsverktyget (CTT) utför ingen typ av innehållsanalys innan innehåll överförs från källinstansen till målinstansen. CTT skiljer till exempel inte mellan publicerat och opublicerat innehåll när innehåll hämtas till en Publish-miljö. Det innehåll som anges i migreringsuppsättningen hämtas till den valda målinstansen. En användare kan importera en migreringsuppsättning till en Author-instans eller en Publish-instans eller både och. Adobe rekommenderar att CTT installeras på källförfattarinstansen när innehåll flyttas till en Production-instans för att flytta innehållet till målförfattarinstansen. Du kan även installera CTT på Publish-källinstansen för att flytta innehåll till Publish-målinstansen. Mer information finns i [Köra verktyget Innehållsöverföring på en Publish-instans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=sv-SE#running-tool).
 
 * De grupper som överförs av verktyget Innehållsöverföring är bara de grupper som krävs för att innehållet ska uppfylla behörigheterna. Processen _Extrahering_ kopierar hela `/home/groups` till migreringsuppsättningen. Mer information finns i [Gruppmigrering](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/group-migration.md). Processen _Inmatning_ kopierar alla grupper som refereras i de migrerade innehålls-ACL:erna. Se [Migrera stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information om grupper som används i en CUG-princip (Closed User Group).
 
@@ -84,7 +84,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * När du använder `Amazon S3` eller `Azure` som datalager på AEM, bör datalagret konfigureras så att de lagrade blobbarna inte kan tas bort (skräpsamling). Detta garanterar indexdataintegritet och om detta inte konfigureras på det här sättet kan det leda till misslyckade extraheringar på grund av att dessa indexdata saknar integritet.
 
-* Om du använder anpassade index måste du se till att konfigurera anpassade index med noden `tika` innan du kör verktyget Innehållsöverföring. Mer information finns i [Förbereder den nya indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#preparing-the-new-index-definition).
+* Om du använder anpassade index måste du se till att konfigurera anpassade index med noden `tika` innan du kör verktyget Innehållsöverföring. Mer information finns i [Förbereder den nya indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE#preparing-the-new-index-definition).
 
 * Om du tänker göra toppuppsättningar får innehållsstrukturen i det befintliga innehållet inte ändras från den tidpunkt då den första extraheringen utförs till den tidpunkt då extraheringen av toppuppsättningar körs. Det går inte att köra uppsättningar på innehåll vars struktur har ändrats sedan den första extraheringen. Kontrollera att du begränsar detta under migreringsprocessen.
 
@@ -92,7 +92,7 @@ Följ avsnittet nedan om du vill veta mer om viktiga aspekter när du använder 
 
 * Innehållsöverföringsverktyget (CTT) stöder inte sammanfogningsförslag. Om du vill konsolidera innehåll från flera system till en enda instans av Cloud Servicen kan endast versioner från ett källsystem migreras. Den här processen kräver att migreringar med parametern wipe=false används, vilket kan ge utökad inmatningstid på grund av åtgärdens inkrementella karaktär. Om det är möjligt bör du konsolidera innehåll i ett enda källsystem innan du påbörjar migreringen, så att du slipper lägga samman innehåll.
 
-* Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod, efter vilken dess data inte längre är tillgängliga. Granska [migreringsuppsättningen upphör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html#migration-set-expiry) om du vill ha mer information.
+* Ett migreringsset upphör att gälla efter en längre inaktivitetsperiod, efter vilken dess data inte längre är tillgängliga. Granska [migreringsuppsättningen upphör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=sv-SE#migration-set-expiry) om du vill ha mer information.
 
 ## What&#39;s Next {#whats-next}
 

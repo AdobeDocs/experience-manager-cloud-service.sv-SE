@@ -36,7 +36,7 @@ Följande version (2020.12.0) kommer att vara den 17 december 2020
 
 * **Inläsning av stora mängder resurser**: Ge kunderna en skalbar, molnbaserad inmatningstjänst som använder [!DNL Experience Manager] as a Cloud Service arkitektur, inklusive tillgångsmikrotjänster. Exempel på viktiga användningsområden är inhämtning i stor skala med övervakning, rapportering och schemaläggning, samtidigt som resurser kan överföras till molndatalager med hjälp av vanliga verktyg för molnöverföring. Se [verktyg för massinhämtning av resurser](/help/assets/add-assets.md#asset-bulk-ingestor).
 
-  Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html) eller [överföringen med Assets användargränssnitt](/help/assets/add-assets.md#upload-assets) för mindre inmatningsjobb.
+  Det här verktyget är avsett för systemadministratörer, konsulter eller implementeringspartners. Den här funktionen tillåter storskaligt intag och används helst vid första intag eller vid enstaka stora intag. Använd [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE) eller [överföringen med Assets användargränssnitt](/help/assets/add-assets.md#upload-assets) för mindre inmatningsjobb.
 
   ![Konfiguration av bulkimporterare](/help/assets/assets/bulk-import-config-low-res.png)
 
@@ -107,7 +107,7 @@ Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/mana
 
 ### Arbetsflöden {#workflows}
 
-* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Sök efter arbetsflödesinstanser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/administering/workflows-administering.html).
+* Stöd lades till för sökning av arbetsflödesinstanser baserat på arbetsflödets titel, arbetsflödesmodell, status, initierare, nyttolastsökväg och startdatum. Se [Sök efter arbetsflödesinstanser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/administering/workflows-administering.html?lang=sv-SE).
 
 ### Synkronisering av användardata på Publish-nivå {#user-sync}
 
@@ -115,7 +115,7 @@ Mer information finns i [Hantera miljöer](/help/implementing/cloud-manager/mana
 
 ### SDK Build Analyzers {#analyzers}
 
-AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) och [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html#building-for-the-sdk).
+AEM as a Cloud Service SDK Build Analyzer Maven Plugin identifierar problem i ett maven-projekt, inklusive saknade beroenden. Det ger utvecklare möjlighet att upptäcka problem under den lokala utvecklingen, långt före distributionen till molnmiljöer med Cloud Manager. Mer information finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=sv-SE#developing) och [här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE#building-for-the-sdk).
 
 ### Övriga {#others-foundation}
 
@@ -123,7 +123,7 @@ Den nya syntaxen [&#128279;](/help/implementing/dispatcher/disp-overview.md#loca
 
 ## Verktyget Innehållsöverföring {#content-transfer-tool}
 
-Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [Innehållsöverföringsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html) version 1.1.12.
+Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar för [Innehållsöverföringsverktyget](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=sv-SE) version 1.1.12.
 
 ### Nyheter {#what-is-new-ctt}
 

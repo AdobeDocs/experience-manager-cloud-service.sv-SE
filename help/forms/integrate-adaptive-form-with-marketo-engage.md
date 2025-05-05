@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ![Arbetsflöde](/help/forms/assets/workflow-marketo-4.png)
 
-När du har skapat molntjänstkonfigurationen för integrering av Marketo Engage med AEM Forms kan du konfigurera ett adaptivt formulär som ska integreras med [Adobe Marketo Engage](https://experienceleague.adobe.com/en/docs/marketo/using/home).
+När du har skapat molntjänstkonfigurationen för integrering av Marketo Engage med AEM Forms kan du konfigurera ett adaptivt formulär som ska integreras med [Adobe Marketo Engage](https://experienceleague.adobe.com/sv/docs/marketo/using/home).
 
 Du kan ansluta Marketo Engage till ett adaptivt formulär med hjälp av formulärguiden, som förenklar konfigurationsprocessen genom att vägleda dig genom varje steg. Här kan du välja mallar, format och datafält, samt ange datamappning för att säkerställa att formuläret är klart att kommunicera med Marketo Engage när det har skapats. Med hjälp av formulärguiden kan du även konfigurera det adaptiva formuläret så att data skickas direkt till Adobe Marketo Engage när det skickas.
 
@@ -95,7 +95,7 @@ Det adaptiva formuläret har nu konfigurerats för att ansluta till instansen Ma
 
 ## Nästa steg
 
-Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
+Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/sv/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
 
 ## Relaterade artiklar
 

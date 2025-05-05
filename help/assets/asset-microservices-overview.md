@@ -133,6 +133,6 @@ Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsfl
 >
 >* [Komma igång med mikrotjänster för material](asset-microservices-configure-and-use.md)
 >* [Filformat som stöds](file-format-support.md)
->* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
+>* [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html)
+>* [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE)
 >* [Apache Oak-dokumentation om direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)

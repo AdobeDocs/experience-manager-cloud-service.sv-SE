@@ -82,4 +82,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-översättni
 
 * [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om hur du AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)

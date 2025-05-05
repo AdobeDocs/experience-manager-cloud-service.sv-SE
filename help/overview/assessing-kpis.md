@@ -17,8 +17,8 @@ ht-degree: 0%
 >id="aemcloud_assesskpis"
 >title="Utvärderar nyckeltal"
 >abstract="Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html" text="Justera KPI:er"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html" text="Välja rätt team"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=sv-SE" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=sv-SE" text="Välja rätt team"
 
 Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll.
 

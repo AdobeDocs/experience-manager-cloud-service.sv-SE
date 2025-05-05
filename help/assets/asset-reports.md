@@ -53,7 +53,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Med resursrapportering kan du utvärdera verktyget för din [!DNL Adobe Experience Manager Assets]-distribution. Med [!DNL Assets] kan du generera olika rapporter för dina digitala resurser. Rapporterna innehåller användbar information om hur ditt system används, hur användare interagerar med resurser och vilka resurser som delas av <!-- downloaded and -->.
@@ -103,7 +103,7 @@ När en rapport genereras meddelas du via <!-- through an email (optional) and -
 
    >[!NOTE]
    >
-   >Ange dig själv till en **AEM Administrator-produktprofil** för att skapa en **Download**-rapport. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM Administrator-produktprofil.
+   >Ange dig själv till en **AEM Administrator-produktprofil** för att skapa en **Download**-rapport. Se [Tilldela AEM produktprofiler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem) för att ge dig rätt till en AEM Administrator-produktprofil.
 
    ![Välj rapporttyp](assets/choose_report.png)
 

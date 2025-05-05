@@ -29,7 +29,7 @@ Den tidigare tillgängliga CIF-kopplingen kan inte installeras längre. Kod som 
 
 ## Projektstruktur
 
-Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) och egenskaperna för AEM as a Cloud Service. Anpassa projektinställningarna till AEM as a Cloud Service layout.
+Lär dig [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) och egenskaperna för AEM as a Cloud Service. Anpassa projektinställningarna till AEM as a Cloud Service layout.
 Jämfört med AEM 6.5-distributioner finns det två huvudsakliga skillnader här:
 
 * GraphQL-klientens OSGI-paket **får inte** längre inkluderas i AEM, det distribueras via CIF.

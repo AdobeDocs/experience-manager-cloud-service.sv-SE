@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Guiden Skapa projekt {#project-creation-wizard}
 
-När du har skapat ditt produktionsprogram erbjuder Cloud Manager en guide för att skapa ett AEM projekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att snabbt komma igång.
+När du har skapat ditt produktionsprogram erbjuder Cloud Manager en guide för att skapa ett AEM projekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) för att snabbt komma igång.
 
 Följ de här stegen för att skapa ett AEM programprojekt i Cloud Manager med hjälp av guiden.
 

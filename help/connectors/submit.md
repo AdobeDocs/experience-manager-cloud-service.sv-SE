@@ -22,7 +22,7 @@ I tidigare AEM användes [Package Manager](/help/implementing/developing/tools/p
 Det finns olika alternativ för hur paketen kan inkluderas i ett projekt:
 
 1. Partnerns offentliga arkiv - en partner skulle vara värd för innehållspaketet i ett offentligt tillgängligt arkiv
-1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Mer information finns i [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
+1. Partnerns lösenordsskyddade arkiv - en partner lagrar innehållspaketet i en lösenordsskyddad maven-databas. Mer information finns i [lösenordsskyddade maven-databaser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=sv-SE#password-protected-maven-repositories).
 1. Paket med sammankopplade artefakter - i det här fallet inkluderas kopplingspaketet lokalt i kundens maven-projekt.
 
 Oavsett var de finns måste paket refereras som beroenden i pom.xml, vilket tillhandahålls av leverantören.

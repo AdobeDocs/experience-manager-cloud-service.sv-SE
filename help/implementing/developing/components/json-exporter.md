@@ -81,4 +81,4 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 * [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
 * [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
 * [Skapa med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md)
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och komponenten [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) och komponenten [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=sv-SE)

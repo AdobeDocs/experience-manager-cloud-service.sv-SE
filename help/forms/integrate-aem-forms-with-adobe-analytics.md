@@ -16,12 +16,12 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/integrate-aem-forms-with-experience-cloud-solutions/configure-analytics-forms-documents.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/integrate-aem-forms-with-experience-cloud-solutions/configure-analytics-forms-documents.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 <span class="preview"> Det här dokumentet beskriver den manuella proceduren för att aktivera Adobe Analytics i ett anpassat formulär. Adobe rekommenderar dock att du använder [Aktivera Adobe Analytics för ett adaptivt formulär med Experience Cloud Setup Automation](/help/forms/enable-adobe-analytics-adaptive-form-using-experience-cloud-setup-automation.md). </span>
 
-AEM Forms integreras med [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=en) så att du kan hämta in och spåra prestandamått för dina publicerade formulär. Syftet med att analysera dessa värden är att göra det möjligt för företagsanvändare att få insikter i slutanvändarnas beteende och optimera datainhämtningsupplevelsen. Du kan fånga in och spåra beteendet hos både inloggade och ej inloggade (anonyma) användare via Adobe Analytics för Adaptiv Forms.
+AEM Forms integreras med [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/overview.html?lang=sv-SE) så att du kan hämta in och spåra prestandamått för dina publicerade formulär. Syftet med att analysera dessa värden är att göra det möjligt för företagsanvändare att få insikter i slutanvändarnas beteende och optimera datainhämtningsupplevelsen. Du kan fånga in och spåra beteendet hos både inloggade och ej inloggade (anonyma) användare via Adobe Analytics för Adaptiv Forms.
 
 När du har utfört åtgärderna som nämns i den här artikeln kan du konfigurera och visa rapporter i [!DNL Adobe Analytics], vilket visas i följande video:
 
@@ -54,12 +54,12 @@ Följande bild visar vilka åtgärder du behöver utföra innan du visar rapport
 Skapa:[!DNL Adobe Analytics]
 
 * En Adobe ID att logga in på [Adobe Experience Cloud](https://experience.adobe.com/#/home).
-* En [rapportserie](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
+* En [rapportserie](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=sv-SE).
 
 
 ### Installera AEM Forms och [!DNL Adobe Analytics] tillägg {#install-extensions}
 
-Så här konfigurerar du AEM Forms- och [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)-tillägg:
+Så här konfigurerar du AEM Forms- och [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=sv-SE)-tillägg:
 
 1. Logga in på Adobe Experience Cloud och välj ett namn för företaget.
 
@@ -203,7 +203,7 @@ Utför följande steg för att publicera konfigurationen:
 
 ## 2. Konfigurera AEM Forms {#configure-aem-forms}
 
-Skapa en [Adobe IMS-konfiguration med Adobe Launch som molnlösning](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html) innan du skapar en startkonfiguration för Adobe.
+Skapa en [Adobe IMS-konfiguration med Adobe Launch som molnlösning](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=sv-SE) innan du skapar en startkonfiguration för Adobe.
 
 ### Skapa startkonfiguration för Adobe {#create-adobe-launch-configuration}
 
@@ -215,7 +215,7 @@ Så här skapar du en konfiguration för Adobe Launch:
 
 1. Ange en rubrik för konfigurationen i fältet **[!UICONTROL Title]**.
 
-1. Välj den [associerade Adobe IMS-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html).
+1. Välj den [associerade Adobe IMS-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=sv-SE).
 
 1. Välj namnet på företaget som användes när [Adobe Analytics](#Configure-adobe-analytics) konfigurerades.
 
@@ -235,7 +235,7 @@ Så här använder du konfigurationen [!DNL Adobe Launch] i ett befintligt adapt
 1. Välj **[!UICONTROL Save & Close]**. Det adaptiva formuläret har aktiverats för [!DNL Adobe Analytics].
 1. Publish blanketten.
 
-När du har aktiverat [!DNL Adobe Analytics] för ett anpassat formulär kan du [validate](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon) om det finns ett lämpligt datahändelseflöde mellan AEM Forms och [!DNL Adobe Analytics]. Integreringen av AEM Forms med Adobe Analytics är klar. Nu kan du [konfigurera och visa rapporter i Adobe Analytics](#view-reports-adobe-analytics).
+När du har aktiverat [!DNL Adobe Analytics] för ett anpassat formulär kan du [validate](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=sv-SE#validate-the-page-view-beacon) om det finns ett lämpligt datahändelseflöde mellan AEM Forms och [!DNL Adobe Analytics]. Integreringen av AEM Forms med Adobe Analytics är klar. Nu kan du [konfigurera och visa rapporter i Adobe Analytics](#view-reports-adobe-analytics).
 
 ### Skapa regler för att hämta anpassade händelser (valfritt) {#capture-custom-events}
 

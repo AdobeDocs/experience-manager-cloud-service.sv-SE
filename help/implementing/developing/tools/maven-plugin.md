@@ -41,7 +41,7 @@ AEM as a Cloud Service följer de senaste metoderna för pakethantering och proj
 
 >[!TIP]
 >
->Se artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html). Båda stöds fullt ut för AEM 6.5.
+>Se artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE). Båda stöds fullt ut för AEM 6.5.
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
@@ -215,4 +215,4 @@ Den senaste AEM Project Archetype implementerar paketstrukturen med bästa praxi
 
 >[!TIP]
 >
->Se artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html). Båda stöds fullt ut för AEM 6.5.
+>Se artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE). Båda stöds fullt ut för AEM 6.5.

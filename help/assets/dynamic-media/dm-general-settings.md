@@ -89,7 +89,7 @@ När du skapar ett konto tillhandahåller Adobe Dynamic Media automatiskt de ser
 
   Kontrollerar bevarande av befintliga manuella beskärningsdefinitioner.
 
-  Se även `preserveCrop` i [UploadPostJob](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job) och [ReprocessAssetsJob](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job), båda i referenshandboken för Dynamic Media Viewer.
+  Se även `preserveCrop` i [UploadPostJob](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-production-api/data-types/r-upload-post-job) och [ReprocessAssetsJob](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-production-api/data-types/r-reprocess-assets-job), båda i referenshandboken för Dynamic Media Viewer.
 
 ## Standardalternativ för överföring {#default-upload-options}
 
@@ -106,7 +106,7 @@ För effekten Oskarp mask används samma alternativ som för filtret Oskarp mask
 | **[!UICONTROL Threshold]** | Obligatoriskt.<br>Tröskelvärde är ett kontrastintervall som ignoreras när filtret Oskarp mask används. Den här effekten är viktig så att inget &quot;brus&quot; uppstår i en bild när filtret används. Värdeintervallet är `0` - `255`, vilket är antalet intensitetssteg i en gråskalebild. `0`=svart, `128`=50 % grått och `255`=vitt.<br>Ett tröskelvärde på `12` ignorerar små variationer i hudtonens ljusstyrka för att undvika att lägga till brus, men lägger ändå till kantkontrast i kontrastområden som där ögonfransarna möts av hud.<br>Om du har ett foto av någons ansikte påverkar Oskarp mask de kontrastrika delarna av bilden. Till exempel där ögonfransar och hud möts för att skapa ett tydligt kontrastområde och den utjämnade huden. Även den jämnaste huden uppvisar subtila förändringar i intensitetsvärden. Om du inte använder ett tröskelvärde framhäver filtret dessa subtila ändringar i hudpixlar. I sin tur skapas en högljudd och oönskad effekt medan kontrasten på ögonfransarna ökar, vilket ökar skärpan.<br>För att undvika det här problemet introduceras ett tröskelvärde som anger för filtret att ignorera pixlar som inte ändrar kontrast dramatiskt, till exempel mjuk hud.<br>I zippargrafiken som visades tidigare, lägg märke till texturen bredvid zipporna. Bildbrus visas eftersom tröskelvärdena var för låga för att undertrycka bruset. |
 | **[!UICONTROL Monochrome]** | Markera för att få bildintensiteten oskarp mask (intensitet).<br>Avmarkera om du vill avmarkera varje färgkomponent för att göra dem skarpa. |
 
-Se även [Öka skärpan i bilder i Adobe Dynamic Media och på Image Server](https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf?lang=en).
+Se även [Öka skärpan i bilder i Adobe Dynamic Media och på Image Server](https://experienceleague.adobe.com/docs/experience-manager-65/assets/sharpening_images.pdf?lang=sv-SE).
 
 ### PostScript tab {#postscript-tab}
 

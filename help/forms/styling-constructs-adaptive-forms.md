@@ -19,7 +19,7 @@ Kunskap om CSS och LESS Framework.
 
 ## Vad kan anpassas {#what-can-be-customized}
 
-Artikeln innehåller en lista över allmänt tillgängliga CSS-klasser för Adaptive Forms. Du kan använda dessa klasser för att formatera olika komponenter i ett adaptivt formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner om du bara vill skapa format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
+Artikeln innehåller en lista över allmänt tillgängliga CSS-klasser för Adaptive Forms. Du kan använda dessa klasser för att formatera olika komponenter i ett adaptivt formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner om du bara vill skapa format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](https://helpx.adobe.com/se/experience-manager/6-3/forms/using/themes.html).
 
 ## Anpassa format i Adaptive Forms {#customizing-styles-in-adaptive-forms}
 
