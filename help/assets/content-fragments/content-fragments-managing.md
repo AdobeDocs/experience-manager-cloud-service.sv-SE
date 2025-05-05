@@ -5,9 +5,9 @@ exl-id: 333ad877-db2f-454a-a3e5-59a936455932
 feature: Content Fragments
 role: User, Admin
 solution: Experience Manager Sites
-source-git-commit: 715283a9b7c7930ba11063475dbc19f71baacb05
+source-git-commit: 74e2f015d6bcb36505c2dc6471bb68d69d98db99
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1925'
 ht-degree: 4%
 
 ---
@@ -37,11 +37,19 @@ När du har definierat dina [modeller för innehållsfragment](#creating-a-conte
 
 >[!NOTE]
 >
->Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
+>Innehållsfragment är en **webbplatsfunktion**, men lagras som **Assets**.
 >
->De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **Assets**. I det här avsnittet beskrivs hantering från **Assets**-konsolen.
+>De hanteras primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **[Assets](/help/assets/content-fragments/content-fragments-managing.md)**.
 >
->Det finns två redigerare för att skapa innehållsfragment. Även om de grundläggande funktionerna är desamma finns det vissa skillnader. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**). Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
+>Det finns två redigerare för att skapa innehållsfragment - den nya redigeraren och den ursprungliga redigeraren. Den nya redigeraren är standard. Även om de grundläggande funktionerna är desamma finns det vissa skillnader.
+>
+>I det här avsnittet beskrivs den ursprungliga redigeraren.
+>
+>Standardredigeraren för [innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) är den nya redigeraren, som nås både från konsolen **Innehållsfragment** och konsolen **Assets** . Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md).
+>
+>Om du vill använda den [ursprungliga redigeraren](/help/assets/content-fragments/content-fragments-variations.md) öppnar du först den nya redigeraren och inaktiverar sedan växeln **Ny redigerare**.
+>
+>Båda redigerarna har en växlingsknapp i det övre verktygsfältet som ger snabb åtkomst till den andra redigeraren.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -132,23 +140,23 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
-Så här öppnar du fragmentet för redigering:
+Så här öppnar du fragmentet för redigering i den ursprungliga redigeraren:
 
 >[!CAUTION]
 >
 >Du behöver [lämplig behörighet](/help/implementing/developing/extending/content-fragments-customizing.md#asset-permissions) för att kunna redigera ett innehållsfragment. Kontakta systemadministratören om du har problem.
 
-1. Använd **Assets**-konsolen för att navigera till platsen för ditt innehållsfragment.
-1. Öppna fragmentet för redigering, antingen genom att:
+1. Navigera till innehållsfragmentets plats.
 
-   * Klicka/tryck på fragment- eller fragment-länken (detta beror på konsolvyn).
-   * Markera fragmentet och **Redigera** i verktygsfältet.
+1. Öppna fragmentet för redigering.
 
-1. Fragmentredigeraren öppnas. Gör önskade ändringar:
+1. Fragmentet öppnas i den nya redigeraren. Inaktivera växeln **Ny redigerare** (överst till höger) för att öppna den ursprungliga redigeraren:
 
    ![Fragmentredigerare](assets/cfm-managing-03.png)
 
-1. När du har gjort ändringarna använder du **Spara**, **Spara och stäng** eller **Stäng** efter behov.
+1. Gör önskade ändringar.
+
+1. Använd **Spara**, **Spara och stäng** eller **Stäng** efter behov när du är klar.
 
    >[!NOTE]
    >

@@ -5,22 +5,26 @@ exl-id: af05aae6-d535-4007-ba81-7f41213ff152
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 74e2f015d6bcb36505c2dc6471bb68d69d98db99
 workflow-type: tm+mt
-source-wordcount: '2518'
+source-wordcount: '2530'
 ht-degree: 4%
 
 ---
 
 # Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
 
-[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig egenskap i innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service. Detta beror på att du kan skapa och redigera kopior av **mallinnehållet** för användning i vissa kanaler och scenarier. Detta gör i synnerhet innehållsleverans utan motstycke ännu flexiblare.
+[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig funktion i innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service. Detta beror på att du kan skapa och redigera kopior av **mallinnehållet** för användning i vissa kanaler och scenarier. Detta gör i synnerhet innehållsleverans utan motstycke ännu flexiblare.
 
 >[!NOTE]
 >
 >Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
->Det finns två redigerare för att skapa innehållsfragment. Även om de grundläggande funktionerna är desamma finns det vissa skillnader. I det här avsnittet beskrivs den ursprungliga redigeraren, som huvudsakligen nås från **Assets**-konsolen. Mer information om den nya redigeraren finns i webbplatsdokumentationen, [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) (som huvudsakligen nås från konsolen **Innehållsfragment**).
+>Det finns två redigerare för att skapa innehållsfragment - den nya redigeraren och den ursprungliga redigeraren. Den nya redigeraren är standard. Även om de grundläggande funktionerna är desamma finns det vissa skillnader.
+>
+>I det här avsnittet beskrivs den ursprungliga redigeraren. Det här är [öppnat via den nya redigeraren](/help/assets/content-fragments/content-fragments-managing.md#opening-the-fragment-editor).
+>
+>Mer information om den nya redigeraren finns i webbplatsdokumentationen [Innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md).
 
 På fliken **Variationer** kan du göra följande:
 
@@ -43,11 +47,11 @@ Utför en mängd andra åtgärder beroende på vilken datatyp som redigeras, til
 
 >[!CAUTION]
 >
->När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
+>När ett fragment har publicerats och/eller refererats visas en varning i AEM när en författare öppnar fragmentet för redigering igen. Detta för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
-När du öppnar ditt innehållsfragment för redigering är fliken **Variationer** öppen som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Det strukturerade fragmentet innehåller fält med olika datatyper som har definierats i innehållsmodellen.
+När du öppnar ditt innehållsfragment för redigering i den ursprungliga redigeraren är fliken **Variationer** öppen som standard. Här kan du skapa innehållet, för mallsidor eller andra varianter som du har. Det strukturerade fragmentet innehåller fält med olika datatyper som har definierats i innehållsmodellen.
 
 Till exempel:
 

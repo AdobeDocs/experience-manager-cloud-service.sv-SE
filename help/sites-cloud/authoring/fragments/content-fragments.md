@@ -5,9 +5,9 @@ exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
 solution: Experience Manager Sites
 feature: Authoring, Content Fragments
 role: User
-source-git-commit: 46b0af152d5f297419e7d1fa372975aded803bc7
+source-git-commit: 369f0be002413d164911515349b3e25d33eb8b2f
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1272'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,11 @@ Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service [skapas o
 >
 >Innehållsfragment är en **webbplatsfunktion**, men lagras som **Assets**.
 >
->De hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **[Assets](/help/assets/content-fragments/content-fragments-managing.md)**.
+>De hanteras primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)**, men de kan fortfarande hanteras från konsolen **[Assets](/help/assets/content-fragments/content-fragments-managing.md)**.
 >
->Det finns två redigerare för att skapa innehållsfragment:
+>Standardredigeraren för [innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md) är den nya redigeraren, som nås både från konsolen **Innehållsfragment** och konsolen **Assets** .
 >
->* Den nya redigeraren för [innehållsfragment - redigering](/help/sites-cloud/administering/content-fragments/authoring.md), nås primärt från konsolen **Innehållsfragment**.
->* Den [ursprungliga redigeraren](/help/assets/content-fragments/content-fragments-variations.md) är primärt åtkomlig från **Assets**-konsolen.
+>Om du vill använda den [ursprungliga redigeraren](/help/assets/content-fragments/content-fragments-variations.md) öppnar du först den nya redigeraren och inaktiverar sedan växeln **Ny redigerare**.
 
 >[!NOTE]
 >
