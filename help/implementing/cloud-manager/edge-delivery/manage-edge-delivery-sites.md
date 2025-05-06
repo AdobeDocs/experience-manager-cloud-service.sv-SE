@@ -4,7 +4,7 @@ description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Deliv
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 960aa3c6-27b9-44b1-81ea-ad8c5bbc99a5
-source-git-commit: 8e4d988934b927ecbbb29277acdd373a87193ea9
+source-git-commit: 4fa8c65d9744b9451089423de0da63b39530973e
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 0%
@@ -66,7 +66,9 @@ Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smo
 
 Använd API-slutpunkten `/program/{programId}/site/{siteId}` för att migrera en Edge Delivery-webbplats mellan Helix 4 och Helix 5.
 
-CDN-konfigurationer för Helix 4-webbplatser kan inte migreras automatiskt till Helix 5. Begränsningen gäller eftersom kundens produktionsanläggningar fortfarande kan köras på Helix 4 medan deras Helix 5-versioner fortfarande är under utveckling.
+>[!IMPORTANT]
+>
+>CDN-konfigurationer för Helix 4-webbplatser kan inte migreras automatiskt till Helix 5. Begränsningen gäller eftersom kundens produktionsanläggningar fortfarande kan köras på Helix 4 medan deras Helix 5-versioner fortfarande är under utveckling.
 
 **Förutsättningar**
 
