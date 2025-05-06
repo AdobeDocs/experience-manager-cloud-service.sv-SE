@@ -4,7 +4,7 @@ description: Lär dig hur du skapar formulärfragment i den universella redigera
 feature: Edge Delivery Services
 role: Admin, User, Developer
 exl-id: 7b0d4c7f-f82f-407b-8e25-b725108f8455
-source-git-commit: 28a8ce3b3afbdc80d06b50bf4824d52cb81954fe
+source-git-commit: 8dfcec0648f5b474113325b6cc6cffc754e21ec2
 workflow-type: tm+mt
 source-wordcount: '1334'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 <span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Forms innehåller ofta vanliga avsnitt som kontaktinformation, identifikationsinformation eller godkännandeavtal. Formulärutvecklarna skapar dessa avsnitt varje gång de skapar ett nytt formulär som är upprepande och tidskrävande.
 För att slippa detta dubbelarbete erbjuder Universal Editor ett sätt att skapa återanvändbara formulärsegment, t.ex. paneler eller fältgrupper, bara en gång och återanvända dem i olika formulär. Dessa återanvändbara, modulära och fristående segment kallas för formulärfragment. Samma kontaktfragment för nödsituationer kan till exempel användas i olika avsnitt av ett formulär, till exempel för kontaktinformation för medarbetare och ansvarig.
@@ -72,7 +72,7 @@ Så här skapar du ett formulärfragment i den universella redigeraren:
    ![Skapa fragment](/help/edge/docs/forms/universal-editor/assets/create-fragment.png)
 
    Guiden **Skapa adaptivt formulärfragment** visas.
-1. Välj den gruppbaserade mallen för leveranstjänster på fliken **Välj mall** och klicka på **[!UICONTROL Next]**.
+1. Välj den Edge Delivery Services-baserade mallen på fliken **Välj mall** och klicka på **[!UICONTROL Next]**.
    ![Välj Edge Delivery Services-mall](/help/edge/docs/forms/universal-editor/assets/create-form-fragment.png)
 
 1. Ange rubrik, namn, beskrivning och taggar för fragmentet. Se till att du anger ett unikt namn för fragmentet. Om det finns ett annat fragment med samma namn kan fragmentet inte skapas.
