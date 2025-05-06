@@ -3,9 +3,7 @@ title: Hur skapar man blanketter i AEM?
 description: Lär dig mer om de olika plattformar för formulärframtagning som finns i Adobe Experience Manager (AEM) och hur du väljer rätt plattform baserat på dina behov.
 feature: Edge Delivery Services, Adaptive Forms, Core Components
 role: User, Developer
-hide: true
-hidefromtoc: true
-source-git-commit: f6c6b4c17482eb519fb0d4287704d775d0a5da00
+source-git-commit: ec5d15d6ca0e4dc75d1f8abbbd6f794534d8bed7
 workflow-type: tm+mt
 source-wordcount: '1176'
 ht-degree: 0%
@@ -44,7 +42,7 @@ AEM har stöd för flera redigeringsmetoder, som alla passar olika användarbeho
 * [Edge Delivery Services Forms](/help/edge/docs/forms/overview.md): Edge Delivery Services Forms förändrar hur formulär skapas, körs och bearbetas. Genom att utnyttja Edge Delivery Services kan man skapa snabba, säkra och lättillgängliga digitala blanketter som förbättrar användarupplevelsen och effektiviteten i verksamheten i en snabb utvecklingsmiljö. Du kan skapa Edge Delivery Services Forms på två sätt:
    * [WYSIWYG Authoring](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md): Använd den universella redigeraren för att skapa visuella, dra-och-släpp-formulär som är idealiska för innehållsförfattare med begränsad teknisk kunskap. Forms som skapats med Universal Editor levereras med Edge Delivery Services för snabb och enkel rendering.
    * [Dokumentbaserad redigering](/help/edge/docs/forms/tutorial.md): Använd verktyg som Microsoft Excel eller Google Sheets för att definiera formulärstruktur och innehåll. Den här metoden är användbar för företagsanvändare som föredrar kalkylbladsdrivna indata. Dessa formulär publiceras vanligtvis via Edge Delivery Services och är lämpliga för att användas i små och stora volymer.
-* [Headless Authoring](https://experienceleague.adobe.com/sv/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service): Använd API:er för att återge formulär som JSON för alla frontend, till exempel React, Angular, mobilappar eller kioskdatorer, utan att vara beroende av AEM. För närvarande stöder endast Core Components headless-leverans. Headless-formulär är idealiska för flerkanaliga användningsområden och används oberoende av AEM sidåtergivning, vilket gör dem flexibla för anpassade front-end-distributioner.
+* [Headless Authoring](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service): Använd API:er för att återge formulär som JSON för alla frontend, till exempel React, Angular, mobilappar eller kioskdatorer, utan att vara beroende av AEM. För närvarande stöder endast Core Components headless-leverans. Headless-formulär är idealiska för flerkanaliga användningsområden och används oberoende av AEM sidåtergivning, vilket gör dem flexibla för anpassade front-end-distributioner.
 
 ### Jämförelseanalys av AEM blankettkonstruktion
 
@@ -108,6 +106,6 @@ I följande tabell finns en detaljerad jämförelse av de viktigaste funktionern
 ## Relaterad artikel
 
 * [Dokumentbaserad redigering med Microsoft Excel eller Google Sheets](/help/edge/docs/forms/create-forms.md)
-* [Universell redigerare för WYSIWYG-redigering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring)
+* [Universell redigerare för WYSIWYG-redigering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring)
 * [Skapa ett adaptivt formulär (grundkomponenter)](/help/forms/creating-adaptive-form.md)
 * [Skapa en adaptiv form (kärnkomponenter)](/help/forms/create-an-adaptive-form.md)
