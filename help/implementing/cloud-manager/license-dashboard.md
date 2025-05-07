@@ -5,7 +5,7 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
+source-git-commit: e25e337e4b71ed6c0d15bddcb306be243d970501
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Cloud Manager har en kontrollpanel där du enkelt kan se vilka AEMaaCS-produktr�
 
 >[!IMPORTANT]
 >
->Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
+>Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
 >Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md#program-cards).
 
@@ -56,7 +56,7 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 
 >[!TIP]
 >
->Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/se/enterprise/using/admin-console.html).
+>Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Visa användningsinformation {#view-usage-details}
 
@@ -100,38 +100,38 @@ The right side of the window presents an area chart showing the usage broken dow
 
 ## Frågor och svar {#faq}
 
-+++**Vad är en innehållsförfrågan?** {#what-is-a-content-request}
++++**Vad är en innehållsförfrågan?**{#what-is-a-content-request}
 
-En innehållsbegäran är en begäran som riktas till AEM Sites eller ett cachelagringssystem som kunden tillhandahåller, till exempel ett leveransnätverk. Det hämtar innehåll eller data i HTML-format för sidvisningar. Eller i JSON-format för API-anrop.
+En innehållsbegäran är en begäran som riktas till AEM Sites eller ett cachelagringssystem som kunden tillhandahåller, till exempel ett leveransnätverk. Den hämtar innehåll eller data i HTML-format för sidvisningar. Eller i JSON-format för API-anrop.
 
 En innehållsbegäran räknas för varje sidvy eller för var femte API-anrop, mätt i ingressen till det första cachelagringssystemet som tar emot en innehållsbegäran. Innehållsbegäranden räknas endast mot produktionsmiljöer.
 
-Innehållsförfrågningar exkluderar förfrågningar eller aktiviteter som initierats av eller på uppdrag av Adobe enbart i syfte att tillhandahålla produkter och tjänster. Användaragenttrafik som identifieras av Adobe från botar, crawler och spindlar som hör till vanliga sökmotorer och tjänster inom sociala medier är också utesluten.
+Innehållsförfrågningar exkluderar förfrågningar eller aktiviteter som initierats av eller för Adobe enbart i syfte att tillhandahålla produkter och tjänster. Användaragenttrafik som identifieras av Adobe från botar, crawler och spindlar som hör till vanliga sökmotorer och tjänster inom sociala medier är också utesluten.
 
-Se även [Förstå innehållsförfrågningar från Cloud Service](/help/implementing/cloud-manager/content-requests.md).
+Se även [Förstå förfrågningar om Cloud Service-innehåll](/help/implementing/cloud-manager/content-requests.md).
 +++
 
-+++**Hur mäter Adobe Experience Manager innehållsförfrågningar?** {#how-are-content-requests-measured}
++++**Hur mäter Adobe Experience Manager innehållsförfrågningar?**{#how-are-content-requests-measured}
 
-Innehållsbegäranden spåras på AEM as a Cloud Service edge-servrar. Ursprungstrafiken räknas inte med i innehållsförfrågningar. Det CDN som är inbyggt i AEM as a Cloud Service spårar giltiga förfrågningar från HTML och JSON.
+Innehållsbegäranden spåras på AEM as a Cloud Service edge-servrar. Ursprungstrafiken räknas inte med i innehållsförfrågningar. Det CDN som är inbyggt i AEM as a Cloud Service spårar giltiga HTML- och JSON-begäranden.
 
-AEM har också regler för att utesluta välkända organ, inklusive välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst.
+AEM har också regler för att utesluta välkända botar, inklusive välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst.
 
-Se även [Förstå förfrågningar om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
+Se även [Förstå Cloud Service-innehållsförfrågningar](/help/implementing/cloud-manager/content-requests.md).
 +++
 
-+++**Varför visar min analysrapport andra resultat än AEM innehållsförfrågningar?** {#why-are-reports-different}
++++**Varför visar min Analytics-rapport andra resultat än AEM-innehållsförfrågningar?**{#why-are-reports-different}
 
-Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg. Mer information finns i [Förstå förfrågningar om Cloud Service innehåll](/help/implementing/cloud-manager/content-requests.md).
+Innehållsförfrågningar kan innehålla avvikelser med en organisations analysrapporteringsverktyg. Mer information finns i [Förstå Cloud Service-innehållsförfrågningar](/help/implementing/cloud-manager/content-requests.md).
 +++
 
-+++**Vad gör jag om jag vill veta mer om min volym för innehållsförfrågan?** {#current-request-volumes}
++++**Vad gör jag om jag vill veta mer om min volym för innehållsförfrågan?**{#current-request-volumes}
 
-Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på kontrollpanelen för licenser kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta ert Adobe-team eller Adobe kundsupport för att få en rapport över de viktigaste användningsområdena.
+Om du vill ha ytterligare insikter om hur många innehållsförfrågningar som visas på kontrollpanelen för licenser kan ditt Adobe-team tillhandahålla en rapport som visar de viktigaste volymdrivrutinerna för innehållsförfrågningar. Kontakta Adobe-teamet eller Adobe kundsupport för att få en rapport över de viktigaste användningsområdena.
 +++
 
-+++**Vad händer om jag använder mitt eget CDN?** {#using-own-cdn}
++++**Vad händer om jag använder mitt eget CDN?**{#using-own-cdn}
 
-På kontrollpanelen för licenser visas endast data som spåras av Cloud Servicens CDN. Om du väljer att ta med ditt eget CDN (BYOCDN) rapporterar du antalet innehållsförfrågningar till Adobe på årsbasis, vilket framgår av ditt avtal.
+På kontrollpanelen för licenser visas endast data som spåras av Cloud Service CDN. Om du väljer att ta med ditt eget CDN (BYOCDN) rapporterar du mängden innehållsförfrågningar till Adobe på årsbasis, vilket framgår av ditt avtal.
 +++
 
