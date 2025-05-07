@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 83def24319831c3f14f396f2f6b92b053a9d46a9
+source-git-commit: f102cdbab6b38ffabc370691e507754227b91f4e
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1595'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Om du vill ställa in Maven-körnings-JDK skapar du en fil med namnet `.cloudman
 
 #### Krav för migrering till byggteknik med Java 21 eller Java 17 {#prereq-for-building}
 
-Om du vill gå över till att bygga med Java 21 eller Java 17 måste du först uppgradera till den senaste SonarQube-versionen. Mer information finns i [versionsinformationen för Cloud Manager 2025.1.0](/help/implementing/cloud-manager/release-notes/current.md#what-is-new).
+För att kunna bygga med Java 21 eller Java 17 använder Cloud Manager nu SonarQube 9.9, som är kompatibelt med dessa Java-versioner. Den här ändringen infördes i Cloud Manager version 2025.1.0. Ingen kundåtgärd krävs för att uppgradera SonarQube. Mer information och information om ändringen finns i [Versionsinformation för Cloud Manager 2025.1.0](/help/implementing/cloud-manager/release-notes/2025/2025-1-0.md).
 
 När du migrerar ditt program till en ny Java-version och runtime-version bör du noggrant testa i miljö med dev och stage innan du distribuerar till produktion.
 
@@ -103,7 +103,7 @@ Följande funktioner kanske inte fungerar som de ska när de körs i Java 21, oc
 
 #### Körningskrav {#runtime-requirements}
 
-Java 21-miljön används för byggen med Java 21 och Java 17, och den kommer gradvis att tillämpas även på Java 11-byggen (se anmärkningen nedan). En miljö måste finnas i AEM version 17098 eller senare för att Java 21-uppdateringen ska kunna tas emot. För att säkerställa kompatibilitet krävs följande justeringar.
+Java 21-miljön används för byggen med Java 21 och Java 17 och kommer att användas gradvis även i Java 11-byggen (se anmärkningen nedan). En miljö måste finnas i AEM version 17098 eller senare för att Java 21-uppdateringen ska kunna tas emot. För att säkerställa kompatibilitet krävs följande justeringar.
 
 Biblioteksuppdateringar kan användas när som helst eftersom de är kompatibla med äldre Java-versioner.
 
