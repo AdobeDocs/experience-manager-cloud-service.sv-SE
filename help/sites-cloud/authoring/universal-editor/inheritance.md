@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 2a1b87c2-29b9-4689-9a15-e17942439160
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 20f57e2b1b502f48f54e8a03d35a231d0c905739
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Läs om hur den universella redigeraren stöder innehållsarv för hantering av 
 
 >[!NOTE]
 >
->Den här funktionen är bara tillgänglig för innehåll som lagras i AEM.
+>Den här funktionen är bara tillgänglig för innehåll som lagras i AEM-databasen.
 
 ## Användningsfall {#use-case}
 
@@ -44,17 +44,25 @@ När en sida är en del av ett flerlägesobjekt eller en Launch-sida och innehå
 
 Författaren behöver inte klicka på en knapp eller på något annat sätt vidta några andra åtgärder för att inaktivera arv innan han eller hon gör lokala redigeringar. Så snart en ändring har gjorts avbryts arvet implicit. Det här arbetsflödet står i kontrast till [sidredigeraren](/help/sites-cloud/authoring/page-editor/edit-content.md#inherited-components).
 
+Arv kan återställas för hela sidan via:
+
+* [Konsolen Live-kopia - översikt](/help/sites-cloud/administering/msm/live-copy-overview.md)
+* [Startar konsolen](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)
+* Använda knappen **Återställ** på fliken **Live-kopia** i fönstret [sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md).
+
 Den universella redigeraren påverkar inte den underliggande arvsmekanismen. Mer information om hur arv fungerar finns i följande dokumentation.
 
 * [Hantering av flera webbplatser (MSM)](/help/sites-cloud/administering/msm/overview.md)
-* [Startar](/help/sites-cloud/authoring/launches/overview.md)
+* [Launches](/help/sites-cloud/authoring/launches/overview.md)
+
+### AEM MSM-tillägg (Multi-Site Management) {#msm-extension}
+
+Om det är installerat visar både **AEM Multi-Site-Management (MSM)-tillägget** den aktuella arvsstatusen för den markerade komponenten och gör att du kan bryta eller återställa arv på komponentnivå.
+
+Mer information finns i [redigeringsdokumentationen.](/help/sites-cloud/authoring/universal-editor/authoring.md#inheritance)
 
 ## Begränsningar {#limitations}
 
-* Författare kan inte återställa arv för enskilda komponenter.
-   * Arv kan bara återställas för hela sidan via
-      * [Konsolen Live-kopia - översikt](/help/sites-cloud/administering/msm/live-copy-overview.md)
-      * [Startar konsolen](/help/sites-cloud/authoring/launches/overview.md#the-launches-console)
-      * Använda knappen **Återställ** på fliken **Live-kopia** i fönstret [sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md).
-* Författare har ingen visuell feedback för att se vilka komponenter som har sitt arv inaktiverat och vilka som fortfarande har det bevarat.
+* Om du vill återställa arv för enskilda komponenter måste **MSM-tillägget** (AEM Multi-Site-Management) vara aktiverat.
+* Om du vill se vilken komponent som arv inaktiveras och som fortfarande har det bevarat, måste **MSM-tillägget** (AEM Multi-Site-Management) aktiveras.
 * Dessa funktioner är för närvarande begränsade till komponenter på sidor och gäller ännu inte för [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md), trots att de också har MSM- och Launch-funktioner.

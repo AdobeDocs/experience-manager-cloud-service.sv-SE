@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: da14ed18b786c1f19d76926ed027d13a53275af3
+source-git-commit: a2039c99cd1c7e163086ba20af3b41b48fa93683
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '2133'
 ht-degree: 0%
 
 ---
@@ -192,6 +192,122 @@ När du är klar med redigeringen av innehållet vill du ofta navigera i det och
 
 I förhandsgranskningsläget fungerar knapptryckning eller klickning på innehåll på samma sätt som för en läsare av innehållet. Om du vill markera innehållet som ska redigeras växlar du från [förhandsgranskningsläget](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode).
 
+## Redigera komponentarv {#inheritance}
+
+Arv är den mekanism där innehåll kan länkas så att om du ändrar det ena ändras det andra automatiskt.
+
+Med den universella redigeraren kan du avbryta arv av innehåll genom att helt enkelt uppdatera innehållet. Redigeraren inaktiverar automatiskt arv för alla ändringar som görs av författare på den sidan, vilket säkerställer att ändrat innehåll bevaras när uppdateringarna synkroniseras från planen.
+
+Om **AEM Multi-Site-Management (MSM) Extension** är aktiverat för ditt program har du [ytterligare verktygsfältsalternativ](#inheritance-extension) som du kan använda för att visa och ändra arvsstatus för en enskild komponent i Universal Editor.
+
+Mer information om hur arv fungerar med den universella redigeraren finns i [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md).
+
+
+## Alternativ för verktygsfält{#toolbar-options}
+
+Ytterligare funktioner finns som tillägg till den universella redigeraren för att du ska kunna hantera sidor och innehåll ytterligare. [Dessa tillägg måste aktiveras av en administratör](/help/implementing/universal-editor/extending.md) i programmet innan de visas som innehållsförfattare i [verktygsfältet för den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/navigation.md#universal-editor-toolbar)
+
+### Arv {#inheritance-extension}
+
+Tillägget **AEM Multi-Site-Management (MSM)** visar den aktuella arvsstatusen för den markerade komponenten och gör att du kan [bryta eller återinstallera arv.](/help/sites-cloud/authoring/universal-editor/inheritance.md)
+
+Ikonen **Arv installerat** i verktygsfältet för universell redigering visar att arv fortfarande är aktivt för den valda komponenten.
+
+![Ikon installerad för arv](assets/inheritance-installed-icon.png)
+
+Tryck eller klicka på ikonen för att bryta arv för den markerade komponenten. Arv bryts automatiskt om du redigerar komponenten.
+
+Ikonen **Arv brutet** visar att arv har brutits för den valda komponenten.
+
+![Ikonen för brutet arv](assets/inheritance-broken-icon.png)
+
+Tryck eller klicka på ikonen för att återskapa arv för den markerade komponenten. Du måste läsa in sidan igen för att uppdatera innehållet för att kunna visa det ärvda innehållet.
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
+>[!NOTE]
+>
+>Ikonerna **Inledda arv** och **Avbrutna arv** visas bara när en komponent har markerats och sidan baseras på en plan.
+
+>[!NOTE]
+>
+>**AEM Multi-Site-Management (MSM)-tillägget** fungerar bara för sidor, inte för innehållsfragment.
+
+### Åtkomst till sidegenskaper {#page-properties}
+
+Med **AEM-tillägget Sidegenskaper** får du snabb åtkomst till [fönstret Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) för sidan som redigeras just nu.
+
+![Ikon för sidegenskaper](assets/page-properties-icon.png)
+
+Tryck eller klicka på ikonen **Sidegenskaper** i verktygsfältet för Universell redigerare för att öppna sidegenskaperna för sidan på en ny flik i webbläsaren.
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
+>[!NOTE]
+>
+>**AEM-tillägget Sidegenskaper** fungerar bara för sidor, inte för innehållsfragment.
+
+### Åtkomstplatskonsolen {#sites-console}
+
+Med **AEM Site Admin Extension** får du snabb åtkomst till den sida som redigeras i [Sites Console i AEM](/help/sites-cloud/authoring/sites-console/introduction.md) så att du kan navigera i webbplatsträdet eller utföra åtgärder på sidnivå i konsolen.
+
+![Öppna i ikonen Webbplatsadministratör](assets/open-in-site-admin-icon.png)
+
+Tryck eller klicka på ikonen för att öppna platskonsolen på en ny flik i webbläsaren, navigerad till sidan som är i redigeraren.
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
+### Låsa och låsa upp sidor {#locking-pages}
+
+**AEM Page Lock Extension** visar sidans aktuella låsstatus i redigeraren och du kan [låsa eller låsa upp sidan.](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page)
+
+Ikonen **Olåst** i verktygsfältet för universell redigering visar att sidan som för närvarande finns i redigeraren inte är låst.
+
+![Olåst ikon](assets/unlocked-icon.png)
+
+Tryck eller klicka på ikonen för att låsa sidan.
+
+Ikonen **Låst** i verktygsfältet för universell redigering visar att sidan som för närvarande finns i redigeraren är låst. Håll muspekaren över ikonen om du vill visa ett verktygstips som anger användaren som låste sidan.
+
+![Låst ikon](assets/locked-icon.png)
+
+Tryck eller klicka på ikonen för att låsa upp sidan om du är den användare som låste den.
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
+>[!NOTE]
+>
+>**AEM Page Lock Extension** fungerar bara för sidor, inte för innehållsfragment.
+
+### Arbetsflöden {#workflows}
+
+Med **AEM Workflows Extension** kan du [starta ett arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) på den sida som är i redigeraren.
+
+![Ikon för arbetsflöden](assets/workflows-icon.png)
+
+Tryck eller klicka på ikonen **Arbetsflöden** i verktygsfältet för Universell redigering för att öppna **Starta ett arbetsflöde** modal. I fönstret visas det möjliga innehåll som du kan använda ett arbetsflöde på.
+
+![Starta ett arbetsflöde modalt](assets/start-a-workflow.png)
+
+1. Välj arbetsflödet som ska användas i listrutan **Arbetsflödesmodell**.
+1. Ange en beskrivning av arbetsflödet i fältet **Namn**.
+1. I listan **Innehåll som ska inkluderas i arbetsflödet** använder du kryssrutorna för att definiera vilket innehåll som ska inkluderas i arbetsflödet.
+1. Tryck eller klicka på **Starta arbetsflöde** för att starta arbetsflödet eller på **Stäng** för att avbryta.
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
+### Utvecklarinloggning {#developer-login}
+
+**Dev-inloggningstillägget för AEM Universal Editor** är användbart för utvecklare som utvecklar lokalt, vilket gör det enkelt att autentisera lokalt i en AEM SDK för testning.
+
+![Ikon för utvecklarinloggning](assets/developer-login-icon.png)
+
+Tryck eller klicka på ikonen **Developer Logon** i verktygsfältet Universal Editor för att ange dina lokala inloggningsuppgifter för att logga in på din lokala AEM SDK.
+
+![Inloggningsmodal för utvecklare](assets/developer-login.png)
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
 ## Ytterligare resurser {#additional-resources}
 
 Läs det här dokumentet om du vill lära dig hur du publicerar innehåll med den universella redigeraren.
@@ -205,11 +321,3 @@ Mer information om de tekniska detaljerna i Universal Editor finns i dessa utvec
 * [Universell redigeringsarkitektur](/help/implementing/universal-editor/architecture.md) - Lär dig mer om arkitekturen för den universella redigeraren och hur data flödar mellan dess tjänster och lager.
 * [Attribut och typer](/help/implementing/universal-editor/attributes-types.md) - Lär dig mer om de dataattribut och datatyper som krävs för den universella redigeraren.
 * [Autentisering av universell redigerare](/help/implementing/universal-editor/authentication.md) - Lär dig hur den universella redigeraren autentiseras.
-
-## Redigera komponentarv {#inheritance}
-
-Arv är den mekanism där innehåll kan länkas så att om du ändrar det ena ändras det andra automatiskt.
-
-Med den universella redigeraren kan du avbryta arv av innehåll genom att helt enkelt uppdatera innehållet. Redigeraren inaktiverar automatiskt arv för alla ändringar som görs av författare på den sidan, vilket säkerställer att ändrat innehåll bevaras när uppdateringarna synkroniseras från planen.
-
-Mer information om hur arv fungerar med den universella redigeraren finns i [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md).

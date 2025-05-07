@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 98879fe30482e042da05a390e75d11c0adf7dba9
+source-git-commit: eddccf5a9d5c6be8d07120ea2f9e36007f7f909f
 workflow-type: tm+mt
-source-wordcount: '1660'
+source-wordcount: '1698'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -116,6 +116,8 @@ Välj den ikon som representerar användaren för att få åtkomst till dina anv
 ### Verktygsfältet för den universella redigeraren {#universal-editor-toolbar}
 
 Verktygsfältet för den universella redigeraren visas alltid längst upp på skärmen precis under [Experience Cloud-rubriken](#experience-cloud-header). Du får snabb åtkomst för att navigera till en annan sida för att redigera och publicera den aktuella sidan.
+
+Beroende på hur programmet är konfigurerat kan det även innehålla [ytterligare funktioner som har aktiverats som tillägg av administratören.](#additional-toolbar-buttons)
 
 ![Verktygsfältet Universal Editor](assets/universal-editor-toolbar.png)
 
@@ -217,8 +219,9 @@ Du kan till exempel avpublicera en sida (d.v.s. invertera åtgärden för knappe
 
 Universal Editor ger en anpassningsbar och utbyggbar redigeringsfunktion. Om du ser ytterligare knappar i verktygsfältet har den universella redigeraren utökats.
 
+* Mer information om hur ett enskilt tillägg fungerar finns i [dokumentationen för Universal Editor.](/help/sites-cloud/authoring/universal-editor/authoring.md#managing-page-content)
 * Mer information om tilläggsmöjligheter finns i [Utöka den universella redigeraren](/help/implementing/universal-editor/extending.md).
-* Mer information om hur ett enskilt tillägg fungerar finns i [Extension Manager-dokumentationen](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/).
+* Mer information om hur du installerar ett enskilt tillägg finns i [Extension Manager-dokumentationen](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/).
 
 ### Redigeraren {#editor}
 
