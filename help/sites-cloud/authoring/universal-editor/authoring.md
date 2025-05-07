@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: a2039c99cd1c7e163086ba20af3b41b48fa93683
+source-git-commit: 36a27d7fb36c9832b78c13d7544a43df2cbd0fa0
 workflow-type: tm+mt
-source-wordcount: '2133'
+source-wordcount: '2222'
 ht-degree: 0%
 
 ---
@@ -178,14 +178,6 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 >
 >Komponenter kan bara flyttas mellan behållare om målbehållarna [komponentfiltret](/help/implementing/universal-editor/filtering.md) tillåter den valda komponenten.
 
-### Skapa variationer med GenAI med Generera variationer {#generate-variations-ai}
-
-Använd Generative Variations för att utnyttja generativ AI för att snabba upp framtagningen av innehåll.
-
-Öppna Universal Editor för att hitta startpunkten till Generera variationer.
-
-Mer information finns i [Generera variationer - Integrerat i AEM Editors](/help/generative-ai/generate-variations-integrated-editor.md).
-
 ## Förhandsgranska innehåll {#previewing-content}
 
 När du är klar med redigeringen av innehållet vill du ofta navigera i det och se hur det ser ut i innehållet på andra sidor. I [förhandsgranskningsläget](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode) kan du klicka på länkar för att navigera i ditt innehåll som en läsare skulle kunna. Innehållet återges i redigeraren på samma sätt som det publiceras.
@@ -202,8 +194,7 @@ Om **AEM Multi-Site-Management (MSM) Extension** är aktiverat för ditt program
 
 Mer information om hur arv fungerar med den universella redigeraren finns i [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md).
 
-
-## Alternativ för verktygsfält{#toolbar-options}
+## Valfria verktygsfältsfunktioner {#toolbar-options}
 
 Ytterligare funktioner finns som tillägg till den universella redigeraren för att du ska kunna hantera sidor och innehåll ytterligare. [Dessa tillägg måste aktiveras av en administratör](/help/implementing/universal-editor/extending.md) i programmet innan de visas som innehållsförfattare i [verktygsfältet för den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/navigation.md#universal-editor-toolbar)
 
@@ -305,6 +296,20 @@ Information om hur du aktiverar det här tillägget finns i [Extension Manager-d
 Tryck eller klicka på ikonen **Developer Logon** i verktygsfältet Universal Editor för att ange dina lokala inloggningsuppgifter för att logga in på din lokala AEM SDK.
 
 ![Inloggningsmodal för utvecklare](assets/developer-login.png)
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+
+## Valfria funktioner i egenskapspanelen {#properties-panel-options}
+
+Ytterligare funktioner finns som tillägg till den universella redigeraren för att du ska kunna hantera sidinnehållet ytterligare. [Dessa tillägg måste aktiveras av en administratör](/help/implementing/universal-editor/extending.md) i programmet innan de visas som innehållsförfattare i [egenskapspanelen för den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
+
+### Generera variationer {#generate-variations}
+
+Med tillägget **Generera variationer** kan du använda generativ artificiell intelligens (AI) för att skapa variationer för ditt innehåll direkt på egenskapspanelen.
+
+![Ikonen Generera variationer](assets/generate-variations-icon.png)
+
+Tryck eller klicka på ikonen **Generera variationer** på egenskapspanelen för den universella redigeraren för att ta emot rekommendationer och skapa variationer. Mer information om hur du genererar variationer finns i dokumentet [Generate Variations - Integrated in AEM Editors](/help/generative-ai/generate-variations-integrated-editor.md).
 
 Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
 

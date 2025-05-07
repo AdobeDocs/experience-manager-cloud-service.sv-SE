@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att utöka funktionerna 
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 2f487fa5-57a7-477a-ad68-590e6cc12f4e
-source-git-commit: ff8025914a7ece20211ee154e03ce2cd602f81b6
+source-git-commit: 36a27d7fb36c9832b78c13d7544a43df2cbd0fa0
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,7 @@ Som en Adobe Experience Cloud-tjänst kan du utöka den universella redigerarens
 * **[AEM Page Lock Extension](/help/sites-cloud/authoring/universal-editor/authoring.md#locking-pages)**: Visa och ändra status för sidlås i Universal Editor
 * **[AEM Workflows Extension](/help/sites-cloud/authoring/universal-editor/authoring.md#workflows)**: Starta arbetsflöden på sidan och sidinnehållet från Universal Editor
 * **[Dev-inloggningstillägg för AEM Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md#developer-login)**: Autentisera enkelt till din lokala AEM SDK när du utvecklar lokalt
+* **[Generera variationer](/help/generative-ai/generate-variations-integrated-editor.md)**: Använd generativ artificiell intelligens (AI) för att skapa variationer för ditt innehåll direkt på egenskapspanelen.
 * **[AEM produktväljare för Universal Editor](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/ue-product-picker/)**: Integrera Adobe Commerce-data genom att markera eller ta bort produktdata från redigeraren.
 * **[Innehållsutkast för Universal Editor](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/universal-editor-content-drafts/)**: Skapa, redigera och hantera flera utkast av innehåll.
 * **[Konfigurerbar resursväljare](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/)**: Aktivera val av resurser från andra databaser än den som används av den redigerade sidan.
@@ -48,7 +49,7 @@ Om du vill utforska möjligheterna att skapa egna tillägg kan du läsa följand
 
 >[!TIP]
 >
->Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
+>Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
 
 [Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) kan du aktivera eller inaktivera tillägg per instans, få åtkomst till Adobe förstahandstillägg, inklusive de för Universal Editor, och mycket annat.
 

@@ -4,9 +4,9 @@ description: Läs mer om Generera variationer, som kan hämtas från olika redig
 feature: Generate Variations
 role: Admin, Architect, Developer, User
 exl-id: d380ddd6-43f9-4bbf-8167-a6a472b9fc01
-source-git-commit: 056ad9a00ad725d2c10a17a5feff06126eb3c30b
+source-git-commit: c6d03117494d913e5b93edde9d7b38544e566c8a
 workflow-type: tm+mt
-source-wordcount: '1372'
+source-wordcount: '1401'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
   >[!NOTE]
   >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 
@@ -313,7 +313,10 @@ Om du vill använda Generera variationer i Sidekick (i Edge Delivery Services) i
 
 ### Åtkomst från AEM Universal Editor {#access-aem-universal-editor}
 
-Åtkomst från [AEM Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) har implementerats som ett tillägg. Mer information finns i [Extension Manager i AEM Experience Manager](https://developer.adobe.com/uix/docs/extension-manager/).
+Åtkomst från [AEM Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md) har implementerats som ett tillägg.
+
+* Mer information om hur du får åtkomst till Generera variationer från den universella redigeraren finns i dokumentet [Skapa innehåll med den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#generate-variations)
+* Mer information om hur du aktiverar tillägget finns i dokumentet [Extension Manager i AEM Experience Manager.](https://developer.adobe.com/uix/docs/extension-manager/)
 
 ### Åtkomst från AEM Content Fragment Editor {#access-aem-content-fragment-editor}
 
@@ -325,9 +328,9 @@ Du kan även läsa mer om:
 
 * [GenAI Generera variationer på GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
 * [Edge Delivery Services Experimentation](https://www.aem.live/docs/experimentation)
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)
 
 ## Versionshistorik {#release-history}
 
