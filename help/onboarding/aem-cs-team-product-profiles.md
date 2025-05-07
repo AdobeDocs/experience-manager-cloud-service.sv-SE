@@ -4,9 +4,9 @@ description: Läs om hur AEM as a Cloud Service team och produktprofiler kan ge 
 exl-id: 7b1474c9-aca0-4354-8798-1abdcda2f6dd
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 86bb2e020a003fd418f8b1cf7bdf55987a2eaf3d
+source-git-commit: b9cc5450effb70afcb67725fe38826646d947da9
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2124'
 ht-degree: 0%
 
 ---
@@ -143,11 +143,10 @@ I följande tabell beskrivs en lista med möjliga produktprofiler under en produ
         <td>Användare av AEM Assets Collaborator</td>
         <td>
         <ul>
-                <li>Avsett för skrivskyddad åtkomst till DAM. Användare i den här produktprofilen blir automatiskt medlemmar i AEM-gruppen"Medarbetare" som skapats i AEM.
+                <li>Arbeta med material från Experience Manager via integreringar av Assets som är tillgängliga för er organisation i andra Adobe-produkter och program från andra företag än Adobe.
                 </li>
-                <li>
-                Dessutom innehåller det Adobe Express berättiganden för att skapa resursvariationer.
-                </li>
+                <li>Skapa och redigera material med inbyggda Adobe Express och Firefly och använd professionellt designade mallar, märkespaket, Adobe Stock-material med mera.</li>
+                <li>Få åtkomst till och utnyttja godkänt material från er organisation via AEM Assets Content Hub portal.</li>
           <ul>
     </tr>
     <tr>
@@ -156,11 +155,11 @@ I följande tabell beskrivs en lista med möjliga produktprofiler under en produ
         <td>AEM Assets Power Users</td>
 <td>
         <ul>
-                <li>Avsett för skrivskyddad åtkomst till DAM. Användare i den här produktprofilen blir automatiskt medlemmar i AEM-gruppen"Medarbetare" som skapats i AEM.
+                <li>Få tillgång till alla AEM Assets-funktioner, inklusive hantering av resurser, metadata och övergripande styrning och automatisering av digitala resurser.</li>
+                <li>Arbeta med material från Experience Manager via integreringar av Assets som är tillgängliga för er organisation i andra Adobe-produkter och program från andra företag än Adobe.
                 </li>
-                <li>
-                Dessutom innehåller det Adobe Express berättiganden för att skapa resursvariationer.
-                </li>
+                <li>Skapa och redigera material med inbyggda Adobe Express och Firefly och använd professionellt designade mallar, märkespaket, Adobe Stock-material med mera.</li>
+                <li>Få åtkomst till och utnyttja godkänt material från er organisation via AEM Assets Content Hub portal.</li>
           <ul>
 </td>
     </tr>
