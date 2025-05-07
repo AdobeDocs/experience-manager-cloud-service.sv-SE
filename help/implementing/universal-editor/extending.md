@@ -48,7 +48,7 @@ Om du vill utforska möjligheterna att skapa egna tillägg kan du läsa följand
 
 >[!TIP]
 >
->Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
+>Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
 
 [Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) kan du aktivera eller inaktivera tillägg per instans, få åtkomst till Adobe förstahandstillägg, inklusive de för Universal Editor, och mycket annat.
 
