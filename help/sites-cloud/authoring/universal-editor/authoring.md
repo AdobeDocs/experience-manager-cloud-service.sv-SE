@@ -5,7 +5,7 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 36a27d7fb36c9832b78c13d7544a43df2cbd0fa0
+source-git-commit: 9941c652a1509934662cdaae6d187d1a28a1cc31
 workflow-type: tm+mt
 source-wordcount: '2222'
 ht-degree: 0%
@@ -214,7 +214,7 @@ Ikonen **Arv brutet** visar att arv har brutits för den valda komponenten.
 
 Tryck eller klicka på ikonen för att återskapa arv för den markerade komponenten. Du måste läsa in sidan igen för att uppdatera innehållet för att kunna visa det ärvda innehållet.
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 >[!NOTE]
 >
@@ -232,7 +232,7 @@ Med **AEM-tillägget Sidegenskaper** får du snabb åtkomst till [fönstret Side
 
 Tryck eller klicka på ikonen **Sidegenskaper** i verktygsfältet för Universell redigerare för att öppna sidegenskaperna för sidan på en ny flik i webbläsaren.
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 >[!NOTE]
 >
@@ -246,7 +246,7 @@ Med **AEM Site Admin Extension** får du snabb åtkomst till den sida som redige
 
 Tryck eller klicka på ikonen för att öppna platskonsolen på en ny flik i webbläsaren, navigerad till sidan som är i redigeraren.
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 ### Låsa och låsa upp sidor {#locking-pages}
 
@@ -264,7 +264,7 @@ Ikonen **Låst** i verktygsfältet för universell redigering visar att sidan so
 
 Tryck eller klicka på ikonen för att låsa upp sidan om du är den användare som låste den.
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 >[!NOTE]
 >
@@ -285,7 +285,7 @@ Tryck eller klicka på ikonen **Arbetsflöden** i verktygsfältet för Universel
 1. I listan **Innehåll som ska inkluderas i arbetsflödet** använder du kryssrutorna för att definiera vilket innehåll som ska inkluderas i arbetsflödet.
 1. Tryck eller klicka på **Starta arbetsflöde** för att starta arbetsflödet eller på **Stäng** för att avbryta.
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 ### Utvecklarinloggning {#developer-login}
 
@@ -297,7 +297,7 @@ Tryck eller klicka på ikonen **Developer Logon** i verktygsfältet Universal Ed
 
 ![Inloggningsmodal för utvecklare](assets/developer-login.png)
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 ## Valfria funktioner i egenskapspanelen {#properties-panel-options}
 
@@ -311,7 +311,7 @@ Med tillägget **Generera variationer** kan du använda generativ artificiell in
 
 Tryck eller klicka på ikonen **Generera variationer** på egenskapspanelen för den universella redigeraren för att ta emot rekommendationer och skapa variationer. Mer information om hur du genererar variationer finns i dokumentet [Generate Variations - Integrated in AEM Editors](/help/generative-ai/generate-variations-integrated-editor.md).
 
-Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/)
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 ## Ytterligare resurser {#additional-resources}
 

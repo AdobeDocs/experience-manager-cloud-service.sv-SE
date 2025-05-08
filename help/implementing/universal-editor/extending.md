@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att utöka funktionerna 
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 2f487fa5-57a7-477a-ad68-590e6cc12f4e
-source-git-commit: 36a27d7fb36c9832b78c13d7544a43df2cbd0fa0
+source-git-commit: 9941c652a1509934662cdaae6d187d1a28a1cc31
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig mer om de olika alternativen för att utöka funktionerna i Universell 
 
 ## Tillägg {#extensions}
 
-Som en Adobe Experience Cloud-tjänst kan du utöka den universella redigerarens användargränssnitt med App Builder och Experience Manager. Adobe har många färdiga tillägg som du kan använda i ditt projekt.
+Som en Adobe Experience Cloud-tjänst kan du utöka den universella redigerarens användargränssnitt med App Builder och Experience Manager. Adobe erbjuder många färdiga tillägg som är tillgängliga via [Extension Manager](https://experience.adobe.com/aem/extension-manager) som du kan använda för ditt projekt.
 
 * **[AEM MSM-tillägg (Multi-Site Management)](/help/sites-cloud/authoring/universal-editor/authoring.md#inheritance)**: Bryt eller återinstallera arv på komponentnivå
 * **[AEM-tillägget Sidegenskaper](/help/sites-cloud/authoring/universal-editor/authoring.md#page-properties)**: Gå till sidegenskapsfönstret för sidan i Universell redigerare
@@ -37,6 +37,8 @@ Som en Adobe Experience Cloud-tjänst kan du utöka den universella redigerarens
 * **[Exportera innehållsfragment till Adobe Target](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/exporting-content-fragment-to-adobe-target/)**: Exportera innehållsfragment som skapats i Adobe Experience Manager as a Cloud Service till Adobe Target för att användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
 * **[Arbetsflöden för innehållsfragment](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/content-fragments-workflows/)**: Initiera ett AEM-arbetsflöde för valda innehållsfragment.
 
+Information om hur du aktiverar dessa tillägg finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
+
 ## Utöka användargränssnittet {#extending-ui}
 
 UI-tilläggen för Universal Editor är JavaScript-program som skapats med Adobe App Builder. Med samma verktyg kan du också lägga till egna knappar och åtgärder i rubrikmenyn och egenskapspanelen samt skapa egna händelser för den universella redigeraren.
@@ -49,7 +51,7 @@ Om du vill utforska möjligheterna att skapa egna tillägg kan du läsa följand
 
 >[!TIP]
 >
->Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
+>Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
 
 [Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) kan du aktivera eller inaktivera tillägg per instans, få åtkomst till Adobe förstahandstillägg, inklusive de för Universal Editor, och mycket annat.
 

@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 2a1b87c2-29b9-4689-9a15-e17942439160
-source-git-commit: 20f57e2b1b502f48f54e8a03d35a231d0c905739
+source-git-commit: 9941c652a1509934662cdaae6d187d1a28a1cc31
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,9 @@ Den universella redigeraren påverkar inte den underliggande arvsmekanismen. Mer
 
 Om det är installerat visar både **AEM Multi-Site-Management (MSM)-tillägget** den aktuella arvsstatusen för den markerade komponenten och gör att du kan bryta eller återställa arv på komponentnivå.
 
-Mer information finns i [redigeringsdokumentationen.](/help/sites-cloud/authoring/universal-editor/authoring.md#inheritance)
+Mer information om hur du använder tillägget finns i [redigeringsdokumentationen.](/help/sites-cloud/authoring/universal-editor/authoring.md#inheritance)
+
+Information om hur du aktiverar det här tillägget finns i [Extension Manager-dokumentationen.](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions)
 
 ## Begränsningar {#limitations}
 
