@@ -4,7 +4,7 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 722d9a14ccac2f9f1c6dd32455935bafc4897a68
+source-git-commit: c4dcb1cecb756f746ecb856fcfd65d73833a5ee0
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 0%
@@ -178,6 +178,8 @@ Följande variabler är tillgängliga för att definiera dina mappningar i fält
 Din app är nu instrumenterad för att använda den universella redigeraren!
 
 Se [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md) för att lära dig hur enkelt och intuitivt det är för innehållsförfattare att skapa innehåll med den universella redigeraren.
+
+{{ue-headless-auth}}
 
 ## Ytterligare resurser {#additional-resources}
 

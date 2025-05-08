@@ -4,7 +4,7 @@ description: Lär dig mer om den universella redigeraren med praktiska erfarenhe
 exl-id: 97e1395f-b51e-4cee-b1d0-2466a08f96af
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: c4dcb1cecb756f746ecb856fcfd65d73833a5ee0
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lär dig mer om den universella redigeraren med praktiska erfarenheter med Secur
 
 ## Förutsättningar {#prerequisites}
 
-* Du måste tilldelas **AEM Administrator** [produktprofilen](/help/journey-onboarding/assign-profiles-aem.md) för att kunna installera SecurBank-appen.
+* Du måste tilldelas till **AEM Administrator** [produktprofilen](/help/journey-onboarding/assign-profiles-aem.md) för att kunna installera SecurBank-appen.
 * Du måste ha [Node.js](https://nodejs.org) version 20 eller senare installerat för lokal utveckling.
 
 ## Installerar SecurBank {#installation}
@@ -25,8 +25,8 @@ Lär dig mer om den universella redigeraren med praktiska erfarenheter med Secur
 Installationen av SecurBank-appen är enkel, men eftersom den berör många delar av AEM as a Cloud Service finns det ett antal steg. Här följer en översikt över de viktigaste stegen.
 
 1. [Skapa ett sandlådeprogram i Cloud Manager](#create-sandbox-program).
-1. [Klona programmets Git-databas och uppdatera med SecurBank-AEM projektinnehåll](#clone-and-update).
-1. [Kör pipelinen för att distribuera SecurBank-AEM](#run-pipeline).
+1. [Klona programmets Git-databas och uppdatera med SecurBank AEM-projektinnehåll](#clone-and-update).
+1. [Kör pipeline för att distribuera SecurBank AEM-projektet](#run-pipeline).
 1. [Hämta Cloud Manager-autentiseringsuppgifter för lokal webbprogramsutveckling](#retrieve-credentials).
 1. [Hämta och konfigurera SecurBanks webbprogram](#download-web-app).
 1. [Kör SecurBank-webbprogrammet](#run-web-app).
@@ -44,7 +44,7 @@ Du behöver ett nytt Cloud Manager-program där du kan installera SecurBank.
    * Använd standardalternativen när du väljer **Lösningar och tillägg**.
    * Mer information om hur du skapar ett sandlådeprogram finns i dokumentet [Skapa sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-sandbox-programs.md).
 
-### Klona programmets Git-databas och uppdatera med SecurBank-AEM projektinnehåll. {#clone-and-update}
+### Klona programmets Git-arkiv och uppdatera med SecurBank AEM-projektinnehåll. {#clone-and-update}
 
 1. När programmet har skapats öppnar du det och på fliken **Databaser** trycker eller klickar på knappen **Åtkomst till replikinformation** för att öppna dialogrutan **Databasinformation** och visar de inloggningsuppgifter som krävs för åtkomst till Git-databasen för sandlådemiljön.
 
@@ -54,7 +54,7 @@ Du behöver ett nytt Cloud Manager-program där du kan installera SecurBank.
 
 1. Leta reda på mappen för den lokala klonen, öppna den och ta bort allt innehåll utom dolda/punktfiler.
 
-1. Hämta den senaste SecurBank-AEM-projektkoden från GitHub på [`https://github.com/Adobe-Marketing-Cloud/summit-2024-l425-securbank`](https://github.com/Adobe-Marketing-Cloud/summit-2024-l425-securbank) genom att klicka på **Code** och sedan på **Download ZIP** i listrutan.
+1. Hämta den senaste SecurBank AEM-projektkoden från GitHub på [`https://github.com/Adobe-Marketing-Cloud/summit-2024-l425-securbank`](https://github.com/Adobe-Marketing-Cloud/summit-2024-l425-securbank) genom att klicka på **Code** och sedan på **Download ZIP** i listrutan.
 
 1. Dekomprimera innehållet i zip-filen på det lokala filsystemet och flytta den till den nu tomma mappen för den lokala klonen i sandlådeprogrammet.
 
@@ -64,9 +64,9 @@ Du behöver ett nytt Cloud Manager-program där du kan installera SecurBank.
    1. `git commit -m "Adding SecurBank app code"`
    1. `git push`
 
-### Kör pipelinen för att distribuera SecurBank-AEM. {#run-pipeline}
+### Kör pipeline för att distribuera SecurBank AEM-projektet. {#run-pipeline}
 
-Med det AEM projektet för SecurBank för sandlådedatabasen kan det distribueras med en pipeline.
+Med AEM-projektet för SecurBank kopplat till sandlådedatabasen kan det distribueras med en pipeline.
 
 1. Gå tillbaka till fliken **Översikt** i ditt sandlådeprogram i Cloud Manager och kör pipelinen för icke-produktion i helhög.
 
@@ -137,3 +137,6 @@ Grattis! Nu bör du se när SecurBank-appen körs i webbläsaren.
 Om innehållet inte visas än kontrollerar du att pipeline **Distribuera till Dev** som du har kört har slutförts.
 
 ![SecurBank-appen i webbläsaren](assets/securbank.png)
+
+{{ue-headless-auth}}
+

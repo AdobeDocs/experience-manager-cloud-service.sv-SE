@@ -4,7 +4,7 @@ description: Lär dig mer om de viktigaste användningsexemplen i Universal Edit
 exl-id: 398ad0e2-c299-4c49-9784-05c84c67bec2
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: cdad4954b13f5582bebfd604220da90529231ccd
+source-git-commit: c4dcb1cecb756f746ecb856fcfd65d73833a5ee0
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -55,6 +55,8 @@ Om detta är ditt sätt att arbeta kan du i nästa steg se följande dokument so
 * [SecurBank-exempelapp för Universal Editor](/help/implementing/universal-editor/securbank.md)
 
 När du har läst det dokumentet kan du gå tillbaka till den här sidan för att lära dig mer om WYSIWYG redigeringsprogram och hur den universella redigeraren fungerar i allmänhet.
+
+{{ue-headless-auth}}
 
 ## How the Universal Editor Works {#how-ue-works}
 
