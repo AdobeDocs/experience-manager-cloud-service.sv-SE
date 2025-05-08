@@ -1,11 +1,12 @@
 ---
-title: Komma igång med Edge Delivery Services för AEM Forms. Skapa ett formulär.
-description: Skapa perfekta formulär, snabbt! ⚡ AEM Forms Edge Delivery dokumentbaserad redigering = blixtsnabb och SEO-vänliga formulär för nöjdare användare och sökmotorer.
+title: Skapa ett formulär med anpassat Forms-block
+description: Kom igång med Edge Delivery Services för AEM Forms. Skapa perfekta formulär, snabbt! AEM Forms Edge Delivery-baserad redigering = blixtsnabb och SEO-anpassade formulär för nöjdare användare och sökmotorer.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: 04fb65b4ec2d8bf6f54e1927469cda4bf94cbec8
+exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
+source-git-commit: efd4fbb38724632865d87b80827611899e2c6d1f
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '784'
 ht-degree: 0%
 
 ---
