@@ -5,7 +5,7 @@ exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: cb9707e4f53e32ed6e5aec244b1ef2240fcf376c
+source-git-commit: 87836c7f28c9e3c8269fac073f46c53ce73fecfa
 workflow-type: tm+mt
 source-wordcount: '1098'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Se [Fler alternativ för produktionsprogram](#options).
 
    * Om du är osäker på om du behöver ett eller flera program för de olika lösningar du har tillgängliga väljer du det som intresserar dig mest. Du kan aktivera ytterligare lösningar genom att [redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) senare. Se dokumentet [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för fler rekommendationer för programkonfiguration.
    * Minst en lösning krävs för att skapa ett program.
-   * Välj **Edge Deliver Services** för en fullständigt hanterad CDN-lösning som optimerar digitala upplevelser. Se [Använda Edge Delivery Services för att leverera ditt Cloud Manager-projekt](#edge-overview)
+   * Välj **Edge Delivery Services** för en fullständigt hanterad CDN-lösning som optimerar digitala upplevelser. Se [Använda Edge Delivery Services för att leverera ditt Cloud Manager-projekt](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
    * Om du valde alternativet **[Aktivera förbättrat skydd](#security)** kan du bara välja så många lösningar som det finns tillgängliga HIPAA-berättiganden för.
 
      ![Välj lösningar](/help/implementing/cloud-manager/assets/add-production-program-with-edge.png)
@@ -128,7 +128,7 @@ Utöver de rättigheter som krävs har SLA 99,99 % för Sites eller Forms följa
 
 1. Välj **Programöversikt** om du vill gå till sidan **Översikt** för Cloud Manager.
 
-1. Huvudkortet på översiktssidan hjälper dig att skapa en miljö, en icke-produktionsprocess och slutligen en produktionsprocess.
+1. Call-to-action-kortet på översiktssidan vägleder dig genom att skapa en miljö, en produktionsprocess och slutligen en produktionsprocess.
 
    ![Programöversikt](assets/set-up-prod5.png)
 

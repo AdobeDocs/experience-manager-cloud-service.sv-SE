@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bd207a7c3e9e5e52202456fa95dd31293639725f
+source-git-commit: 23ee3857bb0440ba9f386002b859217d0b5f8f37
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 Innehållsförfrågningar omfattar förfrågningar som skickas till AEM Sites. Dessa förfrågningar kan skickas via Edge Delivery Services eller kundtillhandahållna cachelagringssystem, t.ex. ett CDN-nätverk (Content Delivery Network). Dessa förfrågningar levererar strukturerade data i HTML- eller JSON-format och supportsidor (till exempel sidor och Experience Fragments) eller JSON-returer via API:er utan rubriker.
 
 Systemet räknar innehållsbegäranden när en användare visar en sida med HTML eller JSON. Den mäter begäran vid den punkt där det första cachesystemet tar emot den. Vissa HTTP-begäranden inkluderas eller exkluderas för att räkna innehållsbegäranden. Se den fullständiga listan över HTTP [inkluderade innehållsförfrågningar](#included-content-requests) och [exkluderade innehållsförfrågningar](#excluded-content-request).
+
+>[!NOTE]
+>
+>Data som visas i vyn Innehållsförfrågningar uppdateras var 24:e timme.
 
 ## Om förfrågningar om Cloud Service-innehåll {#understanding-cloud-service-content-requests}
 

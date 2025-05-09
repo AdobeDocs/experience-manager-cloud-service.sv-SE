@@ -5,7 +5,7 @@ exl-id: 10011392-3059-4bb0-88db-0af1d390742e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8b15b203d0d6a5947a80c9bd217c7fdcdb8f494c
+source-git-commit: 87836c7f28c9e3c8269fac073f46c53ce73fecfa
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Läs mer om programtyper i dokumentet [Om program- och programtyper](program-typ
 1. I listrutan **Lösningar och tillägg** väljer du en eller flera lösningar som ska ingå i programmet.
 
    * Klicka på nedtryckningen till vänster om namnet på en lösning för att visa alla tillgängliga valfria tillägg som du vill inkludera i en vald lösning.
-   * Lösningarna **Webbplatser**, **Assets** och **Edge Deliver Services** är alltid markerade som standard när du skapar ett sandlådeprogram. Du kan inte avmarkera dem.
+   * Lösningarna **Webbplatser**, **Assets** och **Edge Delivery Services** är alltid markerade som standard när du skapar ett sandlådeprogram. Du kan inte avmarkera dem.
 
    ![Välj lösningar och tillägg för en sandlåda](assets/sandbox-solutions-add-ons.png)
 
@@ -67,11 +67,11 @@ När ett nytt sandlådeprogram har skapats kan du visa detaljerna för sandlåde
    >
    >Mer information om hur du får åtkomst till och hanterar Git-databasen finns i [Åtkomst till Git](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
-1. När utvecklingsmiljön har skapats kan du klicka på **Åtkomst AEM** och logga in AEM.
+1. När utvecklingsmiljön har skapats kan du klicka på **Åtkomst till AEM** och logga in på AEM.
 
-   ![AEM](assets/create-program5.png)
+   ![Länk till AEM](assets/create-program5.png)
 
-1. När den icke-produktionsprocess som distribueras till utvecklingsfasen är klar vägleder guiden i anropet dig till att antingen få åtkomst till AEM utvecklingsmiljö eller att distribuera kod till utvecklingsmiljön.
+1. När den icke-produktionsprocess som distribueras till utvecklingsfasen är klar vägleder guiden i call-to-action dig att antingen komma åt AEM utvecklingsmiljö eller att distribuera kod till utvecklingsmiljön.
 
    ![Distribuerar sandlåda](assets/create-program-setup-deploy.png)
 
