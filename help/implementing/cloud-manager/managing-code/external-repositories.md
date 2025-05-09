@@ -1,13 +1,13 @@
 ---
 title: Lägg till externa databaser i Cloud Manager
-description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
+description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab-, Bitbucket- och Azure DevOps-databaser.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: d7278834cf5704d1b54d5713df22a7a980c78457
+source-git-commit: a0eac2f3f513b9fecd595a86bb2110083fa0b80f
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '2074'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,11 @@ ht-degree: 0%
 
 Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
 
+Kunderna kan nu även införliva sina Azure DevOps Git-databaser i Cloud Manager, med stöd för både moderna Azure DevOps-databaser och äldre VSTS-databaser (Visual Studio Team Services).
+
+* För Edge Delivery Services-användare kan den inbyggda databasen användas för att synkronisera och distribuera platskod.
+* För AEM as a Cloud Service- och Adobe Managed Services-användare (AMS) kan databasen länkas till både fullständiga och frontbaserade pipelines.
+&#39;
 >[!NOTE]
 >
 >De funktioner som beskrivs i den här artikeln är endast tillgängliga via programmet för tidig användning. Mer information och om du vill registrera dig som tidig användare finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
@@ -60,7 +65,7 @@ Konfigurationen av en extern databas i Cloud Manager består av följande steg:
    | --- | --- |
    | **Databasnamn** | Obligatoriskt. Ett uttrycksfullt namn för din nya databas. |
    | **Databas-URL** | Obligatoriskt. Databasens URL.<br><br>Om du använder en GitHub-värdbaserad databas måste sökvägen sluta i `.git`.<br>Till exempel *`https://github.com/org-name/repo-name.git`* (URL-sökvägen är endast avsedd som illustration).<br><br>Om du använder en extern databas måste den använda följande URL-sökvägsformat:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> eller<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Och matcha Git-leverantören. |
-   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder:<ul><li>**GitHub** (GitHub Enterprise och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (endast `bitbucket.org` (molnversion) stöds. Den självhanterade versionen av Bitbucket är borttagen från och med den 15 februari 2024.)</li></ul>Om databasens URL-sökväg ovan innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald. |
+   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder. Om databasens URL-sökväg innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald.:<ul><li>**GitHub** (GitHub Enterprise och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (endast `bitbucket.org` - molnversion) stöds. Den självhanterade versionen av Bitbucket är borttagen från och med den 15 februari 2024.)</li><li>**Azure DevOps** (`dev.azure.com`) </ul> |
    | **Beskrivning** | Valfritt. En detaljerad beskrivning av databasen. |
 
 1. Välj **Spara** för att lägga till databasen.
@@ -76,10 +81,11 @@ Konfigurationen av en extern databas i Cloud Manager består av följande steg:
    | **Lägg till ny åtkomsttoken** | **Databastyp: GitHub Enterprise**<br><ul><li> Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitHub-dokumentationen](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Behörigheter som krävs för GitHub Enterprise Personal Access Token (PAT)<br>Dessa behörigheter säkerställer att Cloud Manager kan validera pull-begäranden, hantera implementeringsstatuskontroller och få tillgång till nödvändig repo-information.<br>När du genererar PAT i GitHub Enterprise måste du se till att det innehåller följande databasbehörigheter:<ul><li>Pull-begäran (läs och skriv)<li>Bekräfta status (läs och skriv)<li>Databasmetadata (skrivskyddade)</li></li></ul></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
    | | **Databastyp: GitLab**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Behörigheter som krävs för GitLab Personal Access Token (PAT)<br>Dessa scope ger Cloud Manager åtkomst till databasdata och användarinformation som behövs för validering och webkrok-integrering.<br>När du genererar PAT i GitLab ska du kontrollera att det innehåller följande tokenomfång:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
    | | **Databastyp: Bitbucket**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Behörigheter som krävs för Bitbucket Personal Access Token (PAT)<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webboks-händelser.<br>När du skapar applösenordet i Bitbucket måste det innehålla följande lösenordsbehörigheter:<ul><li>Databas (skrivskyddad)<li>Hämta begäranden (läsa och skriva)<li>Webhooks (läs och skriv)</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | | **Databastyp: Azure DevOps**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Azure DevOps-dokumentationen](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=Windows).<li>Nödvändig behörighet för Azure DevOps Personal Access Token (PAT).<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webkrockshändelser.<br>När du skapar applösenordet i Azure DevOps måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Databas (skrivskyddad)</li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
 
-   >[!NOTE]
+   >[!IMPORTANT]
    >
-   >Funktionen **Lägg till ny åtkomsttoken** är för närvarande i fasen Tidiga Adobe-program. Ytterligare funktioner planeras. Därför kan de behörigheter som krävs för åtkomsttoken ändras. Dessutom kan användargränssnittet för hantering av tokens uppdateras, inklusive funktioner som utgångsdatum för token. Och automatiska kontroller för att säkerställa att tokens som är länkade till databaser förblir giltiga.
+   >Funktionen **Lägg till ny åtkomsttoken** är för närvarande i fasen tidig Adobe. Ytterligare funktioner planeras. Därför kan de behörigheter som krävs för åtkomsttoken ändras. Dessutom kan användargränssnittet för hantering av tokens uppdateras, inklusive funktioner som utgångsdatum för token. Och automatiska kontroller för att säkerställa att tokens som är länkade till databaser förblir giltiga.
 
 1. Klicka på **Validera**.
 
@@ -89,7 +95,8 @@ Efter valideringen är den externa databasen klar att användas och länkas till
 
 1. Lägga till eller redigera en pipeline:
    * [Lägg till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
-   * [Lägga till icke-produktionsrörledningar](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+   * [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
+   <!-- * [Add an Edge Delivery Pipeline]() -->
    * [Redigera en pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#editing-pipelines)
 
    ![Källkodskatalogen för pipeline och Git-grenen](/help/implementing/cloud-manager/managing-code/assets/pipeline-repo-gitbranch.png)
@@ -163,6 +170,7 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
    | GitHub Enterprise | Dessa händelser gör att Cloud Manager kan svara på GitHub-aktivitet, som pull-begäran-validering, push-baserade utlösare för pipelines eller Edge Delivery Services-kodsynkronisering.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrockshändelser:<ul><li>Dra in begäranden<li>Penslar<li>Skicka kommentarer</li></li></li></ul></ul></ul> |
    | GitLab | Dessa webkrofshändelser gör att Cloud Manager kan utlösa rörledningar när kod skickas eller när en sammanfogningsbegäran skickas. De spårar även kommentarer som rör validering av pull-begäran (via anteckningshändelser).<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Push-händelser<li>Sammanfoga begäranhändelser<li>Anteckningshändelser</li></li></li></ul></ul></ul> |
    | Bitbucket | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Dragningsbegäran: Skapad<li>Pull-begäran: Uppdaterad<li>Dragningsbegäranden: Sammanfogade<li>Pull-begäran: Kommentar<li>Databas: Tryck</li></li></li></ul></ul></ul> |
+   | Azure DevOps | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Databas: Tryck</li></li></ul></ul></ul> |
 
 ### Validering av pull-begäranden med webhooks
 
