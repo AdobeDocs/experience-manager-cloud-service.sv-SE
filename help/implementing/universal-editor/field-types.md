@@ -4,10 +4,10 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 3583c8dad2ad8dce941845003dbf850ea0b8ad2a
+source-git-commit: 9327bc51ba170971bde8ce8e338c9a42ac5cbe82
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1500'
+ht-degree: 1%
 
 ---
 
@@ -849,6 +849,7 @@ Text tillåter en enda rad med textinmatning.  Det innehåller ytterligare valid
       "name": "text",
       "label": "Simple Text",
       "valueType": "string",
+      "valueFormat": "regexp",
       "description": "This is a text input with validation.",
       "required": true,
       "validation": {
