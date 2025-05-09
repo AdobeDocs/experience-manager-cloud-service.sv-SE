@@ -5,9 +5,9 @@ exl-id: 27521a6d-c6e9-4f43-9ddf-9165b0316084
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 8d4d60a2105915108393cc295949491e59e5fc2b
+source-git-commit: 8d31907392e09bc5b3c669b8f8f23d6a2a26ced4
 workflow-type: tm+mt
-source-wordcount: '2296'
+source-wordcount: '2454'
 ht-degree: 2%
 
 ---
@@ -38,7 +38,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Varumärke**
 
-  Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
+  Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
    * **Varumärkesinstruktion**
 
@@ -242,7 +242,9 @@ Genom en enkel konfiguration kan en innehållsförfattare nu aktivera funktioner
 
 >[!NOTE]
 >
->Se [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/sites-console/enable-pwa.md).
+>Mer information finns i [Aktivera progressiva webbprogramfunktioner](/help/sites-cloud/authoring/sites-console/enable-pwa.md).
+
+{{pwa-deprecation}}
 
 * **Konfigurera installerbar upplevelse**
 
@@ -337,3 +339,35 @@ När du har valt Massredigering kan du:
       * De nya värdena tillämpas på alla markerade sidor när du väljer **Klar**.
       * När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.
    * Fält som är vanliga, men har olika värden på de olika sidorna, anges med ett särskilt värde som texten `<Mixed Entries>`.
+
+## Egenskapsarv {#inheritance}
+
+Om sidan baseras på en plan eller på annat sätt ärver innehåll från en annan sida, återspeglas arv i fönstret **Sidegenskaper** för det enskilda fältet.
+
+![Ärvda egenskaper](assets/property-inhertiance.png)
+
+Ärvda egenskaper kan inte redigeras. Tryck eller klicka på ikonen **Avbryt arv** bredvid ett visst fält för att bryta dess arv.
+
+![Avbryt arv](assets/cancel-inheritance.png)
+
+Bekräfta annulleringen i **Avbryt arv** modal.
+
+![Avbryt spärrkontroll av arv](assets/cancel-inheriance-confirmation.png)
+
+När arvet avbryts för ett fält kan det redigeras.
+
+![Avbrutet arv](assets/property-inheritance-broken.png)
+
+Om du vill återställa arvet trycker eller klickar du på ikonen **Återställ arv** bredvid fältet.
+
+![Återgå arv](assets/revert-inheritance.png)
+
+Bekräfta återgivningen i **återställ arv** modal.
+
+![Återgå spärrad arvsbekräftelse modal](assets/revert-inhertiance-confirmation.png)
+
+Välj **Synkronisera sida efter återgång av arv** om du vill uppdatera fältet med de senaste värdena i planen. Om du inte gör det uppdateras värdena nästa gång LiveCopy synkroniseras.
+
+>[!TIP]
+>
+>Mer information om arv finns i dokumentet [Multi Site Manager och Translation](/help/sites-cloud/administering/msm-and-translation.md)
