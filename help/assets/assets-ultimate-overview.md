@@ -4,9 +4,9 @@ description: Läs mer om viktiga aspekter av Assets Ultimate, t.ex. viktiga för
 feature: Asset Management
 role: User, Admin
 exl-id: 3ae96cd2-e0ac-43a5-a0bf-bebb1a028b10
-source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
+source-git-commit: ccd2334528ed7309c271d069209adec333de356c
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -138,6 +138,6 @@ I följande tabell sammanfattas tillgängliga AEM Assets-användartyper, vilka b
 | AEM > Production Author instance > AEM Administrators | - | - | - | ✓ |
 | **Mer information** | Se [Aktivera Content Hub](/help/assets/enable-assets-ultimate.md##enable-assets-ultimate-new-users) | Se [Användare som samarbetar internt](/help/assets/enable-assets-ultimate.md#onboard-collaborator-users) | Se [Onboard Power Users](/help/assets/enable-assets-ultimate.md#onboard-power-users) | - |
 
-Information om hur du kommer igång med Assets Ultimate finns i [Aktivera AEM Assets Ultimate](/help/assets/enable-assets-ultimate.md).
+Information om hur du kommer igång med Assets Ultimate finns i [Aktivera AEM Assets Ultimate](/help/assets/enable-assets-ultimate.md). Om AEM Assets-användare har frågor om när du kan uppgradera till Assets Ultimate kontaktar du din kontorepresentant för Adobe. Du kan även se [Aktivera Assets Ultimate för befintliga kunder](/help/assets/enable-assets-ultimate.md#enable-assets-ultimate-existing-customers) om du vill ha mer information.
 
 AEM Assets erbjuder också en enklare DAM för kunder som inte har avancerade krav som UI-utökningsmöjligheter, API-driven automatisering och anpassad koddriftsättning. Mer information finns i [AEM Assets Prime](/help/assets/assets-prime.md).
