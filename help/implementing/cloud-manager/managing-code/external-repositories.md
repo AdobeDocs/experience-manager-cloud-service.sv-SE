@@ -5,7 +5,7 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: a0eac2f3f513b9fecd595a86bb2110083fa0b80f
+source-git-commit: d0cf86d429c7374ad12f6eeb9f287b0ace3406ec
 workflow-type: tm+mt
 source-wordcount: '2074'
 ht-degree: 0%
@@ -96,8 +96,9 @@ Efter valideringen är den externa databasen klar att användas och länkas till
 1. Lägga till eller redigera en pipeline:
    * [Lägg till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md)
    * [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md)
-   <!-- * [Add an Edge Delivery Pipeline]() -->
    * [Redigera en pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#editing-pipelines)
+
+   <!-- Add an Edge Delivery Pipeline -->
 
    ![Källkodskatalogen för pipeline och Git-grenen](/help/implementing/cloud-manager/managing-code/assets/pipeline-repo-gitbranch.png)
    *Lägg till icke-produktionsförlopp, dialogruta med vald databas och Git-förgrening,*

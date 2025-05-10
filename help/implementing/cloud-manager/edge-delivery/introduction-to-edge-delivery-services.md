@@ -4,7 +4,7 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med Edge De
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 086aaf323291279d0782c71982baa1a5867784a1
+source-git-commit: 54ea92b53d97be314dcef1ed3afbde35b16f9949
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 1%
@@ -30,7 +30,7 @@ Med Cloud Manager i AEM as a Cloud Service kan du aktivera Edge Delivery Service
 
 ## Om Edge Delivery Services i Cloud Manager {#edge-in-cloud-manager}
 
-Om du har licensierat Edge Delivery Services som en del av Adobe Experience Manager Sites kan du publicera din webbplats med Edge Delivery Services direkt i Cloud Manager och gå live [med hjälp av en guidad självbetjäningsupplevelse](/help/implementing/cloud-manager/managing-code/private-repositories.md).
+Om du har licensierat Edge Delivery Services som en del av Adobe Experience Manager Sites kan du publicera din webbplats med Edge Delivery Services direkt i Cloud Manager och gå live [med hjälp av en guidad självbetjäningsupplevelse](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
 Dessutom får ni tillgång till en enhetlig upplevelse för att hantera alla era AEM-egenskaper samtidigt som ni säkerställer enhetlighet i alla viktiga arbetsflöden. Dessa arbetsflöden omfattar domännamnshantering, SSL-certifikathantering och CDN-mappningar.
 
@@ -83,7 +83,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 7 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 8 | GoLive | Se [Go-Live-checklista](/help/edge/docs/go-live-checklist.md). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3441565?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 
