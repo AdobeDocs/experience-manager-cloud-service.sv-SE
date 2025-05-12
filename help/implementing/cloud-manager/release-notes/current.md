@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.5.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: effa19a98d59993e330e925fb933a436ff9d20d7
+source-git-commit: 6b18623cc940856383009cd6b4ba011515c12ab5
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '780'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Innehållskällans konfiguration skiljer sig åt mellan Helix 4 och Helix 5 på 
 
 I den här artikeln finns omfattande konfigurationssteg, exempel och valideringsinstruktioner för båda versionerna.
 
-B **innan du börjar**
+**Innan du börjar**
 
 Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) är webbplatsen Helix 5 med en enda databas. Följ Helix 5-instruktionerna och använd den medföljande Helix 4 YAML-versionen som reserv.
 
@@ -131,7 +131,7 @@ Använd API:t för konfigurationstjänsten.
 1. Autentisera via en API-nyckel eller åtkomsttoken.
 1. Gör följande `PUT` API-anrop:
 
-   ```bash
+   ```bash {.line-numbering}
    PUT /api/{program}/{programId}/site/{siteId}
    Content-Type: application/json
    
