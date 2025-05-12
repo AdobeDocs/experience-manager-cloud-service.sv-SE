@@ -4,9 +4,9 @@ description: På den här sidan beskrivs hur du skapar en miljö i Cloud Manager
 exl-id: 744a473c-edad-4bf2-ae87-0175f6451e32
 feature: Screens Deployments
 role: Admin, Developer, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: 66cb3b49836d9bb52d7955edcf1f0b7f87b22802
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '193'
 ht-degree: 1%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 1%
 I det här avsnittet beskrivs hur du skapar en miljö för ditt program i Cloud Manager.
 
 >[!NOTE]
->Mer information om hur användaren kan skapa en miljö finns i [Hantera miljöer i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
+>Mer information om hur användaren kan skapa en miljö finns i [Hantera miljöer i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
 ## Syfte {#objective}
 
 I följande avsnitt beskrivs hur du skapar en miljö för ditt program i Cloud Manager.
 
-## Steg för att skapa en miljö för ditt Screens-projekt i Cloud Manager {#steps-branch-creation}
+## Steg för att skapa en miljö för ditt projekt i Cloud Manager {#steps-branch-creation}
 
-När projektet har skapats kan du se uppdateringen av anropskortet på Cloud Manager översiktssida.
+När projektet har skapats kan du se uppdateringen av call-to-action-kortet på sidan Cloud Manager Översikt.
 
 1. Navigera till Cloud Manager och markera ikonen så att du kommer till Cloud Manager **Översikt** -sida.
 
@@ -36,7 +36,7 @@ När projektet har skapats kan du se uppdateringen av anropskortet på Cloud Man
 
    ![bild](/help/screens-cloud/assets/onboarding/add-environ2.png)
 
-1. När du har lagt till en miljö som är klar uppdateras åtgärdskortet enligt bilden nedan.
+1. När en miljö har lagts till uppdateras call-to-action-kortet enligt bilden nedan.
 
    ![bild](/help/screens-cloud/assets/onboarding/add-environ3a.png)
 
