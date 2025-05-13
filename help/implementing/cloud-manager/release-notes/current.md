@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.5.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 6b18623cc940856383009cd6b4ba011515c12ab5
+source-git-commit: f9f4226bff8a0772878c144773eb8ff841a0a8d0
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -27,13 +27,13 @@ Nästa planerade version är torsdagen den 5 juni 2025.
 
 ## Nyheter {#what-is-new}
 
-### Ändra innehållskällan med ett klick för Edge Delivery Services
+### Konfigurera innehållskällan med ett klick för Edge Delivery Services
 
 Adobe Experience Manager (AEM) Edge Delivery Services tillåter innehållsleverans från flera källor, som Google Drive, SharePoint eller AEM, via ett snabbt, globalt distribuerat gränsnätverk.
 
 Innehållskällans konfiguration skiljer sig åt mellan Helix 4 och Helix 5 på följande sätt:
 
-| Version | Konfigurationsmetod |
+| Version | Konfigurationsmetod för innehållskälla |
 | --- | --- |
 | Helix 4 | YAML-fil (`fstab.yaml`) |
 | Helix 5 | Konfigurationstjänstens API (*no`fstab.yaml`*) |
@@ -42,7 +42,7 @@ I den här artikeln finns omfattande konfigurationssteg, exempel och validerings
 
 **Innan du börjar**
 
-Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) är webbplatsen Helix 5 med en enda databas. Följ Helix 5-instruktionerna och använd den medföljande Helix 4 YAML-versionen som reserv.
+Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) är webbplatsen Helix 5 med en enda databas. Följ Helix 5- instruktionerna och använd den medföljande Helix 4 YAML- versionen som reserv.
 
 **Bestäm din Helix-version**
 
@@ -51,20 +51,18 @@ Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implement
 
 Bekräfta via databasmetadata eller kontakta administratören om du fortfarande är osäker.
 
-#### Konfigurera innehållskällan (Helix 4)
+#### Konfigurera innehållskällan för Helix 4
 
-I Helix 4 definieras innehållskällan i en YAML-konfigurationsfil med namnet `fstab.yaml` som finns i GitHub-databasens rot.
-
-##### YAML-filformat
-
-Filen `fstab.yaml` definierar monteringspunkter (URL-sökvägsprefix mappade till innehållskällans URL:er) som i följande exempel (endast i illustrationssyfte):
+I Helix 4 definierar filen fstab.yaml innehållskällan för platsen. Den här filen finns i roten av GitHub-databasen och mappar URL-sökvägsprefix (kallas monteringspunkter) till externa innehållskällor. Ett typiskt exempel ser ut så här:
 
 ```yaml
 mountpoints:
   /: https://drive.google.com/drive/folders/your-folder-id
 ```
 
-##### Ändra innehållskällan
+Det här exemplet är endast för illustrationer. Den faktiska URL:en ska peka mot innehållskällan, till exempel en specifik Google Drive-mapp, SharePoint-katalog eller AEM-sökväg.
+
+**Så här konfigurerar du innehållskällan för Helix 4:**
 
 Stegen varierar beroende på vilket källsystem du använder.
 
@@ -113,22 +111,20 @@ Stegen varierar beroende på vilket källsystem du använder.
 * Klicka på **Förhandsgranska** > **Publicera** > **Testa den publicerade webbplatsen** med AEM Sidekick Chrome Extension.
 * Verifiera URL: `https://main--<repo>--<org>.hlx.page/`
 
-#### Konfigurera innehållskälla (Helix 5)
+#### Konfigurera innehållskällan för Helix 5
 
 Helix 5 är svarslös, använder inte `fstab.yaml` och stöder flera platser som delar samma katalog. Konfigurationen hanteras via konfigurationstjänstens API eller Edge Delivery Services UI. Konfigurationen är platsnivå (inte databasnivå).
 
-##### Konceptskillnader
+Följande skillnader är konceptuella:
 
 | Proportioner | Helix 4 | Helix 5 |
 | --- | --- | --- |
-| Konfigurationsfil | `fstab.yaml` | API- eller gränssnittskonfiguration |
-| Monteringspunkter | YAML-definierad | Inte obligatoriskt (implicit rot) |
+| Konfiguration | Klart till `fstab.yaml` | Klar via API:t eller användargränssnittet i stället för YAML. |
+| Monteringspunkter | Definieras i `fstab.yaml`. | Krävs inte. Roten är implicit känd. |
 
-##### Ändra innehållskällan
+**Konfigurera innehållskällan för Helix 5:**
 
-Använd API:t för konfigurationstjänsten.
-
-1. Autentisera via en API-nyckel eller åtkomsttoken.
+1. Använd konfigurationstjänstens API för att autentisera via en API-nyckel eller åtkomsttoken.
 1. Gör följande `PUT` API-anrop:
 
    ```bash {.line-numbering}
