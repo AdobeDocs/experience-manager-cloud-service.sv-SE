@@ -4,9 +4,9 @@ description: Lär dig hur du använder Cloud Acceleration Manager för att impor
 exl-id: d8c81152-f05c-46a9-8dd6-842e5232b45e
 feature: Migration
 role: Admin
-source-git-commit: 01c2bda6b688bb85a214991f7594585f87850ec2
+source-git-commit: 30386a3117f241d81eed5e55f6c6e97bbe4084f8
 workflow-type: tm+mt
-source-wordcount: '3441'
+source-wordcount: '3467'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 >id="aemcloud_ctt_ingestion"
 >title="Innehållsintag"
 >abstract="Inmatning avser att hämta innehåll från migreringsuppsättningen till Cloud Service-målinstansen. Content Transfer Tool har en funktion för differentiell innehållsuppdatering som gör att du kan överföra enbart de ändringar som gjorts sedan den föregående innehållsöverföringen."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content#top-up-extraction-process" text="Extrahering uppifrån"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content#top-up-extraction-process" text="Extrahering uppifrån"
 
 Följ stegen nedan för att importera din migreringsuppsättning med Cloud Acceleration Manager:
 
@@ -99,7 +99,7 @@ Följ stegen nedan för att importera din migreringsuppsättning med Cloud Accel
 >id="aemcloud_ctt_ingestion_topup"
 >title="Övre inmatning"
 >abstract="Använd den övre funktionen för att flytta innehåll som ändrats sedan föregående innehållsöverföringsaktivitet. Kontrollera loggarna efter eventuella fel eller varningar när Ingeset är klart. Felen ska åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att kontakta Adobe kundtjänst."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs" text="Visa loggar"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/viewing-logs" text="Visa loggar"
 
 Verktyget Innehållsöverföring har en funktion som tillåter extrahering av differentiellt innehåll genom att utföra en *top-up* av migreringsuppsättningen. Detta gör att migreringsuppsättningen kan ändras så att endast innehåll som har ändrats sedan den föregående extraheringen tas med, utan att allt innehåll behöver extraheras igen.
 
@@ -118,7 +118,7 @@ Börja med att skapa ett matningsjobb och se till att **Rensa** är inaktiverat 
 >id="aemcloud_ctt_ingestion_troubleshooting"
 >title="Felsökning av innehållsmatning"
 >abstract="Läs i förbrukningsloggarna och dokumentationen för att hitta lösningar på vanliga orsaker till varför ett intag kan misslyckas och hitta ett sätt att åtgärda problemet. När det är klart kan intaget köras igen."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers" text="Verifierar innehållsöverföringar"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers" text="Verifierar innehållsöverföringar"
 
 ### CAM kan inte hämta migreringstoken {#cam-unable-to-retrieve-the-migration-token}
 
@@ -151,13 +151,13 @@ Det här meddelandet anger att Cloud Acceleration Manager inte kunde nå målmil
 > Fältet &quot;Migreringstoken&quot; visas eftersom det i ett fåtal fall inte är tillåtet att hämta denna token. Genom att tillåta manuell inmatning kan användaren snabbt påbörja intagningen utan ytterligare hjälp. Om token anges och meddelandet fortfarande visas, var det inte problemet att hämta token.
 
 * AEM as a Cloud Service underhåller miljötillståndet och måste ibland starta om migreringstjänsten av olika vanliga orsaker. Om tjänsten startas om kan den inte nås, men är tillgänglig så småningom.
-* Det är möjligt att en annan process körs på instansen. Om [AEM-versionsuppdateringar](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) till exempel tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. När den processen är klar kan ett nytt försök att starta intaget göras.
+* Det är möjligt att en annan process körs på instansen. Om [AEM-versionsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) till exempel tillämpar en uppdatering kan systemet vara upptaget och migreringstjänsten är inte tillgänglig regelbundet. När den processen är klar kan ett nytt försök att starta intaget göras.
 * Om ett [IP-Tillåtelselista har tillämpats](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) via Cloud Manager blockeras Cloud Acceleration Manager från att nå migreringstjänsten. Det går inte att lägga till en IP-adress för frågor eftersom adressen är dynamisk. För närvarande är den enda lösningen att inaktivera IP-tillåtelselista under importen och indexeringen.
 * Det kan finnas andra skäl till att en utredning behöver göras. Om det fortfarande inte går att få tillgång till produkten eller indexeringen kontaktar du Adobe kundtjänst.
 
 ### Uppdateringar och förslag för AEM-versioner {#aem-version-updates-and-ingestions}
 
-[AEM-versionsuppdateringar](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) används automatiskt i miljöer för att de ska vara uppdaterade med den senaste AEM as a Cloud Service-versionen. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön.
+[AEM-versionsuppdateringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/aem-version-updates) används automatiskt i miljöer för att de ska vara uppdaterade med den senaste AEM as a Cloud Service-versionen. Om uppdateringen utlöses när ett intag utförs, kan det orsaka oförutsägbara resultat, bland annat skador på miljön.
 
 Om&quot;AEM-versionsuppdateringar&quot; introduceras i målprogrammet försöker den inaktivera kön innan den startas. När inmatningen är klar återställs versionsuppdaterarens tillstånd till det som var innan inmatningen startade.
 
@@ -190,7 +190,7 @@ Se till att författarmiljön är tillgänglig och vänta några minuter innan d
 >id="aemcloud_cam_ingestion_troubleshooting_uuid"
 >title="Felaktigt begränsningsfel"
 >abstract="En vanlig orsak till ett icke-rensningsfel är en konflikt i nod-ID:n. Det får bara finnas en av de noder som står i konflikt."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content#top-up-ingestion-process" text="Inmatning uppifrån"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content#top-up-ingestion-process" text="Inmatning uppifrån"
 
 En vanlig orsak till ett [Top-up Inghit](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process)-fel är en konflikt i nod-ID:n. Du kan identifiera felet genom att hämta matningsloggen med hjälp av Cloud Acceleration Manager-gränssnittet och leta efter en post som följande:
 
@@ -210,7 +210,7 @@ Den här konflikten måste lösas manuellt. Någon som är bekant med innehålle
 >id="aemcloud_cam_ingestion_troubleshooting_referenced_node"
 >title="Det går inte att ta bort referensnod"
 >abstract="En vanlig orsak till ett icke-rensningsfel är en versionskonflikt för en viss nod i målinstansen. Versionerna för noden måste repareras."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content#top-up-ingestion-process" text="Inmatning uppifrån"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/ingesting-content#top-up-ingestion-process" text="Inmatning uppifrån"
 
 En annan vanlig orsak till ett [överst inmatningsfel](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/ingesting-content.md#top-up-ingestion-process) är en versionskonflikt för en viss nod i målinstansen. Du kan identifiera felet genom att hämta matningsloggen med hjälp av Cloud Acceleration Manager-gränssnittet och leta efter en post som följande:
 
@@ -228,7 +228,7 @@ Bästa tillvägagångssätt visar att om ett **icke-rensat**-inlägg måste kör
 >id="aemcloud_cam_ingestion_troubleshooting_bson"
 >title="Stor nodegenskap"
 >abstract="En vanlig orsak till att ett fel uppstår i en förtäring är att den maximala storleken för egenskapsvärden för noden har överskridits. Följ dokumentationen, inklusive de som rör BPA-rapporten, för att åtgärda detta."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool" text="Krav för migrering"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool" text="Krav för migrering"
 
 Nodegenskapsvärden som lagras i MongoDB får inte överskrida 16 MB. Om ett nodvärde överskrider den storlek som stöds misslyckas importen och loggen innehåller antingen:
 
@@ -239,7 +239,7 @@ Detta är en MongoDB-begränsning.
 
 Mer information finns i `Node property value in MongoDB`-anteckningen i [Krav för verktyget Innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/prerequisites-content-transfer-tool.md). Där finns också en länk till ett Oak-verktyg som kan hjälpa dig att hitta alla stora noder. När alla noder med stora storlekar har åtgärdats kör du extraheringen och intaget igen.
 
-Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) på AEM-källinstansen och granska resultatet som den visar, särskilt [&quot;Repository Structure som inte stöds&quot; (URS)](https://experienceleague.adobe.com/sv/docs/experience-manager-pattern-detection/table-of-contents/urs) -mönstret.
+Du kan undvika den här begränsningen genom att köra [Best Practices Analyzer](/help/journey-migration/best-practices-analyzer/using-best-practices-analyzer.md) på AEM-källinstansen och granska resultatet som den visar, särskilt [&quot;Repository Structure som inte stöds&quot; (URS)](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/urs) -mönstret.
 
 >[!NOTE]
 >
@@ -259,6 +259,7 @@ Ibland kan oväntade problem ge upphov till misslyckade frågor där det enda s�
 * `Atlas prescale timeout error` - Inmatningsfasen försöker förskala målmolndatabasen till en lämplig storlek som passar storleken på det migreringsuppsättningsinnehåll som importeras. Oftast slutförs inte den här åtgärden inom den förväntade tidsramen.
 * `Exhausted mongo restore retries` - Ett försök att återställa en lokal dump av innehållet i den inkapslade migreringsuppsättningen till molndatabasen har gjorts. Detta tyder på ett övergripande hälso-/nätverksproblem med MongoDB, som ofta läker av sig själv efter några minuter.
 * `Mongo network error` - Ibland kan det misslyckas med att upprätta en anslutning till MongoDB, vilket gör att intagsprocessen avslutas tidigt och rapporterar att den misslyckades. Ett enkelt försök att återanvända intaget bör göras.
+* `Mongo server selection error` - Detta är ett sällsynt enkelsidigt timeout-fel på klientsidan som kan inträffa av flera underliggande orsaker. Ett efterföljande försök kommer troligen att korrigera problemet.
 
 ### Inmatningen har avbrutits {#ingestion-rescinded}
 
