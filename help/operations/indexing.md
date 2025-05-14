@@ -4,9 +4,9 @@ description: Läs om innehållssökning och indexering i AEM as a Cloud Service.
 exl-id: 4fe5375c-1c84-44e7-9f78-1ac18fc6ea6b
 feature: Operations
 role: Admin
-source-git-commit: bf8ec70fa6f6678c4a2ffb49aea453be11fa26f1
+source-git-commit: e6b1a42c36d85ca255138a115bffddb087370a62
 workflow-type: tm+mt
-source-wordcount: '2767'
+source-wordcount: '2850'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ Nedan finns en lista över de viktigaste ändringarna jämfört med AEM 6.5 och 
 
 Begränsningar:
 
-* För närvarande stöds bara indexhantering på AEM as a Cloud Service för index av typen `lucene`.
-* Endast standardanalysatorer stöds (det vill säga analysatorer som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
+* För närvarande stöds bara indexhantering på AEM as a Cloud Service för index av typen `lucene`. Det innebär att alla indexanpassningar måste vara av typen `lucene`. Egenskapen `async` kan bara vara något av följande: `[async]`, `[async,nrt]` eller `[fulltext-async]`.
 * Internt kan andra index konfigureras och användas för frågor. Till exempel kan frågor som skrivs mot indexet `damAssetLucene`, på Skyline, faktiskt köras mot en Elasticsearch-version av det här indexet. Skillnaden är vanligtvis inte synlig för programmet och användaren, men vissa verktyg, som funktionen `explain`, rapporterar ett annat index. Skillnader mellan Lucene-index och Elastic Index finns i [den elastiska dokumentationen i Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/elastic.html). Kunderna behöver inte, och kan inte heller, konfigurera Elasticsearch-index direkt.
+* Endast standardanalysatorer stöds (det vill säga analysatorer som levereras tillsammans med produkten). Anpassade analysatorer stöds inte.
 * Sökning med liknande funktionsvektorer (`useInSimilarity = true`) stöds inte.
 
 >[!TIP]
@@ -78,6 +78,9 @@ Om du vill anpassa ett OOTB-index skapar du ett nytt paket som innehåller den f
 Om du vill skapa ett helt anpassat index skapar du ett nytt indexdefinitionspaket som innehåller indexdefinitionen som följer namnmönstret:
 
 `<prefix>.<indexName>-<productVersion>-custom-<customVersion>`
+
+Som vi nämnt i avsnittet om begränsningar måste `type` för den anpassade indexdefinitionen alltid anges till `lucene` även om den extraherade indexdefinitionen med hjälp av Package Manager är av en annan typ (t.ex. `elasticsearch`).
+Egenskapen `async` måste också ändras om den extraherade indexdefinitionen är inställd på `elastic-async`. Egenskapen `async` måste anges till något av följande: `[async]`, `[async,nrt]` eller `[fulltext-async]` för den anpassade indexdefinitionen.
 
 <!-- Alexandru: temporarily drafting this statement due to CQDOC-17701
 
