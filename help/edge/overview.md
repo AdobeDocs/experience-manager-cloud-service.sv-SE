@@ -102,7 +102,7 @@ Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Deli
 
 Läs dokumentet [Komma igång - Universal Editor Developer Tutorial](https://www.aem.live/developer/ue-tutorial) i aem.live-dokumentationen om du vill veta hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
 
-Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Real Use Monitoring (RUM)](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch.](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
 
 ## Få hjälp från Adobe {#getting-help}
 
