@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.5.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: f9f4226bff8a0772878c144773eb8ff841a0a8d0
+source-git-commit: 3db5ee2852fadc9c86b3a7979ce40296bbaca858
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ I den här artikeln finns omfattande konfigurationssteg, exempel och validerings
 
 **Innan du börjar**
 
-Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) är webbplatsen Helix 5 med en enda databas. Följ Helix 5- instruktionerna och använd den medföljande Helix 4 YAML- versionen som reserv.
+Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) är webbplatsen Helix 5 med en enda databas. Följ Helix 5- instruktionerna och använd den medföljande Helix 4 YAML- versionen av instruktionerna som reserv.
 
 **Bestäm din Helix-version**
 
@@ -60,7 +60,7 @@ mountpoints:
   /: https://drive.google.com/drive/folders/your-folder-id
 ```
 
-Det här exemplet är endast för illustrationer. Den faktiska URL:en ska peka mot innehållskällan, till exempel en specifik Google Drive-mapp, SharePoint-katalog eller AEM-sökväg.
+Det här exemplet är endast för illustrationer. Den faktiska URL:en ska peka mot innehållskällan, t.ex. en Google Drive-mapp, SharePoint-katalog eller AEM-sökväg.
 
 **Så här konfigurerar du innehållskällan för Helix 4:**
 
@@ -190,6 +190,16 @@ Se [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manag
 ![Dialogrutan Lägg till databas](/help/implementing/cloud-manager/release-notes/assets/azure-repo.png)
 
 Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
+
+#### Vanliga frågor och svar om hur du tar med din egen Git
+
+| Fråga | Svar |
+|---|---|
+| *Hur kan ett projekt vid behov växla tillbaka till den Adobe-hanterade Git-databasen?* | Det är enkelt att byta tillbaka. [Uppdatera pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) så att de pekar på Adobe-databasen och tar bort den externa databasen om den inte längre behövs. |
+| *Går det att konfigurera olika databaser för olika miljöer (till exempel icke-produktion kontra produktion) så att testning i icke-produktion först tillåts?* | Ja, olika databaser kan konfigureras för olika miljöer. Utvecklings- eller kodkvalitetsflödet kan till exempel peka på en extern databas medan produktionsflödet är anslutet till Adobe-databasen. Kontrollera att synkroniseringsjobbet mellan de två databaserna förblir aktivt under den här konfigurationen. |
+| *Fortsätter befintliga inställningar som IP tillåtelselista att fungera?* | Ja, befintlig IP-tillåtelselista fortsätter att fungera som vanligt. Om den externa Git-databasen skyddas av en brandvägg måste de nödvändiga [Adobe IP-adresserna läggas till i tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md). |
+| *Fungerar alla URL:er för GitLab-databasen? Databas-URL:en som används har formatet `https://gitlab_dedicated_url.com/path/repo-name.git`, vilket skiljer sig från exemplet i dokumentationen.* | Ja, alla GitLab-databaser som har stöd för API V3 eller V4 stöds, inklusive GitLab-URL:er som de som finns som värd, som den som beskrivs i [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/external-repositories.md) (`https://git-vendor-name.com/org-name/repo-name.git`). |
+
 
 <!--
 ## Bug fixes
