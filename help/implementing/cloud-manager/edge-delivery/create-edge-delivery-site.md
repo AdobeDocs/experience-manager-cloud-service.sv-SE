@@ -1,33 +1,21 @@
 ---
-title: Skapa en Edge Delivery-webbplats i Cloud Manager
+title: Skapa en Edge Delivery-webbplats i Cloud Manager med ett klick
 description: Lär dig hur du snabbt skapar en Edge Delivery-webbplats i Cloud Manager med en enkel musklickning.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0e30cf827e764a356dde304df3124d0be3d2e58b
+exl-id: 292bf0b4-990b-4980-b971-91b8aedde3de
+source-git-commit: 59743546b5e057599f60a76d3087d7c5b6423b2e
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
-
 
 # Skapa en Edge Delivery-webbplats i Cloud Manager {#about-one-click-edge-delivery-site}
 
 Webbplatsen Create an Edge Delivery är utformad för att hjälpa dig att automatisera introduktionen och driftsättningen av Edge Delivery webbplatser inom Cloud Manager. Det förenklar processen avsevärt genom att du kan klicka på en enda knapp. Den här klickningen ger den infrastruktur som krävs, integreras med GitHub för versionskontroll och konfigurerar dokument- och materiallagring i Google Drive.
 
 Den här automatiseringen minskar den manuella arbetsinsats som krävs för att skapa den första webbplatsen. Det ger smidiga arbetsflöden, skalbarhet och förbättrar teamets prestanda när det gäller att hantera innehåll i framkanten.
-
-## Viktiga begrepp {#key-concepts}
-
-Viktiga koncept när du skapar en Edge Delivery-webbplats i Cloud Manager med ett enda klick.
-
-| Nyckelbegrepp | Beskrivning |
-| --- | --- |
-| Automatiserad driftsättning av Edge | <ul><li>Användare kan skapa och konfigurera Edge Delivery-webbplatser direkt.</li><li>Genom att använda Cloud Manager integrering med CI/CD-arbetsflöde minskar eller eliminerar det behovet av manuella introduktionsprocesser.</li><li>Integrerat med Cloud Manager för smidiga arbetsflöden med CI/CD.</li></ul> |
-| Integrering med Cloud Manager | <ul><li>Använder Cloud Manager användargränssnitt för att utlösa One Click Edge Delivery-processen.</li><li>Ge åtkomst till automatiserad generering och driftsättning av databaser.</li></ul> |
-| GitHub-baserad versionskontroll | <ul><li>Skapar en GitHub-databas inom en organisation med fördefinierade mallmallar för att standardisera distributioner.</li><li>Länkar med AEM Bot för innehållsuppdateringar.</li></ul> |
-| Integrering av dokument- och resurslagring | <ul><li>Skapar en Google Drive-mapp för lagring.<li>Installerar programmet AEM Code Sync i databasen, vilket ger smidig synkronisering och driftsättning.</li></li><li>Medarbetare kan enkelt hantera dokument.</li></ul> |
-| Säkerhet och skalbarhet | <ul><li>Säkerställer att företagets säkerhetsstandarder följs.</li><li>Stöder flera Edge Delivery-sajter under olika Cloud Manager-klienter.</li></ul> |
 
 <!-- >
 ## Practical use cases {#use-cases}
@@ -80,7 +68,3 @@ När etableringen och valideringen av webbplatsen har slutförts av Cloud Manage
    | Förhandsgranska en publicerad webbplats | <ul><li>I listrutan **Edge Delivery-webbplatser** klickar du, under kolumnrubriken **Platsnamn**, på URL-adressen till webbplatsen som du just skapade och publicerade.<br>Observera att URL-adressen för webbplatsen avslutas med `.page` i URL-adressfältet i webbläsaren, vilket anger att du ser en förhandsgranskning av webbplatsen.</li><li>Om du vill visa webbplatsen live ändrar du `.page` manuellt till `.live` i URL-adressfältet.</li></ul> |
    | Ge användarna tillgång till innehållsarkivet på Google Drive | <ul><li> Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst till höger om namnet på din webbplats i listrutan **Edge Delivery-webbplatser** för att öppna listrutan.</li><li>Klicka på ikonen ![Lägg till användare](https://spectrum.adobe.com/static/icons/workflow_18/Smock_UsersAdd_18_N.svg) **Få åtkomst till innehållsdatabasen** i listrutan.</li><li>Ange e-postadressen till en medarbetare i dialogrutan **Lägg till medarbetare på webbplatsen** och klicka sedan på ikonen ![Markera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Checkmark_18_N.svg).</li><li>Fortsätt lägga till e-post från medverkande efter behov.</li><li>När du är klar klickar du på **Lägg till medarbetare**.</li><li>Klicka på **OK** i dialogrutan **Collaboration har lagts till** om du vill dela länken med dina innehållsmedarbetare.</li><li>Klicka på ikonen ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) i dialogrutan som Collaboration har lagt till för att kopiera länken och dela den med dina medarbetare.<br>Innan du delar länken måste du bekräfta att medarbetare är inloggade med den e-postadress som är kopplad till deras IMS-konto. Om deras IMS-e-postkonto inte är tillgängligt måste de använda den e-postadress som lagts till som medarbetare. På så sätt ser du till att medarbetarna kan komma åt länken och se innehållet som ska redigeras eller uppdateras på Google Drive.</li><li>När du är klar med redigeringen klickar du på **Publicera webbplats** i Cloud Manager, enligt beskrivningen ovan.<br>Eller förhandsgranska ändringarna enligt beskrivningen ovan.</li></ul> |
    | Ge användarna åtkomst till basdatabasen på GitHub | <ul><li> Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst till höger om namnet på din webbplats i listrutan **Edge Delivery-webbplatser** för att öppna listrutan.</li><li>Klicka på ikonen ![Kod](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Code_18_N.svg) **Få åtkomst till basdatabasen** i listrutan.</li><li>Ange GitHub-användarnamnet för en medarbetare i dialogrutan **Åtkomst till basdatabasen för din plats** och klicka sedan på ![bockmarkeringsikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Checkmark_18_N.svg).</li><li>Fortsätt lägga till GitHub-användarnamn efter behov.</li><li>När du är klar klickar du på **Lägg till medarbetare**.</li>Användarna måste ge åtkomst till sina egna GitHub-användarnamn för att kunna visa databasen. |
-
-
-
-
