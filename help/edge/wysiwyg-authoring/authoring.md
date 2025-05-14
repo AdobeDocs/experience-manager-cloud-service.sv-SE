@@ -7,7 +7,7 @@ role: User
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 17c14a78c2cfa262e25c6196fa73c6c4b17e200a
+source-git-commit: e57610e4c5e498ddfdbaa0ba39c9197ecfb5d177
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -59,4 +59,4 @@ Läs [Utvecklarhandboken Komma igång för WYSIWYG-redigering med Edge Delivery 
 
 WYSIWYG är ett kraftfullt och intuitivt verktyg för skribenter. Det finns dock många olika användningsområden, och därför erbjuder AEM ytterligare redigeringslösningar.
 
-Läs dokumentet [Välja en redigeringsmetod](/help/edge/authoring-methods.md) om du vill veta mer om de redigeringslösningar som AEM erbjuder, inklusive dokumentbaserad redigering och headless.
+Läs dokumentet [Edge Delivery Services Overview](/help/edge/overview.md#authoring-method) om du vill veta mer om de redigeringslösningar som AEM erbjuder, inklusive dokumentbaserad redigering och headless.

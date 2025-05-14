@@ -1,10 +1,13 @@
 ---
 title: Välja en redigeringsmetod
-description: Lär dig viktiga saker när du bestämmer hur du ska skapa innehåll i AEM för att hjälpa dig att fatta det bästa beslutet för innehållsförfattarna.
+description: Lär dig viktiga saker när du bestämmer hur du ska skapa ditt innehåll i AEM så att du kan fatta det bästa beslutet för dina innehållsförfattare.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: a75e7051-e5ec-4d2a-848a-a66989e2f30b
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+index: false
+hide: true
+hidefromtoc: true
+source-git-commit: e57610e4c5e498ddfdbaa0ba39c9197ecfb5d177
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 0%
@@ -13,16 +16,16 @@ ht-degree: 0%
 
 # Välja en redigeringsmetod {#authoring-methods}
 
-Lär dig viktiga saker när du bestämmer hur du ska skapa innehåll i AEM för att hjälpa dig att fatta det bästa beslutet för innehållsförfattarna.
+Lär dig viktiga saker när du bestämmer hur du ska skapa ditt innehåll i AEM så att du kan fatta det bästa beslutet för dina innehållsförfattare.
 
 ## Översikt över överväganden {#overview}
 
-AEM flexibilitet säkerställer att alla redigeringsbehov täcks oavsett om du väljer dokumentbaserad redigering eller WYSIWYG-redigering. Tänk på följande när du börjar.
+AEM flexibla hantering säkerställer att alla redigeringsbehov täcks oavsett om du väljer dokumentbaserad redigering eller WYSIWYG-redigering. Tänk på följande när du börjar.
 
 * **Involvera alltid innehållsförfattarna i beslutet.** - Dina innehållsförfattare är dina experter och deras insikter är viktiga.
-* **Flera redigeringsmetoder kan implementeras.** - Även om Adobe rekommenderar att du startar enkel och lageruppbyggd vid behov, kan flera redigeringsmetoder fungera tillsammans i ett projekt.
+* **Flera redigeringsmetoder kan implementeras.** - Även om Adobe rekommenderar att du börjar med enkel och komplex lagerhantering vid behov, kan flera redigeringsmetoder fungera tillsammans i ett projekt.
 * **Du kan alltid ändra redigeringsmetod efter hand.** - Oavsett vad du bestämmer dig för är du inte låst. Att byta från en metod till en annan är enkelt med hjälp av Adobe automatiska migreringsverktyg.
-* **Du får inte bestämma dig före implementeringen, utan som en del av implementeringen.** - AEM är en enda produkt, så detta viktiga beslut behöver inte ingå i avtalsförhandlingarna. När du köper AEM får du alla. Detta är snarare ett beslut under genomförandet.
+* **Du får inte bestämma dig före implementeringen, utan som en del av implementeringen.** - AEM är en enhetlig produkt, så detta viktiga beslut behöver inte ingå i avtalsförhandlingarna. När du köper AEM får du alla. Detta är snarare ett beslut under genomförandet.
 
 Adobe kan hjälpa dig att avgöra vilken metod (eller vilka metoder) som bäst passar dina behov som en del av implementeringen.
 
@@ -36,7 +39,7 @@ Olika projekt kan ha olika (och flera) användningsområden.
 
 ![Användningsexempel](assets/use-cases.png)
 
-Adobe förstår detta och erbjuder därför inte en strategi som passar alla. AEM är er enda lösning som erbjuder olika strategier för innehållsleverans och innehållsskapande efter era behov.
+Adobe förstår detta och erbjuder därför inte en lösning som passar alla. AEM är den enda lösning som erbjuder olika strategier för innehållsleverans och innehållsframtagning efter dina behov.
 
 För att fastställa det bästa tillvägagångssättet måste du överväga fyra alternativ.
 
@@ -64,7 +67,7 @@ Du bör tänka på hur du vill skapa ditt innehåll. Följande beslutsträd kan 
 
 Detta kan hjälpa dig att avgöra om du behöver:
 
-* AEM Edge Delivery Services med [dokumentbaserad redigering](/help/edge/docs/authoring.md).
+* AEM Edge Delivery Services med den [dokumentbaserade redigeringen](/help/edge/docs/authoring.md).
 * [WYSIWYG-redigering med Universal Editor](/help/edge/wysiwyg-authoring/authoring.md).
 
 ## Projektmål {#project-goals}

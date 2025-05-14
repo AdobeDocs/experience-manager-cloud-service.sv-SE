@@ -5,13 +5,13 @@ topic-tags: platform
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 22d4e6b5f87221b2739cf1dd9d59b4652a014316
+exl-id: 7ddd0a75-621a-4499-91d1-7b3408a68269
+source-git-commit: e57610e4c5e498ddfdbaa0ba39c9197ecfb5d177
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 0%
 
 ---
-
 
 # Klientplattformar som stöds {#supported-platforms}
 
@@ -35,7 +35,7 @@ Adobe definierar följande supportnivåer för AEM klientplattformar.
 
 AEM användargränssnitt är optimerat för större skärmar som finns i bärbara datorer, stationära datorer och surfplattor (som Apple iPad eller Microsoft Surface). Telefonformfaktorn stöds inte för redigeringssyften.
 
-Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar beroende på [redigeringsmetod.](/help/edge/authoring-methods.md)
+Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar beroende på [redigeringsmetod.](/help/edge/overview.md#authoring-method)
 
 * [Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md)
 * [Page Editor](/help/sites-cloud/authoring/page-editor/introduction.md)
