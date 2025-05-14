@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 158b808c2f97bea52d285d4f2611c6e297375ca1
+source-git-commit: d3a935a061831befaebd2ce25c00f8bf10522f6c
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 20783, som offentliggjordes den 13 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
 
-Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-20783}
 
@@ -33,9 +33,8 @@ Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns
 * SITES-27775: Optimerad referenssökning under publicering.
 * SITES-30885: Optimerad JSON-bearbetning i beständiga frågor.
 * SITES-25433: Edge Delivery med Universal Editor: Stöd för helsidesrendering vid jämförelse av gamla versioner.
-* SITES-27792: Edge Delivery med Universal Editor: Flytta EDS-konfigurationen helt till CA Config.
+* SITES-27792: Edge Delivery med Universal Editor: Lägg till specifik mall för Edge Delivery Service-konfigurationer
 * SITES-19754: Edge Delivery med Universal Editor: övertygande felmeddelande när installationen har brutits.
-* SITES-30267: Edge Delivery med Universal Editor: Sheet V2 (tidig åtkomst).
 * SITES-30328: Edge Delivery med Universal Editor: Preview from Sidekick support.
 * SITES-23499: Edge Delivery med Universal Editor: tillåt att flera fält används för blockalternativ.
 * SITES-29987: Lägg till funktion för att ange `previewUrlPattern` när innehållsfragmentmodeller skapas.
