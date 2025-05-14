@@ -4,14 +4,14 @@ description: Lär dig hur du snabbt skapar en Edge Delivery-webbplats i Cloud Ma
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 292bf0b4-990b-4980-b971-91b8aedde3de
-source-git-commit: 59743546b5e057599f60a76d3087d7c5b6423b2e
+source-git-commit: 767b1f89f42340cc9307a43ff9e97e9a074e592e
 workflow-type: tm+mt
-source-wordcount: '945'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
-# Skapa en Edge Delivery-webbplats i Cloud Manager {#about-one-click-edge-delivery-site}
+# Skapa en Edge Delivery-webbplats i Cloud Manager med ett klick{#about-one-click-edge-delivery-site}
 
 Webbplatsen Create an Edge Delivery är utformad för att hjälpa dig att automatisera introduktionen och driftsättningen av Edge Delivery webbplatser inom Cloud Manager. Det förenklar processen avsevärt genom att du kan klicka på en enda knapp. Den här klickningen ger den infrastruktur som krävs, integreras med GitHub för versionskontroll och konfigurerar dokument- och materiallagring i Google Drive.
 
