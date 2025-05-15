@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.5.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 3db5ee2852fadc9c86b3a7979ce40296bbaca858
+source-git-commit: 12388df411b9bf0693358a82de17fec90d83877a
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1050'
 ht-degree: 0%
 
 ---
@@ -166,11 +166,11 @@ Delta i Cloud Manager Tidiga Adobe-program och få exklusiv tillgång till komma
 
 Följande tidiga möjligheter för användare finns för närvarande:
 
-### Lägg till Edge Delivery Pipeline {#add-eds-pipeline}
+### Lägg till Edge Delivery Config Pipeline {#add-eds-pipeline}
 
-**Pipelines** stöds nu för webbplatser som byggts med Edge Delivery Services, vilket gör att den här funktionen kan användas även i andra miljöer än Cloud Service. Du kan använda **pipelines** för att hantera inställningar som trafikfiltreringsregler och konfigurationer för WAF (Web Application Firewall), där det är tillämpligt. Se [Konfigurationer som stöds](/help/operations/config-pipeline.md#configurations).
+Config Pipelines stöds nu för sajter som byggts med Edge Delivery Services, vilket ger fler möjligheter än bara Cloud Service-miljöer. Du kan använda **Konfigurera pipelines** för att hantera inställningar som trafikfiltreringsregler och konfigurationer för WAF (Web Application Firewall), där det är tillämpligt. Se [Konfigurationer som stöds](/help/operations/config-pipeline.md#configurations).
 
-<!-- ![Add Edge Delivery pipeline in Add Pipeline drop-down list](/help/implementing/cloud-manager/release-notes/assets/add-edge-delivery-pipeline.png) -->
+![Lägg till Edge Delivery-pipeline i listrutan Lägg till pipeline](/help/implementing/cloud-manager/release-notes/assets/add-edge-delivery-pipeline.png)
 
 Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [grp-aemeds-config-pipeline-adopter@adobe.com](mailto:grp-aemeds-config-pipeline-adopter@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
 
