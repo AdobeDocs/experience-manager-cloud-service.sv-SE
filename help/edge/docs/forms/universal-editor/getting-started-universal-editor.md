@@ -71,6 +71,7 @@ Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som
       ![öppna filen fstab.yaml](/help/edge/docs/forms/assets/open-fstab.png)
 
    1. Redigera filen **fstab.yaml** för att uppdatera monteringspunkten för projektet. Ersätt URL:en med URL:en för AEM as a Cloud Service-redigeringsinstansen.
+
       `https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main`
 
       ![redigera filen fstab.yaml](/help/edge/docs/forms/assets/edit-fstab-file.png)
@@ -344,7 +345,7 @@ Du kan konfigurera en lokal AEM-utvecklingsmiljö för att utveckla anpassade fo
        npm install -g @adobe/aem-cli
    ```
 
-1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
+1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
