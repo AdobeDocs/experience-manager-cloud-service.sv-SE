@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 2b936b2495eb63defdb184320ae866bbecbe7546
+source-git-commit: 95998daf04ae579ca11896953903852e6140c3a4
 workflow-type: tm+mt
-source-wordcount: '1852'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,6 @@ Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som
       ![öppna filen fstab.yaml](/help/edge/docs/forms/assets/open-fstab.png)
 
    1. Redigera filen **fstab.yaml** för att uppdatera monteringspunkten för projektet. Ersätt URL:en med URL:en för AEM as a Cloud Service-redigeringsinstansen.
-
       `https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main`
 
       ![redigera filen fstab.yaml](/help/edge/docs/forms/assets/edit-fstab-file.png)
@@ -85,6 +84,7 @@ Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som
 ### Skapa ett nytt AEM-projekt
 
 Nu när du har ett GitHub-projekt kan du fortsätta att skapa och publicera ett nytt AEM-projekt i AEM as a Cloud Service-redigeringsinstansen.
+
 1. Så här skapar du ett nytt AEM-projekt:
 
    1. Logga in på AEM as a Cloud Service redigeringsinstans och välj **Platser**.
@@ -165,34 +165,103 @@ Om du har ett befintligt AEM-projekt kan du integrera det adaptiva Forms-blocket
 >[!NOTE]
 >
 >
-> Det här steget gäller projekt som skapats med [AEM-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-xwalk). Om du har skapat ditt AEM-projekt med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
+> Det här steget gäller projekt som skapats med [AEM-standardmallen XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk). Om du har skapat ditt AEM-projekt med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
 
 Integrera:
-1. **Lägg till nödvändiga filer och mappar**
-   1. Kopiera och klistra in följande mappar och filer från [AEM Forms-originalet](https://github.com/adobe-rnd/aem-boilerplate-forms) i ditt AEM-projekt:
 
-      * Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
-      * Mappen [form-common](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-common)
-      * Mappen [form-components](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-components)
-      * filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
-      * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
+1. Navigera till AEM Project-databasmappen på din lokala dator.
 
-1. **Uppdatera komponentdefinitioner och modellfiler**
-   1. Navigera till filen `../models/_component-definition.json` i ditt AEM-projekt och uppdatera den med ändringarna från filen [_component-definition.json i AEM Forms-mallen ](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-definition.json#L39-L48).
+1. Kopiera och klistra in följande mappar och filer från [AEM Forms-originalet](https://github.com/adobe-rnd/aem-boilerplate-forms) i ditt AEM-projekt:
 
-   1. Navigera till filen `../models/_component-models.json` i ditt AEM-projekt och uppdatera den med ändringarna från filen [_component-models.json i AEM Forms-mallen ](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-models.json#L24-L26)
+   * Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
+   * filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
+   * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
+1. Navigera till filen `/scripts/editor-support.js` i ditt AEM-projekt och uppdatera den med filen [editor-support.js i AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js)
+1. Navigera till `/models/_section.json` i ditt AEM-projekt och lägg till&quot;form&quot; och&quot;embed-adaptive-form&quot; i komponentarrayen för objektet `filters`:
 
-1. **Lägg till formulärredigerare i redigeringsskript**
-   1. Navigera till filen `../scripts/editor-support.js` i AEM Project och uppdatera den med ändringarna från filen [editor-support.js i AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js#L105-L106)
-1. **Uppdatera ESLint-konfigurationsfilen**
-   1. Navigera till filen `../.eslintignore` i ditt AEM-projekt och lägg till följande kodrad för att förhindra fel relaterade till regelmotorn för formulärblockering:
+   ```
+       "filters": [
+       {
+     "id": "section",
+     "components": [
+       .
+       .
+       .
+       "form",
+       "embed-adaptive-form"
+     ]
+    }]
+   ```
 
-      ```
-          blocks/form/rules/formula/*
-          blocks/form/rules/model/*
-      ```
+1. (Valfritt) Navigera till `/.eslintignore` i ditt AEM-projekt och lägg till nedanför kodraderna:
+
+   ```
+   blocks/form/rules/formula/*
+   blocks/form/rules/model/*
+   blocks/form/rules/functions.js
+   scripts/editor-support.js
+   scripts/editor-support-rte.js
+   ```
+
+1. (Valfritt) Navigera till `/.eslintrc.js` i ditt AEM-projekt och lägg till nedanför kodraderna i objektet `rules`:
+
+   ```
+   'xwalk/max-cells': ['error', {
+     '*': 4, // default limit for all models
+     form: 15,
+     wizard: 12,
+     'form-button': 7,
+     'checkbox-group': 20,
+     checkbox: 19,
+     'date-input': 21,
+     'drop-down': 19,
+     email: 22,
+     'file-input': 20,
+     'form-fragment': 15,
+     'form-image': 7,
+     'multiline-input': 23,
+     'number-input': 22,
+     panel: 17,
+     'radio-group': 20,
+     'form-reset-button': 7,
+     'form-submit-button': 7,
+     'telephone-input': 20,
+     'text-input': 23,
+     accordion: 14,
+     modal: 11,
+     rating: 18,
+     password: 20,
+     tnc: 12,
+   }],
+   'xwalk/no-orphan-collapsible-fields': 'off', // Disable until enhancement is done for Forms properties
+   ```
+
+1. Öppna terminalen och kör kommandona nedan:
+
+   ```
+   npm i
+   npm run build:json
+   ```
+
+   >[!NOTE]
+   >
+   > Innan du skickar ändringarna till AEM Project-databasen på GitHub måste du se till att filerna `component-definition.json`, `component-models.json` och `component-filters.json` som finns på rotnivån i AEM-projektet uppdateras med formulärrelaterade objekt.
 
 1. Genomför och skicka dessa ändringar till AEM Project-databasen på GitHub.
+
+   <!--
+    1. **Update ESLint configuration file**
+    2. Navigate to the `../.eslintignore` file in your AEM Project and add the following line of codes to prevent errors related to the Form Block rule engine:
+        
+            blocks/form/rules/formula/*
+            blocks/form/rules/model/*
+       * [form-common](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-common)  folder
+       * [form-components](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-components) folder
+    
+     3. **Update component definitions and models files**
+       1. Navigate to the `../models/_component-definition.json` file in your AEM Project and update it with the changes from the [_component-definition.json file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-definition.json#L39-L48).
+    
+    3. Navigate to the `../models/_component-models.json` file in your AEM Project and update it with the changes from the [_component-models.json file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-models.json#L24-L26) -->
 
 Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM-projekt. Du kan [börja skapa och lägga till formulär i ditt AEM-projekt](#add-edge-delivery-services-forms-to-aem-site-project).
 
@@ -275,7 +344,7 @@ Du kan konfigurera en lokal AEM-utvecklingsmiljö för att utveckla anpassade fo
        npm install -g @adobe/aem-cli
    ```
 
-1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
+1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
@@ -305,7 +374,7 @@ Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella pro
 Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projektfilen]/package.json och ändra lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera ändringarna i GitHub-projektet.
 
 * **Resolve Module Path-fel:**
-Om du får felmeddelandet&quot;Det går inte att lösa sökvägen till modulen &quot;&#39;../../scripts/lib-franklin.js&#39;&quot; går du till filen [EDS Project]/blocks/forms/form.js. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
+Om du får felmeddelandet&quot;Det går inte att lösa sökvägen till modulen &quot;&#39;/scripts/lib-franklin.js&#39;&quot; går du till filen [EDS Project]/blocks/forms/form.js. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
 
 ## Se även
 
