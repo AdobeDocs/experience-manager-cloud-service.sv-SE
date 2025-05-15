@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 088d470333d8f5a26f1a938380028541a1e945a1
+source-git-commit: 6493c48797c09fa4598c2c0ff86c9cc1fafa758c
 workflow-type: tm+mt
-source-wordcount: '1750'
+source-wordcount: '1448'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,12 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 20783, som offentliggjordes den 13 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
 
-Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-20783}
 
-* FORMS-18455: AEM Forms Core Component Adaptive Form editor förbättrat för att visa visuella indikatorer (punkter) för dataobjekt som redan används eller mappas i formuläret i datakällträdet, en funktion som gör det enkelt att identifiera dataelement som används.
-* FORMS-18450: Produkten har förbättrats genom att migrera domänlogiken reCaptcha V2 till `AdaptiveFormConfigurationServiceImpl`. Den här ändringen syftar till att centralisera konfigurationen och kan anpassas till att ge stöd för osynlig reCaptcha V2 i Core Components.
-* FORMS-19630: AEM 6.5 quickstart uber-jar uppdateras till att innehålla det senaste adaptiva Forms Core-komponentpaketet, vilket säkerställer att snabbstartsmiljön speglar de senaste adaptiva Forms-funktionerna och ersätter äldre kod.
 * FORMS-19125: Core Component Adaptive Form editor har förbättrats med stöd för automatisk mappning av tillgängliga adaptiva formulärfragment när ett motsvarande avsnitt från datakällträdet släpps på formulärets arbetsyta. Detta ger en viktig produktivitetsfunktion från den grundläggande redigeraren till kärnkomponenterna.
-* FORMS-17887: Nu kan AEM Forms generera dokument i AFP-format (Advanced Function Presentation) via sin utdatatjänst. Den här förbättringen tillgodoser kundernas behov av snabba, stora utskriftsvolymer som vanligtvis används i AFP.
-* FORMS-15089: AEM Forms har introducerat möjligheten att versionshantera ett formulär vid publicering på ett sådant sätt att alla ingående fragment är infogade (inbäddade) i den specifika publicerade versionen. Detta garanterar en exakt, komplett återgivning av formuläret så som det såg ut vid publiceringen, vilket kan vara viktigt för arkivering, juridik och regelefterlevnad.
-* FORMS-17107: AEM Forms erbjuder nu förbättrad tolkning av anpassade funktioner på klientsidan. Detta inkluderar stöd för moderna JavaScript-funktioner (ECMAScript ES10+), t.ex. valfri kedjekoppling, och introducerar möjligheten att använda statiska importer i anpassade funktionsskript. Detta gör att utvecklare bättre kan ordna kod, använda ESM-moduler och ta bort tidigare begränsningar som har uppstått med anpassade funktioner i Adaptive Forms v2 och Edge Delivery Services, särskilt för användare som tidigare behövde tillfälliga lösningar för dessa funktioner.
+* FORMS-17107: AEM Forms erbjuder nu förbättrad tolkning av anpassade funktioner på klientsidan. Detta inkluderar stöd för moderna JavaScript-funktioner (ECMAScript ES10+), t.ex. valfri kedjekoppling, och introducerar möjligheten att använda statiska importer i anpassade funktionsskript. Detta gör att utvecklare bättre kan ordna kod, använda ESM-moduler och ta bort tidigare begränsningar som uppstått med anpassade funktioner i Adaptive Forms baserat på kärnkomponenter och Edge Delivery Services, särskilt för användare som tidigare behövde tillfälliga lösningar för dessa funktioner.
 * SITES-27775: Optimerad referenssökning under publicering.
 * SITES-30885: Optimerad JSON-bearbetning i beständiga frågor.
 * SITES-25433: Edge Delivery med Universal Editor: Stöd för helsidesrendering vid jämförelse av gamla versioner.
@@ -65,14 +60,11 @@ Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns
 * FORMS-18526: När en regel som innehåller flera fält i villkoren kopieras från ett fält till ett annat, behåller en fast fältreferens inom dessa villkor felaktigt sin referens till det ursprungliga källfältet i stället för att uppdateras till det nya fältet där regeln kopieras.
 * FORMS-19047: När ett anpassat formulär har ändrats och publicerats på nytt i AEM Forms (särskilt 6.5.22.0) kanske översättningar för vissa formulärelement, särskilt textrutor, saknas.
 * FORMS-19234: Tidslinjefunktionen för PDF-filer i AEM Forms, som gör att användare kan visa information om hur PDF skapar och versionshanterar, slutar fungera efter att en PDF har överförts under avsnittet Forms och dokument.
-* FORMS-19373: Replikeringsfel rapporteras felaktigt under en process av typen&quot;gyllene publicering&quot; i miljöer där inga replikeringsagenter har konfigurerats.
 * FORMS-18196: HTTP-API:t för synkronisering `generatePrintedOutput` (eller `generatePdfOutput`) returnerar felaktigt en 200-svarskod (Slutfört) i stället för den förväntade 400-felkoden (Ogiltig begäran) när valfria fältdata som krävs för XDP-mallen lämnas tomma i begäran.
 * FORMS-19336: I Core Component Adaptive Form Editor (AF2-redigerare) fungerar inte sökfunktionen i Data Source Tree korrekt eller som förväntat, vilket hindrar användare från att enkelt hitta specifika dataelement.
-* FORMS-19629: JSON-schemaparsern skapar ogiltiga resultat eller feltolkar vissa kundtillhandahållna JSON-scheman. Det här problemet kan påverka funktioner som kräver korrekt schemaanalys negativt, till exempel automatisk mappning av fragment.
-* FORMS-19380: Versionsstödet för Core Component Adaptive Forms har oavsiktligt aktiverat versionshantering för olika andra resurstyper (t.ex. Foundation Forms, PDF-filer, teman, FDM) utan någon specifik design eller testning för dessa resurstyper. Denna oavsiktliga biverkning håller på att undersökas.
 * FORMS-17707: AEP-anslutningen (Adobe Experience Platform) fungerar inte korrekt när den är konfigurerad för att ansluta till AEP-plattformens scen-miljöer.
-FORMS-18526: När du kopierar en regel som har villkor som baseras på flera fält uppdateras inte ett fält som refereras inom regelns villkor eller åtgärder (som inte är det primära fält som utlöser regeln) så att det korrekt refererar till det nya fältet som regeln kopieras till. I stället fortsätter den att referera till det ursprungliga källfältet som regeln kopierades från.
-FORMS-18474: En regel som utformats för att fokusera på en viss panel eller komponent när ett visst fälts värde ändras (t.ex. fält&quot;A&quot;) aktiveras felaktigt av en ändring i något fält i formuläret. Om till exempel fält B ändras ställs fokus fortfarande in på den avsedda panelen, även om regeln bara konfigurerades för ändringar i fält A.
+* FORMS-18526: När du kopierar en regel som har villkor som baseras på flera fält uppdateras inte ett fält som refereras inom regelns villkor eller åtgärder (som inte är det primära fält som utlöser regeln) så att det korrekt refererar till det nya fältet som regeln kopieras till. I stället fortsätter den att referera till det ursprungliga källfältet som regeln kopierades från.
+* FORMS-18474: En regel som utformats för att fokusera på en viss panel eller komponent när ett visst fälts värde ändras (t.ex. fält&quot;A&quot;) aktiveras felaktigt av en ändring i något fält i formuläret. Om till exempel fält B ändras ställs fokus fortfarande in på den avsedda panelen, även om regeln bara konfigurerades för ändringar i fält A.
 * GRANITE-58276: OSGi-beroendecykler förhindrar att HTL-skriptmotorfabriken fungerar korrekt.
 * OAK-11673: Ökning av CPU för Oak-segment-azure v12 som orsakas av refreshLease.
 * SITES-30752: Använd inte `If-modified-since`/`last-modified`-huvuden när du genererar beständigt frågesvar.
