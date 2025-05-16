@@ -4,7 +4,7 @@ description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Deliv
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 960aa3c6-27b9-44b1-81ea-ad8c5bbc99a5
-source-git-commit: 4fa8c65d9744b9451089423de0da63b39530973e
+source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Lär dig hur du hanterar Edge Delivery-webbplatser i Cloud Manager genom att lägga till en CDN-konfiguration till en befintlig webbplats. Du kan också ta bort en Edge Delivery-webbplats.
 
-## Lägga till en CDN-konfiguration på en befintlig Edge Delivery-webbplats {#add-cdn-to-edge-delivery-site}
+## Lägg till en domänmappning till en befintlig Edge Delivery-webbplats {#add-cdn-to-edge-delivery-site}
 
-Se [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md).
+Se [Lägg till en domänmappning](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md).
 
 ## Byta namn på en Edge Delivery-webbplats (#rename-edge-delivery-site)
 

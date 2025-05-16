@@ -4,7 +4,7 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
+source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
 workflow-type: tm+mt
 source-wordcount: '1729'
 ht-degree: 2%
@@ -37,7 +37,7 @@ För att förbereda dig för innehållsleverans med AEM inbyggda CDN via Cloud M
 * [EDGE DELIVERY SERVICES i CLOUD MANAGER](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
 * [Introduktion till anpassade domännamn](/help/implementing/cloud-manager/custom-domain-names/introduction.md)
 * [Introduktion till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md)
-* [Konfigurera ett CDN](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md)
+* [Konfigurera ett CDN](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md)
 
 **Begränsa trafik**
 

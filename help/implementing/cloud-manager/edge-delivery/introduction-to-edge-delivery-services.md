@@ -4,7 +4,7 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med Edge De
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 54ea92b53d97be314dcef1ed3afbde35b16f9949
+source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 1%
@@ -79,11 +79,11 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 3 | Lägg till Edge Delivery-webbplats ELLER <br>Skapa webbplats nu | Se [Lägg till en Edge Delivery-webbplats](#eds-add-site).<br>Se [Skapa en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md). |
 | 4 | Lägg till domän | Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | 5 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
-| 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md). |
+| 6 | Konfigurera CDN för din Edge Delivery-webbplats | Se [Lägg till en domänmappning](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md). |
 | 7 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 8 | GoLive | Se [Go-Live-checklista](/help/edge/docs/go-live-checklist.md). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3441565?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 

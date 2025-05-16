@@ -4,7 +4,7 @@ description: Versionsinformation om 2024.3.0-utgåvan av  [!DNL Adobe Experience
 exl-id: b3816929-2c0a-4d6a-b583-c928d2182ecd
 feature: Release Information
 role: Admin
-source-git-commit: 7f63f66cb1753fc32996e4672214eccc33ca8d92
+source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
 workflow-type: tm+mt
 source-wordcount: '2293'
 ht-degree: 0%
@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.3.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten för mars 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.3.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3450363?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3428342?quality=12)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
@@ -201,7 +201,7 @@ Med de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rul
 
 Nu kan du skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>** om du vill gå med i det tidiga adopterprogrammet så att du kan få meddelanden när trafikfilterreglerna aktiveras. E-postmeddelanden från Åtgärdscenter håller dig informerad när vissa trafikförhållanden inträffar så att du kan vidta lämpliga åtgärder.
 
-#### CDN-konfiguration (Tidigt Adobe-program) {#cdn-config-early-adopter}
+#### Domänmappning (Tidigt Adobe-program) {#cdn-config-early-adopter}
 
 Förutom de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria brandväggsreglerna för webbprogram (WAF), finns det en möjlighet att använda konfigurationsflödet för att deklarera och distribuera andra typer av CDN-konfigurationer. [Läs mer](/help/implementing/dispatcher/cdn-configuring-traffic.md) och gå med i det tidiga adopterprogrammet genom att skicka ett e-postmeddelande till **<aemcs-cdn-config-adopter@adobe.com>** för att få tillgång till:
 

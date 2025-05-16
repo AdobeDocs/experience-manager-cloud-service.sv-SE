@@ -5,7 +5,7 @@ exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bf903736e256bb9275bad6c0271b31b8dbdec625
+source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Lär dig hur du lägger till ett eget SSL-certifikat eller ett Adobe-hanterat DV
 
 >[!NOTE]
 >
->Om du använder ett kundhanterat (OV/EV) SSL-certifikat och en kundhanterad CDN-leverantör kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md) när det är klart.
+>Om du använder ett kundhanterat (OV/EV) SSL-certifikat och en kundhanterad CDN-leverantör, kan du hoppa över att lägga till ett SSL-certifikat och gå direkt till [Lägg till en domänmappning](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md) när det är klart.
 
 Det kan ta flera dagar att etablera ett certifikat. Därför rekommenderar Adobe att du etablerar ditt eget certifikat långt före ett visst datum för deadline eller en viss tid för att undvika förseningar.
 
@@ -85,7 +85,7 @@ Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-cer
 
 Du har nu lagt till ett fungerande Adobe-hanterat DV SSL-certifikat för ditt projekt. Det här steget är ofta det första som ställer in ett anpassat domännamn.
 
-Du kan nu lägga till en [CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md).
+Du kan nu lägga till en [CDN-konfiguration](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md).
 
 ## Lägg till ett OV/ED-SSL-certifikat (Customer managed) {#add-customer-managed-ssl-cert}
 
@@ -132,7 +132,7 @@ Det här fältet är avsett endast som information och kan vara vilket namn som 
 
 Du har nu lagt till ett fungerande SSL-certifikat för ditt projekt. Det här steget är ofta det första som ställer in ett anpassat domännamn.
 
-Du kan nu lägga till en [CDN-konfiguration](/help/implementing/cloud-manager/cdn-configurations/add-cdn-config.md).
+Du kan nu lägga till en [CDN-konfiguration](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md).
 
 
 

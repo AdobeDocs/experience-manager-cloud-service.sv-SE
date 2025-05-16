@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2023.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2023.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2023.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2023.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 19cff082-80aa-445c-9462-5e319b7fe0e9
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.11.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -53,7 +53,7 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
 ### Nya funktioner i Assets View {#assets-view-features}
 
-* **Redigeraren för inbäddad Adobe Express i AEM Assets**: Användare med tillgång till Express har nu integrerade verktyg för bildredigering och bildskapande från Adobe Express och Adobe Firefly tillgängliga direkt i AEM Assets för att förbättra återanvändning av innehåll och snabba upp hastigheten på innehållet.
+* **Inbäddad Adobe Express-redigerare i AEM Assets**: Användare med tillgång till Express har nu integrerade verktyg för bildredigering och bildskapande från Adobe Express och Adobe Firefly tillgängliga direkt i AEM Assets för att förbättra återanvändning av innehåll och snabba upp hastigheten.
 
   ![tilldela metadataformulär till en mapp](/help/assets/assets/adobe-express-aem-assets.png)
 
@@ -82,13 +82,13 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
 ### Nya funktioner i [!DNL Experience Manager Forms] {#forms-features}
 
-* **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html?lang=sv-SE)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
+* **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
 
-* **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html?lang=sv-SE)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
+* **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
 
   ![Komponenter på fliken Kryssruta, Villkor och Lodrätt](/help/forms/assets/forms-components.png)
 
-* **[Komponent för lodräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html?lang=sv-SE)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
+* **[Komponent för lodräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
 
 
 
@@ -110,21 +110,21 @@ Titta på videon med versionsöversikten för november 2023 om du vill se en sam
 
   ![Stöd för höger till vänster-språk](/help/forms/assets/right-to-left-language-support.png)
 
-* **[Protect dina dokument med DocAssurance-API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med DocAssurance-API:erna kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
+* **[Skydda dina dokument med DocAssurance-API:er (del av kommunikations-API:er)](/help/forms/aem-forms-cloud-service-communications-introduction.md#document-assurance-doc-assurance)**: Med DocAssurance-API:erna kan du skydda känslig information genom att signera och kryptera dokumenten. Genom kryptering omvandlas innehållet i ett dokument till ett oläsligt format så att bara behöriga användare kan få åtkomst till det. Detta förstärkta skydd skyddar inte bara värdefulla data från obehöriga ögon, utan ger även sinnesro. Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att endast avsedda mottagare kan ändra dokument.
 
   Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### WAF-trafikfilterregler kan nu licensieras {#cdn-waf-license}
+### WAF trafikfilterregler kan nu licensieras {#cdn-waf-license}
 
-Traffic Filter Rules släpptes i oktober och innehöll en kommentar om att den speciella kategorin för reglerna för Web Application Firewall (WAF) skulle vara tillgänglig senare i år för att komplettera de regler som redan finns för Sites och Forms-kunder. Som uppdatering kan WAF-DDoS Protection-erbjudandet nu licensieras.
+Traffic Filter Rules släpptes i oktober och innehöll en kommentar om att specialkategorin WAF-regler (Web Application Firewall) skulle vara tillgänglig senare i år för att komplettera de regler som redan är tillgängliga för Sites och Forms-kunder. Som en uppdatering kan WAF-DDoS Protection-erbjudandet nu licensieras.
 
 När licensen har löpt ut kan dessa avancerade WAF-regler distribueras till CDN med Cloud Manager Configuration Pipeline för att lägga till ett extra skydd mot webbattacker.
 
-Läs om [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), inklusive WAF. Tala med ditt AEM om licenser för WAF-DDoS Protection eller Enhanced Security.
+Läs om [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md), inklusive WAF. Tala med ditt AEM-kontoteam om licensiering av WAF-DDoS-skydd eller förbättrad säkerhet.
 
-### CDN-konfiguration Tidigt program {#cdn-config-early-adopter}
+### Tidiga Adobe-program för domänmappning {#cdn-config-early-adopter}
 
 Förutom de nyligen släppta [trafikfilterreglerna (inklusive WAF)](/help/security/traffic-filter-rules-including-waf.md) finns det en möjlighet att använda konfigurationsförloppet för att deklarera och distribuera andra typer av CDN-konfigurationer. Vi vill gärna veta mer om dina användningsexempel, bland annat:
 * 301/302 klientomdirigeringar
@@ -149,4 +149,4 @@ Du hittar en fullständig lista över migreringsverktygen [här](/help/journey-m
 
 * Det går inte att skicka Adaptiv Forms baserat på kärnkomponenter. Problemet inträffar för Adaptive Forms som byggts med Core Components version 2.0.38 - 2.0.60.
 
-  För att lösa problemet. du kan gå över till Adaptive Form Core Components version 2.0.62 eller senare. Om du vill ange en version av adaptiva Forms Core-komponenter för din miljö anger du [versioner av Core.forms.components.version, core.forms.components.af.version och core.wcm.components.version ](/help/forms/enable-adaptive-forms-core-components.md#2-add-adaptive-forms-core-components-dependencies-to-your-git-repository) -beroenden i ditt Forms as a Cloud Service databas- eller AEM Archetype-baserade projekt och [distribuerar ändringarna till din Forms as a Cloud Service miljö](/help/forms/enable-adaptive-forms-core-components.md#build-and-deploy-updated-code-on-an-aem-forms-as-a-cloud-service-environment). Du hittar den senaste versionen av adaptiva Forms Core Components-beroenden i [Adaptive Forms Core Components Git-databasen](https://github.com/adobe/aem-core-forms-components#system-requirements).
+  För att lösa problemet. du kan gå över till Adaptive Form Core Components version 2.0.62 eller senare. Om du vill ange en version av adaptiva Forms Core-komponenter för din miljö anger du [versioner av Core.forms.components.version, core.forms.components.af.version och core.wcm.components.version ](/help/forms/enable-adaptive-forms-core-components.md#2-add-adaptive-forms-core-components-dependencies-to-your-git-repository) -beroenden i ditt Forms as a Cloud Service-databas eller AEM Archetype-baserade projekt och [distribuerar ändringarna till din Forms as a Cloud Service-miljö](/help/forms/enable-adaptive-forms-core-components.md#build-and-deploy-updated-code-on-an-aem-forms-as-a-cloud-service-environment). Du hittar den senaste versionen av adaptiva Forms Core Components-beroenden i [Adaptive Forms Core Components Git-databasen](https://github.com/adobe/aem-core-forms-components#system-requirements).
