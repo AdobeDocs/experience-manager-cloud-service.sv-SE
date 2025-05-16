@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: c6ba1c2bcf7db8c406350c81c51639dc5bc8843f
 workflow-type: tm+mt
-source-wordcount: '2566'
+source-wordcount: '2567'
 ht-degree: 0%
 
 ---
@@ -166,14 +166,14 @@ Om du markerar ett visst fragment öppnas ett verktygsfält som fokuserar på de
 ![Konsolen för innehållsfragment - verktygsfält för ett valt fragment](assets/cf-managing-console-fragment-toolbar.png)
 
 * **[Öppna i ny redigerare](#editing-the-content-of-your-fragment)**
-* **[Öppna](/help/assets/content-fragments/content-fragments-variations.md)** (i originalredigeraren)
 * **[Publicera](#publishing-and-previewing-a-fragment)** (och **[Avpublicera](#unpublishing-a-fragment)**)
 * **[Hantera taggar](#manage-tags)**
-* **[Kopiera](/help/assets/manage-digital-assets.md)**
-* **[Flytta](/help/assets/manage-digital-assets.md)**
-* **[Byt namn](/help/assets/manage-digital-assets.md)**
-* **[Ta bort](#deleting-a-fragment)**
+* **Kopiera**
 * **[Ersätt](#find-and-replace)**
+* **Flytta**
+* **Byt namn**
+* **[Ta bort](#deleting-a-fragment)** (endast tillgängligt för opublicerade fragment)
+
 
 >[!NOTE]
 >
