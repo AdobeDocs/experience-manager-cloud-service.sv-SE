@@ -5,7 +5,7 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 2ec16c91-0195-4732-a26d-ac223e10afb9
-source-git-commit: 41f4619728e7c9a964f38c0d96b3cb88969c31b8
+source-git-commit: c1040572085183f0ddd2a12f159f74e399c12df3
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Lär dig hur du använder Cloud Manager för att redigera eller ta bort CDN-konfigurationer för en Edge Delivery-webbplats eller en Cloud Manager-miljö.
 
-## Redigera en CDN-konfiguration från sidan Domänmappningar {#edit-cdn}
+## Redigera en CDN-konfiguration från sidan Domänmappningar {#edit-domain-mapping}
 
 I Adobe Cloud Manager kan du av flera anledningar redigera en CDN-konfiguration (Content Delivery Network), inklusive miljönivån (Publicera eller Förhandsgranska) och SSL-certifikat.
 
