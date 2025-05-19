@@ -84,7 +84,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 7 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 8 | GoLive | Se [Go-Live-checklista](/help/edge/docs/go-live-checklist.md). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441565?learn=on&captions=swe)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 
