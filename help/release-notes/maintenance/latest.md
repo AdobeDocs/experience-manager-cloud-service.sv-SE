@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 6493c48797c09fa4598c2c0ff86c9cc1fafa758c
+source-git-commit: 53a2dd005de075c0f1e4bf83675995608e5f785d
 workflow-type: tm+mt
-source-wordcount: '1448'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,17 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 20783 {#20783}
+## Utgåva 20936 {#20936}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 20783, som offentliggjordes den 13 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 20936, som offentliggjordes den 19 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
 
-Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-20783}
+>[!NOTE]
+>
+>Utgåva 20783 gjordes privat den 19 maj och har ersatts av version 20936.
+
+### Förbättringar {#enhancements-20936}
 
 * FORMS-19125: Core Component Adaptive Form editor har förbättrats med stöd för automatisk mappning av tillgängliga adaptiva formulärfragment när ett motsvarande avsnitt från datakällträdet släpps på formulärets arbetsyta. Detta ger en viktig produktivitetsfunktion från den grundläggande redigeraren till kärnkomponenterna.
 * FORMS-17107: AEM Forms erbjuder nu förbättrad tolkning av anpassade funktioner på klientsidan. Detta inkluderar stöd för moderna JavaScript-funktioner (ECMAScript ES10+), t.ex. valfri kedjekoppling, och introducerar möjligheten att använda statiska importer i anpassade funktionsskript. Detta gör att utvecklare bättre kan ordna kod, använda ESM-moduler och ta bort tidigare begränsningar som uppstått med anpassade funktioner i Adaptive Forms baserat på kärnkomponenter och Edge Delivery Services, särskilt för användare som tidigare behövde tillfälliga lösningar för dessa funktioner.
@@ -46,7 +50,7 @@ Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns
 * SITES-26711: Länkar för RTE-textfält uppdateras inte så att de pekar på den aktiva kopian vid MSM-utrullning.
 * SITES-25976: Länkar inuti Experience Fragments som inte anpassar sig efter MSM-utrullning.
 
-### Åtgärdade problem {#fixed-issues-20783}
+### Åtgärdade problem {#fixed-issues-20936}
 
 * ASSETS-50994: Inkommande trafik blockerad vid AemRequestEventFilter.
 * CQ-4358591: Projekt saknas för ett fåtal språk när språkkopior skapas från platsens referenspanel med alternativet&quot;Skapa översättningsprojekt&quot;.
@@ -92,21 +96,22 @@ Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns
 * SITES-31020: Förbättra användargränssnittet för att skapa live-kopieringsjobb så att kunden ser förloppet.
 * SITES-29816: &quot;Resource Not found&quot; Error while Creating Live Copy of Experience Fragment.
 * SITES-29363: Knappen Återställ live-kopia fungerar inte för kapslad innehållshierarki för live-kopia.
+* SITES-31467: JS-fel från `contexthub.authoring-hook.js` i sidredigeraren.
 * SKYOPS-106509: Lägg till extra öppningsflaggor som stöder GSON-reflektiv åtkomst i Java 21.
 
-### Kända fel {#known-issues-20783}
+### Kända fel {#known-issues-20936}
 
-Ingen.
+* SITES-28030: Alternativet Start Target saknas vid val av målinriktning.
 
-### Föråldrade funktioner och API:er {#deprecated-20783}
+### Föråldrade funktioner och API:er {#deprecated-20936}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-20783}
+### Säkerhetskorrigeringar {#security-20936}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 19 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-20783}
+### Inbäddade tekniker {#embedded-tech-20936}
 
 | Teknik | Version | Länk |
 |---|---|---|
