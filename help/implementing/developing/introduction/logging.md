@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: f799dd9a4a2e5138776eb57a04c116df49d28030
+source-git-commit: 783210b4b72cf6efbdb4cf8c8cab08dbcd3004c6
 workflow-type: tm+mt
-source-wordcount: '2546'
+source-wordcount: '2540'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,6 @@ Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer fö
 |---|---|
 | `org.apache.sling.commons.log.names` | Java-paketen som loggsatser ska samlas in för. |
 | `org.apache.sling.commons.log.level` | Loggnivån som Java-paketen ska loggas på, som anges av `org.apache.sling.commons.log.names` |
-| `org.apache.sling.commons.log.file` | Ange målet för utdata: `logs/error.log` |
 
 Om du ändrar andra konfigurationsegenskaper för LogManager OSGi kan det uppstå tillgänglighetsproblem i AEM as a Cloud Service.
 
