@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med Edge De
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9d866df00c25a827d351fcaf21a8c63ab04e6e41
+source-git-commit: 4e79e7f3e4d4b1cc0413fa9e599b181d23ced635
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '800'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,9 @@ Maximera fördelarna med Adobe genom att skaffa och använda din Edge Delivery S
 * [Få åtkomst till SLA-rapportering](/help/implementing/cloud-manager/sla-reporting.md) (*kommer snart*)
 * [Få tillgång till Adobe support](/help/edge/overview.md#support-ticket) för dina registrerade produktionsprogram.
 
-Med Cloud Manager kan du dessutom använda [Adobe hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) för din Edge Delivery-webbplats och dra nytta av viktiga fördelar som självbetjäning för CDN-hantering, inklusive konfiguration och tillägg av DV-certifikat. När ett DV-certifikat har skapats förnyas det dessutom automatiskt var tredje månad, om det inte tas bort. Om du inte har någon Edge Delivery Services-licens med Adobe och väljer att använda ditt eget självhanterade CDN måste det installationsprogrammet köras på [`aem.live`-plattformen](https://www.aem.live/docs/go-live-checklist#cdn-configuration).
+Om du har en Edge Delivery Services-licens (EDS) kan du använda ett [Adobe-hanterat CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) för din Edge Delivery-webbplats och utnyttja funktioner som självbetjäning för CDN-hantering och automatisk förnyelse av DV-certifikat var tredje månad, såvida det inte raderas.
+
+Om du väljer att använda ditt CDN (dvs. ett icke-Adobe-hanterat CDN), oavsett din Edge Delivery Services-licens, måste du konfigurera det på `aem.live`-plattformen. Se [BYO CDN-konfiguration](https://www.aem.live/docs/byo-cdn-setup).
 
 
 ## Om att lägga till Edge Delivery Services i ett produktionsprogram eller sandlådeprogram
@@ -84,7 +86,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 7 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 8 | GoLive | Se [Go-Live-checklista](/help/edge/docs/go-live-checklist.md). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3441565?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 
