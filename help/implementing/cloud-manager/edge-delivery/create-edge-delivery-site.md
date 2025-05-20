@@ -4,7 +4,7 @@ description: Lär dig hur du snabbt skapar en Edge Delivery-webbplats i Cloud Ma
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 292bf0b4-990b-4980-b971-91b8aedde3de
-source-git-commit: 9bf64836c2f769c31017d7f9df6bc26b280606a0
+source-git-commit: 0c4ef0eb5bb7caa5cd68dac6c788b37f564e1770
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 0%
@@ -17,7 +17,11 @@ Att skapa din första Edge Delivery-webbplats med ett enda klick har utformats f
 
 Den här automatiseringen minskar den manuella arbetsinsats som krävs för att skapa den första webbplatsen. Det ger smidiga arbetsflöden, skalbarhet och förbättrar teamets prestanda när det gäller att hantera innehåll i framkanten.
 
-<!-- ADD LINK TO DORU'S VIDEO DEMO -->
+<!-- Check out this quick 2-minute video for a step-by-step walkthrough on creating your first Edge Delivery site—no hassle, just one click.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458975?quality=12&learn=on) -->
+
+
 
 <!-- >
 ## Practical use cases {#use-cases}
@@ -30,6 +34,10 @@ Den här automatiseringen minskar den manuella arbetsinsats som krävs för att 
 | Edge computing workloads | <ul><li>Support serverless computing to process workloads closer to users.</li><li>Reduce latency and enhance performance. </li></ul> |
 | Security and governance | <ul><li>Security is provided with integrated DDoS (Distributed Denial of Service) protection and WAF (Web Application Firewall) integration.</li><li>Ensure that content is delivered securely through TLS (Transport Security Layer) encryption. </li></ul> |
 -->
+
+
+
+
 
 ## Skapa en Edge Delivery-webbplats i Cloud Manager med ett klick {#one-click-edge-delivery-site}
 
