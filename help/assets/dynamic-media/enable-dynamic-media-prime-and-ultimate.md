@@ -216,7 +216,7 @@ Utför följande steg i Cloud Manager för att konfigurera en anpassad domän i 
 
 1. [Lägg till ett anpassat domännamn](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name#adding-cdn-settings).
 
-1. Navigera till sidan med miljöinformation och [lägg till en CDN-konfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/domain-mappings/add-domain-mapping). När du lägger till konfigurationen väljer du **[!UICONTROL Delivery]** i fältet **[!UICONTROL Tier]** i dialogrutan **[!UICONTROL Configure CDN]**.
+1. Navigera till sidan med miljöinformation och [lägg till en CDN-konfiguration](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/domain-mappings/add-domain-mapping). När du lägger till konfigurationen väljer du **[!UICONTROL Delivery]** i fältet **[!UICONTROL Tier]** i dialogrutan **[!UICONTROL Configure CDN]**.
 
    ![Konfigurera CDN](/help/assets/assets/select-delivery-tier-in-configure-cdn-form.png)
 
