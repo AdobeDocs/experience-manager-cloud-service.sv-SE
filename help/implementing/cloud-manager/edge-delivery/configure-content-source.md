@@ -1,11 +1,12 @@
 ---
 title: Konfigurera Source
-description: Lär dig hur du konfigurerar innehållskällan för din Edge Delivery-webbplats med fstab.yaml i Helix 4 eller Edge Delivery Services UI (eller API:t för konfigurationstjänst) i Helix 5.
+description: Lär dig hur du konfigurerar innehållskällan för din Edge Delivery-webbplats med fstab.yaml i Helix 4 eller med hjälp av den guidade guiden i Cloud Manager (eller API:t för konfigurationstjänst) i Helix 5.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8696cf8a7e7cfc439450b34fa6fda10b38cd415e
+exl-id: f82eafc0-03d0-4c69-9b28-e769a012531b
+source-git-commit: 56ab7a402a2fa7bdcf30bd66045b04e9314bed64
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -30,7 +31,7 @@ Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implement
 **Bestäm din Helix-version**
 
 * Helix 4 - Ditt projekt innehåller en `fstab.yaml`-fil.
-* Helix 5 - Ditt projekt *använder inte* `fstab.yaml` och konfigurerades med [Edge Delivery Services-gränssnittet](#config-helix5) eller API:t.
+* Helix 5 - Ditt projekt *använder inte* `fstab.yaml` och konfigurerades via [Cloud Manager med hjälp av den guidade guiden](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md) eller API:t.
 
 Bekräfta via databasmetadata eller kontakta administratören om du fortfarande är osäker.
 
