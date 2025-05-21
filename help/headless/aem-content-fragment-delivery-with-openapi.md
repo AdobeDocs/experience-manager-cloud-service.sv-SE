@@ -4,9 +4,9 @@ description: Läs mer om AEM Content Fragment Delivery med OpenAPI
 feature: Headless, Content Fragments, Edge Delivery Services
 role: Admin, Developer
 exl-id: b298db37-1033-4849-bc12-7db29fb77777
-source-git-commit: 4f58a52c5ccc8178e768f9072e7b2047cbe3fb20
+source-git-commit: 7f7ed3adcbd01f688f48f3ba4a0c25293b8b1551
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 I Adobe Experience Manager (AEM) as a Cloud Service, AEM OpenAPI for Content Fragment Delivery:
 
-* är ett HTTP REST API på [AEM Edge Delivery Services](/help/edge/overview.md) som är utformat för att leverera strukturerat innehåll från innehållsfragment i JSON-format
+* är ett OpenAPI som är optimerat för direktleverans av AEM Content Fragments i JSON-format.
 * erbjuder en modern CDN-integrering som tillåter att aktivt innehåll ogiltigförklaras
 * fokuserar på innehållsleverans (prestanda, skalbarhet, CDN-integrering, optimerad JSON-kontroll och utdata)
 * inkluderar möjlighet att hydratisera JSON för refererade fragment och resurser
