@@ -5,9 +5,9 @@ exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 87836c7f28c9e3c8269fac073f46c53ce73fecfa
+source-git-commit: 8ca3546725f2a95d233497a899afe3b4f6036775
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1079'
 ht-degree: 0%
 
 ---
@@ -49,13 +49,18 @@ Se [Fler alternativ för produktionsprogram](#options).
 1. I listrutan **Lösningar och tillägg** väljer du en eller flera lösningar som ska ingå i programmet.
 
    * Om du är osäker på om du behöver ett eller flera program för de olika lösningar du har tillgängliga väljer du det som intresserar dig mest. Du kan aktivera ytterligare lösningar genom att [redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) senare. Se dokumentet [Introduktion till produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/introduction-production-programs.md) för fler rekommendationer för programkonfiguration.
-   * Minst en lösning krävs för att skapa ett program.
-   * Välj **Edge Delivery Services** för en fullständigt hanterad CDN-lösning som optimerar digitala upplevelser. Se [Använda Edge Delivery Services för att leverera ditt Cloud Manager-projekt](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
-   * Om du valde alternativet **[Aktivera förbättrat skydd](#security)** kan du bara välja så många lösningar som det finns tillgängliga HIPAA-berättiganden för.
+   * Du måste välja minst en lösning för att skapa ett program. Du kan t.ex. välja **Edge Delivery Services** som en helt hanterad CDN-lösning som optimerar digitala upplevelser. Se [Använda Edge Delivery Services för att leverera ditt Cloud Manager-projekt](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
 
-     ![Välj lösningar](/help/implementing/cloud-manager/assets/add-production-program-with-edge.png)
+   ![Välj lösningar](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/add-production-program-with-edge-v2.png)
 
-   * Klicka på ikonen ![Sparrstorlek 300](https://spectrum.adobe.com/static/icons/ui_18/ChevronSize300.svg) till vänster om ett lösningens namn för att visa valfria tillägg, till exempel alternativet **Commerce** under **Platser**.
+
+
+
+   <!-- * If you selected the **[Enable Enhanced Security](#security)** option, you can select only as many solutions for which HIPAA entitlements are available. -->
+
+
+
+   * Klicka på ikonen ![Sparrstorlek 300](https://spectrum.adobe.com/static/icons/ui_18/ChevronSize300.svg) till vänster om ett lösningens namn för att visa valfria tillägg. <!-- such as the **Commerce** add-on option under **Sites**. -->
 
    ![Välj tillägg](assets/setup-prod-commerce.png)
 
