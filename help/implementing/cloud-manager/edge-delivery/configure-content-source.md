@@ -1,21 +1,25 @@
 ---
 title: Konfigurera Source
-description: Lär dig hur du konfigurerar innehållskällan för din Edge Delivery-webbplats med fstab.yaml i Helix 4 eller med hjälp av den guidade guiden i Cloud Manager (eller API:t för konfigurationstjänst) i Helix 5.
+description: Lär dig hur du konfigurerar innehållskällan för din Edge Delivery-webbplats. Använd fstab.yaml med Helix 4-arkitekturen eller använd guiden i Cloud Manager (eller API:t för konfigurationstjänsten) med Helix 5-arkitekturen.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: f82eafc0-03d0-4c69-9b28-e769a012531b
-source-git-commit: 56ab7a402a2fa7bdcf30bd66045b04e9314bed64
+source-git-commit: 71618a5603328990603db2ee7554048c9020a883
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
 
 # Konfigurera innehållskällan med ett klick för Edge Delivery Services {#config-content-source}
 
+>[!IMPORTANT]
+>
+>*Helix* är det interna namnet på den underliggande arkitekturen som driver AEM Sites med dokumentbaserad redigering. Det är inte en funktion eller ett produktnamn. I den här artikeln hänvisar *Helix* till den arkitekturversion som används av dina Edge Delivery Sites. Helix 5 är den nuvarande versionen av den underliggande arkitekturen; Helix 4 är den tidigare versionen.
+
 Adobe Experience Manager (AEM) Edge Delivery Services tillåter innehållsleverans från flera källor, som Google Drive, SharePoint eller AEM, via ett snabbt, globalt distribuerat gränsnätverk.
 
-Innehållskällans konfiguration skiljer sig åt mellan Helix 4 och Helix 5 på följande sätt:
+Innehållskällans konfiguration skiljer sig mellan de två arkitekturversionerna på följande sätt:
 
 | Version | Konfigurationsmetod för innehållskälla |
 | --- | --- |
@@ -26,7 +30,7 @@ I den här artikeln finns omfattande konfigurationssteg, exempel och validerings
 
 **Innan du börjar**
 
-Om du använder [en klickning på Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) är webbplatsen Helix 5 med en enda databas. [Följ Helix 5-instruktionerna](#config-helix5) och använd den medföljande Helix 4 YAML-versionen av instruktionerna som reserv.
+Om du använder [ett klick i Edge Delivery i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md##one-click-edge-delivery-site) använder webbplatsen Helix 5 med en enda databas. [Följ Helix 5-instruktionerna](#config-helix5) och använd den medföljande Helix 4 YAML-versionen av instruktionerna som reserv.
 
 **Bestäm din Helix-version**
 
@@ -37,14 +41,14 @@ Bekräfta via databasmetadata eller kontakta administratören om du fortfarande 
 
 ## Konfigurera innehållskällan för Helix 4
 
-I Helix 4 definierar filen fstab.yaml innehållskällan för platsen. Den här filen finns i roten av GitHub-databasen och mappar URL-sökvägsprefix (kallas monteringspunkter) till externa innehållskällor. Ett typiskt exempel ser ut så här:
+I Helix 4 definierar filen `fstab.yaml` platsens innehållskälla. Den här filen finns i roten av GitHub-databasen och mappar URL-sökvägsprefix (kallas monteringspunkter) till externa innehållskällor. Ett typiskt exempel ser ut så här:
 
 ```yaml
 mountpoints:
   /: https://drive.google.com/drive/folders/your-folder-id
 ```
 
-Det här exemplet är endast för illustrationer. Den faktiska URL:en ska peka mot innehållskällan, t.ex. en Google Drive-mapp, SharePoint-katalog eller AEM-sökväg.
+Exemplet ovan är endast för illustrationer. Den faktiska URL:en ska peka mot innehållskällan, t.ex. en Google Drive-mapp, SharePoint-katalog eller AEM-sökväg.
 
 **Så här konfigurerar du innehållskällan för Helix 4:**
 
@@ -97,7 +101,7 @@ Stegen varierar beroende på vilket källsystem du använder.
 
 ## Konfigurera innehållskällan för Helix 5 {#config-helix5}
 
-Helix 5 är svarslös, använder inte `fstab.yaml` och stöder flera platser som delar samma katalog. Konfigurationen hanteras via konfigurationstjänstens API eller Edge Delivery Services UI. Konfigurationen är platsnivå (inte databasnivå).
+Helix 5 är svarslös, använder inte `fstab.yaml` och stöder flera platser som delar samma katalog. Konfigurationen hanteras via konfigurationstjänstens API eller användargränssnittet för Edge Delivery Sites. Konfigurationen är platsnivå (inte databasnivå).
 
 Följande skillnader är konceptuella:
 
