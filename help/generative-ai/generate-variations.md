@@ -4,9 +4,9 @@ description: Läs mer om Generera variationer, som kan hämtas från AEM as a Cl
 exl-id: 9114037f-37b9-4b2f-a714-10933f69b2c3
 feature: Generate Variations
 role: Admin, Architect, Developer
-source-git-commit: 85489b9d2c774af2f82efe4cde406d6d33057d4e
+source-git-commit: 8c4908bf52ca03798d7d40ed66647c17fc0faf14
 workflow-type: tm+mt
-source-wordcount: '3287'
+source-wordcount: '3294'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,7 @@ Välj en variant, följt av **Generera bild**, som ska öppnas direkt i **Text t
 
 Du kan göra ytterligare ändringar:
 
-* [skriv din egen uppmaning i Adobe Express](https://helpx.adobe.com/se/firefly/using/tips-and-tricks.html) genom att beskriva vad du vill se,
+* [skriv din egen uppmaning i Adobe Express](https://helpx.adobe.com/firefly/using/tips-and-tricks.html) genom att beskriva vad du vill se,
 * justera alternativen för **text till bild**,
 * **Uppdatera** de genererade bilderna.
 
@@ -182,7 +182,7 @@ Här kan du visa åtgärdsobjekt för:
 
 >[!NOTE]
 >
->[Innehållsautentiseringsuppgifterna](https://helpx.adobe.com/se/creative-cloud/help/content-credentials.html) bevaras inte när de används i dokumentbaserad redigering.
+>[Innehållsautentiseringsuppgifterna](https://helpx.adobe.com/creative-cloud/help/content-credentials.html) bevaras inte när de används i dokumentbaserad redigering.
 
 ### Använd innehåll {#use-content}
 
@@ -355,13 +355,13 @@ Om du väljer en **Adobe Target**-målgrupp i uppmaningen kan genereringen av in
 
    >[!NOTE]
    >
-   >Beskrivningsfältet måste fyllas i om du vill använda en **Adobe Target**-målgrupp. Annars visas målgruppen i listrutan som otillgänglig. Om du vill lägga till en beskrivning går du till Mål och [lägger till en publikbeskrivning](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/audiences/create-audiences).
+   >Beskrivningsfältet måste fyllas i om du vill använda en **Adobe Target**-målgrupp. Annars visas målgruppen i listrutan som otillgänglig. Om du vill lägga till en beskrivning går du till Mål och [lägger till en publikbeskrivning](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/audiences/create-audiences).
 
    ![Generera variationer - målgruppskälla - Adobe Target](assets/generate-variations-audiences-adobe-target.png)
 
 #### Lägg till Adobe Target Audience {#add-adobe-target-audience}
 
-Se [Skapa målgrupper](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/audiences/create-audiences) för att skapa en målgrupp i Adobe Target.
+Se [Skapa målgrupper](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/audiences/create-audiences) för att skapa en målgrupp i Adobe Target.
 
 ### Målgrupp - CSV-fil {#audience-csv-file}
 
@@ -412,11 +412,11 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
   >[!NOTE]
   >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
 
 * Adobe Express
 
-  Bildgenereringsanvändningen hanteras via Adobe Express-berättiganden och [generativa krediter](https://helpx.adobe.com/se/firefly/using/generative-credits-faq.html).
+  Bildgenereringsanvändningen hanteras via Adobe Express-berättiganden och [generativa krediter](https://helpx.adobe.com/firefly/using/generative-credits-faq.html).
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 
@@ -490,6 +490,7 @@ Du kan även läsa mer om:
 
 * [GenAI Generera variationer på GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
 * [Edge Delivery Services Experimentation](https://www.aem.live/docs/experimentation)
+* [Generativ i AEM as a Cloud Service](/help/generative-ai/generative-ai-in-aem.md)
 
 ## Vanliga frågor {#faqs}
 
