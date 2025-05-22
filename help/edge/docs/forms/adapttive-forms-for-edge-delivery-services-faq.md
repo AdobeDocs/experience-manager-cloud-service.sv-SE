@@ -6,9 +6,9 @@ role: User, Developer
 hide: true
 hidefromtoc: true
 exl-id: b39601a1-7f37-4a7d-a4c8-7e79dca074e5
-source-git-commit: babddee34b486960536ce7075684bbe660b6e120
+source-git-commit: 8be0a9894bb5b3a138c0ec40a437d6c8e4bc7e25
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 **A:** Det finns flera alternativ för analys och spårning:
 
 - Adobe Experience Platform Web SDK (primär rekommendation)
-- Real User Monitoring (RUM) för provstatistik
+- Operativ telemetri för provstatistik
 - Integrering med andra analyssystem efter behov
 
 ## Dokumentation och resurser
