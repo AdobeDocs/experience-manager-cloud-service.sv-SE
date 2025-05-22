@@ -5,21 +5,21 @@ feature: Integration
 role: Admin
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: e5c529ced09a557585681ebf82f40daafc2c4402
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Experience Cloud kan Adobe Target öka innehållets relevans genom målinriktning och mätning i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
+Som en del av Adobe Experience Cloud kan du med [Adobe Target](https://experienceleague.adobe.com/en/docs/target) öka innehållets relevans genom att målinrikta och mäta i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
 
 * med Touch-gränssnittet för att skapa en målkonfiguration i AEM as a Cloud Service (IMS-konfiguration krävs).
-* lägger till och konfigurerar Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=sv-SE).
+* lägger till och konfigurerar Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
 
-Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM (JS-bibliotek/taggar). Integreringen med Launch behövs dock för&quot;Experience Targeting&quot;.
+Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM-sidor (JS-bibliotek/-taggar). Integreringen med Launch behövs dock för&quot;Experience Targeting&quot;.
 
 Om du vill exportera Experience Fragments och/eller Content Fragments till Target behöver du [Adobe Target Configuration](#create-configuration), inklusive [IMS-integrering](#ims-configuration).
 
@@ -27,9 +27,13 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 >
 >Kunder som inte har något befintligt Target-konto kan begära åtkomst till Target Foundation Pack för Experience Cloud. Foundation Pack ger begränsad volymanvändning av Target.
 
+>[!NOTE]
+>
+>Se även Adobe Target-dokumentationen: [Integrera mål med Adobe Experience Manager (AEM)](https://experienceleague.adobe.com/en/docs/target/using/integrate/aem/aem-target-integration).
+
 ## Skapa Adobe Target-konfigurationen {#create-configuration}
 
-1. Navigera till **Verktyg** → **Cloud Service**.
+1. Navigera till **Verktyg** → **Molntjänster**.
    ![Navigering](assets/cloudservice1.png "Navigering")
 2. Välj **Adobe Target**.
 3. Klicka på knappen **Skapa**.
@@ -39,7 +43,7 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 
 ### IMS-konfiguration {#ims-configuration}
 
-Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System). IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) och videon [Integrera Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=sv-SE) om du vill veta mer om hur du skapar mål-IMS-konfigurationen.
+Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System). IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) och videon [Integrating Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) om du vill veta mer om hur du skapar mål-IMS-konfigurationen.
 
 >[!NOTE]
 >
@@ -90,9 +94,9 @@ Så här redigerar du målkonfigurationen:
 
 Om du vill använda en Touch UI-konfiguration på en plats går du till: **Platser** > **Välj en webbplatssida** > **Egenskaper** > **Avancerat** > **Konfiguration** > Välj konfigurationtenant.
 
-## Integrera Adobe Target på AEM sajter med Adobe Launch {#integrate-target-launch}
+## Integrera Adobe Target på AEM webbplatser med Adobe Launch {#integrate-target-launch}
 
-AEM erbjuder en färdig integrering med Experience Platform Launch. Genom att lägga till Adobe Target-tillägget i Experience Platform Launch kan du använda Adobe Target funktioner på AEM webbsidor. Målbibliotek återges endast med Launch.
+AEM är nära integrerat med Experience Platform Launch. Genom att lägga till Adobe Target-tillägget i Experience Platform Launch kan du använda funktionerna i Adobe Target på AEM webbsidor. Målbibliotek återges endast med Launch.
 
 >[!NOTE]
 >
@@ -104,7 +108,7 @@ Som en allmän översikt är integrationsstegen:
 2. Lägg till de tillägg som krävs
 3. Skapa ett dataelement (för att hämta hubbparametrar)
 4. Skapa en sidregel
-5. Bygg och Publish
+5. Bygg och publicera
 
 ### Skapa en startegenskap {#create-property}
 
@@ -147,9 +151,9 @@ I **Regel** definieras och ordnas en sekvens med åtgärder, som körs på webbp
 2. I Lägg till parametrar i alla Mboxes lägger du till dataelementet som konfigurerats tidigare (se dataelementet ovan) i den parameter som skickas i mbox-anropet.
    ![Mbox](assets/map_data1.png "Åtgärder")
 
-### Bygg och Publish {#build-publish}
+### Bygg och publicera {#build-publish}
 
-Mer information om hur du skapar och publicerar finns på [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html?lang=sv-SE).
+Mer information om hur du skapar och publicerar finns på [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
 
 ## Förändringar i innehållsstrukturen mellan Classic- och Touch UI-konfigurationer {#changes-content-structure}
 
