@@ -19,7 +19,7 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service | Den här artikeln |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/integrate-aem-forms-with-experience-cloud-solutions/view-understand-aem-forms-analytics-reports.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/integrate-aem-forms-with-experience-cloud-solutions/view-understand-aem-forms-analytics-reports.html?lang=sv-SE) |
 
 I det snabbt föränderliga landskapet med digital analys är det av största vikt att vi fortsätter att engagera oss i globala trender för att fatta välgrundade beslut och optimera digitala upplevelser. Adaptive Forms integreras smidigt med Adobe Analytics för att hämta in och spåra prestandamått för era publicerade formulär och dokument. Syftet med att analysera dessa värden är att fatta databaserade beslut med hjälp av statistik och analyser för att förbättra formulärens användbarhet och effektivitet.
 
@@ -57,7 +57,7 @@ Här finns mätvärden för formuläråtergivning, formulärinskickning, valider
 
 * **Valideringsfel**: Valideringsfel visar det totala antalet valideringsrelaterade fel som inträffade i formulärfälten.
 
-* **Unika besökare**: Unika besökare representerar det antal gånger som formuläret återges av en besökare. Mer information om unika besökare finns i [Unika besökare, besök och kundbeteende](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
+* **Unika besökare**: Unika besökare representerar det antal gånger som formuläret återges av en besökare. Mer information om unika besökare finns i [Unika besökare, besök och kundbeteende](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html?lang=sv-SE).
 
   ![Forms-prestanda](assets/forms-performance.png){width="100%"}
 
@@ -65,8 +65,8 @@ Här finns mätvärden för formuläråtergivning, formulärinskickning, valider
 
 Det hjälper er att få värdefulla insikter om besökaraktiviteten i era formulär:
 
-* **Besök och inskickade formulär**: Här beskrivs hur ofta du besöker formulär i ett datumintervall och hur många formulär som skickas. Mer information om detta finns på [Besök](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html).
-* **Unika besökare och deras totala besök**: Det skiljer mellan nya och återkommande användare. En besökare kan till exempel komma till din webbplats varje dag i en månad, men de räknas ändå som en unik besökare. Besök [unika besökare](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html) om du vill ha mer information.
+* **Besök och inskickade formulär**: Här beskrivs hur ofta du besöker formulär i ett datumintervall och hur många formulär som skickas. Mer information om detta finns på [Besök](https://experienceleague.adobe.com/docs/analytics/components/metrics/visits.html?lang=sv-SE).
+* **Unika besökare och deras totala besök**: Det skiljer mellan nya och återkommande användare. En besökare kan till exempel komma till din webbplats varje dag i en månad, men de räknas ändå som en unik besökare. Besök [unika besökare](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html?lang=sv-SE) om du vill ha mer information.
 
   ![Forms Visitors](assets/forms-visitors.png){width="100%"}
 
