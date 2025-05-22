@@ -63,7 +63,7 @@ Du kan lägga till behörigheter genom att söka i textfältet och sedan välja 
 
 >[!NOTE]
 >
->En fullständig lista över behörigheter och beskrivningar finns i [Administrering av användar-, grupp- och åtkomsträttigheter](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/user-group-ac-admin#access-right-management).
+>En fullständig lista över behörigheter och beskrivningar finns i [Administrering av användar-, grupp- och åtkomsträttigheter](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/security/user-group-ac-admin#access-right-management).
 
 ![Sökbehörighet för en angiven sökväg.](assets/image2019-3-21_0-5-47.png) ![Lägg till ny post för &quot;dam-users&quot;, vilket visas av en sökväg som är markerad i lodräta kolumner.](assets/image2019-3-21_0-6-53.png)
 
