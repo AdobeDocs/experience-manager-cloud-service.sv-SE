@@ -163,7 +163,7 @@ Välj en variant, följt av **Generera bild**, som ska öppnas direkt i **Text t
 
 Du kan göra ytterligare ändringar:
 
-* [skriv din egen uppmaning i Adobe Express](https://helpx.adobe.com/firefly/using/tips-and-tricks.html) genom att beskriva vad du vill se,
+* [skriv din egen uppmaning i Adobe Express](https://helpx.adobe.com/se/firefly/using/tips-and-tricks.html) genom att beskriva vad du vill se,
 * justera alternativen för **text till bild**,
 * **Uppdatera** de genererade bilderna.
 
@@ -182,7 +182,7 @@ Här kan du visa åtgärdsobjekt för:
 
 >[!NOTE]
 >
->[Innehållsautentiseringsuppgifterna](https://helpx.adobe.com/creative-cloud/help/content-credentials.html) bevaras inte när de används i dokumentbaserad redigering.
+>[Innehållsautentiseringsuppgifterna](https://helpx.adobe.com/se/creative-cloud/help/content-credentials.html) bevaras inte när de används i dokumentbaserad redigering.
 
 ### Använd innehåll {#use-content}
 
@@ -355,13 +355,13 @@ Om du väljer en **Adobe Target**-målgrupp i uppmaningen kan genereringen av in
 
    >[!NOTE]
    >
-   >Beskrivningsfältet måste fyllas i om du vill använda en **Adobe Target**-målgrupp. Annars visas målgruppen i listrutan som otillgänglig. Om du vill lägga till en beskrivning går du till Mål och [lägger till en publikbeskrivning](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/audiences/create-audiences).
+   >Beskrivningsfältet måste fyllas i om du vill använda en **Adobe Target**-målgrupp. Annars visas målgruppen i listrutan som otillgänglig. Om du vill lägga till en beskrivning går du till Mål och [lägger till en publikbeskrivning](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/audiences/create-audiences).
 
    ![Generera variationer - målgruppskälla - Adobe Target](assets/generate-variations-audiences-adobe-target.png)
 
 #### Lägg till Adobe Target Audience {#add-adobe-target-audience}
 
-Se [Skapa målgrupper](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/audiences/create-audiences) för att skapa en målgrupp i Adobe Target.
+Se [Skapa målgrupper](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/audiences/create-audiences) för att skapa en målgrupp i Adobe Target.
 
 ### Målgrupp - CSV-fil {#audience-csv-file}
 
@@ -412,11 +412,11 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
   >[!NOTE]
   >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
 
 * Adobe Express
 
-  Bildgenereringsanvändningen hanteras via Adobe Express-berättiganden och [generativa krediter](https://helpx.adobe.com/firefly/using/generative-credits-faq.html).
+  Bildgenereringsanvändningen hanteras via Adobe Express-berättiganden och [generativa krediter](https://helpx.adobe.com/se/firefly/using/generative-credits-faq.html).
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 
