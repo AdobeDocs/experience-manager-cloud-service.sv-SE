@@ -6,30 +6,30 @@ role: Admin
 hide: true
 hidefromtoc: true
 exl-id: 100ddbf2-9c63-406f-a78d-22862501a085
-source-git-commit: 18fe0125351c635c226bebf0f309710634230e64
+source-git-commit: eb38369ee918851a9f792af811bafff9b2e49a53
 workflow-type: tm+mt
-source-wordcount: '1199'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
 # Inställningar för kundhanterade nycklar för AEM as a Cloud Service {#cusomer-managed-keys-for-aem-as-a-cloud-service}
 
-AEM as a Cloud Service lagrar för närvarande kunddata i Azure Blob Storage och MongoDB, och använder krypteringsnycklar som hanteras av providerleverantörer som standard för att skydda data. Även om den här konfigurationen uppfyller säkerhetskraven för många organisationer, kan företag i reglerade branscher eller de som behöver utökad datahemvist söka större kontroll över sin krypteringssed. För organisationer som prioriterar datasäkerhet, efterlevnad och möjlighet att hantera sina krypteringsnycklar erbjuder CMK-lösningen (Customer-Managed Keys) en viktig förbättring.
+AEM as a Cloud Service lagrar för närvarande kunddata i Azure Blob Storage och MongoDB, och använder krypteringsnycklar som hanteras av providerleverantörer som standard för att skydda data. Även om den här konfigurationen uppfyller säkerhetskraven för många organisationer kan företag i reglerade branscher eller de som behöver förbättrad datasäkerhet söka större kontroll över sin krypteringsmetod. För organisationer som prioriterar datasäkerhet, efterlevnad och möjlighet att hantera sina krypteringsnycklar erbjuder CMK-lösningen (Customer-Managed Keys) en viktig förbättring.
 
 ## Problemet som löses {#the-problem-being-solved}
 
-Leverantörshanterade nycklar kan skapa bekymmer för företag inom sektorer som finans, sjukvård och myndigheter, där strikta regler kräver omfattande kontroll över datasäkerheten. Utan kontroll över nyckelhanteringen kan organisationer möta utmaningar när det gäller att uppfylla regelkrav, implementera anpassade säkerhetspolicyer och säkerställa fullständig datahemvist.
+Leverantörshanterade nycklar kan skapa bekymmer för företag som behöver ytterligare sekretess och integritet. Utan kontroll över nyckelhanteringen kan organisationer möta utmaningar när det gäller att uppfylla regelkrav, implementera anpassade säkerhetsregler och säkerställa fullständig datasäkerhet.
 
-Införandet av kundhanterade nycklar (CMK) löser dessa problem genom att ge AEM möjlighet att ha full kontroll över sina krypteringsnycklar. Genom att autentisera via Microsoft Entra ID (tidigare Azure Active Directory) ansluter AEM CS säkert till kundens Azure Key Vault, vilket gör att de kan hantera livscykeln för sina krypteringsnycklar, som omfattar skapande av nycklar, rotation och återkallning.
+Införandet av kundhanterade nycklar (CMK) löser dessa problem genom att ge AEM-kunder full kontroll över deras krypteringsnycklar. Genom att autentisera via Microsoft Entra ID (tidigare Azure Active Directory) ansluter AEM CS på ett säkert sätt till kundens Azure Key Vault, vilket gör att de kan hantera livscykeln för sina krypteringsnycklar, som omfattar skapande av nycklar, rotation och återkallning.
 
 CMK har flera fördelar:
 
-* **Förbättrade skyddsinställningar:** Kunder kan se till att krypteringsrutinerna uppfyller specifika säkerhetskrav, vilket ger dem sinnesro när det gäller dataskydd.
-* **Kompatibilitetsflexibilitet:** Med fullständig kontroll över nyckellivscykeln kan företag enkelt anpassa sig till nya standarder som GDPR, HIPAA eller CCPA och säkerställa att deras regelefterlevnadsläge förblir starkt.
-* **Sömlös integrering:** CMK-lösningen integreras direkt med Azure Blob Storage och MongoDB i AEM CS, så att inga avbrott i lagringsåtgärder eller användbarhet uppstår samtidigt som kunderna får kraftfulla krypteringsfunktioner.
+* **Kontrollera data- och programkryptering:** Öka säkerheten med direktstyrning av ditt AEM-program och kryptografiska nycklar.
+* **Öka sekretessen och integriteten:** Minska sannolikheten för oavsiktlig åtkomst och exponering av känsliga eller egna data med fullständig krypteringshantering.
+* **Stöd för Azure Key Vault:** Användning av Azure Key Vault möjliggör nyckellagring, bearbetning av hemligheter och utförande av nyckelrotationer.
 
-Genom att använda CMK kan kunderna få bättre kontroll över datasäkerhet och krypteringsrutiner, bättre regelefterlevnad och mindre risker samtidigt som de får samma skalbarhet och flexibilitet som AEM CS.
+Genom att använda CMK kan man få bättre kontroll över datasäkerhet och kryptering, förbättra säkerheten och minska riskerna samtidigt som man får tillgång till skalbarheten och flexibiliteten i AEM CS.
 
 Med AEM as a Cloud Service kan du få dina egna krypteringsnycklar för att kunna kryptera data i vila. Den här guiden innehåller steg för att konfigurera en kundhanterad nyckel (CMK) i Azure Key Vault för AEM as a Cloud Service.
 
@@ -43,7 +43,7 @@ Du får även hjälp med följande steg när du skapar och konfigurerar den nöd
 1. Hämta ett program-ID från Adobe
 1. Skapa en ny resursgrupp
 1. Skapa en tangentkabel
-1. Bevilja Adobe åtkomst till tangentkabeln
+1. Bevilja Adobe åtkomst till nyckelmotorn
 1. Skapa en krypteringsnyckel
 
 Du måste dela nyckelvalvs-URL:en, krypteringsnyckelns namn och information om nyckelvalvet med Adobe.
@@ -79,7 +79,7 @@ Om du redan har en resursgrupp kan du använda den i stället. I resten av den h
 
 ## Skapa ett nyckelvalv {#create-a-key-vault}
 
-Du måste skapa ett nyckelvalv som innehåller din krypteringsnyckel. Töm skydd måste vara aktiverat för nyckelvalvet. Rensningsskydd krävs för kryptering av vilande data från andra Azure-tjänster. Åtkomst till offentliga nätverk måste också aktiveras för att klientorganisationen Adobe ska kunna komma åt nyckelvalvet.
+Du måste skapa ett nyckelvalv som innehåller din krypteringsnyckel. Töm skydd måste vara aktiverat för nyckelvalvet. Rensningsskydd krävs för kryptering av vilande data från andra Azure-tjänster. Åtkomst till offentliga nätverk måste också aktiveras för att Adobe-klientorganisationen ska kunna komma åt nyckelvalvet.
 
 >[!IMPORTANT]
 >När nyckelvalvet med offentlig nätverksåtkomst inaktiverat skapas måste alla nyckelvalsrelaterade åtgärder, som skapande av nyckel eller rotation, utföras från en miljö som har nätverksåtkomst till KeyVault, till exempel en virtuell dator som har åtkomst till KeyVault.
@@ -103,7 +103,7 @@ az keyvault create `
   --public-network-access Enabled
 ```
 
-## Ge Adobe åtkomst till nyckelvalvet {#grant-adone-access-to-the-key-vault}
+## Bevilja Adobe åtkomst till nyckelvalvet {#grant-adobe-access-to-the-key-vault}
 
 I det här steget ger du Adobe åtkomst till ditt nyckelvalv via ett Entra-program. ID:t för Entra-programmet ska redan ha angetts av Adobe.
 
@@ -198,6 +198,6 @@ Notify the Adobe Engineer once this process is complete and the Private Endpoint
 
 ## Kundhanterade nycklar i Private Beta {#customer-managed-keys-in-private-beta}
 
-Ingenjörsteamet på Adobe arbetar för närvarande på en förbättrad implementering av CMK med hjälp av Azure&#39;s Private Link. Den nya implementeringen tillåter delning av din nyckel via Azure-stamnätet tack vare en direktanslutning till Private Link mellan Adobe och ditt nyckelvalv.
+Ingenjörsteamet på Adobe arbetar för närvarande på en förbättrad implementering av CMK med hjälp av Azure&#39;s Private Link. Den nya implementeringen tillåter delning av din nyckel via Azure-stamnätet tack vare en direktanslutning till Private Link mellan Adobe-klienten och ditt nyckelvalv.
 
 Den förbättrade implementeringen finns för närvarande i Private Beta och kan aktiveras för utvalda kunder som går med på att prenumerera på Private Beta och har ett nära samarbete med Adobe Engineering. Om du är intresserad av Private Beta för CMK med hjälp av Private Link kontaktar du Adobe för mer information.
