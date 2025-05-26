@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 95c643151e4828fa2eae0725dc1081aeeabc42fb
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -111,9 +111,23 @@ Du kan snabbt hitta resurser som överförts med Content Hub i AEM as a Cloud Se
 
 1. Sorterar resurser med fältet **[!UICONTROL Modified Date]**.
 
-## Varför visar jag inte redigeringsalternativet med Adobe Express på mitt resurskort för att kunna mixa om resurser och skapa nya varianter? {#edit-using-express-not-available}
+## Varför ser jag inte alternativet Redigera med Adobe Express på mitt resurskort för att kunna mixa om resurser och skapa nya varianter? {#edit-using-express-not-available}
 
-Om du vill visa redigeringen med alternativet Adobe Express på resurskortet måste du ha Adobe Express-berättiganden förutom behörighet för [Content Hub-användare med behörighet att mixa om resurser till nya varianter](#onboard-content-hub-users-add-assets). Adobe Express måste driftsättas i samma organisation i Adobe Admin Console där Adobe Experience Manager är driftsatt.
+Om du vill visa alternativet **Redigera med Adobe Express** på resurskortet måste användaren ha Adobe Express Enterprise- eller Teams-behörighet (se [abonnemang](https://www.adobe.com/express/pricing)) förutom behörighet för [Content Hub-användare med behörighet att mixa om resurser till nya varianter](#onboard-content-hub-users-add-assets).
+
+Det finns några konfigurationer av hur användare tilldelas till [!DNL Content Hub] &amp; [!DNL Adobe Express]:
+
+1. Organisationen har [Assets Ultimate](/help/assets/assets-ultimate-overview.md) eller [Assets Prime](/help/assets/assets-prime.md) licens och användaren tilldelas en av Experience Manager-profilerna i Admin Console som innehåller Adobe Express-berättigande (medarbetare eller Power-användare). Integreringen fungerar utan någon ytterligare konfiguration.
+
+1. [!DNL Adobe Express] distribueras i samma [!DNL Adobe Admin Console] som [!DNL Experience Manager Assets] med [!DNL Content Hub]. Integreringen fungerar utan någon ytterligare konfiguration.
+
+1. [!DNL Adobe Express] distribueras i en annan [!DNL Adobe Admin Console] än [!DNL Experience Manager Assets] med [!DNL Content Hub]. I det här fallet kan administratören av [!DNL Assets] konfigurera integreringen (se [ dokumentation](/help/assets/connect-assets-with-creative-cloud.md)) för att integreringen ska fungera.
+
+   >[!NOTE]
+   >
+   >Användaren som tilldelats Express- och Assets-produktprofiler i två Admin Consoles måste ha samma e-postadress och använda ett **Enterprise- eller School** -företagskonto, inte ett **Personal** -konto. Den idealiska konfigurationen är att ha båda Admin Consoles inställda som **Federated ID** med en förtroenderelation konfigurerad mellan dem, så att användaren får en sömlös inloggning. Vissa Express-planer (till exempel Express Teams) stöder inte Federated ID/enkel inloggning.
+
+Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[#UICONTROL /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Kan jag konfigurera Content Hub så att min organisations varumärkesriktlinjer visas som en länk på startsidan? {#content-hub-setup-brand-guidelines}
 
