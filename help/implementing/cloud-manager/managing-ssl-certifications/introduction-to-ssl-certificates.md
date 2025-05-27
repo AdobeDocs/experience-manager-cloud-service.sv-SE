@@ -5,9 +5,9 @@ exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: a91b15836d0ca0308fbc860ec57aacda908f610d
+source-git-commit: b0c8769b5941ed772a91cf189e8c7355d1db766b
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ Lär dig mer om de självbetjäningsverktyg som Cloud Manager tillhandahåller f
 >id="aemcloud_golive_sslcert"
 >title="Hantera SSL-certifikat"
 >abstract="Läs om hur Cloud Manager har självbetjäningsverktyg för att installera och hantera SSL-certifikat för att skydda din webbplats för dina användare. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Visa, uppdatera och ersätta ett SSL-certifikat"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Kontrollera status för ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Visa, uppdatera och ersätta ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Kontrollera status för ett SSL-certifikat"
 
 ## Vad är SSL-certifikat? {#overview}
 
@@ -53,15 +53,19 @@ Båda modellerna har följande allmänna funktioner för att hantera dina certif
 >
 >[Om du vill lägga till och associera en anpassad domän med miljön ](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
 
-### SSL-certifikat som hanteras av Adobe {#adobe-managed}
+### Adobe-hanterade (DV) SSL-certifikat {#adobe-managed}
 
 DV-certifikat är den mest grundläggande nivån för SSL-certifiering och används ofta för testning eller för att skydda webbplatser med grundläggande kryptering. DV-certifikat är tillgängliga i både [produktionsprogram och sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md).
 
-När DV-certifikatet har skapats förnyas det automatiskt i Adobe var tredje månad, såvida det inte tas bort.
+När DV-certifikatet har skapats förnyas det automatiskt var tredje månad, såvida det inte tas bort.
+
+>[!IMPORTANT]
+>
+>Om din miljö använder (DV) SSL-certifikat med en CNAME-baserad validering, ska du tänka på att om du tar bort CNAME-posten innan den automatiska certifikatförnyelsen sker kan förnyelsen misslyckas. Borttagningen kan leda till att certifikatet upphör att gälla och att tjänsten avbryts. För att undvika detta bör du kontrollera att CNAME-posten finns kvar under hela förnyelseprocessen. Förnyelseprocessen beror på att CNAME-posten finns tillgänglig för validering av domänägarskap.
 
 ### SSL-certifikat som hanteras av kund (OV/EV) {#customer-managed}
 
-OV- och EV-certifikat innehåller CA-validerad information. Sådan information hjälper användarna att bedöma om webbplatsägaren, e-postavsändaren eller den digitala signeraren av kod eller PDF kan betraktas som tillförlitliga. DV-certifikat tillåter inte sådan ägarskapsverifiering.
+OV- och EV-certifikat innehåller CA-validerad information. Sådan information hjälper användarna att bedöma om webbplatsägaren, e-postavsändaren eller den digitala signeraren av kod eller PDF-dokument kan betraktas som tillförlitliga. DV-certifikat tillåter inte sådan ägarskapsverifiering.
 
 OV och EV erbjuder dessutom dessa funktioner jämfört med DV-certifikat i Cloud Manager.
 
@@ -85,7 +89,7 @@ Om du väljer att lägga till ett eget kundhanterat SSL-certifikat måste det up
    * 2048-bitars RSA, standardstöd.
 RSA-nycklar som är större än 2048 bitar (till exempel 3072-bitars eller 4096-bitars RSA-nycklar) stöds inte för närvarande.
    * Elliptiska kurvnycklar (EC) `prime256v1` (`secp256r1`) och `secp384r1`
-   * ECDSA-certifikat (Elliptic Curve Digital Signature Algorithm). Sådana certifikat rekommenderas av Adobe i stället för RSA för bättre prestanda, säkerhet och effektivitet.
+   * ECDSA-certifikat (Elliptic Curve Digital Signature Algorithm). Sådana certifikat rekommenderas av Adobe framför RSA för bättre prestanda, säkerhet och effektivitet.
 
 * Certifikat måste vara korrekt formaterade för att validering ska kunna utföras. Privata nycklar måste ha formatet `PKCS#8`.
 
