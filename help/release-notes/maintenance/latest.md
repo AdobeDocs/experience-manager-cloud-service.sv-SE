@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 859af15f4038b28e6e1398e5168dc008d22985e9
+source-git-commit: e1fa4b3bcb04ab3e834b34f507f1350fb536b513
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '555'
 ht-degree: 1%
 
 ---
@@ -16,72 +16,85 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
->[!NOTE]
->
-> Versionerna 20936 och 20783 har gjorts privata.
+## Version 21005 {#21005}
 
-## Utgåva 20626 {#20626}
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21005, som offentliggjordes den 27 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 20626, som offentliggjordes den 29 april 2025. Den tidigare underhållsutgåvan släpptes 20476.
+Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-Funktionsaktiveringen i 2025.5.0 innehåller alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+### Förbättringar {#enhancements-21005}
 
-### Förbättringar {#enhancements-20626}
+* GRANITE-58927: Förbättringar av växlingsfunktionen Semantic Search.
+* GRANITE-58800: Uppdatera Apache Commons-samlingar till version 4.5.0.
+* GRANITE-58866: Uppdatera Oak till 1.80.0.
+* SKYOPS-106509: Förbättrad GSON-kompatibilitet via reflekterande åtkomst i Java 21.
+* SKYOPS-107761: Uppdatering av Sling Models Jackson Exporter till 1.1.6.
+* SKYOPS-107813: Uppdatera till Sling ResourceResolver 1.12.8.
 
-* ASSETS-46413, ASSETS-46580: En ny granskningsstatus,&quot;Preview&quot;, har lagts till.
-* ASSETS-49542: Utökning av språk som stöds för video- och ljudtranskriberingar och översättning.
-* ASSETS-48264: Stöd för utökning av PNG-kvalitet för återgivningar.
+### Åtgärdade problem {#fixed-issues-21005}
 
-### Åtgärdade problem {#fixed-issues-20626}
-
-* ASSETS-50387: Korrigera standardminiatyrbild för innehållsfragment för användning i GenStudio.
-* ASSETS-49006: Visa videoegenskaper när användaren inte har skrivbehörighet.
-* ASSETS-46757, ASSETS-46997: Förbättra tillgängligheten i den smarta beskärningsredigeraren.
-* ASSETS-48018: Förbättra resursreferensspårningen i Assets Publish Report.
-* ASSETS-35846: Förbättra åtkomsten mellan författare och leveransnivå.
-* ASSETS-48171: Förbättra enhetligheten i dynamiska mediamallar med arbetsytan.
-* ASSETS-49813: Förbättra förfallomeddelande.
-* ASSETS-47768, ASSETS-49825, ASSETS-49008, ASSETS-48287: Förbättra hanteringen och synligheten i gruppåtgärder.
-* ASSETS-50003, ASSETS-50004: Förbättra namngivningen och kontrollen över de återgivningar som ingår i en mediehämtning.
-* ASSETS-47939: Förbättra svarsorganisationen för Content Hub.
-* ASSETS-46738: Förbättra prestanda för mycket stora samlingar.
-* ASSETS-50121: Förbättra tillförlitligheten för publicerade händelser.
-* ASSETS-48490: Förbättra flexibiliteten i automatiserad bearbetning vid bildhantering.
-* ASSETS-28106, ASSETS-49404: Förbättra tillförlitligheten i fulltextsökning.
-* ASSETS-50006, ASSETS-50423: Förbättra prestanda för sökning och bläddring i stora mappar.
-* ASSETS-46021: Förbättra videouppspelningen för Safari och mobilwebbläsare.
-* ASSETS-49002: Förbättrad hantering av redigering av dynamiska mediamallar.
-* ASSETS-48376: Diverse förbättringar i Content Hub-gränssnittet.
-* ASSETS-48504, ASSETS-49378: Diverse förbättringar av gränssnittets beteende.
-* ASSETS-49540: Flytta OpenAPI för resursrelationer från experimentfasen.
-* ASSETS-40284: Uppdateringsdokumentation om Adobe Stock-integrering.
-* ASSETS-49739: Arbeta för att integrera Figma från resursväljaren.
+* CNTBF-443: Fast SearchSlingJob `EVENT_JOB_TOPIC`-egenskap.
+* GRANITE-57853: Korrigerade nedrullningsjusteringsproblem i användargränssnittet.
+* GRANITE-58107: Korrigerade 404 fel vid publicering genom att inaktivera användarbaserad pod-tillhörighet i OAuth-hanteraren.
+* GRANITE-58276, SLING-12755: Åtgärdade OSGi-beroendecykler som kan förhindra att HTL Script Engine-fabriken startar korrekt, vilket kan orsaka intermittenta återgivningsfel på serversidan.
+* SKYOPS-105151: Fast NPE vid åtkomst till paketlistan.
+* SKYOPS-83910, SKYOPS-82371 - Korrigerade problem med samtidig JSP-kompilering.
 
 #### AEM Guides {#guides}
 
-* GUIDES-21734: Nya ID:n kan inte generera för element när sådana element läggs till via fragment eller skapas via mallar, även när alternativet för automatisk generering av ID är aktiverat i XMLEditorConfig.
-* GUIDES-25969: Om attributet `scope=external` saknas i externa länkar i ett DITA-avsnitt misslyckas publiceringen i HTML5 utan att ange de filer där attributet saknas i felloggarna, särskilt när mikrotjänsten är aktiverad.
-* GUIDES-27288: Det går inte att skicka metadataegenskaperna för att mappa landningssidor som genererats med den nya AEM Sites-publiceringen.
+* GUIDES-26919: När du öppnar en DITA-karta med det enhetliga skalet aktiverat uppdateras redigeraren regelbundet.
+* GUIDES-26282: Om JCR-sessionsanslutningar inte kan stängas vid uppdatering eller skapande av ämnen resulterar detta i minnesläckor och driftavbrott.
+* GUIDES-26434: Den inbyggda PDF-publiceringen fortsätter i oändlighet om DITA-innehållet har en webblänk utan omfång som `external`.
+* GUIDES-26516: Publicering av inbyggda PDF-filer och AEM-webbplatser stoppas och köas om det finns fel i innehållet.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
-### Kända fel {#known-issues-20626}
+### Kända fel {#known-issues-21005}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-20626}
+### Föråldrade funktioner och API:er {#deprecated-21005}
+
+* GRANITE-54164: `org.apache.jackrabbit.oak.plugins.blob` har tagits bort från publikt API.
+* GRANITE-54280: `org.apache.jackrabbit.oak.cache` har tagits bort från publikt API.
+* GRANITE-58332: `org.apache.jackrabbit.oak.plugins.memory` har tagits bort i publikt API.
+* Funktionen [Experience Cloud Setup Automation](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md) har tagits bort.
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-20626}
+### Säkerhetskorrigeringar {#security-21005}
 
-AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar elva identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
+AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 5 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-20626}
+### Ändringsmeddelande {#change-notice-21005}
+
+* Den här versionen innehåller följande nya produktindexversioner:
+   * **damAssetLucene-12**
+
+Anpassade versioner av tidigare indexversioner sammanfogas automatiskt med den nya produktindexversionen. Använd ytterligare anpassade uppdateringar för den sammanfogade versionen.
+
+#### Uppdatera aem-cloud-testing-clients {#update-aem-cloud-testing-clients-21005}
+
+För kommande ändringar måste biblioteket [aem-cloud-testing-clients](https://github.com/adobe/aem-testing-clients) som används i dina anpassade funktionstester uppdateras till minst version **1.2.1** (Rekommenderas: senaste versionen 1.2.9)
+
+Kontrollera att beroendet i `it.tests/pom.xml` har uppdaterats.
+
+```xml
+<dependency>
+   <groupId>com.adobe.cq</groupId>
+   <artifactId>aem-cloud-testing-clients</artifactId>
+   <version>1.2.9</version>
+</dependency>
+```
+
+Denna ändring måste utföras före den 15 juni 2025.
+Om du inte uppdaterar beroendebiblioteket kommer det att uppstå ett pipeline-fel i steget&quot;Custom Functional Testing&quot;.
+
+### Inbäddade tekniker {#embedded-tech-21005}
 
 | Teknik | Version | Länk |
 |---|---|---|
-| AEM Oak | 1.78.0 | [Oak API 1.78.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.78.0/index.html) |
+| AEM Oak | 1.80.0 | [Oak API 1.80.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.80.0/index.html) |
 | AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
-| AEM HTL | 1.4.26-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
+| AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Grundläggande komponenter i AEM | 2.29.0 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
