@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
 solution: Experience Manager Sites
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: 3950df27533bf545d33da39a9f5fe9819820134a
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1987'
 ht-degree: 1%
 
 ---
@@ -53,7 +53,7 @@ Innehållsfragment innehåller strukturerat innehåll:
 Innehållsfragment kan också levereras i JSON-format med exportfunktionerna för Sling Model (JSON) i AEM kärnkomponenter. Leveranssätt:
 
 * gör att du kan använda komponenten för att hantera vilka element i ett fragment som ska levereras
-* tillåter massleverans, genom att lägga till flera [kärnkomponenter för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) på sidan som används för API-leverans
+* tillåter massleverans, genom att lägga till flera [kärnkomponenter för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) på sidan som används för API-leverans
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som:
 
@@ -81,7 +81,7 @@ Dessa innehållsfragment kan sedan monteras för att ge upplevelser över flera 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhåller och använder innehållsfragment:
 
@@ -98,6 +98,7 @@ När fragmenten har skapats kan du:
    * samarbeta med andra författare med hjälp av kommentarer
 * [Analysera](/help/sites-cloud/administering/content-fragments/analysis.md) innehållsfragmentets struktur med hjälp av redigeraren
 * [Få tillgång till dina fragment med GraphQL för headless-leverans till dina program](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
+* [Integrera och använda dina innehållsfragment i Adobe Journey Optimizer](/help/sites-cloud/administering/content-fragments/content-fragments-with-journey-optimizer.md)
 * [Eller använd fragmenten för att skapa sidor](/help/sites-cloud/authoring/fragments/content-fragments.md)
 
 >[!NOTE]
@@ -180,7 +181,7 @@ Innehållsfragmenten är:
 
 * Tillgängligt i sidredigeraren [genom att använda komponenten Content Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md) (refereringskomponent):
 
-   * [Kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) är tillgänglig för sidförfattare. De kan referera till, och leverera, önskat innehållsfragment i antingen HTML- eller JSON-format.
+   * [Kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) är tillgänglig för sidförfattare. De kan referera till, och leverera, önskat innehållsfragment i antingen HTML- eller JSON-format.
 
 Innehållsfragment är en innehållsstruktur som:
 
@@ -267,7 +268,7 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
    * Ansvarig för layout och leverans av ett fragment, t.ex. kanaler.
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.
-   * Se [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE).
+   * Se [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html).
 
 ## Konsolen Innehållsfragment {#content-fragments-console}
 
