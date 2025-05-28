@@ -101,7 +101,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 
    >[!NOTE]
    >
-   >Namnet måste följa samma konventioner för en AEM-nod och får inte innehålla något av följande tecken: `. / : [ ] | * &lt; > ^ ? { } % # &quot;och inga ovanliga symboler eller känslolägesikoner.
+   >Namnet måste följa samma konventioner för en AEM-nod och får inte innehålla något av följande tecken: &grave;. / : [ ] | * &lt; > ^ ? { } % # &quot;och inga ovanliga symboler eller känslolägesikoner.
 
 1. Nu bör du se din migreringslista i listvyn. Markera symbolen med tre punkter (**..**) för att öppna listrutan och välj **Kopiera extraheringsnyckel**. Du behöver den här nyckeln under extraheringsfasen. Kopiera den här extraheringsnyckeln.
 
@@ -148,6 +148,7 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
       >Från och med CTT-versionen (3.0.24) har nya funktioner inkluderats i verktyget Innehållsöverföring, vilket förbättrar processen att inkludera och exkludera banor. Tidigare var sökvägarna tvungna att väljas en i taget, vilket var tidsödande och tidsödande. Nu kan användare inkludera sökvägar direkt från användargränssnittet eller överföra en CSV-fil enligt sina önskemål.  CSV-filen måste ha en sökväg per rad och inga kommatecken.
 
    1. **Sökvägar som ska inkluderas**: Använd sökvägsläsaren för att välja sökvägar som ska migreras. Banväljaren accepterar indata genom att skriva eller genom att välja. Användare kan bara välja ett alternativ för att inkludera sökvägar: antingen från användargränssnittet eller genom att överföra en CSV-fil.
+
       >[!IMPORTANT]
       >Följande sökvägar är begränsade när du skapar en migreringsuppsättning:
       >* `/apps`
