@@ -1,11 +1,11 @@
 ---
-title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
+title: Egenskaper för resursväljare för anpassning
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: cd5ec1de-36b0-48a5-95c9-9bd22fac9719
-source-git-commit: 97a432270c0063d16f2144d76beb437f7af2895a
+source-git-commit: 89a7346f5b6bc1d65524c5ead935aa4a2a764ebb
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1403'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *imsToken* | Sträng | Nej | | IMS-innehavartoken används för autentisering. `imsToken` krävs om du använder ett [!DNL Adobe]-program för integreringen. |
 | *apiKey* | Sträng | Nej | | API-nyckel som används för åtkomst till AEM Discovery-tjänsten. `apiKey` krävs om du använder en [!DNL Adobe]-programintegrering. |
 | *filterSchema* | Array | Nej | | Modell som används för att konfigurera filteregenskaper. Detta är användbart när du vill begränsa vissa filteralternativ i Resursväljaren. |
-| *filterFormProps* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. För! Exempel: MIME-typ JPG, PNG, GIF. |
+| *filterFormulärutkast* | Objekt | Nej | | Ange de filteregenskaper som du behöver använda för att förfina sökningen. För! Exempel: MIME-typ JPG, PNG, GIF. |
 | *selectedAssets* | Matris `<Object>` | Nej |                 | Ange valt Assets när resursväljaren återges. Det krävs en array med objekt som innehåller en id-egenskap för resurserna. `[{id: 'urn:234}, {id: 'urn:555'}]` En resurs måste till exempel vara tillgänglig i den aktuella katalogen. Om du behöver använda en annan katalog anger du även ett värde för egenskapen `path`. |
 | *acvConfig* | Objekt | Nej | | Resurssamlingens visningsegenskap som innehåller objekt med anpassad konfiguration som åsidosätter standardvärden. Den här egenskapen används också med egenskapen `rail` för att aktivera spårningsvisning av resursvyn. |
 | *i18nSymboler* | `Object<{ id?: string, defaultMessage?: string, description?: string}>` | Nej |                 | Om OTB-översättningarna inte är tillräckliga för ditt programs behov kan du visa ett gränssnitt genom vilket du kan skicka dina egna anpassade, lokaliserade värden via `i18nSymbols`-proppen. Om du skickar ett värde genom det här gränssnittet åsidosätts standardöversättningarna och i stället används dina egna. Om du vill utföra åsidosättningen måste du skicka ett giltigt [Message Descriptor](https://formatjs.io/docs/react-intl/api/#message-descriptor)-objekt till nyckeln för `i18nSymbols` som du vill åsidosätta. |
@@ -66,7 +66,7 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *databaseId* | Sträng | Nej | &#39; | Databas från vilken resursväljaren läser in innehållet. |
 | *additionalAemSolutions* | `Array<string>` | Nej | [ ] | Här kan du lägga till en lista med ytterligare AEM-databaser. Om ingen information anges i den här egenskapen beaktas endast mediebibliotek eller AEM Assets-databaser. |
 | *hideTreeNav* | Boolean | Nej |  | Anger om navigeringssidofältet för resursträd ska visas eller döljas. Den används endast i modal vy och därför har den här egenskapen ingen effekt i järnvägsvy. |
-| *onDrop* | Funktion | Nej | | Egenskapen gör att en resurs kan släppas. |
+| *onDrop* | Funktion | Nej | | Funktionen för att släppa används för att dra en resurs och släppa den på ett särskilt släppområde. Det möjliggör interaktiva användargränssnitt där resurser kan flyttas och bearbetas sömlöst. |
 | *dropOptions* | `{allowList?: Object}` | Nej | | Konfigurerar släppningsalternativ med tillåtelselista. |
 | *colorScheme* | Sträng | Nej | | Konfigurera temat (`light` eller `dark`) för resursväljaren. |
 | *Tema* | Sträng | Nej | Standard | Använd temat för resursväljarprogrammet mellan `default` och `express`. Det har även stöd för `@react-spectrum/theme-express`. |
@@ -94,11 +94,20 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *onFilesChange* | Funktion | Nej | | Det är en återanropsfunktion som används för att visa hur överföringen fungerar när en fil ändras. Den skickar den nya arrayen med filer som väntar på överföring och källtypen för överföringen. Source-typen kan vara null om fel uppstår. Syntaxen är `(newFiles: File[], uploadType: UploadType) => void` |
 | *uploadingPlaceholder* | Sträng | | | Det är en platshållarbild som ersätter metadataformuläret när en överföring av resursen initieras. Syntaxen är `{ href: string; alt: string; } ` |
 | *uploadConfig* | Objekt | | | Det är ett objekt som innehåller en anpassad konfiguration för överföringen. |
-| *featureSet* | Array | Sträng | | Egenskapen `featureSet:[ ]` används för att aktivera eller inaktivera en viss funktion i resursväljarprogrammet. Om du vill aktivera komponenten eller en funktion kan du skicka ett strängvärde i arrayen eller lämna arrayen tom för att inaktivera komponenten. Om du till exempel vill aktivera överföringsfunktioner i resursväljaren använder du syntaxen `featureSet:[0:"upload"]`. |
+| *featureSet* | Array | Sträng | | Egenskapen `featureSet:[ ]` används för att aktivera eller inaktivera en viss funktion i resursväljarprogrammet. Om du vill aktivera komponenten eller en funktion kan du skicka ett strängvärde i arrayen eller lämna arrayen tom för att inaktivera komponenten.  Om du till exempel vill aktivera överföringsfunktioner i resursväljaren använder du syntaxen `featureSet:[0:"upload"]`. På samma sätt kan du använda `featureSet:[0:"collections"]` för att aktivera samlingar i resursväljaren. Använd dessutom `featureSet:[0:"detail-panel"]` för att aktivera [informationspanelen](overview-asset-selector.md#asset-details-and-metadata) för en resurs. Syntaxen är `featureSet:["upload", "collections", "detail-panel"]` om du vill använda de här funktionerna tillsammans. |
 
 <!--
+| *selectedRendition* | Object | | | This property allows users to define and control which renditions of an asset are displayed when the panel is accessed. This customization enhances user experience by filtering out unnecessary renditions and showcasing only the most relevant renditions. For example, `CopyUrlHref` allows you to use Dynamic Media renditions in your Asset Selector application (delivery URL). |
+| *featureSet* | Array | String | | The `featureSet:[ ]` property is used to enable or disable a particular functionaly in the Asset Selector application. To enable the component or a feature, you can pass a string value in the array or leave the array empty to disable that component. For example, you want to enable upload functionality in the Asset Selector, use the syntax `featureSet:[0:"upload"]`. Similarly, you can use `featureSet:[0:"collections"]` to enable collections in the Asset Selector. Addidionally, use `featureSet:[0:"detail-panel"]` to enable [details panel](overview-asset-selector.md#asset-details-and-metadata) of an asset. Also, `featureSet:[0:"dm-renditions"]` to show Dynamic Media renditions of an asset.|
 | *rootPath* | String | No | /content/dam/ | Folder path from which Asset Selector displays your assets. `rootPath` can also be used in the form of encapsulation. For example, given the following path, `/content/dam/marketing/subfolder/`, Asset Selector does not allow you to traverse through any parent folder, but only displays the children folders. |
 | *path* | String | No | | Path that is used to navigate to a specific directory of assets when the Asset Selector is rendered. |
 | *expirationDate* | Function | No | | This function is used to set the usability period of an asset. |
 | *disableDefaultBehaviour* | Boolean | No | False | It is a function that is used to enable or disable the selection of an expired asset. You can customize the default behavior of an asset that is set to expire. See [customize expired assets](/help/assets/asset-selector-customization.md#customize-expired-assets). |
 -->
+
+>[!MORELIKETHIS]
+>
+>* [Anpassningar av resursväljare](/help/assets/asset-selector-customization.md)
+>* [Integrera resursväljare med olika program](/help/assets/integrate-asset-selector.md)
+>* [Integrera resursväljare med dynamiska media med OpenAPI-funktioner](/help/assets/integrate-asset-selector-dynamic-media-open-api.md)
+>* [Integrera resursväljaren med program från tredje part](/help/assets/integrate-asset-selector-non-adobe-app.md)

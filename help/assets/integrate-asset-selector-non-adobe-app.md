@@ -1,11 +1,11 @@
 ---
-title: Resursväljare för  [!DNL Adobe Experience Manager]  som en [!DNL Cloud Service]
+title: Integrera resursväljare med program från andra företag än Adobe eller andra
 description: Integrera resursväljare med olika program från Adobe, andra företag än Adobe och tredje part.
 role: Admin, User
 exl-id: 55848de0-aff2-42a0-b959-c771235d9425
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 08fc43bc8edeea91bfeb01f053d435e136658e7f
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---

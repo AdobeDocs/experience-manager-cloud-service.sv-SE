@@ -4,7 +4,7 @@ description: Läs om hur AEM Assets och Dynamic Media förenklar effektiv bildha
 exl-id: 006dc493-c400-4d0f-b314-c1978582b7fb
 feature: Renditions
 role: User
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: b6c753ec581a80991f0f79134bec019c3ad6d1d0
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Med dessa renderingar kan organisationer leverera personaliserade och optimerade
    * [Bildförinställningar](/help/assets/dynamic-media/managing-image-presets.md)
 
   Du kan [växla vyn](/help/assets/assets-view-introduction.md#how-to-access-assets-view) senare för att förhandsgranska dynamiska återgivningar i vyn Assets.
-* Publicera material på Dynamic Media för att göra Dynamic Media-renderingar tillgängliga i Assets-vyn. Mer information finns i [Publicera Assets till AEM och Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm).
+* Publicera material på Dynamic Media för att göra Dynamic Media-renderingar tillgängliga i Assets-vyn. Mer information finns i [Publicera Assets till AEM och Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm).
 
 
 ### Visa och hämta dynamiska medierenderingar {#view-download-dm-renditions}
@@ -115,7 +115,7 @@ Så här visar eller hämtar du dynamiska återgivningar av bilder i Experience 
 
 ## Dynamic Media med OpenAPI Capabilities renditions {#dm-with-openapi-renditions}
 
-### Innan du börjar
+### Innan du börjar {#prereqs-dm-with-openapi-renditions}
 
 * Du måste ha licens för AEM Dynamic Media.
 * Assets måste godkännas för visning av Dynamic Media med OpenAPI-funktioner. Mer information finns i [Godkänn resurser i Experience Manager](/help/assets/approve-assets.md#copy-delivery-url-approved-assets)
