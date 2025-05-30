@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: e1fa4b3bcb04ab3e834b34f507f1350fb536b513
+source-git-commit: 6884e33a922a7147e3a6a3f3ddb3dd3b2da85fbf
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '562'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21005, som offentliggjordes den 27 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
 
-Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21005}
 
@@ -47,7 +47,7 @@ Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns
 * GUIDES-26434: Den inbyggda PDF-publiceringen fortsätter i oändlighet om DITA-innehållet har en webblänk utan omfång som `external`.
 * GUIDES-26516: Publicering av inbyggda PDF-filer och AEM-webbplatser stoppas och köas om det finns fel i innehållet.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-21005}
 
@@ -58,6 +58,7 @@ Ingen.
 * GRANITE-54164: `org.apache.jackrabbit.oak.plugins.blob` har tagits bort från publikt API.
 * GRANITE-54280: `org.apache.jackrabbit.oak.cache` har tagits bort från publikt API.
 * GRANITE-58332: `org.apache.jackrabbit.oak.plugins.memory` har tagits bort i publikt API.
+* YUI-kompressor för javascript har tagits bort.
 * Funktionen [Experience Cloud Setup Automation](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md) har tagits bort.
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
