@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21005, som offentliggjordes den 27 maj 2025. Den tidigare underhållsutgåvan släpptes 20626.
 
-Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21005}
 
@@ -47,7 +47,7 @@ Funktionsaktiveringen i 2025.5.0 kommer att innehålla alla funktioner som finns
 * GUIDES-26434: Den inbyggda PDF-publiceringen fortsätter i oändlighet om DITA-innehållet har en webblänk utan omfång som `external`.
 * GUIDES-26516: Publicering av inbyggda PDF-filer och AEM-webbplatser stoppas och köas om det finns fel i innehållet.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-21005}
 
