@@ -5,9 +5,9 @@ exl-id: 6d33c3c5-258c-4c9c-90c2-d566eaeb14c0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d4b579e817831945f46b06d9c271c8e671958bed
+source-git-commit: eea0ac03cf2da9cd8508b6df9242dfe67b67c9f9
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1529'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,15 @@ ht-degree: 0%
 
 # Kontrollpanel för Experience Audit {#experience-audit-dashboard}
 
-Upptäck hur Experience Audit validerar er driftsättningsprocess och ser till att ändringarna uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO. Den ger ett tydligt och informativt gränssnitt för att spåra mätvärdena.
+<!-- Engineer architect over this feature was Bogdan Anton; scrum master Alexandru Nica -->
+
+Upptäck hur Experience Audit validerar er distributionsprocess och ser till att ändringarna uppfyller grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO (sökmotoroptimering). Den ger ett tydligt och informativt gränssnitt för att spåra mätvärdena.
 
 ## Ökning {#overview}
 
 Experience Audit validerar distributionsprocessen och säkerställer att ändringarna distribueras:
 
-1. Uppfyll grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO (sökmotoroptimering).
-
+1. Uppfyll grundläggande standarder för prestanda, tillgänglighet, bästa praxis och SEO.
 1. Inför inte regressioner.
 
 Med Experience Audit i Cloud Manager säkerställs att användarens upplevelse på webbplatsen är av högsta standard.
@@ -35,9 +36,9 @@ Experience Audit drivs av [Google Lightroom](https://developer.chrome.com/docs/l
 
 Experience Audit finns för Cloud Manager:
 
-* (Standard) Anläggningspipelines för produktion
-* (Valfritt) Utveckling av rörledningar i full stapel
-* (Valfritt) Utveckling av rörledningar
+* (Standard) Sites production pipelines.
+* (Valfritt) Utveckling av rörledningar i full stapel.
+* (Valfritt) Utveckling av rörledningar för framände.
 
 Mer information om hur du konfigurerar granskningen för de valfria miljöerna finns i avsnittet [Konfiguration](#configuration).
 
@@ -49,9 +50,9 @@ Experience Audit är tillgängligt som standard för produktionspipelines. Den k
 
 1. Beroende på vilken typ av pipeline du vill konfigurera gör du något av följande:
 
-   * Lägg till en ny [produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för att definiera sökvägarna som du vill att granskningen ska utvärdera.
-   * Lägg till en ny [icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) om du vill aktivera granskningen för en frontendpipeline eller en fullständig utvecklingspipeline.
-   * Du kan också [redigera en befintlig pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) och uppdatera befintliga alternativ.
+   * [Lägg till en produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-production-pipelines.md) för att definiera sökvägarna som du vill att granskningen ska utvärdera.
+   * [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md) om du vill aktivera granskningen för en frontendpipeline eller en fullständig utvecklingspipeline.
+   * [Redigera en befintlig pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md) och uppdatera befintliga alternativ.
 
 1. Om du vill använda Experience Audit när du lägger till eller redigerar en icke-produktionspipeline markerar du kryssrutan **Experience Audit** . Det här alternativet finns på fliken **Source-kod**.
 
@@ -148,7 +149,7 @@ När du flyttar musen över diagrammet visas ett verktygstips värdena för kate
 
 ![Trendinformation](assets/experience-audit-trend-details.png)
 
-Om du klickar på diagrammet vid en tidpunkt öppnas en port med detaljer om den skanningen. Klicka på **Öppna Experience Audit-genomsökningen** för att läsa in dessa genomsökningsresultat i avsnittet **[Experience Audit-resultat](#scan-results)**.
+Om du klickar på diagrammet vid en tidpunkt öppnas ett popup-fönster med detaljer om den skanningen. Klicka på **Öppna Experience Audit-genomsökningen** för att läsa in dessa genomsökningsresultat i avsnittet **[Experience Audit-resultat](#scan-results)**.
 
 ![Välj en annan skanning](assets/experience-audit-open-scan.png)
 
