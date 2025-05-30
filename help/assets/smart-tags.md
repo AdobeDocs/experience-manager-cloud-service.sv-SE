@@ -1,79 +1,55 @@
 ---
-title: Hur lägger jag till smarta taggar till resurser i AEM?
-description: Lägg in smarta taggar i AEM med en artificiellt intelligent tjänst som lägger in kontextuella och beskrivande taggar.
-contentOwner: AG
-feature: Smart Tags
-role: Admin, User
-exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+title: Tagga resurser automatiskt med  [!DNL Adobe Sensei] smart tjänst
+description: Tagga tillgångar med en artificiellt intelligent tjänst som använder kontextuella och beskrivande affärstaggar.
+feature: Smart Tags,Tagging
+role: Admin,User
+source-git-commit: 9af552b17421e320b6139d6bd6ecaa42428de397
 workflow-type: tm+mt
-source-wordcount: '2454'
-ht-degree: 3%
+source-wordcount: '2347'
+ht-degree: 0%
 
 ---
 
 
-# Lägga till smarta taggar till resurser i AEM {#smart-tags-assets-aem}
+# Smarta taggar för AEM Assets {#using-smart-tags}
 
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
+Organisationer har ett stort antal digitala resurser och antalet fortsätter att öka snabbt. Att söka efter en viss resurs i en så stor mängd data utgör en stor utmaning. För att åtgärda detta används `metadata` och `tags` för att förbättra sökbarheten för digitala resurser. Organisationer använder taxonomistyrda vokabulärer i metadata för resurser. Dessa består vanligtvis av nyckelordslistor som anställda, partners och kunder vanligtvis använder för att referera till och hitta digitala resurser.
 
-| Version | Artikellänk |
-| -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/enhanced-smart-tags.html?lang=sv-SE) |
-| AEM as a Cloud Service | Den här artikeln |
+Smarta taggar är nyckelord som inte bara visas i texten utan också bäst beskriver resursen. Genom att tagga resurser med taxonomistyrd vokabulär kan de enkelt identifieras och hämtas via sökning.
 
-Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter sina digitala resurser. Genom att tagga resurser med taxonomistyrd vokabulär kan du se till att de är lätta att identifiera och hämta i sökningar.
+Ord som ordnas i bokstavsordning är till exempel enklare att hitta än de som är slumpmässigt spridda. Taggning har ett liknande syfte. Den organiserar resurser efter affärsklonomi och ser till att de mest relevanta visas i sökresultaten. En biltillverkare kan till exempel märka bilderna med modellnamn så att endast relevanta bilder visas när de utformar en kampanjkampanj. Vare sig man lägger in märkord i &quot;runners&quot; eller &quot;löpskor&quot; behöver man inte bekymra sig om typografi, stavningsvariationer eller alternativa söktermer - Smarta taggar känner igen dem alla.
 
-Jämfört med naturliga språkordsuttryck hjälper taggning som baseras på företagstaxonomi till att anpassa tillgångarna till företagets verksamhet och säkerställer att de mest relevanta resurserna visas i sökningar. En biltillverkare kan t.ex. märka bilderna med modellnamn så att endast relevanta bilder visas när de genomsöks för att utforma en kampanj.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/products/sensei/adobe-sensei.html) automatiskt smarta taggar för överförda resurser (som standard) tillsammans med text som justeras efter företagsklonomin.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/why-adobe/experience-cloud-artificial-intelligence.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Som standard lägger AEM automatiskt till smarta taggar i överförda resurser.
+## Krav och konfiguration {#smart-tags-prereqs-config}
 
-<!-- TBD: Create a flowchart for how training works in CS.
-![flowchart](assets/flowchart.gif) 
--->
+Smarta taggar etableras automatiskt för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] och därför krävs ingen konfiguration.
 
-## Resurstyper som stöds för smarta taggar i AEM {#smart-tags-supported-file-formats}
+## Arbetsflöde för smarta taggar {#smart-tags-workflow}
 
-Du kan tagga följande typer av resurser:
+[!DNL Adobe Sensei] använder artificiell smart taggning för att analysera innehåll och lägga till taggar i resurserna. Detta minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Smarta taggar visas i fallande ordning efter deras [konfidensgrad](#confidence-score) i resursegenskaper.
 
-* **Bilder**: Bilder i många format taggas med Adobe Sensei smarta innehållstjänster. Du [skapar en utbildningsmodell](#train-model) och sedan taggas de överförda bilderna automatiskt. Smarta taggar används för de filtyper som stöds och som genererar återgivningar i JPG- och PNG-format.
-* **Textbaserade resurser**: [!DNL Experience Manager Assets] taggar automatiskt de textbaserade resurser som stöds när de överförs.
-* **Videoresurser**: Videotaggning är aktiverat som standard i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. [Videoklipp taggas automatiskt](/help/assets/smart-tags-video-assets.md) när du överför nya videoklipp eller bearbetar om befintliga.
+* **Bildbaserade resurser**
+För bilder baseras smarta taggar på vissa visuella proportioner. Bilder i många format taggas med smarta innehållstjänster. Smarta taggar används för de [filtyper](#supported-file-formats) som stöds och som genererar återgivningar i JPG- och PNG-format.
+
+  <!-- ![Image Smart Tag](assets/image-smart-tag.png)-->
+
+* **Videobaserade resurser**
+För videobaserade resurser är taggning aktiverat som standard i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] . På samma sätt som bild- och textbaserade taggar, taggas videoklipp även automatiskt när du överför nya videoklipp eller bearbetar om befintliga. [!DNL Adobe Sensei] genererar två uppsättningar taggar för en video: Den ena uppsättningen motsvarar objekt, scener och attribut i den videon, medan den andra uppsättningen gäller åtgärder som att dricka, köra och jogga. Kontrollera även [avanmäl dig från smart taggning för video](#opt-out-video-smart-tagging).
+
+* **Textbaserade resurser**
+För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger dock en dedikerad, strukturerad och prioriterad sökfaktor. Den senare hjälper till att förbättra tillgångsidentifiering jämfört med ett sökindex.
+För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text.
+
+  ![Typer av smarta taggar](assets/smart-tags-types.png)
+
+Smarta taggar implementeras i AEM Assets med följande arbetsflöde:
+
+1. Skapa eller överföra en resurs i AEM. Slut på taggar genereras för bild-, video- och textbaserade Assets.
+
+1. Om du upptäcker att specifika taggar inte genereras kan du träna dina bildtypstaggar i enlighet med detta. Mer information finns i [Utbildning om smarta taggar](#smart-tags-training.md).
+
+## Filformat som stöds för smarta taggar {#supported-file-formats}
 
 | Bilder (MIME-typer) | Textbaserade resurser (filformat) | Videomaterial (filformat och kodekar) |
 |----|-----|------|
@@ -96,147 +72,82 @@ Du kan tagga följande typer av resurser:
 | image/psd |  |  |
 | image/vnd.adobe.photoshop |  |  |
 
-AEM lägger automatiskt till smarta taggar i textbaserade resurser och i videoklipp som standard. Om du vill lägga till smarta taggar automatiskt till bilder utför du följande åtgärder.
+## Förbereda en resurs för smart taggning utanför paketet
 
-* [Förstå taggmodeller och riktlinjer](#understand-tag-models-guidelines).
-* [Utbilda modellen](#train-model).
-* [Tagga dina digitala resurser](#tag-assets).
-* [Hantera taggar och sökningar](#manage-smart-tags-and-searches).
+När du [överför resurser](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som [!DNL Cloud Service] bearbetas de överförda resurserna. När bearbetningen är klar går du till fliken [!UICONTROL Basic] på sidan för resursen [!UICONTROL Properties]. Smarta taggar läggs automatiskt till i resurserna under [!UICONTROL Smart Tags]. Resursmikrotjänsterna använder [!DNL Adobe Sensei] för att skapa dessa smarta taggar.
 
-## Förstå taggmodeller och riktlinjer {#understand-tag-models-guidelines}
-
-En taggmodell är en grupp relaterade taggar som är kopplade till olika visuella aspekter av bilder som taggas. Taggar relaterar till de olika visuella aspekterna av bilder så att taggarna när de används hjälper dig att söka efter särskilda typer av bilder. En skosamling kan till exempel ha olika taggar, men alla taggar är relaterade till skor och kan tillhöra samma taggmodell. När märkorden används kan de hjälpa dig att hitta olika typer av skor, till exempel efter design eller efter användning. Om du vill förstå innehållsrepresentationen för en utbildningsmodell i [!DNL Experience Manager] ska du visualisera en utbildningsmodell som en entitet på den översta nivån som består av en grupp med manuellt tillagda taggar och exempelbilder för varje tagg. Varje tagg kan användas exklusivt på en bild.
-
-Innan du skapar en taggmodell och utbildar tjänsten bör du identifiera en uppsättning unika taggar som bäst beskriver objekten i bilderna i ditt företags sammanhang. Kontrollera att resurserna i din aktuella uppsättning uppfyller [riktlinjerna för utbildning](#training-guidelines).
-
-### Utbildningsriktlinjer {#training-guidelines}
-
-Kontrollera att bilderna i kursuppsättningen överensstämmer med följande riktlinjer:
-
-**Kvantitet och storlek:** Minst 10 bilder och högst 50 bilder per tagg.
-
-**Samordning**: Kontrollera att bilderna för en tagg är visuellt lika. Det är bäst att lägga samman märkorden om samma visuella aspekter (till exempel samma typ av objekt i en bild) till en enda taggmodell. Det är till exempel ingen bra idé att tagga de här bilderna som `my-party` (för utbildning) eftersom de inte är visuellt lika.
-
-![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coherence.png)
-
-**Täckning**: Det ska finnas tillräckligt med variation i bilderna i kursen. Tanken är att ge några exempel som är ganska olika, men som ändå är ganska olika, så att [!DNL Experience Manager] lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ. För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan så att tjänsten kan identifiera liknande bilder mer exakt under taggningen.
-
-![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/coverage_1.png)
-
-**Distraktion/obstruktion**: Tjänsten tränar bättre på bilder som har mindre störning (framträdande bakgrunder, icke-relaterade komponenter, t.ex. objekt/personer med huvudmotivet). För taggen *casual-shoe* är till exempel den andra bilden inte en bra träningskandidat.
-
-![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/distraction.png)
-
-**Fullständighet:** Om en bild kvalificerar sig för mer än en tagg lägger du till alla tillämpliga taggar innan du inkluderar bilden för träning. För taggar som *regnrock* och *modellvy* lägger du till båda taggarna i den kvalificerade resursen innan du inkluderar den för träning.
-
-![Illustrativa bilder som exempel på riktlinjer för utbildning](assets/do-not-localize/completeness.png)
-
-**Antal taggar**: Adobe rekommenderar att du utbildar en modell med minst två distinkta taggar och minst tio olika bilder för varje tagg. Lägg inte till fler än 50 taggar i en enda taggmodell.
-
-**Antal exempel**: Lägg till minst tio exempel för varje tagg. Adobe rekommenderar dock cirka 30 exempel. Högst 50 exempel per tagg stöds.
-
-**Förhindra felaktiga positiva och konflikter**: Adobe rekommenderar att du skapar en enda taggmodell för en enskild visuell aspekt. Strukturera taggmodellerna på ett sätt som undviker överlappande taggar mellan modellerna. Använd till exempel inte vanliga taggar som `sneakers` i två olika taggmodellnamn `shoes` och `footwear`. Utbildningsprocessen skriver över en tränad taggmodell med den andra för ett vanligt nyckelord.
-
-**Exempel**: Fler exempel på vägledning är:
-
-* Skapa en taggmodell som endast innehåller
-
-   * Taggar för bilmodeller.
-   * Taggen för fodral för vuxna och barn.
-
-* Skapa inte
-
-   * En taggmodell som innehåller bilmodeller som släpptes 2019 och 2020.
-   * Flera taggmodeller som innehåller samma få bilmodeller.
-
-**Bilder som används för att utbilda**: Du kan använda samma bilder för att utbilda olika taggmodeller. Koppla emellertid inte en bild till mer än en tagg i en taggmodell. Du kan lägga till märkord i samma bild med olika märkord som tillhör olika taggmodeller.
-
-Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
-
-## Ange modell för anpassade taggar {#train-model}
-
-Följ de här stegen för att skapa och utbilda en modell för dina företagsspecifika taggar:
-
-1. Skapa nödvändiga taggar och rätt taggstruktur. Överför relevanta bilder i DAM-databasen.
-1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Smart Tag Training]** i användargränssnittet för [!DNL Experience Manager].
-1. Klicka på **[!UICONTROL Create]**. Ange **[!UICONTROL Title]**, **[!UICONTROL Description]**.
-1. Klicka på mappikonen i fältet **[!UICONTROL Tags]**. Ett popup-fönster öppnas.
-1. Sök efter eller välj lämpliga taggar från de befintliga taggarna i `cq-tags` som du vill lägga till i modellen. Klicka på **[!UICONTROL Next]**.
-
-   >[!NOTE]
-   >
-   >Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]**-datum eller **[!UICONTROL Modified]**-datum.
-
-
-1. Klicka **[!UICONTROL Add Assets]** mot varje tagg i dialogrutan **[!UICONTROL Select Assets]**. Sök i DAM-databasen eller bläddra i databasen för att välja minst 10 och högst 50 bilder. Välj resurser och inte mappen. När du har markerat bilderna klickar du på **[!UICONTROL Select]**.
-
-   ![Visa utbildningsstatus](assets/smart-tags-training-status.png)
-
-1. Om du vill förhandsvisa miniatyrbilderna för de markerade bilderna klickar du på dragspelet framför en tagg. Du kan ändra markeringen genom att klicka på **[!UICONTROL Add Assets]**. När du är nöjd med markeringen klickar du på **[!UICONTROL Submit]**. Användargränssnittet visar ett meddelande längst ned på sidan om att kursen har startats.
-1. Kontrollera utbildningsstatusen i kolumnen **[!UICONTROL Status]** för varje taggmodell. Möjliga statusvärden är [!UICONTROL Pending], [!UICONTROL Trained] och [!UICONTROL Failed].
-
-![Arbetsflöde för att träna taggningsmodellen för smarta taggar](assets/smart-tag-model-training-flow.png)
-
-*Bild: Steg i utbildningsarbetsflödet för att träna taggningsmodellen.*
-
-### Visa utbildningsstatus och rapport {#training-status}
-
-Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i utbildningsuppsättningen med resurser kan du läsa rapporten om utbildningsarbetsflödet i rapportkonsolen.
-
-1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
-1. Klicka på **[!UICONTROL Create]** på sidan **[!UICONTROL Asset Reports]**.
-1. Välj rapporten **[!UICONTROL Smart Tags Training]** och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
-1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
-1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Om du vill visa rapporten klickar du på **[!UICONTROL View]** i verktygsfältet.
-1. Granska informationen i rapporten. Rapporten visar träningsstatusen för de taggar du har tränat. Den gröna färgen i kolumnen **[!UICONTROL Training Status]** anger att smarta taggar har tränats för taggen. Gul färg anger att tjänsten är delvis tränad för en viss tagg. Om du vill utbilda tjänsten helt för en tagg lägger du till fler bilder med den särskilda taggen och genomför utbildningsarbetsflödet. Om du inte ser dina taggar i den här rapporten kör du utbildningsarbetsflödet igen för de här taggarna.Taggar
-1. Om du vill hämta rapporten markerar du den i listan och klickar på **[!UICONTROL Download]** i verktygsfältet. Rapporten hämtas som ett kalkylblad.
+![Smarta taggar läggs till i videoklipp och visas på fliken Grundläggande i resursegenskaper](assets/smart-tags-added-to-videos.png)
 
 <!--
-### Tag assets from the workflow console {#tagging-assets-from-the-workflow-console}
+The applied smart tags are sorted in descending order of [confidence score](#confidence-score), combined for object and action tags, within [!UICONTROL Smart Tags].
+-->
 
-1. In [!DNL Experience Manager] interface, go to **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. From the **[!UICONTROL Workflow Models]** page, select the **[!UICONTROL DAM Smart Tags Assets]** workflow and then click **[!UICONTROL Start Workflow]** from the toolbar.
+>[!IMPORTANT]
+>
+>Du rekommenderas att granska dessa automatiskt genererade taggar för att säkerställa att de överensstämmer med ditt varumärke och dess värden.
 
-   ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
+## Otaggad Assets i DAM {#smart-tag-existing-assets}
 
-1. In the **[!UICONTROL Run Workflow]** dialog, browse to the payload folder containing assets on which you want to apply your tags automatically.
-1. Specify a title for the workflow and an optional comment. Click **[!UICONTROL Run]**.
+Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
 
-   ![tagging_dialog](assets/tagging_dialog.png)
+<!--
+To smart tag assets, or folders (including subfolders) of assets that exist in assets repository, follow these steps:
 
-   *Figure: Navigate to the asset folder and review the tags to verify whether your assets are tagged properly. For details, see [manage smart tags](#manage-smart-tags-and-searches).*
+1. Select the [!DNL Adobe Experience Manager] logo and then select assets from the [!UICONTROL Navigation] page.
 
-### Tag assets from the timeline {#tagging-assets-from-the-timeline}
+1. Select [!UICONTROL Files] to display the Assets interface.
 
-1. From the [!DNL Assets] user interface, select the folder containing assets or specific assets to which you want to apply smart tags.
-1. From upper-left corner, open the **[!UICONTROL Timeline]**.
-1. Open actions from the bottom of the left sidebar and click **[!UICONTROL Start Workflow]**.
+1. Navigate to the folder to which you want to apply Smart Tags.
 
-   ![start_workflow](assets/start_workflow.png)
+1. Select the assets and click ![Reprocess assets icon](assets/do-not-localize/reprocess-assets-icon.png) [!UICONTROL Reprocess Assets] icon and select the [!UICONTROL Full Process] option.
 
-1. Select the **[!UICONTROL DAM Smart Tag Assets]** workflow, and specify a title for the workflow.
-1. Click **[!UICONTROL Start]**. The workflow applies your tags on assets. Navigate to the asset folder and review the tags to verify that your assets are tagged properly. For details, see [manage smart tags](#manage-smart-tags-and-searches).
+![Reprocess assets to add tags to videos existing DAM repository](assets/reprocess.gif)-->
+
+## Konfidenspoäng {#confidence-score}
+
+Sökresultaten för dina resurser rangordnas baserat på konfidensintervallet, som i allmänhet förbättrar sökresultaten utöver vad en inspektion av de tilldelade taggarna för en resurs antyder. Felaktiga taggar har ofta låga konfidensvärden, så de visas sällan överst i listan Smarta taggar för resurser.
+<!--
+[!DNL Adobe Experience Manager] as a [!DNL Cloud Service] applies a minimum confidence threshold for object and action-smart tags to avoid having too many tags for each asset, which slows down indexing. 
+
+The default threshold for action and object tags in [!DNL Adobe Experience Manager] for an image is 0.5 and for video it is 0.7 (should be value from 0 through 1). If some assets are not tagged by a specific tag, then it indicates that the algorithm is less than 70% confident in the predicted tags. The default threshold might not always be optimal for all the users. You can, therefore, change the confidence score value in OSGI configuration.
+
+To add the confidence score OSGI configuration to the project deployed to [!DNL Adobe Experience Manager] as a [!DNL Cloud Service] through [!DNL Cloud Manager]:
+
+In the [!DNL Adobe Experience Manager] project (`ui.config` since Archetype 24, or previously `ui.apps`) the `config.author` OSGi configuration, include a config file named `com.adobe.cq.assetcompute.impl.senseisdk.SenseiSdkImpl.cfg.json` with the following contents:
+
+```json
+{
+  "minVideoActionConfidenceScore":0.5,
+  "minVideoObjectConfidenceScore":0.5,
+}
+```
+-->
 
 >[!NOTE]
 >
->In the subsequent tagging cycles, only the modified assets are tagged again with newly trained tags. However, even unaltered assets are tagged if the gap between the last and current tagging cycles for the tagging workflow exceeds 24 hours. For periodic tagging workflows, unaltered assets are tagged when the time gap exceeds six months.
+>Manuella taggar tilldelas en konfidensgrad på 100 % (maximal konfidensgrad). Om det finns resurser med manuella taggar som matchar sökfrågan visas de därför före smarta taggar som matchar sökfrågan.
 
-### Tag uploaded assets {#tag-uploaded-assets}
+## Måttliga smarta taggar {#moderate-smart-tags}
 
-[!DNL Experience Manager] can automatically tag the assets that users upload to DAM. To do so, administrators configure a workflow to add an available step that tags assets. See [how to enable Smart Tags for uploaded assets](/help/assets/smart-tags-configuration.md#enable-smart-tagging-for-uploaded-assets).
--->
+Med [!DNL Adobe Experience Manager] som [!DNL Cloud Service] kan du strukturera smarta taggar till:
 
-## Tagga resurser med smarta taggar i AEM {#tag-assets}
+* ta bort felaktiga taggar som tilldelats ert varumärkeskonto.
 
-Alla typer av resurser som stöds taggas automatiskt av [!DNL Experience Manager Assets] när de överförs. Taggning är aktiverat och fungerar som standard. AEM använder rätt smarta taggar i nära realtid. <!-- TBD: You can also apply the tagging workflow on-demand. The workflow applies to both, assets and folders. -->
+* förfina taggbaserade sökningar efter resurser genom att se till att dina resurser visas i sökresultaten för de mest relevanta taggarna. Det eliminerar därför risken för att orelaterade resurser visas i sökresultaten.
 
-* För bilder och videoklipp baseras smarta taggar på vissa visuella aspekter.
+* tilldelar en högre rankning till en tagg för att öka dess relevans med avseende på en tillgång. Om du befordrar en tagg för en resurs ökar risken för att den aktuella resursen visas i sökresultaten när en sökning utförs baserat på den taggen.
 
-* För textbaserade resurser beror effekten av smarta taggar inte på mängden text i resursen utan på relevanta nyckelord eller enheter som finns i resursens text. För textbaserade resurser är de smarta taggarna de nyckelord som visas i texten men de som bäst beskriver resursen. För resurser som stöds extraherar [!DNL Experience Manager] redan texten, som sedan indexeras och används för att söka efter resurserna. Smarta taggar baserade på nyckelord i texten ger dock en dedikerad, strukturerad och prioriterad sökfaktor. Den senare hjälper till att förbättra tillgångsidentifiering jämfört med ett sökindex.
+Mer information om hur du modererar smarta taggar för resurser finns i [Hantera smarta taggar](smart-tags.md#manage-smart-tags-and-searches).
+
+![Måttliga smarta videotaggar](assets/manage-video-smart-tags.png)
+
+>[!NOTE]
+>
+>Eventuella taggar som modereras med stegen i [Hantera smarta taggar](smart-tags.md#manage-smart-tags-and-searches) sparas inte när resursen bearbetas om. De ursprungliga tagguppsättningarna visas igen.
 
 ## Hantera smarta taggar och resurssökningar {#manage-smart-tags-and-searches}
 
-Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats ert varumärkesobjekt, så att endast de mest relevanta taggarna visas.
+Du kan strukturera smarta taggar om du vill ta bort felaktiga taggar som kan ha tilldelats till ert varumärkesmaterial, så att endast de mest relevanta taggarna visas.
 
 Genom att moderera smarta taggar kan du också förbättra taggbaserade sökningar efter resurser genom att se till att dina resurser visas i sökresultaten för de mest relevanta taggarna. I grund och botten hjälper det till att eliminera riskerna för att orelaterade resurser visas i sökresultaten.
 
@@ -250,9 +161,9 @@ Så här modererar du smarta taggar för dina digitala resurser:
 
 1. Markera en resurs och välj sedan ![Hantera taggar-ikonen](assets/do-not-localize/manage-tags-icon.png) i verktygsfältet.
 
-1. Granska taggarna från sidan **[!UICONTROL Manage Tags]**. Om du inte vill att resursen ska genomsökas baserat på en viss tagg markerar du taggen och väljer ![Ta bort ikon](assets/do-not-localize/delete-icon.png) i verktygsfältet. Du kan också välja symbolen `X` bredvid etiketten.
+1. Granska taggarna från sidan **[!UICONTROL Manage Tags]**. Om du inte vill att resursen ska genomsökas baserat på en viss tagg markerar du taggen och väljer ![Ta bort ikon](assets/do-not-localize/delete-icon.svg) i verktygsfältet. Du kan också välja ![stäng ikon](assets/do-not-localize/close_icon.svg) bredvid etiketten.
 
-1. Om du vill tilldela en högre rankning till en tagg markerar du taggen och väljer ![Befordra ikon](assets/do-not-localize/promote-icon.png) i verktygsfältet. Taggen som du höjer upp flyttas till avsnittet **[!UICONTROL Tags]**.
+1. Om du vill tilldela en högre rankning till en tagg markerar du taggen och väljer ![Befordra ikon](assets/do-not-localize/promote-icon.svg) i verktygsfältet. Taggen som du höjer upp flyttas till avsnittet **[!UICONTROL Tags]**.
 
 1. Välj **[!UICONTROL Save]** och sedan **[!UICONTROL OK]** för att stänga dialogrutan [!UICONTROL Success].
 
@@ -260,58 +171,136 @@ Så här modererar du smarta taggar för dina digitala resurser:
 
 ### Förstå [!DNL Experience Manager]-sökresultat med smarta taggar {#understand-search}
 
-Som standard kombineras söktermerna i [!DNL Experience Manager] med en `AND` -sats. Om du använder smarta taggar ändras inte standardbeteendet. Om du använder smarta taggar läggs en `OR`-sats till för att hitta någon av söktermerna i de använda smarta taggarna. Du kan till exempel söka efter `woman running`. Assets med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som taggats med antingen `woman` eller `running` med smarta taggar visas i en sådan sökfråga. Sökresultaten är en kombination av
+Som standard kombinerar [!DNL Experience Manager] söktermerna med en `AND` - eller `OR` -sats för att hitta något av söktermerna i de använda smarta taggarna. Om du använder smarta taggar ändras inte standardbeteendet. Du kan till exempel söka efter `woman running`. Assets med bara `woman` eller bara `running` nyckelord i metadata visas inte som standard i sökresultaten. En resurs som taggats med antingen `woman` eller `running` med smarta taggar visas dock i en sådan sökfråga. Sökresultaten är en kombination av
 
 * Assets med nyckelorden `woman` och `running` i metadata.
 
 * Assets smart taggad med något av nyckelorden.
 
-Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i de smarta taggarna. I ovanstående exempel är den ungefärliga visningsordningen för sökresultat:
+Sökresultaten som matchar alla söktermer i metadatafält visas först, följt av sökresultaten som matchar någon av söktermerna i Smarta taggar. I ovanstående exempel är den ungefärliga visningsordningen för sökresultat:
 
 1. matchar `woman running` i de olika metadatafälten.
 1. matchar `woman running` i smarta taggar.
 1. matchar `woman` eller `running` i smarta taggar.
 
-## Taggningsrelaterade begränsningar och bästa praxis {#limitations}
+## Avanmäl dig från smart taggning {#opt-out-smart-tagging}
 
-Förbättrad smart taggning bygger på inlärningsmodeller för bilder och taggar för dessa. Dessa modeller är inte alltid perfekta när det gäller att identifiera taggar. Den aktuella versionen av smarta taggar har följande begränsningar:
+När den automatiska taggningen av resurser körs parallellt med andra bearbetningsuppgifter som att skapa miniatyrbilder och extrahera metadata kan det vara tidskrävande. Du kan avanmäla dig från smart taggning vid överföring på mappnivå för att påskynda resursbearbetningen. Så här avanmäler du dig från generering av automatiska smarta taggar för resurser som överförts till en viss mapp:
+
+1. Öppna fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties].
+1. I [!UICONTROL Smart Tags for Videos]-menyn är till exempel alternativet [!UICONTROL Inherited] valt som standard och smart tagg för video är aktiverat.
+
+   När alternativet [!UICONTROL Inherited] är markerat visas även den ärvda mappsökvägen tillsammans med informationen om den är inställd på [!UICONTROL Enable] eller [!UICONTROL Disable].
+
+   ![Inaktivera smart taggning](assets/disable-tagging.png)
+
+1. Välj [!UICONTROL Disable] om du vill avanmäla dig från smart taggning som överförts till mappen.
+
+1. På samma sätt kan du välja bort smart taggning för [!UICONTROL Smart Tags for Text], [!UICONTROL Smart Tags for Image] och [!UICONTROL Color Tags for Images].
+
+>[!IMPORTANT]
+>
+>Om du har valt att inte tagga en mapp vid överföringen och vill att taggen ska vara smart efter överföringen, **[!UICONTROL Enable Smart Tags]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option ](#smart-tag-existing-assets) för att lägga till smarta taggar i resurserna.
+
+<!--
+## Benefits of Smart Tags to your assets {#benefits-of-smart-tags}
+
+Following are the benefits of using Smart Tags in your AEM Assets:
+*  Makes an asset searchable.
+*  Smart Tags are generated automatically to your assets, thus, it minimizes your effort to perform tagging manually.
+*  It allows the usage of the same vocabulary, tag structure, and taxonomy so that you need not to worry about tagging if by chance you miss tagging at first.
+*  Whether you are tagging "runners" or "running" shoes, you do not need to worry about typos, wrong spellings, or alternative search terms as Smart Tags know it already!
+*  Helps your assets to become organized and categorized.
+-->
+
+## Förbättra innehållsidentifiering med AI-genererade smarta taggar {#ai-smart-tags}
+
+I stället för att förlita sig på manuell inmatning tilldelar AI automatiskt beskrivande taggar till digitala resurser. Dessa AI-genererade taggar förbättrar metadatakvaliteten och gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll. Om resursen till exempel är en bild kan AI identifiera objekt, scener, känslor eller till och med varumärkeslogotyper i den och generera relevanta taggar som&quot;solnedgång&quot;,&quot;strand&quot;,&quot;semester&quot; eller&quot;leende&quot;. AI-genererat innehåll kan förbättra sökningen efter resurser genom att använda både semantiska och lexikala söktekniker. Se mer [Sök i Assets](search-assets.md). <!--If the asset is a document, AI reads and interprets the text to assign meaningful keywords that summarize its content—such as "climate change," "policy," or "renewable energy.-->
+
+![Förbättrade smarta taggar](assets/enhanced-smart-tags1.png)
+
+### Använda AI-genererade smarta taggar {#using-ai-generated-smart-tags}
+
+<!--[!NOTE]
+>
+>The enhanced smart tags capability is available only for the newly uploaded assets.
+-->
+
+Utför följande steg om du vill använda den förbättrade funktionen för smarta taggar:
+
+1. Gå till önskad mapp i gränssnittet [!DNL Experience Manager] och klicka på **[!UICONTROL Add Assets]**. <!--Alternatively, to update enhanced smart tags in an existing content, click **[!UICONTROL reprocess]**.--> De kompatibla bildfilformaten är `png`, `jpg`, `jpeg`,`psd`, `tiff`, `gif`, `webp`, `crw`, `cr2`, `3fr`, `nef`, `arw` och `bmp`.
+
+1. Vänta tills den nyligen överförda resursen bearbetas. Gå till resursegenskaper när du är klar.
+
+1. Gå till fliken **[!UICONTROL AI-Generated]**. Om versionen [!DNL Experience Manager] är inkompatibel eller inte uppdaterad visas inte den här fliken. Den lägsta version av AEM som krävs är `20626`. Följande fält finns där:
+
+   * **[!UICONTROL Generated title]:** Titeln innehåller en tydlig och kortfattad rubrik som beskriver kärnidén för en överförd resurs, vilket gör det enkelt att förstå direkt. När du lägger till en resurs visas den i resursvyn om du anger en titel (i `dc:title`). Om inget anges tilldelas en AI-genererad titel automatiskt.
+   * **[!UICONTROL Generated description]:** Beskrivningen ger en kort men informativ sammanfattning av vad resursen handlar om, vilket hjälper användare och sökmoduler att snabbt förstå dess relevans.
+   * **[!UICONTROL Generated keywords]:** Nyckelorden är måltermer som representerar huvudteman för en resurs, vilket underlättar taggning och innehållsfiltrering.
+
+1. [Valfritt] Du kan lägga till ytterligare taggar eller skapa egna om du tror att relevanta taggar saknas. Det gör du genom att skriva dina taggar i fältet **[!UICONTROL Generated keywords]** och klicka på **[!UICONTROL Save]**.
+
+## Begränsningar och bästa metoder för smarta taggar {#limitations-best-practices-smart-tags}
+
+Dessa modeller är inte alltid perfekta när det gäller att identifiera taggar. Den aktuella versionen av smarta taggar har följande begränsningar:
 
 * Oförmåga att identifiera små skillnader i bilder. Exempel: skjortor som inte passar lika bra som skjortor med normal passning.
 * Oförmåga att identifiera taggar baserat på små mönster eller delar av en bild. Till exempel logotyper på skjortor.
-* Taggning stöds på de språk som [!DNL Experience Manager] stöder.
 * De taggar som inte hanteras gäller:
 
-   * Ej visuella, abstrakta aspekter. Exempel: år eller säsong då en produkt släpps, stämning eller känslor som en bild ger upphov till samt en subjektiv nyans av en video.
+   * Ej visuella, abstrakta aspekter. Exempel: år eller säsong då en produkt, stämning eller känslor släpps upp som en bild orsakar samt en subjektiv nyans av en video.
    * Fina visuella skillnader mellan produkter som skjortor med och utan färg eller små logotyper som är inbäddade i produkter.
 
-Använd de bilder som passar bäst för att utbilda modellen. Utbildningen kan inte återupptas eller så kan utbildningsmodellen inte tas bort. Hur korrekt taggningen är beror på den aktuella kursen, så gör det med omsorg.
+* Endast videoklipp som är mindre än 300 MB i filstorlek taggas automatiskt. Tjänsten [!DNL Adobe Sensei] hoppar över videofiler som är större.
+* Om du vill söka efter filer med smarta taggar (vanliga eller förbättrade) använder du sökningen [!DNL Assets] (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
+* Jämfört med allmänna taggar är det lättare att identifiera och hämta resurser som taggats med hjälp av företagtaxonomi genom taggbaserade sökningar.
 
-<!-- TBD: Add limitations related to text files. -->
+## Frågor och svar{#faq-smart-tags}
 
-Om du vill söka efter filer med smarta taggar (vanliga eller förbättrade) använder du sökningen [!DNL Assets] (fulltextsökning). Det finns inget separat sökpredikat för smarta taggar.
++++**Hur förbättrar smarta taggar sökfunktionen för en resurs?**
 
->[!NOTE]
->
->Möjligheten att använda smarta taggar för att utbilda dig på dina taggar och använda dem på andra bilder beror på kvaliteten på de bilder du använder i utbildningen.
->För bästa resultat rekommenderar Adobe att du använder visuellt liknande bilder för att utbilda tjänsten för varje tagg.
+[!DNL Adobe] Sensei taggar resurserna automatiskt när du överför dem. Den automatiserade processen går så snabbt att du ser taggar som läggs till i dina resurser efter några sekunder när överföringen är klar.
 
-**Se även**
++++
 
-* [Översätt Assets](translate-assets.md)
-* [ASSETS HTTP API](mac-api-assets.md)
-* [Filformat som stöds av Assets](file-format-support.md)
-* [Sök resurser](search-assets.md)
-* [Anslutna resurser](use-assets-across-connected-assets-instances.md)
-* [Resursrapporter](asset-reports.md)
-* [Metadata-scheman](metadata-schemas.md)
-* [Hämta resurser](download-assets-from-aem.md)
-* [Hantera metadata](manage-metadata.md)
-* [Sök efter ansikten](search-facets.md)
-* [Hantera samlingar](manage-collections.md)
-* [Import av massmetadata](metadata-import-export.md)
-* [Publicera Assets till AEM och Dynamic Media](/help/assets/publish-assets-to-aem-and-dm.md)
++++**Vad händer om listan med smarta taggar är felaktig eller visar en oönskad tagg?**
 
->[!MORELIKETHIS]
->
->* [Förstå hur smarta taggar hjälper dig att hantera dina digitala filer](https://medium.com/adobetech/efficient-asset-management-with-enhanced-smart-tags-887bd47dbb3f)
->* [Använd smarta taggar för videofilmer](smart-tags-video-assets.md)
+En felaktig eller oönskad tagg kan tas bort från listan. Som bilhandlare kanske du vill ta bort&quot;skadad&quot; tagg från listan.
+
++++
+
++++**Hur kan du prioritera resurser som innehåller samma taggar?**
+
+Ja, du kan prioritera resurser som innehåller samma taggar. Du kan höja upp en tagg i listan Smarta taggar för en resurs för att utföra prioriteringen. Om du befordrar en tagg kan du prioritera bilderna som visas i sökresultaten för den aktuella taggen.
+
++++
+
++++**Är tillämpningen av smarta taggar begränsad till en viss mapp?**
+
+Smarta taggar kan konfigureras och användas i alla mappar i DAM.
+
++++
+
++++**Hur vet jag att taggningen behöver tränas?**
+
+Mer information finns i [Bestämma kraven för utbildning för smarta taggar](#smart-tags-training.md#smart-tag-training-requirement).
+
++++
+
++++**Vilka filformat stöds för taggning av en resurs?**
+
+Se [Filformat som stöds](#supported-file-formats).
+
++++
+
++++**I vilket språk genereras smarta taggar?**
+
+Smarta taggar genereras endast på engelska. De kan översättas till andra språk genom att översätta hela resursen inklusive metadata.
+
++++
+
++++**Jag vill inte använda smarta taggar längre.**
+
+Du kan [avanmäla dig från smarta taggar](#opt-out-smart-tagging) när du vill avbryta.
+
++++
