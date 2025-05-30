@@ -118,7 +118,7 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 >[!NOTE]
 >
 >Du kan använda samma bilder för att utbilda olika taggmodeller. Koppla emellertid inte en bild till mer än en tagg i en taggmodell. Du kan lägga till märkord i samma bild med olika märkord som tillhör olika taggmodeller.
->>Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
+>&#x200B;>Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
 
 ## Ange modell för anpassade taggar {#train-model}
 
@@ -161,7 +161,7 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 >[!NOTE]
 >
 >Hur gör jag om jag vill överföra övergången från smarta taggar från en instans till en annan via en export?
->>Du behöver inte exportera utbildning för smarta taggar om miljön tillhör samma IMS-organisation. Den delas automatiskt. Om miljön fungerar på olika IMS-organ finns det inget sätt att dela eller exportera utbildning för smarta taggar.
+>&#x200B;>Du behöver inte exportera utbildning för smarta taggar om miljön tillhör samma IMS-organisation. Den delas automatiskt. Om miljön fungerar på olika IMS-organ finns det inget sätt att dela eller exportera utbildning för smarta taggar.
 
 ## Begränsningar och bästa metoder för smarta taggar {#limitations-smart-tags-training}
 
@@ -172,4 +172,4 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 >[!NOTE]
 >
 >Möjligheten att använda smarta taggar för att utbilda dig på dina taggar och använda dem på andra bilder beror på kvaliteten på de bilder du använder i utbildningen.
->>För bästa resultat rekommenderar Adobe att du använder visuellt liknande bilder för att utbilda tjänsten för varje tagg.
+>&#x200B;>För bästa resultat rekommenderar Adobe att du använder visuellt liknande bilder för att utbilda tjänsten för varje tagg.
