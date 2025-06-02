@@ -37,7 +37,7 @@ Nedan visas förutsättningarna för att använda Forms Submission-tjänsten:
 
 ## Konfigurera tjänsten Forms Submit
 
-Skapa ett nytt AEM-projekt som har konfigurerats med Adaptive Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM-projekt. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
+Skapa ett nytt AEM-projekt som har konfigurerats med Adaptive Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM-projekt. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
 
 Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-submission-service-manually) eller [konfigurera Forms Submission Service med API](#configuring-the-forms-submission-service-using-api).
 
@@ -47,7 +47,7 @@ Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-su
 
 #### &#x200B;1. Skapa ett formulär med en formulärdefinition
 
-Skapa ett formulär med Google Sheets eller Microsoft Excel. [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms) om du vill lära dig hur du skapar ett formulär med en formulärdefinition i Microsoft Excel eller Google Sheets.
+Skapa ett formulär med Google Sheets eller Microsoft Excel. [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms) om du vill lära dig hur du skapar ett formulär med en formulärdefinition i Microsoft Excel eller Google Sheets.
 
 Skärmbilden nedan visar formulärdefinitionen som används för att skapa formuläret:
 
@@ -59,7 +59,7 @@ Skärmbilden nedan visar formulärdefinitionen som används för att skapa formu
 
 #### &#x200B;2. Aktivera kalkylbladet så att data accepteras.
 
-När du har skapat och förhandsgranskat formuläret kan du aktivera motsvarande kalkylblad för att börja ta emot data. lägg till ett nytt blad som `incoming`. Du kan [manuellt aktivera kalkylbladet för att ta emot data](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/submit-forms#manually-enable-the-spreadsheet-to-accept-data).
+När du har skapat och förhandsgranskat formuläret kan du aktivera motsvarande kalkylblad för att börja ta emot data. lägg till ett nytt blad som `incoming`. Du kan [manuellt aktivera kalkylbladet för att ta emot data](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/submit-forms#manually-enable-the-spreadsheet-to-accept-data).
 
 ![Inkommande blad](/help/forms/assets/form-submission-incoming-sheet.png)
 
