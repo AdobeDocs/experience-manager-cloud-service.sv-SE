@@ -241,7 +241,7 @@ För att komma igång med en lokal utvecklingsmiljö från AEM på nolltid:
        npm install -g @adobe/aem-cli
    ```
 
-1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
+1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
