@@ -5,9 +5,9 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d9e067ec7aa9226721853a3e35a8863445a5002e
+source-git-commit: 3ecb3f0f49160536ba9abd1261477b0985a03c07
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -64,23 +64,21 @@ Nedan följer några vanliga verifieringsfel för domännamn och deras vanliga u
 
 <!-- This error may occur during domain validation of the EV/OV certificate even after you have checked that the certificate has been updated appropriately. -->
 
-När du lägger till en domänmappning i Cloud Manager kan följande felmeddelande visas:
+När du försöker lägga till en domänmappning i Cloud Manager kan följande felmeddelande visas:
 
 *Domänen är redan installerad på ett snabbkonto. Ta bort det först från den platsen innan du lägger till i Cloud Service.*
 
-Det här meddelandet anger att domänen för närvarande är kopplad till ett annat Fast-konto, vanligtvis utanför Adobe kontroll. Om du vill fortsätta måste domänen kopplas från det andra kontot innan den kan läggas till i den Adobe-hanterade Cloud Service. Det här problemet uppstår oftast när samma domän redan har mappats till ett annat ursprung i en konfiguration som inte är Adobe Fast.
+<!-- This message indicates that the domain is currently associated with a different Fastly account—typically outside of Adobe's control. To proceed, the domain must be disassociated from the other account before it can be added to the Adobe-managed Cloud Service. This issue usually occurs when the same domain is already mapped to a different origin in a non-Adobe Fastly configuration. -->
 
-#### Felorsak {#cause}
-
+**Felorsak**
 Låser snabbt en domän till det konto som först registrerar den, och andra konton måste begära behörighet att registrera en underdomän. Med Fastly kan du dessutom bara tilldela en apex-domän och associerade underdomäner till en fast tjänst och ett konto. Om du har ett befintligt Fast-konto som länkar samma index och underdomäner som används för dina AEM Cloud Service-domäner visas det här felet.
 
-#### Fellösning {#resolution}
-
+**Fellösning**
 Felet är åtgärdat på följande sätt:
 
 * Ta bort API:t och underdomänerna från det befintliga kontot innan du installerar domänen i Cloud Manager.
 
-* Använd det här alternativet om du vill länka apex-domänen och alla underdomäner till AEM as a Cloud Service Fast-kontot. Mer information finns i [Arbeta med domäner i Snabbt-dokumentationen](https://docs.fastly.com/en/guides/working-with-domains).
+* Använd det här alternativet om du vill länka apex-domänen och alla underdomäner till AEM as a Cloud Service Fast-kontot. Mer information finns i [Arbeta med domäner](https://www.fastly.com/documentation/guides/getting-started/domains/working-with-domains/working-with-domains/) i Snabbt-dokumentationen.
 
 * Om din huvuddomän har flera underdomäner för AEM as a Cloud Service- och icke-AEM-webbplatser som måste länka till olika Snabbt-konton, försöker du installera domänen i Cloud Manager. Den här processen hjälper till att hantera underdomänsanslutningar mellan olika snabbkonton. Om domäninstallationen misslyckas skapar du en kundsupportbiljett med Snabbt så att Adobe kan följa upp med Fastly å dina vägnar.
 
