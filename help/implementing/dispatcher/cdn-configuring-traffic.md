@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 9e0217a4cbbbca1816b47f74a9f327add3a8882d
+source-git-commit: ab855192e4b60b25284b19cc0e3a8e9da5a7409c
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1508'
 ht-degree: 0%
 
 ---
@@ -60,9 +60,11 @@ Regeltyperna i avsnitten nedan har en gemensam syntax.
 
 En regel refereras av ett namn, en villkorlig&quot;when-sats&quot; och åtgärder.
 
-När-satsen avgör om en regel ska utvärderas, baserat på egenskaper som domän, sökväg, frågesträngar, rubriker och cookies. Syntaxen är densamma för alla regeltyper. Mer information finns i avsnittet [Villkorsstruktur](/help/security/traffic-filter-rules-including-waf.md#condition-structure) i artikeln Regler för trafikfilter.
+När-satsen avgör om en regel ska utvärderas utifrån egenskaper som domän, sökväg, frågesträngar, rubriker och cookies. Syntaxen är densamma för alla regeltyper. Mer information finns i avsnittet [Villkorsstruktur](/help/security/traffic-filter-rules-including-waf.md#condition-structure) i artikeln Regler för trafikfilter.
 
 Detaljerna för åtgärdsnoden skiljer sig åt mellan olika regeltyper och beskrivs i de enskilda avsnitten nedan.
+
+I konfigurationsreglerna kan du referera till hemligheter som definierats som miljövariabler (se [Konfigurationshemligheter](/help/implementing/dispatcher/cdn-credentials-authentication.md)).
 
 ## Begär omformningar {#request-transformations}
 

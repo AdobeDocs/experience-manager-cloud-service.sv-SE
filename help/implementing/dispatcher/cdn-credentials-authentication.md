@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: ab855192e4b60b25284b19cc0e3a8e9da5a7409c
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1712'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Konfigurera CDN-autentiseringsuppgifter och autentisering {#cdn-credentials-authentication}
 
-CDN som tillhandahålls av Adobe har flera funktioner och tjänster, varav vissa förlitar sig på autentiseringsuppgifter och autentisering för att säkerställa en lämplig nivå av företagssäkerhet. Genom att deklarera regler i en konfigurationsfil som distribuerats med hjälp av Cloud Manager [config pipeline](/help/operations/config-pipeline.md) kan kunderna på ett självbetjäningssätt konfigurera följande:
+CDN som tillhandahålls av Adobe har flera funktioner och tjänster, varav vissa är beroende av autentiseringsuppgifter och autentisering för att säkerställa en lämplig nivå av företagssäkerhet. Genom att deklarera regler i en konfigurationsfil som distribuerats med hjälp av Cloud Manager [config pipeline](/help/operations/config-pipeline.md) kan kunderna på ett självbetjäningssätt konfigurera följande:
 
-* HTTP-huvudvärdet X-AEM-Edge-Key som används av Adobe CDN för att validera begäranden som kommer från ett kundhanterat CDN.
+* HTTP-huvudvärdet för X-AEM-Edge-Key som används av Adobe CDN för att validera begäranden som kommer från ett kundhanterat CDN.
 * Den API-token som används för att rensa resurser i CDN-cachen.
 * En lista över kombinationer av användarnamn och lösenord som kan få åtkomst till begränsat innehåll genom att skicka ett grundläggande autentiseringsformulär.
 
@@ -24,13 +24,19 @@ Var och en av dessa, inklusive konfigurationssyntaxen, beskrivs i sitt eget avsn
 
 Det finns ett avsnitt om hur du [roterar nycklar](#rotating-secrets), vilket är en bra säkerhetspraxis.
 
+>[!NOTE]
+> Hemligheter som definieras som miljövariabler bör betraktas som oföränderliga. I stället för att ändra deras värde bör du skapa en ny hemlighet med ett nytt namn och en referens till hemligheten i konfigurationen. Om du inte gör det kommer hemligheterna att uppdateras på ett otillförlitligt sätt.
+
+>[!WARNING]
+>Ta inte bort de miljövariabler som refereras i CDN-konfigurationen. Detta kan orsaka fel vid uppdatering av CDN-konfigurationen (till exempel uppdatering av regler eller anpassade domäner och certifikat).
+
 ## Kundhanterat CDN HTTP-huvudvärde {#CDN-HTTP-value}
 
 Så som beskrivs på [CDN-sidan i AEM as a Cloud Service](/help/implementing/dispatcher/cdn.md#point-to-point-CDN) kan kunderna välja att dirigera trafik genom sitt eget CDN, som kallas kundens CDN (kallas ibland även BYOCDN).
 
-Som en del av konfigurationen måste Adobe CDN och kundens CDN komma överens om ett värde för HTTP-huvudet `X-AEM-Edge-Key`. Värdet anges för varje begäran hos Customer CDN, innan det dirigeras till Adobe CDN, som sedan validerar att värdet är som förväntat, så att det kan lita på andra HTTP-huvuden, inklusive de som hjälper till att dirigera begäran till rätt AEM.
+Som en del av konfigurationen måste Adobe CDN och kundens CDN komma överens om ett värde för HTTP-huvudet `X-AEM-Edge-Key`. Värdet anges för varje begäran hos Customer CDN, innan det dirigeras till Adobe CDN, som sedan validerar att värdet är som förväntat, så att det kan lita på andra HTTP-huvuden, inklusive de som hjälper till att dirigera begäran till rätt AEM-ursprung.
 
-Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.  Syntaxen beskrivs i exemplet nedan.
+Värdet *X-AEM-Edge-Key* refereras av egenskaperna `edgeKey1` och `edgeKey2` i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config` -mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.  Syntaxen beskrivs i exemplet nedan.
 
 Mer felsökningsinformation och vanliga fel finns i [Vanliga fel](/help/implementing/dispatcher/cdn.md#common-errors).
 
@@ -59,7 +65,7 @@ data:
 
 Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
-Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
+Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
 
 Ytterligare egenskaper är:
 
@@ -158,11 +164,11 @@ Ytterligare egenskaper är:
 >[!NOTE]
 >Töm nyckel måste konfigureras som en [hemlig typ av Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras. Vi rekommenderar att du använder en unik slumpmässig nyckel med en längd på minst 32 byte. Open SSL-kryptografibiblioteket kan till exempel generera en slumpmässig nyckel genom att köra kommandot openssl rand -hex 32
 
-Du kan referera till [en självstudie](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
+Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
 ## Grundläggande autentisering {#basic-auth}
 
-Protect vissa innehållsresurser genom att öppna en enkel autentiseringsdialogruta som kräver användarnamn och lösenord. Den här funktionen är främst avsedd för enkla autentiseringssituationer, som granskning av innehåll av intressenter i företag, i stället för som en fullständig lösning för slutanvändares åtkomsträttigheter.
+Skydda vissa innehållsresurser genom att öppna en enkel dialogruta för autentisering som kräver ett användarnamn och lösenord. Den här funktionen är främst avsedd för enkla autentiseringssituationer, som granskning av innehåll av intressenter i företag, i stället för som en fullständig lösning för slutanvändares åtkomsträttigheter.
 
 Slutanvändaren får en grundläggande autentiseringsdialogruta som ser ut så här:
 
@@ -216,7 +222,9 @@ Dessutom innehåller syntaxen:
 
 ## Rotera hemligheter {#rotating-secrets}
 
-1. Det är god säkerhetspraxis att emellanåt ändra autentiseringsuppgifter. Detta kan åstadkommas enligt exemplet nedan med hjälp av en kantnyckel, även om samma strategi används för tömningsnycklar.
+Det är en god säkerhetspraxis att ändra inloggningsuppgifter regelbundet. Kom ihåg att miljövariabler inte ska ändras direkt, utan i stället skapa en ny hemlighet och referera till det nya namnet i konfigurationen.
+
+Det här användningsexemplet visas nedan med hjälp av en kantnyckel, men samma strategi kan även användas för tömningsnycklar.
 
 1. Till att börja med har bara `edgeKey1` definierats, i det här fallet refererat till `${{CDN_EDGEKEY_052824}}`, vilket som en rekommenderad konvention, visar datumet då det skapades.
 
@@ -227,7 +235,6 @@ Dessutom innehåller syntaxen:
          type: edge
          edgeKey1: ${{CDN_EDGEKEY_052824}}
    ```
-
 1. När det är dags att rotera nyckeln skapar du en ny Cloud Manager-hemlighet, till exempel `${{CDN_EDGEKEY_041425}}`.
 1. I konfigurationen refererar du till den från `edgeKey2` och distribuerar den.
 
@@ -249,7 +256,6 @@ Dessutom innehåller syntaxen:
          type: edge
          edgeKey2: ${{CDN_EDGEKEY_041425}}
    ```
-
 1. Ta bort den gamla hemliga referensen (`${{CDN_EDGEKEY_052824}}`) från Cloud Manager och distribuera.
 
 1. När du är redo för nästa rotation följer du samma procedur, men den här gången lägger du till `edgeKey1` i konfigurationen och refererar till en ny Cloud Manager-miljöhemlighet med namnet, till exempel, `${{CDN_EDGEKEY_031426}}`.
@@ -262,3 +268,47 @@ Dessutom innehåller syntaxen:
          edgeKey2: ${{CDN_EDGEKEY_041425}}
          edgeKey1: ${{CDN_EDGEKEY_031426}}
    ```
+
+När hemligheter som anges i begärandehuvuden roteras, t.ex. för autentisering mot en serverdel, bör du rotera i två steg för att säkerställa att rubrikvärdet byts utan tillfälliga luckor.
+
+1. Inledande konfiguration före rotationen. I det här läget skickas den gamla nyckeln till backend-objektet.
+
+   ```
+   requestTransformations:
+     rules:
+       - name: set-api-key-header
+         actions:
+           - type: set
+             reqHeader: x-api-key
+             value ${{API_KEY_1}}
+   ```
+
+1. Introducera den nya nyckeln `API_KEY_2` genom att ange samma rubrik två gånger (den nya nyckeln ska anges efter den gamla nyckeln). När du har distribuerat detta visas den nya nyckeln i serverdelen.
+
+   ```
+   requestTransformations:
+     rules:
+       - name: set-api-key-header
+         actions:
+           - type: set
+             reqHeader: x-api-key
+             value ${{API_KEY_1}}
+           - type: set
+             reqHeader: x-api-key
+             value ${{API_KEY_2}}
+   ```
+
+1. Ta bort den gamla nyckeln `API_KEY_1` från konfigurationen. När du har distribuerat detta ser du den nya nyckeln i serverdelen och det är säkert att ta bort den gamla nyckelns miljövariabel.
+
+
+   ```
+   requestTransformations:
+     rules:
+       - name: set-api-key-header
+         actions:
+           - type: set
+             reqHeader: x-api-key
+             value ${{API_KEY_2}}
+   ```
+
+
