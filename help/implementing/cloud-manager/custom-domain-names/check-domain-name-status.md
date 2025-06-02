@@ -5,7 +5,7 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 3ecb3f0f49160536ba9abd1261477b0985a03c07
+source-git-commit: 68da11037cb3572a6f869fe8bd6a898e0aad87ec
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Cloud Manager verifierar domänägarskap via det kundhanterade (OV/EV) SSL-certi
 
 ## Domännamnsfel {#domain-error}
 
-Nedan följer några vanliga verifieringsfel för domännamn och deras vanliga upplösning.
+Följande är ett vanligt fel vid verifiering av domännamn och dess vanliga upplösning.
 
 ### Domänen är inte installerad {#domain-not-installed}
 
