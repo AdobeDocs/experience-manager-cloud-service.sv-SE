@@ -5,9 +5,9 @@ Keywords: Use form submission service, Submit form using form submission service
 feature: Edge Delivery Services
 Role: User, Developer
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
+source-git-commit: 67416999d068af6350748d610e7c1c7b1d991bc4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Nedan visas förutsättningarna för att använda Forms Submission-tjänsten:
 
 ## Konfigurera tjänsten Forms Submit
 
-Skapa ett nytt AEM-projekt som har konfigurerats med Adaptive Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM-projekt. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
+Skapa ett nytt AEM-projekt som har konfigurerats med Adaptive Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM-projekt. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
 
 Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-submission-service-manually) eller [konfigurera Forms Submission Service med API](#configuring-the-forms-submission-service-using-api).
 
@@ -45,17 +45,21 @@ Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-su
 
 ![Arbetsflöde för tjänsten för att skicka formulär](/help/forms/assets/forms-submission-service-workflow.png)
 
-#### 1. Skapa ett formulär med en formulärdefinition
+#### &#x200B;1. Skapa ett formulär med en formulärdefinition
 
-Skapa ett formulär med Google Sheets eller Microsoft Excel. [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms) om du vill lära dig hur du skapar ett formulär med en formulärdefinition i Microsoft Excel eller Google Sheets.
+Skapa ett formulär med Google Sheets eller Microsoft Excel. [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms) om du vill lära dig hur du skapar ett formulär med en formulärdefinition i Microsoft Excel eller Google Sheets.
 
 Skärmbilden nedan visar formulärdefinitionen som används för att skapa formuläret:
 
 ![Formulärdefinition](/help/forms/assets/form-submission-definition.png)
 
-#### 2. Aktivera kalkylbladet så att data accepteras.
+>[!IMPORTANT]
+>
+>**Det blad där formuläret har skapats har begränsningar för vad det kan namnges. Endast `helix-default` och `shared-aem` kan användas som bladnamn.**
 
-När du har skapat och förhandsgranskat formuläret kan du aktivera motsvarande kalkylblad för att börja ta emot data. lägg till ett nytt blad som `incoming`. Du kan [manuellt aktivera kalkylbladet för att ta emot data](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/submit-forms#manually-enable-the-spreadsheet-to-accept-data).
+#### &#x200B;2. Aktivera kalkylbladet så att data accepteras.
+
+När du har skapat och förhandsgranskat formuläret kan du aktivera motsvarande kalkylblad för att börja ta emot data. lägg till ett nytt blad som `incoming`. Du kan [manuellt aktivera kalkylbladet för att ta emot data](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/submit-forms#manually-enable-the-spreadsheet-to-accept-data).
 
 ![Inkommande blad](/help/forms/assets/form-submission-incoming-sheet.png)
 
@@ -63,7 +67,7 @@ När du har skapat och förhandsgranskat formuläret kan du aktivera motsvarande
 >
 > Om bladet `incoming` inte finns skickar AEM inga data till arbetsboken.
 
-#### 3. Dela kalkylbladet och skapa en länk.
+#### &#x200B;3. Dela kalkylbladet och skapa en länk.
 
 Så här delar du kalkylbladet till kontot `forms@adobe.com` och skapar en länk:
 
@@ -77,7 +81,7 @@ klicka på ögonikonen, välj **Redigera** åtkomst och klicka på **Skicka** .
 
    ![Kopiera länk för inkommande blad](/help/forms/assets/form-submission-copy-link.png)
 
-#### 4. Länka kalkylbladet i formulärdefinitionen
+#### &#x200B;4. Länka kalkylbladet i formulärdefinitionen
 
 Så här konfigurerar du Forms Submission-tjänsten med Google Sheets eller Microsoft Excel:
 
@@ -153,7 +157,7 @@ Kör till exempel följande kommando i terminal eller kommandotolk när du har e
     curl -X POST &quot;https://forms.adobe.com/adobe/forms/af/submit/{id}&quot; \
     —header &quot;Content-Type: application/json&quot; \
     —header &quot;x-adobe-routing: tier=live,bucket=main—[plats/databas]—[organisation]&quot; \
-    —data &#39;&lbrace;
+    —data &#39;{
     &quot;data&quot;: 
     &quot;startDate&quot;: &quot;2 025-01-10&quot;,
     &quot;endDate&quot;: &quot;2025-01-25&quot;,
@@ -165,7 +169,7 @@ Kör till exempel följande kommando i terminal eller kommandotolk när du har e
     &quot;age&quot;: &quot;35&quot;,
     &quot;subscribe&quot;: null,
     &quot;email&quot;: &quot;mary@gmail.com&quot;
-    &rbrace;
+    }
     &#39;
     
     &quot;

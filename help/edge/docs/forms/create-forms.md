@@ -4,9 +4,9 @@ description: Kom igång med Edge Delivery Services för AEM Forms. Skapa perfekt
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: efd4fbb38724632865d87b80827611899e2c6d1f
+source-git-commit: 67416999d068af6350748d610e7c1c7b1d991bc4
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '807'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,10 @@ Så här fortsätter du med att skapa formulär:
 1. Öppna det skapade kalkylbladet och ändra standardbladets namn till &quot;shared-aem&quot;.
 
    ![Byt namn på standardblad till &quot;shared-default&quot;](/help/edge/assets/rename-sheet-to-shared-default.png)
+
+   >[!IMPORTANT]
+   >
+   >**Det blad där formuläret har skapats har begränsningar för vad det kan namnges. Endast `helix-default` och `shared-aem` kan användas som bladnamn.**
 
 1. Om du vill lägga till formulärfälten infogar du rader och kolumnrubriker i bladet&quot;shared-aem&quot;. Varje rad ska representera ett [formulärfält](/help/edge/docs/forms/form-components.md#available-components), med kolumnrubriker som definierar motsvarande [fältegenskaper](/help/edge/docs/forms/form-components.md#components-properties).
 

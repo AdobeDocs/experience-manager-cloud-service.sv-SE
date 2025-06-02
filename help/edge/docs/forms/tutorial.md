@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: 95998daf04ae579ca11896953903852e6140c3a4
+source-git-commit: 67416999d068af6350748d610e7c1c7b1d991bc4
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1922'
 ht-degree: 0%
 
 ---
@@ -189,6 +189,10 @@ Exempelinnehållet innehåller ett frågeblad som fungerar som mall för frågef
 
 ![Formulär för förfrågan](/help/edge/docs/forms/assets/enquiry-form-microsoft-sharepoint.png)
 
+>[!IMPORTANT]
+>
+>**Det blad där formuläret har skapats har begränsningar för vad det kan namnges. Endast `helix-default` och `shared-aem` kan användas som bladnamn.**
+
 Vi börjar med att uppdatera en fältetikett. Öppna förfrågningsbladet för redigering, ändra etiketten för skicka-knappen till `Let's Talk` och använd AEM Sidekick för att förhandsgranska och publicera filen.
 
 ![Formulär för förfrågan](/help/edge/assets/enquiry-form-preview-publish.png)
@@ -237,7 +241,7 @@ För att komma igång med en lokal utvecklingsmiljö från AEM på nolltid:
        npm install -g @adobe/aem-cli
    ```
 
-1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
+1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
