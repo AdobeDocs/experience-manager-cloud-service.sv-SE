@@ -5,9 +5,9 @@ exl-id: 8fdc8dda-7dbf-46b6-9fc6-d304ed377197
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d35610b204cc2e06fefa93e048c16940cf1c47c
+source-git-commit: d9e067ec7aa9226721853a3e35a8863445a5002e
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,13 @@ Nedan följer några vanliga verifieringsfel för domännamn och deras vanliga u
 
 ### Domänen är inte installerad {#domain-not-installed}
 
-Detta fel kan uppstå under domänvalidering av EV/OV-certifikatet även efter att du har kontrollerat att certifikatet har uppdaterats korrekt.
+<!-- This error may occur during domain validation of the EV/OV certificate even after you have checked that the certificate has been updated appropriately. -->
+
+När du lägger till en domänmappning i Cloud Manager kan följande felmeddelande visas:
+
+*Domänen är redan installerad på ett snabbkonto. Ta bort det först från den platsen innan du lägger till i Cloud Service.*
+
+Det här meddelandet anger att domänen för närvarande är kopplad till ett annat Fast-konto, vanligtvis utanför Adobe kontroll. Om du vill fortsätta måste domänen kopplas från det andra kontot innan den kan läggas till i den Adobe-hanterade Cloud Service. Det här problemet uppstår oftast när samma domän redan har mappats till ett annat ursprung i en konfiguration som inte är Adobe Fast.
 
 #### Felorsak {#cause}
 
