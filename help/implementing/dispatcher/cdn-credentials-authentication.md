@@ -235,6 +235,7 @@ Det här användningsexemplet visas nedan med hjälp av en kantnyckel, men samma
          type: edge
          edgeKey1: ${{CDN_EDGEKEY_052824}}
    ```
+
 1. När det är dags att rotera nyckeln skapar du en ny Cloud Manager-hemlighet, till exempel `${{CDN_EDGEKEY_041425}}`.
 1. I konfigurationen refererar du till den från `edgeKey2` och distribuerar den.
 
@@ -256,6 +257,7 @@ Det här användningsexemplet visas nedan med hjälp av en kantnyckel, men samma
          type: edge
          edgeKey2: ${{CDN_EDGEKEY_041425}}
    ```
+
 1. Ta bort den gamla hemliga referensen (`${{CDN_EDGEKEY_052824}}`) från Cloud Manager och distribuera.
 
 1. När du är redo för nästa rotation följer du samma procedur, men den här gången lägger du till `edgeKey1` i konfigurationen och refererar till en ny Cloud Manager-miljöhemlighet med namnet, till exempel, `${{CDN_EDGEKEY_031426}}`.
