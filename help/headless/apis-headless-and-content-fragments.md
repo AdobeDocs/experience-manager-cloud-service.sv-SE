@@ -4,9 +4,9 @@ description: Läs mer om API:erna för strukturerad innehållsleverans och hante
 feature: Headless, Content Fragments, Edge Delivery Services
 role: Admin, Developer
 exl-id: 95aecd30-566a-42a9-b97a-7efe45fd389c
-source-git-commit: e427bd34867974c663e67a2124f257cd12e946ae
+source-git-commit: 243adc6f6428cea23c04ca788bd8ad0bda7e4501
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -27,12 +27,10 @@ Adobe Experience Manager (AEM) as a Cloud Service erbjuder flera API:er för bå
    * Dessa API:er är avsedda för strukturerad innehållshantering.
    * GET-operatorer är inte optimerade för innehållsleverans.
    * Detta API är REST-baserat.
-* [Stöd för innehållsfragment i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
-   * Ursprungligt API för JSON-utdata för strukturerad innehållsleverans i AEM.
-      * Även om det är robust och bevisat levererar detta API inte *fullständigt hydrerade* JSON-utdata. Referenser genereras bara som sökvägar, vilket kräver sekundära API-begäranden för att hämta ytterligare innehåll.
-   * Assets HTTP API kan också användas för att hantera innehållsfragment och modeller för innehållsfragment (CRUD).
-   * Detta API är REST-baserat.
-   * Stöd för innehållsfragment i Assets HTTP API kommer att bli inaktuellt i framtiden eftersom det följs av Edge Delivery Services JSON REST API. Tidsskalan har inte fastställts än.
+
+>[!NOTE]
+>
+>[Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md) är nu [inaktuellt](/help/release-notes/deprecated-removed-features.md). Den har ersatts av [Content Fragment Delivery med OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md) tillsammans med [Content Fragments och Content Fragment Models Management OpenAPI:er](/help/headless/content-fragment-openapis.md).
 
 ## REST vs GraphQL {#rest-vs-graphql}
 
