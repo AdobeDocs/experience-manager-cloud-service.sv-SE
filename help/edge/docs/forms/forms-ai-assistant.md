@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 hide: true
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: d3ade6ee9216b44b55d6808d8acffe83f1e263c9
+source-git-commit: 2db966405b5326d735083a66b2625d6d973ad7db
 workflow-type: tm+mt
-source-wordcount: '2061'
+source-wordcount: '2354'
 ht-degree: 0%
 
 ---
@@ -232,6 +232,69 @@ Din input är ovärderlig för den kontinuerliga förbättringen av AI-assistent
 - **Ge feedback:** Använd det inbyggda kommandot eller knappen **Ge feedback** i AI Assistant-gränssnittet för att dela med dig av dina upplevelser, rapportera problem eller föreslå förbättringar. (Du kan t.ex. skriva `/feedback` eller leta efter en feedback-ikon).
 - **Officiell support:** Om du har allvarliga problem eller behöver mer hjälp kan du kontakta Adobe officiella supportkanaler eller få hjälp av de supportkontakter som har kontaktats av din organisation.
 
+
+
+## Arbeta med bifogade filer
+
+AI Assistant har stöd för bifogade filer för att förbättra formulärframtagningen och konfigurationen. Du kan bifoga olika filtyper för att ge visuell kontext, designreferenser eller befintliga formulär som ska konverteras.
+
+### Bilagetyper som stöds
+
+| Filtyp | Användningsexempel | Kommandon som stöder bifogade filer | Exempel |
+|-----------|-----------|-----------------------------------|----------|
+| **Bilder** (PNG, JPG, JPEG, GIF) | Formulärlayoutreferenser, UI-dummies, inskannade pappersformulär | /create-form, /add-form, /create-panel, /add-panel, /update-field | Överför en skärmbild av önskad layout |
+| **PDF-filer** | Befintliga formulär att konvertera, designa specifikationer | /create-form, /add-form, /create-panel, /add-panel | Konvertera PDF-ansökningsformulär |
+| **Figma-filer** | Utforma systemreferenser, gränssnittsprototyper | /create-form, /add-form, /create-panel | Importera designramar från Figma |
+| **Designfiler** (Skiss, Adobe XD-export) | Visuella designreferenser | /create-form, /add-form, /create-panel | Referenssystemkomponenter för design |
+
+### Använda bifogade filer
+
+1. **Koppla före eller med ditt kommando:**
+
+   - Klicka på bilageikonen i AI Assistant-gränssnittet
+   - Välj dina filer på enheten
+   - Skriv det kommando som refererar till den bifogade filen
+
+2. **Referensbilagor i kommandon:**
+
+   ```
+   /create-form based on the attached PDF application form
+   /add-panel using the layout shown in the uploaded image
+   /create-panel following the design in the attached Figma file
+   /update-field @email to match the style in the attached screenshot
+   ```
+
+3. **Flera bifogade filer:**
+
+   - Du kan bifoga flera filer för jämförelse eller referens
+   - Ange vilken bilaga som ska användas: &quot;med den första bifogade bilden&quot; eller &quot;baserad på PDF-filen&quot;
+
+### Bästa praxis för bifogade filer
+
+- **Tydliga bilder med hög kvalitet:** Se till att överförda bilder är tydliga och läsbara för bättre AI-analys
+- **Relevanta filnamn:** Använd beskrivande filnamn för att förstå kontexten i AI
+- **Enkelt fokus:** Varje bifogad fil ska fokusera på en viss aspekt (layout, fältdesign osv.)
+- **Format som stöds:** Håll dig till vanliga format (PNG, JPG, PDF) för bästa kompatibilitet
+- **Filstorlek:** Behåll bifogade filer under 10 MB för optimal bearbetningshastighet
+
+### Exempel på arbetsflöden för bifogade filer
+
+**Konverterar ett pappersformulär:**
+
+1. Skanna in eller fotografera pappersformuläret tydligt
+2. Överför bildfilen
+3. Använd kommando: `/create-form based on the attached form image, converting all fields to digital equivalents`
+
+**Matchande ett designsystem:**
+
+1. Exportera eller ta skärmdumpar relevanta designkomponenter
+2. Koppla designreferensen
+3. Använd kommando: `/create-panel following the visual style and layout shown in the attached design`
+
+**Fältformateringsreferens:**
+
+1. Bifoga skärmbild av önskat fältutseende
+2. Använd kommando: `/update-field @email to match the styling and layout shown in the attached image`
 
 ## Relaterat innehåll
 

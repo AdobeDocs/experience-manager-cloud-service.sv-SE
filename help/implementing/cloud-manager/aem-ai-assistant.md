@@ -7,7 +7,7 @@ role: Admin, Architect, Developer
 hide: false
 hidefromtoc: true
 exl-id: 6cdf7f65-7112-420a-90c1-564f0ef8ceaf
-source-git-commit: d3ade6ee9216b44b55d6808d8acffe83f1e263c9
+source-git-commit: 2db966405b5326d735083a66b2625d6d973ad7db
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 0%
@@ -49,7 +49,7 @@ AI Assistentens nuvarande omfattning fokuserar på produktkunskapsfrågor för A
 
 ## AI Assistant för AEM Forms (Forms Experience Builder) {#ai-forms-builder}
 
-Förutom den allmänna AI-assistenten för produktkunskap erbjuder AEM en specialiserad **AI-assistent för AEM Forms (Forms Experience Builder)**. Denna förbättrade assistent kan aktivt hjälpa dig att skapa och konfigurera formulär med hjälp av naturliga språkfrågor och svar på frågor som är specifika för formulär.
+Förutom den allmänna AI-assistenten för produktkunskap erbjuder AEM en specialiserad **[AI-assistent för AEM Forms (Forms Experience Builder)](/help/edge/docs/forms/forms-ai-assistant.md)**. Denna förbättrade assistent kan aktivt hjälpa dig att skapa och konfigurera formulär med hjälp av naturliga språkfrågor och svar på frågor som är specifika för formulär.
 
 ### Nyckelfunktioner
 
@@ -76,7 +76,7 @@ AI Assistant för AEM Forms finns i:
 >
 > AI Assistant för AEM Forms (Forms Experience Builder) är tillgänglig via programmet för tidiga användare. Skicka ett e-postmeddelande från din arbetsadress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst.
 
-Mer information om hur du använder AI Assistant för AEM Forms, inklusive detaljerade exempel och metodtips, finns i dokumentationen för AI Assistant för AEM Forms.
+Mer information om hur du använder AI-assistenten för AEM Forms, med detaljerade exempel och bästa praxis, finns i [AI-assistenten för AEM Forms-dokumentation](/help/edge/docs/forms/forms-ai-assistant.md).
 
 ### Exempel på användningsfall
 
