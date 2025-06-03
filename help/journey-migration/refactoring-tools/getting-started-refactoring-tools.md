@@ -17,7 +17,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="aemcloud_rs_upload"
 >title="Download"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html?lang=sv-SE" text="Release Notes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html" text="Release Notes"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Software Distribution Portal"
 
 -->
@@ -35,7 +35,7 @@ Använd omfaktoriseringsverktyget för att migrera din kod för kompatibilitet m
 
    ![bild](/help/journey-migration/refactoring-tools/assets/rscam2.png)
 
-&#x200B;---
+---
 
 ## Överför Source Code {#uploading}
 
@@ -72,7 +72,7 @@ När kunderna först använder **omfaktoriseringsverktygen** får de ett tomt l�
 >[!NOTE]
 >Omfaktoriseringsjobb kan bara utföras om källkodsöverföringen lyckas.
 
-&#x200B;---
+---
 
 ## Omfaktoriseringsjobb {#refactoring-jobs}
 
@@ -91,7 +91,7 @@ När du klickar på fliken **Omfaktoriseringsjobb** visas en lista med befintlig
 >[!NOTE]
 >Du kan aktivera enskilda omfaktoriseringsjobb eller köra alla tillgängliga verktyg på en gång med alternativet **Alla verktyg tillsammans** .
 
-&#x200B;---
+---
 
 ### &#x200B;2. Jobbstatus
 
