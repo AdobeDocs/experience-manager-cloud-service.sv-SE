@@ -14,7 +14,7 @@ ht-degree: 0%
 >id="aemcloud_rs_overview"
 >title="Ökning"
 >abstract="Refactoring Tools är en lösning som utvecklats av Adobe för att hjälpa till att omfaktorisera befintliga AEM-projekt för kompatibilitet med AEM as a Cloud Service. Verktygen körs via Cloud Acceleration Manager (CAM) och automatiserar viktiga moderniseringsuppgifter."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Riktlinjer och bästa praxis"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html?lang=sv-SE" text="Riktlinjer och bästa praxis"
 
 # Komma igång med omfaktoriseringsverktyg {#getting-started-refactoring-tools}
 
