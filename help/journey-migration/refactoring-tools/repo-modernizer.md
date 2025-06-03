@@ -17,7 +17,7 @@ Databasmodernisering är ett verktyg som utvecklats för att strukturera om befi
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter i dina AEM-projekt. Det krävs dock vissa ändringar i Adobe Experience Manager Maven-projekt för att de ska vara kompatibla med AEM Cloud-tjänsten. På en hög nivå kräver AEM en separation av **content** och **code** i diskreta delpaket för att respektera delningen mellan muterbart och oföränderligt innehåll. Mer information om den nya AEM-projektstrukturen för Cloud Service finns i [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html).
+Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter i dina AEM-projekt. Det krävs dock vissa ändringar i Adobe Experience Manager Maven-projekt för att de ska vara kompatibla med AEM Cloud-tjänsten. På en hög nivå kräver AEM en separation av **content** och **code** i diskreta delpaket för att respektera delningen mellan muterbart och oföränderligt innehåll. Mer information om den nya AEM-projektstrukturen för Cloud Service finns i [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE).
 
 Databasmoderniseringen skapar en kompatibel projektstruktur för AEM Cloud-tjänsten genom att skapa följande distributionsstruktur:
 
