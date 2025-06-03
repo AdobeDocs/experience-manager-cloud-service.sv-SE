@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f102cdbab6b38ffabc370691e507754227b91f4e
+source-git-commit: 1df836c55e7276cf05a84e5512220b51de7131a8
 workflow-type: tm+mt
-source-wordcount: '1595'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -103,9 +103,7 @@ Följande funktioner kanske inte fungerar som de ska när de körs i Java 21, oc
 
 #### Körningskrav {#runtime-requirements}
 
-Java 21-miljön används för byggen med Java 21 och Java 17 och kommer att användas gradvis även i Java 11-byggen (se anmärkningen nedan). En miljö måste finnas i AEM version 17098 eller senare för att Java 21-uppdateringen ska kunna tas emot. För att säkerställa kompatibilitet krävs följande justeringar.
-
-Biblioteksuppdateringar kan användas när som helst eftersom de är kompatibla med äldre Java-versioner.
+Java 21-miljön har tillämpats på alla berättigade miljöer, som är miljöer i AEM version 17098 eller senare som uppfyller villkoren nedan. Om en miljö inte uppfyller kriterierna är det viktigt att göra justeringar för att säkerställa prestanda, tillgänglighet och säkerhet.
 
 * **Lägsta version av ASM:**
 Uppdatera användningen av Java-paketet `org.objectweb.asm`, som ofta paketeras i `org.ow2.asm.*` artefakter, till version 9.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
@@ -127,8 +125,7 @@ När AEM körs lokalt med Java 21 misslyckas startskripten (`crx-quickstart/bin/
 
 >[!IMPORTANT]
 >
->När `.cloudmanager/java-version` är inställt på `21` eller `17` distribueras Java 21-miljön. Java 21-miljön är planerad att gradvis lanseras i alla miljöer (inte bara de miljöer vars kod byggts med Java 11) med början tisdagen den 4 februari 2025. Utgångarna börjar med sandlådor och utvecklingsmiljöer, som följs av alla produktionsmiljöer i april 2025. Kunder som vill använda Java 21-miljön *tidigare* kan kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
-
+>Om en miljö ännu inte har uppdaterats automatiskt till Java 21-miljön kan du aktivera den genom att bygga med Java 17 eller 21. Detta görs genom att ställa in `.cloudmanager/java-version` på `21` eller `17`. Kontakta Adobe på [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com) om du har frågor.
 
 #### Krav för byggtid {#build-time-reqs}
 
