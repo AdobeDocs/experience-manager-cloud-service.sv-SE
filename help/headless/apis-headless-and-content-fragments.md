@@ -4,7 +4,7 @@ description: Läs mer om API:erna för strukturerad innehållsleverans och hante
 feature: Headless, Content Fragments, Edge Delivery Services
 role: Admin, Developer
 exl-id: 95aecd30-566a-42a9-b97a-7efe45fd389c
-source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
+source-git-commit: e427bd34867974c663e67a2124f257cd12e946ae
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
@@ -33,21 +33,6 @@ Adobe Experience Manager (AEM) as a Cloud Service erbjuder flera API:er för bå
    * Assets HTTP API kan också användas för att hantera innehållsfragment och modeller för innehållsfragment (CRUD).
    * Detta API är REST-baserat.
    * Stöd för innehållsfragment i Assets HTTP API kommer att bli inaktuellt i framtiden eftersom det följs av Edge Delivery Services JSON REST API. Tidsskalan har inte fastställts än.
-
-<!--
-## JSON vs HTML {#json-vs-HTML}
-
-The content delivery format used is driven by frontend implementation. Unstructured content/HTML for full-stack implementations, structured content/JSON for headless implementations, or a combination of both in hybrid implementations. 
-
-Key considerations include:
-
-* Definition
-  * JSON (JavaScript Object Notation) - used to represent, access and process structured data. 
-  * HTML (HyperText Markup Language) - a markup language of tags and elements in a hierarchical structure.
-* Primary Purpose
-  * JSON is often used for transferring structure content between the server and client app.
-  * HTML is the standard markup language for creating and rendering web pages in a browser.
--->
 
 ## REST vs GraphQL {#rest-vs-graphql}
 
