@@ -7,16 +7,16 @@ role: Admin, Architect, Developer
 hide: false
 hidefromtoc: true
 exl-id: 6cdf7f65-7112-420a-90c1-564f0ef8ceaf
-source-git-commit: 36832b02ac12c1ade70fb81b2cb2c267b5eebdfe
+source-git-commit: d3ade6ee9216b44b55d6808d8acffe83f1e263c9
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
 
 # Om AI Assistant i Adobe Experience Manager {#aem-home}
 
-AI Assistant i AEM (Adobe Experience Manager) har ett konversationsgränssnitt som är utformat för att göra det enklare att hitta svar på frågor som rör Adobe Experience Manager. Det hjälper dig att få tillgång till produktinformation, felsöka problem och utforska information som finns i Experience League. Under det begränsade Beta-programmet stöder AI Assistant Adobe Experience Manager as a Cloud Service, bland annat Sites, Assets, Forms och Cloud Manager.
+AI Assistant i AEM (Adobe Experience Manager) har ett konversationsgränssnitt som gör det enkelt att hitta svar på frågor som rör Adobe Experience Manager. Det hjälper dig att få tillgång till produktinformation, felsöka problem och utforska information som finns i Experience League. Under det begränsade Beta-programmet stöder AI Assistant Adobe Experience Manager as a Cloud Service, bland annat Sites, Assets, Forms och Cloud Manager.
 
 >[!IMPORTANT]
 >Kontrollera att du har granskat och skickat in användaravtalet så att Adobe kan aktivera AI Assistant-funktionen så att du kan testa och delta i Beta.
@@ -37,7 +37,7 @@ I den här artikeln beskrivs de förtroendecentrerade funktioner som du kan för
 
 ## Lär känna AI Assistant för produktkännedom {#ai-prod-insights}
 
-Produktkunskap omfattar begrepp och ämnen som härletts ur Adobe Experience League dokumentation. Dessa frågor kan kategoriseras i följande undergrupper:
+Produktkunskap omfattar begrepp och ämnen som härletts ur Adobe Experience League-dokumentationen. Dessa frågor kan kategoriseras i följande undergrupper:
 
 | Produktkunskap | Exempel |
 | --- | --- |
@@ -46,6 +46,46 @@ Produktkunskap omfattar begrepp och ämnen som härletts ur Adobe Experience Lea
 | Felsökning | <ul><li>Varför har jag inte åtkomst till Universal Editor?</li><li>Varför misslyckas min pipeline?</li></ul> |
 
 AI Assistentens nuvarande omfattning fokuserar på produktkunskapsfrågor för Adobe Experience Manager as a Cloud Service. Detta omfattar omfattande stöd för nyckelområden som Sites, Assets, Forms och Cloud Manager.
+
+## AI Assistant för AEM Forms (Forms Experience Builder) {#ai-forms-builder}
+
+Förutom den allmänna AI-assistenten för produktkunskap erbjuder AEM en specialiserad **AI-assistent för AEM Forms (Forms Experience Builder)**. Denna förbättrade assistent kan aktivt hjälpa dig att skapa och konfigurera formulär med hjälp av naturliga språkfrågor och svar på frågor som är specifika för formulär.
+
+### Nyckelfunktioner
+
+AI Assistant för AEM Forms ger:
+
+* **Skapa formulär**: Skapa nya formulär från grunden med naturliga språkbeskrivningar
+* **Designimport**: Konvertera befintliga designer (PDF, Figma, bilder) till fungerande AEM-formulär
+* **Formulärkonfiguration**: Lägg till fält, paneler, verifieringsregler och villkorslogik
+* **Layouthantering**: Ordna formulärstrukturen och optimera för olika enheter
+* **Integrationsinställningar**: Konfigurera formulärinskick och datahantering
+* **Produktkunskap**: Svara på frågor om AEM Forms funktioner och bästa praxis
+
+### Åtkomstplats
+
+AI Assistant för AEM Forms finns i:
+
+* **Universell redigerare**: För Edge Delivery Services-formulär med visuella redigeringsfunktioner
+* **Adaptiv Forms Editor**: För detaljerad formulärkonfiguration och avancerade funktioner
+* **Forms Management UI**: För formulärskapande och hanteringsåtgärder på hög nivå
+
+### Komma igång
+
+>[!NOTE]
+>
+> AI Assistant för AEM Forms (Forms Experience Builder) är tillgänglig via programmet för tidiga användare. Skicka ett e-postmeddelande från din arbetsadress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst.
+
+Mer information om hur du använder AI Assistant för AEM Forms, inklusive detaljerade exempel och metodtips, finns i dokumentationen för AI Assistant för AEM Forms.
+
+### Exempel på användningsfall
+
+* **&quot;Skapa ett formulär för kundfeedback med namn, e-post, betyg och kommentarfält&quot;**
+* **&quot;Konvertera det här överförda PDF-programformuläret till ett digitalt anpassat formulär&quot;**
+* **&quot;Lägg till villkorlig logik om du bara vill visa information om make/maka när civilstånd är gift&quot;**
+* **&quot;Konfigurera det här formuläret för att skicka data till vårt CRM-system&quot;**
+
+Denna specialiserade Forms AI Assistant utgör nästa steg i formulärskapandet och kombinerar styrkan i AI med AEM kraftfulla formulärfunktioner för att effektivisera arbetsflödet för att skapa formulär.
 
 ## Skapa effektiva frågor {#ai-craft-questions}
 
@@ -113,6 +153,6 @@ Här är svar på några vanliga frågor om AI-assistenten:
 * **Vilka Adobe-program stöder AI Assistant?**\
   För närvarande har AI Assistant stöd för AEM as a Cloud Service, som Sites, Assets, Forms och Cloud Manager, särskilt för produktinformationsfrågor.
 * **Vilka funktioner har AI Assistant?**\
-  AI Assistant är avsedd att besvara frågor som rör produktkunskaper i Adobe.
+  AI Assistant är utformat för att besvara frågor som rör Adobe produktkunskaper.
 * **Använder AI Assistant personlig information för utbildningsdata?**\
   Nej. AI Assistant använder inte personuppgifter för utbildningsändamål. Undvik att dela personuppgifter om dig själv eller andra, inklusive namn eller kontaktuppgifter, med AI-assistenten.
