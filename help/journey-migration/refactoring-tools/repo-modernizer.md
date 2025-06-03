@@ -4,7 +4,7 @@ description: Lär dig hur du strukturerar om befintliga projektpaket och gör de
 exl-id: cd9d212e-e720-4209-8b5a-659883cc1d95
 feature: Migration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 6920651420da9b427510518b7add0637479adef5
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -17,9 +17,9 @@ Databasmodernisering är ett verktyg som utvecklats för att strukturera om befi
 
 ## Introduktion {#introduction}
 
-Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter i dina AEM projekt. Det krävs dock vissa förändringar i Adobe Experience Manager Maven-projekten för att de ska vara kompatibla med AEM Cloud Service. På en hög nivå kräver AEM en separation av **content** och **code** till diskreta delpaket för att respektera delningen mellan muterbart och oföränderligt innehåll. Se [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) för mer information om den nya AEM projektstrukturen för Cloud Service.
+Adobe Experience Manager as a Cloud Service har många nya funktioner och möjligheter i dina AEM-projekt. Det krävs dock vissa ändringar i Adobe Experience Manager Maven-projekt för att de ska vara kompatibla med AEM Cloud-tjänsten. På en hög nivå kräver AEM en separation av **content** och **code** i diskreta delpaket för att respektera delningen mellan muterbart och oföränderligt innehåll. Mer information om den nya AEM-projektstrukturen för Cloud Service finns i [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html).
 
-Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service genom att skapa följande distributionsstruktur:
+Databasmoderniseringen skapar en kompatibel projektstruktur för AEM Cloud-tjänsten genom att skapa följande distributionsstruktur:
 
 * Paketet `ui.apps` distribueras till `/apps` och innehåller all kod
 
@@ -28,13 +28,14 @@ Databasmodernisering skapar en kompatibel projektstruktur för AEM Cloud Service
 * Paketet `all` är ett behållarpaket som innehåller underpaketen `ui.apps` och `ui.content`.
 
 >[!NOTE]
+>
 >Projektstrukturen baseras på *Arketyp 24* för paket och deras `pom.xml/filter.xml files`. Mer information finns i [Arketyp 24](https://github.com/adobe/aem-project-archetype).
 
 ## Använda Repository Modernizer {#using-repo-modernizer}
 
 >[!VIDEO](https://video.tv.adobe.com/v/333057/?quality=12&learn=on)
 
-* Som Adobe I/O CLI: Adobe rekommenderar vi att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM as a Cloud Service-plugin för kodomfaktorisering för Adobe I/O CLI).
+* Som Adobe I/O CLI: Adobe rekommenderar att du använder Repository Modernizer via `aio-cli-plugin-aem-cloud-service-migration` (AEM as a Cloud Service-plugin för kodomfaktorisering för Adobe I/O CLI).
 
   Se **[Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#introduction)** så att du kan lära dig hur du installerar och använder plugin-programmet.
 
