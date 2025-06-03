@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 7ddd0a75-621a-4499-91d1-7b3408a68269
-source-git-commit: e57610e4c5e498ddfdbaa0ba39c9197ecfb5d177
+source-git-commit: d53bfe103ff8e40c8221805a2d66faf3c5cd3823
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -50,10 +50,9 @@ Alla webbläsare testas med standarduppsättningen med plugin-program och tillä
 | Mozilla Firefox (evergreen) | A: Stöds | A: Stöds | Z: Stöds inte |
 | Mozilla Firefox senaste ESR [1] | A: Stöds | A: Stöds | Z: Stöds inte |
 | Safari på macOS (evergreen) | A: Stöds | A: Stöds | Z: Stöds inte |
-| Safari på iOS (evergreen) [2] | Z: Stöds inte | A: Stöds | Z: Stöds inte |
+| Safari på iPadOS (evergreen) | Z: Stöds inte | A: Stöds | Z: Stöds inte |
 
 1. Extended Support Release för Firefox ([läs mer om mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/))
-1. Stöd endast för Apple iPad
 
 >[!NOTE]
 >
