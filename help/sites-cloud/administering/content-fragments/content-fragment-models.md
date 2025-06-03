@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
 solution: Experience Manager Sites
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: cf2f64dec2ff39ea237dd092b3049bf9b8cd40e7
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2280'
 ht-degree: 1%
 
 ---
@@ -64,9 +64,9 @@ Content Fragment Model definierar effektivt strukturen för de resulterande inne
 
         >[!CAUTION]
         >
-        >När egenskapen **Egenskapsnamn** uppdateras manuellt för en datatyp, får namn bara innehålla ** A-Z, a-z, 0-9 och understreck&quot;_&quot; som specialtecken.
+        När egenskapen **Egenskapsnamn** uppdateras manuellt för en datatyp, får namn bara innehålla ** A-Z, a-z, 0-9 och understreck&quot;_&quot; som specialtecken.
         >
-        >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+        Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
      Till exempel:
 
@@ -98,9 +98,9 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
   >[!NOTE]
   >
-  >Oavsett om textområdet är RTF, Oformaterad text eller Markering definieras i modellen av egenskapen **Standardtyp**.
+  Oavsett om textområdet är RTF, Oformaterad text eller Markering definieras i modellen av egenskapen **Standardtyp**.
   >
-  >Det här formatet kan inte ändras från [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md), utan bara från modellen.
+  Det här formatet kan inte ändras från [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md), utan bara från modellen.
 
 * **Number**
    * Lägga till ett numeriskt fält
@@ -125,6 +125,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
       * Skapa ett nytt innehållsfragment baserat på lämplig modell
       * Skapa nya instanser av fältet
    * Referensen anger sökvägen till den refererade resursen, till exempel `/content/dam/path/to/resource`
+
 * **Fragmentreferens (UUID)**
    * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Datatypen kan konfigureras så att fragmentförfattare kan:
@@ -134,17 +135,26 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
       * Du behöver inte känna till UUID. I fragmentredigeraren kan du bläddra till det nödvändiga fragmentet
 
+  >[!NOTE]
+  >
+  UUID:n är databasspecifika. Om du använder [innehållskopieringsverktyget](/help/implementing/developing/tools/content-copy.md) för att kopiera innehållsfragment beräknas UUID:n om i målmiljön.
+
 * **Innehållsreferens**
    * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Om en bild refereras kan du välja att visa en miniatyrbild
    * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
    * Referensen anger sökvägen till den refererade resursen, till exempel `/content/dam/path/to/resource`
+
 * **Innehållsreferens (UUID)**
    * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Om en bild refereras kan du välja att visa en miniatyrbild
    * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
    * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
       * Du behöver inte känna till UUID. I fragmentredigeraren kan du bläddra till den resurs som krävs
+
+  >[!NOTE]
+  >
+  UUID:n är databasspecifika. Om du använder [innehållskopieringsverktyget](/help/implementing/developing/tools/content-copy.md) för att kopiera innehållsfragment beräknas UUID:n om i målmiljön.
 
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
@@ -159,7 +169,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
      >[!NOTE]
      >
-     >Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schemat.
+     Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schemat.
 
 ## Egenskaper (datatyper) {#properties}
 
@@ -171,7 +181,7 @@ Många egenskaper är självförklarande, för vissa egenskaper finns ytterligar
 
   >[!CAUTION]
   >
-  >Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
+  Om modeller som skapats i tidigare versioner av AEM innehåller ogiltiga tecken tar du bort eller uppdaterar dessa tecken.
 
 * **Återge som**
 
@@ -202,11 +212,11 @@ Innehållet (för det specifika fältet) måste vara unikt för alla innehållsf
 
   >[!NOTE]
   >
-  >Unikitet säkerställs per språkrot.
+  Unikitet säkerställs per språkrot.
 
   >[!NOTE]
   >
-  >Variationer kan ha samma *unika*-värde som varianter av samma fragment, men inte samma värde som används i andra variationer av fragment.
+  Variationer kan ha samma *unika*-värde som varianter av samma fragment, men inte samma värde som används i andra variationer av fragment.
 
 * Mer information om den specifika datatypen och dess egenskaper finns i **[Innehållsreferens](#content-reference)**.
 
@@ -262,28 +272,28 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 
      >[!NOTE]
      >
-     >Den här metoden är särskilt intressant när du använder [Headless Content Delivery med hjälp av Content Fragments med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
+     Den här metoden är särskilt intressant när du använder [Headless Content Delivery med hjälp av Content Fragments med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 >[!NOTE]
 >
->Se [Uppgradera dina innehållsfragment för UUID-referenser](/help/headless/graphql-api/uuid-reference-upgrade.md) för mer information om Content/Fragment Reference och Content/Fragment Reference (UUID) och uppgradera till UUID-baserade datatyper.
+Se [Uppgradera dina innehållsfragment för UUID-referenser](/help/headless/graphql-api/uuid-reference-upgrade.md) för mer information om Content/Fragment Reference och Content/Fragment Reference (UUID) och uppgradera till UUID-baserade datatyper.
 
 >[!NOTE]
 >
->AEM har upprepningsskydd för:
+AEM har upprepningsskydd för:
 >
->* Innehållsreferenser
->Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
+* Innehållsreferenser
+Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
->* Fragmentreferenser i GraphQL
->Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+* Fragmentreferenser i GraphQL
+Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 >[!CAUTION]
 >
->Om du ska fråga mot flera refererade fragment rekommenderar vi inte att de olika fragmentmodellerna har fältnamn med samma namn, utan olika typer.
+Om du ska fråga mot flera refererade fragment rekommenderar vi inte att de olika fragmentmodellerna har fältnamn med samma namn, utan olika typer.
 >
->Mer information finns i [AEM GraphQL API för användning med innehållsfragment - begränsningar](/help/headless/graphql-api/content-fragments.md#limitations)
+Mer information finns i [AEM GraphQL API för användning med innehållsfragment - begränsningar](/help/headless/graphql-api/content-fragments.md#limitations)
 
 ### Innehållsreferens {#content-reference}
 
@@ -294,16 +304,16 @@ Förutom standardegenskaper kan du ange:
 * **Rotsökvägen** som anger, eller representerar, var det refererade innehållet ska lagras
   >[!NOTE]
   >
-  >Detta är obligatoriskt om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
+  Detta är obligatoriskt om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
   >
-  >Mer information finns i [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images).
+  Mer information finns i [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images).
 
 * De innehållstyper som kan refereras
   >[!NOTE]
   >
-  >Dessa måste innehålla **Bild** om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
+  Dessa måste innehålla **Bild** om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
   >
-  >Mer information finns i [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images).
+  Mer information finns i [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images).
 
 * Begränsningar för filstorlekar
 * Om en bild refereras:
@@ -337,7 +347,7 @@ type CompanyModel {
 
 >[!NOTE]
 >
->Fragmentreferenser är av särskilt intresse för [Headless Content Delivery med hjälp av Content Fragments med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
+Fragmentreferenser är av särskilt intresse för [Headless Content Delivery med hjälp av Content Fragments med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
 
 Förutom standardegenskaper kan du definiera:
 
@@ -363,6 +373,6 @@ Detta anger, eller representerar, en rotsökväg för alla fragment som referera
 
 >[!NOTE]
 >
->Det finns en mekanism för upprepningsskydd. Det förhindrar användaren från att markera det aktuella innehållsfragmentet i fragmentreferensen och kan leda till en tom dialogruta för fragmentreferensväljaren.
+Det finns en mekanism för upprepningsskydd. Det förhindrar användaren från att markera det aktuella innehållsfragmentet i fragmentreferensen och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
->Det finns också upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.
+Det finns också upprepningsskydd för fragmentreferenser i GraphQL. Om du skapar en djup fråga i två innehållsfragment som refererar till varandra returneras null.

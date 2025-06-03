@@ -4,9 +4,9 @@ description: Med innehållskopieringsverktyget kan man kopiera muterbart innehå
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: fef97af53726d45cae36e2c9c6a5d82aa2f872c2
+source-git-commit: cf2f64dec2ff39ea237dd092b3049bf9b8cd40e7
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1321'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ När du kopierar innehåll är källmiljön en källa till sanning.
 
 Om du vill använda verktyget för innehållskopiering krävs vissa behörigheter i både käll- och målmiljöer.
 
-| Innehållskopia | AEM | Distributionshanterarroll |
+| Innehållskopia | AEM Administrator Group | Distributionshanterarroll |
 |---|---|---|
 | Skapa och ändra [innehållsuppsättningar](#create-content-set) | Krävs inte | Obligatoriskt |
 | Starta eller avbryta [innehållskopieringsprocessen](#copy-content) | Obligatoriskt | Obligatoriskt |
@@ -175,7 +175,7 @@ På sidan **Kopiera innehållsaktivitet** väljer du åtgärden **Avbryt** på e
 >
 >När du avbryter en innehållskopia kan det resultera i en partiell kopia av innehållet i målmiljön. Detta kan göra att målmiljön inte kan användas.
 >
->Om din miljö är i ett sådant läge på grund av att du har upphört kontaktar du Adobe kundtjänst för att få hjälp.
+>Om din miljö är i ett sådant läge på grund av att du har avbrutit kontaktar du Adobe kundtjänst för hjälp.
 
 ### Åtkomst till loggar {#accessing-logs}
 
@@ -200,3 +200,4 @@ Verktyget för innehållskopiering har följande begränsningar.
 * Verktyget för innehållskopiering har ingen versionshantering och kan inte automatiskt identifiera ändrat innehåll eller skapat innehåll i källmiljön i en innehållsuppsättning sedan den senaste kopieringsåtgärden.
    * Om du bara vill uppdatera målmiljön med innehållsändringar sedan den senaste kopieringsåtgärden måste du skapa en innehållsuppsättning. Ange sedan sökvägarna i källinstansen där ändringar har gjorts sedan den senaste kopieringsåtgärden.
 * Versionsinformation ingår inte i en innehållskopia.
+* [Modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types) kan ange referensfält baserat på UUID (Universally Unique ID). Sådana UUID:n är databasspecifika, så innehållskopieringsverktyget beräknar om UUID:n i målmiljön när innehållsfragment kopieras.
