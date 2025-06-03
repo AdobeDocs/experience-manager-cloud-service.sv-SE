@@ -940,4 +940,4 @@ In Universal Editor, create a **responsive contact form** for the company websit
 6. **Testning av användargodkännande** - Låt verkliga användare testa formuläret innan det distribueras
 
 
-*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya AI Assistant-funktioner. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html).*
+*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya AI Assistant-funktioner. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE).*
