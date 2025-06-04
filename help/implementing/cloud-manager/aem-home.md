@@ -7,38 +7,53 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: 1bfa47e1-fb2f-4b68-ac69-4618a9e4a5f4
-source-git-commit: ca046c1635e9de6b422e78fd7a87b8fd078a6bdc
+source-git-commit: 225e355f7a802c1d0ac3432f305410cfa4d425a8
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
 # Om Experience Hub {#aem-experience-hub}
 
-Experience Hub introducerar en central utgångspunkt för hantering av innehåll, resurser och webbplatser inom Adobe Experience Manager. Experience Hub är utformat för att leverera en personaliserad upplevelse och låter er navigera i AEM ekosystem sömlöst efter era roller och mål. Det är en guide som ger viktiga insikter och rekommenderade åtgärder som hjälper er att uppnå era mål på ett effektivt sätt. Med en tydlig, personstyrd layout kan Experience Hub säkerställa snabb åtkomst till viktiga verktyg och ge stöd för en smidig och effektiv upplevelse i alla AEM-funktioner.
+Experience Hub introducerar en central startpunkt för hantering av innehåll, resurser och webbplatser inom Adobe Experience Manager. Experience Hub är utformat för att leverera en personaliserad upplevelse och låter er navigera smidigt i AEM ekosystem efter era roller och mål. Det är en guide som ger viktiga insikter och rekommenderade åtgärder som hjälper er att uppnå era mål på ett effektivt sätt. Med en tydlig, personstyrd layout får Experience Hub snabb tillgång till viktiga verktyg som stöder en smidig och effektiv upplevelse i alla AEM-funktioner.
+
+Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (1 minut, 27 sekunder).
+
+>[!VIDEO](https://video.tv.adobe.com/v/3463267?quality=12&learn=on)
 
 <!--
 Available to early adopters, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
 
-## Experience Hub up close {#aem-experience-hub-about}
+## Experience Hub - stäng {#aem-experience-hub-about}
 
-[Adobe Experience Manager-sidan](https://experience.adobe.com/#/experiencemanager) har uppdaterats med förbättrad navigering och interaktiva widgetar. Den tidigare samlingen av lösningskort ger tillgång till verktyg som följande:
+1. Kom igång genom att klicka på [Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home) för att öppna startsidan.
 
-* Brand Portal
-* Cloud Acceleration Manager
-* Cloud Manager
-* Extension Manager
-* Programvarudistribution
+   ![Adobe Experience Cloud hemsida](/help/implementing/cloud-manager/assets/experience-cloud-experiencemanager.png)
+
+1. Klicka på **Experience Manager** i grupperingen **Snabbåtkomst**.
+1. På sidan **Berätta vad du vill göra** klickar du på det alternativ du vill ha så att Adobe kan skräddarsy din upplevelse.
+
+   Du kan ändra den här inställningen när som helst.
+
+   ![The tell us what you want to do page](/help/implementing/cloud-manager/assets/experience-cloud-tellus.png)
+
+Adobe Experience Manager-sidan har uppdaterats med förbättrad navigering och interaktiva widgetar. Den tidigare samlingen av lösningskort ger tillgång till verktyg som följande:
+
 * Universal Editor
+* Cloud Manager
+* Cloud Acceleration Manager
+* Programvarudistribution
+* Extension Manager
+* Brand Portal
 
 De här lösningarna har nu flyttats till huvudnavigeringen under **Verktyg**. Dessutom ger nya navigeringselement för **Webbplatser** och **Assets** snabb åtkomst till viktiga Adobe Experience Manager-funktioner som Assets, Samlingar, Webbplatser och Innehållsfragment. De här funktionerna är tillgängliga för den primära produktionsmiljön som du har tillgång till.
 
 ![Experience Hub-miljöer](/help/implementing/cloud-manager/assets/experience-hub-author-environments.png)
 
-Experience Hub-sidan är navet för Adobe Experience Manager och den utökas med ytterligare widgetar och åtgärder som är skräddarsydda för varje användarroll. Sidan är helt anpassningsbar och du kan välja den optimala layouten för skärmen. Widgetar kan filtreras så att endast de valda visas på huvudsidan, vilket ger en personlig upplevelse.
+Experience Hub-sidan fungerar som central nav för Adobe Experience Manager och utökas med ytterligare widgetar och åtgärder som är skräddarsydda för varje användarroll. Sidan är helt anpassningsbar och du kan välja den optimala layouten för skärmen. Widgetar kan filtreras så att endast de valda visas på huvudsidan, vilket ger en personlig upplevelse.
 
-![Experience Hub har anpassats](/help/implementing/cloud-manager/assets/experience-hub-custom.png)
+![Experience Hub anpassat](/help/implementing/cloud-manager/assets/experience-hub-custom.png)
 
 Du kan också ändra storlek på widgetar och placera dem på sidan så att de passar dina behov och önskemål bättre.
 
@@ -52,7 +67,7 @@ Navigeringselementen innehåller Assets Browse, som läser in databasen med den 
 
 Om inga AEM Cloud-tjänstmiljöer för produktion är tillgängliga visas alternativen nedtonade (inte tillgängliga) för användaren.
 
-![Experience Hub i inga produktionsmiljöer](/help/implementing/cloud-manager/assets/experience-hub-no-prod-environs.png)
+![Experience Hub inga produktionsmiljöer](/help/implementing/cloud-manager/assets/experience-hub-no-prod-environs.png)
 
 
 
