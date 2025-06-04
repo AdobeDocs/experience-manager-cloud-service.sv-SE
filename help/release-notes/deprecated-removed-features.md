@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: f595cb1030f49e3213b93cac897de9598060131d
+source-git-commit: aaa0d9c547af360aff4cabb2ce024b586a3870df
 workflow-type: tm+mt
-source-wordcount: '2912'
+source-wordcount: '3028'
 ht-degree: 0%
 
 ---
@@ -18,27 +18,26 @@ ht-degree: 0%
 >title="Borttagna funktioner i AEM as a Cloud Service"
 >abstract="AEM as a Cloud Service har en distributionsmodell som bygger på molnet. På den här fliken markeras funktioner som ersatts av deras molnbaserade motsvarigheter."
 
-Adobe utvärderar ständigt produktfunktioner för att med tiden kunna förnya eller ersätta äldre funktioner med modernare alternativ för att förbättra det totala kundvärdet, alltid under noggrant övervägande av bakåtkompatibilitet. Eftersom [!DNL Adobe Experience Manager] som [!DNL Cloud Service] använder en molnbaserad distributionsmodell ersätts vissa funktioner med molnbaserade motsvarigheter.
+Adobe granskar regelbundet funktioner, inklusive API:er och konfigurationer, för att säkerställa att de uppfyller nya standarder för prestanda, säkerhet och det övergripande värdet för AEM as a Cloud Service. Baserat på dessa utvärderingar kan vissa funktioner markeras för borttagning. När det är möjligt kommer Adobe att tillhandahålla en lämplig ersättning.
 
-Följande regler gäller för att kommunicera den förestående borttagningen/ersättningen av [!DNL Experience Manager]-funktioner:
+När en borttagning annonseras är funktionen endast tillgänglig under en begränsad period och kunden måste ta bort all användning före ett visst borttagningsdatum. Adobe kommer att lämna rimliga varningar och vägledning för att underlätta övergången.
 
-1. Föråldringsanmälan kommer först. Föråldrade funktioner är fortfarande tillgängliga men har inte förbättrats ytterligare.
-1. Funktioner som annonserats vara borttagna så snart som möjligt i den senare större versionen. Det faktiska måldatumet för borttagning tillkännages.
+Under borttagningstiden kommer Adobe att påminna kunderna om vilka åtgärder de behöver vidta för att gå över från att använda en funktion via e-postmeddelanden, aviseringar från Åtgärdscenter eller påminnelser i Cloud Manager.
 
-Den här processen ger kunderna minst en releasecykel för att anpassa implementeringen till en ny version eller en efterföljare till en borttagningsfunktion, innan den faktiska borttagningen.
+>[!WARNING]
+>
+>I vissa fall måste en funktion tas bort innan du kan installera en ny version av Cloud Manager eller uppgradera till den senaste versionen av AEM as a Cloud Service.
 
-## Föråldrade funktioner {#deprecated-features}
+## Undertryckta funktioner {#deprecated-features}
 
-I det här avsnittet visas funktioner som har markerats som borttagna i [!DNL Experience Manager] som [!DNL Cloud Service]. Vanligtvis ställs funktioner som ska tas bort i en framtida version in för borttagning först, med ett alternativ.
-
-Kunderna rekommenderas att granska om de använder funktionen/funktionen i den aktuella distributionen och planera för att ändra implementeringen så att den använder det alternativ som erbjuds.
+Funktionerna i tabellen nedan har meddelats att de är borttagna, men har ännu inte tagits bort.  Användning av funktioner måste upphöra innan målets borttagningsdatum eller problem som rör prestanda, tillgänglighet och säkerhet kan uppstå.
 
 | Funktioner | Inaktuell funktion | Ersättning |
 | ------------ | ------------------ | ----------- |
 | Sites | [Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md) | [Leverans av innehållsfragment med OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)<br>tillsammans med <br> [OpenAPI:er för hantering av innehållsfragment och innehållsfragmentmodeller](/help/headless/content-fragment-openapis.md) |
 | Sites | [PWA-funktioner](/help/sites-cloud/authoring/sites-console/enable-pwa.md) | Ingen |
 | Sites | [SPA-redigerare](/help/implementing/developing/hybrid/introduction.md) | De redigerare som rekommenderas för att hantera headless-innehåll i AEM är:<br>- [Universell redigerare](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering.<br>- [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering. |
-| [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/sv/docs/experience-manager-htl/content/java-use-api) |
+| [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api) |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen är planerad att tas bort snart. |
 | Sites | [Experience Cloud Setup Automation](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md) | Ingen |
 | [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md). |
@@ -48,31 +47,31 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att skapa miniatyrbilder för MPEG. Använd [Dynamiska media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
 | [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera för replikeringsagenter (borttagning efter 30 september 2021) | [Hantera arbetsflödesmetoderna för publikation](/help/operations/replication.md#manage-publication) eller [Trädaktivering](/help/operations/replication.md#tree-activation). |
 | [!DNL Foundation] | Administratörsskärmbilden för replikeringsagenten har fliken Distribuera och replikerings-API:t kan inte replikera innehållspaket som är större än 10 MB. | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflöde för trädaktivering](/help/operations/replication.md#tree-activation) |
-| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Från och med den 1 maj 2024 går det inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console. Befintliga JWT-autentiseringsuppgifter (Service Account) är fortfarande användbara för konfigurerade integreringar fram till 1 januari 2025. Därefter slutar de fungera, vilket kräver att kunderna migrerar till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
+| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Från och med den 1 maj 2024 går det inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console. Befintliga JWT-autentiseringsuppgifter (Service Account) är fortfarande användbara för konfigurerade integreringar fram till 1 januari 2025. Därefter slutar de fungera, vilket kräver att kunderna migrerar till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
 | [!DNL Foundation] | Publicera arbetsflöde för innehållsträd och det relaterade arbetsflödessteget Publicera innehållsträd, som användes för replikeringar av innehållshierarkier. | Använd [Arbetsflödessteget för trädaktivering](/help/operations/replication.md#tree-activation), vilket är mer prestandaförbättrat. |
 | [!DNL Foundation] | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. | Adobe rekommenderar att man byter till Google Closure Compiler (GCC) för implementering. |
 
 ## Borttagna funktioner {#removed-features}
 
-I det här avsnittet visas funktioner som har tagits bort från [!DNL Experience Manager] med [!DNL Experience Manager] som [!DNL Cloud Service].
+I det här avsnittet visas de funktioner som har tagits bort.
 
 | Område | Funktion | Ersättning | Borttagningsdatum för mål |
 | ------------ | ------------------ | ----------- | ------------------- |
 | Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns några dialogrutor för klassiskt användargränssnitt för ett fåtal utvalda funktioner, som Länkkontroll, Rensa version och vissa Cloud Service-konfigurationer. De kommande [produktuppdateringarna](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
-| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/administering/integration/scene7#integration) och [Dynamic Media Hybrid Mode](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/dynamic/config-dynamic#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamiska media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
+| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/scene7#integration) och [Dynamic Media Hybrid Mode](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dynamic#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamiska media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. | Borttagen |
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i databasen [!DNL Experience Manager] inte är tillgängliga vid körning. | Borttagen |
-| [!DNL Assets] | Det går inte att dela [!DNL Assets] med tjänsten Assets Core och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. | Borttagen |
+| [!DNL Assets] | Det går inte att dela [!DNL Assets] med tjänsten Assets Core och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
 | [!DNL Foundation] | Stöd för com.adobe.granite.oauth.server | Integrering med Adobe IMS | Mars 2023 |
 | [!DNL Foundation] | Stöd för funktionen org.apache.sling.servicusermapping till [hämta tjänstanvändar-ID](https://sling.apache.org/apidocs/sling12/org/apache/sling/serviceusermapping/ServiceUserMapper.html#getServiceUserID-org.osgi.framework.Bundle-java.lang.String-) | Ej tillämpligt | 8/30/24 |
+| [!DNL Foundation] | Java 11 är föråldrat och har ersatts av Adobe med Java 21 runtime. Observera att koden fortfarande kan byggas med Java 11 (Java 17 och 21 är de andra alternativen) | Java 21-miljön används. För att säkerställa kompatibilitet är det viktigt att uppdatera biblioteksversionerna enligt anvisningarna i [Körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements) | 5/29/25 mars |
 
+## Föråldrade API:er {#aem-apis}
 
-## AEM API:er {#aem-apis}
-
-Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntade borttagningsdatum. Kunder förväntas ta bort API:erna vid målborttagningsdatumet från sin kod. All användning av API:t efter borttagningsdatumet kan generera fel i den lokala SDK/Development Environment och Cloud Manager byggprocess.
+API:erna i tabellen nedan (klicka för att expandera för att visa dem) har meddelats att de är borttagna, men har ännu inte tagits bort.  Användningen av dessa API:er måste upphöra före målets borttagningsdatum, annars riskerar du problem med prestanda, tillgänglighet och säkerhet. Vissa API:er refererar till avsnittet API-vägledning för borttagning nedan.
 
 <details>
   <summary>Expandera om du vill visa en lista över inaktuella API:er.</summary>
@@ -91,47 +90,17 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>8/31/2025</td>
   </tr>
   <tr>
-    <td>org.apache.sling.runmode</td>
-    <td></td>
-    <td>2015</td>
-    <td>7/30/2021</td>
-  </tr>
-  <tr>
-    <td>org.json</td>
-    <td>Apache Johnzon-implementeringen av <a href="https://johnzon.apache.org/index.html">javax.json</a> rekommenderas och bör användas. </td>
-    <td>4/30/2021</td>
-    <td>12/31/2021</td>
-  </tr>
-  <tr>
-    <td>org.apache.commons.lang<br>org.apache.commons.lang.enums<br>org.apache.commons.lang.builder<br>org.apache.commons.lang.exception<br>org.apache.commons.lang.math<br>org.apache.commons.lang.mutable<br>org.apache.commons.lang.reflect<br>org.apache.commons.lang.text<br>org.apache.commons.lang.time</td>
-    <td>Commons Lang 2 är i underhållsläge. Kommandon Lang 3 bör användas i stället. <a href="#apache.commons">Se borttagningsanteckningar nedan.</a></td>
-    <td>4/30/2021</td>
-    <td>12/31/2021</td>
-  </tr>
-  <tr>
-    <td>org.apache.commons.collections<br>org.apache.commons.collections.bag<br>org.apache.commons.collections.bidimap<br>org.apache.commons.collections.buffer<br>org.apache.commons.collections.collection<br>org.apache.commons.collections.comparators<br>org.apache.commons.collections.functors<br>org.apache.commons.collections.iterators<br>org.apache.commons.collections.keyvalue<br>org.apache.commons.collections.list<br>org.apache.commons.collections.map<br>org.apache.commons.collections.set</td>
-    <td>Commons Collections 3 är i underhållsläge. Commons Collections 4 ska användas i stället. <a href="#apache.commons">Se borttagningsanteckningar nedan.</a></td>
-    <td>4/30/2021</td>
-    <td>12/31/2021</td>
-  </tr>
-  <tr>
-    <td>org.apache.felix.webconsole<br>org.apache.felix.webconsole.bundleinfo<br>org.apache.felix.webconsole.i18n<br>org.apache.felix.webconsole.spi</td>
-    <td>Felix webbkonsol stöds inte i molnmiljöer. <a href="#org.apache.felix.webconsole">Se borttagningsanteckningar nedan.</a></td>
-    <td>4/30/2021</td>
-    <td>8/31/2025</td>
-  </tr>
-  <tr>
 <td>org.eclipse.jetty.client<br>org.eclipse.jetty.client.api<br>org.eclipse.jetty.client.http<br>org.eclipse.jetty.client.util<br>org.eclipse.jetty.http<br>org.eclipse.jetty.http.pathmap<br>org.eclipse.jetty.io<br>org.eclipse.jetty.io.ssl<br>org.eclipse.jetty.security<br>org.eclipse.jetty.server<br>org.eclipse.jetty.server.handler<br>org.eclipse.jetty.server.handler.gzip<br>org.eclipse.jetty.server.session<br>org.eclipse.jetty.servlet<br>org.eclipse.jetty.servlet.listener<br>org.eclipse.jetty.util<br>org.eclipse.jetty.util.annotation<br>org.eclipse.jetty.util.component<br>org.eclipse.jetty.util.log<br>org.eclipse.jetty.util.resource<br>org.eclipse.jetty.util.security<br>org.eclipse.jetty.util.ssl<br>org.eclipse.jetty.util.statistic<br>org.eclipse.jetty.util.thread</td>
     <td>Paketen Eclipse Jetty och Felix Http Jetty stöds inte längre. <a href="#org.eclipse.jetty">Se borttagningsanteckningar nedan.</a></td>
     <td>2021-05-27</td>
     <td>8/31/2025</td>
   </tr>
-  <tr>     <td>com.mongodb<br>com.mongodb.annotations<br>com.mongodb.assertions<br>com.mongodb.async<br>com.mongodb.binding<br>com.mongodb.bulk<br>com.mongodb.client<br>com.mongodb.client.gridfs<br>com.mongodb.client.gridfs.codecs<br>com.mongodb.client.gridfs.model<br>com.mongodb.client.jndi<br>com.mongodb.client.model<br>com.mongodb.client.model.changestream<br>com.mongodb.client.model.geojson<br>com.mongodb.client.model.geojson.codecs<br>com.mongodb.client.result<br>com.mongodb.connection<br>com.mongodb.connection.netty<br>com.mongodb.diagnostics.logging<br>com.mongodb.event<br>com.mongodb.gridfs<br>com.mongodb.internal<br>com.mongodb.internal.async<br>com.mongodb.internal.authentication<br>com.mongodb.internal.connection<br>com.mongodb.internal.dns<br>com.mongodb.internal.event<br>com.mongodb.internal.management.jmx<br>com.mongodb.internal.session<br>com.mongodb.internal.thread<br>com.mongodb.internal.validator<br>com.mongodb.management<br>com.mongodb.operation<br>com.mongodb.selector<br>com.mongodb.session<br>com.mongodb.util</td>
+ <tr>     <td>com.mongodb<br>com.mongodb.annotations<br>com.mongodb.assertions<br>com.mongodb.async<br>com.mongodb.binding<br>com.mongodb.bulk<br>com.mongodb.client<br>com.mongodb.client.gridfs<br>com.mongodb.client.gridfs.codecs<br>com.mongodb.client.gridfs.model<br>com.mongodb.client.jndi<br>com.mongodb.client.model<br>com.mongodb.client.model.changestream<br>com.mongodb.client.model.geojson<br>com.mongodb.client.model.geojson.codecs<br>com.mongodb.client.result<br>com.mongodb.connection<br>com.mongodb.connection.netty<br>com.mongodb.diagnostics.logging<br>com.mongodb.event<br>com.mongodb.gridfs<br>com.mongodb.internal<br>com.mongodb.internal.async<br>com.mongodb.internal.authentication<br>com.mongodb.internal.connection<br>com.mongodb.internal.dns<br>com.mongodb.internal.event<br>com.mongodb.internal.management.jmx<br>com.mongodb.internal.session<br>com.mongodb.internal.thread<br>com.mongodb.internal.validator<br>com.mongodb.management<br>com.mongodb.operation<br>com.mongodb.selector<br>com.mongodb.session<br>com.mongodb.util</td>
     <td>Användning av detta API stöds inte i AEM as a Cloud Service. <a href="#com.mongodb">Se borttagningsanteckningar nedan.</a></td>
     <td>2021-05-27</td>
     <td>8/31/2025</td>
   </tr>
-  <tr>
+   <tr>
     <td>org.apache.abdera<br>org.apache.abdera.model<br>org.apache.abdera.factory<br>org.apache.abdera.ext.media<br>org.apache.abdera.util<br>org.apache.abdera.i18n.iri<br>org.apache.abdera.writer<br>org.apache.abdera.i18n.rfc4646<br>org.apache.abdera.i18n.rfc4646.enums<br>org.apache.abdera.i18n.text<br>org.apache.abdera.filter<br>org.apache.abdera.xpath<br>org.apache.abdera.i18n.text.io<br>org.apache.abdera.i18n.text.data<br>org.apache.abdera.parser</td>
     <td>API:t används inte eftersom Apache Abdera är ett projekt som har gått tillbaka sedan 2017. <a href="#org.apache.abdera_or_org.apache.sling.atom.taglib">Se borttagningsanteckningar nedan.</a></td>
     <td>7/29/2021</td>
@@ -173,17 +142,7 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>2022-1-27</td>
     <td>8/31/2025</td>
   </tr>
-  <tr>
-    <td>com.day.cq.contentsync.handler.util</td>
-    <td>Detta API är inaktuellt. Använd Apache Sling's Builders i stället.</td>
-    <td>10/31/2022</td>
-    <td>1/01/2023</td>
-  </tr>
-  <tr><td>org.apache.sling.commons.json<br>org.apache.sling.commons.json.http<br>org.apache.sling.commons.json.io<br>org.apache.sling.commons.json.jcr<br>org.apache.sling.commons.json.sling<br>org.apache.sling.commons.json.util<br>org.apache.sling.commons.json.xml</td>
-    <td>AEM as a Cloud Service stöder inte detta API.</td>
-    <td>5/15/2023</td>
-    <td>15/6/2023</td>
-  </tr><td>com.google.common.annotations<br>com.google.common.base<br>com.google.common.cache<br>com.google.common.collect<br>com.google.common.escape<br>com.google.common.eventbus<br>com.google.common.hash<br>com.google.common.html<br>com.google.common.io<br>com.google.common.math<br>com.google.common.net<br>com.google.common.primitives<br>com.google.common.reflect<br>com.google.common.util.concurrent<br>com.google.common.xml</td>
+  <tr>  <td>com.google.common.annotations<br>com.google.common.base<br>com.google.common.cache<br>com.google.common.collect<br>com.google.common.escape<br>com.google.common.eventbus<br>com.google.common.hash<br>com.google.common.html<br>com.google.common.io<br>com.google.common.math<br>com.google.common.net<br>com.google.common.primitives<br>com.google.common.reflect<br>com.google.common.util.concurrent<br>com.google.common.xml</td>
     <td>Google Guava Core Libraries är föråldrat.</td>
     <td>5/15/2023</td>
     <td>8/31/2025</td>
@@ -193,20 +152,8 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>AEM as a Cloud Service stöder inte detta interna slf4j-API. <a href="#org.slf4j">Se borttagningsanteckningar nedan.</a></td>
     <td>4/11/2022</td>
     <td>8/31/2025</td>
-  </tr>
-  <tr>
-    <td>com.day.cq.xss<br>com.day.cq.xss.taglib<br>com.day.cq.xss.impl</td>
-    <td>Använd org.apache.sling.xss i stället.</td>
-    <td>12/12/2023</td>
-    <td>6/30/2024</td>
-  </tr>
-  <tr>
-    <td>com.adobe.granite.xss<br>com.adobe.granite.xss.impl</td>
-    <td>Använd org.apache.sling.xss i stället.</td>
-    <td>12/12/2023</td>
-    <td>6/30/2024</td>
-  </tr>
-  <tr>
+  </tr> 
+    <tr>
     <td>com.drew.*</td>
     <td>Du bör extrahera metadata från bilder och videoklipp via Asset Compute i Cloud Service eller via Apache POI eller Apache Tika.</td>
     <td>9/17/2024</td>
@@ -225,16 +172,70 @@ Nedan finns en omfattande lista över borttagna AEM-API:er och deras förväntad
     <td>8/31/2025</td>
   </tr>
   <tr>
-    <td>org.bson<br/>org.bson.assertions<br/>org.bson.codecs<br/>org.bson.codecs.configuration<br/>org.bson.codecs.pojo<br/>org.bson.codecs.pojo.annotations<br/>org.bson.conversions<br/>org.bson.diagnostics<br/>org.bson.internal<br/>org.bson.io<br/>org.bson.json<br/>org.bson.types<br/>org.bson.util</td>
+<td>org.apache.felix.webconsole<br>org.apache.felix.webconsole.bundleinfo<br>org.apache.felix.webconsole.i18n<br>org.apache.felix.webconsole.spi</td>
+    <td>Felix webbkonsol stöds inte i molnmiljöer. <a href="#org.apache.felix.webconsole">Se borttagningsanteckningar nedan.</a></td>
+    <td>4/30/2021</td>
+    <td>8/31/2025</td>
+  </tr>
+<td>org.bson<br/>org.bson.assertions<br/>org.bson.codecs<br/>org.bson.codecs.configuration<br/>org.bson.codecs.pojo<br/>org.bson.codecs.pojo.annotations<br/>org.bson.conversions<br/>org.bson.diagnostics<br/>org.bson.internal<br/>org.bson.io<br/>org.bson.json<br/>org.bson.types<br/>org.bson.util</td>
     <td>Användning av detta API stöds inte i AEM as a Cloud Service.</td>
     <td>10/31/2022</td>
     <td>8/31/2025</td>
+  </tr>  
+  <tr>
+    <td>org.apache.sling.runmode</td>
+    <td></td>
+    <td>2015</td>
+    <td>TBD</td>
   </tr>
-</tbody>
+  <tr>
+    <td>org.json</td>
+    <td>Apache Johnzon-implementeringen av <a href="https://johnzon.apache.org/index.html">javax.json</a> rekommenderas och bör användas. </td>
+    <td>4/30/2021</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+<td>org.apache.commons.lang<br>org.apache.commons.lang.enums<br>org.apache.commons.lang.builder<br>org.apache.commons.lang.exception<br>org.apache.commons.lang.math<br>org.apache.commons.lang.mutable<br>org.apache.commons.lang.reflect<br>org.apache.commons.lang.text<br>org.apache.commons.lang.time</td>
+    <td>Commons Lang 2 är i underhållsläge. Kommandon Lang 3 bör användas i stället. <a href="#apache.commons">Se borttagningsanteckningar nedan.</a></td>
+    <td>4/30/2021</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td>org.apache.commons.collections<br>org.apache.commons.collections.bag<br>org.apache.commons.collections.bidimap<br>org.apache.commons.collections.buffer<br>org.apache.commons.collections.collection<br>org.apache.commons.collections.comparators<br>org.apache.commons.collections.functors<br>org.apache.commons.collections.iterators<br>org.apache.commons.collections.keyvalue<br>org.apache.commons.collections.list<br>org.apache.commons.collections.map<br>org.apache.commons.collections.set</td>
+    <td>Commons Collections 3 är i underhållsläge. Commons Collections 4 ska användas i stället. <a href="#apache.commons">Se borttagningsanteckningar nedan.</a></td>
+    <td>4/30/2021</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td>com.day.cq.contentsync.handler.util</td>
+    <td>Detta API är inaktuellt. Använd Apache Sling's Builders i stället.</td>
+    <td>10/31/2022</td>
+    <td>TBD</td>
+  </tr>
+  <tr><td>org.apache.sling.commons.json<br>org.apache.sling.commons.json.http<br>org.apache.sling.commons.json.io<br>org.apache.sling.commons.json.jcr<br>org.apache.sling.commons.json.sling<br>org.apache.sling.commons.json.util<br>org.apache.sling.commons.json.xml</td>
+    <td>AEM as a Cloud Service stöder inte detta API.</td>
+    <td>5/15/2023</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td>com.day.cq.xss<br>com.day.cq.xss.taglib<br>com.day.cq.xss.impl</td>
+    <td>Använd org.apache.sling.xss i stället.</td>
+    <td>12/12/2023</td>
+    <td>TBD</td>
+  </tr>
+  <tr>
+    <td>com.adobe.granite.xss<br>com.adobe.granite.xss.impl</td>
+    <td>Använd org.apache.sling.xss i stället.</td>
+    <td>12/12/2023</td>
+    <td>TBD</td>
+  </tr>
+  </tbody>
 </table>
 </details>
 
-Nedan finns en omfattande lista över borttagna AEM API:er.
+## Borttagna API:er {#removed-apis}
+
+I det här avsnittet visas API:er som har tagits bort och tagits bort. Vissa API:er refererar till avsnittet API-vägledning för borttagning nedan.
 
 <details>
   <summary>Expandera om du vill visa listan över borttagna API:er.</summary>
@@ -314,6 +315,10 @@ Nedan finns en omfattande lista över borttagna AEM API:er.
 </tbody>
 </table>
 </details>
+
+## API-borttagningsvägledning {#api-removal-guidance}
+
+I det här avsnittet visas API-borttagningsvägledning för olika API:er i tabellerna ovan.
 
 ### Tar bort `org.apache.sling.commons.auth*` {#org.apache.sling.commons.auth}
 
@@ -412,223 +417,126 @@ Om du använder `org.apache.log4j` växlar du till SLF4J (`org.slf4j`) eller Log
 
 ## OSGI-konfiguration {#osgi-configuration}
 
-De två listorna nedan återspeglar konfigurationsytan för AEM as a Cloud Service OSGi och beskriver vad kunderna kan konfigurera.
+Avsnitten nedan återspeglar konfigurationsytan för AEM as a Cloud Service OSGi och beskriver vad kunderna kan konfigurera.
 
 1. Kundkoden får inte konfigurera de listade OSGi-konfigurationerna.
 1. En lista över OSGi-konfigurationer vars egenskaper kan konfigureras, men måste följa de angivna verifieringsreglerna. Dessa regler omfattar huruvida deklarationen av egenskapen är obligatorisk, dess typ och i vissa fall dess tillåtna värdeintervall.
 
 Kundkoden kan konfigurera OSGi-konfigurationer som inte finns med i listan.
 
-Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
 
 Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
 
-+++OSGi-konfigurationer som inte kan ändras.
+### Föråldrade OSGi-egenskaper (de som inte längre kan ändras) {#deprecated-osgi-properties}
 
-* **`org.apache.felix.webconsole.internal.servlet.OsgiManager`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-* **`com.day.cq.auth.impl.cug.CugSupportImpl`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-* **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-* **`org.apache.felix.http (Factory)`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-* **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** (Tillkännagivandedatum: 2021-08-25, Kräftelsedatum: 2021-08-26)
-+++
+Vissa egenskaper för följande OSGi-komponent-PID kan inte längre ändras. Detta kommer att verkställas inom den tidsram som beskrivs nedan.
 
-+++OSGi-konfigurationer som omfattas av build-valideringsregler.
+| **OSGI-komponent-ID** | **Oändringsbara egenskaper** | **Borttagning** | **Tvingande** |
+|---|---|---|---|
+| **`org.apache.sling.commons.log.LogManager`** | alla | 4/24/25 | 8/31/25 (konfig ignorerades i juni) |
+| **`org.apache.sling.commons.log.LogManager.factory.config`** | org.apache.sling.Commons.log.file, org.apache.sling.Commons.log.pattern | 4/24/25 | 8/31/25 (konfig ignorerades i juni) |
+| **`org.apache.felix.webconsole.internal.servlet.OsgiManager`** | alla | 2024 | 8/31/25 |
+| **`com.day.cq.auth.impl.cug.CugSupportImpl`** | alla | 2024 |
+| **`com.day.cq.jcrclustersupport.ClusterStartLevelController`** | alla | 2024 | 8/31/25 |
+| **`org.apache.felix.http (Factory)`** | alla | 2024 | 8/31/25 |
+| **`org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet`** | alla | 2024 | 8/31/25 |
+| **`com.adobe.granite.toggle.impl.ToggleRouterImpl`** | alla | 6/3/25 | 8/31/25 |
+| **`org.apache.sling.engine.impl.log.RequestLoggerFilter`** | alla | 6/3/25 | 8/31/25 |
+| **`org.apache.sling.feature.apiregions.impl`** | alla | 6/3/25 | 8/31/25 |
+| **`com.adobe.granite.toggle.impl.dev.DynamicToggleProviderImpl`** | alla | 6/3/25 | 8/31/25 |
+| **`org.apache.sling.jcr.resource.internal.helper.jcr.BinaryDownloadUriProvider`** | alla | 6/3/25 | 8/31/25 |
+| **`com.adobe.cq.unifiedshell.impl.discovery.DiscoveryServlet`** | alla | 6/3/25 | 8/31/25 |
+| **`com.adobe.cq.unifiedshell.impl.ui.FrameErrorHandler`** | alla | 6/3/25 | 8/31/25 |
+| **`com.adobe.cq.unifiedshell.impl.config.UnifiedShellConfService`** | alla | 6/3/25 | 8/31/25 |
+| **`com.adobe.cq.unifiedshell.impl.config.RepositoryIdentifier`** | alla | 6/3/25 | 8/31/25 |
+| **`org.apache.http.proxyconfigurator`** | alla | 6/3/25 | 8/31/25 |
+| **`org.apache.sling.feature.apiregions.factory`** | alla | 6/3/25 | 8/31/25 |
+| **`com.adobe.granite.toggle.monitor.systemproperty`** | alla | 6/3/25 | 8/31/25 |
 
-* **`org.apache.felix.eventadmin.impl.EventAdmin`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-* `org.apache.felix.eventadmin.ThreadPoolSize`
-   * Typ: heltal
-   * Obligatoriskt intervall: 2-100
-* `org.apache.felix.eventadmin.AsyncToSyncThreadRatio`
-   * Typ: dubbel
-* `org.apache.felix.eventadmin.Timeout`
-   * Typ: heltal
-* `org.apache.felix.eventadmin.RequireTopic`
-   * Typ: boolesk
-* `org.apache.felix.eventadmin.IgnoreTimeout`
-   * Obligatoriskt
-   * Typ: strängmatris
-   * Obligatoriskt intervall: Måste innehålla minst `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*`
-* `org.apache.felix.eventadmin.IgnoreTopic`
-   * Typ: strängmatris
-* **`org.apache.felix.http`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-   * `org.apache.felix.http.timeout`
-      * Typ: heltal
-   * `org.apache.felix.http.session.timeout`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.threadpool.max`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.headerBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.requestBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.responseBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.http.jetty.maxFormSize`
-      * Typ: heltal
-   * `org.apache.felix.https.jetty.session.cookie.httpOnly`
-      * Typ: boolesk
-   * `org.apache.felix.https.jetty.session.cookie.secure`
-      * Typ: boolesk
-   * `org.eclipse.jetty.servlet.SessionIdPathParameterName`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.CheckingRemoteSessionIdEncoding`
-      * Typ: boolesk
-   * `org.eclipse.jetty.servlet.SessionCookie`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.SessionDomain`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.SessionPath`
-      * Typ: sträng
-   * `org.eclipse.jetty.servlet.MaxAge`
-      * Typ: heltal
-   * `org.eclipse.jetty.servlet.SessionScavengingInterval`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gziphandler.enable`
-      * Typ: boolesk
-   * `org.apache.felix.jetty.gzip.minGzipSize`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gzip.compressionLevel`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gzip.inflateBufferSize`
-      * Typ: heltal
-   * `org.apache.felix.jetty.gzip.syncFlush`
-      * Typ: boolesk
-   * `org.apache.felix.jetty.gzip.excludedUserAgents`
-      * Typ: sträng
-   * `org.apache.felix.jetty.gzip.includedMethods`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.excludedMethods`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.includedPaths`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.excludedPaths`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.includedMimeTypes`
-      * Typ: strängmatris
-   * `org.apache.felix.jetty.gzip.excludedMimeTypes`
-      * Typ: strängmatris
-   * `org.apache.felix.http.session.invalidate`
-      * Typ: boolesk
-   * `org.apache.felix.http.session.container.attribute`
-      * Typ: strängmatris
-   * `org.apache.felix.http.session.uniqueid`
-      * Typ: boolesk
-* **`org.apache.sling.scripting.cache`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-   * `org.apache.sling.scripting.cache.size`
-      * Typ: heltal
-      * Obligatoriskt intervall: >= 2048
-   * `org.apache.sling.scripting.cache.additional_extensions`
-      * Obligatoriskt
-      * Typ: strängmatris
-      * Obligatoriskt intervall: måste innehålla js
-* **`com.day.cq.mailer.DefaultMailService`** (Anmälningsdatum: 2021-04-30, Kräftelsedatum: 2021-07-31)
-   * `smtp.host`
-      * Typ: sträng
-   * `smtp.port`
-      * Typ: heltal
-      * Obligatoriskt intervall: 465, 587 eller 25
-   * `smtp.user`
-      * Typ: sträng
-   * `smtp.password`
-      * Typ: sträng
-   * `from.address`
-      * Typ: sträng
-   * `smtp.ssl`
-      * Typ: sträng
-   * `smtp.starttls`
-      * Typ: boolesk
-   * `smtp.requiretls`
-      * Typ: boolesk
-   * `debug.email`
-      * Typ: boolesk
-   * `oauth.flow`
-      * Typ: boolesk
-* **`org.apache.sling.commons.log.LogManager.factory.config`** (Meddelande: 11/16/21, Kräftelsedatum: 2/16/21)
-   * `org.apache.sling.commons.log.level`
-      * Typ: uppräkning
-      * Obligatoriskt intervall: INFO, DEBUG eller TRACE
-   * `org.apache.sling.commons.log.names`
-      * Typ: sträng
-   * `org.apache.sling.commons.log.file`
-      * Typ: sträng
-   * `org.apache.sling.commons.log.additiv`
-      * Typ: boolesk
-+++
+<!--
+### Unmodifiable OSGi properties {#unmodifiable-osgi-properties}
+
+Properties for the following OSGi component PIDs cannot be modified, as described below.
+-->
+
+### OSGi-egenskapsbegränsningar {#restrictions-osgi-properties}
+
+Värdena för vissa OSGi-egenskaper är begränsade till reglerna som beskrivs nedan.
+
+| OSGi-komponent-PID |   | Obligatoriskt | Typ | Begränsning (om tillämpligt) |
+|---|---|---|---|---|
+| `org.apache.felix.eventadmin.impl.EventAdmin` | `org.apache.felix.eventadmin.ThreadPoolSize` | Ja | heltal | 2-100 |
+|   | `org.apache.felix.eventadmin.AsyncToSyncThreadRatio` |   | double | — |
+|   | `org.apache.felix.eventadmin.AsyncToSyncThreadRatio` |   | heltal | — |
+|   | `org.apache.felix.eventadmin.RequireTopic` |   | boolesk | — |
+|   | `org.apache.felix.eventadmin.IgnoreTimeout` | Ja | array med strängar | Måste innehålla minst `org.apache.felix*`, `org.apache.sling*`, `come.day*`, `com.adobe*` |
+|   | `org.apache.felix.eventadmin.IgnoreTopic` |   | array med strängar | — |
+| `org.apache.felix.http` | `org.apache.felix.http.timeout` |   | heltal |   |
+|   | `org.apache.felix.http.session.timeout` |   | heltal |   |
+|   | `org.apache.felix.http.jetty.threadpool.max` |   | heltal |   |
+|   | `org.apache.felix.http.jetty.headerBufferSize` |   | heltal |   |
+|   | `org.apache.felix.http.jetty.requestBufferSize` |   | heltal |   |
+|   | `org.apache.felix.http.jetty.responseBufferSize` |   | heltal |   |
+|   | `org.apache.felix.http.jetty.maxFormSize` |   | heltal |   |
+|   | `org.apache.felix.https.jetty.session.cookie.httpOnly` |   | boolesk |   |
+|   | `org.apache.felix.https.jetty.session.cookie.secure` |   | boolesk |   |
+|   | `org.eclipse.jetty.servlet.SessionIdPathParameterName` |   | string |   |
+|   | `org.eclipse.jetty.servlet.CheckingRemoteSessionIdEncoding` |   | boolesk |   |
+|   | `org.eclipse.jetty.servlet.SessionCookie` |   | string |   |
+|   | `org.eclipse.jetty.servlet.SessionDomain` |   | string |   |
+|   | `org.eclipse.jetty.servlet.SessionPath` |   | string |   |
+|   | `org.eclipse.jetty.servlet.MaxAge` |   | heltal |   |
+|   | `org.eclipse.jetty.servlet.SessionScavengingInterval` |   | heltal |   |
+|   | `org.apache.felix.jetty.gziphandler.enable` |   | boolesk |   |
+|   | `org.apache.felix.jetty.gzip.minGzipSize` |   | heltal |   |
+|   | `org.apache.felix.jetty.gzip.compressionLevel` |   | heltal |   |
+|   | `org.apache.felix.jetty.gzip.inflateBufferSize` |   | heltal |   |
+|   | `org.apache.felix.jetty.gzip.syncFlush` |   | boolesk |   |
+|   | `org.apache.felix.jetty.gzip.excludedUserAgents` |   | string |   |
+|   | `org.apache.felix.jetty.gzip.includedMethods` |   | array med strängar |   |
+|   | `org.apache.felix.jetty.gzip.excludedMethods` |   | array med strängar |   |
+|   | `org.apache.felix.jetty.gzip.includedPaths` |   | array med strängar |   |
+|   | `org.apache.felix.jetty.gzip.excludedPaths` |   | array med strängar |   |
+|   | `org.apache.felix.jetty.gzip.includedMimeTypes` |   | array med strängar |   |
+|   | `org.apache.felix.http.session.invalidate` |   | boolesk |   |
+|   | `org.apache.felix.http.session.container.attribute` |   | array med strängar |   |
+|   | `org.apache.felix.http.session.uniqueid` |   | boolesk |   |
+| `org.apache.sling.scripting.cache` | `org.apache.sling.scripting.cache.size` | Ja | heltal | >= 2048 |
+|   | `org.apache.sling.scripting.cache.additional_extensions` | Ja | array med strängar | måste innehålla &quot;js&quot; |
+| `com.day.cq.mailer.DefaultMailService` | `smtp.host` |   | string |   |
+|   | `smtp.port` | Ja | heltal | antingen &quot;465&quot;, &quot;587&quot; eller &quot;25&quot; |
+|   | `smtp.user` |   | string |   |
+|   | `smtp.password` |   | string |   |
+|   | `from.address` |   | string |   |
+|   | `smtp.ssl` |   | string |   |
+|   | `smtp.starttls` |   | boolesk |   |
+|   | `smtp.requiretls` |   | boolesk |   |
+|   | `debug.email` |   | boolesk |   |
+|   | `oauth.flow` |   | boolesk |   |
+| `org.apache.sling.commons.log.LogManager.factory.config` | `org.apache.sling.commons.log.level` | Ja | string | antingen &quot;INFO&quot;, &quot;DEBUG&quot; eller &quot;TRACE&quot; |
+|   | `org.apache.sling.commons.log.names` |   | array med strängar |   |
+|   | `org.apache.sling.commons.log.additiv` |   | boolesk |   |
+| `org.apache.sling.engine.impl.log.RequestLogger` | `request.log.output` | Nej | string |   |
+|   | `request.log.outputtype` | Nej | string |   |
+|   | `request.log.entry.format` | Nej | string |   |
+|   | `request.log.exit.format` | Nej | string |   |
+|   | `request.log.enabled` | Nej | string |   |
+|   | `access.log.output` | Nej | string |   |
+|   | `access.log.outputtype` | Nej | string |   |
+|   | `access.log.enabled` | Nej | string |   |
+| `org.apache.sling.servlets.resolver.SlingServletResolver` | `servletresolver.servletRoot` | Nej | string |   |
+|   | `servletresolver.cacheSize` | Nej | heltal |   |
+|   | `servletresolver.paths` | Nej | sträng[] |   |
+|   | `servletresolver.defaultExtensions` | Nej | string |   |
+|   | `servletresolver.mountProviders` | Nej | boolesk |   |
+|   | `servletresolver.scriptUser` | Nej | string | borttagen, använd inte |
+| `com.day.cq.commons.impl.ExternalizerImpl` | `externalizer.domains` | Nej | sträng[] |   |
+|   | `externalizer.encodedpath` | Nej | boolesk |   |
+|   | `externalizer.host` | Nej | string |   |
+|   | `externalizer.contextpath` | Nej | string |   |
 
 ## Java runtime update to version 21 {#java-runtime-update-21}
 
-Adobe Experience Manager as a Cloud Service går över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att uppdatera biblioteksversionerna enligt [Runtime Requirements](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
+Adobe Experience Manager as a Cloud Service har gått över till Java 21 runtime. För att säkerställa kompatibilitet är det viktigt att uppdatera biblioteksversionerna enligt [Runtime Requirements](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
 
-<!-- (OLD Removed from here to end of topic 1/16/25 as per instruction in https://wiki.corp.adobe.com/pages/viewpage.action?pageId=3359689801) AEM as a Cloud Service will be moving to Java 21 runtime. In order to ensure compatibility, it is essential to make the following adjustments:
-
-### Runtime Requirements
-
-These adjustments are required to ensure compatibility with the Java 21 runtime. The libraries can be updated at any time as they are compatible with older versions of Java.
-
-#### Minimum version of org.objectweb.asm {#org.objectweb.asm}
-
-Update the usage of org.objectweb.asm to version 9.5 or higher to ensure support for newer JVM runtimes.
-
-#### Minimum version of org.apache.groovy {#org.apache.groovy}
-
-Update the usage of org.apache.groovy to version 4.0.22 or higher to ensure support for newer JVM runtimes.
-
-This bundle can be indirectly included by adding third party dependencies such as the AEM Groovy Console.
-
-### Build-time Requirements
-
-These adjustments are required to allow building the project with newer versions of Java but not required for runtime compatibility. The Maven plug-ins can be updated at any time as they are compatible with older versions of Java.
-
-#### Minimum version of bnd-maven-plugin {#bnd-maven-plugin}
-
-Update the usage of bnd-maven-plugin to version 6.4.0 to ensure support for newer JVM runtimes. Versions 7 or higher are not compatible with Java 11 or lower so an upgrade to that version is not recommended at this time.
-
-#### Minimum version of aemanalyser-maven-plugin {#aemanalyser-maven-plugin}
-
-Update the usage of aemanalyser-maven-plugin to version 1.6.6 or higher to ensure support for newer JVM runtimes.
-
-#### Minimum version of maven-bundle-plugin  {#maven-bundle-plugin}
-
-Update the usage of maven-bundle-plugin to version 5.1.5 or higher to ensure support for newer JVM runtimes.
-
-#### Update dependencies in maven-scr-plugin  {#maven-scr-plugin}
-
-The `maven-scr-plugin` is not directly compatible with Java 17 and 21. However, it is possible to generate the descriptor files by updating the ASM dependency version within the plugin configuration, similar to the snippet below:
-
-```
-[source,xml]
- <project>
-   ...
-   <build>
-     ...
-     <plugins>
-       ...
-       <plugin>
-         <groupId>org.apache.felix</groupId>
-         <artifactId>maven-scr-plugin</artifactId>
-         <version>1.26.4</version>
-         <executions>
-           <execution>
-             <id>generate-scr-scrdescriptor</id>
-             <goals>
-               <goal>scr</goal>
-             </goals>
-           </execution>
-         </executions>
-         <dependencies>
-           <dependency>
-             <groupId>org.ow2.asm</groupId>
-             <artifactId>asm-analysis</artifactId>
-             <version>9.7.1</version>
-             <scope>compile</scope>
-           </dependency>
-         </dependencies>
-       </plugin>
-       ...
-     </plugins>
-     ...
-   </build>
-   ...
- </project>
-```
--->
