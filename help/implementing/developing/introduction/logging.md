@@ -4,9 +4,9 @@ description: Lär dig hur du använder loggning för AEM as a Cloud Service för
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: 783210b4b72cf6efbdb4cf8c8cab08dbcd3004c6
+source-git-commit: 5c32a088cf7e334ba6497a595b5176e5389ce9ed
 workflow-type: tm+mt
-source-wordcount: '2540'
+source-wordcount: '2556'
 ht-degree: 0%
 
 ---
@@ -158,8 +158,8 @@ Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer fö
 Om du ändrar andra konfigurationsegenskaper för LogManager OSGi kan det uppstå tillgänglighetsproblem i AEM as a Cloud Service.
 
 För att säkerställa en effektiv övervakning av kundens miljöer, som vi nämnt i ett tidigare avsnitt:
-* Java-loggar för AEM produktkod måste behålla standardloggnivån INFO och får inte åsidosättas av anpassade konfigurationer.
-* Det går bra att ställa in loggnivåerna på DEBUG för produktkoden, men använd den sparsamt för att förhindra prestandaförsämring och återställa till INFO när det inte längre behövs.
+* Loggnivån för AEM standardloggkonfiguration (Apache Sling Logging Configuration) får inte ändras från standardvärdet INFO.
+* Du kan ställa in loggnivåerna på DEBUG för enskilda paket med produktkod (med instanser av OSGi-konfigurationsfabriken &quot;Apache Sling Logging Logger configuration&quot;), men du bör spara tid för att förhindra prestandaförsämring och återställa till INFO när det inte längre behövs.
 * Det går bra att justera loggnivåer för kundutvecklad kod.
 * Alla loggar - för både AEM produktkod och kundutvecklad kod - måste behålla standardloggningsformatet.
 * Loggutdata måste vara kopplade till standardfilen &quot;logs/error.log&quot;.
