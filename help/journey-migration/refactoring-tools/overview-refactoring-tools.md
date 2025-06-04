@@ -1,28 +1,29 @@
 ---
-title: Komma igång med omfaktoriseringsverktyg
+title: Omfaktoriseringsverktyg - översikt
 description: Kom igång med AEM Refactoring Tools
-exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
-source-git-commit: fa65b489d54d5333811145a1875a8f6fc89317bc
+source-git-commit: a77dfef8dce9f4ed549135087f7b63f6d46a4ea1
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
+<!-- Alexandru: temporarily commeting this out, since it breaks validation
+
 >[!CONTEXTUALHELP]
 >id="aemcloud_rs_overview"
->title="Ökning"
->abstract="Refactoring Tools är en lösning som utvecklats av Adobe för att hjälpa till att omfaktorisera befintliga AEM-projekt för kompatibilitet med AEM as a Cloud Service. Verktygen körs via Cloud Acceleration Manager (CAM) och automatiserar viktiga moderniseringsuppgifter."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html?lang=sv-SE" text="Riktlinjer och bästa praxis"
+>title="Overview"
+>abstract="Refactoring Tools is a solution developed by Adobe to help refactor existing AEM projects for compatibility with AEM as a Cloud Service. The tools are executed via Cloud Acceleration Manager (CAM) and automate key modernization tasks."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/guidelines-best-practices-content-transfer-tool.html" text="Guidelines and Best Practices"
 
-# Komma igång med omfaktoriseringsverktyg {#getting-started-refactoring-tools}
+-->
+
+# Omfaktoriseringsverktyg - översikt {#refactoring-tools-overview}
 
 **Omfaktoriseringsverktygen** effektiviserar processen att uppdatera befintliga AEM-projekt så att de blir kompatibla med **AEM as a Cloud Service (AEMaaCS)**. De här verktygen automatiserar vanliga omfaktoriserings- och moderniseringsuppgifter och är integrerade med **Cloud Acceleration Manager** för en smidig upplevelse.
 
 Omfaktoriseringsverktygen fanns tidigare bara som CLI-verktyg och har nu ett enhetligt gränssnitt med funktioner som automatiserad inspektion, konfigurationsgenerering och jobbkörning, vilket minskar de manuella kostnaderna och förbättrar synligheten.
-
-&#x200B;---
 
 ## Inspektionsarbetsflöde {#inspection-workflow}
 
@@ -34,8 +35,6 @@ Omfaktoriseringsverktygen fanns tidigare bara som CLI-verktyg och har nu ett enh
 * **Konfigurationsgenerering** - Verktygen undersöker den överförda källkoden och genererar de nödvändiga konfigurationerna.
 * **Belastningsöverföring** - Dessa konfigurationer skickas direkt till de valda verktygen för körning.
 
-&#x200B;---
-
 ## Tillgängliga omfaktoriseringsverktyg
 
 ### Databasmodernisering {#repo-modernizer}
@@ -45,8 +44,6 @@ Omfaktoriseringsverktygen fanns tidigare bara som CLI-verktyg och har nu ett enh
 ### Kodtransformator {#code-transformer}
 
 **Kodtransformatorn** använder intelligent mönsterigenkänning och AI-driven analys för att identifiera och uppdatera kodsegment som är inkompatibla med AEMaaCS. Det här verktyget förenklar migreringen och minskar antalet manuella kodändringar.
-
-&#x200B;---
 
 ## Fas i arbetsflöde för omfaktorisering {#phases-in-refactoring-tools}
 
@@ -59,8 +56,6 @@ Omfaktoriseringsverktygen följer en strukturerad tvåstegsprocess:
 
 >[!NOTE]
 >Under inspektionen är det inte tillåtet att överföra ett annat projekt.
-
-&#x200B;---
 
 ### Fas 2: Utlösa ett omfaktoriseringsjobb
 
