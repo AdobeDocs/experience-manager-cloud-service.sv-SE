@@ -1,39 +1,55 @@
 ---
-title: Versionsinformation för Cloud Manager 2025.5.0
-description: Läs om Cloud Manager 2025.5.0 i Adobe Experience Manager as a Cloud Service.
+title: Versionsinformation om Cloud Manager 2025.6.0
+description: Läs om Cloud Manager 2025.6.0 i Adobe Experience Manager as a Cloud Service.
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 8696cf8a7e7cfc439450b34fa6fda10b38cd415e
+source-git-commit: 2d0153d9a7c18097266d94575c2a61e471ccd536
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
 
-# Versionsinformation om Cloud Manager 2025.5.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
+# Versionsinformation om Cloud Manager 2025.6.0 i Adobe Experience Manager as a Cloud Service {#release-notes}
 
 <!-- https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.03.0+Release -->
 
-Läs om Cloud Manager 2025.5.0 i AEM (Adobe Experience Manager) as a Cloud Service.
+Läs om Cloud Manager 2025.6.0 i AEM (Adobe Experience Manager) as a Cloud Service.
 
 Se även [aktuell versionsinformation för Adobe Experience Manager as a Cloud Service](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Cloud Manager 2025.5.0 i AEM as a Cloud Service är torsdagen den 8 maj 2025.
+Lanseringsdatumet för Cloud Manager 2025.6.0 i AEM as a Cloud Service är torsdagen den 5 juni 2025.
 
-Nästa planerade version är torsdagen den 5 juni 2025.
+Nästa planerade version är torsdagen den 10 juli 2025.
 
 ## Nyheter {#what-is-new}
 
-### Konfigurera innehållskällan med ett klick för Edge Delivery Services
+* **(UI) Licenspanelen innehåller nu Edge Delivery Services-licens**
 
-Adobe Experience Manager (AEM) Edge Delivery Services tillåter innehållsleverans från flera källor, som Google Drive, SharePoint eller AEM, via ett snabbt, globalt distribuerat gränsnätverk.
+  Användningen av Edge Delivery Services-licenser visas nu på kontrollpanelen, vilket ger en tydligare bild av dina rättigheter och din status. <!-- CMGR-67686 -->
 
-Innehållskällans konfiguration skiljer sig mellan Helix 4 och Helix 5. Lär dig skillnaden och följ de omfattande konfigurationsstegen, exemplen och valideringsinstruktionerna för båda versionerna.
+  ![Licensinstrumentpanel](/help/implementing/cloud-manager/assets/license-dashboard.png)
 
-Se [Konfigurera innehållskällan](/help/implementing/cloud-manager/edge-delivery/configure-content-source.md).
+  Se [Kontrollpanel för licenser](/help/implementing/cloud-manager/license-dashboard.md).
+
+* **(UI) Edge Delivery platskonfiguration har uppdaterats**
+
+  Förenklade flödet för att lägga till en Edge Delivery-webbplats genom att begära **Edge Delivery Origin** i stället för **Repository URL**, vilket gör introduktionen och konfigurationen snabbare och mer intuitiv <!-- CMGR-67686 -->
+
+  ![Dialogrutan Lägg till Edge Delivery-webbplats](/help/implementing/cloud-manager/release-notes/assets/add-edge-delivery-site.png)
+
+  Se [Lägg till en Edge Delivery-webbplats](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md).
+
+* **(UI) Pipeline-favoriter**
+
+  I den här versionen av Cloud Manager introducerar du möjligheten att fästa favoritledningar, så att du kan markera specifika pipelines som favoriter så att de visas högst upp i listan på sidan **Pipelines**. Den här förbättringen gör det enklare att hitta och köra rörledningar som du ofta använder. <!-- CMGR-68293 -->
+
+  ![Rörledningar markerade som favoriter](/help/implementing/cloud-manager/release-notes/assets/pipeline-favorites.png) *Två rörledningar markerade som favoriter.*
+
+  Se [Markera pipeline-favoriter](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipeline-favorites).
 
 
 ## Program för tidig användning {#early-adoption}
@@ -42,13 +58,26 @@ Delta i Cloud Manager Tidiga Adobe-program och få exklusiv tillgång till komma
 
 Följande tidiga möjligheter för användare finns för närvarande:
 
-### Lägg till Edge Delivery Config Pipeline {#add-eds-pipeline}
 
-Config Pipelines stöds nu för sajter som byggts med Edge Delivery Services, vilket ger fler möjligheter än bara Cloud Service-miljöer. Du kan använda **Konfigurera pipelines** för att hantera inställningar som trafikfiltreringsregler och konfigurationer för WAF (Web Application Firewall), där det är tillämpligt. Se [Konfigurationer som stöds](/help/operations/config-pipeline.md#configurations).
+### Hantera åtkomsttoken{#manage-access-tokens}
 
-![Lägg till Edge Delivery-pipeline i listrutan Lägg till pipeline](/help/implementing/cloud-manager/release-notes/assets/add-edge-delivery-pipeline.png)
+Använd **Hantera åtkomsttoken** i Cloud Manager för att visa, byta namn på och ta bort åtkomsttoken som är associerade med externa Bring Your Own Git-databaser, som GitHub Enterprise, GitLab, Bitbucket och Azure DevOps.
 
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [grp-aemeds-config-pipeline-adopter@adobe.com](mailto:grp-aemeds-config-pipeline-adopter@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
+Se [Hantera åtkomsttoken](/help/implementing/cloud-manager/managing-code/manage-access-tokens.md)
+
+Om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till från den e-postadress som är kopplad till din Adobe ID.
+
+
+### Specialiserad testmiljö {#specialized-test-environment}
+
+Cloud Manager stöder nu tillägg av en ny miljötyp som kallas **Specialiserad testmiljö**. Miljön är utformad för att hjälpa team att validera funktioner under förhållanden nära produktionsförhållanden innan de publicerar. Den här miljötypen skiljer sig från *Produktion + Stage*, *Utveckling* eller *Snabb utveckling* och erbjuder ett fokuserat utrymme för att köra avancerade valideringsscenarier.
+
+Se [Lägga till en anpassad testmiljö](/help/implementing/cloud-manager/specialized-test-environment.md).
+
+![Dialogrutan Lägg till miljö med alternativknappen Specialiserad testmiljö markerad](/help/implementing/cloud-manager/release-notes/assets/specialized-test-environment.png)
+
+Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [grp-earlyadopter_cs_advtestenvironment@adobe.com](mailto:grp-earlyadopter_cs_advtestenvironment@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
+
 
 ### Ta med din egen Git - nu med stöd för Azure DevOps {#gitlab-bitbucket-azure-vsts}
 
@@ -67,6 +96,7 @@ Se [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manag
 
 Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
 
+
 #### Vanliga frågor och svar om hur du tar med din egen Git
 
 | Fråga | Svar |
@@ -77,15 +107,22 @@ Om du är intresserad av att testa den här nya funktionen och dela med dig av d
 | *Fungerar alla URL:er för GitLab-databasen? Databas-URL:en som används har formatet `https://gitlab_dedicated_url.com/path/repo-name.git`, vilket skiljer sig från exemplet i dokumentationen.* | Ja, alla GitLab-databaser som har stöd för API V3 eller V4 stöds, inklusive GitLab-URL:er som de som finns som värd, som den som beskrivs i [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/external-repositories.md) (`https://git-vendor-name.com/org-name/repo-name.git`). |
 
 
-<!--
-## Bug fixes
+### Lägg till Edge Delivery Config Pipeline {#add-eds-pipeline}
 
-* Issue
+Config Pipelines stöds nu för sajter som byggts med Edge Delivery Services, vilket ger fler möjligheter än bara Cloud Service-miljöer. Du kan använda **Konfigurera pipelines** för att hantera inställningar som trafikfiltreringsregler och konfigurationer för WAF (Web Application Firewall), där det är tillämpligt. Se [Konfigurationer som stöds](/help/operations/config-pipeline.md#configurations).
 
-* Issue
+![Lägg till Edge Delivery-pipeline i den nedrullningsbara listan Lägg till pipeline](/help/implementing/cloud-manager/release-notes/assets/edge-delivery-pipeline-add.png) *Lägger till en Edge Delivery-pipeline från sidan **Programöversikt**,**Pipelines**-kort.*
 
-* Issue
--->
+![Lägg till dialogrutan för Edge Delivery-pipeline](/help/implementing/cloud-manager/release-notes/assets/edge-delivery-pipeline-add-dialogbox.png) *Lägg till Edge Delivery-dialogrutan för pipeline.*
+
+Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [grp-aemeds-config-pipeline-adopter@adobe.com](mailto:grp-aemeds-config-pipeline-adopter@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
+
+
+## Felkorrigeringar
+
+* Sandlådemiljöer som tidigare markerats som `HIBERNATED` har inte längre fastnat i det läget, vilket gör att pipeline-körning eller distribution kan fortsätta som förväntat. <!-- CMGR-67705 -->
+* AEM Cloud Manager mappar nu Maven build-fel som orsakats av 409 fel (konflikter) korrekt när kundartefakter hämtas till ett kundrelaterat fel. Den här ändringen förbättrar felmeddelandena genom att skilja mellan interna fel och problem som rör konfiguration av kundmiljö. <!-- CMGR-66673 -->
+
 
 <!-- ## Known issues {#known-issues} -->
 
