@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.6.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 2d0153d9a7c18097266d94575c2a61e471ccd536
+source-git-commit: 6365b1c4109c2f2a77fbc332d11e1a8906d2cc6d
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Nästa planerade version är torsdagen den 10 juli 2025.
 
 ## Nyheter {#what-is-new}
 
-* **(UI) Licenspanelen innehåller nu Edge Delivery Services-licens**
+* **Licenspanelen innehåller nu Edge Delivery Services-licens**
 
   Användningen av Edge Delivery Services-licenser visas nu på kontrollpanelen, vilket ger en tydligare bild av dina rättigheter och din status. <!-- CMGR-67686 -->
 
@@ -35,7 +35,7 @@ Nästa planerade version är torsdagen den 10 juli 2025.
 
   Se [Kontrollpanel för licenser](/help/implementing/cloud-manager/license-dashboard.md).
 
-* **(UI) Edge Delivery platskonfiguration har uppdaterats**
+* **Edge Delivery platskonfiguration har uppdaterats**
 
   Förenklade flödet för att lägga till en Edge Delivery-webbplats genom att begära **Edge Delivery Origin** i stället för **Repository URL**, vilket gör introduktionen och konfigurationen snabbare och mer intuitiv <!-- CMGR-67686 -->
 
@@ -43,7 +43,7 @@ Nästa planerade version är torsdagen den 10 juli 2025.
 
   Se [Lägg till en Edge Delivery-webbplats](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md).
 
-* **(UI) Pipeline-favoriter**
+* **Pipeline-favoriter**
 
   I den här versionen av Cloud Manager introducerar du möjligheten att fästa favoritledningar, så att du kan markera specifika pipelines som favoriter så att de visas högst upp i listan på sidan **Pipelines**. Den här förbättringen gör det enklare att hitta och köra rörledningar som du ofta använder. <!-- CMGR-68293 -->
 
