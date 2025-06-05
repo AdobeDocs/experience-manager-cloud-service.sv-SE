@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: c27c78cbe21c9a02c4075ca7eade9853082fe211
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
@@ -213,25 +213,37 @@ Administratörer kan definiera metadatafält som söks igenom när en användare
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna så att den nya metadataegenskapen visas i listan med metadatafält.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgänglig metadataegenskap, om du vill redigera egenskapen eller klicka på ikonen Ta bort om du vill ta bort en befintlig egenskap. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
-
 ![Sökning i konfigurationsgränssnittet på Content Hub](assets/configuration-ui-metadata-search.png)
-
 
 ### Varumärke {#configure-branding-content-hub}
 
-Administratörer kan också anpassa rubrik och brödtext på banderollen på Content Hub-portalen efter varumärkeskraven. Gör så här:
+Som administratör anpassar du din [!DNL Content Hub]-portal så att den uppfyller dina varumärkeskrav. På sidan ![Varumärkning](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du avsnitten **[!UICONTROL Banner]**, **[!UICONTROL Colors]** och **[!UICONTROL Banner image]** för att utföra följande anpassningar:
 
-1. Klicka på **[!UICONTROL Branding]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. [Ändra banderollbilden från avsnittet [!UICONTROL Banner image]](#Change-the-banner-image)
+1. [Uppdatera rubrik och brödtext på banderollen och ändra textfärgen i avsnittet [!UICONTROL Banner]](#Add-title-and-body-text-to-your-banner-and-change-the-text-color)
+1. [Ändra primär och sekundär färg från avsnittet [!UICONTROL Colors] för att använda ett färgschema som är anpassat till ditt varumärkes tema](#Change-the-primary-and-secondary-color)
 
-1. Ange text i fälten **[!UICONTROL Title text on banner]** och **[!UICONTROL Body text on banner]**.
+Välj alternativet **[!UICONTROL Reset Defaults]** om du vill återställa ändringarna och standardtemat.
 
-1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
+#### Ändra banderollbilden{#Change-the-banner-image}
 
-![Gränssnittsmärkning för konfiguration på Content Hub](assets/configuration-ui-branding.png)
+Utför följande steg på sidan ![Varumärkning](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** för att ändra banderollbilden för din [!DNL Content Hub]-distribution:
 
-De varumärkningsuppdateringar som är aktiverade på skärmen för användargränssnittet för konfiguration på bannern för Content Hub-portalen:
+1. Klicka på ![välj bild](/help/assets/assets/Browse.svg) **[!UICONTROL Select from gallery]** om du vill välja en banderollbild med dialogrutan för resursväljaren. Resursväljaren visar endast godkända bilder.
+1. Markera bilden, klicka på **[!UICONTROL Select]** och sedan på **[!UICONTROL Save]** för att visa den som en banderollbild för din [!DNL Content Hub]-distribution.
 
-![Gränssnittsmärkning för konfiguration på Content Hub](assets/configuration-ui-branding-updates.png)
+#### Lägg till rubrik och brödtext i bannern och ändra textfärgen{#Add-title-and-body-text-to-your-banner-and-change-the-text-color}
+
+På sidan ![Varumärkning](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du respektive fält i avsnittet **[!UICONTROL Banner]** för att lägga till rubrik och brödtext i din banderoll.
+Klicka på den fyrkantiga rutan bredvid **[!UICONTROL Banner text color]** om du vill välja en textfärg i färgväljaren för din banderolltext eller ange färgens hexadecimala kod i fältet bredvid färgväljarens fyrkantiga ruta.
+
+#### Ändra primär- och sekundärfärg{#Change-the-primary-and-secondary-color}
+
+På sidan ![Varumärkning](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du avsnittet **[!UICONTROL Colors]** för att ange primära och sekundära färger genom att antingen välja dem med färgväljaren eller definiera färgens hexadecimala kod. De här färgerna anger bakgrund, text och ikonfärger för gränssnittselement så att användargränssnittet i [!DNL Content Hub] anpassas efter ditt varumärkes tema.
+
+**[!UICONTROL Primary color]:** Det primära färgschemat används för markeringsåtgärder, interaktiva element som kryssrutor, sökfält och växlingsknappar över [!DNL Content Hub] inklusive [!DNL Content Hub] startsida och [!UICONTROL Configuration] -sida. Det gäller även åtgärdsalternativ som är tillgängliga på primära [!DNL Content Hub]-gränssnitt, till exempel alternativ som är tillgängliga på **[!UICONTROL All Assets]**- och **[!UICONTROL Collections]**-sidor.
+
+**[!UICONTROL Secondary color]:** På hemsidan [!DNL Content Hub] gäller det sekundära färgschemat för gränssnittsalternativ och inmatningsfält som är tillgängliga i dialogrutor. Det gäller för alla alternativ på konfigurationsmenyn som är tillgängliga på sidan [!UICONTROL Configuration] förutom markeringsåtgärder, kryssrutor, sökfält och växlingsreglage.
 
 ### Utgångna resurser{#expired-assets-content-hub}
 
@@ -261,7 +273,7 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 ### Återgivningar {#renditions-content-hub}
 
-Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
 Gör så här:
 
