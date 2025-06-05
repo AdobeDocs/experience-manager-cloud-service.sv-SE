@@ -1,11 +1,11 @@
 ---
 title: Hämta resurser från Content Hub
-description: Lär dig hur du hämtar resurser från Content Hub-portalen
+description: Lär dig hur du hämtar en eller flera resurser och deras återgivningar från Content Hub-portalen.
 role: User
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: e108d25f3cdc025e0fbe8010854f245f62786baf
+source-git-commit: 809c0e780959340964933b13c8a347157f1dc17e
 workflow-type: tm+mt
-source-wordcount: '891'
+source-wordcount: '851'
 ht-degree: 0%
 
 ---
@@ -54,61 +54,86 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
+> Guiden [!DNL Content Hub] är nu tillgänglig i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
 >
 >[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
-Med Content Hub kan du hämta och dela dina resurser. Content Hub användargränssnitt visar endast godkända resurser. Dessa resurser kan vara bilder, videor eller annat digitalt innehåll. Content Hub förbättrar tillgängligheten och anpassbarheten för effektiv materialdistribution.
+Med [!DNL Content Hub] kan du hämta och dela dina resurser. Användargränssnittet [!DNL Content Hub] visar bara godkända resurser. Dessa resurser kan vara bilder, videor eller annat digitalt innehåll. [!DNL Content Hub] förbättrar tillgängligheten och anpassbarheten för effektiv resursdistribution.
 
-Du kan hämta en eller flera resurser och deras tillgängliga återgivningar med Content Hub.
+Du kan hämta en eller flera resurser och deras tillgängliga återgivningar med [!DNL Content Hub].
 
-Se [typer av renderingar i Content Hub](#types-of-renditions).
+Se de [typer av återgivningar som finns i Content Hub](#types-of-renditions).
 
-## Hämta en resurs och dess återgivningar {#download-asset-renditions}
+## Hämta en eller flera resurser och deras återgivningar {#download-asset-renditions}
 
-Så här hämtar du en resurs och dess återgivningar:
+Så här hämtar du en eller flera resurser och deras återgivningar:
 
-1. Klicka på resursen för att visa dess egenskaper.
+1. Om du vill hämta en resurs väljer du ![hämta](/help/assets/assets/download-icon.svg) som finns på resurskortet för att förhandsgranska resursen, markerar de tillgängliga återgivningarna och klickar på alternativet **[!UICONTROL Download]** i dialogrutan för att hämta de valda återgivningarna som en ZIP-fil. Om dialogrutan visar en resurslicens (för en licensierad mediefil) godkänner du licensvillkoren och klickar på **[!UICONTROL Download]**.
+   ![](/help/assets/assets/download-an-asset-CH-from-asset-card.png)
 
-1. Klicka på ![download](/help/assets/assets/download-icon.svg) för att starta hämtningsprocessen. På hämtningspanelen visas alla tillgängliga resursåtergivningar.
+   Du kan också klicka på resursens miniatyrbild och välja ![download](/help/assets/assets/download-icon.svg) för att markera och visa de tillgängliga återgivningarna i dialogrutan innan du hämtar dem.
+
+1. Om du vill hämta flera resurser markerar du resurserna, klickar på ![hämta](/help/assets/assets/download-icon.svg) **[!UICONTROL Download]** och granskar listan över valda resurser i dialogrutan **[!UICONTROL Download assets]**. Klicka på ![avmarkera](/help/assets/assets/Close.svg) bredvid en resurs för att avmarkera den i listan. Markera en eller flera återgivningar och klicka på **[!UICONTROL Download]** för att hämta dem som en ZIP-fil. Om du väljer **[!UICONTROL Smart Crop]** och **[!UICONTROL Static Renditions]** hämtas alla tillgängliga statiska och smarta beskärningsåtergivningar för varje markerad resurs.
+   ![hämta flera resurser](/help/assets/assets/download-multiple-assets-CH.png)
+Du kan fortsätta använda [!DNL Content Hub] medan hämtningen pågår. Content Hub avbryter inte arbetsflödet under hämtningen.
+   ![hämta flera resurser](/help/assets/assets/download-assets-notification-ch.png)
+Om dialogrutan **[!UICONTROL Download assets]** visar resurslicenser väljer du varje licens i den vänstra rutan ([!UICONTROL T&C Documents] avsnitt) för att förhandsgranska licensen och visa de valda resurserna som är kopplade till licensen i den mittersta rutan i dialogrutan. När du har granskat varje licens väljer du renderingarna, klickar på **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** och väljer **[!UICONTROL Download]** för att hämta dem.
+   ![hämta flera resurser](/help/assets/assets/download-multiple-licensed-assets-CH.png)
 
    >[!NOTE]
    >
-   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [Konfiguration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) .
-   >* Du kan hämta alla [statiska, dynamiska och smarta beskärningsåtergivningar](#types-of-renditions) när du hämtar en resurs.
+   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [!UICONTROL [Configuration]](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub).
+   >* De användare som har åtkomst till [!DNL [Dynamic Media with Open API capabilities]](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsåtergivningar.
+   >* Förhandsgranskningen av licensen visas bara om resursen har godkänts med [!DNL Assets as a Cloud Service]-redigeringsmiljön. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
-1. Markera en eller flera återgivningar och klicka på **[!UICONTROL Download]**.
+<!--
 
-   ![Hämta renderingar för en enskild resurs](/help/assets/assets/download-single-asset-renditions.png)
+## Download an asset and its renditions {#download-asset-renditions} 
+
+To download an asset and its renditions, execute the following steps: 
+
+1. Click the asset to view its properties.
+
+1. Click ![download](/help/assets/assets/download-icon.svg) to see the list of available asset renditions in the **[!UICONTROL Download]** panel.
+
+   >[!NOTE]
+   >
+   >* The renditions display only if their visibility is enabled using the [Configuration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) User Interface.
+   >* You can download all [static, dynamic, and smart crop renditions](#types-of-renditions) while downloading an asset.
+
+1. Select one or more renditions and click **[!UICONTROL Download]** to download the selected renditions as a zip file. 
+While downloading a licensed asset, select **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** before clicking **[!UICONTROL Download]**. You can also click **[!UICONTROL terms & conditions]** to view the asset license. The preview of the license displays only if the asset is approved using Assets as a Cloud Service authoring environment. For more information, see [Manage licensed assets on Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
+
+   ![Download single asset renditions](/help/assets/assets/download-single-asset-renditions.png)
 
 
-Om du hämtar en licensierad resurs väljer du **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** och klickar sedan på **[!UICONTROL Download]**. Du kan också klicka på **[!UICONTROL terms & conditions]** för att visa resurslicensen. Förhandsgranskningen av licensen visas bara om resursen har godkänts i Assets as a Cloud Service-redigeringsmiljön. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
+If you are downloading a licensed asset, select **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** and then click **[!UICONTROL Download]**. You can also click **[!UICONTROL terms & conditions]** to view the asset license. The preview of the license displays only if the asset is approved using Assets as a Cloud Service authoring environment. For more information, see [Manage licensed assets on Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
 >[!NOTE]
 >
-> De användare som har tillgång till [Dynamiska medier med Open API-funktioner](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsrenderingar.
+> The users with access to [Dynamic Media with Open API capabilities](/help/assets/dynamic-media-open-apis-overview.md) can view and download dynamic and smart crop renditions.
 
-## Hämta flera resurser och deras återgivningar {#download-multiple-assets-renditions}
+## Download multiple assets and their renditions {#download-multiple-assets-renditions} 
 
-Så här hämtar du flera resurser och deras återgivningar:
+To download multiple assets and their renditions, execute the following steps: 
 
-1. Markera resurserna och klicka på ![Hämta](/help/assets/assets/download-icon.svg) **[!UICONTROL Download]**. Skärmen [!UICONTROL Download assets] visar en lista med alla markerade resurser.
-1. Klicka på **[!UICONTROL Download]** för att välja bland de olika hämtningsalternativen för att påbörja hämtningen:
+1. Select the assets and click ![download](/help/assets/assets/download-icon.svg) **[!UICONTROL Download]**. The [!UICONTROL Download assets] screen displays listing all the selected assets. 
+1. Click **[!UICONTROL Download]** to select from the various download options to begin download:
 
-   * **Hämta[!UICONTROL Originals]**: Välj det här alternativet om du vill hämta de valda resurserna i det ursprungliga formuläret.
-   * **Hämta[!UICONTROL Static Renditions only]**: Välj det här alternativet om du vill hämta alla tillgängliga statiska återgivningar av resurser förutom de ursprungliga resurserna.
-   * **Hämta[!UICONTROL Originals & Static Renditions]**: Välj det här alternativet om du vill hämta både ursprungliga och statiska återgivningar av de valda resurserna.
+    * **Download [!UICONTROL Originals]**: Select this option to download the selected assets in the original form.
+    * **Download [!UICONTROL Static Renditions only]**: Select this option to download all available static renditions of assets except the original assets.
+    * **Download [!UICONTROL Originals & Static Renditions]**: Select this option to download both original and static renditions of the selected assets. 
 
-     ![Hämta flera återgivningar](/help/assets/assets/download-multiple-renditions.png)
+      ![Download multiple renditions](/help/assets/assets/download-multiple-renditions.png)
 
-     >[!NOTE]
-     >
-     >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [Konfiguration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) .
-     >* Du kan bara hämta [statiska återgivningar](#types-of-renditions) när du hämtar flera resurser.
+      >[!NOTE]
+      >
+      >* The renditions display only if their visibility is enabled using the [Configuration](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub) User Interface.
+      >* You can only download [static renditions](#types-of-renditions) while downloading multiple assets.
 
-   Om någon av de markerade resurserna är en licensierad resurs klickar du på licensen för resursen i den vänstra rutan för att se förhandsvisningen, vilket gör att du kan välja **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** och sedan klicka på **[!UICONTROL Download]**. Förhandsgranskningen av licensen visas bara om resursen har godkänts i Assets as a Cloud Service-redigeringsmiljön. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
+    If any of the selected asset is a licensed asset, click the license of the asset in left pane to see its preview, which enables you to select **[!UICONTROL I have read and accepted the terms & conditions mentioned above]** and then click **[!UICONTROL Download]**. The preview of the license displays only if the asset is approved using Assets as a Cloud Service authoring environment. For more information, see [Manage licensed assets on Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
-   <!--![download-multiple-license](/help/assets/assets/download-multiple-license.png)-->
+    <!--![download-multiple-license](/help/assets/assets/download-multiple-license.png)-->
 
 <!--1. On the Content Hub homepage, select the asset and click **Download**. The **Download assets** dialog box displays a license or list of licenses associated with the selected assets in the left pane. 
 1. Click a license in the left pane to see its PDF in the middle pane and the associated assets with it in the right pane. The license PDF preview is displayed only if the license is approved in your Assets as a Cloud Service environment. [Approve the license PDFs](/help/assets/approve-assets-content-hub.md) of the selected assets to see their previews.
@@ -142,12 +167,11 @@ The dialog box that displays depends on whether the download list includes expir
 
  To download non-licensed assets, select the assets and click ![download](/help/assets/assets/download-icon.svg) from the top rail.-->
 
-
 ## Typ av återgivning {#types-of-renditions}
 
 Resursåtergivningar är olika representationer av en tillgångs originalfil. Det kan vara miniatyrbilder, optimerade versioner för webb eller mobiler, vattenstämplade eller DRM-skyddade filer eller till och med dynamiska element som smarta beskärningar. De behöver inte matcha den ursprungliga filtypen, utan de representerar resursen i olika fall.
 
-Läs mer om att [visa och hantera återgivningar i Experience Manager Assets](/help/assets/renditions.md).
+Läs mer om att [visa och hantera återgivningar i [!DNL Experience Manager Assets]](/help/assets/renditions.md).
 
 [!DNL Experience Manager Assets] stöder följande typer av återgivningar:
 
@@ -155,7 +179,7 @@ Läs mer om att [visa och hantera återgivningar i Experience Manager Assets](/h
 
 * [Dynamiska återgivningar](/help/assets/renditions.md#dynamic-renditions): Dynamiska återgivningar är anpassade versioner av resurser i realtid som utför olika åtgärder, till exempel att ändra storlek på bilder för olika enhetsupplösningar eller beskära för att passa olika proportioner. Med dessa renderingar kan ni erbjuda personaliserade och optimerade upplevelser för större behov. Dynamiska återgivningar av resurser skapas i [!DNL Adobe Experience Manager Assets]-redigeringsmiljön. Mer information om steg som krävs för att aktivera dynamiska renderingar finns i [Aktivera dynamiska renderingar](#enable-dynamic-media-renditions).
 
-* [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic media smart crop for utnyttjar artificiell intelligens som drivs av Adobe Sensei för att spåra intressepunkten och säkerställa att våra resurser ser ut som de bästa på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
+* [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic Media Smart crop utnyttjar artificiell intelligens från Adobe Sensei för att spåra intressepunkten och säkerställa att våra resurser ser så bra ut som möjligt på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
 
   Smart Crop-renderingar visas och är bara tillgängliga för hämtning om du har tillgång till [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md). Återgivningar för smart beskärning är bara tillgängliga för bildresurser.
 
