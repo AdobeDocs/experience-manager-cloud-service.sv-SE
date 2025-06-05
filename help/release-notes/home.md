@@ -4,7 +4,7 @@ description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud 
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
 feature: Release Information
 role: Admin
-source-git-commit: 06c8cfb5bdd020334c164058fd1f9f337a97f4a3
+source-git-commit: b13d005e6c0553b08e0d361cfd925872d61aa7ec
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 6%
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 | Produkt | Adobe Experience Manager as a Cloud Service |
 |---|---|
-| Version | 2025.4.0 |
+| Version | 2025.5.0 |
 | Typ | Kontinuerliga uppdateringar |
 | Tillgänglighetsdatum | Kontinuerlig uppdatering |
 
@@ -35,7 +35,7 @@ Förutom innovationshastigheten ger [!DNL Adobe Experience Manager] as a Cloud S
 
 Så här förbereder du en release:
 
-1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager releases-färdplanen](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
+1. Markera dina kalendrar: Kontrollera nyckeldatum för månatliga releaser på [Experience Manager releases-färdplanen](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 1. Granska versionsinformationen: Läs [aktuell versionsinformation](/help/release-notes/release-notes-cloud/release-notes-current.md) för att få information om releasefunktionerna och förhandsversionsfunktionerna.
 1. Få åtkomst till och försök med nya funktioner: Aktivera [prerelease-kanalen](/help/release-notes/prerelease.md) i icke-produktionsmiljöer och börja testa funktionerna i dina anpassade miljöer.
 1. Utbilda dina användare: Använd dokumentation och Experience League-resurser för att få användarna att komma igång och bli bättre på de nya funktionerna.
