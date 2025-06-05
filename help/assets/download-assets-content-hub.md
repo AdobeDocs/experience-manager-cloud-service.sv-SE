@@ -82,8 +82,8 @@ Om dialogrutan **[!UICONTROL Download assets]** visar resurslicenser väljer du 
 
    >[!NOTE]
    >
-   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [!UICONTROL [Configuration]](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub).
-   >* De användare som har åtkomst till [!DNL [Dynamic Media with Open API capabilities]](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsåtergivningar.
+   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [[!UICONTROL [Configuration]]](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub).
+   >* De användare som har åtkomst till [[!DNL [Dynamic Media with Open API capabilities]]](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsåtergivningar.
    >* Förhandsgranskningen av licensen visas bara om resursen har godkänts med [!DNL Assets as a Cloud Service]-redigeringsmiljön. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
 <!--
