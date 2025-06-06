@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.6.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 6365b1c4109c2f2a77fbc332d11e1a8906d2cc6d
+source-git-commit: 58514d9f55eaaa35801380648831ad6d13cf1529
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Om du är intresserad av att testa den nya funktionen och dela med dig av dina s
 
 Cloud Manager stöder nu tillägg av en ny miljötyp som kallas **Specialiserad testmiljö**. Miljön är utformad för att hjälpa team att validera funktioner under förhållanden nära produktionsförhållanden innan de publicerar. Den här miljötypen skiljer sig från *Produktion + Stage*, *Utveckling* eller *Snabb utveckling* och erbjuder ett fokuserat utrymme för att köra avancerade valideringsscenarier.
 
-Se [Lägga till en anpassad testmiljö](/help/implementing/cloud-manager/specialized-test-environment.md).
+Se [Lägg till en anpassad testmiljö](/help/implementing/cloud-manager/specialized-test-environment.md).
 
 ![Dialogrutan Lägg till miljö med alternativknappen Specialiserad testmiljö markerad](/help/implementing/cloud-manager/release-notes/assets/specialized-test-environment.png)
 

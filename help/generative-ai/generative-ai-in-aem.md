@@ -4,10 +4,10 @@ description: Läs mer om generativ AI i Adobe Experience Manager as a Cloud Serv
 feature: Generative AI
 role: Admin, Architect, Developer, User
 exl-id: 740d9a5b-bd83-4723-a43e-0ead475c3392
-source-git-commit: df463616bcc85fc0065fb708e69d4f7bd5bac131
+source-git-commit: 8e3b3ffed97336580a17ad572cc1793c690a8a7d
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: '350'
+ht-degree: 3%
 
 ---
 
@@ -38,6 +38,10 @@ Generativ AI används i hela AEM:
 
   Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe Express-rättigheter). Du kan redigera befintligt innehåll med lättanvända verktyg, producera varumärkesanpassade varianter med mallar och märkeselement och skapa nytt innehåll med de senaste GenAI-funktionerna från Adobe Firefly.
 
+* [AI-genererade smarta taggar](/help/assets/metadata-assets-view.md#ai-smart-tags)
+
+  För digitala Assets kan du använda AI för att automatiskt tilldela beskrivande taggar i stället för att förlita dig på manuella indata. Dessa AI-genererade taggar förbättrar metadatakvaliteten och gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll.
+
 <!-- 
   * [AI Assistant in Adobe Experience Manager](/help/implementing/cloud-manager/aem-ai-assistant.md)
 -->
@@ -46,6 +50,6 @@ Generativ AI används i hela AEM:
 
 * [Adobe AI - översikt](https://www.adobe.com/ai/overview.html)
 
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)
