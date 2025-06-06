@@ -31,6 +31,7 @@ Som standard är funktionen för rensning av cache inaktiverad i CIF-konfigurati
 * Gör det möjligt för avlyssnaren att rensa cacheminnet från varje instans av AEM (publicera och författare) genom att lägga till konfigurationen `com.adobe.cq.commerce.core.cacheinvalidation.internal.InvalidateCacheSupport.cfg.json` i ditt projekt, vilket visas [här](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.core.cacheinvalidation.internal.InvalidateCacheSupport.cfg.json).
    * Konfiguration ska vara aktiverat för både författare och publiceringsinstanser.
    * Aktivera Dispatcher-cachen (valfritt): du kan aktivera inställningen för rensningscache för dispatcher genom att ange egenskapen `enableDispatcherCacheInvalidation` till true i ovanstående konfiguration. Detta innehåller funktioner för att rensa cacheminnet från dispatchern.
+
      >[!NOTE]
      >
      > Detta fungerar bara med publiceringsinstanser.
@@ -63,6 +64,7 @@ För att kontrollera om cacheminnen rensas ordentligt:
        "storePath": "/content/venia/us/en", // Mandatory : Needs to be given to know for which site we are removing the clear cache.
    }'
    ```
+
 Om allt blir bra återspeglas de nya ändringarna i alla instanser. Om ändringarna inte återspeglas för publiceringsinstansen kan du kontrollera i det privata fönstret om det finns motsvarande PLP- och PDP-sidor.
 
 >[!NOTE]
