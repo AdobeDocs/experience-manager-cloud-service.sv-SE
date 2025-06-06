@@ -48,6 +48,7 @@ ht-degree: 0%
         </td>
     </tr>
 </table>
+
 <!-- ![Manage collections](assets/manage-collections.jpg) -->
 ![Hantera samlingar](assets/manage-collection.png)
 
