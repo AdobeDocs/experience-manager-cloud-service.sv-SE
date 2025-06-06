@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt prod
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 17e842c9-599a-4877-9834-1e7220f508a8
-source-git-commit: a7e8e340355d85236a0997b28e0a04296b2ef5b4
+source-git-commit: 88c1712e2021eda2ea66304c65f6d96a1a8155be
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Läs om varför du måste lägga upp din Edge Delivery Services webbplats på Cloud Manager.
->Se [Fördelar med att använda Adobe rekommenderade sökväg för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#recommended-path-eds).
+>>Se [Fördelar med att använda Adobe rekommenderade sökväg för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#recommended-path-eds).
 
 **Så här lägger du till en Edge Delivery-webbplats i Cloud Manager:**
 
@@ -40,7 +40,7 @@ Klicka på **Lägg till plats** i sidans övre högra hörn.
    | Textfält | Beskrivning |
    | - | --- |
    | Platsnamn | Ange namnet på den Edge Delivery-webbplats som du lägger till.<br>Namnet fungerar som en unik identifierare för webbplatsen i Cloud Manager. |
-   | Databas-URL | Ange Git-databasen där webbplatsens kod lagras.<br>I det här fältet kan Cloud Manager hämta koden från den databasen under distributionsprocessen. |
+   | Edge Delivery Origin | Det här värdet anger URL-sökvägen till innehållskällan för din webbplats i Edge Delivery Services. Den länkar också Cloud Manager till er webbplats.<br>URL-adressen innehåller vanligtvis *branch*, *project* och *tenant*, som i följande exempel (endast i illustrationssyfte):<br>`https://main--projectname--tenant.aem.live` |
    | Platsbeskrivning (valfritt) | Ange en kort beskrivning av den Edge Delivery-webbplats som du lägger till.<br>En beskrivning hjälper till att identifiera och skilja ut webbplatsen, vilket gör det enklare att hantera och identifiera andra webbplatser som du har lagt till. |
 
 1. Klicka på **Lägg till** i dialogrutans nedre högra hörn.

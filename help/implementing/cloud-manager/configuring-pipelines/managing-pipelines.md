@@ -6,9 +6,9 @@ exl-id: 4aff5a84-134a-43fa-8de8-8d564f4edd16
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fdf28905b16b4cc5c6947b8b216940b0c43b2a6a
+source-git-commit: 4ddca61044d7923db9fd08b96cb18cedfd71cf70
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,19 @@ Om en pipeline körs klickar du på ![Info - medieikon](https://spectrum.adobe.c
 Du kan också klicka på ![Ellips - Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) bredvid pipelinen om du vill vidta ytterligare åtgärder som är lämpliga för pipelineläget, till exempel [redigera](#editing-pipelines) eller [avbryta körningen](#cancel).
 
 ![Pipeline-åtgärder](/help/implementing/cloud-manager/assets/configure-pipeline/pipeline-actions.png)
+
+### Markera pipeline-favoriter{#pipeline-favorites}
+
+Du kan markera specifika pipelines som favoriter så att de visas högst upp i listan på sidan **Pipelines** . Detta gör det enklare att hitta och köra rörledningar som du ofta använder.
+
+**Så här markerar du pipeline-favoriter:**
+
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
+1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+1. På sidan **Programöversikt** klickar du på fliken ![Pipeline - ikonen Arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines** .
+1. På sidan Pipelines, till vänster om ett pipelinenamn och en pipelinetyp, klickar du på ![Stjärndispositionsikonen för ofördelaktig pipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_StarOutline_18_N.svg) för att lägga till den i din favoritlista.
+Du kan också klicka på ikonen ![Stjärna för en favoritpipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Star_18_N.svg) om du vill ta bort pipelinen från favoritlistan.
+
 
 ## Aktivitetssida {#activity}
 
@@ -209,3 +222,4 @@ Du kan också avbryta en pipeline från informationssidan för pipeline.
    ![Avbryt pipeline-information](/help/implementing/cloud-manager/assets/cancel-pipeline-details.png)
 
 1. Klicka på **Avbryt**.
+

@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
+source-git-commit: f75bcd7e311980c3d1f9075be73d5f2896f76a2d
 workflow-type: tm+mt
-source-wordcount: '2374'
+source-wordcount: '2430'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,13 @@ En användare med nödvändig behörighet kan skapa följande miljötyper (inom 
 | **Produktion + scen** | Produktions- och testmiljöer finns som par och används för produktions- respektive testningsändamål. Utför prestanda- och säkerhetstester på scenmiljön. Den har samma storlek som produktionen. |
 | **Utveckling** | En utvecklingsmiljö kan skapas för utvecklings- och testningsändamål och kan endast kopplas till icke-produktionsrörledningar. Utvecklingsmiljöer har inte samma storlek som fas och produktion och bör inte användas för att utföra prestanda- och säkerhetstester. |
 | **Snabb utveckling** | Med en Rapid Development Environment (RDE) kan utvecklare snabbt driftsätta och granska ändringar. Detta minskar tiden som krävs för att testa funktioner som redan har validerats i en lokal utvecklingsmiljö. Mer information om hur du använder en RDE finns i [dokumentationen för den snabba utvecklingsmiljön](/help/implementing/developing/introduction/rapid-development-environments.md). |
+| **Specialiserad testmiljö** | Specialiserade testmiljöer ger ett dedikerat utrymme för att validera funktioner under förhållanden som liknar produktionsförhållanden, vilket är idealiskt för stresstestning och avancerade kontroller före driftsättning. Se [Lägg till en anpassad testmiljö](/help/implementing/cloud-manager/specialized-test-environment.md) |
 
-Funktionerna i enskilda miljöer beror på vilka lösningar som har aktiverats i [programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) i miljön.
+>[!NOTE]
+>
+>Funktionen **Specialiserad testmiljö** är för närvarande bara tillgänglig via det program som används tidigt. Information om hur du registrerar dig som tidig användare finns i [Specialiserad testmiljö](/help/implementing/cloud-manager/release-notes/current.md#specialized-test-environment).
+
+Funktionerna i enskilda miljöer beror på vilka lösningar som är aktiverade i [programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md) i miljön.
 
 * [Sites](/help/overview/introduction.md)
 * [Assets](/help/assets/overview.md)
@@ -76,7 +81,7 @@ Sidan **Översikt** visar nu din nya miljö på kortet **Miljöer**. Nu kan du s
 
 ## Flera publiceringsregioner {#multiple-regions}
 
-En användare med rollen **Affärsägare** kan konfigurera produktions- och mellanlagringsmiljöer så att ytterligare tre publiceringsregioner ingår förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Mer information finns i [dokumentationen för ytterligare Publish-regioner](/help/operations/additional-publish-regions.md).
+En användare med rollen **Affärsägare** kan konfigurera produktions- och mellanlagringsmiljöer så att ytterligare tre publiceringsregioner ingår förutom den primära regionen. Ytterligare publiceringsregioner kan förbättra tillgängligheten. Mer information finns i [dokumentationen för ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md).
 
 >[!TIP]
 >
@@ -105,7 +110,7 @@ Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-net
 
 ### Redigera flera publiceringsområden {#edit-regions}
 
-Om du inte angav några ytterligare regioner från början kan du göra det efter att miljöerna har skapats om du har de tillstånd som krävs.
+Om du inte angav några ytterligare regioner från början kan du göra det när miljön har skapats och du har de rättigheter som krävs.
 
 Du kan även ta bort ytterligare publiceringsregioner. Du kan dock bara lägga till eller ta bort regioner i en transaktion. Om du måste lägga till en region och ta bort en region, ska du först lägga till, spara ändringen och sedan ta bort (eller omvänt).
 
@@ -213,21 +218,21 @@ Oavsett vilket dirigeras [trafik alltid till den närmaste regionen som är onli
 
 ## Uppdatera miljöer {#updating-dev-environment}
 
-Som molnbaserad tjänst hanterar Adobe automatiskt uppdateringar för utvecklings-, staging- och produktionsmiljöer inom produktionsprogrammen.
+Som molnbaserad tjänst hanterar Adobe automatiskt uppdateringar för din utvecklings-, staging- och produktionsmiljö i produktionsprogrammen.
 
-Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. När en sådan miljö inte kör den senaste allmänt tillgängliga AEM visar statusen på kortet **Miljöer** på skärmen **Översikt** i programmet **Uppdatering tillgänglig**.
+Uppdateringar av miljöer i sandlådeprogram hanteras dock i programmen. Om en sådan miljö inte kör den senaste allmänt tillgängliga AEM-versionen visas **Uppdatering tillgänglig** på **miljökortet** på skärmen **Översikt** i programmet.
 
 ![Status för miljöuppdatering](assets/environ-update.png)
 
 ### Uppdateringar och rörledningar {#updates-pipelines}
 
-Pipelines är det enda sättet att [distribuera kod till AEM as a Cloud Service](deploy-code.md)-miljöer. Därför är varje pipeline kopplad till en viss AEM.
+Pipelines är det enda sättet att [distribuera kod till AEM as a Cloud Service](deploy-code.md)-miljöer. Därför är varje pipeline kopplad till en viss AEM-version.
 
-När Cloud Manager identifierar en nyare version av AEM än den som senast distribuerades med pipelinen visas statusen **Uppdatering tillgänglig** för miljön.
+När Cloud Manager identifierar en nyare version av AEM än den som senast distribuerades med pipeline, visas statusen **Uppdatering tillgänglig** för miljön.
 
 Uppdateringsprocessen är därför en tvåstegsprocess:
 
-1. Uppdaterar pipeline med den senaste AEM versionen
+1. Uppdatera pipeline med den senaste AEM-versionen
 1. Köra pipeline för att distribuera den nya versionen av AEM till en miljö
 
 ### Uppdatera dina miljöer {#updating-your-environments}
@@ -243,9 +248,9 @@ Det här alternativet är också tillgängligt genom att klicka på fliken **Mil
 
 ![Uppdateringsalternativ på fliken Miljö](assets/environ-update3.png)
 
-En användare med rollen **Distributionshanteraren** eller **Affärsägare** kan använda det här alternativet för att uppdatera pipeline som är associerad med den här miljön till den senaste AEM.
+En användare med rollen **Distributionshanteraren** eller **Affärsägare** kan använda det här alternativet för att uppdatera pipeline som är associerad med den här miljön till den senaste AEM-versionen.
 
-När pipeline-versionen har uppdaterats till den senaste allmänt tillgängliga AEM-versionen uppmanas användaren att köra den associerade pipelinen för att distribuera den senaste versionen till miljön.
+När pipeline-versionen har uppdaterats till den senaste allmänt tillgängliga AEM-versionen uppmanas användaren att köra den associerade pipeline för att distribuera den senaste versionen till miljön.
 
 ![Exempel på uppmaningen att köra pipelinen för att uppdatera miljön](assets/update-run-pipeline.png)
 
@@ -294,7 +299,7 @@ En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console*
 
 Endast en användare med rollen **Utvecklare** har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
+Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
 
 Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i en enskild miljö.
 

@@ -5,9 +5,9 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 6b3e2b960869786427a22d077216aa75a5ca0717
+source-git-commit: 6c36e45dc5437f34b26732a34e9bda38deac56b1
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Kontrollpanel för licenser {#license-dashboard}
 
-Cloud Manager har en kontrollpanel där du enkelt kan se vilka AEMaaCS-produkträttigheter som är tillgängliga för din organisation eller hyresgäst.
+Cloud Manager har en kontrollpanel där du enkelt kan se vilka Adobe Experience Manager as a Cloud Service-produkträttigheter (AEMaaCS) som är tillgängliga för din organisation eller hyresgäst.
 
 >[!IMPORTANT]
 >
->Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
+>Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
 >Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md#program-cards).
 
@@ -41,7 +41,10 @@ Cloud Manager License Dashboard ger enkel åtkomst till tillgängliga lösningsr
 
 Kontrollpanelen är uppdelad i tre avsnitt som visar dig:
 
-* **Lösningar** - Vilka lösningar har du licensierat?
+* **Lösningar** - Vilka lösningar har du licensierat? Exempel: Sites, Edge Delivery Services och Assets.
+
+  ![Lösningslista](assets/solutions.png)
+
 * **Tillägg** - Vilka tillägg till dina licensierade lösningar som du har tillgängliga.
 * **Andra berättiganden** - Vilken sandlåda, vilken dev-miljö och andra berättiganden som kan användas i din klientorganisation.
 
@@ -56,7 +59,7 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 
 >[!TIP]
 >
->Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/se/enterprise/using/admin-console.html).
+>Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Visa användningsinformation {#view-usage-details}
 

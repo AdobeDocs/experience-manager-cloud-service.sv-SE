@@ -5,9 +5,9 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: d0cf86d429c7374ad12f6eeb9f287b0ace3406ec
+source-git-commit: e881c3d8af7127e030aa9a0a2c163eaf04870c2b
 workflow-type: tm+mt
-source-wordcount: '2074'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,11 @@ Kunderna kan nu även införliva sina Azure DevOps Git-databaser i Cloud Manager
 
 * För Edge Delivery Services-användare kan den inbyggda databasen användas för att synkronisera och distribuera platskod.
 * För AEM as a Cloud Service- och Adobe Managed Services-användare (AMS) kan databasen länkas till både fullständiga och frontbaserade pipelines.
-&#39;
+
 >[!NOTE]
 >
 >De funktioner som beskrivs i den här artikeln är endast tillgängliga via programmet för tidig användning. Mer information och om du vill registrera dig som tidig användare finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
+
 
 ## Konfigurera en extern databas
 
@@ -83,13 +84,16 @@ Konfigurationen av en extern databas i Cloud Manager består av följande steg:
    | | **Databastyp: Bitbucket**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Behörigheter som krävs för Bitbucket Personal Access Token (PAT)<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webboks-händelser.<br>När du skapar applösenordet i Bitbucket måste det innehålla följande lösenordsbehörigheter:<ul><li>Databas (skrivskyddad)<li>Hämta begäranden (läsa och skriva)<li>Webhooks (läs och skriv)</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
    | | **Databastyp: Azure DevOps**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Azure DevOps-dokumentationen](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=Windows).<li>Nödvändig behörighet för Azure DevOps Personal Access Token (PAT).<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webkrockshändelser.<br>När du skapar applösenordet i Azure DevOps måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Databas (skrivskyddad)</li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
 
+   Se även [Hantera åtkomsttoken](/help/implementing/cloud-manager/managing-code/manage-access-tokens.md).
+
    >[!IMPORTANT]
    >
    >Funktionen **Lägg till ny åtkomsttoken** är för närvarande i fasen tidig Adobe. Ytterligare funktioner planeras. Därför kan de behörigheter som krävs för åtkomsttoken ändras. Dessutom kan användargränssnittet för hantering av tokens uppdateras, inklusive funktioner som utgångsdatum för token. Och automatiska kontroller för att säkerställa att tokens som är länkade till databaser förblir giltiga.
 
 1. Klicka på **Validera**.
 
-Efter valideringen är den externa databasen klar att användas och länkas till en pipeline.
+   Efter valideringen är den externa databasen klar att användas och länkas till en pipeline.
+
 
 ## Länka en validerad extern databas till en pipeline {#validate-ext-repo}
 
@@ -113,6 +117,7 @@ Efter valideringen är den externa databasen klar att användas och länkas till
 >[!TIP]
 >
 >Mer information om hur du hanterar databaser i Cloud Manager finns i [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md).
+
 
 ## Konfigurera en webkrok för en extern databas {#configure-webhook}
 
@@ -172,6 +177,7 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
    | GitLab | Dessa webkrofshändelser gör att Cloud Manager kan utlösa rörledningar när kod skickas eller när en sammanfogningsbegäran skickas. De spårar även kommentarer som rör validering av pull-begäran (via anteckningshändelser).<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Push-händelser<li>Sammanfoga begäranhändelser<li>Anteckningshändelser</li></li></li></ul></ul></ul> |
    | Bitbucket | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Dragningsbegäran: Skapad<li>Pull-begäran: Uppdaterad<li>Dragningsbegäranden: Sammanfogade<li>Pull-begäran: Kommentar<li>Databas: Tryck</li></li></li></ul></ul></ul> |
    | Azure DevOps | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Databas: Tryck</li></li></ul></ul></ul> |
+
 
 ### Validering av pull-begäranden med webhooks
 
