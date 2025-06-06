@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.6.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 58514d9f55eaaa35801380648831ad6d13cf1529
+source-git-commit: 52c8745d3a3cc4bc41003a258a85a817e7ccb48b
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
@@ -59,15 +59,6 @@ Delta i Cloud Manager Tidiga Adobe-program och få exklusiv tillgång till komma
 Följande tidiga möjligheter för användare finns för närvarande:
 
 
-### Hantera åtkomsttoken{#manage-access-tokens}
-
-Använd **Hantera åtkomsttoken** i Cloud Manager för att visa, byta namn på och ta bort åtkomsttoken som är associerade med externa Bring Your Own Git-databaser, som GitHub Enterprise, GitLab, Bitbucket och Azure DevOps.
-
-Se [Hantera åtkomsttoken](/help/implementing/cloud-manager/managing-code/manage-access-tokens.md)
-
-Om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till från den e-postadress som är kopplad till din Adobe ID.
-
-
 ### Specialiserad testmiljö {#specialized-test-environment}
 
 Cloud Manager stöder nu tillägg av en ny miljötyp som kallas **Specialiserad testmiljö**. Miljön är utformad för att hjälpa team att validera funktioner under förhållanden nära produktionsförhållanden innan de publicerar. Den här miljötypen skiljer sig från *Produktion + Stage*, *Utveckling* eller *Snabb utveckling* och erbjuder ett fokuserat utrymme för att köra avancerade valideringsscenarier.
@@ -79,7 +70,7 @@ Se [Lägg till en anpassad testmiljö](/help/implementing/cloud-manager/speciali
 Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [grp-earlyadopter_cs_advtestenvironment@adobe.com](mailto:grp-earlyadopter_cs_advtestenvironment@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
 
 
-### Ta med din egen Git - nu med stöd för Azure DevOps {#gitlab-bitbucket-azure-vsts}
+### Använd din egen Git (BYOG) - nu med stöd för Azure DevOps {#gitlab-bitbucket-azure-vsts}
 
 <!-- BOTH CS & AMS -->
 
@@ -97,7 +88,7 @@ Se [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manag
 Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) från den e-postadress som är kopplad till din Adobe ID. Ta med vilken Git-plattform du vill använda och om du har en privat/offentlig eller företagsdatabasstruktur.
 
 
-#### Vanliga frågor och svar om hur du tar med din egen Git
+**Frågor och svar om BYOG**
 
 | Fråga | Svar |
 |---|---|
@@ -105,6 +96,15 @@ Om du är intresserad av att testa den här nya funktionen och dela med dig av d
 | *Går det att konfigurera olika databaser för olika miljöer (till exempel icke-produktion kontra produktion) så att testning i icke-produktion först tillåts?* | Ja, olika databaser kan konfigureras för olika miljöer. Utvecklings- eller kodkvalitetsflödet kan till exempel peka på en extern databas medan produktionsflödet är anslutet till Adobe-databasen. Kontrollera att synkroniseringsjobbet mellan de två databaserna förblir aktivt under den här konfigurationen. |
 | *Fortsätter befintliga inställningar som IP tillåtelselista att fungera?* | Ja, befintlig IP-tillåtelselista fortsätter att fungera som vanligt. Om den externa Git-databasen skyddas av en brandvägg måste de nödvändiga [Adobe IP-adresserna läggas till i tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md). |
 | *Fungerar alla URL:er för GitLab-databasen? Databas-URL:en som används har formatet `https://gitlab_dedicated_url.com/path/repo-name.git`, vilket skiljer sig från exemplet i dokumentationen.* | Ja, alla GitLab-databaser som har stöd för API V3 eller V4 stöds, inklusive GitLab-URL:er som de som finns som värd, som den som beskrivs i [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/external-repositories.md) (`https://git-vendor-name.com/org-name/repo-name.git`). |
+
+
+#### Hantera åtkomsttoken{#manage-access-tokens}
+
+Använd **Hantera åtkomsttoken** i Cloud Manager för att visa, byta namn på och ta bort åtkomsttoken som är kopplade till externa BYOG-databaser, som GitHub Enterprise, GitLab, Bitbucket och Azure DevOps.
+
+Se [Hantera åtkomsttoken](/help/implementing/cloud-manager/managing-code/manage-access-tokens.md).
+
+Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
 
 
 ### Lägg till Edge Delivery Config Pipeline {#add-eds-pipeline}
