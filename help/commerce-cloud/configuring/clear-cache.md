@@ -4,9 +4,9 @@ description: Lär dig hur du aktiverar och verifierar funktionen för rensning a
 feature: Commerce Integration Framework
 role: Admin
 exl-id: f89c07c7-631f-41a4-b5b9-0f629ffc36f0
-source-git-commit: f6d3ffd80e84f7c1d56fe24a395c9998ec209908
+source-git-commit: 27d8b5f6f358176c828d01f2ff51886d0433017c
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Cachelagring för komponenter och GraphQL {#clear-cache}
 
 Det här dokumentet innehåller en omfattande guide om hur du aktiverar och verifierar funktionen för rensning av cache i AEM CIF.
+
+>[!NOTE]
+>
+> Den här funktionen är experimentell.
 
 ## Aktivera funktionen Rensa cache i CIF-konfigurationen {#enable-clear-cache}
 
@@ -27,10 +31,9 @@ Som standard är funktionen för rensning av cache inaktiverad i CIF-konfigurati
 * Gör det möjligt för avlyssnaren att rensa cacheminnet från varje instans av AEM (publicera och författare) genom att lägga till konfigurationen `com.adobe.cq.commerce.core.cacheinvalidation.internal.InvalidateCacheSupport.cfg.json` i ditt projekt, vilket visas [här](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.core.cacheinvalidation.internal.InvalidateCacheSupport.cfg.json).
    * Konfiguration ska vara aktiverat för både författare och publiceringsinstanser.
    * Aktivera Dispatcher-cachen (valfritt): du kan aktivera inställningen för rensningscache för dispatcher genom att ange egenskapen `enableDispatcherCacheInvalidation` till true i ovanstående konfiguration. Detta innehåller funktioner för att rensa cacheminnet från dispatchern.
-
-  >[!NOTE]
-  >
-  > Detta fungerar bara med publiceringsinstanser.
+     >[!NOTE]
+     >
+     > Detta fungerar bara med publiceringsinstanser.
 
    * Se även till att du anger motsvarande mönster som passar din produkt, kategori och CMS-sida måste läggas till i ovanstående konfigurationsfil för att den ska kunna tas bort från dispatchercachen.
 
@@ -60,7 +63,6 @@ För att kontrollera om cacheminnen rensas ordentligt:
        "storePath": "/content/venia/us/en", // Mandatory : Needs to be given to know for which site we are removing the clear cache.
    }'
    ```
-
 Om allt blir bra återspeglas de nya ändringarna i alla instanser. Om ändringarna inte återspeglas för publiceringsinstansen kan du kontrollera i det privata fönstret om det finns motsvarande PLP- och PDP-sidor.
 
 >[!NOTE]
@@ -98,7 +100,6 @@ I den här tabellen visas den obligatoriska egenskapen som måste skickas i alla
 | Egenskap | Värde | Typ (Array/String/Boolean) | Rensa dispatchercachen? | Kommentar |
 |------------------------------|-------------------|---|---|---|
 | `storePath` | Motsvarande värde för webbplatssökvägen där cachen måste tas bort (Exempel: `/content/venia/us/en` som referens med veniaprojekt). | Sträng | Ja | Detta måste anges med kombinationen av `invalidateType.` |
-
 
 ### Exempel på API-begäran
 
