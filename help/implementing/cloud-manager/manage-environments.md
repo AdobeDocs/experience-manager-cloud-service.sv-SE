@@ -299,7 +299,7 @@ En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console*
 
 Endast en användare med rollen **Utvecklare** har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
+Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
 
 Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i en enskild miljö.
 
