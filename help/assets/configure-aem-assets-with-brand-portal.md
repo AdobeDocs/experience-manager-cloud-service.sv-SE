@@ -238,7 +238,7 @@ Along with the automation workflow to activate Brand Portal on Experience Manage
 >[!NOTE]
 >
 > Du kan inte skapa nya JWT-autentiseringsuppgifter från och med juni 2024. Härifrån skapas endast OAuth-autentiseringsuppgifter.
-> > Se mer [skapa en OAuth-konfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service#creating-oauth-configuration:~:text=For%20example%3A-,Creating%20an%20OAuth%20configuration,-To%20create%20a).
+> &#x200B;> Se mer [skapa en OAuth-konfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service#creating-oauth-configuration:~:text=For%20example%3A-,Creating%20an%20OAuth%20configuration,-To%20create%20a).
 
 I följande avsnitt beskrivs hur du konfigurerar Experience Manager Assets manuellt som en [!DNL Cloud Service] med Brand Portal med Adobe Developer Console.
 
