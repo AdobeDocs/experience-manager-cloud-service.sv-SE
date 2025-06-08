@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 6f4c2a8d6e4d4e67bfd0bd4da68bcef11668b8c5
+source-git-commit: 1b6316d07153fdf93481a252173334af45137a29
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2062'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the February 2025 Release Overview video for a summary of the features added in the 2025.2.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -64,7 +64,7 @@ AEM Assets kan integreras direkt med Figma, vilket ger designers möjlighet att 
 
 **Attributbaserad åtkomstkontroll (ABAC)**
 
-Content Hub tillåter nu att du tillämpar regelbaserade begränsningar för åtkomst av resurser. Tillgångsbehörigheter säkerställer styrning och ser också till att endast de relevanta resurserna är tillgängliga för användarna.
+[Content Hub tillåter nu att du tillämpar regelbaserade begränsningar för åtkomst av resurser](/help/assets/attribute-based-access-control.md). Tillgångsbehörigheter säkerställer styrning och ser också till att endast de relevanta resurserna är tillgängliga för användarna.
 
 Reglerna för resursbegränsning baseras på metadata och om villkoren som definieras i regeln matchar metadata för resursen visas resursen för användargrupperna.
 
@@ -78,21 +78,21 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 **Gränssnittsmärkning**
 
-Nu kan administratörer anpassa användargränssnittet med varumärkesspecifika element som bannerbilder, bannertitlar och brödtext samt primära och sekundära färger. Dessa förbättringar bidrar till att säkerställa ett enhetligt varumärke, förenkla användarnas introduktion och bygga upp förtroende.
+Content Hub tillåter nu administratörer att [anpassa användargränssnittet med varumärkesspecifika element](/help/assets/configure-content-hub-ui-options.md##configure-branding-content-hub), inklusive banderollbilder, bannertitlar och brödtext samt primära och sekundära färger. Dessa förbättringar bidrar till att säkerställa ett enhetligt varumärke, förenkla användarnas introduktion och bygga upp förtroende.
 
 ![Gränssnittsmärkning](/help/assets/assets/content-hub-ui-branding.png)
 
 **Delning av offentlig länk**
 
-Content Hub har nu stöd för att generera delningsbara länkar så att externa användare, utan programåtkomst, kan visa metadata för resurser eller hämta resurser.
+Content Hub har nu stöd för [generering av delningsbara länkar så att externa användare](/help/assets/share-assets-content-hub.md##share-assets), utan programåtkomst, kan visa metadata för resurser eller hämta resurser.
 
 ![Gränssnittsmärkning](/help/assets/assets/public-and-private-link.png)
 
 **Samlingsstyrning**
 
-Med Content Hub kan du nu styra åtkomsten till samlingar när du skapar dem, så att bara behöriga användare kan visa eller hantera grupperade resurser. Det ger bättre säkerhet, bättre samarbete, organiserad resurshantering och förenklad styrning.
+I Content Hub kan du nu [styra åtkomsten till samlingar när du skapar, så att bara behöriga användare kan visa eller hantera grupperade resurser](/help/assets/collections-content-hub.md##create-collections). Det ger bättre säkerhet, bättre samarbete, organiserad resurshantering och förenklad styrning.
 
-![Samlingsstyrning](/help/assets/assets/collection-permissions.png)
+>[!VIDEO](https://video.tv.adobe.com/v/3463336)
 
 >[!NOTE]
 >
@@ -100,11 +100,11 @@ Med Content Hub kan du nu styra åtkomsten till samlingar när du skapar dem, s�
 
 **Hämta flera resurser som en ZIP**
 
-Nu kan du även ladda ned de markerade resurserna och deras återgivningar i en ZIP-fil och inte som separata filer, vilket förenklar filhanteringen.
+Nu kan du även [hämta de markerade resurserna och deras återgivningar i en ZIP-fil](/help/assets/download-assets-content-hub.md#download-asset-renditions) och inte som separata filer, vilket förenklar filhanteringen.
 
 **Dynamiska medierenderingar i Content Hub**
 
-Få tillgång till alla förinställda renderingar och smarta beskärningar för nedladdning direkt från Content Hub användargränssnitt.
+Få tillgång till alla dina förinställda renderingar och smarta beskärningar för [Dynamic Media för hämtning, direkt från Content Hub användargränssnitt](/help/assets/download-assets-content-hub.md#download-asset-renditions).
 
 &#x200B;![Dynamiska medierenderingar](/help/assets/assets/dm-renditions-content-hub.png)
 
@@ -112,9 +112,9 @@ Få tillgång till alla förinställda renderingar och smarta beskärningar för
 
 **Dynamisk inbyggd medieintegrering med AJO B2C-&#x200B;**
 
-Inbyggd integrering av Experience Manager (AEM) Dynamic Media med Journey Optimizer (AJO) B2C, vilket gör att marknadsförarna enkelt kan bädda in AEM Dynamic Media-resurser (rendering och DM-mall) i AJO-innehåll och leverera uppdateringar i realtid och personaliserade upplevelser i alla kanaler.
+[Inbyggd integrering av Experience Manager (AEM) Dynamic Media med Journey Optimizer (AJO) B2C](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/aem-dynamic), vilket gör att marknadsförarna enkelt kan bädda in AEM Dynamic Media-resurser (återgivning och DM-mallar) i AJO-innehåll och leverera uppdateringar i realtid och personliga upplevelser i alla kanaler.
 
-&#x200B;![Dynamiska medierenderingar](/help/assets/assets/dm-ajo-integration.png)
+>[!VIDEO](https://video.tv.adobe.com/v/3457695/?learn=on&enablevpops=&autoplay=true)
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -263,7 +263,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -283,4 +283,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
