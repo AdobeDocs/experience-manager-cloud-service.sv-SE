@@ -2,7 +2,7 @@
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur man får tillgång till det och hur man kan ge feedback kring de alternativ som finns i Content Hub.
 exl-id: c5908058-f1ad-4aaa-9e8e-c0157e107ed1
-source-git-commit: f728e29110808b6b5a8181120086ab82349c9835
+source-git-commit: dbf83611f31ee598b43208f44614d3d8210a20f1
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe E
 
 ## Content Hub demo {#content-hub-demo}
 
->[!VIDEO](https://video.tv.adobe.com/v/3459547)
+>[!VIDEO](https://video.tv.adobe.com/v/3463712)
 
 ## Förutsättningar {#prerequisites-content-hub}
 
