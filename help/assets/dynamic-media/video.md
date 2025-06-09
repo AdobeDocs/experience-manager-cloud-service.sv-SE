@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Video Profiles,Best Practices
 role: User
 exl-id: 0d5fbb3e-b763-415f-8c69-ea36445f882b
-source-git-commit: 6cc21d0e7330b3dd4254ad15b64dc94c065417f7
+source-git-commit: 5514aec10184d67c24d00d2ed783a154e6587035
 workflow-type: tm+mt
-source-wordcount: '9687'
+source-wordcount: '9905'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,6 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Förhandsgranska och publicera videomaterial
 
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
-
         [Förhandsgranska videoklipp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) eller [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
         [Hantera videorenderingar](/help/assets/manage-digital-assets.md#managing-renditions)
 
@@ -70,7 +69,6 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Arbeta med videometadata
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
-
         [Redigera videoegenskaper](/help/assets/manage-digital-assets.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](/help/assets/manage-metadata.md)
@@ -95,11 +93,9 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Om du använder ett WCM-system från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
 
       * Integrera video med URL:
-
         [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
 
       * Integrera video med inbäddad kod på en webbsida:
-
         [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
    * [Generera videorapporter](#viewing-video-reports).
@@ -135,7 +131,7 @@ Följande stöds när du hanterar enstaka video och adaptiva videouppsättningar
 * Ordna, bläddra bland och sök videoklipp med fullt stöd för metadata för effektiv hantering av videomaterial.
 * Leverera adaptiva videouppsättningar till webben, datorer, surfplattor och mobila enheter.
 
-Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok för dynamiska mediavisare](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference).
+Adaptiv videoströmning stöds på olika iOS-plattformar. Se [Referenshandbok för dynamiska mediavisare](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/c-html5-video-reference).
 
 <!-- OUTDATED 2/28/22 BASED ON CQDOC-18692 Dynamic Media supports mobile video playback for MP4 H.264 video. You can find BlackBerry&reg; devices that support this video format at the following: [Supported video formats on BlackBerry&reg;](https://support.blackberry.com/kb/articleDetail?ArticleNumber=000005482).
 
@@ -151,7 +147,7 @@ OUTDATED 2/28/22 BASED ON CQDOC-18692 You can find Windows&reg; devices that sup
 
 <!-- GIVES a 404 See [Dynamic video playback](https://s7d9.scene7.com/s7/uvideo.jsp?asset=GeoRetail/Mop_AVS&config=GeoRetail/Universal_Video1&stageSize=640,480) sample. -->
 
-Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc) och [Endast för Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för dynamiska mediavisare](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources).
+Se även [Visningsprogram för Experience Manager Assets och Dynamic Media Classic](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers#viewers-aem-assets-dmc) och [Endast för Experience Manager Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för dynamiska mediavisare](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources).
 
 ## Bästa praxis: Använda videovisningsprogrammet för HTML5 {#best-practice-using-the-html-video-viewer}
 
@@ -163,7 +159,7 @@ På visningsprogrammets uppspelningssida identifieras webbläsarens videokapacit
 
 Du kan kombinera möjligheten att utforma uppspelningskomponenterna med HTML5 och CSS i en enda spelare. Den kan ha inbäddad uppspelning och använda adaptiv och progressiv strömning beroende på webbläsarens kapacitet. Alla dessa funktioner innebär att du kan utöka räckvidden för ditt multimediematerial till både dator- och mobilanvändare och få en smidig videoupplevelse.
 
-Se även [Endast visningsprogram för Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för dynamiska medievyer](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources).
+Se även [Endast visningsprogram för Experience Manager Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/c-html5-aem-asset-viewers#viewers-for-aem-assets-only) i [referenshandboken för dynamiska medievyer](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources).
 
 
 ### Uppspelning av video på stationära datorer och mobila enheter med videovisningsprogrammet för HTML5 {#playback-of-video-on-desktop-computers-and-mobile-devices-using-the-html-video-viewer}
@@ -183,7 +179,7 @@ DASH är den internationella standarden och HLS är en Apple-standard. Båda anv
 
 Progressiv video levereras genom att videon hämtas och lagras lokalt på en användares dator eller mobila enhet.
 
-I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för videofilmer på stationära datorer och mobila enheter med [Dynamic Media HTML5 Video Viewer](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video#interactive-video).
+I följande tabell beskrivs enheten, webbläsaren och uppspelningsmetoden för videofilmer på stationära datorer och mobila enheter med [Dynamic Media HTML5 Video Viewer](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video#interactive-video).
 
 <table>
  <tbody>
@@ -460,7 +456,7 @@ If you are using an out-of-box video viewer provided by Dynamic Media, or if you
 
 Use the Dynamic Media Viewers Reference and the Dynamic Media HTML5 Viewers SDK to create your own video viewers.
 
-See [Dynamic Media Viewers Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html?lang=sv-SE).
+See [Dynamic Media Viewers Reference Guide](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/home.html).
 
 Download the Scene7 HTML Viewer SDK from Adobe Developer Connection.
 
@@ -562,10 +558,10 @@ Tillagda bildtexter stöds med formaten WebVTT och Adobe VTT. Dessutom stöds ti
 1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
 1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
    ![Markerad videoresurs med bockmarkering över videominiatyrbild och Visa egenskaper markerade i verktygsfältet.](/help/assets/dynamic-media/assets/msma-selectedasset-propertiesbutton.png)*Markerad videoresurs i kortvyn.*
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på videons egenskapssida.
+1. Välj fliken **[!UICONTROL Captions & Audio tracks]** på videons egenskapssida.
 
    >[!TIP]
-   >Om du inte ser fliken **[!UICONTROL Captions & Audio Tracks]** betyder det något av två:
+   >Om du inte ser fliken **[!UICONTROL Captions & Audio tracks]** betyder det något av två:
    >
    >* Mappen där den valda videon finns har ingen tilldelad videoprofil. I så fall, se [Använda en videoprofil i mappen](/help/assets/dynamic-media/video-profiles.md#applying-video-profiles-to-specific-folders)
    >* Eller så måste Dynamic Media bearbeta videon igen. I så fall ska du läsa [Bearbeta dynamiska medieresurser igen i en mapp](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
@@ -732,16 +728,45 @@ Dynamic Media har stöd för att lägga till en enda bildtext med video via en U
 1. Publicera videon som vanligt.
 Den befintliga URL:en med bildtextmodifieraren kan nu läsa in flera bildtexter.
 
+
+### Redigera videoundertexter
+
+Du kan redigera undertexter (bildtexter) för videoresurser direkt i användargränssnittet för Dynamic Media. Med den här funktionen kan du redigera `.vtt`-undertitelfiler, förhandsgranska uppdateringar och publicera ändringar sömlöst.
+
+* När underrubriker publiceras synkroniseras och publiceras eventuella ändringar automatiskt.
+* Om det uppstår redigeringsfel och du måste generera om undertexterna:
+   * Ta bort den befintliga undertextfilen.
+   * Använd alternativ 2 (Konvertera ljudspår) i steg 7 av [Lägg till flera bildtexter och ljudspår i videon](#add-msma).
+   * Klicka på **Spara** eller **Spara och stäng** för att generera en ny undertextfil.
+* Undertextförhandsvisningen i redigeraren är endast till för redigering och visar inte hur undertexterna visas i det slutliga användargränssnittet för videouppspelning.
+
+**Så här redigerar du videoundertexter:**
+
+1. Navigera till den videoresurs vars undertexter du vill redigera.
+1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
+1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
+1. Välj fliken **[!UICONTROL Captions & Audio tracks]** på sidan Egenskaper.
+1. Under rubriken **Bildtexter** klickar du på ikonen ![](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ProjectEdit_18_N.svg) till höger om namnet på en bildtextfil.
+
+   ![Ikonen Redigera underrubrik under rubriken Bildtexter](/help/assets/dynamic-media/assets/msma-editcaption.png)
+
+1. Redigera texten i WebVTT-filen efter behov i dialogrutan **Redigera underrubrik** .
+
+   ![Dialogrutan Redigera underrubrik](/help/assets/dynamic-media/assets/msma-editsubtitle-dialogbox.png)
+
+1. Klicka på **Spara** i dialogrutans nedre högra hörn.
+
+
 ### Visa livscykelstatus för överförda beskrivnings- och ljudspårsfiler {#lifecycle-status-video}
 
-Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler som överförts till den primära videon. Det kan du göra på fliken **Bildtexter och ljudspår** i **Egenskaper**.
+Du kan följa livscykelstatusen för alla beskrivnings- eller ljudspårsfiler som överförts till den primära videon. Det kan du göra på fliken **Bildtexter och ljudspår** i **Egenskaper** .
 
 **Så här visar du livscykelstatusen för en video:**
 
 1. Navigera till den videoresurs vars livscykelstatus du vill visa.
 1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
 1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan **Egenskaper**.
+1. Välj fliken **[!UICONTROL Captions & Audio tracks]** på sidan **Egenskaper**.
 1. Observera status för varje bildtext eller ljudfil i kolumnen **[!UICONTROL Status]**.
 
 | Status för beskrivningar och ljudspår | Beskrivning |
@@ -771,7 +796,7 @@ Alla överförda ljudspårsfiler kan dock anges som standardljud som spelas upp 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
 1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper.
+1. Välj fliken **[!UICONTROL Captions & Audio tracks]** på sidan Egenskaper.
 1. Under rubriken **Ljudspår** väljer du den ljudspårsfil som du vill ange som videons standard.
 1. Klicka på ![Ljudikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Audio_18_N.svg) **[!UICONTROL Set as default]**.
 1. Klicka på **[!UICONTROL Replace]** i dialogrutan **Ange som standard**.
@@ -825,7 +850,7 @@ Det går inte att ta bort det ursprungliga ljudspåret som har extraherats från
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
 1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan Egenskaper.
+1. Välj fliken **[!UICONTROL Captions & Audio tracks]** på sidan Egenskaper.
 1. Gör något av följande:
 
    * Bildtexter - Under rubriken **Bildtexter** markerar du en eller flera bildtextfiler som du vill ta bort från videon och klickar sedan på ikonen ![Ta bort](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Delete_22_N.svg) **[!UICONTROL Delete]** .
@@ -847,7 +872,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
 1. Navigera till den videoresurs vars standardljudspår du vill ställa in.
 1. Välj videoresursen i resursurvalsläget, antingen från ![Visa kortikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewCard_18_N.svg) (kortvy) eller ![Visa listikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) (listvy).
 1. Klicka på ![Info-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) Egenskaper i verktygsfältet.
-1. Välj fliken **[!UICONTROL Captions & Audio Tracks]** på sidan **Egenskaper**.
+1. Välj fliken **[!UICONTROL Captions & Audio tracks]** på sidan **Egenskaper**.
 1. Gör något av följande:
 
    * Bildtexter - Under rubriken **Bildtexter** väljer du en eller flera bildtextfiler som du vill hämta från videon och klickar sedan på ![Ikonen Hämta](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Download_22_N.svg) **[!UICONTROL Download]** .
@@ -891,7 +916,7 @@ Se även [Hjälpmedel i dynamiska media](/help/assets/dynamic-media/accessibilit
 
 Dynamic Media kan konvertera bildtextfiler till JSON-format (JavaScript Object Notation). Den här konverteringen innebär att du kan bädda in JSON-texten på en webbsida som en dold men fullständig utskrift av videon. Sökmotorer kan sedan crawla/indexera innehållet för att göra videoklippen lättare att hitta och ge kunderna mer information om videoinnehållet.
 
-Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents#image-serving-api).
+Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar statiskt (icke-bildinnehåll)](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/c-serving-static-nonimage-contents#image-serving-api).
 
 **Så här lägger du till bildtexter i en video:**
 
@@ -1510,7 +1535,7 @@ Enabling any of the above three capabilities, enables all of them. So, if you on
 
 **To enable DASH, multi-captions and multi-audio tracks, and AI-generated captions support on your Dynamic Media account:** 
 
-1. [Use the Admin Console to start the creation of a new support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+1. [Use the Admin Console to start the creation of a new support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. To create a support case, follow the instructions while ensuring you provide the following information:
 
     * Primary contact name, email, phone.
@@ -1572,11 +1597,11 @@ Added captions and captions are supported with WebVTT and Adobe VTT formats. And
 
    ![Asset properties button.](/help/assets/dynamic-media/assets/msma-selectedasset-propertiesbutton.png)*Selected video asset in Card View.*
 
-1. On the video's Properties page, select the **[!UICONTROL Captions & Audio Tracks]** tab.
+1. On the video's Properties page, select the **[!UICONTROL Captions & Audio tracks]** tab.
 
 
    >[!TIP]
-   >If you do not see the [!UICONTROL Captions & Audio Tracks] tab, it means either one of two things:
+   >If you do not see the [!UICONTROL Captions & Audio tracks] tab, it means either one of two things:
    >* The folder in which the selected video resides does not have a video profile assigned to it. In which case, see [Apply a video profile to the folder](/help/assets/dynamic-media/video-profiles.md#applying-video-profiles-to-specific-folders)
    >* Or, Dynamic Media must reprocess the video. In which case, see [Reprocess Dynamic Media assets in a folder](/help/assets/dynamic-media/about-image-video-profiles.md#reprocessing-assets).
 
