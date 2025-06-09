@@ -60,6 +60,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Förhandsgranska och publicera videomaterial
 
       * Visa källvideon och de kodade återgivningarna av videon tillsammans med tillhörande miniatyrer:
+
         [Förhandsgranska videoklipp](/help/assets/manage-video-assets.md#upload-and-preview-video-assets) eller [Förhandsgranska resurser](/help/assets/dynamic-media/previewing-assets.md)
         [Hantera videorenderingar](/help/assets/manage-digital-assets.md#managing-renditions)
 
@@ -69,6 +70,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Arbeta med videometadata
 
       * Redigera egenskaperna för video, till exempel titel, beskrivning och taggar, anpassade metadatafält:
+
         [Redigera videoegenskaper](/help/assets/manage-digital-assets.md#editing-properties)
 
       * [Hantera metadata för digitala resurser](/help/assets/manage-metadata.md)
@@ -93,9 +95,11 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
    * Om du använder ett WCM-system från en annan leverantör kan du länka eller bädda in videor på dina webbsidor.
 
       * Integrera video med URL:
+
         [Länka URL:er till ditt webbprogram](/help/assets/dynamic-media/linking-urls-to-yourwebapplication.md).
 
       * Integrera video med inbäddad kod på en webbsida:
+
         [Bädda in videovisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 
    * [Generera videorapporter](#viewing-video-reports).
