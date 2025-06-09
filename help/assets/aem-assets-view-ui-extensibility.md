@@ -4,9 +4,9 @@ description: Lär dig mer om UI-utökningsfunktionen i  [!DNL AEM Assets View]. 
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: 969860593670ce490cc688a92c349addb952b3b4
+source-git-commit: 50477660e50db13cd279a56a1f1b3ddc118a0aad
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**
 >[!IMPORTANT]
 >
 > * [!DNL AEM Assets View] UI-utbyggbarhet är tillgänglig med [[!DNL Assets Ultimate]](/help/assets/assets-ultimate-overview.md).
-> * [Skapa och skicka ett  [!DNL Adobe] kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) om du vill få åtkomst till [!DNL Assets view] UI-utökningsbarhet.
+> * [Skapa och skicka ett  [!DNL Adobe] kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få åtkomst till [!DNL Assets view] UI-utökningsbarhet.
 > * Du kan ge feedback genom att expandera **[!UICONTROL Detailed Feedback options]** och klicka på **[!UICONTROL Report an issue]**.
 
 ## <a id="1"></a> Öppna Assets-vyn{#add-UI-Extensibility-in-AEM-Assets-View}
@@ -85,3 +85,11 @@ Fyll i följande krav om du vill börja lägga till utökningskomponenten i [!DN
 1. Konfigurera den lokala miljön och skapa ditt första användargränssnittstillägg för att få en första upplevelse av processen att utveckla användargränssnittstillägg i [!DNL Assets View]. Mer information finns i [Steg-för-steg-AEM Assets View Extension Development](https://developer.adobe.com/uix/docs/services/aem-assets-view/extension-development/).
 1. Konfigurera programmet med AIO CLI för att generera den grundläggande tilläggsstrukturen och den nödvändiga koden. Mer information finns i [kodgenerering för  [!DNL AEM Assets View]](https://developer.adobe.com/uix/docs/services/aem-assets-view/code-generation/).
 1. Testa tilläggen lokalt för att kontrollera att de fungerar som förväntat före distributionen. Kör tillägget i en helt isolerad miljö eller med partiell isolering och anslut tillägget till produktionen [!DNL AEM Assets View] för testning. Mer information finns i [Felsökning - [!DNL AEM Assets View] utökningsbarhet](https://developer.adobe.com/uix/docs/services/aem-assets-view/debug/).
+
+## Anpassa snabbåtgärder och åtgärdsfältet i Assets-vyn {#customize-quick-actions-and-actions-bar}
+
+Du kan anpassa de åtgärder som visas när du markerar en eller flera resurser (åtgärdsfältet) i Assets-vyn. I Assets-vyn kan du även anpassa de åtgärder som visas när du klickar på Fler alternativ (..) på resurskortet. Mer information finns i [Bläddra i vyn](https://developer.adobe.com/uix/docs/services/aem-assets-view/api/browse-view/).
+
+## Öppna anpassade dialogrutor i Assets-vyn {#open-custom-dialogs-assets-view}
+
+I Assets-vyn kan du även öppna anpassade dialogrutor med valfri text. Du kan också lägga till länkar till texten. Mer information finns i [Modal API](https://developer.adobe.com/uix/docs/services/aem-assets-view/api/commons/#modal-api).
