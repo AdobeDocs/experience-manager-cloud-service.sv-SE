@@ -3,9 +3,9 @@ title: Integrera resursväljaren med API:t för Dynamic Media-öppning
 description: Integrera resursväljare med olika program från Adobe, andra företag än Adobe och tredje part.
 role: Admin, User
 exl-id: b01097f3-982f-4b2d-85e5-92efabe7094d
-source-git-commit: 08fc43bc8edeea91bfeb01f053d435e136658e7f
+source-git-commit: 48a456039986abf07617d0828fbf95bf7661f6d6
 workflow-type: tm+mt
-source-wordcount: '933'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -206,6 +206,10 @@ Efter integrering med Adobe Micro-Frontend Asset Selector kan du bara se resurss
 * **F**: [Sortera i stigande eller fallande ordning](#sorting)
 * **G**: Avbryt markering
 * **H**: Markera en eller flera resurser
+
+>[!NOTE]
+>
+>Mappar stöds bara vid anslutning till en författardatabas, inte dynamiska medier med OpenAPI-databas.
 
 >[!MORELIKETHIS]
 >
