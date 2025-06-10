@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: c6d03117494d913e5b93edde9d7b38544e566c8a
+source-git-commit: 6976f0c9926fb4cb64b0b2d7f8d2daf004c6b936
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1756'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -183,9 +183,9 @@ I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i
 >
 >Använd snabbtangenten `p` för att växla till och från förhandsvisningsläget.
 
-#### Öppna programförhandsgranskning {#open-app-preview}
+#### Öppna sida {#open-page}
 
-Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan som du redigerar på en egen webbläsarflik, utan redigeraren, för att förhandsgranska innehållet.
+Markera ikonen för att öppna sidan som du redigerar på en egen webbläsarflik, utan redigeraren, för att förhandsgranska innehållet.
 
 ![Öppna förhandsgranskning av program](assets/open-app-preview.png)
 
@@ -197,6 +197,10 @@ Välj ikonen för förhandsgranskning av öppna program om du vill öppna sidan 
 >
 >URL:en för förhandsgranskning för din app [kan anpassas](/help/implementing/universal-editor/customizing.md#custom-preview-urls).
 
+>[!NOTE]
+>
+>Knappen [ för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
+
 #### Publicera {#publish}
 
 Välj publiceringsknappen så att du kan publicera ändringarna i innehållet live för att användas av läsarna eller i en förhandsvisningsmiljö för granskning.
@@ -206,6 +210,10 @@ Välj publiceringsknappen så att du kan publicera ändringarna i innehållet li
 >[!TIP]
 >
 >Mer information om hur du publicerar med den universella redigeraren finns i dokumentet [Publicera innehåll med den universella redigeraren](publishing.md).
+
+>[!NOTE]
+>
+>Publiceringsknappen [ kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
 
 #### Ellips {#ellipsis}
 
