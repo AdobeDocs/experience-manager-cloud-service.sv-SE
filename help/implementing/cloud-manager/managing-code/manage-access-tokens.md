@@ -4,13 +4,13 @@ description: Lär dig hur du visar, redigerar och tar bort åtkomsttoken som anv
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#manage-access-tokens"
-source-git-commit: 9e2be3cabe0a93e6e357ceb5ecf4950c25d034d0
+exl-id: bc9f392c-61f5-4d39-972b-4c6c8f9bab4a
+source-git-commit: 9f9f931a233320014675c6aac86a2cc65f6909c6
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
-
 
 # Hantera åtkomsttoken för externa databaser {#manage-access-tokens}
 
@@ -43,9 +43,9 @@ Se även [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud
 ## Redigera en åtkomsttoken {#edit-access-tokens}
 
 1. Klicka på ![Redigera-ikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) i dialogrutan **Hantera åtkomsttoken** till höger om ett tokennamn.
-1. Uppdatera tokennamnet i textfältet **Token Name** i dialogrutan **Redigera åtkomsttoken**.
+1. I dialogrutan **Redigera åtkomsttoken** uppdaterar du **tokennamnet**, **åtkomsttoken** eller båda.
 
-   Själva åtkomsttokenhemligheten kan inte redigeras.
+   Om **åtkomsttoken** används för närvarande visas ett varningsmeddelande om att alla associerade databaser automatiskt valideras efter uppdateringen.
 
    ![Dialogrutan Redigera åtkomsttoken](/help/implementing/cloud-manager/managing-code/assets/access-tokens-edit.png)
 
