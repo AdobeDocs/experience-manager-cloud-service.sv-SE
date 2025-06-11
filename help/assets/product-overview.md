@@ -2,9 +2,9 @@
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur man får tillgång till det och hur man kan ge feedback kring de alternativ som finns i Content Hub.
 exl-id: c5908058-f1ad-4aaa-9e8e-c0157e107ed1
-source-git-commit: ecbc1783e6327b7d187eba01b698948111c3a2d3
+source-git-commit: cc6c227a566c4d4fd8c9a20d1bb39020974f494f
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '739'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,10 @@ ht-degree: 0%
 Content Hub ingår i Experience Manager Assets as a Cloud Service för att demokratisera tillgången till varumärkesinnehåll för organisationer och deras affärspartners. Fokus ligger på att distribuera resurser för aktivering i stor skala och att skapa innehållsvarianter för varumärke, vilket ger förbättrad marknadsföringsflexibilitet.
 
 ## Content Hub demo {#content-hub-demo}
+
+>[!IMPORTANT]
+>
+>[Assets Ultimate](/help/assets/assets-ultimate-overview.md) och Assets as a Cloud Service innehåller 250 Content Hub-användare. [Assets Prime](/help/assets/assets-prime.md) innehåller 50 Content Hub-användare.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3463712)
 
