@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 6976f0c9926fb4cb64b0b2d7f8d2daf004c6b936
+source-git-commit: c2f1660552d32f3dae9418e7dfc2d4f1ab8cc3c3
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,18 @@ Knappen **Öppna sida** kan inaktiveras helt i ett program genom att följande m
 ```html
 <meta name="urn:adobe:aue:config:disable" content="header-open-page" />
 ```
+
+## Inaktiverar knappen Duplicera {#duplicate-button}
+
+Vissa redigeringsarbetsflöden kan behöva begränsa möjligheten för innehållsförfattaren att duplicera komponenter. Du kan inaktivera ikonen [Duplicera](/help/sites-cloud/authoring/universal-editor/navigation.md#duplicate) genom att lägga till följande metadata.
+
+```html
+<meta name="urn:adobe:aue:config:disable" content="duplicate"/>
+```
+
+## Ändra slutpunkten {#custom-endpoint}
+
+Om du inte vill använda den universella redigeringstjänsten, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Mer information finns i dokumentet [Komma igång med den universella redigeraren i AEM](/help/implementing/universal-editor/getting-started.md##configuration-settings).
 
 ## Filtrera komponenter {#filtering-components}
 
