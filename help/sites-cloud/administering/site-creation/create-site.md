@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 0%
@@ -14,31 +14,33 @@ ht-degree: 0%
 
 # Skapa en plats {#creating-site}
 
-Lär dig hur du använder AEM skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
+{{traditional-aem}}
+
+Lär dig hur du använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 
 ## Ökning {#overview}
 
-Innan innehållsförfattare kan skapa sidor med innehåll måste webbplatsen först skapas. Detta utförs vanligtvis av en AEM som definierar platsens ursprungliga struktur. Med hjälp av webbplatsmallar kan du snabbt och flexibelt skapa webbplatser.
+Innan innehållsförfattare kan skapa sidor med innehåll måste webbplatsen först skapas. Detta utförs vanligtvis av en AEM-administratör som definierar platsens ursprungliga struktur. Med hjälp av webbplatsmallar kan du snabbt och flexibelt skapa webbplatser.
 
-Med AEM snabbverktyg kan andra användare snabbt skapa en webbplats från grunden med hjälp av webbplatsmallar.
+Med verktyget AEM Quick Site Creation kan man snabbt skapa en helt ny webbplats med hjälp av mallar.
 
-Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för AEM (JavaScript, CSS och statiska resurser). Detta gör att gränssnittsutvecklaren, som inte behöver ha någon kunskap om AEM, kan arbeta separat och parallellt med innehållsskaparna. Den AEM administratören laddar ned webbplatstemat och skickar det till den frontendutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i den AEM koddatabasen, som sedan distribueras.
+Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för AEM-webbplatsen (JavaScript, CSS och statiska resurser). Detta gör att den som inte har någon kunskap om AEM kan arbeta separat och parallellt med de som skapar materialet. AEM-administratören laddar bara ned webbplatstemat och skickar det till den frontutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i AEM koddatabas, som sedan distribueras.
 
-Det här dokumentet fokuserar på att skapa webbplatser med verktyget Skapa snabbwebbplats. Om du vill ha en översikt över arbetsflödet för att skapa och anpassa webbplatser läser du [AEM Skapa snabbwebbplats](/help/journey-sites/quick-site/overview.md)
+Det här dokumentet fokuserar på att skapa webbplatser med verktyget Skapa snabbwebbplats. Om du vill ha en översikt över arbetsflödet för att skapa och anpassa webbplatser kan du läsa [AEM snabbplatsresa](/help/journey-sites/quick-site/overview.md)
 
 ## Struktur för planeringsplats {#structure}
 
-Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur stöder enkel navigering och innehållsidentifiering för webbplatsens besökare och stöder olika AEM funktioner som [hantering av flera webbplatser och översättning](/help/sites-cloud/administering/msm-and-translation.md).
+Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur har stöd för enkel navigering och innehållsidentifiering för webbplatsens besökare och har stöd för olika AEM-funktioner som [hantering av flera webbplatser och översättning](/help/sites-cloud/administering/msm-and-translation.md).
 
 >[!TIP]
 >
->[WKND-referenswebbplatsen ](https://wknd.site) innehåller en implementering av bästa praxis för en fullt fungerande varumärkeswebbplats för upplevelser utomhus. Se hur en välbyggd AEM är strukturerad.
+>[WKND-referenswebbplatsen ](https://wknd.site) innehåller en implementering av bästa praxis för en fullt fungerande varumärkeswebbplats för upplevelser utomhus. Se hur en välbyggd AEM-sajt är uppbyggd.
 
 ## Webbplatsmallar {#site-templates}
 
 Eftersom webbplatsstrukturen är så viktig för att en webbplats ska lyckas är det bekvämt att ha fördefinierade strukturer tillgängliga för att snabbt kunna driftsätta en ny webbplats baserat på en uppsättning befintliga standarder. Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket.
 
-Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur- och webbplatsformatering så att du snabbt kommer igång med den nya webbplatsen. Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du skapa olika webbplatser som passar olika affärsbehov.
+Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur- och webbplatsformatering så att du snabbt kommer igång med den nya webbplatsen. Mallarna är kraftfulla eftersom de kan återanvändas och anpassas. Och eftersom du kan ha flera mallar tillgängliga i din AEM-installation kan du skapa olika webbplatser som passar olika affärsbehov.
 
 >[!TIP]
 >
@@ -52,7 +54,7 @@ Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll oc
 
 Det är enkelt att använda en mall för att skapa en plats.
 
-1. Logga in i AEM redigeringsmiljö och navigera till webbplatskonsolen
+1. Logga in i din AEM-redigeringsmiljö och navigera till webbplatskonsolen
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 

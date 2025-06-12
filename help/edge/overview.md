@@ -4,9 +4,9 @@ description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda o
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
 role: Admin, Architect, Developer
-source-git-commit: 8be0a9894bb5b3a138c0ec40a437d6c8e4bc7e25
+source-git-commit: ad9592c705c7b26292a29b43997edadfa01ccb65
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1321'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,12 @@ Med Edge Delivery Services kan man
 * Skapa snabba sajter med en perfekt Lightroom Score och övervaka kontinuerligt sajtens prestanda med Operational Telemetry.
 * Öka redigeringseffektiviteten genom att frikoppla innehållskällor. Nu kan du använda både AEM-redigering med den universella redigeraren och dokumentbaserad redigering. På så sätt kan du arbeta med flera innehållskällor på samma webbplats.
 * Använd ett inbyggt experimentramverk som gör det möjligt att snabbt skapa tester, exekvera utan prestandapåverkan och snabbt släppa till en testvinnares produktion.
+
+>[!TIP]
+>
+>**Vill du prova på saker direkt?**
+>
+>Om du vill komma igång direkt kan du påbörja ditt eget Edge Delivery Services-projekt med AEM-redigering på mindre än 30 minuter genom att [checka ut självstudiekursen på aem.live.](https://www.aem.live/developer/ue-tutorial)
 
 ## Flexibel reaktion på affärsbehov {#agile-reaction}
 
@@ -54,6 +60,22 @@ I följande diagram visas hur du kan redigera innehåll i Microsoft Word (dokume
 
 Edge Delivery Services använder GitHub så att du kan hantera och distribuera kod direkt från din GitHub-databas. Nytt innehåll läggs till direkt utan någon omgenereringsprocess.
 
+### AEM Authoring with the Universal Editor{#wysiwyg-authoring}
+
+Universell redigerare är en anpassningsbar plats där du kan redigera innehåll live och i sitt sammanhang med hjälp av en visuell förhandsgranskning.
+
+* Med AEM kan du arbeta effektivare - både utan ramar och utan papper.
+* Du kan utnyttja AEM omfattande funktioner för innehållshantering, inklusive arbetsflöde och styrning.
+* Utnyttja ett stort antal tilläggspunkter för att stödja era egna processer och integreringar.
+* Du kan utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub.
+
+![AEM-redigering med Universal Editor](assets/wysiwyg-authoring.png)
+
+Kom igång med AEM-redigering med Universal Editor och Edge Delivery Services:
+
+* En översikt över AEM-redigering med den universella redigeraren finns i dokumentet [Skapa med AEM för Edge Delivery Services](https://www.aem.live/docs/aem-authoring) i aem.live-dokumentationen.
+* En utvecklaröversikt finns i dokumentet [Getting Started - Universal Editor Developer Tutorial](https://www.aem.live/developer/ue-tutorial) i aem.live-dokumentationen.
+
 ### Dokumentbaserad redigering {#document-based}
 
 Med dokumentbaserad redigering kan du använda innehåll direkt från Microsoft Word eller Google Docs så att dessa källor blir sidor på din webbplats. Rubriker, listor, bilder och teckensnittselement kan alla överföras från den ursprungliga källan till webbplatsen.
@@ -71,22 +93,6 @@ Läs mer i den dokumentbaserade redigeringsdokumentationen:
 * Mer information om hur du redigerar och publicerar innehåll med Edge Delivery finns i avsnittet [Publicera i dokumentationen för aem.live.](https://www.aem.live/docs/authoring)
 * Mer information om hur du startar webbprojekt på rätt sätt finns i avsnittet [Starta i dokumentationen för aem.live](https://www.aem.live/docs/#launch)
 
-### AEM Authoring with the Universal Editor{#wysiwyg-authoring}
-
-Universell redigerare är en anpassningsbar plats där du kan redigera innehåll live och i sitt sammanhang med hjälp av en visuell förhandsgranskning.
-
-* Med AEM kan du arbeta effektivare - både utan ramar och utan papper.
-* Du kan utnyttja AEM omfattande funktioner för innehållshantering, inklusive arbetsflöde och styrning.
-* Utnyttja ett stort antal tilläggspunkter för att stödja era egna processer och integreringar.
-* Du kan utveckla webbplatsens funktionalitet med hjälp av CSS och JavaScript i GitHub.
-
-![AEM-redigering med Universal Editor](assets/wysiwyg-authoring.png)
-
-Kom igång med AEM-redigering med Universal Editor och Edge Delivery Services:
-
-* En översikt över AEM-redigering med den universella redigeraren finns i dokumentet [Skapa med AEM för Edge Delivery Services](https://www.aem.live/docs/aem-authoring) i aem.live-dokumentationen.
-* En utvecklaröversikt finns i dokumentet [Getting Started - Universal Editor Developer Tutorial](https://www.aem.live/developer/ue-tutorial) i aem.live-dokumentationen.
-
 ### Bestäm din redigeringsmetod {#authoring-method}
 
 AEM flexibilitet säkerställer att alla redigeringsbehov täcks. Adobe kan hjälpa dig att avgöra vilken metod (eller vilka metoder) som bäst passar dina behov.
@@ -102,7 +108,7 @@ Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Deli
 
 Läs dokumentet [Komma igång - Universal Editor Developer Tutorial](https://www.aem.live/developer/ue-tutorial) i aem.live-dokumentationen om du vill veta hur du startar ett eget projekt som du kan skapa med AEM och Edge Delivery Services.
 
-Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Operational Telemetry](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch.](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration), [Operational Telemetry](https://www.aem.live/developer/rum) för att diagnostisera användning och prestanda för dina webbplatser och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
 
 ## Få hjälp från Adobe {#getting-help}
 

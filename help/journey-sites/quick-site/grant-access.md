@@ -1,11 +1,11 @@
 ---
 title: Bevilja åtkomst till klientutvecklaren
-description: Anlita gränssnittsutvecklarna i Cloud Manager så att de får tillgång till era AEM och er pipeline.
+description: Anlita gränssnittsutvecklarna till Cloud Manager så att de får tillgång till AEM webbplats via lagringsplats och pipeline.
 exl-id: 58e95c92-b859-4bb9-aa62-7766510486fd
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
@@ -14,11 +14,13 @@ ht-degree: 0%
 
 # Bevilja åtkomst till klientutvecklaren {#grant-fed-access}
 
-Anlita gränssnittsutvecklarna i Cloud Manager så att de får tillgång till era AEM och er pipeline.
+{{traditional-aem}}
+
+Anlita gränssnittsutvecklarna till Cloud Manager så att de får tillgång till AEM webbplats via lagringsplats och pipeline.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet från den AEM snabbwebbplatsskaparresan, [Konfigurera din pipeline](pipeline-setup.md), lärde du dig att skapa en frontendpipeline för att hantera anpassningen av webbplatsens tema, och du bör nu:
+I det föregående dokumentet för AEM snabbplatsskapanderesa, [Konfigurera din pipeline](pipeline-setup.md), lärde du dig att skapa en frontendpipeline för att hantera anpassningen av webbplatsens tema, och du bör nu:
 
 * Förstå vad en rörledning är.
 * Ta reda på hur man lägger upp en rörledning i Cloud Manager.
@@ -54,7 +56,7 @@ Först måste du lägga till frontutvecklaren som användare med Admin Console.
 
 1. När du har loggat in visas en översiktssida som liknar följande bild.
 
-   ![Översikt över Admin Console](assets/admin-console.png)
+   ![Admin Console - översikt](assets/admin-console.png)
 
 1. Kontrollera att du är i rätt organisation genom att kontrollera organisationsnamnet i skärmens övre högra hörn.
 
@@ -86,7 +88,7 @@ Den inbjudna frontendutvecklaren kan komma åt Cloud Manager genom att klicka p�
 
 ## Lämna över till front-end Developer {#handover}
 
-Med en e-postinbjudan till Cloud Manager på vägen till den som utvecklar gränssnittet kan du och AEM nu ge den som utvecklar gränssnittet den information som behövs för att börja anpassa produkten.
+Med en e-postinbjudan till Cloud Manager på vägen till den som utvecklar gränssnittet kan du och AEM-administratören nu ge den som utvecklar gränssnittet den information som behövs för att anpassa produkten.
 
 * En [sökväg till typiskt innehåll](#example-page)
 * Temakällan som [du hämtade](#download-theme)
@@ -96,12 +98,12 @@ Med en e-postinbjudan till Cloud Manager på vägen till den som utvecklar grän
 
 ## What&#39;s Next {#what-is-next}
 
-Nu när du har slutfört den här delen av AEM snabbwebbplats bör du känna till:
+Nu när du är klar med den här delen av AEM Quick Site Creation bör du känna till:
 
 * Så här lägger du till en frontendutvecklare som användare.
 * Så här tilldelar du de roller som krävs till frontendutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM genom att nästa gång läsa dokumentet [Hämta information om Git-databasåtkomst](retrieve-access.md), som endast växlar perspektiv till slututvecklaren och förklarar hur gränssnittsutvecklare som använder Cloud Manager får åtkomst till Git-databasinformation.
+Bygg vidare på den här kunskapen och fortsätt din resa till AEM Quick Site Creation genom att nästa gång läsa dokumentet [Hämta information om Git-databasåtkomst](retrieve-access.md) , som endast ändrar perspektiv för den som utvecklar gränssnittet och förklarar hur den som utvecklar gränssnittet Cloud Manager får åtkomst till Git-databasinformation.
 
 ## Ytterligare resurser {#additional-resources}
 

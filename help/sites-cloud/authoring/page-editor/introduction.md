@@ -1,20 +1,20 @@
 ---
-title: AEM sidredigeraren
-description: Den AEM sidredigeraren är ett kraftfullt verktyg för att skapa innehåll.
+title: AEM Page Editor
+description: AEM sidredigerare är ett kraftfullt verktyg för att skapa innehåll.
 exl-id: da7d5933-f6c9-4937-a483-ec4352fba86b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 9a700e9eb3116252f42bb08db9dadc0e8a6adbf7
 workflow-type: tm+mt
 source-wordcount: '1431'
 ht-degree: 0%
 
 ---
 
-# AEM sidredigeraren {#editing-page-content}
+# AEM Page Editor {#editing-page-content}
 
-När sidan har skapats i [**webbplatskonsolen**](/help/sites-cloud/authoring/sites-console/introduction.md) kan du redigera innehållet på sidan med hjälp av AEM sidredigerare, ett kraftfullt verktyg för att skapa innehåll.
+När sidan har skapats i [**webbplatskonsolen**](/help/sites-cloud/authoring/sites-console/introduction.md) kan du redigera sidans innehåll med AEM sidredigerare, ett kraftfullt verktyg för att skapa ditt innehåll.
 
 >[!NOTE]
 >
@@ -24,9 +24,11 @@ När sidan har skapats i [**webbplatskonsolen**](/help/sites-cloud/authoring/sit
 >
 >Ditt konto behöver rätt behörighet för att kunna redigera sidor. Kontakta systemadministratören om du inte har behörighet.
 
+{{traditional-aem}}
+
 ## Orientering {#orientation}
 
-Den AEM sidredigeraren består huvudsakligen av tre avsnitt:
+AEM sidredigerare består huvudsakligen av tre avsnitt:
 
 1. [Verktygsfältet](#toolbar) - Med verktygsfältet kan du snabbt ändra sidläge och få åtkomst till ytterligare sidinställningar.
 1. [Sidpanelen](#side-panel) - Sidpanelen ger dig tillgång till sidkomponenter, resurser och andra redigeringsverktyg.
@@ -60,7 +62,7 @@ Detta ger tillgång till detaljerad sidinformation, inklusive sidinformation och
 * [Utrullningssida](/help/sites-cloud/administering/msm/overview.md#msm-from-the-ui)
 * [Starta arbetsflöde](/help/sites-cloud/authoring/workflows/applying.md#starting-a-workflow-from-the-page-editor)
 * [Lås sida](/help/sites-cloud/authoring/page-editor/introduction.md#locking-unlocking)
-* [Publish Page](/help/sites-cloud/authoring/sites-console/publishing-pages.md#publishing-pages-1)
+* [Publicera sida](/help/sites-cloud/authoring/sites-console/publishing-pages.md#publishing-pages-1)
 * [Avpublicera sida](/help/sites-cloud/authoring/sites-console/publishing-pages.md#unpublishing-pages)
 * [Redigera mall](/help/sites-cloud/authoring/page-editor/templates.md)
 * [Visa som publicerad](/help/sites-cloud/authoring/page-editor/introduction.md#view-as-published)
@@ -146,7 +148,7 @@ I redigeraren gör du ändringar direkt i sidinnehållet. Sidan återges som du 
 
 Nu när du förstår sidredigeraren kan du redigera innehållet.
 
-Mer information finns i dokumentet [Redigera innehåll med AEM sidredigeraren](/help/sites-cloud/authoring/page-editor/edit-content.md).
+Mer information finns i dokumentet [Redigera innehåll med sidredigeraren i AEM](/help/sites-cloud/authoring/page-editor/edit-content.md).
 
 ## Statusmeddelande {#status-notification}
 
@@ -216,7 +218,7 @@ Alternativet **Visa som publicerad** finns på menyn [Sidinformation](#page-info
 
 ## Låsa och låsa upp en sida {#locking-unlocking}
 
-AEM kan du låsa en sida så att ingen annan kan redigera innehållet. Låsning är användbart när du gör flera ändringar på en viss sida, eller när du behöver frysa en sida en kort stund.
+Med AEM kan du låsa en sida så att ingen annan kan redigera innehållet. Låsning är användbart när du gör flera ändringar på en viss sida, eller när du behöver frysa en sida en kort stund.
 
 1. Välj ikonen **Sidinformation** för att öppna menyn.
 1. Välj alternativet **Lås sida**.

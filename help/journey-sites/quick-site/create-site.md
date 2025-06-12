@@ -1,11 +1,11 @@
 ---
 title: Skapa webbplats från mall
-description: Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
+description: Lär dig hur du snabbt skapar en AEM-webbplats med hjälp av en webbplatsmall.
 exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
 workflow-type: tm+mt
 source-wordcount: '1485'
 ht-degree: 0%
@@ -14,39 +14,41 @@ ht-degree: 0%
 
 # Skapa webbplats från mall {#create-site-from-template}
 
-Lär dig hur du snabbt skapar en AEM webbplats med hjälp av en webbplatsmall.
+{{traditional-aem}}
+
+Lär dig hur du snabbt skapar en AEM-webbplats med hjälp av en webbplatsmall.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet på AEM snabbwebbplats [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) fick du veta mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser. Nu bör du:
+I det föregående dokumentet på AEM-snabbwebbplatsresa [Förstå Cloud Manager och arbetsflödet för att skapa snabbwebbplatser](cloud-manager.md) fick du veta mer om Cloud Manager och hur det knyter ihop den nya processen för att skapa snabbwebbplatser. Nu bör du:
 
 * Förstå hur AEM Sites och Cloud Manager samarbetar för att underlätta framtagningen
-* Se hur anpassningssteget i gränssnittet är helt fristående från AEM och kräver ingen AEM kunskap.
+* Se hur anpassningssteget är helt fristående från AEM och kräver ingen AEM-kunskap.
 
 Den här artikeln bygger på dessa grundläggande funktioner så att du kan ta det första konfigurationssteget och skapa en webbplats för en mall som du sedan kan anpassa med hjälp av verktygen i gränssnittet.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur du snabbt skapar en AEM webbplats med hjälp av en platsmall. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur du snabbt kan skapa en AEM-webbplats med hjälp av en webbplatsmall. När du har läst bör du:
 
-* Lär dig hur du hämtar AEM webbplatsmallar.
+* Lär dig hur du får tillgång till mallar för AEM Site.
 * Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
 ## Ansvarig roll {#responsible-role}
 
-Den här delen av resan gäller för AEM.
+Den här delen av resan gäller AEM-administratören.
 
 ## Webbplatsmallar {#site-templates}
 
 Webbplatsmallar är ett sätt att kombinera grundläggande webbplatsinnehåll i ett bekvämt och återanvändbart paket. Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll och struktur- och webbplatsformatering så att du snabbt kommer igång med den nya webbplatsen. Den faktiska strukturen är följande:
 
-* `files`: Mapp med UI-kit, XD och eventuellt andra filer
+* `files`: Mapp med UI-kit, XD-fil och eventuellt andra filer
 * `previews`: Mapp med skärmbilder av platsmallen
 * `site`: Innehållspaket för innehållet som kopieras för varje plats som skapas från den här mallen, till exempel sidmallar, sidor och så vidare.
 * `theme`: Källor till malltemat för att ändra hur webbplatsen ser ut inklusive CSS, JavaScript och så vidare.
 
-Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt kan skapa en webbplats. Och eftersom du kan ha flera mallar tillgängliga i AEM kan du tillgodose olika affärsbehov.
+Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt kan skapa en webbplats. Och eftersom du kan ha flera mallar tillgängliga i din AEM-installation kan du tillgodose olika affärsbehov.
 
 >[!NOTE]
 >
@@ -54,13 +56,13 @@ Mallar är kraftfulla eftersom de kan återanvändas så att skribenterna snabbt
 
 ## Hämta en webbplatsmall {#obtaining-template}
 
-Det enklaste sättet att komma igång är att [hämta den senaste versionen av AEM standardwebbplatsmall från dess GitHub-databas](https://github.com/adobe/aem-site-template-standard/releases).
+Det enklaste sättet att komma igång är att [hämta den senaste versionen av AEM Standard Site Template från dess GitHub-databas](https://github.com/adobe/aem-site-template-standard/releases).
 
-När du har laddat ned den kan du ladda upp den till AEM på samma sätt som andra paket. Mer information om hur du arbetar med paket finns i avsnittet [Ytterligare resurser](#additional-resources) om du behöver mer information om det här avsnittet.
+När du har laddat ned den kan du ladda upp den till din AEM-miljö precis som andra paket. Mer information om hur du arbetar med paket finns i avsnittet [Ytterligare resurser](#additional-resources) om du behöver mer information om det här avsnittet.
 
 >[!TIP]
 >
->AEM standardmall kan anpassas efter ditt projekts behov och kan eliminera behovet av ytterligare anpassning. Det här ämnet ligger dock utanför den här kundresan. Mer information finns i GitHub-dokumentationen för standardplatsmallen.
+>AEM standardmall för webbplatser kan anpassas efter dina behov och kan eliminera behovet av ytterligare anpassningar. Det här ämnet ligger dock utanför den här kundresan. Mer information finns i GitHub-dokumentationen för standardplatsmallen.
 
 >[!TIP]
 >
@@ -70,7 +72,7 @@ När du har laddat ned den kan du ladda upp den till AEM på samma sätt som and
 
 Det är enkelt att använda en mall för att skapa en plats.
 
-1. Logga in i AEM redigeringsmiljö och navigera till webbplatskonsolen
+1. Logga in i din AEM-redigeringsmiljö och navigera till webbplatskonsolen
 
    * `https://<your-author-environment>.adobeaemcloud.com/sites.html/content`
 
@@ -148,9 +150,9 @@ Du har nu en kopia av temakällfilerna i dina nedladdningsfiler.
 
 ## Konfigurera proxyanvändare {#proxy-user}
 
-För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkligt AEM innehåll från webbplatsen måste du konfigurera en proxyanvändare.
+För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkligt AEM-innehåll från din webbplats måste du skapa en proxyanvändare.
 
-1. Gå AEM från huvudnavigeringen till **Verktyg** > **Dokumentskydd** > **Användare**.
+1. I AEM går du till **Verktyg** > **Säkerhet** > **Användare**.
 1. Välj **Skapa** i användarhanteringskonsolen.
 
    ![Konsol för användarhantering](assets/user-management-console.png)
@@ -161,7 +163,7 @@ För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkl
    ![Ny användarinformation](assets/new-user-details.png)
 
 1. Lägg till proxyanvändaren i gruppen `contributors` på fliken **Grupper**.
-   * Om du skriver in termen `contributors` AEM funktionen för automatisk komplettering så att gruppen blir enkel att välja.
+   * Om du skriver in termen `contributors` aktiveras AEM funktion för automatisk komplettering så att du enkelt kan markera gruppen.
 
    ![Lägg till i grupp](assets/add-to-group.png)
 
@@ -171,22 +173,22 @@ Du har nu slutfört konfigurationen. Innehållsförfattare kan nu börja skapa i
 
 ## What&#39;s Next {#what-is-next}
 
-Nu när du är klar med den här delen av AEM snabbwebbplats:
+Nu när du är klar med den här delen av AEM snabbwebbplats bör du:
 
-* Lär dig hur du hämtar AEM webbplatsmallar.
+* Lär dig hur du får tillgång till mallar för AEM Site.
 * Lär dig hur du skapar en plats med hjälp av en mall.
 * Se hur du laddar ned mallen från din nya webbplats och kan ge den till frontutvecklaren.
 
-Bygg vidare på den här kunskapen och fortsätt din resa med att skapa AEM snabbwebbplats genom att gå igenom dokumentet [Konfigurera din pipeline](pipeline-setup.md), där du skapar en pipeline i gränssnittet för att hantera anpassningen av webbplatsens tema.
+Bygg vidare på den här kunskapen och fortsätt din resa till AEM Quick Site Creation genom att gå igenom dokumentet [Konfigurera din pipeline](pipeline-setup.md), där du skapar en frontpipeline för att hantera anpassningen av webbplatsens tema.
 
 ## Ytterligare resurser {#additional-resources}
 
 Vi rekommenderar att du går vidare till nästa del av processen för att skapa snabbwebbplats genom att granska dokumentet [Konfigurera din pipeline](pipeline-setup.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
 
-* [AEM Standardplatsmall](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardplatsmall.
-* [Organisera sidor](/help/sites-cloud/authoring/sites-console/organizing-pages.md) - Den här guiden beskriver hur du ordnar sidorna på din AEM.
+* [AEM standardwebbplatsmall](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardwebbplatsmall.
+* [Organisera sidor](/help/sites-cloud/authoring/sites-console/organizing-pages.md) - Den här guiden beskriver hur du ordnar sidorna på din AEM-webbplats.
 * [Skapar sidor](/help/sites-cloud/authoring/sites-console/creating-pages.md) - Den här guiden beskriver hur du lägger till nya sidor på webbplatsen.
 * [Hantera sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md) - Den här guiden beskriver hur du hanterar sidorna på din webbplats, inklusive flyttning, kopiering och borttagning.
-* [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet förklaras hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
+* [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet beskrivs hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
 * [Dokumentation för webbplatsadministration](/help/sites-cloud/administering/site-creation/create-site.md) - Mer information om funktionerna i verktyget Skapa snabbwebbplats finns i de tekniska dokumenten för att skapa webbplatser.
 * [Skapa eller lägg till formulär på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) - Lär dig stegvisa tekniker och metodtips för att integrera formulär på din webbplats och optimera dina digitala upplevelser för maximal effekt.

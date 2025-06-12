@@ -1,11 +1,11 @@
 ---
 title: Grundläggande hantering
-description: Bekanta dig med navigering i AEM och dess grundläggande användning
+description: Bekanta dig med navigeringen i AEM och dess grundläggande användning
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 9a700e9eb3116252f42bb08db9dadc0e8a6adbf7
 workflow-type: tm+mt
 source-wordcount: '954'
 ht-degree: 0%
@@ -15,17 +15,15 @@ ht-degree: 0%
 
 # Grundläggande hantering {#basic-handling}
 
-Det här dokumentet är utformat för att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö.
+Det här dokumentet är avsett att ge en översikt över grundläggande hantering när du använder AEM redigeringsmiljö.
 
 >[!TIP]
 >
->Kortkommandon är tillgängliga i hela AEM. Särskilt när [använder webbplatskonsolen](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) och [sidredigeraren](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md).
-
-{{edge-delivery-authoring}}
+>Kortkommandon finns i hela AEM. Särskilt när [använder webbplatskonsolen](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) och [sidredigeraren](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md).
 
 ## Ett pekaktiverat användargränssnitt {#a-touch-enabled-ui}
 
-AEM användargränssnitt är aktiverat för pekskärmar. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programmet med gester som att trycka, trycka och hålla ned och svepa. Eftersom användargränssnittet för AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm som mobiltelefonen eller surfplattan. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
+AEM användargränssnitt är aktiverat för pekskärmar. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programmet med gester som att trycka, trycka och hålla ned och svepa. Eftersom användargränssnittet i AEM är pekaktiverat kan du använda pekgester på enheter med pekskärm, till exempel mobiltelefoner och surfplattor. Det finns dock även musåtgärder på en traditionell stationär enhet, vilket ger dig flexibilitet när det gäller hur du väljer att skapa ditt innehåll.
 
 ## Steg 1 {#first-steps}
 
@@ -33,11 +31,11 @@ Omedelbart efter inloggningen kommer du till [navigeringspanelen](#navigation-pa
 
 ![Navigeringspanelen](assets/basic-handling-navigation.png)
 
-För att få en god förståelse för hur AEM används är det här dokumentet baserat på konsolen **Platser**. Välj på **Webbplatser** för att komma igång.
+För att få en god förståelse för den grundläggande användningen av AEM är det här dokumentet baserat på konsolen **Platser**. Välj på **Webbplatser** för att komma igång.
 
 ## Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Ta en minut att välja igenom och få en bra översikt över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Ta en minut att gå igenom och få en bra översikt över AEM grundläggande hantering.
 
 ![Navigeringsgenomgång](assets/basic-handling-tutorial.png)
 
@@ -73,9 +71,9 @@ Följande konsoler finns i Navigation:
 | Konsol | Syfte |
 |---|---|
 | Projekt | Med projektkonsolen får du direktåtkomst till dina projekt. [Projekt är virtuella instrumentpaneler](/help/sites-cloud/authoring/projects/overview.md) som kan användas för att skapa ett team. Sedan kan ni ge teamet tillgång till resurser, arbetsflöden och uppgifter och på så sätt låta andra arbeta mot ett gemensamt mål. |
-| Sites | [Med platskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) kan du skapa, visa och hantera platser som körs på din AEM. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
+| Sites | [Med platskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) kan du skapa, visa och hantera webbplatser som körs på din AEM-instans. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
 | Upplevelsefragment | En [Experience Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md) är en fristående upplevelse som kan återanvändas i olika kanaler och ha variationer, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger. |
-| Assets | Med Assets-konsolen kan du importera och hantera [digitala resurser som bilder, videoklipp, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. Du kan också skapa och hantera [innehållsfragment](/help/assets/content-fragments/content-fragments.md) från Assets-konsolen. |
+| Assets | Med Assets-konsolen kan du importera och hantera [digitala resurser som bilder, videoklipp, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. Du kan också skapa och hantera [innehållsfragment](/help/assets/content-fragments/content-fragments.md) från Assets-konsolen. |
 | Personalization | Den här konsolen innehåller ett ramverk med verktyg för [att skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
 | Innehållsfragment | [Med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) kan du utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan ta fram strukturerat innehåll som är klart för användning på flera platser/i flera kanaler, och som är idealiskt för både sidutveckling och headless-leverans. |
 | Generera variationer | [Generate Variations](/help/generative-ai/generate-variations.md) använder generativ artificiell intelligens (AI) för att skapa innehållsvariationer baserat på uppmaningar. Dessa uppmaningar tillhandahålls antingen av Adobe eller skapas, och hanteras av användare. |
@@ -130,7 +128,7 @@ Det finns ett antal hjälpresurser och några sätt att komma åt dem.
 
   ![Hjälpikon](assets/basic-handling-help.png)
 
-* **Konsol** - Första gången du navigerar i systemet, [en serie bilder innehåller AEM navigering](#product-navigation).
+* **Konsol** - Första gången du navigerar i systemet, [en serie bilder innehåller AEM-navigering](#product-navigation).
 
   ![Självstudiekurs](assets/basic-handling-console-tutorial.png)
 

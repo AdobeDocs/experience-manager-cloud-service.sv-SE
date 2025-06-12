@@ -3,7 +3,8 @@ title: Borttagning av SPA-redigerare
 description: Även om SPA-redigeraren fortfarande stöds av Adobe kan du ta reda på vad borttagningen innebär för ditt projekt och vilka alternativ du har för framtida projekt.
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7bff178eabdf7e0d89e7195be6ca109db19ee655
+exl-id: 58b1bb4a-33df-46df-8743-a56cefc5a60a
+source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 0%
@@ -50,7 +51,7 @@ Vilken som är den lämpligaste ersättningen för SPA-redigeraren beror på din
 
 * **[Den universella redigeraren](/help/edge/wysiwyg-authoring/authoring.md)** är den bästa direkta ersättningen för SPA-redigeraren.
    * Universal Editor är också en visuell redigerare och har tagits fram specifikt för fristående implementeringar som innehåller all Adobe-funktionalitet från SPA Editor.
-   * Den universella redigeraren har också [släppts för AEM 6.5](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) (med version 2024.11.05 av AEM 6.5) och stöder därför AMS och lokala användningsfall förutom molntjänster.
+   * Den universella redigeraren har också [släppts för AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) (med version 2024.11.05 av AEM 6.5) och stöder därför AMS och lokala användningsfall förutom molntjänster.
 * **[Innehållsfragmentsredigeraren](/help/assets/content-fragments/content-fragments-managing.md)** är ett alternativ för dem som föredrar en formulärbaserad redigerare.
    * Innehållsfragmentsredigeraren passar bäst när innehållet är strukturerat som innehållsfragment i stället för som sidor.
 

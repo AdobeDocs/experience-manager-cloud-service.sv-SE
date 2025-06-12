@@ -5,18 +5,25 @@ exl-id: 224928dd-e365-4f3e-91af-4d8d9f47efdd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: d2cd112de034ca6ea22590245fb480622acf258a
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
 
-# Formatsystem{#style-system}
+
+# Formatsystem {#style-system}
 
 Med Style System kan mallskapare definiera formatklasser i en komponents innehållsprincip så att en innehållsförfattare kan markera dem när komponenten på en sida redigeras. Dessa format kan vara alternativa visuella varianter av en komponent, vilket gör komponenten mer flexibel.
 
-På så sätt elimineras behovet av att utveckla en anpassad komponent för varje format eller att anpassa komponentdialogrutan för att aktivera sådana formatfunktioner. Det leder till mer återanvändbara komponenter som snabbt och enkelt kan anpassas efter innehållsförfattarnas behov utan någon AEM backend-utveckling.
+På så sätt elimineras behovet av att utveckla en anpassad komponent för varje format eller att anpassa komponentdialogrutan för att aktivera sådana formatfunktioner. Det leder till mer återanvändbara komponenter som snabbt och enkelt kan anpassas efter innehållsförfattarnas behov utan någon AEM-backend-utveckling.
+
+>[!NOTE]
+>
+>Formatsystemet gäller endast för sidor som skapats med sidredigeraren.
+>
+>Du kan skapa formatsidor som skapats med [Universal Editor](/help/implementing/universal-editor/introduction.md) och som hanteras med [Edge Delivery Services](/help/edge/overview.md) genom ditt GitHub-projekt.
 
 ## Användningsfall {#use-case}
 
@@ -37,21 +44,21 @@ Vanligtvis har du följande format när du använder Style System.
 
 1. Webbdesignern skapar olika visuella variationer av en komponent.
 
-1. HTML-utvecklaren får komponenternas HTML-utdata och de visuella variationer som ska implementeras.
+1. HTML-utvecklaren får HTML-utdata av komponenterna och de visuella variationer som ska implementeras.
 
-1. Utvecklaren i HTML definierar CSS-klasserna som motsvarar varje visuell variation och som ska infogas i elementet som omsluter komponenterna.
+1. HTML-utvecklaren definierar de CSS-klasser som motsvarar varje visuell variation och som ska infogas i elementet som omsluter komponenterna.
 
-1. Utvecklaren HTML implementerar motsvarande CSS-kod (och eventuellt JS-kod) för alla visuella variationer så att de ser ut som de definierats.
+1. HTML-utvecklaren implementerar motsvarande CSS-kod (och eventuellt JS-kod) för alla visuella variationer så att de ser ut som de definierats.
 
-1. Den AEM utvecklaren placerar angiven CSS (och valfri JS) i ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) och distribuerar det.
+1. AEM-utvecklaren placerar angiven CSS (och valfri JS) i ett [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md) och distribuerar det.
 
 1. AEM utvecklare eller mallskapare konfigurerar sidmallarna och redigerar profilen för varje formaterad komponent, lägger till definierade CSS-klasser, ger användarvänliga namn för varje format och anger vilka format som kan kombineras.
 
-1. AEM kan sedan välja de formgivna formaten i sidredigeraren via formatmenyn i komponentens verktygsfält.
+1. Sidförfattaren av AEM kan sedan välja de formgivna formaten i sidredigeraren via formatmenyn i komponentens verktygsfält.
 
-Endast de tre sista stegen genomförs i AEM. Detta innebär att all utveckling av nödvändig CSS och JavaScript kan göras utan AEM.
+I AEM utförs faktiskt bara de tre sista stegen. Detta innebär att all utveckling av nödvändig CSS och JavaScript kan göras utan AEM.
 
-För att kunna implementera formaten behöver du bara distribuera AEM och välja mellan komponenterna i de önskade mallarna.
+För att kunna implementera formaten behöver du bara distribuera dem på AEM och välja dem bland komponenterna i de önskade mallarna.
 
 Följande diagram visar arkitekturen i Style System.
 
@@ -59,7 +66,7 @@ Följande diagram visar arkitekturen i Style System.
 
 ## Använd {#use}
 
-För att demonstrera funktionen använder vi [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE)-implementeringen av kärnkomponentens [title-komponent](https://www.adobe.com/go/aem_cmp_title_v2) som exempel.
+För att demonstrera funktionen använder vi [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)-implementeringen av kärnkomponentens [title-komponent](https://www.adobe.com/go/aem_cmp_title_v2) som exempel.
 
 I följande avsnitt [Som innehållsförfattare](#as-a-content-author) och [ som mallskapare](#as-a-template-author) beskrivs hur du testar funktionaliteten i Style System med Style System of WKND.
 
@@ -82,7 +89,7 @@ Om du vill använda Style System för dina egna komponenter gör du följande:
 
    >[!NOTE]
    >
-   >I det här exemplet utesluter formaten **Färger** (**Svart**, **Vit** och **Grå**) varandra, medan alternativen **Format** (**Understruken**, **Högerjustera** och **Mini Spacing**&rbrace;) kan kombineras. Detta kan [konfigureras i mallen som mallskapare](#as-a-template-author).
+   >I det här exemplet utesluter formaten **Färger** (**Svart**, **Vit** och **Grå**) varandra, medan alternativen **Format** (**Understruken**, **Högerjustera** och **Mini Spacing**}) kan kombineras. Detta kan [konfigureras i mallen som mallskapare](#as-a-template-author).
 
 ### Som mallskapare {#as-a-template-author}
 
@@ -117,7 +124,7 @@ Följande steg är bara nödvändiga för att aktivera Style System för dina eg
 
 ### Aktivera fliken Format i designdialogrutan {#enable-styles-tab-design}
 
-För att en komponent ska kunna fungera med AEM Style System och visa stilfliken i sin designdialogruta måste komponentutvecklaren inkludera stilfliken med följande inställningar för komponenten:
+För att en komponent ska kunna arbeta med AEM Style System och visa stilfliken i sin designdialogruta måste komponentutvecklaren inkludera stilfliken med följande inställningar för komponenten:
 
 * `path = "/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_design/styletab"`
 * `sling:resourceType = "granite/ui/components/coral/foundation/include"`
@@ -125,7 +132,7 @@ För att en komponent ska kunna fungera med AEM Style System och visa stilfliken
 >[!NOTE]
 >Detta använder [övertäckningar](/help/implementing/developing/introduction/overlays.md) med hjälp av [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md).
 
-När komponenten är konfigurerad infogas de format som är konfigurerade av sidförfattarna automatiskt av AEM på dekorationselementet som AEM runt varje redigerbar komponent automatiskt. Själva komponenten behöver inte göra något annat för att detta ska hända.
+När komponenten är konfigurerad infogas de format som har konfigurerats av sidförfattarna automatiskt av AEM i dekorationselementet som AEM automatiskt omsluter runt varje redigerbar komponent. Själva komponenten behöver inte göra något annat för att detta ska hända.
 
 ### Aktivera fliken Format i dialogrutan Redigera {#enable-styles-tab-edit}
 

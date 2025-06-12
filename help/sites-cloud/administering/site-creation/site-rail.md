@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -14,6 +14,8 @@ ht-degree: 0%
 
 
 # Hantera ditt webbplatstema med hjälp av platspanelen {#site-panel}
+
+{{traditional-aem}}
 
 Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera ditt webbplatstema.
 
@@ -34,7 +36,7 @@ Panelen Plats används för att hantera tema- och mallrelaterad information för
 
 ## Hämtar temakällor {#downloading-theme-sources}
 
-När du skapar en webbplats i AEM baserat på en [webbplatsmall](site-templates.md) kan du hämta ditt [webbplatstema](site-themes.md) med hjälp av platspanelen.
+När du skapar en webbplats i AEM baserad på en [webbplatsmall](site-templates.md) kan du hämta ditt [webbplatstema](site-themes.md) med hjälp av platspanelen.
 
 När platspanelen visas i platskonsolen markerar du platsens rot för att visa temainformation om platsen.
 
@@ -68,7 +70,7 @@ Välj **Välj version** om du vill visa tidigare versioner av temat.
 
 Markera den version du vill ändra till och välj sedan **Använd** för att göra ändringen.
 
-Om AEM upptäcker att en nyare version av temat har distribuerats via front end-pipeline men inte tillämpats på din webbplats, visas en meddelandeikon.
+Om AEM upptäcker att en nyare version av temat har distribuerats via front end-pipeline men inte tillämpats på din webbplats visas en meddelandeikon.
 
 ![Senare version av temaindikatorn](/help/sites-cloud/administering/assets/new-theme-version.png)
 
