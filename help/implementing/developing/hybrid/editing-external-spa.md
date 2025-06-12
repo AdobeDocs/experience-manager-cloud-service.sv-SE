@@ -28,9 +28,9 @@ I det här dokumentet beskrivs de rekommenderade stegen för att överföra en f
 Förutsättningarna är enkla.
 
 * Kontrollera att en instans av AEM körs lokalt.
-* Skapa ett basprojekt för AEM SPA med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
+* Skapa ett basprojekt för AEM SPA med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE&#available-properties).
    * Forms ligger till grund för AEM-projektet som uppdateras med det externa SPA-programmet.
-   * För exemplen i det här dokumentet använder Adobe startpunkten för [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
+   * För exemplen i det här dokumentet använder Adobe startpunkten för [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=sv-SE#spa-editor).
 * Ha den fungerande, externa React SPA som du vill integrera till hands.
 
 ## Överför SPA till AEM Project {#upload-spa-to-aem-project}
@@ -373,8 +373,8 @@ RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett
 Följande referensmaterial kan vara användbart för att förstå SPA i samband med AEM.
 
 * [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
-* [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
+* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE)
+* [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=sv-SE)
 * [Komma igång med SPA i AEM med React](/help/implementing/developing/hybrid/getting-started-react.md)
 * [SPA-referensmaterial (API-referenser)](/help/implementing/developing/hybrid/reference-materials.md)
 * [SPA Blueprint och PageModelManager](/help/implementing/developing/hybrid/blueprint.md#pagemodelmanager)

@@ -130,7 +130,7 @@ Bygg vidare på den här kunskapen och fortsätt din resa till AEM Quick Site Cr
 
 Vi rekommenderar att du går vidare till nästa del av processen för att skapa snabbwebbplats genom att granska dokumentet [Skapa webbplats från mall](create-site.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på resan.
 
-* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
-* [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html) - Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. I det här dokumentet finns mer information om de här rollerna och hur du administrerar dem.
+* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=sv-SE) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
+* [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=sv-SE) - Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. I det här dokumentet finns mer information om de här rollerna och hur du administrerar dem.
 * [npm](https://www.npmjs.com) - AEM-teman som används för att snabbt skapa webbplatser baseras på npm.
 * [webpack](https://webpack.js.org) - AEM-teman som används för att snabbt skapa webbplatser är beroende av webbpaket.
