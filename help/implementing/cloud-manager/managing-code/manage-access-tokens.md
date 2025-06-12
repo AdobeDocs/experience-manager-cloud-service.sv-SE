@@ -3,9 +3,9 @@ title: Hantera åtkomsttoken för externa databaser i Cloud Manager
 description: Lär dig hur du visar, redigerar och tar bort åtkomsttoken som används för Använd egen Git i AEM Cloud Manager.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#manage-access-tokens"
+badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#manage-access-tokens"
 exl-id: bc9f392c-61f5-4d39-972b-4c6c8f9bab4a
-source-git-commit: 9f9f931a233320014675c6aac86a2cc65f6909c6
+source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Se även [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud
 
 >[!NOTE]
 >
->De funktioner som beskrivs i den här artikeln är endast tillgängliga via programmet för tidig användning. Mer information och om du vill registrera dig som tidig användare finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
+>De funktioner som beskrivs i den här artikeln är endast tillgängliga via det privata betaprogrammet. Mer information och om du vill registrera dig för den privata betaversionen finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
 
 ## Visa åtkomsttoken {#view-access-tokens}
 

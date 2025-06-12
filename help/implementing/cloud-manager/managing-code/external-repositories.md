@@ -3,11 +3,11 @@ title: Lägg till externa databaser i Cloud Manager
 description: Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab-, Bitbucket- och Azure DevOps-databaser.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-badge: label="Tidiga användare" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
+badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: e881c3d8af7127e030aa9a0a2c163eaf04870c2b
+source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
 workflow-type: tm+mt
-source-wordcount: '2079'
+source-wordcount: '2077'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Kunderna kan nu även införliva sina Azure DevOps Git-databaser i Cloud Manager
 
 >[!NOTE]
 >
->De funktioner som beskrivs i den här artikeln är endast tillgängliga via programmet för tidig användning. Mer information och om du vill registrera dig som tidig användare finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
+>De funktioner som beskrivs i den här artikeln är endast tillgängliga via det privata betaprogrammet. Mer information och om du vill registrera dig för den privata betaversionen finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
 
 
 ## Konfigurera en extern databas
@@ -82,13 +82,13 @@ Konfigurationen av en extern databas i Cloud Manager består av följande steg:
    | **Lägg till ny åtkomsttoken** | **Databastyp: GitHub Enterprise**<br><ul><li> Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitHub-dokumentationen](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Behörigheter som krävs för GitHub Enterprise Personal Access Token (PAT)<br>Dessa behörigheter säkerställer att Cloud Manager kan validera pull-begäranden, hantera implementeringsstatuskontroller och få tillgång till nödvändig repo-information.<br>När du genererar PAT i GitHub Enterprise måste du se till att det innehåller följande databasbehörigheter:<ul><li>Pull-begäran (läs och skriv)<li>Bekräfta status (läs och skriv)<li>Databasmetadata (skrivskyddade)</li></li></ul></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
    | | **Databastyp: GitLab**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en personlig åtkomsttoken genom att följa instruktionerna i [GitLab-dokumentationen](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Behörigheter som krävs för GitLab Personal Access Token (PAT)<br>Dessa scope ger Cloud Manager åtkomst till databasdata och användarinformation som behövs för validering och webkrok-integrering.<br>När du genererar PAT i GitLab ska du kontrollera att det innehåller följande tokenomfång:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
    | | **Databastyp: Bitbucket**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Bitbucket-dokumentationen](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Behörigheter som krävs för Bitbucket Personal Access Token (PAT)<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webboks-händelser.<br>När du skapar applösenordet i Bitbucket måste det innehålla följande lösenordsbehörigheter:<ul><li>Databas (skrivskyddad)<li>Hämta begäranden (läsa och skriva)<li>Webhooks (läs och skriv)</li></li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
-   | | **Databastyp: Azure DevOps**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Azure DevOps-dokumentationen](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&amp;tabs=Windows).<li>Nödvändig behörighet för Azure DevOps Personal Access Token (PAT).<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webkrockshändelser.<br>När du skapar applösenordet i Azure DevOps måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Databas (skrivskyddad)</li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+   | | **Databastyp: Azure DevOps**<ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Azure DevOps-dokumentationen](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Nödvändig behörighet för Azure DevOps Personal Access Token (PAT).<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webkrockshändelser.<br>När du skapar applösenordet i Azure DevOps måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Databas (skrivskyddad)</li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
 
    Se även [Hantera åtkomsttoken](/help/implementing/cloud-manager/managing-code/manage-access-tokens.md).
 
    >[!IMPORTANT]
    >
-   >Funktionen **Lägg till ny åtkomsttoken** är för närvarande i fasen tidig Adobe. Ytterligare funktioner planeras. Därför kan de behörigheter som krävs för åtkomsttoken ändras. Dessutom kan användargränssnittet för hantering av tokens uppdateras, inklusive funktioner som utgångsdatum för token. Och automatiska kontroller för att säkerställa att tokens som är länkade till databaser förblir giltiga.
+   >Funktionen **Lägg till ny åtkomsttoken** är för närvarande i en privat beta. Ytterligare funktioner planeras. Därför kan de behörigheter som krävs för åtkomsttoken ändras. Dessutom kan användargränssnittet för hantering av tokens uppdateras, inklusive funktioner som utgångsdatum för token. Och automatiska kontroller för att säkerställa att tokens som är länkade till databaser förblir giltiga.
 
 1. Klicka på **Validera**.
 

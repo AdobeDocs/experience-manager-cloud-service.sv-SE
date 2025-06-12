@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.6.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 52c8745d3a3cc4bc41003a258a85a817e7ccb48b
+source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
 workflow-type: tm+mt
 source-wordcount: '954'
 ht-degree: 0%
@@ -52,11 +52,11 @@ Nästa planerade version är torsdagen den 10 juli 2025.
   Se [Markera pipeline-favoriter](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipeline-favorites).
 
 
-## Program för tidig användning {#early-adoption}
+## Privat betatprogram {#private-beta-program}
 
-Delta i Cloud Manager Tidiga Adobe-program och få exklusiv tillgång till kommande funktioner innan de släpps.
+Delta i Cloud Manager privata Beta-program och få exklusiv tillgång till kommande funktioner innan de släpps.
 
-Följande tidiga möjligheter för användare finns för närvarande:
+Följande privata betaversioner är tillgängliga:
 
 
 ### Specialiserad testmiljö {#specialized-test-environment}

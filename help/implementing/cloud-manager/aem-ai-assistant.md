@@ -1,5 +1,5 @@
 ---
-title: AI Assistant i Adobe Experience Manager (Limited Beta)
+title: AI Assistant i Adobe Experience Manager (privat beta)
 description: Använd AI Assistant i Adobe Experience Manager för att hitta svar, felsöka och utforska webbplatser, Assets, Forms och Cloud Manager.
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -7,19 +7,19 @@ role: Admin, Architect, Developer
 hide: false
 hidefromtoc: true
 exl-id: 6cdf7f65-7112-420a-90c1-564f0ef8ceaf
-source-git-commit: 2db966405b5326d735083a66b2625d6d973ad7db
+source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
 
 # Om AI Assistant i Adobe Experience Manager {#aem-home}
 
-AI Assistant i AEM (Adobe Experience Manager) har ett konversationsgränssnitt som gör det enkelt att hitta svar på frågor som rör Adobe Experience Manager. Det hjälper dig att få tillgång till produktinformation, felsöka problem och utforska information som finns i Experience League. Under det begränsade Beta-programmet stöder AI Assistant Adobe Experience Manager as a Cloud Service, bland annat Sites, Assets, Forms och Cloud Manager.
+AI Assistant i AEM (Adobe Experience Manager) har ett konversationsgränssnitt som gör det enkelt att hitta svar på frågor som rör Adobe Experience Manager. Det hjälper dig att få tillgång till produktinformation, felsöka problem och utforska information som finns i Experience League. Under det privata betaprogrammet stöder AI Assistant Adobe Experience Manager as a Cloud Service, inklusive Sites, Assets, Forms och Cloud Manager.
 
 >[!IMPORTANT]
->Kontrollera att du har granskat och skickat in användaravtalet så att Adobe kan aktivera AI Assistant-funktionen så att du kan testa och delta i Beta.
+>Kontrollera att du har granskat och skickat in användaravtalet så att Adobe kan aktivera AI Assistant-funktionen så att du kan testa och delta i det privata betaprogrammet.
 >
 >Om du har några frågor skickar du ett e-postmeddelande till [Grp-AEMAIASSISTANT@adobe.com](mailto:Grp-AEMAIASSISTANT@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
 
@@ -74,7 +74,7 @@ AI Assistant för AEM Forms finns i:
 
 >[!NOTE]
 >
-> AI Assistant för AEM Forms (Forms Experience Builder) är tillgänglig via programmet för tidiga användare. Skicka ett e-postmeddelande från din arbetsadress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst.
+> AI Assistant för AEM Forms (Forms Experience Builder) är tillgängligt via det privata betaprogrammet. Skicka ett e-postmeddelande från din arbetsadress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) för att begära åtkomst.
 
 Mer information om hur du använder AI-assistenten för AEM Forms, med detaljerade exempel och bästa praxis, finns i [AI-assistenten för AEM Forms-dokumentation](/help/edge/docs/forms/forms-ai-assistant.md).
 
