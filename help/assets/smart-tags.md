@@ -3,13 +3,13 @@ title: Tagga resurser automatiskt med  [!DNL Adobe Sensei] smart tjänst
 description: Tagga tillgångar med en artificiellt intelligent tjänst som använder kontextuella och beskrivande affärstaggar.
 feature: Smart Tags,Tagging
 role: Admin,User
-source-git-commit: 9af552b17421e320b6139d6bd6ecaa42428de397
+exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
+source-git-commit: e253445d04889390ea9bf34df4ab14a9583d78aa
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2398'
 ht-degree: 0%
 
 ---
-
 
 # Smarta taggar för AEM Assets {#using-smart-tags}
 
@@ -88,7 +88,7 @@ The applied smart tags are sorted in descending order of [confidence score](#con
 
 ## Otaggad Assets i DAM {#smart-tag-existing-assets}
 
-Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=sv-SE#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
+Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
 
 <!--
 To smart tag assets, or folders (including subfolders) of assets that exist in assets repository, follow these steps:
@@ -213,13 +213,25 @@ Following are the benefits of using Smart Tags in your AEM Assets:
 *  Helps your assets to become organized and categorized.
 -->
 
-## Förbättra innehållsidentifiering med AI-genererade smarta taggar {#ai-smart-tags}
+## Förbättra innehållsidentifiering med AI-genererade metadata {#ai-smart-tags}
 
 I stället för att förlita sig på manuell inmatning tilldelar AI automatiskt beskrivande taggar till digitala resurser. Dessa AI-genererade taggar förbättrar metadatakvaliteten och gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll. Om resursen till exempel är en bild kan AI identifiera objekt, scener, känslor eller till och med varumärkeslogotyper i den och generera relevanta taggar som&quot;solnedgång&quot;,&quot;strand&quot;,&quot;semester&quot; eller&quot;leende&quot;. AI-genererat innehåll kan förbättra sökningen efter resurser genom att använda både semantiska och lexikala söktekniker. Se mer [Sök i Assets](search-assets.md). <!--If the asset is a document, AI reads and interprets the text to assign meaningful keywords that summarize its content—such as "climate change," "policy," or "renewable energy.-->
 
 ![Förbättrade smarta taggar](assets/enhanced-smart-tags1.png)
 
-### Använda AI-genererade smarta taggar {#using-ai-generated-smart-tags}
+### Hur aktiverar jag AI-genererade metadata? {#enable-ai-generated-metadata}
+
+Så här aktiverar du AI-genererade metadata:
+
+* Den lägsta version av AEM som krävs är `20626`.
+
+* Du måste underteckna ett GenAI Rider-avtal. Kontakta Adobe om du vill ha mer information.
+
+  >[!IMPORTANT]
+  >
+  > Den AI-genererade titeln för en resurs visas bara på tillgångskortet när du inte har definierat resurstiteln. Den skriver inte över den resurstitel som du har angett.
+
+### Använda AI-genererade metadata {#using-ai-generated-smart-tags}
 
 <!--[!NOTE]
 >
@@ -232,7 +244,7 @@ Utför följande steg om du vill använda den förbättrade funktionen för smar
 
 1. Vänta tills den nyligen överförda resursen bearbetas. Gå till resursegenskaper när du är klar.
 
-1. Gå till fliken **[!UICONTROL AI-Generated]**. Om versionen [!DNL Experience Manager] är inkompatibel eller inte uppdaterad visas inte den här fliken. Den lägsta version av AEM som krävs är `20626`. Följande fält finns där:
+1. Gå till fliken **[!UICONTROL AI-Generated]**. Om versionen [!DNL Experience Manager] är inkompatibel eller inte uppdaterad visas inte den här fliken. Följande fält finns där:
 
    * **[!UICONTROL Generated title]:** Titeln innehåller en tydlig och kortfattad rubrik som beskriver kärnidén för en överförd resurs, vilket gör det enkelt att förstå direkt. När du lägger till en resurs visas den i resursvyn om du anger en titel (i `dc:title`). Om inget anges tilldelas en AI-genererad titel automatiskt.
    * **[!UICONTROL Generated description]:** Beskrivningen ger en kort men informativ sammanfattning av vad resursen handlar om, vilket hjälper användare och sökmoduler att snabbt förstå dess relevans.
