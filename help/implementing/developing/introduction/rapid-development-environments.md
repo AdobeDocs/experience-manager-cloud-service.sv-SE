@@ -25,7 +25,7 @@ När ändringarna har testats i en RDE kan de distribueras till en vanlig Cloud 
 >[!VIDEO](https://video.tv.adobe.com/v/3415582/?quality=12&learn=on)
 
 
-Du kan se ytterligare videofilmer som visar [hur du konfigurerar den](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup), [hur du använder den](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use) och [utvecklingscykeln](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle) med hjälp av RDE.
+Du kan se ytterligare videofilmer som visar [hur du konfigurerar den](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup), [hur du använder den](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use) och [utvecklingscykeln](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/development-life-cycle) med hjälp av RDE.
 
 ## Introduktion {#introduction}
 
@@ -179,7 +179,7 @@ I miljöer där ingen användare interaktivt kan köra installationskommandot (t
 
    `aio config:set cloudmanager_orgid 4E03EQC05D34GL1A0B49421C@AdobeOrg`
 
-   * Ditt eget organisations-ID kan slås upp med den metod som beskrivs under [Visa ditt företags-ID](https://experienceleague.adobe.com/en/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
+   * Ditt eget organisations-ID kan slås upp med den metod som beskrivs under [Visa ditt företags-ID](https://experienceleague.adobe.com/sv/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 1. Konfigurera sedan ditt program-ID:
 
@@ -195,7 +195,7 @@ I miljöer där ingen användare interaktivt kan köra installationskommandot (t
 
    Dessa steg kräver att du är medlem i produktprofilen Cloud Manager **Developer - Cloud Service**. Mer information finns i [Tilldela teammedlemmar till Cloud Manager produktprofiler - Tilldela produktprofilen för utvecklare](/help/journey-onboarding/assign-profiles-cloud-manager.md#assign-developer).
 
-Titta på videosjälvstudiekursen [om hur du konfigurerar en RDE (06:24)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup) om du vill ha mer information och demonstration.
+Titta på videosjälvstudiekursen [om hur du konfigurerar en RDE (06:24)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-setup) om du vill ha mer information och demonstration.
 </details>
 
 ## Använd RDE när du utvecklar en ny funktion {#using-rde-while-developing-a-new-feature}
@@ -524,7 +524,7 @@ aio aem:rde:delete com.adobe.granite.csrf.impl.CSRFFilter
 #14: delete completed for osgi-config com.adobe.granite.csrf.impl.CSRFFilter on publish - done by karl at 2022-09-12T22:01:12.979Z
 ```
 
-Mer information och demonstration finns i videosjälvstudien [om hur du använder RDE-kommandon (10:01)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use).
+Mer information och demonstration finns i videosjälvstudien [om hur du använder RDE-kommandon (10:01)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use).
 
 
 ## Distribuera till en RDE från externa Git-leverantörer {#deploy-to-rde}
@@ -1151,7 +1151,7 @@ Forms-utvecklare kan använda AEM Forms Cloud Service Rapid Development Environm
 
 ## RDE, genomgång
 
-Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvstudiekursen som demonstrerar [hur du konfigurerar den, hur du använder den och utvecklingscykeln (01:25)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview).
+Om du vill veta mer om RDE i AEM as a Cloud Service kan du titta i videosjälvstudiekursen som demonstrerar [hur du konfigurerar den, hur du använder den och utvecklingscykeln (01:25)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/overview).
 
 ## Felsökning {#troubleshooting}
 
