@@ -38,6 +38,7 @@ Mer information om redigerbara externa SPA:er i AEM finns i artikeln [Redigera e
    * https://github.com/shellscape/webpack-manifest-plugin
    * https://github.com/webdeveric/webpack-assets-manifest
    * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
+
      ![exempel på egenskapen entrypoints](assets/asset-manifest-entrypoints.png)
 * Programmet måste kunna initieras i ett `<div id="root"></div>` under elementet `body`. Om en annan kod förväntas för att programmet ska kunna instansieras måste detta justeras i HTML-skripten för proxykomponenten som har en `sling:resourceSuperType="spa-project-core/components/remotepage`.
 
