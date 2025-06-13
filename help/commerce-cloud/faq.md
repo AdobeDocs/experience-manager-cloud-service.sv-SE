@@ -49,7 +49,7 @@ Dynamiska data som pris eller lager cachelagras inte på Dispatcher. Dynamiska d
 
 ## &#x200B;9. Hur fungerar cacheminnet för AEM Dispatcher tillsammans med AEM och e-handel?
 
-Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar Adobe att du återger data på klientsidan. Mer information om ogiltigförklaring av TTL-baserad cache finns i [Optimera Dispatcher-cachen.](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)
+Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar Adobe att du återger data på klientsidan. Mer information om ogiltigförklaring av TTL-baserad cache finns i [Optimera Dispatcher-cachen.](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=sv-SE)
 
 ## &#x200B;10. Finns det någon rekommendation om enhetlig sökning i AEM-innehåll med Commerce?
 

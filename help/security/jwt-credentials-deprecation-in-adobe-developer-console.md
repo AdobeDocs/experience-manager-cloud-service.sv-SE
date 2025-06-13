@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->AEM 6.5-kunder bör referera till [den jämförbara dokumentationen för AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/jwt-credentials-deprecation-in-adobe-developer-console) för mer information.
+>AEM 6.5-kunder bör referera till [den jämförbara dokumentationen för AEM 6.5](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/security/jwt-credentials-deprecation-in-adobe-developer-console) för mer information.
 
 Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. En av dessa autentiseringstyper, JWT-autentiseringsuppgifter (Service Account), har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server. Det går inte att skapa nya JWT-referenser (Service Account) den 3 juni 2024 eller senare, och befintliga JWT-autentiseringsuppgifter fungerar inte den 30 juni 2025 eller senare. Du kan [läsa om borttagningen](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
@@ -86,8 +86,8 @@ Adobe kommer att initiera en stegvis migreringsstrategi under första kvartalet 
 
 Automatiskt genererade projektintegreringar slutar att fungera om de inte migreras till OAuth senast i juni 2025.
 
-För att övergången ska gå smidigt bör man kontakta [Adobe kundtjänst](https://helpx.adobe.com/ca/enterprise/using/support-for-experience-cloud.html) omedelbart och börja uppdatera till den [senaste AEM-utgåvan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/maintenance/latest). Detta ger god tid för regressionstestning och gör att Adobe effektivt kan hantera migreringen av projekt.
+För att övergången ska gå smidigt bör man kontakta [Adobe kundtjänst](https://helpx.adobe.com/ca/enterprise/using/support-for-experience-cloud.html) omedelbart och börja uppdatera till den [senaste AEM-utgåvan](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/maintenance/latest). Detta ger god tid för regressionstestning och gör att Adobe effektivt kan hantera migreringen av projekt.
 
 **Kan jag uppgradera till en OAuth-version som stöds utan att uppgradera min AEM as a Cloud Service AEM-version?**
 
-Nej. För att övergången ska gå smidigt bör man kontakta [Adobe kundtjänst](https://helpx.adobe.com/ca/enterprise/using/support-for-experience-cloud.html) omedelbart och börja uppdatera till den [senaste AEM-utgåvan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/maintenance/latest). Detta ger god tid för regressionstestning och gör att Adobe effektivt kan hantera migreringen av projekt.
+Nej. För att övergången ska gå smidigt bör man kontakta [Adobe kundtjänst](https://helpx.adobe.com/ca/enterprise/using/support-for-experience-cloud.html) omedelbart och börja uppdatera till den [senaste AEM-utgåvan](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/maintenance/latest). Detta ger god tid för regressionstestning och gör att Adobe effektivt kan hantera migreringen av projekt.

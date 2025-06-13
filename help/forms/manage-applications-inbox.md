@@ -23,7 +23,7 @@ Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde ä
 
 Dessutom konsoliderar AEM Inbox meddelanden och uppgifter från olika AEM-komponenter, inklusive Forms-arbetsflöden. När en Forms Workflow som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
 
-Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Inkorgen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html#inbox-in-the-header).
+Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Inkorgen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/inbox.html?lang=sv-SE#inbox-in-the-header).
 
 Sammanfattningsvis kan du i Inkorgen skapa ett program och hantera tilldelade uppgifter.
 
@@ -81,7 +81,7 @@ Den detaljerade uppgiftsvyn innehåller följande avsnitt:
 
 #### Uppgiftsinformation {#task-details}
 
-I avsnittet Uppgiftsinformation visas information om uppgiften. Vilken information som visas beror på konfigurationsinställningarna för [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem) i arbetsflödet. I exemplet ovan visas beskrivning, status, startdatum och arbetsflöde som används för uppgiften. Det gör det även möjligt att bifoga en fil till uppgiften.
+I avsnittet Uppgiftsinformation visas information om uppgiften. Vilken information som visas beror på konfigurationsinställningarna för [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem) i arbetsflödet. I exemplet ovan visas beskrivning, status, startdatum och arbetsflöde som används för uppgiften. Det gör det även möjligt att bifoga en fil till uppgiften.
 
 #### Formulär {#form}
 
@@ -89,7 +89,7 @@ Fliken Formulär i området för huvudinnehållet visar eventuella bifogade form
 
 #### Information om arbetsflöde {#workflow-details}
 
-Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela uppgiftssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem) i det associerade arbetsflödet.
+Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela uppgiftssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem) i det associerade arbetsflödet.
 
 Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan välja **[!UICONTROL View Details]** för en slutförd fas om du vill veta mer om den scenen. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
 
@@ -97,7 +97,7 @@ Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet.
 
 #### Verktygsfältet Åtgärder {#actions-toolbar}
 
-Verktygsfältet Åtgärder visar alla tillgängliga alternativ för uppgiften. Medan Spara, Återställ och Delegera är standardåtgärder konfigureras andra tillgängliga åtgärder i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem). I exemplet ovan har Godkänn och Avvisa konfigurerats i arbetsflödet.
+Verktygsfältet Åtgärder visar alla tillgängliga alternativ för uppgiften. Medan Spara, Återställ och Delegera är standardåtgärder konfigureras andra tillgängliga åtgärder i [Tilldela aktivitetssteg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem). I exemplet ovan har Godkänn och Avvisa konfigurerats i arbetsflödet.
 
 När du arbetar med uppgiften fortsätter den i arbetsflödet.
 
@@ -112,7 +112,7 @@ I AEM Inbox visas endast aktiva uppgifter. Slutförda uppgifter visas inte i lis
 
 1. Välj om du vill välja en uppgift och klicka på **[!UICONTROL Open]**.
 
-Aktiviteten öppnas och dokumentet eller det adaptiva formuläret som är kopplat till uppgiften visas. För Adaptiv form visar uppgiften det skrivskyddade adaptiva formuläret eller dess PDF Document of Record som konfigurerats på fliken Formulär/Dokument i arbetsflödessteget [Tilldela uppgift](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html#extending-aem).
+Aktiviteten öppnas och dokumentet eller det adaptiva formuläret som är kopplat till uppgiften visas. För Adaptiv form visar uppgiften det skrivskyddade adaptiva formuläret eller dess PDF Document of Record som konfigurerats på fliken Formulär/Dokument i arbetsflödessteget [Tilldela uppgift](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-step-ref.html?lang=sv-SE#extending-aem).
 
 I avsnittet med aktivitetsinformation visas information om till exempel åtgärd, aktivitetsstatus, startdatum och slutdatum.
 
@@ -141,7 +141,7 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM Wo
      | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
 
 
-   * Distribuera indexen via ett AEM-paket. Du kan använda ett [AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=en) -projekt för att skapa ett distribuerbart AEM-paket. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
+   * Distribuera indexen via ett AEM-paket. Du kan använda ett [AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) -projekt för att skapa ett distribuerbart AEM-paket. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -151,6 +151,6 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM Wo
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [Skapa ett egenskapsindex och ange det till true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=en#the-property-index).
+1. [Skapa ett egenskapsindex och ange det till true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=sv-SE#the-property-index).
 
 1. När du har konfigurerat index i CRX DE eller distribuerat via ett paket indexerar du om databasen.
