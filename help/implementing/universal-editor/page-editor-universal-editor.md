@@ -4,9 +4,9 @@ description: Sidredigeraren stöds fortfarande av Adobe, men den universella red
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 0a13fb52-623e-4aff-b254-186d8d117e4d
-source-git-commit: f21e21b0f7239ec9112d65b94b372344c4a07566
+source-git-commit: 9da4c90c56b7a82a41604173100ad6503a4a06d0
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Eftersom luckan mellan de två redigerarna ständigt krymper bör du läsa versi
 
 |  | Page Editor | Anteckningar | Universal Editor | Anteckningar |
 |---|---|---|---|---|
-| [Klassisk AEM-leverans](/help/sites-cloud/authoring/author-publish.md) | [!BADGE Tillgänglig]{type=Positive} | Rekommenderas för användning med kärnkomponenter | [!BADGE Inte tillgänglig]{type=Negative} | Klassiska AEM-sidor är ofta beroende av flera funktioner som är svåra att kopiera som de är med den universella redigeraren. |
+| [Publicera leverans](/help/sites-cloud/authoring/author-publish.md) | [!BADGE Tillgänglig]{type=Positive} | Rekommenderas för användning med Core Components och traditionella AEM-projekt | [!BADGE Inte tillgänglig]{type=Negative} | Vanliga AEM-sidor använder ofta flera funktioner som är svåra att kopiera som de är med den universella redigeraren. |
 | [Edge Delivery](/help/edge/overview.md) | [!BADGE Inte tillgänglig]{type=Negative} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | [Headless Delivery](/help/headless/introduction.md) | [!BADGE Delvis tillgänglig]{type=Caution} | Endast med [SPA-redigeraren,](/help/implementing/developing/hybrid/introduction.md) som [är inaktuellt](/help/implementing/developing/hybrid/spa-editor-deprecation.md) till förmån för den universella redigeraren | [!BADGE Tillgänglig]{type=Positive} | Med Universell redigerare kan utvecklare ta med sig ett eget webbprogram utan att införa några specifika ramverkskrav eller implementeringsbegränsningar. |
 
@@ -103,6 +103,6 @@ Det finns ingen direkt migreringssökväg från sidredigeraren till den universe
    * Detta påverkar många områden i dialogrutorna, t.ex. anpassade widgetar, fältvalidering, visa/dölj regler och mallbaserade anpassningar.
       * Dessa funktioner är fortfarande möjliga, men i Universell redigerare löses de genom konfiguration i stället för att JavaScript distribueras i dialogrutor.
 
-Medan Universell redigerare tekniskt kan aktivera redigering för klassiska AEM-sidor (t.ex. skapade med Core Components), är dessa webbplatser vanligtvis beroende av flera funktioner som är specifika för sidredigeraren, t.ex. Style System, Responsive Grid, Editable Templates och anpassad JavaScript i dialogrutor.
+Medan Universell redigerare tekniskt kan aktivera redigering av sidor för traditionella AEM-projekt (t.ex. skapade med Core Components), är dessa webbplatser vanligtvis beroende av flera funktioner som är specifika för sidredigeraren, t.ex. Style System, Responsive Grid, Editable Templates och anpassad JavaScript i dialogrutor.
 
 Eftersom den universella redigeraren följer ett mer strömlinjeformat, modernt arbetssätt som inte har stöd för dessa äldre funktioner, behöver du omfaktorisera om du migrerar sådana webbplatser. Därför bör **du bara migrera sidredigeringswebbplatser till den universella redigeraren för projekt som övergår till Edge Delivery Services.**
