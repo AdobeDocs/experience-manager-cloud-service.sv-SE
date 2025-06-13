@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 6976f0c9926fb4cb64b0b2d7f8d2daf004c6b936
+source-git-commit: 40f3f4652dbfce9bda65b8e69c349b9a8a563469
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1782'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -269,7 +269,8 @@ I innehållsträdesläget visas sidinnehållets hierarki på panelen.
 
 ![Läge för innehållsträd](assets/content-tree-mode.png)
 
-När du väljer ett objekt i innehållsträdet rullar redigeraren till det innehållet och markerar det.
+* När du väljer ett objekt i innehållsträdet rullar redigeraren till det innehållet och markerar det.
+* När du dubbelklickar på ett objekt i innehållsträdet rullar redigeraren till det innehållet och markerar det, och öppnar även de associerade egenskaperna i [egenskapsläget.](#properties-mode)
 
 ![Innehållsträdet](assets/content-tree.png)
 
