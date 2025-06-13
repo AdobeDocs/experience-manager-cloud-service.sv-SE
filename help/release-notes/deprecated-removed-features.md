@@ -4,9 +4,9 @@ description: Versionsinformation som är specifik för borttagna och borttagna f
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 569ab7cfab02cfc5d5ad1c8f402a51df34f4bac6
+source-git-commit: c7615247be1e237c72508ae4dfc3156fdcde9905
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Funktionerna i tabellen nedan har meddelats att de är borttagna, men har ännu 
 | Sites | [Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md) | [Leverans av innehållsfragment med OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)<br>tillsammans med <br> [OpenAPI:er för hantering av innehållsfragment och innehållsfragmentmodeller](/help/headless/content-fragment-openapis.md) |
 | Sites | [PWA-funktioner](/help/sites-cloud/authoring/sites-console/enable-pwa.md) | Ingen |
 | Sites | [SPA-redigerare](/help/implementing/developing/hybrid/introduction.md) | De redigerare som rekommenderas för att hantera headless-innehåll i AEM är:<br>- [Universell redigerare](/help/edge/wysiwyg-authoring/authoring.md) för visuell redigering.<br>- [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering. |
-| [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/sv/docs/experience-manager-htl/content/java-use-api) |
+| [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api) |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen är planerad att tas bort snart. |
 | Sites | [Experience Cloud Setup Automation](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md) | Ingen |
 | [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md). |
@@ -47,7 +47,7 @@ Funktionerna i tabellen nedan har meddelats att de är borttagna, men har ännu 
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att skapa miniatyrbilder för MPEG. Använd [Dynamiska media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
 | [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera för replikeringsagenter (borttagning efter 30 september 2021) | [Hantera arbetsflödesmetoderna för publikation](/help/operations/replication.md#manage-publication) eller [Trädaktivering](/help/operations/replication.md#tree-activation). |
 | [!DNL Foundation] | Administratörsskärmbilden för replikeringsagenten har fliken Distribuera och replikerings-API:t kan inte replikera innehållspaket som är större än 10 MB. | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflöde för trädaktivering](/help/operations/replication.md#tree-activation) |
-| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Från och med den 1 maj 2024 går det inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console. Befintliga JWT-autentiseringsuppgifter (Service Account) är fortfarande användbara för konfigurerade integreringar fram till 1 januari 2025. Därefter slutar de fungera, vilket kräver att kunderna migrerar till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
+| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Från och med den 1 maj 2024 går det inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console. Befintliga JWT-autentiseringsuppgifter (Service Account) är fortfarande användbara för konfigurerade integreringar fram till 1 januari 2025. Därefter slutar de fungera, vilket kräver att kunderna migrerar till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
 | [!DNL Foundation] | Publicera arbetsflöde för innehållsträd och det relaterade arbetsflödessteget Publicera innehållsträd, som användes för replikeringar av innehållshierarkier. | Använd [Arbetsflödessteget för trädaktivering](/help/operations/replication.md#tree-activation), vilket är mer prestandaförbättrat. |
 | [!DNL Foundation] | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. | Adobe rekommenderar att man byter till Google Closure Compiler (GCC) för implementering. |
 
@@ -58,10 +58,10 @@ I det här avsnittet visas de funktioner som har tagits bort.
 | Område | Funktion | Ersättning | Borttagningsdatum för mål |
 | ------------ | ------------------ | ----------- | ------------------- |
 | Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns några dialogrutor för klassiskt användargränssnitt för ett fåtal utvalda funktioner, som Länkkontroll, Rensa version och vissa Cloud Service-konfigurationer. De kommande [produktuppdateringarna](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
-| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/administering/integration/scene7#integration) och [Dynamic Media Hybrid Mode](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/dynamic/config-dynamic#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamiska media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
+| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/scene7#integration) och [Dynamic Media Hybrid Mode](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dynamic#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamiska media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. | Borttagen |
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i databasen [!DNL Experience Manager] inte är tillgängliga vid körning. | Borttagen |
-| [!DNL Assets] | Det går inte att dela [!DNL Assets] med tjänsten Assets Core och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. | Borttagen |
+| [!DNL Assets] | Det går inte att dela [!DNL Assets] med tjänsten Assets Core och Creative Cloud. | Använd [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) för integrering med [!DNL Adobe Creative Cloud]. | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
@@ -143,7 +143,7 @@ API:erna i tabellen nedan (klicka för att expandera för att visa dem) har medd
     <td>8/31/2025</td>
   </tr>
   <tr>  <td>com.google.common.annotations<br>com.google.common.base<br>com.google.common.cache<br>com.google.common.collect<br>com.google.common.escape<br>com.google.common.eventbus<br>com.google.common.hash<br>com.google.common.html<br>com.google.common.io<br>com.google.common.math<br>com.google.common.net<br>com.google.common.primitives<br>com.google.common.reflect<br>com.google.common.util.concurrent<br>com.google.common.xml</td>
-    <td>Google Guava Core Libraries är föråldrat.</td>
+    <td>Google Guava Core Libraries används inte i Cloud Service. <a href="#com.google.common">Se borttagningsanteckningar nedan.</a></td>
     <td>5/15/2023</td>
     <td>8/31/2025</td>
   </tr>
@@ -363,6 +363,19 @@ Lägg till Mongo-klient-API i ditt projekt.
 * Lägg till det här paketet i ditt projekt
    * `org.mongodb:mongo-java-driver:3.12.7`
 
+Du kan välja en annan version beroende på dina behov.
+
+### Tar bort `com.google.common*` {#com.google.common}
+
+Ta bort användningen av Google Guava Core Libraries eller lägg in en lämplig version i ditt projekt. I många fall kan användningen av det här biblioteket ersättas med antingen samlingsklasser från JDK eller Apache Commons Collections4. Om du inte hittar någon ersättare inkluderar du den senaste versionen av Google Guave Core Library i ditt projekt. Om du använder en gammal version av [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) måste du uppdatera till den senaste versionen.
+
+Åtgärdslista:
+
+* Uppdatera ACS AEM Commons till den senaste versionen (minst 6.11.0)
+* Ersätta användningen av Google Guava Core Library med JDK-samlingar eller Apache Commons Collections4
+* Om det fortfarande behövs lägger du till det här paketet i projektet (ersätt versionen med den senaste versionen):
+   * `com.google.guava:guava:33.4.8-jre`
+
 ### Tar bort `Apache Commons Lang 2 and Apache Commons Collections 3` {#apache.commons}
 
 Ta bort användningen av de icke underhållna Apache Commons-biblioteken och ersätt dem med användning av supportversionerna. I de flesta fall kräver detta bara att paketimporterna justeras, i vissa fall har bara klasser eller metoder fått ett nytt namn. Om du använder en gammal version av [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) måste du uppdatera till den senaste versionen.
@@ -424,7 +437,7 @@ Avsnitten nedan återspeglar konfigurationsytan för AEM as a Cloud Service OSGi
 
 Kundkoden kan konfigurera OSGi-konfigurationer som inte finns med i listan.
 
-Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
 
 Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
 
