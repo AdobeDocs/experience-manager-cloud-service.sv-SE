@@ -168,6 +168,7 @@ Du kan skapa en anpassad funktion med eller utan jsdoc-kommentarer.
             // code to be executed
         }
 ```
+
 Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas den i regelredigeraren med sitt funktionsnamn. Vi rekommenderar dock att du tar med JavaScript-anteckningar för förbättrad läsbarhet av anpassade funktioner.
 
 ### Pilfunktion med obligatoriska JavaScript-anteckningar eller kommentarer
