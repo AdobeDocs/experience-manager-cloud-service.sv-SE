@@ -4,9 +4,9 @@ description: Versionsinformation om 2025.2.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: b893663d-35f1-43ae-a029-4c249b117f2d
-source-git-commit: fecbebde808c545a84889da5610a79c088f2f459
+source-git-commit: 403ffbede5438131d0b0e770215b990e2d16c018
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.2.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Assets som lagras i andra AEM as a Cloud Service-program än Content Fragments, 
 
 **Utrullning av innehållsfragmentredigerare**
 
-Vi fortsätter att aktivera den nya gränssnittsbaserade redigeraren för innehållsfragment i AEM as a Cloud Service. Efter att ha blivit standard för alla Cloud Service Developer-miljöer i november 2024 kommer den att anges som standard för alla scenmiljöer den 1 april 2025 och för alla produktionsmiljöer den 1 maj 2025. I samtliga fall har användarna fortfarande möjlighet att återgå till den traditionella redigeraren för innehållsfragment i AEM Touch-gränssnittet.
+Vi fortsätter att aktivera den nya [innehållsfragmentredigeraren](/help/sites-cloud/administering/content-fragments/authoring.md) i AEM as a Cloud Service med [Enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) (med spektrum-gränssnittet). Efter att ha blivit standard för alla Cloud Service Developer-miljöer i november 2024 kommer den att anges som standard för alla scenmiljöer den 1 april 2025 och för alla produktionsmiljöer den 1 maj 2025. I samtliga fall har användarna fortfarande möjlighet att återgå till den traditionella redigeraren för innehållsfragment i AEM Touch-gränssnittet.
 
 **Översättnings-HTTP API**
 
@@ -141,7 +141,7 @@ Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@a
 
 Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
 
-Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
+Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
 
 De API-slutpunkter som anges nedan är tillgängliga som en del av ett program för tidig användning. Om du är intresserad kan du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av hur du tänker använda dem.
 
@@ -158,7 +158,7 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2025-releases/2502-release/whats-new-2025-02-0).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/release-notes/cloud-release-notes/2025-releases/2502-release/whats-new-2025-02-0).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -178,4 +178,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

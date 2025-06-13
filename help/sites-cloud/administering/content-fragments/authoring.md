@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: e9491b732556cc018f24ac7e7e2040c26b330dc0
 workflow-type: tm+mt
-source-wordcount: '2817'
+source-wordcount: '2824'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Den här redigeraren innehåller:
 
 >[!WARNING]
 >
->Redigeraren som beskrivs i det här avsnittet är *endast* tillgänglig i *online* Adobe Experience Manager (AEM) as a Cloud Service.
+>Redigeraren som beskrivs i det här avsnittet är *endast* tillgänglig i [Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md); så *online* Adobe Experience Manager (AEM) as a Cloud Service, inte en lokal instans.
 
 ## Innehållsfragmentsredigerare {#content-fragment-editor}
 
@@ -267,7 +267,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
