@@ -5,7 +5,7 @@ feature: Adaptive Forms, Acrobat Sign
 role: Admin, User
 level: Intermediate
 exl-id: 609c3072-1c3d-43fa-898a-b4e62db8483b
-source-git-commit: 31a4a8b5b86439483b058c1fb132979476aab2e5
+source-git-commit: 82a3016149645701abe829ad89c493f480956267
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -16,10 +16,10 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html?lang=sv-SE#adobe-acrobat-sign-for-government) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html#adobe-acrobat-sign-for-government) |
 | AEM as a Cloud Service | Den här artikeln |
 
-[!DNL Adobe Acrobat Sign] aktiverar e-signaturarbetsflöden för adaptiva Forms- och AEM. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
+[!DNL Adobe Acrobat Sign] aktiverar e-signaturarbetsflöden för adaptiva Forms- och AEM-arbetsflöden. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
 
 I ett typiskt [!DNL Adobe Acrobat Sign]- och Adaptivt Forms-scenario fyller en användare i ett adaptivt formulär som kan användas för en tjänst. Till exempel kan en kreditkortsansökan och en medborgare få förmåner. När en användare fyller i, skickar och signerar ansökningsformuläret skickas formuläret till tjänsteleverantören för ytterligare åtgärder. Tjänsteleverantören granskar programmet och använder [!DNL Adobe Acrobat Sign] för att markera programmet som godkänt. AEM Forms stöder både Adobe Acrobat Sign och Adobe Acrobat Sign Solutions for Government. Beroende på licens och krav kan du integrera eller ansluta AEM Forms med någon av lösningarna:
 
@@ -34,10 +34,10 @@ Om du vill ansluta **[!DNL AEM Forms]** till **[!DNL Adobe Acrobat Sign]** stäl
 
 Du behöver följande konfiguration för att integrera [!DNL Adobe Acrobat Sign] med [!DNL AEM Forms]:
 
-1. Ett aktivt [Adobe Acrobat Sign-utvecklarkonto](https://acrobat.adobe.com/us/en/sign/developer-form.html).
+1. Ett aktivt [Adobe Acrobat Sign-utvecklarkonto.](https://www.adobe.com/acrobat/business/developer-form.html)
 1. Ett [Adobe Acrobat Sign API-program](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 1. Autentiseringsuppgifter (klient-ID och klienthemlighet) för API-programmet [!DNL Adobe Acrobat Sign].
-1. (Endast för myndighets-ID-baserad autentisering) [Aktivera autentiseringsmetoden](https://helpx.adobe.com/se/sign/using/adobesign-authentication-government-id.html#AuditReport) för autentisering av myndighets-ID.
+1. (Endast för myndighets-ID-baserad autentisering) [Aktivera autentiseringsmetoden](https://helpx.adobe.com/sign/using/adobesign-authentication-government-id.html#AuditReport) för autentisering av myndighets-ID.
 
 ### Koppla samman AEM Forms Author och publicera förekomster med Adobe Acrobat Sign {#configure-adobe-sign-with-aem-forms}
 
@@ -45,7 +45,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
 1. I AEM Forms-författarinstans går du till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
 1. Välj **[!UICONTROL Create]** på sidan **[!UICONTROL Configuration Browser]**.
-1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av Cloud Service. Kontrollera att mappnamnet inte innehåller något utrymme.
+1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av molntjänster. Kontrollera att mappnamnet inte innehåller något utrymme.
 1. Navigera till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** och öppna konfigurationsbehållaren som du skapade i föregående steg.
 
    >[!NOTE]
@@ -68,14 +68,14 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 1. Kopiera URL:en som finns i det aktuella webbläsarfönstret till ett anteckningsblock och ta bort delen `/ui#/aem` från URL:en. Den ändrade URL:en krävs sedan för att konfigurera [!DNL Adobe Acrobat Sign]-programmet med [!DNL AEM Forms], i ett senare steg. Välj **[!UICONTROL Next]**.
 
 1. På fliken **[!UICONTROL Settings]**
-   * fältet **[!UICONTROL OAuth URL]** innehåller standardwebbadressen som innehåller Adobe Sign-databasdelning. URL-formatet är:
+   * fältet **[!UICONTROL OAuth URL]** innehåller standard-URL:en som innehåller Adobe Sign-databasdelning. URL-formatet är:
 
      `https://<shard>/public/oauth/v2`
 
      Till exempel:
      `https://secure.na1.echosign.com/public/oauth/v2`
 
-   * fältet **[!UICONTROL Access token URL]** innehåller standardwebbadressen som innehåller Adobe Sign-databasdelning. URL-formatet är:
+   * fältet **[!UICONTROL Access token URL]** innehåller standard-URL:en som innehåller Adobe Sign-databasdelning. URL-formatet är:
 
      `https://<shard>/oauth/v2/token`
 
@@ -84,12 +84,12 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    där:
 
-   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/se/sign/using/identify-account-shard.html).
+   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL  Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/sign/using/identify-account-shard.html).
 
    >[!NOTE]
    >
    >* Håll sidan **Skapa Adobe Acrobat Sign-konfiguration** öppen. Stäng den inte. Du kan hämta **klient-ID** och **klienthemlighet** efter att OAuth-inställningarna för [!DNL Adobe Acrobat Sign]-programmet har konfigurerats, vilket beskrivs i kommande steg.
-   > * När du har loggat in på ditt Adobe Sign-konto går du till **[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API Information]** > **[!UICONTROL REST API Methods Documentation]** > **[!UICONTROL OAuth Access Token]** för att få tillgång till information om Adobe Sign OAuth URL och Access Token URL.
+   > * När du har loggat in på ditt Adobe Sign-konto går du till **[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API Information]** > **[!UICONTROL REST API Methods Documentation]** > **[!UICONTROL OAuth Access Token]** för att komma åt information som rör Adobe Sign OAuth-URL och Access Token URL.
 
 1. Konfigurera OAuth-inställningar för programmet [!DNL Adobe Acrobat Sign]:
 
@@ -106,7 +106,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    * [!DNL workflow_read]
 
    >[!NOTE]
-   > Du kan ändra omfattningsmodifieraren från `self` till `account` direkt från AEM som anges i steg 12.
+   > Du kan ändra omfattningsmodifieraren från `self` till `account` direkt från AEM-gränssnittet enligt steg 12.
 
    Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL Adobe Acrobat Sign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
 
@@ -129,7 +129,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
 1. Upprepa alla ovanstående steg på din utvecklare, scen och produktionsinstanser (beroende på vad som återstår) för att slutföra konfigurationen av [!DNL Adobe Acrobat Sign] med [!DNL AEM Forms] för din miljö.
 
-Nu kan du [använda för att lägga till Adobe Acrobat Sign-fält i ett anpassat formulär](working-with-adobe-sign.md). Se till att du lägger till konfigurationsbehållaren som används för Cloud Servicen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
+Nu kan du [använda för att lägga till Adobe Acrobat Sign-fält i ett anpassat formulär](working-with-adobe-sign.md). Se till att du lägger till konfigurationsbehållaren som används för Cloud Service i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
 
 >[!NOTE]
 >
@@ -150,12 +150,12 @@ När du ansluter [!DNL Adobe Acrobat Sign] till [!DNL AEM Forms] och hittar ett 
 
 Att knyta AEM Forms till Adobe Acrobat Sign Solutions för myndigheter är en flerstegsprocess. Den innehåller följande uppgifter:
 
-* Skapar omdirigerings-URL för dina AEM
-* Dela omdirigerings-URL:er och omfattningar med Adobe Sign Solutions for Government-teamet
-* Få inloggningsuppgifter från Adobe Sign team
+* Skapa omdirigerings-URL för dina AEM-instanser
+* Dela omdirigerings-URL:er och omfattningar med Adobe Sign-lösningar för myndighetsteamet
+* Få inloggningsuppgifter från Adobe Sign-teamet
 * Använda inloggningsuppgifterna för att ansluta AEM Forms till Adobe Acrobat Sign Solutions för myndigheter
 
-![Adobe Sign Government Workflow](/help/forms/assets/adobe-acrobat-sign-govt-workflow.png)
+![Adobe Sign - arbetsflöde för myndigheter](/help/forms/assets/adobe-acrobat-sign-govt-workflow.png)
 
 
 AEM Forms as a Cloud Service erbjuder utvecklings-, scen- och produktionsmiljöer. Du kan börja med att ansluta utvecklingsmiljön för med Adobe Acrobat Sign Solutions för myndigheter och senare koppla samman scen- och produktionsmiljöerna.
@@ -165,19 +165,19 @@ AEM Forms as a Cloud Service erbjuder utvecklings-, scen- och produktionsmiljöe
 Innan du börjar ansluta AEM Forms med Adobe Acrobat Sign Solution måste du kontrollera att ditt [Adobe Acrobat Sign Solutions for Government](https://opensource.adobe.com/acrobat-sign/signgov/gstarted.html#account-provisioning)-konto har etablerats.
 
 
-### Anslut AEM Forms as a Cloud Service till Adobe Acrobat Sign Solutions för myndigheter {#connect-adobe-acrobat-sign-for-government}
+### Koppla AEM Forms as a Cloud Service till Adobe Acrobat Sign Solutions för myndigheter {#connect-adobe-acrobat-sign-for-government}
 
-#### Skapa en omdirigerings-URL för AEM
+#### Skapa en omdirigerings-URL för din AEM-instans
 
-1. På Forms as a Cloud Service författarinstans går du till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
+1. På författarinstansen för Forms as a Cloud Service går du till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
 1. Välj **[!UICONTROL Create]** på sidan **[!UICONTROL Configuration Browser]**.
-1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av Cloud Service. Kontrollera att mappnamnet inte innehåller något utrymme.
+1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av molntjänster. Kontrollera att mappnamnet inte innehåller något utrymme.
 1. Navigera till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** och öppna konfigurationsbehållaren som du skapade i föregående steg. När du skapar ett adaptivt formulär anger du behållarnamnet i fältet **[!UICONTROL Configuration Container]**.
 1. På konfigurationssidan väljer du **[!UICONTROL Create]** för att skapa [!DNL Adobe Acrobat Sign]-konfigurationen i AEM Forms.
 1. Kopiera URL-adressen för det aktuella webbläsarfönstret till ett anteckningsblock och ta bort `/ui#/aem` från URL-adressen. Denna URL kallas `re-direct URL`.
-I nästa avsnitt delar du `re-direct URL` och `Scopes` med Adobe Sign-teamet och begär autentiseringsuppgifter (klient-ID och klienthemlighet).
+I nästa avsnitt delar du `re-direct URL` och `Scopes` med Adobe Sign-teamet och begär inloggningsuppgifter (klient-ID och klienthemlighet).
 
-#### Dela omdirigerings-URL:en och omfattningarna med Adobe Sign team och få inloggningsuppgifter
+#### Dela omdirigerings-URL:en och omfattningarna med Adobe Sign-teamet och få inloggningsuppgifter
 
 Adobe Acrobat Sign for Government Solutions-teamet kräver att `re-direct URL` och vissa omfattningar är aktiverade för ditt Adobe Acrobat Sign-program (se nedan) för att generera autentiseringsuppgifter (klient-ID och klienthemlighet) som gör att du kan ansluta AEM Forms till Adobe Acrobat Sign Solutions för myndigheter.
 
@@ -197,7 +197,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 #### Använd de inloggningsuppgifter som tas emot för att ansluta AEM Forms till Adobe Acrobat Sign Solutions för offentlig sektor
 
-1. Öppna `re-direct URL` i webbläsaren. Du skapade och lade märke till `re-direct URL` i det sista steget i avsnittet [Skapa en omdirigerings-URL för din AEM ](#create-a-redirect-url-for-your-aem-instance).
+1. Öppna `re-direct URL` i webbläsaren. Du skapade och noterade `re-direct URL` i det sista steget i avsnittet [Skapa en omdirigerings-URL i din AEM-instans](#create-a-redirect-url-for-your-aem-instance).
 
 1. På fliken **[!UICONTROL General]** på sidan **[!UICONTROL Create Adobe Sign Configuration]** anger du **[!UICONTROL Name]** för konfigurationen och väljer **[!UICONTROL Next]**. Du kan också ange en **[!UICONTROL Title]** och bläddra för att välja en **[!UICONTROL Thumbnail]** för konfigurationen. Klicka på **[!UICONTROL Next]**.
 
@@ -209,14 +209,14 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 1. I fältet **[!UICONTROL Email]** anger du den e-postadress som är kopplad till ditt Adobe Acrobat Sign Solutions for Government-konto.
 
 1. På fliken **[!UICONTROL Settings]**
-   * fältet **[!UICONTROL OAuth URL]** innehåller standardwebbadressen som innehåller Adobe Sign-databasdelning. URL-formatet är:
+   * fältet **[!UICONTROL OAuth URL]** innehåller standard-URL:en som innehåller Adobe Sign-databasdelning. URL-formatet är:
 
      `https://<shard>/api/gateway/adobesignauthservice/api/v1/authorize`
 
      Till exempel:
      `https://secure.na1.adobesign.us/api/gateway/adobesignauthservice/api/v1/authorize`
 
-   * fältet **[!UICONTROL Access token URL]** innehåller standardwebbadressen som innehåller Adobe Sign-databasdelning. URL-formatet är:
+   * fältet **[!UICONTROL Access token URL]** innehåller standard-URL:en som innehåller Adobe Sign-databasdelning. URL-formatet är:
 
      `https://<shard>/api/gateway/adobesignauthservice/api/v1/token`
 
@@ -225,11 +225,11 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
    där:
 
-   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/se/sign/using/identify-account-shard.html).
+   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL  Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/sign/using/identify-account-shard.html).
 
    >[!NOTE]
    >
-   > * När du har loggat in på ditt Adobe Sign-konto går du till **[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API Information]** > **[!UICONTROL REST API Methods Documentation]** > **[!UICONTROL OAuth Access Token]** för att få tillgång till information om Adobe Sign Autentiserings-URL och Access Token URL.
+   > * När du har loggat in på ditt Adobe Sign-konto går du till **[!UICONTROL Acrobat Sign API]** > **[!UICONTROL API Information]** > **[!UICONTROL REST API Methods Documentation]** > **[!UICONTROL OAuth Access Token]** för att få tillgång till information om Adobe Sign-autentiserings-URL och åtkomsttoken-URL.
 
 1. Använd de inloggningsuppgifter som delas av Adobe Acrobat Sign for Government Solution manager ([Adobe Professional Services team member]) i föregående avsnitt som [**[!UICONTROL Client ID]** och **[!UICONTROL Client Secret]**].
 
@@ -247,14 +247,14 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 1. Upprepa alla ovanstående steg på din utvecklare, scen och produktionsinstanser (beroende på vad som återstår) för att slutföra konfigurationen av [!DNL Adobe Acrobat Sign Solutions for Government] med [!DNL AEM Forms] för din miljö.
 
-Nu kan du [använda Adobe Acrobat Sign-fält i ett anpassat formulär](working-with-adobe-sign.md) eller [AEM ](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). Se till att du lägger till den konfigurationsbehållare som används för Cloud Servicen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
+Nu kan du [använda Adobe Acrobat Sign-fält i ett adaptivt formulär](working-with-adobe-sign.md) eller [AEM Workflow](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). Se till att du lägger till konfigurationsbehållaren som används för Cloud Service-konfigurationen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
 
 ## Konfigurera schemaläggaren för [!DNL Adobe Acrobat Sign] för att synkronisera signeringsstatusen {#configure-adobe-sign-scheduler-to-sync-the-signing-status}
 
 AEM Forms as a Cloud Service tillhandahåller en schemaläggningstjänst som kontrollerar signerarnas status med definierade intervall. Scenerna där du konfigurerar schemaläggningstjänsten:
 
 * Om du använder [Skicka formuläret (när alla mottagare har slutfört signeringsceremonin)](/help/forms/working-with-adobe-sign.md#select-adobe-sign-cloud-service-and-signing-order) för att signera ett dokument, skickas formuläret endast när alla signerare har signerat formuläret.
-* Om du använder [Signeringssteget i ett AEM arbetsflöde](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step) för att signera ett dokument väntar signeringssteget på att alla signerare ska signera dokumentet innan du fortsätter till nästa steg i arbetsflödet.
+* Om du använder [Signeringssteget i ett AEM-arbetsflöde](/help/forms/aem-forms-workflow-step-reference.md#sign-document-step) för att signera ett dokument väntar signeringssteget på att alla signerare ska signera dokumentet innan du fortsätter till nästa steg i arbetsflödet.
 
 Som standard kontrollerar [!DNL Adobe Acrobat Sign] Scheduler Services (enkäter) signerarens svar efter var 24:e timme. Du kan ändra standardintervallet för din miljö.
 
@@ -268,7 +268,7 @@ Om du till exempel vill köra konfigurationstjänsten varje dag kl. 00:00 anger 
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Vanliga frågor
 

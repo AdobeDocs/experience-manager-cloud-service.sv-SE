@@ -4,7 +4,7 @@ description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Ecl
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: fecbebde808c545a84889da5610a79c088f2f459
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 0%
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 # AEM Developer Tools for Eclipse{#aem-developer-tools-for-eclipse}
 
-![Experience Manager Developer Tools for Eclipse logo](assets/eclipse-logo.png)
+![Experience Manager Developer Tools for Eclipse, logotyp](assets/eclipse-logo.png)
 
 ## Ökning {#overview}
 
-_Experience Manager Developer Tools för Eclipse_ är ett Eclipse-plugin som baseras på [Eclipse-pluginen för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släppts under Apache License 2.
+_Experience Manager Developer Tools for Eclipse_ är en Eclipse-plugin som baseras på [Eclipse-pluginen för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släppts under Apache License 2.
 
-Den har flera funktioner som gör AEM enklare:
+Den har flera funktioner som underlättar utvecklingen av AEM:
 
-* Smidig integrering med AEM instanser via Eclipse Server Connector
+* Smidig integrering med AEM-instanser via Eclipse Server Connector
 * Synkronisering för både innehåll och OSGi-paket
 * Felsökningsstöd med möjlighet att byta kod under drift
-* Enkelt Bootstrap i AEM projekt med hjälp av en särskild projektguide
+* Enkel Bootstrap av AEM-projekt genom en särskild projektguide
 * Enkel redigering av JCR-egenskaper
 
 ## Krav {#requirements}
@@ -32,7 +32,7 @@ Den har flera funktioner som gör AEM enklare:
 Innan du använder AEM Developer Tools måste du:
 
 * Hämta och installera [Eclipse IDE for Enterprise Java™ Developers](https://www.eclipse.org/downloads/packages/).
-* Konfigurera din förmörkande installation för att säkerställa att du har minst 1 GB stackminne genom att redigera konfigurationsfilen `eclipse.ini` enligt beskrivningen i [Vanliga frågor om Eclipse](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse).
+* Konfigurera din förmörkande installation för att säkerställa att du har minst 1 GB stackminne genom att redigera konfigurationsfilen för `eclipse.ini` enligt beskrivningen i [Vanliga frågor om Eclipse.](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F)
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Innan du använder AEM Developer Tools måste du:
 
 När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Öppna [AEM webbplatsen för utvecklingsverktyg](https://eclipse.adobe.com/com.adobe.granite.ide.p2update-1.3.0.zip). <!-- RB: OLD URL was (https://eclipse.adobe.com/aem/dev-tools/) This URL is generating a 404 error in the experience-manager-cloud-service.en LinkCheckExl report . The website appears to be dead; no redirects at all. Clicking "Installation Link" does not do anything. Only the link "Download archive" works. The "Online Documentation" link just takes you to the AEM Docs home page. Not sure if this topic is still needed?? -->
+1. Öppna [AEM Developer Tools Web Site](https://eclipse.adobe.com/com.adobe.granite.ide.p2update-1.3.0.zip). <!-- RB: OLD URL was (https://eclipse.adobe.com/aem/dev-tools/) This URL is generating a 404 error in the experience-manager-cloud-service.en LinkCheckExl report . The website appears to be dead; no redirects at all. Clicking "Installation Link" does not do anything. Only the link "Download archive" works. The "Online Documentation" link just takes you to the AEM Docs home page. Not sure if this topic is still needed?? -->
 
 1. Kopiera **installationslänken**.
 
@@ -54,17 +54,17 @@ När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-progr
 1. Ange `AEM Developer Tools` i fältet **Namn**.
 1. Kopiera installations-URL:en i fältet **Plats**.
 1. Klicka på **Lägg till**.
-1. Kontrollera både **AEM** och **Sling** plugin-program.
+1. Kontrollera både **AEM**- och **Sling**-plugin-program.
 1. Klicka på **Nästa**.
 1. Klicka på **Nästa** igen i fönstret **Installationsinformation**.
 1. Acceptera licensavtalen och klicka på **Slutför**.
 1. Klicka på **RestartNow** för att starta om Eclipse.
 
-## AEM {#the-aem-perspective}
+## AEM Perspective {#the-aem-perspective}
 
 I Eclipse avgör ett perspektiv vilka åtgärder och vyer som finns tillgängliga i ett fönster och aktiverar uppgiftsorienterad interaktion med resurser i Eclipse. Mer information om perspektiv finns i [Eclipse-dokumentationen](https://help.eclipse.org/latest/index.jsp).
 
-_Experience Manager Development Tools for Eclipse_ har ett AEM perspektiv som ger dig full kontroll över dina AEM projekt och instanser. Så här öppnar du AEM perspektiv:
+_Experience Manager utvecklingsverktyg för Eclipse_ har ett AEM-perspektiv som ger dig full kontroll över dina AEM-projekt och instanser. Så här öppnar du AEM Perspective:
 
 1. Välj **Fönster** > **Perspektiv** > **Öppna perspektiv** > **Annat** på Eclipse-menyraden.
 1. Välj **AEM** i dialogrutan och klicka på **Öppna**.
@@ -73,13 +73,13 @@ _Experience Manager Development Tools for Eclipse_ har ett AEM perspektiv som ge
 
 ## Exempel på flermodulsprojekt {#sample-multi-module-project}
 
-Utvecklingsverktygen för _Experience Manager för Eclipse_ innehåller ett exempel på ett projekt med flera moduler som hjälper dig att snabbt komma igång med en projektkonfiguration i Eclipse. Det är också en praktisk guide till flera AEM funktioner. [Läs mer om projekttypen](https://github.com/adobe/aem-project-archetype).
+_Experience Manager Developer Tools for Eclipse_ innehåller ett exempel på ett projekt med flera moduler som hjälper dig att snabbt komma igång med projektkonfigurationen i Eclipse. Det är också en metodguide till flera AEM-funktioner. [Läs mer om projekttypen](https://github.com/adobe/aem-project-archetype).
 
 Så här skapar du exempelprojektet:
 
-1. I menyn **Arkiv** > **Nytt** > **Projekt** bläddrar du till avsnittet **AEM** och väljer **AEM Exempelprojekt med flera moduler** .
+1. Gå till avsnittet **AEM** på menyn **Arkiv** > **Nytt** > **Projekt** och välj **AEM Sample Multi-Module Project**.
 
-   ![AEM Exempel på flermodulsprojekt](assets/aem-sample-project.png)
+   ![Exempel på AEM-projekt med flera moduler](assets/aem-sample-project.png)
 
 1. Klicka på **Nästa**.
 
@@ -104,7 +104,7 @@ Så här skapar du exempelprojektet:
 
 1. Klicka på **Nästa**.
 
-1. Sedan konfigurerar du en AEM som Eclipse ska ansluta till.
+1. Sedan konfigurerar du en AEM-server som Eclipse ansluter till.
 
    Om du vill använda felsökningsfunktionen måste du ha startat AEM i felsökningsläge, vilket du kan göra genom att lägga till följande på kommandoraden:
 
@@ -112,7 +112,7 @@ Så här skapar du exempelprojektet:
        -nofork -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=10123
    ```
 
-   ![Anslut till AEM server](assets/connect-server.png)
+   ![Anslut till AEM-server](assets/connect-server.png)
 
 1. Klicka på **Slutför**. Projektstrukturen skapas.
 
@@ -189,10 +189,10 @@ Du kan använda funktionen **Nytt projekt** för att skapa rätt struktur för d
         </workspaceFilter>
         ```
 
-1. Spara alla ändringar. Nu kan du synkronisera det nya innehållet med din AEM.
+1. Spara alla ändringar. Nu kan du synkronisera det nya innehållet med din AEM-instans.
 
 1. Kontrollera att anslutningen har startats på serverpanelen och starta den om den inte redan har startats.
-1. Klicka på ikonen **Rengör och Publish** .
+1. Klicka på ikonen **Rensa och publicera** .
 
 När du är klar bör du låta paketet köras på din instans, och när du sparar synkroniseras alla ändringar automatiskt till instansen.
 

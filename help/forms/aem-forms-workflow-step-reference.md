@@ -1,37 +1,37 @@
 ---
-title: Vilka arbetsflödessteg kan användas på AEM Forms Cloud Service för att skapa ett arbetsflöde eller för automatisering av affärsprocesser (BPM)?
+title: Vilka arbetsflödessteg kan användas i AEM Forms Cloud Service för att skapa ett arbetsflöde eller för automatisering av affärsprocesser (BPM)?
 description: Med Forms-centrerade arbetsflöden kan du snabbt skapa adaptiva Forms-baserade arbetsflöden. Du kan använda Adobe Sign för att e-signera dokument, skapa formulärbaserade affärsprocesser, hämta och skicka data till flera datakällor och skicka e-postmeddelanden
 exl-id: e1403ba6-8158-4961-98a4-2954b2e32e0d
 google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
-keywords: Använd AEM arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrivet steg, generera icke-interaktiva utdata från PDF
+keywords: Använd AEM-arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrift, generera icke-interaktiva PDF-utdata
 feature: Adaptive Forms, Workflow
 role: Admin, User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: fecbebde808c545a84889da5610a79c088f2f459
 workflow-type: tm+mt
-source-wordcount: '6730'
+source-wordcount: '6721'
 ht-degree: 0%
 
 ---
 
 
-# Använd Forms-centrerade AEM - stegvis referens för att automatisera affärsprocesser {#forms-centric-workflow-on-osgi-step-reference}
+# Använd Forms-centrerade AEM Workflows - Step Reference för att automatisera affärsprocesserna {#forms-centric-workflow-on-osgi-step-reference}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Du använder arbetsflödesmodeller. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM arbetsflödessteg i en modell för att uppnå affärslogiken](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem).
+Du använder arbetsflödesmodeller. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM Workflow-steg i en modell för att uppnå affärslogiken](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem).
 
 ## Forms-centrerade steg {#forms-workflow-steps}
 
-Forms-centrerade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM arbetsflöde. Med dessa steg kan du snabbt skapa ett adaptivt Forms-baserat Forms-baserat arbetsflöde i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan även använda Formers Workflow för att:
+Forms-baserade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett AEM-arbetsflöde. Med dessa steg kan du snabbt skapa ett adaptivt Forms-baserat Forms-baserat arbetsflöde i OSGi. Dessa arbetsflöden kan användas för att utveckla enkla arbetsflöden för granskning och godkännande, interna och övergripande affärsprocesser. Du kan även använda Forms Workflow steg för att:
 
 * Skapa affärsprocesser, arbetsflöden efter inlämningen och serverbaserade arbetsflöden för att hantera registreringsprocesser.
 
 * Skapa och tilldela uppgifter till en användare eller grupp.
 
-* Använd [!DNL Adobe Sign] i ett AEM arbetsflöde för att skicka ett dokument för signering.
+* Använd [!DNL Adobe Sign] i ett AEM-arbetsflöde för att skicka ett dokument för signering.
 
 * Generera ett dokument för registrering on demand eller när formulär skickas.
 
@@ -41,20 +41,20 @@ Forms-centrerade arbetsflödessteg utför AEM Forms-specifika åtgärder i ett A
 
 >[!NOTE]
 >
->Om arbetsflödesmodellen är markerad för ett externt lagringsutrymme kan du bara välja variabelalternativet för lagring eller hämtning av datafiler och bilagor för alla steg i Formens Workflow.
+>Om arbetsflödesmodellen är markerad för ett externt lagringsutrymme kan du för alla Forms Workflow-steg bara välja variabelalternativet för att lagra eller hämta datafiler och bilagor.
 
 ## Tilldela aktivitetssteg {#assign-task-step}
 
-Tilldela ett arbetsobjekt och tilldelar det till en användare eller grupp. Förutom att tilldela uppgiften anger komponenten även den adaptiva formen eller icke-interaktiva PDF för uppgiften. Det adaptiva formuläret krävs för att kunna ta emot indata från användare och icke-interaktiva PDF eller ett skrivskyddat anpassat formulär används endast för granskning.
+Tilldela ett arbetsobjekt och tilldelar det till en användare eller grupp. Förutom att tilldela uppgiften anger komponenten även den adaptiva formen eller icke-interaktiva PDF för uppgiften. Det adaptiva formuläret krävs för att kunna ta emot indata från användare och icke-interaktiva PDF eller ett skrivskyddat adaptivt formulär används endast för granskning.
 
 Du kan också använda komponenten för att styra aktivitetens beteende. Du kan till exempel skapa ett automatiskt dokument för post, tilldela uppgiften till en viss användare eller grupp, ange sökvägen för skickade data, ange sökvägen för data som ska fyllas i i förväg och ange standardåtgärder. Tilldela uppgift-steget har följande egenskaper:
 
-* **[!UICONTROL Title]**: Aktivitetens namn. Titeln visas i AEM Inkorg.
+* **[!UICONTROL Title]**: Aktivitetens namn. Titeln visas i AEM Inbox.
 * **[!UICONTROL Description]**: Förklaring av de åtgärder som utförs i aktiviteten. Den här informationen är användbar för andra processutvecklare när du arbetar i en delad utvecklingsmiljö.
 
 * **[!UICONTROL Thumbnail Path]**: Sökväg till aktivitetsminiatyrbilden. Om ingen sökväg anges visas en standardminiatyrbild för ett adaptivt formulär och en standardikon för Postdokument.
-* **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
-* **[!UICONTROL Priority]**: Den valda prioriteten visas i AEM Inkorg. De tillgängliga alternativen är Hög, Medium och Låg. Standardvärdet är Medium.
+* **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera dessa steg i modellens egenskaper (Sidekick > Sida > Sidegenskaper > Steg).
+* **[!UICONTROL Priority]**: Den valda prioriteten visas i AEM Inbox. De tillgängliga alternativen är Hög, Medium och Låg. Standardvärdet är Medium.
 * **[!UICONTROL Due Date]**: Ange antalet dagar eller timmar efter vilka aktiviteten har markerats som försenad. Om du väljer **[!UICONTROL Off]** markeras aktiviteten aldrig som försenad. Du kan också ange en uttidshanterare för att utföra vissa åtgärder när åtgärden är försenad.
 
 * **[!UICONTROL Days]**: Antalet dagar innan aktiviteten ska slutföras. Antalet dagar räknas efter att uppgiften har tilldelats en användare. Om en uppgift inte är fullständig och korsar det antal dagar som anges i fältet Dagar, aktiveras en timeout-hanterare efter förfallodatumet om den väljs.
@@ -81,11 +81,11 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 -->
 
 * **[!UICONTROL Adaptive Form Path]**: Ange sökvägen för det adaptiva formuläret. Du kan använda det adaptiva formulär som skickas till arbetsflödet, finns på en absolut sökväg eller hämta det adaptiva formuläret från en sökväg som lagras i en variabel av strängdatatyp.
-* **[!UICONTROL Select input PDF using]**: Ange sökvägen för ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i textfältet. Du kan markera indata PDF med den sökväg som är relativ till nyttolasten, som har sparats med en absolut sökväg eller med en variabel av dokumentdatatypen. Exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna använda alternativet PDF-sökväg.
-* **[!UICONTROL For completed task, render the Adaptive Form as]**: När en uppgift har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat anpassat formulär eller ett PDF-dokument. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna återge det adaptiva formuläret som Dokument för post.
+* **[!UICONTROL Select input PDF using]**: Ange sökvägen till ett icke-interaktivt PDF-dokument. Fältet är tillgängligt när du väljer ett icke-interaktivt PDF-dokument i typfältet. Du kan välja indata-PDF med hjälp av sökvägen som är relativ till nyttolasten, sparad med en absolut sökväg eller med hjälp av en variabel av datatypen Document. Exempel: [Payload_Directory]/Workflow/PDF/credit-card.pdf. Sökvägen finns inte i crx-databasen. En administratör skapar sökvägen innan den används. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna använda alternativet PDF Path.
+* **[!UICONTROL For completed task, render the Adaptive Form as]**: När en uppgift har markerats som slutförd kan du återge det adaptiva formuläret som ett skrivskyddat adaptivt formulär eller ett PDF-dokument. Du måste ha alternativet Dokument för post aktiverat eller formulärmallsbaserad Adaptiv Forms för att kunna återge det adaptiva formuläret som Dokument för post.
 * **[!UICONTROL Pre-populated]**: Följande fält i listan nedan fungerar som indata för uppgiften:
 
-   * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell (FDM)). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel de data som har skickats för formuläret via ett AEM Inkorgsprogram. En exempelsökväg är [Payload_Directory]/workflow/data.
+   * **[!UICONTROL Select input data file using]**: Sökväg till indatafil (.json, .xml, .doc eller formulärdatamodell (FDM)). Du kan hämta indatafilen med en sökväg som är relativ till nyttolasten eller hämta filen som lagras i en variabel av datatypen Document, XML eller JSON. Filen innehåller till exempel data som skickats för formuläret via ett AEM Inbox-program. En exempelsökväg är [Payload_Directory]/workflow/data.
    * **[!UICONTROL Select input attachments using]**: Bifogade filer som är tillgängliga på platsen bifogas till formuläret som är associerat med uppgiften. Sökvägen kan vara relativ till nyttolasten eller hämta den bifogade filen som lagras i en variabel i ett dokument. En exempelsökväg är [Payload_Directory]/attachments/. Du kan ange bifogade filer som placeras i förhållande till nyttolasten eller använda en dokumenttypsvariabel (Array list > Document) för att ange en bifogad indatafil för det adaptiva formuläret.
 
   <!-- 
@@ -120,8 +120,8 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     
     -->
 
-* **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange den metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM användare eller grupp.
-* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Tilldela ett arbetsflöde dynamiskt till användarna](https://helpx.adobe.com/experience-manager/kb/HowToAssignAWorkflowDynamicallyToParticipants.html) och [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE&amp;CID=RedirectAEMCommunityKautuk).
+* **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange den metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM-användare eller grupp.
+* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&CID=RedirectAEMCommunityKautuk).
 
 * **[!UICONTROL Participants]**: Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** har valts i fältet **[!UICONTROL Participant Chooser]**. I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
@@ -137,24 +137,24 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 * **[!UICONTROL Recipient Email Address]**: Du kan lagra en e-postadress i en variabel, använda en litteral för att ange en permanent e-postadress eller använda den förvalda e-postadressen för den som har angetts i profilen för den som tilldelats. Du kan använda literalen eller en variabel för att ange en grupps e-postadress. Variabelalternativet är användbart när du dynamiskt vill hämta och använda en e-postadress. Alternativet **[!UICONTROL Use default email address of the assignee]** är endast för en tilldelad. I det här fallet används den e-postadress som lagras i användarprofilen för tilldelade användare.
 
 * **[!UICONTROL HTML Email Template]**: Välj e-postmall för e-postmeddelandet. Om du vill redigera en mall ändrar du filen på /libs/fd/dashboard/templates/email/htmlEmailTemplate.txt i crx-databasen.
-* **[!UICONTROL Allow Delegation To]**: I AEM Inkorg finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **[!UICONTROL allow delegation to members of the assignee group]** har valts går det inte att delegera uppgiften till en annan användare eller grupp.
-* **[!UICONTROL Share Settings]**: AEM Inkorg innehåller alternativ för att dela en enskild eller alla uppgifter i inkorgen med en annan användare:
-   * När alternativet **[!UICONTROL Allow assignee to share explicitly in inbox]** är markerat kan användaren markera uppgiften i AEM Inkorg och dela den med en annan AEM.
+* **[!UICONTROL Allow Delegation To]**: I AEM Inbox finns ett alternativ för den inloggade användaren att delegera det tilldelade arbetsflödet till en annan användare. Du får delegera inom samma grupp eller till arbetsflödesanvändaren i en annan grupp. Om uppgiften har tilldelats en enskild användare och alternativet **[!UICONTROL allow delegation to members of the assignee group]** har valts går det inte att delegera uppgiften till en annan användare eller grupp.
+* **[!UICONTROL Share Settings]**: AEM Inbox innehåller alternativ för att dela en eller alla uppgifter i inkorgen med en annan användare:
+   * När alternativet **[!UICONTROL Allow assignee to share explicitly in inbox]** är markerat kan användaren markera uppgiften i AEM Inbox och dela den med en annan AEM-användare.
    * När alternativet **[!UICONTROL Allow assignee to share via inbox sharing]** är markerat och användarna delar sina inkorgsobjekt eller tillåter andra användare att få åtkomst till sina inkorgsobjekt, delas endast uppgifter med det tidigare nämnda alternativet.
    * När **[!UICONTROL Allow assignee to delegate using 'Out of Office' settings]** har valts. Uppdragaren kan aktivera alternativet att delegera uppgiften till andra användare tillsammans med andra frånvaroalternativ. Alla nya uppgifter som tilldelas till användaren utanför kontoret delegeras automatiskt (tilldelas) till de användare som anges i inställningarna utanför kontoret.
 
   Det gör att andra användare kan välja tilldelningsuppgifter när de inte är på kontoret och inte kan arbeta med tilldelade uppgifter.
 
 * **[!UICONTROL Actions]** > **[!UICONTROL Default Actions]**: Utanför rutan finns åtgärderna Skicka, Spara och Återställ. Som standard är alla standardåtgärder aktiverade.
-* **[!UICONTROL Route Variable]**: Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inkorg.
-* **[!UICONTROL Routes]**: En aktivitet kan förgrena till olika vägar. När du väljer det här alternativet i AEM Inkorg returnerar flödet ett värde och arbetsflödesgrenarna baserat på det valda flödet. Du kan antingen lagra vägar i en variabel av datatypen String eller välja **[!UICONTROL Literal]** om du vill lägga till vägar manuellt.
+* **[!UICONTROL Route Variable]**: Namn på flödesvariabeln. Vägvariabeln hämtar anpassade åtgärder som en användare väljer i AEM Inbox.
+* **[!UICONTROL Routes]**: En aktivitet kan förgrena till olika vägar. När du väljer det här alternativet i AEM Inbox returneras ett värde och arbetsflödesgrenarna baserat på det valda flödet. Du kan antingen lagra vägar i en variabel av datatypen String eller välja **[!UICONTROL Literal]** om du vill lägga till vägar manuellt.
 
-* **[!UICONTROL Route Title]**: Ange ruttens titel. Den visas i AEM Inkorg.
-* **[!UICONTROL Coral Icon]**: Ange ett HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter pekskärpan först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inkorg. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
-* **[!UICONTROL Allow assignee to add comment]**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarerna från AEM Inkorg när uppgiften skickas.
+* **[!UICONTROL Route Title]**: Ange ruttens titel. Den visas i AEM Inbox.
+* **[!UICONTROL Coral Icon]**: Ange ett HTML-attribut för en korallikon. Adobe CorelUI-biblioteket innehåller en mängd ikoner som sätter fokus först. Du kan välja och använda en ikon för rutten. Den visas tillsammans med titeln i AEM Inbox. Om du lagrar rutterna i en variabel använder rutterna en taggikon.
+* **[!UICONTROL Allow assignee to add comment]**: Välj det här alternativet om du vill aktivera kommentarer för uppgiften. En tilldelad kan lägga till kommentarerna inifrån AEM Inbox när uppgiften skickas.
 * **[!UICONTROL Save comment in variable]**: Spara kommentaren i en variabel av datatypen String. Det här alternativet visas bara om du markerar kryssrutan **[!UICONTROL Allow assignee to add comment]**.
 
-* **[!UICONTROL Allow assignee to add attachments to the task]**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inkorg när uppgiften skickas. Du kan också begränsa den maximala storleken **[!UICONTROL (Maximum File Size)]** för en bifogad fil. Standardstorleken är 2 MB.
+* **[!UICONTROL Allow assignee to add attachments to the task]**: Välj det här alternativet om du vill aktivera bilagor för uppgiften. En tilldelad kan lägga till de bifogade filerna inifrån AEM Inbox när uppgiften skickas. Du kan också begränsa den maximala storleken **[!UICONTROL (Maximum File Size)]** för en bifogad fil. Standardstorleken är 2 MB.
 
 * **[!UICONTROL Save output task attachments using]**: Ange platsen för den bifogade mappen. Du kan spara bilagor för utdatauppgifter med en relativ sökväg till nyttolasten eller med en variabel av en array med dokumentdatatyper. Det här alternativet visas bara om du markerar kryssrutan **[!UICONTROL Allow assignee to add attachments to the task]** och väljer **[!UICONTROL Adaptive Form]**, **[!UICONTROL Read-only Adaptive Form]** eller **[!UICONTROL Non-interactive PDF document]** i listrutan **[!UICONTROL Type]** på fliken **[!UICONTROL Form/Document]**.
 
@@ -166,13 +166,13 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
 
 >[!NOTE]
 >
->Alternativen för att spara steget Tilldela uppgift som utkast och för att hämta historiken för steget Tilldela uppgift inaktiveras när du konfigurerar en AEM arbetsflödesmodell för extern datalagring. I Inkorgen är dessutom alternativet att spara inaktiverat.
+>Alternativen för att spara steget Tilldela uppgift som utkast och för att hämta historiken för steget Tilldela uppgift inaktiveras när du konfigurerar en arbetsflödesmodell för AEM för extern datalagring. I Inkorgen är dessutom alternativet att spara inaktiverat.
 
-## Konvertera till PDF/A-steg {#convert-pdfa}
+## Konvertera till PDF/A {#convert-pdfa}
 
-PDF/A är ett arkiveringsformat som gör att dokumentets innehåll bevaras på lång sikt genom att teckensnitten bäddas in och filen dekomprimeras. Därför är ett PDF/A-dokument vanligtvis större än ett PDF-standarddokument. Du kan använda steget ***Konvertera till PDF/A*** i ett AEM arbetsflöde för att konvertera dina PDF-dokument till PDF/A-format.
+PDF/A är ett arkiveringsformat för långtidsbevaring av dokumentets innehåll, genom att bädda in teckensnitten och dekomprimera filen. Därför är ett PDF/A-dokument vanligtvis större än ett vanligt PDF-dokument. Du kan använda steget ***Konvertera till PDF/A*** i ett AEM-arbetsflöde för att konvertera dina PDF-dokument till PDF/A-format.
 
-Följande egenskaper gäller för steget Konvertera till PDF/A:
+Konvertera till PDF/A-steget har följande egenskaper:
 
 **[!UICONTROL Input Document]**: Indatadokumentet kan vara relativt till nyttolasten, ha en absolut sökväg, kan anges som en nyttolast eller lagras i en variabel av dokumentdatatypen.
 
@@ -180,16 +180,16 @@ Följande egenskaper gäller för steget Konvertera till PDF/A:
 * **[!UICONTROL Compliance]**: Anger den standard som utdata-PDF/A-dokumentet måste uppfylla. Det stöder olika PDF-standarder som PDF/A-1b, PDF/A-2b eller PDF/A-3b.
 * **[!UICONTROL Result Level]**: Anger resultatnivån som PassFail, Summary eller Detailed för konverteringsutdata.
 * **[!UICONTROL Color Space]**: Anger den fördefinierade färgrymden som S_RGB, COATED_FOGRA27, JAPAN_COLOR_COATED eller SWOP, som kan användas för utdata i PDF/A-filer.
-* **[!UICONTROL Optional Content]**: Tillåt att specifika grafiska objekt och/eller anteckningar visas i utdata från PDF/A-dokument, endast när en angiven uppsättning villkor uppfylls.
+* **[!UICONTROL Optional Content]**: Tillåt att specifika grafiska objekt och/eller anteckningar visas i utdata-PDF/A-dokument endast när en angiven uppsättning villkor uppfylls.
 
 **[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. Utdatafilen kan sparas på en plats som är relativ till nyttolasten, skriver över nyttolasten, om nyttolasten är en fil eller i en variabel av dokumentdatatypen.
 
 
 ## Skicka e-poststeg {#send-email-step}
 
-Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication--> eller med ett bifogat PDF-dokument. Skicka e-post-steget stöder [HTML-e-post](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en HTML-e-postmall för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
+Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication--> eller med ett bifogat PDF-dokument. Skicka e-post-steget stöder [HTML-e-post](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en e-postmall från HTML för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
 
-I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email) om du vill aktivera portar för att skicka e-post och aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
+I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=en#sending-email) om du vill aktivera portar för att skicka e-post och aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
 
 E-poststeget har följande egenskaper:
 
@@ -250,7 +250,7 @@ Om du anger sökvägen till en mapp, till exempel bilagor, bifogas alla filer so
 
 ## Anropa DDX-steg {#invokeddx}
 
-Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget ***Anropa DDX*** i ett AEM arbetsflöde för att utföra olika åtgärder, som att samla ihop disassemblerande dokument, skapa och ändra Acrobat och XFA Forms, och andra som beskrivs i [DDX-referensdokumentationen](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
+Document Description XML (DDX) är ett deklarativt kodspråk vars element representerar byggstenar av dokument. Dessa byggstenar innehåller PDF- och XDP-dokument och andra element som kommentarer, bokmärken och formaterad text. DDX definierar en uppsättning åtgärder som kan tillämpas på ett eller flera indatadokument för att generera ett eller flera utdatadokument. Ett enda DX kan användas med ett antal olika källdokument. Du kan använda steget ***Anropa DDX*** i ett AEM-arbetsflöde för att utföra olika åtgärder, som att samla ihop disassemblerande dokument, skapa och ändra Acrobat och XFA Forms, och andra som beskrivs i [DDX-referensdokumentationen](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf).
 
 Anropa DDX-steget har följande egenskaper:
 
@@ -390,14 +390,14 @@ Stegen Signera dokument har följande egenskaper:
 
 * **[!UICONTROL Locale]**: Ange språk för alternativen för e-post och verifiering. Du kan antingen lagra språkinställningen i en variabel av datatypen String eller välja **[!UICONTROL Literal]** för att välja språkinställningen i listan med tillgängliga alternativ. Du måste definiera språkkoden medan du lagrar värdet för språkinställningen i en variabel. Ange till exempel **[!UICONTROL en_US]** för engelska och **[!UICONTROL fr_FR]** för franska.
 
-* **[!UICONTROL Adobe Sign Cloud Configuration]**: Välj en [!DNL Adobe Sign] molnkonfiguration. Om du inte har konfigurerat [!DNL Adobe Sign] för [!DNL AEM Forms] kan du läsa [Integrera Adobe Sign med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
+* **[!UICONTROL Adobe Sign Cloud Configuration]**: Välj en [!DNL Adobe Sign] molnkonfiguration. Om du inte har konfigurerat [!DNL Adobe Sign] för [!DNL AEM Forms] läser du [Integrera Adobe Sign med [!DNL AEM Forms]](adobe-sign-integration-adaptive-forms.md).
 
 * **[!UICONTROL Select Document to be signed using]**: Du kan välja ett dokument från en plats som är relativ till nyttolasten, använda nyttolasten som dokument, ange en absolut sökväg för dokumentet eller hämta dokumentet som lagras i en variabel av dokumentdatatypen.
 * **[!UICONTROL Days Until Deadline]**: Ett dokument markeras som förfallet (passerat tidsgräns) efter det att aktiviteten inte har någon aktivitet för det antal dagar som anges i fältet **[!UICONTROL Days Until Deadline]**. Antalet dagar räknas efter att dokumentationen har tilldelats en användare för signering.
 * **[!UICONTROL Reminder Email Frequency]**: Du kan skicka en påminnelse via e-post varje dag eller vecka. Veckan räknas från den dag som dokumentationen tilldelas en användare för signering.
 * **[!UICONTROL Signature Process]**: Du kan välja att signera ett dokument i en sekventiell eller parallell ordning. I sekventiell ordning tar en signerare emot dokumentet i taget för signering. När den första signeraren har slutfört signeringen av dokumentet skickas dokumentet till den andra signeraren och så vidare. Flera signerare kan signera ett dokument samtidigt i parallell ordning.
 * **[!UICONTROL Redirection URL]**: Ange en URL för omdirigering. När dokumentet har signerats kan du dirigera om den som tilldelats till en URL. Oftast innehåller denna URL ett tackmeddelande eller ytterligare instruktioner.
-* **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inkorg. Du kan definiera dessa steg i modellens egenskaper ( **[!UICONTROL Sidekick]** > **[!UICONTROL Page]** > **[!UICONTROL Page Properties]** > **[!UICONTROL Stages]**).
+* **[!UICONTROL Workflow Stage]**: Ett arbetsflöde kan ha flera steg. Dessa steg visas i AEM Inbox. Du kan definiera dessa steg i modellens egenskaper ( **[!UICONTROL Sidekick]** > **[!UICONTROL Page]** > **[!UICONTROL Page Properties]** > **[!UICONTROL Stages]**).
 * **[!UICONTROL Select Recipients]**: Ange metoden för att välja mottagare för dokumentet. Du kan dynamiskt tilldela arbetsflödet till en användare eller en grupp eller manuellt lägga till information om en mottagare. När du väljer Manuellt i listrutan lägger du till mottagarinformation som e-post, roll och autentiseringsmetod.
 
   >[!NOTE]
@@ -566,9 +566,9 @@ Skriv språkkoden i den litterala rutan eller välj en strängvariabel som inneh
    * **[!UICONTROL Duplex Short Edge]**: Använd dubbelsidig utskrift och utskrift med hjälp av kortkantssidnumrering.
    * **[!UICONTROL Simplex]**: Använd enkelsidig utskrift.
 
-## Generera icke-interaktiv PDF-utdatasteg   {#generatePDFdocuments}
+## Generera icke-interaktiva PDF Output step   {#generatePDFdocuments}
 
-1. Dra arbetsflödet Generera icke-interaktiv PDF-utdata på fliken Forms Workflow i Sidekick.
+1. Dra arbetsflödet Generera icke-interaktiva PDF Output under fliken Forms Workflow i Sidekick.
 1. Dubbelklicka på det tillagda arbetsflödessteget för att redigera komponenten.
 1. Konfigurera indatadokument, utdatadokument och ytterligare parametrar i dialogrutan Redigera komponent och klicka sedan på **[!UICONTROL OK]**.
 
@@ -587,13 +587,13 @@ Skriv språkkoden i den litterala rutan eller välj en strängvariabel som inneh
 * **Innehållsrot**: Anger sökvägen till mappen i databasen där fragment eller bilder som används i XDP-indatamallen lagras.
 * **Språk**: Anger standardspråk för genererat PDF-formulär.
 * **Acrobat Version**: Anger målversionen för Acrobat för det genererade PDF-formuläret.
-* **Linjärt PDF**: Anger om det genererade PDF ska optimeras för webbvisning.
-* **Tagged PDF**: Anger om den genererade PDF ska vara tillgänglig.
+* **Linjär PDF**: Anger om den genererade PDF ska optimeras för webbvisning.
+* **Taggad PDF**: Anger om den genererade PDF-filen ska vara tillgänglig.
 * **XCI-dokument**: Anger sökvägen till XCI-filen.
 
 ## Se även {#see-also}
 
-* [Variabler i Forms-centrerade AEM](/help/forms/variable-in-aem-workflows.md)
+* [Variabler i Forms-centrerade AEM-arbetsflöden](/help/forms/variable-in-aem-workflows.md)
 * [Konfigurera frånvaroinställningar](/help/forms/configure-out-of-office-settings.md)
 
 <!--

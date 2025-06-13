@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar IMS-integreringar för AEM as a Cloud 
 exl-id: 72fb1ea1-355c-4faa-a733-77bc7de75ed5
 feature: Security
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 00a05b3bdc1a689947c1507847da99b54c94dcac
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 1%
@@ -49,7 +49,7 @@ Mer information om hur du gör detta finns i Developer Console-dokumentationen, 
 
 * Skapa en ny OAuth-autentiseringsuppgift:
 
-   * [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+   * [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
 
 * Migrera en befintlig JWT-autentiseringsuppgift till en OAuth-autentiseringsuppgift:
 
@@ -67,7 +67,7 @@ Så här skapar du en ny Adobe IMS-integrering med OAuth:
 
 1. Välj **Skapa**.
 
-1. Slutför konfigurationen baserat på information från [Developer Console](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/). Till exempel:
+1. Slutför konfigurationen baserat på information från [Developer Console](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation). Till exempel:
 
    ![Skapa OAuth-konfiguration](assets/ims-create-oauth-configuration.png)
 

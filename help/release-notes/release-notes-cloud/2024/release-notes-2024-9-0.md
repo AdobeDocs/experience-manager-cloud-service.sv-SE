@@ -4,9 +4,9 @@ description: Versionsinformation om 2024.9.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 75ecd154-112a-4468-9962-de50bb1f4cd0
-source-git-commit: 1481983bde41bda51e725930bae492aa599b6c93
+source-git-commit: 5db419e674ceb3c861f53a19e7b852c89ebd3702
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.9.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Titta på videon med versionsöversikten för september 2024 om du vill se en sa
 
 #### Översättningshantering {#translation-management}
 
-AEM översättningsarbetsflöden och API-åtgärder utlöser nu händelser som ger insikter om förändringar i översättningsjobbens tillstånd. Användare kan prenumerera på dessa evenemang via Adobe Developer Console. Mer information om AEM Translation Management API finns i [här](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/translation/).
+AEM översättningsarbetsflöden och API-åtgärder utlöser nu händelser som ger insikter om förändringar i översättningsjobbens tillstånd. Användare kan prenumerera på dessa evenemang via Adobe Developer Console.
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -158,7 +158,7 @@ Ungefär som i AEM 6.5 skriver Apache/dispatcher ingests om kartor som placerats
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -178,4 +178,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
