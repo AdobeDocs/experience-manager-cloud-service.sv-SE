@@ -5,9 +5,9 @@ exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: ae1dedc3d0533205decc08d396c5a844c4525ba2
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -57,10 +57,10 @@ Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som
 * Ljusgrön - komponent tillagd
 * Rosa - komponent borttagen
 
-**Ändringar i HTML**
+**HTML-ändringar**
 
-* Mörkgrön - tillagd HTML
-* Röd - HTML har tagits bort
+* Mörkgrön - HTML tillagd
+* Röd - HTML borttagen
 
 >[!NOTE]
 >
@@ -90,6 +90,7 @@ Du kan när som helst stänga diff sida vid sida genom att klicka på stängning
 
 I vissa situationer kan det hända att sidskillnader inte identifierar någon skillnad som förväntat.
 
+* När olika sidor skapas för användning med [Edge Delivery Services](/help/edge/overview.md) visas sidorna sida vid sida för att underlätta jämförelsen, men skillnaderna markeras inte.
 * När olika versioner och starter används inte dynamiska komponenter som vägbeskrivningar, menyer, produktlistor eller logotyper (komponenter som är beroende av webbplatsstrukturen för att återge sitt innehåll).
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
