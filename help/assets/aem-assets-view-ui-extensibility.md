@@ -4,9 +4,9 @@ description: Lär dig mer om UI-utökningsfunktionen i  [!DNL AEM Assets View]. 
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: 50477660e50db13cd279a56a1f1b3ddc118a0aad
+source-git-commit: a03e6cf842f95f8799f23ed5c7e3b563b092b4e5
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**
 >[!IMPORTANT]
 >
 > * [!DNL AEM Assets View] UI-utbyggbarhet är tillgänglig med [[!DNL Assets Ultimate]](/help/assets/assets-ultimate-overview.md).
-> * [Skapa och skicka ett  [!DNL Adobe] kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) om du vill få åtkomst till [!DNL Assets view] UI-utökningsbarhet.
+> * [Skapa och skicka ett  [!DNL Adobe] kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få åtkomst till [!DNL Assets view] UI-utökningsbarhet.
 > * Du kan ge feedback genom att expandera **[!UICONTROL Detailed Feedback options]** och klicka på **[!UICONTROL Report an issue]**.
 
 ## <a id="1"></a> Öppna Assets-vyn{#add-UI-Extensibility-in-AEM-Assets-View}
@@ -73,7 +73,7 @@ Fyll i följande krav om du vill börja lägga till utökningskomponenten i [!DN
 * [Åtkomst till [!DNL Assets View]](#1).
 * Åtkomst till [[!DNL Adobe app builder]](https://developer.adobe.com/app-builder/docs/overview/).
 * Tillstånd till utvecklare av systemadministratörsrollen inom organisationen. Mer information finns i [den här dokumentationen](https://developer.adobe.com/uix/docs/guides/get-access/).
-* [!DNL Adobe IO command line tool (AIO CLI)] är installerat på dina lokala datorer. Det här verktyget är nödvändigt för att skapa och distribuera tilläggsprojekt. Mer information finns i [den här dokumentationen](https://developer.adobe.com/app-builder/docs/getting_started/#local-environment-set-up).
+* [!DNL Adobe IO command line tool (AIO CLI)] är installerat på dina lokala datorer. Det här verktyget är nödvändigt för att skapa och distribuera tilläggsprojekt. Mer information finns i [Skapa ditt första App Builder-program](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app#local-environment-set-up) (kräver autentisering för åtkomst).
 * Bra insikt i [!DNL JavaScript]-, [!DNL Node.js]- och [!DNL React]-tekniker.
 
 ## Lägg till UI-utökningskomponenten i [!DNL Assets View] {#ui-extensibility-in-assets-view}
