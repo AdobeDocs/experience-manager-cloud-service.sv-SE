@@ -4,7 +4,7 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 300dc71969e8e1da32d4f86f0a987b7e2777ccf5
+source-git-commit: 5435f776e38abf5245c58985e747ce05443f3c2a
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -45,7 +45,7 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -53,7 +53,7 @@ Universell redigeringstjänst är inte en fullständig kopia av Universell redig
 
 [NodeJS version 20](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 Spara filen `universal-editor-service.cjs` från programvarudistribution till den lokala utvecklingsmiljön.
 
@@ -156,7 +156,7 @@ När den är inställd ska du se alla anrop om innehållsuppdatering gå till `h
 
 ## Redigera en sida med den lokala universella redigeringstjänsten {#editing}
 
-Med den [universella redigeringstjänsten som körs lokalt](#running-ue) och [innehållssidan som är instrumenterad för att använda den lokala tjänsten](#using-loca-ue) kan du nu starta redigeraren.
+Med den [universella redigeringstjänsten som körs lokalt](#running-ue) och [innehållssidan som är instrumenterad för att använda den lokala tjänsten](/help/implementing/universal-editor/getting-started.md) kan du nu starta redigeraren.
 
 1. Öppna webbläsaren på `https://localhost:8000/ping`.
 1. Be webbläsaren godkänna [ditt självsignerade certifikat](#ue-https).
