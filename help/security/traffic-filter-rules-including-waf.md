@@ -59,7 +59,7 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring p
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
+På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
 Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
 
@@ -750,7 +750,7 @@ Det finns två självstudiekurser.
 
 ### Skydda webbplatser med trafikfilterregler (inklusive WAF regler) {#tutorial-protecting-websites}
 
-[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF regler.
+[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF regler.
 
 Självstudiekursen leder dig igenom:
 
@@ -762,7 +762,7 @@ Självstudiekursen leder dig igenom:
 
 ### Blockera DoS- och DDoS-attacker med trafikfilterregler {#tutorial-blocking-DDoS-with-rules}
 
-[Detaljerad information om hur du blockerar ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) med trafikfilterregler för hastighetsbegränsning och andra strategier.
+[Detaljerad information om hur du blockerar ](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) med trafikfilterregler för hastighetsbegränsning och andra strategier.
 
 Självstudiekursen leder dig igenom:
 
