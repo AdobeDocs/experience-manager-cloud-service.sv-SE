@@ -4,9 +4,9 @@ description: Lär dig hur du aktiverar och verifierar funktionen för rensning a
 feature: Commerce Integration Framework
 role: Admin
 exl-id: f89c07c7-631f-41a4-b5b9-0f629ffc36f0
-source-git-commit: 27d8b5f6f358176c828d01f2ff51886d0433017c
+source-git-commit: fb8b2645c0401d1358c7751db03a138dc2de2664
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,13 @@ Som standard är funktionen för rensning av cache inaktiverad i CIF-konfigurati
 * Gör det möjligt för avlyssnaren att rensa cacheminnet från varje instans av AEM (publicera och författare) genom att lägga till konfigurationen `com.adobe.cq.commerce.core.cacheinvalidation.internal.InvalidateCacheSupport.cfg.json` i ditt projekt, vilket visas [här](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.core.cacheinvalidation.internal.InvalidateCacheSupport.cfg.json).
    * Konfiguration ska vara aktiverat för både författare och publiceringsinstanser.
    * Aktivera Dispatcher-cachen (valfritt): du kan aktivera inställningen för rensningscache för dispatcher genom att ange egenskapen `enableDispatcherCacheInvalidation` till true i ovanstående konfiguration. Detta innehåller funktioner för att rensa cacheminnet från dispatchern.
-
      >[!NOTE]
      >
      > Detta fungerar bara med publiceringsinstanser.
 
    * Se även till att du anger motsvarande mönster som passar din produkt, kategori och CMS-sida måste läggas till i ovanstående konfigurationsfil för att den ska kunna tas bort från dispatchercachen.
 
-* Om du vill förbättra prestanda för SQL-frågor för att hitta motsvarande sida som är relaterad till produkten och kategorin lägger du till motsvarande index i projektet (rekommenderas). Mer information finns i [cifCacheInvalidationSupport/]&#x200B;(link https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.apps/src/main/content/jcr_root/_oak_index/cifCacheInvalidationSupport/.content.xml).
+* Om du vill förbättra prestanda för SQL-frågor för att hitta motsvarande sida som är relaterad till produkten och kategorin lägger du till motsvarande index i projektet (rekommenderas). Mer information finns i [cifCacheInvalidationSupport](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.apps/src/main/content/jcr_root/_oak_index/cifCacheInvalidationSupport/.content.xml).
 
 ## Verifierar funktionen Rensa cache {#verify-clear-cache}
 
@@ -64,8 +63,7 @@ För att kontrollera om cacheminnen rensas ordentligt:
        "storePath": "/content/venia/us/en", // Mandatory : Needs to be given to know for which site we are removing the clear cache.
    }'
    ```
-
-Om allt blir bra återspeglas de nya ändringarna i alla instanser. Om ändringarna inte återspeglas för publiceringsinstansen kan du kontrollera i det privata fönstret om det finns motsvarande PLP- och PDP-sidor.
+Om allt blir bra återspeglas de nya ändringarna i alla instanser. Om ändringarna inte visas i publiceringsinstansen kan du försöka komma åt relevanta PLP- och PDP-sidor i ett privat/inkognito-webbläsarfönster.
 
 >[!NOTE]
 >
