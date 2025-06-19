@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 20d4ea369676baad28c43246fe399e2e2f4b1db7
+source-git-commit: 70ba91e83ce2395e748ff8bdbecfc4d4fc04250b
 workflow-type: tm+mt
-source-wordcount: '4278'
+source-wordcount: '4262'
 ht-degree: 0%
 
 ---
@@ -49,8 +49,6 @@ Den här artikeln är indelad i följande avsnitt:
 * **Rekommenderade startregler:** En uppsättning regler att komma igång med.
 * **Självstudiekurs:** Praktiska kunskaper om funktionen, inklusive hur du använder instrumentpanelsverktyg för att deklarera rätt regler.
 
-Adobe inbjuder dig att ge feedback eller ställa frågor om trafikfilterregler genom att skicka ett e-postmeddelande till **aemcs-waf-adopter@adobe.com**.
-
 ## Trafikskydd - översikt {#traffic-protection-overview}
 
 I det digitala landskapet är skadlig trafik ett hot som aldrig tidigare förekommit. Adobe inser hur allvarlig risken är och erbjuder flera olika strategier för att skydda kundtillämpningar och mildra attacker när de inträffar.
@@ -61,7 +59,7 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring p
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
+På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
 Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
 
@@ -752,7 +750,7 @@ Det finns två självstudiekurser.
 
 ### Skydda webbplatser med trafikfilterregler (inklusive WAF regler) {#tutorial-protecting-websites}
 
-[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF regler.
+[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF regler.
 
 Självstudiekursen leder dig igenom:
 
@@ -764,7 +762,7 @@ Självstudiekursen leder dig igenom:
 
 ### Blockera DoS- och DDoS-attacker med trafikfilterregler {#tutorial-blocking-DDoS-with-rules}
 
-[Detaljerad information om hur du blockerar ](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) med trafikfilterregler för hastighetsbegränsning och andra strategier.
+[Detaljerad information om hur du blockerar ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) med trafikfilterregler för hastighetsbegränsning och andra strategier.
 
 Självstudiekursen leder dig igenom:
 
