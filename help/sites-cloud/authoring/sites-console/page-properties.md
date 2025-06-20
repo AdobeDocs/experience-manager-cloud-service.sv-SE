@@ -50,7 +50,7 @@ Sidegenskaper kan styra många aspekter av en sida, från sidans titel och varum
 
 ### Varumärke {#branding}
 
-Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
 
 * **Varumärkesinstruktion**
    * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
@@ -205,7 +205,7 @@ Det här avsnittet används för att välja och konfigurera sidans miniatyrbild.
 
 ## Behörigheter {#permissions}
 
-Använd fliken **Behörigheter** för att definiera vilka användare, grupper eller [stängda användargrupper (CUG)](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html) som kan komma åt och/eller ändra sidan.
+Använd fliken **Behörigheter** för att definiera vilka användare, grupper eller [stängda användargrupper (CUG)](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html?lang=sv-SE) som kan komma åt och/eller ändra sidan.
 
 * **Lägg till behörigheter**
 * **Redigera stängd användargrupp**
