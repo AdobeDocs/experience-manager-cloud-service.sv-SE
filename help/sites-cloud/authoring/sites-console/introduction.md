@@ -1,11 +1,11 @@
 ---
 title: Webbplatskonsolen
-description: Lär dig hur du använder webbplatskonsolen för att hantera och ordna dina AEM sidor.
+description: Lär dig hur du använder Sites-konsolen för att hantera och ordna dina AEM-sidor.
 exl-id: b666e62a-c3dc-4be3-8932-d5fe67b178d6
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Webbplatskonsolen {#sites-console}
 
-Lär dig hur du använder konsolen **Platser** för att hantera och ordna dina AEM sidor.
+Lär dig hur du använder konsolen **Platser** för att hantera och ordna dina AEM-sidor.
 
 ## Orientering {#orientation}
 
@@ -98,7 +98,7 @@ Konsolen **Platser** innehåller tre olika vyer av din innehållshierarki. Du ka
 * [Kortvy](#card-view)
 * [Listvy](#list-view)
 
-Ikonen **Visa** längst till höger i verktygsfältet AEM anger att den aktuella vyn är markerad.
+Ikonen **Visa** längst till höger i AEM-verktygsfältet anger att den aktuella vyn är markerad.
 
 Om du trycker eller klickar på den kan du välja en annan vy.
 
@@ -238,11 +238,11 @@ Verktygsfältet Åtgärder visas bara när en resurs har valts i konsolen. Den �
 * **Redigera** - Beroende på hur den markerade sidan skapades kommer åtgärden **Redigera** att öppna rätt redigerare.
    * [Sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) - För sidor som skapats med AEM sidredigeraren
    * [Universell redigerare](/help/sites-cloud/authoring/universal-editor/authoring.md) - för sidor som skapats med den universella redigeraren
-* [**Egenskaper**](/help/sites-cloud/authoring/sites-console/page-properties.md) - Öppnar fönstret för sidegenskaper
+* [**Egenskaper**](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) - Öppnar fönstret för sidegenskaper
 * [**Lås**](/help/sites-cloud/authoring/sites-console/managing-pages.md#locking-a-page) - Lås en sida så att andra inte kan ändra den
 * [**Kopiera**](/help/sites-cloud/authoring/sites-console/managing-pages.md#copying-and-pasting-a-page) - Kopiera en sida
 * [**Flytta**](/help/sites-cloud/authoring/sites-console/managing-pages.md#moving-or-renaming-a-page) - Flytta eller ändra namn på en sida
-* [**Snabb Publish**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#quick-publish) - Publish en eller flera sidor direkt
+* [**Snabbpublicering**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#quick-publish) - Publicera en eller flera sidor direkt
 * [**Hantera publikation**](/help/sites-cloud/authoring/sites-console/publishing-pages.md#manage-publication) - Schemalägg en eller flera sidor för publicering
 * [**Återställ**](/help/sites-cloud/authoring/sites-console/page-versions.md#restore-version) - Återställ en version av en sida eller ett sidträd
 * [**Ta bort**](/help/sites-cloud/authoring/sites-console/managing-pages.md#deleting-a-page) - Ta bort en eller flera sidor

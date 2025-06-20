@@ -5,7 +5,7 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: f0d60086-e92e-4492-ad50-bef84fed2a82
-source-git-commit: bcf0940d3365ecde6788772d28d32f22f367816d
+source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Du kan antingen [skapa en ny sida](/help/sites-cloud/authoring/sites-console/cre
 
 1. Använd konsolen **Platser** för att [navigera till den nya eller befintliga sidan](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources) som du vill använda som mall och markera den genom att trycka eller klicka på den.
 
-1. När sidan har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
+1. När sidan har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) i verktygsfältet.
 
 1. På fliken **Avancerat** i egenskapsdialogrutan under avsnittet **Mallinställningar** väljer du alternativet **Använd sida som mall**.
 

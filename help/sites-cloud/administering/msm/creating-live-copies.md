@@ -5,7 +5,7 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 53ed574d-e20d-4e73-aaa2-27168b9d05fe
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
 workflow-type: tm+mt
 source-wordcount: '4270'
 ht-degree: 0%
@@ -46,7 +46,7 @@ När du använder en ritningskonfiguration kan du associera den med en utrullnin
 
 Blåtryckskonfigurationer betraktas som oföränderliga data och kan därför inte redigeras under körning. Därför måste alla konfigurationsändringar distribueras via Git med CI/CD-pipeline.
 
-Mer information finns i artikeln [Antagbara ändringar av Adobe Experience Manager (AEM) as a Cloud Service](/help/release-notes/aem-cloud-changes.md).
+Mer information finns i artikeln [Antagbara ändringar i Adobe Experience Manager (AEM) as a Cloud Service](/help/release-notes/aem-cloud-changes.md).
 
 Följande steg är bara tillgängliga för en administratör på en lokal utvecklingsinstans för testnings- och utvecklingssyften. Dessa alternativ är inte tillgängliga i någon AEMaaCS-molninstans.
 
@@ -212,7 +212,7 @@ Så här visar du egenskaperna:
 
 ### Visa Live-kopior av en blå sida {#seeing-the-live-copies-of-a-blueprint-page}
 
-Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en designkonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på fliken **Utskrift** i [sidegenskaperna](/help/sites-cloud/authoring/sites-console/page-properties.md).
+Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en designkonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på fliken **Utskrift** i sidegenskaperna [för ](/help/sites-cloud/authoring/sites-console/page-properties.md).
 
 ![Fliken Utskrift för sidegenskaper](../assets/live-copy-blueprint-tab.png)
 

@@ -5,7 +5,7 @@ solution: Experience Manager Sites
 feature: Administering
 role: User
 exl-id: d11d7176-dd35-4855-9dcd-dd40ff096510
-source-git-commit: 7201cc90c0f698454d8ccda0eb83e433a330c1eb
+source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 0%
@@ -73,7 +73,7 @@ Om en författare startar en mall som har skapats med mallredigeraren och som re
 
 ## Egenskaper {#properties}
 
-Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md).Mallegenskaper omfattar:
+Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper.Mallegenskaperna för ](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) innehåller:
 
 * Malltitel
 * Beskrivning

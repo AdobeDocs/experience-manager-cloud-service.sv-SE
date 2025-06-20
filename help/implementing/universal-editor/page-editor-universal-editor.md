@@ -4,7 +4,7 @@ description: Sidredigeraren stöds fortfarande av Adobe, men den universella red
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 0a13fb52-623e-4aff-b254-186d8d117e4d
-source-git-commit: 9da4c90c56b7a82a41604173100ad6503a4a06d0
+source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
@@ -73,7 +73,7 @@ Eftersom luckan mellan de två redigerarna ständigt krymper bör du läsa versi
 | Innehållsträd | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Det går även att ändra ordning i trädet |
 | Enhetssimulering | [!BADGE Tillgänglig]{type=Positive} | [Konfigurerade enheter kan simuleras,](/help/sites-cloud/administering/responsive-layout.md), men användaren kan inte ange några olika skärmdimensioner att simulera manuellt. | [!BADGE Tillgänglig]{type=Positive} | [Alla skärmdimensioner som ska simuleras kan anges manuellt,](/help/sites-cloud/authoring/universal-editor/navigation.md#emulator), men standardbrytpunkter kan inte konfigureras. |
 | [Sidlåsning](/help/sites-cloud/authoring/sites-console/managing-pages.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Respterar låsstatus som angetts i Sites Console med tillägg för att låsa/låsa upp sidor från redigeraren |
-| [Sidegenskaper](/help/sites-cloud/authoring/sites-console/page-properties.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Tillgängligt från Webbplatsadministratör, med tillägg för att även komma åt egenskaper för sidor från redigeraren |
+| [Sidegenskaper](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Tillgängligt från Webbplatsadministratör, med tillägg för att även komma åt egenskaper för sidor från redigeraren |
 | Egenskaper för flera fält | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Planerad |
 | [Fjärr-DAM](/help/assets/dynamic-media-open-apis-overview.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | [Sidversionshantering](/help/sites-cloud/authoring/sites-console/page-versions.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |

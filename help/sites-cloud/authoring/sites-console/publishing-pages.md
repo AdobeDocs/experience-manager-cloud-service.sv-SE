@@ -1,28 +1,35 @@
 ---
-title: Publicera sidor
-description: Lär dig hur du publicerar och avpublicerar dina sidor med olika funktioner i AEM.
+title: Publicera sidor från webbplatskonsolen
+description: Lär dig hur du publicerar och avpublicerar sidor med hjälp av platskonsolen.
 exl-id: 89f2363c-7922-4ca5-92cb-cbee6a393ee3
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: c738a123eccbb9b8c011f75ac60d79aba7a2a2d8
+source-git-commit: 5ad91a32d705ef61e8b9799bf7fb1e136bb8bfa0
 workflow-type: tm+mt
-source-wordcount: '1926'
-ht-degree: 4%
+source-wordcount: '1635'
+ht-degree: 5%
 
 ---
 
-# Publicera sidor {#publishing-pages}
+
+# Publicera sidor från webbplatskonsolen {#publishing-pages}
 
 När du har skapat och granskat ditt innehåll i författarmiljön är målet att [göra det tillgängligt på din offentliga webbplats](/help/sites-cloud/authoring/author-publish.md) (din publiceringsmiljö).
 
 Detta kallas att publicera en sida. När du vill ta bort en sida från publiceringsmiljön kallas det för att avpublicera. När du publicerar och avpublicerar är sidan fortfarande tillgänglig i redigeringsmiljön för ytterligare ändringar tills du tar bort den.
 
-Du kan publicera/avpublicera en sida direkt eller vid ett fördefinierat datum/tid i framtiden.
+Du kan använda [**webbplatskonsolen**](/help/sites-cloud/authoring/sites-console/introduction.md) för att publicera/avpublicera en sida direkt eller vid ett fördefinierat datum/tid i framtiden.
 
->[!NOTE]
+>[!TIP]
 >
->Publicering av ett [Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md) följer i princip samma procedur som för publicering av en sida, men från Experience Fragments-konsolen eller redigeraren.
+>Du kan publicera från andra platser än Platskonsolen.
+>
+>* [Från sidredigeraren](/help/sites-cloud/authoring/page-editor/publishing.md)
+>* [Från den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md)
+>* [Från Experience Fragment](/help/sites-cloud/authoring/fragments/experience-fragments.md)-konsolen eller redigeraren
+>
+>Publicering från dessa platser erbjuder olika alternativ men följer liknande procedurer och allmänna idéer som beskrivs här.
 
 ## Terminologi {#terminology}
 
@@ -38,14 +45,6 @@ Du kan stöta på olika publiceringsvillkor när du arbetar med Adobe Experience
    * Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en tjänst till en annan när du publicerar en sida (till exempel från författare till förhandsgranskning).
    * Dessa termer används främst av utvecklare.
 
-## Publicera sidor {#publishing-pages-1}
-
-Beroende på din plats kan du publicera:
-
-* [Från sidredigeraren](#publishing-from-the-page-editor)
-* [Från ](#publishing-from-the-sites-console)
-* [Från den universella redigeraren](/help/sites-cloud/authoring/universal-editor/publishing.md)
-
 >[!NOTE]
 >
 >Om du inte har behörighet att publicera en viss sida:
@@ -60,50 +59,17 @@ Beroende på din plats kan du publicera:
 >
 >Sidordningen garanteras inte:
 >
->* om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
->* om de överordnade och underordnade sidorna publiceras i separata åtgärder
+>* Om endast underordnade sidor har valts för publicering (som orderinformationen finns på den överordnade sidan)
+>* Om de överordnade och underordnade sidorna publiceras i separata åtgärder
 
-### Publicera från sidredigeraren {#publishing-from-the-page-editor}
-
-Om du redigerar en sida i [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) kan den publiceras direkt från redigeraren.
-
-1. Välj ikonen **Sidinformation** för att öppna menyn och sedan alternativet **Publicera sida** .
-
-   ![Publicera en sida via sidalternativ](/help/sites-cloud/authoring/assets/publishing-page-options.png)
-
-1. Beroende på om sidan har referenser som behöver publiceras:
-
-   * Sidan publiceras direkt om det inte finns några referenser att publicera.
-   * Om sidan innehåller referenser som behöver publiceras visas dessa i guiden **Publicera** där du kan antingen:
-      * Ange vilka resurser, eller taggar och så vidare, som du vill publicera tillsammans med sidan och använd sedan **Publicera** för att slutföra processen.
-      * Använd **Avbryt** om du vill avbryta åtgärden.
-
-   ![Publicerar referenser med sidan](/help/sites-cloud/authoring/assets/publishing-references.png)
-
-1. Om du väljer **Publicera** replikeras sidan till publiceringsmiljön. I sidredigeraren visas en informationsbanderoll som bekräftar publiceringsåtgärden.
-
-   ![Banderoll för publiceringsstatusinformation](/help/sites-cloud/authoring/assets/publishing-info.png)
-
-   När du visar samma sida i konsolen visas den uppdaterade publiceringsstatusen.
-
-   ![Sidpubliceringsstatus i kolumnvy i webbplatskonsolen](/help/sites-cloud/authoring/assets/publishing-status-console-column.png)
-
->[!NOTE]
->
->Publicering från sidredigeraren är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och eventuella underordnade sidor publiceras/inte.
-
->[!NOTE]
->
->Sidor som används av [alias](/help/sites-cloud/authoring/sites-console/page-properties.md#advanced) i redigeraren kan inte publiceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
-
-### Publicera från Site Console {#publishing-from-the-sites-console}
+## Publicera sidor från webbplatskonsolen {#publishing-from-the-sites-console}
 
 I konsolen **Platser** finns det två alternativ för publicering:
 
 * [Snabbpublicering](#quick-publish)
 * [Hantera publikation](#manage-publication)
 
-#### Snabbpublicering {#quick-publish}
+### Snabbpublicering {#quick-publish}
 
 **Snabbpublicering** är för enkla fall och publicerar de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
 
@@ -123,7 +89,7 @@ Så här publicerar du en sida med Snabbpublicering:
 >
 >Snabbpublicering är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
 
-#### Hantera publikation {#manage-publication}
+### Hantera publikation {#manage-publication}
 
 **Hantera publikation** har fler alternativ än **Snabbpublicering**, vilket gör att underordnade sidor kan inkluderas, referenser anpassas, publiceras till en förhandsgranskningstjänst (om det är tillgängligt) och arbetsflöden kan startas samt publiceras vid ett senare datum.
 
@@ -149,13 +115,13 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
      När du publicerar senare startas ett arbetsflöde för publicering av den eller de valda sidorna vid den angivna tidpunkten. Om du inte publicerar senare startas ett arbetsflöde för att avpublicera den eller de valda sidorna vid en viss tidpunkt.
 
-     >[!NOTE]
+     >[!TIP]
      >
      >Om du vill avbryta en publicering/avpublicering senare går du till [arbetsflödeskonsolen](/help/sites-cloud/administering/workflows-administering.md#suspending-resuming-and-terminating-a-workflow-instance) och avslutar motsvarande arbetsflöde.
 
-     >[!NOTE]
+     >[!TIP]
      >
-     >Schemaläggning av innehåll för publicering är inte detsamma som [**På tid** och **Av tid** i sidegenskaperna,](/help/sites-cloud/authoring/sites-console/page-properties.md#basic), men kan användas under liknande omständigheter.
+     >När du schemalägger innehåll för publicering återges innehållet och publiceringsarbetsflödena respekteras. Om du tillfälligt vill dölja redan publicerat innehåll utan att avpublicera, bör du överväga att [**På tid** och **Av tid** är tillgängliga i sidegenskaperna.](/help/sites-cloud/authoring/sites-console/page-properties.md#basic)
 
    ![Hantera publikationsalternativ](/help/sites-cloud/authoring/assets/publishing-manage-publication-options.png)
 
@@ -230,26 +196,9 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
 1. Klicka på **Publicera** eller **Publicera senare** för att slutföra publiceringen.
 
-
-
 ## Avpublicerar sidor {#unpublishing-pages}
 
-Om du avpublicerar en sida tas den bort från publiceringsmiljön eller [förhandsvisningen](/help/sites-cloud/authoring/sites-console/previewing-content.md) så att den inte längre är tillgänglig för läsarna.
-
-På ett [sätt som liknar publicering](#publishing-pages) kan en eller flera sidor avpubliceras från det önskade målet:
-
-* [Från sidredigeraren](#unpublishing-from-the-editor)
-* [Från webbplatskonsolen](#unpublishing-from-the-console)
-
-### Avpublicera från redigeraren {#unpublishing-from-the-editor}
-
-Om du vill avpublicera en sida när du redigerar den väljer du **Avpublicera sida** på menyn **Sidinformation**, på samma sätt som du [publicerar sidan](#publishing-from-the-editor).
-
->[!NOTE]
->
->Sidor som används av [alias](/help/sites-cloud/authoring/sites-console/page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
-
-### Avpublicera från konsolen {#unpublishing-from-the-console}
+Om du avpublicerar en sida tas den bort från publicerings- eller [förhandsgranskningsmiljön](/help/sites-cloud/authoring/sites-console/previewing-content.md) så att den inte längre är tillgänglig för läsarna.
 
 Precis som du [använder alternativet Hantera publikation för att publicera](#manage-publication) kan du även använda det för att avpublicera.
 
@@ -310,7 +259,7 @@ Du kan ange en sidas publiceringsstatus:
 
   Publikationsstatusen visas i [kort](/help/sites-cloud/authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-cloud/authoring/basic-handling.md#column-view)- och [list](/help/sites-cloud/authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
-* På tidslinjen [&#128279;](/help/sites-cloud/authoring/basic-handling.md#timeline)
+* På tidslinjen [](/help/sites-cloud/authoring/basic-handling.md#timeline)
 
   ![Publiceringsstatus i tidslinjevyn](/help/sites-cloud/authoring/assets/publishing-status-timeline.png)
 
