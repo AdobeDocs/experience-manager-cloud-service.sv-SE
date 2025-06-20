@@ -1,22 +1,30 @@
 ---
-title: Launches
-description: Med lanseringar kan du effektivt utveckla innehåll för en framtida release. De gör att du kan göra ändringar redo för framtida publicering, samtidigt som du behåller dina aktuella sidor
+title: Startar för sidor
+description: Lär dig hur du använder starter för sidor i Adobe Experience Manager as a Cloud Service. Med Launches kan du effektivt utveckla innehåll för en framtida release, samtidigt som du behåller de aktuella sidorna.
 exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: 9ddda040eda85b29c86a4940cb656f26073b0f12
+source-git-commit: 4c75904958f7faf91173cb8a37d5be5b3048cfae
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '995'
 ht-degree: 3%
 
 ---
 
-# Launches {#launches}
+# Startar för sidor {#launches-for-pages}
 
-Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
+I Adobe Experience Manager (AEM) as a Cloud Service kan du med Launches effektivt utveckla material för framtida releaser.
 
-En *Launch* skapas så att du kan göra ändringar inför framtida publicering, samtidigt som du behåller de aktuella sidorna. Det innebär att du redigerar två versioner samtidigt: sidor som för närvarande är publicerade och en version av dessa sidor, som ska publiceras i taget i framtiden. När tiden är inne kan du ersätta originalsidorna och publicera den nya versionen.
+En *Launch* skapas så att du kan göra ändringar inför framtida publicering, samtidigt som du behåller det aktuella innehållet. För AEM-sidor innebär detta att du redigerar två versioner samtidigt: sidor som är publicerade och en version av dessa sidor som ska publiceras i framtiden. När tiden är inne kan du ersätta originalsidorna och publicera de nya versionerna.
+
+<!--
+>[!NOTE]
+>
+>Launches are also available for Content Fragments. The basic concepts are the same, but there are differences in how to manage them in AEM. 
+>
+>For full details see [Launches for Content Fragments](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md).
+-->
 
 Du skapar en *Launch* och när du har redigerat och uppdaterat dina *Launch* -sidor *höjer du* dem tillbaka till *Source*. Du kan sedan aktivera dessa *Source*-sidor (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
 
@@ -28,7 +36,7 @@ Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras kvar
 Du kan också:
 
 * Navigera i startgrenen och lägg till eller ta bort sidor efter behov.
-* Förhandsgranska hur publicerat innehåll ser ut på ett specifikt datum/tid i framtiden.
+* Förhandsgranska hur publicerat innehåll ser ut på ett visst datum i framtiden.
 
 När nästa kvartal anländer befordrar du startsidorna så att du kan publicera källsidorna (med det uppdaterade innehållet). Du kan antingen befordra alla sidor eller bara de som du har ändrat.
 
@@ -106,6 +114,12 @@ Med Launes kan du:
    ![Åtgärder som ska vidtas vid starter i webbplatskonsolen](/help/sites-cloud/authoring/assets/launches-references-actions.png)
 
 ## Startkonsolen {#the-launches-console}
+
+>[!NOTE]
+>
+>Den här konsolen är endast för startprogram för sidor.
+>
+>Mer information om hur du hanterar innehållsfragment finns i [Starta för innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md).
 
 På startkonsolen får du en översikt över dina starter och kan agera på dem som visas.
 
