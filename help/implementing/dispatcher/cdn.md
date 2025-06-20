@@ -4,9 +4,9 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
+source-git-commit: 62af306bbf645c4d70d0f07f95aa90e4d53e20f8
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1744'
 ht-degree: 2%
 
 ---
@@ -78,10 +78,10 @@ För användarvänliga autentiseringssituationer, inklusive affärsintressenter 
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_byocdn"
->title="Customer CDN points to AEM Managed CDN"
+>title="Customer CDN (eller proxy) pekar på AEM Managed CDN"
 >abstract="AEM som Cloud Service erbjuder ett alternativ för kunder att använda sitt befintliga CDN. För publiceringsnivån kan kunderna även peka på det från sitt eget CDN, som de måste hantera. Detta scenario tillåts från fall till fall, baserat på att vissa krav uppfylls, inklusive, men inte begränsat till, den kund som har en äldre integrering med sin CDN-leverantör som är svår att överge."
 
-Om en kund måste använda sitt befintliga CDN kan de hantera det och peka det mot det CDN som hanteras av AEM, förutsatt att följande uppfylls:
+Om en kund måste använda sitt befintliga CDN (eller någon annan omvänd proxy, till exempel en belastningsutjämnare eller en WAF), kan de hantera det och peka det mot det CDN som hanteras av AEM, förutsatt att följande uppfylls:
 
 * Kunden måste ha ett befintligt CDN som är betungande att ersätta.
 * Kunden måste hantera det.
