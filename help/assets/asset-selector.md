@@ -5,9 +5,9 @@ contentOwner: KK
 feature: Selectors
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 47afd8f95eee2815f82c429e9800e1e533210a47
 workflow-type: tm+mt
-source-wordcount: '5364'
+source-wordcount: '5397'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ Integreringen görs genom att du importerar resursväljarpaketet och ansluter ti
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 
-* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE).
+* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=en).
 * Du har redan en IMS-token genererad för autentisering.
 
 ## Integrera resursväljaren med olika program {#asset-selector-integration-with-apps}
@@ -484,25 +484,27 @@ Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som e
 **Godkänd API-specifikation för resursleverans**
 
 URL:
-`https://<delivery-api-host>/adobe/dynamicmedia/deliver/<asset-id>/<seo-name>.<format>?<image-modification-query-parameters>`
+`https://<delivery-api-host>/adobe/assets/<asset-id>/as/<seo-name>.<format>?<image-modification-query-parameters>`
 
 Var,
 
 * Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
-* API-roten är `"/adobe/dynamicmedia/deliver"`
+* API-roten är `"/adobe/assets"`
 * `<asset-id>` är tillgångsidentifierare
+* `as` är den konstanta delen av en öppen API-specifikation som anger vad resursen ska kallas
 * `<seo-name>` är namnet på en resurs
 * `<format>` är utdataformatet
 * `<image modification query parameters>` som stöd av den godkända resursens leverans-API-specifikation
 
-**Godkänt leverans-API för resurser**
+**Godkänt resurser, ursprungligt återgivnings-API**
 
 Den dynamiska leverans-URL:en har följande syntax:
-`https://<delivery-api-host>/adobe/assets/deliver/<asset-id>/<seo-name>`, där,
+`https://<delivery-api-host>/adobe/assets/<asset-id>/original/as/<seo-name>`, där,
 
 * Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
-* API-roten för ursprunglig återgivningsleverans är `"/adobe/assets/deliver"`
+* API-roten för ursprunglig återgivningsleverans är `"/adobe/assets"`
 * `<asset-id>` är tillgångsidentifierare
+* `/original/as` är den konstanta delen av en öppen API-specifikation som anger vilken ursprunglig återgivning som ska kallas
 * `<seo-name>` är namnet på resursen som kan ha ett tillägg eller inte
 
 +++
@@ -533,12 +535,12 @@ När du har valt en PDF-fil i en sidospark visas nedanstående information i urv
   { 
       "height": 319, 
       "width": 319, 
-      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/as/algorithm design.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
+      "href": "https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/as/algorithm design.jpg?width=319&height=319", 
       "type": "image/webp" 
   } 
   ```
 
-På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgivningen införlivas i målversionen om PDF krävs och inte i dess miniatyrbild. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
+På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgivningen införlivas i målversionen om PDF krävs och inte i dess miniatyrbild. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf`
 
 * **Video:** Du kan använda videospelarens URL för videomaterialet som använder en inbäddad iFrame. Du kan använda följande arrayåtergivningar i målupplevelsen:
   <!--![Video dynamic delivery url](image.png)-->
@@ -547,7 +549,7 @@ På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgiv
   { 
       "height": 319, 
       "width": 319, 
-      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/as/asDragDrop.2.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
+      "href": "https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/as/asDragDrop.2.jpg?width=319&height=319", 
       "type": "image/webp" 
   } 
   ```
@@ -556,7 +558,7 @@ På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgiv
 
   Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som en HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
 
-  I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play?accept-experimental=1`
+  I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play`
 
 +++**Användargränssnittet Resursväljare för dynamiska media med OpenAPI-funktioner**
 
@@ -1098,10 +1100,10 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png) [!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervyn](assets/do-not-localize/grid-view.png) [!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* **![stödrastervyn](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 <!--
 ### Modes to view Asset Selector

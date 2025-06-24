@@ -3,9 +3,9 @@ title: Integrera resursväljaren med API:t för Dynamic Media-öppning
 description: Integrera resursväljare med olika program från Adobe, andra företag än Adobe och tredje part.
 role: Admin, User
 exl-id: b01097f3-982f-4b2d-85e5-92efabe7094d
-source-git-commit: 48a456039986abf07617d0828fbf95bf7661f6d6
+source-git-commit: 47afd8f95eee2815f82c429e9800e1e533210a47
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '967'
 ht-degree: 0%
 
 ---
@@ -105,25 +105,26 @@ Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som e
 #### Godkänd specifikation för tillgångsleverans-API {#approved-assets-delivery-api-specification}
 
 URL:
-`https://<delivery-api-host>/adobe/dynamicmedia/deliver/<asset-id>/<seo-name>.<format>?<image-modification-query-parameters>`
+`https://<delivery-api-host>/adobe/assets/<asset-id>/<seo-name>.<format>?<image-modification-query-parameters>`
 
 Var,
 
 * Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
-* API-roten är `"/adobe/dynamicmedia/deliver"`
+* API-roten är `"/adobe/assets"`
 * `<asset-id>` är tillgångsidentifierare
 * `<seo-name>` är namnet på en resurs
 * `<format>` är utdataformatet
 * `<image modification query parameters>` som stöd av den godkända resursens leverans-API-specifikation
 
-#### Godkänt API för tillgångsleverans {#approved-assets-delivery-api}
+#### Godkänt material Ursprungligt återgivnings-API {#approved-assets-delivery-api}
 
 Den dynamiska leverans-URL:en har följande syntax:
-`https://<delivery-api-host>/adobe/assets/deliver/<asset-id>/<seo-name>`, där,
+`https://<delivery-api-host>/adobe/assets/<asset-id>/original/as/<seo-name>`, där,
 
 * Värddatorn är `https://delivery-pxxxxx-exxxxxx.adobe.com`
-* API-roten för ursprunglig återgivningsleverans är `"/adobe/assets/deliver"`
+* API-roten för ursprunglig återgivningsleverans är `"/adobe/assets"`
 * `<asset-id>` är tillgångsidentifierare
+* `/original/as` är den konstanta delen av en öppen API-specifikation som anger vilken ursprunglig återgivning som ska kallas
 * `<seo-name>` är namnet på resursen som kan ha ett tillägg eller inte
 
 ### Redo att välja dynamisk leverans-URL {#ready-to-pick-dynamic-delivery-url}
@@ -133,7 +134,7 @@ Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som e
 | Objekt | JSON |
 |---|---|
 | Värd | `assetJsonObj["repo:repositoryId"]` |
-| API-rot | `/adobe/assets/deliver` |
+| API-rot | `/adobe/assets` |
 | asset-id | `assetJsonObj["repo:assetId"]` |
 | seo-name | `assetJsonObj["repo:name"]` |
 
@@ -153,12 +154,12 @@ När du har valt en PDF-fil i en sidospark visas nedanstående information i urv
   { 
       "height": 319, 
       "width": 319, 
-      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/as/algorithm design.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
+      "href": "https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/as/algorithm design.jpg?width=319&height=319", 
       "type": "image/webp" 
   } 
   ```
 
-På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgivningen införlivas i målversionen om PDF krävs och inte i dess miniatyrbild. Exempel: `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf?accept-experimental=1`
+På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgivningen införlivas i målversionen om PDF krävs och inte i dess miniatyrbild. Exempel: `https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:8560f3a1-d9cf-429d-a8b8-d81084a42d41/original/as/algorithm design.pdf`
 
 * **Video:** Du kan använda videospelarens URL för videomaterialet som använder en inbäddad iFrame. Du kan använda följande arrayåtergivningar i målupplevelsen:
   <!--![Video dynamic delivery url](image.png)-->
@@ -167,7 +168,7 @@ På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgiv
   { 
       "height": 319, 
       "width": 319, 
-      "href": "https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/as/asDragDrop.2.jpg?accept-experimental=1&width=319&height=319&preferwebp=true", 
+      "href": "https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/as/asDragDrop.2.jpg?width=319&height=319", 
       "type": "image/webp" 
   } 
   ```
@@ -176,7 +177,7 @@ På skärmbilden ovan måste leveransadressen för den ursprungliga PDF-återgiv
 
   Kodfragmentet i skärmbilden ovan är ett exempel på en videoresurs. Den innehåller en array med återgivningslänkar. `selection[5]` i utdraget är ett exempel på en miniatyrbild som kan användas som platshållare för videominiatyrbilden i målupplevelsen. `selection[5]` i återgivningens array är för videospelaren. Detta fungerar som en HTML och kan anges som `src` för iframe. Den stöder strömning med adaptiv bithastighet, som är webboptimerad leverans av videon.
 
-  I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx-cmstg.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play?accept-experimental=1`
+  I exemplet ovan är videospelarens URL `https://delivery-pxxxxx-exxxxx.adobeaemcloud.com/adobe/assets/urn:aaid:aem:2fdef732-a452-45a8-b58b-09df1a5173cd/play`
 
 ### Konfigurera anpassade filter {#configure-custom-filters-dynamic-media-open-api}
 

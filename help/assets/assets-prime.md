@@ -4,9 +4,9 @@ description: Läs mer om viktiga aspekter av Assets Prime, t.ex. viktiga fördel
 feature: Asset Management
 role: User, Admin
 exl-id: 012f94c5-b1c3-4799-8eaf-af68d06c036f
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 47afd8f95eee2815f82c429e9800e1e533210a47
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Assets as a Cloud Service Prime innehåller ett lättviktigt DAM med vilket du k
 
   >[!NOTE]
   >
-  >Dynamic Media med OpenAPI-funktioner som ger dig tillgång till grundläggande bildmodifierare som rotation, beskärning (endast manuellt - ingen smart beskärning), flip, size, preferwebp, height, width, quality, format och adaptive video streaming finns också i Assets Prime. Kontakta Adobe kontoteam för mer information.
+  >Dynamic Media med OpenAPI-funktioner som ger dig tillgång till grundläggande bildmodifierare som rotering, beskärning (endast manuellt - ingen smart beskärning), bläddring, höjd, bredd, kvalitet, format och adaptiv videoströmning finns också i Assets Prime. Kontakta Adobe kontoteam för mer information.
 
 1. [Skapa ett nytt program](/help/journey-onboarding/create-program.md).
 
