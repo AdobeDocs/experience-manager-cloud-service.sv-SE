@@ -375,7 +375,7 @@ Du kan visa alla metadata för GraphQL-typer om du visar det genererade GraphQL-
 >[!NOTE]
 >
 >**Skillnad mellan normala metadata och arraymetadata**
->>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
+>&#x200B;>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
 >
 >Om du till exempel anropar fältet `stringMetadata` får du en array med alla metadata som lagrats i databasen som `String` , och om du anropar `stringArrayMetadata` får du en array med alla metadata som lagrats i databasen som `String[]`.
 
