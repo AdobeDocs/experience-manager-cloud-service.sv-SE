@@ -5,7 +5,7 @@ contentOwner: KK
 feature: Selectors
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: 47afd8f95eee2815f82c429e9800e1e533210a47
+source-git-commit: f171bbeaf01e2d9be3a8f3b5172919a5e8ca7d97
 workflow-type: tm+mt
 source-wordcount: '5397'
 ht-degree: 0%
@@ -136,7 +136,7 @@ Integreringen görs genom att du importerar resursväljarpaketet och ansluter ti
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 
-* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE).
+* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=en).
 * Du har redan en IMS-token genererad för autentisering.
 
 ## Integrera resursväljaren med olika program {#asset-selector-integration-with-apps}
@@ -476,7 +476,7 @@ Alla markerade resurser bärs av funktionen `handleSelection` som fungerar som e
 | Objekt | JSON |
 |---|---|
 | Värd | `assetJsonObj["repo:repositoryId"]` |
-| API-rot | `/adobe/dynamicmedia/deliver` |
+| API-rot | `/adobe/assets` |
 | asset-id | `assetJsonObj["repo:assetId"]` |
 | seo-name | `assetJsonObj["repo:name"].split(".").slice(0,-1).join(".")` |
 | format | `.jpg` |
@@ -1100,10 +1100,10 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png) [!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervyn](assets/do-not-localize/grid-view.png) [!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* **![stödrastervyn](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 <!--
 ### Modes to view Asset Selector
