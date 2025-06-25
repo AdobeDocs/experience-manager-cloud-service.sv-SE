@@ -4,9 +4,9 @@ description: Versionsinformation för Adobe Experience Manager (AEM) as a Cloud 
 exl-id: 05b9e51f-467e-4c8e-baea-b1cf832597cd
 feature: Release Information
 role: Admin
-source-git-commit: 3d25a9279433e5bf6cc2b2e552ae6266a811c88b
+source-git-commit: 4b729f7d06ff3ef546dee2a67065cced7e5bb3fa
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '630'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,7 @@ Om det till exempel är maj kan du utvärdera kommande funktioner som kommer att
 
 Den här konferensen ger dig ett rullande fönster där du kan bedöma effekten av kommande funktioner i dina projekt och anpassningar och planera lanseringar av sådana funktioner, tester och användarutbildning.
 
-I [Experience Manager-lanseringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service) finns mer information om kommande releaser.
+I [Experience Manager-lanseringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) finns mer information om kommande releaser.
 
 ## Förbereda för en release {#how-to-prepare}
 
@@ -51,7 +51,7 @@ Så här förbereder du en release:
 
 ## Markera dina kalendrar {#mark-calendars}
 
-Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleaser publiceras på [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service)
+Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleaser publiceras på [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
 
 Notera releasedatumen så att du kan planera tiden för granskning och testning av kommande funktioner.
 
@@ -67,12 +67,12 @@ Du kan även [kontrollera kända fel](/help/release-notes/maintenance/latest.md)
 
 Kommande funktioner är vanligtvis tillgängliga på ett av två sätt:
 
-* Som en del av ett program för tidig användning
+* Som en del av ett Alpha-, Beta- eller Limited Availability-program
 * Som en del av betaversionskanalen
 
 Hur en kommande funktion blir tillgänglig beskrivs i [versionsinformationen.](#release-notes)
 
-* Om programmet ingår i ett program som man har börjat använda tidigare behöver du vanligtvis kontakta Adobe för att aktivera det så som beskrivs i versionsinformationen.
+* Om det ingår i ett Alpha-, Beta- eller Limited Availability-program måste du i allmänhet kontakta Adobe för att aktivera det så som anges i versionsinformationen.
 * Om den är en del av betaversionskanalen måste du [aktivera betaversionskanalen i en utvecklings- eller sandlådemiljö.](/help/release-notes/prerelease.md)
 
 ## Utbilda dina användare {#train-users}
@@ -81,8 +81,8 @@ När du har testat de kommande funktionerna och bestämt dig för att använda d
 
 Adobe Experience League erbjuder massor av resurser för att lära sig AEMaaCS.
 
-* [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE)
-* [Självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html?lang=sv-SE)
+* [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
+* [Självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
 * [Den månatliga översiktsvideon ](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
 
 ## Viktig versionsinformation {#key-articles}

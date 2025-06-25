@@ -4,9 +4,9 @@ description: Lär dig hur du använder betaversionskanalen för att få en förh
 exl-id: cfc91699-0087-40fa-a76c-0e5e1e03a5bd
 feature: Release Information
 role: Admin
-source-git-commit: 36da09746f02daad82875329b0aa53ee4eb7c074
+source-git-commit: e6567c965a026967e7a5baa67050eb5615979531
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Adobe Experience Manager as a Cloud Service har nya funktioner på ett regelbund
 
 Kommande funktioner är i allmänhet tillgängliga på ett av två sätt:
 
-* Som en del av ett program för tidig användning
+* Som en del av ett Alpha-, Beta- eller Limited Availability-program
 * Som en del av betaversionskanalen
 
 I det här dokumentet beskrivs hur du aktiverar betaversionskanalen. Prerelease-kanalen ger tillgång till tidiga funktioner som kommer att lanseras i en framtida version av AEM. Detta ger er möjlighet att validera nya funktioner och planera för deras införande i förväg. I dokumentet [Versionsinformation för Adobe Experience Manager (AEM) as a Cloud Service](/help/release-notes/home.md) finns mer information om AEM releaseschema.
@@ -152,7 +152,7 @@ Javadocs publiceras i Maven Central.
 > 
 > ArtefactId `aem-prerelease-sdk-api` får aldrig användas vid distribution till scenen eller produktionen. Använd alltid `aem-sdk-api` när du distribuerar via produktionsflödet. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionsflödet.
 
-[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=sv-SE#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
+[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
 
 ## Överväganden {#considerations}
 
