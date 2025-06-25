@@ -152,7 +152,7 @@ Javadocs publiceras i Maven Central.
 > 
 > ArtefactId `aem-prerelease-sdk-api` får aldrig användas vid distribution till scenen eller produktionen. Använd alltid `aem-sdk-api` när du distribuerar via produktionsflödet. Kod som refererar till prerelease-API:er ska inte heller distribueras via produktionsflödet.
 
-[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
+[AEM CS SDK Build Analyzer maven plugin v1.0 och senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin.html?lang=sv-SE#developing) upptäcker om prerelease API används i ett projekt genom att undersöka beroendena. Om analysatorn hittar den kommer den att använda förhandsversionen av SDK-API:t för att analysera projektet.
 
 ## Överväganden {#considerations}
 
