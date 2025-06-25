@@ -5,9 +5,9 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: 26892959443a16203184f4a0798d9c7fdc75dd8f
+source-git-commit: b4bbf73cd49f6d7beb47d2edce0910d957879e39
 workflow-type: tm+mt
-source-wordcount: '2292'
+source-wordcount: '2322'
 ht-degree: 0%
 
 ---
@@ -242,9 +242,9 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/azure_devops -->
 
-| Nödvändiga webbkrokhändelser |
+| Nödvändiga webkrockhändelser och autentisering |
 | --- |
-| Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Databas: Tryck</li></li></ul></ul></ul> |
+| Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Databas: Tryck</li></ul>Ange autentisering:<br>1. Skriv `cloudmanager` i fältet **Användarnamn för grundläggande autentisering**.<br>2. I fältet **Grundläggande autentiseringslösenord** skriver du den Webkrockhemlighet som genererats från Cloud Manager användargränssnitt. |
 
 >[!ENDTABS]
 
