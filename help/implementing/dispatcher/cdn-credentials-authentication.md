@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: ab855192e4b60b25284b19cc0e3a8e9da5a7409c
+source-git-commit: bfe0538660474d445a60fa1c8174d7a690b1dc4c
 workflow-type: tm+mt
-source-wordcount: '1712'
+source-wordcount: '1939'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ data:
 
 Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
-Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
+Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
 
 Ytterligare egenskaper är:
 
@@ -119,6 +119,29 @@ curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -H "X-Forwarded-H
 
 När testningen är klar kan det ytterligare villkoret tas bort och konfigurationen distribueras på nytt.
 
+### Migreringsprocess om Adobe Support tidigare genererade värdet `X-AEM-Edge-Key` för HTTP Header {#migrating-legacy}
+
+>[!NOTE]
+>Innan du fortsätter med migreringen ska du schemalägga en testmigrering på scenmiljön för att verifiera strategin.
+
+>[!WARNING]
+> Ändra inte nyckeln i det kundhanterade CDN förrän steg 4.
+
+Processen för integrering med ett kundhanterat CDN involverade tidigare kunder som begärde ett HTTP Header-värde för X-AEM-Edge-Key från Adobe Support i stället för att själva definiera värdet. Om du vill migrera till den nya självbetjäningsmetoden där du definierar egna kantnyckelvärden följer du de här stegen för att säkerställa en smidig övergång utan driftavbrott:
+
+1. Konfigurera CDN-konfigurationen med både de nya (kundgenererade) och gamla (Adobe-genererade) hemligheter som anges som `edgeKey1` och `edgeKey2`. Det här är en variation av dokumentationen [som roterar hemligheter](/help/implementing/dispatcher/cdn-credentials-authentication.md#rotating-secrets).
+
+2. Distribuera hemligheterna och den självbetjänande CDN-konfigurationen. Nu ska den gamla Adobe-definierade hemligheten förbli det X-AEM-Edge-Key-värde som skickas av kundhanterad CDN.
+
+3. Kontakta Adobe Support och be Adobe växla över för att använda självbetjäningskonfigurationen och ange att du redan har distribuerat den.
+
+4. När Adobe har bekräftat att den har utfört den åtgärden konfigurerar du det kundhanterade CDN så att det använder den nya, kunddefinierade nyckeln för HTTP Header-värdet `X-AEM-Edge-Key`.
+
+5. Ta bort den gamla nyckeln från CDN-konfigurationen och distribuera konfigurationsflödet igen.
+
+>[!WARNING]
+>Om du inte har återställningen med båda nycklarna konfigurerade samtidigt kan det leda till driftstopp under migreringen.
+
 ## Rensa API-token {#purge-API-token}
 
 Kunder kan [rensa CDN-cachen](/help/implementing/dispatcher/cdn-cache-purge.md) genom att använda en deklarerad rensnings-API-token. Token har deklarerats i en fil med namnet `cdn.yaml` eller liknande, någonstans under en `config`-mapp på översta nivån. Läs [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure) om du vill ha mer information om mappstrukturen och hur du distribuerar konfigurationen.
@@ -164,7 +187,7 @@ Ytterligare egenskaper är:
 >[!NOTE]
 >Töm nyckel måste konfigureras som en [hemlig typ av Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras. Vi rekommenderar att du använder en unik slumpmässig nyckel med en längd på minst 32 byte. Open SSL-kryptografibiblioteket kan till exempel generera en slumpmässig nyckel genom att köra kommandot openssl rand -hex 32
 
-Du kan referera till [en självstudie](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
+Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
 ## Grundläggande autentisering {#basic-auth}
 
@@ -235,7 +258,6 @@ Det här användningsexemplet visas nedan med hjälp av en kantnyckel, men samma
          type: edge
          edgeKey1: ${{CDN_EDGEKEY_052824}}
    ```
-
 1. När det är dags att rotera nyckeln skapar du en ny Cloud Manager-hemlighet, till exempel `${{CDN_EDGEKEY_041425}}`.
 1. I konfigurationen refererar du till den från `edgeKey2` och distribuerar den.
 
@@ -257,7 +279,6 @@ Det här användningsexemplet visas nedan med hjälp av en kantnyckel, men samma
          type: edge
          edgeKey2: ${{CDN_EDGEKEY_041425}}
    ```
-
 1. Ta bort den gamla hemliga referensen (`${{CDN_EDGEKEY_052824}}`) från Cloud Manager och distribuera.
 
 1. När du är redo för nästa rotation följer du samma procedur, men den här gången lägger du till `edgeKey1` i konfigurationen och refererar till en ny Cloud Manager-miljöhemlighet med namnet, till exempel, `${{CDN_EDGEKEY_031426}}`.
