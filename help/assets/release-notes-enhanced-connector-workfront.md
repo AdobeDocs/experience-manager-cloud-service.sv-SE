@@ -4,9 +4,9 @@ description: Versionsinformation för  [!DNL Workfront for Experience Manager en
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
 feature: Release Information
 role: Admin
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: cb06380e4d3977f4f70a6444923cda2b0566d173
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -52,17 +52,21 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Workfront for Experience Manager enhanced connector].
 
-Releasedatum för den senaste versionen, 1.9.20 av [!DNL Workfront for Experience Manager enhanced connector], är 6 september 2024.
+Releasedatum för den senaste versionen, 1.9.21 av [!DNL Workfront for Experience Manager enhanced connector], är 25 juni 2025.
 
 ## Frigör högdagrar {#release-highlights}
 
-Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande felkorrigering:
+Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connector] innehåller följande förbättringar och felkorrigeringar:
 
-* MIME-typen förloras när en ny version av en befintlig resurs överförs och skapas.
+* Förbättrad loggning av API-förfrågningar för att undvika falsk positiv loggning av autentiseringsfel.
+
+* Anslutningsläckage för Workfront API-anrop har åtgärdats.
+
+* Stöd för Workfront Enhanced Connector med 6.5 LTS för Java 17- och Java 21-versioner.
 
 >[!NOTE]
 >
->AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/se/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=sv-SE).
+>AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=en).
 
 >[!IMPORTANT]
 >
@@ -75,6 +79,10 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 * När du använder den klassiska Workfront-upplevelsen tillåter inte alternativet **[!UICONTROL Send to]** i listrutan **[!UICONTROL More]** att du väljer måldestinationen i Experience Manager. Alternativet **[!UICONTROL Send to]** fungerar korrekt med listrutan **[!UICONTROL Document Actions]**. Alternativet **[!UICONTROL Send to]** fungerar korrekt för listrutan **[!UICONTROL More]** och listrutan **[!UICONTROL Document Actions]** som är tillgänglig i den nya Workfront-upplevelsen.
 
 ## Tidigare versioner {#previous-releases}
+
+### September 2024-utgåvan {#september-2024-release}
+
+* MIME-typen förloras när en ny version av en befintlig resurs överförs och skapas.
 
 ### April 2024-utgåvan {#april-2024-release}
 
@@ -94,9 +102,9 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 ### Januariversion 2024 {#january-2024-release}
 
-* [!DNL Workfront]-konfigurationen i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur du [konfigurerar behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html?lang=sv-SE#linked-folders).
+* [!DNL Workfront]-konfigurationen i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur du [konfigurerar behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#linked-folders).
 
-* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om att [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html?lang=sv-SE#metadata-schema-mapping).
+* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om att [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#metadata-schema-mapping).
 
 * Om du tar bort anslutningskonfigurationer på den utökade kopplingen påverkas händelsprenumerationer och andra sparade konfigurationer avsevärt, vilket gör att de pekar på en gammal URL.
 
@@ -299,4 +307,4 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!MORELIKETHIS]
 >
->* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=sv-SE)
+>* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=en)
