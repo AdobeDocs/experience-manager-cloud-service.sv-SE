@@ -4,10 +4,10 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: d3cdc3d69c0002c5b124150050f905123457331c
+source-git-commit: 7ae30d2053a17c2855c66b265c831ea27d19d535
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 1%
+source-wordcount: '1496'
+ht-degree: 0%
 
 ---
 
@@ -16,45 +16,132 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 21193 {#21193}
+## Utgåva 21331 {#21331}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21193, som offentliggjordes den 10 juni 2025. Den tidigare underhållsutgåvan släpptes 2005.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 21331, som offentliggjordes den 24 juni 2025. Den tidigare underhållsutgåvan släpptes 21193.
 
-Funktionsaktiveringen i 2025.6.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-21193}
+### Förbättringar {#enhancements-21331}
 
-* ASSETS-51245: Förbättrade prestanda för stora mapplistor i Touch-gränssnittet.
-* ASSETS-51686: Förbättringar av massjobb, bland annat enklare jobbavbrott, förbättrad loggning och granskningsnedladdningar för större resultat.
-* CQ-4360131: Förbättrat felsvar för OpenAPI-slutpunkter som gör att API-klienter kan få korrekt strukturerad felinformation.
+* CQ-4356522: `WorkflowResourceStatusProvider`-optimering.
+* FORMS-16458: Gränssnitt för teckensnittsegenskaper (teckensnitt).
+* FORMS-17707: AEP Connector fungerar inte på AEP plattformsscen.
+* FORMS-19125: Stöd för automatisk fragmentmappning i AF-redigeraren.
+* FORMS-19336: Sökningen har lagts till i Data Source Tree i AF-redigeraren.
+* FORMS-19417: Stöd för alternativknappar i hierarkivyn.
+* FORMS-19603: Stöd för mallsidor och designsidor i både regelredigeraren.
+* SITES-10575: &quot;MSM Blueprint Bloomfilter Loader&quot; försöker läsa in fler än 10000 rader.
+* SITES-14542: Om du byter namn på/flyttar en källsida för live-kopia bör publiceringen av den omdöpta/flyttade sidan för live-kopia utlösas om den redan har publicerats.
+* SITES-19754: Edge Delivery med Universal Editor: Lägg till ett läsbart felmeddelande när integreringen har problem.
+* SITES-23499: Edge Delivery med Universal Editor: Lägg till stöd för flera fält som ska användas för blockalternativ.
+* SITES-23518: Edge Delivery with Universal Editor: Add support for Edge Delivery specific asset renditions.
+* SITES-25913: Content Fragments Rest API: tidsboxed validation of resources before starting the publish workflow.
+* SITES-25976: Länkar inuti Experience Fragments som inte anpassar sig efter MSM-utrullning.
+* SITES-26271: Content Fragments Rest API: växla till BFS Traversal för GET Variation-slutpunkten.
+* SITES-27486: Universal Editor - AEM Integration.
+* SITES-27775: Optimerad referenssökning under publicering (lat metadatainläsning).
+* SITES-27782: Edge Delivery med Universal Editor: Lägg till specifik utgivar-prenumerant-implementering för att publicera innehåll i Edge Delivery (tidig åtkomst).
+* SITES-27792: Edge Delivery med Universal Editor: Lägg till dedikerad mall för Edge Delivery-tjänstkonfiguration.
+* SITES-28683: Tillåt att MSM LiveRelationship-sökningar hoppar över avancerad status.
+* SITES-29930: Content Fragments Rest API: add metrics for the Content Fragment Publish workflow.
+* SITES-29986: Content Fragments Rest API: stöd för teknisk namngivning av CF-modell.
+* SITES-30088: Content Fragments Rest API: CF Publish - hoppa över hämtning av referenser när filterReferencesByStatus är tom.
+* SITES-30328: Edge Delivery med Universal Editor: Lägg till stöd för förhandsgranskning från Sidekick.
+* SITES-30445: Content Fragments Rest API: CF Model UI-schema: lägg till ett alternativ för att styra ursprungligt läge för komprimeringsbart.
+* SITES-30604: Content Fragments Rest API: stöd för användning av Model Metadata Schema i nytt användargränssnitt.
+* SITES-30885: Optimerad JSON-bearbetning i beständiga frågor.
+* SITES-30886: Content Fragments Rest API: GET-arbetsflöden för Content Fragment-slutpunkt baserat på fragmenthandböcker som lagras i arbetsflödets metadata.
+* SITES-31005: Förbättra användargränssnittet för utfällbara projekt så att förloppet visas.
+* SITES-31020: Förbättra användargränssnittet för att skapa live-kopieringsjobb så att förloppet visas.
+* SITES-31472: Delete Launch kan göra att databasen pausas om det blir en enorm starttid.
+* SITES-31677: Anpassad arbetsyta stöder export av AEM Content fragment till Target.
+* SITES-31782: Content Fragments Rest API: lägg till en beskrivning för lokala resurser.
+* SITES-32175: Tillåt mellanliggande implementeringar för både Live Copy-skapande och MSM Page rollout.
+* SITES-5358: Content Fragments Rest API: Copy CFs with children.
 
-### Åtgärdade problem {#fixed-issues-21193}
+### Åtgärdade problem {#fixed-issues-21331}
 
-* ASSETS-41007: Borttagna resurser kan förbli synliga i Content Hub.
-* ASSETS-50994: AemRequestEventFilter orsakar för hög Jetty-trådskonflikter.
-* ASSETS-50155: Dubblerade metadataändringshändelser utlöstes.
-* ASSETS-50716: Sortering efter titel i Assets listvy fungerar inte som förväntat.
-* ASSETS-50820: Kontrollera att ogiltiga begäranden till API:t för resursrelationer avvisas korrekt med ett 400-fel.
-* ASSETS-50562: API för överföring av resurser ska skapa version som standard vid namnkonflikt.
-* ASSETS-50992: Assets API-slutpunkten initialUpload.json ska returnera innehållstypen för application/json.
-* ASSETS-51322: Automatisk borttagning och förfallodatum för asynkrona barrikader som kvarstår oavbrutet efter ett misslyckat jobb.
-* ASSETS-51809: CSV-redigeraren visade inte nyligen sparade ändringar på grund av webbläsarcachelagring.
-* SITES-31678: Experience Fragments (XF) with context-aware references was not resolve the correct language root in XF Publishing API.
+* CQ-4359756: Översättningsregler innehåller nu filteregenskaper på komponentnivå.
+* CQ-4359826: Korrigerar inkonsekvent status i referenspanelen för innehållsfragment.
+* CQ-4359866: Klassen LanguageUtils har nu stöd för enhetstestning utan att ytterligare beroenden läggs till.
+* FORMS-13990: Forms Service API:er: Dokumentgenerering: datafältet som lämnas tomt efter att ha valts ger 200 när det förväntas vara 400.
+* FORMS-14309: Forms Service API:er: Extract data Response Code Rectification.
+* FORMS-18526: När en regel med flera fält i villkor kopieras ändras inte det fasta fältet.
+* FORMS-18977: DOR-tjänsten skickar inte dokumentets titel.
+* FORMS-19047: Översättningar saknas efter publicering av ett anpassat formulär på AEM Forms i SP22.
+* FORMS-19234: Det går inte att använda tidslinjefunktionen i PDF-filer i AEM-formulär.
+* FORMS-19628: I Automatiskt genererad DOR döljs även rotpanelens namn, förutom den kapslade paneltiteln.
+* FORMS-19651: Korrigera regel när en knapp klickas används i binärt läge och samma knapp används i programsatsen.
+* FORMS-19808: FormsPortal - Det går inte att hämta utkast när den lata inläsningen är aktiverad.
+* FORMS-19887: Access-egenskapen fungerar inte i HTML5 Preview.
+* SITES-15452: Unika CF-element ska inte kontrolleras mot sina kopior vid starten.
+* SITES-24492: ARIA-tablisten har inget tillgängligt namn.
+* SITES-24623: Content Fragments Rest API: fix ETag mismatch between endpoints for the same CF.
+* SITES-24668: References Rail functionality break when zoom is added to 400%.
+* SITES-24678: References Rail status message is not announby screen reader.
+* SITES-24697: Skärmläsaren meddelar inte om inläsningsstatus för bildmodellen.
+* SITES-24708: Filters Rail-funktionaliteten bryts när zoomningen ökas till 400 %.
+* SITES-25235: Meddelandet om att läsa in innehåll i filterspår visas inte av skärmläsaren.
+* SITES-25254: Vågrät rullningslist visas i Carousel Modal när innehållet visas på 320px.
+* SITES-25433: Edge Delivery med Universal Editor: Korrigera återgivning av sidversioner för flerspråkiga webbplatsstrukturer.
+* SITES-26890: När du använder tangentbord visas inte tangentbordsfokus för scopet &quot;Tabellrubriker&quot; på sidan Hantera publikation.
+* SITES-29075: Översikt över Live-kopior fungerar inte för webbplatser med stora volymer.
+* SITES-29514: Edge Delivery med Universal Editor: Gör GitHub/Project URL obligatorisk när du skapar en ny webbplats.
+* SITES-29691: Det går inte att flytta sidan i ett specifikt startrelaterat ärende.
+* SITES-29745: Content Fragments Rest API: implementera hydrering av referensvariationer i BFS-traversal.
+* SITES-29748: Korrigera återgivningsvillkor för att visa hanteringspublicerings-/snabbpubliceringsåtgärder i CF-redigeraren.
+* SITES-29789: Component link change issue on copied root pages.
+* SITES-29987: Content Fragments Rest API: Create &amp; Edit Content Fragment Model does not support `previewUrlPattern`.
+* SITES-30140: Problem med dubbla fönster när innehållsfragmentreferens skapas.
+* SITES-30260: Content Fragments Rest API: error to update/delete CF using latest ETag.
+* SITES-30327: Content Fragments Rest API: publicera CF:er utan behörigheter skapar separata arbetsflöden för varje nyttolastresurs.
+* SITES-30333: Läs metadata för resurser från jcr för att undvika xmp-tolkningsproblem.
+* SITES-30353: GraphQL DataFetchingExceptions for &quot;src&quot; Field in AEM Content Fragments.
+* SITES-30377: Edge Delivery med Universal Editor: Sanera org- och sitenames.
+* SITES-30386: Edge Delivery med Universal Editor: Ta bort dubbletter, äldre UE `cors.js`.
+* SITES-30583: Content Fragments Rest API: verktyget Sök och ersätt ändrar alla tecken till gemener.
+* SITES-30585: Content Fragments Rest API: `previewUrlPattern` inte inställt på att skapa CFM:er med referenser.
+* SITES-30634: RTE Image Alt Text &amp; Alignment fungerar inte konsekvent.
+* SITES-30660: ADA Compliance Issue with Custom AEM Component.
+* SITES-30695: Edge Delivery med Universal Editor: Öka rankningen för rewriter-pipeline så att den inte stör anpassad kod.
+* SITES-30727: Det går inte att dra och släppa komponenter i redigeraren för produktionsförfattare.
+* SITES-30752: Använd inte `If-modified-since`/`last-modified`-huvuden när du genererar beständigt frågesvar.
+* SITES-30871: DOM-uppdateringar efter att efterredigeringslyssnaren har utlösts.
+* SITES-30877: Felaktig status för underordnad sidutrullning.
+* SITES-30899: Alternativet Senare som utrullning tillåter fortsatt utan valt datum.
+* SITES-30947: Null-pekarundantag på grund av att egenskapen &quot;behavior&quot; saknas i ritningen under utrullning.
+* SITES-31157: Content Fragments Rest API: patch Fails is specific case.
+* SITES-31272: Det går inte att skapa en Assets-språkkopia via PageManager.copy.
+* SITES-31327: Content Fragments Rest API: ta bort ETag-validering i GET Fragment-begäran.
+* SITES-31387: JavaScript-fel&quot;ns.ui.alert is not a function&quot; when re-enabling spökcomponent inherance.
+* SITES-31455: Content Fragments Rest API: fix ETag Mismatch between Endpoints for the same Content Fragment Model.
+* SITES-31459: Content Fragments Rest API: CF Live copy kan inte redigeras när det finns ett innehållsreferensfält.
+* SITES-31467: js-errors from contexthub.authoring-krok.js in the page editor.
+* SITES-31594: API för innehållsfragment finns: `extractMetadataSchemaFieldLabel` fel.
+* SITES-31621: Edge Delivery med Universal Editor: Ta bort tom rad från kalkylblad som är live-kopior.
+* SITES-31676: Om du redigerar eller tar bort komponenter lämnas ett tomt utrymme längst ned på sidan.
+* SITES-31822: ClassicUI Checkbox label missing &amp; Encoded HTML.
+* SITES-31857: Det går inte att skapa CF i mappar med enkla citattecken.
+* SITES-31888: Borttagning av innehållsfragment kan inte spridas till förhandsvisning.
+* SITES-31922: Content Fragments Rest API: sidreferenser returneras inte av referenspunkten referencedBy.
+* SITES-31987: Visa inte previewURL:er för innehållsfragment när de publiceras till Förhandsgranska.
+* SITES-32095: Auto-Refresh Fails on afterdelete Event Listener in Live Copy.
+* SITES-32237: Edge Delivery med Universal Editor: Korrigera återgivning av tomma/felformaterade textkomponenter.
 
-
-### Kända fel {#known-issues-21193}
+### Kända fel {#known-issues-21331}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-21193}
+### Föråldrade funktioner och API:er {#deprecated-21331}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-21193}
+### Säkerhetskorrigeringar {#security-21331}
 
-AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar två identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
+AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 21 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-21193}
+### Inbäddade tekniker {#embedded-tech-21331}
 
 | Teknik | Version | Länk |
 |---|---|---|
