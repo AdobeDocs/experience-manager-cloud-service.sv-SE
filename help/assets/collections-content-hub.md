@@ -3,9 +3,9 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: 6bc838ff76edda3e03cbde8da4a28f65cba3b36a
+source-git-commit: fd45c1aadbbab7475becb94f9df27bbd5a1c165b
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -13,40 +13,75 @@ ht-degree: 0%
 # Hantera samlingar i [!DNL Content Hub] {#manage-collections}
 
 <table>
+
     <tr>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+
         </td>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+
         </td>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+
         </td>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+
         </td>
+
           <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+
         </td>
+
     </tr>
+
     <tr>
+
         <td>
+
             <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+
         </td>
+
         <td>
+
             <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+
         </td>
+
         <td>
+
             <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+
         </td>
+
         <td>
+
             <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+
         </td>
+
         <td>
+
             <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+
         </td>
+
     </tr>
+
 </table>
 
 <!-- ![Manage collections](assets/manage-collections.jpg) -->
@@ -93,17 +128,22 @@ Följ stegen nedan för att styra åtkomsten när du skapar samlingar:
 
    | Åtkomstmetod | Åtkomsttyp | Beskrivning |
    |---|---|---|
-   | **Endast du och administratörer har åtkomst till** | Privat | Endast skapare och administratörer kan redigera och komma åt den här samlingen. |
-   | **Alla kan komma åt** | Offentlig | Alla kan komma åt den här samlingen, men bara skapare och administratörer kan redigera. |
-   | **Alla kan komma åt och redigera** | Offentlig | Samlingen är öppen för alla, med fullständig åtkomst och redigeringsbehörighet utan begränsningar. |
+   | **Endast du och administratörer kan redigera** | Privat | Endast författare och administratörer kan redigera och komma åt den här samlingen. |
+   | **Alla kan visa** | Offentlig | Alla kan komma åt den här samlingen, men bara skapare och administratörer kan redigera. |
+   | **Alla kan visa och redigera** | Offentlig | Samlingen är öppen för alla, med fullständig åtkomst och redigeringsbehörighet utan begränsningar. |
+
+   >[!NOTE]
+   >
+   > Administratören för [!DNL Content Hub] kan visa alla alternativ som är tillgängliga i listrutan **[!UICONTROL Who can access]**, medan du för vanliga användare måste [ange och konfigurera](configure-content-hub-ui-options.md) vilka alternativ som de kan komma åt.
 
 1. Klicka på **[!UICONTROL Create]**. När du är klar kan du [lägga till resurser i samlingen](#add-assets-to-existing-collection).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3463336)
 
+<!--
 >[!NOTE]
 >
->Samlingsstyrning är en begränsad tillgänglighetsfunktion. Du kan aktivera det genom att skapa en supportanmälan. När den är aktiverad måste du [konfigurera samlingar i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub).
+>Collections governance is a limited availability feature. You can get it enabled  by creating a support ticket. Once enabled, you need to [Configure Collections in Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub).-->
 
 <!--To create a new collection, navigate to the **[!UICONTROL Collections]** tab and click **[!UICONTROL Create new collection]**. Enter the **[!UICONTROL Title]** and provide an optional **[!UICONTROL Description]** for the assets. Click **[!UICONTROL Create]**.
 ![Create collection](assets/add-assets-collection.jpg)          
@@ -174,17 +214,23 @@ Lär dig hur du [hämtar en resurs från  [!DNL Content Hub]](download-assets-co
 
 Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#enable-public-link-sharing). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela](assets/share.svg) på samlingskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
 
-När du delar samlingar i Content Hub kan du definiera omfattningen av de behörigheter och åtgärder som mottagarna kan utföra på digitala resurser i systemet. Content Hub Collections innehåller omfattande styrningsverktyg för effektiv filhantering, inklusive anpassningsbara delningsbehörigheter och samarbetsfunktioner. De här inställningarna ger allt från skrivskyddad åtkomst till fullständig administrativ kontroll och har stöd för finstyrning framför resursdistribution.
+Content Hub Collections innehåller omfattande styrningsverktyg för effektiv filhantering, inklusive anpassningsbara delningsbehörigheter och samarbetsfunktioner. De här inställningarna ger allt från skrivskyddad åtkomst till fullständig administrativ kontroll och har stöd för finstyrning framför resursdistribution. När du delar en resurs antingen individuellt eller som en del av en samling bestäms omfattningen av åtkomsten av samlingens aktuella åtkomstnivå som tilldelats användaren. Du kan också inte dela en privat samling.
 
 ## Redigera information om en samling {#edit-details-of-collection}
 
-Om du vill redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling klickar du på samlingens namn och sedan på ikonen ![info](assets/info-icon.svg) . [!UICONTROL Collection Details]-skärmen visas. Du kan redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling. Klicka på **[!UICONTROL Save Changes]** för att bekräfta ändringarna.
+Om du vill redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling klickar du på samlingens namn och sedan på ikonen ![info](assets/info-icon.svg) . [!UICONTROL Collection Details]-skärmen visas. Du kan redigera **[!UICONTROL Title]** och **[!UICONTROL Description]** för en samling. Klicka på **[!UICONTROL Save Changes]** för att bekräfta ändringarna. Du kan dessutom uppdatera åtkomsten till samlingen via dialogrutan Redigera samling, beroende på konfigurationen.
 
 ![samlingsinformation](assets/collection-details.png)
 
 ## Ta bort resurser från en samling{#remove-assets-from-a-collection}
 
-Du kan ta bort en eller flera resurser från en samling. Om du vill ta bort resurser från en samling klickar du på samlingen som du vill ta bort resurser från, markerar resurserna och klickar på **[!UICONTROL Remove from collection]**.
+Följande användare kan ta bort en eller flera resurser från en samling:
+
+* En administratör
+* En ägare till samlingen
+* En icke-admin-användare med redigeringsbehörighet
+
+Om du vill ta bort resurser från en samling klickar du på samlingen som du vill ta bort resurser från, markerar resurserna och klickar på **[!UICONTROL Remove from collection]**.
 
 ![Ta bort samling](assets/remove-collection-new.jpg)
 
@@ -193,7 +239,7 @@ De markerade resurserna har tagits bort från samlingen.
 
 ## Ta bort en samling{#delete-collection}
 
-Om du vill ta bort en samling går du till fliken **[!UICONTROL Collections]** och klickar på samlingen som du vill ta bort. Klicka på ikonen ![Ta bort](assets/remove-icon.svg) för att ta bort samlingen.
+Endast administratörer och skapare kan ta bort en samling. Om du vill ta bort en samling går du till fliken **[!UICONTROL Collections]** och klickar på samlingen som du vill ta bort. Klicka på ikonen ![Ta bort](assets/delete-icon.svg) för att ta bort samlingen.
 
 
 

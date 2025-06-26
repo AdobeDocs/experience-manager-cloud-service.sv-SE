@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: b12c650719ac6bcaed1e6181688e89df482132ad
+source-git-commit: fd45c1aadbbab7475becb94f9df27bbd5a1c165b
 workflow-type: tm+mt
-source-wordcount: '1989'
+source-wordcount: '1997'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,9 @@ Som administratör hanterar du följande konfigurationsalternativ för dina anv�
 
 * [Anpassade länkar](#configure-custom-links-content-hub)
 
-* [Samlingar och delning](#configure-collections-sharing-content-hub)
+* [Samlingar och delning](#configure-collections-content-hub)
+
+<!--* [Enable public link sharing](#enable-public-link-sharing)-->
 
 ### Importera {#configure-import-options-content-hub}
 
@@ -275,7 +277,7 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 ### Återgivningar {#renditions-content-hub}
 
-Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
 Gör så här:
 
@@ -311,21 +313,33 @@ Den anpassade länken visas som en ny flik bredvid fliken Insikter på Content H
 
 ![Anpassade länkar i konfigurationsgränssnittet på Content Hub](assets/configuration-ui-custom-link-tab.png)
 
-### Samlingar och delning {#configure-collections-sharing-content-hub}
+### Samlingar och delning {#configure-collections-content-hub}
 
-Administratörer kan definiera användarbehörigheter när de skapar samlingar och tillåta Content Hub-användare att skapa en offentlig länk. Så här aktiverar du de här inställningarna:
+Administratörer kan definiera användarbehörigheter när de skapar samlingar. Så här aktiverar du de här inställningarna:
 
-1. Klicka på **[!UICONTROL Collections and sharing]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på **[!UICONTROL Collections]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
 
-1. Aktivera växlingsknappen **[!UICONTROL Read Only Collections]** för att tillåta samlingar som är tillgängliga för alla men bara kan redigeras av skaparen och administratören.
+1. Aktivera växlingsknappen **[!UICONTROL Enable Public Link]** för att tillåta att offentliga länkar skapas som externa användare kan använda för att komma åt och hämta resurser utan att logga in på Content Hub.
 
-1. Aktivera växlingsknappen **[!UICONTROL Public Collections]** för att tillåta samlingar som är tillgängliga och redigerbara av alla.
+1. Aktivera växlingsknappen **[!UICONTROL View Only Collections]** för att tillåta samlingar som är tillgängliga för alla men bara kan redigeras av skaparen och administratören.
 
-1. Aktivera växlingsknappen **[!UICONTROL Enable Public Link]** om du vill att Content Hub-användare ska kunna skapa en offentlig länk.
+1. Aktivera växlingsknappen **[!UICONTROL Public Collections]** för att tillåta samlingar som är tillgängliga och redigerbara av alla. Om **[!UICONTROL View Only Collections]**- och **[!UICONTROL Public Collections]**-växlarna är inaktiverade kan icke-adminanvändare som standard bara skapa privata samlingar.
 
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
-   ![Fliken Konfigurationssamlingar i Content Hub](assets/collections-link-sharing.png)
+   ![Fliken Konfigurationssamlingar i Content Hub](assets/collections-and-sharing.png)
 
+<!--
+### Enable public link sharing {#enable-public-link-sharing}
 
-   Mer information om samlingar och delning av resurser finns i [Hantera samlingar i Content Hub](/help/assets/collections-content-hub.md) och [Dela resurser i [!DNL Content Hub]](share-assets-content-hub.md).
+Enable the following setting on the Configurations user interface to allow Content Hub users to generate a public link:
+
+1. On the [Configurations](#access-configuration-options-content-hub) user interface, click **[!UICONTROL Collections and Sharing]**.
+
+1. Enable the **[!UICONTROL Enable Public Link]** toggle and click **[!UICONTROL Save]** to apply the changes.
+
+    ![Enable public link sharing in Content Hub](assets/enable-public-link-sharing-tab.png)
+
+-->
+
+Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
