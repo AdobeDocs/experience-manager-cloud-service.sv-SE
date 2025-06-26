@@ -3,9 +3,9 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: be6c75dc12d80b252131e4e7369c1c5555432215
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1596'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,14 @@ I följande tabell sammanfattas tillgängliga Content Hub-användartyper, vilka 
 
 ## Steg 1: Aktivera Content Hub för Experience Manager Assets med Cloud Manager {#enable-content-hub}
 
-För att få tillgång till Content Hub-portalen måste administratörer först aktivera Content Hub för Experience Manager Assets as a Cloud Service med Cloud Manager. Utför följande steg:
+
+För att få tillgång till Content Hub-portalen måste administratörer först aktivera Content Hub för Experience Manager Assets as a Cloud Service med Cloud Manager.
+
+### Behörigheter {#permissions-edit-program}
+
+Du måste ha rollen Business Owner för att kunna redigera program i Cloud Manager. Mer information finns i [Redigera program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md).
+
+Så här aktiverar du Content Hub för Experience Manager Assets:
 
 1. Logga in på Cloud Manager. Se till att du väljer rätt organisation när du loggar in. Cloud Manager listar alla program.
 
@@ -262,4 +269,4 @@ Så här konfigurerar du Experience Manager Assets-användare:
 
    >[!NOTE]
    >
-   >Du behöver inte läggas till i [Content Hub-produktprofilen](#onboard-content-hub-users) för Experience Manager Assets-användare.
+   > Du behöver inte läggas till i [Content Hub-produktprofilen](#onboard-content-hub-users) för Experience Manager Assets-användare.
