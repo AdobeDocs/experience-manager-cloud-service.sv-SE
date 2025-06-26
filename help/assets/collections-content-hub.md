@@ -3,9 +3,9 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: fd45c1aadbbab7475becb94f9df27bbd5a1c165b
+source-git-commit: c98d5ba776f13549c4b82bdbe8f9220663ccb50e
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -13,40 +13,75 @@ ht-degree: 0%
 # Hantera samlingar i [!DNL Content Hub] {#manage-collections}
 
 <table>
+
     <tr>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
+
         </td>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
+
         </td>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
+
         </td>
+
         <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
+
         </td>
+
           <td>
+
             <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
+
         </td>
+
     </tr>
+
     <tr>
+
         <td>
+
             <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
+
         </td>
+
         <td>
+
             <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
+
         </td>
+
         <td>
+
             <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
+
         </td>
+
         <td>
+
             <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
+
         </td>
+
         <td>
+
             <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
+
         </td>
+
     </tr>
+
 </table>
 
 <!-- ![Manage collections](assets/manage-collections.jpg) -->
@@ -134,7 +169,7 @@ Med Content Hub kan du filtrera samlingsvyn för att enkelt hitta exakt det du s
 
 Om du vill filtrera vyn av samlingar går du till fliken **[!DNL Collections]** och navigerar till listrutan Samlingar. Välj bland följande alternativ:
 
-* **[!UICONTROL All Collections]:** Välj det här alternativet om du vill visa alla samlingar som är privata och som delas med dig.
+* **[!UICONTROL All Collections]:** Välj det här alternativet om du vill visa och redigera alla samlingar, inklusive de som är privata eller delade med dig.
 * **[!UICONTROL Only me]:** Välj det här alternativet om du vill visa samlingar som är tillgängliga för dig.
 * **[!UICONTROL Anyone can view]:** Med det här alternativet kan du filtrera samlingar som är tillgängliga för alla men bara kan redigeras av den som skapat dem.
 * **[!UICONTROL Anyone can edit]:** Välj det här alternativet om du vill filtrera samlingar som är tillgängliga och redigerbara av alla.
