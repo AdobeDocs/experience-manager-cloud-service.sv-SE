@@ -18,7 +18,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.5.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ Få tillgång till alla dina förinställda renderingar och smarta beskärningar
 
 **Dynamisk inbyggd medieintegrering med AJO B2C-&#x200B;**
 
-[Inbyggd integrering av Experience Manager (AEM) Dynamic Media med Journey Optimizer (AJO) B2C](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/aem-dynamic), vilket gör att marknadsförarna enkelt kan bädda in AEM Dynamic Media-resurser (återgivning och DM-mallar) i AJO-innehåll och leverera uppdateringar i realtid och personliga upplevelser i alla kanaler.
+[Inbyggd integrering av Experience Manager (AEM) Dynamic Media med Journey Optimizer (AJO) B2C](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/aem-dynamic), vilket gör att marknadsförarna enkelt kan bädda in AEM Dynamic Media-resurser (återgivning och DM-mallar) i AJO-innehåll och leverera uppdateringar i realtid och personliga upplevelser i alla kanaler.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457695/?learn=on&enablevpops=&autoplay=true)
 
@@ -256,7 +256,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -276,4 +276,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
