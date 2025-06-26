@@ -1,20 +1,18 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+title: Versionsinformation om 2025.5.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2025.5.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: ad23b8328f155ac56b4163ce90f3f0818e7e76c9
+source-git-commit: df16d5c7ee666f563cf4bbc861df4210318f7f36
 workflow-type: tm+mt
-source-wordcount: '1332'
+source-wordcount: '2108'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2025.5.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.5.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,37 +26,112 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.6.0) är 26 juni 2025. Nästa funktionsversion (2025.7.0) är planerad till 31 juli 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.5.0) är 5 juni 2025. Nästa version (2025.6.0) är planerad till 26 juni 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
-<!-- 
+## Släpp video {#release-video}
 
-## Release Video {#release-video}
+Titta på videon om versionsöversikten från maj 2025 om du vill se en sammanfattning av funktioner som lagts till i version 2025.5.0:
 
-Have a look at the February 2025 Release Overview video for a summary of the features added in the 2025.2.0 release:
-
->[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
-
--->
+>[!VIDEO](https://video.tv.adobe.com/v/3464307?quality=12)
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-**Förbättrad hantering av metadataformulär i Assets View**
+**AI-genererade metadata**
 
-Nu kan du importera metadataformulär från administrationsvyn direkt till Assets-vyn. Uppdateringar som görs i dessa formulär i Assets-vyn visas automatiskt i administrationsvyn, vilket ger en konsekvent upplevelse. Den här funktionen stöder en smidig övergång till den nya vyn i Assets samtidigt som kontinuiteten bibehålls i befintliga metadatakonfigurationer.
+AEM Assets använder nu [AI för att automatiskt generera metadata, inklusive titel, beskrivning och nyckelord](/help/assets/metadata-assets-view.md#ai-smart-tags). Dessa AI-genererade fält gör metadata mer korrekta, vilket gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll.
 
-![AI genererade metadata](/help/assets/assets/import-metadata-forms-page.png)
+![AI genererade metadata](/help/assets/assets/enhanced-smart-tags.png)
+
+**Integrering med Figma**
+
+AEM Assets kan integreras direkt med Figma, vilket ger designers möjlighet att direkt komma åt de mediefiler som lagras i AEM Assets inifrån Figma-användargränssnittet. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan i Figma och sedan spara nytt eller redigerat innehåll i AEM Assets-databasen. Klicka [här](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) om du vill få åtkomst till AEM Assets Connector på Figma Community-sidan.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3463828)
+
 
 ### Nya funktioner i Content Hub {#new-features-content-hub}
+
+**Attributbaserad åtkomstkontroll (ABAC)**
+
+[Content Hub tillåter nu att du tillämpar regelbaserade begränsningar för åtkomst av resurser](/help/assets/attribute-based-access-control.md). Tillgångsbehörigheter säkerställer styrning och ser också till att endast de relevanta resurserna är tillgängliga för användarna.
+
+Reglerna för resursbegränsning baseras på metadata och om villkoren som definieras i regeln matchar metadata för resursen visas resursen för användargrupperna.
+
+Några av fördelarna med attributbaserad åtkomstkontroll är:
+
+* Eliminerar beroendet av mappstrukturen för behörigheter
+
+* Tillåter administratörer att överföra resurser och retroaktivt fastställa behörighetsstrukturer
+
+* Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
+
+**Gränssnittsmärkning**
+
+Content Hub tillåter nu administratörer att [anpassa användargränssnittet med varumärkesspecifika element](/help/assets/configure-content-hub-ui-options.md##configure-branding-content-hub), inklusive banderollbilder, bannertitlar och brödtext samt primära och sekundära färger. Dessa förbättringar bidrar till att säkerställa ett enhetligt varumärke, förenkla användarnas introduktion och bygga upp förtroende.
+
+![Gränssnittsmärkning](/help/assets/assets/content-hub-ui-branding.png)
+
+**Delning av offentlig länk**
+
+Content Hub har nu stöd för [generering av delningsbara länkar så att externa användare](/help/assets/share-assets-content-hub.md##share-assets), utan programåtkomst, kan visa metadata för resurser eller hämta resurser.
+
+![Gränssnittsmärkning](/help/assets/assets/public-and-private-link.png)
 
 **Samlingsstyrning**
 
 I Content Hub kan du nu [styra åtkomsten till samlingar när du skapar, så att bara behöriga användare kan visa eller hantera grupperade resurser](/help/assets/collections-content-hub.md##create-collections). Det ger bättre säkerhet, bättre samarbete, organiserad resurshantering och förenklad styrning.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3463336)
+
+>[!NOTE]
+>
+>Samlingsstyrning är en begränsad tillgänglighetsfunktion. Du kan aktivera det genom att skapa en supportanmälan.
+
+**Hämta flera resurser som en ZIP**
+
+Nu kan du även [hämta de markerade resurserna och deras återgivningar i en ZIP-fil](/help/assets/download-assets-content-hub.md#download-asset-renditions) och inte som separata filer, vilket förenklar filhanteringen.
+
+**Dynamiska medierenderingar i Content Hub**
+
+Få tillgång till alla dina förinställda renderingar och smarta beskärningar för [Dynamic Media för hämtning, direkt från Content Hub användargränssnitt](/help/assets/download-assets-content-hub.md#download-asset-renditions).
+
+&#x200B;![Dynamiska medierenderingar](/help/assets/assets/dm-renditions-content-hub.png)
+
+### Nya funktioner i Dynamic Media {#new-features-dynamic-media}
+
+**Dynamisk inbyggd medieintegrering med AJO B2C-&#x200B;**
+
+[Inbyggd integrering av Experience Manager (AEM) Dynamic Media med Journey Optimizer (AJO) B2C](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/aem-dynamic), vilket gör att marknadsförarna enkelt kan bädda in AEM Dynamic Media-resurser (återgivning och DM-mallar) i AJO-innehåll och leverera uppdateringar i realtid och personliga upplevelser i alla kanaler.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3457695/?learn=on&enablevpops=&autoplay=true)
+
+## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
+
+### Funktioner för förhandsversioner
+
+* [Universell redigerare - Formulärfragment](/help/edge/docs/forms/universal-editor/creating-form-fragments.md): Nu kan du skapa och återanvända formulärfragment för adaptiv Forms med den universella redigeraren. Dessa fragment är återanvändbara formuläravsnitt (t.ex. kontaktuppgifter, tillståndsfält) som kan byggas en gång och tillämpas på flera formulär. Den här funktionen effektiviserar formulärframtagningen, säkerställer enhetlighet och förbättrar redigeringseffektiviteten.
+
+* [SharePoint-dokumentbibliotek - Spara bifogade filer med originalfilnamn](/help/forms/connect-forms-to-sharepoint-document-library.md#connect-an-adaptive-form-to-microsoft-sharepoint-document-library): Du kan nu välja att spara bifogade filer med sina ursprungliga filnamn när du lagrar dem i ett SharePoint-dokumentbibliotek. Den här förbättringen gör det enklare att identifiera och hantera överförda filer.
+
+* **Regelredigeraren**:
+   * [Binärt villkor med klickningshändelse i &quot;When&quot;-sats](/help/forms/rule-editor-core-components-events-operators.md#available-operator-types-and-events-in-rule-editor): Regelredigeraren tillåter nu att en knappklickningshändelse (_Är klickad_) kombineras med andra villkor i &quot;When&quot;-satsen. Detta ger mer exakt kontroll över regelkörningen baserat på användarinteraktion och andra faktorer. Obs! Om du använder flera villkor måste klickhändelsen vara det första villkoret som anges.
+   * [Valideringsvillkor för fält och paneler](/help/forms/rule-editor-core-components-usecases.md): Regelredigeraren innehåller nu villkoren _IsValid_ och _IsNotValid_ . Med dessa kan du kontrollera valideringsstatusen för specifika fält eller hela paneler (inklusive layouter som Vågräta flikar, Lodräta flikar, Dragspel och Guider), vilket underlättar formulärnavigering och användarupplevelse baserat på valideringsresultat.
+* [Förbättrad scopehantering för SharePoint-listor](/help/forms/connect-forms-to-sharepoint-list.md): SharePoint-webbplatser har nu stöd för alla hanterade sökvägar, till exempel /sites och /teams. Den här förbättringen möjliggör en bredare integrering över olika SharePoint webbplatsstrukturer, vilket ger större flexibilitet när det gäller att ansluta till organisationsinnehåll.
+* [Stöd för att spara postdokument i SharePoint-lista](/help/forms/generate-document-of-record-core-components.md#bind-adaptive-form-components-with-template-fields): Forms som har skapats med en SharePoint listbaserad formulärdatamodell (FDM) kan nu spara postdokumentet (DoR) i SharePoint-listor genom att konfigurera fältegenskapen Dokumentreferens för postbindning. Den här förbättringen möjliggör smidig integrering av formulärdata och dokument som stöds med SharePoint-lagring.
+
+### Tidiga åtkomstfunktioner i AEM Forms {#forms-new-early-access-features}
+
+Programmet AEM Forms Early Access Program ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna och hjälper dig att utveckla dem.
+
+Den här versionsinformationen innehåller en lista över de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
+
+#### Adobe Experience Platform (AEP)-integrering med Forms
+
+Integreringsfunktioner mellan Forms och AEP finns nu tillgängliga för användare som är tidiga.
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
@@ -112,7 +185,7 @@ Obs! Körningsversionen är en annan än den version koden har. Vi rekommenderar
 
 Som framgår av versionsinformationen för april måste AEM Java-loggarna följa ett standardformat för att säkerställa tillförlitlig övervakning i alla kundmiljöer. Anpassade loggkonfigurationer, t.ex. ändringar i loggformatering, utdatafiler eller standardloggnivåer, stöds inte längre. Loggar måste vara dirigerade till standardfilerna och standardloggnivåerna för AEM-produktkoden måste bevaras. Mer information finns i artikeln [Loggning](/help/implementing/developing/introduction/logging.md#configuration-loggers).
 
-Med början i **slutet av augusti** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
+Med början i **slutet av augusti** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe kommer att kontakta kunder vars nuvarande konfiguration kan påverkas direkt.
 
 Granska och uppdatera alla processer som är beroende av anpassat loggningsbeteende. Till exempel:
 
@@ -123,7 +196,7 @@ Granska och uppdatera alla processer som är beroende av anpassat loggningsbetee
 
 För närvarande har innehållsversioner och granskningsloggar associerade *rensningsunderhållsaktiviteter* inaktiverats som standard och inga data tas bort om de inte uttryckligen konfigureras.
 
-Om du vill optimera databasprestanda från och med **början av juli 2025** aktiveras rensning som standard enligt följande riktlinjer:
+Om du vill optimera databasprestanda från och med **slutet av juni 2025** aktiveras rensning som standard enligt följande riktlinjer:
 
 #### Innehållsversioner {#mt-content}
 
