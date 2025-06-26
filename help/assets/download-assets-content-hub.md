@@ -3,7 +3,7 @@ title: Hämta resurser från Content Hub
 description: Lär dig hur du hämtar en eller flera resurser och deras återgivningar från Content Hub-portalen.
 role: User
 exl-id: 96d4ffba-4e3e-4496-9da2-6eb36be8331f
-source-git-commit: 809c0e780959340964933b13c8a347157f1dc17e
+source-git-commit: 9636fbf2ca78f001e08ef281f3d7ea3bfc212387
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 0%
@@ -82,8 +82,8 @@ Om dialogrutan **[!UICONTROL Download assets]** visar resurslicenser väljer du 
 
    >[!NOTE]
    >
-   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [[!UICONTROL [Configuration]]](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub).
-   >* De användare som har åtkomst till [[!DNL [Dynamic Media with Open API capabilities]]](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsåtergivningar.
+   >* Återgivningarna visas bara om deras synlighet har aktiverats med användargränssnittet [[!UICONTROL Configuration]](/help/assets/configure-content-hub-ui-options.md#renditions-content-hub).
+   >* De användare som har åtkomst till [[!DNL Dynamic Media with Open API capabilities]](/help/assets/dynamic-media-open-apis-overview.md) kan visa och hämta dynamiska och smarta beskärningsåtergivningar.
    >* Förhandsgranskningen av licensen visas bara om resursen har godkänts med [!DNL Assets as a Cloud Service]-redigeringsmiljön. Mer information finns i [Hantera licensierade mediefiler på Content Hub](/help/assets/manage-licensed-assets-on-content-hub.md).
 
 <!--
@@ -179,7 +179,7 @@ Läs mer om att [visa och hantera återgivningar i [!DNL Experience Manager Asse
 
 * [Dynamiska återgivningar](/help/assets/renditions.md#dynamic-renditions): Dynamiska återgivningar är anpassade versioner av resurser i realtid som utför olika åtgärder, till exempel att ändra storlek på bilder för olika enhetsupplösningar eller beskära för att passa olika proportioner. Med dessa renderingar kan ni erbjuda personaliserade och optimerade upplevelser för större behov. Dynamiska återgivningar av resurser skapas i [!DNL Adobe Experience Manager Assets]-redigeringsmiljön. Mer information om steg som krävs för att aktivera dynamiska renderingar finns i [Aktivera dynamiska renderingar](#enable-dynamic-media-renditions).
 
-* [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic Media Smart crop utnyttjar artificiell intelligens från Adobe Sensei för att spåra intressepunkten och säkerställa att våra resurser ser så bra ut som möjligt på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
+* [Smart beskärning](/help/assets/dynamic-media/image-profiles.md#creating-image-profiles): Den smarta beskärningen fokuserar enbart på den viktigaste delen av en resurs under beskärningsprocessen. Dynamic Media Smart crop utnyttjar artificiell intelligens från Adobe Sensei för att spåra intressepunkten och säkerställa att våra resurser ser så bra ut som möjligt på alla skärmstorlekar. [!DNL Adobe Experience Manager] smart beskärning visar bredden och höjden på en resursåtergivning tillsammans med titeln. Mer information finns på [med SmartCrop med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
 
   Smart Crop-renderingar visas och är bara tillgängliga för hämtning om du har tillgång till [Dynamic Media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md). Återgivningar för smart beskärning är bara tillgängliga för bildresurser.
 
