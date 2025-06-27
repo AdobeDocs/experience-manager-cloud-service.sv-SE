@@ -61,7 +61,7 @@ Kontrollera att du har administratörsbehörighet för att importera metadatafor
 
 Som administratör ska du utföra följande steg för att importera metadataformulär som är tillgängliga i [!DNL Admin View] till [!DNL Assets View]:
 
-1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL  Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
+1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL &#x200B; Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
 
    ![sida med metadataformulär](/help/assets/assets/metadata-forms-page.png)
 
@@ -83,6 +83,7 @@ Som administratör ska du utföra följande steg för att importera metadataform
 
    * Klicka på kolumnrubriken om du vill sortera tabellen efter [!UICONTROL Name], [!UICONTROL Modified] eller [!UICONTROL Author].
    * Markera det importerade formuläret, klicka på **[!UICONTROL Remove from folder(s)]** och kontrollera sedan mappnamnet i mappsökvägen för att bekräfta att mappen är korrekt porterad.
+
      ![verifiera sidan med metadataformulär](/help/assets/assets/confirm-ported-folder.png)
    * Markera det importerade formuläret och klicka på **[!UICONTROL Edit]** för att visa alla konfigurationer som stöds av metadataformuläret. Mer information om metadataformulär, deras komponenter och fält finns i [Konfigurera metadata-Forms](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/metadata#metadata-forms).
 
