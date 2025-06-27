@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 23ee3857bb0440ba9f386002b859217d0b5f8f37
+source-git-commit: fddd57877f2e4e98f0b89b496eedc25ce741d8f1
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
@@ -101,3 +101,4 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | Uteslut Commerce integration framework-samtal | Exkluderad | Begäranden som skickas till AEM som vidarebefordras till Commerce integration framework - URL:en börjar med `/api/graphql` - för att undvika dubbelräkning kan de inte debiteras för Cloud Service. |
 | Uteslut `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på en dator eller mobiltelefon. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
 | Uteslut `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON har vissa scenarier, som SAML-autentiseringsflöden, observerats returnera favoritikoner som HTML. Därför exkluderas favoritikoner uttryckligen från antalet. |
+| Experience Fragment (XF) - Återanvändning i samma domän | Exkluderad | Begäranden som gjorts för XF-sökvägar (till exempel `/content/experience-fragments/...`) från sidor som finns på samma domän (som identifieras av referensrubriken som matchar begärandevärden).<br><br> Exempel: En hemsida på `aem.customer.com` som drar in en XF-fil för en banderoll eller ett kort från samma domän.<br><br> ・ URL matchar /content/experience-fragments/..<br> ・ referensdomänen matchar `request_x_forwarded_host`<br><br>**Obs!** Om Experience Fragment-sökvägen är anpassad (till exempel med `/XFrags/...` eller någon sökväg utanför `/content/experience-fragments/`), kommer begäran inte att uteslutas och kan räknas, även om den är samma domän. Vi rekommenderar att Adobe standardstruktur för XF-sökväg används för att säkerställa att exkluderingslogiken tillämpas korrekt. |
