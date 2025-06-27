@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.05.21
-description: Detta är versionsinformationen för version 2025.05.21 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.06.19
+description: Detta är versionsinformationen för version 2025.06.19 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 40f3f4652dbfce9bda65b8e69c349b9a8a563469
+source-git-commit: 5ffae9e548ca952975b3ea805808e227102ec99f
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.05.21 {#release-notes}
+# Versionsinformation om Universal Editor 2025.06.19 {#release-notes}
 
-Det här är versionsinformationen för den 21 maj 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 19 juni 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,11 +22,29 @@ Det här är versionsinformationen för den 21 maj 2025-versionen av Universal E
 
 ## Nyheter {#what-is-new}
 
-* **Inaktivera knappen för att öppna sidan** - Knappen för att öppna sidan [ kan nu inaktiveras.](/help/implementing/universal-editor/customizing.md#open-page)
-* **Åtkomst till egenskaper från innehållsträdet** - [När du dubbelklickar på en post i innehållsträdet ](/help/sites-cloud/authoring/universal-editor/navigation.md) öppnas de associerade egenskaperna automatiskt på sidopanelen.
+* **Stöd för flera fält i egenskapsfältet** -
+  [Behållarkomponenten](/help/implementing/universal-editor/field-types.md#container) kan nu användas för att skapa egenskaper för flera fält.
+* **Stöd för kapslade egenskaper** - Fältet [`name` ](/help/implementing/universal-editor/field-types.md#nesting) har nu stöd för sökvägar för att aktivera egenskapsinkapsling.
+* **Justerbar högerpanel** - Sidpanelen kan nu storleksändras för att bättre ta hänsyn till längre innehåll som visas på sidpanelen.
+
+## Funktioner för tidig användning {#early-adopter}
+
+Om du vill testa några av de kommande funktionerna är du med i Adobe tidiga app-program.
+
+### **Ångra/Gör om** {#undo-redo}
+
+Ångra och gör om är nu tillgängligt för innehållsförfattare i Universal Editor.
+
+* Detta inkluderar redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt tillägg (eller duplicering), flytt och borttagning av block.
+* Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
+
+Om du är intresserad av att testa den nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till Adobe Customer Success Manager från den e-postadress som är kopplad till din Adobe ID.
 
 ## Andra förbättringar {#other-improvements}
 
-* Referenser som redan är publicerade är nu omarkerade som standard i dialogrutan Publicera för att förhindra att de publiceras igen.
-* Inläsningen av tillägg har förbättrats.
-* Undantag som genereras av tillägg hanteras nu bättre för att inte påverka redigeraren.
+* Kollisionsfel för resursnyckel när block flyttas mellan behållare har åtgärdats.
+* Ett problem som gjorde att dupliceringen av det sista blocket i en behållare misslyckades har åtgärdats.
+* Listrutan Lägg till åtgärd visar nu bara komponenter som har ett lämpligt plugin-program definierat i filen `component-definition.json`.
+* Det ändringsdatum som användes i publiceringsdialogrutan har korrigerats där sidorna i vissa fall inte kändes igen som ändrade och inte publicerades om.
+* Ett MSM-arvsbeteende som innebar att redigering av en behållare avbröts för arv av underordnade noder har åtgärdats.
+* `fetchUrl` har korrigerats och flyttblock återställs från en behållare till en annan.

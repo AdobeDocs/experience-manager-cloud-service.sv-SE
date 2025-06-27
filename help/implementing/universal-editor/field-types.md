@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 9327bc51ba170971bde8ce8e338c9a42ac5cbe82
+source-git-commit: 584dba3fb28c54d19d8a4162a3879ff30f7fe352
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1542'
 ht-degree: 1%
 
 ---
@@ -91,7 +91,7 @@ Ett fältobjekt har följande typdefinition.
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
 | `component` | `ComponentType` | Återgivning av komponenten | Ja |
-| `name` | `string` | Egenskap där uppgifterna ska sparas | Ja |
+| `name` | `string` | Egenskap [eller sökväg](#nesting) där data ska sparas | Ja |
 | `label` | `FieldLabel` | Fältets etikett | Ja |
 | `description` | `FieldDescription` | Beskrivning av fältet | Nej |
 | `placeholder` | `string` | Platshållare för fältet | Nej |
@@ -104,6 +104,14 @@ Ett fältobjekt har följande typdefinition.
 | `multi` | `boolean` | Är fältet ett flerfält | Nej |
 | `validation` | `ValidationType` | Valideringsregel eller -regler för fältet | Nej |
 | `raw` | `unknown` | Raw-data som kan användas av komponenten | Nej |
+
+### namnfält och kapsling {#nesting}
+
+Fältet `name` kan peka direkt på en egenskap för den aktuella resursen eller, när det gäller komponenter i `cq:Pages`, också använda en sökväg till en kapslad egenskap. Till exempel:
+
+```json
+"name": "teaser/image/fileReference"
+```
 
 ### Komponenttyper {#component-types}
 
@@ -281,7 +289,7 @@ På samma sätt som för ett booleskt värde kan en kryssrutegruppskomponenttyp 
 
 #### Behållare {#container}
 
-En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en extra konfiguration.
+En behållarkomponenttyp tillåter gruppering av komponenter inklusive stöd för flera fält. Den erbjuder en extra konfiguration.
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|
@@ -324,7 +332,36 @@ En behållarkomponenttyp tillåter gruppering av komponenter. Den erbjuder en ex
 
 ![Skärmbild av behållarkomponenttyp](assets/component-types/container.png)
 
+>[!TAB Stöd för flera fält]
+
+```json
+{
+  "component": "container",
+  "name": "test",
+  "label": "Multi Text",
+  "multi": true,
+  "fields": [
+    {
+      "component": "reference",
+      "name": "image",
+      "value": "",
+      "label": "Sample Image",
+      "valueType": "string"
+    },
+    {
+      "component": "text",
+      "name": "alt",
+      "value": "",
+      "label": "Alt Text",
+      "valueType": "string"
+    }
+  ]
+}
+```
+
 >[!ENDTABS]
+
+
 
 #### Innehållsfragment {#content-fragment}
 
