@@ -1,18 +1,18 @@
 ---
-title: Importera  [!DNL Admin View] metadataformulär till [!DNL Assets View]
-description: I den här artikeln beskrivs hur du importerar metadataformuläret som finns i  [!DNL Admin View] till [!DNL Assets View]
+title: Importera metadataformulär från [!DNL Admin View] till [!DNL Assets View]
+description: I den här artikeln beskrivs hur du importerar metadataformuläret från [!DNL Admin View] till [!DNL Assets View]
 contentOwner: AG
 feature: Metadata
 role: User, Admin
 exl-id: 5fb4fe97-486a-4a91-af60-a7182efcc2f9
-source-git-commit: 5c279f4a02f0d981e1ab9a0f32f60f76fb1418dd
+source-git-commit: fdd74e4d9b74600fd462e951046abfb1bb8e203b
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
 
-# Importera [!DNL Admin View] metadataformulär till [!DNL Assets View] {#import-admin-view-metadata-forms-to-assets-view}
+# Importera metadata från [!DNL Admin View] till [!DNL Assets View] {#import-metadata-forms-from-admin-view-to-assets-view}
 
 <table>
     <tr>
@@ -61,7 +61,7 @@ Kontrollera att du har administratörsbehörighet för att importera metadatafor
 
 Som administratör ska du utföra följande steg för att importera metadataformulär som är tillgängliga i [!DNL Admin View] till [!DNL Assets View]:
 
-1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL &#x200B; Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
+1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL  Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
 
    ![sida med metadataformulär](/help/assets/assets/metadata-forms-page.png)
 
@@ -83,9 +83,8 @@ Som administratör ska du utföra följande steg för att importera metadataform
 
    * Klicka på kolumnrubriken om du vill sortera tabellen efter [!UICONTROL Name], [!UICONTROL Modified] eller [!UICONTROL Author].
    * Markera det importerade formuläret, klicka på **[!UICONTROL Remove from folder(s)]** och kontrollera sedan mappnamnet i mappsökvägen för att bekräfta att mappen är korrekt porterad.
-
      ![verifiera sidan med metadataformulär](/help/assets/assets/confirm-ported-folder.png)
-   * Markera det importerade formuläret och klicka på **[!UICONTROL Edit]** för att visa alla konfigurationer som stöds av metadataformuläret. Mer information om metadataformulär, deras komponenter och fält finns i [Konfigurera metadata-Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/metadata#metadata-forms).
+   * Markera det importerade formuläret och klicka på **[!UICONTROL Edit]** för att visa alla konfigurationer som stöds av metadataformuläret. Mer information om metadataformulär, deras komponenter och fält finns i [Konfigurera metadata-Forms](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/metadata#metadata-forms).
 
    ![verifiera sidan med metadataformulär](/help/assets/assets/verify-metadata-forms-page.png)
 
@@ -94,8 +93,8 @@ Som administratör ska du utföra följande steg för att importera metadataform
 När du har importerat metadataformulär från [!DNL Admin View] till [!DNL Assets View] följer du de här stegen för att verifiera importen:
 
 1. Navigera till någon av de associerade mapparna i det importerade metadataformuläret.
-1. Navigera till informationssidan för en [resurs](/help/assets/navigate-assets-view.md#preview-assets) och verifiera att de metadatakomponenter, komponentfält och fältvärden som stöds synkroniseras från [!DNL Admin View]. Mer information om metadatakomponenter, komponentfält och fältvärden finns i artikeln [Metadata i Resurser Essentials](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/metadata) .
+1. Navigera till informationssidan för en [resurs](/help/assets/navigate-assets-view.md#preview-assets) och verifiera att de metadatakomponenter, komponentfält och fältvärden som stöds synkroniseras från [!DNL Admin View]. Mer information om metadatakomponenter, komponentfält och fältvärden finns i artikeln [Metadata i Resurser Essentials](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/metadata) .
 
    >[!NOTE]
    >
-   > I [[!DNL Assets View] informationssidan](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/metadata-assets-view#metadata-forms) eller egenskapssidan [[!DNL Admin View] ](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/administer/metadata-schemas) synkroniseras ändringar av egenskapsvärden för metadata automatiskt mellan de två gränssnitten. Strukturella ändringar i formuläret, som att lägga till eller ta bort fält eller andra ändringar, synkroniseras inte.
+   > I [[!DNL Assets View] informationssidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/metadata-assets-view#metadata-forms) eller egenskapssidan [[!DNL Admin View] ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/metadata-schemas) synkroniseras ändringar av egenskapsvärden för metadata automatiskt mellan de två gränssnitten. Strukturella ändringar i formuläret, som att lägga till eller ta bort fält eller andra ändringar, synkroniseras inte.
