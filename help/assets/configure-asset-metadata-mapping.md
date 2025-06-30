@@ -91,6 +91,7 @@ Så här konfigurerar du metadatamappning med ett nytt metadataformulär i Exper
    1. Ange `Project Name` i fältet **[!UICONTROL Field Label]**.
 
    1. Ange `./jcr:content/metadata/wm:projectName` i fältet **[!UICONTROL Map to property]**. Som vägledning kan du använda följande mall för att definiera fältmappningar i Experience Manager Assets:
+
       `./jcr:content/metadata/<mapping defined for the field in workfront>`.
 
       När du konfigurerade mappningar i Workfront mappades `wm:projectName` Experience Manager Assets-fält till Project > Name Workfront-fält.

@@ -1063,10 +1063,10 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervyn](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* **![listvy](assets/do-not-localize/list-view.png) [!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* **![stödrastervyn](assets/do-not-localize/grid-view.png) [!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 <!--
 ### Modes to view Asset Selector

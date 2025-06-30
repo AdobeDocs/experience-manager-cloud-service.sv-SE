@@ -34,6 +34,7 @@ Stöd för fjärrresurser med Dynamic Media med OpenAPI-funktioner kräver:
 * Ställ in följande [miljövariabler](/help/implementing/cloud-manager/environment-variables.md#add-variables) för AEM as a Cloud Service:
 
    * ASSET_DELIVERY_REPOSITORY_ID= &quot;delivery-pxxx-eyyyyy.adobeaemcloud.com&quot; <br>
+
      `pXXXX` refererar till program-ID <br>
      `eYYYY` refererar till miljö-ID
 
@@ -90,7 +91,7 @@ Med Dynamic Media med OpenAPI-funktioner kan du komma åt resurser som finns i d
 Följ stegen nedan för att använda fjärrresurser i AEM Page Editor på din AEM Sites-instans. Du kan göra detta genom att integrera AEM as a Cloud Service och AEM 6.5.
 
 1. Gå till **[!UICONTROL Sites]** > _din webbplats_ där AEM **[!UICONTROL Page]** finns där du måste lägga till fjärrresursen.
-1. Markera sidan och klicka på **[!UICONTROL Edit (_e _)]**. AEM **[!UICONTROL Page Editor]**öppnas.
+1. Markera sidan och klicka på **[!UICONTROL Edit (_e _)]**. AEM **[!UICONTROL Page Editor]**&#x200B;öppnas.
 1. Klicka på layoutbehållaren och lägg till en **[!UICONTROL Image]**-komponent.
 1. Klicka på komponenten **[!UICONTROL Image]** och klicka på ikonen ![settings](/help/assets/assets/do-not-localize/settings-icon.svg) .
 1. Avmarkera alternativet **[!UICONTROL Inherit featured image from page]**.

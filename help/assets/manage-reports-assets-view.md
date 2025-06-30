@@ -50,6 +50,7 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
    1. **Beskrivning:** Lägg till en valfri beskrivning i rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera rapporten med överförda och hämtade resurser i den specifika mappen. Om du till exempel behöver rapporten med resurser som överförts till en mapp anger du sökvägen till den mappen.
    1. **Välj datumintervall:** Välj datumintervall för att visa överförings- eller hämtningsaktiviteten i mappen.
+
    <br>
 
    >[!NOTE]
@@ -202,6 +203,7 @@ Följ stegen nedan för att schemalägga en rapport:
    1. **Beskrivning**: Lägg till en valfri beskrivning till rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera en rapport för resurser som ska överföras till eller hämtas från den aktuella mappen i framtiden.
    1. Växla **Schemarapport:** Växla för att schemalägga rapporten senare eller för dess upprepade förekomst.
+
       ![schemarapport](/help/assets/assets/schedule-reports1.svg)
 
    1. **Välj frekvens:** Ange intervallet för att generera rapporten (till exempel dagligen, veckovis, månadsvis, årsvis eller en gång) och ange datum och tid för att köra rapporten tillsammans med slutdatumet för upprepning. För en engångsrapport väljer du datumintervall för rapporten om den valda aktivitetstypen i AEM-miljön. Om du till exempel behöver en rapport om hämtade resurser från den 10 till den 29 (framtida datum) för en viss månad, väljer du dessa datum i fältet **Välj datumintervall**.

@@ -32,8 +32,8 @@ Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen
 >[!NOTE]
 >
 >Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
->>Assets bör publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
->> För [!DNL Experience Manager Assets] som [!DNL Cloud Service] är överföringshastigheten som observeras under labbvillkoret 1 000 resurser per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
+>&#x200B;>Assets bör publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
+>&#x200B;> För [!DNL Experience Manager Assets] som [!DNL Cloud Service] är överföringshastigheten som observeras under labbvillkoret 1 000 resurser per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
 
 ## Publicera material i Brand Portal {#publish-assets-to-bp}
 
@@ -93,12 +93,12 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 >
 > * De befintliga användarna i gruppen DAM-Users har läsåtkomst på sökvägen &quot;/conf/global/settings/cloudconfigs/mediaportal&quot;
 > * Nya användare (eller icke-adminanvändare) behöver följande rättigheter för att publicera på varumärkesportalen.
->   > Banor:
->   > `"/conf/global/settings/cloudconfigs/mediaportal" : jcr:read `
->   >`/libs : jcr:read`
->   >`/conf : jcr:read`
->   >`/content : jcr:read, crx:replicate`
->   >`/content/dam/ : jcr:read,modify, crx:replicate`
+>   &#x200B;> Banor:
+>   &#x200B;> `"/conf/global/settings/cloudconfigs/mediaportal" : jcr:read `
+>   &#x200B;>`/libs : jcr:read`
+>   &#x200B;>`/conf : jcr:read`
+>   &#x200B;>`/content : jcr:read, crx:replicate`
+>   &#x200B;>`/content/dam/ : jcr:read,modify, crx:replicate`
 
 ## Publicera mappar i Brand Portal {#publish-folders-to-brand-portal}
 
