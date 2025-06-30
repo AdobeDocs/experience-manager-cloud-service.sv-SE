@@ -47,7 +47,7 @@ Det inbyggda visningsprogrammet för PDF Doc Cloud har följande komponenter i A
 
 Med Adobe Experience Manager Assets kan du förhandsgranska PDF-dokument som består av flera sidor. Så här förhandsgranskar du flera sidor i ett PDF-dokument:
 
-1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=en).
+1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=sv-SE).
 1. Bläddra i det PDF-dokument som du vill ladda upp och förhandsgranska.
 1. Öppna dokumentet.
 1. PDF dokumentvisningsprogram läses in som standard. Du kan också välja PDF-återgivning på panelen Återgivning.
@@ -126,7 +126,7 @@ Förutom PDF-dokumenten kan du även förhandsgranska flera sidor för dokument 
 
 Utför följande steg för att förhandsgranska flera sidor i andra dokumentformat som stöds:
 
-1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=en).
+1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=sv-SE).
 1. Bläddra i dokumentet som du vill överföra och förhandsgranska.
 1. Öppna dokumentet.
 1. Välj PDF under det statiska avsnittet på den vänstra panelen. Den högra panelen visar förhandsgranskningen av en resurs på flera sidor. Välj en miniatyrbild i den vänstra panelen för att välja den sida som du vill förhandsgranska.

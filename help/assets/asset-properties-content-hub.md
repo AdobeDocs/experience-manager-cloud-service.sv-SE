@@ -105,7 +105,7 @@ Vissa egenskaper för resurser som visas i [!DNL Content Hub] härleds, eller ge
 
 * **Smarta taggar:** [!DNL The Content Hub] använder Adobe Sensei smarta innehållstjänster för att utbilda resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL Experience Manager Assets] använder smarta taggar automatiskt på resurser som standard.
 
-* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
+* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=sv-SE) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
 
 * Överföringsdatum
 

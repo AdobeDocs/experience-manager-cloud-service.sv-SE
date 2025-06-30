@@ -18,7 +18,7 @@ ht-degree: 12%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 I stora företag kan den infrastruktur som krävs för att skapa webbplatser vara distribuerad. Ibland kan funktionerna för att skapa webbplatser och de digitala resurser som används för att skapa webbplatserna finnas i olika distributioner. En orsak kan vara att befintliga distributioner som krävs för att fungera tillsammans distribueras geografiskt. En annan orsak kan vara förvärv som leder till heterogen infrastruktur, inklusive olika [!DNL Experience Manager]-versioner, som huvudföretaget vill använda tillsammans.
@@ -44,7 +44,7 @@ För författarna till [!DNL Sites] är fjärrresurserna tillgängliga som skriv
 Innan du använder eller konfigurerar den här funktionen bör du kontrollera följande:
 
 * Användarna ingår i rätt användargrupper för varje distribution.
-* Ett av villkoren som stöds är uppfyllt för [!DNL Adobe Experience Manager]-distributionstyper. [!DNL Experience Manager] as a Cloud Service [!DNL Assets] fungerar med [!DNL Experience Manager] 6.5. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] 6.5 finns i [Ansluten Assets i [!DNL Experience Manager] 6.5 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html).
+* Ett av villkoren som stöds är uppfyllt för [!DNL Adobe Experience Manager]-distributionstyper. [!DNL Experience Manager] as a Cloud Service [!DNL Assets] fungerar med [!DNL Experience Manager] 6.5. Mer information om hur den här funktionen fungerar i [!DNL Experience Manager] 6.5 finns i [Ansluten Assets i [!DNL Experience Manager] 6.5 [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html?lang=sv-SE).
 
   | | [!DNL Sites] som en [!DNL Cloud Service] | [!DNL Experience Manager] 6.5 [!DNL Sites] på AMS | [!DNL Experience Manager] 6.5 [!DNL Sites] lokalt |
   |---|---|---|---|
@@ -134,7 +134,7 @@ Följ de här stegen för att konfigurera anslutningsmöjligheter för anslutna 
    >
    >Alla återgivningar som är tillgängliga på fjärrdistributionen hämtas när författare hämtar en resurs. Om du vill skapa fler återgivningar av en hämtad resurs hoppar du över det här konfigurationssteget. Arbetsflödet [!UICONTROL DAM Update Asset] aktiveras och skapar fler återgivningar. Dessa återgivningar är bara tillgängliga på den lokala distributionen av [!DNL Sites] och inte på den fjärranslutna DAM-distributionen.
 
-1. Lägg till distributionen [!DNL Sites] som ett tillåtet ursprung i CORS-konfigurationen i distributionen [!DNL Assets]. Mer information finns i [förstå CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
+1. Lägg till distributionen [!DNL Sites] som ett tillåtet ursprung i CORS-konfigurationen i distributionen [!DNL Assets]. Mer information finns i [förstå CORS](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=sv-SE).
 
 1. Konfigurera [stöd för samma webbplats-cookie](/help/security/same-site-cookie-support.md).
 
@@ -173,7 +173,7 @@ Så här konfigurerar du [!DNL Dynamic Media] för [!DNL Assets]- och [!DNL Site
    * På lokal [!DNL Sites] väljer du **[!UICONTROL Selective Publish]** i alternativet **[!UICONTROL Publish Assets]**. Välj inte **[!UICONTROL Sync All Content]**.
    * På fjärrdistribution av [!DNL Assets] i [!UICONTROL Dynamic Media sync mode] väljer du **[!UICONTROL Enabled by default]**.
 
-1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html#dynamic-media). Med den här funktionen aktiveras [Image-komponenten](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html) som standard för att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor i lokal [!DNL Sites]-distribution.
+1. Aktivera [[!DNL Dynamic Media] stöd i Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE#dynamic-media). Med den här funktionen aktiveras [Image-komponenten](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html) som standard för att visa [!DNL Dynamic Media] bilder när [!DNL Dynamic Media] bilder används av författare på webbsidor i lokal [!DNL Sites]-distribution.
 
 ## Använd fjärrresurser {#use-remote-assets}
 
@@ -322,7 +322,7 @@ Du kan lägga till resurser i distributionen [!DNL Sites], men dessa resurser ka
 * Konfigurera [Assets Insight](/help/assets/assets-insights.md)-funktionen för instansen [!DNL Sites] om du vill få information om resursanvändning.
 * Användning av sökvägsläsare i redigeringskomponenter stöds inte i anslutna resurser.
 
-* Du kan inte dra fjärrresursen till dialogrutan [Konfigurera bildkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=en#configure-dialog). Du kan dock dra fjärrresursen direkt till bildkomponenten på sidan Platser utan att klicka på **[!UICONTROL Configure]**.
+* Du kan inte dra fjärrresursen till dialogrutan [Konfigurera bildkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE#configure-dialog). Du kan dock dra fjärrresursen direkt till bildkomponenten på sidan Platser utan att klicka på **[!UICONTROL Configure]**.
 
 ### Tillstånd och resurshantering {#permissions-and-managing-assets}
 

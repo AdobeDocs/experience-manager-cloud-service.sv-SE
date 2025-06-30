@@ -62,7 +62,7 @@ Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services 
 
 ## Integrering med Adobe Journey Optimizer {#integration-with-ajo}
 
-[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar kundens resehantering genom att tillhandahålla flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service-databasen direkt från Journey Optimizer-gränssnittet. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html).
+[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar kundens resehantering genom att tillhandahålla flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service-databasen direkt från Journey Optimizer-gränssnittet. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html?lang=sv-SE).
 
 ## Nya Assets-funktioner {#whats-new-assets}
 

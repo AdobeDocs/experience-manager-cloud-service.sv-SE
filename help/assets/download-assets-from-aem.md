@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/download-assets-from-aem.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/download-assets-from-aem.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. <!-- The compressed ZIP file has a maximum file size of 1 GB for the export job. A maximum of 500 total assets per export job are allowed. -->
@@ -35,8 +35,8 @@ Du kan hämta resurser från Experience Manager på följande sätt:
 
 * [Experience Manager användargränssnitt](#download-assets)
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
-* [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
+* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html?lang=sv-SE)
+* [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#download-assets)
 
 ## Hämta resurser med gränssnittet [!DNL Experience Manager] {#download-assets}
 
@@ -55,7 +55,7 @@ Asynkrona nedladdningar aktiveras i följande fall:
 * Om hämtningsstorleken är större än 100 MB
 * Om nedladdningen tar mer än 30 sekunder att förbereda
 
-Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Förutom Experience Manager inkorgsmeddelanden kan Experience Manager skicka e-post för att meddela användaren när nedladdningen är klar. Om du vill aktivera den här funktionen kan administratörerna konfigurera e-posttjänsten genom att [konfigurera en SMTP-serveranslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Förutom Experience Manager inkorgsmeddelanden kan Experience Manager skicka e-post för att meddela användaren när nedladdningen är klar. Om du vill aktivera den här funktionen kan administratörerna konfigurera e-posttjänsten genom att [konfigurera en SMTP-serveranslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email).
 
 När e-posttjänsten har konfigurerats kan administratörer och användare aktivera e-postmeddelanden från Experience Manager-gränssnittet.
 
@@ -128,7 +128,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att förhindra DoS-liknande risker. `Asset Download Servlet` kan inaktiveras på en [!DNL Experience Manager]-författare och publicera instanser genom att uppdatera dispatcherkonfigurationen för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
-1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du konfigurationen `dispatcher.any` och lägger till en ny regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring).
+1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du konfigurationen `dispatcher.any` och lägger till en ny regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring).
 
    `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
@@ -139,7 +139,7 @@ Om du vill aktivera tjänsten `OnOffTimeAssetAccessFilter` måste du skapa en OS
 1. Skapa en konfigurationsfil på `/apps/system/config/com.day.cq.dam.core.impl.servlet.OnOffTimeAssetAccessFilter.cfg.json` i din projektkod i Git. Filen ska innehålla `{}` som innehåll, vilket anger en tom OSGi-konfiguration för motsvarande OSGi-komponent. Den här åtgärden aktiverar tjänsten.
 1. Distribuera koden, inklusive den nya konfigurationen, via [!DNL Cloud Manager].
 1. När de distribuerats är återgivningarna och metadata tillgängliga enligt objektens tidsinställningar. Om det aktuella datumet eller den aktuella tiden infaller före eller efter tidpunkten för avaktiveringen visas ett felmeddelande.
-Mer information om hur du lägger till en tom OSGi-konfiguration finns i den här [guiden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=en).
+Mer information om hur du lägger till en tom OSGi-konfiguration finns i den här [guiden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE).
 
 ## Tips och begränsningar {#tips-limitations}
 
@@ -163,5 +163,5 @@ Mer information om hur du lägger till en tom OSGi-konfiguration finns i den hä
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
->* [Hämta resurser med Experience Manager-datorprogrammet på Windows- eller Mac-skrivbordet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
+>* [Hämta resurser med Experience Manager-datorprogrammet på Windows- eller Mac-skrivbordet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE)
 >* [Hämta resurser med Adobe Assets Link från de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)

@@ -141,7 +141,7 @@ Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leverans
 <!--
 >[!NOTE]
 > 
->To get early access to the Dynamic Media Delivery Report on your Dynamic Media account, [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+>To get early access to the Dynamic Media Delivery Report on your Dynamic Media account, [create and submit an Adobe Customer Support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
 -->
 
 ### Förutsättningar {#prereqs-dynamic-media-delivery-reports}

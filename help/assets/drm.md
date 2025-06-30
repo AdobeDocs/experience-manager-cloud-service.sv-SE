@@ -16,7 +16,7 @@ ht-degree: 2%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/drm.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/drm.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Digitala resurser är ofta kopplade till en licens som anger användningsvillkoren och hur länge de ska användas. Med hjälp av plattformen [!DNL Experience Manager] kan du effektivt hantera förfalloinformation för mediefiler och licensieringsinformation.

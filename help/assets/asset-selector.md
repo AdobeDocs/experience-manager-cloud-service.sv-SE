@@ -99,7 +99,7 @@ Integreringen görs genom att du importerar resursväljarpaketet och ansluter ti
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 
-* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=en).
+* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE).
 * Du har redan en IMS-token genererad för autentisering.
 
 ## Integrera resursväljaren med olika program {#asset-selector-integration-with-apps}

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-configure.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-connector-configure.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] som [!DNL Cloud Service] konfigurerar den förbättrade anslutningen efter att den har installerats. Instruktioner om hur du installerar finns i [Installera anslutningsprogrammet](/help/assets/workfront-integrations.md).
