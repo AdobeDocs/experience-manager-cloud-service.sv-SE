@@ -1,52 +1,15 @@
 ---
 title: Redigera flera metadata i  [!DNL Assets View]
-description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [!DNL ! Assets View] samtidigt.
+description: Lär dig hur du kan uppdatera en fördefinierad uppsättning standardmetadatafält för flera resurser som finns på [DNL! Assets View] samtidigt.
 exl-id: f5fee1b3-2855-4010-ae4a-216beb20920d
-source-git-commit: 19c5155363ef3f5083d36af880727a33c7224e84
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
 
 # Redigera flera metadata i [!DNL Assets View]{#how-to-edit-the-metadata-of-multiple-assets-simultaneously}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Funktionen **[!DNL Bulk Metadata Edit]** i [!DNL Assets View] gör att du kan redigera en fördefinierad uppsättning med standardmetadatafält för flera resursfiler samtidigt. Välj flera resurser och uppdatera deras fördefinierade standarduppsättning med standardmetadata samtidigt i stället för att uppdatera standardmetadata för varje resurs separat. Denna funktion bibehåller effektiviteten, enhetligheten och exaktheten hos standardegenskaperna för metadata i de stora materialuppsättningarna, vilket förbättrar sökbarheten och organisationen för dessa resurser.
 
@@ -65,7 +28,6 @@ Utför de här stegen för att massredigera metadata för flera resurser samtidi
    * **[!UICONTROL Keywords]:** Lägg till specifika termer eller textsträngar som ger högnivåinformation om resurserna för att förbättra deras upptäckbarhet. Lägg till ett nyckelord och tryck på **Retur** eller **return** för att lägga till ytterligare ett nyckelord i listan.
    * **[!UICONTROL Tags]:** Klicka på ![redigera massmetadata](/help/assets/assets/tags-icon.svg) för att välja taggar bland de tillgängliga alternativen. Taggar ger mer specifik information om resurserna och gör det lättare att hitta dem. Taggar som redan används för de markerade resurserna visas på panelen **[!UICONTROL Properties]**. Om du inte hittar de relevanta taggarna skapar du dem och tilldelar till de valda resurserna. Mer information om hur du skapar och tilldelar taggar till resurser finns i [Hantera taggar i [!DNL Assets view]](/help/assets/tagging-management-assets-view.md).
    * Klicka på **[!UICONTROL Save]** om du vill använda metadatauppdateringarna ovan på de markerade resurserna. När informationen har sparats läggs **[!UICONTROL Keywords]** och **[!UICONTROL Tags]** till medan den uppdaterade informationen för **[!UICONTROL Status]**, **[!UICONTROL Expiration date]** och **[!UICONTROL Author]** åsidosätter den befintliga informationen.
-
      ![save-bulk-metadata-edit-properties](/help/assets/assets/save-bulk-metadata-edit-properties2.png)
 
      >[!NOTE]

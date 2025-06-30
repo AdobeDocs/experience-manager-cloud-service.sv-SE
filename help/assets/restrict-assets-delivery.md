@@ -3,57 +3,14 @@ title: Begränsa leverans av resurser med Dynamic Media med OpenAPI-funktioner
 description: Lär dig hur du begränsar materialdistributionen med OpenAPI-funktioner.
 role: User
 exl-id: 3fa0b75d-c8f5-4913-8be3-816b7fb73353
-source-git-commit: 5db419e674ceb3c861f53a19e7b852c89ebd3702
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1064'
 ht-degree: 0%
 
 ---
 
 # Begränsa leverans av resurser med Dynamic Media med OpenAPI-funktioner {#restrict-access-to-assets}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
-
->[!AVAILABILITY]
->
->Dynamic Media med funktionsguiden OpenAPI finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
->
->[!BADGE Dynamiska media med OpenAPI-funktioner - guide för PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/dynamic-media-with-openapi-capabilities.pdf"}
 
 Med central resursstyrning i Experience Manager kan DAM-administratören eller varumärkeshanterarna hantera åtkomst till resurser som är tillgängliga via Dynamic Media med OpenAPI-funktioner. De kan begränsa leveransen av godkända resurser (ned till en enskild resurs) till utvalda [Adobe Identity Management System-användare (IMS) eller grupper](https://helpx.adobe.com/in/enterprise/using/users.html#user-mgt-strategy) genom att konfigurera vissa metadata för resurserna i AEM as a Cloud Service-författartjänsten.
 
@@ -113,7 +70,7 @@ Om resursen inte är baserad på standardmetadataschemat och fälten På tid och
 
 ## Leverans av begränsade tillgångar {#delivery-restricted-assets}
 
-Leveransen av begränsade tillgångar baseras på lyckad auktorisering för åtkomst av resurser. Auktoriseringen sker antingen via [IMS Bearer-token](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/) (program för begäranden som initierats från [AEM Asset Selector](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector)) eller en säker cookie (om du har anpassade identitetsleverantörer konfigurerade för AEM Publish/Preview-tjänster och har konfigurerat skapande och inkludering av cookies på sidorna).
+Leveransen av begränsade tillgångar baseras på lyckad auktorisering för åtkomst av resurser. Auktoriseringen sker antingen via [IMS Bearer-token](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/) (program för begäranden som initierats från [AEM Asset Selector](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector)) eller en säker cookie (om du har anpassade identitetsleverantörer konfigurerade för AEM Publish/Preview-tjänster och har konfigurerat skapande och inkludering av cookies på sidorna).
 
 ### Leverans för förfrågningar från AEM-författare eller resursväljare {#delivery-aem-author-asset-selector}
 
@@ -125,8 +82,8 @@ På både AEM Cloud-tjänstens författartjänster och resursväljare genereras 
 >Om du vill ha mer information om hur du aktiverar IMS-autentisering för AEM Asset Selector-baserade integreringar kan du kontakta Enterprise Support
 
 1. För icke-resursväljarbaserade upplevelser stöder AEM as a Cloud Service och Dynamic Media med OpenAPI-funktioner för närvarande API-integreringar på serversidan och kan generera IMS Bearer-tokens.
-   * Följ anvisningarna [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#the-server-to-server-flow) för att utföra service-to-server-API-integreringar som kan hämta IMS Bearer-tokens via [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console)
-   * Under en begränsad tid kan lokal utvecklaråtkomst (inte avsedd för produktionsbruk), kortlivade IMS Bearer-token för den användare som autentiserats på [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console) genereras genom att följa instruktionerna [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#developer-flow)
+   * Följ anvisningarna [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#the-server-to-server-flow) för att utföra service-to-server-API-integreringar som kan hämta IMS Bearer-tokens via [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console)
+   * Under en begränsad tid kan lokal utvecklaråtkomst (inte avsedd för produktionsbruk), kortlivade IMS Bearer-token för den användare som autentiserats på [AEM as a Cloud Service Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#crxde-lite-and-developer-console) genereras genom att följa instruktionerna [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#developer-flow)
 
 1. När du gör [API-begäranden för sökning](search-assets-api.md) och [leverans](deliver-assets-apis.md) lägger du till den erhållna IMS Bearer-token i HTTP-begärans **[!UICONTROL Authorization]**-huvud (se till att dess värde har prefixet **[!UICONTROL Bearer]**).
 
@@ -136,4 +93,4 @@ På både AEM Cloud-tjänstens författartjänster och resursväljare genereras 
 
 ### Leverans för anpassade identitetsleverantörer i Publiceringstjänst {#delivery-custom-identity-provider}
 
-AEM Sites, AEM Assets och Dynamic Media med OpenAPI-licenser kan användas tillsammans, vilket gör det möjligt att konfigurera begränsad leverans av resurser på webbplatser som använder AEM Publish eller Preview. Det säkra leveransflödet utnyttjar cookies i webbläsaren för att fastställa användarens åtkomst och att ha en anpassad domän för leveransnivå som är underdomän till publiceringsdomänen är en förutsättning för att det här användningsexemplet ska kunna implementeras. Om AEM Sites publicerings- och förhandsgranskningstjänster är konfigurerade att använda en [anpassad identitetsleverantör (IdP)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0), måste en ny cookie som kallas `delivery-token` kapslande användares gruppmedlemskap anges för autentisering av publiceringsdomänpostanvändarens autentisering. Leveransnivån extraherar auktoriseringsmaterialet från säker-cookie och validerar åtkomsten. Logga en [företagssupportbiljett](/help/assets/dynamic-media-open-apis-overview.md#how-to-enable-the-dynamic-media-with-openapi-capabilities) om du vill ha mer information.
+AEM Sites, AEM Assets och Dynamic Media med OpenAPI-licenser kan användas tillsammans, vilket gör det möjligt att konfigurera begränsad leverans av resurser på webbplatser som använder AEM Publish eller Preview. Det säkra leveransflödet utnyttjar cookies i webbläsaren för att fastställa användarens åtkomst och att ha en anpassad domän för leveransnivå som är underdomän till publiceringsdomänen är en förutsättning för att det här användningsexemplet ska kunna implementeras. Om AEM Sites publicerings- och förhandsgranskningstjänster är konfigurerade att använda en [anpassad identitetsleverantör (IdP)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0), måste en ny cookie som kallas `delivery-token` kapslande användares gruppmedlemskap anges för autentisering av publiceringsdomänpostanvändarens autentisering. Leveransnivån extraherar auktoriseringsmaterialet från säker-cookie och validerar åtkomsten. Logga en [företagssupportbiljett](/help/assets/dynamic-media-open-apis-overview.md#how-to-enable-the-dynamic-media-with-openapi-capabilities) om du vill ha mer information.

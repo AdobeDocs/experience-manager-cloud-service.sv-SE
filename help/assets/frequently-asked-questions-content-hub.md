@@ -2,59 +2,16 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: 95c643151e4828fa2eae0725dc1081aeeabc42fb
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
 
 # Vanliga frågor om Content Hub {#content-hub-frequently-asked-questions}
 
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
-
 ![Vanlig fråga från Content Hub](assets/content-hub-faqs.png)
-
->[!AVAILABILITY]
->
->Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
->
->[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 ## Vad är Content Hub? {#what-is-content-hub}
 
@@ -127,7 +84,7 @@ Det finns några konfigurationer av hur användare tilldelas till [!DNL Content 
    >
    >Användaren som tilldelats Express- och Assets-produktprofiler i två Admin Consoles måste ha samma e-postadress och använda ett **Enterprise- eller School** -företagskonto, inte ett **Personal** -konto. Den idealiska konfigurationen är att ha båda Admin Consoles inställda som **Federated ID** med en förtroenderelation konfigurerad mellan dem, så att användaren får en sömlös inloggning. Vissa Express-planer (till exempel Express Teams) stöder inte Federated ID/enkel inloggning.
 
-Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[!UICONTROL # /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[#UICONTROL /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Kan jag konfigurera Content Hub så att min organisations varumärkesriktlinjer visas som en länk på startsidan? {#content-hub-setup-brand-guidelines}
 

@@ -3,53 +3,16 @@ title: Integrering med Content Credentials
 description: Content Credentials, som är integrerat i AEM Assets och finns i Assets View, kan erbjuda kontext i en tillgångs historia, inklusive hur den har skapats och vem som har deltagit i skapandet av den. Som en näringsetikett för digitalt innehåll kan Content Credentials bidra till att öka transparensen och bygga förtroende hos målgrupperna.
 role: User
 exl-id: 27c25ae0-4477-40c3-85c8-3e0aa725aba7
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
 
 # Content Credentials {#content-credentials}
 
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
-
-Varumärken är mer oroade än någonsin över innehållets transparens, AI-exponering och förhindrande av manipulering av tillgångar. CAI (Content Authenticity Initiative) på Adobe bygger verktyg som är kompatibla med den tekniska standarden [Coalition for Content Provenance and Authenticity](https://c2pa.org/specifications/specifications/1.1/specs/C2PA_Specification.html#_trust_model) (C2PA). Content Credentials, som är en ny typ av krypterade, manipuleringssäkra metadata, kan hjälpa tittarna att förstå innehållet och säkerställa varumärkesmaterialets integritet. De kan innehålla ett brett urval av härkomstdata som ger insikter i en digital resursers historia.
+Varumärken är mer oroade än någonsin över innehållets transparens, AI-exponering och förhindrande av manipulering av tillgångar. Content Authenticity Initiative (CAI) på Adobe bygger verktyg som är kompatibla med den tekniska standarden [Coalition for Content Provenance and Authenticity](https://c2pa.org/specifications/specifications/1.1/specs/C2PA_Specification.html#_trust_model) (C2PA). Content Credentials, som är en ny typ av krypterade, manipuleringssäkra metadata, kan hjälpa tittarna att förstå innehållet och säkerställa varumärkesmaterialets integritet. De kan innehålla ett brett urval av härkomstdata som ger insikter i en digital resursers historia.
 
 Denna information kan omfatta
 
@@ -74,11 +37,8 @@ Adobe Experience Manager Assets har nu stöd för Content Credentials så att an
 1. Klicka på **Detaljer** och välj `Cr pin` i rutan längst till höger. På fliken Content Credentials visas följande information om resursen.
    1. **Genererad bild:** Datum och tid då Content Credentials tillämpades.
    1. **Innehållssammanfattning:** Anger om resursen har genererats delvis eller helt av AI, eller hur den har redigerats.
-
       ![innehållsautentiseringsuppgifter](/help/assets/assets/content-credentials1.png)
    1. **Process:** Anger vilket program, vilken enhet och vilket AI-verktyg (till exempel Adobe Firefly) som används för att generera resursen samt vilka ändringar som görs senare.
-
       ![process](/help/assets/assets/CR-Process.png)
    1. **Om denna Content Credentials:** Utfärdarens namn tillsammans med datum och tid för utfärdande.
-
       ![utfärdare](/help/assets/assets/CR-issuer.png)

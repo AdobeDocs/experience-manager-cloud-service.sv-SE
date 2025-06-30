@@ -4,51 +4,14 @@ description: Lär dig att integrera [!DNL AEM Assets] med [!DNL Figma] för att 
 hide: false
 role: User
 exl-id: 530561ca-497b-4331-a014-72c561e1ca84
-source-git-commit: 2644c849df32af14c70e686a803b690996812046
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
 
 # Integrera [!DNL AEM Assets] med [!DNL Figma]{#integrate-aem-assets-with-figma}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 [!DNL AEM Assets] kan integreras med [!DNL Figma], vilket gör att designers kan komma åt resurser som lagras i [!DNL AEM Assets] direkt från användargränssnittet i [!DNL Figma]. Du kan placera innehåll som hanteras i [!DNL AEM Assets] på arbetsytan [!DNL Figma] och sedan spara nytt eller redigerat innehåll i databasen [!DNL AEM Assets].
 
@@ -70,13 +33,13 @@ Du kan även komma åt den [[!DNL Adobe Experience Manager (AEM) Assets Connecto
 
 >[!NOTE]
 >
-> [Kontakta Adobe Support](https://helpx.adobe.com/se/contact.html) om du behöver hjälp om du får ett **[!UICONTROL Network Error]**-meddelande efter att du loggat in i din [!DNL AEM]-miljö.
+> [Kontakta Adobe Support](https://helpx.adobe.com/contact.html) om du behöver hjälp om du får ett **[!UICONTROL Network Error]**-meddelande efter att du loggat in i din [!DNL AEM]-miljö.
 
 ## Importera [!DNL AEM] resurser till arbetsytan i [!DNL Figma]{#import-aem-assets-into-figma-workflow}
 
 [Öppna [!UICONTROL Adobe Experience Manager (AEM) Assets Connector]-panelen](#access-aem-assets-connector) i designgränssnittet i [!DNL Figma] och gör följande:
 
-1. Sök efter resurser på panelen [!UICONTROL Adobe Experience Manager (AEM) Assets Connector]. Mer information finns i [Använda resursväljaren](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector#using-asset-selector).
+1. Sök efter resurser på panelen [!UICONTROL Adobe Experience Manager (AEM) Assets Connector]. Mer information finns i [Använda resursväljaren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector#using-asset-selector).
 
 1. Dra och släpp resursen på arbetsytan eller markera resursen och klicka på **[!UICONTROL Select]** för att lägga resursen på arbetsytan.
 

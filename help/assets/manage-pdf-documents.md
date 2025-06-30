@@ -4,51 +4,14 @@ description: Hantera PDF-dokument i [!DNL Adobe Experience Manager] som en [!DNL
 feature: Asset Management
 role: User, Admin
 exl-id: 29660869-6902-4093-845b-cd629be59d4d
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
 
 # Hantera PDF-dokument i Experience Manager Assets as a Cloud Service {#add-assets-to-experience-manager}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Experience Manager Assets integreras smidigt med Document Cloud PDF Viewer så att du kan förhandsgranska flera sidor i ett PDF-dokument. Dessutom kan du använda avancerade visningsfunktioner i Document Cloud PDF som anteckningar, söktext, navigera i PDF-dokumentet med bokmärken och miniatyrbilder med mera under samma tak. Med Experience Manager Assets kan du även överföra dokument i andra format som stöds och förhandsgranska dem i ett PDF-format.
 
@@ -84,7 +47,7 @@ Det inbyggda visningsprogrammet för PDF Doc Cloud har följande komponenter i A
 
 Med Adobe Experience Manager Assets kan du förhandsgranska PDF-dokument som består av flera sidor. Så här förhandsgranskar du flera sidor i ett PDF-dokument:
 
-1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=sv-SE).
+1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=en).
 1. Bläddra i det PDF-dokument som du vill ladda upp och förhandsgranska.
 1. Öppna dokumentet.
 1. PDF dokumentvisningsprogram läses in som standard. Du kan också välja PDF-återgivning på panelen Återgivning.
@@ -163,7 +126,7 @@ Förutom PDF-dokumenten kan du även förhandsgranska flera sidor för dokument 
 
 Utför följande steg för att förhandsgranska flera sidor i andra dokumentformat som stöds:
 
-1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=sv-SE).
+1. Följ stegen för att [överföra resurser i AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=en).
 1. Bläddra i dokumentet som du vill överföra och förhandsgranska.
 1. Öppna dokumentet.
 1. Välj PDF under det statiska avsnittet på den vänstra panelen. Den högra panelen visar förhandsgranskningen av en resurs på flera sidor. Välj en miniatyrbild i den vänstra panelen för att välja den sida som du vill förhandsgranska.

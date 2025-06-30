@@ -5,51 +5,14 @@ contentOwner: AG
 feature: Upload, Asset Processing, Publishing, Asset Compute Microservices
 role: User, Admin
 exl-id: 4cff355e-d12c-44c7-b519-4cc37f49e396
-source-git-commit: 1d8136b761528fe927b467320ebc7363de0d8a37
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
 
 # Generera variationer av resurser med hjälp av [!DNL Adobe Creative Cloud]-integrering {#content-automation}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Tillägget för innehållsautomatisering integrerar [!DNL Adobe Experience Manager Assets] som en [!DNL Cloud Service] - och [!DNL Adobe Creative Cloud]-API för att bearbeta dina resurser i stor skala. [!DNL Experience Manager] använder molnbaserade [tillgångsmikrotjänster](/help/assets/asset-microservices-overview.md) för att använda [!DNL Adobe Creative Cloud]-funktionerna och automatisera skapandet av resurser och mediehanteringen.
 
@@ -97,7 +60,7 @@ Så här aktiverar du tillägget för innehållsautomatisering för AEM as a Clo
 1. Klicka på **[!UICONTROL Continue]**.
 1. Expandera **[!UICONTROL Assets]** och välj **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Create]**.
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
 
 Om du behöver lägga till tillägget för innehållsautomatisering i ett befintligt AEM as a Cloud Service-program i Cloud Manager:
 
@@ -107,7 +70,7 @@ Om du behöver lägga till tillägget för innehållsautomatisering i ett befint
 
 1. Expandera **[!UICONTROL Assets]** och välj **[!UICONTROL Content Automation]**.
 1. Klicka på **[!UICONTROL Update]**.
-1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE).
+1. Kör pipelinen för att [distribuera ändringarna till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/deploy-code.html).
 
 ## Använd en bearbetningsprofil för att redigera flera kreativa resurser samtidigt {#process-assets}
 

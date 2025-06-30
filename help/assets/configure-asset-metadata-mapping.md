@@ -4,51 +4,14 @@ description: Mappa metadatafält för resurser mellan Adobe Workfront- och Exper
 exl-id: 71400769-b2bc-4f5d-8b6b-a73598e837b4
 feature: Metadata, Workfront Integrations and Apps
 role: User, Admin
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '982'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
 
 # Konfigurera metadatamappning mellan Adobe Workfront och Experience Manager Assets {#asset-metadata-mapping-workfront-aem-assets}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Du kan mappa metadatafälten för resurser mellan Adobe Workfront- och Experience Manager as a Cloud Service-program. När du skickar en resurs från Workfront till Experience Manager Assets kan du mappa metadata för resursen i Experience Manager Assets genom att mappa metadatafält.
 
@@ -68,7 +31,7 @@ Det finns en bild `add-users-workfront.png` i projektet `Metadata Syncs` i Adobe
 
 * Administratörsåtkomst till Workfront- och Experience Manager Assets as a Cloud Service-program.
 
-* En integrering mellan [Workfront- och Experience Manager Assets as a Cloud Service-program](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2Fsetup-asset-essentials.htm&amp;_LANG=enus).
+* En integrering mellan [Workfront- och Experience Manager Assets as a Cloud Service-program](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2Fsetup-asset-essentials.htm&_LANG=enus).
 
 ## Ställ in metadatamappning i Workfront {#set-up-metadata-mapping}
 
@@ -128,7 +91,6 @@ Så här konfigurerar du metadatamappning med ett nytt metadataformulär i Exper
    1. Ange `Project Name` i fältet **[!UICONTROL Field Label]**.
 
    1. Ange `./jcr:content/metadata/wm:projectName` i fältet **[!UICONTROL Map to property]**. Som vägledning kan du använda följande mall för att definiera fältmappningar i Experience Manager Assets:
-
       `./jcr:content/metadata/<mapping defined for the field in workfront>`.
 
       När du konfigurerade mappningar i Workfront mappades `wm:projectName` Experience Manager Assets-fält till Project > Name Workfront-fält.

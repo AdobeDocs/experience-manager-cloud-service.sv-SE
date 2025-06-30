@@ -5,9 +5,9 @@ contentOwner: AK
 feature: Asset Management
 role: User, Leader, Architect
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '927'
 ht-degree: 2%
 
 ---
@@ -16,43 +16,6 @@ ht-degree: 2%
 # Vi presenterar Assets som [!DNL Cloud Service] för Digital Asset Management i AEM {#assets-cloud-service-introduction}
 
 <!-- Need review information from gklebus -->
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Adobe Experience Manager Assets som [!DNL Cloud Service] erbjuder en molnbaserad, PaaS-lösning för företag att inte bara utföra sina Digital Asset Management- och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
 
@@ -99,7 +62,7 @@ Integrera AEM Assets med dokumentbaserad redigering för Edge Delivery Services 
 
 ## Integrering med Adobe Journey Optimizer {#integration-with-ajo}
 
-[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar kundens resehantering genom att tillhandahålla flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service-databasen direkt från Journey Optimizer-gränssnittet. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html?lang=sv-SE).
+[Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) förenklar kundens resehantering genom att tillhandahålla flerkanalskampanjer med smarta beslut och insikter. När du utformar meddelanden med Journey Optimizer kan du komma åt Assets as a Cloud Service-databasen direkt från Journey Optimizer-gränssnittet. Användare får åtkomst till resurser via det inbäddade användargränssnittet i Experience Manager Assets. Mer information finns i [Skapa och hantera resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/journey-optimizer/using/content-management/assets-images/assets.html).
 
 ## Nya Assets-funktioner {#whats-new-assets}
 

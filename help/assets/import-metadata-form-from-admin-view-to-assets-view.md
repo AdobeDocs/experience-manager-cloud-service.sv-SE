@@ -5,51 +5,14 @@ contentOwner: AG
 feature: Metadata
 role: User, Admin
 exl-id: 5fb4fe97-486a-4a91-af60-a7182efcc2f9
-source-git-commit: fdd74e4d9b74600fd462e951046abfb1bb8e203b
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
 # Importera metadata från [!DNL Admin View] till [!DNL Assets View] {#import-metadata-forms-from-admin-view-to-assets-view}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Med [!DNL Adobe Experience Manager Assets] kan du importera metadataformulär och deras mappassociationer från [!DNL Admin View] till [!DNL Assets View].
 
@@ -61,7 +24,7 @@ Kontrollera att du har administratörsbehörighet för att importera metadatafor
 
 Som administratör ska du utföra följande steg för att importera metadataformulär som är tillgängliga i [!DNL Admin View] till [!DNL Assets View]:
 
-1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL &#x200B; Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
+1. Navigera till startsidan för [!DNL Assets View] och klicka på **[!UICONTROL  Metadata Forms]** under **[!UICONTROL Settings]** för att öppna sidan **[!UICONTROL Metadata Forms]** med en lista över metadataformulär som är tillgängliga i [!DNL Assets View].
 
    ![sida med metadataformulär](/help/assets/assets/metadata-forms-page.png)
 
@@ -83,9 +46,8 @@ Som administratör ska du utföra följande steg för att importera metadataform
 
    * Klicka på kolumnrubriken om du vill sortera tabellen efter [!UICONTROL Name], [!UICONTROL Modified] eller [!UICONTROL Author].
    * Markera det importerade formuläret, klicka på **[!UICONTROL Remove from folder(s)]** och kontrollera sedan mappnamnet i mappsökvägen för att bekräfta att mappen är korrekt porterad.
-
      ![verifiera sidan med metadataformulär](/help/assets/assets/confirm-ported-folder.png)
-   * Markera det importerade formuläret och klicka på **[!UICONTROL Edit]** för att visa alla konfigurationer som stöds av metadataformuläret. Mer information om metadataformulär, deras komponenter och fält finns i [Konfigurera metadata-Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/metadata#metadata-forms).
+   * Markera det importerade formuläret och klicka på **[!UICONTROL Edit]** för att visa alla konfigurationer som stöds av metadataformuläret. Mer information om metadataformulär, deras komponenter och fält finns i [Konfigurera metadata-Forms](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/metadata#metadata-forms).
 
    ![verifiera sidan med metadataformulär](/help/assets/assets/verify-metadata-forms-page.png)
 
@@ -94,8 +56,8 @@ Som administratör ska du utföra följande steg för att importera metadataform
 När du har importerat metadataformulär från [!DNL Admin View] till [!DNL Assets View] följer du de här stegen för att verifiera importen:
 
 1. Navigera till någon av de associerade mapparna i det importerade metadataformuläret.
-1. Navigera till informationssidan för en [resurs](/help/assets/navigate-assets-view.md#preview-assets) och verifiera att de metadatakomponenter, komponentfält och fältvärden som stöds synkroniseras från [!DNL Admin View]. Mer information om metadatakomponenter, komponentfält och fältvärden finns i artikeln [Metadata i Resurser Essentials](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/metadata) .
+1. Navigera till informationssidan för en [resurs](/help/assets/navigate-assets-view.md#preview-assets) och verifiera att de metadatakomponenter, komponentfält och fältvärden som stöds synkroniseras från [!DNL Admin View]. Mer information om metadatakomponenter, komponentfält och fältvärden finns i artikeln [Metadata i Resurser Essentials](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/metadata) .
 
    >[!NOTE]
    >
-   > I [[!DNL Assets View] informationssidan](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/metadata-assets-view#metadata-forms) eller egenskapssidan [[!DNL Admin View] ](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/administer/metadata-schemas) synkroniseras ändringar av egenskapsvärden för metadata automatiskt mellan de två gränssnitten. Strukturella ändringar i formuläret, som att lägga till eller ta bort fält eller andra ändringar, synkroniseras inte.
+   > I [[!DNL Assets View] informationssidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/metadata-assets-view#metadata-forms) eller egenskapssidan [[!DNL Admin View] ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/metadata-schemas) synkroniseras ändringar av egenskapsvärden för metadata automatiskt mellan de två gränssnitten. Strukturella ändringar i formuläret, som att lägga till eller ta bort fält eller andra ändringar, synkroniseras inte.

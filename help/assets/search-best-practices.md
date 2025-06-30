@@ -5,48 +5,14 @@ contentOwner: KK
 exl-id: 446692de-5cea-4dbd-a98e-ec5177c7017e
 feature: Best Practices
 role: User
-source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '2480'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
 
 # AEM Assets Search - metodtips
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 [!DNL Adobe Experience Manager Assets] innehåller robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Ibland kan det vara besvärligt och tidskrävande att hitta rätt mediefil. Därför är sökresurser i [!DNL Adobe Experience Manager Assets] centrala för användningen av ett digitalt resurshanteringssystem, oavsett om det är till för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer.
 
@@ -302,7 +268,7 @@ Det tar dig till samlingen med resurser med liknande färg och metadata.
 
 ## Anpassade sökfaktorer {#custom-search-facets}
 
-Med sökfaktorer i Adobe Experience Manager kan du söka efter resurser på flera olika sätt i stället för i en enda, förbestämd eller taxonisk ordning. Du kan anpassa sökfaktorer och lägga till predikat utifrån dina behov. Läs [Sök efter ansikten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=sv-SE#) om du vill ha stegvisa anvisningar om hur du lägger till ett anpassat predikat.
+Med sökfaktorer i Adobe Experience Manager kan du söka efter resurser på flera olika sätt i stället för i en enda, förbestämd eller taxonisk ordning. Du kan anpassa sökfaktorer och lägga till predikat utifrån dina behov. Läs [Sök efter ansikten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en#) om du vill ha stegvisa anvisningar om hur du lägger till ett anpassat predikat.
 
 <!--**Scenario 10: Search assets based on Sku ID**
 to be added later
@@ -350,7 +316,7 @@ The newly added assets are not indexed.
     </tr>
     <tr>
         <td> Anpassade aspekter </td>
-        <td> Du kan lägga till <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=sv-SE">anpassade sökfaktorer efter behov.</td>
+        <td> Du kan lägga till <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en">anpassade sökfaktorer efter behov.</td>
         <td> De anpassade funktionerna stöds delvis i Assets-vyn. De aspekter som stöds är:
             <ul>
             <li> Förutsedda taggar
@@ -464,5 +430,5 @@ The newly added assets are not indexed.
 
 >[!MORELIKETHIS]
 >
->* [Söka efter resurser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=sv-SE)
->* [Söka efter fasetter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=sv-SE)
+>* [Söka efter resurser](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/search-assets.html?lang=en)
+>* [Söka efter fasetter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/search-facets.html?lang=en)

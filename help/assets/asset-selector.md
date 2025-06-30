@@ -5,51 +5,14 @@ contentOwner: KK
 feature: Selectors
 role: Admin,User
 exl-id: 5f962162-ad6f-4888-8b39-bf5632f4f298
-source-git-commit: f171bbeaf01e2d9be3a8f3b5172919a5e8ca7d97
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '5397'
+source-wordcount: '5351'
 ht-degree: 0%
 
 ---
 
 # Mikrofrontsväljare för mediefiler {#Overview}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Micro-Frontend Asset Selector har ett användargränssnitt som enkelt kan integreras med [!DNL Experience Manager Assets]-databasen så att du kan bläddra bland eller söka efter digitala resurser som är tillgängliga i databasen och använda dem i programutvecklingen.
 
@@ -136,7 +99,7 @@ Integreringen görs genom att du importerar resursväljarpaketet och ansluter ti
 
 Du kan utföra autentisering utan att definiera några IMS-egenskaper om:
 
-* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE).
+* Du integrerar ett [!DNL Adobe]-program i [Enhetligt gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=en).
 * Du har redan en IMS-token genererad för autentisering.
 
 ## Integrera resursväljaren med olika program {#asset-selector-integration-with-apps}
@@ -1100,10 +1063,10 @@ Du kan sortera resurser i Resursväljaren efter namn, dimensioner eller storlek 
 
 Med Resursväljaren kan du visa resursen i fyra olika vyer:
 
-* **![listvy](assets/do-not-localize/list-view.png) [!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
-* **![stödrastervyn](assets/do-not-localize/grid-view.png) [!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
-* **![gallerivy](assets/do-not-localize/gallery-view.png) [!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
-* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png) [!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
+* **![listvy](assets/do-not-localize/list-view.png)[!UICONTROL List View]** I listvyn visas rullningsbara filer och mappar i en enda kolumn.
+* **![stödrastervyn](assets/do-not-localize/grid-view.png)[!UICONTROL Grid View]** I stödrastervyn visas rullningsbara filer och mappar i ett rutnät med rader och kolumner.
+* **![gallerivy](assets/do-not-localize/gallery-view.png)[!UICONTROL Gallery View]** Gallerivyn visar filer eller mappar i en centrerad vågrät lista.
+* **![vattenfallsvy](assets/do-not-localize/waterfall-view.png)[!UICONTROL Waterfall View]** I vattenfallsvyn visas filer eller mappar i form av en Bridge.
 
 <!--
 ### Modes to view Asset Selector

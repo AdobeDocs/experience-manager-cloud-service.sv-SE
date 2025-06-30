@@ -4,9 +4,9 @@ description: Lär dig mer om metadata och de effektivaste strategierna för att 
 role: User, Admin
 exl-id: d90519df-55a6-4e23-81ad-ff2365d71c0d
 feature: Metadata, Best Practices
-source-git-commit: c82f84fe99d8a196adebe504fef78ed8f0b747a9
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1411'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -17,40 +17,6 @@ aem metadata
 experience manager metadata-->
 
 # Metadatahantering och bästa praxis {#metadata-best-practices}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 För att få ert företag att sticka ut och engagera fler kunder är det avgörande att ni använder högkvalitativa bilder, videor och andra digitala resurser. För att uppnå detta behöver ni en process där ni kan lägga till metadata i alla digitala resurser, så att de blir enkelt sökbara. Metadata är de data som innehåller viktig information om digitala resurser, inklusive resursens namn, typ, plats i en databas, ändringsdatum och associerade taggar. Metadata effektiviserar resurshanteringen, förbättrar sökbarheten och tillgängligheten samt säkerställer effektiv versionskontroll.
 
@@ -131,7 +97,7 @@ Bestäm var informationen kommer från och granska detaljerna i metadatastrategi
 
 >[!NOTE]
 >
->Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=sv-SE).
+>Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html).
 
 ### Var konsekvent med metadatastrategin
 
@@ -170,7 +136,7 @@ Du kan lägga till flera nyckelord och ordna dem efter din prioritet.
    1. Klicka på **[!UICONTROL Save & Close]**.
 Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de översta sökresultaten.
 
-  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=sv-SE).
+  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
 
 * **Anpassade metadatafält:** Anpassa metadatafälten för att hämta ytterligare information om resurser. Du kan till exempel lägga till specifika fält för projektinformation, copyrightinformation eller andra relevanta data som förbättrar sökfunktionerna. Lär dig [att redigera eller lägga till anpassade metadata](meta-edit.md) i Experience Manager Assets.
 
@@ -200,4 +166,4 @@ Undersök innehållsförsörjningskedjan för att hitta metadatakällor och enga
 
 informera om mål, framsteg, milstolpar och utmaningar tidigt för att få synpunkter och samarbete från alla intressenter. Uppmuntra samarbete i hela organisationen för att skapa effektiva processer och värdefulla metadata.
 
-Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html?lang=sv-SE) för att effektivt hantera dina Experience Manager-metadata.
+Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html) för att effektivt hantera dina Experience Manager-metadata.

@@ -3,59 +3,16 @@ title: Förhandsgranska resursen och dess egenskaper i  [!DNL the Content Hub]
 description: Lär dig hur du förhandsgranskar resurser och egenskaper i  [!DNL Content Hub]
 role: User
 exl-id: a85af980-4c51-4d30-9fad-afd16370e9db
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
 # Förhandsgranska resurs och dess egenskaper i Content Hub {#asset-properties}
 
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
-
 ![Metadatabannerbild](assets/metadata-banner-image.png)
-
->[!AVAILABILITY]
->
->Content Hub Guide finns nu i PDF-format. Ladda ned hela guiden och använd Adobe Acrobat AI Assistant för att besvara dina frågor.
->
->[!BADGE Content Hub Guide PDF]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/content-hub.pdf"}
 
 Med [!DNL The Content Hub] kan du visa information om resursen som är viktig för en effektiv resursdistribution. Det är en samling av alla data som är tillgängliga för en tillgång.
 
@@ -148,7 +105,7 @@ Vissa egenskaper för resurser som visas i [!DNL Content Hub] härleds, eller ge
 
 * **Smarta taggar:** [!DNL The Content Hub] använder Adobe Sensei smarta innehållstjänster för att utbilda resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL Experience Manager Assets] använder smarta taggar automatiskt på resurser som standard.
 
-* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=sv-SE) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
+* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
 
 * Överföringsdatum
 

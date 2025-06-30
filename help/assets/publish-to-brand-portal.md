@@ -5,55 +5,18 @@ contentOwner: Adobe
 feature: Brand Portal, Asset Distribution, Configuration
 role: User
 exl-id: 1cc438bc-8cad-4421-af03-c1f6d750e0a8
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 77%
+source-wordcount: '1154'
+ht-degree: 80%
 
 ---
 
 # Publicera material i Brand Portal {#publish-assets-to-brand-portal}
 
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
-
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/brandportal/brand-portal-publish-assets) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/brandportal/brand-portal-publish-assets) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Som administratör för Adobe Experience Manager (AEM) Assets kan du publicera resurser, mappar och samlingar på varumärkesportalinstansen för AEM Assets. Du kan även schemalägga publiceringsarbetsflödet för en resurs eller mapp till ett senare datum eller en senare tid. Efter publiceringen kan varumärkesportalens användare komma åt och vidaredistribuera resurser, mappar och samlingar till andra användare.
@@ -69,8 +32,8 @@ Om du senare gör ändringar i den ursprungliga resursen, mappen eller samlingen
 >[!NOTE]
 >
 >Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
->Assets bör publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
-> För [!DNL Experience Manager Assets] som [!DNL Cloud Service] är överföringshastigheten som observeras under labbvillkoret 1 000 resurser per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
+>>Assets bör publiceras gruppvis. Rekommendationen för batchstorlek är 15 kB.
+>> För [!DNL Experience Manager Assets] som [!DNL Cloud Service] är överföringshastigheten som observeras under labbvillkoret 1 000 resurser per timme. Frekvensen observeras med en genomsnittlig storlek på 10 MB för resurserna.
 
 ## Publicera material i Brand Portal {#publish-assets-to-bp}
 
@@ -130,12 +93,12 @@ Gör så här för att schemalägga publicering av resurser på varumärkesporta
 >
 > * De befintliga användarna i gruppen DAM-Users har läsåtkomst på sökvägen &quot;/conf/global/settings/cloudconfigs/mediaportal&quot;
 > * Nya användare (eller icke-adminanvändare) behöver följande rättigheter för att publicera på varumärkesportalen.
-> Banor:
-> `"/conf/global/settings/cloudconfigs/mediaportal" : jcr:read `
->`/libs : jcr:read`
->`/conf : jcr:read`
->`/content : jcr:read, crx:replicate`
->`/content/dam/ : jcr:read,modify, crx:replicate`
+>   > Banor:
+>   > `"/conf/global/settings/cloudconfigs/mediaportal" : jcr:read `
+>   >`/libs : jcr:read`
+>   >`/conf : jcr:read`
+>   >`/content : jcr:read, crx:replicate`
+>   >`/content/dam/ : jcr:read,modify, crx:replicate`
 
 ## Publicera mappar i Brand Portal {#publish-folders-to-brand-portal}
 
@@ -197,7 +160,7 @@ Så här schemalägger du publiceringen av resursmapparna till ett senare datum 
 
 1. Växla till listvyn ![listvyn](assets/list-view.svg) om du vill visa resursens aktuella publiceringsstatus.
 
-<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
+<!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
 
 ![genererad rapportstatus](assets/report-status.JPG)
 
@@ -295,11 +258,11 @@ Gör så här för att avpublicera en samling:
 
 Förutom ovanstående kan du även publicera metadatascheman, bildförinställningar, sökfasetter och taggar från AEM Assets till varumärkesportalen.
 
-* [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html?lang=sv-SE)
-* [Publicera taggar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html?lang=sv-SE)
+* [Publicera förinställningar, scheman och fasetter på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Publicera taggar på varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
 
-Mer information finns i [dokumentationen till varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=sv-SE).
+Mer information finns i [dokumentationen till varumärkesportalen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html).
 
 
 <!--

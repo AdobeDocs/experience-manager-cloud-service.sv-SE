@@ -4,51 +4,14 @@ description: Versionsinformation för  [!DNL Workfront for Experience Manager en
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
 feature: Release Information
 role: Admin
-source-git-commit: cb06380e4d3977f4f70a6444923cda2b0566d173
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1658'
 ht-degree: 0%
 
 ---
 
 # Versionsinformation för [!DNL Workfront for Experience Manager enhanced connector] {#release-notes-enhanced-connector-workfront}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 I följande avsnitt beskrivs den allmänna versionsinformationen för [!DNL Workfront for Experience Manager enhanced connector].
 
@@ -66,7 +29,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!NOTE]
 >
->AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/se/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=sv-SE).
+>AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=en).
 
 >[!IMPORTANT]
 >
@@ -102,9 +65,9 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 ### Januariversion 2024 {#january-2024-release}
 
-* [!DNL Workfront]-konfigurationen i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur du [konfigurerar behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html?lang=sv-SE#linked-folders).
+* [!DNL Workfront]-konfigurationen i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur du [konfigurerar behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#linked-folders).
 
-* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om att [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html?lang=sv-SE#metadata-schema-mapping).
+* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om att [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#metadata-schema-mapping).
 
 * Om du tar bort anslutningskonfigurationer på den utökade kopplingen påverkas händelsprenumerationer och andra sparade konfigurationer avsevärt, vilket gör att de pekar på en gammal URL.
 
@@ -307,4 +270,4 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!MORELIKETHIS]
 >
->* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=sv-SE)
+>* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=en)

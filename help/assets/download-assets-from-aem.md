@@ -5,55 +5,18 @@ contentOwner: Vishabh Gupta
 feature: Asset Management
 role: User
 exl-id: f68b03ba-4ca1-4092-b257-16727fb12e13
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1307'
 ht-degree: 0%
 
 ---
 
 # Hämta resurser från [!DNL Adobe Experience Manager] {#download-assets-from-aem}
 
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
-
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/download-assets-from-aem.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/download-assets-from-aem.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan hämta resurser, inklusive statiska och dynamiska återgivningar. Du kan också skicka e-postmeddelanden med länkar till resurser direkt från [!DNL Adobe Experience Manager Assets]. Hämtade resurser paketeras i en ZIP-fil. <!-- The compressed ZIP file has a maximum file size of 1 GB for the export job. A maximum of 500 total assets per export job are allowed. -->
@@ -72,8 +35,8 @@ Du kan hämta resurser från Experience Manager på följande sätt:
 
 * [Experience Manager användargränssnitt](#download-assets)
 * [Kommandon för resursdelning](https://adobe-marketing-cloud.github.io/asset-share-commons/)
-* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html?lang=sv-SE)
-* [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#download-assets)
+* [Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/brand-portal.html)
+* [Datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#download-assets)
 
 ## Hämta resurser med gränssnittet [!DNL Experience Manager] {#download-assets}
 
@@ -92,7 +55,7 @@ Asynkrona nedladdningar aktiveras i följande fall:
 * Om hämtningsstorleken är större än 100 MB
 * Om nedladdningen tar mer än 30 sekunder att förbereda
 
-Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Förutom Experience Manager inkorgsmeddelanden kan Experience Manager skicka e-post för att meddela användaren när nedladdningen är klar. Om du vill aktivera den här funktionen kan administratörerna konfigurera e-posttjänsten genom att [konfigurera en SMTP-serveranslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email).
+Medan den asynkrona nedladdningen körs i bakgrunden kan användaren fortsätta utforska och arbeta vidare i Experience Manager. Förutom Experience Manager inkorgsmeddelanden kan Experience Manager skicka e-post för att meddela användaren när nedladdningen är klar. Om du vill aktivera den här funktionen kan administratörerna konfigurera e-posttjänsten genom att [konfigurera en SMTP-serveranslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
 När e-posttjänsten har konfigurerats kan administratörer och användare aktivera e-postmeddelanden från Experience Manager-gränssnittet.
 
@@ -165,7 +128,7 @@ Om du vill tillåta hämtning av resurser från DAM, till exempel när du använ
 
 Om du inte behöver nedladdningsfunktionen kan du inaktivera servleten för att förhindra DoS-liknande risker. `Asset Download Servlet` kan inaktiveras på en [!DNL Experience Manager]-författare och publicera instanser genom att uppdatera dispatcherkonfigurationen för att blockera eventuella hämtningsbegäranden. Servern kan även inaktiveras manuellt via OSGi-konsolen direkt.
 
-1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du konfigurationen `dispatcher.any` och lägger till en ny regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring).
+1. Om du vill blockera resurshämtningsbegäranden via en dispatcherkonfiguration redigerar du konfigurationen `dispatcher.any` och lägger till en ny regel i [filteravsnittet](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring).
 
    `/0100 { /type "deny" /url "*.assetdownload.zip/assets.zip*" }`
 
@@ -176,7 +139,7 @@ Om du vill aktivera tjänsten `OnOffTimeAssetAccessFilter` måste du skapa en OS
 1. Skapa en konfigurationsfil på `/apps/system/config/com.day.cq.dam.core.impl.servlet.OnOffTimeAssetAccessFilter.cfg.json` i din projektkod i Git. Filen ska innehålla `{}` som innehåll, vilket anger en tom OSGi-konfiguration för motsvarande OSGi-komponent. Den här åtgärden aktiverar tjänsten.
 1. Distribuera koden, inklusive den nya konfigurationen, via [!DNL Cloud Manager].
 1. När de distribuerats är återgivningarna och metadata tillgängliga enligt objektens tidsinställningar. Om det aktuella datumet eller den aktuella tiden infaller före eller efter tidpunkten för avaktiveringen visas ett felmeddelande.
-Mer information om hur du lägger till en tom OSGi-konfiguration finns i den här [guiden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE).
+Mer information om hur du lägger till en tom OSGi-konfiguration finns i den här [guiden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=en).
 
 ## Tips och begränsningar {#tips-limitations}
 
@@ -200,5 +163,5 @@ Mer information om hur du lägger till en tom OSGi-konfiguration finns i den hä
 >[!MORELIKETHIS]
 >
 >* [Hämta DRM-skyddade resurser](drm.md)
->* [Hämta resurser med Experience Manager-datorprogrammet på Windows- eller Mac-skrivbordet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE)
+>* [Hämta resurser med Experience Manager-datorprogrammet på Windows- eller Mac-skrivbordet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html)
 >* [Hämta resurser med Adobe Assets Link från de Adobe Creative Cloud-appar som stöds](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)

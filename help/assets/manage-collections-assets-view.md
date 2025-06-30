@@ -4,51 +4,14 @@ description: En samling är en uppsättning resurser i vyn Experience Manager As
 exl-id: 540dc1d9-eaf4-4e08-8087-dc58da23a6e8
 feature: Collections, Asset Management
 role: User
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
 
 # Hantera samlingar {#manage-collections}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 >[!CONTEXTUALHELP]
 >id="assets_collections"
@@ -229,15 +192,15 @@ Så här tar du bort en samling:
 
 ## Hantera behörigheter för en privat samling{#manage-permissions-private-collection}
 
-Du kan tillåta administratörer att hantera [åtkomstnivåer](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions) för privata samlingar som är tillgängliga i databasen. Du kan tilldela användargrupperna eller användarna behörigheter som `Can View` och `Can Edit`. Du kan även delegera behörighetshanteringsbehörigheter till användargrupper. De användare som skapar privata samlingar är ägare av dessa samlingar. De kan använda åtgärden [!UICONTROL Manage Permissions] för att bevilja åtkomst till de andra användarna. Administratörer kan dessutom visa och hantera behörigheter för de privata samlingarna i databasen [!DNL Experience Manager].
+Du kan tillåta administratörer att hantera [åtkomstnivåer](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions) för privata samlingar som är tillgängliga i databasen. Du kan tilldela användargrupperna eller användarna behörigheter som `Can View` och `Can Edit`. Du kan även delegera behörighetshanteringsbehörigheter till användargrupper. De användare som skapar privata samlingar är ägare av dessa samlingar. De kan använda åtgärden [!UICONTROL Manage Permissions] för att bevilja åtkomst till de andra användarna. Administratörer kan dessutom visa och hantera behörigheter för de privata samlingarna i databasen [!DNL Experience Manager].
 <!--
 >[!NOTE]
 >
 >Adobe does not recommend to assign permissions to users.
 -->
-Mer information om hur du tilldelar tillgängliga behörigheter till användargrupper finns i [Lägga till behörigheter till användargrupper](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Mer information om hur du tilldelar tillgängliga behörigheter till användargrupper finns i [Lägga till behörigheter till användargrupper](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
-Mer information om arbetsflödet från början till slut finns i [Hantera behörigheter](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Mer information om arbetsflödet från början till slut finns i [Hantera behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Nästa steg {#next-steps}
 
@@ -245,4 +208,4 @@ Mer information om arbetsflödet från början till slut finns i [Hantera behör
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)

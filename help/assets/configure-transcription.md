@@ -9,51 +9,14 @@ topic-tags: Configuration
 feature: Asset Management, Configuration
 role: Admin
 exl-id: e96c8d68-74a6-4d61-82dc-20e619338d4b
-source-git-commit: 188f60887a1904fbe4c69f644f6751ca7c9f1cc3
+source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
 
 # Konfigurera transkription i [!DNL Experience Manager Assets] {#configure-transcription-service}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/aem-assets-view-ui-extensibility.md"><b>UI-utökningsbarhet</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 Transkription är processen att översätta ljudet från en ljud- eller videofil till text (tal till text) med hjälp av taligenkänningstekniken.
 [!DNL Adobe Experience Manager Assets] har konfigurerats med [!DNL Azure Media Services] som automatiskt genererar textutskrift av det talade språket i en ljud- eller videofil som stöds i WebVTT-format (.vtt). När en ljud- eller videoresurs bearbetas i [!DNL Experience Manager Assets] genererar transkriberingstjänsten automatiskt texttranskriberingen av ljud- eller videoresursen och lagrar den på samma plats i Assets-databasen där den ursprungliga resursen finns. Med transkriberingstjänsten [!DNL Experience Manager Assets] kan marknadsförarna effektivt hantera sitt ljud- och videoinnehåll med ökad identifiering av textinnehållet och öka avkastningen på dessa resurser genom stöd för hjälpmedel och lokalisering.
@@ -161,7 +124,7 @@ Om du har [konfigurerat Dynamic Media](/help/assets/dynamic-media/config-dm.md) 
 
 Se även:
 
-* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html?lang=sv-SE#add-cc-closed-captioning-to-dynamic-media-video)
+* [Videosjälvstudiekurs om hur du lägger till CC Closed Caption i videon Dynamic Media ](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html#add-cc-closed-captioning-to-dynamic-media-video)
 * [Publicera Dynamic Media-videor till YouTube](/help/assets/dynamic-media/video.md#publishing-videos-to-youtube)
 
 I följande bild återspeglar webbadressen bildtextdelen som refererar till utskriften (.vtt-filen). Videon visar det talade språket (transkriberad text) som **[!UICONTROL Closed Caption]** vid den angivna tidsstämpeln i videon. Användaren kan aktivera eller inaktivera bildtexten med knappen **[!UICONTROL CC]**.

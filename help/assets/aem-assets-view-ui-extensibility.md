@@ -4,48 +4,14 @@ description: Lär dig mer om UI-utökningsfunktionen i  [!DNL AEM Assets View]. 
 feature: App Builder
 role: User, Developer
 exl-id: a11f7043-17cf-4331-b76c-d3db099c2411
-source-git-commit: a03e6cf842f95f8799f23ed5c7e3b563b092b4e5
+source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
 
 # Aktivera UI-utökningsbarhet i [!DNL AEM Assets View] {#AEM-Assets-View-UI-Extensibility}
-
-<table>
-    <tr>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/dm-prime-ultimate.md"><b>Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/assets-ultimate-overview.md"><b>AEM Assets Ultimate</b></a>
-        </td>
-        <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/integrate-aem-assets-edge-delivery-services.md"><b>AEM Assets-integrering med Edge Delivery Services</b></a>
-        </td>
-          <td>
-            <sup style= "background-color:#008000; color:#FFFFFF; font-weight:bold"><i>Nytt</i></sup> <a href="/help/assets/dynamic-media/enable-dynamic-media-prime-and-ultimate.md"><b>Aktivera Dynamic Media Prime och Ultimate</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/search-best-practices.md"><b>Sök efter bästa praxis</b></a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="/help/assets/metadata-best-practices.md"><b>Metadata - bästa praxis</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/product-overview.md"><b>Content Hub</b></a>
-        </td>
-        <td>
-            <a href="/help/assets/dynamic-media-open-apis-overview.md"><b>Dynamiska media med OpenAPI-funktioner</b></a>
-        </td>
-        <td>
-            <a href="https://developer.adobe.com/experience-cloud/experience-manager-apis/"><b>AEM Assets-dokumentation för utvecklare</b></a>
-        </td>
-    </tr>
-</table>
 
 [!DNL AEM Assets View] har stöd för UI-utbyggbarhet, vilket gör att du kan lägga till anpassade UI-komponenter i [!DNL Assets View]-gränssnittet för specifika arbetsflöden och affärskrav som inte uppfylls av de körklara funktionerna i [!DNL AEM Assets View]. Den här utökningsfunktionen för användargränssnitt i [!DNL AEM Assets View] förbättrar flexibiliteten och gör det möjligt för organisationer att anpassa gränssnittet för specifika arbetsflöden och krav.\
 Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**. Det tillagda tillägget visas på en dedikerad panel på sidan **Resurs**, **Samling** eller **Mapp** **[!UICONTROL Details]**.
@@ -53,7 +19,7 @@ Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**
 >[!IMPORTANT]
 >
 > * [!DNL AEM Assets View] UI-utbyggbarhet är tillgänglig med [[!DNL Assets Ultimate]](/help/assets/assets-ultimate-overview.md).
-> * [Skapa och skicka ett  [!DNL Adobe] kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) om du vill få åtkomst till [!DNL Assets view] UI-utökningsbarhet.
+> * [Skapa och skicka ett  [!DNL Adobe] kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill få åtkomst till [!DNL Assets view] UI-utökningsbarhet.
 > * Du kan ge feedback genom att expandera **[!UICONTROL Detailed Feedback options]** och klicka på **[!UICONTROL Report an issue]**.
 
 ## <a id="1"></a> Öppna Assets-vyn{#add-UI-Extensibility-in-AEM-Assets-View}
