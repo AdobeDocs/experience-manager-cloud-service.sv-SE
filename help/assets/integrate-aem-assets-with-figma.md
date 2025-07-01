@@ -34,13 +34,13 @@ Du kan även komma åt den [[!DNL Adobe Experience Manager (AEM) Assets Connecto
 
 >[!NOTE]
 >
-> [Kontakta Adobe Support](https://helpx.adobe.com/contact.html) om du behöver hjälp om du får ett **[!UICONTROL Network Error]**-meddelande efter att du loggat in i din [!DNL AEM]-miljö.
+> [Kontakta Adobe Support](https://helpx.adobe.com/se/contact.html) om du behöver hjälp om du får ett **[!UICONTROL Network Error]**-meddelande efter att du loggat in i din [!DNL AEM]-miljö.
 
 ## Importera [!DNL AEM] resurser till arbetsytan i [!DNL Figma]{#import-aem-assets-into-figma-workflow}
 
 [Öppna [!UICONTROL Adobe Experience Manager (AEM) Assets Connector]-panelen](#access-aem-assets-connector) i designgränssnittet i [!DNL Figma] och gör följande:
 
-1. Sök efter resurser på panelen [!UICONTROL Adobe Experience Manager (AEM) Assets Connector]. Mer information finns i [Använda resursväljaren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector#using-asset-selector).
+1. Sök efter resurser på panelen [!UICONTROL Adobe Experience Manager (AEM) Assets Connector]. Mer information finns i [Använda resursväljaren](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector#using-asset-selector).
 
 1. Dra och släpp resursen på arbetsytan eller markera resursen och klicka på **[!UICONTROL Select]** för att lägga resursen på arbetsytan.
 
