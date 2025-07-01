@@ -4,7 +4,7 @@ description: Så här kommer du åt, inloggningsupplevelsen av, användningsfall
 role: User, Leader
 exl-id: 51ae6657-f6b5-44b0-a47f-451735ab0d01
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 31c9e742d8bdf69c12788794670817864c9c027a
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%
@@ -60,13 +60,13 @@ De olika DAM-aktiviteterna (Digital Asset Management) som du kan utföra med [!D
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video för att komma igång med Assets View](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/getting-started.html?lang=sv-SE)
+* [Titta på en video för att komma igång med Assets View](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/getting-started.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets View
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 
 <!--TBD: Merge the below rows in the table when the use cases are documented/available.

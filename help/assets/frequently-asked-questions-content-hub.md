@@ -2,7 +2,7 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 31c9e742d8bdf69c12788794670817864c9c027a
 workflow-type: tm+mt
 source-wordcount: '1284'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Vad är Content Hub? {#what-is-content-hub}
 
-Content Hub ingår i Adobe Experience Manager Assets as a Cloud Service.
+Content Hub är en del av Adobe Experience Manager Assets as a Cloud Service.
 
 Med Content Hub kan större team enkelt hitta relevanta, godkända resurser via en intuitiv portal och snabbt anpassa dem efter sina behov.  Dessutom har Content Hub en funktion för intag som gör att dessa användare enkelt kan vara självbetjänade när de överför resurser till DAM. Detta är direkt anpassat till behovet av att organisationer skapar innehåll snabbare samtidigt som varumärkets enhetlighet och efterlevnad upprätthålls med lämpliga skyddsåtgärder.
 
@@ -84,7 +84,7 @@ Det finns några konfigurationer av hur användare tilldelas till [!DNL Content 
    >
    >Användaren som tilldelats Express- och Assets-produktprofiler i två Admin Consoles måste ha samma e-postadress och använda ett **Enterprise- eller School** -företagskonto, inte ett **Personal** -konto. Den idealiska konfigurationen är att ha båda Admin Consoles inställda som **Federated ID** med en förtroenderelation konfigurerad mellan dem, så att användaren får en sömlös inloggning. Vissa Express-planer (till exempel Express Teams) stöder inte Federated ID/enkel inloggning.
 
-Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[!UICONTROL # /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[#UICONTROL /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Kan jag konfigurera Content Hub så att min organisations varumärkesriktlinjer visas som en länk på startsidan? {#content-hub-setup-brand-guidelines}
 
