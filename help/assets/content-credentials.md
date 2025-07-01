@@ -37,8 +37,11 @@ Adobe Experience Manager Assets har nu stöd för Content Credentials så att an
 1. Klicka på **Detaljer** och välj `Cr pin` i rutan längst till höger. På fliken Content Credentials visas följande information om resursen.
    1. **Genererad bild:** Datum och tid då Content Credentials tillämpades.
    1. **Innehållssammanfattning:** Anger om resursen har genererats delvis eller helt av AI, eller hur den har redigerats.
+
       ![innehållsautentiseringsuppgifter](/help/assets/assets/content-credentials1.png)
    1. **Process:** Anger vilket program, vilken enhet och vilket AI-verktyg (till exempel Adobe Firefly) som används för att generera resursen samt vilka ändringar som görs senare.
+
       ![process](/help/assets/assets/CR-Process.png)
    1. **Om denna Content Credentials:** Utfärdarens namn tillsammans med datum och tid för utfärdande.
+
       ![utfärdare](/help/assets/assets/CR-issuer.png)
