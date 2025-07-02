@@ -4,7 +4,7 @@ description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda o
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
 role: Admin, Architect, Developer
-source-git-commit: 207926d68f42f5b398841b92c0a8c72a3f852292
+source-git-commit: 9829709a4558a2d0fd479c7c0fed979ee43937ea
 workflow-type: tm+mt
 source-wordcount: '963'
 ht-degree: 2%
@@ -53,7 +53,7 @@ Oavsett om du är headless eller headful kan du leverera rätt innehåll i rätt
 
 Edge Delivery Services är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet när det gäller hur du skapar innehåll på din webbplats. Det ersätter AEM Publish/Dispatcher och det traditionella sättet att skapa upplevelser med AEM Core Components med en SaaS-lösning med flera moln och en helhetsutvecklingsstrategi.
 
-![Edge Delivery-arkitektur](assets/AEM-with-EDS-architecture.png)
+![Edge Delivery-arkitektur](assets/aem-with-eds-architecture.png)
 
 Edge Delivery Services använder GitHub så att du kan hantera och distribuera kod direkt från din GitHub-databas. Nytt innehåll läggs till direkt utan någon omgenereringsprocess.
 
@@ -90,7 +90,7 @@ Kom igång med AEM-redigering med Universal Editor och Edge Delivery Services:
 
 Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Delivery Services och AEM Sites finnas parallellt på samma domän, vilket är ett vanligt användningsexempel för större webbplatser. Dessutom kan dina AEM Sites-sidor enkelt förbruka innehåll från Edge Delivery Services, och det motsatta är också sant.
 
-Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration) och [Launch.](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration) och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
 
 ## Få hjälp från Adobe {#getting-help}
 
