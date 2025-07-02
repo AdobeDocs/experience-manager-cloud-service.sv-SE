@@ -7,9 +7,9 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
 role: User, Developer
-source-git-commit: fecbebde808c545a84889da5610a79c088f2f459
+source-git-commit: 5b5b44f8dffc01a75eda464cd7759cf03028c2c6
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1336'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-core-components/create-and-use-custom-functions-core-components) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/create-and-use-custom-functions-core-components) |
 | AEM as a Cloud Service | Den här artikeln |
 
 AEM Forms har stöd för anpassade funktioner, vilket gör att man kan definiera JavaScript-funktioner för att implementera komplexa affärsregler. Dessa anpassade funktioner gör att man kan förbättra blanketternas funktioner genom att underlätta hantering och bearbetning av inmatade data för att uppfylla specifika krav. De gör det möjligt att dynamiskt ändra formulärbeteende baserat på fördefinierade kriterier. Med anpassade funktioner kan utvecklare också använda komplex valideringslogik, utföra dynamiska beräkningar och styra visningen eller beteendet för formulärelement baserat på användarinteraktioner eller fördefinierade kriterier.
@@ -214,6 +214,16 @@ Om du vill visa anpassade funktioner i regelredigeraren för ett adaptivt formul
 ```
 
 Om användaren inte lägger till några JavaScript-anteckningar i den anpassade funktionen visas inte den anpassade funktionen i regelredigeraren för ett anpassat formulär.
+
+## Känt fel
+
+* Anpassade funktioner stöder inte JavaScript reguljära uttryckslitteraler. Om du använder regex-litteraler i en anpassad funktion uppstår fel under körningen. Till exempel:
+  `const pattern = /^abc$/;`
+
+  För att säkerställa kompatibilitet använder du RegExp-konstruktorn i de anpassade funktionerna.
+
+  `const pattern = new RegExp("^abc$");`
+Använd reguljära uttryck för att använda RegExp-konstruktorn för att säkerställa en konsekvent och tillförlitlig exekvering.
 
 ## Nästa steg
 

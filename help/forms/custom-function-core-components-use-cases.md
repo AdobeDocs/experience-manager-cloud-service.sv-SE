@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: df92b91e-f3b0-4a08-bd40-e99edc9a50a5
-source-git-commit: 88b9686a1ceec6729d9657d4bb6f458d9c411065
+source-git-commit: 5b5b44f8dffc01a75eda464cd7759cf03028c2c6
 workflow-type: tm+mt
-source-wordcount: '2134'
+source-wordcount: '2184'
 ht-degree: 0%
 
 ---
@@ -259,7 +259,7 @@ Titta på bilden för `console window` nedan för att visa att om användaren l�
 
 Du kan även kontrollera konsolfönstret för att visa data som skickats till servern:
 
-![Inspect-data i konsolfönstret](/help/forms/assets/custom-function-submit-data-console-data.png)
+![Inspektera data i konsolfönstret](/help/forms/assets/custom-function-submit-data-console-data.png)
 
 ## Åsidosätt formulärskickning och felhantering
 
@@ -370,7 +370,7 @@ Se bilden nedan för att visa att felmeddelandet visas i ett modalt format när 
 
 Funktionerna `Default submit Form Success Handler` och `Default submit Form Error Handler` är tillgängliga i paketet om du vill visa om formuläret har skickats in eller misslyckats på ett standardsätt.
 
-Om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM projekt eller formulär, se avsnittet [felsökning](#troubleshooting).
+Om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM-projekt eller formulär, se avsnittet [felsökning](#troubleshooting).
 
 ## Utför åtgärder i en specifik instans av den repeterbara panelen
 
@@ -513,13 +513,22 @@ Se gif nedan som visar att när användaren klickar på knappen `Delete Traveler
 
 ![Ta bort panel](/help/forms/assets/custom-function-delete-panel.gif)
 
+## Känt fel
+
+* Anpassade funktioner stöder inte JavaScript reguljära uttryckslitteraler. Om du använder regex-litteraler i en anpassad funktion uppstår fel under körningen. Till exempel:
+  `const pattern = /^abc$/;`
+
+  För att säkerställa kompatibilitet använder du RegExp-konstruktorn i de anpassade funktionerna.
+
+  `const pattern = new RegExp("^abc$");`
+Använd reguljära uttryck för att använda RegExp-konstruktorn för att säkerställa en konsekvent och tillförlitlig exekvering.
 
 ## Felsökning
 
-* Utför följande steg om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM projekt eller formulär:
-   * Kontrollera att kärnkomponentversionen för [är uppdaterad till 3.0.18 och senare](https://github.com/adobe/aem-core-forms-components). För befintliga AEM och formulär finns det dock ytterligare steg att utföra:
+* Utför följande steg om den anpassade överföringshanteraren inte fungerar som förväntat i befintliga AEM-projekt eller formulär:
+   * Kontrollera att kärnkomponentversionen för [är uppdaterad till 3.0.18 och senare](https://github.com/adobe/aem-core-forms-components). För befintliga AEM-projekt och -formulär finns det dock ytterligare steg att utföra:
 
-   * För det AEM projektet bör användaren ersätta alla instanser av `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` och distribuera projektet via Cloud Manager pipeline.
+   * För AEM-projektet bör användaren ersätta alla instanser av `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` och distribuera projektet via Cloud Manager pipeline.
 
    * Om de anpassade överföringshanterarna inte fungerar som de ska i befintliga formulär måste användaren öppna och spara regeln `submitForm` på knappen **Skicka** med regelredigeraren. Den här åtgärden ersätter den befintliga regeln från `submitForm('custom:submitSuccess', 'custom:submitError')` med `submitForm()` i formuläret.
 
