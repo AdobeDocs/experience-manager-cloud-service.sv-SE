@@ -2,7 +2,7 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: a60b0e8ccba2680b0f053f3349adca21b65c3045
+source-git-commit: 4fb2ca8123dfd5a0d3244b9d5966cd8bb7eeaf09
 workflow-type: tm+mt
 source-wordcount: '1955'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Så här öppnar du konfigurationsalternativ på Content Hub:
 
 1. Klicka på användarikonen i den högra rutan.
 
-1. Välj **[!UICONTROL Configurations]** i avsnittet **[!UICONTROL Product Settings]**.
+1. Välj **[!UICONTROL Product Settings]** i avsnittet **[!UICONTROL Configurations]**.
 
    ![Få åtkomst till konfigurationsalternativ på Content Hub](assets/access-content-hub-configuration-ui.png)
 
@@ -78,7 +78,7 @@ Som administratör hanterar du följande konfigurationsalternativ för dina anv�
 
 Du kan konfigurera metadatafält som visas för användarna när du överför eller importerar resurser till Content Hub-portalen, till exempel kampanjnamn, nyckelord, kanaler, tidsram, region och så vidare. Gör så här:
 
-1. Klicka på **[!UICONTROL Import]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Import]**.
 
 1. Klicka på **[!UICONTROL Add metadata]**.
 
@@ -96,16 +96,16 @@ Klicka på växlingsknappen **[!UICONTROL Auto-approval]** om du vill att alla r
 
 Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
 
-![Överföringsinformation för konfigurationsgränssnittet på Content Hub](/help/assets/assets/import-content-hub.png)
+![Överföringsinformation för konfigurationsgränssnittet på Content Hub](/help/assets/assets/import-content-hub1.png)
 
 Metadata är aktiverade i konfigurationsanvändargränssnittet på sidan för överföring av resurser:
-![Överför metadata på Content Hub](assets/add-assets-for-approval.png)
+![Överför metadata på Content Hub](assets/add-assets-for-approval1.png)
 
 ### Filter {#configure-filters-content-hub}
 
 I Content Hub kan administratörer konfigurera filter som visas när de söker efter resurser. Utför följande steg för att lägga till ett nytt filter:
 
-1. Klicka på **[!UICONTROL Filters]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Filters]**.
 
 1. Klicka på **[!UICONTROL Add filters]**.
 
@@ -119,17 +119,16 @@ I Content Hub kan administratörer konfigurera filter som visas när de söker e
    >Det nya filtret visas bara på söksidan om det finns minst en resurs i databasen som matchar filtervillkoren.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje tillgängligt filter, för att redigera etiketterna eller klicka på ikonen Ta bort för att ta bort befintliga filter. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
-![Gränssnittsfilter för konfiguration på Content Hub](assets/configuration-filter.png)
+![Gränssnittsfilter för konfiguration på Content Hub](assets/configuration-filter1.png)
 
 De filter som är aktiverade i konfigurationsanvändargränssnittet visas på söksidan:
-![Sök på Content Hub](assets/content-hub-filters.png)
-
+![Sök på Content Hub](assets/content-hub-filters1.png)
 
 ### Resursinformation {#configure-asset-details-content-hub}
 
 Du kan också konfigurera resursegenskaperna som visas för varje resurs, till exempel filnamn, titel, format, storlek och så vidare. Gör så här:
 
-1. Klicka på **[!UICONTROL Asset details]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Asset details]**.
 
 1. Klicka på **[!UICONTROL Add metadata]**.
 
@@ -144,7 +143,7 @@ På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit
 
 De egenskaper som är aktiverade i konfigurationsanvändargränssnittet visas på sidan Resursinformation:
 
-![Resursegenskaper i Content Hub](assets/asset-details-page-content-hub.png)
+![Resursegenskaper i Content Hub](assets/asset-details-page-content-hub1.png)
 
 ### Tillgångskort {#asset-card}
 
@@ -152,18 +151,18 @@ Du kan också konfigurera de viktigaste metadataegenskaperna som du behöver vis
 ![nyckelmetadata på resurskortet](/help/assets/assets/asset-card-metadata.png)
 Utför följande steg för att konfigurera metadataegenskaperna så att de visas i **[!UICONTROL Asset card]** :
 
-1. Klicka på **Resurskort** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [Resurskort](#access-configuration-options-content-hub) i användargränssnittet för **konfigurationer**.
 2. Klicka på **Lägg till metadata**. Dialogrutan **Lägg till metadata för resurskort** visas.
 3. Ange metadatanamnet i fältet **Etikett** och välj en metadataegenskap i fältet **Metadata**.
 4. Klicka på **Bekräfta** och sedan på **Spara** för att tillämpa ändringarna så att den nya egenskapen visas på sidan med resursinformation.
-   ![resurskort](/help/assets/assets/configuration-asset-card.png)
+   ![resurskort](/help/assets/assets/configuration-asset-card1.png)
 På samma sätt klickar du på ![redigera](/help/assets/assets/edit-content-hub.svg) som är tillgänglig bredvid varje tillgänglig egenskap, om du vill göra nödvändiga ändringar eller på ![ta bort](/help/assets/assets/delete-content-hub.svg) om du vill ta bort en befintlig metadataegenskap. Klicka på **Spara** när du har gjort alla ändringar för att tillämpa ändringarna.
 
 ### Sök {#configure-metadata-search-content-hub}
 
 Administratörer kan definiera metadatafält som söks igenom när en användare anger ett sökvillkor i Content Hub. Utför följande steg:
 
-1. Klicka på **[!UICONTROL Add metadata]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Add metadata]**.
 
 1. Ange metadatafältet och klicka på **[!UICONTROL Confirm]**.
 
@@ -190,7 +189,7 @@ Utför följande steg på sidan ![Varumärkning](/help/assets/assets/ColorPalett
 
 1. Klicka på ![välj bild](/help/assets/assets/Browse.svg) **[!UICONTROL Select from gallery]** om du vill välja en banderollbild med dialogrutan för resursväljaren. Resursväljaren visar endast godkända bilder.
 1. Markera bilden, klicka på **[!UICONTROL Select]** och sedan på **[!UICONTROL Save]** för att visa den som en banderollbild för din [!DNL Content Hub]-distribution.
-   ![banderollbild](/help/assets/assets/banner-image-content-hub.png)
+   ![banderollbild](/help/assets/assets/banner-image-content-hub1.png)
 
 #### Lägg till rubrik och brödtext i bannern och ändra textfärgen{#Add-title-and-body-text-to-your-banner-and-change-the-text-color}
 
@@ -201,7 +200,7 @@ Klicka på den fyrkantiga rutan bredvid **[!UICONTROL Banner text color]** om du
 #### Ändra primär- och sekundärfärg{#Change-the-primary-and-secondary-color}
 
 På sidan ![Varumärkning](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du avsnittet **[!UICONTROL Colors]** för att ange primära och sekundära färger genom att antingen välja dem med färgväljaren eller definiera färgens hexadecimala kod. De här färgerna anger bakgrund, text och ikonfärger för gränssnittselement så att användargränssnittet i [!DNL Content Hub] anpassas efter ditt varumärkes tema.
-![primär och sekundär färg](/help/assets/assets/primary-secondary-color-content-hub.png)
+![primär och sekundär färg](/help/assets/assets/primary-secondary-color-content-hub1.png)
 **[!UICONTROL Primary color]:** Det primära färgschemat används för markeringsåtgärder, interaktiva element som kryssrutor, sökfält och växlingsknappar över [!DNL Content Hub] inklusive [!DNL Content Hub] startsida och [!UICONTROL Configuration] -sida. Det gäller även åtgärdsalternativ som är tillgängliga på primära [!DNL Content Hub]-gränssnitt, till exempel alternativ som är tillgängliga på **[!UICONTROL All Assets]**- och **[!UICONTROL Collections]**-sidor.
 
 **[!UICONTROL Secondary color]:** På hemsidan [!DNL Content Hub] gäller det sekundära färgschemat för gränssnittsalternativ och inmatningsfält som är tillgängliga i dialogrutor. Det gäller för alla alternativ på konfigurationsmenyn som är tillgängliga på sidan [!UICONTROL Configuration] förutom markeringsåtgärder, kryssrutor, sökfält och växlingsreglage.
@@ -214,15 +213,15 @@ Utgångna mediefiler visas inte i Content Hub som standard.
 
 Gör så här:
 
-1. Klicka på **[!UICONTROL Asset Visibility]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Asset Visibility]**.
 
-1. Aktivera alternativet **[!UICONTROL Allow users to view expired assets]** i avsnittet **[!UICONTROL Visible]** för att göra alla förfallna resurser synliga på Content Hub.
+1. Aktivera alternativet **[!UICONTROL Visible]** i avsnittet **[!UICONTROL Allow users to view expired assets]** för att göra alla förfallna resurser synliga på Content Hub.
 
 1. När du har aktiverat synlighet för resurser kan du aktivera eller inaktivera möjligheten att hämta utgångna resurser med hjälp av växlingsknappen **[!UICONTROL Allow users to download expired assets]**.
 1. Aktivera växlingsknappen **[!UICONTROL Allow users to view assets approved for delivery]** för att visa alla resurser som har godkänts för leverans i Content Hub.
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
-   ![Utgångna resurser på Content Hub](assets/asset-visibility-content-hub.png)
+   ![Utgångna resurser på Content Hub](assets/asset-visibility-content-hub1.png)
 
 När du har aktiverat synlighet för resurser kan du visa de förfallna resurserna på Content Hub, enligt bilden nedan:
 
@@ -234,17 +233,17 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 ### Återgivningar {#renditions-content-hub}
 
-Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
 Gör så här:
 
-Klicka på **[!UICONTROL Renditions]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub). Följande alternativ är tillgängliga:
+Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Renditions]**. Följande alternativ är tillgängliga:
 
 * Aktivera växlingsknappen [!UICONTROL Enable availability of renditions] för att göra alla återgivningar synliga på Content Hub.
 
 * Aktivera eller inaktivera **[!UICONTROL Allow users to download original assets]** för att kontrollera tillgängligheten för hämtning av originalresurser.
 
-  ![Konfigurera renderingar på Content Hub](assets/configuration-renditions.png)
+  ![Konfigurera renderingar på Content Hub](assets/configuration-renditions1.png)
 
 Mer information om hur du visar och hämtar återgivningar i Content Hub finns i [Hämta resurser i Content Hub](/help/assets/download-assets-content-hub.md).
 
@@ -252,7 +251,7 @@ Mer information om hur du visar och hämtar återgivningar i Content Hub finns i
 
 Du kan även lägga till anpassade flikar utöver standardflikarna **[!UICONTROL All Assets]**, **[!UICONTROL Collections]** och **[!UICONTROL Insights]** på Content Hub-portalen precis nedanför banderollen. Gör så här:
 
-1. Klicka på **[!UICONTROL Custom Links]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Custom Links]**.
 
 1. Klicka på **[!UICONTROL Add link]**.
 
@@ -263,7 +262,7 @@ Du kan även lägga till anpassade flikar utöver standardflikarna **[!UICONTROL
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
 På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg), som finns bredvid varje URL, om du vill redigera länkarna eller klicka på ikonen Ta bort om du vill ta bort en befintlig URL. Klicka på **[!UICONTROL Save]** när du har gjort alla ändringar för att tillämpa ändringarna.
-![Anpassade länkar i konfigurationsgränssnittet på Content Hub](assets/configuration-custom-links.png)
+![Anpassade länkar i konfigurationsgränssnittet på Content Hub](assets/configuration-custom-links1.png)
 
 Den anpassade länken visas som en ny flik bredvid fliken Insikter på Content Hub hemsida.
 ![Anpassade länkar i konfigurationsgränssnittet på Content Hub](assets/configuration-ui-custom-link-tab.png)
@@ -272,7 +271,7 @@ Den anpassade länken visas som en ny flik bredvid fliken Insikter på Content H
 
 Administratörer kan definiera användarbehörigheter när de skapar samlingar. Så här aktiverar du de här inställningarna:
 
-1. Klicka på **[!UICONTROL Collections]** i användargränssnittet för [konfigurationer](#access-configuration-options-content-hub).
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Collections]**.
 
 1. Aktivera växlingsknappen **[!UICONTROL Enable Public Link]** för att tillåta att offentliga länkar skapas som externa användare kan använda för att komma åt och hämta resurser utan att logga in på Content Hub.
 
@@ -282,7 +281,7 @@ Administratörer kan definiera användarbehörigheter när de skapar samlingar. 
 
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
-   ![Fliken Konfigurationssamlingar i Content Hub](assets/collections-and-sharing.png)
+   ![Fliken Konfigurationssamlingar i Content Hub](assets/collections-and-sharing1.png)
 
 <!--
 ### Enable public link sharing {#enable-public-link-sharing}
