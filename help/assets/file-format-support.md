@@ -37,8 +37,8 @@ I följande förklaring beskrivs stödnivån för varje format.
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Manager Assets] har bara stöd för de filformat som anges i den här artikeln.
->>Vissa funktioner verkar fungera med andra format, men dessa format stöds inte officiellt. Resultatet kan vara inkonsekvent och funktionerna kanske inte fungerar som förväntat.
->>Använd endast de format som stöds för att få enhetliga och tillförlitliga resultat.
+>&#x200B;>Vissa funktioner verkar fungera med andra format, men dessa format stöds inte officiellt. Resultatet kan vara inkonsekvent och funktionerna kanske inte fungerar som förväntat.
+>&#x200B;>Använd endast de format som stöds för att få enhetliga och tillförlitliga resultat.
 
 ## Adobe-format {#adobe-formats}
 
