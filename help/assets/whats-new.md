@@ -3,9 +3,9 @@ title: Nyheter i Content Hub
 description: Läs mer om några av de nya Content Hub-funktionerna
 role: User
 exl-id: 77a5c54c-bbc5-4dfb-9c3a-aa0620e836d0
-source-git-commit: a573f0deec4ca4e9502c2170b22b0dec68fc291e
+source-git-commit: 9d706fcaf0014ec5a719e52d37a563f222d760d0
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 * Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
 
-[!BADGE Läs mer]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control"}
 
 ## Gränssnittsmärkning {#ui-branding}
 
@@ -58,7 +58,7 @@ Nu kan administratörer anpassa användargränssnittet med varumärkesspecifika 
 
 ![Gränssnittsmärkning](/help/assets/assets/content-hub-ui-branding.png)
 
-[!BADGE Läs mer]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/configure-content-hub-ui-options#configure-branding-content-hub"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/configure-content-hub-ui-options#configure-branding-content-hub"}
 
 ## Delning av offentlig länk {#public-link-sharing}
 
@@ -66,7 +66,7 @@ Content Hub har nu stöd för att generera delningsbara länkar så att externa 
 
 ![Gränssnittsmärkning](/help/assets/assets/public-and-private-link.png)
 
-[!BADGE Läs mer]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/share-assets-content-hub"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/share-assets-content-hub"}
 
 ## Samlingsstyrning {#collections-governance}
 
@@ -74,7 +74,7 @@ Med Content Hub kan du nu styra åtkomsten till samlingar när du skapar dem, s�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3463336)
 
-[!BADGE Läs mer]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/collections-content-hub#create-collections"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/collections-content-hub#create-collections"}
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Med Content Hub kan du nu styra åtkomsten till samlingar när du skapar dem, s�
 
 Nu kan du även ladda ned de markerade resurserna och deras återgivningar i en ZIP-fil och inte som separata filer, vilket förenklar filhanteringen.
 
-[!BADGE Läs mer]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
 
 ## Dynamic Media-renderingar i Content Hub {#dynamic-media-renditions}
 
@@ -92,4 +92,4 @@ Få tillgång till alla förinställda renderingar och smarta beskärningar för
 
 &#x200B;![Dynamiska medierenderingar](/help/assets/assets/dm-renditions-content-hub.png)
 
-[!BADGE Läs mer]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
