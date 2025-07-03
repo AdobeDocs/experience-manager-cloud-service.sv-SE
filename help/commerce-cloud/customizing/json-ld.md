@@ -23,8 +23,8 @@ Den här guiden förklarar hur du aktiverar och verifierar JSON+LD-funktionen i 
 ## Aktivera JSON+LD i CIF-konfiguration {#enabling}
 
 Som standard är kryssrutan **Aktivera JSON+LD** inte synlig i CIF-konfigurationen. Om du vill aktivera den här funktionen måste projektet innehålla den nödvändiga OSGi-konfigurationen, som gör att kryssrutan kan visas. Den här konfigurationen gör att användare kan växla stöd för JSON+LD-skript på produktsidor.
-Om du vill göra kryssrutan **Aktivera JSON+LD** tillgänglig i CIF-konfigurationen lägger du till följande OSGi-konfiguration i ditt projekt: `
-com.adobe.cq.cif.components.models.JsonLdFeatureEnable`.
+Om du vill göra kryssrutan **Aktivera JSON+LD** tillgänglig i CIF-konfigurationen lägger du till följande OSGi-konfiguration i ditt projekt: &grave;
+com.adobe.cq.cif.components.models.JsonLdFeatureEnable&grave;.
 Mer information om hur du lägger till den här konfigurationen finns i [Lägger till konfiguration för Json-Ld](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.cif.components.models.JsonLdFeatureEnable.cfg.json) i databasen för offentliga aem-cif-guides-venia.
 
 När den här konfigurationen har lagts till och distribuerats visas kryssrutan i CIF konfigurationsinställningar och här är de steg som krävs för att aktivera **JSON+LD**:

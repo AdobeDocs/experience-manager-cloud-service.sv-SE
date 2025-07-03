@@ -346,7 +346,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
 
 Återgå till utvecklingsmiljön och det genererade projektet.
 
-1. Öppna filen **** igen i modulen `_productteaser.scss`ui.front`ui.frontend/src/main/styles/commerce/_productteaser.scss`.
+1. Öppna filen **&#x200B;**&#x200B;igen i modulen `_productteaser.scss`ui.front`ui.frontend/src/main/styles/commerce/_productteaser.scss`.
 
 1. Gör följande ändringar i Product Teaser-gränsen:
 
