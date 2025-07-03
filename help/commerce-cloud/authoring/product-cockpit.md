@@ -4,7 +4,8 @@ description: Lär dig hur du arbetar med Product Cockpit, som ger en enhetlig ö
 exl-id: 6dbf039c-e040-48f1-88f3-ebbd70cdf94d
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -25,9 +26,9 @@ Mellanlagrade produktdata inkluderar eventuell mutation i framtiden, t.ex. nya k
 
 ## Konfiguration {#configuration}
 
-Produktkataloger måste konfigureras i AEM. Mer information finns i [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html?lang=sv-SE#catalog).
+Produktkataloger måste konfigureras i AEM. Mer information finns i [konfigurera butik och kataloger](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html#catalog).
 
-Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html?lang=sv-SE).
+Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html).
 
 >[!NOTE]
 >
@@ -35,7 +36,7 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer informa
 
 ## Öppnar produktdockan {#opening-product-cockpit}
 
-Det enklaste sättet att komma åt produktdockan är via menyn Commerce AEM huvudmenyn. Det går också att använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
+Det enklaste sättet att komma åt produktdockan är via Commerce-menyn i AEM huvudmeny. Det går också att använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
 
 ![AEM-menyn](../assets/aem-menu.png)
 
@@ -79,8 +80,8 @@ På flikarna Allmänt och Variant visas fördefinierade handelsegenskaper som ko
 
 ![katalogegenskaper](../assets/catalog-properties.png)
 
-### AEM innehållsflikar {#content-tabs}
+### AEM Content Tabs {#content-tabs}
 
-Dessa flikar, grupperade efter AEM (Experience Fragments, Content Fragments, Associated Assets), visar AEM innehåll som är associerat med handelsobjektet. Åtgärden Visa detaljer öppnar en ny webbläsarflik med det valda innehållet.
+Dessa flikar, grupperade efter AEM innehållstyper (Experience Fragments, Content Fragments, Associated Assets), visar AEM-innehåll som är associerat med handelsobjektet. Åtgärden Visa detaljer öppnar en ny webbläsarflik med det valda innehållet.
 
 ![innehållsegenskaper](../assets/content-properties.png)

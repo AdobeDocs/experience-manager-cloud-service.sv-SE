@@ -1,24 +1,25 @@
 ---
-title: '[!DNL Live Search] CIF-komponent'
-description: Använda CIF komponenter för att aktivera  [!DNL Live Search] komponenten Popover på en AEM plats
+title: Komponenten [!DNL Live Search] för att posta CIF
+description: Använda CIF-komponenter för att aktivera  [!DNL Live Search] komponenten Popover på en AEM-webbplats
 exl-id: 9dac6693-fe87-4a47-a920-2cf788933499
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
-# [!DNL Live Search] CIF-komponent {#live-search-popover}
+# [!DNL Live Search] posta CIF-komponent {#live-search-popover}
 
 [!DNL Live Search]-porten är det element som innehåller [!DNL Live Search]-resultaten när du skriver i sökfältet.
-I det här avsnittet beskrivs hur du integrerar den här komponenten i din AEM.
+I det här avsnittet beskrivs hur du integrerar den här komponenten i din AEM-webbplats.
 
 ## Filstruktur {#file-strucure}
 
-Om du vill aktivera CIF måste filerna redigeras och skapas.
+Om du vill aktivera CIF-komponenten måste filerna redigeras och skapas.
 
 * ui.apps/src/main/content/jcr_root/apps/venia/components/commerce/searchbar/clientlibs/.content.xml
 

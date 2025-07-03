@@ -4,7 +4,8 @@ description: Lär dig hur du hanterar produktkatalogsidor och mallar
 exl-id: 0d795d85-c865-40d5-941e-e02ee96fdd11
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 0%
@@ -17,7 +18,7 @@ Lär dig hur du hanterar produktkatalogsidor och mallar.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet på redigeringsresan för AEM och Commerce, [Komma igång med AEM CIF ](getting-started.md) , lärde du dig grunderna i CIF.
+I det föregående dokumentet på redigeringsresan för AEM Content och Commerce, [Komma igång med grunderna i AEM CIF](getting-started.md), lärde du dig grunderna i CIF.
 
 Den här artikeln bygger på dessa grunder.
 
@@ -33,7 +34,7 @@ Det här dokumentet hjälper dig att förstå hur du hanterar produktkatalogsido
 
 Venia storefront har en typisk produktkatalogsupplevelse med navigering, landning, kategori (PLP) och produktinformationssidor (PDP).
 
-Katalogsidor skapas dynamiskt med en AEM CIF katalogmall och produktdata i realtid som hämtas från e-handelsslutpunkten vid behov. Varje katalog har en allmän mall för produkt- och kategorisidor.
+Katalogsidor byggs dynamiskt med en AEM CIF-katalogmall och produktdata i realtid som hämtas från e-handelsslutpunkten vid behov. Varje katalog har en allmän mall för produkt- och kategorisidor.
 ![katalogstruktur](assets/catalog-structure.png)
 
 Navigeringskomponenten visar innehåll och katalogsidor. Det går att visa antingen kataloglandningssidan eller kategorierna på första nivån i navigeringen. Om du placerar pekaren över en kategori visas kategorier på andra nivån som en andra rad.
@@ -109,11 +110,11 @@ Nu när du är klar med den här delen av resan bör du:
 * hur generiska mallar fungerar
 * har skapat en enskild mall
 
-Bygg vidare på den här kunskapen och fortsätt din resa genom att gå igenom dokumentet [Hantera testade produktkataloger](staged-catalog.md) där du får lära dig hur du arbetar med testade produktdata och AEM.
+Bygg vidare på den här kunskapen och fortsätt din resa genom att gå igenom dokumentet [Hantera testade produktkataloger](staged-catalog.md) där du får lära dig hur du arbetar med testade produktdata och AEM Launches.
 
 ## Ytterligare resurser {#additional-resources}
 
 Vi rekommenderar att du går vidare till nästa del av resan genom att granska dokumentet [Hantera upplevelser i den mellanlagrade produktkatalogen](staged-catalog.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den vanliga resan:
 
 * [Skapa flera kategori- och produktsidor](/help/commerce-cloud/authoring/multi-template-usage.md)
-* [Migreringsguide för Experience Manager Cloud Servicen](/help/commerce-cloud/migration.md) - Så här migrerar du till AEM Commerce integration framework (CIF)-tillägget från en gammal version
+* [Migreringsguide för Experience Manager Cloud Service](/help/commerce-cloud/migration.md) - Så här migrerar du till tillägget AEM Commerce integration framework (CIF) från en gammal version

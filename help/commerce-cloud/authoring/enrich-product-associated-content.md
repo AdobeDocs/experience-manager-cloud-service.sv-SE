@@ -11,7 +11,8 @@ kt: 7065
 thumbnail: 333205.jpg
 exl-id: d0062779-7e90-4f09-8878-eded877580ef
 role: Admin
-source-git-commit: 1bd36e584d956c5ae8da7b1d618e155da86a74f5
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 0%
@@ -24,7 +25,7 @@ Läs om hur marknadsförare kan förbättra produktdata med tillhörande innehå
 
 ## Digital Assets {#digital-assets}
 
->[!VIDEO](https://video.tv.adobe.com/v/3447313/?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/339121/?quality=12&learn=on)
 
 Digitala resurser kan kopplas till en eller flera produkt-SKU:er. När den är kopplad kan den digitala resursen identifieras med nyckelordssökningar som baseras på SKU:n. Materialet visas automatiskt som tillhörande innehåll när du redigerar en sida som innehåller den relevanta produkten, vilket gör det ännu enklare att skapa nästa digitala upplevelse.
 
@@ -36,7 +37,7 @@ Experience Fragments är en funktion i Adobe Experience Manager som gör att en 
 
 ## Innehållsfragment {#content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/3452161/?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/339182/?quality=12&learn=on)
 
 Innehållsfragment är en funktion i Adobe Experience Manager som gör att en marknadsförare kan skapa **strukturerat** återanvändbart innehåll. Innehållsfragment kan kopplas till en produkt-SKU eller ett katalog-id. När de är kopplade kan marknadsförarna enkelt identifiera relaterade fragment baserat på produkter som visas på en sida. Innehållsfragment kan också inkluderas dynamiskt på en produktkatalogsida med hjälp av en platshållare och association.
 

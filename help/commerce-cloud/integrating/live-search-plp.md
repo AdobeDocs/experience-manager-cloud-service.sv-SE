@@ -1,27 +1,28 @@
 ---
-title: '[!DNL Live Search] CIF på produktlistsida'
-description: Använda CIF komponenter för att aktivera  [!DNL Live Search] produktlistsidkomponenten på en AEM webbplats
+title: CIF-komponent för [!DNL Live Search] produktlistsida
+description: Använda CIF-komponenter för att aktivera  [!DNL Live Search] produktlistsidkomponenten på en AEM-webbplats
 exl-id: 7f2d9a43-a7cb-4d9d-a108-b016cd1ff81e
 feature: Commerce Integration Framework
 role: Admin
-source-git-commit: 0e328d013f3c5b9b965010e4e410b6fda2de042e
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
 
 ---
 
-# CIF [!DNL Live Search] {#live-search-cif-component}
+# [!DNL Live Search] CIF-komponent {#live-search-cif-component}
 
 Live Search för Adobe Commerce ger en snabb, relevant och intuitiv sökupplevelse utan extra kostnad. Live Search som drivs av Adobe Sensei använder artificiell intelligens och maskininlärningsalgoritmer för att göra en djupgående analys av samlade besöksdata. När dessa data kombineras med din Adobe Commerce-katalog skapas en relevant och personaliserad shoppingupplevelse.
 
-I det här avsnittet beskrivs hur du använder en AEM CIF-komponent för att implementera PLP-widgeten ([!DNL Live Search] Product Listing Page) på din AEM.
+I det här avsnittet beskrivs hur du använder en AEM CIF-komponent för att implementera PLP-widgeten (Product Listing Page) för [!DNL Live Search] på din AEM-webbplats.
 
 ## Förutsättningar {#prerequisites}
 
-Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=sv-SE).
+Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
-PLP-komponenten kräver att komponenten [[!DNL Live Search] CIF](live-search-popover.md) är installerad. PLP-widgeten kräver en webbläsarsessionsvariabel som genereras av povern.
+PLP-komponenten kräver att [[!DNL Live Search] PowerCIF-komponenten](live-search-popover.md) är installerad. PLP-widgeten kräver en webbläsarsessionsvariabel som genereras av povern.
 
 ## Uppdatera disposition {#update-composer}
 

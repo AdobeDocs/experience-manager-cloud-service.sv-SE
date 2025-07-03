@@ -1,16 +1,18 @@
 ---
-title: Anpassade attribut till CIF produktCarousel
-description: Lär dig hur du utökar AEM produktCarousel-komponenten genom att uppdatera Sling-modellen och anpassa koden.
+title: Anpassade attribut till CIF Product Carousel
+description: Lär dig hur du utökar AEM CIF Product Carousel-komponenten genom att uppdatera Sling Model och anpassa koden.
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 594f0e6ec88851c86134be8d5d7f1719f74ddf4f
+exl-id: 758e0e13-c4d8-4d32-bcc9-91a36b3ffa98
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%
 
 ---
 
-# Anpassade attribut till CIF produktCarousel {#product-carousel}
+# Anpassade attribut till CIF Product Carousel {#product-carousel}
 
 ## Introduktion {#intro}
 
@@ -30,7 +32,7 @@ Produktkarusellkomponenten utökas genom hela kursen. Som ett första steg lägg
 
 Du kan utöka affärslogiken i Product Carousel genom att implementera en Sling-modell:
 
-1. I din IDE navigerar du under kärnmodulen till `core/src/main/java/com/venia/core/models/commerce` och skapar ett CustomCarousel-gränssnitt som utökar CIF ProductCarousel-gränssnitt:
+1. I din IDE navigerar du under kärnmodulen till `core/src/main/java/com/venia/core/models/commerce` och skapar ett CustomCarousel-gränssnitt som utökar CIF ProductCarousel-gränssnittet:
 
    ```
    package com.venia.core.models.commerce;
@@ -38,7 +40,6 @@ Du kan utöka affärslogiken i Product Carousel genom att implementera en Sling-
    public interface CustomCarousel extends ProductCarousel {
    }
    ```
-
 1. Skapa sedan en implementeringsklass `CustomCarouselImpl.java` vid `core/src/main/java/com/venia/core/models/commerce/CustomCarouselImpl.java`.
 Delegeringsmönstret för delningsmodeller gör att `CustomCarouselImpl` kan referera till `ProductCarousel`-modellen via egenskapen `sling:resourceSuperType`:
 

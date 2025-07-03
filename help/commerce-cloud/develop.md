@@ -9,7 +9,8 @@ kt: 5826
 thumbnail: 39476.jpg
 exl-id: 6f28a52b-52f8-4b30-95cd-0f9cb521de62
 role: Admin
-source-git-commit: 1bd36e584d956c5ae8da7b1d618e155da86a74f5
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '908'
 ht-degree: 2%
@@ -20,9 +21,9 @@ ht-degree: 2%
 
 Utveckla AEM Commerce-projekt, som bygger på Commerce integration framework (CIF) for AEM as a Cloud Service, följer samma regler och bästa praxis som andra AEM-projekt på AEM as a Cloud Service. Granska följande först:
 
-- [AEM-projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE)
-- [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE)
-- [Utvecklingsriktlinjer för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=sv-SE)
+- [AEM-projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html)
+- [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html)
+- [Utvecklingsriktlinjer för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html)
 
 ## Lokal utveckling med AEM as a Cloud Service SDK {#local}
 
@@ -32,13 +33,13 @@ En lokal utvecklingsmiljö rekommenderas för CIF-projekt. CIF Add-On för AEM a
 
 CIF Add-On finns som arkiv för Sling Feature. ZIP-filen som finns på Software Distribution Portal innehåller två Sling Feature-arkivfiler, en för AEM-författare och en för AEM publiceringsinstanser.
 
-**Ny på AEM as a Cloud Service?** [En mer detaljerad guide till hur du konfigurerar en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE).
+**Ny på AEM as a Cloud Service?** [En mer detaljerad guide till hur du konfigurerar en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
 ### Nödvändig programvara
 
 Följande bör installeras lokalt:
 
-- [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=sv-SE#download-the-aem-as-a-cloud-service-sdk)
+- [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk)
 - [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 - [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
 - [Node.js v10+](https://nodejs.org/en)
@@ -85,7 +86,7 @@ Så här utvecklar du CIF Add-on lokalt med AEM as a Cloud Service SDK:
 
    Den här variabeln används av AEM för att ansluta till ditt handelssystem. CIF-tillägget innehåller också en lokal omvänd proxy som gör Commerce GraphQL-slutpunkten tillgänglig lokalt. Den här proxyn används av CIF utvecklingsverktyg (produktkonsol och väljare) och för CIF klientkomponenter som gör direkta GraphQL-anrop.
 
-   Den här variabeln måste även ställas in för AEM as a Cloud Service-miljön. Mer information om variabler finns i [Konfigurera OSGi för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#local-development).
+   Den här variabeln måste även ställas in för AEM as a Cloud Service-miljön. Mer information om variabler finns i [Konfigurera OSGi för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#local-development).
 
 1. (Valfritt) Om du vill aktivera funktioner för mellanlagrade kataloger måste du skapa en integreringstoken för din Adobe Commerce-instans. Skapa token genom att följa stegen på [Komma igång](./getting-started.md#staging).
 
@@ -95,7 +96,7 @@ Så här utvecklar du CIF Add-on lokalt med AEM as a Cloud Service SDK:
    Authorization: Bearer <Access Token>
    ```
 
-   Mer information om hemligheter finns i [Konfigurera OSGi för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#local-development).
+   Mer information om hemligheter finns i [Konfigurera OSGi för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#local-development).
 
 1. Starta AEM as a Cloud Service SDK
 

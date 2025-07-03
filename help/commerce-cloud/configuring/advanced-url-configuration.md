@@ -11,7 +11,8 @@ kt: 4933
 thumbnail: 34350.jpg
 exl-id: 314494c4-21a9-4494-9ecb-498c766cfde7
 role: Admin
-source-git-commit: 1bd36e584d956c5ae8da7b1d618e155da86a74f5
+index: false
+source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
 workflow-type: tm+mt
 source-wordcount: '2059'
 ht-degree: 0%
@@ -22,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager (AEM) as a Cloud Service. Mer information finns i [Bästa metoder för SEO- och URL-hantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=sv-SE).
+> Sökmotoroptimering (SEO) har blivit en viktig fråga för många marknadsförare. Därför måste SEO-frågor behandlas i många projekt på Adobe Experience Manager (AEM) as a Cloud Service. Mer information finns i [Bästa metoder för SEO- och URL-hantering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html).
 
 [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) innehåller avancerade konfigurationer för att anpassa URL:er för produkt- och kategorisidor. Många implementeringar anpassar dessa URL:er för sökmotoroptimering (SEO). Följande video visar hur du konfigurerar tjänsten `UrlProvider` och funktionerna i [Sling Mapping](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) för att anpassa URL:er för produkt- och kategorisidor.
 
@@ -223,15 +224,15 @@ URL-omskrivningar kan också göras med hjälp av AEM Dispatcher HTTP-server med
 
 Som vi nämnt innan du väljer ett av de tillgängliga standardformaten, eller till och med implementerar ett anpassat format, beror i hög grad på butikens behov och krav. Följande förslag kan hjälpa dig att fatta ett väl underbyggt beslut.
 
-_&#x200B;**Använd ett URL-format för en produktsida som innehåller SKU:n.**&#x200B;_
+_**Använd ett URL-format för en produktsida som innehåller SKU:n.**_
 
 CIF Core Components använder SKU:n som primär identifierare i alla komponenter. Om produktsidans URL-format inte innehåller SKU:n måste du ha en GraphQL-fråga för att kunna lösa det. Den här upplösningen kan påverka tiden till första byten. Det kan också vara önskvärt att kunderna kan hitta produkter genom SKU med sökmotorer.
 
-_&#x200B;**Använd ett URL-format för en produktsida som innehåller kategorikontexten.**&#x200B;_
+_**Använd ett URL-format för en produktsida som innehåller kategorikontexten.**_
 
 Vissa funktioner i CIF URL Provider är bara tillgängliga när du använder produkts-URL-format, som kodar kategorikontexten, till exempel kategorin `url_key` eller kategorin `url_path`. Även om dessa funktioner kanske inte behövs för en ny butik kan du minska migreringsansträngningarna i framtiden genom att använda något av de här URL-formaten i början.
 
-_&#x200B;**Balans mellan URL-längd och kodad information.**&#x200B;_
+_**Balans mellan URL-längd och kodad information.**_
 
 Beroende på katalogstorleken, särskilt kategoriträdets storlek och djup, är det inte säkert att det går att koda hela `url_path` kategorier till URL:en. I så fall kan URL-längden minskas genom att endast kategorins `url_key` inkluderas i stället. Den här metoden stöder de flesta av de funktioner som är tillgängliga när du använder kategorin `url_path`.
 
@@ -256,5 +257,5 @@ Projektet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia) 
 ## Ytterligare resurser {#additional}
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM-resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html?lang=sv-SE)
+* [AEM-resursmappning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/resource-mapping.html)
 * [Kopplingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)
