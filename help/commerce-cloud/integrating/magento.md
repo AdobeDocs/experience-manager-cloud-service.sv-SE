@@ -55,5 +55,5 @@ I projekt kan AEM CIF Core Components och anpassade projektkomponenter enkelt h�
 
 ## Sök {#search}
 
-CIF tillhandahåller en [sökkärnkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/commerce/search.html) som är en renderad sökupplevelse på serversidan som baseras på [Commerce GraphQL API](https://developer.adobe.com/commerce/webapi/graphql/). Commerce-kunder kan använda [Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html?lang=en) i stället. Följ den här [länken](/help/commerce-cloud/integrating/live-search-plp.md) om du vill veta mer om integrationen mellan CIF - Live Search.
+CIF tillhandahåller en [sökkärnkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/commerce/search.html) som är en renderad sökupplevelse på serversidan som baseras på [Commerce GraphQL API](https://developer.adobe.com/commerce/webapi/graphql/). Commerce-kunder kan använda [Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html?lang=sv-SE) i stället. Följ den här [länken](/help/commerce-cloud/integrating/live-search-plp.md) om du vill veta mer om integrationen mellan CIF - Live Search.
 

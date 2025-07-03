@@ -20,7 +20,7 @@ I det här avsnittet beskrivs hur du använder en AEM CIF-komponent för att imp
 
 ## Förutsättningar {#prerequisites}
 
-Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=sv-SE).
 
 PLP-komponenten kräver att [[!DNL Live Search] PowerCIF-komponenten](live-search-popover.md) är installerad. PLP-widgeten kräver en webbläsarsessionsvariabel som genereras av povern.
 
