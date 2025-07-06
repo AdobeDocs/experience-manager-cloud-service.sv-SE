@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 080a79cdc0e48a54570ea53618b1f0be164d5156
+source-git-commit: 26c42152bdebc069dd60cc4f5f070276eb1a1f46
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1780'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 21331, som offentliggjordes den 24 juni 2025. Den tidigare underhållsutgåvan släpptes 21193.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21331}
 
@@ -147,6 +147,7 @@ Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns
 ### Kända fel {#known-issues-21331}
 
 * SITES-33177: Avsnittsformat som lagras som kommaseparerade strängar bryts.
+* SITES-33262: Blocks utan name-egenskap misslyckas med sidåtergivning och publicering.
 
 ### Föråldrade funktioner och API:er {#deprecated-21331}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du återställer AEM as a Cloud Service-innehåll frå
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
 feature: Operations
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: fee4921b7087fd64b2f65b086998aedde8aaafb0
 workflow-type: tm+mt
-source-wordcount: '1338'
+source-wordcount: '1339'
 ht-degree: 0%
 
 ---
@@ -18,16 +18,16 @@ Lär dig hur du återställer AEM as a Cloud Service-innehåll från en säkerhe
 
 ## Ökning {#overview}
 
-Cloud Manager självbetjäningsprocess för återställning kopierar data från Adobe-säkerhetskopiering och återställer dem till den ursprungliga miljön. En återställning utförs för att returnera data som har gått förlorade, skadats eller tagits bort av misstag till det ursprungliga tillståndet.
+Cloud Manager självbetjäningsprocess för återställning kopierar data från Adobe systemsäkerhetskopieringar och återställer dem till den ursprungliga miljön. En återställning utförs för att returnera data som har gått förlorade, skadats eller tagits bort av misstag till det ursprungliga tillståndet.
 
-Återställningsprocessen påverkar bara innehållet, så att koden och versionen av AEM inte ändras. Du kan initiera en återställning av enskilda miljöer när som helst.
+Återställningsprocessen påverkar bara innehållet, så koden och versionen av AEM ändras inte. Du kan initiera en återställning av enskilda miljöer när som helst.
 
 I Cloud Manager finns det två typer av säkerhetskopior som du kan återställa innehåll från.
 
 * **PIT (Point-In-Time):** Den här typen återställer från kontinuerliga systemsäkerhetskopieringar från de senaste 24 timmarna från den aktuella tiden.
 * **Senaste veckan:** Den här typen återställer från systemsäkerhetskopieringar under de senaste sju dagarna, exklusive de föregående 24 timmarna.
 
-I båda fallen ändras inte versionen av den anpassade koden och AEM.
+I båda fallen ändras inte versionen av din anpassade kod och AEM-versionen.
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ Som standard har ingen användare behörighet att köra innehållsåterställnin
 
 1. Skapa en produktprofil med ett uttrycksfullt namn som refererar till innehållsåterställning.
 1. Ange behörighet för **programåtkomst** för det program som krävs.
-1. Ange behörigheten **Innehållsåterställning** i den miljö som krävs eller i alla miljöer i programmet, beroende på ditt användningssätt.
+1. Ange behörigheten **Miljöåterställning Skapa** i den miljö som krävs eller i alla miljöer i programmet, beroende på ditt användningssätt.
 1. Tilldela användare till den profilen.
 
 Mer information om hur du hanterar behörigheter finns i dokumentationen om [anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
@@ -93,7 +93,7 @@ Bestäm först tidsramen för innehållet som du vill återställa. Utför sedan
 
    ![Säkerhetskopior tillgängliga](assets/backup-available.png)
 
-1. Hitta den säkerhetskopia som du vill återställa genom att använda informationsikonen för att visa information om vilken version av koden och AEM som ingår i säkerhetskopian och ta hänsyn till konsekvenserna av en återställning när du [väljer säkerhetskopian](#choosing-the-right-backup).
+1. Hitta den säkerhetskopia som du vill återställa genom att använda informationsikonen för att visa information om vilken version av koden och AEM-versionen som ingår i säkerhetskopian och ta hänsyn till konsekvenserna av en återställning när du [väljer säkerhetskopian](#choosing-the-right-backup).
 
    ![Säkerhetskopieringsinformation](assets/backup-info.png)
 
@@ -114,7 +114,7 @@ När återställningen har slutförts kommer miljön att:
 
 ## Välja rätt säkerhetskopia {#choosing-backup}
 
-Cloud Manager självbetjäningsåterställning återställer bara innehåll till AEM. Därför måste du noga överväga kodändringar som gjorts mellan den önskade återställningspunkten och den aktuella tidpunkten genom att granska implementeringshistoriken mellan det aktuella implementerings-ID:t och det som återställs.
+Cloud Manager självbetjäningsåterställning återställer endast innehåll till AEM. Därför måste du noga överväga kodändringar som gjorts mellan den önskade återställningspunkten och den aktuella tidpunkten genom att granska implementeringshistoriken mellan det aktuella implementerings-ID:t och det som återställs.
 
 Det finns flera scenarier.
 
@@ -136,11 +136,11 @@ Genom att klicka på informationsikonen för en säkerhetskopia kan du hämta lo
 
 ## Säkerhetskopiering offline {#offsite-backup}
 
-Regelbunden säkerhetskopiering täcker risken för oavsiktliga borttagningar eller tekniska fel inom AEM Cloud Service, men ytterligare risker kan uppstå om en region inte fungerar. Förutom tillgänglighet är den största risken i sådana regionala avbrott en dataförlust.
+Regelbunden säkerhetskopiering täcker risken för oavsiktliga borttagningar eller tekniska fel i AEM Cloud Services, men ytterligare risker kan uppstå om en region slutar fungera. Förutom tillgänglighet är den största risken i sådana regionala avbrott en dataförlust.
 
-AEM as a Cloud Service minskar denna risk för alla AEM produktionsmiljöer genom att kontinuerligt kopiera allt AEM innehåll till en fjärrregion och göra det tillgängligt för återställning under en period på tre månader. Den här funktionen kallas säkerhetskopiering på annan plats.
+AEM as a Cloud Service minskar denna risk för alla AEM produktionsmiljöer genom att kontinuerligt kopiera allt AEM-material till en fjärrregion och göra det tillgängligt för återställning under en period av tre månader. Den här funktionen kallas säkerhetskopiering på annan plats.
 
-Återställandet av AEM Cloud Service för mellanlagrings- och produktionsmiljöer från externa säkerhetskopieringar utförs av AEM Service Reliable Engineering i händelse av dataavbrott i dataområden.
+Återställningen av AEM Cloud Services för mellanlagrings- och produktionsmiljöer från externa säkerhetskopieringar utförs av AEM servicesäkerhetsteknisk konstruktion i händelse av dataavbrott i dataområden.
 
 ## Begränsningar {#limitations}
 
