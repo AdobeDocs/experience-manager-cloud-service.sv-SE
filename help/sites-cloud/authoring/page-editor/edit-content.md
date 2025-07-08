@@ -1,20 +1,20 @@
 ---
-title: Redigera sidinnehåll med AEM sidredigeraren
-description: Den AEM sidredigeraren är ett kraftfullt verktyg för att skapa innehåll.
+title: Redigera sidinnehåll med AEM Page Editor
+description: AEM sidredigerare är ett kraftfullt verktyg för att skapa innehåll.
 exl-id: eacfda02-ff53-42ed-b5b2-88be3879a5e9
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 9a798be41cb3bcf08b6841d236379bf861ff5510
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1628'
 ht-degree: 2%
 
 ---
 
-# Redigera sidinnehåll med AEM sidredigeraren {#edit-content}
+# Redigera sidinnehåll med AEM Page Editor {#edit-content}
 
-Den AEM sidredigeraren är ett kraftfullt verktyg för att skapa en sidas innehåll. Lär dig hur du använder den för att dra och släppa innehåll och redigera innehåll på plats.
+AEM sidredigerare är ett kraftfullt verktyg för att skapa en sidas innehåll. Lär dig hur du använder den för att dra och släppa innehåll och redigera innehåll på plats.
 
 ## Ökning {#overview}
 
@@ -24,13 +24,17 @@ Det finns tre grundläggande åtgärder som du kan utföra i sidredigeraren för
 1. [Lägger till nya resurser](#adding-asset) genom att dra och släppa dem på sidan.
 1. [Redigerar komponenter på plats](#edit-in-place) som redan finns på sidan.
 
-Den AEM sidredigeraren har ett intuitivt användargränssnitt för att utföra dessa uppgifter samt ger åtkomst till mer avancerade funktioner.
+AEM sidredigerare har ett intuitivt användargränssnitt för att utföra dessa uppgifter samt ger åtkomst till mer avancerade funktioner.
 
 Dessutom kan du ordna det befintliga innehållet på sidan genom att låta dig
 
 * [Flytta komponenter](#moving-components)
 * [Redigera komponentlayout](#editing-component-layout)
 * [Redigera komponentarv](#inherited-components)
+
+>[!NOTE]
+>
+>Ditt projektteam kan anpassa redigeraren om det behövs. Mer information finns i [Anpassa sidredigering](/help/implementing/developing/extending/page-authoring.md).
 
 ## Lägga till komponenter {#adding-components}
 
