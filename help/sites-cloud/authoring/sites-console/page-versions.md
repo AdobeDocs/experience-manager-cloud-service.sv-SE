@@ -5,9 +5,9 @@ exl-id: 33d8e43c-594d-4bba-9631-b2c42a1e910f
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: b39c455c9bd4b50eb3777cd1a4bdbada48786d62
+source-git-commit: ebbf38563be65c28384276f7a0baa100f9f384b2
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1620'
 ht-degree: 2%
 
 ---
@@ -202,10 +202,6 @@ Så här jämför du en tidigare version med den aktuella sidan:
 
 Timewarp är en funktion som har utformats för att simulera en sidas *publicerade*-läge vid en viss tidpunkt.
 
->[!TIP]
->
->[Timewarp kan också användas med Launches (Starta) för att förhandsgranska framtiden](/help/sites-cloud/authoring/launches/preview.md).
-
 Eftersom framtagning av innehåll är en pågående och samarbetsorienterad process är syftet med Timewarp att tillåta författare att spåra den publicerade webbplatsen över tid så att de kan förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra publiceringsmiljöns tillstånd.
 
 Så här använder du funktionen:
@@ -214,6 +210,16 @@ Så här använder du funktionen:
 * Det betyder att den visade versionen skapades/aktiverades *före* den tidpunkt som valdes i Timewarp.
 * När du navigerar till en sida som har tagits bort återges den också, så länge som de gamla versionerna av sidan fortfarande är tillgängliga i databasen.
 * Om ingen publicerad version hittas återgår Timewarp till det aktuella läget för sidan i författarmiljön (orsaken är att förhindra ett fel/404-sida, vilket skulle förhindra bläddring).
+
+>[!NOTE]
+>
+>Timewarp fungerar och är avsett att användas för AEM-sidor - versioner för historik och starter för framtida innehållslägen.
+>
+>Det fungerar inte för kapslade starter eller när upplevelsefragment används.
+
+>[!TIP]
+>
+>[Timewarp kan också användas med Launches (Starta) för att förhandsgranska framtiden](/help/sites-cloud/authoring/launches/preview.md).
 
 ### Använda Timewarp {#using-timewarp}
 
@@ -240,6 +246,7 @@ Med Timewarp kan du göra ett bra försök att återskapa en sida vid en viss ti
 * **Borttagna versioner påverkar Timewarp** - Om versioner tas bort från databasen kan inte Timewarp visa rätt vy.
 * **Timewarp är skrivskyddat** - du kan inte redigera den gamla versionen av sidan. Det är bara tillgängligt för visning. Om du vill återställa den äldre versionen måste du göra det manuellt med [restore](#revert-to-a-version).
 * **Timewarp baseras på sidinnehåll** - Om element för återgivning av webbplatsen ändras, till exempel kod, CSS och resurser, skiljer sig vyn från den ursprungliga vyn. De objekten versionshanteras inte i databasen.
+* Timewarp fungerar inte för kapslade starter eller när upplevelsefragment används.
 
 >[!CAUTION]
 >
