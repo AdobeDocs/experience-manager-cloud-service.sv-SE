@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Komma igång med Forms på AEM Edge Delivery Services
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
 
 Den här guiden hjälper dig att förstå och implementera formulär med Adobe Experience Manager (AEM) Edge Delivery Services (EDS). Oavsett om du skapar ett enkelt kontaktformulär eller ett komplext datainsamlingsverktyg går du igenom alternativen på den här sidan.
 

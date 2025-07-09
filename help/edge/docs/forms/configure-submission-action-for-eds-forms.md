@@ -151,7 +151,7 @@ I det här diagrammet visas hur värdsidan hämtar HTML från Source och visar d
 
 ## Konfigurera CORS för inbäddad Forms
 
-[CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing) är en säkerhetsfunktion i webbläsaren. Om din värdsida (t.ex. `site-a.com`) försöker hämta ett formulär från en annan domän (t.ex. `forms-site-b.com`) blockerar webbläsaren det såvida inte `forms-site-b.com` uttryckligen tillåter det via CORS-rubriker.
+[CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing) är en säkerhetsfunktion i webbläsaren. Om din värdsida (t.ex. `site-a.com`) försöker hämta ett formulär från en annan domän (t.ex. `forms-site-b.com`) blockerar webbläsaren det såvida inte `forms-site-b.com` uttryckligen tillåter det via CORS-rubriker.
 
 Utan korrekta CORS-huvuden på **Form Source-servern** kan webbläsaren inte läsa in formuläret från värdsidan och det inbäddade formuläret visas inte.
 
