@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: c2f1660552d32f3dae9418e7dfc2d4f1ab8cc3c3
+source-git-commit: 32b3a125d6370dd591252fde342843d5f9e33cf1
 workflow-type: tm+mt
-source-wordcount: '429'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
@@ -108,8 +108,6 @@ Villkoren kan definieras med [JsonLogic-schema](https://jsonlogic.com/). Om vill
 ## URL för anpassad förhandsvisning {#custom-preview-urls}
 
 Du kan ange en anpassad URL för förhandsgranskning via en `urn:adobe:aue:config:preview`-metakonfiguration, som öppnas när du klickar på knappen **Öppna sida** i [redigerarens övre högra verktygsfält](/help/sites-cloud/authoring/universal-editor/navigation.md#universal-editor-toolbar).
-
-Detta är särskilt användbart för program med särskilda förhandsgranskningskrav, till exempel de [som använder Edge Delivery Services med WYSIWYG ](/help/edge/wysiwyg-authoring/authoring.md).
 
 Det gör du genom att helt enkelt ta med önskad URL för förhandsgranskning i en meta-tagg för det instrumenterade programmet, som i följande exempel.
 
