@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 21484, som offentliggjordes den 8 juli 2025. Den tidigare underhållsutgåvan släpptes 21331.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21484}
 
@@ -38,7 +38,7 @@ Ingen.
 * GUIDES-28104: Om du publicerar en DITA-karta med attributet `chunk=to-content` skapas dubbletter av JCR-noder i nya AEM Sites-utdata, vilket leder till en överflödig innehållsstruktur i AEM Sites.
 * GUIDES-29065, GUIDES-28793: Prestandaproblem som längre inläsningstider och återkommande timeout observeras när du arbetar med stora samlingar.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-21484}
 
