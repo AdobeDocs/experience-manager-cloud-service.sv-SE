@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
+source-git-commit: f5dcf76b662e8bec9248ca11f133f9a82142d877
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2474'
 ht-degree: 0%
 
 ---
@@ -130,26 +130,29 @@ De ändringar som görs i produktionsmiljön gäller både produktions- och stag
 
 Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-networking.md) för programmet rekommenderar vi att den här etableringen görs innan du lägger till ytterligare publiceringsregioner i miljöerna. I annat fall går trafiken för de extra publiceringsregionerna igenom den primära regionens proxy.
 
-## Information om åtkomstmiljö {#viewing-environment}
+## Visa information om en miljö {#viewing-environment}
 
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
-1. Gör något av följande för att få åtkomst till miljöinformationen:
+1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på programmet som du vill visa information om en miljö för.
 
-   * På sidan **Översikt** klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö** på den vänstra menyn.
+1. Visa alla miljöer för programmet genom att göra något av följande:
 
-   ![Fliken Miljö](assets/environments-tab2.png)
+   * På den vänstra menyn, under **Tjänster**, klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**.
 
-   * Klicka på ikonen ![Arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Visa alla** på **miljökortet**.
+   ![Fliken Miljö](assets/environments-1.png)
 
-     ![Visa alla alternativ](assets/environment-showall.png)
+   * Klicka på **Översikt** under **Program** på den vänstra menyn och klicka sedan på **Arbetsflödesikonen** ![Visa alla](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) på **miljökortet** .
 
-   Sidan **Miljö** öppnas och alla miljöer för programmet visas.
+     ![Visa alla alternativ](assets/environments-2.png)
 
-   ![Miljöfliken](assets/environments-tab2.png)
+   >[!NOTE]
+   >
+   >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
 1. Gör något av följande på sidan Miljöer:
 
-   * Klicka på en miljö i listan för att visa informationen om den.
+   * Klicka på en miljö i listan för att visa information om den.
 
    ![Miljöinformation](assets/environ-preview1.png)
 
@@ -157,9 +160,11 @@ Om du vill etablera [avancerat nätverk](/help/security/configuring-advanced-net
 
    ![Visa miljöinformation](assets/view-environment-details.png)
 
->[!NOTE]
->
->Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet om du vill visa alla miljöer i programmet.
+
+## Återställa innehåll i en miljö (Alpha) {#restore-environment}
+
+Se [Återställning av innehåll i AEM as a Cloud Service](/help/operations/restore.md).
+
 
 ### Öppna förhandsgranskningstjänsten {#access-preview-service}
 
@@ -291,7 +296,7 @@ Välj **Hantera åtkomst** på menyn Ellips i miljön på kortet **Miljöer**. D
 
 ## Gå till Developer Console {#accessing-developer-console}
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och sedan på **Developer Console**.
+1. Klicka på ikonen **Mer** på ![miljökortet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Developer Console**.
 
 En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console**.
 
@@ -299,7 +304,7 @@ En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console*
 
 Endast en användare med rollen **Utvecklare** har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
+Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
 
 Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i en enskild miljö.
 
@@ -307,7 +312,7 @@ Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret
 
 1. Gör något av följande:
 
-   * Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och klicka sedan på **Lokal inloggning**.
+   * Klicka på ikonen **Mer** på ![miljökortet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och klicka sedan på **Lokal inloggning**.
 
      ![Logga in lokalt](assets/environ-login-locally.png)
 

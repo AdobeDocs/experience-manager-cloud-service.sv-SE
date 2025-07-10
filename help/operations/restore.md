@@ -4,9 +4,9 @@ description: Lär dig hur du återställer AEM as a Cloud Service-innehåll frå
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
 feature: Operations
 role: Admin
-source-git-commit: fee4921b7087fd64b2f65b086998aedde8aaafb0
+source-git-commit: f5dcf76b662e8bec9248ca11f133f9a82142d877
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1323'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Innehållsåterställning i AEM as a Cloud Service {#content-restore}
 
-Lär dig hur du återställer AEM as a Cloud Service-innehåll från en säkerhetskopia med Cloud Manager.
+Du kan återställa ditt AEM as a Cloud Service-innehåll från en säkerhetskopia med Cloud Manager.
 
 ## Ökning {#overview}
 
@@ -24,7 +24,7 @@ Cloud Manager självbetjäningsprocess för återställning kopierar data från 
 
 I Cloud Manager finns det två typer av säkerhetskopior som du kan återställa innehåll från.
 
-* **PIT (Point-In-Time):** Den här typen återställer från kontinuerliga systemsäkerhetskopieringar från de senaste 24 timmarna från den aktuella tiden.
+* **PIT (Point-In-Time):** Med det här alternativet återställs kontinuerliga säkerhetskopior som har samlats in under de senaste 24 timmarna.
 * **Senaste veckan:** Den här typen återställer från systemsäkerhetskopieringar under de senaste sju dagarna, exklusive de föregående 24 timmarna.
 
 I båda fallen ändras inte versionen av din anpassade kod och AEM-versionen.
@@ -36,7 +36,7 @@ I båda fallen ändras inte versionen av din anpassade kod och AEM-versionen.
 >[!WARNING]
 >
 >* Den här funktionen bör endast användas när det finns allvarliga problem med kod eller innehåll.
->* Om du återställer en säkerhetskopia går nya data förlorade mellan tidpunkten för säkerhetskopieringen och den aktuella. Mellanlagring återställs också till den gamla versionen.
+>* När du återställer en säkerhetskopia tas alla data som har lagts till efter säkerhetskopieringen bort. Mellanlagring återgår också till den tidigare versionen.
 >* Innan du startar en innehållsåterställning bör du överväga andra alternativ för selektiv innehållsåterställning.
 
 ## Alternativ för selektiv innehållsåterställning {#selective-options}
@@ -52,77 +52,84 @@ Om inget av ovanstående alternativ fungerar och innehållet i den borttagna ban
 
 ## Skapa användarroll {#user-role}
 
-Som standard har ingen användare behörighet att köra innehållsåterställningar i utvecklings-, produktions- eller stagingmiljöer. Om du vill delegera behörigheten till specifika användare eller grupper följer du dessa allmänna steg.
+Som standard har ingen användare behörighet att köra innehållsåterställningar i utvecklings-, produktions- eller stagingmiljöer. Om du vill delegera den här behörigheten till specifika användare eller grupper använder du följande allmänna steg.
 
 1. Skapa en produktprofil med ett uttrycksfullt namn som refererar till innehållsåterställning.
 1. Ange behörighet för **programåtkomst** för det program som krävs.
 1. Ange behörigheten **Miljöåterställning Skapa** i den miljö som krävs eller i alla miljöer i programmet, beroende på ditt användningssätt.
 1. Tilldela användare till den profilen.
 
-Mer information om hur du hanterar behörigheter finns i dokumentationen om [anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
+Mer information om hur du hanterar behörigheter finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
 
-## Återställer innehåll {#restoring-content}
-
-Bestäm först tidsramen för innehållet som du vill återställa. Utför sedan dessa steg för att återställa miljöns innehåll från en säkerhetskopia.
+## Återställa innehållet i en miljö {#restoring-content}
 
 >[!NOTE]
 >
 >En användare måste ha [lämplig behörighet](#user-role) för att initiera en återställningsåtgärd.
 
+**Så här återställer du innehållet i en miljö:**
+
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
 1. Klicka på det program som du vill starta en återställning för.
 
-1. På sidan **Programöversikt** på kortet **Miljö** klickar du på ellipsknappen bredvid den miljö som du vill initiera en återställning för och väljer **Återställ innehåll**.
+1. Visa alla miljöer för programmet genom att göra något av följande:
 
-   ![Återställningsalternativ](assets/backup-option.png)
+   * På den vänstra menyn, under **Tjänster**, klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**.
 
-   * Du kan också navigera direkt till fliken **Återställ innehåll** på sidan med miljöinformation i en viss miljö.
+     ![Fliken Miljö](assets/environments-1.png)
 
-1. På fliken **Återställ innehåll** på sidan med miljöinformation markerar du först tidsramen för återställningen i listrutan **Tid för återställning**.
+   * Klicka på **Översikt** under **Program** på den vänstra menyn och klicka sedan på **Arbetsflödesikonen** ![Visa alla](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) på **miljökortet** .
 
-   1. Om du väljer **De senaste 24 timmarna** kan du i fältet **Tid** ange exakt tid inom de senaste 24 timmarna som ska återställas.
+     ![Visa alla alternativ](assets/environments-2.png)
 
-      ![De senaste 24 timmarna](assets/backup-time.png)
+     >[!NOTE]
+     >
+     >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
-   1. Om du väljer **Senaste veckan** kan du i fältet **Dag** välja ett datum under de senaste sju dagarna, exklusive de föregående 24 timmarna.
+1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om en miljö vars innehåll du vill återställa i miljötabellen och klicka sedan på **Återställ innehåll**.
 
-      ![Förra veckan](assets/backup-date.png)
+   ![Återställ innehållsalternativ från ellipsmenyn](/help/operations/assets/environments-ellipsis-menu.png)
+
+1. Markera tidsramen för återställningen på fliken **Återställ innehåll** på miljösidan i listrutan **Tid för återställning**.
+
+   ![Återställa fliken Innehåll i en miljö](/help/operations/assets/environments-content-restore-tab.png)
+
+   * Om du väljer **Senaste 24 timmarna** anger du den exakta tiden inom de senaste 24 timmarna som ska återställas i fältet **Tid** intill.
+   * Om du valde **Senaste veckan** i fältet **Dag** väljer du ett datum under de senaste sju dagarna, exklusive de föregående 24 timmarna.
 
 1. När du har valt ett datum eller angett en tidpunkt visas en lista med tillgängliga säkerhetskopior som kan återställas i avsnittet **Tillgängliga säkerhetskopior** nedan
 
-   ![Säkerhetskopior tillgängliga](assets/backup-available.png)
-
-1. Hitta den säkerhetskopia som du vill återställa genom att använda informationsikonen för att visa information om vilken version av koden och AEM-versionen som ingår i säkerhetskopian och ta hänsyn till konsekvenserna av en återställning när du [väljer säkerhetskopian](#choosing-the-right-backup).
+1. Klicka på ![Informationsikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) bredvid en säkerhetskopia för att se kodversionen och AEM-versionen och mät sedan återställningens effekt innan du väljer en säkerhetskopia (se [Välja rätt säkerhetskopia](#choosing-backup)).
 
    ![Säkerhetskopieringsinformation](assets/backup-info.png)
 
-   * Tidsstämpeln som visas för återställningsalternativen baseras på användarens tidszon.
+   Tidsstämpeln som visas för återställningsalternativen baseras på datorns tidszon för användaren.
 
-1. Klicka på ikonen **Återställ** till höger i raden som representerar den säkerhetskopia som du vill återställa för att starta återställningsprocessen.
+1. Klicka på ![Rotera motsols fet eller återställ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_RotateCCWBold_18_N.svg) till höger om raden som representerar den säkerhetskopia som du vill återställa för att starta återställningsprocessen.
 
-1. Granska informationen i dialogrutan **Återställ innehåll** innan du bekräftar din begäran genom att klicka på **Återställ**.
+1. Granska informationen i dialogrutan **Återställ innehåll** och klicka sedan på **Återställ**.
 
    ![Bekräfta återställning](assets/backup-restore.png)
 
-Säkerhetskopieringsprocessen initieras och du kan visa dess status i listan **[Återställningsaktivitet](#restore-activity)**. Hur lång tid det tar att slutföra en återställning beror på storleken och profilen på det innehåll som återställs.
+Säkerhetskopieringsprocessen initieras. Du kan visa dess status i listan **[Återställ aktivitet](#restore-activity)**. Hur lång tid det tar att slutföra en återställning beror på storleken och profilen på det innehåll som återställs.
 
-När återställningen har slutförts kommer miljön att:
+När återställningen har slutförts gör miljön följande:
 
-* Kör samma kod och AEM som när återställningen initierades.
-* Ha samma innehåll som var tillgängligt vid tidsstämpeln för den valda ögonblicksbilden, med indexen ombyggda så att de matchar den aktuella koden.
+* Kör samma kod och AEM som när återställningsåtgärden initierades.
+* Den har samma innehåll som var tillgängligt vid tidsstämpeln för den valda ögonblicksbilden, med indexen omgjorda för att matcha den aktuella koden.
 
-## Välja rätt säkerhetskopia {#choosing-backup}
+## Välj rätt säkerhetskopia {#choosing-backup}
 
-Cloud Manager självbetjäningsåterställning återställer endast innehåll till AEM. Därför måste du noga överväga kodändringar som gjorts mellan den önskade återställningspunkten och den aktuella tidpunkten genom att granska implementeringshistoriken mellan det aktuella implementerings-ID:t och det som återställs.
+Cloud Manager självbetjäningsåterställning återställer endast innehåll till AEM. Därför måste du noga överväga kodändringar som gjorts mellan den önskade återställningspunkten och den aktuella tidpunkten. Granska implementeringshistoriken mellan det aktuella implementerings-ID:t och det som återställs.
 
 Det finns flera scenarier.
 
-* Den anpassade koden i miljön och återställningen finns i samma databas och gren.
-* Den anpassade koden i miljön och återställningen finns i samma databas men i en annan gren med en gemensam implementering.
-* Den anpassade koden i miljön och återställningen finns i olika databaser.
+* Miljöns anpassade kod och återställningen finns i samma databas och samma gren.
+* Miljöns egen kod och återställningen delar en databas, använder en separat gren och härstammar från en gemensam implementering.
+* Miljöns anpassade kod och återställningen finns i olika databaser.
    * I det här fallet visas inget implementerings-ID.
-   * Vi rekommenderar att du klonar båda databaserna och använder ett diff-verktyg för att jämföra grenarna.
+   * Adobe rekommenderar att du klonar båda databaserna och använder ett diff-verktyg för att jämföra grenarna.
 
 Tänk också på att en återställning kan göra att produktions- och staging-miljöerna inte synkroniseras. Du ansvarar för konsekvenserna av att återställa innehåll.
 
@@ -132,15 +139,15 @@ I listan **Återställningsaktivitet** visas status för de tio senaste återst�
 
 ![Återställ aktivitet](assets/backup-activity.png)
 
-Genom att klicka på informationsikonen för en säkerhetskopia kan du hämta loggar för den säkerhetskopian och kontrollera kodinformationen, inklusive skillnaderna mellan ögonblicksbilden och data när återställningen initierades.
+Genom att klicka på ![Informationsikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Info_18_N.svg) för en säkerhetskopia kan du hämta loggar för den säkerhetskopian och kontrollera kodinformationen, inklusive skillnaderna mellan ögonblicksbilden och data när återställningen initierades.
 
 ## Säkerhetskopiering offline {#offsite-backup}
 
 Regelbunden säkerhetskopiering täcker risken för oavsiktliga borttagningar eller tekniska fel i AEM Cloud Services, men ytterligare risker kan uppstå om en region slutar fungera. Förutom tillgänglighet är den största risken i sådana regionala avbrott en dataförlust.
 
-AEM as a Cloud Service minskar denna risk för alla AEM produktionsmiljöer genom att kontinuerligt kopiera allt AEM-material till en fjärrregion och göra det tillgängligt för återställning under en period av tre månader. Den här funktionen kallas säkerhetskopiering på annan plats.
+AEM as a Cloud Service minskar denna risk för alla AEM produktionsmiljöer. Det innebär att allt AEM-innehåll fortlöpande kopieras till en fjärrregion. Den här processen gör innehållet tillgängligt för återställning i tre månader. Den här funktionen kallas säkerhetskopiering på annan plats.
 
-Återställningen av AEM Cloud Services för mellanlagrings- och produktionsmiljöer från externa säkerhetskopieringar utförs av AEM servicesäkerhetsteknisk konstruktion i händelse av dataavbrott i dataområden.
+AEM Service Reliable Engineering återställer staging och produktion av AEM Cloud-tjänstmiljöer från säkerhetskopiering på annan plats vid dataavbrott.
 
 ## Begränsningar {#limitations}
 
@@ -149,7 +156,7 @@ Användningen av mekanismen för självbetjäning av återställning omfattas av
 * Återställningsåtgärderna är begränsade till sju dagar, vilket innebär att det inte går att återställa en ögonblicksbild som är äldre än sju dagar.
 * Högst tio lyckade återställningar tillåts i alla miljöer i ett program per kalendermånad.
 * När miljön har skapats tar det sex timmar innan den första ögonblicksbilden av säkerhetskopian skapas. Innan den här ögonblicksbilden har skapats går det inte att återställa miljön.
-* En återställningsåtgärd initieras inte om det finns en fullständig stack- eller webbskiktskonfigurationspipeline som körs för miljön.
+* Ingen återställningsåtgärd initieras om det för närvarande körs en fullständig stack- eller webbskiktskonfigurationspipeline för miljön.
 * Det går inte att starta en återställning om en annan återställning redan körs i samma miljö.
 * I sällsynta fall, på grund av gränsen på 24 timmar/sju dagar för säkerhetskopiering, kan den markerade säkerhetskopian bli otillgänglig på grund av en fördröjning mellan den tidpunkt då den valdes och den tidpunkt då återställningen initierades.
 * Data från borttagna miljöer går förlorade permanent och kan inte återställas.
