@@ -3,13 +3,13 @@ title: Konfigurera Skicka-åtgärder för AEM Forms med Edge Delivery Services
 description: Lär dig hur du konfigurerar skicka-åtgärder i AEM Forms med Edge Delivery Services. Välj mellan Forms Submission Service och AEM Publish Submit Action för att hantera formulärdata på ett säkert och effektivt sätt.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
-source-git-commit: bca160763fdd1e96f1350ac74eb76ff7c26ac00b
+exl-id: 8f490054-f7b6-40e6-baa3-3de59d0ad290
+source-git-commit: 75d8ea4f0913e690e3374d62c6e7dcc44ea74205
 workflow-type: tm+mt
 source-wordcount: '2166'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera formuläröverföringar: Var finns dina data?
 
@@ -46,7 +46,6 @@ Den här tjänsten är idealisk för vanliga, enkla åtgärder som att skicka da
     style ExcelSheet fill:#90ee90,stroke:#333
     style Email fill:#add8e6,stroke:#333
 ```-->
-
 ![Forms Submission](/help/forms/assets/eds-fss.png)
 
 I det här flödesdiagrammet visas hur Forms överföringstjänst tar emot skickade data och skickar dem till ett konfigurerat kalkylblad eller ett konfigurerat e-postmeddelande.
@@ -145,13 +144,12 @@ Sidan där du vill att formuläret ska visas (vi kallar den &quot;värdsida&quot
     style FetchForm fill:#fff2cc,stroke:#333
     style Submission fill:#f0fff0,stroke:#333
 ```-->
-
 ![Inbäddad formulärarkitektur](/help/forms/assets/eds-embedded-form.png)
 I det här diagrammet visas hur värdsidan hämtar HTML från Source och visar det. Vid överföring används det ursprungliga formulärets konfigurerade slutpunkt.
 
 ## Konfigurera CORS för inbäddad Forms
 
-[CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing) är en säkerhetsfunktion i webbläsaren. Om din värdsida (t.ex. `site-a.com`) försöker hämta ett formulär från en annan domän (t.ex. `forms-site-b.com`) blockerar webbläsaren det såvida inte `forms-site-b.com` uttryckligen tillåter det via CORS-rubriker.
+[CORS (Cross-Origin Resource Sharing)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing) är en säkerhetsfunktion i webbläsaren. Om din värdsida (t.ex. `site-a.com`) försöker hämta ett formulär från en annan domän (t.ex. `forms-site-b.com`) blockerar webbläsaren det såvida inte `forms-site-b.com` uttryckligen tillåter det via CORS-rubriker.
 
 Utan korrekta CORS-huvuden på **Form Source-servern** kan webbläsaren inte läsa in formuläret från värdsidan och det inbäddade formuläret visas inte.
 
