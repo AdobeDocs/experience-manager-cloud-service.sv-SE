@@ -46,6 +46,7 @@ Den här tjänsten är idealisk för vanliga, enkla åtgärder som att skicka da
     style ExcelSheet fill:#90ee90,stroke:#333
     style Email fill:#add8e6,stroke:#333
 ```-->
+
 ![Forms Submission](/help/forms/assets/eds-fss.png)
 
 I det här flödesdiagrammet visas hur Forms överföringstjänst tar emot skickade data och skickar dem till ett konfigurerat kalkylblad eller ett konfigurerat e-postmeddelande.
@@ -144,6 +145,7 @@ Sidan där du vill att formuläret ska visas (vi kallar den &quot;värdsida&quot
     style FetchForm fill:#fff2cc,stroke:#333
     style Submission fill:#f0fff0,stroke:#333
 ```-->
+
 ![Inbäddad formulärarkitektur](/help/forms/assets/eds-embedded-form.png)
 I det här diagrammet visas hur värdsidan hämtar HTML från Source och visar det. Vid överföring används det ursprungliga formulärets konfigurerade slutpunkt.
 
