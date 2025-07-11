@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
