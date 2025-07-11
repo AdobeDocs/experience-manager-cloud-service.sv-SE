@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten för april 2025 om du vill se en sammanfattning av funktioner som lagts till i version 2025.4.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3463991?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3464006?quality=12&captions=swe)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
