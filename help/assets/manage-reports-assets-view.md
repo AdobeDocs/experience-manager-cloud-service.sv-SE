@@ -4,7 +4,9 @@ description: Använd uppgifterna i rapportavsnittet i Assets-vyn för att utvär
 exl-id: 26d0289e-445a-4b8e-a5a1-b02beedbc3f1
 feature: Asset Insights, Asset Reports
 role: User, Admin, Developer
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+hide: true
+hidefromtoc: true
+source-git-commit: 132f601e1bbeeea59dc6a14392a9f6c786b20682
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 0%
@@ -50,7 +52,6 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
    1. **Beskrivning:** Lägg till en valfri beskrivning i rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera rapporten med överförda och hämtade resurser i den specifika mappen. Om du till exempel behöver rapporten med resurser som överförts till en mapp anger du sökvägen till den mappen.
    1. **Välj datumintervall:** Välj datumintervall för att visa överförings- eller hämtningsaktiviteten i mappen.
-
    <br>
 
    >[!NOTE]
@@ -141,7 +142,7 @@ Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leverans
 <!--
 >[!NOTE]
 > 
->To get early access to the Dynamic Media Delivery Report on your Dynamic Media account, [create and submit an Adobe Customer Support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+>To get early access to the Dynamic Media Delivery Report on your Dynamic Media account, [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 -->
 
 ### Förutsättningar {#prereqs-dynamic-media-delivery-reports}
@@ -203,7 +204,6 @@ Följ stegen nedan för att schemalägga en rapport:
    1. **Beskrivning**: Lägg till en valfri beskrivning till rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera en rapport för resurser som ska överföras till eller hämtas från den aktuella mappen i framtiden.
    1. Växla **Schemarapport:** Växla för att schemalägga rapporten senare eller för dess upprepade förekomst.
-
       ![schemarapport](/help/assets/assets/schedule-reports1.svg)
 
    1. **Välj frekvens:** Ange intervallet för att generera rapporten (till exempel dagligen, veckovis, månadsvis, årsvis eller en gång) och ange datum och tid för att köra rapporten tillsammans med slutdatumet för upprepning. För en engångsrapport väljer du datumintervall för rapporten om den valda aktivitetstypen i AEM-miljön. Om du till exempel behöver en rapport om hämtade resurser från den 10 till den 29 (framtida datum) för en viss månad, väljer du dessa datum i fältet **Välj datumintervall**.

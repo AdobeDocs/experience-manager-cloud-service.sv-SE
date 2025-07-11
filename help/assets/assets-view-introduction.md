@@ -5,9 +5,9 @@ mini-toc-levels: 3
 exl-id: c27134f5-178c-4db1-a8e6-ec45d020f2b5
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 79213bcfe5c5ccf7c60a31e6cb757f60a0ba87a7
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
@@ -67,13 +67,17 @@ Säg hej till en Digital Asset Management-lösning som förstår de olika behove
 
 [![Se guiden](assets/see-the-guide-sm.png)](my-workspace-assets-view.md)
 
-### Insikter för att fatta databaserade beslut {#insights-data}
+<!--
 
-För att hålla jämna steg med innehållets hastighet är användbara insikter viktiga. I Assets-vyn finns avancerade insikter i My Workspace, som ger värdefulla data om resursprestanda, målgruppsanvändning och engagemang. Marknadsförarna kan fatta datadrivna beslut, optimera innehållsstrategier och förfina leveransen i efterföljande led för att få optimala resultat. Med tillgång till meningsfulla insikter kan företag ligga steget före konkurrenterna och få exceptionella resultat.
+### Insights to take data-driven decisions {#insights-data}
 
-![Insikter - översikt](assets/insights-overview.gif)
+To keep pace with content velocity, actionable insights are essential. The Assets view offers advanced insights within the My Workspace, providing valuable data on asset performance, audience usage, and engagements. Marketers can make data-driven decisions, optimize content strategies, and refine their downstream delivery to achieve optimal results. With access to meaningful insights, businesses can stay ahead of the competition and drive exceptional outcomes.
 
-[![Se guiden](assets/see-the-guide-sm.png)](manage-reports-assets-view.md#view-live-statistics)
+![Insights overview](assets/insights-overview.gif)
+
+[![See the Guide](assets/see-the-guide-sm.png)](manage-reports-assets-view.md#view-live-statistics)
+
+-->
 
 ### Adobe Photoshop Express-integration snabbar upp samarbetet {#accelerate-collaboration}
 
