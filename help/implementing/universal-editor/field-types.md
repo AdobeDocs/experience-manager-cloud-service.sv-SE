@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 584dba3fb28c54d19d8a4162a3879ff30f7fe352
+source-git-commit: 199ee7e11f6706773bd426c3d27236d6ea791a6c
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1568'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Modelldefinitionen är en JSON-struktur som börjar med en array med modeller.
 ]
 ```
 
-Mer information om hur du definierar `fields`-arrayen finns i avsnittet **[Fält](#fields)** i det här dokumentet.
+Mer information om hur du definierar **[-arrayen finns i avsnittet](#fields)** Fält`fields` i det här dokumentet.
 
 Du kan länka en modell till en komponent på två sätt: med [komponentdefinitionen](#component-definition) eller [via instrumenteringen.](#instrumentation)
 
@@ -101,7 +101,7 @@ Ett fältobjekt har följande typdefinition.
 | `readOnly` | `boolean` | Är fältet skrivskyddat | Nej |
 | `hidden` | `boolean` | Är fältet dolt som standard | Nej |
 | `condition` | `RulesLogic` | Regel som visar eller döljer fältet baserat på ett [villkor](/help/implementing/universal-editor/customizing.md#conditionally-hide) | Nej |
-| `multi` | `boolean` | Är fältet ett flerfält | Nej |
+| `multi` | `boolean` | Är fältet ett flerfält<br/>Observera att behållarkapsling inte tillåts för flerfält i egenskapspanelen | Nej |
 | `validation` | `ValidationType` | Valideringsregel eller -regler för fältet | Nej |
 | `raw` | `unknown` | Raw-data som kan användas av komponenten | Nej |
 
@@ -289,7 +289,7 @@ På samma sätt som för ett booleskt värde kan en kryssrutegruppskomponenttyp 
 
 #### Behållare {#container}
 
-En behållarkomponenttyp tillåter gruppering av komponenter inklusive stöd för flera fält. Den erbjuder en extra konfiguration.
+En behållarkomponenttyp tillåter gruppering av komponenter inklusive stöd för flera fält. Den erbjuder en extra konfiguration. Observera att behållarkapsling inte tillåts för flera fält på egenskapspanelen
 
 | Konfiguration | Värdetyp | Beskrivning | Obligatoriskt |
 |---|---|---|---|

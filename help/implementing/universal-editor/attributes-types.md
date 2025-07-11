@@ -4,9 +4,9 @@ description: Läs mer om de dataattribut och objekttyper som krävs för den uni
 exl-id: 02795a31-244a-42b4-8297-2649125d7777
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 1a122fee45fadfb32239d9407aeac0a59b4b2470
+source-git-commit: 597315a7d569ebd62243322c543627b7a3535a6b
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,6 @@ För att ett program ska kunna redigeras av den universella redigeraren måste d
 * Det krävs inte direkt på taggen där `data-aue-type` är inställd.
 * Om det inte anges används attributet `data-aue-resource` för närmaste överordnade.
 
-`data-aue-prop` krävs när du vill göra en redigering i kontexten, förutom för en behållare där den är valfri (om den är inställd är behållaren ett innehållsfragment och utkastet pekar på ett fält med flera referenser).
+`data-aue-prop` krävs när du vill redigera i kontexten, förutom för en behållare där det är valfritt (om den anges är behållaren ett innehållsfragment och egenskapen pekar på ett fält med flera referenser).
 
 * `data-aue-prop` är det attribut som ska uppdateras för primärnyckeln för `data-aue-resource`.

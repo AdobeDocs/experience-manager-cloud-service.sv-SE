@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 40f3f4652dbfce9bda65b8e69c349b9a8a563469
+source-git-commit: 597315a7d569ebd62243322c543627b7a3535a6b
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1820'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -154,6 +154,10 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 Välj ikonen med inställningar för autentiseringshuvudet om du behöver [ange ett anpassat autentiseringshuvud för lokal utveckling](/help/implementing/universal-editor/developer-overview.md#auth-header).
 
 ![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
+
+>[!NOTE]
+>
+>Den här knappen är dold som standard eftersom den i de flesta fall har ett begränsat värde. Om du behöver det skickar du ett e-postmeddelande till din kundansvarige på Adobe från den e-postadress som är kopplad till din Adobe ID.
 
 #### Emulatorinställningar {#emulator}
 

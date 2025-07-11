@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 9941c652a1509934662cdaae6d187d1a28a1cc31
+source-git-commit: 597315a7d569ebd62243322c543627b7a3535a6b
 workflow-type: tm+mt
-source-wordcount: '2222'
+source-wordcount: '2252'
 ht-degree: 0%
 
 ---
@@ -129,6 +129,8 @@ Beroende på arbetsflödets behov kan du behöva redigera innehållsfragmentet i
 1. Välj sedan ikonen Lägg till på egenskapspanelen.
 
    ![Välj ikonen Lägg till](assets/add-icon.png)
+
+1. Om mer än en komponent tillåts för behållaren väljer du vilken du vill infoga i listrutan. Om bara en komponent tillåts infogas den automatiskt.
 
 Komponenten infogas i behållaren och kan redigeras i redigeraren.
 
