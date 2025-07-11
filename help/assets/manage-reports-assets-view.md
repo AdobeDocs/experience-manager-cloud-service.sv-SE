@@ -6,9 +6,9 @@ feature: Asset Insights, Asset Reports
 role: User, Admin, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 132f601e1bbeeea59dc6a14392a9f6c786b20682
+source-git-commit: 8aae8b2219e60f0a9220aa34b53bb3c8e19232c1
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,6 @@ I AEM Assets visningsmiljö finns omfattande rapporteringsfunktioner via rapport
    1. **Beskrivning:** Lägg till en valfri beskrivning i rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera rapporten med överförda och hämtade resurser i den specifika mappen. Om du till exempel behöver rapporten med resurser som överförts till en mapp anger du sökvägen till den mappen.
    1. **Välj datumintervall:** Välj datumintervall för att visa överförings- eller hämtningsaktiviteten i mappen.
-
    <br>
 
    >[!NOTE]
@@ -143,7 +142,7 @@ Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leverans
 <!--
 >[!NOTE]
 > 
->To get early access to the Dynamic Media Delivery Report on your Dynamic Media account, [create and submit an Adobe Customer Support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+>To get early access to the Dynamic Media Delivery Report on your Dynamic Media account, [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 -->
 
 ### Förutsättningar {#prereqs-dynamic-media-delivery-reports}
@@ -205,7 +204,6 @@ Följ stegen nedan för att schemalägga en rapport:
    1. **Beskrivning**: Lägg till en valfri beskrivning till rapporten.
    1. **Välj mappsökväg:** Välj en mappsökväg för att generera en rapport för resurser som ska överföras till eller hämtas från den aktuella mappen i framtiden.
    1. Växla **Schemarapport:** Växla för att schemalägga rapporten senare eller för dess upprepade förekomst.
-
       ![schemarapport](/help/assets/assets/schedule-reports1.svg)
 
    1. **Välj frekvens:** Ange intervallet för att generera rapporten (till exempel dagligen, veckovis, månadsvis, årsvis eller en gång) och ange datum och tid för att köra rapporten tillsammans med slutdatumet för upprepning. För en engångsrapport väljer du datumintervall för rapporten om den valda aktivitetstypen i AEM-miljön. Om du till exempel behöver en rapport om hämtade resurser från den 10 till den 29 (framtida datum) för en viss månad, väljer du dessa datum i fältet **Välj datumintervall**.
@@ -249,11 +247,11 @@ Klicka på **[!UICONTROL Insights]** i den vänstra navigeringsrutan för att vi
 
 * **Överföringar**: Antalet resurser som har överförts till visningsmiljön i Assets under de senaste 30 dagarna eller 12 månaderna representeras av ett linjediagram.
   ![insights-uploads](/help/assets/assets/insights-uplods2.svg)
-  <!--* **Asset Count by Size**: The division of count of assets based on their range of various sizes from 0 MB to 100 GB.-->
+<!--* **Asset Count by Size**: The division of count of assets based on their range of various sizes from 0 MB to 100 GB.
 
-* **Lagringsanvändning**: Lagringsanvändningen (i byte) för visningsmiljön i Assets representeras av ett stapeldiagram.
-  ![insights-uploads](/help/assets/assets/insights-storage-usage1.svg)
-  <!--* **Delivery**: The graph depicts the count of assets as the delivery dates.-->
+* **Storage usage**: The storage usage, in bytes, for the Assets view environment represented using a bar chart.
+![insights-uploads](/help/assets/assets/insights-storage-usage1.svg)
+<!--* **Delivery**: The graph depicts the count of assets as the delivery dates.-->
 
 <!--* **Asset Count by Asset Type**: Represents count of various MIME types of the available assets. For example, application/zip, image/png, video/mp4, application/postscripte.-->
 
