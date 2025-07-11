@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Generera AFP-utdata med AEM Forms API
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
 
 AFP (Advanced Function Presentation) är ett högpresterande dokumentformat som huvudsakligen är avsett för tryck.\
 I den här guiden beskrivs alla nödvändiga steg och konfigurationer för att generera AFP-utdata med AEM Forms.
