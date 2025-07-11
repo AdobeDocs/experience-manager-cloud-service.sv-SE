@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ![Integrering av AEM-resurser med Universal Editor](/help/assets/assets/EDS2.png)
 
-[[!DNL Edge Delivery Services]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet i hur du skapar och levererar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](/help/sites-cloud/authoring/author-publish.md) och [WYSIWYG med  [!DNL Universal Editor]  samt dokumentbaserad redigering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring).
+[[!DNL Edge Delivery Services]](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/overview) är en sammansättningsbar uppsättning tjänster som ger stor flexibilitet i hur du skapar och levererar innehåll på din webbplats. Du kan använda både [AEM innehållshantering](/help/sites-cloud/authoring/author-publish.md) och [WYSIWYG med  [!DNL Universal Editor]  samt dokumentbaserad redigering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring).
 
 Du kan redigera innehåll i:
 
@@ -58,7 +58,7 @@ Du kan också använda resurser som levereras med [!DNL Dynamic Media with OpenA
 
 -->
 
-Mer information om funktionerna finns i dokumentationen för [[!DNL Dynamic Media with OpenAPI capabilities]](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/dynamic-media-open-apis-overview).
+Mer information om funktionerna finns i dokumentationen för [[!DNL Dynamic Media with OpenAPI capabilities]](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dynamic-media-open-apis/dynamic-media-open-apis-overview).
 
 ### Förutsättningar {#dynamic-media-with-universal-editor-and-edge-delivery-services}
 
