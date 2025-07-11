@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->>Funktionen som beskrivs i den här artikeln är endast tillgänglig via alfavärdet för tidig adopter. Information om hur du registrerar dig för alfa finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
+>&#x200B;>Funktionen som beskrivs i den här artikeln är endast tillgänglig via alfavärdet för tidig adopter. Information om hur du registrerar dig för alfa finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
 
 Använd **Återställ tidigare kod som distribuerats** för att omedelbart återställa en miljö till den senaste lyckade versionen - ingen pipeline-körning krävs.
 
