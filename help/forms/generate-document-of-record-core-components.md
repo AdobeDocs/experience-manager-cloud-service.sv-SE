@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: 2637adfbac0e266abe5a023b9253e7e702884709
+source-git-commit: 2a780b6d1263fd70be6fc54fcc79282046f82fab
 workflow-type: tm+mt
-source-wordcount: '3044'
+source-wordcount: '3099'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Innan du börjar lära dig mer och förbereder de resurser som krävs för ett d
 1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
-1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **[!UICONTROL Form Model]**, **[!UICONTROL Select From]** eller **[!UICONTROL Form Data Model]** i listrutan **[!UICONTROL Schema]** på fliken **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla XFA-mallar (XDP-filer) som är tillgängliga på datorn. Välj lämplig fil. Se även till att samma schema (dataschema) används för Adaptivt formulär och vald XFA-mall (XDP-fil).
 1. Klicka på **[!UICONTROL Done]**
 
@@ -55,7 +55,7 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller **[!UICONTROL Create an Adaptive Form]** och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
-1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **[!UICONTROL Form Model]**, **[!UICONTROL Select From]** eller **[!UICONTROL Form Data Model]** i listrutan **[!UICONTROL Schema]** på fliken **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla Acrobat PDF (Acrobat) som är tillgängliga på datorn. Markera den Acrobat som du vill använda.
 1. Klicka på **[!UICONTROL Done]**
 
@@ -76,7 +76,7 @@ Så här konfigurerar du ett anpassat formulär så att det automatiskt generera
 1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Välj ett formulär eller Skapa ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
-1. Välj **[!UICONTROL Form Data Model]**, **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **[!UICONTROL Form Model]**, **[!UICONTROL Select From]** eller **[!UICONTROL Form Data Model]** i listrutan **[!UICONTROL Schema]** på fliken **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Generera postdokument** i avsnittet Dokumentmall på fliken Formulärmodell.
 1. Klicka på **[!UICONTROL Done]**
 
@@ -380,7 +380,13 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
 1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
 
-
+>[!NOTE]
+> 
+> Om du vill visa en anpassad formulärtitel i ditt postdokument redigerar du den **anpassade formulärtiteln** i **Postdokument** > **Egenskaper för mallsida**. Den här anpassade titeln:
+> 
+> * Visas i rubriken för den genererade PDF
+> * Visas som rubriken i PDF-dokumentegenskaperna
+> * Visas som rubrik för den inledande vyn när PDF öppnas
 
 ## Tabell- och kolumnlayouter för paneler i dokumentformat {#table-and-column-layouts-for-panels-in-document-of-record}
 

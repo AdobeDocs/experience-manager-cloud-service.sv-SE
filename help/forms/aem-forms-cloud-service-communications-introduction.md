@@ -5,9 +5,9 @@ Keywords: document generation, PDF manipulation, document security, batch proces
 feature: Adaptive Forms, APIs & Integrations, Document Services
 role: Admin, Developer, User
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: a5bbcd19b41b3aeff94f900da13e98de65651f8c
+source-git-commit: 8803896bf728524833a0dde004ddaa2e8b6bb103
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2654'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 > **Versionstillgänglighet**
 >
-> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=sv-SE)
+> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html)
 > * **AEM as a Cloud Service**: Den här artikeln
 
 ## Introduktion
@@ -44,7 +44,7 @@ API:er för kommunikation har en omfattande uppsättning funktioner för dokumen
 
 ## Dokumentgenerering
 
-API:er för dokumentgenerering för kommunikation hjälper dig att kombinera en mall (XFA eller PDF) med kunddata (XML) för att generera dokument i PDF och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder PDF- och XFA-mallar med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument vid behov eller flera dokument med hjälp av ett batchjobb.
+API:er för dokumentgenerering för kommunikation hjälper dig att kombinera en mall (XFA eller PDF) med kunddata (XML) för att generera dokument i PDF-, AFP- (Advanced Function Presentation) och utskriftsformat som PS, PCL, DPL, IPL och ZPL. Dessa API:er använder PDF- och XFA-mallar med [XML-data](communications-known-issues-limitations.md#form-data) för att generera ett enda dokument vid behov eller flera dokument med hjälp av ett batchjobb.
 
 Vanligtvis skapar du en mall med [Designer](use-forms-designer.md) och använder kommunikationsAPI:er för att sammanfoga data med mallen. Programmet kan skicka utdatadokumentet till en nätverksskrivare, en lokal skrivare eller till ett lagringssystem för arkivering. Ett typiskt exempel och anpassade arbetsflöden ser ut så här:
 
@@ -54,14 +54,28 @@ Beroende på hur de används kan du även göra dessa dokument tillgängliga fö
 
 ### Nyckelfunktioner för dokumentgenerering
 
-#### Skapa PDF-dokument {#create-pdf-documents}
+#### Skapa dokument i PDF/AFP-format
 
-Du kan använda API:erna för dokumentgenerering för att skapa ett PDF-dokument som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt PDF-dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett PDF-dokument. I följande bild visas hur du sammanfogar en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
+Du kan använda API:erna för dokumentgenerering för att skapa ett dokument i PDF- eller AFP-format som baseras på en formulärdesign och XML-formulärdata. Utdata är ett icke-interaktivt dokument. Användarna kan alltså inte ange eller ändra formulärdata. Ett grundläggande arbetsflöde är att sammanfoga XML-formulärdata med en formulärdesign för att skapa ett dokument. I följande bild visas hur du sammanfogar en formulärdesign och XML-formulärdata för att skapa ett PDF-dokument.
 
 ![Skapa PDF-dokument](assets/outPutPDF_popup.png)
-Bild: Vanligt arbetsflöde för att skapa ett PDF-dokument
+Bild: Vanligt arbetsflöde för att skapa ett dokument
 
-API:t för dokumentgenerering returnerar det genererade PDF-dokumentet. Du kan också överföra de genererade PDF-filerna till Azure Blob Storage.
+Tabellen nedan visar skillnaden mellan formatet AFP och PDF:
+
+| **Funktion** | **AFP (Advanced Function Presentation)** | **PDF (Portable Document Format)** |
+|---------------------------|--------------------------------------------------------------------|-------------------------------------------------------------|
+| **Syfte** | Tryckning och produktion av transaktionsdokument i stora volymer | Allmänt dokumentutbyte och -visning |
+| **Använd skiftläge** | Bankkontoutdrag, växlar, fakturor, försäkringsdokument | E-böcker, blanketter, rapporter, meriter, handböcker |
+| **Plattformens ursprung** | Utvecklat av IBM | Utvecklat av Adobe |
+| **Struktur** | Sidorienterat format med strukturerade fält och objekt | Sidorienterad men med fast layout |
+| **Redigerbarhet** | Utformad för tryckproduktion och redigeras sällan | Kan redigeras med olika verktyg, till exempel Adobe Acrobat |
+| **Filstorlek och prestanda** | Optimerad för prestanda i miljöer med höghastighetsutskrift | Kan vara större och mindre optimerade för större utdata |
+| **Interaktivitet** | Minimal till ingen, statiska sidor | Stöd för interaktiva element som formulär, länkar, JavaScript |
+| **Utdatakontroll** | Finkornig kontroll över skrivarens layout | Visuell layout optimerad för skärm och utskrift |
+| **Teckensnitt och bilder** | Använder teckensnitt och resursreferenser. Återgivare måste tolka | Bäddar in teckensnitt och bilder direkt i filen |
+
+API:t för dokumentgenerering returnerar det genererade PDF-dokumentet eller AFP-dokumentet. Du kan också överföra de genererade PDF-filerna till Azure Blob Storage.
 
 <span class="preview"> Överför genererade PDF-filer med hjälp av dokumentgenererings-API:t till Azure Blob Storage-funktionen under [Tidigt Adobe-program](/help/forms/early-access-ea-features.md). Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 

@@ -6,9 +6,9 @@ keywords: Lägg till adaptiva formulärfragment, adaptiva formulärfragment, ska
 feature: Adaptive Forms, Core Components
 exl-id: 3a9ad1b7-2f6f-4ca9-a1c9-549c4238c59e
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: a99bd181a079713571fd659ec2a04207c5eeee90
 workflow-type: tm+mt
-source-wordcount: '1348'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 | -------- | ---------------------------- |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/adaptive-form-fragments.md) |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) |
 
 Alla formulär har utformats för ett specifikt ändamål, men det finns några vanliga segment i de flesta formulär, till exempel för att ge personliga uppgifter som namn och adress, familjeinformation och inkomstinformation. Formulärutvecklare måste skapa dessa gemensamma segment varje gång ett nytt formulär skapas.
 
@@ -32,7 +32,7 @@ Du kan lägga till ett fragment flera gånger i ett dokument och använda databi
 
 >[!NOTE]
 >
-> Du kan enkelt anpassa fragmentupplevelsen för användare med dialogrutan [Konfigurera och dialogrutan Design för komponenten Form Fragment](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment).
+> Du kan enkelt anpassa fragmentupplevelsen för användare med dialogrutan [Konfigurera och dialogrutan Design för komponenten Form Fragment](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/adaptive-form-fragment).
 
 ## Skapa ett anpassat formulärfragment {#create-a-fragment}
 
@@ -119,15 +119,14 @@ Du kan använda ett icke-baserat och schemabaserat formulärfragment flera gång
 
 ![använder flera fragment i adaptiv form](/help/forms/assets/using-multiple-fragment-af.gif)
 
-<!--
+## Stöd för automatisk mappning av fragment i ett adaptivt formulär
 
-## Auto mapping of fragments for data binding {#auto-mapping-of-fragments-for-data-binding}
+När du skapar ett adaptivt formulärfragment baserat på en JSON-schemadefinition kan det återanvändas automatiskt i formulär som skapats från samma schema.
+Om du drar och släpper ett schemaobjekt eller kapslade objekt som matchar JSON-schemadefinitionsmappningen för ett adaptivt formulärfragment, ersätts objektet av det matchande adaptiva formulärfragmentet. I stället för att lägga till en panel med enskilda fält infogar formuläret det mappade adaptiva formulärfragmentet.
 
-When you create an Adaptive Form fragment using an XFA form template or XSD complex type and drag-drop the fragment to an Adaptive Form, the XFA fragment or the XSD complex type is automatically replaced by the corresponding Adaptive Form fragment whose fragment model root is mapped to the XFA fragment or XSD complex Type.
+![Dra och släpp ett fragment](/help/forms/assets/fragment.png)
 
-You can change the fragment asset and its bindings from the Edit component dialog.
-
-You can also drag-drop a bound Adaptive Form fragment from Adaptive Form Fragment library in AEM content finder and provide the correct bind reference from the Edit component dialog of the Adaptive Form fragment panel. -->
+Du kan också dra och släppa ett bundet adaptivt formulärfragment från biblioteket för adaptiva formulärfragment i AEM Content Finder och tillhandahålla rätt bindningsreferens från dialogrutan Redigera komponent i fragmentpanelen för adaptiva formulär.
 
 ## Hantera fragment {#manage-fragments}
 
@@ -149,7 +148,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
   </tr>
    <tr>
    <td><p>Förhandsgranska</p> </td>
-   <td><p>Tillhandahåller alternativ för att förhandsgranska fragmentet som HTML eller som en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. Mer information finns i <a>Förhandsgranska ett formulär</a>.<br /> <br /> </p> </td>
+   <td><p>Tillhandahåller alternativ för att förhandsgranska fragmentet som en HTML eller som en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. Mer information finns i <a>Förhandsgranska ett formulär</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Ladda ned</p> </td>
@@ -164,7 +163,7 @@ Du kan utföra flera åtgärder på adaptiva formulärfragment med hjälp av AEM
    <td><p>Skapar en ordlista för lokalisering av det valda fragmentet. Mer information finns i <a>Lokalisera anpassad Forms</a>.<br /> <br /> </p> </td>
   </tr>
   <tr>
-   <td><p>Publish / Avpublicera</p> </td>
+   <td><p>Publicera/avpublicera</p> </td>
    <td><p>Publicerar/återpublicerar det valda fragmentet.<br /> <br /> </p> </td>
   </tr>
   <tr>

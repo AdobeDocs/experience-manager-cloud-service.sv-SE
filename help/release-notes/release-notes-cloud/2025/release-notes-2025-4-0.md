@@ -4,9 +4,9 @@ description: Versionsinformation om 2025.4.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 48e09824-5c67-49d8-8896-358d679649fc
-source-git-commit: c1ff27a76309628f1fb7b816092172aca7c6a738
+source-git-commit: c8391e09b7e2888423187f48360423c52b18fe0a
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.4.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten för april 2025 om du vill se en sammanfattning av funktioner som lagts till i version 2025.4.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3464006?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3463991?quality=12)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
@@ -65,7 +65,7 @@ Dessutom bör kunder som använder AEM 6.5 vara medvetna om att stacken Dynamic 
 
 Fliken Bandbredd i Dynamic Media Classic rapportkontrollpanel stöds inte längre från och med april 2025.
 
-Se [Bandbredd och lagring, rapporttyper](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/setup/administration-setup#types-of-reports).
+Se [Bandbredd och lagring, rapporttyper](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/setup/administration-setup#types-of-reports).
 
 ## Nya funktioner i Assets View {#new-features-assets-view}
 
@@ -81,19 +81,21 @@ Nu kan du snabbt välja och jämföra vilken version av en mediefil som helst me
 
 ![jämför versioner av resurs](/help/assets/assets/version-compare2.png)
 
+
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Funktioner för förhandsversioner
 
-* [Universell redigerare - Formulärfragment](/help/edge/docs/forms/universal-editor/creating-form-fragments.md): Nu kan du skapa och återanvända formulärfragment för adaptiv Forms med den universella redigeraren. Dessa fragment är återanvändbara formuläravsnitt (t.ex. kontaktuppgifter, tillståndsfält) som kan byggas en gång och tillämpas på flera formulär. Den här funktionen effektiviserar formulärframtagningen, säkerställer enhetlighet och förbättrar redigeringseffektiviteten.
+* [Universell redigerare för adaptiva Forms- och formulärfragment](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md): Den universella redigeraren har nu stöd för att skapa både adaptiva Forms och återanvändbara formulärfragment. Man kan visuellt skapa blanketter, konfigurera skicka-åtgärder och lägga in reCAPTCHA-validering i en förenklad WYSIWYG-miljö. Detta snabbar upp framtagningen av blanketter, ger bättre enhetlighet och förbättrar skyddet mot skräppost och automatiskt missbruk.
 
 * [SharePoint-dokumentbibliotek - Spara bifogade filer med originalfilnamn](/help/forms/connect-forms-to-sharepoint-document-library.md#connect-an-adaptive-form-to-microsoft-sharepoint-document-library): Du kan nu välja att spara bifogade filer med sina ursprungliga filnamn när du lagrar dem i ett SharePoint-dokumentbibliotek. Den här förbättringen gör det enklare att identifiera och hantera överförda filer.
 
 * **Regelredigeraren**:
    * [Binärt villkor med klickningshändelse i &quot;When&quot;-sats](/help/forms/rule-editor-core-components-events-operators.md#available-operator-types-and-events-in-rule-editor): Regelredigeraren tillåter nu att en knappklickningshändelse (_Är klickad_) kombineras med andra villkor i &quot;When&quot;-satsen. Detta ger mer exakt kontroll över regelkörningen baserat på användarinteraktion och andra faktorer. Obs! Om du använder flera villkor måste klickhändelsen vara det första villkoret som anges.
    * [Valideringsvillkor för fält och paneler](/help/forms/rule-editor-core-components-usecases.md): Regelredigeraren innehåller nu villkoren _IsValid_ och _IsNotValid_ . Med dessa kan du kontrollera valideringsstatusen för specifika fält eller hela paneler (inklusive layouter som Vågräta flikar, Lodräta flikar, Dragspel och Guider), vilket underlättar formulärnavigering och användarupplevelse baserat på valideringsresultat.
-* **Förbättrad scopehantering för SharePoint-listor**: SharePoint-webbplatser har nu stöd för alla hanterade sökvägar, till exempel /sites och /teams. Den här förbättringen möjliggör en bredare integrering över olika SharePoint webbplatsstrukturer, vilket ger större flexibilitet när det gäller att ansluta till organisationsinnehåll.
-* **Stöd för att spara postdokument i SharePoint-lista**: Forms som har skapats med en SharePoint listbaserad formulärdatamodell (FDM) kan nu spara postdokumentet (DoR) i SharePoint-listor genom att konfigurera fältegenskapen Dokumentreferens för postbindning. Den här förbättringen möjliggör smidig integrering av formulärdata och dokument som stöds med SharePoint-lagring.
+* [Förbättrad scopehantering för SharePoint-listor](/help/forms/connect-forms-to-sharepoint-list.md): SharePoint-webbplatser har nu stöd för alla hanterade sökvägar, till exempel /sites och /teams. Den här förbättringen möjliggör en bredare integrering över olika SharePoint webbplatsstrukturer, vilket ger större flexibilitet när det gäller att ansluta till organisationsinnehåll.
+* [Stöd för att spara postdokument i SharePoint-lista](/help/forms/generate-document-of-record-core-components.md#bind-adaptive-form-components-with-template-fields): Forms som har skapats med en SharePoint listbaserad formulärdatamodell (FDM) kan nu spara postdokumentet (DoR) i SharePoint-listor genom att konfigurera fältegenskapen Dokumentreferens för postbindning. Den här förbättringen möjliggör smidig integrering av formulärdata och dokument som stöds med SharePoint-lagring.
+* [Stöd för automatisk mappning för adaptiva formulärfragment](/help/forms/adaptive-form-fragments-core-components.md#auto-mapping-support-for-fragments-in-an-adaptive-form): Adaptiv Forms har nu stöd för automatisk infogning av matchande fragment när schemaobjekt justeras mot en definierad fragmentstruktur, vilket effektiviserar skapandet av formulär och främjar återanvändning.
 
 ### Tidiga åtkomstfunktioner i AEM Forms {#forms-new-early-access-features}
 
@@ -103,7 +105,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 #### Adobe Experience Platform (AEP)-integrering med Forms
 
-Integreringsfunktioner mellan Forms och AEP finns nu tillgängliga för användare som är tidiga.
+* [Integrering av AEM Forms med Adobe Experience Platform](/help/forms/aem-forms-aep-connector.md): AEM Forms till Adobe Experience Platform Connector möjliggör sömlös integrering mellan adaptiv Forms och Adobe Experience Platform. Med den här funktionen kan formulärdata mappas till XDM-scheman och skickas direkt till AEP i realtid. Det effektiviserar datainhämtningen för användning av personalisering och aktivering i olika Adobe Experience Cloud-lösningar.
 
 ## CIF Add-on {#cloud-services-cif}
 
@@ -125,7 +127,7 @@ Integreringsfunktioner mellan Forms och AEP finns nu tillgängliga för använda
 
 Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att skapa Adobe Developer Console-projekt och ha stöd för OAuth Server-to-Server, Web App och Single Page App (SPA).
 
-[Se den fullständiga listan](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) med OpenAPI-baserade API:er, [läs mer](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
+[Se den fullständiga listan](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) med OpenAPI-baserade API:er, [läs mer](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
 
 I den här videon får du lära dig hur du konfigurerar ett autentiserat API för senare användning:
 
@@ -196,7 +198,7 @@ Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@a
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -216,4 +218,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

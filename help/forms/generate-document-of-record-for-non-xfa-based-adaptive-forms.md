@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
 role: User, Developer
-source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
+source-git-commit: 2a780b6d1263fd70be6fc54fcc79282046f82fab
 workflow-type: tm+mt
-source-wordcount: '4030'
+source-wordcount: '4085'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -53,7 +53,7 @@ Innan du börjar lära dig mer och förbereder de resurser som krävs för ett d
 1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Markera ett formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
-1. Välj **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **[!UICONTROL Form Model]** eller **[!UICONTROL Select From]** i listrutan **[!UICONTROL Schema]** på fliken **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla XFA-mallar (XDP-filer) som är tillgängliga på datorn. Välj lämplig fil. Se även till att samma schema (dataschema) används för Adaptivt formulär och vald XFA-mall (XDP-fil).
 1. Klicka på **[!UICONTROL Done]**
 
@@ -66,7 +66,7 @@ Ditt adaptiva formulär är nu konfigurerat att använda en XDP-fil som mall fö
 1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Markera ett formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
-1. Välj **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **[!UICONTROL Form Model]** eller **[!UICONTROL Select From]** i listrutan **[!UICONTROL Schema]** på fliken **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Associera formulärmall som postmall** i avsnittet Dokumentmall på fliken Formulärmodell. När du väljer det här alternativet visas alla Acrobat PDF (Acrobat) som är tillgängliga på datorn. Välj lämplig fil.
 1. Klicka på **[!UICONTROL Done]**
 
@@ -87,7 +87,7 @@ Så här konfigurerar du ett anpassat formulär så att det automatiskt generera
 1. I Experience Manager-författarinstans klickar du på **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents].**
 1. Markera ett formulär och klicka på **[!UICONTROL Properties]**.
 1. Välj **[!UICONTROL Form Model]** i fönstret Egenskaper.
-1. Välj **[!UICONTROL Schema]** eller **[!UICONTROL None]** i listrutan **[!UICONTROL Select From]** på fliken **[!UICONTROL Form Model]**. Du kan också välja en formulärmodell när du skapar ett formulär.
+1. Välj **[!UICONTROL Form Model]** eller **[!UICONTROL Select From]** i listrutan **[!UICONTROL Schema]** på fliken **[!UICONTROL None]**. Du kan också välja en formulärmodell när du skapar ett formulär.
 1. Välj **Generera postdokument** i avsnittet Dokumentmall på fliken Formulärmodell.
 1. Klicka på **[!UICONTROL Done]**
 
@@ -395,6 +395,14 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
    ```
 
 1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
+
+>[!NOTE]
+> 
+> Om du vill visa en anpassad formulärtitel i ditt postdokument redigerar du den **anpassade formulärtiteln** i **Postdokument** > **Egenskaper för mallsida**. Den här anpassade titeln:
+> 
+> * Visas i rubriken för den genererade PDF
+> * Visas som rubriken i PDF-dokumentegenskaperna
+> * Visas som rubrik för den inledande vyn när PDF öppnas
 
 ## Dokumentstöd i anpassad formulärredigerare {#dor-support-in-adaptiveform}
 
