@@ -1,18 +1,18 @@
 ---
-title: Innehållsåterställning i AEM as a Cloud Service
+title: Återställ innehåll i AEM as a Cloud Service
 description: Lär dig hur du återställer AEM as a Cloud Service-innehåll från en säkerhetskopia med Cloud Manager.
 exl-id: 921d0c5d-5c29-4614-ad4b-187b96518d1f
 feature: Operations
 role: Admin
-source-git-commit: f5dcf76b662e8bec9248ca11f133f9a82142d877
+source-git-commit: 3aff6beda8bcafc884c46ffdc55c530d581543e4
 workflow-type: tm+mt
-source-wordcount: '1323'
+source-wordcount: '1359'
 ht-degree: 0%
 
 ---
 
 
-# Innehållsåterställning i AEM as a Cloud Service {#content-restore}
+# Återställ innehåll i AEM as a Cloud Service {#content-restore}
 
 Du kan återställa ditt AEM as a Cloud Service-innehåll från en säkerhetskopia med Cloud Manager.
 
@@ -20,7 +20,7 @@ Du kan återställa ditt AEM as a Cloud Service-innehåll från en säkerhetskop
 
 Cloud Manager självbetjäningsprocess för återställning kopierar data från Adobe systemsäkerhetskopieringar och återställer dem till den ursprungliga miljön. En återställning utförs för att returnera data som har gått förlorade, skadats eller tagits bort av misstag till det ursprungliga tillståndet.
 
-Återställningsprocessen påverkar bara innehållet, så koden och versionen av AEM ändras inte. Du kan initiera en återställning av enskilda miljöer när som helst.
+Återställningsprocessen påverkar bara innehållet, så koden och versionen av AEM ändras inte. Du kan initiera en återställning av enskilda miljöer när som helst. (Om du behöver återställa tidigare distribuerad källkod på ett enkelt och snabbt sätt, utan att behöva starta en ny pipeline-körning, kan du använda [Återställ den tidigare distribuerade koden](/help/operations/restore-previous-code-deployed.md)).
 
 I Cloud Manager finns det två typer av säkerhetskopior som du kan återställa innehåll från.
 
@@ -87,7 +87,7 @@ Mer information om hur du hanterar behörigheter finns i [Anpassade behörighete
      >
      >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) till höger om en miljö vars innehåll du vill återställa i miljötabellen och klicka sedan på **Återställ innehåll**.
+1. I miljötabellen, till höger om en miljö vars innehåll du vill återställa, klickar du på ikonen ![Mer eller Ellips ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ innehåll**.
 
    ![Återställ innehållsalternativ från ellipsmenyn](/help/operations/assets/environments-ellipsis-menu.png)
 
