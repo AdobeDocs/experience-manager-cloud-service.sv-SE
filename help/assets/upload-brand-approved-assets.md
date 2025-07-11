@@ -3,9 +3,9 @@ title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: dc0f6b5faf75fb7303611e3f25febe89b43a834d
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
@@ -61,21 +61,6 @@ Så här lägger du till resurser i Content Hub:
 1. Klicka på **[!UICONTROL Upload]** om du vill överföra resurser till Content Hub. [!UICONTROL Review details] bekräftelseruta visas. Klicka på [!UICONTROL Continue].
 
 1. Assets börjar ladda upp. Klicka på [!UICONTROL New Upload] för att starta om överföringsproceduren. Klicka på [!UICONTROL Done] för att slutföra överföringen.
-
-Administratörer kan också konfigurera obligatoriska och valfria fält som visas när resurser överförs, som kampanjnamn, nyckelord, kanaler och så vidare. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-upload-options-content-hub).
-
-
-## Lägga till resurser i Content Hub från datakällor i OneDrive eller Dropbox {#add-assets-onedrive-dropbox}
-
-Så här lägger du till resurser till Content Hub från datakällor i OneDrive eller Dropbox:
-
-1. Klicka på **[!UICONTROL Add Assets]** om du vill visa dialogrutan **[!UICONTROL Add your approved assets]** där du kan importera resurser från OneDrive eller Dropbox.
-
-1. Klicka på **[!UICONTROL OneDrive]** eller **[!UICONTROL Dropbox]** för att starta importprocessen. Content Hub uppmanar dig att logga in på ditt OneDrive- eller Dropbox-konto och visar sedan mappstrukturen för OneDrive eller Dropbox i den vänstra rutan.
-
-1. Klicka på ikonen + bredvid filen eller mappnamnet för att visa objektet i listan med valda objekt. När du har valt alla filer som du behöver lägga till i Content Hub-portalen upprepar du steg 3 till 6 i [Lägg till resurser i Content Hub från det lokala filsystemet](#add-assets-local-file-system) för att slutföra överföringsprocessen.
-
-   ![Överför resurser till Content Hub från OneDrive eller Dropbox](assets/add-assets-onedrive-dropbox.png)
 
 Administratörer kan också konfigurera obligatoriska och valfria fält som visas när resurser överförs, som kampanjnamn, nyckelord, kanaler och så vidare. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-upload-options-content-hub).
 

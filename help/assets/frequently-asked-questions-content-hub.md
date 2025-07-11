@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: fb7ce7dbb58be9fef5ab087441457770828d73c8
+source-git-commit: 642440e1349eb94adb2f1875a0c5f36d0673d702
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Det finns några konfigurationer av hur användare tilldelas till [!DNL Content 
    >
    >Användaren som tilldelats Express- och Assets-produktprofiler i två Admin Consoles måste ha samma e-postadress och använda ett **Enterprise- eller School** -företagskonto, inte ett **Personal** -konto. Den idealiska konfigurationen är att ha båda Admin Consoles inställda som **Federated ID** med en förtroenderelation konfigurerad mellan dem, så att användaren får en sömlös inloggning. Vissa Express-planer (till exempel Express Teams) stöder inte Federated ID/enkel inloggning.
 
-Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[!UICONTROL # /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[#UICONTROL /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Kan jag konfigurera Content Hub så att min organisations varumärkesriktlinjer visas som en länk på startsidan? {#content-hub-setup-brand-guidelines}
 
@@ -96,4 +96,43 @@ Adobe tillhandahåller migreringsstöd från Brand Portal till Content Hub som d
 
 ## Varför kan jag inte se produktinställningar/konfigurationsalternativ i Content Hub? {#ui-configuration-option-missing}
 
-Du måste vara [Content Hub-administratör](/help/assets/deploy-content-hub.md##onboard-content-hub-administrator) för att få åtkomst till [konfigurationsanvändargränssnittet](/help/assets/configure-content-hub-ui-options.md). Om du har tilldelats produktprofilen AEM Administrators på produktionsförfattarinstansen i Adobe Admin Console och du fortfarande inte kan se konfigurationsalternativet, kontrollerar du att produktprofilen AEM Administrators inte byter namn. Mer information finns i [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
+Du måste vara [Content Hub-administratör](/help/assets/configure-content-hub-ui-options.md) för att få åtkomst till [konfigurationsanvändargränssnittet](/help/assets/deploy-content-hub.md##onboard-content-hub-administrator). Om du har tilldelats produktprofilen AEM Administrators på produktionsförfattarinstansen i Adobe Admin Console och du fortfarande inte kan se konfigurationsalternativet, kontrollerar du att produktprofilen AEM Administrators inte byter namn. Mer information finns i [AEM as a Cloud Service Team- och produktprofiler](/help/onboarding/aem-cs-team-product-profiles.md).
+
+## Hur tillgodoser Content Hub Brand Portal begränsningar? {#content-hub-brand-portal-comparison}
+
+
+Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
+
+| Område | Funktion | Content Hub | Brand Portal |
+|---|---|----|----|
+| Konfigurera distributionsupplevelsen | Konfigurera metadata för filter, resursinformation och lägg till resurssida | ✓ | - |
+|  | Konfigurera externa länkar från portalen | ✓ | - |
+|  | Konfigurera banderollmeddelanden | ✓ | ✓ |
+|  | Konfigurera banderollbild för varumärkning | ✓ | ✓ |
+|  | Konfigurera primära och sekundära färger för användargränssnittet enligt varumärkeskraven | ✓ | - |
+| Dela resurser från DAM | Dela ursprungliga godkända resurser från DAM | ✓ | ✓ |
+|  | Godkända resursändringar synkroniserade automatiskt | ✓ | - |
+| Söka och filtrera | Dynamiska filter (alternativen visas dynamiskt baserat på de resurser som visas) | ✓ | - |
+|  | Sökhistorik | ✓ | - |
+| Överföring av tillgångar | Lokal enhet | ✓ | ✓ |
+|  | Lägg till konfigurerbara metadata när du överför resurser | ✓ | - |
+| Hämta och återge | Hämta ursprunglig resurs | ✓ | ✓ |
+|  | Dela och hämta statiska återgivningar från DAM | ✓ | ✓ |
+|  | Hämta dynamiska renderingar (förinställningar och smarta beskärningar) | ✓ | ✓ |
+|  | Möjlighet att begränsa visning och hämtning av utgångna resurser | ✓ | - |
+| Länkdelning och samlingar | Länkresurs för inloggade användare | ✓ | ✓ |
+|  | Offentliga samlingar | ✓ | ✓ |
+|  | Sök i samlingar | ✓ | - |
+|  | Anonym länkdelning | ✓ | ✓ |
+|  | Privata samlingar | ✓ | ✓ |
+| Behörigheter | ACL-baserade behörigheter | - | ✓ |
+|  | Attributbaserad åtkomstkontroll | ✓ | - |
+| Express-integrering | Redigera Content Hub Assets i Adobe Express och spara i DAM | ✓ | - |
+| Kontrollpaneler och rapporter | Instrumentpanel för insikter | ✓ | - |
+| Utbyggbarhet för användargränssnitt | Anpassade tilläggspunkter på sidan med tillgångsinformation | Begränsad tillgänglighet | - |
+| Nyheter som kommer snart | Favoritsamlingar efter användare | ✓ | - |
+|  | Fastnålade samlingar av administratör | ✓ | - |
+|  | Semantisk sökning | ✓ | - |
+|  | Lokaliserad sökning och visning av metadata | ✓ | - |
+
+
