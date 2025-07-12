@@ -4,9 +4,10 @@ description: Lär dig hur du återställer en miljö till den senast slutförda 
 feature: Operations
 role: Admin
 badge: label="Alpha" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
-source-git-commit: ae90f527d398af40cf9e6963d2e27de3368f2e8f
+exl-id: 8f804f55-a66d-47ad-a48d-61b861cef4f7
+source-git-commit: 19e23785f2c4fbfa5a244864fe16500c1e7e128b
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->&#x200B;>Funktionen som beskrivs i den här artikeln är endast tillgänglig via alfavärdet för tidig adopter. Information om hur du registrerar dig för alfa finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
+>Funktionen som beskrivs i den här artikeln är endast tillgänglig via alfavärdet för tidig adopter. Information om hur du registrerar dig för alfa finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
 
 Använd **Återställ tidigare kod som distribuerats** för att omedelbart återställa en miljö till den senaste lyckade versionen - ingen pipeline-körning krävs.
 
@@ -29,12 +30,12 @@ Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsm
 
 Funktionen **Återställ föregående kod som distribuerats** blir bara tillgänglig när **var**-villkoret nedan är sant:
 
-* Du har behörigheten **Återskapa miljö**. Mer information om hur du hanterar behörigheter finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
+* Du har **behörighet att återställa miljön**. Mer information om hur du hanterar behörigheter finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
 * Din organisation är registrerad i programmet för tidig Adobe-användare och flaggan för funktionen är aktiverad.
-* Programmet körs på **AEM as a Cloud Service**.
-* Den valda miljön är en **DEV**-miljö (temporär Alpha-gräns).
-* Den senaste pipeline för den miljön slutfördes **utan fel** och kördes för **mindre än 10 dagar** sedan.
-* Miljöstatusen är **Körs** och ingen pipeline pågår.
+* Programmet körs på AEM as a Cloud Service.
+* Den valda miljön är en `Development`-miljö (temporär Alpha-gräns).
+* Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 10 dagar** sedan.
+* Miljöstatusen är *Körs* och ingen pipeline pågår.
 * Den målkällkodsversion som du vill återställa har distribuerats **inom 30 dagar**.
 
 Om en kontroll misslyckas öppnar Cloud Manager följande dialogruta med en eller flera villkor som inte uppfylls och **Bekräfta** inaktiveras, vilket förhindrar återställning.
