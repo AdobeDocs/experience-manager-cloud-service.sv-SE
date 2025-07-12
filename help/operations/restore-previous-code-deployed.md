@@ -1,12 +1,12 @@
 ---
-title: Återställ tidigare Source-kod som distribuerats i AEM as a Cloud Service
+title: Återställ tidigare distribuerad Source-kod
 description: Lär dig hur du återställer en miljö till den senast slutförda bygg&emarginalen; ingen pipeline-körning krävs.
 feature: Operations
 role: Admin
 badge: label="Alpha" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
-source-git-commit: d5a740aa3133504f394933bc77a735f7d14230ba
+source-git-commit: ae90f527d398af40cf9e6963d2e27de3368f2e8f
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->&#x200B;>Funktionen som beskrivs i den här artikeln är endast tillgänglig via alfavärdet för tidig adopter. Information om hur du registrerar dig för alfa finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
+>>Funktionen som beskrivs i den här artikeln är endast tillgänglig via alfavärdet för tidig adopter. Information om hur du registrerar dig för alfa finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
 
 Använd **Återställ tidigare kod som distribuerats** för att omedelbart återställa en miljö till den senaste lyckade versionen - ingen pipeline-körning krävs.
 
