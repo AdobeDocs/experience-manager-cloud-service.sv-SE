@@ -278,6 +278,7 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    * Välj **[!UICONTROL Minus]** i fältet **[!UICONTROL Select Operator]**.
 
    * Markera eller dra och släpp fältet **[!UICONTROL Additional Deduction]** i det andra **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
+
      ![Regelredigeraren, exempel15](/help/edge/docs/forms/assets/rule-editor18.png)
 
 1. Välj **[!UICONTROL Done]** om du vill spara regeln.
@@ -295,6 +296,7 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    * Välj **[!UICONTROL Multiplied by]** i fältet **[!UICONTROL Select Operator]**.
 
    * Välj **Number** i fältet **[!UICONTROL Select Option]** och ange värdet som `10` i fältet **[!UICONTROL Enter a Number]**.
+
      ![Regelredigeraren, exempel18](/help/edge/docs/forms/assets/rule-editor21.png)
 1. Välj sedan **[!UICONTROL Extend Expression]** i det markerade området runt uttrycksfältet.
    ![Regelredigeraren, exempel19](/help/edge/docs/forms/assets/rule-editor22.png)
@@ -360,6 +362,7 @@ function days(endDate, startDate) {
 // eslint-disable-next-line import/prefer-default-export
 export { getFullName, days };
 ```
+
 ![Lägger till anpassad funktion](/help/edge/docs/forms/assets/create-custom-function.png)
 
 ### Använda en anpassad funktion i regelredigeraren

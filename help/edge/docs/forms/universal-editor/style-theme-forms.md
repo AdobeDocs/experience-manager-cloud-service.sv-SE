@@ -142,6 +142,7 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
   }
   
 ```
+
 * `.{Type}-wrapper`: Målar det yttre `div`-elementet baserat på    fälttypen. `.text-wrapper` anger till exempel all text som mål    fält.
 * `.field-{Name}`: Markerar elementet ytterligare baserat på det specifika fältnamnet. `.field-first-name` anger till exempel textfältet Förnamn som mål. Även om den här väljaren kan användas för att rikta element med klassen field-{Name} är det viktigt att vara försiktig. I det här specifika fallet skulle det inte vara användbart för formaterade inmatningsfält eftersom det skulle vara avsett inte bara för själva inmatningen utan även för etikett- och beskrivningselementen. Vi rekommenderar att du använder mer specifika väljare, som de du har för textinmatningsfält (.text-wrapper input).
 
@@ -219,6 +220,7 @@ main .form form .drop-down-wrapper .field-label {
   font-weight: bold;
 }
 ```
+
 * Ange som mål för wrapper: Den första väljaren (`.drop-down-wrapper`) anger det yttre wrapper-elementet som mål, vilket garanterar att formaten tillämpas på hela listrutekomponenten.
 * Flexbox Layout: Flexbox ordnar etiketten, listrutan och beskrivningen lodrätt för en ren layout.
 * Etikettformatering: Etiketten sticker ut med en större teckensnittsvikt och en liten marginal.
@@ -228,7 +230,7 @@ main .form form .drop-down-wrapper .field-label {
 
 +++
 
----
+&#x200B;---
 
 ### Alternativgrupper
 
@@ -282,6 +284,7 @@ Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, precis som komponente
     padding: 10px;
   }
 ```
+
 Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrapper som mål. Det är användbart om du vill använda allmänna format på hela alternativgruppen.
 
 * Egenskaper för alternativknappar
@@ -462,7 +465,7 @@ main .form form .checkbox-group-wrapper input[type="checkbox"]:checked + label::
 ```
 
 * Fältuppsättningselementet fungerar som panelbehållare med klassens panelwrapper och ytterligare klasser för formatering baserat på panelnamnet (fältinloggning).
-* Förklaringselementet (<legend>) fungerar som panelrubrik med texten&quot;Inloggningsinformation&quot; och klassens fältetikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
+* Förklaringselementet (&lt;legend>) fungerar som panelrubrik med texten&quot;Inloggningsinformation&quot; och klassens fältetikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
 * I fältuppsättningen, multipel.{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
 * Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
 
@@ -623,6 +626,7 @@ main .form form .panel-wrapper[data-repeatable="true"] .{Type}-wrapper {
   margin-bottom: 10px;
 }
 ```
+
 Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vilket ger ett konsekvent avstånd mellan fälten.
 
 * Ange specifika fält som mål (inom en panel):
