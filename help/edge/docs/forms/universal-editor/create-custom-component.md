@@ -392,6 +392,7 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    float: right;
    }
    ```
+
    Koden hjälper dig att definiera den anpassade komponentens format och visuella utseende.
 
 1. Om du vill lägga till funktionen går du till filen `/blocks/form/components/range/range.js` och lägger till följande kodrad:
