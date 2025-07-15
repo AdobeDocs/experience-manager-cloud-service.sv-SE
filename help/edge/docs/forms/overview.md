@@ -4,9 +4,9 @@ description: Skapa och leverera högpresterande formulär på Adobe Experience M
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
+source-git-commit: 37b20a97942f381b46ce36a6a3f72ac019bba5b7
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -31,14 +31,11 @@ använder HTML, modern CSS och vanilj JavaScript för att skapa exceptionella up
 
 Med Adobe Experience Manager (AEM) Edge Delivery Services (EDS) kan du leverera blixtsnabba, skalbara webbupplevelser i toppklass. Den här guiden förklarar **hur du skapar och publicerar formulär för dessa upplevelser** - med en tydlig rekommendationshierarki:
 
-1. **Universell redigerare (UE) - Bästa val för de flesta team**
-2. **Dokumentbaserad redigering (dokument/ark) - Perfekt för snabba, enkla formulär**
-3. **Dokumentredigering (DA) - Används för att bädda in formulär på DA-skapade sidor**
+* **Universell redigerare (UE) - Bästa val för de flesta team**
+* **Dokumentbaserad redigering (dokument/ark) - Perfekt för snabba, enkla formulär**
+* **Dokumentredigering (DA) - Används för att bädda in formulär på DA-skapade sidor**
 
 När allt är klart kan du välja rätt redigeringsmetod, förstå överföringsalternativen och följa nästa steg mot produktionsklara formulär.
-
-
-
 
 
 | Team och krav | Rekommenderad metod | Varför |
@@ -52,9 +49,9 @@ När allt är klart kan du välja rätt redigeringsmetod, förstå överförings
 
 ### Universal Editor
 
-<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsversion </a>. </span>
+<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsversion </a>. </span>
 
-Universell redigerare är ett visuellt dra-och-släpp-verktyg för marknadsförare och designers som kombinerar snabbhet med kraftfulla verktyg i företagsklass:
+[Universell redigerare](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) är ett visuellt dra och släpp-redigeringsverktyg för marknadsförare och designers som kombinerar snabbhet med kraftfulla företagsfunktioner:
 
 * WYSIWYG redigering i realtid och förhandsgranskning av enheter.
 * Direkt integrering med AEM resurser, arbetsflöden och FDM (Form Data Model).
@@ -70,12 +67,12 @@ Universell redigerare är ett visuellt dra-och-släpp-verktyg för marknadsföra
 * Möjlighet att välja bland flera olika åtgärder för att skicka in formulär, inklusive att skicka data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics, många fler datakällor.
 * Skicka in med Forms Submission Service (FSS) eller AEM Publish
 
-> **Rekommendation**: Starta alla nya formulärprojekt med Universal Editor, såvida inte ditt team har dokumentcentrerat till 100 % och formuläret är mycket grundläggande.
+**Rekommendation**: Starta alla nya formulärprojekt med Universal Editor, såvida inte ditt team har dokumentcentrerat till 100 % och formuläret är mycket grundläggande.
 
 
 ### Dokumentbaserad redigering (med Microsoft Docs eller Google Sheets)
 
-Dokumentbaserad redigering passar bäst för att skapa enkla, komplexa formulär med välbekanta verktyg som Microsoft Word, Google Docs och Google Sheets. Den här metoden är idealisk för team som behöver ett snabbt och enkelt sätt att skapa formulär.
+[Dokumentbaserad redigering](/help/edge/docs/forms/tutorial.md) är bäst lämpad för att skapa enkla, komplexa formulär med välbekanta verktyg som Microsoft Word, Google Docs eller Google Sheets. Den här metoden är idealisk för team som behöver ett snabbt och enkelt sätt att skapa formulär.
 
 * Tillgängliga komponenter för en användarvänlig upplevelse.
 * Standardiserad HTML-struktur för enhetlig rendering.
@@ -116,9 +113,11 @@ Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Go
 
 ## Nästa steg
 
-1. **Börja med Universal Editor:** Se [Guiden Komma igång för Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) när du vill börja skapa formulär.
-1. **Använd dokumentbaserad redigering:** Om du vill skapa formulär med Microsoft Excel eller Google Sheets följer du [dokumentbaserad redigering](/help/edge/docs/forms/tutorial.md).
-1. **Bädda in Forms i dokumentredigering:** Om du skapar sidor i dokumentredigering skapar du formuläret med **Universal Editor** (rekommenderas) eller dokumentbaserad redigering och bäddar in formuläret på en [DA-sida](https://www.aem.live/developer/da-tutorial).
+* [Funktioner i Universal Editor för Edge Delivery Services for Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md)
+* [Skapa ditt första formulär med Universal Editor](/help/edge/docs/forms/universal-editor/create-forms.md)
+* [Skapa ditt första formulär med Google Sheets eller Microsoft Excel](/help/edge/docs/forms/tutorial.md).
+* [Bädda in Forms i dokumentredigering (DA)](https://www.aem.live/developer/da-tutorial)
+
 
 Nu kan du skapa ditt första högpresterande formulär med AEM Edge Delivery Services.
 
