@@ -4,9 +4,9 @@ description: Med regelredigeraren i Universal Editor kan du lägga till dynamisk
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
+source-git-commit: 9ef4c5638c2275052ce69406f54dda3ea188b0ef
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2091'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Introduktion till regelredigeraren i WYSIWYG Authoring
 
-<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsversion </a>. </span>
 
 
 Du kan lägga till dynamiskt formulärbeteende med regelredigeraren, som du kan använda för att skapa regler. Dessa regler möjliggör synlighet för villkorliga fält, automatiserar beräkningar baserat på användarindata och förbättrar den övergripande användarupplevelsen. Regelredigeraren effektiviserar ifyllningsprocessen och ser till att både noggrannheten och effektiviteten är hög.
@@ -278,7 +278,6 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    * Välj **[!UICONTROL Minus]** i fältet **[!UICONTROL Select Operator]**.
 
    * Markera eller dra och släpp fältet **[!UICONTROL Additional Deduction]** i det andra **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
-
      ![Regelredigeraren, exempel15](/help/edge/docs/forms/assets/rule-editor18.png)
 
 1. Välj **[!UICONTROL Done]** om du vill spara regeln.
@@ -296,7 +295,6 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    * Välj **[!UICONTROL Multiplied by]** i fältet **[!UICONTROL Select Operator]**.
 
    * Välj **Number** i fältet **[!UICONTROL Select Option]** och ange värdet som `10` i fältet **[!UICONTROL Enter a Number]**.
-
      ![Regelredigeraren, exempel18](/help/edge/docs/forms/assets/rule-editor21.png)
 1. Välj sedan **[!UICONTROL Extend Expression]** i det markerade området runt uttrycksfältet.
    ![Regelredigeraren, exempel19](/help/edge/docs/forms/assets/rule-editor22.png)
@@ -362,7 +360,6 @@ function days(endDate, startDate) {
 // eslint-disable-next-line import/prefer-default-export
 export { getFullName, days };
 ```
-
 ![Lägger till anpassad funktion](/help/edge/docs/forms/assets/create-custom-function.png)
 
 ### Använda en anpassad funktion i regelredigeraren
