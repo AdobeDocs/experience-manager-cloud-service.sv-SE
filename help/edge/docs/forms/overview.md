@@ -49,7 +49,7 @@ När allt är klart kan du välja rätt redigeringsmetod, förstå överförings
 
 ### Universal Editor
 
-<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsversion </a>. </span>
+<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsversion </a>. </span>
 
 [Universell redigerare](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) är ett visuellt dra och släpp-redigeringsverktyg för marknadsförare och designers som kombinerar snabbhet med kraftfulla företagsfunktioner:
 
