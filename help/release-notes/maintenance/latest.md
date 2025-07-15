@@ -24,7 +24,7 @@ Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 2157
 >
 >[Version 21484](/help/release-notes/maintenance/2025/2025-7-0.md#21484) har gjorts privat och ersatts av version 21570.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21570}
 
