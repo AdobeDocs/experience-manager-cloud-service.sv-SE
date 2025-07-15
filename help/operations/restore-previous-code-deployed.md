@@ -5,9 +5,9 @@ feature: Operations
 role: Admin
 badge: label="Alpha" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: 8f804f55-a66d-47ad-a48d-61b861cef4f7
-source-git-commit: 19e23785f2c4fbfa5a244864fe16500c1e7e128b
+source-git-commit: 72b80f411ee39674530c1c41349329604e127e1e
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -34,9 +34,8 @@ Funktionen **Återställ föregående kod som distribuerats** blir bara tillgän
 * Din organisation är registrerad i programmet för tidig Adobe-användare och flaggan för funktionen är aktiverad.
 * Programmet körs på AEM as a Cloud Service.
 * Den valda miljön är en `Development`-miljö (temporär Alpha-gräns).
-* Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 10 dagar** sedan.
+* Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 30 dagar** sedan.
 * Miljöstatusen är *Körs* och ingen pipeline pågår.
-* Den målkällkodsversion som du vill återställa har distribuerats **inom 30 dagar**.
 
 Om en kontroll misslyckas öppnar Cloud Manager följande dialogruta med en eller flera villkor som inte uppfylls och **Bekräfta** inaktiveras, vilket förhindrar återställning.
 
