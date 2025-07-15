@@ -3,9 +3,9 @@ title: Egenskaper för resursväljare för anpassning
 description: Använd resursväljaren för att söka efter, hitta och hämta resursers metadata och återgivningar i programmet.
 role: Admin, User
 exl-id: cd5ec1de-36b0-48a5-95c9-9bd22fac9719
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: c2ced432f3f0bd393bf5e8e7485c0e973c451b7a
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -47,16 +47,16 @@ Du kan använda egenskaperna för resursväljaren för att anpassa hur resursvä
 | *filterRepoList* | Funktion | Nej |  | Du kan använda callback-funktionen `filterRepoList` som anropar Experience Manager-databasen och returnerar en filtrerad lista med databaser. |
 | *expirationOptions* | Funktion | | | Du kan använda mellan följande två egenskaper: **getExpiryStatus** som anger status för en utgången resurs. Funktionen returnerar `EXPIRED`, `EXPIRING_SOON` eller `NOT_EXPIRED` baserat på förfallodatumet för en resurs som du anger. Se [anpassa utgångna resurser](/help/assets/asset-selector-customization.md#customize-expired-assets). Dessutom kan du använda **allowSelectionAndDrag** där värdet för funktionen antingen kan vara `true` eller `false`. När värdet är `false` kan resursen som har gått ut inte markeras eller dras på arbetsytan. |
 | *showToast* | | Nej | | Det gör det möjligt för resursväljaren att visa ett anpassat popup-meddelande för den utgångna resursen. |
-| *metadataSchema* | Array | Nej | | Lägg till en array med fält som du anger för att samla in metadata från användaren. Med den här egenskapen kan du även använda dolda metadata som tilldelas till en resurs automatiskt men inte är synliga för användaren. |
-| *onMetadataFormChange* | Återanropsfunktion | Nej | | Det består av `property` och `value`. `Property` är lika med *mapToProperty* för fältet som skickas från *metadataSchema* vars värde uppdateras. `value` är lika med det nya värdet som anges som indata. |
-| *targetUploadPath* | Sträng |  | `"/content/dam"` | Målets överföringssökväg för de filer som har standardvärdet root of the assets database. |
-| *hideUploadButton* | Boolean | | Falskt | Den ser till att den interna överföringsknappen döljs eller inte. |
-| *onUploadStart* | Funktion | Nej |  | Det är en callback-funktion som används för att skicka överföringskällan till Dropbox, OneDrive eller lokal. Syntaxen är `(uploadInfo: UploadInfo) => void` |
-| *importSettings* | Funktion | | | Det aktiverar stöd för import av resurser från tredje parts källa. `sourceTypes` använder en array med de importkällor som du vill aktivera. Källorna som stöds är Onedrive och Dropbox. Syntaxen är `{ sourceTypes?: ImportSourceType[]; apiKey?: string; }` |
-| *onUploadComplete* | Funktion | Nej | | Det är en återanropsfunktion som används för att skicka filöverföringsstatus bland lyckade, misslyckade eller duplicerade filer. Syntaxen är `(uploadStats: UploadStats) => void` |
-| *onFilesChange* | Funktion | Nej | | Det är en återanropsfunktion som används för att visa hur överföringen fungerar när en fil ändras. Den skickar den nya arrayen med filer som väntar på överföring och källtypen för överföringen. Source-typen kan vara null om fel uppstår. Syntaxen är `(newFiles: File[], uploadType: UploadType) => void` |
-| *uploadingPlaceholder* | Sträng | | | Det är en platshållarbild som ersätter metadataformuläret när en överföring av resursen initieras. Syntaxen är `{ href: string; alt: string; } ` |
-| *uploadConfig* | Objekt | | | Det är ett objekt som innehåller en anpassad konfiguration för överföringen. |
+| *uploadConfig* | Objekt | | | Det är ett objekt som innehåller en anpassad konfiguration för överföringen. Se [överföringskonfiguration](#asset-selector-customization.md#upload-config) för användbarhet. |
+| *metadataSchema* | Array | Nej | | Den här egenskapen är kapslad under egenskapen `uploadConfig`. Lägg till en array med fält som du anger för att samla in metadata från användaren. Med den här egenskapen kan du även använda dolda metadata som tilldelas till en resurs automatiskt men inte är synliga för användaren. |
+| *onMetadataFormChange* | Återanropsfunktion | Nej | | Den här egenskapen är kapslad under egenskapen `uploadConfig`. Det består av `property` och `value`. `Property` är lika med *mapToProperty* för fältet som skickas från *metadataSchema* vars värde uppdateras. `value` är lika med det nya värdet som anges som indata. |
+| *targetUploadPath* | Sträng |  | `"/content/dam"` | Den här egenskapen är kapslad under egenskapen `uploadConfig`. Målets överföringssökväg för de filer som har standardvärdet root of the assets database. |
+| *hideUploadButton* | Boolean | | Falskt | Den ser till att den interna överföringsknappen döljs eller inte. Den här egenskapen är kapslad under egenskapen `uploadConfig`. |
+| *onUploadStart* | Funktion | Nej |  | Det är en callback-funktion som används för att skicka överföringskällan till Dropbox, OneDrive eller lokal. Syntaxen är `(uploadInfo: UploadInfo) => void`. Den här egenskapen är kapslad under egenskapen `uploadConfig`. |
+| *importSettings* | Funktion | | | Det aktiverar stöd för import av resurser från tredje parts källa. `sourceTypes` använder en array med de importkällor som du vill aktivera. Källorna som stöds är Onedrive och Dropbox. Syntaxen är `{ sourceTypes?: ImportSourceType[]; apiKey?: string; }`. Dessutom är den här egenskapen kapslad under egenskapen `uploadConfig`. |
+| *onUploadComplete* | Funktion | Nej | | Det är en återanropsfunktion som används för att skicka filöverföringsstatus bland lyckade, misslyckade eller duplicerade filer. Syntaxen är `(uploadStats: UploadStats) => void`. Dessutom är den här egenskapen kapslad under egenskapen `uploadConfig`. |
+| *onFilesChange* | Funktion | Nej | | Den här egenskapen är kapslad under egenskapen `uploadConfig`. Det är en återanropsfunktion som används för att visa hur överföringen fungerar när en fil ändras. Den skickar den nya arrayen med filer som väntar på överföring och källtypen för överföringen. Source-typen kan vara null om fel uppstår. Syntaxen är `(newFiles: File[], uploadType: UploadType) => void` |
+| *uploadingPlaceholder* | Sträng | | | Det är en platshållarbild som ersätter metadataformuläret när en överföring av resursen initieras. Syntaxen är `{ href: string; alt: string; }`. Dessutom är den här egenskapen kapslad under egenskapen `uploadConfig`. |
 | *featureSet* | Array | Sträng | | Egenskapen `featureSet:[ ]` används för att aktivera eller inaktivera en viss funktion i resursväljarprogrammet. Om du vill aktivera komponenten eller en funktion kan du skicka ett strängvärde i arrayen eller lämna arrayen tom för att inaktivera komponenten.  Om du till exempel vill aktivera överföringsfunktioner i resursväljaren använder du syntaxen `featureSet:[0:"upload"]`. På samma sätt kan du använda `featureSet:[0:"collections"]` för att aktivera samlingar i resursväljaren. Använd dessutom `featureSet:[0:"detail-panel"]` för att aktivera [informationspanelen](overview-asset-selector.md#asset-details-and-metadata) för en resurs. Syntaxen är `featureSet:["upload", "collections", "detail-panel"]` om du vill använda de här funktionerna tillsammans. |
 
 <!--

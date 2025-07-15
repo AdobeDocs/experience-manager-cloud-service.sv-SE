@@ -3,9 +3,9 @@ title: Anpassa programmet Resursväljare
 description: Använd funktioner för att anpassa resursväljaren i programmet.
 role: Admin, User
 exl-id: 0fd0a9f7-8c7a-4c21-9578-7c49409df609
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: c2ced432f3f0bd393bf5e8e7485c0e973c451b7a
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -408,9 +408,10 @@ const filterSchema = useMemo ((); => {
 
 ## Överför i resursväljaren {#upload-in-asset-selector}
 
-Du kan överföra filer eller mappar till resursväljaren från det lokala filsystemet. Om du vill överföra filer med det lokala filsystemet behöver du i allmänhet använda en överföringsfunktion från ett front-end-program för resursväljare. Olika kodfragment som krävs för att anropa överföring i resursväljaren är:
+Du kan överföra filer eller mappar till resursväljaren från det lokala filsystemet. Om du vill överföra filer med det lokala filsystemet behöver du i allmänhet använda en överföringsfunktion från ett front-end-program för resursväljare. De `upload` olika kodfragment som krävs för att anropa överföring i resursväljaren omfattar:
 
 * [Grundläggande uppladdning av formulärkodfragment](#basic-upload)
+* [Överför konfiguration](#upload-config)
 * [Överför med metadata](#upload-with-metadata)
 * [Anpassad överföring](#customized-upload)
 * [Överför med tredjepartskällor](#upload-using-third-party-source)
@@ -449,6 +450,25 @@ export const UploadExample = () => {
     )
 }
 ```
+
+### Överför konfiguration {#upload-config}
+
+```
+uploadConfig: {
+        onUploadStart: action('onUploadStart'),
+        onUploadComplete: action('onUploadComplete'),
+        metadataSchema: [
+            {
+                mapToProperty: 'dam:assetStatus',
+                value: 'approved',
+                element: 'hidden',
+            },
+        ],
+        ... more properties
+     }, 
+```
+
+*Fler egenskaper är `metadataSchema`, `onMetadataFormChange`, `targetUploadPath`, `hideUploadButton`, `onUploadStart`, `importSettings` `onUploadComplete`, `onFilesChange`,`uploadingPlaceholder`*. Mer information finns i [Egenskaper för resursväljare](#asset-selector-properties.md).
 
 ### Överför med metadata {#upload-with-metadata}
 
