@@ -4,9 +4,9 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '1773'
+source-wordcount: '1841'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Att lägga till en anpassad komponent i den universella redigeraren innebär att
 
 Låt oss ta ett exempel på hur du skapar en ny anpassad komponent med namnet **range**. Intervallkomponenten visas som en rak linje och visar värden som minimum, maximum eller selected.
 
-![Komponentformat för intervall](/help/edge/docs/forms/universal-editor/assets/custom-component-range-style.png)
+![En visuell representation av en intervallkomponent som visar ett reglage med minimi- och maximivärden samt en markerad värdeindikator](/help/edge/docs/forms/universal-editor/assets/custom-component-range-style.png)
 
 I slutet av den här artikeln lär du dig att skapa anpassade komponenter från grunden.
 
-### 1. Lägga till struktur för ny anpassad komponent
+### &#x200B;1. Lägga till struktur för ny anpassad komponent
 
 Innan en anpassad komponent kan användas måste den registreras så att Universal Editor identifierar den som ett tillgängligt alternativ. Detta uppnås genom en komponentdefinition, som innehåller en unik identifierare, standardegenskaper och komponentens struktur. Utför följande steg för att göra den anpassade komponenten tillgänglig för formulärutveckling:
 
@@ -104,9 +104,9 @@ Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project
 
 >[!NOTE]
 >
-> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
+> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
 
-### 2. Definiera egenskaperna för den anpassade komponenten för redigering
+### &#x200B;2. Definiera egenskaperna för den anpassade komponenten för redigering
 
 Den anpassade komponenten innehåller en komponentmodell som anger vilka egenskaper som kan konfigureras av formulärförfattaren. De här egenskaperna visas i dialogrutan **Egenskaper** i den universella redigeraren, vilket gör att författare kan justera inställningar som etiketter, valideringsregler, format och andra attribut. Så här definierar du egenskaper:
 
@@ -161,7 +161,7 @@ Den anpassade komponenten innehåller en komponentmodell som anger vilka egenska
 
    >[!NOTE]
    >
-   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
+   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
 
    Du kan också [lägga till anpassade egenskaper](#adding-custom-properties-for-your-custom-component) i en anpassad komponent för att utöka dess funktioner.
 
@@ -253,7 +253,7 @@ Därför är den sista `_range.json`-filen, efter att du har lagt till komponent
 ![komponentdefinition och modell](/help/edge/docs/forms/universal-editor/assets/custom-component-json-file.png)
 
 
-### 3. Göra den anpassade komponenten synlig i komponentlistan i WYSIWYG
+### &#x200B;3. Göra den anpassade komponenten synlig i komponentlistan i WYSIWYG
 
 Ett filter definierar i vilket avsnitt den anpassade komponenten kan användas i Universellt redigeringsprogram. Detta garanterar att komponenten bara kan användas i lämpliga avsnitt, vilket bevarar strukturen och användbarheten.
 
@@ -299,7 +299,7 @@ Så här ser du till att den anpassade komponenten visas i listan med tillgängl
 
 ![komponentfilter](/help/edge/docs/forms/universal-editor/assets/custom-component-form-file.png)
 
-### 4. Registrera din anpassade komponent
+### &#x200B;4. Registrera din anpassade komponent
 
 Om du vill att formulärblocket ska känna igen den anpassade komponenten och läsa in dess egenskaper som definierats i komponentmodellen vid formulärredigeringen, lägger du till värdet `fd:viewType` från komponentdefinitionen i filen `mappings.js`.
 Så här registrerar du en komponent:
@@ -324,15 +324,15 @@ const OOTBComponentDecorators = ['file-input',
 
 När du har slutfört stegen ovan visas den anpassade komponenten i formulärets komponentlista i Universalläsaren. Du kan sedan dra och släppa det i formuläravsnittet.
 
-![intervallkomponent](/help/edge/docs/forms/universal-editor/assets/custom-component-range.png)
+![Skärmbild av komponentpaletten Universal Editor som visar den anpassade intervallkomponenten som är tillgänglig för dra och släpp i formulär](/help/edge/docs/forms/universal-editor/assets/custom-component-range.png)
 
 Skärmbilden nedan visar egenskaperna för komponenten `range` som lagts till i komponentmodellen, som anger egenskaperna som formulärförfattaren kan konfigurera:
 
-![Egenskaper för intervallkomponenten](/help/edge/docs/forms/universal-editor/assets/range-properties.png)
+![Skärmbild på egenskapspanelen för den universella redigeraren med konfigurerbara inställningar för intervallkomponenten inklusive grundläggande egenskaper, verifieringsregler och formateringsalternativ](/help/edge/docs/forms/universal-editor/assets/range-properties.png)
 
 Nu kan du definiera runtime-beteendet för den anpassade komponenten genom att lägga till format och funktioner.
 
-### 5. Lägga till körningsbeteende för den anpassade komponenten
+### &#x200B;5. Lägga till körningsbeteende för den anpassade komponenten
 
 Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i [Formateringen av formulärfält](/help/edge/docs/forms/style-theme-forms.md). Detta kan du göra med anpassad CSS (Cascading Style Sheets) och anpassad kod för att förbättra komponentens utseende. Så här lägger du till körningsbeteendet för komponenten:
 
@@ -392,7 +392,6 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    float: right;
    }
    ```
-
    Koden hjälper dig att definiera den anpassade komponentens format och visuella utseende.
 
 1. Om du vill lägga till funktionen går du till filen `/blocks/form/components/range/range.js` och lägger till följande kodrad:
@@ -457,7 +456,7 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    När du har infogat anpassade format och funktioner förbättras intervallkomponentens utseende och beteende. Den uppdaterade designen återspeglar de format som används, medan den nya funktionen ger en mer dynamisk och interaktiv användarupplevelse.
 Skärmbilden nedan visar den uppdaterade intervallkomponenten.
 
-![Komponentformat för intervall](/help/edge/docs/forms/universal-editor/assets/custom-component-range-1.png)
+![Den sista omfångskomponenten som fungerar visar ett reglage med värdebubblor och interaktiva funktioner i Universell redigerare](/help/edge/docs/forms/universal-editor/assets/custom-component-range-1.png)
 
 ## Frågor och svar
 

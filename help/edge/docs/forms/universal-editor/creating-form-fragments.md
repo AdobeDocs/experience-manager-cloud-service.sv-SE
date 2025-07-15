@@ -4,9 +4,9 @@ description: Lär dig hur du skapar formulärfragment i den universella redigera
 feature: Edge Delivery Services
 role: Admin, User, Developer
 exl-id: 7b0d4c7f-f82f-407b-8e25-b725108f8455
-source-git-commit: 8dfcec0648f5b474113325b6cc6cffc754e21ec2
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '1334'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 <span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Forms innehåller ofta vanliga avsnitt som kontaktinformation, identifikationsinformation eller godkännandeavtal. Formulärutvecklarna skapar dessa avsnitt varje gång de skapar ett nytt formulär som är upprepande och tidskrävande.
 För att slippa detta dubbelarbete erbjuder Universal Editor ett sätt att skapa återanvändbara formulärsegment, t.ex. paneler eller fältgrupper, bara en gång och återanvända dem i olika formulär. Dessa återanvändbara, modulära och fristående segment kallas för formulärfragment. Samma kontaktfragment för nödsituationer kan till exempel användas i olika avsnitt av ett formulär, till exempel för kontaktinformation för medarbetare och ansvarig.
@@ -108,7 +108,7 @@ Så här skapar du ett formulärfragment i den universella redigeraren:
 
    Skärmbilden nedan visar `contact fragment` som har skapats i Universell redigerare.
 
-   ![Kontaktfragment](/help/edge/docs/forms/universal-editor/assets/contact-fragment.png)
+   ![Skärmbild av ett ifyllt formulärfragment med kontaktinformation i Universell redigerare, med fält för namn, telefon, e-post och adress som kan återanvändas i flera formulär](/help/edge/docs/forms/universal-editor/assets/contact-fragment.png)
 
    När du har skapat fragmentet kan du [lägga till det skapade fragmentet i Edge Delivery Services Forms](#adding-form-fragments-in-forms).
 
@@ -140,7 +140,7 @@ Låt oss skapa ett enkelt `Employee Details`-formulär som innehåller informati
 
    Formulärfragmentet läggs till med referens till formuläret och förblir synkroniserat med det fristående formulärfragmentet.
 
-   ![Fragment i formulär](/help/edge/docs/forms/universal-editor/assets/fragment-in-form.png)
+   ![Skärmbild som visar kontaktinformationsfragmentet som har integrerats i ett medarbetarformulär i den universella redigeraren och som visar hur fragment behåller sin struktur när de återanvänds](/help/edge/docs/forms/universal-editor/assets/fragment-in-form.png)
 
    Du kan förhandsgranska formuläret för att se hur det ser ut i **förhandsgranskningsläget**.
 

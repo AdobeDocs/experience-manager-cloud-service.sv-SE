@@ -4,9 +4,9 @@ description: Använd Universell redigerare för Edge Delivery Services for Forms
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1049'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Den universella redigeraren är en smidig lösning för att skapa och hantera fo
 
 | ![Analys och spårning](/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg) | ![Formulärfragment](/help/edge/docs/forms/universal-editor/assets/form-fragments.svg) | ![Databindning](/help/edge/docs/forms/universal-editor/assets/data-binding.svg) |
 |:-------------:|:-------------:|:-------------:|
-| [**Analys och spårning**](https://www.aem.live/developer/martech-integration) | **Formulärfragment** (kommer snart) | **Databindning** (kommer snart) |
+| [**Analys och spårning**](https://www.aem.live/developer/martech-integration) | **Formulärfragment** (kommer snart) | [**Databindning**](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md) |
 | Få insikter om användarbeteende, formulärinteraktioner och överföringshastighet med inbyggda analyser och spårning för att möjliggöra datadriven optimering av formulär. | Med Form Fragments kan man återanvända de vanligaste sektionerna en gång och återanvända dem i flera olika formulär, vilket ger enhetlighet och minskar behovet av underhåll. | Databindning möjliggör direkta anslutningar mellan formulärfält och backend-datakällor, med stöd för realtidsuppdateringar och avancerad datamappning. |
 
 | ![CAPTCHA](/help/edge/docs/forms/universal-editor/assets/captcha.svg) | ![Bädda in Forms](/help/edge/docs/forms/universal-editor/assets/embedding-forms.svg) | ![Tack!](/help/edge/docs/forms/universal-editor/assets/thank-you.svg) |
@@ -217,7 +217,7 @@ In-addtion to pre-built form components, the Universal editor also provides supp
 
 ## Onboarding
 
-Om du vill aktivera den universella redigeraren och dess avancerade funktioner som regelredigeraren kan du skriva till oss på aem-forms-ea@adobe.com från ditt officiella e-post-id. Adobe-teamet är här för att hjälpa er att skapa nya formulär.
+<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsversion </a>. </span>
 
 ## Vanliga frågor och svar
 

@@ -4,14 +4,52 @@ description: Konfigurera Skicka-åtgärder för anpassat formulär.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: beee9be7-8215-496b-9fb9-61fba000a055
-source-git-commit: 0c6f024594e1b1fd98174914d2c0714dffecb241
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
 
 # Inlämningsåtgärd för anpassat formulär
+
+## Ökning
+
+Inlämning av blanketter är det avgörande steget i användarens resa - där insamlade data behandlas och åtgärder vidtas. Det här dokumentet innehåller en omfattande guide till hur du konfigurerar och hanterar Skicka-åtgärder för Adaptive Forms i Universal Editor.
+
+### Vad du kommer att lära dig
+
+I slutet av det här dokumentet kommer du att förstå hur du:
+
+* Konfigurera olika typer av skicka-åtgärder för formulären
+* Ställ in REST-slutpunktsöverföringar för integrering med externa system
+* Konfigurera e-postöverföringar för formulärsvar
+* Implementera anpassade skicka-åtgärder för specifika affärsbehov
+* Hantera formulärvalidering och felscenarier vid inlämning
+
+### Målgrupp
+
+Den här guiden är utformad för:
+
+* **Formulärutvecklare** som implementerar inskickningslogik
+* **Systemintegratörer** ansluter formulär till backend-system
+* **Affärsanalytiker** definierar formulärarbetsflöden
+* **Teknikarkitekter** formger formuläröverföringsprocesser
+
+### Tillgängliga överföringsåtgärder
+
+Universal Editor har två primära åtgärdstyper:
+
+1. **Skicka till REST-slutpunkt** * Skicka formulärdata till API-slutpunkter
+2. **Skicka e-post** * Leverera formulärsvar via e-post
+
+### Förutsättningar
+
+Innan du konfigurerar skicka-åtgärder måste du se till att:
+
+* Åtkomst till Universal Editor
+* Rätt behörigheter för formulärkonfiguration
+* Förstå målets slutpunkt eller e-postkonfiguration
 
 En Skicka-åtgärd anger målet för de data som samlas in via ett anpassat formulär. Överföringsprocessen börjar när användaren klickar på knappen **[!UICONTROL Submit]** i formuläret. AEM Forms erbjuder två typer av skicka-åtgärder som beskrivs nedan och gör att du kan skapa och använda anpassade skicka-åtgärder som uppfyller dina specifika behov. De färdiga Skicka-åtgärderna är:
 
@@ -42,7 +80,7 @@ Så här konfigurerar du en REST-slutpunkt:
 1. Ange REST-slutpunkts-URL.
 1. Du kan också **aktivera POST-begäran** och ange en URL för att skicka begäran.
 
-![Aktivera efterbegäran för anpassningsbara formulär](/help/forms/assets/enable-post-request-ue.png)
+![Skärmbild av egenskapspanelen för Universal Editor som visar REST-konfigurationsfält för slutpunkter inklusive URL-indata och Aktivera POST-begäran för att växla mellan formulärsändning](/help/forms/assets/enable-post-request-ue.png)
 
 >[!NOTE]
 >
@@ -124,7 +162,7 @@ Så här konfigurerar du en skicka-åtgärd som en e-postadress för att skicka 
         * **Use External Template**: Enables the use of an external email template for formatting the email content. Provide the URL or path to the External template path to integrate a pre-designed email template hosted in your AEM Assets folder.
         * **Include Attachment**: Specifies whether the submitted form data should include an attachment submitted through the form in the email.
 
-    {width=50%,height=50%}![Enable post request for adaptive forms](/help/forms/assets/email-config-ue.png)
+    ![Screenshot of the Universal Editor email configuration panel showing fields for From, To, CC, BCC, Subject, and options for external templates and attachments](/help/forms/assets/email-config-ue.png)
 
 -->
 

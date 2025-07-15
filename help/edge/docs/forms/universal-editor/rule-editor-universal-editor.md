@@ -4,9 +4,9 @@ description: Med regelredigeraren i Universal Editor kan du lägga till dynamisk
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: 9127c58a72dc4942312907f9e8f0cdcc8de9aa4b
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '2089'
+source-wordcount: '2128'
 ht-degree: 0%
 
 ---
@@ -188,7 +188,7 @@ Nu ska vi utforska hur du [skriver regler i regelredigeraren](#write-rules).
 
 För att förstå hur du skriver regler i Visual Rule Editor ska vi titta på ett enkelt exempel på ett skatteberäkningsformulär:
 
-![Exempel på regelredigerare](/help/edge/docs/forms/assets/rule-editor-1.png)
+![Skärmbild av gränssnittet i regelredigeraren som visar hur en villkorsregel skapas med logiken När-Då för formulärfältets synlighet ](/help/edge/docs/forms/assets/rule-editor-1.png)
 
 I den form som beskrivs ovan anger användaren bruttolönen. Baserat på denna inmatning visas villkorsfält och betald moms beräknas.
 
@@ -209,7 +209,7 @@ I den form som beskrivs ovan anger användaren bruttolönen. Baserat på denna i
 
 Så här skriver du regler:
 
-### 1. Skapa ett formulär
+### &#x200B;1. Skapa ett formulär
 
 Så här skapar du ett formulär i Universal Editor:
 
@@ -223,9 +223,9 @@ Så här skapar du ett formulär i Universal Editor:
    * Skicka (Skicka-knapp)
 1. Dölj formulärfältet `Additional Deduction` genom att öppna dess `Properties`.
 
-   ![Exempel på regelredigerare](/help/edge/docs/forms/assets/rule-editor2.png)
+   ![Skärmbild av ett momsberäkningsformulär med inmatningsfält för bruttolön, civilstånd och underordnade, som visar formulärstrukturen innan reglerna tillämpas](/help/edge/docs/forms/assets/rule-editor2.png)
 
-### 2. Lägg till en villkorsregel för ett formulärfält
+### &#x200B;2. Lägg till en villkorsregel för ett formulärfält
 
 När du har skrivit formuläret kan du bara skriva den första regeln för att visa fältet `Additional Deduction` om bruttolönen överstiger 50 000 USD. Så här lägger du till en villkorsregel:
 
@@ -243,7 +243,7 @@ Regeltypen `Set Value Of` är som standard markerad. Du kan inte ändra eller ä
 1. Ange `50000` i fältet **[!UICONTROL Enter a Number]** i regeln.
    ![Exempel på regelredigerare6](/help/edge/docs/forms/assets/rule-editor8.png)
 Du har definierat villkoret som `When Gross Salary is greater than 50000`. Definiera sedan åtgärden som ska utföras om villkoret är `True`.
-1. Välj **[!UICONTROL Show]** i listrutan **[!UICONTROL Select Action]** i programsatsen `Then`.
+1. Välj `Then` i listrutan **[!UICONTROL Show]** i programsatsen **[!UICONTROL Select Action]**.
    ![Exempel på regelredigerare7](/help/edge/docs/forms/assets/rule-editor9.png)
 1. Dra och släpp fältet **[!UICONTROL Additional Deduction]** från fliken Formulärobjekt i fältet **[!UICONTROL Drop object or select here]**. Du kan också markera fältet **[!UICONTROL Drop object or select here]** och välja fältet **[!UICONTROL Additional Deduction]** på snabbmenyn, där alla formulärobjekt i formuläret listas.
    ![Exempel på regelredigerare8](/help/edge/docs/forms/assets/rule-editor10.png)
@@ -261,7 +261,7 @@ Regeln visas så här i Regelredigeraren.
 >
 > Du kan också skriva en Visa-regel i fältet Ytterligare avdrag, i stället för en När-regel i fältet Bruttolön, för att implementera samma beteende.
 
-### 3. Lägg till beräkningsregler för formulärfälten
+### &#x200B;3. Lägg till beräkningsregler för formulärfälten
 
 Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden mellan `Gross Salary` och `Additional Deduction` (om tillämpligt). Så här lägger du till beräkningsregel i fältet **[!UICONTROL Taxable Income]**:
 
@@ -278,7 +278,6 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    * Välj **[!UICONTROL Minus]** i fältet **[!UICONTROL Select Operator]**.
 
    * Markera eller dra och släpp fältet **[!UICONTROL Additional Deduction]** i det andra **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
-
      ![Regelredigeraren, exempel15](/help/edge/docs/forms/assets/rule-editor18.png)
 
 1. Välj **[!UICONTROL Done]** om du vill spara regeln.
@@ -296,7 +295,6 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    * Välj **[!UICONTROL Multiplied by]** i fältet **[!UICONTROL Select Operator]**.
 
    * Välj **Number** i fältet **[!UICONTROL Select Option]** och ange värdet som `10` i fältet **[!UICONTROL Enter a Number]**.
-
      ![Regelredigeraren, exempel18](/help/edge/docs/forms/assets/rule-editor21.png)
 1. Välj sedan **[!UICONTROL Extend Expression]** i det markerade området runt uttrycksfältet.
    ![Regelredigeraren, exempel19](/help/edge/docs/forms/assets/rule-editor22.png)
@@ -304,7 +302,7 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    ![Exempel på regelredigerare20](/help/edge/docs/forms/assets/rule-editor23.png)
 1. Välj **[!UICONTROL Done]** om du vill spara regeln.
 
-### 4. Förhandsgranska ett formulär
+### &#x200B;4. Förhandsgranska ett formulär
 
 När du nu förhandsgranskar formuläret och anger **bruttolön** som `60,000` visas fältet **Ytterligare avdrag** och fältet **Skattepliktig inkomst** och **Skatteskuld** beräknas därefter.
 
@@ -362,7 +360,6 @@ function days(endDate, startDate) {
 // eslint-disable-next-line import/prefer-default-export
 export { getFullName, days };
 ```
-
 ![Lägger till anpassad funktion](/help/edge/docs/forms/assets/create-custom-function.png)
 
 ### Använda en anpassad funktion i regelredigeraren

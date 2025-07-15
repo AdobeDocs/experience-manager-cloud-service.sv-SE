@@ -4,9 +4,9 @@ description: I den här artikeln beskrivs hur du skapar adaptiv Forms genom att 
 feature: Edge Delivery Services
 role: User
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: e2ea802856a2fbab90d4ddb1ecf7280ce789d59c
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1629'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ Ett beslutsflödesdiagram som vägleder installationen och publiceringen av Adap
 
 Följ de här stegen för att skapa formulär i AEM och publicera dem på Edge Delivery Services:
 
-[1. Välj en mall och skapa formuläret](#choose-a-template-and-create-the-form)
+[&#x200B;1. Välj en mall och skapa formuläret](#choose-a-template-and-create-the-form)
 
-[2. Skriv formuläret](#author-the-form)
+[&#x200B;2. Skriv formuläret](#author-the-form)
 
-[3. Publicera ett formulär](#publish-a-form)
+[&#x200B;3. Publicera ett formulär](#publish-a-form)
 
 ### Välj en mall och skapa formuläret
 
@@ -79,14 +79,13 @@ Gör så här för att välja mallen och skapa formuläret:
 
    1. Ange **Namn** och **Titel**.
    1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en:
-
       `https://github.com/wkndforms/edsforms`
 
    ![Guiden Skapa formulär](/help/edge/assets/create-form-wizard.png)
 
    När du klickar på **[!UICONTROL Create]** öppnas formuläret i den universella redigeraren för redigering.
 
-   ![författare till formuläret](/help/edge/assets/author-form.png)
+   ![Skärmbild av den universella redigeraren som visar ett formulär som redigeras med komponentpaletten till vänster, formulärarbetsytan i mitten och egenskapspanelen till höger](/help/edge/assets/author-form.png)
 1. Klicka på **[!UICONTROL Create]** för att skapa formuläret. Nu kan du [skapa formuläret med den universella redigeraren](#author-the-form).
 
 >[!TAB Kärnkomponentbaserad mall]
@@ -136,7 +135,7 @@ Utför följande steg för att skapa formulär med den universella redigeraren f
 
    På skärmbilden nedan visas `Registration Form` som har skapats i Universella redigerare:
 
-   ![kontakta oss](/help/edge/assets/contact-us.png)
+   ![Skärmbild av ett ifyllt kontaktformulär i Universal Editor som visar formulärfält för namn, e-post, telefon och meddelande med korrekt formatering och layout](/help/edge/assets/contact-us.png)
 
 >[!NOTE]
 >
@@ -220,7 +219,7 @@ För att få åtkomst till formuläret på Edge Delivery Services är det obliga
 
 1. Publicera formuläret genom att klicka på knappen **[!UICONTROL Publish]** i det övre högra hörnet av Universella redigerare.
 
-![publicera formulär](/help/edge/assets/publish-form.png)
+![Skärmbild av den universella redigeraren som visar publiceringsdialogrutan med alternativ för formulärpublicering och bekräftelseknappar](/help/edge/assets/publish-form.png)
 
 >[!NOTE]
 >

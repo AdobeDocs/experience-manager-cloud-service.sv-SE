@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 4144c726a6f8551df9497732c2ca95b8eec5c63a
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '2356'
+source-wordcount: '2219'
 ht-degree: 0%
 
 ---
@@ -72,21 +72,6 @@ Det här är mer konversationskritiska Forms ger:
 
 
 Forms är mer än bara ett nytt utseende - de förändrar användarupplevelsen.  Öka engagemanget, minska antalet blanketter som läggs ned och gör interaktionen med er webbplats roligare för alla.
-
-
-### WYSIWYG Authoring for Edge Delivery Services
-
-WYSIWYG Authoring har gränssnitt från WYSIWYG (Universal Editor och Adaptive Forms Editor) för att skapa och publicera anpassningsbara formulär till Edge Delivery Services. WYSIWYG Authoring har alla funktioner som finns i [Dokumentbaserad redigering](/help/edge/docs/forms/overview.md#document-based-authoring-features), plus en mängd andra funktioner:
-
-* Avancerad regelredigerare för avancerad logik.
-* Utbyggbarhet på serversidan för anpassade funktioner.
-* WYSIWYG redigeringsupplevelse för enkel framtagning och visualisering av formulär.
-* Dokumentera arkivfunktionalitet för att skapa manipuleringssäkra arkiv av inlämnade data.
-* Integrering med Adobe Sign för elektroniska signaturer.
-* Integrering med olika datakällor för förifyllande av formulär och inlämning av data.
-* Form Data Model (FDM) för att definiera datastrukturen och interaktionen med olika datakällor.
-* Möjlighet att välja bland flera olika åtgärder för att skicka in formulär, inklusive att skicka data till Microsoft SharePoint, Microsoft OneDrive, Adobe Workfront Fusion, Salesforce, Microsoft Dynamics och många andra datakällor.
-
 
 ### AEM Forms till Marketo Connector
 
@@ -195,7 +180,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 

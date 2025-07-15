@@ -4,9 +4,9 @@ description: Lär dig skapa formulär baserade på en formulärdatamodell (FDM).
 feature: Edge Delivery Services, Form Data Model
 role: Admin, User
 exl-id: 9ce51223-57d0-47d8-8868-84b37d4e8e3e
-source-git-commit: 95998daf04ae579ca11896953903852e6140c3a4
+source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Genom att integrera formulär med en formulärdatamodell (FDM) i den universella
 
 * Om ikonen **Datakällor** inte visas i det universella redigeringsgränssnittet eller egenskapen **Bind referens** i den högra egenskapspanelen aktiverar du tillägget **Datakälla** i **Extension Manager** .
 
-  ![tilläggshanteraren](/help/edge/docs/forms/universal-editor/assets/extension-manager.png)
+  ![Skärmbild av Extension Manager-gränssnittet i Universal Editor som visar tillgängliga tillägg, inklusive tillägget Datakällor som kan aktiveras för formulärintegrering](/help/edge/docs/forms/universal-editor/assets/extension-manager.png)
 
   Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar och inaktiverar tillägg i den universella redigeraren.
 
@@ -79,7 +79,7 @@ När du skapar ett schemabaserat formulär konfigureras det automatiskt med en d
 
    När du klickar på **[!UICONTROL Create]** öppnas formuläret i Universell redigerare för redigering.
 
-   ![författare till formuläret](/help/edge/docs/forms/universal-editor/assets/schema-based-form-in-ue.png)
+   ![Skärmbild av den universella redigeraren som visar ett schemabaserat formulär med förifyllda formulärfält och Content Browser som visar tillgängliga datakällelement](/help/edge/docs/forms/universal-editor/assets/schema-based-form-in-ue.png)
 
    Formuläret skapas med dataelementen från den associerade datakällan, där formulärfälten har förkonfigurerad databindning.
 
@@ -131,7 +131,7 @@ När du skapar ett icke schemabaserat formulär konfigureras ingen datakälla. D
 
    Du kan också dra och släppa dessa element för att skapa ett anpassat formulär. När du klickar på **[!UICONTROL Add]** läggs de markerade elementen på fliken **[!UICONTROL Datasource]** till i formuläret, och en bock visas framför de tillagda elementen.
 
-   ![Skapa formulär](/help/edge/docs/forms/universal-editor/assets/non-schema-form.png)
+   ![Skärmbild som visar den universella redigeraren med ett icke-schemaformulär som byggs genom att dataelement dras och släpps från fliken Data Source till formulärstrukturen](/help/edge/docs/forms/universal-editor/assets/non-schema-form.png)
 
 Du kan lägga till databindning till ett formulärfält genom att välja det i egenskapen **Bindningsreferens** . Låt oss till exempel lägga till en databindningsreferens i textrutan **Id** som redan finns i formuläret.
 Gör så här för att välja databindning för formulärfältet från datakällträdet:
