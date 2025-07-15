@@ -159,7 +159,7 @@ Kör till exempel följande kommando i terminal eller kommandotolk när du har e
     curl -X POST &quot;https://forms.adobe.com/adobe/forms/af/submit/{id}&quot; \
     —header &quot;Content-Type: application/json&quot; \
     —header &quot;x-adobe-routing: tier=live,bucket=main—[plats/databas]—[organisation]&quot; \
-    —data &#39;{
+    —data &#39;&lbrace;
     &quot;data&quot;: 
     &quot;startDate&quot;: &quot;2 025-01-10&quot;,
     &quot;endDate&quot;: &quot;2025-01-25&quot;,
@@ -171,7 +171,7 @@ Kör till exempel följande kommando i terminal eller kommandotolk när du har e
     &quot;age&quot;: &quot;35&quot;,
     &quot;subscribe&quot;: null,
     &quot;email&quot;: &quot;mary@gmail.com&quot;
-    }
+    &rbrace;
     &#39;
     
     &quot;
