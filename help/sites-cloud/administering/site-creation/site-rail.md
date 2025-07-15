@@ -1,13 +1,13 @@
 ---
 title: Hantera platstemat med hjälp av platspanelen
-description: Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera ditt webbplatstema.
+description: Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera webbplatstemat för traditionella AEM-projekt med publiceringsleverans.
 feature: Administering
 role: Admin
 exl-id: 45785e5a-4fa2-4cf2-a300-f1865f6f5807
 solution: Experience Manager Sites
-source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
+source-git-commit: 076005e1ed1ca3303ed5843a3f27e0d707df5022
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 {{traditional-aem}}
 
-Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera ditt webbplatstema.
+Lär dig de kraftfulla funktionerna i panelen Webbplats så att du enkelt kan anpassa och hantera webbplatstemat för traditionella AEM-projekt med publiceringsleverans.
 
 ## Ökning {#overview}
 
-På platspanelen kan du hantera teman och mallresurser för din webbplats. [Precis som andra paneler](/help/sites-cloud/authoring/sites-console/console-side-panel.md), t.ex. panelerna Innehållsträd, Referenser och Tidslinje, visas platspanelen som den vänstra panelen i platskonsolen och visar information om det markerade objektet. Till skillnad från andra paneler gäller platspanelen endast platsrötter.
+På platspanelen kan du hantera temat och mallresurserna för din webbplats för traditionella AEM-redigeringsprojekt med [publiceringsleverans.](/help/sites-cloud/authoring/author-publish.md) [Precis som andra paneler](/help/sites-cloud/authoring/sites-console/console-side-panel.md), t.ex. panelerna Innehållsträd, Referenser och Tidslinje, visas platspanelen som den vänstra panelen i platskonsolen och visar information om det markerade objektet. Till skillnad från andra paneler gäller platspanelen endast platsrötter.
 
 Panelen Plats används för att hantera tema- och mallrelaterad information för din webbplats, inklusive:
 
@@ -46,7 +46,7 @@ Välj **Hämta temakällor** om du vill hämta en lokal kopia av webbplatstemat 
 
 ## Hämtar mallresurser {#downloading-template-resources}
 
-[Webbplatsmallar](site-templates.md) kan innehålla information utöver webbplatsens innehållsstruktur och [webbplatstemat](site-themes.md). Platsmallar kan till exempel innehålla trådramsdesign eller andra platsrelaterade filer.
+[Webbplatsmallar](site-templates.md) kan innehålla information utöver webbplatsens innehållsstruktur och [webbplatstemat.](site-themes.md) Platsmallar kan till exempel innehålla trådramsdesign eller andra platsrelaterade filer.
 
 Om webbplatsen är baserad på en platsmall, där platspanelen visas i platskonsolen, markerar du platsens rot för att visa temainformation om platsen, inklusive ytterligare webbplatsresurser.
 
@@ -86,4 +86,4 @@ När platspanelen visas i platskonsolen markerar du platsens rot för att visa t
 
 ![Aktiverar frontendpipeline](/help/sites-cloud/administering/assets/enable-fep.png)
 
-Mer information finns i dokumentet [Aktivera frontdelspipelinen](enable-front-end-pipeline.md).
+Mer information finns i dokumentet [Aktivera frontdelspipelinen.](enable-front-end-pipeline.md)

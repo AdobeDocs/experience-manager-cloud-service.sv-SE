@@ -5,36 +5,25 @@ feature: Administering
 role: Admin
 exl-id: 9c71c167-2934-4210-abd9-ab085b36593b
 solution: Experience Manager Sites
-source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
+source-git-commit: 4d45e7ef626ad0b46f5323263cca791b14f9732f
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
 
-# Skapa en plats {#creating-site}
 
-{{traditional-aem}}
+# Skapa en plats {#creating-site}
 
 Lär dig hur du använder AEM för att skapa en webbplats med hjälp av webbplatsmallar för att definiera webbplatsens format och struktur.
 
 ## Ökning {#overview}
 
-Innan innehållsförfattare kan skapa sidor med innehåll måste webbplatsen först skapas. Detta utförs vanligtvis av en AEM-administratör som definierar platsens ursprungliga struktur. Med hjälp av webbplatsmallar kan du snabbt och flexibelt skapa webbplatser.
-
-Med verktyget AEM Quick Site Creation kan man snabbt skapa en helt ny webbplats med hjälp av mallar.
-
-Med verktyget Skapa snabbwebbplats kan du snabbt anpassa temat och formatet för AEM-webbplatsen (JavaScript, CSS och statiska resurser). Detta gör att den som inte har någon kunskap om AEM kan arbeta separat och parallellt med de som skapar materialet. AEM-administratören laddar bara ned webbplatstemat och skickar det till den frontutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i AEM koddatabas, som sedan distribueras.
-
-Det här dokumentet fokuserar på att skapa webbplatser med verktyget Skapa snabbwebbplats. Om du vill ha en översikt över arbetsflödet för att skapa och anpassa webbplatser kan du läsa [AEM snabbplatsresa](/help/journey-sites/quick-site/overview.md)
+Innan innehållsförfattare kan skapa sidor med innehåll måste webbplatsen först skapas. Detta utförs vanligtvis av en AEM-administratör som definierar platsens ursprungliga struktur. Med hjälp av webbplatsmallar kan du snabbt och flexibelt skapa webbplatser för icke-utvecklare.
 
 ## Struktur för planeringsplats {#structure}
 
-Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur har stöd för enkel navigering och innehållsidentifiering för webbplatsens besökare och har stöd för olika AEM-funktioner som [hantering av flera webbplatser och översättning](/help/sites-cloud/administering/msm-and-translation.md).
-
->[!TIP]
->
->[WKND-referenswebbplatsen ](https://wknd.site) innehåller en implementering av bästa praxis för en fullt fungerande varumärkeswebbplats för upplevelser utomhus. Se hur en välbyggd AEM-sajt är uppbyggd.
+Ta tid till att fundera över webbplatsens syfte och planerade innehåll långt i förväg. Detta styr hur du utformar webbplatsens struktur. En bra webbplatsstruktur har stöd för enkel navigering och innehållsidentifiering för webbplatsens besökare och har stöd för olika AEM-funktioner som [hantering av flera webbplatser och översättning.](/help/sites-cloud/administering/msm-and-translation.md)
 
 ## Webbplatsmallar {#site-templates}
 
@@ -44,11 +33,15 @@ Webbplatsmallar innehåller i allmänhet information om baswebbplatsinnehåll oc
 
 >[!TIP]
 >
->Mer information om webbplatsmallar finns i [Webbplatsmallar](site-templates.md).
+>Mer information om webbplatsmallar finns i dokumentet [Webbplatsmallar.](site-templates.md)
 
 >[!NOTE]
 >
->Webbplatsmallen ska inte blandas ihop med sidmallar. Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
+>Webbplatsmallen ska inte blandas ihop med [sidmallar.](/help/sites-cloud/authoring/page-editor/templates.md) Platsmallar definierar den övergripande strukturen för en plats. En sidmall definierar strukturen och det ursprungliga innehållet för en enskild sida.
+
+### Webbplatsmallar från Adobe {#adobe-templates}
+
+{{adobe-templates}}
 
 ## Skapa en plats {#create-site}
 
@@ -80,6 +73,11 @@ Det är enkelt att använda en mall för att skapa en plats.
    * Webbplatsnamnet blir en del av webbadressen.
    * Webbplatsnamnet måste uppfylla [AEM regler för sidnamngivning](/help/sites-cloud/authoring/sites-console/organizing-pages.md#page-name-restrictions-and-best-practices).
 
+1. Ange ytterligare webbplatsinformation enligt webbplatsmallen.
+
+   * Olika mallar kan kräva ytterligare information.
+   * Mallar för [Edge Delivery Services-projekt](https://www.aem.live/developer/ue-tutorial) kräver till exempel GitHub-databasen för ditt projekt.
+
 1. Välj **Skapa** så skapas webbplatsen från webbplatsmallen.
 
    ![Information om den nya platsen](../assets/create-site-details.png)
@@ -96,10 +94,10 @@ Innehållsförfattare kan nu börja skriva!
 
 ## Webbplatsanpassning {#site-customization}
 
-Om webbplatsen kräver anpassning utöver de tillgängliga mallarna finns det flera alternativ.
+Mallar är användbara när du snabbt vill ställa in grundläggande struktur och stil för en plats. De flesta projekt kräver dock viss ytterligare formatering och anpassning. Webbplatsmallar gör att webbplatsens format inte behöver vara densamma så att utvecklare inte behöver någon kunskap om AEM för att skapa webbplatsen, utan kan
+arbeta separat och parallellt med de som skapar innehållet. Beroende på vilken typ av projekt det är kan det ta två former.
 
-* Om webbplatsens struktur eller det ursprungliga innehållet måste justeras kan [platsmallen anpassas efter dina behov](site-templates.md).
-* Om webbplatsens format måste justeras kan du [hämta och anpassa webbplatstemat](/help/journey-sites/quick-site/overview.md).
-* Om webbplatsfunktionaliteten måste justeras kan [platsen anpassas helt](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
-
-Alla anpassningar bör göras med stöd av en utvecklingsteam.
+* För projekt med AEM sidredigering med Universal Editor och leverans via [edge-leverans,](/help/edge/overview.md) görs all formatering i GitHub-projektet.
+   * Mer information finns i dokumentet [Komma igång - Självstudiekurs för utvecklare av universell redigerare](https://www.aem.live/developer/ue-tutorial).
+* För projekt med traditionell AEM sidredigering och leverans via [publiceringsleverans](/help/sites-cloud/authoring/author-publish.md) hämtar AEM-administratören bara webbplatstemat och skickar det till den frontutvecklare som anpassar det med sina favoritverktyg och sedan implementerar ändringarna i AEM koddatabas, som sedan distribueras.
+   * Mer information finns i dokumentet [AEM Quick Site Creation Journey](/help/journey-sites/quick-site/overview.md).
