@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 17064d27dd34bbd5aad89f814481c29b0f6a7fe1
+source-git-commit: 5d00bed4008c70e81f3a70d219ddc411ec8bdc59
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '387'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 21484, som offentliggjordes den 10 juli 2025. Den tidigare underhållsutgåvan släpptes 21331.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21484}
 
@@ -38,11 +38,11 @@ Ingen.
 * GUIDES-28104: Om du publicerar en DITA-karta med attributet `chunk=to-content` skapas dubbletter av JCR-noder i nya AEM Sites-utdata, vilket leder till en överflödig innehållsstruktur i AEM Sites.
 * GUIDES-29065, GUIDES-28793: Prestandaproblem som längre inläsningstider och återkommande timeout observeras när du arbetar med stora samlingar.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-21484}
 
-Ingen.
+* Den SDK som är tillgänglig i Software Distribution Portal har problem som körs lokalt. Fortsätt att använda den tidigare SDK-versionen för lokal testning.
 
 ### Föråldrade funktioner och API:er {#deprecated-21484}
 
