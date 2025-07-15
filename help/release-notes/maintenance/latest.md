@@ -4,10 +4,10 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 5d00bed4008c70e81f3a70d219ddc411ec8bdc59
+source-git-commit: bd0b4c993652b56657023ef7522d7d179ca994c4
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 1%
+source-wordcount: '214'
+ht-degree: 2%
 
 ---
 
@@ -16,43 +16,37 @@ ht-degree: 1%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Version 21484 {#21484}
+## Utgåva 21570 {#21570}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 21484, som offentliggjordes den 10 juli 2025. Den tidigare underhållsutgåvan släpptes 21331.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 21570, som offentliggjordes den 15 juli 2025. Den tidigare underhållsversionen var version 21484.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+>[!NOTE]
+>
+>[Version 21484](/help/release-notes/maintenance/2025/2025-7-0.md#21484) har gjorts privat och ersatts av version 21570.
 
-### Förbättringar {#enhancements-21484}
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-Ingen.
+### Förbättringar {#enhancements-21570}
 
-### Åtgärdade problem {#fixed-issues-21484}
+Ingen
 
-Ingen.
+### Åtgärdade problem {#fixed-issues-21570}
 
-#### AEM Guides {#guides-21484}
+* SKYOPS-112722 - Korrigerat ett problem som medförde att URL-matchningen för vanity misslyckades
 
-* GUIDES-29781: När en XML-kommentar läggs till i ett element i Source-vyn försvinner inledande och avslutande blanksteg runt kommentaren när du byter vy.
-* GUIDES-29078: När du öppnar ett ämne i redigeringsvyn efter att en webbläsare har uppdaterats behålls inte tidigare använda taggar på panelen Filegenskaper. Om du lägger till nya taggar skrivs de befintliga över, särskilt när ett stort antal taggar är tillgängliga för markering.
-* GUIDES-28214: Försök att skapa granskningsåtgärder via AEM-arbetsflödet misslyckas konsekvent eftersom granskningsnoden inte skapas.
-* GUIDES-28104: Om du publicerar en DITA-karta med attributet `chunk=to-content` skapas dubbletter av JCR-noder i nya AEM Sites-utdata, vilket leder till en överflödig innehållsstruktur i AEM Sites.
-* GUIDES-29065, GUIDES-28793: Prestandaproblem som längre inläsningstider och återkommande timeout observeras när du arbetar med stora samlingar.
+### Kända fel {#known-issues-21570}
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+* Den samhörande AEM SDK har ett annat versions-ID (21575) och är tillgänglig via portalen för distribution av programvara.
 
-### Kända fel {#known-issues-21484}
-
-* Den SDK som är tillgänglig i Software Distribution Portal har problem som körs lokalt. Fortsätt att använda den tidigare SDK-versionen för lokal testning.
-
-### Föråldrade funktioner och API:er {#deprecated-21484}
+### Föråldrade funktioner och API:er {#deprecated-21570}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-21484}
+### Säkerhetskorrigeringar {#security-21570}
 
-AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 5 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
+Ingen
 
-### Inbäddade tekniker {#embedded-tech-21484}
+### Inbäddade tekniker {#embedded-tech-21570}
 
 | Teknik | Version | Länk |
 |---|---|---|
