@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 70ba91e83ce2395e748ff8bdbecfc4d4fc04250b
+source-git-commit: c54f77a7e0a034bab5eeddcfe231973575bf13f4
 workflow-type: tm+mt
-source-wordcount: '4262'
+source-wordcount: '4582'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Trafikfilterregler kan användas för att blockera eller tillåta förfrågninga
 * Fastställande av hastighetsgränser som är mindre mottagliga för volymetriska DoS-attacker
 * Förhindra att IP-adresser som du vet är skadliga riktas mot dina sidor
 
-De flesta av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud Service Sites- och Forms-kunder. De arbetar huvudsakligen med egenskaper för begäran och begäranrubriker, inklusive IP, värdnamn, sökväg och användaragent.
+Många av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud Service Sites- och Forms-kunder. De kallas *standardtrafikfilterregler* och arbetar huvudsakligen med begäranegenskaper och begäranrubriker, inklusive IP, värdnamn, sökväg och användaragent. Standardregler för trafikfilter innehåller regler för hastighetsbegränsning för att skydda mot trafiktoppar.
 
-En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en WAF-DDoS-skyddslicens. Dessa kraftfulla regler kallas trafikfilterregler för WAF (Web Application Firewall) (eller WAF-regler för kort) och har tillgång till de [WAF-flaggor](#waf-flags-list) som beskrivs senare i den här artikeln.
+En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en WAF-DDoS-skyddslicens. Dessa kraftfulla regler kallas trafikfilterregler för WAF (Brandvägg för webbaserade program) (eller *WAF-regler* för kort) och har tillgång till de [WAF-flaggor](#waf-flags-list) som beskrivs senare i den här artikeln.
 
 Trafikfilterregler kan driftsättas via Cloud Manager konfigureringsrörledningar för olika typer av dev-, stage- och produktionsmiljöer. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
@@ -59,25 +59,25 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring p
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
+På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
-Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver trafikfilterregler som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas WAF-regler.
+Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver *standardtrafikfilterregler* som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas *WAF-regler*.
 
 ## Föreslagen process {#suggested-process}
 
 Nedan följer en högnivårekommenderad process från början till slut för att komma fram till rätt trafikfilterregler:
 
 1. Konfigurera pipelines för icke-produktion och produktionskonfiguration enligt beskrivningen i avsnittet [Inställningar](#setup).
-1. Kunder som har licensierat underkategorin till WAF trafikfilterregler bör aktivera dem i Cloud Manager.
+1. Kunder som har licensierat *WAF trafikfilterregler* bör aktivera dem i Cloud Manager.
 1. Läs igenom och prova självstudiekursen för att få en större förståelse för hur man använder trafikfilterregler, inklusive WAF-regler om de har licensierats. I självstudiekursen får du hjälp med att distribuera regler till en utvecklingsmiljö, simulera skadlig trafik, hämta [CDN-loggarna](#cdn-logs) och analysera dem i [instrumentpanelsverktyget](#dashboard-tooling).
-1. Kopiera de rekommenderade startreglerna till `cdn.yaml` och distribuera konfigurationen till produktionsmiljön i loggläge.
-1. När du har samlat in trafik analyserar du resultatet med [instrumentpanelsverktyget](#dashboard-tooling) för att se om det finns några matchningar. Leta upp felaktiga positiva inställningar och gör eventuella nödvändiga justeringar för att aktivera startreglerna i blockläge.
-1. Lägg till anpassade regler baserat på analys av CDN-loggarna, först testning med simulerad trafik i utvecklingsmiljöer innan driftsättning i scen- och produktionsmiljöer i loggläge, sedan blockläge.
+1. Kopiera de rekommenderade startreglerna till `cdn.yaml` och distribuera konfigurationen till produktionsmiljön, med några av reglerna i loggläge.
+1. När du har samlat in trafik analyserar du resultatet med [instrumentpanelsverktyget](#dashboard-tooling) för att se om det finns några matchningar. Leta upp falska positiva inställningar och gör nödvändiga justeringar för att aktivera alla startregler i blockläge.
+1. Om det behövs lägger du till anpassade regler baserade på analys av CDN-loggarna, först testar med simulerad trafik i utvecklingsmiljöer innan du distribuerar till scen- och produktionsmiljöer i loggläge och sedan blockerar läge.
 1. Övervaka trafiken kontinuerligt och ändra reglerna allteftersom hotbilden utvecklas.
 
 ## Inställningar {#setup}
 
-1. Skapa en fil `cdn.yaml` med en uppsättning trafikfilterregler, inklusive WAF-regler.
+1. Skapa en fil `cdn.yaml` med en uppsättning trafikfilterregler, inklusive WAF-regler. Till exempel:
 
    ```
    kind: "CDN"
@@ -107,13 +107,13 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 
    1. Om du vill konfigurera WAF för ett befintligt program [redigerar du programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md) och avmarkerar eller markerar alternativet **WAF-DDOS** när som helst på fliken **Säkerhet** .
 
-1. Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i [konfigurationsförsäljningsartikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager). Pipelinen kommer att referera till en `config`-mapp på den översta nivån där filen `cdn.yaml` placeras någonstans under. Mer information finns i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
+1. Skapa en config pipeline i Cloud Manager, enligt beskrivningen i [konfigurationspipeline-artikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager). Pipelinen kommer att referera till en `config`-mapp på den översta nivån där filen `cdn.yaml` placeras någonstans under. Mer information finns i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
 ## Syntax för trafikfilterregler {#rules-syntax}
 
 Du kan konfigurera *trafikfilterregler* så att de matchar på mönster som IP, användaragent, begäranrubriker, värdnamn, geo och url.
 
-Kunder som licensierar erbjudandet Förbättrat skydd eller WAF-DDoS-skydd kan även konfigurera en särskild kategori av trafikfilterregler som kallas *WAF trafikfilterregler* (eller WAF-regler för kort) som refererar till en eller flera [WAF-flaggor](#waf-flags-list).
+Kunder som licensierar erbjudandet Förbättrat skydd eller WAF-DDoS-skydd kan också konfigurera en särskild kategori av trafikfilterregler som kallas *WAF trafikfilterregler* (eller *WAF-regler* för kort) som refererar till en eller flera [WAF-flaggor](#waf-flags-list).
 
 Här är ett exempel på en uppsättning trafikfilterregler, som även innehåller en WAF-regel.
 
@@ -237,8 +237,8 @@ Egenskapen `wafFlags`, som kan användas i de licensbara WAF-trafikfilterreglern
 
 | **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
 |---|---|---|
-| ATTACK | Attackera | Flagga för att identifiera begäranden som innehåller en eller flera typer av attacker som anges i tabellen |
-| ATTACK-FROM-BAD-IP | Attackera från felaktig IP | Flagga för att identifiera begäranden som kommer från `BAD-IP` och som innehåller en eller flera typer av attacker som listas i tabellen |
+| ATTACK | Attackera | En aggregering av flaggor som relaterar till skadlig trafik (SQLI, CMDEXE, XSS osv.). I avsnittet [Rekommenderade WAF-regler](#recommended-waf-starter-rules) finns mer information om hur den här flaggan kan användas effektivt. |
+| ATTACK-FROM-BAD-IP | Attackera från felaktig IP | Liknar ATTACK-flaggan, men&quot;logiskt AND-ed&quot; med flaggan `BAD-IP`, så en begäran flaggas om den matchar både ATTACK och BAD-IP. I avsnittet [Rekommenderade WAF-regler](#recommended-waf-starter-rules) finns mer information om hur den här flaggan kan användas effektivt. |
 | SQLI | SQL-inmatning | SQL Injection är ett försök att få åtkomst till ett program eller få privilegierad information genom att köra godtyckliga databasfrågor. |
 | BAKDOOR | Bakdörr | En bakdörrssignal är en begäran som försöker avgöra om det finns en gemensam bakdörrsfil i systemet. |
 | CMDEXE | Kommandokörning | Kommandokörning är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga systemkommandon med hjälp av användarindata. |
@@ -254,7 +254,7 @@ Egenskapen `wafFlags`, som kan användas i de licensbara WAF-trafikfilterreglern
 | **Flagga-ID** | **Flaggnamn** | **Beskrivning** |
 |---|---|---|
 | ABNORMALPATH | Onormal bana | Onormal sökväg anger att den ursprungliga sökvägen skiljer sig från den normaliserade sökvägen (till exempel normaliseras `/foo/./bar` till `/foo/bar`) |
-| BAD-IP | Felaktig IP | Flagga som identifierar begäran från IP-adresser identifierar som felaktig, antingen eftersom det finns identifierare som skadliga källor (`SANS`, `TORNODE`) eller eftersom de har identifierats som dåliga av WAF efter att de skickat för många skadliga begäranden |
+| BAD-IP | Felaktig IP | Identifierar begäranden som kommer från IP-adresser som är kända som skadliga, antingen på grund av att de ingår i datauppsättningar som `SANS` och `TORNODE`, eller på grund av att WAF tidigare har upptäckt skadliga beteenden |
 | BHH | Felaktiga Hop-huvuden | Felaktiga Hop-huvuden anger ett försök till HTTP-smuggling via en felformaterad Transfer-Encoding (TE) eller Content-Length (CL)-rubrik, eller en korrekt formaterad TE- och CL-rubrik |
 | KODEINJEKTION | Kodinmatning | Kodinjektion är ett försök att få kontroll över eller skada ett målsystem genom godtyckliga programkodkommandon som användaren anger. |
 | KOMPRIMERAD | Komprimering upptäcktes | POST-begärandetexten är komprimerad och kan inte inspekteras. Om till exempel ett `Content-Encoding: gzip`-begärandehuvud har angetts och POST-brödtexten inte är oformaterad text. |
@@ -661,11 +661,20 @@ Adobe har en funktion för att hämta instrumentpanelsverktyg till din dator fö
 
 Instrumentpanelsverktygen kan klonas direkt från GitHub-databasen [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling).
 
-[Självstudiekurser](#tutorial) finns tillgängliga för konkreta anvisningar om hur du använder instrumentpanelsverktygen.
+[Det finns en självstudiekurs](#tutorial) med konkreta anvisningar om hur du använder instrumentpanelsverktygen.
 
 ## Rekommenderade startregler {#recommended-starter-rules}
 
-Du kan kopiera de rekommenderade reglerna nedan till din `cdn.yaml` för att komma igång. Starta i loggläge, analysera trafiken och när du är nöjd ändras den till blockläge. Du kanske vill ändra reglerna baserat på de unika egenskaperna för webbplatsens livstrafik.
+Adobe föreslår att man börjar med trafikfilterreglerna nedan och sedan finjusterar dem över tiden. *Standardregler* är tillgängliga med en Sites- eller Forms-licens, medan *WAF-regler* kräver en Enhanced Security- eller WAF-DDoS-skyddslicens.
+
+### Rekommenderade standardregler {#recommended-nonwaf-starter-rules}
+
+Börja med dessa regler:
+
+1. hastighetsbegränsning (loggningsläge):
+   * logg när trafik från en viss IP-adress överskrider en hastighetsgräns. Ändra till blockläge efter att ha verifierat att inga aviseringar har tagits emot. Om aviseringar togs emot skulle det ha indikerat att gränsvärdet var för lågt.
+2. specifika länder (blockläge):
+   * blockera trafik från vissa länder (ändra landskoderna baserat på dina affärskrav)
 
 ```
 kind: "CDN"
@@ -701,8 +710,9 @@ data:
         groupBy:
           - reqProperty: clientIp
       action: log
+      alert: true
     # Block requests coming from OFAC countries
-    - name: block-ofac-countries
+    - name: ofac-countries
       when:
         allOf:
           - { reqProperty: tier, in: ["author", "publish"] }
@@ -720,7 +730,53 @@ data:
               - ZW
               - CU
               - CI
-      action: log
+      action: block
+```
+
+### Rekommenderade WAF-regler {#recommended-waf-starter-rules}
+
+Lägg till följande regler i din befintliga konfiguration:
+
+1. ATTACK-FROM-BAD-IP-flagga (blockläge):
+   * Blockera omedelbart trafik som båda matchar misstänkta mönster (inklusive flera i [WAF-flagglistan](#waf-flags-list)) och härstammar från IP-adresser som är kända som skadliga.
+   * ATTACK-FROM-BAD-IP-flaggan uppfyller alltid båda villkoren (mönstermatchning och känd skadlig IP), vilket minimerar risken för falsk positiv information. Du kan alltså använda den här regeln i blockeringsläge direkt.
+2. ATTACK-flagga (loggläge):
+   * Logga (i stället för att blockera) trafik som matchar misstänkta mönster men som inte kommer från kända skadliga IP-adresser. Denna försiktiga loggningsmetod i stället för att blockera hjälper till att undvika att oavsiktligt blockera legitim trafik (falska positiva).
+   * När du har distribuerat den här regeln bör du noggrant analysera CDN-loggar för att verifiera att berättigade förfrågningar inte flaggas felaktigt. När du är säker på att ingen legitim trafik påverkas växlar du till blockläge.
+
+>[!NOTE]
+> Vår erfarenhet tyder på att falska positiva värden som är kopplade till ATTACK-flaggan är ovanliga. Därför kan det vara en praktisk strategi att omedelbart blockera all misstänkt trafik - även om IP-adressen inte är känd som skadlig - och därefter använda CDN-logganalys för att identifiera och införa regler för legitim trafik. Varje organisation bör utvärdera sin egen risktolerans och väga fördelarna med ett bättre skydd mot risken för att oavsiktligt blockera legitima förfrågningar.
+>
+
+```
+    # blocks likely attack traffic, which also comes from suspected IPs
+    - name: attacks-from-bad-ips-globally
+      when:
+        reqProperty: tier
+        in: ["author", "publish"]
+      action:
+        type: block
+        wafFlags:
+          - ATTACK-FROM-BAD-IP
+    # log likely attack traffic, and later switch to block mode if false positives aren't observed
+    - name: attacks-from-any-ips-globally
+      when:
+        reqProperty: tier
+        in: ["author", "publish"]
+      action:
+        type: log
+        wafFlags:
+          - ATTACK
+```
+
+### Äldre rekommenderade WAF-regler {#previous-waf-starter-rules}
+
+Före juli 2025 rekommenderade Adobe de WAF-regler som anges nedan, som fortfarande är giltiga och effektiva för att försvara mot skadlig trafik. Se självstudiekursen om du vill ha mer information om hur du migrerar till de nya rekommenderade reglerna.
+
+<details>
+  <summary>Expandera om du vill se de äldre rekommenderade WAF-reglerna.</summary>
+
+```
     # Enable recommended WAF protections (only works if WAF is licensed enabled for your environment)
     - name: block-waf-flags-globally
       when:
@@ -743,32 +799,21 @@ data:
           - PRIVATEFILE
           - NULLBYTE
 ```
+</details>
 
-## Självstudiekurser {#tutorial}
+## Självstudiekurs {#tutorial}
 
-Det finns två självstudiekurser.
+Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
 
-### Skydda webbplatser med trafikfilterregler (inklusive WAF regler) {#tutorial-protecting-websites}
+Självstudiekurserna är följande:
 
-[Arbeta igenom en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få allmän, praktisk kunskap och erfarenhet om trafikfilterregler, inklusive WAF regler.
-
-Självstudiekursen leder dig igenom:
-
-* Ställa in Cloud Manager konfigurationsflöde
-* Använda verktyg för att simulera skadlig trafik
-* Deklarera trafikfilterregler, inklusive WAF-regler
-* Analysera resultat med kontrollpanelsverktyg
+* En översikt över standardregler och WAF trafikfilterregler
+* Konfigurera de rekommenderade trafikfilterreglerna och WAF trafikfilterreglerna för att blockera attacker, inklusive DoS (Denial of Service) och andra hot
+* Distribuera regler med hjälp av Cloud Manager konfigurationsflöde
+* Testa reglerna med verktyg för att simulera skadlig trafik
+* Analysera resultat med logganalysverktyget
 * God praxis
 
-### Blockera DoS- och DDoS-attacker med trafikfilterregler {#tutorial-blocking-DDoS-with-rules}
-
-[Detaljerad information om hur du blockerar ](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules) DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) med trafikfilterregler för hastighetsbegränsning och andra strategier.
-
-Självstudiekursen leder dig igenom:
-
-* skydd
-* få meddelanden när hastighetsgränserna överskrids
-* analysera trafikmönster med kontrollpanelsverktyg för att konfigurera tröskelvärden för trafikfilterregler för hastighetsbegränsning
 
 
 
