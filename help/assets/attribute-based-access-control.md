@@ -2,9 +2,10 @@
 title: Attributbaserad åtkomstkontroll
 description: Lär dig hur du aktiverar attributbaserad åtkomstkontroll för att definiera metadatabaserade regler för att definiera åtkomstnivån för resurser som är tillgängliga i Content Hub
 role: Admin
-source-git-commit: 49a70e1564a5b1de4ff16a40ccd8f06df53530e7
+exl-id: 05f54b05-40b8-4a6c-af8f-5c3f7a2089d4
+source-git-commit: ea1760a3076fa0e18dca38fe856ff0ef78b18f07
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -29,7 +30,18 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 ## Hur aktiverar jag attributbaserad åtkomstkontroll? {#enable-attribute-based-access-control}
 
-Från och med nu kan du inte skapa attributbaserade åtkomstkontrollsregler på egen hand med Content Hub användargränssnitt. Skapa en Adobe supportanmälan för att definiera regler i ett kalkylblad med hjälp av riktlinjerna i den här artikeln.
+Från och med nu kan du inte skapa attributbaserade åtkomstkontrollsregler på egen hand med Content Hub användargränssnitt.
+
+Klicka på **Hämta kalkylblad** om du vill hämta och definiera regler i ett kalkylblad. Skapa en Adobe supportanmälan och förse Adobe med de regler som finns definierade i kalkylbladet.
+
+[!BADGE Hämta kalkylblad]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/ABAC_Get_Started_Template_Validator.xlsx"}
+
+
+Definiera regler i kalkylbladet med hjälp av riktlinjerna i den här artikeln.
+
+>[!IMPORTANT]
+>
+> När du har definierat reglerna går du till fliken **Valideringsfel** i kalkylbladet och klickar på **Kör ABAC-valideringar**. **Alla valideringar som skickas** bekräftar att du kan ange definierade regler för Adobe.
 
 ## Exempel: Attributbaserad åtkomstkontroll {#example-metadata-based-rules}
 
@@ -84,13 +96,3 @@ Detta gör att du kan skriva enkla och uttrycksfulla regler, som: ALLOW if regio
 * Fånga regelns affärsmetod i kommentarer, oavsett om villkoret är korrekt skrivet, eftersom metoden hjälper oss att validera och korrigera logiken, om det behövs.
 
 * Licensen för PDF-filer som är inställda för DRM måste vara synliga för alla, så att användarna kan se dem när de hämtar resursen med licens.
-
-
-
-
-
-
-
-
-
-
