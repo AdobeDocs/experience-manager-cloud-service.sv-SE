@@ -3,16 +3,17 @@ title: Hur använder man AFP-API för utdatasynkronisering?
 description: Lär dig hur du använder API:t för AFP-utdatasynkronisering för att hämta och synkronisera utdatarenderingar.
 feature: Adaptive Forms, APIs & Integrations, Document Services
 role: Admin, User
-source-git-commit: 0b86f3bf71505b69ef995369045b7c682d7db8e3
+exl-id: 5602fc63-ef74-44eb-b3be-61b8f8a2795a
+source-git-commit: b6316401bea7d6593d89d15e70c50536df5f116c
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
 # Generera AFP-utdata med AEM Forms API
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 AFP (Advanced Function Presentation) är ett högpresterande dokumentformat som huvudsakligen är avsett för tryck.\
 I den här guiden beskrivs alla nödvändiga steg och konfigurationer för att generera AFP-utdata med AEM Forms.
@@ -100,4 +101,4 @@ Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera A
 
 Du kan spara svaret och öppna den sparade filen i AFP-läsaren för att visa den.
 
-![PDF Reader](/help/forms/assets/afp-pdf.png)
+<!-- ![PDF reader](/help/forms/assets/afp-pdf.png) -->
