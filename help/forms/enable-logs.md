@@ -172,9 +172,9 @@ Till exempel:
 >[!NOTE]
 >
 >Standardloggnivån för varje loggkategori a (xfa), b (xfaView) och c (xfaPerf) är 2 (ERROR). För loggkonfigurationen 2-b6 är loggnivåerna för olika kategorier därför följande:
->>a (xfa): 2 (standardnivåfel)
->>b (xfaView): 6 (användarspecificerad TRACE)
->>a (xfaPerf): 2 (standardnivåfel)
+>&#x200B;>a (xfa): 2 (standardnivåfel)
+>&#x200B;>b (xfaView): 6 (användarspecificerad TRACE)
+>&#x200B;>a (xfaPerf): 2 (standardnivåfel)
 
 ### Aktivera loggning med Configuration Manager {#enabling-logging-using-configuration-manager}
 
