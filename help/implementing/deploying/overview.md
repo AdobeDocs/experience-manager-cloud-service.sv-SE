@@ -56,8 +56,8 @@ I följande video visas en översikt över hur du distribuerar kod till AEM as a
 
 ![image](https://git.corp.adobe.com/storage/user/9001/files/e91b880e-226c-4d5a-93e0-ae5c3d6685c8) -->
 
-Kunder driftsätter anpassad kod i molnmiljöer via Cloud Manager. Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett program på AEM as a Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Package Manager](/help/implementing/developing/tools/package-manager.md) i molnmiljöer innehåller namnet alltså &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Mer detaljerad dokumentation om konverteraren finns i [
-sling-org-apache-sling-feature-cpconverter på GitHub ](https://github.com/apache/sling-org-apache-sling-feature-cpconverter) .
+Kunder driftsätter anpassad kod i molnmiljöer via Cloud Manager. Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett program på AEM as a Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Package Manager](/help/implementing/developing/tools/package-manager.md) i molnmiljöer innehåller namnet alltså &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Mer detaljerad dokumentation om konverteraren finns i [&#128279;](https://github.com/apache/sling-org-apache-sling-feature-cpconverter)
+sling-org-apache-sling-feature-cpconverter på GitHub  .
 
 Innehållspaket som skrivits för program på AEM as a Cloud Service måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager installerar bara det muterbara innehållet, vilket även utlöser ett meddelande som följande:
 
