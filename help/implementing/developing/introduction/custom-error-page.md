@@ -77,7 +77,7 @@ Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsam
 >[!NOTE]
 >
 >I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. Om du vill tillåta att det faktiska svaret från backend skickas genom måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
->>Detta fungerar bara för svar från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
+>&#x200B;>Detta fungerar bara för svar från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 >[!CAUTION]
 >
