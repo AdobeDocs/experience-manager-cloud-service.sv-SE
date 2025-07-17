@@ -4,9 +4,9 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: d25c4aa5801d1ef2b746fc207d9c64ddf381bb8e
+source-git-commit: 7094ac805e2b66813797fbbc7863870f18632cdc
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2409'
 ht-degree: 0%
 
 ---
@@ -19,23 +19,107 @@ ht-degree: 0%
 
 Kunder som har en licens hos en loggningsleverantör eller som är värd för en loggningsprodukt kan få AEM-loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till det associerade loggningsmålet. AEM as a Cloud Service stöder följande loggningsmål:
 
-* Amazon S3 (privat beta, se anm. nedan)
-* Azure Blob Storage
-* Datadog
-* Elasticsearch eller OpenSearch
-* HTTPS
-* Splunk
-* Sumo Logic (privat beta, se anm. nedan)
+<html>
+<style>
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  table-layout: fixed;
+}
+th, td {
+  width: 5%;
+  max-width: 100%;
+  border: 1px solid black;
+  padding: 8px;
+  word-wrap: break-word;
+}
+</style>
+<table>
+  <tbody>
+    <tr>
+      <th>Loggteknik</th>
+      <th>Private Beta*</th>
+      <th>AEM</th>
+      <th>Dispatcher</th>
+      <th>CDN</th>
+    </tr>
+    <tr>
+      <td>Amazon S3</td>
+      <td style="background-color: #ffb3b3;">Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td style="background-color: #ffb3b3;">Nej</td>
+    </tr>
+    <tr>
+      <td>Azure Blob Storage</td>
+      <td>Nej</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+    </tr>
+    <tr>
+      <td>DataDog</td>
+      <td>Nej</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+    </tr>
+    <tr>
+      <td>Dynatrace</td>
+      <td style="background-color: #ffb3b3;">Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td style="background-color: #ffb3b3;">Nej</td>
+    </tr>
+    <tr>
+      <td>Elasticsearch<br>OpenSearch</td>
+      <td>Nej</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+    </tr>
+    <tr>
+      <td>HTTPS</td>
+      <td>Nej</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+    </tr>
+    <tr>
+      <td>New Relic</td>
+      <td style="background-color: #ffb3b3;">Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td style="background-color: #ffb3b3;">Nej</td>
+    </tr>
+    <tr>
+      <td>Splunk</td>
+      <td>Nej</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+    </tr>
+    <tr>
+      <td>Sumologik</td>
+      <td style="background-color: #ffb3b3;">Ja</td>
+      <td>Ja</td>
+      <td>Ja</td>
+      <td style="background-color: #ffb3b3;">Nej</td>
+    </tr>
+  </tbody>
+</table>
+</html>
+
+>[!NOTE]
+>
+> Om du har tekniker i Private Beta kan du skicka ett e-postmeddelande till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) för att begära åtkomst.
 
 Vidarebefordran av loggar konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och kan distribueras via Cloud Manager konfigurationspipelines för utvecklings-, scen- och produktionsmiljötyper. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
 Det finns ett alternativ för att dirigera loggarna för AEM och Apache/Dispatcher via AEM avancerade nätverksinfrastruktur, till exempel dedikerad IP-adress för utgångar.
 
 Observera att den nätverksbandbredd som är associerad med loggar som skickas till loggningsmålet räknas som en del av organisationens I/O-användning i nätverket.
-
->[!NOTE]
->
->Amazon S3 och Sumo Logic finns i Private Beta och stöder endast AEM-loggar (inklusive Apache/Dispatcher).  New Relic via HTTPS är också i en privat betaversion. E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
 
 ## Hur den här artikeln ordnas {#how-organized}
 
@@ -49,7 +133,7 @@ Den här artikeln är organiserad på följande sätt:
 
 ## Inställningar {#setup}
 
-1. Skapa en fil med namnet `logForwarding.yaml`. Den ska innehålla metadata, enligt beskrivningen i [config pipeline-artikeln](/help/operations/config-pipeline.md#common-syntax) (**kind** ska anges till `LogForwarding` och versionen ska anges till &quot;1&quot;), med en konfiguration som liknar den nedan (vi använder Splunk som exempel).
+1. Skapa en fil med namnet `logForwarding.yaml`. Den ska innehålla metadata, enligt beskrivningen i artikeln [Configuration Pipeline](/help/operations/config-pipeline.md#common-syntax) (**kind** ska anges till `LogForwarding` och versionen ska anges till &quot;1&quot;), med en konfiguration som liknar den nedan (vi använder Splunk som exempel).
 
    ```yaml
    kind: "LogForwarding"
@@ -116,14 +200,14 @@ Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM-lo
 Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av loggningsdestinationerna, andra kanske behöver använda andra portar än HTTPS (443).  I så fall måste [Avancerat nätverk](/help/security/configuring-advanced-networking.md) konfigureras innan konfigurationen för vidarebefordran av loggar distribueras.
 
 Använd tabellen nedan för att se vad som krävs för konfigurationen av avancerat nätverk och loggning baserat på om du använder port 443 eller inte och om du behöver visa loggarna från en fast IP-adress eller inte.
-&lt;html>
-&lt;style>
-table, th, td &lbrace;
+<html>
+<style>
+table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
-&rbrace;
-&lt;/style>
+}
+</style>
 <table>
   <tbody>
     <tr>
@@ -133,7 +217,7 @@ table, th, td &lbrace;
       <th>LogForwarding.yaml-portdefinition krävs</th>
     </tr>
     <tr>
-      <td rowspan="2">HTTPS (443)</td>
+      <td rowspan="2" ro>HTTPS (443)</td>
       <td>Nej</td>
       <td>Nej</td>
       <td>Nej</td>
@@ -155,7 +239,7 @@ table, th, td &lbrace;
       <td>Ja</td>
   </tbody>
 </table>
-&lt;/html>
+</html>
 
 >[!NOTE]
 >Om loggarna visas från en enda IP-adress avgörs av ditt val av avancerad nätverkskonfiguration.  Dedikerade urkor måste användas för att underlätta detta.
@@ -194,13 +278,17 @@ Konfigurationer för loggningsmål som stöds listas nedan tillsammans med event
 
 ### Amazon S3 {#amazons3}
 
+Loggvidarebefordran till Amazon S3 stöder AEM- och Dispatcher-loggar, CDN-loggar stöds ännu inte.
+
 >[!NOTE]
 >
->Loggar som skrivs till S3 periodvis, var 10:e minut för varje loggfilstyp.  Detta kan resultera i en inledande fördröjning för loggar som skrivs till S3 när funktionen har växlats.  Mer information om varför det här beteendet finns [här](https://docs.fluentbit.io/manual/pipeline/outputs/s3#differences-between-s3-and-other-fluent-bit-outputs).
+>Loggar som skrivs till S3 periodvis, var 10:e minut för varje loggfilstyp.  Detta kan resultera i en inledande fördröjning för loggar som skrivs till S3 när funktionen har växlats.  [Mer information om detta beteende](https://docs.fluentbit.io/manual/pipeline/outputs/s3#differences-between-s3-and-other-fluent-bit-outputs).
 
 ```yaml
 kind: "LogForwarding"
 version: "1.0"
+metadata:
+  envTypes: ["dev"]
 data:
   awsS3:
     default:
@@ -211,7 +299,7 @@ data:
       secretAccessKey: "${{AWS_S3_SECRET_ACCESS_KEY}}"
 ```
 
-Om du vill använda S3 Log Forwarder måste du förkonfigurera en AWS IAM-användare med lämplig profil för att få åtkomst till S3-bucket.  Se [här](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) för hur du skapar IAM-användarautentiseringsuppgifter.
+Om du vill använda S3 Log Forwarder måste du förkonfigurera en AWS IAM-användare med lämplig profil för att få åtkomst till S3-bucket.  Se [AWS IAM-användardokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) om du vill veta mer om hur du skapar IAM-användarautentiseringsuppgifter.
 
 IAM-principen bör tillåta användaren att använda `s3:putObject`.  Till exempel:
 
@@ -228,7 +316,7 @@ IAM-principen bör tillåta användaren att använda `s3:putObject`.  Till exemp
 }
 ```
 
-Mer information om implementering av AWS Bucket Policy finns [här](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html).
+Mer information om hur du implementerar finns i [AWS Bucket Policy Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html).
 
 ### Azure Blob Storage {#azureblob}
 
@@ -319,7 +407,7 @@ data:
       
 ```
 
-Att tänka på:
+#### Överväganden
 
 * Skapa en API-nyckel, utan någon integrering med en viss molnleverantör.
 * Taggegenskapen är valfri
@@ -345,7 +433,7 @@ data:
       pipeline: "ingest pipeline name"
 ```
 
-Att tänka på:
+#### Överväganden
 
 * Som standard är porten 443. Den kan åsidosättas med en egenskap med namnet `port`
 * För autentiseringsuppgifter måste du använda distributionsuppgifter i stället för kontoautentiseringsuppgifter. Detta är de autentiseringsuppgifter som genereras på en skärm som kan likna den här bilden:
@@ -378,17 +466,10 @@ data:
       authHeaderValue: "${{HTTPS_LOG_FORWARDING_TOKEN}}"
 ```
 
-Att tänka på:
+#### Överväganden
 
 * URL-strängen måste innehålla **https://**, annars misslyckas valideringen.
 * URL:en kan innehålla en port. Exempel: `https://example.com:8443/aem_logs/aem`. Om ingen port ingår i URL-strängen antas port 443 (standard-HTTPS-port).
-
-#### New Relic Log API {#newrelic-https}
-
-E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
-
->[!NOTE]
->New Relic tillhandahåller regionspecifika slutpunkter baserat på var ditt New Relic-konto är etablerat.  Mer information om New Relic finns i [här](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/#endpoint).
 
 #### HTTPS CDN-loggar {#https-cdn}
 
@@ -413,6 +494,52 @@ Det finns också en egenskap med namnet `Source-Type` som är inställd på någ
 * aemhttpdaccess
 * aemhttpderror
 
+### New Relic Log API {#newrelic-https}
+
+Logga vidarebefordran till New Relic använder New Relic HTTPS API för förtäring.  För närvarande stöder den endast loggar från AEM och Dispatcher. CDN-loggar stöds ännu inte.
+
+```yaml
+  kind: "LogForwarding"
+  version: "1"
+  metadata:
+    envTypes: ["dev"]
+  data:
+    newRelic:
+      default:
+        enabled: true
+        uri: "https://log-api.newrelic.com/log/v1"
+        apiKey: "${{NR_API_KEY}}"
+```
+
+>[!NOTE]
+>Loggvidarebefordran till New Relic är endast tillgängligt för kundägda New Relic-konton.
+>
+>E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
+>
+>New Relic tillhandahåller regionspecifika slutpunkter baserat på var ditt New Relic-konto är etablerat.  Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/#endpoint).
+
+### Dynatrace Log API {#dynatrace-https}
+
+Logga vidarebefordran till Dynatrace använder Dynatrace HTTPS API för förtäring.  För närvarande stöder den endast loggar från AEM och Dispatcher. CDN-loggar stöds ännu inte.
+
+Scope-attributet &quot;Ingest Logs&quot; krävs för token.
+
+```yaml
+  kind: "LogForwarding"
+  version: "1"
+  metadata:
+    envTypes: ["dev"]
+  data:
+    dynatrace:
+      default:
+        enabled: true
+        environmentId: "${{DYNATRACE_ENVID}}"
+        token: "${{DYNATRACE_TOKEN}}"  
+```
+
+>[!NOTE]
+> E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
+
 ### Splunk {#splunk}
 
 ```yaml
@@ -429,7 +556,7 @@ data:
       index: "aemaacs"
 ```
 
-Att tänka på:
+#### Överväganden
 
 * Som standard är porten 443. Den kan åsidosättas med en egenskap med namnet `port`.
 * Källtypsfältet kommer att ha ett av följande värden, beroende på den specifika loggen: *aemaccess*, *aemerror*,
@@ -441,6 +568,8 @@ Att tänka på:
 > [Om du migrerar](#legacy-migration) från äldre loggvidarebefordran till den här självbetjäningsmodellen kan värdena i fältet `sourcetype` som skickas till ditt Splunk-index ha ändrats, så justera därefter.
 
 ### Sumologik {#sumologic}
+
+Loggvidarebefordran till Sumo Logic stöder AEM- och Dispatcher-loggar. CDN-loggar stöds ännu inte.
 
 När du konfigurerar Sumo Logic för datainmatning visas en&quot;HTTP Source Address&quot; som tillhandahåller värddatorn, receiverURI och den privata nyckeln i en enda sträng.  Till exempel:
 
