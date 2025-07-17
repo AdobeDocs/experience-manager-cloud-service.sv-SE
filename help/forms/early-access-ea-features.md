@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
+source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2467'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,30 @@ Ni kan koppla AEM Forms till Adobe Experience Platform (AEP) för att utnyttja k
 
 Vill du börja? [Läs mer om att integrera AEM Forms med Adobe Experience Platform (AEP)](/help/forms/aem-forms-aep-connector.md).
 
+### AEM Forms HTML5 Forms
+
+Med AEM Forms HTML5 Forms kan du återge befintliga XFA-formulärmallar (XML Forms Architecture) i HTML5-format, vilket gör dem tillgängliga i moderna webbläsare och på mobila enheter där XFA-baserad PDF inte stöds. Detta överbryggar klyftan mellan traditionella PDF forms och moderna webbupplevelser.
+
+![HTML5 Forms Preview](/help/forms/assets/mobile_form_on_an_ipad_date_14.png)
+
+**Nyckelfunktioner:**
+
+* **HTML5-baserad återgivning av XFA-formulärmallar**: Rendera dina befintliga XFA-baserade formulär i HTML5-format för att utöka klientplattformen till mobila enheter (Apple iPad, Android-surfplatta, smarttelefoner med mera) som stöder HTML5, men som inte stöder Adobe Reader med XFA Forms.
+
+* **Mobilklara formulär**: HTML5 Forms har många funktioner som är mobilklara, vilket hjälper dig att utöka dina nuvarande lösningar och arbetsflöden till surfplattor och smarttelefoner med HTML5-webbläsare.
+
+* **Tillgänglighetsstöd**: HTML5 Forms använder tillgänglighetsstandarden ARIA HTML5 och stöder fliknavigering, vilket gör dem kompatibla med vanliga skärmläsare som JAWS och VoiceOver.
+
+* **Anpassningsfunktioner**: Du kan anpassa utseendet på befintliga widgetar, skapa egna anpassade widgetar eller använda anpassade format i formulär med standardwebbtekniker som CSS och JavaScript.
+
+* **Stöd för höger-till-vänster-språk**: HTML5 Forms har stöd för höger-till-vänster-språk som hebreiska, vilket gör att du kan visa och fylla i formulär på RTL-språk.
+
+* **Stöd för bifogade filer**: Överför, förhandsgranska och skicka bifogade filer med HTML5-formulär för förbättrad datainsamling.
+
+* **Spara utkast**: Spara ett HTML5-formulär som ett utkast och fortsätt fylla i formuläret i ett senare skede.
+
+Vill du börja? Dokumentationen [Introduktion till HTML5-formulär](/help/forms/introductionhtml5.md) innehåller en omfattande översikt och en guide om hur du kommer igång med innovationen.
+
 ## Ytterligare innovationer för tidig åtkomst
 
 ### HTML e-postmallar i Adaptiv Forms
@@ -180,7 +204,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 
