@@ -78,4 +78,4 @@ Om du vill aktivera formulärlistor för komponenterna Utkast och Skicka lägger
  </tbody>
 </table>
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden /content/forms/fp i publiceringsinstansen. Du kan lägga till din anpassade lagringsleverantör. Mer information finns i [Anpassad lagring för komponenten Utkast och överföringar](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/use-forms-portal/adding-custom-storage-provider-forms).
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden /content/forms/fp i publiceringsinstansen. Du kan lägga till din anpassade lagringsleverantör. Mer information finns i [Anpassad lagring för komponenten Utkast och överföringar](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/use-forms-portal/adding-custom-storage-provider-forms).
