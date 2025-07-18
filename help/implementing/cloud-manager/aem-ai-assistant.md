@@ -81,7 +81,7 @@ Administratörer bör tänka på normal Cloud Manager-styrning. Du måste ha adm
 
 ![Teknisk supportanmälan i AEM AI Assistant i Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-En genomgång av hur du konfigurerar användare och grupper i AEM as a Cloud Service finns i [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview).
+En genomgång av hur du konfigurerar användare och grupper i AEM as a Cloud Service finns i [Konfigurera åtkomst till AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/accessing/overview).
 
 Se även [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
 
