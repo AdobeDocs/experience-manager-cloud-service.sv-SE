@@ -9,12 +9,15 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: a9879445-d626-4279-8a95-a9009294b483
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+hide: true
+hidefromtoc: true
+source-git-commit: 81a6c2b942df0e72a0b7d359f29c615a44640396
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
 
 ---
+
 
 # Spara ett HTML5-formulär som ett utkast {#saving-an-html-form-as-a-draft}
 
@@ -75,4 +78,4 @@ Om du vill aktivera formulärlistor för komponenterna Utkast och Skicka lägger
  </tbody>
 </table>
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden /content/forms/fp i publiceringsinstansen. Du kan lägga till din anpassade lagringsleverantör. Mer information finns i [Anpassad lagring för komponenten Utkast och överföringar](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/use-forms-portal/adding-custom-storage-provider-forms).
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen av ett formulär i noden /content/forms/fp i publiceringsinstansen. Du kan lägga till din anpassade lagringsleverantör. Mer information finns i [Anpassad lagring för komponenten Utkast och överföringar](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/use-forms-portal/adding-custom-storage-provider-forms).

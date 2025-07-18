@@ -9,12 +9,15 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+hide: true
+hidefromtoc: true
+source-git-commit: 81a6c2b942df0e72a0b7d359f29c615a44640396
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2803'
 ht-degree: 0%
 
 ---
+
 
 # Formuläruppsättning i AEM Forms{#form-set-in-aem-forms}
 
@@ -34,7 +37,7 @@ Formuläruppsättningar stöds också i AEM Forms-appen, vilket gör att fältar
 
 Du kan koppla flera XDP-filer eller formulärmallar, som har skapats med Designer, till en formuläruppsättning. Formuläruppsättningar kan sedan användas för att selektivt återge XDP:er baserat på värden som användarna angett i de ursprungliga formulären och deras profiler.
 
-Använd [AEM Forms användargränssnitt](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/getting-started/introduction-managing-forms) för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
+Använd [AEM Forms användargränssnitt](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/getting-started/introduction-managing-forms) för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
 
 ### Skapa en formuläruppsättning {#create-a-form-set}
 
@@ -65,7 +68,7 @@ Så här skapar du en formuläruppsättning:
 
    * Formulärordning: Dra och släpp formulären för att ordna om dem. Formulärordningen definierar den ordning i vilken formulären visas för slutanvändaren i AEM Forms-appen och i en fristående återgivning.
    * Formuläridentifierare: Anger en unik identitet för de formulär som ska användas i berättigandeuttryck.
-   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Som standard är värdet /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen i formuläruppsättningen finns i [Förifyll XML för formuläruppsättningen](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/html5-forms/formset-in-aem-forms#prefill-xml-for-form-set).
+   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Som standard är värdet /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen i formuläruppsättningen finns i [Förifyll XML för formuläruppsättningen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/html5-forms/formset-in-aem-forms#prefill-xml-for-form-set).
    * Kvalifikationsuttryck: Anger ett JavaScript-uttryck som utvärderar ett booleskt värde och anger om ett formulär i formuläruppsättningen kan fyllas i. Om värdet är false tillfrågas inte användaren och visas inte heller formuläret för att fyllas i. Uttrycket baseras vanligtvis på värdena i de fält som har hämtats före det här formuläret. Uttrycken innehåller även anrop till formuläruppsättningens API fs.valueOf för att extrahera de värden som användaren fyller i i ett fält i ett formulär i formuläruppsättningen:
 
    *fs.valueOf(&lt;Form Identifier>, &lt;fieldAs expression>) > &lt;value>*
@@ -341,7 +344,7 @@ Det här märkordet anger början på HTML5 Form XML. Detta läggs till i XML-s�
 
 Namnet rootElement är bara en platshållare. Det faktiska namnet hämtas från formulären som används i formuläruppsättningen. Det underträd som börjar med rootElement innehåller data från fälten och delformulären i Forms i formuläruppsättningen. Det finns flera faktorer som bestämmer strukturen för rootElement och dess underordnade element.
 
-I förifylld XML är den här taggen valfri, men om den saknas ignoreras hela XML-koden.
+I förifylld XML är den här taggen valfri, men om den saknas ignoreras hela XML.
 
 NAMN PÅ ROTELEMENTTAGGEN
 
