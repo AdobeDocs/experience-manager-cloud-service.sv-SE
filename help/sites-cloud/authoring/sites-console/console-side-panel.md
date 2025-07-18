@@ -5,9 +5,9 @@ exl-id: 7f2571d6-b847-4cce-8e94-94ba0d2e04a5
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 45805d4baa8b93df2225b44152fee1457b421150
+source-git-commit: 18cbf1c963fa4f12b69a08859a7ca855f0ac601b
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '828'
 ht-degree: 1%
 
 ---
@@ -99,7 +99,7 @@ I vyn **Referenser** visas en lista med referenstyper till eller från till den 
 
 Välj lämplig referenstyp för mer information. I vissa situationer är ytterligare åtgärder tillgängliga när du väljer en specifik referens, bland annat:
 
-* **Inkommande länkar** innehåller en lista med sidor som direkt refererar till den valda sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk.
+* **Inkommande länkar** innehåller en lista med sidor som direkt refererar till den valda sidan tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk.
    * Detta visar bara statiska länkar, inte dynamiskt genererade länkar som till exempel från List-komponenten.
 * [Startar](/help/sites-cloud/authoring/launches/overview.md), ger åtkomst till relaterade starter
 * [Live-kopior](/help/sites-cloud/administering/msm/overview.md) visar sökvägarna för alla live-kopior som baseras på den valda resursen.
