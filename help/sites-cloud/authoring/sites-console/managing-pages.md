@@ -1,20 +1,20 @@
 ---
 title: Hantera sidor
-description: Lär dig hur du hanterar webbplatsens sidor i AEM, inklusive flyttning, kopiering och borttagning.
+description: Lär dig hur du hanterar sidorna på din webbplats i AEM, inklusive flytt, kopiering och borttagning.
 exl-id: 355b60c5-a82e-4bbb-98ea-bfcc0126b7fd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 45805d4baa8b93df2225b44152fee1457b421150
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1329'
 ht-degree: 0%
 
 ---
 
 # Hantera sidor {#managing-pages}
 
-Lär dig hur du hanterar webbplatsens sidor i AEM, inklusive flyttning, kopiering och borttagning.
+Lär dig hur du hanterar sidorna på din webbplats i AEM, inklusive flytt, kopiering och borttagning.
 
 >[!TIP]
 >
@@ -106,7 +106,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    ![Flytta-knapp](/help/sites-cloud/authoring/assets/move.png)
 
-1. Från steget **Byt namn** i guiden kan du antingen:
+1. I steget **Byt namn** i guiden får du **information** om sidan, inklusive skapandedatum, sökväg och antal direkta referenser. Här kan du antingen:
 
    * Ange det namn du vill att sidan ska ha efter att den har flyttats och välj sedan **Nästa** för att fortsätta.
    * **Avbryt** om du vill avbryta processen.
@@ -144,7 +144,8 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    >[!NOTE]
    >
-   >Om sidan varken är länkad till eller refererad är det här steget inte tillgängligt.
+   >* Om sidan varken är länkad till eller refererad är det här steget inte tillgängligt.
+   >* I det här steget visas både direkta och indirekta referenser. Detta kan skilja sig från mängden som rapporteras i steget **Byt namn** i guiden samt referenserna som rapporteras av referenslinjen, där båda endast rapporterar direkta referenser av prestandaskäl.
 
    ![Publicera om sida vid flytt](/help/sites-cloud/authoring/assets/move-page-republish.png)
 

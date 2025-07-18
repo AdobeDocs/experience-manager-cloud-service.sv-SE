@@ -1,11 +1,11 @@
 ---
 title: Sidopanelen i platskonsolen
-description: Lär dig hur du använder sidopanelen i konsolen AEM webbplatser för att bättre förstå och navigera i ditt innehåll.
+description: Lär dig hur du använder sidopanelen i AEM webbplatskonsol för att bättre förstå och navigera i ditt innehåll.
 exl-id: 7f2571d6-b847-4cce-8e94-94ba0d2e04a5
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 45805d4baa8b93df2225b44152fee1457b421150
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Sidopanelen i platskonsolen {#side-panel}
 
-Lär dig hur du använder sidopanelen i konsolen AEM **Platser** för att bättre förstå och navigera i ditt innehåll.
+Lär dig hur du använder sidopanelen i AEM **Sites** -konsol för att bättre förstå och navigera i ditt innehåll.
 
 ## Orientering {#orientation}
 
@@ -99,8 +99,8 @@ I vyn **Referenser** visas en lista med referenstyper till eller från till den 
 
 Välj lämplig referenstyp för mer information. I vissa situationer är ytterligare åtgärder tillgängliga när du väljer en specifik referens, bland annat:
 
-* **Inkommande länkar** innehåller en lista med sidor som refererar till sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk.
-   * Detta kan bara visa statiska länkar, inte dynamiskt genererade länkar som till exempel från List-komponenten.
+* **Inkommande länkar** innehåller en lista med sidor som direkt refererar till den valda sidan, tillsammans med direktåtkomst till **Redigera** en av dessa sidor när du väljer en specifik länk.
+   * Detta visar bara statiska länkar, inte dynamiskt genererade länkar som till exempel från List-komponenten.
 * [Startar](/help/sites-cloud/authoring/launches/overview.md), ger åtkomst till relaterade starter
 * [Live-kopior](/help/sites-cloud/administering/msm/overview.md) visar sökvägarna för alla live-kopior som baseras på den valda resursen.
 * [Utskrift](/help/sites-cloud/administering/msm/best-practices.md), innehåller information och olika åtgärder
@@ -112,7 +112,7 @@ I vyn **Plats** på sidpanelen visas information om platser [som skapats med en 
 
 ![Platspanelen](assets/console-side-panel-site-paenl.png)
 
-Mer information om hur du kan använda panelen för att hantera [temat för din plats](/help/sites-cloud/administering/site-creation/site-themes.md) finns i dokumentet [Hantera ditt platstema på panelen Plats](/help/sites-cloud/administering/site-creation/site-rail.md).
+Mer information om hur du kan använda panelen för att hantera [temat för din plats](/help/sites-cloud/administering/site-creation/site-rail.md) finns i dokumentet [Hantera ditt platstema på panelen Plats](/help/sites-cloud/administering/site-creation/site-themes.md).
 
 Om du ännu inte har konfigurerat frontendinje för att kunna skapa temabaserade webbplatser kommer sidopanelen att erbjuda det alternativet.
 
