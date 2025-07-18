@@ -5,9 +5,9 @@ exl-id: 167da985-7f19-45b3-90a3-884817907da2
 solution: Experience Manager
 feature: Security, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
+source-git-commit: 0afd74120380c9ae3d02db9fb684189c2f19648f
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1490'
 ht-degree: 1%
 
 ---
@@ -110,7 +110,7 @@ Nu kan du tilldela användare till den nya produktprofilen som du skapade med an
 
 1. Välj knappen **Lägg till användare** och tilldela användare till din nya produktprofil med anpassade behörigheter.
 
-Mer information om hur du använder Admin Console finns i avsnittet **Lägg till användare och användargrupper i en produktprofil** i dokumentet [Hantera produktprofiler för företagsanvändare](https://helpx.adobe.com/se/enterprise/using/manage-product-profiles.html).
+Mer information om hur du använder Admin Console finns i avsnittet **Lägg till användare och användargrupper i en produktprofil** i dokumentet [Hantera produktprofiler för företagsanvändare](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
 
 ## Konfigurerbara behörigheter {#configurable-permissions}
 
@@ -174,7 +174,7 @@ Behörighetsobjekt avser det område där behörigheten tillämpas. Vanligtvis �
 
 | Typ av behörighetsobjekt | Exempel | Beskrivning |
 | --- | --- | --- |
-| Organisation | organisation:företagA | Alla tillämpliga resurser i en organisation. En resurs kan vara ett program, en miljö eller en pipeline. Om användaren lägger till en organisation för någon behörighet har alla nya resurser i den organisationen också den behörigheten. |
+| Organisation | organisation:companyA | Alla tillämpliga resurser i en organisation. En resurs kan vara ett program, en miljö eller en pipeline. Om användaren lägger till en organisation för någon behörighet har alla nya resurser i den organisationen också den behörigheten. |
 | Program | Program A | Alla tillämpliga resurser i ett program. |
 | Miljö | Program A: miljö | Gäller en viss miljö. |
 | Pipeline | Program A: Pipeline | Gäller en viss rörledning. |
