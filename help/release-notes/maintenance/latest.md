@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 21644, som offentliggjordes den 22 juli 2025. Den tidigare underhållsversionen var version 21570.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21644}
 
