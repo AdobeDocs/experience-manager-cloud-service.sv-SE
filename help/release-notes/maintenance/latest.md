@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 13124956fcce105ad42767f67b700284c8250012
+source-git-commit: a4e023ca44c93124627912bae08dc3535d48400c
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '622'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 21644, som offentliggjordes den 22 juli 2025. Den tidigare underhållsversionen var version 21570.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-21644}
 
@@ -61,9 +61,9 @@ Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns
 * CQ-4359863: Taggsökning efter nyckelord som är i fel ordning i Content Fragment Editor/Resursredigeraren.
 * CQ-4359958: Gör stöd för openapi kompatibelt med AEM 6.5.22.0 och senare.
 * CQ-4360256: Inkludera serverns kontextsökväg i sökvägen för HTTP-begäranden som hanteras via serverletskontexten `/adobe`.
-* CQ-4360317: Lägg till metod för att ange Sunset date header när svar skapas.
+* CQ-4360317: Lägg till metod för inställning av Sunset-datumhuvudet när svar skapas.
 * GRANITE-60311: AEM SDK Quickstart - NPE på OSGi Installer Configuration Printer.
-* GS-15285: Användarna visas som inaktiverade.
+* GS-15285: Användare visas som inaktiverade.
 
 ### Kända fel {#known-issues-21644}
 
@@ -81,7 +81,7 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 
 | Teknik | Version | Länk |
 |---|---|---|
-| AEM Oak | 1.80.0 | [Oak API 1.80.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.80.0/index.html) |
+| AEM Oak | 1.80.0 | [Oak API 1.80.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.80/index.html) |
 | AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.63 | [Apache HTTP 2.4.63](https://github.com/apache/httpd/blob/2.4.63/CHANGES) |
