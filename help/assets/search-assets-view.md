@@ -4,9 +4,9 @@ description: Läs om hur du söker efter och identifierar resurser i AEM Assets-
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 8136083b9154704b93726ceefaed9f3a3340beef
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '2193'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ ht-degree: 0%
 >id="assets_search"
 >title="Sök i Assets"
 >abstract="Sök efter resurser genom att ange ett nyckelord i sökfältet eller genom att filtrera resurser baserat på status, filtyp, MIME-typ, storlek, skapande, ändring och förfallodatum. Du kan också använda egna filter förutom standardfiltren. Du kan spara de filtrerade resultaten som en sparad sökning eller som en smart samling."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=sv-SE#manage-smart-collection" text="Skapa smarta samlingar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=en#manage-smart-collection" text="Skapa smarta samlingar"
 
 [!DNL Assets view] innehåller en effektiv sökning som bara fungerar som standard. Sökningen är omfattande eftersom den är en fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och även sökningar via metadata som smarta taggar, titel, skapad den och copyright.
 
-Om du vill söka efter resurser
+Så här söker du efter resurser:
 
 * Klicka i sökrutan högst upp på sidan. Som standard söker programmet i den mapp som du just nu bläddrar i. Gör något av följande:
 
@@ -101,7 +101,7 @@ Så här lägger du till anpassade filter:
 
 1. Klicka på **[!UICONTROL Filters]**.
 
-1. Klicka på **[!UICONTROL Edit]** eller **[!UICONTROL Add Filters]** i avsnittet **[!UICONTROL Custom Filters]**.
+1. Klicka på **[!UICONTROL Custom Filters]** eller **[!UICONTROL Edit]** i avsnittet **[!UICONTROL Add Filters]**.
 
    ![Lägg till anpassade filter](assets/add-custom-filters.png)
 
@@ -115,11 +115,45 @@ Så här tar du bort anpassade filter:
 
 1. Klicka på **[!UICONTROL Filters]**.
 
-1. Klicka på **[!UICONTROL Edit]** i avsnittet **[!UICONTROL Custom Filters]**.
+1. Klicka på **[!UICONTROL Custom Filters]** i avsnittet **[!UICONTROL Edit]**.
 
 1. I dialogrutan **[!UICONTROL Custom filters management]** avmarkerar du de filter som du vill ta bort från den befintliga filterlistan.
 
 1. Klicka på **[!UICONTROL Confirm]** om du vill ta bort filtren från användargränssnittet.
+
+## Semantisk sökning {#semantic-search}
+
+Semantisk sökning är en avancerad sökfunktion som förstår innebörden och avsikten bakom en användarfråga i stället för att förlita sig på exakta nyckelordsmatchningar. Det använder artificiell intelligens (AI), naturlig språkbearbetning (NLP) och maskininlärning för att leverera mer korrekta och kontextmedvetna resultat.
+
+Till skillnad från traditionell nyckelordsbaserad sökning, som söker efter exakta termer, tolkas relationerna mellan ord, begrepp och användarmetod i Semantic Search. Detta gör att användarna hittar det de söker efter, även om deras fråga är formulerad på ett annat sätt, innehåller stavfel eller är på ett annat språk.
+
+Några av fördelarna med den:
+
+* **Flerspråksstöd**: Sök på flera språk utan att exakta översättningar krävs. Användarna kan hitta relevant innehåll oavsett frågespråk.
+
+* **Hanterar felstavningar**: Korrigerar eller tolkar automatiskt stavfel och säkerställer korrekta resultat även om indata är felaktiga.
+
+* **Förstå synonymer**: Ger resultat för relaterade termer och fraser, så användarna behöver inte gissa rätt nyckelord.
+
+* **Kontextmedveten sökning**: Identifierar avsikten bakom en fråga, inte bara orden.
+
+* **Sök baserat på textbaserade uppmaningar**: Experience Manager Assets tillämpar filter på innehåll och visar lämpliga resultat automatiskt baserat på enkla textbaserade uppmaningar.
+
+>[!IMPORTANT]
+>
+> Ange tre eller fler än tre ord för den semantiska sökningen för att visa lämpliga resultat.
+
+### Exempel på semantisk sökning {#examples-semantic-search}
+
+**Exempelfråga**: *Kvinna som dricker kaffe*
+
+Den traditionella nyckelordsbaserade sökningen söker efter exakta matchningar av metadata för resurser, t.ex. kvinna, kaffe osv., och returnerar resurser som innehåller dessa nyckelord.
+
+Semantisk sökning söker dock efter liknande ord som `Girl`, `Lady` för `Woman` och kaffealternativ, som `Cappuccino` och `Latte` för `Coffee`.
+
+På samma sätt kan du ange den här uppmaningen på spanska eller felstava `Woman` som `Wman` och ändå få samma resultat.
+
+![Semantisk sökning i Assets-vyn](assets/semantic-search.png)
 
 ## Sök efter resurser med [!DNL Adobe Firefly] {#search-firefly}
 
@@ -216,7 +250,7 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 * **Tilldela uppgifter**: Tilldela uppgifter till användare för en resurs.
 
-* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
+* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
 
 ## Konfigurera den första startsidan för sökning {#configuring-search-first-homepage}
 
@@ -337,12 +371,12 @@ Om du behöver ge feedback på funktionen för sammanhangsbaserad sökning klick
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html?lang=sv-SE)
+* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback genom att [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen.
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 
