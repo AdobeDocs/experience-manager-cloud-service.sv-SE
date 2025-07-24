@@ -4,7 +4,7 @@ description: Läs om distribution och felsökning av replikering i AEM as a Clou
 exl-id: c84b4d29-d656-480a-a03a-fbeea16db4cd
 feature: Operations
 role: Admin
-source-git-commit: 9dac0b63fec56bede7db9331d47ef479b29e67d0
+source-git-commit: 1179e45f6e75a8a4f5e5e76903243f64d9f406ae
 workflow-type: tm+mt
 source-wordcount: '1711'
 ht-degree: 0%
@@ -24,9 +24,9 @@ Adobe Experience Manager as a Cloud Service använder funktionen [Sling Content 
 >[!NOTE]
 >
 >Om du är intresserad av att publicera satsvis kan du skapa ett arbetsflöde med [Arbetsflödessteget för trädaktivering](#tree-activation) som effektivt kan hantera stora nyttolaster.
->Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
->Om du måste anpassa av någon anledning kan du utlösa ett arbetsflöde med det här steget genom att använda befintliga arbetsflödes-API:er.
->Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflöden med arbetsflödessteget Trädaktivering.
+>>Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
+>>Om du måste anpassa av någon anledning kan du utlösa ett arbetsflöde med det här steget genom att använda befintliga arbetsflödes-API:er.
+>>Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflöden med arbetsflödessteget Trädaktivering.
 
 ### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
@@ -58,7 +58,7 @@ Skapa en arbetsflödesmodell som använder processsteget `TreeActivation`:
 
 1. Gå till **Verktyg - Arbetsflöde - Modeller** från AEM as a Cloud Service hemsida.
 1. På sidan Arbetsflödesmodeller trycker du på **Create** i skärmens övre högra hörn.
-1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE).
+1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 1. Markera den skapade modellen i listan och tryck på **Redigera**
 1. I följande fönster tar du bort steget som visas som standard
 1. Dra och släpp Processsteget till det aktuella modellflödet:
@@ -135,13 +135,13 @@ Du kan utlösa en trädreplikering genom att välja **Verktyg - Arbetsflöde - M
 
 Anropa inte den ursprungliga modellen. Kontrollera i stället att först kopiera modellen och anropa kopian.
 
-Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html?lang=sv-SE#extending-aem).
+Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html#extending-aem).
 
 Du kan också skapa en arbetsflödesmodell som använder processsteget `Publish Content Tree`.
 
 1. Gå till **Verktyg - Arbetsflöde - Modeller** från AEM as a Cloud Service hemsida.
 1. På sidan Arbetsflödesmodeller trycker du på **Create** i skärmens övre högra hörn.
-1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE).
+1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 1. Markera den skapade modellen i listan och tryck på **Redigera**
 1. I följande fönster drar och släpper du Processsteg till det aktuella modellflödet:
 
@@ -193,7 +193,6 @@ Här följer exempel på loggar som genereras under ett exempel på arbetsflöde
 ```
 21.04.2021 19:14:58.541 [cm-p123-e456-aem-author-797aaaf-wkkqt] *INFO* [JobHandler: /var/workflow/instances/server60/2021-04-20/brian-tree-replication-test-2_1:/content/wknd/us/en/adventures] com.day.cq.wcm.workflow.process.impl.ChunkedReplicator closing chunkedReplication-VolatileWorkItem_node1_var_workflow_instances_server60_2021-04-20_brian-tree-replication-test-2_1, 17 paths replicated in 2971 ms
 ```
-
 </details>
 
 ### Replikerings-API {#replication-api}
@@ -272,7 +271,7 @@ Storleken på innehållet som skickas per replikeringsanrop får inte överstiga
 
 Om du vill felsöka replikering går du till Replikeringsköer i webbgränssnittet för AEM Author Service:
 
-1. Gå till **Verktyg** > **Distribution** > **Distribution** på Start-menyn i AEM.
+1. Navigera från AEM [Global Navigation](/help/sites-cloud/authoring/basic-handling.md#global-navigation) till **Verktyg** > **Distribution** > **Distribution**
 1. Välj kortet **publicera**
 
    ![Status](assets/publish-status.png "Status")
