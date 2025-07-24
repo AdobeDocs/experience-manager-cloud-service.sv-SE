@@ -548,7 +548,7 @@ I videon nedan visas den färdiga komponenten och hur den kan läggas till i en 
 
 ## Kod klar {#finished-code}
 
-Nedan visas den färdiga koden från självstudiekursen. **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip** och **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip** är kompilerade AEM-paket. **SRC-screens-weretail-run-0.0.1.zip **är den okompilerade källkoden som kan distribueras med Maven.
+Nedan visas den färdiga koden från självstudiekursen. **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip** och **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip** är kompilerade AEM-paket. **SRC-screens-weretail-run-0.0.1.zip &#x200B;** är den okompilerade källkoden som kan distribueras med Maven.
 
 [Hämta fil](/help/screens-cloud/developing/assets/screens-weretail-runuiapps-001-snapshot.zip)
 

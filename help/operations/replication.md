@@ -24,9 +24,9 @@ Adobe Experience Manager as a Cloud Service använder funktionen [Sling Content 
 >[!NOTE]
 >
 >Om du är intresserad av att publicera satsvis kan du skapa ett arbetsflöde med [Arbetsflödessteget för trädaktivering](#tree-activation) som effektivt kan hantera stora nyttolaster.
->>Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
->>Om du måste anpassa av någon anledning kan du utlösa ett arbetsflöde med det här steget genom att använda befintliga arbetsflödes-API:er.
->>Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflöden med arbetsflödessteget Trädaktivering.
+>&#x200B;>Vi rekommenderar inte att du skapar en egen anpassad masspubliceringskod.
+>&#x200B;>Om du måste anpassa av någon anledning kan du utlösa ett arbetsflöde med det här steget genom att använda befintliga arbetsflödes-API:er.
+>&#x200B;>Det är alltid en god vana att bara publicera innehåll som måste publiceras. Och var försiktig med att inte försöka publicera stora mängder innehåll, om det inte är nödvändigt. Det finns dock inga gränser för hur mycket innehåll du kan skicka via arbetsflöden med arbetsflödessteget Trädaktivering.
 
 ### Snabb borttagning/publicering - planerad avstängning/publicering {#publish-unpublish}
 
@@ -193,6 +193,7 @@ Här följer exempel på loggar som genereras under ett exempel på arbetsflöde
 ```
 21.04.2021 19:14:58.541 [cm-p123-e456-aem-author-797aaaf-wkkqt] *INFO* [JobHandler: /var/workflow/instances/server60/2021-04-20/brian-tree-replication-test-2_1:/content/wknd/us/en/adventures] com.day.cq.wcm.workflow.process.impl.ChunkedReplicator closing chunkedReplication-VolatileWorkItem_node1_var_workflow_instances_server60_2021-04-20_brian-tree-replication-test-2_1, 17 paths replicated in 2971 ms
 ```
+
 </details>
 
 ### Replikerings-API {#replication-api}
