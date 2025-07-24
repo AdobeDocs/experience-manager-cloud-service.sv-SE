@@ -3,9 +3,9 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: fb7ce7dbb58be9fef5ab087441457770828d73c8
+source-git-commit: 367406ff325eb71a4c75018c4440eae6535f20dc
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ Content Hub ingår i Experience Manager Assets as a Cloud Service för att demok
 Resurserna som är markerade Godkänd på Experience Manager Assets as a Cloud Service kan distribueras på Content Hub.
 
 Den här artikeln innehåller ett komplett arbetsflöde för att ge Content Hub åtkomst till användare, inklusive variationer av behörigheter baserat på deras behov.
+
+I den här videon får du lära dig hur du aktiverar Content Hub för Experience Manager Assets:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469851)
 
 De olika behörigheterna för Content Hub omfattar:
 
