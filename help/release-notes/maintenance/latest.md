@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: a4e023ca44c93124627912bae08dc3535d48400c
+source-git-commit: 3686697c85273ccc13e80b8d7f4ad1ff3c79845d
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,17 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Version 21644 {#21644}
+## Version 21706 {#21706}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 21644, som offentliggjordes den 22 juli 2025. Den tidigare underhållsversionen var version 21570.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21706, som offentliggjordes den 24 juli 2025. Den tidigare underhållsversionen var version 21570.
 
-Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+>[!NOTE]
+>
+>Version 21644 gjordes privat och ersattes av version 21706.
 
-### Förbättringar {#enhancements-21644}
+Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+
+### Förbättringar {#enhancements-21706}
 
 * ASSETS-39377: Förbättra hanteringen av 429s från fjärrlagring i Assets Bulk Importer.
 * ASSETS-46026: Konfigurerbart maxdjup för metadataexporterare.
@@ -39,7 +43,7 @@ Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns
 * SITES-31677: Anpassad arbetsyta stöder export av AEM Content fragment till Target.
 * SKYOPS-112741: Ta bort paketet `com.adobe.granite.product.support` från AEM-CS SDK.
 
-### Åtgärdade problem {#fixed-issues-21644}
+### Åtgärdade problem {#fixed-issues-21706}
 
 * ASSETS-12882: UI-justeringsproblem efter att visningsförinställningar öppnats.
 * ASSETS-48958: Problem med att ändra publiceringsstatus för resurssynkronisering på lokala AEM-platser.
@@ -65,19 +69,19 @@ Funktionsaktiveringen i 2025.7.0 kommer att innehålla alla funktioner som finns
 * GRANITE-60311: AEM SDK Quickstart - NPE på OSGi Installer Configuration Printer.
 * GS-15285: Användare visas som inaktiverade.
 
-### Kända fel {#known-issues-21644}
+### Kända fel {#known-issues-21706}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-21644}
+### Föråldrade funktioner och API:er {#deprecated-21706}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-21644}
+### Säkerhetskorrigeringar {#security-21706}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar fyra identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-21644}
+### Inbäddade tekniker {#embedded-tech-21706}
 
 | Teknik | Version | Länk |
 |---|---|---|
