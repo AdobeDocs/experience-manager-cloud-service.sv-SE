@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 83aceb71ead66763b94ec523c9d9c76c4286c762
+source-git-commit: b4aec70b13575366c1d40ccf935481580a1fb6d8
 workflow-type: tm+mt
 source-wordcount: '1810'
 ht-degree: 0%
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the February 2025 Release Overview video for a summary of the features added in the 2025.2.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -63,9 +63,11 @@ I Content Hub kan du nu [styra åtkomsten till samlingar när du skapar, så att
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-* [Universell redigerare för adaptiva Forms- och formulärfragment](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md): Den universella redigeraren har nu stöd för att skapa både adaptiva Forms och återanvändbara formulärfragment. Man kan visuellt skapa blanketter, konfigurera skicka-åtgärder och lägga in reCAPTCHA-validering i en förenklad WYSIWYG-miljö. Detta snabbar upp framtagningen av blanketter, ger bättre enhetlighet och förbättrar skyddet mot skräppost och automatiskt missbruk.
+
 
 ### Funktioner för förhandsversioner
+
+* [Universell redigerare för adaptiva Forms- och formulärfragment](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md): Den universella redigeraren har nu stöd för att skapa både adaptiva Forms och återanvändbara formulärfragment. Man kan visuellt skapa blanketter, konfigurera skicka-åtgärder och lägga in reCAPTCHA-validering i en förenklad WYSIWYG-miljö. Detta snabbar upp framtagningen av blanketter, ger bättre enhetlighet och förbättrar skyddet mot skräppost och automatiskt missbruk.
 
 * [Generera och synkronisera AFP-återgivningar från adaptiv Forms](/help/forms/document-generation-afp-api.md): Med API:t för AFP-utdatasynkronisering kan administratörer och användare generera AFP-utdata (Advanced Function Presentation) från adaptiv Forms och synkronisera utdata med externa system eller lagringsplatser. AFP är ett högpresterande dokumentformat som är optimerat för utskrift och ofta används i storskaliga företagsmiljöer.
 
@@ -210,7 +212,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -230,4 +232,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
