@@ -5,15 +5,15 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: bf519f03b9be56c46c1ca04420169eaf221478cc
+source-git-commit: 829881a91a6f1c9a020c04ec581ce010b07bae01
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '543'
 ht-degree: 0%
 
 ---
 
 
-# Lägga till en domänmappning {#add-domain-mapping}
+# Om att lägga till en domänmappning {#add-domain-mapping}
 
 Om du vill länka en domän med ett SSL-certifikat i det Adobe-hanterade CDN-nätverket i ditt program måste du lägga till en CDN-konfiguration (Content Delivery Network).
 
