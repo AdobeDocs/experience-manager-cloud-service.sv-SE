@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: 67416999d068af6350748d610e7c1c7b1d991bc4
+source-git-commit: b194a8fc4e7490cc322b0868a8348e80626df7eb
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -111,8 +111,8 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
 1. Nu när du har konfigurerat innehållsmappen är det dags att länka den till ditt projekt på GitHub som du skapade med AEM Forms Boilerplate tidigare. Ansluta:
 
    1. Gå till GitHub-databasen som du skapade tidigare med AEM Forms Boilerplate.
-   1. Öppna `fstab.yaml` för redigering.
-   1. Ersätt den befintliga referensen med sökvägen till mappen som du delade med AEM-användaren (forms@adobe.com).
+   1. Lägg till filen `fstab.yaml` i rotmappen.
+   1. Lägg till referensen med sökvägen till mappen som du delade med AEM-användaren (forms@adobe.com).
 
       ![Exempelinnehåll på Google Drive](/help/edge/assets/replace-path-in-fstab-yaml-with-your-content-folder.png)
 
@@ -132,7 +132,7 @@ Så här kopierar du exempelinnehållet till din egen innehållsmapp och pekar d
       Mer information om hur du hanterar filer med Microsoft SharePoint finns i [Använda Adobe SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
-   1. Genomför den uppdaterade `fsatb.yaml`-filen när du har uppdaterat referensen och allt ser bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+   1. Genomför filen `fsatb.yaml` när du har lagt till referensen så ser allting bra ut. Om du stöter på några byggproblem kan du läsa [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
       ![Bekräfta uppdaterad fsatab.yaml-fil](/help/edge/assets/commit-updated-fstab-yaml.png)
 
@@ -241,7 +241,7 @@ För att komma igång med en lokal utvecklingsmiljö från AEM på nolltid:
        npm install -g @adobe/aem-cli
    ```
 
-1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
+1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>

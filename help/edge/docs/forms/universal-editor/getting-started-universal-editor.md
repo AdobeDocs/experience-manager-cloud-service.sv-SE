@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 95998daf04ae579ca11896953903852e6140c3a4
+source-git-commit: 0e7375adb146c370a189127838d736290d1860ad
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,6 @@ AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edg
 ![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png){width=auto}
 
 Den här självstudiekursen vägleder dig genom att skapa, förhandsgranska och publicera ditt eget formulär med ett nytt eller befintligt Adobe Experience Manager Site-projekt med hjälp av Universal Editors WYSIWYG-redigering.
-
 
 ## Förutsättningar
 
@@ -66,17 +65,16 @@ Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som
 1. Länka nu GitHub-databasen som du skapade med AEM Forms Boilerplate till AEM Project-miljön. Ansluta:
 
    1. Gå till GitHub-databasen som du skapade tidigare med AEM Forms Boilerplate.
-   1. Öppna filen **fstab.yaml** för redigering.
+   1. Lägg till filen **fstab.yaml** i rotmappen.
 
       ![öppna filen fstab.yaml](/help/edge/docs/forms/assets/open-fstab.png)
 
-   1. Redigera filen **fstab.yaml** för att uppdatera monteringspunkten för projektet. Ersätt URL:en med URL:en för AEM as a Cloud Service-redigeringsinstansen.
-
+   1. Lägg till monteringspunkten för projektet i filen **fstab.yaml**. Lägg till URL:en för AEM as a Cloud Service-redigeringsinstansen.
       `https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main`
 
       ![redigera filen fstab.yaml](/help/edge/docs/forms/assets/edit-fstab-file.png)
 
-   1. Genomför den uppdaterade filen **fstab.yaml** när du har uppdaterat referensen och allt ser bra ut.
+   1. Genomför filen **fstab.yaml** när du har lagt till referensen och allt ser bra ut.
 
       ![verkställ ändringarna](/help/edge/docs/forms/assets/commit-fstab-changes.png)
 
@@ -345,7 +343,7 @@ Du kan konfigurera en lokal AEM-utvecklingsmiljö för att utveckla anpassade fo
        npm install -g @adobe/aem-cli
    ```
 
-1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
+1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
