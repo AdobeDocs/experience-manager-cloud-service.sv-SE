@@ -5,9 +5,9 @@ exl-id: 6cab8cf2-22c0-4f4b-9c54-a1425e74ddd0
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 5d35610b204cc2e06fefa93e048c16940cf1c47c
+source-git-commit: bf519f03b9be56c46c1ca04420169eaf221478cc
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ I Adobe Cloud Manager kanske du vill redigera en anpassad domännamnskonfigurati
 
 1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet på sidan för att visa den vänstra menyn.
 
-1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **Domänmappningar** under rubriken **Tjänster**.
+1. Klicka på ikonen **Sociala nätverk** ![Domänmappningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) under rubriken **Tjänster**.
 
 1. På sidan **Domänmappningar** klickar du på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars CDN du vill redigera.
 
@@ -105,6 +105,12 @@ En användare med rollen **Business Owner** eller **Deployment Manager** kan anv
 
 
 ### Ta bort ett anpassat domännamn från en viss miljö {#delete-cdn-specific}
+
+>[!WARNING]
+>
+>Ta bort domänens DNS-poster med din DNS-leverantör *innan* domänen i Cloud Manager tas bort. Övergivna (farliga) DNS-poster kan kapas och utgöra en säkerhetsrisk.
+
+**Så här tar du bort ett anpassat domännamn från en viss miljö:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
