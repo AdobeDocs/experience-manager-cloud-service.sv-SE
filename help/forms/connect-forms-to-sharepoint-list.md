@@ -2,16 +2,16 @@
 Title: How to send data to a SharePoint List storage on submission of an Adaptive Form?
 Description: Learn how to send data from your Adaptive Form to a SharePoint storage like a SharePoint list when you submit the form.
 keywords: Hur ansluter man SharePoint lista till ett tilläggsformulär?, Skicka till SharePoint, Skapa en SharePoint List Configuration, Använd åtgärden Skicka till SharePoint i ett adaptivt format, Ansluta ett adaptivt formulär till Microsoft&reg; SharePoint List.
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
-source-git-commit: 55e8f142e242f5f4010653a155a241ffcf801470
+exl-id: 9ac3e7be-c6fa-4dbc-9aba-b81741ba6c55
+source-git-commit: 64edcfe1bf94638ae5d9510a5a6ac660cf1bcd0a
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
 
 ---
-
 
 # Ansluta ett anpassat formulär till Microsoft® SharePoint List {#connect-af-sharepoint-list}
 
@@ -22,7 +22,7 @@ Så här använder du åtgärden [!UICONTROL Submit to SharePoint List] Skicka i
 1. [Skapa en SharePoint-listkonfiguration](#1-create-a-sharepoint-list-configuration): Den ansluter AEM Forms till din Microsoft® Sharepoint-listlagring.
 1. [Använd Skicka med FDM (Form Data Model) i ett adaptivt formulär](#2-use-the-submit-using-form-data-model-fdm-in-an-adaptive-form-use-submit-using-fdm): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
 
-## 1. Skapa en SharePoint List-konfiguration
+## &#x200B;1. Skapa en SharePoint List-konfiguration
 
 Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 
@@ -44,7 +44,7 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint-lista:
 1. Välj **[!UICONTROL Create]** om du vill skapa molnkonfigurationen för Microsoft® SharePointList.
 
 
-## 2. Använd Skicka med FDM (Form Data Model) i ett anpassat formulär {#use-submit-using-fdm}
+## &#x200B;2. Använd Skicka med FDM (Form Data Model) i ett anpassat formulär {#use-submit-using-fdm}
 
 Du kan använda den skapade SharePoint List-konfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en SharePoint List. Så här använder du en SharePoint List i ett adaptivt format:
 

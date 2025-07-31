@@ -5,61 +5,36 @@ keywords: hur man väljer en inskickningsåtgärd för ett tilläggsformulär, k
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
 role: User, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
 
-# Inlämningsåtgärd för anpassat formulär {#configuring-the-submit-action}
+# Skicka funktionsmakron som stöds i adaptiv Forms baserat på kärnkomponenter
 
 <span class="preview"> Adobe rekommenderar att du använder kärnkomponenter för att [lägga till adaptiv Forms på en AEM Sites-sida](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md) eller för att [skapa fristående adaptiv Forms](/help/forms/creating-adaptive-form-core-components.md). </span>
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
+| AEM as a Cloud Service (Edge Delivery Services) | [Klicka här](/help/forms/configure-submit-action-eds-forms.md) |
 
-Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på knappen **[!UICONTROL Submit]** i ett anpassat formulär. Forms as a Cloud Service, för Adaptive Forms baserat på kärnkomponenter, erbjuder en rad fördefinierade Skicka-åtgärder. Dessa färdiga sändningsåtgärder ger dig möjlighet att:
+Med en Skicka-åtgärd kan du välja målet för data som har hämtats via ett anpassat formulär. Den aktiveras när en användare klickar på knappen **[!UICONTROL Submit]** i ett anpassat formulär. Den adaptiva Forms som är baserad på Core Component har stöd för olika [körklara överföringsåtgärder](#submit-actions-supported-by-adaptive-forms-based-on-core-components).
 
-* Skicka enkelt formulärdata via e-post.
-* Initiera Microsoft® Power Automate-flöden eller AEM arbetsflöden när data skickas.
-* Skicka formulärdata direkt till Microsoft® SharePoint Server, Microsoft® Azure Blob Storage eller Microsoft® OneDrive.
-* Skicka smidigt data till en konfigurerad datakälla med hjälp av FDM (Form Data Model).
-* Skicka enkelt data till en REST-slutpunkt.
+<!--You can also configure different actions for an Adaptive Form submissions.
 
-Du kan [utöka standardåtgärderna för att skicka in](custom-submit-action-form.md). Du kan också anpassa Skicka-åtgärder för organisationsspecifika krav.
+* **Redirect URL/Path** - This option allows user to configure a page for each form, to which the form users are redirected after submitting an Adaptive Form. 
+* **Show Message** - This option allows users to add a message that is displayed when the Adaptive Form is successfully submitted. The predefined text is included in the dialog box and it can be modified by the user. -->
 
-Använd dialogrutan Konfigurera för en **adaptiv formulärbehållare** om du vill definiera en Skicka-åtgärd för en anpassad formulärbehållare. Konfigurationsdialogrutan för en **adaptiv formulärbehållare** innehåller:
+## Skicka funktionsmakron för Forms baserat på kärnkomponenter
 
-* Fliken Grundläggande
-* Fliken Formulärdatamodell
-* Fliken Skicka
-
-Du kan definiera egenskaperna för formulärbehållaren i dialogrutan Konfigurera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html?lang=sv-SE) om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.
-
-## Välj och konfigurera en Skicka-åtgärd för ett anpassat formulär {#select-and-configure-submit-action}
-
-Så här väljer och konfigurerar du en Skicka-åtgärd för formuläret:
-
-1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
-1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
-
-1. Klicka på fliken **[!UICONTROL Submission]**.
-
-   ![Klicka på skiftnyckelsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
-
-1. Välj och konfigurera en **[!UICONTROL Submit action]** utifrån dina krav.
-
-Du kan också konfigurera olika åtgärder för att skicka in anpassade formulär.
-* **Omdirigerings-URL/sökväg** - Med det här alternativet kan användaren konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att ha skickat ett anpassat formulär.
-* **Visa meddelande** - Med det här alternativet kan användare lägga till ett meddelande som visas när det adaptiva formuläret har skickats. Den fördefinierade texten tas med i dialogrutan och kan ändras av användaren.
-
-Mer information om följande Skicka-åtgärder finns i:
+Följande Skicka-åtgärder stöds av Adaptive Forms baserat på kärnkomponenter:
 
 * [Skicka e-post](/help/forms/configure-submit-action-send-email.md)
 * [Anropa ett Power Automate-flöde](/help/forms/forms-microsoft-power-automate-integration.md)
@@ -69,17 +44,42 @@ Mer information om följande Skicka-åtgärder finns i:
 * [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
 * [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
 * [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
-* [Anropa ett AEM](/help/forms/configure-submit-action-workflow.md)
+* [Starta ett AEM-arbetsflöde](/help/forms/configure-submit-action-workflow.md)
 * [Skicka till Marketo](/help/forms/submit-adaptive-form-to-marketo-engage.md)
+* [Skicka till Adobe Experience Platform (AEP)](/help/forms/aem-forms-aep-connector.md)
 
-Du kan även skicka ett adaptivt formulär till andra lagringskonfigurationer:
+Du kan även skicka ett adaptivt formulär baserat på kärnkomponenter till andra lagringskonfigurationer:
 
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Ansluta ett adaptivt formulär till Microsoft](/help/forms/ms-dynamics-odata-configuration.md)
-* [Ansluta ett adaptivt formulär till Adobe Marketo Engage](/help/forms/integrate-form-to-marketo-engage.md)
 
-Du kan [anpassa standardåtgärderna för att skicka ](custom-submit-action-form.md). Dessutom kan du anpassa Skicka-åtgärder så att de passar specifika organisatoriska krav.
+Dessutom kan du [anpassa standardinställningen för Skicka-åtgärder](/help/forms/custom-submit-action-for-adaptive-forms-based-on-core-components.md) så att den överensstämmer med specifika organisatoriska krav.
 
+
+### Konfigurera en Skicka-åtgärd för ett anpassat formulär baserat på kärnkomponenter
+
+<!--To define a Submit action for an Adaptive Form, use the Configure Dialog of an **Adaptive Form Container** component. The configure dialog of a **Adaptive Form Container** component includes:
+
+* Basic Tab
+* Form Data Model Tab
+* Submission Tab
+  ![AEM Forms Submit action](/help/forms/assets/aem-forms-submit-action.png)
+  -->
+
+Du kan definiera egenskaperna för formulärbehållaren på fliken Skicka i dialogrutan Konfigurera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html) om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.
+
+![Klicka på skiftnyckelsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
+
+<!--To select and configure a Submit Action for your form:
+
+1. Open the Content browser, and select the **[!UICONTROL Guide Container]** component of your Adaptive Form. 
+1. Click the Guide Container properties ![Guide properties](/help/forms/assets/configure-icon.svg) icon. The Adaptive Form Container dialog box opens. 
+
+1. Click the  **[!UICONTROL Submission]** tab. 
+
+    ![Click the Wrench icon to open Adaptive Form Container dialog box to configure a submit action](/help/forms/assets/adaptive-forms-submit-message.png)
+
+1. Select and configure a **[!UICONTROL Submit action]**, based on your requirements. -->
 
 <!--
 ## Send Email {#send-email}
@@ -87,7 +87,7 @@ Du kan [anpassa standardåtgärderna för att skicka ](custom-submit-action-form
 To send an email to one or more recipients upon successful submission of the form, you can use the **[!UICONTROL Send Email]** Submit Action. 
 
 Refer to [configure the send email submit action for an Adaptive Form](/help/forms/configure-submit-action-send-email.md) to learn how to set up an Adaptive Form to send an email upon successful submission.
-[!NOTE]
+>[!NOTE]
 >
 >Send PDF via Email Submit Action is applicable only to Adaptive Forms that use XFA template as form model. 
 
@@ -125,7 +125,7 @@ For a comprehensive guide on the detailed steps to post or submit data to a REST
 
 ## Invoke an AEM Workflow {#invoke-an-aem-workflow}
 
-The **[!UICONTROL Invoke an AEM Workflow]** Submit Action integrates an Adaptive Form with an [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem). When a form is submitted, the selected workflow starts automatically. 
+The **[!UICONTROL Invoke an AEM Workflow]** Submit Action integrates an Adaptive Form with an [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). When a form is submitted, the selected workflow starts automatically. 
 
  [Integrate AEM Adaptive Form with AEM Workflow: Streamlining Business Processes](/help/forms/configure-submit-action-workflow.md) provides step-by-step instructions to seamlessly integrate AEM Workflow with Adaptive Forms, optimizing business processes and enhancing workflow automation.
 
@@ -141,7 +141,7 @@ The **[!UICONTROL Submit to Azure Blob Storage]** Submit Action connects an Adap
 
 AEM as a Cloud Service allows submitting data to Azure Storage from AEM Adaptive Forms. Learn how to [create and use Azure Blob Storage configuration in AEM Forms](/help/forms/configure-submit-action-azure-blob-storage.md) for efficient data storage. 
 
-To set values of a configuration, [Generate OSGi Configurations using the AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart), and [deploy the configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) to your Cloud Service instance.
+To set values of a configuration, [Generate OSGi Configurations using the AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart), and [deploy the configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) to your Cloud Service instance.
 
 ## Submit to Power Automate {#microsoft-power-automate}
 
@@ -211,18 +211,14 @@ If end-user bypass those validations and submit the forms, the server again perf
 >[!NOTE]
 >
 >Server-side validation validates the form model. You are recommended to create a separate client library for validations and not mix it with other things like HTML styling and DOM manipulation in the same client library.
--->
 
-## Felhantering vid Skicka-åtgärd {#error-handling-on-submit-action}
+## Error handling on Submit Action {#error-handling-on-submit-action}
 
-Som en del av AEM riktlinjer för säkerhet och skärpa konfigurerar du anpassade felsidor som 400.jsp, 404.jsp och 500.jsp. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på Publish-noden. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
+As a part of AEM security and hardening guidelines, configure custom error pages such as 400.jsp, 404.jsp, and 500.jsp. These handlers are called, when on submitting a form 400, 404, or 500 errors appear. The handlers are also called when these error codes are triggered on the Publish node. You can also create JSP pages for other HTTP error codes.
 
-När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-dataklagomål till ett schema som inte innehåller `<afData>` -, `<afBoundData>` - och `</afUnboundData>` -taggar, förloras data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan egenskapen `bindref`.
+When you prefill a form data model (FDM), or schema based Adaptive Form with XML or JSON data complaint to a schema that is data does not contain `<afData>`, `<afBoundData>`, and `</afUnboundData>` tags, then the data of unbounded fields of the Adaptive Form is lost. The schema can be an XML schema, JSON schema, or a Form Data Model (FDM). Unbounded fields are Adaptive Form fields without the `bindref` property.
 
-<!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). -->
-
-
-<!--
+<!-- For more information, see [Customizing Pages shown by the Error Handler](/help/sites-developing/customizing-errorhandler-pages.md). 
 ## See next
 
 * [Create style or themes for your forms](using-themes-in-core-components.md)
@@ -233,5 +229,5 @@ När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv fo
 
 ## Se även {#see-also}
 
-{{see-also}}
+{{af-submit-action}}
 

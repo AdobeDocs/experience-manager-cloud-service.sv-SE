@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '6292'
+source-wordcount: '6526'
 ht-degree: 0%
 
 ---
@@ -16,25 +16,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/rule-editor-core-components.md) |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html) |
 
 ## Ökning {#overview}
 
 Regelredigerarfunktionen ger formuläranvändare och utvecklare möjlighet att skriva regler på adaptiva formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
-Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare.<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> Några av de viktigaste åtgärderna som du kan utföra på adaptiva formulärobjekt med hjälp av regler är:
+Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att skriva regler. Regelredigeraren erbjuder en visuell redigerare för alla användare.<!-- In addition, only for forms power users, rule editor provides a code editor to write rules and scripts. --> Några av de nyckelåtgärder du kan utföra på adaptiva formulärobjekt med regler är:
 
-* Visa eller gömma ett objekt
+* Visa eller dölja ett objekt
 * Aktivera eller inaktivera ett objekt
 * Ange ett värde för ett objekt
-* Validera värdet för ett objekt
-* Köra funktioner för att beräkna värdet för ett objekt
+* Validera ett objekts värde
+* Utför funktioner för att beräkna värdet för ett objekt
 * Anropa en tjänst för formulärdatamodell och utföra en åtgärd
 * Ange ett objekts egenskap
 
@@ -42,7 +42,7 @@ Regelredigeraren har ett intuitivt och förenklat användargränssnitt för att 
 
 Användare som läggs till i användargruppen för formulär kan skapa skript och redigera befintliga. Användare i gruppen [!DNL forms-users] kan använda skript men inte skapa eller redigera skript.
 
-## Skillnaden mellan regelredigeraren i kärnkomponenterna och regelredigeraren i grundkomponenterna
+## Skillnad mellan regelredigerare i kärnkomponenter och Regelredigerare i Foundation Components
 
 {{rule-editor-diff}}
 
@@ -111,11 +111,11 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 ### [!UICONTROL When] {#whenruletype}
 
-Regeltypen **[!UICONTROL When]** följer regelkonstruktionen villkor-åtgärd-alternativ **åtgärd**, eller ibland bara villkor-åtgärdskonstruktionen **&#x200B;**. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen När kan du använda flera AND- och OR-operatorer[&#128279;](#nestedexpressions) för att skapa kapslade uttryck.
+Regeltypen **[!UICONTROL When]** följer regelkonstruktionen **condition-action-alternate action** eller ibland bara **condition-action** -konstruktionen. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt ( `True`). När du använder regeltypen When kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck](#nestedexpressions).
 
-Med hjälp av regeltypen När kan du utvärdera ett villkor för ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
+Med regeltypen När kan du utvärdera ett villkor i ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
-I klartext är en typisk When-regel strukturerad på följande sätt:
+Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `When on Object A:`
 
@@ -123,7 +123,7 @@ I klartext är en typisk When-regel strukturerad på följande sätt:
 
 `Then, do the following:`
 
-Åtgärd 2 om objekt B;
+Åtgärd 2 på objekt B.
 OCH
 Åtgärd 3 om objekt C.
 
@@ -131,11 +131,11 @@ _
 
 När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
-En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När du skapar regeln hämtas alternativen (alternativknapparna) automatiskt och görs tillgängliga för regelskaparen på följande sätt:
+En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regeln skapas hämtas alternativen (alternativknappar) automatiskt och görs tillgängliga för regelskaparen enligt följande:
 
-![Visningsalternativ för flera värden](assets/multivaluefcdisplaysoptions1.png)
+![Flera värden visar alternativ](assets/multivaluefcdisplaysoptions1.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Rensa värde för. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
+När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
 ![Rensa värdet för ](assets/clearvalueof1.png)
 
@@ -209,19 +209,19 @@ Med regeltypen **[!UICONTROL Set Value of]** kan du ange värdet för ett formul
 
 Regeltypen **Ange värdet för** är inte tillgänglig för alla formulärobjekt, till exempel paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
 
-Ange värdet för Objekt A till:
+Ange värdet för objekt A till:
 
-(sträng ABC) ELLER
-(objektegenskap X för objekt C) ELLER
-(värde från en funktion) ELLER
-(värde från ett matematiskt uttryck) ELLER
-(utdatavärde för en datamodellstjänst eller webbtjänst)
+(sträng ABC) OR
+(objektegenskap X för objekt C) OR
+(värde från en funktion) OR
+(värde från ett matematiskt uttryck) OR
+(datavärdet för en datamodelltjänst eller webbtjänst),
 
 När (valfritt):
 
-(Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
+(Villkor 1 OCH villkor 2 OCH villkor 3) är SANT.
 
-I följande exempel används värdet i fältet som indata och fältets värde `Relation` anges till utdata från `Relation` argumentet i `dependentid` `getDependent` tjänsten Form Data Model.
+I följande exempel används värdet i fältet `dependentid` som indata och värdet i fältet `Relation` anges som utdata för argumentet `Relation` i tjänsten `getDependent` Form Data Model.
 
 ![Set-value-web-service](assets/set-value-web-service1.png)
 
@@ -435,11 +435,11 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
-   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen **&#x200B;**- respektive **&#x200B;**-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
+   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen ****- respektive ****-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
 
    ![Värden för alternativknappar från regelredigeraren](assets/radio-button-values.png)
 
-1. Ange **0** i fältet **[!UICONTROL Enter a String]** i regeln.
+1. Ange **[!UICONTROL Enter a String]** 0 **i fältet** i regeln.
 
    ![write-rules-visual-editor-4](assets/write-rules-visual-editor-4.png)
 
@@ -537,7 +537,7 @@ Så här skriver du regler:
 
 Users added to the forms-power-users group can use code editor. The rule editor auto generates the JavaScript code for any rule you create using visual editor. You can switch from visual editor to the code editor to view the generated code. However, if you modify the rule code in the code editor, you cannot switch back to the visual editor. If you prefer writing rules in code editor rather than visual editor, you can write rules afresh in the code editor. The visual-code editors switcher helps you switch between the two modes.
 
-The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/se/experience-manager/6-5/forms/javascript-api/index.html).
+The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 For more information about guidelines to write rules in the code editor, see [Adaptive Form Expressions](adaptive-form-expressions.md).
 
@@ -601,7 +601,7 @@ Visar parametrar som används av funktionen. En funktion kan ha flera parametert
 Syntax: `@return {type}`
 Du kan också använda `@returns {type}` .
 Lägger till information om funktionen, till exempel dess mål.
-{type} representerar funktionens returtyp. Följande returtyper tillåts:
+  {type} representerar funktionens returtyp. Följande returtyper tillåts:
 
    1. string
    1. tal
@@ -641,7 +641,7 @@ Du kan t.ex. lägga till en egen funktion som beräknar en kvadratyta. Sidlängd
 
 Så här skapar du ett klientbibliotek och lägger till det i CRX-databasen:
 
-1. Skapa ett klientbibliotek. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=sv-SE#developing).
+1. Skapa ett klientbibliotek. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 1. I CRXDE lägger du till egenskapen `categories` med strängtypsvärdet `customfunction` i mappen `clientlib`.
 
    >[!NOTE]
@@ -730,6 +730,22 @@ var c = {
 >[!NOTE]
 >
 >Se till att du använder `jsdoc` för alla anpassade funktioner. Även om `jsdoc` kommentarer uppmuntras bör du inkludera en tom `jsdoc`-kommentar för att markera funktionen som anpassad funktion. Den aktiverar standardhantering av din anpassade funktion.
+
+### Stöd för anpassade funktioner i valideringsuttryck {#supporting-custom-functions-in-validation-expressions-br}
+
+Om det finns **komplexa valideringsregler** finns ibland det exakta valideringsskriptet i anpassade funktioner och författaren anropar dessa anpassade funktioner från fältvalideringsuttryck. Om du vill att det här anpassade funktionsbiblioteket ska vara känt och tillgängligt när du utför validering på serversidan kan formulärförfattaren konfigurera namnet på AEM klientbibliotek på fliken **[!UICONTROL Basic]** i egenskaper för adaptiv formulärbehållare enligt nedan.
+
+![Stöd för anpassade funktioner i valideringsuttryck](assets/clientlib-cat.png)
+
+Stöd för anpassade funktioner i valideringsuttryck
+
+Författaren kan konfigurera customJavaScript-bibliotek per adaptiv form. I biblioteket behåller du bara återanvändbara funktioner som är beroende av jquery- och underscore.js-bibliotek från tredje part.
+
+## Felhantering vid Skicka-åtgärd {#error-handling-on-submit-action}
+
+Konfigurera anpassade felsidor som 400.jsp, 404.jsp och 500.jsp som en del av AEM riktlinjer för säkerhet och skärpning. Dessa hanterare anropas när ett formulär 400-, 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera. Du kan också skapa JSP-sidor för andra HTTP-felkoder.
+
+När du förifyller en formulärdatamodell (FDM), eller schemabaserad adaptiv form med XML- eller JSON-dataklagomål till ett schema som inte innehåller `<afData>` -, `<afBoundData>` - och `</afUnboundData>` -taggar, förloras data i obegränsade fält i det adaptiva formuläret. Schemat kan vara ett XML-schema, ett JSON-schema eller en FDM (Form Data Model). Obegränsade fält är adaptiva formulärfält utan egenskapen `bindref`.
 
 ## Hantera regler {#manage-rules}
 

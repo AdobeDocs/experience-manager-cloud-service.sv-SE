@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Intermediate
 exl-id: 77131cc2-9cb1-4a00-bbc4-65b1a66e76f5
-source-git-commit: 82a3016149645701abe829ad89c493f480956267
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1692'
 ht-degree: 0%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/customize-aem-forms/custom-submit-action-form.html?lang=sv-SE) |
-| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/custom-submit-action-for-adaptive-forms-based-on-core-components) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/customize-aem-forms/custom-submit-action-form.html) |
+| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/custom-submit-action-for-adaptive-forms-based-on-core-components) |
 | AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 
 Ett anpassat formulär innehåller flera färdiga inskickningsåtgärder (OTB). En Skicka-åtgärd specificerar vilka åtgärder som ska utföras på data som samlats in via det adaptiva formuläret. Du kan till exempel skicka data via ett e-postmeddelande.
@@ -78,7 +78,7 @@ När du bifogar filer till det adaptiva formuläret validerar servern de bifogad
 
 * Storleken på den bifogade filen är 0 byte.
 
-* Den bifogade filens format definieras inte i avsnittet [Filtyper som stöds](https://helpx.adobe.com/se/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text) när komponenten Bifogad fil konfigureras i ett anpassat formulär.
+* Den bifogade filens format definieras inte i avsnittet [Filtyper som stöds](https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text) när komponenten Bifogad fil konfigureras i ett anpassat formulär.
 
 ### Framåtsökväg och omdirigerings-URL {#forward-path-and-redirect-url}
 
@@ -94,7 +94,7 @@ Om åtgärden inte har någon framåtriktad sökväg dirigeras webbläsaren om m
 
 ## Skicka åtgärd {#submit-action}
 
-En Skicka-åtgärd är en sling:Mapp som innehåller följande:
+En Skicka-åtgärd är en sling :Folder som innehåller följande:
 
 * **addfields.jsp**: Det här skriptet innehåller de åtgärdsfält som läggs till i HTML-filen under återgivningen. Använd det här skriptet för att lägga till dolda indataparametrar som krävs vid överföring i skriptet post.POST.jsp.
 * **dialog.xml**: Det här skriptet liknar CQ Component-dialogrutan. Det innehåller konfigurationsinformation som författaren anpassar. Fälten visas på fliken Skicka åtgärder i dialogrutan Redigera anpassat formulär när du väljer åtgärden Skicka.
@@ -111,13 +111,13 @@ En Skicka-åtgärd är en sling:Mapp som innehåller följande:
 
 >[!NOTE]
 >
-> Mer information om hur du skapar en anpassad skickaåtgärd för kärnkomponenter finns i [Skapa en anpassad sändningsåtgärd för adaptiva Forms (kärnkomponenter)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/custom-submit-action-for-adaptive-forms-based-on-core-components).
+> Mer information om hur du skapar en anpassad skickaåtgärd för kärnkomponenter finns i [Skapa en anpassad sändningsåtgärd för adaptiva Forms (kärnkomponenter)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/custom-submit-action-for-adaptive-forms-based-on-core-components).
 
 Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data i CRX-databasen och sedan skickar ett e-postmeddelande till dig. Det adaptiva formuläret innehåller OTB-innehållet för att skicka Action Store-innehåll (borttaget) som sparar data i CRX-databasen. Dessutom har AEM ett [Mail](https://www.adobe.io/experience-manager/reference-materials/6-5/javadoc/com/day/cq/mailer/package-summary.html)-API som kan användas för att skicka e-postmeddelanden. Konfigurera tjänsten Day CQ Mail via systemkonsolen innan du använder e-post-API:t. Du kan återanvända åtgärden Lagra innehåll (föråldrat) för att lagra data i databasen. Åtgärden Lagra innehåll (föråldrat) finns på platsen /libs/fd/af/components/guideSubittype/store i CRX-databasen.
 
-1. Logga in på CRXDE Lite på adressen https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapen sling:Folder och name store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
+1. Logga in på CRXDE Lite på adressen https://&lt;server>:&lt;port>/crx/de/index.jsp. Skapa en nod med egenskapsling :Folder och namnge store_and_mail i mappen /apps/custom_submit_action. Skapa mappen custom_submit_action om den inte redan finns.
 
-   ![Skärmbild som avbildar skapandet av en nod med egenskapen sling:Folder](assets/step1.png)
+   ![Skärmbild som avbildar skapandet av en nod med egenskapsling:Folder](assets/step1.png)
 
 2. **Ange obligatoriska konfigurationsfält.**
 
@@ -209,7 +209,7 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
 ## Använd egenskapen submitService för anpassade överföringsåtgärder {#submitservice-property}
 
-När du anger den anpassade åtgärden Skicka, som innehåller egenskapen `submitService`, utlöser formuläret [FormSubmitActionService](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/service/FormSubmitActionService.html) när det skickas. `FormSubmitActionService` använder metoden `getServiceName` för att hämta värdet för egenskapen `submitService`. Baserat på värdet för egenskapen `submitService` anropar tjänsten lämplig sändningsmetod. Inkludera `FormSubmitActionService` i det anpassade paketet som du överför till servern [!DNL AEM Forms].
+När du anger den anpassade åtgärden Skicka, som innehåller egenskapen `submitService`, utlöser formuläret [FormSubmitActionService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/aemds/guide/service/FormSubmitActionService.html) när det skickas. `FormSubmitActionService` använder metoden `getServiceName` för att hämta värdet för egenskapen `submitService`. Baserat på värdet för egenskapen `submitService` anropar tjänsten lämplig sändningsmetod. Inkludera `FormSubmitActionService` i det anpassade paketet som du överför till servern [!DNL AEM Forms].
 
 Lägg till egenskapen `submitService` av typen sträng i `sling:Folder` för din anpassade skickaåtgärd för att aktivera [!DNL Adobe Sign] för det anpassade formuläret. Du kan bara välja alternativet **[!UICONTROL Enable Adobe Sign]** i avsnittet **[!UICONTROL Electronic Signature]** i behållaregenskaperna för det adaptiva formuläret efter att du har angett värdet för egenskapen `submitService` för den anpassade åtgärden Skicka.
 
@@ -217,6 +217,7 @@ Lägg till egenskapen `submitService` av typen sträng i `sling:Folder` för din
 
 
 ![Skicka tjänstegenskap](assets/submit-service-property.png)
+
 
 <!-- You can't do comments within comments, so I changed comment tags to <start-comment> <end-comment> -->
 

@@ -5,14 +5,14 @@ Keywords: Use Marketo Engage data source in Adaptive Forms, How to connect a Mar
 Feature: Adaptive Forms, Form Data Model
 Role: User, Developer
 exl-id: 4656ec65-f1ad-4e97-8d93-25933cdc7f7b
-source-git-commit: e46c5afac945620cc44e9064956848acecc786bf
+source-git-commit: ce4646d8db1870f8ec85faddeb4e0a6a04f4c46e
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
 
-# Konfigurera Marketo Engage-datakälla för befintlig adaptiv Forms
+# Konfigurera Marketo Engage-datakälla för befintliga adaptiva Forms
 
 <span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
@@ -20,46 +20,93 @@ ht-degree: 0%
 
 När du har skapat molntjänstkonfigurationen för att integrera Marketo Engage med befintliga AEM Forms kan du konfigurera datakällan för formulär.
 
-Genom att konfigurera dataintegrering kan användarna ansluta till olika datakällor eller scheman. Genom att integrera med datakällan i Marketo Engage och använda den i olika formulär blir det lättare att hantera data. Om du vill utforska de användningsklara datakällor som stöds för ett adaptivt formulär kan du läsa artikeln [Konfigurera datakällor](/help/forms/configure-data-sources.md).
+Genom att konfigurera dataintegrering kan användarna ansluta till olika datakällor eller scheman. Genom att integrera med Marketo Engage datakälla och använda den i olika formulär blir det lättare att hantera data. Om du vill utforska de användningsklara datakällor som stöds för ett adaptivt formulär kan du läsa artikeln [Konfigurera datakällor](/help/forms/configure-data-sources.md).
 
 ## Att tänka på när du konfigurerar Marketo Engage-datakällan för formulär
 
-När du konfigurerar Marketo Engage för datakällor för formulär bör du tänka på följande:
+När du konfigurerar Marketo Engage datakälla för formulär bör du tänka på följande:
 
-* Det går inte att ansluta Edge Delivery Services från Forms till Marketo Engage.
+* Det går inte att ansluta Edge Delivery Services Forms till Marketo Engage.
 
-## Krav för att använda datakällan Marketo Engage för formulär
+## Krav för att använda Marketo Engage datakälla för formulär
 
-Krav för att använda Marketo Engage-datakällan med formulär:
+Krav för att använda Marketo Engage datakälla med formulär:
 
 * Skapa [molntjänstkonfigurationen för att integrera Marketo Engage med formulär](/help/forms/integrate-form-to-marketo-engage.md).
 
-## Hur konfigurerar man det befintliga adaptiva formuläret för datakällan i Marketo Engage?
+## Hur konfigurerar man det befintliga adaptiva formuläret för Marketo Engage datakälla?
 
 >[!VIDEO](https://video.tv.adobe.com/v/3442871/marketo-aem-forms-aem-marketo-engage)
 
-Så här konfigurerar du ett adaptivt formulär med datakällan Marketo Engage:
+>[!BEGINTABS]
+
+>[!TAB Foundation Component]
+
+Så här konfigurerar du ett adaptivt formulär baserat på Foundation-komponenter med Marketo Engage-datakällan:
+
 1. Logga in på din [!DNL Experience Manager Forms] Author-instans.
+1. Öppna det adaptiva formuläret för redigering och navigera till avsnittet **[!UICONTROL Data Model]** i egenskaperna för den adaptiva formulärbehållaren och välj en formulärmodell som **Koppling**.
+1. Välj **[!UICONTROL Connector]** i listrutan.
+1. När du har valt **[!UICONTROL Connector]** kan du välja molnkonfigurationen.
 
-2. Öppna det adaptiva formuläret för redigering.
-3. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
-4. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare där du konfigurerar datakällan öppnas.
-5. Öppna fliken **[!UICONTROL Data Model]** och välj en formulärmodell som **Koppling**.
-6. Välj **[!UICONTROL Connector]** i listrutan.
+   ![Välj Marketo Connector](/help/forms/assets/select-marketo-connector-af1.png){width=50%, height=50%}
 
-7. När du har valt **[!UICONTROL Connector]** kan du välja molnkonfigurationen.
+   Baserat på den valda Marketo Engage-konfigurationen visas formulärelementen på fliken **[!UICONTROL Data Model Objects]** i **[!UICONTROL Content Browser]** i sidlisten. Du kan dra och släppa dessa element för att skapa ett anpassat formulär.
 
-   ![Välj Marketo Connector](/help/forms/assets/select-marketo-connector.png)
+   ![Marketo Data Source](/help/forms/assets/marketo-engage-data-source-af1.png){width=50%, height=50%}
 
-   Baserat på den markerade Marketo Engage-konfigurationen visas formulärelementen på fliken **[!UICONTROL Data Model Objects]** i **[!UICONTROL Content Browser]** i sidlisten. Du kan dra och släppa dessa element för att skapa ett anpassat formulär.
-
-   ![Marketo Data Source](/help/forms/assets/marketo-engage-data-source.png)
-
-8. Klicka på **[!UICONTROL Done]**.
+1. Klicka på **[!UICONTROL Done]**.
 
 Du kan också redigera egenskaperna för det adaptiva formuläret för att ändra dess associerade konfiguration.
 
 Det adaptiva formuläret har nu konfigurerats med datakällan från den anslutna Marketo Engage-instansen. Konfigurera den nu för att skicka data till Adobe Marketo Engage.
+
+>[!TAB Kärnkomponent]
+
+Så här konfigurerar du ett adaptivt formulär baserat på kärnkomponenter med Marketo Engage datakälla:
+
+1. Logga in på din [!DNL Experience Manager Forms] Author-instans.
+
+1. Öppna det adaptiva formuläret för redigering.
+1. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
+1. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare där du konfigurerar datakällan öppnas.
+1. Öppna fliken **[!UICONTROL Data Model]** och välj en formulärmodell som **Koppling**.
+1. Välj **[!UICONTROL Connector]** i listrutan.
+
+1. När du har valt **[!UICONTROL Connector]** kan du välja molnkonfigurationen.
+
+   ![Välj Marketo Connector](/help/forms/assets/select-marketo-connector.png){width=50%, height=50%}
+
+   Baserat på den valda Marketo Engage-konfigurationen visas formulärelementen på fliken **[!UICONTROL Data Model Objects]** i **[!UICONTROL Content Browser]** i sidlisten. Du kan dra och släppa dessa element för att skapa ett anpassat formulär.
+
+   ![Marketo Data Source](/help/forms/assets/marketo-engage-data-source.png){width=50%, height=50%}
+
+1. Klicka på **[!UICONTROL Done]**.
+
+Du kan också redigera egenskaperna för det adaptiva formuläret för att ändra dess associerade konfiguration.
+
+Det adaptiva formuläret har nu konfigurerats med datakällan från den anslutna Marketo Engage-instansen. Konfigurera den nu för att skicka data till Adobe Marketo Engage.
+
+>[!TAB Universell redigerare]
+
+Så här konfigurerar du ett adaptivt formulär som har skapats i Universal Editor med Marketo Engage-datakällan:
+
+1. Öppna egenskaperna för formuläret för redigering.
+1. Välj **[!UICONTROL Form Model]**.
+1. Välj **Koppling** i **[!UICONTROL Form Model]**.
+1. När du har valt **[!UICONTROL Connector]** kan du välja molnkonfigurationen.
+
+   ![Välj Marketo Connector](/help/forms/assets/select-marketo-connector-ue.png)
+
+1. Klicka på **[!UICONTROL Save & Close]**.
+
+Baserat på den valda Marketo Engage-konfigurationen visas formulärelementen på fliken **[!UICONTROL Datasource]** i Content Browser på egenskapspanelen. Du kan dra och släppa dessa element för att skapa ett anpassat formulär.
+
+![Marketo Data Source](/help/forms/assets/marketo-engage-data-source-ue.png)
+
+Formuläret har nu konfigurerats med datakällan från den anslutna Marketo Engage-instansen. Konfigurera den nu för att skicka data till Adobe Marketo Engage.
+
+>[!ENDTABS]
 
 ## Vanliga frågor och svar
 
@@ -74,7 +121,7 @@ Det adaptiva formuläret har nu konfigurerats med datakällan från den anslutna
 
 ## Nästa steg
 
-Nu har du konfigurerat datakällan Marketo Engage för Adaptiv Forms. Sedan kan du [konfigurera ett anpassat formulär så att data skickas till Marketo Engage](/help/forms/submit-adaptive-form-to-marketo-engage.md).
+Nu har du konfigurerat Marketo Engage datakälla för Adaptive Forms. Sedan kan du [konfigurera ett anpassat formulär så att data skickas till Marketo Engage](/help/forms/submit-adaptive-form-to-marketo-engage.md).
 
 ## Relaterade artiklar
 

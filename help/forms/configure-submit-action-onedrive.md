@@ -1,15 +1,15 @@
 ---
-Title: How to submit data from an Adaptive Form to Microsoft® OneDrive?
-Description: Explore the streamlined process of connecting AEM Forms with Microsoft® OneDrive using the Submit to OneDrive Submit Action. Learn the step-by-step guide to configure OneDrive and set up submission actions for efficient data storage and retrieval
-keywords: AEM Forms OneDrive-integrering, Anslut till Microsoft OneDrive, Konfigurationsinställningar för OneDrive med AEM formulär
-feature: Adaptive Forms, Core Components
+Title: How to submit data from an Adaptive Form to Microsoft&reg; OneDrive?
+Description: Explore the streamlined process of connecting AEM Forms with Microsoft&reg; OneDrive using the Submit to OneDrive Submit Action. Learn the step-by-step guide to configure OneDrive and set up submission actions for efficient data storage and retrieval
+keywords: AEM Forms OneDrive-integrering, Anslut till Microsoft OneDrive, Konfigurationsinställningar för OneDrive med AEM-formulär
+feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 exl-id: dbfa4094-1b92-4a7c-a799-f66973d27054
-title: "Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?"
+title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 0%
+source-wordcount: '810'
+ht-degree: 1%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 0%
 
 Åtgärden **[!UICONTROL Submit to OneDrive]** kopplar ett anpassat formulär till en Microsoft® OneDrive. Du kan skicka formulärdata, filer, bilagor eller arkivdokument till den anslutna Microsoft® OneDrive-lagringsplatsen.
 
-AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/aem-forms-submit-action.md).
 
 ## Fördelar
 
 Några av fördelarna med smidig integrering av AEM Forms och Microsoft® OneDrive är:
 
 * Enhetsövergripande åtkomst till OneDrive säkerställer att lagrade formulärdata är tillgängliga på olika plattformar. Användarna kan komma åt inskickade data, bilagor och dokument från stationära datorer, bärbara datorer, surfplattor och mobila enheter, vilket förbättrar tillgängligheten och flexibiliteten.
-* OneDrive-integrering med AEM ger en tillförlitlig och skalbar lösning för effektiv datalagring. Alla inskickade anpassade formulär, som filer, bilagor och arkivdokument, kan enkelt sparas i OneDrive för att säkerställa att alla data är välorganiserade och tillgängliga.
+* OneDrive-integrering med AEM-formulär är en tillförlitlig och skalbar lösning för effektiv datalagring. Alla inskickade anpassade formulär, som filer, bilagor och arkivdokument, kan enkelt sparas i OneDrive för att säkerställa att alla data är välorganiserade och tillgängliga.
 
 ## Anslut OneDrive till ett anpassat formulär
 
@@ -69,21 +69,61 @@ Nu kan du använda den här lagringskonfigurationen för OneDrive för att skick
 
 ### Använd OneDrive-konfiguration i ett adaptivt formulär {#use-onedrive-configuartion-in-af}
 
-Du kan använda den skapade OneDrive-lagringskonfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en OneDrive-mapp. Utför följande steg för att använda OneDrive-lagringskonfigurationen i ett adaptivt formulär som:
-1. Skapa ett [anpassat formulär](/help/forms/creating-adaptive-form.md).
+Du kan använda den skapade OneDrive-lagringskonfigurationen i ett adaptivt formulär för att spara data eller skapa ett postdokument i en OneDrive-mapp.
 
-   >[!NOTE]
-   >
-   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat ditt OneDrive-lagringsutrymme.
-   > * Om [!UICONTROL Configuration Container] inte är markerat visas de globala [!UICONTROL Storage Configuration]-mapparna i egenskapsfönstret för Skicka åtgärd.
+>[!NOTE]
+>
+> * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat ditt OneDrive-lagringsutrymme.
+> * Om [!UICONTROL Configuration Container] inte är markerat visas de globala [!UICONTROL Storage Configuration]-mapparna i egenskapsfönstret för Skicka åtgärd.
 
-1. Välj **Skicka åtgärd** som **[!UICONTROL Submit to OneDrive]**.
-   ![OneDrive GIF](/help/forms/assets/onedrive-video.gif)
+>[!BEGINTABS]
+
+>[!TAB Foundation Component]
+
+Utför följande steg för att använda OneDrive-lagringskonfigurationen i ett adaptivt formulär baserat på Foundation-komponenten som:
+
+1. Öppna det adaptiva formuläret för redigering och navigera till avsnittet **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
+1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Submit to OneDrive]**.
+   ![OneDrive GIF](/help/forms/assets/wubmit-to-onedrive-fc.png){width=50%,height=50%}
+Du kan också spara DoR-dokument (Document of Record) i OneDrive.
 1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
 1. Klicka på **[!UICONTROL Save]** om du vill spara Skicka-inställningarna.
 
 När du skickar formuläret sparas data i den angivna Microsoft® OneDrive-lagringsplatsen.
 Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+
+>[!TAB Kärnkomponent]
+
+Utför följande steg för att använda OneDrive-lagringskonfigurationen i ett adaptivt formulär baserat på kärnkomponenten som:
+
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
+1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Submit to OneDrive]**.
+   ![OneDrive GIF](/help/forms/assets/onedrive-video.gif)
+Du kan också spara DoR-dokument (Document of Record) i OneDrive.
+1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
+1. Klicka på **[!UICONTROL Save]** om du vill spara Skicka-inställningarna.
+
+>[!TAB Universell redigerare]
+
+Utför följande steg om du vill använda lagringskonfigurationen för OneDrive i ett adaptivt formulär som har skapats i Universal Editor:
+
+1. Öppna det adaptiva formuläret för redigering.
+1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.
+Dialogrutan **Formuläregenskaper** visas.
+
+   >[!NOTE]
+   >
+   > * Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+   > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+1. Klicka på fliken **Skicka** och välj **[!UICONTROL Submit to OneDrive]**.
+   ![OneDrive GIF](/help/forms/assets/submit-to-onedrive-ue.png)
+Om du väljer **Spara bifogade filer med ursprungligt namn** sparas de bifogade filerna i mappen med sina ursprungliga filnamn. Du kan också spara DoR-dokument (Document of Record) i Azure Blob Storage.
+1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
+1. Klicka på **[!UICONTROL Save&Close]**
+
+>[!ENDTABS]
 
 ## Relaterade artiklar
 

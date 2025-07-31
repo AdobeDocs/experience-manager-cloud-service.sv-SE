@@ -2,12 +2,12 @@
 Title: How to integrate Adaptive Form to a SharePoint Document Library?
 Description: This article explains how to send data from your Adaptive Form to a SharePoint  Document library when you submit the form.
 keywords: Ansluta SharePoint dokumentbibliotek till ett tilläggsformulär, Skicka till SharePoint, Skapa en SharePoint Document Library-konfiguration, Använd åtgärden Skicka till SharePoint i ett adaptivt formulär, AEM Forms Data Model SharePoint Document Library, Forms Data Model SharePoint Document Library, Integrate Forms Data Model för att SharePoint dokumentbiblioteket
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 role: User, Developer
 exl-id: a00b4a93-2324-4c2a-824f-49146dc057b0
-source-git-commit: 1dddba99c5871d01bf51c335747363af1889738d
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '906'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Så här använder du åtgärden **[!UICONTROL Submit to SharePoint Document Lib
 1. [Skapa en SharePoint-dokumentbibliotekskonfiguration](#1-create-a-sharepoint-document-library-configuration): Den ansluter AEM Forms till din Microsoft® Sharepoint-lagring.
 2. [Använd åtgärden Skicka till SharePoint i ett adaptivt formulär](#2-use-sharepoint-document-library-configuration-in-an-adaptive-form): Det kopplar ditt adaptiva formulär till konfigurerade Microsoft® SharePoint.
 
-## 1. Skapa en SharePoint Document Library-konfiguration
+## &#x200B;1. Skapa en SharePoint Document Library-konfiguration
 
 Så här ansluter du AEM Forms till din Microsoft® Sharepoint Document Library-lagring:
 
@@ -59,30 +59,73 @@ Så här ansluter du AEM Forms till din Microsoft® Sharepoint Document Library-
 
 Nu kan du använda den här SharePoint Sites-konfigurationen för att skicka-åtgärden i ett adaptivt formulär.
 
-### 2. Använd SharePoint Document Library Configuration i ett adaptivt format
+### &#x200B;2. Använd SharePoint Document Library Configuration i ett adaptivt format
 
-Du kan använda den skapade SharePoint Document Library-konfigurationen i ett adaptivt formulär för att spara data eller generera Document of Record i en SharePoint-mapp. Utför följande steg för att använda lagringskonfigurationen för SharePoint Document Library i ett adaptivt formulär som:
+Du kan använda den skapade SharePoint Document Library-konfigurationen i ett adaptivt formulär för att spara data eller generera Document of Record i en SharePoint-mapp.
 
-1. Skapa ett [anpassat formulär](/help/forms/creating-adaptive-form-core-components.md).
+>[!NOTE]
+>
+> * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat ditt SharePoint Document Library-lagringsutrymme.
+> * Om [!UICONTROL Configuration Container] inte är markerat visas de globala [!UICONTROL Storage Configuration]-mapparna i egenskapsfönstret för Skicka åtgärd.
 
-   >[!NOTE]
-   >
-   > * Välj samma [!UICONTROL Configuration Container] för ett adaptivt formulär, där du har skapat ditt SharePoint Document Library-lagringsutrymme.
-   > * Om [!UICONTROL Configuration Container] inte är markerat visas de globala [!UICONTROL Storage Configuration]-mapparna i egenskapsfönstret för Skicka åtgärd.
+>[!BEGINTABS]
 
-1. Välj **Skicka åtgärd** som **[!UICONTROL Submit to SharePoint]**.
+>[!TAB Foundation Component]
+
+Utför följande steg för att använda en SharePoint Document Library-lagringskonfiguration i ett adaptivt formulär baserat på Foundation-komponenten som:
+
+1. Öppna det adaptiva formuläret för redigering och navigera till avsnittet **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
+1. Välj **[!UICONTROL Submit Action]** Skicka åtgärd **som** i listrutan **[!UICONTROL Submit to SharePoint]**.
+   ![SharePoint GIF](/help/forms/assets/submit-to-sharepoint-fc.png){width=50%}
+1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
+1. Klicka på **[!UICONTROL Save]** om du vill spara Skicka-inställningarna.
+
+>[!NOTE]
+>
+> * När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen. Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+> * Bifogade filer lagras också i katalogen `/folder_name/form_name/year/month/date/submission_id/data`. Om du väljer **Spara bifogade filer med ursprungligt namn** lagras de bifogade filerna i mappen med sina ursprungliga filnamn.
+
+>[!TAB Kärnkomponent]
+
+Utför följande steg för att använda en lagringskonfiguration i SharePoint Document Library i ett adaptivt formulär baserat på Core Component som:
+
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
+1. Välj **[!UICONTROL Submit Action]** Skicka åtgärd **som** i listrutan **[!UICONTROL Submit to SharePoint]**.
    ![SharePoint GIF](/help/forms/assets/sharedrive-video.gif)
 1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
 1. Klicka på **[!UICONTROL Save]** om du vill spara Skicka-inställningarna.
 
 >[!NOTE]
 >
-> När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen. Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+> * När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen. Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+> * Bifogade filer lagras också i katalogen `/folder_name/form_name/year/month/date/submission_id/data`. Om du väljer **Spara bifogade filer med ursprungligt namn** lagras de bifogade filerna i mappen med sina ursprungliga filnamn.
+
+>[!TAB Universell redigerare]
+
+Utför följande steg om du vill använda en lagringskonfiguration för SharePoint Document Library i ett adaptivt formulär som har skapats i Universell redigerare:
+
+1. Öppna det adaptiva formuläret för redigering.
+1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.
+Dialogrutan **Formuläregenskaper** visas.
+
+   >[!NOTE]
+   >
+   > * Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+   > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+
+1. Klicka på fliken **Skicka** och välj åtgärden **[!UICONTROL Submit to SharePoint]** Skicka.
+   ![SharePoint GIF](/help/forms/assets/submit-to-sharepoint-ue.png)
+1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
+1. Klicka på **[!UICONTROL Save&Close]** om du vill spara Skicka-inställningarna.
 
 >[!NOTE]
 >
-> Bifogade filer lagras också i katalogen `/folder_name/form_name/year/month/date/submission_id/data`. Om du väljer **Spara bifogade filer med ursprungligt namn** lagras de bifogade filerna i mappen med sina ursprungliga filnamn.
-> ![bild](/help/forms/assets/sp-doc-attachment-af2.png){height=50%,width=50%}
+> * När du skickar formuläret sparas data i den angivna Microsoft® Sharepoint-dokumentbibliotekslagringen. Mappstrukturen som data ska sparas i är `/folder_name/form_name/year/month/date/submission_id/data`.
+> * Bifogade filer lagras också i katalogen `/folder_name/form_name/year/month/date/submission_id/data`. Om du väljer **Spara bifogade filer med ursprungligt namn** lagras de bifogade filerna i mappen med sina ursprungliga filnamn.
+
+>[!ENDTABS]
 
 ## Relaterade artiklar
 

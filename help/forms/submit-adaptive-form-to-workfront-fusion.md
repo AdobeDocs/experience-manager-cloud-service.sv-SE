@@ -3,13 +3,13 @@ title: Integrering av Adobe Workfront Fusion med AEM Forms Submission
 description: Med Adobe Workfront Fusion kan du fokusera på nya uppgifter istället för att fokusera på repetitiva uppgifter. Du kan ansluta Adobe Workfront Fusion till ett adaptivt formulär genom att skicka formulär.
 keywords: Skicka in ett adaptivt formulär till Adobe Workfront Fusion, Integration of Adobe Workfront Fusion with AEM Forms Submission, Adobe Workfront Fusion with AEM Forms, Workfront Fusion with AEM Forms, Connect Workfront Fusion to AEM Forms, AEM Forms and Workfront Fusion, How to connect Workfront Fusion with AEM Forms?, Connect Workfront Fusion to a Form
 topic-tags: author, developer
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components, Edge Delivery Services, Core Components
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: d0d7a10b2c1dadb0f8bfaa654db7993d3e5e6635
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 0%
+source-wordcount: '1210'
+ht-degree: 1%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 <span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
-[Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html?lang=sv-SE) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter i stället för återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
+[Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter i stället för återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
 
 Med Workfront Fusion kan du till exempel skapa ett scenario där du samlar in data med adaptiv form, bearbetar data och skickar data till ett datalager för arkivering. När ett scenario har konfigurerats utför Workfront Fusion automatiskt uppgifterna när en användare fyller i ett formulär och uppdaterar datalagret sömlöst.
 
@@ -35,12 +35,12 @@ AEM Forms as a Cloud Service har en OOTB-anslutning för att ansluta och skicka 
 
 För att upprätta en anslutning mellan Workfront Fusion och AEM Forms krävs följande:
 
-* En giltig [Workfront- och Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html?lang=sv-SE).
-* En AEM användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) för att [hämta tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
+* En giltig [Workfront- och Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html).
+* En AEM-användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) för att [hämta tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
 
 ## Integrera AEM Forms med Adobe Workfront Fusion
 
-### 1. Skapa ett Workfront-scenario {#workflow-scenario}
+### &#x200B;1. Skapa ett Workfront-scenario {#workflow-scenario}
 
 Så här skapar du ett Workfront-scenario:
 
@@ -51,6 +51,7 @@ Så här skapar du ett Workfront-scenario:
 #### Skapa ett scenario {#create-scenario}
 
 Så här skapar du ett scenario:
+
 1. Logga in på ditt [Workfront Fusion-konto](https://app-qa.workfrontfusion.com/).
 1. Klicka på **[!UICONTROL Scenarios]** ![Delningsikonen](/help/forms/assets/Smock_ShareAndroid_18_N.svg) i den vänstra panelen.
 1. Klicka på **[!UICONTROL Create a new scenario]** i det övre högra hörnet på sidan. En sida för att skapa ett nytt scenario visas på skärmen.
@@ -78,7 +79,7 @@ Så här lägger du till en webkrok:
 
    >[!NOTE]
    >
-   > Vi rekommenderar att du noga väljer ditt webkrok-namn eftersom det angivna webkroknamnet visas i AEM.
+   > Vi rekommenderar att du noga väljer ditt webkrok-namn eftersom det angivna webkroknamnet visas i AEM-instansen.
 
 1. Klicka på **[!UICONTROL Add]** om du vill lägga till en ny anslutning. Dialogrutan **[!UICONTROL Create a Connection]** visas.
 
@@ -102,7 +103,7 @@ Så här lägger du till en anslutning:
    >
    > Instans-URL är den unika webbadressen som pekar på en viss AEM Forms-instans.
 
-   Du kan hämta inloggningsuppgifterna för [tjänsten från utvecklarkonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE) som krävs för att skapa en anslutning.
+   Du kan hämta inloggningsuppgifterna för [tjänsten från utvecklarkonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html) som krävs för att skapa en anslutning.
 
 1. Ersätt `ims-na1.adobelogin.com` i **IMS-slutpunkten** med värdet **imsEndpoint** från autentiseringsuppgifterna för tjänsten i utvecklarkonsolen.
 
@@ -120,7 +121,7 @@ Så här lägger du till en anslutning:
 
    >[!NOTE]
    >
-   >* Ta bort `\r\n` från värdet för **Privat nyckel**.
+   >* Ta bort **från värdet för** Privat nyckel`\r\n`.
    >  Om värdet för den privata nyckeln till exempel är:
    >`\r\nIJAVO8GDYAOZ9jMA0GCSqGSIb3DQEBCwUAMDAxL\r\nMy1lMTUxODMxLWNtc3RnLWludGVncmF0aW9uLTAw`, sedan efter att `\r\n` tagits bort från den privata nyckeln, skulle nyckeln se ut så här, med båda värdena på en separat rad:
    >
@@ -143,53 +144,60 @@ Så här lägger du till en anslutning:
 >
 > Om du inte aktiverar Workfront-scenariot kan det inte identifieras och om du ställer in skicka-åtgärden på Workfront blir överföringen misslyckad.
 
-### 2. Konfigurera en åtgärd för att skicka ett adaptivt formulär för Workfront Fusion
+### &#x200B;2. Konfigurera en åtgärd för att skicka ett adaptivt formulär för Workfront Fusion
 
-Du kan konfigurera skicka-åtgärden för Workfront Fusion för:
-* [Ny adaptiv Forms](#new-af-submit-action)
-* [Befintliga adaptiva formulär](#existing-af-submit-action)
+>[!BEGINTABS]
 
-#### Konfigurera åtgärden skicka för det nya adaptiva formuläret för Workfront Fusion {#new-af-submit-action}
+>[!TAB Foundation Component]
 
-Så här konfigurerar du skickaåtgärden för det nya adaptiva formuläret för Workfront Fusion:
+Så här konfigurerar du skickaåtgärd för ett adaptivt formulär baserat på Foundation-komponenter för Workfront Fusion:
 
-1. Logga in på din AEM.
-1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]** > **[!UICONTROL Create]** > **[!UICONTROL Adaptive Form]**. Guiden **[!UICONTROL Create Form]** visas.
-1. Välj en anpassad formulärmall på fliken **[!UICONTROL Source]**.
-1. Välj ett tema på fliken **[!UICONTROL Style]**.
+1. Öppna det adaptiva formuläret för redigering och navigera till avsnittet **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
+1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Invoke a WorkFront Fusion Scenario]**.
+   ![Skicka-åtgärd för Workfront Fusion](/help/forms/assets/workfront-fusion-fc.png)
 
-   ![Skicka-åtgärd för Workfront Fusion](/help/forms/assets/workfront-scenario-new-af.png)
-
-1. Välj **[!UICONTROL Invoke a WorkFront Fusion Scenario]** på fliken **[!UICONTROL Submission]**.
-1. Välj den skapade webkroken på fliken **[!UICONTROL Options]** i fönstret **[!UICONTROL Properties]**.
-
-   >[!NOTE]
-   >
-   > Webkroknamnet för Workfront-scenariot visas i listrutan **Alternativ**.
-
-1. Klicka på **[!UICONTROL Create]**.
-1. Ange namnet på det nya adaptiva formuläret och klicka på **[!UICONTROL Create]**.
-
-#### Konfigurera skicka-åtgärd för befintligt adaptivt formulär för Workfront Fusion {#existing-af-submit-action}
-
-Så här konfigurerar du skickaåtgärden för det befintliga adaptiva formuläret för Workfront Fusion:
-
-1. Logga in på din AEM.
-1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
-1. Markera ett adaptivt formulär och öppna formuläret i redigeringsläge.
-1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
-1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
-
-   ![Skicka-åtgärd för Workfront Fusion](/help/forms/assets/workfront-scenario-existing-af.png)
-
-1. Öppna fliken **[!UICONTROL Submission]**.
-1. Välj **[!UICONTROL Submit action]** som **[!UICONTROL Invoke a WorkFront Fusion Scenario]**
 1. Välj **[!UICONTROL Workfront Fusion scenario]** i listrutan.
 1. Klicka på **[!UICONTROL Done]**.
 
+
+>[!TAB Kärnkomponent]
+
+Så här konfigurerar du åtgärden skicka i ett adaptivt formulär baserat på kärnkomponenter för Workfront Fusion:
+
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
+1. I listrutan **[!UICONTROL Submit Action]** väljer du **[!UICONTROL Invoke a WorkFront Fusion Scenario]**.
+
+   ![Skicka-åtgärd för Workfront Fusion](/help/forms/assets/workfront-scenario-existing-af.png)
+1. Välj **[!UICONTROL Workfront Fusion scenario]** i listrutan.
+1. Klicka på **[!UICONTROL Done]**.
+
+>[!TAB Universell redigerare]
+
+Så här konfigurerar du åtgärden skicka för ett adaptivt formulär som har skapats med Universal Editor:
+
+1. Öppna det adaptiva formuläret för redigering.
+1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.
+Dialogrutan **Formuläregenskaper** visas.
+
+   >[!NOTE]
+   >
+   > * Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+   > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+
+1. Klicka på fliken **Skicka** och välj åtgärden **[!UICONTROL Invoke a WorkFront Fusion Scenario]** Skicka.
+
+   ![Skicka-åtgärd för Workfront Fusion](/help/forms/assets/workfront-fusion-ue.png)
+
+1. Välj **[!UICONTROL Workfront Fusion scenario]** i listrutan.
+1. Klicka på **[!UICONTROL Save&Close]**.
+
+>[!ENDTABS]
+
 ## Bästa praxis {#best-practices}
 
-* Vi rekommenderar att du noga väljer webbhollänsnamn eftersom det inte finns något sätt att hämta scenarionamnet vid AEM. Om du ändrar webkroknamnet i framtiden återspeglas det inte i listrutan för AEM Forms-åtgärden Skicka.
+* Vi rekommenderar att du noga väljer ditt webbhotell eftersom det inte finns något sätt att hämta scenarionamnet vid AEM-instansen. Om du ändrar webkroknamnet i framtiden återspeglas det inte i listrutan för AEM Forms-åtgärden Skicka.
 * Ett scenario kan ha flera webkroklänkar, men vid en tidpunkt är bara en webkrok aktiv. Vi rekommenderar att du tar bort den olänkade webkroken så att den inte visas i listrutan AEM Forms Skicka-åtgärd.
 
 <!-- During testing or development of Workfront, add the Author URL to the instance URL. However, when deploying Workfront Fusion in a production environment, it is recommended to replicate the scenario URLs for the Publish instance. -->

@@ -3,11 +3,11 @@ title: Hur integrerar man ett anpassat formulär med Microsoft&reg; Power Automa
 description: Integrera ett anpassat formulär med Microsoft&reg; Power Automate.
 exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
 keywords: koppla samman AEM-blanketter med automatiserad strömhantering, automatiserad strömhantering AEM Forms, integrera automatiserad strömhantering till adaptiva Forms, skicka data från adaptiva Forms till Power Automate
-feature: Adaptive Forms
+feature: Adaptive Forms, Foundation Components, Core Components, Edge Delivery Services
 role: Admin, User, Developer
-source-git-commit: 8d0814642fa0e5eb3f92a499202d0b79d90f91e3
+source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power
 
 Den adaptiva Forms-redigeraren tillhandahåller **Anropa ett Microsoft® Power Automate-flöde** för att skicka adaptiva formulärdata, bilagor och arkivdokument som skickas till Power Automate Cloud Flow.
 
-AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
+AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/aem-forms-submit-action.md).
 
 
 ## Fördelar
@@ -88,7 +88,7 @@ Klicka på `Add permissions` om du vill spara behörigheterna.
 ### Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration {#microsoft-power-automate-dataverse-cloud-configuration}
 
 1. I AEM Forms-författarinstans går du till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
-1. Välj **[!UICONTROL Create]** på sidan **[!UICONTROL Configuration Browser]**.
+1. Välj **[!UICONTROL Configuration Browser]** på sidan **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av molntjänster. Kontrollera att mappnamnet inte innehåller något utrymme.
 1. Navigera till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft® Power Automate Dataverse]** och öppna konfigurationsbehållaren som du skapade i föregående steg.
 
@@ -140,12 +140,17 @@ Din instans av Forms as a Cloud Service är nu ansluten till Microsoft® Power A
 
 När du har [anslutit din Forms as a Cloud Service-instans till Microsoft® Power Automate](#connect-forms-server-with-power-automate) utför du följande åtgärd för att konfigurera ditt adaptiva formulär så att inhämtade data skickas till ett Microsoft®-flöde när formulär skickas.
 
+>[!BEGINTABS]
+
+>[!TAB Foundation Component]
+
 1. Logga in på din författarinstans, markera ditt adaptiva formulär och klicka på **[!UICONTROL Properties]**.
 1. I konfigurationsbehållaren bläddrar du till och markerar den behållare som har skapats i avsnittet [Skapa Microsoft® Power Automate Dataverse Cloud Configuration](#microsoft-power-automate-dataverse-cloud-configuration) och väljer **[!UICONTROL Save and Close]**.
 1. Öppna det adaptiva formuläret för redigering och navigera till avsnittet **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
 1. I egenskapsbehållaren för **[!UICONTROL Submit Actions]** markerar du alternativet **[!UICONTROL Invoke a Power Automate flow]** och väljer **[!UICONTROL Power Automate flow]**. Välj önskat flöde och adaptiva Forms-data skickas till det när de skickas.
 
    ![Konfigurera Skicka-åtgärd](assets/submission.png)
+1. Klicka på **[!UICONTROL Done]**.
 
 >[!NOTE]
 >
@@ -210,6 +215,167 @@ När du har [anslutit din Forms as a Cloud Service-instans till Microsoft® Powe
             }
         }
 ```
+
+>[!TAB Kärnkomponent]
+
+1. Logga in på din författarinstans, markera ditt adaptiva formulär och klicka på **[!UICONTROL Properties]**.
+1. I konfigurationsbehållaren bläddrar du till och markerar den behållare som har skapats i avsnittet [Skapa Microsoft® Power Automate Dataverse Cloud Configuration](#microsoft-power-automate-dataverse-cloud-configuration) och väljer **[!UICONTROL Save and Close]**.
+1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
+1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
+1. Klicka på fliken **[!UICONTROL Submission]**.
+1. Välj alternativet **[!UICONTROL Invoke a Power Automate flow]** i listrutan Skicka-åtgärd och välj en **[!UICONTROL Power Automate flow]**. Välj önskat flöde och adaptiva Forms-data skickas till det när de skickas.
+
+   ![Konfigurera Skicka-åtgärd](/help/forms/assets/power-automate-cc.png)
+1. Klicka på **[!UICONTROL Done]**.
+
+>[!NOTE]
+>
+> Innan du skickar det adaptiva formuläret måste du se till att `When an HTTP Request is received`-utlösaren med JSON-schema under läggs till i Power Automate-flödet.
+
+```
+        {
+            "type": "object",
+            "properties": {
+                "attachments": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "filename": {
+                                "type": "string"
+                            },
+                            "data": {
+                                "type": "string"
+                            },
+                            "contentType": {
+                                "type": "string"
+                            },
+                            "size": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "filename",
+                            "data",
+                            "contentType",
+                            "size"
+                        ]
+                    }
+                },
+                "templateId": {
+                    "type": "string"
+                },
+                "templateType": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "document": {
+                    "type": "object",
+                    "properties": {
+                        "filename": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "type": "string"
+                        },
+                        "contentType": {
+                            "type": "string"
+                        },
+                        "size": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+```
+
+>[!TAB Universell redigerare]
+
+1. Logga in på din Author-instans och välj ditt adaptiva formulär.
+1. I konfigurationsbehållaren bläddrar du till och markerar den behållare som har skapats i avsnittet [Skapa Microsoft® Power Automate Dataverse Cloud Configuration](#microsoft-power-automate-dataverse-cloud-configuration) och väljer **[!UICONTROL Save and Close]**.
+1. Öppna det adaptiva formuläret för redigering.
+1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.
+Dialogrutan **Formuläregenskaper** visas.
+
+   >[!NOTE]
+   >
+   > * Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+   > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+
+
+1. Klicka på fliken **Skicka** och välj åtgärden **[!UICONTROL Invoke a Power Automate flow]** Skicka. Välj önskat flöde och adaptiva Forms-data skickas till det när de skickas.
+
+   ![Konfigurera Skicka-åtgärd](/help/forms/assets/power-automate-ue.png)
+1. Klicka på **[!UICONTROL Save&Close]**.
+
+>[!NOTE]
+>
+> Innan du skickar det adaptiva formuläret måste du se till att `When an HTTP Request is received`-utlösaren med JSON-schema under läggs till i Power Automate-flödet.
+
+```
+        {
+            "type": "object",
+            "properties": {
+                "attachments": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "filename": {
+                                "type": "string"
+                            },
+                            "data": {
+                                "type": "string"
+                            },
+                            "contentType": {
+                                "type": "string"
+                            },
+                            "size": {
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "filename",
+                            "data",
+                            "contentType",
+                            "size"
+                        ]
+                    }
+                },
+                "templateId": {
+                    "type": "string"
+                },
+                "templateType": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "document": {
+                    "type": "object",
+                    "properties": {
+                        "filename": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "type": "string"
+                        },
+                        "contentType": {
+                            "type": "string"
+                        },
+                        "size": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        }
+```
+
+>[!ENDTABS]
 
 <!--
 ## See also
