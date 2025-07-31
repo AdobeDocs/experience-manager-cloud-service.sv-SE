@@ -17,7 +17,7 @@ ht-degree: 1%
 
 <span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
-[Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter i stället för återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
+[Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html?lang=sv-SE) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter i stället för återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
 
 Med Workfront Fusion kan du till exempel skapa ett scenario där du samlar in data med adaptiv form, bearbetar data och skickar data till ett datalager för arkivering. När ett scenario har konfigurerats utför Workfront Fusion automatiskt uppgifterna när en användare fyller i ett formulär och uppdaterar datalagret sömlöst.
 
@@ -35,8 +35,8 @@ AEM Forms as a Cloud Service har en OOTB-anslutning för att ansluta och skicka 
 
 För att upprätta en anslutning mellan Workfront Fusion och AEM Forms krävs följande:
 
-* En giltig [Workfront- och Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html).
-* En AEM-användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) för att [hämta tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
+* En giltig [Workfront- och Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html?lang=sv-SE).
+* En AEM-användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) för att [hämta tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
 
 ## Integrera AEM Forms med Adobe Workfront Fusion
 
@@ -103,7 +103,7 @@ Så här lägger du till en anslutning:
    >
    > Instans-URL är den unika webbadressen som pekar på en viss AEM Forms-instans.
 
-   Du kan hämta inloggningsuppgifterna för [tjänsten från utvecklarkonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html) som krävs för att skapa en anslutning.
+   Du kan hämta inloggningsuppgifterna för [tjänsten från utvecklarkonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE) som krävs för att skapa en anslutning.
 
 1. Ersätt `ims-na1.adobelogin.com` i **IMS-slutpunkten** med värdet **imsEndpoint** från autentiseringsuppgifterna för tjänsten i utvecklarkonsolen.
 

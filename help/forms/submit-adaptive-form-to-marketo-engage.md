@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ![Arbetsflöde](/help/forms/assets/workflow-marketo-3.png)
 
-Adaptiv Forms-redigerare innehåller åtgärden **Skicka till Marketo Engage** som skickar adaptiva Forms-data till Adobe Marketo Engage för bearbetning. Du kan konfigurera ett befintligt adaptivt formulär så att data skickas till [Adobe Marketo Engage](https://experienceleague.adobe.com/en/docs/marketo/using/home) när det skickas.
+Adaptiv Forms-redigerare innehåller åtgärden **Skicka till Marketo Engage** som skickar adaptiva Forms-data till Adobe Marketo Engage för bearbetning. Du kan konfigurera ett befintligt adaptivt formulär så att data skickas till [Adobe Marketo Engage](https://experienceleague.adobe.com/sv/docs/marketo/using/home) när det skickas.
 
 Det finns ett antal färdiga skickningsåtgärder för att hantera formuläröverföringar. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
@@ -94,7 +94,7 @@ När du har konfigurerat skicka-åtgärden för det adaptiva formuläret som **S
 
 ## Nästa steg
 
-Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
+Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/sv/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
 
 ## Relaterade artiklar
 
