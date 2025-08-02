@@ -31,7 +31,7 @@ Det är direkt inbäddat i AEM och tillgängligt från AEM Experience Hub, Cloud
 
 I följande 3-minuters-39-sekundersvideo får du stegvis genomgång av AEM AI Assistant.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470354?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3470359?learn=on&captions=swe)
 
 >[!IMPORTANT]
 >Kontrollera att du har granskat och skickat in användaravtalet så att Adobe kan aktivera AI Assistant-funktionen så att du kan testa och delta i det privata betaprogrammet.
