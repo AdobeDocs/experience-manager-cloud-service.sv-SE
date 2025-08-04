@@ -169,7 +169,7 @@ Nu kan du välja den nya konfigurationen för redigering.
 
      >[!NOTE]
      >
-     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
+     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=sv-SE), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
      >
      >mbox.js har tagits bort och kommer att tas bort i ett senare skede.
      >
@@ -241,7 +241,7 @@ Ditt ramverk har skapats. Om du vill replikera ramverket till publiceringsinstan
 <!--
 ### Associating Activities With the Target Cloud Configuration  {#associating-activities-with-the-target-cloud-configuration}
 
-Associate your [AEM activities](/help/sites-cloud/authoring/personalization/activities.md) with your Target cloud configuration so that you can mirror the activities in [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
+Associate your [AEM activities](/help/sites-cloud/authoring/personalization/activities.md) with your Target cloud configuration so that you can mirror the activities in [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=sv-SE).
 
 >[!NOTE]
 >
@@ -340,7 +340,7 @@ Så här exporterar du ett innehållsfragment från AEM till Target (efter att d
 
 ## Använda dina innehållsfragment i Adobe Target {#using-your-content-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html).
+När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html?lang=sv-SE).
 
 >[!NOTE]
 >
@@ -378,10 +378,10 @@ Mer information finns i följande:
 * [Creating a Target Cloud Configuration](/help/sites-cloud/integrating/integrating-adobe-target.md#create-configuration)
 -->
 
-* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
+* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE)
 
 * [Adobe Target-utveckling](https://developers.adobetarget.com/)
 
-* [Adobe Target - Använda AEM Content Fragments i Target-aktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html)
+* [Adobe Target - Använda AEM Content Fragments i Target-aktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html?lang=sv-SE)
 
-* [Adobe Target - Översikt över AEM Experience Fragments och Content Fragments](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html)
+* [Adobe Target - Översikt över AEM Experience Fragments och Content Fragments](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html?lang=sv-SE)
