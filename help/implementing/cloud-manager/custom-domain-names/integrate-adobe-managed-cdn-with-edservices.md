@@ -71,12 +71,12 @@ Båda modellerna kan samexistera inom samma Cloud Manager-program, vilket möjli
 ## Förutsättningar {#prerequisites}
 
 1. Anmäl er webbplats i Cloud Manager
-- Krävs för båda distributionsmodellerna. Följ en AEM webbplats.
+&#x200B;- Krävs för båda distributionsmodellerna. Följ en AEM webbplats.
 
 2. Hämta din egen Git (BYOG) (tillval)
-- Om du lagrar webbplatskod utanför Adobe Git, slutför du BYOG-introduktionen.
+&#x200B;- Om du lagrar webbplatskod utanför Adobe Git, slutför du BYOG-introduktionen.
 
 3. Edge Delivery-licens
-- Kontrollera att programmet har licens för Edge Delivery Services.
+&#x200B;- Kontrollera att programmet har licens för Edge Delivery Services.
 
 
