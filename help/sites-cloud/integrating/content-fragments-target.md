@@ -5,9 +5,9 @@ exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
 solution: Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 58a0cb3fab9f3be1ff431aa5814797b6e6675265
 workflow-type: tm+mt
-source-wordcount: '2159'
+source-wordcount: '1997'
 ht-degree: 0%
 
 ---
@@ -16,8 +16,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->* AEM innehållsfragment exporteras till standardarbetsytan i Adobe Target.
->* AEM måste integreras med Adobe Target enligt instruktionerna under [Integrering med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
+>AEM måste integreras med Adobe Target enligt instruktionerna under [Integrering med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md).
 
 Du kan exportera [innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md) som skapats i Adobe Experience Manager as a Cloud Service (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
 
@@ -27,7 +26,7 @@ Det finns ett alternativ för att exportera ett innehållsfragment till Adobe Ta
 
 <!-- * GraphQL query ??? -->
 
-Om du vill förbereda instansen för att exportera AEM innehållsfragment till Adobe Target måste du:
+Om du vill förbereda din instans för att exportera AEM Content Fragments till Adobe Target måste du:
 
 * [Integrera med Adobe Target](/help/sites-cloud/integrating/integrating-adobe-target.md)
 * [Lägg till molnkonfigurationen](#add-the-cloud-configuration)
@@ -70,52 +69,26 @@ Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** f
 
 * ange de formatalternativ som ska användas för exporten
 * välj en målarbetsyta som mål
-* välj en externaliseringsdomän för att skriva om referenser i innehållsfragmentet (valfritt)
 
-De obligatoriska alternativen kan väljas i **Sidegenskaper** för den obligatoriska mappen, eller i ett fragment, eller båda. Specifikationen ärvs om det behövs.
+De obligatoriska alternativen kan väljas i **Egenskaper** för den obligatoriska mappen. Specifikationen ärvs vid behov.
 
 1. Gå till **Assets**-konsolen.
 
-1. Öppna **Sidegenskaper** för rätt mapp eller fragment.
+1. Öppna **Egenskaper** för rätt mapp.
 
    >[!NOTE]
    >
    >Om du lägger till molnkonfigurationen i den överordnade mappen för innehållsfragment ärvs konfigurationen av alla underordnade.
-   >
-   >Om du lägger till molnkonfigurationen i själva innehållsfragmentet ärvs konfigurationen av alla variationer.
 
-1. Markera fliken **Cloud Service**.
+1. Välj fliken **Molntjänster**.
 
-1. Under **Konfiguration av Cloud Service** väljer du **Adobe Target** i listrutan.
+1. Under **Cloud Service-konfiguration** väljer du målkonfiguration i listrutan.
 
-   <!-- is this note appropriate? -->
+1. Välj din Adobe Target-arbetsyta.
 
-   >[!NOTE]
-   >
-   >JSON-formatet för ett Content Fragment-erbjudande kan anpassas. Om du vill göra det definierar du en komponent för kundinnehållsfragment och kommenterar sedan hur egenskaperna ska exporteras i komponentens Sling Model.
-   >
-   >Se kärnkomponenten: [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE)
+   Till exempel:
 
-1. Under **Adobe Target** väljer du:
-
-   * lämplig konfiguration
-   * det obligatoriska formatalternativet
-   * en Adobe Target-arbetsyta
-   * vid behov - externaliseringsdomänen
-
-   >[!CAUTION]
-   >
-   >Externeringsdomänen är valfri.
-   >
-   > En AEM externalisering konfigureras när du vill att det exporterade innehållet ska peka på en specifik *publiceringsdomän*. Mer information finns i [Konfigurera AEM Link Externalizer](/help/implementing/developing/extending/content-fragments-customizing.md#configuring-the-aem-link-externalizer).
-   >
-   > Observera också att Externalizer-domäner bara är relevanta för innehållet i det innehållsfragment som skickas till Target, och inte för metadata som Visa erbjudandeinnehåll.
-
-   För en mapp:
-
-   <!-- need a new screenshot -->
-
-   ![Mapp - Cloud Service](assets/cf-target-integration-01.png "Mapp - Cloud Service")
+   ![Mapp - molntjänster](assets/cf-target-integration-01.png "Mapp - molntjänster")
 
 1. **Spara och stäng**.
 
@@ -127,19 +100,19 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** för den obligator
 >
 >Att lägga till en ny äldre konfiguration är ett specialscenario som bara stöds för export av innehållsfragment.
 
-När du har [lagt till molnkonfigurationen](#add-the-cloud-configuration) för att använda Launch byn Adobe, måste du även integrera AEM med Adobe Target manuellt med Adobe Target med en äldre konfiguration.
+När du har [lagt till molnkonfigurationen](#add-the-cloud-configuration) för att använda Launch från Adobe måste du även integrera AEM med Adobe Target manuellt med Adobe Target med en äldre konfiguration.
 
 ### Skapa en målmolnkonfiguration {#creating-a-target-cloud-configuration}
 
 Om du vill att AEM ska kunna interagera med Adobe Target skapar du en Target-molnkonfiguration. Om du vill skapa konfigurationen anger du Adobe Target klientkod och inloggningsuppgifter.
 
-Du skapar bara målmolnkonfigurationen en gång eftersom du kan associera konfigurationen med flera AEM kampanjer. Om du har flera Adobe Target-klientkoder skapar du en konfiguration för varje klientkod.
+Du skapar molnkonfigurationen för Target endast en gång eftersom du kan associera konfigurationen med flera AEM-kampanjer. Om du har flera Adobe Target-klientkoder skapar du en konfiguration för varje klientkod.
 
 Du kan konfigurera molnkonfigurationen så att segment från Adobe Target synkroniseras. Om du aktiverar synkronisering importeras segment från Target i bakgrunden så snart molnkonfigurationen har sparats.
 
-Använd följande procedur för att skapa en Target-molnkonfiguration i AEM:
+Gör så här för att skapa en Target-molnkonfiguration i AEM:
 
-1. Navigera till **Äldre Cloud Service** via logotypen **AEM** > **Verktyg** > **Cloud Service** > **Äldre Cloud Service**.
+1. Navigera till **Äldre molntjänster** via **AEM-logotypen** > **Verktyg** > **Molntjänster** > **Äldre molntjänster**.
 Till exempel: ([http://localhost:4502/libs/cq/core/content/tools/cloudservices.html](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html))
 
    Översiktssidan för **Adobe Experience Cloud** öppnas.
@@ -190,13 +163,13 @@ Nu kan du välja den nya konfigurationen för redigering.
 
    * **Använd korrekt målinriktning:** Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
 
-   * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du alltid måste använda segment från Target. (Den AEM termen segment motsvarar målgruppen.)
+   * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du alltid måste använda segment från Target. (AEM-termen för segment motsvarar målgruppen.)
 
    * **Klientbibliotek:** som standard är AT.js (mbox.js är inaktuellt)
 
      >[!NOTE]
      >
-     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=sv-SE), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
+     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
      >
      >mbox.js har tagits bort och kommer att tas bort i ett senare skede.
      >
@@ -211,7 +184,7 @@ Nu kan du välja den nya konfigurationen för redigering.
      >
      >Du kan välja AT.js eller mbox.js i listrutan **Klientbibliotek** .
 
-   * **Använd Tag Management System för att leverera klientbiblioteket** - Välj det här alternativet om du vill använda klientbiblioteket från Adobe Launch eller ett annat tagghanteringssystem (eller DTM, som är inaktuellt).
+   * **Använd Tag Management System för att leverera klientbibliotek** - Välj det här alternativet om du vill använda klientbiblioteket från Adobe Launch eller ett annat tagghanteringssystem (eller DTM, som är inaktuellt).
 
    * **Anpassad AT.js**: Bläddra för att överföra din anpassade AT.js. Lämna tomt om du vill använda standardbiblioteket.
 
@@ -241,7 +214,7 @@ Du kan skapa flera ramverk för en enda Target-konfiguration. Flera ramverk är 
 
    <!-- ![Configure Target Framework Dialog](assets/config-target-framework-dialog.png) -->
 
-   Ramverkssidan öppnas. Sidekick tillhandahåller komponenter som representerar information från [ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) som du kan mappa.
+   Ramverkssidan öppnas. Sidekick innehåller komponenter som representerar information från [ContextHub](/help/implementing/developing/personalization/configuring-contexthub.md) som du kan mappa.
 
    <!-- ![Configuring ContextHub](assets/chlimage_1-162.png) -->
 
@@ -268,7 +241,7 @@ Ditt ramverk har skapats. Om du vill replikera ramverket till publiceringsinstan
 <!--
 ### Associating Activities With the Target Cloud Configuration  {#associating-activities-with-the-target-cloud-configuration}
 
-Associate your [AEM activities](/help/sites-cloud/authoring/personalization/activities.md) with your Target cloud configuration so that you can mirror the activities in [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=sv-SE).
+Associate your [AEM activities](/help/sites-cloud/authoring/personalization/activities.md) with your Target cloud configuration so that you can mirror the activities in [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 >
@@ -314,11 +287,11 @@ When you associate a page with the framework, the child pages inherit the associ
 
 >[!CAUTION]
 >
->För medieresurser, till exempel bilder, exporteras bara en referens till Target. Resursen lagras i AEM Assets och levereras från den AEM publiceringsinstansen.
+>För medieresurser, till exempel bilder, exporteras bara en referens till Target. Resursen lagras i AEM Assets och levereras från AEM publiceringsinstans.
 >
 >På grund av detta måste innehållsfragmentet, med alla relaterade resurser, publiceras innan det exporteras till Target.
 
-Så här exporterar du ett innehållsfragment från AEM till mål (efter att du har angett molnkonfigurationen):
+Så här exporterar du ett innehållsfragment från AEM till Target (efter att du har angett molnkonfigurationen):
 
 1. Navigera till ditt innehållsfragment i **Assets**-konsolen.
 1. Markera det innehållsfragment som du vill exportera till mål.
@@ -337,7 +310,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
    
    -->
 
-1. Välj **Exportera utan publicering** eller **Publish** efter behov.
+1. Välj **Exportera utan publicering** eller **Publicera** efter behov.
 
    >[!NOTE]
    >
@@ -347,7 +320,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
    >[!NOTE]
    >
-   >Om du väljer **Publish** publiceras innehållsfragmentet direkt och skickas till Target.
+   >Om du väljer **Publicera** publiceras innehållsfragmentet direkt och skickas till Target.
 
 1. Välj **OK** i bekräftelsedialogrutan.
 
@@ -367,7 +340,7 @@ Så här exporterar du ett innehållsfragment från AEM till mål (efter att du 
 
 ## Använda dina innehållsfragment i Adobe Target {#using-your-content-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html?lang=sv-SE).
+När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html).
 
 >[!NOTE]
 >
@@ -385,15 +358,15 @@ Om du tar bort ett innehållsfragment som redan har exporterats till Target kan 
 
 För att undvika sådana situationer:
 
-* Om innehållsfragmentet inte används i en aktivitet kan AEM ta bort fragmentet utan ett varningsmeddelande.
-* Om innehållsfragmentet används av en aktivitet i Target visas ett felmeddelande som informerar AEM om eventuella konsekvenser som en borttagning av fragmentet kan ha för aktiviteten.
+* Om innehållsfragmentet inte används för närvarande i en aktivitet kan AEM ta bort fragmentet utan ett varningsmeddelande.
+* Om innehållsfragmentet används av en aktivitet i Target visas ett felmeddelande som varnar AEM-användaren om eventuella konsekvenser som en borttagning av fragmentet kan ha för aktiviteten.
 
   Felmeddelandet i AEM förhindrar inte användaren från att (tvinga) ta bort innehållsfragmentet. Om innehållsfragmentet tas bort:
 
-   * Målerbjudandet med AEM innehållsfragment kan visa oönskat beteende
+   * Target-erbjudandet med AEM Content Fragment kan visa oönskat beteende
 
       * Erbjudandet kommer troligtvis fortfarande att återges eftersom innehållsfragmentet skickades till Target
-      * Eventuella referenser i innehållsavsnittet kanske inte fungerar korrekt om refererade resurser också tas bort i AEM.
+      * Eventuella referenser i innehållsavsnittet kanske inte fungerar korrekt om refererade resurser även har tagits bort i AEM.
 
    * Det går förstås inte att göra ytterligare ändringar i innehållsfragmentet eftersom innehållsfragmentet inte längre finns i AEM.
 
@@ -405,10 +378,10 @@ Mer information finns i följande:
 * [Creating a Target Cloud Configuration](/help/sites-cloud/integrating/integrating-adobe-target.md#create-configuration)
 -->
 
-* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE)
+* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
 
 * [Adobe Target-utveckling](https://developers.adobetarget.com/)
 
-* [Adobe Target - Använda AEM innehållsfragment i målaktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html?lang=sv-SE)
+* [Adobe Target - Använda AEM Content Fragments i Target-aktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html)
 
-* [Adobe Target - AEM Experience Fragments and Content Fragments overview](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html?lang=sv-SE)
+* [Adobe Target - Översikt över AEM Experience Fragments och Content Fragments](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html)
