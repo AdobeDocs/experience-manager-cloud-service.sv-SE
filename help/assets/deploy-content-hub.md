@@ -3,7 +3,7 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: 367406ff325eb71a4c75018c4440eae6535f20dc
+source-git-commit: 797d1e275bcb8e949171d322871b377582e72a71
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Den här artikeln innehåller ett komplett arbetsflöde för att ge Content Hub 
 
 I den här videon får du lära dig hur du aktiverar Content Hub för Experience Manager Assets:
 
->[!VIDEO](https://video.tv.adobe.com/v/3469851)
+>[!VIDEO](https://video.tv.adobe.com/v/3470434)
 
 De olika behörigheterna för Content Hub omfattar:
 

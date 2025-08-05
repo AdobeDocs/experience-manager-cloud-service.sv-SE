@@ -2,9 +2,9 @@
 title: Content Hub - översikt
 description: Läs mer om Content Hub, dess viktigaste fördelar, hur man får tillgång till det och hur man kan ge feedback kring de alternativ som finns i Content Hub.
 exl-id: c5908058-f1ad-4aaa-9e8e-c0157e107ed1
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 797d1e275bcb8e949171d322871b377582e72a71
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '613'
 ht-degree: 0%
 
 ---
@@ -36,10 +36,6 @@ De vanligaste egenskaperna i Content Hub, t.ex. sökfilter, fält som är tillg�
 **Ge icke-kreatörer möjlighet att redigera och mixa om innehåll samtidigt som de behåller sitt varumärke**
 
 Med Content Hub kan du skapa nytt innehåll med Adobe Express (om du har Adobe Express-rättigheter). Du kan redigera befintligt innehåll med lättanvända verktyg, producera varumärkesanpassade varianter med mallar och märkeselement och skapa nytt innehåll med de senaste GenAI-funktionerna från Adobe Firefly.
-
-**Få insikter om hur innehåll används i olika team**
-
-[!DNL Content Hub] ger värdefulla insikter om resurser, och åtgärdar en vanlig utmaning som marknadsföringsintressenter ofta stöter på - statistik om resursanvändning som används i marknadsföringskampanjer, kanaler och olika regioner. Genom att få en tydlig förståelse för resursernas prestanda och popularitet kan ni få användbara insikter som är viktiga för att förbättra användarupplevelsen.
 
 ## Förutsättningar {#prerequisites-content-hub}
 
