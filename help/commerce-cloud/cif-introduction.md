@@ -61,7 +61,7 @@ CIF ger dig standardiserade integreringsmönster baserade på bästa praxis. Det
    * Ingen åtkomst till mellanlagrade data
    * Behovet av produktdata och upplevelser i realtid
 * En växande digital mognad leder till ett behov av upplevelsehantering
-* 
+* &#x200B;
    * CIF har funktioner för hantering av produktupplevelser som kan införlivas stegvis utan ytterligare IT-arbete.
 * Redo för flera kanaler
    * CIF har stöd för en mängd olika kontakttekniker (serversidan, hybrid, klientsidan) med mönster, acceleratorer och kärnkomponenter.
