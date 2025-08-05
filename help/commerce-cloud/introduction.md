@@ -33,13 +33,13 @@ Om ditt företag vill ha den snabbaste och mest AI-vänliga butiken på webben o
 
 #### &#x200B;1. Integrering med Adobe Commerce as a Cloud Service {#acaacs}
 
-Det här är den perfekta lösningen om du använder Edge Delivery och [Adobe Commerce Storefront](https://experienceleague.adobe.com/developer/commerce/storefront/) som utgångspunkt. I butiken finns en standardmall som är förintegrerad med Adobe Commerce-tjänster, API:er och en mängd olika Commerce-komponenter för att snabbt skapa en butiksskylt.
+Det här är den perfekta lösningen om du använder Edge Delivery och [Adobe Commerce Storefront](https://experienceleague.adobe.com/developer/commerce/storefront/?lang=sv-SE) som utgångspunkt. I butiken finns en standardmall som är förintegrerad med Adobe Commerce-tjänster, API:er och en mängd olika Commerce-komponenter för att snabbt skapa en butiksskylt.
 
 Bra passform: En typisk butiksupplevelse med Adobe Commerce as a Cloud Service
 
 #### &#x200B;2. Integrering med Adobe Commerce Optimizer (för alla tredjepartslösningar) {#aco}
 
-Om du vill integrera din befintliga e-handelslösning och öka katalogens prestanda rekommenderar Adobe att du använder [Adobe Commerce Optimizer](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/adobe-commerce-optimizer/overview) som det moderna integreringslagret. Commerce Optimizer förbättrar er e-handelslösning med högpresterande SaaS-tjänster för katalog och marknadsföring. Precis som med Adobe Commerce as a Cloud Service fungerar [Adobe Commerce Storefront](https://experienceleague.adobe.com/developer/commerce/storefront/) direkt med programmet.
+Om du vill integrera din befintliga e-handelslösning och öka katalogens prestanda rekommenderar Adobe att du använder [Adobe Commerce Optimizer](https://experienceleague.adobe.com/sv/docs/commerce-learn/tutorials/adobe-commerce-optimizer/overview) som det moderna integreringslagret. Commerce Optimizer förbättrar er e-handelslösning med högpresterande SaaS-tjänster för katalog och marknadsföring. Precis som med Adobe Commerce as a Cloud Service fungerar [Adobe Commerce Storefront](https://experienceleague.adobe.com/developer/commerce/storefront/?lang=sv-SE) direkt med programmet.
 
 Det finns integreringar med lösningar för kommersiell handel som Salesforce Commerce. Tala med din Adobe-representant.
 
@@ -53,7 +53,7 @@ Bra passform: Lågt värde från Edge Deliery Store
 
 ### Använd din egen butik (integrering med Headless AEM) {#own-storefront}
 
-Du har en befintlig butik (t.ex. byggd med React JS) och vill använda Adobe Experience Manager för innehållshantering och leverans (Content Fragments), resurser och sammanhangsbaserad redigering (Universal Editor). Startpunkten för en integrering är [Introduktion till Adobe Experience Manager som Headless CMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/introduction) och [CIF-tillägget](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/authoring/enrich-product-associated-content). CIF-tillägget möjliggör en smidig integrering av dina produktdata i AEM (sök, bläddra och hitta produkter i AEM användargränssnitt) som du kan använda för att skapa e-handelsspecifika upplevelser.
+Du har en befintlig butik (t.ex. byggd med React JS) och vill använda Adobe Experience Manager för innehållshantering och leverans (Content Fragments), resurser och sammanhangsbaserad redigering (Universal Editor). Startpunkten för en integrering är [Introduktion till Adobe Experience Manager som Headless CMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/introduction) och [CIF-tillägget](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/authoring/enrich-product-associated-content). CIF-tillägget möjliggör en smidig integrering av dina produktdata i AEM (sök, bläddra och hitta produkter i AEM användargränssnitt) som du kan använda för att skapa e-handelsspecifika upplevelser.
 
 ### AEM CIF store {#cif}
 
@@ -61,4 +61,4 @@ Adobe rekommendationer och referensarkitektur är att använda Edge Delivery Ser
 
 >[!NOTE]
 >
->Befintliga kunder som vill utnyttja nya funktioner i AEM/Commerce bör flytta sin webbplats till Edge Delivery. Ett vanligt mönster är att börja med att bara flytta en delmängd av sidor till Edge Delivery och köra Edge Deliery- och CIF-sidor sida vid sida. Det går också att ersätta AEM CIF-komponenter med de nya [Commerce-komponenterna](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/all/introduction/) för att utnyttja de nya funktionerna i Commerce.
+>Befintliga kunder som vill utnyttja nya funktioner i AEM/Commerce bör flytta sin webbplats till Edge Delivery. Ett vanligt mönster är att börja med att bara flytta en delmängd av sidor till Edge Delivery och köra Edge Deliery- och CIF-sidor sida vid sida. Det går också att ersätta AEM CIF-komponenter med de nya [Commerce-komponenterna](https://experienceleague.adobe.com/developer/commerce/storefront/dropins/all/introduction/?lang=sv-SE) för att utnyttja de nya funktionerna i Commerce.
