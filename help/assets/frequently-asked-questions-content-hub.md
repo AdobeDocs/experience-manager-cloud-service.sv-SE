@@ -2,9 +2,9 @@
 title: Vanliga frågor och svar från Content Hub
 description: Få svar på några av de vanligaste frågorna och svaren för Content Hub.
 exl-id: 74b5c308-c1d3-4787-9f1f-f64cf09d298a
-source-git-commit: 642440e1349eb94adb2f1875a0c5f36d0673d702
+source-git-commit: 4125f6d99c1c1d63b9234d66dc552695bd30e7bc
 workflow-type: tm+mt
-source-wordcount: '1487'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Det finns några konfigurationer av hur användare tilldelas till [!DNL Content 
    >
    >Användaren som tilldelats Express- och Assets-produktprofiler i två Admin Consoles måste ha samma e-postadress och använda ett **Enterprise- eller School** -företagskonto, inte ett **Personal** -konto. Den idealiska konfigurationen är att ha båda Admin Consoles inställda som **Federated ID** med en förtroenderelation konfigurerad mellan dem, så att användaren får en sömlös inloggning. Vissa Express-planer (till exempel Express Teams) stöder inte Federated ID/enkel inloggning.
 
-Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[!UICONTROL # /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Utöver rätt produktbehörigheter kräver Adobe Express-integrering i Content Hub att den tilldelade användaren har minst [!UICONTROL Can Edit] behörigheter i Assets-redigeringsmiljön som driver Content Hub, i minst mapphierarkin **[#UICONTROL /content/dam/hydrated-assets/]** , där Content Hub-användare kan spara innehåll som de skapat med Express. Se [Behörighetshantering](/help/security/touch-ui-principal-view.md) i administrationsvyn (Touch UI) eller en förenklad [behörighetshantering i Assets-vyn](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Kan jag konfigurera Content Hub så att min organisations varumärkesriktlinjer visas som en länk på startsidan? {#content-hub-setup-brand-guidelines}
 
@@ -134,5 +134,29 @@ Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 |  | Fastnålade samlingar av administratör | ✓ | - |
 |  | Semantisk sökning | ✓ | - |
 |  | Lokaliserad sökning och visning av metadata | ✓ | - |
+
+## Hur väljer jag en databas för att visa resurser endast för den valda miljön? {#select-repository-multiple-environments}
+
+När du har konfigurerat Content Hub för produktion och andra lägre miljöer för samma program kan du välja databasen och visa resurserna för den valda miljön. Utför följande steg:
+
+1. Klicka på användarikonen i den högra rutan.
+
+1. Välj **[!UICONTROL Product Settings]** i avsnittet **[!UICONTROL Select Repository]**.
+
+1. Välj databasen i listrutan **[!UICONTROL Repository]** och klicka på **[!UICONTROL OK]** för att bekräfta.
+
+   Content Hub visar nu resurser för den valda miljön.
+
+## Hur visar Content Hub miniatyrbildsförhandsvisning för filtypen ZIP? {#thumbnail-preview-zip-file}
+
+Om du vill ha en miniatyrbildsförhandsvisning för filtyper som ZIP i Content Hub kan du lägga till en återgivning med namnet `cq5dam.preview.jpg` eller `cq5dam.preview.png` i roten av sökvägen där ZIP-filen är tillgänglig i AEM as a Cloud Service-redigeringsmiljö.
+
+Bilden som du lägger till som återgivning:
+
+* Kan vara i JPG-, JPEG- eller PNG-format.
+
+* Måste vara mindre än 50 MB
+
+När det är tillgängligt visas bilden som förhandsvisningsminiatyrbild för ZIP-filen i Content Hub.
 
 
