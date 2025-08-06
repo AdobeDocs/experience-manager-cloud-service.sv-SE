@@ -3,9 +3,9 @@ title: Dynamic Media med OpenAPI-funktioner - frågor och svar
 description: Dynamic Media med OpenAPI-funktioner - frågor och svar
 role: User
 exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
-source-git-commit: 4c346ea4bd3ddea7f5f9f14af56a0b3ec779f9f9
+source-git-commit: 57ffeca8fc6c1a9e0b04a40fe5ddd1bf0fff50d9
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ På samma sätt anger Experience Manager Assets statusen Avvisat i Assets-vyn me
 
 ## Hur kan du få användar- eller grupp-ID:n för Adobe IMS (Adobe Identity Management Services) att användas för att ange rollerna för resurser i Experience Manager Admin-vyn, för att säkra leverans- och sökupplevelsen? {#set-roles-secure-delivery-search}
 
-Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=sv-SE).
+Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=en).
 
 
 ## Kan du godkänna flera resurser samtidigt i en mapp? {#approve-multiple-assets-in-folder}
@@ -133,9 +133,9 @@ Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 
 ## Vissa modifierare är markerade som begränsad tillgänglighet. Hur kan jag börja använda dem? {#use-limited-availability-modifiers}
 
-Så här aktiverar du produktionsanvändning av modifierare i begränsad tillgänglighet för ditt konto:
+Så här aktiverar du produktionen av [modifierare i begränsad tillgänglighet](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/) för ditt konto:
 
-1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 1. Ange följande i Adobe Support-ärendet:
 
