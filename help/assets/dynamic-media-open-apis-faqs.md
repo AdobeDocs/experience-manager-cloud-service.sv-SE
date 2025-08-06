@@ -3,22 +3,21 @@ title: Dynamic Media med OpenAPI-funktioner - frågor och svar
 description: Dynamic Media med OpenAPI-funktioner - frågor och svar
 role: User
 exl-id: 3450e050-4b0b-4184-8e71-5e667d9ca721
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 4c346ea4bd3ddea7f5f9f14af56a0b3ec779f9f9
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
 
 # Dynamic Media med OpenAPI-funktioner - frågor och svar {#new-dynaminc-media-apis-frequently-asked-questions}
 
-+++**Är alla resurser i Experience Manager Assets as a Cloud Service-databasen tillgängliga för sökning och leverans med Dynamic Media med OpenAPI-funktioner?**
+## Finns alla resurser i Experience Manager Assets as a Cloud Service-databasen tillgängliga för sökning och leverans med Dynamic Media med OpenAPI-funktioner? {#assets-available-for-search}
 
 Nej, endast [godkända och senaste versionen av resurserna](/help/assets/approve-assets.md) är tillgängliga för sökning och leverans med Dynamic Media med OpenAPI-funktioner, vilket säkerställer att alla kanaler och program har ett enhetligt varumärke.
 
-+++
 
-+++**Hur kan administratörer markera nya och befintliga resurser som lagts till i en mapp som godkända?**
+## Hur kan administratörer markera nya och befintliga resurser som lagts till i en mapp som godkända? {#add-assets-to-folder-as-approved}
 
 Status för en resurs i Experience Manager Assets styrs av egenskapen `jcr:content/metadata/dam:status`. Den här egenskapens värden kan vara:
 
@@ -50,22 +49,19 @@ På samma sätt anger Experience Manager Assets statusen Avvisat i Assets-vyn me
 ![Avvisade resurser i Assets-vyn](/help/assets/assets/rejected-assets-admin-view.png)
 
 
-+++
+## Hur kan du få användar- eller grupp-ID:n för Adobe IMS (Adobe Identity Management Services) att användas för att ange rollerna för resurser i Experience Manager Admin-vyn, för att säkra leverans- och sökupplevelsen? {#set-roles-secure-delivery-search}
 
-+++**Hur kan du få användar- eller grupp-ID:t för Adobe IMS (Adobe Identity Management Services) att användas för att ställa in rollerna för resurser i Experience Manager Admin-vyn, för att säkra leverans- och sökupplevelsen?**
+Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=en).
 
-Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=sv-SE).
 
-+++
-
-+++**Kan du godkänna flera resurser samtidigt i en mapp?**
+## Kan du godkänna flera resurser samtidigt i en mapp? {#approve-multiple-assets-in-folder}
 
 Ja, du kan godkänna flera resurser i en mapp samtidigt.
 
 Utför följande steg för att godkänna flera resurser samtidigt i [!DNL Experience Manager Assets Admin view]:
 
 1. Markera resurserna och klicka på **[!UICONTROL Properties]**.
-1. Bläddra nedåt till **[!UICONTROL Review Status]** på fliken **[!UICONTROL Basic]**.
+1. Bläddra nedåt till **[!UICONTROL Basic]** på fliken **[!UICONTROL Review Status]**.
 1. Ändra granskningsstatusen till **[!UICONTROL Approved]**.
 1. Klicka på **[!UICONTROL Save & Close]**.
 
@@ -78,9 +74,7 @@ På samma sätt kan du godkänna flera resurser samtidigt i en mapp i Assets-vyn
 1. Klicka på **[!UICONTROL Save]**.
 
 
-+++
-
-+++**Hur skyddar jag leveransen av mediefiler och söker efter Dynamic Media OpenAPI:er?**
+## Hur säkrar jag materialleveransen och söker efter Dynamic Media OpenAPI:er? {#secure-asset-delivery}
 
 Med central resursstyrning i Experience Manager kan DAM-administratörer och varumärkesansvariga hantera åtkomst till resurser. De kan begränsa åtkomsten genom att konfigurera roller eller genom att ställa in aktiverings- och inaktiveringstid för godkända mediefiler på redigeringssidan, särskilt på AEM as a Cloud Service författarinstans.
 
@@ -88,21 +82,18 @@ Slutanvändare som söker efter eller använder leverans-URL:er kan få åtkomst
 
 Mer information finns i [Begränsa åtkomst till resurser i Experience Manager](restrict-assets-delivery.md#authoring).
 
-+++
 
-+++**Hur får du behörighet att redigera godkännandestatusen för en resurs?**
+## Hur får du behörighet att redigera godkännandestatusen för en resurs? {#permissions-edit-approval-status}
 
 Som DAM-användare kanske du inte har behörighet att [godkänna resurser](approve-assets.md#approve-assets). Om du vill ha behörighet att redigera godkännandestatusen för en resurs kan administratören redigera standardmetadataschemat eller något annat metadataschema som används i resursmappen och ge redigeringsbehörighet till fältet **[!UICONTROL Review Status]**. Mer information finns i [Så här inaktiverar du redigering för fältet Granskningsstatus](approve-assets.md#configuration).
 
-+++
 
-+++**Vilken filstorlek stöds för videoklipp?**
+## Vilken filstorlek stöds för videoklipp? {#supported-file-formats-videos}
 
 Dynamic Media med OpenAPI-funktioner har stöd för videor med lång form. Videorna har stöd för upp till 50 GB och 2 timmar.
 
-+++
 
-+++**Hur skiljer sig Dynamic Media med OpenAPI-funktioner från Dynamic Media?**
+## Hur skiljer sig Dynamic Media med OpenAPI-funktioner från Dynamic Media? {#dynamic-media-and-dynamic-media-with-openapi-differences}
 
 Dynamic Media med OpenAPI-funktioner och Dynamic Media representerar distinkta lösningar som alla har specialfunktioner för leverans. Det är av största vikt att du noggrant granskar dina specifika krav för att fastställa den lämpligaste lösningen som passar dina behov.
 
@@ -124,9 +115,8 @@ Nedan följer några av de viktigaste skillnaderna mellan Dynamic Media med Open
 | Dynamiska videokodar som säkerställer att bästa kodning hanteras baserat på indatavideon. Ingen inställning krävs för inbyggd videoleverans. | Standard 3 kodar oberoende av videoingång (kan påverka videoleveransprestanda). Du måste ställa in olika kodningar manuellt för olika videobithastigheter. |
 | Det är svårt att gissa vilken resurs-UID-baserade URL:er är (gör att URL-adresser kan döljas), men SEO-optimering används. | URL-döljning är bara tillgänglig för URL-frågeparametrar. Assets-id:n (resursnamn) i URL:er är identifierbara. |
 
-+++
 
-+++**Hur fungerar Dynamic Media med OpenAPI-funktioner för att åtgärda begränsningarna i funktionen för anslutna Assets?**
+## Hur tillgodoser Dynamic Media med OpenAPI-funktioner begränsningarna i funktionen Connected Assets? {#dynamic-media-openapi-addresses-connected-assets-limitations}
 
 Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 
@@ -141,4 +131,14 @@ Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 | Alla ändringar som görs i godkända resurser som är tillgängliga vid fjärdistributionen av DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i Sites-instansen inom ett kort TTL-värde på 10 minuter. | Resursuppdateringar för fjärrdistribution av DAM hanteras automatiskt via livscykelhändelser, men tar mycket mer tid jämfört med Dynamic Media med OpenAPI-funktioner. |
 | Resursmetadata på fjärr-DAM är även tillgängliga på AEM Sites-instanser. | Resursmetadata på fjärr-DAM är inte tillgängliga på AEM Sites-instansen. |
 
-+++
+## Vissa modifierare är markerade som begränsad tillgänglighet. Hur kan jag börja använda dem? {#use-limited-availability-modifiers}
+
+Så här aktiverar du produktionsanvändning av modifierare i begränsad tillgänglighet för ditt konto:
+
+1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+
+1. Ange följande i Adobe Support-ärendet:
+
+   * IMS-organisation
+
+   * Lista över modifierare som ska aktiveras
