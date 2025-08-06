@@ -51,7 +51,7 @@ På samma sätt anger Experience Manager Assets statusen Avvisat i Assets-vyn me
 
 ## Hur kan du få användar- eller grupp-ID:n för Adobe IMS (Adobe Identity Management Services) att användas för att ange rollerna för resurser i Experience Manager Admin-vyn, för att säkra leverans- och sökupplevelsen? {#set-roles-secure-delivery-search}
 
-Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=en).
+Användare som behöver åtkomst till Experience Manager Author-miljön hanteras som Adobe IMS-användare i Adobe Admin Console. Mer information om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console finns i [Adobe IMS-användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/adobe-ims-users.html?lang=sv-SE).
 
 
 ## Kan du godkänna flera resurser samtidigt i en mapp? {#approve-multiple-assets-in-folder}
@@ -135,7 +135,7 @@ Tabellen nedan visar de viktigaste skillnaderna mellan de två lösningarna:
 
 Så här aktiverar du produktionsanvändning av modifierare i begränsad tillgänglighet för ditt konto:
 
-1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+1. [Skapa ett Adobe-supportärende med Admin Console](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
 
 1. Ange följande i Adobe Support-ärendet:
 
