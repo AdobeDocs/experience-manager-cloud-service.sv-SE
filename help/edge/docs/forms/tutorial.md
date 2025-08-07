@@ -4,9 +4,9 @@ description: Den här självstudien hjälper dig att komma igång med ett nytt A
 feature: Edge Delivery Services
 exl-id: bb7e93ee-0575-44e1-9c5e-023284c19490
 role: Admin, Architect, Developer
-source-git-commit: b194a8fc4e7490cc322b0868a8348e80626df7eb
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
@@ -23,10 +23,10 @@ Den här AEM Forms-självstudiekursen guidar dig genom att skapa, förhandsgrans
 
 ## Förutsättningar
 
-* Du har ett GitHub-konto och förstår Git-grunderna.
-* Du har ett Google- eller Microsoft SharePoint-konto.
-* Du förstår grunderna i HTML, CSS och JavaScript.
-* Du har installerat Node/npm för lokal utveckling.
+- Du har ett GitHub-konto och förstår Git-grunderna.
+- Du har ett Google- eller Microsoft SharePoint-konto.
+- Du förstår grunderna i HTML, CSS och JavaScript.
+- Du har installerat Node/npm för lokal utveckling.
 
 **Upp med huvudet!** I den här självstudien används macOS, Chrome och Visual Studio Code. Stegen kan anpassas för andra inställningar, men skärmbilderna och specifika gränssnittselement kan skilja sig åt beroende på vilket operativsystem, vilken webbläsare och vilken kodredigerare du har valt.
 
@@ -63,9 +63,9 @@ Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som
 
    Grattis! Du har en ny webbplats som körs på `https://<branch>--<repo>--<owner>.aem.page/`.
 
-   * `<branch>` refererar till din GitHub-databas.
-   * `<repository>` betecknar din GitHub-databas.
-   * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
+   - `<branch>` refererar till din GitHub-databas.
+   - `<repository>` betecknar din GitHub-databas.
+   - `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
    Om filialnamnet till exempel är `main`, databasen är `wefinance` och ägaren är `wkndforms`, kommer webbplatsen att vara igång på `https://main--wefinance--wkndforms.aem.page`
 &lt;!—(https://main—weFinance—wkndform.aem.page)—>
@@ -173,9 +173,9 @@ Så här förhandsgranskar du opublicerat innehåll:
    https://<branch>--<repository>--<owner>.aem.live
    ```
 
-   * `<branch>` refererar till din GitHub-databas.
-   * `<repository>` betecknar din GitHub-databas.
-   * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
+   - `<branch>` refererar till din GitHub-databas.
+   - `<repository>` betecknar din GitHub-databas.
+   - `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
 
    URL för `https://<branch>--<repo>--<owner>.aem.page/enquiry`.
@@ -241,7 +241,7 @@ För att komma igång med en lokal utvecklingsmiljö från AEM på nolltid:
        npm install -g @adobe/aem-cli
    ```
 
-1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
+1. Klona ditt GitHub-projekt: Klona din projektdatabas från GitHub med följande kommando och ersätt <owner> med databasägaren och <repo> med databasnamnet:
 
    ```
    git clone https://github.com/<owner>/<repo>
@@ -281,9 +281,9 @@ Integrera:
 
 1. Kopiera och klistra in följande mappar och filer från [AEM Forms-originalet](https://github.com/adobe-rnd/aem-boilerplate-forms) i ditt AEM-projekt:
 
-   * Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
-   * filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
-   * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
+   - Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
+   - filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
+   - [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
 1. Navigera till filen `/scripts/editor-support.js` i ditt AEM-projekt och uppdatera den med filen [editor-support.js i AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js)
 1. Navigera till `/models/_section.json` i ditt AEM-projekt och lägg till&quot;form&quot; och&quot;embed-adaptive-form&quot; i komponentarrayen för objektet `filters`:
 
@@ -363,13 +363,9 @@ Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM-projekt. Du kan börja s
 
 Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella problem:
 
-* **Resolve Module Path-fel:**
+- **Resolve Module Path-fel:**
 Om du får felmeddelandet&quot;Det går inte att lösa sökvägen till modulen &quot;&#39;/scripts/lib-franklin.js&#39;&quot; går du till filen [EDS Project]/blocks/forms/form.js. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
 
-* **Hantera lintingfel:**
+- **Hantera lintingfel:**
 Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projektfilen]/package.json och ändra lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera ändringarna i GitHub-projektet.
 
-
-## Se även
-
-{{see-more-forms-eds}}

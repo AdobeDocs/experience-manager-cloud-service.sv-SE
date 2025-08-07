@@ -1,10 +1,10 @@
 ---
 title: Använd regler för att lägga till dynamiskt beteende i ett formulär
-description: Edge Delivery Services för AEM Forms har utformats för bästa prestanda, vilket gör att ni kan förutse framtiden för smidig datainsamling och användarengagemang. Använd regler för att lägga till dynamiskt beteende i formulären.
+description: Edge Delivery Services för AEM Forms har tagits fram för bästa prestanda, vilket ger er möjlighet att förutse framtiden för smidig datainsamling och användarengagemang. Använd regler för att lägga till dynamiskt beteende i formulären.
 feature: Edge Delivery Services
 exl-id: 58042016-e655-446f-a2bf-83f1811525e3
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
 source-wordcount: '2218'
 ht-degree: 0%
@@ -21,16 +21,16 @@ I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva for
 
 Regler är som instruktioner som talar om för oss vad vi ska göra i olika situationer. En regel har vanligtvis följande konstruktion:
 
-* Villkor: Dessa anger under vilka omständigheter regeln gäller. Se dem som en fråga som behöver besvaras (ja eller nej).
+- Villkor: Dessa anger under vilka omständigheter regeln gäller. Se dem som en fråga som behöver besvaras (ja eller nej).
 
-* Åtgärder: Dessa definierar vad som händer när villkoret är uppfyllt (true) eller inte är uppfyllt (false).
+- Åtgärder: Dessa definierar vad som händer när villkoret är uppfyllt (true) eller inte är uppfyllt (false).
 
 
 Om du till exempel vill visa en e-postruta när en kryssruta är markerad:
 
-* Villkor: &quot;Tycker du om att prenumerera på tidskrifter och aktiviteter?&quot; är markerad. (Ja eller nej?). Det här villkoret anges i formulärets `Visible`-egenskap.
-* Åtgärd (True): E-postrutan visas. (Vad händer om ja). `Visibility Expression` använder villkoret som definierats för egenskapen `visible` för att dynamiskt visa fält.
-* Åtgärd (Falskt): E-postrutan är dold. (Vad händer om nej). `Visibility Expression` använder villkoret som definierats för `Value` för att dynamiskt dölja fält.
+- Villkor: &quot;Tycker du om att prenumerera på tidskrifter och aktiviteter?&quot; är markerad. (Ja eller nej?). Det här villkoret anges i formulärets `Visible`-egenskap.
+- Åtgärd (True): E-postrutan visas. (Vad händer om ja). `Visibility Expression` använder villkoret som definierats för egenskapen `visible` för att dynamiskt visa fält.
+- Åtgärd (Falskt): E-postrutan är dold. (Vad händer om nej). `Visibility Expression` använder villkoret som definierats för `Value` för att dynamiskt dölja fält.
 
 Detaljerade steg-för-steg-instruktioner finns i [fältet för att visa/dölja e-post baserat på ett villkor](#example-1-conditional-email-field)
 
@@ -41,8 +41,8 @@ Detaljerade steg-för-steg-instruktioner finns i [fältet för att visa/dölja e
 
 Tänk dig en ljusbrytare för formulärfältet. Egenskapen `Visible` är som den växeln och styr om fältet är synligt från början i formuläret när det läses in första gången.
 
-* Sant (som ljusväxeln är på): Fältet visas i formuläret.
-* Falskt (som om ljusbrytaren är av): Fältet är dolt i formuläret.
+- Sant (som ljusväxeln är på): Fältet visas i formuläret.
+- Falskt (som om ljusbrytaren är av): Fältet är dolt i formuläret.
 
 Du kan använda SpreadSheet-formeln (inklusive taggen =) för att skriva en formel med hjälp av kalkylbladsliknande logik för att bestämma fältets synlighet. Du kan använda värden från andra fält i formuläret i den här formeln. Om en användare t.ex. väljer &quot;Individuell&quot; i ett registreringstypfält kan du dölja e-postfältet med en formel som kontrollerar det värdet.
 
@@ -73,10 +73,10 @@ Använd `=FORMULATEXT("Address of the corresponding Value property)` för att h�
 
 Här är en analogi för att stärka dessa koncept:
 
-* Synlig: Föreställ dig ett formulär som ett hus. Egenskapen&quot;Synlig&quot; fungerar som ljusbrytaren för varje rum (fält). Du bestämmer om rummet är belyst (synligt) eller mörkt (dolt) när någon kommer in i huset (öppnar formuläret).
-* Synligt uttryck: Detta är som en omkopplare för rörelsesensorljus. Rummet (fältet) kan till en början vara mörkt (dolt), men en formel (rörelsesensor) kan aktivera det (visa fältet) om någon går förbi (ändrar värdet i ett annat fält).
-* Värde: Detta är som en förinställd nedtoningsbrytare för ljuset (ursprungliga data i fältet). Användarna kan sedan justera intensiteten (ändra värdet).
-* Värdeuttryck: Det här är som en avancerad räknare inbyggd i priskoden för en produkt i huset (form). Pristaggen (fältet) visar det slutliga priset baserat på en formel (till exempel tillägg av moms till baspriset) som använder annan information som baspriset (värde från ett annat fält).
+- Synlig: Föreställ dig ett formulär som ett hus. Egenskapen&quot;Synlig&quot; fungerar som ljusbrytaren för varje rum (fält). Du bestämmer om rummet är belyst (synligt) eller mörkt (dolt) när någon kommer in i huset (öppnar formuläret).
+- Synligt uttryck: Detta är som en omkopplare för rörelsesensorljus. Rummet (fältet) kan till en början vara mörkt (dolt), men en formel (rörelsesensor) kan aktivera det (visa fältet) om någon går förbi (ändrar värdet i ett annat fält).
+- Värde: Detta är som en förinställd nedtoningsbrytare för ljuset (ursprungliga data i fältet). Användarna kan sedan justera intensiteten (ändra värdet).
+- Värdeuttryck: Det här är som en avancerad räknare inbyggd i priskoden för en produkt i huset (form). Pristaggen (fältet) visar det slutliga priset baserat på en formel (till exempel tillägg av moms till baspriset) som använder annan information som baspriset (värde från ett annat fält).
 
 Genom att kombinera dessa egenskaper med [kalkylbladsfunktioner](#spreadsheet-functions-for-rules) kan du få ett brett urval av dynamiska beteenden i dina formulär.
 
@@ -86,19 +86,19 @@ Adaptiv Forms Block har stöd för en mängd kalkylbladsfunktioner som kan anvä
 
 ### Logiska funktioner
 
-* [NOT()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#__RefHeading__1018452_715980110): Inverterar det logiska läget (TRUE blir FALSE och vice versa).
-* [AND()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#AND): Returnerar endast TRUE om alla angivna villkor är TRUE.
-* [OR()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#OR): Returnerar TRUE om minst ett av de angivna villkoren är TRUE.
+- [NOT()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#__RefHeading__1018452_715980110): Inverterar det logiska läget (TRUE blir FALSE och vice versa).
+- [AND()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#AND): Returnerar endast TRUE om alla angivna villkor är TRUE.
+- [OR()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#OR): Returnerar TRUE om minst ett av de angivna villkoren är TRUE.
 
 ### Villkorliga funktioner
 
-* [IF()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#__RefHeading__1018446_715980110): Utvärderar ett villkor och returnerar ett specifikt värde om värdet är TRUE och ett annat värde om värdet är FALSE.
+- [IF()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#__RefHeading__1018446_715980110): Utvärderar ett villkor och returnerar ett specifikt värde om värdet är TRUE och ett annat värde om värdet är FALSE.
 
 ### Matematiska funktioner
 
-* [SUM()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#SUM): Lägger till värden från ett angivet cellintervall.
-* [ROUND()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#ROUND): Avrundar ett tal till ett angivet antal decimaler.
-* [MIN()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#MIN): Returnerar det minsta värdet från ett angivet cellintervall.
+- [SUM()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#SUM): Lägger till värden från ett angivet cellintervall.
+- [ROUND()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#ROUND): Avrundar ett tal till ett angivet antal decimaler.
+- [MIN()](https://docs.oasis-open.org/office/v1.2/os/OpenDocument-v1.2-os-part2.html#MIN): Returnerar det minsta värdet från ett angivet cellintervall.
 
 ## Skapa en regel
 
@@ -156,7 +156,7 @@ Här är några exempel på vanliga tabellfunktioner:
 
 **Logiska funktioner:**
 
-* **NOT():** Inverterar det logiska läget (TRUE blir FALSE och vice versa).
+- **NOT():** Inverterar det logiska läget (TRUE blir FALSE och vice versa).
 
   Exempel: Dölja fältet Bekräfta e-post om e-postfältet lämnas tomt.
 
@@ -170,9 +170,9 @@ Här är några exempel på vanliga tabellfunktioner:
       ![AEM Forms visible-uttrycksformel](/help/edge/assets/aem-forms-visible-expression-formula-text.png)
 
 
-* AND(): Returnerar endast TRUE om alla angivna villkor är TRUE.
+- AND(): Returnerar endast TRUE om alla angivna villkor är TRUE.
 
-   * Exempel: Aktivera bara knappen &quot;skicka&quot; om alla obligatoriska fält är ifyllda.
+   - Exempel: Aktivera bara knappen &quot;skicka&quot; om alla obligatoriska fält är ifyllda.
 
    1. Ställ in egenskapen `Visible` för skicka-knappen till:
 
@@ -202,9 +202,9 @@ Här är några exempel på vanliga tabellfunktioner:
 
       I den här formeln visas bara knappen &quot;skicka&quot; (TRUE) om alla fält (namn, e-post, telefon) är ifyllda (NOT()) returnerar TRUE för varje fält), annars döljs knappen (AND(flera FALSES) = FALSE).
 
-* OR(): Returnerar TRUE om minst ett av de angivna villkoren är TRUE.
+- OR(): Returnerar TRUE om minst ett av de angivna villkoren är TRUE.
 
-   * Exempel: Använder en rabatt om en användare anger någon av de tillämpliga rabattkupongkoderna.
+   - Exempel: Använder en rabatt om en användare anger någon av de tillämpliga rabattkupongkoderna.
 
    1. Ställ in egenskapen `Visible` för fältet&quot;final amount&quot; på:
 
@@ -229,9 +229,9 @@ Här är några exempel på vanliga tabellfunktioner:
 
 **Textfunktioner:**
 
-* IF(): Utvärderar ett villkor och returnerar ett specifikt värde om värdet är TRUE och ett annat värde om värdet är FALSE.
+- IF(): Utvärderar ett villkor och returnerar ett specifikt värde om värdet är TRUE och ett annat värde om värdet är FALSE.
 
-   * Exempel: Visa ett anpassat meddelande baserat på en vald produktkategori.
+   - Exempel: Visa ett anpassat meddelande baserat på en vald produktkategori.
 
    1. Ange egenskapen `Value` för fältet `message` till `Only upto 7 kg check-in lagguage is allowed!`:
 
@@ -264,7 +264,7 @@ Här är några exempel på vanliga tabellfunktioner:
 
 **Matematiska funktioner:**
 
-* SUM(): Lägger till värden från ett angivet cellintervall.
+- SUM(): Lägger till värden från ett angivet cellintervall.
 
   Exempel: Beräkna den totala kostnaden för artiklar i en kundvagn.
 
@@ -273,7 +273,7 @@ SUM (pris * kvantitet)
 
   Formeln förutsätter att du har separata fält för&quot;pris&quot; och&quot;kvantitet&quot; för varje artikel. De multipliceras och SUM() används för att addera den totala kostnaden för alla artiklar i kundvagnen.
 
-* ROUND(): Avrundar ett tal till ett angivet antal decimaler.
+- ROUND(): Avrundar ett tal till ett angivet antal decimaler.
 
   Exempel: Avrundar ett beräknat rabattbelopp till två decimaler.
 
@@ -282,7 +282,7 @@ ROUND(rabatt, 2)
 
   Den här formeln avrundar rabattvärdet till två decimaler.
 
-* MIN(): Returnerar det minsta värdet från ett angivet cellintervall.
+- MIN(): Returnerar det minsta värdet från ett angivet cellintervall.
 
   Exempel: Söker efter den lägsta ålder som krävs för ett registreringsformulär baserat på ett valt land.
 
@@ -304,9 +304,9 @@ Det anpassningsbara Forms-blocket som finns i körklart läge (OTB) innehåller 
 
 Anpassade funktioner finns i filen `[Adaptive form block]/functions.js`. Att skapa innefattar i allmänhet följande steg:
 
-* Funktionsdeklaration: Definiera funktionsnamnet och dess parametrar (de indata som accepteras).
-* Logikimplementering: Skriv koden som anger de specifika beräkningar eller ändringar som utförs av funktionen.
-* Funktionsexport: Gör funktionen tillgänglig i reglerna genom att exportera den från den relevanta filen.
+- Funktionsdeklaration: Definiera funktionsnamnet och dess parametrar (de indata som accepteras).
+- Logikimplementering: Skriv koden som anger de specifika beräkningar eller ändringar som utförs av funktionen.
+- Funktionsexport: Gör funktionen tillgänglig i reglerna genom att exportera den från den relevanta filen.
 
 ### Exempel: Årsfunktion
 
@@ -315,9 +315,9 @@ I det här exemplet visas två anpassade funktioner som efterliknar funktionen Y
 
 ```JavaScript
 /**
- * Get the current date and time
- * @name now
- * @returns {Date} The current date and time as a Date object
+ - Get the current date and time
+ - @name now
+ - @returns {Date} The current date and time as a Date object
  */
 function now() {
   const today = new Date();
@@ -325,11 +325,11 @@ function now() {
 }
 
 /**
- * Get the year from a Date object
- * @name year
- * @param {Date} date The date object
- * @throws {TypeError} If the input is not a Date object
- * @returns {number} The year as a number
+ - Get the year from a Date object
+ - @name year
+ - @param {Date} date The date object
+ - @throws {TypeError} If the input is not a Date object
+ - @returns {number} The year as a number
  */
 function year(date) {
   let inputDate = new Date(date)

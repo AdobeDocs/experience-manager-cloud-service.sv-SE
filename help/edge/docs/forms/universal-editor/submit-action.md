@@ -6,9 +6,9 @@ role: Admin, Architect, Developer
 exl-id: beee9be7-8215-496b-9fb9-61fba000a055
 hide: true
 hidefromToC: true
-source-git-commit: 565336d96a718a46f23d0acfa6155a6fd78ad87d
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -23,20 +23,20 @@ Inlämning av blanketter är det avgörande steget i användarens resa - där in
 
 I slutet av det här dokumentet kommer du att förstå hur du:
 
-* Konfigurera olika typer av skicka-åtgärder för formulären
-* Ställ in REST-slutpunktsöverföringar för integrering med externa system
-* Konfigurera e-postöverföringar för formulärsvar
-* Implementera anpassade skicka-åtgärder för specifika affärsbehov
-* Hantera formulärvalidering och felscenarier vid inlämning
+- Konfigurera olika typer av skicka-åtgärder för formulären
+- Ställ in REST-slutpunktsöverföringar för integrering med externa system
+- Konfigurera e-postöverföringar för formulärsvar
+- Implementera anpassade skicka-åtgärder för specifika affärsbehov
+- Hantera formulärvalidering och felscenarier vid inlämning
 
 ### Målgrupp
 
 Den här guiden är utformad för:
 
-* **Formulärutvecklare** som implementerar inskickningslogik
-* **Systemintegratörer** ansluter formulär till backend-system
-* **Affärsanalytiker** definierar formulärarbetsflöden
-* **Teknikarkitekter** formger formuläröverföringsprocesser
+- **Formulärutvecklare** som implementerar inskickningslogik
+- **Systemintegratörer** ansluter formulär till backend-system
+- **Affärsanalytiker** definierar formulärarbetsflöden
+- **Teknikarkitekter** formger formuläröverföringsprocesser
 
 ### Tillgängliga överföringsåtgärder
 
@@ -49,16 +49,16 @@ Universal Editor har två primära åtgärdstyper:
 
 Innan du konfigurerar skicka-åtgärder måste du se till att:
 
-* Åtkomst till Universal Editor
-* Rätt behörigheter för formulärkonfiguration
-* Förstå målets slutpunkt eller e-postkonfiguration
+- Åtkomst till Universal Editor
+- Rätt behörigheter för formulärkonfiguration
+- Förstå målets slutpunkt eller e-postkonfiguration
 
 En Skicka-åtgärd anger målet för de data som samlas in via ett anpassat formulär. Överföringsprocessen börjar när användaren klickar på knappen **[!UICONTROL Submit]** i formuläret. AEM Forms erbjuder två typer av skicka-åtgärder som beskrivs nedan och gör att du kan skapa och använda anpassade skicka-åtgärder som uppfyller dina specifika behov. De färdiga Skicka-åtgärderna är:
 
 <!--To define a Submit Action for an Adaptive Form, you use the Properties dialog of the **Adaptive Form block** in the **Editor**-->
 
-* [Skicka till REST-slutpunkt](#rest-endpoint-submission-ue)
-* [Skicka e-post](#email-submission-ue)
+- [Skicka till REST-slutpunkt](#rest-endpoint-submission-ue)
+- [Skicka e-post](#email-submission-ue)
 
 
 ### Skicka till REST-slutpunkt {#rest-endpoint-submission-ue}
@@ -66,9 +66,9 @@ En Skicka-åtgärd anger målet för de data som samlas in via ett anpassat form
 Åtgärden Skicka till REST-slutpunkt används för att skicka skickade formulärdata till en angiven REST-slutpunkt. Slutpunkten kan tillhöra antingen en intern server där formuläret finns eller en extern server genom att använda en relativ sökväg eller en absolut sökväg. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
 <!--Configuring the Submit Action to REST Endpoint for Adaptive Forms offers several benefits such as:  
-* It facilitates seamless integration of form data with external systems and services via RESTful APIs.  
-* Offers flexibility in managing data submissions from Adaptive Forms, accommodating dynamic and complex data structures.  
-* Allows dynamic mapping of form fields to parameters within the REST endpoint URL, enabling adaptable and customizable data submissions.
+- It facilitates seamless integration of form data with external systems and services via RESTful APIs.  
+- Offers flexibility in managing data submissions from Adaptive Forms, accommodating dynamic and complex data structures.  
+- Allows dynamic mapping of form fields to parameters within the REST endpoint URL, enabling adaptable and customizable data submissions.
 -->
 
 
@@ -86,8 +86,8 @@ Så här konfigurerar du en REST-slutpunkt:
 
 >[!NOTE]
 >
-> * Ange sökvägen till resursen om du vill skicka data till en intern server. Data bokförs på resursens sökväg. Exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
-> * Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POST-begäran anonymt.
+> - Ange sökvägen till resursen om du vill skicka data till en intern server. Data bokförs på resursens sökväg. Exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
+> - Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POST-begäran anonymt.
 
 ### Skicka e-post {#email-submission-ue}
 
@@ -176,11 +176,8 @@ Med alternativet Vid sändning kan du konfigurera ett Skicka-åtgärdsmeddelande
 1. Välj din **[!UICONTROL Adaptive Form Block]**.
 1. Klicka på egenskapsikonen ![properties](/help/forms/assets/Smock_Properties_18_N.svg) .
 1. När du klickar visas följande alternativ:
-   * **[!UICONTROL On Submit]**: Vid sändning kan du anpassa ett meddelande som ska visas när ett formulär skickas. Som standard visas ett anpassat meddelande&quot;Tack för att du skickat in formuläret&quot; för användaren när ett formulär har skickats.
+   - **[!UICONTROL On Submit]**: Vid sändning kan du anpassa ett meddelande som ska visas när ett formulär skickas. Som standard visas ett anpassat meddelande&quot;Tack för att du skickat in formuläret&quot; för användaren när ett formulär har skickats.
 Du kan också anpassa tackmeddelandet när du skickar in formulär genom att välja alternativet **[!UICONTROL Show message]** och lägga till/redigera meddelandet i **RTF-redigeraren**.
 
 
-## Se även
-
-{{universal-editor-see-also}}
 

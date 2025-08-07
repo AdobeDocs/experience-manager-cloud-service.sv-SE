@@ -4,7 +4,7 @@ description: Lär dig att skapa upprepningsbara avsnitt eller fält i en adaptiv
 role: Architect, Developer, Admin, User
 feature: Adaptive Forms, Core Components
 exl-id: 02521bf3-83c1-40a0-8fe6-23af240727e9
-source-git-commit: fecbebde808c545a84889da5610a79c088f2f459
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
 source-wordcount: '1258'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-forms-repeatable-sections.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-forms-repeatable-sections.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Ett upprepningsbart avsnitt avser en del av ett formulär som kan dupliceras eller upprepas flera gånger för att samla in information för flera instanser av samma data.
@@ -31,10 +31,10 @@ I slutet av den här artikeln lär du dig att:
 * Ange minsta eller högsta antal upprepningar för en adaptiv formulärkomponent
 * Använd regelredigeraren för att konfigurera åtgärder för tillägg eller borttagning för repeterbara avsnitt
 
-Du kan använda komponenterna [Panel](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel), [dragspelspanel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html?lang=sv-SE), [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html?lang=sv-SE), [Lodräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) eller [Wizard](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html?lang=sv-SE) för att göra avsnitt i ett adaptivt formulär repeterbara. Du kan lägga till underordnade komponenter i dessa komponenter för att skapa upprepningsbara avsnitt i ett formulär.
+Du kan använda komponenterna [Panel](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel), [dragspelspanel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html), [Lodräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) eller [Wizard](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html) för att göra avsnitt i ett adaptivt formulär repeterbara. Du kan lägga till underordnade komponenter i dessa komponenter för att skapa upprepningsbara avsnitt i ett formulär.
 
 
-Exemplen i det här dokumentet är baserade på komponenten [Panel](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel). Du kan utföra identiska steg för att göra komponenterna [Panel](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel), [Accordion](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html?lang=sv-SE), [Horizontal Tabs](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html?lang=sv-SE), [Vertical Tabs](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) eller [Wizard](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html?lang=sv-SE) repeterbara.
+Exemplen i det här dokumentet är baserade på komponenten [Panel](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel). Du kan utföra identiska steg för att göra komponenterna [Panel](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel), [Accordion](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [Horizontal Tabs](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html), [Vertical Tabs](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) eller [Wizard](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html) repeterbara.
 
 ## Lägga till eller ta bort repeterbara avsnitt i ett formulär {#add-or-delete-repeatable-section-in-panel-container}
 
@@ -49,6 +49,7 @@ Om du vill upprepa en panel i formuläret eller ta bort repeterbara paneler anv�
 ![Fliken Tillgänglighet](/help/forms/assets/repeat-panel.png)
 
 Så här gör du en panel upprepningsbar:
+
 1. Välj en panelbehållare och välj ![cmpr](/help/forms/assets/cmppr.png).
 1. Klicka på **upprepade panelen** och växla till **gör panelen upprepningsbar**.
 1. Ange **minsta repetitioner** som krävs för minst repeterbara avsnitt. Du kan ställa in **minsta repetitioner** på noll om panelerna inte ska kopieras eller om de upprepade panelerna ska tas bort. Som standard är värdet för minsta repetition noll.
@@ -135,30 +136,9 @@ Panelens överordnade panel bör innehålla en borttagningsknapp för att ta bor
 >
 >
 
-<!-- 
->For more information, see: Class: InstanceManager#instances in [AEM Forms Java API reference](https://adobe.com/go/learn_aemforms_documentation_63).      
--->
-
 >[!NOTE]
 >
-> När alla instanser av en panel tas bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda API:t addInstance för instanshanteraren för att lägga till den borttagna instansen. Till exempel _panelName.addInstance(). En instans av den borttagna panelen läggs till.
-
-<!--
-![panel-repeatability-video](/help/adaptive-forms/assets/panel-repeatability-video.mp4)
--->
-
-<!--
-
-## Using the accordion layout for the parent panel &nbsp; {#using-the-accordion-layout-for-the-parent-panel-nbsp}
-
-A panel has various layouts options. The Layout for accordian design option has out of the box support for repeatable panels. Perform the following steps to repeatable panel with Layout for accordian design option:
-
-1. On the parent of panel to be repeated, select ![cmppr](assets/cmppr.png). You can see the properties in the sidebar. In the **Layout** drop-down, select **Accordion**.
-1. On a panel, which is to be repeated, select ![cmppr](assets/cmppr.png). You can see the panel properties in the sidebar. Enable the **Make Panel Repeatable** tab, and specify value for the **Maximum** and **Minimum** fields.
-
-   Now, you can use the plus (+) and delete ( ![delete-panel](assets/delete-panel.png)) buttons to add and remove the panels.
-
--->
+> När alla instanser av en panel tas bort från ett adaptivt formulär kan du lägga till en instans av den borttagna panelen med syntaxen _panelName för att fånga instanshanteraren på panelen och använda API:t addInstance för instanshanteraren för att lägga till den borttagna instansen. Till exempel &#39;_panelName.addInstance()&#39;. En instans av den borttagna panelen läggs till.
 
 ## Använda upprepade delformulär från formulärmallen (XDP/XSD) {#using-repeating-subforms-from-form-template-xdp-xsd}
 
@@ -173,7 +153,7 @@ Upprepningsbart delformulär liknar de repeterbara panelerna i Adaptiv Forms. G�
 1. Om du vill ange maximalt antal upprepningar av delformulär väljer du Max och skriver ett tal i den tillhörande rutan. Om du inte anger något värde i rutan Max är antalet delformulärrepetitioner obegränsat.
 1. Om du vill ange ett visst antal upprepningar av delformulär, oavsett datamängd, väljer du Antal initialer och skriver ett tal i den tillhörande rutan. Om du väljer det här alternativet och antingen inga data är tillgängliga eller det finns färre data än det angivna värdet för antal initialer, placeras tomma instanser av delformuläret fortfarande i formuläret.
 1. Lägg till två knappar i det överordnade delformuläret - en för att lägga till en instans och en för att ta bort en instans av det repeterbara delformuläret. Mer information finns i [Skapa en åtgärd](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c74572b5612a87ca2b56-8000.2.html#WS107c29ade9134a2c-1f74d86012a87d4fe55-8000.2).
-1. Länka formulärmallen till det anpassade formuläret. Mer information finns i [Skapa ett anpassat formulär baserat på en mall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-adaptive-form.html?lang=sv-SE#create-an-adaptive-form-based-on-an-xfa-form-template).
+1. Länka formulärmallen till det anpassade formuläret. Mer information finns i [Skapa ett anpassat formulär baserat på en mall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-adaptive-form.html?lang=en#create-an-adaptive-form-based-on-an-xfa-form-template).
 1. Använd knapparna i steg 9 för att lägga till och ta bort delformulär.
 
 Den bifogade ZIP-filen innehåller ett exempel på upprepningsbart delformulär.
@@ -182,7 +162,7 @@ Den bifogade ZIP-filen innehåller ett exempel på upprepningsbart delformulär.
 
 ## Använda upprepade inställningar för ett XML-schema (XSD) {#using-repeat-settings-of-an-xml-schema-xsd-br}
 
-Du kan skapa upprepningsbara paneler från ett XML-schema och från egenskapen minOcCours &amp; maxOccurs för alla komplexa tytelement. Mer information om XML-schema finns i [Skapa adaptiva formulär med XML-schema som formulärmodell](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-xml-schema-form-model.html?lang=sv-SE).
+Du kan skapa upprepningsbara paneler från ett XML-schema och från egenskapen minOcCours &amp; maxOccurs för alla komplexa tytelement. Mer information om XML-schema finns i [Skapa adaptiva formulär med XML-schema som formulärmodell](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-xml-schema-form-model.html).
 
 I följande kod använder panelen `SampleType`egenskapen minOcCours &amp; maxOccurs.
 

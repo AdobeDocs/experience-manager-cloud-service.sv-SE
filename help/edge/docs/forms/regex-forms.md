@@ -1,14 +1,14 @@
 ---
-title: Edge Delivery Services för ofta använda regex-uttryck i AEM Forms för validering av formulärfält
-description: Edge Delivery Services för ofta använda regex-uttryck i AEM Forms för validering av formulärfält
+title: Vanliga regex-uttryck för validering av formulärfält i Edge Delivery Services for AEM Forms
+description: Vanliga regex-uttryck för validering av formulärfält i Edge Delivery Services for AEM Forms
 feature: Edge Delivery Services
 role: User
 hide: true
 hidefromtoc: true
 exl-id: 5cfe23bb-155f-4639-b7b7-5edc172ba92a
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,10 @@ Här är några reguljära uttryck som du kan använda för att förbättra form
 
 Ser till minst 8 tecken med:
 
-* Gemener (a-z)
-* Versaler (A-Z)
-* Siffra (0-9)
-* Specialtecken (@$)%*?&amp;)
+- Gemener (a-z)
+- Versaler (A-Z)
+- Siffra (0-9)
+- Specialtecken (@$)%*?&amp;)
 
 
 ## E-postadress
@@ -70,7 +70,7 @@ Garanterar en giltig URL som börjar med http eller https.
 Validerar i formatet ÅÅÅ-MM-DD.
 
 
-## Tid (TT:MM)
+## Tid (HH:MM)
 
 ```regex
 ^([01][0-9]|2[0-3]):[0-5][0-9]$

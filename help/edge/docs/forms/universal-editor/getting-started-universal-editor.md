@@ -1,381 +1,784 @@
 ---
-title: Komma igång med Edge Delivery Services för AEM Forms i Universal Editor - självstudiekurs för utvecklare
-description: Den här självstudien hjälper dig att komma igång med ett nytt Adobe Experience Manager Forms-projekt (AEM). Om tio till tjugo minuter har du skapat en egen Edge Delivery Services Forms i Universal Editor.
+title: Komma igång med Edge Delivery Services för AEM Forms med Universal Editor
+description: Lär dig hur du skapar och publicerar högpresterande formulär med hjälp av den universella redigerarens WYSIWYG-redigering.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
+level: Intermediate
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 0e7375adb146c370a189127838d736290d1860ad
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '2116'
 ht-degree: 0%
 
 ---
 
 
-# Komma igång med Edge Delivery Services för AEM Forms med Universal Editor (WYSIWYG)
+# Komma igång med Edge Delivery Services för AEM Forms med Universal Editor
 
-| Version | Artikellänk |
-| -------- | ---------------------------- |
-| Universell redigeringsbaserad redigering | Den här artikeln |
-| Dokumentbaserad redigering | [Klicka här](/help/edge/docs/forms/tutorial.md) |
+| Redigeringsmetod | Guide |
+|---------------------------------|-----------------------------------------------------------------------|
+| **Universell redigerare (WYSIWYG)** | Den här artikeln |
+| **Dokumentbaserad redigering** | [Dokumentbaserad självstudiekurs](/help/edge/docs/forms/tutorial.md) |
 
+Edge Delivery Services for AEM Forms kombinerar högpresterande webbpublicering med WYSIWYG i Universal Editor. Den här guiden beskriver hur du skapar, anpassar och publicerar snabbt inlästa formulär.
 
-<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn. Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+## Vad du kommer att göra
 
-I dagens digitala ålder är användarvänliga formulär oumbärliga för alla organisationer. Edge Delivery Services Forms skapas med Universal Editor, som har WYSIWYG-funktioner (what-you-see-is-what-you-get). Det har ett modernt, intuitivt gränssnitt för effektiv formulärutveckling.
+I slutet av kursen kommer du att:
 
-AEM Forms har ett block, Adaptive Forms Block, som gör det enkelt att skapa Edge Delivery Services Forms för datainhämtning och lagring. Du kan [skapa ett nytt AEM-projekt förkonfigurerat med det adaptiva Forms-blocket](#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [lägga till det adaptiva Forms-blocket i ett befintligt AEM-projekt](#add-adaptive-forms-block-to-your-existing-aem-project).
+- Konfigurera en GitHub-databas med det adaptiva Forms-blocket
+- Skapa en AEM Site som är integrerad med Edge Delivery Services
+- Bygg och publicera blanketter med Universal Editor
+- Konfigurera lokal utvecklingsmiljö
 
-![Github-databasarbetsflöde](/help/edge/assets/repo-workflow.png){width=auto}
+## Välj din sökväg
 
-Den här självstudiekursen vägleder dig genom att skapa, förhandsgranska och publicera ditt eget formulär med ett nytt eller befintligt Adobe Experience Manager Site-projekt med hjälp av Universal Editors WYSIWYG-redigering.
+Välj den metod som matchar ditt scenario:
+
+![Välj vägbeslutsguide](/help/edge/docs/forms/universal-editor/assets/choose-your-path.svg)
+*Figur: Visuell guide som hjälper dig att välja rätt implementeringsväg*
+
+| **Sökväg A: Nytt projekt** | **Sökväg B: Befintligt projekt** |
+|----------------------------------------|-------------------------------------------|
+| Börja med en förkonfigurerad mall | Lägg till formulär i ditt aktuella AEM-projekt |
+| **Bäst för:** Nya implementeringar | **Bäst för:** Befintlig AEM Sites |
+| **Vad du får:** Förkonfigurerat Forms-block | **Vad du får:** Forms har lagts till på en befintlig webbplats |
+| **Steg:** Mall → Konfigurera → Forms | **Steg:** Integration → Konfiguration → Forms |
+| [Börja med sökväg A](#path-a-create-new-project-with-forms) | [Börja med sökväg B](#path-b-add-forms-to-existing-project) |
 
 ## Förutsättningar
 
-* Du har ett GitHub-konto och förstår Git-grunderna.
-* Du förstår grunderna i HTML, CSS och JavaScript.
-* Du har installerat Node/npm för lokal utveckling.
+Innan du börjar bör du kontrollera att du har följande:
 
-## Skapa ett nytt AEM-projekt förkonfigurerat med Adaptive Forms Block
+### Nödvändig åtkomst
 
-Med AEM Forms-mallen Boilerplate kommer du snabbt igång med ett AEM-projekt som är förkonfigurerat med Adaptive Forms Block. Det är det snabbaste och enklaste sättet att följa AEM bästa praxis och börja skapa formulär.
+- **GitHub-konto** med behörighet att skapa databaser
+- **Redigeringsåtkomst för AEM as a Cloud Service**
 
-### Kom igång med AEM Forms mall för standarddatabas
+### Tekniska krav
 
-1. Skapa en GitHub-databas för ditt AEM-projekt. Så här skapar du databas:
-   1. Gå till [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms).
+- **Git-grunder**: klona, genomföra, push-åtgärder
+- **Webbtekniker**: Grundläggande om HTML, CSS, JavaScript
+- **Node.js** (version 16+ rekommenderas) för lokal utveckling
+- Pakethanteraren **npm** eller **garn**
 
-      ![AEM Forms-mallsida](/help/edge/docs/forms/assets/eds-form-boilerplate.png)
-   1. Klicka på alternativet **Använd den här mallen** och välj alternativet **Skapa en ny databas**.
+### Rekommenderad kunskap
 
-      ![Skapa en ny databas med AEM Forms-standardmallen](/help/edge/docs/forms/assets/use-eds-form-template.png)
+- Grundläggande förståelse för AEM Sites koncept
+- Välbekant med principer för formulärdesign
+- Upplevelser med WYSIWYG-redigerare
 
-      Skärmen **Skapa en ny databas** öppnas.
+>[!TIP]
+>
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
 
-   1. På skärmen **Skapa en ny databas** väljer du **ägare** och anger **databasnamn** . Adobe rekommenderar att databasen ställs in på **Offentlig**. Välj därför alternativet **public** och klicka på **Skapa databas**.
+## Sökväg A: Skapa nytt projekt med Forms
 
-      ![Ställ in databasen på public](/help/edge/docs/forms/assets/name-eds-repo.png)
+**Bäst för:** Nya implementeringar eller konceptkorrektur
 
-1. Installera AEM Code Sync GitHub App i din databas. Installera:
-   1. Gå till [https://github.com/apps/aem-code-sync/installations/new](https://github.com/apps/aem-code-sync/installations/new).
-   1. På skärmen **Installera AEM Code Sync** markerar du alternativet **Only select Repositories** och väljer din nya databas. Klicka på **Spara**.
+AEM Forms Boilerplate är en förkonfigurerad mall med inbyggt Adaptive Forms Block.
 
-   ![Ställ in databasen på public](/help/edge/docs/forms/assets/aem-code-sync-up.png)
+### Översikt över steg
 
-1. Länka nu GitHub-databasen som du skapade med AEM Forms Boilerplate till AEM Project-miljön. Ansluta:
+1. Konfigurera en GitHub-databas från mallen
+2. Installera AEM Code Sync
+3. Konfigurera AEM-projektanslutning
+4. Skapa och publicera en AEM-webbplats
+5. Lägga till formulär med Universal Editor
 
-   1. Gå till GitHub-databasen som du skapade tidigare med AEM Forms Boilerplate.
-   1. Lägg till filen **fstab.yaml** i rotmappen.
+Vi går igenom varje steg:
 
-      ![öppna filen fstab.yaml](/help/edge/docs/forms/assets/open-fstab.png)
++++steg 1: Skapa GitHub-databas från mall
 
-   1. Lägg till monteringspunkten för projektet i filen **fstab.yaml**. Lägg till URL:en för AEM as a Cloud Service-redigeringsinstansen.
+1. **Öppna AEM Forms-mallen för mallar**
+   - Gå till [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms)
 
-      `https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main`
+   ![AEM Forms-mallmall](/help/edge/docs/forms/assets/eds-form-boilerplate.png)
+   *Bild: AEM Forms-standarddatabas med förkonfigurerat adaptivt Forms-block*
 
-      ![redigera filen fstab.yaml](/help/edge/docs/forms/assets/edit-fstab-file.png)
+2. **Skapa din databas**
+   - Klicka på **Använd mallen** > **Skapa en ny databas**
 
-   1. Genomför filen **fstab.yaml** när du har lagt till referensen och allt ser bra ut.
+   ![Skapa databas från mall](/help/edge/docs/forms/assets/use-eds-form-template.png)
+   *Figur: Använda mallen för att skapa en ny databas*
 
-      ![verkställ ändringarna](/help/edge/docs/forms/assets/commit-fstab-changes.png)
+3. **Konfigurera databasinställningar**
+   - **Ägare**: Välj ditt GitHub-konto eller din organisation
+   - **Databasnamn**: Välj ett beskrivande namn (till exempel `my-forms-project`)
+   - **Synlighet**: Välj **Offentlig** (rekommenderas för Edge Delivery Services)
+   - Klicka på **Skapa databas**
 
-      Om du stöter på några byggproblem kan du läsa [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+   ![Databaskonfiguration](/help/edge/docs/forms/assets/name-eds-repo.png)
+   *Bild: Konfigurera din nya databas med synlighet*
 
-### Skapa ett nytt AEM-projekt
+**Validering:** Bekräfta att du har en ny GitHub-databas som är baserad på AEM Forms-mallen Boilerplate.
 
-Nu när du har ett GitHub-projekt kan du fortsätta att skapa och publicera ett nytt AEM-projekt i AEM as a Cloud Service-redigeringsinstansen.
++++
 
-1. Så här skapar du ett nytt AEM-projekt:
++++Steg 2: Installera AEM Code Sync
 
-   1. Logga in på AEM as a Cloud Service redigeringsinstans och välj **Platser**.
+AEM Code Sync synkroniserar automatiskt innehållsändringar mellan din AEM-redigeringsmiljö och din GitHub-databas.
 
-      ![välj platser](/help/edge/assets/select-sites.png)
+1. **Installera GitHub App**
+   - Gå till [https://github.com/apps/aem-code-sync/installations/new](https://github.com/apps/aem-code-sync/installations/new)
 
-   1. Klicka på **Skapa** > **Plats från mall**.
+2. **Konfigurera åtkomstbehörigheter**
+   - Välj **Välj bara databaser**
+   - Välj din nya databas
+   - Klicka på **Spara**
 
-      ![create-sites](/help/edge/docs/forms/assets/create-sites.png)
+   ![Installation av AEM Code Sync](/help/edge/docs/forms/assets/aem-code-sync-up.png)
+   *Bild: Installerar AEM Code Sync med databasspecifika behörigheter*
 
-   1. Markera Edge Delivery Services Site-mallen och klicka på **Next**.
+**Kontrollpunkt:** AEM Code Sync är nu installerat och har åtkomst till din databas.
 
-      ![select-site-template](/help/edge/docs/forms/assets/select-site-template.png)
++++
 
-      >[!NOTE]
-      >
-      > * Om Edge Delivery Services Site-mallen inte är tillgänglig i redigeringsinstansen klickar du på Importera för att överföra mallen.
-      > * Du kan hämta Edge Delivery Services webbplatsmallar från [GitHub](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
++++steg 3: Konfigurera AEM-integrering
 
-   1. Ange följande information för att skapa ett nytt AEM-projekt:
-      * **Platstitel** - Lägg till en beskrivande titel för webbplatsen.
-      * **Platsrubrik** - Använd `site-name` som du definierade i föregående steg.
-      * **GitHub-URL** - Använd URL:en för GitHub-projektet som du skapade i föregående steg.
+Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för innehållssynkronisering.
 
-      ![skapa AEM Site](/help/edge/docs/forms/assets/create-aem-site.png)
+1. **Navigera till din databas**
+   - Gå till din nya GitHub-databas
+   - Du bör se AEM Forms-mallfilerna
 
-   1. Dialogrutan **Skapa plats** visas. Klicka på **OK**.
+2. **Skapa filen fstab.yaml**
+   - Klicka på **Lägg till fil** > **Skapa ny fil** i rotkatalogen
+   - Namnge filen `fstab.yaml`
 
-      ![klicka på OK](/help/edge/docs/forms/assets/click-ok-aem-site.png)
+   ![Skapar fstab.yaml-fil](/help/edge/docs/forms/assets/open-fstab.png)
+   *Figur: Skapar konfigurationsfilen fstab.yaml*
 
-      På bara några minuter skapas ditt nya AEM-projekt.
+3. **Lägg till din AEM-anslutningsinformation**
 
-   1. Navigera till ditt nyskapade AEM-projekt i webbplatskonsolen och klicka på **Redigera**.
-I det här fallet används sidan `index.html` för illustration.
+   Kopiera och klistra in följande konfiguration och ersätt platshållarna:
 
-      ![redigera AEM-webbplats](/help/edge/docs/forms/assets/edit-site.png)
+   ```yaml
+   mountpoints:
+     /: https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main
+   ```
 
-      AEM Project öppnas i Universal Editor på en ny flik som möjliggör redigering i WYSIWYG. Nu kan du redigera ditt AEM-projekt.
+   **Ersätt:**
+   - `<aem-author>`: Din URL för AEM as a Cloud Service-författare (t.ex. `author-p12345-e67890.adobeaemcloud.com`)
+   - `<owner>`: ditt GitHub-användarnamn eller din organisation
+   - `<repository>`: Ditt databasnamn
 
-      ![Webbplatsen öppnas i Universal Editor](/help/edge/docs/forms/assets/site-in-universal-editor.png)
+   **Exempel:**
 
-1. Publicera ditt skapade AEM Project
+   ```yaml
+   mountpoints:
+     /: https://author-p12345-e67890.adobeaemcloud.com/bin/franklin.delivery/mycompany/my-forms-project/main
+   ```
 
-   När du är klar med redigeringen av AEM Project publicerar du det. Publicera:
+   ![Redigerar filen fstab.yaml](/help/edge/docs/forms/assets/edit-fstab-file.png)
+   *Bild: Konfigurerar monteringspunkten för AEM-integrering*
 
-   1. På webbplatskonsolen markerar du alla AEM Project-sidor och klickar på **Snabbpublicering**.
+4. **Bekräfta konfigurationen**
+   - Lägg till ett implementeringsmeddelande: &quot;Add AEM integration configuration&quot;
+   - Klicka på **Genomför ny fil**
 
-      ![publicera AEM Sites Project](/help/edge/docs/forms/assets/publish-sites.png)
+   ![Bekräftar FTDB-ändringar](/help/edge/docs/forms/assets/commit-fstab-changes.png)
+   *Bild: Bekräftar fstab.yaml-konfigurationen*
 
-   1. Bekräftelsedialogrutan **Snabbpublicering** visas. Klicka på **Publicera** för att starta publiceringsprocessen.
-
-      ![Bekräftelsedialogruta för snabbpublicering](/help/edge/docs/forms/assets/quick-publish.png)
-
-      Du kan även publicera dina AEM Project-sidor direkt från användargränssnittet i Universalläsaren.
-
-      ![Bekräftelsedialogruta för snabbpublicering](/help/edge/docs/forms/assets/qui.png)
-
-   Grattis! Du har en ny webbplats som körs på `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/`.
-
-   * `<branch>` refererar till din GitHub-databas.
-   * `<repository>` betecknar din GitHub-databas.
-   * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
-   * `<site-name>` refererar till namnet på den plats du har skapat.
-
-   Om filialnamnet till exempel är `main`, databasen är `edsforms`, ägaren är `wkndforms` och `site-name` är `eds-forms`, kommer webbplatsen att vara igång på `https://main--edsforms--wkndforms.aem.page/content/eds-forms/`
-
-   >[!NOTE]
-   >
-   > * Om du vill visa sidan `index.html` i AEM Project använder du URL:en: `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/`
-   > * Om du vill visa andra sidor än `index page` i AEM Project använder du URL:en: `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/<site-page-name>`
-
-Nu kan du börja [skapa och lägga till formulär i ditt AEM-projekt](#add-edge-delivery-services-forms-to-aem-project).
-
-## Lägg till anpassat Forms-block i ditt befintliga AEM-projekt
-
-Om du har ett befintligt AEM-projekt kan du integrera det adaptiva Forms-blocket i ditt nuvarande projekt för att komma igång med att skapa formulär.
+**Validering:** Bekräfta din GitHub-databasanslutning till AEM.
 
 >[!NOTE]
 >
+>Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+
++++
+
++++steg 4: Skapa en AEM-webbplats som är ansluten till din GitHub-databas.
+
+1. **Öppna AEM Sites-konsolen**
+   - Logga in i din AEM as a Cloud Service-instans
+   - Navigera till **Webbplatser**
+
+   ![AEM Sites Console](/help/edge/assets/select-sites.png)
+   *Bild: Åtkomst till AEM Sites-konsolen*
+
+2. **Börja skapa webbplats**
+   - Klicka på **Skapa** > **Plats från mall**
+
+   ![Skapa platsalternativ](/help/edge/docs/forms/assets/create-sites.png)
+   *Figur: Skapa en ny webbplats från mallen*
+
+3. **Välj Edge Delivery Services-mallen**
+   - Välj mallen **Edge Delivery Services Site**
+   - Klicka på **Nästa**
+
+   ![Val av platsmall](/help/edge/docs/forms/assets/select-site-template.png)
+   *Bild: Välja Edge Delivery Services-webbplatsmall*
+
+   >[!NOTE]
+   >
+   >**Mallen är inte tillgänglig?** Om du inte ser Edge Delivery Services-mallen:
+   >
+   >1. Klicka på **Importera** för att överföra mallen
+   >2. Hämta mallar från [GitHub-versioner](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases)
+
+4. **Konfigurera din plats**
+
+   Ange följande information:
+
+   | Fält | Värde | Exempel |
+   |-----------------|-----------------------------|-----------------------------------------|
+   | **Platstitel** | Beskrivande namn för webbplatsen | &quot;Mitt Forms-projekt&quot; |
+   | **Platsnamn** | URL-vänligt namn | &quot;my-forms-project&quot; |
+   | **GitHub-URL** | Din databas-URL | `https://github.com/mycompany/my-forms-project` |
+
+   ![Platskonfiguration](/help/edge/docs/forms/assets/create-aem-site.png)
+   *Bild: Konfigurera din nya AEM-webbplats med GitHub-integrering*
+
+5. **Slutför webbplatsskapandet**
+   - Granska dina inställningar
+   - Klicka på **Skapa**
+
+   ![Bekräfta skapande av webbplats](/help/edge/docs/forms/assets/click-ok-aem-site.png)
+   *Bild: Bekräfta skapande av webbplats*
+
+   **Klart!** Din AEM-webbplats har nu skapats och är ansluten till GitHub.
+
+6. **Öppna i Universal Editor**
+   - Leta reda på din nya plats i webbplatskonsolen
+   - Välj sidan `index`
+   - Klicka på **Redigera**
+
+   ![Redigera plats i universell redigerare](/help/edge/docs/forms/assets/edit-site.png)
+   *Bild: Öppnar webbplatsen för redigering*
+
+   Universal Editor öppnas på en ny flik med funktioner för WYSIWYG-redigering.
+
+   ![Universellt redigeringsgränssnitt](/help/edge/docs/forms/assets/site-in-universal-editor.png)
+   *Bild: Din webbplats har öppnats i Universal Editor för WYSIWYG-redigering*
+
+**Verifiering:** Bekräfta att din AEM-webbplats är klar för formulärredigering.
+
++++
+
++++Steg 5: Publicera din webbplats
+
+Med publicering blir din webbplats tillgänglig på Edge Delivery Services för global åtkomst.
+
+1. **Snabbpublicering från webbplatskonsolen**
+   - Återgå till AEM Sites Console
+   - Markera dina webbplatssidor (eller markera alla med Ctrl+A)
+   - Klicka på **Snabbpublicering**
+
+   ![Publicerar AEM-webbplats](/help/edge/docs/forms/assets/publish-sites.png)
+   *Figur: Välja sidor för snabb publicering*
+
+2. **Bekräfta publicering**
+   - Klicka på **Publicera** i bekräftelsedialogrutan
+
+   ![Dialogrutan Snabbpublicering](/help/edge/docs/forms/assets/quick-publish.png)
+   *Bild: Bekräfta publiceringsåtgärden*
+
+   **Alternativ:** Du kan även publicera direkt från Universal Editor med knappen Publicera.
+
+   ![Publicera från universell redigerare](/help/edge/docs/forms/assets/qui.png)
+   *Figur: Publicera direkt från Universal Editor*
+
+3. **Åtkomst till din aktiva webbplats**
+
+   Webbplatsen finns nu på:
+
+   ```
+   https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/
+   ```
+
+   **URL-strukturen förklaras:**
+   - `<branch>`: GitHub-gren (vanligen `main`)
+   - `<repo>`: Ditt databasnamn
+   - `<owner>`: ditt GitHub-användarnamn eller din organisation
+   - `<site-name>`: Ditt AEM-webbplatsnamn
+
+   **Exempel:**
+
+   ```
+   https://main--my-forms-project--mycompany.aem.page/content/my-forms-project/
+   ```
+
+**Verifiering:** Bekräfta att din webbplats är publicerad på Edge Delivery Services.
+
+>[!TIP]
 >
-> Det här steget gäller projekt som skapats med [AEM-standardmallen XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk). Om du har skapat ditt AEM-projekt med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) kan du hoppa över det här steget.
+> **URL-mönster:**
+>
+> - **Startsida:** `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/`
+> - **Andra sidor:** `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/<page-name>`
 
-Integrera:
+**Nästa:** [Skapa ditt första formulär](#create-your-first-form)
 
-1. Navigera till AEM Project-databasmappen på din lokala dator.
++++
 
-1. Kopiera och klistra in följande mappar och filer från [AEM Forms-originalet](https://github.com/adobe-rnd/aem-boilerplate-forms) i ditt AEM-projekt:
+## Sökväg B: Lägg till Forms i befintligt projekt
 
-   * Mappen [formulärblock](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form)
-   * filen [form-editor-support.js](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js)
-   * [form-editor-support.css](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) fil
-1. Navigera till filen `/scripts/editor-support.js` i ditt AEM-projekt och uppdatera den med filen [editor-support.js i AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js)
-1. Navigera till `/models/_section.json` i ditt AEM-projekt och lägg till&quot;form&quot; och&quot;embed-adaptive-form&quot; i komponentarrayen för objektet `filters`:
+**Bäst för:** Befintlig AEM Sites med Edge Delivery Services
 
+Om du redan har ett AEM-projekt med Edge Delivery Services kan du lägga till formulärfunktioner genom att integrera Adaptive Forms Block.
+
+### Krav för sökväg B
+
+- Befintliga AEM-projekt som byggts med [AEM Boilerplate XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk)
+- Lokal utvecklingsmiljö har konfigurerats
+- Git-åtkomst till projektdatabasen
+
+**Använder AEM Forms-mallsida?** Om ditt projekt skapades med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) är formulär redan integrerade. Hoppa till [Skapa ditt första formulär](#create-your-first-form).
+
+Vi går igenom varje steg:
+
+### Översikt över steg
+
+1. Kopiera adaptiva Forms Block-filer
+2. Uppdatera projektkonfiguration
+3. Konfigurera ESLint-regler
+4. Bygg och implementera ändringar
+
++++steg 1: Kopiera Forms-blockfiler
+
+1. **Navigera till ditt lokala projekt**
+
+   ```bash
+   cd /path/to/your/aem-project
    ```
-       "filters": [
-       {
-     "id": "section",
-     "components": [
-       .
-       .
-       .
-       "form",
-       "embed-adaptive-form"
+
+2. **Hämta nödvändiga filer från AEM Forms-standardmallen**
+
+   Kopiera de här filerna från [AEM Forms-databasen ](https://github.com/adobe-rnd/aem-boilerplate-forms):
+
+   | Source | Mål | Syfte |
+   |------------------------------------------------------------------------|----------------------------|----------------------------|
+   | [`blocks/form/`](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/blocks/form) | `blocks/form/` | Kärnfunktioner |
+   | [`scripts/form-editor-support.js`](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.js) | `scripts/form-editor-support.js` | Integrering med Universal Editor |
+   | [`scripts/form-editor-support.css`](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/form-editor-support.css) | `scripts/form-editor-support.css` | Redigerarens format |
+
+3. **Stöd för uppdateringsredigerare**
+   - Ersätt din `/scripts/editor-support.js`-fil med [editor-support.js från AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/scripts/editor-support.js)
+
+**Verifiering:** Bekräfta att formulärblocksfiler finns i ditt projekt.
+
++++
+
++++steg 2: Uppdatera komponentkonfiguration
+
+1. **Uppdatera avsnittsmodell**
+
+   Öppna `/models/_section.json` och lägg till formulärkomponenter i filtren:
+
+   ```json
+   {
+        "filters": [
+        {
+      "id": "section",
+      "components": [
+           "text",
+           "image",
+           "button",
+        "form",
+        "embed-adaptive-form"
+      ]
+       }
      ]
-    }]
+   }
    ```
 
-1. (Valfritt) Navigera till `/.eslintignore` i ditt AEM-projekt och lägg till nedanför kodraderna:
+   **Vad detta gör:** Aktiverar formulärkomponenter i komponentväljaren för Universal Editor.
 
-   ```
-   blocks/form/rules/formula/*
-   blocks/form/rules/model/*
-   blocks/form/rules/functions.js
-   scripts/editor-support.js
-   scripts/editor-support-rte.js
-   ```
+**Verifiering:** Bekräfta formulärkomponenter visas i Universell redigerare.
 
-1. (Valfritt) Navigera till `/.eslintrc.js` i ditt AEM-projekt och lägg till nedanför kodraderna i objektet `rules`:
++++
 
-   ```
-   'xwalk/max-cells': ['error', {
-     '*': 4, // default limit for all models
-     form: 15,
-     wizard: 12,
-     'form-button': 7,
-     'checkbox-group': 20,
-     checkbox: 19,
-     'date-input': 21,
-     'drop-down': 19,
-     email: 22,
-     'file-input': 20,
-     'form-fragment': 15,
-     'form-image': 7,
-     'multiline-input': 23,
-     'number-input': 22,
-     panel: 17,
-     'radio-group': 20,
-     'form-reset-button': 7,
-     'form-submit-button': 7,
-     'telephone-input': 20,
-     'text-input': 23,
-     accordion: 14,
-     modal: 11,
-     rating: 18,
-     password: 20,
-     tnc: 12,
-   }],
-   'xwalk/no-orphan-collapsible-fields': 'off', // Disable until enhancement is done for Forms properties
++++steg 3: Konfigurera ESLint (valfritt)
+
+**Varför det här steget:** Förhindrar lintingfel från formulärspecifika filer och konfigurerar korrekta valideringsregler.
+
+1. **Uppdatera .eslintignore**
+
+   Lägg till de här raderna i `/.eslintignore`:
+
+   ```bash
+   # Form block rule engine files
+    blocks/form/rules/formula/*
+    blocks/form/rules/model/*
+    blocks/form/rules/functions.js
+    scripts/editor-support.js
+    scripts/editor-support-rte.js
    ```
 
-1. Öppna terminalen och kör kommandona nedan:
+2. **Uppdatera .eslintrc.js**
 
+   Lägg till de här reglerna i objektet `rules` i `/.eslintrc.js`:
+
+   ```javascript
+   {
+     "rules": {
+       // Existing rules...
+   
+       // Form component cell limits
+    'xwalk/max-cells': ['error', {
+         '*': 4, // default limit
+      form: 15,
+      wizard: 12,
+      'form-button': 7,
+      'checkbox-group': 20,
+      checkbox: 19,
+      'date-input': 21,
+      'drop-down': 19,
+      email: 22,
+      'file-input': 20,
+      'form-fragment': 15,
+      'form-image': 7,
+      'multiline-input': 23,
+      'number-input': 22,
+      panel: 17,
+      'radio-group': 20,
+      'form-reset-button': 7,
+      'form-submit-button': 7,
+      'telephone-input': 20,
+      'text-input': 23,
+      accordion: 14,
+      modal: 11,
+      rating: 18,
+      password: 20,
+         tnc: 12
+       }],
+   
+       // Disable this rule for forms
+       'xwalk/no-orphan-collapsible-fields': 'off'
+     }
+   }
    ```
-   npm i
+
+**Validering:** Bekräfta ESLint fungerar med formulärkomponenter.
+
++++
+
++++Steg 4: Skapa och distribuera
+
+1. **Installera beroenden och bygg**
+
+   ```bash
+   # Install any new dependencies
+   npm install
+   
+   # Build component definitions
    npm run build:json
    ```
 
-   >[!NOTE]
-   >
-   > Innan du skickar ändringarna till AEM Project-databasen på GitHub måste du se till att filerna `component-definition.json`, `component-models.json` och `component-filters.json` som finns på rotnivån i AEM-projektet uppdateras med formulärrelaterade objekt.
+   **Vad detta gör:**
+   - Uppdaterar `component-definition.json` med formulärkomponenter
+   - Skapar `component-models.json` med formulärmodeller
+   - Skapar `component-filters.json` med filtreringsregler
 
-1. Genomför och skicka dessa ändringar till AEM Project-databasen på GitHub.
+2. **Verifiera genererade filer**
 
-   <!--
-    1. **Update ESLint configuration file**
-    2. Navigate to the `../.eslintignore` file in your AEM Project and add the following line of codes to prevent errors related to the Form Block rule engine:
-        
-            blocks/form/rules/formula/*
-            blocks/form/rules/model/*
-       * [form-common](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-common)  folder
-       * [form-components](https://github.com/adobe-rnd/aem-boilerplate-forms/tree/main/models/form-components) folder
-    
-     3. **Update component definitions and models files**
-       1. Navigate to the `../models/_component-definition.json` file in your AEM Project and update it with the changes from the [_component-definition.json file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-definition.json#L39-L48).
-    
-    3. Navigate to the `../models/_component-models.json` file in your AEM Project and update it with the changes from the [_component-models.json file in the AEM Forms Boilerplate](https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/models/_component-models.json#L24-L26) -->
+   Kontrollera att de här filerna i projektroten innehåller formulärrelaterade objekt:
+   - `component-definition.json`
+   - `component-models.json`
+   - `component-filters.json`
 
-Så ja! Det adaptiva Forms-blocket ingår nu i ditt AEM-projekt. Du kan [börja skapa och lägga till formulär i ditt AEM-projekt](#add-edge-delivery-services-forms-to-aem-site-project).
+3. **Verkställ och skicka ändringar**
 
-## Skapa Forms med WYSIWYG
+   ```bash
+   git add .
+   git commit -m "Add Adaptive Forms Block integration"
+   git push origin main
+   ```
 
-Du kan öppna ditt AEM-projekt i den universella redigeraren för WYSIWYG där du kan redigera projektet och lägga till sektionen Adaptiv form för att inkludera Edge Delivery Services-formulär på AEM Project-sidor.
+**Validering:** Bekräfta att ditt projekt innehåller formulärfunktioner.
 
-1. Lägg till avsnittet Adaptivt formulär på din AEM Project-sida. Lägga till:
-   1. Navigera till ditt AEM-projekt i webbplatskonsolen, markera den webbplatssida som du vill redigera och klicka på **Redigera**. AEM projektsida öppnas i Universal Editor för redigering.
-I det här fallet används sidan `index.html` för illustration.
-   1. Öppna innehållsträdet och navigera till ett avsnitt där du vill lägga till avsnittet Adaptivt formulär.
-   1. Klicka på ikonen **[!UICONTROL Add]** och välj komponenten **[!UICONTROL Adaptive Form]** i komponentlistan.
++++
 
-   ![innehållsträd](/help/edge/docs/forms/assets/add-adaptive-form-block.png)
+**Nästa:** [Skapa ditt första formulär](#create-your-first-form)
 
-   Avsnittet Adaptiv form läggs till. Nu kan du börja lägga till formulärkomponenter på AEM Project-sidan.
+## Skapa ditt första formulär
 
-1. Lägg till formulärkomponenter i det tillagda adaptiva formuläravsnittet. Så här lägger du till formulärkomponenter:
-   1. Navigera till det tillagda adaptiva formuläravsnittet i innehållsträdet.
+**Gäller för:** Både användare med sökvägen A och B
 
-      ![adaptivt formulärblock tillagt](/help/edge/docs/forms/assets/adative-form-block.png)
+Nu när ditt projekt är uppbyggt med formulärfunktioner kan vi skapa ditt första formulär med Universal Editors WYSIWYG-gränssnitt.
 
+### Översikt över processen att skapa formulär
 
-   1. Klicka på ikonen **[!UICONTROL Add]** och lägg till de önskade komponenterna från listan **Adaptiva formulärkomponenter**.
+1. **Lägg till anpassat formulärblock** på sidan
+2. **Lägg till formulärkomponenter** (textinmatningar, knappar osv.)
+3. **Konfigurera komponentegenskaper**
+4. **Förhandsgranska och testa** formuläret
+5. **Publicera** den uppdaterade sidan
 
-      ![lägg till komponent](/help/edge/docs/forms/assets/add-component.png)
+Vi går igenom varje steg:
 
-      Du kan också dra och släppa nödvändiga adaptiva Forms-komponenter, eftersom den universella redigeraren har en intuitiv dra och släpp-funktion.
++++steg 1: Lägg till anpassat formulärblock
 
-   1. Markera den tillagda adaptiva formulärkomponenten om du vill uppdatera dess egenskaper med **[!UICONTROL Properties]**.
+1. **Öppna sidan i Universal Editor**
+   - Navigera till konsolen **Platser** i AEM
+   - Markera sidan där du vill lägga till ett formulär (t.ex. `index`)
+   - Klicka på **Redigera**
 
-      ![öppna egenskaper](/help/edge/docs/forms/assets/component-properties.png)
+   Sidan öppnas i Universal Editor för WYSIWYG-redigering.
 
-   1. Förhandsgranska formuläret.
-På skärmbilden nedan visas det formulär som skapats i AEM Project med WYSIWYG-redigering:
+2. **Lägg till komponenten Adaptivt formulär**
+   - Öppna panelen **Innehållsträd** (vänster sidospalt)
+   - Navigera till ett avsnitt där du vill lägga till formuläret
+   - Klicka på ikonen **Lägg till** (+)
+   - Välj **Adaptivt formulär** i komponentlistan
 
-      ![tillagt formulär](/help/edge/docs/forms/assets/added-form-aem-sites.png)
+   ![Lägger till adaptivt formulärblock](/help/edge/docs/forms/assets/add-adaptive-form-block.png)
+   *Bild: Lägga till ett adaptivt formulärblock på sidan*
 
-      När du är nöjd med förhandsgranskningen kan användaren fortsätta att publicera sidan.
+**Verifiering:** Bekräfta att du har en tom formulärbehållare.
 
-      >[!NOTE]
-      >
-      > Det är viktigt att du publicerar din AEM Project-sida igen när du har gjort ändringar, annars visas inte uppdateringarna i webbläsaren.
++++
 
-1. Publicera om AEM Project-sidan.
++++steg 2: Lägg till formulärkomponenter
 
-   1. Klicka på **Publicera** om du vill publicera AEM Project-sidan igen när du har lagt till formuläret.
+1. **Navigera till ditt formulärblock**
+   - Leta reda på ditt nya adaptiva formuläravsnitt i innehållsträdet
 
-      ![publicera formulär](/help/edge/docs/forms/assets/publish-form.png)
+   ![Adaptivt formulärblock tillagt](/help/edge/docs/forms/assets/adative-form-block.png)
+   *Figur: Adaptivt formulärblock i innehållsträdet*
 
-   1. Bekräftelsedialogrutan **Publicera** visas på skärmen. Klicka på **Publicera** för att starta publiceringen.
+2. **Lägg till formulärkomponenter**
 
-      ![publicera formulär1](/help/edge/docs/forms/assets/publish-form1.png)
+   Du kan lägga till komponenter på två sätt:
 
-      När du klickar på knappen **Publicera** visas meddelandet `Publish started successfully`.
+   **Metod A: Klicka för att lägga till**
+   - Klicka på ikonen **Lägg till** (+) i formuläravsnittet
+   - Välj komponenter i listan **Adaptiva formulärkomponenter**
 
-      ![publicera formulär2](/help/edge/docs/forms/assets/publish-form2.png)
+   **Metod B: Dra och släpp**
+   - Dra komponenter direkt från komponentpanelen till formuläret
 
-   Nu kan du visa AEM Project-sidan med det nya Edge Delivery Services-formuläret på följande URL:
-   `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/`.
+   ![Lägger till formulärkomponenter](/help/edge/docs/forms/assets/add-component.png)
+   *Figur: Lägga till komponenter i formuläret*
 
-   Om filialnamnet till exempel är `main`, databasen är `edsforms`, ägaren är `wkndforms` och platsen-namnet är `eds-forms`, blir URL:en:
-   `https://main--edsforms--wkndforms.aem.page/content/eds-forms/`
+   **Rekommenderade startkomponenter:**
+   - Textindata (för namn, e-post)
+   - Textområde (för meddelanden)
+   - Skicka-knapp
 
-   ![indexsida](/help/edge/docs/forms/assets/publish-index-page.png)
+3. **Konfigurera komponentegenskaper**
+   - Markera en formulärkomponent
+   - Använd panelen **Egenskaper** (höger sidofält) för att konfigurera:
+      - Etiketter och platshållare
+      - Valideringsregler
+      - Obligatoriska fältinställningar
 
-Du kan formatera Edge Delivery Services Forms genom att redigera `.css`- och `.js`-filerna i det adaptiva Forms-blocket och [konfigurera en lokal AEM-utvecklingsmiljö](#set-up-local-aem-development-environment) så att du ser ändringarna direkt i webbläsaren.
+   ![Panelen Komponentegenskaper](/help/edge/docs/forms/assets/component-properties.png)
+   *Figur: Konfigurera komponentegenskaper*
 
->[!NOTE]
+4. **Förhandsgranska formuläret**
+
+   Formuläret ser ut ungefär så här:
+
+   ![Förhandsgranskning av slutfört formulär](/help/edge/docs/forms/assets/added-form-aem-sites.png)
+   *Figur: Exempelformulär som har skapats med den universella redigeraren*
+
+**Verifiering:** Bekräfta att formuläret är klart för publicering.
+
+>[!IMPORTANT]
 >
-> Du kan också [skapa ett fristående formulär i Universal Editor och publicera det på Edge Delivery Services](/help/edge/docs/forms/universal-editor/create-forms.md).
+> Kom ihåg att publicera sidan när du har gjort ändringar för att se uppdateringar i webbläsaren.
 
-## Konfigurera lokal AEM-utvecklingsmiljö
++++
 
-Du kan konfigurera en lokal AEM-utvecklingsmiljö för att utveckla anpassade format och komponenter lokalt. Så här kommer du igång med en lokal utvecklingsmiljö i AEM:
++++Steg 3: Publicera formuläret
 
-1. **Installera AEM CLI**: AEM CLI förenklar utvecklingsuppgifter. Låt oss installera det globalt med npm:
+1. **Publicera från universell redigerare**
+   - Klicka på knappen **Publicera** i Universell redigerare
 
-   ```Bash
-       npm install -g @adobe/aem-cli
+   ![Publicerar formulär](/help/edge/docs/forms/assets/publish-form.png)
+   *Figur: Publicera formuläret från den universella redigeraren*
+
+2. **Bekräfta publicering**
+   - Klicka på **Publicera** i bekräftelsedialogrutan
+
+   ![Bekräfta publicering](/help/edge/docs/forms/assets/publish-form1.png)
+   *Bild: Bekräfta publiceringsåtgärden*
+
+   Ett meddelande som bekräftar publiceringen visas.
+
+   ![Publiceringen lyckades](/help/edge/docs/forms/assets/publish-form2.png)
+   *Figur: Publiceringsbekräftelse lyckades*
+
+3. **Visa ditt live-formulär**
+
+   Ditt formulär finns nu på:
+
+   ```
+   https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/
    ```
 
-1. **Klona ditt GitHub-projekt**: Klona din AEM Project-databas från GitHub med följande kommando och ersätt &lt;owner> med databasägaren och &lt;repo> med databasnamnet:
+   **Exempel-URL:**
 
    ```
+   https://main--my-forms-project--mycompany.aem.page/content/my-forms-project/
+   ```
+
+   ![Live-formulärsida](/help/edge/docs/forms/assets/publish-index-page.png)
+   *Figur: Din publicerade formulärsida på Edge Delivery Services*
+
+**Grattis!** Ditt formulär är nu öppet och kan samla in inskickade svar.
+
++++
+
+### Nästa steg
+
+Nu när du har ett fungerande formulär kan du:
+
+- **Anpassa format** genom att redigera CSS- och JavaScript-filer
+- **Lägg till avancerade formulärfunktioner**, som valideringsregler och villkorslogik
+- **Konfigurera lokal utveckling** för snabbare iteration
+- **Skapa fristående formulär** för särskilda användningsfall
+
+>[!TIP]
+>
+> **Läs mer:** [Skapa fristående formulär i Universal Editor](/help/edge/docs/forms/universal-editor/create-forms.md)
+
+## Konfigurera lokal utvecklingsmiljö
+
+**Passar bäst för:** Utvecklare som vill anpassa formulärformatering och -beteende
+
+Med en lokal utvecklingsmiljö kan du göra ändringar och se dem direkt utan att behöva gå igenom publiceringscykeln.
+
++++Konfigurera AEM CLI och lokal utveckling
+
+1. **Installera AEM CLI**
+
+   AEM CLI förenklar lokala utvecklingsuppgifter:
+
+   ```bash
+   npm install -g @adobe/aem-cli
+   ```
+
+2. **Klona din databas**
+
+   ```bash
    git clone https://github.com/<owner>/<repo>
-   ```
-
-1. **Starta den lokala miljön**: Navigera till projektkatalogen och starta den lokala AEM-instansen med ett enda kommando:
-
-   ```
    cd <repo>
+   ```
+
+   Ersätt `<owner>` och `<repo>` med dina faktiska GitHub-uppgifter.
+
+3. **Starta den lokala utvecklingsservern**
+
+   ```bash
    aem up
    ```
 
-Du kan göra lokala ändringar i den adaptiva Forms-blockmappen `blocks/form` för att formatera och koda dina formulär! Redigera `.css`- eller `.js`-filerna i den här katalogen så ser du att ändringarna återspeglas direkt i webbläsaren.
+   Detta startar en lokal server med funktioner för att ladda upp filer under drift.
 
-När du är klar med ändringarna använder du Git-kommandon för att implementera och överföra dem. Detta uppdaterar förhandsgransknings- och produktionsmiljöer som du kommer åt på följande URL:er (ersätt platshållare med projektinformation):
+4. **Gör anpassningar**
 
-Förhandsgranska: `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>`
+   - Redigera filer i katalogen `blocks/form/` för formulärformat och -beteende
+   - Ändra `form.css` för formatering
+   - Uppdatera `form.js` för beteende
 
-Produktion: `https://<branch>--<repo>--<owner>.aem.live/content/<site-name>`
+   **Se ändringarna direkt** i webbläsaren på `http://localhost:3000`
+
+5. **Distribuera dina ändringar**
+
+   ```bash
+   git add .
+   git commit -m "Custom form styling"
+   git push origin main
+   ```
+
+   Ändringarna finns på:
+   - **Förhandsgranska:** `https://<branch>--<repo>--<owner>.aem.page/content/<site-name>`
+   - **Produktion:** `https://<branch>--<repo>--<owner>.aem.live/content/<site-name>`
+
++++
 
 
-## Felsökning av byggproblem med GitHub
+## Felsökning
 
-Se till att GitHub-byggprocessen blir smidig genom att åtgärda potentiella problem:
+### Vanliga problem och lösningar
 
-* **Hantera lintingfel:**
-Om du skulle stöta på ett lintingfel kan du kringgå dem. Öppna [EDS-projektfilen]/package.json och ändra lint-skriptet från `"lint": "npm run lint:js && npm run lint:css"` till `"lint": "echo 'skipping linting for now'"`. Spara filen och implementera ändringarna i GitHub-projektet.
++++GitHub Build Issues
 
-* **Resolve Module Path-fel:**
-Om du får felmeddelandet&quot;Det går inte att lösa sökvägen till modulen &quot;&#39;/scripts/lib-franklin.js&#39;&quot; går du till filen [EDS Project]/blocks/forms/form.js. Uppdatera importsatsen genom att ersätta filen lib-franklin.js med filen aem.js.
+**Problem:** Fel vid skapande eller lintingfel
 
-## Se även
+**Lösning 1: Hantera lintingfel**
 
-{{universal-editor-see-also}}
+Om det uppstår lintingfel:
+
+1. Öppna `package.json` i projektets rot
+2. Hitta skriptet `lint`:
+
+   ```json
+   "scripts": {
+     "lint": "npm run lint:js && npm run lint:css"
+   }
+   ```
+
+3. Inaktivera linting tillfälligt:
+
+   ```json
+   "scripts": {
+     "lint": "echo 'skipping linting for now'"
+   }
+   ```
+
+4. Verkställ och skicka ändringarna
+
+**Lösning 2: Sökvägsfel för modul**
+
+Om du ser&quot;Det går inte att matcha sökvägen till modulen &#39;/scripts/lib-franklin.js&#39;&quot;:
+
+1. Navigera till `blocks/form/form.js`
+2. Uppdatera importsatsen:
+
+   ```javascript
+   // Change this:
+   import { ... } from '/scripts/lib-franklin.js';
+   
+   // To this:
+   import { ... } from '/scripts/aem.js';
+   ```
+
++++
+
++++Universal Editor Issues
+
+**Problem:** Formulärkomponenter visas inte i den universella redigeraren
+
+**Lösningar:**
+
+- Kontrollera att AEM Code Sync är installerat och körs
+- Kontrollera att `fstab.yaml` har rätt URL för AEM-författare
+- Kontrollera att tidig åtkomst är aktiverat för din AEM-instans
+- Bekräfta att `component-definition.json` innehåller formulärkomponenter
+
+**Problem:** Ändringar som inte visas efter publicering
+
+**Lösningar:**
+
+- Vänta på CDN-cacheuppdatering
+- Kontrollera webbläsarens cacheminne (prova incognito/private mode)
+- Kontrollera att rätt URL-format används
+
++++
+
++++Formulärfunktionsproblem
+
+**Problem:** Formuläröverföringar fungerar inte
+
+**Lösningar:**
+
+- Kontrollera att du har en komponent för Skicka-knapp
+- Kontrollera URL-konfiguration för formuläråtgärd
+- Verifiera formulärverifieringsregler
+- Testa i förhandsgranskningsläge först
+
+**Problem:** Formateringsproblem
+
+**Lösningar:**
+
+- Kontrollera CSS-filsökvägar i `blocks/form/`
+- Rensa webbläsarcache
+- Verifiera CSS-syntax
+- Testa i den lokala utvecklingsmiljön
+
++++
+

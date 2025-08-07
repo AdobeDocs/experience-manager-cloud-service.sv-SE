@@ -1,17 +1,17 @@
 ---
-title: Publish och Edge Delivery Services för AEM Forms
-description: Publish och Edge Delivery Services för AEM Forms
+title: Publicera en Edge Delivery Services för AEM Forms
+description: Publicera en Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 exl-id: dcb16da1-dcc2-4529-8859-0716e727b54d
 role: Admin, Architect, Developer
-source-git-commit: 81fbf43572c5129efb0a0718b408f0c9ae4a5ad3
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
-# Publish formulär och börja samla in data
+# Publicera formuläret och börja samla in data
 
 När du är redo att dela formuläret med dina kunder för datainsamling eller insändning kan du helt enkelt publicera det, så att formuläret blir lätt tillgängligt för kunderna.
 
@@ -19,16 +19,16 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 ## Krav
 
-* Du har ett AEM projekt baserat på [AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptivt Forms-block i ditt befintliga AEM ](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project)
-* Formuläret är fullständigt testat och klart att användas.
-* Ditt [kalkylblad är konfigurerat](/help/edge/docs/forms/submit-forms.md) för att ta emot data.
+- Du har ett AEM-projekt baserat på [AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) eller [har lagt till Adaptivt Forms-block i ditt befintliga AEM-projekt](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project)
+- Formuläret är fullständigt testat och klart att användas.
+- Ditt [kalkylblad är konfigurerat](/help/edge/docs/forms/submit-forms.md) för att ta emot data.
 
 
-## Publish formulär
+## Publicera formuläret
 
-+++ 1. Publish ditt kalkylblad
++++ &#x200B;1. Publicera kalkylbladet
 
-1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och navigera till din AEM Edge Delivery projektkatalog.
+1. Öppna ditt Microsoft SharePoint- eller Google Drive-konto och gå till din projektkatalog för AEM Edge Delivery.
 
 1. Öppna det kalkylblad som innehåller ditt formulär. [Förfrågan](/help/edge/assets/enquiry.xlsx) är till exempel en Microsoft Excel-arbetsbok.
 
@@ -40,16 +40,16 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
    ![Forms Preview JSON-format](/help/edge/assets/forms-preview-json-format.png)
 
-1. Använd AEM Sidekick för att publicera bladet. Se till att du hämtar publicerings-URL:en, eftersom detta krävs för att återge formuläret i nästa avsnitt. URL-formatet är följande:
+1. Publicera bladet med AEM Sidekick. Se till att du hämtar publicerings-URL:en, eftersom detta krävs för att återge formuläret i nästa avsnitt. URL-formatet är följande:
 
 
    ```JSON
        https://<branch>--<repository>--<owner>.aem.live/<form>.json
    ```
 
-   * `<branch>` refererar till din GitHub-databas.
-   * `<repository>` betecknar din GitHub-databas.
-   * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
+   - `<branch>` refererar till din GitHub-databas.
+   - `<repository>` betecknar din GitHub-databas.
+   - `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
    Om projektdatabasen till exempel heter&quot;weFinance&quot;, finns den under kontot&quot;wkndform&quot; och du använder huvudgrenen och formuläret som&quot;förfrågan&quot;, ser URL:en ut så här:
 
@@ -58,7 +58,7 @@ När du är redo att dela formuläret med dina kunder för datainsamling eller i
 
 +++
 
-+++ 2. Lägg till formuläret på din webbsida
++++ &#x200B;2. Lägg till formuläret på din webbsida
 
 Lägg till `<form>.json` på en webbsida för att underlätta kundinteraktion, så att formuläranvändare enkelt kan fylla i och skicka formuläret.
 
@@ -99,7 +99,7 @@ Så här lägger du till formuläret på din webbsida:
    | `https://main--wefinance--wkndform.aem.page/enquiry.json` |
 
 
-   **Publish URL**
+   **Publicera URL**
 
    | Formulär |
    |---|
@@ -125,6 +125,4 @@ Om du råkar ut för ett fel som påminner om följande meddelande anger det att
 +++
 
 
-## Se även
 
-{{see-more-forms-eds}}

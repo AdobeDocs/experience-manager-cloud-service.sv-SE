@@ -4,17 +4,14 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: 9ef4c5638c2275052ce69406f54dda3ea188b0ef
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1789'
 ht-degree: 0%
 
 ---
 
 # Skapa anpassad komponent i WYSIWYG Authoring
-
-<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsversion </a>. </span>
-
 
 Edge Delivery Services Forms erbjuder anpassning så att gränssnittsutvecklare kan skapa skräddarsydda blankettkomponenter. Dessa anpassade komponenter integreras smidigt i WYSIWYG redigeringsmiljö, vilket gör det enkelt för formulärförfattare att lägga till, konfigurera och hantera dem i formulärredigeraren. Med anpassade komponenter kan man förbättra funktionaliteten samtidigt som man får en smidig och intuitiv redigeringsprocess.
 
@@ -24,8 +21,8 @@ I det här dokumentet beskrivs de olika stegen för att skapa anpassade komponen
 
 Innan du börjar skapa en anpassad komponent bör du:
 
-* Lär dig grundläggande kunskaper om [inbyggda HTML-komponenter](/help/edge/docs/forms/form-components.md).
-* Lär dig hur du [formaterar formulärfält baserat på fälttyp med CSS-väljarna](/help/edge/docs/forms/style-theme-forms.md)
+- Lär dig grundläggande kunskaper om [inbyggda HTML-komponenter](/help/edge/docs/forms/form-components.md).
+- Lär dig hur du [formaterar formulärfält baserat på fälttyp med CSS-väljarna](/help/edge/docs/forms/style-theme-forms.md)
 
 ## Skapa en anpassad komponent
 
@@ -52,9 +49,9 @@ Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project
    1. Öppna ditt AEM-projekt och gå till `../blocks/form/components/`.
    1. Lägg till en ny mapp för din anpassade komponent på `../blocks/form/components/<component_name>`. I det här exemplet skapar vi en mapp med namnet `range`.
    1. Navigera till den nyligen skapade mappen på `../blocks/form/components/<component_name>`. Navigera till `../blocks/form/components/range` och lägg till följande filer:
-      * `/blocks/form/components/range/_range.json`: Innehåller definitionen för den anpassade komponenten.
-      * `../blocks/form/components/range/range.css`: Definierar formateringen för den anpassade komponenten.
-      * `../blocks/form/components/range/range.js`: Anpassar den anpassade komponenten vid körning.
+      - `/blocks/form/components/range/_range.json`: Innehåller definitionen för den anpassade komponenten.
+      - `../blocks/form/components/range/range.css`: Definierar formateringen för den anpassade komponenten.
+      - `../blocks/form/components/range/range.js`: Anpassar den anpassade komponenten vid körning.
 
         ![Lägger till den anpassade komponenten för redigering](/help/edge/docs/forms/universal-editor/assets/adding-custom-component.png)
 
@@ -68,12 +65,12 @@ Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project
 
    För att lägga till definitionen måste fälten läggas till i filen `_range.json`:
 
-   * **title**: Titeln på komponenten som visas i den universella redigeraren.
-   * **id**: En unik identifierare för komponenten.
-   * **fieldType**: Forms stöder olika **fieldType** för att hämta specifika typer av användarindata. Du hittar den [stödda fieldType i avsnittet Extra Byte](#supported-fieldtypes).
-   * **resourceType**: Varje anpassad komponent har en associerad resurstyp baserat på dess fieldType. Du hittar den [stödda resourceType i avsnittet Extra Byte](#supported-resourcetype).
-   * **jcr:title**: Den liknar en titel, men den lagras i komponentens struktur.
-   * **fd:viewType**: Den representerar namnet på den anpassade komponenten. Det är den unika identifieraren för komponenten. Du måste skapa en anpassad vy för komponenten.
+   - **title**: Titeln på komponenten som visas i den universella redigeraren.
+   - **id**: En unik identifierare för komponenten.
+   - **fieldType**: Forms stöder olika **fieldType** för att hämta specifika typer av användarindata. Du hittar den [stödda fieldType i avsnittet Extra Byte](#supported-fieldtypes).
+   - **resourceType**: Varje anpassad komponent har en associerad resurstyp baserat på dess fieldType. Du hittar den [stödda resourceType i avsnittet Extra Byte](#supported-resourcetype).
+   - **jcr:title**: Den liknar en titel, men den lagras i komponentens struktur.
+   - **fd:viewType**: Den representerar namnet på den anpassade komponenten. Det är den unika identifieraren för komponenten. Du måste skapa en anpassad vy för komponenten.
 
 `_range.json`-filen är följande när du har lagt till komponentdefinitionen:
 
@@ -104,7 +101,7 @@ Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project
 
 >[!NOTE]
 >
-> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
+> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
 
 ### &#x200B;2. Definiera egenskaperna för den anpassade komponenten för redigering
 
@@ -118,17 +115,17 @@ Den anpassade komponenten innehåller en komponentmodell som anger vilka egenska
 
    1. **Skapa ny modell**
 
-      * Lägg till ett nytt objekt i modellarrayen och ställ in `id` för komponentmodellen så att den matchar egenskapen `fd:viewType` som konfigurerats tidigare i komponentdefinitionen.
-      * Inkludera en fältarray i det här objektet.
+      - Lägg till ett nytt objekt i modellarrayen och ställ in `id` för komponentmodellen så att den matchar egenskapen `fd:viewType` som konfigurerats tidigare i komponentdefinitionen.
+      - Inkludera en fältarray i det här objektet.
 
    2. **Definiera fält för egenskapsdialogrutan**
 
-      * Varje objekt i fältarrayen ska vara en behållartypskomponent, vilket gör att det kan visas som en flik i dialogrutan **Egenskap** .
-      * Vissa fält kan referera till återanvändbara egenskaper i `models/form-common`.
+      - Varje objekt i fältarrayen ska vara en behållartypskomponent, vilket gör att det kan visas som en flik i dialogrutan **Egenskap** .
+      - Vissa fält kan referera till återanvändbara egenskaper i `models/form-common`.
 
    3. **Använd en befintlig komponentmodell som referens**
 
-      * Du kan kopiera innehållet i en befintlig komponentmodell som motsvarar din valda `fieldType` och ändra den efter behov. Komponenten `number-input` utökas till att skapa en **range** -komponent, så vi kan använda modellarrayen från `models/form-components/_number-input.json` som referens.
+      - Du kan kopiera innehållet i en befintlig komponentmodell som motsvarar din valda `fieldType` och ändra den efter behov. Komponenten `number-input` utökas till att skapa en **range** -komponent, så vi kan använda modellarrayen från `models/form-components/_number-input.json` som referens.
 
    `_range.json`-filen är följande när du har lagt till komponentmodellen:
 
@@ -161,7 +158,7 @@ Den anpassade komponenten innehåller en komponentmodell som anger vilka egenska
 
    >[!NOTE]
    >
-   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
+   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
 
    Du kan också [lägga till anpassade egenskaper](#adding-custom-properties-for-your-custom-component) i en anpassad komponent för att utöka dess funktioner.
 
@@ -186,10 +183,10 @@ Lägg till den anpassade egenskapen Stegvärde genom att lägga till komponentmo
 
 JSON-fragmentet definierar en anpassad egenskap med namnet **Stegvärde** för en **Intervall** -komponent. Nedan visas en beskrivning av varje fält:
 
-* **komponent**: Anger typen av indatafält som används i egenskapsdialogrutan. I det här fallet anger `number` att numeriska värden accepteras i fältet.
-* **name**: Identifieraren för egenskapen, som används för att referera till den i komponentens logik. Här representerar `stepValue` stegvärdesinställningen för intervallet.
-* **label**: Egenskapens visningsnamn som det visas i egenskapsdialogrutan.
-* **valueType**: Definierar den datatyp som förväntas för egenskapen. `number` säkerställer att endast numeriska indata tillåts.
+- **komponent**: Anger typen av indatafält som används i egenskapsdialogrutan. I det här fallet anger `number` att numeriska värden accepteras i fältet.
+- **name**: Identifieraren för egenskapen, som används för att referera till den i komponentens logik. Här representerar `stepValue` stegvärdesinställningen för intervallet.
+- **label**: Egenskapens visningsnamn som det visas i egenskapsdialogrutan.
+- **valueType**: Definierar den datatyp som förväntas för egenskapen. `number` säkerställer att endast numeriska indata tillåts.
 
 Du kan nu använda `stepValue` som en anpassad egenskap i JSON-egenskaperna för `range.js` och implementera dynamiskt beteende baserat på dess värde vid körning.
 
@@ -263,46 +260,48 @@ Så här ser du till att den anpassade komponenten visas i listan med tillgängl
 1. Leta reda på komponentarrayen i objektet som har `id="form"`.
 1. Lägg till värdet `fd:viewType` från `definitions[]` i komponentarrayen för objektet med `id="form"`.
 
-```javascript
- "filters": [
-    {
-      "id": "form",
-      "components": [
-        "captcha",
-        "checkbox",
-        "checkbox-group",
-        "date-input",
-        "drop-down",
-        "email",
-        "file-input",
-        "form-accordion",
-        "form-button",
-        "form-fragment",
-        "form-image",
-        "form-modal",
-        "form-reset-button",
-        "form-submit-button",
-        "number-input",
-        "panel",
-        "plain-text",
-        "radio-group",
-        "rating",
-        "telephone-input",
-        "text-input",
-        "tnc",
-        "wizard",
-        "range"
-      ]
-    }
-  ]
-```
+   ```javascript
+   "filters": [
+     {
+       "id": "form", 
+       "components": [
+         "captcha",
+         "checkbox",
+         "checkbox-group",
+         "date-input",
+         "drop-down",
+         "email",
+         "file-input",
+         "form-accordion",
+         "form-button",
+         "form-fragment",
+         "form-image",
+         "form-modal",
+         "form-reset-button",
+         "form-submit-button",
+         "number-input",
+         "panel",
+         "plain-text",
+         "radio-group",
+         "rating",
+         "telephone-input",
+         "text-input",
+         "tnc",
+         "wizard",
+         "range"
+       ]
+     }
+   ]
+   ```
 
 ![komponentfilter](/help/edge/docs/forms/universal-editor/assets/custom-component-form-file.png)
 
 ### &#x200B;4. Registrera din anpassade komponent
 
 Om du vill att formulärblocket ska känna igen den anpassade komponenten och läsa in dess egenskaper som definierats i komponentmodellen vid formulärredigeringen, lägger du till värdet `fd:viewType` från komponentdefinitionen i filen `mappings.js`.
+
 Så här registrerar du en komponent:
+
 1. Navigera till filen `/blocks/form/mappings.js`.
 1. Leta reda på `customComponents[]`-arrayen.
 1. Lägg till värdet `fd:viewType` från arrayen `definitions[]` i arrayen `customComponents[]`.
@@ -347,7 +346,7 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    height: 5px;
    border-radius: 5px;
    border: none;
-   background-image: linear-gradient(to right, #ADD8E6 calc(100% * var(--current-steps)/var(--total-steps)), #C5C5C5 calc(100% * var(--current-steps)/var(--total-steps)));
+   background-image: linear-gradient(to right, #ADD8E6 calc(100% - var(--current-steps)/var(--total-steps)), #C5C5C5 calc(100% - var(--current-steps)/var(--total-steps)));
    }
    
    main .form .range-widget-wrapper.decorated input[type="range"]:focus {
@@ -359,18 +358,18 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    width: 25px;
    height: 25px;
    border-radius: 50%;
-   background: #00008B; /* Dark Blue */
-   border: 3px solid #00008B; /* Dark Blue */
+   background: #00008B; /- Dark Blue */
+   border: 3px solid #00008B; /- Dark Blue */
    cursor: pointer;
    outline: 3px solid #fff;
    }
    
    .range-widget-wrapper.decorated input[type="range"]:focus::-webkit-slider-thumb {
-   border-color: #00008B; /* Dark Blue */
+   border-color: #00008B; /- Dark Blue */
    }
    
    .range-widget-wrapper.decorated .range-bubble {
-   color: #00008B; /* Dark Blue */
+   color: #00008B; /- Dark Blue */
    font-size: 20px;
    line-height: 28px;
    position: relative;
@@ -408,7 +407,7 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    const bubble = element.querySelector('.range-bubble');
    // during initial render the width is 0. Hence using a default here.
    const bubbleWidth = bubble.getBoundingClientRect().width || 31;
-   const left = `${(current / total) * 100}% - ${(current / total) * bubbleWidth}px`;
+   const left = `${(current / total) - 100}% - ${(current / total) - bubbleWidth}px`;
    bubble.innerText = `${value}`;
    const steps = {
        '--total-steps': Math.ceil((max - min) / step),
@@ -461,18 +460,18 @@ Skärmbilden nedan visar den uppdaterade intervallkomponenten.
 
 ## Frågor och svar
 
-* **Om jag lägger till en stil i både component.css och forms.css, vilket prioriterar jag?**
+- **Om jag lägger till en stil i både component.css och forms.css, vilket prioriterar jag?**
 När format definieras i både `component.css` och **forms.css** prioriteras `component.css` . Detta beror på att format på komponentnivå är mer specifika och åsidosätter globala format från `forms.css`.
 
-* **Min anpassade komponent visas inte i listan över tillgängliga komponenter i Universal Editor. Hur kan jag åtgärda det här?**
+- **Min anpassade komponent visas inte i listan över tillgängliga komponenter i Universal Editor. Hur kan jag åtgärda det här?**
 Om din anpassade komponent inte visas kontrollerar du följande filer för att säkerställa att komponenten är korrekt registrerad:
-   * **component-definition.json**: Verifiera att komponenten är korrekt definierad.
-   * **component-filters.json**: Kontrollera att komponenten tillåts i rätt avsnitt.
-   * **component-models.json**: Bekräfta att komponentmodellen är korrekt konfigurerad.
+   - **component-definition.json**: Verifiera att komponenten är korrekt definierad.
+   - **component-filters.json**: Kontrollera att komponenten tillåts i rätt avsnitt.
+   - **component-models.json**: Bekräfta att komponentmodellen är korrekt konfigurerad.
 
 ## Bästa praxis
 
-* Vi rekommenderar att du [konfigurerar en lokal AEM-utvecklingsmiljö](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#set-up-local-aem-development-environment) för att utveckla anpassade format och komponenter lokalt.
+- Vi rekommenderar att du [konfigurerar en lokal AEM-utvecklingsmiljö](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#set-up-local-aem-development-environment) för att utveckla anpassade format och komponenter lokalt.
 
 
 ## Extra byte
@@ -497,19 +496,17 @@ Om din anpassade komponent inte visas kontrollerar du följande filer för att s
 ### FieldTypes som stöds
 
 FieldTypes som stöds för formulär är:
-* text-input
-* tal-input
-* date-input
-* panel
-* kryssruta
-* nedrullningsbar
-* alternativgrupp
-* normal text
-* file-input
-* e-post
-* image
-* knapp
 
-## Se även
+- text-input
+- tal-input
+- date-input
+- panel
+- kryssruta
+- nedrullningsbar
+- alternativgrupp
+- normal text
+- file-input
+- e-post
+- image
+- knapp
 
-{{universal-editor-see-also}}

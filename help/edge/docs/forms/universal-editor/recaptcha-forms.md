@@ -1,205 +1,369 @@
 ---
-title: Skydda din Forms med reCAPTCHA - en visuell guide
-description: Lär dig hur du enkelt kan lägga till Google reCAPTCHA i dina Edge Delivery Services-formulär för att förhindra skräppost och robotmaterial
+title: Lägg till Google reCAPTCHA i Forms i Universal Editor
+description: Guide till hur man implementerar Google reCAPTCHA-skydd i Edge Delivery Services-formulär för att förhindra skräppost och automatiska attacker
 feature: Edge Delivery Services
 keywords: reCAPTCHA in forms, Using reCAPTCHA in Universal Editor, Add reCAPTCHA in forms, form security, spam protection
-role: Developer
+role: Developer, Admin
+level: Intermediate
 exl-id: 1f28bd13-133f-487e-8b01-334be7c08a3f
-source-git-commit: babddee34b486960536ce7075684bbe660b6e120
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1290'
 ht-degree: 0%
 
 ---
 
 
-# Skydda din Forms mot skräppost med Google reCAPTCHA
+# Lägg till Google reCAPTCHA i Forms i Universal Editor
 
-<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> med ditt GitHub-organisationsnamn och databasnamn.</span>
+Google reCAPTCHA hjälper till att skydda formulär genom att skilja mellan människor och automatiserade affärssystem. Den här guiden förklarar hur du implementerar både reCAPTCHA Enterprise- och Standard-versioner i Universal Editor.
 
+**Mål:**
 
+- Välj lämplig reCAPTCHA-lösning
+- Konfigurera reCAPTCHA Enterprise eller Standard
+- Lägg till reCAPTCHA i formulären
+- Validera och testa implementeringen
+- Övervaka och optimera prestanda
 
-## Varför ska du använda reCAPTCHA i formulären?
+## Förutsättningar
+
+Innan du börjar bör du kontrollera följande:
+
+### Åtkomstkrav
+
+- Åtkomst till redigering i AEM as a Cloud Service
+- Universell redigeringsåtkomst med formulärredigeringsbehörigheter
+- Registrering i programmet för tidig åtkomst för reCAPTCHA-funktioner
+
+### Tekniska krav
+
+- Aktivt Google-konto
+- För företag: Google Cloud Platform-projekt med fakturering aktiverad
+- Standard: Google reCAPTCHA-konto
+- Bekräftat domänägarskap för formulären
+
+### Kunskapskrav
+
+- Grundläggande förståelse för AEM Forms och Universal Editor
+- Förtrogenhet med molntjänstkonfigurationer
+- Förståelse av säkerhetsbegrepp för formulär
+
+## Varför ska du använda reCAPTCHA i din Forms?
 
 | ![Säkerhet](/help/edge/docs/forms/universal-editor/assets/security.svg) | ![Punktskydd](/help/edge/docs/forms/universal-editor/assets/bot-protection.svg) | ![Användarupplevelse](/help/edge/docs/forms/universal-editor/assets/user-experience.svg) |
 |:-------------:|:-------------:|:-------------:|
 | **Förbättrat skydd** | **Förebyggande av skräppost** | **Smidig användarupplevelse** |
-| Skydda era formulär mot bedrägliga aktiviteter och skadliga attacker | Slipp automatiserade bollar från att översvämma era formulär med irrelevant eller skadligt innehåll | Den osynliga reCAPTCHA-funktionen fungerar bakom kulisserna utan att störa berättigade användare |
+| Skydda blanketterna mot bedrägliga aktiviteter och attacker | Förhindra att automatiska starter skickar in formulär | Invisible reCAPTCHA stör inte berättigade användare |
 
-Ett skatteberäkningsformulär med känslig ekonomisk information behöver till exempel skyddas mot missbruk. reCAPTCHA verifierar att inskickade data kommer från verkliga användare, inte från automatiserade system.
+**Nyckelbegrepp:** reCAPTCHA använder maskininlärning för att analysera användarbeteende och tilldelar ett poängvärde (0,0 till 1,0) som anger sannolikheten för mänsklig interaktion. Högre poäng visar på humana användare, lägre poäng tyder på boter.
+
+**Exempel:** En formulärhantering för momsberäkning som hanterar känsliga data kräver skydd mot automatiserade attacker. reCAPTCHA verifierar att inskickade data kommer från verkliga användare, inte från början.
 
 ## Välj din reCAPTCHA-lösning
 
-Edge Delivery Services Forms har stöd för två Google reCAPTCHA-alternativ:
+Edge Delivery Services Forms har stöd för två Google reCAPTCHA-alternativ. Använd följande kriterier för att välja rätt lösning:
 
-| ![reCAPTCHA Enterprise](/help/edge/docs/forms/universal-editor/assets/enterprise.svg) | ![reCAPTCHA Standard](/help/edge/docs/forms/universal-editor/assets/standard.svg) |
-|:-------------:|:-------------:|
-| [**reCAPTCHA Enterprise**](#set-up-recaptcha-enterprise) | [**reCAPTCHA Standard**](#set-up-recaptcha-standard) |
-| Förstklassig upptäckt av bedrägeri i företagsklass med ytterligare funktioner och anpassningar | Kostnadsfri tjänst med poängbaserad identifiering som fungerar osynligt i bakgrunden |
-| Bäst för: Stora organisationer med komplexa säkerhetsbehov | Bäst för: Små till medelstora projekt med grundläggande skyddsbehov |
+### Snabbbeslutshandbok
 
-Båda alternativen använder poängbaserad identifiering (0,0 till 1,0) för att identifiera mänsklig interaktion jämfört med robotinteraktion utan att störa användarupplevelsen.
+**Använd reCAPTCHA Enterprise om du har:**
+
+- Formulär för högtrafik (>10 000 förfrågningar/månad)
+- Strikta kompatibilitetskrav (GDPR, SOX, HIPAA)
+- Behovet av avancerad analys och rapportering
+- Budget för premiumsäkerhetsfunktioner
+- Komplexa driftsättningar i flera domäner
+
+**Använd reCAPTCHA-standard om du har:**
+
+- Låg till måttlig trafik (&lt;10 000 förfrågningar/månad)
+- Grundläggande säkerhetsbehov
+- Begränsad budget (kostnadsfri nivå)
+- Enkel konfiguration med en domän
+- Är nytt för reCAPTCHA
+
+### Detaljerad jämförelse
+
+| **Funktion** | **reCAPTCHA Enterprise** | **reCAPTCHA Standard** |
+|-------------|--------------------------|------------------------|
+| **Kostnad** | Betald (användarbaserad prissättning) | Kostnadsfritt |
+| **Begärandegräns** | Obegränsad | 1 miljon förfrågningar/månad |
+| **Avancerad analys** | Detaljerad rapportering | Endast grundläggande statistik |
+| **Anpassade regler** | Kontospecifika regler | Endast globala regler |
+| **Stöd för flera domäner** | Avancerad hantering | Grundläggande support |
+| **SLA** | 99,9 % garanti för drifttid | Bästa försök |
+| **Support** | Företagssupport | Community-stöd |
+| **Efterlevnad** | Företag | Standardiserad kompatibilitet |
+
+**Båda lösningarna innehåller:**
+
+- Poängbaserad detektering (skala 0,0 till 1,0)
+- Osynlig åtgärd (ingen användarinteraktion krävs)
+- Maskinininlärningsdriven robotavkänning
+- Riskbedömning i realtid
 
 ## Konfigurera reCAPTCHA Enterprise
 
-### Steg 1: Hämta dina Google Cloud-autentiseringsuppgifter
 
-Innan du konfigurerar reCAPTCHA Enterprise behöver du:
++++ Steg 1: Förbered Google Cloud-miljön
 
-- Ett [Google Cloud-projekt](https://cloud.google.com/recaptcha/docs/prepare-environment#before-you-begin) med ditt [projekt-ID](https://support.google.com/googleapi/answer/7014113)
-- [reCAPTCHA Enterprise API aktiverat](https://cloud.google.com/recaptcha/docs/prepare-environment#enable-api) för ditt projekt
-- En [API-nyckel](https://console.cloud.google.com/apis/credentials) för autentisering
-- En [webbplatsnyckel](https://console.cloud.google.com/security/recaptcha) för din domän
+**Krav:**
 
-### Steg 2: Skapa en molnkonfigurationsbehållare
+1. Google Cloud Project med fakturering aktiverad
+2. Projekt-ID (från GCP-kontrollpanelen)
+3. Domänverifiering för formulär
+4. Administratörsåtkomst till GCP och AEM
+
+**Inställningar:**
+
+1. Skapa eller välja ett Google Cloud-projekt
+   - Gå till [Google Cloud Console](https://console.cloud.google.com/)
+   - Skapa ett nytt projekt eller välj ett befintligt
+   - Anteckna ditt projekt-ID
+
+2. Aktivera reCAPTCHA Enterprise API
+   - Gå till API:er och tjänster > Bibliotek
+   - Sök efter&quot;reCAPTCHA Enterprise API&quot;
+   - Klicka på Aktivera
+
+3. Skapa API-autentiseringsuppgifter
+   - Gå till API:er och tjänster > Autentiseringsuppgifter
+   - Klicka på Skapa autentiseringsuppgifter > API-nyckel
+   - Kopiera och lagra API-nyckeln
+
+4. Skapa webbplatsnyckel
+   - Gå till Security > reCAPTCHA Enterprise
+   - Klicka på Skapa nyckel
+   - Välj poängbaserad nyckeltyp
+   - Lägg till dina domäner
+   - Ange tröskelpoäng (rekommenderas: 0,5)
+
+**Kontrollpunkt för validering:** Kontrollera att du har:
+
+- Projekt-ID
+- API-nyckel
+- Webbplatsnyckel
+- Verifierad domän i Google Cloud
+
++++
+
++++ Steg 2: Konfigurera AEM Cloud Configuration Container
 
 ![Stegvis konfiguration av molnet](/help/edge/docs/forms/universal-editor/assets/recaptcha-general-configuration.png)
+*Bild: Aktivera molnkonfigurationer för formulärbehållaren*
 
-1. Logga in på din AEM-författarinstans
-2. Navigera till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**
-3. Hitta ditt formulär och välj **Egenskaper**
-4. Aktivera **molnkonfigurationer** i dialogrutan
-5. Spara och publicera konfigurationen
+**Inställningar:**
 
-### Steg 3: Konfigurera reCAPTCHA Enterprise Service
+1. Åtkomst till konfigurationsläsaren
+   - Logga in på din AEM-författarinstans
+   - Gå till Verktyg > Allmänt > Konfigurationsläsaren
+
+2. Aktivera molnkonfigurationer
+   - Hitta formulärets konfigurationsbehållare
+   - Välj egenskaper
+   - Kontrollera molnkonfigurationer
+   - Klicka på Spara och stäng
+
+3. Verifiera konfiguration
+   - Bekräfta att molnkonfigurationer visas i behållaregenskaperna
+
+**Kontrollpunkt för validering:**
+
+- Molnkonfigurationer aktiverade för din behållare
+- Behållaren visas i Configuration Browser
+- Egenskaperna visar att molnkonfigurationer är aktiverade
+
++++
+
++++ Steg 3: Konfigurera reCAPTCHA Enterprise Service i AEM
 
 ![reCAPTCHA Enterprise configuration screen](/help/edge/docs/forms/universal-editor/assets/recaptcha-enterprise.png)
+*Bild: reCAPTCHA Enterprise-konfigurationsgränssnittet i AEM*
 
-1. Gå till **Verktyg** > **Molntjänster** > **reCAPTCHA**
-2. Navigera till formuläret och klicka på **Skapa**
-3. I dialogrutan:
-   - Välj **ReCAPTCHA Enterprise**-version
-   - Ange en titel och ett namn
-   - Lägg till ditt projekt-ID, webbplatsnyckel och API-nyckel
-   - Välj **Poängbaserad webbplatsnyckel** som nyckeltyp
-   - Ange ett tröskelvärde (0-1) för att skilja människor från bottnar
-4. Klicka på **Skapa** och publicera konfigurationen
+**Konfiguration:**
+
+1. Åtkomst till konfiguration av reCAPTCHA
+   - Gå till Verktyg > Molntjänster > reCAPTCHA
+   - Välj formulärets konfigurationsbehållare
+   - Klicka på Skapa
+
+2. Konfigurera företagsinställningar
+   - Titel: beskrivande namn (t.ex. &quot;Production reCAPTCHA&quot;)
+   - Namn: Systemnamn (autogenererat eller anpassat)
+   - Version: Välj ReCAPTCHA Enterprise
+   - Projekt-ID: Ange ditt projekt-ID för Google Cloud
+   - Webbplatsnyckel: Ange webbplatsnyckeln från Google Cloud
+   - API-nyckel: Ange din Google Cloud API-nyckel
+   - Nyckeltyp: Välj poängbaserad webbplatsnyckel
+
+3. Ange säkerhetströskel
+   - Tröskelpoäng: Ange mellan 0,0 och 1,0
+   - Rekommenderade värden:
+      - 0.7-0.9: Hög säkerhet (kan blockera vissa berättigade användare)
+      - 0.5-0.7: Balanserad säkerhet (rekommenderas)
+      - 0.1-0.5: Lägre säkerhet (tillåter fler användare)
+
+4. Spara och publicera
+   - Klicka på Skapa för att spara konfigurationen
+   - Klicka på Publicera för att göra den tillgänglig
+
+**Kontrollpunkt för validering:**
+
+- Konfigurationen har sparats
+- Alla obligatoriska fält har slutförts
+- Konfiguration publicerad och synlig
+- Inga felmeddelanden
+
++++
 
 ## Konfigurera reCAPTCHA Standard
 
-### Steg 1: Hämta API-nycklar
-
-Innan du startar [hämtar du ett API-nyckelpar för reCAPTCHA](https://www.google.com/recaptcha/admin) (platsnyckel och hemlig nyckel) från Google reCAPTCHA-konsolen.
++++Steg 1: Hämta API-nycklar för reCAPTCHA (se informationen)
 
 >[!IMPORTANT]
 >
->Edge Delivery Services Forms stöder endast **reCAPTCHA Score-baserad** version.
+> Edge Delivery Services Forms stöder endast reCAPTCHA v2 (Score-based). Använd inte kryssrutans version.
 
-### Steg 2: Skapa en molnkonfigurationsbehållare
+**Nyckelgenerering:**
 
-Följ samma steg som i Enterprise-versionen för att skapa och publicera en molnkonfigurationsbehållare.
+1. Öppna Google reCAPTCHA-konsolen
 
-### Steg 3: Konfigurera standardtjänsten reCAPTCHA
+   - Gå till [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin)
+   - Logga in med ditt Google-konto
+
+2. Skapa ny plats
+
+   - Klicka på + för att lägga till en ny plats
+   - Etikett: Ange ett beskrivande namn
+   - reCAPTCHA-typ: Välj reCAPTCHA v2 > &quot;Jag är inte en robot&quot; Osynlig
+   - Domäner: Lägg till formulärdomäner
+   - Acceptera villkoren och klicka på Skicka
+
+3. Samla in dina nycklar
+
+   - Platsnyckel: Kopiera webbplatsnyckeln (offentlig nyckel)
+   - Hemlig nyckel: Kopiera den hemliga nyckeln (privat nyckel)
+
+**Kontrollpunkt för validering:**
+
+- Webbplatsen har skapats i reCAPTCHA-konsolen
+
+- Webbplatsnyckeln har hämtats
+
+- Hemlig nyckel har hämtats
+
+- Domäner har lagts till och verifierats
+
++++
+
++++steg 2: Konfigurera AEM Cloud-konfigurationsbehållaren (se information)
+
+Följ samma procedur som i Enterprise-konfigurationen:
+
+1. Aktivera molnkonfigurationer i Configuration Browser
+
+2. Verifiera behållarkonfiguration
+
+3. Bekräfta att inställningarna sparas
+
++++
+
++++steg 3: Konfigurera standardtjänsten reCAPTCHA i AEM (se information)
 
 ![reCAPTCHA Standard configuration screen](/help/edge/docs/forms/universal-editor/assets/recaptcha.png)
+*Bild: konfigurationsgränssnittet reCAPTCHA Standard i AEM*
 
-1. Gå till **Verktyg** > **Molntjänster** > **reCAPTCHA**
-2. Navigera till formuläret och klicka på **Skapa**
-3. I dialogrutan:
-   - Välj version **ReCAPTCHA v2**
-   - Ange en titel och ett namn
-   - Lägg till din webbplatsnyckel och hemlig nyckel
-4. Klicka på **Skapa** och publicera konfigurationen
+**Konfiguration:**
 
-## Lägg till reCAPTCHA i formuläret
+1. Åtkomst till konfiguration av reCAPTCHA
 
-Nu när du har konfigurerat reCAPTCHA är det dags att lägga till det i formuläret:
+   - Gå till Verktyg > Molntjänster > reCAPTCHA
+   - Välj formulärets konfigurationsbehållare
+   - Klicka på Skapa
+
+2. Konfigurera standardinställningar
+
+   - Titel: beskrivande namn (t.ex. &quot;Standard reCAPTCHA&quot;)
+   - Namn: Systemnamn (autogenererat eller anpassat)
+   - Version: Välj ReCAPTCHA v2
+   - Webbplatsnyckel: Ange din Google reCAPTCHA-webbplatsnyckel
+   - Hemlig nyckel: Ange din hemliga nyckel för Google reCAPTCHA
+
+3. Spara och publicera
+
+   - Klicka på Skapa för att spara konfigurationen
+   - Klicka på Publicera för att göra den tillgänglig
+
+**Kontrollpunkt för validering:**
+
+- Konfiguration skapad utan fel
+
+- Båda nycklarna har angetts korrekt
+
+- Konfigurationen har publicerats
+
+- Konfigurationen visas i listan
+
++++
+
+## Lägg till reCAPTCHA i ditt formulär
+
+När du har konfigurerat tjänsten reCAPTCHA lägger du till skydd i formuläret enligt följande:
 
 ![Lägger till komponenten reCAPTCHA i ett formulär](/help/edge/docs/forms/universal-editor/assets/add-recaptcha-component.png)
+*Figur: Lägga till komponenten Osynlig Captcha i formuläret*
 
-1. Öppna formuläret i Universal Editor
-2. Navigera till sektionen Adaptivt formulär i innehållsträdet
-3. Klicka på ikonen **Lägg till** och välj **Captcha (osynlig)** i listan med adaptiva formulärkomponenter
-   - *Du kan också dra och släppa komponenten i formuläret*
-4. Klicka på **Publicera** för att uppdatera formuläret med reCAPTCHA-skydd
++++1. Öppna formulär i Universal Editor
+Gå till formuläret i AEM Sites och klicka på Redigera för att öppna det i Universell redigerare. Vänta tills redigeraren har lästs in.
 
-Formuläret är nu skyddat! Se den här:
-`https://<branch>--<repo>--<owner>.aem.live/content/forms/af/<form-name>`
+- Gå till ditt formulär i AEM Sites
+- Klicka på Redigera för att öppna i Universal Editor
+- Vänta tills redigeraren har lästs in
++++
 
-![Formulär med reCAPTCHA-skydd aktiverat](/help/edge/docs/forms/universal-editor/assets/form-with-recaptcha.png)
++++2. Leta reda på formulärstrukturen
+I innehållsträdet (den vänstra panelen) hittar du avsnittet Adaptivt formulär och expanderar formulärstrukturen så att insättningspunkter visas.
 
-## Validerar din reCAPTCHA-integrering
+- I innehållsträdet (den vänstra panelen) hittar du sektionen Adaptiv form
+- Expandera formulärstrukturen så att insättningspunkter visas
++++
 
-När du har lagt till reCAPTCHA i formuläret är det viktigt att verifiera att det fungerar som det ska. Så här validerar du implementeringen:
++++3. Lägg till reCAPTCHA-komponent
+Lägg till komponenten Captcha (osynlig) i formuläret.
 
-### Visual verification
+- Klicka på ikonen Lägg till (+) i formuläravsnittet
+- Välj Captcha (osynlig) i komponentlistan
+- Du kan också dra och släppa komponenten från komponentpanelen
++++
 
-Medan reCAPTCHA v2 (Score-based) fungerar osynligt kan du bekräfta dess närvaro genom att:
++++4. Konfigurera komponent (valfritt)
+Markera den nya Captcha-komponenten och verifiera att den använder din reCAPTCHA-konfiguration.
 
-1. **Inspektera sidkällan**: Högerklicka på formulärsidan och välj Visa sidan Source.
-   - Leta efter om skriptet reCAPTCHA ingår i webbplatsnyckeln
-   - Exempel: `<script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>`
+- Markera den nya Captcha-komponenten
+- Verifiera på egenskapspanelen att den använder din reCAPTCHA-konfiguration
+- Ingen ytterligare konfiguration krävs för grundläggande konfiguration
++++
 
-2. **Kontrollera nätverksförfrågningar**: Använda verktyg för webbläsarutvecklare (F12)
-   - Skicka formuläret och sök efter nätverksförfrågningar till `google.com/recaptcha`
-   - Dessa förfrågningar indikerar att reCAPTCHA är aktivt i ditt formulär
++++5. Publicera dina ändringar
+Publicera ändringarna och verifiera att det inte finns några fel.
 
-### Funktionstestning
+- Klicka på Publicera i Universal Editor
+- Vänta på bekräftelse
+- Kontrollera att inga fel visas
++++
 
-Så här kontrollerar du att reCAPTCHA faktiskt skyddar ditt formulär:
+### Verifiera implementering
 
-1. **Normalt sändningstest**:
-   - Fyll i formuläret med giltiga data
-   - Skicka in formuläret i normal mänsklig takt
-   - Verifiera att formuläret har skickats
+Ditt skyddade formulär finns nu på:
 
-2. **Punktliknande beteendetest**:
-   - Öppna formuläret i ett inkognito/privat fönster
-   - Fyll i formuläret extremt snabbt (automatiserat beteende)
-   - Skicka flera gånger i snabb följd
-   - Om reCAPTCHA fungerar kan dessa inskickade data vara blockerade eller flaggade
+```
+https://<branch>--<repo>--<owner>.aem.live/content/forms/af/
+<form-name>
+```
 
-3. **Kontrollera inskickningsposter för formulär**:
-   - Granska inskickade data
-   - Varje tävlingsbidrag ska innehålla en reCAPTCHA-poäng
-   - Poäng närmare 1.0 indikerar troliga användare
-   - Poäng närmare 0.0 indikerar möjlig robotaktivitet
+**Exempel-URL:**
 
-### Använda administratörskonsolen för Google reCAPTCHA
-
-För Enterprise-användare innehåller Google Cloud Console detaljerade analyser:
-
-1. Gå till [Google Cloud Console](https://console.cloud.google.com/)
-2. Navigera till **Säkerhet** > **reCAPTCHA**
-3. Välj webbplatsnyckel
-4. Granska bedömningsdiagrammen och statistiken
-5. Leta efter:
-   - Trafikmönster
-   - Poängfördelningar
-   - Potentiellt bedrägliga aktiviteter
-
-För användare av Standard reCAPTCHA finns grundläggande statistik i [reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin/).
-
-### Justera implementeringen
-
-Baserat på dina valideringsresultat:
-
-- Om berättigade användare blockeras bör du överväga att sänka tröskelvärdet
-- Om du fortfarande får skräppost bör du överväga att öka tröskelvärdet
-- Kontrollera konfigurationen av reCAPTCHA och se till att alla nycklar är korrekt angivna för beständiga problem
-
-Kom ihåg att reCAPTCHA använder maskininlärning för att förbättra bilden över tiden, så att effektiviteten kan öka när man lär sig platsens trafikmönster.
-
-## Felsökning och vanliga frågor
-
-| ![Fråga](/help/edge/docs/forms/universal-editor/assets/question.svg) | ![Svar](/help/edge/docs/forms/universal-editor/assets/answer.svg) |
-|:-------------:|:-------------:|
-| **Vad händer om jag inte skapar någon reCAPTCHA-konfiguration?** | Systemet söker efter en konfiguration i den globala behållaren. Om det inte finns något fel får du ett felmeddelande. |
-| **Vad händer om jag skapar flera konfigurationer?** | Systemet använder automatiskt den första konfigurationen som skapas. |
-| **Varför syns inte mina ändringar på den publicerade URL:en?** | Kontrollera att du publicerar om formuläret när du har gjort ändringarna. |
-| **Vilka reCAPTCHA-tjänster stöds?** | Edge Delivery Services Forms stöder endast poängbaserade reCAPTCHA-tjänster. |
-
-## Nästa steg
-
-Nu när du har skyddat formuläret med reCAPTCHA:
-
-- **Verifiera implementeringen**: Följ [valideringsstegen](#-validating-your-recaptcha-integration) för att säkerställa att reCAPTCHA fungerar korrekt
-- **Övervakningsprestanda**: Kontrollera regelbundet om Google reCAPTCHA-instrumentpanelen innehåller misstänkta aktiviteter och poängfördelningar
-- **Finjustera inställningarna**: Justera tröskelvärdet baserat på dina säkerhetsbehov och feedback från användarupplevelsen
-- **Håll dig uppdaterad**: Håll din reCAPTCHA-implementering aktuell med Google senaste säkerhetsrekommendationer
-- **Undervisa ditt team**: Dela kunskap om hur reCAPTCHA fungerar och hur analyserna kan tolkas
-- **Samla in feedback**: Övervaka användarupplevelsen för att säkerställa att berättigade användare inte blockeras
-
-Kom ihåg att effektivt formulärskydd är en pågående process som kräver regelbunden övervakning och justeringar.
-
-
+```
+https://main--my-forms--company.aem.live/content/forms/af/
+contact-form
+```

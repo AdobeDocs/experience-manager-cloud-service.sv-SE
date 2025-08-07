@@ -4,9 +4,9 @@ description: Kom igång med Edge Delivery Services för AEM Forms. Skapa perfekt
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 0cf881a2-3784-45eb-afe8-3435e5e95cf4
-source-git-commit: 67416999d068af6350748d610e7c1c7b1d991bc4
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '805'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Dessa formulär skickar data direkt till en Microsoft Excel- eller Google Sheets
 
 Kontrollera att du har utfört följande steg innan du börjar:
 
-* Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) [lade till Adaptivt Forms-block i ditt befintliga AEM-projekt](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
+- Konfigurera ett [AEM-projekt med AEM Forms-standardmallen](/help/edge/docs/forms/tutorial.md#create-a-new-aem-project-pre-configured-with-adaptive-forms-block) [lade till Adaptivt Forms-block i ditt befintliga AEM-projekt](/help/edge/docs/forms/tutorial.md#add-adaptive-forms-block-to-your-existing-aem-project) och klona motsvarande GitHub-databas på din lokala dator.
 <!--In this document, the local folder of your Edge Delivery Services (EDS) project is referred as `[EDS Project repository]`.  -->
-* Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Använda SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
+- Se till att du har tillgång till Google Sheets eller Microsoft SharePoint. Information om hur du konfigurerar Microsoft SharePoint som innehållskälla finns i [Använda SharePoint](https://www.aem.live/docs/setup-customer-sharepoint).
 
 
 
@@ -54,10 +54,10 @@ After completing these steps, the Adaptive Forms Block is successfully added to 
 
 Ensure a smooth GitHub build process by addressing potential issues:
 
-* **Resolve Module Path Error:**
+- **Resolve Module Path Error:**
     If you encounter the error "Unable to resolve path to module "'../../scripts/lib-franklin.js'", navigate to the [EDS Project]/blocks/forms/form.js file. Update the import statement by replacing the lib-franklin.js file with the aem.js file.
 
-* **Handle Linting Errors:**
+- **Handle Linting Errors:**
     Should you come across any linting errors, you can bypass them. Open the [EDS Project]/package.json file and modify the "lint" script from "lint": "npm run lint:js && npm run lint:css" to "lint": "echo 'skipping linting for now'". Save the file and commit the changes to your GitHub project. -->
 
 +++ Steg 1: Skapa ett formulär med Microsoft Excel eller Google Sheet.
@@ -105,9 +105,9 @@ Så här fortsätter du med att skapa formulär:
        https://<branch>--<repository>--<owner>.aem.live/<form-path>/<form-file-name>.json
    ```
 
-   * `<branch>` refererar till din GitHub-databas.
-   * `<repository>` betecknar din GitHub-databas.
-   * `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
+   - `<branch>` refererar till din GitHub-databas.
+   - `<repository>` betecknar din GitHub-databas.
+   - `<owner>` refererar till användarnamnet för ditt GitHub-konto som är värd för din GitHub-databas.
 
    Om projektdatabasen till exempel heter&quot;weFinance&quot; finns den under kontot&quot;wkndform&quot; och du använder huvudgrenen ser URL-adressen ut så här:
 
@@ -164,6 +164,3 @@ Till nu har du förberett formulärets struktur. Nu kan du förhandsgranska form
 [Förbered kalkylbladet](/help/edge/docs/forms/submit-forms.md) för att börja ta emot data när formulär skickas.
 
 
-## Se även
-
-{{see-more-forms-eds}}

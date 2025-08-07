@@ -4,9 +4,9 @@ description: Använd Google reCAPTCHA i ett formulär för Edge Delivery Service
 feature: Edge Delivery Services
 exl-id: ac104e23-f175-435f-8414-19847efa5825
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -27,30 +27,31 @@ Edge Delivery Services har bara stöd för **Score based(v3)-reCAPTCHA** för de
 
 
 I slutet av den här artikeln lär du dig att:
-* [Aktivera Google reCAPTCHA för ett enda formulär](#enable-google-recaptchas-for-a-single-form)
-* [Aktivera reCAPTCHA för alla formulär på din webbplats](#enable-recaptcha-for-all-the-forms)
+- [Aktivera Google reCAPTCHA för ett enda formulär](#enable-google-recaptchas-for-a-single-form)
+- [Aktivera reCAPTCHA för alla formulär på din webbplats](#enable-recaptcha-for-all-the-forms)
 
 ## Krav
 
-* Påbörja utvecklingen av Edge Delivery Services i Forms genom att följa stegen som beskrivs i [Skapa ett formulär med Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md).
-* Registrera din domän med [Google reCAPTCHA och få inloggningsuppgifter](https://www.google.com/recaptcha/admin/create).
+- Börja utveckla Edge Delivery Services Forms genom att följa stegen som beskrivs i [Skapa ett formulär med hjälp av Adaptivt Forms-block](/help/edge/docs/forms/create-forms.md).
+- Registrera din domän med [Google reCAPTCHA och få inloggningsuppgifter](https://www.google.com/recaptcha/admin/create).
 
 ## Aktivera Google reCAPTCHA för ett enda formulär {#enable-google-recaptchas-for-a-single-form}
 
 Att möjliggöra för Google reCAPTCHA att fylla i ett och samma formulär innebär att Google reCAPTCHA-tjänst integreras i ett specifikt webbformulär för att förhindra automatiskt missbruk eller skräppost.
 
 Så här aktiverar du Google reCAPTCHA för ett enda formulär:
+
 1. [Konfigurera den hemliga reCAPTCHA-nyckeln i projektkonfigurationsfilen](#configure-secret-key)
 1. [Lägg till platsnyckeln reCAPTCHA i formuläret](#add-site-key)
 
-Om du vill börja konfigurera reCaptcha i Edge Delivery Servicens Forms, se följande [kalkylblad](/help/edge/docs/forms/assets/recaptcha.xlsx) som innehåller formulärdefinitionen för ett formulär.
+Om du vill börja konfigurera reCaptcha i Edge Delivery Services Forms ska du läsa följande [kalkylblad](/help/edge/docs/forms/assets/recaptcha.xlsx) som innehåller formulärdefinitionen för ett formulär.
 
 ### Konfigurera den hemliga reCAPTCHA-nyckeln i projektkonfigurationsfilen {#configure-secret-key}
 
-Webbplatsens hemlighet för en domän som är registrerad hos Google reCAPTCHA läggs till för att projicera konfigurationsfilen (`.helix/config`) i din AEM projektmapp på Microsoft SharePoint eller Google Drive. Så här lägger du till platshemlighet i konfigurationsfilen:
+Webbplatsens hemlighet för en domän som är registrerad hos Google reCAPTCHA läggs till för att projicera konfigurationsfilen (`.helix/config`) i din AEM-projektmapp på Microsoft SharePoint eller Google Drive. Så här lägger du till platshemlighet i konfigurationsfilen:
 
-1. Gå till AEM projektmapp på Microsoft® SharePoint eller Google Drive.
-1. Skapa filen `.helix/config.xlsx` i din AEM projektmapp på Microsoft SharePoint-platsen eller filen `.helix/config` AEM projektmappen på din Google-enhet.
+1. Gå till AEM Project-mappen i Microsoft® SharePoint eller Google Drive.
+1. Skapa filen `.helix/config.xlsx` i AEM Project-mappen på Microsoft SharePoint Site eller filen `.helix/config` i AEM Project-mappen på Google Drive.
 
    >[!NOTE]
    >
@@ -58,13 +59,13 @@ Webbplatsens hemlighet för en domän som är registrerad hos Google reCAPTCHA l
 
 1. Öppna filen `config` och lägg till följande nyckel- och värdepar:
 
-   * **captcha.secrets**: Hemligt nyckelvärde för Google reCAPTCHA
-   * **captcha.type**: reCAPTCHA v2
+   - **captcha.secrets**: Hemligt nyckelvärde för Google reCAPTCHA
+   - **captcha.type**: reCAPTCHA v2
 
    >[!NOTE]
    >
-   >  * Du kan hämta reCAPTCHA-nycklarna från [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin).
-   >  * Du måste ange värdet **captcha.type** i filen `config` som **reCAPTCHA v2**.
+   >  - Du kan hämta reCAPTCHA-nycklarna från [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin).
+   >  - Du måste ange värdet **captcha.type** i filen `config` som **reCAPTCHA v2**.
 
    Se skärmbilden av en projektkonfigurationsfil nedan:
 
@@ -78,10 +79,10 @@ Webbplatsens hemlighet för en domän som är registrerad hos Google reCAPTCHA l
 
 Webbplatsnyckeln för en domän som är registrerad hos Google reCAPTCHA läggs till i kalkylbladet för det formulär som ska skyddas. Så här lägger du till platsnyckeln i ett formulär:
 
-1. Gå till AEM projektmapp på Microsoft® SharePoint eller Google Drive och öppna kalkylbladet. Du kan också skapa nya kalkylblad för ett formulär.
+1. Gå till AEM Project-mappen i Microsoft® SharePoint eller Google Drive och öppna kalkylbladet. Du kan också skapa nya kalkylblad för ett formulär.
 1. Infoga en rad i kalkylbladet och lägg till ett nytt fält som CAPTCHA, inklusive följande information:
-   * **typ**: captcha
-   * **värde**: Google reCAPTCHA-webbplatsnyckelvärde
+   - **typ**: captcha
+   - **värde**: Google reCAPTCHA-webbplatsnyckelvärde
 
    Se skärmbilden nedan som visar kalkylbladet med den nya radtypen CAPTCHA:
 
@@ -92,7 +93,7 @@ Webbplatsnyckeln för en domän som är registrerad hos Google reCAPTCHA läggs 
    >  Du kan hämta reCAPTCHA-nycklarna från [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin).
 
 1. Spara kalkylbladet.
-1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska och publicera kalkylbladet.
+1. Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska och publicera bladet.
 
 När du har lagt till en ny rad i formulärdefinitionen visas ett reCAPTCHA-märke längst ned till höger i formuläret. Detta säkerställer att formuläret nu skyddas mot bedrägliga aktiviteter, skräppost och missbruk.
 
@@ -104,7 +105,7 @@ Om du vill tillämpa Google reCAPTCHA på alla formulär på din webbplats som a
 
 1. [Uppdatera Google reCAPTCHA Site Key i filen recaptcha.js](#1-update-google-recaptcha-site-key-in-recaptchajs-file)
 1. [Distribuera filen och bygg projektet](#2-deploy-the-file-and-build-the-project)
-1. [Förhandsgranska webbplatsen med AEM](#3-preview-the-site-using-the-aem-sidekick)
+1. [Förhandsgranska webbplatsen med AEM sidspark](#3-preview-the-site-using-the-aem-sidekick)
 
 ### Uppdatera Google reCAPTCHA-webbplatsnyckel i filen recaptcha.js
 
@@ -124,13 +125,9 @@ Om du vill tillämpa Google reCAPTCHA på alla formulär på din webbplats som a
 
 Distribuera den uppdaterade `recaptcha.js`-filen till ditt GitHub-projekt och verifiera en lyckad version.
 
-### Förhandsgranska webbplatsen med AEM
+### Förhandsgranska webbplatsen med AEM sidspark
 
 Använd [AEM Sidekick](https://www.aem.live/developer/tutorial#preview-and-publish-your-content) för att förhandsgranska och publicera webbplatsen.
 
 Emblemet reCAPTCHA visas för alla formulär på din webbplats.
-
-## Se även
-
-{{see-more-forms-eds}}
 

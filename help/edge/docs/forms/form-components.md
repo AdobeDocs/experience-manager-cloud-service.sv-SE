@@ -4,9 +4,9 @@ description: Det här dokumentet innehåller en översikt över de formulärkomp
 feature: Edge Delivery Services
 exl-id: 7d087d41-9313-482a-a905-8955b0999781
 role: Admin, Architect, Developer
-source-git-commit: 4a8153ffbdbc4da401089ca0a6ef608dc2c53b22
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -26,17 +26,17 @@ Här är en översikt över de tillgängliga komponenterna:
 
 ### Indatafält
 
-* Alla giltiga HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types) och [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea). Till exempel knapp, kryssruta, färg, datum, datum/tid-lokal, e-post, fil, dold, bild, månad, nummer, lösenord, radio, intervall, återställning, skicka, tel, text, tid, url och vecka.
+- Alla giltiga HTML5 [indatatyper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types) och [textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea). Till exempel knapp, kryssruta, färg, datum, datum/tid-lokal, e-post, fil, dold, bild, månad, nummer, lösenord, radio, intervall, återställning, skicka, tel, text, tid, url och vecka.
 
 ### Markeringskontroller
 
-* [Kryssrutegrupper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox): Om du vill välja flera alternativ.
-* [Radiogrupper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio): Om du vill välja ett enskilt alternativ från en grupp.
-* [Listrutor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select): Om du vill visa en meny med alternativ. Till exempel listruta.
+- [Kryssrutegrupper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox): Om du vill välja flera alternativ.
+- [Radiogrupper](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio): Om du vill välja ett enskilt alternativ från en grupp.
+- [Listrutor](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select): Om du vill visa en meny med alternativ. Till exempel listruta.
 
 ### Behållare
 
-* Paneler/behållare: Om du vill gruppera relaterade formulärelement tillsammans blir det enklare att organisera. Det är en kombination av [fältuppsättningen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) och [teckenförklaringen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend).
+- Paneler/behållare: Om du vill gruppera relaterade formulärelement tillsammans blir det enklare att organisera. Det är en kombination av [fältuppsättningen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) och [teckenförklaringen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/legend).
 
 
 ## Komponentegenskaper
@@ -46,7 +46,7 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 
 | Egenskap | Tillämpliga komponenter | Information |
 |--------------|------------------------------|----------------------------------------------------------------------|
-| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptivt Forms-block har stöd för <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga indatatyper i HTML5</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</a> och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fältset</a> som typ. |
+| Typ | Alla | Anger komponentens typ. Den här egenskapen avgör inmatningsfältets beteende och utseende. För textinmatningar kan till exempel typen vara &quot;text&quot;, &quot;email&quot; för e-postinmatningar och &quot;password&quot; för lösenordsinmatningar. Adaptivt Forms-block har stöd för <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types">alla giltiga HTML5-indatatyper</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea">textarea</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">select</a> och <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset">fieldSet</a> som typ. |
 | Namn | Alla | Identifierar komponenten för att skicka formulär. Attributet name används när formulärdata skickas till servern och associerar användarindata med ett specifikt fält. |
 | Etikett | Alla | Ger kontextuell information till användare. Etiketten är den text som visas bredvid komponenten och ger användarna vägledning om vilken information som ska anges. |
 | Värde | Text, Lösenord, E-post, Nummer, Intervall, Datum och dess varianter (datetime-local, month, week, time), Kryssruta, Radio, Hidden, Submit, Button | Anger komponentens startvärde. För textinmatningar, textområden och markerade element visas detta som standardtext eller standardalternativ. För alternativknappar och kryssrutekomponenter är detta det värde/de data som skickas när de markeras. Attributet value är valfritt men ska betraktas som obligatoriskt för kryssrutor och alternativinmatningar. |
@@ -64,8 +64,3 @@ Varje formulärkomponent har olika egenskaper som gör att du kan styra dess bet
 | Upprepningsbar | Alla | En boolesk egenskap för `fieldset` som anger att en viss fältuppsättning kan upprepas för angivet `Min` och `Max` antal gånger. Egenskapen `Min` ska anges till 1 eller högre, ställ inte in egenskapen `Min` på 0. |
 | Synligt uttryck | Alla | Ett synligt uttryck refererar till en kalkylbladsformel, som betecknas med taggen &#39;=&#39;, som används för att styra synligheten för ett fält. I den här formeln kan bara egenskapen value i andra fält användas, vilket gör att synlighet i fält kan hanteras enkelt i systemet. |
 | Värdeuttryck | Alla | Ett värdeuttryck refererar till en kalkylbladsformel, som betecknas med taggen &#39;=&#39;, som används för att kontrollera värdet i ett fält. I den här formeln kan bara värdeegenskapen i andra fält användas, vilket gör det enkelt att hantera fältvärdet i systemet. |
-
-
-## Se även
-
-{{see-more-forms-eds}}

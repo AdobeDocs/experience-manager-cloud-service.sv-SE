@@ -4,7 +4,7 @@ description: Lär dig hur du skapar och levererar högpresterande formulär på 
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: e1ead9342fadbdf82815f082d7194c9cdf6d799d
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Komma igång med Forms på AEM Edge Delivery Services
 
-<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsversion </a>. </span>
+<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsversion </a>. </span>
 
 Med Adobe Experience Manager (AEM) Edge Delivery Services (EDS) kan du leverera blixtsnabba, skalbara webbupplevelser i toppklass. Den här guiden förklarar **hur du skapar och publicerar formulär för dessa upplevelser** - med en tydlig rekommendationshierarki:
 
@@ -41,11 +41,11 @@ När allt är klart kan du välja rätt redigeringsmetod, förstå överförings
 
 Universell redigerare är ett visuellt dra-och-släpp-verktyg för marknadsförare och designers som kombinerar snabbhet med kraftfulla verktyg i företagsklass:
 
-* WYSIWYG redigering i realtid och förhandsgranskning av enheter.
-* Avancerade regler och gränssnitt för validering - ingen kod behövs.
-* Direkt integrering med AEM resurser, arbetsflöden och FDM (Form Data Model).
-* Smidig leverans till utvecklare för anpassade komponenter i vanilj JS/CSS.
-* Flexibla inskickningsmål: börja enkelt med **Forms Submission Service (FSS)** eller växla till **AEM Publish submit actions** när behoven växer.
+- WYSIWYG redigering i realtid och förhandsgranskning av enheter.
+- Avancerade regler och gränssnitt för validering - ingen kod behövs.
+- Direkt integrering med AEM resurser, arbetsflöden och FDM (Form Data Model).
+- Smidig leverans till utvecklare för anpassade komponenter i vanilj JS/CSS.
+- Flexibla inskickningsmål: börja enkelt med **Forms Submission Service (FSS)** eller växla till **AEM Publish submit actions** när behoven växer.
 
 > **Rekommendation**: Starta alla nya formulärprojekt med Universal Editor, såvida inte ditt team har dokumentcentrerat till 100 % och formuläret är mycket grundläggande.
 
@@ -54,10 +54,10 @@ Universell redigerare är ett visuellt dra-och-släpp-verktyg för marknadsföra
 
 Dokumentbaserad redigering passar bäst för att skapa enkla, komplexa formulär med välbekanta verktyg som Microsoft Word, Google Docs och Google Sheets. Den här metoden är idealisk för team som behöver ett snabbt och enkelt sätt att skapa formulär.
 
-* Definiera formulärfält i en tabell (dokument) eller som rader (ark).
-* Stöder grundläggande fältvalidering och Google reCAPTCHA för skräppostskydd.
-* Blankettinlämning hanteras enbart via Forms inskickningstjänst.
-* Direkt publicering - alla ändringar som görs i källdokumentet återspeglas direkt på webbplatsen utan att något driftsättningsflöde krävs.
+- Definiera formulärfält i en tabell (dokument) eller som rader (ark).
+- Stöder grundläggande fältvalidering och Google reCAPTCHA för skräppostskydd.
+- Blankettinlämning hanteras enbart via Forms inskickningstjänst.
+- Direkt publicering - alla ändringar som görs i källdokumentet återspeglas direkt på webbplatsen utan att något driftsättningsflöde krävs.
 
 
 ### Bädda in Forms i Document Authoring (DA)

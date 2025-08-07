@@ -6,7 +6,7 @@ role: User, Developer
 exl-id: bd9cb623-c272-4cdf-ad39-f97043f781a6
 hide: true
 hidefromToC: true
-source-git-commit: 1662d1c9458f05c2e511514ce8a04247da90eaf3
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 0%
@@ -37,14 +37,14 @@ AEM har flera alternativ för att skapa interaktiva och engagerande blanketter. 
 
 AEM har stöd för flera redigeringsmetoder, som alla passar olika användarbehov, kunskapsnivåer och publiceringsmål.
 
-* [Foundation Components](/help/forms/create-adaptive-form-tutorial.md): Använd Foundation Components för att skapa traditionella, interaktiva formulär. Passar bäst för formulär som integreras med äldre system eller som är beroende av etablerade arbetsflöden. Forms som skapats med Foundation Components kan bara publiceras på AEM och är inte kompatibla med Edge Delivery Services.
+- [Foundation Components](/help/forms/create-adaptive-form-tutorial.md): Använd Foundation Components för att skapa traditionella, interaktiva formulär. Passar bäst för formulär som integreras med äldre system eller som är beroende av etablerade arbetsflöden. Forms som skapats med Foundation Components kan bara publiceras på AEM och är inte kompatibla med Edge Delivery Services.
 
-* [Kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md): Använd kärnkomponenter för att skapa moderna, responsiva och skalbara formulär. De har stöd för återanvändbarhet, tillgänglighet och bättre prestanda. Forms som skapats med Core Components kan publiceras på både AEM och Edge Delivery Services, vilket ger flexibilitet på olika plattformar.
+- [Kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md): Använd kärnkomponenter för att skapa moderna, responsiva och skalbara formulär. De har stöd för återanvändbarhet, tillgänglighet och bättre prestanda. Forms som skapats med Core Components kan publiceras på både AEM och Edge Delivery Services, vilket ger flexibilitet på olika plattformar.
 
-* [Edge Delivery Services Forms](/help/edge/docs/forms/overview.md): Edge Delivery Services Forms förändrar hur formulär skapas, körs och bearbetas. Genom att utnyttja Edge Delivery Services kan man skapa snabba, säkra och lättillgängliga digitala blanketter som förbättrar användarupplevelsen och effektiviteten i verksamheten i en snabb utvecklingsmiljö. Du kan skapa Edge Delivery Services Forms på två sätt:
-   * [WYSIWYG Authoring](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md): Använd den universella redigeraren för att skapa visuella, dra-och-släpp-formulär som är idealiska för innehållsförfattare med begränsad teknisk kunskap. Forms som skapats med Universal Editor levereras med Edge Delivery Services för snabb och enkel rendering.
-   * [Dokumentbaserad redigering](/help/edge/docs/forms/tutorial.md): Använd verktyg som Microsoft Excel eller Google Sheets för att definiera formulärstruktur och innehåll. Den här metoden är användbar för företagsanvändare som föredrar kalkylbladsdrivna indata. Dessa formulär publiceras vanligtvis via Edge Delivery Services och är lämpliga för att användas i små och stora volymer.
-* [Headless Authoring](https://experienceleague.adobe.com/sv/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service): Använd API:er för att återge formulär som JSON för alla frontend, till exempel React, Angular, mobilappar eller kioskdatorer, utan att vara beroende av AEM. För närvarande stöder endast Core Components headless-leverans. Headless-formulär är idealiska för flerkanaliga användningsområden och används oberoende av AEM sidåtergivning, vilket gör dem flexibla för anpassade front-end-distributioner.
+- [Edge Delivery Services Forms](/help/edge/docs/forms/overview.md): Edge Delivery Services Forms förändrar hur formulär skapas, körs och bearbetas. Genom att utnyttja Edge Delivery Services kan man skapa snabba, säkra och lättillgängliga digitala blanketter som förbättrar användarupplevelsen och effektiviteten i verksamheten i en snabb utvecklingsmiljö. Du kan skapa Edge Delivery Services Forms på två sätt:
+   - [WYSIWYG Authoring](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md): Använd den universella redigeraren för att skapa visuella, dra-och-släpp-formulär som är idealiska för innehållsförfattare med begränsad teknisk kunskap. Forms som skapats med Universal Editor levereras med Edge Delivery Services för snabb och enkel rendering.
+   - [Dokumentbaserad redigering](/help/edge/docs/forms/tutorial.md): Använd verktyg som Microsoft Excel eller Google Sheets för att definiera formulärstruktur och innehåll. Den här metoden är användbar för företagsanvändare som föredrar kalkylbladsdrivna indata. Dessa formulär publiceras vanligtvis via Edge Delivery Services och är lämpliga för att användas i små och stora volymer.
+- [Headless Authoring](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service): Använd API:er för att återge formulär som JSON för alla frontend, till exempel React, Angular, mobilappar eller kioskdatorer, utan att vara beroende av AEM. För närvarande stöder endast Core Components headless-leverans. Headless-formulär är idealiska för flerkanaliga användningsområden och används oberoende av AEM sidåtergivning, vilket gör dem flexibla för anpassade front-end-distributioner.
 
 ### Jämförelseanalys av AEM blankettkonstruktion
 
@@ -107,7 +107,7 @@ I följande tabell finns en detaljerad jämförelse av de viktigaste funktionern
 
 ## Relaterad artikel
 
-* [Dokumentbaserad redigering med Microsoft Excel eller Google Sheets](/help/edge/docs/forms/create-forms.md)
-* [Universell redigerare för WYSIWYG-redigering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring)
-* [Skapa ett adaptivt formulär (grundkomponenter)](/help/forms/creating-adaptive-form.md)
-* [Skapa en adaptiv form (kärnkomponenter)](/help/forms/create-an-adaptive-form.md)
+- [Dokumentbaserad redigering med Microsoft Excel eller Google Sheets](/help/edge/docs/forms/create-forms.md)
+- [Universell redigerare för WYSIWYG-redigering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring)
+- [Skapa ett adaptivt formulär (grundkomponenter)](/help/forms/creating-adaptive-form.md)
+- [Skapa en adaptiv form (kärnkomponenter)](/help/forms/create-an-adaptive-form.md)

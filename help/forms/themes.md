@@ -4,7 +4,7 @@ description: Använd adaptiva formulärteman för att utforma och ge en visuell 
 feature: Adaptive Forms, Foundation Components
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
 role: User, Developer, Admin
-source-git-commit: 449ff970f3b1e4479309e52d16aacf0979a0ec41
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
 source-wordcount: '5421'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan skapa och använda teman för att anpassa ett anpassat formulär <!-- or an interactive communication-->. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Temat hanteras oberoende av varandra utan en referens till det adaptiva formuläret <!-- or interactive communication -->.
@@ -212,7 +212,7 @@ Temaredigeraren är uppdelad i två paneler:
 
 * **Arbetsyta** - visas till höger. Det visar ett exempel på adaptiv form <!--  or interactive communication --> där alla formatändringar återges omedelbart. Du kan också markera objekt direkt från arbetsytan för att leta upp format som är kopplade till dem och för att redigera formaten. En enhetsupplösningslinjal längst upp styr arbetsytan. Om du väljer en brytpunkt för upplösning från linjalen visas förhandsvisningen av exempelformuläret <!--  or interactive communication --> för respektive upplösning. Arbetsytan beskrivs mer ingående [nedan](themes.md#using-canvas).
 
-* **Sidofältet** - visas på vänster sida. Den har följande objekt:
+* **Sidpanelen*** visas på vänster sida. Den har följande objekt:
 
    * **Väljare:** Visar den komponent som valts för formatering och dess egenskaper som du kan formatera. Väljaren representerar alla komponenter av en typ. Om du väljer en textrutekomponent i ett tema för formatering ärver alla textrutor i formuläret <!-- or interactive communication --> formatet. Med väljare kan du välja en allmän komponent eller en specifik komponent för formatering. En fältkomponent är till exempel en allmän komponent och en textruta är en specifik komponent.
 
@@ -496,7 +496,7 @@ Du kan nu använda teckensnitt som är tillgängliga i en webbtjänst i det adap
 Så här konfigurerar du Adobe Fonts i Experience Manager:
 
 1. Klicka på ![Adobe Experience Manager](assets/adobeexperiencemanager.png) **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]** i författarinstansen.
-1. Navigera till och öppna alternativet **[!UICONTROL Adobe Fonts]** på sidan **[!UICONTROL Cloud Services]**. Öppna konfigurationsmappen och klicka på **[!UICONTROL Create]**.
+1. Navigera till och öppna alternativet **[!UICONTROL Cloud Services]** på sidan **[!UICONTROL Adobe Fonts]**. Öppna konfigurationsmappen och klicka på **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en rubrik för konfigurationen och klickar på **[!UICONTROL Create]**.
 
    Du omdirigeras till konfigurationssidan.

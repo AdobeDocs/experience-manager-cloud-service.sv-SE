@@ -1,216 +1,556 @@
 ---
-Title: How to use forms submission service for submitting forms?
-Description: Learn how to use forms submission service for submitting forms.
-Keywords: Use form submission service, Submit form using form submission service
+title: Forms Submission Service for Edge Delivery Services
+description: Lagra inskickade blanketter direkt i kalkylblad med Adobe värdbaserade Forms Submission Service. Lär dig hur Google Sheets, OneDrive och SharePoint integreras med konfiguration, konfiguration och API-användning.
+keywords: Forms Submission Service, Edge Delivery Services-formulär, integration av kalkylblad, Google Sheets-formulär, OneDrive-formulär, SharePoint-formulär, formulärdatainsamling
 feature: Edge Delivery Services
-Role: User, Developer
+role: User, Developer, Admin
+level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: 37b20a97942f381b46ce36a6a3f72ac019bba5b7
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '906'
+source-wordcount: '1578'
 ht-degree: 0%
 
 ---
 
-# Forms Submission Service med Edge Delivery Services Forms
+# Forms Submission Service for Edge Delivery Services
 
-<span class="preview"> Den här funktionen är tillgänglig via programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande med ditt GitHub-organisationsnamn och databasnamn från din officiella adress till <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . Om databas-URL:en till exempel är https://github.com/adobe/abc är organisationsnamnet adobe och databasnamnet abc.</span>
+Forms Submission Service är en värdbaserad lösning från Adobe som automatiskt lagrar data som skickas in direkt i kalkylblad: Google Sheets, Microsoft OneDrive eller SharePoint. Detta eliminerar behovet av komplex backend-infrastruktur samtidigt som datainsamling och -hantering i realtid tillhandahålls.
 
-Med tjänsten Forms Submission kan du lagra data från de inskickade formulären i alla kalkylblad, t.ex. OneDrive, SharePoint eller Google Sheets, så att du enkelt kan komma åt och hantera formulärdata på den kalkylbladsplattform du föredrar.
+>[!NOTE]
+>
+>**Tidig åtkomst:** Den här funktionen är för närvarande tillgänglig via tidig åtkomst. Om du vill begära åtkomst skickar du [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med din GitHub-organisations- och databasnamn från din officiella adress.
+>
+>**Exempel:** För databas `https://github.com/adobe/abc`, skicka: organisation = `adobe`, databas = `abc`
+
+## Ökning
 
 ![Forms överföringstjänst](/help/forms/assets/form-submission-service.png)
+*Bild: Arbetsflöde för Forms Sändningstjänst - från formulärsändning till kalkylarkslagring*
 
-## Fördelar med att använda tjänsten Forms Submission
+### Vem ska använda den här tjänsten?
 
-Några fördelar med att använda Forms Submission Service med kalkylblad är:
+**Perfekt för:**
 
-* **Direktintegrering**: Du kan konfigurera formulär så att de skickar data direkt till ett visst kalkylblad, vilket eliminerar behovet av manuell dataöverföring.
-* **Datastruktur**: När du konfigurerar överföringen kan du mappa formulärfält till motsvarande kalkylbladskolumner för organiserad datalagring.
-* **Åtkomstkontroll**: Du kan använda befintliga behörigheter för att styra vem som kan få åtkomst till och ändra skickade formulärdata, beroende på vilken kalkylbladstjänst som valts.
+- **Innehållsskapare** skapar enkla datainsamlingsformulär
+- **Små företag** som behöver snabba arbetsflöden mellan formulär och kalkylblad
+- **Marknadsföringsteam** samlar in leadinformation
+- **Händelseorganisatörer** hanterar registreringar
 
-## Krav
+**Överväg alternativ för:**
 
-Nedan visas förutsättningarna för att använda Forms Submission-tjänsten:
+- Komplexa arbetsflöden som kräver anpassad logik
+- Företagsintegrering med databaser
+- Forms behöver avancerad validering eller bearbetning
 
-* Kontrollera att ditt AEM-projekt har det senaste adaptiva formulärblocket.
-* Se till att din Git-databas har lagts till på tillåtelselista för att använda Forms inskickningstjänst. [mailto:aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) med ditt GitHub-organisationsnamn och databasnamn om du vill att de ska läggas till i tillåtelselista för att använda Forms överföringstjänst.
+### Vanliga användningsfall
 
-## Konfigurera tjänsten Forms Submit
+| Användningsfall | Exempel | Fördelar med kalkylblad |
+|----------|---------|-------------------|
+| **Kontakta Forms** | Webbplatsfrågor → Google Sheets | Enkel uppföljning och CRM-import |
+| **Händelseregistrering** | Konferensregistreringar → Excel Online | Spårning av deltagare i realtid |
+| **Leadgenerering** | Nyhetsbrev - signaturer → SharePoint | Analys av marknadsföringskampanjer |
+| **Feedback-samling** | Undersökningssvar → Google Sheets | Snabb datavisualisering |
 
-Skapa ett nytt AEM-projekt som har konfigurerats med Adaptive Forms Block. Läs artikeln [Komma igång - självstudiekurs för utvecklare](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) om du vill veta mer om hur du skapar ett nytt AEM-projekt. Uppdatera filen `fstab.yaml` i ditt projekt. Ersätt den befintliga referensen med sökvägen till mappen som du har delat med `forms@adobe.com`.
+## Viktiga fördelar
 
-Du kan [konfigurera Forms Submission Service manuellt](#configuring-the-forms-submission-service-manually) eller [konfigurera Forms Submission Service med API](#configuring-the-forms-submission-service-using-api).
+Forms Submission Service har flera fördelar för smidig datainsamling:
 
-### Konfigurera Forms Submission Service manuellt
+### **Förenklad installation**
+
+- **Ingen backend-infrastruktur krävs** - Adobe är värd för överföringsslutpunkten
+- **Direktintegrering** med populära kalkylbladsplattformar
+- **Automatisk datamappning** från formulärfält till kalkylbladskolumner
+
+### **Datahantering i realtid**
+
+- **Datainhämtning direkt** - inskickade data visas omedelbart i kalkylbladet
+- **Strukturerad lagring** - strukturerade kolumner för enkel analys
+- **Live-samarbete** - flera teammedlemmar kan komma åt och analysera data
+
+### **Inbyggd säkerhet och åtkomstkontroll**
+
+- **Utnyttjar befintliga behörigheter** - använd kalkylbladsplattformens delningskontroller
+- **Adobe-hanterad säkerhet** - säker slutpunkt för överföring med företagsskydd
+- **Dataägarskap** - dina data ligger kvar på den kalkylbladsplattform du valt
+
+## Förutsättningar
+
+Innan du konfigurerar Forms Submission Service bör du kontrollera att du har:
+
+### **Tekniska krav**
+
+- **GitHub-databasen** har konfigurerats för ditt Edge Delivery Services-projekt med det senaste adaptiva Forms-blocket installerat
+- **Åtkomstgodkännande** - databasen har lagts till i tillåtelselista
+
+### **Plattformskonfiguration för kalkylblad**
+
+
+Välj en av de plattformar som stöds:
+
+- **Google-blad** - Google-konto med behörighet att skapa blad
+- **Microsoft OneDrive** - Microsoft 365-konto med åtkomst via Excel Online
+- **SharePoint** - SharePoint-åtkomst med list-/biblioteksbehörigheter
+
+### **Behörigheter och åtkomst**
+
+- **Redigera behörigheter** för målkalkylbladet
+- **Delningsfunktioner** som ger åtkomst till `forms@adobe.com`
+- **Länkgenerering** behörigheter för den valda plattformen
+
+>[!TIP]
+>
+>**Ny på Edge Delivery Services?** Börja med självstudiekursen [Komma igång](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) för att konfigurera din projektgrund.
+
+## Konfigurationsmetoder
+
+Forms Submission Service erbjuder två konfigurationsmetoder. Välj den metod som passar ditt arbetsflöde bäst:
+
+### Välj din konfigurationsmetod
+
+| Metod | Bäst för | Tid krävs | Teknisk nivå |
+|--------|----------|---------------|-----------------|
+| **[Manuell inställning](#manual-configuration)** | Innehållsutvecklare, engångsinstallation | 10-15 minuter | Nybörjare |
+| **[API-konfiguration](#api-configuration)** | Utvecklare, automatiserade arbetsflöden | 5-10 minuter | Mellanliggande |
+
+### Projektinställningar
+
+Innan du konfigurerar någon av metoderna måste du se till att din grund för AEM-projektet är klar:
+
+1. **Skapa eller uppdatera ditt AEM-projekt** med det senaste adaptiva Forms-blocket ([Komma igång-självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial))
+
+2. **Uppdatera`fstab.yaml`** i projektets rot:
+
+   ```yaml
+   # Replace with the path to your shared folder
+   mountpoints:
+     /: https://drive.google.com/drive/folders/your-shared-folder-id
+   ```
+
+
+3. **Dela projektmappen** med `forms@adobe.com` (redigeringsbehörighet krävs)
+
+## Manuell konfiguration
 
 ![Arbetsflöde för tjänsten för att skicka formulär](/help/forms/assets/forms-submission-service-workflow.png)
+*Bild: Komplett arbetsflöde för manuell konfiguration av Forms överföringstjänst*
 
-#### &#x200B;1. Skapa ett formulär med en formulärdefinition
+Följ dessa steg-för-steg-instruktioner för att ställa in formuläret genom att skicka in kalkylblad:
 
-Skapa ett formulär med Google Sheets eller Microsoft Excel. [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms) om du vill lära dig hur du skapar ett formulär med en formulärdefinition i Microsoft Excel eller Google Sheets.
+### Steg 1: Skapa en formulärdefinition
 
-Skärmbilden nedan visar formulärdefinitionen som används för att skapa formuläret:
+Skapa en formulärstruktur med Google Sheets eller Microsoft Excel.
+
+**Steg för att skapa formulär:**
+
+1. **Öppna kalkylbladsplattformen** (Google-blad eller Microsoft Excel)
+2. **Skapa ett nytt kalkylblad** för ditt formulärprojekt
+3. **Namnge bladet** (måste vara antingen `helix-default` eller `shared-aem`)
+4. **Definiera formulärstrukturen** med hjälp av guiden [Skapa formulär](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)
 
 ![Formulärdefinition](/help/forms/assets/form-submission-definition.png)
+*Exempel: Formulärdefinition med fälttyper, etiketter och valideringsregler*
 
 >[!IMPORTANT]
 >
->**Det blad där formuläret har skapats har begränsningar för vad det kan namnges. Endast `helix-default` och `shared-aem` kan användas som bladnamn.**
+>**Krav för bladnamngivning**
+>
+>Formulärdefinitionsbladet måste ha följande namn:
+>
+>- `helix-default` (rekommenderas för enstaka formulär)
+>- `shared-aem` (för flerformulärsprojekt)
+>
+>Andra bladnamn känns inte igen av systemet.
 
-#### &#x200B;2. Aktivera kalkylbladet så att data accepteras.
+**Kontrollpunkt för validering:**
 
-När du har skapat och förhandsgranskat formuläret kan du aktivera motsvarande kalkylblad för att börja ta emot data. lägg till ett nytt blad som `incoming`. Du kan [manuellt aktivera kalkylbladet för att ta emot data](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/submit-forms#manually-enable-the-spreadsheet-to-accept-data).
+- Formulärstrukturen har fyllts i med alla obligatoriska fält
+- Blad har rätt namn (`helix-default` eller `shared-aem`)
+- Fälttyper och verifieringsregler är korrekt konfigurerade
+
+### Steg 2: Skapa datainsamlingsmallen
+
+Skapa ett dedikerat blad för att ta emot formuläröverföringsdata.
+
+**Inställningar för datablad:**
+
+1. **Lägg till ett nytt blad** i ditt befintliga kalkylblad
+2. **Namnge bladet exakt`incoming`** (skiftlägeskänsligt)
+3. **Konfigurera kolumnrubriker** som matchar formulärfälten
+4. **Spara kalkylbladet** för att säkerställa att ändringarna bevaras
 
 ![Inkommande blad](/help/forms/assets/form-submission-incoming-sheet.png)
+*Exempel: Inkommande blad med kolumnrubriker som matchar formulärfält*
 
 >[!WARNING]
 >
-> Om bladet `incoming` inte finns skickar AEM inga data till arbetsboken.
-
-#### &#x200B;3. Dela kalkylbladet och skapa en länk.
-
-Så här delar du kalkylbladet till kontot `forms@adobe.com` och skapar en länk:
-
-1. Klicka på knappen **Dela** i det övre högra hörnet i Excel- eller Google-blad.
-1. Lägg till kontot `forms@adobe.com` och
-klicka på ögonikonen, välj **Redigera** åtkomst och klicka på **Skicka** .
-
-   ![Dela inkommande blad](/help/forms/assets/form-submission-share-incoming.png)
-
-1. Om du vill kopiera kalkylbladslänken klickar du på knappen **Dela** i det övre högra hörnet och väljer **Kopiera länk**.
-
-   ![Kopiera länk för inkommande blad](/help/forms/assets/form-submission-copy-link.png)
-
-#### &#x200B;4. Länka kalkylbladet i formulärdefinitionen
-
-Så här konfigurerar du Forms Submission-tjänsten med Google Sheets eller Microsoft Excel:
-
-1. Öppna det kalkylblad som innehåller formulärdefinitionen.
-1. Klistra in den kopierade kalkylbladslänken i kolumnen **Åtgärd** i raden som motsvarar fältet **Skicka**.
-
-   ![Länka ett kalkylblad](/help/forms/assets/form-submission-sheet-linking.png)
-
-1. Förhandsgranska och publicera bladet med [AEM Sidekick](https://www.aem.live/docs/sidekick) med den uppdaterade tjänsten för formuläröverföring.
-
->[!NOTE]
+>**Kritiskt krav**
 >
-> Du kan referera till [kalkylbladet](/help/forms/assets/spreadsheet.xlsx) för att använda tjänsten Forms Submission.
-
-### Konfigurera Forms Submission Service med API
-
-Du kan också skicka en **POST**-begäran till formuläret för att uppdatera `incoming`-bladet med data.
-
->[!NOTE]
+>Bladet måste ha exakt namnet `incoming` (gemener). Utan detta blad:
 >
-> * Om bladet `incoming` inte finns skickar AEM inga data till arbetsboken.
-> * Dela bladet `incoming` med Adobe Experience Manager `forms@adobe.com` och ge redigeringsåtkomst.
-> * Förhandsgranska och publicera `incoming`-bladet i sidosparken.
+>- Formulärinskickat material kommer att avvisas
+>- Inga data kommer att lagras
+>- Användarna ser fel när de skickar in data
 
-Mer information om hur du formaterar POST-begäran för att konfigurera bladet finns i [API-dokumentationen](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/references/aem-forms-submission-service/). Du kan titta på exemplet nedan:
+**Kontrollpunkt för validering:**
 
-Du kan använda verktyg som curl eller Postman för att utföra denna POST-begäran, vilket visas nedan.
+- `incoming` blad finns i kalkylbladet
+- Kolumnrubrikerna matchar formulärfältsnamnen
+- Blad är rätt sparad och tillgänglig
 
-* **Använda Postman**:
+>[!TIP]
+>
+>**Pro Tips!** Kopiera de exakta fältnamnen från formulärdefinitionen för att säkerställa perfekt matchning mellan formulärfält och kalkylbladskolumner.
 
-Skicka till exempel begäran nedan i Postman efter att ha ersatt:
-* `{id}` med ditt formulär-ID
-* `site or repository` med ditt GitHub-databas eller webbplatsnamn
-* `organization` med ditt GitHub-användarnamn
+### Steg 3: Dela kalkylblad med Adobe Service
 
-  ```json
-  POST 'https://forms.adobe.com/adobe/forms/af/submit/{id}' \
-  --header 'Content-Type: application/json' \
-  --header 'x-adobe-routing: tier=live,bucket=main--[site/repository]--[organization]' \
-  --data '{
-      "data": {
-          "startDate": "2025-01-10",
-          "endDate": "2025-01-25",
-          "destination": "Australia",
-          "class": "First Class",
-          "budget": "2000",
-          "amount": "1000000",
-          "name": "Mary",
-          "age": "35",
-          "subscribe": null,
-          "email": "mary@gmail.com"
-              }
-          }'
-  ```
+Ge Adobe Forms inskickningstjänst åtkomst till ditt kalkylblad.
 
-Om du klickar på knappen **Skicka** i Postman returneras ett `201 Created`-svar, och bladet `incoming` uppdateras med skickade data.
+**Delningsprocess:**
+
+1. **Klicka på knappen Dela** i det övre högra hörnet av kalkylbladet
+2. **Lägg till Adobe-tjänstkontot:**
+   - E-post: `forms@adobe.com`
+   - Behörighetsnivå: **Redigeraren** (krävs för att skriva data)
+3. **Skicka delningsinbjudan**
+4. **Kopiera kalkylbladslänken** för nästa steg
+
+![Dela inkommande blad](/help/forms/assets/form-submission-share-incoming.png)
+*Stegvis delning för att bevilja åtkomst till Adobe-tjänster*
+
+**Plattformsspecifika instruktioner:**
+
+**Google-blad:**
+
+- Lägg till `forms@adobe.com` som redigerare
+- Kontrollera att &quot;Alla med länken kan visa&quot; är aktiverat
+- Kopiera delningslänken
+
+**Microsoft Excel (OneDrive/SharePoint):**
+
+- Lägg till `forms@adobe.com` med redigeringsbehörigheter
+- Ange länkdelning till&quot;Alla med länken kan redigera&quot;
+- Kopiera delnings-URL
+
+![Kopiera länk för inkommande blad](/help/forms/assets/form-submission-copy-link.png)
+*Exempel: Kopiera den delningsbara länken för formulärkonfigurationen*
+
+**Kontrollpunkt för validering:**
+
+- `forms@adobe.com` har redigeraren åtkomst till ditt kalkylblad
+- Kalkylbladslänken kopieras och kan användas
+- Delningsbehörigheter ger extern åtkomst
+
+### Steg 4: Koppla formulär till kalkylblad
+
+Länka formulärdefinitionen till det inskickade kalkylbladet.
+
+**Anslutning av formulär-kalkylblad:**
+
+1. **Öppna formulärdefinitionskalkylbladet** (det med `helix-default` eller `shared-aem` ark)
+2. **Leta reda på fältet Skicka** i formulärdefinitionen
+3. **Klistra in den kopierade kalkylbladslänken** i kolumnen **Åtgärd** för fältet Skicka
+4. **Spara ändringarna** i formulärdefinitionen
+
+![Länka ett kalkylblad](/help/forms/assets/form-submission-sheet-linking.png)
+*Exempel: Ansluta sändningsåtgärden till ditt datainsamlingskalkylblad*
+
+**Publicerar ditt formulär:**
+
+1. **Öppna AEM Sidekick** i webbläsaren
+2. **Förhandsgranska formuläret** för att testa konfigurationen
+3. **Publicera formuläret** för att göra det tillgängligt
+
+**Slutlig validering:**
+
+- Kalkylbladslänk läggs till korrekt i åtgärden Skicka fält
+- Formulärdefinitionen sparas och publiceras
+- Förhandsgranska formulär visar alla fält korrekt
+- Knappen Skicka är korrekt konfigurerad
+
+>[!SUCCESS]
+>
+>**Installationen är klar!** Ditt formulär är nu anslutet till Forms överföringstjänst. Testa genom att skicka exempeldata och kontrollera bladet `incoming`.
+
+**Referensmaterial:**
+
+- [Fullständigt exempelkalkylblad](/help/forms/assets/spreadsheet.xlsx) med rätt konfiguration
+- [AEM Sidekick-dokumentation](https://www.aem.live/docs/sidekick) för publiceringsvägledning
+
+## API-konfiguration
+
+Med API-metoden kan utvecklare programmässigt skicka data till Forms Submission Service, idealiskt för automatiserade arbetsflöden och anpassade integreringar.
+
+### Använda API
+
+**Perfekt för:**
+
+- Automatiserade datainsamlingssystem
+- Anpassade formulärimplementeringar
+- Integration med befintliga tillämpningar
+- Arbetsflöden för att skicka data satsvis
+
+### Förutsättningar för API
+
+Innan du använder API måste du se till att du har:
+
+- **Kalkylbladskonfiguration** har slutförts (inklusive `incoming` ark)
+- **Åtkomst till Adobes tjänst** beviljad till `forms@adobe.com`
+- **Formulär-ID** från ditt publicerade formulär
+- **Databasinformation** (organisations- och platsnamn)
+
+>[!IMPORTANT]
+>
+>**Nödvändiga installationssteg**
+>
+>API kräver samma kalkylbladskonfiguration som manuell konfiguration:
+>
+>- `incoming` blad måste finnas
+>- `forms@adobe.com` måste ha redigeraråtkomst
+>- Blad måste publiceras via AEM Sidekick
+
+### API-slutpunkt och autentisering
+
+**Bas-URL:** `https://forms.adobe.com/adobe/forms/af/submit/{id}`
+
+**Obligatoriska rubriker:**
+
+- `Content-Type: application/json`
+- `x-adobe-routing: tier=live,bucket=main--[repository]--[organization]`
+
+**API-dokumentation:** [Fullständig API-referens](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/references/aem-forms-submission-service/)
+
+### Använda Postman
+
+Postman har ett användarvänligt gränssnitt för att testa API-inskickade data.
+
+**Installationsanvisningar:**
+
+1. **Skapa en ny POST-begäran** i Postman
+2. **Konfigurera slutpunkten:** `https://forms.adobe.com/adobe/forms/af/submit/{id}`
+3. **Ersätt platshållare:**
+   - `{id}` → Ditt faktiska formulär-ID
+   - `[repository]` → Ditt GitHub-databasnamn
+   - `[organization]` → Din GitHub-organisation/ditt användarnamn
+
+**Begär konfiguration:**
+
+```json
+POST https://forms.adobe.com/adobe/forms/af/submit/your-form-id
+
+Headers:
+Content-Type: application/json
+x-adobe-routing: tier=live,bucket=main--your-repo--your-org
+
+Body (JSON):
+{
+    "data": {
+        "startDate": "2025-01-10",
+        "endDate": "2025-01-25",
+        "destination": "Australia",
+        "class": "First Class",
+        "budget": "2000",
+        "amount": "1000000",
+        "name": "Mary",
+        "age": "35",
+        "subscribe": null,
+        "email": "mary@gmail.com"
+    }
+}
+```
+
+**Förväntat svar:**
+
+- **Statuskod:** `201 Created`
+- **Data visas** i ditt `incoming`-kalkylblad omedelbart
 
 ![postmansskärm](/help/forms/assets/postman-api.png)
+*Exempel: API-överföringen har slutförts med Postman-gränssnittet*
 
-* **Använder kommandot Rulla**:
+### Använda kommandorad (vändning)
 
-Kör till exempel följande kommando i terminal eller kommandotolk när du har ersatt:
-* `{id}` med ditt formulär-ID
-* `site or repository` med ditt GitHub-databas eller webbplatsnamn
-* `organization` med ditt GitHub-användarnamn
+För utvecklare som föredrar terminal-/kommandotolk använder du curl för att skicka data programmatiskt.
 
+**Inställningar för kommandorad:**
+
+Ersätt följande platshållare i kommandona nedan:
+
+- `{id}` → Ditt faktiska formulär-ID
+- `[repository]` → Ditt GitHub-databasnamn
+- `[organization]` → Din GitHub-organisation/ditt användarnamn
 
 >[!BEGINTABS]
 
->[!TAB För macOS]
+>[!TAB macOS/Linux]
 
-    &quot;json
-    curl -X POST &quot;https://forms.adobe.com/adobe/forms/af/submit/{id}&quot; \
-    —header &quot;Content-Type: application/json&quot; \
-    —header &quot;x-adobe-routing: tier=live,bucket=main—[plats/databas]—[organisation]&quot; \
-    —data &#39;&lbrace;
-    &quot;data&quot;: 
-    &quot;startDate&quot;: &quot;2 025-01-10&quot;,
-    &quot;endDate&quot;: &quot;2025-01-25&quot;,
-    &quot;destination&quot;: &quot;Australia&quot;,
-    &quot;class&quot;: &quot;First Class&quot;,
-    &quot;budget&quot;: &quot;2000&quot;,
-    &quot;amount&quot;: &quot;100 00000&quot;,
-    &quot;name&quot;: &quot;Joe&quot;,
-    &quot;age&quot;: &quot;35&quot;,
-    &quot;subscribe&quot;: null,
-    &quot;email&quot;: &quot;mary@gmail.com&quot;
-    &rbrace;
-    &#39;
-    
-    &quot;
+```bash
+curl -X POST "https://forms.adobe.com/adobe/forms/af/submit/your-form-id" \
+  --header "Content-Type: application/json" \
+  --header "x-adobe-routing: tier=live,bucket=main--your-repo--your-org" \
+  --data '{
+    "data": {
+      "startDate": "2025-01-10",
+      "endDate": "2025-01-25",
+      "destination": "Australia",
+      "class": "First Class",
+      "budget": "2000",
+      "amount": "1000000",
+      "name": "Joe",
+      "age": "35",
+      "subscribe": null,
+      "email": "joe@example.com"
+    }
+  }'
+```
 
->[!TAB För Windows OS]
+>[!TAB Kommandotolken i Windows]
 
-    &quot;json
-    
-    curl -X POST &quot;https://forms.adobe.com/adobe/forms/af/submit/{id}&quot; ^
-    —header &quot;Content-Type: application/json&quot; ^
-    —header &quot;x-adobe-routing: tier=live,bucket=main—[plats/databas]—[organisation]&quot; ^
-    —data &quot;{\&quot;data\&quot;: {\&quot;startDate\&quot;: \&quot;20 25-01-10\&quot;, \&quot;slutdatum\&quot;: \&quot;2025-01-25\&quot;, \&quot;mål\&quot;: \&quot;Australien\&quot;, \&quot;klass\&quot;: \&quot;första klass\&quot;, \&quot;budget\&quot;: \&quot;2000\&quot;, \&quot;belopp\&quot;: \&quot;100 0000, \&quot;namn\&quot;: \&quot;Joe\&quot;, \&quot;ålder\&quot;: \&quot;35\&quot;, \&quot;prenumerera\&quot;: null, \&quot;e-post\&quot;: \&quot;mary@gmail.com\&quot;}}&quot;
-    
-    &quot;
+```cmd
+curl -X POST "https://forms.adobe.com/adobe/forms/af/submit/your-form-id" ^
+  --header "Content-Type: application/json" ^
+  --header "x-adobe-routing: tier=live,bucket=main--your-repo--your-org" ^
+  --data "{\"data\": {\"startDate\": \"2025-01-10\", \"endDate\": \"2025-01-25\", \"destination\": \"Australia\", \"class\": \"First Class\", \"budget\": \"2000\", \"amount\": \"1000000\", \"name\": \"Joe\", \"age\": \"35\", \"subscribe\": null, \"email\": \"joe@example.com\"}}"
+```
+
+>[!TAB Windows PowerShell]
+
+```powershell
+$body = @{
+  data = @{
+    startDate = "2025-01-10"
+    endDate = "2025-01-25"
+    destination = "Australia"
+    class = "First Class"
+    budget = "2000"
+    amount = "1000000"
+    name = "Joe"
+    age = "35"
+    subscribe = $null
+    email = "joe@example.com"
+  }
+} | ConvertTo-Json -Depth 3
+
+Invoke-RestMethod -Uri "https://forms.adobe.com/adobe/forms/af/submit/your-form-id" `
+  -Method POST `
+  -Headers @{"Content-Type"="application/json"; "x-adobe-routing"="tier=live,bucket=main--your-repo--your-org"} `
+  -Body $body
+```
 
 >[!ENDTABS]
 
-Ovannämnda POST-begäran uppdaterar `incoming`-bladet med följande svar:
+### API-svar och verifiering
 
-```json
-    < HTTP/1.1 201 Created
-    < Connection: keep-alive
-    < Content-Length: 0
-    < X-Request-Id: 02a53839-2340-56a5-b238-67c23ec28f9f
-    < X-Message-Id: 42ecb4dd-b63a-4674-8f1a-05a4a5b0372c
-    < Accept-Ranges: bytes
-    < Date: Fri, 10 Jan 2025 13:06:10 GMT
-    < Via: 1.1 varnish
-    < Access-Control-Allow-Origin: *
-    < X-Served-By: cache-del21750-DEL
-    < X-Cache: MISS
-    < X-Cache-Hits: 0
-    < X-Timer: S1736514370.704084,VS0,VE1234
+**Slutfört svar:**
+
+```http
+HTTP/1.1 201 Created
+Connection: keep-alive
+Content-Length: 0
+X-Request-Id: 02a53839-2340-56a5-b238-67c23ec28f9f
+X-Message-Id: 42ecb4dd-b63a-4674-8f1a-05a4a5b0372c
+Date: Fri, 10 Jan 2025 13:06:10 GMT
+Access-Control-Allow-Origin: *
 ```
 
-Skärmen nedan visar skärmbilden för bladet `incoming` som uppdaterats av data som skickats med API:
+**Dataverifiering:**
+
+När överföringen är klar kontrollerar du att data finns i kalkylbladet:
 
 ![uppdaterat blad](/help/forms/assets/updated-sheet.png)
+*Exempel: Data har skrivits till det inkommande bladet via API*
 
-## Se även
+**Svarsvalidering:**
 
-{{see-more-forms-eds}}
+- **HTTP-status:** `201 Created` indikerar att överföringen lyckades
+- **X-Request-Id:** Unik identifierare för att spåra överföringen
+- **Data visas** i `incoming`-bladet på några sekunder
+- **Alla formulärfält** är korrekt mappade till kalkylbladskolumner
+
+## Felsökning
+
+### Vanliga problem och lösningar
+
+**Problem: 403 Otillåtet fel**
+
+```
+Causes: Missing or incorrect access permissions
+Solutions:
+- Verify forms@adobe.com has Editor access to your spreadsheet
+- Check that your repository is added to the allowlist
+- Confirm the x-adobe-routing header format
+```
+
+**Problem: 404 Det gick inte att hitta felet**
+
+```
+Causes: Incorrect Form ID or endpoint URL
+Solutions:  
+- Verify your Form ID is correct
+- Check the API endpoint URL format
+- Ensure your form is published and live
+```
+
+
+**Problem: Data visas inte i kalkylblad**
+
+```
+Causes: Missing 'incoming' sheet or permission issues
+Solutions:
+- Confirm 'incoming' sheet exists (case-sensitive)
+- Verify column headers match form field names exactly
+- Check forms@adobe.com has edit permissions
+- Ensure spreadsheet is shared properly
+```
+
+
+**Problem: Ogiltigt JSON-formatfel**
+
+```
+Causes: Malformed request body
+Solutions:
+- Validate JSON syntax using online JSON validators
+- Ensure proper escaping of special characters
+- Check quote marks and brackets are balanced
+```
+
+
+### Få hjälp
+
+**Supportkanaler:**
+
+- **Problem med tidig åtkomst:** E-post [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com)
+- **API-dokumentation:** [Utvecklarreferens](https://adobedocs.github.io/experience-manager-forms-cloud-service-developer-reference/references/aem-forms-submission-service/)
+- **Community Support:** [Adobe Experience League Community](https://experienceleaguecommunities.adobe.com/)
+
+## Nästa steg
+
+Nu när du har konfigurerat Forms Submission Service kan du utforska följande relaterade ämnen:
+
+### **Förbättra din Forms**
+
+- **[Skapa avancerad Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)** - Lägg till validering, villkorslogik och anpassad formatering
+- **[Handbok för formulärkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/forms-components)** - Utforska tillgängliga formulärfältstyper
+
+### **Alternativa överföringsmetoder**
+
+- **[AEM Publish Submissions](/help/edge/docs/forms/configure-submission-action-for-eds-forms.md)** - For complex workflows and enterprise integrations
+- **[Anpassade överföringsåtgärder](/help/forms/configure-submit-actions-core-components.md)** - Avancerad överföringshantering
+
+### **Datahantering**
+
+- **[Formuläranalys](/help/forms/view-understand-aem-forms-analytics-reports.md)** - Spåra formulärens prestanda och användning
+- **[Dataintegrering](/help/forms/configure-data-sources.md)** - Koppla formulär till databaser och CRM-system
+
+## Sammanfattning
+
+Forms Submission Service är en kraftfull, kodlös lösning för att samla in blankettdata direkt i kalkylblad. Några viktiga fördelar:
+
+- **Snabbinstallation** - Ingen backend-infrastruktur krävs
+- **Realtidsdata** - omedelbar inskickning
+- **Flexibla plattformar** - Google Sheets, OneDrive eller SharePoint
+- **API-åtkomst** - Programmatiska inskickningsfunktioner
+- **Företagssäkerhet** - Adobe-hanterade slutpunkter med åtkomstkontroller
+
+**Vill du komma igång?*** Följ [handboken för manuell konfiguration](#manual-configuration) för en visuell konfiguration, eller gå till [API-konfiguration](#api-configuration) för programmatisk integrering.

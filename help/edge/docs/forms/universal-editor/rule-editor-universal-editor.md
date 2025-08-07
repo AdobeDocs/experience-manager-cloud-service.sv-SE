@@ -1,231 +1,433 @@
 ---
-title: Hur använder man regelredigeraren för att tillämpa regler på formulärfält, vilket möjliggör dynamiskt beteende och komplex logik för formulär som skapats med WYSIWYG?
-description: Med regelredigeraren i Universal Editor kan du lägga till dynamiskt beteende och bygga in komplex logik i formulär utan kodning eller skript.
+title: Regelredigeraren för Dynamic Forms i Universell redigerare
+description: Skapa dynamiska, intelligenta formulär med regelredigeraren i Universell redigerare. Lägg till villkorsstyrd logik, beräkningar och interaktiva beteenden utan kodning.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
+level: Intermediate
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: 9ef4c5638c2275052ce69406f54dda3ea188b0ef
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '3472'
 ht-degree: 0%
 
 ---
 
 
-# Introduktion till regelredigeraren i WYSIWYG Authoring
+# Regelredigeraren för Dynamic Forms i Universell redigerare
 
-<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsversion </a>. </span>
+Med regelredigeraren i Universal Editor kan du skapa intelligenta, dynamiska formulär som svarar på användarens inmatningar i realtid. Ni kan omvandla statiska formulär till interaktiva upplevelser med villkorlig fältsynlighet, automatiska beräkningar och komplex affärslogik - allt utan att behöva skriva kod.
 
+## Vad du kommer att lära dig
 
-Du kan lägga till dynamiskt formulärbeteende med regelredigeraren, som du kan använda för att skapa regler. Dessa regler möjliggör synlighet för villkorliga fält, automatiserar beräkningar baserat på användarindata och förbättrar den övergripande användarupplevelsen. Regelredigeraren effektiviserar ifyllningsprocessen och ser till att både noggrannheten och effektiviteten är hög.
+I slutet av guiden kommer du att:
 
-Regelredigeraren har ett intuitivt visuellt gränssnitt för att skapa och hantera regler. Det användarvänliga sättet gör det tillgängligt för alla användare, även de som saknar omfattande teknisk expertis, så att de enkelt kan implementera logik i sina formulär.
+- Förstå hur regler fungerar och när olika regeltyper ska användas
+- Aktivera och öppna regelredigeraren i Universell redigerare
+- Skapa villkorslogik för att visa eller dölja formulärfält dynamiskt
+- Implementera automatiserade beräkningar och datavalidering
+- Bygg anpassade funktioner för komplexa affärsregler
+- Tillämpa bästa praxis för optimala formulärprestanda
 
-## Förstå en regel
+## Varför ska jag använda regelredigeraren?
 
-Regler är instruktioner som vägleder användarna när det gäller vilka åtgärder som ska utföras under specifika förhållanden.
+**Omvandla statisk Forms till smarta upplevelser:**
 
-* **Villkor**: Ett villkor är en kontroll eller regel som utvärderar om något är sant eller falskt. Svarar på frågan:&quot;Uppfyller detta kraven?&quot;
+- **Villkorlig logik**: Visa relevanta fält baserat på användarval
+- **Dynamiska beräkningar**: Beräkna värden automatiskt när användare skriver
+- **Dataverifiering**: Ge feedback i realtid och förhindra fel
+- **Förbättrat användargränssnitt**: Minska formulärens komplexitet och vägleda användarna genom logiska flöden
+- **Ingen kodning krävs**: Visuellt gränssnitt tillgängligt för icke-utvecklare
 
-* **Åtgärd**: En åtgärd är vad som händer när villkoret är sant. Det är den uppgift eller det beteende som utlöses baserat på utvärderingen av villkoret.
+**Vanliga användningsexempel:**
 
-En regel följer vanligtvis någon av följande konstruktioner:
+- Skatteberäkningsformulär med villkorliga avdrag
+- Guider i flera steg med förgrenade banor
+- Försäkringsformulär med tariffberäkningar
+- Enkätformulär med villkorliga frågor
+- E-handelsblanketter med dynamisk prissättning
 
-* **Condition-Action**: Kontrollera först ett villkor och utför sedan en åtgärd. Regeltypen `When` tvingar `condition-action`-konstruktionen i regelredigeraren.
-* **Åtgärdsvillkor**: Utför en åtgärd först och kontrollera sedan ett villkor. Regeltyperna `Set Value Of` och `Validate` i regelredigeraren framtvingar `action-condition`-konstruktionen.
-* **Åtgärd-Villkor-Alternativ åtgärd**: Utför en åtgärd, kontrollera ett villkor och utför sedan antingen huvudåtgärden eller en alternativ åtgärd baserat på villkoret. Som standard är den alternativa åtgärden för `Show` `Hide` och för `Enable` är den `Disable`.
+## Hur regler fungerar
 
-Ett villkor kan till exempel kontrollera om en användare har angett ett visst värde i ett fält och åtgärden kan vara att visa eller dölja ett fält.
-* **Villkor**: Kontrollera om inkomsten är större än 50 000 USD.
-* **Åtgärd**: Om villkoret är sant visar du fältet `Additional Deduction`, annars utför du den alternativa åtgärden: dölj fältet `Additional Deduction`.
+Reglerna är automatiserade instruktioner som gör formulären intelligenta och responsiva. De anger vad som ska hända när vissa villkor är uppfyllda.
 
-Detaljerade stegvisa instruktioner finns i [Lägg till en villkorsregel](#2-add-a-conditional-rule).
+### **Regelkomponenter**
 
-## Hur aktiverar jag tillägget Regelredigerare?
+**Villkor**: Ett logiskt test som utvärderas till sant eller falskt.
 
-Tillägget Regelredigerare är inte aktiverat som standard i Universellt redigeringsprogram. Om du vill aktivera tillägget Regelredigerare skriver du till oss på [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från ditt officiella e-post-id.
+- &quot;Är användarens inkomster större än 50 000 dollar?&quot;
+- &quot;Har användaren valt &quot;Ja&quot; för försäkringsskydd?&quot;
+- &quot;Är formulärfältet tomt?&quot;
 
-När regelredigeringstillägget har aktiverats för din miljö visas ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) i det övre högra hörnet av redigeraren.
+**Åtgärd**: Resultatet som inträffar när villkoret uppfylls.
+
+- Visa eller dölja formulärfält
+- Beräkna värden automatiskt
+- Visa valideringsmeddelanden
+- Aktivera eller inaktivera komponenter
+
+### **Regellogikmönster**
+
+**1. Villkorsåtgärd (When-then)**
+
+```
+WHEN gross salary > 50000
+THEN show "Additional Deduction" field
+```
+
+*Bäst för:* Villkorlig fältsynlighet, dynamiskt innehåll
+
+**2. Åtgärdsvillkor (ange om)**
+
+```
+SET taxable income = gross salary - deductions
+IF deductions are applicable
+```
+
+*Bäst för:* Beräkningar, dataomvandlingar
+
+**3. Action-Condition-Alternate (If-then-Else)**
+
+```
+IF income > 50000
+THEN show "High Income" fields
+ELSE show "Standard Income" fields
+```
+
+*Passar bäst för:* Förgreningslogik, alternativ som utesluter varandra
+
+### **Real-World Example**
+
+**Scenario**: Formulär för momsberäkning
+
+- **Villkor**: &quot;Bruttolönen överstiger 50 000 dollar&quot;
+- **Primär åtgärd**: Visa fältet &quot;Ytterligare minskning&quot;
+- **Alternativ åtgärd**: Dölj fältet &quot;Ytterligare minskning&quot;
+- **Resultat**: Användarna ser bara relevanta fält utifrån sin inkomstnivå
+
+## Förutsättningar
+
+Innan du börjar arbeta med regelredigeraren bör du kontrollera att du har följande:
+
+### **Åtkomstkrav**
+
+- Redigeringsåtkomst till **AEM as a Cloud Service**
+- **Universell redigerare** med regelredigerartillägget aktiverat
+- Behörigheter för formulärredigering i din AEM-miljö
+
+### **Tekniska krav**
+
+- **Kunskap om grundläggande formulärdesign**: Förtroende med formulärkomponenter och deras egenskaper
+- **Affärslogikens välkända**: Möjlighet att definiera villkorliga krav
+- **Grundläggande JavaScript-kunskap** (krävs endast för anpassade funktioner)
+
+### **Aktivera regelredigeringstillägg**
+
+Tillägget Regelredigeraren är inte aktiverat som standard i Universell redigerare. Du kan aktivera den från [Extension Manager](/help/implementing/developing/extending/extension-manager.md).
+
+**Efter aktivering av tillägget:**
+Ikonen ![ edit-rules ](/help/forms/assets/edit-rules-icon.svg) visas i det övre högra hörnet när du markerar formulärkomponenter.
 
 ![Regelredigeraren Universal Editor](/help/edge/docs/forms/assets/universal-editor-rule-editor.png)
+*Figur: Ikonen för regelredigeraren visas när du väljer formulärkomponenter*
 
-Markera den formulärkomponent som du vill skriva en regel för och klicka på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) . Användargränssnittet för Regelredigeraren visas.
+**Så här kommer du åt regelredigeraren:**
+
+1. Välj en formulärkomponent i Universell redigerare.
+2. Klicka på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) som visas.
+3. Gränssnittet för Regelredigeraren öppnas i en ny panel.
 
 ![Användargränssnittet i regelredigeraren](/help/edge/docs/forms/assets/rule-editor-for-field.png)
+*Figur: Gränssnitt för regelredigeraren för redigering av komponentregler*
 
-I den här artikeln används `form object` och `form component` omväxlande.
+>[!NOTE]
+>
+> I hela den här artikeln hänvisar&quot;formulärkomponent&quot; och&quot;formulärobjekt&quot; till samma element (t.ex. indatafält, knappar, paneler).
 
-Nu kan du börja skriva regler eller affärslogik för det markerade formulärfältet med [tillgängliga regeltyper i regelredigeraren](#available-rule-types-in-rule-editor).
+## Översikt över regelredigeringsgränssnittet
 
-## Förstå användargränssnittet i regelredigeraren
-
-Regelredigeraren öppnas när du klickar på ikonen ![edit-rules](/help/forms/assets/edit-rules-icon.svg) :
+Regelredigeraren har ett användarvänligt visuellt gränssnitt för att skapa och hantera regler:
 
 ![Användargränssnitt för regelredigeraren](/help/edge/docs/forms/assets/rule-editor-interface.png)
+*Figur: Fullständigt gränssnitt för regelredigeraren med numrerade komponenter*
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>Regelredigerarens komponent</th>
-      <th>Beskrivning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1. Titel</td>
-      <td>Visar formulärkomponentens rubrik och den valda regeltypen. Till exempel är 'Ange bruttolön' en textrutekomponent som regeltypen 'När' är markerad för. </td>
-    </tr>
-    <tr>
-      <td>2. Formulärobjekt och funktioner</td>
-      <td>På fliken <b>Forms-objekt</b> visas en hierarkisk vy över alla komponenter som finns i formuläret. Fliken <b>Funktioner</b> innehåller en uppsättning inbyggda funktioner i regelredigeraren.</td>
-    </tr>
-    <tr>
-      <td>3. Växla mellan formulärobjekt och funktioner</td>
-      <td>Växlingsknappen visar eller döljer alternativt formulärobjekten och funktionsrutan. </td>
-    </tr>
-    <tr>
-      <td>4. Visuell regelredigerare</td>
-      <td>Den visuella regelredigeraren är gränssnittet där du kan skapa regler för formulärkomponenterna.</td>
-    </tr>
-    <tr>
-      <td>5. Knapparna Klar och Avbryt</td>
-      <td>Knappen <b>Klar</b> används för att spara en regel. Knappen <b>Avbryt</b> ignorerar alla ändringar som du har gjort i en regel och stänger regelredigeraren.</td>
-    </tr>
-  </tbody>
-</table>
+### **Gränssnittskomponenter**
 
-Alla befintliga regler för en formulärkomponent visas när du markerar komponenten. Du kan visa titeln och en förhandsgranskning av regelsammanfattningen i regelredigeraren. Dessutom kan du ändra ordningen på regler, redigera regler, aktivera/inaktivera regler eller ta bort regler.
+**1. Komponenttitel och regeltyp**
+
+- **Syfte**: Visar namnet på den markerade komponenten och den aktuella regeltypen.
+- **Exempel**: &quot;Ange bruttolön&quot; (textinmatning) med regeln &quot;När&quot; vald.
+- **Tips**: Bekräfta alltid att du redigerar rätt komponent.
+
+**2. Formulärobjekt och funktionspanel**
+
+- **Fliken Formulärobjekt**: Tillhandahåller en hierarkisk vy över alla formulärkomponenter.
+   - Använd för: Referera till andra fält i reglerna.
+   - Navigering: Expandera eller komprimera för att hitta specifika komponenter.
+- **Fliken Funktioner**: Innehåller inbyggda matematiska och logiska funktioner.
+   - Använd för: Utföra komplexa beräkningar och dataändringar.
+   - Kategorier: Math, String, Date och Validation.
+
+**3. Växlingsknapp för panel**
+
+- **Syfte**: Visar eller döljer objekt- och funktionspanelen.
+- **Tips**: Om du vill öka arbetsytan för regelredigering drar du av panelen.
+- **Kortkommando**: Användbart när du arbetar med komplexa regler.
+
+**4. Visual Rule Builder**
+
+- **Syfte**: Huvudområdet för att skapa regellogik.
+- **Funktioner**: Dra och släpp-gränssnitt och listrutesäljare.
+- **Arbetsflöde**: Välj regeltyp → Definiera villkor → Ange åtgärder.
+
+**5. Kontrollknappar**
+
+- **Klar**: Sparar regeln och stänger redigeraren.
+- **Avbryt**: Ignorerar ändringar och stänger redigeraren utan att spara.
+- **Tips**: Testa alltid reglerna innan du klickar på Klar.
+
+### **Regelhantering**
+
+När du öppnar regelredigeraren för en komponent som redan har regler:
 
 ![visa tillgängliga regler för formulärobjekt](/help/edge/docs/forms/assets/rule-editor15.png)
+*Figur: Hantera befintliga regler för en formulärkomponent*
+
+**Tillgängliga åtgärder:**
+
+- **Visa**: Granska regelsammanfattningar och logik.
+- **Redigera**: Ändra befintliga regelvillkor eller åtgärder.
+- **Ändra ordning**: Ändra körningsordningen för regler (reglerna körs uppifrån och ned).
+- **Aktivera/inaktivera**: Aktivera eller inaktivera regler tillfälligt i testningssyfte.
+- **Ta bort**: Ta bort regler permanent.
+
+>[!TIP]
+>
+> **Regelkörningsordning har betydelse**: Regler körs uppifrån och ned. Placera mer specifika villkor före de allmänna.
 
 ## Tillgängliga regeltyper
 
-Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du kan använda för att skriva regler, vilket visas i tabellen nedan:
+Regelredigeraren innehåller en omfattande uppsättning regeltyper ordnade efter funktion. Välj lämplig typ baserat på ditt specifika användningsfall:
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>Regeltyp</th>
-      <th>Beskrivning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ange värdet för</td>
-      <td>Anger värdet för en formulärkomponent beroende på om det angivna villkoret är uppfyllt eller inte.</td>
-    </tr>
-    <tr>
-      <td>Radera värdet för</td>
-      <td>Rensar värdet för den angivna formulärkomponenten.</td>
-    </tr>
-    <tr>
-      <td>Dölj/visa</td>
-      <td>Döljer eller visar en formulärkomponent baserat på om ett villkor är uppfyllt eller inte.</td>
-    </tr>
-    <tr>
-      <td>Aktivera/inaktivera</td>
-      <td>Aktiverar eller inaktiverar en formulärkomponent baserat på om ett villkor är uppfyllt eller inte.</td>
-    </tr>
-    <tr>
-      <td>Validera</td>
-      <td>Kontrollerar formulärkomponenten baserat på ett villkor och visar ett fel om villkoret inte uppfylls. </td>
-    </tr>
-    <tr>
-      <td>När</td>
-      <td>Det anger ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt. Det följer på <i>condition-action-alternate</i>-åtgärdsregelkonstruktionen eller <i>condition-action</i>-regelkonstruktionen. </td>
-    </tr>
-    <tr>
-      <td>Format</td>
-      <td> Ändrar formulärkomponentens visningsvärde med det angivna uttrycket när dess värde ändras.</td>
-    </tr>
-    <tr>
-      <td>Anropa tjänst</td>
-      <td>Anropar en tjänst som konfigurerats med externa API:er, formulärdatamodell eller RESTful-webbtjänster.</td>
-    </tr>
-    <tr>
-      <td>Ange egenskap</td>
-      <td>Anger värdet för en egenskap för den angivna formulärkomponenten baserat på ett villkor.</td>
-    </tr>
-    <tr>
-      <td>Ange fokus</td>
-      <td>Ställer in fokus på den angivna formulärkomponenten.</td>
-    </tr>
-    <tr>
-      <td>Spara formulär</td>
-      <td>Det gör att användaren kan spara formuläret som ett utkast med hjälp av Forms Portal-komponenten Utkast och överföringar. </td>
-    </tr>
-    <tr>
-      <td>Skicka formulär</td>
-      <td>Skickar formuläret.</td>
-    </tr>
-    <tr>
-      <td>Återställ formulär</td>
-      <td>Återställer formuläret.</td>
-    </tr>
-    <tr>
-      <td>Lägg till/ta bort instans</td>
-      <td>Lägger till eller tar bort en instans av den angivna repeterbara panelen eller tabellraden.</td>
-    </tr>
-    <tr>
-      <td>Navigera till</td>
-      <td>Navigerar till andra adaptiva Forms, andra resurser som bilder eller dokumentfragment eller en extern URL.</td>
-    </tr>
-    <tr>
-      <td>Utsändningshändelse</td>
-      <td>Utlöser specifika åtgärder baserat på fördefinierade villkor eller händelser.</td>
-    </tr>
-    <tr>
-      <td>Navigera bland panelerna</td>
-      <td>Gör att du kan flytta fokus mellan olika paneler i ett formulär.</td>
-    </tr>
-  </tbody>
-</table>
+### **Villkorliga logikregler**
+
+**När**
+
+- **Syfte**: Fungerar som primär villkorsregel för implementering av komplex logik.
+- **Använd fall**: Om användaren till exempel väljer &quot;Gift&quot;, visar du fält för information om make/maka.&quot;
+- **Logiskt mönster**: Villkor → Åtgärd (med en alternativ åtgärd som tillval)
+
+**Visa/Göm**
+
+- **Syfte**: Kontrollerar fältsynlighet baserat på angivna villkor.
+- **Använd skiftläge**: Dölj irrelevanta avsnitt eller aktivera progressiv visning.
+- **Bästa praxis**: Används för att skapa en ren, fokuserad användarupplevelse.
+
+**Aktivera/inaktivera**
+
+- **Syfte**: Kontrollerar om ett fält kan interagera med, baserat på villkor.
+- **Använd skiftläge**: Inaktivera skicka-knappen tills alla obligatoriska fält har slutförts.
+- **Bästa praxis**: Ge användarna tydlig visuell feedback.
+
+### **Datahanteringsregler**
+
+**Ange värdet**
+
+- **Syfte**: Fyller i fältvärden automatiskt.
+- **Använd skiftläge**: Ange dagens datum, beräkna summor eller kopiera värden mellan fält.
+- **Bästa praxis**: Används för att minska användaransträngningen och säkerställa att den är korrekt.
+
+**Rensa värdet för**
+
+- **Syfte**: Tar bort data från fält när villkoren ändras.
+- **Använd skiftläge**: Rensa beroende fält när en överordnad markering ändras.
+- **Bästa praxis**: Bevara dataintegritet och förhindra överblivna värden.
+
+**Format**
+
+- **Syfte**: Omvandlar hur värden visas.
+- **Använd skiftläge**: Formatera valuta, telefonnummer eller datum.
+- **Bästa praxis**: Förbättra läsbarheten utan att ändra underliggande data.
+
+### **Verifieringsregler**
+
+**Validera**
+
+- **Syfte**: Implementerar anpassad verifieringslogik.
+- **Använd skiftläge**: Använd komplexa affärsregler eller validering mellan fält.
+- **Bästa praxis**: Ange tydliga och åtgärdbara felmeddelanden.
+
+### **Beräkningsregler**
+
+**Matematiskt uttryck**
+
+- **Syfte**: Utför automatiserade beräkningar.
+- **Använd skiftläge**: Skatteberäkningar, summor eller procentandelar.
+- **Bästa praxis**: Uppdatera beräkningar i realtid när användare skriver.
+
+### **Användargränssnittsregler**
+
+**Ange fokus**
+
+- **Syfte**: Riktar användarnas uppmärksamhet till specifika fält.
+- **Använd fall**: Fokusera på felfält eller vägleda användarna genom guidestegen.
+- **Bästa praxis**: Undvik att störa användarflödet.
+
+**Ange egenskap**
+
+- **Syfte**: Ändrar komponentegenskaper dynamiskt.
+- **Använd skiftläge**: Ändra platshållartext eller ändra alternativ i en listruta.
+- **Bästa praxis**: Förbättra användarupplevelsen med sammanhangsbaserade ändringar.
+
+### **Formulärkontrollsregler**
+
+**Skicka formulär**
+
+- **Syfte**: Utlösare skickar formulär programmatiskt.
+- **Använd skiftläge**: Skicka automatiskt när specifika villkor uppfylls.
+- **Bästa praxis**: Verifiera alltid formuläret innan det skickas.
+
+**Återställ formulär**
+
+- **Syfte**: Tar bort alla formulärdata och återställer formuläret till dess ursprungliga tillstånd.
+- **Använd skiftläge**: Funktionen Starta om.
+- **Bästa praxis**: Bekräfta åtgärden med användaren innan du återställer.
+
+**Spara formulär**
+
+- **Syfte**: Sparar formuläret som ett utkast som kan fyllas i senare.
+- **Använd skiftläge**: Användbart för långa formulär eller arbetsflöden med flera sessioner.
+- **Bästa praxis**: Ge tydlig feedback om sparstatusen.
+
+### **Avancerade regler**
+
+**Anropa tjänsten**
+
+- **Syfte**: Anropar externa API:er eller tjänster.
+- **Använd skiftläge**: Adresssökning, validering i realtid eller dataanrikning.
+- **Bästa praxis**: Hantera inläsningstillstånd och felscenarier korrekt.
+
+**Lägg till/ta bort instans**
+
+- **Syfte**: Hanterar repeterbara avsnitt dynamiskt.
+- **Använd skiftläge**: Lägg till familjemedlemmar eller flera adresser.
+- **Bästa praxis**: Ange tydliga kontroller för att lägga till eller ta bort instanser.
+
+**Navigera till**
+
+- **Syfte**: Dirigerar om användare till andra formulär eller sidor.
+- **Använd skiftläge**: Arbetsflöden med flera formulär eller villkorlig routning.
+- **Bästa praxis**: Bevara formulärdata före navigering.
+
+**Navigera bland paneler**
+
+- **Syfte**: Kontrollerar navigering i guideliknande formulär.
+- **Använd skiftläge**: Flerstegsformulär eller hoppande villkorsstyrda steg.
+- **Bästa praxis**: Visa tydliga förloppsindikatorer.
+
+**Utsändningshändelse**
+
+- **Syfte**: Utlöser anpassade händelser för avancerade integreringar.
+- **Använd fall**: Analysspårning eller tredjepartsintegreringar.
+- **Bästa praxis**: Använd bara för icke-blockerande åtgärder.
 
 
-Nu ska vi utforska hur du [skriver regler i regelredigeraren](#write-rules).
+## Stegvis självstudiekurs: Skapa en smart skattekalkylator
 
-## Skriv regler
-
-För att förstå hur du skriver regler i Visual Rule Editor ska vi titta på ett enkelt exempel på ett skatteberäkningsformulär:
+Det här avsnittet innehåller ett praktiskt exempel som demonstrerar funktionerna i regelredigeraren. Exemplet vägleder dig genom att skapa ett skatteberäkningsformulär som använder villkorsstyrd logik och automatiserade beräkningar.
 
 ![Skärmbild av gränssnittet i regelredigeraren som visar hur en villkorsregel skapas med logiken När-Då för formulärfältets synlighet ](/help/edge/docs/forms/assets/rule-editor-1.png)
+*Figur: Formulär för momsberäkning med intelligenta villkorsfält*
 
-I den form som beskrivs ovan anger användaren bruttolönen. Baserat på denna inmatning visas villkorsfält och betald moms beräknas.
+### **Översikt över självstudiekursen**
 
-**Formulärfält:**
-* Bruttolön (användarindata)
-* Ytterligare avdrag (villkorsfält)
-* Skattepliktig inkomst (beräknat fält)
-* Skatteskuld (beräknat fält)
+I den här självstudien skapar du ett formulär som:
 
-**Villkorsregel:**
-* Villkor: bruttolön > 50 000
-* Åtgärd: Visa fältet Ytterligare avdrag
+1. **Anpassar till användarindata**: Visar relevanta fält baserat på inkomstnivå.
+2. **Beräknar automatiskt**: Beräknar skatteskuld i realtid.
+3. **Verifierar data**: Ser till att beräkningarna och datainmatningen är korrekta.
 
-**Beräkningsregler:**
+### **Formulärstruktur**
 
-* Skattepliktig inkomst = bruttolön - avdrag (om tillämpligt)
-* Skatteskuld = skattepliktig inkomst * Skatteränta (för enkelhetens skull anta en fast skattesats på 10 %)
+| Fältnamn | Typ | Syfte | Beteende |
+|------------|------|---------|----------|
+| **Bruttolön** | Nummerindata | Användaren anger årsinkomst | Villkorlig logik för utlösare |
+| **Ytterligare avdrag** | Nummerindata | Extra avdrag (om tillämpligt) | Visar när lön > $50 000 |
+| **Skattepliktig inkomst** | Nummerindata | Beräknas automatiskt | Uppdateringar om indataändringar |
+| **Skatteskuld** | Nummerindata | Slutligt momsbelopp | Beräknar med 10 % ränta |
 
-Så här skriver du regler:
+### **Affärslogik att implementera**
 
-### &#x200B;1. Skapa ett formulär
+**Regel 1: Visning av villkorliga fält**
 
-Så här skapar du ett formulär i Universal Editor:
+```
+WHEN Gross Salary > 50,000
+THEN Show "Additional Deduction" field
+ELSE Hide "Additional Deduction" field
+```
 
-1. Öppna ett formulär i Universal Editor för redigering.
-1. Lägg till följande formulärkomponenter:
-   * Momsberäkningsformulär (rubrik)
-   * Bruttolön (talindata)
-   * Ytterligare avdrag (talindata)
-   * Skattepliktig inkomst (talindata)
-   * Skattepliktig (antal indata)
-   * Skicka (Skicka-knapp)
-1. Dölj formulärfältet `Additional Deduction` genom att öppna dess `Properties`.
+**Regel 2: Beräkning av skattepliktig inkomst**
 
-   ![Skärmbild av ett momsberäkningsformulär med inmatningsfält för bruttolön, civilstånd och underordnade, som visar formulärstrukturen innan reglerna tillämpas](/help/edge/docs/forms/assets/rule-editor2.png)
+```
+SET Taxable Income = Gross Salary - Additional Deduction
+(When Additional Deduction is applicable)
+```
 
-### &#x200B;2. Lägg till en villkorsregel för ett formulärfält
+**Regel 3: Skatteberäkning**
+
+```
+SET Tax Payable = Taxable Income × 10%
+(Simplified flat rate for demonstration)
+```
+
+### **Implementeringssteg**
+
+Följ de här stegen för att skapa ett intelligent skatteformulär:
+
+
+
++++ 1: Skapa grundformuläret
+
+**Mål**: Bygg den grundläggande formulärstrukturen med alla nödvändiga komponenter
+
+Så här skapar du ett skatteberäkningsformulär i Universal Editor:
+
+1. **Öppna Universal Editor**
+   - Navigera till din AEM Sites-konsol
+   - Markera den sida där du vill lägga till formuläret
+   - Klicka på **Redigera** för att öppna den universella redigeraren
+
+2. **Lägg till formulärkomponenter**
+
+   Lägg till de här komponenterna i ordning:
+
+   | Komponent | Typ | Etikett | Inställningar |
+   |-----------|------|-------|----------|
+   | Titel | Titel | &quot;Skatteberäkningsformulär&quot; | Rubriknivå H2 |
+   | Nummerindata | Nummerindata | &quot;Bruttolön&quot; | Obligatoriskt: Ja, platshållare:&quot;Ange årslön&quot; |
+   | Nummerindata | Nummerindata | &quot;Ytterligare avdrag&quot; | Obligatoriskt: Nej, platshållare:&quot;Ange ytterligare avdrag&quot; |
+   | Nummerindata | Nummerindata | &quot;Skattepliktig inkomst&quot; | Obligatoriskt: Nej, skrivskyddat: Ja |
+   | Nummerindata | Nummerindata | &quot;Skatteskuld&quot; | Obligatoriskt: Nej, skrivskyddat: Ja |
+   | Skicka-knapp | Skicka | &quot;Beräkna skatt&quot; | Typ: Skicka |
+
+3. **Konfigurera initiala inställningar**
+
+   - **Dölj fältet Ytterligare avdrag**:
+      - Välj komponenten &quot;Additional Deduction&quot; (Ytterligare minskning)
+      - Ange **Synlig** till **Nej** i panelen Egenskaper
+      - Det här fältet visas villkorligt baserat på regler
+
+   - **Gör beräknade fält skrivskyddade**:
+      - Välj fälten&quot;Skattepliktig inkomst&quot; och&quot;Skattepliktig&quot;
+      - Ange **Skrivskyddad** till **Ja** i Egenskaper
+
+     ![Skärmbild av ett momsberäkningsformulär med inmatningsfält för bruttolön, civilstånd och underordnade, som visar formulärstrukturen innan reglerna tillämpas](/help/edge/docs/forms/assets/rule-editor2.png)
+     *Figur: Inledande formulärstruktur med grundläggande komponenter konfigurerade*
+
+**Kontrollpunkt**: Nu bör du ha ett formulär med alla obligatoriska fält, där &quot;Ytterligare avdrag&quot; är dold och beräknade fält är skrivskyddade.
+
++++
+
++++ &#x200B;2. Lägg till en villkorsregel för ett formulärfält
 
 När du har skrivit formuläret kan du bara skriva den första regeln för att visa fältet `Additional Deduction` om bruttolönen överstiger 50 000 USD. Så här lägger du till en villkorsregel:
 
@@ -261,7 +463,9 @@ Regeln visas så här i Regelredigeraren.
 >
 > Du kan också skriva en Visa-regel i fältet Ytterligare avdrag, i stället för en När-regel i fältet Bruttolön, för att implementera samma beteende.
 
-### &#x200B;3. Lägg till beräkningsregler för formulärfälten
++++
+
++++ &#x200B;3. Lägg till beräkningsregler för formulärfälten
 
 Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden mellan `Gross Salary` och `Additional Deduction` (om tillämpligt). Så här lägger du till beräkningsregel i fältet **[!UICONTROL Taxable Income]**:
 
@@ -273,12 +477,11 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
 
 1. I fältet för matematiska uttryck:
 
-   * Markera eller dra och släpp fältet **[!UICONTROL Gross Salary]** i det första **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
+   - Markera eller dra och släpp fältet **[!UICONTROL Gross Salary]** i det första **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
 
-   * Välj **[!UICONTROL Minus]** i fältet **[!UICONTROL Select Operator]**.
+   - Välj **[!UICONTROL Minus]** i fältet **[!UICONTROL Select Operator]**.
 
-   * Markera eller dra och släpp fältet **[!UICONTROL Additional Deduction]** i det andra **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
-
+   - Markera eller dra och släpp fältet **[!UICONTROL Additional Deduction]** i det andra **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
      ![Regelredigeraren, exempel15](/help/edge/docs/forms/assets/rule-editor18.png)
 
 1. Välj **[!UICONTROL Done]** om du vill spara regeln.
@@ -291,12 +494,11 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    ![Regelredigeraren, exempel17](/help/edge/docs/forms/assets/rule-editor20.png)
 1. I fältet för matematiska uttryck:
 
-   * Markera eller dra och släpp fältet **[!UICONTROL Taxable Income]** i det första **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
+   - Markera eller dra och släpp fältet **[!UICONTROL Taxable Income]** i det första **[!UICONTROL Drop object or select here]**-fältet på fliken Forms-objekt.
 
-   * Välj **[!UICONTROL Multiplied by]** i fältet **[!UICONTROL Select Operator]**.
+   - Välj **[!UICONTROL Multiplied by]** i fältet **[!UICONTROL Select Operator]**.
 
-   * Välj **Number** i fältet **[!UICONTROL Select Option]** och ange värdet som `10` i fältet **[!UICONTROL Enter a Number]**.
-
+   - Välj **Number** i fältet **[!UICONTROL Select Option]** och ange värdet som `10` i fältet **[!UICONTROL Enter a Number]**.
      ![Regelredigeraren, exempel18](/help/edge/docs/forms/assets/rule-editor21.png)
 1. Välj sedan **[!UICONTROL Extend Expression]** i det markerade området runt uttrycksfältet.
    ![Regelredigeraren, exempel19](/help/edge/docs/forms/assets/rule-editor22.png)
@@ -304,47 +506,80 @@ Skriv sedan en regel för att beräkna `Taxable Income`, vilket är skillnaden m
    ![Exempel på regelredigerare20](/help/edge/docs/forms/assets/rule-editor23.png)
 1. Välj **[!UICONTROL Done]** om du vill spara regeln.
 
-### &#x200B;4. Förhandsgranska ett formulär
++++
+
++++ &#x200B;4. Förhandsgranska ett formulär
 
 När du nu förhandsgranskar formuläret och anger **bruttolön** som `60,000` visas fältet **Ytterligare avdrag** och fältet **Skattepliktig inkomst** och **Skatteskuld** beräknas därefter.
 
 ![Förhandsgranska ett formulär](/help/edge/docs/forms/assets/rule-editor-form.png)
 
-Förutom användningsklara funktioner som Summa, Medel som visas under Funktioner Output, kan du [skriva anpassade funktioner](#create-a-custom-function) för att implementera komplexa affärslogik.
++++
 
-## Egen funktion i regelredigeraren
+Förutom inbyggda funktioner som Sum och Average kan du skapa anpassade funktioner för att implementera komplex affärslogik som är anpassad efter dina specifika behov.
 
-Edge Delivery Services Forms har stöd för anpassade funktioner som gör att man kan definiera JavaScript-funktioner för att implementera komplexa affärsregler. Med de anpassade funktionerna kan man bättre hantera blanketterna genom att underlätta hanteringen och bearbetningen av inmatade data.
+## Avancerat: Anpassade funktioner
 
-### Skapa en anpassad funktion
+**När anpassade funktioner ska användas:**
 
-Om du vill skapa anpassade funktioner redigerar du filen `../[blocks]/form/functions.js`. Att skapa innefattar i allmänhet följande steg:
+- För komplexa beräkningar som går utöver de inbyggda funktionerna
+- Implementera affärsspecifika valideringsregler
+- För dataomformningar och formatering
+- Integrera med externa system eller API:er
 
-* **Funktionsdeklaration**: Definiera funktionsnamnet och dess parametrar (de indata som accepteras).
-* **Logikimplementering**: Skriv koden som anger de specifika beräkningar eller ändringar som utförs av funktionen.
-* **Funktionsexport**: Gör funktionen tillgänglig i reglerna genom att exportera den från den relevanta filen.
+**Fördelar:**
 
+- **Återanvändbarhet**: Skriv funktionen en gång och använd den i flera formulär och regler
+- **Underhållbarhet**: Centraliserad logik som är enkel att uppdatera
+- **Prestanda**: Optimerad körning av JavaScript
+- **Flexibilitet**: Möjlighet att hantera komplexa scenarier som inte hanteras av standardregler
 
-I det här exemplet visas två anpassade funktioner som `getFullName` och `days`:
+### **Skapa anpassade funktioner**
+
+**Filplats**: `/blocks/form/functions.js` i ditt AEM-projekt
+
+**Arbetsflöde för utveckling:**
+
+1. **Funktionsdeklaration**
+   - Definiera tydliga och beskrivande funktionsnamn och parametrar
+   - Använd namn som anger funktionens syfte
+   - Dokumentparametrar och returtyper
+
+2. **Logikimplementering**
+   - Skriv ren och effektiv JavaScript-kod
+   - Hantera kantfall och felscenarier
+   - Följ vedertagna metoder för kodning
+
+3. **Funktionsexport**
+   - Exportera funktioner för att göra dem tillgängliga i regelredigeraren
+   - Använd namngiven export för bättre organisation
+   - Testa funktioner före distribution
+
+4. **Dokumentation**
+   - Lägga till JSDoc-kommentarer för funktionsdokumentation
+   - Inkludera exempel
+   - Ange parametertyper och returvärden
+
+I följande exempel visas två anpassade funktioner: `getFullName` och `days`.
 
 ```JavaScript
 /**
- * Get Full Name
- * @name getFullName Concats first name and last name
- * @param {string} firstname in Stringformat
- * @param {string} lastname in Stringformat
- * @return {string}
+ - Get Full Name
+ - @name getFullName Concats first name and last name
+ - @param {string} firstname in Stringformat
+ - @param {string} lastname in Stringformat
+ - @return {string}
  */
 function getFullName(firstname, lastname) {
   return `${firstname} ${lastname}`.trim();
 }
 
 /**
- * Calculate the number of days between two dates.
- * @param {*} endDate
- * @param {*} startDate
- * @name days Calculates the numebr of days between two dates
- * @returns {number} returns the number of days between two dates
+ - Calculate the number of days between two dates.
+ - @param {*} endDate
+ - @param {*} startDate
+ - @name days Calculates the numebr of days between two dates
+ - @returns {number} returns the number of days between two dates
  */
 function days(endDate, startDate) {
   const start = typeof startDate === 'string' ? new Date(startDate) : startDate;
@@ -367,26 +602,190 @@ export { getFullName, days };
 
 ### Använda en anpassad funktion i regelredigeraren
 
-Så här använder du den anpassade funktionen i Regelredigeraren:
+Så här använder du en anpassad funktion i Regelredigeraren:
 
-1. **Lägg till funktionen**: Inkludera din anpassade funktion i filen `../[blocks]/form/functions.js`. Kom ihåg att lägga till den i programsatsen `export` i filen.
-1. **Distribuera filen**: Distribuera den uppdaterade `functions.js` filen till ditt GitHub-projekt och verifiera att bygget lyckades.
-1. **Funktionsanvändning**: Du kommer åt funktionen i regelredigeraren i ditt formulär genom att välja alternativet `Function Output` i fältet **[!UICONTROL Select Action]**.
+1. **Lägg till funktionen**: Lägg till den anpassade funktionen i filen `../[blocks]/form/functions.js`. Se till att du inkluderar den i programsatsen `export` i filen.
+2. **Distribuera filen**: Distribuera den uppdaterade `functions.js` filen till ditt GitHub-projekt och bekräfta att bygget har slutförts.
+3. **Funktionsanvändning**: I regelredigeraren i ditt formulär kan du komma åt funktionen genom att välja alternativet `Function Output` i fältet **[!UICONTROL Select Action]**.
 
    ![Anpassad funktion i regelredigeraren](/help/edge/docs/forms/assets/custom-function-rule-editor.png)
 
-1. **Förhandsgranska formuläret**: Förhandsgranska formuläret med den nyligen implementerade funktionen.
+4. **Förhandsgranska formuläret**: Förhandsgranska formuläret för att verifiera att den nyligen implementerade funktionen fungerar som förväntat.
 
-## Ytterligare information
+## Metodtips för regelutveckling
 
->[!NOTE]
+### **Prestandaoptimering**
+
+**Minimera regelkomplexitet**
+
+- Behåll enskilda regler enkla och fokuserade.
+- Bryt komplex logik i flera mindre regler.
+- Undvik djupt kapslade förhållanden när det är möjligt.
+
+**Optimera regelkörning**
+
+- Placera de oftast utlösta reglerna först.
+- Använd särskilda villkor för att minska onödiga utvärderingar.
+- Tänk på hur reglerna påverkar tiden för inläsning av formulär.
+
+**Resurshantering**
+
+- Begränsa antalet regler per formulärkomponent.
+- Använd anpassade funktioner för upprepad logik i stället för att duplicera regler.
+- Testa prestanda med realistiska datavolymer.
+
+### **Riktlinjer för användarupplevelser**
+
+**Ge tydlig feedback**
+
+- Använd valideringsmeddelanden som vägleder användarna mot rätt indata.
+- Visa inläsningsindikatorer för regler som omfattar externa tjänster.
+- Implementera progressiv exponering för att minska kognitiv belastning.
+
+**Behåll formulärsvarstider**
+
+- Undvik regler som orsakar abrupta visuella ändringar.
+- Implementera mjuka övergångar för visa/dölj-åtgärder.
+- Testa regler på olika enheter och skärmstorlekar.
+
+**Felhantering**
+
+- Ange reservbeteende när reglerna misslyckas.
+- Visa användarvänliga felmeddelanden.
+- Logga felsökningsfel med en positiv användarupplevelse.
+
+### **Bästa metoder för utveckling**
+
+**Testar strategi**
+
+- Testa regler med kantfall och gränsvärden.
+- Kontrollera regelbeteendet i olika webbläsare.
+- Testa formulärfunktioner både med och utan JavaScript aktiverat.
+
+**Dokumentation**
+
+- Dokumentera affärslogiken bakom komplexa regler.
+- Underhåll regellager för stora formulär.
+- Använd konsekventa namnkonventioner för komponenter och regler.
+
+**Versionskontroll**
+
+- Spåra ändringar i anpassade funktioner i versionskontrollen.
+- Testregler i en utvecklingsmiljö före produktion.
+- Underhåll säkerhetskopior av arbetsregelkonfigurationer.
+
+## Felsökning av vanliga problem
+
+### **Regelkörningsproblem**
+
+**Regler utlöses inte**
+
+- **Kontrollera komponentnamn**: Kontrollera att det finns refererade komponenter och att de har rätt namn.
+- **Verifiera regelordning**: Regler körs uppifrån och ned, sortera om vid behov.
+- **Verifiera villkor**: Testa villkor med kända värden för att verifiera logik.
+- **Webbläsarkonsol**: Sök efter JavaScript-fel som kan blockera körning.
+
+**Felaktigt regelbeteende**
+
+- **Granska logikoperatorer**: Bekräfta OCH/ELLER-villkor är korrekt strukturerade.
+- **Testa med exempeldata**: Använd kända värden för att isolera problem.
+- **Kontrollera datatyper**: Kontrollera att numeriska jämförelser använder siffror, inte strängar.
+- **Validera uttryck**: Testa matematiska uttryck separat.
+
+### **Prestandaproblem**
+
+**Långsam formulärrespons**
+
+- **Minska regelkomplexiteten**: Förenkla komplex villkorslogik.
+- **Optimera anpassade funktioner**: Profilera och optimera JavaScript-kod.
+- **Begränsa externa anrop**: Minimera serviceanrop i regler.
+- **Använd effektiva väljare**: Kontrollera att formulärobjektreferenserna är specifika.
+
+**Minnesanvändning**
+
+- **Rensa händelseavlyssnare**: Ta bort oanvända regelbindningar.
+- **Optimera anpassade funktioner**: Undvik minnesläckor i JavaScript-kod.
+- **Begränsa regelomfång**: Använd målregler i stället för globala villkor.
+
+### **Egna funktionsproblem**
+
+**Funktioner är inte tillgängliga**
+
+- **Kontrollera filsökvägen**: Verifiera att `functions.js` finns på rätt plats: `/blocks/form/functions.js`.
+- **Verifiera export**: Kontrollera att funktioner exporteras korrekt.
+- **Skapa process**: Bekräfta att projektbygget innehåller den uppdaterade funktionsfilen.
+- **Cacherensning**: Rensa webbläsarcachen efter att nya funktioner har distribuerats.
+
+**Funktionsfel**
+
+- **Parametervalidering**: Kontrollera att funktionsparametrarna matchar förväntade typer.
+- **Felhantering**: Lägg till try-catch-block för att hantera undantag på ett bra sätt.
+- **Konsolloggning**: Använd console.log för felsökningsfunktionskörning.
+- **JSDoc-validering**: Kontrollera att funktionsdokumentationen matchar implementeringen.
+
+### **Integrering med Universal Editor**
+
+**Regelredigeraren visas inte**
+
+- **Tillägg aktiverat**: Kontrollera att regelredigerartillägget är aktiverat.
+- **Komponentval**: Kontrollera att du har valt en formulärkomponent som stöds.
+- **Webbläsarkompatibilitet**: Testa i webbläsare som stöds (Chrome, Firefox, Safari).
+- **Åtkomstbehörigheter**: Bekräfta att användaren har de AEM-behörigheter som krävs.
+
+**Gränssnittsproblem**
+
+- **Panelsynlighet**: Använd växlingsknappen för att visa eller dölja panelen för formulärobjekt.
+- **Regelsparande**: Kontrollera att reglerna sparas innan du stänger redigeraren.
+- **Zooma i webbläsare**: Återställ webbläsarzoomningen till 100 % för optimal gränssnittsvisning.
+
+## Viktiga begränsningar
+
+>[!IMPORTANT]
 >
-> I Universal Editor stöds inte statiska och dynamiska importer i anpassade funktionsskript. Du måste lägga till den fullständiga koden i filen `../[blocks]/form/functions.js`.
+> **Anpassade funktionsbegränsningar**:
+>
+> - Statiska och dynamiska importer stöds inte i anpassade funktionsskript.
+> - All kod måste inkluderas direkt i filen `/blocks/form/functions.js`.
+> - Funktioner måste vara synkrona (inga asynkrona/väntande eller löften).
+> - Åtkomsten till webbläsar-API:er är begränsad av säkerhetsskäl.
 
-I den här artikeln finns begränsad information om regelredigeraren som är tillgänglig i den universella redigeraren. Mer information om regelredigeraren och anpassade funktioner finns i följande artiklar:
+>[!WARNING]
+>
+> **Produktionsöverväganden**:
+>
+> - Testa alla regler noggrant i en staging-miljö.
+> - Övervaka formulärprestanda efter att ha implementerat komplexa regler.
+> - Ha en återställningsplan för regelrelaterade problem.
+> - Tänk på vilken inverkan användare har med långsamma nätverksanslutningar.
 
-{{see-also-rule-editor}}
+## Sammanfattning
 
-## Se även
+Med regelredigeraren i den universella redigeraren kan du skapa intelligenta, dynamiska formulär som ger enastående användarupplevelser. Genom att implementera villkorslogik, automatiserade beräkningar och anpassade affärsregler kan ni:
 
-{{universal-editor-see-also}}
+**Omforma statiskt Forms**:
+
+- Lägg till villkorlig fältsynlighet för renare, mer fokuserade gränssnitt.
+- Implementera realtidsberäkningar och datavalidering.
+- Skapa sofistikerad affärslogik utan kodning.
+
+**Förbättra användarupplevelsen**:
+
+- Vägled användarna genom logiska formulärflöden.
+- Minska antalet fel med intelligent validering.
+- Ge omedelbar feedback och hjälp.
+
+**Förbättra effektiviteten**:
+
+- Automatisera repetitiva beräkningar och datainmatning.
+- Effektivisera komplexa arbetsflöden med smart routning.
+- Minska supportbördan med självbetjäning.
+
+### **Nästa steg**
+
+Nu när du förstår grunderna i regelredigeraren:
+
+1. **Starta enkelt**: Börja med grundläggande regler för att visa/dölja innan du går vidare till komplexa beräkningar.
+1. **Öva med exempel**: Använd självstudiekursen för beräkning av skatt som grund.
+1. **Utforska avancerade funktioner**: Experimentera med anpassade funktioner för att hitta specifika behov.
+1. **Testa noggrant**: Verifiera alltid regler i olika scenarier och enheter.
+1. **Övervakningsprestanda**: Kontrollera att reglerna förbättrar snarare än förhindrar användarupplevelsen.

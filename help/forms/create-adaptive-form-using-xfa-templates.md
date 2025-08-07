@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: f3c9b798-8b20-4674-9b96-a3a0b143d947
-source-git-commit: 10de700e5e4b352051b8b77dfd0825bb9b6e0219
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Du kan återanvända formulärmallar från XFA eller XDP-filer för att skapa ad
 Några av fördelarna med att skapa formulär baserade på XFA-formulärmallar eller XDP-filer är:
 
 * **Tidsbesparingar**: Du kan snabbt återanvända befintliga XFA-formulärmallar (XDP-filer) utan att behöva återskapa formulärstrukturen, vilket sparar tid och arbete under redigeringsprocessen.
-* **Smidig migrering**: Om du redan har XFA-formulärmallar i användning är det här alternativet en enkel migreringsväg till Adaptive Forms, vilket gör att du kan dra nytta av fördelarna med moderna AEM Core Components utan att förlora befintliga formulärdata och logik.
+* **Smidig migrering**: Om du redan har XFA-formulärmallar i användning är det här alternativet ett enkelt sätt att migrera till Adaptiv Forms, vilket gör att du kan dra nytta av fördelarna med moderna AEM Core-komponenter utan att förlora befintliga formulärdata och logik.
 * **Förbättrad användarupplevelse**: Adaptiv Forms är mer responsiv och anpassningsbar än XFA-formulär. Genom att gå över till Adaptiv Forms kan du skapa en användarvänlig upplevelse för olika enheter och skärmstorlekar.
 * **Förbättrad integrering**: Adaptiv Forms är bättre integrerat med andra funktioner, som arbetsflöden, databindning och formulärinskickning, vilket ger smidigare arbetsflöden och bättre övergripande formulärhantering.
 
@@ -43,7 +43,7 @@ Du behöver följande för att skapa ett adaptivt formulär baserat på kärnkom
 Så här skapar du ett adaptivt formulär med hjälp av XFA- eller XDP-formulärmallar:
 
 1. Logga in på din [!DNL Experience Manager Forms]-författarinstans.
-1. Ange dina uppgifter på inloggningssidan för Experience Manager. När du är inloggad väljer du **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** i det övre vänstra hörnet.
+1. Ange dina inloggningsuppgifter på Experience Manager inloggningssida. När du är inloggad väljer du **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** i det övre vänstra hörnet.
 
    ![Forms och dokument](/help/forms/assets/create-fdm.png)
 
@@ -93,7 +93,3 @@ Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redi
 >
 > Du kan inaktivera skript för XDP-formulärfält med panelens verktygsfält i det tillagda fältet. Skapa logik för de tillagda fälten med [redigeraren för visuell regel](/help/forms/rule-editor-core-components.md).
 
-## Se även
-
-{{see-also}}
-* [Lägga till dynamiskt beteende i formulär med regelredigeraren](/help/forms/rule-editor-core-components.md)

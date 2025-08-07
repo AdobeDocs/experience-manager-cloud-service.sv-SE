@@ -4,9 +4,9 @@ description: Alternativen i listrutan ingår i ett visst kalkylblad och importer
 feature: Edge Delivery Services
 exl-id: 5b0bc1b6-6e33-41f3-b7c1-4d997787b6cd
 role: Admin, Architect, Developer
-source-git-commit: cb914f76b0b785a89b20ef5eaacbc36e8217944b
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,28 @@ Forms innehåller ofta listrutor där användarna kan välja bland fördefiniera
 
 Fördelarna med att läsa in en listruta från ett separat kalkylblad är:
 
-* Förenklad hantering: Bibehåll listrutealternativen centralt för enklare uppdateringar och tillägg.
-* Förbättrad effektivitet: Eliminera behovet av att lägga till långa alternativlistor manuellt i formulärdefinitionen.
+- Förenklad hantering: Bibehåll listrutealternativen centralt för enklare uppdateringar och tillägg.
+- Förbättrad effektivitet: Eliminera behovet av att lägga till långa alternativlistor manuellt i formulärdefinitionen.
 
 ![Listrutealternativ](/help/forms/assets/drop-down-options.png)
 
 
 I slutet av den här artikeln lär du dig att:
 
-* [Definiera alternativ i ett separat kalkylblad](#define-options)
-* [Lägg till URL för att läsa in alternativ i listrutan](#add-url)
+- [Definiera alternativ i ett separat kalkylblad](#define-options)
+- [Lägg till URL för att läsa in alternativ i listrutan](#add-url)
 
 ## Definiera alternativ i ett separat blad {#define-options}
 
 Definiera alternativ i ett separat kalkylblad
 
 1. Skapa ett kalkylblad:
-   1. Leta reda på AEM projektmapp i Microsoft® SharePoint eller Google Drive.
+   1. Leta upp projektmappen för AEM i Microsoft® SharePoint eller Google Drive.
    1. Lägg till ett nytt blad. Exempel:&quot;shared-country&quot;.
 1. Definiera alternativkolumner:
 Lägg till två kolumner:&quot;Alternativ&quot; och&quot;Värde&quot;.
-   * &quot;Option&quot; definierar den text som visas i listrutan.
-   * &quot;Värde&quot; definierar det skickade värdet när en användare väljer alternativet.
+   - &quot;Option&quot; definierar den text som visas i listrutan.
+   - &quot;Värde&quot; definierar det skickade värdet när en användare väljer alternativet.
 
    >[!NOTE]
    >
@@ -67,7 +67,7 @@ Ange dina landsalternativ i kolumnen&quot;Alternativ&quot; (och&quot;Värde&quot
 
 Egenskapen `Options` för ett `select`-fält accepterar en URL. URL:en returnerar en JSON-matris som används som alternativ för den nedrullningsbara listan `Destination`. Så här lägger du till URL:en för att läsa in listrutealternativ:
 
-1. Gå till AEM projektmapp på Microsoft® SharePoint eller Google Drive och öppna kalkylbladet. Du kan också skapa nya kalkylblad för ett formulär.
+1. Gå till AEM Project-mappen i Microsoft® SharePoint eller Google Drive och öppna kalkylbladet. Du kan också skapa nya kalkylblad för ett formulär.
 1. Kopiera URL:en för bladet `shared-country` och klistra in den i kolumnen `Options` för fältet `Destination`.
 
    ![Kalkylblad för förfrågan](/help/forms/assets/drop-down-enquiry.png)
@@ -84,11 +84,6 @@ När du har integrerat URL:en i formulärdefinitionen för att läsa in listrute
 Om projektdatabasen till exempel heter&quot;weFinance&quot;, finns den under kontoägaren&quot;wkndform&quot; och du använder huvudgrenen, visar URL:en nedan formuläret `enquiry` med de alternativ som har sparats i det separata bladet:
 
 `https://main--wefinance--wkndform.aem.live/enquiry-form`
-<!--(https://main--wefinance--wkndform.aem.live/enquiry-form) 
--->
 
-## Se även
-
-{{see-more-forms-eds}}
 
 

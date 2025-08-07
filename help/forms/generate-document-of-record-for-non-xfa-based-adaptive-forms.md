@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
 role: User, Developer
-source-git-commit: 2a780b6d1263fd70be6fc54fcc79282046f82fab
+source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
 workflow-type: tm+mt
-source-wordcount: '4085'
+source-wordcount: '4081'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -281,7 +281,6 @@ I följande tabell beskrivs adaptiva formulärkomponenter och motsvarande XFA-ko
 | Adaptiv Form-komponent | Motsvarande XFA-komponent | Anteckningar |
 |---|---|---|
 | Bild | Bild | Komponenterna TextDraw och Image, oavsett om de är bundna eller obundna, visas alltid i registreringsdokumentet för ett XSD-baserat anpassat formulär, såvida de inte utelämnas med inställningarna för postdokument. |
-| Text | Text |
 
 ### Tabeller {#tables}
 
@@ -364,7 +363,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Visa endast de markerade värdena för komponenterna Kryssruta och Alternativknapp**: Om du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
       * **Avgränsare för flera värden**: Du kan välja en avgränsare, till exempel komma eller radbrytning, om du vill visa flera värden.
       * **Alternativ Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas i [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Om du ställer in egenskaperna från [!UICONTROL Form Field Properties] i DoR skrivs egenskaperna som angetts i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär över. Om du väljer alternativet [!UICONTROL Same as Aaptive form] används justeringen som konfigurerats i en författarinstans för adaptiva formulär för [!UICONTROL Document of Record]-fält.
-      * **Antal alternativ för vågrät justering**:Du kan ange hur många alternativ som ska visas i postdokumentet för den vågräta justeringen.
+      * **Antal alternativ för vågrät justering**:You kan ange antalet alternativ som ska visas i postdokumentet för den vågräta justeringen.
 
       ![Egenskaper för formulärfält](/help/forms/assets/formfieldpropertiesdor.png)
 
@@ -414,9 +413,7 @@ Utför följande steg från författarinstansen av redigeraren för adaptiva for
 1. Klicka på ikonen ![Konfigurera ikon](/help/forms/assets/configure-icon.svg) för att öppna behållaren **[!UICONTROL Properties]** för det adaptiva formuläret.
 1. Öppna fliken **[!UICONTROL Document of Record Template]** och välj bland följande alternativ:
    * **[!UICONTROL None]**: När det här alternativet är markerat skapas ingen [!UICONTROL Document of Record]-mall för ditt adaptiva formulär.
-
-   * **[!UICONTROL Associate Form Template as Document of Record Template]**:När det här alternativet är markerat används XFA-formulär som mall för postdokument.
-
+   * **[!UICONTROL Associate Form Template as Document of Record Template]**:Whendet här alternativet är valt, XFA-formulär används som mall för postdokument.
    * **[!UICONTROL Generate Document of Record]**: När det här alternativet är markerat genereras mallen [!UICONTROL Document of Record] automatiskt för ditt adaptiva formulär.
 
 1. Välj ![Spara](/help/forms/assets/check-button.png) om du vill spara egenskaperna.
