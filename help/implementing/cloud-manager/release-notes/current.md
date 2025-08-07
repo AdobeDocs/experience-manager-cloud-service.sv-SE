@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.8.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 34e17f63809de261dcd2c6b741f525058600a987
+source-git-commit: cb841b9614ccf5c6bcfeef7524fd6306b3b1ac35
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Nästa planerade version är torsdagen den 4 september 2025.
 
      ![Forms-tillägg i lösningar och tillägg när du skapar ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-creating-production-program.png) *När du skapar ett program kan du välja Forms-tillägget i webbplatslösningen.*
 
-     ![Forms-tillägg vid redigering av ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-editing-production-program.png) *I **Redigera program**&#x200B;väljer du Forms-tillägg för Sites-programmet och kör sedan pipeline för att aktivera det i miljöerna.*
+     ![Forms-tillägg vid redigering av ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-editing-production-program.png) *I **Redigera program**väljer du Forms-tillägg för Sites-programmet och kör sedan pipeline för att aktivera det i miljöerna.*
 
      Mer information finns i [Skapa ett produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
@@ -67,16 +67,13 @@ Följande möjligheter är för närvarande tillgängliga:
 
 Återgå snabbt till en tidigare distribution om den senaste kundkällkoden inte fungerar som förväntat - du behöver inte köra om hela pipelinen eller återställa implementeringar manuellt.<!--https://jira.corp.adobe.com/browse/CMGR-69556 -->
 
-![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**&#x200B;för en vald miljö.*
-
+![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**för en vald miljö.*
 
 ![Återställ föregående dialogruta för koddistribution](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed-dialogbox.png)
-*I dialogrutan **Återställ tidigare kod som distribuerats**&#x200B;granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
-
+*I dialogrutan **Återställ tidigare kod som distribuerats**granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
 
 ![Återställer aktiveringen](/help/implementing/cloud-manager/release-notes/assets/restoring-previous-code-deployed-restoring.png)
-*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**&#x200B;tills distributionen är klar.*
-
+*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**tills distributionen är klar.*
 
 ![Source-kodversionen används](/help/implementing/cloud-manager/release-notes/assets/environments-view-details-sourcecodeversion.png) *Vyn Miljöinformation, som visas ovan, visar nu även den aktiva källkodsversionen som används.*
 
