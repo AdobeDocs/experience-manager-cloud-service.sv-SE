@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 3b6d75b13730e920a10bc623947bc8b2d46dc5a9
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2837'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,8 @@ Interactive Communications on Cloud är en kraftfull lösning för att skapa, ha
 
 * **Formatflexibilitet**: Utdata i formaten PDF, HTML, PCL, PostScript® och ZPL.
 
+* **Regelredigeraren**: Bygg dynamiska, datadrivna åtgärder direkt i dokumenten med ett intuitivt gränssnitt där du kan peka och klicka. Definiera enkelt villkorsstyrd logik, automatisera arbetsflöden och personalisera innehåll utan att behöva skriva kod.
+
 #### Användningsexempel:
 
 * Finansiella institut som genererar kontoutdrag
@@ -154,6 +156,38 @@ Med AEM Forms HTML5 Forms kan du återge befintliga XFA-formulärmallar (XML For
 * **Spara utkast**: Spara ett HTML5-formulär som ett utkast och fortsätt fylla i formuläret i ett senare skede.
 
 Vill du börja? Dokumentationen [Introduktion till HTML5-formulär](/help/forms/introductionhtml5.md) innehåller en omfattande översikt och en guide om hur du kommer igång med innovationen.
+
+### AEM Forms Scaffolder CLI for Custom Components
+
+Snabba upp utvecklingen av AEM Forms Edge Delivery Services med AEM Forms CLI-verktyg. Med det här kommandoradsgränssnittet kan du direkt generera den kod och de kablar som behövs för att komma igång med utvecklingen av anpassade komponenter - utan någon mallsida, inget trassel.
+
+>[!VIDEO]&#x200B;(https://video.tv.adobe.com/v/3470514/aem-forms)
+
+**Nyckelfunktioner:**
+
+* **Snabb ställningar**: Generera strukturen och koden för nya anpassade komponenter på ett ögonblick, vilket minskar tiden för manuell konfiguration.
+* **Bästa praxis inbyggt**: Verktyget följer rekommenderade mönster för AEM Forms Edge Delivery Services, vilket ger enhetlighet och underhållbarhet.
+* **Utvecklarproduktivitet**: Fokusera på att skapa affärslogik och användargränssnitt, medan CLI hanterar repetitiva konfigurationsuppgifter.
+* **Smidig integrering**: Genererade komponenter är klara att användas och integreras med dina befintliga AEM Forms-projekt.
+
+Vill du börja? AEM Forms CLI-verktyg är tillgängligt via programmet för tidig åtkomst för Forms as a Cloud Service-distributioner. Om du vill begära åtkomst skickar du ditt organisations-ID och programinformation till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) från din officiella adress.
+
+### API-integreringsverktyg för dynamiska formulärdata
+
+Med API Integration Tool kan man skapa dynamiska, intelligenta blanketter som automatiskt hämtar och fyller i data från externa REST API:er baserat på användarinteraktioner. Denna icke-kodsintegration omvandlar statiska formulär till responsiva datainsamlingsgränssnitt.
+
+Viktiga funktioner:
+
+* **Gränssnitt för visuell konfiguration**: Skapa API-integreringar via ett intuitivt peka och klicka-gränssnitt utan anpassad kodning
+* **Fyll i data i realtid**: Fyll i formulärfält automatiskt baserat på användaren i indata (t.ex. ort och tillstånd för automatisk ifyllning när användaren anger postnummer)
+* **Flexibelt API-stöd**: Anslut till ett offentligt tillgängligt REST API med stöd för GET/POST-metoder, autentisering och JSON/XML-svar
+* **Regelbaserade utlösare**: Definiera när API-anrop aktiveras med den inbyggda regelmotorn (t.ex. fältändringar, formulärhändelser)
+* **Smart datamappning**: Konfigurera hur API-svarsdata mappar till specifika formulärfält med Adobe JSON-parsningsfunktioner
+* **Förbättrad användarupplevelse**: Minska den manuella datainmatningen, förbättra datakvaliteten och skapa mer engagerande formulärinteraktioner
+
+Det här verktyget är särskilt användbart för scenarier som automatisk ifyllnad, dynamisk ifyllning av listrutor, validering i realtid mot externa databaser och för att skapa sammanhangsberoende formulärupplevelser som anpassar sig utifrån användarens indata.
+
+
 
 ## Ytterligare innovationer för tidig åtkomst
 
@@ -204,7 +238,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 

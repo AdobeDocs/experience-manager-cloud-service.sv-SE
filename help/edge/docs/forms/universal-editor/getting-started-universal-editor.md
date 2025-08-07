@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: 6400662cb1c7a504f69db7091091452e99dd6ce9
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2117'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Innan du börjar bör du kontrollera att du har följande:
 
 >[!TIP]
 >
-> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE).
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
 
 ## Sökväg A: Skapa nytt projekt med Forms
 
@@ -182,8 +182,8 @@ Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för i
 
 **Validering:** Bekräfta din GitHub-databasanslutning till AEM.
 
->[!NOTE]
->
+    >[!OBS!]
+    >
 >Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
 +++
@@ -399,11 +399,11 @@ Vi går igenom varje steg:
 
    ```bash
    # Form block rule engine files
-    blocks/form/rules/formula/*
-    blocks/form/rules/model/*
-    blocks/form/rules/functions.js
-    scripts/editor-support.js
-    scripts/editor-support-rte.js
+   blocks/form/rules/formula/*
+   blocks/form/rules/model/*
+   blocks/form/rules/functions.js
+   scripts/editor-support.js
+   scripts/editor-support-rte.js
    ```
 
 2. **Uppdatera .eslintrc.js**
@@ -648,7 +648,7 @@ Med en lokal utvecklingsmiljö kan du göra ändringar och se dem direkt utan at
    AEM CLI förenklar lokala utvecklingsuppgifter:
 
    ```bash
-   npm install -g @adobe/aem-cli
+       npm install -g @adobe/aem-cli
    ```
 
 2. **Klona din databas**
