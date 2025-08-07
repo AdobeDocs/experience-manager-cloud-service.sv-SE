@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: 4125f6d99c1c1d63b9234d66dc552695bd30e7bc
+source-git-commit: e8932e6490008368e0e22ebec3331553b7b54c59
 workflow-type: tm+mt
-source-wordcount: '1955'
+source-wordcount: '2048'
 ht-degree: 0%
 
 ---
@@ -177,11 +177,20 @@ Som administratör anpassar du din [!DNL Content Hub]-portal så att den uppfyll
 ![återställ standard](/help/assets/assets/reset-default-content-hub.png)
 På sidan ![ Varumärkning ](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** använder du avsnitten **[!UICONTROL Banner]**, **[!UICONTROL Colors]** och **[!UICONTROL Banner image]** för att utföra följande anpassningar:
 
+1. [Ändra logotypbilden från avsnittet [!UICONTROL Logo image]](#Change-the-logo-image)
 1. [Ändra banderollbilden från avsnittet [!UICONTROL Banner image]](#Change-the-banner-image)
 1. [Uppdatera rubrik och brödtext på banderollen och ändra textfärgen i avsnittet [!UICONTROL Banner]](#Add-title-and-body-text-to-your-banner-and-change-the-text-color)
 1. [Ändra primär och sekundär färg från avsnittet [!UICONTROL Colors] för att använda ett färgschema som är anpassat till ditt varumärkes tema](#Change-the-primary-and-secondary-color)
 
 Välj alternativet **[!UICONTROL Reset Defaults]** om du vill återställa ändringarna och standardtemat.
+
+#### Ändra logotypbilden{#change-the-logo-image}
+
+Utför följande steg på sidan ![Varumärkning](/help/assets/assets/ColorPalette.svg) **[!UICONTROL Branding]** för att ändra logotypbilden för din [!DNL Content Hub]-distribution:
+
+1. Klicka på ![välj bild](/help/assets/assets/Browse.svg) **[!UICONTROL Select Image]** om du vill välja en logotypbild med dialogrutan för resursväljaren. Resursväljaren visar endast godkända bilder.
+1. Markera bilden, klicka på **[!UICONTROL Select]** och sedan på **[!UICONTROL Save]** för att visa den som logotypbild för din [!DNL Content Hub]-distribution.
+   ![banderollbild](/help/assets/assets/logo-image-content-hub1.png)
 
 #### Ändra banderollbilden{#Change-the-banner-image}
 
@@ -190,6 +199,12 @@ Utför följande steg på sidan ![Varumärkning](/help/assets/assets/ColorPalett
 1. Klicka på ![välj bild](/help/assets/assets/Browse.svg) **[!UICONTROL Select from gallery]** om du vill välja en banderollbild med dialogrutan för resursväljaren. Resursväljaren visar endast godkända bilder.
 1. Markera bilden, klicka på **[!UICONTROL Select]** och sedan på **[!UICONTROL Save]** för att visa den som en banderollbild för din [!DNL Content Hub]-distribution.
    ![banderollbild](/help/assets/assets/banner-image-content-hub1.png)
+
+>[!NOTE]
+>
+> * Den rekommenderade storleken för **banderollbild** är `height = 200 to 450px` och `width = 1920 to 2560px`.
+> * Den rekommenderade storleken för **logotypbild** är `height = 80 to 120px` och `width = 120 to 200px`.
+> * MIME-typerna **som stöds** för både Banner- och Logo-bilder är `'JPG', value: 'image/jpeg'`, `'PNG', value: 'image/png'`, `'WEBP', value: 'image/webp'`, `'TIFF', value: 'image/tiff'`, `'SVG', value: 'image/svg+xml'`, `'GIF', value: 'image/gif'`.
 
 #### Lägg till rubrik och brödtext i bannern och ändra textfärgen{#Add-title-and-body-text-to-your-banner-and-change-the-text-color}
 
@@ -233,7 +248,7 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 ### Återgivningar {#renditions-content-hub}
 
-Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
 Gör så här:
 

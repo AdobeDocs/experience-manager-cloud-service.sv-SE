@@ -3,9 +3,9 @@ title: Söka efter resurser i Content Hub
 description: Lär dig söka efter resurser i  [!DNL Content Hub]
 role: User
 exl-id: 8578d7d0-32b9-4e5c-80ef-3827e358ac6c
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: a0ca51bdf2cd4ece11e05243713a616e9fcb5850
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Du kan till exempel söka efter alla **[!UICONTROL JPEG]**-bilder med nyckelorde
 
 ## Begränsa sökresultaten med filter {#narrow-down-search-results}
 
-Använd panelen Filter om du vill söka efter resurser baserat på metadata. Du kan filtrera sökresultat baserat på olika sökpredikt. Du kan välja alla lämpliga predikat för att minimera eller begränsa sökresultaten. När du väljer flera alternativ i ett filter visas de resurser som matchar något av de alternativ som är markerade i ett filter. När du väljer flera alternativ för olika filter visas endast de resurser som matchar alla alternativ som har valts för olika filter för att begränsa sökresultaten.
+Använd panelen Filter om du vill söka efter resurser baserat på metadata. Du kan filtrera sökresultat baserat på olika sökpredikt. Du kan välja alla lämpliga predikat för att minimera eller begränsa sökresultaten. Du kan välja fler än 10 predikat när du filtrerar sökresultaten. När du väljer flera alternativ i ett filter visas de resurser som matchar något av de alternativ som är markerade i ett filter. När du väljer flera alternativ för olika filter visas endast de resurser som matchar alla alternativ som har valts för olika filter för att begränsa sökresultaten.
 
 Standardfiltren innehåller filformat, godkänt av, godkänt, förfallet och inte förfallet samt förfallodatum. Administratörer kan också konfigurera de filter som visas i filterlistan. Mer information finns i [Konfigurera Content Hub användargränssnitt](configure-content-hub-ui-options.md#configure-filters-content-hub).
 

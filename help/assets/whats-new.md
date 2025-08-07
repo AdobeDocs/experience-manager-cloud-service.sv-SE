@@ -3,9 +3,9 @@ title: Nyheter i Content Hub
 description: Läs mer om några av de nya Content Hub-funktionerna
 role: User
 exl-id: 77a5c54c-bbc5-4dfb-9c3a-aa0620e836d0
-source-git-commit: dfbe7a639f69c2e5a8a6fc864b6071e1aa1fb7ba
+source-git-commit: 9f185b48405cd6924ea1483ca79b2acbf36b1be9
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,23 @@ I följande video visas Content Hub nyckelfunktioner:
 
 ## Releasedatum {#release-date}
 
-Lanseringsdatumet för Content Hub (2025.6.0) är 26 juni 2025 (samma som för AEM as a Cloud Service). Nästa funktionsversion (2025.7.0) är planerad till 31 juli 2025.
+Lanseringsdatumet för Content Hub (2025.7.0) är 7 augusti 2025 (samma som för AEM as a Cloud Service). Nästa version (2025.8.0) är planerad till 28 augusti 2025.
+
+## Julversionen - funktioner {#july-release-features}
+
+**Utökad flexibilitet för varumärken i Content Hub**
+
+Tack vare de befintliga personaliseringsfunktionerna kan administratörer nu skräddarsy sin driftsättning ytterligare genom att lägga till anpassade logotypbilder. Stöd för filformatet TIFF har också lagts till för både banner- och logotypbilder, vilket ger större flexibilitet i designen.
+
+**Smart delning med namngivna länkar**
+
+Du kan nu lägga till en titel när du skapar en delad länk, oavsett om det är från vyn med tillgångsinformation eller efter att du har valt en eller flera resurser. Detta hjälper mottagarna att enkelt identifiera syftet med varje länk, särskilt när de tar emot flera delade resurser.
+
+![privat och offentlig länk](/help/assets/assets/shared-link-for-assets.png)
+
+**Förbättrad filternavigering**
+
+Content Hub innehåller nu alternativet **Visa alla** i filter, vilket gör att användare kan visa alla tillgängliga aspekter tillsammans med resursantal från den aktuella begränsningen att endast visa upp till tio sidor. Förbättrade sök- och sorteringsfunktioner i varje filter gör det enklare att upptäcka och hantera resurser effektivare.
 
 ## Funktioner i juniversionen {#june-release-features}
 
@@ -34,7 +50,7 @@ Med Content Hub kan du nu styra åtkomsten till samlingar när du skapar dem, s�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3463336)
 
-[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/collections-content-hub#create-collections"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/collections-content-hub#create-collections"}
 
 ## Versionsfunktioner från maj {#may-release-features}
 
@@ -64,7 +80,7 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 
 * Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
 
-[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control"}
 
 ### Gränssnittsmärkning {#ui-branding}
 
@@ -72,7 +88,7 @@ Nu kan administratörer anpassa användargränssnittet med varumärkesspecifika 
 
 ![Gränssnittsmärkning](/help/assets/assets/content-hub-ui-branding.png)
 
-[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/configure-content-hub-ui-options#configure-branding-content-hub"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/configure-content-hub-ui-options#configure-branding-content-hub"}
 
 ### Delning av offentlig länk {#public-link-sharing}
 
@@ -80,13 +96,13 @@ Content Hub har nu stöd för att generera delningsbara länkar så att externa 
 
 ![Gränssnittsmärkning](/help/assets/assets/public-and-private-link.png)
 
-[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/share-assets-content-hub"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/share-assets-content-hub"}
 
 ### Hämta flera resurser som ZIP {#download-multiple-assets-as-zip}
 
 Nu kan du även ladda ned de markerade resurserna och deras återgivningar i en ZIP-fil och inte som separata filer, vilket förenklar filhanteringen.
 
-[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
 
 ### Dynamic Media-renderingar i Content Hub {#dynamic-media-renditions}
 
@@ -94,4 +110,4 @@ Få tillgång till alla förinställda renderingar och smarta beskärningar för
 
 &#x200B;![Dynamiska medierenderingar](/help/assets/assets/dm-renditions-content-hub.png)
 
-[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
+[!BADGE Gör mer om den här funktionen]{type=Informative url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/download-assets-content-hub#download-asset-renditions"}
