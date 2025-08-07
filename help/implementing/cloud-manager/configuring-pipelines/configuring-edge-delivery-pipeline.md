@@ -6,15 +6,14 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
-hide: true
-hidefromtoc: true
-source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
+hide: false
+hidefromtoc: false
+source-git-commit: 96a619c6ab8f71034914b72a57bdb1e7f363fbc6
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
-
 
 
 # Lägg till en Edge Delivery-pipeline {#configure-production-pipeline}
@@ -25,9 +24,9 @@ En användare måste ha rollen **[Distributionshanteraren](/help/onboarding/clou
 
 >[!NOTE]
 >
->Det går inte att konfigurera en produktionspipeline förrän följande har inträffat:
+>En Edge Delivery-pipeline kan inte konfigureras förrän följande har inträffat:
 >
->* Programmet skapas.
+>* Ett program som innehåller en Edge Delivery Services-webbplats och en mappad domän skapas. I annat fall visas alternativet **Lägg till Edge Delivery Pipeline** inaktiverat i användargränssnittet och ett verktygstips förklarar saknade krav. <!-- CMGR‑69680 -->
 >* Git-databasen har minst en gren.
 >* Produktions- och mellanlagringsmiljöerna skapas.
 
@@ -37,45 +36,54 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 >
 >Du kan [redigera pipeline-inställningar](managing-pipelines.md) efter den första konfigurationen.
 
-## Lägg till en ny Edge Delivery-pipeline {#adding-production-pipeline}
+**Så här lägger du till en Edge Delivery-pipeline:**
 
-När du har konfigurerat programmet och har minst en miljö med användargränssnittet för [!UICONTROL Cloud Manager] kan du lägga till en produktionspipeline genom att följa de här stegen.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj önskad organisation.
 
->[!TIP]
->
->Innan du konfigurerar en pipeline för framtagning bör du läsa [AEM Quick Site Creation Journey](/help/journey-sites/quick-site/overview.md) för att få en heltäckande guide med det lättanvända verktyget AEM Quick Site Creation. Den här resan kan hjälpa er att effektivisera framtidens utveckling av er AEM-webbplats, så att ni snabbt kan anpassa er webbplats utan kunskaper om AEM bakomliggande system.
+1. På sidan **Mina program** väljer du det program du vill ha.
 
-**Så här lägger du till en ny Edge Delivery-pipeline:**
+   ![Sidan Mina program i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/assets/my-programs.png)
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation
+1. Gör något av följande:
 
-1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+   * **Lägg till en Edge Delivery-pipeline från pipelines-kortet**
 
-1. Navigera till kortet **Pipelines** på sidan **Programöversikt** och klicka på **Lägg till** för att välja **Lägg till produktionspipeline**.
+      1. Klicka på ikonen **Översikt** **![Översikt](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg) i den vänstra listen under [Program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+      1. På sidan **Programöversikt**, under kortet **Pipelines**, klickar du på **![Plustecken](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg)Lägg till** och väljer sedan **Lägg till Edge Delivery Pipeline**.
 
-   ![Rörledningskortet i programhanteraren - översikt](/help/implementing/cloud-manager/assets/configure-pipeline/add-prod-1.png)
+         ![Rörledningskortet på sidan Programöversikt](/help/implementing/cloud-manager/configuring-pipelines/assets/pipelinescard-add-ed-pipeline.png)
 
-1. Dialogrutan **Lägg till produktionspipeline** visas. Ange ett **Pipelinenamn** som identifierar din pipeline tillsammans med följande alternativ. Klicka på **Fortsätt**.
+   * **Lägg till en Edge Delivery-pipeline från sidan för pipeline**
 
-   **Utlösare för distribution** - Du har följande alternativ när du definierar distributionsutlösare för att starta pipeline.
+      1. Klicka på ikonen **Arbetsflöde eller Pipelines** Pipelines **![i den vänstra listen under ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Program**.
+      1. Klicka på **Lägg till pipeline** > **Lägg till Edge Delivery-pipeline** på sidan Pipelines, i det övre högra hörnet.
 
-   * **Manuell** - Starta pipelinen manuellt.
-   * **Vid Git-ändringar** - Startar CI/CD-flödet när implementeringar läggs till i den konfigurerade Git-grenen. Med det här alternativet kan du fortfarande starta pipelinen manuellt efter behov.
+         ![Sidan Pipelines med knappen Lägg till pipeline](/help/implementing/cloud-manager/configuring-pipelines/assets/pipelinespage-add-ed-pipeline.png)
 
-   **Beteende vid viktiga måttfel** - Under pipeline-konfiguration eller redigering kan **Distributionshanteraren** definiera pipelinens beteende när ett viktigt fel påträffas i någon av kvalitetsportarna. De tillgängliga alternativen är:
+1. I dialogrutan **Lägg till Edge Delivery-pipeline** skriver du en beskrivande pipeline-etikett i textfältet **Pipelinenamn**.
 
-   * **Fråga varje gång** - Standardinställning. Det kräver manuell åtgärd vid varje viktigt fel.
-   * **Misslyckades omedelbart** - Om du väljer det här alternativet avbryts pipelinen när ett viktigt fel inträffar. Den här processen emulerar i princip en användare som manuellt avvisar varje fel.
-   * **Fortsätt omedelbart** - Om du väljer det här alternativet fortsätter pipelinen automatiskt när ett viktigt fel inträffar. Den här processen emulerar i princip en användare som manuellt godkänner varje fel.
+   ![Dialogrutan Lägg till Edge Delivery-pipeline](/help/implementing/cloud-manager/configuring-pipelines/assets/add-edge-delivery-pipeline-configuration.png)
 
-   ![Konfiguration av produktionspipeline](/help/implementing/cloud-manager/assets/configure-pipeline/production-pipeline-configuration.png)
+1. Markera alternativet **Distributionutlösare** som du vill använda.
 
-1. På fliken **Source Code** väljer du vilken typ av kod som pipeline ska bearbeta.
+   * **Manuell** - Du startar distributionen.
+   * **Vid Git-ändringar** - Git startar distributionen automatiskt. Med det här alternativet kan du fortfarande starta pipelinen manuellt, om det behövs.
 
-   * **[Konfigurera en fullständig stackkodspipeline](#full-stack-code)**
-   * **[Konfigurera en riktad distributionsprocess](#targeted-deployment)**
+1. Klicka på **Fortsätt**.
 
-Mer information om olika typer av pipelines finns i [CI/CD Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
+1. Ange följande alternativ under **Source-kod**:
 
-Stegen för att slutföra skapandet av produktionsflödet varierar beroende på vilken typ av källkod du har valt. Följ länkarna ovan för att gå till nästa avsnitt i det här dokumentet så att du kan slutföra konfigurationen av din pipeline.
+   * **Distributionsmiljö** - Visar målmiljöfältet, men är fortfarande skrivskyddat.
 
+   * **Databas** - Använd den nedrullningsbara listan för att peka pipelinen mot den exakta Git-databasen som lagrar Edge Delivery-konfigurationen.
+
+     Se även [Lägg till och hantera databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) för att lära dig hur du lägger till och hanterar databaser i Cloud Manager.
+
+   * **Git-gren** - Använd listrutan för att välja en specifik gren i den valda databasen. Om det behövs klickar du på ikonen ![Papperskorgen eller ikonen Uppdatera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Refresh_18_N.svg) för att läsa in den nedrullningsbara listan för Git-grenen igen efter senaste push-meddelanden
+   * **Kodplats** - Definierar mappsökvägen inuti databasen där pipeline-klar kod startar ( `/` är lika med databasroten).
+
+   ![Konfigurera pipeline](/help/implementing/cloud-manager/configuring-pipelines/assets/add-edge-delivery-pipeline-sourcecode.png)
+
+1. Klicka på **Spara**.
+
+Du kan nu [hantera din pipeline](managing-pipelines.md) på **pipelines**-kortet på sidan **Programöversikt** eller från sidan **Pipelines**.

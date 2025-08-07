@@ -5,9 +5,9 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: 815fb5c3-a171-4531-8727-b79183d85f06
-source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
+source-git-commit: 2d1b7385fec60a77f8c76f260fc87f9e5af428a3
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->&#x200B;>Funktionen som beskrivs i den här artikeln är endast tillgänglig via det privata betaprogrammet. Mer information om hur du registrerar dig för den privata betaversionen finns i [Specialiserad testmiljö](/help/implementing/cloud-manager/release-notes/current.md#specialized-test-environment).
+>>Funktionen som beskrivs i den här artikeln är endast tillgänglig via det privata betaprogrammet. Mer information om hur du registrerar dig för den privata betaversionen finns i [Specialiserad testmiljö](/help/implementing/cloud-manager/release-notes/current.md#specialized-test-environment).
 
 Den specialiserade testmiljön, DevXL, är en ny typ av Cloud Manager-miljö som du kan skapa. Den är utformad för att stödja avancerade användningsfall som UAT (User Acceptance Testing) och prestandavalidering. Till skillnad från traditionella utvecklingsmiljöer, utvecklingsmiljöer och mellanlagringsmiljöer arbetar DevXL-miljöer utanför produktionsdistributionsflödet. De ger dig större flexibilitet och strikt isolering för att förhindra störningar i produktionsflödena.
 
@@ -31,7 +31,7 @@ DevXL är byggt för att spegla storleken, skalbarheten och konfigurationerna i 
 | Miljöstorlek | Matchar scenmiljön. |
 | Isolering | Helt isolerad från andra miljöer. |
 | Kodrörledningar | Samma som utvecklingsmiljön (validering, Skapa, distribuera). |
-| Innehållskopia | Tillåts från produktions- eller scenmiljö. |
+| Kopiera innehåll | Tillåts från Production, Stage eller Specialized Testing Environment. |
 | Återställning av innehåll | Samma som utvecklingsmiljön. |
 | Åtkomstloggar | Samma som utvecklingsmiljön. |
 | Developer Console | Samma som utvecklingsmiljön. |
@@ -52,9 +52,8 @@ Om du vill lägga till eller redigera en miljö måste användaren vara medlem i
 
 1. Gör något av följande:
 
-   Om alternativet **Lägg till miljö** är nedtonat (inaktiverat) kan det bero på att behörigheter saknas eller att de är beroende av de licensierade resurserna.
-
    * På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på **Lägg till miljö** på **miljökortet**.
+Om alternativet **Lägg till miljö** är nedtonat (inaktiverat) kan det bero på att behörigheter saknas eller att de är beroende av de licensierade resurserna.
 
    ![Miljökort](assets/no-environments.png)
 
