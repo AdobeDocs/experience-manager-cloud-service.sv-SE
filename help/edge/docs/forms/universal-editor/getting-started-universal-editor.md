@@ -182,9 +182,9 @@ Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för i
 
 **Validering:** Bekräfta din GitHub-databasanslutning till AEM.
 
-    >[!OBS!]
+    >[ !OBS!]
     >
->Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+    >Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
 +++
 
