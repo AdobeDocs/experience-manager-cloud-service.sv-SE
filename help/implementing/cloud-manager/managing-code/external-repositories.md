@@ -4,7 +4,7 @@ description: Lär dig hur du lägger till en extern databas i Cloud Manager. Clo
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: 19fd6713e083826bd9aa621d86805bcd55a6743a
+source-git-commit: 0243251148af4f188785b1ef0e5ee8eeffe6e0bd
 workflow-type: tm+mt
 source-wordcount: '2321'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Konfigurationen av en extern databas i Cloud Manager består av följande steg:
    | --- | --- |
    | **Databasnamn** | Obligatoriskt. Ett uttrycksfullt namn för din nya databas. |
    | **Databas-URL** | Obligatoriskt. Databasens URL.<br><br>Om du använder en GitHub-värdbaserad databas måste sökvägen sluta i `.git`.<br>Till exempel *`https://github.com/org-name/repo-name.git`* (URL-sökvägen är endast avsedd som illustration).<br><br>Om du använder en extern databas måste den använda följande URL-sökvägsformat:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> eller<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Och matcha Git-leverantören. |
-   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder. Om databasens URL-sökväg innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald.:<ul><li>**GitHub** (GitHub Enterprise och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (endast `bitbucket.org` - molnversion) stöds. Den självhanterade versionen av Bitbucket är borttagen från och med den 15 februari 2024.)</li><li>**Azure DevOps** (`dev.azure.com`) </ul> |
+   | **Välj databastyp** | Obligatoriskt. Välj den databastyp som du använder. Om databasens URL-sökväg innehåller Git-leverantörens namn, till exempel GitLab eller Bitbucket, är databastypen redan förvald.:<ul><li>**GitHub** (GitHub Enterprise och den självhanterade versionen av GitHub)</li><li>**GitLab** (både `gitlab.com` och den självhanterade versionen av GitLab) </li><li>**Bitbucket** (endast `bitbucket.org` - molnversion) stöds. Den självhanterade versionen av Bitbucket är borttagen från och med den 15 februari 2024.</li><li>**Azure DevOps** (`dev.azure.com`) </ul> |
    | **Beskrivning** | Valfritt. En detaljerad beskrivning av databasen. |
 
 1. Välj **Spara** för att lägga till databasen.
