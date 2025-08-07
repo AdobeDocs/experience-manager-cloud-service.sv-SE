@@ -4,7 +4,7 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 0f16c31a5fea1fc538fbeabe6db182ad3a30560d
+source-git-commit: 280e02ba0ace1fe123fd5112a982c6434fd4d499
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 0%
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21772, som offentliggjordes den 6 augusti 2025. Den tidigare underhållsversionen var version 21706.
 
-Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Nya funktioner  {#new-features-21772}
 
@@ -131,7 +131,7 @@ Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns
 
 ### Kända fel {#known-issues-21772}
 
-* SITES-31791: Content Fragments GraphQL - Query failed with &quot;Maximum field count beyond&quot;. Se [Kunskapsbasartikeln](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-27231).
+* SITES-31791: Content Fragments GraphQL - Query failed with &quot;Maximum field count beyond&quot;. Se [Kunskapsbasartikeln](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27231).
 
 ### Föråldrade funktioner och API:er {#deprecated-21772}
 
@@ -140,7 +140,6 @@ Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs
 ### Säkerhetskorrigeringar {#security-21772}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 35 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
-
 
 ### Inbäddade tekniker {#embedded-tech-21772}
 
@@ -151,5 +150,4 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.63 | [Apache HTTP 2.4.63](https://github.com/apache/httpd/blob/2.4.63/CHANGES) |
 | Grundläggande komponenter i AEM | 2.29.0 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
-
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
