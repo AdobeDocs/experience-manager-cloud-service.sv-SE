@@ -5,7 +5,7 @@ keywords: hur man väljer en inskickningsåtgärd för ett tilläggsformulär, k
 feature: Adaptive Forms, Core Components
 exl-id: 495948e8-30a7-4e7c-952f-c71de15520f0
 role: User, Developer
-source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
+source-git-commit: 2c3e8f6f8dab1004a6fbd9be8f5604b1570a1808
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 | AEM as a Cloud Service (Edge Delivery Services) | [Klicka här](/help/forms/configure-submit-action-eds-forms.md) |
@@ -40,7 +40,7 @@ Följande Skicka-åtgärder stöds av Adaptive Forms baserat på kärnkomponente
 * [Anropa ett Power Automate-flöde](/help/forms/forms-microsoft-power-automate-integration.md)
 * [Skicka till SharePoint](/help/forms/configure-submit-action-sharepoint.md)
 * [Anropa en Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
-* [Skicka med hjälp av formulärdatamodell (FDM)](/help/forms/using-form-data-model.md)
+* [Skicka med hjälp av formulärdatamodell (FDM)](/help/forms/integrate-adaptive-form-with-fdm.md)
 * [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
 * [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
 * [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
@@ -66,7 +66,7 @@ Dessutom kan du [anpassa standardinställningen för Skicka-åtgärder](/help/fo
   ![AEM Forms Submit action](/help/forms/assets/aem-forms-submit-action.png)
   -->
 
-Du kan definiera egenskaperna för formulärbehållaren på fliken Skicka i dialogrutan Konfigurera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html?lang=sv-SE) om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.
+Du kan definiera egenskaperna för formulärbehållaren på fliken Skicka i dialogrutan Konfigurera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/form-container.html) om du vill veta mer om dialogrutan Konfigurera för en formulärbehållarkomponent.
 
 ![Klicka på skiftnyckelsikonen för att öppna dialogrutan Adaptiv formulärbehållare och konfigurera en sändningsåtgärd](/help/forms/assets/adaptive-forms-submit-message.png)
 
@@ -125,7 +125,7 @@ For a comprehensive guide on the detailed steps to post or submit data to a REST
 
 ## Invoke an AEM Workflow {#invoke-an-aem-workflow}
 
-The **[!UICONTROL Invoke an AEM Workflow]** Submit Action integrates an Adaptive Form with an [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem). When a form is submitted, the selected workflow starts automatically. 
+The **[!UICONTROL Invoke an AEM Workflow]** Submit Action integrates an Adaptive Form with an [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem). When a form is submitted, the selected workflow starts automatically. 
 
  [Integrate AEM Adaptive Form with AEM Workflow: Streamlining Business Processes](/help/forms/configure-submit-action-workflow.md) provides step-by-step instructions to seamlessly integrate AEM Workflow with Adaptive Forms, optimizing business processes and enhancing workflow automation.
 
@@ -141,7 +141,7 @@ The **[!UICONTROL Submit to Azure Blob Storage]** Submit Action connects an Adap
 
 AEM as a Cloud Service allows submitting data to Azure Storage from AEM Adaptive Forms. Learn how to [create and use Azure Blob Storage configuration in AEM Forms](/help/forms/configure-submit-action-azure-blob-storage.md) for efficient data storage. 
 
-To set values of a configuration, [Generate OSGi Configurations using the AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart), and [deploy the configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) to your Cloud Service instance.
+To set values of a configuration, [Generate OSGi Configurations using the AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart), and [deploy the configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) to your Cloud Service instance.
 
 ## Submit to Power Automate {#microsoft-power-automate}
 

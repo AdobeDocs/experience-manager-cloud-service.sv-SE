@@ -5,9 +5,9 @@ Keywords: Submit data to Marketo engage, Configure submit action as Submit to Ma
 Feature: Adaptive Forms, Form Data Model
 Role: User, Developer
 exl-id: 0683564b-1ac4-42b4-bc08-101c4fdef286
-source-git-commit: ce4646d8db1870f8ec85faddeb4e0a6a04f4c46e
+source-git-commit: dabf8029577c5fb6bb5eebdbf10d77f3d4d95a5d
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ![Arbetsflöde](/help/forms/assets/workflow-marketo-3.png)
 
-Adaptiv Forms-redigerare innehåller åtgärden **Skicka till Marketo Engage** som skickar adaptiva Forms-data till Adobe Marketo Engage för bearbetning. Du kan konfigurera ett befintligt adaptivt formulär så att data skickas till [Adobe Marketo Engage](https://experienceleague.adobe.com/sv/docs/marketo/using/home) när det skickas.
+Adaptiv Forms-redigerare innehåller åtgärden **Skicka till Marketo Engage** som skickar adaptiva Forms-data till Adobe Marketo Engage för bearbetning. Du kan konfigurera ett befintligt adaptivt formulär så att data skickas till [Adobe Marketo Engage](https://experienceleague.adobe.com/en/docs/marketo/using/home) när det skickas.
 
 Det finns ett antal färdiga skickningsåtgärder för att hantera formuläröverföringar. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
@@ -35,6 +35,9 @@ Krav för att konfigurera skicka-åtgärden till Marketo Engage:
 ## Hur konfigurerar jag skicka-åtgärden till Marketo Engage för befintliga formulär?
 
 >[!VIDEO](https://video.tv.adobe.com/v/3442866/submit-action-marketo-engage-marketo-aem-aem-forms-engage)
+
+<span> Den här videon gäller endast för kärnkomponenter. Information om UE/Foundation Components finns i artikeln.</span>
+
 
 >[!BEGINTABS]
 
@@ -94,7 +97,7 @@ När du har konfigurerat skicka-åtgärden för det adaptiva formuläret som **S
 
 ## Nästa steg
 
-Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/sv/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
+Du kan också ansluta ett adaptivt formulär till [Munchkin-biblioteket](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/setup/munchkin) för att spåra antalet besök, klick och formuläröverföringar.
 
 ## Relaterade artiklar
 

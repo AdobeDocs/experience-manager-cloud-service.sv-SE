@@ -6,9 +6,9 @@ docset: CloudService
 role: Admin, Developer, User
 feature: Adaptive Forms, Core Components
 exl-id: b0eb19d3-0297-4583-8471-edbb7257ded4
-source-git-commit: 628e60e43d0810ef9e871dd77ed1674d7646072b
+source-git-commit: dabf8029577c5fb6bb5eebdbf10d77f3d4d95a5d
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: '2047'
 ht-degree: 0%
 
 ---
@@ -51,21 +51,23 @@ I videon nedan visas steg-för-steg-anvisningar om förutsättningarna (som att 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457850/)
 
+<span> Den här videon gäller endast för kärnkomponenter. Information om UE/Foundation Components finns i artikeln.</span>
+
 ## Förutsättningar {#prerequisites}
 
 Innan du konfigurerar AEP Connector i AEM Forms måste du kontrollera att du har slutfört följande i Adobe Experience Platform:
 
 1. Schemainställningar
-   * [Skapa ett XDM-schema](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui)
-   * [Aktivera schema för profilering](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
-   * [Definiera identitetsfält](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
+   * [Skapa ett XDM-schema](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui)
+   * [Aktivera schema för profilering](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
+   * [Definiera identitetsfält](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
 
 2. Datakonfiguration
-   * [Skapa en datauppsättning](https://experienceleague.adobe.com/sv/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-datasets)
-   * [Konfigurera direktuppspelningsanslutning](https://experienceleague.adobe.com/sv/docs/experience-platform/ingestion/tutorials/create-streaming-connection) (Du behöver URL:en för direktuppspelningsslutpunkten senare, så notera det nu.)
+   * [Skapa en datauppsättning](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-datasets)
+   * [Konfigurera direktuppspelningsanslutning](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/tutorials/create-streaming-connection) (Du behöver URL:en för direktuppspelningsslutpunkten senare, så notera det nu.)
 
 3. Autentisering
-   * [Generera API-autentiseringsuppgifter](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/platform-apis/api-authentication#generate-credentials) (klient-ID och klienthemlighet) från Adobe Developer Console
+   * [Generera API-autentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-authentication#generate-credentials) (klient-ID och klienthemlighet) från Adobe Developer Console
 
 
 ## Implementeringssteg
@@ -90,12 +92,17 @@ Innan du konfigurerar AEP Connector i AEM Forms måste du kontrollera att du har
 
 ### &#x200B;2. Skapa formulär med integrering av XDM-schema {#form-creation}
 
+>[!BEGINTABS]
+
+>[!TAB Foundation Component]
+
+Utför följande steg för att skapa ett adaptivt formulär baserat på grundkomponenter med schemaintegrering:
+
 1. Öppna guiden Skapa formulär:
    * Navigera till din **Adobe Experience Manager-instans** > **Forms** > **Forms &amp; Documents**.
    * Klicka på **Skapa** > **Adaptivt formulär**.
-1. Välj en mall på fliken **källa**
+1. Välj en grundmall på fliken **källa**.
 1. Markera alternativet **Adobe Experience Platform** på fliken **Data** .
-
 1. Välj din molnkonfiguration i egenskapspanelen.
 
    ![](/help/forms/assets/xdm-schema-integration.png)
@@ -121,6 +128,85 @@ Innan du konfigurerar AEP Connector i AEM Forms måste du kontrollera att du har
    * Lagringssökväg
 1. Lägg till knappen Skicka i formuläret. Formuläret kan nu skickas till AEP.
 
+>[!TAB Kärnkomponent]
+
+Utför följande steg för att skapa ett adaptivt formulär baserat på kärnkomponenter med schemaintegrering:
+
+1. Öppna guiden Skapa formulär:
+   * Navigera till din **Adobe Experience Manager-instans** > **Forms** > **Forms &amp; Documents**.
+   * Klicka på **Skapa** > **Adaptivt formulär**.
+1. Välj en Core Component-baserad mall på fliken **source**.
+1. Markera alternativet **Adobe Experience Platform** på fliken **Data** .
+1. Välj din molnkonfiguration i egenskapspanelen.
+
+   ![](/help/forms/assets/xdm-schema-integration.png)
+
+   Systemet läser in alla tillgängliga scheman från Adobe Experience Platform
+
+   >[!NOTE]
+   >
+   >
+   > * Endast profilaktiverade och icke-systemgenererade scheman hämtas.
+   > * Inläsning av inledande schema kan ta en stund vid första konfigurationen.
+
+1. Välj lämpliga/obligatoriska fält i schemat. (Se videon för detaljerade steg.)
+1. På fliken Skicka:
+   * Välj åtgärden **Skicka till Adobe Experience Platform**
+   * Konfigurera inställningar för formulärsändning för **AEM Forms-dataöverföring till Experience Platform**
+1. I egenskapspanelen:
+   * Lägg till strömnings-URL (hämtas från AEP Sources > Streaming Connection)
+   * Lägg till dataflödes-ID (finns i AEP-källor > Flöde > API-användningsinformation)
+1. Klicka på **Spara**. Ange formulärinformationen:
+   * Titel
+   * Namn
+   * Lagringssökväg
+1. Lägg till knappen Skicka i formuläret. Formuläret kan nu skickas till AEP.
+
+>[!TAB Universell redigerare]
+
+Utför följande steg för att skapa ett adaptivt formulär som skapats med Universal Editor med schemaintegrering:
+
+1. Öppna guiden Skapa formulär:
+   * Navigera till din **Adobe Experience Manager-instans** > **Forms** > **Forms &amp; Documents**.
+   * Klicka på **Skapa** > **Adaptivt formulär**.
+1. Välj Edge Delivery-baserad mall på fliken **källa**.
+1. Markera alternativet **Adobe Experience Platform** på fliken **Data** .
+1. Välj din molnkonfiguration i egenskapspanelen.
+
+   ![schemaintegrering](/help/forms/assets/xdm-schema-integration.png)
+
+   Systemet läser in alla tillgängliga scheman från Adobe Experience Platform
+
+   >[!NOTE]
+   >
+   >
+   > * Endast profilaktiverade och icke-systemgenererade scheman hämtas.
+   > * Inläsning av inledande schema kan ta en stund vid första konfigurationen.
+
+1. Välj lämpliga/obligatoriska fält i schemat. (Se videon för detaljerade steg.)
+1. På fliken Skicka:
+   * Välj åtgärden **Skicka till Adobe Experience Platform**
+   * Konfigurera inställningar för formulärsändning för **AEM Forms-dataöverföring till Experience Platform**
+
+     >[!NOTE]
+     >
+     >* Om du inte ser ikonen Datakällor i det universella redigeringsgränssnittet eller egenskapen Bind Reference i den högra egenskapspanelen aktiverar du tillägget **Datakälla** i Extension Manager.
+     >* Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+     > 
+     > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+
+   Förifyllningstjänsten för formulär i Universal Editor stöds för närvarande inte.
+
+1. I egenskapspanelen:
+   * Lägg till strömnings-URL (hämtas från AEP Sources > Streaming Connection)
+   * Lägg till dataflödes-ID (finns i AEP-källor > Flöde > API-användningsinformation)
+1. Klicka på **Spara**. Ange formulärinformationen:
+   * Titel
+   * Namn
+   * Lagringssökväg
+1. Lägg till knappen Skicka i formuläret. Formuläret kan nu skickas till AEP.
+
+>[!ENDTABS]
 
 ## Viktiga anteckningar {#important-notes}
 
@@ -163,7 +249,7 @@ S: Den här kopplingen fungerar med både adaptiva Forms Core-komponenter och ad
 S: För närvarande kan varje formulär bara skicka till en datauppsättning.
 
 **F: Finns det någon gräns för hur många formulärinskickade formulär som kan behandlas?**
-S: Inlämningar av formulär omfattas av ditt AEP direktuppspelade [kvoter och rabattbegränsningar](https://experienceleague.adobe.com/sv/docs/experience-platform/data-lifecycle/api/quota) .
+S: Inlämningar av formulär omfattas av ditt AEP direktuppspelade [kvoter och rabattbegränsningar](https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/api/quota) .
 
 <!-- >
 **Q: Can form attachments be sent to AEP?**
@@ -200,11 +286,11 @@ Så här kommer du igång med den här integreringen:
 
 ## Relaterade resurser {#related-resources}
 
-* [AEM Forms as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE)
-* [Adobe Experience Platform-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=sv-SE)
-* [Översikt över XDM-systemet](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv-SE)
-* [Direktuppspelning i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=sv-SE)
-* [Kundprofil i realtid - översikt](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=sv-SE)
+* [AEM Forms as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html)
+* [Adobe Experience Platform-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)
+* [Översikt över XDM-systemet](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)
+* [Direktuppspelning i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html)
+* [Kundprofil i realtid - översikt](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html)
 * [AEM Forms Tidiga åtkomstfunktioner](/help/forms/early-access-ea-features.md)
 * [Skapa adaptiv Forms med kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md)
 * [Använda formulärdatamodeller i AEM Forms](/help/forms/using-form-data-model.md)

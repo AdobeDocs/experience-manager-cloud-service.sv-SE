@@ -1,5 +1,5 @@
 ---
-source-git-commit: deffd60c1a77bdfb0dbf939632d4384c74316148
+source-git-commit: 70363b7dce1f7df5e933d99f8f9af7f6e6c702b3
 workflow-type: tm+mt
 source-wordcount: '1622'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 * [Skapa ett anpassat AEM-formulär](/help/forms/creating-adaptive-form-core-components.md)
 * [Lägg till ett anpassat AEM-formulär på AEM Sites-sidan](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md)
 * [Använda teman i ett anpassat AEM-formulär](/help/forms/using-themes-in-core-components.md)
-* [Lägg till komponenter i ett anpassat AEM-formulär](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction#components)
+* [Lägg till komponenter i ett anpassat AEM-formulär](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#components)
 * [Använd CAPTCHA i ett anpassat AEM-formulär](/help/forms/captcha-adaptive-forms-core-components.md)
 * [Generera en PDF-version (DoR) av ett anpassat AEM-formulär](/help/forms/generate-document-of-record-core-components.md)
 * [Översätt ett anpassat AEM-formulär](/help/forms/using-aem-translation-workflow-to-localize-adaptive-forms-core-components.md)
@@ -30,7 +30,7 @@ ht-degree: 0%
 * [Ansluta anpassat formulär till Salesforce](/help/forms/aem-forms-salesforce-integration.md)
 * [Använd Adobe Sign i ett anpassat AEM-formulär](/help/forms/working-with-adobe-sign.md)
 * [Lägga till en ny språkinställning för ett adaptivt formulär](/help/forms/supporting-new-language-localization-core-components.md)
-* [Skicka adaptiva formulärdata till en databas](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/data-integration)
+* [Skicka adaptiva formulärdata till en databas](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/data-integration)
 * [Skicka data för anpassat formulär till en REST-slutpunkt](/help/forms/configure-submit-actions-core-components.md#submit-to-rest-endpoint)
 * [Skicka anpassade formulärdata till AEM Workflow](/help/forms/configure-submit-actions-core-components.md#invoke-an-aem-workflow)
 * [Använd Forms Portal för att lista AEM Adaptive Forms på en AEM webbplats](/help/forms/configure-forms-portal.md)
@@ -43,7 +43,7 @@ ht-degree: 0%
 * [Skicka e-post](/help/forms/configure-submit-action-send-email.md)
 * [Skicka till SharePoint Document Library](/help/forms/connect-forms-to-sharepoint-document-library.md)
 * [Skicka till SharePoint List](/help/forms/connect-forms-to-sharepoint-list.md)
-* [Skicka med formulärdatamodell](/help/forms/using-form-data-model.md#write-submitted-adaptive-form-data-into-data-sources-write-af)
+* [Skicka med formulärdatamodell](/help/forms/integrate-adaptive-form-with-fdm.md)
 * [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
 * [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
 * [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
@@ -168,11 +168,11 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >[!IMPORTANT]
 >
 >För frontendpipelinen måste följande IP-Tillåtelselista läggas till i Cloud Manager i förväg.
->&#x200B;>Om det behövs kan du [lägga till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) genom att kopiera adressblocket nedan. Varje adress avgränsas med kommatecken. Klistra in blocket i fältet **IP-adress/CIDR** i dialogrutan **Lägg till IP-Tillåtelselista** . Placera markören precis efter det första kommatecknet i adresslistan och tryck på **Retur**. Spara listan.
->&#x200B;>Om du vill undvika avbrott i körningen av frontendpipelinen kontrollerar du att det här IP-Tillåtelselista har lagts till i Cloud Manager *innan* du aktiverar pipelinen.
+>>Om det behövs kan du [lägga till IP Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) genom att kopiera adressblocket nedan. Varje adress avgränsas med kommatecken. Klistra in blocket i fältet **IP-adress/CIDR** i dialogrutan **Lägg till IP-Tillåtelselista** . Placera markören precis efter det första kommatecknet i adresslistan och tryck på **Retur**. Spara listan.
+>>Om du vill undvika avbrott i körningen av frontendpipelinen kontrollerar du att det här IP-Tillåtelselista har lagts till i Cloud Manager *innan* du aktiverar pipelinen.
 >
 >**Cloud Manager IP Tillåtelselista**
->&#x200B;>52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28&rbrace;,52.254.106.0/28,4.152.211.251
+>>52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28},52.254.106.0/28,4.152.211.251
 >   
 
 ## Lägg till en Cloud Manager IP Tillåtelselista och rörledning för frontendsupport {#add-cm-allowlist-frontend-pipeline}
@@ -180,7 +180,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >[!IMPORTANT]
 >
 >Om du använder, eller tänker använda, frontendriet för att utveckla webbplatser måste Cloud Manager IP Tillåtelselista läggas till i förväg.
->&#x200B;>Se [Användning av Cloud Manager IP Tillåtelselista med frontendspipeline](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#allowlists-frontend-pipeline).
+>>Se [Användning av Cloud Manager IP Tillåtelselista med frontendspipeline](/help/implementing/cloud-manager/ip-allow-lists/introduction.md#allowlists-frontend-pipeline).
 
 ## IP Tillåtelselista och Universal Editor {#ip-allow-lists-ue}
 
@@ -202,16 +202,16 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >
 >* Följ [Bästa praxis för dynamiska media](/help/assets/dynamic-media/dm-best-practices.md) för att få ut det mesta av materialet.
 >
->* Prova Dynamic Media-bildfunktioner med verktyget [Ögonblicksbild](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
+>* Prova Dynamic Media-bildfunktioner med verktyget [Ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
 >
->* Se till att videouppspelningen blir jämn med [adaptiv video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-dash).
+>* Se till att videouppspelningen blir jämn med [adaptiv video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-dash).
 >
->* Automatisera beskärning av [bilder med Smart beskärning](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
+>* Automatisera beskärning av [bilder med Smart beskärning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use).
 >
->* Automatisera beskärning av [videor med Smart beskärning](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video).
+>* Automatisera beskärning av [videor med Smart beskärning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video).
 >
->* Leverera en [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
->* Annan [resursbank för dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).
+>* Leverera en [interaktiv 3D-baserad upplevelse](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/3d/dynamic-media-3d-feature-video).
+>* Annan [resursbank för dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use).
 
 ## Logga en supportanmälan {#support-ticket}
 
@@ -221,7 +221,7 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
 
 **Så här loggar du en supportanmälan:**
 
-1. [Följ standardsupportprocessen](https://experienceleague.adobe.com/sv?support-tab=home#support) och skapa en biljett.
+1. [Följ standardsupportprocessen](https://experienceleague.adobe.com/?support-tab=home#support) och skapa en biljett.
 1. Lägg till **Edge Delivery** i biljettens titel.
 1. I beskrivningen anger du följande information förutom problembeskrivningen:
 

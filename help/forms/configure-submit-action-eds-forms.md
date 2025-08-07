@@ -4,19 +4,19 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 keywords: hur du väljer en åtgärd för att skicka ett anpassat formulär, kopplar ett anpassat formulär till SharePoint-listan, ansluter ett anpassat formulär till SharePoint-dokumentbiblioteket, ansluter ett anpassat formulär till formulärdatamodellen (FDM)
 feature: Adaptive Forms, Edge Delivery Services
 role: User, Developer
-source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
+exl-id: 3f8950c3-9022-4e9f-b3ed-723245201e45
+source-git-commit: 2c3e8f6f8dab1004a6fbd9be8f5604b1570a1808
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # Skicka funktionsmakron för Edge Delivery Services Forms
 
 | Version | Artikellänk |
 |---------|-----------------------------|
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
 | AEM as a Cloud Service (Edge Delivery Services) | Den här artikeln |
@@ -33,7 +33,7 @@ Följande inskickningsåtgärder stöds av [Adaptiv Forms som har skapats i Univ
 * [Anropa ett Power Automate-flöde](/help/forms/forms-microsoft-power-automate-integration.md)
 * [Skicka till SharePoint](/help/forms/configure-submit-action-sharepoint.md)
 * [Anropa Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
-* [Skicka med hjälp av formulärdatamodell (FDM)](/help/forms/using-form-data-model.md)
+* [Skicka med hjälp av formulärdatamodell (FDM)](/help/forms/integrate-adaptive-form-with-fdm.md)
 * [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
 * [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
 * [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
@@ -68,4 +68,3 @@ Dokumentbaserad Forms kan endast skickas till kalkylblad. Mer information om hur
 ## Se även {#see-also}
 
 {{af-submit-action}}
-

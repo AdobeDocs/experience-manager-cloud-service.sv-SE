@@ -1,19 +1,24 @@
 ---
-title: Skicka funktionsmakron
-description: Konfigurera Skicka-åtgärder för anpassat formulär.
-feature: Edge Delivery Services
-role: Admin, Architect, Developer
-exl-id: beee9be7-8215-496b-9fb9-61fba000a055
-hide: true
-hidefromToC: true
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+title: Hur konfigurerar jag en Skicka-åtgärd för ett anpassat formulär?
+description: Ett anpassat formulär innehåller flera överföringsåtgärder. En Skicka-åtgärd definierar hur ett anpassat formulär ska bearbetas när det har skickats in. Du kan använda inbyggda Skicka-åtgärder eller skapa egna.
+keywords: hur du väljer en åtgärd för att skicka ett anpassat formulär, kopplar ett anpassat formulär till SharePoint-listan, ansluter ett anpassat formulär till SharePoint-dokumentbiblioteket, ansluter ett anpassat formulär till formulärdatamodellen (FDM)
+feature: Adaptive Forms, Edge Delivery Services
+role: User, Developer
+source-git-commit: d221959bbf19a874ec65eb414c4c49811df291ca
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
 
 # Inlämningsåtgärd för anpassat formulär
+
+| Version | Artikellänk |
+|---------|-----------------------------|
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
+| AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
+| AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
+| AEM as a Cloud Service (Edge Delivery Services) | Den här artikeln |
 
 ## Ökning
 
@@ -38,146 +43,41 @@ Den här guiden är utformad för:
 - **Affärsanalytiker** definierar formulärarbetsflöden
 - **Teknikarkitekter** formger formuläröverföringsprocesser
 
-### Tillgängliga överföringsåtgärder
+## Skicka funktionsmakron för Forms som har skapats i Universal Editor
 
-Universal Editor har två primära åtgärdstyper:
+Följande inskickningsåtgärder stöds av [Adaptiv Forms som har skapats i Universal Editor](/help/edge/docs/forms/universal-editor/create-forms.md):
 
-1. **Skicka till REST-slutpunkt** * Skicka formulärdata till API-slutpunkter
-2. **Skicka e-post** * Leverera formulärsvar via e-post
+- [Skicka e-post](/help/forms/configure-submit-action-send-email.md)
+- [Anropa ett Power Automate-flöde](/help/forms/forms-microsoft-power-automate-integration.md)
+- [Skicka till SharePoint](/help/forms/configure-submit-action-sharepoint.md)
+- [Anropa Workfront Fusion](/help/forms/submit-adaptive-form-to-workfront-fusion.md)
+- [Skicka med hjälp av formulärdatamodell (FDM)](/help/forms/integrate-adaptive-form-with-fdm.md)
+- [Skicka till Azure Blob Storage](/help/forms/configure-submit-action-azure-blob-storage.md)
+- [Skicka till REST-slutpunkt](/help/forms/configure-submit-action-restpoint.md)
+- [Skicka till OneDrive](/help/forms/configure-submit-action-onedrive.md)
+- [Starta ett AEM-arbetsflöde](/help/forms/configure-submit-action-workflow.md)
+- [Skicka till Marketo Engage](/help/forms/submit-adaptive-form-to-marketo-engage.md)
+- [Skicka till Adobe Experience Platform (AEP)](/help/forms/aem-forms-aep-connector.md)
+- [Skicka till kalkylblad](/help/forms/forms-submission-service.md)
 
-### Förutsättningar
+<!--You can also submit an Adaptive Form in the Universal Editor to other storage or CRM integrations:
 
-Innan du konfigurerar skicka-åtgärder måste du se till att:
+* [Connect Adaptive Form to Salesforce](/help/forms/aem-forms-salesforce-integration.md)
+* [Connect an Adaptive Form to Microsoft&reg; Dynamics OData](/help/forms/ms-dynamics-odata-configuration.md)-->
 
-- Åtkomst till Universal Editor
-- Rätt behörigheter för formulärkonfiguration
-- Förstå målets slutpunkt eller e-postkonfiguration
+Du kan konfigurera åtgärden skicka för formulär som har skapats i den universella redigeraren med fliken **Skicka** i tillägget **Redigera formuläregenskaper** .
 
-En Skicka-åtgärd anger målet för de data som samlas in via ett anpassat formulär. Överföringsprocessen börjar när användaren klickar på knappen **[!UICONTROL Submit]** i formuläret. AEM Forms erbjuder två typer av skicka-åtgärder som beskrivs nedan och gör att du kan skapa och använda anpassade skicka-åtgärder som uppfyller dina specifika behov. De färdiga Skicka-åtgärderna är:
+**Hur konfigurerar jag Skicka-åtgärd för Forms som har skapats i Universal Editor?**
+Du kan konfigurera åtgärden skicka för formulär som har skapats i den universella redigeraren på fliken **Skicka** i tillägget **Redigera formuläregenskaper** .
 
-<!--To define a Submit Action for an Adaptive Form, you use the Properties dialog of the **Adaptive Form block** in the **Editor**-->
+![Ikon för formuläregenskaper](/help/forms/assets/ue-form-properties-icon.png)
 
-- [Skicka till REST-slutpunkt](#rest-endpoint-submission-ue)
-- [Skicka e-post](#email-submission-ue)
-
-
-### Skicka till REST-slutpunkt {#rest-endpoint-submission-ue}
-
-Åtgärden Skicka till REST-slutpunkt används för att skicka skickade formulärdata till en angiven REST-slutpunkt. Slutpunkten kan tillhöra antingen en intern server där formuläret finns eller en extern server genom att använda en relativ sökväg eller en absolut sökväg. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
-
-<!--Configuring the Submit Action to REST Endpoint for Adaptive Forms offers several benefits such as:  
-- It facilitates seamless integration of form data with external systems and services via RESTful APIs.  
-- Offers flexibility in managing data submissions from Adaptive Forms, accommodating dynamic and complex data structures.  
-- Allows dynamic mapping of form fields to parameters within the REST endpoint URL, enabling adaptable and customizable data submissions.
--->
-
-
-
-Så här konfigurerar du en REST-slutpunkt:
-
-1. Öppna ditt adaptiva formulär i **[!UICONTROL Editor]**.
-1. Välj **[!UICONTROL Adaptive Form Block]**.
-1. Klicka på egenskapsikonen ![properties](/help/forms/assets/Smock_Properties_18_N.svg) .
-1. Välj **[!UICONTROL Submit to a REST endpoint]** i listrutan **[!UICONTROL Submit Action]**.
-1. Ange REST-slutpunkts-URL.
-1. Du kan också **aktivera POST-begäran** och ange en URL för att skicka begäran.
-
-![Skärmbild av egenskapspanelen för Universal Editor som visar REST-konfigurationsfält för slutpunkter inklusive URL-indata och Aktivera POST-begäran för att växla mellan formulärsändning](/help/forms/assets/enable-post-request-ue.png)
+![Formuläregenskaper för Universal Editor](/help/forms/assets/ue-form-properties.png)
 
 >[!NOTE]
 >
-> - Ange sökvägen till resursen om du vill skicka data till en intern server. Data bokförs på resursens sökväg. Exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.
-> - Ange en URL om du vill skicka data till en extern server. URL-formatet är `https://host:port/path_to_rest_end_point`. Se till att du konfigurerar sökvägen så att den hanterar POST-begäran anonymt.
-
-### Skicka e-post {#email-submission-ue}
-
-Med Skicka e-poståtgärd kan du skicka ett e-postmeddelande till en eller flera mottagare när formuläret har skickats. Med Skicka e-post-konfigurationen kan du skapa ett e-postmeddelande som kan innehålla formulärdata i ett fördefinierat format. Ta till exempel följande mall där kundnamn, leveransadress, delstatsnamn och postnummer hämtas från skickade formulärdata. [Läs mer om e-postmallar i Adaptiv Forms](/help/forms/html-email-templates-in-adaptive-forms.md). Några fördelar med att konfigurera ett anpassat formulär med Skicka e-post-åtgärden är:
-
-1. Det möjliggör snabb kommunikation när formulärdata skickas direkt till angivna e-postmottagare.
-1. Det effektiviserar arbetsflödet genom att direkt integrera inskickade formulär i e-postmeddelanden.
-1. Det hjälper organisationer att anpassa e-postinnehållet och på så sätt göra det lämpligt för specifika kommunikationsbehov.
-
-![Adaptiva formuläregenskaper i Universell redigerare](/help/forms/assets/submit-actions-ue.png)
-
-
-Så här konfigurerar du en skicka-åtgärd som en e-postadress för att skicka formulär:
-
-1. Öppna ditt adaptiva formulär i **Redigeraren**.
-1. Välj din **[!UICONTROL Adaptive Form Block]**.
-1. Klicka på egenskapsikonen ![properties](/help/forms/assets/Smock_Properties_18_N.svg) .
-1. Välj alternativet **[!UICONTROL Send email]** i listrutan **[!UICONTROL Submit Action]**.
-1. När du har valt alternativet Skicka e-post kan du konfigurera följande egenskaper så som de visas i bilden nedan.
-
-<table>
-  <thead>
-    <tr>
-      <th>Bild</th>
-      <th>Egenskap</th>
-      <th>Beskrivning</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-    <td rowspan="7"><img src="/help/forms/assets/email-config-ue.png" alt="E-postkonfiguration"></td> 
-    <td><b>Från</td>
-    <td>Ange avsändarens e-postadress.</td>
-    </tr>
-    <tr>
-      <td><b>Till</td>
-      <td>Ange de primära mottagarna av e-postmeddelandet. Flera e-postadresser kan läggas till, avgränsade med kommatecken.</td>
-    </tr>
-    <tr>
-      <td><b>CC</td>
-      <td>Ange vilka mottagare som ska få en kopia (CC) av e-postmeddelandet.</td>
-    </tr>
-    <tr>
-      <td><b>BCC</td>
-      <td>Ange vilka mottagare som ska få en kopia (BCC) av e-postmeddelandet.</td>
-    </tr>
-    <tr>
-      <td><b>Ämne</td>
-      <td>Ange ämnesraden för e-postmeddelandet.</td>
-    </tr>
-    <tr>
-      <td><b>Använd extern mall</td>
-      <td>Gör att en extern e-postmall kan användas för att formatera e-postinnehållet. Ange URL-adressen eller sökvägen till den externa mallen för att integrera en fördesignad e-postmall som finns i din AEM Assets-mapp.</td>
-    </tr>
-    <tr>
-      <td><b>Inkludera bifogad fil</td>
-      <td>Anger om skickade formulärdata ska innehålla en bifogad fil som skickats via formuläret i e-postmeddelandet. Bifogade format som stöds är PDF, XML och JSON.</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-
-
-
-<!--
-        
-        * **From**: The email address of the sender.
-        * **To**: Specify the primary recipients of the email, multiple email addresses can be added, separated by commas.
-        * **CC**: Specify the recipients who should receive a carbon copy (CC) of the email.
-        * **BCC**: Specify the recipients who should receive a blind carbon copy (BCC) of the email.
-        * **Subject**: Specify the subject line of the email.
-        * **Use External Template**: Enables the use of an external email template for formatting the email content. Provide the URL or path to the External template path to integrate a pre-designed email template hosted in your AEM Assets folder.
-        * **Include Attachment**: Specifies whether the submitted form data should include an attachment submitted through the form in the email.
-
-    ![Screenshot of the Universal Editor email configuration panel showing fields for From, To, CC, BCC, Subject, and options for external templates and attachments](/help/forms/assets/email-config-ue.png)
-
--->
-
-## Visa ett anpassat tackmeddelande om inskickning av anpassade formulär {#submit-action-message-ue}
-
-Med alternativet Vid sändning kan du konfigurera ett Skicka-åtgärdsmeddelande för sändning av anpassat formulär så här konfigurerar du ett Skicka-åtgärdsmeddelande för formuläret:
-
-1. Öppna ditt adaptiva formulär i **Redigeraren**.
-1. Välj din **[!UICONTROL Adaptive Form Block]**.
-1. Klicka på egenskapsikonen ![properties](/help/forms/assets/Smock_Properties_18_N.svg) .
-1. När du klickar visas följande alternativ:
-   - **[!UICONTROL On Submit]**: Vid sändning kan du anpassa ett meddelande som ska visas när ett formulär skickas. Som standard visas ett anpassat meddelande&quot;Tack för att du skickat in formuläret&quot; för användaren när ett formulär har skickats.
-Du kan också anpassa tackmeddelandet när du skickar in formulär genom att välja alternativet **[!UICONTROL Show message]** och lägga till/redigera meddelandet i **RTF-redigeraren**.
+> - Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+> - Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
 
 
 

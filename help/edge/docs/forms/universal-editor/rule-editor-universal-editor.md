@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: ccfb85da187e828b5f7e8b1a8bae3f483209368d
 workflow-type: tm+mt
 source-wordcount: '3472'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 # Regelredigeraren för Dynamic Forms i Universell redigerare
 
 Med regelredigeraren i Universal Editor kan du skapa intelligenta, dynamiska formulär som svarar på användarens inmatningar i realtid. Ni kan omvandla statiska formulär till interaktiva upplevelser med villkorlig fältsynlighet, automatiska beräkningar och komplex affärslogik - allt utan att behöva skriva kod.
+
 
 ## Vad du kommer att lära dig
 

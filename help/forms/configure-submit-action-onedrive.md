@@ -6,9 +6,9 @@ feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery S
 exl-id: dbfa4094-1b92-4a7c-a799-f66973d27054
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
-source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
+source-git-commit: dabf8029577c5fb6bb5eebdbf10d77f3d4d95a5d
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '827'
 ht-degree: 1%
 
 ---
@@ -29,6 +29,8 @@ Några av fördelarna med smidig integrering av AEM Forms och Microsoft® OneDri
 ## Anslut OneDrive till ett anpassat formulär
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424864/connect-aem-adaptive-form-to-onedrive/?quality=12&learn=on)
+
+<span> Den här videon gäller endast för kärnkomponenter. Information om UE/Foundation Components finns i artikeln.</span>
 
 Så här konfigurerar du OneDrive för AEM Forms-överföring:
 

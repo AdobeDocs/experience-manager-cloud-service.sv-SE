@@ -6,9 +6,9 @@ feature: Edge Delivery Services
 role: User, Developer, Admin
 level: Beginner
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: 53b1d38eb0e9e6cf18ca3ef7b1414bc231c82098
 workflow-type: tm+mt
-source-wordcount: '2209'
+source-wordcount: '2358'
 ht-degree: 0%
 
 ---
@@ -180,14 +180,14 @@ Verktygsfältet **Universal Editor** innehåller viktiga åtgärder för att tes
 **Syfte:** Visa formuläret på en ny flik utan redigeringsgränssnittet\
 **När ska du använda:** För helskärmstestning, dela med intressenter för granskning
 
-    ![Öppna sida](/help/edge/docs/forms/universal-editor/assets/ue-openpage.png)
+![Öppna sida](/help/edge/docs/forms/universal-editor/assets/ue-openpage.png)
 
 #### **Publicera**
 
 **Syfte:** Gör formuläret tillgängligt för användare och live\
 **När du ska använda:** Efter grundlig testning i förhandsgransknings- och svarsläge
 
-    ![Publicera](/help/edge/docs/forms/universal-editor/assets/ue-publish.png)
+![Publicera](/help/edge/docs/forms/universal-editor/assets/ue-publish.png)
 
 **Checklista för validering före publicering:**
 
@@ -216,12 +216,22 @@ Verktygsfältet **Universal Editor** innehåller viktiga åtgärder för att tes
 
 **Dessa verktyg används för specifika scenarier eller avancerade inställningar:**
 
-#### **Redigera formuläregenskaper**
+#### **AEM-formuläregenskaper**
 
 **Syfte:** Konfigurera inställningar på formulärnivå som FDM (Form Data Model) och publiceringsdatum\
 **När ska användas:** Konfigurera dataintegreringar, schemalägga publicering
 
 ![Formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/ue-formproperties.png)
+
+![Guiden Formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/form-properties-ue.png)
+
+Panelen Formuläregenskaper innehåller följande avsnitt:
+
+- **Skicka**: Definiera vad som ska hända när en användare skickar formuläret. Välj bland flera olika inlämningsåtgärder, som att skicka data via e-post, skicka till SharePoint, använda en formulärdatamodell eller integrera med tjänster som Adobe Experience Platform eller Microsoft Power Automate. En fullständig lista över de överföringsåtgärder som stöds finns i artikeln [Skicka åtgärd](/help/edge/docs/forms/universal-editor/submit-action.md).
+
+- **Förifyll**: Konfigurera hur formulärfält fylls i automatiskt innan användaren interagerar med formuläret. Du kan ansluta till datakällor som en FDM (Form Data Model) eller använda URL-parametrar för att fylla i fält i förväg, förbättra användarupplevelsen och minska manuell inmatning. Mer information finns i artikeln [Prefill Service](/help/edge/docs/forms/universal-editor/prefill-form.md).
+
+- **Tack**: Anpassa vad användarna ser när de har skickat in formuläret. Du kan visa ett bekräftelsemeddelande eller dirigera om dem till en annan webbsida, vilket ger ett smidigt och professionellt resultat. Mer information om hur du konfigurerar ett tackmeddelande för formulär finns i artikeln [Konfigurera tackmeddelande](/help/edge/docs/forms/universal-editor/configure-thankyou-message.md).
 
 #### **Regelredigeraren** (tidig åtkomst)
 
@@ -339,7 +349,7 @@ Verktygsfältet **Universal Editor** innehåller viktiga åtgärder för att tes
 
     ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
-**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
 
 #### **Innehållsutkast**
 
@@ -521,4 +531,3 @@ Nu när du förstår gränssnittet i Universal Editor:
 4. **Huvudregelredigerare** - Lägg till dynamiska beteenden med [regelredigerarhandboken](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md)
 
 **Kom ihåg:** Den universella redigeraren är utformad för att göra formulärskapandet intuitivt. Börja med grunderna och utforska de avancerade funktionerna i takt med att behoven växer.
-
