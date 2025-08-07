@@ -150,13 +150,14 @@ Konfigurera resursdelning mellan ursprung på formulärkällan:
 
 2. **Exempelkonfiguration**:
 
-       # Konfiguration för platsen som är värd för formuläret 
+       &#x200B;# Konfiguration för platsen som är värd för formuläret 
        rubriker:
        - sökväg: /forms/**
        anpassad:
        Access-control-Allow-origin: https://host-domain.com
        Access-control-allow-methods: GET, OPTIONS
    
+
 ### Inbäddningssteg
 
 1. **Skapa och publicera formulär**
