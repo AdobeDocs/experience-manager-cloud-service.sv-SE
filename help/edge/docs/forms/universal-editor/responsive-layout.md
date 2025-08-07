@@ -172,7 +172,7 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 **Implementeringssteg:**
 
-1. Använd [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
+1. Använd [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
 2. Gruppera relaterade fält på varje panel.
 3. Lägg till tydliga rubriker för varje avsnitt.
 4. Se till att det finns tillräckligt med mellanrum mellan panelerna.
@@ -205,7 +205,7 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 **Implementeringssteg:**
 
-1. Använd [guidekomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
+1. Använd [guidekomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
 2. Dela upp komplexa formulär i logiska steg (3-7 steg är optimalt).
 3. Inkludera förloppsindikatorer för användarorientering.
 4. Ange tydliga navigeringskontroller (Nästa, Bakåt, Spara).
@@ -245,7 +245,7 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 **Implementeringssteg:**
 
-1. Använd [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
+1. Använd [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
 2. Gruppera relaterat valfritt innehåll i varje avsnitt.
 3. Använd beskrivande avsnittsrubriker.
 4. Ange lämpliga öppna/stängda standardlägen.

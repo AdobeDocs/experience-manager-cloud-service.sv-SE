@@ -58,16 +58,16 @@ I videon nedan visas steg-för-steg-anvisningar om förutsättningarna (som att 
 Innan du konfigurerar AEP Connector i AEM Forms måste du kontrollera att du har slutfört följande i Adobe Experience Platform:
 
 1. Schemainställningar
-   * [Skapa ett XDM-schema](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui)
-   * [Aktivera schema för profilering](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
-   * [Definiera identitetsfält](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
+   * [Skapa ett XDM-schema](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui)
+   * [Aktivera schema för profilering](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
+   * [Definiera identitetsfält](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui#profile)
 
 2. Datakonfiguration
-   * [Skapa en datauppsättning](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-datasets)
-   * [Konfigurera direktuppspelningsanslutning](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/tutorials/create-streaming-connection) (Du behöver URL:en för direktuppspelningsslutpunkten senare, så notera det nu.)
+   * [Skapa en datauppsättning](https://experienceleague.adobe.com/sv/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-datasets)
+   * [Konfigurera direktuppspelningsanslutning](https://experienceleague.adobe.com/sv/docs/experience-platform/ingestion/tutorials/create-streaming-connection) (Du behöver URL:en för direktuppspelningsslutpunkten senare, så notera det nu.)
 
 3. Autentisering
-   * [Generera API-autentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-authentication#generate-credentials) (klient-ID och klienthemlighet) från Adobe Developer Console
+   * [Generera API-autentiseringsuppgifter](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/platform-apis/api-authentication#generate-credentials) (klient-ID och klienthemlighet) från Adobe Developer Console
 
 
 ## Implementeringssteg
@@ -249,7 +249,7 @@ S: Den här kopplingen fungerar med både adaptiva Forms Core-komponenter och ad
 S: För närvarande kan varje formulär bara skicka till en datauppsättning.
 
 **F: Finns det någon gräns för hur många formulärinskickade formulär som kan behandlas?**
-S: Inlämningar av formulär omfattas av ditt AEP direktuppspelade [kvoter och rabattbegränsningar](https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/api/quota) .
+S: Inlämningar av formulär omfattas av ditt AEP direktuppspelade [kvoter och rabattbegränsningar](https://experienceleague.adobe.com/sv/docs/experience-platform/data-lifecycle/api/quota) .
 
 <!-- >
 **Q: Can form attachments be sent to AEP?**
@@ -286,11 +286,11 @@ Så här kommer du igång med den här integreringen:
 
 ## Relaterade resurser {#related-resources}
 
-* [AEM Forms as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html)
-* [Adobe Experience Platform-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)
-* [Översikt över XDM-systemet](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)
-* [Direktuppspelning i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html)
-* [Kundprofil i realtid - översikt](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html)
+* [AEM Forms as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE)
+* [Adobe Experience Platform-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=sv-SE)
+* [Översikt över XDM-systemet](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv-SE)
+* [Direktuppspelning i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=sv-SE)
+* [Kundprofil i realtid - översikt](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=sv-SE)
 * [AEM Forms Tidiga åtkomstfunktioner](/help/forms/early-access-ea-features.md)
 * [Skapa adaptiv Forms med kärnkomponenter](/help/forms/creating-adaptive-form-core-components.md)
 * [Använda formulärdatamodeller i AEM Forms](/help/forms/using-form-data-model.md)
