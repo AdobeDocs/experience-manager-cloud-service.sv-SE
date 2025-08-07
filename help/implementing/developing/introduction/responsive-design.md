@@ -85,7 +85,7 @@ I [WKND-självstudien](develop-wknd-tutorial.md) används den här strategin fö
 
 ### Använda mediefrågor med AEM Pages {#using-media-queries-with-aem-pages}
 
-[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html), som innehåller klientlibs via sidprincipen.
+[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) använder [Page Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html?lang=sv-SE), som innehåller klientlibs via sidprincipen.
 
 Om din egen sidkomponent inte är baserad på Page Core-komponenten kan du även inkludera klientbiblioteksmappen i HTML- eller JSP-skriptet för den. Om du gör det genereras och refereras CSS-filen med de mediefrågor som behövs för att det responsiva rutnätet ska fungera.
 
@@ -135,10 +135,10 @@ Enhetsgruppnoderna finns i mappen `/etc/mobile/groups`.
 
 Responsiva sidor anpassar sig dynamiskt till den enhet som de återges på, vilket ger en bättre upplevelse för användaren. Men det är också viktigt att resurserna optimeras till brytpunkten och enheten för att minimera sidinläsningstiden.
 
-[Core Component Image Component Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) har funktioner som adaptiv bildmarkering.
+[Core Component Image Component Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE) har funktioner som adaptiv bildmarkering.
 
-* Som standard använder Image-komponenten [Adaptive Image Server](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/adaptive-image-servlet.html) för att leverera rätt återgivning.
-* [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) är också tillgängligt via en enkel kryssruta i policyn, som levererar bildresurser från DAM i WebP-format och kan minska hämtningsstorleken för en bild med i genomsnitt cirka 25 %.
+* Som standard använder Image-komponenten [Adaptive Image Server](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/adaptive-image-servlet.html?lang=sv-SE) för att leverera rätt återgivning.
+* [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) är också tillgängligt via en enkel kryssruta i policyn, som levererar bildresurser från DAM i WebP-format och kan minska hämtningsstorleken för en bild med i genomsnitt cirka 25 %.
 
 ## Layoutbehållaren {#layout-container}
 

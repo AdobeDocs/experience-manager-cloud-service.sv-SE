@@ -339,7 +339,7 @@ Verktygsfältet **Universal Editor** innehåller viktiga åtgärder för att tes
 
     ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
-**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
 
 #### **Innehållsutkast**
 

@@ -70,7 +70,7 @@ Innan du börjar bör du kontrollera att du har följande:
 
 >[!TIP]
 >
-> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE).
 
 ## Sökväg A: Skapa nytt projekt med Forms
 

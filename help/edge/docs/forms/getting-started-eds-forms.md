@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Komma igång med Forms på AEM Edge Delivery Services
 
-<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsversion </a>. </span>
+<span class="preview"> Det här är en förhandsversion som är tillgänglig via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsversion </a>. </span>
 
 Med Adobe Experience Manager (AEM) Edge Delivery Services (EDS) kan du leverera blixtsnabba, skalbara webbupplevelser i toppklass. Den här guiden förklarar **hur du skapar och publicerar formulär för dessa upplevelser** - med en tydlig rekommendationshierarki:
 

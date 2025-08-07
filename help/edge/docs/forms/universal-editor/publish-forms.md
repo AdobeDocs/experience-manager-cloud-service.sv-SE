@@ -148,8 +148,8 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [CORS - konfigurationsguide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
-- [Dokumentation för referentfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
+- [CORS - konfigurationsguide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
+- [Dokumentation för referentfilter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
 
 ### Steg 3: Konfigurera referensfilter
 
@@ -196,7 +196,7 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
+- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
 
 ## Fas 3: Få tillgång till ditt publicerade formulär
 
