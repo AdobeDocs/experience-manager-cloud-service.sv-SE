@@ -140,9 +140,9 @@ Universal Editor har två alternativ för förifyllningstjänsten:
 
 6. Klicka på **Klar** för att spara argumentet och **Spara** för att spara FDM-filen
 
-       >[!OBS!]
+       >[ !OBS!]
        >
-   > Läs mer om hur du konfigurerar FDM-tjänster i [Arbeta med FDM (Form Data Model)](/help/forms/work-with-form-data-model.md).
+       > Läs mer om hur du konfigurerar FDM-tjänster i [Arbeta med FDM (Form Data Model)](/help/forms/work-with-form-data-model.md).
 
 +++
 
@@ -267,7 +267,7 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
 
     &quot;
     
-    {
+    &lbrace;
     &quot;afBoundData&quot;: 
     &quot;user&quot;: 
     &quot;firstName&quot;: &quot;John&quot;,
@@ -275,10 +275,10 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
     &quot;email&quot;: &quot;john.doe@example.com&quot;,
     &quot;phone&quot;: &quot;+1-555-0123&quot;
     
-    },
-    &quot;afUnBoundData&quot;: {
+    &rbrace;,
+    &quot;afUnBoundData&quot;: &lbrace;
     &quot;additionalInfo&quot;: &quot;Användarinställningar inlästa&quot;
-    }
+    &rbrace;
     
     
     &quot;
@@ -433,6 +433,7 @@ Du kan konfigurera en primär förifyllningstjänst per formulär. Du kan emelle
 +++
 
 =
+
 ## Relaterade ämnen
 
 - [Integrera formulär med formulärdatamodellen i den universella redigeraren](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md)
