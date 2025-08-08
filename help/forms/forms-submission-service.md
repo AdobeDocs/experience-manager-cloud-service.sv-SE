@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: 3b6d75b13730e920a10bc623947bc8b2d46dc5a9
+source-git-commit: b8b5937919dceb83a11b2fe359a9accec7012f81
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1578'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,6 @@ Innan du konfigurerar Forms Submission Service bör du kontrollera att du har:
 
 ### **Plattformskonfiguration för kalkylblad**
 
-
 Välj en av de plattformar som stöds:
 
 - **Google-blad** - Google-konto med behörighet att skapa blad
@@ -102,7 +101,7 @@ Välj en av de plattformar som stöds:
 
 >[!TIP]
 >
->**Ny på Edge Delivery Services?** Börja med självstudiekursen [Komma igång](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) för att konfigurera din projektgrund.
+>**Ny på Edge Delivery Services?** Börja med självstudiekursen [Komma igång](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) för att konfigurera din projektgrund.
 
 ## Konfigurationsmetoder
 
@@ -119,9 +118,8 @@ Forms Submission Service erbjuder två konfigurationsmetoder. Välj den metod so
 
 Innan du konfigurerar någon av metoderna måste du se till att din grund för AEM-projektet är klar:
 
-1. **Skapa eller uppdatera ditt AEM-projekt** med det senaste adaptiva Forms-blocket ([Komma igång-självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial))
-
-2. **Uppdatera`fstab.yaml`** i projektets rot:
+1. **Skapa eller uppdatera ditt AEM-projekt** med det senaste adaptiva Forms-blocket ([Komma igång-självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial))
+1. **Uppdatera`fstab.yaml`** i projektets rot:
 
    ```yaml
    # Replace with the path to your shared folder
@@ -129,8 +127,7 @@ Innan du konfigurerar någon av metoderna måste du se till att din grund för A
      /: https://drive.google.com/drive/folders/your-shared-folder-id
    ```
 
-
-3. **Dela projektmappen** med `forms@adobe.com` (redigeringsbehörighet krävs)
+1. **Dela projektmappen** med `forms@adobe.com` (redigeringsbehörighet krävs)
 
 ## Manuell konfiguration
 
@@ -146,9 +143,9 @@ Skapa en formulärstruktur med Google Sheets eller Microsoft Excel.
 **Steg för att skapa formulär:**
 
 1. **Öppna kalkylbladsplattformen** (Google-blad eller Microsoft Excel)
-2. **Skapa ett nytt kalkylblad** för ditt formulärprojekt
-3. **Namnge bladet** (måste vara antingen `helix-default` eller `shared-aem`)
-4. **Definiera formulärstrukturen** med hjälp av guiden [Skapa formulär](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)
+1. **Skapa ett nytt kalkylblad** för ditt formulärprojekt
+1. **Namnge bladet** (måste vara antingen `helix-default` eller `shared-aem`)
+1. **Definiera formulärstrukturen** med hjälp av guiden [Skapa formulär](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)
 
 ![Formulärdefinition](/help/forms/assets/form-submission-definition.png)
 *Exempel: Formulärdefinition med fälttyper, etiketter och valideringsregler*
@@ -177,9 +174,9 @@ Skapa ett dedikerat blad för att ta emot formuläröverföringsdata.
 **Inställningar för datablad:**
 
 1. **Lägg till ett nytt blad** i ditt befintliga kalkylblad
-2. **Namnge bladet exakt`incoming`** (skiftlägeskänsligt)
-3. **Konfigurera kolumnrubriker** som matchar formulärfälten
-4. **Spara kalkylbladet** för att säkerställa att ändringarna bevaras
+1. **Namnge bladet exakt`incoming`** (skiftlägeskänsligt)
+1. **Konfigurera kolumnrubriker** som matchar formulärfälten
+1. **Spara kalkylbladet** för att säkerställa att ändringarna bevaras
 
 ![Inkommande blad](/help/forms/assets/form-submission-incoming-sheet.png)
 *Exempel: Inkommande blad med kolumnrubriker som matchar formulärfält*
@@ -211,14 +208,17 @@ Ge Adobe Forms inskickningstjänst åtkomst till ditt kalkylblad.
 **Delningsprocess:**
 
 1. **Klicka på knappen Dela** i det övre högra hörnet av kalkylbladet
-2. **Lägg till Adobe-tjänstkontot:**
+1. **Lägg till Adobe-tjänstkontot:**
+
    - E-post: `forms@adobe.com`
    - Behörighetsnivå: **Redigeraren** (krävs för att skriva data)
-3. **Skicka delningsinbjudan**
-4. **Kopiera kalkylbladslänken** för nästa steg
+
+1. **Skicka delningsinbjudan**
+1. **Kopiera kalkylbladslänken** för nästa steg
 
    ![Dela inkommande blad](/help/forms/assets/form-submission-share-incoming.png)
-   *Stegvis delning för att bevilja åtkomst till Adobe-tjänster*
+
+*Stegvis delning för att bevilja åtkomst till Adobe-tjänster*
 
 **Plattformsspecifika instruktioner:**
 
@@ -250,18 +250,19 @@ Länka formulärdefinitionen till det inskickade kalkylbladet.
 **Anslutning av formulär-kalkylblad:**
 
 1. **Öppna formulärdefinitionskalkylbladet** (det med `helix-default` eller `shared-aem` ark)
-2. **Leta reda på fältet Skicka** i formulärdefinitionen
-3. **Klistra in den kopierade kalkylbladslänken** i kolumnen **Åtgärd** för fältet Skicka
-4. **Spara ändringarna** i formulärdefinitionen
+1. **Leta reda på fältet Skicka** i formulärdefinitionen
+1. **Klistra in den kopierade kalkylbladslänken** i kolumnen **Åtgärd** för fältet Skicka
+1. **Spara ändringarna** i formulärdefinitionen
 
    ![Länka ett kalkylblad](/help/forms/assets/form-submission-sheet-linking.png)
-   *Exempel: Ansluta sändningsåtgärden till ditt datainsamlingsblad*
+
+*Exempel: Ansluta sändningsåtgärden till ditt datainsamlingsblad*
 
 **Publicerar ditt formulär:**
 
 1. **Öppna AEM Sidekick** i webbläsaren
-2. **Förhandsgranska formuläret** för att testa konfigurationen
-3. **Publicera formuläret** för att göra det tillgängligt
+1. **Förhandsgranska formuläret** för att testa konfigurationen
+1. **Publicera formuläret** för att göra det tillgängligt
 
 **Slutlig validering:**
 
@@ -329,37 +330,38 @@ Postman har ett användarvänligt gränssnitt för att testa API-inskickade data
 **Installationsanvisningar:**
 
 1. **Skapa en ny POST-begäran** i Postman
-2. **Konfigurera slutpunkten:** `https://forms.adobe.com/adobe/forms/af/submit/{id}`
-3. **Ersätt platshållare:**
+1. **Konfigurera slutpunkten:** `https://forms.adobe.com/adobe/forms/af/submit/{id}`
+1. **Ersätt platshållare:**
+
    - `{id}` → Ditt faktiska formulär-ID
    - `[repository]` → Ditt GitHub-databasnamn
    - `[organization]` → Din GitHub-organisation/ditt användarnamn
 
 **Begär konfiguration:**
 
-    &quot;json
+```json
 POST https://forms.adobe.com/adobe/forms/af/submit/your-form-id
 
-Sidhuvuden:
+Headers:
 Content-Type: application/json
-x-adobe-routing: tier=live,bucket=main—your-repo—your-org
+x-adobe-routing: tier=live,bucket=main--your-repo--your-org
 
 Body (JSON):
-&lbrace;
-&quot;data&quot;: &lbrace;
-&quot;startDate&quot;: &quot;2025-01-10&quot;,
-&quot;endDate&quot;: &quot;2025-01-25&quot;,
-&quot;destination&quot;: &quot;Australia&quot;,
-&quot;class&quot;: &quot;First Class&quot;,
-&quot;budget&quot;: &quot;2000&quot;,
-’belopp’: ’1000000’,
-&quot;name&quot;: &quot;Mary&quot;,
-&quot;age&quot;: &quot;35&quot;,
-&quot;subscribe&quot;: null,
-&quot;email&quot;: &quot;mary@gmail.com&quot;
-&rbrace;
-&rbrace;
-&quot;
+{
+        "data": {
+            "startDate": "2025-01-10",
+            "endDate": "2025-01-25",
+            "destination": "Australia",
+            "class": "First Class",
+            "budget": "2000",
+            "amount": "1000000",
+            "name": "Mary",
+            "age": "35",
+            "subscribe": null,
+            "email": "mary@gmail.com"
+                }
+}
+```
 
 **Förväntat svar:**
 
@@ -403,10 +405,10 @@ curl -X POST "https://forms.adobe.com/adobe/forms/af/submit/your-form-id" \
       "email": "joe@example.com"
                 }
             }'
-        ```
+```
 
->[!TAB Windows Command Prompt]
-     
+>[!TAB Kommandotolken i Windows]
+
 ```cmd
 curl -X POST "https://forms.adobe.com/adobe/forms/af/submit/your-form-id" ^
     --header "Content-Type: application/json" ^
@@ -436,13 +438,13 @@ Invoke-RestMethod -Uri "https://forms.adobe.com/adobe/forms/af/submit/your-form-
   -Method POST `
   -Headers @{"Content-Type"="application/json"; "x-adobe-routing"="tier=live,bucket=main--your-repo--your-org"} `
   -Body $body
-    ```
+```
 
 >[!ENDTABS]
 
-### API Response & Verification
+### API-svar och verifiering
 
-**Successful Response:**
+**Slutfört svar:**
 
 ```http
 HTTP/1.1 201 Created
@@ -530,7 +532,7 @@ Nu när du har konfigurerat Forms Submission Service kan du utforska följande r
 
 ### **Förbättra din Forms**
 
-- **[Skapa avancerad Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)** - Lägg till validering, villkorslogik och anpassad formatering
+- **[Skapa avancerad Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)** - Lägg till validering, villkorslogik och anpassad formatering
 - **[Handbok för formulärkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/forms-components)** - Utforska tillgängliga formulärfältstyper
 
 ### **Alternativa överföringsmetoder**
