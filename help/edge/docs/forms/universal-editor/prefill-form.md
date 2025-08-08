@@ -6,7 +6,7 @@ role: User, Developer
 level: Beginner, Intermediate
 time: 45-60 minutes
 keywords: förifyllnadsformulär, adaptiva blanketttjänster, automatisk ifyllnad av blanketter
-source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
+source-git-commit: d91b019ed98dc4e4ceff0ec964cad491fe9d4292
 workflow-type: tm+mt
 source-wordcount: '1874'
 ht-degree: 0%
@@ -140,9 +140,9 @@ Universal Editor har två alternativ för förifyllningstjänsten:
 
 6. Klicka på **Klar** för att spara argumentet och **Spara** för att spara FDM-filen
 
-       >[ !OBS!]
+       >[!OBS!]
        >
-       > Läs mer om hur du konfigurerar FDM-tjänster i [Arbeta med FDM (Form Data Model)](/help/forms/work-with-form-data-model.md).
+   > Läs mer om hur du konfigurerar FDM-tjänster i [Arbeta med FDM (Form Data Model)](/help/forms/work-with-form-data-model.md).
 
 +++
 
@@ -267,7 +267,7 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
 
     &quot;
     
-    &lbrace;
+    {
     &quot;afBoundData&quot;: 
     &quot;user&quot;: 
     &quot;firstName&quot;: &quot;John&quot;,
@@ -275,10 +275,10 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
     &quot;email&quot;: &quot;john.doe@example.com&quot;,
     &quot;phone&quot;: &quot;+1-555-0123&quot;
     
-    &rbrace;,
-    &quot;afUnBoundData&quot;: &lbrace;
+    },
+    &quot;afUnBoundData&quot;: {
     &quot;additionalInfo&quot;: &quot;Användarinställningar inlästa&quot;
-    &rbrace;
+    }
     
     
     &quot;
@@ -431,8 +431,6 @@ Autentiseringen beror på din datakällkonfiguration. Konfigurera autentisering 
 Du kan konfigurera en primär förifyllningstjänst per formulär. Du kan emellertid kombinera olika datakällor i en enda formulärdatamodell för att få liknande funktionalitet.
 
 +++
-
-=
 
 ## Relaterade ämnen
 
