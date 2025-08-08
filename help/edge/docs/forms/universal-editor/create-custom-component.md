@@ -4,7 +4,7 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: f843a7c91c3d47610580a3787a96e7e3bd49ba09
 workflow-type: tm+mt
 source-wordcount: '1789'
 ht-degree: 0%
@@ -45,10 +45,13 @@ I slutet av den här artikeln lär du dig att skapa anpassade komponenter från 
 Innan en anpassad komponent kan användas måste den registreras så att Universal Editor identifierar den som ett tillgängligt alternativ. Detta uppnås genom en komponentdefinition, som innehåller en unik identifierare, standardegenskaper och komponentens struktur. Utför följande steg för att göra den anpassade komponenten tillgänglig för formulärutveckling:
 
 1. **Lägg till ny mapp och nya filer**
-Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project.
+
+   Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project.
+
    1. Öppna ditt AEM-projekt och gå till `../blocks/form/components/`.
    1. Lägg till en ny mapp för din anpassade komponent på `../blocks/form/components/<component_name>`. I det här exemplet skapar vi en mapp med namnet `range`.
    1. Navigera till den nyligen skapade mappen på `../blocks/form/components/<component_name>`. Navigera till `../blocks/form/components/range` och lägg till följande filer:
+
       - `/blocks/form/components/range/_range.json`: Innehåller definitionen för den anpassade komponenten.
       - `../blocks/form/components/range/range.css`: Definierar formateringen för den anpassade komponenten.
       - `../blocks/form/components/range/range.js`: Anpassar den anpassade komponenten vid körning.
@@ -101,7 +104,7 @@ Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project
 
 >[!NOTE]
 >
-> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
+> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
 
 ### &#x200B;2. Definiera egenskaperna för den anpassade komponenten för redigering
 
@@ -158,7 +161,7 @@ Den anpassade komponenten innehåller en komponentmodell som anger vilka egenska
 
    >[!NOTE]
    >
-   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
+   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
 
    Du kan också [lägga till anpassade egenskaper](#adding-custom-properties-for-your-custom-component) i en anpassad komponent för att utöka dess funktioner.
 
@@ -358,18 +361,18 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    width: 25px;
    height: 25px;
    border-radius: 50%;
-   background: #00008B; /- Dark Blue */
-   border: 3px solid #00008B; /- Dark Blue */
+   background: #00008B; /* Dark Blue */
+   border: 3px solid #00008B; /* Dark Blue */
    cursor: pointer;
    outline: 3px solid #fff;
    }
    
    .range-widget-wrapper.decorated input[type="range"]:focus::-webkit-slider-thumb {
-   border-color: #00008B; /- Dark Blue */
+   border-color: #00008B; /* Dark Blue */
    }
    
    .range-widget-wrapper.decorated .range-bubble {
-   color: #00008B; /- Dark Blue */
+   color: #00008B; /* Dark Blue */
    font-size: 20px;
    line-height: 28px;
    position: relative;
@@ -407,7 +410,7 @@ Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i 
    const bubble = element.querySelector('.range-bubble');
    // during initial render the width is 0. Hence using a default here.
    const bubbleWidth = bubble.getBoundingClientRect().width || 31;
-   const left = `${(current / total) - 100}% - ${(current / total) - bubbleWidth}px`;
+   const left = `${(current / total) * 100}% - ${(current / total) * bubbleWidth}px`;
    bubble.innerText = `${value}`;
    const steps = {
        '--total-steps': Math.ceil((max - min) / step),

@@ -1,18 +1,17 @@
 ---
-title: Hur förifyller man adaptiva formulärfält?
+title: Hur man fyller i anpassade formulärfält i förväg
 description: Använd befintliga data för att förifylla fält i ett adaptivt formulär. Användare kan förifylla grundläggande information i ett formulär genom att logga in med sina sociala profiler.
 feature: Adaptive Forms, Edge Delivery Services
 role: User, Developer
 level: Beginner, Intermediate
 time: 45-60 minutes
 keywords: förifyllnadsformulär, adaptiva blanketttjänster, automatisk ifyllnad av blanketter
-source-git-commit: 6c93af923e600dbb20add6c5f1053c832d5a5ca0
+source-git-commit: f843a7c91c3d47610580a3787a96e7e3bd49ba09
 workflow-type: tm+mt
 source-wordcount: '1829'
 ht-degree: 0%
 
 ---
-
 
 # Configuring Prefill Service in Adaptive Forms using Edge Delivery Services
 
@@ -37,9 +36,9 @@ I följande diagram visas den automatiska förifyllningsprocessen som inträffar
 Förifyllningsprocessen omfattar fyra huvudsteg:
 
 1. **Användaren öppnar formuläret**: Användaren öppnar ett anpassat formulär via en URL eller navigering
-2. **Identifiera data Source**: Förifyll-tjänsten avgör den konfigurerade datakällan (formulärdatamodell eller utkasttjänst)
-3. **Hämta data**: Systemet hämtar relevanta användardata baserat på kontext, parametrar eller användaridentifiering
-4. **Mappa och visa**: Data mappas till formulärfält med `bindRef`-egenskaper och det ifyllda formuläret visas för användaren
+1. **Identifiera data Source**: Förifyll-tjänsten avgör den konfigurerade datakällan (formulärdatamodell eller utkasttjänst)
+1. **Hämta data**: Systemet hämtar relevanta användardata baserat på kontext, parametrar eller användaridentifiering
+1. **Mappa och visa**: Data mappas till formulärfält med `bindRef`-egenskaper och det ifyllda formuläret visas för användaren
 
 Denna automatiska process gör att användarna ser ett formulär som är förifyllt med relevant information, vilket avsevärt förbättrar användarupplevelsen och antalet ifyllda formulär.
 
@@ -62,7 +61,6 @@ Dataformatet måste överensstämma med formulärmodellen:
 - **JSON-schemaformulär**: JSON-kompatibel med schemat
 - **FDM-formulär (Form Data Model)**: JSON matchar FDM-strukturen
 - **Schemafria formulär**: Alla fält är obundna och använder obunden XML
-
 
 ## Förutsättningar
 
@@ -106,39 +104,39 @@ Universal Editor har två alternativ för förifyllningstjänsten:
 
 ## Konfigurera förifyllningstjänst för ett formulär
 
-
 +++Fas 1: Konfigurera formulärdatamodell
 
 ### Steg 1: Skapa formulärdatamodell
 
 1. Logga in på din AEM Forms as a Cloud Service-instans
-2. Navigera till **Adobe Experience Manager** > **Forms** > **Dataintegreringar**
-3. Välj **Skapa** > **Formulärdatamodell**
-4. Välj din **Data Source-konfiguration** och välj den konfigurerade **Data Source**
+1. Navigera till **Adobe Experience Manager** > **Forms** > **Dataintegreringar**
+1. Välj **Skapa** > **Formulärdatamodell**
+1. Välj din **Data Source-konfiguration** och välj den konfigurerade **Data Source**
 
    ![Skapad formulärdatamodell](/help/edge/docs/forms/universal-editor/assets/create-fdm.png)
 
    >[!TIP]
    >
-   > Mer information om hur du skapar formulärdatamodeller finns i [Skapa formulärdatamodell](/help/forms/create-form-data-models.md).
+   >Mer information om hur du skapar formulärdatamodeller finns i [Skapa formulärdatamodell](/help/forms/create-form-data-models.md).
 
 ### Steg 2: Konfigurera FDM-tjänster
 
 1. Gå till **Adobe Experience Manager** > **Forms** > **Dataintegreringar**
-2. Öppna formulärdatamodellen i redigeringsläge
-3. Markera ett datamodellsobjekt och klicka på **Redigera egenskaper**
-4. Konfigurera tjänsterna **Läs** och **Skriv** för de markerade datamodellsobjekten
+1. Öppna formulärdatamodellen i redigeringsläge
+1. Markera ett datamodellsobjekt och klicka på **Redigera egenskaper**
+1. Konfigurera tjänsterna **Läs** och **Skriv** för de markerade datamodellsobjekten
 
    ![Konfigurera läs- och skrivtjänst](/help/edge/docs/forms/universal-editor/assets/configure-reda-write-service.png)
 
-5. Konfigurera tjänstargument:
+1. Konfigurera tjänstargument:
+
    - Klicka på redigeringsikonen för lästjänstargumentet
    - Bind argumentet till ett **användarprofilattribut**, **begärandeattribut** eller **litteralvärde**
    - Ange bindningsvärdet (t.ex. `petid` för ett registreringsformulär för ett djur)
 
    ![Konfigurera argument för ID för husdjur](/help/edge/docs/forms/universal-editor/assets/pet-id-arguments.png)
 
-6. Klicka på **Klar** för att spara argumentet och **Spara** för att spara FDM-filen
+1. Klicka på **Klar** för att spara argumentet och **Spara** för att spara FDM-filen
 
    >[!NOTE]
    >
@@ -251,7 +249,7 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 3. Välj **Förhandsgranska som HTML**
 4. Testa förifyllning genom att lägga till parametrar till URL:en:
 
-   https://your-preview-url.com?&lt;bindreferencefield>=&lt;value>
+   https://your-preview-url.com?<bindreferencefield>=<value>
 
    **Exempel:**
 
@@ -271,7 +269,7 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
 
     &quot;
     
-    &lbrace;
+    {
     &quot;afBoundData&quot;: 
     &quot;user&quot;: 
     &quot;firstName&quot;: &quot;John&quot;,
@@ -279,10 +277,10 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
     &quot;email&quot;: &quot;john.doe@example.com&quot;,
     &quot;phone&quot;: &quot;+1-555-0123&quot;
     
-    &rbrace;,
-    &quot;afUnBoundData&quot;: &lbrace;
+    },
+    &quot;afUnBoundData&quot;: {
     &quot;additionalInfo&quot;: &quot;Användarinställningar inlästa&quot;
-    &rbrace;
+    }
     
     
     &quot;
