@@ -113,7 +113,7 @@ Dialogrutan **Formuläregenskaper** visas.
 
 * Vi rekommenderar att du håller e-postinnehållet klart och koncist. Användarna bör förstå syftet med e-postmeddelandet och de åtgärder de behöver vidta.
 * Det rekommenderas att alla formulärfält har unika elementnamn, även om de finns på olika paneler i ett adaptivt formulär.
-* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
+* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email).
 
 ## Relaterade artiklar
 
