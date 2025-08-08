@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 3b6d75b13730e920a10bc623947bc8b2d46dc5a9
+source-git-commit: e9aef80c162d681894cff53f65bd9f0bc7afd948
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2235'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -48,10 +48,9 @@ Have a look at the July 2025 Release Overview video for a summary of the feature
 
 ### Nya funktioner i Experience Manager Sites {#enhancements-sites}
 
-**Förbättringar av innehållsfragment**
-
-* Nu kan du kopiera innehållsfragment med underordnade.
-* Nu kan du konfigurera en anpassad arbetsyta i mappinställningarna för att exportera innehållsfragmenten till den konfigurerade arbetsytan i Adobe Target.
+* Nu kan du kopiera innehållsfragment med refererade fragment (underordnade fragment) i en åtgärd. Detta gör att befintliga innehållsfragmentstrukturer kan återanvändas för att skapa nytt innehåll.
+* I Administratörsgränssnittet för innehållsfragment kan du nu visa arbetsflödesstatusen för innehållsfragment, med detaljerad information om tidigare och pågående arbetsflöden för ett valt fragment.
+* Om du byter namn på eller flyttar en källsida för live-kopia kommer det nu att utlösa en ompublicering av en sida med motsvarande namn eller flyttad live-kopia.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
@@ -90,7 +89,7 @@ Content Hub innehåller nu alternativet **Visa alla** i filter, vilket gör att 
 
 Få automatisk uppladdning av nya filer och mappar, förbättrad filhantering, smartare resursidentifiering och smidig integrering med AEM - vilket gör innehållshanteringen snabbare, tydligare och mer intuitiv.
 
-En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes).
+En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes).
 
 ### Nya funktioner i Dynamic Media med OpenAPI-funktioner {#new-features-dynamic-media-with-openapi}
 
@@ -223,7 +222,7 @@ OSGi-egenskaper:
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade &#x200B;** Java 21-miljön**.
+**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade **Java 21-miljön**.
 
 Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)), bör du ha fått ett e-postmeddelande från Adobe med specifika nästa steg. Kontrollera att alla nödvändiga uppdateringar är slutförda senast den **28 augusti 2025** så att miljön kan uppgraderas utan avbrott.
 
@@ -311,7 +310,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -331,4 +330,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
