@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.07.09
-description: Det här är versionsinformationen för version 2025.07.09 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.07.31
+description: Detta är versionsinformationen för version 2025.07.31 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 199ee7e11f6706773bd426c3d27236d6ea791a6c
+source-git-commit: 91799e32f363aca268a89a7eebcb5001c5295cc5
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.07.09 {#release-notes}
+# Versionsinformation om Universal Editor 2025.07.31 {#release-notes}
 
-Detta är versionsinformationen för den 9 juli 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 31 juli 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,9 +22,15 @@ Detta är versionsinformationen för den 9 juli 2025-versionen av Universal Edit
 
 ## Nyheter {#what-is-new}
 
-* [Om bara en komponenttyp tillåts när du klickar på verktygsfältsknappen **Lägg till** på behållare, ](/help/sites-cloud/authoring/universal-editor/authoring.md#adding-components) infogas den omedelbart utan att du behöver välja någon från den nedrullningsbara menyn.
-* [Verktygsfältsalternativet ](/help/sites-cloud/authoring/universal-editor/navigation.md#autentication-settings) för autentiseringshuvudet har placerats bakom en funktionsväxling, eftersom det inte är användbart i de flesta fall.
-* [Eftersom behållarkapsling inte tillåts för flera fält på egenskapspanelen ](/help/implementing/universal-editor/field-types.md#fields) filtrerar återgivningsrutinen nu bort kapslade behållare från fältlistan för att förhindra ogiltig kapsling.
+* [Verktygsfältsalternativet för autentiseringshuvudet](/help/sites-cloud/authoring/universal-editor/navigation.md#autentication-settings) finns kvar bakom en funktionsväxling som introducerades i [version 2025.07.09.](/help/release-notes/universal-editor/2025/2025-07-09.md)
+   * Men nu är den aktiverad som standard.
+* Nya funktioner för [RTE-användare i förtid](#new-rte)
+   * Stöd för mörkt läge har lagts till.
+   * Stöd för textjustering har lagts till.
+      * Inaktiverat som standard och endast tillgängligt för headless-projekt
+   * Stöd för indrag har lagts till.
+      * Inaktiverat som standard och endast tillgängligt för headless-projekt
+   * Brytningar (`<br>`) infogas nu vid Skift+Retur.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -43,14 +49,12 @@ Den nya ProseMirror RTE med en sidväljare i länkdialogrutan är nu tillgängli
 
 ## Andra förbättringar {#other-improvements}
 
-* Ett problem har korrigerats där borttagning av en enda resursreferens inte var möjlig vid redigering via egenskapsfältet.
-* Ett problem har korrigerats där egenskapspanelen lästes in oavbrutet eftersom resursreferenser automatiskt konverterades till arrayer, vilket orsakade ett oändligt inläsningstillstånd.
-   * Resursreferensvärden lagras nu som de är, utan automatisk konvertering till arrayer.
-* Ett problem har korrigerats där egenskapspanelen inte visade fält när en modell definierades men inte innehöll något innehåll.
-   * Detta orsakade ett oändligt inläsningsläge för egenskapspanelen för tomma detaljsvar, som tomma innehållsfragment.
-* ESLint-konfigurationen har omarbetats för kompatibilitet med version 9, inklusive uppdaterade regler och stöd för plugin-program.
+* Korrigeringar för tidig adopter RTE
+   * Om du trycker på Retur skapas nu ett nytt listobjekt (`<li>`) i en lista.
+* Videor uppdateras nu korrekt när du använder fjärr-DAM.
+* Tjänstsupport har lagts till för 6,5 LTS.
 
 ## Undertryckningar {#deprecations}
 
-* Komponenten `text-input` är nu officiellt föråldrad.
+* Komponenterna `text-input` och `text-area` togs officiellt bort med [release 2025.07.09.](/help/release-notes/universal-editor/2025/2025-07-09.md)
    * I `model-definition.json` använder du textkomponenten för att skapa textinmatningar för egenskapspanelen.
