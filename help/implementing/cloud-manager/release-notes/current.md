@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.8.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 3111e74e844fb37afa0c7d218c37014d32ad0a64
+source-git-commit: c465542d5e89dbae0eb1c380ca1e7756d0beb2b6
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,6 @@ Lanseringsdatumet för Cloud Manager 2025.8.0 i AEM as a Cloud Service är torsd
 
 Nästa planerade version är torsdagen den 4 september 2025.
 
-
-
-
-
-
 ## Nyheter {#what-is-new}
 
 * **Edge Delivery Services-licens kan inkluderas i ett HIPAA-program på ett självbetjäningssätt**
@@ -42,7 +37,7 @@ Nästa planerade version är torsdagen den 4 september 2025.
 
 * **Automatisk etablering för det nya Forms-tillägget**
 
-  Kunder som bara använder webbplatser behöver ofta ett enkelt och billigt sätt att skapa marknadsföringsformulär. Det nya tillägget AEM Forms Sites uppfyller detta behov genom att lägga till begränsade Forms-funktioner i ett Sites-program. Det skapar också en tydlig uppgraderingsväg till AEM Forms-erbjudandet, om du vill. <!-- (CMGR-64301) --> <!-- KT: CMGR Provisioning Support for AEM Forms Sites Add-On SKU https://wiki.corp.adobe.com/pages/viewpage.action?pageId=3578379797 -->
+  Kunder som bara använder webbplatser behöver ofta ett enkelt och billigt sätt att skapa marknadsföringsformulär. Det nya tillägget AEM Forms Sites uppfyller detta behov genom att lägga till begränsade Forms-funktioner i ett Sites-program. Det skapar också en tydlig uppgradering till AEM Forms fullversion. <!-- (CMGR-64301) --> <!-- KT: CMGR Provisioning Support for AEM Forms Sites Add-On SKU https://wiki.corp.adobe.com/pages/viewpage.action?pageId=3578379797 -->
 
   Tillägget:
    * Bifogar till ett Sites-program och distribuerar tillsammans med det - inget separat Forms-program eller berättigande.
@@ -53,7 +48,7 @@ Nästa planerade version är torsdagen den 4 september 2025.
 
      ![Forms-tillägg i lösningar och tillägg när du skapar ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-creating-production-program.png) *När du skapar ett program kan du välja Forms-tillägget i webbplatslösningen.*
 
-     ![Forms-tillägg vid redigering av ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-editing-production-program.png) *I **Redigera program**&#x200B;väljer du Forms-tillägg för Sites-programmet och kör sedan pipeline för att aktivera det i miljöerna.*
+     ![Forms-tillägg vid redigering av ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-editing-production-program.png) *I **Redigera program**väljer du Forms-tillägg för Sites-programmet och kör sedan pipeline för att aktivera det i miljöerna.*
 
      Mer information finns i [Skapa ett produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
@@ -67,13 +62,13 @@ Följande möjligheter är för närvarande tillgängliga:
 
 Återgå snabbt till en tidigare distribution om den senaste kundkällkoden inte fungerar som förväntat - du behöver inte köra om hela pipelinen eller återställa implementeringar manuellt.<!--https://jira.corp.adobe.com/browse/CMGR-69556 -->
 
-![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**&#x200B;för en vald miljö.*
+![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**för en vald miljö.*
 
 ![Återställ föregående dialogruta för koddistribution](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed-dialogbox.png)
-*I dialogrutan **Återställ tidigare kod som distribuerats**&#x200B;granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
+*I dialogrutan **Återställ tidigare kod som distribuerats**granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
 
 ![Återställer aktiveringen](/help/implementing/cloud-manager/release-notes/assets/restoring-previous-code-deployed-restoring.png)
-*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**&#x200B;tills distributionen är klar.*
+*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**tills distributionen är klar.*
 
 ![Source-kodversionen används](/help/implementing/cloud-manager/release-notes/assets/environments-view-details-sourcecodeversion.png) *Vyn Miljöinformation, som visas ovan, visar nu även den aktiva källkodsversionen som används.*
 
@@ -82,7 +77,6 @@ Om du är intresserad av att testa den här nya funktionen och dela med dig av d
 Se [Återställa föregående kod som distribuerats i AEM as a Cloud Service](/help/operations/restore-previous-code-deployed.md).
 
 Se även [Innehållsåterställning i AEM as a Cloud Service](/help/operations/restore.md).
-
 
 ### Specialiserad testmiljö {#specialized-test-environment}
 
@@ -158,7 +152,7 @@ Config Pipelines stöds nu för sajter som byggts med Edge Delivery Services, vi
 
 Se [Lägg till Edge Delivery Pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md)
 
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till [grp-aemeds-config-pipeline-adopter@adobe.com](mailto:grp-aemeds-config-pipeline-adopter@adobe.com) från den e-postadress som är kopplad till din Adobe ID.
+<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [grp-aemeds-config-pipeline-adopter@adobe.com](mailto:grp-aemeds-config-pipeline-adopter@adobe.com) from your email address associated with your Adobe ID. -->
 
 
 ## Felkorrigeringar
