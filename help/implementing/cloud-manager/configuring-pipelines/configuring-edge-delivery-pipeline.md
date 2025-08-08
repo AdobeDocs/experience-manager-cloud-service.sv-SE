@@ -8,7 +8,7 @@ badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager
 hide: false
 index: false
 hidefromtoc: false
-source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
+source-git-commit: 62134c5b67d610f801c407e696e761ed05e02c87
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
@@ -26,9 +26,12 @@ En användare måste ha rollen **[Distributionshanteraren](/help/onboarding/clou
 >
 >En Edge Delivery-pipeline kan inte konfigureras förrän följande har inträffat:
 >
->* Ett program som innehåller en Edge Delivery Services-webbplats och en mappad domän skapas. I annat fall visas alternativet **Lägg till Edge Delivery Pipeline** inaktiverat i användargränssnittet och ett verktygstips förklarar saknade krav. <!-- CMGR‑69680 -->
+>* Ett program som innehåller en Edge Delivery Services-webbplats och en mappad domän skapas. I annat fall visas alternativet **Lägg till Edge Delivery Pipeline** inaktiverat i användargränssnittet och ett verktygstips förklarar saknade krav.
 >* Git-databasen har minst en gren.
 >* Produktions- och mellanlagringsmiljöerna skapas.
+
+<!-- CMGR‑69680 -->
+
 
 Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställningar från [!UICONTROL Cloud Manager].
 

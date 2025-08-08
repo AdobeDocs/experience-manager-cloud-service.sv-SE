@@ -3,7 +3,7 @@ title: Hur integrerar man FDM (Form Data Model) för ett formulär med adaptiv f
 description: Lär dig skapa formulär baserade på en formulärdatamodell (FDM). Generera och redigera exempeldata för datamodellsobjekt i FDM.
 feature: Edge Delivery Services, Adaptive Forms, Form Data Model
 role: Admin, User
-source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
+source-git-commit: 62134c5b67d610f801c407e696e761ed05e02c87
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -54,6 +54,7 @@ Utför följande steg för att konfigurera formulärdatamodellen med ett adaptiv
 1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
 1. Klicka på fliken **[!UICONTROL Submission]**.
 1. Välj **[!UICONTROL Submit Action]** Skicka med formulärdatamodell **[i listrutan]**.
+
    ![skicka med formulärdatamodell](/help/forms/assets/submit-uisng-fdm-cc.png)
 
 1. Välj den skapade **[!UICONTROL Data Model to submit]**-konfigurationen.

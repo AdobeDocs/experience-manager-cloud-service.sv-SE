@@ -4,7 +4,7 @@ description: Lär dig hur användare kan visa ett tackmeddelande eller omdiriger
 feature: Adaptive Forms, Edge Delivery Services
 role: User
 level: Intermediate
-source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
+source-git-commit: 62134c5b67d610f801c407e696e761ed05e02c87
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -27,8 +27,8 @@ Du kan konfigurera åtgärden skicka för formulär som har skapats i den univer
 
 >[!NOTE]
 >
-> * Om ikonen **Formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
-> * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+>* Om ikonen **Formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
+>* Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
 
 ## Hur konfigurerar jag omdirigering eller tackar för ditt meddelande?
 
@@ -37,9 +37,9 @@ När du skickar ett formulär kan du dirigera om användaren till en annan webbs
 Så här konfigurerar du omdirigeringssidan eller tackar för meddelandet:
 
 1. Öppna det adaptiva formuläret för redigering.
-2. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
-3. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
-4. Öppna fliken **[!UICONTROL Submission]**. Alternativ för att konfigurera en omdirigeringssida eller ett meddelande visas:
+1. Öppna innehållsträdet och välj **[!UICONTROL Guide Container]**.
+1. Klicka på ikonen för den adaptiva formulärbehållaren ![Egenskaper för den adaptiva formulärbehållaren](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas för att konfigurera datamodeller.
+1. Öppna fliken **[!UICONTROL Submission]**. Alternativ för att konfigurera en omdirigeringssida eller ett meddelande visas:
 
    ![Dialogrutan Skicka i Guide Container för att konfigurera en omdirigeringssida eller ett meddelande](/help/forms/assets/adaptive-forms-core-components-redirect-page-or-thank-you-message.png)
 
