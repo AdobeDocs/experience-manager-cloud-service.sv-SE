@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 time: 45-60 minutes
 keywords: förifyllnadsformulär, adaptiva blanketttjänster, automatisk ifyllnad av blanketter
-source-git-commit: d91b019ed98dc4e4ceff0ec964cad491fe9d4292
+source-git-commit: 6c93af923e600dbb20add6c5f1053c832d5a5ca0
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1829'
 ht-degree: 0%
 
 ---
@@ -140,9 +140,9 @@ Universal Editor har två alternativ för förifyllningstjänsten:
 
 6. Klicka på **Klar** för att spara argumentet och **Spara** för att spara FDM-filen
 
-       >[ !OBS!]
-       >
-       > Läs mer om hur du konfigurerar FDM-tjänster i [Arbeta med FDM (Form Data Model)](/help/forms/work-with-form-data-model.md).
+   >[!NOTE]
+   >
+   > Läs mer om hur du konfigurerar FDM-tjänster i [Arbeta med FDM (Form Data Model)](/help/forms/work-with-form-data-model.md).
 
 +++
 
@@ -151,35 +151,36 @@ Universal Editor har två alternativ för förifyllningstjänsten:
 ### Steg 3: Skapa ett adaptivt formulär
 
 1. Navigera till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**
-2. Välj **Skapa** > **Adaptiv Forms**
-3. På fliken **Source** väljer du en Edge Delivery Services-mall:
+1. Välj **Skapa** > **Adaptiv Forms**
+1. På fliken **Source** väljer du en Edge Delivery Services-mall:
 
-       ![Edge Delivery Services-mall](/help/edge/assets/create-eds-forms.png)
-   
-4. Klicka på **Skapa** för att öppna guiden **Skapa formulär**
-5. Ange formulärinformationen:
+   ![Edge Delivery Services-mall](/help/edge/assets/create-eds-forms.png)
+
+1. Klicka på **Skapa** för att öppna guiden **Skapa formulär**
+1. Ange formulärinformationen:
+
    - **Namn**: Ange ett beskrivande namn för formuläret
    - **Titel**: Ange en användarvänlig titel
    - **GitHub-URL**: Ange din databas-URL (t.ex. `https://github.com/wkndforms/edsforms`)
 
-6. Klicka på **Skapa**
+1. Klicka på **Skapa**
 
-       ![Skapa schemabaserat formulär](/help/edge/docs/forms/universal-editor/assets/create-schema-based-form1.png)
-   
+   ![Skapa schemabaserat formulär](/help/edge/docs/forms/universal-editor/assets/create-schema-based-form1.png)
+
 Formuläret öppnas i den universella redigeraren för redigering.
 
 ### Steg 4: Konfigurera Source för formulärdata
 
 1. Markera formuläret och klicka på **Egenskaper**
 
-       ![Välj formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/select-form-properties1.png)
-   
+   ![Välj formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/select-form-properties1.png)
+
 2. Öppna fliken **Formulärmodell**
 3. I listrutan **Välj från** väljer du **FDM (Form Data Model)**
 4. Välj den formulärdatamodell (t.ex. PetFDM) du har skapat i listrutan
 
-       ![Välj fliken Formulärmodell](/help/edge/docs/forms/universal-editor/assets/select-form-model1.png)
-   
+   ![Välj fliken Formulärmodell](/help/edge/docs/forms/universal-editor/assets/select-form-model1.png)
+
 5. Klicka på **Spara och stäng**
 6. Öppna formuläret för redigering i Universal Editor
 
@@ -193,6 +194,7 @@ Formulärelementen från din FDM visas på fliken **Datakälla** i **Content Bro
    ![Skärmbild av Universal Editor med schemabaserat formulär](/help/edge/docs/forms/universal-editor/assets/ue-form.png)
 
 3. Lägg till databindning i formulärfält:
+
    - Markera ett formulärfält
    - Leta reda på egenskapen **Bind Reference** i panelen **Egenskaper**
    - Välj lämplig databindningsreferens
@@ -208,12 +210,14 @@ Formulärelementen från din FDM visas på fliken **Datakälla** i **Content Bro
 Se till att dessa tillägg är aktiverade i Universell redigerare:
 
 1. **AEM Form Properties Extension**
+
    - Öppna **Extension Manager** i Universal Editor
    - Aktivera tillägget **AEM-formuläregenskaper**
 
    ![Ikon för formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/form-edit-properties.png)
 
-2. **Data Source Extension**
+1. **Data Source Extension**
+
    - Aktivera tillägget **Datakälla** om du inte ser ikonen **Datakällor**
 
    ![Skärmbild av Universal Editor Extension Manager](/help/edge/docs/forms/universal-editor/assets/extension-manager.png)
@@ -232,8 +236,8 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 3. Klicka på fliken **Förifyll**
 4. Välj **Förfyllnadstjänst för formulärdatamodell**
 
-       ![Välj förifyllningstjänst](/help/edge/docs/forms/universal-editor/assets/select-fdm-prefill.png)
-   
+   ![Välj förifyllningstjänst](/help/edge/docs/forms/universal-editor/assets/select-fdm-prefill.png)
+
 5. Klicka på **Spara och stäng**
 
 +++
@@ -247,14 +251,14 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 3. Välj **Förhandsgranska som HTML**
 4. Testa förifyllning genom att lägga till parametrar till URL:en:
 
-       https://your-preview-url.com?&lt;bindningsreferensfält>=&lt;värde>
-   
+   https://your-preview-url.com?<bindreferencefield>=<value>
+
    **Exempel:**
 
-       https://your-preview-url.com?petid=12345
-       
-       ![Förifyll formulär](/help/edge/docs/forms/universal-editor/assets/prefill-form.png)
-   
+   https://your-preview-url.com?petid=12345
+
+   ![Förifyll formulär](/help/edge/docs/forms/universal-editor/assets/prefill-form.png)
+
 Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern.
 
 +++
@@ -267,7 +271,7 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
 
     &quot;
     
-    &lbrace;
+    {
     &quot;afBoundData&quot;: 
     &quot;user&quot;: 
     &quot;firstName&quot;: &quot;John&quot;,
@@ -275,10 +279,10 @@ Formuläret ska automatiskt fyllas i med data baserat på den angivna parametern
     &quot;email&quot;: &quot;john.doe@example.com&quot;,
     &quot;phone&quot;: &quot;+1-555-0123&quot;
     
-    &rbrace;,
-    &quot;afUnBoundData&quot;: &lbrace;
+    },
+    &quot;afUnBoundData&quot;: {
     &quot;additionalInfo&quot;: &quot;Användarinställningar inlästa&quot;
-    &rbrace;
+    }
     
     
     &quot;
@@ -306,11 +310,11 @@ URL-adresserna nedan är endast till för illustrationsändamål och fungerar in
 
 **Grundläggande prefill-test:**
 
-    https://preview.example.com/form.html?userId=12345
+`https://preview.example.com/form.html?userId=12345`
 
 **Test av flera parametrar:**
 
-    https://preview.example.com/form.html?userId=12345&amp;category=premium
+`https://preview.example.com/form.html?userId=12345&category=premium`
 
 
 ## Felsökning
@@ -330,21 +334,25 @@ URL-adresserna nedan är endast till för illustrationsändamål och fungerar in
 +++Felsökningssteg
 
 1. **Verifiera FDM-konfiguration:**
+
    - Kontrollera om tjänsterna är korrekt konfigurerade
    - Testa FDM-tjänsterna oberoende av varandra
    - Validera anslutning till datakälla
 
 2. **Kontrollera formulärkonfiguration:**
+
    - Bekräfta att formuläret är kopplat till rätt FDM
    - Verifiera värden för fält `bindRef`
    - Testa formuläret utan förifyllning först
 
 3. **Testa dataflöde:**
+
    - Använd webbläsarutvecklarverktygen för att inspektera nätverksförfrågningar
    - Kontrollera JavaScript-fel i konsolen
    - Validera svarsdataformat
 
 4. **Vanliga felmeddelanden:**
+
    - &quot;Det gick inte att hitta förifyllningstjänsten: Kontrollera tjänstkonfigurationen
    - &quot;Databindningen misslyckades&quot;: Verifiera noggrannheten för `bindRef`
    - &quot;Ogiltigt dataformat&quot;: Kontrollera att data matchar schema
