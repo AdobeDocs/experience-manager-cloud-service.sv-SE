@@ -3,7 +3,7 @@ title: Konfigurera en Edge Delivery-webbplats att använda en extern Git-databas
 description: Lär dig hur du länkar en Edge Delivery-webbplats till en privat eller företags Git-databas.
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 239ee3021057dd108d18ab2d7729680692223403
+source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%

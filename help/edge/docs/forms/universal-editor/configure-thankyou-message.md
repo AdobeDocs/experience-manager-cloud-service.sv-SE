@@ -4,7 +4,7 @@ description: Lär dig hur användare kan visa ett tackmeddelande eller omdiriger
 feature: Adaptive Forms, Edge Delivery Services
 role: User
 level: Intermediate
-source-git-commit: 958891216e117acc03c50446ae92f85108d275a7
+source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%
@@ -56,5 +56,3 @@ Så här konfigurerar du omdirigeringssidan eller tackar för meddelandet:
 ![tack](/help/edge/docs/forms/universal-editor/assets/thankyou-ue.png)
 
 Formulärförfattare kan konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att de har skickat in formuläret.
-
-

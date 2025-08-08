@@ -3,7 +3,7 @@ title: Versionsinformation om 2025.6.0-utgåvan av  [!DNL Adobe Experience Manag
 description: Versionsinformation om 2025.6.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 2679466939e1c2e25e426c62f0fd6bde1bf90b93
+source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 0%
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.6.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the June 2025 Release Overview video for a summary of the features added in the 2025.6.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -70,10 +70,10 @@ Mer information finns i artikeln [som inte längre används](/help/release-notes
 
 Expandera listan nedan för att visa de inaktuella API:er och OSGi-konfigurationer som inte längre får användas. Mer information, inklusive tidslinjer för borttagning, finns i artikeln om borttagning.
 
-<details>
-  <summary>Expandera om du vill visa borttagningarna</summary>
++++Expandera om du vill visa borttagningarna
 
 Java-API:er:
+
 * `org.apache.sling.commons.auth`
 * `org.apache.felix.webconsole`
 * `org.eclipse.jetty`
@@ -96,7 +96,7 @@ OSGi-egenskaper:
 * `org.apache.sling.commons.log.LogManager` (alla egenskaper)
 * `org.apache.sling.commons.log.LogManager.factory.config` (`org.apache.sling.commons.log.file`, `org.apache.sling.commons.log.pattern`)
 
-</details>
++++
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
@@ -125,7 +125,7 @@ Om du vill optimera databasprestanda från och med **början av juli 2025** akti
 
 #### Innehållsversioner {#mt-content}
 
-* **Nya miljöer** (skapas efter ett kommande datum (kommer att meddelas senare)
+* **Nya miljöer** (skapas efter ett kommande datum som ska kommuniceras senare)
    * Versioner som är äldre än **30 dagar** tas regelbundet bort.
    * De senaste fem versionerna under de senaste 30 dagarna bevaras tillsammans med den senaste versionen och den aktuella versionen, oavsett ålder.
 
@@ -181,7 +181,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -201,4 +201,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

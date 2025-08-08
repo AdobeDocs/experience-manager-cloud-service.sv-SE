@@ -1,14 +1,14 @@
 ---
 title: Lägg till en Edge Delivery Pipeline
 description: Lär dig hur du lägger till en Edge Delivery-pipeline för att bygga och driftsätta din kod i produktionsmiljöer.
-index: false
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 hide: false
+index: false
 hidefromtoc: false
-source-git-commit: 96a619c6ab8f71034914b72a57bdb1e7f363fbc6
+source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%

@@ -6,7 +6,7 @@ role: User, Developer
 level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
-source-git-commit: 848a06abf2012d9afd0b9493d21fbcee815f5f97
+source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Förbättringar och användningsfall i regelredigeraren
 
-<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsutgåva</a>.
+<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsutgåva</a>.
 
 I den här artikeln beskrivs de senaste förbättringarna av regelredigeraren i Adaptive Forms. Uppdateringarna är utformade för att hjälpa er att enklare definiera formulärbeteende utan att behöva skriva anpassad kod, och för att skapa mer dynamiska, responsiva och personaliserade formulärupplevelser.
 
@@ -59,7 +59,7 @@ I ovanstående regel kontrollerar knappen **Nästa** om fälten i avsnittet **Pe
 
 >[!NOTE]
 >
-> Du kan använda metoden **validate()** i formulär, fragment eller enskilda fält. När ett fragment ingår i ett formulär visas både formuläret och fragmentet som alternativ i valideringskontexten. I det här fallet refererar fragmentet till fälten i det, medan formuläret refererar till det överordnade formulär där fragmentet är inbäddat.
+>Du kan använda metoden **validate()** i formulär, fragment eller enskilda fält. När ett fragment ingår i ett formulär visas både formuläret och fragmentet som alternativ i valideringskontexten. I det här fallet refererar fragmentet till fälten i det, medan formuläret refererar till det överordnade formulär där fragmentet är inbäddat.
 
 ## DownloadDor as OOTB function in Rule Editor
 
@@ -67,7 +67,7 @@ Om du använder funktionen **DownloadDor()** i körklart läge (OTB) i regelredi
 
 >[!NOTE]
 >
-> Om formuläret inte har konfigurerats för Dokument för post visas ett felmeddelande när regeln med funktionen **downloadDoR()** används för knappen.
+>Om formuläret inte har konfigurerats för Dokument för post visas ett felmeddelande när regeln med funktionen **downloadDoR()** används för knappen.
 
 **Scenario**: En myndighet tillhandahåller ett digitalt ansökningsformulär för att utfärda certifikat. Efter att ha skickat in formuläret behöver de sökande ofta en kopia av det ifyllda formuläret för att kunna registrera sig eller dela det med en annan avdelning. För att förbättra användarupplevelsen vill myndigheten ge de sökande möjlighet att ladda ned en DoR-fil (Document of Record) omedelbart efter inlämningen eller i vilket skede som helst före den slutliga inlämningen.
 

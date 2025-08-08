@@ -3,7 +3,7 @@ title: Hur integrerar man FDM (Form Data Model) för ett formulär med adaptiv f
 description: Lär dig skapa formulär baserade på en formulärdatamodell (FDM). Generera och redigera exempeldata för datamodellsobjekt i FDM.
 feature: Edge Delivery Services, Adaptive Forms, Form Data Model
 role: Admin, User
-source-git-commit: 2c3e8f6f8dab1004a6fbd9be8f5604b1570a1808
+source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -66,15 +66,19 @@ Utför följande steg för att konfigurera formulärdatamodellen med ett adaptiv
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.
-Dialogrutan **Formuläregenskaper** visas.
+
+   Dialogrutan **Formuläregenskaper** visas.
 
    >[!NOTE]
    >
    > * Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
    > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+
 1. Klicka på fliken **Skicka** och välj **[!UICONTROL Submit using Form Data Model]**.
+
    ![OneDrive GIF](/help/forms/assets/submit-uisng-fdm-ue.png)
 Om du väljer **Spara bifogade filer med ursprungligt namn** sparas de bifogade filerna i mappen med sina ursprungliga filnamn. Du kan också spara DoR-dokument (Document of Record) i Azure Blob Storage.
+
 1. Markera **[!UICONTROL Storage Configuration]** där du vill spara dina data.
 1. Klicka på **[!UICONTROL Save&Close]**
 
