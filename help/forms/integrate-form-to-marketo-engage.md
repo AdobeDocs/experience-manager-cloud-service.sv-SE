@@ -1,13 +1,13 @@
 ---
-Title: How to Integrate Marketo Engage with AEM Forms?
-Description: Learn how to integrate your Marketo Engage instance with AEM Forms.
-Keywords: How to connect a Marketo instance with form? , Connect a form to Marketo, Integrate a form with Marketo Engage, Integrate an Adaptive Form with a Marketo instance.
-Feature: Adaptive Forms, Form Data Model
-Role: User, Developer
+title: Hur integrerar man Marketo Engage med AEM Forms?
+description: Lär dig hur du integrerar din Marketo Engage-instans med AEM Forms.
+keywords: Hur ansluter jag en Marketo-instans till ett formulär? , Ansluta ett formulär till Marketo, Integrera ett formulär med Marketo Engage, Integrera ett adaptivt formulär med en Marketo-instans.
+feature: Adaptive Forms, Form Data Model
+role: User, Developer
 exl-id: 74cd25f9-1ee1-4f3f-8e02-8714071e7c86
-source-git-commit: dabf8029577c5fb6bb5eebdbf10d77f3d4d95a5d
+source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 <span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
-Genom att integrera AEM Forms med [Adobe Marketo Engage](https://experienceleague.adobe.com/sv/docs/marketo/using/home) kan användare utnyttja möjligheterna i Marketo Engage för att skapa affärslogik från insamlade data och automatisera arbetsflöden, inklusive smarta kampanjer och automatiserad e-postmarknadsföring. Det konfigurerade formuläret kan skicka inhämtade data till Marketo Engage för bearbetning.
+Genom att integrera AEM Forms med [Adobe Marketo Engage](https://experienceleague.adobe.com/en/docs/marketo/using/home) kan användare utnyttja möjligheterna i Marketo Engage för att skapa affärslogik från insamlade data och automatisera arbetsflöden, inklusive smarta kampanjer och automatiserad e-postmarknadsföring. Det konfigurerade formuläret kan skicka inhämtade data till Marketo Engage för bearbetning.
 
 ## Fördelar med att integrera Marketo Engage med blanketter
 
@@ -52,7 +52,7 @@ Tabellen nedan visar några skäl att välja AEM Forms framför andra alternativ
 Tänk på följande när du integrerar Marketo Engage med AEM Forms:
 
 * AEM stöder bara People(Leads)-databasen bland de olika Marketo-databaserna.
-* Marketo tillåter att [10 anpassade objekt](https://experienceleague.adobe.com/sv/docs/marketo/using/product-docs/administration/marketo-custom-objects/add-marketo-custom-object-fields) skapas som användardefinierade objekt för att lagra specialiserade data utöver standardfälten i Leads, vilket stöder unika affärsbehov.
+* Marketo tillåter att [10 anpassade objekt](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/marketo-custom-objects/add-marketo-custom-object-fields) skapas som användardefinierade objekt för att lagra specialiserade data utöver standardfälten i Leads, vilket stöder unika affärsbehov.
 * AEM har bara åtkomst till anpassade objekt om de är kopplade till lead-databasen
 
 ## Förutsättningar för att integrera Marketo Engage med formulär
@@ -60,7 +60,7 @@ Tänk på följande när du integrerar Marketo Engage med AEM Forms:
 Nedan beskrivs förutsättningarna för att ansluta Marketo Engage till AEM Forms:
 
 * En giltig Adobe Marketo Engage-licens
-* En fungerande instans av Marketo Engage som [hämtar klient-ID och klienthemlighet](https://experienceleague.adobe.com/sv/docs/marketo/using/product-docs/administration/additional-integrations/create-a-custom-service-for-use-with-rest-api) för att skapa en molnkonfiguration.
+* En fungerande instans av Marketo Engage som [hämtar klient-ID och klienthemlighet](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/additional-integrations/create-a-custom-service-for-use-with-rest-api) för att skapa en molnkonfiguration.
 
 ## Skapa molntjänstkonfiguration för att ansluta AEM Forms (Adaptiv Forms) till Marketo Engage
 

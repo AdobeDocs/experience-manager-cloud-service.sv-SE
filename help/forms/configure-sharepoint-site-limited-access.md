@@ -1,16 +1,16 @@
 ---
-Title: How to configure a SharePoint Site with limited access using authorization scope?
-Description: Learn how to configure SharePoint Site with limited access using the authorization scope.
+title: Hur konfigurerar man en SharePoint Site med begränsad åtkomst med hjälp av behörighetsomfånget?
+description: Lär dig hur du konfigurerar SharePoint Site med begränsad åtkomst med hjälp av behörighetsomfånget.
 keywords: Hur man konfigurerar SharePoint Site med begränsad åtkomst?, Konfigurera SharePoint med begränsad åtkomst, Använda behörighetsområde för att begränsa åtkomst till SharePoint Site.
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: 85cef99dc7a8d762d12fd6e1c9bc2aeb3f8c1312
+exl-id: 3230bab2-c1aa-409d-9f01-c42cf88b1135
+source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
-
 
 <span class="preview"> Funktionen är tillgänglig under det tidiga adopterprogrammet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
@@ -37,7 +37,7 @@ Fördelar med begränsad åtkomst till SharePoint Site:
 Följ stegen nedan för att konfigurera SharePoint Sites med begränsad åtkomst med hjälp av behörighetsområden:
 
 1. [Skapa ett program med ](#create-an-application-with-the-limited-permission-in-the-azure-portal)
-1. [Ange auktoriseringsomfånget AEM instansen](#set-the-authorization-scope-at-aem-instance)
+1. [Ange auktoriseringsomfånget på AEM-instansen](#set-the-authorization-scope-at-aem-instance)
 
 ### Skapa ett program med begränsad behörighet i Azure-portalen
 
@@ -52,9 +52,9 @@ Mer information om hur du hämtar `Client ID`, `Client Secret` och `Tenant ID` f
 
 Om du vill använda API-behörigheten `Sites.Selected` måste du ha ett program som är registrerat i Azure-portalen med rätt behörigheter för SharePoint Online Sites. Installationen säkerställer att programmet har den behörighet som krävs för att interagera med SharePoint Site inom det definierade området, vilket ger den begränsade åtkomst som krävs.
 
-Mer information om hur du utvecklar program som använder `Sites.Selected`-behörigheter för SharePoint Online-platser finns i [bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476).
+Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i ](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
 
-### Ange auktoriseringsomfånget AEM instansen
+### Ange auktoriseringsomfånget på AEM-instansen
 
 För att ge begränsad åtkomst till en Microsoft SharePoint Site är det viktigt att ange behörighetsomfånget korrekt. Så här anger du auktoriseringsomfång och ansluter AEM Forms till din Microsoft® SharePoint-lagring:
 
@@ -92,7 +92,7 @@ Nu kan du använda den här [SharePoint Sites-konfigurationen för att skicka-å
 
 Så här hämtar du värdet för `SharePoint Site ID`:
 1. Gå till [API:erna för Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer).
-1. Klicka på `Search for a SharePoint site by keyword` i den vänstra rutan under API:erna för `SharePoint Sites`.
+1. Klicka på `SharePoint Sites` i den vänstra rutan under API:erna för `Search for a SharePoint site by keyword`.
 1. Ersätt platshållaren `contoso` med det faktiska namnet på din SharePoint-webbplats för att hämta motsvarande plats-ID.
 
    ![SharePoint-dokumentbiblioteks-ID](/help/forms/assets/sharepoint-site-id.png)

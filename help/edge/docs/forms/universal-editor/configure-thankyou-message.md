@@ -1,10 +1,10 @@
 ---
-title: Hur man konfigurerar en omdirigeringssida eller ett tackmeddelande?
+title: Konfigurera en omdirigeringssida eller ett tackmeddelande
 description: Lär dig hur användare kan visa ett tackmeddelande eller omdirigeras till en webbsida som formulärförfattare kan konfigurera när de skapar formuläret.
 feature: Adaptive Forms, Edge Delivery Services
 role: User
 level: Intermediate
-source-git-commit: 62134c5b67d610f801c407e696e761ed05e02c87
+source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 0%

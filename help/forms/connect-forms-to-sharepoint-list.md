@@ -1,14 +1,13 @@
 ---
-Title: How to send data to a SharePoint List storage on submission of an Adaptive Form?
 Description: Learn how to send data from your Adaptive Form to a SharePoint storage like a SharePoint list when you submit the form.
 keywords: Hur ansluter man SharePoint lista till ett tilläggsformulär?, Skicka till SharePoint, Skapa en SharePoint List Configuration, Använd åtgärden Skicka till SharePoint i ett adaptivt format, Ansluta ett adaptivt formulär till Microsoft&reg; SharePoint List.
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
 exl-id: 9ac3e7be-c6fa-4dbc-9aba-b81741ba6c55
-source-git-commit: dabf8029577c5fb6bb5eebdbf10d77f3d4d95a5d
+source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---

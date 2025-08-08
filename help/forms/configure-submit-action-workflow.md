@@ -1,13 +1,13 @@
 ---
-Title: How to integrate AEM workflow with an Adaptive Form?
-Description: Explore the process of automated workflow initiation with AEM Forms Submit Action.
+title: Hur integrerar man AEM arbetsflöde med ett adaptivt formulär?
+description: Utforska processen med automatisk start av arbetsflöden med AEM Forms Submit Action.
 keywords: AEM Workflow, Integrated Adaptive Form with AEM workflow, Invoke AEM workflow Submit Action
 feature: Adaptive Forms, Core Components
 exl-id: b7788e3d-acd8-4867-b232-f9767cf6b2f5
 role: User, Developer
-source-git-commit: dc9fc0c7d886d976f9b0b9daa955f98402341527
+source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1341'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->  Lär dig hur du [skapar en arbetsflödesmodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem) för att definiera serien med steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
+>  Lär dig hur du [skapar en arbetsflödesmodell](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för att definiera serien med steg som körs när en användare startar arbetsflödet. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser.
 
 AEM as a Cloud Service erbjuder olika inskickningsåtgärder för att hantera inskickade formulär. Du kan läsa mer om de här alternativen i artikeln [Åtgärd för att skicka anpassade formulär](/help/forms/configure-submit-actions-core-components.md).
 
@@ -47,7 +47,7 @@ Before using the **[!UICONTROL Invoke an AEM Workflow]** Submit Action configure
 
 >[!TAB Foundation Component]
 
-Så här ställer du in automatiserad process med [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem) för ett adaptivt formulär baserat på Foundation-komponenter:
+Så här ställer du in automatiserad process med [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för ett adaptivt formulär baserat på Foundation-komponenter:
 
 1. Öppna det adaptiva formuläret för redigering och navigera till avsnittet **[!UICONTROL Submission]** i egenskaperna för den adaptiva formulärbehållaren.
 1. Välj **[!UICONTROL Submit Action]** Skicka åtgärd **som** i listrutan **[!UICONTROL Invoke an AEM workflow]**.
@@ -73,7 +73,7 @@ Så här ställer du in automatiserad process med [AEM Workflow](https://experie
 
 >[!TAB Kärnkomponent]
 
-Så här ställer du in automatiserad process med [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem) för ett adaptivt formulär baserat på kärnkomponenter:
+Så här ställer du in automatiserad process med [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för ett adaptivt formulär baserat på kärnkomponenter:
 
 1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
 1. Klicka på ikonen för egenskaper för stödlinjebehållaren ![Egenskaper för stödlinje](/help/forms/assets/configure-icon.svg) . Dialogrutan Adaptiv formulärbehållare öppnas.
@@ -102,7 +102,7 @@ Så här ställer du in automatiserad process med [AEM Workflow](https://experie
 
 >[!TAB Universell redigerare]
 
-Så här ställer du in automatiserad process med [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem) för ett adaptivt formulär som har skapats i den universella redigeraren:
+Så här ställer du in automatiserad process med [AEM Workflow](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem) för ett adaptivt formulär som har skapats i den universella redigeraren:
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.

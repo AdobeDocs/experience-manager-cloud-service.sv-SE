@@ -1,14 +1,13 @@
 ---
-Title: How to submit data from an Adaptive Form to Microsoft&reg; OneDrive?
-Description: Explore the streamlined process of connecting AEM Forms with Microsoft&reg; OneDrive using the Submit to OneDrive Submit Action. Learn the step-by-step guide to configure OneDrive and set up submission actions for efficient data storage and retrieval
+description: Utforska den smidiga processen att ansluta AEM Forms till Microsoft&reg; OneDrive med åtgärden Skicka till OneDrive. Lär dig steg-för-steg-guiden för att konfigurera OneDrive och konfigurera överföringsåtgärder för effektiv lagring och hämtning av data
 keywords: AEM Forms OneDrive-integrering, Anslut till Microsoft OneDrive, Konfigurationsinställningar för OneDrive med AEM-formulär
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 exl-id: dbfa4094-1b92-4a7c-a799-f66973d27054
 title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
-source-git-commit: dabf8029577c5fb6bb5eebdbf10d77f3d4d95a5d
+source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '876'
 ht-degree: 1%
 
 ---
