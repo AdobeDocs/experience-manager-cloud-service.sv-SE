@@ -225,7 +225,7 @@ OSGi-egenskaper:
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade **Java 21-miljön**.
+**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade &#x200B;** Java 21-miljön**.
 
 Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)), bör du ha fått ett e-postmeddelande från Adobe med specifika nästa steg. Kontrollera att alla nödvändiga uppdateringar är slutförda senast den **28 augusti 2025** så att miljön kan uppgraderas utan avbrott.
 
