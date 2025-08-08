@@ -4,7 +4,7 @@ description: Använd adaptiva formulärteman för att utforma och ge en visuell 
 feature: Adaptive Forms, Foundation Components
 exl-id: 99c3d1f7-5756-49d2-98ee-72dd62063110
 role: User, Developer, Admin
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: bc422429d4a57bbbf89b7af2283b537a1f516ab5
 workflow-type: tm+mt
 source-wordcount: '5421'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/themes.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan skapa och använda teman för att anpassa ett anpassat formulär <!-- or an interactive communication-->. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Temat hanteras oberoende av varandra utan en referens till det adaptiva formuläret <!-- or interactive communication -->.
@@ -511,7 +511,8 @@ Så här konfigurerar du ett tema för Adobe Fonts-konfigurationen:
 
    Nu ser du att teckensnitten har lagts till i temats egenskap font-family.
 
-<!-- >
+<!-- 
+
 ### Listing and selecting fonts in theme editor {#listing-and-selecting-fonts-in-theme-editor}
 
 You can use the theme configuration service to add more fonts to the theme editor. Perform the following steps to add fonts:
@@ -521,7 +522,8 @@ You can use the theme configuration service to add more fonts to the theme edito
 
    ![theme-config](assets/theme-config.png)
 
-1. Click +, specify the name of the font, and click **Save**. The font is added and available in theme editor. -->
+1. Click +, specify the name of the font, and click **Save**. The font is added and available in theme editor. 
+-->
 
 #### Välja teckensnitt i temaredigeraren {#selecting-fonts-in-theme-editor}
 

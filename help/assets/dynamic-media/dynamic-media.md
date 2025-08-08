@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Dynamic Media,Asset Management
 role: Admin,User
 exl-id: 3ec3cb85-88ce-4277-a45c-30e52c75ed42
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: bc422429d4a57bbbf89b7af2283b537a1f516ab5
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 1%
@@ -18,9 +18,11 @@ ht-degree: 1%
 
 Dynamic Media levererar interaktiva visningsupplevelser som zoomning, 360-gradersrotation och video. Dynamic Media införlivar arbetsflödena i Adobe Experience Manager Digital Asset Management (Assets) för att förenkla och effektivisera hanteringen av digitala kampanjer.
 
-<!-- >[!NOTE]
+<!-- 
+>[!NOTE]
 >
->A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). -->
+>A Community article is available on [Working with Adobe Experience Manager and Dynamic Media](https://helpx.adobe.com/experience-manager/using/aem_dynamic_media.html). 
+-->
 
 ## Vad är Dynamic Media?
 

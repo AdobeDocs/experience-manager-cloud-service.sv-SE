@@ -5,9 +5,9 @@ feature: Adaptive Forms, Acrobat Sign
 role: Admin, User
 level: Intermediate
 exl-id: 609c3072-1c3d-43fa-898a-b4e62db8483b
-source-git-commit: 82a3016149645701abe829ad89c493f480956267
+source-git-commit: bc422429d4a57bbbf89b7af2283b537a1f516ab5
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2024'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html?lang=sv-SE#adobe-acrobat-sign-for-government) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html#adobe-acrobat-sign-for-government) |
 | AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Acrobat Sign] aktiverar e-signaturarbetsflöden för adaptiva Forms- och AEM-arbetsflöden. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
@@ -37,14 +37,14 @@ Du behöver följande konfiguration för att integrera [!DNL Adobe Acrobat Sign]
 1. Ett aktivt [Adobe Acrobat Sign-utvecklarkonto.](https://www.adobe.com/acrobat/business/developer-form.html)
 1. Ett [Adobe Acrobat Sign API-program](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 1. Autentiseringsuppgifter (klient-ID och klienthemlighet) för API-programmet [!DNL Adobe Acrobat Sign].
-1. (Endast för myndighets-ID-baserad autentisering) [Aktivera autentiseringsmetoden](https://helpx.adobe.com/se/sign/using/adobesign-authentication-government-id.html#AuditReport) för autentisering av myndighets-ID.
+1. (Endast för myndighets-ID-baserad autentisering) [Aktivera autentiseringsmetoden](https://helpx.adobe.com/sign/using/adobesign-authentication-government-id.html#AuditReport) för autentisering av myndighets-ID.
 
 ### Koppla samman AEM Forms Author och publicera förekomster med Adobe Acrobat Sign {#configure-adobe-sign-with-aem-forms}
 
 När förutsättningarna är uppfyllda utför du följande steg för att konfigurera [!DNL Adobe Acrobat Sign] med [!DNL AEM Forms] på författarinstanserna.
 
 1. I AEM Forms-författarinstans går du till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
-1. Välj **[!UICONTROL Create]** på sidan **[!UICONTROL Configuration Browser]**.
+1. Välj **[!UICONTROL Configuration Browser]** på sidan **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av molntjänster. Kontrollera att mappnamnet inte innehåller något utrymme.
 1. Navigera till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** och öppna konfigurationsbehållaren som du skapade i föregående steg.
 
@@ -84,7 +84,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    där:
 
-   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/se/sign/using/identify-account-shard.html).
+   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL  Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/sign/using/identify-account-shard.html).
 
    >[!NOTE]
    >
@@ -170,7 +170,7 @@ Innan du börjar ansluta AEM Forms med Adobe Acrobat Sign Solution måste du kon
 #### Skapa en omdirigerings-URL för din AEM-instans
 
 1. På författarinstansen för Forms as a Cloud Service går du till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL General]** > **[!UICONTROL Configuration Browser]**.
-1. Välj **[!UICONTROL Create]** på sidan **[!UICONTROL Configuration Browser]**.
+1. Välj **[!UICONTROL Configuration Browser]** på sidan **[!UICONTROL Create]**.
 1. I dialogrutan **[!UICONTROL Create Configuration]** anger du **[!UICONTROL Title]** för konfigurationen, aktiverar **[!UICONTROL Cloud Configurations]** och väljer **[!UICONTROL Create]**. Den skapar en konfigurationsbehållare för lagring av molntjänster. Kontrollera att mappnamnet inte innehåller något utrymme.
 1. Navigera till **[!UICONTROL Tools]** ![hammer](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Adobe Acrobat Sign]** och öppna konfigurationsbehållaren som du skapade i föregående steg. När du skapar ett adaptivt formulär anger du behållarnamnet i fältet **[!UICONTROL Configuration Container]**.
 1. På konfigurationssidan väljer du **[!UICONTROL Create]** för att skapa [!DNL Adobe Acrobat Sign]-konfigurationen i AEM Forms.
@@ -201,7 +201,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 1. På fliken **[!UICONTROL General]** på sidan **[!UICONTROL Create Adobe Sign Configuration]** anger du **[!UICONTROL Name]** för konfigurationen och väljer **[!UICONTROL Next]**. Du kan också ange en **[!UICONTROL Title]** och bläddra för att välja en **[!UICONTROL Thumbnail]** för konfigurationen. Klicka på **[!UICONTROL Next]**.
 
-1. Välj [!DNL Adobe Acrobat Sign Solutions for Government] för alternativet **[!UICONTROL Select solution]** på fliken **[!UICONTROL Settings]** på sidan **[!UICONTROL Create Adobe Sign Configuration]**.
+1. Välj **[!UICONTROL Settings]** för alternativet **[!UICONTROL Create Adobe Sign Configuration]** på fliken **[!UICONTROL Select solution]** på sidan [!DNL Adobe Acrobat Sign Solutions for Government].
 
 
    ![Adobe Acrobat Sign Solutions för offentlig sektor](assets/adobe-sign-for-govt.png)
@@ -225,7 +225,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
    där:
 
-   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/se/sign/using/identify-account-shard.html).
+   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL  Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/sign/using/identify-account-shard.html).
 
    >[!NOTE]
    >
@@ -239,7 +239,9 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
    ![Konfigurationen av Adobe Acrobat Sign Cloud lyckades](assets/adobe-sign-cloud-configuration-success.png)
 
-   <!-- > When prompted for credentials, provide username and password of the account used while creating [!DNL Adobe Acrobat Sign] application. When asked to confirm access for `your developer account`, Click **[!UICONTROL Allow Access]**. -->
+   <!-- 
+      > When prompted for credentials, provide username and password of the account used while creating [!DNL Adobe Acrobat Sign] application. When asked to confirm access for `your developer account`, Click **[!UICONTROL Allow Access]**. 
+      -->
 
 1. Välj **[!UICONTROL Create]** för att skapa konfigurationen.
 
@@ -260,7 +262,7 @@ Som standard kontrollerar [!DNL Adobe Acrobat Sign] Scheduler Services (enkäter
 
 Om du vill ändra standardintervallet anger du ett [cron-uttryck](https://en.wikipedia.org/wiki/Cron#CRON_expression) för egenskapen **sign.status.exp** i konfigurationen för **Adobe Acrobat Sign Configuration Service**.
 
-Om du till exempel vill köra konfigurationstjänsten varje dag kl. 00:00 anger du egenskapen **sign.status.exp** för konfigurationen av **Adobe Acrobat Sign Configuration Service** till `0 0 0 1/1 * ? *`. I följande JSON-fil visas exemplet som ska köra konfigurationstjänsten varje dag klockan 00:00:
+Om du till exempel vill köra konfigurationstjänsten dagligen klockan 00:00 ställer du in egenskapen **sign.status.exp** för konfigurationen **Adobe Acrobat Sign Configuration Service** så att den anger `0 0 0 1/1 * ? *`. I följande JSON-fil visas exemplet för att köra konfigurationstjänsten varje dag klockan 00:00::00
 
 ```json
 {
@@ -268,7 +270,7 @@ Om du till exempel vill köra konfigurationstjänsten varje dag kl. 00:00 anger 
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Vanliga frågor
 
