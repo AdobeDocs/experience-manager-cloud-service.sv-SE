@@ -147,6 +147,7 @@ Variabler för typografi och mellanrum ger omfattande kontroll över textpresent
     --form-input-padding: 0.5rem 0.4rem;
 }
 ```
+
 +++
 
 +++ Layout- och strukturvariabler
@@ -1108,6 +1109,7 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
   text-align: center;
 }
 ```
+
 +++
 
 +++ Formatering baserad på fältnamn
@@ -1495,6 +1497,7 @@ main .form form .text-wrapper input {
   cursor: not-allowed;
 }
 ```
+
 +++
 
 ### **Komponentspecifika metodtips**

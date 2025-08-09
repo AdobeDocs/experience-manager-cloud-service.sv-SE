@@ -115,13 +115,13 @@ Ange en URL om du vill skicka data till en extern server. URL-formatet är `http
 
    Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
-+++
+   +++
 
    +++Konfiguration
 
    Med det här alternativet kan du lägga till en fördefinierad HTTP-konfiguration som hanteras via AEM Configuration Browser. Du kan välja den konfiguration som har skapats för tjänstens autentiseringstyp för återställningsslutpunkt och innehållstyper. Mer information om autentiseringstyp och innehållstyper finns på [Konfigurera datakällor](/help/forms/configure-data-sources.md#configure-restful-services-using-service-endpoint-configure-restful-services-service-endpoint)
 
-+++
+   +++
 
 1. Klicka på **[!UICONTROL Done]**.
 
@@ -172,13 +172,13 @@ Ange en URL om du vill skicka data till en extern server. URL-formatet är `http
 
    Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
-+++
+   +++
 
    +++Konfiguration
 
    Med det här alternativet kan du lägga till en fördefinierad HTTP-konfiguration som hanteras via AEM Configuration Browser. Du kan välja den konfiguration som har skapats för tjänstens autentiseringstyp för återställningsslutpunkt och innehållstyper. Mer information om autentiseringstyp och innehållstyper finns på [Konfigurera datakällor](/help/forms/configure-data-sources.md#configure-restful-services-using-service-endpoint-configure-restful-services-service-endpoint)
 
-+++
+   +++
 
 1. Klicka på **[!UICONTROL Save&Close]**.
 
