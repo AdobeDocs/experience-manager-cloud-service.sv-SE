@@ -1,13 +1,13 @@
 ---
+title: Hur konfigurerar jag åtgärden Skicka till återställningsslutpunkt för ett anpassat formulär?
 description: Upptäck hur du konfigurerar Rest Endpoint när du skickar in ett adaptivt formulär.
 keywords: AEM Forms REST Endpoint, Submit to REST Endpoint, Post Data to REST URL, Configure REST Endpoint Action
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
-title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
 exl-id: 58c63ba6-aec5-4961-a70a-265990ab9cc8
-source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1419'
 ht-degree: 0%
 
 ---
@@ -115,13 +115,13 @@ Ange en URL om du vill skicka data till en extern server. URL-formatet är `http
 
    Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
-   +++
++++
 
    +++Konfiguration
 
    Med det här alternativet kan du lägga till en fördefinierad HTTP-konfiguration som hanteras via AEM Configuration Browser. Du kan välja den konfiguration som har skapats för tjänstens autentiseringstyp för återställningsslutpunkt och innehållstyper. Mer information om autentiseringstyp och innehållstyper finns på [Konfigurera datakällor](/help/forms/configure-data-sources.md#configure-restful-services-using-service-endpoint-configure-restful-services-service-endpoint)
 
-   +++
++++
 
 1. Klicka på **[!UICONTROL Done]**.
 
@@ -172,13 +172,13 @@ Ange en URL om du vill skicka data till en extern server. URL-formatet är `http
 
    Du kan också **[!UICONTROL Enable POST request]** och ange en URL för att skicka begäran. Om du vill skicka data till den AEM-server som är värd för formuläret använder du en relativ sökväg som motsvarar rotsökvägen för AEM-servern. Exempel: `/content/forms/af/SampleForm.html`. Om du vill skicka data till en annan server använder du den absoluta sökvägen.
 
-   +++
++++
 
    +++Konfiguration
 
    Med det här alternativet kan du lägga till en fördefinierad HTTP-konfiguration som hanteras via AEM Configuration Browser. Du kan välja den konfiguration som har skapats för tjänstens autentiseringstyp för återställningsslutpunkt och innehållstyper. Mer information om autentiseringstyp och innehållstyper finns på [Konfigurera datakällor](/help/forms/configure-data-sources.md#configure-restful-services-using-service-endpoint-configure-restful-services-service-endpoint)
 
-   +++
++++
 
 1. Klicka på **[!UICONTROL Save&Close]**.
 

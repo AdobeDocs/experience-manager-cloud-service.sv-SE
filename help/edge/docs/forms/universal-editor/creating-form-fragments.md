@@ -4,9 +4,9 @@ description: Lär dig hur du skapar formulärfragment i den universella redigera
 feature: Edge Delivery Services
 role: Admin, User, Developer
 exl-id: 7b0d4c7f-f82f-407b-8e25-b725108f8455
-source-git-commit: bc422429d4a57bbbf89b7af2283b537a1f516ab5
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1649'
 ht-degree: 0%
 
 ---
@@ -16,44 +16,67 @@ ht-degree: 0%
 <!--
 <span class="preview"> This feature is available through the early access program. To request access, send an email with your GitHub organization name and repository name from your official address to <a href="mailto:aem-forms-ea@adobe.com">aem-forms-ea@adobe.com</a> . For example, if the repository URL is https://github.com/adobe/abc, the organization name is adobe and the repository name is abc.</span> 
 
-<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 -->
 
-Forms innehåller ofta vanliga avsnitt som kontaktinformation, identifikationsinformation eller godkännandeavtal. Formulärutvecklarna skapar dessa avsnitt varje gång de skapar ett nytt formulär som är upprepande och tidskrävande.
-För att slippa detta dubbelarbete erbjuder Universal Editor ett sätt att skapa återanvändbara formulärsegment, t.ex. paneler eller fältgrupper, bara en gång och återanvända dem i olika formulär. Dessa återanvändbara, modulära och fristående segment kallas för formulärfragment. Samma kontaktfragment för nödsituationer kan till exempel användas i olika avsnitt av ett formulär, till exempel för kontaktinformation för medarbetare och ansvarig.
+Formulärfragment är återanvändbara komponenter som eliminerar repetitivt utvecklingsarbete och säkerställer konsekvens i alla era formulär. I stället för att återskapa vanliga avsnitt som kontaktinformation, adressinformation eller godkännandeavtal för varje formulär kan du skapa dessa element en gång som fragment och återanvända dem i flera formulär.
 
-I slutet av artikeln får du lära dig att skapa och använda fragment i formulär med den universella redigeraren.
+**Vad du ska göra i den här artikeln:**
 
-## Funktioner för Edge Delivery Services-formulärfragment
+- Förstå affärsvärdet och de tekniska funktionerna i formulärfragment
+- Skapa återanvändbara formulärfragment med Universal Editor
+- Integrera fragment i befintliga blanketter med rätt konfiguration
+- Hantera fragmentets livscykel och bevara enhetlighet i alla formulär
 
-- **Bevara konsekvens med formulärfragment**
-Du kan integrera fragment i olika formulär, vilket gör att du kan upprätthålla enhetliga layouter och standardiserat innehåll.
+**Affärsfördelar:**
 
-  >[!NOTE]
-  >
-  > Med metoden&quot;ändra en gång, spegla överallt&quot; tillämpas automatiskt alla uppdateringar som görs i ett fragment på alla formulär i förhandsgranskningsläget. I publiceringsläget måste du dock publicera fragmentet eller publicera formuläret på nytt för att ändringarna ska återspeglas.
+- **Minskad utvecklingstid**: Bygg gemensamma formuläravsnitt en gång, återanvänd överallt
+- **Förbättrad konsekvens**: Standardiserade layouter och innehåll i alla formulär
+- **Förenklat underhåll**: Uppdatera ett fragment en gång för att återspegla ändringar i alla formulär som använder det
+- **Förbättrad efterlevnad**: Se till att regelsektionerna är konsekventa och uppdaterade
 
-- **Lägger till formulärfragment flera gånger i formuläret**
-Du kan lägga till ett formulärfragment flera gånger i ett formulär och konfigurera dess databindningsegenskaper till datakällor eller scheman.
+Formulärfragment i Edge Delivery Services har stöd för avancerade funktioner som kapslade fragment, flera instanser i ett och samma formulär samt smidig integrering med datakällor.
 
-- **Använda fragment inom fragment**
-Du kan skapa kapslade formulärfragment, vilket betyder att du kan lägga till ett fragment i ett annat fragment och ha en kapslad fragmentstruktur.
+## Förstå formulärfragment
 
-  >[!NOTE]
-  >
-  > Du kan inte kapsla in ett fragment i sig själv eftersom detta kan orsaka rekursiva referenser och oönskat beteende, vilket kan leda till fel eller återgivningsproblem.
+Formulärfragment i Edge Delivery Services har kraftfulla funktioner för modulär formulärutveckling:
 
-## Att tänka på när du använder Edge Delivery Services-formulärfragment
+**Kärnfunktioner:**
 
-- Du måste lägga till samma GitHub-URL i både fragmentet och formuläret där du tänker använda fragmentet.
-- Du kan inte redigera ett formulärfragment i ett formulär. Om du vill göra ändringar ändrar du det fristående formulärfragmentet.
+- **Konsekvenshantering**: Fragment behåller identiska layouter och innehåll i flera formulär. Med metoden&quot;ändra en gång, spegla överallt&quot; tillämpas uppdateringar av ett fragment automatiskt på alla formulär i förhandsgranskningsläget.
+- **Flera användningsområden**: Lägg till samma fragment flera gånger i ett enda formulär, var och en med oberoende databindning till olika datakällor eller schemaelement.
+- **Kapslade strukturer**: Skapa komplexa hierarkier genom att bädda in fragment i andra fragment för avancerade formulärarkitekturer.
+
+**Tekniska krav:**
+
+- **GitHub URL-konsekvens**: Både fragmentet och alla formulär som använder det måste ange samma GitHub-databas-URL
+- **Fristående redigering**: Fragment kan bara ändras i sin fristående form; ändringar kan inte göras i värdformuläret
+
+**Publiceringsbeteende:**
+
+>[!IMPORTANT]
+>
+>I förhandsgranskningsläget återspeglas fragmentändringarna omedelbart i alla formulär. I publiceringsläget måste du publicera om både fragmentet och alla formulär som använder det för att se uppdateringar.
+
+>[!CAUTION]
+>
+>Undvik rekursiva fragmentreferenser (kapsling av ett fragment i sig) eftersom detta orsakar återgivningsfel och oväntat beteende.
 
 ## Förutsättningar
 
-- [Konfigurera din GitHub-databas](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#get-started-with-the-aem-forms-boilerplate-repository-template) för att upprätta en anslutning mellan din AEM-miljö och GitHub-databasen.
-- Om du redan använder Edge Delivery Services lägger du till den senaste versionen av [Adaptive Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project) i din GitHub-databas.
-- Instansen AEM Forms Author innehåller en mall baserad på Edge Delivery Services.
-- Ha URL:en till din AEM Forms as a Cloud Service-författarinstans och din GitHub-databas till hands.
+**Tekniska installationskrav:**
+
+- [GitHub-databasen har konfigurerats](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#get-started-with-the-aem-forms-boilerplate-repository-template) med en anslutning upprättad mellan din AEM-miljö och GitHub-databasen
+- [Det senaste adaptiva Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project) har lagts till i GitHub-databasen (för befintliga Edge Delivery Services-projekt)
+- Instans av AEM Forms Author med Edge Delivery Services-mall tillgänglig
+- Åtkomst till URL:en för AEM Forms as a Cloud Service-författarinstansen och URL:en för GitHub-databasen
+
+**Nödvändig kunskap och behörigheter:**
+
+- Grundläggande förståelse för formulärdesignkoncept och komponenthierarki
+- Välbekant med gränssnittet i den universella redigeraren och arbetsflöden för att skapa formulär
+- Behörigheter på författarnivå i AEM Forms för att skapa och hantera formulärresurser
+- Förstå organisationens formulärstandarder och krav på återanvändbara komponenter
 
 ## Arbeta med Edge Delivery Services-formulärfragment
 
@@ -63,7 +86,7 @@ Du kan skapa Edge Delivery Services-formulärfragment i den universella redigera
 - [Lägga till formulärfragment i ett formulär](#adding-form-fragments-to-a-form)
 - [Hantera formulärfragment](#managing-form-fragments)
 
-### Skapa formulärfragment
++++ Skapa formulärfragment
 
 Så här skapar du ett formulärfragment i den universella redigeraren:
 
@@ -97,26 +120,40 @@ Så här skapar du ett formulärfragment i den universella redigeraren:
 
 1. (Valfritt) Ange **Publiceringsdatum** eller **Avpubliceringsdatum** för fragmentet på fliken **Avancerat**.
 
-   ![Avancerad flik](/help/edge/docs/forms/universal-editor/assets/advanced-properties-fragment.png)
-1. Klicka på **Skapa** så visas en guide.
+   ![Fliken Avancerat](/help/edge/docs/forms/universal-editor/assets/advanced-properties-fragment.png)
+1. Klicka på **Skapa** för att generera fragmentet. En dialogruta med redigeringsalternativ visas.
 
    ![Redigera fragment](/help/edge/docs/forms/universal-editor/assets/edit-fragment.png)
 
-1. Klicka på **Redigera** så öppnas det skapade fragmentet med en standardmall i Universal Editor för redigering.
+1. Klicka på **Redigera** för att öppna fragmentet i Universal Editor med standardmallen använd.
 
-   ![Fragment i Univerasal Editor för redigering](/help/edge/docs/forms/universal-editor/assets/fragment-in-ue.png)
+   ![Fragment i Universal Editor för redigering](/help/edge/docs/forms/universal-editor/assets/fragment-in-ue.png)
 
-   I redigeringsläget kan du lägga till alla formulärkomponenter i fragmentet. Mer information om hur du skapar ett fragment i den universella redigeraren finns i artikeln [Komma igång med Edge Delivery Services för AEM Forms med den universella redigeraren](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#author-forms-using-wysiwyg) .
+1. **Designa fragmentinnehåll**: Lägg till formulärkomponenter (textfält, listrutor, kryssrutor) för att skapa det återanvändbara avsnittet. Detaljerad vägledning om komponenter finns i [Komma igång med Edge Delivery Services för AEM Forms med Universal Editor](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#author-forms-using-wysiwyg).
 
-   Skärmbilden nedan visar `contact fragment` som har skapats i Universell redigerare.
+1. **Konfigurera komponentegenskaper**: Ange fältnamn, verifieringsregler och standardvärden efter behov för ditt användningsfall.
+
+1. **Spara och förhandsgranska**: Spara fragmentet och använd förhandsgranskningsläget för att verifiera layout och funktion.
 
    ![Skärmbild av ett ifyllt formulärfragment med kontaktinformation i Universell redigerare, med fält för namn, telefon, e-post och adress som kan återanvändas i flera formulär](/help/edge/docs/forms/universal-editor/assets/contact-fragment.png)
 
-   När du har skapat fragmentet kan du [lägga till det skapade fragmentet i Edge Delivery Services Forms](#adding-form-fragments-in-forms).
+**Kontrollpunkt för validering:**
 
-### Lägga till formulärfragment i ett formulär
+- Fragmentinläsningar utan fel i Universal Editor
+- Alla formulärkomponenter återges korrekt
+- Fältegenskaper och valideringsregler fungerar som förväntat
+- Fragmentet sparas och är tillgängligt i Forms &amp; Documents Console
 
-Låt oss skapa ett enkelt `Employee Details`-formulär som innehåller information om både medarbetare och ansvarig. Du kan använda fragmentet `Contact Details` på både den anställdes- och övervakarpanelerna. Så här använder du formulärfragmentet i formuläret:
+När fragmentet är klart kan du [integrera det i alla Edge Delivery Services-formulär](#adding-form-fragments-to-a-form).
+
++++
+
+
++++ Lägga till formulärfragment i ett formulär
+
+I det här exemplet visas hur du skapar ett `Employee Details`-formulär som använder `Contact Details`-fragmentet för både den anställdes- och arbetsledarens informationsavsnitt. Detta tillvägagångssätt garanterar enhetlig datainsamling samtidigt som utvecklingsinsatsen minskas.
+
+Så här integrerar du ett formulärfragment i formuläret:
 
 1. Öppna formuläret i redigeringsläge.
 1. Lägg till komponenten Formulärfragment i formuläret.
@@ -152,7 +189,11 @@ Låt oss skapa ett enkelt `Employee Details`-formulär som innehåller informati
 
    ![Formulär för personalinformation](/help/edge/docs/forms/universal-editor/assets/employee-detail-form-with-fragments.png)
 
-### Hantera formulärfragment
++++
+
+
+
++++ Hantera formulärfragment
 
 Du kan utföra flera åtgärder på formulärfragment med AEM Forms användargränssnitt.
 
@@ -211,10 +252,50 @@ Du kan utföra flera åtgärder på formulärfragment med AEM Forms användargr�
     </tbody>
     </table>
 
++++
+
 ## Bästa praxis
 
-- Kontrollera att fragmentnamnet är unikt. Fragmentet kan inte skapas om det finns ett befintligt fragment med samma namn.
-- Alla uttryck, skript och format i ett fristående formulärfragment behålls när de infogas som referens eller bäddas in i ett formulär.
-- När du publicerar ett formulär publiceras de formulärfragment som infogats med referens i formuläret automatiskt.
+**Fragmentdesign och namn:**
+
+- **Använd beskrivande, unika namn**: Välj namn som tydligt anger fragmentets syfte (t.ex. &quot;contact-details-with-validation&quot; i stället för &quot;fragment1&quot;)
+- **Planera för återanvändbarhet**: Designa fragment så att de blir sammanhangsberoende och fungerar på olika formulärtyper
+- **Håll fragmenten fokuserade**: Skapa engångs-fragment i stället för komplexa flerfunktionskomponenter
+
+**Utvecklingsarbetsflöde:**
+
+- **Testa fragment oberoende**: Verifiera fragmentfunktioner innan du integrerar i formulär
+- **Behåll konsekventa GitHub-URL:er**: Se till att samma databas-URL används för alla relaterade fragment och formulär
+- **Syftet med dokumentfragment**: Inkludera tydliga beskrivningar och taggar som hjälper teammedlemmarna att förstå när de ska använda varje fragment
+
+**Publikation och underhåll:**
+
+- **Koordinera publikation**: När du uppdaterar fragment bör du planera att publicera om alla beroende formulär samtidigt
+- **Versionskontroll**: Använd meningsfulla implementeringsmeddelanden när du uppdaterar fragment för att spåra ändringar över tid
+- **Övervaka beroenden**: Håll reda på vilka formulär som använder varje fragment för att utvärdera uppdateringseffekten
+
+>[!TIP]
+>
+>Fragmentformat, skript och uttryck bevaras när de bäddas in, så design med detta arv i åtanke.
+
+## Sammanfattning
+
+Du har nu lärt dig att utnyttja formulärfragment i Edge Delivery Services för att förbättra utvecklingseffektiviteten och upprätthålla enhetligheten i hela organisationens formulär.
+
+**Viktiga resultat:**
+
+- **Förstå**: Utnyttja affärsvärdet och de tekniska funktionerna i formulärfragment
+- **Skapande**: Skapar återanvändbara formulärfragment med den universella redigeraren med rätt konfiguration
+- **Integrering**: Fragment har lagts till i formulär med korrekt referenskonfiguration och egenskapskonfiguration
+- **Hantering**: Utforskade livscykeloperationer och underhållsarbetsflöden för fragment
+
+**Nästa steg:**
+
+- Skapa ett bibliotek med ofta använda fragment för din organisation
+- Upprätta namnkonventioner och styrningsprinciper för fragmentanvändning
+- Utforska avancerad integrering med [Form Data Models](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md) för dynamiska datadrivna fragment
+- Implementera fragmentbaserade blankettmallar för enhetliga användarupplevelser
+
+Era formulär har nu en modulär, underhållningsbar arkitektur som kan skalas effektivt mellan olika projekt samtidigt som de ger en enhetlig användarupplevelse.
 
 

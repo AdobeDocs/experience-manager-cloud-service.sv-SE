@@ -6,9 +6,9 @@ feature: Edge Delivery Services
 role: User, Developer
 level: Beginner
 exl-id: 0c7fb491-4bad-4202-a472-87e6e6d9ab40
-source-git-commit: ccfb85da187e828b5f7e8b1a8bae3f483209368d
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '1815'
+source-wordcount: '2383'
 ht-degree: 0%
 
 ---
@@ -16,8 +16,9 @@ ht-degree: 0%
 
 # Skapa responsiva Forms med Universal Editor
 
-Användarna har tillgång till formulär på en mängd olika enheter, inklusive datorer, surfplattor och smarttelefoner. Att skapa responsiva formulär ger en optimal upplevelse för alla användare, oavsett enhet. Den här guiden förklarar hur du utformar, testar och optimerar formulär för alla skärmstorlekar med den universella redigeraren.
+Det moderna webblandskapet kräver formulär som fungerar smidigt på ett ständigt växande spektrum av enheter och skärmstorlekar. Från stora skärmar till kompakta smarttelefoner - användarna förväntar sig enhetliga, intuitiva upplevelser oavsett vilken enhet de väljer. Det är inte längre valfritt att skapa responsiva formulär - det är ett grundläggande krav för att kunna leverera professionella, tillgängliga och konverteringsoptimerade digitala upplevelser.
 
+Universell redigerare innehåller omfattande verktyg och metoder för att utveckla responsiva formulär som på ett intelligent sätt anpassar sig till olika skärmstorlekar, inmatningsmetoder och användarsammanhang. I den här guiden utforskas de tekniska grunderna, implementeringsstrategier och optimeringstekniker som behövs för att skapa formulär som fungerar enastående på alla enheter samtidigt som användbarhet, tillgänglighet och visuell tilltalande bevaras.
 
 Att skapa responsiva formulär innebär två huvudsakliga aktiviteter:
 
@@ -160,115 +161,116 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 ### Panellayout
 
-**Syfte:** Organiserar relaterat innehåll i visuellt distinkta avsnitt som kan visas samtidigt.
+Panellayouten organiserar relaterat innehåll i visuellt distinkta avsnitt, så att användarna kan visa flera avsnitt samtidigt. Layouten är idealisk för formulär med kategoriserad information som utnyttjar en sida vid sida-presentation på större skärmar.
 
 ![Exempel på panellayout](/help/edge/docs/forms/universal-editor/assets/panel-layout.png)
 
-**Responsivt beteende:**
+**Responsivt beteende**
 
-- **Skrivbord (1 200 px+):** Paneler visas sida vid sida eller i ett rutnät
-- **Surfplatta (768px-1199px):** Paneler staplas lodrätt med mellanrum
-- **Mobil (320px-767px):** Layout med en kolumn och tydliga avsnittsbrytningar
+- **Skrivbord (1200px och senare):** Paneler visas sida vid sida eller i ett rutnät för maximal synlighet.
+- **Surfplatta (768px-1199px):** Paneler staplas lodrätt med lämpligt mellanrum för att behålla klarheten.
+- **Mobil (320px-767px):** Paneler visas i en layout med en kolumn, med tydlig separation mellan sektioner för enkel navigering.
 
-**Implementeringssteg:**
+**Så här implementerar du**
 
-1. Använd [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
-2. Gruppera relaterade fält på varje panel.
-3. Lägg till tydliga rubriker för varje avsnitt.
-4. Se till att det finns tillräckligt med mellanrum mellan panelerna.
+1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
+2. Gruppera relaterade fält i varje panel för att upprätthålla en logisk ordning.
+3. Tilldela tydliga beskrivande rubriker till varje panelavsnitt.
+4. Se till att det finns tillräckligt med mellanrum mellan panelerna för att förhindra att det blir rörigt.
 
-**God praxis:**
+**God praxis**
 
-- Begränsa till 3-4 paneler på datorn för att undvika överväldigande användare.
-- Använd beskrivande titlar för varje panel.
-- Gruppera relaterade fält logiskt för att minska kognitiv belastning.
-- Testa panelnavigering på pekenheter.
+- Begränsa antalet paneler till 3 eller 4 på datorn för att undvika överväldigande användare.
+- Använd kortfattade beskrivande titlar för varje panel för att underlätta för användaren.
+- Ordna fälten i panelerna logiskt för att minimera kognitiv belastning.
+- Testa panelnavigeringen på pekenheter för att säkerställa användbarheten på alla plattformar.
 
-**Exempel på användningsexempel:**
+**Vanliga användningsexempel**
 
-- **Jobbprogram:** Personlig information, Utbildning, Upplevelse, Referenser
-- **Produktregistrering:** Grundläggande information, Tekniska specifikationer, Garantiinformation
-- **Survey Forms:** Demographics, Preferences, Feedback, Contact
+- **Jobbprogram:** Avsnitt för personlig information, utbildning, upplevelse och referenser.
+- **Produktregistrering:** Paneler för grundläggande information, tekniska specifikationer och garantiinformation.
+- **Enkät-Forms:** Grupperingar för demografi, inställningar, feedback och kontaktinformation.
 
 ### Guidelayout
 
-**Syfte:** Hjälper användarna att stegvis utföra komplexa processer, vilket minskar den kognitiva belastningen och förbättrar slutförandehastigheten.
+Guiden Layout guidar användarna genom en flerstegsprocess och presenterar ett avsnitt i taget. Den här layouten är särskilt effektiv för komplexa formulär eftersom den minskar kognitiv belastning och ökar slutförandehastigheten genom att processen delas upp i hanterbara steg.
 
 ![Exempel på guidelayout](/help/edge/docs/forms/universal-editor/assets/wizard-layout.png)
 
-**Responsivt beteende:**
+**Responsivt beteende**
 
-- **Alla enheter:** Bevarar fokus i ett enda steg för en optimal mobilupplevelse.
-- **Steginnehåll:** anpassas i varje steg (stapling eller sida vid sida).
-- **Navigering:** Touchvänliga knappar med tillräckligt avstånd.
-- **Förloppsindikator:** Skalas för skärmstorlek.
+- **Alla enheter:** Behåller fokus i ett enda steg, vilket är optimalt för mobilanvändare.
+- **Steginnehåll:** Varje steg anpassas responsivt, staplar fält eller ordnar dem sida vid sida beroende på skärmstorleken.
+- **Navigering:** Har pekvänliga knappar med lämpligt avstånd för enkel interaktion.
+- **Förloppsindikator:** Förloppsindikatorer eller stegindikatorer skalförändras på rätt sätt för olika enheter, vilket ger tydlig feedback om slutförandestatusen.
 
-**Implementeringssteg:**
+**Så här implementerar du**
 
-1. Använd [guidekomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
-2. Dela upp komplexa formulär i logiska steg (3-7 steg är optimalt).
-3. Inkludera förloppsindikatorer för användarorientering.
-4. Ange tydliga navigeringskontroller (Nästa, Bakåt, Spara).
+1. Infoga [Wizard Component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
+2. Dela upp formuläret i logiska steg, helst mellan 3 och 7, så att varje steg är fokuserat och hanterbart.
+3. Lägg till förloppsindikatorer som hjälper användarna att förstå sin position i processen.
+4. Ange tydliga navigeringskontroller, som knapparna Nästa, Bakåt och Spara.
 
-**Mobiloptimering:**
+**Tips för mobiloptimering**
 
-- Använd mål med stor beröring (minst 44px) för navigeringsknappar.
-- Kontrollera att stegindikatorerna är tydliga och synliga på små skärmar.
-- Begränsa antalet fält per steg för att minska rullningen.
-- Aktivera autosparande för att förhindra dataförlust.
+- Använd stora beröringsmål (minst 44 pixlar högt) för navigeringskontroller för att förbättra tillgängligheten.
+- Kontrollera att stegindikatorerna är synliga och läsbara på små skärmar.
+- Begränsa antalet fält per steg för att minimera rullningen och förbättra fokus.
+- Aktivera funktionen för att spara automatiskt för att förhindra dataförlust om användarna lämnar formuläret.
 
-**God praxis:**
+**God praxis**
 
-- Se till att det finns en logisk stegförlopp - varje steg bör bygga på det föregående.
-- Använd tydliga stegrubriker så att användarna vet vad de ska förvänta sig.
-- Validera indata vid varje steg för att fånga upp fel tidigt.
-- Tillåt användare att navigera bakåt för att granska eller redigera information.
+- Utforma steg för att följa en logisk utveckling, där varje steg bygger på det föregående.
+- Använd tydliga beskrivande titlar för varje steg för att ställa in användarnas förväntningar.
+- Validera användarindata vid varje steg för att fånga upp fel tidigt och minska frustrationen.
+- Tillåt användare att navigera bakåt för att granska eller redigera tidigare information utan att förlora data.
 
-**Exempel på användningsexempel:**
+**Vanliga användningsexempel**
 
-- **Försäkringsanspråk:** Incident → Bevis → Personlig → Granska
-- **Kontoinställning:** Grundläggande information → Inställningar → Säkerhet → Bekräftelse
-- **Beställningsprocess:** Produkter → Leverans → Betalning → Sammanfattning
+- **Försäkringsanspråk:** Steg för incidentinformation, bevisinlämning, personlig information och granskning.
+- **Kontoinställning:** Steg för grundläggande information, inställningar, säkerhetsinställningar och bekräftelse.
+- **Beställningsprocess:** Steg för produktval, leveransinformation, betalningsinformation och ordersammanfattning.
 
 ### Dragspelets layout
 
-**Syfte:** Sparar utrymme genom att ordna innehåll i komprimerbara avsnitt, idealiskt för valfri eller sekundär information.
+Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbara avsnitt, vilket gör det idealiskt för valfri eller sekundär information. Den här layouten är särskilt effektiv för formulär med innehåll som kan grupperas logiskt och som inte behöver visas alla samtidigt.
 
 ![Exempel på dragspelslayout](/help/edge/docs/forms/universal-editor/assets/accordion-layout.png)
 
-**Responsivt beteende:**
+**Responsivt beteende**
 
-- **Utmärkta mobila prestanda:** Endast relevant innehåll visas.
-- **Touchoptimerade rubriker:** Det är enkelt att trycka och expandera avsnitt.
-- **Utjämna animeringar:** Ge visuell feedback för interaktioner.
-- **Utrymmeseffektivt:** Minimerar rullning på alla enheter.
+- **Mobila prestanda:** Endast det relevanta avsnittet har utökats, vilket minskar behovet av bläddring och förbättrar inläsningstiden.
+- **Touchoptimerade rubriker:** Avsnittshuvuden är enkla att trycka och utöka och stöder naturliga gester på mobila enheter.
+- **Utjämna animeringar:** Genom att expandera och komprimera avsnitt får du visuell feedback för användarinteraktioner.
+- **Space Efficiency:** Komprimerade avsnitt minimerar det lodräta utrymmet, vilket gör det enklare att navigera i formuläret på alla enheter.
 
-**Implementeringssteg:**
+**Så här implementerar du**
 
-1. Använd [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
-2. Gruppera relaterat valfritt innehåll i varje avsnitt.
-3. Använd beskrivande avsnittsrubriker.
-4. Ange lämpliga öppna/stängda standardlägen.
+1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
+2. Gruppera relaterat valfritt eller sekundärt innehåll i varje dragspelssektion.
+3. Använd tydliga, beskrivande rubriker för varje avsnitt för att hjälpa användarna förstå vilken information som finns i avsnittet.
+4. Ange lämpliga standardlägen för öppna och stängda för varje avsnitt baserat på prioritet och användarbehov.
 
-**Fördelar för mobila enheter:**
+**Fördelar för mobila enheter**
 
-- Minskar rullningen genom att komprimera oanvända avsnitt.
-- Pekvänlig interaktion med naturliga expanderings-/komprimeringsgester.
-- Snabbare inläsning - endast aktivt innehåll syns.
-- Bättre fokus - användarna ser bara vad de behöver.
+- Minskar rullningen genom att komprimera oanvända avsnitt, vilket gör att användarna kan fokusera på ett avsnitt i taget.
+- Pekvänlig interaktion stöder naturliga expanderings-/komprimeringsgester.
+- Snabbare inläsning eftersom bara det aktiva innehållet syns.
+- Ökat fokus eftersom användarna bara ser den information de behöver vid en viss tidpunkt.
 
-**God praxis:**
+**God praxis**
 
-- Använd tydliga avsnittsrubriker så att användarna vet vad som finns inuti innan de expanderar.
-- Gruppera relaterat innehåll logiskt i varje avsnitt.
-- Ange att viktiga avsnitt ska börja utökas vid behov.
-- Förgranska korta avsnitt för att hjälpa användarna att bestämma vad de vill expandera.
+- Använd tydliga avsnittsrubriker så att användarna vet vad de ska förvänta sig innan de expanderar ett avsnitt.
+- Gruppera relaterat innehåll logiskt i varje avsnitt för att underlätta förståelsen.
+- Ange att viktiga avsnitt ska börja expanderas om omedelbar åtgärd krävs.
+- Förgranska eller sammanfatta avsnitt i korthet för att hjälpa användarna att bestämma vilka avsnitt som ska expanderas.
 
-**Exempel på användningsexempel:**
+**Vanliga användningsexempel**
 
-- **Produktkonfiguration:** Grundläggande → Avancerade → Tillbehör → Support
-- **Frågor och svar Forms:** Konto → Fakturering → Teknik → Allmänt
-- **Inställningar Forms:** Sekretess → Meddelanden → Utseende → Avancerat
+- **Produktkonfiguration:** avsnitt för grundläggande alternativ, avancerade inställningar, tillbehör och support.
+- **Vanliga frågor och svar Forms:** Grupperingar av frågor om konto, fakturering, teknik och allmänna frågor.
+- **Inställningar för Forms:** Avsnitt för Sekretess, meddelanden, utseende och avancerade alternativ.
+
 
 ## Del 3: Bästa praxis för responsiv design
 
@@ -276,42 +278,42 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 +++Mobiloptimering (320px-767px)
 
-**Grundläggande praxis:**
+**Layout och interaktion:**
 
-- Använd en layout med en kolumn för allt innehåll.
-- Tillhandahåll stora, pekvänliga knappar (minst 44px höjd).
-- Förenkla navigeringen med alternativ för bakåt/bakåt.
-- Minimera rullningen i varje avsnitt.
-- Fokusera automatiskt på det första fältet för att visa tangentbordet.
+- Använd en layout med en kolumn för allt formulärinnehåll för att maximera läsbarheten och användarvänligheten.
+- Kontrollera att alla knappar och interaktiva element är minst 44px höga för tillförlitlig pekinteraktion.
+- Ge tydlig och enkel navigering med synliga bakåt- och nästa knappar.
+- Minimera behovet av bläddring i varje avsnitt genom att dela upp långa formulär.
+- Fokusera automatiskt på det första inmatningsfältet för att fråga det mobila tangentbordet.
 
-**Fältspecifika riktlinjer:**
+**Fältriktlinjer:**
 
-- **Textindata:** Full bredd med provutfyllnad.
-- **Listrutor:** Använd inbyggda valda element för bättre pekskärmsupplevelse.
-- **Datumväljare:** Använd indata för inbyggda datum för mobilkompatibilitet.
-- **Filöverföringar:** Ange stora, tydliga överföringsområden.
+- Textfält bör omfatta hela skärmens bredd med tillräcklig utfyllnad för pekrörelser.
+- Använd den inbyggda listrutan/välj element för optimal mobil användning.
+- Implementera inbyggda datumväljare för en enhetlig mobilupplevelse.
+- Gör filöverföringsområdena stora och tydligt märkta så att de blir lätta att komma åt.
 
 +++
 
 +++Tablet Optimization (768px-1199px)
 
-**Layoutstrategier:**
+**Layout och användbarhet:**
 
-- Använd layouter med två kolumner för relaterade fält.
-- Testa både stående och liggande orientering.
-- Stöd för interaktion med både pekskärmar och mus.
-- Skapa större innehållsområden med bibehållen läsbarhet.
+- Använd layouter med två kolumner för relaterade fält för att utnyttja utökat skärmutrymme.
+- Testa formulärens utseende och användbarhet i både stående och liggande orientering.
+- Designa för både pek- och musindata och se till att alla kontroller är lättillgängliga.
+- Öka innehållsområdets storlek samtidigt som en tydlig visuell hierarki och läsbarhet bevaras.
 
 +++
 
 +++Desktop Optimization (1 200 px+)
 
-**Avancerade funktioner:**
+**Avancerade funktioner och layout:**
 
-- Använd flerspaltig layout för effektiv utrymmesanvändning.
-- Erbjud kortkommandon för avancerade användare.
-- Implementera hovringslägen för interaktiv feedback.
-- Avancerad validering med detaljerade felmeddelanden.
+- Använd flerspaltig layout för att effektivt använda vågrätt utrymme och minska den lodräta rullningen.
+- Ange kortkommandon för åtgärder som ofta utförs för att stödja avancerade användare.
+- Implementera hovringslägen och visuell feedback för interaktiva element.
+- Erbjud avancerad validering med tydliga, detaljerade felmeddelanden för komplexa formulär.
 
 +++
 
@@ -321,52 +323,52 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 +++Formulärlayoutbrytningar på mobilen
 
-**Vanliga orsaker:**
+**Möjliga orsaker:**
 
-- Element med fast bredd som inte skalas
-- CSS utformad för skrivbordslayouter
+- Element med fast bredd som inte anpassar sig till mindre skärmar
+- CSS som är först i persondator och som åsidosätter mobilformat
 - Bilder eller innehåll som flödar över behållarna
 
-**Lösningar:**
+**Så här korrigerar du:**
 
-- Se till att bilder och behållare skalas till skärmstorlek.
-- Använd design som sätter mobilen först med progressiv förbättring.
-- Testa med både enhetsemulatorer och riktiga enheter.
-- Använd flexibel storlek i stället för fasta dimensioner.
+- Se till att relativa eller procentuella storlekar används för alla bilder och behållare.
+- Börja med en CSS-strategi som sätter mobilen först och skapa lager på förbättringar för större skärmar.
+- Testa formulär med både enhetsemulatorer och riktiga enheter.
+- Undvik fasta dimensioner, använd flexibla layouter.
 
 +++
 
 +++Touch-mål för litet
 
-**Vanliga orsaker:**
+**Möjliga orsaker:**
 
-- Knappar mindre än 44px × 44px
+- Knappar eller länkar mindre än 44px x x 44px
 - Interaktiva element som placerats för nära varandra
-- Anpassad CSS åsidosätter pekvänliga standardinställningar
+- Anpassad CSS som reducerar standardstorlek för pekskärmsmål
 
-**Lösningar:**
+**Så här korrigerar du:**
 
-- Se till att alla interaktiva element är minst 44px × 44px.
-- Lägg till mellanrum mellan knappar och länkar.
-- Testa pekinteraktionen med faktiska fingrar, inte bara med musen.
-- Öka målområdena för pekskärmar för enklare knackning.
+- Kontrollera att alla interaktiva element är minst 44px gånger 44px.
+- Lägg till lämpligt avstånd mellan knappar, länkar och andra kontroller.
+- Testa med riktiga pekenheter, inte bara en mus.
+- Expandera de målområden som behövs för tillgänglighet.
 
 +++
 
 +++Problem med innehållsspill
 
-**Vanliga orsaker:**
+**Möjliga orsaker:**
 
 - Lång text eller etiketter som inte radbryts
 - Behållare med fast bredd
-- Bilder som inte skalas korrekt
+- Bilder som inte skalas responsivt
 
-**Lösningar:**
+**Så här korrigerar du:**
 
-- Aktivera figursättning för långt innehåll.
-- Använd responsiva bilder som skalas korrekt.
-- Implementera flexibla layouter som anpassar sig efter innehållet.
-- Testa med olika innehållslängder.
+- Aktivera figursättning för alla etiketter och innehåll.
+- Använd responsiva bilder som skalas med behållaren.
+- Designa flexibla layouter som anpassar sig efter olika innehållslängder.
+- Testa med både kort och långt innehåll för att säkerställa anpassningsbarhet.
 
 +++
 
@@ -374,18 +376,18 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 +++Långsam inläsning på mobil
 
-**Vanliga orsaker:**
+**Möjliga orsaker:**
 
-- Stora bilder som inte är optimerade för mobiler
-- Överdriven exekvering av JavaScript
+- Stora, ooptimerade bilder
+- Tung eller överdriven JavaScript
 - För många formulärfält läses in samtidigt
 
-**Lösningar:**
+**Så här korrigerar du:**
 
-- Optimera bilder för olika skärmstorlekar.
-- Läs endast in icke-kritiskt innehåll vid behov.
-- Använd tekniker för att snabba upp mobilinläsningen.
-- Minimera skript och widgetar från tredje part.
+- Optimera bilder för mobiler och använd rätt filformat.
+- Skjut upp eller läs in icke-kritiskt innehåll.
+- Minimera användningen av skript och widgetar från tredje part.
+- Effektivisera formulärfälten så att de bara laddas det som behövs.
 
 +++
 
@@ -393,18 +395,18 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 +++Emulator jämfört med verkliga enhetsskillnader
 
-**Vanliga orsaker:**
+**Möjliga orsaker:**
 
-- Webbläsarspecifika återgivningsskillnader
-- Skillnader i interaktion mellan pekskärm och mus
-- Variationer i nätverkshastighet
+- Skillnader i webbläsaråtergivningsmotorer
+- Pekinteraktion simuleras inte korrekt av mus
+- Felaktiga nätverkshastigheter
 
-**Lösningar:**
+**Så här korrigerar du:**
 
-- Testa på faktiska enheter när det är möjligt.
-- Använd flera webbläsare för emulatortestning.
-- Simulera olika nätverkshastigheter under testningen.
-- Validera med verkliga användare i målmiljöer.
+- Testa alltid på riktiga enheter förutom emulatorer.
+- Använd olika webbläsare och enheter för omfattande testning.
+- Simulera olika nätverkshastigheter för att identifiera prestandamässiga flaskhalsar.
+- Samla in feedback från verkliga användare i er målgrupp.
 
 +++
 
@@ -412,33 +414,34 @@ Layoutmönster avgör hur formulärinnehållet anpassas till olika skärmstorlek
 
 +++Key Performance Indicators
 
-**Mätvärden för användarupplevelse:**
+**Användarupplevelse:**
 
-- **Slutförandegrad för formulär:** Mål 85 %+ på mobilt
-- **Tid för slutförande:** Mobilens slutförandetid måste vara inom 20 % av datorns
-- **Felfrekvens:** Mindre än 5 % valideringsfel
-- **Överlämningspunkter:** Identifiera var användare faller bort
+- **Färdigställningsgrad för formulär:** Rikta dig för 85 % eller mer på mobila enheter.
+- **Dags att fylla i:** Mobilanvändare bör fylla i formulär inom 20 % av tiden för slutförande av skrivbordet.
+- **Felfrekvens:** Behåll valideringsfel under 5 %.
+- **Överlämningspunkter:** Identifiera och åtgärda de steg där användare faller bort.
 
 **Tekniska prestanda:**
 
-- **Sidinläsningstid:** Under 3 sekunder i 3G-nätverk
-- **Core Web Vitals:** Överför alla prestandatester för Google
-- **Hjälpmedelspoäng:** WCAG 2.1 AA-kompatibilitet
-- **Kompatibilitet mellan olika webbläsare:** 98 %+ funktionalitet i de vanligaste webbläsarna
+- **Sidinläsningstid:** Mindre än 3 sekunder för en 3G-anslutning.
+- **Core Web Vitals:** Uppfyll eller överträffa Google rekommenderade tröskelvärden.
+- **Tillgänglighet:** Uppnå WCAG 2.1 AA-överensstämmelse.
+- **Webbläsarkompatibilitet:** Kontrollera att det finns mer än 98 % funktionalitet i alla större webbläsare.
 
 +++
 
 +++Testchecklista
 
-**Före publicering:**
+**Checklista för förpublicering:**
 
-- Testa formuläret på faktiska mobila enheter.
+- Testa formuläret på faktiska mobila enheter (inte bara emulatorer).
 - Kontrollera att alla beröringsmål är minst 44px × 44px.
-- Kontrollera textens läsbarhet i alla skärmstorlekar.
-- Bekräfta att formulärvalideringen fungerar på alla enheter.
-- Kontrollera att inläsningstiden är mindre än 3 sekunder på mobilen.
-- Kontrollera att alla interaktiva element är tillgängliga.
+- Kontrollera textens läsbarhet vid alla skärmstorlekar som stöds.
+- Bekräfta att formulärvalideringen fungerar likadant på olika enheter och webbläsare.
+- Kontrollera att mobilens inläsningstid är mindre än 3 sekunder.
+- Kontrollera att alla interaktiva element är tillgängliga via tangentbordet och skärmläsare.
 - Testa att skicka formulär på alla enheter som stöds.
+
 
 +++
 

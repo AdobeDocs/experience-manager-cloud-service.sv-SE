@@ -6,16 +6,14 @@ role: Admin, Architect, Developer
 level: Intermediate
 keywords: [publicera formulär, Edge Delivery Services, formulärkonfiguration, CORS, referensfilter]
 exl-id: ba1c608d-36e9-4ca1-b87b-0d1094d978db
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: 756
+source-wordcount: 746
 ht-degree: 0%
 
 ---
 
 # Publicera adaptiv Forms med Edge Delivery Services
-
-## Ökning
 
 Genom att publicera ett adaptivt formulär blir det tillgängligt på Edge Delivery Services så att slutanvändarna kan öppna och skicka in det. Den här processen omfattar tre huvudfaser: publicera formuläret, konfigurera säkerhetsinställningar och få åtkomst till live-formuläret.
 
@@ -28,29 +26,35 @@ Genom att publicera ett adaptivt formulär blir det tillgängligt på Edge Deliv
 
 ## Förutsättningar
 
-- **Formulärkrav:**
-   - Adaptivt formulär som skapats med Edge Delivery Services-mall
-   - Formuläret har testats och är klart för produktion
+- Adaptivt formulär som skapats med Edge Delivery Services-mall
+- Formuläret har testats och är klart för produktion
+- AEM Forms författarbehörigheter
+- Cloud Manager-åtkomst (för produktionskonfiguration)
+- Utvecklare har tillgång till blockkod för formulär (för inställning av inskickning)
 
-- **Åtkomstkrav:**
-   - AEM Forms författarbehörigheter
-   - Cloud Manager-åtkomst (för produktionskonfiguration)
-   - Utvecklare har tillgång till blockkod för formulär (för inställning av inskickning)
+## Översikt över publiceringsprocessen
 
-- **Relaterad dokumentation:**
-   - [Skapa formulär med Edge Delivery Services](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md)
-   - [Konfigurera skicka-åtgärder](/help/edge/docs/forms/configure-submission-action-for-eds-forms.md)
+Publicering av formulär till Edge Delivery Services sker i tre faser:
 
-## Fas 1: Publicera ditt formulär
+- **Fas 1: Formulärpublikation** - Publicera formuläret till CDN och verifiera publiceringsstatus
+- **Fas 2: Säkerhetskonfiguration** - Konfigurera CORS-principer och referensfilter för säkra överföringar
+- **Fas 3: Åtkomst och validering** - Testa formulärfunktioner och validera hela arbetsflödet
 
-### Steg 1: Starta publicering
+Varje fas bygger på den föregående för att säkerställa säker, funktionell driftsättning.
+
+### Fas 1: Publicera ditt formulär
+
++++ Steg 1: Starta publicering
 
 1. **Öppna ditt formulär**: Öppna ditt adaptiva formulär i den universella redigeraren
 2. **Starta publicering**: Klicka på ikonen **Publicera** i verktygsfältet
 
    ![Klicka på Publicera](/help/forms/assets/publish-icon-eds-form.png)
 
-### Steg 2: Granska och bekräfta
++++
+
+
++++ Steg 2: Granska och bekräfta
 
 1. **Granska publiceringsresurser**: Systemet visar alla resurser som publiceras, inklusive ditt formulär
 
@@ -61,7 +65,10 @@ Genom att publicera ett adaptivt formulär blir det tillgängligt på Edge Deliv
 
    ![Publiceringen lyckades](/help/forms/assets/publish-success.png)
 
-### Steg 3: Verifiera publikationsstatus
++++
+
+
++++ Steg 3: Verifiera publikationsstatus
 
 **Kontrollera status**: Klicka på ikonen **Publicera** igen för att visa aktuell status
 
@@ -73,7 +80,10 @@ Genom att publicera ett adaptivt formulär blir det tillgängligt på Edge Deliv
 - Inga felmeddelanden under publiceringsprocessen
 - Formuläret visas i listan med publicerade resurser
 
-### Hantera publicerade Forms
++++
+
+
++++ Hantera publicerade Forms
 
 **Så här avpublicerar du ett formulär:**
 
@@ -83,9 +93,12 @@ Genom att publicera ett adaptivt formulär blir det tillgängligt på Edge Deliv
 
 ![Avpublicera formulär](/help/forms/assets/unpublish--form.png)
 
-## Fas 2: Konfigurera säkerhetsinställningar
++++
 
-### Varför säkerhetskonfiguration krävs
+
+### Fas 2: Konfigurera säkerhetsinställningar
+
++++ Varför säkerhetskonfiguration krävs
 
 Om du vill aktivera säker formuläröverföring måste du konfigurera säkerhetsinställningar som:
 
@@ -98,7 +111,11 @@ Om du vill aktivera säker formuläröverföring måste du konfigurera säkerhet
 >
 >**Krävs för produktion**: De här konfigurationerna är obligatoriska för formuläröverföringar som ska fungera i produktionsmiljöer.
 
-### Steg 1: Konfigurera URL för att skicka formulär
++++
+
+
+
++++ Steg 1: Konfigurera URL för att skicka formulär
 
 **Syfte**: Skicka formulär direkt till din AEM-instans
 
@@ -123,7 +140,11 @@ export const submitBaseUrl = 'https://publish-staging-p120-e12.adobeaemcloud.com
 - URL:en matchar din miljö (produktion, mellanlagring eller lokal)
 - Inget avslutande snedstreck i URL
 
-### Steg 2: Konfigurera CORS-inställningar
++++
+
+
+
++++ Steg 2: Konfigurera CORS-inställningar
 
 **Syfte**: Tillåt förfrågningar om formuläröverföring från Edge Delivery Services-domäner
 
@@ -148,10 +169,14 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [CORS - konfigurationsguide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
-- [Dokumentation för referentfilter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
+- [CORS - konfigurationsguide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
+- [Dokumentation för referentfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
 
-### Steg 3: Konfigurera referensfilter
++++
+
+
+
++++ Steg 3: Konfigurera referensfilter
 
 **Syfte**: Begränsa skrivåtgärder till auktoriserade Edge Delivery Services-domäner
 
@@ -196,11 +221,16 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
+- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
 
-## Fas 3: Få tillgång till ditt publicerade formulär
++++
 
-### URL-struktur för Edge Delivery Services
+
+### Fas 3: Få tillgång till ditt publicerade formulär
+
+
+
++++ URL-struktur för Edge Delivery Services
 
 **Standard-URL-format:**
 
@@ -225,7 +255,11 @@ https://main--universaleditor--wkndforms.aem.live/content/forms/af/wknd-form
 https://main--universaleditor--wkndforms.aem.page/content/forms/af/wknd-form
 ```
 
-### Slutliga valideringssteg
++++
+
+
+
++++ Slutliga valideringssteg
 
 **Verifiera formulärtillgänglighet:**
 
@@ -242,29 +276,15 @@ https://main--universaleditor--wkndforms.aem.page/content/forms/af/wknd-form
 - Data visas i konfigurerad destination (kalkylblad, e-post osv.)
 - Inga konsolfel relaterade till CORS eller säkerhetsprinciper
 
++++
+
 
 ## Nästa steg
 
-**Omedelbara åtgärder:**
-
-- Testa det publicerade formuläret noggrant
-- Övervaka data för inskickning av formulär
-- Ställ in analysspårning vid behov
-
-**Avancerade ämnen:**
 
 - [Konfigurera formuläröverföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md)
 - [Stila och tema dina formulär](/help/edge/docs/forms/universal-editor/style-theme-forms.md)
 - [Lägg till reCAPTCHA-skydd](/help/edge/docs/forms/universal-editor/recaptcha-forms.md)
 - [Skapa responsiva formulärlayouter](/help/edge/docs/forms/universal-editor/responsive-layout.md)
 
-## Sammanfattning
 
-Du har lyckats:
-
-- Publicera ditt adaptiva formulär till Edge Delivery Services
-- Konfigurerade säkerhetsinställningar för att skicka formulär
-- Ange rätt URL-åtkomst för slutanvändare
-- Verifierad blankettfunktion och tillgänglighet
-
-Formuläret är nu live och klart för produktion.

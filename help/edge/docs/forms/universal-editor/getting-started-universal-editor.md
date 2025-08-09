@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 6400662cb1c7a504f69db7091091452e99dd6ce9
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2609'
 ht-degree: 0%
 
 ---
@@ -48,45 +48,47 @@ Välj den metod som matchar ditt scenario:
 
 ## Förutsättningar
 
-Innan du börjar bör du kontrollera att du har följande:
+För att Edge Delivery Services för AEM Forms ska fungera smidigt och framgångsrikt med Universal Editor bör du kontrollera och bekräfta följande innan du fortsätter:
 
-### Nödvändig åtkomst
+### Åtkomstkrav
 
-- **GitHub-konto** med behörighet att skapa databaser
-- **Redigeringsåtkomst för AEM as a Cloud Service**
+- **GitHub-konto**: Du måste ha ett GitHub-konto med behörighet för att skapa nya databaser. Detta är nödvändigt för att du ska kunna hantera din källkod och samarbeta med ditt team.
+- **AEM as a Cloud Service Authoring Access**: Kontrollera att du har behörighet på författarnivå till din AEM as a Cloud Service-miljö. Den här åtkomsten krävs för att skapa, redigera och publicera formulär.
 
 ### Tekniska krav
 
-- **Git-grunder**: klona, genomföra, push-åtgärder
-- **Webbtekniker**: Grundläggande om HTML, CSS, JavaScript
-- **Node.js** (version 16+ rekommenderas) för lokal utveckling
-- Pakethanteraren **npm** eller **garn**
+- **Bekanta dig med Git**: Du bör känna dig bekväm med att utföra grundläggande Git-åtgärder som att klona databaser, genomföra ändringar och skicka uppdateringar. Dessa färdigheter är grundläggande för källkontroll och projektsamarbete.
+- **Förstå webbtekniker**: Vi rekommenderar en fungerande kunskap om HTML, CSS och JavaScript. Dessa tekniker utgör grunden för formuläranpassning och felsökning.
+- **Node.js (version 16 eller senare)**: Node.js krävs för lokal utveckling och för att köra byggverktyg. Kontrollera att du har version 16 eller senare installerad på datorn.
+- **Pakethanteraren (npm eller garn)**: Du behöver antingen npm (Node Package Manager) eller garn för att hantera projektberoenden och skript.
 
-### Rekommenderad kunskap
+### Rekommenderad bakgrund
 
-- Grundläggande förståelse för AEM Sites koncept
-- Välbekant med principer för formulärdesign
-- Upplevelser med WYSIWYG-redigerare
+- **AEM Sites Concepts**: En grundläggande förståelse för AEM Sites, inklusive webbplatsstruktur och innehållsutveckling, hjälper dig att navigera och integrera formulär effektivt.
+- **Principer för formulärdesign**: Om du är bekant med bästa praxis för formulärdesign, till exempel användbarhet, tillgänglighet och datavalidering, kan du skapa effektiva och användarvänliga formulär.
+- **Upplevelse med WYSIWYG Editors**: Tidigare erfarenheter med What You See Is What You Get (WYSIWYG) Editor hjälper dig att utnyttja den universella redigerarens visuella redigeringsfunktioner effektivare.
 
 >[!TIP]
 >
-> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE).
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
 
-## Sökväg A: Skapa nytt projekt med Forms
+## Sökväg A: Skapa ett nytt projekt med Forms
 
-**Bäst för:** Nya implementeringar eller konceptkorrektur
+**Rekommenderas för:** Nya projekt, piloter eller konceptbevisinitiativ
 
-AEM Forms Boilerplate är en förkonfigurerad mall med inbyggt Adaptive Forms Block.
+Dra nytta av AEM Forms Boilerplate för att snabba upp projektinstallationen. Den här mallen innehåller en färdig mall som smidigt integrerar det adaptiva Forms-blocket så att du snabbt kan skapa och distribuera formulär på din AEM-webbplats.
 
-### Översikt över steg
+### Ökning
 
-1. Konfigurera en GitHub-databas från mallen
-2. Installera AEM Code Sync
-3. Konfigurera AEM-projektanslutning
-4. Skapa och publicera en AEM-webbplats
-5. Lägga till formulär med Universal Editor
+Så här startar du ditt nya projekt med integrerade formulär:
 
-Vi går igenom varje steg:
+1. Skapa en GitHub-databas med AEM Forms-mallen för mallar.
+2. Konfigurera AEM Code Sync för att automatisera innehållssynkroniseringen mellan AEM och databasen.
+3. Konfigurera anslutningen mellan GitHub-projektet och AEM-miljön.
+4. Skapa och publicera en ny AEM-webbplats.
+5. Lägg till och hantera formulär med den universella redigeraren.
+
+Följande avsnitt vägleder dig steg för steg i detalj, vilket ger en smidig och effektiv projektkonfiguration.
 
 +++steg 1: Skapa GitHub-databas från mall
 
@@ -182,9 +184,9 @@ Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för i
 
 **Validering:** Bekräfta din GitHub-databasanslutning till AEM.
 
-    >[ !OBS!]
+    >[!OBS!]
     >
-    >Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+>Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
 +++
 
@@ -320,20 +322,26 @@ Om du redan har ett AEM-projekt med Edge Delivery Services kan du lägga till fo
 
 ### Krav för sökväg B
 
-- Befintliga AEM-projekt som byggts med [AEM Boilerplate XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk)
-- Lokal utvecklingsmiljö har konfigurerats
-- Git-åtkomst till projektdatabasen
+För att kunna integrera formulär i ditt befintliga AEM-projekt måste följande krav vara uppfyllda:
 
-**Använder AEM Forms-mallsida?** Om ditt projekt skapades med [AEM Forms-standardmallen](https://github.com/adobe-rnd/aem-boilerplate-forms) är formulär redan integrerade. Hoppa till [Skapa ditt första formulär](#create-your-first-form).
+- Du har ett befintligt AEM-projekt som har skapats med [AEM Boilerplate XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
+- Du har konfigurerat en [lokal utvecklingsmiljö](#set-up-local-development-environment)
+- Du har Git-åtkomst till projektdatabasen, vilket gör att du kan klona, ändra och skicka ändringar efter behov.
 
-Vi går igenom varje steg:
+>[!NOTE]
+>
+> Om ditt projekt ursprungligen konfigurerades med [AEM Forms-mallen](https://github.com/adobe-rnd/aem-boilerplate-forms) ingår redan formulärfunktioner. I det här fallet kan du gå vidare till avsnittet [Skapa ditt första formulär](#create-your-first-form).
 
-### Översikt över steg
+Följande guide ger en strukturerad metod för att lägga till formulärfunktioner i ditt befintliga projekt. Varje steg är utformat för att säkerställa en sömlös integrering och optimala funktioner i den universella redigeringsmiljön.
 
-1. Kopiera adaptiva Forms Block-filer
-2. Uppdatera projektkonfiguration
-3. Konfigurera ESLint-regler
-4. Bygg och implementera ändringar
+### Ökning
+
+Du kommer att slutföra följande steg på hög nivå:
+
+1. Kopiera de adaptiva Forms-blockfilerna till ditt projekt.
+2. Uppdatera projektets konfiguration för att identifiera och ge support för formulärkomponenter.
+3. Justera ESLint-regler så att de nya filerna och kodningsmönstren får plats.
+4. Bygg ditt projekt och implementera ändringarna i din databas.
 
 +++steg 1: Kopiera Forms-blockfiler
 
@@ -494,19 +502,31 @@ Vi går igenom varje steg:
 
 ## Skapa ditt första formulär
 
-**Gäller för:** Både användare med sökvägen A och B
+**Vem ska följa det här avsnittet:**\
+Det här avsnittet gäller användare som följer antingen Sökväg A (nytt projekt) eller Sökväg B (befintligt projekt).
 
-Nu när ditt projekt är uppbyggt med formulärfunktioner kan vi skapa ditt första formulär med Universal Editors WYSIWYG-gränssnitt.
+Nu när ditt projekt är utrustat för att skapa formulär kan du skapa ditt första formulär med den intuitiva WYSIWYG-redigeringsmiljön. I följande steg beskrivs hur du utformar, konfigurerar och publicerar ett formulär på din AEM-webbplats på ett strukturerat sätt.
 
-### Översikt över processen att skapa formulär
+### Ökning
 
-1. **Lägg till anpassat formulärblock** på sidan
-2. **Lägg till formulärkomponenter** (textinmatningar, knappar osv.)
-3. **Konfigurera komponentegenskaper**
-4. **Förhandsgranska och testa** formuläret
-5. **Publicera** den uppdaterade sidan
+Processen med att skapa ett formulär i Universal Editor består av flera viktiga steg:
 
-Vi går igenom varje steg:
+1. **Infoga det adaptiva formulärblocket**\
+   Börja med att lägga till det adaptiva formulärblocket på den valda sidan.
+
+2. **Lägg till formulärkomponenter**\
+   Fyll i formuläret genom att infoga komponenter som textfält, knappar och andra indataelement.
+
+3. **Konfigurera komponentegenskaper**\
+   Justera inställningarna och egenskaperna för varje komponent så att de uppfyller formulärets krav.
+
+4. **Förhandsgranska och testa formuläret**\
+   Använd förhandsgranskningsfunktionen för att validera formulärets utseende och beteende innan det publiceras.
+
+5. **Publicera den uppdaterade sidan**\
+   När du är nöjd publicerar du sidan så att den blir tillgänglig för slutanvändarna.
+
+I följande avsnitt beskrivs dessa steg i detalj, vilket ger en smidig och effektiv formulärskaparupplevelse.
 
 +++steg 1: Lägg till anpassat formulärblock
 

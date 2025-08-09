@@ -4,26 +4,30 @@ description: Anpassa temat och formatet för AEM Forms som levereras via Edge De
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: ac780399-34fe-457d-aaf4-b675656c024d
-source-git-commit: f843a7c91c3d47610580a3787a96e7e3bd49ba09
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '1916'
+source-wordcount: '2493'
 ht-degree: 0%
 
 ---
 
 # Anpassa utseendet på formulären
 
-Forms är avgörande för användarinteraktion på webbplatser, så att de kan mata in data. Du kan använda CSS (Cascading Style Sheets) för att formatera fält i ett formulär, förbättra den visuella presentationen av formulären och förbättra användarupplevelsen.
+Formulärformatering i Edge Delivery Services för AEM Forms kräver en sofistikerad förståelse för CSS-anpassade egenskaper, blockbaserad arkitektur och komponentspecifika strategier för målinriktning. Till skillnad från traditionella metoder för blankettformatering implementerar Adaptive Forms Block ett systematiskt designtokensystem som möjliggör enhetlig hantering samtidigt som man bibehåller Edge Delivery Services prestanda- och tillgänglighetsfördelar.
 
-Det adaptiva Forms-blocket ger en konsekvent struktur för alla formulärfält. Den konsekventa strukturen gör det enklare att utveckla CSS-väljare för att markera och formatera formulärfält baserat på fälttyp och fältnamn.
+Den adaptiva Forms Block-arkitekturen genererar standardiserade HTML-strukturer för alla formulärkomponenter, vilket skapar förutsägbara mönster för CSS-målinriktning och anpassning. Tack vare den här enhetligheten kan utvecklare implementera omfattande formateringssystem som kan byggas ut över komplexa formulärimplementeringar samtidigt som de blockbaserade prestandaoptimeringarna som gör Edge Delivery Services exceptionellt snabba bevaras.
 
-I det här dokumentet beskrivs HTML-strukturen för olika formulärkomponenter, så att du kan skapa en förståelse för hur du skapar CSS-väljare för olika formulärfält för att formatera formulärfält i ett adaptivt Forms-block.
+Denna omfattande handbok beskriver de tekniska grunderna för formulärformatering i Edge Delivery Services ekosystem, inklusive anpassade CSS-egenskapssystem, HTML-komponentstrukturmönster och avancerade formateringstekniker. Dokumentationen ger både teoretisk förståelse och praktisk implementeringsvägledning för att skapa avancerade varumärkesanpassade formulärupplevelser.
 
-I slutet av artikeln:
+## Det du kommer att behärska
 
-- Du bygger upp en förståelse för strukturen i standardfilen för CSS som ingår i det adaptiva Forms-blocket.
-- Du bygger upp en förståelse för HTML-strukturen för de formulärkomponenter som tillhandahålls av det adaptiva Forms-blocket, inklusive allmänna komponenter och specifika komponenter som listrutor, alternativgrupper och kryssrutegrupper.
-- Du lär dig att formatera formulärfält baserat på fälttyp och fältnamn med hjälp av CSS-väljare, vilket ger en konsekvent eller unik formatering baserat på krav.
+**CSS Custom Properties Mastery**: Förstå hela variabelsystemet som styr formulärutseendet, inklusive färgscheman, typografiskalor, mellanrumssystem och layoutparametrar. Lär dig hur du åsidosätter och utökar dessa egenskaper för att implementera omfattande varumärkesteman.
+
+**Komponentarkitektur Förstå**: Få djupa kunskaper om de HTML-strukturmönster som används av varje formulärkomponenttyp, vilket möjliggör exakt CSS-målinriktning och anpassning utan att de underliggande funktionerna eller tillgänglighetsfunktionerna förstörs.
+
+**Avancerade formateringstekniker**: Implementera sofistikerade formateringsmönster, inklusive lägesbaserad formatering, responsiv designintegrering och prestandaoptimerade anpassningsstrategier som bevarar de snabbladdande egenskaperna hos Edge Delivery Services.
+
+**Professionella implementeringsstrategier**: Lär dig branschledande metoder för formulärformatering, inklusive integrering av designsystem, bibehållbar CSS-arkitektur och felsökningstekniker för komplexa formateringsscenarier.
 
 ## Förstå formulärfältstyper
 
@@ -45,57 +49,265 @@ Att förstå [grundläggande CSS-koncept](https://www.w3schools.com/css/css_intr
 - Flexbox/Grid: CSS [Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) och [Grid layouts](https://www.w3schools.com/css/css_grid.asp) är kraftfulla verktyg för att skapa responsiva och flexibla designer.
 
 
-## Formatera ett formulär för Adaptive Forms Block
 
-Adaptive Forms Block har en standardiserad HTML-struktur som förenklar processen att välja ut och formatera formulärkomponenter:
 
-- **Uppdatera standardformat**: Du kan ändra standardformaten för ett formulär genom att redigera CSS-formulärfilen. Standardformaten är tillgängliga i ditt projekts GitHub-databas, vanligtvis på: `https://github.com/<your-github-username>/<your-repository>/tree/main/blocks/form/form.css`. Den här filen innehåller omfattande formatering för formulär, stöd för guideformulär i flera steg och framhäver användningen av anpassade CSS-egenskaper för enkel anpassning.
+## Omfattande formulärformatering med CSS-anpassade egenskaper
 
-- **CSS-formateringsmönster**: Edge Delivery Services använder en blockbaserad CSS-arkitektur. Använd följande rekommenderade väljarmönster:
+Det adaptiva Forms-blocket använder en sofistikerad CSS-arkitektur som bygger på anpassade egenskaper (CSS-variabler) som möjliggör systematisk tema och enhetlig formatering för alla formulärkomponenter. Att förstå denna struktur är nödvändigt för effektiv anpassning och varumärkesanpassning av formulär.
 
-  **Primära mönster (rekommenderas):**
+### Formulär.css-arkitekturen - introduktion
 
-  ```css
-  /* Block-level styling - Form container */
-  .form {
-      /* Styles for the entire form block */
-      max-width: 600px;
-      margin: 0 auto;
-  }
-  
-  /* Form element styling */
-  .form form {
-      /* Styles for the actual <form> element */
-      padding: 2rem;
-  }
-  
-  /* Field wrapper styling by type */
-  .form .{Type}-wrapper input {
-      /* Styles for input fields */
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-  }
-  ```
+Standardformulärformaten finns i projektdatabasen på `/blocks/form/form.css` och följer en strukturerad metod som prioriterar underhållsbarhet, konsekvens och anpassningsflexibilitet. Arkitekturen består av flera viktiga komponenter:
 
-  **Kontextspecifika mönster (när högre specificitet krävs):**
+**Anpassad CSS-egenskapsgrund**: Formateringssystemet bygger på anpassade CSS-egenskaper som definierats på `:root` -nivå, vilket ger ett centraliserat temasystem som överlappar alla formulärkomponenter. Dessa variabler används för att skapa designvariabler för färg-, typografi-, mellanrums- och layoutegenskaper.
 
-  ```css
-  /* When you need higher specificity for main content area */
-  main .form .{Type}-wrapper input {
-      /* More specific targeting */
-      border-color: #007cba;
-  }
-  ```
+**Blockbaserad CSS-struktur**: Edge Delivery Services använder en blockbaserad arkitektur där klassen `.form` fungerar som det primära namnutrymmet för alla formulärrelaterade format, vilket säkerställer korrekt omfångsisolering och förhindrar CSS-konflikter med andra sidkomponenter.
+
+**Komponentspecifik formatering**: Individuella formulärkomponenter formateras med konsekventa brytningsmönster (`.{Type}-wrapper`) som ger förutsägbar målanpassning för olika fälttyper samtidigt som den övergripande designsystemintegriteten bevaras.
+
+### Anpassad CSS-referens för egenskaper
+
+Formulärformatsystemet innehåller över 50 anpassade CSS-egenskaper som styr alla aspekter av formulärens utseende och beteende. Genom att förstå dessa egenskaper kan du göra omfattande anpassningar samtidigt som du bibehåller designens enhetlighet.
+
++++ Färg- och temavariabler
+
+Färgsystemet lägger grunden till en komplett visuell grund för blanketter med hjälp av välstrukturerade anpassade egenskaper:
+
+```css
+:root {
+    /* Primary color system */
+    --background-color-primary: #fff;
+    --label-color: #666;
+    --border-color: #818a91;
+    --form-error-color: #ff5f3f;
+    
+    /* Button color system */
+    --button-primary-color: #5F8DDA;
+    --button-secondary-color: #666;
+    --button-primary-hover-color: #035fe6;
+    
+    /* Form-specific color applications */
+    --form-background-color: var(--background-color-primary);
+    --form-input-border-color: var(--border-color);
+    --form-invalid-border-color: #ff5f3f;
+    --form-label-color: var(--label-color);
+}
+```
+
+**Exempel på praktisk anpassning**: Om du vill implementera ett mörkt tema för dina formulär åsidosätter du basfärgsvariablerna:
+
+```css
+:root {
+    --background-color-primary: #1a1a1a;
+    --label-color: #e0e0e0;
+    --border-color: #404040;
+    --form-error-color: #ff6b6b;
+    --button-primary-color: #4a9eff;
+}
+```
+
+Den här enskilda ändringen sprids genom alla formulärkomponenter eftersom systemet använder variabelreferenser i stället för hårdkodade värden.
+
++++
+
++++ Typografi- och mellanrumsvariabler
+
+Variabler för typografi och mellanrum ger omfattande kontroll över textpresentation och layout:
+
+```css
+:root {
+    /* Font size system */
+    --form-font-size-m: 22px;
+    --form-font-size-s: 18px;
+    --form-font-size-xs: 16px;
+    
+    /* Component-specific typography */
+    --form-label-font-size: var(--form-font-size-s);
+    --form-label-font-weight: 400;
+    --form-title-font-weight: 600;
+    --form-input-font-size: 1rem;
+    
+    /* Spacing system */
+    --form-field-horz-gap: 40px;
+    --form-field-vert-gap: 20px;
+    --form-input-padding: 0.75rem 0.6rem;
+    --form-padding: 0 10px;
+}
+```
+
+**Exempel på praktisk anpassning**: Så här skapar du en mer kompakt formulärlayout med mindre typografi:
+
+```css
+:root {
+    --form-font-size-m: 18px;
+    --form-font-size-s: 14px;
+    --form-font-size-xs: 12px;
+    --form-field-horz-gap: 20px;
+    --form-field-vert-gap: 15px;
+    --form-input-padding: 0.5rem 0.4rem;
+}
+```
++++
+
++++ Layout- och strukturvariabler
+
+Layoutvariabler styr formulärdimensioner, stödrasterbeteende och komponentdisposition:
+
+```css
+:root {
+    /* Form layout */
+    --form-width: 100%;
+    --form-columns: 12;
+    --form-submit-width: 100%;
+    
+    /* Card-based components */
+    --form-card-border-radius: 4px;
+    --form-card-padding: 0.6rem 0.8rem;
+    --form-card-shadow: 0 1px 2px rgb(0 0 0 / 3%);
+    --form-card-hover-shadow: 0 2px 4px rgb(0 0 0 / 6%);
+    
+    /* Wizard-specific layout */
+    --form-wizard-padding: 0px;
+    --form-wizard-padding-bottom: 160px;
+    --form-wizard-step-legend-padding: 10px;
+}
+```
+
+**Exempel på praktisk anpassning**: Så här skapar du ett kortliknande formulär med utökat visuellt djup:
+
+```css
+:root {
+    --form-card-border-radius: 12px;
+    --form-card-padding: 1.5rem 2rem;
+    --form-card-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+    --form-card-hover-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+    --form-background-color: #f8f9fa;
+}
+
+.form {
+    background: var(--form-background-color);
+    border-radius: var(--form-card-border-radius);
+    box-shadow: var(--form-card-shadow);
+    padding: var(--form-card-padding);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+```
+
++++
+
+### CSS-formateringsmönster och bästa praxis
+
+Det adaptiva Forms-blocket följer specifika CSS-mönster som säkerställer att alla komponenter har bibehållna, prestanda och enhetlig formatering.
+
++++ Primära formateringsmönster
+
+**Formulärbehållare på blocknivå**: Använd den primära formulärbehållaren som mål för övergripande layout- och bakgrundsformat:
+
+```css
+.form {
+    /* Form-wide styles */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--form-background-color);
+    padding: var(--form-padding);
+    border-radius: var(--form-card-border-radius);
+}
+```
+
+**Komponentomslutningsmönster**: Målspecifika fälttyper som använder konsekventa omslutningsklasser:
+
+```css
+/* Text input fields */
+.form .text-wrapper input {
+    padding: var(--form-input-padding);
+    border: var(--form-input-border-size) solid var(--form-input-border-color);
+    font-size: var(--form-input-font-size);
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Email input fields */
+.form .email-wrapper input {
+    padding: var(--form-input-padding);
+    border: var(--form-input-border-size) solid var(--form-input-border-color);
+    font-size: var(--form-input-font-size);
+}
+
+/* Button styling */
+.form .button-wrapper button {
+    background-color: var(--form-button-background-color);
+    color: var(--form-button-color);
+    padding: var(--form-button-padding);
+    border: var(--form-button-border);
+    font-size: var(--form-button-font-size);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form .button-wrapper button:hover {
+    background-color: var(--form-button-background-hover-color);
+}
+```
+
++++
+
++++ Avancerade anpassningsmönster
+
+**Fältspecifik målgruppsanpassning**: Ange enskilda fält efter namn för unika formateringskrav:
+
+```css
+/* Style specific fields */
+.form .field-email input {
+    background-image: url('data:image/svg+xml;...'); /* Email icon */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 40px;
+}
+
+.form .field-phone input {
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+```
+
+**Statusbaserad formatering**: Implementera validering och interaktionstillstånd:
+
+```css
+/* Validation states */
+.form .field-wrapper[data-valid="false"] input {
+    border-color: var(--form-error-color);
+    box-shadow: 0 0 0 2px rgba(255, 95, 63, 0.1);
+}
+
+.form .field-wrapper[data-valid="true"] input {
+    border-color: #28a745;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.1);
+}
+
+/* Focus states */
+.form .text-wrapper input:focus,
+.form .email-wrapper input:focus {
+    outline: none;
+    border-color: var(--button-primary-color);
+    box-shadow: 0 0 0 2px rgba(95, 141, 218, 0.2);
+}
+```
+
++++
+
 
 ## Komponentstruktur
 
 Det adaptiva Forms-blocket erbjuder en enhetlig HTML-struktur för olika formulärelement, vilket gör det enklare att formatera och hantera. Du kan ändra komponenterna med CSS i formateringssyfte.
 
-### Allmänna komponenter (utom listrutor, alternativknappar och kryssrutegrupper):
++++ Allmänna komponenter (utom listrutor, alternativknappar och kryssrutegrupper):
 
 Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har följande HTML-struktur:
 
-+++ HTML-struktur för allmänna komponenter
+#### HTML-struktur för allmänna komponenter
 
 ```HTML
   <div class="{Type}-wrapper field-{Name}   field-wrapper" data-required={Required}>
@@ -128,34 +340,31 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 </div>
 ```
 
-+++
+#### CSS-väljare för allmänna komponenter
 
-+++ CSS-väljare för allmänna komponenter
-
-```CSS
-  
-  /* Primary Pattern: Target field wrapper by type */
-  .form .{Type}-wrapper {
-    /* Add your styles here */
+```css
+/* Primary Pattern: Target field wrapper by type */
+.form .{Type}-wrapper {
+    /* Container styling for specific field types */
     margin-bottom: 1rem;
     border-radius: 4px;
-  }
-  
-  /* Primary Pattern: Target input fields within wrapper */
-  .form .{Type}-wrapper input {
-    /* Add your styles here */
-    border: 1px solid #ccc;
-    padding: 8px;
+}
+
+/* Primary Pattern: Target input fields within wrapper */
+.form .{Type}-wrapper input {
+    /* Input field styling using CSS custom properties */
+    border: var(--form-input-border-size) solid var(--form-input-border-color);
+    padding: var(--form-input-padding);
     border-radius: 4px;
     width: 100%;
-  }
-  
-  /* Context-specific: Target element by field name when higher specificity needed */
-  .form .field-{Name} input {
-    /* Add your styles here */
-    /* Use this pattern for specific field customization */
-  }
-  
+    font-size: var(--form-input-font-size);
+}
+
+/* Context-specific: Target element by field name when higher specificity needed */
+.form .field-{Name} input {
+    /* Field-specific customizations */
+    /* Use this pattern for unique styling requirements */
+}
 ```
 
 - `.form .{Type}-wrapper`: Målar fältelementet baserat på fälttypen. `.form .text-wrapper` har till exempel alla textfältbehållare som mål.
@@ -165,35 +374,37 @@ Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har
 
 **Exempel på CSS-väljare för allmänna komponenter**
 
-```CSS
+```css
 /* Primary Pattern: Target all text input fields */
 .form .text-wrapper input {
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-  width: 100%;
+    border: var(--form-input-border-size) solid var(--form-input-border-color);
+    padding: var(--form-input-padding);
+    border-radius: 4px;
+    width: 100%;
+    font-size: var(--form-input-font-size);
+    background-color: var(--form-input-background-color);
 }
 
 /* Context-specific: Target field by name when higher specificity needed */
 .form .field-first-name input {
-  text-transform: capitalize;
-  border-color: #007cba;
+    text-transform: capitalize;
+    border-color: var(--button-primary-color);
 }
 
 /* Alternative with main context if needed */
 main .form .text-wrapper input {
-  /* Use only when you need higher specificity */
-  color: #333;
+    /* Use only when you need higher specificity */
+    color: var(--form-label-color);
 }
 ```
 
 +++
 
-### Listrutekomponent
++++ Listrutekomponent
 
 I listrutor används elementet `select` i stället för ett `input`-element:
 
-+++ HTML-struktur för nedrullningskomponent
+#### HTML-struktur för nedrullningskomponent
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -221,33 +432,35 @@ I listrutor används elementet `select` i stället för ett `input`-element:
 </div>
 ```
 
-+++
-
-+++ CSS-väljare för nedrullningskomponent
+#### CSS-väljare för nedrullningskomponent
 
 Följande CSS visar några exempel på CSS-väljare för nedrullningsbara komponenter.
 
-```CSS
+```css
 /* Primary Pattern: Target the dropdown wrapper */
 .form .drop-down-wrapper {
-  /* Add your styles here */
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+    /* Container layout using flexbox */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--form-field-vert-gap);
 }
 
 /* Target the select element */
 .form .drop-down-wrapper select {
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: #fff;
+    border: var(--form-input-border-size) solid var(--form-input-border-color);
+    padding: var(--form-input-padding);
+    border-radius: 4px;
+    background-color: var(--form-input-background-color);
+    font-size: var(--form-input-font-size);
+    color: var(--form-label-color);
 }
 
 /* Style the label */
 .form .drop-down-wrapper .field-label {
-  margin-bottom: 5px;
-  font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: var(--form-label-font-weight);
+    color: var(--form-label-color);
+    font-size: var(--form-label-font-size);
 }
 ```
 
@@ -260,11 +473,11 @@ Följande CSS visar några exempel på CSS-väljare för nedrullningsbara kompon
 
 +++
 
-### Alternativgrupper
++++ Alternativgrupper
 
 Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, precis som komponenter i listrutor:
 
-+++ HTML Structure of Radio Group
+#### HTML Structure of Radio Group
 
 ```HTML
 <fieldset class="radio-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -300,43 +513,50 @@ Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, precis som komponente
 </fieldset>
 ```
 
-+++
-
-+++ CSS-väljare för alternativknappar
+#### CSS-väljare för alternativknappar
 
 - Ange fältuppsättningen
 
-```CSS
-  main .form form .radio-group-wrapper {
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
+```css
+/* Target radio group container */
+.form .radio-group-wrapper {
+    border: var(--form-input-border-size) solid var(--form-input-border-color);
+    padding: var(--form-input-padding);
+    border-radius: 4px;
+    margin-bottom: var(--form-field-vert-gap);
+}
 ```
 
 Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrapper som mål. Det är användbart om du vill använda allmänna format på hela alternativgruppen.
 
 - Egenskaper för alternativknappar
 
-```CSS
-main .form form .radio-wrapper label {
-    font-weight: normal;
+```css
+/* Target radio button labels */
+.form .radio-wrapper label {
+    font-weight: var(--form-label-font-weight);
     margin-right: 10px;
-  }
+    color: var(--form-label-color);
+    font-size: var(--form-label-font-size);
+    cursor: pointer;
+}
 ```
 
 - Ange alla alternativknappsetiketter för ett specifikt fält baserat på dess namn
 
-```CSS
-main .form form .field-color .radio-wrapper label {
-  /* Your styles here */
+```css
+/* Target all radio button labels within a specific fieldset based on its name */
+.form .field-color .radio-wrapper label {
+    /* Field-specific radio label customizations */
+    /* Add your custom styles here */
 }
 ```
 
 +++
 
-### Kryssrutegrupper
++++ Kryssrutegrupper
 
-+++ HTML Structure of Checkbox Group
+#### HTML Structure of Checkbox Group
 
 ```HTML
 <fieldset class="checkbox-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -370,105 +590,141 @@ main .form form .field-color .radio-wrapper label {
 </fieldset>
 ```
 
-+++
-
-+++ CSS-väljare för kryssrutegrupper
+#### CSS-väljare för kryssrutegrupper
 
 - Ange som mål för den yttre omslutningen: Dessa väljare har de yttre behållarna för både alternativknappar och kryssrutegrupper som mål, vilket gör att du kan använda allmänna format för hela gruppstrukturen. Det här är användbart när du vill ange avstånd, justering eller andra layoutrelaterade egenskaper.
 
-```CSS
-  
-  /* Primary Pattern: Targets radio group wrappers */
-  .form .radio-group-wrapper {
-    margin-bottom: 20px; /* Adds space between radio groups */  
+```css
+/* Primary Pattern: Targets radio group wrappers */
+.form .radio-group-wrapper {
+    margin-bottom: var(--form-field-vert-gap); /* Adds space between radio groups */
     display: flex;
     flex-direction: column;
-  }
+    border: var(--form-fieldset-border);
+    padding: var(--form-input-padding);
+}
 
-  /* Primary Pattern: Targets checkbox group wrappers */
-  .form .checkbox-group-wrapper {
-    margin-bottom: 20px; /* Adds space between checkbox groups */
+/* Primary Pattern: Targets checkbox group wrappers */
+.form .checkbox-group-wrapper {
+    margin-bottom: var(--form-field-vert-gap); /* Adds space between checkbox groups */
     display: flex;
     flex-direction: column;
-  }
+    border: var(--form-fieldset-border);
+    padding: var(--form-input-padding);
+}
 ```
 
 - Målgruppsetiketter: Den här väljaren anger elementet `.field-label` som mål i gruppomslutningar för både alternativknappar och kryssrutor. På så sätt kan du formatera etiketterna specifikt för dessa grupper, vilket kan få dem att sticka ut mer.
 
-```CSS
+```css
 /* Primary Pattern: Target group labels */
 .form .radio-group-wrapper legend,
 .form .checkbox-group-wrapper legend {
-  font-weight: bold; /* Makes the group label bold */
-  margin-bottom: 0.5rem;
-  font-size: var(--form-font-size-base);
+    font-weight: var(--form-title-font-weight); /* Makes the group label bold */
+    margin-bottom: 0.5rem;
+    font-size: var(--form-fieldset-legend-font-size);
+    color: var(--form-fieldset-legend-color);
+    padding: var(--form-fieldset-legend-padding);
+    border: var(--form-fieldset-legend-border);
 }
 ```
 
 - Indata och etiketter för enskilda användare: Dessa väljare ger mer exakt kontroll över enskilda alternativknappar, kryssrutor och tillhörande etiketter. Du kan använda dessa för att justera storlek, avstånd eller använda mer distinkta visuella format.
 
-```CSS
+```css
 /* Primary Pattern: Styling radio buttons */
 .form .radio-group-wrapper input[type="radio"] {
-  margin-right: 8px; /* Adds space between the input and its label */
-  margin-bottom: 4px;
+    margin-right: 8px; /* Adds space between the input and its label */
+    margin-bottom: 4px;
+    cursor: pointer;
 }
 
 /* Primary Pattern: Styling radio button labels */
 .form .radio-group-wrapper label {
-  font-size: var(--form-font-size-base); /* Changes the label font size */
-  display: flex;
-  align-items: center;
+    font-size: var(--form-label-font-size); /* Changes the label font size */
+    color: var(--form-label-color);
+    font-weight: var(--form-label-font-weight);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 /* Primary Pattern: Styling checkboxes */
 .form .checkbox-group-wrapper input[type="checkbox"] {
-  margin-right: 8px; /* Adds space between the input and its label */
-  margin-bottom: 4px;
+    margin-right: 8px; /* Adds space between the input and its label */
+    margin-bottom: 4px;
+    cursor: pointer;
 }
 
 /* Primary Pattern: Styling checkbox labels */
 .form .checkbox-group-wrapper label {
-  font-size: var(--form-font-size-base); /* Changes the label font size */
-  display: flex;
-  align-items: center;
+    font-size: var(--form-label-font-size); /* Changes the label font size */
+    color: var(--form-label-color);
+    font-weight: var(--form-label-font-weight);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 ```
 
 - Anpassa utseendet på alternativknappar och kryssrutor: Den här tekniken döljer standardindata och använder `:before` och `:after` pseudoelement för att skapa anpassade bilder som ändrar utseende baserat på markerat läge.
 
-```CSS
+```css
 /* Hide the default radio button or checkbox */
-main .form form .radio-group-wrapper input[type="radio"],
-main .form form .checkbox-group-wrapper input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
+.form .radio-group-wrapper input[type="radio"],
+.form .checkbox-group-wrapper input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
 }
 
 /* Create a custom radio button */
-main .form form .radio-group-wrapper input[type="radio"] + label::before {
-  /* ... styles for custom radio button ... */
+.form .radio-group-wrapper input[type="radio"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--form-input-border-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: var(--form-input-background-color);
+    transition: all 0.2s ease;
 }
 
-main .form form .radio-group-wrapper input[type="radio"]:checked + label::before {
-  /* ... styles for checked radio button ... */
+.form .radio-group-wrapper input[type="radio"]:checked + label::before {
+    background-color: var(--button-primary-color);
+    border-color: var(--button-primary-color);
+    box-shadow: inset 0 0 0 3px var(--form-input-background-color);
 }
 
 /* Create a custom checkbox */
-main .form form .checkbox-group-wrapper input[type="checkbox"] + label::before {
-  /* ... styles for custom checkbox ... */
+.form .checkbox-group-wrapper input[type="checkbox"] + label::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--form-input-border-color);
+    border-radius: 2px;
+    margin-right: 8px;
+    background-color: var(--form-input-background-color);
+    transition: all 0.2s ease;
 }
 
-main .form form .checkbox-group-wrapper input[type="checkbox"]:checked + label::before {
-  /* ... styles for checked checkbox ... */
+.form .checkbox-group-wrapper input[type="checkbox"]:checked + label::before {
+    background-color: var(--button-primary-color);
+    border-color: var(--button-primary-color);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="white" d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 ```
 
 +++
 
-### Panel-/behållarkomponenter
++++ Panel-/behållarkomponenter
 
-+++ HTML-struktur för paneler/behållarkomponenter
+#### HTML-struktur för paneler/behållarkomponenter
 
 ```HTML
 <fieldset class="panel-wrapper field-{PanelName} field-wrapper">
@@ -510,16 +766,15 @@ main .form form .checkbox-group-wrapper input[type="checkbox"]:checked + label::
 - I fältuppsättningen, multipel.{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
 - Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
 
-+++
 
-+++ Exempel på CSS-väljare för panel-/behållarkomponenter
+#### Exempel på CSS-väljare för panel-/behållarkomponenter
 
 1. Panelen:
 
 ```CSS
-  /* Target the entire panel container */
+  /- Target the entire panel container */
   main .form form .panel-wrapper {
-    /* Add your styles here (e.g., border, padding, background color) */
+    /- Add your styles here (e.g., border, padding, background color) */
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 4px;
@@ -532,14 +787,14 @@ main .form form .checkbox-group-wrapper input[type="checkbox"]:checked + label::
 1. Ange paneltiteln som mål:
 
 ```CSS
-  /* Target the legend element (panel title) */
+  /- Target the legend element (panel title) */
   .panel-wrapper legend {
-    /* Add your styles here (e.g., font-weight, font-size) */
+    /- Add your styles here (e.g., font-weight, font-size) */
     font-weight: bold;
     font-size: 16px;
     padding-bottom: 5px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #ddd; /* Optional: create a separation line */
+    border-bottom: 1px solid #ddd; /- Optional: create a separation line */
   }
 ```
 
@@ -549,9 +804,9 @@ main .form form .checkbox-group-wrapper input[type="checkbox"]:checked + label::
 1. Ange enskilda fält som mål på panelen:
 
 ```CSS
-/* Target all form field wrappers within a panel */
+/- Target all form field wrappers within a panel */
 main .form form .panel-wrapper .{Type}-wrapper {
-  /* Add your styles here (e.g., margin) */
+  /- Add your styles here (e.g., margin) */
   margin-bottom: 10px;
 }
 ```
@@ -561,24 +816,25 @@ main .form form .panel-wrapper .{Type}-wrapper {
 1. Målspecifika fält (valfritt):
 
 ```CSS
-  /* Target the username field wrapper */
+  /- Target the username field wrapper */
   main .form form .panel-wrapper .text-wrapper.field-username {
-    /* Add your styles here (specific to username field) */
+    /- Add your styles here (specific to username field) */
   }
 
-  /* Target the password field wrapper */
+  /- Target the password field wrapper */
   main .form form .panel-wrapper .password-wrapper.field-password {
-    /* Add your styles here (specific to password field) */
+    /- Add your styles here (specific to password field) */
   }
 ```
 
 - Dessa väljare gör att du kan rikta in dig på specifika fältbrytningar på panelen för unik formatering, t.ex. markera användarnamnsfältet.
 
+
 +++
 
-### Repeterbar panel
++++ Repeterbar panel
 
-+++ HTML-struktur för en upprepningsbar panel
+#### HTML-struktur för en upprepningsbar panel
 
 ```HTML
 <fieldset class="panel-wrapper field-{PanelName} field-wrapper">
@@ -638,16 +894,15 @@ Varje panel har samma struktur som exemplet med en panel, med ytterligare attrib
 
 - Unika ID:n och namn: Varje element i panelen har ett unikt ID (till exempel name-1, email-1) och name-attribut baserat på panelens indexvärde (till exempel name=&quot;contact[0].name&quot;). Detta gör att data kan samlas in korrekt när flera paneler skickas.
 
-+++
 
-+++ CSS-väljare för en upprepningsbar panel
+#### CSS-väljare för en upprepningsbar panel
 
 - Alla upprepningsbara paneler som mål:
 
 ```CSS
-  /* Target all panels with the repeatable attribute */
+  /- Target all panels with the repeatable attribute */
  main .form form .panel-wrapper[data-repeatable="true"] {
-    /* Add your styles here (e.g., border, margin) */
+    /- Add your styles here (e.g., border, margin) */
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 4px;
@@ -661,9 +916,9 @@ Väljaren formaterar alla paneler som kan upprepas, vilket ger ett konsekvent ut
 - Ange enskilda fält som mål på en panel:
 
 ```CSS
-/* Target all form field wrappers within a repeatable panel */
+/- Target all form field wrappers within a repeatable panel */
 main .form form .panel-wrapper[data-repeatable="true"] .{Type}-wrapper {
-  /* Add your styles here (e.g., margin) */
+  /- Add your styles here (e.g., margin) */
   margin-bottom: 10px;
 }
 ```
@@ -673,19 +928,21 @@ Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vi
 - Ange specifika fält som mål (inom en panel):
 
 ```CSS
-/* Target the name field wrapper within the first panel */
+/- Target the name field wrapper within the first panel */
 main .form form .panel-wrapper[data-repeatable="true"][data-index="0"] .text-wrapper.field-name {
-  /* Add your styles here (specific to first name field) */
+  /- Add your styles here (specific to first name field) */
 }
 
 /- Target all
 ```
 
+
 +++
 
-### Bifogad fil
 
-+++ HTML-struktur för bifogad fil
++++ Bifogad fil
+
+#### HTML-struktur för bifogad fil
 
 ```HTML
 <div class="file-wrapper field-{FileName} field-wrapper">
@@ -728,16 +985,15 @@ main .form form .panel-wrapper[data-repeatable="true"][data-index="0"] .text-wra
 - Attributen id och name för indataelementet matchar namnet på den bifogade filen (claim_form).
 - Avsnittet med fillistan är inledningsvis tomt. Den fylls i dynamiskt med JavaScript när filer överförs.
 
-+++
 
-+++ CSS-väljare för komponenten Bifogad fil
+#### CSS-väljare för komponenten Bifogad fil
 
 - Målkomponenten för hela den bifogade filen:
 
 ```CSS
-/* Target the entire file attachment component */
+/- Target the entire file attachment component */
 main .form form .file-wrapper {
-  /* Add your styles here (e.g., border, padding) */
+  /- Add your styles here (e.g., border, padding) */
   border: 1px solid #ccc;
   padding: 15px;
   border-radius: 4px;
@@ -750,32 +1006,32 @@ Den här väljaren formaterar hela den bifogade filkomponenten, inklusive tecken
 - Målinriktade specifika element:
 
 ```CSS
-/* Target the drag and drop area */
+/- Target the drag and drop area */
 main .form form .file-wrapper .file-drag-area {
-  /* Add your styles here (e.g., background color, border) */
+  /- Add your styles here (e.g., background color, border) */
   background-color: #f0f0f0;
   border: 1px dashed #ddd;
   padding: 10px;
   text-align: center;
 }
 
-/* Target the file input element */
+/- Target the file input element */
 main .form form .file-wrapper input[type="file"] {
-  /* Add your styles here (e.g., hide the default input) */
+  /- Add your styles here (e.g., hide the default input) */
   display: none;
 }
 
-/* Target individual file descriptions within the list (populated dynamically) */
+/- Target individual file descriptions within the list (populated dynamically) */
 main .form form .file-wrapper .files-list .file-description {
-  /* Add your styles here (e.g., margin, display) */
+  /- Add your styles here (e.g., margin, display) */
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-/* Target the file name within the description */
+/- Target the file name within the description */
 main .form form .file-wrapper .files-list .file-description .file-description-name {
-  /* Add your styles here (e.g., font-weight) */
+  /- Add your styles here (e.g., font-weight) */
   font-weight: bold;
 }
 ```
@@ -785,15 +1041,16 @@ Dessa väljare gör att du kan formatera olika delar av den bifogade filkomponen
 +++
 
 
+
 ## Formatkomponenter
 
 Du kan formatera formulärfält baserat på deras specifika typ (`{Type}-wrapper`) eller enskilda namn (`field-{Name}`). På så sätt får du bättre kontroll över och anpassning av formulärets utseende.
 
-### Formatering baserad på fälttyp
++++ Formatering baserad på fälttyp
 
 Du kan använda CSS-väljare för att ange specifika fälttyper och använda format på ett konsekvent sätt.
 
-+++ HTML Structure
+#### HTML Structure
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -832,34 +1089,32 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 - Varje fält har en motsvarande etikett, indataelement och eventuella ytterligare element som platshållare och beskrivningar.
 
 
-+++
 
 
-+++ Exempel på CSS-väljare
+#### Exempel på CSS-väljare
 
 ```CSS
-/* Primary Pattern: Target all text input fields */
+/- Primary Pattern: Target all text input fields */
 .form .text-wrapper input {
-  /* Add your styles here */
+  /- Add your styles here */
   width: 100%;
   padding: var(--form-input-padding);
 }
 
-/* Primary Pattern: Target all number input fields */
+/- Primary Pattern: Target all number input fields */
 .form .number-wrapper input {
-  /* Add your styles here */
-  letter-spacing: 2px; /* Example for adding letter spacing to all number fields */
+  /- Add your styles here */
+  letter-spacing: 2px; /- Example for adding letter spacing to all number fields */
   text-align: center;
 }
 ```
-
 +++
 
-### Formatering baserad på fältnamn
++++ Formatering baserad på fältnamn
 
 Du kan också ange enskilda fält som mål efter namn för att använda unika format.
 
-+++ HTML Structure
+#### HTML Structure
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -883,118 +1138,343 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 </div>
 ```
 
-+++
 
-+++ Exempel på CSS-väljare
+#### Exempel på CSS-väljare
 
 ```CSS
-/* Primary Pattern: Target specific field by name */
+/- Primary Pattern: Target specific field by name */
 .form .field-otp input {
    letter-spacing: 2px;
    text-align: center;
    font-family: monospace;
 }
 
-/* Context-specific: Use higher specificity when needed */
+/- Context-specific: Use higher specificity when needed */
 main .form .field-otp input {
-   /* Use only when you need to override other styles */
+   /- Use only when you need to override other styles */
    font-weight: bold;
 }
 ```
 
 Den här CSS-koden har alla indataelement som finns i ett element som har klassen `field-otp` som mål. Edge Delivery Services formulärstruktur följer de adaptiva blockkonventionerna för Forms, där behållare är markerade med fältspecifika klasser som &quot;field-otp&quot; för fält med namnet &quot;otp&quot;.
 
-+++
 
-## CSS-filstruktur och -referenser
+## CSS-filstruktur och implementering
 
-### **Standardplats för format**
+### **Referensimplementering**
 
-Standardformulärformaten finns på:
+Den fullständiga formulärformatsreferensen finns i AEM Forms-databasen för mallar:
 
 ```
 https://github.com/adobe-rnd/aem-boilerplate-forms/blob/main/blocks/form/form.css
 ```
 
-### **Lokal projektstruktur**
+Den här filen fungerar som en kanonisk implementering av det anpassade CSS-egenskapssystemet och utgör grunden för all formulärformatering. Den innehåller omfattande definitioner för alla CSS-variabler, komponentformateringsmönster och implementeringar av responsiv design.
 
-I ditt Edge Delivery Services-projekt:
++++
+
++++ Projektintegrering
+
+I ditt Edge Delivery Services-projekt kan du implementera formulärformat på följande strukturerade sätt:
 
 ```
-/blocks/form/form.css          // Main form block styles
-/styles/styles.css             // Global site styles
-/styles/lazy-styles.css        // Additional component styles
+/blocks/form/form.css          // Core form block styles (copied from boilerplate)
+/styles/styles.css             // Global site styles and CSS variable overrides
+/styles/lazy-styles.css        // Additional component enhancements
 ```
 
-### **Anpassad CSS-integrering**
++++
 
-1. **Anpassa på projektnivå**: Lägg till format i `/styles/styles.css`
-2. **Formulärspecifik anpassning**: Ändra `/blocks/form/form.css`
-3. **Komponentåsidosättningar**: Använd lämpliga specificitetsväljare i din anpassade CSS
++++ Genomförandestrategi
+
+**Åsidosätter anpassade CSS-egenskaper**: Åsidosätt formulärvariabler i globala format för att implementera varumärkesspecifik tema:
+
+```css
+/* In /styles/styles.css */
+:root {
+    /* Brand-specific overrides */
+    --button-primary-color: #your-brand-color;
+    --form-background-color: #your-background;
+    --label-color: #your-text-color;
+}
+```
+
+**Komponentspecifika anpassningar**:
+Lägg till komponentspecifik formatering med bibehållet CSS-variabelsystem:
+
+```css
+/* Enhanced component styling */
+.form .text-wrapper input {
+    border-radius: var(--form-card-border-radius);
+    transition: all 0.2s ease;
+}
+
+.form .text-wrapper input:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 3px rgba(var(--button-primary-color), 0.1);
+}
+```
+
+**Responsiv designintegrering**: Använd anpassade CSS-egenskaper i mediefrågor för konsekvent responsivt beteende:
+
+```css
+@media (max-width: 768px) {
+    :root {
+        --form-input-padding: 0.875rem;
+        --form-field-vert-gap: 1rem;
+        --form-padding: 1rem;
+    }
+}
+```
+
++++
+
+### Exempel på komplett formatimplementering
+
+I det här avsnittet visas hur du skapar ett modernt, varumärkesprofilerat formulär med anpassade CSS-egenskaper. Implementeringen är uppdelad i tydliga underavsnitt för enklare förståelse och navigering.
+
+
+
++++ &#x200B;1. Variabler för varumärkestema
+
+Definiera varumärkets färgpalett, mellanrum och typografi med hjälp av anpassade CSS-egenskaper.
+
+```css
+/* Custom brand theme */
+:root {
+  /* Brand color system */
+  --brand-primary: #2563eb;
+  --brand-secondary: #64748b;
+  --brand-success: #059669;
+  --brand-error: #dc2626;
+  --brand-background: #f8fafc;
+  
+  /* Override form variables */
+  --background-color-primary: #ffffff;
+  --button-primary-color: var(--brand-primary);
+  --button-primary-hover-color: #1d4ed8;
+  --form-error-color: var(--brand-error);
+  --form-background-color: var(--brand-background);
+  --label-color: var(--brand-secondary);
+  --border-color: #d1d5db;
+  
+  /* Enhanced spacing */
+  --form-input-padding: 1rem;
+  --form-field-vert-gap: 1.5rem;
+  --form-padding: 2rem;
+  
+  /* Modern typography */
+  --form-font-size-s: 16px;
+  --form-label-font-weight: 500;
+}
+```
+
+
++++
+
++++ &#x200B;2. Formulärbehållarformatering
+
+Använd en modern bakgrund, kantradie och skugga i formulärbehållaren för en visuellt tilltalande layout.
+
+
+```css
+/* Enhanced form container */
+.form {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+```
+
+
+
+
++++
+
++++ &#x200B;3. Formatering av inmatningsfält
+
+Formatera text-, e-post- och nummerinmatningsfält för ett rent, modernt utseende.
+
+
+```css
+/* Modern input styling */
+.form .text-wrapper input,
+.form .email-wrapper input,
+.form .number-wrapper input {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--form-input-padding);
+    font-size: 16px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+```
+
+
++++
+
++++ &#x200B;4. Ytterligare anpassning
+
+Du kan utöka formulärformateringen ytterligare genom att rikta in dig på specifika fält, lägen eller komponenter efter behov. Mer information om avancerade mönster finns i tidigare avsnitt.
+
+```css
+/* Custom brand theme */
+:root {
+    /* Brand color system */
+    --brand-primary: #2563eb;
+    --brand-secondary: #64748b;
+    --brand-success: #059669;
+    --brand-error: #dc2626;
+    --brand-background: #f8fafc;
+    
+    /* Override form variables */
+    --background-color-primary: #ffffff;
+    --button-primary-color: var(--brand-primary);
+    --button-primary-hover-color: #1d4ed8;
+    --form-error-color: var(--brand-error);
+    --form-background-color: var(--brand-background);
+    --label-color: var(--brand-secondary);
+    --border-color: #d1d5db;
+    
+    /* Enhanced spacing */
+    --form-input-padding: 1rem;
+    --form-field-vert-gap: 1.5rem;
+    --form-padding: 2rem;
+    
+    /* Modern typography */
+    --form-font-size-s: 16px;
+    --form-label-font-weight: 500;
+}
+
+/* Enhanced form container */
+.form {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    max-width: 600px;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+/* Modern input styling */
+.form .text-wrapper input,
+.form .email-wrapper input,
+.form .number-wrapper input {
+    background: white;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: var(--form-input-padding);
+    font-size: 16px;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.form .text-wrapper input:focus,
+.form .email-wrapper input:focus,
+.form .number-wrapper input:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Enhanced button styling */
+.form .button-wrapper button[type="submit"] {
+    background: linear-gradient(135deg, var(--brand-primary) 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.form .button-wrapper button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+```
+
+Denna omfattande metod visar hur anpassade CSS-egenskaper möjliggör avancerad kodning samtidigt som de strukturella integritets- och tillgänglighetsfunktionerna i det adaptiva Forms-blocksystemet bibehålls.
+
++++
 
 ## Felsöka CSS-problem
 
-### **CSS-specialproblem**
++++ Specifika CSS-problem
 
 ```css
-/* ❌ Problem: Styles not applying */
+/- ❌ Problem: Styles not applying */
 .text-wrapper input {
   color: red;
 }
 
-/* ✅ Solution: Match or exceed existing specificity */
+/- ✅ Solution: Match or exceed existing specificity */
 .form .text-wrapper input {
   color: red;
 }
 
-/* ✅ Alternative: Use higher specificity when needed */
+/- ✅ Alternative: Use higher specificity when needed */
 main .form .text-wrapper input {
   color: red;
 }
 ```
 
-### **CSS-variabelåsidosättningsproblem**
++++
+
++++ CSS-variabelåsidosättningsproblem
 
 ```css
-/* ❌ Problem: Variables not working */
+/- ❌ Problem: Variables not working */
 .form {
-  --form-border-color: blue; /* Local scope only */
+  --form-border-color: blue; /- Local scope only */
 }
 
-/* ✅ Solution: Define in root scope */
+/- ✅ Solution: Define in root scope */
 :root {
-  --form-border-color: blue; /* Global scope */
+  --form-border-color: blue; /- Global scope */
 }
 ```
 
-### **Vanliga väljarfel**
++++
+
++++ Vanliga väljarfel
 
 ```css
-/* ❌ Incorrect: Assumes direct nesting */
+/- ❌ Incorrect: Assumes direct nesting */
 .form form input {
-  /* This might miss inputs in wrappers */
+  /- This might miss inputs in wrappers */
 }
 
-/* ✅ Correct: Target actual structure */
+/- ✅ Correct: Target actual structure */
 .form .text-wrapper input {
-  /* Targets actual HTML structure */
+  /- Targets actual HTML structure */
 }
 
-/* ❌ Avoid: Unnecessary specificity */
+/- ❌ Avoid: Unnecessary specificity */
 main .form form .text-wrapper input {
-  /* Too specific, harder to override */
+  /- Too specific, harder to override */
 }
 
-/* ✅ Preferred: Balanced specificity */
+/- ✅ Preferred: Balanced specificity */
 .form .text-wrapper input {
-  /* Easier to maintain and override */
+  /- Easier to maintain and override */
 }
 ```
 
-### **Formulärtillståndsformatering**
++++
+
++++ Formulärtillståndsformat
 
 ```css
-/* Validation states */
+/- Validation states */
 .form .field-wrapper.error input {
   border-color: var(--form-error-color);
 }
@@ -1003,25 +1483,27 @@ main .form form .text-wrapper input {
   border-color: var(--form-success-color);
 }
 
-/* Loading state */
+/- Loading state */
 .form[data-submitting="true"] {
   opacity: 0.7;
   pointer-events: none;
 }
 
-/* Disabled state */
+/- Disabled state */
 .form input:disabled {
   background-color: var(--form-input-disabled-background);
   cursor: not-allowed;
 }
 ```
++++
 
 ### **Komponentspecifika metodtips**
 
-#### **Knappformat**
+
++++ Knappformat
 
 ```css
-/* Primary buttons */
+/- Primary buttons */
 .form .button-wrapper button[type="submit"] {
   background-color: var(--form-focus-color);
   color: white;
@@ -1030,7 +1512,7 @@ main .form form .text-wrapper input {
   border-radius: var(--form-border-radius);
 }
 
-/* Secondary buttons */
+/- Secondary buttons */
 .form .button-wrapper button[type="reset"] {
   background-color: transparent;
   color: var(--form-text-color);
@@ -1038,16 +1520,18 @@ main .form form .text-wrapper input {
 }
 ```
 
-#### **Responsiv formulärdesign**
++++
+
++++ Responsiv formulärdesign
 
 ```css
-/* Mobile-first approach */
+/- Mobile-first approach */
 .form {
   width: 100%;
   padding: 1rem;
 }
 
-/* Tablet and up */
+/- Tablet and up */
 @media (min-width: 768px) {
   .form {
     max-width: var(--form-max-width);
@@ -1055,6 +1539,8 @@ main .form form .text-wrapper input {
   }
 }
 ```
+
++++
 
 ## Sammanfattning av bästa praxis
 

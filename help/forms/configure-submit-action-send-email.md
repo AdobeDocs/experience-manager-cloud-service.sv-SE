@@ -1,13 +1,13 @@
 ---
+title: Hur skickar man e-post när man skickar in ett anpassat formulär?
 description: Utforska processen för att skapa e-postmeddelanden när du skickar in ett adaptivt formulär.
 keywords: Skicka ett e-postmeddelande för ett tilläggsformulär, Skicka med e-post, Adaptiv e-post, Skicka e-post med formulär, Skicka e-postguide
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 exl-id: 70386e57-345b-4edb-97f1-3fd52ea9ff4f
-title: Hur konfigurerar man en Skicka-åtgärd för ett anpassat formulär?
 role: User, Developer
-source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '786'
 ht-degree: 1%
 
 ---
@@ -113,7 +113,7 @@ Dialogrutan **Formuläregenskaper** visas.
 
 * Vi rekommenderar att du håller e-postinnehållet klart och koncist. Användarna bör förstå syftet med e-postmeddelandet och de åtgärder de behöver vidta.
 * Det rekommenderas att alla formulärfält har unika elementnamn, även om de finns på olika paneler i ett adaptivt formulär.
-* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email).
+* När du använder AEM as a Cloud Service kräver utgående e-post kryptering. Som standard är funktionen för utgående e-post inaktiverad. Om du vill aktivera det skickar du en supportanmälan till [begär åtkomst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email).
 
 ## Relaterade artiklar
 

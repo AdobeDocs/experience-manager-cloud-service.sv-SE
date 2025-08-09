@@ -4,9 +4,9 @@ description: Använd Universell redigerare för Edge Delivery Services for Forms
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: ccfb85da187e828b5f7e8b1a8bae3f483209368d
+source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Den universella redigeraren är en smidig lösning för att skapa och hantera fo
 
 | ![Formatering](/help/edge/docs/forms/universal-editor/assets/personalization.svg) | ![Tjänster för förifyllnad](/help/edge/docs/forms/universal-editor/assets/prefill-services.svg) | ![A/B-testning](/help/edge/docs/forms/universal-editor/assets/experimentation-ab-testing.svg) |
 |:-------------:|:-------------:|:-------------:|
-| [**Formatering**](/help/edge/docs/forms/universal-editor/style-theme-forms.md) | **Förfyll tjänster** (kommer snart) | [**A/B-testning**](https://github.com/adobe/aem-experimentation/blob/main/documentation/experiments.md) |
+| [**Formatering**](/help/edge/docs/forms/universal-editor/style-theme-forms.md) | **[Fyll i formulär i förväg](/help/edge/docs/forms/universal-editor/prefill-form.md)** | [**A/B-testning**](https://github.com/adobe/aem-experimentation/blob/main/documentation/experiments.md) |
 | Med formatering med CSS kan utvecklare anpassa utseendet på formulärelement och skapa en visuellt tilltalande design som passar ihop med webbplatsens estetik. | I förifyllda tjänster fylls formulärfält automatiskt i med relevanta användardata från olika källor, vilket minskar behovet av manuell inmatning och förbättrar användarupplevelsen. | A/B-tester gör det möjligt för organisationer att experimentera med olika formulärdesigner, layouter och funktioner för att identifiera de mest framgångsrika varianterna. |
 
 | ![Analys och spårning](/help/edge/docs/forms/universal-editor/assets/analyticsandtracking.svg) | ![Formulärfragment](/help/edge/docs/forms/universal-editor/assets/form-fragments.svg) | ![Databindning](/help/edge/docs/forms/universal-editor/assets/data-binding.svg) |
