@@ -249,7 +249,7 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 3. Välj **Förhandsgranska som HTML**
 4. Testa förifyllning genom att lägga till parametrar till URL:en:
 
-   https://your-preview-url.com?<bindreferencefield>=<value>
+   https://your-preview-url.com?&lt;bindreferencefield>=&lt;value>
 
    **Exempel:**
 
