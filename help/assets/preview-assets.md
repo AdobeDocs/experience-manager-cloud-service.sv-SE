@@ -26,7 +26,7 @@ Kontrollera att du har:
 
 * Åtkomst till [!DNL AEM Assets as a Cloud Service].
 * Behörighet att redigera egenskapen Status för resurser.
-* [Ett [!UICONTROL Preview]-värde har lagts till i metadataegenskapen [!UICONTROL  Status] som finns på [!UICONTROL Basic] tab ](/help/assets/metadata-assets-view.md#edit-metadata-forms) i metadataformuläret som används i mappen som innehåller de resurser som ska förhandsgranskas.
+* [Ett [!UICONTROL Preview]-värde har lagts till i metadataegenskapen [!UICONTROL &#x200B; Status] som finns på [!UICONTROL Basic] tab ](/help/assets/metadata-assets-view.md#edit-metadata-forms) i metadataformuläret som används i mappen som innehåller de resurser som ska förhandsgranskas.
   ![Lägg till förhandsvisningsalternativ](/help/assets/assets/metedata-form-preview.png)
 * Nyckeln som genererar förhandsvisningstoken. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) och begär en nyckel.
 
