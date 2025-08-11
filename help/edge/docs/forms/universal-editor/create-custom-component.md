@@ -104,7 +104,7 @@ Innan en anpassad komponent kan användas måste den registreras så att Univers
 
 >[!NOTE]
 >
-> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
+> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
 
 ### &#x200B;2. Definiera egenskaperna för den anpassade komponenten för redigering
 
@@ -161,7 +161,7 @@ Den anpassade komponenten innehåller en komponentmodell som anger vilka egenska
 
    >[!NOTE]
    >
-   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
+   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
 
    Du kan också [lägga till anpassade egenskaper](#adding-custom-properties-for-your-custom-component) i en anpassad komponent för att utöka dess funktioner.
 

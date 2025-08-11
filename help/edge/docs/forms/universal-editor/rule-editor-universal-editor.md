@@ -308,7 +308,7 @@ Du skapar ett formulär som:
 
 1. **Öppna Universal Editor**:
    - Navigera till AEM Sites-konsolen, markera sidan och klicka på **Redigera**
-   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) är korrekt konfigurerad
+   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) är korrekt konfigurerad
 
 2. **Lägg till formulärkomponenter i den här ordningen**:
    - Titel (H2):&quot;Skatteberäkningsformulär&quot;
@@ -676,7 +676,7 @@ Forms blir kraftfulla verktyg för datainsamling, kvalificering av leads och anv
 
 **Ytterligare resurser**:
 
-- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) för ett bredare sammanhang
+- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) för ett bredare sammanhang
 - [Extension Manager guide](/help/implementing/developing/extending/extension-manager.md) för att aktivera ytterligare funktioner
 - [Edge Delivery Services-formulär](/help/edge/docs/forms/overview.md) för omfattande riktlinjer för formulärutveckling
 

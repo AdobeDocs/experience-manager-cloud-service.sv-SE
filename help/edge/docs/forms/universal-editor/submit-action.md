@@ -15,7 +15,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 |---------|-----------------------------|
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
 | AEM as a Cloud Service (Edge Delivery Services) | Den här artikeln |
