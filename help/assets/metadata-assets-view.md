@@ -5,12 +5,13 @@ role: User, Leader, Admin, Architect, Developer
 contentOwner: AG
 exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
 feature: Metadata
-source-git-commit: 460dd76a1d7d1d3f85a924a0aa88e8649ada32bc
+source-git-commit: fecc13161b2502aab086e4c1c89d650d003cec06
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2464'
 ht-degree: 0%
 
 ---
+
 
 # Metadata i Assets View {#metadata}
 
@@ -32,7 +33,7 @@ Om du vill visa metadata för en resurs bläddrar du till resursen eller söker 
 
 ![Visa metadata för en resurs](assets/metadata-view.png)
 
-*Figur: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**&#x200B;i verktygsfältet eller dubbelklickar på resursen.*
+*Figur: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklickar på resursen.*
 
 Grundläggande metadata som titel, beskrivning och överföringsdatum är tillgängliga på fliken [!UICONTROL Basic]. Fliken [!UICONTROL Advanced] innehåller mer avancerade metadata som kameramodell, objektivinformation och geotaggar. Fliken [!UICONTROL Tags] innehåller automatiskt tillämpade taggar baserat på bildens innehåll.
 
@@ -48,7 +49,7 @@ De smarta taggarna används nästan i realtid och genereras baserat på bildens 
 
 ![Visa smarta taggar för en resurs](assets/metadata-view-tags.png)
 
-*Figur: Om du vill visa smarta taggar för en resurs klickar du på&#x200B;**[!UICONTROL Details]**&#x200B;i verktygsfältet eller dubbelklickar på resursen.*
+*Figur: Om du vill visa smarta taggar för en resurs klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklickar på resursen.*
 
 Smarta taggar innehåller också ett konfidensintervall som ett procenttal. Det anger förtroendet som är kopplat till den tillämpade taggen. Du kan moderera de automatiskt tillämpade smarta taggarna.
 
@@ -181,7 +182,6 @@ Följ stegen nedan för att använda länkkomponenten i metadataformuläret:
    * Klicka på ![redigeringsikonen](assets/do-not-localize/edit.svg) om du vill redigera URL-adressen.
 1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 
-
 ### Arbeta med taggkomponenten i metadataformulär {#tag-component-metadata-form}
 
 Rotelementet representerar trädstrukturen för de taggar som du kan associera med resurserna, vilket hjälper till att identifiera resursen baserat på taggen som tilldelats den. Dessutom kan du begränsa åtkomsten till en viss taxonomi när du konfigurerar metadataformuläret i metadataredigeraren.
@@ -213,6 +213,17 @@ See [Assign metadata form to folders](#assign-metadata-form-folder). Follow the 
 -->
 
 Om du vill visa de konfigurerade rottaggarna går du till objektets informationssida där mappningen mellan metadataformuläret och rottaggarna utförs.
+
+## Redigera metadata-Forms {#edit-metadata-forms}
+
+Så här redigerar du ett metadataformulär:
+
+1. Navigera till startsidan för [!DNL Assets View] och välj **[!DNL Metadata Forms]** för att visa en lista med metadataformulär.
+1. Markera ett formulär och klicka på **[!UICONTROL Edit]** för att öppna sidan [!DNL Metadata Form Editor]. Den här sidan visar komponenter i metadataformuläret i den vänstra rutan, flikar som Grundläggande, Avancerat, Taggar med mera i den mellersta rutan och inställningspanelen för redigering av metadataegenskaperna i den högra rutan.
+1. Öppna en flik (**[!DNL Basic]**, **[!DNL Advanced]** eller **[!DNL Tags]**).
+1. Välj en metadataegenskap om du vill redigera dess inställningar på panelen **[!UICONTROL Settings]**. Du kan uppdatera egenskapsmappningar, byta namn på etiketter, ändra eller lägga till egenskapsvärden och utföra fler sådana redigeringar på panelen **[!UICONTROL Settings]**.
+1. Klicka på **[!UICONTROL Preview]** om du vill granska ändringarna i formuläret innan du sparar ändringarna.
+1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
 ## Förbättra innehållsidentifiering med AI-genererade metadata {#ai-smart-tags}
 
@@ -254,13 +265,13 @@ Mer information om hur du inaktiverar AI-genererade metadata finns i [Inaktivera
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video om hur du hanterar metadataformulär i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/configuring/metadata-forms.html?lang=sv-SE)
+* [Titta på en video om hur du hanterar metadataformulär i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/configuring/metadata-forms.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 <!-- TBD: Cannot create a form using the second option. Documenting only the first option for now.
 To reuse an existing form to create a form, do one of these:
@@ -291,4 +302,3 @@ How can one search based strictly on the metadata. Similar to AEM Assets GQL que
 >
 >* [Search assets](search.md).
 -->
-
