@@ -4,11 +4,11 @@ description: Lär dig hur du publicerar, konfigurerar och får tillgång till Ad
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
-keywords: [publicera formulär, Edge Delivery Services, formulärkonfiguration, CORS, referensfilter]
+keywords: publicera formulär, Edge Delivery Services, formulärkonfiguration, CORS, referensfilter
 exl-id: ba1c608d-36e9-4ca1-b87b-0d1094d978db
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: 05c0d8fd16cc8bd805a0e8644d3145685fe6fa12
 workflow-type: tm+mt
-source-wordcount: 746
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -169,8 +169,8 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [CORS - konfigurationsguide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
-- [Dokumentation för referentfilter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
+- [CORS - konfigurationsguide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
+- [Dokumentation för referentfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
 
 +++
 
@@ -221,7 +221,7 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
+- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
 
 +++
 
