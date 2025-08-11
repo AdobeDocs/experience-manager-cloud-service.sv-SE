@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 1cb24ca4aabf3ccd12c514cc9d74ad0c1cc8e2fb
+source-git-commit: 401eaaaa0bb8dad054c7105533cbd4486964c484
 workflow-type: tm+mt
-source-wordcount: '2271'
+source-wordcount: '2269'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -88,7 +88,7 @@ Content Hub innehåller nu alternativet **Visa alla** i filter, vilket gör att 
 
 Få automatisk uppladdning av nya filer och mappar, förbättrad filhantering, smartare resursidentifiering och smidig integrering med AEM - vilket gör innehållshanteringen snabbare, tydligare och mer intuitiv.
 
-En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes).
+En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes).
 
 ### Nya funktioner i Dynamic Media med OpenAPI-funktioner {#new-features-dynamic-media-with-openapi}
 
@@ -177,12 +177,11 @@ Snabba upp utvecklingen av AEM Forms Edge Delivery Services med detta CLI-verkty
 
 Med API Integration Tool kan man skapa dynamiska, intelligenta blanketter som automatiskt hämtar och fyller i data från externa REST API:er baserat på användarinteraktioner. Denna icke-kodsintegration omvandlar statiska formulär till responsiva datainsamlingsgränssnitt.
 
-
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### Huvudvy för behörighetshantering {#principal-view}
+### Nodvy för behörighetshantering {#node-view}
 
-AEM introducerar behörighetshantering för användare och grupper. Huvudfunktionaliteten är densamma som det klassiska användargränssnittet, men är mer användarvänlig och effektiv. Mer information finns i den [dedikerade artikeln](/help/security/touch-ui-principal-view.md).
+AEM introducerar behörighetshantering för nodvy. Huvudfunktionaliteten är densamma som det klassiska användargränssnittet, men är mer användarvänlig och effektiv. Mer information finns i den [dedikerade artikeln](/help/security/touch-ui-principal-view.md).
 
 ### Uppdaterad borttagningsprocess {#updated-deprecation-process}
 
@@ -225,7 +224,7 @@ OSGi-egenskaper:
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade &#x200B;** Java 21-miljön**.
+**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade **Java 21-miljön**.
 
 Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)), bör du ha fått ett e-postmeddelande från Adobe med specifika nästa steg. Kontrollera att alla nödvändiga uppdateringar är slutförda senast den **28 augusti 2025** så att miljön kan uppgraderas utan avbrott.
 
@@ -313,7 +312,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -333,4 +332,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
