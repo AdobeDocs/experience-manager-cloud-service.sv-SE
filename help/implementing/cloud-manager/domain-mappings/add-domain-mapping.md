@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: 829881a91a6f1c9a020c04ec581ce010b07bae01
+source-git-commit: 840db9fff35af0da212fa03e2d9255cca9524ae6
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '551'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ curl -svo /dev/null https://www.example.com \
 ```
 
 * Ersätt **`www.example.com`** med din domän.
-* Ersätt **151.101.3.10** med den Edge IP-adress som visas i Cloud Manager för den här mappningen.
+* IP-adressen ``151.101.3.10`` är en av IP-adresserna som kan användas för att komma åt AEM Cloud-tjänsten. Se även [APEX-post](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md#adobe-managed-cert-apex-record).
 
 Flaggan `--resolve` tvingar begäran till den angivna IP-adressen och returnerar bara lyckade när certifikatet och routningen för din domän har installerats korrekt.
 
