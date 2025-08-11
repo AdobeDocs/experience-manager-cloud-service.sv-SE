@@ -4,9 +4,9 @@ description: Lär dig hur användare kan visa ett tackmeddelande eller omdiriger
 feature: Adaptive Forms, Edge Delivery Services
 role: User
 level: Intermediate
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -14,282 +14,238 @@ ht-degree: 0%
 
 # Konfigurera tackmeddelanden och omdirigerings-URL
 
-Formulärfragment är återanvändbara komponenter som eliminerar repetitivt utvecklingsarbete och säkerställer konsekvens i alla era formulär. I stället för att återskapa vanliga avsnitt som kontaktinformation, adressinformation eller godkännandeavtal för varje formulär kan du skapa dessa element en gång som fragment och återanvända dem i flera formulär.
+Upplevelserna efter inlämningen påverkar i hög grad användarnas nöjdhet och antalet ifyllda formulär. Adobe Universal Editor har ett stort antal alternativ för att konfigurera vad användarna ser efter att ha skickat in formulär, antingen genom skräddarsydda tackmeddelanden eller strategiska omdirigeringar till specifika sidor.
 
-**Vad du ska göra i den här artikeln:**
-
-- Förstå affärsvärdet och de tekniska funktionerna i formulärfragment
-- Skapa återanvändbara formulärfragment med Universal Editor
-- Integrera fragment i befintliga blanketter med rätt konfiguration
-- Hantera fragmentets livscykel och bevara enhetlighet i alla formulär
-
-**Affärsfördelar:**
-
-- **Minskad utvecklingstid**: Bygg gemensamma formuläravsnitt en gång, återanvänd överallt
-- **Förbättrad konsekvens**: Standardiserade layouter och innehåll i alla formulär
-- **Förenklat underhåll**: Uppdatera ett fragment en gång för att återspegla ändringar i alla formulär som använder det
-- **Förbättrad efterlevnad**: Se till att regelsektionerna är konsekventa och uppdaterade
-
-Formulärfragment i Edge Delivery Services har stöd för avancerade funktioner som kapslade fragment, flera instanser i ett och samma formulär samt smidig integrering med datakällor.
-
-## Förstå formulärfragment
-
-Formulärfragment i Edge Delivery Services har kraftfulla funktioner för modulär formulärutveckling:
-
-**Kärnfunktioner:**
-
-- **Konsekvenshantering**: Fragment behåller identiska layouter och innehåll i flera formulär. Med metoden&quot;ändra en gång, spegla överallt&quot; tillämpas uppdateringar av ett fragment automatiskt på alla formulär i förhandsgranskningsläget.
-- **Flera användningsområden**: Lägg till samma fragment flera gånger i ett enda formulär, var och en med oberoende databindning till olika datakällor eller schemaelement.
-- **Kapslade strukturer**: Skapa komplexa hierarkier genom att bädda in fragment i andra fragment för avancerade formulärarkitekturer.
-
-**Tekniska krav:**
-
-- **GitHub URL-konsekvens**: Både fragmentet och alla formulär som använder det måste ange samma GitHub-databas-URL
-- **Fristående redigering**: Fragment kan bara ändras i sin fristående form; ändringar kan inte göras i värdformuläret
-
-**Publiceringsbeteende:**
-
->[!IMPORTANT]
->
->I förhandsgranskningsläget återspeglas fragmentändringarna omedelbart i alla formulär. I publiceringsläget måste du publicera om både fragmentet och alla formulär som använder det för att se uppdateringar.
-
->[!CAUTION]
->
->Undvik rekursiva fragmentreferenser (kapsling av ett fragment i sig) eftersom detta orsakar återgivningsfel och oväntat beteende.
+I den här artikeln finns detaljerade riktlinjer för hur du implementerar både tackmeddelanden och omdirigerings-URL:er, inklusive tekniska överväganden, bästa praxis och riktlinjer för användarupplevelser för att maximera effekten av dina formulärinskickade formulär.
 
 ## Förutsättningar
 
-**Tekniska installationskrav:**
+Innan du konfigurerar upplevelser efter att produkten har skickats in måste du se till att du har:
 
-- [GitHub-databasen har konfigurerats](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#get-started-with-the-aem-forms-boilerplate-repository-template) med en anslutning upprättad mellan din AEM-miljö och GitHub-databasen
-- [Det senaste adaptiva Forms-blocket](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#add-adaptive-forms-block-to-your-existing-aem-project) har lagts till i GitHub-databasen (för befintliga Edge Delivery Services-projekt)
-- Instans av AEM Forms Author med Edge Delivery Services-mall tillgänglig
-- Åtkomst till URL:en för AEM Forms as a Cloud Service-författarinstansen och URL:en för GitHub-databasen
+**Teknisk konfiguration:**
 
-**Nödvändig kunskap och behörigheter:**
+- Tillgång till Universal Editor med rätt behörighet
+- Ett befintligt adaptivt formulär som har skapats i den universella redigeraren
+- Förstå kraven för din organisations omdirigerings-URL
 
-- Grundläggande förståelse för formulärdesignkoncept och komponenthierarki
-- Välbekant med gränssnittet i den universella redigeraren och arbetsflöden för att skapa formulär
-- Behörigheter på författarnivå i AEM Forms för att skapa och hantera formulärresurser
-- Förstå organisationens formulärstandarder och krav på återanvändbara komponenter
+**Planeringsöverväganden:**
 
-## Arbeta med Edge Delivery Services-formulärfragment
+- **Meddelandestrategi**: Definiera ton, längd och specifik information som ska ingå i tackmeddelanden
+- **Omdirigeringsstrategi**: Identifiera målsidor och se till att de är optimerade för upplevelser efter att formuläret har fyllts i
+- **Analysintegrering**: Planera hur du spårar användarinteraktioner med tackmeddelanden eller omdirigeringsmål
 
-Du kan skapa Edge Delivery Services-formulärfragment i den universella redigeraren och lägga till de skapade fragmenten i Edge Delivery Services-formulär. Du kan utföra följande åtgärder med Edge Delivery Services-formulärfragment:
+## Konfigurera tackmeddelanden
 
-- [Skapa formulärfragment](#creating-form-fragments)
-- [Lägga till formulärfragment i ett formulär](#adding-form-fragments-to-a-form)
-- [Hantera formulärfragment](#managing-form-fragments)
+Tack för att du får ett meddelande med en omedelbar bekräftelse på att formuläret har skickats in och att det kan innehålla anpassat innehåll, nästa steg eller viktig information som är relevant för användarens inlämning.
 
-+++ Skapa formulärfragment
+### Använda tackmeddelanden när
 
-Så här skapar du ett formulärfragment i den universella redigeraren:
+Tack! Meddelanden fungerar bäst när:
 
-1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
-1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Klicka på **Skapa > Adaptivt formulärfragment**.
+- **Enkel bekräftelse**: Användarna måste bekräfta utan ytterligare navigeringskrav
+- **Undervisningsinnehåll**: Du måste ange specifika nästa steg eller viktig information
+- **Varumärkeskonsekvens**: Meddelandet kan utformas i linje med organisationens kommunikationsstil
+- **Enkelsidig upplevelse**: Användare bör vara kvar på den aktuella sidan för att upprätthålla arbetsflödet
 
-   ![Skapa fragment](/help/edge/docs/forms/universal-editor/assets/create-fragment.png)
+### Implementeringssteg
 
-   Guiden **Skapa adaptivt formulärfragment** visas.
-1. Välj den Edge Delivery Services-baserade mallen på fliken **Välj mall** och klicka på **[!UICONTROL Next]**.
-   ![Välj Edge Delivery Services-mall](/help/edge/docs/forms/universal-editor/assets/create-form-fragment.png)
+**1. Åtkomst till formuläregenskaper**
 
-1. Ange rubrik, namn, beskrivning och taggar för fragmentet. Se till att du anger ett unikt namn för fragmentet. Om det finns ett annat fragment med samma namn kan fragmentet inte skapas.
-1. Ange **GitHub-URL**. Om din GitHub-databas till exempel har namnet `edsforms`, finns den under kontot `wkndforms`, är URL:en `https://github.com/wkndforms/edsforms`.
+Öppna det adaptiva formuläret i den universella redigeraren och klicka på ikonen **Redigera formuläregenskaper** i verktygsfältet. Då öppnas en omfattande dialogruta för formuläregenskaper.
 
-   ![grundläggande egenskaper](/help/edge/docs/forms/universal-editor/assets/fragment-basic-properties.png)
+**2. Navigera till din konfiguration**
 
-1. (Valfritt) Klicka för att öppna fliken **Formulärmodell** och välj en av följande modeller för fragmentet på den nedrullningsbara menyn **Välj från**:
+I dialogrutan Formuläregenskaper väljer du fliken **Tack** för att komma åt konfigurationsalternativen efter överföring.
 
-   ![Visar modelltyp på fliken Formulärmodell](/help/edge/docs/forms/universal-editor/assets/select-fdm-for-fragment.png)
+**3. Konfigurera meddelandevisning**
 
-   - **Formulärdatamodell (FDM)**: Integrera datamodellsobjekt och datatjänster från datakällor i fragmentet. Välj FDM (Form Data Model) om formuläret kräver att du läser och skriver data från flera källor.
+Välj **Visa meddelande** bland de tillgängliga alternativen. Detta aktiverar meddelandets innehållsredigerare med avancerade textfunktioner.
 
-   - **JSON-schema**: Integrera formuläret med ett serverdelssystem genom att associera ett JSON-schema som definierar datastrukturen. Det gör att du kan lägga till dynamiskt innehåll med schemaelementen.
-   - **Inget**: Anger att fragmentet ska skapas från grunden utan att någon formulärmodell används.
+**4. Skapa ditt meddelandeinnehåll**
 
-   >[!NOTE]
-   >
-   > Mer information om hur du integrerar formulär eller fragment med en formulärdatamodell (FDM) i den universella redigeraren för att använda olika backend-datakällor finns i [Integrera formulär med formulärdatamodellen i den universella redigeraren](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md).
+I fältet **Meddelandeinnehåll** kan du skapa ett tackmeddelande med RTF-redigeraren. Redigeraren stöder:
 
-1. (Valfritt) Ange **Publiceringsdatum** eller **Avpubliceringsdatum** för fragmentet på fliken **Avancerat**.
+- **Textformatering**: Alternativ för fet, kursiv, understrykning och färg
+- **Listor**: Punktlistor och numrerade listor för att ordna information
+- **Länkar**: Direktlänkar till relevanta resurser eller nästa steg
+- **Fullskärmsredigering**: Klicka på ikonen Expandera för en större arbetsyta för redigering
 
-   ![Fliken Avancerat](/help/edge/docs/forms/universal-editor/assets/advanced-properties-fragment.png)
-1. Klicka på **Skapa** för att generera fragmentet. En dialogruta med redigeringsalternativ visas.
+### Tekniska överväganden
 
-   ![Redigera fragment](/help/edge/docs/forms/universal-editor/assets/edit-fragment.png)
+**Visningsbeteende för meddelanden:**
 
-1. Klicka på **Redigera** för att öppna fragmentet i Universal Editor med standardmallen använd.
+- Meddelanden visas i en modal övertäckning omedelbart efter att formuläret har skickats in
+- Innehållet stöder HTML-formatering och bevarar responsiv design
+- Meddelanden kan stängas av användare eller konfigureras med automatisk stängning av tidtagare
 
-   ![Fragment i Universal Editor för redigering](/help/edge/docs/forms/universal-editor/assets/fragment-in-ue.png)
+**Riktlinjer för innehåll:**
 
-1. **Designa fragmentinnehåll**: Lägg till formulärkomponenter (textfält, listrutor, kryssrutor) för att skapa det återanvändbara avsnittet. Detaljerad vägledning om komponenter finns i [Komma igång med Edge Delivery Services för AEM Forms med Universal Editor](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#author-forms-using-wysiwyg).
+- Håll meddelandena koncisa samtidigt som du lämnar nödvändig information
+- Inkludera rensning av nästa steg vid behov
+- Överväg att inkludera referensnummer eller bekräftelseinformation
+- Säkra mobilvänlig formatering
 
-1. **Konfigurera komponentegenskaper**: Ange fältnamn, verifieringsregler och standardvärden efter behov för ditt användningsfall.
+### Exempel på implementering
 
-1. **Spara och förhandsgranska**: Spara fragmentet och använd förhandsgranskningsläget för att verifiera layout och funktion.
+    Tack för ditt bidrag!
+    
+    Programmet har tagits emot och tilldelats referensnummer #REF-2024-001234.
+    
+    **Vad händer sedan:**
+    - Du får ett bekräftelsemeddelande via e-post inom 15 minuter
+    - Vårt team granskar ditt bidrag inom 2 arbetsdagar
+    - Vi kontaktar dig direkt om ytterligare information behövs
+    
+    **Behöver du hjälp?** Kontakta vårt supportteam på support@example.com
 
-   ![Skärmbild av ett ifyllt formulärfragment med kontaktinformation i Universell redigerare, med fält för namn, telefon, e-post och adress som kan återanvändas i flera formulär](/help/edge/docs/forms/universal-editor/assets/contact-fragment.png)
+## Konfigurera omdirigerings-URL:er
 
-**Kontrollpunkt för validering:**
+Omdirigerings-URL:er navigerar automatiskt till specifika sidor efter att formuläret har skickats in, vilket möjliggör smidig integrering med befintliga arbetsflöden eller dirigerar användare till relevant innehåll.
 
-- Fragmentinläsningar utan fel i Universal Editor
-- Alla formulärkomponenter återges korrekt
-- Fältegenskaper och valideringsregler fungerar som förväntat
-- Fragmentet sparas och är tillgängligt i Forms &amp; Documents Console
+### När omdirigerings-URL ska användas
 
-När fragmentet är klart kan du [integrera det i alla Edge Delivery Services-formulär](#adding-form-fragments-to-a-form).
+Omdirigerings-URL är optimala för:
 
-+++
+- **Arbetsflödesintegration**: Vägleder användare till instrumentpaneler, kontosidor eller nästa steg i en process
+- **Innehållsleverans**: Visar relevanta produkter, tjänster eller information baserat på formulärsvar
+- **Analysspårning**: Riktning mot sidor med specifika spårningsimplementeringar
+- **Flerstegsprocesser**: Flyttar användare till nästa fas i komplexa arbetsflöden
 
+### Implementeringssteg
 
-+++ Lägga till formulärfragment i ett formulär
+**1. Åtkomst till formuläregenskaper**
 
-I det här exemplet visas hur du skapar ett `Employee Details`-formulär som använder `Contact Details`-fragmentet för både den anställdes- och arbetsledarens informationsavsnitt. Detta tillvägagångssätt garanterar enhetlig datainsamling samtidigt som utvecklingsinsatsen minskas.
+Öppna det adaptiva formuläret i den universella redigeraren och klicka på ikonen **Redigera formuläregenskaper** för att öppna dialogrutan för formulärkonfiguration.
 
-Så här integrerar du ett formulärfragment i formuläret:
+**2. Navigera till din konfiguration**
 
-1. Öppna formuläret i redigeringsläge.
-1. Lägg till komponenten Formulärfragment i formuläret.
-1. Öppna innehållsläsaren och navigera till komponenten **[!UICONTROL Adaptive Form]** i **innehållsträdet**.
-1. Navigera till avsnittet där du vill lägga till ett fragment. Navigera till exempel till panelen **Information om medarbetare**.
+Välj fliken **Tack** i dialogrutan Formuläregenskaper för att få tillgång till konfigurationsalternativen för omdirigering.
 
-   ![Navigera till avsnittet](/help/edge/docs/forms/universal-editor/assets/navigate-to-section.png)
+**3. Aktivera omdirigeringsfunktionen**
 
-1. Klicka på ikonen **[!UICONTROL Add]** och lägg till komponenten **[!UICONTROL Form Fragment]** från listan **Adaptiva formulärkomponenter**.
-   ![Lägg till formulärfragment](/help/edge/docs/forms/universal-editor/assets/add-fragment.png)
+Välj **Omdirigera till URL** bland de tillgängliga alternativen efter överföring.
 
-   När du väljer komponenten **[!UICONTROL Form Fragment]** läggs fragmentet till i formuläret. Du kan konfigurera egenskaperna för det tillagda fragmentet genom att öppna dess **Egenskaper**. Dölj till exempel fragmentets namn från dess **egenskaper**.
+**4. Konfigurera mål-URL**
 
-   ![Konfigurerar fragmentets egenskaper](/help/edge/docs/forms/universal-editor/assets/fragment-properties.png)
+Ange mål-URL:en i fältet. Systemet stöder flera URL-format för flexibel implementering.
 
-1. Markera **fragmentreferensen** på fliken **Grundläggande**. Alla fragment som är tillgängliga för formuläret, beroende på formulärmodellen, visas.
+### URL-konfigurationsalternativ
 
-   Navigera till exempel till `/content/forms/af` och markera fragmentet `Contact Details`.
+**Absoluta URL:er**
 
-   ![Välj fragment](/help/edge/docs/forms/universal-editor/assets/select-fragment.png)
+Fullständiga webbadresser inklusive protokoll och domän:
 
-1. Klicka på **[!UICONTROL Select]**.
+    https://www.example.com/thank-you
+    https://dashboard.example.com/user/profile
 
-   Formulärfragmentet läggs till med referens till formuläret och förblir synkroniserat med det fristående formulärfragmentet.
+**Relativa sökvägar**
 
-   ![Skärmbild som visar kontaktinformationsfragmentet som har integrerats i ett medarbetarformulär i den universella redigeraren och som visar hur fragment behåller sin struktur när de återanvänds](/help/edge/docs/forms/universal-editor/assets/fragment-in-form.png)
+Sökvägar i förhållande till den aktuella domänen:
 
-   Du kan förhandsgranska formuläret för att se hur det ser ut i **förhandsgranskningsläget**.
+    /thanks-you
+    /dashboard/user-profile
+    ../confirmation-page.html
 
-   ![Förhandsgranska](/help/edge/docs/forms/universal-editor/assets/preview-form-with-fragment.png)
+**AEM Sites sidreferenser**
 
-   På samma sätt kan du upprepa steg 3 till 7 för att infoga `Contact Details`-fragmentet för panelen `Supervisor Details`.
+Referenser till andra sidor i din AEM Sites-implementering:
 
-   ![Formulär för personalinformation](/help/edge/docs/forms/universal-editor/assets/employee-detail-form-with-fragments.png)
+    /content/mysite/en/thanks-you
+    /content/mysite/en/next-steps
 
-+++
+### Tekniska överväganden
 
+**Omdirigeringsbeteende:**
 
+- Omdirigeringar sker omedelbart efter det att formuläret har skickats in
+- Webbläsarhistoriken innehåller omdirigering för korrekt bakåtknappsfunktion
+- Omdirigeringstidsplanering kan konfigureras med valfria fördröjningar
 
-+++ Hantera formulärfragment
+**URL-validering:**
 
-Du kan utföra flera åtgärder på formulärfragment med AEM Forms användargränssnitt.
+- URL-formatet valideras innan konfigurationen tillåts
+- Relativa URL:er löses mot den aktuella domänen
+- Externa URL-adresser kräver korrekt CORS-konfiguration vid behov
 
-1. Logga in på din AEM Forms as a Cloud Service-författarinstans.
-1. Välj **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
+## Bästa praxis och rekommendationer
 
-1. Markera ett formulärfragment och i verktygsfältet visas följande åtgärder som du kan utföra på det markerade fragmentet.
+### Riktlinjer för användarupplevelser
 
-   ![Hantera fragment](/help/edge/docs/forms/universal-editor/assets/manage-fragment.png)
+**Meddelandeoptimering:**
 
-   <table>
-    <tbody>
-    <tr>
-   <td><p><strong>Åtgärd</strong></p> </td>
-   <td><p><strong>Beskrivning</strong></p> </td>
-    </tr>
-    <tr>
-   <td><p>Redigera</p> </td>
-   <td><p>Öppnar formulärfragmentet i redigeringsläge.<br /> <br /> </p> </td>
-    </tr>
-    <tr>
-   <td><p>Egenskaper</p> </td>
-   <td><p>Tillhandahåller alternativ för att ändra egenskaperna för formulärfragmentet.<br /> <br /> </p> </td>
-    </tr>
-    <td><p>Kopiera</p> </td>
-   <td><p> Innehåller alternativ för att kopiera formulärfragmentet och klistra in det på önskad plats. <br /> <br /> </p> </td>
-    </tr>
-   <tr>
-   <td><p>Förhandsgranska</p> </td>
-   <td><p>Tillhandahåller alternativ för att förhandsgranska fragmentet som HTML eller utföra en anpassad förhandsgranskning genom att sammanfoga data från en XML-fil med fragmentet. <br /> </p> </td>
-    </tr>
-    <tr>
-   <td><p>Ladda ned</p> </td>
-   <td><p>Hämtar det markerade fragmentet.<br /> <br /> </p> </td>
-    </tr>
-    <tr>
-   <td><p>Starta granskning/hantera granskning</p> </td>
-   <td><p>Tillåter initiering och hantering av en granskning av det valda fragmentet.<br /> <br /> </p> </td>
-    </tr>
-    <!--<tr>
-   <td><p>Add Dictionary</p> </td>
-   <td><p>Generates a dictionary for localizing the selected fragment. For more information, see <a>Localizing Adaptive Forms</a>.<br /> <br /> </p> </td>
-    </tr>-->
-    <tr>
-   <td><p>Publicera/avpublicera</p> </td>
-   <td><p>Publicerar/återpublicerar det valda fragmentet.<br /> <br /> </p> </td>
-    </tr>
-    <tr>
-   <td><p>Ta bort</p> </td>
-   <td><p>Tar bort det markerade fragmentet.<br /> <br /> </p> </td>
-    </tr>
-    <tr>
-   <td><p>Jämför</p> </td>
-   <td><p>Jämför två olika formulärfragment för förhandsgranskning.<br /> <br /> </p> </td>
-    </tr>
-    </tbody>
-    </table>
+- **Klarhet först**: Kontrollera att användarna direkt förstår att överföringen lyckades
+- **Värdetillägg**: Ange information som hjälper användare med nästa steg
+- **Konsekvent varumärkesprofilering**: Behåll organisationens röst och visuella stil
+- **Mobil hänsyn**: Testa meddelanden på olika skärmstorlekar
 
-+++
+**Omdirigeringsoptimering:**
 
-## Bästa praxis
+- **Sidoptimering**: Kontrollera att omdirigeringsmål är optimerade för postformulärsbesökare
+- **Inläsningsprestanda**: Verifiera att omdirigeringssidor läses in snabbt för att upprätthålla användarupplevelsen
+- **Innehållsrelevans**: Kontrollera att omdirigeringsinnehåll är relevant för formulärsammanhanget
 
-**Fragmentdesign och namn:**
+### Säkerhetsaspekter
 
-- **Använd beskrivande, unika namn**: Välj namn som tydligt anger fragmentets syfte (t.ex. &quot;contact-details-with-validation&quot; i stället för &quot;fragment1&quot;)
-- **Planera för återanvändbarhet**: Designa fragment så att de blir sammanhangsberoende och fungerar på olika formulärtyper
-- **Håll fragmenten fokuserade**: Skapa engångs-fragment i stället för komplexa flerfunktionskomponenter
+**URL-validering:**
 
-**Utvecklingsarbetsflöde:**
+- Implementera korrekt validering för omdirigerings-URL:er för att förhindra skadliga omdirigeringar
+- Överväg att använda vitlistmetoder för tillåtna omdirigeringsdomäner
+- Övervaka omdirigeringsmönster för ovanlig aktivitet
 
-- **Testa fragment oberoende**: Verifiera fragmentfunktioner innan du integrerar i formulär
-- **Behåll konsekventa GitHub-URL:er**: Se till att samma databas-URL används för alla relaterade fragment och formulär
-- **Syftet med dokumentfragment**: Inkludera tydliga beskrivningar och taggar som hjälper teammedlemmarna att förstå när de ska använda varje fragment
+**Innehållssäkerhet:**
 
-**Publikation och underhåll:**
+- Sanera tackmeddelandeinnehåll för att förhindra skriptinjektion
+- Lägg in lämpliga säkerhetsregler för RTF-material
+- Regelbunden säkerhetsgranskning av omdirigerade destinationer
 
-- **Koordinera publikation**: När du uppdaterar fragment bör du planera att publicera om alla beroende formulär samtidigt
-- **Versionskontroll**: Använd meningsfulla implementeringsmeddelanden när du uppdaterar fragment för att spåra ändringar över tid
-- **Övervaka beroenden**: Håll reda på vilka formulär som använder varje fragment för att utvärdera uppdateringseffekten
+### Analyser och spårning
 
->[!TIP]
->
->Fragmentformat, skript och uttryck bevaras när de bäddas in, så design med detta arv i åtanke.
+**Implementeringsöverväganden:**
 
-## Sammanfattning
+- **Målspårning**: Ställ in analysmål för både tackmeddelandevyer och omdirigeringar
+- **Mappning av användarresan**: Spåra hur användare interagerar med upplevelser efter överföringen
+- **Konverteringsoptimering**: A/B-testa olika tackmeddelanden och omdirigeringsmål
 
-Du har nu lärt dig att utnyttja formulärfragment i Edge Delivery Services för att förbättra utvecklingseffektiviteten och upprätthålla enhetligheten i hela organisationens formulär.
+**Mätningsstrategier:**
 
-**Viktiga resultat:**
+- Övervakningstid för tackmeddelanden innan uppsägning
+- Spåra klickfrekvenser för länkar i tackmeddelanden
+- Analysera användarbeteende på omdirigeringsmålsidor
 
-- **Förstå**: Utnyttja affärsvärdet och de tekniska funktionerna i formulärfragment
-- **Skapande**: Skapar återanvändbara formulärfragment med den universella redigeraren med rätt konfiguration
-- **Integrering**: Fragment har lagts till i formulär med korrekt referenskonfiguration och egenskapskonfiguration
-- **Hantering**: Utforskade livscykeloperationer och underhållsarbetsflöden för fragment
+## Kontrollpunkter för validering
 
-**Nästa steg:**
+När du har konfigurerat ditt arbete efter överföringen:
 
-- Skapa ett bibliotek med ofta använda fragment för din organisation
-- Upprätta namnkonventioner och styrningsprinciper för fragmentanvändning
-- Utforska avancerad integrering med [Form Data Models](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md) för dynamiska datadrivna fragment
-- Implementera fragmentbaserade blankettmallar för enhetliga användarupplevelser
+**Konfigurationsverifiering:**
 
-Era formulär har nu en modulär, underhållningsbar arkitektur som kan skalas effektivt mellan olika projekt samtidigt som de ger en enhetlig användarupplevelse.
+- Formuläregenskaperna visar det valda tackalternativet korrekt
+- Meddelandeinnehållet visas korrekt i förhandsgranskningsläge
+- Omdirigerings-URL:er är korrekt formaterade och tillgängliga
+- Alla länkar i meddelanden fungerar korrekt
+
+**Testning av användarupplevelsen:**
+
+- Skicka in testformulär för att verifiera att tackmeddelandet visas korrekt
+- Testa omdirigeringsfunktioner i olika webbläsare
+- Bekräfta att du svarar mobilt på tackmeddelanden
+- Bekräfta omdirigering av destinationer läses in korrekt
+
+**Analysinställningar:**
+
+- Spårningskoder har implementerats korrekt för tackmeddelanden
+- Spårning av omdirigeringsmål har konfigurerats
+- Målslutförandehändelser har utlösts korrekt
+
+## Nästa steg
+
+När du har konfigurerat ditt arbete efter överföringen:
+
+- **Övervaka prestanda**: Granska analyser för att förstå användarinteraktionen med tackmeddelanden eller omdirigeringssidor
+- **Förbättra och förbättra**: Använd användarfeedback och datainsikter för att förfina din strategi efter överföring
+- **Skalimplementering**: Använd framgångsrika mönster i andra formulär i organisationen
+
+**Relaterad dokumentation:**
+
+- [Konfigurationsguide för inskickning av formulär](submit-action.md)
+- [Bästa praxis för användarupplevelser](responsive-layout.md)
 

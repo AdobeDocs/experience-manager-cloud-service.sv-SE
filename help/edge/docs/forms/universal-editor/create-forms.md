@@ -6,7 +6,7 @@ feature: Edge Delivery Services
 role: User, Developer
 level: Beginner
 exl-id: 1eab3a3d-5726-4ff8-90b9-947026c17e22
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '1773'
 ht-degree: 0%
@@ -41,10 +41,12 @@ Innan du börjar ska du avgöra vilken malltyp som passar dina krav:
 
 **Vägledning för beslut:**
 
+![Beslut om mallval](/help/edge/docs/forms/universal-editor/assets/template-selection-decision.svg)
+
 - Använd **kärnkomponenter** för komplexa arbetsflöden, djup AEM-integrering eller om du vill utnyttja befintliga AEM-resurser.
 - Använd **Edge Delivery Services** för prestanda, enkelhet och moderna utvecklingsmetoder.
 
-![Beslut om mallval](/help/edge/docs/forms/universal-editor/assets/template-selection-decision.svg)
+
 *Beslutsflödesschema för val av lämplig malltyp*
 
 ## Förutsättningar
@@ -505,7 +507,7 @@ Nedan beskrivs vanliga problem och lösningar för AEM Forms med Edge Delivery S
 Om problemen kvarstår:
 
 1. Kontrollera status för Adobe Experience Cloud-tjänst.
-2. Granska [Edge Delivery Services-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=sv-SE).
+2. Granska [Edge Delivery Services-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html).
 3. Besök [Adobe Experience League Community](https://experienceleaguecommunities.adobe.com/).
 4. Kontakta Adobe kundtjänst.
 
@@ -528,6 +530,6 @@ När du är klar med formulärframtagningen och publiceringen bör du tänka på
 
 ### Prestandaoptimering
 
-- [Edge Delivery Services bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=sv-SE): Maximera prestanda.
+- [Edge Delivery Services bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html): Maximera prestanda.
 - [Formuläranalys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/analytics.html): Spåra formulärprestanda och användarbeteende.
 

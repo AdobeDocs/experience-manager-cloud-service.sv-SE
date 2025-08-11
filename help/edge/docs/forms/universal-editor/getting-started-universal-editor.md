@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '2609'
 ht-degree: 0%
@@ -70,7 +70,7 @@ För att Edge Delivery Services för AEM Forms ska fungera smidigt och framgång
 
 >[!TIP]
 >
-> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE).
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
 
 ## Sökväg A: Skapa ett nytt projekt med Forms
 
@@ -184,9 +184,9 @@ Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för i
 
 **Validering:** Bekräfta din GitHub-databasanslutning till AEM.
 
-    >[ !OBS!]
+    >[!OBS!]
     >
-    >Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+>Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
 +++
 
@@ -759,27 +759,6 @@ Om du ser&quot;Det går inte att matcha sökvägen till modulen &#39;/scripts/li
 
 +++
 
-+++Universal Editor Issues
-
-**Problem:** Formulärkomponenter visas inte i den universella redigeraren
-
-**Lösningar:**
-
-- Kontrollera att AEM Code Sync är installerat och körs
-- Kontrollera att `fstab.yaml` har rätt URL för AEM-författare
-- Kontrollera att tidig åtkomst är aktiverat för din AEM-instans
-- Bekräfta att `component-definition.json` innehåller formulärkomponenter
-
-**Problem:** Ändringar som inte visas efter publicering
-
-**Lösningar:**
-
-- Vänta på CDN-cacheuppdatering
-- Kontrollera webbläsarens cacheminne (prova incognito/private mode)
-- Kontrollera att rätt URL-format används
-
-+++
-
 +++Formulärfunktionsproblem
 
 **Problem:** Formuläröverföringar fungerar inte
@@ -801,4 +780,27 @@ Om du ser&quot;Det går inte att matcha sökvägen till modulen &#39;/scripts/li
 - Testa i den lokala utvecklingsmiljön
 
 +++
+
++++Universal Editor Issues
+
+**Problem:** Formulärkomponenter visas inte i den universella redigeraren
+
+**Lösningar:**
+
+- Kontrollera att AEM Code Sync är installerat och körs
+- Kontrollera att `fstab.yaml` har rätt URL för AEM-författare
+- Kontrollera att tidig åtkomst är aktiverat för din AEM-instans
+- Bekräfta att `component-definition.json` innehåller formulärkomponenter
+
+**Problem:** Ändringar som inte visas efter publicering
+
+**Lösningar:**
+
+- Vänta på CDN-cacheuppdatering
+- Kontrollera webbläsarens cacheminne (prova incognito/private mode)
+- Kontrollera att rätt URL-format används
+
++++
+
+
 

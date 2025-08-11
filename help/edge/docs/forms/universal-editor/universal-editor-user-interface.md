@@ -6,7 +6,7 @@ feature: Edge Delivery Services
 role: User, Developer, Admin
 level: Beginner
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: 53b1d38eb0e9e6cf18ca3ef7b1414bc231c82098
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '2358'
 ht-degree: 0%
@@ -349,7 +349,7 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
     ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
-**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
 
 #### **Innehållsutkast**
 
@@ -507,19 +507,19 @@ Använd kortkommandona för att skapa formulär snabbare och effektivare:
 - **Planera innan du skapar** - Skissa formulärstrukturen innan du startar
 - **Behåll det enkelt** - Undvik överväldigande användare med för många fält
 
-### **Prestandaoptimering**
-
-- **Minimera komponenter** - Använd endast nödvändiga formulärfält
-- **Optimera bilder** - Komprimera alla bilder som används i formulär
-- **Testa på mobilen** - Säkerställ goda prestanda på långsammare mobilanslutningar
-- **Verifiera tidigt** - Ställ in korrekt validering för att förhindra överföringsfel
-
 ### **Användarupplevelse**
 
 - **Testa ofta** - Använd förhandsgranskningsläget efter varje större ändring
 - **Tänk som användare** - Överväg att fylla i hela formuläret
 - **Ange tydliga etiketter** - Gör fälten tydliga för användarna
 - **Lägg till hjälptext** - Använd hjälptext för komplexa fält
+
+### **Prestandaoptimering**
+
+- **Minimera komponenter** - Använd endast nödvändiga formulärfält
+- **Optimera bilder** - Komprimera alla bilder som används i formulär
+- **Testa på mobilen** - Säkerställ goda prestanda på långsammare mobilanslutningar
+- **Verifiera tidigt** - Ställ in korrekt validering för att förhindra överföringsfel
 
 ## Nästa steg
 

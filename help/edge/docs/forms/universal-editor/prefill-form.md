@@ -6,7 +6,7 @@ role: User, Developer
 level: Beginner, Intermediate
 time: 45-60 minutes
 keywords: förifyllnadsformulär, adaptiva blanketttjänster, automatisk ifyllnad av blanketter
-source-git-commit: 074b81f9cb1050eac5175bdc46796f9371f3a35b
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 0%
@@ -249,7 +249,7 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 3. Välj **Förhandsgranska som HTML**
 4. Testa förifyllning genom att lägga till parametrar till URL:en:
 
-   https://your-preview-url.com?&lt;bindreferencefield>=&lt;value>
+   https://your-preview-url.com?<bindreferencefield>=<value>
 
    **Exempel:**
 
@@ -422,17 +422,19 @@ Kontrollera att alla fält har rätt `bindRef`-värden som matchar din FDM exakt
 
 +++
 
++++Kan jag använda flera förifyllningstjänster i ett formulär?
+
+Du kan konfigurera en primär förifyllningstjänst per formulär. Du kan emellertid kombinera olika datakällor i en enda formulärdatamodell för att få liknande funktionalitet.
+
++++
+
 +++Hur hanterar jag autentisering för förifyllda tjänster?
 
 Autentiseringen beror på din datakällkonfiguration. Konfigurera autentisering i inställningarna för datakällan för FDM-baserad förifyllning. För förifyllning av utkast måste användaren vanligtvis vara inloggad för att komma åt sina sparade utkast.
 
 +++
 
-+++Kan jag använda flera förifyllningstjänster i ett formulär?
 
-Du kan konfigurera en primär förifyllningstjänst per formulär. Du kan emellertid kombinera olika datakällor i en enda formulärdatamodell för att få liknande funktionalitet.
-
-+++
 
 ## Relaterade ämnen
 

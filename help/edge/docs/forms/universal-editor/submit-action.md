@@ -4,9 +4,9 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 keywords: hur du väljer en åtgärd för att skicka ett anpassat formulär, kopplar ett anpassat formulär till SharePoint-listan, ansluter ett anpassat formulär till SharePoint-dokumentbiblioteket, ansluter ett anpassat formulär till formulärdatamodellen (FDM)
 feature: Adaptive Forms, Edge Delivery Services
 role: User, Developer
-source-git-commit: d221959bbf19a874ec65eb414c4c49811df291ca
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,11 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 |---------|-----------------------------|
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
 | AEM as a Cloud Service (Edge Delivery Services) | Den här artikeln |
 
-## Ökning
 
 Inlämning av blanketter är det avgörande steget i användarens resa - där insamlade data behandlas och åtgärder vidtas. Det här dokumentet innehåller en omfattande guide till hur du konfigurerar och hanterar Skicka-åtgärder för Adaptive Forms i Universal Editor.
 

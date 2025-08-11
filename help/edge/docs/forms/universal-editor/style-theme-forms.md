@@ -4,7 +4,7 @@ description: Anpassa temat och formatet för AEM Forms som levereras via Edge De
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: ac780399-34fe-457d-aaf4-b675656c024d
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '2493'
 ht-degree: 0%
@@ -147,7 +147,6 @@ Variabler för typografi och mellanrum ger omfattande kontroll över textpresent
     --form-input-padding: 0.5rem 0.4rem;
 }
 ```
-
 +++
 
 +++ Layout- och strukturvariabler
@@ -1109,7 +1108,6 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
   text-align: center;
 }
 ```
-
 +++
 
 +++ Formatering baserad på fältnamn
@@ -1447,32 +1445,6 @@ main .form .text-wrapper input {
 
 +++
 
-+++ Vanliga väljarfel
-
-```css
-/- ❌ Incorrect: Assumes direct nesting */
-.form form input {
-  /- This might miss inputs in wrappers */
-}
-
-/- ✅ Correct: Target actual structure */
-.form .text-wrapper input {
-  /- Targets actual HTML structure */
-}
-
-/- ❌ Avoid: Unnecessary specificity */
-main .form form .text-wrapper input {
-  /- Too specific, harder to override */
-}
-
-/- ✅ Preferred: Balanced specificity */
-.form .text-wrapper input {
-  /- Easier to maintain and override */
-}
-```
-
-+++
-
 +++ Formulärtillståndsformat
 
 ```css
@@ -1499,6 +1471,34 @@ main .form form .text-wrapper input {
 ```
 
 +++
+
++++ Vanliga väljarfel
+
+```css
+/- ❌ Incorrect: Assumes direct nesting */
+.form form input {
+  /- This might miss inputs in wrappers */
+}
+
+/- ✅ Correct: Target actual structure */
+.form .text-wrapper input {
+  /- Targets actual HTML structure */
+}
+
+/- ❌ Avoid: Unnecessary specificity */
+main .form form .text-wrapper input {
+  /- Too specific, harder to override */
+}
+
+/- ✅ Preferred: Balanced specificity */
+.form .text-wrapper input {
+  /- Easier to maintain and override */
+}
+```
+
++++
+
+
 
 ### **Komponentspecifika metodtips**
 

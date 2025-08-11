@@ -4,7 +4,7 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: f843a7c91c3d47610580a3787a96e7e3bd49ba09
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '1789'
 ht-degree: 0%
@@ -104,7 +104,7 @@ Innan en anpassad komponent kan användas måste den registreras så att Univers
 
 >[!NOTE]
 >
-> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
+> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
 
 ### &#x200B;2. Definiera egenskaperna för den anpassade komponenten för redigering
 
@@ -161,7 +161,7 @@ Den anpassade komponenten innehåller en komponentmodell som anger vilka egenska
 
    >[!NOTE]
    >
-   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
+   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
 
    Du kan också [lägga till anpassade egenskaper](#adding-custom-properties-for-your-custom-component) i en anpassad komponent för att utöka dess funktioner.
 
@@ -504,12 +504,12 @@ FieldTypes som stöds för formulär är:
 - tal-input
 - date-input
 - panel
-- kryssruta
-- nedrullningsbar
-- alternativgrupp
 - normal text
 - file-input
 - e-post
 - image
 - knapp
+- kryssruta
+- nedrullningsbar
+- alternativgrupp
 

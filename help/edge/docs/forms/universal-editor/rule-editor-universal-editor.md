@@ -5,7 +5,7 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '2598'
 ht-degree: 0%
@@ -308,7 +308,7 @@ Du skapar ett formulär som:
 
 1. **Öppna Universal Editor**:
    - Navigera till AEM Sites-konsolen, markera sidan och klicka på **Redigera**
-   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) är korrekt konfigurerad
+   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) är korrekt konfigurerad
 
 2. **Lägg till formulärkomponenter i den här ordningen**:
    - Titel (H2):&quot;Skatteberäkningsformulär&quot;
@@ -664,7 +664,7 @@ Forms blir kraftfulla verktyg för datainsamling, kvalificering av leads och anv
 
 +++
 
-+++ Nästa steg
+## Nästa steg
 
 **Rekommenderad utbildningsväg**:
 
@@ -676,8 +676,7 @@ Forms blir kraftfulla verktyg för datainsamling, kvalificering av leads och anv
 
 **Ytterligare resurser**:
 
-- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) för ett bredare sammanhang
+- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) för ett bredare sammanhang
 - [Extension Manager guide](/help/implementing/developing/extending/extension-manager.md) för att aktivera ytterligare funktioner
 - [Edge Delivery Services-formulär](/help/edge/docs/forms/overview.md) för omfattande riktlinjer för formulärutveckling
 
-+++

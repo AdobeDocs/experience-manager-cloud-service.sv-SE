@@ -6,9 +6,9 @@ feature: Edge Delivery Services
 role: User, Developer
 level: Beginner
 exl-id: 0c7fb491-4bad-4202-a472-87e6e6d9ab40
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2382'
 ht-degree: 0%
 
 ---
@@ -173,7 +173,7 @@ Panellayouten organiserar relaterat innehåll i visuellt distinkta avsnitt, så 
 
 **Så här implementerar du**
 
-1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
+1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
 2. Gruppera relaterade fält i varje panel för att upprätthålla en logisk ordning.
 3. Tilldela tydliga beskrivande rubriker till varje panelavsnitt.
 4. Se till att det finns tillräckligt med mellanrum mellan panelerna för att förhindra att det blir rörigt.
@@ -206,7 +206,7 @@ Guiden Layout guidar användarna genom en flerstegsprocess och presenterar ett a
 
 **Så här implementerar du**
 
-1. Infoga [Wizard Component](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
+1. Infoga [Wizard Component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
 2. Dela upp formuläret i logiska steg, helst mellan 3 och 7, så att varje steg är fokuserat och hanterbart.
 3. Lägg till förloppsindikatorer som hjälper användarna att förstå sin position i processen.
 4. Ange tydliga navigeringskontroller, som knapparna Nästa, Bakåt och Spara.
@@ -246,7 +246,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 **Så här implementerar du**
 
-1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
+1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
 2. Gruppera relaterat valfritt eller sekundärt innehåll i varje dragspelssektion.
 3. Använd tydliga, beskrivande rubriker för varje avsnitt för att hjälpa användarna förstå vilken information som finns i avsnittet.
 4. Ange lämpliga standardlägen för öppna och stängda för varje avsnitt baserat på prioritet och användarbehov.
@@ -317,7 +317,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 +++
 
-## Omfattande felsökning
+## Felsökning
 
 ### Layoutproblem
 

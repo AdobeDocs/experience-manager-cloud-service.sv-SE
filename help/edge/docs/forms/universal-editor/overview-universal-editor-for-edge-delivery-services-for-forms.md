@@ -4,7 +4,7 @@ description: Använd Universell redigerare för Edge Delivery Services for Forms
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: d711e0d1-a2fc-4aa6-af87-6e77a7bc5d2e
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 0%
@@ -173,11 +173,13 @@ Absolut. Den universella redigeraren stöder smidig databindning med backend-sys
 **F: Går det att anpassa formulärkomponenterna?**
 Ja, i Universell redigerare kan utvecklare skapa anpassade komponenter som är anpassade efter specifika organisatoriska behov. Dessutom kan du utöka redigerarens funktionalitet med hjälp av UI-tillägg och anpassade arbetsflöden.
 
+**F: Vilken typ av analys kan jag få från formulären?**
+Den universella redigeraren innehåller inbyggda analys- och spårningsverktyg för att övervaka användarinteraktioner, formuläröverföringshastighet och konverteringsstatistik. Dessa insikter hjälper er att optimera era formulär för bättre prestanda.
+
 **F: Hur hanterar den universella redigeraren tillgängligheten?**
 Den universella redigeraren följer standarderna för tillgänglighet, inklusive WCAG (Web Content Accessibility Guidelines). Detta garanterar att formulären kan användas av personer med funktionshinder, vilket ger en heltäckande upplevelse.
 
-**F: Vilken typ av analys kan jag få från formulären?**
-Den universella redigeraren innehåller inbyggda analys- och spårningsverktyg för att övervaka användarinteraktioner, formuläröverföringshastighet och konverteringsstatistik. Dessa insikter hjälper er att optimera era formulär för bättre prestanda.
+
 
 
 
