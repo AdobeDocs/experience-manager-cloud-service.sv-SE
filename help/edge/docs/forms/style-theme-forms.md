@@ -637,6 +637,7 @@ Väljaren formaterar alla paneler som kan upprepas, vilket ger ett konsekvent ut
   margin-bottom: 10px;
 }
 ```
+
 Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vilket ger ett konsekvent avstånd mellan fälten.
 
 - Ange specifika fält som mål (inom en panel):

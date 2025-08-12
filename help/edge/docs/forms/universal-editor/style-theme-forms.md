@@ -1109,6 +1109,7 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
   text-align: center;
 }
 ```
+
 +++
 
 +++ Formatering baserad på fältnamn

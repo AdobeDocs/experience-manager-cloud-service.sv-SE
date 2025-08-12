@@ -93,7 +93,7 @@ Kunder som har en licens hos en loggningsleverantör eller som är värd för en
     </tr>
   </tbody>
 </table>
-</html>
+&lt;/html>
 
 >[!NOTE]
 >
@@ -216,7 +216,7 @@ Använd tabellen nedan för att se vad som krävs för konfigurationen av avance
       <td>Ja</td>
   </tbody>
 </table>
-</html>
+&lt;/html>
 
 >[!NOTE]
 >Om loggarna visas från en enda IP-adress avgörs av ditt val av avancerad nätverkskonfiguration.  Dedikerade urkor måste användas för att underlätta detta.
