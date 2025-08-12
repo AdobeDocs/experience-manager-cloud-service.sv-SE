@@ -4,17 +4,17 @@ description: Lär dig hur du skapar en anpassad Skicka-åtgärd för en anpassad
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Intermediate
-source-git-commit: b703d4c0b0bb25ecc57e5335b672069f7ad2199d
+exl-id: a369b585-d148-4b5a-8afe-d5673ea865d0
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en anpassad sändningsåtgärd för adaptiva Forms (kärnkomponenter)
 
-Med en skicka-åtgärd kan användarna välja mål för de data som hämtas från ett formulär och definiera ytterligare funktioner som ska utföras när formulär skickas. AEM har stöd för flera [färdiga åtgärder (OTB)](/help/forms/configure-submit-actions-core-components.md), t.ex. att skicka ett e-postmeddelande eller spara data till SharePoint eller OneDrive.
+Med en skicka-åtgärd kan användarna välja mål för de data som hämtas från ett formulär och definiera ytterligare funktioner som ska utföras när formulär skickas. AEM-formulär har stöd för flera [skicka-åtgärder som är färdiga (OTB)](/help/forms/configure-submit-actions-core-components.md), till exempel att skicka ett e-postmeddelande eller spara data till SharePoint eller OneDrive.
 
 Du kan också skapa en anpassad skickaåtgärd för att lägga till funktioner som inte ingår i de [färdiga alternativen](/help/forms/configure-submit-actions-core-components.md#select-and-configure-a-submit-action-for-an-adaptive-form-select-and-configure-submit-action). Integrera till exempel formulärdata med ett program från en annan leverantör eller utlösa ett personanpassat SMS-meddelande baserat på användarens indata.
 
@@ -47,11 +47,11 @@ I bilden nedan visas stegen för att skapa en anpassad skickaåtgärd för ett a
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa uppgifter finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
    **Projektet är klart!**
 
-   När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Den här mappen namnges efter ditt program (till exempel app-id). Den här mappen innehåller alla filer och all kod som hämtats från din AEM as a Cloud Service Git-databas. Du kan hitta `<appid>` för ditt AEM projekt i filen `archetype.properties`.
+   När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Den här mappen namnges efter ditt program (till exempel app-id). Den här mappen innehåller alla filer och all kod som hämtats från din AEM as a Cloud Service Git-databas. Du kan hitta `<appid>` för ditt AEM-projekt i filen `archetype.properties`.
 
    ![Egenskaper för arkitekttyp](/help/forms/assets/custom-submit-action-archetype-app-id.png)
 
@@ -81,10 +81,10 @@ I bilden nedan visas stegen för att skapa en anpassad skickaåtgärd för ett a
 
    `/ui.apps/src/main/content/jcr_root/apps/<app-id>/customsubmitaction/`
 
-   `Important`: Ersätt &lt;app-id> med ditt faktiska program-ID.
+   `Important`: Ersätt `<app-id>` med ditt faktiska program-ID.
 
 1. Skapa ny konfigurationsfil.
-Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
+Skapa en ny fil med namnet `customsubmitaction` i mappen `.content.xml`.
 
    ![Skapa konfigurationsfil](/help/forms/assets/custom-submit-action-create-config-folder.png)
 
@@ -134,7 +134,7 @@ Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
 
 1. Navigera till följande katalog i din `[AEMaaCS project directory]`:
    `/core/src/main/java/com/<app-id>/core/service/`
-   `Important`: Ersätt &lt;app-id> med ditt faktiska program-ID.
+   `Important`: Ersätt `<app-id>` med ditt faktiska program-ID.
 1. Skapa en ny Java-fil för att implementera tjänsten för den tillagda sändningsåtgärden. Lägg till exempel till en ny Java-fil som `CustomSubmitService.java`.
 
    ![Anpassad mapp för överföringsåtgärd](/help/forms/assets/custom-submit-action-custom-submit-folder.png)
@@ -204,9 +204,9 @@ Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
 
       ![Lokal distribution](/help/forms/assets/custom-submit-action-local-deployment.png)
 
-**Distribuera koden för Cloud Servicen**
+**Distribuera koden för Cloud Service-miljön**
 
-* Distribuera AEM as a Cloud Service, `[AEMaaCS project directory]`, till din Cloud Service. Så här distribuerar du till din Cloud Service:
+* Distribuera AEM as a Cloud Service, `[AEMaaCS project directory]`, till din Cloud Service-miljö. Så här distribuerar du till din Cloud Service-miljö:
 
    1. Genomför ändringarna:
 
@@ -214,9 +214,9 @@ Skapa en ny fil med namnet `.content.xml` i mappen `customsubmitaction`.
 
    1. Distribuera den uppdaterade koden:
 
-      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline). Den genererar och distribuerar automatiskt den uppdaterade koden med det nya stödet för åtgärden Skicka.
+      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline). Den genererar och distribuerar automatiskt den uppdaterade koden med det nya stödet för åtgärden Skicka.
 
-      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
+      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
       ![Molndistribution](/help/forms/assets/custom-submit-action-cloud-deployment.png)
 

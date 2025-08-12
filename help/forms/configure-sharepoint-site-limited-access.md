@@ -5,16 +5,16 @@ keywords: Hur man konfigurerar SharePoint Site med begränsad åtkomst?, Konfigu
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: 3230bab2-c1aa-409d-9f01-c42cf88b1135
-source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
-<span class="preview"> Funktionen är tillgänglig under det tidiga adopterprogrammet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
-
 # Konfigurera SharePoint Site med begränsad åtkomst med hjälp av behörighetsomfattning
+
+<span class="preview"> Funktionen är tillgänglig under det tidiga adopterprogrammet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 Syftet med begränsad eller begränsad åtkomst är att förbättra säkerhetshanteringen genom att tillåta administratörer att styra åtkomsten till en viss SharePoint-webbplats eller en grupp av SharePoint-webbplatser. Behörighetsnivån är användbar när du behöver ge en användare eller grupp åtkomst till en specifik webbplats utan att tillåta dem att visa andra otillåtna SharePoint-platser.
 

@@ -4,9 +4,9 @@ description: Läs mer om de bästa sätten att sälja användarmappning för tj�
 exl-id: 72f0dcbf-b4e6-4a73-8232-3574a212ac19
 feature: Security
 role: Admin
-source-git-commit: f28f212574dda0ece2cedb56a714d381e5bd7d3c
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Sekvensen för att hämta en tjänst `Session/ResourceResolver` fungerar så hä
 
 1. Hämta huvudnamn från `ServiceUserMapper` =>-databasinloggning före autentisering enligt beskrivningen nedan
 1. Hämta användar-ID från `ServiceUserMapper`
-1. Kontrollera om 1ServiceUserConfiguration&grave; är inaktuellt användar-ID
+1. Kontrollera om `1ServiceUserConfiguration` är inaktuellt för användar-ID
 1. Standardinloggning för Sling-tjänsten med användar-ID (t.ex. en sekvens av `createAdministrativeSession` och personifiering för användar-ID)
 
 Den nya mappningen med huvudnamn resulterar i följande förenklade databasinloggning:
@@ -118,7 +118,7 @@ När du har verifierat att ingen befintlig tjänstanvändare i AEM kan användas
 
 **Namnkonvention**
 
-AEM säkerhetsteam har definierat följande namngivningskonvention för tjänstanvändare för att göra nya tjänstanvändare mer konsekventa och för att förbättra läsbarheten och underhållet.
+AEM säkerhetsteam har definierat följande namngivningskonvention för tjänstanvändare för att göra nya användare mer konsekventa och för att förbättra läsbarheten och underhållet.
 
 Ett tjänstanvändarnamn består av 3 element avgränsade med bindestreck **-**:
 

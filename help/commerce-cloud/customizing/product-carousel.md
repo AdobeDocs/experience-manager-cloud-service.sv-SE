@@ -5,9 +5,9 @@ feature: Commerce Integration Framework
 role: Admin, Developer
 exl-id: 758e0e13-c4d8-4d32-bcc9-91a36b3ffa98
 index: false
-source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,15 @@ Produktkarusellkomponenten utökas genom hela kursen. Som ett första steg lägg
 1. Infoga en ny Product Carousel-komponent i huvudlayoutbehållaren på sidan.
    ![Product Carousel-komponent](/help/commerce-cloud/assets/product-carousel-component.png)
 1. Expandera sidopanelen (om den inte redan är aktiverad) och växla till listrutan **Produkter** för att hitta resurser.
-     ![Carousel-produkter](/help/commerce-cloud/assets/carousel-products.png)    
+
+   ![Carousel-produkter](/help/commerce-cloud/assets/carousel-products.png)
+
 1. Här visas en lista över tillgängliga produkter från en ansluten Adobe Commerce-instans.
+
    ![Ansluten instans](/help/commerce-cloud/assets/connected-instance.png)
+
 1. Produkter visas enligt nedan med standardegenskaper:
+
    ![Produkten visas med egenskaper](/help/commerce-cloud/assets/discount.png)
 
 ## Uppdatera försäljningsmodellen {#update-sling-model}
@@ -50,7 +55,7 @@ Delegeringsmönstret för delningsmodeller gör att `CustomCarouselImpl` kan ref
    private ProductCarousel productCarousel;
    ```
 
-1. Anteckningen @PostConstruct säkerställer att den här metoden anropas när Sling-modellen initieras. Produktens GraphQL-fråga har redan utökats med metoden extendProductQueryWith för att hämta attribut. Uppdatera GraphQL-frågan så att den innehåller  attribut i den partiella frågan:
+1. Anteckningen @PostConstruct säkerställer att den här metoden anropas när Sling-modellen initieras. Produktens GraphQL-fråga har redan utökats med metoden extendProductQueryWith för att hämta attribut. Uppdatera GraphQL-frågan så att attributet inkluderas i den partiella frågan:
 
    ```
    @PostConstruct

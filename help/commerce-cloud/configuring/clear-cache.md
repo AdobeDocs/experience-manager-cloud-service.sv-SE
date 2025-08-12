@@ -5,9 +5,9 @@ feature: Commerce Integration Framework
 role: Admin
 exl-id: f89c07c7-631f-41a4-b5b9-0f629ffc36f0
 index: false
-source-git-commit: 173b70aa6f9ad848d0f80923407bf07540987071
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,7 @@ Det här dokumentet innehåller en omfattande guide om hur du aktiverar och veri
 Som standard är funktionen för rensning av cache inaktiverad i CIF-konfigurationen. Om du vill aktivera det måste du lägga till följande i dina motsvarande projekt:
 
 * Aktivera servern `/bin/cif/invalidate-cache` som hjälper dig att utlösa API:t för rensning av cache med deras motsvarande begäranden genom att lägga till konfigurationen `com.adobe.cq.cif.cacheinvalidation.internal.InvalidateCacheNotificationImpl.cfg.json` i ditt projekt enligt [här](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config.author/com.adobe.cq.cif.cacheinvalidation.internal.InvalidateCacheNotificationImpl.cfg.json).
+
   >[!NOTE]
   >
   > Konfiguration behöver bara aktiveras för författarinstanserna.
@@ -45,11 +46,12 @@ Som standard är funktionen för rensning av cache inaktiverad i CIF-konfigurati
 
 Så här kontrollerar du att allt är korrekt konfigurerat:
 
-* Trigga motsvarande server till Author Instance AEM, till exempel [http://localhost:4502/bin/cif/invalidate-cache](http://localhost:4502/bin/cif/invalidate-cache), så får du ett 200 HTTP-svar.
+* Trigga motsvarande server till Author Instance AEM, till exempel [http://localhost:4502/bin/CIF/invalidate-cache](http://localhost:4502/bin/cif/invalidate-cache), och du bör få ett 200 HTTP-svar.
 * Kontrollera att en nod har skapats under följande sökväg i författarinstanser: `/var/cif/cacheinvalidation`. Nodnamnet följer mönstret: `cmd_{{timestamp}}`.
 * Kontrollera att samma nod har skapats i varje publiceringsinstans.
 
 För att kontrollera om cacheminnen rensas ordentligt:
+
 1. Navigera till motsvarande PLP- och PDP-sidor.
 2. Uppdatera ett produkt- eller kategorinamn i e-handelsmotorn. Ändringarna återspeglas inte direkt i AEM baserat på cachekonfigurationer.
 3. Trigga serverletens API så här:
@@ -57,7 +59,7 @@ För att kontrollera om cacheminnen rensas ordentligt:
    ```
    curl --location '{Author AEM Instance Url}/bin/cif/invalidate-cache' \
    --header 'Content-Type: application/json' \
-   --header 'Authorization: ••••••' \ // Mandatory
+   --header 'Authorization: ******' \ // Mandatory
    --header 'Cookie: private_content_version=0299c5e4368a1577a6f454a61370317b' \
    --data '{
        "productSkus": ["Sku1", "Sku2"], // Optional: Pass the corresponding sku which got updated.
@@ -109,7 +111,7 @@ I den här tabellen visas den obligatoriska egenskapen som måste skickas i alla
 ```
 curl --location 'https://author-p10603-e145552-cmstg.adobeaemcloud.com/bin/cif/invalidate-cache' \
 --header 'Content-Type: application/json' \
---header 'Authorization: ••••••' \
+--header 'Authorization: ******' \
 --header 'Cookie: private_content_version=0299c5e4368a1577a6f454a61370317b' \
 --data '{
 "productSkus": ["VP01", "VT10"], // This will clear cache for the corresponding pages related with mentioned skus.

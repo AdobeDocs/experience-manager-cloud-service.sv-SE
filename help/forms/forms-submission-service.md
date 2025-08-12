@@ -8,7 +8,7 @@ level: Beginner, Intermediate
 hide: true
 hidefromtoc: true
 exl-id: 12b4edba-b7a1-4432-a299-2f59b703d583
-source-git-commit: 05c0d8fd16cc8bd805a0e8644d3145685fe6fa12
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '1545'
 ht-degree: 0%
@@ -115,7 +115,7 @@ Välj en av de plattformar som stöds:
 
 >[!TIP]
 >
->**Ny på Edge Delivery Services?** Börja med självstudiekursen [Komma igång](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) för att konfigurera din projektgrund.
+>**Ny på Edge Delivery Services?** Börja med självstudiekursen [Komma igång](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial) för att konfigurera din projektgrund.
 
 ## Konfigurationsmetoder
 
@@ -135,7 +135,7 @@ Forms Submission Service erbjuder två konfigurationsmetoder. Välj den metod so
 
 Innan du konfigurerar någon av metoderna måste du se till att din grund för AEM-projektet är klar:
 
-1. **Skapa eller uppdatera ditt AEM-projekt** med det senaste adaptiva Forms-blocket ([Komma igång-självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial))
+1. **Skapa eller uppdatera ditt AEM-projekt** med det senaste adaptiva Forms-blocket ([Komma igång-självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/tutorial))
 
 2. **Uppdatera`fstab.yaml`** i projektets rot:
 
@@ -147,8 +147,6 @@ Innan du konfigurerar någon av metoderna måste du se till att din grund för A
 
 
 3. **Dela projektmappen** med `forms@adobe.com` (redigeringsbehörighet krävs)
-
-+++
 
 +++
 
@@ -170,7 +168,7 @@ Skapa en formulärstruktur med Google Sheets eller Microsoft Excel.
 1. **Öppna kalkylbladsplattformen** (Google-blad eller Microsoft Excel)
 2. **Skapa ett nytt kalkylblad** för ditt formulärprojekt
 3. **Namnge bladet** (måste vara antingen `helix-default` eller `shared-aem`)
-4. **Definiera formulärstrukturen** med hjälp av guiden [Skapa formulär](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)
+4. **Definiera formulärstrukturen** med hjälp av guiden [Skapa formulär](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)
 
 ![Formulärdefinition](/help/forms/assets/form-submission-definition.png)
 *Exempel: Formulärdefinition med fälttyper, etiketter och valideringsregler*
@@ -369,6 +367,7 @@ Postman har ett användarvänligt gränssnitt för att testa API-inskickade data
 1. **Skapa en ny POST-begäran** i Postman
 2. **Konfigurera slutpunkten:** `https://forms.adobe.com/adobe/forms/af/submit/{id}`
 3. **Ersätt platshållare:**
+
    - `{id}` → Ditt faktiska formulär-ID
    - `[repository]` → Ditt GitHub-databasnamn
    - `[organization]` → Din GitHub-organisation/ditt användarnamn
@@ -581,7 +580,7 @@ Nu när du har konfigurerat Forms Submission Service kan du utforska följande r
 
 +++ Förbättra din Forms
 
-- **[Skapa avancerad Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)** - Lägg till validering, villkorslogik och anpassad formatering
+- **[Skapa avancerad Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/getting-started-edge-delivery-services-forms/create-forms)** - Lägg till validering, villkorslogik och anpassad formatering
 - **[Handbok för formulärkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/build-forms/forms-components)** - Utforska tillgängliga formulärfältstyper
 
 +++

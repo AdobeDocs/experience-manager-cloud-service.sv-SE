@@ -4,7 +4,7 @@ description: Läs om grunderna och de bästa sätten att distribuera till AEM as
 feature: Deploying
 exl-id: 7fafd417-a53f-4909-8fa4-07bdb421484e
 role: Admin
-source-git-commit: d6c5c70e8b6565a20866d392900aef219d3fd09d
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '3440'
 ht-degree: 0%
@@ -56,8 +56,7 @@ I följande video visas en översikt över hur du distribuerar kod till AEM as a
 
 ![image](https://git.corp.adobe.com/storage/user/9001/files/e91b880e-226c-4d5a-93e0-ae5c3d6685c8) -->
 
-Kunder driftsätter anpassad kod i molnmiljöer via Cloud Manager. Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett program på AEM as a Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Package Manager](/help/implementing/developing/tools/package-manager.md) i molnmiljöer innehåller namnet alltså &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Mer detaljerad dokumentation om konverteraren finns i [&#128279;](https://github.com/apache/sling-org-apache-sling-feature-cpconverter)
-sling-org-apache-sling-feature-cpconverter på GitHub  .
+Kunder driftsätter anpassad kod i molnmiljöer via Cloud Manager. Cloud Manager omvandlar lokalt sammansatta innehållspaket till en artefakt som överensstämmer med Sling Feature Model, som är hur ett program på AEM as a Cloud Service beskrivs när det körs i en molnmiljö. När du tittar på paketen i [Package Manager](/help/implementing/developing/tools/package-manager.md) i molnmiljöer innehåller namnet alltså &quot;cp2fm&quot; och alla omformade paket har tagits bort. De kan inte interagera med dem, vilket innebär att de inte kan hämtas, replikeras eller öppnas. Mer information om konverteraren finns i [sling-org-apache-sling-feature-cpconverter på GitHub](https://github.com/apache/sling-org-apache-sling-feature-cpconverter).
 
 Innehållspaket som skrivits för program på AEM as a Cloud Service måste ha en ren separation mellan oföränderligt och muterbart innehåll, och Cloud Manager installerar bara det muterbara innehållet, vilket även utlöser ett meddelande som följande:
 
@@ -112,7 +111,7 @@ Efter övergång till en ny version av programmet:
    * Kontextmedveten konfiguration (allt under `/conf`) (lägg till, ändra, ta bort)
    * Skript (paket kan utlösa Install-kopplingar vid olika faser av installationsprocessen för paketinstallationen. Se [Jackrabbit-dokumentation för fillevault](https://jackrabbit.apache.org/filevault/installhooks.html) om hur du installerar kopplingar. I AEM CS används för närvarande Fireworks version 3.4.0, som begränsar möjligheten att installera kopplingar till administratörer, systemanvändare och medlemmar i administratörsgruppen).
 
-Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html?lang=sv-SE).
+Det går att begränsa installation av muterbart innehåll för författare eller publicering genom att bädda in paket i en install.author- eller install.publish-mapp under `/apps`. Omstrukturering för att återspegla denna separation gjordes i AEM 6.5 och information om rekommenderad projektomstrukturering finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html).
 
 >[!NOTE]
 >Innehållspaket distribueras till alla miljötyper (dev, stage, prod). Det går inte att begränsa distributionen till en viss miljö. Denna begränsning finns för att säkerställa möjligheten att testa automatiserad körning. Innehåll som är specifikt för en miljö kräver manuell installation med hjälp av [Package Manager](/help/implementing/developing/tools/package-manager.md).
@@ -121,7 +120,7 @@ Det finns inte heller någon mekanism för att återställa ändringar i det än
 
 Alla inkluderade tredjepartspaket måste valideras som AEM as a Cloud Service-kompatibla, annars leder inkludering till ett distributionsfel.
 
-Som nämnts ovan bör kunder med befintliga kodbaser följa den databasomstrukturering som behövs för de ändringar i 6.5-databasen som beskrivs i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html?lang=sv-SE).
+Som nämnts ovan bör kunder med befintliga kodbaser följa den databasomstrukturering som behövs för de ändringar i 6.5-databasen som beskrivs i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/restructuring/repository-restructuring.html).
 
 ## Repoinit {#repoinit}
 
@@ -177,7 +176,7 @@ above appears to be internal, to confirm with Brian -->
 >id="aemcloud_packagemanager"
 >title="Pakethanteraren - migrerar paket med ändringsbart innehåll"
 >abstract="Utforska användningen av Package Manager för de användningsområden där ett innehållspaket ska installeras som en av. I installationen ingår att importera specifikt innehåll från produktion till testning för att felsöka ett produktionsproblem, överföra ett litet innehållspaket från en lokal miljö till AEM Cloud-miljöer, med mera."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=sv-SE" text="Verktyget Innehållsöverföring"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html" text="Verktyget Innehållsöverföring"
 
 I vissa fall bör ett innehållspaket installeras som en&quot;engångspaket&quot;. Om du till exempel importerar visst innehåll från produktion till mellanlagring felsöker du ett produktionsproblem. I dessa scenarier kan [Package Manager](/help/implementing/developing/tools/package-manager.md) användas i miljöer på AEM as a Cloud Service.
 
@@ -263,7 +262,7 @@ För närvarande fungerar inte AEM as a Cloud Service med indexhanteringsverktyg
 
 ## Replikering {#replication}
 
-Publikationsmekanismen är bakåtkompatibel med [AEM Replication Java™ API:er](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE).
+Publikationsmekanismen är bakåtkompatibel med [AEM Replication Java™ API:er](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).
 
 Om du vill utveckla och testa med replikering med AEM snabbstart, som är klar för molnet, måste du använda de klassiska replikeringsfunktionerna tillsammans med en författare-/publiceringskonfiguration. Om användargränssnittets startpunkt på AEM Author tas bort för molnet går användarna till `http://localhost:4502/etc/replication` för konfiguration.
 

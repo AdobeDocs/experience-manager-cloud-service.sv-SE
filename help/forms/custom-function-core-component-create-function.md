@@ -5,7 +5,7 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: e7ab4233-2e91-45c6-9377-0c9204d03ee9
-source-git-commit: 249c60c6b4a888b8d32bbb6bebf159c972f82f94
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -42,9 +42,10 @@ Innan du börjar lägga till en anpassad funktion i din adaptiva Forms måste du
 
 ## Skapa en anpassad funktion
 
-Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=sv-SE#developing).
+Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 
 Steg för att skapa anpassade funktioner är:
+
 1. [Skapa ett klientbibliotek](#create-client-library)
 1. [Lägga till klientbibliotek i ett adaptivt formulär](#use-custom-function)
 
@@ -54,7 +55,7 @@ Du kan lägga till anpassade funktioner genom att lägga till ett klientbibliote
 
 **Klona databasen**
 
-Klona din [AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git):
+Klona din [AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git):
 
 1. Öppna kommandoraden eller terminalfönstret.
 
@@ -110,7 +111,7 @@ Lägg till följande i den tillagda klientbiblioteksmappen:
        function.js
    ```
 
-1. Lägg till javascript-filen som `function.js` i mappen `js` som innehåller de anpassade funktionerna:
+1. Lägg till javascript-filen som `js` i mappen `function.js` som innehåller de anpassade funktionerna:
 
    ```javascript
     /**
@@ -150,9 +151,9 @@ Lägg till följande i den tillagda klientbiblioteksmappen:
 
 ![XML för anpassat funktionsfilter](/help/forms/assets/custom-function-filterxml.png)
 
-**Distribuera den nyligen skapade biblioteksmappen för klienter till AEM**
+**Distribuera den nyligen skapade biblioteksmappen för klient till din AEM-miljö**
 
-Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud Service. Så här distribuerar du till din Cloud Service:
+Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud Service-miljö. Så här distribuerar du till din Cloud Service-miljö:
 
 1. Verkställ ändringarna
 
@@ -168,7 +169,7 @@ Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud S
 
    1. Utlösa en distribution av koden via den befintliga pipeline-funktionen för hela stackar. Detta skapar och distribuerar automatiskt den uppdaterade koden.
 
-Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
+Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
 När pipeline har körts blir den anpassade funktion som lagts till i klientbiblioteket tillgänglig i regelredigeraren [Adaptiv form](/help/forms/rule-editor-core-components.md).
 
@@ -228,13 +229,13 @@ Låt oss förhandsgranska formuläret för att se hur de anpassade funktionerna 
 
 >[!NOTE]
 >
-> Du kan referera till följande [anpassade funktionsmapp](/help/forms/assets//customfunctions.zip). Hämta och installera den här mappen i AEM med hjälp av [Package Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+> Du kan referera till följande [anpassade funktionsmapp](/help/forms/assets//customfunctions.zip). Hämta och installera den här mappen i din AEM-instans med [Package Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
 ## Funktioner för anpassade funktioner
 
-Anpassade funktioner i AEM erbjuder en robust lösning för att utöka och personalisera funktionaliteten i era formulär. Du kan använda anpassade funktioner för att tillgodose organisationens specifika behov.
+Anpassade funktioner i AEM-blanketter är en robust lösning för att utöka och personalisera funktionaliteten i era blanketter. Du kan använda anpassade funktioner för att tillgodose organisationens specifika behov.
 
-Dessa funktioner har stöd för olika funktioner, bland annat att arbeta med specifika fält, använda globala fält och asynkrona åtgärder samt att införliva cachningsmekanismer. Tack vare den här flexibiliteten kan blanketterna anpassas efter komplexa krav och ge en effektiv, skräddarsydd användarupplevelse. Genom att utnyttja dessa avancerade funktioner kan ni förbättra interaktionen med formulär och optimera prestanda, vilket gör AEM formulär både mer funktionella och responsiva.
+Dessa funktioner har stöd för olika funktioner, bland annat att arbeta med specifika fält, använda globala fält och asynkrona åtgärder samt att införliva cachningsmekanismer. Tack vare den här flexibiliteten kan blanketterna anpassas efter komplexa krav och ge en effektiv, skräddarsydd användarupplevelse. Genom att utnyttja dessa avancerade funktioner kan ni förbättra interaktionen med blanketterna och optimera prestandan, så att era AEM-blanketter blir både mer funktionella och lättillgängliga.
 
 Låt oss dyka upp i funktionerna för anpassade funktioner.
 

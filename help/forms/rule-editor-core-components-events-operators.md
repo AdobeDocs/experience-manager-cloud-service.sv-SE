@@ -1,13 +1,13 @@
 ---
-title: Vilka olika operatorer, typer och händelser är tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenter?
-description: Adaptiv regelredigerare i Forms har stöd för olika typer av operatorer och händelser.
+title: Vilka operatortyper och händelser finns tillgängliga i regelredigeraren för ett adaptivt formulär baserat på kärnkomponenterna?
+description: Anpassad regelredigerare för Forms stöder olika operatortyper och händelser.
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: ac85ff04-25dc-4566-a986-90ae374bf383
-source-git-commit: 321116ce8d6da53c431f68f437cbf7c0050a47e8
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2252'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ I AEM Forms som moln innehåller regelredigeraren olika typer av operatorer och 
 
 Operatortyperna som är tillgängliga i regelredigeraren för ett adaptivt formulär ger ett robust ramverk för att skapa exakta villkor. De gör det möjligt för er att hantera data, utföra beräkningar och kombinera olika villkor på ett logiskt och sammanhängande sätt. Oavsett om du jämför värden, utför aritmetiska operationer eller manipulerar strängar ser de här operatorerna till att reglerna är både flexibla och kraftfulla.
 
-Händelser i regelredigeraren fungerar som utlösare som aktiverar reglerna. De definierar de specifika åtgärder som inträffar när vissa villkor är uppfyllda. Genom att utnyttja olika typer av händelser kan du automatisera svar på en mängd olika scenarier, till exempel användarinteraktioner, schemalagda tider, ändringar i data och systemtillstånd. Med möjligheten att ange dessa utlösare kan du skapa dynamiska och responsiva regler som tillgodoser dina specifika krav.
+Händelser i regelredigeraren fungerar som utlösare som aktiverar reglerna. De definierar de specifika åtgärder som inträffar när vissa villkor uppfylls. Genom att utnyttja olika typer av händelser kan du automatisera svar på en mängd olika scenarier, till exempel användarinteraktioner, schemalagda tider, dataändringar och systemtillstånd. Med möjlighet att ange dessa utlösare kan du skapa dynamiska och responsiva regler som uppfyller dina specifika krav.
 
 Genom att förstå och använda tillgängliga operatortyper och händelser kan du utnyttja regelredigerarens fulla potential, som gör att du kan skapa effektiva regler som uppfyller dina unika behov och förbättra den övergripande systemfunktionaliteten.
 
@@ -68,12 +68,11 @@ Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `Action 2 on Object B;`
 `AND`
-&grave;Åtgärd 3 på objekt C;
+`Action 3 on Object C;`
 
 `Else, do the following:`
 
 `Action 2 on Object C;`
-_
 
 När du har en komponent med flera värden, till exempel alternativknappar eller listor, hämtas alternativen automatiskt och görs tillgängliga för regelskaparen när du skapar en regel för den komponenten. Du behöver inte ange alternativvärdena igen.
 
@@ -83,13 +82,13 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-satsen för att lägga till ytterligare villkor
 
-![Tydligt värde för](assets/clearvalueof.png)
+![Rensa värdet för ](assets/clearvalueof.png)
 
 >[!NOTE]
 >
-> När regeltypen endast stöder then-else-instruktioner på en nivå.
+> När regeltypen bara har stöd för enkla then-else-satser.
 
-##### Tillåtna Flera fält i [!UICONTROL When] {#allowed-multiple-fields}
+##### Tillåtna flera fält i [!UICONTROL When] {#allowed-multiple-fields}
 
 I villkoret **När** har du möjlighet att lägga till andra fält förutom det fält som regeln tillämpas på.
 
@@ -115,11 +114,11 @@ _
 
 * Kontrollera att kärnkomponenten [är inställd på version 3.0.14 eller senare](https://github.com/adobe/aem-core-forms-components) för att använda den här funktionen i regelredigeraren.
 * Om regler tillämpas på olika fält i villkoret När utlöses regeln även om endast ett av dessa fält ändras.
-* Du kan bara lägga till flera fält i villkoret **När för en** AND-regel **&#x200B;**. Det är inte möjligt för en **OR-regel** .
+* Du kan bara lägga till flera fält i villkoret **När** för en **AND**-regel. Det går inte att använda en **OR**-regel.
 
 >[!NOTE]
 >
-> Om du vill lägga till flera villkor som innehåller ett knappklick ser du till att knappklickningshändelsen placeras som det första villkoret. Är till exempel `When button is clicked AND text input equals '5'` giltig, medan `When text input equals '5' AND button is clicked` det inte stöds.
+> Om du vill lägga till flera villkor som innehåller en knappklickning kontrollerar du att knappklickningshändelsen är placerad som det första villkoret. `When button is clicked AND text input equals '5'` är till exempel giltig, medan `When text input equals '5' AND button is clicked` inte stöds.
 
 <!--
 * It is not possible to add multiple fields in the When condition while applying rules to a button.
@@ -138,7 +137,7 @@ Allowed Multiple fields in When condition feature is disabled by default. To ena
    * value: deps
 1. Click **[!UICONTROL Done]**. -->
 
-Om de tillåtna flera fälten i funktionen När-villkor stöter på problem följer du felsökningsstegen som:
+Om det uppstår problem i de tillåtna fälten i villkorsfunktionen följer du felsökningsstegen enligt följande:
 
 1. Öppna formuläret i redigeringsläge.
 1. Öppna innehållsläsaren och markera komponenten **[!UICONTROL Guide Container]** i det adaptiva formuläret.
@@ -226,17 +225,17 @@ Regeltypen **Ange värdet för** är inte tillgänglig för alla formulärobjekt
 
 Ange värdet för objekt A till:
 
-(sträng ABC) ELLER
-(objektegenskap X för objekt C) ELLER
-(värde från en funktion) ELLER
-(värde från ett matematiskt uttryck) ELLER
-(utdatavärde för en datamodelltjänst);
+(String ABC) ELLER
+(objektegenskap X för objekt C) OR
+(värde från en funktion) OR
+(värde från ett matematiskt uttryck) OR
+(datavärde för en datamodelltjänst),
 
 När (valfritt):
 
-(Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
+(Villkor 1 OCH villkor 2 OCH villkor 3) är SANT.
 
-I följande exempel väljs värdet `Question2` för as `True` och värdet för as `Result` `correct`.
+I följande exempel väljs värdet för `Question2` som `True` och värdet för `Result` anges som `correct`.
 
 ![Set-value-web-service](assets/set-value-web-service.png)
 
@@ -246,7 +245,7 @@ Exempel på Ange värderegel med tjänsten Formulärdatamodell.
 
 Med regeltypen **[!UICONTROL Show]** kan du skriva en regel som visar eller döljer ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Visa utlöser även åtgärden Dölj om villkoret inte uppfylls eller returnerar `False`.
 
-En typisk Show-regel är strukturerad på följande sätt:
+En vanlig Visa-regel är strukturerad på följande sätt:
 
 `Show Object A;`
 
@@ -260,7 +259,7 @@ En typisk Show-regel är strukturerad på följande sätt:
 
 #### [!UICONTROL Hide] {#hide}
 
-På samma sätt som med regeltypen Visa kan du använda regeltypen **[!UICONTROL Hide]** för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Regeltypen Dölj utlöser också åtgärden Visa om villkoret inte uppfylls eller returneras `False`.
+På liknande sätt som med regeltypen Visa kan du använda regeltypen **[!UICONTROL Hide]** för att visa eller dölja ett formulärobjekt baserat på om ett villkor är uppfyllt eller inte. Dölj regeltyp utlöser även åtgärden Visa om villkoret inte uppfylls eller returnerar `False`.
 
 En vanlig Dölj-regel är strukturerad på följande sätt:
 
@@ -352,7 +351,7 @@ På samma sätt kan du skriva **Navigera bland panelerna** för att flytta fokus
 
 #### [!UICONTROL Async Function call]
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Regeltypen **[!UICONTROL Async Function call]** gör att du kan utföra asynkrona funktioner. Det gör att du kan initiera ett funktionsanrop som fungerar oberoende av huvudkörningstråden, vilket gör att andra processer kan fortsätta köras utan att vänta på att den asynkrona funktionen ska slutföras.
 

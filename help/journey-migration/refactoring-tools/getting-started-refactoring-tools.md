@@ -1,7 +1,8 @@
 ---
 title: Komma igång med omfaktoriseringsverktyg
 description: Lär dig komma igång med Refactoring Tools i AEM as a Cloud Service
-source-git-commit: 20bb756c4a2eb37341da4582f19cf41e4d60304a
+exl-id: 84394bdd-2b92-4f5d-b08a-7dc2c681baa4
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 1%
@@ -17,7 +18,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="aemcloud_rs_upload"
 >title="Download"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html?lang=sv-SE" text="Release Notes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html" text="Release Notes"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Software Distribution Portal"
 
 -->
@@ -34,8 +35,6 @@ Använd omfaktoriseringsverktyget för att migrera din kod för kompatibilitet m
 1. När du först öppnar **Source-kodvyn** visas ett tomt läge där du uppmanas att överföra din källkod.
 
    ![bild](/help/journey-migration/refactoring-tools/assets/rscam2.png)
-
-&#x200B;---
 
 ## Överför Source Code {#uploading}
 
@@ -67,12 +66,12 @@ När kunderna först använder **omfaktoriseringsverktygen** får de ett tomt l�
    ![bild](/help/journey-migration/refactoring-tools/assets/rscam5.png)
 
 >[!NOTE]
+>
 >Om du överför ett nytt projekt tas det befintliga projektet bort. Kontrollera att alla nödvändiga data har sparats innan du fortsätter.
 
 >[!NOTE]
+>
 >Omfaktoriseringsjobb kan bara utföras om källkodsöverföringen lyckas.
-
-&#x200B;---
 
 ## Omfaktoriseringsjobb {#refactoring-jobs}
 
@@ -89,9 +88,8 @@ När du klickar på fliken **Omfaktoriseringsjobb** visas en lista med befintlig
 ![bild](/help/journey-migration/refactoring-tools/assets/rscam7.png)
 
 >[!NOTE]
+>
 >Du kan aktivera enskilda omfaktoriseringsjobb eller köra alla tillgängliga verktyg på en gång med alternativet **Alla verktyg tillsammans** .
-
-&#x200B;---
 
 ### &#x200B;2. Jobbstatus
 
@@ -110,5 +108,5 @@ När jobbet har slutförts blir knappen **Hämta** tillgänglig så att du kan h
 ![bild](/help/journey-migration/refactoring-tools/assets/rscam9.png)
 
 >[!NOTE]
+>
 >Varje jobb kan ta upp till 1 timme att slutföra. Kontakta Adobe Support om statusen inte uppdateras.
-

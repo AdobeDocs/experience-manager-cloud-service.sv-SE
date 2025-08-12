@@ -6,7 +6,7 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 2cae8bb1050bc4538f4645d9f064b227fb947d75
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '1535'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Visuell regelredigerare i ett adaptivt formulär har stöd för funktionen **Anropa tjänst** som gör att du kan välja en tjänst i listan över formulärdatamodeller (FDM) som är konfigurerade för din instans. Du kan mappa formulärfält direkt till tjänstens indataparametrar. Om du vill mappa formulärfält till utdataparametrarna använder du händelsens nyttolastalternativ för den angivna formulärdatamodellstjänsten. Dessutom kan du med redigeraren för visuella regler skapa regler för hanterare för lyckade och misslyckade åtgärder för **Invoke Service** -åtgärder baserat på dess utdataresvar. Hanterare för lyckade åtgärder hanterar den lyckade körningen av åtgärden **Anropa tjänst**, medan felhanterare åtgärdar eventuella fel som inträffar.
 
-### Fördelar med att använda Invoke Service i formulärets regelredigerare
+## Fördelar med att använda Invoke Service i formulärets regelredigerare
 
 Här är några fördelar med att använda Invoke Service-åtgärden i regelredigeraren för ett tilläggsformulär:
 
@@ -193,7 +193,7 @@ Det här användningsexemplet visar hur du dynamiskt anger värdet för en panel
 
 #### Implementering
 
-Skapa en regel i textrutan `Pet ID` för att anropa tjänsten `getPetById`. I **[!UICONTROL Add Success Handler]** lägger du till ett annat svar från en hanterare. Ange värdet `category.name` för textrutan `categoryname` i regeln.
+Skapa en regel i textrutan `Pet ID` för att anropa tjänsten `getPetById`. I **[!UICONTROL Add Success Handler]** lägger du till ett annat svar från en hanterare. Ange värdet `categoryname` för textrutan `category.name` i regeln.
 
 ![Skapa regel för repeterbar panel](/help/forms/assets/set-panel-values.png)
 

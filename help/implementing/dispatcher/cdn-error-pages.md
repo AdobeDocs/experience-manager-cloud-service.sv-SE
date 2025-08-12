@@ -4,7 +4,7 @@ description: Lär dig hur du åsidosätter standardfelsidan genom att lagra stat
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera CDN-felsidor {#cdn-error-pages}
 
-Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM ursprung, visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med Cloud Manager [config pipeline](/help/operations/config-pipeline.md#managing-in-cloud-manager).
+Om det osannolika skulle inträffa att det [Adobe-hanterade CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) inte kan nå AEM-ursprunget visas som standard en allmän felsida utan varumärke som anger att servern inte kan nås. Du kan åsidosätta standardfelsidan genom att lagra statiska filer i värdbaserat lagringsutrymme som Amazon S3 eller Azure Blob Storage och referera till dem i en konfigurationsfil som distribueras med Cloud Manager [config pipeline](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
 ## Inställningar {#setup}
 
@@ -30,7 +30,7 @@ Innan du kan åsidosätta standardfelsidan måste du göra följande:
 
 ### Syntax {#syntax}
 
-Felsidan implementeras som ett program med en sida (SPA) och refererar till en handfull egenskaper, vilket visas i exemplet nedan.  De statiska filer som URL-adresserna refererar till bör lagras hos dig på en Internettillgänglig tjänst som Amazon S3 eller Azure Blob Storage.
+Felsidan implementeras som ett SPA-program (single page application) och refererar till en handfull egenskaper, vilket visas i exemplet nedan.  De statiska filer som URL-adresserna refererar till bör lagras hos dig på en Internettillgänglig tjänst som Amazon S3 eller Azure Blob Storage.
 
 Konfigurationsexempel:
 
@@ -58,7 +58,7 @@ Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-
 |     | cssUrl | URL till en CSS-fil. |
 |     | jsUrl | URL till en JavaScript-fil. |
 
-### Sample Generated HTML {#sample-generated-html}
+### Exempelgenererad HTML {#sample-generated-html}
 
 Den HTML-kod som genereras av CDN och skickas till klienten, t.ex. en webbläsare, liknar (men är inte identisk med) följande kodutdrag:
 
@@ -93,6 +93,6 @@ På så sätt utlöser du CDN:ens felhanterare direkt för att testa det synteti
 
 ### Självstudiekurs
 
-Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
+Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
 
 

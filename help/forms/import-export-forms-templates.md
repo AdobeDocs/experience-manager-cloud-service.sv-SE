@@ -1,29 +1,27 @@
 ---
 title: Hur importerar, exporterar och organiserar man Adaptive Forms eller PDF forms i en AEM Forms-instans?
-description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra stödresurser till och från en AEM.
+description: Lär dig att migrera adaptiva Forms, PDF forms, teman och andra stödresurser till och från en AEM-instans.
 topic-tags: forms-manager
 role: Admin, User
 feature: Adaptive Forms
 exl-id: f5105fb7-b8c0-4656-8095-b21d392746c0
-source-git-commit: 6f547bd743932d45e45e0a3c47ff5eb2129cb664
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 1%
 
 ---
 
-
+# Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser {#importing-and-exporting-assets-to-aem-forms}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/manage-administer-aem-forms/import-export-forms-templates) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/manage-administer-aem-forms/import-export-forms-templates) |
 | AEM as a Cloud Service | Den här artikeln |
 
-# Importera eller exportera anpassningsbara Forms- och AEM Forms-resurser {#importing-and-exporting-assets-to-aem-forms}
+Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, fragment och PDF forms mellan [!DNL AEM Forms] instanser.
 
-Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, fragment och PDF forms mellan [!DNL AEM Forms]-instanser.
-
-## Ladda ned anpassningsbara Forms-, PDF forms- och samhörande resurser {#download-forms-amp-documents-assets}
+## Ladda ned adaptiva Forms-, PDF forms- eller samhörande resurser {#download-forms-amp-documents-assets}
 
 Så här hämtar du formulär eller relaterade resurser:
 
@@ -96,7 +94,7 @@ Du kan överföra och använda teman som andra skapar i dina formulär.
 Så här överför du ett tema:
 
 1. Logga in på din [!DNL Experience Manager Forms]-instans.
-1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Themes]** i Experience Manager.
+1. I Experience Manager går du till **[!UICONTROL Forms]** > **[!UICONTROL Themes]**.
 
    ![Välj tema](/help/forms/assets/select-theme.png)
 
@@ -183,7 +181,7 @@ Så här söker du efter resursen:
 
    ![Söka efter resurser](/help/forms/assets/search-bar.png)
 
-Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=sv-SE).
+Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html).
 
 <!--
 ## Export or create a package {#export-a-workflow-application}

@@ -4,9 +4,9 @@ description: Lär dig mer om de olika händelser som den universella redigeraren
 exl-id: c9f7c284-f378-4725-a4e6-e4799f0f8175
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: fefbb01c786cc00a31602c4646ca8b015e16ed98
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Nyttolasten är en JSON-korrigering av de uppdaterade egenskaperna.
 }
 ```
 
-### ljud:content-remove {#content-remove}
+### aue:content-remove {#content-remove}
 
 Händelsen `aue:content-remove` aktiveras när en komponent tas bort från en behållare.
 
@@ -219,7 +219,7 @@ Nyttolasten är vyportens dimensioner.
 }
 ```
 
-### aue:initierad {#initialized}
+### aue:initialized {#initialized}
 
 Händelsen `aue:initialized` aktiveras för att fjärrsidan ska kunna känna till att den har lästs in i Universell redigerare.
 

@@ -5,19 +5,19 @@ feature: Adaptive Forms, Foundation Components
 role: User
 hide: true
 hidefromtoc: true
-source-git-commit: 937bd4653e454beea3111cfc7ef7b4bbc1ace193
+exl-id: e5b77cc1-5fb1-4f73-afe6-64f1c407e42b
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
-source-wordcount: '2686'
+source-wordcount: '2682'
 ht-degree: 0%
 
 ---
-
 
 # Adaptiva formuläruttryck {#adaptive-form-expressions}
 
 Adaptiv Forms ger optimerad och förenklad ifyllning av blanketter för användare med dynamiska skriptfunktioner. Det gör att du kan skriva uttryck för att lägga till olika beteenden, till exempel dynamiska fält och paneler för att visa/dölja. Du kan också lägga till beräknade fält, skrivskydda fält, lägga till valideringslogik och mycket annat. Det dynamiska beteendet baseras på användarens indata eller förifyllda data.
 
-JavaScript™ är uttrycksspråket i Adaptive Forms. Alla uttryck är giltiga JavaScript™-uttryck och använder API:er för adaptiv Forms-skriptmodell. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva Forms-klasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript™-bibliotek för adaptiv Forms](https://helpx.adobe.com/se/experience-manager/6-5/forms/javascript-api/index.html).
+JavaScript™ är uttrycksspråket i Adaptive Forms. Alla uttryck är giltiga JavaScript™-uttryck och använder API:er för adaptiv Forms-skriptmodell. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva Forms-klasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript™-bibliotek för adaptiv Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 ## Bästa tillvägagångssätt för att skriva uttryck {#best-practices-for-writing-expressions}
 
@@ -32,7 +32,7 @@ Upprepade paneler är instanser av en panel som läggs till eller tas bort dynam
 * Om du vill skapa en upprepande panel öppnar du inställningarna i paneldialogrutan och anger värdet för fältet för högsta antal till mer än 1.
 * Minsta antal för upprepade panelinställningar kan vara en eller flera, men det får inte vara fler än högsta antal.
 * När ett uttryck refererar till ett fält med upprepande panel tolkas fältnamnen i uttrycket som det närmaste upprepade elementet.
-* Adaptiv Forms har några specialfunktioner som förenklar beräkning av repeterbara paneler som summa, antal, min, max, filter och många andra. En fullständig lista över funktioner finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/se/aem-forms/6/javascript-api/af.html)
+* Adaptiv Forms har några specialfunktioner som förenklar beräkning av repeterbara paneler som summa, antal, min, max, filter och många andra. En fullständig lista över funktioner finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/aem-forms/6/javascript-api/af.html)
 * API:er för manipulering av instanser av upprepande panel är:
 
    * Så här lägger du till en panelinstans: `panel1.instanceManager.addInstance()`
@@ -78,7 +78,7 @@ Beräkningsuttrycket används för att automatiskt beräkna värdet för ett fä
 
 ### Klicka på uttryck {#click-expression}
 
-Klickuttrycket hanterar de åtgärder som utförs på en knapps klickningshändelse. I GuideBridge finns API:er för att utföra olika funktioner som skicka, validera som används tillsammans med klickuttrycket. En fullständig lista över API:erna finns i [GuideBridge API:er](https://helpx.adobe.com/se/aem-forms/6/javascript-api/GuideBridge.html).
+Klickuttrycket hanterar de åtgärder som utförs på en knapps klickningshändelse. I GuideBridge finns API:er för att utföra olika funktioner som skicka, validera som används tillsammans med klickuttrycket. En fullständig lista över API:erna finns i [GuideBridge API:er](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
 
 **Gäller för**: Knappfält
 
@@ -209,7 +209,7 @@ Visningsformat kan användas för att visa data i olika format. Du kan till exem
 
 ### GuideBridge - API:er och händelser {#guidebridge-apis-and-events}
 
-GuideBridge är en samling API:er som kan användas för att interagera med Adaptiv Forms i en webbläsares minnesmodell. Detaljerad introduktion till Guide Bridge API, klassmetoder och exponerade händelser finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/se/aem-forms/6/javascript-api/).
+GuideBridge är en samling API:er som kan användas för att interagera med Adaptiv Forms i en webbläsares minnesmodell. Detaljerad introduktion till Guide Bridge API, klassmetoder och exponerade händelser finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/aem-forms/6/javascript-api/).
 
 >[!NOTE]
 >
@@ -217,15 +217,15 @@ GuideBridge är en samling API:er som kan användas för att interagera med Adap
 
 #### GuideBridge-användning i olika uttryck {#guidebridge-usage-in-various-expressions}
 
-* Om du vill återställa formulärfält kan du aktivera `guideBridge.reset()`-API:t i klickuttrycket för en knapp. På samma sätt finns det ett API för att skicka som kan anropas som ett klickuttryck `guideBridge.submit()`**.**
+* Om du vill återställa formulärfält kan du aktivera `guideBridge.reset()`-API:t i klickuttrycket för en knapp. På samma sätt finns det ett sändnings-API som kan anropas som ett klickuttryck `guideBridge.submit()`.
 
-* Du kan använda API:t `setFocus()` för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus()`innehåller en mängd alternativ för navigering, till exempel navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda:&grave;guideBridge.setFocus(this.panel.somExpression, &#39;nextItem&#39;).
+* Du kan använda API:t `setFocus()` för att ange fokus i olika fält eller paneler (för panelfokus ställs det första fältet automatiskt in). `setFocus()` innehåller en mängd alternativ för navigering, till exempel navigering över paneler, föregående/nästa genomgång, inställning av fokus till ett visst fält och många andra alternativ. Om du till exempel vill gå till nästa panel kan du använda: `guideBridge.setFocus(this.panel.somExpression, 'nextItem')`.
 
 * Använd `guideBridge.validate(errorList, somExpression).` om du vill validera ett adaptivt formulär eller dess specifika paneler
 
 #### Använda GuideBridge utanför uttryck  {#using-guidebridge-outside-expressions-nbsp}
 
-Du kan också använda API:erna för GuideBridge utanför uttrycken. Du kan till exempel använda API:t för GuideBridge för att ange kommunikation mellan HTML som är värd för det adaptiva formuläret och formulärmodellen. Dessutom kan du ange det värde som kommer från den överordnade delen av Iframe som är värd för formuläret.
+Du kan också använda API:erna för GuideBridge utanför uttrycken. Du kan till exempel använda API:t för GuideBridge för att ange kommunikation mellan sidan HTML som är värd för det adaptiva formuläret och formulärmodellen. Dessutom kan du ange det värde som kommer från den överordnade delen av Iframe som är värd för formuläret.
 
 Om du vill använda API:t för GuideBridge för ovanstående exempel hämtar du en instans av GuideBridge. Om du vill hämta instansen lyssnar du på `bridgeInitializeStart`händelsen för ett `window`objekt:
 
@@ -255,7 +255,7 @@ Om du vill använda GuideBridge när formuläret har initierats (händelsen `bri
 
 #### GuideBridge Events {#guidebridge-events}
 
-GuideBridge innehåller även vissa händelser för externa skript på värdsidan. Externa skript kan lyssna på dessa händelser och utföra olika åtgärder. När användarnamnet i ett formulär ändras, till exempel, ändras även namnet som visas i sidhuvudet på sidan. Mer information om sådana händelser finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/se/aem-forms/6/javascript-api/GuideBridge.html).
+GuideBridge innehåller även vissa händelser för externa skript på värdsidan. Externa skript kan lyssna på dessa händelser och utföra olika åtgärder. När användarnamnet i ett formulär ändras, till exempel, ändras även namnet som visas i sidhuvudet på sidan. Mer information om sådana händelser finns i [JavaScript™ Library API reference for Adaptive Forms](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html).
 
 Använd följande kod för att registrera hanterare:
 
@@ -284,4 +284,3 @@ Utför följande steg för att skapa ett anpassat mönster för en viss fälttyp
    ![Skapa anpassade mönster för fält i CrxDe](assets/creating-custom-patterns.png)
 
    Skapa egna mönster
-

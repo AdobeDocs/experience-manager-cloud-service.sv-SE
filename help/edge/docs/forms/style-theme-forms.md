@@ -4,7 +4,7 @@ description: Anpassa teman och format för Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
 role: Admin, Architect, Developer
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 0%
@@ -476,7 +476,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 ```
 
 - Fältuppsättningselementet fungerar som panelbehållare med klassens panelwrapper och ytterligare klasser för formatering baserat på panelnamnet (fältinloggning).
-- Förklaringselementet (&lt;legend>) fungerar som panelrubrik med texten&quot;Inloggningsinformation&quot; och klassens fältetikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
+- Förklaringselementet (`<legend>`) fungerar som panelrubrik med texten Inloggningsinformation och klassfältets etikett. Attributet data-visible=&quot;false&quot; kan användas med JavaScript för att styra visningen av titeln.
 - I fältuppsättningen, multipel .{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
 - Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
 
@@ -637,7 +637,6 @@ Väljaren formaterar alla paneler som kan upprepas, vilket ger ett konsekvent ut
   margin-bottom: 10px;
 }
 ```
-
 Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vilket ger ett konsekvent avstånd mellan fälten.
 
 - Ange specifika fält som mål (inom en panel):

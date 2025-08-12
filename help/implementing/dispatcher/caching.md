@@ -4,7 +4,7 @@ description: Lär dig grunderna i cachelagring i AEM as a Cloud Service
 feature: Dispatcher
 exl-id: 4206abd1-d669-4f7d-8ff4-8980d12be9d6
 role: Admin
-source-git-commit: 4a586a0022682dadbc57bab1ccde0ba2afa78627
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '3071'
 ht-degree: 0%
@@ -20,14 +20,13 @@ På den här sidan beskrivs också hur cacheminnet i Dispatcher ogiltigförklara
 
 ## Cachning {#caching}
 
-Cachelagring av HTTP-svar i AEM as a Cloud Service CDN styrs av följande HTTP-svarshuvuden från ursprungsläget: `Cache-Control`, `Surrogate-Control` eller `Expires`.
+Cachelagring av HTTP-svar i AEM as a Cloud Service CDN styrs av följande HTTP-svarshuvuden från origo: `Cache-Control`, `Surrogate-Control` eller `Expires`.
 
-Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med mod_headers, men kan också ställas in i anpassad Java™-kod som körs i AEM Publish (se [Så här aktiverar du CDN-cachning](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/enable-caching)).
+Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med mod_headers, men kan också ställas in i anpassad Java™-kod som körs i AEM Publish (se [Så här aktiverar du CDN-cachning](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/enable-caching)).
 
 Cachenyckeln för CDN-resurser innehåller den fullständiga begäran-URL:en, inklusive frågeparametrar, så varje enskild frågeparameter skapar en annan cachepost. Överväg att ta bort oönskade frågeparametrar. [se nedan](#marketing-parameters) för att förbättra träffkvoten för cachen.
 
-Ursprungliga svar som innehåller `private`, `no-cache` eller `no-store` i `Cache-Control` cachas inte av AEM as a Cloud Service CDN (se [&#128279;](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/disable-caching)Så här inaktiverar du CDN-cachelagring
- om du vill ha mer information).  Svaren som anger cookies, d.v.s. har ett `Set-Cookie`-svarshuvud, cachelagras inte av CDN.
+Ursprungliga svar som innehåller `private`, `no-cache` eller `no-store` i `Cache-Control` cachelagras inte av AEM as a Cloud Service CDN (mer information finns i [Så här inaktiverar du CDN-cachelagring](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/disable-caching)).  Svaren som anger cookies, d.v.s. har ett `Set-Cookie`-svarshuvud, cachelagras inte av CDN.
 
 ### HTML/Text {#html-text}
 
@@ -54,7 +53,7 @@ Den här metoden är till exempel användbar när din affärslogik kräver finju
   ```
 
   >[!NOTE]
-  >Rubriken Surrogate-Control gäller för det CDN som hanteras av Adobe. Om du använder ett [kundhanterat CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE#point-to-point-CDN) kan ett annat huvud behövas beroende på din CDN-leverantör.
+  >Rubriken Surrogate-Control gäller för det CDN som hanteras av Adobe. Om du använder ett [kundhanterat CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html#point-to-point-CDN) kan ett annat huvud behövas beroende på din CDN-leverantör.
 
   Var försiktig när du anger rubriker för global cachekontroll eller liknande cacherubriker som matchar ett brett register så att de inte tillämpas på innehåll som du måste behålla privat. Överväg att använda flera direktiv för att säkerställa att reglerna tillämpas på ett detaljerat sätt. AEM as a Cloud Service tar därför bort cachehuvudet om det upptäcker att det har tillämpats på det som Dispatcher inte kan tolka, vilket beskrivs i Dispatcher-dokumentationen. Om du vill tvinga AEM att alltid använda cachelagringshuvuden kan du lägga till alternativet **`always`** enligt följande:
 
@@ -84,13 +83,13 @@ Den här metoden är till exempel användbar när din affärslogik kräver finju
     </LocationMatch>
   ```
 
-* HTML-innehåll som är inställt på privat cachelagras inte i CDN, men det kan cachas i Dispatcher om [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=sv-SE) är konfigurerad, vilket säkerställer att endast behöriga användare kan betjäna innehållet.
+* HTML-innehåll som är inställt på privat cachelagras inte i CDN, men det kan cachas i Dispatcher om [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) är konfigurerad, vilket säkerställer att endast behöriga användare kan betjäna innehållet.
 
   >[!NOTE]
   >De andra metoderna, inklusive [Dispatcher-ttl AEM ACS Commons-projektet](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), åsidosätter inte värdena.
 
   >[!NOTE]
-  >Dispatcher kan fortfarande cachelagra innehåll enligt sina egna [cachelagringsregler](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17497.html?lang=sv-SE). Om du vill göra innehållet helt privat ser du till att det inte cachas av Dispatcher.
+  >Dispatcher kan fortfarande cachelagra innehåll enligt sina egna [cachelagringsregler](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17497.html). Om du vill göra innehållet helt privat ser du till att det inte cachas av Dispatcher.
 
 ### Klientbibliotek (js, css) {#client-side-libraries}
 
@@ -158,7 +157,7 @@ AEM-lagret cache-lagrar inte blobbinnehåll som standard.
 >[!NOTE]
 >Ändra det äldre standardbeteendet så att det överensstämmer med det nya beteendet (program-ID som är högre än 65000) genom att ange Cloud Manager-miljövariabeln AEM_BLOB_ENABLE_CACHING_HEADERS som true. Om programmet redan är öppet kontrollerar du att innehållet fungerar som du tänkt dig efter ändringarna.
 
-Nu går det inte att cachelagra bilder i bloblagring som markerats som privata på Dispatcher med [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=sv-SE). Bilden efterfrågas alltid från AEM ursprung och hanteras om användaren är behörig.
+Nu går det inte att cachelagra bilder i bloblagring som markerats som privata på Dispatcher med [Behörighetskänslig cachelagring](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html). Bilden efterfrågas alltid från AEM ursprung och hanteras om användaren är behörig.
 
 >[!NOTE]
 >De andra metoderna, inklusive AEM ACS Commons-projektet [dispatcher-ttl](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-ttl/), åsidosätter inte värdena.
@@ -238,7 +237,7 @@ Nu går det inte att cachelagra bilder i bloblagring som markerats som privata p
 
 ### Analyserar CDN-cacheträffrekvens {#analyze-chr}
 
-I självstudiekursen [cache-hit för analys av träffkvot](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/cdn-cache-hit-ratio-analysis.html?lang=sv-SE) finns information om hur du hämtar CDN-loggar och analyserar webbplatsens cachekvot med hjälp av en instrumentpanel.
+I självstudiekursen [cache-hit för analys av träffkvot](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/cdn-cache-hit-ratio-analysis.html) finns information om hur du hämtar CDN-loggar och analyserar webbplatsens cachekvot med hjälp av en instrumentpanel.
 
 ### HEAD beteende vid förfrågan {#request-behavior}
 
@@ -254,7 +253,7 @@ För miljöer som skapats i oktober 2023 eller senare kommer CDN att ta bort van
 ^(utm_.*|gclid|gdftrk|_ga|mc_.*|trk_.*|dm_i|_ke|sc_.*|fbclid|msclkid|ttclid)$
 ```
 
-Den här funktionen kan aktiveras och inaktiveras med en `requestTransformations`-flagga i [CDN-konfigurationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
+Den här funktionen kan aktiveras och inaktiveras med en `requestTransformations`-flagga i [CDN-konfigurationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
 
 Om du till exempel vill sluta ta bort marknadsföringsparametrar på CDN-nivå måste du distribuera `removeMarketingParams: false` med en config som innehåller följande avsnitt.
 
@@ -268,7 +267,7 @@ data:
     removeMarketingParams: false
 ```
 
-Om `removeMarketingParams`-funktionen är inaktiverad på CDN-nivå rekommenderar vi fortfarande att du konfigurerar Dispatcher-konfigurationens `ignoreUrlParams` -egenskap. Mer information finns i [Konfigurera Dispatcher - Ignorera URL-parametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#ignoring-url-parameters).
+Om `removeMarketingParams`-funktionen är inaktiverad på CDN-nivå rekommenderar vi fortfarande att du konfigurerar Dispatcher-konfigurationens `ignoreUrlParams` -egenskap. Mer information finns i [Konfigurera Dispatcher - Ignorera URL-parametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#ignoring-url-parameters).
 
 Det finns två möjligheter att ignorera marknadsföringsparametrar. (Där den första är att föredra att ignorera cachebusting via frågeparametrar):
 
@@ -304,7 +303,7 @@ Precis som i tidigare versioner av AEM rensas innehållet från Dispatcher-cache
 >[!NOTE]
 >För att Dispatcher ska bli korrekt måste du se till att förfrågningar från 127.0.0.1, localhost, \*.local,\*.adobeaemcloud.com och \\*.adobeaemcloud.net matchas och hanteras av en värdkonfiguration så att begäran kan hanteras. Du kan utföra den här aktiviteten genom att globalt matcha &quot;*&quot; i en konfiguration med en catch-all-värd som följer mönstret i referensen [AEM-arkivtyp](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.d/available_vhosts/default.vhost). Du kan också se till att den tidigare nämnda listan fångas av någon av värdarna.
 
-När publiceringsinstansen tar emot en ny version av en sida eller en resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess Dispatcher. Den uppdaterade sökvägen tas bort från Dispatcher-cachen, tillsammans med dess överordnade objekt, upp till en nivå (du kan konfigurera den här nivån med [statusfilnivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#invalidating-files-by-folder-level)).
+När publiceringsinstansen tar emot en ny version av en sida eller en resurs från författaren, används justeringsagenten för att göra lämpliga sökvägar ogiltiga i dess Dispatcher. Den uppdaterade sökvägen tas bort från Dispatcher-cachen, tillsammans med dess överordnade objekt, upp till en nivå (du kan konfigurera den här nivån med [statusfilnivå](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#invalidating-files-by-folder-level)).
 
 ## Explicit ogiltigförklaring av Dispatcher-cachen {#explicit-invalidation}
 
@@ -515,7 +514,7 @@ Replicator.replicate (session,ReplicationActionType.DELETE,paths, options);
 >1. Invoke the replication agent, specifying the publish dispatcher flush agent
 >2. Directly calling the `invalidate.cache` API (for example, `POST /dispatcher/invalidate.cache`)
 >
->The dispatcher's `invalidate.cache` API approach will no longer be supported since it addresses only a specific dispatcher node. AEM as a Cloud Service operates at the service level, not the individual node level and so the invalidation instructions in the [Invalidating Cached Pages From AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html?lang=sv-SE) page are not longer valid for AEM as a Cloud Service.
+>The dispatcher's `invalidate.cache` API approach will no longer be supported since it addresses only a specific dispatcher node. AEM as a Cloud Service operates at the service level, not the individual node level and so the invalidation instructions in the [Invalidating Cached Pages From AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html) page are not longer valid for AEM as a Cloud Service.
 
 The replication flush agent should be used. This can be done using the [Replication API](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/replication/Replicator.html). The flush agent endpoint is not configurable but pre-configured to point to the dispatcher, matched with the publish service running the flush agent. The flush agent can typically be triggered by OSGi events or workflows.
 
@@ -527,9 +526,9 @@ The diagram presented below illustrates this.
 
 ![CDN](assets/cdnd.png "CDN")
 
-If there is a concern that the dispatcher cache is not clearing, contact [customer support](https://helpx.adobe.com/se/support.ec.html) who can flush the dispatcher cache if necessary.
+If there is a concern that the dispatcher cache is not clearing, contact [customer support](https://helpx.adobe.com/support.ec.html) who can flush the dispatcher cache if necessary.
 
-The Adobe-managed CDN respects TTLs and thus there is no need fo it to be flushed. If an issue is suspected, [contact customer support](https://helpx.adobe.com/se/support.ec.html) support who can flush an Adobe-managed CDN cache as necessary. -->
+The Adobe-managed CDN respects TTLs and thus there is no need fo it to be flushed. If an issue is suspected, [contact customer support](https://helpx.adobe.com/support.ec.html) support who can flush an Adobe-managed CDN cache as necessary. -->
 
 ## Bibliotek på klientsidan och versionskonsekvens {#content-consistency}
 

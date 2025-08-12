@@ -4,7 +4,7 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7094ac805e2b66813797fbbc7863870f18632cdc
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '2409'
 ht-degree: 0%
@@ -19,22 +19,6 @@ ht-degree: 0%
 
 Kunder som har en licens hos en loggningsleverantör eller som är värd för en loggningsprodukt kan få AEM-loggar (inklusive Apache/Dispatcher) och CDN-loggar vidarebefordrade till det associerade loggningsmålet. AEM as a Cloud Service stöder följande loggningsmål:
 
-&lt;html>
-&lt;style>
-table &lbrace;
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-  table-layout: fixed;
-&rbrace;
-th, td &lbrace;
-  width: 5%;
-  max-width: 100%;
-  border: 1px solid black;
-  padding: 8px;
-  word-wrap: break-word;
-&rbrace;
-&lt;/style>
 <table>
   <tbody>
     <tr>
@@ -109,7 +93,7 @@ th, td &lbrace;
     </tr>
   </tbody>
 </table>
-&lt;/html>
+</html>
 
 >[!NOTE]
 >
@@ -200,14 +184,7 @@ Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM-lo
 Vissa organisationer väljer att begränsa vilken trafik som kan tas emot av loggningsdestinationerna, andra kanske behöver använda andra portar än HTTPS (443).  I så fall måste [Avancerat nätverk](/help/security/configuring-advanced-networking.md) konfigureras innan konfigurationen för vidarebefordran av loggar distribueras.
 
 Använd tabellen nedan för att se vad som krävs för konfigurationen av avancerat nätverk och loggning baserat på om du använder port 443 eller inte och om du behöver visa loggarna från en fast IP-adress eller inte.
-&lt;html>
-&lt;style>
-table, th, td &lbrace;
-  border: 1px solid black;
-  border-collapse: collapse;
-  text-align: center;
-&rbrace;
-&lt;/style>
+
 <table>
   <tbody>
     <tr>
@@ -239,7 +216,7 @@ table, th, td &lbrace;
       <td>Ja</td>
   </tbody>
 </table>
-&lt;/html>
+</html>
 
 >[!NOTE]
 >Om loggarna visas från en enda IP-adress avgörs av ditt val av avancerad nätverkskonfiguration.  Dedikerade urkor måste användas för att underlätta detta.
@@ -270,6 +247,7 @@ data:
 För CDN-loggar kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till en https-server eller (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en känd IP-adress till deras slutliga mål.
 
 >[!NOTE]
+>
 >Det går inte att visa CDN-loggar från samma IP-adress som dina AEM-loggar kommer från. Det beror på att loggarna skickas direkt från Fast och inte från AEM Cloud Service.
 
 ## Konfiguration för loggningsmål {#logging-destinations}
@@ -304,15 +282,15 @@ Om du vill använda S3 Log Forwarder måste du förkonfigurera en AWS IAM-använ
 IAM-principen bör tillåta användaren att använda `s3:putObject`.  Till exempel:
 
 ```json
-{
-   "Version": "2012-10-17",
-   "Statement": [{
-       "Effect": "Allow",
-       "Action": [
-           "s3:PutObject"
-       ],
-       "Resource": "arn:aws:s3:::your_bucket_name/*"
-   }]
+ {
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Action": [
+            "s3:PutObject"
+        ],
+        "Resource": "arn:aws:s3:::your_bucket_name/*"
+    }]
 }
 ```
 
@@ -512,6 +490,7 @@ Logga vidarebefordran till New Relic använder New Relic HTTPS API för förtär
 ```
 
 >[!NOTE]
+>
 >Loggvidarebefordran till New Relic är endast tillgängligt för kundägda New Relic-konton.
 >
 >E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
@@ -538,6 +517,7 @@ Scope-attributet &quot;Ingest Logs&quot; krävs för token.
 ```
 
 >[!NOTE]
+>
 > E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
 
 ### Splunk {#splunk}
@@ -630,6 +610,7 @@ När du är redo att migrera konfigurerar du bara YAML-filen enligt beskrivninge
 Vi rekommenderar, men behöver inte göra det, att en konfiguration distribueras till alla miljöer så att de alla styrs av självbetjäning. Annars kanske du glömmer vilka miljöer som har konfigurerats av Adobe jämfört med de som konfigurerats på ett självbetjäningssätt.
 
 >[!NOTE]
+>
 >Värdena för fältet `sourcetype` som skickades till ditt Splunk-index kan ha ändrats, så justera därefter.
 >
 >När loggvidarebefordran distribueras till en miljö som tidigare konfigurerats av Adobe support kan du få dubblettloggar i upp till några timmar. Detta kommer till slut att matchas automatiskt.

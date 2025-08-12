@@ -4,7 +4,7 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: c54f77a7e0a034bab5eeddcfe231973575bf13f4
+source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
 workflow-type: tm+mt
 source-wordcount: '4582'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring p
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
+På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
 Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver *standardtrafikfilterregler* som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas *WAF-regler*.
 
@@ -745,8 +745,8 @@ Lägg till följande regler i din befintliga konfiguration:
    * När du har distribuerat den här regeln bör du noggrant analysera CDN-loggar för att verifiera att berättigade förfrågningar inte flaggas felaktigt. När du är säker på att ingen legitim trafik påverkas växlar du till blockläge.
 
 >[!NOTE]
-> Vår erfarenhet tyder på att falska positiva värden som är kopplade till ATTACK-flaggan är ovanliga. Därför kan det vara en praktisk strategi att omedelbart blockera all misstänkt trafik - även om IP-adressen inte är känd som skadlig - och därefter använda CDN-logganalys för att identifiera och införa regler för legitim trafik. Varje organisation bör utvärdera sin egen risktolerans och väga fördelarna med ett bättre skydd mot risken för att oavsiktligt blockera legitima förfrågningar.
 >
+> Vår erfarenhet tyder på att falska positiva värden som är kopplade till ATTACK-flaggan är ovanliga. Därför kan det vara en praktisk strategi att omedelbart blockera all misstänkt trafik - även om IP-adressen inte är känd som skadlig - och därefter använda CDN-logganalys för att identifiera och införa regler för legitim trafik. Varje organisation bör utvärdera sin egen risktolerans och väga fördelarna med ett bättre skydd mot risken för att oavsiktligt blockera legitima förfrågningar.
 
 ```
     # blocks likely attack traffic, which also comes from suspected IPs
@@ -773,8 +773,7 @@ Lägg till följande regler i din befintliga konfiguration:
 
 Före juli 2025 rekommenderade Adobe de WAF-regler som anges nedan, som fortfarande är giltiga och effektiva för att försvara mot skadlig trafik. Se självstudiekursen om du vill ha mer information om hur du migrerar till de nya rekommenderade reglerna.
 
-<details>
-  <summary>Expandera om du vill se de äldre rekommenderade WAF-reglerna.</summary>
++++ Expandera om du vill se de äldre rekommenderade WAF-reglerna.
 
 ```
     # Enable recommended WAF protections (only works if WAF is licensed enabled for your environment)
@@ -800,11 +799,11 @@ Före juli 2025 rekommenderade Adobe de WAF-regler som anges nedan, som fortfara
           - NULLBYTE
 ```
 
-</details>
++++
 
 ## Självstudiekurs {#tutorial}
 
-Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
+Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
 
 Självstudiekurserna är följande:
 
@@ -814,7 +813,3 @@ Självstudiekurserna är följande:
 * Testa reglerna med verktyg för att simulera skadlig trafik
 * Analysera resultat med logganalysverktyget
 * God praxis
-
-
-
-
