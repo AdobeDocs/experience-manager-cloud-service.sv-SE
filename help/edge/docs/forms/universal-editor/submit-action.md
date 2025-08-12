@@ -4,7 +4,8 @@ description: Ett anpassat formulär innehåller flera överföringsåtgärder. E
 keywords: hur du väljer en åtgärd för att skicka ett anpassat formulär, kopplar ett anpassat formulär till SharePoint-listan, ansluter ett anpassat formulär till SharePoint-dokumentbiblioteket, ansluter ett anpassat formulär till formulärdatamodellen (FDM)
 feature: Adaptive Forms, Edge Delivery Services
 role: User, Developer
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+exl-id: beee9be7-8215-496b-9fb9-61fba000a055
+source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 |---------|-----------------------------|
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
 | AEM as a Cloud Service (Edge Delivery Services) | Den här artikeln |
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 Inlämning av blanketter är det avgörande steget i användarens resa - där insamlade data behandlas och åtgärder vidtas. Det här dokumentet innehåller en omfattande guide till hur du konfigurerar och hanterar Skicka-åtgärder för Adaptive Forms i Universal Editor.
 
-### Vad du kommer att lära dig
+## Vad du kommer att lära dig
 
 I slutet av det här dokumentet kommer du att förstå hur du:
 
@@ -33,7 +34,7 @@ I slutet av det här dokumentet kommer du att förstå hur du:
 - Implementera anpassade skicka-åtgärder för specifika affärsbehov
 - Hantera formulärvalidering och felscenarier vid inlämning
 
-### Målgrupp
+## Målgrupp
 
 Den här guiden är utformad för:
 
@@ -77,6 +78,3 @@ Du kan konfigurera åtgärden skicka för formulär som har skapats i den univer
 >
 > - Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
 > - Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
-
-
-

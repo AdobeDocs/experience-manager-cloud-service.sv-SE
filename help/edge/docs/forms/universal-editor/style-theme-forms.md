@@ -4,7 +4,7 @@ description: Anpassa temat och formatet för AEM Forms som levereras via Edge De
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: ac780399-34fe-457d-aaf4-b675656c024d
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
 workflow-type: tm+mt
 source-wordcount: '2493'
 ht-degree: 0%
@@ -308,7 +308,7 @@ Det adaptiva Forms-blocket erbjuder en enhetlig HTML-struktur för olika formul�
 
 Alla formulärfält, utom listrutor, alternativgrupper och kryssrutegrupper, har följande HTML-struktur:
 
-#### HTML-struktur för allmänna komponenter
+### HTML-struktur för allmänna komponenter
 
 ```HTML
   <div class="{Type}-wrapper field-{Name}   field-wrapper" data-required={Required}>
@@ -1051,7 +1051,7 @@ Du kan formatera formulärfält baserat på deras specifika typ (`{Type}-wrapper
 
 Du kan använda CSS-väljare för att ange specifika fälttyper och använda format på ett konsekvent sätt.
 
-#### HTML Structure
+### HTML Structure
 
 ```HTML
 <div class="{Type}-wrapper field-{Name} field-wrapper" data-required={Required}>
@@ -1092,7 +1092,7 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 
 
 
-#### Exempel på CSS-väljare
+### Exempel på CSS-väljare
 
 ```CSS
 /- Primary Pattern: Target all text input fields */
