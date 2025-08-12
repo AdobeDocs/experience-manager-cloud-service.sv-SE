@@ -115,6 +115,7 @@ Konfigurera nu OIDC-autentiseringshanteraren. Flera OIDC-anslutningar kan konfig
       "storeRefreshToken": false
    }
    ```
+
 1. Konfigurera sedan egenskaperna enligt följande:
    * `groupsInIdToken`: Ange som true om grupperna skickas i ID-token. Om värdet är false, eller inte anges, läses grupperna från UserInfo-slutpunkten.
    * `groupsClaimName`: Anspråkets namn innehåller de grupper som ska synkroniseras i AEM.
