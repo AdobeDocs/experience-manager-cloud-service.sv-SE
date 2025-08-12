@@ -51,13 +51,13 @@ Utför följande steg för att ställa in objektets status till förhandsgranskn
    >
    > Resursväljaren visar resurser med den senaste statusuppdateringen inställd på Godkänd eller Förhandsgranska.
 
-1. Publicera sidan på förhandsgranskningsnivån med alternativet **[!UICONTROL Manage Publication]**. Utför stegen i avsnittet [Publicera innehåll till förhandsgranskning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/previewing-content) för att publicera sidan på förhandsgranskningsnivån. Generera en förhandsgransknings-URL för sidan efter publiceringen. På sidan Förhandsgranska visas resurserna (med de senaste statusuppdateringarna) på sidan Platser.
+1. Publicera sidan på förhandsgranskningsnivån med alternativet **[!UICONTROL Manage Publication]**. Utför stegen i avsnittet [Publicera innehåll till förhandsgranskning](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/previewing-content) för att publicera sidan på förhandsgranskningsnivån. Generera en förhandsgransknings-URL för sidan efter publiceringen. På sidan Förhandsgranska visas resurserna (med de senaste statusuppdateringarna) på sidan Platser.
 
-Dela den här förhandsgransknings-URL:en med intressenter för granskning och feedback. Se till att dina intressenter har tillgång till förhandsgranskningssidan. Mer information om hur du ger åtkomst till förhandsgranskningssidorna finns i [Åtkomst till förhandsgranskningstjänsten](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments#access-preview-service).
+Dela den här förhandsgransknings-URL:en med intressenter för granskning och feedback. Se till att dina intressenter har tillgång till förhandsgranskningssidan. Mer information om hur du ger åtkomst till förhandsgranskningssidorna finns i [Åtkomst till förhandsgranskningstjänsten](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments#access-preview-service).
 
 >[!NOTE]
 >
->Huvudkomponenten [för bild V3](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/image#version-and-compatibility) har som standard stöd för förhandsgranskningsversioner av resurser. När du väljer en förhandsvisningsversion av en resurs (resurs med förhandsgranskningsstatus) med panelen [Resursväljare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/asset-selector-upload), återges den automatiskt av Image V3-komponenten i förhandsgranskningsskiktet (en förhandsversion på webbplatsens författarsida).
+>Huvudkomponenten [för bild V3](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/image#version-and-compatibility) har som standard stöd för förhandsgranskningsversioner av resurser. När du väljer en förhandsvisningsversion av en resurs (resurs med förhandsgranskningsstatus) med panelen [Resursväljare](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/asset-selector-upload), återges den automatiskt av Image V3-komponenten i förhandsgranskningsskiktet (en förhandsversion på webbplatsens författarsida).
 
 När du har slutfört resursversionen [publicerar du dina sidor på publiceringsnivån](#publish-your-pages-to-publish-tier) för offentlig användning.
 
@@ -66,8 +66,8 @@ När du har slutfört resursversionen [publicerar du dina sidor på publicerings
 När du har slutfört resursversionen för allmänt bruk anger du resursstatusen till **[!UICONTROL Approved]**. Publicera sedan sidorna på publiceringsnivån. Så här publicerar du sidorna:
 
 1. Följ steg 1 i [Förhandsgranska resurser på sidan för webbplatsförhandsgranskning](#asset-preview-on-sites-pages-using-Dynamic-Media-with-OpenAPI-capabilities) ovan för att ändra resursstatus till **[!UICONTROL Approved]**.
-1. Navigera till webbplatsens författarsida och publicera den på [!DNL Publish tier]. Publicera sidorna genom att köra stegen i avsnittet [Publicera från sidredigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/page-editor/publishing#publishing-from-the-page-editor).
-Du kan också följa stegen i avsnittet [Publicera sidor från Sites Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/publishing-pages#publishing-from-the-sites-console) för att publicera sidan från webbplatsens konsol.
+1. Navigera till webbplatsens författarsida och publicera den på [!DNL Publish tier]. Publicera sidorna genom att köra stegen i avsnittet [Publicera från sidredigeraren](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/page-editor/publishing#publishing-from-the-page-editor).
+Du kan också följa stegen i avsnittet [Publicera sidor från Sites Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/publishing-pages#publishing-from-the-sites-console) för att publicera sidan från webbplatsens konsol.
 
    >[!NOTE]
    >
