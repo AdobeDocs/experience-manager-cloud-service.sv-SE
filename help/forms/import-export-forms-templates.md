@@ -16,7 +16,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/manage-administer-aem-forms/import-export-forms-templates) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/manage-administer-aem-forms/import-export-forms-templates) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan flytta adaptiva Forms och relaterade resurser som adaptiva formulärteman, formulärdatamodell (FDM), adaptiva formulärmallar, fragment och PDF forms mellan [!DNL AEM Forms] instanser.
@@ -181,7 +181,7 @@ Så här söker du efter resursen:
 
    ![Söka efter resurser](/help/forms/assets/search-bar.png)
 
-Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html).
+Mer information och instruktioner om hur du använder sökfunktionen finns i [Sök](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=sv-SE).
 
 <!--
 ## Export or create a package {#export-a-workflow-application}

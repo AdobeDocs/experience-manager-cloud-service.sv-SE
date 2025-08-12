@@ -346,4 +346,4 @@ Läs dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery
 
 >[!TIP]
 >
->En genomgång av hur du skapar ett nytt Edge Delivery Services-projekt som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här AEM GEM-webbinariet](https://experienceleague.adobe.com/en/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery).
+>En genomgång av hur du skapar ett nytt Edge Delivery Services-projekt som är aktiverat för WYSIWYG-redigering med AEM as a Cloud Service som innehållskälla finns i [det här AEM GEM-webbinariet](https://experienceleague.adobe.com/sv/docs/events/experience-manager-gems-recordings/gems2024/aem-authoring-and-edge-delivery).

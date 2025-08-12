@@ -58,7 +58,7 @@ Skapa en arbetsflödesmodell som använder processsteget `TreeActivation`:
 
 1. Gå till **Verktyg - Arbetsflöde - Modeller** från AEM as a Cloud Service hemsida.
 1. På sidan Arbetsflödesmodeller trycker du på **Create** i skärmens övre högra hörn.
-1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
+1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE).
 1. Markera den skapade modellen i listan och tryck på **Redigera**
 1. I följande fönster tar du bort steget som visas som standard
 1. Dra och släpp Processsteget till det aktuella modellflödet:
@@ -134,13 +134,13 @@ Du kan utlösa en trädreplikering genom att välja **Verktyg - Arbetsflöde - M
 
 Anropa inte den ursprungliga modellen. Kontrollera i stället att först kopiera modellen och anropa kopian.
 
-Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html#extending-aem).
+Precis som med alla arbetsflöden kan den också anropas via API. Mer information finns i [Interagera med arbetsflöden programmatiskt](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-program-interaction.html?lang=sv-SE#extending-aem).
 
 Du kan också skapa en arbetsflödesmodell som använder processsteget `Publish Content Tree`.
 
 1. Gå till **Verktyg - Arbetsflöde - Modeller** från AEM as a Cloud Service hemsida.
 1. På sidan Arbetsflödesmodeller trycker du på **Create** i skärmens övre högra hörn.
-1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
+1. Lägg till en titel och ett namn i modellen. Mer information finns i [Skapa arbetsflödesmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE).
 1. Markera den skapade modellen i listan och tryck på **Redigera**
 1. I följande fönster drar och släpper du Processsteg till det aktuella modellflödet:
 

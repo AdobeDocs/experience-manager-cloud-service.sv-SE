@@ -15,21 +15,21 @@ ht-degree: 0%
 >id="bulk-principal-uploading"
 >title="Massöverföring av huvudkonton"
 >abstract="Översikt över Överför filer gruppvis för grupper och användare och hur du använder dem på Admin Console för att skapa grupper och användare i IMS."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/admin-console" text="Dokumentation för AEM Admin Console"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/onboarding/journey/admin-console" text="Dokumentation för AEM Admin Console"
 >additional-url="https://adminconsole.adobe.com/" text="AEM Admin Console"
 
 ## Introduktion {#introduction}
 
 När du migrerar innehåll till molnet med CTT och CAM skapas grupper på AEM molninstans, men det går inte att placera grupper eller användare i IMS. De måste finnas i IMS för att kunna hanteras på rätt sätt av kunderna. Lyckligtvis finns det funktioner i Admin Console som gör att man kan skapa IMS-grupper och användare i grupp. CAM-importen underlättar processen genom att indatafiler sparas för att skapa massfiler. Detta gör att kunderna kan slutföra Admin Console-åtgärden som en del av den övergripande migreringsprocessen. Två typer av massöverföringsfiler skapas: en för grupper och en för användare.
 
-Se även [Hantera användare](https://helpx.adobe.com/enterprise/using/users.html) för mer information om hur du hanterar AEM as a Cloud Service-användare.
+Se även [Hantera användare](https://helpx.adobe.com/se/enterprise/using/users.html) för mer information om hur du hanterar AEM as a Cloud Service-användare.
 
 ## Allmänna regler för överföring av filer {#rules}
 
 Det finns några allmänna riktlinjer för redigering och användning av båda typerna av överföringsfiler:
 
 * Administratörsåtkomst till Admin Console måste först beviljas innan instruktionerna kan följas.
-* Observera att det finns flera olika sätt att skapa användare och gruppera i IMS.  Se [IMS-stöd för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/ims-support) om du vill veta mer om alla tillgängliga alternativ.  Här beskrivs endast Admin Console massöverföringsmetoder.
+* Observera att det finns flera olika sätt att skapa användare och gruppera i IMS.  Se [IMS-stöd för Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/ims-support) om du vill veta mer om alla tillgängliga alternativ.  Här beskrivs endast Admin Console massöverföringsmetoder.
 * Det finns tre identitetstyper i IMS: Adobe ID, Enterprise ID och Federated ID.  Instruktionerna på den här sidan finns endast för **Adobe ID**.  Om du behöver använda Enterprise ID eller Federated ID, se den fullständiga [Admin Console-dokumentationen](https://helpx.adobe.com/ca/enterprise/using/admin-console.html) och även den specifika dokumentationen för [Admin Console Bulk Group-överföring](https://helpx.adobe.com/ca/enterprise/using/user-groups.html) och [Admin Console Bulk User Upload](https://helpx.adobe.com/ca/enterprise/using/bulk-upload-users.html).  Specifikationerna för överföringsfilerna skiljer sig något åt för de två identitetstyperna.
 * Om ett CSV-fält tillåter flera poster (till exempel flera produktprofiler, flera grupper eller flera administratörer) måste posterna stå inom dubbla citattecken och avgränsas med kommatecken, dvs. `"profile 1,profile 2"`.
 
@@ -97,7 +97,7 @@ Så här använder du Admin Console massöverföring av användare:
    1. I den dialogruta som visas väljer du **Massanvändarfil** i listrutan under **Hämta en fil..** och klickar på knappen **Hämta**.
    1. Spara den resulterande CSV-filen
 1. Redigera massanvändarfilen
-   * Varje rad representerar en användare som ska överföras och har femton fält (fältnamnen utgör filens första rad). Vissa fält är valfria och beskrivs inte här. Se [CSV-format för massanvändare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format).  Fälten är:
+   * Varje rad representerar en användare som ska överföras och har femton fält (fältnamnen utgör filens första rad). Vissa fält är valfria och beskrivs inte här. Se [CSV-format för massanvändare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format).  Fälten är:
 
       * _Identitetstyp_ - valfritt.  Om inget anges skapas den som en Adobe ID
       * _Användarnamn_ - valfritt och inte använt för Adobe ID-överföringar
@@ -108,14 +108,14 @@ Så här använder du Admin Console massöverföring av användare:
       * _Landskod_ - Valfri och används inte för Adobe ID-överföringar
       * _ID_ - Valfritt och inte använt för Adobe ID-överföringar
       * _Produktkonfigurationer_ - valfritt. Det här fältet ärvs också från alla grupper som användaren är medlem i
-      * _Administratörsroller_ - valfritt. Använd det här fältet om användaren är administratör. Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format)
-      * _Produktkonfigurationer som administreras_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format). Det här fältet ärvs också från alla grupper som användaren är medlem i
+      * _Administratörsroller_ - valfritt. Använd det här fältet om användaren är administratör. Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format)
+      * _Produktkonfigurationer som administreras_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format). Det här fältet ärvs också från alla grupper som användaren är medlem i
       * _Användargrupper_ - valfritt. En lista över grupper som användaren ska tilldelas som medlem. Varje grupp måste vara en befintlig IMS-grupp. När massanvändarfilen hämtas från CAM fylls fältet i automatiskt med namnen på den IMS-aktiverade gruppen som användaren var medlem i (direkt eller indirekt) före migreringen
-      * _Användargrupper som administreras_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format). Det här fältet ärvs också från alla grupper som användaren är medlem i
-      * _Produkter som administreras_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format). Det här fältet ärvs också från alla grupper som användaren är medlem i
-      * _Kontrakt administrerade_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format)
-      * _Developer Access_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format)
-      * _Automatiskt tilldelade produkter_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html#csv-format)
+      * _Användargrupper som administreras_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format). Det här fältet ärvs också från alla grupper som användaren är medlem i
+      * _Produkter som administreras_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format). Det här fältet ärvs också från alla grupper som användaren är medlem i
+      * _Kontrakt administrerade_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format)
+      * _Developer Access_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format)
+      * _Automatiskt tilldelade produkter_ - valfritt.  Mer information finns i [CSV-format för flera användare](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html#csv-format)
 
    * När CSV-filen redigeras kan vissa program lägga till ytterligare citattecken när de sparas, vilket gör att bearbetningen misslyckas. Det är god praxis att inspektera CSV-filen för Raw-format i en enkel textredigerare för att se till att varje fält bara har ett inledande och ett avslutande citattecken (och de ska inte vara&quot;typografiska citattecken&quot;)
 
