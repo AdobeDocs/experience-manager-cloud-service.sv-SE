@@ -1,13 +1,13 @@
 ---
 title: Om Experience Hub
-description: Läs mer om AEM Experience Hub.
+description: Läs mer om Adobe Experience Hub.
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 exl-id: 1bfa47e1-fb2f-4b68-ac69-4618a9e4a5f4
-source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
+source-git-commit: f02457a115d00262b61f09769b9ac0e210942059
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Experience Hub introducerar en central startpunkt för hantering av innehåll, r
 
 Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (1 minut, 27 sekunder).
 
->[!VIDEO](https://video.tv.adobe.com/v/3463271?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3463267?quality=12&learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -63,7 +63,7 @@ Avsnittet **Redigeringsmiljöer** visar alla AEM-miljöer som du har tillgång t
 
 Navigeringselementen innehåller Assets Browse, som läser in databasen med den produktionsmiljö som är tillgänglig för användaren.
 
-![Experience Hub-navigeringselement](/help/implementing/cloud-manager/assets/experience-hub-navigation.png)
+![Experience Hub navigeringselement](/help/implementing/cloud-manager/assets/experience-hub-navigation.png)
 
 Om inga AEM Cloud-tjänstmiljöer för produktion är tillgängliga visas alternativen nedtonade (inte tillgängliga) för användaren.
 
