@@ -5,9 +5,9 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
+source-git-commit: d6d34c2818ecb07c9d610844f6b868fe6a5918c6
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1089'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Stegen för de metoder som beskrivs i det här dokumentet baseras på Fast. Om d
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
-1. Klicka på ikonen ![Inställningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Settings_18_N.svg) **Domäninställningar** på sidomenyn under **Tjänster**.
+1. Klicka på ikonen **Inställningar** ![Domäninställningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Settings_18_N.svg) på sidomenyn under **Tjänster**.
 
    ![Fönstret Domäninställningar](/help/implementing/cloud-manager/assets/cdn/cdn-create.png)
 
@@ -94,13 +94,18 @@ Om du vill konfigurera de här inställningarna måste du kontrollera om en `CNA
 >
 >För CDN som hanteras av Adobe tillåts endast webbplatser med ACME-validering när DV-certifikat (Domain Validation) används.
 
-#### Krav {#adobe-managed-cert-dv-requirements}
 
-Uppfyll dessa krav innan du konfigurerar DNS-posterna.
+### Konfigurera DNS{#config-dns}
+
+>[!WARNING]
+>
+>Principen om att registrera dig innan du annonserar gäller här. Det innebär att konfigurering av DNS endast ska utföras *efter* att du har lagt till domänmappningen. Om du gör det ser du till att Cloud Manager känner igen och validerar att domänen finns i sin egen konfiguration innan det kan svara på begäranden för den. Det undviker också eventuella försök till domänövertagande.
+
+Se till att du uppfyller följande krav *innan* du konfigurerar dina DNS-poster:
 
 * Identifiera din domänvärd eller registrator om du inte redan känner till den.
 * Kan redigera DNS-posterna för organisationens domän eller kontakta lämplig person som kan göra det.
-* Du måste redan ha verifierat ditt konfigurerade anpassade domännamn enligt beskrivningen i dokumentet [Kontrollera domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
+* Du har redan verifierat ditt konfigurerade anpassade domännamn enligt beskrivningen i dokumentet [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
 #### CNAME-post {#adobe-managed-cert-cname-record}
 

@@ -5,7 +5,7 @@ exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bf519f03b9be56c46c1ca04420169eaf221478cc
+source-git-commit: d6d34c2818ecb07c9d610844f6b868fe6a5918c6
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 1%
@@ -19,8 +19,8 @@ ht-degree: 1%
 >id="aemcloud_golive_domains"
 >title="Hantera anpassade domännamn"
 >abstract="Med Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name" text="Lägga till ett anpassat domännamn"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/managing-custom-domain-names" text="Visa och uppdatera anpassat domännamn"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name" text="Lägga till ett anpassat domännamn"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/managing-custom-domain-names" text="Visa och uppdatera anpassat domännamn"
 
 Adobe Experience Manager as a Cloud Service har etablerats med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Med hjälp av Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt. Standarddomännamnet `*.adobeaemcloud.com` kvarstår, även efter att du har associerat anpassade domännamn till webbplatsen.
 
@@ -60,7 +60,7 @@ Om du vill lägga till ett anpassat domännamn måste DNS-tjänsten och Cloud Ma
 | 1 | [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md) |
 | 2 | [Lägg till en anpassad domän](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) |
 | 3 | [Lägg till domänmappning](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md) |
-| 4 | [Konfigurera DNS](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) |
+| 4 | [Konfigurera DNS](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md#config-dns) |
 | 5 | [Kontrollera DNS-status](/help/implementing/cloud-manager/custom-domain-names/check-dns-record-status.md) |
 
 >[!TIP]
