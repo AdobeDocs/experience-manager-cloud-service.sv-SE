@@ -5,9 +5,9 @@ feature: Authoring
 exl-id: ef482843-451b-474e-a8d0-d0bfcc17221b
 solution: Experience Manager Sites
 role: User
-source-git-commit: 9a700e9eb3116252f42bb08db9dadc0e8a6adbf7
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '570'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ Om du använder Edge Delivery tjänster kan du välja att redigera ditt innehål
 
 Med dokumentbaserad redigering kan man använda de verktyg man redan känner till och ändå dra nytta av AEM Edge Delivery Services snabbhet och prestanda för att publicera sitt material. Dokumentbaserad redigering kräver ingen användning av AEM-konsolen.
 
-Mer information om dokumentbaserad redigering finns i [Skapa och publicera innehåll](/help/edge/docs/authoring.md).
+Mer information om dokumentbaserad redigering finns i [Skapa och publicera innehåll](https://www.aem.live/docs/aem-authoring).
 
 ## AEM Content Fragment Editor {#cf-editor}
 

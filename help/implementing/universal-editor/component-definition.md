@@ -4,9 +4,9 @@ description: Förstå JSON-kontraktet mellan komponentdefinitionen och den unive
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: e1bb1a54-50c0-412a-a8fd-8167c6f47d2b
-source-git-commit: afb59345b48b39376b62a13cce8910bc9bc42c38
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '602'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ Filen `component-definition.json` definierar de komponenter som är tillgänglig
 
 >[!TIP]
 >
->En översikt över innehållsmodelleringsprocessen finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services-projekt](/help/edge/wysiwyg-authoring/content-modeling.md).
+>En översikt över innehållsmodelleringsprocessen finns i dokumentet [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services-projekt.](https://www.aem.live/developer/component-model-definitions)
 
 >[!TIP]
 >
->Du behöver inte skapa en egen `component-definition.json`-fil från grunden. Projektmallen som du använder för att [bootstrap ditt projekt](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) innehåller en [fullt fungerande `component-definition.json` fil ](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) som du kan anpassa efter dina behov.
+>Du behöver inte skapa en egen `component-definition.json`-fil från grunden. Projektmallen som du använder för att [bootstrap ditt projekt](https://www.aem.live/developer/ue-tutorial) innehåller en [fullt fungerande `component-definition.json` fil ](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) som du kan anpassa efter dina behov.
 
 ## Exempel på komponentdefinition {#example}
 

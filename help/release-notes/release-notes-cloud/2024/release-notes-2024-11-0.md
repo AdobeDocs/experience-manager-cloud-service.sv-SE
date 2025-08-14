@@ -4,9 +4,9 @@ description: Versionsinformation om 2024.11.0-utgåvan av  [!DNL Adobe Experienc
 feature: Release Information
 role: Admin
 exl-id: 3fd6482e-66f0-48ee-983c-4cb6b7742dcd
-source-git-commit: 5db419e674ceb3c861f53a19e7b852c89ebd3702
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1810'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.11.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten för november 2024 om du vill se en sammanfattning av funktioner som lagts till i version 2024.11.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
@@ -47,11 +47,11 @@ Gör snabbt om en Edge Delivery-sida till en sidmall. På så sätt kan du start
 
 **[!DNL Edge Delivery Services]CSV-importerare för publicering via en AEM-instans**
 
-Hantera dina Edge Delivery-kalkylbladsdata (t.ex. omdirigeringar) effektivt i ditt kalkylbladsverktyg och ladda upp dem till AEM via den nya CSV-importeraren. [Läs mer](/help/edge/wysiwyg-authoring/tabular-data.md#importing).
+Hantera dina Edge Delivery-kalkylbladsdata (t.ex. omdirigeringar) effektivt i ditt kalkylbladsverktyg och ladda upp dem till AEM via den nya CSV-importeraren. [Läs mer](https://www.aem.live/docs/authoring-tabular-data).
 
 ### Förhandsversionsfunktioner i AEM Sites
 
-Förbättrade [Content Fragment-referenser med unika ID-baserade referenser](/help/headless/graphql-api/uuid-reference-upgrade.md), vilket säkerställer stabila länkar som förblir giltiga även när resurser eller fragment flyttas, vilket eliminerar behovet av uppdateringar eller ompublicering. Aktuell begränsning: Sidreferenser stöds ännu inte med unika ID:n. Om det finns referenser till sidor i innehållsfragment bör den här funktionen inte användas.
+Förbättrade [Content Fragment-referenser med unika ID-baserade referenser](/help/headless/graphql-api/uuid-reference-upgrade.md), vilket garanterar stabila länkar som förblir giltiga även när resurser eller fragment flyttas, vilket eliminerar behovet av uppdateringar eller ompublicering. Aktuell begränsning: Sidreferenser stöds ännu inte med unika ID:n. Om det finns referenser till sidor i innehållsfragment bör den här funktionen inte användas.
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
@@ -73,7 +73,7 @@ AI-genererade videobildtexter i Adobe Dynamic Media använder artificiell intell
 
 Få leveransinsikter om mediefiler som levereras med Dynamic Media, med leveransantal på tillgångsnivå, referensinformation, resurssökväg i AEM Assets och unikt resurs-ID. Rapporter kan genereras för alla resurser som levereras via Dynamic Media för AEM Assets-databasen eller för en viss mapphierarki i AEM Assets. Insikter hjälper till att mäta avkastningen på levererade tillgångar, mäta kanalernas prestanda och ta hjälp av välgrundade resurshanteringsåtgärder för tillgångar.
 
-Om du vill få tidig åtkomst till Dynamic Media Delivery Report på ditt Dynamic Media-konto kan du [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill få tidig åtkomst till Dynamic Media Delivery Report på ditt Dynamic Media-konto kan du [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ### Nya funktioner i vyn Assets {#assets-view-new-features}
 
@@ -121,7 +121,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
   ![HTML Forms (XFA-baserade webbformulär)](/help/forms/assets/html-forms-xfa-based-web-forms.png)
 
 
-* **[Base64-kodad sträng stöds för bifogad fil](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab)**: Komponenten för bifogad fil i adaptiv Forms baserad på kärnkomponenter innehåller nu ett alternativ för att skicka bifogade filer som Base64-kodade strängar.
+* **[Base64-kodad sträng stöds för bifogad fil](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab)**: Komponenten för bifogad fil i adaptiv Forms baserad på kärnkomponenter innehåller nu ett alternativ för att skicka bifogade filer som Base64-kodade strängar.
 
 #### API:er för interaktiv kommunikation och kommunikation
 
@@ -147,7 +147,7 @@ intuitive and improving the mobile form-filling experience.
 
 ## Automatisk formulärkonverteringstjänst
 
-* **[Konvertera PDF forms till Core Components-baserade adaptiva Forms](https://experienceleague.adobe.com/sv/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms)**: nu kan du använda automatisk formulärkonverteringstjänst för att omvandla PDF forms-, AcroForms- eller XFA-baserade formulär till Core Components-baserade adaptiva Forms.
+* **[Konvertera PDF forms till Core Components-baserade adaptiva Forms](https://experienceleague.adobe.com/en/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms)**: nu kan du använda automatisk formulärkonverteringstjänst för att omvandla PDF forms-, AcroForms- eller XFA-baserade formulär till Core Components-baserade adaptiva Forms.
 
 >[!IMPORTANT]
 >
@@ -170,7 +170,7 @@ intuitive and improving the mobile form-filling experience.
 
 Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att Adobe Developer Console-projekt skapas.
 
-Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
+Lär dig mer om [OpenAPI-baserade AEM API:er](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) som visar konfiguration och användning.
 
 De API-slutpunkter som anges nedan är tillgängliga som en del av ett program för tidig användning. Om du är intresserad kan du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av hur du tänker använda dem.
 * [API:er för innehållsfragment för webbplatser](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/)
@@ -190,7 +190,7 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -210,4 +210,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 7ddd0a75-621a-4499-91d1-7b3408a68269
-source-git-commit: d53bfe103ff8e40c8221805a2d66faf3c5cd3823
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '422'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Adobe Experience Manager användargränssnitt fungerar med följande klientplatt
 
 * [Universal Editor](/help/sites-cloud/authoring/universal-editor/authoring.md)
 * [Page Editor](/help/sites-cloud/authoring/page-editor/introduction.md)
-* [Dokumentbaserad redigering](/help/edge/docs/authoring.md) med [Sidekick](/help/edge/docs/sidekick.md)
+* [Dokumentbaserad redigering](https://www.aem.live/docs/aem-authoring) med [Sidekick](https://www.aem.live/docs/sidekick)
 
 Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
 
@@ -64,4 +64,4 @@ Alla webbläsare testas med standarduppsättningen med plugin-program och tillä
 
 Webbläsarstöd för webbplatser som återges av AEM beror på implementeringen av AEM sidmallar, block, design och komponentutdata. Därför har utvecklare som implementerar ditt projekt kontrollen över webbplatsens kompatibilitet.
 
-AEM [Project-mallen ](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md#create-github-project) [Core Components,](/help/implementing/developing/components/overview.md#aem-core-components) och [WKND sample site](/help/implementing/developing/introduction/develop-wknd-tutorial.md) är alla kompatibla med alla moderna webbläsare.
+AEM [Project-mallen ](https://www.aem.live/developer/ue-tutorial#create-github-project) [Core Components,](/help/implementing/developing/components/overview.md#aem-core-components) och [WKND sample site](/help/implementing/developing/introduction/develop-wknd-tutorial.md) är alla kompatibla med alla moderna webbläsare.

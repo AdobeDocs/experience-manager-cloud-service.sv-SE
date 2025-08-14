@@ -4,9 +4,9 @@ description: Läs mer om Generera variationer, som kan hämtas från olika redig
 feature: Generate Variations
 role: Admin, Architect, Developer, User
 exl-id: d380ddd6-43f9-4bbf-8167-a6a472b9fc01
-source-git-commit: 8c4908bf52ca03798d7d40ed66647c17fc0faf14
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1417'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
   >[!NOTE]
   >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 
@@ -198,7 +198,7 @@ Om du vill ge vissa användare åtkomst tilldelar du deras användarkonto till r
 
 ### Åtkomst från AEM Sidekick för dokumentbaserad redigering {#access-aem-sidekick}
 
-Åtkomst från AEM Sidekick används för [dokumentbaserad redigering](/help/edge/wysiwyg-authoring/authoring.md).
+Åtkomst från AEM Sidekick används för [dokumentbaserad redigering](https://www.aem.live/docs/aem-authoring).
 
 En del konfiguration krävs innan du kan komma åt Generera variationer från Sidekick (i Edge Delivery Services).
 
@@ -328,9 +328,9 @@ Du kan även läsa mer om:
 
 * [GenAI Generera variationer på GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
 * [Edge Delivery Services Experimentation](https://www.aem.live/docs/experimentation)
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)
 
 * [Generera startsida för variationer på Experience Cloud](https://experience.adobe.com/solutions/aem-sites-genai-aem-genai-variations-mfe/static-assets/resources/ga.html)
 

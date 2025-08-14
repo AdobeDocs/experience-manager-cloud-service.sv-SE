@@ -4,9 +4,9 @@ description: Lär dig mer om de viktigaste användningsexemplen i Universal Edit
 exl-id: 398ad0e2-c299-4c49-9784-05c84c67bec2
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: c4dcb1cecb756f746ecb856fcfd65d73833a5ee0
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '882'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ På så sätt kan du dra nytta av de verktyg som finns i Sites-konsolen, till ex
 
 Om det är ditt sätt att arbeta kan du i nästa steg få en komplett översikt över hur du kommer igång med Universal Editor i AEM.
 
-1. [Guiden Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) - Kom igång med ditt första Universal Editor-projekt i AEM
-1. [Skapar block som är instrumenterade för användning med den universella redigeraren](/help/edge/wysiwyg-authoring/create-block.md) - Lär dig hur du gör instrumentblock för att göra ditt innehåll redigerbart i den universella redigeraren
-1. [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](/help/edge/wysiwyg-authoring/content-modeling.md) - Lär dig mer om hur block är strukturerade för att effektivt modellera ditt innehåll för användning med den universella redigeraren.
+1. [Guiden Komma igång för utvecklare för WYSIWYG-redigering med Edge Delivery Services](https://www.aem.live/developer/ue-tutorial) - Kom igång med ditt första Universal Editor-projekt i AEM
+1. [Skapar block som är instrumenterade för användning med den universella redigeraren](https://www.aem.live/developer/universal-editor-blocks) - Lär dig hur du gör instrumentblock för att göra ditt innehåll redigerbart i den universella redigeraren
+1. [Innehållsmodellering för WYSIWYG-redigering med Edge Delivery Services Projects](https://www.aem.live/developer/component-model-definitions) - Lär dig mer om hur block är strukturerade för att effektivt modellera ditt innehåll för användning med den universella redigeraren.
 
 När du har läst dessa dokument kan du gå tillbaka till den här sidan för att lära dig mer om hur du använder utan rubrik och hur den universella redigeraren fungerar i allmänhet.
 
@@ -65,7 +65,7 @@ Den universella redigerarens styrka är möjligheten att skapa allt innehåll p�
 Universal Editor fungerar på följande sätt.
 
 1. En utvecklare instrumenterar programmet eller sidan för att använda den universella redigeraren. Den här instrumenteringen talar om för redigeraren vilket innehåll som kan redigeras och hur det ska bevaras.
-   * Om du följer [Developer Getting Started Guide for WYSIWYG Authoring with Edge Delivery Services](/help/edge/wysiwyg-authoring/edge-dev-getting-started.md) -dokumentationen, så används sidorna automatiskt.
+   * Om du följer [Developer Getting Started Guide for WYSIWYG Authoring with Edge Delivery Services](https://www.aem.live/developer/ue-tutorial) -dokumentationen, så används sidorna automatiskt.
    * För headless-redigering är det enkelt att instrumentera appen.
 1. Innehållsförfattaren läser in Universal Editor, som i sin tur läser in sidan för redigering. Eftersom den är instrumenterad vet den vilket innehåll som är redigerbart och hur det ska återges och bevaras.
 1. Innehållsförfattaren redigerar sidinnehållet i ett intuitivt WYSIWYG-gränssnitt och redigerar det på plats.

@@ -4,9 +4,9 @@ description: Versionsinformation om 2024.8.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: dd1d4b8f-8331-4e97-a754-37e720974db6
-source-git-commit: 4b8086920bc3e3b9c5ed2a74934645fbc69acf71
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1174'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.8.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -48,18 +48,18 @@ Titta på videon Augustiversionen 2024 med en sammanfattning av funktioner som l
 Befintliga [arv](/help/sites-cloud/authoring/universal-editor/inheritance.md)-funktioner för platser stöds nu:
 
 * [AEM Launches](/help/sites-cloud/authoring/launches/overview.md)
-* [MSM](/help/sites-cloud/administering/msm/overview.md) at the page level
+* [MSM](/help/sites-cloud/administering/msm/overview.md) på sidnivå
 
-In addition, the following page management features are now supported:
+Dessutom stöds nu följande sidhanteringsfunktioner:
 
-* [AEM Tags](/help/sites-cloud/authoring/sites-console/tags.md) can be exported as a [taxonomy](/help/edge/wysiwyg-authoring/taxonomy.md) to Edge Delivery Services.
-* [Templates](/help/sites-cloud/authoring/universal-editor/templates.md) for Edge Delivery Services are coming soon!
+* [AEM-taggar](/help/sites-cloud/authoring/sites-console/tags.md) kan exporteras som en [taxonomi](https://www.aem.live/docs/authoring-taxonomy) till Edge Delivery Services.
+* [Mallar](/help/sites-cloud/authoring/universal-editor/templates.md) för Edge Delivery Services kommer snart!
 
 ### Tidiga Adobe-program {#sites-early-adopter}
 
 **Generera variationer**
 
-Leverage GenAI through AEM&#39;s new feature, [generate variations](/help/generative-ai/generate-variations.md), accessible now in Cloud Service. Generate variations helps you generate and scale content creation through the use of generative AI. Kontakta ditt Adobe-kontoteam och ta del av ditt bidrag i programmet.
+Utnyttja GenAI genom AEM nya funktion, [generera varianter](/help/generative-ai/generate-variations.md), som nu är tillgängliga i Cloud Service. Generera variationer hjälper er att generera och skala innehåll med hjälp av generativ AI. Kontakta ditt Adobe-kontoteam och ta del av ditt bidrag i programmet.
 
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
@@ -76,7 +76,7 @@ Assets as a Cloud Service använder nu den senaste widgeten från Firefly som g�
 
 Assets as a Cloud Service har nu stöd för Photoshop stora dokument (PSB-filer) utöver det befintliga stödet för PSD-filer.
 
-### New enhancements in Content Hub {#content-hub-new-enhancements}
+### Nya förbättringar i Content Hub {#content-hub-new-enhancements}
 
 * Bättre hantering av långa filnamn, enkel utökning av hela namnet med verktygstips.
 * Förbättrade miniatyrbilder som bättre passar innehållets proportioner och täcker större innehållsområden.
@@ -148,7 +148,7 @@ Adobe hanterade CDN har nu stöd för [Edge Side Includes (ESI)](/help/implement
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -168,4 +168,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

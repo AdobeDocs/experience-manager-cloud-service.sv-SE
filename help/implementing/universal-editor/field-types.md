@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 199ee7e11f6706773bd426c3d27236d6ea791a6c
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1569'
 ht-degree: 1%
 
 ---
@@ -166,7 +166,7 @@ En taggkomponenttyp i AEM aktiverar en AEM-taggväljare som kan användas för a
 
 >[!TIP]
 >
->Se dokumentet [Hantera taxonomidata](/help/edge/wysiwyg-authoring/taxonomy.md) för mer information om hur du kan använda kalkylblad för att hantera taxonomidata för ditt Edge Delivery Services-projekt.
+>Se dokumentet [Hantera taxonomidata](https://www.aem.live/docs/authoring-taxonomy) för mer information om hur du kan använda kalkylblad för att hantera taxonomidata för ditt Edge Delivery Services-projekt.
 
 #### AEM Content {#aem-content}
 

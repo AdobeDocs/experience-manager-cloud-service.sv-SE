@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att utöka funktionerna 
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 2f487fa5-57a7-477a-ad68-590e6cc12f4e
-source-git-commit: 9941c652a1509934662cdaae6d187d1a28a1cc31
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Om du vill utforska möjligheterna att skapa egna tillägg kan du läsa följand
 
 >[!TIP]
 >
->Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
+>Om du föredrar att lära dig som exempel kan du titta i självstudiekursen [AEM UI extensibility](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview). Även om den fokuserar på att utöka konsolen för innehållsfragment är begreppen för att implementera ett UI-tillägg i den universella redigeraren desamma.
 
 [Med Extension Manager i AEM Sites](https://developer.adobe.com/uix/docs/extension-manager/) kan du aktivera eller inaktivera tillägg per instans, få åtkomst till Adobe förstahandstillägg, inklusive de för Universal Editor, och mycket annat.
 
@@ -59,6 +59,6 @@ Om du vill utforska möjligheterna att skapa egna tillägg kan du läsa följand
 
 Förutom UI-utbyggbarhet erbjuder den universella redigeraren många andra flexibla tilläggspunkter som möjliggör smidig integrering av anpassade affärskrav.
 
-* **[Block](/help/edge/developer/block-collection.md)**: I enkelt JSON-format kan projekt justera blocken och UE-funktionerna som är tillgängliga för att skapa innehåll.
+* **[Block](https://www.aem.live/developer/block-collection)**: I enkelt JSON-format kan projekt justera blocken och UE-funktionerna som är tillgängliga för att skapa innehåll.
 * **[Anpassat användargränssnitt](#extending-ui)**: Tillägg kan visa nödvändigt gränssnitt i sidopaneler eller modala dialogrutor.
 * **[Händelser](/help/implementing/universal-editor/events.md)**: Tillägg tar emot händelser om författarens åtgärder och val på sidan för att svara korrekt.

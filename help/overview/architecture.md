@@ -4,9 +4,9 @@ description: Introduktion till arkitekturen i Adobe Experience Manager as a Clou
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
 feature: Release Information
 role: Admin
-source-git-commit: 8be0a9894bb5b3a138c0ec40a437d6c8e4bc7e25
+source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
 workflow-type: tm+mt
-source-wordcount: '2712'
+source-wordcount: '2711'
 ht-degree: 8%
 
 ---
@@ -53,7 +53,7 @@ Det finns fyra typer av [miljö](/help/implementing/cloud-manager/manage-environ
 
 * Scenmiljö:
 
-   * En scenmiljö är vanligtvis kopplad till en produktionsmiljö i en 1:1-relation.
+   * En scenmiljö är vanligtvis kopplad till en produktionsmiljö i en :1-relation.
    * Scenmiljön är främst utformad för automatisk testning innan ändringar i programmet överförs till produktionsmiljön.
       * Detta är oberoende av de ändringar som initieras antingen av Adobe som en del av en underhållsuppdatering eller av dina koddistributioner.
       * Du kan också utföra manuell testning om en koddistribution sker.
@@ -238,5 +238,5 @@ Den senaste arkitekturen för AEM as a Cloud Service innehåller några grundlä
    * [Testning av kodkvalitet](/help/implementing/cloud-manager/code-quality-testing.md)
 * Edge Delivery Services:
    * [AEM as a Cloud Service Overview - with Edge Delivery Services](/help/edge/overview.md)
-   * [Använda Edge Delivery Services](/help/edge/using.md)
-   * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=sv-SE)
+   * [Använda Edge Delivery Services](/help/edge/overview.md)
+   * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)
