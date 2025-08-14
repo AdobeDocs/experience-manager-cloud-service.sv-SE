@@ -6,9 +6,9 @@ feature: Edge Delivery Services
 role: User, Developer, Admin
 level: Beginner
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: 07160248d5b5817d155a118475878ce04a687a32
 workflow-type: tm+mt
-source-wordcount: '2358'
+source-wordcount: '2355'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,11 @@ ht-degree: 0%
 
 # Navigera i det universella redigeringsgränssnittet för AEM Forms
 
-[Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) har ett visuellt gränssnitt för att skapa AEM Forms med Edge Delivery Services. Den här guiden hjälper dig att förstå gränssnittet för att skapa formulär effektivt.
+[Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) har ett visuellt gränssnitt för att skapa AEM Forms med Edge Delivery Services. Det ger en **What You See Is What You Get (WYSIWYG)**-upplevelse som visar exakt hur formulären kommer att se ut för användarna.
 
 ![Gränssnittsöversikt för Universal Editor](/help/edge/docs/forms/universal-editor/assets/universal-editor-interface.png)
 
-## Ökning
-
-Universal Editor erbjuder en **What You See Is What You Get (WYSIWYG)**-upplevelse som visar exakt hur formulären kommer att se ut för användarna. Vare sig du är nybörjare eller erfaren utvecklare kommer den här guiden att hjälpa dig att:
+Den här guiden hjälper dig att förstå gränssnittet för att skapa formulär effektivt. Vare sig du är nybörjare eller erfaren utvecklare kommer den här guiden att hjälpa dig att:
 
 **Lär dig viktiga färdigheter:**
 
@@ -37,6 +35,8 @@ Universal Editor erbjuder en **What You See Is What You Get (WYSIWYG)**-upplevel
 - Skapa blanketter från idé till publicering
 - Testa och förhandsgranska formulär på olika enheter
 - Samarbeta med teammedlemmar i formulärprojekt
+
+
 
 ## Komma igång snabbt
 
@@ -349,7 +349,7 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
     ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
-**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
 
 #### **Innehållsutkast**
 
@@ -378,7 +378,7 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
 +++
 
-+++Collaboration-verktyg
++++Collaboration Tools
 
 #### **Aktivitetshantering**
 
@@ -485,7 +485,7 @@ Använd kortkommandona för att skapa formulär snabbare och effektivare:
 
 +++
 
-+++Förhandsvisningslägesproblem
++++Problem med förhandsgranskningsläge
 
 **Problem:** Förhandsgranskningsläget fungerar inte som det ska eller så visas fel
 
