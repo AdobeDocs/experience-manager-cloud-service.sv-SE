@@ -290,7 +290,7 @@ Nedan beskrivs vanliga problem och lösningar för AEM Forms med Edge Delivery S
 Om problemen kvarstår:
 
 1. Kontrollera status för Adobe Experience Cloud-tjänst.
-2. Granska [Edge Delivery Services-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html).
+2. Granska [Edge Delivery Services-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=sv-SE).
 3. Besök [Adobe Experience League Community](https://experienceleaguecommunities.adobe.com/).
 4. Kontakta Adobe kundtjänst.
 
@@ -302,6 +302,6 @@ När du är klar med formulärframtagningen och publiceringen bör du tänka på
 
 - [Konfigurera överföringsåtgärder](/help/edge/docs/forms/universal-editor/submit-action.md): Konfigurera datahantering och integreringar.
 - [Formulärdatamodeller](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md): Koppla formulär till backend-datakällor.
-- [Edge Delivery Services bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html): Maximera prestanda.
+- [Edge Delivery Services bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=sv-SE): Maximera prestanda.
 - [Formuläranalys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate/services/analytics.html): Spåra formulärprestanda och användarbeteende.
 
