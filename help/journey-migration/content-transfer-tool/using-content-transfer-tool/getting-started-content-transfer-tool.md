@@ -65,7 +65,7 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
 >id="aemcloud_ctt_demo"
 >title="Verktyget Innehållsöverföring körs"
 >abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehåll till AEM as a Cloud Service (författare/publicera)."
->additional-url="https://video.tv.adobe.com/v/35460/?quality=12&amp;learn=on" text=" Se demo"
+>additional-url="https://video.tv.adobe.com/v/35460/?quality=12&learn=on" text=" Se demo"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverföring. Följ det här avsnittet för att lära dig hur du använder verktyget Innehållsöverföring för att migrera innehåll till AEM as a Cloud Service:
