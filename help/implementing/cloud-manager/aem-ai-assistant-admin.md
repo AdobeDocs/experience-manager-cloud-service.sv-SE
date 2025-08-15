@@ -36,7 +36,7 @@ Innan du börjar bör du kontrollera att du uppfyller följande krav:
 
 ## 1 - Skapa en ny produktprofil i Adobe Admin Console{#create-profile}
 
-1. Följ de detaljerade instruktionerna i [Skapa en ny produktprofil i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/create-profile) när du hittade Experience Platform-dokumentationen.
+1. Följ de detaljerade instruktionerna i [Skapa en ny produktprofil i Adobe Admin Console](https://experienceleague.adobe.com/sv/docs/experience-platform/access-control/ui/create-profile) när du hittade Experience Platform-dokumentationen.
 
 1. När du skapar den nya produktprofilen använder du följande exempel på de värden du kan använda för AI-assistenten.
 
@@ -54,7 +54,7 @@ Innan du börjar bör du kontrollera att du uppfyller följande krav:
 
 Processen för att tilldela anpassade behörigheter till produktprofiler följer standardarbetsflödet för anpassade behörigheter i Adobe Cloud Manager.
 
-Referensartikel: [Tilldela anpassade behörigheter till den nya produktprofilen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/custom-permissions#assign-permissions)
+Referensartikel: [Tilldela anpassade behörigheter till den nya produktprofilen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/custom-permissions#assign-permissions)
 
 1. I Admin Console klickar du på namnet på den nya produktprofilen (`AEM AI Assistant`)
 
