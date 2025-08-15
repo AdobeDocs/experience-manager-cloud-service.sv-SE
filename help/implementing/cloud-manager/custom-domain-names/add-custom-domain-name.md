@@ -5,7 +5,7 @@ exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d6d34c2818ecb07c9d610844f6b868fe6a5918c6
+source-git-commit: 215f4630acb3eca4be501c7c5f5de7c60b550bf8
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%
@@ -95,7 +95,7 @@ Om du vill konfigurera de här inställningarna måste du kontrollera om en `CNA
 >För CDN som hanteras av Adobe tillåts endast webbplatser med ACME-validering när DV-certifikat (Domain Validation) används.
 
 
-### Konfigurera DNS{#config-dns}
+## Konfigurera DNS{#config-dns}
 
 >[!WARNING]
 >
@@ -107,7 +107,7 @@ Se till att du uppfyller följande krav *innan* du konfigurerar dina DNS-poster:
 * Kan redigera DNS-posterna för organisationens domän eller kontakta lämplig person som kan göra det.
 * Du har redan verifierat ditt konfigurerade anpassade domännamn enligt beskrivningen i dokumentet [Kontrollerar domännamnsstatus](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).
 
-#### CNAME-post {#adobe-managed-cert-cname-record}
+### CNAME-post {#adobe-managed-cert-cname-record}
 
 Ett kanoniskt namn eller en CNAME-post är en typ av DNS-post som mappar ett aliasnamn till ett sant eller kanoniskt domännamn. CNAME-poster används vanligtvis för att mappa en underdomän som `www.example.com` till den domän som är värd för den underdomänens innehåll.
 
@@ -117,7 +117,7 @@ Logga in på din DNS-tjänstleverantör och skapa en `CNAME`-post för att peka 
 | --- | --- |
 | `www.customdomain.com` | `cdn.adobeaemcloud.com` |
 
-#### APEX-post {#adobe-managed-cert-apex-record}
+### APEX-post {#adobe-managed-cert-apex-record}
 
 En domän är en anpassad domän som inte innehåller någon underdomän, till exempel `example.com`. En huvuddomän har konfigurerats med en `A`-, `ALIAS`- eller `ANAME`-post via din DNS-leverantör. Apex-domäner måste peka på specifika IP-adresser.
 
