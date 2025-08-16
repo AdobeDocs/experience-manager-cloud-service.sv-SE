@@ -4,7 +4,7 @@ description: Skapa och leverera högpresterande formulär på Adobe Experience M
 feature: Edge Delivery Services
 exl-id: ecea1e05-d36b-4d63-af9d-c69dafd2f94f
 role: Admin, Architect, Developer
-source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
+source-git-commit: 81de486a2b9f1db0d8fe588e883d929fd2f7b7f1
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 0%
@@ -50,7 +50,7 @@ När allt är klart kan du välja rätt redigeringsmetod, förstå överförings
 ### Universal Editor
 
 <!--
-<span class="preview"> This is a pre-release feature available through our <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">pre-release channel</a>. </span>
+<span class="preview"> This is a pre-release feature available through our <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">pre-release channel</a>. </span>
 -->
 
 [Universell redigerare](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) är ett visuellt dra och släpp-redigeringsverktyg för marknadsförare och designers som kombinerar snabbhet med kraftfulla företagsfunktioner:
@@ -121,7 +121,6 @@ Följande diagram visar hur du kan redigera formulär i Microsoft Excel eller Go
 
 
 Nu kan du skapa ditt första högpresterande formulär med AEM Edge Delivery Services.
-
 
 <!--
 ## Start creating forms
