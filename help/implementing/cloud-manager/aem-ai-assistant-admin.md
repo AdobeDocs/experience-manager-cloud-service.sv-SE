@@ -6,26 +6,26 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: ab8fefe18e43c1fe937d0d16df65b6137fc8a292
+source-git-commit: a216777f6d5bb3dd1afe5d7cdb88ec41435c0500
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
 
-# Konfigurera AEM AI Assistant - Administratörsinstallation {#aem-ai-asst-admin-setup}
+# Konfigurera AI-assistenten i Adobe Experience Manager {#aem-ai-asst-admin-setup}
 
-En administratör måste konfigurera åtkomst, behörigheter och inställningar innan användare i organisationen kan använda funktionerna i AEM AI Assistant. I den här artikeln beskrivs hur du aktiverar AI-assistenten för din organisation, konfigurerar nödvändiga autentiseringsuppgifter och sparar konfigurationsändringar.
+En administratör måste konfigurera åtkomst, behörigheter och inställningar innan användare i organisationen kan använda funktionerna i AEM (Adobe Experience Manager) AI Assistant. I den här artikeln beskrivs hur du aktiverar AI-assistenten för din organisation, konfigurerar nödvändiga autentiseringsuppgifter och sparar konfigurationsändringar.
 
 **Översikt över konfigurationsprocessen för AEM AI Assistant**
 
 Konfigurationsprocessen består av följande steg:
 
-1. Skapa en ny produktprofil i Adobe Admin Console.
-1. Aktivera behörigheten&quot;AI Assistant Product Knowledge&quot;.
-1. Skapa eller använd en befintlig användargrupp.
-1. Lägg till användare i användargruppen.
-1. Tilldela produktprofilen till användargruppen.
+1. [Skapa en ny produktprofil i Adobe Admin Console](#create-profile).
+1. [Aktivera AI Assistant-produktkunskapsbehörighet](#enable-permission).
+1. [Skapa en ny användargrupp (eller använd en befintlig användargrupp)](#create-user-group).
+1. [Lägg till användare i användargruppen](#add-users).
+1. [Tilldela produktprofilen till användargruppen](#assign-product-profile).
 
 **Förutsättningar**
 
@@ -36,9 +36,9 @@ Innan du börjar bör du kontrollera att du uppfyller följande krav:
 
 ## 1 - Skapa en ny produktprofil i Adobe Admin Console{#create-profile}
 
-1. Följ de detaljerade instruktionerna i [Skapa en ny produktprofil i Adobe Admin Console](https://experienceleague.adobe.com/sv/docs/experience-platform/access-control/ui/create-profile) när du hittade Experience Platform-dokumentationen.
+1. Följ de detaljerade instruktionerna i [Skapa en ny produktprofil i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/create-profile) som finns i Experience Platform-dokumentationen.
 
-1. När du skapar den nya produktprofilen använder du följande exempel på de värden du kan använda för AI-assistenten.
+1. När du skapar den nya produktprofilen kan du använda följande föreslagna värden för AI-assistenten.
 
    | Textfält | Föreslaget värde |
    | --- | --- |
@@ -50,11 +50,11 @@ Innan du börjar bör du kontrollera att du uppfyller följande krav:
 
 
 
-## 2 - Aktivera behörigheten&quot;AI Assistant Product Knowledge&quot;{#enable-permission}
+## 2 - Aktivera AI Assistant Product Knowledge-behörighet{#enable-permission}
 
 Processen för att tilldela anpassade behörigheter till produktprofiler följer standardarbetsflödet för anpassade behörigheter i Adobe Cloud Manager.
 
-Referensartikel: [Tilldela anpassade behörigheter till den nya produktprofilen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/custom-permissions#assign-permissions)
+Referensartikel: [Tilldela anpassade behörigheter till den nya produktprofilen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/custom-permissions#assign-permissions)
 
 1. I Admin Console klickar du på namnet på den nya produktprofilen (`AEM AI Assistant`)
 
@@ -77,7 +77,7 @@ Referensartikel: [Tilldela anpassade behörigheter till den nya produktprofilen]
    Din produktprofil har nu AI Assistant-produktkunskapsbehörighet aktiverad.
 
 
-## 3 - Skapa en användargrupp (eller använd en befintlig användargrupp){#create-user-group}
+## 3 - Skapa en ny användargrupp (eller använd en befintlig användargrupp){#create-user-group}
 
 1. Gör något av följande:
 
@@ -126,7 +126,7 @@ Du kan använda en befintlig AEM-användargrupp om den uppfyller åtkomstkraven 
 
    ![Sidan med användargrupper för AEM AI Assistant som visar fliken Användare och knappen Lägg till användare](/help/implementing/cloud-manager/assets/ai-assistant-add-users.png)
 
-1. På sidan **Lägg till användare i den här användargruppen** söker du efter och väljer användare som behöver åtkomst till AEM AI Assistant.
+1. På sidan **`Add users to this user group`** söker du efter och väljer användare som behöver åtkomst till AEM AI Assistant.
 
    ![Lägg till användare på den här användargruppsidan](/help/implementing/cloud-manager/assets/ai-assistant-add-users-to-this-group.png)
 
@@ -138,7 +138,7 @@ Du kan använda massöverföring i Admin Console.
 
 1. Förbered en CSV-fil med användarinformation.
 
-1. Använd alternativet **Lägg till användare via CSV** om du vill lägga till flera användare effektivt.
+1. Använd alternativet **`Add users by CSV`** för effektiv massutökning.
 
 >[!ENDTABS]
 
