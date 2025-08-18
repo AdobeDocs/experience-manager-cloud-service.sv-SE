@@ -3,7 +3,7 @@ title: Dynamic Media Prime och Ultimate
 description: Läs mer om Dynamic Media Prime och Ultimate, deras fördelar och skillnader mellan de båda.
 role: User
 exl-id: fd049d9c-7940-4638-a17a-21d1f85e9c52
-source-git-commit: 47afd8f95eee2815f82c429e9800e1e533210a47
+source-git-commit: 8b596c6e82d9beaeb922cc6635717f151bb390e7
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 6%
@@ -45,13 +45,13 @@ Förutom Dynamic Media Prime-funktioner som AEM Assets-integrering med Adobe ell
 * [Dynamiska media med OpenAPI](/help/assets/dynamic-media-open-apis-overview.md) har avancerade funktioner som:
 
    * Säker leverans av tillgångar.
-   * [Smart beskärning, Smart bildbehandling, bildförinställningar och ytterligare bildmodifierare](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetSeoFormat).
+   * [Smart beskärning, Smart bildbehandling, bildförinställningar och ytterligare bildmodifierare](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
 
 * [Dynamisk medielösning i AEM as a Cloud Service](/help/assets/dynamic-media/dynamic-media.md) som även innehåller följande nyckelfunktioner:
 
    * [Dynamiska mediamallar](/help/assets/dynamic-media/dynamic-media-templates.md)
-   * [Grundläggande om mallar](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
-   * [Visuell konfiguration](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
+   * [Grundläggande om mallar](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
+   * [Visuell konfiguration](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
 
 ### Förutsättningar {#pre-requisites-dm-ultimate}
 

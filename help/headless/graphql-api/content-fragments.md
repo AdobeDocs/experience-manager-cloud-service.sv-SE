@@ -4,9 +4,9 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: 47afd8f95eee2815f82c429e9800e1e533210a47
+source-git-commit: 32344eb9668aefd5efe44a073bc4c66c2496f003
 workflow-type: tm+mt
-source-wordcount: '5981'
+source-wordcount: '5984'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,7 @@ Med GraphQL kan du utföra frågor för att returnera:
 
 * En **[lista med poster](https://graphql.org/learn/schema/#lists-and-non-null)**
 
-AEM innehåller funktioner för att konvertera frågor (båda typerna) till [beständiga frågor, som kan cachas](/help/headless/graphql-api/persisted-queries.md) av Dispatcher och CDN.
+AEM har funktioner för att konvertera frågor (båda typerna) till [beständiga frågor, som kan cachas](/help/headless/graphql-api/persisted-queries.md) av Dispatcher och CDN.
 
 ### GraphQL Query Best Practices (Dispatcher och CDN) {#graphql-query-best-practices}
 
@@ -169,7 +169,7 @@ Användaren måste också ha tillgång till en GraphQL-slutpunkt för att kunna 
 
 ## Schemagenerering {#schema-generation}
 
-GraphQL är ett högtypat API, vilket innebär att data måste vara tydligt strukturerade och ordnade efter typ.
+GraphQL är ett starkt typbestämt API, vilket innebär att data måste vara tydligt strukturerade och ordnade efter typ.
 
 GraphQL-specifikationen innehåller en serie riktlinjer för hur du skapar ett robust API för att förhöra data i en viss instans. För att kunna göra detta måste en klient hämta [Schema](#schema-generation), som innehåller alla typer som krävs för en fråga.
 
@@ -375,7 +375,7 @@ Du kan visa alla metadata för GraphQL-typer om du visar det genererade GraphQL-
 >[!NOTE]
 >
 >**Skillnad mellan normala metadata och arraymetadata**
->&#x200B;>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
+>>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
 >
 >Om du till exempel anropar fältet `stringMetadata` får du en array med alla metadata som lagrats i databasen som `String` , och om du anropar `stringArrayMetadata` får du en array med alla metadata som lagrats i databasen som `String[]`.
 
@@ -755,7 +755,7 @@ Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
 Med AEM kan du
 
-* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) till GraphQL-frågor.
+* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) till GraphQL-frågor.
 
 Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar på GET-begäranden för dessa bilder.
 
@@ -1171,7 +1171,7 @@ De nuvarande begränsningarna är:
 
   >[!NOTE]
   >
-  >Den fullständiga URL:en måste sedan skapas på klientsidan, baserat på [API:t för resursleverans](https://adobe-aem-assets-delivery.redoc.ly/#operation/getAssetSeoFormat).
+  >Den fullständiga URL:en måste sedan skapas på klientsidan, baserat på [API:t för resursleverans](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
 
 * Endast *Godkända* resurser är tillgängliga för referens från fjärrdatabaserna
 * Om en resurs som refereras tas bort från fjärrdatabasen resulterar detta i en trasig referens för innehållsfragmentresurser.
@@ -1379,4 +1379,4 @@ AEM planerar att investera i AEM GraphQL API.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
