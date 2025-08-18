@@ -1,6 +1,6 @@
 ---
-title: Nu kommer Assets as a Cloud Service för hantering av digitala resurser i AEM
-description: Nu kommer Assets as a Cloud Service för hantering av digitala resurser i AEM
+title: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
+description: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
 source-git-commit: c3a528d7e903b43f6b9a18b2426a04638b086d38
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# Nu kommer Assets as a Cloud Service för hantering av digitala resurser i AEM {#assets-as-cloud-service-digital-asset-management-aem}
+# Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM {#assets-as-cloud-service-digital-asset-management-aem}
 
 Adobe Experience Manager Assets as a Cloud Service är en molnbaserad, Adobe PaaS-lösning som gör att företag inte bara kan utföra sina Digital Asset Management- och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
 
@@ -57,11 +57,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/using">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/using">
    <img alt="Använd AEM datorprogram" src="./assets/desktop-app-upload.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/using">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/using">
       <strong> Använda AEM-datorprogrammet </strong>
       </a>
    </div>
@@ -70,11 +70,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
    </p>
 </td>
 <td>
-   <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+   <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
    <img alt="Använd Adobe Asset Link" src="./assets/adobe-asset-link.jpeg" />
    </a>
    <div>
-      <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+      <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
       <strong> Använd Adobe Asset Link </strong>
       </a>
    </div>
@@ -517,7 +517,7 @@ Du kan integrera resursväljaren med ett Adobe- eller ett program som inte komme
 
 * **Integrering med Adobe Workfront**: [!DNL Adobe Workfront] är ett arbetshanteringsprogram som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
-  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations.html?lang=sv-SE).
+  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations.html).
 
 * **Integrering med Figma**: AEM Assets kan integreras direkt med Figma, vilket gör att designers kan komma åt de resurser som lagras i AEM Assets direkt från Figma-användargränssnittet. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan i Figma och sedan spara nytt eller redigerat innehåll i AEM Assets-databasen. Klicka [här](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) om du vill få åtkomst till AEM Assets Connector på Figma Community-sidan.
 
@@ -583,11 +583,11 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
 
 <table>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+   <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
    <img alt="Integrering med Adobe Journey Optimizer" src="./assets/integration-figma.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+      <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
       <strong>Integrering med Adobe Journey Optimizer</strong>
       </a>
    </div>
@@ -596,11 +596,11 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/aem-asset-management/aem-assets-integration">
+   <a href="https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/aem-asset-management/aem-assets-integration">
    <img alt="Integrering med Commerce" src="./assets/integration-ajo.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/aem-asset-management/aem-assets-integration">
+      <a href="https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/aem-asset-management/aem-assets-integration">
       <strong>Integrering med Commerce</strong>
       </a>
    </div>
