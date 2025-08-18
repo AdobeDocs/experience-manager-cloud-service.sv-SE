@@ -136,7 +136,7 @@ Du kan använda en befintlig AEM-användargrupp om den uppfyller åtkomstkraven 
    ![Lägg till användare på den här användargruppsidan](/help/implementing/cloud-manager/assets/ai-assistant-add-users-to-this-group.png)
 
 1. Klicka på **Spara** i sidans nedre högra hörn.
-1. Tilldela nu produktprofilen till användargruppen](#assign-product-profile).
+1. Tilldela nu produktprofilen till användargruppen&rbrack;(#assign-product-profile).
 
 >[!TAB Lägg till användare i grupp]
 
@@ -144,7 +144,7 @@ Du kan använda massöverföring i Admin Console.
 
 1. Förbered en CSV-fil med användarinformation.
 1. Använd alternativet **`Add users by CSV`** för effektiv massutökning.
-1. Tilldela nu produktprofilen till användargruppen](#assign-product-profile).
+1. Tilldela nu produktprofilen till användargruppen&rbrack;(#assign-product-profile).
 
 >[!ENDTABS]
 
