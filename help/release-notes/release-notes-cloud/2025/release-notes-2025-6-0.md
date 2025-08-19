@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon om versionsöversikten för juni 2025 om du vill se en sammanfattning av funktioner som lagts till i version 2025.6.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3470878?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3470882?quality=12&captions=swe)
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
