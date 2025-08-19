@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 280e02ba0ace1fe123fd5112a982c6434fd4d499
+source-git-commit: 90e92cfb15a6dfe5a8a474996f52c8a0c689f5e6
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -16,138 +16,71 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 21772 {#21772}
+## Utgåva 21994 {#21994}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21772, som offentliggjordes den 6 augusti 2025. Den tidigare underhållsversionen var version 21706.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21994, som offentliggjordes den 19 augusti 2025. Den tidigare underhållsversionen var version 21772.
 
-Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Nya funktioner  {#new-features-21772}
+### Nya funktioner  {#new-features-21994}
 
-* SITES-30049: Ny slutpunkt för hämtning av språkkopior av ett innehållsfragment med dess UUID har lagts till.
+Ingen.
 
-### Förbättringar {#enhancements-21772}
+### Förbättringar {#enhancements-21994}
 
-* CQ-4358722: Korrigerade lokaliseringsproblem som orsakas av olika språkkoder mellan Java 11 och Java 17.
-* FORMS-19624: Aktiverad interaktiv kommunikation. Den ger företag möjlighet att leverera skräddarsydd on demand-kommunikation - som kontoutdrag, fakturor och korrespondens - genom att kombinera strukturerade mallar med dynamiska data. Med funktioner som webbaserad malldesign, återanvändbara innehållsfragment, regelstyrda variationer och smidig dataintegrering kan IC erbjuda enhetlig och skalbar kundkommunikation över olika kanaler.
-* FORMS-19587, FORMS-17107, FORMS-19591, FORMS-19582, FORMS-20129, FORMS-2002, FORMS-19593, FORMS-20655, FORMS-11 9583, FORMS-18024, FORMS-19581: Följande förbättringar har gjorts i redigeraren för anpassade Forms:
-   * Metoden `validate` i funktionslistan kan nu validera paneler, fält och formulär.
-   * Förbättrad parsning av anpassade funktioner på klientsidan som stöder ES10+-funktioner och statisk import.
-   * En färdig (OTB)&quot;Download Document of Record (DoR)&quot;-knapp har lagts till i regelredigeraren.
-   * Stöd för dynamiska variabler i regler har lagts till.
-   * Möjliggjorde skapande av regler baserat på anpassade händelser.
-   * Regler för upprepningsbara paneler körs nu i rätt sammanhang, i stället för bara i den sista panelinstansen.
-   * Regler kan nu aktiveras baserat på frågeparametrar, UTM-parametrar och webbläsarparametrar.
-   * Stöd för formulärspecifika anpassade funktionsskript i EDS (Experience Data Store) har lagts till.
-   * Stöd för att använda `EVENT_PAYLOAD` i åtgärden Navigera till har lagts till i regelredigerarens hanterare.
-   * Funktionsanrop som stöds i indataparametrar i regelredigeraren och säkerställda regler sparas inte om några obligatoriska parametrar saknas i funktionsanropet.
-   * Markerade brutna regler i regelredigeringsgränssnittet.
-* FORMS-18450: reCAPTCHA V2 (inklusive ovisible reCAPTCHA) är nu enklare att konfigurera och använda i Adaptiv Forms. Konfigurationen hanteras nu på ett och samma ställe, vilket gör det enklare för dig att aktivera skräppostskydd i dina formulär.
-* FORMS-18385: Stöd för AFP-generering från XDP och data i AEM Forms via Output-tjänsten har lagts till.
-* FORMS-17789: En färdig knapp har lagts till i regelredigeraren för att hämta DoR (Document of Record).
-* FORMS-20313, FORMS-2896: Stöd för egenskapen `dorExclude` har lagts till för att inaktivera vissa funktioner i kärnkomponentbaserade formulär.
-* FORMS-20262: Hanterade ogiltiga bifogade filer (0 byte) på klientsidan.
-* FORMS-18347: Förbättrad adaptiv loggning av Forms-redigerare för proxy-komponenter som saknas i formulärbehållaren.
-* FORMS-16205: Undantagna inaktiverade komponenter från DoR (Document of Record) i kärnkomponentbaserade formulär.
-* FORMS-10836: Ändrad orientering för mallsidesegenskaper i DoR (Document of Record) för höger till vänster-språk.
-* SITES-33025: Öppna ny CF-redigerare via ID i stället för sökväg.
-* SITES-32741: Utlös uppdatering av sidreferenser för innehålls-fragment asynkront.
-* SITES-32087: GraphQL: Lägg till stöd för `_ignoreCase` i StringArray.
-* SITES-12211: Förbättrade prestanda i mallredigeraren
-* SITES-32861: Prestandaförbättring för framtagning av live-kopior genom chunked-bearbetning.
-* SITES-21383: Prestandaoptimering för åtgärder för att starta innehållsfragment.
-* SITES-31165: Prestandaförbättringar genom att dela upp utrullningsåtgärder i hanterbara segment.
-* SITES-21353: Förbättrade frågeprestanda för Content Fragment startar med databasindexering.
-* SITES-30495: Förbättring med stöd för UUID-baserade fragmentreferenser när Content Fragment startas.
-* SITES-32151: API-förbättring som visar behållaregenskapsfunktioner.
-* SITES-26849: Justera bakåtreferenser när en innehållsavsnittsvariation flyttas eller tas bort.
-* SITES-31846: Lägg till alternativ för att kopiera/klistra in rotfragment och referenser i samma mapp för kopieringsträdsåtgärder.
-* SITES-30241: Justera referenser i ett långt textfält när du flyttar, byter namn på eller tar bort ett fragment.
-* SITES-32684: Förbättra mekanismen för synkronisering av tabbändringar i gränssnittsschema.
-* SITES-33308: Lägg till återförsöksmekanism för synkronisering av ändringar i UI-schemat när du redigerar modeller.
-* SITES-32247: Dialogrutan Personalization &amp; UI misalignment i komponenten &quot;Text and Personalization&quot; saknas.
-* SITES-32261: Experience Fragment i18n Gäller inte fält.
-* SITES-32666: Mallpredikatet innehåller `\n` vilket gör att HTML-sökningen misslyckas.
-* SITES-32674: Det aktuella bildfältets bildväljare fungerar inte för guiden Skapa sida trots `cq:showOnCreate`.
-* SITES-32014: Edge Delivery med Universal Editor: Lägg till automatisk konfiguration av CORS-principer för localhost, aem.page och aem.live
-* SITES-26532: Edge Delivery med Universal Editor: Lägg till stöd för lokaliserade URL:er (tidig åtkomst).
-* SITES-30887: Lägg till innehållets fragmenthandtag som lagras i arbetsflödets metadata.
+* GRANITE-53488: Förbättra felhanteringen för deleteconf.json-slutpunkter.
+* GRANITE-59968: Tillåt att konfigurera REPLICATION_FORCE_READY_MILLIES.
+* GRANITE-60183: Apache Commons-fileupload 1.6.0.
+* GRANITE-60306: Apache Commons-lang to 3.18.0.
+* GRANITE-60637: Apache Commons-codec to 1.19.0.
+* GRANITE-60645: Apache commons-ui 2.20.0.
+* GRANITE-60663: Apache Commons-text 1.14.0.
+* GRANITE-60714: Mongo Java Driver 5.2.
+* GRANITE-60778: Filevault 4.0.0.
+* GRANITE-60823: Jackrabbit 2.22.2
+* GRANITE-60967: Skapa mätvärden för att spåra kompileringstid för klientlib.
+* SKYOPS-105469: Lägger till stöd för acsredirectMgr i autofix api.
+* SKYOPS-113929: Lägg till mätvärden för kontroll av replikeringsberedskap.
+* SKYOPS-84821: Sling engine 2.16.6.
+* SKYOPS-114322: Dumpa slutkompilatorspråket på nivån till `ECMASCRIPT_2018`.
 
-### Åtgärdade problem {#fixed-issues-21772}
+### Åtgärdade problem {#fixed-issues-21994}
 
-* CQ-4360190: Korrigerad `UnsupportedOperationException` inträffade när add skulle användas på en keySet som inte stöder åtgärden.
-* CQ-4360421: Åtgärdade ett problem med kryptering av Microsoft Translator-prenumerationsnyckel för att förbättra säkerheten och kompatibiliteten.
-* FORMS-20980: Korrigerade problem med tangentbordstillgänglighet i datumväljaren med anpassat visningsformat i Adaptiv Forms.
-* FORMS-20498: En kontroll för null-pekarundantag i OdataResponse lades till för att förhindra körningsfel.
-* FORMS-20947: Åtgärdade flera olika tillgänglighetsproblem, bland annat problem med skärmläsare och texttrunkering/överlappning.
-* FORMS-21030, FORMS-20630: Löste problem med listrutefält som konfigurerats för flera val i adaptiva formulär. Den genererade PDF innehåller nu korrekt alla valda värden.
-* FORMS-19579: Korrigerade ett fel där Invoke-tjänstregeln inte korrigerade automatiskt när filen sparades igen.
-* FORMS-20734: Dubbletter av signaturfält i PDF-dokument som genererats av Output-tjänsten för XFAF-baserade PDF-indatamallar har korrigerats.
-* FORMS-20934: Korrigerade listrutan Autofyll attribut i AEM Forms redigeringsgränssnitt för att ta bort dubblettposter och inkludera alla standardvariabler för automatisk komplettering av HTML.
-* FORMS-20700: Löste den flimmer som finns i hjälptexter för listrutor vid första inläsningen i AEM Forms.
-* FORMS-20307: Korrigerade ett problem där formulär som är inbäddade på en webbsida inte översattes med språkområden på 4 tecken.
-* FORMS-20493: Åtgärdade ett problem där formulär automatiskt uppdaterades när data hämtades, vilket orsakade problem för användaren.
-* FORMS-18455: Förbättrad adaptiv Forms-redigerare för kärnkomponenter så att prickar för använda dataobjekt visas i datakällträdet.
-* FORMS-19373: Replikeringsfel som inte har några replikeringsagenter konfigurerade har förhindrats i publiceringsmiljöer.
-* FORMS-20042: Korrigerade den brutna egenskapsvyn som orsakades av konfigurationen för Apache Sling GET Servlet med HTML-konfigurationen aktiverad.
-* FORMS-20036, FORMS-19978: Åtgärdade problem med kompabilitet och validering av PDF/A-1b.
-* FORMS-19166: Pagedatasource.jsp har flyttats till serverleten för att förbättra tydligheten i stackspårning och lägga till fler skyddsutkast och loggning.
-* FORMS-16466: Korrigerade problem med repeterbara paneler som inte fylldes korrekt i AEM Forms.
-* FORMS-19629: Korrigerade problem med JSON-schemaparsning för kunder som ger ogiltiga resultat.
-* LC-3923083: Löste felet &quot;path object not tagged&quot; för kantlistade objekt i XDP-mallar.
-* SITES-33177: Edge Delivery med Universal Editor: Korrigera brutna avsnittsformat när de lagras som kommaseparerade strängar.
-* SITES-33262: Edge Delivery med Universal Editor: fix blocks with no name property break page rendering and publishing.
-* SITES-33309: Edge Delivery med Universal Editor: korrigera `IllegalArgumentException` när du skriver till ett kalkylblad med ett snedstreck i kolumner.
-* SITES-33408: Edge Delivery med Universal Editor: korrigerade kalkylblad visas inte som ändrade när du har gjort ändringar.
-* SITES-31992: GraphQL: Korrigera sporadiska fel i modellskanning vid start av paket.
-* SITES-29967: GraphiQL: Long query names are cut off.
-* SITES-26266: Innehållsreferenser som inte börjar med `/` returneras inte från BE-svar (Java API).
-* SITES-17874: GraphQL beständiga frågor: Korrigera kodning för innehållstypprogram/graphql-response+json.
-* SITES-24506: Skärmläsare informeras om sökresultaten.
-* SITES-25268: Förbättrad skärmläsare för anteckningar.
-* SITES-32366: Stavningskontrollresultat dolda bakom dialogrutan RTE.
-* SITES-32829: Förbättringar av MediaQuery-emulatorn för att tolka mediefrågenivå 3 och 4.
-* SITES-32278: Taggfält som är fästa att använda fältetiketter korrekt.
-* SITES-25244: Vågrätt streck visas inte längre i bildmodala.
-* SITES-33395: Fast rollout button functionality for Content Fragment live copy synchronization.
-* SITES-33147: Åtgärdat tjänstbindningsproblem som påverkar live-relationsfunktioner.
-* SITES-33528: Ett problem med tidsstämpelns bevarande har korrigerats under starthöjningen.
-* SITES-33014: Korrigerad generering av varningslogg från LaunchesAdapterFactory.
-* SITES-32305: Fixed live copy inherance break functionality after layout changes.
-* SITES-32268: Inaktivera URL-kodning för sökning efter innehållsfragment.
-* SITES-32772: Egenskapen som är låst i variantens fält var alltid false när förbättringarna från SITES-31455 aktiverades - relaterat till det enhetliga taggvärdet.
-* SITES-32696: Korrigerat problem när ett fält för Live-kopia i innehållsfragment med brutet arv inte längre kunde redigeras.
-* SITES-31712: Långsam fråga från Omni-search på prod Author.
-* SITES-33039: Sidhändelser utlöses inte korrekt.
-* SITES-31192: Upplev att fragment förlorar versionshistorik när de har flyttats.
-* SITES-33529: Error while linking the ACS Campaign templates with AEM pages.
-* SITES-33678: Add Toggle for SITES-33529.
-* SITES-33468: AEMaaCS kan inte ansluta till ACS.
+* GRANITE-60167: Async index update in Skyline does not support CSV data.
+* GRANITE-60532: Ändringen av värdemogglar har inte hämtats.
+* SITES-34277: Åtgärda blockeringsfel i översättningsarbetsflöden för sidor.
+* SKYOPS-105471: Support dambaseredirect fix for aso autofix.
+* SKYOPS-109532: Lägg till borttagen länk som kommentar bakom växlingsknappen.
 
-### Ändrade funktioner {#altered-functionality-21772}
+#### AEM Guides {#guides-21994}
 
-* SITES-26344: Enhetlig verifiering av `fragmentId`/`modelId` mellan slutpunkter - dessa ID:n har validerats och en 400-statuskod returneras om de inte är giltiga.
-* SITES-29598: Validera innehållsfragmentreferenser som lagts till i fragmentreferensfält när en innehållsfragmentmodell uppdateras.
+* GUIDES-26688: CSS- och sidlayoutfiler i PDF-mallar har ett inkonsekvent fillåsningsbeteende, vilket gör att redigeringar kan göras även när filerna är låsta.
+* GUIDES-30900: Om du kopierar en mapp med ett stort antal resurser från Assets UI kommer en API-timeout att uppstå. Åtgärden fortsätter att köras i serverdelen och slutförs efter en stund, men inget meddelande om att åtgärden lyckades eller misslyckades visas eller inget meddelande visas i användargränssnittet.
+* GUIDES-29090: I utdata från PDF visas LOI (List of Index) i en icke-alfabetisk ordning och kapslade indextermer grupperas inte korrekt, vilket gör indexet svårt att navigera i.
+* GUIDES-11227: Om du kopierar en DITA-karta från Assets-gränssnittet kopieras även den kopplade baslinjen till den nya kartan.
+* GUIDES-31506: Hemsidan blir tom när en av filerna som listas i widgeten Senaste filer är baserad på en mall vars källmall inte innehåller någon miniatyrbild.
 
-### Kända fel {#known-issues-21772}
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
-* SITES-31791: Content Fragments GraphQL - Query failed with &quot;Maximum field count beyond&quot;. Se [Kunskapsbasartikeln](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-27231).
+### Kända fel {#known-issues-21994}
 
-### Föråldrade funktioner och API:er {#deprecated-21772}
+* Apache HTTPD version 2.4.65 innehåller ändringar som kan påverka vissa konfigurationer på grund av nya begränsningar som implementeras som en del av säkerhetskorrigeringar. Dessa korrigeringar åtgärdar sårbarheter genom att säkerställa att direktiv som `RequestHeader set`, `edit` och `edit_r` som används för att ändra Content-Type-huvudet nu begränsas korrekt till begäranrubriker. Den här ändringen förhindrar oavsiktliga ändringar av svarshuvuden, särskilt för statiskt innehåll.
+
+### Föråldrade funktioner och API:er {#deprecated-21994}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-21772}
+### Säkerhetskorrigeringar {#security-21994}
 
-AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 35 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
+AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar två identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-21772}
+### Inbäddade tekniker {#embedded-tech-21994}
 
 | Teknik | Version | Länk |
 |---|---|---|
-| AEM Oak | 1.80.0 | [Oak API 1.80.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.80/index.html) |
+| AEM Oak | 1.84.0 | [Oak API 1.84.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.84/index.html) |
 | AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
-| Apache HTTP-server | 2.4.63 | [Apache HTTP 2.4.63](https://github.com/apache/httpd/blob/2.4.63/CHANGES) |
+| Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.29.0 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
