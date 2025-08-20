@@ -4,7 +4,7 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: 32344eb9668aefd5efe44a073bc4c66c2496f003
+source-git-commit: 25e566ac2b1e8d59be25c34bd17fff5d28354ffd
 workflow-type: tm+mt
 source-wordcount: '5984'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Med GraphQL API i AEM kan du effektivt leverera innehållsfragment till JavaScri
 >
 >GraphQL används för närvarande i två (separata) scenarier i Adobe Experience Manager (AEM) as a Cloud Service:
 >
->* [AEM Commerce förbrukar data från en Commerce-plattform via GraphQL](/help/commerce-cloud/integrating/magento.md).
+>* [AEM Commerce förbrukar data från en Commerce-plattform via GraphQL.](/help/commerce-cloud/cif-storefront/integrating/magento.md)
 >* AEM Content Fragments fungerar tillsammans med AEM GraphQL API (en anpassad implementering som baseras på standard-GraphQL) för att leverera strukturerat innehåll som kan användas i dina program.
 
 >[!NOTE]
@@ -375,7 +375,7 @@ Du kan visa alla metadata för GraphQL-typer om du visar det genererade GraphQL-
 >[!NOTE]
 >
 >**Skillnad mellan normala metadata och arraymetadata**
->&#x200B;>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
+>>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
 >
 >Om du till exempel anropar fältet `stringMetadata` får du en array med alla metadata som lagrats i databasen som `String` , och om du anropar `stringArrayMetadata` får du en array med alla metadata som lagrats i databasen som `String[]`.
 
@@ -755,7 +755,7 @@ Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
 Med AEM kan du
 
-* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) till GraphQL-frågor.
+* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) till GraphQL-frågor.
 
 Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar på GET-begäranden för dessa bilder.
 
@@ -1379,4 +1379,4 @@ AEM planerar att investera i AEM GraphQL API.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
