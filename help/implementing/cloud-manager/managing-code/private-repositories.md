@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
+source-git-commit: 45645a963c42f1335ff2019ffe2aa516ee084a9f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Konfigurationen av en privat GitHub Cloud-databas i Cloud Manager består av tv�
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du det program som du vill länka till en privat Git-databas.
 
-1. Välj ![Mappikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) **Databaser** på sidomenyn under **Tjänster**.
+1. Välj **Mappikon** ![Databaser](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) på sidomenyn under **Tjänster**.
 
    ![Sidan Databaser](/help/implementing/cloud-manager/managing-code/assets/repositories-tab.png)
 
@@ -115,7 +115,7 @@ Till valideringen visas databasen med en röd ikon, som anger att den ännu inte
 
 Kolumnen **Type** i tabellen på sidan **Databaser** identifierar databaser som tillhandahålls av Adobe (**Adobe**) och egna privata databaser (**GitHub**).
 
-Om du behöver gå tillbaka till databasen senare för att slutföra valideringen klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på sidan **Databaser** på raden som representerar GitHub-databasen som du just lade till. Välj **Verifiering av ägarskap** i listrutan.
+Om du behöver gå tillbaka till databasen senare för att slutföra valideringen klickar du på ikonen **Mer** på sidan ![Databaser](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på raden som representerar GitHub-databasen som du just lade till. Välj **Verifiering av ägarskap** i listrutan.
 
 
 
@@ -162,3 +162,4 @@ Validerade privata databaser kan associeras med [rörledningar i full hög och i
 * [Återanvändning av felaktigheter](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) gäller inte för privata databaser.
 * Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager.
 Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.
+* Om GitHub-organisationen har IP-begränsningar skapar du ett supportärende som tar emot listan över IP-adresser som ska tillåtas.
