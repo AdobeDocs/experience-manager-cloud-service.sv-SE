@@ -4,7 +4,7 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
+source-git-commit: 2e136117508d7bd17993bf0e64b41aa860d71ab1
 workflow-type: tm+mt
 source-wordcount: '2409'
 ht-degree: 0%
@@ -561,7 +561,7 @@ version: "1"
 metadata:
   envTypes: ["dev"]
 data:
-  sumologic:
+  sumoLogic:
     default:
       enabled: true
       collectorURL: "https://collectors.de.sumologic.com/receiver/v1/http"
