@@ -37,7 +37,7 @@ CIF Add-On finns som arkiv för Sling Feature. ZIP-filen som finns på Software 
 >[!TIP]
 >
 >**Ny på AEM as a Cloud Service?**
->>Ta en titt på [en mer detaljerad guide om hur du konfigurerar en lokal utvecklingsmiljö med AEM as a Cloud Service SDK.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+>&#x200B;>Ta en titt på [en mer detaljerad guide om hur du konfigurerar en lokal utvecklingsmiljö med AEM as a Cloud Service SDK.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
 
 ### Nödvändig programvara {#required-software}
 
