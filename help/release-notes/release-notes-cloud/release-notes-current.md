@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 401eaaaa0bb8dad054c7105533cbd4486964c484
+source-git-commit: 07b957374dcc513050c48bb320e8d639385c3344
 workflow-type: tm+mt
-source-wordcount: '2269'
+source-wordcount: '2350'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -88,7 +88,7 @@ Content Hub innehåller nu alternativet **Visa alla** i filter, vilket gör att 
 
 Få automatisk uppladdning av nya filer och mappar, förbättrad filhantering, smartare resursidentifiering och smidig integrering med AEM - vilket gör innehållshanteringen snabbare, tydligare och mer intuitiv.
 
-En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes).
+En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes).
 
 ### Nya funktioner i Dynamic Media med OpenAPI-funktioner {#new-features-dynamic-media-with-openapi}
 
@@ -105,32 +105,44 @@ Alla OpenAPI-bildbegäranden utnyttjar nu Smart Imaging fullt ut med automatisk 
 
 ### Nya funktioner i AEM Forms {#forms-new-features}
 
-**Universell redigerare för adaptiva Forms och formulärfragment**
+* **Universell redigerare för adaptiva Forms och formulärfragment**
 
-[Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) har nu stöd för att skapa både adaptiva Forms-filer och återanvändbara formulärfragment. Man kan visuellt skapa blanketter, konfigurera skicka-åtgärder och lägga in reCAPTCHA-validering i en förenklad WYSIWYG-miljö. Detta snabbar upp framtagningen av blanketter, ger bättre enhetlighet och förbättrar skyddet mot skräppost och automatiskt missbruk.
+  [Universal Editor](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md) har nu stöd för att skapa både adaptiva Forms-filer och återanvändbara formulärfragment. Man kan visuellt skapa blanketter, konfigurera skicka-åtgärder och lägga in reCAPTCHA-validering i en förenklad WYSIWYG-miljö. Detta snabbar upp framtagningen av blanketter, ger bättre enhetlighet och förbättrar skyddet mot skräppost och automatiskt missbruk.
 
-![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=80%, align-center}
+  ![Universell redigerare](/help/edge/docs/forms/universal-editor/assets/universal-editor.png){width=80%, align-center}
 
 
-**Forms Submission Service för Edge Delivery Services Forms**
+* **Forms Submission Service för Edge Delivery Services Forms**
 
-Se [Forms Submission Service](/help/forms/forms-submission-service.md). Med kan du smidigt lagra data från inskickade adaptiva formulär direkt i vanliga kalkylbladsplattformar som Google Sheets, Microsoft OneDrive eller SharePoint. Integreringen effektiviserar datahanteringen genom att möjliggöra direkt inlämning av formulärdata till det kalkylblad du valt, vilket eliminerar manuell dataöverföring och minskar antalet fel.
+  Med [Forms överföringstjänst](/help/forms/forms-submission-service.md) kan du enkelt lagra data från inskickade adaptiva formulär direkt på vanliga kalkylbladsplattformar som Google Sheets, Microsoft OneDrive eller SharePoint. Integreringen effektiviserar datahanteringen genom att möjliggöra direkt inlämning av formulärdata till det kalkylblad du valt, vilket eliminerar manuell dataöverföring och minskar antalet fel.Några viktiga fördelar är:
 
-Några viktiga fördelar:
+   * **Direktintegrering:** Konfigurera formulären så att de skickar data direkt till ett angivet kalkylblad.
+   * **Anpassad datamappning:** Mappa formulärfält till motsvarande kalkylbladskolumner för organiserad lagring.
+   * **Åtkomstkontroll:** Utnyttja befintliga kalkylbladsbehörigheter för att hantera vilka som får åtkomst till eller ändra skickade data.
 
-* **Direktintegrering:** Konfigurera formulären så att de skickar data direkt till ett angivet kalkylblad.
-* **Anpassad datamappning:** Mappa formulärfält till motsvarande kalkylbladskolumner för organiserad lagring.
-* **Åtkomstkontroll:** Utnyttja befintliga kalkylbladsbehörigheter för att hantera vilka som får åtkomst till eller ändra skickade data.
+* **Generera och synkronisera AFP-återgivningar från adaptiv Forms**
 
-**Generera och synkronisera AFP-återgivningar från adaptiv Forms**
+  Med API:t [AFP Output Sync](/help/forms/document-generation-afp-api.md) kan administratörer och användare generera AFP-utdata (Advanced Function Presentation) från Adaptive Forms och synkronisera utdata med externa system eller lagringsplatser. AFP är ett högpresterande dokumentformat som är optimerat för utskrift och ofta används i storskaliga företagsmiljöer.
 
-Med API:t [AFP Output Sync](/help/forms/document-generation-afp-api.md) kan administratörer och användare generera AFP-utdata (Advanced Function Presentation) från Adaptive Forms och synkronisera utdata med externa system eller lagringsplatser. AFP är ett högpresterande dokumentformat som är optimerat för utskrift och ofta används i storskaliga företagsmiljöer.
+* **Stöd för automatisk mappning för adaptiva formulärfragment**
 
-<!-- ### New pre-release features in AEM Forms {#forms-new-pre-release-features}
+  Adaptiv Forms har nu stöd för [automatisk mappning av adaptiva formulärfragment](/help/forms/adaptive-form-fragments-core-components.md#auto-mapping-support-for-fragments-in-an-adaptive-form). Med den här förbättringen infogas matchande fragment automatiskt när schemaobjekt justeras mot en definierad fragmentstruktur. Det förenklar framtagningen av blanketter, förbättrar återanvändbarheten för fragment och säkerställer enhetlighet i alla dataintegrerade formulär.
+
+* **Egen formulärtitel i postdokument**
+
+  Författare kan nu definiera en [anpassad formulärtitel i postdokumentet](/help/forms/generate-document-of-record-core-components.md#customize-the-branding-information-in-document-of-record) genom att redigera en anpassad formulärtitel. Den anpassade titeln visas i PDF-rubriken, PDF dokumentegenskaper och som den första vytiteln när PDF öppnas, vilket ger en tydlig identifiering och enhetlig märkning.
+
+* **Utökad felhantering för begränsade filtyper**
+
+  [Felhantering för begränsade filtyper](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#validation-tab) stöds nu, vilket blockerar filöverföringar som inte stöds. När en användare försöker skicka en fil genom att ändra dess typ till ett format som inte stöds, genereras ett fel under överföringen.
+
+
+<!--
+### Pre-release features in AEM Forms {#forms-new-pre-release-features}
 
 **Enhancements in Rule Editor**
 
-* The `validate` method in the function list now supports validation at the panel, field, and form levels.
+* The `validate` / `reset` method in the function list now supports validation at the panel, field, and form levels.
 * Client-side custom function parsing now supports ES10+ JavaScript features and static imports.
 * The button to download Document of Record (DoR) is now available as an out-of-the-box (OOTB) option in the rule editor.
 * Rules now support the use of dynamic variables.
@@ -139,16 +151,14 @@ Med API:t [AFP Output Sync](/help/forms/document-generation-afp-api.md) kan admi
 * Rules can now be triggered based on query parameters, UTM parameters, and browser parameters.
 * Form-specific custom function scripts are now supported for Adaptive Forms in Edge Delivery Services.
 
- -->
+### New Early Access Features in AEM Forms {#forms-new-early-access-features}
 
-### Nya funktioner för tidig åtkomst i AEM Forms {#forms-new-early-access-features}
+The AEM Forms Early Access Program offers a unique opportunity for you to get exclusive access to cutting-edge innovations and help shape their development.
 
-AEM Forms Early Access Program ger dig unika möjligheter att få exklusiv tillgång till de senaste innovationerna och hjälpa till att utforma deras utveckling.
-
-I versionsinformationen visas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
+These release notes list the innovations delivered in the current release. For the complete list of innovations available under the Early Access Program, see [AEM Forms Early Access Program documentation](/help/forms/early-access-ea-features.md). 
 
 
-<!-- **Forms Optimization opportunities**
+**Forms Optimization opportunities**
 
 Forms Optimization uses AI to analyze your forms and suggest improvements for better performance. It highlights forms with low engagement, flags accessibility issues, and generates AI-powered variations to help increase conversion rates and compliance with WCAG standards.
 
@@ -224,7 +234,7 @@ OSGi-egenskaper:
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade &#x200B;** Java 21-miljön**.
+**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade **Java 21-miljön**.
 
 Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)), bör du ha fått ett e-postmeddelande från Adobe med specifika nästa steg. Kontrollera att alla nödvändiga uppdateringar är slutförda senast den **28 augusti 2025** så att miljön kan uppgraderas utan avbrott.
 
@@ -312,7 +322,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -332,4 +342,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
