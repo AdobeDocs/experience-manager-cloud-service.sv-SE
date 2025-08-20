@@ -258,5 +258,5 @@ Projektet [Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia) 
 ## Ytterligare resurser {#additional}
 
 * [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-* [AEM-resursmappning](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/configuring/resource-mapping)
+* [AEM-resursmappning](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/configuring/resource-mapping)
 * [Kopplingsmappningar](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html)

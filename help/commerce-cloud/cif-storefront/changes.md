@@ -46,7 +46,7 @@ Projektet är tillgängligt i [Cloud Manager Git-databas](/help/implementing/clo
 ### Tidigare versioner av CIF {#previous-versions-venia}
 
 * CIF Classic: Installera med AEM-paket
-* CIF Open-source: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* CIF Open-source: Via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE)
 
 ## Produktkatalogdata {#product-catalog-data}
 
