@@ -1,102 +1,72 @@
 ---
-title: AEM Forms AI Assistant - promptbibliotek
+title: Forms Experience Builder - Prompt Library
 description: Samling av beprövade promptmönster och exempel för att skapa formulär med hjälp av AI i Forms Management-gränssnittet, Adaptive Forms Editor och Universal Editor.
 feature: Edge Delivery Services
 hide: true
+index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: d3ade6ee9216b44b55d6808d8acffe83f1e263c9
+exl-id: c8f64082-a23f-4919-ad66-042faad77d31
+source-git-commit: 750674bbd29ec1b29388579d77c7c15bd89335ab
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
 
 
+# Forms Experience Builder - Prompt Library
 
-# AEM Forms AI Assistant - promptbibliotek
-
-Samling av återanvändbara promptmönster och exempel för vanliga formulärgenereringsscenarier. Tänk på dessa som mallar som du kan anpassa efter dina specifika behov. Varje avsnitt behandlar ett visst användningsfall med vägledning om när det ska användas och beprövade exempel.
+Samling av återanvändbara promptmönster och exempel som är optimerade för Forms Experience Builder. Det här smidiga biblioteket fokuserar på de två grundläggande metoderna: Skapa från grunden och Importera och konvertera, med förbättrat stöd för smarta fält som bygger på LLM och enhetlig varumärkeshantering.
 
 >[!NOTE]
 >
-> AI Assistant för AEM Forms kan köpas genom ett program som tagits i bruk för tidigt. Skicka ett e-postmeddelande från din arbetsadress till mailto:aem-forms-ea@adobe.com för att begära åtkomst.
+> Forms Experience Builder är tillgängligt via programmet för tidig användning. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
 
 >[!IMPORTANT]
 >
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa praxis kan ändras i takt med att AI Assistant för AEM Forms utvecklas under det program där man introducerar programmet.
+> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
-## Bästa praxis för optimala resultat
+## Använda detta frågebibliotek
 
-För att få ut så mycket som möjligt av AI-assistenten bör du tänka på följande:
+Det här biblioteket innehåller återanvändbara promptmönster för vanliga formulärgenereringsscenarier. Mer information finns i [Forms Experience Builder Komma igång-guiden](forms-ai-assistant-getting-started.md#best-practices).
 
-### Starta enkelt, bygg stegvis
+### Snabbtips för det här biblioteket
 
-Börja med mindre, specifika kommandon (t.ex.&quot;Lägg till textinmatning för&quot;Förnamn&quot;&quot;) i stället för alltför komplexa flerstegsbegäranden från början. Det här arbetssättet gör det enklare att felsöka om något inte fungerar som det ska.
+- **Börja med exempel** - Använd tillhandahållna uppmaningar som mallar och anpassa efter dina behov
+- **Två metoder** - Välj Skapa från grunden eller Importera och konvertera.
+- **Var specifik** - Lägg till egna detaljer i generiska exempel
+- **Testa noggrant** - Verifiera alltid resultat i din specifika miljö
 
-**Exempel på enkel start:**
+### Märkesmallar och format
+
+**Förbered varumärkesresurser i förväg för att skapa enhetliga formulär:**
+
+- **Varumärkesmallar** - Skapa standardiserade formulärmallar med organisationens färger, teckensnitt och layoutmönster
+- **Riktlinjer för format** - Definiera konsekvent fältformat, knappdesign och mellanrumsstandarder
+- **Komponentbibliotek** - Skapa återanvändbara formulärkomponenter som matchar din varumärkesidentitet
+- **Visual Assets** - Förbered logotyper, ikoner och bakgrundselement för formulärintegrering
+
+**Exempel på fråga om varumärkesmall:**
 
 ```
-Add a text input field for "First Name" with placeholder "Enter your first name"
+Create a brand template for financial services forms with:
+- Corporate blue (#003366) and silver (#C0C0C0) color scheme
+- Open Sans font family for all text
+- 16px minimum font size for accessibility
+- Consistent 24px spacing between sections
+- Corporate logo in header with proper sizing
+- Professional button styling with hover effects
 ```
 
-**Bygg sedan stegvis:**
+>[!NOTE]
+>
+>**Anpassade komponenter**: Kontrollera med ditt utvecklingsteam om hur du använder organisationsspecifika komponenter och deras kompatibilitet med Forms Experience Builder innan du implementerar anpassade varumärkeselement.
 
-```
-Make @firstName mandatory and add validation message "First name is mandatory"
-```
+>[!NOTE]
+>
+> Detta promptbibliotek har uppdaterats för att återspegla de strömlinjeformade funktionerna i Forms Experience Builder. Vissa avancerade integrerings- och testfunktioner som visas i exemplen kan kräva ytterligare konfiguration.
 
-### Använd AEM Forms terminologi
-
-Använd termer som &quot;panel&quot;, &quot;textinmatningsfält&quot;, &quot;kryssrutegrupp&quot;, &quot;skicka-åtgärd&quot;, &quot;regel&quot; osv. för att få bättre förståelse av assistenten. Detta garanterar att AI tolkar dina förfrågningar korrekt i AEM Forms-sammanhang.
-
-**Standardtermer:**
-
-- textinmatningsfält i stället för textruta
-- &quot;kryssrutegrupp&quot; i stället för &quot;kryssrutor&quot;
-- &quot;dropdown&quot; i stället för &quot;select list&quot;
-- &quot;panel&quot; i stället för &quot;section&quot; eller &quot;container&quot;
-- &quot;skicka åtgärd&quot; i stället för &quot;skicka formulär&quot;
-- &quot;rule&quot; i stället för &quot;logic&quot; eller &quot;condition&quot;
-
-### Referensfält tydligt
-
-När du konfigurerar befintliga fält ska du använda @fieldName-notationen (t.ex. &quot;Make @firstName mandatory&quot;). Detta hjälper AI att identifiera exakt vilket fält du refererar till, särskilt i komplexa formulär med många fält.
-
-**Exempel:**
-
-- `Make @email mandatory with real-time validation`
-- `Show @spouseInfo panel when @maritalStatus equals "Married"`
-- `Set @country default value to "United States"`
-
-### Granska alltid planer
-
-Granska alltid planer noggrant för ändringar som föreslås av assistenten i den universella redigeraren innan du klickar på &quot;Använd&quot;. AI visar vad man tänker göra - ägna en stund åt att kontrollera att det matchar dina förväntningar.
-
-### Validera manuellt
-
-När assistenten har gjort ändringar ska du alltid förhandsgranska och testa formuläret för att kontrollera att det fungerar som det ska. AI är ett kraftfullt verktyg, men slutlig validering är avgörande för att säkerställa kvalitet.
-
-**Checklista för validering:**
-
-- Testa formulärfunktionen i förhandsgranskningsläge
-- Verifiera att villkorslogik fungerar korrekt
-- Kontrollera mobilrespons
-- Testa formulärinlämning
-- Validera tillgänglighetsfunktioner
-
-### Iterera och förfina
-
-Om den första prompten inte ger exakt resultat kan du försöka att formulera om eller dela upp förfrågningen i mindre steg. AI lär sig av sitt sammanhang, så mer specifika detaljer ger ofta bättre resultat.
-
-**Exempel på iteration:**
-
-1. Första försöket:&quot;Gör formuläret mobilvänligt&quot;
-2. Förfinad:&quot;Optimera formulärlayouten för mobila skärmar under 768px med en kolumn och större touch-mål&quot;
-
-### Ge feedback
-
-Använd den inbyggda feedbackmekanismen för att hjälpa assistenten att lära sig och förbättra. Din feedback gör AI bättre för alla.
 
 
 ## Exempel på inkrementell utveckling
@@ -143,205 +113,307 @@ Show @urgencyLevel dropdown (Low, Medium, High) only when @inquiryType equals "S
 Create a user registration form with personal information panel
 ```
 
-**Steg 2 - Lägg till kärnfält:**
+**Steg 2 - Lägg till obligatoriska fält:**
 
 ```
-Add text input fields: @firstName, @lastName, @email, @phone to the personal information panel
+Add fields for @firstName, @lastName, @email, @phoneNumber with appropriate validation
 ```
 
-**Steg 3 - Lägg till validering:**
+**Steg 3 - Lägg till affärslogik:**
 
 ```
-Make @firstName, @lastName, and @email mandatory with real-time validation
+Create a rule: if @age is under 18, show parent/guardian information section
 ```
 
-**Steg 4 - Lägg till kontoinformation:**
+**Steg 4 - Förbättra med inställningar:**
 
 ```
-Create a new panel "Account Information" with @username and @password fields
+Add a preferences panel with @newsletterSubscription, @marketingConsent, @termsAccepted
 ```
 
-**Steg 5 - Förbättra säkerheten:**
+**Steg 5 - Lägg till filöverföring:**
 
 ```
-Add password confirmation field @confirmPassword with validation to match @password
+Include a file upload field for @profilePicture with size limit of 5MB
 ```
 
-**Steg 6 - Lägg till inställningar:**
+## Skapa och hantera formulär
+
+**När ska du använda:** När du behöver skapa nya formulär eller ändra befintliga.
+
+**Så här använder du:** Välj en av två metoder: Skapa från grunden eller Importera och konvertera (se [Guiden Komma igång](forms-ai-assistant-getting-started.md#two-ways-to-create-forms)).
+
+**Exempelfråga - Skapa enkelt formulär:**
 
 ```
-Create "Preferences" panel with @newsletter checkbox and @communicationMethod radio group (Email, SMS, Phone)
+Create a customer feedback form with:
+- Product rating (1-5 stars)
+- Comment field for detailed feedback
+- Customer email (optional)
+- Submit to email notification
 ```
 
-Detta stegvisa tillvägagångssätt hjälper dig att:
-
-- Fånga upp problem tidigt innan de sätts samman
-- Testa varje funktion noggrant
-- Göra justeringar baserat på användarfeedback
-- Få bättre kontroll över utvecklingsprocessen
-
-## Starta ny Forms
-
-**När ska du använda:** I början av ett formulärprojekt. Denna uppmaning hjälper AI att förstå era behov och bygga upp grundstrukturen.
-
-**Så här använder du:** Börja med grundläggande struktur och grundläggande krav. Ange formulärtyp, målgrupp och primärt syfte. Gör efterföljande uppmaningar mer komplicerade.
-
-**Exempelfråga - enkel start:**
+**Exempelfråga - skapa komplexa formulär:**
 
 ```
-Create a **customer onboarding form** for new bank account applications with:
+Create a comprehensive employee onboarding form with:
 
-**Purpose:** Collect personal information for account setup
-**Target Users:** New customers applying for checking/savings accounts
-**Basic Structure:** Single panel with essential fields
-**Core Fields:** Name, email, phone, account type selection
+**Personal Information Section:**
+- Full name (first, middle, last)
+- Date of birth with age validation
+- Contact information (email, phone, address)
+- Emergency contact details
 
-Start with a simple layout that we can enhance step by step.
+**Employment Details:**
+- Position and department selection
+- Start date with business day validation
+- Salary information with confidentiality notice
+- Reporting structure
+
+**Document Upload:**
+- Resume/CV upload (PDF, DOC, DOCX)
+- ID verification documents
+- Tax forms and banking information
+- Signed employment agreement
+
+**Preferences:**
+- Benefits selection with cost calculator
+- Work schedule preferences
+- Training requirements
+- Equipment needs
+
+**Validation Rules:**
+- Email format validation
+- Phone number format validation
+- Age must be 18 or older
+- All required documents must be uploaded
+- Terms and conditions must be accepted
+
+**Submit Actions:**
+- Send confirmation email to new employee
+- Notify HR department
+- Create employee record in HR system
+- Schedule orientation meeting
 ```
 
-**Bygg sedan stegvis:**
+**Formulärhanteringsfrågor:**
 
 ```
-Add an address panel to @customerOnboardingForm with street address, city, state, and zip code fields
-```
-
-```
-Add employment information panel with @employer, @jobTitle, and @annualIncome fields
-```
-
-```
-Add file upload field @identityDocuments for identity verification (Accept: .pdf,.jpg,.png)
-```
-
-**Alternativa enkla startfrågor:**
-
-```
-Create a basic **event registration form** with name, email, and event selection fields
-```
-
-```
-Build a simple **contact form** with name, email, and message fields
-```
-
-```
-Design a basic **feedback survey** with rating scale and comments field
-```
-
-## Formulärstruktur och layout
-
-**När ska du använda:** När du behöver organisera komplexa formulär eller förbättra användarupplevelsen genom bättre layoutdesign.
-
-**Så här använder du:** Fokusera på användarresan och logisk gruppering av information. Ange layoutinställningar och navigeringsmönster.
-
-**Exempelfråga - Formulärstruktur i flera steg:**
-
-```
-Convert this single-page form into a **3-step wizard** with:
-
-**Step 1: Personal Information**
-- Name, email, phone, address fields
-- Progress indicator showing "Step 1 of 3"
-- "Next" button (validate mandatory fields before proceeding)
-
-**Step 2: Preferences & Requirements** 
-- Service selection (checkbox group)
-- Budget range (dropdown)
-- Timeline preferences (radio group)
-- Special requirements (text input field)
-
-**Step 3: Review & Submit**
-- Summary of all entered information
-- Edit links to go back to specific steps
-- Terms and conditions checkbox
-- Submit button with confirmation
-
-Include "Previous" and "Next" buttons, allow users to jump between completed steps, save progress automatically.
-```
-
-**Fråga om layoutoptimering:**
-
-```
-Reorganize this form using a **wizard layout** for desktop and single column for mobile. 
+Import this PDF application form and convert it to an adaptive form with enhanced validation
 ```
 
 ```
-Convert this long form into an **accordion layout** where users can expand/collapse sections.
+Update the existing contact form to include social media handles and preferred contact method
 ```
 
 ```
-Create a **vertical tabbed interface** for this form with tabs for: Basic Info, Contact Details, Preferences, and Review.
+Reorganize the registration form into a 3-step wizard: personal info, preferences, confirmation
 ```
 
-## Fälthantering och validering
+## Fälthantering och konfiguration
 
-**När du ska använda:** När du behöver lägga till, ändra eller förbättra formulärfält med specifika valideringsregler och beteenden.
+**När ska du använda:** När du behöver lägga till, ändra eller konfigurera formulärfält.
 
-**Så här använder du:** Var specifik när det gäller fälttyper, verifieringskrav och förväntningar på användarupplevelse. Referera till befintliga fält med @fieldName-syntax.
+**Så här använder du:** Var specifik när det gäller fälttyper, verifieringsregler och krav på användarupplevelse.
 
-**Exempelfråga - fältförbättring:**
-
-```
-Enhance the form fields with these specific requirements:
-
-**Email Field (@email):**
-- Make mandatory with real-time validation
-- Show green checkmark when valid format entered
-- Display helpful error message: "Please enter a valid email address"
-- Add placeholder: "your.email@company.com"
-
-**Phone Number (@phone):**
-- Type: tel for mobile optimization
-- Make mandatory for business customers, optional for personal
-- Add placeholder: "Enter your phone number"
-
-**Date of Birth (@dateOfBirth):**
-- Type: date with date picker
-- Validate age is 18+ for account opening
-- Show error if under 18: "Must be 18 or older to open account"
-
-**File Upload (@documents):**
-- Accept: .pdf,.doc,.docx
-- Multiple: true for multiple document upload
-- Show upload progress and file names after upload
-```
-
-**Fältspecifika frågor:**
+**Exempelfråga - grundläggande fälttillägg:**
 
 ```
-Add a **file upload field** for resume with these specs: Accept only PDF/DOC/DOCX files, allow multiple files, show upload progress, display file names after upload.
+Add a text input field for "Company Name" with placeholder "Enter your company name"
+```
+
+**Exempelfråga - avancerad fältkonfiguration:**
+
+```
+Add a comprehensive address section with:
+
+**Street Address:**
+- Address line 1 (required, max 100 characters)
+- Address line 2 (optional, max 100 characters)
+- City (required, dropdown with common cities)
+- State/Province (required, dropdown)
+- Postal code (required, format validation)
+- Country (required, default to "United States")
+
+**Validation Rules:**
+- Postal code must match state selection
+- Address line 1 cannot be empty
+- City must be a valid city for selected state
+
+**User Experience:**
+- Auto-complete for address fields
+- Clear labels and help text
+- Mobile-friendly input fields
+- Accessibility compliance
+```
+
+**Fråga om fältkonfiguration:**
+
+```
+Make @email field required with real-time validation and custom error message
 ```
 
 ```
-Create a **dropdown field** for country selection with all countries listed. Set default value based on user's location if available.
+Add a dropdown for @country with options for USA, Canada, UK, Germany, France, and "Other"
 ```
 
 ```
-Build a **repeatable panel** for work experience where users can add/remove multiple jobs. Each entry needs: company, title, start date, end date, description.
+Configure @phoneNumber field with format (XXX) XXX-XXXX and validation
 ```
 
-## Villkorlig logik och regler
+```
+Add a file upload field for @resume with PDF and DOC restrictions, max 5MB
+```
 
-**När ska du använda:** När du behöver ett dynamiskt formulärbeteende som baseras på användarindata eller affärsregler.
+## LLM-Enhanced Smart Fields
 
-**Så här använder du:** Definiera villkoren och de resulterande åtgärderna tydligt. Använd specifika fältreferenser och logiska operatorer.
+**När ska du använda:** När du behöver fält med förifyllda alternativ som utnyttjar AI:s kunskapsbas.
 
-**Exempelfråga - komplex villkorlig logik:**
+**Så här använder du:** Begär fält som kräver omfattande datauppsättningar - AI kan automatiskt fylla i alternativ med hjälp av den inbyggda kunskapen.
+
+### Geografiska fält och platsfält
+
+**Flygplatser och transport:**
 
 ```
-Implement these conditional rules for the application form:
+Add a dropdown for departure airports with all major international airports
+Add arrival airport field with IATA codes and full names
+Create a field for nearest airport to user location
+Add a selection of train stations for European cities
+```
 
-**Business vs Personal Account Logic:**
-- If @accountType equals "Business", show:
-  - Business name field (mandatory)
-  - Tax ID field (mandatory)
-  - Business address section
-  - Number of employees dropdown
-- If @accountType equals "Personal", hide all business fields
+**Administrativa regioner:**
 
-**Income-Based Requirements:**
-- If @annualIncome is less than 25000:
-  - Show additional verification section
-  - Make co-signer information mandatory
+```
+Add a complete list of US states with abbreviations
+Create a country dropdown with ISO codes and full names
+Add a field for major world cities with time zones
+Include a dropdown of Canadian provinces and territories
+Add a field for UK counties and postal areas
+```
+
+### Affärs- och branschdata
+
+**Företagsklassificeringar:**
+
+```
+Add a field for industry classification with NAICS codes
+Create a dropdown of business entity types (LLC, Corporation, Partnership, etc.)
+Add a field for company size categories (startup, SME, enterprise)
+Include department selection for large organizations
+Add a field for professional service types
+```
+
+**Professionella klassificeringar:**
+
+```
+Add a field for job titles with common industry roles
+Create a dropdown of professional certifications by field
+Include education levels with degree types
+Add a field for years of experience ranges
+Create a selection for programming languages and frameworks
+```
+
+### Standarder och bestämmelser
+
+**Finans och juridik:**
+
+```
+Add a field for currency codes with symbols and exchange rates
+Create a dropdown of tax ID types by country
+Include a field for legal document types
+Add payment method options with security features
+Create a selection for banking institutions by country
+```
+
+**Tekniska standarder:**
+
+```
+Add a dropdown of file format types with extensions
+Include network protocol options
+Add a field for database types and versions
+Create a selection for API authentication methods
+```
+
+### Hälso- och sjukvård
+
+**Medicinska klassificeringar:**
+
+```
+Add a field for medical specialties
+Create a dropdown of common medications with generic names
+Include a field for insurance provider types
+Add a selection for medical emergency contact relationships
+Create a field for dietary restrictions and allergies
+```
+
+### Time and Calendar Intelligence
+
+**Datum- och tidsfält:**
+
+```
+Add a field for business hours with time zone handling
+Create a dropdown of public holidays by country
+Include seasonal options with date ranges
+Add a field for conference room booking with availability
+Create a selection for recurring meeting patterns
+```
+
+### Produkt- och tjänstekategorier
+
+**E-handelsklassificeringar:**
+
+```
+Add a field for product categories with subcategories
+Create a dropdown of shipping methods with delivery estimates
+Include a field for return policy options
+Add a selection for customer priority levels
+Create a field for subscription billing cycles
+```
+
+**Exempel på frågor om smarta fält:**
+
+```
+"Add a departure airport field with all major airports worldwide including IATA codes and city names"
+```
+
+```
+"Create a comprehensive industry field using standard NAICS classification with technology subcategories"
+```
+
+```
+"Include a professional certification dropdown that adapts based on the selected job field"
+```
+
+```
+"Add an international phone number field that formats based on the selected country"
+```
+
+```
+"Create a university selection field with major institutions organized by country and ranking"
+```
+
+## Regelskapande och affärslogik
+
+**När du ska använda:** När du måste implementera villkorslogik, verifieringsregler eller affärsprocesser.
+
+**Så här använder du:** Beskriv affärslogiken tydligt och ange villkor och åtgärder.
+
+**Exempelfråga - enkel villkorslogik:**
+
+```
+Create a rule that shows @spouseInformation panel only when @maritalStatus equals "Married"
+```
+
+**Exempelfråga - komplexa affärsregler:**
+
+```
+Implement comprehensive loan application validation:
+
+**Income Validation:**
+- If @annualIncome is less than 30000:
+  - Show warning message: "Income may be insufficient for requested loan amount"
+  - Require additional income documentation
   - Display message: "Additional documentation may be required"
 - If @annualIncome is greater than 100000:
   - Show premium services options
@@ -360,15 +432,15 @@ Implement these conditional rules for the application form:
 **Regelspecifika frågor:**
 
 ```
-Create a **visibility rule** that shows @spouseInformation panel only when @maritalStatus equals "Married" or "Domestic Partnership".
+Create a **visibility rule** that shows @spouseInformation panel only when @maritalStatus equals "Married" or "Domestic Partnership"
 ```
 
 ```
-Add **progressive disclosure** where additional questions appear based on previous answers. Start with basic info, then show relevant follow-ups.
+Add **progressive disclosure** where additional questions appear based on previous answers. Start with basic info, then show relevant follow-ups
 ```
 
 ```
-Implement **smart defaults** where @country selection auto-sets related fields. Allow manual override.
+Implement **smart defaults** where @country selection auto-sets related fields. Allow manual override
 ```
 
 ## Dataintegrering och överföring
@@ -399,7 +471,7 @@ Add email notification to @applicationForm: Send confirmation email to @email ad
 Add CRM integration to @applicationForm: Create new lead record with @firstName, @lastName, @email, and set Status to "New Application"
 ```
 
-**Exempelfråga - avancerad flerkanalsöverföring:**
+**Exempelfråga - standard för flerkanalsöverföring:**
 
 ```
 Configure form submission with multiple data destinations:
@@ -431,22 +503,22 @@ Configure form submission with multiple data destinations:
 **Integrationsspecifika frågor:**
 
 ```
-Connect this form to **CRM system** to create new leads. Map @firstName to FirstName, @email to Email, set LeadSource to "Web Form", and Status to "New".
+Connect this form to **CRM system** to create new leads. Map @firstName to FirstName, @email to Email, set LeadSource to "Web Form", and Status to "New"
 ```
 
 ```
-Set up **workflow trigger** when form is submitted. Pass all form data and trigger approval workflow with manager notification.
+Set up **workflow trigger** when form is submitted. Pass all form data and trigger approval workflow with manager notification
 ```
 
 ```
-Configure **database integration** to save form submissions as records. Create new folder for each submission with uploaded documents.
+Configure **database integration** to save form submissions as records. Create new folder for each submission with uploaded documents
 ```
 
-## Design Import och konvertering
+## Importera och konvertera befintlig Forms
 
-**När ska du använda:** När du har befintliga formulärdesigner (PDF, Figma, bilder) som måste konverteras till fungerande AEM-formulär.
+**När ska du använda:** När du har befintliga formulär, dokument eller designer att omvandla till moderna AEM-formulär.
 
-**Så här använder du:** Ange en tydlig kontext om källdesignen och ange eventuella ändringar eller förbättringar som behövs.
+**Så här använder du:** Överför källfilen och beskriv konverteringskraven (se [Importera guide](forms-ai-assistant-getting-started.md#2-import-and-convert)).
 
 **Exempelfråga - PDF-formulärkonvertering:**
 
@@ -477,21 +549,21 @@ Convert this uploaded **PDF application form** into a functional AEM adaptive fo
 - Ensure consistent spacing and alignment
 - Add subtle animations for better user experience
 
-Preserve all original field labels and help text, but improve the user experience with modern form interactions.
+Preserve all original field labels and help text, but improve the user experience with modern form interactions
 ```
 
 **Fråga om designimport:**
 
 ```
-Import this **design mockup** and convert it into an adaptive form. Maintain the exact visual design but add proper validation and mobile responsiveness.
+Import this **design mockup** and convert it into an adaptive form. Maintain the exact visual design but add proper validation and mobile responsiveness
 ```
 
 ```
-Analyze this **image of a paper form** and recreate it digitally. Improve the layout for better mobile experience while keeping all mandatory fields.
+Analyze this **image of a paper form** and recreate it digitally. Improve the layout for better mobile experience while keeping all mandatory fields
 ```
 
 ```
-Convert this **existing HTML form** to AEM adaptive form format. Preserve all functionality but add AEM-specific features like rules and themes.
+Convert this **existing HTML form** to AEM adaptive form format. Preserve all functionality but add AEM-specific features like rules and themes
 ```
 
 ## Mobiloptimering och respons
@@ -543,313 +615,360 @@ Optimize this form for **mobile-first responsive design**:
 - Horizontal form sections for related fields
 - Sidebar navigation for long forms
 - Hover states and advanced interactions
-
-**Touch Optimization:**
-- Larger checkbox and radio button targets
-- Swipe gestures for multi-step navigation
-- Pull-to-refresh for saved drafts
-- Touch-friendly date/time pickers
-
-**Performance:**
-- Lazy load non-critical form sections
-- Optimize images and icons for mobile
-- Minimize JavaScript for faster loading
-- Progressive enhancement approach
 ```
 
-**Mobilspecifika enkla frågor:**
+**Mobilspecifika frågor:**
 
 ```
-Make @checkoutForm mobile-optimized with large buttons and one-thumb navigation
+Make this form **touch-friendly** with larger buttons and simplified navigation for mobile users
 ```
 
 ```
-Add touch-friendly controls to @surveyForm for tablet users
+Optimize form for **tablet users** with appropriate field sizes and navigation patterns
 ```
 
 ```
-Enable offline functionality for @applicationForm with local data saving
+Add **swipe gestures** for multi-step form navigation on mobile devices
 ```
 
 ## Tillgänglighet och efterlevnad
 
-**När ska användas:** När formulär måste uppfylla tillgänglighetsstandarder (WCAG 2.1 AA) eller kompatibilitetskrav.
+**När ska användas:** När formulär måste uppfylla tillgänglighetsstandarder (WCAG) eller kompatibilitetskrav.
 
-**Så här använder du:** Ange tillgänglighetskrav och kompatibilitetsstandarder som måste uppfyllas.
+**Så här använder du:** Ange den kompatibilitetsnivå som krävs och eventuella tillgänglighetsfunktioner som behövs.
 
-**Exempelfråga - hjälpmedelsimplementering:**
+**Exempelfråga - grundläggande tillgänglighet:**
 
 ```
-Make this form **WCAG 2.1 AA compliant** with these accessibility features:
+Make @contactForm accessible with:
 
-**Keyboard Navigation:**
-- Logical tab order through all form elements
-- Skip links to main content and form sections
-- Keyboard shortcuts for common actions
-- Focus indicators clearly visible on all interactive elements
-
-**Screen Reader Support:**
+**Basic Accessibility:**
 - Proper ARIA labels for all form fields
-- Descriptive error messages announced to screen readers
-- Form section headings with proper hierarchy (h1, h2, h3)
-- Progress announcements for multi-step forms
-
-**Visual Accessibility:**
-- Color contrast ratio minimum 4.5:1 for text
-- Don't rely solely on color to convey information
-- Text size minimum 16px for body text
-- Scalable up to 200% without horizontal scrolling
-
-**Motor Accessibility:**
-- Large click targets (minimum 44x44px)
-- Generous spacing between interactive elements
-- No time limits or provide extension options
-- Alternative input methods support
-
-**Cognitive Accessibility:**
-- Clear, simple language in all instructions
-- Consistent navigation and layout patterns
-- Error prevention and clear error recovery
-- Help text and examples for complex fields
-
-**Testing Requirements:**
-- Test with screen readers (NVDA, JAWS, VoiceOver)
-- Verify keyboard-only navigation
-- Check color contrast with automated tools
-- Validate HTML for semantic correctness
+- Keyboard navigation support
+- High contrast color scheme
+- Screen reader compatibility
+- Focus indicators for all interactive elements
 ```
 
-**Efterlevnadsspecifika frågor:**
+**Exempelfråga - avancerad tillgänglighet:**
 
 ```
-Ensure this **healthcare form meets HIPAA requirements** with proper data encryption, audit logging, and privacy controls.
+Implement comprehensive accessibility for @applicationForm:
+
+**WCAG 2.1 AA Compliance:**
+- Semantic HTML structure with proper headings
+- ARIA landmarks and roles for navigation
+- Color contrast ratio of at least 4.5:1
+- Keyboard-only navigation support
+- Screen reader announcements for dynamic content
+
+**Form-Specific Accessibility:**
+- Error messages announced to screen readers
+- Field validation with clear error descriptions
+- Progress indicators for multi-step forms
+- Skip navigation links for keyboard users
+- Alternative text for all images and icons
+
+**User Experience:**
+- Clear focus indicators on all interactive elements
+- Logical tab order through form fields
+- Descriptive link text and button labels
+- Help text available for complex fields
+- Timeout warnings for session expiration
+```
+
+**Tillgänglighetsspecifika frågor:**
+
+```
+Add **screen reader support** to this form with proper ARIA labels and announcements
 ```
 
 ```
-Make this **financial form PCI DSS compliant** with secure payment field handling and data protection measures.
+Implement **keyboard navigation** for all form interactions and navigation elements
 ```
 
 ```
-Create a **government form meeting Section 508 standards** with full accessibility and plain language requirements.
+Ensure **color contrast** meets WCAG AA standards for all text and interactive elements
+```
+
+## Prestandaoptimering
+
+**När ska användas:** När formulär måste läsas in snabbt och fungera bra under olika förhållanden.
+
+**Så här använder du:** Ange prestandakrav och optimeringsstrategier.
+
+**Exempelfråga - Grundläggande prestanda:**
+
+```
+Optimize @contactForm for performance:
+
+**Loading Optimization:**
+- Lazy load non-critical form sections
+- Minimize initial bundle size
+- Optimize images and assets
+- Enable caching for static resources
+```
+
+**Exempelfråga - Avancerade prestanda:**
+
+```
+Implement comprehensive performance optimization for @applicationForm:
+
+**Loading Performance:**
+- Progressive loading of form sections
+- Optimize images with WebP format
+- Minimize JavaScript bundle size
+- Enable gzip compression for all assets
+
+**Runtime Performance:**
+- Debounce validation calls to reduce API requests
+- Optimize conditional logic execution
+- Cache frequently used data
+- Implement virtual scrolling for long lists
+
+**User Experience:**
+- Show loading indicators for async operations
+- Provide offline capability for form data
+- Auto-save form progress every 30 seconds
+- Optimize form submission with retry logic
+
+**Monitoring:**
+- Track form load times and user interactions
+- Monitor validation performance
+- Measure submission success rates
+- Alert on performance degradation
+```
+
+**Prestandaspecifika frågor:**
+
+```
+Optimize form **loading speed** by implementing progressive loading and asset optimization
+```
+
+```
+Add **auto-save functionality** to prevent data loss during form completion
+```
+
+```
+Implement **offline support** so users can complete forms without internet connection
 ```
 
 ## Testning och kvalitet i Assurance
 
-**När ska du använda:** När du behöver validera formulärfunktioner, användarupplevelse och tekniska prestanda.
+**När ska användas:** När formulär behöver omfattande testning för att säkerställa tillförlitlighet och användarnöjdhet.
 
-**Så här använder du:** Ange testscenarier, kantfall och kvalitetskriterier som måste verifieras.
+**Så här använder du:** Ange testscenarier, valideringskrav och kvalitetsmått.
 
-**Exempelfråga - Omfattande formulärtestning:**
+**Exempelfråga - Grundläggande testning:**
 
 ```
-Create a **comprehensive testing plan** for this application form:
+Add comprehensive testing for @contactForm:
 
 **Functional Testing:**
-- Test all field validations with valid and invalid data
-- Verify conditional logic shows/hides fields correctly
-- Test file upload with various file types and sizes
-- Validate calculation fields update correctly
-- Test form submission with complete and incomplete data
+- Test all form field validations
+- Verify submit functionality works correctly
+- Test error handling and user feedback
+- Validate conditional logic and rules
+```
+
+**Exempelfråga - avancerad testning:**
+
+```
+Implement comprehensive testing strategy for @applicationForm:
+
+**Functional Testing:**
+- Unit tests for all validation rules
+- Integration tests for submit actions
+- End-to-end testing for complete user flows
+- Cross-browser compatibility testing
 
 **User Experience Testing:**
-- Test form completion time (target: under 10 minutes)
-- Verify error messages are helpful and actionable
-- Test progress saving and restoration
-- Validate mobile touch interactions
-- Check form accessibility with assistive technologies
+- Usability testing with target user groups
+- Accessibility testing with screen readers
+- Mobile device testing on various screen sizes
+- Performance testing under load conditions
 
-**Edge Case Testing:**
-- Test with extremely long text inputs
-- Verify behavior with special characters and emojis
-- Test with slow internet connections
-- Validate offline functionality if applicable
-- Test browser back/forward button behavior
+**Quality Assurance:**
+- Automated testing for regression prevention
+- Manual testing for edge cases and scenarios
+- Security testing for data protection
+- Compliance testing for regulatory requirements
 
-**Performance Testing:**
-- Measure form load time (target: under 3 seconds)
-- Test with large file uploads
-- Verify memory usage with long form sessions
-- Test concurrent user submissions
-- Validate database performance under load
-
-**Security Testing:**
-- Test input sanitization and XSS prevention
-- Verify CSRF protection is working
-- Test file upload security restrictions
-- Validate data encryption in transit and at rest
-- Check authentication and authorization controls
-
-**Cross-Browser Testing:**
-- Test on Chrome, Firefox, Safari, Edge
-- Verify mobile browsers (iOS Safari, Chrome Mobile)
-- Test on different operating systems
-- Validate older browser fallbacks
-- Check print functionality across browsers
+**Monitoring:**
+- Track form completion rates and abandonment
+- Monitor error rates and user feedback
+- Measure performance metrics and load times
+- Analyze user behavior and interaction patterns
 ```
 
 **Testningsspecifika frågor:**
 
 ```
-Create **automated test scripts** for this form's critical user paths: successful submission, validation errors, and conditional logic.
+Add **automated testing** for all form validations and submit functionality
 ```
 
 ```
-Design a **user acceptance testing plan** with realistic scenarios and success criteria for business stakeholders.
+Implement **user acceptance testing** scenarios for complete form workflows
 ```
 
 ```
-Set up **performance monitoring** to track form completion rates, abandonment points, and submission success rates.
+Set up **performance monitoring** to track form load times and user interactions
 ```
 
-## Avancerade funktioner och integreringar
+## Felsökning
 
-**När du ska använda:** När du behöver avancerade formulärfunktioner som AI-hjälp, avancerade arbetsflöden eller komplexa integreringar.
+Snabba lösningar på vanliga problem med Forms Experience Builder:
 
-**Så här använder du:** Definiera de avancerade funktionerna och integrationskraven tydligt.
+| Problem | Snabbkorrigering |
+|-------|-----------|
+| Formuläret skickar inte | Kontrollera konfigurationen och valideringsreglerna för Skicka-åtgärd |
+| Valideringsfel visas inte | Verifiera fältvalideringsinställningar och placering av felmeddelanden |
+| Mobila layoutproblem | Granska responsiva designinställningar och fältstorlek |
+| Fält som inte visas | Kontrollera villkorsstyrd logik och synlighetsregler |
+| Importfel | Verifiera kompatibilitet och storleksbegränsningar för filformat |
+| Integreringsfel | Validera API-slutpunkter och autentiseringsuppgifter |
+| Prestandaproblem | Optimera fältantalet och ta bort onödiga valideringar |
+| Tillgänglighetsproblem | Granska fältetiketter, ARIA-attribut och tabbordning |
 
-**Exempelfråga - AI-förbättrat formulär:**
+**Fråga om felsökningsläge:**
 
 ```
-Add **AI-powered features** to enhance this application form:
+Enable debug mode to identify issues with form submission and field validation
+```
 
-**Smart Auto-Complete:**
-- Use AI to suggest company names as user types
-- Auto-populate address fields from partial input
-- Suggest job titles based on industry selection
-- Provide intelligent form completion suggestions
+**Felanalysfråga:**
 
-**Dynamic Question Generation:**
-- Generate follow-up questions based on previous answers
-- Adapt form complexity to user's experience level
-- Show relevant optional fields based on user profile
-- Personalize form sections for different user types
+```
+Analyze form errors: check validation rules, API responses, and user input patterns
+```
 
-**Intelligent Validation:**
-- Use AI to detect potentially incorrect information
-- Suggest corrections for common data entry errors
-- Validate business information against public databases
-- Flag suspicious or inconsistent responses
+## Avancerad analys och insikter
 
-**Content Optimization:**
-- A/B test different form layouts automatically
-- Optimize field order based on completion patterns
-- Adjust form length based on user engagement
-- Personalize help text based on user behavior
+**När ska du använda:** När du behöver förstå formulärprestanda och användarbeteende.
+
+**Så här använder du:** Ange de analyskrav och insikter som krävs.
+
+**Exempelfråga - Grundläggande analys:**
+
+```
+Add analytics to @contactForm:
+
+**Basic Metrics:**
+- Form completion rates
+- Field abandonment rates
+- Submit success/failure rates
+- User session duration
+```
+
+**Exempelfråga - avancerad analys:**
+
+```
+Implement comprehensive analytics for @applicationForm:
+
+**User Behavior Analytics:**
+- Track field completion rates and abandonment
+- Monitor user session duration and patterns
+- Analyze form navigation and user flow
+- Identify bottlenecks and friction points
+
+**Performance Analytics:**
+- Measure form load times and performance
+- Track API response times and failures
+- Monitor validation rule effectiveness
+- Analyze submission success rates
+
+**Business Intelligence:**
+- Generate reports on form effectiveness
+- Track conversion rates and ROI
+- Monitor user satisfaction and feedback
+- Identify opportunities for optimization
 
 **Predictive Analytics:**
-- Predict likelihood of form completion
-- Identify users who might need assistance
-- Suggest optimal times for form completion reminders
-- Analyze drop-off points and suggest improvements
-
-**Natural Language Processing:**
-- Allow voice input for text fields
-- Convert speech to text for accessibility
-- Analyze open-text responses for sentiment
-- Extract structured data from unstructured input
+- Predict form completion likelihood
+- Identify users likely to abandon
+- Recommend form improvements
+- Optimize user experience based on data
 ```
 
-**Avancerade integreringsfrågor:**
+**Analysspecifika frågor:**
 
 ```
-Integrate with **CRM system** to pre-populate known customer data, update records in real-time, and trigger automated follow-up sequences.
+Add **conversion tracking** to measure form completion rates and user behavior
 ```
 
 ```
-Connect to **payment gateway** for secure transaction processing with PCI compliance, fraud detection, and multiple payment methods.
+Implement **A/B testing** to compare different form designs and optimize performance
 ```
 
 ```
-Implement **blockchain verification** for document authenticity, immutable audit trails, and decentralized identity verification.
+Create **analytics dashboard** to monitor form performance and user insights
 ```
 
-## Felsökning och optimering
+## Säkerhet och dataskydd
 
-**När ska användas:** När formulär har prestandaproblem, användarupplevelseproblem eller tekniska problem.
+**När ska användas:** När formulär hanterar känsliga data och behöver säkerhetsåtgärder.
 
-**Så här använder du:** Beskriv det specifika problemet och önskat resultat tydligt.
+**Så här använder du:** Ange säkerhetskrav och dataskyddsåtgärder.
 
-**Exempelfråga - Prestandaoptimering:**
-
-```
-Optimize this form for **better performance and user experience**:
-
-**Current Issues:**
-- Form takes 8+ seconds to load on mobile
-- Users are abandoning at the address section (60% drop-off)
-- File uploads frequently fail or timeout
-- Validation errors are confusing users
-
-**Performance Improvements:**
-- Implement lazy loading for non-critical form sections
-- Optimize images and reduce bundle size
-- Add progressive loading indicators
-- Cache frequently used data (country lists, etc.)
-- Minimize JavaScript execution time
-
-**User Experience Fixes:**
-- Simplify the address section with auto-complete
-- Add inline validation with helpful error messages
-- Implement smart defaults based on user location
-- Add progress saving every 30 seconds
-- Provide clear instructions for each section
-
-**Technical Optimizations:**
-- Implement chunked file uploads with resume capability
-- Add client-side validation before server submission
-- Optimize database queries for faster responses
-- Implement proper error handling and retry logic
-- Add comprehensive logging for debugging
-
-**Monitoring & Analytics:**
-- Set up form analytics to track user behavior
-- Monitor completion rates by section
-- Track error rates and types
-- Measure performance metrics continuously
-- A/B test improvements with real users
-```
-
-**Felsökningsfrågor:**
+**Exempelfråga - grundläggande säkerhet:**
 
 ```
-**Debug this form submission error:** Users report getting "500 Internal Server Error" when submitting. Check validation logic, server endpoints, and data formatting.
+Add security measures to @contactForm:
+
+**Basic Security:**
+- HTTPS encryption for all data transmission
+- Input validation and sanitization
+- CSRF protection for form submissions
+- Secure session management
 ```
 
+**Exempelfråga - avancerad säkerhet:**
+
 ```
-**Fix mobile layout issues:** Form fields are overlapping on iPhone screens and submit button is not visible. Ensure proper responsive design.
+Implement comprehensive security for @applicationForm:
+
+**Data Protection:**
+- End-to-end encryption for sensitive data
+- PII data masking and anonymization
+- Secure file upload with virus scanning
+- Data retention and deletion policies
+
+**Access Control:**
+- Role-based access control for form data
+- Multi-factor authentication for admin access
+- Audit logging for all data access
+- Secure API authentication and authorization
+
+**Compliance:**
+- GDPR compliance for data handling
+- HIPAA compliance for health information
+- PCI DSS compliance for payment data
+- SOC 2 compliance for data security
+
+**Monitoring:**
+- Real-time security monitoring and alerts
+- Intrusion detection and prevention
+- Data breach notification systems
+- Regular security audits and assessments
+```
+
+**Säkerhetsspecifika frågor:**
+
+```
+Implement **data encryption** for sensitive form submissions and user information
 ```
 
 ```
-**Resolve validation conflicts:** Some users can't submit even with valid data. Review validation rules for conflicts and edge cases.
+Add **access control** to restrict form data access based on user roles and permissions
 ```
 
-## Miljöspecifika bästa metoder
-
-### Forms Management UI
-
-**När ska du använda:** För formulärskaps- och hanteringsaktiviteter på hög nivå.
-
 ```
-In Forms Management UI, create a new **customer survey template** that can be reused across different departments. Include standard branding, common field types, and configurable sections.
+Set up **security monitoring** to detect and prevent unauthorized access to form data
 ```
 
-### Adaptiv Forms Editor
+## Kommandoreferens
 
-**När ska du använda:** För detaljerad formulärkonfiguration och komplex regelgenerering.
-
-```
-In the Adaptive Forms Editor, configure **advanced business rules** for this loan application: calculate debt-to-income ratio, determine eligibility, and show appropriate next steps.
-```
-
-### Universal Editor
-
-**När ska du använda:** För Edge Delivery Services-formulär med visuell redigering.
-
-```
-In Universal Editor, create a **responsive contact form** for the company website. Ensure it matches the site design and integrates with the existing content management workflow.
-```
-
-## Lathund - snabbguide
+### Essential Commands
 
 | Kommando | Bästa användningsfall | Exempel |
 |---------|---------------|---------|
@@ -863,81 +982,81 @@ In Universal Editor, create a **responsive contact form** for the company websit
 | `/configure-submit` | Ställa in datahantering | `/configure-submit to CRM and send confirmation email` |
 | `/help` | Få hjälp | `/help how to implement multi-step validation?` |
 
-## Referens för komponentegenskaper som stöds
+### Fältreferenser
 
-### Universella egenskaper (alla komponenter)
+Använd syntaxen `@fieldName` för att referera till befintliga fält i dina uppmaningar:
 
-- **Typ**: Komponenttyp (text, e-post, nummer, tel, datum, kryssruta, radio, listruta, fil osv.)
+- `@email` - Referensfält för e-post
+- `@firstName` - Referensförnamnsfält
+- `@maritalStatus` - Referensfält för civilstånd
+
+### Komponenttyper
+
+**Indatakomponenter:**
+
+- `text`, `email`, `number`, `tel`, `date`, `checkbox`, `radio`, `dropdown`, `file`, `textarea`
+
+**Behållarkomponenter:**
+
+- `fieldset`, `panel`, `repeatable`, `wizard`
+
+### Komponentegenskaper
+
+**Universella egenskaper (alla komponenter):**
+
+- **Typ**: Komponenttyp
 - **Namn**: Fältidentifierare för formulärsändning
 - **Etikett**: Visa text för fältet
 - **Beskrivning**: Hjälptext för fältet
 - **Synlig**: Boolesk för inledande synlighet
 - **Obligatoriskt**: Booleskt för obligatoriska fält
 
-### Egenskaper för inmatningsfält
+**Egenskaper för indatafält:**
 
 - **Värde**: Standardvärde/startvärde
 - **Platshållare**: Tipstext för inmatningsfält
 - **Min**: Minsta värde (för siffror/datum)
 - **Max**: Maximalt värde (för siffror/datum)
 
-### Egenskaper för filöverföring
+**Egenskaper för filöverföring:**
 
 - **Acceptera**: Filtyper (.pdf, .doc, .docx, .jpg, .png osv.)
 - **Flera**: Boolean för flera filval
 
-### Egenskaper för markeringskontroll
+**Egenskaper för markeringskontroll:**
 
 - **Alternativ**: Alternativ för listrutor (kommaseparerad lista)
 - **Markerad**: Standardval för kryssrutor/radio
 
-### Behållaregenskaper
+**Behållaregenskaper:**
 
 - **Fältuppsättning**: Gruppera relaterade fält
 - **Repeterbar**: Boolean för repeterbara avsnitt
 
-### Avancerade egenskaper
+**Avancerade egenskaper:**
 
 - **Synligt uttryck**: Formel för villkorlig synlighet (=formel)
 - **Värdeuttryck**: Formel för beräknade värden (=formel)
 
-## Sammanfattning av bästa praxis
+### Integreringskommandon
 
-### Tekniska riktlinjer
+**Skicka åtgärder:**
 
-- **Använd bara egenskaper som stöds** från den officiella AEM Forms-komponentspecifikationen
-- **Följ rätt syntax** för fältreferenser (@fieldName) och uttryck (=formula)
-- **Testa inkrementellt** efter varje ändring för att fånga upp problem tidigt
-- **Planera för tillgänglighet** från början, inte som en eftertanke
-- **Fundera på mobilanvändare** i varje designbeslut
-- **Dokumentkomplexa regler** för framtida underhåll och teamsamarbete
+- E-postaviseringar
+- REST API-överföringar
+- molnlagring (Azure, SharePoint)
+- Automatisering av arbetsflöden (Power Automate, Workfront Fusion)
+- Marknadsplattformar (Marketo)
+- CRM-integreringar
 
-### Strategisk strategi
+### Visa riktlinjer för syntax
 
-- **Börja med användarnas behov** - Fokusera på vad användarna behöver göra, inte bara på tekniska funktioner
-- **Design för slutförande** - Minimera friktion och kognitiv belastning i formulärdesign
-- **Planera dataflöde** tidigt - Fundera på hur data ska behandlas, lagras och användas
-- **Bygg för skala** - Designa formulär som kan hantera förväntad användarvolym och datatillväxt
-- **Implementera progressiv förbättring** - Kontrollera att grundläggande funktioner fungerar och lägg sedan till avancerade funktioner
+- **Fältreferenser**: Använd `@fieldName` för befintliga fält
+- **Kommandon**: Använd `/command` för specifika åtgärder
+- **Naturligt språk**: Beskriv kraven tydligt och specifikt
 
-### Vanliga fallgropar att undvika
+### Checklista för validering
 
-- **Överdrivet komplexa initiala begäranden** - Dela upp stora uppgifter i mindre, hanterbara steg
-- **Använder egenskaper som inte stöds** som inte finns i AEM Forms-specifikationen
-- **Mobilupplevelsen ignoreras** tills sent i utvecklingsprocessen
-- **Hoppar över användartestning** med verkliga scenarier och edge-fall
-- **Anta att AI förstår kontext** utan att ge tydliga, specifika instruktioner
-- **Glömmer om hjälpmedel** och kompatibilitetskrav
-- **Verifierar inte ändringar** innan du går vidare till nästa steg
+Mer information om god praxis och riktlinjer för validering finns i [Forms Experience Builder Getting Started Guide](forms-ai-assistant-getting-started.md#best-practices).
 
-### Assurance-strategi för kvalitet
-
-1. **Förhandsgranska ofta** - Kontrollera resultatet i förhandsgranskningsläget efter varje ändring
-2. **Testa kantfall** - Prova ovanliga indata, lång text, specialtecken
-3. **Validera mellan enheter** - Testa på mobiler, surfplattor och datorer
-4. **Kontrollera tillgänglighet** - Kontrollera tangentbordsnavigering och skärmläsarkompatibilitet
-5. **Prestandatest** - Kontrollera att formulären läses in snabbt och att de fungerar som de ska
-6. **Testning av användargodkännande** - Låt verkliga användare testa formuläret innan det distribueras
-
-
-*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya AI Assistant-funktioner. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE).*
+*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html).*
