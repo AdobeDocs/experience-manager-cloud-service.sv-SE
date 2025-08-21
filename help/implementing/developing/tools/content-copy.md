@@ -4,9 +4,9 @@ description: Med innehållskopieringsverktyget kan man kopiera muterbart innehå
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: cf2f64dec2ff39ea237dd092b3049bf9b8cd40e7
+source-git-commit: 295b4be073376332f08a85d4e6e0e46cdb6482ea
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -133,6 +133,7 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
       * Produktion
       * Mellanlagring
       * Utveckling/RDE
+   * Som standard är Korsprogramövergripande innehållskopia inaktiverat. På kundens begäran kan den dock aktiveras, vilket gör ytterligare ett **målprogram** -indatafält tillgängligt.
 
 1. Om det behövs kan du även välja att **Inkludera åtkomstkontrollistor** i kopieringsprocessen.
 
@@ -193,7 +194,6 @@ Verktyget för innehållskopiering har följande begränsningar.
 
 * Innehåll kan inte kopieras från en lägre miljö till en högre miljö.
 * Innehåll kan bara kopieras från och till redigeringstjänster.
-* Det går inte att kopiera innehåll mellan program.
 * Det går inte att köra samtidiga kopieringsåtgärder för innehåll i samma miljö.
 * Upp till 50 sökvägar kan anges per innehållsuppsättning. Det finns ingen begränsning för uteslutna banor.
 * Använd inte verktyget för innehållskopiering som kloning eller spegling eftersom det inte går att spåra flyttat eller borttaget innehåll i källan.
