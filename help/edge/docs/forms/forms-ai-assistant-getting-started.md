@@ -6,14 +6,13 @@ hide: true
 index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-exl-id: b8f64082-a23f-4919-ad66-042faad77d30
-source-git-commit: 750674bbd29ec1b29388579d77c7c15bd89335ab
+exl-id: da429952-ccc0-4579-a243-8bddeb73a0fb
+source-git-commit: 8be2b09200af58c701721b3e8537ea5e6cc3e4a2
 workflow-type: tm+mt
 source-wordcount: '1720'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med Forms Experience Builder
 
@@ -483,4 +482,4 @@ Forms Experience Builder kan även lära dig mer om AEM Forms funktioner:
 
 **Behöver du fortfarande hjälp?** Skriv `/help` följt av din specifika fråga eller kontakta systemadministratören.
 
-Mer support finns i [Forms Experience Builder Prompt Library](ai-assistant-prompt-library.md) eller så kontaktar du systemadministratören för teknisk hjälp.
+Mer support finns i [Forms Experience Builder Prompt Library](/help/edge/docs/forms/ai-assistant-prompt-library.md) eller så kontaktar du systemadministratören för teknisk hjälp.
