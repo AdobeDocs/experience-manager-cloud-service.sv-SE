@@ -6,13 +6,14 @@ hide: true
 index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-exl-id: 333d42e0-625f-432e-a61b-5d49bf08765a
-source-git-commit: 8be2b09200af58c701721b3e8537ea5e6cc3e4a2
+exl-id: c8f64082-a23f-4919-ad66-042faad77d31
+source-git-commit: 9996bc602ae6169dd1aade622d5dbc5b1addeb54
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
 
 ---
+
 
 # Forms Experience Builder - Prompt Library
 
@@ -140,7 +141,7 @@ Include a file upload field for @profilePicture with size limit of 5MB
 
 **När ska du använda:** När du behöver skapa nya formulär eller ändra befintliga.
 
-**Så här använder du:** Välj en av två metoder: Skapa från grunden eller Importera och konvertera (se [Guiden Komma igång](/help/edge/docs/forms/forms-ai-assistant-getting-started.md)).
+**Så här använder du:** Välj en av två metoder: Skapa från grunden eller Importera och konvertera (se [Guiden Komma igång](forms-ai-assistant-getting-started.md#two-ways-to-create-forms)).
 
 **Exempelfråga - Skapa enkelt formulär:**
 
@@ -517,7 +518,7 @@ Configure **database integration** to save form submissions as records. Create n
 
 **När ska du använda:** När du har befintliga formulär, dokument eller designer att omvandla till moderna AEM-formulär.
 
-**Så här använder du:** Överför källfilen och beskriv konverteringskraven (se [Importera guide](/help/edge/docs/forms/forms-ai-assistant-getting-started.md)).
+**Så här använder du:** Överför källfilen och beskriv konverteringskraven (se [Importera guide](forms-ai-assistant-getting-started.md#2-import-and-convert)).
 
 **Exempelfråga - PDF-formulärkonvertering:**
 
@@ -1058,4 +1059,4 @@ Använd syntaxen `@fieldName` för att referera till befintliga fält i dina upp
 
 Mer information om god praxis och riktlinjer för validering finns i [Forms Experience Builder Getting Started Guide](forms-ai-assistant-getting-started.md#best-practices).
 
-*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE).*
+*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html).*
