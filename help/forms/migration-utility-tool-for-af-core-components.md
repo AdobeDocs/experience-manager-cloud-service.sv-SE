@@ -165,5 +165,5 @@ Nu ser du att den adaptiva formen som bygger på Foundation Components omvandlas
 
 ## Bästa praxis {#best-practices}
 
-* Kontrollera att dina Foundation Components-baserade formulär bara använder de komponenter som har motsvarande [Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction#available-components-a-breakdown-by-component-type) tillgängliga. Om du använder Foundation Components som inte har någon motsvarande Core Component (Grundläggande komponent) konverteras inte Foundation Component (Grundläggande komponent). Därför fungerar den inte korrekt när du redigerar ett formulär
+* Kontrollera att dina Foundation Components-baserade formulär bara använder de komponenter som har motsvarande [Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction#available-components-a-breakdown-by-component-type) tillgängliga. Om du använder Foundation Components som inte har någon motsvarande Core Component (Grundläggande komponent) konverteras inte Foundation Component (Grundläggande komponent). Därför fungerar den inte korrekt när du redigerar ett formulär
 * Kontrollera att reglerna som konverterar Foundation Components till Core Components är formaterade i XML.

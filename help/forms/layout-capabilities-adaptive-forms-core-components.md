@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html?lang=sv-SE) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/layout-capabilities-adaptive-forms.md) |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 
@@ -48,7 +48,7 @@ Panelayout är användbart när du vill ordna relaterade fält på ett sätt som
 
 Panellayout
 
-Du kan använda [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) för att lägga till panellayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar olika egenskaper för panelkomponenten finns i artikeln [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
+Du kan använda [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) för att lägga till panellayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar olika egenskaper för panelkomponenten finns i artikeln [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
 
 >[!TAB Guidelayout]
 
@@ -58,7 +58,7 @@ Med hjälp av guidelayouten kan du förenkla ett komplext formulär genom att de
 
 Guidelayout
 
-Du kan använda [guidekomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) för att lägga till guidelayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för guidekomponenten finns i artikeln [wizard component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
+Du kan använda [guidekomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) för att lägga till guidelayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för guidekomponenten finns i artikeln [wizard component](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
 
 >[!TAB Lodrät tabblayout]
 
@@ -68,7 +68,7 @@ Layouten för de lodräta flikarna kallas även för tabbar i den vänstra layou
 
 Lodrät tabblayout
 
-Du kan använda den [lodräta flikkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) för att lägga till den lodräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för komponenten med lodräta flikar finns i artikeln [för komponenten med lodräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs).
+Du kan använda den [lodräta flikkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) för att lägga till den lodräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för komponenten med lodräta flikar finns i artikeln [för komponenten med lodräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs).
 
 
 >[!TAB Vågrät fliklayout]
@@ -80,7 +80,7 @@ Layouten för de vågräta flikarna kallas även för Tabbar i den översta layo
 
 Vågrät fliklayout
 
-Du kan använda den [vågräta flikkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) för att lägga till den vågräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för den vågräta flikkomponenten finns i artikeln [vågräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) .
+Du kan använda den [vågräta flikkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) för att lägga till den vågräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för den vågräta flikkomponenten finns i artikeln [vågräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) .
 
 
 >[!TAB Dragspelslayout]
@@ -91,7 +91,7 @@ Dragspelslayouten visar innehåll i komprimerbara avsnitt eller paneler i ett ad
 
 Dragspelets layout
 
-Du kan använda [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) för att lägga till dragspelslayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för dragspelskomponenten finns i artikeln om [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
+Du kan använda [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) för att lägga till dragspelslayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för dragspelskomponenten finns i artikeln om [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
 
 >[!ENDTABS]
 
