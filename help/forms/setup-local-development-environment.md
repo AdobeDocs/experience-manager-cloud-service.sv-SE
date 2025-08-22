@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Konfigurera lokal utvecklingsmiljö för AEM Forms {#overview}
 
-När du konfigurerar och konfigurerar en [!DNL  Adobe Experience Manager Forms] som en [!DNL  Cloud Service]-miljö konfigurerar du utvecklings-, staging- och produktionsmiljöer i molnet. Dessutom kan du konfigurera och konfigurera en lokal utvecklingsmiljö.
+När du konfigurerar och konfigurerar en [!DNL &#x200B; Adobe Experience Manager Forms] som en [!DNL &#x200B; Cloud Service]-miljö konfigurerar du utvecklings-, staging- och produktionsmiljöer i molnet. Dessutom kan du konfigurera och konfigurera en lokal utvecklingsmiljö.
 
 Du kan använda den lokala utvecklingsmiljön för att utföra följande åtgärder utan att logga in i molnutvecklingsmiljön:
 
@@ -272,7 +272,7 @@ Använd det här projektet för att skapa Adaptiv Forms, distribuera konfigurati
 >[!NOTE]
 >
 > Konfigurera AEM Archetype version 30 eller senare-baserade projekt för att hämta och använda Microsoft® Dynamics 365 och Salesforce Form Data Model (FDM) med AEM Forms as a Cloud Service.
-> > Konfigurera AEM Archetype version 32 eller senare-baserade projekt för att hämta och använda temana Tranquil, Urbane och Ultramarine med AEM Forms as a Cloud Service.
+> &#x200B;> Konfigurera AEM Archetype version 32 eller senare-baserade projekt för att hämta och använda temana Tranquil, Urbane och Ultramarine med AEM Forms as a Cloud Service.
 
 Så här ställer du in projektet:
 
