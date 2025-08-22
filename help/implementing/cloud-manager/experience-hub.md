@@ -1,14 +1,16 @@
 ---
 title: Om Experience Hub
 description: Läs mer om Adobe Experience Hub.
+landing-page-description: Läs om Adobe Experience Hub, en central startpunkt för alla AEM-funktioner.
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: d9d7dea7b19cb4202778a52b3fc4c0e9d1fd5cbd
+exl-id: a1b0eed7-b74c-4e72-8399-c473bbda9245
+source-git-commit: 7835fba8383893a961226a8cc77cc9c38d4f2959
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -30,7 +32,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/implementing/cloud-manager/assets/experience-cloud-experiencemanager.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Första gången du öppnar den klickar du på önskat alternativ på sidan **Berätta för oss vad du vill göra** så att Adobe kan skräddarsy din upplevelse.
 
    Du kan ändra den här inställningen när som helst.
@@ -83,7 +85,3 @@ Om det inte finns någon AEM Cloud-tjänst för produktion eller Managed Service
 ## AI Assistant i AEM
 
 För kunder som har [uppfyllt villkoren](/help/implementing/cloud-manager/aem-ai-assistant.md#get-access) är AEM AI Assistant i AEM tillgängligt för användare i organisationen. Se [AI-assistenten i AEM](/help/implementing/cloud-manager/aem-ai-assistant.md).
-
-
-
-
