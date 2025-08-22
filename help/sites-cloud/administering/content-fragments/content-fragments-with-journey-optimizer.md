@@ -14,19 +14,19 @@ ht-degree: 2%
 
 # Innehållsfragment med Adobe Journey Optimizer {#content-fragments-with-journey-optimizer}
 
-[Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/get-started) hjälper er att leverera sammankopplade, kontextuella och personaliserade upplevelser till era kunder. Genom att integrera Adobe Experience Manager (AEM) as a Cloud Service med Adobe Journey Optimizer (AJO) kan du återanvända AEM-innehåll i dina inkommande AJO-kanaler och i dina utgående AJO-kanaler, inklusive webb, SMS, e-post och andra.
+[Adobe Journey Optimizer](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/get-started/get-started) hjälper er att leverera sammankopplade, kontextuella och personaliserade upplevelser till era kunder. Genom att integrera Adobe Experience Manager (AEM) as a Cloud Service med Adobe Journey Optimizer (AJO) kan du återanvända AEM-innehåll i dina inkommande AJO-kanaler och i dina utgående AJO-kanaler, inklusive webb, SMS, e-post och andra.
 
 Du kan till exempel:
 
-* införliva dina [AEM Content Fragments](/help/sites-cloud/administering/content-fragments/overview.md) i ditt [Journey Optimizer e-postinnehåll](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/email/email-landing-page)
+* införliva dina [AEM Content Fragments](/help/sites-cloud/administering/content-fragments/overview.md) i ditt [Journey Optimizer e-postinnehåll](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/channels/email/email-landing-page)
 * förgranska AJO direkt från AEM
 
 Kopplingen mellan Content Fragments och AJO förenklar processen att komma åt och utnyttja AEM-innehåll, vilket gör det möjligt att skapa personaliserade och dynamiska kampanjer och resor.
 
 Mer information finns i AJO-dokumentationen:
 
-* [Använda innehållsfragment i AJO](https://experienceleague.adobe.com/docs/journey-optimizer/using/integrations/aem-fragments.html#integrations)
-* [Integrering av AJO-erbjudanden med innehållsfragment](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/decisioning/offer-decisioning/managing-offers-in-the-offer-library/configure-offers/add-representations#urls)
+* [Använda innehållsfragment i AJO](https://experienceleague.adobe.com/docs/journey-optimizer/using/integrations/aem-fragments.html?lang=sv-SE#integrations)
+* [Integrering av AJO-erbjudanden med innehållsfragment](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/decisioning/offer-decisioning/managing-offers-in-the-offer-library/configure-offers/add-representations#urls)
 
 ## Dispatcher Configuration {#dispatcher-configuration}
 
