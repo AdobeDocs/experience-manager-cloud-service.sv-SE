@@ -532,7 +532,7 @@ Använd de här anvisningarna för att få mer detaljerad information om formul�
 
 - [Forms Experience Builder Prompt Library](ai-assistant-prompt-library.md)
 - [Forms Experience Builder Best Practices](aem-forms-ai-assistant-best-practices.md)
-- [AEM Forms-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html)
+- [AEM Forms-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE)
 
 ### Eskalering och support
 
@@ -573,4 +573,4 @@ Använd de här anvisningarna för att få mer detaljerad information om formul�
 - Utbildning och kunskapsutbyte
 - Feedback till produktteamet för funktionsförbättringar
 
-Den här felsökningsguiden uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. Den senaste informationen och ytterligare resurser finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html).
+Den här felsökningsguiden uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. Den senaste informationen och ytterligare resurser finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE).
