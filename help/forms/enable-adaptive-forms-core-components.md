@@ -6,7 +6,9 @@ docset: CloudService
 role: Admin, Developer, User
 feature: Adaptive Forms, Core Components
 exl-id: 32a574e2-faa9-4724-a833-1e4c584582cf
-source-git-commit: 0656e923c4b50d0554780ecf56dd08302a165fa9
+hide: true
+hidefromtoc: true
+source-git-commit: 0845447c1c4f47b77debd179f24eac95a0d2c2db
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -17,7 +19,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Genom att aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service kan du börja skapa, publicera och leverera Core Components-baserade adaptiva Forms och Headless Forms med hjälp av AEM Forms Cloud Service-instanser i flera kanaler. Du behöver en adaptiv Forms Core Components-aktiverad miljö för att kunna använda Headless Adaptive Forms.
@@ -194,7 +196,7 @@ Utför följande steg i listad ordning för att aktivera adaptiva Forms Core-kom
    >
    >  Ersätt `${appId}` med ditt appId.
    >
-   >  Om du vill hitta din `${appId}` söker du efter termen `-packages/application/install` i filen `[AEM Repository Folder]/all/pom.xml`. Texten före termen `-packages/application/install` är din `${appId}`. Följande kod, `myheadlessform`, är till exempel `${appId}`.
+   >  Om du vill hitta din `${appId}` söker du efter termen `[AEM Repository Folder]/all/pom.xml` i filen `-packages/application/install`. Texten före termen `-packages/application/install` är din `${appId}`. Följande kod, `myheadlessform`, är till exempel `${appId}`.
    >
    >   ```
    >             <embedded>
@@ -299,7 +301,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
 
    När paketet har skapats finns det i [Git-databasmappen]\all\target\[appid].all-[version].zip
 
-1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE) för att distribuera [AEM Archetype-projektmappen]\all\target\[appid].all-[version].zip-paketet på den lokala utvecklingsmiljön.
+1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmappen]\all\target\[appid].all-[version].zip-paketet på den lokala utvecklingsmiljön.
 
 
 ### Skapa och driftsätt uppdaterad kod i en AEM Forms as a Cloud Service-miljö {#core-components-on-aem-forms-cs}
@@ -315,7 +317,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
     git push origin
    ```
 
-1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE) när filerna har implementerats i Git-databasen.
+1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) när filerna har implementerats i Git-databasen.
 
    När pipeline-körningen har slutförts aktiveras adaptiva Forms Core-komponenter för motsvarande miljö. Dessutom har en adaptiv Forms-mall (Core Components) och Canvas 3.0-temat lagts till i din Forms as a Cloud Service-miljö, med alternativ för att anpassa och skapa Core Components-baserade Adaptive Forms.
 
@@ -324,7 +326,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
 
 ### Vad är kärnkomponenter? {#core-components}
 
-[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 ### Vilka funktioner finns det för att aktivera kärnkomponenter? {#core-components-capabilities}
 
@@ -333,7 +335,7 @@ När de adaptiva Forms Core-komponenterna är aktiverade för din miljö läggs 
 * [Skapa grundkomponenter baserade på adaptiv Forms](/help/forms/creating-adaptive-form-core-components.md).
 * [Skapa kärnkomponentbaserade adaptiva formulärmallar](/help/forms/template-editor.md).
 * [Skapa anpassade teman för grundkomponentbaserade adaptiva formulärmallar](/help/forms/using-themes-in-core-components.md).
-* [Servera Core Component-baserade adaptive Form-baserade JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver ett formulärs rubrikfria representation](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE).
+* [Servera Core Component-baserade adaptive Form-baserade JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver ett formulärs rubrikfria representation](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html).
 
 ### Är adaptiva Forms Core-komponenter aktiverade för min miljö? {#enable-components}
 

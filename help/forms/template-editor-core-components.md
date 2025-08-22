@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 Keywords: create adaptive form template, create adaptive form template based on core components, Use template to create adpative form.
 exl-id: c1c050d3-953e-4e56-a96b-d84f2ec05e5e
 role: User, Developer
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: e9c595d0afae5c29adf2842bfb2ee28a046b804c
 workflow-type: tm+mt
-source-wordcount: '1884'
+source-wordcount: '1873'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ You can download and install [!DNL AEM Forms] reference content package from [So
 
 ## Förutsättning
 
-**Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Om du har en as a Cloud Service formulärmiljö baserad på [AEM Archetype 39 eller tidigare](https://github.com/adobe/aem-project-archetype) [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md).
+**Aktivera adaptiva Forms Core-komponenter för din miljö**: När du skapar ett program är de adaptiva Forms Core-komponenterna redan aktiverade för din miljö. Installera den senaste versionen om du vill aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö.
 
 >[!NOTE]
 >
@@ -42,7 +42,7 @@ Du kommer åt mallredigeraren på Verktyg-menyn genom att gå till **[!UICONTROL
 >
 > Du hittar de redigerbara mallarna som bygger på kärnkomponenten i kärnkomponentspecifika mappar.
 
-I Experience Manager finns en global mapp där du kan ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=sv-SE#editing-templates-template-authors).
+I Experience Manager finns en global mapp där du kan ordna mallar. Den är dock inte aktiverad som standard. Du kan begära att administratören aktiverar den globala mappen eller skapar en mapp för mallar. Mer information om hur du skapar mappar finns i [Mallmappar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html#editing-templates-template-authors).
 
 ## Skapa en mall {#create-template}
 
@@ -51,7 +51,7 @@ När du har skapat en mapp öppnar du mappen och utför följande steg för att 
 1. Välj **[!UICONTROL Create]** i mappen som du har skapat.
 1. I avsnittet **[!UICONTROL Pick a Template Type]** väljer du **[!UICONTROL Adaptive Form (Core Component) template]** och sedan **[!UICONTROL Next]**.
 
-1. Ange en **malltitel** i avsnittet **[!UICONTROL Template Details]** och välj **[!UICONTROL Create]**.
+1. Ange en **[!UICONTROL Template Details]** malltitel **i avsnittet** och välj **[!UICONTROL Create]**.
 Du kan också ange en beskrivning.
 
 1. Välj **[!UICONTROL Done]** om du vill återgå till konsolen eller välj **[!UICONTROL Open]** om du vill öppna mallen i redigeraren.
@@ -139,7 +139,7 @@ När du redigerar en mall kan du definiera layouten, vilket innebär att en resp
 
 ![Layoutbehållare i strukturlagret](/help/forms/assets/layout-template-core-component.png)
 
-Mer information finns i artikeln [Förstå responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/responsive-layout-feature-video-understand.html?lang=sv-SE).
+Mer information finns i artikeln [Förstå responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/responsive-layout-feature-video-understand.html?lang=en).
 
 ## Aktivera mallen {#enabling-the-template}
 
@@ -152,7 +152,7 @@ När du skapar ett adaptivt formulär kan du se mallen som visas när du ombeds 
 
 ## Importera eller exportera en mall {#importing-or-exporting-a-template}
 
-Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan [!DNL AEM Forms]-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från noden `/conf` i `https://<server>:<port>/crx/packmgr` och portera den i instansen [!DNL AEM Forms] där du vill överföra formuläret. Du kan också [skapa en mall med hjälp AEM Archetype och distribuera den till din Cloud Services-instans](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html?lang=sv-SE#prerequisites).
+Ett formulär fungerar med sin mall. När du hämtar ett adaptivt formulär som skapats med en anpassad mall hämtas inte mallen. När du importerar formuläret till en annan [!DNL AEM Forms]-instans importeras det utan någon mall. Om ett formulär importeras men mallen inte är tillgänglig, återges inte formuläret. Du kan paketera den anpassade mallen från noden `/conf` i `https://<server>:<port>/crx/packmgr` och portera den i instansen [!DNL AEM Forms] där du vill överföra formuläret. Du kan också [skapa en mall med AEM-arkitekturen och distribuera den till din molntjänstinstans](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/pages-templates.html#prerequisites).
 
 >[!NOTE]
 >
@@ -280,7 +280,7 @@ You can also save an Adaptive Form as a template for future use. To save a Adapt
 
 ## Bästa praxis {#best-practices}
 
-* Skapa mallar med komponenterna som bygger på kärnkomponenter, till exempel Adaptiv formulärtext, Adaptiv formulärbehållare med mera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) om du vill ha information om adaptiva Forms Core-komponenter.
+* Skapa mallar med komponenterna som bygger på kärnkomponenter, till exempel Adaptiv formulärtext, Adaptiv formulärbehållare med mera. [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) om du vill ha information om adaptiva Forms Core-komponenter.
 * Begränsa antalet mallar så att de matchar de i grunden olika formulärtyperna som finns på webbplatserna
 * Ge de anpassade komponenter som används i en mall den flexibilitet och konfigurationsmöjligheter som behövs.
 

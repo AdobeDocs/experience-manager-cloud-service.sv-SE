@@ -3,13 +3,13 @@ title: Hur lägger man till formulärlänkar på AEM Sites-sidan med Länka Form
 description: Lär dig hur du lägger till formulärlänkar på AEM Sites-sidan.
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: 31f18027d856cbd161457c4a01d6c7c17d1c2b89
+exl-id: a55d0776-8827-46cc-9625-5d6f5f6bda3b
+source-git-commit: 16b1e7ffa4e3812e9207bb283c63029939f7d14e
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
-
 
 # Lägga till formulärlänkar på webbplatssidan
 
@@ -19,7 +19,7 @@ I scenariot med bankwebbplatser förbättrar Forms Portal-komponenten **Link** n
 
 ## Förutsättning
 
-Innan du utforskar de olika funktionerna i en Forms Portal-komponent kontrollerar du att kärnkomponenterna är aktiverade för din miljö. [Klicka här](/help/forms/enable-adaptive-forms-core-components.md) om du vill ha detaljerade anvisningar om hur du aktiverar kärnkomponenter för din miljö.
+Innan du utforskar de olika funktionerna i en Forms Portal-komponent kontrollerar du att kärnkomponenterna är aktiverade för din miljö. Installera den senaste versionen för att aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö.
 
 När du har distribuerat de senaste Core-komponenterna till din miljö blir Forms Portal-komponenterna tillgängliga i din redigeringsmiljö.
 
@@ -31,7 +31,7 @@ Så här lägger du till portalkomponenten **Link** på din webbplatssida:
 1. Gå till **[!UICONTROL Page Information]** > **[!UICONTROL Edit Template]**
    ![Redigera mallprincip](/help/forms/assets/save-form-as-draft-edit-template.png)
 
-1. Klicka på **[!UICONTROL Policy]** och markera kryssrutan **[!UICONTROL Link]** under **[AEM Archetype Project Name] - Forms and Communications Portal**.
+1. Klicka på **[!UICONTROL Policy]** och markera kryssrutan **[!UICONTROL Link]** under **[Projektnamn för AEM-arkityp] - Forms och kommunikationsportal**.
 
    ![Principval](/help/forms/assets/add-link.png)
 

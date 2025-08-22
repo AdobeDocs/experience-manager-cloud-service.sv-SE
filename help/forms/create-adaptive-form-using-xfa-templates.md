@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner
 exl-id: f3c9b798-8b20-4674-9b96-a3a0b143d947
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: 8d43f28e62a865b6b990678544e0d9589f17722a
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Några av fördelarna med att skapa formulär baserade på XFA-formulärmallar e
 
 Du behöver följande för att skapa ett adaptivt formulär baserat på kärnkomponenter med hjälp av XFA-formulärmallar eller XDP-filer:
 
-* [Aktivera adaptiva Forms Core-komponenter för din miljö](enable-adaptive-forms-core-components.md).
+* Installera den senaste versionen för att aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö.
 * Du bör känna till följande områden:
    * Skapa ett anpassat formulär
    * XFA (XML Forms Architecture)
