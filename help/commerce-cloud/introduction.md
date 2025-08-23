@@ -53,7 +53,7 @@ Bra passform: Lågt värde från Edge Deliery Store
 
 ### Använd din egen butik (integrering med Headless AEM) {#own-storefront}
 
-Du har en befintlig butik (t.ex. byggd med React JS) och vill använda Adobe Experience Manager för innehållshantering och leverans (Content Fragments), resurser och sammanhangsbaserad redigering (Universal Editor). Startpunkten för en integrering är [Introduktion till Adobe Experience Manager som Headless CMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/introduction) och [CIF-tillägget](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/authoring/enrich-product-associated-content). CIF-tillägget möjliggör en smidig integrering av dina produktdata i AEM (sök, bläddra och hitta produkter i AEM användargränssnitt) som du kan använda för att skapa e-handelsspecifika upplevelser.
+Du har en befintlig butik (t.ex. byggd med React JS) och vill använda Adobe Experience Manager för innehållshantering och leverans (Content Fragments), resurser och sammanhangsbaserad redigering (Universal Editor). Startpunkten för en integrering är [Introduktion till Adobe Experience Manager som Headless CMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/introduction) och [CIF-tillägget](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/authoring/enrich-product-associated-content). CIF-tillägget möjliggör en smidig integrering av dina produktdata i AEM (sök, bläddra och hitta produkter i AEM användargränssnitt) som du kan använda för att skapa e-handelsspecifika upplevelser.
 
 ### AEM CIF store {#cif}
 
