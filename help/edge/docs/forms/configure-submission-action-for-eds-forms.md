@@ -150,7 +150,7 @@ Konfigurera referensfiltret så att dina specifika Edge Delivery-webbplatsdomän
 
 3. Distribuera konfigurationen via Cloud Manager
 
-Mer information om konfigurationen för OSGi-referensfilter finns i [Handboken för referensfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter).
+Mer information om konfigurationen för OSGi-referensfilter finns i [Handboken för referensfilter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter).
 
 #### 3. CORS (Cross-Origin Resource Sharing) Issues
 
@@ -180,10 +180,10 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 >
 >Ersätt `main--abc--adobe.aem.live` och `main--abc1--adobe.aem.live` med de faktiska webbplatsdomänerna. Varje plats som lagras från samma databas kräver en separat CORS-konfigurationspost.
 
-Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
+Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
 
 
-Om du vill aktivera CORS för din lokala utvecklingsmiljö läser du artikeln [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing).
+Om du vill aktivera CORS för din lokala utvecklingsmiljö läser du artikeln [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing).
 
 <!--
 #### 4. CDN Redirect Rules
