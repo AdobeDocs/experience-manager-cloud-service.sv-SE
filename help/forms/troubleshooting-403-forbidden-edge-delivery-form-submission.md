@@ -3,13 +3,13 @@ title: Felsökning 403 Otillåtna fel vid inskickning av Edge Delivery Services-
 description: Lär dig att diagnostisera och åtgärda 403 Otillåtna fel när du skickar formulär från Edge Delivery Services till AEM Publish. Den här guiden innehåller vanliga orsaker, bland annat CORS, Dispatcher regler och problem med referensfilter.
 feature: Edge Delivery Services
 role: Admin, Developer
-source-git-commit: 3130a6fa8a8b244707f6578034ab274f6038ced6
+exl-id: f397e059-f1b3-4afa-bd38-8f5fc591bb22
+source-git-commit: d457bf9af377176222c2b96816fbbc4265e6b167
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
-
 
 # Felsökning 403 Otillåtna fel vid inskickning av Edge Delivery Services-formulär {#troubleshooting-403-forbidden-edge-delivery}
 
@@ -75,7 +75,7 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 >
 >Ersätt `main--abc--adobe.aem.live` och `main--abc1--adobe.aem.live` med de faktiska webbplatsdomänerna. Varje plats som lagras från samma databas kräver en separat CORS-konfigurationspost.
 
-Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
+Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
 
 ### &#x200B;2. Dispatcher regler
 
@@ -169,7 +169,7 @@ Konfigurera referensfiltret så att dina specifika Edge Delivery-webbplatsdomän
 
 >[!IMPORTANT]
 >
->**Forrestless-inställningar:** Du måste lägga till varje platsdomän individuellt i arrayen `allow.hosts`. Det kanske inte räcker att bara använda regex-mönster för alla scenarier. Inkludera både specifika domäner och regex-mönster för omfattande täckning.
+>**För svarslösa inställningar:** Du måste lägga till varje webbplatsdomän individuellt i arrayen `allow.hosts`. Det kanske inte räcker att bara använda regex-mönster för alla scenarier. Inkludera både specifika domäner och regex-mönster för omfattande täckning.
 
 >[!WARNING]
 >
@@ -262,8 +262,8 @@ Med Helix-5 och kraftlösa arkitekturer följer du dessa riktlinjer:
 ## Ytterligare resurser
 
 - [Filterkonfiguration för referent med AEM Headless](/help/headless/deployment/referrer-filter.md)
-- [CORS - konfigurationsguide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
-- [Om resursdelning mellan ursprung](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
+- [CORS - konfigurationsguide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
+- [Om resursdelning mellan ursprung](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
 - [Edge Delivery Services Forms Documentation](/help/edge/docs/forms/universal-editor/publish-forms.md)
 
 ## Relaterade ämnen

@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar skicka-åtgärder i AEM Forms med Edge
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 8f490054-f7b6-40e6-baa3-3de59d0ad290
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: 2d16a9bd1f498dd0f824e867fd3b5676fb311bb3
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -98,27 +98,100 @@ Skicka formulärdata direkt till AEM as a Cloud Service Publish-instansen för k
 
 ### Konfigurationskrav
 
-#### 1. AEM Dispatcher Configuration
+#### &#x200B;1. Uppdatera AEM Instance URL i Edge Delivery
 
-Konfigurera Dispatcher på din AEM Publish-instans:
+Uppdatera AEM Cloud Service-instansens URL i filen `constant.js` i blocket `form` under `submitBaseUrl`. Du kan konfigurera URL-adressen baserat på din miljö:
 
-- **Tillåt inskickningssökvägar**: Ändra `filters.any` så att POST-begäranden tillåts till `/adobe/forms/af/submit/...`
-- **Inga omdirigeringar**: Kontrollera att Dispatcher-reglerna inte omdirigerar sökvägar för formulärinlämning
+**För Cloud Service-instans**
+
+```js
+export const submitBaseUrl = '<aem-publish-instance-URL>';
+```
+
+**För lokal utveckling**
+
+```js
+export const submitBaseUrl = 'http://localhost:<port-number>';
+```
 
 #### &#x200B;2. Refererarfilter för OSGi
 
-I AEM OSGi-konsolen (`/system/console/configMgr`):
+Konfigurera referensfiltret så att dina specifika Edge Delivery-webbplatsdomäner tillåts:
 
-1. Sök efter &quot;Apache Sling Referrer-filter&quot;
-2. Lägg till din Edge Delivery-domän i listan Tillåt värdar
-3. Inkludera domäner som `https://your-eds-domain.hlx.page`
+1. Skapa eller uppdatera OSGi-konfigurationsfilen: `org.apache.sling.security.impl.ReferrerFilter.cfg.json`
 
-#### &#x200B;3. Omdirigeringsregler för CDN
+2. Lägg till följande konfiguration med dina specifika webbplatsdomäner:
 
-Konfigurera ditt Edge Delivery CDN för att skicka material vidare:
+   ```json
+   {
+     "allow.empty": false,
+     "allow.hosts": [
+       "main--abc--adobe.aem.live",
+       "main--abc1--adobe.aem.live"
+     ],
+     "allow.hosts.regexp": [
+       "https://.*\\.aem\\.live:443",
+       "https://.*\\.aem\\.page:443",
+       "https://.*\\.hlx\\.page:443",
+       "https://.*\\.hlx\\.live:443"
+     ],
+     "filter.methods": [
+       "POST",
+       "PUT",
+       "DELETE",
+       "COPY",
+       "MOVE"
+     ],
+     "exclude.agents.regexp": [
+       ""
+     ]
+   }
+   ```
 
-- Vidarebefordra begäranden från `/adobe/forms/af/submit/...` till din AEM Publish-instans
-- Implementeringen varierar beroende på CDN-leverantör (Fastly, Akamai, Cloudflare)
+3. Distribuera konfigurationen via Cloud Manager
+
+Mer information om konfigurationen för OSGi-referensfilter finns i [Handboken för referensfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter).
+
+#### 3. CORS (Cross-Origin Resource Sharing) Issues
+
+Konfigurera CORS-inställningar i AEM för att tillåta begäranden från dina specifika Edge Delivery-webbplatsdomäner:
+
+**Developer Localhost**
+
+```apache
+SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http://localhost(:\d+)?$)#" CORSTrusted=true
+```
+
+**Edge Delivery Sites - Lägg till varje webbplatsdomän individuellt**
+
+```apache
+SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://main--abc--adobe\.aem\.live$)#" CORSTrusted=true
+SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://main--abc1--adobe\.aem\.live$)#" CORSTrusted=true
+```
+
+**Äldre Franklin-domäner (om de fortfarande används)**
+
+```apache
+SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.page$)#" CORSTrusted=true  
+SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(https://.*\.hlx\.live$)#" CORSTrusted=true
+```
+
+>[!NOTE]
+>
+>Ersätt `main--abc--adobe.aem.live` och `main--abc1--adobe.aem.live` med de faktiska webbplatsdomänerna. Varje plats som lagras från samma databas kräver en separat CORS-konfigurationspost.
+
+Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
+
+
+Om du vill aktivera CORS för din lokala utvecklingsmiljö läser du artikeln [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing).
+
+<!--
+#### 4. CDN Redirect Rules
+
+Configure your Edge Delivery CDN to route submissions:
+
+- Route requests from `/adobe/forms/af/submit/...` to your AEM Publish instance
+- Implementation varies by CDN provider (Fastly, Akamai, Cloudflare)-->
 
 #### &#x200B;4. Formulärkonfiguration
 
@@ -128,55 +201,54 @@ Konfigurera ditt Edge Delivery CDN för att skicka material vidare:
 4. Publicera formulär på Edge Delivery webbplats
 
 +++
+<!--
++++ Form Embedding
 
-+++ Formulärinbäddning (valfritt)
+Embed forms created in one location into different web pages or sites.
 
-Bädda in formulär som skapats på en plats på olika webbsidor eller webbplatser.
+### Use Cases
 
-### Användningsexempel
+- Reuse standard forms across multiple landing pages
+- Include specialized forms in Document-Authored content
+- Maintain single form across multiple EDS projects
 
-- Återanvända standardformulär på flera landningssidor
-- Inkludera specialanpassade blanketter i dokumentredigerat innehåll
-- Underhåll ett formulär i flera EDS-projekt
+### CORS Configuration
 
-### CORS-konfiguration
+Configure Cross-Origin Resource Sharing on the form source:
 
-Konfigurera resursdelning mellan ursprung på formulärkällan:
-
-1. **Lägg till CORS-rubriker** i formulärkällsvar:
+1. **Add CORS Headers** to form source responses:
    - `Access-Control-Allow-Origin: https://your-host-domain.com`
-   - `Access-Control-Allow-Methods: GET, OPTIONS`
+   - `Access-Control-Allow-Methods: GET, OPTIONS`  
    - `Access-Control-Allow-Headers: Content-Type`
 
-2. **Exempelkonfiguration**:
+2. **Example Configuration**:
 
-       &#x200B;# Konfiguration för platsen som är värd för formuläret 
-       rubriker:
-       - sökväg: /forms/**
-       anpassad:
-       Access-control-Allow-origin: https://host-domain.com
-       Access-control-allow-methods: GET, OPTIONS
-   
+        # Configuration for site hosting the form
+        headers:
+          - path: /forms/**
+            custom:
+              Access-Control-Allow-Origin: https://host-domain.com
+              Access-Control-Allow-Methods: GET, OPTIONS
 
-### Inbäddningssteg
+### Embedding Steps
 
-1. **Skapa och publicera formulär**
-   - Bygg formulär med Document Authoring eller Universal Editor
-   - Konfigurera överföringsmetod (FSS eller AEM Publish)
-   - Publicera till fristående URL
+1. **Create and Publish Form**
+   - Build form using Document Authoring or Universal Editor
+   - Configure submission method (FSS or AEM Publish)
+   - Publish to standalone URL
 
-2. **Konfigurera CORS**
-   - Ställ in CORS-huvuden på formulärkällans webbplats
-   - Tillåt värdsidans domän att hämta formulär
+2. **Configure CORS**
+   - Set up CORS headers on form source site
+   - Allow host page domain to fetch form
 
-3. **Bädda in på värdsida**
-   - Lägg till block för inbäddning av formulär på värdsidan
-   - Punktblock till publicerad formulär-URL
-   - Publicera värdsida
+3. **Embed in Host Page**
+   - Add form embedding block to host page
+   - Point block to published form URL
+   - Publish host page
 
-![Inbäddad formulärarkitektur](/help/forms/assets/eds-embedded-form.png)
+![Embedded Form Architecture](/help/forms/assets/eds-embedded-form.png)
 
-+++
++++-->
 
 +++ Vanliga problem
 
