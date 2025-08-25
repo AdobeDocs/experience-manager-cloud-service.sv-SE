@@ -18,11 +18,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-forms-authoring.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-forms-authoring.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -161,7 +161,7 @@ Du kan dra och släppa formulärmodellelement i det adaptiva formuläret. De til
   </tr>
   <tr>
    <td>Bifogad fil</td>
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten för bifogad fil har stöd för en fördefinierad uppsättning filformat i Adaptive Forms aktiverat för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat som stöds</a>.</p> </td>
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten för bifogad fil har stöd för en fördefinierad uppsättning filformat i Adaptive Forms aktiverat för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/se/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat som stöds</a>.</p> </td>
   </tr>
   <tr>
    <td>Lista över bifogade filer</td>
