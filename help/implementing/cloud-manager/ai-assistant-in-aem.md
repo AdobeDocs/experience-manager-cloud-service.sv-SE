@@ -7,9 +7,10 @@ role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: d36eb5807718f3d20ea0c3de4491981cb7942b44
+exl-id: 81e7b1ac-50d0-4547-8622-bf145ebc3dc0
+source-git-commit: f72f72e87dabe89cafc0a56feb35f58ae1a97dfb
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
@@ -33,7 +34,7 @@ Det är direkt inbäddat i AEM och tillgängligt från AEM Experience Hub, Cloud
 
 I följande 3-minuters-39-sekundersvideo får du stegvis genomgång av AI Assistant i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470359?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3470354?learn=on)
 
 ## Få tillgång till AI Assistant i AEM{#get-access}
 
@@ -44,17 +45,15 @@ Om du vill ge användare åtkomst till AI-assistenten i AEM måste din Adobe-adm
 
 AI Assistant-begäranden i AEM autentiseras via Adobe Identity Management Services (IMS). Mer information finns i [Adobe Identity Management Services - översikt](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/corporate/adobe-identity-management-services-security-overview.pdf).
 
->[!NOTE]
-> 
->Kundorganisationer måste acceptera ytterligare juridiska villkor för att kunna aktivera AI-assistenten. Kontakta Adobe för mer information.
-
 **Så här får du åtkomst till AI Assistant i AEM:**
 
-1. [Kunder måste signera Gen AI-reglaget med Adobe](https://fieldreadiness-adobe.highspot.com/items/665f831c9f831b011aeda057#1).
+1. Kunderna måste ha ett extra avtal för att få tillgång till de flesta AI-baserade och autentiska funktionerna i Adobe Experience Manager. Kontakta Adobe för mer information.
 
-   GenAI Rider är ett juridiskt avtal mellan en kund och Adobe som krävs för att använda de flesta AI-funktioner och agentiska funktioner. Kontakta Adobe kundtjänst om du vill veta mer.
+<!-- OLD STEP 1 [Customers must sign the Gen AI rider with Adobe](https://fieldreadiness-adobe.highspot.com/items/665f831c9f831b011aeda057#1). 
 
-1. AEM Admin konfigurerar AI-assistenten för användning i organisationen. Se [Konfigurera AI-assistenten i AEM](/help/implementing/cloud-manager/aem-ai-assistant-admin.md).
+    The GenAI Rider is a legal agreement between a customer and Adobe, required to use most AI and agentic capabilities. Contact Adobe Customer Care to learn more. -->
+
+1. AEM Admin konfigurerar AI-assistenten för användning i organisationen. Se [Konfigurera AI-assistenten i AEM](/help/implementing/cloud-manager/ai-assistant-in-aem-admin.md).
 
 <!--
 >[!IMPORTANT]
@@ -93,7 +92,7 @@ Produktkunskap omfattar begrepp och ämnen som härletts ur Adobe Experience Lea
 | Undervisning | <ul><li>Vad är den universella redigeraren?</li><li>Hur skapar jag ett program i Cloud Manager?</li></ul> |
 | Öppna identifiering | <ul><li>Hur använder jag Universal Editor?</li><li>Finns det något sätt att kopiera innehåll från en miljö till en annan?</li></ul> |
 | Felsökning | <ul><li>Varför har jag inte åtkomst till Universal Editor?</li><li>Varför misslyckas min pipeline?</li></ul> |
-| **Skapa supportbiljett** | **Endast tillgängligt för supportadministratörer &#x200B;**<br>**Exempel** |
+| **Skapa supportbiljett** | **Endast tillgängligt för supportadministratörer **<br>**Exempel** |
 | Automatiserad framtagning av supportbiljetter som fångar AI Assistant-chatthistorik och kontext | <ul><li>Skapa en supportbiljett åt mig.</li></ul> |
 | Hämta status för supportanmälan | <ul><li>Visa alla supportärenden som jag har öppnat.</li><li>Visa status för biljetten E—</li></ul> |
 
@@ -133,7 +132,7 @@ Administrators should keep normal Cloud Manager governance in mind. Hold product
 
 ![Technical support ticket creation in the AI Assistant in AEM of the Admin Console](/help/implementing/cloud-manager/assets/ai-assistant-admin-console-support-ticket.png)
 
-For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/accessing/overview). 
+For a guided walkthrough of setting up users and groups in AEM as a Cloud Service, see [Configuring access to AEM as a Cloud Service ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/overview). 
 
 See also [Custom Permissions](/help/implementing/cloud-manager/custom-permissions.md). -->
 
@@ -148,7 +147,11 @@ Du kan återställa AI-assistenten i AEM och starta en ny konversation när du v
 
    ![AI Assistant-ikon i verktygsfältet](/help/implementing/cloud-manager/assets/ai-assistant-icon.png)
 
-1. Skriv din fråga i textrutan på panelen **AI Assistant** längst ned och tryck sedan på `Enter` eller klicka på ![ikonen Skicka](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Send_18_N.svg).
+1. Skriv din fråga eller fråga i textrutan på panelen **AI Assistant** längst ned och tryck sedan på `Enter` eller klicka på ![ikonen Skicka](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Send_18_N.svg).
+
+   >[!NOTE]
+   >
+   >Personuppgifter bör inte inkluderas i dina indata, eftersom det är onödigt att använda det här verktyget.
 
    ![Textruta längst ned på AI-assistentpanelen](/help/implementing/cloud-manager/assets/ai-assistant-prompt-text-box.png)
 
@@ -168,7 +171,7 @@ AI Assistant i AEM innehåller en funktion som hjälper dig att utforska ämnen 
    *Panel med promptkategorier i AI Assistant.*
 
 1. Välj en kategori om du vill visa en lista med relaterade uppmaningar.
-1. Välj ett kommando för att se exempel på de typer av frågor som AEM AI Assistant kan besvara.
+1. Välj en uppmaning om att se exempel på de typer av frågor som AI-assistenten kan besvara.
 
 1. Om du vill dölja frågeidentifieringspanelen klickar du på ![ikonen Lär dig](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Learn_18_N.svg) igen.
 

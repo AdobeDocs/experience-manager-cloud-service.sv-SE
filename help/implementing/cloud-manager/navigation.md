@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 1683d53491e06ebe2dfcc96184ce251539ecf732
+source-git-commit: 4c42888af1e846c011242af2c328e553bb811cfd
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 0%
 
 Läs om hur Cloud Manager användargränssnitt är organiserat och hur du navigerar för att hantera program och miljöer.
 
+
 Användargränssnittet för molnhantering består huvudsakligen av två grafiska gränssnitt:
 
 * [På konsolen Mina program](#my-programs-console) kan du visa och hantera alla program.
@@ -25,6 +26,12 @@ Användargränssnittet för molnhantering består huvudsakligen av två grafiska
 >[!TIP]
 >
 >Se även [introduktionsdokumentationsresan](/help/journey-onboarding/overview.md) för en fullständig översikt över hur du kommer igång med AEM as a Cloud Service med Cloud Manager.
+
+
+## AI Assistant i AEM
+
+För kunder som har [uppfyllt villkoren](/help/implementing/cloud-manager/ai-assistant-in-aem.md#get-access) är AI Assistant i AEM tillgängligt för användare i organisationen. Se [AI-assistenten i AEM](/help/implementing/cloud-manager/ai-assistant-in-aem.md).
+
 
 ## My Programs Console {#my-programs-console}
 
@@ -39,7 +46,7 @@ Konsolen Mina program ger en översikt över alla program som du har tillgång t
    * Vyn **Hem** (standard) som väljer vyn **Mina program** med en översikt över alla program
    * **Licens** som har åtkomst till [licensinstrumentpanelen](/help/implementing/cloud-manager/license-dashboard.md).
    * Observera att flikarna som standard stängs och att de kan visas med ![Visa menyikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i [Cloud Manager-rubriken](#cloud-manager-header).
-1. [Statistik och uppmaning](#statistics) för en översikt över din senaste aktivitet
+1. [Statistik och call-to-action](#statistics) för en översikt över din senaste aktivitet
 1. [**Mina program** avsnitt](#my-programs-section) med en översikt över alla dina program
 1. [Snabblänkar](#quick-links-section) gör det enkelt att komma åt relaterade resurser.
 
@@ -55,11 +62,11 @@ Det finns två verktygsfält ovanpå varandra.
 
 Det första är Cloud Manager-rubriken som är beständig när du navigerar i Cloud Manager. Det är en ankarpunkt som ger dig tillgång till inställningar och information som gäller för alla Cloud Manager-program.
 
-![Experience Cloud-huvudet](assets/experience-cloud-header.png)
+![Experience Cloud-rubriken](assets/experience-cloud-header.png)
 
 1. Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) (visa eller dölj sidomenyn) för att ge dig tillgång till en mängd olika flikar som kan ta dig till specifika delar av ett enskilt program. Eller så kan du växla mellan [licensöversikten](/help/implementing/cloud-manager/license-dashboard.md) och konsolen **[Mina program](#my-programs-console)** beroende på sammanhanget.
-1. Klicka på Adobe Cloud Manager för att gå tillbaka till My Programs-konsolen i Cloud Manager oavsett var du befinner dig i Cloud Manager.
-1. Klicka på **Feedback** om du vill ge Adobe feedback om Cloud Manager.
+1. Klicka på Adobe Cloud Manager när du vill gå tillbaka till My Programs-konsolen för Cloud Manager oavsett var du befinner dig i Cloud Manager.
+1. Klicka på **Feedback** om du vill lämna feedback till Adobe om Cloud Manager.
 1. Klicka på organisationsväljaren för att visa organisationen som du är inloggad på (i det här exemplet Foundation Internal). Klicka för att växla till en annan organisation om din Adobe ID är kopplad till flera.
 1. Klicka på ikonen ![Appar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) (lösningsväljaren) om du snabbt vill gå till andra Experience Cloud-lösningar.
 1. Klicka på ![hjälpikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Help_18_N.svg) om du snabbt vill få tillgång till utbildnings- och supportresurser.
@@ -78,7 +85,7 @@ Verktygsfältet Program innehåller länkar för att växla mellan Cloud Manager
 
 ### Statistik och uppmaning {#statistics}
 
-Statistik och avsnittet med uppmaning att vidta åtgärder innehåller aggregerade data för din organisation, t.ex. om du har konfigurerat dina program, kan statistik över dina aktiviteter under de senaste 90 dagarna visa, inklusive:
+Statistik och call-to-action-avsnitt innehåller sammanställda data för din organisation, t.ex. om du har konfigurerat dina program, kan statistik över dina aktiviteter under de senaste 90 dagarna visa, inklusive:
 
 * Antal [distributioner](/help/implementing/cloud-manager/deploy-code.md)
 * Antal [kodkvalitetsproblem](/help/implementing/cloud-manager/code-quality-testing.md) som identifierats
@@ -119,7 +126,7 @@ Ett kort (eller en rad i en tabell) representerar alla program och ger en övers
 * Namn som tilldelats programmet. I bilden ovan visas&quot;SecurBank Sample&quot; som programnamn.
 * Tjänsttyp:
    * **Experience Manager Cloud** - för AEM as a Cloud Service-program
-   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction)
+   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
 * [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md):
    * Sandbox
    * Produktion
@@ -146,7 +153,7 @@ Ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_22/Smock_More_22_
 * Navigera till en viss ![dataikon](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Data_22_N.svg) [Miljö](/help/implementing/cloud-manager/manage-environments.md) i programmet
 * Öppna ikonen ![Programöversikt](/help/implementing/cloud-manager/assets/program-overview.svg) [Programöversikt](#program-overview)
 * ![Ikonen Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
-* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) [Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
+* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg)[Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
 
 >[!TIP]
 >
@@ -171,7 +178,7 @@ Programöversikten ger dig tillgång till alla detaljer i ett Cloud Manager-prog
 
 1. [Verktygsfält](#program-overview-toolbar) om du snabbt vill gå tillbaka till konsolen Mina program och navigera i programmet
 1. [Tabbar](#program-tabs) för att växla mellan olika aspekter av programmet
-1. En [uppmaning till åtgärd](#cta) baserad på de senaste åtgärderna i programmet
+1. En [call-to-action](#cta) baserad på de senaste åtgärderna i programmet
 1. En [översikt över programmets miljöer](#environments)
 1. En [översikt över programmets pipelines](#pipelines)
 1. En [översikt över programmets prestanda](#performance)
@@ -227,11 +234,11 @@ Varje program har flera alternativ och data kopplade till sig. Dessa alternativ 
 
 Som standard visas fliken **Översikt** när du öppnar ett program. Den aktuella fliken markeras. Välj en annan flik om du vill visa information om den.
 
-Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet av [Cloud Manager-sidhuvudet](#cloud-manager-header-2) om du vill visa eller dölja sidomenyn med flikar.
+Klicka på [Visa menyikon](#cloud-manager-header-2) i det övre vänstra hörnet av ![Cloud Manager-sidhuvudet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) om du vill visa eller dölja sidomenyn med flikar.
 
 ### Call-to-action {#cta}
 
-Avsnittet&quot;call-to-action&quot; ger användbar information beroende på programmets status. För ett nytt program kan du se nästa steg och en påminnelse om ett publiceringsdatum, [angivet när programmet skapades](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md).
+I call-to-action-avsnittet finns information som du kan använda beroende på programmets status. För ett nytt program kan du se nästa steg och en påminnelse om ett publiceringsdatum, [angivet när programmet skapades](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md).
 
 ![Call-to-action för ett nytt program](/help/implementing/cloud-manager/assets/info-banner-new-program.png)
 

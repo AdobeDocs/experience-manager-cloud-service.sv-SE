@@ -2,16 +2,16 @@
 title: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 description: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: c3a528d7e903b43f6b9a18b2426a04638b086d38
+source-git-commit: f72f72e87dabe89cafc0a56feb35f58ae1a97dfb
 workflow-type: tm+mt
-source-wordcount: '5032'
+source-wordcount: '5078'
 ht-degree: 0%
 
 ---
 
 # Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM {#assets-as-cloud-service-digital-asset-management-aem}
 
-Adobe Experience Manager Assets as a Cloud Service är en molnbaserad, Adobe PaaS-lösning som gör att företag inte bara kan utföra sina Digital Asset Management- och Dynamic Media-åtgärder snabbt och effektivt, utan även använda nästa generations smarta funktioner, som AI/ML, inifrån ett system som alltid är aktuellt, alltid tillgängligt och alltid håller på att lära sig.
+AEM Assets as a Cloud Service är en molnbaserad, PaaS-lösning för företag som inte bara arbetar med Digital Asset Management och Dynamic Media, utan även använder nästa generations smarta funktioner, som AI/ML. Allt från ett system som alltid är aktuellt, alltid tillgängligt och alltid är tillgängligt.
 
 Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får ut mesta möjliga av era digitala resurser. Adobe Experience Manager Assets har två separata upplevelser som använder samma molntjänstdatabas för att passa era behov. Mer information om personliga upplevelser för AEM Assets finns i [Tillgängliga personbaserade upplevelser för hantering av digitala resurser](#persona-based-experiences).
 
@@ -30,11 +30,11 @@ Några av de viktigaste funktionerna i Adobe Digital Asset Management:
 
 Använd bulkimportfunktionen för att importera ett stort antal resurser direkt från en datakälla, till exempel Azure, AWS, Google Cloud, Dropbox och OneDrive, till Assets as a Cloud Service.
 
-Du kan utföra massimportåtgärden i administrationsvyn eller vyn Assets. I Assets-vyn finns fler alternativ för datakällor jämfört med i administrationsvyn.
+Du kan utföra massimportåtgärden i administrationsvyn eller Assets-vyn. I Assets-vyn finns fler alternativ för datakällor jämfört med i administrationsvyn.
 
-Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
+Förutom webbläsarens användargränssnitt har Experience Manager stöd för andra klienter på datorn. De kan också ladda upp direkt från webbläsaren.
 
-* Adobe Asset Link ger åtkomst till material från Experience Manager i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till Experience Manager direkt från Adobe Asset Link-användargränssnittet från dessa datorprogram.
+* Adobe Asset Link ger åtkomst till material från Experience Manager i Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till Experience Manager. Du kan göra det direkt via Adobe Asset Link-gränssnittet som finns i de här datorprogrammen.
 
 * Experience Manager datorprogram gör det enklare att arbeta med resurser på datorn, oberoende av filtyp eller vilket program som hanterar dem. Det är användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
@@ -57,11 +57,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/using">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started">
    <img alt="Använd AEM datorprogram" src="./assets/desktop-app-upload.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/using">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started">
       <strong> Använda AEM-datorprogrammet </strong>
       </a>
    </div>
@@ -70,11 +70,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
    </p>
 </td>
 <td>
-   <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+   <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
    <img alt="Använd Adobe Asset Link" src="./assets/adobe-asset-link.jpeg" />
    </a>
    <div>
-      <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+      <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
       <strong> Använd Adobe Asset Link </strong>
       </a>
    </div>
@@ -88,9 +88,9 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 **Smarta taggar**: Smarta taggar använder det artificiellt intelligenta ramverket i Adobe Sensei för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Som standard lägger AEM automatiskt till smarta taggar i överförda resurser.
 
-**Intelligent färgbaserad taggning och sökning**: AEM Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och tillämpa dem automatiskt som taggar vid förtäring. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
+**Intelligent färgbaserad taggning och sökning**: AEM Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och tillämpa dessa egenskaper som taggar automatiskt vid förtäring. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
 
-**AI-genererade metadata**: AEM Assets använder AI för att automatiskt generera metadata, inklusive rubrik, beskrivning och nyckelord. Dessa AI-genererade fält gör metadata mer korrekta, vilket gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll.
+**AI-genererade metadata**: AEM Assets använder AI för att generera metadata automatiskt, inklusive rubrik, beskrivning och nyckelord. Dessa AI-genererade fält gör metadata mer korrekta, vilket gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll.
 
 **Byt namn på flera resurser i grupp**: [I Assets-vyn kan du byta namn på flera resurser samtidigt med hjälp av artificiell intelligens](/help/assets/bulk-rename-assets-view.md). Du kan markera flera filer samtidigt och döpa om dem alla samtidigt. Några av de exempel som visas när du byter namn på konversationer är *Ändra alla filer till &#39;min fil&#39; och lägg till ett ökande nummer* och *Prefix för filerna med 001, 002 osv. och översätt till engelska*.
 
@@ -138,11 +138,14 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 </td>
 </table>
 
-**Sammanhangsbaserad sökning**: I AEM Assets kan du söka efter resurser som är tillgängliga i databasen genom att definiera textmeddelanden. Experience Manager Assets omvandlar automatiskt dessa textmeddelanden till sökfilter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare. Några av exemplen på konversationstextprompter är *Bilder som är minst 200 pixlar höga och 100 pixlar breda med strand och klar himmel* och *Jag behöver bilder med blå himmel som är 1 500 och 2 500 pixlar höga och som har skapats den senaste månaden och som inte har gått ut och godkänts*.
+**Sammanhangsbaserad sökning**: Med AEM Assets kan du söka efter resurser i databasen genom att definiera textmeddelanden. Experience Manager Assets omvandlar automatiskt textuppmaningarna för att söka efter filter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare. Några av exemplen på konversationstextprompter är följande:
 
-**Generera resurser med Adobe Firefly i AEM**: Med AEM Assets kan du generera en resurs om sökfrågan inte returnerar några resultat, med Adobe Firefly i realtid. AEM Assets gör det även möjligt att överföra den genererade bilden till AEM Assets-databasen från AEM Assets användargränssnitt.
+* *Bilder som är minst 200px höga och 100px breda med strand och klar himmel* och
+* *Jag behöver bilder med blå himmel som är 1 500 och 2 500 pixlar höga och som har skapats den senaste månaden och som inte har gått ut och godkänts*.
 
-**Integrering med Adobe Express**: AEM Assets kan integreras direkt med Adobe Express, vilket gör att du kan komma åt resurser som lagras i AEM Assets direkt från Adobe Express användargränssnitt. Du kan också använda Adobe Firefly Artificial Intelligence i Express för att generera bilder med enkla textmeddelanden och placera dem på Express Canvas. Du kan sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
+**Generera resurser med Adobe Firefly i AEM**: Med AEM Assets kan du generera en resurs om sökfrågan inte returnerar några resultat, med Adobe Firefly i realtid. Sedan kan du ladda upp den genererade bilden till AEM Assets-databasen från AEM Assets användargränssnitt.
+
+**Integrering med Adobe Express**: AEM Assets kan integreras med Adobe Express, vilket gör att du kan komma åt resurser som lagras direkt i AEM Assets inifrån Adobe Express användargränssnitt. Du kan också använda Adobe Firefly Artificial Intelligence i Express för att generera bilder med enkla textmeddelanden och placera dem på Express Canvas. Du kan sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
 
 <table>
 <td>
@@ -190,7 +193,7 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 **Smart Imaging**: Smart Imaging ger ännu bättre prestanda för leverans av bildresurser genom att automatiskt optimera en bilds format och filstorlek baserat på en kunds webbläsarkapacitet. Det fungerar med befintliga bildförinställningar och använder intelligens vid leverans. Den här intelligensen minskar bildfilens storlek ytterligare baserat på webbläsarens och nätverkets anslutningshastighet.
 
-**Smart beskärning**: En Adobe Sensei AI-funktion som automatiskt identifierar fokalpunkten i en bild eller video och beskär för att behålla den. Den fångar upp den avsedda intressepunkten oavsett skärmstorlek och eliminerar därmed långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla enheter och skärmar.
+**Smart beskärning**: En Adobe Sensei AI-funktion, som identifierar fokalpunkten automatiskt i alla bilder och videoklipp, och beskär för att behålla den. Den fångar upp den avsedda intressepunkten oavsett skärmstorlek och eliminerar därmed långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla enheter och skärmar.
 
 **AI-genererade videobeskrivningar**: AI-genererade videobeskrivningar i Adobe Dynamic Media använder artificiell intelligens för att generera bildtexter automatiskt för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter. Bildtexter genereras från det ursprungliga ljudet, eventuella ytterligare ljudspår eller extra bildtexter finns på fliken `Captions and Audio` på sidan med videoegenskaper. Med stöd för över 60 språk kan bildtexter granskas och förhandsgranskas innan videon publiceras.
 <table>
@@ -210,16 +213,16 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use.html">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
    <img alt="Smart beskärning" src="./assets/smart-cropping.jpg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use.html">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
       <strong> Smart beskärning </strong>
       </a>
    </div>
    <p>
-      <em>Använd AI för att automatiskt identifiera brännpunkten i bilder och videoklipp och beskär för att behålla den</em>
+      <em>Använd AI för att identifiera fokalpunkten automatiskt i alla bilder och videoklipp, och beskär för att behålla den</em>
    </p>
 </td>
 <td>
@@ -232,7 +235,7 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
       </a>
    </div>
    <p>
-      <em>Använd artificiell intelligens för att generera bildtexter automatiskt för videoinnehåll. </em>
+      <em>Använd artificiell intelligens för att automatiskt generera bildtexter för videoinnehåll. </em>
    </p>
 </td>
 </table>
@@ -243,7 +246,7 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 När du har importerat dina mediefiler till AEM Assets är det en utmaning att snabbt hitta rätt mediefiler från en sådan stor samling.
 
-AEM Assets har funktioner som gör det enklare att hitta rätt resurs på nolltid, t.ex. AI-genererad taggning (smarta taggar), anpassade metadata och funktioner som ger en bättre sökupplevelse.
+AEM Assets innehåller funktioner som hjälper dig att snabbt hitta rätt resurs. Bland dessa funktioner finns AI-genererad taggning (smarta taggar), anpassade metadata och förbättrade sökfunktioner.
 
 **Metadatahantering**: Metadata är den viktigaste aspekten när du startar resurshanteringsresan. Administratörerna får inte längre kontroll över metadatahanteringen när resurserna distribueras till användarna. Effektiva metadata säkerställer bättre sökning, vilket är det ultimata målet för alla DAM-verktyg.
 
@@ -298,7 +301,7 @@ AEM Assets har funktioner som gör det enklare att hitta rätt resurs på nollti
 
 **Sök efter resurser**: När du har rätt metadata på plats kan du söka med olika operatorer, jokertecken, avancerade frågor och anpassade filter i AEM Assets.
 
-**Sammanhangsbaserad sökning**: AEM Assets tillhandahåller också funktionen Sammanhangsbaserad sökning, som gör att du kan söka efter resurser i databasen genom att definiera textmeddelanden. Experience Manager Assets omvandlar automatiskt dessa textmeddelanden till sökfilter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare.
+**Sammanhangsbaserad sökning**: AEM Assets tillhandahåller också funktionen Sammanhangsbaserad sökning, som gör att du kan söka efter resurser i databasen genom att definiera textmeddelanden. Experience Manager Assets omvandlar automatiskt textuppmaningarna för att söka efter filter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare.
 
 <table>
 <td>
@@ -326,7 +329,7 @@ AEM Assets har funktioner som gör det enklare att hitta rätt resurs på nollti
       </a>
    </div>
    <p>
-      <em>Lär dig hur du effektivt använder kontextuell sökning och andra sökfunktioner i Assets-vyn.</em>
+      <em>Lär dig hur du använder sammanhangsbaserad sökning effektivt och andra sökfunktioner i Assets-vyn.</em>
    </p>
 </td>
 <td>
@@ -339,7 +342,7 @@ AEM Assets har funktioner som gör det enklare att hitta rätt resurs på nollti
       </a>
    </div>
    <p>
-      <em>Beskriver olika scenarier som hjälper AEM-användare att utföra grundläggande till avancerad sökning.</em>
+      <em>Lär dig mer om olika scenarier som hjälper AEM-användare att utföra grundläggande till avancerad sökning.</em>
    </p>
 </td>
 </table>
@@ -354,7 +357,7 @@ När du har överfört dina resurser till AEM Assets och angett metadata för de
 
 Du kan också underhålla resursversioner, ange resursstatus och ange förfallodatum för tillgångar.
 
-**Min Workspace**: Assets-vyn innehåller även en anpassningsbar arbetsyta som ger smidig åtkomst till viktiga delar av Assets användargränssnitt och den information som är mest relevant för dig. Den här sidan är en helhetslösning som ger en översikt över dina arbetsobjekt och ger snabb åtkomst till viktiga arbetsflöden.
+**Min Workspace**: Assets-vyn innehåller även en anpassningsbar arbetsyta med widgetar. Dessa widgetar ger smidig åtkomst till viktiga delar av Assets användargränssnitt och den information som är relevant för dig. Den här sidan är en helhetslösning som ger en översikt över dina arbetsobjekt och ger snabb åtkomst till viktiga arbetsflöden.
 
 **Content Credentials**: En annan kraftfull funktion som AEM Assets stöder är Content Credentials. Varumärken är mer oroade än någonsin över innehållets transparens, AI-exponering och förhindrande av manipulering av tillgångar. Content Authenticity Initiative (CAI) på Adobe bygger verktyg som är kompatibla med den tekniska standarden Coalition for Content Provenance and Authenticity (C2PA). Content Credentials, som är en ny typ av krypterade, manipuleringssäkra metadata, kan hjälpa tittarna att förstå innehållet och säkerställa varumärkesmaterialets integritet. De kan innehålla ett brett urval av härkomstdata som ger insikter i en digital resursers historia.
 
@@ -384,7 +387,7 @@ Du kan också underhålla resursversioner, ange resursstatus och ange förfallod
       </a>
    </div>
    <p>
-      <em>Lär dig hur du arbetar med Min Workspace för att snabbt komma åt nyckelområden i Assets användargränssnitt.</em>
+      <em>Lär dig hur du snabbt kommer åt nyckelområden i Assets användargränssnitt med My Workspace.</em>
    </p>
 </td>
 <td>
@@ -462,9 +465,9 @@ AEM Assets kan integreras smidigt med olika Adobe- och andra program än Adobe. 
 
 +++**Integrering med Adobe och andra program än Adobe**
 
-* **Dynamiska media med OpenAPI-funktioner**: [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) erbjuder en omfattande uppsättning API:er för [sökning](/help/assets/search-assets-api.md) och [leverans](/help/assets/deliver-assets-apis.md). Det gör att utvecklarna enkelt kan integrera leverans av resurser med sina program. Programmen innehåller både Adobe och tredjepartsprogram. Det har ett användargränssnitt för resursväljare i Micro FrontEnd som gör att du kan söka efter och välja godkända resurser. Väljaren kan enkelt integreras med alla program som är baserade på JavaScript ramverk som React JS, Angular JS och Vanilla JS.
+* **Dynamiska media med OpenAPI-funktioner**: [Dynamiska media med OpenAPI-funktioner](/help/assets/dynamic-media-open-apis-overview.md) erbjuder en omfattande uppsättning API:er för [sökning](/help/assets/search-assets-api.md) och [leverans](/help/assets/deliver-assets-apis.md). Det gör att utvecklarna enkelt kan integrera materialleveransen med sina applikationer. Programmen innehåller både Adobe och tredjepartsprogram. Det har ett användargränssnitt för resursväljare i Micro FrontEnd som gör att du kan söka efter och välja godkända resurser. Väljaren kan enkelt integreras med alla program som är baserade på JavaScript ramverk som React JS, Angular JS och Vanilla JS.
 
-* **Micro-Frontend Asset Selector**: Micro-Frontend Asset Selector har ett användargränssnitt som enkelt kan integreras med Experience Manager Assets-databasen så att du kan bläddra bland eller söka efter digitala resurser som är tillgängliga i databasen och använda dem i programutvecklingen.
+* **Micro-FrontEnd Asset Selector**: Micro-FrontEnd Asset Selector har ett användargränssnitt som är integrerat med Experience Manager Assets-databasen så att du kan bläddra bland eller söka efter digitala resurser som finns i databasen. Du kan sedan använda dem när du redigerar program.
 Du kan integrera resursväljaren med ett Adobe- eller ett program som inte kommer från Adobe.
 
 <table>
@@ -478,7 +481,7 @@ Du kan integrera resursväljaren med ett Adobe- eller ett program som inte komme
       </a>
    </div>
    <p>
-      <em>Lär dig viktiga fördelar och hur du aktiverar det. </em>
+      <em>Lär dig viktiga fördelar och hur du aktiverar dem. </em>
    </p>
 </td>
 
@@ -517,13 +520,13 @@ Du kan integrera resursväljaren med ett Adobe- eller ett program som inte komme
 
 * **Integrering med Adobe Workfront**: [!DNL Adobe Workfront] är ett arbetshanteringsprogram som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
-  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations.html?lang=sv-SE).
+  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations).
 
-* **Integrering med Figma**: AEM Assets kan integreras direkt med Figma, vilket gör att designers kan komma åt de resurser som lagras i AEM Assets direkt från Figma-användargränssnittet. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan i Figma och sedan spara nytt eller redigerat innehåll i AEM Assets-databasen. Klicka [här](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) om du vill få åtkomst till AEM Assets Connector på Figma Community-sidan.
+* **Integrering med Figma**: AEM Assets kan integreras direkt med Figma, vilket gör att designers kan komma åt resurser som lagras direkt i AEM Assets inifrån Figma-användargränssnittet. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan i Figma och sedan spara nytt eller redigerat innehåll i AEM Assets-databasen. Klicka [här](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) om du vill få åtkomst till AEM Assets Connector på Figma Community-sidan.
 
-* **Inbyggd integrering med Adobe Express**: AEM Assets kan integreras med Adobe Express, vilket gör att du kan komma åt resurser som lagras i AEM Assets direkt från Adobe Express användargränssnitt. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
+* **Inbyggd integrering med Adobe Express**: AEM Assets kan integreras med Adobe Express, vilket gör att du kan komma åt resurser som lagras direkt i AEM Assets inifrån Adobe Express användargränssnitt. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan Express och sedan spara nytt eller redigerat innehåll i en AEM Assets-databas.
 
-* **Anslut AEM Assets till Creative Cloud**: Experience Manager Assets kan ansluta till ett Creative Cloud-berättigande som har etablerats till en annan IMS-organisation för att enkelt kunna använda de senaste Creative Cloud-integreringarna i AEM Assets, inklusive Express och Creative Cloud Libraries. Om era Creative Cloud-produkter och AEM Assets är avsedda för olika IMS-organisationer kan ni ansluta till en annan Creative Cloud-organisation för att kunna genomföra integrerade arbetsflöden mellan de två lösningarna.
+* **Anslut AEM Assets till Creative Cloud**: Experience Manager Assets kan ansluta till ett Creative Cloud-berättigande som har etablerats i en annan IMS-organisation. Med denna möjlighet kan ni använda de senaste Creative Cloud-integreringarna i AEM Assets, inklusive Express och Creative Cloud Libraries. Om era Creative Cloud-produkter och AEM Assets är avsedda för olika IMS-organisationer kan ni ansluta till en annan Creative Cloud-organisation för att kunna genomföra integrerade arbetsflöden mellan de två lösningarna.
 
 <table>
 <td>
@@ -573,21 +576,21 @@ Du kan integrera resursväljaren med ett Adobe- eller ett program som inte komme
 * **Integrering med Adobe Journey Optimizer**: Sammanför arbetsflöden för marknadsföring och kreativitet med Adobe Experience Manager Assets. Inbyggt i Adobe Journey Optimizer ger du tillgång till Assets as a Cloud Service där du kan lagra, hantera, upptäcka och distribuera digitalt material. Det utgör en central databas med resurser som du kan använda för att fylla i dina meddelanden.
 
 * **Integrering med Commerce**: Adobe Experience Manager (AEM) Assets Integration för Commerce kombinerar de robusta funktionerna i AEM som ett DAM-system (Digital Asset Management) med Adobe Commerce för att förbättra e-handelsupplevelsen. Dessa funktioner levereras genom att man kopplar ihop Commerce-projekt med AEM kraftfulla resurshanteringsmiljö för att erbjuda ett smidigt, skalbart och effektivt sätt att hantera och leverera material i butiker.
-* **Integrera AEM Assets med dokumentbaserade redigeringsflöden för Edge Delivery Services**: När [!DNL AEM Assets] integreras med dokumentbaserade redigeringsverktyg som [!DNL Microsoft Word] eller [!DNL Google Docs] innehåller det en resursväljare i utvecklingsverktyget. Använd den här resursväljaren för att komma åt [!DNL AEM Assets] och infoga godkända resurser i ditt innehåll.
+* **Integrera AEM Assets med dokumentbaserade redigeringsflöden för Edge Delivery Services**: När [!DNL AEM Assets] integreras med dokumentbaserade redigeringsverktyg som [!DNL Microsoft Word] eller [!DNL Google Docs] innehåller det en resursväljare i ditt redigeringsverktyg. Använd den här resursväljaren för att komma åt [!DNL AEM Assets] och infoga godkända resurser i ditt innehåll.
 Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL AEM Assets] plugin](https://github.com/adobe-rnd/aem-assets-plugin/blob/main/README.md)-dokumentationen och lära dig hur du integrerar [!DNL AEM Assets] med ditt befintliga [!DNL AEM]-projekt.
 
 * **Integrerar [!DNL AEM Assets] med [!DNL Universal Editor]-baserade redigeringsflöden för[!DNL Edge Delivery Services]**: Konfigurera [!DNL Universal Editor] för integrering med [!DNL AEM Assets]. Med den här integreringen kan du använda [!DNL Dynamic Media with OpenAPI capabilities] för att leverera resurser.
 
    * Mer information om hur du lägger till en anpassad resursväljarfunktion i [ finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
-   * Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill veta hur du får åtkomst till [!DNL AEM Assets] och infogar resurserna när du redigerar i [!DNL Universal Editor].
+   * Läs [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill veta hur du får åtkomst till [!DNL AEM Assets] och infogar resurserna när du redigerar i [!DNL Universal Editor].
 
 <table>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+   <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
    <img alt="Integrering med Adobe Journey Optimizer" src="./assets/integration-figma.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+      <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
       <strong>Integrering med Adobe Journey Optimizer</strong>
       </a>
    </div>
@@ -596,11 +599,11 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/aem-asset-management/aem-assets-integration">
+   <a href="https://experienceleague.adobe.com/en/docs/commerce/aem-assets-integration/overview">
    <img alt="Integrering med Commerce" src="./assets/integration-ajo.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/aem-asset-management/aem-assets-integration">
+      <a href="https://experienceleague.adobe.com/en/docs/commerce/aem-assets-integration/overview">
       <strong>Integrering med Commerce</strong>
       </a>
    </div>
@@ -769,17 +772,17 @@ Dynamic Media med OpenAPI-funktioner sätter DAM i centrum för ett flexibelt oc
 
 Dynamic Media med OpenAPI-funktioner ger följande viktiga fördelar:
 
-* **Smidiga integreringar**: Dynamiska medier med OpenAPI-funktioner erbjuder en omfattande uppsättning API:er för sökning och leverans. Det gör att utvecklarna enkelt kan [integrera leverans av resurser med sina program](/help/assets/integrate-dynamic-media-open-apis.md). Programmen innehåller både Adobe och tredjepartsprogram. Det har ett [användargränssnitt för resursväljare i Microsoft FrontEnd](/help/assets/overview-asset-selector.md) för att söka efter och välja godkända resurser. Väljaren kan enkelt integreras med alla program som är baserade på JavaScript ramverk som React JS, Angular JS och Vanilla JS.
+* **Smidiga integreringar**: Dynamiska medier med OpenAPI-funktioner erbjuder en omfattande uppsättning API:er för sökning och leverans. Det gör att utvecklarna enkelt kan [integrera leveransen av resurser med sina program](/help/assets/integrate-dynamic-media-open-apis.md). Programmen innehåller både Adobe och tredjepartsprogram. Det har ett [användargränssnitt för resursväljare i Microsoft FrontEnd](/help/assets/overview-asset-selector.md) för att söka efter och välja godkända resurser. Väljaren kan enkelt integreras med alla program som är baserade på JavaScript ramverk som React JS, Angular JS och Vanilla JS.
 
 * **Centraliserad hantering av digitala resurser**: DAM är den enda källan till sanning för alla digitala resurser. Dina digitala resurser hanteras centralt i AEM Assets och levereras till de förbrukande programmen via referens via leverans-URL:er, utan att du behöver kopiera resurbinärfiler.
 
 * **Realtidsuppdateringar**: Alla ändringar som görs i godkända resurser i DAM, inklusive versionsuppdateringar och metadataändringar, återspeglas automatiskt i leverans-URL:erna. Med ett kort TTL-värde (Time-to-Live) på 10 minuter konfigurerat för Dynamic Media med OpenAPI-funktioner via CDN blir uppdateringarna synliga i alla redigerings- och publiceringsgränssnitt på mindre än 10 minuter.
 
-* **Varumärkeskonsekvens**: Endast [varumärkesgodkända resurser](/help/assets/approve-assets.md) exponeras för program längre fram i kedjan. [Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkesresurser](/help/assets/restrict-assets-delivery.md). Det är bara en godkänd och den senaste versionen av resursen som är tillgänglig för användning, vilket garanterar ett enhetligt varumärke i alla kanaler och tillämpningar.
+* **Varumärkeskonsekvens**: Endast [varumärkesgodkända resurser](/help/assets/approve-assets.md) exponeras för program längre fram i kedjan. [Varumärkesansvariga och marknadsförare har strikt kontroll över varumärkesresurser](/help/assets/restrict-assets-delivery.md). Det är bara den godkända och senaste versionen av mediefilen som är tillgänglig för användning, vilket säkerställer att alla kanaler och tillämpningar har ett enhetligt varumärke.
 
-* **Webboptimerad leverans**: Digitala resurser levereras i webboptimerade format för att förbättra de digitala upplevelsernas Core Web Vitals. Detta inkluderar stöd för WebP-återgivningar för bilder, adaptiv direktuppspelning via HLS- eller DASH-protokoll för videor samt ursprungliga återgivningar för dokument.
+* **Webboptimerad leverans**: Digitala resurser levereras i webboptimerade format för att förbättra de digitala upplevelsernas Core Web Vitals. Optimeringen inkluderar stöd för WebP-renderingar för bilder, adaptiv direktuppspelning via HLS- eller DASH-protokoll för videor och originalrenderingar för dokument.
 
-* **Dynamisk resursomformning**: I vårt system går det att göra bildomformningar direkt med URL-parametrar som kallas bildmodifierare. [Till exempel bredd, höjd, rotering, vänd, kvalitet, beskärning, format och smart beskärning](/help/assets/deliver-assets-apis.md). Omformade renderingar genereras dynamiskt och levereras smidigt via CDN.
+* **Dynamisk resursomformning**: Systemet tillåter snabb bildomformning med URL-parametrar som kallas bildmodifierare. [Till exempel bredd, höjd, rotering, vänd, kvalitet, beskärning, format och smart beskärning](/help/assets/deliver-assets-apis.md). Omformade renderingar genereras dynamiskt och levereras smidigt via CDN.
 
 * **Säker leverans av resurser**: Dynamiska media med OpenAPI-funktioner ger en mekanism för kontroll över åtkomsten till dina digitala resurser. Du kan ange användarroller eller användargrupper som metadata för att skydda resurser och ange en fördefinierad tidsram under vilken [endast behöriga användare kan komma åt dessa resurser](/help/assets/restrict-assets-delivery.md). Leverans-URL:erna för skyddade tillgångar kan inte matchas för obehöriga användare under den begränsade perioden.
 
@@ -796,7 +799,7 @@ Information om tillgängliga Dynamic Media-erbjudanden finns i [Dynamic Media Pr
       </a>
    </div>
    <p>
-      <em>Lär dig viktiga fördelar och hur du aktiverar det. </em>
+      <em>Lär dig viktiga fördelar och hur du aktiverar dem. </em>
    </p>
 </td>
 
@@ -835,7 +838,7 @@ Information om tillgängliga Dynamic Media-erbjudanden finns i [Dynamic Media Pr
 
 ## Resursinsikter {#asset-insights}
 
-Med tillgångsrapportering kan administratörer se vilka aktiviteter Adobe Experience Manager Assets View-miljön har. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare har tillgång till Insikter-kontrollpanelen och de som har tilldelats administratörens produktprofil kan skapa användardefinierade rapporter.
+Med tillgångsrapportering kan administratörer se vilka aktiviteter Adobe Experience Manager Assets View-miljön har. Dessa data ger användbar information om hur användarna interagerar med innehållet och produkten. Alla användare har tillgång till kontrollpanelen Insights och de som är tilldelade administratörens produktprofil kan skapa användardefinierade rapporter.
 
 Du kan generera olika typer av rapporter, som Överför, Hämta och Dynamic Media-leverans.
 
@@ -871,7 +874,7 @@ Du kan generera olika typer av rapporter, som Överför, Hämta och Dynamic Medi
       </a>
    </div>
    <p>
-      <em>Lär dig hur du hanterar Adobe Analytics integrerade rapporter i administratörsvyn.</em>
+      <em>Lär dig hur du hanterar Adobe Analytics integrerade rapporter i administrationsvyn.</em>
    </p>
 </td>
 <td>
@@ -901,8 +904,12 @@ Adobe erbjuder robusta DAM-lösningar (Digital Asset Management) så att ni får
 
 ![add-tags](assets/newui-overview.svg)
 
-Användare som har åtkomst till administrationsvyn har även åtkomst till vyn Assets. Assets View har ett förenklat användargränssnitt som gör det enkelt att hantera, upptäcka och distribuera digitala resurser. Ett stort antal användare från olika funktioner, inklusive kreatörer, marknadsförare och branschgrupper, kan samarbeta om resurser och få tillgång till rätt, godkänt material när och var de behöver det. Många tillfälliga DAM-användare föredrar Assets-vyn eftersom den bara innehåller en delmängd av funktioner. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
+Användare som har åtkomst till administrationsvyn har även åtkomst till vyn Assets. Assets View har ett förenklat användargränssnitt som gör det enkelt att hantera, identifiera och distribuera digitala resurser. Ett stort antal användare från olika funktioner, inklusive kreatörer, marknadsförare och branschgrupper, kan samarbeta om resurser och få tillgång till rätt, godkänt material när och var de behöver det. Många tillfälliga DAM-användare föredrar Assets-vyn eftersom den bara innehåller en delmängd av funktioner. Upplevelsen riktar sig till kreatörer, skrivskyddade mediekonsumenter och användare med mindre vikt-DAM.
 
 DAM-bibliotek, utvecklare och superanvändare kan fortsätta att använda administrationsvyn eller växla mellan användargränssnitten efter behov. Du kan välja den upplevelse som fungerar bäst för din roll.
 
-Mer information om hur du kommer åt vyn Assets och vissa av de förenklingar som den erbjuder via administratörsvyn finns i [Introduktion till vyn Assets](/help/assets/assets-view-introduction.md).
+Mer information om hur du kommer åt vyn Assets och vissa av de förenklingar som den erbjuder via administrationsvyn finns i [Introduktion till vyn Assets](/help/assets/assets-view-introduction.md).
+
+## AI Assistant i AEM
+
+För kunder som har [uppfyllt villkoren](/help/implementing/cloud-manager/ai-assistant-in-aem.md#get-access) är AI Assistant i AEM tillgängligt för användare i organisationen. Se [AI-assistenten i AEM](/help/implementing/cloud-manager/ai-assistant-in-aem.md).

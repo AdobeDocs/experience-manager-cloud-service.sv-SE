@@ -7,9 +7,9 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 feature: Adaptive Forms, Foundation Components
 exl-id: 16f86dae-86fb-481b-8978-b8898705ed7e
 role: User, Developer
-source-git-commit: b5340c23f0a2496f0528530bdd072871f0d70d62
+source-git-commit: 4c42888af1e846c011242af2c328e553bb811cfd
 workflow-type: tm+mt
-source-wordcount: '2453'
+source-wordcount: '2481'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-forms-authoring.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-forms-authoring.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -70,7 +70,7 @@ När du skapar eller redigerar ett befintligt adaptivt formulär använder du f�
 
 Med sidofältet
 
-* Sök, visa och använd resurser i din AEM DAM-databas (Digital Asset Management).
+* Sök, visa och använd resurser i AEM Digital Asset Management (DAM).
 * Se formulärinnehåll som paneler, komponenter, fält och layout.
 * Lägg till komponenter i formuläret.
 * Redigera komponentegenskaper.
@@ -116,8 +116,8 @@ Du kan dra och släppa formulärmodellelement i det adaptiva formuläret. De til
    <th><strong>Funktionalitet</strong></th>
   </tr>
   <tr>
-   <td>Adobe Sign Block</td>
-   <td>Lägger till ett textblock med platshållare för fält som ska fyllas i när du signerar med Adobe Sign.</td>
+   <td>Adobe Sign-block</td>
+   <td>Lägger till ett textblock med platshållare för fält som ska fyllas i vid signering med Adobe Sign.</td>
   </tr>
   <tr>
    <td>Knapp</td>
@@ -157,11 +157,11 @@ Du kan dra och släppa formulärmodellelement i det adaptiva formuläret. De til
   </tr>
   <tr>
    <td>E-post</td>
-   <td><p>Lägger till ett fält för att hämta e-postadressen. E-postkomponenten validerar som standard e-postadresser med följande reguljära uttryck.</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_&grave;{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
+   <td><p>Lägger till ett fält för att hämta e-postadressen. E-postkomponenten validerar som standard e-postadresser med följande reguljära uttryck.</p> <p><code>^[a-zA-Z0-9.!#$%&amp;'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$</code></p> </td>
   </tr>
   <tr>
    <td>Bifogad fil</td>
-   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten för bifogad fil har stöd för en fördefinierad uppsättning filformat i Adaptive Forms aktiverat för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/se/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat som stöds</a>.</p> </td>
+   <td><p>Lägger till en knapp som gör att användare kan bläddra bland och bifoga stöddokument till ett formulär.</p> <p><strong>Obs! </strong>Komponenten för bifogad fil har stöd för en fördefinierad uppsättning filformat i Adaptive Forms aktiverat för Adobe Sign. Mer information finns i <a href="https://helpx.adobe.com/document-cloud/help/supported-file-formats-fill-sign.html#main-pars_text">Filformat som stöds</a>.</p> </td>
   </tr>
   <tr>
    <td>Lista över bifogade filer</td>
@@ -363,6 +363,10 @@ Innehållsstrukturen innehåller vanligtvis följande primära komponenter:
 * **verktygsfält:** En behållare för anpassat formulär har ett associerat globalt verktygsfält som är globalt för formuläret. Det här verktygsfältet kan läggas till med åtgärden **[!UICONTROL Add Toolbar]** i redigeringsfältet, som gör att författare kan lägga till åtgärder som Skicka, Spara, Återställ och så vidare.
 
 * **resurser:** Den här noden innehåller ytterligare information som används för formulärredigering. Exempel: formulärmodellinformation, lokaliseringsinformation osv.
+
+## AI Assistant i AEM
+
+För kunder som har [uppfyllt villkoren](/help/implementing/cloud-manager/ai-assistant-in-aem.md#get-access) är AI Assistant i AEM tillgängligt för användare i organisationen. Se [AI-assistenten i AEM](/help/implementing/cloud-manager/ai-assistant-in-aem.md).
 
 ## Se även {#see-also}
 
