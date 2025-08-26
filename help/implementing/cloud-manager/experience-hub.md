@@ -5,10 +5,10 @@ landing-page-description: Läs om Adobe Experience Hub, en central startpunkt f�
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-hide: true
-hidefromtoc: true
+hide: false
+hidefromtoc: false
 exl-id: a1b0eed7-b74c-4e72-8399-c473bbda9245
-source-git-commit: 4c42888af1e846c011242af2c328e553bb811cfd
+source-git-commit: a9fb3838feb17fa9ead35f432e4937ee01f500b7
 workflow-type: tm+mt
 source-wordcount: '590'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/implementing/cloud-manager/assets/experience-cloud-experiencemanager.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Första gången du öppnar den klickar du på önskat alternativ på sidan **Berätta för oss vad du vill göra** så att Adobe kan skräddarsy din upplevelse.
 
    Du kan ändra den här inställningen när som helst.
