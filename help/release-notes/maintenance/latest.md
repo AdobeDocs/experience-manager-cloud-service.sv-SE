@@ -4,7 +4,7 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 90e92cfb15a6dfe5a8a474996f52c8a0c689f5e6
+source-git-commit: 3067e88f8adea50f6b6b05e0466974bc57bc4a4e
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21994, som offentliggjordes den 19 augusti 2025. Den tidigare underhållsversionen var version 21772.
 
-Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Nya funktioner  {#new-features-21994}
 
@@ -33,7 +33,7 @@ Ingen.
 * GRANITE-60183: Apache Commons-fileupload 1.6.0.
 * GRANITE-60306: Apache Commons-lang to 3.18.0.
 * GRANITE-60637: Apache Commons-codec to 1.19.0.
-* GRANITE-60645: Apache commons-ui 2.20.0.
+* GRANITE-60645: Apache Commons-io 2.20.0.
 * GRANITE-60663: Apache Commons-text 1.14.0.
 * GRANITE-60714: Mongo Java Driver 5.2.
 * GRANITE-60778: Filevault 4.0.0.
@@ -60,7 +60,7 @@ Ingen.
 * GUIDES-11227: Om du kopierar en DITA-karta från Assets-gränssnittet kopieras även den kopplade baslinjen till den nya kartan.
 * GUIDES-31506: Hemsidan blir tom när en av filerna som listas i widgeten Senaste filer är baserad på en mall vars källmall inte innehåller någon miniatyrbild.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-21994}
 
@@ -83,4 +83,4 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.29.0 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
