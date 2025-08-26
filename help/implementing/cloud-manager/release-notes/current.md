@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.8.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: f72f72e87dabe89cafc0a56feb35f58ae1a97dfb
+source-git-commit: 8bd6fd4a7abcfbf37ba8aa458a9d2a035cca050e
 workflow-type: tm+mt
 source-wordcount: '1403'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Nästa planerade version är torsdagen den 4 september 2025.
 
   Från och med 19 augusti 2025 börjar Adobe med en stegvis lansering av nya Experience Hub för alla Adobe Experience Manager-användare.
 
-  Experience Hub är en enhetlig startpunkt som levererar personaliserade, sammanhangsbaserade upplevelser som hjälper användarna att nå målen snabbare. Lanseringen är slutförd den 26 augusti 2025 och gör den tillgänglig för alla användare. Den nya Experience Hub-versionen är tillgänglig direkt på [experience.adobe.com](https://experience.adobe.com/). Mer information finns i [Adobe Experience Hub](/help/implementing/cloud-manager/experience-hub.md).
+  Experience Hub är en enhetlig startpunkt som levererar personaliserade, sammanhangsbaserade upplevelser som hjälper användarna att nå målen snabbare. Lanseringen är slutförd den 26 augusti 2025 och gör den tillgänglig för alla användare. Den nya Experience Hub-versionen är tillgänglig direkt på [experience.adobe.com](https://experience.adobe.com/). Mer information finns i [Adobe Experience Hub](/help/experience-hub.md).
 
 * **Edge Delivery Services-licens kan inkluderas i ett HIPAA-program på ett självbetjäningssätt**
 
@@ -54,7 +54,7 @@ Nästa planerade version är torsdagen den 4 september 2025.
 
      ![Forms-tillägg i lösningar och tillägg när du skapar ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-creating-production-program.png) *När du skapar ett program kan du välja Forms-tillägget i webbplatslösningen.*
 
-     ![Forms-tillägg vid redigering av ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-editing-production-program.png) *I **Redigera program**&#x200B;väljer du Forms-tillägg för Sites-programmet och kör sedan pipeline för att aktivera det i miljöerna.*
+     ![Forms-tillägg vid redigering av ett produktionsprogram](/help/implementing/cloud-manager/release-notes/assets/forms-add-on-editing-production-program.png) *I **Redigera program**väljer du Forms-tillägg för Sites-programmet och kör sedan pipeline för att aktivera det i miljöerna.*
 
      Mer information finns i [Skapa ett produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
 
@@ -68,13 +68,13 @@ Följande möjligheter är för närvarande tillgängliga:
 
 Återgå snabbt till en tidigare distribution om den senaste kundkällkoden inte fungerar som förväntat - du behöver inte köra om hela pipelinen eller återställa implementeringar manuellt.<!--https://jira.corp.adobe.com/browse/CMGR-69556 -->
 
-![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**&#x200B;för en vald miljö.*
+![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**för en vald miljö.*
 
 ![Återställ föregående dialogruta för koddistribution](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed-dialogbox.png)
-*I dialogrutan **Återställ tidigare kod som distribuerats**&#x200B;granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
+*I dialogrutan **Återställ tidigare kod som distribuerats**granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
 
 ![Återställer aktiveringen](/help/implementing/cloud-manager/release-notes/assets/restoring-previous-code-deployed-restoring.png)
-*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**&#x200B;tills distributionen är klar.*
+*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**tills distributionen är klar.*
 
 ![Source-kodversionen används](/help/implementing/cloud-manager/release-notes/assets/environments-view-details-sourcecodeversion.png) *Vyn Miljöinformation, som visas ovan, visar nu även den aktiva källkodsversionen som används.*
 
