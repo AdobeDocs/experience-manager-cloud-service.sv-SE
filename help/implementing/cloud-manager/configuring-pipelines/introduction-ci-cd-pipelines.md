@@ -6,9 +6,9 @@ exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 7a370ee0ab77046d128ae260af2575d50e655254
+source-git-commit: d065397b874cc24fb7af53e1258520f3e8270c55
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ En icke-produktionspipeline används främst för att köra kodkvalitetssökning
 
 Rörledningar kan också skilja sig åt beroende på vilken typ av kod de distribuerar, förutom i produktions- och icke-produktionsmiljöer.
 
-* **[Fullspaltig rörledning](#full-stack-pipeline)** - Distribuera samtidigt kodbyggen i bakände och i framände som innehåller ett eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer.
+* **[Fullspaltig rörledning](#full-stack-pipeline)** - Distribuera samtidigt kodbyggen i bakände och framände som innehåller ett eller flera AEM-serverprogram tillsammans med HTTPD/Dispatcher-konfigurationer.
 * **[Konfigurera pipelines](#config-deployment-pipeline)** - Du kan snabbt distribuera konfigurationer för funktioner som vidarebefordran av loggar och tömningsrelaterade underhållsaktiviteter. Det innehåller även olika CDN-konfigurationer (Content Delivery Network), till exempel trafikfilterregler, inklusive WAF-regler (Web Application Firewall). Dessutom kan du hantera begäran- och svarsomvandlingar, ursprungsväljare, klientomdirigeringar, felsidor, CDN-nycklar, rensnings-API-nycklar och grundläggande autentisering. Mer information finns i [Använd konfigurationspipelines](/help/operations/config-pipeline.md).
 * **[Framtidspipelines](#front-end)** - Distribuera frontkodsbyggen som innehåller ett eller flera klientprogram.
 * **[Dirigeringspipelines för webbskiktskonfiguration](#web-tier-config-pipelines)** - Distribuerar HTTPD/Dispatcher-konfigurationer.
@@ -68,7 +68,7 @@ I följande tabell sammanfattas de rörledningar som är tillgängliga i Cloud M
 
 | Typ av pipeline | Driftsättnings- eller kodkvalitet | Source code | Syfte | Anteckningar |
 | --- | --- | --- | --- | ---|
-| Produktion eller icke-produktion | Distribution | Fullhög | Distribuerar samtidigt kodbyggen för baksidan och framsidan tillsammans med HTTPD/Dispatcher-konfigurationer | Används när serverkod måste distribueras samtidigt med AEM kod. Används när rörledningar i frontendänden eller konfigurationsledningar i webbskiktet ännu inte har antagits. |
+| Produktion eller icke-produktion | Distribution | Fullhög | Distribuerar samtidigt kodbyggen för baksidan och framsidan tillsammans med HTTPD/Dispatcher-konfigurationer | Används när serverdelskoden måste distribueras samtidigt med AEM serverkod. Används när rörledningar i frontendänden eller konfigurationsledningar i webbskiktet ännu inte har antagits. |
 | Produktion eller icke-produktion | Distribution | Front-end | Distribuerar frontkodbygge som innehåller ett eller flera gränssnittsprogram på klientsidan | Stöder flera samtidiga frontendledningar<br>mycket snabbare än fullstacksdistributioner. |
 | Produktion eller icke-produktion | Distribution | Webbnivåkonfiguration | Distribuerar HTTPD/Dispatcher-konfigurationer | Distribuerar på några minuter |
 | Produktion eller icke-produktion | Distribution | Konfig | Distribuerar [konfiguration för ett antal funktioner ](/help/operations/config-pipeline.md) som är relaterade till CDN, vidarebefordring av loggar och tömningsunderhåll | Distribuerar på några minuter |
@@ -82,7 +82,7 @@ I följande diagram visas Cloud Manager pipeline-konfigurationer med traditionel
 
 ## Rörledningar i fullhög {#full-stack-pipeline}
 
-I rörledningar i fullhög distribueras back-end-kod, front-end-kod och webbskiktskonfigurationer till AEM samtidigt.
+I rörledningar i fullhög distribueras backend-kod, front end-kod och webbskiktskonfigurationer till AEM-miljön samtidigt.
 
 * Back-End-kod - oföränderligt innehåll som Java-kod, OSGi-konfigurationer, återanvisning och ändringsbart innehåll
 * Front-End-kod - användargränssnittsresurser som JavaScript, CSS, teckensnitt
@@ -90,7 +90,7 @@ I rörledningar i fullhög distribueras back-end-kod, front-end-kod och webbskik
 
 Pipelinen i full hög representerar en rörledning i &#39;uber&#39;. Den hanterar allt samtidigt, samtidigt som användarna kan driftsätta sin klientkod eller Dispatcher-konfigurationer separat. Distributionen sker via pipeline i frontend-läge respektive via konfigurationspipelines på webbnivå.
 
-Framåtslutningskod för paket (JavaScript/CSS) i full stapel som [AEM klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
+Framåtkod (JavaScript/CSS) för paket med fullständigt pipelines som [AEM-klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
 
 I pipelines med fullständig stapel kan webbnivåkonfigurationer distribueras om en [pipeline för webbnivåkonfiguration](#web-tier-config-pipelines) inte har konfigurerats.
 
@@ -102,7 +102,7 @@ Följande begränsningar gäller.
 Tänk dessutom på hur pipelinen i en hel hög fungerar om du väljer att introducera en [konfigurationspipeline för webbskikt](#web-tier-config-pipelines).
 
 * I helstacksflödet för en miljö ignoreras Dispatcher-konfigurationen om motsvarande konfigurationsflöde för webbnivån finns.
-* Om motsvarande konfigurationsflöde för webbskiktet för miljön inte finns kan användaren konfigurera pipelinen för helhög som innehåller eller ignorerar Dispatcher-konfigurationen.
+* Om motsvarande konfigurationsflöde för webbskiktet för miljön inte finns kan användaren konfigurera pipelinen för hela stacken så att den innehåller eller ignorerar Dispatcher-konfigurationen.
 
 Fullspaltig rörledning kan vara pipelines med kodkvalitet eller driftsättning.
 
@@ -124,7 +124,7 @@ Se [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/con
 
 ## Förloppsledningar {#front-end}
 
-Front-end-kod är kod som används som statiska filer. Den är skild från gränssnittskod som hanteras av AEM och kan innehålla webbplatsteman, kunddefinierade SPA, SPA och andra lösningar.
+Front-end-kod är kod som används som statiska filer. Den är skild från användargränssnittskod som hanteras av AEM och kan innehålla webbplatsteman, kunddefinierade SPA, SPA och andra lösningar.
 
 Med rörledningar kan era team effektivisera design- och utvecklingsprocessen genom att möjliggöra snabbare driftsättning av frontkodslayout, asynkron backend-utveckling. Detta dedikerade tillvägagångssätt distribuerar JavaScript och CSS till AEM distributionslager som ett tema, vilket resulterar i en ny temaversion, som kan refereras från sidor som levereras av AEM.
 
@@ -138,7 +138,7 @@ Frontrörledningar kan vara pipelines med kodkvalitet eller distributionsrörled
 
 ### Innan du konfigurerar frontendpipelines {#before-start}
 
-Innan du konfigurerar rörledningar för frontend bör du gå igenom [AEM snabbregistreringsresan](/help/journey-sites/quick-site/overview.md) för att få en komplett guide med hjälp av det lättanvända AEM snabbplatsverktyget. Med den här resan kan du effektivisera utvecklingen på frontend och snabbt anpassa webbplatsen utan kunskaper om AEM.
+Innan du konfigurerar rörledningar för frontend bör du gå igenom [AEM Quick Site Creation Journey](/help/journey-sites/quick-site/overview.md) för att få en komplett guide med hjälp av det lättanvända verktyget AEM Quick Site Creation. Med den här resan kan du effektivisera utvecklingen på frontend och snabbt anpassa webbplatsen utan kunskaper om AEM.
 
 ### Konfigurera en frontendpipeline {#configure-front-end}
 
@@ -153,7 +153,7 @@ Se [Utveckla webbplatser med frontendpipeline](/help/implementing/developing/int
 
 ## Konfigurationspipelines på webbnivå {#web-tier-config-pipelines}
 
-Med konfigurationspipelines på webbnivå kan du exklusiv distribution av HTTPD/Dispatcher-konfiguration till AEM, vilket frigör den från andra kodändringar. Det är en smidig pipeline som ger användare som bara vill driftsätta konfigurationsändringar från Dispatcher, ett snabbare sätt att göra det på bara några minuter.
+Med konfigurationspipelines på webbnivå kan du exklusiv distribution av HTTPD/Dispatcher-konfiguration till AEM-miljön, vilket frigör den från andra kodändringar. Det är en smidig pipeline som ger användare som bara vill driftsätta konfigurationsändringar från Dispatcher, ett snabbare sätt att göra det på bara några minuter.
 
 >[!TIP]
 >
