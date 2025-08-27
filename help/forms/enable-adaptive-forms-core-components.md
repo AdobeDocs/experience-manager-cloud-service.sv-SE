@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Adaptiva Forms Core-komponenter och Headless Adaptive Forms är redan aktiverade för de flesta AEM Forms as a Cloud Service-kunder. På så sätt kan du skapa, publicera och leverera Core Components-baserade Adaptive Forms och Headless Forms med AEM Forms Cloud Service-instanser i flera kanaler.
@@ -333,7 +333,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
 
    När paketet har skapats finns det i [Git-databasmappen]\all\target\[appid].all-[version].zip
 
-1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmappen]\all\target\[appid].all-[version].zip-paketet på den lokala utvecklingsmiljön.
+1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE) för att distribuera [AEM Archetype-projektmappen]\all\target\[appid].all-[version].zip-paketet på den lokala utvecklingsmiljön.
 
 
 ### Skapa och driftsätt uppdaterad kod i en AEM Forms as a Cloud Service-miljö {#core-components-on-aem-forms-cs}
@@ -349,7 +349,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
     git push origin
    ```
 
-1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) när filerna har implementerats i Git-databasen.
+1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE) när filerna har implementerats i Git-databasen.
 
    När pipeline-körningen har slutförts aktiveras adaptiva Forms Core-komponenter för motsvarande miljö. Dessutom har en adaptiv Forms-mall (Core Components) och Canvas 3.0-temat lagts till i din Forms as a Cloud Service-miljö, med alternativ för att anpassa och skapa Core Components-baserade Adaptive Forms.
 
@@ -359,7 +359,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
 
 ### Vad är kärnkomponenter? {#core-components}
 
-[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 ### Vilka funktioner finns det för att aktivera kärnkomponenter? {#core-components-capabilities}
 
@@ -368,7 +368,7 @@ När de adaptiva Forms Core-komponenterna är aktiverade för din miljö läggs 
 * [Skapa grundkomponenter baserade på adaptiv Forms](/help/forms/creating-adaptive-form-core-components.md).
 * [Skapa kärnkomponentbaserade adaptiva formulärmallar](/help/forms/template-editor.md).
 * [Skapa anpassade teman för grundkomponentbaserade adaptiva formulärmallar](/help/forms/using-themes-in-core-components.md).
-* [Servera Core Component-baserade adaptive Form-baserade JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver ett formulärs rubrikfria representation](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html).
+* [Servera Core Component-baserade adaptive Form-baserade JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver ett formulärs rubrikfria representation](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE).
 
 ### Hur vet jag om jag behöver aktivera adaptiva Forms Core-komponenter manuellt? {#manual-enablement-needed-faq}
 
