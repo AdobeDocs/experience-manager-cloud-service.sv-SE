@@ -4,9 +4,9 @@ description: Läs mer om Operational Telemetry, en automatiserad tjänst som gö
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 8be0a9894bb5b3a138c0ec40a437d6c8e4bc7e25
+source-git-commit: 41d9fd628eec8ce757447bed13d50211e71785de
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Operativ telemetri hjälper kunder och Adobe att förstå hur slutanvändarna in
 
 ## Datainsamling för telemetritjänsten {#operational-telemetry-service-data-sampling}
 
-Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. AEM telemetritjänst hämtar endast information från en liten del av sidvyerna. Tjänsten är avsedd att samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna 1:100 samplingsförhållande. Webbplatsoperatorer kan för närvarande inte öka eller minska samplingsfrekvensen. För att beräkna den totala trafiken korrekt samlas data in från 1 för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.
+Traditionella webbanalyslösningar försöker samla in data om varje enskild besökare. AEM telemetritjänst hämtar endast information från en liten del av sidvyerna. Tjänsten är avsedd att samplas och anonymiseras i stället för att ersättas för analyser. Som standard har sidorna en samplingsproportion på 1:100. Webbplatsoperatorer kan för närvarande inte öka eller minska samplingsfrekvensen. För att beräkna den totala trafiken korrekt samlas data in från 1 för varje 100 sidvy, vilket ger en tillförlitlig uppskattning av den totala trafiken.
 
 När man beslutar om uppgifterna ska samlas in, görs det i sidvy per sida och det blir praktiskt taget omöjligt att spåra interaktioner mellan flera sidor. Operativ telemetri har som design inget koncept för besökare eller sessioner, utan bara för sidvisningar.
 
@@ -42,7 +42,7 @@ Den operativa telemetritjänsten är utformad för att minimera datainsamling. D
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttypen och det operativsystem som används för att visa sidan, till exempel: `desktop:windows` eller `mobile:ios`
 * Tidpunkten för datainsamlingen, till exempel: `2021-06-26 06:00:02.596000 UTC (in order to preserve privacy, we round all minutes to the previous hour, so that only seconds and milliseconds are tracked)`
-* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs?lang=sv-SE`
+* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs`
 * Referens-URL (URL:en för sidan som länkade till den aktuella sidan, om användaren följde en länk)
 * Ett slumpmässigt genererat ID för sidvyn i ett format som liknar: `2Ac6`
 * Samplingsfrekvensen, t.ex. `100`, har samma vikt eller inverterad. Det betyder att bara en av hundra sidvisningar spelas in
@@ -93,7 +93,7 @@ Here are key considerations for customers to keep in mind when interpreting thei
 
 1. **Sökvägen `/.rum` blockeras på min webbplats, hur ska jag åtgärda den?**
 
-   Sökvägen `/.rum` krävs för att telemetrisamlingen ska fungera. Om du använder ett CDN framför Adobe AEM as a Cloud Service kontrollerar du att sökvägen `/.rum` går till samma AEM-ursprung som ditt andra AEM-innehåll. Och se till att den inte justeras på något sätt.
+   Sökvägen `/.rum` krävs för att telemetrisamlingen ska fungera. Om du använder ett CDN framför Adobe AEM as a Cloud Service kontrollerar du att sökvägen `/.rum` går till samma AEM-ursprung som ditt andra AEM-innehåll. Och se till att den inte justeras på något sätt. Du kan också ändra värden som ska användas för Operational Telemetry till `rum.hlx.page` genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_EXTERNAL` på värdet `true`. Om du vill ändra tillbaka till samma domänbegäran vid ett senare tillfälle tar du bara bort den systemvariabeln igen.
 
 1. **Räknas operativ telemetrisamling med innehållsförfrågningar för kontraktssyften?**
 
@@ -103,4 +103,4 @@ Here are key considerations for customers to keep in mind when interpreting thei
 
    Adobe rekommenderar att du använder Operational Telemetry på grund av dess stora fördelar och att det kommer att göra det möjligt för Adobe att optimera dina digitala upplevelser genom att förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
 
-   Om du väljer bort detta kan det innebära att du missar en chans att förbättra trafikengagemanget på din webbplats. Om du råkar ut för några problem kontaktar du Adobe Support.
+   Om du väljer bort detta kan det innebära att du missar en chans att förbättra trafikengagemanget på din webbplats. Om du råkar ut för några problem kan du inaktivera Operational Telemetry genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_DISABLED` på värdet `true`. Om du vill aktivera Operational Telemetry igen vid ett senare tillfälle tar du bara bort den miljövariabeln igen.
