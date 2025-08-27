@@ -1,6 +1,6 @@
 ---
-title: Hur aktiverar man adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service och den lokala utvecklingsmiljön?
-description: Lär dig hur du aktiverar adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service.
+title: Kontrollera och aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service
+description: Lär dig hur du kontrollerar om adaptiva Forms Core-komponenter är aktiverade och hur du aktiverar dem vid behov i AEM Forms as a Cloud Service.
 contentOwner: Khushwant Singh
 docset: CloudService
 role: Admin, Developer, User
@@ -8,34 +8,66 @@ feature: Adaptive Forms, Core Components
 exl-id: 32a574e2-faa9-4724-a833-1e4c584582cf
 hide: true
 hidefromtoc: true
-source-git-commit: 0845447c1c4f47b77debd179f24eac95a0d2c2db
+source-git-commit: 3c1931d67e69d155e777c8761fe2bbbd21461ddf
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1235'
 ht-degree: 0%
 
 ---
 
-# Aktivera adaptiva Forms Core-komponenter {#enable-headless-adaptive-forms-on-aem-forms-cloud-service}
+# Kontrollera och aktivera adaptiva Forms Core-komponenter {#enable-headless-adaptive-forms-on-aem-forms-cloud-service}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Genom att aktivera adaptiva Forms Core-komponenter i AEM Forms as a Cloud Service kan du börja skapa, publicera och leverera Core Components-baserade adaptiva Forms och Headless Forms med hjälp av AEM Forms Cloud Service-instanser i flera kanaler. Du behöver en adaptiv Forms Core Components-aktiverad miljö för att kunna använda Headless Adaptive Forms.
+Adaptiva Forms Core-komponenter och Headless Adaptive Forms är redan aktiverade för de flesta AEM Forms as a Cloud Service-kunder. På så sätt kan du skapa, publicera och leverera Core Components-baserade Adaptive Forms och Headless Forms med AEM Forms Cloud Service-instanser i flera kanaler.
 
-## Överväganden
+## Kontrollera om adaptiva Forms Core-komponenter är aktiverade {#check-if-enabled}
 
-* När du skapar ett nytt AEM Forms as a Cloud Service-program är [Adaptiva Forms Core-komponenter och Headless Adaptive Forms redan aktiverade för din miljö](#are-adaptive-forms-core-components-enabled-for-my-environment).
+Innan du följer några aktiveringssteg ska du kontrollera om adaptiva Forms Core-komponenter redan är aktiverade för din miljö:
 
-* Om du har ett äldre Forms as a Cloud Service-program där Core Components [inte är aktiverade](#enable-components) kan du [lägga till adaptiva Forms Core Components-beroenden](#enable-headless-adaptive-forms-for-an-aem-forms-as-a-cloud-service-environment) i din AEM as a Cloud Service-databas och distribuera databasen till dina Cloud Service-miljöer för att aktivera Headless Adaptive Forms.
+### För nya AEM Forms as a Cloud Service-program
 
-* Om din befintliga Cloud Service-miljö innehåller alternativ för att [skapa Core Components-baserade Adaptive Forms](creating-adaptive-form-core-components.md) är Adaptive Forms Core Components och Headless Adaptive Forms redan aktiverade för din miljö, och du kan använda Core Component-baserad Adaptive Forms som headless-formulär för kanaler som mobil, webb, inbyggda appar och tjänster som kräver en headless representation av Adaptive Forms.
+När du skapar ett nytt AEM Forms as a Cloud Service-program är adaptiva Forms Core-komponenter och Headless Adaptive Forms redan aktiverade för din miljö.
 
-## Aktivera adaptiva Forms Core-komponenter och Headless Adaptive Forms {#enable-headless-forms}
+### För Cloud Service befintliga miljöer
 
-Utför följande steg i listad ordning för att aktivera adaptiva Forms Core-komponenter och Headless Adaptive Forms för en AEM Forms as a Cloud Service-miljö
+Om din befintliga Cloud Service-miljö innehåller alternativet att [skapa Core Components-baserade Adaptive Forms](creating-adaptive-form-core-components.md) är adaptiva Forms Core-komponenter och Headless Adaptive Forms redan aktiverade för din miljö.
 
+### Verifiera genom att kontrollera din databas
+
+Så här bekräftar du att adaptiva Forms Core-komponenter är aktiverade för din miljö:
+
+1. Klona AEM Forms as a Cloud Service-arkivet.
+
+1. Öppna `[AEM Repository Folder]/all/pom.xml`-filen för din AEM Forms Cloud Service Git-databas.
+
+1. Sök efter följande beroenden:
+
+   * core-forms-components-af-core
+   * core-forms-components-core
+   * core-forms-components-apps
+   * core-forms-components-af-apps
+   * core-forms-components-examples-apps
+   * core-forms-components-examples-content
+
+   ![leta reda på artefakten core-forms-components-af-core i all/pom.xml](/help/forms/assets/enable-headless-adaptive-forms-on-aem-forms-cloud-service-locate-core-af-artifact.png)
+
+   Om det finns sådana beroenden aktiveras adaptiva Forms Core-komponenter för din miljö.
+
+## När manuell aktivering krävs {#when-manual-enablement-needed}
+
+Endast om du har ett äldre Forms as a Cloud Service-program där kärnkomponenter inte är aktiverade (bekräftas av kryssrutan ovan) måste du manuellt lägga till adaptiva Forms Core-komponentberoenden i din AEM as a Cloud Service-databas och distribuera databasen till dina Cloud Service-miljöer.
+
++++ Manuella aktiveringssteg 
+
+>[!WARNING]
+>
+>Följ bara de här stegen om verifieringskontrollen ovan bekräftar att adaptiva Forms Core-komponenter INTE är aktiverade för din miljö.
+
+Utför följande steg i listad ordning för att aktivera adaptiva Forms Core-komponenter och Headless Adaptive Forms för en AEM Forms as a Cloud Service-miljö:
 
 ![Aktivera kärnkomponenter och dynamiska adaptiva formulär](/help/forms/assets/enable-headless-adaptive-forms-on-aem-forms-cloud-service.png)
 
@@ -301,7 +333,7 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
 
    När paketet har skapats finns det i [Git-databasmappen]\all\target\[appid].all-[version].zip
 
-1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE) för att distribuera [AEM Archetype-projektmappen]\all\target\[appid].all-[version].zip-paketet på den lokala utvecklingsmiljön.
+1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmappen]\all\target\[appid].all-[version].zip-paketet på den lokala utvecklingsmiljön.
 
 
 ### Skapa och driftsätt uppdaterad kod i en AEM Forms as a Cloud Service-miljö {#core-components-on-aem-forms-cs}
@@ -317,16 +349,17 @@ Distribuera den uppdaterade koden till din lokala utveckling och Cloud Service-m
     git push origin
    ```
 
-1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE) när filerna har implementerats i Git-databasen.
+1. [Kör pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) när filerna har implementerats i Git-databasen.
 
    När pipeline-körningen har slutförts aktiveras adaptiva Forms Core-komponenter för motsvarande miljö. Dessutom har en adaptiv Forms-mall (Core Components) och Canvas 3.0-temat lagts till i din Forms as a Cloud Service-miljö, med alternativ för att anpassa och skapa Core Components-baserade Adaptive Forms.
 
++++
 
 ## Vanliga frågor {#faq}
 
 ### Vad är kärnkomponenter? {#core-components}
 
-[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 ### Vilka funktioner finns det för att aktivera kärnkomponenter? {#core-components-capabilities}
 
@@ -335,28 +368,16 @@ När de adaptiva Forms Core-komponenterna är aktiverade för din miljö läggs 
 * [Skapa grundkomponenter baserade på adaptiv Forms](/help/forms/creating-adaptive-form-core-components.md).
 * [Skapa kärnkomponentbaserade adaptiva formulärmallar](/help/forms/template-editor.md).
 * [Skapa anpassade teman för grundkomponentbaserade adaptiva formulärmallar](/help/forms/using-themes-in-core-components.md).
-* [Servera Core Component-baserade adaptive Form-baserade JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver ett formulärs rubrikfria representation](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE).
+* [Servera Core Component-baserade adaptive Form-baserade JSON-representationer för kanaler som mobiler, webben, inbyggda appar och tjänster som kräver ett formulärs rubrikfria representation](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html).
 
-### Är adaptiva Forms Core-komponenter aktiverade för min miljö? {#enable-components}
+### Hur vet jag om jag behöver aktivera adaptiva Forms Core-komponenter manuellt? {#manual-enablement-needed-faq}
 
-Så här kontrollerar du att adaptiva Forms Core-komponenter är aktiverade för din miljö:
+De flesta kunder har redan aktiverat adaptiva Forms Core-komponenter. Du behöver bara aktivera dem manuellt om:
 
-1. [Klona din AEM Forms as a Cloud Service-databas](#1-clone-your-aem-forms-as-a-cloud-service-git-repository).
+1. Du har ett äldre Forms as a Cloud Service-program som skapats innan Core Components inkluderades automatiskt
+1. Verifieringskontrollen i avsnittet [Kontrollera om adaptiva Forms Core-komponenter är aktiverade](#check-if-enabled) bekräftar att nödvändiga beroenden saknas i din databas
 
-1. Öppna `[AEM Repository Folder]/all/pom.xml`-filen för din AEM Forms Cloud Service Git-databas.
-
-1. Sök efter följande beroenden:
-
-   * core-forms-components-af-core
-   * core-forms-components-core
-   * core-forms-components-apps
-   * core-forms-components-af-apps
-   * core-forms-components-examples-apps
-   * core-forms-components-examples-content
-
-   ![leta reda på artefakten core-forms-components-af-core i all/pom.xml](/help/forms/assets/enable-headless-adaptive-forms-on-aem-forms-cloud-service-locate-core-af-artifact.png)
-
-   Om det finns beroenden aktiveras adaptiva Forms Core-komponenter för din miljö.
+Om du är osäker följer du verifieringsstegen i avsnittet [Kontrollera om adaptiva Forms Core-komponenter är aktiverade](#check-if-enabled) ovan.
 
 ### Varför kan inte kärnkomponentbaserade formulär återges i projekt?
 
