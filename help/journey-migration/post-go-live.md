@@ -20,7 +20,7 @@ ht-degree: 5%
 >title="Troubleshooting AEM"
 >abstract="Review best practices for continuous development and management of logs. Learn about tools like Developer Console and CRXDE Lite to help with troubleshooting issues with AEM."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs" text="Accessing and Managing Logs"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service Development tools"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service Development tools"
 
 -->
 
@@ -65,9 +65,9 @@ Mer information om hur du får åtkomst till och hanterar loggar finns i [Åtkom
 >id="aemcloud_golive_support"
 >title="Hjälp och support"
 >abstract="Kontakta Adobe AEM Support-team för att få klargöranden eller för att ta itu med eventuella problem."
->additional-url="https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html" text="Stöd för Experience Cloud"
+>additional-url="https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html" text="Stöd för Experience Cloud"
 
-Om du har frågor om Cloud Service kontaktar du Adobe eller [Support för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information.
+Om du har frågor om Cloud Service kontaktar du Adobe eller [Support för Experience Cloud](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information.
 
 ## Dokumentinlärning {#document-learnings}
 
