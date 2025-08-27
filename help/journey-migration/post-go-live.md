@@ -4,21 +4,25 @@ description: Lär dig hur du övervakar problem och förbättrar prestanda.
 exl-id: 487f0b51-501b-48fc-a796-3cb8a6d64462
 feature: Migration
 role: Admin
-source-git-commit: bb2688701b80a560ea9078c2b7b6594ff55ce824
+source-git-commit: f3cd1bc761c513ebb85351185e7aa0b6f6eb6f33
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 4%
+source-wordcount: '417'
+ht-degree: 5%
 
 ---
 
 # Post GoLive {#post-go-live}
 
+<!-- Alexandru: contextual help links are broken, temporarily comminting this out until they,re fixed.
+
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_troubleshooting"
->title="Felsökning av AEM"
->abstract="Granska metodtips för kontinuerlig utveckling och hantering av loggar. Läs om verktyg som Developer Console och CRXDE Lite som hjälper dig att felsöka problem med AEM."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs" text="Åtkomst till och hantering av loggar"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
+>title="Troubleshooting AEM"
+>abstract="Review best practices for continuous development and management of logs. Learn about tools like Developer Console and CRXDE Lite to help with troubleshooting issues with AEM."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs" text="Accessing and Managing Logs"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service Development tools"
+
+-->
 
 Den här resan är den sista delen, så du får lära dig att övervaka problem och förbättra resultatet när migreringen är klar. Se till att tillfälliga filer rensas, granska vedertagna metoder för kontinuerlig utveckling och hantera loggar.
 
@@ -61,9 +65,9 @@ Mer information om hur du får åtkomst till och hanterar loggar finns i [Åtkom
 >id="aemcloud_golive_support"
 >title="Hjälp och support"
 >abstract="Kontakta Adobe AEM Support-team för att få klargöranden eller för att ta itu med eventuella problem."
->additional-url="https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html" text="Stöd för Experience Cloud"
+>additional-url="https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html" text="Stöd för Experience Cloud"
 
-Om du har frågor om Cloud Service kontaktar du Adobe eller [Support för Experience Cloud](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information.
+Om du har frågor om Cloud Service kontaktar du Adobe eller [Support för Experience Cloud](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) om du vill ha mer information.
 
 ## Dokumentinlärning {#document-learnings}
 

@@ -5,9 +5,9 @@ exl-id: 352fae8e-d116-40b0-ba54-d7f001f076e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 593b8c704c5b016bb55ae6a25420b577044b4126
+source-git-commit: f3cd1bc761c513ebb85351185e7aa0b6f6eb6f33
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -17,12 +17,16 @@ ht-degree: 0%
 
 Lär dig hur IP Tillåtelselista kan begränsa från vilka adresser användare kan få åtkomst till domäner i AEM as a Cloud Service.
 
+<!-- Alexandru: contextual help links are broken, temporarily comminting this out until they,re fixed.
+
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_ipallowlist"
->title="Hantera IP-Tillåtelselista"
->abstract="AEM as a Cloud Service är tillgängligt via Internet och skyddas genom användarautentisering och behörighet. Cloud Manager IP Tillåtelselista kan användas för att begränsa och styra åtkomsten enbart till betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan skapa tillåtelselista med betrodda IP-adresser från vilka webbplatsens användare kan komma åt sina AEM-domäner."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists" text="Lägg till en IP-Tillåtelselista"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/managing-ip-allow-lists" text="Visa och uppdatera en IP-Tillåtelselista"
+>title="Manage IP Allow Lists"
+>abstract="AEM as a Cloud Service is accessible by way of the Internet and is secured through user authentication and authorization. Cloud Manager's IP Allow Lists can be used to limit and control access only to trusted IP addresses. Cloud Manager users with appropriate permissions can create allowlists of trusted IP addresses from which their site's users can access their AEM domains."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/add-ip-allow-lists" text="Add an IP Allow List"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/managing-ip-allow-lists" text="View and update an IP Allow List"
+
+-->
 
 ## Ökning {#overview}
 
