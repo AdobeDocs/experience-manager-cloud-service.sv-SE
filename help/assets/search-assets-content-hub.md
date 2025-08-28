@@ -3,16 +3,16 @@ title: Söka efter resurser i Content Hub
 description: Lär dig söka efter resurser i  [!DNL Content Hub]
 role: User
 exl-id: 8578d7d0-32b9-4e5c-80ef-3827e358ac6c
-source-git-commit: a0ca51bdf2cd4ece11e05243713a616e9fcb5850
+source-git-commit: 46c127fd56949281da7211225d25a40c6a867bbb
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
 
 # Sök i Assets i [!DNL Content Hub] {#search-assets}
 
-När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub]-sökningen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, till exempel hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel textbaserad sökning, filter, taggar eller smart taggspecifik sökning, sökning efter ett visst filformat och så vidare.
+När du har ett stort antal resurser i din databas är det tidskrävande att söka efter rätt resurs. [!DNL The Content Hub]-sökningen ger dig möjlighet att söka efter godkända resurser så att du kan utföra ytterligare åtgärder på dem, till exempel hämta, dela eller skapa samlingar. Du kan använda olika funktioner för att begränsa sökresultaten, till exempel utföra textbaserad sökning, använda filter, utföra taggar eller smart taggspecifik sökning, söka efter ett visst filformat och så vidare.
 
 ## Förutsättningar {#prerequisites}
 
@@ -148,6 +148,24 @@ Standardfiltren innehåller filformat, godkänt av, godkänt, förfallet och int
 
 -->
 
+## Masssökning {#bulk-search}
+
+Med masssökning av resurser kan du söka efter flera resurser samtidigt genom att ange en lista med identifierare (till exempel namn, filformat, färger, taggar med mera). I stället för att söka efter resurser en i taget, gör [!DNL Content Hub] en gruppsökning det snabbare att identifiera de resurser du behöver. Med den här funktionen kan du ange flera värden för alla filteregenskaper, avgränsade med en avgränsare (till exempel flera SKU-ID:n), och omedelbart hämta alla matchande resurser med en enda sökning.
+
+Om du vill söka efter flera resurser samtidigt anger du flera värden i en enda fråga genom att separera dem med avgränsarna ` [ , | \t | \r | \n | \r\n ]`. Du kan också lägga till fler avgränsare beroende på hur du använder dem. Se [Konfigurera masssökning](configure-content-hub-ui-options.md#bulk-search-configuration).
+
+Utför följande steg om du vill utföra en gruppsökning i [!DNL Content Hub]:
+
+1. När gruppsökningen är [konfigurerad](configure-content-hub-ui-options.md#bulk-search-configuration) kan du se Aktivera alternativet för gruppsökning på de [!DNL Content Hub] filteregenskaper som du har konfigurerat. Du kan aktivera eller inaktivera den efter behov.
+
+1. Lägg till en sökfråga som innehåller avgränsare som anges i konfigurationen. Sökfrågan ska innehålla en sträng som åtföljs av flera kommaseparerade värden.
+
+![Masssökning, användargränssnitt](assets/bulk-search-ui.png)
+
 ## Gör mer med sökningar {#do-more-with-search}
 
 [!DNL The Content Hub] är inte begränsat till sökning, utan låter dig utföra ytterligare åtgärder, som [download](download-assets-content-hub.md), [share](share-assets-content-hub.md) och [lägga till resurser i samlingen](collections-content-hub.md), direkt från sök- eller förhandsgranskningsgränssnittet. Markera resurserna på sökresultatsidan för att visa dessa alternativ.
+
+Läs mer om hur [konfigurerar resurser i  [!DNL Content Hub]](configure-content-hub-ui-options.md).
+
+

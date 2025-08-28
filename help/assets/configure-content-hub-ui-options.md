@@ -2,9 +2,9 @@
 title: Konfigurera Content Hub användargränssnitt
 description: Konfigurera Content Hub användargränssnitt
 exl-id: e9e22862-9bcd-459a-bcf4-7f376a0b329a
-source-git-commit: e8932e6490008368e0e22ebec3331553b7b54c59
+source-git-commit: 06373e14ff9199d97c03332d95a0d2b024b3220f
 workflow-type: tm+mt
-source-wordcount: '2048'
+source-wordcount: '2120'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Du kan konfigurera metadatafält som visas för användarna när du överför el
 
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
-På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg) , som finns bredvid varje tillgänglig egenskap, om du vill redigera etiketterna, göra dessa fält obligatoriska eller icke-obligatoriska för användare när du överför resurser med hjälp av växlingsknappen **[!UICONTROL Required field]** eller klicka på ikonen Ta bort om du vill ta bort en metadataegenskap.
+På samma sätt kan du klicka på ![redigeringsikonen](assets/do-not-localize/edit_icon.svg) , som är tillgänglig bredvid varje tillgänglig egenskap, om du vill redigera etiketterna, göra dessa fält obligatoriska eller icke-obligatoriska för användare när de överför resurser med hjälp av växlingsknappen **[!UICONTROL Required field]** eller klicka på ikonen Ta bort om du vill ta bort en metadataegenskap.
 
 Klicka på växlingsknappen **[!UICONTROL Auto-approval]** om du vill att alla resurser som du lägger till i Experience Manager Assets-databasen ska godkännas automatiskt så att de är tillgängliga i Content Hub direkt. Annars måste DAM-författare eller -administratörer manuellt godkänna mediefilerna för att göra dem tillgängliga på Content Hub. Växlingsknappen är som standard inställd på Av.
 
@@ -123,6 +123,20 @@ På samma sätt kan du klicka på ikonen ![Redigera](assets/do-not-localize/edit
 
 De filter som är aktiverade i konfigurationsanvändargränssnittet visas på söksidan:
 ![Sök på Content Hub](assets/content-hub-filters1.png)
+
+#### Masssökning {#bulk-search-configuration}
+
+Om du vill aktivera sökning av flera resurser samtidigt i [!DNL Content Hub] ska du utföra följande steg:
+
+1. Klicka på [ i användargränssnittet för ](#access-configuration-options-content-hub)konfigurationer **[!UICONTROL Filters]**.
+
+1. Klicka på ikonen ![Redigera](assets/do-not-localize/edit_icon.svg)som finns bredvid varje tillgängligt filter.
+
+1. Aktivera växlingen **[!UICONTROL Bulk Search]**. Standardavgränsarna `[ , | \t | \r\n | \r | \n ]` visas automatiskt. Dessutom kan du lägga till ytterligare avgränsare. Om du vill göra det anger du avgränsare i indatarutan avgränsade med `pipe symbol (|)`.
+
+   ![Konfiguration för masssökning](assets/bulk-search-configuration.png)
+
+1. Klicka på **[!UICONTROL Confirm]** om du vill spara ändringarna. Se [Masssökning i Content Hub](search-assets-content-hub.md#bulk-search) in action.
 
 ### Resursinformation {#configure-asset-details-content-hub}
 
@@ -248,7 +262,7 @@ Om synligheten för utgångna resurser är aktiverad markeras även resurser som
 
 ### Återgivningar {#renditions-content-hub}
 
-Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
+Återgivningar är anpassade versioner av digitala resurser, som bilder, dokument och så vidare, som utformats för olika enheter och plattformar för att ge optimala prestanda. Se mer om [återgivningar i Adobe Experience Manager Assets](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/renditions).
 
 Gör så här:
 
@@ -312,3 +326,4 @@ Enable the following setting on the Configurations user interface to allow Conte
 -->
 
 Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
+
