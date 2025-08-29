@@ -4,7 +4,7 @@ description: Lär dig hur du får tillgång till Cloud Manager så att du kan ko
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
 feature: Onboarding
-source-git-commit: 841e30bc279a3859ce9a302b18ddf566d8163100
+source-git-commit: 0db48ef4c15b6ca530b2626f7078c7172c872fff
 workflow-type: tm+mt
 source-wordcount: '909'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Innan teammedlemmarna som du tilldelade rollen **Business Owner** kan komma åt 
 
    Återgå till föregående steg, [Tilldela teammedlemmar till Cloud Manager produktprofiler](assign-profiles-cloud-manager.md), om du vill ha mer information om hur du tilldelar systemadministratören rollen **Affärsägare**.
 
-1. Logga in på Cloud Manager på [experience.adobe.com](https://experience.adobe.com/).
+1. Logga in på Cloud Manager på [experience.adobe.com](https://experience.adobe.com).
 1. Klicka på **Experience Manager** i snabbåtkomstgruppen.
 1. Klicka på **Cloud Manager** på den vänstra panelen.
 
