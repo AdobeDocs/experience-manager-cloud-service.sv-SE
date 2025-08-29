@@ -6,7 +6,7 @@ feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 2d2a206fea14d7e786a98e848bc2f2592ac65429
+source-git-commit: 71ea3b810d4145d5581c29e26db9bc157c425a15
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -70,13 +70,10 @@ Båda modellerna kan samexistera inom samma Cloud Manager-program, vilket möjli
 
 ## Förutsättningar {#prerequisites}
 
-1. Anmäl er webbplats i Cloud Manager
-&#x200B;- Krävs för båda distributionsmodellerna. Följ en AEM webbplats.
+1. Anlita din webbplats i Cloud Manager - krävs för båda distributionsmodellerna. Följ en AEM webbplats.
 
-2. Hämta din egen Git (BYOG) (tillval)
-&#x200B;- Om du lagrar webbplatskod utanför Adobe Git, slutför du BYOG-introduktionen.
+2. Hämta din egen Git (BYOG) (tillval) - Om du lagrar webbplatskod utanför Adobe Git, slutför du BYOG-introduktionen.
 
-3. Edge Delivery-licens
-&#x200B;- Kontrollera att programmet har licens för Edge Delivery Services.
+3. Edge Delivery-licens - Kontrollera att ditt program är licensierat för Edge Delivery Services.
 
 
