@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: b09452637fd86af8fc71101f98e05597a8fe630e
+source-git-commit: 39cfcc26181ca651dda8d6f492c588397a865ea4
 workflow-type: tm+mt
-source-wordcount: '2885'
+source-wordcount: '2920'
 ht-degree: 0%
 
 ---
@@ -134,6 +134,18 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
    * Välj antal för att öppna en dialogruta som visar alla språkkopior. Om du vill öppna en viss språkkopia klickar du på **Titel** i dialogrutan.
 
      ![Konsolen för innehållsfragment - dialogrutan Språk](assets/cf-managing-console-languages-dialog.png)
+
+* **Arbetsflöden**
+
+   * Endast information
+
+   * Markera ikonen för ett visst fragment:
+
+     ![Konsolen för innehållsfragment - ikonen för arbetsflöden](assets/cf-managing-console-workflows-icon.png)
+
+     Om du vill öppna en dialogruta med detaljerad information om arbetsflöden (tidigare och aktuella) för fragmentet.:
+
+     ![Konsolen Innehållsfragment - dialogrutan Arbetsflöden](assets/cf-managing-console-workflows-dialog.png)
 
 ## Åtgärder {#actions}
 
