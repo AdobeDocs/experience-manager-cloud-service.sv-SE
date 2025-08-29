@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 8d43f28e62a865b6b990678544e0d9589f17722a
+source-git-commit: 4aecf84672ea60ad9688a974330a62be0a5fde86
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1555'
 ht-degree: 0%
 
 ---
@@ -218,6 +218,10 @@ Skapa en regel i textrutan `Pet ID` för att anropa tjänsten `getPetById`. I **
 Ange `102` i textrutan `Pet ID` och knappen **Skicka** är dold.
 
 ![Utdata](/help/forms/assets/output4.png)
+
+>[!NOTE]
+>
+> Du kan även [integrera API direkt i regelredigerarens gränssnitt](/help/forms/api-integration-in-rule-editor.md) utan att använda en fördefinierad formulärdatamodell.
 
 ## Frågor och svar
 

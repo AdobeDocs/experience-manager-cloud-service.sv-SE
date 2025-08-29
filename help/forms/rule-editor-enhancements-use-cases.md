@@ -4,22 +4,21 @@ description: I den här artikeln utforskas olika användningsexempel för regelr
 feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
-hide: true
-hidefromtoc: true
-source-git-commit: 87650caea6eb907093f0f327f1dbc19641098e4a
+exl-id: 062ed441-6e1f-4279-9542-7c0fedc9b200
+source-git-commit: 85555ebe4bfa41bf01d7c5610fa5760551830b5c
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1975'
 ht-degree: 0%
 
 ---
 
 # Förbättringar och användningsfall i regelredigeraren
 
-<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsutgåva</a>.
+<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
 
 I den här artikeln beskrivs de senaste förbättringarna av regelredigeraren i Adaptive Forms. Uppdateringarna är utformade för att hjälpa er att enklare definiera formulärbeteende utan att behöva skriva anpassad kod, och för att skapa mer dynamiska, responsiva och personaliserade formulärupplevelser.
 
-Tabellen nedan visar de senaste förbättringarna av regelredigeraren i Adaptive Forms, tillsammans med en kort beskrivning och de viktigaste fördelarna med varje funktion.:
+I tabellen nedan visas de senaste förbättringarna av regelredigeraren i Adaptive Forms, tillsammans med en kort beskrivning och de viktigaste fördelarna med varje funktion:
 
 | Förbättring | Beskrivning | Fördelar |
 |---|----|---|
@@ -29,6 +28,10 @@ Tabellen nedan visar de senaste förbättringarna av regelredigeraren i Adaptive
 | **Anpassade händelsebaserade regler** | Definiera regler som svarar på anpassade händelser utöver standardutlösarna. | - Stöder avancerade användningsfall <br> - Bättre kontroll över när och hur regler körs <br> - Förbättrar interaktiviteten |
 | **Kontextmedveten upprepningsbar panelkörning** | Regler körs nu i rätt sammanhang för varje upprepad panel, i stället för bara för den sista instansen. | - Exakt regelprogram för varje upprepad instans <br> - Minskar antalet fel i dynamiska avsnitt <br> - Förbättrar användarupplevelsen med upprepat innehåll |
 | **Stöd för frågesträng, UTM och webbläsarparametrar** | Skapa regler som anpassar formulärbeteenden baserat på URL-parametrar eller webbläsarspecifika värden. | - Aktiverar personalisering baserat på källa eller miljö <br> - användbart för marknadsförings- eller spårningsspecifika flöden <br> - Inget behov av extra skript eller anpassning |
+
+>[!NOTE]
+>
+> Förbättringarna i regelredigeraren gäller även för Edge Delivery Services Forms.
 
 Nu ska vi utforska varje metod i detalj med specifika användningsexempel för att få en förståelse för hur de här funktionerna kan användas för att leverera en personaliserad upplevelse till användarna
 
@@ -89,58 +92,63 @@ Om formuläret är konfigurerat för DoR-generering genereras och hämtas PDF di
 
 ## Stöd för dynamiska variabler i regler
 
-Den förbättrade regelredigeraren har nu stöd för att skapa och använda dynamiska (tillfälliga) variabler. Dessa variabler kan ställas in och hämtas under hela formulärets livscykel med de inbyggda funktionerna **Ange variabelvärde** och **Hämta variabelvärde** .
+Den förbättrade regelredigeraren har stöd för att skapa och använda dynamiska (tillfälliga) variabler. Dessa variabler kan ställas in och hämtas under hela formulärets livscykel med de inbyggda funktionerna **Ange variabelvärde** och **Hämta variabelvärde** .
 Dessa variabler:
 
 * Skickas inte tillsammans med formulärdata.
 * Kan innehålla mellanliggande eller beräknade värden.
 * Kan användas i villkorsstyrd logik och åtgärder.
 
-**Scenario**: Ett e-handelsföretag tillhandahåller ett orderformulär där användarna kan välja en produkt och en leveransmetod. Medan produktpriset hämtas via ett formulärfält bestäms fraktkostnaden dynamiskt baserat på den valda metoden och det valda landet.
+**Scenario**: Med ett onlinebutiksformulär kan användarna välja en produkt, ange kvantitet och välja ett land att leverera. Produktpriset är ett fast värde som hämtas via ett formulärfält, medan fraktkostnaden varierar dynamiskt beroende på vilket land som valts.
 
-För att hålla formulärstrukturen ren och undvika att lägga till dolda fält i onödan, vill företaget hantera fraktkostnaden som ett tillfälligt värde som stöder realtidsberäkning av det totala beloppet.
+För att undvika oreda i formuläret med dolda fält bestämmer man sig för att lagra leveranskostnaden i en temporär variabel och använda den för realtidsberäkningar.
 
 **Implementering med funktionerna Ange variabelvärde och Hämta variabelvärde i regelredigeraren**
 
-En regel har konfigurerats för att ange en temporär variabel med namnet **extracharge** med funktionen **Set Variable Value** . Värdet för den här variabeln beror på det valda landet. Om användaren t.ex. väljer &quot;USA&quot; är värdet 50. För alla andra länder är det inställt på 100.
+En regel har konfigurerats på **Address**-fragmentet med funktionen **Set Variable Value** för att tilldela en temporär variabel med namnet **extracharge**. Värdet för den här variabeln ändras dynamiskt baserat på det valda landet. Till exempel:
+
+* Om användaren väljer USA är **extracharge** inställt på 500.
+* För alla andra länder är **extracharge** inställt på 100.
 
 ![Ange variabelvärde](/help/forms/assets/setvalue.png)
 
-När du senare beräknar den totala leveranskostnaden hämtar funktionen **Hämta variabelvärde** värdet **extraheringsavgift** baserat på det valda landet.
+När sedan **Total leveranskostnad** beräknas används funktionen **Hämta variabelvärde** för att hämta värdet för **extraheringsavgift**. Det här värdet läggs till i **Produktpris × Produktkvantitet** för att beräkna det slutliga beloppet som ska betalas genom att klicka på knappen.
 
 ![Hämta variabelvärde](/help/forms/assets/getvalue.png)
 
-Det här värdet läggs sedan till i produktens leveranskostnad och resultatet visas i fältet **Total leveranskostnad**.
-
+Fältet **Total leveranskostnad** uppdateras dynamiskt för att återspegla både produktkostnaden och fraktkostnaden när användaren ändrar land eller kvantitet.
 ![utdata](/help/forms/assets/getsetvalue-output.png)
 
-Med den här metoden kan du beräkna och visa ytterligare avgifter dynamiskt utan att lagra dem i ett synligt fält, vilket ger en ren, responsiv och kodfri användarupplevelse.
+>[!NOTE]
+>
+> Du kan också lägga till funktionen **Hämta variabelvärde** i villkoret När.
+> > ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
 
+På så sätt kan du göra dynamiska realtidsberäkningar utan att lägga till extra fält i formuläret, vilket gör strukturen ren och användarvänlig.
 
 ## Stöd för anpassade händelsebaserade regler
 
 Den förbättrade regelredigeraren stöder anpassad händelsehantering med funktionerna **Skicka händelse** och **Vid utlösarhändelse**. Dessa funktioner gör att olika delar av formuläret kan kommunicera genom att skicka och lyssna på anpassade händelser, vilket möjliggör en renare, modulär logik utan att knyta åtgärder till specifika fält.
 
-**Scenario**: Ett jobbansökningsformulär är integrerat med ett externt HR-system som utför bakgrundsverifiering. När kontrollen är klar uppdaterar systemet formuläret med **Bakgrundsverifieringen klar!** meddelande. Formuläret måste dynamiskt justera vad sökanden ser utifrån detta resultat.
+**Scenario**: Ett inloggningsformulär skapas med ett återanvändbart inloggningsfragment som innehåller fälten **Ange användarnamn** och **Ange lösenord**. När en användare anger giltiga inloggningsuppgifter validerar formuläret indata och initierar processen **Hämta engångslösenord**. När användaren har angett en giltig engångslösenord omdirigeras de till rätt sida.
 
-I stället för att binda logiken direkt till fältet som får statusen, använder formuläret en anpassad händelsebaserad metod för att förbättra modulariteten och underhållet.
+I stället för att binda logiken direkt till fälten, använder formuläret en händelsebaserad metod med **Dispatch Event** och **On Trigger Event** för att förbättra modulariteten och underhållet.
 
 **Implementering med utsändningshändelse och utlösarhändelse**
 
-När bakgrundskontrollens status uppdateras används **Dispatch Event** för att generera en anpassad händelse som **bgvmsg** tillsammans med statusresultatet. En separat regel lyssnar efter den här händelsen med **Vid utlösarhändelse**.
+Inloggningsfragmentet läggs till i formuläret och innehåller fördefinierade fält för användarnamn och lösenord. En regel har konfigurerats på knappen **Hämta engångslösenord** för att visa **valideringspanelen**, som innehåller indatafältet för att ange och validera engångslösenordet.
 
-Skärmbilderna nedan visar de regler som gäller för&quot;Är bakgrundsverifieringen slutförd?&quot; alternativknappen och textfältet &quot;bgvmsg&quot;.
+![Hämta regel för engångslösenord](/help/forms/assets/get-otp-rule.png)
 
-![skicka händelse](/help/forms/assets/dispatch-event-rule.png)
+I **valideringspanelen** har en regel konfigurerats för knappen Validera. API-integrering används för att validera engångslösenord som anges i fältet **Ange engångslösenord**. Om valideringen lyckas utlöses en **utsändningshändelse** med namnet **LoggedIn** med händelsens nyttolast som innehåller API-svaret.
 
-![vid utlösarhändelse](/help/forms/assets/trigger-event-rule.png)
+![I utlösarhändelseregel](/help/forms/assets/trigger-event-rule.png)
 
-När händelsen identifieras kontrolleras statusen och formuläret uppdateras i enlighet med detta. Till exempel:
+På formulärnivå har en regel konfigurerats att lyssna efter händelsen **LoggedIn**. När den här händelsen utlöses visas omdirigeringsmeddelandet i regeln och användaren dirigeras till kontrollpanelssidan.
 
-* Om bakgrundskontrollen skickas visas ett bekräftelsemeddelande i formuläret.
-* Om ytterligare dokument behövs visas ett avsnitt i formuläret där sökanden uppmanas att överföra den begärda informationen tillsammans med ett varningsmeddelande.
+![skicka händelseregel](/help/forms/assets/dispatch-event-rule.png)
 
-![Skicka händelseutdata](/help/forms/assets/dispatch-trigger-output.png)
+När användaren skickar formuläret med korrekta inloggningsuppgifter och en giltig engångslösenord, slutförs inloggningen och användaren omdirigeras till sin kontrollpanel.
 
 Stöd för anpassade händelser som gör att utvecklare kan skapa och utlösa anpassade händelser som kan användas som villkor i regelredigeraren.
 
@@ -192,3 +200,7 @@ Om parametervärdet **utm_source** är lika med &quot;google&quot; visas ett anp
 På så sätt kan marknadsförarna leverera relevant innehåll till användarna baserat på kampanjen som förde dem till formuläret utan att det krävs manuell fältinmatning eller anpassade skript.
 
 Dessa förbättringar utökar funktionerna i den adaptiva regelredigeraren i Forms och ger utvecklare kraftfulla verktyg för att skapa mer dynamiska, interaktiva och intelligenta formulär. Varje förbättring tillgodoser specifika affärsbehov samtidigt som den är enkel att använda och gör regelredigeraren tillgänglig för både tekniska och icke-tekniska användare.
+
+## Ytterligare resurser
+
+{{see-also-rule-editor}}

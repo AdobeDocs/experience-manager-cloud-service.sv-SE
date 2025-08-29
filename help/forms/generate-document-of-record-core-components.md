@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: 2a780b6d1263fd70be6fc54fcc79282046f82fab
+source-git-commit: 03e46bb43e684a6b7057045cf298f40f9f1fe622
 workflow-type: tm+mt
-source-wordcount: '3099'
+source-wordcount: '3136'
 ht-degree: 0%
 
 ---
@@ -348,7 +348,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Visa endast de markerade värdena för komponenterna Kryssruta och Alternativknapp**: Om du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
       * **Avgränsare för flera värden**: Du kan välja en avgränsare, till exempel komma eller radbrytning, om du vill visa flera värden.
       * **Alternativ Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas i [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Om du ställer in egenskaperna från [!UICONTROL Form Field Properties] i DoR skrivs egenskaperna som angetts i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär över. Om du väljer alternativet [!UICONTROL Same as Aaptive form] används justeringen som konfigurerats i en författarinstans för adaptiva formulär för [!UICONTROL Document of Record]-fält.
-      * **Antal alternativ för vågrät justering**:Du kan ange hur många alternativ som ska visas i postdokumentet för den vågräta justeringen.
+      * **Antal alternativ för vågrät justering**:You kan ange antalet alternativ som ska visas i postdokumentet för den vågräta justeringen.
 
 
 
@@ -415,6 +415,7 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 * **Visa panelen som tabell:** Om egenskapen anges visas panelen som tabell i postdokument om panelen innehåller färre än 6 fält. Gäller endast för panelen.
 * **Exkludera rubrik från postdokument:** Om egenskapen anges exkluderas panelens/tabellens namn från postdokumentet. Gäller endast för panel och tabell.
 * **Uteslut beskrivning från postdokument:** Om egenskapen anges exkluderas beskrivning av panelen/tabellen från postdokument. Gäller endast för panel och tabell.
+* **Uteslut dolda fält från postdokument**: Om du väljer den här egenskapen exkluderas dolda fält från postdokumentet. Det gäller alla formulärfält. Som standard är alternativet **Uteslut dolda fält från postdokument** inte markerat.
 
 **Inställningar på formulärnivå**
 
