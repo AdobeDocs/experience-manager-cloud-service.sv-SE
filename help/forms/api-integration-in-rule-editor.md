@@ -5,13 +5,13 @@ feature: Adaptive Forms, Core Components, Edge Delivery Services
 role: User, Developer
 level: Beginner, Intermediate
 keywords: integrera API i regelredigeraren, anropa tjänstförbättringar
-source-git-commit: 5d25204516cb46334c4d594c16852b033f3e6c90
+exl-id: fc51f86d-e672-4513-b473-6700757a0c3d
+source-git-commit: 80dde7ddaa08d752391b4004d7c93e5baac9716e
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
-
 
 # Integrera API i regelredigeraren
 
@@ -25,7 +25,7 @@ Med Visual Rule Editor kan du dessutom definiera **success** - och **error-hante
 
 >[!NOTE]
 >
-> API-integrering i regelredigeraren gäller även för Edge Delivery Services Forms.
+> API-integrering i regelredigeraren kan även användas för [Edge Delivery Services Forms som har skapats i Universal Editor](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md).
 
 ## Jämförelse: API-integreringsmetoder
 
@@ -76,6 +76,8 @@ Skärmbilden nedan visar konfigurationsfönstret för API-integrering:
    * **Lägg till/ta bort**: Lägg till nya mappningar eller ta bort befintliga.
 
 ## Användningsfall: Fylla i fält för land i en ansökningsblankett för visum
+
+>[!VIDEO](https://video.tv.adobe.com/v/3471606/rule-editor-api-integration/?quality=12&learn=on)
 
 **Scenario**: En myndighet tillhandahåller ett onlineansökningsformulär för Visa med följande fält:
 

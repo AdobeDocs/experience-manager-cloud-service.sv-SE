@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 062ed441-6e1f-4279-9542-7c0fedc9b200
-source-git-commit: 85555ebe4bfa41bf01d7c5610fa5760551830b5c
+source-git-commit: 80dde7ddaa08d752391b4004d7c93e5baac9716e
 workflow-type: tm+mt
 source-wordcount: '1975'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Förbättringar och användningsfall i regelredigeraren
 
-<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
+<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
 
 I den här artikeln beskrivs de senaste förbättringarna av regelredigeraren i Adaptive Forms. Uppdateringarna är utformade för att hjälpa er att enklare definiera formulärbeteende utan att behöva skriva anpassad kod, och för att skapa mer dynamiska, responsiva och personaliserade formulärupplevelser.
 
@@ -105,6 +105,8 @@ För att undvika oreda i formuläret med dolda fält bestämmer man sig för att
 
 **Implementering med funktionerna Ange variabelvärde och Hämta variabelvärde i regelredigeraren**
 
+>[!VIDEO](https://video.tv.adobe.com/v/3471607/get-set-variable-final-video/?quality=12&learn=on)
+
 En regel har konfigurerats på **Address**-fragmentet med funktionen **Set Variable Value** för att tilldela en temporär variabel med namnet **extracharge**. Värdet för den här variabeln ändras dynamiskt baserat på det valda landet. Till exempel:
 
 * Om användaren väljer USA är **extracharge** inställt på 500.
@@ -122,7 +124,7 @@ Fältet **Total leveranskostnad** uppdateras dynamiskt för att återspegla båd
 >[!NOTE]
 >
 > Du kan också lägga till funktionen **Hämta variabelvärde** i villkoret När.
-> &#x200B;> ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
+> > ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
 
 På så sätt kan du göra dynamiska realtidsberäkningar utan att lägga till extra fält i formuläret, vilket gör strukturen ren och användarvänlig.
 
@@ -135,6 +137,9 @@ Den förbättrade regelredigeraren stöder anpassad händelsehantering med funkt
 I stället för att binda logiken direkt till fälten, använder formuläret en händelsebaserad metod med **Dispatch Event** och **On Trigger Event** för att förbättra modulariteten och underhållet.
 
 **Implementering med utsändningshändelse och utlösarhändelse**
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3471610/dispatch-trigger-final/?quality=12&learn=on)
 
 Inloggningsfragmentet läggs till i formuläret och innehåller fördefinierade fält för användarnamn och lösenord. En regel har konfigurerats på knappen **Hämta engångslösenord** för att visa **valideringspanelen**, som innehåller indatafältet för att ange och validera engångslösenordet.
 
