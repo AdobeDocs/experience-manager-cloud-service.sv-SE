@@ -1,12 +1,12 @@
 ---
 title: Använda bibliotek på klientsidan i AEM as a Cloud Service
-description: AEM innehåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
+description: AEM tillhandahåller biblioteksmappar på klientsidan, som gör att du kan lagra klientsidans kod (klientlibs) i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 exl-id: 370db625-09bf-43fb-919d-4699edaac7c8
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: da44719521546e81af60e4f8dd5452d83ff5e1e7
 workflow-type: tm+mt
-source-wordcount: '2497'
+source-wordcount: '2422'
 ht-degree: 0%
 
 ---
@@ -14,12 +14,12 @@ ht-degree: 0%
 
 # Använda bibliotek på klientsidan i AEM as a Cloud Service {#using-client-side-libraries}
 
-Digitala upplevelser är till stor del beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Med AEM-bibliotek (klientbibliotek) kan du ordna och centralt lagra dessa klientbibliotek i databasen. I kombination med [front end-byggprocessen i AEM Project-arkitypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE) blir det enkelt att hantera din front end-kod för ditt AEM.
+Digitala upplevelser är till stor del beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Med AEM Client-Side Libraries (klientbibliotek) kan du ordna och centralt lagra dessa klientbibliotek i databasen. I kombination med [front end-byggprocessen i AEM Project-arkitypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) blir det enkelt att hantera din front end-kod för ditt AEM-projekt.
 
-Fördelarna med att använda klienter i AEM är bland annat:
+Fördelarna med att använda clientlibs i AEM är bland annat:
 
 * Kod på klientsidan lagras i databasen precis som all annan programkod och annat innehåll
-* Med Clientlibs in AEM kan du samla all CSS och JS i en enda fil
+* Clientlibs i AEM kan samla all CSS och JS i en enda fil
 * Visa klientlibs via en sökväg som är tillgänglig via [dispatchern](/help/implementing/dispatcher/disp-overview.md)
 * Tillåter omskrivning av sökvägar för refererade filer eller bilder
 
@@ -27,17 +27,17 @@ Clientlibs är den inbyggda lösningen för CSS och JavaScript från AEM.
 
 >[!TIP]
 >
->Utvecklare som skapar CSS och JavaScript för AEM-projekt bör också bekanta sig med [AEM Project Archetype och dess automatiserade front-end-byggprocess](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE).
+>Utvecklare som skapar CSS- och JavaScript för AEM-projekt bör också bekanta sig med [AEM Project Archetype och dess automatiserade front-end-byggprocess](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
 ## Vad är klientbibliotek? {#what-are-clientlibs}
 
-Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att kunna bearbetas på klientsidan. En klientlib AEM en mekanism för att referera (vid behov per kategori) och betjäna sådana resurser.
+Webbplatser kräver JavaScript och CSS samt statiska resurser som ikoner och webbteckensnitt för att kunna bearbetas på klientsidan. En clientlib är en AEM-mekanism som refererar (vid behov per kategori) till och betjänar sådana resurser.
 
-AEM samlar in webbplatsens CSS och JavaScript i en enda fil, på en central plats, för att säkerställa att endast en kopia av en resurs inkluderas i utdata från HTML. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
+AEM samlar webbplatsens CSS och JavaScript i en enda fil på en central plats, så att endast en kopia av en resurs inkluderas i HTML-utdata. Detta maximerar effektiviteten vid leverans och gör att sådana resurser kan underhållas centralt i databasen via proxy, vilket skyddar åtkomsten.
 
 ## Front-End Development for AEM as a Cloud Service {#fed-for-aemaacs}
 
-Alla JavaScript-, CSS- och andra frontresurser ska bevaras i modulen [ui.front i AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE). Tack vare den flexibla arkitekturen kan du använda dina moderna webbverktyg för att skapa och hantera dessa resurser.
+Alla JavaScript-, CSS- och andra frontresurser ska bevaras i modulen [ui.front i AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html). Tack vare den flexibla arkitekturen kan du använda dina moderna webbverktyg för att skapa och hantera dessa resurser.
 
 Arketypen kan sedan kompilera resurserna till en enda CSS- och JS-fil, och bädda in dem automatiskt i en `cq:clientLibraryFolder` i databasen.
 
@@ -79,7 +79,7 @@ En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås.
 
 1. Öppna CRXDE Lite i en webbläsare (`https://<host>:<port>/crx/de`).
 1. Markera mappen `/apps` och klicka på **Skapa > Skapa nod**.
-1. Ange ett namn för biblioteksmappen och välj `cq:ClientLibraryFolder` i listan **Typ**. Klicka på **OK** och sedan på **Spara alla**.
+1. Ange ett namn för biblioteksmappen och välj **i listan** Typ`cq:ClientLibraryFolder`. Klicka på **OK** och sedan på **Spara alla**.
 1. Om du vill ange kategorin eller kategorierna som biblioteket tillhör markerar du noden `cq:ClientLibraryFolder`, lägger till följande egenskap och klickar sedan på **Spara alla**:
    * Namn: `categories`
    * Typ: String
@@ -92,7 +92,7 @@ En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås.
 1. Om du behöver hantera statiska resurser skapar du en undermapp med namnet `resources` under klientbiblioteksmappen.
    * Om du lagrar statiska resurser var som helst utom under mappen `resources` kan de inte refereras till på en publiceringsinstans.
 1. Lägg till källfiler i biblioteksmappen.
-   * Detta görs vanligtvis i den inledande byggprocessen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE).
+   * Detta görs vanligtvis i den inledande byggprocessen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
    * Du kan ordna källfiler i undermappar om du vill.
 1. Markera klientbiblioteksmappen och klicka på **Skapa > Skapa fil**.
 1. Skriv något av följande filnamn i rutan Filnamn och klicka på OK:
@@ -127,7 +127,7 @@ Klientbibliotek läses in via en hjälpmall från AEM, som du kommer åt via `da
 
 Varje hjälpmall förväntar sig ett `categories`-alternativ för att referera till de önskade klientbiblioteken. Det alternativet kan antingen vara en array med strängvärden eller en sträng som innehåller en kommaseparerad värdelista.
 
-[Mer information om hur du läser in klipp via HTML finns i dokumentationen för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html?lang=sv-SE#loading-client-libraries).
+[Mer information om hur du läser in klipp via HTML finns i dokumentationen för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html#loading-client-libraries).
 
 <!--
 ### Setting Cache Timestamps {#setting-cache-timestamps}
@@ -135,11 +135,11 @@ Varje hjälpmall förväntar sig ett `categories`-alternativ för att referera t
 This is possible. Still need detail.
 -->
 
-## Klientbibliotek på författare jämfört med Publish {#clientlibs-author-publish}
+## Klientbibliotek på författare jämfört med Publicera {#clientlibs-author-publish}
 
 De flesta klientlibs krävs i AEM publiceringsinstans. Det vill säga att de flesta kundens syften är att skapa en användarupplevelse av innehållet. För klientbibliotek på publiceringsinstanser kan [klientbyggverktygen](#fed-for-aemaacs) användas och distribueras via [klientbiblioteksmappar enligt beskrivningen ovan](#creating-clientlib-folders).
 
-Det finns dock tillfällen då klientbibliotek kan behövas för att anpassa redigeringsupplevelsen. Om du till exempel anpassar en dialogruta kan det krävas att du distribuerar små bitar av CSS eller JS till AEM.
+Det finns dock tillfällen då klientbibliotek kan behövas för att anpassa redigeringsupplevelsen. Om du till exempel anpassar en dialogruta kan det krävas att du distribuerar små bitar av CSS eller JS till AEM-redigeringsinstansen.
 
 ### Hantera klientbibliotek på författare {#clientlibs-on-author}
 
@@ -164,7 +164,7 @@ Informationen omfattar bibliotekets sökväg och typ (CSS eller JS) samt värden
 Komponenten `dumplibs` innehåller en testväljare som visar den källkod som genereras för `ui:includeClientLib` -taggar. Sidan innehåller kod för olika kombinationer av js-, css- och temaattribut.
 
 1. Använd någon av följande metoder för att öppna sidan Testa utdata:
-   * Klicka på länken i texten **Klicka här för utdatatestning** på sidan `dumplibs.html`.
+   * Klicka på länken i texten `dumplibs.html`Klicka här för utdatatestning **på sidan**.
    * Öppna följande URL i webbläsaren (använd en annan värd och port efter behov):
       * `http://<host>:<port>/libs/granite/ui/content/dumplibs.html`
    * Standardsidan visar utdata för taggar utan värde för attributet categories.
@@ -178,7 +178,7 @@ Det finns flera andra funktioner som stöds av klientbiblioteksmappar i AEM. Des
 >
 >Dessa extrafunktioner i klientbiblioteksmappar behövs inte i AEM as a Cloud Service och därför bör de inte användas. De listas här för fullständighet.
 
-### Bibliotekshanteraren Adobe Granite HTML {#html-library-manager}
+### Adobe Granite HTML Library Manager {#html-library-manager}
 
 Ytterligare inställningar för klientbibliotek kan styras via panelen **Adobe Granite HTML Library Manager** i systemkonsolen på `https://<host>:<port>/system/console/configMgr`).
 
@@ -187,7 +187,7 @@ Ytterligare inställningar för klientbibliotek kan styras via panelen **Adobe G
 Ytterligare mappegenskaper kan styra beroenden och inbäddningar, men behövs vanligtvis inte längre och användningen bör därför inte användas:
 
 * `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Om till exempel två `cq:ClientLibraryFolder`-noder `F` och `G` kräver en annan fil i `F` för att den ska fungera på rätt sätt i `G` måste minst en av `categories` i `G` finnas bland `dependencies` i `F` .
-* `embed`: Används för att bädda in kod från andra bibliotek. Om noden `F` bäddar in noderna `G` och `H` blir HTML en sammanfogning av innehåll från noderna `G` och `H`.
+* `embed`: Används för att bädda in kod från andra bibliotek. Om noden `F` bäddar in noderna `G` och `H` blir den resulterande HTML en sammanfogning av innehåll från noderna `G` och `H`.
 
 ### Länka till beroenden {#linking-to-dependencies}
 
@@ -197,7 +197,7 @@ Beroenden måste vara en annan `cq:ClientLibraryFolder`. Om du vill identifiera 
 
 * **Namn:** beroenden
 * **Typ:** String[]
-* **Värden:** Värdet på kategoriegenskapen i cq:ClientLibraryFolder-noden som den aktuella biblioteksmappen är beroende av.
+* **Värden:** Värdet på kategoriegenskapen för cq:ClientLibraryFolder-noden som den aktuella biblioteksmappen är beroende av.
 
 `/etc/clientlibs/myclientlibs/publicmain` är till exempel beroende av biblioteket `cq.jquery`. Sidan som refererar till huvudklientbiblioteket genererar HTML som innehåller följande kod:
 
@@ -224,7 +224,7 @@ Använd egenskapen categories för att identifiera klientbiblioteksmappen som sk
 
 #### Använda inbäddning för att minimera begäranden {#using-embedding-to-minimize-requests}
 
-I vissa fall kan du upptäcka att det sista HTML som genereras för den typiska sidan av publiceringsinstansen innehåller ett relativt stort antal `<script>` element.
+I vissa fall kan det hända att den slutliga HTML som genereras för den typiska sidan av din publiceringsinstans innehåller ett relativt stort antal `<script>`-element.
 
 I sådana fall kan det vara användbart att kombinera all nödvändig klientbibliotekskod till en enda fil så att antalet fram- och tillbaka-begäranden vid sidinläsning minskar. För att göra detta kan du `embed` de nödvändiga biblioteken i ditt programspecifika klientbibliotek med hjälp av inbäddningsegenskapen för noden `cq:ClientLibraryFolder` .
 
@@ -254,7 +254,7 @@ body {
 }
 ```
 
-#### Se Inbäddade filer i utdata från HTML {#see-embedded-files}
+#### Se Inbäddade filer i HTML Output {#see-embedded-files}
 
 Om du vill spåra ursprunget för inbäddad kod eller se till att inbäddade klientbibliotek ger det förväntade resultatet, kan du se namnen på de filer som bäddas in under körning. Om du vill visa filnamnen lägger du till parametern `debugClientLibs=true` i webbsidans URL. Biblioteket som skapas innehåller `@import` programsatser i stället för den inbäddade koden.
 
@@ -270,14 +270,14 @@ Om du öppnar filen `publicmain.css` visas följande kod:
 @import url("/apps/myapp/clientlib/styles/main.css");
 ```
 
-1. Lägg till följande text i URL:en för HTML i webbläsarens adressruta:
+1. Lägg till följande text i webbadressen för din HTML i webbläsarens adressruta:
    * `?debugClientLibs=true`
 1. Visa sidans källa när sidan läses in.
 1. Klicka på länken som anges som href för länkelementet för att öppna filen och visa källkoden.
 
 ### Använda preprocessorer {#using-preprocessors}
 
-AEM tillåter anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
+AEM tillåter anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript samt [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
 
 De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
@@ -288,7 +288,7 @@ De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
 >[!NOTE]
 >
->Som standard använder AEM YUI-kompressor. En lista över kända fel finns i [YUI Compressor GitHub-dokumentationen](https://github.com/yui/yuicompressor/issues). Om du växlar till GCC-komprimerare för vissa klienter kan vissa problem som uppstår när du använder YUI lösas.
+>Som standard använder AEM GCC-kompressorn för att minimera Javascript.
 
 >[!CAUTION]
 >
@@ -299,9 +299,8 @@ De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 Du kan välja att konfigurera preprocessorer-konfigurationen per klientbibliotek eller system i hela systemet.
 
 * Lägg till flervärdesegenskaperna `cssProcessor` och `jsProcessor` på klientbiblioteksnoden
-* Eller definiera systemstandardkonfigurationen via OSGi-konfigurationen för **HTML Library Manager**
 
-En preprocessorkonfiguration på klientlib-noden har företräde framför OSGI-konfigurationen.
+Det går inte att definiera systemstandardkonfigurationen via OSGi-konfigurationen för **HTML Library Manager**. Det gäller endast för den lokala SDK-servern och inte för fullständiga pipeline-körningar.
 
 #### Format och exempel {#format-and-examples}
 
@@ -337,7 +336,7 @@ jsProcessor: [
 ```javascript
 failOnWarning (defaults to "false")
 languageIn (defaults to "ECMASCRIPT5")
-languageOut (defaults to "ECMASCRIPT5")
+languageOut (defaults to "ECMASCRIPT_2018" as of release 21994, was previously "ECMASCRIPT5" )
 compilationLevel (defaults to "simple") (can be "whitespace", "simple", "advanced")
 ```
 
@@ -345,11 +344,4 @@ Mer information om GCC-alternativ finns i [GCC-dokumentation](https://developers
 
 #### Ange systemstandardminiatyr {#set-system-default-minifier}
 
-YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra detta till GCC.
-
-1. Gå till Apache Felix Config Manager på (`http://<host>:<port/system/console/configMgr`)
-1. Hitta och redigera bibliotekshanteraren **Adobe Granite HTML**.
-1. Aktivera alternativet **Minify** (om det inte redan är aktiverat).
-1. Ange värdet **JS-processorns standardkonfigurationer** till `min:gcc`.
-   * Alternativ kan skickas om de avgränsas med ett semikolon, till exempel `min:gcc;obfuscate=true`.
-1. Klicka på **Spara** för att spara ändringarna.
+Det går inte att ange systemstandardminiprogram i AEM as a Cloud Service.
