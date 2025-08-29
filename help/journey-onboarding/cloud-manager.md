@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till Cloud Manager så att du kan ko
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
 feature: Onboarding
-source-git-commit: 4cad0ea1be4cba1c7f1af55cc760fb65fdc3cc4a
+source-git-commit: 841e30bc279a3859ce9a302b18ddf566d8163100
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -42,9 +42,13 @@ Innan teammedlemmarna som du tilldelade rollen **Business Owner** kan komma åt 
 
    Återgå till föregående steg, [Tilldela teammedlemmar till Cloud Manager produktprofiler](assign-profiles-cloud-manager.md), om du vill ha mer information om hur du tilldelar systemadministratören rollen **Affärsägare**.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/).
+1. Logga in på Cloud Manager på [experience.adobe.com](https://experience.adobe.com/).
+1. Klicka på **Experience Manager** i snabbåtkomstgruppen.
+1. Klicka på **Cloud Manager** på den vänstra panelen.
 
-Genom att logga in som systemadministratör med rollen **Affärsägare** initierar du Cloud Manager för användning av andra användare med rollen **Affärsägare**. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
+   ![Cloud Manager på konsol](/help/journey-onboarding/assets/consol-cloud-manager.png)
+
+Genom att logga in som systemadministratör med rollen **Affärsägare** använder du Cloud Manager för att användas av andra användare med rollen **Affärsägare**. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
 
 Innan du har loggat in på Cloud Manager som systemadministratör med rollen **Business Owner** kan andra användare med rollen **Business Owner** inte skapa program i Cloud Manager. Den här regeln gäller även om de har tilldelats rätt roller.
 
@@ -63,27 +67,28 @@ Användare med rollen **Affärsägare** får ett välkomstmeddelande med en län
 
 1. Du dirigeras till Cloud Manager landningssida.
 
-Du kan också navigera till Cloud Manager **Program- och produktsida** från Adobe Experience Cloud hemsida med dessa steg.
+<!-- OLD
+Alternatively, you can navigate to Cloud Manager's **Programs and Products** page from the Adobe Experience Cloud home page using these steps.
 
-1. Navigera direkt till [Adobe Experience Cloud](https://experience.adobe.com) och logga in med din Adobe ID.
+1. Navigate directly to [Adobe Experience Cloud](https://experience.adobe.com) and login using your Adobe ID.
 
-1. På Adobe Experience Cloud hemsida väljer du **Experience Manager** för att öppna AEM hemsida.
+1. From the Adobe Experience Cloud home page, select **Experience Manager** to open the AEM home page.
 
-   ![Experience Cloud hemsida](/help/journey-onboarding/assets/setup-resources2.png)
+   ![Experience Cloud homepage](/help/journey-onboarding/assets/setup-resources2.png)
 
-1. Välj **Starta** på panelen **Cloud Manager**.
+1. On the **Cloud Manager** tile, select **Launch**.
 
-   ![AEM hemsida](/help/journey-onboarding/assets/setup-resources3.png)
+   ![AEM home page](/help/journey-onboarding/assets/setup-resources3.png)
 
-1. När du har loggat in dirigeras du till Cloud Manager landningssida. Mer information finns i [Visa Cloud Manager-program](#viewing-programs).
+1. After successfully logging on, you are directed to the Cloud Manager landing page. See [Viewing Cloud Manager's Programs](#viewing-programs) for more details.
 
-Det är upp till dig och det påverkar inte hur du använder Cloud Manager eller hur du hanterar dina program.
+How you access your programs and products via Cloud Manager is up to you and has no effect on how you use Cloud Manager or how you manage your programs.
 
 >[!NOTE]
 >
->Beroende på vilka roller som har tilldelats i Cloud Manager och programmets status visas olika skärmar när du använder Cloud Manager användargränssnitt.
+>Depending on the roles assigned in Cloud Manager and the state of the application, you see different screens while using the Cloud Manager user interface. -->
 
-## Visningsprogram {#viewing-programs}
+## Visa program {#viewing-programs}
 
 När du har fått tillgång till Cloud Manager beror det hur programmen ser ut, vilket beskrivs i följande avsnitt.
 
@@ -91,37 +96,37 @@ När du har fått tillgång till Cloud Manager beror det hur programmen ser ut, 
 
 Om det inte finns några program i din organisation instruerar landningssidan dig att skapa ditt första program.
 
-![Inga program](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin0.png)
+![Inga program](/help/journey-onboarding/assets/cloud-manager-programs-do-not-exist.png)
 
 ### När program redan finns {#programs-exist}
 
 Om det finns program i organisationen visar landningssidan dina befintliga program och erbjuder även en knapp för att lägga till ytterligare program.
 
-![Program finns](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/first_timelogin1.png)
+![Program finns](/help/journey-onboarding/assets/cloud-manager-programs-exist.png)
 
 ### När ett program finns och du är systemadministratör {#programs-exist-sysadmin}
 
 Om det finns program i organisationen och du är systemadministratör, visas knappen **Hantera åtkomst** på landningssidan tillsammans med alternativet **Lägg till program** på sidan.
 
-![Systemadministratörsvy](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/assets/admin-console-4.png)
+![Systemadministratörsvy](/help/journey-onboarding/assets/cloud-manager-programs-as-sysadmin.png)
 
 ## Verifiera dina användarroller {#verify-user-roles}
 
 När du har loggat in på Cloud Manager kan du verifiera att du har tilldelats produktprofilen **Business Owner**.
 
-1. Välj din profil längst upp till höger i fönstret.
+1. Klicka på ikonen **Konto** i sidans övre högra hörn.
 
-1. Om du vill visa rollerna som tilldelats din användare väljer du **Användarroller**.
+1. Klicka på **Användarroller**.
 
-   ![Användarroller](/help/journey-onboarding/assets/setup-resources6.png)
+   ![Användarroller](/help/journey-onboarding/assets/cloud-manager-user-roles.png)
 
-1. Dialogrutan bör bekräfta att din användare har rollen **Affärsägare**.
+1. Bekräfta att din användare har rollen **Affärsägare** i dialogrutan **Användarroller**.
 
-   ![Lista över användarroller](/help/journey-onboarding/assets/setup-resources7.png)
+   ![Lista över användarroller](/help/journey-onboarding/assets/cloud-manager-user-roles-business-owner.png)
 
-Du har loggat in på Cloud Manager som företagsägare! Kontakta systemadministratören om du inte har tilldelats rollen **Affärsägare**.
+Du har loggat in på Cloud Manager som företagsägare. Kontakta systemadministratören om du inte har tilldelats rollen **Affärsägare**.
 
-## What&#39;s Next {#whats-next}
+## Vad kommer härnäst? {#whats-next}
 
 Nu när du har åtkomst till Cloud Manager som systemadministratör kan du skapa ditt första program.
 
