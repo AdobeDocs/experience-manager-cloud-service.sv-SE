@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 827077d8dd39520a74992907134e0466b7beb648
+source-git-commit: 0d2164920ca44ee6c872fdfe2090760a1506215d
 workflow-type: tm+mt
-source-wordcount: '1908'
+source-wordcount: '1961'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -77,36 +77,63 @@ Skapa Vanity-URL:er för leverans av resurser i DM med OpenAPI och ersätt lång
 
 >[!NOTE]
 >
->Den här funktionen blir tillgänglig som en begränsad tillgänglighetsfunktion den 10 september. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+>Den här funktionen blir tillgänglig som en begränsad tillgänglighetsfunktion den 10 september. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-### Nya funktioner i AEM Forms {#forms-new-features}
+### Nya funktioner i Experience Manager Forms {#new-features-forms}
 
-* [Indatakomponent för datum och tid](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component): Nu finns det en komponent för datum och tid som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
-* [Förbättrad felhantering för filöverföringar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab): Komponenten för bifogad fil validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
-* [Angivet felsvar för anpassad skickaåtgärd](/help/forms/custom-submit-action-troubleshooting.md): När en anpassad sändningsåtgärd påträffar ett ohanterat fel returneras felkod 502. Detta hjälper till att identifiera att problemet är relaterat till den anpassade skicka-åtgärden, vilket gör felsökningen enklare.
-* [Utesluter dolda fält från postdokument](/help/forms/generate-document-of-record-core-components.md#document-of-record-settings): En ny egenskap har lagts till för att tillåta att dolda fält utesluts från postdokumentet. Som standard är det här alternativet inte markerat och gäller för alla formulärfält.
+**Indatakomponent för datum och tid**
+
+Det finns nu en [datum- och tidskomponent](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component) som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
+
+**Utökad felhantering för filöverföringar**
+
+Komponenten [Bifogad fil](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab) validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
+
+**Angivet felsvar för anpassad överföringsåtgärd**
+
+När en [anpassad skicka-åtgärd](/help/forms/custom-submit-action-troubleshooting.md) påträffar ett ohanterat fel returneras felkoden 502. Detta hjälper till att identifiera att problemet är relaterat till den anpassade skicka-åtgärden, vilket gör felsökningen enklare.
+
+**Utesluter dolda fält från postdokument**
+
+En ny egenskap tillåter att dolda fält utesluts från [postdokumentet](/help/forms/generate-document-of-record-core-components.md#document-of-record-settings). Som standard är det här alternativet inte markerat och gäller för alla formulärfält.
+
 
 ### Pre-Release-funktioner i AEM Forms
 
-* [Generera och synkronisera AFP-återgivningar](/help/forms/document-generation-afp-api.md): Nu kan du använda AEM Forms Communication API för att konvertera en XDP-fil till AFP-format. AFP är ett högpresterande format som används ofta vid storskalig trycksaksproduktion.
-* **Förbättringar i regelredigeraren**
-   * [Validera metod i funktionslista](/help/forms/rule-editor-enhancements-use-cases.md#validate-method-in-function-list): Metoderna validate och reset har nu stöd för körning på panelnivå, fält- och formulärnivå. Tidigare stöddes de endast på formulärnivå.
-   * [Modernt stöd för JavaScript](/help/forms/rule-editor-core-components-difference-tables.md): Stöd för ECMAScript 2019 och senare funktioner har lagts till för anpassade funktioner, vilket gör att du kan skriva mer effektiv, modulär och återanvändbar kod
-   * [Ladda ned DoR-alternativ i regelredigeraren](/help/forms/rule-editor-enhancements-use-cases.md#downloaddor-as-ootb-fuction-in-rule-editor): En funktion för att hämta dokumentarkivfilen (DoR) har lagts till som ett OTB-alternativ (Out-of-Box) i regelredigeraren.
-     ![Dokument-av-post](/help/forms/assets/document-of-record-rn.gif)
-   * [Dynamiska variabler i Regelredigeraren](/help/forms/rule-editor-enhancements-use-cases.md#support-for-dynamic-variables-in-rules): Du kan nu använda dynamiska (tillfälliga) variabler i Regelredigeraren för större flexibilitet när du definierar villkor och åtgärder. Dolda fält behövs inte längre för att lagra tillfälliga värden.
-   * [Stöd för anpassade händelsebaserade regler](/help/forms/rule-editor-enhancements-use-cases.md#custom-event-based-rules-support): Du kan nu definiera anpassade händelser och utlösarregler baserat på dessa händelser.
-   * [Kontextmedvetna upprepningsbara panelregler](/help/forms/rule-editor-enhancements-use-cases.md#context-based-rule-execution-for-repeatable-panels): I upprepningsbara paneler körs nu regler baserat på kontext, i stället för att bara tillämpas på den sista panelinstansen.
-   * [Regler som utlösts av parametrar](/help/forms/rule-editor-enhancements-use-cases.md#url-and-browser-parameter-based-rules-in-adaptive-forms): Regelredigeraren stöder nu regelkörning baserat på frågeparametrar, UTM-parametrar eller webbläsarparametrar.
-   * [Formulärspecifika anpassade funktioner](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md#organizing-custom-functions-across-different-forms): Edge Delivery Services Forms har nu stöd för formulärspecifika anpassade funktionsskript, vilket ger större flexibilitet vid hantering av återanvändbar logik.
-   * [Statisk import för anpassade funktioner](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md#static-imports-for-custom-functions): Regelredigeraren i Universal Editor har nu stöd för statiska importer, vilket gör att utvecklare kan ordna, dela och återanvända funktioner i flera formulär.
+**Generera och synkronisera AFP-återgivningar**
 
-### Tidiga Adobe-funktioner i AEM Forms
+Du kan nu använda [AEM Forms Communication API](/help/forms/document-generation-afp-api.md) för att konvertera en XDP-fil till AFP-format. AFP är ett högpresterande format som används ofta vid storskalig trycksaksproduktion.
 
-* [Klottsigneringskomponent](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature): Nu kan du använda komponenten Klottsignatur för att hjälpa användare att lägga till sina signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
-* [Direkt API-integrering i regelredigeraren](/help/forms/api-integration-in-rule-editor.md): Adaptiv Forms har nu stöd för direkt API-integrering i Visual Rule Editor utan att någon formulärdatamodell krävs. Författare kan konfigurera API:er med en URL- eller cURL-import, mappa in-/utdataparametrar och säkra anrop med autentisering.
+**Förbättringar i regelredigeraren**
+
+* [Validera metod i funktionslista](/help/forms/rule-editor-enhancements-use-cases.md#validate-method-in-function-list): Metoderna validate och reset har nu stöd för körning på panelnivå, fält- och formulärnivå. Tidigare stöddes de endast på formulärnivå.
+* [Modernt JavaScript-stöd](/help/forms/rule-editor-core-components-difference-tables.md): Stöd för ECMAScript 2019 och senare funktioner har lagts till för anpassade funktioner, vilket gör att du kan skriva mer effektiv, modulär och återanvändbar kod.
+* [Ladda ned DoR-alternativ i regelredigeraren](/help/forms/rule-editor-enhancements-use-cases.md#downloaddor-as-ootb-fuction-in-rule-editor): En funktion för att hämta dokumentarkivfilen (DoR) har lagts till som ett OTB-alternativ (Out-of-Box) i regelredigeraren.
+
+  ![Dokument-av-post](/help/forms/assets/document-of-record-rn.gif)
+
+* [Dynamiska variabler i Regelredigeraren](/help/forms/rule-editor-enhancements-use-cases.md#support-for-dynamic-variables-in-rules): Du kan nu använda dynamiska (tillfälliga) variabler i Regelredigeraren för större flexibilitet när du definierar villkor och åtgärder. Dolda fält behövs inte längre för att lagra tillfälliga värden.
+* [Stöd för anpassade händelsebaserade regler](/help/forms/rule-editor-enhancements-use-cases.md#custom-event-based-rules-support): Du kan nu definiera anpassade händelser och utlösarregler baserat på dessa händelser.
+* [Kontextmedvetna upprepningsbara panelregler](/help/forms/rule-editor-enhancements-use-cases.md#context-based-rule-execution-for-repeatable-panels): I upprepningsbara paneler körs nu regler baserat på kontext, i stället för att bara tillämpas på den sista panelinstansen.
+* [Regler som utlösts av parametrar](/help/forms/rule-editor-enhancements-use-cases.md#url-and-browser-parameter-based-rules-in-adaptive-forms): Regelredigeraren stöder nu regelkörning baserat på frågeparametrar, UTM-parametrar eller webbläsarparametrar.
+* [Formulärspecifika anpassade funktioner](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md#organizing-custom-functions-across-different-forms): Edge Delivery Services Forms har nu stöd för formulärspecifika anpassade funktionsskript, vilket ger större flexibilitet vid hantering av återanvändbar logik.
+* [Statisk import för anpassade funktioner](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md#static-imports-for-custom-functions): Regelredigeraren i Universal Editor har nu stöd för statiska importer, vilket gör att utvecklare kan ordna, dela och återanvända funktioner i flera formulär.
+
+### Nya funktioner för tidig åtkomst i AEM Forms {#forms-new-early-access-features}
+
+AEM Forms Early Access Program ger dig unika möjligheter att få exklusiv tillgång till de senaste innovationerna och hjälpa till att utforma deras utveckling.
+
+I versionsinformationen visas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
+
+**Klottsignaturkomponent**
+
+Du kan nu använda [Klottsigneringskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature) för att hjälpa användare att lägga till signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
+
+**Direkt API-integrering i regelredigeraren**
+
+Adaptiv Forms har nu stöd för [direkt API-integrering](/help/forms/api-integration-in-rule-editor.md) i Visual Rule Editor utan någon formulärdatamodell. Författare kan konfigurera API:er med en URL- eller cURL-import, mappa in-/utdataparametrar och säkra anrop med autentisering.
 
 <!--
 **Forms Optimization opportunities**
@@ -153,6 +180,7 @@ Flera inaktuella API:er är avsedda för borttagning den 31 augusti och bör dä
 * `org.bson`
 * `org.apache.jackrabbit.oak.plugins.blob`
 * `org.apache.jackrabbit.oak.plugins.memory`
+
 </details>
 
 <!--
@@ -220,7 +248,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -240,4 +268,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
