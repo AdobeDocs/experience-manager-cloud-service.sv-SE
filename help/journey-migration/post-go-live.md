@@ -17,7 +17,7 @@ ht-degree: 4%
 >id="aemcloud_golive_troubleshooting"
 >title="Felsökning av AEM"
 >abstract="Granska metodtips för kontinuerlig utveckling och hantering av loggar. Läs om verktyg som Developer Console och CRXDE Lite som hjälper dig att felsöka problem med AEM."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs" text="Åtkomst till och hantering av loggar"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-logs" text="Åtkomst till och hantering av loggar"
 >additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines#aem-as-a-cloud-service-development-tools" text="AEM as a Cloud Service utvecklingsverktyg"
 
 Den här resan är den sista delen, så du får lära dig att övervaka problem och förbättra resultatet när migreringen är klar. Se till att tillfälliga filer rensas, granska vedertagna metoder för kontinuerlig utveckling och hantera loggar.
