@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 3067e88f8adea50f6b6b05e0466974bc57bc4a4e
+source-git-commit: 3884f53d56a8fc5bb71b736dd0b1368906c05623
 workflow-type: tm+mt
-source-wordcount: '607'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåvan 21994, som offentliggjordes den 19 augusti 2025. Den tidigare underhållsversionen var version 21772.
 
-Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.8.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Nya funktioner  {#new-features-21994}
 
@@ -60,11 +60,13 @@ Ingen.
 * GUIDES-11227: Om du kopierar en DITA-karta från Assets-gränssnittet kopieras även den kopplade baslinjen till den nya kartan.
 * GUIDES-31506: Hemsidan blir tom när en av filerna som listas i widgeten Senaste filer är baserad på en mall vars källmall inte innehåller någon miniatyrbild.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-21994}
 
 * Apache HTTPD version 2.4.65 innehåller ändringar som kan påverka vissa konfigurationer på grund av nya begränsningar som implementeras som en del av säkerhetskorrigeringar. Dessa korrigeringar åtgärdar sårbarheter genom att säkerställa att direktiv som `RequestHeader set`, `edit` och `edit_r` som används för att ändra Content-Type-huvudet nu begränsas korrekt till begäranrubriker. Den här ändringen förhindrar oavsiktliga ändringar av svarshuvuden, särskilt för statiskt innehåll.
+* Apache HTTPD version 2.4.65 introducerar ändringar i mod_proxy när ProxyRemote-anslutningar används. Om du får problem anger du flaggan för inaktivering till På.
+  ```ProxyPass "/example" "http://backend.example.com" disablereuse=on```
 
 ### Föråldrade funktioner och API:er {#deprecated-21994}
 
@@ -83,4 +85,4 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.29.0 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
