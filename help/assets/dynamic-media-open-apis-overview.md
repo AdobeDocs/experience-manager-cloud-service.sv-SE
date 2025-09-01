@@ -3,9 +3,9 @@ title: Dynamic Media med OpenAPI-funktioner
 description: Lär dig viktiga begrepp som varför du använder Dynamic Media med OpenAPI-funktioner och hur du aktiverar det.
 role: User
 exl-id: 658b6eff-9f5a-4166-9ff6-5dc8eb92ada3
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 2b7dc8e25c28c7e537bf19b9ed0518c9adfe7a74
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1063'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Dynamic Media med OpenAPI-funktioner ger följande viktiga fördelar:
 
 * **Webboptimerad leverans**: Digitala resurser levereras i webboptimerade format för att förbättra de digitala upplevelsernas Core Web Vitals. Detta inkluderar stöd för WebP-återgivningar för bilder, adaptiv direktuppspelning via HLS- eller DASH-protokoll för videor samt ursprungliga återgivningar för dokument.
 
-* **Dynamisk resursomformning**: I vårt system går det att göra bildomformningar direkt med URL-parametrar som kallas bildmodifierare. [Till exempel bredd, höjd, rotering, vänd, kvalitet, beskärning, format och smart beskärning](/help/assets/deliver-assets-apis.md). Omformade renderingar genereras dynamiskt och levereras smidigt via CDN.
+* [Dynamisk resursomformning](https://developer.adobe.com/experience-cloud/experience-manager-apis): I vårt system går det att göra bildomformningar direkt med URL-parametrar som kallas bildmodifierare. Exempel: bredd, höjd, rotering, vänd, kvalitet, beskärning, format och smart beskärning. Omformade renderingar genereras dynamiskt och levereras smidigt via CDN.
 
 * **Säker leverans av resurser**: Dynamiska media med OpenAPI-funktioner ger en mekanism för kontroll över åtkomsten till dina digitala resurser. Du kan ange användarroller eller användargrupper som metadata för att skydda resurser och ange en fördefinierad tidsram under vilken [endast behöriga användare kan komma åt dessa resurser](/help/assets/restrict-assets-delivery.md). Leverans-URL:erna för skyddade tillgångar kan inte matchas för obehöriga användare under den begränsade perioden.
 
