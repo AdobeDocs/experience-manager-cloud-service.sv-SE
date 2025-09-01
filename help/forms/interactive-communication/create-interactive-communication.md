@@ -7,15 +7,22 @@ role: User, Developer, Admin
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: 5dd94d22a2a1a2ddbfd7dee44e93e6ea0c4b7ad9
+source-git-commit: 17a75e271377d9c7bfdac28c9f3d9d8178b565fd
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en interaktiv kommunikation
+
+>[!NOTE]
+>
+> Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
+
+>[!IMPORTANT]
+>
+> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med interaktiv kommunikation kan ni skapa, hantera och leverera personaliserad och interaktiv kommunikation, inklusive kundtjänst, fakturering, onboarding-dokument, anställningserbjudanden, kontouppdateringar med mera. Det är utformat för att stödja alla situationer där dynamiskt, användarspecifikt innehåll förbättrar kommunikationsupplevelsen i olika branscher.
 

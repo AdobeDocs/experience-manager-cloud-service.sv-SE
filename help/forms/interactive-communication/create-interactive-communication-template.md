@@ -7,15 +7,22 @@ role: User, Developer, Admin
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: 5dd94d22a2a1a2ddbfd7dee44e93e6ea0c4b7ad9
+source-git-commit: 17a75e271377d9c7bfdac28c9f3d9d8178b565fd
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en interaktiv kommunikationsmall
+
+>[!NOTE]
+>
+> Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
+
+>[!IMPORTANT]
+>
+> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med Interactive Communication Templates i AEM kan man definiera återanvändbara layoutstrukturer som sidhuvuden, sidfötter, logotyper och standardformat. Mallarna fungerar som en bas för att skapa enhetlig, varumärkesprofilerad och effektiv kommunikation.
 
