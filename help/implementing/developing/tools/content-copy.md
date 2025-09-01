@@ -4,9 +4,9 @@ description: Med innehållskopieringsverktyget kan man kopiera muterbart innehå
 exl-id: 5883e4bc-9861-498e-bd35-32ff03d901cc
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 295b4be073376332f08a85d4e6e0e46cdb6482ea
+source-git-commit: 28a9e32395b73edff46cabba1dcc6c4134594fc6
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1450'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 # Verktyget Innehållskopia {#content-copy}
 
 Med innehållskopieringsverktyget kan man kopiera muterbart innehåll on-demand från produktionsmiljöer i AEM as a Cloud Service till lägre miljöer för teständamål.
+
+>[!NOTE]
+>Det primära innehållskopieringsflödet är från högre miljöer till lägre miljöer, men med en ytterligare funktion - **Framåtflöde** - kan du kopiera från lägre icke-produktionsmiljöer till högre icke-produktionsmiljöer (till exempel Dev → Stage, RDE → Stage). Mer information, inklusive tillgänglighetskrav, finns i [Begränsningar](#limitations).
 
 ## Introduktion {#introduction}
 
@@ -105,7 +108,7 @@ När du redigerar din innehållsuppsättning kan du expandera de konfigurerade s
 När en innehållsuppsättning har skapats kan du använda den för att kopiera innehåll. Följ de här stegen för att kopiera innehåll.
 
 >[!NOTE]
-> Använd inte Content Copy i en miljö när en [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md)-åtgärd körs i den miljön.
+> Använd inte innehållskopiering i en miljö medan en [innehållsöverföring](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/overview-content-transfer-tool.md) körs i den miljön.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
@@ -133,7 +136,7 @@ När en innehållsuppsättning har skapats kan du använda den för att kopiera 
       * Produktion
       * Mellanlagring
       * Utveckling/RDE
-   * Som standard är Korsprogramövergripande innehållskopia inaktiverat. På kundens begäran kan den dock aktiveras, vilket gör ytterligare ett **målprogram** -indatafält tillgängligt.
+   * Som standard är&quot;Cross-Program&quot;-innehållskopiering inaktiverat. På kundens begäran kan den dock aktiveras, vilket gör ytterligare ett **målprogram** -indatafält tillgängligt.
 
 1. Om det behövs kan du även välja att **Inkludera åtkomstkontrollistor** i kopieringsprocessen.
 
@@ -192,9 +195,11 @@ Loggarna hämtas till din lokala dator. Om hämtningen inte startar kontrollerar
 
 Verktyget för innehållskopiering har följande begränsningar.
 
-* Innehåll kan inte kopieras från en lägre miljö till en högre miljö.
+* Verktyget Innehållskopiering har stöd för två flödeslägen:
+   1. Uppifrån och ned-flöde - Innehållet kan kopieras från högre miljöer till lägre miljöer (t.ex. Production → Stage, Stage → Development/RDE).
+   2. Framåtflöde (ny funktion) - Innehållet kan också kopieras från en lägre icke-produktionsmiljö till en högre icke-produktionsmiljö (till exempel Development → Stage, RDE → Stage). Den här funktionen är bara tillgänglig efter explicit begäran och är aktiverad tills explicit begärd att inaktiveras. Produktionsmiljöer är aldrig giltiga mål för Forward Flow.
 * Innehåll kan bara kopieras från och till redigeringstjänster.
-* Det går inte att köra samtidiga kopieringsåtgärder för innehåll i samma miljö.
+* Det går inte att köra samtidiga innehållskopieringsåtgärder i samma miljö.
 * Upp till 50 sökvägar kan anges per innehållsuppsättning. Det finns ingen begränsning för uteslutna banor.
 * Använd inte verktyget för innehållskopiering som kloning eller spegling eftersom det inte går att spåra flyttat eller borttaget innehåll i källan.
 * Verktyget för innehållskopiering har ingen versionshantering och kan inte automatiskt identifiera ändrat innehåll eller skapat innehåll i källmiljön i en innehållsuppsättning sedan den senaste kopieringsåtgärden.
