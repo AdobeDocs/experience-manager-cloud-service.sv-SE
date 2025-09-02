@@ -4,9 +4,9 @@ description: Läs mer om Operational Telemetry, en automatiserad tjänst som gö
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 41d9fd628eec8ce757447bed13d50211e71785de
+source-git-commit: d02569f5fcca0e53c8f258be8a193663364ac31f
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Den operativa telemetritjänsten är utformad för att minimera datainsamling. D
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttypen och det operativsystem som används för att visa sidan, till exempel: `desktop:windows` eller `mobile:ios`
 * Tidpunkten för datainsamlingen, till exempel: `2021-06-26 06:00:02.596000 UTC (in order to preserve privacy, we round all minutes to the previous hour, so that only seconds and milliseconds are tracked)`
-* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs?lang=sv-SE`
+* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs`
 * Referens-URL (URL:en för sidan som länkade till den aktuella sidan, om användaren följde en länk)
 * Ett slumpmässigt genererat ID för sidvyn i ett format som liknar: `2Ac6`
 * Samplingsfrekvensen, t.ex. `100`, har samma vikt eller inverterad. Det betyder att bara en av hundra sidvisningar spelas in
@@ -104,3 +104,14 @@ Here are key considerations for customers to keep in mind when interpreting thei
    Adobe rekommenderar att du använder Operational Telemetry på grund av dess stora fördelar och att det kommer att göra det möjligt för Adobe att optimera dina digitala upplevelser genom att förbättra webbplatsens prestanda. Tjänsten är utformad för att vara sömlös och påverkar inte webbplatsens prestanda.
 
    Om du väljer bort detta kan det innebära att du missar en chans att förbättra trafikengagemanget på din webbplats. Om du råkar ut för några problem kan du inaktivera Operational Telemetry genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_DISABLED` på värdet `true`. Om du vill aktivera Operational Telemetry igen vid ett senare tillfälle tar du bara bort den miljövariabeln igen.
+
+1. **Kan jag använda en skyddsprofil för innehåll med ett kort varv?
+
+   Stödet för Operational Telemetry innehåller en experimentell funktion som stöder en Content Security Policy med en nonce. Den här funktionen kan aktiveras genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_NONCE` på värdet `true`. Om du vill inaktivera det här igen vid ett senare tillfälle tar du bara bort systemvariabeln igen.
+
+   Kontakta Adobe Support om du råkar ut för problem med den här funktionen.
+
+1. **Hur kan jag bara aktivera fungerande telemetri för vissa sidor?**
+
+   Operationell telemetri är aktiverat som standard för alla sidor under mappen `/content` i databasen. Genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_INCLUDED_PATHS` på en lista med kommaseparerade sökvägar i databasen, aktiveras Operational Telemetry bara för dessa sidor. Dessutom kan du ange `AEM_OPTEL_EXCLUDED_PATHS` som en lista över sökvägar i databasen som ska uteslutas. Genom att kombinera dessa två inställningar kan du justera inkluderingen av Operational Telemetry efter dina behov.
+
