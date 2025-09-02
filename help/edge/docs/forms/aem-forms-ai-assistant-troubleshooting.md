@@ -198,6 +198,7 @@ Denna omfattande felsökningsguide hjälper er att identifiera, diagnostisera oc
        - Meddelande (obligatoriskt textområde, max 500 tecken) 
        - Skicka till e-postmeddelande 
    
+
 ### Problem med layout och format
 
 **Symtomen:**
