@@ -6,9 +6,9 @@ hide: true
 index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: 9996bc602ae6169dd1aade622d5dbc5b1addeb54
+source-git-commit: fe34b44d02c308e7d18a08dd05f21abc67bd0cb2
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -20,46 +20,21 @@ ht-degree: 0%
 >
 > **Dokumentation som kan ändras**: Dokumentationen testas för närvarande mot produkten och kan uppdateras och revideras. Funktioner, kommandon och exempel kan ändras allt eftersom Forms Experience Builder fortsätter att utvecklas under det program som antogs tidigt.
 
-Med Forms Experience Builder får Adobe Experience Manager (AEM) Forms kraften från artificiell intelligens. Denna innovativa lösning förändrar hur organisationer skapar, hanterar och optimerar sina digitala formulär genom naturliga språkinteraktioner och intelligent automatisering.
+AEM Forms Experience Builder utnyttjar kraften i generativ AI för att demokratisera och snabba upp skapandet och uppdateringen av digitala formulärupplevelser. Genom att möjliggöra intent-baserade arbetsflöden som bygger på naturliga språkinteraktioner kan användarna smidigt utforma, ändra och optimera formulär snabbt och enkelt.
 
-Forms Experience Builder bygger på modern webbteknik och bygger på avancerade AI-tjänster, vilket gör det möjligt för både tekniska och icke-tekniska användare att skapa avancerade, proffsiga formulär genom konversationsgränssnitt. Vare sig du är affärsanalytiker och behöver ett enkelt registreringsformulär eller utvecklare som skapar komplexa flerstegsarbetsflöden effektiviserar Forms Experience Builder hela processen för att skapa formulär.
+Forms Experience Builder bygger på modern webbteknik och bygger på avancerade AI-tjänster, vilket gör det möjligt för både tekniska och icke-tekniska användare att skapa avancerade, proffsiga formulär genom konversationsgränssnitt. Denna revolutionerande metod minskar time to value från dagar till timmar, eliminerar tekniska hinder genom gränssnittets enkelhet och anpassar moderniseringen i hela ekosystemet.
 
-## Konversationsgränssnitt
 
-Forms Experience Builder har ett intuitivt chattbaserat gränssnitt som gör det lika enkelt att skapa formulär som att föra en konversation:
-
-```
-┌─────────────────────────────────────────────────────────┐
-│ Forms Experience Builder                               │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  👤 User: Create a customer feedback form              │
-│                                                         │
-│  🤖 AI: I'll help you create a feedback form. What    │
-│       type of feedback do you want to collect?         │
-│                                                         │
-│  👤 User: Product reviews with ratings and comments    │
-│                                                         │
-│  🤖 AI: Perfect! I've created a feedback form with:   │
-│       * Product rating (1-5 stars)                     │
-│       * Comment field                                   │
-│       * Customer email (optional)                       │
-│       * Submit to email notification                    │
-│                                                         │
-│  👤 User: Add a field for product category             │
-│                                                         │
-│  🤖 AI: Added a dropdown field with common categories  │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
 
 ## Kärnfunktioner
 
-### Skapa AI-baserade formulär
+Forms Experience Builder har två arbetsflöden för att skapa kraftfulla digitala formulär:
+
+### &#x200B;1. Skapa AI-baserade formulär
 
 **Formulärgenerering för naturligt språk**
 
-Skapa kompletta formulär från grunden med enkla engelska beskrivningar. Beskriv helt enkelt era krav, till exempel&quot;Skapa ett formulär för kundfeedback med klassificeringsskalor och kommentarsfält&quot;, så genererar Forms Experience Builder rätt formulärstruktur, fälttyper och valideringsregler.
+Skapa kompletta formulär från grunden med enkla engelska beskrivningar. Beskriv helt enkelt dina krav, till exempel&quot;Skapa ett formulär för kundfeedback med klassificeringsskalor och kommentarsfält&quot;, så genererar Forms Experience Builder rätt formulärstruktur. Du använder funktionen som bygger upp visuella redigeringsprogram för att lägga till fler fält, valideringsregler och inskickningslogik.
 
 **Dynamisk fälthantering**
 
@@ -67,27 +42,7 @@ Lägg till, ändra eller ta bort formulärfält med konversationskommandon. AI f
 
 **Layoutoptimering**
 
-Uppdatera formulärlayouter och konfigurationer på ett naturligt språk. Begär ändringar som&quot;Gör formuläret mer mobilvänligt&quot; eller&quot;Organisera fält i ett logiskt flöde&quot; så använder Forms Experience Builder lämpliga format- och layoutjusteringar.
-
-### Intelligent import och konvertering
-
-**Konvertering av PDF till formulär**
-
-Förvandla statiska PDF-dokument till interaktiva, dynamiska blanketter. Ladda upp alla PDF-dokument så analyserar Forms Experience Builder strukturen för att skapa ett motsvarande digitalt formulär med lämpliga fälttyper och validering.
-
-**URL till formulärkonvertering**
-
-Konvertera befintliga webbformulär eller webbsidor till AEM Forms. Ange bara en URL så extraherar Forms Experience Builder formulärelementen och återskapar dem som AEM Forms med utökade funktioner.
-
-**Stöd för flera format**
-
-Hantera olika filtyper för att skapa blanketter: PDF, bilder, skärmdumpar och befintliga blankettmallar. Forms Experience Builder kan bearbeta och konvertera dessa till fungerande AEM Forms.
-
-### Avancerad blankettlogik och integration
-
-**Skapa intelligenta regler**
-
-Skapa komplex formulärvalidering och logiska regler för verksamheten med ett naturligt språk. Forms Experience Builder kan generera avancerad villkorsstyrd logik, fältberoenden och valideringsregler som vanligtvis kräver omfattande kodningskunskaper.
+Uppdatera formulärlayouter och konfigurationer på ett naturligt språk. Begär ändringar som&quot;Ändra formulärlayout till guidelayout&quot; och Forms Experience Builder använder lämpliga format- och layoutjusteringar.
 
 **Konfiguration av omfattande överföringsåtgärd**
 
@@ -100,126 +55,86 @@ Konfigurera inskickade formulär så att de kan integreras med era befintliga af
 - **Marknadsplattformar**: Direktintegrering med Marketo för lead-hantering
 - **AEM-arbetsflöden**: Utnyttja befintliga arbetsflödesfunktioner i AEM
 
-**Prestandaanalys**
 
-Analysera formulärkonverteringens prestanda och användarinteraktionsmönster. Forms Experience Builder ger insikter i formuläreffektiviteten och föreslår optimeringar för att förbättra slutförandefrekvensen och användarupplevelsen.
+### &#x200B;2. Intelligent import och konvertering
+
+**Importformat som stöds**
+
+Omvandla befintliga formulär och dokument till interaktiva digitala upplevelser. Forms Experience Builder har stöd för:
+
+- **Acrobat**: Interaktiv PDF forms med befintliga fältstrukturer
+- **XFA PDF-filer**: Komplexa XML-baserade formulärarkitekturer
+- **Platt PDF-fil**: Statiska dokument konverterade till interaktiva formulär
+- **Bilder och skärmbilder**: JPG, PNG-format (kontrollera med team om du har storleksbegränsningar)
+- **Handritade Forms**: Skisser och fotografier av pappersformulär
+
+
+**Intelligent konverteringsprocess**
+
+Det överförda innehållet analyseras till:
+
+- Identifiera fälttyper och relationer
+- Bevara layouten i största möjliga utsträckning
+- Förbättra med modern responsiv design
+- Lägg in avancerad validering och villkorlig logik
+- Optimera för tillgänglighet och mobilupplevelse
 
 ## Så här fungerar det
 
 Forms Experience Builder har en enkel konverteringsmetod:
 
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│  1. Describe    │───▶│  2. AI Creates  │───▶│  3. Refine &    │
-│  Your Form      │    │  Initial Form   │    │  Configure      │
-│  Requirements   │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │
-         │                       │                       │
-         ▼                       ▼                       ▼
-┌─────────────────────────────────────────────────────────────────┐
-│  "Create a loan application form"  →  Form with relevant        │
-│  "Add conditional logic"           →  fields and basic          │
-│  "Connect to CRM system"           →  validation rules          │
-└─────────────────────────────────────────────────────────────────┘
-```
+    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+    │ 1. Beskriv    │───▶│ 2. AI skapar │───▶│ 3. Förfina &amp;    │
+    │ Ditt formulär      │    │ Inledande formulär   │    │ Konfigurera      │
+    │ Krav   │    │                 │    │                 │
+    └─────────────────┘    └─────────────────┘    └─────────────────┘
+    │                       │                       │
+    │                       │                       │
+    ▼                       ▼                       ▼
+    ┌───────────────────────────────────────────────────────────────────────────┐
+    │&quot;Skapa en låneblankett&quot; → Formulär med relevant                  │
+    │ &quot;Lägg till e-postfält&quot;           → fält och grundläggande                          │
+    │ &quot;Ange värdet för e-postfältet som har arkiverats till @firstname@gmail.com&quot; → verifieringsregler   │
+    └───────────────────────────────────────────────────────────────────────────┘
 
-## Exempel på användningsfall
+## Exempelscenarier
 
-### Låneansökningsformulär
+:::: landing-cards-container
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/file-pdf.svg)
 
-```
-┌─────────────────────────────────────────────────────────┐
-│ Loan Application - Multi-Step Form                    │
-├─────────────────────────────────────────────────────────┤
-│ Step 1: Personal Information                           │
-│  🏠 Property Type: [Primary] [Investment] [Commercial] │
-│  💰 Loan Amount: [$_______] (triggers different paths) │
-│  📊 Income Verification: [W2] [Self-Employed] [Other]  │
-│                                                         │
-│ Step 2: Financial Details (conditional based on above) │
-│  ↳ If Self-Employed: Show tax returns, profit/loss     │
-│  ↳ If W2: Show employment history, pay stubs           │
-│  ↳ Complex debt-to-income calculations                 │
-│                                                         │
-│ Step 3: Compliance & Review                            │
-│  📋 Regulatory disclosures, digital signatures         │
-│  🔍 Automated eligibility pre-screening                │
-└─────────────────────────────────────────────────────────┘
-```
+**Omvandla PDF forms till Digital Forms**
 
-### Försäkringsanspråksblankett
+Konvertera Acroforms, XFA PDF:er eller platta PDF-dokument till interaktiva digitala formulär med utökad funktionalitet.
+:::
 
-```
-┌─────────────────────────────────────────────────────────┐
-│ Insurance Claim - Adaptive Form                        │
-├─────────────────────────────────────────────────────────┤
-│ 🚗 Claim Type: [Auto] [Property] [Health] [Business]   │
-│                                                         │
-│ ↳ Auto Selected: Shows accident details, police report │
-│ ↳ Property: Shows damage assessment, repair estimates  │
-│ ↳ Health: Shows medical provider network, pre-auth     │
-│                                                         │
-│ 📎 Dynamic Document Requirements:                       │
-│   * Photos/videos of damage                            │
-│   * Police reports (auto only)                         │
-│   * Medical records (health only)                      │
-│   * Repair estimates (property only)                   │
-│                                                         │
-│ 🔄 Real-time claim status updates                      │
-└─────────────────────────────────────────────────────────┘
-```
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/data-transfer-up.svg)
 
-### Migrerings- och konverteringsscenarier
+**Modernisera äldre XFA Forms**
 
-Omvandla era befintliga formulär till kraftfulla digitala upplevelser med AI-baserad konvertering.
+Förvandla komplexa XFA-applikationer till moderna, tillgängliga digitala upplevelser med förbättrade arbetsflöden.
+:::
 
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/image.svg)
 
-#### Omvandla PDF forms till Digital Forms
+**Konvertera skärmbilder till Digital Forms**
 
-Förvandla PDF forms med olika fält till dynamiska digitala upplevelser med automatiserade beräkningar och mobilresponsiv design.
+Omvandla bilder, skärmbilder eller handritade formulär till fullt fungerande digitala upplevelser.
+:::
+::::
 
-**Viktiga fördelar:**
+<!-- #### Import and Enhance Web Forms
 
-- Automatiserade momsberäkningar och fältberoenden
-- Integrering av digitala signaturer och e-arkivering
-- Mobilresponsiv layoutoptimering
-- 95 % minskning av antalet bearbetningsfel
+Import existing HTML forms and enhance them with advanced features while preserving existing functionality.
 
+**Key benefits:**
 
-#### Modernisering av äldre XFA-baserade formulär
-
-Du kan konvertera komplexa XFA-program till moderna guider i flera steg med validering i realtid och efterlevnad av hjälpmedelsregler.
-
-**Viktiga fördelar:**
-
-- Effektivt gränssnitt för flerstegsguiden
-- Validering i realtid med sammanhangsbaserad hjälp
-- Integrering av myndighetsdatabaser
-- Komplett WCAG 2.1-kompatibilitet
-
-
-#### Konvertera skärmbild av formulär till ett digitalt formulär
-
-Ni kan omvandla alla pappersblanketter till en digital upplevelse. AEM Forms optimerar automatiskt layouten och skapar integrerade digitala formulär från en skärmbild.
-
-**Viktiga fördelar:**
-
-- Intelligent fälttypsidentifiering
-- Optimerad framtagning av responsiv layout
-- Förbättrad validering utöver originalpapper
-- Integreringsförberedd arkitektur
-
-#### Importera och förbättra befintliga webbformulär
-
-Du kan importera ditt befintliga webbformulär och lägga till avancerad validering, villkorsstyrd logik och flerkanalsöverföring i formulären utan att befintliga funktioner bryts.
-
-**Viktiga fördelar:**
-
-- Avancerad valideringslogik och regler
-- Villkorliga fältbeteenden och arbetsflöden
-- Alternativ för flerkanalsöverföring
-- Inbyggd analys och prestandaspårning
+- Advanced validation and business logic
+- Conditional field behaviors
+- Multi-channel submission options
+- Enhanced user experience design -->
 
 ## Forms Experience Builder jämfört med traditionell utveckling
 
@@ -228,46 +143,83 @@ Du kan importera ditt befintliga webbformulär och lägga till avancerad valider
 | **Dags att skapa** | 2-3 dagar | 2-3 timmar |
 | **Teknisk kunskap** | Obligatoriskt | Krävs inte |
 | **Verifieringsregler** | Manuell kodning | Naturligt språk |
-| **Mobiloptimering** | Manuell CSS/JS | Automatisk |
 | **Tillgänglighet** | Manuell implementering | Inbyggd efterlevnad |
-| **Uppdateringar** | Kodändringar krävs | Naturligt språk |
 
 
 ## Fördelar för organisationer
 
-### Demokratiserad blankettgenerering
+:::: landing-cards-container
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/users.svg)
 
-Ge icke-tekniska användare möjlighet att skapa avancerade blanketter utan programmeringskunskaper. Affärsanalytiker, ämnesexperter och innehållsskapare kan direkt översätta sina krav till funktionella formulär genom naturliga språkkonversationer.
+**Demokratiserad formulärgenerering**
 
-### Reducerad tid till värde (TTV)
+Ge icke-tekniska användare möjlighet att skapa avancerade blanketter utan programmeringskunskaper genom naturliga språkkonversationer.
+:::
 
-Snabba upp formulärutvecklingen dramatiskt från dagar till timmar. Det som tidigare krävde omfattande utvecklingscykler kan nu genomföras i en enda session genom konverteringsbaserad AI, vilket möjliggör snabbare time-to-market för digitala initiativ.
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/bolt.svg)
 
-### Gränssnittets tydlighet
+**Reducerad tid till värde (TTV)**
 
-Eliminera inlärningskurvan med ett intuitivt konversationsgränssnitt. Man kan skapa komplexa blanketter på ett naturligt språk istället för att lära sig tekniska verktyg för blankettkonstruktion, vilket minskar utbildningstiden och ökar acceptansen.
+Snabba upp formulärutvecklingen från dagar till timmar och möjliggör snabbare time-to-market för digitala initiativ.
+:::
 
-### Moderniseringsåtgärder för skalförändring
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/lightbulb.svg)
 
-Modernisera befintliga formulärportföljer effektivt. Konvertera befintliga PDF-, XFA- och HTML-formulär till responsiva digitala upplevelser, samtidigt som affärslogiken bevaras och användarupplevelsen förbättras i hela formulärets ekosystem.
+**Gränssnittets enkelhet**
+
+Eliminera inlärningskurvan med ett intuitivt konversationsgränssnitt, minska utbildningstiden och öka acceptansen.
+:::
+
+:::
+![icon](https://cdn.experienceleague.adobe.com/icons/layers.svg)
+
+**Moderniseringsåtgärder för skalförändring**
+
+Modernisera befintliga formulärportföljer effektivt, bevara logiska funktioner och förbättra användarupplevelsen i hela formulärets ekosystem.
+:::
+::::
+
+## Onboarding
+
+Forms Experience Builder är för närvarande tillgängligt som en del av programmet för tidig åtkomst (EA). Du behöver följande information för att kunna delta och få åtkomst:
+
+### Nödvändig information
+
+- **IMS-organisations-ID**: Din Adobe-organisationsidentifierare
+- **Program-ID**: Ditt specifika program-ID i Adobe Experience Cloud
+- **Projektinformation**: Tidslinje, omfång och användningsfall
+- **E-post för officiellt arbete**: Associerad med din organisations Adobe-konto
+
+
+### Så här skaffar du IMS-organisations-ID och program-ID
+
+Detaljerade steg för att hitta ditt IMS-organisations-ID och program-ID finns i:
+
+- [Adobe Experience Cloud guide för organisationskonfiguration](/help/onboarding/cloud-manager-introduction.md)
+- [Program- och miljöhantering](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md)
+
+### Begär åtkomst
+
+1. Samla ditt IMS-organisations-ID och program-ID med hjälp av guiderna ovan
+2. Skicka ett e-postmeddelande till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) och begära åtkomst
+3. Inkludera i din begäran:
+   - Organisationsnamn och IMS-organisations-ID
+   - Program-ID
+   - Projektets tidslinje och omfattning
+   - Planerade användningsfall och verksamhetsmål
+
+>[!IMPORTANT]
+>
+> **Begränsat tillgänglighetsprogram**: Åtkomst till Forms Experience Builder måste godkännas av interna intressenter. Adobe kommer att granska din begäran baserat på programkapacitet och anpassning till kriterier för tidig åtkomst. Godkännandet är inte garanterat och beror på den aktuella programtillgängligheten.
+
+Mer information om programmet för tidig åtkomst och dess funktioner finns i [dokumentationen för AEM Forms tidig åtkomst](/help/forms/early-access-ea-features.md).
+
 
 ## Komma igång
 
 Gå till [Forms Experience Builder-dokumentationen](forms-ai-assistant-getting-started.md) om du vill komma igång med Forms Experience Builder. Du kan öppna Forms Experience Builder via AEM Forms Editor eller Universal Editor, beroende på vilket arbetsflöde du föredrar.
 
 Forms Experience Builder är en kraftfull och intuitiv lösning som kombinerar flexibiliteten i konversationsbaserad AI med tillförlitligheten i blanketthanteringen i enterpriseklass.
-
-## Onboarding och tidig åtkomst
-
-Forms Experience Builder är för närvarande tillgängligt som en del av programmet för tidig åtkomst (EA). Följ de här stegen för att delta och få åtkomst:
-
-1. Kontrollera att du använder den e-postadress till arbetet som är kopplad till din organisation.
-2. Skicka ett e-postmeddelande till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) och begära åtkomst till Forms Experience Builder.
-3. Inkludera organisationens namn och relevant projektinformation i din förfrågan för att underlätta introduktionsprocessen.
-
->[!NOTE]
->
-> Tillgång till Forms Experience Builder är begränsad till godkända deltagare i programmet för tidig åtkomst. Adobe kommer att granska din ansökan och ge dig ytterligare anvisningar om hur du går med i programmet om du är berättigad.
-
-Mer information om programmet för tidig åtkomst och dess funktioner finns i [dokumentationen för AEM Forms tidig åtkomst](/help/forms/early-access-ea-features.md).
-
