@@ -101,7 +101,7 @@ Forms Experience Builder har en enkel konverteringsmetod:
 
 :::: landing-cards-container
 :::
-![icon](https://cdn.experienceleague.adobe.com/icons/file-pdf.svg)
+![icon](https://cdn.experienceleague.adobe.com/icons/file-pdf.svg?lang=sv-SE)
 
 **Omvandla PDF forms till Digital Forms**
 
@@ -117,7 +117,7 @@ Förvandla komplexa XFA-applikationer till moderna, tillgängliga digitala upple
 :::
 
 :::
-![icon](https://cdn.experienceleague.adobe.com/icons/image.svg)
+![icon](https://cdn.experienceleague.adobe.com/icons/image.svg?lang=sv-SE)
 
 **Konvertera skärmbilder till Digital Forms**
 
@@ -150,7 +150,7 @@ Import existing HTML forms and enhance them with advanced features while preserv
 
 :::: landing-cards-container
 :::
-![icon](https://cdn.experienceleague.adobe.com/icons/users.svg)
+![icon](https://cdn.experienceleague.adobe.com/icons/users.svg?lang=sv-SE)
 
 **Demokratiserad formulärgenerering**
 
@@ -158,7 +158,7 @@ Ge icke-tekniska användare möjlighet att skapa avancerade blanketter utan prog
 :::
 
 :::
-![icon](https://cdn.experienceleague.adobe.com/icons/bolt.svg)
+![icon](https://cdn.experienceleague.adobe.com/icons/bolt.svg?lang=sv-SE)
 
 **Reducerad tid till värde (TTV)**
 
@@ -166,7 +166,7 @@ Snabba upp formulärutvecklingen från dagar till timmar och möjliggör snabbar
 :::
 
 :::
-![icon](https://cdn.experienceleague.adobe.com/icons/lightbulb.svg)
+![icon](https://cdn.experienceleague.adobe.com/icons/lightbulb.svg?lang=sv-SE)
 
 **Gränssnittets enkelhet**
 
