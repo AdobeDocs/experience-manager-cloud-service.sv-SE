@@ -81,7 +81,7 @@ Utför följande steg för att använda bildförinställningar på redigeringssi
 
 1. Navigera till webbplatsredigeringssidan.
 1. Utför stegen i avsnittet [Åtkomst till fjärrresurser i AEM Page Editor](/help/assets/integrate-remote-approved-assets-with-sites.md#access-remote-assets-in-aem-page-editor) för att använda panelen [!DNL Asset Selector] för att välja en resurs.
-1. Bläddra nedåt till [!DNL asset selector] på panelen **[!UICONTROL  Preset type]** och ange `Preset=Preset Name` i fältet **[!UICONTROL Image Modifiers]**.
+1. Bläddra nedåt till [!DNL asset selector] på panelen **[!UICONTROL &#x200B; Preset type]** och ange `Preset=Preset Name` i fältet **[!UICONTROL Image Modifiers]**.
 
    ![förinställning](/help/assets/assets/preset-in-asset-selector-panel.png)
 
