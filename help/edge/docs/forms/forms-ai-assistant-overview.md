@@ -6,9 +6,9 @@ hide: true
 index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: fe34b44d02c308e7d18a08dd05f21abc67bd0cb2
+source-git-commit: 6134772ea9916fc17fb7fc8a30e18799a81d4994
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '939'
 ht-degree: 0%
 
 ---
@@ -99,31 +99,38 @@ Forms Experience Builder har en enkel konverteringsmetod:
 
 ## Exempelscenarier
 
-:::: landing-cards-container
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/file-pdf.svg?lang=sv-SE)
-
-**Omvandla PDF forms till Digital Forms**
-
-Konvertera Acroforms, XFA PDF:er eller platta PDF-dokument till interaktiva digitala formulär med utökad funktionalitet.
-:::
-
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/data-transfer-up.svg)
-
-**Modernisera äldre XFA Forms**
-
-Förvandla komplexa XFA-applikationer till moderna, tillgängliga digitala upplevelser med förbättrade arbetsflöden.
-:::
-
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/image.svg?lang=sv-SE)
-
-**Konvertera skärmbilder till Digital Forms**
-
-Omvandla bilder, skärmbilder eller handritade formulär till fullt fungerande digitala upplevelser.
-:::
-::::
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Transform PDF Forms to Digital Forms">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Omvandla PDF forms till Digital Forms</p>
+                    <p class="is-size-6">Konvertera Acroforms, XFA PDF:er eller platta PDF-dokument till interaktiva digitala formulär med utökad funktionalitet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Modernize Legacy XFA Forms">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Modernize Legacy XFA Forms</p>
+                    <p class="is-size-6">Förvandla komplexa XFA-applikationer till moderna, tillgängliga digitala upplevelser med förbättrade arbetsflöden.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Convert Screenshots to Digital Forms">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Konvertera skärmbilder till Digital Forms</p>
+                    <p class="is-size-6">Omvandla bilder, skärmbilder eller handritade formulär till fullt fungerande digitala upplevelser.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- #### Import and Enhance Web Forms
 
@@ -148,39 +155,48 @@ Import existing HTML forms and enhance them with advanced features while preserv
 
 ## Fördelar för organisationer
 
-:::: landing-cards-container
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/users.svg?lang=sv-SE)
-
-**Demokratiserad formulärgenerering**
-
-Ge icke-tekniska användare möjlighet att skapa avancerade blanketter utan programmeringskunskaper genom naturliga språkkonversationer.
-:::
-
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/bolt.svg?lang=sv-SE)
-
-**Reducerad tid till värde (TTV)**
-
-Snabba upp formulärutvecklingen från dagar till timmar och möjliggör snabbare time-to-market för digitala initiativ.
-:::
-
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/lightbulb.svg?lang=sv-SE)
-
-**Gränssnittets enkelhet**
-
-Eliminera inlärningskurvan med ett intuitivt konversationsgränssnitt, minska utbildningstiden och öka acceptansen.
-:::
-
-:::
-![icon](https://cdn.experienceleague.adobe.com/icons/layers.svg)
-
-**Moderniseringsåtgärder för skalförändring**
-
-Modernisera befintliga formulärportföljer effektivt, bevara logiska funktioner och förbättra användarupplevelsen i hela formulärets ekosystem.
-:::
-::::
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Democratized Form Creation">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Demokratiserad blankettgenerering</p>
+                    <p class="is-size-6">Ge icke-tekniska användare möjlighet att skapa avancerade blanketter utan programmeringskunskaper genom naturliga språkkonversationer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Reduced Time to Value (TTV)">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Reducerad tid till värde (TTV)</p>
+                    <p class="is-size-6">Snabba upp formulärutvecklingen från dagar till timmar och möjliggör snabbare time-to-market för digitala initiativ.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Interface Simplicity">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Gränssnittets tydlighet</p>
+                    <p class="is-size-6">Eliminera inlärningskurvan med ett intuitivt konversationsgränssnitt, minska utbildningstiden och öka acceptansen.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Scaling Modernization Efforts">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">Moderniseringsåtgärder för skalförändring</p>
+                    <p class="is-size-6">Modernisera befintliga formulärportföljer effektivt, bevara logiska funktioner och förbättra användarupplevelsen i hela formulärets ekosystem.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Onboarding
 
