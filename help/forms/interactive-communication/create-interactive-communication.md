@@ -7,7 +7,7 @@ role: User, Developer, Admin
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: 17a75e271377d9c7bfdac28c9f3d9d8178b565fd
+source-git-commit: 764cfbbcb8efd407cff85bfc24928aa3f8e5e956
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Med interaktiv kommunikation kan ni skapa, hantera och leverera personaliserad o
 
 Tänk dig att du måste skicka ett kontoutdrag, en försäkring eller en faktura till tusentals kunder. Alla har samma layout men personaliserade data. Interaktiv kommunikation gör detta möjligt på ett effektivt sätt.
 
-![Sök efter IC Docu](/help/forms/interactive-communication/assets/Picture1.png)
+![Sök efter IC Docu](/help/forms/interactive-communication/assets/introimg.png)
 
 Manuell framtagning av dessa dokument kan vara tidskrävande och leder ofta till inkonsekvenser, särskilt när personalisering och dataintegrering krävs. Med Interactive Communication Editor kan man effektivisera arbetet med att skapa interaktiv kommunikation.
 
