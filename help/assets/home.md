@@ -35,7 +35,7 @@ Adobe Enterprise Documentation innehåller mer än en samling användarhandböck
 ### Innehåll och Commerce
 
 + [[!DNL Experience Manager as a Cloud Service]](experience-manager-cloud-service.md)
-+ [Experience Manager Sites Optimizer](https://experienceleague.adobe.com/en/docs/experience-manager-sites-optimizer/content/home)
++ [Experience Manager Sites Optimizer](https://experienceleague.adobe.com/sv/docs/experience-manager-sites-optimizer/content/home)
 + [Experience Manager 6.5 LTS](experience-manager-65-lts.md)
 + [Experience Manager 6.5](experience-manager-65.md)
 + [Experience Manager ](experience-manager-release-information#/help/using/aem-previous-versions.md)
@@ -87,8 +87,8 @@ Adobe Enterprise Documentation innehåller mer än en samling användarhandböck
 
 ### Dokumentation
 
-+ [Acrobat studiematerial och support](https://helpx.adobe.com/support/acrobat.html)
-+ [Acrobat Sign studiematerial och support](https://helpx.adobe.com/support/sign.html)
++ [Acrobat studiematerial och support](https://helpx.adobe.com/se/support/acrobat.html)
++ [Acrobat Sign studiematerial och support](https://helpx.adobe.com/se/support/sign.html)
 
 ### Developer
 
@@ -97,48 +97,48 @@ Adobe Enterprise Documentation innehåller mer än en samling användarhandböck
 
 ### Resurser för Document Cloud
 
-+ [Document Cloud studiematerial och support](https://helpx.adobe.com/support/document-cloud.html)
-+ [Document Cloud Enterprise-självstudiekurser](https://experienceleague.adobe.com/docs/home-tutorials.html#document-cloud-tutorials)
++ [Document Cloud studiematerial och support](https://helpx.adobe.com/se/support/document-cloud.html)
++ [Document Cloud Enterprise-självstudiekurser](https://experienceleague.adobe.com/docs/home-tutorials.html?lang=sv-SE#document-cloud-tutorials)
 + [Adobe-status](https://status.adobe.com/)
-+ [Administratörshandbok](https://helpx.adobe.com/enterprise/admin-guide.html)
++ [Administratörshandbok](https://helpx.adobe.com/se/enterprise/admin-guide.html)
 
 ## Creative Cloud for Enterprise
 
 ### Dokumentation
 
-+ [Creative Cloud studiematerial och support](https://helpx.adobe.com/support/creative-cloud.html)
++ [Creative Cloud studiematerial och support](https://helpx.adobe.com/se/support/creative-cloud.html)
 
 ### Resurser för Creative Cloud for Enterprise
 
 + [Creative Cloud for Enterprise - självstudiekurser](creative-cloud-enterprise-learn#cce-learning-hub)
 + [Adobe-status](https://status.adobe.com/)
 + [Adobe Developer](https://developer.adobe.com/)
-+ [Administratörshandbok](https://helpx.adobe.com/enterprise/admin-guide.html)
++ [Administratörshandbok](https://helpx.adobe.com/se/enterprise/admin-guide.html)
 
 ## Ytterligare resurser {#lists-resources}
 
 ### Resurser i flera moln
 
-+ [Experience League Events](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html#events)
++ [Experience League Events](https://experienceleague.adobe.com/docs/release-notes/experience-cloud/current.html?lang=sv-SE#events)
 + [Adobe-status](https://status.adobe.com/)
 + [Adobe Developer](https://developer.adobe.com/)
-+ [Administratörshandbok](https://helpx.adobe.com/enterprise/admin-guide.html)
++ [Administratörshandbok](https://helpx.adobe.com/se/enterprise/admin-guide.html)
 + [Programvarudistribution](experience-cloud#software-distribution)
 
 ### Resurser för aktivering och administration
 
 + [Experience Cloud Administration](core-services#/help/interface/administration/admin-tool-experience-cloud.md)
-+ [Adobe Enterprise and Teams: Administration Guide](https://helpx.adobe.com/enterprise/managing/user-guide.html) för alla Adobe molnprodukter
++ [Adobe Enterprise and Teams: Administration Guide](https://helpx.adobe.com/se/enterprise/managing/user-guide.html) för alla Adobe molnprodukter
 + [Nöjda kunder: Strategi och tankeledarskap](customer-success#customer-success)
 
 ### Resurser för utbildning och support
 
 + [Versionsinformation för Experience Cloud](release-notes#experience-cloud)
 + [Självstudiekurser](home-tutorials.md)
-+ [Spellistor](https://experienceleague.adobe.com/en/playlists)
++ [Spellistor](https://experienceleague.adobe.com/sv/playlists)
 + [Certifiering](certification#program)
 + [Community-forum](https://experienceleaguecommunities.adobe.com)
-+ [Support](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)
++ [Support](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support)
 
 <!--
 + [Events](events.md)
