@@ -4,7 +4,7 @@ description: Detta är versionsinformationen för version 2025.09.04 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 8ca329ad8fe64ab4c45b01ce5906d51c8db45155
+source-git-commit: 0c380e0faca1db0966d22d056dd1f824a731a7bc
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -24,6 +24,13 @@ Det här är versionsinformationen för den 4 september 2025-versionen av Univer
 
 * Kopiera och klistra in är tillgängligt för [tidiga användare](#copy-paste)
 
+### Ångra/Gör om {#undo-redo}
+
+Ångra och gör om är nu tillgängligt för innehållsförfattare i Universal Editor.
+
+* Detta inkluderar redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt tillägg (eller duplicering), flytt och borttagning av block.
+* Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
+
 ## Funktioner för tidig användning {#early-adopter}
 
 Om du är intresserad av att testa dessa kommande funktioner och dela med dig av dina synpunkter skickar du ett e-postmeddelande till din Adobe Customer Success Manager från den e-postadress som är kopplad till din Adobe ID.
@@ -31,13 +38,6 @@ Om du är intresserad av att testa dessa kommande funktioner och dela med dig av
 ### Ny RTE {#new-rte}
 
 Den nya ProseMirror RTE med en sidväljare i länkdialogrutan är nu tillgänglig på den högra panelen.
-
-### Ångra/Gör om {#undo-redo}
-
-Ångra och gör om är nu tillgängligt för innehållsförfattare i Universal Editor.
-
-* Detta inkluderar redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt tillägg (eller duplicering), flytt och borttagning av block.
-* Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
 
 ### Kopiera/klistra in {#copy-paste}
 
