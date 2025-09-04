@@ -4,9 +4,9 @@ description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: 4fcb17f6fd6db9d33d08574420633b06f18bd9b2
+source-git-commit: 200d0ae5546b5d50e8bad590f496b0fab62f0fe3
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,10 @@ När du har infogat lämpliga ändringar på arbetsytan Express kan du spara dem
 
    ![Spara resurser i AEM](assets/adobe-express-share.png)
 
-2. Välj **AEM Assets** i lagringsavsnittet i den högra rutan. Adobe Express visar dialogrutan för överföring.
+2. Välj **[!UICONTROL Recommended]** AEM Assets **i avsnittet** i den högra rutan. Adobe Express visar dialogrutan för överföring.
+
+   ![Spara resurser i AEM](assets/adobe-express-aem.png)
+
 3. Välj antingen **Aktuell sida** eller **Alla sidor**. Ange ett namn och format för de resurser som ska exporteras. Du kan exportera arbetsytans innehåll i PNG-, JPEG-, PDF-, MP4-, MP4+PNG- eller MP4+JPEG-format. Formatet justeras automatiskt baserat på resursen/resurserna på arbetsytans sida/sidor.
 Om du väljer **Aktuell sida** sparas resursen på den aktuella sidan i målmappen. Om du väljer **Alla sidor** och exportformatet inte är PDF, sparas alla sidor på arbetsytan som separata filer i en ny mapp i målmappen. Om exportformatet är PDF sparas alla arbetsytesidor som en enda PDF-fil i målmappen.
 
@@ -65,20 +68,12 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
 
 7. Klicka på **[!UICONTROL Upload]** för att överföra resurserna till AEM Assets.
 
-Se [Filformat som stöds](asset-properties-content-hub.md#supported-formats).
-
-[!DNL Content Hub] stöder alla resurstyper och format som den underliggande [!DNL Assets]-databasen stöder. I följande tabell visas viktiga filformat i [!DNL the Content Hub], som har ytterligare stöd för att förhandsgranska resurser visuellt:
-
 <table> 
     <tbody>
      <tr>
-      <th><strong>Filtyp</strong></th>
       <th><strong>Format som stöds</strong></th>
       <th><strong>Storlek</strong></th>
      </tr>
-     <tr>
-        <td rowspan="4"> Bild </td>
-    </tr>
     </tr>
     <tr>
         <td>[!UICONTROL JPEG]</td>
@@ -93,44 +88,11 @@ Se [Filformat som stöds](asset-properties-content-hub.md#supported-formats).
         <td> Högst 250 kB</td>
     </tr>
     <tr>
-        <td rowspan="4"> Video </td>
     </tr>
-    </tr>
-    <tr>
-        <td>[!UICONTROL Quicktime]</td>
-        <td> - </td>
     </tr>
     <tr>
         <td>[!UICONTROL MP4]</td>
         <td> 3 840 × 3 840 pixlar, maximalt 200 MB</td>
-    </tr>
-    <tr>
-        <td>[!UICONTROL MPEG]</td>
-        <td> Högst 200 MB </td>
-    </tr>
-    <tr>
-        <td rowspan="4"> Dokument </td>
-    </tr>
-    </tr>
-    <tr>
-        <td>[!UICONTROL txt] (Oformaterad)</td>
-        <td> - </td>
-    </tr>
-    <tr>
-        <td>[!UICONTROL Doc/Docx]</td>
-        <td> - </td>
-    </tr>
-    <tr>
-        <td>[!UICONTROL XML]</td>
-        <td> - </td>
-    </tr>
-    <tr>
-        <td rowspan="2"> Skriv ut media </td>
-    </tr>
-    </tr>
-    <tr>
-        <td>[!UICONTROL PDF]</td>
-        <td> - </td>
     </tr>
     </tbody>
 </table>
@@ -139,7 +101,7 @@ Se [Filformat som stöds](asset-properties-content-hub.md#supported-formats).
 
 1. För import och export är den videofiltyp som stöds MP4.
 
-2. För **MP4-videoimport**, se [filformat som stöds](asset-properties-content-hub.md#supported-formats). Dessutom stöds inte video med genomskinliga bakgrunder (alfakanal).
+2. För **MP4-videoimport** stöds inte videofilmer med genomskinliga bakgrunder (alfakanal).
    <!--
    1. The maximum file size supported is 200 MB. If this limit exceeds, an alert message displays.
    2. The maximum supported resolution is 3840 X 3840 pixels.
