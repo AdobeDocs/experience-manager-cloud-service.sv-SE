@@ -4,9 +4,9 @@ description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: d68ed456b3fe838e71465461f8ab4c7508c7668c
+source-git-commit: 4fcb17f6fd6db9d33d08574420633b06f18bd9b2
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '677'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
 
 7. Klicka på **[!UICONTROL Upload]** för att överföra resurserna till AEM Assets.
 
-## Filformat som stöds {#supported-formats}
+Se [Filformat som stöds](asset-properties-content-hub.md#supported-formats).
 
 [!DNL Content Hub] stöder alla resurstyper och format som den underliggande [!DNL Assets]-databasen stöder. I följande tabell visas viktiga filformat i [!DNL the Content Hub], som har ytterligare stöd för att förhandsgranska resurser visuellt:
 
@@ -133,13 +133,13 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
         <td> - </td>
     </tr>
     </tbody>
-   </table>
+</table>
 
 ## Begränsningar {#limitations}
 
 1. För import och export är den videofiltyp som stöds MP4.
 
-2. För **MP4-videoimport**, se [filformat som stöds](#supported-formats). Dessutom stöds inte video med genomskinliga bakgrunder (alfakanal).
+2. För **MP4-videoimport**, se [filformat som stöds](asset-properties-content-hub.md#supported-formats). Dessutom stöds inte video med genomskinliga bakgrunder (alfakanal).
    <!--
    1. The maximum file size supported is 200 MB. If this limit exceeds, an alert message displays.
    2. The maximum supported resolution is 3840 X 3840 pixels.

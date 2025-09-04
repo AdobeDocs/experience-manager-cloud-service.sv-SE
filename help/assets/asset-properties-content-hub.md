@@ -3,9 +3,9 @@ title: Förhandsgranska resursen och dess egenskaper i  [!DNL the Content Hub]
 description: Lär dig hur du förhandsgranskar resurser och egenskaper i  [!DNL Content Hub]
 role: User
 exl-id: a85af980-4c51-4d30-9fad-afd16370e9db
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: 4fcb17f6fd6db9d33d08574420633b06f18bd9b2
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Innan du använder, delar eller hämtar en resurs kan du visa den närmare. Med 
 * **K:** Stäng förhandsgranskningsskärmen
 * **L:** Information om en resurs som innehåller titel, format, storlek, upplösning, taggar, färgtaggar och smarta taggar.
 
-## Resursformat som stöds {#supported-formats}
+## Filformat som stöds {#supported-formats}
 
 [!DNL Content Hub] stöder alla resurstyper och format som den underliggande [!DNL Assets]-databasen stöder. I följande tabell visas viktiga filformat i [!DNL the Content Hub], som har ytterligare stöd för att förhandsgranska resurser visuellt:
 
@@ -54,46 +54,66 @@ Innan du använder, delar eller hämtar en resurs kan du visa den närmare. Med 
      <tr>
       <th><strong>Filtyp</strong></th>
       <th><strong>Format som stöds</strong></th>
+      <th><strong>Storlek</strong></th>
      </tr>
      <tr>
-      <td>Bild</td>
-      <td>
-        <ul>
-            <li>[!UICONTROL JPEG]</li> 
-            <li>[!UICONTROL PNG]</li> 
-            <li>[!UICONTROL SVG]</li>
-        </ul>
-      </td>
-     </tr>
-     <tr>
-      <td>Video</td>
-      <td>
-        <ul>
-            <li>[!UICONTROL Quicktime]</li>  
-            <li>[!UICONTROL MP4]</li> 
-        </ul>
-      </td>
-     </tr>
-      <tr>
-      <td>Dokument</td>
-      <td>
-        <ul>
-            <li>[!UICONTROL txt] (Oformaterad)</li>  
-            <li>[!UICONTROL Doc/Docx]</li> 
-            <li>[!UICONTROL XML]</li>
-        </ul>
-      </td>
-     </tr>
-     <tr>
-      <td>Skriv ut media</td>
-      <td>
-        <ul>
-            <li>[!UICONTROL PDF]</li>  
-        </ul>
-      </td>
-     </tr>  
+        <td rowspan="4"> Bild </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL JPEG]</td>
+        <td> 8 000 × 8 000 pixlar, maximalt 40 MB</td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL PNG]</td>
+        <td> 8 000 × 8 000 pixlar, maximalt 40 MB</td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL SVG]</td>
+        <td> Högst 250 kB</td>
+    </tr>
+    <tr>
+        <td rowspan="4"> Video </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL Quicktime]</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL MP4]</td>
+        <td> 3 840 × 3 840 pixlar, maximalt 200 MB</td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL MPEG]</td>
+        <td> Högst 200 MB </td>
+    </tr>
+    <tr>
+        <td rowspan="4"> Dokument </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL txt] (Oformaterad)</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL Doc/Docx]</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL XML]</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td rowspan="2"> Skriv ut media </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL PDF]</td>
+        <td> - </td>
+    </tr>
     </tbody>
-   </table>
+</table>
 
 ### Härledda egenskaper {#derived-properties}
 
@@ -105,7 +125,7 @@ Vissa egenskaper för resurser som visas i [!DNL Content Hub] härleds, eller ge
 
 * **Smarta taggar:** [!DNL The Content Hub] använder Adobe Sensei smarta innehållstjänster för att utbilda resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL Experience Manager Assets] använder smarta taggar automatiskt på resurser som standard.
 
-* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=sv-SE) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
+* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
 
 * Överföringsdatum
 
