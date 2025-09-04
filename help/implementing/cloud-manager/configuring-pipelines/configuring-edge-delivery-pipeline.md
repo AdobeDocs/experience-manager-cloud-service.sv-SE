@@ -4,17 +4,17 @@ description: Lär dig hur du lägger till en Edge Delivery-pipeline för att byg
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-badge: label="Privat beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
+badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 hide: false
 index: false
 hidefromtoc: false
-source-git-commit: 62134c5b67d610f801c407e696e761ed05e02c87
+exl-id: 5ad342fa-dd71-4105-a9cb-2d999d402780
+source-git-commit: dbd4ef8d782c9d05e50cab7479adbbc16d6a247d
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
-
 
 # Lägg till en Edge Delivery-pipeline {#configure-production-pipeline}
 

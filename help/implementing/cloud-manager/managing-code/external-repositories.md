@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en extern databas i Cloud Manager. Clo
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: aebda813-2eb0-4c67-8353-6f8c7c72656c
-source-git-commit: 0243251148af4f188785b1ef0e5ee8eeffe6e0bd
+source-git-commit: 7a4fbb5bb217a43a223be01e142458ba9a962cc9
 workflow-type: tm+mt
-source-wordcount: '2321'
+source-wordcount: '2452'
 ht-degree: 0%
 
 ---
@@ -17,14 +17,15 @@ ht-degree: 0%
 
 Lär dig hur du lägger till en extern databas i Cloud Manager. Cloud Manager stöder integrering med GitHub Enterprise-, GitLab- och Bitbucket-databaser.
 
-Kunderna kan nu även införliva sina Azure DevOps-Git-databaser (Beta) i Cloud Manager, med stöd för både moderna Azure DevOps-databaser och äldre VSTS-databaser (Visual Studio Team Services).
+Kunderna kan nu även införliva sina Azure DevOps Git-databaser i Cloud Manager, med stöd för både moderna Azure DevOps-databaser och äldre VSTS-databaser (Visual Studio Team Services).
 
 * För Edge Delivery Services-användare kan den inbyggda databasen användas för att synkronisera och distribuera platskod.
 * För AEM as a Cloud Service- och Adobe Managed Services-användare (AMS) kan databasen länkas till både fullständiga och frontbaserade pipelines.
 
+<!--
 >[!NOTE]
 >
->Det stöd som lagts till för Azure DevOps som beskrivs i den här artikeln är endast tillgängligt via det privata betaprogrammet. Mer information och om du vill registrera dig för betaversionen finns i [Hämta din egen Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket-azure-vsts).
+>The support added for Azure DevOps described in this article is available only through the private beta program. For more details and to sign up for the beta, see [Bring Your Own Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket-azure-vsts). -->
 
 
 ## Konfigurera en extern databas
@@ -121,14 +122,14 @@ Efter valideringen är den externa databasen klar att användas och länkas till
 
 Se även [Hantera åtkomsttoken](/help/implementing/cloud-manager/managing-code/manage-access-tokens.md).
 
->[!TAB Azure DevOps (Beta)]
+>[!TAB Azure DevOps]
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/azure_devops -->
 
 | Alternativ för åtkomsttoken | Beskrivning |
 | --- | --- |
 | **Använd befintlig åtkomsttoken** | Om du redan har angett en åtkomsttoken för databasen för din organisation och har tillgång till flera databaser kan du välja en befintlig token. Använd listrutan **Tokennamn** för att välja den token som du vill använda för databasen. I annat fall lägger du till en ny åtkomsttoken. |
-| **Lägg till ny åtkomsttoken** | <ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Azure DevOps-dokumentationen](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Nödvändig behörighet för Azure DevOps Personal Access Token (PAT).<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webkrockshändelser.<br>När du skapar applösenordet i Azure DevOps måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Databas (skrivskyddad)</li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
+| **Lägg till ny åtkomsttoken** | <ul><li>Skriv ett namn på åtkomsttoken som du skapar i textfältet **Token Name**.<li>Skapa en databasåtkomsttoken med hjälp av [Azure DevOps-dokumentationen](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Nödvändig behörighet för Azure DevOps Personal Access Token (PAT).<br>Dessa behörigheter ger Cloud Manager åtkomst till databasinnehåll, hanterar pull-begäranden och konfigurerar eller reagerar på webkrockshändelser.<br>När du skapar applösenordet i Azure DevOps måste det innehålla följande lösenordsbehörigheter för appen:<ul><li>Kod (läs)</li><li>Kod (status)</li><li>Pull Request Threads (Läs och skriv)</li></ul></li></li></ul></ul></ul><ul><li>Klistra in den token du just skapade i fältet **Åtkomsttoken**. |
 
 Efter valideringen är den externa databasen klar att användas och länkas till en pipeline.
 
@@ -239,13 +240,13 @@ Klistra in hemligheten i en vanlig textfil. Den kopierade hemligheten krävs fö
 | --- |
 | Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Dragningsbegäran: Skapad<li>Pull-begäran: Uppdaterad<li>Dragningsbegäranden: Sammanfogade<li>Pull-begäran: Kommentar<li>Databas: Tryck</li></li></li></ul></ul></ul> |
 
->[!TAB Azure DevOps (Beta)]
+>[!TAB Azure DevOps]
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/azure_devops -->
 
 | Nödvändiga webkrockhändelser och autentisering |
 | --- |
-| Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Databas: Tryck</li></ul>Ange autentisering:<br>1. Skriv **i fältet** Användarnamn för grundläggande autentisering`cloudmanager`.<br>2. I fältet **Grundläggande autentiseringslösenord** skriver du den Webkrockhemlighet som genererats från Cloud Manager användargränssnitt. |
+| Dessa händelser säkerställer att Cloud Manager kan validera pull-begäranden, svara på exekveringar och interagera med kommentarer för samordning av pipeline.<br>Kontrollera att webbkroken är konfigurerad för att aktiveras för följande obligatoriska webkrokrok-händelser<ul><li>Koden har publicerats</li><li>Drag-begäran kommenterad</li><li>Drag-begäran har skapats</li><li>Drag-begäran har uppdaterats</li></ul>Ange autentisering:<br>1. Skriv **i fältet** Användarnamn för grundläggande autentisering`cloudmanager`.<br>2. I fältet **Grundläggande autentiseringslösenord** skriver du den Webkrockhemlighet som genererats från Cloud Manager användargränssnitt. |
 
 >[!ENDTABS]
 
@@ -303,6 +304,25 @@ Använder bekräftelsestatus för spårning av PR-valideringsförlopp. I följan
 
 ![Dra in begärandevalideringsstatus för Bitbucket](/help/implementing/cloud-manager/managing-code/assets/repository-webhook-bitbucket2.png)
 
+>[!TAB Azure DevOps]
+
+Azure DevOps spårar pull-begärandevalidering via statuskontroller. När Cloud Manager kör pull-begärandevalidering läggs statuskontroller till som visas i Azure DevOps pull-begärandegränssnittet.
+
+Vid validering av kodkvalitet visas en statuskontroll att processen pågår:
+
+![Azure DevOps-validering av pull-begäranden med webhooks-1](/help/implementing/cloud-manager/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-1.png)
+
+När valideringen av kodkvaliteten är klar uppdateras statuskontrollen för att återspegla resultatet:
+
+![Azure DevOps-validering av pull-begäranden med webhooks-2](/help/implementing/cloud-manager/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-2.png)
+
+Om valideringen misslyckas visas detaljerad felinformation i statuskontrollinformationen. Du kan klicka på statuskontrollen för att visa det fullständiga valideringsresultatet i Cloud Manager.
+
+![Azure DevOps-validering av pull-begäranden med webhooks-3](/help/implementing/cloud-manager/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-3.png)
+
+För pull-begärankommentarer och feedback lägger Cloud Manager till kommentarer direkt i pull-begäran i Azure DevOps med verifieringsinformation och nödvändiga åtgärder.
+
+![Azure DevOps-validering av pull-begäranden med webhooks-4](/help/implementing/cloud-manager/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
 
 
 >[!ENDTABS]

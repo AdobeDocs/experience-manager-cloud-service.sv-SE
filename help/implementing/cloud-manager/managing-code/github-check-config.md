@@ -1,28 +1,28 @@
 ---
-title: GitHub-kontrollkonfiguration för privata databaser
+title: Pull Request Checks for Private Repositories
 description: Lär dig hur du styr de rörledningar som skapas automatiskt för att validera varje pull-begäran till en privat databas.
 exl-id: 3ae3c19e-2621-4073-ae17-32663ccf9e7b
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0a08d5fc033f4f4f57b824492766e5b42a801b6e
+source-git-commit: 0ec47218d598aad6b225a9d5d8faeab20e606716
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
-# GitHub-kontrollkonfiguration för privata databaser {#github-check-config}
+# Hämta begärandekontroller för privata databaser {#github-check-config}
 
 Lär dig hur du styr de rörledningar som skapas automatiskt för att validera varje pull-begäran till en privat databas.
 
-## Konfiguration av GitHub-kontroller {#configuration}
+## Konfiguration av kontroller av privata databaser {#configuration}
 
 När du använder [privata databaser](private-repositories.md#using) skapas automatiskt en [pipeline för full stackkodkvalitet](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md). Detta tillvägagångssätt startas vid varje uppdatering av pull-begäran.
 
 Du kan kontrollera de här kontrollerna genom att skapa en `.cloudmanager/pr_pipelines.yml`-konfigurationsfil i standardgrenen i den privata databasen.
 
 ```yaml
-github:
+pullRequest:
   shouldDeletePreviousComment: false
   shouldSkipCheckAnnotations: false
 pipelines:

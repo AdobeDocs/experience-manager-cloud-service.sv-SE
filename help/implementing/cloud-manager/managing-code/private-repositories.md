@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 45645a963c42f1335ff2019ffe2aa516ee084a9f
+source-git-commit: 0ec47218d598aad6b225a9d5d8faeab20e606716
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,10 @@ Genom att konfigurera Cloud Manager för integrering med ditt privata GitHub-mol
 >
 >Du kan även lägga till följande typer av databaser med webbhooks:
 >
->* GitHub Enterprise Server-databaser (värdbaserad version av GitHub)
->* GitLab-databaser (både `gitlab.com` och självhanterade versioner av GitLab)
->* Bitbucket-databaser (både `bitbucket.org` och Bitbucket Server, den självhanterade versionen av BitBucket)
+>* GitHub Enterprise Server-databaser (värdbaserad version av GitHub).
+>* GitLab-databaser (både `gitlab.com` och självhanterade versioner av GitLab).
+>* Bitbucket-databaser (både `bitbucket.org` och Bitbucket Server, den självhanterade versionen av BitBucket).
+>* Azure DevOps (både [dev.azure.com](http://dev.azure.com) och självhanterade versioner av Azure DevOps)-databaser.
 >
 >Se [Lägg till externa databaser i Cloud Manager - privat beta](/help/implementing/cloud-manager/managing-code/external-repositories.md).
 
@@ -153,13 +154,13 @@ Validerade privata databaser kan associeras med [rörledningar i full hög och i
 
 
 
-## Användningsinformation {#usage-notes}
+## Begränsningar {#limitations}
 
-* Rörledningar för webbnivå och konfiguration stöds inte i privata databaser.
+Vissa begränsningar gäller när du använder privata databaser med Cloud Manager.
+
 * Ingen Git-tagg skapas och skickas när privata databaser används i produktion av rörledningar i en hel hög.
 * Om Adobe GitHub-appen tas bort från din GitHub-organisation tas funktionen för pull-begärandevalidering bort för alla databaser.
 * Pipeliner som använder privata GitHub Cloud-databaser och utlösaren för att implementera startas inte automatiskt när en ny implementering överförs till den valda grenen.
 * [Återanvändning av felaktigheter](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/setting-up-project.md#build-artifact-reuse) gäller inte för privata databaser.
-* Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager.
-Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.
-* Om GitHub-organisationen har IP-begränsningar skapar du ett supportärende som tar emot listan över IP-adresser som ska tillåtas.
+* Du kan inte pausa pull-begärandevalideringen med GitHub-kontrollen från Cloud Manager. Om GitHub-databasen valideras i Cloud Manager försöker Cloud Manager alltid validera pull-begäranden som skapas för den databasen.
+* Om din GitHub-organisation använder IP-begränsningar öppnar du ett supportärende för att få en lista över IP-adresser som måste tillåtas.
