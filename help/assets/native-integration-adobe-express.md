@@ -4,9 +4,9 @@ description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: d68ed456b3fe838e71465461f8ab4c7508c7668c
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,6 @@ AEM Assets är integrerat med Adobe Express, som gör att du kan komma åt mater
 ## Förutsättningar {#prerequisites}
 
 Tillstånd att få tillgång till Adobe Express och minst en miljö i AEM Assets. Miljön kan vara någon av databaserna i Assets as a Cloud Service eller Assets Essentials.
-
 
 ## Använda AEM Assets i Adobe Express Editor {#use-aem-assets-in-express}
 
@@ -66,19 +65,88 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
 
 7. Klicka på **[!UICONTROL Upload]** för att överföra resurserna till AEM Assets.
 
+## Filformat som stöds {#supported-formats}
+
+[!DNL Content Hub] stöder alla resurstyper och format som den underliggande [!DNL Assets]-databasen stöder. I följande tabell visas viktiga filformat i [!DNL the Content Hub], som har ytterligare stöd för att förhandsgranska resurser visuellt:
+
+<table> 
+    <tbody>
+     <tr>
+      <th><strong>Filtyp</strong></th>
+      <th><strong>Format som stöds</strong></th>
+      <th><strong>Storlek</strong></th>
+     </tr>
+     <tr>
+        <td rowspan="4"> Bild </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL JPEG]</td>
+        <td> 8 000 × 8 000 pixlar, maximalt 40 MB</td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL PNG]</td>
+        <td> 8 000 × 8 000 pixlar, maximalt 40 MB</td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL SVG]</td>
+        <td> Högst 250 kB</td>
+    </tr>
+    <tr>
+        <td rowspan="4"> Video </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL Quicktime]</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL MP4]</td>
+        <td> 3 840 × 3 840 pixlar, maximalt 200 MB</td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL MPEG]</td>
+        <td> Högst 200 MB </td>
+    </tr>
+    <tr>
+        <td rowspan="4"> Dokument </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL txt] (Oformaterad)</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL Doc/Docx]</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td>[!UICONTROL XML]</td>
+        <td> - </td>
+    </tr>
+    <tr>
+        <td rowspan="2"> Skriv ut media </td>
+    </tr>
+    </tr>
+    <tr>
+        <td>[!UICONTROL PDF]</td>
+        <td> - </td>
+    </tr>
+    </tbody>
+   </table>
+
 ## Begränsningar {#limitations}
 
 1. För import och export är den videofiltyp som stöds MP4.
 
-2. För MP4-videoimport:
+2. För **MP4-videoimport**, se [filformat som stöds](#supported-formats). Dessutom stöds inte video med genomskinliga bakgrunder (alfakanal).
+   <!--
+   1. The maximum file size supported is 200 MB. If this limit exceeds, an alert message displays.
+   2. The maximum supported resolution is 3840 X 3840 pixels.
+   3. Videos with transparent backgrounds (alpha channel) are not supported.
+   -->
 
-   1. Den största filstorlek som stöds är 200 MB. Om gränsen överskrids visas ett varningsmeddelande.
-   2. Den högsta upplösningen som stöds är 3 840 × 3 840 pixlar.
-   3. Videor med genomskinliga bakgrunder (alfakanal) stöds inte.
-
-3. För MP4-videoexport:
-
-   1. Den största filstorlek som stöds är 200 MB. Om gränsen överskrids föreslår en varning att videon trimmas till 200 MB eller mindre, eller att den överförs manuellt till AEM Assets målmapp när den har laddats ned.
+3. För **MP4-videoexport** är den största filstorlek som stöds 200 MB. Om gränsen överskrids föreslår en varning att videon trimmas till 200 MB eller mindre, eller att den överförs manuellt till AEM Assets målmapp när den har laddats ned.
 
 
 
