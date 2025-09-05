@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.9.0 i Adobe Experience Manager as a Clou
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 98182e835e10b0b29aa2ae21c2a02562ca64111a
+source-git-commit: 2b82e3b848be828fbf8c316244031a0e06f512ca
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1125'
 ht-degree: 0%
 
 ---
@@ -41,15 +41,12 @@ Nästa planerade version är torsdagen den 2 oktober 2025.
 
   Cloud Manager har nu stöd för konfigureringspipelines med privata databaser över GitHub, Bitbucket, Azure DevOps och GitLab. Se [Pull Request Checks for Private Repositories](/help/implementing/cloud-manager/managing-code/github-check-config.md).
 
-* **Cloud Manager lägger till stöd för ECDSA-certifikat (Elliptic Curve Digital Signature Algorithm)**
+<!--
+### Staging-Only and Production-Only Pipelines {#staging-production-only-pipelines}
 
-  Cloud Manager har nu stöd för ECDSA-certifikat. Funktionen ger stark säkerhet med mindre nyckelstorlekar, vilket gör det möjligt för kunderna att använda lätt modern kryptografi i sina CDN-konfigurationer. <!-- https://jira.corp.adobe.com/browse/CMGR-62399 -->
+Support for [staging-only and production-only pipelines](/help/implementing/cloud-manager/configuring-pipelines/stage-prod-only.md) has been introduced, enabling you to split full-stack production deployment pipelines into smaller, specialized deployments.
 
-### endast mellanlagring och endast produktion {#staging-production-only-pipelines}
-
-Stöd för [endast mellanlagrings- och endast produktionspipelines](/help/implementing/cloud-manager/configuring-pipelines/stage-prod-only.md) har introducerats, vilket gör att du kan dela upp distributionspipelines för fullständig produktion i mindre, specialiserade distributioner.
-
-Om du är intresserad av att testa den här nya funktionen och dela med dig av dina synpunkter skickar du ett e-postmeddelande till `Grp-cloudmanager_splitpipelines@adobe.com` från den e-postadress som är kopplad till din Adobe ID.
+If you are interested in testing this new feature and sharing your feedback, send an email to  `Grp-cloudmanager_splitpipelines@adobe.com` from your email address associated with your Adobe ID. -->
 
 
 ## Beta {#private-beta-program}
@@ -66,13 +63,13 @@ AEM Cloud Service is going to soon support one custom domain per Author environm
 
 Återgå snabbt till en tidigare distribution om den senaste kundkällkoden inte fungerar som förväntat - du behöver inte köra om hela pipelinen eller återställa implementeringar manuellt.<!--https://jira.corp.adobe.com/browse/CMGR-69556 -->
 
-![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**&#x200B;för en vald miljö.*
+![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**för en vald miljö.*
 
 ![Återställ föregående dialogruta för koddistribution](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed-dialogbox.png)
-*I dialogrutan **Återställ tidigare kod som distribuerats**&#x200B;granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
+*I dialogrutan **Återställ tidigare kod som distribuerats**granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
 
 ![Återställer aktiveringen](/help/implementing/cloud-manager/release-notes/assets/restoring-previous-code-deployed-restoring.png)
-*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**&#x200B;tills distributionen är klar.*
+*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**tills distributionen är klar.*
 
 ![Source-kodversionen används](/help/implementing/cloud-manager/release-notes/assets/environments-view-details-sourcecodeversion.png) *Vyn Miljöinformation, som visas ovan, visar nu även den aktiva källkodsversionen som används.*
 
