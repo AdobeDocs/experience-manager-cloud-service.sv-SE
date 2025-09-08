@@ -5,9 +5,9 @@ exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
 solution: Experience Manager Sites
 feature: Authoring, Experience Fragments
 role: User
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 5578cfd1bbe91d904d3f36b67acf610f9196cb7d
 workflow-type: tm+mt
-source-wordcount: '2099'
+source-wordcount: '2142'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Författare vill bara använda AEM för att skapa, men inte för att leverera ti
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Experience Fragments ska användas:
 
 * När ni vill återanvända upplevelser.
    * Upplevelser som återanvänds med samma eller liknande innehåll.
-* När du använder AEM som en innehållsleveransplattform för tredje part.
+* När du använder AEM som en plattform för innehållsleverans för tredje part.
    * Alla lösningar som vill använda AEM som plattform för innehållsleverans.
    * Bädda in innehåll i kontaktpunkter från tredje part.
 * Om du har en upplevelse med olika variationer eller renderingar.
@@ -420,10 +420,10 @@ Information visas i alla vyer av konsolen **Experience Fragments** med **listvyn
       * **Antal webbvarianter** - endast information
       * **Antal icke-webbvarianter** - endast information
       * **Antal sidor som använder det här fragmentet** - endast information
-   * **Cloud Service**
+   * **Molntjänster**
       * **Molnkonfiguration**
-      * **Konfigurationer av Cloud Service**
-      * **Facebook sid-ID**
+      * **Cloud Service-konfigurationer**
+      * **Facebook-sid-ID**
       * **Pinterest board**
    * **Referenser**
       * En lista med referenser
@@ -434,7 +434,7 @@ Information visas i alla vyer av konsolen **Experience Fragments** med **listvyn
 
 ## The Plain HTML Rendition {#the-plain-html-rendition}
 
-Med väljaren `.plain.` i URL:en kan du få åtkomst till den rena HTML-återgivningen via webbläsaren.
+Med väljaren `.plain.` i URL:en kan du komma åt den vanliga HTML-återgivningen via webbläsaren.
 
 >[!NOTE]
 >
@@ -445,6 +445,16 @@ Med väljaren `.plain.` i URL:en kan du få åtkomst till den rena HTML-återgiv
 Att publicera din Experience Fragment är i princip detsamma som att [publicera en sida](/help/sites-cloud/authoring/sites-console/publishing-pages.md) (även om det kommer från Experience Fragments-konsolen eller redigeraren).
 
 Du kan även [publicera till Preview](/help/sites-cloud/authoring/sites-console/previewing-content.md) (igen från Experience Fragments-konsolen eller redigeraren).
+
+>[!CAUTION]
+>
+>Som standard publicerar du rotmappen för Experience Fragments (som finns direkt under `/content/experience-fragments`):
+>
+>* publicerar bara behållarmappen själv
+>* publicerar inga underordnade
+>* återger alla underordnade som redan publicerats
+>
+>Om du vill publicera alla Experience Fragments i mappen måste alla publiceras separat.
 
 ## Exportera Experience Fragments {#exporting-experience-fragments}
 
