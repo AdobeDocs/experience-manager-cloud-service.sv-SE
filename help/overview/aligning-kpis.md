@@ -17,8 +17,8 @@ ht-degree: 0%
 >id="aemcloud_alignkpis"
 >title="Justera KPI:er"
 >abstract="I en digital värld kan du mäta nästan allt. Om ni väljer rätt nyckeltal för er Adobe Experience Manager-implementering kan teamet fokusera på det som är viktigast."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/assessing-kpis.html" text="Utvärderar nyckeltal"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/choose-right-team.html" text="Välja rätt team"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/assessing-kpis.html?lang=sv-SE" text="Utvärderar nyckeltal"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/choose-right-team.html?lang=sv-SE" text="Välja rätt team"
 
 I en digital värld kan du mäta nästan allt. Om du väljer tre nyckeltal för implementeringen av Adobe Experience Manager kan ditt team fokusera på det som är viktigast.
 
