@@ -4,9 +4,9 @@ description: Förstå JSON-kontraktet mellan komponentdefinitionen och den unive
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: e1bb1a54-50c0-412a-a8fd-8167c6f47d2b
-source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
+source-git-commit: 2b945504385ad78ddfb58d210db4212382e9872c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
@@ -94,9 +94,9 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 
 `plugins` definierar vilket plugin-program som ansvarar för att komponenten behålls. Vanliga plugin-program:
 
-* `aem` för AEM as a Cloud Service.
-* `aem5` för AEM 6.5.
-* `xwalk` för AEM as a Cloud Service WYSIWYG.
+* `aem` för [AEM as a Cloud Service.](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service)
+* `aem65` för [AEM 6.5.](https://experienceleague.adobe.com/en/docs/experience-manager-65)
+* `xwalk` för [Redigering med AEM Sites för Edge Delivery Services.](https://www.aem.live/developer/ue-tutorial)
 
 ## `page` eller `cf` {#page-cf}
 
