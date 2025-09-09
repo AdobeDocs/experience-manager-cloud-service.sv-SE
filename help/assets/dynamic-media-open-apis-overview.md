@@ -3,9 +3,9 @@ title: Dynamic Media med OpenAPI-funktioner
 description: Lär dig viktiga begrepp som varför du använder Dynamic Media med OpenAPI-funktioner och hur du aktiverar det.
 role: User
 exl-id: 658b6eff-9f5a-4166-9ff6-5dc8eb92ada3
-source-git-commit: 2b7dc8e25c28c7e537bf19b9ed0518c9adfe7a74
+source-git-commit: 73b1b7f2133a751ea2494d66960a7d225798d1dd
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,13 @@ Dynamic Media med OpenAPI-funktioner ger följande viktiga fördelar:
 * **Datainsikter för att fatta välgrundade beslut (kommande)**: Utöver tillgångshantering och leverans, samlar den in leveransdatainsikter om tillgångsleveranser hos CDN, vilket gör det möjligt för varumärkesansvariga att spåra leveransmått över olika kanaler. Det gör det möjligt för dem att fatta datadrivna beslut för kontinuerlig optimering av resursstyrnings- och leveransstrategier.
 
 ![API-dataflödesdiagram för Dynamic Media Open](assets/dm-openapi-dfd.png)
+
+Information om tillgängliga Dynamic Media-erbjudanden och deras funktioner finns i [Dynamic Media Prime och Ultimate](/help/assets/dynamic-media/dm-prime-ultimate.md).
+
+>[!NOTE]
+>
+>DM Prime-kunder kan använda grundläggande bildmodifierare som rotation, beskärning, vändning, höjd, bredd och kvalitet. Smart Imaging stöder inte AVIF för DM Prime-kunder.
+
 
 ## Förutsättningar för att få tillgång till Dynamic Media med OpenAPI-funktioner {#prerequisites-dynaminc-media-open-apis}
 

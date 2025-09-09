@@ -3,10 +3,10 @@ title: Dynamic Media Prime och Ultimate
 description: Läs mer om Dynamic Media Prime och Ultimate, deras fördelar och skillnader mellan de båda.
 role: User
 exl-id: fd049d9c-7940-4638-a17a-21d1f85e9c52
-source-git-commit: 8b596c6e82d9beaeb922cc6635717f151bb390e7
+source-git-commit: 73b1b7f2133a751ea2494d66960a7d225798d1dd
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 6%
+source-wordcount: '421'
+ht-degree: 5%
 
 ---
 
@@ -30,6 +30,10 @@ Några andra viktiga fördelar med Dynamic Media Prime:
 * Webboptimerad bildleverans
 * Adaptiv videoströmning
 
+>[!NOTE]
+>
+>DM Prime-kunder kan använda grundläggande bildmodifierare som rotation, beskärning, vändning, höjd, bredd och kvalitet. Smart Imaging stöder inte AVIF för DM Prime-kunder.
+
 ### Förutsättningar {#pre-requisites-dm-prime}
 
 * [AEM Sites as a Cloud Service](/help/sites-cloud/authoring/quick-start.md)
@@ -50,8 +54,8 @@ Förutom Dynamic Media Prime-funktioner som AEM Assets-integrering med Adobe ell
 * [Dynamisk medielösning i AEM as a Cloud Service](/help/assets/dynamic-media/dynamic-media.md) som även innehåller följande nyckelfunktioner:
 
    * [Dynamiska mediamallar](/help/assets/dynamic-media/dynamic-media-templates.md)
-   * [Grundläggande om mallar](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
-   * [Visuell konfiguration](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
+   * [Grundläggande om mallar](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
+   * [Visuell konfiguration](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
 
 ### Förutsättningar {#pre-requisites-dm-ultimate}
 

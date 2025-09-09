@@ -3,9 +3,9 @@ title: Leverans-API:er
 description: Lär dig hur du använder leverans-API:erna.
 role: User
 exl-id: 806ca38f-2323-4335-bfd8-a6c79f6f15fb
-source-git-commit: 32344eb9668aefd5efe44a073bc4c66c2496f003
+source-git-commit: 9f7164e99abb6fce3b1bbc6401234996bcd43889
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,18 @@ I följande tabell visas hur de olika tillgängliga leverans-API:erna används:
 | [Spelarbehållare för videoresursen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/videoPlayerDelivery) | Returnerar videoresursens spelarbehållare. Du kan bädda in spelaren i i ett iframe HTML-element och spela upp videon. |
 | [Uppspelningsmanifest i det valda utdataformatet](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/videoManifestDelivery) | Returnerar uppspelningsmanifestfilen för den angivna videoresursen i det valda utdataformatet. Du måste skapa en anpassad spelare som kan hantera adaptiv strömning via HLS- eller DASH-protokoll för att kunna hämta uppspelningsmanifestfilen och spela upp videon. |
 
+>[!IMPORTANT]
+>
+>Du kan testa valfri modifierare, som vanligtvis inte är tillgänglig via experimentella API:er. Exempel: `</adobe/experimental/advancemodifiers-expires-YYYYMMDD/assets>`
+>>Klicka här om du vill veta mer om hur du använder [experimentella API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/how-to/#experimental-apis) och den [fullständiga listan med modifierare](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
+
 Dynamic Media med OpenAPI-funktioner har också stöd för videor med lång form. Videorna har stöd för upp till 50 GB och 2 timmar.
 
 Information om tillgängliga Dynamic Media-erbjudanden och deras funktioner finns i [Dynamic Media Prime och Ultimate](/help/assets/dynamic-media/dm-prime-ultimate.md).
+
+>[!NOTE]
+>
+>DM Prime-kunder kan använda grundläggande bildmodifierare som rotation, beskärning, vändning, höjd, bredd och kvalitet. Smart Imaging stöder inte AVIF för DM Prime-kunder.
 
 ## Slutpunkter för leverans-API:er {#delivery-apis-endpoint}
 
@@ -64,7 +73,7 @@ headers: {
     }
 ```
 
-Om du vill anropa leverans-API:erna krävs en IMS-token i `Authorization`-informationen för att leverera en begränsad resurs. IMS-token hämtas från ett tekniskt konto. Se [Hämta AEM as a Cloud Service-autentiseringsuppgifter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis) för att skapa ett nytt tekniskt konto. Se [Generera åtkomsttoken](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis) för att generera IMS-token och använda den korrekt i huvud för förfrågan-API:er för leverans.
+Om du vill anropa leverans-API:erna krävs en IMS-token i `Authorization`-informationen för att leverera en begränsad resurs. IMS-token hämtas från ett tekniskt konto. Se [Hämta AEM as a Cloud Service-autentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis) för att skapa ett nytt tekniskt konto. Se [Generera åtkomsttoken](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis) för att generera IMS-token och använda den korrekt i huvud för förfrågan-API:er för leverans.
 
 
 Om du vill visa exempel på förfrågningar, svarsexempel och svarskoder läser du [Leverans-API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
