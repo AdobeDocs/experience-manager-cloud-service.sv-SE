@@ -35,7 +35,7 @@ I följande tabell visas hur de olika tillgängliga leverans-API:erna används:
 >[!IMPORTANT]
 >
 >Du kan testa valfri modifierare, som vanligtvis inte är tillgänglig via experimentella API:er. Exempel: `</adobe/experimental/advancemodifiers-expires-YYYYMMDD/assets>`
->>Klicka här om du vill veta mer om hur du använder [experimentella API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/how-to/#experimental-apis) och den [fullständiga listan med modifierare](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
+>&#x200B;>Klicka här om du vill veta mer om hur du använder [experimentella API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/how-to/#experimental-apis) och den [fullständiga listan med modifierare](https://developer.adobe.com/experience-cloud/experience-manager-apis/).
 
 Dynamic Media med OpenAPI-funktioner har också stöd för videor med lång form. Videorna har stöd för upp till 50 GB och 2 timmar.
 
