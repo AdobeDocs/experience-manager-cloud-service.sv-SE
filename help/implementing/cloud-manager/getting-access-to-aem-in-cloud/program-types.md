@@ -40,7 +40,7 @@ Användare har åtkomst till Cloud Manager Git-databasen via en Git-klient med e
 
 När en Git-klient har konfigurerats kan du hantera Git-databasen från Cloud Manager användargränssnitt. Mer information om hur du hanterar Git med Cloud Manager-användargränssnittet finns i [Access Git](/help/implementing/cloud-manager/managing-code/accessing-repos.md).
 
-Om du vill börja utveckla AEM Cloud-programmet ska du checka ut programkoden från Cloud Manager-databasen till din lokala dator.
+Du börjar utveckla AEM Cloud-programmet genom att checka ut programkoden från Cloud Manager-databasen till din lokala dator.
 
 ```java
 $ git clone {URL}
