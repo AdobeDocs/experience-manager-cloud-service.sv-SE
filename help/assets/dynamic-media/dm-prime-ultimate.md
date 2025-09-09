@@ -54,8 +54,8 @@ Förutom Dynamic Media Prime-funktioner som AEM Assets-integrering med Adobe ell
 * [Dynamisk medielösning i AEM as a Cloud Service](/help/assets/dynamic-media/dynamic-media.md) som även innehåller följande nyckelfunktioner:
 
    * [Dynamiska mediamallar](/help/assets/dynamic-media/dynamic-media-templates.md)
-   * [Grundläggande om mallar](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
-   * [Visuell konfiguration](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
+   * [Grundläggande om mallar](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics)
+   * [Visuell konfiguration](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/master-files/vignette-window-covering-cabinet-files)
 
 ### Förutsättningar {#pre-requisites-dm-ultimate}
 
