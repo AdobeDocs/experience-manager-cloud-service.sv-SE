@@ -1,21 +1,21 @@
 ---
-title: Regelredigeraren för Dynamic Forms i Universell redigerare
+title: Regelredigerare för Edge Delivery Services Forms
 description: Skapa dynamiska, intelligenta formulär med regelredigeraren i Universell redigerare. Lägg till villkorsstyrd logik, beräkningar och interaktiva beteenden utan kodning.
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: 03e46bb43e684a6b7057045cf298f40f9f1fe622
+source-git-commit: e2bc958104bd9b75845ad2c213eec18d2560a3a4
 workflow-type: tm+mt
-source-wordcount: '2781'
+source-wordcount: '2780'
 ht-degree: 0%
 
 ---
 
 
-# Regelredigeraren för Dynamic Forms i Universell redigerare
+# Regelredigerare för Edge Delivery Services Forms
 
-Med regelredigeraren kan författare omvandla statiska formulär till responsiva, intelligenta upplevelser - utan att behöva skriva kod. Du kan villkorligt visa fält, utföra beräkningar, validera data, vägleda användare genom flöden och integrera affärslogik som anpassas som persontyp.
+Med regelredigeraren kan författare omvandla statiska formulär till responsiva, intelligenta upplevelser utan att behöva skriva kod. Du kan villkorligt visa fält, utföra beräkningar, validera data, vägleda användare genom flöden och integrera affärslogik som anpassas som persontyp.
 
 ## Vad du kommer att lära dig
 
@@ -308,7 +308,7 @@ Du skapar ett formulär som:
 
 1. **Öppna Universal Editor**:
    - Navigera till AEM Sites-konsolen, markera sidan och klicka på **Redigera**
-   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) är korrekt konfigurerad
+   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) är korrekt konfigurerad
 
 2. **Lägg till formulärkomponenter i den här ordningen**:
    - Titel (H2):&quot;Skatteberäkningsformulär&quot;
@@ -727,7 +727,7 @@ Forms blir kraftfulla verktyg för datainsamling, kvalificering av leads och anv
 
 **Ytterligare resurser**:
 
-- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) för ett bredare sammanhang
+- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) för ett bredare sammanhang
 - [Extension Manager guide](/help/implementing/developing/extending/extension-manager.md) för att aktivera ytterligare funktioner
 - [Edge Delivery Services-formulär](/help/edge/docs/forms/overview.md) för omfattande riktlinjer för formulärutveckling
 

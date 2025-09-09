@@ -6,22 +6,25 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 4aecf84672ea60ad9688a974330a62be0a5fde86
+source-git-commit: 33dcc771c8c2deb2e5fcb582de001ce5cfaa9ce4
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1567'
 ht-degree: 0%
 
 ---
 
-# Använda Invoke Service i Visual Rule Editor för formulär baserade på kärnkomponenter
+# Integrera externa API:er med Visual Rule Editor i Core Component Forms
 
-Visuell regelredigerare i ett adaptivt formulär har stöd för funktionen **Anropa tjänst** som gör att du kan välja en tjänst i listan över formulärdatamodeller (FDM) som är konfigurerade för din instans. Du kan mappa formulärfält direkt till tjänstens indataparametrar. Om du vill mappa formulärfält till utdataparametrarna använder du händelsens nyttolastalternativ för den angivna formulärdatamodellstjänsten. Dessutom kan du med redigeraren för visuella regler skapa regler för hanterare för lyckade och misslyckade åtgärder för **Invoke Service** -åtgärder baserat på dess utdataresvar. Hanterare för lyckade åtgärder hanterar den lyckade körningen av åtgärden **Anropa tjänst**, medan felhanterare åtgärdar eventuella fel som inträffar.
+Visuell regelredigerare i ett adaptivt formulär har stöd för funktionen **Anropa tjänst** som gör att du kan ansluta till externa API:er via formulärdatamodeller (FDM) som konfigurerats för din instans. Du kan mappa formulärfält direkt till tjänstens indataparametrar och använda händelsens nyttolastalternativ för att mappa utdataparametrarna. Med Visual Rule Editor kan du också definiera regler för hanterare för lyckade och misslyckade åtgärder baserat på tjänstens svar: hanterare för lyckade API-anrop hanterar felhanterare.
+
+På så sätt kan du enkelt skicka API-begäranden från formuläret, bearbeta API-svaren och visa eller använda returnerade data dynamiskt i formuläret. Det säkerställer en sömlös integrering mellan era adaptiva formulär och externa system eller datakällor.
+
 
 ## Fördelar med att använda Invoke Service i formulärets regelredigerare
 
 Här är några fördelar med att använda Invoke Service-åtgärden i regelredigeraren för ett tilläggsformulär:
 
-* **Effektiv integrering**: Visuell regelredigerare förenklar processen att integrera externa tjänster eller API:er i din adaptiva Forms. Genom att använda **Invoke Service** kan du enkelt koppla formulär till olika datakällor och tjänster utan att behöva komplex kodning, vilket gör att formulärintegreringen blir mer effektiv.
+* **Effektiv API-integrering**: Visuell regelredigerare förenklar processen att integrera externa tjänster eller API:er i din adaptiva Forms. Genom att använda **Invoke Service** kan du enkelt koppla formulär till olika datakällor och tjänster utan att behöva komplex kodning, vilket gör att formulärintegreringen blir mer effektiv.
 
 * **Dynamisk svarshantering**: Du kan hantera slutförda och felsvar baserat på utdataresvaren i **Invoke Service**, vilket gör att formulär kan reagera dynamiskt på olika scenarier. Det säkerställer att blanketterna hanterar olika förhållanden på ett korrekt sätt, vilket ger större flexibilitet och kontroll.
 
