@@ -174,7 +174,7 @@ Panellayouten organiserar relaterat innehåll i visuellt distinkta avsnitt, så 
 
 **Så här implementerar du**
 
-1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
+1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
 2. Gruppera relaterade fält i varje panel för att upprätthålla en logisk ordning.
 3. Tilldela tydliga beskrivande rubriker till varje panelavsnitt.
 4. Se till att det finns tillräckligt med mellanrum mellan panelerna för att förhindra att det blir rörigt.
@@ -207,7 +207,7 @@ Guiden Layout guidar användarna genom en flerstegsprocess och presenterar ett a
 
 **Så här implementerar du**
 
-1. Infoga [Wizard Component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
+1. Infoga [Wizard Component](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
 2. Dela upp formuläret i logiska steg, helst mellan 3 och 7, så att varje steg är fokuserat och hanterbart.
 3. Lägg till förloppsindikatorer som hjälper användarna att förstå sin position i processen.
 4. Ange tydliga navigeringskontroller, som knapparna Nästa, Bakåt och Spara.
@@ -247,7 +247,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 **Så här implementerar du**
 
-1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
+1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
 2. Gruppera relaterat valfritt eller sekundärt innehåll i varje dragspelssektion.
 3. Använd tydliga, beskrivande rubriker för varje avsnitt för att hjälpa användarna förstå vilken information som finns i avsnittet.
 4. Ange lämpliga standardlägen för öppna och stängda för varje avsnitt baserat på prioritet och användarbehov.
