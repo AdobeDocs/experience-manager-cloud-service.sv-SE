@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 597315a7d569ebd62243322c543627b7a3535a6b
+source-git-commit: c5a21f14bc3b09200f5513b1e1221c9dabb061af
 workflow-type: tm+mt
-source-wordcount: '2252'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 Den tunna blå konturen ändras till en blå kontur som anger att den är markerad och en markör visas. Gör ändringarna och tryck sedan på Enter eller markera utanför textrutan för att spara ändringarna.
 
-När du väljer att markera textkomponenten visas information om den på [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail). Du kan också redigera texten på panelen.
+När du markerar textkomponenten visas information om den på [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail). Du kan också redigera texten på panelen.
 
 ![Redigera text på egenskapspanelen](assets/ue-editing-text-component-rail.png)
 
@@ -172,13 +172,27 @@ Den markerade komponenten har tagits bort.
 
    ![Ändra ordning på komponenter](assets/ue-reordering-components.png)
 
-1. Den dragna komponenten blir grå i innehållsträdet medan insättningspunkten representeras av en blå linje. Släpp komponenten för att placera den på dess nya plats.
+1. Den dragna komponenten är nedtonad i innehållsträdet, medan insättningspunkten representeras av en blå linje. Släpp komponenten för att placera den på dess nya plats.
 
 Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 
 >[!NOTE]
 >
 >Komponenter kan bara flyttas mellan behållare om målbehållarna [komponentfiltret](/help/implementing/universal-editor/filtering.md) tillåter den valda komponenten.
+
+### Ångra och Gör om {#undo-redo}
+
+Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
+
+![Ångra-ikon](assets/undo.png)
+![Ikonen Gör om ](assets/redo.png)
+
+* Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
+* Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
+
+>[!TIP]
+>
+>Använd snabbtangenten `Command-Z` eller `Shift-Command-Z` för att ångra respektive göra om.
 
 ## Förhandsgranska innehåll {#previewing-content}
 

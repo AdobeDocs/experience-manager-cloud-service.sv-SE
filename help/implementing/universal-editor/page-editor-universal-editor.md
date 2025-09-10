@@ -4,9 +4,9 @@ description: Sidredigeraren stöds fortfarande av Adobe, men den universella red
 feature: Developing
 role: Admin, Architect, Developer
 exl-id: 0a13fb52-623e-4aff-b254-186d8d117e4d
-source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
+source-git-commit: fd52e51c336e65ae698c5102cbe00b90e7038b5e
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ Eftersom luckan mellan de två redigerarna ständigt krymper bör du läsa versi
 | Klipp ut/kopiera/klistra in block | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Planerad |
 | Använd format | [!BADGE Tillgänglig]{type=Positive} | Format kan användas på komponenter med [Style System.](/help/sites-cloud/authoring/page-editor/style-system.md) | [!BADGE Tillgänglig]{type=Positive} | Du kan använda format med vanliga komponentegenskaper (eller Content Fragment). Samma formatväljare är inte tillgänglig i Universal Editor, men om du använder en flervalswidget kan du uppnå ett mycket liknande användargränssnitt. |
 | Använd layout | [!BADGE Tillgänglig]{type=Positive} | Webbplatser måste implementera [AEM responsiva stödraster](/help/implementing/developing/introduction/responsive-design.md) för att författare ska kunna ändra storlek på komponenter över tre fördefinierade brytpunkter. | [!BADGE Tillgänglig]{type=Positive} | Layouter kan användas med vanliga komponentegenskaper (eller Content Fragment), men det responsiva stödrastret stöds inte. |
-| Ångra-Gör om | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Planerad |
+| Ångra-Gör om | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | Publicera (även för förhandsgranskning) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | [Starta arbetsflöde](/help/sites-cloud/authoring/workflows/overview.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Tillgängligt som tillägg |
 | Kommentarer | [!BADGE Tillgänglig]{type=Positive} | Använda [anteckningar](/help/sites-cloud/authoring/page-editor/annotations.md) | [!BADGE Inte tillgänglig]{type=Negative} | Planerad |

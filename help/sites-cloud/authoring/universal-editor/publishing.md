@@ -5,9 +5,9 @@ exl-id: aee34469-37c2-4571-806b-06c439a7524a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 3288edacba909335f8109eee7e1e793abe5a8343
+source-git-commit: fd52e51c336e65ae698c5102cbe00b90e7038b5e
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ När du som innehållsförfattare är redo att publicera ditt innehåll behöver
 
 ![Publicerar sidor](assets/publish-menu.png)
 
-1. Tryck eller klicka på ikonen **Publicera** i den universella redigerarens verktygsfält.[&#128279;](/help/sites-cloud/authoring/universal-editor/navigation.md#publish)
+1. Tryck eller klicka på ikonen [Publicera **i den universella redigerarens verktygsfält.**](/help/sites-cloud/authoring/universal-editor/navigation.md#publish)
 1. Om du har en [förhandsgranskningstjänst](/help/sites-cloud/authoring/sites-console/previewing-content.md) tillgänglig kan du välja var du vill publicera ditt innehåll, antingen till **[Förhandsgranska](/help/sites-cloud/authoring/sites-console/previewing-content.md)** (om den är tillgänglig) eller **Publicera**.
-1. I avsnittet **Objekt** visas innehållet som ingår i publikationen, inklusive:
+1. I avsnittet **Objekt** visas innehållet som ingår i publikationen. Tryck eller klicka på **Visa** för att visa information som:
    * **Nya** objekt som ännu inte har publicerats.
    * **Ändrat** innehåll som har publicerats, men ändrats sedan den senaste publikationen.
    * **Publicerat** innehåll som har publicerats och inte ändrats sedan den publiceringen.

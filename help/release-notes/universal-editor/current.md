@@ -4,9 +4,9 @@ description: Detta är versionsinformationen för version 2025.09.04 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 0c380e0faca1db0966d22d056dd1f824a731a7bc
+source-git-commit: 96524d433d5b8637d0e21186fd465bd550035bde
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,9 @@ Det här är versionsinformationen för den 4 september 2025-versionen av Univer
 ## Nyheter {#what-is-new}
 
 * Kopiera och klistra in är tillgängligt för [tidiga användare](#copy-paste)
-
-### Ångra/Gör om {#undo-redo}
-
-Ångra och gör om är nu tillgängligt för innehållsförfattare i Universal Editor.
-
-* Detta inkluderar redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt tillägg (eller duplicering), flytt och borttagning av block.
-* Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
+* [Ångra och gör om](/help/sites-cloud/authoring/universal-editor/authoring.md#undo-redo) är nu tillgängligt för innehållsförfattare.
+   * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
+   * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -47,8 +43,3 @@ Kopiera och klistra in komponenter på samma sida är nu tillgängligt för inne
 
 * Utformningen av redigeringsverktygsfältet har uppdaterats för att bättre överensstämma med den kommande nya textredigeringsfunktionen.
 * Filtren i resursväljarens dialogruta har återställts.
-
-## Undertryckningar {#deprecations}
-
-* Komponenterna `text-input` och `text-area` togs officiellt bort med [release 2025.07.09.](/help/release-notes/universal-editor/2025/2025-07-09.md)
-   * I `model-definition.json` använder du textkomponenten för att skapa textinmatningar för egenskapspanelen.

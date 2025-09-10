@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 91799e32f363aca268a89a7eebcb5001c5295cc5
+source-git-commit: c5a21f14bc3b09200f5513b1e1221c9dabb061af
 workflow-type: tm+mt
-source-wordcount: '1782'
+source-wordcount: '1854'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -89,15 +89,9 @@ Här visas den organisation du är inloggad på. Välj om du vill byta till en a
 
 ![Organisationsindikator](assets/organization.png)
 
-#### Lösningar {#solutions}
+#### Help Center {#help}
 
-Om du trycker eller klickar på lösningens väljare kan du snabbt gå över till andra Experience Cloud-lösningar.
-
-![Lösningsväljare](assets/solutions.png)
-
-#### Hjälp {#help}
-
-Hjälpikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
+Hjälpcentsikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
 
 ![Hjälp](assets/help.png)
 
@@ -107,9 +101,15 @@ Den här ikonen är märkt med antalet för närvarande tilldelade ofullständig
 
 ![Meddelanden](assets/notifications.png)
 
-#### Användaregenskaper {#user-properties}
+#### Appar {#solutions}
 
-Välj den ikon som representerar användaren för att få åtkomst till dina användarinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
+Om du knackar på eller klickar på appväljaren kan du snabbt gå över till andra Experience Cloud-lösningar.
+
+![Appväxlare](assets/solutions.png)
+
+#### Konto {#user-properties}
+
+Välj den ikon som representerar din användare för att få åtkomst till dina kontoinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
 
 ![Användaregenskaper](assets/user-properties.png)
 
@@ -135,6 +135,8 @@ På startsidan anger du URL-adressen till den webbplats som du vill redigera med
 >
 >Alla sidor som du vill redigera med den universella redigeraren måste vara [instrumenterade för att stödja den universella redigeraren](/help/implementing/universal-editor/getting-started.md).
 
+I avsnittet **Snabblänkar** får du tillgång till hjälpresurser och i avsnittet **Senaste** finns länkar till sidor som du nyligen öppnat med den universella redigeraren.
+
 #### Platsfält {#location-bar}
 
 Platsfältet visar adressen till sidan som du redigerar. Välj det här alternativet om du vill ange adressen till en annan sida som ska redigeras.
@@ -149,21 +151,32 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 >
 >Alla sidor som du vill redigera med den universella redigeraren måste vara [instrumenterade för att stödja den universella redigeraren](/help/implementing/universal-editor/getting-started.md).
 
-#### Inställningar för autentiseringshuvud {#authentication-settings}
+#### Ångra och Gör om {#undo-redo}
 
-Välj ikonen med inställningar för autentiseringshuvudet om du behöver [ange ett anpassat autentiseringshuvud för lokal utveckling](/help/implementing/universal-editor/developer-overview.md#auth-header).
+Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren. Mer information finns i dokumentet [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md#undo-redo).
+
+![Ångra-ikon](assets/undo.png)
+![Ikonen Gör om ](assets/redo.png)
+
+>[!TIP]
+>
+>Använd snabbtangenten `Command-Z` eller `Shift-Command-Z` för att ångra respektive göra om.
+
+#### Autentiseringsrubriker {#authentication-settings}
+
+Välj ikonen för autentiseringshuvuden om du behöver [ange en anpassad autentiseringshuvud för lokal utveckling](/help/implementing/universal-editor/developer-overview.md#auth-header).
 
 ![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
 
-#### Emulatorinställningar {#emulator}
+#### Responsivt läge {#emulator}
 
-Välj emuleringsikonen för att definiera hur den universella redigeraren ska återge sidan.
+Välj ikonen för svarsläge för att definiera hur sidan ska återges i den universella redigeraren.
 
-![Emulatorikon](assets/emulator.png)
+![Ikon för responsivt läge](assets/emulator.png)
 
-Om du trycker eller klickar på emuleringsikonen visas alternativen.
+Om du trycker eller klickar på ikonen för responsivt läge visas alternativen.
 
-![Emuleringsalternativ](assets/emulation-options.png)
+![Alternativ för responsivt läge](assets/emulation-options.png)
 
 Som standard öppnas redigeraren i skrivbordslayout där höjd och bredd definieras automatiskt av webbläsaren.
 
@@ -173,7 +186,7 @@ Du kan också välja att emulera en mobil enhet och i Universell redigerare:
 * Definiera bredd och höjd
 * Ändra orientering
 
-#### Förhandsgranskningsläge {#preview-mode}
+#### Förhandsgranska {#preview-mode}
 
 I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i din publicerade tjänst. Det gör att innehållsförfattaren kan navigera i innehållet genom att klicka på länkar och så vidare.
 
