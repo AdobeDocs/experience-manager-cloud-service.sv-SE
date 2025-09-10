@@ -4,9 +4,9 @@ description: Läs mer om AEM Content Fragment Delivery med OpenAPI
 feature: Headless, Content Fragments, Edge Delivery Services
 role: Admin, Developer
 exl-id: b298db37-1033-4849-bc12-7db29fb77777
-source-git-commit: dd7d2b5553e4ecac7a9955e83da1cab077c74127
+source-git-commit: de161d6707dcb8cedf032ee1f286d79e733be94d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,14 @@ CORS tillåtna ursprung som definieras på dispatcherkonfigurationssidan, specie
 API:t tillåter nya begäranden med en hastighet av upp till 200 begäranden per sekund och miljö.
 
 När gränsen har överskridits börjar API:t skicka [429-felsvar](https://www.rfc-editor.org/rfc/rfc6585#section-4). Dessa fel måste hanteras av alla klientprogram, och misslyckade begäranden som försöks igen efter ett exponentiellt fel. HTTP-svaret innehåller ett specifikt huvud, `Retry-After`, som anger för klienten hur lång tid de måste vänta innan begäran skickas igen.
+
+## Autentiserade begäranden {#authenticated-requests}
+
+Stöd för autentiserade begäranden kan implementeras med Edge-nyckeln [AEM CDN](/help/implementing/dispatcher/cdn-credentials-authentication.md). Med AEM CDN Edge-tangenten kan du förlita dig på AEM CDN och se till att endast specifika begäranden har åtkomst till API:t, baserat på den angivna Edge-nyckelrubriken.
+
+>[!NOTE]
+>
+>Auktorisering baserat på databasspecifika ACL:er stöds för närvarande inte.
 
 <!-- 
 ## Limitations {#limitations}
