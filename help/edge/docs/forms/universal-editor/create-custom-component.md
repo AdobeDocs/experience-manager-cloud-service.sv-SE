@@ -520,13 +520,13 @@ Det äldre sättet att göra detta är att manuellt följa stegen som beskrivs n
 
 10. **Uppdatera _component-definition.json**: I `models/_component-definition.json` uppdaterar du arrayen i gruppen med `id custom-components` med ett objekt på följande sätt:
 
-   ```javascript
-   {
-   "...":"../blocks/form/components/cards/_cards.json#/definitions"
-   }
-   ```
+    ```javascript
+    {
+    "...":"../blocks/form/components/cards/_cards.json#/definitions"
+    }
+    ```
 
-   Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
+    Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
 
 11. **Kör build:json script**: Kör `npm run build:json` för att kompilera och sammanfoga alla komponent-JSON-definitioner till en enda fil som ska hanteras från servern. Detta garanterar att den nya komponentens schema inkluderas i de sammanfogade utdata.
 
