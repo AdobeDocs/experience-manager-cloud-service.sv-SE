@@ -5,9 +5,9 @@ feature: Operations
 role: Admin
 badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: 8f804f55-a66d-47ad-a48d-61b861cef4f7
-source-git-commit: fcc066945d1e44072c4718dd9c1d887dd97be0b6
+source-git-commit: 650ef846b469337c96e728277af02ca890e85117
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -30,13 +30,15 @@ Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsm
 
 Funktionen **Återställ föregående kod som distribuerats** blir bara tillgänglig när **var**-villkoret nedan är sant:
 
+* Endast en återställning tillåts per lyckad pipeline-körning. Om du vill återställa igen kan du slutföra en annan lyckad pipeline-körning.
 * Du har **behörighet att återställa miljön**. Mer information om hur du hanterar behörigheter finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
 * Din organisation är registrerad i betaprogrammet och funktionsflaggan är aktiverad.
 * Programmet körs på AEM as a Cloud Service.
-* Den valda miljön är en `Development`-miljö (temporär Beta-gräns).
+* Återställning av tidigare källkod kan göras i en `Development`-miljö, `Stage`-miljö eller en `Specialized Testng Environment` .
 * Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 30 dagar** sedan.
 * Miljöstatusen är *Körs* och ingen pipeline pågår.
 
+Återställ Den valda miljön är en `Development`-, scen- eller specialiserad testmiljö.
 Om en kontroll misslyckas öppnar Cloud Manager följande dialogruta med en eller flera villkor som inte uppfylls och **Bekräfta** inaktiveras, vilket förhindrar återställning.
 
 ![Dialogrutan Återställ tidigare kod för distribuerat fel](/help/operations/assets/restore-previous-code-deployment-not-allowed.png).

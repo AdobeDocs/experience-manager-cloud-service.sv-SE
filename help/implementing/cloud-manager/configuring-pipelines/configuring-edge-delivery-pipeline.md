@@ -9,9 +9,9 @@ hide: false
 index: false
 hidefromtoc: false
 exl-id: 5ad342fa-dd71-4105-a9cb-2d999d402780
-source-git-commit: dbd4ef8d782c9d05e50cab7479adbbc16d6a247d
+source-git-commit: b367e7d62596c33a4ba399008e856a97d12fb45b
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ Lär dig hur du konfigurerar Edge Delivery-pipelines för att bygga och driftsä
 
 En användare måste ha rollen **[Distributionshanteraren](/help/onboarding/cloud-manager-introduction.md#role-based-permissions)** för att kunna konfigurera produktionspipelines.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >En Edge Delivery-pipeline kan inte konfigureras förrän följande har inträffat:
 >
->* Ett program som innehåller en Edge Delivery Services-webbplats och en mappad domän skapas. I annat fall visas alternativet **Lägg till Edge Delivery Pipeline** inaktiverat i användargränssnittet och ett verktygstips förklarar saknade krav.
->* Git-databasen har minst en gren.
->* Produktions- och mellanlagringsmiljöerna skapas.
+>* Ett program som innehåller en Edge Delivery Services-webbplats och en mappad domän skapas. I annat fall visas alternativet **Lägg till Edge Delivery Pipeline** inaktiverat i användargränssnittet och ett verktygstips förklarar saknade krav. Se [Skapa en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md)
+>* Git-databasen har minst en gren. Se [Hantera databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/managing-repositories.md).
+>* Produktions- och mellanlagringsmiljöerna skapas. Se [Introduktion till CI/CD-pipeline](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md).
 
 <!-- CMGR‑69680 -->
 
@@ -41,7 +41,9 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 
 **Så här lägger du till en Edge Delivery-pipeline:**
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj önskad organisation.
+1. Logga in på Cloud Manager på [experience.adobe.com/experiencemanager](https://my.cloudmanager.adobe.com/) och klicka sedan på **Cloud Manager** i den vänstra panelen.
+
+1. Välj önskad organisation.
 
 1. På sidan **Mina program** väljer du det program du vill ha.
 

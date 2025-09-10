@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: b367e7d62596c33a4ba399008e856a97d12fb45b
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1523'
 ht-degree: 0%
 
 ---
@@ -445,8 +445,9 @@ Anslutningar till originalen är endast SSL och använder port 443.
 
 Det finns scenarier där ursprungsväljare ska användas för att dirigera trafik via AEM Publish till AEM Edge Delivery Services:
 
-* Visst innehåll levereras av en domän som hanteras av AEM Publish, medan annat innehåll från samma domän levereras av Edge Delivery Services
-* Innehåll som levereras av Edge Delivery Services kan utnyttja regler som distribueras via konfigurationsflödet, inklusive trafikfilterregler eller begäran-/svarsomvandlingar
+* Visst innehåll levereras av en domän som hanteras av AEM Publish, medan annat innehåll från samma domän levereras av Edge Delivery Services.
+* Innehåll som levereras av Edge Delivery Services kan utnyttja regler som distribueras via konfigurationsflödet, inklusive trafikfilterregler eller begäran-/svarsomvandlingar.
+* Med Edge Delivery konfigurationsflöde kan du konfigurera Adobe-hanterade CDN-inställningar genom att definiera regler som `trafficFilters`, `originSelectors` och `redirects`. <!-- https://wiki.corp.adobe.com/pages/editpage.action?pageId=3610084282 -->
 
 Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
 
@@ -474,7 +475,8 @@ data:
 ```
 
 >[!NOTE]
-> Eftersom det hanterade CDN-nätverket för Adobe används, måste du konfigurera push-ogiltigförklaring i **hanterat** läge genom att följa Edge Delivery Services [Setup invalidation documentation](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
+>
+>Eftersom det hanterade CDN-nätverket för Adobe används, måste du konfigurera push-ogiltigförklaring i **hanterat** läge genom att följa Edge Delivery Services [Setup invalidation documentation](https://www.aem.live/docs/byo-dns#setup-push-invalidation).
 
 
 ## Serveromdirigeringar {#server-side-redirectors}
