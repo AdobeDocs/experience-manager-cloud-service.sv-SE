@@ -6,15 +6,15 @@ feature: Edge Delivery Services
 role: User, Developer
 level: Beginner
 exl-id: 0c7fb491-4bad-4202-a472-87e6e6d9ab40
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2443'
 ht-degree: 0%
 
 ---
 
 
-# Skapa responsiva Forms med Universal Editor
+# Skapa responsiv Forms med Universal Editor - en komplett guide
 
 Det moderna webblandskapet kräver formulär som fungerar smidigt på ett ständigt växande spektrum av enheter och skärmstorlekar. Från stora skärmar till kompakta smarttelefoner - användarna förväntar sig enhetliga, intuitiva upplevelser oavsett vilken enhet de väljer. Det är inte längre valfritt att skapa responsiva formulär - det är ett grundläggande krav för att kunna leverera professionella, tillgängliga och konverteringsoptimerade digitala upplevelser.
 
@@ -33,20 +33,21 @@ Att skapa responsiva formulär innebär två huvudsakliga aktiviteter:
 - Felsöka vanliga problem med responsiva formulär
 - Optimera formulär för mobila prestanda
 
-## Varför responsiv Forms är viktigt
+<!--
+## Why Responsive Forms Are Important
 
-**Användarupplevelseeffekt:**
+**User Experience Impact:**
 
-- Över 60 % av användarna har tillgång till formulär på mobila enheter
-- Dåliga mobilupplevelser ger 67 % högre avhopp
-- Responsiva formulär kan öka slutförandegraden med upp till 25 %
+- Over 60% of users access forms on mobile devices
+- Poor mobile experiences result in a 67% higher abandonment rate
+- Responsive forms can increase completion rates by up to 25%
 
-**Affärsfördelar:**
+**Business Benefits:**
 
-- Snabbare ifyllnad av formulär
-- Bättre nöjda användare
-- Bättre tillgänglighet
-- Lägre utvecklings- och underhållskostnader
+- Higher form completion rates
+- Improved user satisfaction
+- Enhanced accessibility compliance
+- Lower development and maintenance costs-->
 
 >[!TIP]
 >
@@ -173,7 +174,7 @@ Panellayouten organiserar relaterat innehåll i visuellt distinkta avsnitt, så 
 
 **Så här implementerar du**
 
-1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
+1. Lägg till [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) i formuläret.
 2. Gruppera relaterade fält i varje panel för att upprätthålla en logisk ordning.
 3. Tilldela tydliga beskrivande rubriker till varje panelavsnitt.
 4. Se till att det finns tillräckligt med mellanrum mellan panelerna för att förhindra att det blir rörigt.
@@ -206,7 +207,7 @@ Guiden Layout guidar användarna genom en flerstegsprocess och presenterar ett a
 
 **Så här implementerar du**
 
-1. Infoga [Wizard Component](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
+1. Infoga [Wizard Component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) i formuläret.
 2. Dela upp formuläret i logiska steg, helst mellan 3 och 7, så att varje steg är fokuserat och hanterbart.
 3. Lägg till förloppsindikatorer som hjälper användarna att förstå sin position i processen.
 4. Ange tydliga navigeringskontroller, som knapparna Nästa, Bakåt och Spara.
@@ -246,7 +247,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 **Så här implementerar du**
 
-1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
+1. Lägg till [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) i formuläret.
 2. Gruppera relaterat valfritt eller sekundärt innehåll i varje dragspelssektion.
 3. Använd tydliga, beskrivande rubriker för varje avsnitt för att hjälpa användarna förstå vilken information som finns i avsnittet.
 4. Ange lämpliga standardlägen för öppna och stängda för varje avsnitt baserat på prioritet och användarbehov.
@@ -295,7 +296,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 +++
 
-+++Tablet Optimization (768px-1199px)
++++Optimering för surfplatta (768px-1199px)
 
 **Layout och användbarhet:**
 
@@ -306,7 +307,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 +++
 
-+++Desktop Optimization (1 200 px+)
++++Optimering för datorer (1 200 px+)
 
 **Avancerade funktioner och layout:**
 
@@ -316,6 +317,40 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 - Erbjud avancerad validering med tydliga, detaljerade felmeddelanden för komplexa formulär.
 
 +++
+
+## Konfigurera anpassade layouter med brytpunkter för mediefrågor
+
+När du skapar anpassade layouter för komponenter i Adaptiv Forms med **Universal Editor** måste du definiera responsivt beteende med **CSS media query breakpoints** . Detta säkerställer att formulär återges korrekt på olika enheter och skärmstorlekar.
+
+**Rekommenderade brytpunkter (baserat på AEM Core-komponenter)**
+
+| **Enhetstyp** | **Rekommenderad brytpunkt** |
+|-----------------|---------------------------|
+| **Skrivbord** | `min-width: 1200px` |
+| **Surfplatta** | `min-width: 768px and max-width: 1199px` |
+| **Mobil** | `max-width: 767px` |
+
+**Nyckelpunkter**
+
+- Använd dessa brytpunkter för att styra hur komponenter ändrar storlek, staplar eller döljs på olika enheter.
+- Följ organisationens riktlinjer för responsiv design för ett enhetligt användargränssnitt.
+- Testa layouterna på olika enheter och i olika orienteringar för att säkerställa användbarhet och tillgänglighet.
+
+```css
+/* Example: Stack form fields on smaller screens */
+@media (max-width: 767px) {
+  .custom-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+```
+
+>[!NOTE]
+>
+> Universal Editor har inget gränssnitt för att definiera responsivt beteende. All layoutanpassning måste hanteras med CSS.
+
+
 
 ## Felsökning
 
@@ -338,7 +373,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 +++
 
-+++Touch-mål för litet
++++Touchmålets storlek är för liten
 
 **Möjliga orsaker:**
 
@@ -412,7 +447,7 @@ Dragspelslayouten sparar utrymme genom att organisera innehållet i komprimerbar
 
 ## Success Metrics for Responsive Forms
 
-+++Key Performance Indicators
++++Viktiga prestandaindikatorer
 
 **Användarupplevelse:**
 

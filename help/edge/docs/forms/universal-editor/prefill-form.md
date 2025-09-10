@@ -7,9 +7,9 @@ level: Beginner, Intermediate
 time: 45-60 minutes
 keywords: förifyllnadsformulär, adaptiva blanketttjänster, automatisk ifyllnad av blanketter
 exl-id: 7b6224e2-a19c-4146-8545-0ce9d1da9b29
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1803'
 ht-degree: 0%
 
 ---
@@ -156,6 +156,11 @@ Universal Editor har två alternativ för förifyllningstjänsten:
    ![Edge Delivery Services-mall](/help/edge/assets/create-eds-forms.png)
 
 1. Klicka på **Skapa** för att öppna guiden **Skapa formulär**
+
+   >
+   >
+   > Du kan konfigurera datakällan på fliken **Data** eller senare genom att redigera formuläregenskaperna.
+
 1. Ange formulärinformationen:
 
    - **Namn**: Ange ett beskrivande namn för formuläret
@@ -202,7 +207,7 @@ Formulärelementen från din FDM visas på fliken **Datakälla** i **Content Bro
 
 +++
 
-+++fas 3: Konfigurera förifyllningstjänst
++++Fas 3: Konfigurera förifyllningstjänst
 
 ### Steg 6: Aktivera nödvändiga tillägg
 
@@ -241,7 +246,7 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 
 +++
 
-+++fas 4: Testa din konfiguration för förifyllning
++++Fas 4: Testa din konfiguration för förifyllning
 
 ### Steg 8: Förhandsgranska och testa
 
@@ -250,7 +255,7 @@ Se till att dessa tillägg är aktiverade i Universell redigerare:
 3. Välj **Förhandsgranska som HTML**
 4. Testa förifyllning genom att lägga till parametrar till URL:en:
 
-   https://your-preview-url.com?`<bindreferencefield>`=`<value>`
+   `https://your-preview-url.com?<bindreferencefield>=<value>`
 
    **Exempel:**
 
@@ -374,7 +379,7 @@ URL-adresserna nedan är endast till för illustrationsändamål och fungerar in
 
 +++
 
-+++Säkerhetsfrågor
++++Säkerhetsaspekter
 
 - **Verifiera indataparametrar**: Verifiera alltid URL-parametrar
 - **Sanera data**: Rensa data innan du fyller i formulär i förväg
@@ -417,13 +422,13 @@ Ja, du kan förifylla båda fälttyperna. Bundna fält använder avsnittet `afBo
 
 +++
 
-+++Vad ska jag göra om bara vissa fält förifylls?
++++Vad ska jag göra om bara vissa fält fylls i i förväg?
 
 Kontrollera att alla fält har rätt `bindRef`-värden som matchar din FDM exakt. Kontrollera att datakällan innehåller alla obligatoriska fält och att datastrukturen matchar formulärmodellschemat.
 
 +++
 
-+++Kan jag använda flera förifyllningstjänster i ett formulär?
++++Kan jag använda flera förifyllda tjänster i ett och samma formulär?
 
 Du kan konfigurera en primär förifyllningstjänst per formulär. Du kan emellertid kombinera olika datakällor i en enda formulärdatamodell för att få liknande funktionalitet.
 

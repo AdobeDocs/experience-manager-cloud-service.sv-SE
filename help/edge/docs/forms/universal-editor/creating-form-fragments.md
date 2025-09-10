@@ -4,9 +4,9 @@ description: Lär dig hur du skapar formulärfragment i den universella redigera
 feature: Edge Delivery Services
 role: Admin, User, Developer
 exl-id: 7b0d4c7f-f82f-407b-8e25-b725108f8455
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1672'
 ht-degree: 0%
 
 ---
@@ -76,9 +76,12 @@ Formulärfragment i Edge Delivery Services har kraftfulla funktioner för modul�
 
 Du kan skapa Edge Delivery Services-formulärfragment i den universella redigeraren och lägga till de skapade fragmenten i Edge Delivery Services-formulär. Du kan utföra följande åtgärder med Edge Delivery Services-formulärfragment:
 
-- [Skapa formulärfragment](#creating-form-fragments)
-- [Lägga till formulärfragment i ett formulär](#adding-form-fragments-to-a-form)
-- [Hantera formulärfragment](#managing-form-fragments)
+- [Skapa formulärfragment i Universal Editor](#creating-form-fragments-in-universal-editor)
+   - [Förstå formulärfragment](#understanding-form-fragments)
+   - [Förutsättningar](#prerequisites)
+   - [Arbeta med Edge Delivery Services-formulärfragment](#working-with-edge-delivery-services-form-fragments)
+   - [Bästa praxis](#best-practices)
+   - [Sammanfattning](#summary)
 
 +++ Skapa formulärfragment
 
@@ -175,6 +178,10 @@ Så här integrerar du ett formulärfragment i formuläret:
 
    ![Skärmbild som visar kontaktinformationsfragmentet som har integrerats i ett medarbetarformulär i den universella redigeraren och som visar hur fragment behåller sin struktur när de återanvänds](/help/edge/docs/forms/universal-editor/assets/fragment-in-form.png)
 
+   >[!NOTE]
+   >
+   > Med knappen **Redigera fragment** kan användare navigera direkt till formulärfragmentet för redigering.
+
    Du kan förhandsgranska formuläret för att se hur det ser ut i **förhandsgranskningsläget**.
 
    ![Förhandsgranska](/help/edge/docs/forms/universal-editor/assets/preview-form-with-fragment.png)
@@ -246,7 +253,7 @@ Du kan utföra flera åtgärder på formulärfragment med AEM Forms användargr�
     </tbody>
     </table>
 
-+++
++++ 
 
 ## Bästa praxis
 
@@ -285,10 +292,10 @@ Du har nu lärt dig att utnyttja formulärfragment i Edge Delivery Services för
 
 **Nästa steg:**
 
-- Skapa ett bibliotek med ofta använda fragment för din organisation
-- Upprätta namnkonventioner och styrningsprinciper för fragmentanvändning
+- Skapa ett bibliotek med ofta använda fragment för din organisation.
+- Upprätta namnkonventioner och styrningsprinciper för fragmentanvändning.
 - Utforska avancerad integrering med [Form Data Models](/help/edge/docs/forms/universal-editor/integrate-forms-with-data-source.md) för dynamiska datadrivna fragment
-- Implementera fragmentbaserade blankettmallar för enhetliga användarupplevelser
+- Implementera fragmentbaserade blankettmallar för enhetliga användarupplevelser.
 
 Era formulär har nu en modulär, underhållningsbar arkitektur som kan skalas effektivt mellan olika projekt samtidigt som de ger en enhetlig användarupplevelse.
 

@@ -4,13 +4,13 @@ description: Lär dig hur användare kan visa ett tackmeddelande eller omdiriger
 feature: Adaptive Forms, Edge Delivery Services
 role: User
 level: Intermediate
-source-git-commit: 07160248d5b5817d155a118475878ce04a687a32
+exl-id: cacd7b0a-aad0-4b5d-a6a0-e4bac4cb196d
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera tackmeddelanden och omdirigerings-URL
 
@@ -53,13 +53,19 @@ Tack! Meddelanden fungerar bäst när:
 
 Öppna det adaptiva formuläret i den universella redigeraren och klicka på ikonen **Redigera formuläregenskaper** i verktygsfältet. Då öppnas en omfattande dialogruta för formuläregenskaper.
 
+![Ikon för formuläregenskaper](/help/forms/assets/ue-form-properties-icon.png)
+
 **2. Navigera till din konfiguration**
 
 I dialogrutan Formuläregenskaper väljer du fliken **Tack** för att komma åt konfigurationsalternativen efter överföring.
 
+![Formuläregenskaper för Universal Editor](/help/forms/assets/ue-form-properties.png)
+
 **3. Konfigurera meddelandevisning**
 
-Välj **Visa meddelande** bland de tillgängliga alternativen. Detta aktiverar meddelandets innehållsredigerare med avancerade textfunktioner.
+Välj **Visa meddelande** bland de tillgängliga alternativen.
+
+![tack](/help/edge/docs/forms/universal-editor/assets/thankyou-ue.png)
 
 **4. Skapa ditt meddelandeinnehåll**
 
@@ -117,13 +123,19 @@ Omdirigerings-URL är optimala för:
 
 Öppna det adaptiva formuläret i den universella redigeraren och klicka på ikonen **Redigera formuläregenskaper** för att öppna dialogrutan för formulärkonfiguration.
 
+![Ikon för formuläregenskaper](/help/forms/assets/ue-form-properties-icon.png)
+
 **2. Navigera till din konfiguration**
 
 Välj fliken **Tack** i dialogrutan Formuläregenskaper för att få tillgång till konfigurationsalternativen för omdirigering.
 
+![Formuläregenskaper för Universal Editor](/help/forms/assets/ue-form-properties.png)
+
 **3. Aktivera omdirigeringsfunktionen**
 
 Välj **Omdirigera till URL** bland de tillgängliga alternativen efter överföring.
+
+![omdirigering](/help/edge/docs/forms/universal-editor/assets/redirect-ue.png)
 
 **4. Konfigurera mål-URL**
 
@@ -248,4 +260,3 @@ När du har konfigurerat ditt arbete efter överföringen:
 
 - [Konfigurationsguide för inskickning av formulär](submit-action.md)
 - [Bästa praxis för användarupplevelser](responsive-layout.md)
-

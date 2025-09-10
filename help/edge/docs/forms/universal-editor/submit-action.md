@@ -5,9 +5,9 @@ keywords: hur du väljer en åtgärd för att skicka ett anpassat formulär, kop
 feature: Adaptive Forms, Edge Delivery Services
 role: User, Developer
 exl-id: beee9be7-8215-496b-9fb9-61fba000a055
-source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 |---------|-----------------------------|
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/configuring-submit-actions.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/configuring-submit-actions.md) |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/configure-submit-actions-core-components.md) |
 | AEM as a Cloud Service (Edge Delivery Services) | Den här artikeln |
@@ -72,7 +72,7 @@ Du kan konfigurera åtgärden skicka för formulär som har skapats i den univer
 
 ![Ikon för formuläregenskaper](/help/forms/assets/ue-form-properties-icon.png)
 
-![Formuläregenskaper för Universal Editor](/help/forms/assets/ue-form-properties.png)
+![Guiden Formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/form-properties-ue.png)
 
 >[!NOTE]
 >

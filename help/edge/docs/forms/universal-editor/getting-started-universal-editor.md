@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '2609'
+source-wordcount: '2608'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ För att Edge Delivery Services för AEM Forms ska fungera smidigt och framgång
 
 >[!TIP]
 >
-> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE).
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
 
 ## Sökväg A: Skapa ett nytt projekt med Forms
 
@@ -90,7 +90,7 @@ Så här startar du ditt nya projekt med integrerade formulär:
 
 Följande avsnitt vägleder dig steg för steg i detalj, vilket ger en smidig och effektiv projektkonfiguration.
 
-+++steg 1: Skapa GitHub-databas från mall
++++Steg 1: Skapa GitHub-databas från mall
 
 1. **Öppna AEM Forms-mallen för mallar**
    - Gå till [https://github.com/adobe-rnd/aem-boilerplate-forms](https://github.com/adobe-rnd/aem-boilerplate-forms)
@@ -136,7 +136,7 @@ AEM Code Sync synkroniserar automatiskt innehållsändringar mellan din AEM-redi
 
 +++
 
-+++steg 3: Konfigurera AEM-integrering
++++Steg 3: Konfigurera AEM-integrering
 
 Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för innehållssynkronisering.
 
@@ -157,7 +157,10 @@ Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för i
 
    ```yaml
    mountpoints:
-     /: https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main
+     /: 
+     url: https://<aem-author>/bin/franklin.delivery/<owner>/<repository>/main
+     type: "markup" 
+     suffix: ".html" 
    ```
 
    **Ersätt:**
@@ -184,13 +187,13 @@ Filen `fstab.yaml` ansluter din GitHub-databas till AEM-redigeringsmiljö för i
 
 **Validering:** Bekräfta din GitHub-databasanslutning till AEM.
 
-    >[ !OBS!]
-    >
-    >Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
+>[!NOTE]
+>
+> Har du byggproblem? Se [Felsökning av GitHub-byggproblem](#troubleshooting-github-build-issues).
 
 +++
 
-+++steg 4: Skapa en AEM-webbplats som är ansluten till din GitHub-databas.
++++Steg 4: Skapa en AEM-webbplats som är ansluten till din GitHub-databas.
 
 1. **Öppna AEM Sites-konsolen**
    - Logga in i din AEM as a Cloud Service-instans
@@ -343,7 +346,7 @@ Du kommer att slutföra följande steg på hög nivå:
 3. Justera ESLint-regler så att de nya filerna och kodningsmönstren får plats.
 4. Bygg ditt projekt och implementera ändringarna i din databas.
 
-+++steg 1: Kopiera Forms-blockfiler
++++Steg 1: Kopiera Forms-blockfiler
 
 1. **Navigera till ditt lokala projekt**
 
@@ -368,7 +371,7 @@ Du kommer att slutföra följande steg på hög nivå:
 
 +++
 
-+++steg 2: Uppdatera komponentkonfiguration
++++Steg 2: Uppdatera komponentkonfiguration
 
 1. **Uppdatera avsnittsmodell**
 
@@ -397,7 +400,7 @@ Du kommer att slutföra följande steg på hög nivå:
 
 +++
 
-+++steg 3: Konfigurera ESLint (valfritt)
++++Steg 3: Konfigurera ESLint (valfritt)
 
 **Varför det här steget:** Förhindrar lintingfel från formulärspecifika filer och konfigurerar korrekta valideringsregler.
 
@@ -528,7 +531,7 @@ Processen med att skapa ett formulär i Universal Editor består av flera viktig
 
 I följande avsnitt beskrivs dessa steg i detalj, vilket ger en smidig och effektiv formulärskaparupplevelse.
 
-+++steg 1: Lägg till anpassat formulärblock
++++Steg 1: Lägg till adaptivt formulärblock
 
 1. **Öppna sidan i Universal Editor**
    - Navigera till konsolen **Platser** i AEM
@@ -550,7 +553,7 @@ I följande avsnitt beskrivs dessa steg i detalj, vilket ger en smidig och effek
 
 +++
 
-+++steg 2: Lägg till formulärkomponenter
++++Steg 2: Lägg till formulärkomponenter
 
 1. **Navigera till ditt formulärblock**
    - Leta reda på ditt nya adaptiva formuläravsnitt i innehållsträdet
@@ -626,13 +629,13 @@ I följande avsnitt beskrivs dessa steg i detalj, vilket ger en smidig och effek
    Ditt formulär finns nu på:
 
    ```
-   https://<branch>--<repo>--<owner>.aem.page/content/<site-name>/
+   https://<branch>--<repo>--<owner>.aem.live/content/<site-name>/
    ```
 
    **Exempel-URL:**
 
    ```
-   https://main--my-forms-project--mycompany.aem.page/content/my-forms-project/
+   https://main--my-forms-project--mycompany.aem.live/content/my-forms-project/
    ```
 
    ![Live-formulärsida](/help/edge/docs/forms/assets/publish-index-page.png)
@@ -759,7 +762,7 @@ Om du ser&quot;Det går inte att matcha sökvägen till modulen &#39;/scripts/li
 
 +++
 
-+++Formulärfunktionsproblem
++++Problem med formulärfunktioner
 
 **Problem:** Formuläröverföringar fungerar inte
 
@@ -781,7 +784,7 @@ Om du ser&quot;Det går inte att matcha sökvägen till modulen &#39;/scripts/li
 
 +++
 
-+++Universal Editor Issues
++++Universal Editor-problem
 
 **Problem:** Formulärkomponenter visas inte i den universella redigeraren
 

@@ -6,7 +6,7 @@ role: Admin, Architect, Developer
 level: Intermediate
 keywords: publicera formulär, Edge Delivery Services, formulärkonfiguration, CORS, referensfilter
 exl-id: ba1c608d-36e9-4ca1-b87b-0d1094d978db
-source-git-commit: 05c0d8fd16cc8bd805a0e8644d3145685fe6fa12
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
 source-wordcount: '746'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Varje fas bygger på den föregående för att säkerställa säker, funktionell
 1. **Öppna ditt formulär**: Öppna ditt adaptiva formulär i den universella redigeraren
 2. **Starta publicering**: Klicka på ikonen **Publicera** i verktygsfältet
 
-   ![Klicka på Publicera](/help/forms/assets/publish-icon-eds-form.png)
+   ![Klicka på Publicera](/help/edge/docs/forms/universal-editor/assets/publish-form-ue.png)
 
 +++
 
@@ -58,12 +58,12 @@ Varje fas bygger på den föregående för att säkerställa säker, funktionell
 
 1. **Granska publiceringsresurser**: Systemet visar alla resurser som publiceras, inklusive ditt formulär
 
-   ![Vid klickning på Publicera](/help/forms/assets/on-click-publish.png)
+   ![Vid klickning på Publicera](/help/edge/docs/forms/universal-editor/assets/publish-form-ue-review.png)
 
 2. **Bekräfta publicering**: Klicka på **Publicera** för att fortsätta
 3. **Bekräfta slutförande**: Leta efter bekräftelsemeddelandet
 
-   ![Publiceringen lyckades](/help/forms/assets/publish-success.png)
+   ![Publiceringen lyckades](/help/edge/docs/forms/universal-editor/assets/publish-form-ue-success.png)
 
 +++
 
@@ -72,7 +72,7 @@ Varje fas bygger på den föregående för att säkerställa säker, funktionell
 
 **Kontrollera status**: Klicka på ikonen **Publicera** igen för att visa aktuell status
 
-![Publiceringsstatus](/help/forms/assets/publish-status.png)
+![Publiceringsstatus](/help/edge/docs/forms/universal-editor/assets/publish-form-ue-validate.png)
 
 **Kontrollpunkt för validering:**
 
@@ -91,7 +91,7 @@ Varje fas bygger på den föregående för att säkerställa säker, funktionell
 2. Klicka på menyn med tre punkter ( ⋯) i det övre högra hörnet
 3. Välj **Avpublicera**
 
-![Avpublicera formulär](/help/forms/assets/unpublish--form.png)
+![Avpublicera formulär](/help/edge/docs/forms/universal-editor/assets/unpublish-ue.png)
 
 +++
 
@@ -169,8 +169,8 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [CORS - konfigurationsguide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
-- [Dokumentation för referentfilter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
+- [CORS - konfigurationsguide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors)
+- [Dokumentation för referentfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter)
 
 +++
 
@@ -221,7 +221,7 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 
 **Referensdokumentation:**
 
-- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
+- [Konfigurera referensfilter via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing)
 
 +++
 

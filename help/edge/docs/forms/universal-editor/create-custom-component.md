@@ -4,512 +4,641 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: 1d59791561fc6148778adccab902c8e727adc641
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '2120'
 ht-degree: 0%
 
 ---
 
-# Skapa anpassad komponent i WYSIWYG Authoring
+
+# Skapa anpassad formulärkomponent i anpassat formulärblock
 
 Edge Delivery Services Forms erbjuder anpassning så att gränssnittsutvecklare kan skapa skräddarsydda blankettkomponenter. Dessa anpassade komponenter integreras smidigt i WYSIWYG redigeringsmiljö, vilket gör det enkelt för formulärförfattare att lägga till, konfigurera och hantera dem i formulärredigeraren. Med anpassade komponenter kan man förbättra funktionaliteten samtidigt som man får en smidig och intuitiv redigeringsprocess.
 
 I det här dokumentet beskrivs de olika stegen för att skapa anpassade komponenter genom att formatera de inbyggda HTML-formulärkomponenterna för att förbättra användarupplevelsen och göra formuläret snyggare.
 
-## Krav
+## Arkitektur - översikt
 
-Innan du börjar skapa en anpassad komponent bör du:
+En anpassad komponent för Forms-blocket följer ett **MVC-arkitekturmönster (Model-View-Controller)**:
 
-- Lär dig grundläggande kunskaper om [inbyggda HTML-komponenter](/help/edge/docs/forms/form-components.md).
-- Lär dig hur du [formaterar formulärfält baserat på fälttyp med CSS-väljarna](/help/edge/docs/forms/style-theme-forms.md)
+### Modell
 
-## Skapa en anpassad komponent
+- Definieras av JSON-schemat för varje `field/component`.
 
-Att lägga till en anpassad komponent i den universella redigeraren innebär att göra en ny komponent tillgänglig för formulärförfattare som kan använda när de utformar formulär. Detta innebär att registrera komponenten, definiera dess egenskaper och konfigurera var den kan användas. Stegen för att skapa anpassade komponenter är:
+- Redigerbara egenskaper anges i motsvarande JSON-fil (se block/form/models/form-components).
 
-[1. Lägger till struktur för den nya anpassade komponenten ](#1-adding-structure-for-new-custom-component)
-[ 2. Definiera egenskaperna för den anpassade komponenten för redigering av ](#2-defining-the-properties-of-your-custom-component-for-authoring)
-[ 3.  Göra den anpassade komponenten synlig i WYSIWYG-komponentlistan ](#3-making-your-custom-component-visible-in-the-wysiwyg-component-list)
-[ 4. Registrerar den anpassade komponenten ](#4-registering-your-custom-component)
-[5. Lägger till körningsbeteendet för den anpassade komponenten ](#5-adding-the-runtime-behaviour-for-your-custom-component)
+- Dessa egenskaper är tillgängliga för författare i formulärbyggaren och skickas till komponenten som en del av fältdefinitionen (fd).
 
-Låt oss ta ett exempel på hur du skapar en ny anpassad komponent med namnet **range**. Intervallkomponenten visas som en rak linje och visar värden som minimum, maximum eller selected.
+### Visa
 
-![En visuell representation av en intervallkomponent som visar ett reglage med minimi- och maximivärden samt en markerad värdeindikator](/help/edge/docs/forms/universal-editor/assets/custom-component-range-style.png)
+- HTML-strukturen för varje fälttyp beskrivs i formulärfälttyper.
 
-I slutet av den här artikeln lär du dig att skapa anpassade komponenter från grunden.
+- Det här är grundstrukturen för komponenten som kan utökas eller ändras.
 
-### &#x200B;1. Lägga till struktur för ny anpassad komponent
+- HTML grundstruktur för varje OOTB-komponent dokumenteras i formulärfälttyper.
 
-Innan en anpassad komponent kan användas måste den registreras så att Universal Editor identifierar den som ett tillgängligt alternativ. Detta uppnås genom en komponentdefinition, som innehåller en unik identifierare, standardegenskaper och komponentens struktur. Utför följande steg för att göra den anpassade komponenten tillgänglig för formulärutveckling:
+### Styrenhets-/komponentlogik
 
-1. **Lägg till ny mapp och nya filer**
+- Implementeras i JavaScript, antingen som OTB (färdiga) eller anpassade komponenter.  - Finns i `blocks/form/components` för anpassade komponenter.
 
-   Lägg till nya mappar och filer för den nya anpassade komponenten i AEM Project.
+## OTB-komponenter
 
-   1. Öppna ditt AEM-projekt och gå till `../blocks/form/components/`.
-   1. Lägg till en ny mapp för din anpassade komponent på `../blocks/form/components/<component_name>`. I det här exemplet skapar vi en mapp med namnet `range`.
-   1. Navigera till den nyligen skapade mappen på `../blocks/form/components/<component_name>`. Navigera till `../blocks/form/components/range` och lägg till följande filer:
+**OTB-komponenter (färdiga)** utgör grunden för anpassad utveckling:
 
-      - `/blocks/form/components/range/_range.json`: Innehåller definitionen för den anpassade komponenten.
-      - `../blocks/form/components/range/range.css`: Definierar formateringen för den anpassade komponenten.
-      - `../blocks/form/components/range/range.js`: Anpassar den anpassade komponenten vid körning.
+- OTB-komponenter finns i `blocks/form/models/form-components`.
 
-        ![Lägger till den anpassade komponenten för redigering](/help/edge/docs/forms/universal-editor/assets/adding-custom-component.png)
+- Varje OTB-komponent har en JSON-fil som definierar dess redigerbara egenskaper (till exempel ` _text-input.json`,`_drop-down.json`).
 
-        >[!NOTE]
-        >
-        > Kontrollera att json-filen innehåller ett understreck (_) som prefix i filnamnet.
+- Dessa egenskaper är tillgängliga för författare i formulärbyggaren och skickas till komponenten som en del av fältdefinitionen (fd).
 
-1. Navigera till filen `/blocks/form/components/range/_range.json` och lägg till komponentdefinitionen för den anpassade komponenten.
+- HTML grundstruktur för varje OOTB-komponent dokumenteras i formulärfälttyper.
 
-1. **Lägg till komponentdefinitionen**
+Genom att utöka en befintlig OOTB-komponent kan du återanvända dess grundstruktur, beteende och egenskaper samtidigt som du anpassar den efter dina behov.
 
-   För att lägga till definitionen måste fälten läggas till i filen `_range.json`:
+- Anpassade komponenter måste omfatta en fördefinierad uppsättning OTB-komponenter.
 
-   - **title**: Titeln på komponenten som visas i den universella redigeraren.
-   - **id**: En unik identifierare för komponenten.
-   - **fieldType**: Forms stöder olika **fieldType** för att hämta specifika typer av användarindata. Du hittar den [stödda fieldType i avsnittet Extra Byte](#supported-fieldtypes).
-   - **resourceType**: Varje anpassad komponent har en associerad resurstyp baserat på dess fieldType. Du hittar den [stödda resourceType i avsnittet Extra Byte](#supported-resourcetype).
-   - **jcr:title**: Den liknar en titel, men den lagras i komponentens struktur.
-   - **fd:viewType**: Den representerar namnet på den anpassade komponenten. Det är den unika identifieraren för komponenten. Du måste skapa en anpassad vy för komponenten.
+- Systemet identifierar vilken OTB-komponent som ska utökas baserat på egenskapen `viewType` i fältets JSON.
 
-`_range.json`-filen är följande när du har lagt till komponentdefinitionen:
+- Systemet underhåller ett register med tillåtna anpassade komponentvarianter. Endast varianter som anges i det här registret kan användas, till exempel `customComponents[]` i `mappings.js`.
 
-```javascript
-{
-  "definitions": [
-    {
-      "title": "Range",
-      "id": "range",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-            "template": {
-              "jcr:title": "Range",
-              "fieldType": "number-input",
-              "fd:viewType": "range",
-              "enabled": true,
-              "visible": true
-            }
-          }
-        }
-      }
-    }
-  ]
-}
-```
+- När ett formulär återges kontrolleras variantegenskapen eller `:type/fd:viewType`. Om den matchar en registrerad anpassad komponent läses motsvarande JS- och CSS-filer in från mappen `blocks/form/components`.
+
+- Den anpassade komponenten tillämpas sedan på OTB-komponentens bas-HTML-struktur, vilket gör att du kan förbättra eller åsidosätta dess beteende och utseende.
+
+## Struktur för anpassad komponent
+
+Om du vill skapa anpassade komponenter kan du använda **SCaffolder CLI** för att konfigurera de filer och mappar som krävs för komponenten och sedan lägga till kod för den anpassade komponenten.
+
+- Anpassade komponenter finns i mappen `blocks/form/components`.
+
+- Varje anpassad komponent måste placeras i sin egen mapp, med namnet efter komponenten, till exempel kort. I mappen ska följande filer vara:
+
+   - **_cards.json** - JSON-fil som utökar komponentdefinitionen för en OTB-komponent, definierar dess redigerbara egenskaper (modeller []) och innehållsstruktur vid inläsning (definitioner []).
+   - **cards.js** - Den JavaScript-fil som innehåller huvudlogiken.
+   - **cards.css** - valfritt, för format.
+
+- Namnet på mappen och JS/CSS-filerna måste matcha.
+
+### Återanvända och utöka fält i anpassade komponenter
+
+När du definierar fält i den anpassade komponentens JSON (för alla fältgrupper, grundläggande fält, validering, hjälp osv.) följer du de här bästa sätten för underhåll och konsekvens:
+
+- Återanvänd standardfält/delade fält genom att referera till befintliga delade behållare eller fältdefinitioner (t.ex. `../form-common/_basic-input-placeholder-fields.json#/fields`, `../form-common/_basic- validation-fields.json#/fields`). Detta garanterar att du ärver alla standardalternativ utan att duplicera dem.
+
+- Lägg bara till nya eller anpassade fält explicit i behållaren. Detta håller ditt schema DRY och fokuserat.
+
+- Ta bort eller undvik att duplicera fält som redan finns i referenser. Definiera bara fält som är unika för komponentens logik.
+
+- Referera till hjälpbehållare och annat delat innehåll (t.ex. `../form-common/_help-container.json`) efter behov för konsekvens och underhåll.
+
+>[!TIP]
+>
+> - Det här mönstret gör det enkelt att uppdatera eller utöka logiken i framtiden och ser till att dina anpassade komponenter är konsekventa med resten av formulärsystemet.
+> - Kontrollera alltid om det finns befintliga delade behållare eller fältdefinitioner innan du lägger till nya.
+
+### Definiera nya egenskaper för anpassade komponenter
+
+- Om du behöver hämta nya egenskaper för den anpassade komponenten från författare kan du göra det genom att definiera ett fält i komponentens `fields[]`-array i komponentens JSON-komponent.
+
+- Den anpassade komponenten identifieras med egenskapen :type som kan anges som `fd:viewType` i JSON-filen (t.ex. `fd:viewType: cards`). Detta gör att systemet kan känna igen och läsa in rätt anpassad komponent och därför är detta obligatoriskt för anpassade komponenter
+
+- Alla nya egenskaper som läggs till i JSON-definitionen är tillgängliga som egenskaper i fältdefinitionen. `<propertyName>` i din komponents JS-logik
+
+## JavaScript API för anpassad komponent
+
+JavaScript-API:t för den anpassade komponenten definierar hur du styr beteendet, utseendet och reaktiviteten för den anpassade formulärkomponenten.
+
+### Dekorera funktion
+
+Funktionen **decorate** är startpunkten för den anpassade komponenten. Komponenten initieras, länkas till dess JSON-definition och gör att du kan ändra dess HTML-struktur och -beteende.
 
 >[!NOTE]
 >
-> Alla formulärrelaterade komponenter följer samma tillvägagångssätt som webbplatser när de lägger till block i den universella redigeraren. Mer information finns i artikeln [Creating Blocks Instrumented for use with the Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block).
+> Den anpassade komponentens JavaScript-fil måste exportera en standardfunktion som dekorate:
 
-### &#x200B;2. Definiera egenskaperna för den anpassade komponenten för redigering
+#### Funktionssignatur:
 
-Den anpassade komponenten innehåller en komponentmodell som anger vilka egenskaper som kan konfigureras av formulärförfattaren. De här egenskaperna visas i dialogrutan **Egenskaper** i den universella redigeraren, vilket gör att författare kan justera inställningar som etiketter, valideringsregler, format och andra attribut. Så här definierar du egenskaper:
+```javascript
+export default function decorate(element, fieldJson, container, formId) {
+// element: The HTML structure of the OOTB component you are extending
+// fieldJson: The JSON field definition (all authorable properties)
+// container: The parent element (fieldset or form)
+// formId: The id of the form
+// ... your logic here ...
+}
+```
 
-1. Navigera till filen `/blocks/form/components/range/_range.json` och lägg till komponentmodellen för den anpassade komponenten.
+Den kan:
 
-1. **Lägg till komponentmodellen**
+- **Ändra elementet**: Lägg till händelseavlyssnare, uppdatera attribut eller mata in ytterligare kod.
 
-   Om du vill definiera komponentmodellen för den anpassade komponenten måste du lägga till relevanta fält i filen `_range.json`.
+- **Åtkomst till JSON-egenskaper**: Använd `fd.properties.<propertyName>` för att läsa värden som definierats i JSON-schemat och tillämpa dem i komponentlogiken.
 
-   1. **Skapa ny modell**
+## Prenumerationsfunktion
 
-      - Lägg till ett nytt objekt i modellarrayen och ställ in `id` för komponentmodellen så att den matchar egenskapen `fd:viewType` som konfigurerats tidigare i komponentdefinitionen.
-      - Inkludera en fältarray i det här objektet.
+Funktionen **subscribe** gör att komponenten kan reagera på ändringar i fältvärden eller anpassade händelser. Detta garanterar att komponenten är synkroniserad med formulärets datamodell och kan uppdatera användargränssnittet dynamiskt.
 
-   2. **Definiera fält för egenskapsdialogrutan**
+### Funktionssignatur:
 
-      - Varje objekt i fältarrayen ska vara en behållartypskomponent, vilket gör att det kan visas som en flik i dialogrutan **Egenskap** .
-      - Vissa fält kan referera till återanvändbara egenskaper i `models/form-common`.
+```JavaScript
+import { subscribe } from '../../rules/index.js';
 
-   3. **Använd en befintlig komponentmodell som referens**
+export default function decorate(fieldDiv, fieldJson, container, formId) {
+// Access custom properties defined in the JSON
+const { initialText, finalText, time } = fieldJson?.properties;
+// ... setup logic ...
+subscribe(fieldDiv, formId, (_fieldDiv, fieldModel) => { fieldModel.subscribe(() => {
+// React to custom event (e.g., resetCardOption)
+// ... logic ...
+}, 'resetCardOption');
+});
+}
+```
 
-      - Du kan kopiera innehållet i en befintlig komponentmodell som motsvarar din valda `fieldType` och ändra den efter behov. Komponenten `number-input` utökas till att skapa en **range** -komponent, så vi kan använda modellarrayen från `models/form-components/_number-input.json` som referens.
+Den kan:
 
-   `_range.json`-filen är följande när du har lagt till komponentmodellen:
+- **Registrera ett återanrop**: Anrop av **subscribe(element, formId, callback)** registrerar ditt återanrop så att det körs när fältdata ändras. Använd två återanropsparametrar:
+   - **element**: Det HTML-element som representerar fältet.
+   - **fieldModel**: Det objekt som representerar fältets läges- och händelse-API:er.
+
+- **Lyssna efter ändringar eller händelser**: Använd `fieldModel.subscribe((event) => { ... }, 'eventName')` för att köra logik när ett värde ändras eller en anpassad händelse aktiveras. Händelseobjektet innehåller information om vad som ändrats.
+
+## Skapa en anpassad komponent
+
+I det här avsnittet får du lära dig hur du skapar en anpassad **kortkomponent** genom att utöka alternativknappskomponenten OTB.
+
+![Anpassad kortkomponent](/help/edge/docs/forms/universal-editor/assets/cc-ue-card-component.png)
+
+### &#x200B;1. Kodinställningar
+
+#### 1.1 Filer och mappar
+
+Det första steget är att ställa in de nödvändiga filerna för den anpassade komponenten och koppla den upp till koden i databasen. Den här processen utförs automatiskt av **AEM Forms Scaffolder CLI**, vilket gör det snabbare att ställa in och snurra nödvändiga filer.
+
+1. Öppna terminalen och navigera till roten i formulärprojektet.
+2. Kör följande kommandon:
+
+```bash
+npm install
+npm run create:custom-component
+```
+
+![Skaffelmapp CLI](/help/edge/docs/forms/universal-editor/assets/scaffolder-cli.png)
+
+Den kommer att
+
+- **Uppmana dig att namnge** den nya komponenten. Använd i det här fallet kort.
+- **Be dig välja** en baskomponent (markera alternativknappar)
+
+Då skapas alla mappar och filer som behövs, inklusive:
+
+```
+blocks/form/
+└── components/
+  └── cards/
+    ├── cards.js
+    └── cards.css
+    └── _cards.json
+```
+
+Och knyter ihop den med resten av koden i databasen, så som visas i CLI-utdata.
+Följande funktioner utförs automatiskt:
+
+- Lägger till kort i filtren så att de kan läggas till i det adaptiva formulärblocket.
+- Uppdaterar tillåtelselista till `mappings.js` för att inkludera den nya kortkomponenten.
+- Registrerar definitionen av kortkomponenten under listan **Anpassade komponenter** i Universalläsaren.
+
+>[!NOTE]
+>
+> Du kan också skapa en anpassad komponent med den manuella (äldre) metoden. Mer information finns i avsnittet [Manuell eller Äldre metod](#manual-or-legacy-method-to-create-custom-component) för att skapa anpassade komponenter.
+
+#### 1.2 Använda komponent i universell redigerare
+
+1. **Uppdatera den universella redigeraren**: Öppna formuläret i den universella redigeraren och uppdatera sidan så att den senaste koden från databasen läses in.
+
+2. **Lägg till den anpassade komponenten**
+
+   1. Klicka på knappen **Lägg till (+)** på formulärets arbetsyta.
+   2. Bläddra till sektionen Egna komponenter.
+   3. Välj den nyligen skapade **kortkomponenten** för att infoga den i formuläret.
+
+      ![Välj anpassad komponent](/help/edge/docs/forms/universal-editor/assets/select-custom-component.png)
+
+Eftersom det inte finns någon kod i `cards.js` återges den anpassade komponenten som en alternativknappsgrupp.
+
+#### 1.3 Förhandsgranska och testa lokalt
+
+Nu när formuläret innehåller den anpassade komponenten kan du proxygranska formuläret och göra ändringar i det lokalt och se ändringarna:
+
+1. Gå till terminalen och kör `aem up`.
+
+2. Öppna proxyservern som startades `http://localhost:3000/{path-to-your-form}` (sökvägsexempel: `/content/forms/af/custom-component-form`)
+
+
+### &#x200B;2. Implementera anpassat beteende för din anpassade komponent
+
+#### 2.1 Formatera den anpassade komponenten
+
+Låt oss lägga till klassen **card** i komponenten för formatering och lägga till en bild för varje radio. Använd koden nedan för detta.
+
+**Formatera den anpassade komponenten med dekorationsfunktionen i cards.js**
+
+```javascript
+import { createOptimizedPicture } from '../../../../scripts/aem.js';
+
+export default function decorate(element, fieldJson, container, formId) { element.classList.add('card');
+element.querySelectorAll('.radio-wrapper').forEach((radioWrapper) => { const image = createOptimizedPicture('https://main--afb--
+jalagari.hlx.live/lab/images/card.png', 'card-image'); radioWrapper.appendChild(image);
+});
+return element;
+}
+```
+
+**Lägg till körningsbeteende för den anpassade komponenten i cards.css**
+
+```javascript
+.card .radio-wrapper { min-width: 320px;
+/* or whatever width fits your design */ max-width: 340px;
+background: #fff;
+border-radius: 16px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+flex: 0 0 auto;
+scroll-snap-align: start; padding: 24px 16px;
+margin-bottom: 0;
+position: relative;
+transition: box-shadow 0.2s; display: flex;
+align-items: flex-start; gap: 12px;
+}
+```
+
+Nu ser kortkomponenten ut så här:
+
+![lägg till css och js-kort](/help/edge/docs/forms/universal-editor/assets/add-card-css.png)
+
+#### 2.2 Lägga till dynamiskt beteende med prenumerationsfunktion
+
+När listrutan ändras hämtas korten och ställs in i uppräkningen för alternativgruppen. Men för närvarande hanterar inte vyn det här. Det återges så som visas nedan:
+
+![prenumerationsfunktion](/help/edge/docs/forms/universal-editor/assets/card-subscribe.png)
+
+När API anropas anges fältmodellen och ändringarna måste avlyssnas och vyn återges. Detta uppnås med funktionen **subscribe**.
+
+Låt oss konvertera visningskoden i föregående steg till en funktion och anropa den inuti prenumerationsfunktionen i `cards.js` enligt nedan:
+
+```javascript
+import { createOptimizedPicture } from '../../../../scripts/aem.js';  
+
+import { subscribe } from '../../rules/index.js';  
+function createCard(element, enums) {  
+
+  element.querySelectorAll('.radio-wrapper').forEach((radioWrapper, index) => {  
+
+    if (enums[index]?.name) {  
+
+      let label = radioWrapper.querySelector('label');  
+
+      if (!label) {  
+
+        label = document.createElement('label');  
+
+        radioWrapper.appendChild(label);  
+
+      }  
+
+      label.textContent = enums[index]?.name;  
+
+    }  
+
+    const image = createOptimizedPicture(enums[index].image || 'https://main--afb--jalagari.hlx.page/lab/images/card.png', 'card-image');  
+
+   radioWrapper.appendChild(image);  
+
+  });  
+
+}  
+export default function decorate(element, fieldJson, container, formId) {  
+
+    element.classList.add('card');  
+
+    createCard(element, fieldJson.enum);  
+
+    subscribe(element, formId, (fieldDiv, fieldModel) => {  
+
+        fieldModel.subscribe((e) => {  
+
+            const { payload } = e;  
+
+            payload?.changes?.forEach((change) => {  
+
+                if (change?.propertyName === 'enum') {  
+
+                    createCard(element, change.currentValue);  
+
+                }  
+
+            });  
+
+        });  
+
+    });  
+    return element;  
+
+} 
+```
+
+**Använd prenumerationsfunktionen för att lyssna efter händelseändringar i cards.js**
+
+När du ändrar listrutan fylls korten i enligt nedan:
+
+![prenumerationsfunktion](/help/edge/docs/forms/universal-editor/assets/card-subscribe-final.png)
+
+#### 2.3 Synkronisera vyuppdateringar med fältmodell
+
+Om du vill synkronisera vyändringarna till fältmodellen måste du ange värdet för det valda kortet. Lägg därför till följande ändringshändelseavlyssnare i cards.js enligt nedan:
+
+**Använda API för fältmodell i cards.js**
+
+```javascript
+ 
+
+import { createOptimizedPicture } from '../../../../scripts/aem.js';  
+
+import { subscribe } from '../../rules/index.js';  
+
+  
+
+  
+
+function createCard(element, enums) {  
+
+  element.querySelectorAll('.radio-wrapper').forEach((radioWrapper, index) => {  
+
+    if (enums[index]?.name) {  
+
+      let label = radioWrapper.querySelector('label');  
+
+      if (!label) {  
+
+        label = document.createElement('label');  
+
+        radioWrapper.appendChild(label);  
+
+      }  
+
+      label.textContent = enums[index]?.name;  
+
+    }  
+
+    radioWrapper.querySelector('input').dataset.index = index;  
+
+    const image = createOptimizedPicture(enums[index].image || 'https://main--afb--jalagari.hlx.page/lab/images/card.png', 'card-image');  
+
+   radioWrapper.appendChild(image);  
+
+  });  
+
+}  
+export default function decorate(element, fieldJson, container, formId) {  
+
+    element.classList.add('card');  
+    createCard(element, fieldJson.enum);  
+
+    subscribe(element, formId, (fieldDiv, fieldModel) => {  
+
+        fieldModel.subscribe((e) => {  
+
+            const { payload } = e;  
+
+            payload?.changes?.forEach((change) => {  
+
+                if (change?.propertyName === 'enum') {  
+
+                    createCard(element, change.currentValue);  
+
+                }  
+
+            });  
+
+        });  
+        element.addEventListener('change', (e) => {  
+
+            e.stopPropagation();  
+
+            const value = fieldModel.enum?.[parseInt(e.target.dataset.index, 10)];  
+
+            fieldModel.value = value.name;  
+
+        });  
+
+    });  
+
+    return element;  
+} 
+```
+
+Nu visas den anpassade kortkomponenten enligt nedan:
+
+![Anpassad kortkomponent](/help/edge/docs/forms/universal-editor/assets/cc-ue-card-component.png)
+
+## Verkställ och skicka ändringar
+
+När du har implementerat JavaScript och CSS för den anpassade komponenten och verifierat den lokalt implementerar och skickar du ändringarna till din Git-databas.
+
+```bash
+git add . && git commit -m "Add card custom component" && git push
+```
+
+Du har skapat en komplex, anpassad kortmarkeringskomponent i några enkla steg.
+
+## Manuell eller äldre metod för att skapa anpassad komponent
+
+Det äldre sättet att göra detta är att manuellt följa stegen som beskrivs nedan:
+
+1. **Välj en OOTB-komponent** att utöka (t.ex. knapp, listruta, textinmatning osv.). I det här fallet utökar du radiokomponenten.
+
+2. **Skapa en mapp** i `blocks/form/components` med din komponents namn (kort i det här fallet).
+
+3. **Lägg till en JS-fil** med samma namn:
+   - `blocks/form/components/cards/cards.js`.
+
+4. (Valfritt) **Lägg till en CSS-fil** för anpassade format:
+   - `blocks/form/components/cards/cards.css.`
+
+5. **Definiera en ny JSON-fil** (t.ex. ` _cards.json`) i samma mapp som din **komponent-JS-fil** (`blocks/form/components/cards/_cards.json`). Denna JSON bör utöka en befintlig komponent och i sina definitioner ange `fd:viewType` till din komponents namn (kort i det här fallet):
+
+   - Lägg till anpassade fält explicit för alla fältgrupper (grundläggande, validering, hjälp osv.).
+
+6. **Implementera logiken för JS och CSS:**
+   - Exportera en standardfunktion enligt beskrivningen ovan.
+   - Använd parametern **element** för att ändra HTML grundstruktur.
+   - Använd parametern **fieldJson** om det behövs för standardfältdata.
+   - Använd funktionen **subscribe** för att lyssna på fältändringar eller anpassade händelser om det behövs.
+
+     >[!NOTE]
+     >
+     >Implementera JS- och CSS-logiken för den anpassade komponenten enligt beskrivningen ovan.
+
+7. Registrera komponenten som en variant i formulärbyggaren och ange variantegenskapen eller
+   `fd:viewType/:type` i JSON till din komponents namn, till exempel, lägg till värdet `fd:viewType` från `definitions[]` som kort i komponentarrayen för objektet med `id="form`.
 
    ```javascript
-   "models": [
    {
-     "id": "range",
-     "fields": [
-       {
-         "component": "container",
-         "name": "basic",
-         "label": "Basic",
-         "collapsible": false,
-         "...": "../../../../models/form-common/_basic-input-fields.json"
-       },
-       {
-         "...": "../../../../models/form-common/_help-container.json"
-       },
-       {
-         "component": "container",
-         "name": "validation",
-         "label": "Validation",
-         "collapsible": true,
-         "...": "../../../../models/form-common/_number-validation-fields.json"
-       }
-     ]
+   "definitions": [
+   {
+   "title": "Cards",
+   "id": "cards", "plugins": {
+   "xwalk": {
+   "page": {
+   "resourceType":
+   "core/fd/components/form/radiobutton/v1/radiobutton", "template": {
+   "jcr:title": "Cards",
+   "fieldType": "radio-button", "fd:viewType": "cards",
+   "enabled": true, "visible": true}
    }
-   ]
+   } }
+   }
+   ]}
    ```
 
-   >[!NOTE]
-   >
-   > Om du vill lägga till ett nytt fält i dialogrutan **Egenskap** för en anpassad komponent följer du det [definierade schemat](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#loading-model).
+8. **Uppdatera mappings.js**: Lägg till komponentens namn i listan **OOTBComponentDecorators** (för OTB-formatkomponenter) eller **customComponents** så att den känns igen och läses in av systemet.
 
-   Du kan också [lägga till anpassade egenskaper](#adding-custom-properties-for-your-custom-component) i en anpassad komponent för att utöka dess funktioner.
+   ```javascript
+   let customComponents = ["cards"];
+   const OOTBComponentDecorators = [];
+   ```
 
-#### Lägga till anpassade egenskaper för den anpassade komponenten
-
-Med anpassade egenskaper kan du definiera specifika beteenden baserat på värden som har angetts i egenskapsdialogrutan för en komponent. Detta gör att komponentens funktionalitet och anpassningsalternativ utökas.
-
-I det här exemplet lägger vi till Stegvärde som en anpassad egenskap i intervallkomponenten.
-
-![Egen egenskap för stegvärde](/help/edge/docs/forms/universal-editor/assets/customcomponent-stepvalue.png)
-
-Lägg till den anpassade egenskapen Stegvärde genom att lägga till komponentmodellen med följande kodrader i filen ` _<component>.json`:
-
-```javascript
-      {
-      "component": "number",
-      "name": "stepValue",
-      "label": "Step Value",
-      "valueType": "number"
-      }
-```
-
-JSON-fragmentet definierar en anpassad egenskap med namnet **Stegvärde** för en **Intervall** -komponent. Nedan visas en beskrivning av varje fält:
-
-- **komponent**: Anger typen av indatafält som används i egenskapsdialogrutan. I det här fallet anger `number` att numeriska värden accepteras i fältet.
-- **name**: Identifieraren för egenskapen, som används för att referera till den i komponentens logik. Här representerar `stepValue` stegvärdesinställningen för intervallet.
-- **label**: Egenskapens visningsnamn som det visas i egenskapsdialogrutan.
-- **valueType**: Definierar den datatyp som förväntas för egenskapen. `number` säkerställer att endast numeriska indata tillåts.
-
-Du kan nu använda `stepValue` som en anpassad egenskap i JSON-egenskaperna för `range.js` och implementera dynamiskt beteende baserat på dess värde vid körning.
-
-Därför är den sista `_range.json`-filen, efter att du har lagt till komponentdefinitionen, komponentmodellen och anpassade egenskaper, följande:
-
-```javascript
- {
-  "definitions": [
-    {
-      "title": "Range",
-      "id": "range",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/fd/components/form/numberinput/v1/numberinput",
-            "template": {
-              "jcr:title": "Range",
-              "fieldType": "number-input",
-              "fd:viewType": "range",
-              "enabled": true,
-              "visible": true
-            }
-          }
-        }
-      }
-    }
-  ],
-  "models": [
-    {
-      "id": "range",
-      "fields": [
-        {
-          "component": "container",
-          "name": "basic",
-          "label": "Basic",
-          "collapsible": false,
-          "...": "../../../../models/form-common/_basic-input-fields.json"
-         {
-           "component": "number",
-           "name": "stepValue",
-            "label": "Step Value",
-             "valueType": "number"
-}
-        },
-        {
-          "...": "../../../../models/form-common/_help-container.json"
-        },
-        {
-          "component": "container",
-          "name": "validation",
-          "label": "Validation",
-          "collapsible": true,
-          "...": "../../../../models/form-common/_number-validation-fields.json"
-        }
-      ]
-    }
-  ]
-}
-```
-
-![komponentdefinition och modell](/help/edge/docs/forms/universal-editor/assets/custom-component-json-file.png)
-
-
-### &#x200B;3. Göra den anpassade komponenten synlig i komponentlistan i WYSIWYG
-
-Ett filter definierar i vilket avsnitt den anpassade komponenten kan användas i Universellt redigeringsprogram. Detta garanterar att komponenten bara kan användas i lämpliga avsnitt, vilket bevarar strukturen och användbarheten.
-
-Så här ser du till att den anpassade komponenten visas i listan med tillgängliga komponenter vid formulärutveckling i WYSIWYG:
-
-1. Navigera till filen `/blocks/form/_form.json`.
-1. Leta reda på komponentarrayen i objektet som har `id="form"`.
-1. Lägg till värdet `fd:viewType` från `definitions[]` i komponentarrayen för objektet med `id="form"`.
+9. **Uppdatera_form.json**: Lägg till komponentens namn i arrayen `filters.components` så att den kan tas bort i redigeringsgränssnittet.
 
    ```javascript
    "filters": [
-     {
-       "id": "form", 
-       "components": [
-         "captcha",
-         "checkbox",
-         "checkbox-group",
-         "date-input",
-         "drop-down",
-         "email",
-         "file-input",
-         "form-accordion",
-         "form-button",
-         "form-fragment",
-         "form-image",
-         "form-modal",
-         "form-reset-button",
-         "form-submit-button",
-         "number-input",
-         "panel",
-         "plain-text",
-         "radio-group",
-         "rating",
-         "telephone-input",
-         "text-input",
-         "tnc",
-         "wizard",
-         "range"
+   {
+       "id": "form",
+       "components": [ "cards"]}
        ]
-     }
-   ]
    ```
 
-![komponentfilter](/help/edge/docs/forms/universal-editor/assets/custom-component-form-file.png)
+10. **Uppdatera _component-definition.json**: I `models/_component-definition.json` uppdaterar du arrayen i gruppen med `id custom-components` med ett objekt på följande sätt:
 
-### &#x200B;4. Registrera din anpassade komponent
+   ```javascript
+   {
+   "...":"../blocks/form/components/cards/_cards.json#/definitions"
+   }
+   ```
 
-Om du vill att formulärblocket ska känna igen den anpassade komponenten och läsa in dess egenskaper som definierats i komponentmodellen vid formulärredigeringen, lägger du till värdet `fd:viewType` från komponentdefinitionen i filen `mappings.js`.
+   Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
 
-Så här registrerar du en komponent:
+11. **Kör build:json script**: Kör `npm run build:json` för att kompilera och sammanfoga alla komponent-JSON-definitioner till en enda fil som ska hanteras från servern. Detta garanterar att den nya komponentens schema inkluderas i de sammanfogade utdata.
 
-1. Navigera till filen `/blocks/form/mappings.js`.
-1. Leta reda på `customComponents[]`-arrayen.
-1. Lägg till värdet `fd:viewType` från arrayen `definitions[]` i arrayen `customComponents[]`.
+12. Implementera och skicka dina ändringar till din Git-databas.
+
+Nu kan du lägga till den anpassade komponenten i formuläret.
+
+## Skapa en sammansatt komponent
+
+En sammansatt komponent skapas genom att flera komponenter kombineras.
+En sammansatt villkorskomponent består till exempel av en överordnad panel som innehåller:
+
+- Ett oformaterat textfält för att visa villkoren
+
+- En kryssruta för att hämta användarens avtal
+
+Kompositionsstrukturen definieras som en mall inuti respektive komponents JSON-fil. I följande exempel visas hur du definierar en mall för en villkorskomponent:
 
 ```javascript
-let customComponents = ["range"];
-const OOTBComponentDecorators = ['file-input',
-                                 'wizard', 
-                                 'modal', 'tnc',
-                                'toggleable-link',
-                                'rating',
-                                'datetime',
-                                'list',
-                                'location',
-                                'accordion'];
+{ 
+
+  "definitions": [ 
+
+    { 
+
+      "title": "Terms and conditions", 
+
+      "id": "tnc", 
+
+      "plugins": { 
+
+        "xwalk": { 
+
+          "page": { 
+
+            "resourceType": "core/fd/components/form/termsandconditions/v1/termsandconditions", 
+
+            "template": { 
+
+              "jcr:title": "Terms and conditions", 
+
+              "fieldType": "panel", 
+
+              "fd:viewType": "tnc", 
+
+              "text": { 
+
+                "value": "Text related to the terms and conditions come here.", 
+
+                "sling:resourceType": "core/fd/components/form/text/v1/text", 
+
+                "fieldType": "plain-text", 
+
+                "textIsRich": true 
+
+              }, 
+
+              "approvalcheckbox": { 
+
+                "name": "approvalcheckbox", 
+
+                "jcr:title": "I agree to the terms & conditions.", 
+
+                "sling:resourceType": "core/fd/components/form/checkbox/v1/checkbox", 
+
+                "fieldType": "checkbox", 
+
+                "required": true, 
+
+                "type": "string", 
+
+                "enum": [ 
+
+                  "true" 
+
+                ] 
+
+              } 
+
+            } 
+
+          } 
+
+        } 
+
+      } 
+
+    } 
+
+  ], 
+
+  ... 
+
+} 
 ```
-
-![komponentmappning](/help/edge/docs/forms/universal-editor/assets/custom-component-mapping-file.png)
-
-När du har slutfört stegen ovan visas den anpassade komponenten i formulärets komponentlista i Universalläsaren. Du kan sedan dra och släppa det i formuläravsnittet.
-
-![Skärmbild av komponentpaletten Universal Editor som visar den anpassade intervallkomponenten som är tillgänglig för dra och släpp i formulär](/help/edge/docs/forms/universal-editor/assets/custom-component-range.png)
-
-Skärmbilden nedan visar egenskaperna för komponenten `range` som lagts till i komponentmodellen, som anger egenskaperna som formulärförfattaren kan konfigurera:
-
-![Skärmbild på egenskapspanelen för den universella redigeraren med konfigurerbara inställningar för intervallkomponenten inklusive grundläggande egenskaper, verifieringsregler och formateringsalternativ](/help/edge/docs/forms/universal-editor/assets/range-properties.png)
-
-Nu kan du definiera runtime-beteendet för den anpassade komponenten genom att lägga till format och funktioner.
-
-### &#x200B;5. Lägga till körningsbeteende för den anpassade komponenten
-
-Du kan ändra anpassade komponenter med fördefinierad kod, vilket förklaras i [Formateringen av formulärfält](/help/edge/docs/forms/style-theme-forms.md). Detta kan du göra med anpassad CSS (Cascading Style Sheets) och anpassad kod för att förbättra komponentens utseende. Så här lägger du till körningsbeteendet för komponenten:
-
-1. Om du vill lägga till formatet går du till filen `/blocks/form/components/range/range.css` och lägger till följande kodrad:
-
-   ```javascript
-   /** Styling for range */
-   main .form .range-widget-wrapper.decorated input[type="range"] {
-   margin: unset;
-   padding: unset;
-   appearance: none;
-   height: 5px;
-   border-radius: 5px;
-   border: none;
-   background-image: linear-gradient(to right, #ADD8E6 calc(100% - var(--current-steps)/var(--total-steps)), #C5C5C5 calc(100% - var(--current-steps)/var(--total-steps)));
-   }
-   
-   main .form .range-widget-wrapper.decorated input[type="range"]:focus {
-   outline: none;
-   }
-   
-   .range-widget-wrapper.decorated input[type="range"]::-webkit-slider-thumb {
-   appearance: none;
-   width: 25px;
-   height: 25px;
-   border-radius: 50%;
-   background: #00008B; /* Dark Blue */
-   border: 3px solid #00008B; /* Dark Blue */
-   cursor: pointer;
-   outline: 3px solid #fff;
-   }
-   
-   .range-widget-wrapper.decorated input[type="range"]:focus::-webkit-slider-thumb {
-   border-color: #00008B; /* Dark Blue */
-   }
-   
-   .range-widget-wrapper.decorated .range-bubble {
-   color: #00008B; /* Dark Blue */
-   font-size: 20px;
-   line-height: 28px;
-   position: relative;
-   display: inline-block;
-   padding-bottom: 12px;
-   font-weight: bold;
-   }
-   
-   .range-widget-wrapper.decorated .range-min,
-   .range-widget-wrapper.decorated .range-max {
-   font-size: 14px;
-   line-height: 22px;
-   color: #494f50;
-   margin-top: 16px;
-   display: inline-block;
-   }
-   
-   .range-widget-wrapper.decorated .range-max {
-   float: right;
-   }
-   ```
-
-   Koden hjälper dig att definiera den anpassade komponentens format och visuella utseende.
-
-1. Om du vill lägga till funktionen går du till filen `/blocks/form/components/range/range.js` och lägger till följande kodrad:
-
-   ```javascript
-   function updateBubble(input, element) {
-   const step = input.step || 1;
-   const max = input.max || 0;
-   const min = input.min || 1;
-   const value = input.value || 1;
-   const current = Math.ceil((value - min) / step);
-   const total = Math.ceil((max - min) / step);
-   const bubble = element.querySelector('.range-bubble');
-   // during initial render the width is 0. Hence using a default here.
-   const bubbleWidth = bubble.getBoundingClientRect().width || 31;
-   const left = `${(current / total) * 100}% - ${(current / total) * bubbleWidth}px`;
-   bubble.innerText = `${value}`;
-   const steps = {
-       '--total-steps': Math.ceil((max - min) / step),
-       '--current-steps': Math.ceil((value - min) / step),
-   };
-   const style = Object.entries(steps).map(([varName, varValue]) => `${varName}:${varValue}`).join(';');
-   bubble.style.left = `calc(${left})`;
-   element.setAttribute('style', style);
-   }
-   
-   export default async function decorate(fieldDiv, fieldJson) {
-   console.log('RANGE DIV: ', fieldDiv);
-   console.log('RANGE JSON: fieldJson', fieldJson);
-    const input = fieldDiv.querySelector('input');
-   // modify the type in case it is not range.
-   input.type = 'range';
-   input.min = input.min || 10;
-   input.max = input.max || 1000;
-   // create a wrapper div to provide the min/max and current value
-   const div = document.createElement('div');
-   div.className = 'range-widget-wrapper decorated';
-   input.after(div);
-   const hover = document.createElement('span');
-   hover.className = 'range-bubble';
-   const rangeMinEl = document.createElement('span');
-   rangeMinEl.className = 'range-min';
-   const rangeMaxEl = document.createElement('span');
-   rangeMaxEl.className = 'range-max';
-   rangeMinEl.innerText = `${input.min || 1}`;
-   rangeMaxEl.innerText = `${input.max}`;
-   div.appendChild(hover);
-   // move the input element within the wrapper div
-   div.appendChild(input);
-   div.appendChild(rangeMinEl);
-   div.appendChild(rangeMaxEl);
-   input.addEventListener('input', (e) => {
-   updateBubble(e.target, div);
-   });
-   updateBubble(input, div);
-   return fieldDiv;
-   }
-   ```
-
-   Den styr hur den anpassade komponenten interagerar med användarens indata, bearbetar data och integreras med formulärblocket i den universella redigeraren.
-
-   När du har infogat anpassade format och funktioner förbättras intervallkomponentens utseende och beteende. Den uppdaterade designen återspeglar de format som används, medan den nya funktionen ger en mer dynamisk och interaktiv användarupplevelse.
-Skärmbilden nedan visar den uppdaterade intervallkomponenten.
-
-![Den sista omfångskomponenten som fungerar visar ett reglage med värdebubblor och interaktiva funktioner i Universell redigerare](/help/edge/docs/forms/universal-editor/assets/custom-component-range-1.png)
-
-## Frågor och svar
-
-- **Om jag lägger till en stil i både component.css och forms.css, vilket prioriterar jag?**
-När format definieras i både `component.css` och **forms.css** prioriteras `component.css` . Detta beror på att format på komponentnivå är mer specifika och åsidosätter globala format från `forms.css`.
-
-- **Min anpassade komponent visas inte i listan över tillgängliga komponenter i Universal Editor. Hur kan jag åtgärda det här?**
-Om din anpassade komponent inte visas kontrollerar du följande filer för att säkerställa att komponenten är korrekt registrerad:
-   - **component-definition.json**: Verifiera att komponenten är korrekt definierad.
-   - **component-filters.json**: Kontrollera att komponenten tillåts i rätt avsnitt.
-   - **component-models.json**: Bekräfta att komponentmodellen är korrekt konfigurerad.
 
 ## Bästa praxis
 
-- Vi rekommenderar att du [konfigurerar en lokal AEM-utvecklingsmiljö](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md#set-up-local-aem-development-environment) för att utveckla anpassade format och komponenter lokalt.
+Tänk på följande innan du skapar en egen anpassad komponent:
 
+- **Behåll fokuseringen på komponentlogiken**: Lägg endast till/åsidosätt det som är nödvändigt för ditt anpassade beteende
 
-## Extra byte
+- **Utnyttja grundstrukturen**: Använd OTB HTML som startpunkt
 
-### ResourceType som stöds
+- **Använd redigerbara egenskaper:** Visa konfigurerbara alternativ via JSON-schemat
 
-| Fälttyp | Resurstyp |
-|--------------|------------------------------------------------------------------|
-| text-input | core/fd/components/form/textinput/v1/textinput |
-| tal-input | core/fd/components/form/numberinput/v1/numberinput |
-| date-input | core/fd/components/form/datepicker/v1/datepicker |
-| panel | core/fd/components/form/panel/v1/panelContainer |
-| kryssruta | core/fd/components/form/checkbox/v1/checkbox |
-| nedrullningsbar | core/fd/components/form/dropdown/v1/dropdown |
-| alternativgrupp | core/fd/components/form/radiobutton/v1/radiobutton |
-| normal text | core/fd/components/form/text/v1/text |
-| file-input | core/fd/components/form/fileinput/v2/fileinput |
-| e-post | core/fd/components/form/emailinput/v1/emailinput |
-| image | core/fd/components/form/image/v1/image |
-| knapp | core/fd/components/form/button/v1/button |
+- **Namnge din CSS**: Undvik formatkonflikter genom att använda unika klassnamn
 
-### FieldTypes som stöds
+## Referenser
 
-FieldTypes som stöds för formulär är:
+- formulärfälttyper: Grundläggande HTML-strukturer och -egenskaper för alla fälttyper. [Klicka här](/help/edge/docs/forms/eds-form-field-properties) om du vill visa detaljerade formulärfältsstrukturer och egenskaper.
 
-- text-input
-- tal-input
-- date-input
-- panel
-- normal text
-- file-input
-- e-post
-- image
-- knapp
-- kryssruta
-- nedrullningsbar
-- alternativgrupp
+- **block/form/models/form-components**: OTB och anpassade egenskapsdefinitioner för komponenter.
 
+- **block/form/components**: Placera dina anpassade komponenter. Exempel: `blocks/form/components/countdown-timer/_countdown-timer.json` visar hur du utökar en baskomponent och lägger till nya egenskaper.

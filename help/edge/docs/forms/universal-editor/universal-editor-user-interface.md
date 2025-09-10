@@ -6,9 +6,9 @@ feature: Edge Delivery Services
 role: User, Developer, Admin
 level: Beginner
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: 07160248d5b5817d155a118475878ce04a687a32
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2390'
 ht-degree: 0%
 
 ---
@@ -112,11 +112,16 @@ Verktygsfältet **Universal Editor** innehåller viktiga åtgärder för att tes
 
 **För ditt första formulär:**
 
-1. **Börja bygga** - Lägg till komponenter med knappen **Lägg till** (`a`)
-2. **Konfigurera fält** - Välj komponenter och använd **egenskapsläget** (`d`)
-3. **Testa formuläret** - Använd **förhandsgranskningsläge** (`p`) för att interagera med formuläret
-4. **Kontrollera mobilvyn** - Växla till **responsivt läge** för mobiltestning
-5. **Publicera** - Klicka på **Publicera** när du är klar
+1. **Lägg till en adaptiv formulärkomponent** - Infoga `Adaptive Form`-komponenten i ett avsnitt.
+2. **Börja bygga** - Lägg till komponenter med knappen **Lägg till** (`a`)
+3. **Konfigurera fält** - Välj komponenter och använd **egenskapsläget** (`d`)
+4. **Testa formuläret** - Använd **förhandsgranskningsläge** (`p`) för att interagera med formuläret
+5. **Kontrollera mobilvyn** - Växla till **responsivt läge** för mobiltestning
+6. **Publicera** - Klicka på **Publicera** när du är klar
+
+>[!NOTE]
+>
+> Mer information om hur du skapar formulär i Universal Editor finns i [Skapa och publicera anpassad Forms med Edge Delivery Services](/help/edge/docs/forms/universal-editor/create-forms.md).
 
 **Kontrollpunkter för validering:**
 
@@ -218,7 +223,7 @@ Verktygsfältet **Universal Editor** innehåller viktiga åtgärder för att tes
 
 #### **AEM-formuläregenskaper**
 
-**Syfte:** Konfigurera inställningar på formulärnivå som FDM (Form Data Model) och publiceringsdatum\
+**Syfte:** Konfigurera inställningar på formulärnivå som FDM (Form Data Model), konfigurera skicka-åtgärder och publiceringsdatum\
 **När ska användas:** Konfigurera dataintegreringar, schemalägga publicering
 
 ![Formuläregenskaper](/help/edge/docs/forms/universal-editor/assets/ue-formproperties.png)
@@ -264,7 +269,7 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
 **Egenskapspanelen** (höger sida) är ditt kontrollcenter för att skapa och konfigurera formulär. Det ändras baserat på vad du väljer och innehåller olika verktyg för olika uppgifter.
 
-![Egenskapspanelen](/help/edge/docs/forms/universal-editor/assets/ue-properties-panel.png)
+![Egenskapspanelen](/help/edge/docs/forms/universal-editor/assets/text-properties-ue.png)
 
 ### **Bygg kärnformulärverktyg**
 
@@ -349,7 +354,7 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
     ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
-**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
 
 #### **Innehållsutkast**
 

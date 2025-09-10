@@ -5,9 +5,9 @@ feature: Edge Delivery Services
 role: Admin, Architect, Developer
 level: Intermediate
 exl-id: 846f56e1-3a98-4a69-b4f7-40ec99ceb348
-source-git-commit: e2bc958104bd9b75845ad2c213eec18d2560a3a4
+source-git-commit: 0d088d4e3b4e27fac0a05ff93a7fd01535bba6af
 workflow-type: tm+mt
-source-wordcount: '2780'
+source-wordcount: '2824'
 ht-degree: 0%
 
 ---
@@ -165,13 +165,15 @@ Bild: Gränssnitt för regelredigerare för redigering av komponentregler
 ![Användargränssnitt för regelredigeraren](/help/edge/docs/forms/assets/rule-editor-interface.png)
 Bild: Fullständigt gränssnitt för regelredigeraren med numrerade komponenter
 
-- **Komponenttitel och regeltyp**: Bekräftar den valda komponenten och den aktiva regeltypen.
-- **Panelen Formulärobjekt och funktioner**:
+1. **Komponenttitel och regeltyp**: Bekräftar den valda komponenten och den aktiva regeltypen.
+2. **Panelen Formulärobjekt och funktioner**:
+
    - Formulärobjekt: hierarkisk vy med fält och behållare för referens i regler
    - Funktioner: inbyggda hjälpmedel för matematik, sträng, datum och validering
-- **Växla panel**: Visa/dölj objekt- och funktionspanelen för att öka arbetsytan
-- **Visual rule builder**: Drag-and-drop-driven regeldisposition
-- **Kontroller**: Klart (spara), Avbryt (ignorera). Testa alltid reglerna innan du sparar.
+
+3. **Växla panel**: Visa/dölj objekt- och funktionspanelen för att öka arbetsytan
+4. **Visual rule builder**: Drag-and-drop-driven regeldisposition
+5. **Kontroller**: Klart (spara), Avbryt (ignorera). Testa alltid reglerna innan du sparar.
 
 +++
 
@@ -302,13 +304,13 @@ Du skapar ett formulär som:
 
 +++
 
-+++ Steg 1: Skapa grundformuläret
++++ Steg 1: Skapa formuläret
 
 **Mål**: Bygg basformuläret med alla fält och ursprungliga inställningar.
 
 1. **Öppna Universal Editor**:
    - Navigera till AEM Sites-konsolen, markera sidan och klicka på **Redigera**
-   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) är korrekt konfigurerad
+   - Kontrollera att [Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) är korrekt konfigurerad
 
 2. **Lägg till formulärkomponenter i den här ordningen**:
    - Titel (H2):&quot;Skatteberäkningsformulär&quot;
@@ -533,6 +535,9 @@ Bild: Lägga till anpassade funktioner i filen functions.js
 ![Anpassad funktion i regelredigeraren](/help/edge/docs/forms/assets/custom-function-rule-editor.png)
 Bild: Välja och konfigurera anpassade funktioner i regelredigeraren
 
+>
+>
+> Förbättringarna av regelredigeraren, bland annat anpassade händelsebaserade regler, stöd för dynamiska variabler och API-integrering, är också tillgängliga för Edge Delivery Services Forms. Mer information om dessa förbättringar och hur du använder dem finns i artikeln [Förbättringar av regelredigeraren och användningsfall](/help/forms/rule-editor-enhancements-use-cases.md) .
 
 **Bästa tillvägagångssätt för funktionsanvändning**:
 
@@ -727,7 +732,7 @@ Forms blir kraftfulla verktyg för datainsamling, kvalificering av leads och anv
 
 **Ytterligare resurser**:
 
-- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html?lang=sv-SE) för ett bredare sammanhang
+- [Dokumentation för Universal Editor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction.html) för ett bredare sammanhang
 - [Extension Manager guide](/help/implementing/developing/extending/extension-manager.md) för att aktivera ytterligare funktioner
 - [Edge Delivery Services-formulär](/help/edge/docs/forms/overview.md) för omfattande riktlinjer för formulärutveckling
 

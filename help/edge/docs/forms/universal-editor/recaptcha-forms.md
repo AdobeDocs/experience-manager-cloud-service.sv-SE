@@ -6,9 +6,9 @@ keywords: reCAPTCHA in forms, Using reCAPTCHA in Universal Editor, Add reCAPTCHA
 role: Developer, Admin
 level: Intermediate
 exl-id: 1f28bd13-133f-487e-8b01-334be7c08a3f
-source-git-commit: cfff846e594b39aa38ffbd3ef80cce1a72749245
+source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
 workflow-type: tm+mt
-source-wordcount: '1290'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,6 @@ Innan du börjar bör du kontrollera följande:
 
 - Åtkomst till redigering i AEM as a Cloud Service
 - Universell redigeringsåtkomst med formulärredigeringsbehörigheter
-- Registrering i programmet för tidig åtkomst för reCAPTCHA-funktioner
 
 ### Tekniska krav
 
@@ -218,7 +217,7 @@ Edge Delivery Services Forms har stöd för två Google reCAPTCHA-alternativ. An
 
 ## Konfigurera reCAPTCHA Standard
 
-+++Steg 1: Hämta API-nycklar för reCAPTCHA (se informationen)
++++Steg 1: Hämta API-nycklar för reCAPTCHA (se information)
 
 >[!IMPORTANT]
 >
@@ -256,7 +255,7 @@ Edge Delivery Services Forms har stöd för två Google reCAPTCHA-alternativ. An
 
 +++
 
-+++steg 2: Konfigurera AEM Cloud-konfigurationsbehållaren (se information)
++++Steg 2: Konfigurera AEM Cloud Configuration Container (se information)
 
 Följ samma procedur som i Enterprise-konfigurationen:
 
@@ -268,7 +267,7 @@ Följ samma procedur som i Enterprise-konfigurationen:
 
 +++
 
-+++steg 3: Konfigurera standardtjänsten reCAPTCHA i AEM (se information)
++++Steg 3: Konfigurera standardtjänsten reCAPTCHA i AEM (se information)
 
 ![reCAPTCHA Standard configuration screen](/help/edge/docs/forms/universal-editor/assets/recaptcha.png)
 *Bild: konfigurationsgränssnittet reCAPTCHA Standard i AEM*
@@ -313,7 +312,7 @@ När du har konfigurerat tjänsten reCAPTCHA lägger du till skydd i formuläret
 ![Lägger till komponenten reCAPTCHA i ett formulär](/help/edge/docs/forms/universal-editor/assets/add-recaptcha-component.png)
 *Figur: Lägga till komponenten Osynlig Captcha i formuläret*
 
-+++1. Öppna formulär i Universal Editor
++++&#x200B;1. Öppna formulär i Universal Editor
 Gå till formuläret i AEM Sites och klicka på Redigera för att öppna det i Universell redigerare. Vänta tills redigeraren har lästs in.
 
 - Gå till ditt formulär i AEM Sites
@@ -321,14 +320,14 @@ Gå till formuläret i AEM Sites och klicka på Redigera för att öppna det i U
 - Vänta tills redigeraren har lästs in
 +++
 
-+++2. Leta reda på formulärstrukturen
++++&#x200B;2. Leta reda på formulärstrukturen
 I innehållsträdet (den vänstra panelen) hittar du avsnittet Adaptivt formulär och expanderar formulärstrukturen så att insättningspunkter visas.
 
 - I innehållsträdet (den vänstra panelen) hittar du sektionen Adaptiv form
 - Expandera formulärstrukturen så att insättningspunkter visas
 +++
 
-+++3. Lägg till reCAPTCHA-komponent
++++&#x200B;3. Lägg till reCAPTCHA-komponent
 Lägg till komponenten Captcha (osynlig) i formuläret.
 
 - Klicka på ikonen Lägg till (+) i formuläravsnittet
@@ -336,7 +335,7 @@ Lägg till komponenten Captcha (osynlig) i formuläret.
 - Du kan också dra och släppa komponenten från komponentpanelen
 +++
 
-+++4. Konfigurera komponent (valfritt)
++++&#x200B;4. Konfigurera komponent (valfritt)
 Markera den nya Captcha-komponenten och verifiera att den använder din reCAPTCHA-konfiguration.
 
 - Markera den nya Captcha-komponenten
@@ -344,7 +343,7 @@ Markera den nya Captcha-komponenten och verifiera att den använder din reCAPTCH
 - Ingen ytterligare konfiguration krävs för grundläggande konfiguration
 +++
 
-+++5. Publicera dina ändringar
++++&#x200B;5. Publicera dina ändringar
 Publicera ändringarna och verifiera att det inte finns några fel.
 
 - Klicka på Publicera i Universal Editor
