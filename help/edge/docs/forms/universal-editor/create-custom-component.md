@@ -4,7 +4,7 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: 1d59791561fc6148778adccab902c8e727adc641
+source-git-commit: 6a63b4f839516a2ebc1eec641eb36315efca6dd5
 workflow-type: tm+mt
 source-wordcount: '2120'
 ht-degree: 0%
@@ -175,6 +175,8 @@ I det här avsnittet får du lära dig hur du skapar en anpassad **kortkomponent
 #### 1.1 Filer och mappar
 
 Det första steget är att ställa in de nödvändiga filerna för den anpassade komponenten och koppla den upp till koden i databasen. Den här processen utförs automatiskt av **AEM Forms Scaffolder CLI**, vilket gör det snabbare att ställa in och snurra nödvändiga filer.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3474752)
 
 1. Öppna terminalen och navigera till roten i formulärprojektet.
 2. Kör följande kommandon:
@@ -520,13 +522,13 @@ Det äldre sättet att göra detta är att manuellt följa stegen som beskrivs n
 
 10. **Uppdatera _component-definition.json**: I `models/_component-definition.json` uppdaterar du arrayen i gruppen med `id custom-components` med ett objekt på följande sätt:
 
-    ```javascript
-    {
-    "...":"../blocks/form/components/cards/_cards.json#/definitions"
-    }
-    ```
+   ```javascript
+   {
+   "...":"../blocks/form/components/cards/_cards.json#/definitions"
+   }
+   ```
 
-    Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
+   Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
 
 11. **Kör build:json script**: Kör `npm run build:json` för att kompilera och sammanfoga alla komponent-JSON-definitioner till en enda fil som ska hanteras från servern. Detta garanterar att den nya komponentens schema inkluderas i de sammanfogade utdata.
 
