@@ -4,9 +4,9 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: 6a63b4f839516a2ebc1eec641eb36315efca6dd5
+source-git-commit: 476841e4e7d00679bd6fc75bc1dc346f9e01fdd6
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2121'
 ht-degree: 0%
 
 ---
@@ -443,7 +443,7 @@ Nu visas den anpassade kortkomponenten enligt nedan:
 
 ![Anpassad kortkomponent](/help/edge/docs/forms/universal-editor/assets/cc-ue-card-component.png)
 
-## Verkställ och skicka ändringar
+### &#x200B;3. Verkställ och skicka ändringar
 
 När du har implementerat JavaScript och CSS för den anpassade komponenten och verifierat den lokalt implementerar och skickar du ändringarna till din Git-databas.
 
@@ -453,7 +453,7 @@ git add . && git commit -m "Add card custom component" && git push
 
 Du har skapat en komplex, anpassad kortmarkeringskomponent i några enkla steg.
 
-## Manuell eller äldre metod för att skapa anpassad komponent
++++ ## Manuell eller äldre metod för att skapa en anpassad komponent
 
 Det äldre sättet att göra detta är att manuellt följa stegen som beskrivs nedan:
 
@@ -522,13 +522,13 @@ Det äldre sättet att göra detta är att manuellt följa stegen som beskrivs n
 
 10. **Uppdatera _component-definition.json**: I `models/_component-definition.json` uppdaterar du arrayen i gruppen med `id custom-components` med ett objekt på följande sätt:
 
-    ```javascript
-    {
-    "...":"../blocks/form/components/cards/_cards.json#/definitions"
-    }
-    ```
+   ```javascript
+   {
+   "...":"../blocks/form/components/cards/_cards.json#/definitions"
+   }
+   ```
 
-    Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
+   Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
 
 11. **Kör build:json script**: Kör `npm run build:json` för att kompilera och sammanfoga alla komponent-JSON-definitioner till en enda fil som ska hanteras från servern. Detta garanterar att den nya komponentens schema inkluderas i de sammanfogade utdata.
 
