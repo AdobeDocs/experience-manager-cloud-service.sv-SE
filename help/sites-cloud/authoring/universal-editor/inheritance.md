@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 2a1b87c2-29b9-4689-9a15-e17942439160
-source-git-commit: 9941c652a1509934662cdaae6d187d1a28a1cc31
+source-git-commit: 2099a1aecd30eaa2ca3ca33a13729817a30b6c3f
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -67,4 +67,3 @@ Information om hur du aktiverar det här tillägget finns i [Extension Manager-d
 
 * Om du vill återställa arv för enskilda komponenter måste **MSM-tillägget** (AEM Multi-Site-Management) vara aktiverat.
 * Om du vill se vilken komponent som arv inaktiveras och som fortfarande har det bevarat, måste **MSM-tillägget** (AEM Multi-Site-Management) aktiveras.
-* Dessa funktioner är för närvarande begränsade till komponenter på sidor och gäller ännu inte för [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md), trots att de också har MSM- och Launch-funktioner.

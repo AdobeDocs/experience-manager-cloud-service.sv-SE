@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: c5a21f14bc3b09200f5513b1e1221c9dabb061af
+source-git-commit: d8a57131492a7e0d23b3ad803ea773f3ad7501cb
 workflow-type: tm+mt
-source-wordcount: '2319'
+source-wordcount: '2422'
 ht-degree: 0%
 
 ---
@@ -193,6 +193,24 @@ Välj Ångra eller Gör om för att ångra eller göra om den senaste redigering
 >[!TIP]
 >
 >Använd snabbtangenten `Command-Z` eller `Shift-Command-Z` för att ångra respektive göra om.
+
+### Kopiera och klistra in {#copy-paste}
+
+Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implementing/universal-editor/field-types.md#container) Detta är bara möjligt på samma sida och om [målbehållaren tillåter att komponenten klistras in.](/help/implementing/universal-editor/filtering.md)
+
+![Kopiera ikon](assets/copy.png)
+![Ikonen Klistra in ](assets/paste.png)
+
+1. Markera en komponent i redigeraren eller i innehållsträdet.
+1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.
+1. Ikonen **Klistra in** visas på egenskapspanelen.
+1. Markera komponenten _efter_ som du vill klistra in den kopierade komponenten.
+1. Tryck eller klicka på Klistra in.
+1. Den kopierade komponenten klistras in _efter_ den markerade komponenten.
+
+>[!TIP]
+>
+>Använd snabbtangenten `Command-C` eller `Command-V` för att kopiera respektive klistra in.
 
 ## Förhandsgranska innehåll {#previewing-content}
 
