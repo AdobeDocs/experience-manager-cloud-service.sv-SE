@@ -5,7 +5,7 @@ feature: Operations
 role: Admin
 badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: 8f804f55-a66d-47ad-a48d-61b861cef4f7
-source-git-commit: 519b1ec43f28f27809c727c2519f646c27ab646e
+source-git-commit: 2fa7005eec0a53f632e1b1cb2f5cc5910bbf21f8
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsm
 * Programmet körs på AEM as a Cloud Service.
 * Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 30 dagar** sedan.
 * Miljöstatusen är *Körs* och ingen pipeline pågår.
-* **Du kan återställa tidigare kod som distribuerats** i en `Development` -miljö, `Stage`-miljö eller en `Specialized Testng Environment` -miljö.
+* **Du kan återställa tidigare kod som distribuerats** i en `Development` -miljö, `Stage`-miljö eller en `Specialized Testing Environment` -miljö.
 
 Om en kontroll misslyckas öppnar Cloud Manager följande dialogruta med en eller flera villkor som inte uppfylls och **Bekräfta** inaktiveras, vilket förhindrar återställning.
 
