@@ -1,6 +1,6 @@
 ---
 title: Program och programtyper
-description: Läs om hierarkin i Cloud Manager och hur de olika typerna av program passar in i strukturen och hur de skiljer sig åt.
+description: Läs om hierarkin i Cloud Manager och hur de olika programtyperna passar in i strukturen, och hur de skiljer sig åt.
 exl-id: 507df619-a5b5-419a-9e38-db77541425a2
 solution: Experience Manager
 feature: Cloud Manager, Developing
@@ -8,7 +8,7 @@ role: Admin, Architect, Developer
 source-git-commit: dc4008a33f6a786884a9aad30096ff4f0561346c
 workflow-type: tm+mt
 source-wordcount: '501'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
