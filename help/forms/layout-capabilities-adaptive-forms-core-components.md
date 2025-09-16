@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 keywords: Layout för adaptiv form baserad på kärnkomponenter, olika layouter för formulär, dynamiska formulärlayouter AEM, AEM Cloud-formulärlayouter, formulärlayouttyper i AEM Core-komponenter, anpassade formulärlayouter
 role: User, Developer, Admin
 exl-id: dcc01d84-0d39-4fa8-ac47-71a9aba91b1e
-source-git-commit: 16b1e7ffa4e3812e9207bb283c63029939f7d14e
+source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
 workflow-type: tm+mt
 source-wordcount: '2093'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/layout-capabilities-adaptive-forms.md) |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 
@@ -32,6 +32,7 @@ Innan du utforskar de olika funktionerna i en layout måste du se till att kärn
 ## Anpassade layouttyper i Forms
 
 Adaptiv form baserad på kärnkomponenter har stöd för följande typer av layouter:
+
 * **Panellayout**
 * **Guidelayout**
 * **Lodrät layout**
@@ -48,7 +49,7 @@ Panelayout är användbart när du vill ordna relaterade fält på ett sätt som
 
 Panellayout
 
-Du kan använda [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) för att lägga till panellayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar olika egenskaper för panelkomponenten finns i artikeln [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
+Du kan använda [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) för att lägga till panellayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar olika egenskaper för panelkomponenten finns i artikeln [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
 
 >[!TAB Guidelayout]
 
@@ -58,7 +59,7 @@ Med hjälp av guidelayouten kan du förenkla ett komplext formulär genom att de
 
 Guidelayout
 
-Du kan använda [guidekomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) för att lägga till guidelayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för guidekomponenten finns i artikeln [wizard component](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
+Du kan använda [guidekomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) för att lägga till guidelayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för guidekomponenten finns i artikeln [wizard component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
 
 >[!TAB Lodrät tabblayout]
 
@@ -68,7 +69,7 @@ Layouten för de lodräta flikarna kallas även för tabbar i den vänstra layou
 
 Lodrät tabblayout
 
-Du kan använda den [lodräta flikkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) för att lägga till den lodräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för komponenten med lodräta flikar finns i artikeln [för komponenten med lodräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs).
+Du kan använda den [lodräta flikkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) för att lägga till den lodräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för komponenten med lodräta flikar finns i artikeln [för komponenten med lodräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs).
 
 
 >[!TAB Vågrät fliklayout]
@@ -80,7 +81,7 @@ Layouten för de vågräta flikarna kallas även för Tabbar i den översta layo
 
 Vågrät fliklayout
 
-Du kan använda den [vågräta flikkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) för att lägga till den vågräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för den vågräta flikkomponenten finns i artikeln [vågräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) .
+Du kan använda den [vågräta flikkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) för att lägga till den vågräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för den vågräta flikkomponenten finns i artikeln [vågräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) .
 
 
 >[!TAB Dragspelslayout]
@@ -91,7 +92,7 @@ Dragspelslayouten visar innehåll i komprimerbara avsnitt eller paneler i ett ad
 
 Dragspelets layout
 
-Du kan använda [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) för att lägga till dragspelslayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för dragspelskomponenten finns i artikeln om [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
+Du kan använda [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) för att lägga till dragspelslayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för dragspelskomponenten finns i artikeln om [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
 
 >[!ENDTABS]
 
@@ -136,9 +137,9 @@ Låt oss utforska den stegvisa processen för att infoga en layout och lägga ti
 
    Du kan också [skapa ett nytt adaptivt formulär](/help/forms/creating-adaptive-form-core-components.md).
 
-1. Leta reda på det avsnitt i formulärredigeraren där du kan lägga till en layout.
+1. Leta reda på det avsnitt i formulärbyggaren som gör att du kan lägga till en layout.
 
-   ![Formulärredigeraren](/help/forms/assets/form-editor.png)
+   ![Formulärverktyget](/help/forms/assets/form-editor.png)
 1. Klicka på ikonen **Lägg till** . Ikonen är ett plustecken (+) som anger att du kan lägga till nya komponenter.
 
    ![Infoga layout](/help/forms/assets/insert-layout-add-icon.png)
@@ -342,7 +343,7 @@ Utför följande steg för att ersätta den befintliga layouten för ett formul�
 
 ## Extra byte
 
-Så här drar och släpper du komponenter i formulärredigeraren:
+Så här drar och släpper du komponenter i formulärverktyget:
 
 1. Leta reda på det avsnitt där du kan lägga till komponenter.
 1. Navigera till den vänstra panelen i redigeringsmiljön och klicka på **Komponenter**.

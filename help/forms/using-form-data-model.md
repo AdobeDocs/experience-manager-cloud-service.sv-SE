@@ -5,7 +5,7 @@ feature: Adaptive Forms, Form Data Model
 role: Admin, User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: 7c30c56ca7a4d8dbdadb2e54a1b7320477556fa5
+source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/using-form-data-model.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/using-form-data-model.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -56,7 +56,7 @@ Du kan skapa [anpassningsbara Forms](creating-adaptive-form.md)- och adaptiva fo
 
    ![create-af-3](assets/create-af-3.png)
 
-   När det adaptiva formuläret eller adaptiva formulärfragment som baseras på en formulärdatamodell (FDM) har skapats visas formulärdatamodellsobjekt på fliken **[!UICONTROL Data Sources]** i innehållsläsaren i den adaptiva formulärredigeraren.
+   När det adaptiva formuläret eller adaptiva formulärfragment som baseras på en formulärdatamodell (FDM) har skapats, visas formulärdatamodellsobjekt på fliken **[!UICONTROL Data Sources]** i innehållsläsaren i verktyget för adaptiva formulär.
 
    >[!NOTE]
    >
