@@ -199,6 +199,6 @@ Om du vill ha personlig vägledning kan du kontakta AEM Forms implementeringstea
 ## Relaterade artiklar
 
 - [Jämförelse av formulärframtagning](/help/edge/docs/forms/authoring-a-form.md)
-- [AEM Forms Core Components - översikt](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)
+- [AEM Forms Core Components - översikt](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE)
 - [Edge Delivery Services for Forms - översikt](/help/edge/docs/forms/overview.md)
-- [Headless Adaptive Forms with Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service)
+- [Headless Adaptive Forms with Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-headless-adaptive-forms/using/tutorial/build-engaging-forms-using-core-components-and-headless-adaptive-forms-aem-forms-cloud-service)

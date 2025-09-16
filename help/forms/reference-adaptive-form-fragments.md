@@ -34,7 +34,7 @@ För adaptiva Forms-författare finns referensfragment i [!DNL AEM Forms]-pakete
 * Villkor
 * Villkor med Klottra
 
-När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Distribuera innehållspaket via Cloud Manager och Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#deploying-content-packages-via-cloud-manager-and-package-manager) och [Arbeta med paket](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html).
+När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Distribuera innehållspaket via Cloud Manager och Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#deploying-content-packages-via-cloud-manager-and-package-manager) och [Arbeta med paket](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE).
 
 ![Alla fragment listade](assets/ootb-frags.png)
 

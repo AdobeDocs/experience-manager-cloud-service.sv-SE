@@ -120,7 +120,7 @@ Utför följande steg för att konfigurera en körklar anpassad sändningsåtgä
 
    När du har utfört de här stegen kan du visa en ny anpassad sändningsåtgärd, [Skicka med elektroniska DocuSign-signaturer](#enabledocusign), som är tillgänglig i listan över sändningsalternativ för ett adaptivt formulär och en [DocumentSign-molntjänstkonfiguration](#configure-docusign-with-aem-forms) i den lokala utvecklingsmiljön.
 
-1. Kompilera och [Distribuera koden till din [!DNL AEM Forms] as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#customer-releases).
+1. Kompilera och [Distribuera koden till din [!DNL AEM Forms] as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#customer-releases).
 
 ## Integrera [!DNL DocuSign] med [!DNL AEM Forms] {#configure-docusign-with-aem-forms}
 
