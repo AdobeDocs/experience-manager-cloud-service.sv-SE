@@ -3,13 +3,13 @@ title: Om Experience Hub
 description: Ta reda på mer om sidan Adobe Experience Hub.
 landing-page-description: Ta reda på mer om Experience Hub, en central utgångspunkt för alla AEM-funktioner.
 solution: Experience Manager
-feature: Authoring, Getting Started, Onboarding, AI Assistant, Workflows, Programs
-feature-set: Experience Cloud,Experience Manager Sites
+feature: Authoring, AI Assistant, Central Interface Components, Getting Started, Onboarding, Programs, Workflows
+feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: a1b0eed7-b74c-4e72-8399-c473bbda9245
-source-git-commit: fc3b3399560019df0475c9d3ad71e5ef6056f2ae
+source-git-commit: 82fce826ad6e5736740e39347b32b70d0b9f0176
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '568'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/implementing/cloud-manager/assets/experience-cloud-experiencemanager.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Första gången du öppnar den klickar du på önskat alternativ på sidan **Berätta för oss vad du vill göra** så att Adobe kan skräddarsy din upplevelse.
 
    Du kan ändra den här inställningen när som helst.
@@ -51,11 +51,11 @@ Adobe Experience Manager-sidan har uppdaterats med förbättrad navigering och i
 >
 >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-De här lösningarna har nu flyttats till huvudnavigeringen under **Verktyg** eller **Tjänster**. Dessutom ger nya navigeringselement snabb åtkomst till viktiga Adobe Experience Manager-funktioner som är specifika för de lösningar som är aktiverade, som Assets, Sites, Forms, Content Fragments, Launches och många andra.
+De här lösningarna har nu flyttats till huvudnavigeringen under **Verktyg** eller **Tjänster**. Nya navigeringselement ger snabb åtkomst till AEM-funktioner som är kopplade till dina aktiverade lösningar. Gå till Assets, Sites, Forms, Content Fragments, Launches med flera.
 
 ![Experience Hub-miljöer](/help/implementing/cloud-manager/assets/experience-hub-author-environments.png)
 
-De här funktionerna är tillgängliga för den primära produktionsmiljön som du har tillgång till, eller så kan du välja en specifik miljö att rikta dig till om du har tillgång till flera AEM-instanser.
+Använd dessa funktioner i din primära produktionsmiljö. Om du har tillgång till flera AEM-instanser väljer du den miljö du vill använda som mål.
 
 ![Prod- och scenmiljöer](/help/implementing/cloud-manager/assets/experience-hub-prod-stage.png)
 
@@ -67,7 +67,7 @@ Du kan också ändra storlek på widgetar och placera dem på sidan så att de p
 
 ![Experience Hub-widgetar](/help/implementing/cloud-manager/assets/experience-hub-widgets.png)
 
-Avsnittet **Redigeringsmiljöer** visar alla AEM-miljöer som du har tillgång till, med specifika genvägar för de lösningar och sidor som är tillgängliga för dem, och du kan även fästa specifika miljöer som du vill ska visas högst upp i listan.
+I avsnittet **Redigeringsmiljöer** visas alla AEM-miljöer som du kan komma åt och där finns genvägar till deras lösningar och sidor. Du kan fästa specifika miljöer så att de ligger högst upp i listan.
 
 I avsnittet **Senaste**, som visas i bilden nedan, visas sidor som du nyligen har besökt i AEM. Beroende på din innehavares licensiering kan widgeten innehålla objekt som Program, Pipeline Execution, Assets, Page Editor och Form Editor.
 
