@@ -1,14 +1,14 @@
 ---
 title: Forms Experience Builder
-description: Skapa kraftfulla formulär snabbare med Form Fragments
+description: Introduktion till Forms Experience Builder
 feature: Edge Delivery Services
 hide: true
 index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: 6bbec984e1e22764c762d95ff52ae1f474c6b413
+source-git-commit: ce61bc434614e5d7b92de3f1290e7e15325d27b7
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,6 @@ Omvandla befintliga formulär och dokument till interaktiva digitala upplevelser
 - **Platt PDF-fil**: Statiska dokument konverterade till interaktiva formulär
 - **Bilder och skärmbilder**: JPG, PNG-format (kontrollera med team om du har storleksbegränsningar)
 - **Handritade Forms**: Skisser och fotografier av pappersformulär
-
 
 **Intelligent konverteringsprocess**
 
@@ -206,7 +205,6 @@ Forms Experience Builder är för närvarande tillgängligt som en del av progra
 - **Projektinformation**: Tidslinje, omfång och användningsfall
 - **E-post för officiellt arbete**: Associerad med din organisations Adobe-konto
 
-
 ### Så här skaffar du IMS-organisations-ID och program-ID
 
 Detaljerade steg för att hitta ditt IMS-organisations-ID och program-ID finns i:
@@ -229,7 +227,6 @@ Detaljerade steg för att hitta ditt IMS-organisations-ID och program-ID finns i
 > **Begränsat tillgänglighetsprogram**: Åtkomst till Forms Experience Builder måste godkännas av interna intressenter. Adobe kommer att granska din begäran baserat på programkapacitet och anpassning till kriterier för tidig åtkomst. Godkännandet är inte garanterat och beror på den aktuella programtillgängligheten.
 
 Mer information om programmet för tidig åtkomst och dess funktioner finns i [dokumentationen för AEM Forms tidig åtkomst](/help/forms/early-access-ea-features.md).
-
 
 ## Komma igång
 
