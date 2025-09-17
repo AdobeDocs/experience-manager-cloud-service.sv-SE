@@ -4,11 +4,8 @@ description: Upptäck Interactive Communication Editor i AEM Forms. Lär dig vik
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-hide: true
-index: false
-hidefromtoc: true
 exl-id: 50709c68-8666-47da-8788-fad793d870e6
-source-git-commit: 3bab153b3dbace4c0d31670f954b9e952a5ecd43
+source-git-commit: 479f65872f5cffce5ba29d1208c96de4df3c4ef3
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%

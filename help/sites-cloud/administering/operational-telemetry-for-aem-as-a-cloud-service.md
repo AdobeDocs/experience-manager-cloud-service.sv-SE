@@ -4,7 +4,7 @@ description: Läs mer om Operational Telemetry, en automatiserad tjänst som gö
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: d02569f5fcca0e53c8f258be8a193663364ac31f
+source-git-commit: 100a8cd1a27cd8f0677ed001def0b1e0e7b20ed3
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Den operativa telemetritjänsten är utformad för att minimera datainsamling. D
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttypen och det operativsystem som används för att visa sidan, till exempel: `desktop:windows` eller `mobile:ios`
 * Tidpunkten för datainsamlingen, till exempel: `2021-06-26 06:00:02.596000 UTC (in order to preserve privacy, we round all minutes to the previous hour, so that only seconds and milliseconds are tracked)`
-* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs?lang=sv-SE`
+* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs`
 * Referens-URL (URL:en för sidan som länkade till den aktuella sidan, om användaren följde en länk)
 * Ett slumpmässigt genererat ID för sidvyn i ett format som liknar: `2Ac6`
 * Samplingsfrekvensen, t.ex. `100`, har samma vikt eller inverterad. Det betyder att bara en av hundra sidvisningar spelas in
@@ -105,7 +105,7 @@ Here are key considerations for customers to keep in mind when interpreting thei
 
    Om du väljer bort detta kan det innebära att du missar en chans att förbättra trafikengagemanget på din webbplats. Om du råkar ut för några problem kan du inaktivera Operational Telemetry genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_DISABLED` på värdet `true`. Om du vill aktivera Operational Telemetry igen vid ett senare tillfälle tar du bara bort den miljövariabeln igen.
 
-1. **Kan jag använda en skyddsprofil för innehåll med ett kort varv?
+1. **Kan jag använda en skyddsprofil för innehåll med en Nonce?**
 
    Stödet för Operational Telemetry innehåller en experimentell funktion som stöder en Content Security Policy med en nonce. Den här funktionen kan aktiveras genom att [ställa in en miljövariabel i Cloud Manager](/help/implementing/cloud-manager/environment-variables.md#add-variables) med namnet `AEM_OPTEL_NONCE` på värdet `true`. Om du vill inaktivera det här igen vid ett senare tillfälle tar du bara bort systemvariabeln igen.
 
