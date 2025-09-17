@@ -4,10 +4,7 @@ description: Skapa personaliserad, datadriven kommunikation. Utforska viktiga fu
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-hide: true
-index: false
-hidefromtoc: true
-source-git-commit: 764cfbbcb8efd407cff85bfc24928aa3f8e5e956
+source-git-commit: 479f65872f5cffce5ba29d1208c96de4df3c4ef3
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
