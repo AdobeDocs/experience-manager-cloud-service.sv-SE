@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: b367e7d62596c33a4ba399008e856a97d12fb45b
+source-git-commit: 992f9377133dd7ca3bd7b169c0a29e76baadde7e
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1630'
 ht-degree: 0%
 
 ---
@@ -426,6 +426,8 @@ Tabellen nedan förklarar den tillgängliga åtgärden.
 |-----------|--------------------------|-------------|
 | **selectOrigin** | originName | Namnet på ett av de definierade originalen. |
 |     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
+| **selectAemOrigin** | originName | Namnet på en av de fördefinierade AEM-originalen (värde som stöds: `static`). |
+|     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
 
 **Original**
 
@@ -441,6 +443,29 @@ Anslutningar till originalen är endast SSL och använder port 443.
 | **forwardAuthorization** (valfritt, standardvärdet är false) | Om värdet är true skickas auktoriseringshuvudet från klientbegäran till serverdelen, annars tas auktoriseringshuvudet bort. |
 | **timeout** (valfritt, i sekunder är standardvärdet 60) | Antal sekunder som CDN ska vänta på att en backend-server ska leverera den första byten av en HTTP-svarstext. Det här värdet används också som en tidsgräns mellan byte till serverdelsservern. |
 
+### Proxyserver för anpassad domän till AEM statiska nivå {#proxy-custom-domain-static}
+
+Ursprungsväljare kan användas för att dirigera AEM-publiceringstrafik till statiskt AEM-innehåll som distribueras med [frontendpipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md). Användningsexempel är att använda statiska resurser på samma domän som sidan (t.ex. example.com/static) eller på en explicit annan domän (t.ex. static.example.com).
+
+Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
+
+```
+kind: CDN
+version: '1'
+metadata:
+  envTypes: ["dev"]
+data:
+  originSelectors:
+    rules:
+      - name: select-aem-static-origin
+        when:
+          reqProperty: domain
+          equals: static.example.com
+        action:
+          type: selectAemOrigin
+          originName: static
+```
+
 ### Proxyserver till Edge Delivery Services {#proxying-to-edge-delivery}
 
 Det finns scenarier där ursprungsväljare ska användas för att dirigera trafik via AEM Publish till AEM Edge Delivery Services:
@@ -454,6 +479,8 @@ Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
 ```
 kind: CDN
 version: '1'
+metadata:
+  envTypes: ["dev"]
 data:
   originSelectors:
     rules:
