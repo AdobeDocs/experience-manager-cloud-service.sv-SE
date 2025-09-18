@@ -19,7 +19,7 @@ Fullständig dokumentation finns i [API för hantering av innehållsfragment](ht
 
 >[!NOTE]
 >
->Den befintliga användningen av [Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment bör migreras till det nya OpenAPI:t för hantering av innehållsfragment.
+>Den befintliga användningen av [Assets HTTP API](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment bör migreras till det nya OpenAPI:t för hantering av innehållsfragment.
 
 >[!NOTE]
 >
