@@ -3,9 +3,9 @@ title: Skapa Vanity-URL:er med Dynamic Media med OpenAPI-funktioner
 description: Använd Dynamic Media OpenAPI-funktioner för att omvandla URL:er för leverans av stora tillgångar till korta varumärkesanpassade URL:er. En fågel-URL är en kort, ren, lättåtkomlig och läsbar version av din komplexa leverans-URL. Ni kan inkludera ert varumärke, produktnamn och relevanta nyckelord i er egen webbplats för att öka varumärkets synlighet och användarengagemanget
 role: Admin
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: c72966bff9220b681f8c1e4c534f19cb4b950700
+source-git-commit: 73574b3358451dfe135b91011abb5cad372a783e
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1377'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,9 @@ Läs mer om [metadatamatcheman](/help/assets/metadata-schemas.md).
 
      >[!NOTE]
      >
-     > En enskild resurs kan ha flera ID:n för huvudinnehållet. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) och begär att få generera de ID:n som krävs.
+     > * Använd unika användar-ID:n för varje resurs. Kontrollera alltid att resurser som delar samma metadataformulär har unika ID:n för DM med OpenAPI-leverans via egna URL:er. Om två resurser delar samma ID för huvudinnehållet, levererar DM med OpenAPI den resurs som senast tog emot detta ID och åsidosätter det tidigare berättigandet för ID:t till en annan resurs.
+     >
+     > * En enskild resurs kan ha flera ID:n för huvudinnehållet. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) och begär att få generera de ID:n som krävs.
 
 När du har konfigurerat ditt användar-ID i resursens metadataformulär mappar [det här metadatafältet till systemets leveransmekanism](#map-cloud-manager-environment-variable).
 
@@ -132,7 +134,7 @@ När användaren klickar på tilläggs-URL:en mappar [!DNL Dynamic Media with Op
 
 ## Skala med hjälp av mål-URL:er{#scale-using-vanity-url}
 
-Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
+Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
 
 Se följande huvud-URL och dess anpassningsbara komponenter:
 
@@ -182,9 +184,9 @@ Se följande huvud-URL och dess anpassningsbara komponenter:
 Utför följande steg för att skriva om CDN-reglerna för leverans:
 
 1. Navigera till din AEM-databas för att skapa en YAML-konfigurationsfil.
-2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
+2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
 Följ de här [bästa metoderna](#best-practices) för att skapa din domänsökväg.
-   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
+   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
 
 Nedan följer exempel på skrivregler för att lägga till filnamn med tillägg i tillfälliga URL:er. Anpassa dessa omskrivningsregler efter dina specifika krav. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) om du behöver mer hjälp:
 
