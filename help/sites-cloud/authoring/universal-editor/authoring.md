@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: d8a57131492a7e0d23b3ad803ea773f3ad7501cb
+source-git-commit: 16c97e13ba96df743afd6da0ad9416dfa0c825f7
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2495'
 ht-degree: 0%
 
 ---
@@ -80,6 +80,22 @@ Snabbmenyn öppnas ovanför det formaterade textblocket och innehåller grundlä
 ![Dialogrutan för textredigering](assets/rich-text-canvas.png)
 
 Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara ändringarna.
+
+#### RTF-formateringsalternativ {#formatting-options}
+
+RTF-redigeraren i Universal Editor gör att författaren kan använda standardtextformatering. Som standard är följande alternativ tillgängliga.
+
+* Stycke (h1, h2, h3 osv.)
+* Fet
+* Kursiv
+* Understruken
+* Upphöjd
+* Nedsänkt
+* Punktlista
+* Numrerad lista
+* Länk
+
+RTE kan konfigureras för att dölja alternativ eller visa ytterligare alternativ beroende på författarens behov. Mer information finns i dokumentet [Configuring the RTE for the Universal Editor](/help/implementing/universal-editor/configure-rte.md).
 
 ### Redigera media {#edit-media}
 

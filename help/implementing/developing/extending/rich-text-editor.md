@@ -1,20 +1,21 @@
 ---
-title: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Konfigurera RTF-redigeraren för att skapa innehåll i  [!DNL Adobe Experience Manager] as a Cloud Service.
 description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe Experience Manager] as a Cloud Service.
 contentOwner: AG
 exl-id: 1f0ff800-5e95-429a-97f2-221db0668170
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+source-git-commit: 2c1b444d7b7dad94cc9ebda59783f9c6fde84a91
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1892'
 ht-degree: 0%
 
 ---
 
+
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
-Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG-textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa ](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
+Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa ](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
 
 De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
@@ -24,6 +25,10 @@ De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 | [Olika typer av redigeringslägen](#editingmodes) | [Aktivera plugin-program](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) | [Ange funktionsegenskaper](#aboutplugins) |
 | [Om plugin-program](#aboutplugins) | [Konfigurera RTE-verktygsfält](#dialogfullscreen) | [Konfigurera inklistringslägena](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles) |
 
+>[!NOTE]
+>
+>Den textredigerare som beskrivs i det här dokumentet beskriver den som är tillgänglig i sidredigeraren. Om du använder den moderna universella redigeraren kan du läsa dokumentet [Konfigurera RTE för den universella redigeraren](/help/implementing/universal-editor/configure-rte.md) för mer information.
+
 ## Förstå användargränssnittet som är tillgängligt för författare {#understand-rte-ui}
 
 RTE-gränssnittet erbjuder en [responsiv design](/help/sites-cloud/authoring/page-editor/responsive-layout.md) för redigeringsmiljön. Gränssnittet är utformat för att användas på enheter med pekskärm och stationära datorer.
@@ -32,7 +37,7 @@ RTE-gränssnittet erbjuder en [responsiv design](/help/sites-cloud/authoring/pag
 
 *Bild: Verktygsfältet för textredigeraren med alla tillgängliga alternativ aktiverade.*
 
-Verktygsfältet innehåller alternativ för WYSIWYG-redigering. [!DNL Experience Manager]-administratörer kan konfigurera de alternativ som är tillgängliga i verktygsfältet i gränssnittet. En omfattande uppsättning redigeringsalternativ är tillgängliga som standard i [!DNL Experience Manager]. Utvecklare kan anpassa [!DNL Experience Manager] om du vill lägga till fler redigeringsalternativ.
+Verktygsfältet innehåller alternativ för redigering i WYSIWYG. [!DNL Experience Manager]-administratörer kan konfigurera de alternativ som är tillgängliga i verktygsfältet i gränssnittet. En omfattande uppsättning redigeringsalternativ är tillgängliga som standard i [!DNL Experience Manager]. Utvecklare kan anpassa [!DNL Experience Manager] om du vill lägga till fler redigeringsalternativ.
 
 ## Olika redigeringslägen {#editingmodes}
 
@@ -137,7 +142,7 @@ I följande tabell visas de aktuella plugin-programmen:
 
 Konfigurera följande egenskaper som gäller i redigeringsläget för dialogrutor:
 
-* `useFixedInlineToolbar`: Du kan åtgärda RTE-verktygsfältet i stället för att låta det flyta. Ange den här booleska egenskapen som definierats på RTE-noden med sling:resourceType= `cq/gui/components/authoring/dialog/richtext` till `True`. När den här egenskapen är inställd på `True` startas textredigeringen för händelsen `foundation-contentloaded`. Du kan förhindra detta genom att ange egenskapen `customStart` till `True` och utlösa händelsen `rte-start` för att starta RTE-redigering. När den här egenskapen är `true` startar inte RTE vid klickning och detta är standardbeteendet.
+* `useFixedInlineToolbar`: Du kan åtgärda RTE-verktygsfältet i stället för att låta det flyta. Ange den här booleska egenskapen som är definierad på RTE-noden med sling :resourceType= `cq/gui/components/authoring/dialog/richtext` till `True`. När den här egenskapen är inställd på `True` startas textredigeringen för händelsen `foundation-contentloaded`. Du kan förhindra detta genom att ange egenskapen `customStart` till `True` och utlösa händelsen `rte-start` för att starta RTE-redigering. När den här egenskapen är `true` startar inte RTE vid klickning och detta är standardbeteendet.
 
 * `customStart`: Ange den här booleska egenskapen som definierats på RTE-noden till `True` för att styra när RTE ska startas genom att utlösa händelsen `rte-start`.
 
@@ -154,7 +159,7 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [Så här aktiverar oc
 <!-- TBD ENGREVIEW: To confirm if the sample works in CS or not?
 **Sample**: Download [this sample configuration](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) that illustrates how to configure RTE. In this package all the features are enabled. -->
 
-Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html?lang=sv-SE).
+Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
 >
@@ -228,7 +233,7 @@ De tillgängliga alternativen i textredigeraren flödar nedåt från användargr
 * Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
-Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE#the-text-component-and-the-rich-text-editor).
+Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
 
 ## Anpassa mappningen mellan verktygsfältsikoner och kommandon {#iconstoolbar}
 
