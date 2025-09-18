@@ -4,7 +4,7 @@ description: Lär dig mer om OpenAPI:er för Content Fragments och Content Fragm
 exl-id: 077eed73-a066-4273-b2f5-da4bf5cd900c
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: d683051387af5c0de45917a50003c2194d887bc4
+source-git-commit: 1fb1201fa976e4c0e3c87f22bd9327a55828efef
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -15,7 +15,11 @@ ht-degree: 0%
 
 Med den moderniserade OpenAPI-implementeringen av API:t för hantering av innehållsfragment kan utvecklare programmässigt skapa, läsa, uppdatera och ta bort åtgärder på AEM Author för hantering av innehållsfragmentmodeller och innehållsfragment som lagras i AEM. Dessa API:er har stöd för ett antal användningsfall.
 
-Den befintliga användningen av [Assets HTTP API](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment bör migreras till det nya OpenAPI:t för hantering av innehållsfragment. Fullständig dokumentation finns i [API för hantering av innehållsfragment](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/).
+Fullständig dokumentation finns i [API för hantering av innehållsfragment](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/).
+
+>[!NOTE]
+>
+>Den befintliga användningen av [Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för innehållsfragment bör migreras till det nya OpenAPI:t för hantering av innehållsfragment.
 
 >[!NOTE]
 >
