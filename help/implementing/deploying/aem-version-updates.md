@@ -54,7 +54,7 @@ Det finns två typer av AEM-versionsuppdateringar:
 
 >[!NOTE]
 >
-> Kontrollera nyckeldatum för månatliga releaser på [Experience Manager releases-färdplanen](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
+> Kontrollera nyckeldatum för månatliga releaser på [Experience Manager releases-färdplanen](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service) och markera dina kalendrar för att förbereda dig för de viktigaste aktiviteterna för att göra dig redo för releasen.
 
 ## Uppdateringsfel {#update-failure}
 
