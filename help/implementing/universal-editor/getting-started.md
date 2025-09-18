@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: c4dcb1cecb756f746ecb856fcfd65d73833a5ee0
+source-git-commit: 8e1610e2835a9e85de2d2bffa6a883777c92fe96
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -69,8 +69,6 @@ data-aue-resource="urn:<referenceName>:<resource>"
 ### Exempelanslutning {#example}
 
 ```html
-<meta name="urn:adobe:aue:system:<referenceName>" content="<protocol>:<url>">
-
 <html>
 <head>
     <meta name="urn:adobe:aue:system:aemconnection" content="aem:https://localhost:4502">
@@ -133,7 +131,7 @@ Om du har ett befintligt AEM-projekt med [sidredigeraren](/help/sites-cloud/auth
 1. Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas.
 
    * Ange sökvägarna som den universella redigeraren öppnas för i fältet **Öppna mappning för den universella redigeraren**.
-   * I fältet **Sling:resourceTypes, som ska öppnas av Universell redigerare**, anger du en lista över resurser som ska öppnas direkt av Universell redigerare.
+   * I fältet **Sling:resourceTypes som ska öppnas av Universell redigerare** anger du en lista över resurser som ska öppnas direkt av Universell redigerare.
 
 1. Klicka på **Spara**.
 
@@ -148,7 +146,7 @@ Om du har ett befintligt AEM-projekt med [sidredigeraren](/help/sites-cloud/auth
 När dessa konfigurationssteg är klara öppnas AEM Universell redigerare för sidor i följande ordning.
 
 1. AEM kontrollerar mappningarna under `Universal Editor Opening Mapping` och om innehållet finns under sökvägar som definierats där öppnas Universell redigerare för det.
-1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping`, kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes, som ska öppnas av Universal Editor**, och om innehållet matchar någon av dessa typer, öppnas Universell redigerare för det på `${author}${path}.html`.
+1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping` kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes som ska öppnas av Universal Editor** och om innehållet matchar någon av dessa typer öppnas Universell redigerare på `${author}${path}.html`.
 1. I annat fall öppnas sidredigeraren.
 
 Följande variabler är tillgängliga för att definiera dina mappningar i fältet **Öppna mappning för Universal Editor**.
