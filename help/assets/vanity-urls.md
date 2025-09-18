@@ -3,7 +3,7 @@ title: Skapa Vanity-URL:er med Dynamic Media med OpenAPI-funktioner
 description: Använd Dynamic Media OpenAPI-funktioner för att omvandla URL:er för leverans av stora tillgångar till korta varumärkesanpassade URL:er. En fågel-URL är en kort, ren, lättåtkomlig och läsbar version av din komplexa leverans-URL. Ni kan inkludera ert varumärke, produktnamn och relevanta nyckelord i er egen webbplats för att öka varumärkets synlighet och användarengagemanget
 role: Admin
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 73574b3358451dfe135b91011abb5cad372a783e
+source-git-commit: 54c592e4db4cbaa884e298cc5e81115cd5573b28
 workflow-type: tm+mt
 source-wordcount: '1377'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Använd vanity-URL:er?{#vanity-urls}
+# Använd vanity-URL:er{#vanity-urls}
 
 Använd [!DNL Dynamic Media OpenAPI capabilities] för att omvandla dina URL:er för lång resursleverans till korta, varumärkesanpassade URL:er. StandardURL:er för leverans av resurser inkluderar systemgenererade UUID:n som gör leverans-URL:en komplex, svår att komma ihåg och dela. Ersätt dessa tillgångs-UUID med enkla identifierare (Vanity ID) för att generera en vanity-URL. En fågel-URL är en kort, ren och läsbar version av din komplexa leverans-URL.
 
@@ -43,7 +43,7 @@ I exemplet ovan är `43341ab1-4086-44d2-b7ce-ee546c35613b` UUID.
 
 URL:erna för vanity innehåller en vanity-identifierare i stället för resurs-UUID och följer följande format.
 
-***Format:*** `https://delivery-<tenant>.adobeaemcloud.com/adobe/assets/urn:avid:aem:<vanity-id>/<seoname>.<format>`
+***Format:*** `https://delivery-<tenant>.adobeaemcloud.com/adobe/assets/urn:avid:aem:<vanity-id>/as/<seoname>.<format>`
 
 Den överordnade URL:en innehåller `avid` (*faktisk vanlighetsidentifierare*) efter `urn:` och ditt fågel-ID mellan `urn:avid:aem:` och `/<seoname>.<format>`.
 
@@ -134,13 +134,13 @@ När användaren klickar på tilläggs-URL:en mappar [!DNL Dynamic Media with Op
 
 ## Skala med hjälp av mål-URL:er{#scale-using-vanity-url}
 
-Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
+Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
 
 Se följande huvud-URL och dess anpassningsbara komponenter:
 
 **Vanity URL-format:**
 
-`https://delivery-<tenant>.adobeaemcloud.com/adobe/assets/urn:avid:aem:<vanity-id>/<seoname>.<format>`
+`https://delivery-<tenant>.adobeaemcloud.com/adobe/assets/urn:avid:aem:<vanity-id>/as/<seoname>.<format>`
 
 <table style="border-collapse:collapse; table-layout:auto; width:auto;">
 <tr valign="top">
@@ -161,14 +161,14 @@ Se följande huvud-URL och dess anpassningsbara komponenter:
 <div style="text-align:center;"><a href="#create-vanity-urls">Skapa sans-ID</a></div>
 </td>
 <td style="padding:0 4px; white-space:nowrap; text-align:left; width:1%;">
-<code>/&lt;seoname&gt;.&lt;format&gt;</code>
+<code>/as/&lt;seoname&gt;.&lt;format&gt;</code>
 </td>
 </tr>
 </table>
 
 **Vanity URL-format med anpassade DNS- och CDN-namn:**
 
-`https://<custom-dns>` `/` `dam/assets/` `<vanity-id>` `/<seoname>.<format>`
+`https://<custom-dns>` `/` `dam/assets/` `<vanity-id>` `/as/<seoname>.<format>`
 
 **Anpassningsbara URL-komponenter**
 
@@ -184,9 +184,9 @@ Se följande huvud-URL och dess anpassningsbara komponenter:
 Utför följande steg för att skriva om CDN-reglerna för leverans:
 
 1. Navigera till din AEM-databas för att skapa en YAML-konfigurationsfil.
-2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
+2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
 Följ de här [bästa metoderna](#best-practices) för att skapa din domänsökväg.
-   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
+   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
 
 Nedan följer exempel på skrivregler för att lägga till filnamn med tillägg i tillfälliga URL:er. Anpassa dessa omskrivningsregler efter dina specifika krav. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) om du behöver mer hjälp:
 
