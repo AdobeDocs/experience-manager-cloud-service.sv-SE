@@ -4,9 +4,9 @@ description: Skapa anpassade komponenter för ett EDS-formulär
 feature: Edge Delivery Services
 role: Admin, Architect, Developer
 exl-id: 2bbe3f95-d5d0-4dc7-a983-7a20c93e2906
-source-git-commit: 23534e7bbff8d663fc3b888baa90f5d84e64d310
+source-git-commit: 9664495d17ad8a8101c886408bee1584b3d48f1e
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2103'
 ht-degree: 0%
 
 ---
@@ -248,7 +248,7 @@ Nu när formuläret innehåller den anpassade komponenten kan du proxygranska fo
 
 Låt oss lägga till klassen **card** i komponenten för formatering och lägga till en bild för varje radio. Använd koden nedan för detta.
 
-**Formatera den anpassade komponenten med dekorationsfunktionen i cards.js**
+**Formatera komponenten med card.js**
 
 ```javascript
 import { createOptimizedPicture } from '../../../../scripts/aem.js';
@@ -268,7 +268,7 @@ export default function decorate(element, fieldJson, container, formId) {
 }
 ```
 
-**Lägg till körningsbeteende för den anpassade komponenten i cards.css**
+**Lägg till körningsbeteende med cards.css**
 
 ```javascript
 .card .radio-wrapper {
@@ -505,13 +505,13 @@ Det äldre sättet att göra detta är att manuellt följa stegen som beskrivs n
 
 10. **Uppdatera _component-definition.json**: I `models/_component-definition.json` uppdaterar du arrayen i gruppen med `id custom-components` med ett objekt på följande sätt:
 
-    ```javascript
-    {
-    "...":"../blocks/form/components/cards/_cards.json#/definitions"
-    }
-    ```
+   ```javascript
+   {
+   "...":"../blocks/form/components/cards/_cards.json#/definitions"
+   }
+   ```
 
-    Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
+   Detta är för att ge referens till den nya kortkomponenten som ska byggas med resten av komponenterna
 
 11. **Kör build:json script**: Kör `npm run build:json` för att kompilera och sammanfoga alla komponent-JSON-definitioner till en enda fil som ska hanteras från servern. Detta garanterar att den nya komponentens schema inkluderas i de sammanfogade utdata.
 
@@ -587,7 +587,7 @@ Tänk på följande innan du skapar en egen anpassad komponent:
 
 ## Referenser
 
-- formulärfälttyper: Grundläggande HTML-strukturer och -egenskaper för alla fälttyper. [Klicka här](/help/edge/docs/forms/eds-form-field-properties) om du vill visa detaljerade formulärfältsstrukturer och egenskaper.
+- [formulärfälttyper](/help/edge/docs/forms/eds-form-field-properties.md): Bas i HTML-strukturer och egenskaper för alla fälttyper.
 
 - **block/form/models/form-components**: OTB och anpassade egenskapsdefinitioner för komponenter.
 
