@@ -3,9 +3,9 @@ title: Skapa Vanity-URL:er med Dynamic Media med OpenAPI-funktioner
 description: Använd Dynamic Media OpenAPI-funktioner för att omvandla URL:er för leverans av stora tillgångar till korta varumärkesanpassade URL:er. En fågel-URL är en kort, ren, lättåtkomlig och läsbar version av din komplexa leverans-URL. Ni kan inkludera ert varumärke, produktnamn och relevanta nyckelord i er egen webbplats för att öka varumärkets synlighet och användarengagemanget
 role: Admin
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: e4ee2e3f251f585a3e057c04d62039a0c2e8bef1
+source-git-commit: d9223a8af5d531e66a91e9054201de765be50961
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Använd vanity-URL:er{#vanity-urls}
 
-Använd [!DNL Dynamic Media OpenAPI capabilities] för att omvandla dina URL:er för lång resursleverans till korta, varumärkesanpassade URL:er. StandardURL:er för leverans av resurser inkluderar systemgenererade UUID:n som gör leverans-URL:en komplex, svår att komma ihåg och dela. Ersätt dessa tillgångs-UUID med enkla identifierare (Vanity ID) för att generera en vanity-URL. En fågel-URL är en kort, ren och läsbar version av din komplexa leverans-URL.
+Använd [!DNL Dynamic Media with OpenAPI capabilities] för att omvandla dina URL:er för lång resursleverans till korta, varumärkesanpassade URL:er. StandardURL:er för leverans av resurser inkluderar systemgenererade UUID:n som gör leverans-URL:en komplex, svår att komma ihåg och dela. Ersätt dessa tillgångs-UUID med enkla identifierare (Vanity ID) för att generera en vanity-URL. En fågel-URL är en kort, ren och läsbar version av din komplexa leverans-URL.
 
 Se följande URL-format för att förstå skillnaden:
 * [Standard delivery URL](#standard-urls)
@@ -21,7 +21,7 @@ Se följande URL-format för att förstå skillnaden:
 
 Standardleverans-URL:er använder `aaid` följt av ett UUID, medan standard-URL:er använder `avid` följt av en anpassad identifierare (vanity-identifierare).
 
-Använd korta och enkla vanlighetsidentifierare för att göra din leverans-URL kort, ren, läsbar, lättåtkomlig och dela. Använd ert varumärke, era produktnamn och relevanta nyckelord som sans-ID för att öka varumärkets synlighet och användarengagemanget.
+Använd korta och enkla vanlighetsidentifierare för att göra din egen URL-adress kort, ren, läsbar, lättåtkomlig och dela. Använd ert varumärke, era produktnamn och relevanta nyckelord som sans-ID för att öka varumärkets synlighet och användarengagemanget.
 
 När användaren klickar på din egen URL mappas [!DNL Dynamic Media with OpenAPI] automatiskt till den ursprungliga resursplatsen vid åtkomsten och löser dem korrekt vid leveransen för att servera resursen till användaren.
 
@@ -130,11 +130,11 @@ Lär dig hur du [kopierar dynamiska media med OpenAPI-leverans-URL:er](/help/ass
 
 När användaren klickar på tilläggs-URL:en mappar [!DNL Dynamic Media with OpenAPI] automatiskt användar-ID:t till det ursprungliga tillgångs-UUID:t vid importen och löser dem korrekt vid leveransen så att resursen kan skickas till användaren utan dröjsmål. Du kan anpassa innehålls-URL:en i realtid utan att påverka materialets leveransresultat.
 
-[Förbättra effekten av era egna URL:er med hjälp av de avancerade anpassningsfunktionerna i AEM Cloud-tjänsten.](#scale-using-vanity-url)
+[Använd de avancerade anpassningsfunktionerna i AEM Cloud-tjänsten med din egen URL för att förbättra dess effekt](#scale-using-vanity-url).
 
 ## Skala med hjälp av mål-URL:er{#scale-using-vanity-url}
 
-Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
+Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
 
 Se följande huvud-URL och dess anpassningsbara komponenter:
 
@@ -184,9 +184,9 @@ Se följande huvud-URL och dess anpassningsbara komponenter:
 Utför följande steg för att skriva om CDN-reglerna för leverans:
 
 1. Navigera till din AEM-databas för att skapa en YAML-konfigurationsfil.
-2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
+2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
 Följ de här [bästa metoderna](#best-practices) för att skapa din domänsökväg.
-   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
+   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
 
 Nedan följer exempel på skrivregler för att lägga till filnamn med tillägg i tillfälliga URL:er. Anpassa dessa omskrivningsregler efter dina specifika krav. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) om du behöver mer hjälp:
 
@@ -233,9 +233,9 @@ type: transform
 
 ## Följ de bästa sätten att skapa rena e-postadresser{#best-practices}
 
-Följ dessa metodtips för att skapa anpassade ID:n, DNS-namn och domännamn:
+Följ dessa metodtips för att skapa [användar-ID:n](#create-vanity-urls), [anpassade DNS](#customize-dns)- och [CDN-namn](#rewrite-cdn-rules):
 
 1. Använd inte specialtecken i användar-ID:n, som blanksteg, snedstreck, bindestreck med mera. Systemet ersätter specialtecken i användar-ID med hjälp av en fördefinierad mappning.
-1. Använd ert varumärke, produktnamn och relevanta nyckelord i era egna ID:n, anpassade DNS-namn och domännamn för att öka varumärkets synlighet och användarengagemanget.
+1. Använd ditt varumärkesnamn, produktnamn och relevanta nyckelord i dina [användar-ID](#create-vanity-urls), [anpassade DNS](#customize-dns)- och [CDN-namn](#rewrite-cdn-rules) för att öka varumärkets synlighet och användarengagemanget.
 1. Använd korta, beskrivande ord eller strängar som förmedlar betydelse.
 1. Använd texter som bjuder in användare att klicka.
