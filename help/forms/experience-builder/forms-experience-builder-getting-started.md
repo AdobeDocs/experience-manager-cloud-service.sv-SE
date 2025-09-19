@@ -75,7 +75,7 @@ Skapa formulär med naturliga språkbeskrivningar av era behov.
 
 Förvandla befintliga dokument till interaktiva digitala formulär.
 
-Innan du använder det här alternativet ska du överföra din PDF-fil eller en bild av formuläret. PDF kan vara ett AcroForm- eller XFA-baserat PDF-formulär. För [andra typer av PDF forms](https://experienceleague.adobe.com/en/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents) använder du alternativet [Förbered formulär](https://helpx.adobe.com/in/acrobat/using/creating-distributing-pdf-forms.html) i Adobe Acrobat för att konvertera dem till ett AcroForm
+Innan du använder det här alternativet ska du överföra din PDF-fil eller en bild av formuläret. PDF kan vara ett AcroForm- eller XFA-baserat PDF-formulär. För [andra typer av PDF forms](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents) använder du alternativet [Förbered formulär](https://helpx.adobe.com/in/acrobat/using/creating-distributing-pdf-forms.html) i Adobe Acrobat för att konvertera dem till ett AcroForm
 
 **När ska du använda:**
 

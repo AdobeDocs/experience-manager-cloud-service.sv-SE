@@ -492,4 +492,4 @@ Använd syntaxen `@fieldName` för att referera till befintliga fält i dina upp
 
 Mer information om god praxis och riktlinjer för validering finns i [Forms Experience Builder Getting Started Guide](/help/forms/experience-builder/forms-experience-builder-getting-started.md).
 
-*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html).*
+*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE).*
