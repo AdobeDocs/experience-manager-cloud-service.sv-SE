@@ -6,7 +6,7 @@ hide: true
 index: false
 hidefromtoc: true
 role: Admin, Architect, Developer
-source-git-commit: fe34b44d02c308e7d18a08dd05f21abc67bd0cb2
+source-git-commit: de524aeddd5f53cbd713ff0523222966752ebbc0
 workflow-type: tm+mt
 source-wordcount: '1145'
 ht-degree: 0%
@@ -345,4 +345,4 @@ Hjälp oss att förbättra AI-assistenten:
 
 ## Relaterade resurser
 
-[AEM Forms AI Assistant - promptbibliotek](/help/edge/docs/forms/ai-assistant-prompt-library.md)
+[AEM Forms AI Assistant - promptbibliotek](help/forms/experience-builder/forms-experience-builder-prompt-examples-library.md)
