@@ -3,7 +3,7 @@ title: Attributbaserad åtkomstkontroll
 description: Lär dig hur du aktiverar attributbaserad åtkomstkontroll för att definiera metadatabaserade regler för att definiera åtkomstnivån för resurser som är tillgängliga i Content Hub
 role: Admin
 exl-id: 05f54b05-40b8-4a6c-af8f-5c3f7a2089d4
-source-git-commit: ea1760a3076fa0e18dca38fe856ff0ef78b18f07
+source-git-commit: 0833e31d37c473d37e16ee037823e61611622322
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Från och med nu kan du inte skapa attributbaserade åtkomstkontrollsregler på 
 
 Klicka på **Hämta kalkylblad** om du vill hämta och definiera regler i ett kalkylblad. Skapa en Adobe supportanmälan och förse Adobe med de regler som finns definierade i kalkylbladet.
 
-[!BADGE Hämta kalkylblad]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/ABAC_Get_Started_Template_Validator.xlsx"}
+[!BADGE Hämta kalkylblad]{type=Informative url="https://helpx.adobe.com/content/dam/help/en/experience-manager/aem-assets/ABAC_Get_Started_Template.xlsx"}
 
 
 Definiera regler i kalkylbladet med hjälp av riktlinjerna i den här artikeln.
