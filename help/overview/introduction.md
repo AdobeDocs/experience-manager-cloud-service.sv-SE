@@ -4,7 +4,7 @@ description: Lär dig om hur Experience Manager as a Cloud Service fungerar och 
 exl-id: d81b85bb-a69d-49a4-9e75-76f1c6bbcd67
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: f4c89fc715b686aaabd0766a2e24219ab6811b0b
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 40%
@@ -15,9 +15,9 @@ ht-degree: 40%
 
 [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html) (AEM) finns nu som en molntjänst.
 
-Adobe Experience Manager (AEM) as a Cloud Service är det senaste erbjudandet på AEM produktlinje, vilket hjälper er att även i fortsättningen erbjuda era kunder personaliserade, innehållsledda upplevelser. Den ger molnbaserad flexibilitet för att snabba upp time to value och är utbyggbar för att uppfylla just era verksamhetskrav. Ni kan bygga vidare på tidigare investeringar och innovationer genom att bevara och utöka alla era användningsfall och funktioner.
+Adobe Experience Manager (AEM) as a Cloud Service är det senaste erbjudandet för AEM produktlinje, som hjälper er att fortsätta erbjuda era kunder personaliserade, innehållsledda upplevelser. Den ger molnbaserad flexibilitet för att snabba upp time to value och är utbyggbar för att uppfylla just era verksamhetskrav. Ni kan bygga vidare på tidigare investeringar och innovationer genom att bevara och utöka alla era användningsfall och funktioner.
 
-Med AEM as a Cloud Service kan du utnyttja de AEM programmen på ett molnbaserat sätt så att du kan:
+Med AEM as a Cloud Service kan du utnyttja AEM-programmen på ett molnbaserat sätt så att du kan:
 
 * Anpassa DevOps-möjligheterna med Cloud Manager: CI/CD-ramverk, autosaling, API-anslutning, flexibla driftsättningslägen, portar för kodkvalitet, genomskinlighet för tjänstleverans och guidade uppdateringar.
 
@@ -46,9 +46,10 @@ Med AEM as a Cloud Service
 * Marknadsförare kan få snabbare time-to-value.
 
 >[!NOTE]
+>
 >Se [Terminologi](terminology.md) för några av de nya termer som har introducerats med AEM as a Cloud Service.
 
-## As a Cloud Service värde {#value-added-as-a-cloud-service}
+## As a Cloud Service med mervärde {#value-added-as-a-cloud-service}
 
 AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna Cloud Services:
 
@@ -73,13 +74,13 @@ AEM uppnår dessa mål genom att utnyttja de viktigaste egenskaperna hos moderna
 * [Nyheter och skillnader](/help/overview/what-is-new-and-different.md) i Adobe Experience Manager as a Cloud Service och tidigare versioner
 * [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
 * [Noterbara ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
-* [Betydande förändringar av AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
-* [Betydande förändringar av AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
+* [Betydande förändringar i AEM Sites as a Cloud Service](/help/sites-cloud/sites-cloud-changes.md)
+* [Betydande förändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 * [Nu kommer Assets as a Cloud Service](/help/assets/overview.md)
-* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=sv-SE)
+* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
 >[!TIP]
 >
 >När du har en översikt över AEM as a Cloud Service kan du komma igång snabbt genom att granska [Onboarding Journey](/help/journey-onboarding/overview.md).
 >
->Har du redan börjat eller är redo att testa AEM funktioner? Installera tillägget [AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) för att utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.
+>Är du redan upptagen eller redo att testa AEM funktioner? Installera tillägget [AEM Reference Demos](/help/journey-sites/demos-add-on/overview.md) om du vill utforska AEM kraftfulla funktioner med hjälp av avancerade exempel.
