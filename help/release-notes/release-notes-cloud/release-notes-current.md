@@ -5,7 +5,7 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 0d2164920ca44ee6c872fdfe2090760a1506215d
+source-git-commit: 7213dfa6f4203d406efb5e0f4ac55fcefa59d388
 workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 0%
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -77,7 +77,7 @@ Skapa Vanity-URL:er för leverans av resurser i DM med OpenAPI och ersätt lång
 
 >[!NOTE]
 >
->Den här funktionen blir tillgänglig som en begränsad tillgänglighetsfunktion den 10 september. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+>Den här funktionen blir tillgänglig som en begränsad tillgänglighetsfunktion den 10 september. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -85,11 +85,11 @@ Skapa Vanity-URL:er för leverans av resurser i DM med OpenAPI och ersätt lång
 
 **Indatakomponent för datum och tid**
 
-Det finns nu en [datum- och tidskomponent](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component) som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
+Det finns nu en [datum- och tidskomponent](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component) som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
 
 **Utökad felhantering för filöverföringar**
 
-Komponenten [Bifogad fil](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab) validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
+Komponenten [Bifogad fil](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab) validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
 
 **Angivet felsvar för anpassad överföringsåtgärd**
 
@@ -129,7 +129,7 @@ I versionsinformationen visas de innovationer som levererats i den aktuella vers
 
 **Klottsignaturkomponent**
 
-Du kan nu använda [Klottsigneringskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature) för att hjälpa användare att lägga till signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
+Du kan nu använda [Klottsigneringskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature) för att hjälpa användare att lägga till signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
 
 **Direkt API-integrering i regelredigeraren**
 
@@ -149,7 +149,8 @@ Key optimization opportunities include:
 * Addressing accessibility compliance issues
 * Streamlining navigation to enhance user experience
 
-With Forms Optimization, you get automated, data-driven recommendations and variations, making it easier to boost engagement and ensure your forms are effective and inclusive. -->
+With Forms Optimization, you get automated, data-driven recommendations and variations, making it easier to boost engagement and ensure your forms are effective and inclusive. 
+-->
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
@@ -161,8 +162,7 @@ JavaScript-kompileringen för standardbiblioteket (clientlibs) har nu ECMASCRIPT
 
 Flera inaktuella API:er är avsedda för borttagning den 31 augusti och bör därför inte längre refereras. I början av september kommer meddelanden från Åtgärdscenter att skickas om API-användning upptäcks, och efter den 25 september kommer meddelanden att visas under Cloud Manager byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
 
-<details>
-  <summary>Expandera om du vill visa Java API-borttagningar</summary>
++++ Expandera om du vill visa Java API-borttagningar
 
 * `org.apache.sling.commons.auth`
 * `org.apache.felix.webconsole`
@@ -181,7 +181,7 @@ Flera inaktuella API:er är avsedda för borttagning den 31 augusti och bör dä
 * `org.apache.jackrabbit.oak.plugins.blob`
 * `org.apache.jackrabbit.oak.plugins.memory`
 
-</details>
++++
 
 <!--
 OSGi properties:
@@ -248,7 +248,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -268,4 +268,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
