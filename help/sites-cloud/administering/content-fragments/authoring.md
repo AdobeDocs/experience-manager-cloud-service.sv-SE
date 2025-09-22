@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 8b596c6e82d9beaeb922cc6635717f151bb390e7
+source-git-commit: ea18cacd3a1058f5b9c8e2e81e5e7c36aa1964b4
 workflow-type: tm+mt
-source-wordcount: '2824'
+source-wordcount: '2823'
 ht-degree: 0%
 
 ---
@@ -176,9 +176,9 @@ Mer information finns i [Generera variationer - Integrerat i AEM Editors](/help/
 
 Så här tar du bort en variant av ditt innehållsfragment:
 
-    >[!NOTE]
-    >
-    >Du kan inte ta bort **Main**.
+>[!NOTE]
+>
+>Du kan inte ta bort **Main**.
 
 1. Välj Variation.
 
@@ -267,7 +267,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
