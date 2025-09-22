@@ -1,26 +1,26 @@
 ---
-title: Konfigurera en anpassad domän för publiceringsnivån
-description: Lär dig hur du konfigurerar en anpassad domän för publiceringsskikt i Adobe Cloud Manager.
+title: Konfigurera en anpassad domän för leveransnivån
+description: Lär dig konfigurera en anpassad domän för leveransnivå i Adobe Cloud Manager.
 exl-id: cc71c8c5-cf42-4092-b0e0-646a2ed0ee54
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: d2859c547c87bd1856ba0e05fac835db434d824c
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-# Konfigurera en anpassad domän för publiceringsskiktet{#configure-custom-domain}
+# Konfigurera en anpassad domän för leveransnivån{#configure-custom-domain}
 
 I Adobe Cloud Manager kan du få din webbplats att sticka ut genom att lägga till en anpassad domän. När AEM as a Cloud Service har en standarddomän kan du anpassa den efter dina behov.
 
 ## Innan du börjar
 
 * Du måste ha ett TLS- eller SSL-certifikat för flera SAN-nätverk (Subject Alternative Name).
-* SSL-certifikatet ska ha distinkta SAN-nätverk jämfört med certifikatet som är mappat för publiceringsnivån inom samma domän.
+* SSL-certifikatet ska ha distinkta SAN-nätverk jämfört med certifikatet som är mappat för leveransnivån inom samma domän.
 * Certifikatprofilen måste följa antingen Utökad validering (EV) eller Organisationsvalidering (OV) och inte Domänvalidering (DV).
 
 
-## Konfigurera en anpassad domän för publiceringsskiktet
+## Konfigurera en anpassad domän för leveransnivån
 
 1. Gå till **[!UICONTROL Adobe Cloud Manager]** > **[!UICONTROL Program Overview]** > **[!UICONTROL SSL Certificates]** och lägg till ditt SSL-certifikat.
    ![bild](/help/assets/assets/ssl-certificate.png)
