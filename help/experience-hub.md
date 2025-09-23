@@ -7,9 +7,9 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: a1b0eed7-b74c-4e72-8399-c473bbda9245
-source-git-commit: 82fce826ad6e5736740e39347b32b70d0b9f0176
+source-git-commit: 940a80382cd58a7b119a20b4af534ca1bf38447d
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '572'
 ht-degree: 3%
 
 ---
@@ -31,12 +31,12 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/implementing/cloud-manager/assets/experience-cloud-experiencemanager.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
-1. Första gången du öppnar den klickar du på önskat alternativ på sidan **Berätta för oss vad du vill göra** så att Adobe kan skräddarsy din upplevelse.
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Vid första åtkomsten tilldelas du förinställningen **Innehållsförfattare** (visas i det övre högra hörnet på sidan). Den styr widgetar, navigeringsobjekt och innehåll som du ser.
 
-   Du kan ändra den här inställningen när som helst.
+   Du kan när som helst ändra den här förinställningen.
 
-   ![The tell us what you want to do page](/help/implementing/cloud-manager/assets/experience-cloud-tellus.png)
+   ![Listrutan med förinställningen Innehållsförfattare är markerad](/help/implementing/cloud-manager/assets/experience-hub-role-selection.png)
 
 Adobe Experience Manager-sidan har uppdaterats med förbättrad navigering och interaktiva widgetar. Den tidigare samlingen av lösningskort ger tillgång till verktyg som följande:
 
