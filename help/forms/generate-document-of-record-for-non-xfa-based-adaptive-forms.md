@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Foundation Components
 exl-id: 16d07932-3308-4b62-8fa4-88c4e42ca7b6
 role: User, Developer
-source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
+source-git-commit: 739b2b396bf0c9042d6287bfba2e8e8792cabf70
 workflow-type: tm+mt
-source-wordcount: '4081'
+source-wordcount: '4077'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -142,7 +142,7 @@ När det adaptiva formuläret skickas skapas nu ett uppdaterat arkivdokument.
 
 Tänk på följande när du arbetar med arkivhandlingar för Adaptiv Forms.
 
-* Dokumentmallar stöder inte RTF-text. Därför visas all RTF-text i det statiska adaptiva formuläret eller i den information som användaren fyller i som oformaterad text i postdokumentet.
+* **RTF-stöd**: Record-dokumentet har stöd för HTML-märkordsetiketter i RTF-fält. Fullständig information om taggar och tillgänglighetsaspekter som stöds finns i [Taggar som stöds i HTML-kod som stöds i Dokument för post](html-markup-tags-support-in-document-of-record.md).
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Adaptiva formulärfragment stöds dock.
 * Innehållsbindning i dokument för post som genererats för XML-schemabaserat anpassat formulär stöds inte.
 * Lokaliserad version av Document of Record skapas vid behov för en språkinställning när användaren begär återgivningen av Document of Record. Lokalisering av arkivdokument sker tillsammans med lokalisering av adaptiv form. <!-- For more information on localization of Document of Record and Adaptive Forms see Using AEM translation workflow to localize Adaptive Forms and Document of Record.-->
@@ -405,9 +405,9 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
 ## Dokumentstöd i anpassad formulärredigerare {#dor-support-in-adaptiveform}
 
-Du kan konfigurera mallen [!UICONTROL Document of Record] direkt från verktyget Adaptiv formulärbyggaren eller verktyget Adaptiv formulärmall.
+Du kan konfigurera mallen [!UICONTROL Document of Record] direkt från den adaptiva formulärredigeraren eller den adaptiva formulärmallsredigeraren.
 
-Utför följande steg från författarinstansen av Adaptive Form Builder:
+Utför följande steg från författarinstansen av redigeraren för adaptiva formulär:
 
 1. Markera komponenten **[!UICONTROL Adaptive Form container (Root)]**.
 1. Klicka på ikonen ![Konfigurera ikon](/help/forms/assets/configure-icon.svg) för att öppna behållaren **[!UICONTROL Properties]** för det adaptiva formuläret.
