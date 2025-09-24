@@ -7,10 +7,10 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: a1b0eed7-b74c-4e72-8399-c473bbda9245
-source-git-commit: 940a80382cd58a7b119a20b4af534ca1bf38447d
+source-git-commit: f5f80ffb8524351fa4cdda039671df339fa0742d
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/implementing/cloud-manager/assets/experience-cloud-experiencemanager.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Vid första åtkomsten tilldelas du förinställningen **Innehållsförfattare** (visas i det övre högra hörnet på sidan). Den styr widgetar, navigeringsobjekt och innehåll som du ser.
 
    Du kan när som helst ändra den här förinställningen.
@@ -59,7 +59,7 @@ Använd dessa funktioner i din primära produktionsmiljö. Om du har tillgång t
 
 ![Prod- och scenmiljöer](/help/implementing/cloud-manager/assets/experience-hub-prod-stage.png)
 
-Experience Hub-sidan fungerar som central nav för Adobe Experience Manager och utökas med ytterligare widgetar och åtgärder som är skräddarsydda för varje användarroll. Sidan är helt anpassningsbar och du kan välja den optimala layouten för skärmen. Widgetar kan filtreras så att endast de valda visas på huvudsidan, vilket ger en personlig upplevelse.
+Experience Hub-sidan fungerar som central nav för Adobe Experience Manager och utökas med ytterligare widgetar och åtgärder som är anpassade för varje användarroll (förinställning). Sidan är helt anpassningsbar och du kan välja den optimala layouten för skärmen. Widgetar kan filtreras så att endast de valda visas på huvudsidan, vilket ger en personlig upplevelse.
 
 ![Experience Hub anpassat](/help/implementing/cloud-manager/assets/experience-hub-custom.png)
 

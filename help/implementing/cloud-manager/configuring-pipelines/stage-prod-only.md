@@ -8,9 +8,10 @@ badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/releas
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 24d78f19932a30026c0357db646124c9dd1fa759
+exl-id: 7d76a87c-122c-4c4d-8071-957bef4c9cf1
+source-git-commit: 51318172b826eb81dff86b3e8dfb6f2ded648c4c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -81,7 +82,7 @@ Rörledningar som endast är avsedda för produktion och endast för scenen skap
 
    ![Fliken Source-kod i dialogrutan Lägg till icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/assets/add-non-prod-pipeline-2.png)
 
-1. På fliken **Experience Audit** är den angivna webbplats-URL:en den publicerings-URL som Cloud Manager granskar för sidkvalitet.
+1. På fliken **Experience Audit** är den angivna webbplats-URL:en den publicerade URL som Cloud Manager granskar för att se sidkvalitet.
 
 1. I fältet **Sidsökväg** anger du vilka sidor du vill granska och klickar sedan på **![Lägg till ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) Lägg till sida** .
 
@@ -94,13 +95,13 @@ Rörledningar som endast är avsedda för produktion och endast för scenen skap
 
 ### Skapa en pipeline som endast är avsedd för produktion {#prod-only}
 
-1. I dialogrutan **Lägg till endast produktionspipeline** anger du sluttextnamnet för pipelinen i textfältet **Namn på pipeline**.
+1. I dialogrutan **Lägg till endast produktion av pipeline** anger du sluttextnamnet för pipelinen i textfältet **Pipelinenamn**.
 1. Skriv det namn du vill ha i fältet **Pipelinenamn**.
 1. Under **Alternativ för produktionsdistribution** väljer du **Paus innan du distribuerar till produktion**.
 
    Med det här alternativet infogas en manuell godkännandeport precis före produktionssteget. Pipelinen stoppar och väntar på att en godkännare (t.ex. en Distributionshanterare eller en Business Owner) ska godkänna eller avbryta produktionsdistributionen.
 
-   Använd detta för ändringskontroll eller sista-minuten-kontroller.
+   Används för ändringskontroll eller sista-minuten-kontroller.
 
 1. Klicka på **Spara** om du vill skapa en pipeline som bara är för produktion med dessa alternativ.
 
@@ -129,7 +130,7 @@ I körningsinformationen visas en **Befordra bygge**-knapp efter teststegen. Kli
 
 ![En pipeline som endast är för scenen körs](/help/implementing/cloud-manager/configuring-pipelines/assets/stage-only-pipelines-run.png)
 
-När du klickar på **Befordra bygge** öppnas en bekräftelsedialogruta om det finns en pipeline som endast är avsedd för scenen. Klicka på **Kör**.
+När du klickar på **Befordra bygge** öppnas en dialogruta där du kan bekräfta körningen av den relaterade pipeline som bara är avsedd för produktion. Klicka på **Kör** för att starta den.
 
 ![Befordra bygge - Kör pipeline-dialogruta](/help/implementing/cloud-manager/configuring-pipelines/assets/promote-build-run.png)
 
@@ -144,4 +145,3 @@ För en **pipeline som bara är avsedd för produktion**, visar Cloud Manager k�
 
 
 ![Information om felaktigheter](/help/implementing/cloud-manager/configuring-pipelines/assets/prod-only-pipelines-run.png)
-
