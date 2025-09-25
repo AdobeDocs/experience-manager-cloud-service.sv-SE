@@ -23,7 +23,7 @@ Det här är versionsinformationen för den 25 september 2025-versionen av Unive
 ## Nyheter {#what-is-new}
 
 * [Funktionen för att kopiera och klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) kan nu [inaktiveras med en metatagg.](/help/implementing/universal-editor/customizing.md#copy-paste)
-* [När du använder den universella redigeraren i värdbaserade AEM-miljöer (AMS) ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) kommer den universella redigeraren nu att använda den universella redigerartjänsten från AEM och inte längre förlita sig på en lokal AMS-installation, vilket säkerställer att du alltid har den senaste universella redigeringstjänsten automatiskt.
+* [När du använder den universella redigeraren i värdbaserade AEM-miljöer (AMS) ](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) kommer den universella redigeraren nu att använda den universella redigerartjänsten från AEM och inte längre förlita sig på en lokal AMS-installation, vilket säkerställer att du alltid har den senaste universella redigeringstjänsten automatiskt.
 
 ## Funktioner för tidig användning {#early-adopter}
 
