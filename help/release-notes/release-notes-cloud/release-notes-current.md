@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 7213dfa6f4203d406efb5e0f4ac55fcefa59d388
+source-git-commit: bdc0e7623592efed5270a3cb8322ef22e50cbad9
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '2066'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.8.0) är 28 augusti 2025. Nästa funktionsversion (2025.9.0) är planerad till 25 september 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.9.0) är 25 september 2025. Nästa funktionsrelease (2025.10.0) planeras till 30 oktober 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -40,34 +40,23 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
-## Experience Hub {#experience-hub}
-
-[Experience Hub](/help/experience-hub.md) är den centrala utgångspunkten för åtkomst till alla AEM-funktioner. Det är personaliserat baserat på din användarpersonlighet och de licenser som är tillgängliga för dig, så att varje användare kan uppnå sina resultat effektivt.
-
-## AI Assistant i AEM {#AI-assistant}
-
-[AI Assistant](/help/implementing/cloud-manager/ai-assistant-in-aem.md) för AEM har ett konversationsgränssnitt som ger dig snabba svar på dina produktrelaterade frågor om AEM (*som är tillgängliga för alla användare*) och automatisera skapandet av supportärenden (*som är tillgängliga för supportadministratörer*). Det är direkt inbäddat i AEM och tillgängligt från AEM Experience Hub, Cloud Manager och redigeringsgränssnittet.
-
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
-### Nya funktioner i Experience Manager Sites {#enhancements-sites}
+### Nya funktioner i Experience Manager Sites Prerelease {#prerelease-sites}
 
-* I Administratörsgränssnittet för innehållsfragment kan du nu visa arbetsflödesstatusen för innehållsfragment, med detaljerad information om tidigare och pågående arbetsflöden för ett valt fragment.
-* Prestandan för att öppna innehållsfragment i den nya redigeraren för innehållsfragment har ökat med 25 % i vanliga scenarier genom att öppna fragment via UUID i stället för via sökväg.
-* När du kopierar innehållsfragment med refererade fragment lagras kopior av refererade fragment nu på samma plats som den överordnade fragmentkopian.
-* Nu kan du konfigurera en anpassad arbetsyta i mappinställningarna för att exportera innehållsfragmenten till den konfigurerade arbetsytan i Adobe Target.
+Innehållsmodellredigeraren för AEM Content Fragments har moderniserats för att passa ihop med andra React Spectrum-baserade gränssnitt i AEM. Implementeringen av användargränssnittet och utbyggbarhetsmodellen överensstämmer nu med Content Fragment Editor och Universal Editor. Den nya modellredigeraren är nu standard när den öppnas från det nya gränssnittet för innehållsmodelladministratör. Om du öppnar en innehållsmodell i Touch-gränssnittet öppnas Touch UI-redigeraren och den nya redigeraren erbjuds att testa.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-### Nya funktioner i Content Hub {#new-features-content-hub}
+### Nya funktioner i vyn Assets {#new-features-assets-view}
 
-**Masssökning via filteregenskaper**
+**Förbättrad textformatering med delsträngar i dynamiska mediamallar**
 
-Content Hub gör det nu snabbare att upptäcka de resurser ni behöver. Med den nya funktionen för masssökning kan du ange flera värden för valfri filteregenskap, avgränsade med en avgränsare (till exempel flera SKU-ID:n), och omedelbart hämta alla matchande resurser med en enda sökning.
+Du kan nu använda formatering på delsträngar i textlager i mallen Dynamic Media. Ett markerat ord eller en fras behandlas som ett separat lager så att du kan justera teckensnitt, teckenstorlek, färg med mera. Delsträngslagret parametriseras så att du kan uppdatera det i realtid med mallens leverans-URL
 
 ### Nya funktioner i Dynamic Media med OpenAPI-funktioner {#new-features-dynamic-media-with-openapi}
 
@@ -77,7 +66,25 @@ Skapa Vanity-URL:er för leverans av resurser i DM med OpenAPI och ersätt lång
 
 >[!NOTE]
 >
->Den här funktionen blir tillgänglig som en begränsad tillgänglighetsfunktion den 10 september. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+>Den här funktionen är tillgänglig som en begränsad tillgänglighetsfunktion. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+
+<!--
+
+### New Features in Content Hub {#new-features-content-hub}
+
+**Mark Collections as Favourites**
+
+You can now mark collections as Favorites in Content Hub, making it easier to organize and retrieve them. Once added, your favourite collections are conveniently available from the **Favourites** tab on the Content Hub home page.
+
+**Pin collections for quick access**
+
+Content Hub Administrators can now pin collections in Content Hub for quick access. Pinned collections are displayed in a dedicated **Pinned** section on the Collections home page, making it easier to keep important collections within reach.
+
+>[!NOTE]
+>
+>These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
+
+-->
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -85,11 +92,11 @@ Skapa Vanity-URL:er för leverans av resurser i DM med OpenAPI och ersätt lång
 
 **Indatakomponent för datum och tid**
 
-Det finns nu en [datum- och tidskomponent](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component) som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
+Det finns nu en [datum- och tidskomponent](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component) som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
 
 **Utökad felhantering för filöverföringar**
 
-Komponenten [Bifogad fil](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab) validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
+Komponenten [Bifogad fil](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab) validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
 
 **Angivet felsvar för anpassad överföringsåtgärd**
 
@@ -129,7 +136,7 @@ I versionsinformationen visas de innovationer som levererats i den aktuella vers
 
 **Klottsignaturkomponent**
 
-Du kan nu använda [Klottsigneringskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature) för att hjälpa användare att lägga till signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
+Du kan nu använda [Klottsigneringskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature) för att hjälpa användare att lägga till signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
 
 **Direkt API-integrering i regelredigeraren**
 
@@ -154,13 +161,29 @@ With Forms Optimization, you get automated, data-driven recommendations and vari
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### JavaScript Compilation Update {#javascript-compilation}
+### Nya funktioner i versionshantering {#new-features-release-management}
 
-JavaScript-kompileringen för standardbiblioteket (clientlibs) har nu ECMASCRIPT_2018 som mål i stället för ECMASCRIPT5. Uppdateringen kan åsidosättas tidigare men ger prestandaförbättringar, modern JavaScript-syntax och funktioner som standard.
+**Pausa automatiska underhållsuppdateringar**
+
+Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Våra nya självbetjäningsfunktioner](/help/implementing/deploying/quiet-hours-update-free-periods.md) avbryter automatiskt underhåll av uppdateringar när det behövs, så att era team kan fokusera.
+
+* Tysta timmar: Blockera automatiskt underhåll under fasta tider varje dag. Idealiskt för arbetstider, nattkörningar eller morgonavslutningar.
+* Uppdateringsfri period: Blockera automatiskt underhåll under en hel vecka. Använd den för lanseringar, kampanjer eller årsfrysningar.
+
+>[!NOTE]
+>
+>Tillgänglig som begränsad tillgänglighet den 25 september.
+>>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
+
+### Ny version av AEM Developer Tools for Eclipse {#aem-develeper-tools-for-eclipse}
+
+Version 1.4.0 av AEM Developer Tools för Eclipse har släppts. Den här versionen har stöd för Eclipse IDE 2022-12 eller senare och har validerats med den aktuella versionen (2025-09). Verktygen fungerar nu med moderna versioner av AEM Project Archetype och innehåller förbättringar från Sling IDE Tooling 1.3.0.
+
+Installera från [Eclipse Marketplace](https://marketplace.eclipse.org/content/aem-developer-tools-eclipse) och se sidan [AEM Developer Tools](https://eclipse.adobe.com) för mer information.
 
 ### Kommande Java API-borttagningar {#java-api-deprecation}
 
-Flera inaktuella API:er är avsedda för borttagning den 31 augusti och bör därför inte längre refereras. I början av september kommer meddelanden från Åtgärdscenter att skickas om API-användning upptäcks, och efter den 25 september kommer meddelanden att visas under Cloud Manager byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
+Flera inaktuella API:er markerades för borttagning den 31 augusti och bör därför inte längre refereras. Du får meddelanden från Åtgärdscenter om föråldrad API-användning upptäcks i koden, och efter den 13 november visas meddelanden under Cloud Manager-byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
 
 +++ Expandera om du vill visa Java API-borttagningar
 
@@ -194,17 +217,19 @@ OSGi properties:
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-*Java 11-miljön* är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer prestandaanpassade **Java 21-miljön**.
+*Java 11-miljön* är föråldrad och de flesta miljöer har redan uppgraderats till **Java 21-miljön** med högre prestanda.
 
-Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)), bör du ha fått ett e-postmeddelande från Adobe med specifika nästa steg. Kontrollera att alla nödvändiga uppdateringar är slutförda senast **1 oktober 2025** så att miljön kan uppgraderas utan avbrott.
+Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskraven](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)) bör du ha fått ett e-postmeddelande från Adobe med nästa steg. Så som beskrivs nedan uppgraderade Adobe din **Dev** - och **RDE** -miljö den **18 september 2025** så att du kan validera din plats och dina processer och åtgärda eventuella problem. Uppgraderingar för **Stage** och **Production** fortsätter den **14 oktober 2025**.
 
-Obs! Körningsversionen är en annan än den version koden har. Vi rekommenderar att du bygger med Java 21, men Java 11-byggen stöds fortfarande för tillfället. Ett separat meddelande om borttagning av Java 11-byggen kommer att delas i framtiden.
+>[!NOTE]
+>
+>Körningsversionen är skild från koden. Vi rekommenderar att du bygger med Java 21, men Java 11-byggen är fortfarande godkända för tillfället. Ett separat meddelande om borttagning av Java 11-byggen kommer att delas i framtiden.
 
 ### Tillämpning av konfigurationspolicy för AEM Java-loggar {#logconfig-policy}
 
 Som framgår av versionsinformationen för april måste AEM Java-loggarna följa ett standardformat för att säkerställa tillförlitlig övervakning i alla kundmiljöer. Anpassade loggkonfigurationer, t.ex. ändringar i loggformatering, utdatafiler eller standardloggnivåer, stöds inte längre. Loggar måste vara dirigerade till standardfilerna och standardloggnivåerna för AEM-produktkoden måste bevaras. Mer information finns i artikeln [Loggning](/help/implementing/developing/introduction/logging.md#configuration-loggers).
 
-Med början den **25 september** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
+Med början den **30 oktober** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
 
 Granska och uppdatera alla processer som är beroende av anpassat loggningsbeteende. Till exempel:
 
@@ -217,7 +242,6 @@ Med Edge kan du köra JavaScript på CDN-lagret, vilket tar databearbetningen n�
 
 Exempel på vanliga användningsområden:
 
-* Autentisera användare med en identitetsleverantör innan du beviljar åtkomst till innehåll
 * Anpassa innehåll baserat på geografisk placering, enhetstyp eller användarattribut
 * Fungerar som mellanvara mellan CDN och ditt ursprung
 * Formatera om svar från tredjeparts-API:er (och kanske samla in flera API-svar) innan de skickas till webbläsaren
@@ -226,11 +250,22 @@ Exempel på vanliga användningsområden:
 
 Vi har ett begränsat antal möjligheter, antingen för AEM Publish Delivery eller för Edge Delivery Services-projekt, för produktionssajter. Om du är intresserad av att delta eller vill veta mer kan du skicka ett e-postmeddelande till [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med en kort beskrivning av ditt användningsfall.
 
-### CDN-konfiguration för Edge Delivery Services (Beta-programmet) {#cdn-eds-beta}
+### Edge-autentisering för Edge Delivery Services (Beta-programmet) {#edge-authentication}
 
-Adobe-hanterad CDN erbjuder flexibla konfigurationsalternativ, vilket beskrivs i artikeln [Konfigurera pipeline](/help/operations/config-pipeline.md#configurations).
+Med Edge Authentication kan du begränsa åtkomsten till Edge Delivery Services-sidor till endast de som har autentiserats hos din identitetsleverantör (IdP). Detta uppnås genom att distribuera en YAML-fil med OpenID Connect-konfiguration (OIDC).
 
-I betaversionen kan du nu distribuera en konfigurationsprocess för funktioner som väljare av CDN-ursprung, svar- och begärandeomvandlingar, CDN-loggvidarebefordran med mera. Kontakta [aemcs-cdn-config-adopter@adobe.com](mailto:aemcs-cdn-config-adopter@adobe.com) med information om ditt användningsfall.
+Om du är intresserad kan du skicka ett e-postmeddelande till [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med en kort beskrivning av ditt användningsfall och eventuella frågor du har.
+
+Observera, separat från Edge Delivery Services, att tidigare i år har vi släppt en funktion för att konfigurera Open ID Connect [för AEM Cloud-tjänstens publiceringsskiktsprojekt](/help/security/open-id-connect-support-for-aem-as-a-cloud-service-on-publish-tier.md) för att skydda AEM-sidor.
+
+<!--
+### CDN Configuration for Edge Delivery Services (Beta Program) {#cdn-eds-beta}
+
+The Adobe-Managed CDN offers flexible configuration options, as described in the [Config Pipeline article](/help/operations/config-pipeline.md#configurations). 
+
+Now in beta, youcan deploy a config pipeline for features including CDN origin selectors, response and request transformations, CDN log forwarding and more. Please reach out to [aemcs-cdn-config-adopter@adobe.com](mailto:aemcs-cdn-config-adopter@adobe.com) with the details of your use case.
+
+-->
 
 ### Ögonblicksbilder för RDE (Alpha Program) {#rde-snapshot-program}
 
@@ -246,9 +281,14 @@ I betaversionen kan du nu vidarebefordra AEM-loggar till Amazon S3, Sumo Logic, 
 
 Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementing/developing/introduction/log-forwarding.md).
 
+### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
+
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+
+
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -268,4 +308,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
