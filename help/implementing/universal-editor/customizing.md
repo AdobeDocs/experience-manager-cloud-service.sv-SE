@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 32b3a125d6370dd591252fde342843d5f9e33cf1
+source-git-commit: 217288737cd199701b34b1d12fa755abcc09830a
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,14 @@ Vissa redigeringsarbetsflöden kan behöva begränsa möjligheten för innehåll
 
 ```html
 <meta name="urn:adobe:aue:config:disable" content="duplicate"/>
+```
+
+## Inaktivera kopiera och klistra in {#copy-paste}
+
+Vissa redigeringsarbetsflöden kan behöva begränsa möjligheten för innehållsförfattaren att kopiera och klistra in komponenter. Du kan inaktivera ikonerna [för att kopiera och klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) genom att lägga till följande metadata.
+
+```html
+<meta name="urn:adobe:aue:config:disable" content="copy"/>
 ```
 
 ## Ändra slutpunkten {#custom-endpoint}

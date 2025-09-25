@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.09.18
-description: Detta är versionsinformationen för version 2025.09.18 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.09.25
+description: Detta är versionsinformationen för version 2025.09.25 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 34ae65fb0f6f69ac1983484da6ed020453ea4419
+source-git-commit: 217288737cd199701b34b1d12fa755abcc09830a
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.09.18 {#release-notes}
+# Versionsinformation om Universal Editor 2025.09.25 {#release-notes}
 
-Det här är versionsinformationen för den 18 september 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 25 september 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,8 +22,8 @@ Det här är versionsinformationen för den 18 september 2025-versionen av Unive
 
 ## Nyheter {#what-is-new}
 
-* [universal-editor-service.adobe.io](http://universal-editor-service.adobe.io/) används nu som tjänstslutpunkt för AMS i stället för att tjänsten måste lagras lokalt.
-* Sammansatta multifält stöds nu när du använder AEM-redigering.
+* [Funktionen för att kopiera och klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) kan nu [inaktiveras med en metatagg.](/help/implementing/universal-editor/customizing.md#copy-paste)
+* [När du använder den universella redigeraren i värdbaserade AEM-miljöer (AMS) ](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) kommer den universella redigeraren nu att använda den universella redigerartjänsten från AEM och inte längre förlita sig på en lokal AMS-installation, vilket säkerställer att du alltid har den senaste universella redigeringstjänsten automatiskt.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -39,5 +39,5 @@ Nu går det att kopiera och klistra in på flera sidor förutom på samma sida.
 
 ## Andra förbättringar {#other-improvements}
 
-* Flera små prestandaförbättringar har implementerats runt om i Universal Editor och AEM som ett serverdelssystem.
-* Innehållsfragment publiceras nu med Open API, vilket ger prestandaförbättringar och enhetlighet med hur Content Fragment Editor och Console publicerar.
+* Egenskapsfältet har korrigerats när det används med dokumentredigering.
+* Ett problem med att redigera flera fält i ett innehållsfragment när MSM används har åtgärdats.
