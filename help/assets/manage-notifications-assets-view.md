@@ -4,9 +4,9 @@ description: Övervaka åtgärderna som utförs på de resurser eller mappar som
 exl-id: 1fe6a845-37d5-43c2-bb96-c5b149c238ab
 feature: Assets Essentials
 role: User, Leader
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 4d31745d4ada9e68ffefbba3dc91995037f205b9
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '742'
 ht-degree: 0%
 
 ---
@@ -79,6 +79,8 @@ Så här prenumererar du på meddelandekategorierna:
 
 ## Titta på och ta bort bevakade mappar, resurser och samlingar {#watch-unwatch-assets}
 
+Du kan bevaka och ta bort bevakade mappar, resurser och samlingar för att hålla dig informerad, vilket ger bättre samarbete kring de resurser du övervakar.
+
 När [du har prenumererat på meddelandekategorierna](#subscribe-to-notification-categories) måste du prenumerera på innehållet för att få meddelanden.
 
 >[!NOTE]
@@ -86,15 +88,49 @@ När [du har prenumererat på meddelandekategorierna](#subscribe-to-notification
 >* För meddelandekategorierna **[!UICONTROL Requests]** och **[!UICONTROL Assigned to me]** behöver du inte prenumerera på innehållet efter att du har prenumererat på meddelandekategorierna. Meddelanden skickas automatiskt till dig för förfrågningar som du har skapat och när en uppgift har tilldelats dig.
 >* I Assets-vyn skickas meddelanden endast när andra användare utför åtgärder på det prenumererade innehållet. Du får inga meddelanden om vilka åtgärder du utför på det prenumererade innehållet.
 
-Om du vill prenumerera på innehållet väljer du den mapp, resurs eller samling som du vill prenumerera på och klickar på **[!UICONTROL Watch]**.
+### Prenumerera på innehållet {#subscribe-to-content}
 
-Assets-vyn visar ett meddelande om att åtgärden lyckades. Du kan klicka på **[!UICONTROL Go to notification preferences]** som finns i meddelandet om att åtgärden lyckades om du vill redigera din [prenumeration till meddelandekategorier](#subscribe-to-notification-categories).
+Så här prenumererar du på mappar, resurser och samlingar:
 
-![Meddelanden i Assets-vyn](assets/watch-assets.png)
+1. Bläddra i mappen, resursen eller samlingen som du vill prenumerera på och klicka på **[!UICONTROL Watch]**.
 
-Assets-vyn skickar nu meddelanden om de prenumererade kategorierna. Du kan också markera flera resurser, mappar eller samlingar och klicka på **[!UICONTROL Watch]** för att spara tid. Om du väljer flera enheter av vilka vissa av dem redan har prenumererats visas emellertid inte alternativet **[!UICONTROL Watch]**.
+1. I Assets-vyn visas ett meddelande om att åtgärden lyckades. Du kan klicka på **[!UICONTROL Go to notification preferences]** i meddelandet om att du har lyckats redigera din [prenumeration till meddelandekategorier](#subscribe-to-notification-categories).
 
-Om du vill avbryta prenumerationen markerar du resursen, mappen eller samlingen som du prenumererar på och klickar på **[!UICONTROL Unwatch]**.
+   ![Meddelanden i Assets-vyn](assets/watch-assets.png)
+
+Assets-vyn kommer nu att skicka meddelanden för de prenumerationskategorier som används. Du kan också markera flera resurser, mappar eller samlingar och klicka på **[!UICONTROL Watch]** för att spara tid. Om du markerar flera objekt och vissa redan prenumererar visas dock inte alternativet **[!UICONTROL Watch]**.
+
+### Visa prenumererat innehåll {#view-subscribed-content}
+
+Följ de här stegen för att visa ditt prenumererade innehåll:
+
+1. Navigera till **[!UICONTROL Watched Assets]** under [!UICONTROL Asset Management].
+
+1. I Assets-vyn visas en lista med prenumererade resurser, inklusive namn, typ och sökväg. Välj en resurs, mapp eller samling från listan om du vill visa information, plats eller [avbryta prenumerationen](#unsubscribe-to-content).
+
+   ![visa prenumererat innehåll](assets/view-watched-assets.png)
+
+### Visa innehållsprenumeranter {#view-content-subscribers}
+
+Följ de här stegen för att visa dina innehållsprenumeranter:
+
+1. Navigera till mappen, resursen eller samlingen och välj **[!UICONTROL Details]**.
+
+1. Klicka på ögonikonen![ögat](assets/do-not-localize/eye-icon.png) i den högra rutan om du vill visa en lista med bevakare för innehållet.
+
+   Du kan också klicka på ikonen ![Kommentar](assets/do-not-localize/comment-icon.svg) i den högra rutan för att visa innehållsbevakare.
+
+### Avbeställ utskick av innehållet {#unsubscribe-to-content}
+
+Så här säger du upp prenumerationen:
+
+1. Gå till **[!UICONTROL Watched Assets]** under [!UICONTROL Asset Management].
+
+1. Markera resursen, mappen eller samlingen som du vill avbryta prenumerationen på och klicka på **[!UICONTROL Unwatch]**.
+
+   ![avsluta prenumeration på innehåll](assets/unsubscribe-assets.png)
+
+Du kan även bläddra i mappen, resursen eller samlingen under [!UICONTROL Asset Management]. Markera [prenumerationsresursen](#subscribe-to-content) och klicka på **[!UICONTROL Unwatch]**.
 
 ## Visa meddelanden {#view-notifications}
 
