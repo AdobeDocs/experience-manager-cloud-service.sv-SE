@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 062ed441-6e1f-4279-9542-7c0fedc9b200
-source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
+source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
 workflow-type: tm+mt
 source-wordcount: '1975'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Förbättringar och användningsfall i regelredigeraren
 
-<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
+<span class="preview"> Det här är förhandsversionsfunktioner som är tillgängliga via vår <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features">förhandsutgåva</a>. Dessa förbättringar gäller även för Edge Delivery Services Forms.
 
 I den här artikeln beskrivs de senaste förbättringarna av regelredigeraren i Adaptive Forms. Uppdateringarna är utformade för att hjälpa er att enklare definiera formulärbeteende utan att behöva skriva anpassad kod, och för att skapa mer dynamiska, responsiva och personaliserade formulärupplevelser.
 
@@ -22,12 +22,12 @@ I tabellen nedan visas de senaste förbättringarna av regelredigeraren i Adapti
 
 | Förbättring | Beskrivning | Fördelar |
 |---|----|---|
-| **Validering med metoden `validate()`** | Finns i funktionslistan för att validera enskilda fält, paneler eller hela formuläret. | - Detaljerad validering på panel-, fält- eller formulärnivå <br> - Bättre användarupplevelse med riktade felmeddelanden <br> - Förhindrar progression med ofullständiga data <br> - Minskar antalet formuläröverföringsfel |
-| **Hämta DOR** | Körklar funktion som är tillgänglig i regelredigeraren för att hämta dokumentets (DoR) dokument. | - Ingen anpassad utveckling krävs för nedladdning av DoR <br> - konsekvent nedladdning i alla formulär |
-| **Dynamiska variabler** | Skapa regler med variabler som ändras baserat på användarindata eller andra villkor. | - Aktiverar flexibla regelvillkor <br> - Minskar behovet av dubblettlogik <br> - eliminerar behovet av att skapa dolda fält |
-| **Anpassade händelsebaserade regler** | Definiera regler som svarar på anpassade händelser utöver standardutlösarna. | - Stöder avancerade användningsfall <br> - Bättre kontroll över när och hur regler körs <br> - Förbättrar interaktiviteten |
-| **Kontextmedveten upprepningsbar panelkörning** | Regler körs nu i rätt sammanhang för varje upprepad panel, i stället för bara för den sista instansen. | - Exakt regelprogram för varje upprepad instans <br> - Minskar antalet fel i dynamiska avsnitt <br> - Förbättrar användarupplevelsen med upprepat innehåll |
-| **Stöd för frågesträng, UTM och webbläsarparametrar** | Skapa regler som anpassar formulärbeteenden baserat på URL-parametrar eller webbläsarspecifika värden. | - Aktiverar personalisering baserat på källa eller miljö <br> - användbart för marknadsförings- eller spårningsspecifika flöden <br> - Inget behov av extra skript eller anpassning |
+| [Validering med metoden validate()](#validate-method-in-function-list) | Finns i funktionslistan för att validera enskilda fält, paneler eller hela formuläret. | - Detaljerad validering på panel-, fält- eller formulärnivå <br> - Bättre användarupplevelse med riktade felmeddelanden <br> - Förhindrar progression med ofullständiga data <br> - Minskar antalet formuläröverföringsfel |
+| [Hämta postdokument](#download-document-of-record) | Körklar funktion som är tillgänglig i regelredigeraren för att hämta dokumentets (DoR) dokument. | - Ingen anpassad utveckling krävs för nedladdning av DoR <br> - konsekvent nedladdning i alla formulär |
+| [Dynamiska variabler](#support-for-dynamic-variables-in-rules) | Skapa regler med variabler som ändras baserat på användarindata eller andra villkor. | - Aktiverar flexibla regelvillkor <br> - Minskar behovet av dubblettlogik <br> - eliminerar behovet av att skapa dolda fält |
+| [Anpassade händelsebaserade regler](#custom-event-based-rules-support) | Definiera regler som svarar på anpassade händelser utöver standardutlösarna. | - Stöder avancerade användningsfall <br> - Bättre kontroll över när och hur regler körs <br> - Förbättrar interaktiviteten |
+| [Kontextmedveten upprepningsbar panelkörning](#context-based-rule-execution-for-repeatable-panels) | Regler körs nu i rätt sammanhang för varje upprepad panel, i stället för bara för den sista instansen. | - Exakt regelprogram för varje upprepad instans <br> - Minskar antalet fel i dynamiska avsnitt <br> - Förbättrar användarupplevelsen med upprepat innehåll |
+| [Stöd för frågesträng, UTM och webbläsarparametrar](#url-and-browser-parameter-based-rules-in-adaptive-forms) | Skapa regler som anpassar formulärbeteenden baserat på URL-parametrar eller webbläsarspecifika värden. | - Aktiverar personalisering baserat på källa eller miljö <br> - användbart för marknadsförings- eller spårningsspecifika flöden <br> - Inget behov av extra skript eller anpassning |
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ I ovanstående regel kontrollerar knappen **Nästa** om fälten i avsnittet **Pe
 >
 >Du kan använda metoden **validate()** i formulär, fragment eller enskilda fält. När ett fragment ingår i ett formulär visas både formuläret och fragmentet som alternativ i valideringskontexten. I det här fallet refererar fragmentet till fälten i det, medan formuläret refererar till det överordnade formulär där fragmentet är inbäddat.
 
-## DownloadDor as OOTB function in Rule Editor
+## Ladda ned dokument för inspelning
 
 Om du använder funktionen **DownloadDor()** i körklart läge (OTB) i regelredigeraren kan användaren hämta postdokumentet om formuläret är konfigurerat för att generera dokument för återskapad.
 
@@ -124,7 +124,7 @@ Fältet **Total leveranskostnad** uppdateras dynamiskt för att återspegla båd
 >[!NOTE]
 >
 > Du kan också lägga till funktionen **Hämta variabelvärde** i villkoret När.
-> &#x200B;> ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
+> > ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
 
 På så sätt kan du göra dynamiska realtidsberäkningar utan att lägga till extra fält i formuläret, vilket gör strukturen ren och användarvänlig.
 

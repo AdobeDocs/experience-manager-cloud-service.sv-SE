@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 33dcc771c8c2deb2e5fcb582de001ce5cfaa9ce4
+source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
@@ -78,6 +78,7 @@ Tabellen nedan beskriver några scenarier där **Invoke Service** kan användas:
 | **Ange repeterbar panel med utdata från Invoke Service** | Konfigurerar en repeterbar panel genom att använda data från Invoke Service-utdata, vilket möjliggör dynamiska paneler. [Klicka här](#use-case-2-set-repeatable-panel-using-output-of-invoke-service) för att se implementeringen. |
 | **Ange panel med utdata från Invoke Service** | Anger innehållet eller synligheten för en panel med specifika värden från Invoke Service-utdata. [Klicka här](#use-case-3-set-panel-using-output-of-invoke-service) för att se implementeringen. |
 | **Använd utdataparametern för Invoke Service för att validera andra fält** | Använder specifika utdataparametrar från Anropa-tjänsten för att validera formulärfälten. [Klicka här](#use-case-4-use-output-parameter-of-invoke-service-to-validate-other-fields) för att se implementeringen. |
+| **Använd händelsenyttolast i Navigera till åtgärd i anropstjänsten** | Använder händelsens nyttolast för att hantera lyckade och misslyckade svar och för att skicka data till åtgärden Navigera till under navigeringen. [Klicka här](#use-case-5-use-event-payload-in-navigate-to-action-in-invoke-service) för att se implementeringen. |
 
 Skapa ett `Get Information`-formulär som hämtar värden baserat på indata som anges i textrutan `Pet ID`. Skärmbilden nedan visar det formulär som används i dessa fall:
 
@@ -142,7 +143,6 @@ Låt oss publicera följande JSON med tjänsten [addPet](https://petstore.swagge
         "status": "available"
     }
 ```
-
 
 Regler och logik implementeras med åtgärden **Anropa tjänst** i regelredigeraren i textrutan `Pet ID` för att visa de angivna användningsexemplen.
 
@@ -222,9 +222,38 @@ Ange `102` i textrutan `Pet ID` och knappen **Skicka** är dold.
 
 ![Utdata](/help/forms/assets/output4.png)
 
+### Använd fall 5: Använd händelsenyttolast i Navigera till åtgärd i Anropa tjänst
+
+Det här användningsexemplet visar hur du konfigurerar en regel på knappen **Skicka** som anropar en **Invoke Service** och sedan dirigerar om användaren till en annan sida med åtgärden **Navigera till** .
+
+#### Implementering
+
+Skapa en regel på knappen **Skicka** för att anropa API-tjänsten `redirect-api`. Den här tjänsten ansvarar för att dirigera om användaren till formuläret **Kontakta oss**.
+
+Du kan direkt integrera ett API som API-tjänst för `redirect-api` i regelredigeraren med JSON-data som anges nedan:
+
+```json
+{
+  "id": "1",
+  "path": "/content/dam/formsanddocuments/contact-detail/jcr:content?wcmmode=disabled"
+}
+```
+
 >[!NOTE]
 >
-> Du kan även [integrera API direkt i regelredigerarens gränssnitt](/help/forms/api-integration-in-rule-editor.md) utan att använda en fördefinierad formulärdatamodell.
+> [Klicka här](/help/forms/api-integration-in-rule-editor.md) utan att använda en fördefinierad formulärdatamodell om du vill lära dig hur du integrerar API direkt i regelredigeringsgränssnittet.
+
+I **[!UICONTROL Add Success Handler]** konfigurerar du åtgärden **Navigera till** så att användaren dirigeras om till sidan **Kontakta oss** med parametern `Event Payload`. Här kan användaren skicka sin kontaktinformation.
+
+![Händelsenyttolast](/help/edge/docs/forms/assets/navigate-to-eventpayload.png)
+
+Du kan också konfigurera en felhanterare så att ett felmeddelande visas om anropet till tjänsten misslyckas.
+
+#### Utdata
+
+När du klickar på knappen **Skicka** anropas API-tjänsten `redirect-api`. Användaren omdirigeras till sidan **Kontakta oss** när åtgärden har slutförts.
+
+![Utdata för händelsenyttolast](/help/forms/assets/output5.gif)
 
 ## Frågor och svar
 

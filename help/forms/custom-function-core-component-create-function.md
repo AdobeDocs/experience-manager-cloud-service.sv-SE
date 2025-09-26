@@ -5,9 +5,9 @@ keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa e
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: e7ab4233-2e91-45c6-9377-0c9204d03ee9
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1349'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,8 @@ I den här artikeln får du hjälp med att skapa anpassade funktioner för Adapt
    * Standardparametrar
    * Restparametrar
 
+* De senaste ECMAScript-funktionerna är tillgängliga som tidig åtkomst (EA), medan upp till ECMAScript 2019 stöds i allmänhet.
+
 ## Krav för att skapa en anpassad funktion
 
 Innan du börjar lägga till en anpassad funktion i din adaptiva Forms måste du se till att du har följande:
@@ -42,7 +44,7 @@ Innan du börjar lägga till en anpassad funktion i din adaptiva Forms måste du
 
 ## Skapa en anpassad funktion
 
-Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=sv-SE#developing).
+Skapa ett klientbibliotek för att anropa anpassade funktioner i regelredigeraren. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 
 Steg för att skapa anpassade funktioner är:
 
@@ -55,7 +57,7 @@ Du kan lägga till anpassade funktioner genom att lägga till ett klientbibliote
 
 **Klona databasen**
 
-Klona din [AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git):
+Klona din [AEM Forms as a Cloud Service-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#accessing-git):
 
 1. Öppna kommandoraden eller terminalfönstret.
 
@@ -144,10 +146,10 @@ Lägg till följande i den tillagda klientbiblioteksmappen:
 
 1. Navigera till filen `/ui.apps/src/main/content/META-INF/vault/filter.xml` i [AEMaaCS-projektkatalogen].
 
-1. Öppna filen och lägg till följande rad i slutet:
+2. Öppna filen och lägg till följande rad i slutet:
 
    `<filter root="/apps/experience-league" />`
-1. Spara filen.
+3. Spara filen.
 
 ![XML för anpassat funktionsfilter](/help/forms/assets/custom-function-filterxml.png)
 
@@ -169,7 +171,7 @@ Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud S
 
    1. Utlösa en distribution av koden via den befintliga pipeline-funktionen för hela stackar. Detta skapar och distribuerar automatiskt den uppdaterade koden.
 
-Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
+Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
 När pipeline har körts blir den anpassade funktion som lagts till i klientbiblioteket tillgänglig i regelredigeraren [Adaptiv form](/help/forms/rule-editor-core-components.md).
 
@@ -229,7 +231,7 @@ Låt oss förhandsgranska formuläret för att se hur de anpassade funktionerna 
 
 >[!NOTE]
 >
-> Du kan referera till följande [anpassade funktionsmapp](/help/forms/assets//customfunctions.zip). Hämta och installera den här mappen i din AEM-instans med [Package Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+> Du kan referera till följande [anpassade funktionsmapp](/help/forms/assets//customfunctions.zip). Hämta och installera den här mappen i din AEM-instans med [Package Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
 ## Funktioner för anpassade funktioner
 
