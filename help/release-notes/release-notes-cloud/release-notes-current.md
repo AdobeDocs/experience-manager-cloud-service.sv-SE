@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: bdc0e7623592efed5270a3cb8322ef22e50cbad9
+source-git-commit: 3eda41b89847e1011d818922826b745b880e4977
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '1905'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -66,7 +66,7 @@ Skapa Vanity-URL:er för leverans av resurser i DM med OpenAPI och ersätt lång
 
 >[!NOTE]
 >
->Den här funktionen är tillgänglig som en begränsad tillgänglighetsfunktion. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+>Den här funktionen är tillgänglig som en begränsad tillgänglighetsfunktion. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
 
 <!--
 
@@ -82,7 +82,7 @@ Content Hub Administrators can now pin collections in Content Hub for quick acce
 
 >[!NOTE]
 >
->These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
+>These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
 
 -->
 
@@ -90,43 +90,23 @@ Content Hub Administrators can now pin collections in Content Hub for quick acce
 
 ### Nya funktioner i Experience Manager Forms {#new-features-forms}
 
-**Indatakomponent för datum och tid**
+**Starta arbetsflödessteget för formulärdatamodell för SharePoint-listbilagor**
 
-Det finns nu en [datum- och tidskomponent](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component) som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
-
-**Utökad felhantering för filöverföringar**
-
-Komponenten [Bifogad fil](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab) validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
-
-**Angivet felsvar för anpassad överföringsåtgärd**
-
-När en [anpassad skicka-åtgärd](/help/forms/custom-submit-action-troubleshooting.md) påträffar ett ohanterat fel returneras felkoden 502. Detta hjälper till att identifiera att problemet är relaterat till den anpassade skicka-åtgärden, vilket gör felsökningen enklare.
-
-**Utesluter dolda fält från postdokument**
-
-En ny egenskap tillåter att dolda fält utesluts från [postdokumentet](/help/forms/generate-document-of-record-core-components.md#document-of-record-settings). Som standard är det här alternativet inte markerat och gäller för alla formulärfält.
-
+Arbetsflödessteget Anropa formulärdatamodell har nu stöd för hantering av metadata på arbetsflödessidan för Base64-kodade bilagematriser i SharePoint List-baserade formulärdatamodeller. Med den här förbättringen kan arbetsflödessteget skicka, lagra och hämta metadata som filnamn, MIME-typ och anpassade egenskaper för varje bifogad fil. Denna funktion möjliggör mer omfattande datahantering och underlättar smidig integrering längre fram i kedjan. Mer information finns i [Utökat stöd i arbetsflödessteget Anropa formulärdatamodell för SharePoint List-bilagor](/help/forms/aem-forms-workflow-step-reference.md#invoke-form-data-model-fdm-service-step).
 
 ### Pre-Release-funktioner i AEM Forms
 
-**Generera och synkronisera AFP-återgivningar**
-
-Du kan nu använda [AEM Forms Communication API](/help/forms/document-generation-afp-api.md) för att konvertera en XDP-fil till AFP-format. AFP är ett högpresterande format som används ofta vid storskalig trycksaksproduktion.
-
 **Förbättringar i regelredigeraren**
 
-* [Validera metod i funktionslista](/help/forms/rule-editor-enhancements-use-cases.md#validate-method-in-function-list): Metoderna validate och reset har nu stöd för körning på panelnivå, fält- och formulärnivå. Tidigare stöddes de endast på formulärnivå.
-* [Modernt JavaScript-stöd](/help/forms/rule-editor-core-components-difference-tables.md): Stöd för ECMAScript 2019 och senare funktioner har lagts till för anpassade funktioner, vilket gör att du kan skriva mer effektiv, modulär och återanvändbar kod.
-* [Ladda ned DoR-alternativ i regelredigeraren](/help/forms/rule-editor-enhancements-use-cases.md#downloaddor-as-ootb-fuction-in-rule-editor): En funktion för att hämta dokumentarkivfilen (DoR) har lagts till som ett OTB-alternativ (Out-of-Box) i regelredigeraren.
+Regelredigeraren har nu stöd för förbättrad navigering och tillåter användning av funktioner och matematiska uttryck i indataparametrar.
 
-  ![Dokument-av-post](/help/forms/assets/document-of-record-rn.gif)
+**Förbättrad navigering med stöd för händelsenyttolast**
 
-* [Dynamiska variabler i Regelredigeraren](/help/forms/rule-editor-enhancements-use-cases.md#support-for-dynamic-variables-in-rules): Du kan nu använda dynamiska (tillfälliga) variabler i Regelredigeraren för större flexibilitet när du definierar villkor och åtgärder. Dolda fält behövs inte längre för att lagra tillfälliga värden.
-* [Stöd för anpassade händelsebaserade regler](/help/forms/rule-editor-enhancements-use-cases.md#custom-event-based-rules-support): Du kan nu definiera anpassade händelser och utlösarregler baserat på dessa händelser.
-* [Kontextmedvetna upprepningsbara panelregler](/help/forms/rule-editor-enhancements-use-cases.md#context-based-rule-execution-for-repeatable-panels): I upprepningsbara paneler körs nu regler baserat på kontext, i stället för att bara tillämpas på den sista panelinstansen.
-* [Regler som utlösts av parametrar](/help/forms/rule-editor-enhancements-use-cases.md#url-and-browser-parameter-based-rules-in-adaptive-forms): Regelredigeraren stöder nu regelkörning baserat på frågeparametrar, UTM-parametrar eller webbläsarparametrar.
-* [Formulärspecifika anpassade funktioner](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md#organizing-custom-functions-across-different-forms): Edge Delivery Services Forms har nu stöd för formulärspecifika anpassade funktionsskript, vilket ger större flexibilitet vid hantering av återanvändbar logik.
-* [Statisk import för anpassade funktioner](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md#static-imports-for-custom-functions): Regelredigeraren i Universal Editor har nu stöd för statiska importer, vilket gör att utvecklare kan ordna, dela och återanvända funktioner i flera formulär.
+Åtgärden `Navigate To` i Invoke Service-hanterarna har nu stöd för `EVENT_PAYLOAD`, vilket gör att formulärförfattare kan konfigurera uppföljningsåtgärder baserat på händelsesvar. Den här förbättringen ger större flexibilitet vid utformningen av arbetsflöden efter inskickandet, vilket ger smidigare övergångar och mer personaliserade användarupplevelser. Mer information finns i [Förbättrad navigering med stöd för händelsenyttolast](/help/forms/invoke-service-enhancements-rule-editor.md#use-case-5-use-event-payload-in-navigate-to-action-in-invoke-service).
+
+**Funktion och stöd för matematiska uttryck i indataparametrar**
+
+Indataparametrarna har nu stöd för både funktionsanrop och matematiska uttryck, vilket gör att formulärförfattare kan skicka dynamiskt beräknade värden direkt. Den här förbättringen effektiviserar regelkonfigurationer, eliminerar behovet av extra fält och gör formulär mer anpassningsbara till komplexa logiska och beräkningsdrivna scenarier. Mer information finns i [Funktion och stöd för matematiska uttryck i Indataparametrar](/help/forms/rule-editor-core-components-user-interface.md#function-and-mathematical-expression-support-in-input-parameters).
 
 ### Nya funktioner för tidig åtkomst i AEM Forms {#forms-new-early-access-features}
 
@@ -134,13 +114,17 @@ AEM Forms Early Access Program ger dig unika möjligheter att få exklusiv tillg
 
 I versionsinformationen visas de innovationer som levererats i den aktuella versionen. En fullständig lista över de innovationer som är tillgängliga under Tidig åtkomst-programmet finns i [AEM Forms Tidig åtkomst-programdokumentation](/help/forms/early-access-ea-features.md).
 
-**Klottsignaturkomponent**
+**PDF Preview i Interactive Communication Editor**
 
-Du kan nu använda [Klottsigneringskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature) för att hjälpa användare att lägga till signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
+Användare kan förhandsgranska interaktiva dokument utan data, med lokala JSON-datafiler eller med data från en datamodell, vilket möjliggör flexibel datadriven testning. Mer information finns i [PDF Preview i den interaktiva kommunikationsredigeraren](/help/forms/interactive-communication/pdf-preview-in-interactive-communication-editor-with-different-data-options.md).
 
-**Direkt API-integrering i regelredigeraren**
+**Stöd för anpassade teckensnitt i interaktiv kommunikation**
 
-Adaptiv Forms har nu stöd för [direkt API-integrering](/help/forms/api-integration-in-rule-editor.md) i Visual Rule Editor utan någon formulärdatamodell. Författare kan konfigurera API:er med en URL- eller cURL-import, mappa in-/utdataparametrar och säkra anrop med autentisering.
+Med funktionen för anpassade teckensnitt kan man bädda in anpassade eller organisationsgodkända teckensnitt i Interactive Communications för att säkerställa enhetlig och varumärkesprofilerad PDF-återgivning på olika enheter och plattformar. Mer information finns i [Stöd för anpassade teckensnitt i interaktiv kommunikation](/help/forms/interactive-communication/add-custom-fonts-to-interactive-communication-editor.md).
+
+**Importera och exportera interaktiv kommunikation**
+
+Med den här funktionen kan du migrera och återanvända interaktiv kommunikation i olika miljöer. Nu kan du exportera en interaktiv kommunikation tillsammans med tillhörande fragment och datamodeller från en miljö och importera den till en annan. Mer information finns i [Importera och exportera interaktiv kommunikation](/help/forms/interactive-communication/import-and-export-interactive-communications.md).
 
 <!--
 **Forms Optimization opportunities**
@@ -173,7 +157,7 @@ Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Vår
 >[!NOTE]
 >
 >Tillgänglig som begränsad tillgänglighet den 25 september.
->&#x200B;>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
+>>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
 
 ### Ny version av AEM Developer Tools for Eclipse {#aem-develeper-tools-for-eclipse}
 
@@ -283,12 +267,12 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -308,4 +292,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
