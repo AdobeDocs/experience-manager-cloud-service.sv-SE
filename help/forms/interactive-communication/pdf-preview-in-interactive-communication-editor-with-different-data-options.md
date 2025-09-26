@@ -53,7 +53,7 @@ Förgranska interaktiv kommunikation utan data, lokala data eller exempeldata fr
 
 +++&#x200B;2. Förhandsgranska med lokala JSON-data
 
-2.1. Förbered en strukturerad JSON-fil. Som referens kan du kopiera exempeldata från JSON-schemat [(FDM)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model) som används för kommunikationen.
+2.1. Förbered en strukturerad JSON-fil. Som referens kan du kopiera exempeldata från JSON-schemat [(FDM)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model) som används för kommunikationen.
 
 2.2. Gå till **PDF Preview** > Använda lokala data i IC Editor.
 

@@ -39,7 +39,7 @@ Skapa en interaktiv kommunikation (IC) i en miljö och återanvänd den i en ann
 
 +++&#x200B;1. Exportera interaktiv kommunikation
 
-1.1. Välj en [skapad interaktiv kommunikation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/interactive-communication/create-interactive-communication) (IC).
+1.1. Välj en [skapad interaktiv kommunikation](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/interactive-communication/create-interactive-communication) (IC).
 1.2. Klicka på alternativet **Hämta** om du vill exportera den som en ZIP-fil.
 1.3. Den hämtade ZIP-filen innehåller IC-kortet tillsammans med dess valda **mall**, **fragment** och **datamodell**.
 
