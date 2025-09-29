@@ -3,13 +3,13 @@ title: Märkordstaggar som stöds av HTML i arkivdokumentet
 description: Referenshandbok för HTML märkordstaggar stöds nu vid dokumentgenerering, inklusive återgivningsbeteende och tillgänglighetsaspekter
 feature: Adaptive Forms
 role: Developer, User
-source-git-commit: 739b2b396bf0c9042d6287bfba2e8e8792cabf70
+exl-id: 8481b0dc-aae7-4bd2-acfe-1f1b6d747683
+source-git-commit: 1794ed6cac612ee4600c2f8e1ced18c6130b64a2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
-
 
 
 # Märkordstaggar som stöds av HTML i arkivdokumentet
@@ -132,23 +132,10 @@ Dessa taggar stöds inte och kommer inte att återges korrekt:
 <p>Einstein's equation: E=mc<sup>2</sup></p>
 ```
 
-## Relaterad information
+## Relaterat innehåll
 
-### AEM Forms-dokumentation
 
 - [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
 - [Generera arkivdokument för kärnkomponenter](/help/forms/generate-document-of-record-core-components.md)
 - [Anpassning av dokumentmall](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#customize-the-branding-information-in-document-of-record)
-
-### Tekniska referenser
-
-- [XFA-specifikation - XHTML- och CSS-attribut](https://www.adobe.com/devnet/acrobat/pdfs/XFA-3_3.pdf) (sidan 1187)
-- [PDF Accessibility Standards](https://www.w3.org/TR/WCAG21/)
-- [API-mappningar för grundläggande tillgänglighet](https://www.w3.org/TR/core-aam-1.2/#role-map-superscript)
-
-### Best practices guides
-
-- [Skapa tillgängliga PDF-filer](https://www.adobe.com/accessibility/pdf.html)
-- [Effektiva metoder för att arbeta med text i formulär](/help/forms/creating-accessible-adaptive-forms.md)
-- [Dokumentstruktur för tillgänglighet](/help/forms/creating-accessible-adaptive-forms.md)
 
