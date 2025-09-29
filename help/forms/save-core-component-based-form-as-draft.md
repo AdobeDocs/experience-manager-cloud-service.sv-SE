@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spara formulär som utkast och lista dem på sidan Webbplatser
 
-<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
+<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
 
 Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM Forms Portal-komponenten **Utkast och inskickat material** som finns i kartongen och som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
 
