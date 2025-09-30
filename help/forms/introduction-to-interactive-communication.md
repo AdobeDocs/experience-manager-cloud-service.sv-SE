@@ -4,14 +4,15 @@ description: Designa dynamisk, datadriven kommunikation enkelt med AEM Forms Int
 feature: Release Information
 role: Admin
 hide: true
+index: false
 hidefromtoc: true
-source-git-commit: 664aa2091a3853fdcea792ba5015d685c9285764
+exl-id: 4f28c260-9842-467e-8abb-bcca224280b8
+source-git-commit: aa8f6e129febaf246b70da43dd1d34b6caaf066d
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
-
 
 # Interaktiv kommunikation
 
@@ -32,18 +33,18 @@ Kärnfunktionerna i Interactive Communications Editor är:
 
 | Funktion | Beskrivning | Tillgänglighet |
 |------------|-------------|--------------|
-| Användarvänlig design | Intuitivt musstyrt gränssnitt som kräver minimal teknisk kunskap | ✅ |
-| Dataintegrering | Anslut till scheman, databaser och webbtjänster för generering av dynamiskt innehåll | ✅ |
-| Multimedia | Lägg smidigt in text, bilder och interaktiva element | ✅ |
-| Versionskontroll | Spåra ändringar och bevara dokumenthistorik | ✅ |
-| Mallstöd | Skapa från scratch eller använd mallar för effektiv dokumentgenerering | ✅ |
-| Molnintegrering | Redigera dokument direkt i AEM Forms as a Cloud Service | ✅ |
-| Dokumentfragment | Återanvänd modulära innehållsblock i flera dokument för enhetlighet och effektivitet | ✅ |
-| Textbunden databindning | Bind data direkt i innehållet för personalisering i realtid utan externa konfigurationer | ✅ |
-| Flera komponenter | Använd olika komponenter för att skapa komplexa och engagerande dokument | ✅ |
-| Flerkanalsdesign | Skapa enhetliga upplevelser i alla tryck- och digitala format enligt gällande regelverk | ? Delvis tillgänglig |
-| Dynamiskt innehåll | Generera skräddarsytt innehåll med hjälp av affärslogik och databindning | ? Delvis tillgänglig |
-| Flexibel formatering | Exportera till PDF, HTML, PCL, PostScript ®️ och ZPL | ? Delvis tillgänglig |
+| Användarvänlig design | Intuitivt musstyrt gränssnitt som kräver minimal teknisk kunskap | ✅ tillgängliga |
+| Dataintegrering | Anslut till scheman, databaser och webbtjänster för generering av dynamiskt innehåll | ✅ tillgängliga |
+| Multimedia | Lägg smidigt in text, bilder och interaktiva element | ✅ tillgängliga |
+| Versionskontroll | Spåra ändringar och bevara dokumenthistorik | ✅ tillgängliga |
+| Mallstöd | Skapa från scratch eller använd mallar för effektiv dokumentgenerering | ✅ tillgängliga |
+| Molnintegrering | Redigera dokument direkt i AEM Forms as a Cloud Service | ✅ tillgängliga |
+| Dokumentfragment | Återanvänd modulära innehållsblock i flera dokument för enhetlighet och effektivitet | ✅ tillgängliga |
+| Textbunden databindning | Bind data direkt i innehållet för personalisering i realtid utan externa konfigurationer | ✅ tillgängliga |
+| Flera komponenter | Använd olika komponenter för att skapa komplexa och engagerande dokument | ✅ tillgängliga |
+| Flerkanalsdesign | Skapa enhetliga upplevelser i alla tryck- och digitala format enligt gällande regelverk | 🌓 delvis tillgängligt |
+| Dynamiskt innehåll | Generera skräddarsytt innehåll med hjälp av affärslogik och databindning | 🌓 delvis tillgängligt |
+| Flexibel formatering | Exportera till PDF, HTML, PCL, PostScript ®️ och ZPL | 🌓 delvis tillgängligt |
 | Språkstöd | Skapa kommunikation på flera språk med stöd för anpassade teckensnitt | ⏳ kommer snart |
 
 ## Onboarding

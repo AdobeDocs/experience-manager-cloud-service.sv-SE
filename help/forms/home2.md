@@ -8,13 +8,13 @@ feature: Adaptive Forms, Release Information
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 51d9fed937ea5f12544ed476974d2812843fb457
+exl-id: 50d7ce19-7d76-4ea1-a54c-8ca0e5379982
+source-git-commit: eca09e1bf2ba4466f54e915e01218cc89cf5b116
 workflow-type: tm+mt
 source-wordcount: '2323'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms as a Cloud Service - introduktion {#introduction}
 
@@ -95,7 +95,7 @@ Implementera [villkorsstyrd logik](/help/forms/rule-editor-core-components.md), 
 Återge XFA-baserade formulär som [ HTML5-formulär ](/help/forms/introductionhtml5.md) för mobila enheter och äldre webbläsare. HTML5 Forms ger en inbyggd mobilupplevelse utan plugin-program samtidigt som man bevarar blankettlogiken och valideringen från de ursprungliga XDP-mallarna.
 
 **Interaktiv kommunikation**
-Skapa dokumentcentrerad kommunikation som kontoutdrag, fakturor och meddelanden med en visuell redigerare. [Interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md) kombinerar statiskt innehåll med dynamiska data för att generera personaliserad kommunikation i både tryck och digitala kanaler.
+Skapa dokumentcentrerad kommunikation som kontoutdrag, fakturor och meddelanden med en visuell redigerare. [Interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md) kombinerar statiskt innehåll med dynamiska data för att generera personaliserad kommunikation i både tryck och digitala kanaler.
 
 ### Styrning: Granskning och efterlevnad {#govern}
 
@@ -249,7 +249,7 @@ För komplexa krav som omfattar flera system, dokumentgenerering och arbetsflöd
 **Dokumenttjänster och kommunikation:**
 
 1. **[Implementera kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)** för automatisk dokumentgenerering
-2. **[Skapa interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md)** för anpassade meddelanden och meddelanden
+2. **[Skapa interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)** för anpassade meddelanden och meddelanden
 3. **[Konfigurera Forms Portal](/help/forms/configure-forms-portal.md)** för centraliserad formulärhantering
 
 ### Företagsdistribution: Skala och styrning {#enterprise-deployment}

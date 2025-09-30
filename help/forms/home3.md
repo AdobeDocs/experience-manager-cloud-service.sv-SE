@@ -8,13 +8,13 @@ feature: Adaptive Forms, Release Information
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: 51d9fed937ea5f12544ed476974d2812843fb457
+exl-id: e8c37209-4d8e-4eaf-9e29-ffe32b841eb1
+source-git-commit: eca09e1bf2ba4466f54e915e01218cc89cf5b116
 workflow-type: tm+mt
 source-wordcount: '1932'
 ht-degree: 0%
 
 ---
-
 
 # AEM Forms as a Cloud Service {#aem-forms-platform}
 
@@ -102,7 +102,7 @@ Bygg formulär med den utvecklingsmetod som bäst passar era behov och tekniska 
 | **Vad den gör:** Designa personliga kommunikationer som kombinerar statiskt innehåll med dynamiska data för tryck och digitala kanaler. |
 | **När ska du använda:** Kundutdrag, fakturor, meddelanden, personlig kommunikation, dokumenttunga arbetsflöden. |
 | 📄 Visuell dokumentdesign 📄 Dynamisk dataintegrering 📄 Flerkanalsutdata 📄 Personalization |
-| [Kom igång med interaktiv kommunikation →](/help/forms/introduction-to-interactive-communication.md) |
+| [Kom igång med interaktiv kommunikation →](/help/forms/interactive-communication/create-interactive-communication.md) |
 
 ## 🔗 data och integrering {#data-integration}
 
@@ -304,7 +304,7 @@ Välj startpunkt baserat på dina omedelbara behov och tekniska krav.
 
 **För XFA-modernisering:** Börja med [HTML5 Forms](/help/forms/introductionhtml5.md)
 
-**För dokumentkommunikation:** Börja med [Interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md)
+**För dokumentkommunikation:** Börja med [Interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
 
 ### Snabbstart för dataintegrering {#integration-start}
 
