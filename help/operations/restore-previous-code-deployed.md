@@ -70,7 +70,7 @@ Om du bara vill återställa data, som har gått förlorade, skadats eller av mi
      >
      >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
-1. I miljötabellen, till höger om en miljö vars källkod du vill återställa, klickar du på ikonen ![Mer eller Ellips ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ** > **Tidigare kod som distribuerats**.
+1. I miljötabellen, till höger om en miljö vars källkod du vill återställa, klickar du på ikonen ![Mer eller Ellips &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ** > **Tidigare kod som distribuerats**.
 
    ![Återställ tidigare alternativ för koddistribution från ellipsmenyn](/help/operations/assets/restore-previous-code-deployed-menu.png)
 

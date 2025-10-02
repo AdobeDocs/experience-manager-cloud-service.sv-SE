@@ -45,7 +45,7 @@ Se även [Hälsobedömningsmönster](#ha-patterns) för regeldefinitioner och re
 
      ![Välja Hälsoutvärdering på ellipsmenyn i miljökortet](/help/implementing/cloud-manager/reports/assets/ha-myprograms-environments-card.png)
 
-   * På den vänstra menyn, under **Tjänster**, klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**. Klicka på ikonen ![Ellips eller Mer ](https://spectrum.adobe.com/static/icons/ui_18/More.svg) till höger om ett miljönamn på sidan Miljöer och välj sedan **Hälsoutvärdering** på menyn.
+   * På den vänstra menyn, under **Tjänster**, klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**. Klicka på ikonen ![Ellips eller Mer &#x200B;](https://spectrum.adobe.com/static/icons/ui_18/More.svg) till höger om ett miljönamn på sidan Miljöer och välj sedan **Hälsoutvärdering** på menyn.
 
      ![Välja Hälsoutvärdering på ellipsmenyn på miljösidan](/help/implementing/cloud-manager/reports/assets/ha-environments-page.png)
 
@@ -80,7 +80,7 @@ Se även [Hälsobedömningsmönster](#ha-patterns) för regeldefinitioner och re
 
 ### Visa den senaste rapportinformationen {#view-report-details}
 
-* På sidan **Hälsoutvärdering** till höger om titeln **Senaste rapport** klickar du på ikonen ![Ellips eller Mer ](https://spectrum.adobe.com/static/icons/ui_18/More.svg) och sedan på **Visa information** eller **Hämta**.
+* På sidan **Hälsoutvärdering** till höger om titeln **Senaste rapport** klickar du på ikonen ![Ellips eller Mer &#x200B;](https://spectrum.adobe.com/static/icons/ui_18/More.svg) och sedan på **Visa information** eller **Hämta**.
 
   Alternativet **Visa information** visar följande:
 
