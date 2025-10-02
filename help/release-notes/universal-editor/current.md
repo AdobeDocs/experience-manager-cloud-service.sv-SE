@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.09.25
-description: Detta är versionsinformationen för version 2025.09.25 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.10.02
+description: Detta är versionsinformationen för version 2025.10.02 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 217288737cd199701b34b1d12fa755abcc09830a
+source-git-commit: 017ac03f6547317197a903f23ce77b1227dc94ca
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 0%
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.09.25 {#release-notes}
+# Versionsinformation om Universal Editor 2025.10.02 {#release-notes}
 
-Det här är versionsinformationen för den 25 september 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 2 oktober 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -22,8 +22,7 @@ Det här är versionsinformationen för den 25 september 2025-versionen av Unive
 
 ## Nyheter {#what-is-new}
 
-* [Funktionen för att kopiera och klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) kan nu [inaktiveras med en metatagg.](/help/implementing/universal-editor/customizing.md#copy-paste)
-* [När du använder den universella redigeraren i värdbaserade AEM-miljöer (AMS) ](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) kommer den universella redigeraren nu att använda den universella redigerartjänsten från AEM och inte längre förlita sig på en lokal AMS-installation, vilket säkerställer att du alltid har den senaste universella redigeringstjänsten automatiskt.
+* En knapp har lagts till för att växla mellan förhandsgranskning och produktionsmiljöer.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -39,5 +38,4 @@ Nu går det att kopiera och klistra in på flera sidor förutom på samma sida.
 
 ## Andra förbättringar {#other-improvements}
 
-* Egenskapsfältet har korrigerats när det används med dokumentredigering.
-* Ett problem med att redigera flera fält i ett innehållsfragment när MSM används har åtgärdats.
+* Platsfältet och dess text har justerats bättre i användargränssnittet.
