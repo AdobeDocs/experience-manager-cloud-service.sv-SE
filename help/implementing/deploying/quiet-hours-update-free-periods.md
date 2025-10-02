@@ -5,9 +5,9 @@ feature: Deploying
 role: Admin
 badge: label="Begränsad tillgänglighet" type="Positive"
 exl-id: 54f86a58-eb56-43e6-ab51-7af7466a2d40
-source-git-commit: 350b288d30b3fb8d9d308dbd279f579cec0b292c
+source-git-commit: aec58ceffbbc6c7e2921c471d608ed3c381fe2e4
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >Den här funktionen kommer att vara tillgänglig som en **begränsad tillgänglighet** med början den 25 september. Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera funktionen i dina program.
+
+>[!WARNING]
+>Du kan bara använda funktionerna tysta timmar och Uppdatera lediga perioder efter att du har anslutit till [automatiska underhållsuppdateringar](/help/implementing/deploying/aem-version-updates.md).
 
 AEM as a Cloud Service [automatiska underhållsuppdateringar](/help/implementing/deploying/aem-version-updates.md) säkerställer att dina instanser är säkra och uppdaterade med de senaste underhållsversionerna. Men i vissa fall (som live-event) kan du behöva &quot;skydda&quot; dessa viktiga arbetstider från eventuella avbrott. Därför har AEM as a Cloud Service möjlighet att ange en tidsram där automatiska uppdateringar inte görs för dina pågående program.
 
@@ -26,7 +29,7 @@ Du kan konfigurera dessa tidsramar med två schemaläggningsalternativ:
 
 De kostnadsfria uppdateringsperioderna och funktionerna för tysta timmar konfigureras per program.
 
-Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
+Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
 
 ## Tysta timmar {#quiet-hours}
 
