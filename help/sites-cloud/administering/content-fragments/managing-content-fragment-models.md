@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 solution: Experience Manager Sites
 exl-id: f94f75c2-12fa-47c0-a71b-327f4210077d
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: baf9e56e65bc537e136310814f269a3a20a80dd3
 workflow-type: tm+mt
-source-wordcount: '2260'
+source-wordcount: '2496'
 ht-degree: 0%
 
 ---
@@ -54,8 +54,8 @@ Här ser du att det finns tre huvudområden:
 
 * Det övre verktygsfältet
    * Tillhandahåller AEM standardfunktioner
-   * Visar även din IMS-organisation
-   * Tillhandahåller olika [åtgärder](#actions-unselected)
+   * Visar din IMS-organisation
+   * Tillhandahåller olika [åtgärder](#actions-unselected) som kan [ändras när du väljer en eller flera modeller](#actions-selected-content-fragment-models)
 * Den vänstra panelen
    * Visar [sökvägarna till alla konfigurationer](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) som listas som mappar
    * Här kan du dölja eller visa mappträdet
@@ -97,20 +97,29 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 * **Status**
    * Endast information.
    * Kan användas för [snabb filtrering](#fast-filtering)
+* **Replikeringsstatus**
+   * Endast information.
+   * Kan användas för [snabb filtrering](#fast-filtering).
+* **Förhandsgranska**
+   * Endast information.
 * **Ändrad**
    * Endast information.
+   * Kan användas för [snabb filtrering](#fast-filtering).
 * **Ändrad av**
    * Endast information.
    * Kan användas för [snabb filtrering](#fast-filtering).
 * **Taggar**
    * Endast information.
-   * Visar alla taggar som är relaterade till modellen.
+   * Öppnar en dialogruta med alla taggar som hör till modellen.
    * Kan användas för [snabb filtrering](#fast-filtering).
 * **Publicerad**
    * Endast information.
+   * Kan användas för [snabb filtrering](#fast-filtering).
 * **Publicerad av**
    * Endast information.
    * Kan användas för [snabb filtrering](#fast-filtering).
+* **Används av**
+   * Öppnar en dialogruta med en lista över de innehållsfragment som är baserade på modellen. Listan innehåller länkar som gör att du kan öppna fragment direkt.
 
 ## Modegenskaper {#model-properties}
 
@@ -169,8 +178,9 @@ Vissa åtgärder är tillgängliga från konsolen - efter att du har valt en map
 Om du väljer en viss modell öppnas ett verktygsfält som fokuserar på de åtgärder som är tillgängliga för den modellen. Du kan också välja flera modeller - de tillgängliga åtgärderna justeras därefter.
 
 * **[Redigera](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)** om du vill definiera innehållsfragmentmodellen.
-* **Publicera** på nivåerna [Publicera](/help/implementing/cloud-manager/manage-environments.md#environment-types) eller [Förhandsgranska](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
+* **[Publicera](#publishing-a-content-fragment-model)** och **[Avpublicera](#unpublishing-a-content-fragment-model)** på nivåerna [Publicera](/help/implementing/cloud-manager/manage-environments.md#environment-types) eller [Förhandsgranska](/help/implementing/cloud-manager/manage-environments.md#access-preview-service).
 * **Lås**/**Lås upp** för att kontrollera om en användare får ändra modellen.
+* **Kopiera** din modell.
 * **[Aktivera](#enabling-a-content-fragment-model)**/**[Inaktivera](#disabling-a-content-fragment-model)** för att kontrollera om en användare får skapa innehållsfragment baserat på den här modellen.
 
 Om du väljer en enskild modell visas även [modellegenskaperna](#properties) i den högra panelen.
@@ -317,23 +327,21 @@ De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 * Om arvskedjan inte ger något resultat ska du titta på konfigurationen **Cloud Services** för den mappen (även först direkt och sedan via arv).
 * Om inget av ovanstående ger några resultat finns det inga tillåtna modeller för den mappen.
 
-<!--
-## Deleting a Content Fragment Model {#deleting-a-content-fragment-model}
+## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
 
 >[!CAUTION]
 >
->Deleting a Content Fragment model can impact dependent fragments.
+>Om du tar bort en modell för innehållsfragment kan det påverka beroende fragment.
 
-To delete a Content Fragment model:
+Så här tar du bort en innehållsfragmentmodell:
 
-1. Navigate to, and select your Content Fragment Model. You can select multiple models.
+1. Navigera till och markera innehållsfragmentmodellen. Du kan välja flera modeller.
 
-1. Select **Delete** from the toolbar.
+1. Välj **Ta bort** i verktygsfältet.
 
    >[!NOTE]
    >
-   >If the model is referenced a warning is given, so that you can take appropriate action.
--->
+   >Om du refererar till modellen visas en varning så att du kan vidta lämpliga åtgärder.
 
 ## Publicera en innehållsfragmentmodell {#publishing-a-content-fragment-model}
 
@@ -352,25 +360,25 @@ Så här publicerar du en innehållsfragmentmodell:
 
 1. Arbetsflödet för publicering av de valda modellerna och deras referenser startas. Publiceringsstatusen visas sedan i konsolen.
 
-<!--
-## Unpublishing a Content Fragment Model {#unpublishing-a-content-fragment-model}
+## Avpublicera en innehållsfragmentmodell {#unpublishing-a-content-fragment-model}
 
-Content Fragment Models can be unpublished if they are not referenced by any fragments.
+Modeller för innehållsfragment kan avpubliceras om de inte refereras av några fragment.
 
-To unpublish a Content Fragment Model:
+Så här avpublicerar du en innehållsfragmentmodell:
 
-1. Navigate to, and select your Content Fragment Model.
-1. Select **Unpublish** from the toolbar.
-   The published status is indicated in the console. 
+1. Navigera till och markera innehållsfragmentmodellen.
+Publiceringsstatusen anges i konsolen.
 
-If you try to unpublish a model that is currently used by one or more fragments, then an error warning is shown. For example: 
+1. Välj **Avpublicera** i verktygsfältet.
 
-![Content Fragment Model error message when unpublishing a model that is in use](assets/cf-cfmodels-unpublish-error.png)
+1. Välj **Mål** i dialogrutan Avpublicera:
 
-The message suggests that you check the [References](/help/sites-cloud/authoring/basic-handling.md#references) panel to investigate further:
+   * **Publiceringstjänst**
+   * **Förhandsgranskningstjänst**
 
-![Content Fragment Model in References](assets/cf-cfmodels-references.png)
--->
+1. Arbetsflödet för att avpublicera de valda modellerna och deras referenser startas. Den opublicerade statusen visas sedan i konsolen.
+
+Om du försöker avpublicera en modell som för närvarande används av ett eller flera fragment visas en felvarning. Meddelandet tyder på att du bör kontrollera panelen [Referenser](/help/sites-cloud/authoring/basic-handling.md#references) för att undersöka mer:
 
 ## Låsta modeller för innehållsfragment {#locked-content-fragment-models}
 

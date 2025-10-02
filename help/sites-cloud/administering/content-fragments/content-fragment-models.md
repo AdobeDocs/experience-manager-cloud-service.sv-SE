@@ -5,10 +5,10 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
 solution: Experience Manager Sites
-source-git-commit: cf2f64dec2ff39ea237dd092b3049bf9b8cd40e7
+source-git-commit: 416cb98fbf48885688ee70d63e606e3f7c90f9f8
 workflow-type: tm+mt
-source-wordcount: '2280'
-ht-degree: 1%
+source-wordcount: '2201'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +24,14 @@ På den här sidan beskrivs hur du definierar innehållsfragmentmodellen med den
 >
 >Mer information finns i [AEM GraphQL API för användning med innehållsfragment - begränsningar](/help/headless/graphql-api/content-fragments.md#limitations)
 
+>[!NOTE]
+>
+>Om du skapar en modell med den nya redigeraren bör du alltid använda den här redigeraren för den modellen.
+>
+>Om du sedan öppnar modellen med den [ursprungliga modellredigeraren](/help/assets/content-fragments/content-fragments-models.md) visas meddelandet:
+>
+>* &quot;Den här modellen har ett anpassat gränssnittsschema konfigurerat. Fältordningen som visas i det här användargränssnittet kanske inte matchar användargränssnittets schema. Om du vill visa de fält som är justerade mot gränssnittets schema måste du växla till den nya redigeraren för innehållsfragment.&quot;
+
 ## Definiera innehållsfragmentmodellen {#defining-your-content-fragment-model}
 
 Content Fragment Model definierar effektivt strukturen för de resulterande innehållsfragmenten med hjälp av ett urval av **[datatyper](#data-types)**. Med modellredigeraren kan du lägga till instanser av datatyperna och sedan konfigurera dem för att skapa de obligatoriska fälten:
@@ -38,26 +46,46 @@ Content Fragment Model definierar effektivt strukturen för de resulterande inne
    >
    >Du kan också öppna en modell direkt efter att du har [skapat den](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#creating-a-content-fragment-model).
 
-1. Öppna den modell som krävs för **Redigera**. Använd snabbåtgärden eller markera modellen och sedan åtgärden från verktygsfältet.
+1. Öppna den modell som krävs för **Redigera**. Använd någon av snabbredigeringslänkarna eller markera modellen och sedan åtgärden i verktygsfältet.
 
-   När du har öppnat modellredigeraren visas följande:
-
-   * vänster: fält har redan definierats
-   * höger: **Datatyper** som är tillgängliga för att skapa fält (och **egenskaper** som kan användas när fälten har skapats)
-
-   >[!NOTE]
-   >
-   >När ett fält definieras som **Obligatoriskt** markeras **Label** som anges i den vänstra rutan med ett asterix (**&#42;**).
 
    ![Egenskaper](assets/cf-cfmodels-empty-model.png)
 
+   När du har öppnat modellredigeraren visas följande:
+
+   * överkant:
+      * **Hem** - ikon
+      * alternativ för att växla mellan den [ursprungliga](/help/assets/content-fragments/content-fragments-models.md) och den nya redigeraren
+      * **Avbryt**
+      * **Spara**
+
+   * vänster: **Datatyper** tillgängliga för att skapa fält
+
+   * mitten: fält som redan har definierats tillsammans med alternativet **Lägg till**
+
+   * höger: med ikonerna längst till höger kan du välja mellan:
+
+      * **Egenskaper**: definiera och visa egenskaper för det markerade fältet
+      * **Modellinformation**: visa status **Aktiverad**, **Modelltitel**, **Taggar**, **Beskrivning** och **Förhandsgranska URL**
+
 1. **Lägga till ett fält**
 
-   * Dra en obligatorisk datatyp till önskad plats för ett fält:
+   * Antingen:
 
-     ![Dra datatypen för att skapa fältet](assets/cf-cfmodels-create-field.png)
+      * Dra en datatyp från den vänstra panelen till önskad plats för ett fält i den mittersta panelen.
+      * Välj ikonen **+** efter en datatyp för att lägga till den längst ned i fältlistan.
+      * Välj **Lägg till** i den mellersta panelen och sedan den önskade datatypen i den nedrullningsbara listan för att lägga till ett fält längst ned i listan.
 
-   * När ett fält har lagts till i modellen visar den högra panelen de **egenskaper** som kan definieras för den aktuella datatypen. Här definierar du vad som krävs för fältet.
+     >[!NOTE]
+     >
+     >**Flikplatshållarfält** måste alltid visas ovanför befintliga fält.
+
+   * Du kan flytta ett fält med hjälp av punktformaten till vänster i fältrutan:
+
+     ![Flytta fält](assets/cf-cfmodels-move-field-icon.png)
+
+   * När ett fält har lagts till i modellen (och markerats) visar den högra panelen **Egenskaper** som kan definieras för den aktuella datatypen. Här kan du definiera vad som krävs för den specifika
+fält.
 
       * Många egenskaper är självförklarande. Mer information finns i [Egenskaper (datatyper)](#properties).
       * Om du skriver en **fältetikett** slutförs **egenskapsnamnet** automatiskt, om det är tomt, och kan uppdateras manuellt efteråt.
@@ -72,15 +100,17 @@ Content Fragment Model definierar effektivt strukturen för de resulterande inne
 
      ![Fältegenskaper](assets/cf-cfmodels-field-properties.png)
 
+     >[!NOTE]
+     >
+     >När ett fält definieras som **Obligatoriskt** markeras **Label** i den mittersta rutan med en asterix (**&#42;**).
+
 1. **Ta bort ett fält**
 
-   Markera det obligatoriska fältet och välj sedan papperskorgsikonen. Du ombeds bekräfta åtgärden.
+   Välj papperskorgsikonen för det aktuella fältet på den mittersta panelen.
 
    ![Ta bort](assets/cf-cfmodels-remove-icon.png)
 
-1. Lägg till alla obligatoriska fält och definiera de relaterade egenskaperna efter behov. Till exempel:
-
-   ![Spara](assets/cf-cfmodels-save.png)
+1. Lägg till alla obligatoriska fält och definiera de relaterade egenskaperna efter behov.
 
 1. Välj **Spara** om du vill behålla definitionen.
 
@@ -118,6 +148,7 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 
 * **Taggar**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
+
 * **Fragmentreferens**
    * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Datatypen kan konfigureras så att fragmentförfattare kan:
@@ -126,18 +157,16 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
       * Skapa nya instanser av fältet
    * Referensen anger sökvägen till den refererade resursen, till exempel `/content/dam/path/to/resource`
 
-* **Fragmentreferens (UUID)**
-   * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
-   * Datatypen kan konfigureras så att fragmentförfattare kan:
-      * Redigera det refererade fragmentet direkt.
-      * Skapa ett nytt innehållsfragment baserat på lämplig modell
-      * Skapa nya instanser av fältet
-   * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
-      * Du behöver inte känna till UUID. I fragmentredigeraren kan du bläddra till det nödvändiga fragmentet
+     <!--
+    * Internally the reference is held as a universally unique ID (UUID) that references the resource
+    * You do not need to know the UUID; in the fragment editor you can browse to the required fragment.
+    -->
 
+  <!--
   >[!NOTE]
   >
-  >UUID:n är databasspecifika. Om du använder [innehållskopieringsverktyget](/help/implementing/developing/tools/content-copy.md) för att kopiera innehållsfragment beräknas UUID:n om i målmiljön.
+  >The UUIDs are repository specific. If you use the [Content Copy Tool](/help/implementing/developing/tools/content-copy.md) to copy Content Fragments, the UUIDs will be recalculated in the target environment.
+  -->
 
 * **Innehållsreferens**
    * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
@@ -145,16 +174,16 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
    * Referensen anger sökvägen till den refererade resursen, till exempel `/content/dam/path/to/resource`
 
-* **Innehållsreferens (UUID)**
-   * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
-   * Om en bild refereras kan du välja att visa en miniatyrbild
-   * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
-   * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
-      * Du behöver inte känna till UUID. I fragmentredigeraren kan du bläddra till den resurs som krävs
+     <!--
+    * Internally the reference is held as a universally unique ID (UUID) that references the resource
+    * You do not need to know the UUID; in the fragment editor you can browse to the required asset resource
+    -->
 
+  <!--
   >[!NOTE]
   >
-  >UUID:n är databasspecifika. Om du använder [innehållskopieringsverktyget](/help/implementing/developing/tools/content-copy.md) för att kopiera innehållsfragment beräknas UUID:n om i målmiljön.
+  >The UUIDs are repository specific. If you use the [Content Copy Tool](/help/implementing/developing/tools/content-copy.md) to copy Content Fragments, the UUIDs will be recalculated in the target environment.
+  -->
 
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
@@ -170,6 +199,8 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
      >[!NOTE]
      >
      >Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schemat.
+     >
+     >**Flikplatshållarfält** måste alltid visas ovanför befintliga fält.
 
 ## Egenskaper (datatyper) {#properties}
 
@@ -258,16 +289,12 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 
 * [Innehållsreferens](#content-reference)
    * Ger en enkel referens till annat innehåll, av alla typer.
-   * Tillhandahålls av datatyperna:
-      * **Innehållsreferens** - sökvägsbaserad
-      * **Innehållsreferens (UUID)** - UUID-baserad
+   * Tillhandahålls av datatypen **Content Reference**
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
 * [Fragmentreferens](#fragment-reference-nested-fragments) (kapslade fragment)
    * Refererar till andra fragment, beroende på vilka specifika modeller som anges.
-   * Tillhandahålls av datatyperna:
-      * **Fragmentreferens** - sökvägsbaserad
-      * **Fragmentreferens (UUID)** - UUID-baserad
+   * Tillhandahålls av datatypen **Fragmentreferens**
    * Gör att du kan ta med/hämta strukturerade data.
 
      >[!NOTE]
@@ -275,19 +302,21 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
      >Den här metoden är särskilt intressant när du använder [Headless Content Delivery med hjälp av Content Fragments med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
+<!--
 >[!NOTE]
 >
->Se [Uppgradera dina innehållsfragment för UUID-referenser](/help/headless/graphql-api/uuid-reference-upgrade.md) för mer information om Content/Fragment Reference och Content/Fragment Reference (UUID) och uppgradera till UUID-baserade datatyper.
+>See [Upgrade your Content Fragments for UUID References](/help/headless/graphql-api/uuid-reference-upgrade.md) for further information about Content/Fragment Reference and Content/Fragment Reference (UUID), and upgrading to the UUID-based data types.
+-->
 
 >[!NOTE]
 >
 >AEM har upprepningsskydd för:
 >
 >* Innehållsreferenser
->Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
+>  >  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >* Fragmentreferenser i GraphQL
->Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+>  >  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 >[!CAUTION]
 >
@@ -297,7 +326,7 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 
 ### Innehållsreferens {#content-reference}
 
-Med datatyperna **Innehållsreferens** och **Innehållsreferens (UUID)** kan du återge innehåll från en annan källa, till exempel bild, sida eller Experience Fragment.
+Datatypen **Innehållsreferens** gör att du kan återge innehåll från en annan källa, till exempel bild, sida eller Experience Fragment.
 
 Förutom standardegenskaper kan du ange:
 
@@ -324,7 +353,7 @@ Förutom standardegenskaper kan du ange:
 
 ### Fragmentreferens (kapslade fragment) {#fragment-reference-nested-fragments}
 
-Datatyperna **Fragmentreferens** och **Fragmentreferens (UUID)** kan referera till ett eller flera innehållsfragment. Den här funktionen är av särskilt intresse när du hämtar innehåll som ska användas i din app, eftersom du kan hämta strukturerade data med flera lager.
+Datatypen **Fragmentreferens** kan referera till ett eller flera innehållsfragment. Den här funktionen är av särskilt intresse när du hämtar innehåll som ska användas i din app, eftersom du kan hämta strukturerade data med flera lager.
 
 Till exempel:
 

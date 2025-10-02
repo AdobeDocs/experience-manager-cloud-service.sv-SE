@@ -5,10 +5,10 @@ exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
 role: User, Admin, Architect
 solution: Experience Manager Sites
-source-git-commit: 00b4fa64a2f5d7ddf7ea7af7350374a1f1bcb768
+source-git-commit: 8c9c51c349317250ddf7ef07e1b545860fd18351
 workflow-type: tm+mt
-source-wordcount: '3175'
-ht-degree: 2%
+source-wordcount: '3588'
+ht-degree: 1%
 
 ---
 
@@ -28,6 +28,14 @@ Så här använder du modeller för innehållsfragment:
 >Innehållsfragment är en webbplatsfunktion, men lagras som **Assets**.
 >
 >Innehållsfragment och modeller för innehållsfragment hanteras nu primärt med konsolen **[Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console)** , även om innehållsfragment fortfarande kan hanteras från konsolen **Assets** och modeller för innehållsfragment från konsolen **Verktyg** . I det här avsnittet beskrivs hantering från konsolerna **Assets** och **Verktyg** .
+
+>[!NOTE]
+>
+>Om en modell skapades med den [nya modellredigeraren](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) bör du alltid använda den redigeraren för modellen.
+>
+>Om du sedan öppnar modellen med den här (ursprungliga) modellredigeraren visas meddelandet:
+>
+>* &quot;Den här modellen har ett anpassat gränssnittsschema konfigurerat. Fältordningen som visas i det här användargränssnittet kanske inte matchar användargränssnittets schema. Om du vill visa de fält som är justerade mot gränssnittets schema måste du växla till den nya redigeraren för innehållsfragment.&quot;
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
@@ -67,6 +75,7 @@ Modellen för innehållsfragment definierar effektivt strukturen för de resulte
 
    * vänster: fält har redan definierats
    * höger: **Datatyper** som är tillgängliga för att skapa fält (och **egenskaper** som kan användas när fälten har skapats)
+   * top: ett alternativ för att prova den [nya redigeraren](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
 
    >[!NOTE]
    >
@@ -142,17 +151,43 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
 * **Taggar**
    * Tillåter fragmentförfattare att komma åt och markera taggområden
 
+* **Fragmentreferens**
+   * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Datatypen kan konfigureras så att fragmentförfattare kan:
+      * Redigera det refererade fragmentet direkt.
+      * Skapa ett nytt innehållsfragment baserat på lämplig modell
+      * Skapa nya instanser av fältet
+   * Referensen anger sökvägen till den refererade resursen, till exempel `/content/dam/path/to/resource`
+
+* **Fragmentreferens (UUID)**
+   * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Datatypen kan konfigureras så att fragmentförfattare kan:
+      * Redigera det refererade fragmentet direkt.
+      * Skapa ett nytt innehållsfragment baserat på lämplig modell
+      * Skapa nya instanser av fältet
+   * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
+      * Du behöver inte känna till UUID. I fragmentredigeraren kan du bläddra till det nödvändiga fragmentet
+
+  >[!NOTE]
+  >
+  >UUID:n är databasspecifika. Om du använder [innehållskopieringsverktyget](/help/implementing/developing/tools/content-copy.md) för att kopiera innehållsfragment beräknas UUID:n om i målmiljön.
+
 * **Innehållsreferens**
    * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
    * Om en bild refereras kan du välja att visa en miniatyrbild
    * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
+   * Referensen anger sökvägen till den refererade resursen, till exempel `/content/dam/path/to/resource`
 
-* **Fragmentreferens**
-   * Refererar till andra innehållsfragment; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
-   * Fältet kan konfigureras så att fragmentförfattare kan:
-      * Redigera det refererade fragmentet direkt
-      * Skapa ett nytt innehållsfragment baserat på lämplig modell
-      * Skapa nya instanser av fältet
+* **Innehållsreferens (UUID)**
+   * Refererar till annat innehåll, oavsett typ; kan användas för att [skapa kapslat innehåll](#using-references-to-form-nested-content)
+   * Om en bild refereras kan du välja att visa en miniatyrbild
+   * Fältet kan konfigureras så att fragmentförfattare kan skapa nya instanser av fältet
+   * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
+      * Du behöver inte känna till UUID. I fragmentredigeraren kan du bläddra till den resurs som krävs
+
+  >[!NOTE]
+  >
+  >UUID:n är databasspecifika. Om du använder [innehållskopieringsverktyget](/help/implementing/developing/tools/content-copy.md) för att kopiera innehållsfragment beräknas UUID:n om i målmiljön.
 
 * **JSON-objekt**
    * Gör att innehållsfragmentets författare kan ange JSON-syntax i motsvarande element i ett fragment.
@@ -260,32 +295,43 @@ Olika datatyper kan nu definiera valideringskrav för när innehåll anges i det
 
 Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper:
 
-* **[Innehållsreferens](#content-reference)**
+* [Innehållsreferens](#content-reference)
    * Ger en enkel referens till annat innehåll, av alla typer.
+   * Tillhandahålls av datatyperna:
+      * **Innehållsreferens** - sökvägsbaserad
+      * **Innehållsreferens (UUID)** - UUID-baserad
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
 
-* **[Fragmentreferens](#fragment-reference-nested-fragments)** (kapslade fragment)
+* [Fragmentreferens](#fragment-reference-nested-fragments) (kapslade fragment)
    * Refererar till andra fragment, beroende på vilka specifika modeller som anges.
+   * Tillhandahålls av datatyperna:
+      * **Fragmentreferens** - sökvägsbaserad
+      * **Fragmentreferens (UUID)** - UUID-baserad
    * Gör att du kan ta med/hämta strukturerade data.
 
      >[!NOTE]
      >
-     >Den här metoden är av särskilt intresse i samband med [leverans av Headless-innehåll med hjälp av innehållsfragment med GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+     >Den här metoden är särskilt intressant när du använder [Headless Content Delivery med hjälp av Content Fragments med GraphQL](/help/sites-cloud/administering/content-fragments/content-delivery-with-graphql.md).
+
    * Kan konfigureras för en eller flera referenser (i det resulterande fragmentet).
+
+>[!NOTE]
+>
+>Se [Uppgradera dina innehållsfragment för UUID-referenser](/help/headless/graphql-api/uuid-reference-upgrade.md) för mer information om Content/Fragment Reference och Content/Fragment Reference (UUID) och uppgradera till UUID-baserade datatyper.
 
 >[!NOTE]
 >
 >AEM har ett upprepningsskydd för:
 >
 >* Innehållsreferenser
->Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>  >  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >* Fragmentreferenser i GraphQL
->Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+>  >  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 ### Innehållsreferens {#content-reference}
 
-Med Innehållsreferens kan du återge innehåll från en annan källa, till exempel bild- eller innehållsfragment.
+Med datatyperna **Innehållsreferens** och **Innehållsreferens (UUID)** kan du återge innehåll från en annan källa, till exempel bild, sida eller Experience Fragment.
 
 Förutom standardegenskaper kan du ange:
 
@@ -300,7 +346,7 @@ Förutom standardegenskaper kan du ange:
 
 ### Fragmentreferens (kapslade fragment) {#fragment-reference-nested-fragments}
 
-Fragmentreferensen refererar till ett eller flera innehållsfragment. Den här funktionen är särskilt intressant när du hämtar innehåll som ska användas i programmet, eftersom du kan hämta strukturerade data med flera lager.
+Datatyperna **Fragmentreferens** och **Fragmentreferens (UUID)** kan referera till ett eller flera innehållsfragment. Den här funktionen är av särskilt intresse när du hämtar innehåll som ska användas i din app, eftersom du kan hämta strukturerade data med flera lager.
 
 Till exempel:
 
