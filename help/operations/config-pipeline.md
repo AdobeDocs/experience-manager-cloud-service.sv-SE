@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: 1d29700d8cbb9cd439ec909687c34db06a8090e4
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1355'
 ht-degree: 0%
 
 ---
@@ -19,44 +19,44 @@ Lär dig hur du kan använda konfigurationspipelines för att distribuera olika 
 
 En Cloud Manager-konfigurationspipeline distribuerar konfigurationsfiler (skapade i YAML-format) till en målmiljö. Ett antal funktioner i AEM as a Cloud Service kan konfigureras på det här sättet, inklusive loggvidarebefordran, rensningsrelaterade underhållsåtgärder och flera CDN-funktioner.
 
-Konfigurationspipelines kan distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer. Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline).
+För **Publicera leveransprojekt** -projekt kan konfigurationspipelines distribueras via Cloud Manager till olika typer av dev-, stage- och produktionsmiljöer. Konfigurationsfilerna kan distribueras till Rapid Development Environment (RDE) med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline).
+
+Konfigurationspipelines kan också distribueras via Cloud Manager för **Edge Delivery** -projekt.
 
 I följande avsnitt i det här dokumentet ges en översikt över viktig information om hur du kan använda konfigureringspipelines och hur konfigurationer för dem ska struktureras. Här beskrivs allmänna koncept som delas av alla eller en delmängd av de funktioner som stöds av konfigurationspipelines.
 
 * [Konfigurationer som stöds](#configurations) - En lista över konfigurationer som kan distribueras med konfigurationspipelines
-* [Skapar och hanterar konfigurationsförgreningar](#creating-and-managing) - Så här skapar du en konfigurationsförlopp.
+* [Skapa och hantera konfigurationsförgreningar](#creating-and-managing) - Så här skapar du en konfigurationsförlopp
 * [Vanlig syntax](#common-syntax) - Syntax delad mellan konfigurationer
 * [Mappstruktur](#folder-structure) - Beskriver de strukturkonfigurationströrningar som förväntas för konfigurationerna
 * [Hemliga miljövariabler](#secret-env-vars) - Exempel på hur du använder miljövariabler för att inte avslöja hemligheter i dina konfigurationer
+* [Hemliga pipeline-variabler](#secret-pipeline-vars) - Exempel på hur du använder miljövariabler för att inte avslöja hemligheter i dina konfigurationer före Edge Delivery Services-projekt
 
 ## Konfigurationer som stöds {#configurations}
 
 I följande tabell finns en omfattande lista över sådana konfigurationer med länkar till dedikerad dokumentation som beskriver dess distinkta konfigurationssyntax och annan information.
 
-| Typ | YAML `kind`-värde | Beskrivning |
-|---|---|---|
-| [Trafikfilterregler, inklusive WAF](/help/security/traffic-filter-rules-including-waf.md) | `CDN` | Deklarera regler för att blockera skadlig trafik |
-| [Begär omformningar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations) | `CDN` | Deklarera regler för att omforma formen på trafikförfrågan |
-| [Svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations) | `CDN` | Deklarera regler för att omforma formen på svaret för en given begäran |
-| [Omdirigeringar på serversidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors) | `CDN` | Deklarera 301/302-liknande serversidesomdirigeringar |
-| [Väljare för ursprung](/help/implementing/dispatcher/cdn-configuring-traffic.md#origin-selectors) | `CDN` | Deklarera regler för att dirigera trafik till olika backend-system, inklusive program från andra företag än Adobe |
-| [CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md) | `CDN` | Åsidosätt standardfelsidan om det inte går att nå AEM-originalet och referera till platsen för statiskt innehåll som lagras automatiskt i konfigurationsfilen |
-| [CDN-rensning](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) | `CDN` | Deklarera de rensnings-API-nycklar som används för att rensa CDN |
-| [Kundhanterad CDN HTTP-token](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#CDN-HTTP-value) | `CDN` | Deklarera värdet på den X-AEM-Edge-nyckel som behövs för att anropa Adobe CDN från en kundens CDN |
-| [Grundläggande autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#basic-auth) | `CDN` | Deklarera användarnamn och lösenord för en grundläggande autentiseringsdialogruta som skyddar vissa URL:er. |
-| [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM-databasen genom att deklarera regler för när innehållsversioner ska rensas |
-| [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att ange regler för när loggarna ska rensas |
-| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, Datadog, HTTPS, Elasticsearch, Splunk |
-| [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Detta krävs för användning av OpenAPI-baserade API:er som kräver autentisering |
+| Typ | YAML `kind`-värde | Beskrivning | Publicera leverans | Edge Delivery |
+|---|---|---|---|---|
+| [Trafikfilterregler, inklusive WAF](/help/security/traffic-filter-rules-including-waf.md) | `CDN` | Deklarera regler för att blockera skadlig trafik | X | X |
+| [Begär omformningar](/help/implementing/dispatcher/cdn-configuring-traffic.md#request-transformations) | `CDN` | Deklarera regler för att omforma formen på trafikförfrågan | X | X |
+| [Svarsomvandlingar](/help/implementing/dispatcher/cdn-configuring-traffic.md#response-transformations) | `CDN` | Deklarera regler för att omforma formen på svaret för en given begäran | X | X |
+| [Omdirigeringar på serversidan](/help/implementing/dispatcher/cdn-configuring-traffic.md#server-side-redirectors) | `CDN` | Deklarera 301/302-liknande serversidesomdirigeringar | X | X |
+| [Väljare för ursprung](/help/implementing/dispatcher/cdn-configuring-traffic.md#origin-selectors) | `CDN` | Deklarera regler för att dirigera trafik till olika backend-system, inklusive program från andra företag än Adobe | X | X |
+| [CDN-felsidor](/help/implementing/dispatcher/cdn-error-pages.md) | `CDN` | Åsidosätt standardfelsidan om det inte går att nå AEM-originalet och referera till platsen för statiskt innehåll som lagras automatiskt i konfigurationsfilen | X |  |
+| [CDN-rensning](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) | `CDN` | Deklarera de rensnings-API-nycklar som används för att rensa CDN | X |  |
+| [Kundhanterad CDN HTTP-token](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#CDN-HTTP-value) | `CDN` | Deklarera värdet på den X-AEM-Edge-nyckel som behövs för att anropa Adobe CDN från en kundens CDN | X |  |
+| [Grundläggande autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#basic-auth) | `CDN` | Deklarera användarnamn och lösenord för en grundläggande autentiseringsdialogruta som skyddar vissa URL:er. | X | X |
+| [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM-databasen genom att deklarera regler för när innehållsversioner ska rensas | X |  |
+| [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att ange regler för när loggarna ska rensas | X |  |
+| [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, Datadog, HTTPS, Elasticsearch, Splunk | X | X |
+| [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Detta krävs för användning av OpenAPI-baserade API:er som kräver autentisering | X |  |
 
 ## Skapa och hantera konfigurationsförlopp {#creating-and-managing}
 
-Mer information om hur du skapar och konfigurerar pipelines finns i [CI/CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline).
+Mer information om hur du skapar och konfigurerar **konfigurationspipelines för publiceringsleverans** finns i [CI/CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). När du skapar en konfigurationspipeline i Cloud Manager måste du välja en **riktad distribution** i stället för **fullständig stackkod** när du konfigurerar pipeline. Som tidigare nämnts distribueras konfigurationen för RDE med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline) i stället för en pipeline.
 
-När du skapar en konfigurationspipeline i Cloud Manager måste du välja en **riktad distribution** i stället för **fullständig stackkod** när du konfigurerar pipeline.
-
-Som tidigare nämnts distribueras konfigurationen för RDE med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline) i stället för en pipeline.
-
+Mer information om hur du skapar och konfigurerar **Edge Delivery**-konfigurationspipelines finns i artikeln [Lägg till en Edge Delivery-pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md) .
 
 ## Vanlig syntax {#common-syntax}
 
@@ -73,7 +73,7 @@ Varje konfigurationsfil börjar med egenskaper som liknar följande exempelkodfr
 |---|---|---|
 | `kind` | En sträng som avgör vilken typ av konfiguration, till exempel vidarebefordran av loggfiler, trafikfilterregler eller begäranomvandlingar | Obligatoriskt, ingen standard |
 | `version` | En sträng som representerar schemaversionen | Obligatoriskt, ingen standard |
-| `envTypes` | Den här strängmatrisen är en underordnad egenskap för noden `metadata`. Möjliga värden är dev, stage, prod eller valfri kombination och avgör för vilka miljötyper konfigurationen ska bearbetas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. | Alla miljötyper (dev, stage, prod) |
+| `envTypes` | Den här strängmatrisen är en underordnad egenskap för noden `metadata`. För **Publicera leverans** är möjliga värden dev, stage, prod eller valfri kombination, och den avgör för vilka miljötyper konfigurationen kommer att bearbetas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. För **Edge Delivery** bör endast värdet `prod` användas | Alla miljötyper, dvs. (dev, stage, prod) för Publish Delivery eller bara prod för Edge Delivery |
 
 Du kan använda verktyget `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
 
@@ -121,7 +121,7 @@ Använd den här strukturen när samma konfiguration räcker för alla miljöer 
      envTypes: ["dev", "stage", "prod"]
 ```
 
-Om du använder miljövariabler av hemlig typ kan [hemliga egenskaper](#secret-env-vars) variera per miljö, vilket visas i referensen `${{SPLUNK_TOKEN}}`
+Med hjälp av miljövariabler av hemlig typ (eller pipeline-variabler) kan [hemliga egenskaper](#secret-env-vars) variera per miljö, vilket visas i referensen `${{SPLUNK_TOKEN}}`
 
 ```yaml
 kind: "LogForwarding"
@@ -176,9 +176,44 @@ Filstrukturen ser ut ungefär så här:
 
 En variant av detta tillvägagångssätt är att ha en separat gren per miljö.
 
+### Edge Delivery Services {#yamls-for-eds}
+
+Edge Delivery config-pipelines har inte separata miljöer för utveckling, staging och produktion. Till skillnad från publiceringsleveransmiljöer, där förändringar sker via utvecklings-, scen- och produktnivåer, tillämpas konfigurationen som distribueras via en Edge Delivery-konfigurationspipeline direkt på alla domänmappningar som är registrerade i Cloud Manager med en Edge Delivery-plats.
+
+Distribuera en enkel filstruktur som:
+
+```text
+/config
+  cdn.yaml
+  logForwarding.yaml
+```
+
+Om en regel måste skilja sig åt mellan olika Edge Delivery-platser kan du använda syntaxen *when* för att skilja reglerna från varandra. Observera till exempel att domänen matchar dev.example.com i kodutdraget nedan, som kan särskiljas från domänen www.example.com.
+
+```
+kind: "CDN"
+version: "1"
+data:
+  trafficFilters:
+    rules:
+    # Block simple path
+    - name: block-path
+      when:
+        allOf:
+          - reqProperty: domain
+            equals: "dev.example.com"
+          - reqProperty: path
+            equals: '/block/me'
+      action: block
+```
+
+Om du inkluderar metadatafältet *envTypes* bör bara värdet **prod** användas (det går också bra att utelämna metadatafältet envTypes). Endast värdet *publish* ska användas för **tier** reqProperty.
+
 ## Hemliga miljövariabler {#secret-env-vars}
 
 Så att känslig information inte behöver lagras i källkontrollen stöder konfigurationsfiler Cloud Manager-miljövariabler av typen **secrets**. För vissa konfigurationer, inklusive vidarebefordran av loggar, är hemliga miljövariabler obligatoriska för vissa egenskaper.
+
+Observera att hemliga miljövariabler används för publiceringsleveransprojekt. Se avsnittet Hemliga rörvariabler för Edge Delivery Services-projekt.
 
 Utdraget nedan är ett exempel på hur den hemliga miljövariabeln `${{SPLUNK_TOKEN}}` används i konfigurationen.
 
@@ -197,3 +232,12 @@ data:
 ```
 
 Mer information om hur du använder miljövariabler finns i dokumentet [Cloud Manager-miljövariabler](/help/implementing/cloud-manager/environment-variables.md).
+
+## Variabler för hemliga rörledningar {#secret-pipeline-vars}
+
+Använd Cloud Manager pipeline-variabler av typen **secrets** för Edge Delivery Services Projects så att känslig information inte behöver lagras i källkontrollen. *Använd*-valrutan bör använda alternativet **distribuera**.
+
+Syntaxen är identisk med fragmentet som visades i föregående avsnitt.
+
+Dokumentet [Förloppsvariabler i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) innehåller information om hur du använder pipelinevariabler.
+
