@@ -1,17 +1,17 @@
 ---
-title: Använda konfigurationsförlopp
+title: Använd konfigurationsförlopp
 description: Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer i AEM as a Cloud Service, till exempel inställningar för vidarebefordran av loggfiler, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 1d29700d8cbb9cd439ec909687c34db06a8090e4
+source-git-commit: b0357c9fcc19d29c3d685e6b14369a6fcc6832e1
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
 
-# Använda konfigurationsförlopp {#config-pipelines}
+# Använda config pipelines {#config-pipelines}
 
 Lär dig hur du kan använda konfigurationspipelines för att distribuera olika konfigurationer i AEM as a Cloud Service, till exempel inställningar för vidarebefordran av loggfiler, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer.
 
@@ -25,12 +25,12 @@ Konfigurationspipelines kan också distribueras via Cloud Manager för **Edge De
 
 I följande avsnitt i det här dokumentet ges en översikt över viktig information om hur du kan använda konfigureringspipelines och hur konfigurationer för dem ska struktureras. Här beskrivs allmänna koncept som delas av alla eller en delmängd av de funktioner som stöds av konfigurationspipelines.
 
-* [Konfigurationer som stöds](#configurations) - En lista över konfigurationer som kan distribueras med konfigurationspipelines
-* [Skapa och hantera konfigurationsförgreningar](#creating-and-managing) - Så här skapar du en konfigurationsförlopp
-* [Vanlig syntax](#common-syntax) - Syntax delad mellan konfigurationer
-* [Mappstruktur](#folder-structure) - Beskriver de strukturkonfigurationströrningar som förväntas för konfigurationerna
-* [Hemliga miljövariabler](#secret-env-vars) - Exempel på hur du använder miljövariabler för att inte avslöja hemligheter i dina konfigurationer
-* [Hemliga pipeline-variabler](#secret-pipeline-vars) - Exempel på hur du använder miljövariabler för att inte avslöja hemligheter i dina konfigurationer före Edge Delivery Services-projekt
+* [Konfigurationer som stöds](#configurations) - En lista över konfigurationer som kan distribueras med konfigurationspipelines.
+* [Skapa och hantera konfigurationspipelines](#creating-and-managing) - Så här skapar du en konfigurationspipeline
+* [Vanlig syntax](#common-syntax) - Syntax delad mellan konfigurationer.
+* [Mappstruktur](#folder-structure) - Beskriver de strukturkonfigurationströrningar som förväntas för konfigurationerna.
+* [Hemliga miljövariabler](#secret-env-vars) - Exempel på hur du använder miljövariabler för att inte avslöja hemligheter i dina konfigurationer.
+* [Hemliga pipeline-variabler](#secret-pipeline-vars) - Exempel på hur du använder miljövariabler för att inte avslöja hemligheter i dina konfigurationer före Edge Delivery Services-projekt.
 
 ## Konfigurationer som stöds {#configurations}
 
@@ -50,9 +50,9 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 | [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM-databasen genom att deklarera regler för när innehållsversioner ska rensas | X |  |
 | [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att ange regler för när loggarna ska rensas | X |  |
 | [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, Datadog, HTTPS, Elasticsearch, Splunk | X | X |
-| [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Detta krävs för användning av OpenAPI-baserade API:er som kräver autentisering | X |  |
+| [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Krävs för användning av OpenAPI-baserade API:er som kräver autentisering | X |  |
 
-## Skapa och hantera konfigurationsförlopp {#creating-and-managing}
+## Skapa och hantera konfigureringspipelines {#creating-and-managing}
 
 Mer information om hur du skapar och konfigurerar **konfigurationspipelines för publiceringsleverans** finns i [CI/CD-pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#config-deployment-pipeline). När du skapar en konfigurationspipeline i Cloud Manager måste du välja en **riktad distribution** i stället för **fullständig stackkod** när du konfigurerar pipeline. Som tidigare nämnts distribueras konfigurationen för RDE med [kommandoradsverktyg](/help/implementing/developing/introduction/rapid-development-environments.md#deploy-config-pipeline) i stället för en pipeline.
 
@@ -73,7 +73,7 @@ Varje konfigurationsfil börjar med egenskaper som liknar följande exempelkodfr
 |---|---|---|
 | `kind` | En sträng som avgör vilken typ av konfiguration, till exempel vidarebefordran av loggfiler, trafikfilterregler eller begäranomvandlingar | Obligatoriskt, ingen standard |
 | `version` | En sträng som representerar schemaversionen | Obligatoriskt, ingen standard |
-| `envTypes` | Den här strängmatrisen är en underordnad egenskap för noden `metadata`. För **Publicera leverans** är möjliga värden dev, stage, prod eller valfri kombination, och den avgör för vilka miljötyper konfigurationen kommer att bearbetas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. För **Edge Delivery** bör endast värdet `prod` användas | Alla miljötyper, dvs. (dev, stage, prod) för Publish Delivery eller bara prod för Edge Delivery |
+| `envTypes` | Den här strängmatrisen är en underordnad egenskap för noden `metadata`. För **Publicera leverans** är möjliga värden dev, stage, prod eller valfri kombination, och avgör för vilka miljötyper konfigurationen bearbetas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. För **Edge Delivery** ska endast värdet `prod` användas. | Alla miljötyper, dvs. (dev, stage, prod) för Publish Delivery eller bara för Edge Delivery. |
 
 Du kan använda verktyget `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
 
@@ -96,7 +96,7 @@ eller
     cdn.yaml
 ```
 
-Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde &#x200B;](#configurations).
+Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde ](#configurations).
 
 Konfigurationer distribueras vanligtvis till alla miljöer. Om alla egenskapsvärden är identiska för varje miljö räcker det med en YAML-fil. Det är dock vanligt att egenskapsvärden skiljer sig åt mellan olika miljöer, till exempel när en lägre miljö testas.
 
@@ -104,7 +104,7 @@ I följande avsnitt visas några strategier för hur du strukturerar filer.
 
 ### En enda konfigurationsfil för alla miljöer {#single-file}
 
-Filstrukturen ser ut ungefär så här:
+Filstrukturen liknar följande:
 
 ```text
 /config
@@ -121,7 +121,7 @@ Använd den här strukturen när samma konfiguration räcker för alla miljöer 
      envTypes: ["dev", "stage", "prod"]
 ```
 
-Med hjälp av miljövariabler av hemlig typ (eller pipeline-variabler) kan [hemliga egenskaper](#secret-env-vars) variera per miljö, vilket visas i referensen `${{SPLUNK_TOKEN}}`
+Med hjälp av miljövariabler av hemlig typ (eller pipeline-variabler) kan [hemliga egenskaper](#secret-env-vars) variera per miljö, vilket visas i följande `${{SPLUNK_TOKEN}}`-referens.
 
 ```yaml
 kind: "LogForwarding"
@@ -139,7 +139,7 @@ data:
 
 ### En separat fil per miljötyp {#file-per-env}
 
-Filstrukturen ser ut ungefär så här:
+Filstrukturen liknar följande:
 
 ```text
 /config
@@ -151,8 +151,7 @@ Filstrukturen ser ut ungefär så här:
   logForwarding-prod.yaml
 ```
 
-Använd den här strukturen när det kan finnas skillnader i egenskapsvärden. I filerna förväntar man sig att arrayvärdet `envTypes` motsvarar suffixet, till exempel
-`cdn-dev.yaml` och `logForwarding-dev.yaml` med värdet `["dev"]`, `cdn-stage.yaml` och `logForwarding-stage.yaml` med värdet `["stage"]` och så vidare.
+Använd den här strukturen när det kan finnas skillnader i egenskapsvärden. I filerna förväntar man sig att arrayvärdet `envTypes` motsvarar suffixet. Till exempel `cdn-dev.yaml` och `logForwarding-dev.yaml` med värdet `["dev"]`, `cdn-stage.yaml` och `logForwarding-stage.yaml` med värdet `["stage"]` och så vidare.
 
 ### En mapp per miljö {#folder-per-env}
 
@@ -160,7 +159,7 @@ I den här strategin finns det en separat `config`-mapp per miljö med en separa
 
 Detta är särskilt användbart om du har flera utvecklingsmiljöer där varje miljö har unika egenskapsvärden.
 
-Filstrukturen ser ut ungefär så här:
+Filstrukturen liknar följande:
 
 ```text
 /config/dev1
@@ -178,7 +177,8 @@ En variant av detta tillvägagångssätt är att ha en separat gren per miljö.
 
 ### Edge Delivery Services {#yamls-for-eds}
 
-Edge Delivery config-pipelines har inte separata miljöer för utveckling, staging och produktion. Till skillnad från publiceringsleveransmiljöer, där förändringar sker via utvecklings-, scen- och produktnivåer, tillämpas konfigurationen som distribueras via en Edge Delivery-konfigurationspipeline direkt på alla domänmappningar som är registrerade i Cloud Manager med en Edge Delivery-plats.
+Edge Delivery config-pipelines har inte separata miljöer för utveckling, staging och produktion. I Publicera leverans-miljöer ändrar du förloppet genom nivåerna dev, stage och prod. En Edge Delivery-konfigurationspipeline tillämpar däremot konfigurationen direkt på alla domänmappningar som är registrerade i Cloud Manager för en Edge Delivery-plats.
+
 
 Distribuera en enkel filstruktur som:
 
@@ -188,7 +188,7 @@ Distribuera en enkel filstruktur som:
   logForwarding.yaml
 ```
 
-Om en regel måste skilja sig åt mellan olika Edge Delivery-platser kan du använda syntaxen *when* för att skilja reglerna från varandra. Observera till exempel att domänen matchar dev.example.com i kodutdraget nedan, som kan särskiljas från domänen www.example.com.
+Om en regel måste skilja sig åt mellan olika Edge Delivery-webbplatser kan du använda syntaxen *when* för att skilja reglerna från varandra. Observera till exempel att domänen matchar dev.example.com i kodutdraget nedan, som kan särskiljas från domänen www.example.com.
 
 ```
 kind: "CDN"
@@ -215,7 +215,7 @@ Så att känslig information inte behöver lagras i källkontrollen stöder konf
 
 Observera att hemliga miljövariabler används för publiceringsleveransprojekt. Se avsnittet Hemliga rörvariabler för Edge Delivery Services-projekt.
 
-Utdraget nedan är ett exempel på hur den hemliga miljövariabeln `${{SPLUNK_TOKEN}}` används i konfigurationen.
+Följande kodutdrag är ett exempel på hur den hemliga miljövariabeln `${{SPLUNK_TOKEN}}` används i konfigurationen.
 
 ```
 kind: "LogForwarding"
@@ -231,13 +231,12 @@ data:
       index: "AEMaaCS"
 ```
 
-Mer information om hur du använder miljövariabler finns i dokumentet [Cloud Manager-miljövariabler](/help/implementing/cloud-manager/environment-variables.md).
+Mer information om hur du använder miljövariabler finns i [Cloud Manager miljövariabler](/help/implementing/cloud-manager/environment-variables.md).
 
-## Variabler för hemliga rörledningar {#secret-pipeline-vars}
+## Hemliga pipeline-variabler {#secret-pipeline-vars}
 
 Använd Cloud Manager pipeline-variabler av typen **secrets** för Edge Delivery Services Projects så att känslig information inte behöver lagras i källkontrollen. *Använd*-valrutan bör använda alternativet **distribuera**.
 
 Syntaxen är identisk med fragmentet som visades i föregående avsnitt.
 
-Dokumentet [Förloppsvariabler i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md) innehåller information om hur du använder pipelinevariabler.
-
+Mer information om hur du använder pipeline-variabler finns i [Förloppsvariabler i Cloud Manager](/help/implementing/cloud-manager/configuring-pipelines/pipeline-variables.md).

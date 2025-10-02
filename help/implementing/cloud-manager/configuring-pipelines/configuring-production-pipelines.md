@@ -6,9 +6,9 @@ exl-id: 67edca16-159e-469f-815e-d55cf9063aa4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 9cde6e63ec452161dbeb1e1bfb10c75f89e2692c
+source-git-commit: ac918008c3f99d74e01be59c9841083abf3604aa
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1398'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,13 @@ När du har konfigurerat programmet och har minst en miljö med användargränss
 
 >[!TIP]
 >
->Innan du konfigurerar en pipeline för framtagning bör du läsa [AEM Quick Site Creation Journey](/help/journey-sites/quick-site/overview.md) för att få en heltäckande guide med hjälp av det lättanvända AEM Quick Site Creation-verktyget. Den här resan kan hjälpa er att effektivisera utvecklingen av AEM sajt, så att ni snabbt kan anpassa sajten utan någon AEM kunskap om bakomliggande behov.
+>Innan du konfigurerar en pipeline för framtagning bör du läsa [AEM Quick Site Creation Journey](/help/journey-sites/quick-site/overview.md) för att få en heltäckande guide med det lättanvända verktyget AEM Quick Site Creation. Den här resan kan hjälpa er att effektivisera framtidens utveckling av er AEM-webbplats, så att ni snabbt kan anpassa er webbplats utan kunskaper om AEM bakomliggande system.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation
+1. Logga in på Cloud Manager på [experience.adobe.com](https://experience.adobe.com).
+1. Klicka på **Experience Manager** i avsnittet **Snabbåtkomst**.
+1. Klicka på **Cloud Manager** på den vänstra panelen.
+1. Välj en organisation som du vill ha.
+1. Klicka på ett program på konsolen **Mina program**.
 
 1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
 
@@ -76,7 +80,7 @@ Stegen för att slutföra skapandet av produktionsflödet varierar beroende på 
 
 ### Konfigurera en fullständig stackkodspipeline {#full-stack-code}
 
-En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfiguration.
+En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och framände som innehåller en eller flera AEM-serverprogram tillsammans med HTTPD/Dispatcher-konfiguration.
 
 >[!NOTE]
 >
@@ -106,23 +110,24 @@ Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automati
 
 1. Ange sökvägar som ska inkluderas i Experience Audit.
 
-   * Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-dashboard.md#configuration).
+   * Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/reports/report-experience-audit.md#configuration).
 
 1. Klicka på **Spara** för att spara din pipeline.
 
-När pipeline körs skickas och utvärderas sökvägar som konfigurerats för Experience Audit baserat på prestanda, tillgänglighet, SEO, bästa praxis och PWA-tester. Mer information finns i [Om Experience Audit Results](/help/implementing/cloud-manager/experience-audit-dashboard.md).
+När pipeline körs skickas och utvärderas sökvägar som konfigurerats för Experience Audit baserat på prestanda, tillgänglighet, SEO, bästa praxis och PWA-tester. Mer information finns i [Om Experience Audit Results](/help/implementing/cloud-manager/reports/report-experience-audit.md).
 
 Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) på kortet **Pipelines** på sidan **Programöversikt**.
 
 ### Konfigurera ett riktat distributionsflöde {#targeted-deployment}
 
-En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en sådan distribution kan du välja att **Inkludera** ska vara en av följande typer av kod:
+En riktad distribution distribuerar kod endast för utvalda delar av AEM-programmet. I en sådan distribution kan du välja att **Inkludera** ska vara en av följande typer av kod:
 
-* **Konfig** - Konfigurera inställningar för olika funktioner i AEM.
+* **Konfiguration** - Konfigurera inställningar för olika funktioner i din AEM-miljö.
    * Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md) för en lista över konfigurationer som stöds, som omfattar vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, och för att hantera dem i din databas så att de distribueras korrekt.
-   * När en riktad distributionsprocess körs distribueras konfigurationer, förutsatt att de sparats i den miljö, databas och gren som definierats i pipeline.
+   * När du kör en riktad distributionsprocess distribueras konfigurationer, förutsatt att de sparas i den miljö, databas och gren som definieras i pipeline.
    * Det kan bara finnas en konfigurationspipeline per miljö.
-* **Front End Code** - Konfigurera JavaScript och CSS för frontdelen av AEM.
+* **Konfigurera Edge Delivery Services konfigurationsflöde** - Edge Delivery konfigurationsförlopp har inte separata utvecklings-, mellanlagrings- och produktionsmiljöer. I AEM as a Cloud Service går förändringarna igenom utvecklingsnivå, utvecklingsnivå och produktionsnivå. En Edge Delivery Configuration Pipeline tillämpar däremot konfigurationen direkt på alla Edge Delivery Sites-domäner som är registrerade i Cloud Manager. Mer information finns i [Lägg till en Edge Delivery-pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md).
+* **Front End Code** - Konfigurera JavaScript och CSS för frontdelen av ditt AEM-program.
    * Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
    * I dokumentet [Utveckla platser med frontdelspipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) finns information om hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om för att få ut mesta möjliga av processen.
 * **Webbnivåkonfiguration** - Konfigurera Dispatcher-egenskaper för att lagra, bearbeta och leverera webbsidor till klienten.

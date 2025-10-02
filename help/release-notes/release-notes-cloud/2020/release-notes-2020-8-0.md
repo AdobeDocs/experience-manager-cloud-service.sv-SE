@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2020.8.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.8.0."
+title: Versionsinformation om 2020.8.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: '[!DNL Adobe Experience Manager] Versionsinformation om as a Cloud Service för 2020.8.0.'
 exl-id: 83413130-ae90-4419-bcf7-42fdc740452b
 feature: Release Information
 role: Admin
-source-git-commit: cfaa3be31195929b80310610120a779a20537c61
+source-git-commit: 2aea79d42ef9627a8fc758077a7ee012592888d7
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -22,7 +22,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * Möjlighet att [återställa sidor och undersidor (sidträd) till en tidigare version](/help/sites-cloud/authoring/sites-console/page-versions.md#reinstating-versions).
 
-* Möjlighet att [skapa starter](/help/sites-cloud/authoring/launches/overview.md) i AEM [SPA ](/help/implementing/developing/hybrid/introduction.md).
+* Möjlighet att [skapa starter](/help/sites-cloud/authoring/launches/overview.md) i AEM [SPA Editor](/help/implementing/developing/hybrid/introduction.md).
 
 
 ## [!DNL Adobe Experience Manager Assets] as a Cloud Service {#assets}
@@ -42,11 +42,11 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för Experience
 
 * Använd en bearbetningsprofil för att generera anpassade metadata med hjälp av beräkningstjänsten. Se [Anpassade metadata med bearbetningsprofilen](/help/assets/manage-metadata.md#metadata-compute-service).
 
-* En enklare nedladdningsupplevelse för Brand Portal-användare som administratörer kan konfigurera. Se [översikt över nedladdningsfunktionen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE#download-configurations).
+* En enklare nedladdningsupplevelse för Brand Portal-användare som administratörer kan konfigurera. Se [översikt över nedladdningsfunktionen](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html#download-configurations).
 
-* Inbyggda förhandsvisningar och förhandsgranskningar av originaltrogna PDF är nu tillgängliga i Brand Portal. Se [översikt över dokumentvisningsprogrammet](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE#doc-viewer).
+* Nu kan du förhandsgranska PDF-dokument både internt och exakt som vanligt i Brand Portal. Se [översikt över dokumentvisningsprogrammet](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html#doc-viewer).
 
-* Du kan nu göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] i AEM as a Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Se [Cacheminnet för CDN har inte verifierats med Dynamic Media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
+* Du kan nu göra CDN-cachen (Content Delivery Network) ogiltig direkt från [!DNL Dynamic Media] i AEM as a Cloud Service (till skillnad från att använda [!DNL Dynamic Media Classic]). Det säkerställer att de senaste tillgångarna hanteras på några minuter istället för timmar. Se [Cacheminnet för CDN har inte verifierats med hjälp av dynamiska media](/help/assets/dynamic-media/invalidate-cdn-cache-dynamic-media.md).
 
 * Förbättrat stöd för hjälpmedel har lagts till i användargränssnittskontroller, navigering, bläddring och sökupplevelse i [!DNL Assets].
 
@@ -78,13 +78,13 @@ Releasedatum för [!UICONTROL Cloud Manager] version 2020.8.0 är 6 augusti 2020
 
 ### Nyheter {#what-is-new-cloud-manager}
 
-* Content Audit är en funktion som aktiveras i Cloud Manager Sites Production Pipelines. Konfigurationen av produktionspipeline för program med platser innehåller nu en tredje flik med namnet **Content Audit**. När en produktionsprocess körs inkluderas ett nytt steg för innehållsgranskning efter en anpassad funktionstestning, som utvärderar webbplatsen mot flera dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
+* Content Audit är en funktion som aktiveras i Cloud Manager Sites Production Pipelines. Konfigurationen av produktionspipeline för program med platser innehåller nu en tredje flik med namnet **Content Audit**. När en produktionsprocess körs inkluderas ett nytt Content Audit-steg i produktionsflödet efter anpassad funktionstestning, som utvärderar webbplatsen mot flera dimensioner, inklusive prestanda, SEO (sökmotoroptimering), tillgänglighet, bästa praxis och PWA (Progressive Web App).
 
 
   >[!NOTE]
   >Namnet på Content Audit har ändrats till Experience Audit.
 
-  Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/experience-audit-dashboard.md).
+  Mer information finns i [Experience Audit Testing](/help/implementing/cloud-manager/reports/report-experience-audit.md).
 
 * Nya miljöer i Assets-program konfigureras nu automatiskt med Smart Content Services.
 
@@ -142,6 +142,6 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * AIO-CLI-plugin för att sammanställa kodomfaktoriseringsverktygen så att utvecklare kan anropa och köra verktyg för kodomfaktorisering från ett och samma ställe. Mer information finns i [Git-resurs: aio-cli-plugin-aem-cloud-service-migration](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration).
 
-* AEM Dispatcher Converter har utökats med stöd för konverteringar av Managed Services Dispatcher-konfigurationer på plats och Adobe till AEM as a Cloud Service-kompatibla Dispatcher-konfigurationer. Mer information finns i [Git-resurs: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter).
+* AEM Dispatcher Converter har utökats med stöd för konverteringar av konfigurationer på plats och Adobe Managed Services Dispatcher till AEM as a Cloud Service-kompatibla Dispatcher-konfigurationer. Mer information finns i [Git-resurs: AEM Cloud Service Dispatcher Converter](https://github.com/adobe/aem-cloud-service-source-migration/tree/master/packages/dispatcher-converter).
 
 * AEM Dispatcher Converter skrevs om i ` node.js ` och är integrerat med AIO-CLI-plugin.

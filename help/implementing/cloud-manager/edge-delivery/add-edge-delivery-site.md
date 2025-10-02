@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt prod
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
 exl-id: 17e842c9-599a-4877-9834-1e7220f508a8
-source-git-commit: e99bec4515c79e181ce38b94b1ea327fd99d2695
+source-git-commit: ddf2d80330ecfddad4af8a05c95cdba7f968a986
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,17 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Läs om varför du måste lägga upp din Edge Delivery Services webbplats på Cloud Manager.
->&#x200B;>Se [Fördelar med att använda Adobe rekommenderade sökväg för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#recommended-path-eds).
+>>Se [Fördelar med att använda Adobe rekommenderade sökväg för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#recommended-path-eds).
 
 **Så här lägger du till en Edge Delivery-webbplats i Cloud Manager:**
 
 1. Se till att du först har skapat programmet med en Edge Delivery Services-licens innan du lägger upp en Edge Delivery-webbplats i Cloud Manager.
 Se [Skapa ett produktionsprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/creating-production-programs.md).
-1. Logga in på Cloud Manager på [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
+1. Logga in på Cloud Manager på [experience.adobe.com](https://experience.adobe.com).
+1. Klicka på **Experience Manager** i avsnittet **Snabbåtkomst**.
+1. Klicka på **Cloud Manager** på den vänstra panelen.
+1. Välj en organisation som du vill ha.
+1. Klicka på ett program på konsolen **Mina program**.
 1. Gör något av följande:
 
    * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka sedan på **Lägg till Edge Delivery-webbplats** nära sidans nedre högra hörn.
@@ -30,8 +34,8 @@ Se [Skapa ett produktionsprogram](/help/implementing/cloud-manager/getting-acces
      ![Lägg till Edge Delivery-webbplats från fliken Edge Delivery](/help/implementing/cloud-manager/assets/cm-eds-add1.png)
 
    * Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet på sidan för att visa den vänstra menyn.
-Klicka på ikonen ![Webbsida](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites** under rubriken **Tjänster**.
-Klicka på **Lägg till plats** i sidans övre högra hörn.
+Klicka på ikonen **Webbsida** ![Edge Delivery Sites](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) under rubriken **Tjänster**.
+Klicka på ![Länkikonen eller Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Link_18_N.svg) **Lägg till Edge Delivery-webbplats** i sidans övre högra hörn.
 
      ![Lägg till Edge Delivery-webbplats från knappen Edge Delivery Sites](/help/implementing/cloud-manager/assets/cm-eds-add2.png)
 

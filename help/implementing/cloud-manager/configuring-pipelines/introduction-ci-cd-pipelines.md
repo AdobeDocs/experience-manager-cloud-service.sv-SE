@@ -6,9 +6,9 @@ exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: d065397b874cc24fb7af53e1258520f3e8270c55
+source-git-commit: ac918008c3f99d74e01be59c9841083abf3604aa
 workflow-type: tm+mt
-source-wordcount: '1489'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -116,6 +116,11 @@ Se [Lägg till en icke-produktionspipeline](/help/implementing/cloud-manager/con
 Med hjälp av ett konfigurationsflöde kan du snabbt distribuera inställningar för vidarebefordran av loggfiler, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, inklusive trafikfilterregler (som WAF-regler (Web Application Firewall)). Dessutom kan du hantera begäran- och svarsomvandlingar, ursprungsväljare, klientomdirigeringar, felsidor, kundhanterade CDN-nycklar, rensnings-API-nycklar och grundläggande autentisering.
 
 Se [Använd konfigurationspipelines](/help/operations/config-pipeline.md) för en utförlig lista över funktioner som stöds och för att lära dig hur du hanterar konfigurationerna i din databas så att de distribueras på rätt sätt.
+
+>[!NOTE]
+>
+>Edge Delivery konfigurationspipelines har inte separata utvecklings-, staging- och produktionsmiljöer. I AEM as a Cloud Service går förändringarna igenom utvecklingsnivå, utvecklingsnivå och produktionsnivå. En Edge Delivery Configuration Pipeline tillämpar däremot konfigurationen direkt på alla Edge Delivery Sites-domäner som är registrerade i Cloud Manager. Mer information finns i [Lägg till en Edge Delivery-pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md).
+
 
 ### Konfigurera konfigurationsförlopp {#configure-config-deployment}
 

@@ -4,9 +4,9 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med Edge De
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
+source-git-commit: ac918008c3f99d74e01be59c9841083abf3604aa
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '819'
 ht-degree: 1%
 
 ---
@@ -40,10 +40,10 @@ Maximera fördelarna med Adobe genom att skaffa och använda din Edge Delivery S
 
 * [Förbruka din licens för ditt valda program](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md), [uppdatera andra program](/help/implementing/cloud-manager/edge-delivery/manage-edge-delivery-sites.md) eller båda.
 * Utnyttja fördelarna med [API-first](https://developer.adobe.com/experience-cloud/experience-manager-apis/) för att utföra CRUD-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
-* [Få åtkomst till SLA-rapportering](/help/implementing/cloud-manager/sla-reporting.md) (*kommer snart*)
+* [Öppna SLA-rapporter](/help/implementing/cloud-manager/reports/report-sla.md)
 * [Få tillgång till Adobe support](/help/edge/overview.md#support-ticket) för dina registrerade produktionsprogram.
 
-Om du har en Edge Delivery Services-licens (EDS) kan du använda ett [Adobe-hanterat CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) för din Edge Delivery-webbplats och utnyttja funktioner som självbetjäning för CDN-hantering och automatisk förnyelse av DV-certifikat var tredje månad, såvida det inte raderas.
+Om du har en Edge Delivery Services-licens (EDS) kan du använda ett [Adobe-hanterat CDN](/help/implementing/dispatcher/cdn.md#aem-managed-cdn) för din Edge Delivery-webbplats. Om du gör det aktiveras självbetjäning för CDN-hantering och DV-certifikat som förnyas automatiskt var tredje månad om du inte tar bort certifikatet.
 
 Om du väljer att använda ditt CDN (dvs. ett icke-Adobe-hanterat CDN), oavsett din Edge Delivery Services-licens, måste du konfigurera det på `aem.live`-plattformen. Se [BYO CDN-konfiguration](https://www.aem.live/docs/byo-cdn-setup).
 
@@ -79,7 +79,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | --- | --- | --- |
 | 1 | Gå med i produktsamarbetskanalen | Om du klickar på **Skicka begäran nu** skickas en begäran till Adobe om att skapa en kanal för ditt företag. Om kanalen redan finns vidarebefordras du till företagets kanal. |
 | 2 | Kompletta krav | Se [Visa självstudien Komma igång](https://www.aem.live/developer/tutorial). |
-| 3 | Lägg till Edge Delivery-webbplats ELLER <br>Skapa webbplats nu | Se [Lägg till en Edge Delivery-webbplats](#eds-add-site).<br>Se [Skapa en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md). |
+| 3 | Lägg till Edge Delivery-webbplats ELLER <br>Skapa en webbplats nu | Se [Lägg till en Edge Delivery-webbplats](#eds-add-site).<br>Se [Skapa en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md). |
 | 4 | Konfigurera en Edge Delivery-webbplats att använda en extern Git-databas | Se [Konfigurera en Edge Delivery-webbplats så att den använder en extern Git-databas](/help/implementing/cloud-manager/edge-delivery/config-edge-delivery-site-with-byog.md). |
 | 5 | Lägg till domän | Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
 | 6 | Lägg till SSL-certifikat | Se [Lägg till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md). |
@@ -87,7 +87,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 8 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 9 | GoLive | Se [Go-Live-checklista](https://www.aem.live/docs/go-live-checklist). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3441565?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 

@@ -6,9 +6,9 @@ exl-id: eba608eb-a19e-4bff-82ff-05860ceabe6e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 40a76e39750d6dbeb03c43c8b68cddaf515a2614
+source-git-commit: 07ed9bd6d9830bc9120b59cab43f834ef8620709
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,8 @@ Utöver [produktionspipelines](#configuring-production-pipelines.md) som distrib
 
 Det finns två typer av icke-produktionsrörledningar:
 
-* **Kodkvalitetsförgreningar** - Dessa kör kodkvaliteten genom att skanna koden i en Git-förgrening och kör stegen för bygg- och kodkvalitet.
-* **Distributionspipelines** - Förutom att utföra steg för bygg- och kodkvalitet, som till exempel pipelines för kodkvalitet, distribuerar dessa pipelines koden till en icke-produktionsmiljö.
+* **Kodkvalitetsförgreningar** - Dessa kör kodkvalitet genom att skanna koden i en Git-gren och kör stegen för bygg- och kodkvalitet.
+* **Distributionspipelines** - Förutom att utföra steg för bygg- och kodkvalitet som till exempel pipelines för kodkvalitet distribuerar dessa pipelines koden till en icke-produktionsmiljö.
 
 >[!NOTE]
 >
@@ -37,9 +37,11 @@ Det finns två typer av icke-produktionsrörledningar:
 
 När du har konfigurerat programmet och har minst en miljö med Cloud Manager UI är du redo att lägga till en icke-produktionsprocess genom att följa de här stegen.
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
-
-1. Välj programmet på konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)**.
+1. Logga in på Cloud Manager på [experience.adobe.com](https://experience.adobe.com).
+1. Klicka på **Experience Manager** i avsnittet **Snabbåtkomst**.
+1. Klicka på **Cloud Manager** på den vänstra panelen.
+1. Välj en organisation som du vill ha.
+1. Klicka på ett program på konsolen **Mina program**.
 
 1. Gå till kortet **Pipelines** från Cloud Manager hemskärm. Klicka på **+Lägg till** och välj **Lägg till icke-produktionsförlopp**.
 
@@ -78,7 +80,7 @@ Hur du slutför skapandet av din icke-produktionsprocess varierar beroende på v
 
 ### Fullständig stapelkod {#full-stack-code}
 
-En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och i framände som innehåller en eller flera AEM serverprogram tillsammans med HTTPD/Dispatcher-konfiguration.
+En fullständig kodrapport distribuerar samtidigt kodbyggen i bakände och framände som innehåller en eller flera AEM-serverprogram tillsammans med HTTPD/Dispatcher-konfiguration.
 
 >[!NOTE]
 >
@@ -103,7 +105,7 @@ Följ de här stegen för att slutföra konfigurationen av icke-produktionsflöd
       * **Funktionstestning av produkt** - Kör [produktfunktionstester](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing) mot utvecklingsmiljön.
       * **Anpassad funktionstestning** - Kör [anpassade funktionstester](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) mot utvecklingsmiljön.
       * **Anpassad gränssnittstestning** - Kör [anpassade gränssnittstester](/help/implementing/cloud-manager/ui-testing.md) för anpassade program.
-      * **Experience Audit** - Kör [Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)
+      * **Experience Audit** - Kör [Experience Audit](/help/implementing/cloud-manager/reports/report-experience-audit.md)
 
    ![Pipeline i full hög](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-full-stack.png)
 
@@ -113,19 +115,21 @@ Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) p
 
 ### Målinriktad distribution {#targeted-deployment}
 
-En riktad distribution distribuerar bara kod för utvalda delar av AEM. I en sådan distribution kan du välja att **Inkludera** ska vara en av följande typer av kod:
+En riktad distribution distribuerar kod endast för utvalda delar av AEM-programmet. I en sådan distribution kan du välja att **Inkludera** ska vara en av följande typer av kod:
 
-* **Konfig** - Konfigurera inställningar för olika funktioner i AEM.
+* **Konfiguration** - Konfigurera inställningar för olika funktioner i din AEM-miljö.
    * Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md) för en lista över konfigurationer som stöds, som omfattar vidarebefordran av loggar, rensningsrelaterade underhållsåtgärder och olika CDN-konfigurationer, och för att hantera dem i din databas så att de distribueras korrekt.
-   * När du kör en riktad distributionsprocess distribueras konfigurationerna, förutsatt att de sparas i den miljö, databas och gren som du har definierat i pipeline.
+   * När du kör en riktad distributionsprocess distribueras konfigurationer, förutsatt att de sparas i den miljö, databas och gren som du definierade i pipeline.
    * Det kan bara finnas en konfigurationspipeline per miljö.
-* **Front End Code** - Konfigurera JavaScript och CSS för frontdelen av AEM.
+* **Konfigurera Edge Delivery Services konfigurationsflöde** - Edge Delivery konfigurationsförlopp har inte separata utvecklings-, mellanlagrings- och produktionsmiljöer. I AEM as a Cloud Service går förändringarna igenom utvecklingsnivå, utvecklingsnivå och produktionsnivå. En Edge Delivery Configuration Pipeline tillämpar däremot konfigurationen direkt på alla Edge Delivery Sites-domäner som är registrerade i Cloud Manager. Mer information finns i [Lägg till en Edge Delivery-pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md).
+* **Front End Code** - Konfigurera JavaScript och CSS för frontdelen av ditt AEM-program.
    * Med rörledningar kan utvecklarna bli mer självständiga och utvecklingsprocessen kan accelereras.
    * I dokumentet [Utveckla platser med frontdelspipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) finns information om hur den här processen fungerar tillsammans med vissa överväganden som du bör vara medveten om för att få ut mesta möjliga av processen.
-* **Webbnivåkonfiguration** - Konfigurera dispatcheregenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
+* **Webbnivåkonfiguration** - Konfigurera Dispatcher-egenskaper för att lagra, bearbeta och leverera webbsidor till klienten.
    * Mer information finns i dokumentet [CI/CD Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#web-tier-config-pipelines).
    * Om det finns en kodrapport på webbnivå för den valda miljön är det här valet inaktiverat.
-   * Om du har en befintlig pipeline som distribueras i en hel hög till en miljö, kommer den befintliga konfigurationen på hela stacken att ignoreras om du skapar en konfigurationspipeline för en webbskikt för samma miljö.
+   * Om en pipeline med hela stackar redan distribueras till en miljö kan du fortfarande skapa en konfigurationspipeline på webbnivå för samma miljö. När du gör det ignorerar Cloud Manager webskiktskonfigurationen i pipeline för hela stacken.
+
 
 >[!NOTE]
 >
@@ -152,13 +156,13 @@ Stegen för att slutföra skapandet av din icke-produktion, målinriktade distri
    * **Git-grenen** - Det här alternativet definierar från vilken gren i den valda pipeline som ska hämta koden.
       * Ange de första tecknen i förgreningsnamnet och funktionen Komplettera automatiskt i det här fältet. Här hittas de matchande grenar som du kan välja.
    * **Kodplats** - Det här alternativet definierar sökvägen i grenen för den valda rapporten från vilken pipelinen ska hämta koden.
-   * **Rörledning** - För rörledningar som inte är avsedda för produktion i början har du möjlighet att aktivera **[Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md)**.
+   * **Rörledning** - För rörledningar som inte är avsedda för produktion i början har du möjlighet att aktivera **[Experience Audit](/help/implementing/cloud-manager/reports/report-experience-audit.md)**.
 
    ![Konfigurera pipeline](/help/implementing/cloud-manager/assets/configure-pipeline/non-prod-pipeline-config-deployment-experience-audit.png)
 
 1. Om du har aktiverat Experience Audit klickar du på **Continue** för att gå vidare till fliken **Experience Audit** där du kan definiera sökvägarna som alltid ska inkluderas i Experience Audit.
 
-   * Om du har aktiverat **Experience Audit** finns mer information om hur du konfigurerar i dokumentet [Experience Audit](/help/implementing/cloud-manager/experience-audit-dashboard.md).
+   * Om du har aktiverat **Experience Audit** finns mer information om hur du konfigurerar i dokumentet [Experience Audit](/help/implementing/cloud-manager/reports/report-experience-audit.md).
    * Om du inte gjorde det hoppar du över det här steget.
 
 1. Klicka på **Spara** för att spara pipeline.
@@ -167,9 +171,9 @@ Pipelinen sparas och du kan nu [hantera dina pipelines](managing-pipelines.md) p
 
 ## Hoppa över Dispatcher-paket {#skip-dispatcher-packages}
 
-Om du vill att Dispatcher-paket ska byggas som en del av pipeline men inte vill att de ska publiceras för att skapa lagringsutrymme, kan du inaktivera publiceringen, vilket kan minska körningstiden för pipeline.
+Om du vill att Dispatcher-paket ska byggas in i din pipeline men inte överföras för att bygga lagring inaktiverar du publicering. Om du gör det kan det korta körtiden.
 
-Följande konfiguration för att inaktivera publicering av Dispatcher-paket måste läggas till via projektfilen `pom.xml`. Den baseras på en miljövariabel, som fungerar som en flagga som du kan ange i Cloud Manager byggbehållare för att definiera när Dispatcher-paket ska ignoreras.
+Följande konfiguration för att inaktivera publicering av Dispatcher-paket måste läggas till via projektfilen `pom.xml`. Ange en miljövariabel i Cloud Manager byggbehållare för att flagga när Dispatcher-paket ska ignoreras. Pipelinen läser den här flaggan och ignorerar dem därefter.
 
 ```xml
 <profile>

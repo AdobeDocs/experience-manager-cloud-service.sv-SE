@@ -5,9 +5,9 @@ feature: Operations
 role: Admin
 badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: 8f804f55-a66d-47ad-a48d-61b861cef4f7
-source-git-commit: 2fa7005eec0a53f632e1b1cb2f5cc5910bbf21f8
+source-git-commit: 7968668766ae4c8a966bbde93aa2f2ac0c401659
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,13 @@ Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsm
 * Programmet körs på AEM as a Cloud Service.
 * Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 30 dagar** sedan.
 * Miljöstatusen är *Körs* och ingen pipeline pågår.
-* **Du kan återställa tidigare kod som distribuerats** i en `Development` -miljö, `Stage`-miljö eller en `Specialized Testing Environment` -miljö.
+
+**Återställ tidigare kod som distribuerats** fungerar i `Production`-miljön, utöver `Development` -miljön, `Stage`-miljön och `Specialized Testing Environment`. När du har bekräftat startar Cloud Manager återställningen och skickar ett push-meddelande vid start och när åtgärden har slutförts.
+
+>[!IMPORTANT]
+>
+>Adobe rekommenderar att du validerar proceduren i `Stage` *före* genom att använda den i `Production` för att minska riskerna och säkerställa stabiliteten.
+
 
 Om en kontroll misslyckas öppnar Cloud Manager följande dialogruta med en eller flera villkor som inte uppfylls och **Bekräfta** inaktiveras, vilket förhindrar återställning.
 

@@ -5,9 +5,9 @@ exl-id: 3f3d7631-2bc9-440b-9888-50f6529bcd42
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 71311bfffefec8d2c2f71b0c69e6fec4ce3f299b
+source-git-commit: 5f9d53958076b77cd333a042003c83853594db87
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ Ett kort (eller en rad i en tabell) representerar alla program och ger en övers
 * Namn som tilldelats programmet. I bilden ovan visas&quot;SecurBank Sample&quot; som programnamn.
 * Tjänsttyp:
    * **Experience Manager Cloud** - för AEM as a Cloud Service-program
-   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction)
+   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
 * [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md):
    * Sandbox
    * Produktion
@@ -153,7 +153,7 @@ Ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_22/Smock_More_22_
 * Navigera till en viss ![dataikon](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Data_22_N.svg) [Miljö](/help/implementing/cloud-manager/manage-environments.md) i programmet
 * Öppna ikonen ![Programöversikt](/help/implementing/cloud-manager/assets/program-overview.svg) [Programöversikt](#program-overview)
 * ![Ikonen Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
-* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) [Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
+* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg)[Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
 
 >[!TIP]
 >
@@ -214,7 +214,7 @@ Varje program har flera alternativ och data kopplade till sig. Dessa alternativ 
 * ![Bell-ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) [Aktivitet](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#activity) - Historiken för programmets pipeline-körningar
 * ![Ikon för arbetsflöde](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) [Pipelines](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#pipelines) - Alla pipelines har konfigurerats för programmet
 * ![Mappikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) [Databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) - Alla databaser har konfigurerats för programmet
-* ![Diagramcirkelsymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_GraphPie_18_N.svg) [Rapporter](/help/implementing/cloud-manager/sla-reporting.md) - Mätvärden som SLA-data
+* ![Diagramcirkelsymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_GraphPie_18_N.svg) [Rapporter](/help/implementing/cloud-manager/reports/report-sla.md) - Mätvärden som SLA-data
 
 **Tjänster**
 
@@ -223,7 +223,7 @@ Varje program har flera alternativ och data kopplade till sig. Dessa alternativ 
 * ![Ikon för inställningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Settings_18_N.svg) [Domäninställningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md) - Hantera anpassade domännamn för programmet
 * ![Lås stängd ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_LockClosed_18_N.svg) [SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md) - Hantera SSL-certifikat för programmet
 * ![Ikon för sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) [Domänmappningar](/help/implementing/cloud-manager/custom-domain-names/introduction.md) - Hantera domänmappningar
-* ![Ikon för uppgiftslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) [IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) - Definiera tillåtelselista för vissa IP-adresser
+* ![Ikon för uppgiftslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TaskList_18_N.svg) [`IP Allow Lists`](/help/implementing/cloud-manager/ip-allow-lists/introduction.md) - Definiera tillåtelselista för vissa IP-adresser
 * ![Ruteikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) [Innehållsuppsättningar](/help/implementing/developing/tools/content-copy.md) - Innehållsuppsättningar som skapats i kopieringssyfte
 * ![Ikonen Historik](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) [Kopiera innehållsaktivitet](/help/implementing/developing/tools/content-copy.md) - aktiviteter för innehållskopiering
 * ![Kanalikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Channel_18_N.svg) [Nätverksinfrastrukturer](/help/security/configuring-advanced-networking.md) - Hantera avancerade nätverksalternativ för programmet

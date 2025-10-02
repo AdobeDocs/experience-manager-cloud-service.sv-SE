@@ -5,7 +5,7 @@ exl-id: 2c698d38-6ddc-4203-b499-22027fe8e7c4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
+source-git-commit: 2aea79d42ef9627a8fc758077a7ee012592888d7
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Fas **Scentestning** omfattar följande steg:
 | Funktionstestning av produkten | Cloud Manager pipeline kör tester som körs mot scenmiljön.<br>Se även [Funktionstestning av produkter](/help/implementing/cloud-manager/functional-testing.md#product-functional-testing). |
 | Anpassad funktionstestning | Det här steget i pipeline körs alltid och kan inte hoppas över. Om bygget inte skapar en JAR-test godkänns testet automatiskt.<br>Se även [Anpassad funktionstestning](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing). |
 | Anpassade gränssnittstestningar | En valfri funktion som automatiskt kör gränssnittstester som skapats för anpassade program.<br>Gränssnittstester är självstudiebaserade och paketerade i en Docker-bild för att ge flexibilitet vad gäller språk och ramverk. Med den här metoden kan du använda Java och Maven, Node och WebDriver.io eller valfritt Selenium-baserat ramverk eller teknik.<br>Se även [Anpassad gränssnittstestning](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing). |
-| Experience Audit | Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.<ul><li>De konfigurerade sidorna skickas till tjänsten och utvärderas.</li><li>Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.</li><li>Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.</li></ul>Se [Om Experience Audit-resultat](/help/implementing/cloud-manager/experience-audit-dashboard.md).</li></ul> |
+| Experience Audit | Det här steget i pipeline körs alltid och kan inte hoppas över. När en produktionsprocess körs inkluderas ett steg för upplevelsegranskning efter anpassad funktionstestning som kör kontrollerna.<ul><li>De konfigurerade sidorna skickas till tjänsten och utvärderas.</li><li>Resultaten är informativa och visar poängen och förändringen mellan aktuella och tidigare poäng.</li><li>Den här insikten är värdefull för att avgöra om det finns en regression som introduceras i den aktuella distributionen.</li></ul>Se [Om Experience Audit-resultat](/help/implementing/cloud-manager/reports/report-experience-audit.md).</li></ul> |
 
 ![Scentestning](assets/stage-testing.png)
 
@@ -97,7 +97,7 @@ Produktionsinstallationer följer i allmänhet samma steg som tidigare, men på 
 1. Koppla loss `dispatcher1` från belastningsutjämnaren.
 1. Distribuera AEM-paket till `publish1` och Dispatcher-paketet till `dispatcher1`, rensa Dispatcher-cachen.
 1. Placera `dispatcher1` i belastningsutjämnaren igen.
-1. Koppla loss `dispatcher2` från belastningsutjämnaren när `dispatcher1` är tillbaka i tjänsten.
+1. Koppla loss `dispatcher1` från belastningsutjämnaren när `dispatcher2` är tillbaka i tjänsten.
 1. Distribuera AEM-paket till `publish2` och Dispatcher-paketet till `dispatcher2`, rensa Dispatcher-cachen.
 1. Placera `dispatcher2` i belastningsutjämnaren igen.
 
