@@ -5,9 +5,9 @@ exl-id: aee34469-37c2-4571-806b-06c439a7524a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: f1030bf293ee78380bca7bd5d4266f9767677ad7
+source-git-commit: c0714a7b74cd223ad4a405934c89a3146fb8b5c4
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -44,10 +44,6 @@ När du som innehållsförfattare är redo att publicera ditt innehåll behöver
 
 1. Tryck eller klicka på **Publicera** för att publicera eller **Avbryt** för att avbryta.
 
->[!TIP]
->
->Om du publicerar i förhandsvisningsmiljön kan [du använda alternativet på menyn **Konto**](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties) i verktygsfältet för Experience Manager-sidhuvud för att växla mellan förhandsgransknings- och produktionsmiljöer.
-
 >[!NOTE]
 >
 >Alternativet att publicera till förhandsgranskning [kan inaktiveras](/help/implementing/universal-editor/customizing.md#publish-preview) och kanske inte visas i redigeraren.
@@ -60,7 +56,7 @@ Du har sedan samma alternativ för att avpublicera innehåll som du gjorde när 
 
 ## Publicera och avpublicera från Sites Console {#publishing-sites-console}
 
-Du kan också publicera [&#x200B; från webbplatskonsolen &#x200B;](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
+Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
 
 ## Ytterligare resurser {#additional-resources}
 
