@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 8ee3da55024c0f5246f6c194bc07172b4b71823a
+source-git-commit: 6cf380fd972888fa21f682b0e799cf5ab594e829
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '433'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 22758, som offentliggjordes den 1 oktober 2025. Den tidigare underhållsversionen var version 22450.
 
-Funktionsaktiveringen i 2025.10.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.10.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-22758}
 
@@ -31,9 +31,9 @@ Funktionsaktiveringen i 2025.10.0 kommer att innehålla alla funktioner som finn
 * GRANITE-56026: Förbättra API-statuskodsvaren för behörigheter.
 * GRANITE-61015: Paketet `org.apache.commons.io.channels` har lagts till i den offentliga exporterade listan.
 * GRANITE-61167: Felix-loggen har uppdaterats till den senaste OSGI-specifikationen.
-* GRANITE-61167: Uppdatera felix-beroenden.
+* GRANITE-61167: Uppdatera ett antal Apache Felix-beroenden.
 * GRANITE-61169: Förbättra kontrollen av skyddade strängar.
-* GRANITE-61622: Uppdatera snedningsberoenden.
+* GRANITE-61622: Uppdatera ett antal Apache Sling-beroenden.
 * GRANITE-61663: Lägg till `com.adobe.granite.repository.indexdefs-1.0.2` i snabbstarten.
 * GRANITE-61811: Lägg till `com.adobe.granite.repository-2.0.0` i snabbstarten.
 * SITES-32014: Lyssna efter externa händelser för att uppdatera serviceregistreringar.
@@ -69,8 +69,8 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.86.0 | [Oak 1.86.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.86/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.1 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
