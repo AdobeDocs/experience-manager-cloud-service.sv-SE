@@ -4,9 +4,9 @@ description: Lär dig hur du förhandsgranskar innehållsfragment på flera olik
 feature: Content Fragments
 role: User, Developer, Architect
 solution: Experience Manager Sites
-source-git-commit: 42dbf6138920c4f733d7dc74dfc81504dee1e0ae
+source-git-commit: 3781b494394405f69892686790c17ffa9c69f28b
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '394'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,8 @@ Du kan förhandsgranska fragmentet:
 <!--
 * with a HTML template, using **[Preview]()** from the Content Fragments console
 -->
+
+Du kan förstås även visa ditt fragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md).
 
 >[!IMPORTANT]
 >
@@ -67,7 +69,7 @@ När URL:en har definierats är knappen **[Förhandsgranska](/help/sites-cloud/a
 
 ## Förhandsgranska instans {#preview-instance}
 
-Du kan **publicera**, och **avpublicera**, ditt fragment till din Preview-instans (samt till din Publish-instans).
+Du kan **publicera**, och **avpublicera**, ditt fragment till **[förhandsgranskningstjänsten](/help/headless/deployment/architecture.md)** (och till din publiceringsinstans).
 
 Du kan publicera fragmentet antingen från redigeraren eller konsolen.
 
