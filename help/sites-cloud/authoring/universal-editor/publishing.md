@@ -60,7 +60,7 @@ Du har sedan samma alternativ för att avpublicera innehåll som du gjorde när 
 
 ## Publicera och avpublicera från Sites Console {#publishing-sites-console}
 
-Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
+Du kan också publicera [&#x200B; från webbplatskonsolen &#x200B;](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
 
 ## Ytterligare resurser {#additional-resources}
 
