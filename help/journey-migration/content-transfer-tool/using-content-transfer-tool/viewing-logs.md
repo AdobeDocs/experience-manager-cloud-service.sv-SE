@@ -18,8 +18,8 @@ ht-degree: 9%
 >id="aemcloud_ctt_logs"
 >title="Visa loggar"
 >abstract="När extraheringen av intag har slutförts kontrollerar du om det finns några fel/varningar i loggarna. Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att man kontaktar Adobe support."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html#troubleshooting" text="Felsökning"
->additional-url="https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html" text="Kontakta Adobe Support"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/using-content-transfer-tool.html?lang=sv-SE#troubleshooting" text="Felsökning"
+>additional-url="https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html" text="Kontakta Adobe Support"
 
 När varje steg har slutförts (extrahering och förtäring) kontrollerar du loggarna och söker efter fel.  Felen bör åtgärdas omedelbart, antingen genom att man hanterar de rapporterade problemen eller genom att man kontaktar Adobe support.
 
