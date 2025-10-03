@@ -3,14 +3,14 @@ title: Sammanhangsberoende experiment i AEM as a Cloud Service
 description: Lär dig hur du använder plugin-programmet för experiment för att lägga till experimentella funktioner på din webbplats.
 feature: Administering
 role: Admin
-source-git-commit: 598f05f6cb31395844b1a89cf6c0e34d5627352c
+source-git-commit: 66ee08babae1f6640158260af051f8ad5f9bde85
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1799'
 ht-degree: 0%
 
 ---
 
-# Ökning {#overview}
+# Sammanhangsberoende experiment i AEM as a Cloud Service {#contextual-experimentation}
 
 >[!NOTE]
 >För närvarande är funktionen för kontextexperiment bara tillgänglig via betaprogrammet. Kontakta antingen Adobe support eller din kontoansvarige för att få tillgång till betaprogrammet.
@@ -31,7 +31,7 @@ För webbplatser som körs på Adobe Experience Manager finns det ett **plugin-p
 
 ## Innan du börjar {#before-start}
 
-Plugin-programmet för experimenterande används i kontexten för [Edge Delivery Services](/help/edge/overview.md) så du behöver ett Github-konto, en innehållsdatabas som SharePoint eller Google Drive, och du behöver även [AEM Sidekick](https://www.aem.live/docs/sidekick). Se även självstudiekursen [Komma igång - Universal Editor Developer Tutorial &#x200B;](https://www.aem.live/developer/tutorial) och [Getting Started - Developer Tutorial](https://www.aem.live/developer/tutorial).
+Plugin-programmet för experimenterande används i kontexten för [Edge Delivery Services](/help/edge/overview.md) så du behöver ett Github-konto, en innehållsdatabas som SharePoint eller Google Drive, och du behöver även [AEM Sidekick](https://www.aem.live/docs/sidekick). Se även självstudiekursen [Komma igång - Universal Editor Developer Tutorial ](https://www.aem.live/developer/tutorial) och [Getting Started - Developer Tutorial](https://www.aem.live/developer/tutorial).
 
 När du har konfigurerat allt kan du **titta på den här videon** med titeln [Direktexperiment](https://business.adobe.com/products/experience-manager/sites/testing-optimization.html) för att få en kort demonstration om hur plugin-programmet för experiment fungerar.
 
@@ -48,14 +48,14 @@ Innan du följer resten av guiden för att konfigurera ditt första experiment f
 
 När du skapar ett experiment använder du i allmänhet en befintlig sida som kontrollsida. Sedan skapar du en utmanarsida som ersätter kontrollsidan för några av dina besökare. På utmanarsidan kan du testa olika saker som innehållsvarianter, olika sidlayouter, call-to-action (CTA) och så vidare. Du kan konfigurera dessa experimentella varianter genom att lägga till metadataparametrar på kontrollsidan (se nedan).
 
-Tjänsten [Operational Telemetry &#x200B;](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md) samlar sedan in data, till exempel antalet besökare på kontrollsidan jämfört med utmanarsidan. Sedan använder du dessa data för att välja de nödvändiga förbättringarna för din webbplats. Så länge du håller dig till det språk som webbplatsen är skriven på och använder den befintliga blockfunktionen bör du kunna skapa en experimentvariant och skicka den till produktion på några minuter.
+Tjänsten [Operational Telemetry ](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md) samlar sedan in data, till exempel antalet besökare på kontrollsidan jämfört med utmanarsidan. Sedan använder du dessa data för att välja de nödvändiga förbättringarna för din webbplats. Så länge du håller dig till det språk som webbplatsen är skriven på och använder den befintliga blockfunktionen bör du kunna skapa en experimentvariant och skicka den till produktion på några minuter.
 
 >[!NOTE]
 >Tänk på att plugin-programmet inte använder, och att det inte innehåller, några slutanvändardata som kan leda till att de identifieras. Inget slutanvändardeltagande eller cookie-samtycke krävs när standardkonfigurationen som använder tjänsten [Operational Telemetry i AEM as a Cloud Service](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md) används.
 
 ### Experimentera-ID {#experiment-identifier}
 
-Innan du börjar bör varje experiment ha en egen identifierare för spårnings- och analysändamål. En bra startpunkt är att hitta en bra, unik identifierare för ditt experiment, som blir &quot;Experiment-ID&quot;. Experimenten numreras ofta linjärt eller i korrelation till sitt Issue ID i ett system för ärendespårning eller -hantering. Experiment-ID:n använder ofta ett prefix för projektet, till exempel: OPT-0134, EXP004 eller CCX0076.
+Innan du börjar bör varje experiment ha en egen identifierare för spårnings- och analysändamål. En bra startpunkt är att hitta en bra, unik identifierare för ditt experiment, som blir &quot;Experiment-ID&quot;. Experimenten numreras ofta linjärt eller i korrelation till sitt Issue ID i ett system för ärendespårning eller -hantering. Experiment-ID:n använder ofta ett prefix för projektet, till exempel: `OPT-0134`, `EXP0004` eller `CCX0076`.
 
 ### Skapa din kundsida {#create-challenger-page}
 
@@ -91,7 +91,7 @@ Se exemplet nedan:
 
 För varje experiment delas trafiken upp mellan alla varianter (kontroll och utmanare) och ställs automatiskt in på en jämn fördelning. Om du har en utmanare blir det automatiskt en delning på 50/50 mellan kontroll och utmanare. Om ni har två utmanare ser ni automatiskt en tredjedel av den trafik som är tilldelad till kontroll och varje utmanare osv.
 
-Du kan åsidosätta trafikdelningen genom att konfigurera metadata. Mer information om hur du kan anpassa metadata som används i dina experiment finns på följande [sida](https://github.com/adobe/aem-experience-decisioning/wiki/Experiments#authoring)
+Du kan åsidosätta trafikdelningen genom att konfigurera metadata. Mer information om hur du kan anpassa metadata som används i dina experiment finns på följande [sida](https://github.com/adobe/aem-experience-decisioning/wiki/Experiments#authoring).
 
 ### Förhandsgranska och placera dina experimentella varianter {#preview-stage-experiment}
 
