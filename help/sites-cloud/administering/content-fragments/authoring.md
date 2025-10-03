@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: ea18cacd3a1058f5b9c8e2e81e5e7c36aa1964b4
+source-git-commit: 1fade922ac38340aaaee71794f96db738d492ed6
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2778'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
 * övre verktygsfältet: för nyckelinformation och åtgärder
    * en länk till konsolen för innehållsfragment (hemikonen)
    * information om modellen och mappen
-   * länkar till [Förhandsgranska (om URL-mönstret för standardförhandsvisning har konfigurerats för modellen)](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#model-properties)
+   * länkar till [Förhandsgranska](#preview-content-fragment); om URL-mönstret för standardförhandsvisning är konfigurerat för modellen
    * [Publicera](#publish-content-fragment) och [Avpublicera](#unpublish-content-fragment) åtgärder
    * ett alternativ för att visa alla **överordnade referenser** (länkikon)
    * fragmentet **[Status](/help/sites-cloud/administering/content-fragments/managing.md#statuses-content-fragments)** och den senast sparade informationen
@@ -267,7 +267,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
@@ -497,14 +497,7 @@ Fliken **Kommentarer** i den högra panelen ger dig möjlighet att samarbeta i p
 
 ## Förhandsgranska fragmentet {#preview-content-fragment}
 
-Med redigeraren för innehållsfragment kan författare förhandsgranska sina redigeringar i ett externt klientprogram.
-
-Om du vill använda den här funktionen måste du först:
-
-* Samarbeta med IT-avdelningen och skapa ett externt klientprogram som återger innehållsfragmentet genom att använda JSON-utdata.
-* När det externa klientprogrammet har konfigurerats måste URL-mönstret **Standardförhandsgranskning** definieras som en [egenskap för rätt innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#model-properties).
-
-När URL:en har definierats är knappen **Förhandsgranska** aktiv. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
+Med redigeraren för innehållsfragment kan författare förhandsgranska sina redigeringar i ett externt klientprogram. Detta kräver att URL-mönstret **[Standardförhandsgranskning](/help/sites-cloud/administering/content-fragments/preview.md#preview-url-pattern)** är definierat för att aktivera knappen **Förhandsgranska** i det övre verktygsfältet i redigeraren. Du kan välja den här knappen om du vill starta det externa programmet (på en separat flik) för att återge innehållsfragmentet.
 
 ## Publicera fragment {#publish-content-fragment}
 

@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 solution: Experience Manager Sites
 exl-id: f94f75c2-12fa-47c0-a71b-327f4210077d
-source-git-commit: baf9e56e65bc537e136310814f269a3a20a80dd3
+source-git-commit: a64e0ff18c1508a50400f1423543b3c907552d6a
 workflow-type: tm+mt
-source-wordcount: '2496'
+source-wordcount: '2459'
 ht-degree: 0%
 
 ---
@@ -132,20 +132,7 @@ När du väljer en viss modell visas modellens egenskaper (som de definieras nä
 * **Titel**
 * **Taggar**
 * **Beskrivning**
-* **Förhandsgranska URL-mönster**
-
-  Med Content Fragment Models kan författare **Förhandsgranska** sitt innehåll i ett externt klientprogram. När **förhandsgranskningstjänsten** har konfigurerats lägger du till URL:en för klientprogrammet.
-
-  URL:en för förhandsgranskning bör följa detta mönster:
-    `https://<preview_url>?param=${expression}`
-
-  Tillgängliga uttryck är:
-
-   * `${contentFragment.path}`
-   * `${contentFragment.model.path}`
-   * `${contentFragment.model.name}`
-   * `${contentFragment.variation}`
-   * `${contentFragment.id}`
+* **[Förhandsgranska URL-mönster](/help/sites-cloud/administering/content-fragments/preview.md#preview-url-pattern)**
 
 <!-- CHECK: currently under FT -->
 <!--
