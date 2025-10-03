@@ -4,9 +4,9 @@ description: Detta är versionsinformationen för version 2025.10.02 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 017ac03f6547317197a903f23ce77b1227dc94ca
+source-git-commit: f1030bf293ee78380bca7bd5d4266f9767677ad7
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '179'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Det här är versionsinformationen för den 2 oktober 2025-versionen av Universa
 
 ## Nyheter {#what-is-new}
 
-* En knapp har lagts till för att växla mellan förhandsgranskning och produktionsmiljöer.
+* [Ett alternativ har lagts till ](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties) på menyn **Konto** i verktygsfältet för Experience Manager-rubriken för att växla mellan förhandsgransknings- och produktionsmiljöer.
 
 ## Funktioner för tidig användning {#early-adopter}
 

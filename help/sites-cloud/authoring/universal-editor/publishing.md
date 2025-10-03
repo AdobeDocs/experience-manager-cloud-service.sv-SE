@@ -5,9 +5,9 @@ exl-id: aee34469-37c2-4571-806b-06c439a7524a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: fd52e51c336e65ae698c5102cbe00b90e7038b5e
+source-git-commit: f1030bf293ee78380bca7bd5d4266f9767677ad7
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,10 @@ När du som innehållsförfattare är redo att publicera ditt innehåll behöver
    Tryck eller klicka på bakåtpilen bredvid rubriken **Items** för att återgå till översikten.
 
 1. Tryck eller klicka på **Publicera** för att publicera eller **Avbryt** för att avbryta.
+
+>[!TIP]
+>
+>Om du publicerar i förhandsvisningsmiljön kan [du använda alternativet på menyn **Konto**](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties) i verktygsfältet för Experience Manager-sidhuvud för att växla mellan förhandsgransknings- och produktionsmiljöer.
 
 >[!NOTE]
 >

@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 8205014a07b3683d6dd55f1632f5ac06a62e2337
+source-git-commit: f1030bf293ee78380bca7bd5d4266f9767677ad7
 workflow-type: tm+mt
-source-wordcount: '1894'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en anka
 
 #### Experience Manager {#experience-manager}
 
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 ![Knappen Global navigering](assets/global-navigation.png)
 
@@ -112,6 +112,12 @@ Om du knackar på eller klickar på appväljaren kan du snabbt gå över till an
 Välj den ikon som representerar din användare för att få åtkomst till dina kontoinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
 
 ![Användaregenskaper](assets/user-properties.png)
+
+Om du trycker eller klickar på kontoikonen öppnas en meny med dina användarinställningar. De här inställningarna gäller för Cloud Manager i allmänhet, och funktionerna i dem beskrivs [ i den dokumentationen.](/help/implementing/cloud-manager/navigation.md)
+
+![Miljöväljaren](assets/environment-switcher.png)
+
+Om du har en förhandsgranskningstjänst tillgänglig för Universal Editor [kan du](/help/sites-cloud/authoring/sites-console/previewing-content.md) även växla mellan din produktions- och förhandsvisningsmiljö under rubriken **Produktinställningar**.
 
 ### Verktygsfältet för den universella redigeraren {#universal-editor-toolbar}
 
