@@ -1206,7 +1206,7 @@ ht-degree: 1%
       + Redigering{#authoring}
          + [Redigering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/authoring.html?lang=sv-SE)
          + [Markeringsredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/markdown.html?lang=sv-SE)
-      + [Förhandsgranska fragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/preview.html)
+      + [Förhandsgranska fragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/preview.html?lang=sv-SE)
       + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/analysis.html?lang=sv-SE)
       + [JSON-förhandsvisning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html?lang=sv-SE)
    + Väljare för innehållsfragment {#content-fragment-selector}
