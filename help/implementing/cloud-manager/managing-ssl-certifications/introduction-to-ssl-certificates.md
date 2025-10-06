@@ -51,7 +51,7 @@ Båda modellerna har följande allmänna funktioner för att hantera dina certif
 
 >[!IMPORTANT]
 >
->[Om du vill lägga till och associera en anpassad domän med miljön ](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
+>[Om du vill lägga till och associera en anpassad domän med miljön &#x200B;](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
 
 ### Adobe-hanterade (DV) SSL-certifikat {#adobe-managed}
 
