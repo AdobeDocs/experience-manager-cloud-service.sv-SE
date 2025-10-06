@@ -4,10 +4,10 @@ description: Detta är versionsinformationen för version 2025.10.02 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: c0714a7b74cd223ad4a405934c89a3146fb8b5c4
+source-git-commit: 997eb9bbc3810af8dde14a77002ac0370c92af99
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +18,15 @@ Det här är versionsinformationen för den 2 oktober 2025-versionen av Universa
 
 >[!TIP]
 >
+>Om du vill testa de **kommande** funktionerna i den universella redigeraren innan de släpps, se [Versionsinformationen om den universella redigeraren.](/help/release-notes/universal-editor/preview.md)
+
+>[!TIP]
+>
 >Den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service finns på [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md).
 
 ## Nyheter {#what-is-new}
 
-* [Ett alternativ har lagts till &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties) på menyn **Konto** i verktygsfältet för Experience Manager-rubriken för att växla mellan den aktuella produktionsversionen av Universal Editor och den kommande förhandsversionen.
+* [Ett alternativ har lagts till ](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties) på menyn **Konto** i verktygsfältet för Experience Manager-rubriken för att växla mellan den aktuella produktionsversionen av Universal Editor och den kommande förhandsversionen.
 
 ## Funktioner för tidig användning {#early-adopter}
 
