@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: integrera API i regelredigeraren, anropa tjänstförbättringar
 exl-id: fc51f86d-e672-4513-b473-6700757a0c3d
-source-git-commit: 80dde7ddaa08d752391b4004d7c93e5baac9716e
+source-git-commit: 962e31769c013c87bd3089b20601c258fec22baa
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 # Integrera API i regelredigeraren
 
 <span>Integrering av API i regelredigeraren sker under Tidigt Adobe-program. Du kan skriva till `aem-forms-ea@adobe.com` från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen.</span>
+
+>[!NOTE]
+>
+> Visual Rule Editor stöder API-integrering i Adaptive Forms baserat på Core Components och Edge Delivery Services Forms.
 
 Visual Rule Editor i Adaptive Forms stöder direkt API-integrering utan att skapa en formulärdatamodell. Du kan ansluta till en API-slutpunkt genom att antingen ange API-URL:en (i JSON-format) eller importera konfigurationen med ett cURL-kommando. När åtgärden **Anropa tjänst** har integrerats kan den användas för att anropa API:t.
 
