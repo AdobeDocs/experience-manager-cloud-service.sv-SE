@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: integrera API i regelredigeraren, anropa tjänstförbättringar
 exl-id: fc51f86d-e672-4513-b473-6700757a0c3d
-source-git-commit: 962e31769c013c87bd3089b20601c258fec22baa
+source-git-commit: 0dba0003d8b13631e91147fa08c3b986c11b61d3
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Visual Rule Editor stöder API-integrering i Adaptive Forms baserat på Core Components och Edge Delivery Services Forms.
+> Visual Rule Editor stöder API-integrering i Adaptive Forms baserat på Core Components och [Edge Delivery Services Forms som skapats i Universal Editor](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md).
 
 Visual Rule Editor i Adaptive Forms stöder direkt API-integrering utan att skapa en formulärdatamodell. Du kan ansluta till en API-slutpunkt genom att antingen ange API-URL:en (i JSON-format) eller importera konfigurationen med ett cURL-kommando. När åtgärden **Anropa tjänst** har integrerats kan den användas för att anropa API:t.
 
 Formulärfält kan mappas direkt till de indataparametrar som definieras i API-konfigurationen. På samma sätt kan utdataparametrar mappas till formulärfält med alternativet **händelsenyttolast** för motsvarande API-svar.
 
 Med Visual Rule Editor kan du dessutom definiera **success** - och **error-hanterare** när du anropar en tjänst. Hanterare för lyckade åtgärder anger vilka åtgärder som ska utföras efter ett lyckat API-anrop, medan felhanterare definierar hur formuläret ska svara när ett fel inträffar.
-
->[!NOTE]
->
-> API-integrering i regelredigeraren kan även användas för [Edge Delivery Services Forms som har skapats i Universal Editor](/help/edge/docs/forms/universal-editor/getting-started-universal-editor.md).
 
 ## Jämförelse: API-integreringsmetoder
 
