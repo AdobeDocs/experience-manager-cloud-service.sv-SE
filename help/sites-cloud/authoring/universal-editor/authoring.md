@@ -5,7 +5,7 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 16c97e13ba96df743afd6da0ad9416dfa0c825f7
+source-git-commit: b30367d3892fb58d42533864ba9c354e355c7d7a
 workflow-type: tm+mt
 source-wordcount: '2495'
 ht-degree: 0%
@@ -212,7 +212,7 @@ Välj Ångra eller Gör om för att ångra eller göra om den senaste redigering
 
 ### Kopiera och klistra in {#copy-paste}
 
-Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implementing/universal-editor/field-types.md#container) Detta är bara möjligt på samma sida och om [målbehållaren tillåter att komponenten klistras in.](/help/implementing/universal-editor/filtering.md)
+Du kan kopiera och klistra in komponenter som finns i [behållare](/help/implementing/universal-editor/field-types.md#container) på samma webbläsarflik. Detta är bara möjligt om målbehållaren [inte har några filter angivna.](/help/implementing/universal-editor/filtering.md)
 
 ![Kopiera ikon](assets/copy.png)
 ![Ikonen Klistra in ](assets/paste.png)
