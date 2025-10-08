@@ -5,9 +5,9 @@ keywords: Använd Marketo Engage datakälla i Adaptive Forms, Hur ansluter jag e
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 4656ec65-f1ad-4e97-8d93-25933cdc7f7b
-source-git-commit: 1be7bafc1d93a65a81eeb2f7e86cac33cde7aa35
+source-git-commit: 4bb63932a658cf01cc493b9e5e68b96984cce49c
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '734'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,6 @@ ht-degree: 0%
 När du har skapat molntjänstkonfigurationen för att integrera Marketo Engage med befintliga AEM Forms kan du konfigurera datakällan för formulär.
 
 Genom att konfigurera dataintegrering kan användarna ansluta till olika datakällor eller scheman. Genom att integrera med Marketo Engage datakälla och använda den i olika formulär blir det lättare att hantera data. Om du vill utforska de användningsklara datakällor som stöds för ett adaptivt formulär kan du läsa artikeln [Konfigurera datakällor](/help/forms/configure-data-sources.md).
-
-## Att tänka på när du konfigurerar Marketo Engage-datakällan för formulär
-
-När du konfigurerar Marketo Engage datakälla för formulär bör du tänka på följande:
-
-* Det går inte att ansluta Edge Delivery Services Forms till Marketo Engage.
 
 ## Krav för att använda Marketo Engage datakälla för formulär
 
