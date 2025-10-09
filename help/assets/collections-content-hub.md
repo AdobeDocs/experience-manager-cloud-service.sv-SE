@@ -199,5 +199,5 @@ Du kan markera samlingar som favoriter i Content Hub, vilket gör det enklare at
 
 >[!NOTE]
 >
->[Fäst- eller Ta bort nålsamling](#pin-unpin-collection) och [Markera samlingar som favoriter](#favorite-collection) är begränsade tillgänglighetsfunktioner. Du kan [skapa och skicka in](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) ett kundsupportärende från Adobe för att aktivera dem för din distribution.
+>[Fäst- eller Ta bort nålsamling](#pin-unpin-collection) och [Markera samlingar som favoriter](#favorite-collection) är begränsade tillgänglighetsfunktioner. Du kan [skapa och skicka in](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) ett kundsupportärende från Adobe för att aktivera dem för din distribution.
 
