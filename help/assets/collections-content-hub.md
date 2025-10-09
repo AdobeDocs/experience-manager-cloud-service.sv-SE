@@ -3,9 +3,9 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 4021e8318d8bb2704f44a280f728f06aa6b7d9fa
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '1253'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,8 @@ Med [!DNL Content Hub] kan du skapa offentliga samlingar. Dessa samlingar är ti
 * **Hämta**: Hämta resurserna.
 * **Ta bort**: Ta bort specifika resurser från en samling.
 * **Ta bort**: Ta bort hela samlingen.
+* **Fäst/ta bort**: Fäst eller ta bort samling.
+* **Favorit**: Markera samlingen som favorit.
 
 Det hjälper användarna att enkelt komma åt och hantera de olika resurserna som är tillgängliga i [!DNL Content Hub].
 
@@ -40,7 +42,7 @@ Du kan välja att [skapa en ny samling](#create-new-collection) eller [lägga ti
 
 Följ stegen nedan för att styra åtkomsten när du skapar samlingar:
 
-1. Gå till fliken **[!DNL Collections]** och klicka på **[!UICONTROL Create Collection]**. Fönstret Ny samling visas.
+1. Gå till fliken **[!DNL Collections]** och klicka på **[!UICONTROL Create Collection]**. Ett nytt samlingsfönster visas.
 
 1. Lägg till **[!UICONTROL Title]** och **[!UICONTROL Description]** för samlingen.
 
@@ -163,5 +165,39 @@ De markerade resurserna har tagits bort från samlingen.
 
 Endast administratörer och skapare kan ta bort en samling. Om du vill ta bort en samling går du till fliken **[!UICONTROL Collections]** och klickar på samlingen som du vill ta bort. Klicka på ikonen ![Ta bort](assets/delete-icon.svg) för att ta bort samlingen.
 
+## Fäst eller ta bort samling {#pin-unpin-collection}
 
+Content Hub-administratörer kan fästa samlingar i Content Hub för snabb åtkomst. Fastnålade samlingar visas i ett särskilt avsnitt på startsidan för Samlingar, vilket gör det enklare att hålla viktiga samlingar tillgängliga. För snabb åtkomst kan du fästa eller ta bort en samling genom att utföra stegen nedan:
+
+1. Bläddra bland de samlingar som du vill fästa eller ta bort.
+
+1. Klicka på **[!UICONTROL More actions]** ![ikonen Fler åtgärder](assets/do-not-localize/more-actions.png) och välj **[!UICONTROL Pin to quick access]**. En bekräftelseruta visas.
+
+   ![nålsamling](assets/pin-collection.png)
+
+1. Bekräfta genom att klicka på **[!UICONTROL Pin]**. Varningsmeddelandet visas när du fäster en privat samling.
+
+   ![Bekräfta nålsamling](assets/confirm-pin-collection.png)
+
+   De fästa samlingarna visas högst upp för snabb åtkomst. Du kan också ta bort stiftet för samlingen genom att klicka på ikonen **[!UICONTROL More actions]** ![Fler åtgärder](assets/do-not-localize/more-actions.png) och välja **[!UICONTROL Unpin]**.
+
+   ![Visa fästa samlingar](assets/pinned-collections.png)
+
+## Markera samlingar som favoriter {#favorite-collection}
+
+Du kan markera samlingar som favoriter i Content Hub, vilket gör det enklare att ordna och hämta dem. När du har lagt till dina favoritsamlingar kan du enkelt komma åt dem från fliken Favoriter på Content Hub hemsida. Dessutom kan du söka efter resurser i Favoritsamlingar. Så här markerar du samlingar som favoriter:
+
+1. Bläddra bland de samlingar som du vill fästa eller ta bort.
+
+1. Klicka på **[!UICONTROL More actions]** ![ikonen Fler åtgärder](assets/do-not-localize/more-actions.png) och välj **[!UICONTROL Add to Favorites]** för att markera samlingen som favorit.
+
+   ![Markera samlingar som favoriter](assets/mark-favorite-collection.png)
+
+   Samlingar som är markerade som favoriter visas nu på fliken **[!UICONTROL My Favorites]**. Du kan också ta bort samlingar från **[!UICONTROL My Favorites]**. Om du vill göra det klickar du på ikonen **[!UICONTROL More actions]** ![Fler åtgärder](assets/do-not-localize/more-actions.png) och väljer **[!UICONTROL Remove from Favorites]**.
+
+   ![Ta bort samling som favorit](assets/remove-favorite-collection.png)
+
+>[!NOTE]
+>
+>[Fäst- eller Ta bort nålsamling](#pin-unpin-collection) och [Markera samlingar som favoriter](#favorite-collection) är en begränsad tillgänglighetsfunktion. Du kan skapa och skicka in ett Adobe kundsupportärende för att aktivera dem för din distribution.
 
