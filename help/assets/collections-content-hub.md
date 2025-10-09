@@ -124,7 +124,7 @@ Om du dessutom vill filtrera samlingsvyn baserat på åtkomstbehörigheter går 
 ## Hämta resurser som är tillgängliga i en samling{#download-assets-within-collection}
 
 Om du vill hämta resurser som är tillgängliga i en samling går du till fliken **[!UICONTROL Collections]**.\
-Klicka på ikonen ![Hämta ](assets/download-icon.svg) på samlingskortet.
+Klicka på ikonen ![Hämta &#x200B;](assets/download-icon.svg) på samlingskortet.
 
 ![Fliken Samling](assets/download-collection.png)
 
