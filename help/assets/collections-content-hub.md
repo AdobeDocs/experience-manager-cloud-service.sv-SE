@@ -3,9 +3,9 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: 5c275b305dc128f158dfdac035595e4bb77960a9
+source-git-commit: 676edf3638ebf660aeb8204dc527d9066d2a731e
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1251'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ Om du dessutom vill filtrera samlingsvyn baserat på åtkomstbehörigheter går 
 ## Hämta resurser som är tillgängliga i en samling{#download-assets-within-collection}
 
 Om du vill hämta resurser som är tillgängliga i en samling går du till fliken **[!UICONTROL Collections]**.\
-Klicka på ikonen ![Hämta &#x200B;](assets/download-icon.svg) på samlingskortet.
+Klicka på ikonen ![Hämta ](assets/download-icon.svg) på samlingskortet.
 
 ![Fliken Samling](assets/download-collection.png)
 
@@ -167,7 +167,7 @@ Endast administratörer och skapare kan ta bort en samling. Om du vill ta bort e
 
 ## Fäst eller ta bort samling {#pin-unpin-collection}
 
-Content Hub-administratörer kan fästa samlingar i Content Hub för snabb åtkomst. Fastnålade samlingar visas i ett särskilt avsnitt på startsidan för Samlingar, vilket gör det enklare att hålla viktiga samlingar tillgängliga. För snabb åtkomst kan du fästa eller ta bort en samling genom att utföra stegen nedan:
+Content Hub-administratörer kan fästa samlingar i Content Hub för snabb åtkomst. Fastnålade samlingar visas i ett särskilt avsnitt på startsidan för Samlingar, vilket gör det enklare att hålla viktiga samlingar tillgängliga. Om du vill ha snabb åtkomst kan du fästa eller ta bort en samling genom att utföra stegen nedan:
 
 1. Bläddra bland de samlingar som du vill fästa eller ta bort.
 
@@ -187,17 +187,17 @@ Content Hub-administratörer kan fästa samlingar i Content Hub för snabb åtko
 
 Du kan markera samlingar som favoriter i Content Hub, vilket gör det enklare att ordna och hämta dem. När du har lagt till dina favoritsamlingar kan du enkelt komma åt dem från fliken Favoriter på Content Hub hemsida. Dessutom kan du söka efter resurser i Favoritsamlingar. Så här markerar du samlingar som favoriter:
 
-1. Bläddra bland de samlingar som du vill fästa eller ta bort.
+1. Bläddra bland de samlingar som du vill markera som favoriter.
 
 1. Klicka på **[!UICONTROL More actions]** ![ikonen Fler åtgärder](assets/do-not-localize/more-actions.png) och välj **[!UICONTROL Add to Favorites]** för att markera samlingen som favorit.
 
    ![Markera samlingar som favoriter](assets/mark-favorite-collection.png)
 
-   Samlingar som är markerade som favoriter visas nu under fliken **[!UICONTROL My Favorites]**. Du kan också ta bort samlingar från **[!UICONTROL My Favorites]**. Om du vill göra det klickar du på ikonen **[!UICONTROL More actions]** ![Fler åtgärder](assets/do-not-localize/more-actions.png) och väljer **[!UICONTROL Remove from Favorites]**.
+   Samlingar som är markerade som favoriter visas nu på fliken **[!UICONTROL My Favorites]**. Du kan också ta bort samlingar från **[!UICONTROL My Favorites]**. Om du vill göra det klickar du på ikonen **[!UICONTROL More actions]** ![Fler åtgärder](assets/do-not-localize/more-actions.png) och väljer **[!UICONTROL Remove from Favorites]**.
 
    ![Ta bort samling som favorit](assets/remove-favorite-collection.png)
 
 >[!NOTE]
 >
->[Fäst- eller Ta bort nålsamling](#pin-unpin-collection) och [Markera samlingar som favoriter](#favorite-collection) är begränsade tillgänglighetsfunktioner. Du kan [skapa och skicka in](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) ett kundsupportärende från Adobe för att aktivera dem för din distribution.
+>[Fäst- eller Ta bort nålsamling](#pin-unpin-collection) och [Markera samlingar som favoriter](#favorite-collection) är begränsade tillgänglighetsfunktioner. Du kan [skapa och skicka in](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) ett kundsupportärende från Adobe för att aktivera dem för din distribution.
 
