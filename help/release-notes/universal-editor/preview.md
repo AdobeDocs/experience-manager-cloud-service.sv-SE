@@ -3,7 +3,7 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: 1194a7f9abb15ce51b5cebe0b101f9aec3af782e
+source-git-commit: fcccac27d9648cf8bc313583e4d8acc2ed6b1879
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Versionsinformation om förhandsvisning i Universal Editor {#preview}
 
-Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att lanseras den 23 oktober 2025.
+Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner är planerade att släppas allmänt tillgängliga den 16 oktober 2025.
 
 Versionsinformationen **preview** är praktisk så att du vet vilka ändringar som kommer att göras i den universella redigeraren och kan testa dem genom att [växla till förhandsvisningsmiljön.](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties)
 
