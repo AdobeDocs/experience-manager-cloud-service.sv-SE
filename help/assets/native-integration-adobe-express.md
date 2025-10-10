@@ -4,9 +4,9 @@ description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: 200d0ae5546b5d50e8bad590f496b0fab62f0fe3
+source-git-commit: 76f23be65e71970742c40068c475da7d04c41a9c
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Så här börjar du använda AEM Assets i Adobe Express Editor:
 
 3. Klicka på **[!UICONTROL Assets]** i den vänstra navigeringsrutan. Adobe Express visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå.
 
-4. Bläddra bland eller sök resurser i databasen för att dra och släppa dem på arbetsytan. Du kan filtrera resurser med hjälp av olika tillgängliga filter, till exempel filtyp, MIME-typ och dimensioner.
+4. Bläddra eller sök efter resurser i databasen och dra och släpp dem på arbetsytan. Du kan också klicka på resurserna för att placera dem på arbetsytan. Du kan också filtrera resurser efter olika villkor, till exempel filtyp, MIME-typ och dimensioner.
 
    >[!NOTE]
    >
@@ -41,6 +41,21 @@ Så här börjar du använda AEM Assets i Adobe Express Editor:
 
    ![Inkludera resurser från Assets-tillägg](assets/adobe-express-native-integration.png)
 
+### Ersätta bild med AEM-överföring {#replace-image-using-aem-upload}
+
+Dessutom kan du ersätta de tillagda bilderna med **[!UICONTROL AEM Upload]**. Gör så här:
+
+1. Bläddra bland eller sök resurser och dra och släpp dem på arbetsytan.
+
+1. Markera den bild som du vill ersätta. Klicka på **[!UICONTROL Replace]** och välj **[!UICONTROL AEM Assets]** bland andra alternativ.
+
+   ![AEM Replace](assets/aem-replace.png)
+
+1. **[!UICONTROL AEM Upload]**-panelen öppnas i den vänstra navigeringsrutan. Adobe Express visar en lista över databaser som du har behörighet att komma åt tillsammans med en lista över resurser och mappar som är tillgängliga på rotnivå. Välj en resurs där för att förhandsvisa ersättningen på arbetsytan och klicka sedan på **[!UICONTROL Replace]** för att bekräfta.
+
+   >[!NOTE]
+   >
+   > SVG-filtyper stöds inte.
 
 ## Spara Adobe Express-projekt i AEM Assets {#save-express-projects-in-assets}
 
@@ -77,18 +92,15 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
     </tr>
     <tr>
         <td>[!UICONTROL JPEG]</td>
-        <td> 8 000 × 8 000 pixlar, maximalt 40 MB</td>
+        <td> 65 MP (t.ex. 8K x 8K eller 16 K x 4K) </td>
     </tr>
     <tr>
         <td>[!UICONTROL PNG]</td>
-        <td> 8 000 × 8 000 pixlar, maximalt 40 MB</td>
+        <td> 65 MP (t.ex. 8K x 8K eller 16 K x 4K) </td>
     </tr>
     <tr>
         <td>[!UICONTROL SVG]</td>
         <td> Högst 250 kB</td>
-    </tr>
-    <tr>
-    </tr>
     </tr>
     <tr>
         <td>[!UICONTROL MP4]</td>
