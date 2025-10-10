@@ -65,7 +65,7 @@ Skapa ett enkelt adaptivt formulär med den universella redigeraren för att hä
 ![lead-object-form](assets/create-lead.png)
 
 Hantera klickhändelsen i kryssrutan Skapa lead med regelredigeraren. Mappa indataparametrarna till värdena för de relevanta formulärobjekten enligt nedan. Visa ID:t för det Lead-objekt som nyligen skapats i TextField-objektet `leadid`
-![ rule-editor ](assets/create-leade-rule-editor.png)
+![&#x200B; rule-editor &#x200B;](assets/create-leade-rule-editor.png)
 
 ## Testa integreringen
 
