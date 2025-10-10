@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.10.0 i Adobe Experience Manager as a Clo
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: f0b28245213d77c23259fb753376a6670b408e5e
+source-git-commit: 673e6a2403026e33c3bbd225b7296a1fb8877404
 workflow-type: tm+mt
-source-wordcount: '1284'
+source-wordcount: '1318'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Lanseringsdatumet för Cloud Manager 2025.10.0 i AEM as a Cloud Service är tors
 Nästa planerade version är torsdagen den 6 november 2025.
 
 ## Nyheter {#what-is-new}
+
+* **Dedikerade pipelines för enbart stadium och enbart produktion**
+
+  Cloud Manager erbjuder nu dedikerade pipelines för driftsättning endast på scenen och enbart i produktionen, vilket ger större flexibilitet vid hantering av driftsättningar i staging- och produktionsmiljöer oberoende av varandra. Se [Dela endast scenen och endast produktion ](/help/implementing/cloud-manager/configuring-pipelines/stage-prod-only.md).
 
 * **AEM Cloud Health Assessment Service**
 
@@ -116,13 +120,13 @@ Intresserad? Mejla [beta_quickbuild_cmpipelines@adobe.com](mailto:beta_quickbuil
 
 Återgå snabbt till en tidigare distribution om den senaste kundkällkoden inte fungerar som förväntat - du behöver inte köra om hela pipelinen eller återställa implementeringar manuellt.<!--https://jira.corp.adobe.com/browse/CMGR-69556 -->
 
-![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**&#x200B;för en vald miljö.*
+![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**för en vald miljö.*
 
 ![Återställ föregående dialogruta för koddistribution](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed-dialogbox.png)
-*I dialogrutan **Återställ tidigare kod som distribuerats**&#x200B;granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
+*I dialogrutan **Återställ tidigare kod som distribuerats**granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
 
 ![Återställer aktiveringen](/help/implementing/cloud-manager/release-notes/assets/restoring-previous-code-deployed-restoring.png)
-*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**&#x200B;tills distributionen är klar.*
+*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**tills distributionen är klar.*
 
 ![Source-kodversionen används](/help/implementing/cloud-manager/release-notes/assets/environments-view-details-sourcecodeversion.png) *Vyn Miljöinformation, som visas ovan, visar nu även den aktiva källkodsversionen som används.*
 
