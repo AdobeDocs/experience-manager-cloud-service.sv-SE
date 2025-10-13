@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar OIDC (Open ID Connect) för AEM as a C
 feature: Security
 role: Admin
 exl-id: d2f30406-546c-4a2f-ba88-8046dee3e09b
-source-git-commit: f3cd1bc761c513ebb85351185e7aa0b6f6eb6f33
+source-git-commit: eb03c8941f848ff10c38a4880c8fe85387cc441f
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Först måste vi konfigurera OIDC-anslutningen. Flera OIDC-anslutningar kan konf
 
 Konfigurera nu OIDC-autentiseringshanteraren. Flera OIDC-anslutningar kan konfigureras. Var och en måste ha olika namn. Om de delar samma [OAK-externa identitetsleverantör](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html) kan de dela användare.
 
-1. Skapa konfigurationsfilen. I det här exemplet använder vi `org.apache.sling.auth.oauth_client.impl.OidcConnectionImpl~azure.cfg.json`. `azure`-suffixet måste vara en unik identifierare. Se ett exempel på konfigurationsfilen nedan:
+1. Skapa konfigurationsfilen. I det här exemplet använder vi `org.apache.sling.auth.oauth_client.impl.OidcAuthenticationHandler~azure.cfg.json`. `azure`-suffixet måste vara en unik identifierare. Se ett exempel på konfigurationsfilen nedan:
 
    ```
    {
