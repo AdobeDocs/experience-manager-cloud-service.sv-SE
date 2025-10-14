@@ -4,9 +4,9 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 2e136117508d7bd17993bf0e64b41aa860d71ab1
+source-git-commit: afa88d89b24ac425ba1b69ee9062e589d49ebee9
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2478'
 ht-degree: 0%
 
 ---
@@ -23,80 +23,70 @@ Kunder som har en licens hos en loggningsleverantör eller som är värd för en
   <tbody>
     <tr>
       <th>Loggteknik</th>
-      <th>Private Beta*</th>
       <th>AEM</th>
       <th>Dispatcher</th>
       <th>CDN</th>
     </tr>
     <tr>
       <td>Amazon S3</td>
-      <td style="background-color: #ffb3b3;">Ja</td>
       <td>Ja</td>
       <td>Ja</td>
-      <td style="background-color: #ffb3b3;">Nej</td>
+      <td style="background-color: #ffb3b3;">Framtidens</td>
     </tr>
     <tr>
       <td>Azure Blob Storage</td>
-      <td>Nej</td>
       <td>Ja</td>
       <td>Ja</td>
       <td>Ja</td>
     </tr>
     <tr>
       <td>DataDog</td>
-      <td>Nej</td>
       <td>Ja</td>
       <td>Ja</td>
       <td>Ja</td>
     </tr>
     <tr>
       <td>Dynatrace</td>
-      <td style="background-color: #ffb3b3;">Ja</td>
       <td>Ja</td>
       <td>Ja</td>
-      <td style="background-color: #ffb3b3;">Nej</td>
+      <td style="background-color: #ffb3b3;">Framtidens</td>
     </tr>
     <tr>
       <td>Elasticsearch<br>OpenSearch</td>
-      <td>Nej</td>
       <td>Ja</td>
       <td>Ja</td>
       <td>Ja</td>
     </tr>
     <tr>
       <td>HTTPS</td>
-      <td>Nej</td>
       <td>Ja</td>
       <td>Ja</td>
       <td>Ja</td>
     </tr>
     <tr>
       <td>New Relic</td>
-      <td style="background-color: #ffb3b3;">Ja</td>
       <td>Ja</td>
       <td>Ja</td>
-      <td style="background-color: #ffb3b3;">Nej</td>
+      <td style="background-color: #ffb3b3;">Framtidens</td>
     </tr>
     <tr>
       <td>Splunk</td>
-      <td>Nej</td>
       <td>Ja</td>
       <td>Ja</td>
       <td>Ja</td>
     </tr>
     <tr>
       <td>Sumologik</td>
-      <td style="background-color: #ffb3b3;">Ja</td>
       <td>Ja</td>
       <td>Ja</td>
-      <td style="background-color: #ffb3b3;">Nej</td>
+      <td style="background-color: #ffb3b3;">Framtidens</td>
     </tr>
   </tbody>
 </table>
 
 >[!NOTE]
 >
-> Om du har tekniker i Private Beta kan du skicka ett e-postmeddelande till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) för att begära åtkomst.
+> Kommande CDN-loggtekniker planeras för framtiden. Skicka e-post till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) för att registrera intresse.
 
 Vidarebefordran av loggar konfigureras på ett självbetjäningssätt genom att en konfiguration deklareras i Git och kan distribueras via Cloud Manager konfigurationspipelines för utvecklings-, scen- och produktionsmiljötyper. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
@@ -247,6 +237,8 @@ För CDN-loggar kan du tillåta att IP-adresserna listas enligt beskrivningen i 
 >[!NOTE]
 >
 >Det går inte att visa CDN-loggar från samma IP-adress som dina AEM-loggar kommer från. Det beror på att loggarna skickas direkt från Fast och inte från AEM Cloud Service.
+>
+>Därför går det inte att använda loggvidarebefordran med VPN-konfigurationer för avancerade nätverk.
 
 ## Konfiguration för loggningsmål {#logging-destinations}
 
@@ -293,6 +285,9 @@ IAM-principen bör tillåta användaren att använda `s3:putObject`.  Till exemp
 ```
 
 Mer information om hur du implementerar finns i [AWS Bucket Policy Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-policies.html).
+
+>[!NOTE]
+>Stöd för CDN-logg för AWS S3 planeras för framtiden. Skicka ett e-postmeddelande till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill registrera intresse.
 
 ### Azure Blob Storage {#azureblob}
 
@@ -491,7 +486,7 @@ Logga vidarebefordran till New Relic använder New Relic HTTPS API för förtär
 >
 >Loggvidarebefordran till New Relic är endast tillgängligt för kundägda New Relic-konton.
 >
->E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
+>Stöd för CDN-logg för New Relic Log API planeras för framtiden. Skicka ett e-postmeddelande till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill registrera intresse.
 >
 >New Relic tillhandahåller regionspecifika slutpunkter baserat på var ditt New Relic-konto är etablerat.  Mer information finns i [New Relic-dokumentationen](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/#endpoint).
 
@@ -515,8 +510,7 @@ Scope-attributet &quot;Ingest Logs&quot; krävs för token.
 ```
 
 >[!NOTE]
->
-> E-posta [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill begära åtkomst.
+>Stöd för CDN-logg för Dynatrace Log API planeras för framtiden. Skicka ett e-postmeddelande till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill registrera intresse.
 
 ### Splunk {#splunk}
 
@@ -570,6 +564,8 @@ data:
 ```
 
 >[!NOTE]
+>Stöd för CDN-logg för SumoLogic planeras för framtiden. Skicka ett e-postmeddelande till [aemcs-logforwarding-beta@adobe.com](mailto:aemcs-logforwarding-beta@adobe.com) om du vill registrera intresse.
+>
 > Du måste ha en Sumo Logic Enterprise-prenumeration för att kunna utnyttja funktionen för indexfält.  Loggarna för icke-företagsprenumerationer dirigeras till partitionen `sumologic_default` som standard.  Mer information finns i [Dokumentation för sumologisk partitionering](https://help.sumologic.com/docs/search/optimize-search-partitions/).
 
 ## Loggpostformat {#log-formats}
