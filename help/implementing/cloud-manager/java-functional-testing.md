@@ -131,7 +131,7 @@ Kommande ändringar av den inneslutna infrastrukturen för att köra funktionste
 >[!NOTE]
 >
 >Denna ändring måste utföras före 6 april 2024.
->>Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
+>&#x200B;>Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
 
 ### Lokal testkörning {#local-test-execution}
 
