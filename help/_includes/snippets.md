@@ -268,7 +268,7 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
 
 >[!IMPORTANT]
 >
->Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [ har tagits bort](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md#pwa-features).
+>Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [&#x200B; har tagits bort](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md#pwa-features).
 >
 >Befintliga projekt som använder den här funktionen stöds fortfarande, men nya projekt bör inte använda den här funktionen.
 

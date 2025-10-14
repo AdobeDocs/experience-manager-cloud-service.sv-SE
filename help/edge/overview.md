@@ -77,7 +77,7 @@ Edge Delivery Services använder GitHub så att du kan hantera och distribuera k
 
 ## Drifttelemetri {#telemetry}
 
-Adobe Experience Manager använder [Operational Telemetry](https://www.aem.live/docs/operational-telemetry) för att samla in operationsdata som är absolut nödvändiga för att upptäcka och åtgärda funktions- och prestandaproblem på webbplatser med Adobe Experience Manager. Operativa telemetridata kan användas för att diagnostisera prestandaproblem och för att mäta effekten av försök. Operativ telemetri bevarar besökarnas integritet genom [sampling](https://www.aem.live/docs/operational-telemetry#operational-telemetry-data-is-sampled) (endast en liten del av alla sidvisningar övervakas) och [genom att personligt identifierbar information utesluts ](https://www.aem.live/docs/operational-telemetry#what-data-is-being-collected) (PII).
+Adobe Experience Manager använder [Operational Telemetry](https://www.aem.live/docs/operational-telemetry) för att samla in operationsdata som är absolut nödvändiga för att upptäcka och åtgärda funktions- och prestandaproblem på webbplatser med Adobe Experience Manager. Operativa telemetridata kan användas för att diagnostisera prestandaproblem och för att mäta effekten av försök. Operativ telemetri bevarar besökarnas integritet genom [sampling](https://www.aem.live/docs/operational-telemetry#operational-telemetry-data-is-sampled) (endast en liten del av alla sidvisningar övervakas) och [genom att personligt identifierbar information utesluts &#x200B;](https://www.aem.live/docs/operational-telemetry#what-data-is-being-collected) (PII).
 
 ## Börja utforska {#start-exploring}
 

@@ -41,7 +41,7 @@ Uppdatera spelaren genom att följa stegen nedan:
 
 1. Återigen från fliken **Konfiguration** och klicka på knappen **Ändra till molnläge** under alternativet **Växla körläge**.
 
-   ![Ändra till molnläge under alternativet Växla körläge ](/help/screens-cloud/assets/player/installplayer-1.png)
+   ![Ändra till molnläge under alternativet Växla körläge &#x200B;](/help/screens-cloud/assets/player/installplayer-1.png)
 
 1. Klicka på **Bekräfta** som visas när du växlar till molnläge för att avregistrera spelaren.
 

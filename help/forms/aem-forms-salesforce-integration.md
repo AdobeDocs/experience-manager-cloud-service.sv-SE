@@ -38,7 +38,7 @@ Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgif
 
 Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-miljö:
 
-* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) och en API-användare för din organisation och hämta konsumentnyckeln och konsumenthemligheten för appen.
+* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) och en API-användare för din organisation och hämta konsumentnyckeln och konsumenthemligheten för appen.
 
 * Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html?lang=sv-SE) från början, som är anpassad för användning i AEM.
 

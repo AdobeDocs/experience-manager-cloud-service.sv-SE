@@ -40,7 +40,7 @@ Innan du installerar anslutningsprogrammet följer du de här förinstallationss
 
    * [IP-adresser för Workfront-kluster](https://experienceleague.adobe.com/docs/workfront/using/administration-and-setup/get-started-administration/configure-your-firewall.html?lang=sv-SE#ip-addresses-to-allow-for-clusters-1-2-3-5-7-8-and-9). Om du vill känna till IP-klustret i [!DNL Workfront] går du till **[!UICONTROL Setup]** > **[!UICONTROL System]** > **[!UICONTROL Customer Info]**.
 
-   * [API:er för Workfront Event Subscription ](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html?lang=sv-SE)
+   * [API:er för Workfront Event Subscription &#x200B;](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-api/event-subscriptions/event-subs-api.html?lang=sv-SE)
 
    >[!IMPORTANT]
    >

@@ -34,7 +34,7 @@ Här följer en kort översikt över de olika stegen:
 
 ## Konfigurera en HTML-mall för ett anpassat formulär
 
-Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden ](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en HTML-mall:
+Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden &#x200B;](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en HTML-mall:
 
 ### Alternativ 1: Markera en fil som innehåller HTML-mallen
 
@@ -64,7 +64,7 @@ Din HTML-mall har nu konfigurerats för det anpassade formuläret.
 
 ## Konfigurera en vanlig textmall för ett anpassat formulär
 
-Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden ](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en oformaterad textmall:
+Du kan konfigurera ett anpassat formulär så att ett e-postmeddelande skickas när det skickas med [**Skicka e-post**-åtgärden &#x200B;](/help/forms/configure-submit-action-send-email.md). Åtgärden innehåller två metoder för att konfigurera en oformaterad textmall:
 
 ### Alternativ 1: Välj en fil som innehåller mallen
 

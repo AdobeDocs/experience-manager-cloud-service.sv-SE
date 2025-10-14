@@ -47,7 +47,7 @@ Genom att skapa ett upprepningsbart avsnitt i ett formulär kan användarna ange
 
    Under det repeterbara avsnittet hittar användarna en intuitiv **Lägg till**-knapp som gör det enkelt att lägga till flera avsnitt.
 
-   ![upprepningsbart avsnitt, knappen Lägg till, om du vill lägga till flera avsnitt ](/help/edge/assets/repeatable-section-example.png)
+   ![upprepningsbart avsnitt, knappen Lägg till, om du vill lägga till flera avsnitt &#x200B;](/help/edge/assets/repeatable-section-example.png)
 
 
 ## Ange minsta och högsta antal upprepningar

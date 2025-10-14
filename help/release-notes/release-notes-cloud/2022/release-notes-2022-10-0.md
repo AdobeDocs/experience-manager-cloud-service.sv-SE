@@ -89,7 +89,7 @@ Titta på videon med versionsöversikten för oktober 2022 om du vill se en samm
 
 * AEM as a Cloud Service (Author Service) är nu integrerat med Unified Shell för att förbättra användarupplevelsen och sammanföra den med alla andra Experience Cloud-program. Mer information finns i AEM som en [Cloud Service i Unified Shell](/help/overview/aem-cloud-service-on-unified-shell.md).
 
-* Som tidigare nämnts i versionsinformationen är nu användningen av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) föråldrat och påtvingat. Se [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publish Content Tree ](/help/operations/replication.md#publish-content-tree-workflow) för förslag på metoder för att replikera dessa stora innehållspaket.
+* Som tidigare nämnts i versionsinformationen är nu användningen av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) föråldrat och påtvingat. Se [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publish Content Tree &#x200B;](/help/operations/replication.md#publish-content-tree-workflow) för förslag på metoder för att replikera dessa stora innehållspaket.
 
 * Dispatcher-konfigurationen refererar nu till en fil som listar vanliga frågeparametrar för marknadsföringskampanjer. Kunderna kan välja att avkommentera de parametrar som är relevanta för dem, vilket ger bättre cachning. Mer information finns i [Parametrar för marknadsföringskampanjer](/help/implementing/dispatcher/caching.md#marketing-parameters).
 

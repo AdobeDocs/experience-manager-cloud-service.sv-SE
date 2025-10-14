@@ -29,7 +29,7 @@ Följande version (2021.4.0) kommer att vara den 29 april 2021.
 
 ## [!DNL Adobe Experience Manager Sites] as a Cloud Service {#sites}
 
-* [En progressiv webbprogramversion (PWA) av en webbplats ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) kan nu aktiveras på projektnivå via enkel konfiguration.
+* [En progressiv webbprogramversion (PWA) av en webbplats &#x200B;](/help/sites-cloud/authoring/sites-console/enable-pwa.md) kan nu aktiveras på projektnivå via enkel konfiguration.
 * Modelltillägg för innehållsfragment - nu möjligt att definiera datatyper med flera rader som flerfältslista.
 * Förbättringar i gränssnittet för innehållsfragmentredigeraren - kapslade underordnade fragment visas nu i vägbeskrivningar och förbättrad vy för åtgärder för publicering, spara och spara och avsluta
 

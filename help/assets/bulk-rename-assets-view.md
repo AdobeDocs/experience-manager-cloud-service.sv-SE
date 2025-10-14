@@ -36,7 +36,7 @@ Följ stegen nedan om du vill byta namn på huvuddelen av resurserna samtidigt m
 
 1. Klicka på **[!UICONTROL Execute]** om du vill tillåta att AI byter namn på resurser så som anges i uppmaningen.
 
-1. [Valfritt] Klicka på ikonen ![Ångra ](assets/do-not-localize/undo.svg) om du vill ångra eller avbryta den senaste åtgärden du utförde.
+1. [Valfritt] Klicka på ikonen ![Ångra &#x200B;](assets/do-not-localize/undo.svg) om du vill ångra eller avbryta den senaste åtgärden du utförde.
 
 1. Kontrollera ändringarna i kolumnen [!UICONTROL New name preview] och klicka på **[!UICONTROL Save]**.
 

@@ -36,7 +36,7 @@ Single-page Applications using the JavaScript SPA SDK for AEM are model-driven:
 1. Front-end-komponenter registrerar sig själva för [Component Mapping Store](#componentmapping-module).
 1. Sedan itererar [behållaren](blueprint.md#container), när den har tillhandahållits med en modell av [modellprovidern](blueprint.md#the-model-provider), över sitt modellinnehåll (`:items`).
 
-1. Om det finns en sida hämtar dess underordnade sidor (`:children`) först en komponentklass från [ Component Mapping](blueprint.md#componentmapping) och instansierar den sedan.
+1. Om det finns en sida hämtar dess underordnade sidor (`:children`) först en komponentklass från [&#x200B; Component Mapping](blueprint.md#componentmapping) och instansierar den sedan.
 
 ## Programinitiering {#app-initialization}
 

@@ -29,7 +29,7 @@ Utför följande steg för att komma åt [!UICONTROL Adobe Experience Manager (A
 1. På din [!DNL Figma]-hemsida klickar du på **[!UICONTROL Actions]** i verktygsfältet längst ned på arbetsytan och söker efter [!DNL Adobe Experience Manager (AEM) Assets Connector] i sökfältet som finns i dialogrutan.
 1. Välj [!DNL Adobe Experience Manager (AEM) Assets Connector] om du vill visa panelen [!DNL Adobe Experience Manager (AEM) Assets Connector]. [Importera [!DNL AEM] resurser till din [!DNL Figma] arbetsyta](#import-aem-assets-into-figma-workflow) med den här panelen.
    ![åtgärder](/help/assets/assets/actions-on-figma.png)
-Du kan även komma åt den [[!DNL Adobe Experience Manager (AEM) Assets Connector] ](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) som är tillgänglig i [!DNL Figma] användargruppen, klicka på **[!UICONTROL Open in...]** , välja en nyligen använd fil eller skapa en ny fil och klicka på **[!UICONTROL Run]** för att komma åt panelen [!DNL Adobe Experience Manager (AEM) Assets Connector] .
+Du kan även komma åt den [[!DNL Adobe Experience Manager (AEM) Assets Connector] &#x200B;](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) som är tillgänglig i [!DNL Figma] användargruppen, klicka på **[!UICONTROL Open in...]** , välja en nyligen använd fil eller skapa en ny fil och klicka på **[!UICONTROL Run]** för att komma åt panelen [!DNL Adobe Experience Manager (AEM) Assets Connector] .
    ![plugin-page-on-figma-community](/help/assets/assets/plugin-page-on-figma-community.png)
 
 >[!NOTE]

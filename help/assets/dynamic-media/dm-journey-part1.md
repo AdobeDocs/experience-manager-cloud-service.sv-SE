@@ -262,7 +262,7 @@ Ett annat sätt att förhandsgranska en resurs är att välja bildresursen och s
 ![Förhandsgranska en resurs baserat på visningsförinställningen Zooma vertikalt ljus](/help/assets/dynamic-media/assets/dm-viewer-preset.png)
 _Förhandsgranska en resurs baserat på den valda visningsförinställningen för ZoomVertical_light. Muspekaren (`+`) flyttades över bevakningen för att zooma in. Lägg märke till knapparna URL och Bädda in._
 
-Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&amp;config=jpearldemo/ZoomVertical_light){target="_blank"}.
+Återgivningen ovan är live! [Prova](https://s7d1.scene7.com/s7viewers/html5/ZoomVerticalViewer.html?asset=jpearldemo/AdobeStock_28563982&config=jpearldemo/ZoomVertical_light){target="_blank"}.
 
 ## Valfritt - Läs mer
 

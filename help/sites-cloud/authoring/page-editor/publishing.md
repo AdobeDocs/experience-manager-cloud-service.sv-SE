@@ -59,4 +59,4 @@ När du redigerar en sida med sidredigeraren och vill avpublicera sidan väljer 
 
 ## Publicera och avpublicera från Sites Console {#publishing-sites-console}
 
-Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
+Du kan också publicera [&#x200B; från webbplatskonsolen &#x200B;](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.

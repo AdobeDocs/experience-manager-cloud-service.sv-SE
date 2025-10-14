@@ -55,7 +55,7 @@ Följ stegen nedan för att använda miniatyrbilden i videoklipp:
 
 1. Markera videon och klicka på ikonen Konfigurera (*skiftnyckel*) för att öppna videoegenskaperna.
 
-   ![Markerad videoresursbild med en pil som pekar på ikonen Konfigurera, som visas som en skiftnyckel. i verktygsfältet ](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png).
+   ![Markerad videoresursbild med en pil som pekar på ikonen Konfigurera, som visas som en skiftnyckel. i verktygsfältet &#x200B;](/help/screens-cloud/using-core-product-features/assets/thumbnail-3.png).
 
 1. Dialogrutan **Video** öppnas där du kan visa släppzonen **Miniatyrbild**.
 

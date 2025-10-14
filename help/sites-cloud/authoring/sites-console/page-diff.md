@@ -48,7 +48,7 @@ Om du till exempel jämför versioner visas den aktuella versionen till vänster
 
 Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webbläsarfönstret.
 
-![Versioner sida vid sida ](/help/sites-cloud/authoring/assets/versions-side-by-side.png)
+![Versioner sida vid sida &#x200B;](/help/sites-cloud/authoring/assets/versions-side-by-side.png)
 
 Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
 

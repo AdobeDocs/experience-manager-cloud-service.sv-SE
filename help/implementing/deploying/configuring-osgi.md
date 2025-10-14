@@ -183,7 +183,7 @@ JSON-formaterade OSGi-konfigurationsfiler kan skrivas för hand direkt i AEM. De
 1. Skapa en `<PID>.cfg.json`-fil i den här konfigurationsmappen. PID är den beständiga identiteten för OSGi-komponenten. Det är vanligtvis det fullständiga klassnamnet för OSGi-komponentimplementeringen. Till exempel:
    `/apps/.../config/com.example.workflow.impl.ApprovalWorkflow.cfg.json`
 I-konfigurationsfabrikens namn använder namnkonventionen `<factoryPID>-<name>.cfg.json`
-1. Öppna den nya `.cfg.json`-filen och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och -värdepar enligt [ JSON OSGi-konfigurationsformatet ](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
+1. Öppna den nya `.cfg.json`-filen och definiera nyckel/värde-kombinationerna för OSGi-egenskapen och -värdepar enligt [&#x200B; JSON OSGi-konfigurationsformatet &#x200B;](https://sling.apache.org/documentation/bundles/configuration-installer-factory.html#configuration-files-cfgjson-1).
 1. Spara ändringarna i den nya `.cfg.json`-filen
 1. Lägg till och implementera din nya OSGi-konfigurationsfil i Git
 

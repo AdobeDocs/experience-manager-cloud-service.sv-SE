@@ -60,12 +60,12 @@ Om du vill konfigurera hCaptcha® med AEM Forms måste du hämta sitekey och hem
    1. Välj en konfigurationsbehållare, skapad eller uppdaterad, enligt beskrivningen i föregående avsnitt. Välj **[!UICONTROL Create]**.
 
       ![Configuration Captcha®](assets/config-hcaptcha.png)
-   1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för hCaptcha®-tjänsten [ som hämtats i förutsättning ](#prerequisite). Välj **[!UICONTROL Create]**.
+   1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för hCaptcha®-tjänsten [&#x200B; som hämtats i förutsättning &#x200B;](#prerequisite). Välj **[!UICONTROL Create]**.
 
       ![Konfigurera Cloud Service för att ansluta din AEM Forms-miljö till Captcha®](assets/create-hcaptcha-config.png)
 
 >[!NOTE]
-> Användarna behöver inte ändra [Verifierings-URL:en för klientsidan ](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Verifierings-URL:en för serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering. I vissa länder kan slutpunkterna skilja sig åt. Mer information finns på [hCaptcha® FAQ](https://docs.hcaptcha.com/faq#does-hcaptcha-support-access-by-users-in-china).
+> Användarna behöver inte ändra [Verifierings-URL:en för klientsidan &#x200B;](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Verifierings-URL:en för serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering. I vissa länder kan slutpunkterna skilja sig åt. Mer information finns på [hCaptcha® FAQ](https://docs.hcaptcha.com/faq#does-hcaptcha-support-access-by-users-in-china).
 
 När hCAPTCHA-tjänsten har konfigurerats kan den användas i en adaptiv form.
 

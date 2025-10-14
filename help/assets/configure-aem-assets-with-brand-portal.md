@@ -436,7 +436,7 @@ Så här konfigurerar du molntjänsten i Brand Portal:
 Du kan nu testa konfigurationen genom att kontrollera distributionsagenten och publicera resurser på Brand Portal.
 
 **Tillåtslista IP-adresser i SPS om säker förhandsvisning är aktiverat**
-Om du använder Dynamic Media-Scene7 med [säker förhandsvisning aktiverat](#https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=sv-SE) för ett företag rekommenderar vi att Scene7-företagsadministratören [tillåtslista IP:n för den offentliga utgången ](#https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=sv-SE#testing-the-secure-testing-service) för respektive region med hjälp av SPS-gränssnittet (Scene7 Publishing System) flash.
+Om du använder Dynamic Media-Scene7 med [säker förhandsvisning aktiverat](#https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=sv-SE) för ett företag rekommenderar vi att Scene7-företagsadministratören [tillåtslista IP:n för den offentliga utgången &#x200B;](#https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/testing-assets-making-them-public.html?lang=sv-SE#testing-the-secure-testing-service) för respektive region med hjälp av SPS-gränssnittet (Scene7 Publishing System) flash.
 IP-adresserna för utgångar är följande:
 
 | **Region** | **Utreses-IP** |

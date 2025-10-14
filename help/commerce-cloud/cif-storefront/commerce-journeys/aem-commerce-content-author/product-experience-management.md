@@ -19,7 +19,7 @@ Lär dig hantera produktupplevelser.
 
 ## Story hittills {#story-so-far}
 
-I det tidigare dokumentet om Adobe Experience Manager (AEM) Content and Commerce, [Hantera upplevelser i mellanlagrade produktkataloger, ](/help/commerce-cloud/cif-storefront/commerce-journeys/aem-commerce-content-author/staged-catalog.md) lärde du dig att hantera upplevelser i mellanlagrade produktkataloger.
+I det tidigare dokumentet om Adobe Experience Manager (AEM) Content and Commerce, [Hantera upplevelser i mellanlagrade produktkataloger, &#x200B;](/help/commerce-cloud/cif-storefront/commerce-journeys/aem-commerce-content-author/staged-catalog.md) lärde du dig att hantera upplevelser i mellanlagrade produktkataloger.
 
 ## Syfte {#objective}
 

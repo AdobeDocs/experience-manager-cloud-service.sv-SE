@@ -87,7 +87,7 @@ Den primära begränsningen för en fråga bör vara en egenskapsmatchning, efte
 
 Frågemotorn hanterar bara ett enda index. Det innebär att ett befintligt index kan och bör anpassas genom att fler anpassade indexegenskaper läggs till i det.
 
-I [JCR-frågans ](#jcr-query-cheatsheet)-mallavsnitt i det här dokumentet visas tillgängliga begränsningar och även hur en indexdefinition måste se ut så att den plockas upp. Använd [frågeprestandaverktyget](#query-performance-tool) för att testa frågan och kontrollera att rätt index används och att frågemotorn inte behöver utvärdera begränsningar utanför indexet.
+I [JCR-frågans &#x200B;](#jcr-query-cheatsheet)-mallavsnitt i det här dokumentet visas tillgängliga begränsningar och även hur en indexdefinition måste se ut så att den plockas upp. Använd [frågeprestandaverktyget](#query-performance-tool) för att testa frågan och kontrollera att rätt index används och att frågemotorn inte behöver utvärdera begränsningar utanför indexet.
 
 ### Beställning {#ordering}
 
@@ -103,7 +103,7 @@ Om en viss resultatordning begärs, finns det två sätt för frågemotorn att u
 
 Den hämtade storleken på frågeresultatet är en viktig faktor för frågeprestanda. Eftersom resultatet hämtas på ett lat sätt är det skillnad på att bara hämta de första 20 resultaten jämfört med att hämta 10 000 resultat, både i körtid och minnesanvändning.
 
-Det innebär också att storleken på resultatmängden bara kan bestämmas korrekt om alla resultat hämtas. Därför bör den hämtade resultatuppsättningen alltid begränsas, antingen genom att frågan utökas (mer information finns i [JCR-frågans ](#jcr-query-cheatsheet)-avsnitt i det här dokumentet) eller genom att resultatens läsningar begränsas.
+Det innebär också att storleken på resultatmängden bara kan bestämmas korrekt om alla resultat hämtas. Därför bör den hämtade resultatuppsättningen alltid begränsas, antingen genom att frågan utökas (mer information finns i [JCR-frågans &#x200B;](#jcr-query-cheatsheet)-avsnitt i det här dokumentet) eller genom att resultatens läsningar begränsas.
 
 En sådan gräns förhindrar även att frågemotorn hissar på **traversal-gränsen** på 100 000 noder, vilket leder till ett framtvingat stopp av frågan.
 
@@ -241,7 +241,7 @@ I det här avsnittet av planen anges att
 
 Den här frågekörningsplanen resulterar i att alla resurser under `/content/dam` läses från indexet och sedan filtreras ytterligare av frågemotorn (som endast inkluderar de som matchar den icke-indexerade egenskapsbegränsningen i resultatuppsättningen).
 
-Även om bara en liten procentandel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"` måste frågan läsa ett stort antal noder för att (försöka) fylla den begärda sidan med resultat. Detta kan resultera i en fråga som inte fungerar som den ska, vilket visas som ett lågt `Read Optimization`-resultat i verktyget Frågeprestanda) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [ Indexgenomgång ](#index-traversal)).
+Även om bara en liten procentandel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"` måste frågan läsa ett stort antal noder för att (försöka) fylla den begärda sidan med resultat. Detta kan resultera i en fråga som inte fungerar som den ska, vilket visas som ett lågt `Read Optimization`-resultat i verktyget Frågeprestanda) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [&#x200B; Indexgenomgång &#x200B;](#index-traversal)).
 
 Om du vill optimera prestandan för den andra frågan skapar du en anpassad version av `damAssetLucene-9`-indexet (`damAssetLucene-9-custom-1`) och lägger till följande egenskapsdefinition -
 

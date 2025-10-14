@@ -52,7 +52,7 @@ Du kan öppna Live-kopieringsöversikt från:
 1. Öppna **Egenskaper** för lämplig ritningssida.
 1. Öppna fliken **Utskrift** - alternativet **Översikt över Live-kopia** visas i det övre verktygsfältet:
 
-   ![Egenskaper för utkast ](../assets/live-copy-blueprint-tab.png)
+   ![Egenskaper för utkast &#x200B;](../assets/live-copy-blueprint-tab.png)
 
 1. Välj **Översikt över Live-kopia** om du vill visa och använda översikten över alla Live-kopior som hör till den aktuella planen.
 

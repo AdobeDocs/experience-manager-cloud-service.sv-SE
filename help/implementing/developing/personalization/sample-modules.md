@@ -58,7 +58,7 @@ Konfigurera gränssnittsmodulen contexthub.base med ett JavaScript-objekt i JSON
 
 ### Exempel {#example}
 
-I följande exempel konfigureras en c`ontexthub.base`-gränssnittsmodul så att den visar information från ett [ contexthub.emulators](sample-stores.md#granite-emulators-sample-store-candidate) -arkiv. Objektet `template` visar hur du hämtar data från arkivet med hjälp av nyckeln som skapas av objektet `storeMapping`.
+I följande exempel konfigureras en c`ontexthub.base`-gränssnittsmodul så att den visar information från ett [&#x200B; contexthub.emulators](sample-stores.md#granite-emulators-sample-store-candidate) -arkiv. Objektet `template` visar hur du hämtar data från arkivet med hjälp av nyckeln som skapas av objektet `storeMapping`.
 
 ```javascript
 {

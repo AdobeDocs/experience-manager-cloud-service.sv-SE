@@ -125,7 +125,7 @@ Mer information finns i Använda Java 11-stöd.
 
 * [Loggar kan vidarebefordras till Splunk-konton](/help/implementing/developing/introduction/logging.md#splunk-logs), som gör att organisationer kan använda sin Splunk-investering.
 
-* [En statisk, dedikerad IP-adress ](/help/implementing/developing/introduction/development-guidelines.md#dedicated-egress-ip-address) kan tilldelas för utgående trafik som programmeras i Java-kod, vilket kan vara användbart för vissa integreringar.
+* [En statisk, dedikerad IP-adress &#x200B;](/help/implementing/developing/introduction/development-guidelines.md#dedicated-egress-ip-address) kan tilldelas för utgående trafik som programmeras i Java-kod, vilket kan vara användbart för vissa integreringar.
 
 * Ported AEM Analytics cloud service UI from Classic UI to new AEM UI. Platsen för Analytics-molntjänsten i AEM från `/etc` till `/conf` har också flyttats för att anpassas till andra AEM molntjänster.
 

@@ -60,7 +60,7 @@ Gör så här för att aktivera [!DNL Dynamic Media with OpenAPI] för din molnt
 
 1. Klicka på **[!UICONTROL Activate]** i bekräftelsedialogrutan för att starta aktiveringsprocessen för [!DNL Dynamic Media with OpenAPI]. När aktiveringen är klar visas följande statusuppdateringar:
    1. **[!UICONTROL Environment stage]**: **[!UICONTROL Running]**
-   1. ![DM har aktiverats ](/help/assets/assets/Images_icon.svg)**[!UICONTROL Dynamic Media]**:**[!UICONTROL OpenAPI capabilities are activated]**
+   1. ![DM har aktiverats &#x200B;](/help/assets/assets/Images_icon.svg)**[!UICONTROL Dynamic Media]**:**[!UICONTROL OpenAPI capabilities are activated]**
 
       ![aktiveringen lyckades](/help/assets/assets/activation-successful.png){width="700" align="left"}
 
@@ -69,7 +69,7 @@ Gör så här för att aktivera [!DNL Dynamic Media with OpenAPI] för din molnt
 Om aktiveringen misslyckas visas följande statusuppdateringar i Cloud Manager:
 
 * **[!UICONTROL Environment stage]**: **[!UICONTROL DM with OpenAPI Failed]**
-* ![DM har aktiverats ](/help/assets/assets/Images_icon.svg)**[!UICONTROL Dynamic Media]**:**[!UICONTROL OpenAPI capabilities failed to activate]**
+* ![DM har aktiverats &#x200B;](/help/assets/assets/Images_icon.svg)**[!UICONTROL Dynamic Media]**:**[!UICONTROL OpenAPI capabilities failed to activate]**
 
   ![försök aktivera igen](/help/assets/assets/retry-dm-openapi-failed-activation.png){width="700" align="left"}
 

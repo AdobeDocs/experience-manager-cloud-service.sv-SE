@@ -50,7 +50,7 @@ Titta på videon [Versionsöversikt från augusti 2021](https://video.tv.adobe.c
 
 * Användarna kan nu sortera de resurser som visas i sökresultaten i kolumn- och kortvyn. Sorteringen fungerar på kolumnerna Namn, Skapad, Ändrad eller Ingen.
 
-  ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer ](/help/assets/assets/sort-searched-assets.png)
+  ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer &#x200B;](/help/assets/assets/sort-searched-assets.png)
   *Figur: Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer.*
 
 ### Fel som har åtgärdats i [!DNL Assets] {#assets-bugs-fixed}

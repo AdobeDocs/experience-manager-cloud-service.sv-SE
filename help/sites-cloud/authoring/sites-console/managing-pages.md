@@ -154,7 +154,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
    * **Nu** utlöser ett [asynkront jobb](#asynchronous-actions) för att flytta sidan omedelbart.
    * **Senare** låter dig schemalägga ett datum för flytten som ska bearbetas.
 
-   ![Definierar när ](assets/managing-pages-move-page-now-later.png) ska flyttas
+   ![Definierar när &#x200B;](assets/managing-pages-move-page-now-later.png) ska flyttas
 
 1. Tryck eller klicka på **Fortsätt** för att slutföra sidflytten.
 
@@ -208,7 +208,7 @@ Status för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs St
 Du kan [låsa/låsa upp en sida](/help/sites-cloud/authoring/page-editor/edit-content.md#locking-a-page) från en konsol eller när du redigerar en enskild sida. Information om huruvida en sida är låst visas också på båda platserna.
 
 ![Lås-knapp](/help/sites-cloud/authoring/assets/lock.png)
-![ Knappen Lås upp ](/help/sites-cloud/authoring/assets/unlock.png)
+![&#x200B; Knappen Lås upp &#x200B;](/help/sites-cloud/authoring/assets/unlock.png)
 
 ### Skapa en ny mapp {#creating-a-new-folder}
 

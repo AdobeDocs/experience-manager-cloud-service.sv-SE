@@ -36,7 +36,7 @@ Fördelar med begränsad åtkomst till SharePoint Site:
 
 Följ stegen nedan för att konfigurera SharePoint Sites med begränsad åtkomst med hjälp av behörighetsområden:
 
-1. [Skapa ett program med ](#create-an-application-with-the-limited-permission-in-the-azure-portal)
+1. [Skapa ett program med &#x200B;](#create-an-application-with-the-limited-permission-in-the-azure-portal)
 1. [Ange auktoriseringsomfånget på AEM-instansen](#set-the-authorization-scope-at-aem-instance)
 
 ### Skapa ett program med begränsad behörighet i Azure-portalen
@@ -52,7 +52,7 @@ Mer information om hur du hämtar `Client ID`, `Client Secret` och `Tenant ID` f
 
 Om du vill använda API-behörigheten `Sites.Selected` måste du ha ett program som är registrerat i Azure-portalen med rätt behörigheter för SharePoint Online Sites. Installationen säkerställer att programmet har den behörighet som krävs för att interagera med SharePoint Site inom det definierade området, vilket ger den begränsade åtkomst som krävs.
 
-Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i ](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
+Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i &#x200B;](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
 
 ### Ange auktoriseringsomfånget på AEM-instansen
 

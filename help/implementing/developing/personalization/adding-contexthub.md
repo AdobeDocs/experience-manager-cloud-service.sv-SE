@@ -145,7 +145,7 @@ De regler som används för att lösa dessa segment sammanfattas enligt följand
 
 ## Debugging ContextHub {#debugging-contexthub}
 
-Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub ](configuring-contexthub.md#logging-debug-messages-for-contexthub).
+Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub &#x200B;](configuring-contexthub.md#logging-debug-messages-for-contexthub).
 
 ## Se en översikt över ContextHub Framework {#see-an-overview-of-the-contexthub-framework}
 

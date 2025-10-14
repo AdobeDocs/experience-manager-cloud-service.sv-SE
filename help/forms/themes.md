@@ -234,7 +234,7 @@ En specifik komponent påverkar objekt i den specifika kategorin. När du format
 
    * **Visa CSS**: Gör att du kan visa CSS för den markerade komponenten.
 
-  I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **Simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs närmare i [ nedan](themes.md#using-rail).
+  I sidofältet finns dessutom en pil längst ned. När du klickar på pilen får du ytterligare två alternativ: **Simulera lyckade** och **Simulera fel.** Dessa alternativ, tillsammans med de alternativ som beskrivs ovan, beskrivs närmare i [&#x200B; nedan](themes.md#using-rail).
 
 [![Temaredigeraren](assets/themes.png)](assets/themes-1.png) **A.** Sidofältet **B.** Arbetsytan
 
@@ -295,11 +295,11 @@ Temaredigeraren cachelagrar upp till tio format som har använts på en komponen
 
 När du formaterar en komponent cachelagras formaten och visas i listrutan. I det här exemplet är textrutans etikett formaterad för att ändra teckenstorlek och färg. Du kan följa liknande steg när du väljer en bild eller ändrar färger för att formatera en komponent. Lägg märke till hur formatet cachelagras och visas i listrutan när fältetikettens format ändras.
 
-![Teckensnittsformat som cachelagrats för en komponent som är tillgänglig för en annan ](assets/font-style-cached1.png)
+![Teckensnittsformat som cachelagrats för en komponent som är tillgänglig för en annan &#x200B;](assets/font-style-cached1.png)
 
 I det här exemplet ändras formatet för fältetiketten och när du väljer Responsiv panelbeskrivning för formatet läggs en listpost till i resursbiblioteket. Posten i resursbiblioteket kan användas för att ändra formatet för responsiv panelbeskrivning.
 
-När ett format läggs till i resursbiblioteket är det tillgängligt för andra teman och i [formattsläget ](inline-style-adaptive-forms.md) i användargränssnittet för formulärbyggaren. På samma sätt cachelagras formatet och är tillgängligt i teman när du använder stilläget för användargränssnittet i formulärbyggaren <!-- or interactive communication editor --> för att formatera en komponent.
+När ett format läggs till i resursbiblioteket är det tillgängligt för andra teman och i [formattsläget &#x200B;](inline-style-adaptive-forms.md) i användargränssnittet för formulärbyggaren. På samma sätt cachelagras formatet och är tillgängligt i teman när du använder stilläget för användargränssnittet i formulärbyggaren <!-- or interactive communication editor --> för att formatera en komponent.
 
 Med plusknappen mot resursbiblioteket kan du spara formatet med ett namn som du anger permanent. Med plusknappen sparas formatet även om du inte klickar på knappen Spara i sidlisten för att tillämpa formatet på en komponent. Den plusknapp som används för att spara ett format för senare bruk är inte tillgänglig i formatläget.
 

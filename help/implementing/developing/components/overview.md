@@ -44,7 +44,7 @@ Varje AEM:
 
 ## Grundläggande komponenter i AEM {#aem-core-components}
 
-[De AEM kärnkomponenterna ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) som AEM för att snabba upp utvecklingstiden och minska underhållskostnaderna för dina webbplatser.
+[De AEM kärnkomponenterna &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) som AEM för att snabba upp utvecklingstiden och minska underhållskostnaderna för dina webbplatser.
 
 Core Components ingår i AEM as a Cloud Service och [WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
 

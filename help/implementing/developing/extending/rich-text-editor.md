@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
-Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa ](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
+Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa &#x200B;](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
 
 De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
@@ -95,13 +95,13 @@ Grundfunktionerna i textredigeraren aktiveras, eller inaktiveras, av värdet fö
 
 I följande tabell visas de aktuella plugin-programmen:
 
-* Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när [ett plugin-program ](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) aktiveras.
+* Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när [ett plugin-program &#x200B;](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) aktiveras.
 * Tillåtna värden för egenskapen `features`.
 * En beskrivning av de funktioner som tillhandahålls av plugin-programmet.
 
 | Plug-in-ID | funktioner | Beskrivning |
 |--- |--- |--- |
-| redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och klistra in ](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
+| redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och klistra in &#x200B;](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
 | findreplace | `find`, `replace` | Sök och ersätt. |
 | format | `bold`, `italic`, `underline` | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
 | image | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |

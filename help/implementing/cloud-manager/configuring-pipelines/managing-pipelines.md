@@ -116,7 +116,7 @@ Med Cloud Manager kan du köra flera olika rörledningar samtidigt, vilket förb
 **Så här kör du flera pipelines:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. Klicka på ikonen ![Arbetsflöde ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Förberedelser** på den vänstra menyn.
+1. Klicka på ikonen ![Arbetsflöde &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Förberedelser** på den vänstra menyn.
 1. Markera kryssrutorna intill de rörledningar du vill köra i tabellen på sidan **Rörledning**.
 Om det behövs klickar du på ![Filterikon, tratt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filter** för att sortera pipelines efter namn, miljö, distribuerad kodtyp eller en kombination av alla tre.
 1. Klicka på **Kör markerat (x)** i sidans övre högra hörn.

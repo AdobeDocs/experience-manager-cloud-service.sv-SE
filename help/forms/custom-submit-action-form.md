@@ -145,7 +145,7 @@ Utför följande steg för att skapa en anpassad Skicka-åtgärd som sparar data
 
 5. Öppna ett anpassat formulär. Klicka på knappen **Redigera** bredvid **Start** för att öppna dialogrutan **Redigera** i behållaren för anpassat formulär. Den nya åtgärden visas på fliken **Skicka åtgärder**. Om du väljer åtgärd **Store och e-post** visas konfigurationen som lagts till i noden dialog.
 
-   ![Dialogrutan Skicka åtgärd ](assets/store_and_email_submit_action_dialog.jpg)
+   ![Dialogrutan Skicka åtgärd &#x200B;](assets/store_and_email_submit_action_dialog.jpg)
 
 6. **Använd åtgärden för att slutföra en uppgift.**
 

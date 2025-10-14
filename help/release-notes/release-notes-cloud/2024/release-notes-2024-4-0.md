@@ -117,7 +117,7 @@ En ny förbättrad användarupplevelse för [att skapa länkdelningar](/help/ass
 
   Uppdateringen innehåller även följande förbättringar av regelredigeringsfunktionen. Du kan:
 
-   * Implementera kraftfull [-logik för när-då-else ](/help/forms/rule-editor-core-components.md#when) för villkorlig körning.
+   * Implementera kraftfull [-logik för när-då-else &#x200B;](/help/forms/rule-editor-core-components.md#when) för villkorlig körning.
    * Utnyttja moderna JavaScript-funktioner som låt- och pilfunktioner (ES10-stöd).
    * Validera eller återställ inte bara fält, utan även hela paneler och formulär, vilket ger bättre kontroll över användarinteraktioner.
 
@@ -249,7 +249,7 @@ Nu får du en bättre upplevelse när du filtrerar filer. Den förbättrade funk
 
 Få snabbare åtkomst till relevanta filer och ett mer intuitivt användargränssnitt, vilket gör sökningen smidigare och effektivare.
 
-![snabbsökningsfilter ](/help/release-notes/assets/guides/repository-filter-search-quick.png)
+![snabbsökningsfilter &#x200B;](/help/release-notes/assets/guides/repository-filter-search-quick.png)
 
 *Använd snabbfiltren för att söka efter DITA- och icke-DITA-filer.*
 
@@ -283,7 +283,7 @@ Den här funktionen hjälper dig att använda data som lagras i dina JSON-filer 
 Som administratör kan du konfigurera flera resurs-URL:er för vissa anslutningar som Generic REST Client, Salsify, Akeneo och Microsoft Azure DevOps Boards (ADO).
 Som författare kan du sedan ansluta till datakällorna för att skapa innehållsfragment eller ämnen med generatorerna. Den här funktionen är användbar eftersom du inte behöver skapa en datakälla för varje URL. Det hjälper dig att snabbt hämta data från någon av resurserna för en viss datakälla i ett enda innehållskuvert eller ämne. Visa mer information om datakällanslutningarna och hur du [konfigurerar en datakällkoppling från användargränssnittet](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/install-guide/cs-ig/web-editor-configs-cs/conf-data-source-connector-tools). Lär dig hur du [använder data från din datakälla](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/user-guide/author-content/create-preview-topics/author-content-aem-guides/work-with-web-editor/web-editor-content-snippet).
 
-Mer information om de nya funktionerna och förbättringarna finns i [Experience Manager Guides ](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya funktionerna och förbättringarna finns i [Experience Manager Guides &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 

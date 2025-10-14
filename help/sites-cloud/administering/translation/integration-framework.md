@@ -30,7 +30,7 @@ En översikt över funktionerna för översättning av innehåll i AEM finns i [
 
 Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören.
 
-AEM innehåller möjligheten att [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard. Andra översättningsteknikleverantörer med AEM anslutningar som är medlemmar i partnerprogrammet för Adobe Exchange finns [här](https://exchange.adobe.com/apps/browse/ec?page=1&amp;partnerLevel=All&amp;product=AEM&amp;q=experience+manager+translation&amp;sort=RELEVANCE).
+AEM innehåller möjligheten att [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard. Andra översättningsteknikleverantörer med AEM anslutningar som är medlemmar i partnerprogrammet för Adobe Exchange finns [här](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE).
 
 När du har installerat ett kopplingspaket kan du skapa en molnkonfiguration för anslutningen. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft® Translator-anslutningen finns i [Integrera med Microsoft® Translator](connect-ms-translator.md).
 

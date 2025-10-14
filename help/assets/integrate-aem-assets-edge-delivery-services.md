@@ -89,5 +89,5 @@ Se [WKND Travel](https://aem-dynamicmedia-demo--dm--hlxsites.aem.live/travel-hos
 
 Konfigurera [!DNL Universal Editor] för integrering med [!DNL AEM Assets]. Med den här integreringen kan du använda [!DNL Dynamic Media with OpenAPI capabilities] för att leverera resurser.
 
-* Mer information om hur du lägger till en anpassad resursväljarfunktion i [ finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
+* Mer information om hur du lägger till en anpassad resursväljarfunktion i [&#x200B; finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
 * Se [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill veta hur du får åtkomst till [!DNL AEM Assets] och infogar resurserna när du redigerar i [!DNL Universal Editor].

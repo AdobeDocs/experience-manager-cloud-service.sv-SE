@@ -60,7 +60,7 @@ Det finns två typer av AEM-versionsuppdateringar:
 
 AEM-uppdateringar genomgår en intensiv och helautomatiserad produktvalideringsprocess som innefattar flera steg, vilket säkerställer att ingen tjänst avbryts för system i produktionen. Hälsokontroller används för att övervaka programmets hälsa. Om dessa kontroller misslyckas under en AEM as a Cloud Service-uppdatering fortsätter inte releasen och Adobe undersöker varför uppdateringen orsakade detta oväntade beteende.
 
-När du distribuerar en ny version av anpassad kod i din miljö spelar [Funktionstester för produkter och anpassade ](/help/implementing/cloud-manager/overview-test-results.md#functional-testing) en viktig roll. De säkerställer att produktionssystemen förblir stabila och fungerar även efter det att en ändring har gjorts. Dessa tester används också i uppdateringsprocessen för AEM-versionen.
+När du distribuerar en ny version av anpassad kod i din miljö spelar [Funktionstester för produkter och anpassade &#x200B;](/help/implementing/cloud-manager/overview-test-results.md#functional-testing) en viktig roll. De säkerställer att produktionssystemen förblir stabila och fungerar även efter det att en ändring har gjorts. Dessa tester används också i uppdateringsprocessen för AEM-versionen.
 
 Om uppdateringen till produktionsmiljön misslyckas, kommer Cloud Manager automatiskt att återställa testmiljön. Detta görs automatiskt för att säkerställa att både testnings- och produktionsmiljöerna finns i samma AEM-version när uppdateringen är klar.
 Om en automatisk uppdatering av en utvecklingsmiljö misslyckas uppdateras inte heller mellanlagrings- och produktionsmiljöer.
@@ -88,7 +88,7 @@ Om en automatisk uppdatering av en utvecklingsmiljö misslyckas uppdateras inte 
 
 * **Automatiserad funktionstestning**
    * Inkludera automatiserad testning i pipeline så att du kan testa viktiga funktioner.
-   * [Funktionstestning av kundens ](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) och [testning av anpassade användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) blockeras om de misslyckas kommer AEM-versionen inte att lanseras.
+   * [Funktionstestning av kundens &#x200B;](/help/implementing/cloud-manager/functional-testing.md#custom-functional-testing) och [testning av anpassade användargränssnitt](/help/implementing/cloud-manager/functional-testing.md#custom-ui-testing) blockeras om de misslyckas kommer AEM-versionen inte att lanseras.
 
 ## Regression {#regression}
 

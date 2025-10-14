@@ -828,7 +828,7 @@ Se [Lägg till Assets för dynamiska media på sidor](/help/assets/dynamic-media
 
 1. I **[!UICONTROL Assets]** navigerar du till en befintlig video som du har lagt till flera bildtexter och ljudspår.
 1. Klicka på videoresursen för att öppna den i förhandsgranskningsläge.
-1. Klicka på ikonen ![Till vänster (höger)](https://spectrum.adobe.com/static/icons/workflow_18/Smock_RailLeft_18_N.svg) ![ikon ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan **[!UICONTROL Viewers]** på förhandsvisningssidan, nära det övre vänstra hörnet på sidan.
+1. Klicka på ikonen ![Till vänster (höger)](https://spectrum.adobe.com/static/icons/workflow_18/Smock_RailLeft_18_N.svg) ![ikon &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) och välj sedan **[!UICONTROL Viewers]** på förhandsvisningssidan, nära det övre vänstra hörnet på sidan.
 
    ![Listruta med alternativet Visare.](/help/assets/dynamic-media/assets/msma-selectviewers.png)
 
@@ -928,7 +928,7 @@ Mer information om hur du använder JSON-funktionen i en URL finns i [Serverar s
 
    Kontrollera att filen du skapar följer standarden WebVTT (Web Video Text Track). Bildtextens filnamnstillägg är `.vtt`. Du kan läsa mer om bildtextstandarden WebVTT.
 
-   Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
+   Se [WebVTT: Textspår för webbvideo &#x200B;](https://w3c.github.io/webvtt/).
 
    Det finns många webbplatser som innehåller både kostnadsfria och premiumverktyg och tjänster som du kan använda för att skapa WebVTT-bildtextfiler utanför Dynamic Media.
 
@@ -997,7 +997,7 @@ I exemplet ovan är `Chapter 1` referensidentifieraren och valfri. Referenstiden
 
 Eftersom du använder ett videovisningsprogram för HTML5 bör du kontrollera att den kapitelfil du skapar följer standarden WebVTT (Web Video Text Tracks). Kapitelfiltillägget är `.vtt`. Du kan läsa mer om bildtextstandarden WebVTT.
 
-Se [WebVTT: Textspår för webbvideo ](https://w3c.github.io/webvtt/).
+Se [WebVTT: Textspår för webbvideo &#x200B;](https://w3c.github.io/webvtt/).
 
 **Så här lägger du till kapitelmarkörer i en video:**
 

@@ -124,7 +124,7 @@ Fältet **Total leveranskostnad** uppdateras dynamiskt för att återspegla båd
 >[!NOTE]
 >
 > Du kan också lägga till funktionen **Hämta variabelvärde** i villkoret När.
-> &#x200B;> ![Funktionen Hämta variabelvärde i När villkor ](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
+> &#x200B;> ![Funktionen Hämta variabelvärde i När villkor &#x200B;](/help/forms/assets/when-get-variable.png){width=50%,höjd=50%, align=center}
 
 På så sätt kan du göra dynamiska realtidsberäkningar utan att lägga till extra fält i formuläret, vilket gör strukturen ren och användarvänlig.
 

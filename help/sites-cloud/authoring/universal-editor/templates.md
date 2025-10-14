@@ -34,7 +34,7 @@ Om du vill använda mallar för att skapa sidor som är redigerbara med den univ
 Aktivera först redigerbara mallar för platsens konfiguration.
 
 1. Använd konsolen **Platser** och [välj platsroten](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources).
-1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
+1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** &#x200B;](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
 1. På fliken **Avancerat** i egenskapsdialogrutan kan du notera värdet i fältet **Cloud-konfiguration**.
 1. I huvudnavigeringen väljer du **Verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
 1. I **[Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md)** markerar du den konfiguration du angav i föregående steg och trycker eller klickar på **Egenskaper** i verktygsfältet.
@@ -44,7 +44,7 @@ Aktivera först redigerbara mallar för platsens konfiguration.
 När konfigurationen är aktiverad måste du tillåta mallar för platsen.
 
 1. Använd konsolen **Platser** och [välj platsroten](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources).
-1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
+1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** &#x200B;](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
 1. Tryck eller klicka på knappen **Lägg till** på fliken **Avancerat** i dialogrutan för egenskaper under avsnittet **Mallinställningar** .
 1. Lägg till sökvägen `/conf/<site>/settings/wcm/templates/.*` i det nya, tomma fältet som visas under **Tillåtna mallar**.
 1. Tryck eller klicka på **Spara och stäng**.
@@ -57,7 +57,7 @@ Du kan antingen [skapa en ny sida](/help/sites-cloud/authoring/sites-console/cre
 
 1. Använd konsolen **Platser** för att [navigera till den nya eller befintliga sidan](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources) som du vill använda som mall och markera den genom att trycka eller klicka på den.
 
-1. När sidan har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) i verktygsfältet.
+1. När sidan har valts trycker eller klickar du på ikonen [**Egenskaper** &#x200B;](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) i verktygsfältet.
 
 1. På fliken **Avancerat** i egenskapsdialogrutan under avsnittet **Mallinställningar** väljer du alternativet **Använd sida som mall**.
 

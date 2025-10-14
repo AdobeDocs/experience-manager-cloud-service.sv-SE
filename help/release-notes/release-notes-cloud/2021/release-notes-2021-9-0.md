@@ -44,7 +44,7 @@ Titta på videon [Versionsöversikt för september 2021](https://video.tv.adobe.
 
 * Användarna kan nu sortera de resurser som visas i sökresultaten i kolumn- och kortvyn. Sorteringen fungerar på kolumnerna Namn, Skapad, Ändrad eller Ingen.
 
-  ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer ](/help/assets/assets/sort-searched-assets.png)
+  ![Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer &#x200B;](/help/assets/assets/sort-searched-assets.png)
   *Figur: Sortera sökresultaten i [!DNL Assets] i kolumn- och kortvyer.*
 
 * Ett nytt API introduceras för programmässig bearbetning med hjälp av objektmikrotjänster. Utvecklare kan nu använda en befintlig bearbetningsprofil på mappnivå på en eller flera specifika resurser i en mapp. Bearbetningsprofilen tillämpas baserat på uppdateringar av anpassade metadataegenskaper. Se `AssetProcessor` i [[!DNL Experience Manager] API-referensen](https://developer.adobe.com/experience-manager/reference-materials/). Som tidigare är det möjligt att [använda resursmikrotjänster från användargränssnittet](/help/assets/asset-microservices-configure-and-use.md).

@@ -43,7 +43,7 @@ Den här delen av resan gäller för den som utvecklar gränssnittet.
 
 När du har implementerat ändringarna av temaanpassningen i AEM Git-databasen kan du köra [pipelinen som administratören skapade](pipeline-setup.md) för att distribuera ändringarna.
 
-1. Logga in på Cloud Manager [ på samma sätt som du gjorde för att hämta Git-åtkomstinformation](retrieve-access.md) och få tillgång till ditt program. På fliken **Översikt** visas ett kort för **pipelines**.
+1. Logga in på Cloud Manager [&#x200B; på samma sätt som du gjorde för att hämta Git-åtkomstinformation](retrieve-access.md) och få tillgång till ditt program. På fliken **Översikt** visas ett kort för **pipelines**.
 
    ![Cloud Manager - översikt](assets/cloud-manager-overview.png)
 

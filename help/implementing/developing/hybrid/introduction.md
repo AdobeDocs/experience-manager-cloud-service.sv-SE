@@ -38,7 +38,7 @@ Genomgången baseras på AEM standardfunktioner och exempelprogrammet WKND SPA P
    * Du måste ha administratörsbehörighet för systemet.
 * [Exempelprogrammet WKND SPA Project är tillgängligt på GitHub](https://github.com/adobe/aem-guides-wknd-spa)
    * Hämta den [senaste versionen av React-appen](https://github.com/adobe/aem-guides-wknd-spa/releases) med namnet `wknd-spa-react.all-X.Y.Z-SNAPSHOT.zip`.
-   * Hämta de [senaste exempelbilderna för appen ](https://github.com/adobe/aem-guides-wknd-spa/releases) med namnet `wknd-spa-sample-images-X.Y.Z.zip`.
+   * Hämta de [senaste exempelbilderna för appen &#x200B;](https://github.com/adobe/aem-guides-wknd-spa/releases) med namnet `wknd-spa-sample-images-X.Y.Z.zip`.
    * [Använd pakethanteraren](/help/implementing/developing/tools/package-manager.md) för att installera båda paketen på samma sätt som andra paket i AEM.
    * Appen behöver inte installeras med Maven för den här genomgången.
 

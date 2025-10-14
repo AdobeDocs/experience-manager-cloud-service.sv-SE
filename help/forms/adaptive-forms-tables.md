@@ -44,7 +44,7 @@ AEM Forms tillhandahåller en tabellkomponent i komponentwebbläsaren i sidofäl
 
 Om du vill skapa en tabell drar och släpper du tabellkomponenten från komponentwebbläsaren i sidosparken på det adaptiva formuläret. Tabellen innehåller som standard två kolumner och tre rader, inklusive rubrikraden.
 
-![Tabellkomponent i AEM ](assets/sidebar-tables.png)
+![Tabellkomponent i AEM &#x200B;](assets/sidebar-tables.png)
 
 ### Om rubrik- och brödceller {#about-header-and-body-cells}
 

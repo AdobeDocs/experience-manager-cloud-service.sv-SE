@@ -191,6 +191,6 @@ AEM SPA Editor SDK har fullt stöd av Adobe och fortsätter att förbättras och
 * Redigera konfigurationer (till exempel avlyssnare)
 * Ångra/Gör om
 * Sidskillnader och tidsförskjutning
-* Funktioner som utför HTML-omskrivning på serversidan, till exempel [Länkkontroll, ](/help/operations/link-checker.md) CDN-omskrivartjänst, URL-förkortning och så vidare.
+* Funktioner som utför HTML-omskrivning på serversidan, till exempel [Länkkontroll, &#x200B;](/help/operations/link-checker.md) CDN-omskrivartjänst, URL-förkortning och så vidare.
 * Utvecklarläge
 * AEM Launches

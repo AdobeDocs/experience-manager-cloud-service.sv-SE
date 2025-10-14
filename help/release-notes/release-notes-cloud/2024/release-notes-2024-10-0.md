@@ -164,7 +164,7 @@ För att styra formulärinskickade formulär för Coral- eller Foundation-formul
 
 ### Självbetjänad loggvidarebefordran med alternativet Avancerat nätverk {#log-forwarding}
 
-Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av ](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM-loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
+Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av &#x200B;](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM-loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
 
 Den här funktionen konfigureras av användare på ett självbetjäningssätt och distribueras med [konfigurationspipeline](/help/operations/config-pipeline.md).
 

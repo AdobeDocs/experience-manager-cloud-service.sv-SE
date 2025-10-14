@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ContextHub JavaScript API Reference {#contexthub-javascript-api-reference}
 
-ContextHub JavaScript API är tillgängligt för dina skript när [ContextHub-komponenten har lagts till på sidan ](adding-contexthub.md).
+ContextHub JavaScript API är tillgängligt för dina skript när [ContextHub-komponenten har lagts till på sidan &#x200B;](adding-contexthub.md).
 
 ## ContextHub-konstanter {#contexthub-constants}
 
@@ -264,7 +264,7 @@ Initierar butiken.
 * **`name`:** Butikens namn.
 * **`config`:** Ett objekt som innehåller konfigurationsegenskaper:
    * `eventDeferring`: Standardvärdet är 32.
-   * `eventing`: Objektet [ ContextHub.Utils.Eventing](#contexthub-utils-eventing) för det här arkivet. Standardvärdet är det `ContextHub.eventing`-objekt som används.
+   * `eventing`: Objektet [&#x200B; ContextHub.Utils.Eventing](#contexthub-utils-eventing) för det här arkivet. Standardvärdet är det `ContextHub.eventing`-objekt som används.
    * `persistence`: Objektet `ContextHub.Utils.Persistence` för den här butiken. Standardvärdet är objektet `ContextHub.persistence`.
 
 #### isEventingPaused() {#iseventingpaused}
@@ -483,15 +483,15 @@ Matchar den angivna parametern.
 
 ## ContextHub.Store.PersistedJSONPStore {#contexthub-store-persistedjsonpstore}
 
-`ContextHub.Store.PersistedJSONPStore` utökar [ ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen](adding-contexthub.md#persistence-modes))
+`ContextHub.Store.PersistedJSONPStore` utökar [&#x200B; ContextHub.Store.JSONPStore](#contexthub-store-jsonpstore) så att den ärver alla funktioner i den klassen. Data som hämtas från JSONP-tjänsten sparas dock enligt konfigurationen för ContextHub-beständighet. (Se [Persistenslägen](adding-contexthub.md#persistence-modes))
 
 ## ContextHub.Store.PersistedStore {#contexthub-store-persistedstore}
 
-`ContextHub.Store.PersistedStore` utökar [ ContextHub.Store.Core](#contexthub-store-core) så att den ärver alla funktioner i den klassen. Data i det här arkivet bevaras enligt konfigurationen för ContextHub-beständighet.
+`ContextHub.Store.PersistedStore` utökar [&#x200B; ContextHub.Store.Core](#contexthub-store-core) så att den ärver alla funktioner i den klassen. Data i det här arkivet bevaras enligt konfigurationen för ContextHub-beständighet.
 
 ## ContextHub.Store.SessionStore {#contexthub-store-sessionstore}
 
-`ContextHub.Store.SessionStore` utökar [ ContextHub.Store.Core](#contexthub-store-core) så att den ärver alla funktioner i den klassen. Data i det här arkivet sparas med InMemory Perstance (JavaScript-objekt).
+`ContextHub.Store.SessionStore` utökar [&#x200B; ContextHub.Store.Core](#contexthub-store-core) så att den ärver alla funktioner i den klassen. Data i det här arkivet sparas med InMemory Perstance (JavaScript-objekt).
 
 ## ContextHub.UI {#contexthub-ui}
 
@@ -677,7 +677,7 @@ Avbinder en funktion från en händelse.
 
 ##### Parametrar {#parameters-off}
 
-* **`name`:** Namnet [på händelsen ](#contexthub-utils-eventing) som du tar bort bindningen för funktionen.
+* **`name`:** Namnet [på händelsen &#x200B;](#contexthub-utils-eventing) som du tar bort bindningen för funktionen.
 * **`selector`:** Väljaren som identifierar bindningen. (Se parametern `selector` för funktionerna [`on`](#on-name-handler-selector-triggerforpastevents) och [`once`](#once-name-handler-selector-triggerforpastevents).)
 
 ##### Returnerar {#returns-off}
@@ -690,7 +690,7 @@ Bindar en funktion till en händelse. Funktionen anropas varje gång händelsen 
 
 ##### Parametrar {#parameters-on}
 
-* **`name`:** (String) Namnet [på händelsen ](#contexthub-utils-eventing) som du binder funktionen till.
+* **`name`:** (String) Namnet [på händelsen &#x200B;](#contexthub-utils-eventing) som du binder funktionen till.
 * **`handler`:** (Funktion) Funktionen som ska bindas till händelsen.
 * **`selector`:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen `off` för att ta bort bindningen.
 * **`triggerForPastEvents`:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Värdet `true` anropar hanteraren för tidigare händelser. Värdet `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.
@@ -730,7 +730,7 @@ Bindar en funktion till en händelse. Funktionen anropas bara en gång för den 
 
 ##### Parametrar {#parameters-once}
 
-* **`name`:** (String) Namnet [på händelsen ](#contexthub-utils-eventing) som du binder funktionen till.
+* **`name`:** (String) Namnet [på händelsen &#x200B;](#contexthub-utils-eventing) som du binder funktionen till.
 * **`handler`:** (Funktion) Funktionen som ska bindas till händelsen.
 * **`selector`:** (String) En unik identifierare för bindningen. Du behöver väljaren för att identifiera bindningen om du vill använda funktionen `off` för att ta bort bindningen.
 * **`triggerForPastEvents`:** (Boolean) Anger om hanteraren ska köras för händelser som har inträffat tidigare. Värdet `true` anropar hanteraren för tidigare händelser. Värdet `false` anropar hanteraren för framtida händelser. Standardvärdet är `true`.

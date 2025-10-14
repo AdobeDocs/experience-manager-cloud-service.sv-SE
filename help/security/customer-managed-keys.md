@@ -69,7 +69,7 @@ Du kan sedan starta introduktionsprocessen genom att klicka på knappen **Starta
 
 När startprocessen har startats kommer ett Entra-program-ID att tillhandahållas av Adobe. Detta program-ID är nödvändigt för resten av guiden och kommer att användas för att skapa ett huvudkonto som gör att Adobe kan komma åt ditt nyckelvalv. Om du inte redan har ett program-ID måste du vänta tills det kommer från Adobe.
 
-![Begäran bearbetas. Vänta tills Adobe har skickat Entra-program-ID:t ](./assets/cmk/step2.png)
+![Begäran bearbetas. Vänta tills Adobe har skickat Entra-program-ID:t &#x200B;](./assets/cmk/step2.png)
 
 När begäran är klar kan du se program-ID:t i CMK-gränssnittet.
 

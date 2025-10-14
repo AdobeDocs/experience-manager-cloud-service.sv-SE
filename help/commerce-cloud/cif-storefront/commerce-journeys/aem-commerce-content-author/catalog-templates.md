@@ -95,7 +95,7 @@ Lägg till en bild ovanpå sidan.
 
 Mallen kan förhandsgranskas med alla kategorier/produkter. Öppna **Sidinformation** och välj sedan **Visa med kategori/produkt**. Välj produkt/kategori i väljaren för att få en förhandsvisning av den här produkten/kategorin. Välj **Köp kategorin Look** om du vill ha en förhandsvisning av den uppdaterade mallen.
 
-![skapa mall ](assets/create-template-picker.png)
+![skapa mall &#x200B;](assets/create-template-picker.png)
 
 Nu måste du tilldela mallen till den specifika kategorin. Öppna egenskaper på menyn **Sidinformation** och växla till fliken E-handel. Klicka på mappikonen och välj kategorin **Leta upp** i kategoriväljaren. Du kan tilldela flera kategorier till en mall och även inkludera underkategorier genom att markera kryssrutan.
 

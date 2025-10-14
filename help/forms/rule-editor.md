@@ -137,7 +137,7 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
-![Rensa värdet för ](assets/clearvalueof1.png)
+![Rensa värdet för &#x200B;](assets/clearvalueof1.png)
 
 **[!UICONTROL Hide]** Döljer det angivna objektet.
 

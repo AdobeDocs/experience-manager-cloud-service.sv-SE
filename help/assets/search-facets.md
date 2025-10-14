@@ -35,7 +35,7 @@ Lägg till predikatet `Fulltext` i formuläret för fulltextsökningar. Använd 
 1. Klicka på Experience Manager logotyp och gå sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL Search Forms]**.
 1. På sidan Sök i Forms väljer du **[!UICONTROL Assets Admin Search Rail]** och sedan **Redigera** ![aemassets_edit](assets/aemassets_edit.png).
 
-   ![Leta reda på och markera sökfältet för Assets Admin Search ](assets/assets_admin_searchrail.png)
+   ![Leta reda på och markera sökfältet för Assets Admin Search &#x200B;](assets/assets_admin_searchrail.png)
 
 1. På sidan Redigera sökning i Forms drar du ett predikat från fliken **[!UICONTROL Select Predicate]** till huvudrutan. Dra till exempel **[!UICONTROL Property Predicate]**.
 
@@ -108,7 +108,7 @@ Om du vill använda en befintlig nod anger du den i valdialogrutan.
 1. Gör något av följande:
 
    * I fältet **[!UICONTROL Property Name]** anger du sökvägen till JSON-filen där du definierar noderna för alternativen och anger motsvarande nyckelvärdepar.
-   * Välj ![Assets-ikonen Lägg till](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Assets-ikonen för att lägga till ](assets/do-not-localize/aem_assets_add_icon.png) och upprepar steget.
+   * Välj ![Assets-ikonen Lägg till](assets/do-not-localize/aem_assets_add_icon.png) bredvid fältet Alternativ för att ange visningstext och värde för de alternativ som du vill ange på panelen Filter. Om du vill lägga till ytterligare ett alternativ väljer du ![Assets-ikonen för att lägga till &#x200B;](assets/do-not-localize/aem_assets_add_icon.png) och upprepar steget.
 
 1. Kontrollera att **[!UICONTROL Single Select]** är avmarkerat så att användaren kan välja flera alternativ för filtyper samtidigt (till exempel bilder, dokument, multimedia och arkiv). Om du väljer **[!UICONTROL Single Select]** kan användaren bara välja ett alternativ åt gången för olika filtyper.
 

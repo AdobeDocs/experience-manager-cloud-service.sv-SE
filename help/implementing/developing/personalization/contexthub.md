@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ContextHub {#contexthub}
 
-ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Dess primära funktion är att erbjuda möjligheten att [visa kontextdata samtidigt som man simulerar och växlar mellan olika profiler ](/help/sites-cloud/authoring/personalization/contexthub.md).
+ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Dess primära funktion är att erbjuda möjligheten att [visa kontextdata samtidigt som man simulerar och växlar mellan olika profiler &#x200B;](/help/sites-cloud/authoring/personalization/contexthub.md).
 
 Med ContextHub kan du:
 

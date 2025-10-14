@@ -41,7 +41,7 @@ Titta på videon Augusti 2022 Release Overview om du vill se en sammanfattning a
 * Med e-postkomponenten kan du skapa innehåll i AEM som sedan levereras som e-postmeddelanden via Campaign Classic. Huvudkomponenten för e-post:
    * baseras på [Core WCM-komponenten](https://github.com/adobe/aem-core-wcm-components) som stöder redigerbara mallar och formatsystemet.
    * innehåller 10 e-postoptimerade produktionsklara komponenter (Page, Container, Title, Text, Image, Button, Teaser, Experience Fragment, Content Fragment, Segmentation).
-   * ger avancerad personalisering och segmentering tack vare att Campaign-variabler [infogas ](https://github.com/adobe/aem-core-email-components/wiki/RTE-Personalization) i de flesta dialogrutefält och den flexibla [segmenteringskomponenten](https://github.com/adobe/aem-core-email-components/wiki/Segmentation-component-(Technical-Documentation)).
+   * ger avancerad personalisering och segmentering tack vare att Campaign-variabler [infogas &#x200B;](https://github.com/adobe/aem-core-email-components/wiki/RTE-Personalization) i de flesta dialogrutefält och den flexibla [segmenteringskomponenten](https://github.com/adobe/aem-core-email-components/wiki/Segmentation-component-(Technical-Documentation)).
    * ger optimala e-postvänliga HTML-utdata, tack vare [CSS-formatinlinern](https://github.com/adobe/aem-core-email-components/wiki/HTML-Inliner:-Technical-documentation), [HTML-attributinlinern](https://github.com/adobe/aem-core-email-components/wiki/HTML-Inliner:-Technical-documentation) och [HTML-saneraren](https://github.com/adobe/aem-core-email-components/wiki/HTML-sanitizing:-Technical-documentation).
    * gör det möjligt att skapa e-postmeddelanden var som helst.
 

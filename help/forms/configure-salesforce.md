@@ -30,7 +30,7 @@ ht-degree: 0%
 
 Innan du konfigurerar molntjänsterna [!DNL Salesforce] måste du utföra följande åtgärder:
 
-* [Skapa ett anslutet OAuth-aktiverat [!DNL Salesforce] program](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_api_integration.htm&amp;type=5). När du skapar det anslutna [!DNL Salesforce]-programmet anger du återanrops-URL:en i följande format:
+* [Skapa ett anslutet OAuth-aktiverat [!DNL Salesforce] program](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_api_integration.htm&type=5). När du skapar det anslutna [!DNL Salesforce]-programmet anger du återanrops-URL:en i följande format:
 
   ```
   https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
@@ -68,4 +68,4 @@ När du har konfigurerat [[!DNL Salesforce] Cloud Config-tjänsten](#configure-s
 >
 >* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
 >* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
->  [Lägg till Forms Portal på en AEM Sites-sida ](/help/forms/configure-forms-portal.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida &#x200B;](/help/forms/configure-forms-portal.md)

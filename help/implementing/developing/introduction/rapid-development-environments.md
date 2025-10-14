@@ -1173,7 +1173,7 @@ Du kan också bekräfta att du har den här utvecklarrollen om du loggar in på 
 
 >[!TIP]
 >
->Om du ser felet `Warning: cloudmanager:* is not a aio command.` måste du installera [ aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra följande kommando:
+>Om du ser felet `Warning: cloudmanager:* is not a aio command.` måste du installera [&#x200B; aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager) genom att köra följande kommando:
 >
 >```
 >aio plugins:install @adobe/aio-cli-plugin-cloudmanager

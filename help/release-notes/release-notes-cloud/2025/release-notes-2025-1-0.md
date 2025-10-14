@@ -73,7 +73,7 @@ De redigerare som rekommenderas för hantering av headless-innehåll i AEM är n
 
 #### PWA Features {#pwa-features}
 
-[Funktionerna för det progressiva webbprogrammet (PWA) ](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites är nu inaktuella för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
+[Funktionerna för det progressiva webbprogrammet (PWA) &#x200B;](/help/sites-cloud/authoring/sites-console/enable-pwa.md) för AEM Sites är nu inaktuella för nya projekt från och med version 2025.1.0. Den här funktionen stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 

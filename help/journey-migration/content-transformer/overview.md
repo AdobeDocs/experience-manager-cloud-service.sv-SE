@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Ökning {#overview-ct}
 
-CT (Content Transformer) är ett verktyg som utvecklats av Adobe och som kan användas för att automatiskt identifiera och åtgärda innehållsrelaterade problem som rapporterats av [Best Practices Analyzer ](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md) innan innehåll migreras från den aktuella AEM (lokal eller Managed Services) till AEM as a Cloud Service.
+CT (Content Transformer) är ett verktyg som utvecklats av Adobe och som kan användas för att automatiskt identifiera och åtgärda innehållsrelaterade problem som rapporterats av [Best Practices Analyzer &#x200B;](/help/journey-migration/best-practices-analyzer/overview-best-practices-analyzer.md) innan innehåll migreras från den aktuella AEM (lokal eller Managed Services) till AEM as a Cloud Service.
 
 Innehållstransformeraren kan hjälpa till att lösa problem som faller under följande [BPA-mönsterkategorier](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=sv-SE) (visas i tabellen nedan) genom att tillåta användare att utföra massåtgärder som att flytta eller ta bort. Detta kan avsevärt minska tiden och minska komplexiteten i ett migreringsprojekt.
 

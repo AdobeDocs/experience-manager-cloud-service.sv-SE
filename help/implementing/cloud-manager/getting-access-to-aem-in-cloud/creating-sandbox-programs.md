@@ -28,7 +28,7 @@ Läs mer om programtyper i dokumentet [Om program- och programtyper](program-typ
 
 1. I *Programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
 
-1. Under **Programmål** väljer du ![Trollstaven ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MagicWand_18_N.svg) **Konfigurera en sandlåda**.
+1. Under **Programmål** väljer du ![Trollstaven &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MagicWand_18_N.svg) **Konfigurera en sandlåda**.
 
    ![Skapa programtyp](assets/create-sandbox.png)
 

@@ -21,7 +21,7 @@ Lär dig hur du ansluter AEM till en översättningstjänst.
 
 ## Story hittills {#story-so-far}
 
-I det tidigare dokumentet om översättningsresan för AEM Sites [Kom igång med AEM Sites ](learn-about.md) lärde du dig att ordna ditt innehåll och hur AEM översättningsverktyg fungerar, och du bör nu:
+I det tidigare dokumentet om översättningsresan för AEM Sites [Kom igång med AEM Sites &#x200B;](learn-about.md) lärde du dig att ordna ditt innehåll och hur AEM översättningsverktyg fungerar, och du bör nu:
 
 * Förstå hur viktig innehållsstrukturen är för översättning.
 * Förstå hur AEM lagrar innehåll.

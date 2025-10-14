@@ -36,4 +36,4 @@ I följande tabell beskrivs vanliga scenarier för tillgängliga lösningar och 
 
 >[!NOTE]
 >
->Produktionsprogrammen [ kan redigeras men inte tas bort](editing-programs.md).
+>Produktionsprogrammen [&#x200B; kan redigeras men inte tas bort](editing-programs.md).

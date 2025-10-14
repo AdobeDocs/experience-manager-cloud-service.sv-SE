@@ -99,7 +99,7 @@ Varje enhetstyp visar unika responsiva beteenden:
 *Layout med full bredd med formulärfält sida vid sida.*
 
 **Tablet-vy (768px-1199px):**
-![ Formulärvy för surfplatta ](/help/edge/docs/forms/universal-editor/assets/universal-editor-tab.png)
+![&#x200B; Formulärvy för surfplatta &#x200B;](/help/edge/docs/forms/universal-editor/assets/universal-editor-tab.png)
 *Medium-breddslayout med justerat komponentavstånd.*
 
 **Mobilvy (320px-767px):**

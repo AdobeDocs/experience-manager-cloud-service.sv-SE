@@ -578,8 +578,8 @@ När du börjar instrumentera ditt eget program bör du tänka på de grundlägg
 1. Du har AEM OSGi-inställningarna så att innehållet kan läsas in på fjärrbasis.
    * [`org.apache.sling.engine.impl.SlingMainServlet`](#sameorigin)
    * [`com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`](#samesite-cookies)
-1. [Du har lagt till biblioteket `universal-editor-embedded.js` i filen `customheaderlibs.html` för sidkomponenten i appen ](#ue-connect-remote-frame).
-1. [Du har definierat en anslutning som ska innehålla ändringar i `customheaderlibs.html`-filen för sidkomponenten i appen ](#connection).
+1. [Du har lagt till biblioteket `universal-editor-embedded.js` i filen `customheaderlibs.html` för sidkomponenten i appen &#x200B;](#ue-connect-remote-frame).
+1. [Du har definierat en anslutning som ska innehålla ändringar i `customheaderlibs.html`-filen för sidkomponenten i appen &#x200B;](#connection).
    * Du definierade en anslutning till den lokala AEM utvecklingsinstansen.
    * Du har även definierat en anslutning till den lokala tjänsten Universal Editor.
 1. [Du har instrumenterat teaserkomponenten](#instrumenting-components).

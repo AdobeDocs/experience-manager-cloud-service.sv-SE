@@ -23,8 +23,8 @@ En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat 
 I AEM arbetsflödesmodeller kan du:
 
 * [Skapa en variabel](variable-in-aem-workflows.md#create-a-variable) för en datatyp baserat på den informationstyp som du vill lagra i den.
-* [Ange ett värde för variabeln ](variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använd variabeln ](variable-in-aem-workflows.md#use-a-variable) i alla [!DNL AEM Forms] arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
+* [Ange ett värde för variabeln &#x200B;](variable-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
+* [Använd variabeln &#x200B;](variable-in-aem-workflows.md#use-a-variable) i alla [!DNL AEM Forms] arbetsflödessteg för att hämta det lagrade värdet och i stegen ELLER Dela och Gå till för att definiera ett routningsuttryck.
 
 I följande video visas hur du kan skapa, ange och använda variabler i AEM arbetsflödesmodeller:
 
@@ -285,4 +285,4 @@ Ta bort en variabel:
 
 ## Referenser {#references}
 
-Mer exempel på hur du använder variabler i [!DNL AEM Forms] arbetsflödessteg finns i [Variabler i AEM ](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).
+Mer exempel på hur du använder variabler i [!DNL AEM Forms] arbetsflödessteg finns i [Variabler i AEM &#x200B;](https://helpx.adobe.com/experience-manager/kt/forms/using/authoring_variables_in_aem_forms-workflow1.html).

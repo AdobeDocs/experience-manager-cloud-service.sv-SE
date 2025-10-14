@@ -21,7 +21,7 @@ Från och med AEM Maintenance Release 19149 ändras gruppsynkroniseringsbeteende
 
 1. AEM med suffixet `GROUP_NAME_SUFFIX`. De här grupperna visas inte i Adobe Developer Console, men visas på AEM Group Management-skärmen (se nedan). Om det osannolika fallet att ditt AEM refererar till dessa grupper måste du referera till Adobe Admin Console användargrupper utan det suffixet i stället.
 
-   ![Borttagna grupper ](/help/security/assets/removed-groups-1.png)
+   ![Borttagna grupper &#x200B;](/help/security/assets/removed-groups-1.png)
 
 1. AEM som är kopplade till Adobe Admin Console produktprofiler som inte har med den specifika miljön att göra. Detta kan omfatta produktprofiler som är:
 

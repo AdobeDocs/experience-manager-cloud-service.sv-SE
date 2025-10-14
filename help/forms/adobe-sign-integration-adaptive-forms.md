@@ -108,7 +108,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    >[!NOTE]
    > Du kan ändra omfattningsmodifieraren från `self` till `account` direkt från AEM-gränssnittet enligt steg 12.
 
-   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL Adobe Acrobat Sign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
+   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL Adobe Acrobat Sign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets &#x200B;](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
 
    ![OAuth-konfiguration](/help/forms/assets/oauthconfig-new.png)
 

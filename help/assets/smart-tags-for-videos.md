@@ -101,7 +101,7 @@ Så här avanmäler du dig från automatisk generering av smarta videotaggar fö
 
 >[!IMPORTANT]
 >
->Om du har valt att inte tagga videofilmer i en mapp vid överföringen och vill tagga videofilmerna smart efter överföringen, **[!UICONTROL Enable Smart Tags for Videos]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option ](#smart-tag-existing-videos) för att lägga till smarta taggar i videon.
+>Om du har valt att inte tagga videofilmer i en mapp vid överföringen och vill tagga videofilmerna smart efter överföringen, **[!UICONTROL Enable Smart Tags for Videos]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option &#x200B;](#smart-tag-existing-videos) för att lägga till smarta taggar i videon.
 
 ## Konfidenspoäng {#confidence-score-video-tag}
 

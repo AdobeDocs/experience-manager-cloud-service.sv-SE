@@ -62,7 +62,7 @@ Om du vill uppdatera en molnmiljö så att den använder prerelease-kanalen mås
 
 Du kan också använda Cloud Manager API och CLI för att uppdatera miljövariablerna.
 
-* Använd [Cloud Manager API:ts miljövariabelslutpunkt ](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchEnvironmentVariables) och ange miljövariabeln `AEM_RELEASE_CHANNEL` till värdet `prerelease`.
+* Använd [Cloud Manager API:ts miljövariabelslutpunkt &#x200B;](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchEnvironmentVariables) och ange miljövariabeln `AEM_RELEASE_CHANNEL` till värdet `prerelease`.
 
   ```text
   PATCH /program/{programId}/environment/{environmentId}/variables

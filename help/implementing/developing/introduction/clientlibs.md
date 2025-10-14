@@ -109,7 +109,7 @@ En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås.
 
 ## Serverar bibliotek på klientsidan {#serving-clientlibs}
 
-När klientbiblioteksmappen har [konfigurerats enligt ](#creating-clientlib-folders) kan dina klienter begäras via proxy. Exempel:
+När klientbiblioteksmappen har [konfigurerats enligt &#x200B;](#creating-clientlib-folders) kan dina klienter begäras via proxy. Exempel:
 
 * Du har ett klientlib i `/apps/myproject/clientlibs/foo`
 * Du har en statisk bild i `/apps/myprojects/clientlibs/foo/resources/icon.png`

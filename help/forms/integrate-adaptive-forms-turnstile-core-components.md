@@ -61,7 +61,7 @@ Så här integrerar du AEM Forms med den färdiga tjänsten:
 
       ![Konfigurationsomvandling](assets/config-hcaptcha.png)
    1. Ange **[!UICONTROL Widget Type]** som hanterad, icke-interaktiv eller osynlig. Mer information om widgettyp finns på [Turnstile Widget](https://developers.cloudflare.com/turnstile/concepts/widget/).
-   1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för den färdiga tjänsten [ som hämtats i förutsättningen ](#prerequisite).
+   1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för den färdiga tjänsten [&#x200B; som hämtats i förutsättningen &#x200B;](#prerequisite).
    1. Klicka på **[!UICONTROL Create]**.
 
       ![Konfigurera Cloud Service för att ansluta din AEM Forms-miljö till Turnestle](assets/config-turntstile-cc.png)

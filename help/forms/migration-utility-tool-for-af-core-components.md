@@ -94,7 +94,7 @@ Så här installerar du AEM Modernize Tools i din lokala AEM Forms-miljö:
        mvn clean install 
    ```
 
-![Installationsavbildningen ](/help/forms/assets/aem-modernize-install-steps.png) har slutförts
+![Installationsavbildningen &#x200B;](/help/forms/assets/aem-modernize-install-steps.png) har slutförts
 
 När installationen är klar blir AEM verktyg för modernisering tillgängliga för din miljö.
 

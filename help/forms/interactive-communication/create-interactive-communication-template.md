@@ -78,4 +78,4 @@ Genom att följa stegen ovan kan du skapa en interaktiv kommunikationsmall. När
 ## Nästa steg
 
 [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-[ Skapa ett interaktivt kommunikationsfragment ](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
+[&#x200B; Skapa ett interaktivt kommunikationsfragment &#x200B;](/help/forms/interactive-communication/create-interactive-communication-fragment.md)

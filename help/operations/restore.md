@@ -31,7 +31,7 @@ I båda fallen ändras inte versionen av din anpassade kod och AEM-versionen.
 
 >[!TIP]
 >
->Det går också att återställa säkerhetskopior [med det offentliga API:t ](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+>Det går också att återställa säkerhetskopior [med det offentliga API:t &#x200B;](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
 >[!WARNING]
 >
@@ -87,7 +87,7 @@ Mer information om hur du hanterar behörigheter finns i [Anpassade behörighete
      >
      >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
-1. I miljötabellen, till höger om en miljö vars innehåll du vill återställa, klickar du på ikonen ![Mer eller Ellips ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ innehåll**.
+1. I miljötabellen, till höger om en miljö vars innehåll du vill återställa, klickar du på ikonen ![Mer eller Ellips &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ innehåll**.
 
    ![Återställ innehållsalternativ från ellipsmenyn](/help/operations/assets/environments-ellipsis-menu.png)
 

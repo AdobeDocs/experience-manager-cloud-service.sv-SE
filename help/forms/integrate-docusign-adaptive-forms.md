@@ -140,7 +140,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att integre
    1. Lägg till den URL som kopierades i föregående steg i rutan **[!UICONTROL Redirect URI]** och klicka på **[!UICONTROL Save]**.
    1. Anteckna Integrering och Hemliga nycklar.
 
-   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL DocuSign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://support.docusign.com/guides/ndse-admin-guide-api-and-keys) utvecklardokumentation.
+   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL DocuSign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets &#x200B;](https://support.docusign.com/guides/ndse-admin-guide-api-and-keys) utvecklardokumentation.
 
 1. Gå tillbaka till sidan **[!UICONTROL Create DocuSign Configuration]**. På fliken **[!UICONTROL Settings]** anger fältet **[!UICONTROL OAuth URL]** följande standard-URL:
 

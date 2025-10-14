@@ -42,7 +42,7 @@ Om du vill ändra [!UICONTROL Experience Cloud preferences] klickar du på [!UIC
 
 >[!NOTE]
 >
->Om du navigerar till Assets-vyn och ser ett `Network Error`-meddelande kontrollerar du att du har utfört instruktionerna som nämns i artikeln [Cross-Origin Resource Sharing (CORS) ](/help/headless/deployment/cross-origin-resource-sharing.md) .
+>Om du navigerar till Assets-vyn och ser ett `Network Error`-meddelande kontrollerar du att du har utfört instruktionerna som nämns i artikeln [Cross-Origin Resource Sharing (CORS) &#x200B;](/help/headless/deployment/cross-origin-resource-sharing.md) .
 
 ## [!DNL Assets View] användningsfall {#use-cases}
 

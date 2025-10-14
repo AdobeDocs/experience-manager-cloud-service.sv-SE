@@ -63,7 +63,7 @@ Funktionen för interaktiv kommunikation (IC) är tillgänglig via programmet f�
 ## Nästa steg
 
 [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-[Skapa en interaktiv kommunikationsmall ](/help/forms/interactive-communication/create-interactive-communication-template.md)
+[Skapa en interaktiv kommunikationsmall &#x200B;](/help/forms/interactive-communication/create-interactive-communication-template.md)
 [Skapa ett interaktivt kommunikationsfragment](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
 
 <!-- 

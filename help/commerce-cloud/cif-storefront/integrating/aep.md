@@ -150,7 +150,7 @@ Navigera till modulen `ui.frontend` och uppdatera filen `webpack.common.js` så 
 
 [Apollo-klienten](https://www.apollographql.com/docs/react/) används för att hantera både lokala data och fjärrdata med GraphQL. Resultaten av GraphQL-frågor lagras också i en lokal, normaliserad cache i minnet.
 
-Du behöver en [`InMemoryCache`-fil för att ](https://www.apollographql.com/docs/react/caching/cache-configuration/)`possibleTypes.js` ska fungera effektivt. Mer information om hur du genererar den här filen finns i [Genererar possibleTypes automatiskt.](https://www.apollographql.com/docs/react/data/fragments/#generating-possibletypes-automatically)
+Du behöver en [`InMemoryCache`-fil för att &#x200B;](https://www.apollographql.com/docs/react/caching/cache-configuration/)`possibleTypes.js` ska fungera effektivt. Mer information om hur du genererar den här filen finns i [Genererar possibleTypes automatiskt.](https://www.apollographql.com/docs/react/data/fragments/#generating-possibletypes-automatically)
 
 Se även [PWA Studio referensimplementering](https://github.com/magento/pwa-studio/blob/1977f38305ff6c0e2b23a9da7beb0b2f69758bed/packages/pwa-buildpack/lib/Utilities/graphQL.js#L106-L120) och ett exempel på en [`possibleTypes.js`](../assets/aep-integration/possibleTypes.js)-fil.
 

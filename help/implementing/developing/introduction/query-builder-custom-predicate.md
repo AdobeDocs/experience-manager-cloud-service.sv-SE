@@ -135,7 +135,7 @@ Projektet `cq-search` innehåller den abstrakta klassen `AbstractPredicateEvalua
 >I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/PredicateEvaluator.html).
 
 1. Skapa en ny Java-klass som utökar `com.day.cq.search.eval.AbstractPredicateEvaluator`
-1. Anteckna din klass med ett `@Component`-liknande utdrag som visas i [enhetligt format ](https://en.wikipedia.org/wiki/Diff#Unified_format)
+1. Anteckna din klass med ett `@Component`-liknande utdrag som visas i [enhetligt format &#x200B;](https://en.wikipedia.org/wiki/Diff#Unified_format)
 
    ```text
    @@ -19,8 +19,11 @@

@@ -224,7 +224,7 @@ AEM Forms som molntjänster erbjuder en dockningsbaserad SDK-miljö för enklare
 
 1. Extrahera filen `aem-forms-addon-<version>.zip\aem-forms-addon-native-<version>.zip`.
 
-   ![extraherade aem-formulär har lagts till i ursprungliga ](assets/microservice-docker.png)
+   ![extraherade aem-formulär har lagts till i ursprungliga &#x200B;](assets/microservice-docker.png)
 
 1. Skapa en miljövariabel AEM_HOME och peka på en lokal installation av AEM Author. Exempel: C:\aem\author\.
 

@@ -92,7 +92,7 @@ Om du vill konfigurera användarsynkronisering måste organisationen skapa en up
 
 ![Verktyg för användarsynkronisering](/help/security/assets/ims5.png)
 
-Verktyget för användarsynkronisering distribueras via Adobe GitHub-databasen [ på den här platsen](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.9.0rc2).
+Verktyget för användarsynkronisering distribueras via Adobe GitHub-databasen [&#x200B; på den här platsen](https://github.com/adobe-apiplatform/user-sync.py/releases/tag/v2.9.0rc2).
 
 >[!NOTE]
 >

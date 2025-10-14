@@ -57,7 +57,7 @@ Om du vill konfigurera Turnstile för AEM Forms måste du hämta [Turnstile site
    1. Välj en konfigurationsbehållare, skapad eller uppdaterad, enligt beskrivningen i föregående avsnitt. Välj **[!UICONTROL Create]**.
 
       ![Konfigurationsomvandling](assets/config-hcaptcha.png)
-   1. Ange **[!UICONTROL Widget Type]** som hanterad, widgettypen kan ändras beroende på vilken nyckel som hämtas i förutsättningen **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för den färdiga tjänsten [ som hämtas i förutsättning ](#prerequisite). Välj **[!UICONTROL Create]**.
+   1. Ange **[!UICONTROL Widget Type]** som hanterad, widgettypen kan ändras beroende på vilken nyckel som hämtas i förutsättningen **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för den färdiga tjänsten [&#x200B; som hämtas i förutsättning &#x200B;](#prerequisite). Välj **[!UICONTROL Create]**.
 
       ![Konfigurera Cloud Service för att ansluta din AEM Forms-miljö till Turnestle](assets/config-turntstile.png)
 

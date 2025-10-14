@@ -180,7 +180,7 @@ Skapa en ny fil med namnet `customsubmitaction` i mappen `.content.xml`.
        }
    ```
 
-   ![Anpassad skickaåtgärd ](/help/forms/assets/custom-submit-action-service.png)
+   ![Anpassad skickaåtgärd &#x200B;](/help/forms/assets/custom-submit-action-service.png)
 
 1. Spara ändringarna.
 

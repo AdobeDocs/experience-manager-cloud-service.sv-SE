@@ -65,7 +65,7 @@ Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/exper
 
 Den här (valfria) logiken kan implementeras på olika sätt och anropas från HTML med specifika kommandon:
 
-* Med Java - [Använd-API:t för HTL Java ](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=sv-SE) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+* Med Java - [Använd-API:t för HTL Java &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=sv-SE) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 * Om du använder JavaScript - [Använd-API:t för HTML JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html?lang=sv-SE) aktiveras en HTML-fil för åtkomst till hjälpkod som skrivits i JavaScript. På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 * Använda bibliotek på klientsidan - Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Mer information finns i dokumentet [Använda bibliotek på klientsidan på AEM as a Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
 
@@ -312,7 +312,7 @@ I det här avsnittet beskrivs hur du konfigurerar redigeringsbeteendet för en k
 Redigeringsbeteendet för en komponent konfigureras genom att en `cq:editConfig`-nod av typen `cq:EditConfig` läggs till under komponentnoden (av typen `cq:Component`) och genom att specifika egenskaper och underordnade noder läggs till. Följande egenskaper och underordnade noder är tillgängliga:
 
 * `cq:editConfig`-nodegenskaper
-* [`cq:editConfig` underordnade noder ](#configuring-with-cq-editconfig-child-nodes):
+* [`cq:editConfig` underordnade noder &#x200B;](#configuring-with-cq-editconfig-child-nodes):
    * `cq:dropTargets` (nodtyp `nt:unstructured`): definierar en lista med släppmål som kan acceptera en släppning från en resurs i innehållssökaren (ett enskilt släppmål tillåts)
    * `cq:inplaceEditing` (nodtyp `cq:InplaceEditingConfig`): definierar en redigeringskonfiguration på plats för komponenten
    * `cq:listeners` (nodtyp `cq:EditListenersConfig`): definierar vad som händer före eller efter att en åtgärd inträffar för komponenten
@@ -350,7 +350,7 @@ Mallen i den föregående länken används sedan med följande rad i HTML:
 
 I det föregående exemplet är `model.text` variabeln som är sann bara när innehållet har innehåll och är synligt.
 
-Ett exempel på hur den här mallen används visas i kärnkomponenterna, [, till exempel i titelkomponenten ](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27).
+Ett exempel på hur den här mallen används visas i kärnkomponenterna, [, till exempel i titelkomponenten &#x200B;](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27).
 
 ### Konfigurera med cq:EditConfig-underordnade noder {#configuring-with-cq-editconfig-child-nodes}
 
@@ -439,7 +439,7 @@ Med följande konfiguration uppdateras sidan när komponenten har tagits bort, r
 
 ### Fältvalidering {#field-validation}
 
-Fältvalidering i GRENITUI och GRENITUI-widgetar görs med API:t `foundation-validation`. Mer information finns i [`foundation-valdiation` Granite-dokumentationen ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html).
+Fältvalidering i GRENITUI och GRENITUI-widgetar görs med API:t `foundation-validation`. Mer information finns i [`foundation-valdiation` Granite-dokumentationen &#x200B;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html).
 
 ### Dialogrutans tillgänglighet identifieras {#dialog-ready}
 

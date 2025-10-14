@@ -37,7 +37,7 @@ Titta på videon [Versionsöversikt från juli 2021](https://video.tv.adobe.com/
 ### Nyheter {#what-is-new-foundation}
 
 * Flexiblare Dispatcher-konfiguration: Projekten kan struktureras enklare. Du kan nu t.ex. inkludera flera regelfiler för omskrivning som återspeglar webbplatsens struktur. [Lär dig mer om](/help/implementing/dispatcher/disp-overview.md#validation-debug) det här flexibla läget, inklusive hur du strukturerar din Dispatcher-konfiguration så att du kan utnyttja den.
-* Gränssnittet för trädreplikering på fliken Distribuera i replikeringsagenten bör betraktas som inaktuellt och har tagits bort efter den 30 september 2021. [Läs mer om ](/help/operations/replication.md#tree-activation) alternativa replikeringsstrategier.
+* Gränssnittet för trädreplikering på fliken Distribuera i replikeringsagenten bör betraktas som inaktuellt och har tagits bort efter den 30 september 2021. [Läs mer om &#x200B;](/help/operations/replication.md#tree-activation) alternativa replikeringsstrategier.
 * Paketet `org.apache.sling.datasource-1.0.4.jar` för stöd för ling-datakälla har tagits bort eftersom det har inaktuella funktioner och inte används av kunder.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
@@ -85,7 +85,7 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* Du kan nu använda tjänsten Automated forms conversion för att [konvertera PDF forms på franska, tyska och spanska ](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=sv-SE&#language-specific-meta-model) till anpassningsbara formulär.
+* Du kan nu använda tjänsten Automated forms conversion för att [konvertera PDF forms på franska, tyska och spanska &#x200B;](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/extending-the-default-meta-model.html?lang=sv-SE&#language-specific-meta-model) till anpassningsbara formulär.
 * En separat panel har lagts till i mallredigeraren för att visa fel som rör adaptiva formulärkomponenter. Det bidrar till att konsolidera alla adaptiva formulärfel på en plats och minskar upplösningstiden.
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#beta-features-forms}

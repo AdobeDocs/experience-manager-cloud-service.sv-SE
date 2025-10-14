@@ -54,7 +54,7 @@ I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/
 
 ### Textalternativ (1.1) {#text-alternatives}
 
-[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk ](https://www.w3.org/TR/WCAG/#text-alternatives).
+[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk &#x200B;](https://www.w3.org/TR/WCAG/#text-alternatives).
 
 ### Innehåll som inte är text (1.1.1) {#non-text-content}
 
@@ -613,7 +613,7 @@ Bilder av text används ofta när ett visst textformat är att föredra, t.ex. e
 
 #### Så här möts - bilder av text (1.4.5) {#how-to-meet-images-of-text}
 
-Om du måste använda bilder av text använder du CSS för att ersätta bilder av text med motsvarande text i HTML så att texten blir tillgänglig på ett anpassningsbart sätt. Ett exempel på hur detta kan uppnås finns i [C30: Använda CSS för att ersätta text med bilder av text och tillhandahålla gränssnittskontroller för att växla ](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
+Om du måste använda bilder av text använder du CSS för att ersätta bilder av text med motsvarande text i HTML så att texten blir tillgänglig på ett anpassningsbart sätt. Ett exempel på hur detta kan uppnås finns i [C30: Använda CSS för att ersätta text med bilder av text och tillhandahålla gränssnittskontroller för att växla &#x200B;](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
 
 #### Mer information - Textbilder (1.4.5) {#more-information-images-of-text}
 
@@ -1132,7 +1132,7 @@ Om det finns två komponenter på en webbsida som båda har samma funktioner som
 
 #### Hur man uppfyller kraven - konsekvent identifiering (3.2.4) {#how-to-meet-consistent-identification}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas ](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &#x200B;](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
 
 #### Mer information - Konsekvent identifiering (3.2.4) {#more-information-consistent-identification}
 

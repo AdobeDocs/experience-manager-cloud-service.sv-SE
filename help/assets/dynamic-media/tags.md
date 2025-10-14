@@ -150,7 +150,7 @@ Slutför konfigurationsstegen i avsnitten [Konfigurera Adobe Analytics](#configu
 
 Om konfigurationen är korrekt kan du lägga till stöd för Experience Platform-taggar på en webbsida med ett dynamiskt medievisningsprogram.
 
-Mer information om hur du använder inbäddningskoden för Experience Platform-taggbiblioteket finns i [Lägga till Experience Platform-taggar ](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code) .
+Mer information om hur du använder inbäddningskoden för Experience Platform-taggbiblioteket finns i [Lägga till Experience Platform-taggar &#x200B;](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code) .
 
 Mer information om hur du använder den inbäddade kodfunktionen i Experience Manager Dynamic Media finns i [Bädda in video- eller bildvisningsprogrammet på en webbsida](/help/assets/dynamic-media/embed-code.md).
 

@@ -30,7 +30,7 @@ AEM som molntjänst är som standard tillgängligt via Internet. Säkerhet hante
 
 Cloud Manager IP Tillåtelselista kan bara användas för att begränsa och styra åtkomsten till betrodda IP-adresser. Cloud Manager-användare med lämplig behörighet kan [skapa och lägga till IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/add-ip-allow-lists.md) med betrodda IP-adresser som webbplatsens användare kan komma åt sina AEM-domäner från.
 
-När du har lagt till [IP-Tillåtelselista kan det användas eller tas bort ](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller entitet i en författartjänst, en utgivartjänst eller båda delarna, i en miljö.
+När du har lagt till [IP-Tillåtelselista kan det användas eller tas bort &#x200B;](/help/implementing/cloud-manager/ip-allow-lists/apply-allow-list.md) flera gånger som en enhet eller entitet i en författartjänst, en utgivartjänst eller båda delarna, i en miljö.
 
 >[!NOTE]
 >

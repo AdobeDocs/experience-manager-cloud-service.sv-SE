@@ -90,7 +90,7 @@ Det **skyddade läget** är aktiverat som standard. Låt det vara aktiverat för
    >
    >Kontrollera att AEM Forms-servern är igång. HTML Preview ansluter till CRX-servern för att *generera* en förhandsvisning.
 
-   ![Alternativ för AEM Forms Designer ](assets/server_options.png)
+   ![Alternativ för AEM Forms Designer &#x200B;](assets/server_options.png)
 
    Alternativ för AEM Forms Designer
 

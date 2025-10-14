@@ -47,7 +47,7 @@ Du kan hämta [!DNL JavaScript™] API-referensdokumentation från [!DNL &#x200B
    1. Öppna filen index.html för att visa API-referensdokumentationen.
 
 * **Kan jag fortsätta använda befintliga teman och mallar?**
-Ja, du kan fortsätta använda teman som skapats med AEM 6.4 Forms och AEM 6.5 Forms när du har använt [ migreringsverktyget ](migrate-to-forms-as-a-cloud-service.md) för att flytta dem till [!DNL AEM Forms] as a Cloud Service.
+Ja, du kan fortsätta använda teman som skapats med AEM 6.4 Forms och AEM 6.5 Forms när du har använt [&#x200B; migreringsverktyget &#x200B;](migrate-to-forms-as-a-cloud-service.md) för att flytta dem till [!DNL AEM Forms] as a Cloud Service.
 
   Du kan också skapa ett projekt baserat på [!DNL AEM Forms] as a Cloud Service [Archetype](setup-local-development-environment.md#forms-cloud-service-local-development-environment) och använda de exempelteman och mallar som ingår.
 
@@ -94,7 +94,7 @@ Formulärdatamodellen (FDM) har ingen metod för att använda anpassade certifik
 Forms Portal, appen [!DNL AEM Forms] , integrationen med Adobe Analytics och integrationen med Adobe Target ingår inte i den första GA-versionen. Information om de nya funktionerna finns i månadsversionskommentarerna.
 
 * **Jag har utformat ett [JSON-schema för att skapa ett anpassat formulär](adaptive-form-json-schema-form-model.md). JSON-schemat definierar händelser för vissa komponenter i adaptiva formulär. Har AEM Forms as a Cloud Service stöd för event?**
-Skapa det adaptiva formuläret baserat på JSON-schemat i Forms-miljön Experience Manager 6.5 och använd [ migreringsverktyget ](migrate-to-forms-as-a-cloud-service.md) för att migrera sådana adaptiva Forms till AEM Forms as a Cloud Service. Verktyget konverterar sådana händelser till klientbibliotek och du kan fortsätta använda Adaptive Forms med händelser i en Cloud Service-miljö.
+Skapa det adaptiva formuläret baserat på JSON-schemat i Forms-miljön Experience Manager 6.5 och använd [&#x200B; migreringsverktyget &#x200B;](migrate-to-forms-as-a-cloud-service.md) för att migrera sådana adaptiva Forms till AEM Forms as a Cloud Service. Verktyget konverterar sådana händelser till klientbibliotek och du kan fortsätta använda Adaptive Forms med händelser i en Cloud Service-miljö.
 
 <!-- 
 

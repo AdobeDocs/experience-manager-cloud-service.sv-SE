@@ -253,7 +253,7 @@ Om du vill lägga till ett nytt textfält med namnet **Tone of Voice** använder
 }}
 ```
 
-![Generera variationer - fråga redigerad med rösten ](assets/generate-variations-prompt-edited.png)
+![Generera variationer - fråga redigerad med rösten &#x200B;](assets/generate-variations-prompt-edited.png)
 
 <!--
 #### Example: Add new dropdown field - Page Type {#example-add-new-dropdown-field-page-type}
@@ -307,7 +307,7 @@ När du har redigerat frågan är alternativet **Spara** tillgängligt längst n
 
 När du väljer det här alternativet öppnas dialogrutan **Spara fråga**:
 
-![Generera variationer - dialogruta där du kan spara ](assets/generate-variations-prompt-save-dialog.png)
+![Generera variationer - dialogruta där du kan spara &#x200B;](assets/generate-variations-prompt-save-dialog.png)
 
 1. Lägg till ett unikt **frågenamn**, som används för att identifiera uppmaningen i **Frågemallar**.
    1. Ett nytt och unikt namn skapar en ny promptmall.

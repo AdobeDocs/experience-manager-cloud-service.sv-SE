@@ -42,6 +42,6 @@ Mer information om hur du publicerar en uppsättning eller resurs finns i [Publi
 
 Experience Manager stöder nu leverans av allt dynamiskt medieinnehåll (bilder och video) via HTTP/2. Det betyder att en publicerad URL eller inbäddningskod för bilden eller videon är tillgänglig för integrering med alla program som accepterar en värdbaserad resurs. Den publicerade resursen levereras sedan via HTTP/2-protokollet. Den här leveransmetoden förbättrar sättet som webbläsare och servrar kommunicerar på, vilket ger bättre respons och laddningstider för alla dynamiska medieresurser.
 
-Se [HTTP/2-leverans av innehåll, vanliga frågor ](/help/assets/dynamic-media/http2faq.md).
+Se [HTTP/2-leverans av innehåll, vanliga frågor &#x200B;](/help/assets/dynamic-media/http2faq.md).
 
 <!--this md file used to reside under sites-administering-->

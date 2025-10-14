@@ -144,7 +144,7 @@ Om du vill uppdatera en översättning kan du lägga till ett nytt jobb i ditt b
    ![Välj målspråk](assets/select-target-language.png)
 
 1. När det nya översättningsjobbets målspråk är inställt väljer du ellipsknappen längst ned på jobbkortet för att visa information om jobbet.
-1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [ på samma sätt som när du ursprungligen skapade översättningsprojektet](translate-content.md##manually-creating).
+1. Jobbet är tomt när det skapas. Lägg till innehåll i jobbet genom att trycka på eller klicka på knappen **Lägg till** och använda sökvägsläsaren [&#x200B; på samma sätt som när du ursprungligen skapade översättningsprojektet](translate-content.md##manually-creating).
 
 >[!TIP]
 >

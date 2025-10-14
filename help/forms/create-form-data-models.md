@@ -51,7 +51,7 @@ Kontrollera att du har konfigurerat de datakällor som du vill använda i formul
 
    Låt oss granska de olika komponenterna i användargränssnittet för formulärdatamodellsredigeraren.
 
-   ![En formulärdatamodell med tre datakällor - en RESTful-tjänst, [!DNL Experience Manager] användarprofil och en RDBMS ](assets/fdm-ui.png)
+   ![En formulärdatamodell med tre datakällor - en RESTful-tjänst, [!DNL Experience Manager] användarprofil och en RDBMS &#x200B;](assets/fdm-ui.png)
 
    S. **[!UICONTROL Data Sources]** Visar datakällor i en formulärdatamodell. Expandera en datakälla om du vill visa dess datamodellsobjekt och -tjänster.
 

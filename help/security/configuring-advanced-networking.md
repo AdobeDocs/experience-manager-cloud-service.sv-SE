@@ -405,7 +405,7 @@ Vissa bibliotek kräver explicit konfiguration för att använda Java™-standar
 
 Ett exempel med Apache HttpClient som kräver explicita anrop till
 [`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använd
-[`HttpClients.createSystem()` ](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
+[`HttpClients.createSystem()` &#x200B;](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
 
 ```java
 public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {

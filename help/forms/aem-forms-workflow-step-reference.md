@@ -98,7 +98,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     
     -->
 
-   * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för begäran för att definiera [namnet och värdet för attributet ](work-with-form-data-model.md#bindargument) för begäran. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
+   * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för begäran för att definiera [namnet och värdet för attributet &#x200B;](work-with-form-data-model.md#bindargument) för begäran. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
 
   <!--  
      

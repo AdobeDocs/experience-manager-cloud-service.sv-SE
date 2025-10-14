@@ -31,7 +31,7 @@ Arbetsflödena har olika nivå av migreringsstöd. Se den här [listan över spe
 * `UNNECESSARY`: Funktioner är inte nödvändiga i [!DNL Experience Manager Assets] as a Cloud Service.
 * `NUI_OOTB`: Funktionerna tillhandahålls av [Asset Compute-tjänsten](/help/assets/asset-microservices-configure-and-use.md).
 * `DMS7_OOTB`: Funktioner tillhandahålls som standard [!DNL Dynamic Media]-anslutningar.
-* `NUI_MIGRATED`: Flyttad till en [bearbetningsprofil för tjänsten Asset compute ](/help/assets/asset-microservices-configure-and-use.md).
+* `NUI_MIGRATED`: Flyttad till en [bearbetningsprofil för tjänsten Asset compute &#x200B;](/help/assets/asset-microservices-configure-and-use.md).
 * `UNSUPPORTED`: Stöds för närvarande inte i [!DNL Experience Manager Assets] as a Cloud Service.
 
 ## Använd verktyget för resursarbetsflödesmigrering {#use-workflow-migrator}

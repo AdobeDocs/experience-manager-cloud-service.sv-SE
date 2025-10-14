@@ -25,7 +25,7 @@ Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**
 ## <a id="1"></a> Öppna Assets-vyn{#add-UI-Extensibility-in-AEM-Assets-View}
 
 Följ stegen som anges i bilden nedan för att komma åt [!DNL Assets View]:
-![ access-assets-view-ui ](/help/assets/assets/access-assets-view.jpg)
+![&#x200B; access-assets-view-ui &#x200B;](/help/assets/assets/access-assets-view.jpg)
 
 ## Visa gränssnittstillägg i [!DNL Assets View] {#ui-extensibility-panel-assets-view}
 

@@ -102,7 +102,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
 1. På sidan Dynamic Media Reprocess workflow, i det övre högra hörnet, väljer du **[!UICONTROL Edit]** för att låsa upp arbetsflödet.
 1. I arbetsflödet väljer du komponenten Scene7 Batch Upload för att öppna verktygsfältet och väljer sedan **[!UICONTROL Configure]** i verktygsfältet.
 
-   ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; ](/help/assets/dynamic-media/assets/reprocess-assets8.png).
+   ![Skärmbild av komponenten &quot;Scene7 Batch Upload&quot; på sidan &quot;Dynamic Media Reprocess&quot; med muspekaren över ikonen &quot;Configure&quot; &#x200B;](/help/assets/dynamic-media/assets/reprocess-assets8.png).
 
 1. Ange följande i dialogrutan **[!UICONTROL Batch Upload to Scene7—Step Properties]**:
    * I textfälten **[!UICONTROL Title]** och **[!UICONTROL Description]** anger du en ny titel och beskrivning för jobbet, om så önskas.
@@ -112,7 +112,7 @@ Batch size is the number of assets that are amalgamated into a single IPS (Dynam
    * I **[!UICONTROL Batch field]** anger du det maximala antalet resurser (50-1000) som ska bearbetas i ett batchbearbetningsjobb för en Dynamic Media-server.
    * Välj **[!UICONTROL Advance on timeout]** om du vill fortsätta när tidsgränsen nås. Avmarkera alternativet om du vill fortsätta till inkorgen när tidsgränsen nås.
 
-   ![Skärmbild av sidan &quot;Gruppöverföring till scen7 - Stegegenskaper&quot; ](/help/assets/dynamic-media/assets/reprocess-assets3.png).
+   ![Skärmbild av sidan &quot;Gruppöverföring till scen7 - Stegegenskaper&quot; &#x200B;](/help/assets/dynamic-media/assets/reprocess-assets3.png).
 
 1. Välj **[!UICONTROL Done]** i det övre högra hörnet i dialogrutan **[!UICONTROL Batch Upload to Scene7 – Step Properties]**.
 

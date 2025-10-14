@@ -132,7 +132,7 @@ Mer information finns i [Aktivera cachelagring av beständiga frågor](/help/hea
 >
 >Om du vill tillåta direkta och/eller POST-frågor i Dispatcher kan du be systemadministratören att:
 >
->* Skapa en [Cloud Manager-miljövariabel ](/help/implementing/cloud-manager/environment-variables.md) med namnet `ENABLE_GRAPHQL_ENDPOINT`
+>* Skapa en [Cloud Manager-miljövariabel &#x200B;](/help/implementing/cloud-manager/environment-variables.md) med namnet `ENABLE_GRAPHQL_ENDPOINT`
 >* med värdet `true`
 
 >[!NOTE]

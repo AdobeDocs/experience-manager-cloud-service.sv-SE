@@ -196,7 +196,7 @@ Så här jämför du en tidigare version med den aktuella sidan:
 
    ![Jämför versioner](/help/sites-cloud/authoring/assets/versions-revert.png)
 
-1. Välj **Jämför med aktuell**. [Sidskillnaden ](/help/sites-cloud/authoring/sites-console/page-diff.md) öppnas och skillnaderna visas.
+1. Välj **Jämför med aktuell**. [Sidskillnaden &#x200B;](/help/sites-cloud/authoring/sites-console/page-diff.md) öppnas och skillnaderna visas.
 
 ## Timewarp {#timewarp}
 
