@@ -5,9 +5,9 @@ exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
 solution: Experience Manager
 feature: Log Files, Developing
 role: Admin, Architect, Developer
-source-git-commit: bc92ed7acefbbd906b0986ea0b6b96fa6d8422de
+source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Så här hämtar du loggar:
 
    ![Dialogrutan Hämta loggar](assets/download-preview.png)
 
-   Om [Ytterligare Publish-regioner](/help/operations/additional-publish-regions.md) är aktiverade för din miljö, kan du markera varje region och hämta dess loggar separat, vilket visas nedan:
+   Om [Ytterligare publiceringsregioner](/help/operations/additional-publish-regions.md) är aktiverade för din miljö kan du markera varje region och hämta dess loggar separat, vilket visas nedan:
 
    ![Hämta loggar för ytterligare publiceringsregioner](assets/download-publish-region-logs.png)
 
@@ -101,5 +101,5 @@ Läs mer om Cloud Manager API och Adobe I/O CLI i följande resurser:
 
 Mer information om loggfiler i AEM as a Cloud Service finns i följande resurser:
 
-* [Loggfiler AEM 5 i molnet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files.html?lang=sv-SE)
-* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=sv-SE)
+* [Cloud 5 AEM-loggfiler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files#)
+* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#)

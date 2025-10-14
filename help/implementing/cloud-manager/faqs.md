@@ -5,9 +5,9 @@ exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Ja. Lägg till `maven-toolchains-plugin` med rätt inställningar för Java™ 1
 
 Processen är dokumenterad - se [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
 
-Se till exempel koden för [wk-projektexempel](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+Se till exempel exempelprojektkoden [ för ](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)WKND.
 
 ## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java™ 8 till Java™ 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
 
@@ -43,13 +43,13 @@ För Cloud Manager-byggen kan `maven-enforcer-plugin` misslyckas med det här fe
 "[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion".
 ```
 
-Felet är känt eftersom Cloud Manager använder en annan version av Java™ för att köra kommandot maven jämfört med att kompilera kod. Utelämna helt enkelt `requireJavaVersion` från dina `maven-enforcer-plugin`-konfigurationer.
+Felet är känt eftersom Cloud Manager använder en annan version av Java™ för att köra kommandot Maven jämfört med att kompilera kod. Utelämna helt enkelt `requireJavaVersion` från dina `maven-enforcer-plugin`-konfigurationer.
 
 ## Kodkvalitetskontrollen misslyckades och distributionen stoppas. Finns det något sätt att kringgå den här kontrollen? {#deployment-stuck}
 
-Ja. Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått, så de kan kringgås som en del av en distributionskanal genom att objekten i resultatgränssnittet expanderas.
+Ja. Alla fel i kodkvalitetskontrollen utom säkerhetsklassificeringen är icke-kritiska mått. Det innebär att de kan kringgås som en del av en distributionsprocess genom att objekten i resultatgränssnittet expanderas.
 
-En användare med rollen [Distributionshanterare, Projektledare eller Business Owner](/help/onboarding/aem-cs-team-product-profiles.md#cloud-manager-product-profiles) kan åsidosätta problemen. I så fall fortsätter pipeline eller så kan de acceptera problemen. I så fall avbryts pipeline med ett fel.
+En användare med rollen [Distributionshanterare, Project Manager eller Business Owner](/help/onboarding/aem-cs-team-product-profiles.md#cloud-manager-product-profiles) kan åsidosätta problemen. I så fall fortsätter rörledningen eller så kan de acceptera problemen. I så fall upphör rörledningen med ett fel.
 
 Mer information finns i dokumenten [Kodkvalitetstestning](/help/implementing/cloud-manager/code-quality-testing.md#three-tiered-gate) och [Konfigurera icke-produktionsförlopp](/help/implementing/cloud-manager/configuring-pipelines/configuring-non-production-pipelines.md#non-production-pipelines).
 
@@ -57,7 +57,7 @@ Mer information finns i dokumenten [Kodkvalitetstestning](/help/implementing/clo
 
 Ja. För utvecklardistributioner måste Git-grenen `pom.xml`-filerna innehålla `-SNAPSHOT` i slutet av `<version>`-värdet.
 
-Med det här värdet kan efterföljande distribution fortfarande installeras när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
+Med det här värdet kan efterföljande distribution installeras stilla när versionen inte ändras. I utvecklingsmiljöer läggs ingen automatisk version till eller genereras för maven-bygget.
 
 Du kan också ange versionen till `-SNAPSHOT` för fas- och produktionsbyggen eller distributioner. Cloud Manager anger automatiskt rätt versionsnummer och skapar en tagg i Git. Denna tagg kan vid behov hänvisas till senare.
 
@@ -94,22 +94,22 @@ Lösningen är att lägga till ett [RepositoryInitializer OSGi-konfigurationsskr
 
 I föregående exempelfel innehåller paketet `myapp-base.ui.content-*.zip` innehåll under `/conf` och `/var/workflow`. För att distributionen ska lyckas krävs behörigheter för `sling-distribution-importer` under dessa sökvägar.
 
-Här är ett exempel på en [`org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config`](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) OSGi-konfiguration som lägger till ytterligare behörigheter för användaren `sling-distribution-importer`. Konfigurationen lägger till behörigheter under `/var`. En sådan konfiguration måste läggas till i programpaketet under `/apps/myapp/config` (där myapp är den mapp där programkoden lagras).
+Här är ett exempel på en [`org.apache.sling.jcr.repoinit.RepositoryInitializer-DistributionService.config`](https://github.com/cqsupport/cloud-manager/blob/main/org.apache.sling.jcr.repoinit.RepositoryInitializer-distribution.config) OSGi-konfiguration som lägger till ytterligare behörigheter för användaren `sling-distribution-importer`. Konfigurationen lägger till behörigheter under `/var`. En sådan konfiguration måste läggas till i programpaketet under `/apps/myapp/config` (där `myapp` är den mapp där programkoden lagras).
 
 ## Min Cloud Manager-distribution misslyckas vid distributionssteget i AEM as a Cloud Service och jag har redan lagt till en RepositoryInitializer OSGi-konfiguration. Vad mer kan jag göra? {#build-failures}
 
 Om [tillägget av en OSGi-konfiguration för RepositoryInitializer](#cloud-manager-deployment-cloud-service) inte löste felet kan det bero på något av dessa ytterligare problem.
 
-* Distributionen kan misslyckas på grund av en felaktig OSGi-konfiguration som bryter en färdig tjänst.
+* Distributionen kan misslyckas på grund av en felaktig OSGi-konfiguration som bryter en körklar tjänst.
    * Kontrollera loggarna under distributionen så att du kan se om det finns några uppenbara fel.
 
 * Distributionen kan misslyckas på grund av felaktiga Dispatcher- eller Apache-konfigurationer.
-   * Testa dina Apache- och Dispatcher-konfigurationer lokalt med Docker-bilden som ingår i SDK:n.
+   * Testa dina Apache- och Dispatcher-konfigurationer lokalt med Docker-bilden som ingår i SDK.
    * Se [Dispatcher i molnet](/help/implementing/dispatcher/disp-overview.md#content-delivery) om hur du konfigurerar Dispatcher Docker-behållaren för enkel lokal testning.
 
 * Distributionen kan misslyckas på grund av ett annat fel under replikering av innehållspaketen (Sling-distribution) från författaren till publiceringsinstanser.
    * Följ de här stegen för att simulera problemet i en lokal konfiguration.
-      1. Installera en författare och publicera instansen lokalt med de senaste AEM SDK-burkarna.
+      1. Installera en författare och en Publish-instans lokalt med de senaste AEM SDK-burkarna.
       1. Logga in på författarinstansen.
       1. Gå till **Verktyg** > **Distribution** > **Distribution**.
       1. Distribuera innehållspaketen som är en del av kodbasen och se om kön blockeras med ett fel.
@@ -134,6 +134,6 @@ setting variables... !
 Cannot set variables: https://cloudmanager.adobe.io/api/program/111/environment/222/variables (403 Forbidden)
 ```
 
-I det här fallet måste användaren som kör kommandona läggas till i rollen **Distributionshanteraren** i Admin Console.
+I det här fallet måste användaren som kör dessa kommandon läggas till i rollen **Distributionshanteraren** i Admin Console.
 
 Mer information finns i [API-behörigheter](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/).

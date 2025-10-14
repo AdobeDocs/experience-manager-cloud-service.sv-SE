@@ -5,9 +5,9 @@ exl-id: 93fb216c-c4a7-481a-bad6-057ab3ef09d3
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 3e7ce0c7f330ba92b57e36ea8fe5bb17b5998cb1
+source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2489'
 ht-degree: 0%
 
 ---
@@ -308,7 +308,7 @@ En ny flik öppnas i webbläsaren med inloggningssidan till **Developer Console*
 
 Endast en användare med rollen **Utvecklare** har åtkomst till **Developer Console**. För sandlådeprogram har dock alla användare med åtkomst till sandlådeprogrammet åtkomst till **Developer Console**.
 
-Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
+Mer information finns i [Vilolägen och Fristående sandlådemiljöer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs#hibernation).
 
 Det här alternativet är också tillgängligt på fliken **Miljö** i fönstret **Översikt** när du klickar på ![Mer ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i en enskild miljö.
 
@@ -340,7 +340,7 @@ Om du vill hantera IP Tillåtelselista går du till sidan ![Dataikon](https://sp
 
 ### Använd en IP-Tillåtelselista {#apply-ip-allow-list}
 
-När du använder en IP Tillåtelselista länkas alla definierade IP-intervall till en författare eller publiceringstjänst i miljön.
+När du använder ett IP Tillåtelselista länkas alla definierade IP-intervall till en författare eller publiceringstjänst i miljön.
 
 >[!TIP]
 >

@@ -5,9 +5,9 @@ exl-id: e014b8ad-ac9f-446c-bee8-adf05a6b4d70
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: f60dc00fc031fa7ef73a18daec9c6c0e5570b018
+source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Samma verktyg som Adobe använder för att skriva produktfunktionstester kan anv
 
 Koden för det anpassade funktionstestet är Java™-kod i mappen `it.tests` i ditt projekt. Den ska producera en enda JAR med alla funktionstester. Om bygget skapar mer än en test-JAR är den JAR som är vald icke-deterministisk. Om inga JAR-testversioner skapas godkänns teststeget som standard. Se [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/it.tests) för exempel på tester.
 
-Testerna körs på testinfrastruktur som underhålls av Adobe, inklusive minst två författarinstanser, två publiceringsinstanser och en Dispatcher-konfiguration. Detta innebär att dina anpassade funktionstester körs mot hela AEM.
+Testerna körs på en testinfrastruktur som underhålls av Adobe, inklusive minst två författarinstanser, två publiceringsinstanser och en Dispatcher-konfiguration. Detta innebär att dina anpassade funktionstester körs mot hela AEM-stacken.
 
 ### Struktur för funktionstester {#functional-tests-structure}
 
@@ -105,14 +105,14 @@ Mer information finns i [`aem-testing-clients` GitHub-repo](https://github.com/a
 
 | Typ | Värde | Beskrivning |
 |----------------------|-------|--------------------------------------------------------------------|
-| CPU | 0,5 | Den processortid som reserverats per testkörning |
+| CPU | 0,5 | Bevarande CPU-tid per testkörning |
 | Minne | 0,5 Gi | Mängd minne som tilldelats testet, värde i gibibyte |
-| Timeout | 30 m | Tidsgräns efter vilken testet stoppas. |
-| Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testet inte tar längre tid än så här. |
+| Timeout | 30 m | Den tidsgräns efter vilken testet avslutas. |
+| Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testerna inte tar längre tid än så här. |
 
 >[!NOTE]
 >
-> Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva ditt användningsfall. Adobe teamet granskar din begäran och ger lämplig hjälp.
+> Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva ditt användningsfall. Adobe team granskar din förfrågan och ger lämplig hjälp.
 
 #### Beroenden
 
@@ -131,7 +131,7 @@ Kommande ändringar av den inneslutna infrastrukturen för att köra funktionste
 >[!NOTE]
 >
 >Denna ändring måste utföras före 6 april 2024.
->Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
+>>Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
 
 ### Lokal testkörning {#local-test-execution}
 

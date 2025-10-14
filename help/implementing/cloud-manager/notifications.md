@@ -5,9 +5,9 @@ exl-id: c1c740b0-c873-45a8-9518-a856db2be75b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,9 @@ Klicka på alternativet **Markera alla som lästa** längst ned på panelen om d
 
 Du kan anpassa hur du tar emot meddelanden och vilka meddelanden du får.
 
-Klicka på kugghjulsikonen högst upp i sidofältet för meddelanden.
+Klicka på kugghjulsikonen högst upp i sidofältet för meddelanden för att öppna fönstret med **Experience Cloud-inställningar**. Härifrån kan du definiera dina meddelandeprenumerationer och hur du får dina meddelanden.
 
 ![Ikon för meddelandeinställningar](assets/notifications-configuration.png)
-
-Detta öppnar fönstret **Experience Cloud-inställningar** där du kan definiera dina meddelandeprenumerationer och hur du får dina meddelanden.
 
 ### Prenumerationer {#subscriptions}
 
@@ -63,7 +61,7 @@ Som standard får du alla meddelanden för alla produkter både i programmet och
 
 ### Prioritet {#priority}
 
-Prioritetsvarningar har markerats med en **HIGH** -tagg och kan konfigureras så att de exklusivt tas emot som aviseringar. I avsnittet **Prioritet** kan du definiera vilka kategorier som kvalificerar som prioritetsmeddelanden.
+Prioritetsvarningar har markerats med en **HIGH** -tagg. Du kan konfigurera så att de exklusivt tas emot som aviseringar. I avsnittet **Prioritet** kan du definiera vilka kategorier som kvalificerar som prioritetsmeddelanden.
 
 ![Aviseringsprioritet](assets/notifications-priority.png)
 
@@ -83,7 +81,7 @@ Du kan definiera hur varningarna ska fungera.
 
 ### E-post {#emails}
 
-Meddelanden finns tillgängliga i webbanvändargränssnittet för alla [!UICONTROL Experience Cloud]-lösningar i Adobe. Du kan också välja att de här meddelandena ska skickas via e-post i avsnittet **E-post**.
+Meddelanden är tillgängliga i webbanvändargränssnittet för Adobe [!UICONTROL Experience Cloud]-lösningar. Du kan också välja att de här meddelandena ska skickas via e-post i avsnittet **E-post**.
 
 ![Meddelandemeddelanden](assets/notifications-emails.png)
 
@@ -93,4 +91,4 @@ Inga e-postmeddelanden skickas som standard. Du kan välja att få e-post som:
 * Dagligen
 * Vecka
 
-När **snabbmeddelanden** har valts skickas e-postmeddelanden omedelbart för varje meddelande. För **Daglig sammandrag** och **Veckosammandrag** kan du välja när din dagliga sammandrag ska skickas och på vilken dag och när veckosammandraget ska skickas.
+När du väljer **Snabbmeddelanden** skickas e-postmeddelanden omedelbart för varje meddelande. För **Daglig sammandrag** och **Veckosammandrag** kan du välja när din dagliga sammandrag ska skickas och på vilken dag och när veckosammandraget ska skickas.
