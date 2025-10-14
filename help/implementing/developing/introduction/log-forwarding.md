@@ -547,7 +547,7 @@ När du konfigurerar Sumo Logic för datainmatning visas en&quot;HTTP Source Add
 
 `https://collectors.de.sumologic.com/receiver/v1/http/ZaVnC...`
 
-Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [ CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [ Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
+Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [&#x200B; CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [&#x200B; Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
 
 ```yaml
 kind: "LogForwarding"
