@@ -48,7 +48,7 @@ Import av produktkatalogdata stöds inte längre. Med CIF-tilläggsobjekt kan ma
 
 >[!TIP]
 >
->Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel: [Magento öppen källkod.](https://business.adobe.com/products/magento/open-source.html)
+>Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel: [Magento öppen källkod.](https://business.adobe.com/se/products/magento/open-source.html)
 
 ## Produktkatalogupplevelser med AEM rendering {#aem-rendering}
 

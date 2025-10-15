@@ -19,7 +19,7 @@ Smarta taggar är nyckelord som inte bara visas i texten utan också bäst beskr
 
 Ord som ordnas i bokstavsordning är till exempel enklare att hitta än de som är slumpmässigt spridda. Taggning har ett liknande syfte. Den organiserar resurser efter affärsklonomi och ser till att de mest relevanta visas i sökresultaten. En biltillverkare kan till exempel märka bilderna med modellnamn så att endast relevanta bilder visas när de utformar en kampanjkampanj. Vare sig man lägger in märkord i &quot;runners&quot; eller &quot;löpskor&quot; behöver man inte bekymra sig om typografi, stavningsvariationer eller alternativa söktermer - Smarta taggar känner igen dem alla.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/products/sensei/adobe-sensei.html) automatiskt smarta taggar för överförda resurser (som standard) tillsammans med text som justeras efter företagsklonomin.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/se/products/sensei/adobe-sensei.html) automatiskt smarta taggar för överförda resurser (som standard) tillsammans med text som justeras efter företagsklonomin.
 
 ## Krav och konfiguration {#smart-tags-prereqs-config}
 

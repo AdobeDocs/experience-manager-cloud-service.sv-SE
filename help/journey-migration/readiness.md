@@ -219,7 +219,7 @@ När du har förstått omfattningen av de ändringar som krävs för att gå öv
 ## Ytterligare resurser {#additional-resources}
 
 * [Komma igång med Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/using-cam/getting-started-cam.md) - En omfattande guide om hur du använder Cloud Acceleration Manager för att snabba upp din övergång till molnet.
-* [AEM as a Cloud Service: Introduktion, arkitektur och andra tankar](https://experienceleague.adobe.com/sv?launch=ExperienceManager-D-1-2021.1.migration&recommended=ExperienceManager-D-1-2021.1.migration&lang=en#dashboard/learning)
+* [AEM as a Cloud Service: Introduktion, arkitektur och andra tankar](https://experienceleague.adobe.com/sv?launch=ExperienceManager-D-1-2021.1.migration&recommended=ExperienceManager-D-1-2021.1.migration&lang=sv#dashboard/learning)
 * [AEM a Cloud Service Home](/help/overview/introduction.md) - Här kan du få en översikt över dokumentationen för Experience Manager as a Cloud Service.
 * [AEM as a Cloud Service-översikt](/help/overview/introduction.md) - Den här guiden ger en översikt över Experience Manager som en molntjänst, inklusive en introduktion, terminologi och arkitektur.
 * [Onboarding Journey](/help/journey-onboarding/overview.md) - Den här guiden ger en sammanfattning av hur du kommer igång med Experience Manager as a Cloud Service, inklusive hur du får tillgång till och konfigurerar ditt team.

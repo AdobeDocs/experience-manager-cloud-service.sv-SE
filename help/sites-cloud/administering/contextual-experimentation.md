@@ -33,7 +33,7 @@ För webbplatser som körs på Adobe Experience Manager finns det ett **plugin-p
 
 Plugin-programmet för experimenterande används i kontexten för [Edge Delivery Services](/help/edge/overview.md) så du behöver ett Github-konto, en innehållsdatabas som SharePoint eller Google Drive, och du behöver även [AEM Sidekick](https://www.aem.live/docs/sidekick). Se även självstudiekursen [Komma igång - Universal Editor Developer Tutorial &#x200B;](https://www.aem.live/developer/tutorial) och [Getting Started - Developer Tutorial](https://www.aem.live/developer/tutorial).
 
-När du har konfigurerat allt kan du **titta på den här videon** med titeln [Direktexperiment](https://business.adobe.com/products/experience-manager/sites/testing-optimization.html) för att få en kort demonstration om hur plugin-programmet för experiment fungerar.
+När du har konfigurerat allt kan du **titta på den här videon** med titeln [Direktexperiment](https://business.adobe.com/se/products/experience-manager/sites/testing-optimization.html) för att få en kort demonstration om hur plugin-programmet för experiment fungerar.
 
 ## Vanliga termer {#frequently-used-terms}
 

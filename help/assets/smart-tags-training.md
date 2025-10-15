@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Utbildning om smarta taggar
 
-Med hjälp av utbildningsmaterialet för smarta taggar kan du träna dina taggar så att du kan ange information om de relevanta taggarna inte finns där. Den använder ett artificiellt intelligent ramverk av [Adobe Sensei](https://business.adobe.com/why-adobe/experience-cloud-artificial-intelligence.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din affärsmiljö. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
+Med hjälp av utbildningsmaterialet för smarta taggar kan du träna dina taggar så att du kan ange information om de relevanta taggarna inte finns där. Den använder ett artificiellt intelligent ramverk av [Adobe Sensei](https://business.adobe.com/se/why-adobe/experience-cloud-artificial-intelligence.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din affärsmiljö. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
 
 ## Fastställa kraven på smarta taggar-utbildning {#smart-tag-training-requirement}
 

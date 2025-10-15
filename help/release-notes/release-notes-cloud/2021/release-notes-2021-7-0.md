@@ -110,7 +110,7 @@ API:t `com.day.cq.dam.api.collection.SmartCollection` är inte tillgängligt i [
    * Visuell indikator för mellanlagrade produktdata i redigeringsläge för bättre synlighet för kommande ändringar
    * Ny platskarta för innehålls- och e-handelssidor
 
-* Stöd för [Adobe Commerce Sensei produktrekommendation från Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
+* Stöd för [Adobe Commerce Sensei produktrekommendation från Adobe Sensei](https://business.adobe.com/se/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
 
 ## [!DNL Experience Manager Screens] som en [!DNL Cloud Service] {#screens}
 
