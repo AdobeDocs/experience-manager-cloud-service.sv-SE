@@ -5,7 +5,7 @@ exl-id: a65e8a5a-954b-4307-8027-ca8bac5f4261
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 2c74a3a42dd21e2eaf71c1922931d5fa5149f7c5
+source-git-commit: 18c997a5644288e870c109a8d745b196349b923d
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 0%
@@ -89,10 +89,6 @@ Det finns två sorters:
    * anger sökvägen till den refererade resursen
 * **Fragmentreferens (UUID)**
    * I redigeraren anger referensen sökvägen till den refererade resursen. Referensen behålls internt som ett UUID (Universal Unique ID) som refererar till resursen
-
-<!--
-![Content Modeling with Content Fragments](/help/journey-headless/developer/assets/headless-modeling-01.png "Content Modeling with Content Fragments")
--->
 
 ### Så här skapar du kapslade fragment {#author-nested-fragment}
 

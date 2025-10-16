@@ -5,9 +5,9 @@ exl-id: 3eca973f-b210-41bb-98da-ecbd2bae9803
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 07327f80b23e1e6fdbb3fb49d861221877724d39
+source-git-commit: 18c997a5644288e870c109a8d745b196349b923d
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1733'
 ht-degree: 0%
 
 ---
@@ -63,16 +63,10 @@ Du kan sedan använda navigeringspanelen för att komma åt nyckelområden i AEM
 
 Du kan öppna navigeringspanelen genom att markera ikonen Adobe längst upp till vänster och sedan välja den lilla kompassymbolen.
 
-<!--
-The Navigation Panel can be opened by selecting Adobe icon at the top left, followed by the small compass icon:
-
-![Navigation panel](/help/journey-headless/author/assets/headless-journey-author-navigation-01.png)
--->
-
 >[!NOTE]
 >Innehållsfragment är en funktion i AEM **Sites**, men de sparas som **Assets**. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
 
-I konsolen kan du välja mappar i den vänstra panelen för att navigera till ditt innehållsfragment. Du kan också filtrera och/eller söka.
+I konsolen Innehållsfragment kan du välja mappar i den vänstra panelen för att navigera till ditt innehållsfragment. Du kan också filtrera och/eller söka.
 
 ![Konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cf-managing-console-filter.png)
 
@@ -80,20 +74,18 @@ I konsolen kan du välja mappar i den vänstra panelen för att navigera till di
 
 I konsolen **Innehållsfragment** finns ett antal åtgärder tillgängliga för dina innehållsfragment från verktygsfältet:
 
-<!-- ![Console actions](assets/cfm-managing-cf-console-01.png) -->
-
 * **Öppna i Assets**
 * **Skapa**
 * Kolumnen **Refererad av** innehåller också en direktlänk som visar alla överordnade referenser till det fragmentet, inklusive referenser till innehållsfragment, Experience Fragments och sidor.
 * Vid hovring över mappnamnet visas JCR-sökvägen.
 
-När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
-
-<!-- ![Console actions - fragment selected](assets/cfm-managing-cf-console-selected-01.png) -->
+När du har valt fragmentet finns det ytterligare åtgärder tillgängliga (efter behov):
 
 * **Öppna**
 * **Publicera** (och **Avpublicera**)
+* **Hantera taggar**
 * **Kopiera**
+* **Ersätt**
 * **Flytta**
 * **Byt namn**
 * **Ta bort**
@@ -101,26 +93,6 @@ När du har valt fragmentet är alla lämpliga åtgärder tillgängliga:
 >[!NOTE]
 >
 >Åtgärder som Publicera, Avpublicera, Ta bort, Flytta, Byt namn, Kopiera, utlöser ett asynkront jobb. Jobbets förlopp kan övervakas via användargränssnittet för AEM Async Jobs.
-
-<!--
-The **Assets** console has dedicated **Action Toolbars**, and **Quick Actions** that you can use after selecting a resource (for example, a folder or content fragment).
-
-The Quick Actions are available for a single resource, see **Basel** in the example below:
-
-![Quick Actions](/help/journey-headless/author/assets/headless-journey-author-navigation-05.png)
-
-The Actions Toolbar provides access to the full range of actions - applicable for the current scenario. The actions available can change; for example, dependent on your location, or whether you have selected multiple resources:
-
-![Action Toolbar](/help/journey-headless/author/assets/headless-journey-author-navigation-06.png)
-
-You can select the format for viewing your resources with the View Selector:
-
-![View Selector](/help/journey-headless/author/assets/headless-journey-author-navigation-03.png)
-
-You can view additional information about items using the Rail Selector. This also gives access to additional actions.
-
-![Left Rail](/help/journey-headless/author/assets/headless-journey-author-navigation-04.png)
--->
 
 ## Skapa innehållsfragment {#authoring-content-fragments}
 

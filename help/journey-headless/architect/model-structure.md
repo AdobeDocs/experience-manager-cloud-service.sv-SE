@@ -5,9 +5,9 @@ exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 6306ad88b889197aff377dc0a72ea232cd76ff9c
+source-git-commit: 29c9b47fe10fd4109190ec91990e8ba7a0359f72
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '691'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author &#x200B;](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
 
 Den här artikeln bygger på dessa principer så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 
@@ -24,21 +24,6 @@ Den här artikeln bygger på dessa principer så att du förstår hur du skapar 
 
 * **Målgrupp**: Nybörjare
 * **Mål**: koncept och mekanismer för att modellera innehåll för ditt Headless CMS med Content Fragments Models.
-
-<!-- which persona does this? -->
-<!-- and who allows the configuration on the folders? -->
-
-<!--
-## Enabling Content Fragment Models {#enabling-content-fragment-models}
-
-At the very start you need to enable Content Fragment Models for your site, this is done in the Configuration Browser; under Tools > General > Configuration Browser. You can either select to configure the global entry, or create a configuration. For example:
-
-![Define configuration](/help/sites-cloud/administering/content-fragments/assets/cfm-conf-01.png)
-
->[!NOTE]
->
->See Additional Resources - Content Fragments in the Configuration Browser
--->
 
 ## Skapa modeller för innehållsfragment {#creating-content-fragment-models}
 
@@ -56,39 +41,25 @@ Sedan kan du skapa modellerna för innehållsfragment och definiera strukturen.
 
 1. Använd **Skapa** om du vill spara den tomma modellen eller **Skapa och öppna**.
 
-<!--
-Then the Content Fragments Models can be created and the structure defined. This can be done under **Tools** > **General** > **Content Fragment Models**. 
-
-![Content Fragment Models in Tools](assets/cfm-tools.png)
-
-After selecting this you navigate to the location for your model and select **Create**. Here you can enter various key details.
-
-The option **Enable model** is activated by default. This means that your model is available for use (in creating Content Fragments) as soon as you have saved it. You can deactivate this if you want - there are opportunities later to enable (or disable) an existing model.
-
-![Create Content Fragment Model](/help/sites-cloud/administering/content-fragments/assets/cfm-models-02.png)
-
-Confirm with **Create** and you can then **Open** your model to start defining the structure.
--->
-
 ## Definiera modeller för innehållsfragment {#defining-content-fragment-models}
 
-När du först öppnar en ny modell visas ett stort tomt utrymme till vänster och en lång lista med **datatyper** till höger:
+När du först öppnar en ny modell visas ett stort (relativt) tomt utrymme i mitten, en lång lista med **datatyper** till vänster och **Egenskaper** (tomt i början, eftersom det är för det markerade fältet) till höger:
 
-![Tom modell](/help/sites-cloud/administering/content-fragments/assets/cfm-models-03.png)
+![Tom modell](/help/sites-cloud/administering/content-fragments/assets/cf-cfmodels-empty-model.png)
 
 Så vad ska man göra?
 
-Du kan dra instanser av **datatyperna** till vänster - du definierar redan modellen!
+Du kan antingen:
 
-![Definierar fält](/help/sites-cloud/administering/content-fragments/assets/cfm-models-04.png)
+* Dra en datatyp från den vänstra panelen till önskad plats för ett fält i den mittersta panelen.
+* Markera +-ikonen med en datatyp för att lägga till den längst ned i fältlistan.
+* Välj Lägg till i den mittersta panelen och sedan den önskade datatypen i den nedrullningsbara listan för att lägga till ett fält längst ned i listan.
+
+Du definierar redan din modell!
 
 När du har lagt till en datatyp måste du definiera **egenskaperna** för det fältet. Dessa egenskaper beror på vilken typ som används. Till exempel:
 
-![Dataegenskaper](/help/sites-cloud/administering/content-fragments/assets/cfm-models-05.png)
-
-Du kan lägga till så många fält du behöver. Till exempel:
-
-![Modell för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cfm-models-07.png)
+![Dataegenskaper](/help/sites-cloud/administering/content-fragments/assets/cf-cfmodels-field-properties.png)
 
 ### Dina innehållsförfattare {#your-content-authors}
 

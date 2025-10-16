@@ -5,7 +5,7 @@ exl-id: 81616e31-764b-44b0-94a6-3ae24ce56bf6
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 2ccca86a0e611b93c273e37abb6e0fd7870421d4
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -18,23 +18,18 @@ I den här delen av [AEM Headless Developer Journey](overview.md) kan du lära d
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan rubriker [How to Put All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) lärde du dig att använda de AEM utvecklingsverktygen för att sätta ihop alla delar av projektet.
+I det tidigare dokumentet om AEM resa utan rubriker [How to Put All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) lärde du dig att använda AEM utvecklingsverktyg för att sätta ihop alla delar av ditt projekt.
 
-Den här artikeln bygger på dessa grundläggande funktioner så att du förstår hur du förbereder ett eget AEM headless-projekt för publicering.
+Den här artikeln bygger vidare på dessa grundprinciper så att du förstår hur du förbereder ett eget headless-projekt för AEM att publicera.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå den AEM rubrikfria publiceringsprocessen och de prestandaöverväganden du måste vara medveten om innan du publicerar programmet.
+Det här dokumentet hjälper dig att förstå AEM headless Publishing pipeline och de prestandaöverväganden du måste vara medveten om innan du publicerar programmet.
 
 * Säkra och skala programmet före start
 * Övervaka prestanda och felsökning
 
-<!-- Alexandru: this is a bit redundant, to review again later
-
-## Prepare your AEM Headless Application for Go-Live {#prepare-your-aem-headless-application-for-golive}
-
--->
-Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart för start.
+Följ de riktlinjer som beskrivs nedan för att göra AEM headless-program klara för lansering.
 
 ## Säkra och skala ditt Headless-program innan det startas {#secure-and-scale-before-launch}
 
@@ -66,18 +61,18 @@ Följ de bästa metoderna nedan för att göra ditt AEM headless-program klart f
 
 ## Distribuera till produktion {#deploy-to-production}
 
-När du har testat allt och fungerar som det ska kan du skicka koduppdateringarna till en [centraliserad Git-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=sv-SE).
+När du har testat allt och fungerar som det ska kan du skicka koduppdateringarna till en [centraliserad Git-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
 
-När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM as a Cloud Service med [Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE).
+När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM as a Cloud Service med [Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html).
 
 Du kan börja distribuera koden med Cloud Manager CI/CD-pipeline, som beskrivs utförligt under [Distribuera innehållspaket med Cloud Manager och Package Manager](/help/implementing/deploying/overview.md).
 
 ## Prestandaövervakning {#performance-monitoring}
 
-För att användarna ska få bästa möjliga upplevelse när de använder det AEM headless-programmet är det viktigt att du övervakar nyckeltal enligt beskrivningen nedan:
+För att användarna ska få bästa möjliga upplevelse när de använder AEM headless är det viktigt att du övervakar nyckeltal enligt beskrivningen nedan:
 
 * Validera förhandsgransknings- och produktionsversionerna av appen
-* Verifiera AEM statussidor för den aktuella tjänsttillgänglighetsstatusen
+* Verifiera AEM statussidor för aktuell status för tillgänglighet
 * Få resultatrapporter
    * Leveransprestanda
       * CDN-prestanda (snabbt) - kontrollera antal anrop, cachehastighet, felfrekvens och nyttolasttrafik
@@ -99,8 +94,8 @@ Följ dessa metodtips som ett allmänt tillvägagångssätt vid felsökning:
 * Validera funktionalitet och prestanda med förhandsgranskningsversionen av programmet
 * Validera funktionalitet och prestanda med programmets produktionsversion
 * Validera med JSON-förhandsvisningen i Content Fragment Editor
-* Inspect JSON i klientprogrammet för att kontrollera om det finns problem med klientprogram eller leverans
-* Inspect the JSON using GraphQL to check for the presence of issues related to cached content or AEM
+* Kontrollera JSON i klientprogrammet för att kontrollera om det finns problem med klientprogram eller leverans
+* Sök i JSON med GraphQL efter eventuella problem med cache-lagrat innehåll eller AEM
 
 ### Logga ett fel med support {#logging-a-bug-with-support}
 
@@ -117,25 +112,25 @@ Grattis! Du har slutfört AEM Headless Developer Journey! Nu bör du förstå:
 
 * Skillnaden mellan headless och headful content delivery.
 * AEM headless-funktioner.
-* Organisera och AEM Headless-projekt.
-* Skapa innehåll utan rubriker i AEM.
+* Så här organiserar du och AEM Headless-projekt.
+* Så här skapar du headless-innehåll i AEM.
 * Så här hämtar och uppdaterar du headless-innehåll i AEM.
-* Så här lever du med ett AEM Headless-projekt.
+* Så här lever du i ett AEM Headless-projekt.
 * Vad du ska göra efter det att du är klar.
 
 Antingen har du redan startat ditt första AEM Headless-projekt eller så har du nu all den kunskap du behöver för att göra det. Snyggt jobb!
 
 ### Utforska Single Page-program {#explore-spa}
 
-De headless butikerna i AEM behöver inte stanna här. I delen [Komma igång](getting-started.md#integration-levels) diskuterades kanske en kort stund om hur AEM inte bara stöder headless-leverans och traditionella modeller med full stack, utan även stöder hybridmodeller som kombinerar fördelarna med båda.
+De headless butikerna i AEM behöver dock inte stanna här. I delen [Komma igång](getting-started.md#integration-levels) diskuterades kanske en kort stund om hur AEM inte bara stöder headless-leverans och traditionella helstacksmodeller, utan även stöder hybridmodeller som kombinerar fördelarna med båda.
 
-Om den här typen av flexibilitet är något du behöver för ditt projekt kan du fortsätta med den valfria, extra delen av resan, [Skapa enkelsidiga program (SPA) med AEM](create-spa.md).
+Om du behöver den här typen av flexibilitet i ditt projekt kan du fortsätta med den valfria, extra delen av resan [Skapa SPA-program (Single Page Applications) med AEM](create-spa.md).
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
-* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 * [Översikt över distribution till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
-* [Använd Cloud Manager för att distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE)
-* [Integrera Cloud Manager Git-databasen med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=sv-SE)
+* [Använd Cloud Manager för att distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)
+* [Integrera Cloud Manager Git-databasen med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html)
