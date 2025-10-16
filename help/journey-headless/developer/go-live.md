@@ -61,9 +61,9 @@ Följ de riktlinjer som beskrivs nedan för att göra AEM headless-program klara
 
 ## Distribuera till produktion {#deploy-to-production}
 
-När du har testat allt och fungerar som det ska kan du skicka koduppdateringarna till en [centraliserad Git-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
+När du har testat allt och fungerar som det ska kan du skicka koduppdateringarna till en [centraliserad Git-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=sv-SE).
 
-När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM as a Cloud Service med [Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html).
+När uppdateringarna har överförts till Cloud Manager kan de distribueras till AEM as a Cloud Service med [Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE).
 
 Du kan börja distribuera koden med Cloud Manager CI/CD-pipeline, som beskrivs utförligt under [Distribuera innehållspaket med Cloud Manager och Package Manager](/help/implementing/deploying/overview.md).
 
@@ -129,8 +129,8 @@ Om du behöver den här typen av flexibilitet i ditt projekt kan du fortsätta m
 ## Ytterligare resurser {#additional-resources}
 
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
 * [Översikt över distribution till AEM as a Cloud Service](/help/implementing/deploying/overview.md)
-* [Använd Cloud Manager för att distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html)
-* [Integrera Cloud Manager Git-databasen med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html)
+* [Använd Cloud Manager för att distribuera koden](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE)
+* [Integrera Cloud Manager Git-databasen med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=sv-SE)
