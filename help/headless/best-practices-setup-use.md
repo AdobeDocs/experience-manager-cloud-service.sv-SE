@@ -184,9 +184,9 @@ AEM Headless CMS ger utvecklare frihet att skapa och leverera upplevelser utöve
 
 #### Information {#details-your-apps}
 
-* [Installera och använda AEM SDK för utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html)
-* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* Exempel, bland annat [React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html), [Next.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/next-js.html) och [Node.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/server-to-server-app.html)
+* [Installera och använda AEM SDK för utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html?lang=sv-SE)
+* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+* Exempel, bland annat [React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=sv-SE), [Next.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/next-js.html) och [Node.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/server-to-server-app.html?lang=sv-SE)
 
 #### Miljö {#environments-your-apps}
 
@@ -207,4 +207,4 @@ Mer information om AEM GraphQL och Content Fragments finns i:
 
 * [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 * [Använda GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md)
-* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
