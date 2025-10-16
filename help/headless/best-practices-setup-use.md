@@ -1,10 +1,10 @@
 ---
 title: Bästa tillvägagångssätt för installation och användning av AEM GraphQL med innehållsfragment
-description: Lär dig de rekommenderade bästa metoderna för konfiguration och användning av AEM GraphQL med innehållsfragment.
+description: Lär dig de rekommenderade bästa metoderna för installation och användning av AEM GraphQL med innehållsfragment.
 exl-id: 4d6a5aaa-c8be-4858-ad07-085dc4fb77e7
 feature: Headless
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 38a4bf89e099432163163e90e08aa0f47407724f
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Bästa tillvägagångssätt för installation och användning av AEM GraphQL med innehållsfragment{#best-practices-setup-use-aem-graphql-content-fragments}
 
-I dessa riktlinjer sammanfattas de rekommenderade bästa sätten att konfigurera, konfigurera och använda AEM med GraphQL- och Content Fragments.
+Dessa riktlinjer sammanfattar de rekommenderade bästa sätten att konfigurera, konfigurera och använda AEM med GraphQL och Content Fragments.
 
 ## Komma igång {#getting-started}
 
@@ -24,7 +24,7 @@ Så här kommer du igång:
 
 ## Inställningar {#setup}
 
-Om du vill konfigurera AEM GraphQL för användning med innehållsfragment och dina appar måste du konfigurera olika komponenter.
+Om du vill konfigurera AEM GraphQL säkert för användning med innehållsfragment och dina appar måste du konfigurera olika komponenter.
 
 ### Skapa GraphQL-slutpunkter (inklusive säkerhet) {#graphql-endpoint-creation}
 
@@ -40,7 +40,7 @@ Slutpunkter måste konfigureras i:
 
 * Författare
 * Förhandsgranska
-* Publish
+* Publicera
 
 För:
 
@@ -48,7 +48,7 @@ För:
 * Testning
 * Produktion
 
-### AEM Dispatcher-cachning {#dispatcher-caching}
+### AEM Dispatcher cachning {#dispatcher-caching}
 
 >[!NOTE]
 >Om cachelagring i Dispatcher är aktiverat behövs inte [CORS-konfigurationen](#cors-setup) och kan därför ignoreras.
@@ -63,14 +63,14 @@ Cachelagring av beständiga frågor är inte aktiverat som standard i Dispatcher
 
 Dispatcher är vanligtvis konfigurerat för:
 
-* Publish: produktion
+* Publicera: produktion
 
 ### CORS-inställningar {#cors-setup}
 
 >[!NOTE]
->Om cachelagring i [AEM Dispatcher](#dispatcher-caching) är aktiverad behövs inte CORS-inställningen och det här avsnittet kan därför ignoreras.
+>Om cachelagring i [AEM Dispatcher](#dispatcher-caching) är aktiverad behövs inte CORS-konfigurationen, och det här avsnittet kan därför ignoreras.
 
-För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras och läggas till i ett AEM som distribueras till AEM via Cloud Manager. Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna.
+För att få åtkomst till GraphQL-slutpunkten måste en CORS-princip konfigureras och läggas till i ett AEM-projekt som distribueras till AEM via Cloud Manager. Detta görs genom att en lämplig OSGi CORS-konfigurationsfil läggs till för de önskade slutpunkterna.
 
 #### Information {#details-cors-setup}
 
@@ -80,7 +80,7 @@ För att komma åt GraphQL-slutpunkten måste en CORS-princip konfigureras och l
 
 CORS är vanligtvis konfigurerad för:
 
-* Publish: produktion
+* Publicera: produktion
 
 ### Autentisering {#authentication}
 
@@ -88,14 +88,14 @@ Ett primärt användningsexempel för Adobe Experience Manager as a Cloud Servic
 
 #### Information {#details-authentication}
 
-[Autentisering för fjärrfrågor AEM GraphQL-frågor om innehållsfragment](/help/headless/security/authentication.md)
+[Autentisering av AEM GraphQL-fjärrfrågor för innehållsfragment](/help/headless/security/authentication.md)
 
 #### Miljö {#environments-authentication}
 
 Autentisering är vanligtvis konfigurerad för:
 
 * Förhandsgranska
-* Publish
+* Publicera
 
 För:
 
@@ -105,7 +105,7 @@ För:
 
 ### Behörigheter {#permissions}
 
-Med en headless-implementering finns det flera säkerhets- och behörighetsområden som bör hanteras. Behörigheter och profiler kan övervägas baserat på den AEM miljön **Författare** eller **Publish**. Varje miljö innehåller olika personligheter och med olika behov.
+Med en headless-implementering finns det flera säkerhets- och behörighetsområden som bör hanteras. Behörigheter och profiler kan övervägas baserat på AEM-miljön **Författare** eller **Publicera**. Varje miljö innehåller olika personligheter och med olika behov.
 
 #### Information {#details-permissions}
 
@@ -117,7 +117,7 @@ Behörigheter är vanligtvis konfigurerade för:
 
 * Författare
 * Förhandsgranska
-* Publish
+* Publicera
 
 För:
 
@@ -137,7 +137,7 @@ GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET`-
 
 Ett CDN är vanligtvis konfigurerat för:
 
-* Publish: produktion
+* Publicera: produktion
 
 ### Konfigurera och skapa innehållsfragment {#cconfigure-create-content-fragments}
 
@@ -156,7 +156,7 @@ Innehållsfragment definieras, skapas, testas, publiceras och öppnas på:
 
 * Författare
 * Förhandsgranska
-* Publish
+* Publicera
 
 För:
 
@@ -180,20 +180,20 @@ Riktlinjerna är till för att förhindra prestandaproblem i dina GraphQL-frågo
 
 ### Få tillgång till GraphQL från dina appar {#access-graphql-from-your-apps}
 
-AEM headless CMS ger utvecklare frihet att skapa och leverera exceptionella upplevelser med de språk, ramverk och verktyg de redan är bekanta med.
+AEM Headless CMS ger utvecklare frihet att skapa och leverera upplevelser utöver det vanliga med hjälp av de språk, ramverk och verktyg de redan känner till.
 
 #### Information {#details-your-apps}
 
-* [Installera och använda AEM SDK för utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html?lang=sv-SE)
-* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
-* Exempel, bland annat [React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=sv-SE), [Next.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/next-js.html?lang=sv-SE) och [Node.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/server-to-server-app.html?lang=sv-SE)
+* [Installera och använda AEM SDK för utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html)
+* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* Exempel, bland annat [React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html), [Next.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/next-js.html) och [Node.js](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/server-to-server-app.html)
 
 #### Miljö {#environments-your-apps}
 
 Appar utvecklas, testas och används vanligtvis på:
 
 * Förhandsgranska
-* Publish
+* Publicera
 
 För:
 
@@ -203,8 +203,8 @@ För:
 
 ### Ytterligare resurser
 
-Mer information om AEM GraphQL och innehållsfragment finns i:
+Mer information om AEM GraphQL och Content Fragments finns i:
 
 * [AEM GraphQL API för användning med innehållsfragment](/help/headless/graphql-api/content-fragments.md)
 * [Använda GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md)
-* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+* [AEM Headless Developer Resources](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

@@ -4,9 +4,9 @@ description: Använd AEM Content Fragment Models för att definiera strukturen f
 exl-id: 9a156a17-8403-40fc-9bd0-dd82fb7b2235
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 38a4bf89e099432163163e90e08aa0f47407724f
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -23,27 +23,11 @@ Du måste dock först skapa en resursmapp där du lagrar dem.
 
 Assets-mappar används för att [ordna traditionella innehållsresurser](/help/assets/manage-digital-assets.md), till exempel bilder och videoklipp, tillsammans med innehållsfragment.
 
-## Så här skapar du en Assets-mapp {#how-to-create-an-assets-folder}
+## Skapa och konfigurera en Assets-mapp {#create-and-configure-an-assets-folder}
 
-En administratör behöver bara skapa mappar då och då för att ordna innehållet när det skapas. I den här guiden behöver vi bara skapa en mapp.
+En administratör behöver bara skapa mappar då och då för att ordna innehållet när det skapas. Använd Assets Console för att skapa en ny mapp.
 
-1. Logga in i AEM as a Cloud Service och välj **Navigering > Assets > Filer** på huvudmenyn.
-1. Välj **Skapa > Mapp**.
-1. Ange en **titel** och ett **namn** för din mapp.
-   * **Rubriken** ska vara beskrivande.
-   * **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md).
-      * Den kan vid behov justeras.
-
-   ![Skapa mapp](../assets/assets-folder-create.png)
-1. Markera mappen som du skapade genom att hålla markeringen nedtryckt och trycka på den. Välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommandot](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md)).
-1. I fönstret **Egenskaper** väljer du fliken **Cloud Service** .
-1. För **molnkonfigurationen** väljer du den [konfiguration du skapade tidigare](create-configuration.md).
-   ![Konfigurera resursmappen](../assets/assets-folder-configure.png)
-1. Välj **Spara och stäng**.
-1. Välj **OK** i bekräftelsefönstret.
-
-   ![Bekräftelsefönstret](../assets/assets-folder-confirmation.png)
+När du har skapat filen måste du tillämpa din [konfiguration](/help/headless/setup/create-configuration.md) på mappen. Mer information finns i [Använda konfigurationen i din mapp](/help/sites-cloud/administering/content-fragments/setup.md#apply-the-configuration-to-your-folder).
 
 Du kan skapa ytterligare undermappar i den mapp du skapade. Undermapparna ärver den överordnade mappens **molnkonfiguration**. Detta kan åsidosättas om du vill använda modeller från en annan konfiguration.
 

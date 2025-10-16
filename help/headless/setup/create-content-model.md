@@ -4,9 +4,9 @@ description: Definiera strukturen för det innehåll du ska skapa och tjäna med
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: b76898409291fef85733e75405e65152424e2d41
+source-git-commit: 38a4bf89e099432163163e90e08aa0f47407724f
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -23,47 +23,14 @@ Modeller för innehållsfragment definierar strukturen för data och innehåll s
 
 ## Så här skapar du en innehållsfragmentmodell {#how-to-create-a-content-fragment-model}
 
-En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när nya modeller behövs. I den här guiden behöver vi bara skapa en modell.
+En informationsarkitekt skulle utföra dessa uppgifter endast sporadiskt när nya modeller behövs.
 
-1. Logga in på AEM as a Cloud Service och välj **Verktyg**, **Allmänt**, **Content Fragment Models** på huvudmenyn.
-1. Välj den mapp som skapades när du skapade konfigurationen.
+Stegen som krävs för att skapa en modell som är klar för användning är:
 
-   ![Modellmappen](../assets/models-folder.png)
-1. Välj **Skapa**.
-1. Ange en **modelltitel**, **taggar** och **beskrivning**. Du kan också markera/avmarkera **Aktivera modell** för att kontrollera om modellen aktiveras omedelbart när den skapas.
-
-   ![Skapa en modell](../assets/models-create.png)
-1. I bekräftelsefönstret väljer du **Öppna** för att konfigurera modellen.
-
-   ![Bekräftelsefönstret](../assets/models-confirmation.png)
-1. Använd **Modellredigeraren för innehållsfragment** och skapa innehållsfragmentmodellen genom att dra och släppa fält från kolumnen **Datatyper**.
-
-   ![Dra och släpp fält](../assets/models-drag-and-drop.png)
-
-1. När du har placerat ett fält måste du konfigurera dess egenskaper. Redigeraren växlar automatiskt till fliken **Egenskaper** för det tillagda fältet där du kan ange de obligatoriska fälten.
-
-   ![Konfigurera egenskaper](../assets/models-configure-properties.png)
-
-1. Välj **Spara** när du är klar med att skapa modellen.
-
-1. Den skapade modellens läge beror på om du valde **Aktivera modell** när du skapade modellen:
-   * vald - den nya modellen kommer redan att vara **Aktiverad**
-   * inte markerad - den nya modellen skapas i läget **Utkast**
-
-1. Om modellen inte redan är aktiverad måste den vara **Enabled** för att kunna använda den.
-   1. Markera modellen som du skapade och välj sedan **Aktivera**.
-
-      ![Aktivera modellen](../assets/models-enable.png)
-   1. Bekräfta aktiveringen av modellen genom att trycka på eller klicka på **Aktivera** i bekräftelsedialogrutan.
-
-      ![Aktivera bekräftelsedialogrutan](../assets/models-enabling.png)
-1. Modellen är nu aktiverad och klar att användas.
-
-   ![Modellen är aktiverad](../assets/models-enabled.png)
-
-**Modellredigeraren för innehållsfragment** stöder många olika datatyper, till exempel enkla textfält, resursreferenser, referenser till andra modeller och JSON-data.
-
-Du kan skapa flera modeller. Modeller kan referera till andra innehållsfragment. Använd [konfigurationer](create-configuration.md) för att ordna dina modeller.
+* [Skapa en innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#creating-a-content-fragment-model)
+* [Aktivera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#enabling-a-content-fragment-model)
+* [Definiera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)
+* [Publicera innehållsfragmentmodellen](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#publishing-a-content-fragment-model)
 
 ## Nästa steg {#next-steps}
 
@@ -71,4 +38,7 @@ Nu när du har definierat strukturerna för dina innehållsfragment genom att sk
 
 >[!TIP]
 >
->Fullständig information om modeller för innehållsfragment finns i [dokumentationen för modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md).
+>Fullständig information om modeller för innehållsfragment finns i:
+>
+>* [Hantera modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md)
+>* [Definierar modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md)

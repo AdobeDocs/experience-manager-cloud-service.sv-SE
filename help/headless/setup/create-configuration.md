@@ -1,17 +1,17 @@
 ---
-title: Skapa en konfiguration - Headless-installation
+title: Skapa en konfiguration - Headless Setup
 description: Skapa en konfiguration som ett första steg i arbetet med headless i AEM as a Cloud Service.
 exl-id: 48801599-f279-4e55-8033-9c418d2af5bb
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 38a4bf89e099432163163e90e08aa0f47407724f
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-# Skapa en konfiguration - Headless-installation {#creating-configuration}
+# Skapa en konfiguration - Headless Setup {#create-configuration}
 
 Som ett första steg mot headless i AEM as a Cloud Service måste du skapa en konfiguration.
 
@@ -19,29 +19,15 @@ Som ett första steg mot headless i AEM as a Cloud Service måste du skapa en ko
 
 I Configuration Browser finns ett allmänt konfigurations-API, innehållsstruktur och lösningsmekanism för konfigurationer i AEM.
 
-När det gäller headless content management i AEM kan du tänka på en konfiguration som en arbetsplats i AEM där du kan skapa dina innehållsmodeller, som definierar strukturen för ditt framtida innehåll och innehållsfragment. Du kan ha flera konfigurationer för att separera dessa modeller.
+När det gäller headless content management i AEM kan du tänka dig en konfiguration som en arbetsplats i AEM där du kan skapa dina innehållsmodeller, som definierar strukturen för ditt framtida innehåll och dina framtida innehållsfragment. Du kan ha flera konfigurationer för att separera dessa modeller.
 
-Om du är bekant med [sidmallar i en fullstals AEM implementering](/help/sites-cloud/authoring/page-editor/templates.md) är användningen av konfigurationer för hantering av innehållsmodeller likartad.
+Om du är bekant med [sidmallar i en AEM-implementering i full hög](/help/sites-cloud/authoring/page-editor/templates.md), är användningen av konfigurationer för hantering av innehållsmodeller likartad.
 
 ## Så här skapar du en konfiguration {#how-to-create-a-configuration}
 
 En administratör behöver bara skapa en konfiguration en gång, eller mycket sällan, när det krävs en ny arbetsyta för att kunna ordna dina innehållsmodeller. I den här guiden behöver vi bara skapa en konfiguration.
 
-1. Logga in på AEM as a Cloud Service och välj **Verktyg > Allmänt > Konfigurationsläsaren** på huvudmenyn.
-1. Ange en **titel** och ett **namn** för din konfiguration.
-   * **Rubriken** ska vara beskrivande.
-   * **Namn** blir nodnamnet i databasen.
-      * Den genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner](/help/implementing/developing/introduction/naming-conventions.md).
-      * Den kan vid behov justeras.
-1. Markera följande alternativ:
-   * **Modeller för innehållsfragment**
-   * **GraphQL beständiga frågor**
-
-   ![Skapa konfiguration](../assets/create-configuration.png)
-
-1. Välj **Skapa**
-
-Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också kapslas.
+Stegvisa detaljer finns i [Aktivera funktioner för innehållsfragment i konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser).
 
 >[!NOTE]
 >

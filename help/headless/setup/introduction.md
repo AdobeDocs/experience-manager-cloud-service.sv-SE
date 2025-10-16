@@ -4,28 +4,28 @@ description: Med den här snabbstartsguiden lär du dig grunderna i AEM as a Clo
 exl-id: 26c05122-5930-4b4e-91dd-287b7cc865ee
 feature: Headless
 role: Admin, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: b25d47cca15ac1fe3f06c1ae99f15495ed5f4752
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
 
 # Headless Setup {#introduction}
 
-Nedan beskrivs ett enkelt sätt att skapa, hantera och leverera upplevelser med AEM as a Cloud Service i fem steg för användare som redan är bekanta med AEM och headless-teknik. Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
+Nedan beskrivs en enkel väg för att skapa, hantera och leverera upplevelser med AEM as a Cloud Service i fem steg för användare som redan är bekanta med AEM och headless-teknik (så att de korsrefererar till den detaljerade dokumentationen). Varje guide bygger vidare på det föregående, så vi rekommenderar att du tittar noga igenom dem i ordning.
 
-1. [Skapa en konfiguration](create-configuration.md)
-1. [Skapa en innehållsfragmentmodell](create-content-model.md)
-1. [Skapa en Assets-mapp](create-assets-folder.md)
-1. [Skapa ett innehållsfragment](create-content-fragment.md)
-1. [Skapa en API-begäran](create-api-request.md)
+1. [Skapa en konfiguration](/help/headless/setup/create-configuration.md)
+1. [Skapa en innehållsfragmentmodell](/help/headless/setup/create-content-model.md)
+1. [Skapa en Assets-mapp](/help/headless/setup/create-assets-folder.md)
+1. [Skapa ett innehållsfragment](/help/headless/setup/create-content-fragment.md)
+1. [Skapa en API-begäran](/help/headless/setup/create-api-request.md)
 
 >[!TIP]
 >
 >Den här guiden för att komma igång förutsätter kunskap om både AEM och headless-teknik.
 >
->Om du inte är van vid AEM eller headless, se Adobe Headless Documentation Journeys för en heltäckande introduktion till både headless och hur AEM klarar det.
+>Om du inte har använt AEM tidigare eller använder headless läser du Adobe Headless Documentation Journeys som en heltäckande introduktion till både headless och hur AEM klarar det.
 >
 >* [Headless Developer Journey](/help/journey-headless/developer/overview.md)
 >* [Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
@@ -34,7 +34,7 @@ Nedan beskrivs ett enkelt sätt att skapa, hantera och leverera upplevelser med 
 
 ## Målgrupp {#audience}
 
-De uppgifter som beskrivs är nödvändiga för en grundläggande heltäckande demonstration av AEM headless-funktioner. Alla som har administratörsåtkomst till en testinstans AEM kan följa dessa guider för att förstå headlessleverans i AEM, även om någon med utvecklarupplevelse är idealisk.
+De uppgifter som beskrivs är nödvändiga för en grundläggande heltäckande demonstration av AEM headless-funktioner. Alla som har administratörsåtkomst till en testinstans i AEM kan följa dessa riktlinjer för att förstå headlessleverans i AEM, även om någon med utvecklarupplevelse är idealisk.
 
 I en produktionssituation utförs uppgifterna dock av olika personer, olika många gånger. Till exempel:
 
