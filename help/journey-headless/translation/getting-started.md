@@ -5,7 +5,7 @@ exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Architect, Developer
-source-git-commit: d05c510f9845c006dfb1c4d58438c9632c1325d8
+source-git-commit: 66cd28d43c56f2e8fc44674175aa9b70b7a72ed1
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -86,9 +86,11 @@ Eftersom innehållsmodellerna definierar innehållsstrukturen måste du veta vil
 1. Modellerna listas. Markera modellen och öppna redigeraren.
 1. **Modellredigeraren för innehållsfragment** öppnas.
    ![Modellredigerare för innehållsfragment](/help/sites-cloud/administering/content-fragments/assets/cf-cfmodels-field-properties.png)
-   1. I den vänstra panelen visas en lista över möjliga datatyper.
-   1. Den högra panelen visar de egenskaper som är lämpliga för det valda fältet.
+
+   * I den vänstra panelen visas en lista över möjliga datatyper.
+   * Den högra panelen visar de egenskaper som är lämpliga för det valda fältet.
    * Den mittersta panelen innehåller de fält som du har skapat och definierat - eller kommer att göra.
+
 1. Markera ett av modellens fält. AEM markerar det och informationen om det fältet visas på den högra panelen.
 1. Innehållsarkitekten aktiverar fältet **Översättningsbart** i alla fält i innehållsmodellen som måste översättas.
 
@@ -191,4 +193,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-översättni
 * [Konfigurerar översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md) - Lär dig hur du konfigurerar översättningsintegreringsramverket så att det integreras med översättningstjänster från tredje part.
 * [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Lär dig hur du skapar och hanterar både maskinöversättningsprojekt och mänskliga översättningsprojekt i AEM.
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
