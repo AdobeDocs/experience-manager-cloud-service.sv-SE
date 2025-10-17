@@ -5,7 +5,7 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 1fade922ac38340aaaee71794f96db738d492ed6
+source-git-commit: 117703794c84bebd659294a593ffd98f52ff89a2
 workflow-type: tm+mt
 source-wordcount: '2778'
 ht-degree: 0%
@@ -68,7 +68,7 @@ När du först öppnar Content Fragment Editor visas fyra huvudområden:
 
   >[!NOTE]
   >
-  >Beroende på definitioner i den underliggande modellen kan fälten omfattas av vissa typer av [validering](/help/assets/content-fragments/content-fragments-models.md#validation).
+  >Beroende på definitioner i den underliggande modellen kan fälten omfattas av vissa typer av [validering](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#validation).
 
 ![Innehållsfragmentredigeraren - översikt](assets/cf-authoring-overview.png)
 
@@ -267,7 +267,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
