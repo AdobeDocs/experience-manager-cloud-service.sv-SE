@@ -4,7 +4,7 @@ description: Läs om Cloud Manager 2025.10.0 i Adobe Experience Manager as a Clo
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 302248ade67683712bf1895fd8dfdd8853aae1ac
+source-git-commit: 85784a9611bc6f83a1d70b66ff7087117aa7ec0b
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Nästa planerade version är torsdagen den 6 november 2025.
 
 * **Dedikerade pipelines för enbart stadium och enbart produktion**
 
-  Cloud Manager erbjuder nu dedikerade pipelines för driftsättning endast på scenen och enbart i produktionen, vilket ger större flexibilitet vid hantering av driftsättningar i staging- och produktionsmiljöer oberoende av varandra. Se [Dela endast scenen och endast produktion &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/stage-prod-only.md).
+  Cloud Manager erbjuder nu dedikerade pipelines för driftsättning endast på scenen och enbart i produktionen, vilket ger större flexibilitet vid hantering av driftsättningar i staging- och produktionsmiljöer oberoende av varandra. Se [Dela endast scenen och endast produktion ](/help/implementing/cloud-manager/configuring-pipelines/stage-prod-only.md).
 
 * **AEM Cloud Health Assessment Service**
 
@@ -110,7 +110,8 @@ Intresserad av betaversionen? Mejla [beta_exphubextensibility@adobe.com](mailto:
 
 En ny byggmodell kompilerar endast ändrade moduler (i stället för hela repon) med cache-lagring på modulnivå för att korta byggtiden. Det gäller för rörledningar med kodkvalitet, fullständig stapel och enbart scener.
 
-![Dialogrutan Redigera icke-produktionspipeline med två alternativ för byggstrategi som är Fullständigt byggen och Smart bygge](/help/implementing/cloud-manager/release-notes/assets/non-production-pipeline-edit.png) *Dialogrutan Redigera icke-produktionsförlopp som visar två alternativ för byggstrategi som är Fullständigt bygge och Smart bygge.*
+![Dialogrutan Redigera icke-produktionspipeline som visar två alternativ för byggstrategi som är Fullständigt bygge och Smart bygge](/help/implementing/cloud-manager/release-notes/assets/non-production-pipeline-edit.png)
+*Dialogrutan Redigera icke-produktionsförlopp visar två alternativ för Build Strategy som är Full Build och Smart Build.*
 
 I dialogrutan **Lägg till/redigera pipeline**, under fliken **Source-kod**, finns ett nytt avsnitt i avsnittet **Skapa strategi** där du kan välja något av följande byggalternativ:
 
@@ -129,13 +130,13 @@ Intresserad? Mejla [beta_quickbuild_cmpipelines@adobe.com](mailto:beta_quickbuil
 
 Återgå snabbt till en tidigare distribution om den senaste kundkällkoden inte fungerar som förväntat - du behöver inte köra om hela pipelinen eller återställa implementeringar manuellt.<!--https://jira.corp.adobe.com/browse/CMGR-69556 -->
 
-![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**&#x200B;för en vald miljö.*
+![Återställ kundens källkod från miljökortet](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed.png) *Miljökortet ovan med alternativet **Återställ**>**Tidigare kod som distribuerats**för en vald miljö.*
 
 ![Återställ föregående dialogruta för koddistribution](/help/implementing/cloud-manager/release-notes/assets/restore-previous-code-deployed-dialogbox.png)
-*I dialogrutan **Återställ tidigare kod som distribuerats**&#x200B;granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
+*I dialogrutan **Återställ tidigare kod som distribuerats**granskar du den version som är distribuerad och den version som du vill återställa. Klicka sedan på&#x200B;**Bekräfta***.
 
 ![Återställer aktiveringen](/help/implementing/cloud-manager/release-notes/assets/restoring-previous-code-deployed-restoring.png)
-*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**&#x200B;tills distributionen är klar.*
+*Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehållet och konfigurationen intakt och markerar miljön **Återställning**tills distributionen är klar.*
 
 ![Source-kodversionen används](/help/implementing/cloud-manager/release-notes/assets/environments-view-details-sourcecodeversion.png) *Vyn Miljöinformation, som visas ovan, visar nu även den aktiva källkodsversionen som används.*
 
