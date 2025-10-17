@@ -613,7 +613,7 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 >[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
-![ Skärmbild av flervalskomponenttyp med gruppering ](assets/component-types/multiselect-group.png)
+![&#x200B; Skärmbild av flervalskomponenttyp med gruppering &#x200B;](assets/component-types/multiselect-group.png)
 
 >[!ENDTABS]
 
