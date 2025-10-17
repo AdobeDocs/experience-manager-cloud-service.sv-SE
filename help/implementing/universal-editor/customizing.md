@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 217288737cd199701b34b1d12fa755abcc09830a
+source-git-commit: a72b4b7921a1a379bcd089682c02b0519fe3af8a
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '522'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,26 @@ Alternativet **Förhandsgranska** i publiceringsfönstret kan därför ignoreras
 
 ```html
 <meta name="urn:adobe:aue:config:disable" content="publish-preview"/>
+```
+
+## Inaktiverar publicering till Live {#publish-live}
+
+Vissa redigeringsarbetsflöden kan utesluta publicering till livetjänsten.
+
+Alternativet **Live** i publiceringsfönstret kan därför inaktiveras helt i ett program genom att följande metadata läggs till.
+
+```html
+<meta name="urn:adobe:aue:config:disable" content="publish-live"/>
+```
+
+## Inaktiverar avpublicering {#unpublish}
+
+Vissa redigeringsarbetsflöden kräver en godkännandeprocess innan innehållet avpubliceras. I sådana fall bör alternativet att avpublicera inte vara tillgängligt för författare.
+
+Knappen **Avpublicera** kan därför utelämnas helt i ett program genom att följande metadata läggs till.
+
+```html
+<meta name="urn:adobe:aue:config:disable" content="unpublish"/>
 ```
 
 ## Inaktiverar Öppna sida {#open-page}
