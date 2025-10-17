@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
+source-git-commit: efd96f179482dfe1f00bdce35e2824ac5cdf9813
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1592'
 ht-degree: 1%
 
 ---
@@ -95,7 +95,7 @@ Ett fältobjekt har följande typdefinition.
 | `label` | `FieldLabel` | Fältets etikett | Ja |
 | `description` | `FieldDescription` | Beskrivning av fältet | Nej |
 | `placeholder` | `string` | Platshållare för fältet | Nej |
-| `value` | `FieldValue` | Standardvärde | Nej |
+| `value` | `FieldValue` | Detta är ett standardvärde som fungerar som platshållare. Inga innehållsuppdateringar styrs av det här värdet. Det är bara en representation i användargränssnittet. | Nej |
 | `valueType` | `ValueType` | Standardvalidering, kan vara `string`, `string[]`, `number`, `date`, `boolean` | Nej |
 | `required` | `boolean` | Är fältet obligatoriskt | Nej |
 | `readOnly` | `boolean` | Är fältet skrivskyddat | Nej |
@@ -613,7 +613,7 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 >[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
-![&#x200B; Skärmbild av flervalskomponenttyp med gruppering &#x200B;](assets/component-types/multiselect-group.png)
+![ Skärmbild av flervalskomponenttyp med gruppering ](assets/component-types/multiselect-group.png)
 
 >[!ENDTABS]
 
