@@ -5,7 +5,7 @@ exl-id: cfcef2e2-0590-457d-a0f9-6092a6d9e0e8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: ea85deb74f759f8e74d314df0ba081ea23cb5aab
+source-git-commit: a429ed24d6e724aa3cc7123982e8d4a24cbef5a9
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Om en pipeline körs blockeras variabelhanteringen.
    | --- | --- |
    | Namn | Ett unikt namn på konfigurationsvariabeln. Den identifierar den specifika variabeln som används i pipeline. Den måste följa följande namngivningskonventioner:<ul><li>Variabler får bara innehålla alfanumeriska tecken och understreck (`_`).</li><li>Namnen ska vara versaler.</li><li>Det finns en gräns på 200 variabler per pipeline.</li><li>Varje namn får innehålla högst 100 tecken.</li><li>Varje `string`-variabelvärde måste vara kortare än 2 048 tecken.</li><li>Varje `secretString`-typvariabelvärde måste vara högst 500 tecken.</li></ul> |
    | Värde | Värdet som variabeln innehåller. |
-   | Steget används | Obligatoriskt. Det steg i pipeline som variabeln gäller för:<ul><li>**Build** - Variabeln används under byggprocessen.</li><li>**Funktionstestning** - Variabeln används under funktionstestningssteget.</li><li>**UI-testning** - Variabeln används under gränssnittstestningsfasen.</li>&lt;li&lt;**Deploy** - Variabeln används under distributionssteget. Använd till exempel den här variabeln för Edge Delivery Services-pipelines.</li></ul> |
+   | Steget används | Obligatoriskt. Det steg i pipeline som variabeln gäller för:<ul><li>**Build** - Variabeln används under byggprocessen.</li><li>**Funktionstestning** - Variabeln används under funktionstestningssteget.</li><li>**UI-testning** - Variabeln används under gränssnittstestningsfasen.</li>&lt;li **Distribuera** - Variabeln används under distributionssteget. Använd till exempel den här variabeln för Edge Delivery Services-pipelines.</li></ul> |
    | Typ | Välj om variabeln är oformaterad text eller krypterad som en hemlighet. |
 
    ![Lägg till variabel](/help/implementing/cloud-manager/assets/pipeline-variables-add-variable.png)
