@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: a72b4b7921a1a379bcd089682c02b0519fe3af8a
+source-git-commit: b32e9b83a761e4f178cddb82b83b31a95a8978f6
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -20,69 +20,29 @@ Lär dig mer om de olika alternativen för att anpassa den universella redigerar
 >
 >Den universella redigeraren erbjuder även många [tilläggspunkter](/help/implementing/universal-editor/extending.md) som gör att du kan utöka funktionaliteten efter dina projektbehov.
 
-## Inaktiverar publicering {#disable-publish}
+## Använda Meta Config-taggar {#meta-tags}
 
-Vissa redigeringsarbetsflöden kräver att innehållet granskas innan det publiceras. I sådana fall bör alternativet att publicera inte vara tillgängligt för någon författare.
+Vissa redigeringsarbetsflöden kan kräva att vissa funktioner i den universella redigeraren används, inte andra. För att stödja sådana olika fall finns metataggar tillgängliga för att konfigurera eller inaktivera vissa funktioner eller knappar i redigeraren.
 
-Knappen **Publicera** kan därför ignoreras helt i ett program genom att följande metadata läggs till.
-
-```html
-<meta name="urn:adobe:aue:config:disable" content="publish"/>
-```
-
-## Inaktiverar publicering till förhandsgranskning {#publish-preview}
-
-Vissa redigeringsarbetsflöden kan utesluta publiceringen till [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) (om den är tillgänglig).
-
-Alternativet **Förhandsgranska** i publiceringsfönstret kan därför ignoreras helt i ett program genom att följande metadata läggs till.
+Använd den här taggen i avsnittet `<head>` på sidan om du vill inaktivera en eller flera funktioner:
 
 ```html
-<meta name="urn:adobe:aue:config:disable" content="publish-preview"/>
+<meta name="urn:adobe:aue:config:disable" content="..." />
 ```
 
-## Inaktiverar publicering till Live {#publish-live}
+Om du vill inaktivera flera funktioner anger du en kommaavgränsad lista med värden.
 
-Vissa redigeringsarbetsflöden kan utesluta publicering till livetjänsten.
+Följande värden stöds för `content`, d.v.s. de funktioner som kan inaktiveras med metataggar.
 
-Alternativet **Live** i publiceringsfönstret kan därför inaktiveras helt i ett program genom att följande metadata läggs till.
-
-```html
-<meta name="urn:adobe:aue:config:disable" content="publish-live"/>
-```
-
-## Inaktiverar avpublicering {#unpublish}
-
-Vissa redigeringsarbetsflöden kräver en godkännandeprocess innan innehållet avpubliceras. I sådana fall bör alternativet att avpublicera inte vara tillgängligt för författare.
-
-Knappen **Avpublicera** kan därför utelämnas helt i ett program genom att följande metadata läggs till.
-
-```html
-<meta name="urn:adobe:aue:config:disable" content="unpublish"/>
-```
-
-## Inaktiverar Öppna sida {#open-page}
-
-Knappen **Öppna sida** kan inaktiveras helt i ett program genom att följande metadata läggs till.
-
-```html
-<meta name="urn:adobe:aue:config:disable" content="header-open-page" />
-```
-
-## Inaktiverar knappen Duplicera {#duplicate-button}
-
-Vissa redigeringsarbetsflöden kan behöva begränsa möjligheten för innehållsförfattaren att duplicera komponenter. Du kan inaktivera ikonen [Duplicera](/help/sites-cloud/authoring/universal-editor/navigation.md#duplicate) genom att lägga till följande metadata.
-
-```html
-<meta name="urn:adobe:aue:config:disable" content="duplicate"/>
-```
-
-## Inaktivera kopiera och klistra in {#copy-paste}
-
-Vissa redigeringsarbetsflöden kan behöva begränsa möjligheten för innehållsförfattaren att kopiera och klistra in komponenter. Du kan inaktivera ikonerna [för att kopiera och klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) genom att lägga till följande metadata.
-
-```html
-<meta name="urn:adobe:aue:config:disable" content="copy"/>
-```
+| Innehållsvärde | Beskrivning |
+|---|---|
+| `publish` | Inaktivera [publiceringsknappen](/help/sites-cloud/authoring/universal-editor/navigation.md#publish) |
+| `publish-live` | Inaktivera [publicering](/help/sites-cloud/authoring/universal-editor/publishing.md) live |
+| `publish-preview` | Inaktivera förhandsgranskning (om [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) är tillgänglig) |
+| `unpublish` | Inaktiverar knappen [unpublish](/help/sites-cloud/authoring/universal-editor/publishing.md#unpublishing-content) |
+| `copy` | Inaktiverar knapparna [Kopiera och Klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) |
+| `duplicate` | Inaktiverar knappen [Duplicera](/help/sites-cloud/authoring/universal-editor/navigation.md#duplicate) |
+| `header-open-page` | Inaktiverar knappen [Öppna sida](/help/sites-cloud/authoring/universal-editor/navigation.md#open-page) |
 
 ## Ändra slutpunkten {#custom-endpoint}
 
