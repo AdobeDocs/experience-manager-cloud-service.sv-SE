@@ -4,7 +4,8 @@ description: Framtidsförloppet ökar utvecklarnas oberoende och snabbar upp utv
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
+recommendations: display, noCatalog
+source-git-commit: 0a458616afad836efae27e67dbe145fc44bee968
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Klientmiljön stöder följande `Node.js`-versioner:
 * 14 (standard)
 * 12
 
-Du kan använda `NODE_VERSION` [miljövariabeln &#x200B;](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
+Du kan använda `NODE_VERSION` [miljövariabeln ](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
 
 ## Bästa tillvägagångssätt för att namnge och hantera rörledningar för slutanvändare i AEM {#single-source-of-truth}
 

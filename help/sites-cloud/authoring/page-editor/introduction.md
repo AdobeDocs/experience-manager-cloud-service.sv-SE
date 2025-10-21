@@ -5,12 +5,13 @@ exl-id: da7d5933-f6c9-4937-a483-ec4352fba86b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 9a700e9eb3116252f42bb08db9dadc0e8a6adbf7
+source-git-commit: 0a458616afad836efae27e67dbe145fc44bee968
 workflow-type: tm+mt
 source-wordcount: '1431'
 ht-degree: 0%
 
 ---
+
 
 # AEM Page Editor {#editing-page-content}
 
@@ -239,7 +240,7 @@ När du låser upp en sida liknar det [att låsa sidan](#locking-a-page). När s
 
 Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i verktygsfältet när det är lämpligt:
 
-![Knapparna Ångra och Gör om &#x200B;](assets/page-editor-redo.png)
+![Knapparna Ångra och Gör om ](assets/page-editor-redo.png)
 
 >[!TIP]
 >

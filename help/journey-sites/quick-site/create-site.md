@@ -5,12 +5,14 @@ exl-id: 31bb04c2-b3cc-44ca-b517-5b0d66d9b1fa
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-source-git-commit: 34c2604c7dcc2a1b27f617fe2d88eeb7496b3456
+recommendations: display, noCatalog
+source-git-commit: 0a458616afad836efae27e67dbe145fc44bee968
 workflow-type: tm+mt
 source-wordcount: '1485'
 ht-degree: 0%
 
 ---
+
 
 # Skapa webbplats från mall {#create-site-from-template}
 
@@ -162,7 +164,7 @@ För att frontendutvecklaren ska kunna förhandsgranska anpassningarna med verkl
 
    ![Ny användarinformation](assets/new-user-details.png)
 
-1. Lägg till proxyanvändaren i gruppen `contributors` på fliken **Grupper**.
+1. Lägg till proxyanvändaren i gruppen **på fliken** Grupper`contributors`.
    * Om du skriver in termen `contributors` aktiveras AEM funktion för automatisk komplettering så att du enkelt kan markera gruppen.
 
    ![Lägg till i grupp](assets/add-to-group.png)
