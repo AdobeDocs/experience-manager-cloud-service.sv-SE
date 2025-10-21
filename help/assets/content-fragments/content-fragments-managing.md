@@ -383,7 +383,7 @@ Du kan få åtkomst till detta:
 * Efter skapande; använder [åtgärder som är tillgängliga i Assets-konsolen](#actions-for-a-content-fragment-assets-console).
 * Från [redigeraren för innehållsfragment](#toolbar-actions-in-the-content-fragment-editor).
 
-När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 >[!CAUTION]
 >
