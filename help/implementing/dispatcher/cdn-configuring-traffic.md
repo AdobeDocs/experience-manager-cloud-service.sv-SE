@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: 992f9377133dd7ca3bd7b169c0a29e76baadde7e
+source-git-commit: a8c313c3b1324e4195c2aeb70a5a56e4ef66fcf3
 workflow-type: tm+mt
-source-wordcount: '1630'
+source-wordcount: '1698'
 ht-degree: 0%
 
 ---
@@ -408,6 +408,8 @@ data:
           type: selectOrigin
           originName: example-com
           # skipCache: true
+          # headers:
+          #   Authorization: ${{AUTH_TOKEN}}
     origins:
       - name: example-com
         domain: www.example.com
@@ -423,11 +425,13 @@ data:
 Tabellen nedan förklarar den tillgängliga åtgärden.
 
 | Namn | Egenskaper | Betydelse |
-|-----------|--------------------------|-------------|
+|---------------------|--------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **selectOrigin** | originName | Namnet på ett av de definierade originalen. |
-|     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
+|                     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
+|                     | rubriker (valfritt, standardvärdet är `{}`) | Nyckelvärdepar som innehåller ytterligare HTTP-huvuden som ska skickas till den valda serverdelen när regeln aktiveras. Med nycklar som motsvarar rubriknamn och värden som motsvarar rubrikvärden |
 | **selectAemOrigin** | originName | Namnet på en av de fördefinierade AEM-originalen (värde som stöds: `static`). |
-|     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
+|                     | skipCache (valfritt, standardvärdet är false) | Flagga om cachelagring ska användas för begäranden som matchar den här regeln. Som standard cachelagras svar enligt svarscachningshuvudet (t.ex. Cache-Control eller Expires) |
+|                     | rubriker (valfritt, standardvärdet är `{}`) | Nyckelvärdepar som innehåller ytterligare HTTP-huvuden som ska skickas till den valda serverdelen när regeln aktiveras. Med nycklar som motsvarar rubriknamn och värden som motsvarar rubrikvärden |
 
 **Original**
 
