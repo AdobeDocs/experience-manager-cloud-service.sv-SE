@@ -4,7 +4,7 @@ description: ContextHub innehåller flera exempelmoduler för användargränssni
 exl-id: 31ff4444-8d96-4817-9676-ea5ad36dcda5
 feature: Developing, Personalization
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 79480fc14163b144c76ea33d38cda7c6b84f826b
 workflow-type: tm+mt
 source-wordcount: '1114'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Källkoden finns på `/libs/granite/contexthub/code/ui/container/js/ContextHub.U
 Konfigurera gränssnittsmodulen contexthub.base med ett JavaScript-objekt i JSON-format. Inkludera någon av följande egenskaper för att konfigurera gränssnittsmodulens funktioner:
 
 * **bild:** En URL till en bild som ska visas som ikon.
-* **ikon:** Namnet på en [Coral UI-ikon](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html) -klass. Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
+* **ikon:** Namnet på en [Coral UI-ikon](https://opensource.adobe.com/coral-spectrum/examples/#icon) -klass. Om du anger ett värde för både ikonen och bildegenskaperna används bilden.
 * **titel:** En titel för gränssnittsmodulen. Titeln visas när pekaren pausas över ikonen för modulen Gränssnitt.
 * **helskärm:** Ett booleskt värde som anger om gränssnittsmodulen stöder helskärmsläge. Använd `true` för helskärmsläge och `false` för att förhindra helskärmsläge.
 * **mall:** En [Handlebars](https://handlebarsjs.com/)-mall som anger vilket innehåll som ska återges i ContextHub-verktygsfältet. Använd högst två `<p>`-taggar.
@@ -58,7 +58,7 @@ Konfigurera gränssnittsmodulen contexthub.base med ett JavaScript-objekt i JSON
 
 ### Exempel {#example}
 
-I följande exempel konfigureras en c`ontexthub.base`-gränssnittsmodul så att den visar information från ett [&#x200B; contexthub.emulators](sample-stores.md#granite-emulators-sample-store-candidate) -arkiv. Objektet `template` visar hur du hämtar data från arkivet med hjälp av nyckeln som skapas av objektet `storeMapping`.
+I följande exempel konfigureras en c`ontexthub.base`-gränssnittsmodul så att den visar information från ett [ contexthub.emulators](sample-stores.md#granite-emulators-sample-store-candidate) -arkiv. Objektet `template` visar hur du hämtar data från arkivet med hjälp av nyckeln som skapas av objektet `storeMapping`.
 
 ```javascript
 {

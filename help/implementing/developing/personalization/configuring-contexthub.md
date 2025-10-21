@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar Context Hub, ett ramverk för lagring,
 exl-id: 1fd7d41e-31ad-4838-8749-a5791edcfd63
 feature: Developing, Personalization
 role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 79480fc14163b144c76ea33d38cda7c6b84f826b
 workflow-type: tm+mt
 source-wordcount: '1609'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/i
 * **Webbkonsol:** Om du vill visa användargränssnittet väljer du egenskapen Visa användargränssnitt. Om du vill dölja användargränssnittet avmarkerar du egenskapen Dölj användargränssnitt.
 * **JCR-nod:** Om du vill visa användargränssnittet anger du egenskapen `com.adobe.granite.contexthub.show_ui` för booleskt värde till `true`. Om du vill dölja användargränssnittet anger du egenskapen till `false`.
 
-När du visar ContextHub-gränssnittet visas det bara på sidor AEM författarinstanser. Gränssnittet visas inte på sidor med publiceringsinstanser.
+När du visar ContextHub-gränssnittet visas det bara på sidor i AEM författarinstanser. Gränssnittet visas inte på sidor med publiceringsinstanser.
 
 ## Lägga till gränssnittslägen och moduler för ContextHub {#adding-contexthub-ui-modes-and-modules}
 
@@ -39,7 +39,7 @@ Gränssnittslägen visas som en serie ikoner till vänster i verktygsfältet. N�
 
 ![ContextHub-verktygsfältet](assets/contexthub-toolbar.png)
 
-Ikoner är referenser från ikonbiblioteket [Coral UI &#x200B;](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons).
+Ikoner är referenser från ikonbiblioteket [Coral UI ](https://opensource.adobe.com/coral-spectrum/examples/#icon).
 
 ### Lägga till ett gränssnittsläge {#adding-a-ui-mode}
 
@@ -55,7 +55,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 1. Ange värden för följande egenskaper:
 
    * Rubrik för användargränssnittsläge: Den titel som identifierar användargränssnittsläget
-   * Lägesikon: Väljaren för [Coral UI-ikonen](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som ska användas, till exempel `coral-Icon--user`
+   * Lägesikon: Väljaren för [Coral UI-ikonen](https://opensource.adobe.com/coral-spectrum/examples/#icon) som ska användas, till exempel `coral-Icon--user`
    * Aktiverad: Välj det här alternativet om du vill visa användargränssnittsläget i verktygsfältet ContextHub
 
 1. Välj Spara.
@@ -64,7 +64,7 @@ Lägg till ett gränssnittsläge för att gruppera relaterade ContextHub-moduler
 
 Lägg till en ContextHub-gränssnittsmodul i ett UI-läge så att den visas i ContextHub-verktygsfältet för förhandsgranskning av sidinnehåll. När du lägger till en UI-modul skapar du en instans av en modultyp som är registrerad med ContextHub. Om du vill lägga till en gränssnittsmodul måste du känna till namnet på den associerade modultypen.
 
-AEM innehåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa ContextHub-gränssnittsmoduler](extending-contexthub.md#creating-contexthub-ui-module-types).
+AEM tillhandahåller en grundläggande gränssnittsmodultyp samt flera exempeltyper av gränssnittsmodul som du kan basera en gränssnittsmodul på. Följande tabell innehåller en kort beskrivning av vart och ett av dem. Mer information om hur du utvecklar en anpassad gränssnittsmodul finns i [Skapa ContextHub-gränssnittsmoduler](extending-contexthub.md#creating-contexthub-ui-module-types).
 
 Egenskaperna för användargränssnittsmodulen innehåller en detaljkonfiguration där du kan ange värden för modulspecifika egenskaper. Du anger detaljkonfigurationen i JSON-format. Kolumnen Modultyp i tabellen innehåller länkar till information om den JSON-kod som krävs för varje gränssnittsmodultyp.
 
@@ -107,7 +107,7 @@ Värdet för egenskapen Detaljkonfiguration är ett `config`-objekt i JSON-forma
 
 ### Exempelarkivsökande {#sample-store-candidates}
 
-AEM innehåller följande exempel på butikskandidater som du kan basera en butik på.
+AEM tillhandahåller följande exempel på butikskandidater som du kan basera en butik på.
 
 | Butikstyp | Beskrivning |
 |---|---|
@@ -221,7 +221,7 @@ Använd CRXDE Lite för att ange egenskapen `debug` till **true** under:
 
 ### Felsökningsmeddelanden för loggning för ContextHub {#logging-debug-messages-for-contexthub}
 
-Konfigurera Adobe Granite ContextHub OSGi-tjänsten (PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`) för att logga detaljerade felsökningsmeddelanden som är användbara vid utveckling.
+Konfigurera tjänsten Adobe Granite ContextHub OSGi (PID = `com.adobe.granite.contexthub.impl.ContextHubImpl`) för att logga detaljerade felsökningsmeddelanden som är användbara vid utveckling.
 
 Om du vill konfigurera tjänsten kan du antingen använda [webbkonsolen](/help/implementing/deploying/configuring-osgi.md) eller en JCR-nod i databasen:
 
