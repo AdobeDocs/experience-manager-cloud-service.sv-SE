@@ -25,7 +25,7 @@ Utveckla SPA-material med denna självstudiekurs i flera delar som leder dig gen
 
 I likhet med AEM WKND Tutorial är denna SPA-fokuserade motsvarighet ett heltäckande exempel på hur du skapar en egen single-page-applikation som kan redigeras med AEM som börjar med projektkonfiguration via applikationsroutning.
 
-* [Skapa din första Angular SPA i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [Skapa din första Angular SPA i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html?lang=sv-SE)
 * [Skapa din första React SPA i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
 Innan du börjar ett eget SPA-projekt för AEM kanske du också vill granska dokumentet [Developing SPAs for AEM](developing.md).
