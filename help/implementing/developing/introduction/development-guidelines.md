@@ -4,9 +4,9 @@ description: Lär dig riktlinjer för utveckling på AEM as a Cloud Service och 
 exl-id: 94cfdafb-5795-4e6a-8fd6-f36517b27364
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: a352261034188cc66a0bc7f2472ef8340c778c13
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2768'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Om du till exempel ändrar en indexdefinition i en databas med stort innehåll i
 
 För lokal utveckling skrivs loggposter till lokala filer i mappen `/crx-quickstart/logs`.
 
-I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att svepa loggarna. <!-- See the [Cloud Manager documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=sv-SE) for more details. Custom logs are not supported and so all logs should be output to the error log. -->
+I molnmiljöer kan utvecklare hämta loggar via Cloud Manager eller använda ett kommandoradsverktyg för att svepa loggarna. <!-- See the [Cloud Manager documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) for more details. Custom logs are not supported and so all logs should be output to the error log. -->
 
 **Anger loggnivå**
 
@@ -215,11 +215,11 @@ AEM as a Cloud Service Developer Console är också användbart vid felsökning 
 
 ![Dev Console 4](/help/implementing/developing/introduction/assets/devconsole4.png)
 
-För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM Users eller AEM Administrators för både författare och publiceringstjänster för att visa data från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=sv-SE).
+För produktionsprogram definieras åtkomsten till AEM as a Cloud Service Developer Console av&quot;Cloud Manager - Developer Role&quot; i Adobe Admin Console, medan AEM as a Cloud Service Developer Console för sandlådeprogram är tillgängligt för alla användare med en produktprofil som ger dem tillgång till AEM as a Cloud Service. För alla program krävs&quot;Cloud Manager - Developer Role&quot; för statusdumpar och databaswebbläsaren och användare måste också definieras i produktprofilen AEM Users eller AEM Administrators för både författare och publiceringstjänster för att visa data från båda tjänsterna. Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 
 ### Prestandaövervakning {#performance-monitoring}
 
-Adobe övervakar programprestanda och vidtar åtgärder för att åtgärda eventuella försämringar. För närvarande kan inte tillämpningsmetrierna följas.
+Adobe övervakar programprestanda och vidtar åtgärder för att åtgärda eventuella försämringar. Programmått kan för närvarande inte observeras.
 
 ## Skickar e-post {#sending-email}
 
@@ -239,13 +239,13 @@ Du måste skicka e-post via en e-postserver i stället för direkt till e-postkl
 
 ### Skicka e-post {#sending-emails}
 
-[Day CQ Mail Service OSGI-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=sv-SE#configuring-the-mail-service) ska användas och e-postmeddelanden måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
+[Day CQ Mail Service OSGI-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service) ska användas och e-postmeddelanden måste skickas till den e-postserver som anges i supportförfrågan i stället för direkt till mottagarna.
 
 ### Konfiguration {#email-configuration}
 
-E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=sv-SE#configuring-the-mail-service).
+E-post i AEM ska skickas med [Day CQ Mail Service OSGi-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service).
 
-Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=sv-SE). Observera följande nödvändiga justeringar av tjänsten `com.day.cq.mailer.DefaultMailService OSGI` för AEM as a Cloud Service:
+Mer information om hur du konfigurerar e-postinställningar finns i [AEM 6.5-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html). Observera följande nödvändiga justeringar av tjänsten `com.day.cq.mailer.DefaultMailService OSGI` för AEM as a Cloud Service:
 
 * SMTP-serverns värdnamn ska anges till $[env:AEM_PROXY_HOST;default=proxy.tunnel]
 * SMTP-serverporten ska anges till värdet för den ursprungliga proxyporten som angetts i parametern portForwards som används i API-anropet när avancerade nätverk konfigureras. Exempel: 30465 (i stället för 465)
