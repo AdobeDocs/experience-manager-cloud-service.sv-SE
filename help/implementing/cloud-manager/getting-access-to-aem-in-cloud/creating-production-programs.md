@@ -5,7 +5,7 @@ exl-id: 4ccefb80-de77-4998-8a9d-e68d29772bb4
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 8ca3546725f2a95d233497a899afe3b4f6036775
+source-git-commit: f99a0bfee76c7efd6f3e441db67d30f8a52707e5
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -91,7 +91,7 @@ Fliken **Säkerhet** innehåller alternativ för att aktivera **HIPAA**, **WAF-D
 
 Adobe HIPAA-kompatibel och WAF-DDOS (Web Application Firewall - Distributed Denial of Service) underlättar molnbaserad säkerhet som en del av en lösning med flera nivåer för att skydda mot sårbarheter.
 
-* **HIPAA** - Det här alternativet aktiverar Adobe HIPPA-förberedda lösningsimplementering.
+* **HIPAA** - Det här alternativet aktiverar Adobe HIPAA-förberedda lösningsimplementering.
    * [Läs mer](https://www.adobe.com/trust/compliance/hipaa-ready.html) om Adobe HIPAA-förberedda implementering av lösningar.
    * HIPAA kan inte aktiveras eller inaktiveras efter att programmet har skapats.
 * **WAF-DDOS-skydd** - Med det här alternativet aktiveras Brandväggen för webbaserade program som regler för att skydda ditt program.
