@@ -5,8 +5,8 @@ exl-id: fe065972-39db-4074-a802-85895c701efd
 solution: Experience Manager Sites
 feature: Developing
 role: Admin, Developer
-recommendations: display, noCatalog
-source-git-commit: 0a458616afad836efae27e67dbe145fc44bee968
+recommendations: noDisplay, noCatalog
+source-git-commit: 8c4b34a77ef85869048fae254728c58cf0d99b66
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Den här delen av resan gäller för den som utvecklar gränssnittet.
 
 När du har implementerat ändringarna av temaanpassningen i AEM Git-databasen kan du köra [pipelinen som administratören skapade](pipeline-setup.md) för att distribuera ändringarna.
 
-1. Logga in på Cloud Manager [&#x200B; på samma sätt som du gjorde för att hämta Git-åtkomstinformation](retrieve-access.md) och få tillgång till ditt program. På fliken **Översikt** visas ett kort för **pipelines**.
+1. Logga in på Cloud Manager [ på samma sätt som du gjorde för att hämta Git-åtkomstinformation](retrieve-access.md) och få tillgång till ditt program. På fliken **Översikt** visas ett kort för **pipelines**.
 
    ![Cloud Manager - översikt](assets/cloud-manager-overview.png)
 
@@ -110,9 +110,9 @@ AEM är ett kraftfullt verktyg och det finns många andra alternativ. Ta en titt
 Nedan följer ytterligare resurser som ger en djupdykning i några koncept som nämns i det här dokumentet.
 
 * [Använda webbplatsregistret för att hantera webbplatstemat](/help/sites-cloud/administering/site-creation/site-rail.md) - Lär dig de kraftfulla funktionerna i webbplatsspåret för att enkelt anpassa och hantera webbplatstemat, inklusive hämtning av temakällor och hantering av temaversioner.
-* [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE) - Om du redan har en god förståelse för AEM kan det vara bra att läsa de detaljerade tekniska dokumenten direkt.
-* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html?lang=sv-SE) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
-* [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=sv-SE) - Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. I det här dokumentet finns mer information om de här rollerna och hur du administrerar dem.
+* [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM kan det vara bra att läsa de detaljerade tekniska dokumenten direkt.
+* [Cloud Manager-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/onboarding-concepts/cloud-manager-introduction.html) - Om du vill ha mer information om Cloud Manager funktioner kan det vara bra att läsa den detaljerade tekniska dokumentationen.
+* [Rollbaserade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html) - Cloud Manager har förkonfigurerade roller med lämpliga behörigheter. I det här dokumentet finns mer information om de här rollerna och hur du administrerar dem.
 * [Cloud Manager-databaser](/help/implementing/cloud-manager/managing-code/managing-repositories.md) - Om du vill ha mer information om hur du konfigurerar och hanterar Git-databaser för ditt AEMaaCS-projekt läser du det här dokumentet.
 * [Konfigurera CI/CD-pipeline - molntjänster](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md) - Läs mer om hur du konfigurerar pipelines, både fullständig stack och frontend, i det här dokumentet.
 * [AEM standardwebbplatsmall](https://github.com/adobe/aem-site-template-standard) - Detta är GitHub-databasen för AEM standardwebbplatsmall.
@@ -124,6 +124,6 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [Hantera sidor](/help/sites-cloud/authoring/sites-console/managing-pages.md) - Den här guiden beskriver hur du hanterar sidorna på din webbplats, inklusive flyttning, kopiering och borttagning.
 * [Så här arbetar du med paket](/help/implementing/developing/tools/package-manager.md) - Med paket kan du importera och exportera databasinnehåll. I det här dokumentet beskrivs hur du arbetar med paket i AEM 6.5, som även gäller för AEMaaCS.
 * [Onboarding Journey](/help/journey-onboarding/overview.md) - Den här guiden fungerar som en startpunkt för att säkerställa att dina team har konfigurerats och tillgång till AEM as a Cloud Service.
-* [Adobe Experience Manager Cloud Manager Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=sv-SE) - Utforska Cloud Manager-dokumentationen och få fullständig information om dess funktioner.
+* [Adobe Experience Manager Cloud Manager Documentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) - Utforska Cloud Manager-dokumentationen och få fullständig information om dess funktioner.
 * [Dokumentation för webbplatsadministration](/help/sites-cloud/administering/site-creation/create-site.md) - Mer information om funktionerna i verktyget Skapa snabbwebbplats finns i de tekniska dokumenten för att skapa webbplatser.
 * [Utveckla platser med frontdelspipeline](/help/implementing/developing/introduction/developing-with-front-end-pipelines.md) - I det här dokumentet beskrivs några överväganden som du bör vara medveten om så att du kan få ut mesta möjliga av utvecklingsprocessen med hjälp av frontendpipeline.
