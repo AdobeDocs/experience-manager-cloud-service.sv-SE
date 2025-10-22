@@ -3,9 +3,9 @@ title: Versionsinformation om 2025.8.0-utgåvan av  [!DNL Adobe Experience Manag
 description: Versionsinformation om 2025.8.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 245ad07ba6abbf18e2011cb71a15948c9b92f80f
+source-git-commit: 339528082561c432b7b98290d09e904ee058186f
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1919'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.8.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -75,12 +75,12 @@ Gör Dynamic Media med OpenAPI-URL:er mer läsbara genom att utnyttja Vanity-URL
 
 >[!NOTE]
 >
->Den här funktionen blir tillgänglig som en begränsad tillgänglighetsfunktion den 10 september. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+>Den här funktionen är tillgänglig som en begränsad tillgänglighetsfunktion. Se [den här artikeln](/help/assets/vanity-urls.md) för att komma igång.
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-* [Indatakomponent för datum och tid](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component): Nu finns det en komponent för datum och tid som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
-* [Förbättrad felhantering för filöverföringar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab): Komponenten för bifogad fil validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
+* [Indatakomponent för datum och tid](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-time-component): Nu finns det en komponent för datum och tid som gör att användare kan välja både datum och tid med hjälp av ett kalender- och klockgränssnitt, eller genom att ange värden manuellt i ett format som stöds.
+* [Förbättrad felhantering för filöverföringar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment#basic-tab): Komponenten för bifogad fil validerar nu automatiskt den överförda filtypen mot tillåtelselista. Om en användare överför en fil i ett format som inte stöds visas ett fel under överföringen. Komponenten kontrollerar också filinnehållet för att validera dess typ, vilket förbättrar formulärets övergripande säkerhet.
 * [Angivet felsvar för anpassad skickaåtgärd](/help/forms/custom-submit-action-troubleshooting.md): När en anpassad sändningsåtgärd påträffar ett ohanterat fel returneras felkod 502. Detta hjälper till att identifiera att problemet är relaterat till den anpassade skicka-åtgärden, vilket gör felsökningen enklare.
 * [Utesluter dolda fält från postdokument](/help/forms/generate-document-of-record-core-components.md#document-of-record-settings): En ny egenskap har lagts till för att tillåta att dolda fält utesluts från postdokumentet. Som standard är det här alternativet inte markerat och gäller för alla formulärfält.
 
@@ -101,7 +101,7 @@ Gör Dynamic Media med OpenAPI-URL:er mer läsbara genom att utnyttja Vanity-URL
 
 ### Tidiga Adobe-funktioner i AEM Forms
 
-* [Klottsigneringskomponent](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature): Nu kan du använda komponenten Klottsignatur för att hjälpa användare att lägga till sina signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
+* [Klottsigneringskomponent](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/scribble-signature): Nu kan du använda komponenten Klottsignatur för att hjälpa användare att lägga till sina signaturer i ett formulär, till exempel i ett avtalsformulär. Med komponenten kan användare rita sin signatur direkt i formuläret med en mus, en styluspenna eller en pekskärm.
 * [Direkt API-integrering i regelredigeraren](/help/forms/api-integration-in-rule-editor.md): Adaptiv Forms har nu stöd för direkt API-integrering i Visual Rule Editor utan att någon formulärdatamodell krävs. Författare kan konfigurera API:er med en URL- eller cURL-import, mappa in-/utdataparametrar och säkra anrop med autentisering.
 
 <!--
@@ -216,7 +216,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -236,4 +236,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
