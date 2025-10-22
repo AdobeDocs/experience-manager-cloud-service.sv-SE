@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: 7d30aa28b2409cdcb70c5491ee2d2d381d090dad
+source-git-commit: cb3cf5ee6bb17c33c118c6463272922e0e212c1a
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,8 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 ## Kommande nya funktioner {#what-is-new}
 
 * Kopiera och klistra in mellan webbläsarflikar stöds nu.
+   * Begränsat till mellan flikar som är öppna samtidigt.
+   * Det går inte att kopiera innehåll och sedan öppna en ny flik.
 * Nu kan du inaktivera knappen för att avpublicera med en metatagg.
 
 ## Kommande förbättringar {#other-improvements}
