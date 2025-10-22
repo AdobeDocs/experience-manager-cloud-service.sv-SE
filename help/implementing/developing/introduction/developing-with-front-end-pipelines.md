@@ -43,7 +43,7 @@ Klientmiljön stöder följande `Node.js`-versioner:
 * 14 (standard)
 * 12
 
-Du kan använda `NODE_VERSION` [miljövariabeln ](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
+Du kan använda `NODE_VERSION` [miljövariabeln &#x200B;](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
 
 ## Bästa tillvägagångssätt för att namnge och hantera rörledningar för slutanvändare i AEM {#single-source-of-truth}
 
