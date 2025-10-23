@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
 | AEM as a Cloud Service | Den här artikeln |
 
 <span class="preview"> Om du använder GovCloud och behöver ansluta till en GCC-klientorganisation (Government Cloud Computing) skickar du ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst via tidig Adobe-program. </span>
