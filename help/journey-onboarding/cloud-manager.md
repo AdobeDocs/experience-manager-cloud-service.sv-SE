@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till Cloud Manager så att du kan ko
 role: Admin, User, Developer
 exl-id: c9476ac9-8318-493e-a48d-94ff5a6433a7
 feature: Onboarding
-source-git-commit: 0db48ef4c15b6ca530b2626f7078c7172c872fff
+source-git-commit: 858a9c4b61fd3a80a257313e48816b067ca77175
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -48,24 +48,35 @@ Innan teammedlemmarna som du tilldelade rollen **Business Owner** kan komma åt 
 
    ![Cloud Manager på konsol](/help/journey-onboarding/assets/consol-cloud-manager.png)
 
-Genom att logga in som systemadministratör med rollen **Affärsägare** använder du Cloud Manager för att användas av andra användare med rollen **Affärsägare**. Du får ingen bekräftelse eller något meddelande. Det räcker att bara logga in.
+En systemadministratör med rollen **Business Owner** måste logga in på Cloud Manager först. Denna första inloggning gör det möjligt för andra användare med rollen **Business Owner** att skapa program. Ingen bekräftelse visas.
 
-Innan du har loggat in på Cloud Manager som systemadministratör med rollen **Business Owner** kan andra användare med rollen **Business Owner** inte skapa program i Cloud Manager. Den här regeln gäller även om de har tilldelats rätt roller.
+<!--
+By successfully signing in as a system administrator with the **Business Owner** role, you use Cloud Manager for use by the other users with the **Business Owner** role. You do not receive a confirmation or any message. Simply signing in is sufficient.
+
+Until you sign in to Cloud Manager as a system administrator with the **Business Owner** role, other users with the **Business Owner** role cannot create programs in Cloud Manager. This rule is true even if they are assigned the correct roles. -->
 
 ## Navigera till Cloud Manager {#navigate-cloud-manager}
 
-Användare med rollen **Affärsägare** får ett välkomstmeddelande med en länk för att komma igång. Följ stegen nedan för att navigera till Cloud Manager med det här välkomstmeddelandet.
+1. Gå till [experience.adobe.com/experiencemanager](https://experience.adobe.com/experiencemanager).
+1. Klicka på **Cloud Manager** på den vänstra panelen.
 
-1. Klicka på **Kom igång** från ditt välkomstmeddelande, vilket visas i bilden nedan.
-   ![Exempel på e-post](/help/journey-onboarding/assets/get-started-email.png)
+>[!NOTE]
+>
+>Beroende på vilka roller som har tilldelats i Cloud Manager och programmets status visas olika skärmar när du använder Cloud Manager användargränssnitt.
 
-1. Gå till Cloud Manager **Program- och produktsida**.
+<!--
+Users with the **Business Owner** role receive a welcome email with a link to get started. Follow the steps below to navigate to Cloud Manager using this welcome email.
+
+1. From your welcome email, click **Get started**, as shown in the figure below.
+    ![Email example](/help/journey-onboarding/assets/get-started-email.png)
+
+1. Navigate to Cloud Manager's **Programs & Products** page.
 
    >[!TIP]
    >
-   >Du kan även navigera direkt till Cloud Manager inloggningssida från `[my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)`. Bokmärk den här sidan för framtida referens.
+   >You can also navigate directly to Cloud Manager's login page from `[my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)`. Bookmark this page for future reference.
 
-1. Du dirigeras till Cloud Manager landningssida.
+1. You are directed to Cloud Manager's landing page. -->
 
 <!-- OLD
 Alternatively, you can navigate to Cloud Manager's **Programs and Products** page from the Adobe Experience Cloud home page using these steps.
