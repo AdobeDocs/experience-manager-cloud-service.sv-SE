@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: cb3cf5ee6bb17c33c118c6463272922e0e212c1a
+source-git-commit: fd80b6b0a3c6d06f8dddaa8387dbae6c33f96038
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Versionsinformation om förhandsvisning i Universal Editor {#preview}
 
-Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att lanseras den 23 oktober 2025.
+Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att släppas den 30 oktober 2025.
 
 Versionsinformationen **preview** är praktisk så att du vet vilka ändringar som kommer att göras i den universella redigeraren och kan testa dem genom att [växla till förhandsvisningsmiljön.](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties)
 
@@ -27,14 +27,9 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande nya funktioner {#what-is-new}
 
-* Kopiera och klistra in mellan webbläsarflikar stöds nu.
-   * Begränsat till mellan flikar som är öppna samtidigt.
-   * Det går inte att kopiera innehåll och sedan öppna en ny flik.
-* Nu kan du inaktivera knappen för att avpublicera med en metatagg.
+* TBD
 
 ## Kommande förbättringar {#other-improvements}
 
-* Strukturträdet har förbättrats.
-* Länkade bilder stöds nu.
-* Förbättringar har gjorts för att ångra/göra om åtgärder.
+* TBD
 

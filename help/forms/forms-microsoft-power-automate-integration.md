@@ -5,15 +5,20 @@ exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
 keywords: koppla samman AEM-blanketter med automatiserad strömhantering, automatiserad strömhantering AEM Forms, integrera automatiserad strömhantering till adaptiva Forms, skicka data från adaptiva Forms till Power Automate
 feature: Adaptive Forms, Foundation Components, Core Components, Edge Delivery Services
 role: Admin, User, Developer
-source-git-commit: c0df3c6eaf4e3530cca04157e1a5810ebf5b4055
+source-git-commit: 03f92d950744e653e4ef509bac3c3b4709477e41
 workflow-type: tm+mt
-source-wordcount: '1405'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
 
 
 # Ansluta ett adaptivt formulär med Microsoft® Power Automate {#connect-adaptive-form-with-power-automate}
+
+| Version | Artikellänk |
+| -------- | ---------------------------- |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
+| AEM as a Cloud Service | Den här artikeln |
 
 <span class="preview"> Om du använder GovCloud och behöver ansluta till en GCC-klientorganisation (Government Cloud Computing) skickar du ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst via tidig Adobe-program. </span>
 

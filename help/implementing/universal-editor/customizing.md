@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: cb3cf5ee6bb17c33c118c6463272922e0e212c1a
+source-git-commit: 5be00b5f0ae606a583a07126892bf51af3048a71
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Följande värden stöds för `content`, d.v.s. de funktioner som kan inaktivera
 | `publish` | Inaktivera alla [publicerings](/help/sites-cloud/authoring/universal-editor/publishing.md)-funktioner, dvs. [publiceringsknappen](/help/sites-cloud/authoring/universal-editor/navigation.md#publish) och [avpubliceringsknappen](/help/sites-cloud/authoring/universal-editor/navigation.md#ellipsis) |
 | `publish-live` | Inaktivera [publicering](/help/sites-cloud/authoring/universal-editor/publishing.md) live |
 | `publish-preview` | Inaktivera förhandsgranskning (om [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) är tillgänglig) |
-| `unpublish` | Inaktivera [knappen för att avbryta publicering](/help/sites-cloud/authoring/universal-editor/publishing.md#unpublishing-content) ([funktionen Förhandsgranska](/help/release-notes/universal-editor/preview.md)) |
+| `unpublish` | Inaktivera knappen [unpublish](/help/sites-cloud/authoring/universal-editor/publishing.md#unpublishing-content) |
 | `copy` | Inaktiverar knapparna [Kopiera och Klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) |
 | `duplicate` | Inaktiverar knappen [Duplicera](/help/sites-cloud/authoring/universal-editor/navigation.md#duplicate) |
 | `header-open-page` | Inaktiverar knappen [Öppna sida](/help/sites-cloud/authoring/universal-editor/navigation.md#open-page) |
