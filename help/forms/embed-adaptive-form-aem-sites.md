@@ -213,7 +213,7 @@ Så här bäddar du in ett befintligt adaptivt formulär på en webbplatssida:
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
 1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** från komponentwebbläsaren till sidan Platser.
-1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten på sidan Platser och välj ![ Egenskaper för adaptiv formulärbehållare ](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
+1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten på sidan Platser och välj ![&#x200B; Egenskaper för adaptiv formulärbehållare &#x200B;](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i **[!UICONTROL Asset Path]**.
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
@@ -227,7 +227,7 @@ Du kan också utöka formulärens tillgänglighet genom att bädda in dem i AEM 
 
 1. Öppna ett Experience Fragment i redigeringsläge.
 1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** från komponentwebbläsaren till Experience Fragment.
-1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten i Experience Fragment och välj ![ egenskaper för adaptiv formulärbehållare ](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
+1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten i Experience Fragment och välj ![&#x200B; egenskaper för adaptiv formulärbehållare &#x200B;](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i **[!UICONTROL Asset Path]**.
 1. Spara inställningarna. Det anpassade formuläret är nu inbäddat i Experience Fragment.
 
@@ -241,7 +241,7 @@ Så här konverterar du ett adaptivt formulär på en AEM Sites-sida till ett Ex
 
 1. Öppna AEM Sites-sidan som innehåller det adaptiva formuläret (i adaptiva Forms Container-komponenten) i redigeringsläge.
 1. Öppna innehållsträdet och markera **[!UICONTROL Adaptive Forms Container]** som är värd för ditt adaptiva formulär. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
-1. På menyraden väljer du ikonen ![Konvertera till upplevelsefragment-variationsikonen ](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till upplevelsefragment-variationsikonen.
+1. På menyraden väljer du ikonen ![Konvertera till upplevelsefragment-variationsikonen &#x200B;](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till upplevelsefragment-variationsikonen.
 
    ![Klicka på filkabinettlogotypen för att konvertera ett adaptivt formulär på AEM Sites-sidan till ett Experience Fragment](/help/forms/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
