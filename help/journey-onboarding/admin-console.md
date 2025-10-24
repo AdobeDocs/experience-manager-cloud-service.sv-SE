@@ -121,8 +121,8 @@ Du är redo att fortsätta din introduktionsresa genom att lära dig hur du [til
 
 Här följer ytterligare, valfria resurser om du vill gå längre än vad som ingår i introduktionsresan.
 
-* [Admin Console Overview](https://helpx.adobe.com/enterprise/using/admin-console.html) - en omfattande översikt över Admin Console
+* [Admin Console Overview](https://helpx.adobe.com/se/enterprise/using/admin-console.html) - en omfattande översikt över Admin Console
 * [Skapa eller uppdatera din Adobe ID](https://helpx.adobe.com/ca/manage-account/using/create-update-adobe-id.html#HowtocreateorupdateyourAdobeID) - Lär dig hur du skapar en Adobe ID, ändrar den och hanterar flera Adobe ID:n.
-* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/saml-2-0-authenticationhandler#) - AEM levereras med en SAML-autentiseringshanterare. Hanteraren ger stöd för SAML 2.0 Authentication Request Protocol (Web-SSO-profil) med HTTP POST-bindning.
-* [Administrativa roller](https://helpx.adobe.com/enterprise/using/admin-roles.html) - Med Adobe Admin Console kan organisationer definiera en flexibel administrativ hierarki som möjliggör detaljerad hantering av åtkomst och användning av Adobe-produkter.
-* [Support- och expertsessioner](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.html) - Lär dig hur du kommer åt supportalternativen på Admin Console, hanterar dina supportärenden, schemalägger en expertsession och mycket annat.
+* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/security/saml-2-0-authenticationhandler#) - AEM levereras med en SAML-autentiseringshanterare. Hanteraren ger stöd för SAML 2.0 Authentication Request Protocol (Web-SSO-profil) med HTTP POST-bindning.
+* [Administrativa roller](https://helpx.adobe.com/se/enterprise/using/admin-roles.html) - Med Adobe Admin Console kan organisationer definiera en flexibel administrativ hierarki som möjliggör detaljerad hantering av åtkomst och användning av Adobe-produkter.
+* [Support- och expertsessioner](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.html) - Lär dig hur du kommer åt supportalternativen på Admin Console, hanterar dina supportärenden, schemalägger en expertsession och mycket annat.
