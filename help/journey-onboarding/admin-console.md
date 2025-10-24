@@ -88,7 +88,7 @@ Grattis, systemadministratör!
 
 1. Klicka på [Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home) för att öppna Experience Hub hemsida.
 
-1. Klicka på **Admin Console**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Admin Console**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 
 ## Adobe Identity Management System {#ims}
 
