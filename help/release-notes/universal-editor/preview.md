@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: fd80b6b0a3c6d06f8dddaa8387dbae6c33f96038
+source-git-commit: 8c7976d68413bc378800d83d373cc876a1a36f25
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,15 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande nya funktioner {#what-is-new}
 
-* TBD
+* Infoga bild för ny textredigering
+* Ny `/configuration`-slutpunkt
 
 ## Kommande förbättringar {#other-improvements}
 
-* TBD
-
+* Uppdateringshändelsen informeras nu om åtgärden har ångrats.
+* Strängen `No results` är nu beroende av webbläsarens språkområde i Universella redigeringstaggar.
+* En extra radbrytning har korrigerats i Universal Editors publiceringsknapp.
+* Rensning gjordes för att korrigera API.
+* Knappen Välj innehåll visas nu i Safari.
+* RPM-bygget har åtgärdats.
+* CORS uppdaterar för att undvika att uppdatera den redigerade texten igen när du har sparat.

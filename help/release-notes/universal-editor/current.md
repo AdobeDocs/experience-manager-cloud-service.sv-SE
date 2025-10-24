@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation om Universal Editor 2025.10.23
-description: Detta är versionsinformationen för version 2025.10.23 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.10.24
+description: Detta är versionsinformationen för version 2025.10.24 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: fd80b6b0a3c6d06f8dddaa8387dbae6c33f96038
+source-git-commit: 8c7976d68413bc378800d83d373cc876a1a36f25
 workflow-type: tm+mt
 source-wordcount: '205'
 ht-degree: 0%
@@ -12,9 +12,9 @@ ht-degree: 0%
 ---
 
 
-# Versionsinformation om Universal Editor 2025.10.23 {#release-notes}
+# Versionsinformation om Universal Editor 2025.10.24 {#release-notes}
 
-Det här är versionsinformationen för den 23 oktober 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 24 oktober 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
