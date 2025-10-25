@@ -1,17 +1,17 @@
 ---
-title: Förberedelse för introduktion
+title: Förberedelser ombord
 description: Innan introduktionsprocessen börjar finns det ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 exl-id: 86139b1a-c22a-4716-a0f9-cf142cbc6c53
 feature: Onboarding
 role: Admin, User, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 7c79ad402826cd40a25560cdc169b31e95cda6bd
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
 
-# Förberedelse för introduktion {#onboarding-preparation}
+# Förberedelse ombord {#onboarding-preparation}
 
 Nu när du vet vad som finns i butik för dig i introduktionsprocessen genom att ha läst artikeln [AEM as a Cloud Service introduktion om introduktion på introduktionsresan](overview.md) är du troligen redo att hoppa in. Innan introduktionsprocessen börjar finns det dock ett antal eller förberedande steg som systemadministratören måste förstå innan han eller hon loggar in på systemet.
 
@@ -21,40 +21,43 @@ AEM as a Cloud Service är ett kraftfullt och flexibelt verktyg med ett antal ti
 
 När du har läst det här dokumentet bör du förstå
 
-* Vilket kontraktet med Adobe definierar.
-* Vilka Adobe ska ha?
+* Vilket kontraktet med Adobe är.
+* Vad Adobe föreskriver.
 * Hur det avtalet påverkar introduktionsprocessen.
 * Hur du förbereder dig för ditt introduktionssamtal.
 
 Var inte orolig om du inte känner till alla termer som används på den här sidan. Villkoren förklaras i nästa del av resan.
 
+<!-- REMOVED VIDEO AS PER CQDOC-23130. VIDEO NEEDS TO BE RECREATED/UPDATED
 ## Video {#video}
 
-I den här videon sammanfattas den introduktionsprocess som beskrivs under resan och är avsedd som en alternativöversikt. Alla ämnen i videon presenteras i detalj under resan.
+This video summarizes the onboarding process laid out in this journey and is intended as an option overview. All topics in the video are presented in detail within the journey.
 
->[!VIDEO](https://video.tv.adobe.com/v/3431505/?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/336959/?quality=12&learn=on)
+
+-->
 
 ## Ditt kontrakt {#contract}
 
-När du går med i AEM as a Cloud Service börjar du med ett undertecknat avtal mellan er organisation och Adobe. Orsaken är att avtalet anger flera viktiga avtal mellan Adobe och din organisation, som:
+När du går med i AEM as a Cloud Service börjar det med ett undertecknat avtal mellan er organisation och Adobe. Orsaken är att avtalet anger flera viktiga avtal mellan Adobe och din organisation, som:
 
 * Vilka lösningar och tillägg din organisation kan använda.
 * Antalet och typerna av miljöer som du kan komma åt
 * Startdatum för tjänsten.
-* Din högsta supportnivå (om du är anställd).
+* Din Premier Support-nivå (om tillämpligt).
 * Dina kontakter för introduktion.
 
 Om du inte känner till dessa uppgifter kan du kontakta den som arbetar med avtalet i din organisation.
 
-När avtalet har undertecknats skickar Adobe ett välkomstmeddelande till de onboarding-kontakter som definieras i avtalet och ett introduktionssamtal ordnas av Adobe. Detta inträffar vanligtvis ett par dagar efter att kontraktet har stängts, såvida inte ett framtida startdatum för tjänsten har fastställts.
+När avtalet har signerats skickar Adobe ut ett välkomstmeddelande till de onboarding-kontakter som definieras i avtalet och Adobe organiserar ett introduktionssamtal. Det här arbetsflödet inträffar vanligtvis några dagar efter att kontraktet har stängts, såvida inte ett framtida startdatum för tjänsten har ställts in.
 
 ## Systemetablering {#provisioning}
 
-När kontraktet har signerats tillhandahålls alla AEM molnmiljöer som omfattas av avtalet automatiskt av Adobe. De här miljöerna kommer också att länkas till dina program i Cloud Manager (mer om detta senare under kundresan). Dessa AEM molnmiljöer ingår i alla AEM as a Cloud Service-prenumerationer och består vanligtvis av minst en produktionsmiljö, en staging-miljö och eventuellt en eller flera utvecklings- eller testmiljöer.
+När avtalet har undertecknats omfattas alla AEM molnmiljöer som omfattas av avtalet automatiskt av Adobe. Dessa miljöer är också kopplade till dina program i Cloud Manager (mer om detta senare under kundresan). Varje prenumeration omfattar AEM molnmiljöer: minst en produktion, en testning och valfri utveckling eller testning.
 
-## Onboarding-samtal {#onboarding-call}
+## Onboard-samtal {#onboarding-call}
 
-När avtalet är klart schemalägger Adobe-introduktionsteamet ett samtal med representanter från er organisation för att diskutera hur ni ska komma igång.
+När avtalet är klart skickar Adobe onboarding-teamet in ett samtal med representanter från din organisation för att diskutera hur man kommer igång.
 
 Deltagare i din organisation ska inkludera:
 
@@ -62,12 +65,12 @@ Deltagare i din organisation ska inkludera:
 * Tekniker
 * Din implementeringspartner
 
-Adobe representeras av:
+Adobe tillhandahåller:
 
-* Inflyttningsspecialist
-* Din tekniska kontoansvarige (beroende på vad som är tillämpligt)
-* Din namngivna Customer Success Enginer (i förekommande fall)
-* Ytterligare ämnesexperter efter behov
+* En introduktionsspecialist.
+* Din tekniska kontoansvarige (beroende på vad som är tillämpligt).
+* Din namngivna Customer Success Enginer (i förekommande fall).
+* Ytterligare ämnesexperter efter behov.
 
 Målet med samtalet är att ge dig möjlighet att ställa frågor, lära dig mer om supportprocessen och eventuellt se produkten för första gången.
 
@@ -75,19 +78,19 @@ Målet med samtalet är att ge dig möjlighet att ställa frågor, lära dig mer
 
 När miljöprovisioneringsprocessen är slutförd får systemadministratören som definieras i avtalet ett välkomstmeddelande med en bekräftelse på att de har beviljats åtkomst till Adobe Experience Cloud. Om du läser den här dokumentationsresan är det sannolikt du!
 
-E-postmeddelandet innehåller detaljerad information om hur du kommer igång med tjänsterna i Experience Cloud och Cloud Manager självbetjäningsportal. E-postmeddelandet innehåller även viktig information som var du kan hitta supportresurser, forum, frågor och svar och mycket annat. I listan över resurser i e-postmeddelandet finns även information om hur du får åtkomst till dina AEM molnmiljöer.
+E-postmeddelandet innehåller detaljerad information om hur du kommer igång med Experience Cloud tjänster och Cloud Manager självbetjäningsportal. E-postmeddelandet innehåller även viktig information som var du kan hitta supportresurser, forum, frågor och svar och mycket annat. I listan med resurser i e-postmeddelandet finns även information om hur du får åtkomst till dina AEM molnmiljöer.
 
 >[!TIP]
 >
 >Om du har fått välkomstmeddelandet och inte är systemadministratör ska du informera Adobe under välkomstsamtalet. Du kan också fortsätta på den här resan och i nästa steg lära dig hur du själv utser en annan kollega som systemadministratör.
 
-## What&#39;s Next {#whats-next}
+## Vad kommer härnäst? {#whats-next}
 
 Nu bör du ha en grundläggande förståelse för:
 
-* Vilket kontraktet med Adobe definierar.
-* Vilka Adobe ska ha?
+* Vilket kontraktet med Adobe är.
+* Vad Adobe föreskriver.
 * Hur det avtalet påverkar introduktionsprocessen.
 * Hur du förbereder dig för ditt introduktionssamtal.
 
-Nu när du är bekant med de här förberedelsestegen är du nästan redo att logga in på systemet själv. Men först behöver du en kort översikt över hur AEM as a Cloud Service är strukturerat ur en systemadministratörs synvinkel och lär dig en del viktiga terminologi. Fortsätt till nästa del av resan, [AEM as a Cloud Service Terminologi](terminology.md).
+Nu när du är bekant med de här förberedelsestegen är du nästan redo att logga in på systemet själv. Börja med en kort genomgång av AEM as a Cloud Service ur ett systemadministratörsperspektiv. Lär dig sedan den viktiga terminologin. Fortsätt till nästa del av resan, [AEM as a Cloud Service Terminologi](terminology.md).
