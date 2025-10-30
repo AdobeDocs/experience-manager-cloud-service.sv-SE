@@ -267,7 +267,7 @@ Så här öppnar du fragmentet för redigering:
    * Skapar en kopia av det markerade innehållsfragmentet på dess plats.
    * Skapar kopior av alla fragment som det valda fragmentet refererar till.
 
-     De [platser som refererade fragment kopieras till ](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
+     De [platser som refererade fragment kopieras till &#x200B;](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
 
       * **Kopiera till den markerade mappen**
 När du väljer det här alternativet kopieras de refererade fragmenten till samma plats som det ursprungliga markerade fragmentet.
@@ -435,7 +435,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 

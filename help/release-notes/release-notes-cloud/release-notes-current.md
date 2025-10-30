@@ -147,7 +147,7 @@ Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Vår
 >[!NOTE]
 >
 >Tillgänglig som begränsad tillgänglighet den 25 september.
->>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
+>&#x200B;>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
 
 ### AEM Log Forwarding to More Destinations {#log-forwarding}
 
