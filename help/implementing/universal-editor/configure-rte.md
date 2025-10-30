@@ -3,13 +3,13 @@ title: Konfigurera RTE för Universal Editor
 description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerare.
 feature: Developing
 role: Admin, Architect, Developer
-source-git-commit: 60699db418e5f02b8bdb0471eb2996c9caf5694b
+exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
+source-git-commit: d02c1a460a1d5ddd2d021b6677ebb5aa489e706f
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera RTE för Universal Editor {#configure-rte}
 
@@ -73,7 +73,7 @@ Verktygsfältskonfigurationen styr vilka redigeringsalternativ som är tillgäng
     // List options
     "list": ["bullet_list", "ordered_list"],
     // Content insertion
-    "insert": ["link", "unlink"],
+    "insert": ["link", "unlink", "image"],
     // Superscript/subscript
     "sr_script": ["superscript", "subscript"],
     // Editor utilities
@@ -158,6 +158,27 @@ Länkåtgärder stöder kontroll av målattribut för att hantera länkbeteenden
 * `hideTarget`: `true` - Uteslut målattribut från länkar helt
 
 Åtgärden `unlink` visas bara när markören är placerad i en befintlig länk. Länkformateringen tas bort samtidigt som textinnehållet bevaras.
+
+### Bildåtgärder {#image}
+
+Bildåtgärder har stöd för figursättning av bildelement för att generera responsiv bildmarkering. Följande avsnitt är tillgängliga.
+
+```json
+{
+  "actions": {
+    "image": {
+      "wrapInPicture": false,     // Use <img> tag (default)
+      "shortcut": "Mod-Shift-I",  // Custom keyboard shortcut
+      "label": "Insert Image"     // Custom button label
+    }
+  }
+}
+```
+
+#### Alternativ för bildkonfiguration {#image-options}
+
+* `wrapInPicture`: `false` (standard) - Generera enkla `<img>`-element
+* `wrapInPicture`: `true` - Radbryt bilder i `<picture>`-element för responsiv design
 
 ### Andra åtgärder {#other}
 

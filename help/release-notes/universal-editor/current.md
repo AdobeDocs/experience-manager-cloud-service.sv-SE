@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.10.24
-description: Detta är versionsinformationen för version 2025.10.24 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.10.30
+description: Detta är versionsinformationen för version 2025.10.30 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 8c7976d68413bc378800d83d373cc876a1a36f25
+source-git-commit: e3e571bef450ddc09eb30ab7d73b144ea521a87b
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.10.24 {#release-notes}
+# Versionsinformation om Universal Editor 2025.10.30 {#release-notes}
 
-Det här är versionsinformationen för den 24 oktober 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 30 oktober 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,10 +26,8 @@ Det här är versionsinformationen för den 24 oktober 2025-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* [Kopiera och klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) på olika webbläsarflikar stöds nu.
-   * Begränsat till mellan flikar som är öppna samtidigt.
-   * Det går inte att kopiera innehåll och sedan öppna en ny flik.
-* Du kan nu inaktivera knappen för att avpublicera med en [meta-tagg.](/help/implementing/universal-editor/customizing.md#meta-tags)
+* [Den nya textredigeraren](#new-rte) kan nu infoga bilder.
+   * Den här funktionen är inaktiverad för OpenB och måste aktiveras explicit via en [filterdefinition.](/help/implementing/universal-editor/configure-rte.md#toolbar)
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -41,6 +39,10 @@ Den nya ProseMirror RTE med en sidväljare i länkdialogrutan är nu tillgängli
 
 ## Andra förbättringar {#other-improvements}
 
-* Strukturträdet har förbättrats.
-* Länkade bilder stöds nu.
-* Förbättringar har gjorts för att ångra/göra om åtgärder.
+* Uppdateringshändelsen informeras nu om åtgärden har ångrats.
+* Strängen `No results` är nu beroende av webbläsarens språkområde i Universella redigeringstaggar.
+* En extra radbrytning har korrigerats i Universal Editors publiceringsknapp.
+* Rensning gjordes för att korrigera API.
+* Knappen Välj innehåll visas nu i Safari.
+* RPM-bygget har åtgärdats.
+* CORS uppdaterar för att undvika att uppdatera den redigerade texten igen när du har sparat.
