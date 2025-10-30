@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer, Architect
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: 6df762075346971aa10536c1f6c09fcd4272a19a
+source-git-commit: d97082c733b9bcae762f4ffbff012cfdbbada3bd
 workflow-type: tm+mt
-source-wordcount: '2920'
+source-wordcount: '2927'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,9 @@ Här ser du att det finns tre huvudområden:
    * Här kan du dölja eller visa mappträdet
    * Du kan välja en viss gren av trädet
    * Storleken kan ändras så att kapslade mappar visas
-   * Förutom innehållsfragment kan du visa [modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) eller [Assets](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md). Du kan även komprimera, eller expandera, länkar till panelerna
+   * Förutom innehållsfragment kan du:
+      * Visa [modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) eller [Assets](/help/sites-cloud/administering/content-fragments/assets-content-fragments-console.md); du kan också komprimera, eller utöka, länkar till panelerna
+      * Skapa, och hantera, [Startar innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md)
 * Den högra panelen - härifrån kan du:
    * Se listan med alla innehållsfragment i den markerade grenen i trädet:
       * Innehållsfragment från den markerade mappen och alla underordnade mappar visas:
@@ -265,7 +267,7 @@ Så här öppnar du fragmentet för redigering:
    * Skapar en kopia av det markerade innehållsfragmentet på dess plats.
    * Skapar kopior av alla fragment som det valda fragmentet refererar till.
 
-     De [platser som refererade fragment kopieras till &#x200B;](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
+     De [platser som refererade fragment kopieras till ](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
 
       * **Kopiera till den markerade mappen**
 När du väljer det här alternativet kopieras de refererade fragmenten till samma plats som det ursprungliga markerade fragmentet.
@@ -433,7 +435,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 

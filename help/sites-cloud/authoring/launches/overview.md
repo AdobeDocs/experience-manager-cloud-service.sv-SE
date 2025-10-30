@@ -5,9 +5,9 @@ exl-id: 3e410120-d08f-4d05-932f-07bc4440af2b
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: 3859393b94680ac1c786bfe31950e6073650167f
+source-git-commit: 20ad1d468ac0d8ec3933477f954120debe4e9240
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '1027'
 ht-degree: 3%
 
 ---
@@ -18,13 +18,11 @@ I Adobe Experience Manager (AEM) as a Cloud Service kan du med Launches effektiv
 
 En *Launch* skapas så att du kan göra ändringar inför framtida publicering, samtidigt som du behåller det aktuella innehållet. För AEM-sidor innebär detta att du redigerar två versioner samtidigt: sidor som är publicerade och en version av dessa sidor som ska publiceras i framtiden. När tiden är inne kan du ersätta originalsidorna och publicera de nya versionerna.
 
-<!--
 >[!NOTE]
 >
->Launches are also available for Content Fragments. The basic concepts are the same, but there are differences in how to manage them in AEM. 
+>Det finns även startfunktioner för innehållsfragment. De grundläggande begreppen är desamma, men det finns skillnader i hur du hanterar dem i AEM.
 >
->For full details see [Launches for Content Fragments](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md).
--->
+>Mer information finns i [Starta för innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md).
 
 Du skapar en *Launch* och när du har redigerat och uppdaterat dina *Launch* -sidor *höjer du* dem tillbaka till *Source*. Du kan sedan aktivera dessa *Source*-sidor (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
 
@@ -115,13 +113,11 @@ Med Launes kan du:
 
 ## Startkonsolen {#the-launches-console}
 
-<!--
 >[!NOTE]
 >
->This console is only for Launches for Pages. 
+>Den här konsolen är endast för startprogram för sidor.
 >
->To manage your Content Fragments see [Launches for Content Fragments](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md).
--->
+>Mer information om hur du hanterar innehållsfragment finns i [Starta för innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md).
 
 På startkonsolen får du en översikt över dina starter och kan agera på dem som visas.
 
