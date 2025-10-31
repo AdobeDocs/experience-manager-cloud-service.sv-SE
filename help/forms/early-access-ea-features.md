@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: a974859746ca20f1979b773668a66be0197f623d
+source-git-commit: ed51ff8df6d1e387960e8580c6dfb543a09ef8fa
 workflow-type: tm+mt
-source-wordcount: '3019'
+source-wordcount: '3076'
 ht-degree: 0%
 
 ---
@@ -254,7 +254,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 
@@ -302,7 +302,11 @@ Genom att lagra PDF-filer i Azure Blob Storage kan man centralisera hanteringen 
 
 ### Förbättringar i Visual Rule Editor
 
-* Visual Rule Editor i Adaptive Forms har nu stöd för [direkt API-integrering utan att det krävs en formulärdatamodell](/help/forms/api-integration-in-rule-editor.md). Du kan ansluta till en API-slutpunkt genom att ange dess JSON-URL eller genom att importera konfigurationen med ett cURL-kommando. Efter integrering kan API:t anropas med åtgärden `Invoke Service`.
+* [Direkt API-integrering](/help/forms/api-integration-in-rule-editor.md): Visual Rule Editor i Adaptive Forms har nu stöd för direkt API-integrering utan att det krävs en formulärdatamodell. Du kan ansluta till en API-slutpunkt genom att ange dess JSON-URL eller genom att importera konfigurationen med ett cURL-kommando. Efter integrering kan API:t anropas med åtgärden `Invoke Service`.
+
+* [Förbättrad navigering med stöd för händelsenyttolast](/help/forms/invoke-service-enhancements-rule-editor.md#use-case-5-use-event-payload-in-navigate-to-action-in-invoke-service): Åtgärden **Navigera till** i Invoke Service-hanterarna har stöd för `EVENT_PAYLOAD`, vilket gör att formulärförfattare kan konfigurera uppföljningsåtgärder baserat på händelsesvar.
+
+* [Stöd för funktioner och matematiska uttryck i indataparametrar](/help/forms/rule-editor-core-components-user-interface.md#function-and-mathematical-expression-support-in-input-parameters): Indataparametrarna har nu stöd för både funktionsanrop och matematiska uttryck, vilket gör att formulärförfattare kan skicka dynamiskt beräknade värden direkt.
 
 ## Se även
 
