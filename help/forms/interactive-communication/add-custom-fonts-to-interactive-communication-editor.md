@@ -4,10 +4,7 @@ description: Lägg till anpassade teckensnitt i den interaktiva kommunikationsre
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-hide: true
-index: false
-hidefromtoc: true
-source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
+source-git-commit: 371838c77beafa8c67259a865b25325632bea0b0
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -39,5 +36,5 @@ Med anpassade teckensnittsfunktioner kan du förbättra utseendet och känslan i
 
 >[!NOTE]
 >
-> För detaljerade konfigurationssteg kan användare följa guiden [Använd anpassade teckensnitt](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/using-communications/use-custom-fonts)
-> &#x200B;>När du är klar med stegen och har kört pipeline kan du använda anpassade teckensnitt direkt i redigeraren för interaktiv kommunikation.
+> För detaljerade konfigurationssteg kan användare följa guiden [Använd anpassade teckensnitt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/using-communications/use-custom-fonts)
+> >När du är klar med stegen och har kört pipeline kan du använda anpassade teckensnitt direkt i redigeraren för interaktiv kommunikation.

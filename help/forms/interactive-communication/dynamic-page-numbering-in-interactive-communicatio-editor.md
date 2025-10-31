@@ -4,10 +4,7 @@ description: Med Dynamic Page Numbering i Interactive Communication Editor kan m
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-hide: true
-index: false
-hidefromtoc: true
-source-git-commit: dae482e1f57a3504bf08926b57b89ca9266bd36a
+source-git-commit: 371838c77beafa8c67259a865b25325632bea0b0
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%

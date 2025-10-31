@@ -4,10 +4,7 @@ description: Med import och export av interaktiv kommunikation kan användarna s
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-hide: true
-index: false
-hidefromtoc: true
-source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
+source-git-commit: 371838c77beafa8c67259a865b25325632bea0b0
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -39,7 +36,7 @@ Skapa en interaktiv kommunikation (IC) i en miljö och återanvänd den i en ann
 
 +++&#x200B;1. Exportera interaktiv kommunikation
 
-1.1. Välj en [skapad interaktiv kommunikation](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/interactive-communication/create-interactive-communication) (IC).
+1.1. Välj en [skapad interaktiv kommunikation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/interactive-communication/create-interactive-communication) (IC).
 1.2. Klicka på alternativet **Hämta** om du vill exportera den som en ZIP-fil.
 1.3. Den hämtade ZIP-filen innehåller IC-kortet tillsammans med dess valda **mall**, **fragment** och **datamodell**.
 
