@@ -5,9 +5,9 @@ exl-id: e014b8ad-ac9f-446c-bee8-adf05a6b4d70
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
+source-git-commit: 4a860c104a5b6cd6e4306b9b713018317b54e365
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
@@ -110,10 +110,6 @@ Mer information finns i [`aem-testing-clients` GitHub-repo](https://github.com/a
 | Timeout | 30 m | Den tidsgräns efter vilken testet avslutas. |
 | Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testerna inte tar längre tid än så här. |
 
->[!NOTE]
->
-> Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva ditt användningsfall. Adobe team granskar din förfrågan och ger lämplig hjälp.
-
 #### Beroenden
 
 * aem-cloud-testing-clients:
@@ -131,7 +127,7 @@ Kommande ändringar av den inneslutna infrastrukturen för att köra funktionste
 >[!NOTE]
 >
 >Denna ändring måste utföras före 6 april 2024.
->&#x200B;>Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
+>Om du inte uppdaterar beroendebiblioteket kan det leda till att pipeline misslyckas i steget&quot;Custom Functional Testing&quot;.
 
 ### Lokal testkörning {#local-test-execution}
 
