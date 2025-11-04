@@ -5,12 +5,13 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: c0714a7b74cd223ad4a405934c89a3146fb8b5c4
+source-git-commit: 41ab36b7227269d63ff49e1af1eab502939dddb8
 workflow-type: tm+mt
-source-wordcount: '1954'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
+
 
 # Öppna och navigera i den universella redigeraren {#navigating}
 
@@ -71,49 +72,17 @@ Gränssnittet är indelat i dessa huvudområden.
 >
 >Den universella redigeraren erbjuder ett antal [anpassningsalternativ](/help/implementing/universal-editor/customizing.md) och [utökningspunkter](/help/implementing/universal-editor/extending.md) som kan ändra och lägga till i redigerarens funktioner. Av den anledningen kan du se andra alternativ än de som beskrivs här.
 
-### Experience Cloud Header {#experience-cloud-header}
+### Experience Platform övre navigeringsfält {#experience-cloud-header}
 
-Experience Cloud-rubriken visas alltid längst upp på skärmen. Det är en ankarpunkt som talar om var du befinner dig inom Experience Cloud och som hjälper dig att navigera till andra Experience Cloud-program.
+Experience Platform övre navigeringsfält finns alltid överst på skärmen. Det är en ankarpunkt som talar om var du befinner dig inom Experience Cloud och som hjälper dig att navigera till andra Experience Cloud-program.
 
 ![Experience Cloud-rubriken](assets/experience-cloud-header.png)
 
-#### Experience Manager {#experience-manager}
-
-Klicka på länken Adobe Experience Cloud till vänster om rubriken för att navigera till roten i din Experience Manager-lösning för att komma åt verktyg som [Cloud Manager](/help/onboarding/cloud-manager-introduction.md), [Cloud Acceleration Manager](/help/journey-migration/cloud-acceleration-manager/introduction/overview-cam.md) och [Programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
-
-![Knappen Global navigering](assets/global-navigation.png)
-
-#### Organisation {#organization}
-
-Här visas den organisation du är inloggad på. Välj om du vill byta till en annan organisation om din Adobe ID är kopplad till flera.
-
-![Organisationsindikator](assets/organization.png)
-
-#### Help Center {#help}
-
-Hjälpcentsikonen ger snabb åtkomst till utbildningsresurser och supportresurser.
-
-![Hjälp](assets/help.png)
-
-#### Meddelanden {#notifications}
-
-Den här ikonen är märkt med antalet för närvarande tilldelade ofullständiga [meddelanden](/help/implementing/cloud-manager/notifications.md).
-
-![Meddelanden](assets/notifications.png)
-
-#### Appar {#solutions}
-
-Om du knackar på eller klickar på appväljaren kan du snabbt gå över till andra Experience Cloud-lösningar.
-
-![Appväxlare](assets/solutions.png)
+Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
 
 #### Konto {#user-properties}
 
-Välj den ikon som representerar din användare för att få åtkomst till dina kontoinställningar. Om du inte har konfigurerat någon användarbild tilldelas ikonen slumpmässigt.
-
-![Användaregenskaper](assets/user-properties.png)
-
-Om du trycker eller klickar på kontoikonen öppnas en meny med dina användarinställningar. De här inställningarna gäller för Cloud Manager i allmänhet, och funktionerna i dem beskrivs [&#x200B; i den dokumentationen.](/help/implementing/cloud-manager/navigation.md)
+Om du trycker eller klickar på kontoikonen öppnas en meny med dina användarinställningar.
 
 ![Miljöväljaren](assets/environment-switcher.png)
 
@@ -162,7 +131,7 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren. Mer information finns i dokumentet [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md#undo-redo).
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 >[!TIP]
 >
@@ -218,7 +187,7 @@ Markera ikonen för att öppna sidan som du redigerar på en egen webbläsarflik
 
 >[!NOTE]
 >
->Knappen [&#x200B; för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
+>Knappen [ för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
 
 #### Publicera {#publish}
 
@@ -232,7 +201,7 @@ Välj publiceringsknappen så att du kan publicera ändringarna i innehållet li
 
 >[!NOTE]
 >
->Publiceringsknappen [&#x200B; kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
+>Publiceringsknappen [ kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
 
 #### Ellips {#ellipsis}
 
@@ -350,7 +319,7 @@ Om du trycker på eller klickar på borttagningsknappen [tas komponenten](/help/
 Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implementing/universal-editor/field-types.md#container)
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 >[!TIP]
 >
