@@ -47,14 +47,14 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
   <tr>
     <td>Rensa version</td>
     <td>Kund</td>
-    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
+    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Kund</td>
-    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
+    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
    </td>
   </tr>
@@ -85,7 +85,7 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Kund</td>
     <td>
     <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi">OSGi-egenskaper</a> för <b>Adobe Projects Renge Configuration</b> .</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi">OSGi-egenskaper</a> för <b>Adobe Projects Renge Configuration</b> .</p>
   </td>
   </tr>
   </tbody>
