@@ -4,9 +4,9 @@ description: Tagga tillgångar med en artificiellt intelligent tjänst som till�
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: a2abc48b-5586-421c-936b-ef4f896d78b7
-source-git-commit: 460dd76a1d7d1d3f85a924a0aa88e8649ada32bc
+source-git-commit: 5dbad509f5a5a9addfe6b52c3c3dd7ce5fa3229d
 workflow-type: tm+mt
-source-wordcount: '2615'
+source-wordcount: '2035'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Smarta taggar är nyckelord som inte bara visas i texten utan också bäst beskr
 
 Ord som ordnas i bokstavsordning är till exempel enklare att hitta än de som är slumpmässigt spridda. Taggning har ett liknande syfte. Den organiserar resurser efter affärsklonomi och ser till att de mest relevanta visas i sökresultaten. En biltillverkare kan till exempel märka bilderna med modellnamn så att endast relevanta bilder visas när de utformar en kampanjkampanj. Vare sig man lägger in märkord i &quot;runners&quot; eller &quot;löpskor&quot; behöver man inte bekymra sig om typografi, stavningsvariationer eller alternativa söktermer - Smarta taggar känner igen dem alla.
 
-I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/se/products/sensei/adobe-sensei.html) automatiskt smarta taggar för överförda resurser (som standard) tillsammans med text som justeras efter företagsklonomin.
+I bakgrunden använder funktionen det artificiellt intelligenta ramverket i [Adobe Sensei](https://business.adobe.com/products/sensei/adobe-sensei.html) automatiskt smarta taggar för överförda resurser (som standard) tillsammans med text som justeras efter företagsklonomin.
 
 ## Krav och konfiguration {#smart-tags-prereqs-config}
 
@@ -88,7 +88,7 @@ The applied smart tags are sorted in descending order of [confidence score](#con
 
 ## Otaggad Assets i DAM {#smart-tag-existing-assets}
 
-Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=sv-SE#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
+Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
 
 <!--
 To smart tag assets, or folders (including subfolders) of assets that exist in assets repository, follow these steps:
@@ -200,7 +200,7 @@ När den automatiska taggningen av resurser körs parallellt med andra bearbetni
 
 >[!IMPORTANT]
 >
->Om du har valt att inte tagga en mapp vid överföringen och vill att taggen ska vara smart efter överföringen, **[!UICONTROL Enable Smart Tags]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option &#x200B;](#smart-tag-existing-assets) för att lägga till smarta taggar i resurserna.
+>Om du har valt att inte tagga en mapp vid överföringen och vill att taggen ska vara smart efter överföringen, **[!UICONTROL Enable Smart Tags]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option ](#smart-tag-existing-assets) för att lägga till smarta taggar i resurserna.
 
 <!--
 ## Benefits of Smart Tags to your assets {#benefits-of-smart-tags}
@@ -212,79 +212,6 @@ Following are the benefits of using Smart Tags in your AEM Assets:
 *  Whether you are tagging "runners" or "running" shoes, you do not need to worry about typos, wrong spellings, or alternative search terms as Smart Tags know it already!
 *  Helps your assets to become organized and categorized.
 -->
-
-## Förbättra innehållsidentifiering med AI-genererade metadata {#ai-smart-tags}
-
-I stället för att förlita sig på manuell inmatning tilldelar AI automatiskt beskrivande taggar till digitala resurser. Dessa AI-genererade taggar förbättrar metadatakvaliteten och gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll. Om resursen till exempel är en bild kan AI identifiera objekt, scener, känslor eller till och med varumärkeslogotyper i den och generera relevanta taggar som&quot;solnedgång&quot;,&quot;strand&quot;,&quot;semester&quot; eller&quot;leende&quot;. AI-genererat innehåll kan förbättra sökningen efter resurser genom att använda både semantiska och lexikala söktekniker. Se mer [Sök i Assets](search-assets.md). <!--If the asset is a document, AI reads and interprets the text to assign meaningful keywords that summarize its content—such as "climate change," "policy," or "renewable energy.-->
-
-![Förbättrade smarta taggar](assets/enhanced-smart-tags1.png)
-
-### Hur aktiverar jag AI-genererade metadata? {#enable-ai-generated-metadata}
-
-Så här aktiverar du AI-genererade metadata:
-
-* Den lägsta version av AEM som krävs är `20626`.
-
-* Du måste underteckna ett GenAI Rider-avtal. Kontakta Adobe om du vill ha mer information.
-
-### Konfigurera AI-genererade titlar {#configure-ai-generated-titles}
-
-Med AEM kan du konfigurera visningen av resursrubriker i kortvyn eller listvyn på sidan Resursbläddring. Du kan välja att visa resurstiteln som du har definierat, titeln som har genererats med AI, eller använda AI-genererad titel endast om det inte finns någon befintlig titel för resursen.
-
-Så här konfigurerar du AI-genererade titlar:
-
-1. Navigera till **[!UICONTROL Tools > Assets > Assets Configuration > Smart Tag Enhancement Configuration]**.
-
-1. Välj något av följande alternativ:
-
-   * **Visa DC-titel (standard)**: Ange den titel i fältet **[!UICONTROL Title]** som är tillgänglig i resursegenskaperna för att visa den i kortvyn eller listvyn. Om objektets titel inte är definierad visas filnamnet i AEM Assets.
-
-   * **Visa AI-genererad titel**: Visar den AI-genererade titeln och ignorerar den titel som anges i resursegenskaperna. Om AI-genererad titel inte är tillgänglig för en resurs visar AEM Assets standardresursens titel som är tillgänglig i dess egenskaper.
-
-   * **Visa endast AI-genererad titel om det inte finns någon DC-titel**: AEM Assets visar endast den AI-genererade titeln om resurstiteln inte har definierats för en resurs.
-
-     ![Konfigurera AI-genererade titlar](assets/configure-title-ai-generated.png)
-
-### Använda AI-genererade metadata {#using-ai-generated-smart-tags}
-
-<!--[!NOTE]
->
->The enhanced smart tags capability is available only for the newly uploaded assets.
--->
-
-Utför följande steg om du vill använda den förbättrade funktionen för smarta taggar:
-
-1. Gå till önskad mapp i gränssnittet [!DNL Experience Manager] och klicka på **[!UICONTROL Add Assets]**. <!--Alternatively, to update enhanced smart tags in an existing content, click **[!UICONTROL reprocess]**.--> De kompatibla bildfilformaten är `png`, `jpg`, `jpeg`,`psd`, `tiff`, `gif`, `webp`, `crw`, `cr2`, `3fr`, `nef`, `arw` och `bmp`.
-
-1. Vänta tills den nyligen överförda resursen bearbetas. Gå till resursegenskaper när du är klar.
-
-1. Gå till fliken **[!UICONTROL AI-Generated]**. Om versionen [!DNL Experience Manager] är inkompatibel eller inte uppdaterad visas inte den här fliken. Följande fält finns där:
-
-   * **[!UICONTROL Generated title]:** Titeln innehåller en tydlig och kortfattad rubrik som beskriver kärnidén för en överförd resurs, vilket gör det enkelt att förstå direkt. När du lägger till en resurs visas den i resursvyn om du anger en titel (i `dc:title`). Om inget anges tilldelas en AI-genererad titel automatiskt.
-   * **[!UICONTROL Generated description]:** Beskrivningen ger en kort men informativ sammanfattning av vad resursen handlar om, vilket hjälper användare och sökmoduler att snabbt förstå dess relevans.
-   * **[!UICONTROL Generated keywords]:** Nyckelorden är måltermer som representerar huvudteman för en resurs, vilket underlättar taggning och innehållsfiltrering.
-
-1. [Valfritt] Du kan lägga till ytterligare taggar eller skapa egna om du tror att relevanta taggar saknas. Det gör du genom att skriva dina taggar i fältet **[!UICONTROL Generated keywords]** och klicka på **[!UICONTROL Save]**.
-
-### Inaktivera AI-genererade metadata {#disable-ai-generated-metadata}
-
-Du kan inaktivera AI-genererade metadata på mappnivå. Alla underordnade mappar ärver egenskaperna från den överordnade mappen.
-
-Så här inaktiverar du AI-genererade metadata på mappnivå:
-
-1. Navigera till **[!UICONTROL Adobe Experience Manager > Assets > Files]**.
-
-1. Markera mappen och klicka på **[!UICONTROL Properties]**.
-
-1. Gå till mappen **[!UICONTROL Asset Processing]** på fliken **[!UICONTROL Smart Tags Enhancements for images]**. Välj något av följande värden i listrutan:
-
-   * Ärvd - Mappen ärver aktiverings- eller inaktiveringsalternativen från den överordnade mappen.
-
-   * Aktivera - Aktiverar AI-genererade metadata för den valda mappen.
-
-   * Inaktivera - Inaktiverar AI-genererade metadata för den valda mappen.
-
-     ![Inaktivera AI-genererade metadata](assets/disable-ai-generated-metadata.png)
 
 ## Begränsningar och bästa metoder för smarta taggar {#limitations-best-practices-smart-tags}
 

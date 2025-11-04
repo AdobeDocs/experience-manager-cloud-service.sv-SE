@@ -5,9 +5,9 @@ role: User, Leader, Admin, Architect, Developer
 contentOwner: AG
 exl-id: 7264e8d1-fc8f-4eb3-93a9-a6066ca3f851
 feature: Metadata
-source-git-commit: fecc13161b2502aab086e4c1c89d650d003cec06
+source-git-commit: 5dbad509f5a5a9addfe6b52c3c3dd7ce5fa3229d
 workflow-type: tm+mt
-source-wordcount: '2464'
+source-wordcount: '2120'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Om du vill visa metadata för en resurs bläddrar du till resursen eller söker 
 
 ![Visa metadata för en resurs](assets/metadata-view.png)
 
-*Figur: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**&#x200B;i verktygsfältet eller dubbelklickar på resursen.*
+*Figur: Om du vill visa en resurs och dess metadata klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklickar på resursen.*
 
 Grundläggande metadata som titel, beskrivning och överföringsdatum är tillgängliga på fliken [!UICONTROL Basic]. Fliken [!UICONTROL Advanced] innehåller mer avancerade metadata som kameramodell, objektivinformation och geotaggar. Fliken [!UICONTROL Tags] innehåller automatiskt tillämpade taggar baserat på bildens innehåll.
 
@@ -49,7 +49,7 @@ De smarta taggarna används nästan i realtid och genereras baserat på bildens 
 
 ![Visa smarta taggar för en resurs](assets/metadata-view-tags.png)
 
-*Figur: Om du vill visa smarta taggar för en resurs klickar du på&#x200B;**[!UICONTROL Details]**&#x200B;i verktygsfältet eller dubbelklickar på resursen.*
+*Figur: Om du vill visa smarta taggar för en resurs klickar du på&#x200B;**[!UICONTROL Details]**i verktygsfältet eller dubbelklickar på resursen.*
 
 Smarta taggar innehåller också ett konfidensintervall som ett procenttal. Det anger förtroendet som är kopplat till den tillämpade taggen. Du kan moderera de automatiskt tillämpade smarta taggarna.
 
@@ -225,53 +225,15 @@ Så här redigerar du ett metadataformulär:
 1. Klicka på **[!UICONTROL Preview]** om du vill granska ändringarna i formuläret innan du sparar ändringarna.
 1. Klicka på **[!UICONTROL Save]** för att tillämpa ändringarna.
 
-## Förbättra innehållsidentifiering med AI-genererade metadata {#ai-smart-tags}
-
-I stället för att förlita sig på manuell inmatning tilldelar AI automatiskt beskrivande taggar till digitala resurser. Dessa AI-genererade taggar förbättrar metadatakvaliteten och gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll. Om resursen till exempel är en bild kan AI identifiera objekt, scener, känslor eller till och med varumärkeslogotyper i den och generera relevanta taggar som&quot;solnedgång&quot;,&quot;strand&quot;,&quot;semester&quot; eller&quot;leende&quot;. AI-genererat innehåll kan förbättra sökningen efter resurser genom att använda både semantiska och lexikala söktekniker. Se mer [Sök i Assets](search-assets-view.md). <!--If the asset is a document, AI reads and interprets the text to assign meaningful keywords that summarize its content—such as "climate change," "policy," or "renewable energy.-->
-
-![AI-genererade metadata](/help/assets/assets/enhanced-smart-tags.png)
-
-### Hur aktiverar jag AI-genererade metadata? {#enable-ai-generated-metadata}
-
-Så här aktiverar du AI-genererade metadata:
-
-* Den lägsta version av AEM som krävs är `20626`.
-
-* Du måste underteckna ett GenAI Rider-avtal. Kontakta Adobe om du vill ha mer information.
-
-
-### Använda AI-genererade metadata {#using-ai-generated-smart-tags}
-
-<!--[!NOTE]
->
->The enhanced smart tags capability is available only for the newly uploaded assets.
--->
-
-Utför följande steg om du vill använda den förbättrade funktionen för smarta taggar:
-
-1. Gå till önskad mapp i gränssnittet [!DNL Experience Manager] och klicka på **[!UICONTROL Add Assets]**. <!--Alternatively, to update enhanced smart tags in an existing content, click **[!UICONTROL reprocess]**.--> De kompatibla bildfilformaten är `png`, `jpg`, `jpeg`,`psd`, `tiff`, `gif`, `webp`, `crw`, `cr2`, `3fr`, `nef`, `arw` och `bmp`.
-
-1. Vänta tills den nyligen överförda resursen bearbetas. Gå till resursinformationen när du är klar.
-
-1. Gå till fliken **[!UICONTROL AI-Generated]**. Om versionen [!DNL Experience Manager] är inkompatibel eller inte uppdaterad visas inte den här fliken.  Följande fält finns där:
-
-   * **[!UICONTROL Generated title]:** Titeln innehåller en tydlig och kortfattad rubrik som beskriver kärnidén för en överförd resurs, vilket gör det enkelt att förstå direkt. När du lägger till en resurs visas den i resursvyn om du anger en titel (i `dc:title`). Om inget anges tilldelas en AI-genererad titel automatiskt.
-   * **[!UICONTROL Generated description]:** Beskrivningen ger en kort men informativ sammanfattning av vad resursen handlar om, vilket hjälper användare och sökmoduler att snabbt förstå dess relevans.
-   * **[!UICONTROL Generated keywords]:** Nyckelorden är måltermer som representerar huvudteman för en resurs, vilket underlättar taggning och innehållsfiltrering.
-
-1. [Valfritt] Du kan lägga till ytterligare taggar eller skapa egna om du tror att relevanta taggar saknas. Det gör du genom att skriva dina taggar i fältet **[!UICONTROL Generated keywords]** och klicka på **[!UICONTROL Save]**.
-
-Mer information om hur du inaktiverar AI-genererade metadata finns i [Inaktivera AI-genererade metadata](/help/assets/smart-tags.md#disable-ai-generated-metadata).
-
 ## Nästa steg {#next-steps}
 
-* [Titta på en video om hur du hanterar metadataformulär i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/configuring/metadata-forms.html?lang=sv-SE)
+* [Titta på en video om hur du hanterar metadataformulär i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/configuring/metadata-forms.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 <!-- TBD: Cannot create a form using the second option. Documenting only the first option for now.
 To reuse an existing form to create a form, do one of these:

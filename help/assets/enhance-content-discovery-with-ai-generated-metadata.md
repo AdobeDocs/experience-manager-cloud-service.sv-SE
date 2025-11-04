@@ -3,15 +3,20 @@ title: Förbättra innehållsidentifiering med AI-genererade metadata i administ
 description: Lär dig förbättra innehållsidentifiering med AI-genererade metadata i administratörsvyn
 feature: Smart Tags,Tagging
 role: Admin,User
-source-git-commit: d73ca2317d594b0d98bb9765796870cc28aa1158
+source-git-commit: 5dbad509f5a5a9addfe6b52c3c3dd7ce5fa3229d
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
 
 
 # Förbättra innehållsidentifiering med AI-genererade metadata {#ai-smart-tags}
+
+| Gränssnitt | Artikellänk |
+| -------- | ---------------------------- |
+| Assets View | [Klicka här](/help/assets/ai-generated-metadata-assets-view.md) |
+| Administratörsvy | Den här artikeln |
 
 I stället för att förlita sig på manuell inmatning tilldelar AI automatiskt beskrivande taggar till digitala resurser. Dessa AI-genererade taggar förbättrar metadatakvaliteten och gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll. Om resursen till exempel är en bild kan AI identifiera objekt, scener, känslor eller till och med varumärkeslogotyper i den och generera relevanta taggar som&quot;solnedgång&quot;,&quot;strand&quot;,&quot;semester&quot; eller&quot;leende&quot;. AI-genererat innehåll kan förbättra sökningen efter resurser genom att använda både semantiska och lexikala söktekniker. Se mer [Sök i Assets](search-assets.md). <!--If the asset is a document, AI reads and interprets the text to assign meaningful keywords that summarize its content—such as "climate change," "policy," or "renewable energy.-->
 
