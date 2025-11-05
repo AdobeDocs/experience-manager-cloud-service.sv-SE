@@ -3,9 +3,9 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: 772afa3fa409af63698585e139d1efdc026272d8
+source-git-commit: fbcfb88aa1b9510d1dc279475b26d85484ef3fe0
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1815'
 ht-degree: 0%
 
 ---
@@ -86,10 +86,38 @@ Content Hub är nu aktiverat för Experience Manager Assets as a Cloud Service. 
 
 >[!NOTE]
 >
->Du har tillgång till och kan använda Content Hub med upp till 250 Content Hub-användare. Kontakta Adobe om du har ytterligare frågor.
+>Du kan komma åt och använda Content Hub med upp till 250 Content Hub Limited-användare för Assets Ultimate och 50 Content Hub-användare för Assets Prime. Kontakta Adobe om du har ytterligare frågor.
 
 
 Om du inte har använt Experience Manager Assets tidigare klickar du på **[!UICONTROL Add Program]**, anger programinformation (Programnamn, konfigurera för produktion) och klickar på **[!UICONTROL Continue]**. Du kan sedan välja **[!UICONTROL Assets]** och **[!UICONTROL Content Hub]** på fliken **[!UICONTROL Solutions & Add-ons]**.
+
+### Aktivera Content Hub för lägre miljöer {#enable-content-hub-lower-environments}
+
+Följande Content Hub-krediter är tillgängliga baserat på AEM Assets-licens:
+
+* Assets Ultimate: 3 Content Hub-krediter
+
+* Assets Prime: 1 Content Hub-kredit
+
+* Befintliga Assets som molntjänstkunder: 1 Content Hub-kredit
+
+Du använder en kredit för att aktivera Content Hub i varje miljö, till exempel Production, Development eller Stage.
+
+Så här aktiverar du Content Hub för lägre miljöer:
+
+1. [Aktivera Content Hub för Experience Manager Assets med Cloud Manager](#enable-content-hub).
+
+1. Klicka på programkortet för att visa en lista över tillgängliga miljöer (produktion, utveckling eller scen).
+
+1. Klicka på den miljö som du vill aktivera. Avsnittet **[!UICONTROL Content Hub]** visar `Content Hub is available for activation`.
+
+   ![Aktivera Content Hub för lägre miljöer](assets/enable-content-hub-lower-environments.png)
+
+1. Klicka på **[!UICONTROL Click to activate]**. Bekräfta genom att klicka på **[!UICONTROL Activate]** igen.
+
+   Content Hub är aktiverat för den valda miljön.
+
+
 
 ### Content Hub instans och produktprofil på Admin Console{#content-hub-instance-product-profile}
 
@@ -229,3 +257,17 @@ Så här konfigurerar du Experience Manager Assets-användare:
    >[!NOTE]
    >
    > Du behöver inte läggas till i [Content Hub-produktprofilen](#onboard-content-hub-users) för Experience Manager Assets-användare.
+
+## Aktivera Content Hub för befintliga Assets as a Cloud Service-kunder {#enable-content-hub-exisitng-cs-customers}
+
+Befintliga Assets as a Cloud Service-kunder har 250 användare av Content Hub Limited som ingår i licensen. Aktivera Content Hub genom att utföra följande steg:
+
+1. [Aktivera Content Hub för Experience Manager Assets med Cloud Manager](#enable-content-hub).
+
+1. [Anlita Content Hub Limited-användare](#onboard-content-hub-users). Dessa användare har åtkomst till resurser som är tillgängliga på portalen, men kan inte lägga till nya resurser eller ändra befintliga resurser.
+
+1. Om användarna behöver lägga till resurser på Content Hub-portalen lägger du till dem i produktprofilen för `AEM Users`. Mer information finns i [Anlita Content Hub-användare med behörighet att lägga till resurser](#onboard-content-hub-users-add-assets).
+
+1. Om användarna behöver komma åt användargränssnittet för Content Hub-konfigurationen lägger du till dem i produktprofilen för `AEM Administrators`. Mer information finns i [Anlita Content Hub-administratör](#onboard-content-hub-administrator).
+
+Om användarna inte får de behörigheter de behöver även efter att ha lagt till dem i produktprofilerna kontaktar du Adobe.
