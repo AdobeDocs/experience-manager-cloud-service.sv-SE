@@ -16,13 +16,13 @@ ht-degree: 0%
 
 I den här artikeln beskrivs de avancerade nätverksfunktionerna i AEM as a Cloud Service. Dessa funktioner omfattar självbetjäning och API-etablering av VPN, icke-standardportar och dedikerade IP-adresser för utgångar.
 
-Förutom den här dokumentationen finns det också en serie självstudiekurser som hjälper dig igenom de olika avancerade nätverksalternativen. Se [Avancerade nätverk](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/advanced-networking).
+Förutom den här dokumentationen finns det också en serie självstudiekurser som hjälper dig igenom de olika avancerade nätverksalternativen. Se [Avancerade nätverk](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/advanced-networking).
 
 >[!IMPORTANT]
 >
 >Du kan konfigurera avancerade nätverk i AEM as a Cloud Service antingen via Cloud Manager-gränssnittet eller med Cloud Manager-API:t (till exempel cURL).
 >
->Den här artikeln fokuserar på att använda gränssnittsmetoden. Om du föredrar att automatisera konfigurationen via API:t, se självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/vpn).
+>Den här artikeln fokuserar på att använda gränssnittsmetoden. Om du föredrar att automatisera konfigurationen via API:t, se självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/vpn).
 >
 >**Automatisera avancerat nätverk med API:t**
 >Om du vill automatisera avancerade nätverksinställningar (till exempel VPN-skapande) kan du använda Cloud Manager API:
@@ -44,7 +44,7 @@ Förutom den här dokumentationen finns det också en serie självstudiekurser s
 >   }'
 >```
 >
->Se den fullständiga självstudiekursen och fler API-exempel i självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/vpn).
+>Se den fullständiga självstudiekursen och fler API-exempel i självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/vpn).
 >
 
 ## Ökning {#overview}
@@ -59,7 +59,7 @@ I den här artikeln beskrivs dessa alternativ i detalj och varför du kan använ
 
 >[!CAUTION]
 >
->Om du redan har etablerat dig med äldre dedikerad utgångsteknik och vill konfigurera något av dessa avancerade nätverksalternativ, [kontaktar du Adobe Client Care](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home).
+>Om du redan har etablerat dig med äldre dedikerad utgångsteknik och vill konfigurera något av dessa avancerade nätverksalternativ, [kontaktar du Adobe Client Care](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager#home).
 >
 >Om du försöker konfigurera avancerade nätverk med äldre teknik kan det påverka webbplatsanslutningen.
 
