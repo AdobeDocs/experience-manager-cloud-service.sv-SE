@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar avancerade nätverksfunktioner som VPN
 exl-id: 968cb7be-4ed5-47e5-8586-440710e4aaa9
 feature: Security
 role: Admin
-source-git-commit: 08a73fcadf65e37b621fbbfba1e4e0b8a5e61b91
+source-git-commit: bfb39bd630c451b4649955af3c264bacefd1c477
 workflow-type: tm+mt
-source-wordcount: '5606'
+source-wordcount: '5549'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 I den här artikeln beskrivs de avancerade nätverksfunktionerna i AEM as a Cloud Service. Dessa funktioner omfattar självbetjäning och API-etablering av VPN, icke-standardportar och dedikerade IP-adresser för utgångar.
 
-Förutom den här dokumentationen finns det också en serie självstudiekurser som hjälper dig igenom de olika avancerade nätverksalternativen. Se [Avancerade nätverk](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/advanced-networking).
+Förutom den här dokumentationen finns det också en serie självstudiekurser som hjälper dig igenom de olika avancerade nätverksalternativen. Se [Avancerade nätverk](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/advanced-networking).
 
 >[!IMPORTANT]
 >
 >Du kan konfigurera avancerade nätverk i AEM as a Cloud Service antingen via Cloud Manager-gränssnittet eller med Cloud Manager-API:t (till exempel cURL).
 >
->Den här artikeln fokuserar på att använda gränssnittsmetoden. Om du föredrar att automatisera konfigurationen via API:t, se självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/vpn).
+>Den här artikeln fokuserar på att använda gränssnittsmetoden. Om du föredrar att automatisera konfigurationen via API:t, se självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/vpn).
 >
 >**Automatisera avancerat nätverk med API:t**
 >Om du vill automatisera avancerade nätverksinställningar (till exempel VPN-skapande) kan du använda Cloud Manager API:
@@ -44,7 +44,7 @@ Förutom den här dokumentationen finns det också en serie självstudiekurser s
 >   }'
 >```
 >
->Se den fullständiga självstudiekursen och fler API-exempel i självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/vpn).
+>Se den fullständiga självstudiekursen och fler API-exempel i självstudiekursen [VPN (Virtual Private Network)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/vpn).
 >
 
 ## Ökning {#overview}
@@ -59,7 +59,7 @@ I den här artikeln beskrivs dessa alternativ i detalj och varför du kan använ
 
 >[!CAUTION]
 >
->Om du redan har etablerat dig med äldre dedikerad utgångsteknik och vill konfigurera något av dessa avancerade nätverksalternativ, [kontaktar du Adobe Client Care](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager#home).
+>Om du redan har etablerat dig med äldre dedikerad utgångsteknik och vill konfigurera något av dessa avancerade nätverksalternativ, [kontaktar du Adobe Client Care](https://experienceleague.adobe.com/?support-solution=Experience+Manager#home).
 >
 >Om du försöker konfigurera avancerade nätverk med äldre teknik kan det påverka webbplatsanslutningen.
 
@@ -405,7 +405,7 @@ Vissa bibliotek kräver explicit konfiguration för att använda Java™-standar
 
 Ett exempel med Apache HttpClient som kräver explicita anrop till
 [`HttpClientBuilder.useSystemProperties()`](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClientBuilder.html) eller använd
-[`HttpClients.createSystem()` &#x200B;](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
+[`HttpClients.createSystem()` ](https://hc.apache.org/httpcomponents-client-4.5.x/current/httpclient/apidocs/org/apache/http/impl/client/HttpClients.html#createSystem()):
 
 ```java
 public JSONObject getJsonObject(String relativePath, String queryString) throws IOException, JSONException {
@@ -595,19 +595,16 @@ Bilden nedan visar en visuell representation av en uppsättning domäner och ass
 <thead>
   <tr>
     <th>Domänmönster</th>
-    <th>Egress (från AEM)</th>
-    <th>Inledning (till AEM), betydelse</th>
+    <th>Beskrivning</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td><code>p{PROGRAM_ID}.external.adobeaemcloud.com</code></td>
-    <td>Dedikerad IP-adress för utgångar för trafik som går till Internet i stället för via privata nätverk </td>
-    <td>Anslutningar från VPN visas vid CDN från den här IP-adressen. Om du bara vill tillåta anslutningar från VPN att gå till AEM, konfigurerar du Cloud Manager så att endast den här IP-adressen tillåts och blockerar allt annat. Mer information finns i avsnittet Begränsa ingång till VPN-anslutningar.</td>
+    <td>Dedikerad IP-adress för utgångar för trafik som går till Internet i stället för via privata nätverk.</td>
   </tr>
   <tr>
     <td><code>p{PROGRAM_ID}.{REGION}-gateway.external.adobeaemcloud.com</code></td>
-    <td>Ej tillämpligt</td>
     <td>IP för VPN-gatewayen på AEM-sidan. Nätverksteknikteamet kan använda den här IP-adressen för att endast tillåta VPN-anslutningar till din VPN-gateway från en viss IP-adress. </td>
   </tr>
 </tbody>
@@ -754,7 +751,7 @@ När nätverksinfrastrukturen har skapats för ett program kan endast begränsad
 
 ### Redigera och ta bort med API:t {#delete-api}
 
-Anropa `DELETE /program/{program ID}/networkinfrastructure/{networkinfrastructureID}` om du vill **ta bort** nätverksinfrastrukturen för ett program.
+Anropa **om du vill** ta bort`DELETE /program/{program ID}/networkinfrastructure/{networkinfrastructureID}` nätverksinfrastrukturen för ett program.
 
 ## Ändra ett programs avancerade nätverksinfrastrukturtyp {#changing-program}
 
