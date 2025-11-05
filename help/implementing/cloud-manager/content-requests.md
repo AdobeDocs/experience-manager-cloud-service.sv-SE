@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: 62e4b038c3fbae0ca5b6bb08c1d9d245842aeab2
+source-git-commit: 20bb86d83a1afeda760e7c8d88e4257b8cb65860
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Se [License Dashboard](/help/implementing/cloud-manager/license-dashboard.md) f�
 
 ## Samlingsregler på serversidan {#serverside-collection}
 
-AEM as a Cloud Service tillämpar regler på serversidan för att räkna innehållsbegäranden. Dessa regler inkluderar logik för att exkludera välkända botar (t.ex. crawlningsprogram för sökmotorer) och icke-användartrafik, t.ex. övervakningstjänster som regelbundet pingar webbplatsen.
+AEM as a Cloud Service tillämpar samlingsregler på serversidan för att räkna innehållsbegäranden. Dessa regler exkluderar välkända botar (t.ex. crawler för sökmotorer) och en uppsättning övervakningstjänster som regelbundet pingar webbplatsen. Annan trafik av syntetisk eller övervakningstyp som inte finns med i den här exkluderingslistan räknas som förfrågningar om fakturerbart innehåll.
 
 I följande tabeller visas typerna av inkluderade och exkluderade innehållsbegäranden, med korta beskrivningar av var och en.
 
@@ -101,4 +101,33 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | Uteslut Commerce integration framework-samtal | Exkluderad | Begäranden som skickas till AEM som vidarebefordras till Commerce integration framework - URL:en börjar med `/api/graphql` - för att undvika dubbelräkning kan de inte debiteras för Cloud Service. |
 | Uteslut `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på en dator eller mobiltelefon. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
 | Uteslut `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON har vissa scenarier, som SAML-autentiseringsflöden, observerats returnera favoritikoner som HTML. Därför exkluderas favoritikoner uttryckligen från antalet. |
-| Experience Fragment (XF) - Återanvändning i samma domän | Exkluderad | Begäranden som gjorts för XF-sökvägar (till exempel `/content/experience-fragments/...`) från sidor som finns på samma domän (som identifieras av referensrubriken som matchar begärandevärden).<br><br> Exempel: En hemsida på `aem.customer.com` som drar in en XF-fil för en banderoll eller ett kort från samma domän.<br><br> ・ URL matchar /content/experience-fragments/..<br> ・ referensdomänen matchar `request_x_forwarded_host`<br><br>**Obs!** Om Experience Fragment-sökvägen har anpassats (till exempel med `/XFrags/...` eller någon annan sökväg utanför `/content/experience-fragments/`), är begäran inte utesluten och kan därför räknas. Det här resultatet är sant även om det är samma domän. Adobe rekommenderar att du använder Adobe XF-standardsökvägsstruktur för att se till att exkluderingslogiken tillämpas korrekt. |
+| Experience Fragment (XF) - Återanvändning i samma domän | Exkluderad | Begäranden som gjorts för XF-sökvägar (till exempel `/content/experience-fragments/...`) från sidor som finns på samma domän (som identifieras av referensrubriken som matchar begärandevärden).<br><br> Exempel: En hemsida på `aem.customer.com` som drar in en XF-fil för en banderoll eller ett kort från samma domän.<br><br> ・ URL matchar /content/experience-fragments/..<br> ・ referensdomänen matchar `request_x_forwarded_host`<br><br>**Obs!** Om Experience Fragment-sökvägen är anpassad (till exempel med `/XFrags/...` eller någon sökväg utanför `/content/experience-fragments/`), kommer begäran inte att uteslutas och kan räknas, även om den är samma domän. Vi rekommenderar att Adobe standardstruktur för XF-sökväg används för att säkerställa att exkluderingslogiken tillämpas korrekt. |
+
+## Hantera innehållsförfrågningar {#managing-content-requests}
+
+Som vi nämnt i avsnittet [Varianter på Cloud Service-innehållsbegäranden](#content-requests-variances) kan innehållsbegäranden vara högre än förväntat på grund av ett antal orsaker, där en vanlig tråd är trafik som träffar CDN.  Det är till din fördel att som AEM-kund övervaka och hantera era innehållsförfrågningar så att de passar er licensbudget.  Hantering av innehållsbegäranden är vanligtvis en kombination av implementeringstekniker och [trafikfilterregler](/help/security/traffic-filter-rules-including-waf.md).
+
+### Implementeringstekniker som hanterar innehållsförfrågningar {#implementation-techniques-to-manage-crs}
+
+* Kontrollera att alla sidsvar som inte hittas levereras med HTTP-status 404.  Om de returneras med statusen 200 räknas de av mot innehållsförfrågningar.
+* Vidarebefordra hälsokontroller eller övervakningsverktyg till URL:en /systems/probes/health eller använd HEAD-metoden i stället för GET för att undvika att det uppstår innehållsförfrågningar.
+* Balansera era behov av aktualitet i innehållet med AEM licenskostnader för alla skräddarsydda crawler som ni har integrerat med er webbplats.  En alltför aggressiv crawler kan förbruka många innehållsförfrågningar.
+* Hantera eventuella omdirigeringar som server (status 301 eller 302) i stället för på klientsidan (status 200 med javascript-omdirigering) för att undvika två separata innehållsförfrågningar.
+* Kombinera eller minska API-anrop, som är JSON-svar från AEM som kan läsas in för att återge sidan.
+
+### Trafikfilterregler för att hantera innehållsförfrågningar {#traffic-filter-rules-to-manage-crs}
+
+* Ett vanligt robotmönster är att använda en tom användaragent.  Du måste granska implementerings- och trafikmönstren för att se om den tomma användaragenten är användbar eller inte.  Om du vill blockera den här trafiken rekommenderas [syntax](/help/security/traffic-filter-rules-including-waf.md#rules-syntax):
+
+```
+trafficFilters:
+  rules:
+    - name: block-missing-user-agent
+      when:
+        anyOf:
+          - { reqHeader: user-agent, exists: false }
+          - { reqHeader: user-agent, equals: '' }
+      action: block
+```
+
+* Somliga botar har slagit en webbplats mycket hårt en dag och försvinner nästa dag.  Detta kan frustrera alla försök att blockera en viss IP-adress eller användaragent.  Ett allmänt tillvägagångssätt är att införa en [avgiftsbegränsningsregel](/help/security/traffic-filter-rules-including-waf.md#rate-limit-rules).  Granska [exemplen](/help/security/traffic-filter-rules-including-waf.md#ratelimiting-examples) och skapa en regel som matchar din tolerans för att få en snabb frekvens av förfrågningar.  Granska syntaxen för [villkorsstruktur](/help/security/traffic-filter-rules-including-waf.md#condition-structure) för eventuella undantag som du vill tillåta för en allmän hastighetsbegränsning.
