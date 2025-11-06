@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 247a501660475d2f3ae9cff735a1845094d02c82
+source-git-commit: cb4764709a86ae2acb33a10dc9a53126804ee7ec
 workflow-type: tm+mt
-source-wordcount: '1628'
+source-wordcount: '1666'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -48,9 +48,9 @@ Have a look at the July 2025 Release Overview video for a summary of the feature
 
 ### Nya funktioner i Experience Manager Sites {#new-sites}
 
-* [Innehållsmodellredigeraren för AEM-innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) har moderniserats så att den justeras mot andra React Spectrum-baserade gränssnitt i AEM. Implementeringen av användargränssnittet och utbyggbarhetsmodellen överensstämmer nu med Content Fragment Editor och Universal Editor. Den nya modellredigeraren är nu standard när den öppnas från det nya gränssnittet för innehållsmodelladministratör. Om du öppnar en innehållsmodell i Touch-gränssnittet öppnas Touch UI-redigeraren och den nya redigeraren erbjuds att testa.
+* [Startar för innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md): Innehållsförfattare kan nu skapa och schemalägga framtida varianter av strukturerat innehåll med hjälp av startfunktioner för innehållsfragment. Med den nya konsolen för innehållsfragment kan du skapa, redigera, hantera och schemalägga Content Fragment som grenar för framtida innehåll som kan synkroniseras med källgrenen. En ny Diff-vy ger en tydlig översikt över alla innehållsändringar innan du implementerar en Launch för framtida publicering.
 
-* [Startar för innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md): På fliken Launches i konsolen Content Fragments kan du skapa starter, lista alla befintliga starter, se nyckelegenskaper och vidta åtgärder för dem.
+* [Innehållsmodellredigeraren för AEM-innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) har moderniserats så att den justeras mot andra React Spectrum-baserade gränssnitt i AEM. Implementeringen av användargränssnittet och utbyggbarhetsmodellen överensstämmer nu med Content Fragment Editor och Universal Editor. Den nya modellredigeraren är nu standard när den öppnas från det nya gränssnittet för innehållsmodelladministratör. Om du öppnar en innehållsmodell i Touch-gränssnittet öppnas Touch UI-redigeraren och den nya redigeraren erbjuds att testa.
 
 <!--
 
@@ -66,7 +66,7 @@ Content Hub Administrators can now pin collections in Content Hub for quick acce
 
 >[!NOTE]
 >
->These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
+>These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
 
 -->
 
@@ -272,11 +272,11 @@ Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-
 
 ### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -296,4 +296,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
