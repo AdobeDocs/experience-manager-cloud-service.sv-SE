@@ -7,9 +7,9 @@ index: false
 hidefromtoc: true
 role: Admin, Developer
 exl-id: c772556b-dab6-4fa8-b728-1fe52c6596a4
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 1d378e6c8ac714779e77314d3457a14d40cd222f
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -316,10 +316,15 @@ För integreringsfrågor:
 - Kontakta systemadministratören för teknisk hjälp
 - API-dokumentation för externa tjänster
 
-## Relaterade artiklar
+<!-- 
+## Related articles
 
-- [Forms Experience Builder - översikt](product-overview.md)
-- [Komma igång med Forms Experience Builder](forms-experience-builder-getting-started.md)
-- [Installera och konfigurera Forms Experience Builder](deploy-forms-experience-builder.md)
-- [Intelligent import och konvertering](intelligent-import-conversion.md)
-- [Frågor och svar](forms-experience-builder-frequently-asked-questions.md)
+- [Forms Experience Builder Overview](product-overview.md)
+- [Getting started with Forms Experience Builder](forms-experience-builder-getting-started.md)
+- [Deploy and configure Forms Experience Builder](deploy-forms-experience-builder.md)
+- [Intelligent import and conversion](intelligent-import-conversion.md)
+- [Frequently asked questions](forms-experience-builder-frequently-asked-questions.md)
+
+-->
+
+

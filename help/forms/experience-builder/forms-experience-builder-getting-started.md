@@ -6,9 +6,9 @@ index: false
 hidefromtoc: true
 role: Admin, Developer
 exl-id: c4f838bc-a001-48e7-afaa-c2ff9034f5d4
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 1d378e6c8ac714779e77314d3457a14d40cd222f
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
@@ -62,10 +62,9 @@ Skapa formulär med naturliga språkbeskrivningar av era behov.
 **Exempel:**
 
     Skapa ett formulär för kundfeedback med:
-    &#x200B;- Produktklassificering (1-5 stjärnor)
-    &#x200B;- Kommentarsfält för detaljerad feedback
-    &#x200B;- E-post från kund (valfritt)
-     &#x200B;- Skicka till e-postmeddelande
+    - Produktklassificering (1-5 stjärnor)
+    - Kommentarsfält för detaljerad feedback
+    - E-post från kund (valfritt)
 
 >[!VIDEO](https://video.tv.adobe.com/v/3473104)
 
@@ -75,7 +74,7 @@ Skapa formulär med naturliga språkbeskrivningar av era behov.
 
 Förvandla befintliga dokument till interaktiva digitala formulär.
 
-Innan du använder det här alternativet ska du överföra din PDF-fil eller en bild av formuläret. PDF kan vara ett AcroForm- eller XFA-baserat PDF-formulär. För [andra typer av PDF forms](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents) använder du alternativet [Förbered formulär](https://helpx.adobe.com/in/acrobat/using/creating-distributing-pdf-forms.html) i Adobe Acrobat för att konvertera dem till ett AcroForm
+Innan du använder det här alternativet ska du överföra din PDF-fil eller en bild av formuläret. PDF kan vara ett AcroForm- eller XFA-baserat PDF-formulär. För [andra typer av PDF forms](https://experienceleague.adobe.com/en/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents) använder du alternativet [Förbered formulär](https://helpx.adobe.com/in/acrobat/using/creating-distributing-pdf-forms.html) i Adobe Acrobat för att konvertera dem till ett AcroForm
 
 **När ska du använda:**
 
@@ -131,9 +130,9 @@ Inkludera ytterligare funktioner:
 
     Lägg till två listrutor
     
-    &#x200B;- queryType med alternativ: General question, &quot;Support Request&quot;, &quot;Sales Inquiry&quot;, &quot;Partnership&quot;
+    - queryType med alternativ: General question, &quot;Support Request&quot;, &quot;Sales Inquiry&quot;, &quot;Partnership&quot;
     
-    &#x200B;- EmergencyLevel med alternativ (Low, Medium, High)
+    - EmergencyLevel med alternativ (Low, Medium, High)
 
 
 ![En listrutekomponent har lagts till med hjälp av naturliga språkuppmaningar i formulärupplevelseverktyget](/help/forms/assets/forms-experience-builder-contact-us-form-add-dropdown.png)
@@ -167,10 +166,9 @@ Använd `@fieldName` för att referera till specifika fält:
 
 Beskriv vad du vill ha på engelska:
 
-    &#x200B;- Lägg till ett avsnitt för företagsinformation
-    &#x200B;- Skapa en listruta för avdelningsval
-     &#x200B;- Inkludera en filöverföring för CV
-    &#x200B;- Konfigurera e-postmeddelanden när formuläret skickas
+    - Lägg till ett avsnitt för företagsinformation 
+    - Skapa en listruta för avdelningsval
+     - Inkludera en filöverföring för CV
 
 ### Bygg stegvis {#build-incrementally}
 
@@ -190,55 +188,53 @@ Börja enkelt och lägg till komplexitet gradvis:
 **Grundläggande kontaktformulär:**
 
     Skapa ett kontaktformulär med:
-    &#x200B;- Namn (obligatoriskt)
-    &#x200B;- E-postadress (obligatoriskt, validerat)
-    &#x200B;- Listrutan Ämne (Allmänt, Support, Försäljning, Partnerskap)
-    &#x200B;- Meddelande (obligatoriskt, flera rader)
-    &#x200B;- Skicka-knapp
+    - Namn (obligatoriskt)
+    - E-post (obligatoriskt, validerat)
+    - Listrutan Ämne (Allmänt, Support, Försäljning, Partnerskap)
+    - Meddelande (obligatoriskt, flerradigt)
 
 **Formulär för kundfeedback:**
 
     Skapa ett formulär för kundfeedback med:
-    &#x200B;- Produktklassificering (1-5 stjärnor)
-    &#x200B;- Kommentarsfält för detaljerad feedback
-    &#x200B;- E-post från kund (valfritt)
-     &#x200B;- Skicka till e-postmeddelande
+    - Produktklassificering (1-5 stjärnor)
+    - Kommentarsfält för detaljerad feedback
+    - E-post från kund (valfritt)
 
 ### Registrerings- och introduktionsformulär {#registration-onboarding-forms}
 
 **Användarregistrering:**
 
     Skapa ett användarregistreringsformulär med:
-    &#x200B;- Personlig information (namn, e-postadress, telefon)
-    &#x200B;- Kontoinställningar (nyhetsbrev, meddelanden)
-    &#x200B;- Villkor för godkännande
-    &#x200B;- Lösenordsskapande med styrkevalidering
+    - Personlig information (namn, e-postadress, telefon)
+    - Kontoinställningar (nyhetsbrev, meddelanden)
+    - Villkor för godkännande
+    - Lösenordsskapande med styrkevalidering
 
 **Anställningskoncern:**
 
     Skapa ett formulär för anställdas introduktion med:
-    &#x200B;- Personlig information och kontaktinformation
-    &#x200B;- Anställningsinformation och startdatum
-    &#x200B;- Dokumentöverföringar (CV, ID, skatteformulär)
-    &#x200B;- Val av förmåner och inställningar
+    - Personlig information och kontaktinformation
+    - Anställningsinformation och startdatum
+    - Dokumentöverföringar (CV, ID, skatteformulär)
+    - Val av förmåner och inställningar
 
 ### Undersöknings- och bedömningsformulär {#survey-assessment-forms}
 
 **Kundnöjdhetsundersökning:**
 
     Skapa en kundnöjdhetsundersökning med:
-    &#x200B;- Samlat omdöme (skala 1-10)
-    &#x200B;- Kategoribetyg (produkt, tjänst, support)
-    &#x200B;- Öppen feedback-sektion
-     &#x200B;- Demografisk information (valfritt)
+    - Samlat omdöme (skala 1-10)
+    - Kategoribetyg (produkt, tjänst, support)
+    - Öppen feedback-sektion
+     - Demografisk information (valfritt)
 
 **Kompetensbedömning:**
 
     Skapa ett formulär för kompetensbedömning med:
-    &#x200B;- Kompetenskategorier med kunskapsnivåer 
-     &#x200B;- Upplevelsevaraktighet för varje kompetens
-    &#x200B;- Certifierings- och utbildningsinformation
-    &#x200B;- Självutvärdering och mål
+    - Kompetenskategorier med kunskapsnivåer 
+     - Upplevelsevaraktighet för varje kompetens
+    - Certifierings- och utbildningsinformation
+    - Självutvärdering och mål
 
 ## Testning och validering {#testing-validation}
 
@@ -275,21 +271,29 @@ Innan du distribuerar något formulär:
     Lägg till filtypsvalidering: endast PDF, DOC, DOCX tillåts för @resume
     Lägg till filstorleksgräns: maximalt 5 MB för @resume
 
-## Nästa steg {#next-steps}
+<!-- 
 
-Nu när du förstår grunderna kan du utforska följande avancerade ämnen:
+## Next steps {#next-steps}
 
-* **[LLM-förbättrade smarta fält](forms-experience-builder-llm-smart-fields.md)** - Skapa fält med förifyllda alternativ med hjälp av AI-kunskaper
-* **[Skapa formulär med AI](forms-experience-builder-prompt-examples-library.md)** - Avancerade promptmönster och exempel
-* **[Intelligent import och konvertering](intelligent-import-conversion.md)** - Omvandla befintliga dokument till formulär
-* **[Inlämning och integrering av formulär](form-submission-integration.md)** - Koppla formulär till affärssystemen
+Now that you understand the basics, explore these advanced topics:
+
+* **[LLM-enhanced smart fields](forms-experience-builder-llm-smart-fields.md)** - Create fields with pre-populated options using AI knowledge
+* **[AI-powered form creation](forms-experience-builder-prompt-examples-library.md)** - Advanced prompt patterns and examples
+* **[Intelligent import and conversion](intelligent-import-conversion.md)** - Transform existing documents into forms
+* **[Form submission and integration](form-submission-integration.md)** - Connect forms to your business systems
+
+-->
 
 
 ## Relaterade artiklar
 
 * [Forms Experience Builder - översikt](product-overview.md)
-* [LM-förbättrade smarta fält](forms-experience-builder-llm-smart-fields.md)
-* [Skapa formulär med AI-funktioner](forms-experience-builder-prompt-examples-library.md)
-* [Intelligent import och konvertering](intelligent-import-conversion.md)
-* [Inlämning och integration av blanketter](form-submission-integration.md)
-* [Frågor och svar](forms-experience-builder-frequently-asked-questions.md)
+
+<!-- 
+* [LLM-enhanced smart fields](forms-experience-builder-llm-smart-fields.md)
+* [AI-powered form creation](forms-experience-builder-prompt-examples-library.md)
+* [Intelligent import and conversion](intelligent-import-conversion.md)
+* [Form submission and integration](form-submission-integration.md)
+* [Frequently asked questions](forms-experience-builder-frequently-asked-questions.md)
+
+-->

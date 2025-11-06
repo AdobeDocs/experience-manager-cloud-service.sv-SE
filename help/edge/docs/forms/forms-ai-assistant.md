@@ -6,9 +6,9 @@ hide: true
 index: false
 hidefromtoc: true
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 1d378e6c8ac714779e77314d3457a14d40cd222f
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -170,9 +170,11 @@ Här är några exempel på vad du kan åstadkomma med ett enkelt, naturligt spr
 "Update the layout to match the attached wireframe"
 ```
 
-### Inlämning och integrering
+<!-- 
 
-**Grundläggande överföring:**
+### Submission and Integration
+
+**Basic submission:**
 
 ```
 "Send form data to our email"
@@ -180,13 +182,15 @@ Här är några exempel på vad du kan åstadkomma med ett enkelt, naturligt spr
 "Redirect to a thank you page"
 ```
 
-**Avancerad integrering:**
+**Advanced integration:**
 
 ```
 "Send form submissions to hr@company.com and create a case in our CRM system"
 "Submit data to our REST API endpoint and trigger the new customer workflow"
 "Email responses to the sales team and add the lead to our marketing automation platform"
 ```
+
+-->
 
 ## Arbeta med bifogade filer
 
@@ -281,8 +285,11 @@ Skriv `/` om du vill visa tillgängliga kortkommandon:
 | `/update-field` | Ändra fältegenskaper | `/update-field @email to be required` |
 | `/create-rule` | Lägg till dynamiskt beteende | `/create-rule show @spouse if married` |
 | `/create-panel` | Lägg till fältbehållare | `/create-panel Personal Information` |
-| `/configure-submit` | Ställ in formulärinlämning | `/configure-submit to email support` |
 | `/help` | Få hjälp | `/help multi-step forms` |
+
+<!-- 
+| `/configure-submit` | Set up form submission | `/configure-submit to email support` |
+-->
 
 ### Fältreferenssyntax
 
