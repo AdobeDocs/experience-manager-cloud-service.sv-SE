@@ -45,7 +45,7 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -53,7 +53,7 @@ Universell redigeringstjänst är inte en fullständig kopia av Universell redig
 
 [NodeJS version 20](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
 
 Spara filen `universal-editor-service.cjs` från programvarudistribution till den lokala utvecklingsmiljön.
 

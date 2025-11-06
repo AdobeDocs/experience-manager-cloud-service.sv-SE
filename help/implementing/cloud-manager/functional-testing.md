@@ -58,7 +58,7 @@ I följande diagram visas en detaljerad översikt över tillgängliga kvalitetsg
 
 Du uppmanas att tillhandahålla enhetstesterna för ditt AEM-program, som utgör grunden för varje teststrategi. De är avsedda att köras snabbt och ofta och ge snabb och snabb feedback. De är nära integrerade i utvecklararbetsflödena, din egen CI/CD och AEM molntjänster.
 
-De implementeras med JUnit och avrättas med Maven. Se kärnmodulen [i AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#unit-tests) för ett exempel på enhetstest för AEM och hur du kommer igång.
+De implementeras med JUnit och avrättas med Maven. Se kärnmodulen [i AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/using#unit-tests) för ett exempel på enhetstest för AEM och hur du kommer igång.
 
 ### Kodkvalitet
 

@@ -29,7 +29,7 @@ Titta på videon Versionsöversikt från augusti 2023 om du vill se en sammanfat
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
 
-* Med konsolen [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) kan användare nu visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användare behöver inte längre växla till Assets-gränssnittet för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
+* Med konsolen [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=sv-SE) kan användare nu visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användare behöver inte längre växla till Assets-gränssnittet för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
 
   ![Taggning i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
 * Den nya Content Fragment Editor är nu tillgänglig i AEM as a Cloud Service. Det ger innehållsförfattarna möjlighet att bli produktivare genom att effektivisera sina redigeringsuppgifter och minska behovet av att växla mellan olika program samtidigt som de redigerar innehåll.
@@ -135,7 +135,7 @@ You can now assign metadata form to a specific folder within your Assets Essenti
 
 ### Headless Adaptive Forms early adopter {#forms-early-adopter}
 
-Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) om du vill att utvecklarna ska kunna skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
+Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE) om du vill att utvecklarna ska kunna skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 
 * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
 * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer

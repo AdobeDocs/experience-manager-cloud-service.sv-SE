@@ -97,7 +97,7 @@ Bestäm var informationen kommer från och granska detaljerna i metadatastrategi
 
 >[!NOTE]
 >
->Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html).
+>Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=sv-SE).
 
 ### Var konsekvent med metadatastrategin
 
@@ -138,7 +138,7 @@ Du kan lägga till flera nyckelord och ordna dem efter din prioritet.
    1. Klicka på **[!UICONTROL Save & Close]**.
 Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de översta sökresultaten.
 
-  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
+  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=sv-SE).
 
 * **Anpassade metadatafält:** Anpassa metadatafälten för att hämta ytterligare information om resurser. Du kan till exempel lägga till specifika fält för projektinformation, copyrightinformation eller andra relevanta data som förbättrar sökfunktionerna. Lär dig [att redigera eller lägga till anpassade metadata](meta-edit.md) i Experience Manager Assets.
 
@@ -168,4 +168,4 @@ Undersök innehållsförsörjningskedjan för att hitta metadatakällor och enga
 
 informera om mål, framsteg, milstolpar och utmaningar tidigt för att få synpunkter och samarbete från alla intressenter. Uppmuntra samarbete i hela organisationen för att skapa effektiva processer och värdefulla metadata.
 
-Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html) för att effektivt hantera dina Experience Manager-metadata.
+Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html?lang=sv-SE) för att effektivt hantera dina Experience Manager-metadata.

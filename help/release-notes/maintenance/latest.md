@@ -24,7 +24,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 22943, som offentliggjordes den 14 oktober 2025. Den tidigare underhållsversionen var version 22758.
 
-Funktionsaktiveringen i 2025.10.0 innehåller alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.10.0 innehåller alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-22943}
 
@@ -56,7 +56,7 @@ Funktionsaktiveringen i 2025.10.0 innehåller alla funktioner som finns i den h�
 * GUIDES-33720: När du zoomar i översättningsgränssnittet flyttas knappen Skicka för översättning under ellipsen och aktiveras även utan att någon resurs markeras.
 * GUIDES-33590: När en granskare slutför en granskningsåtgärd eller initieraren uppdaterar en granskningsåtgärd utan att skriva några kommentarer, visar det skickade e-postmeddelandet den senaste föregående kommentaren.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Föråldrade funktioner och API:er {#deprecated-22943}
 
@@ -80,4 +80,4 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.2 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |

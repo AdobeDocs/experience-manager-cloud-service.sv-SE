@@ -68,7 +68,7 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
    >[!NOTE]
    > Användarna behöver inte ändra [Verifierings-URL:en för klientsidan &#x200B;](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Verifierings-URL:en för serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering.
 
-   När hCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i ett [adaptivt formulär baserat på kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction).
+   När hCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i ett [adaptivt formulär baserat på kärnkomponenter](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction).
 
 ## Använd Captcha® i en adaptiv Forms Core-komponent {#using-hCaptcha&reg;-core-components}
 

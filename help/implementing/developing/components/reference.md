@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Referenshandbok för komponenter {#components-reference-guide}
 
-Komponenterna utgör kärnan i byggandet av en upplevelse i AEM. [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gör det enkelt att komma igång med en verktygsuppsättning med färdiga, robusta komponenter. [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) tar utvecklaren igenom hur de här verktygen används och hur du skapar anpassade komponenter för att skapa en AEM-webbplats.
+Komponenterna utgör kärnan i byggandet av en upplevelse i AEM. [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) gör det enkelt att komma igång med en verktygsuppsättning med färdiga, robusta komponenter. [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) tar utvecklaren igenom hur de här verktygen används och hur du skapar anpassade komponenter för att skapa en AEM-webbplats.
 
 >[!TIP]
 >
->Innan du refererar till det här dokumentet bör du kontrollera att du har slutfört [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och därför känner till [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+>Innan du refererar till det här dokumentet bör du kontrollera att du har slutfört [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och därför känner till [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE).
 
 Eftersom WKND-självstudiekursen täcker de flesta användningsfall är det här dokumentet endast avsett som komplement till dessa resurser. Här finns detaljerade tekniska detaljer om hur komponenterna är strukturerade och konfigurerade i AEM och inte avsedda att komma igång.
 
@@ -39,11 +39,11 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
 
 ### Återanvända befintliga komponenter {#reusing-components}
 
-Innan du lägger tid på att skapa en helt ny komponent bör du överväga att anpassa eller utöka befintliga komponenter. [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) innehåller en serie flexibla, robusta och väl testade produktionsklara komponenter.
+Innan du lägger tid på att skapa en helt ny komponent bör du överväga att anpassa eller utöka befintliga komponenter. [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) innehåller en serie flexibla, robusta och väl testade produktionsklara komponenter.
 
 #### Utöka kärnkomponenter {#extending-core-components}
 
-Core Components erbjuder även [tydliga anpassningsmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html) som du kan använda för att anpassa dem efter ditt eget projekt.
+Core Components erbjuder även [tydliga anpassningsmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=sv-SE) som du kan använda för att anpassa dem efter ditt eget projekt.
 
 #### Ersätta komponenter {#overlying-components}
 
@@ -61,12 +61,12 @@ Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). 
 
 Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
-Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett riktigt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
+Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett riktigt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
 
 Den här (valfria) logiken kan implementeras på olika sätt och anropas från HTML med specifika kommandon:
 
-* Med Java - [Använd-API:t för HTL Java &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
-* Om du använder JavaScript - [Använd-API:t för HTML JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html) aktiveras en HTML-fil för åtkomst till hjälpkod som skrivits i JavaScript. På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+* Med Java - [Använd-API:t för HTL Java &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=sv-SE) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+* Om du använder JavaScript - [Använd-API:t för HTML JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html?lang=sv-SE) aktiveras en HTML-fil för åtkomst till hjälpkod som skrivits i JavaScript. På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 * Använda bibliotek på klientsidan - Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Mer information finns i dokumentet [Använda bibliotek på klientsidan på AEM as a Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
 
 ## Komponentstruktur {#structure}

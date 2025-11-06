@@ -83,7 +83,7 @@ Sidmodellen använder JSON-modellens exporterare, som i sin tur är baserad på 
 * `:itemsOrder`: Ordnad lista över underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
 * `:path`: Innehållssökväg för ett objekt (finns i objekt som representerar en sida)
 
-Se även [Komma igång med AEM Content Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html).
+Se även [Komma igång med AEM Content Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE).
 
 ### Ramverksspecifik modul {#framework-specific-module}
 

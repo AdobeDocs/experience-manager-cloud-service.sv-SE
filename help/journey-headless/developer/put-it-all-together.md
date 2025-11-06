@@ -43,7 +43,7 @@ AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverkt
 
 AEM **Headless SDK** skiljer sig från AEM SDK och är en uppsättning bibliotek som klienter kan använda för att snabbt och enkelt interagera med AEM Headless API:er via HTTP.
 
-Mer information finns i [AEM Headless SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html).
+Mer information finns i [AEM Headless SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/aem-headless-sdk.html?lang=sv-SE).
 
 ## Ytterligare utvecklingsverktyg {#additional-development-tools}
 
@@ -113,10 +113,10 @@ Fortsätt din resa utan AEM genom att nästa gång granska dokumentet [Så här 
 ## Ytterligare resurser {#additional-resources}
 
 * [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md)
-* [Konfigurera en lokal AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html)
+* [Konfigurera en lokal AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=sv-SE)
 * [AEM Headless SDK för webbläsare på klientsidan (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 * [AEM Headless SDK för server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
 * [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)

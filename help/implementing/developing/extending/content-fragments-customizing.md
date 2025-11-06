@@ -98,9 +98,9 @@ Integrera med Assets Core:
 
 >[!CAUTION]
 >
->Komponenten [Innehållsfragment är en del av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html). Mer information finns i [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html).
+>Komponenten [Innehållsfragment är en del av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE). Mer information finns i [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=sv-SE).
 
-Innehållsfragment kan refereras från AEM-sidor, precis som andra resurstyper. AEM tillhandahåller kärnkomponenten **[Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)** - en [komponent som gör att du kan ta med innehållsfragment på dina sidor](/help/sites-cloud/authoring/fragments/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för **[innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)**.
+Innehållsfragment kan refereras från AEM-sidor, precis som andra resurstyper. AEM tillhandahåller kärnkomponenten **[Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE)** - en [komponent som gör att du kan ta med innehållsfragment på dina sidor](/help/sites-cloud/authoring/fragments/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för **[innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=sv-SE)**.
 
 * Komponenten använder egenskapen `fragmentPath` för att referera till det faktiska innehållsfragmentet. Egenskapen `fragmentPath` hanteras på samma sätt som liknande egenskaper för andra resurstyper, till exempel när innehållsfragmentet flyttas till en annan plats.
 
@@ -350,4 +350,4 @@ Till exempel:
 
 Mer information finns i
 
-* [Kärnkomponenter - Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) (rekommenderas)
+* [Kärnkomponenter - Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) (rekommenderas)

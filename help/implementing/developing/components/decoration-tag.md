@@ -57,7 +57,7 @@ Omslagets beteende kan också styras helt.
 
 Det går att helt styra beteendet för wrapper-taggarna från HTML-skript och tillhörande logik.
 
-Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html).
+Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=sv-SE).
 
 ### Beslutsträd {#decision-tree}
 

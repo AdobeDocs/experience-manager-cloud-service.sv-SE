@@ -69,7 +69,7 @@ AEM as a Cloud Service tillhandahåller [frågeprestandaverktyget](#query-perfor
 * Här visas redan utförda frågor med relevanta prestandaegenskaper och frågeplanen.
 * Det gör det möjligt att utföra ad hoc-frågor på olika nivåer, från att bara visa frågeplanen tills den fullständiga frågan körs.
 
-Det går att nå frågeprestandaverktyget via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries). AEM as a Cloud Service Query Performance Tool innehåller mer information om hur frågan körs jämfört med AEM 6.x.
+Det går att nå frågeprestandaverktyget via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE#queries). AEM as a Cloud Service Query Performance Tool innehåller mer information om hur frågan körs jämfört med AEM 6.x.
 
 I det här diagrammet visas det allmänna flödet för att använda verktyget Frågeprestanda för att optimera frågor.
 
@@ -111,7 +111,7 @@ Se avsnittet [Frågor med stora resultatuppsättningar](#queries-with-large-resu
 
 ## Prestandaverktyg för fråga {#query-performance-tool}
 
-Prestandaverktyget för frågor (finns på `/libs/granite/operations/content/diagnosistools/queryPerformance.html` och är tillgängligt via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries)) innehåller -
+Prestandaverktyget för frågor (finns på `/libs/granite/operations/content/diagnosistools/queryPerformance.html` och är tillgängligt via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE#queries)) innehåller -
 
 * En lista med alla&quot;långsamma frågor&quot;, som för närvarande definieras som de som läser/skannar mer än 5 000 rader.
 * En lista med populära frågor
@@ -262,7 +262,7 @@ Om du vill optimera prestandan för den andra frågan skapar du en anpassad vers
 
 ## JCR Query Cheat Sheet {#jcr-query-cheatsheet}
 
-[JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html#jcrquerycheatsheet) kan hämtas och användas som referens under utvecklingen, vilket ger stöd för att skapa effektiva JCR-frågor och indexdefinitioner.
+[JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=sv-SE#jcrquerycheatsheet) kan hämtas och användas som referens under utvecklingen, vilket ger stöd för att skapa effektiva JCR-frågor och indexdefinitioner.
 
 Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar Oak-index. Innehållet i detta värmeblad gäller AEM as a Cloud Service och AEM 6.5.
 

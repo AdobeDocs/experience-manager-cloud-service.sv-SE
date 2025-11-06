@@ -51,7 +51,7 @@ Vilken som är den lämpligaste ersättningen för SPA-redigeraren beror på din
 
 * **[Den universella redigeraren](https://www.aem.live/docs/aem-authoring)** är den bästa direkta ersättningen för SPA-redigeraren.
    * Universal Editor är också en visuell redigerare och har tagits fram specifikt för fristående implementeringar som innehåller all Adobe-funktionalitet från SPA Editor.
-   * Den universella redigeraren har också [släppts för AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) (med version 2024.11.05 av AEM 6.5) och stöder därför AMS och lokala användningsfall förutom molntjänster.
+   * Den universella redigeraren har också [släppts för AEM 6.5](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) (med version 2024.11.05 av AEM 6.5) och stöder därför AMS och lokala användningsfall förutom molntjänster.
 * **[Innehållsfragmentsredigeraren](/help/assets/content-fragments/content-fragments-managing.md)** är ett alternativ för dem som föredrar en formulärbaserad redigerare.
    * Innehållsfragmentsredigeraren passar bäst när innehållet är strukturerat som innehållsfragment i stället för som sidor.
 

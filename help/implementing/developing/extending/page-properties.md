@@ -35,7 +35,7 @@ Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta gö
 
 >[!TIP]
 >
->I självstudiekursen [Utöka sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) finns en guide om hur du anpassar sidegenskaper.
+>I självstudiekursen [Utöka sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html?lang=sv-SE) finns en guide om hur du anpassar sidegenskaper.
 
 ## Konfigurera dina sidegenskaper {#configuring-your-page-properties}
 

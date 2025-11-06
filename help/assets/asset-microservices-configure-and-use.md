@@ -39,7 +39,7 @@ https://adobe-my.sharepoint.com/personal/gklebus_adobe_com/_layouts/15/guestacce
 |---|---|---|
 | [Standardkonfiguration](#default-config) | Den är tillgänglig som den är och kan inte ändras. Den här konfigurationen har en grundläggande funktion för att skapa renderingar. | <ul> <li>Standardminiatyrbilder som används i användargränssnittet för [!DNL Assets] (48, 140 och 319 pixlar) </li> <li> Stor förhandsgranskning (webbåtergivning - 1 280 pixlar) </li><li> Metadata och textrahering.</li></ul> |
 | [Anpassad konfiguration](#standard-config) | Konfigureras av administratörer via användargränssnittet. Fler alternativ finns för generering av återgivning genom att utöka standardalternativet. Utöka det färdiga alternativet om du vill ha olika format och renderingar. | <ul><li>FPO-återgivning (endast för placering). </li> <li>Ändra filformat och upplösning för bilder</li> <li> Tillämpa villkoren på konfigurerade filtyper. </li> </ul> |
-| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa [Asset Compute-tjänsten](https://experienceleague.adobe.com/en/docs/asset-compute/using/introduction). Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
+| [Egen profil](#custom-config) | Konfigureras av administratörer via användargränssnittet för att använda anpassad kod via anpassade program för att anropa [Asset Compute-tjänsten](https://experienceleague.adobe.com/sv/docs/asset-compute/using/introduction). Stöder mer komplexa krav med en molnbaserad och skalbar metod. | Se [tillåtna användningsfall](#custom-config). |
 
 <!-- To create custom processing profiles specific to your custom requirements, say to integrate with other systems, see [post-processing workflows](#post-processing-workflows).
 -->
@@ -59,15 +59,15 @@ Med standardkonfigurationen konfigureras bara den mest grundläggande bearbetnin
 
 ## Standardkonfiguration {#standard-config}
 
-[!DNL Experience Manager] innehåller funktioner för att generera mer specifika återgivningar för vanliga format utifrån användarens behov. En administratör kan skapa ytterligare [!UICONTROL Processing Profiles] för att underlätta skapandet av en sådan återgivning. Användarna tilldelar sedan en eller flera av de tillgängliga profilerna till specifika mappar för att få den ytterligare bearbetningen klar. Den extra bearbetningen kan till exempel generera renderingar för webben, mobiler och surfplattor. [Se den här videon om du vill veta mer om hur du skapar och använder [!UICONTROL Processing Profiles] och hur du får åtkomst till de återgivningar som skapats](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-automation/creative-operations).
+[!DNL Experience Manager] innehåller funktioner för att generera mer specifika återgivningar för vanliga format utifrån användarens behov. En administratör kan skapa ytterligare [!UICONTROL Processing Profiles] för att underlätta skapandet av en sådan återgivning. Användarna tilldelar sedan en eller flera av de tillgängliga profilerna till specifika mappar för att få den ytterligare bearbetningen klar. Den extra bearbetningen kan till exempel generera renderingar för webben, mobiler och surfplattor. [Se den här videon om du vill veta mer om hur du skapar och använder [!UICONTROL Processing Profiles] och hur du får åtkomst till de återgivningar som skapats](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/content-automation/creative-operations).
 
 * **Återgivningsbredd och -höjd**: I specifikationen för återgivningsbredd och -höjd finns maximala storlekar för den genererade utdatabilden. Resursmikrotjänsterna försöker skapa den största möjliga återgivningen, som inte är större än den angivna bredden och höjden. Proportionerna bevaras, det vill säga de ursprungliga. Ett tomt värde innebär att resursbearbetningen baseras på originalets pixeldimension.
 
 * **Inkluderingsregler för MIME-typ**: När en resurs med en viss MIME-typ bearbetas kontrolleras MIME-typen först mot det utelämnade MIME-typvärdet för återgivningsspecifikationen. Om den matchar den listan genereras inte den här specifika återgivningen för resursen (blockeringslista). Annars kontrolleras MIME-typen mot den inkluderade MIME-typen, och om den matchar listan genereras återgivningen (tillåtelselista).
 
-* **Särskild FPO-återgivning**: När stora resurser från [!DNL Experience Manager] monteras i [!DNL Adobe InDesign] -dokument väntar en kreatör en avsevärd tid efter att de [har placerat ut en resurs](https://helpx.adobe.com/indesign/using/placing-graphics.html). Under tiden har användaren blockerats från att använda [!DNL InDesign]. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små återgivningar i [!DNL InDesign]-dokument till att börja med, vilket kan ersättas med högupplösta resurser på begäran senare. [!DNL Experience Manager] innehåller återgivningar som bara används för placering. Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
+* **Särskild FPO-återgivning**: När stora resurser från [!DNL Experience Manager] monteras i [!DNL Adobe InDesign] -dokument väntar en kreatör en avsevärd tid efter att de [har placerat ut en resurs](https://helpx.adobe.com/se/indesign/using/placing-graphics.html). Under tiden har användaren blockerats från att använda [!DNL InDesign]. Detta stör det kreativa flödet och påverkar användarupplevelsen negativt. Med Adobe kan du tillfälligt placera små återgivningar i [!DNL InDesign]-dokument till att börja med, vilket kan ersättas med högupplösta resurser på begäran senare. [!DNL Experience Manager] innehåller återgivningar som bara används för placering. Dessa FPO-återgivningar har en liten filstorlek men har samma proportioner.
 
-Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Läs [!DNL Adobe Asset Link] [dokumentationen](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil. Mer information finns i [den fullständiga dokumentationen för Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+Bearbetningsprofilen kan innehålla en FPO-återgivning (endast för placering). Läs [!DNL Adobe Asset Link] [dokumentationen](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html) om du behöver aktivera den för din bearbetningsprofil. Mer information finns i [den fullständiga dokumentationen för Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html).
 
 ### Skapa en standardprofil {#create-standard-profile}
 
@@ -99,7 +99,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 
 ## Anpassade profil- och användningsfall {#custom-config}
 
-[!DNL Asset Compute Service] har stöd för en mängd olika användningsfall, inklusive standardbearbetning och bearbetning av Adobe-specifika format som Photoshop-filer. Det gör det även möjligt att implementera anpassad eller organisationsspecifik bearbetning. Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller genom att konfigurationen för profiler bearbetas. Om dessa bearbetningsalternativ inte uppfyller dina affärsbehov rekommenderar Adobe att du utvecklar och använder [!DNL Asset Compute Service] för att utöka standardfunktionerna. En översikt finns i [Förstå utökningsmöjligheter och när du ska använda dem](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/understand-extensibility).
+[!DNL Asset Compute Service] har stöd för en mängd olika användningsfall, inklusive standardbearbetning och bearbetning av Adobe-specifika format som Photoshop-filer. Det gör det även möjligt att implementera anpassad eller organisationsspecifik bearbetning. Den anpassning av arbetsflödet för DAM-uppdatering av tillgångar som tidigare krävdes hanteras antingen automatiskt eller genom att konfigurationen för profiler bearbetas. Om dessa bearbetningsalternativ inte uppfyller dina affärsbehov rekommenderar Adobe att du utvecklar och använder [!DNL Asset Compute Service] för att utöka standardfunktionerna. En översikt finns i [Förstå utökningsmöjligheter och när du ska använda dem](https://experienceleague.adobe.com/sv/docs/asset-compute/using/extend/understand-extensibility).
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ The following video demonstrates the usefulness and usage of standard profile.
 
 Det kan omvandla bild, video, dokument och andra filformat till olika renderingar, bland annat miniatyrbilder, extraherad text och metadata samt arkiv.
 
-Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/develop-custom-application) för de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsfall för anrop av externa tjänster:
+Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/sv/docs/asset-compute/using/extend/develop-custom-application) för de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsfall för anrop av externa tjänster:
 
 * Använd [!DNL Adobe Photoshop]ImageCutout API[&#x200B; för &#x200B;](https://developer.adobe.com/photoshop/photoshop-api-docs/) och spara resultatet som en återgivning.
 * Anropa tredjepartssystem för att göra ändringar, till exempel ett PIM-system.
@@ -125,8 +125,8 @@ Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade p
 1. I textfältet Namn skriver du önskat filnamn för återgivningen och anger sedan följande information.
 
    * Filnamn för varje återgivning och ett filtillägg som stöds.
-   * [Slutpunkts-URL för en anpassad App Builder-app](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/deploy-custom-application). Appen måste komma från samma organisation som Experience Manager-kontot.
-   * Lägg till tjänstparametrar i [skicka extra information eller parametrar till det anpassade programmet](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/develop-custom-application#extend).
+   * [Slutpunkts-URL för en anpassad App Builder-app](https://experienceleague.adobe.com/sv/docs/asset-compute/using/extend/deploy-custom-application). Appen måste komma från samma organisation som Experience Manager-kontot.
+   * Lägg till tjänstparametrar i [skicka extra information eller parametrar till det anpassade programmet](https://experienceleague.adobe.com/sv/docs/asset-compute/using/extend/develop-custom-application#extend).
    * Inkluderade och exkluderade MIME-typer för att begränsa bearbetningen till ett fåtal specifika filformat.
 
 1. Klicka på **[!UICONTROL Save]** i det övre högra hörnet på sidan.
@@ -181,7 +181,7 @@ Kontrollera att resurserna bearbetas genom att förhandsgranska de genererade å
 
 Om det krävs ytterligare bearbetning av resurser som inte kan utföras med bearbetningsprofilerna kan ytterligare efterbearbetningsarbetsflöden läggas till i konfigurationen. Med efterbearbetning kan du lägga till helt anpassad bearbetning utöver den konfigurerbara bearbetningen med hjälp av objektmikrotjänster.
 
-När bearbetningen av mikrotjänsterna har slutförts kör [!DNL Experience Manager] automatiskt efterbearbetningsarbetsflöden, eller [Autostart-arbetsflöden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/configuring/auto-start-workflows) om dessa har konfigurerats. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
+När bearbetningen av mikrotjänsterna har slutförts kör [!DNL Experience Manager] automatiskt efterbearbetningsarbetsflöden, eller [Autostart-arbetsflöden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/configuring/auto-start-workflows) om dessa har konfigurerats. Du behöver inte lägga till startprogram för arbetsflöden manuellt för att utlösa arbetsflödena. Exemplen innehåller:
 
 * Anpassade arbetsflödessteg för att bearbeta resurser.
 * Integreringar för att lägga till metadata eller egenskaper i resurser från externa system, till exempel produkt- eller processinformation.
@@ -280,9 +280,9 @@ Följ stegen som beskrivs i [tillämpa en arbetsflödesmodell på en mapp](#appl
 
 >[!MORELIKETHIS]
 >
->* [Introduktion till Asset Compute-tjänsten](https://experienceleague.adobe.com/en/docs/asset-compute/using/introduction).
->* [Förstå utökningsmöjligheterna och när de ska användas](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/understand-extensibility).
->* [Skapa anpassade program](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/develop-custom-application).
+>* [Introduktion till Asset Compute-tjänsten](https://experienceleague.adobe.com/sv/docs/asset-compute/using/introduction).
+>* [Förstå utökningsmöjligheterna och när de ska användas](https://experienceleague.adobe.com/sv/docs/asset-compute/using/extend/understand-extensibility).
+>* [Skapa anpassade program](https://experienceleague.adobe.com/sv/docs/asset-compute/using/extend/develop-custom-application).
 >* [MIME-typer som stöds för olika användningsfall](/help/assets/file-format-support.md).
 
 <!-- TBD: 

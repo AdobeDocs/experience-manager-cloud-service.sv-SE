@@ -80,13 +80,13 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
 
 * AEM Headless Developer Journey
    * [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
    * [Lär dig modellera ditt innehåll](/help/journey-headless/developer/model-your-content.md)
 
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
 
 * [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
 

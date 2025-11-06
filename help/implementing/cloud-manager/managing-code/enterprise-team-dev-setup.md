@@ -54,7 +54,7 @@ För att ett nytt projekt ska kunna introduceras måste det finnas en lista i pr
 
 ![Arbetsflödesdiagram](/help/implementing/cloud-manager/assets/team-setup1.png)
 
-Git-databasen för varje konfiguration konfigureras med [AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview) och följer därför de bästa sätten att konfigurera AEM-projekt. Det enda undantaget är Dispatcher-konfigurationen, som görs i den delade Git-databasen enligt ovan.
+Git-databasen för varje konfiguration konfigureras med [AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview) och följer därför de bästa sätten att konfigurera AEM-projekt. Det enda undantaget är Dispatcher-konfigurationen, som görs i den delade Git-databasen enligt ovan.
 
 Varje team använder ett förenklat Git-arbetsflöde med två + N-grenar, enligt Git-flödesmodellen:
 
@@ -93,7 +93,7 @@ Denna verkliga konfiguration kan användas som en plan och sedan anpassas efter 
 
 >[!TIP]
 >
->Mer information om den här konfigurationen finns i [Arbeta med flera Source Git-databaser](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/managing-code/multiple-git-repos#managing-code).
+>Mer information om den här konfigurationen finns i [Arbeta med flera Source Git-databaser](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/managing-code/multiple-git-repos#managing-code).
 
 ### Att tänka på vid konfiguration av flera team {#considerations}
 

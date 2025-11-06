@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!INFO]
 >
->Du kan även titta på [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html) för att få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
+>Du kan även titta på [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html?lang=sv-SE) för att få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
 
 ## Introduktion {#introduction}
 
@@ -33,7 +33,7 @@ Den är tillgänglig från [AEM as a Cloud Service Developer Console](/help/impl
 
 Följande villkor måste vara uppfyllda för att du ska få åtkomst till AEM as a Cloud Service Developer Console eller databasläsaren
 
-Mer information om hur du kommer åt AEM as a Cloud Service Developer Console finns i [Developer Console-åtkomst](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
+Mer information om hur du kommer åt AEM as a Cloud Service Developer Console finns i [Developer Console-åtkomst](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
 
 För att få åtkomst till Databasläsaren är kraven samma som för AEM as a Cloud Service Developer Console (anges ovan). Så här visar du innehållet i Databasläsaren för en viss instans:
 
@@ -41,7 +41,7 @@ För att få åtkomst till Databasläsaren är kraven samma som för AEM as a Cl
 
 * Publiceringsinstanser: Användare med AEM-användarproduktprofil för **publiceringsinstansen** kan visa databaswebbläsaren med minimal läsåtkomst. Om produktprofilen inte anges kommer användarna att navigera som anonyma användare och vissa sökvägar visas inte på grund av begränsad behörighet.
 
-Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
+Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=sv-SE).
 
 ### Starta Databasläsaren {#launching-the-repository-browser}
 

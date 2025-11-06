@@ -31,7 +31,7 @@ I sandlådeprogram skapas automatiskt. När du [skapar ett sandlådeprogram](/he
 
   ![Välj lösningar och tillägg för en sandlåda](assets/sandbox-solutions-add-ons.png)
 
-* Ställer in en projektdatabas för Git med ett exempelprojekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
+* Ställer in en projektdatabas för Git med ett exempelprojekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Skapar en utvecklingsmiljö.
 * Skapar en icke-produktionspipeline som distribueras till utvecklingsmiljön.
 

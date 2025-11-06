@@ -30,7 +30,7 @@ Så här använder du tillägget med AJO:
 
 >[!NOTE]
 >
->Se även [AJO-integrering](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-fragments).
+>Se även [AJO-integrering](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/integrations/aem-fragments).
 
 1. Öppna konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console).
 

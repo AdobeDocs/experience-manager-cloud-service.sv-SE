@@ -352,7 +352,7 @@ På samma sätt kan du skriva **Navigera bland panelerna** för att flytta fokus
 
 #### [!UICONTROL Async Function call]
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
 
 Regeltypen **[!UICONTROL Async Function call]** gör att du kan utföra asynkrona funktioner. Det gör att du kan initiera ett funktionsanrop som fungerar oberoende av huvudkörningstråden, vilket gör att andra processer kan fortsätta köras utan att vänta på att den asynkrona funktionen ska slutföras.
 

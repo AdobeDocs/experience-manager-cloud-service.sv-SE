@@ -46,7 +46,7 @@ Några av de viktigaste scenerna i Dynamic Media är följande:
 * **Visningsbibliotek för upplevelser:** Anpassa visningsprogram och visningsprogram för varumärkesupplevelser för bilder och videor. De här tittarna kan smidigt integreras i era digitala upplevelser.
 * **Stöd för nya format:** Dynamiska medier gör det möjligt att leverera 3D-upplevelser och panoramaupplevelser.
 
-När du utforskar [Dynamic Media Journey](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1) kan du få ut så mycket som möjligt av funktionerna genom att granska den konsoliderade listan med bästa praxis nedan. Anpassa de här bästa metoderna för Dynamic Media till just era sammanhang och projektkrav så att ni kan optimera upplevelserna över olika kanaler och enheter.
+När du utforskar [Dynamic Media Journey](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1) kan du få ut så mycket som möjligt av funktionerna genom att granska den konsoliderade listan med bästa praxis nedan. Anpassa de här bästa metoderna för Dynamic Media till just era sammanhang och projektkrav så att ni kan optimera upplevelserna över olika kanaler och enheter.
 
 <!-- In Dynamic Media on AEM, there are sets of methods, techniques, and guidelines that can help you maximize the potential of your rich media content. These best practices can lead to optimal results and increase efficiency in your use of Dynamic Media. They represent the most efficient and effective courses of action in a particular situation. They also unlock high value for your audience and deliver high-quality, engaging content. -->
 
@@ -94,9 +94,9 @@ Använd komponenten Image v3 för smart beskärning för att förbättra bildres
 Ta endast med den primära JavaScript-filen för visningsprogrammet på sidan. Undvik att referera till andra JavaScript-filer som kan hämtas av visningsprogrammets körningslogik. Länka inte direkt till HTML5 SDK `Utils.js`-biblioteket från kontextsökvägen `/s7viewers` (kallas konsoliderad SDK include). Visningsprogrammets logik hanterar platsen för `Utils.js` eller liknande visningsprogrambibliotek vid körning, som kan ändras mellan olika versioner. Adobe behåller inte äldre versioner av sekundära visningsprograminkluderingar på servern, så om de refereras direkt kan visningsfunktionen brytas i framtida uppdateringar.
 * **Riktlinjer för inbäddning:**
 Använd dokumentationen för att bädda in riktlinjer som är specifika för varje visningsprogram.
-Vill du veta mer? Gå till [Visare för AEM Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers).
+Vill du veta mer? Gå till [Visare för AEM Assets](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers).
 * **SDK självstudiekurs och exempel:**
-Granska [&#x200B; självstudiekurserna för SDK &#x200B;](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-tutorial) i visningsprogrammet och [&#x200B; programexemplen för HTML5 SDK &#x200B;](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för att få en mer detaljerad förståelse för API:er för SDK-komponenter.
+Granska [&#x200B; självstudiekurserna för SDK &#x200B;](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/c-tutorial) i visningsprogrammet och [&#x200B; programexemplen för HTML5 SDK &#x200B;](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för att få en mer detaljerad förståelse för API:er för SDK-komponenter.
 
 
 ## Förbered material för leverans
@@ -132,7 +132,7 @@ Vill du veta mer? Gå till [Bästa tillvägagångssätt för att optimera kvalit
 
 Eftersom uppfattningen av bildkvaliteten varierar från människa till människa, kan ibland en systematisk undersökningsmetod vara nödvändig för att uppnå önskvärda resultat. Adobe Experience Manager hjälper till med den här processen med över 100 dynamiska mediakommandon för bildförbättring.
 
-Vill du veta mer? Titta på [ögonblicksbilden av dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter, 17 sekunder).
+Vill du veta mer? Titta på [ögonblicksbilden av dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter, 17 sekunder).
 
 Om du vill utvärdera hur de olika kommandona påverkar bildkvaliteten kan du överföra en bild till Dynamic Media, använda verktygets gränssnitt på den angivna URL:en och använda de kommandon som du vill testa.
 
@@ -154,7 +154,7 @@ Smart Crop är en funktion i Dynamic Media som använder Adobe Sensei, Adobe AI 
 
 Ett tips är att skapa en bildprofil med Smart beskärning. I profilen kan du definiera olika skärmstorlekar och låta Adobe Sensei göra resten, så att dina bilder och videor alltid är optimerade för visningsprogrammets enhet.
 
-Vill du veta mer? Titta på [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder) och [Använda smart beskärning med dynamiska media för video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video) (6 minuter, 22 sekunder).
+Vill du veta mer? Titta på [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder) och [Använda smart beskärning med dynamiska media för video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video) (6 minuter, 22 sekunder).
 
 ### Förbättra SEO-rankningarna
 
@@ -182,7 +182,7 @@ Lär dig hur du villkorligt kan omvandla URL:er baserat på olika faktorer, vilk
 Vill du veta mer? Gå till [Använd regeluppsättningar för att omforma URL:er](/help/assets/dynamic-media/using-rulesets-to-transform-urls.md).
 * **Smart bildbehandling och smart beskärning:**
 Använd funktionerna Smart bildbehandling och Smart Crop i Dynamic Media för att leverera optimerade och responsiva bilder. Detta förbättrar inte bara sidinläsningstiden utan bidrar också positivt till SEO-rankningarna.
-Vill du veta mer? Gå till [Smart bildåtergivning](/help/assets/dynamic-media/imaging-faq.md) eller se [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder).
+Vill du veta mer? Gå till [Smart bildåtergivning](/help/assets/dynamic-media/imaging-faq.md) eller se [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder).
 
 Kom ihåg att de här bästa sätten är anpassade efter Google metoder för SEO för bilder. Sådana metoder betonar vikten av att ge kontext och tydlighet till sökmotorer genom lämpliga namnkonventioner, strukturerade data och optimerad bildleverans.
 
@@ -224,7 +224,7 @@ Om du vill lägga en logotyp eller ikon ovanpå en befintlig bild är Dynamic Me
 | **Överför och publicera logotypen eller ikonbilden** | Ladda sedan upp och publicera bilden som du vill lägga ovanpå basbilden. Den här bilden ska vara en genomskinlig PNG-bild med den logotyp eller ikon som du vill täcka över.<br>Här är den genomskinliga PNG-bilden för ett stjärnobjekt med genomskinlighetseffekter som kommer att läggas ovanpå:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorate-star](https://s7g2.scene7.com/is/image/genaibeta/decorate-star) |
 | **Använd URL för dynamiska media** | Skapa nu en dynamisk medie-URL som kombinerar basbilden med logotypen eller ikonbilden. Du kan använda URL-kommandon för att uppnå den här effekten.<br>URL-strukturen ser ut ungefär så här:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&src=decorate-star&scale=1.25&posN=0.33,-.25&fmt=png](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&src=decorate-star&scale=1.25&posN=0.33,-.25&fmt=png)<br>var resursen finns<ul><li> `hotspotRetailBaseImage` är basbilden.</li><li> `starxp` är logotypen/ikonbilden.</li><li> `layer=1` anger att logotypen eller ikonen ska placeras i lager över basbilden.</li><li> `scale=1.25` justerar storleken på logotypen/ikonen.</li><li> `posN=0.33,-.25` avgör logotypens/ikonens position i förhållande till basbilden.</li><li> `fmt=png` ser till att utdata är i PNG-format.</li></ul> |
 
-Vad ska jag lära dig mer? Gå till [src](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-src) om du vill ha mer information om kommandot `src` och andra dynamiska medie-URL-kommandon.
+Vad ska jag lära dig mer? Gå till [src](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-src) om du vill ha mer information om kommandot `src` och andra dynamiska medie-URL-kommandon.
 
 
 #### Ersätta kampanjtext
@@ -276,7 +276,7 @@ Härledd från originalbilden, vilket betonar rummet.
   [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=1720&hei=820&cropN=0,.1,1,1&fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=1720&hei=820&cropN=0,.1,1,1&fit=crop)
 
 Experimentera med olika varianter efter just dina behov.
-Vill du veta mer om de kommandon som finns i en URL? Gå till [Kommandoreferens](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference).
+Vill du veta mer om de kommandon som finns i en URL? Gå till [Kommandoreferens](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference).
 
 ### Leverera GIF-bilder
 
@@ -320,7 +320,7 @@ Använd den angivna URL:en för att länka direkt till videon. Hyperlänka det p
    * **Bädda in videon:**
 Kopiera den inbäddade koden och klistra in den i HTML på webbsidan där du vill att videon ska visas. Om du gör det kan videon spelas upp direkt på din webbplats.
 
-Vill du veta mer? Gå till [Video](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/video).
+Vill du veta mer? Gå till [Video](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/video).
 
 ### Konfigurera videoklipp för optimal kvalitet och engagemang
 

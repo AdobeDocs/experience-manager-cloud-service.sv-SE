@@ -27,7 +27,7 @@ App Builder erbjuder ett sätt för kunder att enkelt utöka Adobe Experience Ma
 
 >[!NOTE]
 >
-> För AEM 6.5-kunder som vill använda App Builder, se [Utöka Adobe Experience Manager 6.5 med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html).
+> För AEM 6.5-kunder som vill använda App Builder, se [Utöka Adobe Experience Manager 6.5 med Adobe Developer App Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/app-builder.html?lang=sv-SE).
 
 ## Arkitektur {#architecture}
 

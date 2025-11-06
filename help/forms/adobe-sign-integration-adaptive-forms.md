@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html#adobe-acrobat-sign-for-government) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adobe-sign-integration-adaptive-forms.html?lang=sv-SE#adobe-acrobat-sign-for-government) |
 | AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Acrobat Sign] aktiverar e-signaturarbetsflöden för adaptiva Forms- och AEM-arbetsflöden. E-signaturer förbättrar arbetsflödena för att bearbeta dokument inom juridik, försäljning, löneadministration, personaladministration och många andra områden.
@@ -37,7 +37,7 @@ Du behöver följande konfiguration för att integrera [!DNL Adobe Acrobat Sign]
 1. Ett aktivt [Adobe Acrobat Sign-utvecklarkonto.](https://www.adobe.com/acrobat/business/developer-form.html)
 1. Ett [Adobe Acrobat Sign API-program](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/create_app.md).
 1. Autentiseringsuppgifter (klient-ID och klienthemlighet) för API-programmet [!DNL Adobe Acrobat Sign].
-1. (Endast för myndighets-ID-baserad autentisering) [Aktivera autentiseringsmetoden](https://helpx.adobe.com/sign/using/adobesign-authentication-government-id.html#AuditReport) för autentisering av myndighets-ID.
+1. (Endast för myndighets-ID-baserad autentisering) [Aktivera autentiseringsmetoden](https://helpx.adobe.com/se/sign/using/adobesign-authentication-government-id.html#AuditReport) för autentisering av myndighets-ID.
 
 ### Koppla samman AEM Forms Author och publicera förekomster med Adobe Acrobat Sign {#configure-adobe-sign-with-aem-forms}
 
@@ -84,7 +84,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
 
    där:
 
-   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/sign/using/identify-account-shard.html).
+   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/se/sign/using/identify-account-shard.html).
 
    >[!NOTE]
    >
@@ -225,7 +225,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
    där:
 
-   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/sign/using/identify-account-shard.html).
+   **na1** refererar till standarddatabasdelningen. Du kan ändra värdet för databasdelningen. Kontrollera att [!DNL &#x200B; Adobe Acrobat Sign]-molnkonfigurationerna pekar på [rätt kort](https://helpx.adobe.com/se/sign/using/identify-account-shard.html).
 
    >[!NOTE]
    >
@@ -270,7 +270,7 @@ Om du till exempel vill köra konfigurationstjänsten dagligen klockan 00:00 st�
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Vanliga frågor
 

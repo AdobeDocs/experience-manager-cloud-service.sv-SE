@@ -19,7 +19,7 @@ Cloud Manager har en kontrollpanel där du enkelt kan se vilka Adobe Experience 
 
 >[!IMPORTANT]
 >
->Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
+>Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
 >Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md#program-cards).
 
@@ -59,7 +59,7 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 
 >[!TIP]
 >
->Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/enterprise/using/admin-console.html).
+>Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/se/enterprise/using/admin-console.html).
 
 ## Visa användningsinformation {#view-usage-details}
 

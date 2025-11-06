@@ -25,7 +25,7 @@ Define what is not included
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/medialibrary.html?lang=en) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/medialibrary.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Plattformen [!DNL Adobe Experience Manager] har olika funktioner för att hantera resurser. Med mediebiblioteket kan användarna överföra ett litet antal resurser till databasen, söka efter och använda dem på webbsidorna och utföra enkla resurshanteringsåtgärder på resurserna.
@@ -116,5 +116,5 @@ Du kan inte använda smarta taggar, [!DNL Asset]-länk, [!DNL Asset]-väljare, b
 
 >[!MORELIKETHIS]
 >
->* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html)
->* [[!DNL Experience Manager] som en [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-cloud-service.html)
+>* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html?lang=sv-SE)
+>* [[!DNL Experience Manager] som en [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-cloud-service.html)

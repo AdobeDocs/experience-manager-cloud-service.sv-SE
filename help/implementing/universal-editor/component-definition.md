@@ -94,8 +94,8 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 
 `plugins` definierar vilket plugin-program som ansvarar för att komponenten behålls. Vanliga plugin-program:
 
-* `aem` för [AEM as a Cloud Service.](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service)
-* `aem65` för [AEM 6.5.](https://experienceleague.adobe.com/en/docs/experience-manager-65) och [AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts)
+* `aem` för [AEM as a Cloud Service.](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service)
+* `aem65` för [AEM 6.5.](https://experienceleague.adobe.com/sv/docs/experience-manager-65) och [AEM 6.5 LTS](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts)
 * `xwalk` för [Redigering med AEM Sites för Edge Delivery Services.](https://www.aem.live/developer/ue-tutorial)
 
 ## `page` eller `cf` {#page-cf}

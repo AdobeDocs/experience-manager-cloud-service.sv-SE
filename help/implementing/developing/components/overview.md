@@ -26,7 +26,7 @@ Den här sidan innehåller en översikt över Adobe Experience Manager-komponent
 * ha ett standardiserat användargränssnitt.
 * Har redigeringsbeteende som kan konfigureras.
 * Använd dialogrutor som har skapats med delelement som baseras på GRE-komponenter.
-* De har utvecklats med [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html).
+* De har utvecklats med [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE).
 * De kan utvecklas för att skapa anpassade komponenter som utökar standardfunktionerna.
 
 Eftersom komponenterna är modulära kan du:
@@ -44,7 +44,7 @@ Varje AEM-komponent:
 
 ## Grundläggande komponenter i AEM {#aem-core-components}
 
-[AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 Core Components ingår i AEM as a Cloud Service och [WKND Tutorial](/help/implementing/developing/introduction/develop-wknd-tutorial.md) visar hur du implementerar och använder komponenter. Komponenterna levereras med all källkod och kan användas som de är eller som startpunkter för ändrade eller utökade komponenter.
 

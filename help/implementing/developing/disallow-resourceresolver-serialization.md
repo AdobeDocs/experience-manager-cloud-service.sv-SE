@@ -43,7 +43,7 @@ Det här loggmeddelandet innebär att `/content/…/page` redan är serialiserat
 
 >[!NOTE]
 >
->[AEM Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/introduction) har verifierats att inte påverkas av det här problemet.
+>[AEM Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/introduction) har verifierats att inte påverkas av det här problemet.
 
 ## Begärd åtgärd {#requested-action}
 

@@ -35,4 +35,4 @@ För ytterligare information:
 * AEM App Builder
 
    * [Utöka AEM med Adobe Developer App Builder](/help/implementing/developing/extending/app-builder/extending-aem-with-app-builder.md)
-   * [AEM UI-utökningsbarhet](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview)
+   * [AEM UI-utökningsbarhet](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/ui/overview)

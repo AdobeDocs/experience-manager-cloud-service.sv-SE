@@ -755,7 +755,7 @@ Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
 Med AEM kan du
 
-* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) till GraphQL-frågor.
+* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) till GraphQL-frågor.
 
 Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar på GET-begäranden för dessa bilder.
 
@@ -1387,4 +1387,4 @@ AEM planerar att investera i AEM GraphQL API.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
