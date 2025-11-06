@@ -5,10 +5,10 @@ contentOwner: AG
 mini-toc-levels: 1
 exl-id: 91619662-e865-47d1-8bec-0739f402353a
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '4281'
+source-wordcount: '4280'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Som standard är plugin-programmen `format`, `link`, `list`, `justify` och `cont
       * en alternativ konfigurationsnod: `.../text/cq:editConfig/cq:inplaceEditing/inplaceEditingTextConfig`
       * `text: .../text/dialog/items/tab1/items/text`
 
-   * Är av typen: **jcr:primärType** `cq:Widget`
+   * Är av typen: **jcr:primaryType** `cq:Widget`
    * Båda har följande egenskap:
 
       * **Namn** `name`
@@ -134,7 +134,7 @@ För länkar kan du också definiera de protokoll som automatiskt godkänns.
 Så här konfigurerar du vilka format som tillåts när du klistrar in text i [!DNL Experience Manager] från ett annat program:
 
 1. Gå till noden `<rtePlugins-node>/edit` i din komponent. Skapa noderna om noden inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
-1. Skapa en nod under noden `edit` som innehåller inklistringsreglerna för HTML:
+1. Skapa en nod under noden `edit` som innehåller HTML inklistringsregler:
 
    * **Namn** `htmlPasteRules`
    * **Typ** `nt:unstructured`
@@ -436,7 +436,7 @@ Du kan konfigurera textredigeraren så att ditt val av tecken blir tillgängligt
 
    * **Namn** `entity`
    * **Typ** `String`
-   * **Värde** är HTML-representationen av det obligatoriska tecknet, till exempel `&189;` för bråket i halva.
+   * **Värde** den HTML-representationen av det obligatoriska tecknet, till exempel `&189;` för bråket en halva.
 
 1. Spara ändringarna.
 
@@ -455,12 +455,10 @@ I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemple
 1. Lägg till följande två egenskaper under den här noden (namngivna enligt ditt teckenintervall):
 
    * **Namn** `rangeStart`
-
      **Typ** `Long`
      **Värde** för [Unicode](https://unicode.org/)-representationen (decimal) av det första tecknet i intervallet
 
    * **Namn** `rangeEnd`
-
      **Typ** `Long`
      **Värde** för [Unicode](https://unicode.org/)-representationen (decimal) av det sista tecknet i intervallet
 
@@ -500,8 +498,8 @@ Format används vanligtvis på text, men du kan också använda separata formatm
    >* **Typ** `String[]`
    >
    >* **Värde**, eller båda, av följande, efter behov:
-   >* `table` om du vill tillåta redigering av tabellegenskaper, inklusive format.
-   >* `cellprops` om du vill tillåta redigering av cellegenskaper, inklusive format.
+   >   * `table` om du vill tillåta redigering av tabellegenskaper, inklusive format.
+   >   * `cellprops` om du vill tillåta redigering av cellegenskaper, inklusive format.
 
 1. Definiera platsen för CSS-formatmallar för att referera till dem. Se [Ange platsen för formatmallen](#locationofstylesheet) eftersom detta är samma som när du definierar [format för text](#textstyles). Platsen kan definieras om du har definierat andra format.
 1. Skapa följande noder under noden `table` efter behov:
@@ -565,7 +563,7 @@ När plugin-programmet för stavningskontroll är aktiverat används lexikon fö
 >
 >Meddelandet&quot;Stavningskontrollen misslyckades.&quot; visas om en kontroll görs för ett språk som inte är installerat.
 
-En standardinstallation i Experience Manager innehåller ordlistor för:
+En standardinstallation av Experience Manager innehåller ordlistor för:
 
 * American English (en_us)
 * Engelska (en_gb)
@@ -631,7 +629,7 @@ När indrag är aktiverat (standard) kan du definiera storleken på indraget:
 >Den här indragsstorleken används bara för stycken (block) i text. Den påverkar inte indraget för verkliga listor.
 
 1. Gå till noden `<rtePlugins-node>/lists` i komponenten. Skapa de här noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
-1. Skapa parametern `identSize` på noden `lists`:
+1. Skapa parametern `lists` på noden `identSize`:
 
    * **Namn**: `identSize`
    * **Typ**: `Long`
@@ -651,7 +649,7 @@ Du kan ange höjden på det redigerbara området som visas i komponentdialogruta
 
 ## Konfigurera format och protokoll för länkar {#linkstyles}
 
-När du lägger till länkar i [!DNL Experience Manager] kan du definiera de CSS-format som ska användas och de protokoll som ska accepteras automatiskt. Om du vill konfigurera hur länkar läggs till i [!DNL Experience Manager] från ett annat program definierar du reglerna för HTML.
+När du lägger till länkar i [!DNL Experience Manager] kan du definiera de CSS-format som ska användas och de protokoll som ska accepteras automatiskt. Om du vill konfigurera hur länkar läggs till i [!DNL Experience Manager] från ett annat program definierar du HTML-reglerna.
 
 1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
 1. Skapa en nod på samma nivå som `<rtePlugins-node>`, d.v.s. skapa noden under den överordnade noden `<rtePlugins-node>`:

@@ -1,27 +1,27 @@
 ---
 title: AEM Technical Foundations
-description: En översikt över den tekniska grunden för AEM, inklusive hur AEM är strukturerad och grundläggande tekniker som JCR, Sling och OSGi.
+description: En översikt över AEM tekniska grunder, inklusive hur AEM är strukturerat och grundläggande tekniker som JCR, Sling och OSGi.
 exl-id: ab6e7fe9-a25d-4351-a005-f4466cc0f40e
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '2130'
+source-wordcount: '2129'
 ht-degree: 0%
 
 ---
 
 # AEM Technical Foundations {#aem-technical-foundations}
 
-AEM är en stabil plattform som bygger på beprövade, skalbara och flexibla tekniker. Det här dokumentet ger en detaljerad översikt över de olika delar som AEM består av och är avsett som ett tekniskt tillägg för en AEM som utvecklar en hel hög. Den är inte avsedd som en guide för att komma igång. Om du inte är van vid AEM ska du läsa [Getting Started Developing AEM Sites - WKND Tutorial](develop-wknd-tutorial.md) som ett första steg.
+AEM är en robust plattform som bygger på beprövade, skalbara och flexibla tekniker. I det här dokumentet finns en detaljerad översikt över de olika delarna som utgör AEM och är avsedda som ett tekniskt tillägg för en AEM-utvecklare i full hög. Den är inte avsedd som en guide för att komma igång. Om du inte har använt AEM tidigare läser du [Komma igång med att utveckla AEM Sites - WKND-självstudiekurs](develop-wknd-tutorial.md) som ett första steg.
 
 >[!TIP]
 >
->Adobe rekommenderar att du slutför självstudiekursen [Komma igång med att utveckla AEM Sites - WKND](develop-wknd-tutorial.md) innan du börjar använda AEM kärnteknik.
+>Innan du börjar dyka upp i AEM kärnteknik rekommenderar Adobe att du slutför självstudiekursen [Getting Started Developing AEM Sites - WKND](develop-wknd-tutorial.md).
 
 ## Grundläggande {#fundamentals}
 
-Som ett modernt innehållshanteringssystem bygger AEM på standardwebbtekniker:
+AEM är ett modernt innehållshanteringssystem som bygger på standardiserad webbteknik:
 
 * Request-response-cykeln (XMLHttpRequest / XMLHttpResponse)
 * HTML
@@ -40,13 +40,13 @@ Java™ Content Repository (JCR)-standarden, [JSR 283](https://developer.adobe.c
 
 Paketet [JCR API 2.0](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html), `javax.jcr.*`, används för direkt åtkomst och redigering av databasinnehåll.
 
-AEM bygger på en JCR.
+AEM bygger på JCR.
 
 ## Apache Jackrabbit Oak {#jackrabbit-oak}
 
 [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/) är en implementering av en skalbar och högpresterande hierarkisk innehållsdatabas som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram, i enlighet med JCR-standarden.
 
-Jackrabbit Oak (även kallat helt enkelt Oak) är implementeringen av JCR-standarden som AEM bygger på.
+Jackrabbit Oak (även kallat helt enkelt Oak) är implementeringen av den JCR-standard som AEM bygger på.
 
 ## Bearbetning av försäljningsbegäran {#sling-request-processing}
 
@@ -56,7 +56,7 @@ AEM byggs med [Sling](https://sling.apache.org/index.html), ett webbprogramramve
 
 Med Sling är den typ av innehåll som ska återges inte den första bearbetningen. Det viktigaste är i stället om URL:en tolkas till ett innehållsobjekt för vilket ett skript sedan kan hittas för att utföra återgivningen. Den här processen ger utmärkt stöd för webbinnehållsförfattare att skapa sidor som enkelt kan anpassas efter deras behov.
 
-Fördelarna med den här flexibiliteten är uppenbara i program med många olika innehållselement eller när du behöver sidor som enkelt kan anpassas. Detta gäller särskilt när man implementerar ett system för hantering av webbinnehåll, t.ex. AEM.
+Fördelarna med den här flexibiliteten är uppenbara i program med många olika innehållselement eller när du behöver sidor som enkelt kan anpassas. Detta gäller särskilt när man inför ett webbinnehållshanteringssystem som AEM.
 
 Information om de första stegen för att utveckla med Sling finns i [Identifiera Sling på 15 minuter](https://sling.apache.org/documentation/getting-started/discover-sling-in-15-minutes.html).
 
@@ -64,7 +64,7 @@ I följande diagram förklaras Sling-skriptupplösningen. Den visar hur du hämt
 
 ![Om Apache Sling-skriptupplösningen](assets/sling-cheatsheet-01.png)
 
-I följande diagram förklaras de dolda, men kraftfulla, parametrarna för begäran som du kan använda med `SlingPostServlet`, standardhanteraren för alla begäranden om POST. Hanteraren ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
+I följande diagram förklaras de dolda, men kraftfulla, frågeparametrar som du kan använda med `SlingPostServlet`, standardhanteraren för alla POST-begäranden. Hanteraren ger dig oändliga alternativ för att skapa, ändra, ta bort, kopiera och flytta noder i databasen.
 
 ![Använda SlingPostServer](assets/sling-cheatsheet-02.png)
 
@@ -148,16 +148,16 @@ Alla Sling-skript lagras i undermappar för antingen `/apps` (mutable, user scri
 
 Några andra punkter att notera är:
 
-* När metoden (GET, POST) krävs, anges den i versaler enligt HTTP-specifikationen, till exempel `jobs.POST.esp`
+* När metoden (GET, POST) krävs anges den i versaler enligt HTTP-specifikationen, till exempel `jobs.POST.esp`
 * Olika skriptmotorer stöds, men de vanliga, rekommenderade skripten är HTML och JavaScript.
 
-Listan över skriptmotorer som stöds av den angivna AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
+Listan över skriptmotorer som stöds av den angivna instansen av AEM finns på Felix Management Console ( `http://<host>:<port>/system/console/slingscripting`).
 
 Om du använder det föregående exemplet och `sling:resourceType` är `hr/jobs` är det för:
 
-* GET/HEAD och URL:er som slutar på `.html` (standardtyper för begäran, standardformat)
+* GET/HEAD-begäranden och URL:er som slutar på `.html` (standardtyper för begäran, standardformat)
    * Skriptet är `/apps/hr/jobs/jobs.esp`. Det sista avsnittet i `sling:resourceType` är filnamnet.
-* Begäranden om POST (alla begärandetyper utom GET/HEAD, metodnamnet måste vara versaler)
+* POST-begäranden (alla typer av begäranden utom GET/HEAD, metodnamnet måste vara versaler)
    * POST används i skriptnamnet.
    * Skriptet är `/apps/hr/jobs/jobs.POST.esp`.
 * URL:er i andra format, slutar inte med `.html`
@@ -172,7 +172,7 @@ Om du använder det föregående exemplet och `sling:resourceType` är `hr/jobs`
    * Skriptet för `../content/corporate/jobs/developer.html` skulle till exempel generera en sökning i `/apps/content/corporate/jobs/`.
    * Den primära nodtypen används.
 * Om inget skript hittas alls används standardskriptet.
-   * Standardåtergivningen stöds som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla innehåller nodens egenskaper (med lämplig formatering). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett begärandetillägg, är att resursen (där det är möjligt) ska tas bort.
+   * Standardåtergivningen stöds som oformaterad text (`.txt`), HTML (`.html`) och JSON (`.json`), som alla innehåller nodens egenskaper (lämpligt formaterade). Standardåtergivningen för tillägget `.res`, eller begäranden utan ett begärandetillägg, är att resursen (där det är möjligt) ska tas bort.
 * För http-felhantering (kod 403 eller 404) söker Sling efter ett skript på antingen:
    * Platsen `/apps/sling/servlet/errorhandler` för anpassade skript
    * Eller platsen för standardskriptet `/libs/sling/servlet/errorhandler/404.jsp`
@@ -236,7 +236,7 @@ I Sling kan skript inte anropas direkt eftersom det skulle bryta det strikta beg
 
 Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet, så att ramverket (Sling) inte längre vet om det. Därför förlorar du vissa funktioner:
 
-* Automatisk hantering av andra http-metoder än GET, inklusive:
+* Automatisk hantering av andra http-metoder än GET:
    * POST, PUT, DELETE som hanteras med en Sing-standardimplementering
    * Skriptet `POST.jsp` på din `sling:resourceType`-plats
 * Kodarkitekturen är inte längre så ren eller så tydligt strukturerad som den ska vara; av största vikt för storskalig utveckling
@@ -245,7 +245,7 @@ Om du anropar representationen (skriptet) direkt döljer du resursen i skriptet,
 
 Använder Sling API-paketet, `org.apache.sling.*` och taggbiblioteken.
 
-### referera till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
+### Refererar till befintliga element med sling:include {#referencing-existing-elements-using-sling-include}
 
 En sista sak är behovet av att referera till befintliga element i skripten.
 
@@ -270,7 +270,7 @@ Ett OSGi-ramverk ger dig dynamisk inläsning/borttagning, konfiguration och kont
 >
 >På sidan Grundläggande utbildning finns en samling presentationer och självstudiekurser.
 
-Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därför AEM, använder implementeringen [Apache Felix](https://felix.apache.org/documentation/index.html) för OSGi. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
+Med den här arkitekturen kan du utöka Sling med programspecifika moduler. Sling, och därmed AEM, använder [Apache Felix](https://felix.apache.org/documentation/index.html)-implementeringen av OSGi. De är båda samlingar av OSGi-paket som körs i ett OSGi-ramverk.
 
 Med den här funktionen kan du utföra följande åtgärder på alla paket i installationen:
 
@@ -292,7 +292,7 @@ I följande lista visas en översikt över strukturen som du ser i databasen.
 * `/content` - Innehåll skapat för din webbplats.
 * `/etc`
 * `/home` - Användar- och gruppinformation.
-* `/libs` - Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar de färdiga AEM. Innehållet i `/libs` får inte ändras. Funktioner som är specifika för din webbplats bör göras under `/apps`.
+* `/libs` - Bibliotek och definitioner som tillhör kärnan i AEM. Undermapparna i `/libs` representerar de färdiga AEM-funktionerna. Innehållet i `/libs` får inte ändras. Funktioner som är specifika för din webbplats bör göras under `/apps`.
 * `/tmp` - Tillfällig arbetsyta.
 * `/var` - Filer som ändras och uppdateras av systemet, till exempel granskningsloggar, statistik och händelsehantering.
 

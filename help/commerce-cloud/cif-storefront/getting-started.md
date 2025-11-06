@@ -9,7 +9,7 @@ kt: 4947
 thumbnail: 37843.jpg
 exl-id: 73ba707e-5e2d-459a-8cc8-846d1a5f2fd7
 role: Admin
-source-git-commit: 856442039fcd25ec675a6258d182f7a35f590c3c
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1092'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Introduktionen till AEM Commerce as a Cloud Service är en tvåstegsprocess:
 
 Det första startsteget görs av Adobe. Mer information om priser och provisionering får du av din säljare.
 
-När du har etablerat dig med CIF-tillägget används det för alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett. Mer information finns i [Konfigurera ditt program.](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html?lang=sv-SE)
+När du har etablerat dig med CIF-tillägget används det för alla befintliga Cloud Manager-program. Om du inte har något Cloud Manager-program måste du skapa ett. Mer information finns i [Konfigurera ditt program.](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html)
 
 Det andra steget är självbetjäning för varje AEM as a Cloud Service-miljö. Det finns ytterligare konfigurationer som du måste göra efter den första etableringen av CIF-tillägget.
 
@@ -77,7 +77,7 @@ Så här ansluter du AEM till en e-handelslösning via Adobe I/O CLI:
 
 1. Skaffa Adobe I/O CLI med Cloud Manager plugin.
 
-   * Läs [Adobe Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI-plugin.](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+   * Läs [Adobe Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) om hur du hämtar, konfigurerar och använder [Adobe I/O CLI](https://github.com/adobe/aio-cli) med [Cloud Manager CLI-plugin.](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 
 1. Autentisera Adobe I/O CLI med AEM as a Cloud Service.
 
@@ -128,14 +128,19 @@ Följande egenskaper kan konfigureras:
 * GraphQL Client - Välj den konfigurerade GraphQL-klienten för e-handelskommunikation. Den här klienten ska normalt vara kvar som standard.
 * Butiksvy - butiksvyns identifierare. Om den är tom används standardbutiksvyn.
 * GraphQL Proxy Path - den URL-sökväg som GraphQL Proxy i AEM använder för proxybegäranden till GraphQL-slutpunkt för e-handel.
+
   >[!NOTE]
   >
   > I de flesta inställningar får standardvärdet `/api/graphql` inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
+
 * Aktivera Catalog UID Support - aktivera stöd för UID i stället för ID i e-handelssamtal med GraphQL.
+
   >[!NOTE]
   >
   > Stöd för UID introducerades i Adobe Commerce 2.4.2. Aktivera bara UID:n om e-handelsbackend har stöd för ett GraphQL-schema av version 2.4.2 eller senare.
+
 * Katalogrotkategoriidentifierare - identifieraren (UID eller ID) för arkivkatalogens rot
+
   >[!CAUTION]
   >
   > Från och med CIF Core Components version 2.0.0 har stödet för `id` tagits bort och ersatts med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera Catalog UID Support och använda en giltig UID-kategori som&quot;Katalogens rotkategoriidentifierare&quot;.

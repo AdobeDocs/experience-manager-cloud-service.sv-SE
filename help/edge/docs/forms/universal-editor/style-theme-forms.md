@@ -2,9 +2,9 @@
 title: Anpassa tema och stil för en Edge Delivery Services for AEM Forms
 description: Anpassa temat och formatet för AEM Forms som levereras via Edge Delivery Services på ett effektivt sätt och skapa en sammanhängande och varumärkesanpassad användarupplevelse.
 feature: Edge Delivery Services
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: ac780399-34fe-457d-aaf4-b675656c024d
-source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2493'
 ht-degree: 0%
@@ -252,7 +252,7 @@ Det adaptiva Forms-blocket följer specifika CSS-mönster som säkerställer att
 }
 ```
 
-+++
++++ 
 
 +++ Avancerade anpassningsmönster
 

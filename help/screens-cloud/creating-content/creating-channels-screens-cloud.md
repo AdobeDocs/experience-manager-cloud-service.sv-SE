@@ -4,14 +4,14 @@ description: På den här sidan beskrivs hur du skapar och hanterar kanaler i Sc
 exl-id: 3b0bae7a-4a45-485a-ab04-604510ff6578
 feature: Authoring Screens
 role: Admin, Developer, User
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 1%
 
 ---
 
-# Skapa och hantera en kanal i Screens as a Cloud Service {#creating-channels-screens-cloud}
+# Skapa och hantera kanaler i Screens as a Cloud Service {#creating-channels-screens-cloud}
 
 När du har skapat ett AEM Screens-projekt måste du skapa kanaler.
 ***Kanaler***, visa en innehållssekvens (bilder och videoklipp), en webbplats eller ett ensidigt program.
@@ -22,7 +22,7 @@ Det här dokumentet hjälper dig att skapa och hantera kanaler för ditt AEM Scr
 
 * förstå hur man skapar kanaler till Screens Content Provider
 * hantera och redigera innehåll i era kanaler
-* hantera tilldelning och aktiveringsschema för dina kanaler i [Screens tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=sv-SE)
+* hantera tilldelning och aktiveringsschema för dina kanaler i [Screens tjänsteleverantör](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/screens-as-cloud-service/configure-screens-cloud/navigating-to-screens-services-provider.html?lang=en)
 
 ## Steg för att skapa en ny sekvenskanal i Screens as a Cloud Service {#create-new-channel}
 
@@ -114,6 +114,7 @@ Med den här funktionen kan du definiera ett standardaktiveringsschema för en k
    ![bild](/help/screens-cloud/assets/display/Assignments3.png)
 
 Den här rutan visar följande information:
+
 * Kanalens standardprioritet i visningen.
 * Start- och slutdatum för aktiveringen när kanalen är schemalagd att spelas upp.
 * Syntetisk vy av upprepningen (varje timme/dag/vecka/varje månad/år och namn som angetts för upprepningen).

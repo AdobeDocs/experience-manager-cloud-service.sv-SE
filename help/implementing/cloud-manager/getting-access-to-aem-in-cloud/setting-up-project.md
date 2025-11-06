@@ -1,11 +1,11 @@
 ---
 title: Projektinställningar
-description: Läs om hur AEM byggs med Maven och vilka standarder du måste följa när du skapar ett eget projekt.
+description: Se hur AEM Projects byggs med Maven och vilka standarder du måste följa när du skapar ett eget projekt.
 exl-id: 76af0171-8ed5-4fc7-b5d5-7da5a1a06fa8
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 88b4864da30fbf201dbd5bde1ac17d3be977648f
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 0%
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Projektinställningar {#project-setup}
 
-Läs om hur AEM byggs med Maven och vilka standarder du måste följa när du skapar ett eget projekt.
+Se hur AEM Projects byggs med Maven och vilka standarder du måste följa när du skapar ett eget projekt.
 
 ## Information om projektinställningar {#project-setup-details}
 
-För att kunna bygga och driftsätta med Cloud Manager måste AEM följa följande riktlinjer:
+AEM Projects måste följa följande riktlinjer för att kunna bygga och driftsätta med Cloud Manager:
 
 * Projekt måste skapas med [Apache Maven](https://maven.apache.org).
 * Det måste finnas en `pom.xml`-fil i Git-databasens rot. Den här `pom.xml`-filen kan referera till så många undermoduler (som i sin tur kan ha andra undermoduler och så vidare) som det behövs.
@@ -32,7 +32,7 @@ För att kunna bygga och driftsätta med Cloud Manager måste AEM följa följan
 
 I vissa begränsade fall kan du behöva ändra din byggprocess något när du kör i Cloud Manager jämfört med när du kör på arbetsstationer för utvecklare. I dessa fall kan [Maven-profiler](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) användas för att definiera hur bygget ska vara olika i olika miljöer, inklusive Cloud Manager.
 
-Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att söka efter `CM_BUILD` [miljövariabeln &#x200B;](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager byggmiljö göras genom att man söker efter denna variabel som saknas.
+Aktivering av en Maven-profil i Cloud Manager-byggmiljön bör göras genom att söka efter `CM_BUILD` [miljövariabeln ](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md). På samma sätt bör en profil som bara är avsedd att användas utanför Cloud Manager byggmiljö göras genom att man söker efter denna variabel som saknas.
 
 Om du till exempel bara vill visa ett enkelt meddelande när bygget körs i Cloud Manager gör du följande:
 
@@ -110,12 +110,12 @@ Om du bara vill få ut ett enkelt meddelande när bygget körs utanför Cloud Ma
 
 >[!NOTE]
 >
->Distribuera artefakter från lösenordsskyddade Maven-databaser med försiktighet, eftersom Cloud Manager inte utvärderar koden med sina [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md). Den här metoden bör reserveras för sällsynta situationer och endast tillämpas på kod som inte har med AEM att göra. Adobe rekommenderar att du inkluderar både Java-källorna och hela projektets källkod tillsammans med binärfilen. På så sätt får du bättre transparens och underhållbarhet under hela driftsättningsprocessen.
+>Distribuera artefakter från lösenordsskyddade Maven-databaser med försiktighet, eftersom Cloud Manager inte utvärderar koden med sina [regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md). Den här metoden bör reserveras för sällsynta situationer och endast tillämpas på kod som inte är relevant för AEM. Adobe rekommenderar att du inkluderar både Java-källorna och hela projektets källkod tillsammans med binärfilen. På så sätt får du bättre transparens och underhållbarhet under hela driftsättningsprocessen.
 
 **Så här använder du en lösenordsskyddad Maven-databas i Cloud Manager:**
 
 1. Ange lösenordet (och eventuellt användarnamnet) som en hemlig [pipeline-variabel](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md).
-1. Referera sedan till den hemligheten i en fil med namnet `.cloudmanager/maven/settings.xml` i Git-databasen, som följer schemat för [&#x200B; Maven Settings File](https://maven.apache.org/settings.html) .
+1. Referera sedan till den hemligheten i en fil med namnet `.cloudmanager/maven/settings.xml` i Git-databasen, som följer schemat för [ Maven Settings File](https://maven.apache.org/settings.html) .
 
 När Cloud Manager byggprocess startar:
 
@@ -278,11 +278,11 @@ Mekanismen för att ange den här egenskapen beror på hur bygget skapar innehå
 
 ## Bygg återanvändning av felaktigheter {#build-artifact-reuse}
 
-I många fall distribueras samma kod till flera AEM miljöer. När det är möjligt undviker Cloud Manager att återskapa kodbasen när det upptäcker att samma Git-implementering används i flera fullständiga pipeline-körningar.
+I många fall distribueras samma kod till flera AEM-miljöer. När det är möjligt undviker Cloud Manager att återskapa kodbasen när det upptäcker att samma Git-implementering används i flera fullständiga pipeline-körningar.
 
-När en körning startas extraheras den aktuella HEAD-implementeringen för förgreningsflödet. Hash för implementeringen visas i användargränssnittet och via API:t. När byggsteget har slutförts lagras de resulterande artefakterna baserat på den implementeringshashen och kan återanvändas i efterföljande pipeline-körningar.
+När en körning startas extraheras den aktuella HEAD-implementeringen för grenflödet. Hash för implementeringen visas i användargränssnittet och via API:t. När byggsteget har slutförts lagras de resulterande artefakterna baserat på den implementeringshashen och kan återanvändas i efterföljande pipeline-körningar.
 
-Paket återanvänds i alla rörledningar om de ingår i samma program. När du söker efter paket som kan återanvändas ignorerar AEM grenar och återanvänder artefakter över grenar.
+Paket återanvänds i alla rörledningar om de ingår i samma program. När AEM söker efter paket som kan återanvändas ignoreras grenar och artefakter återanvänds i alla grenar.
 
 När en återanvändning sker ersätts stegen för bygg- och kodkvalitet effektivt med resultaten från den ursprungliga körningen. Loggfilen för byggsteget innehåller artefakter och körningsinformation som användes för att skapa dem från början.
 

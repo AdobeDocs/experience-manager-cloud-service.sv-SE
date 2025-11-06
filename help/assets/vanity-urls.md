@@ -3,19 +3,20 @@ title: Skapa Vanity-URL:er med Dynamic Media med OpenAPI-funktioner
 description: Använd Dynamic Media OpenAPI-funktioner för att omvandla URL:er för leverans av stora tillgångar till korta varumärkesanpassade URL:er. En fågel-URL är en kort, ren, lättåtkomlig och läsbar version av din komplexa leverans-URL. Ni kan inkludera ert varumärke, produktnamn och relevanta nyckelord i er egen webbplats för att öka varumärkets synlighet och användarengagemanget
 role: Admin
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: d9223a8af5d531e66a91e9054201de765be50961
+exl-id: 596136e9-7c2a-43a1-8091-2d8b6226b695
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1380'
 ht-degree: 0%
 
 ---
 
-
 # Använd vanity-URL:er{#vanity-urls}
 
 Använd [!DNL Dynamic Media with OpenAPI capabilities] för att omvandla dina URL:er för lång resursleverans till korta, varumärkesanpassade URL:er. StandardURL:er för leverans av resurser inkluderar systemgenererade UUID:n som gör leverans-URL:en komplex, svår att komma ihåg och dela. Ersätt dessa tillgångs-UUID med enkla identifierare (Vanity ID) för att generera en vanity-URL. En fågel-URL är en kort, ren och läsbar version av din komplexa leverans-URL.
 
 Se följande URL-format för att förstå skillnaden:
+
 * [Standard delivery URL](#standard-urls)
 * [Vanity-URL:er](#vanity-url)
 
@@ -81,6 +82,7 @@ Kontrollera att du redan har [godkänt resurserna för offentlig leverans](/help
 ## Skapa Vanity-URL:er{#create-vanity-urls}
 
 Utför följande steg för att skapa mål-URL:er:
+
 1. [Ställ in metadata för resurs](#set-up-asset-metadata)
 1. [Skapa och mappa Cloud Manager-miljövariabel](#map-cloud-manager-environment-variable)
 1. [Godkänn de resurser som kräver ursprungs-URL för leverans](/help/assets/manage-organize-assets-view.md#manage-asset-status)
@@ -89,18 +91,22 @@ Utför följande steg för att skapa mål-URL:er:
 ### Ställ in metadata för resurs{#set-up-asset-metadata}
 
 Gör så här för att ställa in ID:t för sans i resursens metadataformulär:
+
 1. Navigera till informationssidan för den mapp som innehåller dina resurser för [!DNL Dynamic Media with OpenAPI]-leverans.
 1. [Redigera metadataformuläret](/help/assets/metadata-assets-view.md#edit-metadata-forms) genom att göra något av följande:
+
    * Lägg till ett nytt metadatafält och ange det obligatoriska ID:t som värde för det fältet.
    * Uppdatera det befintliga fältet genom att ersätta en befintlig metadataegenskaps värde med det obligatoriska fågel-ID:t. Lär dig [bästa praxis](#best-practices) för att skapa ett fågel-ID.
-     ![sans-ID](/help/assets/assets/vanity-id-metadata.png)
-Läs mer om [metadatamatcheman](/help/assets/metadata-schemas.md).
 
-     >[!NOTE]
-     >
-     > * Använd unika användar-ID:n för varje resurs. Kontrollera alltid att resurser som delar samma metadataformulär har unika ID:n för DM med OpenAPI-leverans via egna URL:er. Om två resurser delar samma ID för huvudinnehållet, levererar DM med OpenAPI den resurs som senast tog emot detta ID och åsidosätter det tidigare berättigandet för ID:t till en annan resurs.
-     >
-     > * En enskild resurs kan ha flera ID:n för huvudinnehållet. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) och begär att få generera de ID:n som krävs.
+   ![sans-ID](/help/assets/assets/vanity-id-metadata.png)
+
+   Läs mer om [metadatamatcheman](/help/assets/metadata-schemas.md).
+
+   >[!NOTE]
+   >
+   > * Använd unika användar-ID:n för varje resurs. Kontrollera alltid att resurser som delar samma metadataformulär har unika ID:n för DM med OpenAPI-leverans via egna URL:er. Om två resurser delar samma ID för huvudinnehållet, levererar DM med OpenAPI den resurs som senast tog emot detta ID och åsidosätter det tidigare berättigandet för ID:t till en annan resurs.
+   >
+   > * En enskild resurs kan ha flera ID:n för huvudinnehållet. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) och begär att få generera de ID:n som krävs.
 
 När du har konfigurerat ditt användar-ID i resursens metadataformulär mappar [det här metadatafältet till systemets leveransmekanism](#map-cloud-manager-environment-variable).
 
@@ -134,7 +140,7 @@ När användaren klickar på tilläggs-URL:en mappar [!DNL Dynamic Media with Op
 
 ## Skala med hjälp av mål-URL:er{#scale-using-vanity-url}
 
-Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
+Med AEM as a Cloud Service kan du [anpassa DNS- och CDN-namnen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/introduction) i dina webbadresser. Använd dessa AEMCS-funktioner med dina egna URL:er för att omvandla dem till unika webbadresser som är rena, beskrivande, varumärkesanpassade och intuitiva och som ger de [ovannämnda fördelarna](#key-benefits).
 
 Se följande huvud-URL och dess anpassningsbara komponenter:
 
@@ -184,9 +190,9 @@ Se följande huvud-URL och dess anpassningsbara komponenter:
 Utför följande steg för att skriva om CDN-reglerna för leverans:
 
 1. Navigera till din AEM-databas för att skapa en YAML-konfigurationsfil.
-2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
+2. Utför stegen i avsnittet [setup](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages#setup) för att konfigurera CDN-regler och distribuera konfigurationen via din Cloud Manager-konfigurationspipeline.
 Följ de här [bästa metoderna](#best-practices) för att skapa din domänsökväg.
-   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
+   [Läs mer om CDN-skrivregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#request-transformations).
 
 Nedan följer exempel på skrivregler för att lägga till filnamn med tillägg i tillfälliga URL:er. Anpassa dessa omskrivningsregler efter dina specifika krav. [Kontakta Adobe support](https://helpx.adobe.com/in/contact.html) om du behöver mer hjälp:
 

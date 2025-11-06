@@ -6,7 +6,7 @@ google-site-verification: A1dSvxshSAiaZvk0yHu7-S3hJBb1THj0CZ2Uh8N_ck4
 keywords: Använd AEM-arbetsflöden, tilldela uppgiftssteg, konvertera till PDF/A-steg, generera dokument för inspelat steg, använda arbetsflöden, signera dokumentsteg, generera utskrift, generera icke-interaktiva PDF-utdata
 feature: Adaptive Forms, Workflow
 role: Admin, User
-source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '6760'
 ht-degree: 0%
@@ -18,10 +18,10 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Du använder arbetsflödesmodeller. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM Workflow-steg i en modell för att uppnå affärslogiken](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=sv-SE#extending-aem).
+Du använder arbetsflödesmodeller. En modell hjälper dig att definiera och köra en serie steg. Du kan också definiera modellegenskaper, t.ex. om arbetsflödet är tillfälligt eller använder flera resurser. Du kan [inkludera olika AEM Workflow-steg i en modell för att uppnå affärslogiken](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html?lang=en#extending-aem).
 
 ## Forms-centrerade steg {#forms-workflow-steps}
 
@@ -98,7 +98,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     
     -->
 
-   * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för begäran för att definiera [namnet och värdet för attributet &#x200B;](work-with-form-data-model.md#bindargument) för begäran. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
+   * **[!UICONTROL Request Attribute Mapping]**: Använd avsnittet Mappning av attribut för begäran för att definiera [namnet och värdet för attributet ](work-with-form-data-model.md#bindargument) för begäran. Hämta informationen från datakällan baserat på attributnamnet och värdet som anges i begäran. Du kan definiera ett attributvärde för begäran med hjälp av ett literalt värde eller en variabel av datatypen String.
 
   <!--  
      
@@ -121,7 +121,7 @@ Du kan också använda komponenten för att styra aktivitetens beteende. Du kan 
     -->
 
 * **[!UICONTROL Assignee]** > **[!UICONTROL Assign options]**: Ange den metod som ska användas för att tilldela en användare uppgiften. Du kan dynamiskt tilldela uppgiften till en användare eller en grupp med skriptet för deltagarväljaren eller tilldela uppgiften till en viss AEM-användare eller grupp.
-* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE&CID=RedirectAEMCommunityKautuk).
+* **[!UICONTROL Participant Chooser]**: Alternativet är tillgängligt när alternativet **[!UICONTROL Dynamically to a user or group]** har valts i fältet Tilldela alternativ. Du kan använda ett ECMAScript eller en tjänst för att dynamiskt välja en användare eller grupp. Mer information finns i [Skapa ett anpassat Adobe Experience Manager Dynamic Participant-steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=en&CID=RedirectAEMCommunityKautuk).
 
 * **[!UICONTROL Participants]**: Fältet är tillgängligt när alternativet **[!UICONTROL com.adobe.granite.workflow.core.process.RandomParticipantChooser]** har valts i fältet **[!UICONTROL Participant Chooser]**. I fältet kan du välja användare eller grupper för alternativet RandomParticipantChooser.
 
@@ -177,6 +177,7 @@ Konvertera till PDF/A-steget har följande egenskaper:
 **[!UICONTROL Input Document]**: Indatadokumentet kan vara relativt till nyttolasten, ha en absolut sökväg, kan anges som en nyttolast eller lagras i en variabel av dokumentdatatypen.
 
 **[!UICONTROL Conversion Options]**: Med den här egenskapen anges inställningarna för konvertering av PDF-dokument till PDF/A-dokument. De olika alternativ som är tillgängliga under den här fliken är:
+
 * **[!UICONTROL Compliance]**: Anger den standard som utdata-PDF/A-dokumentet måste uppfylla. Det stöder olika PDF-standarder som PDF/A-1b, PDF/A-2b eller PDF/A-3b.
 * **[!UICONTROL Result Level]**: Anger resultatnivån som PassFail, Summary eller Detailed för konverteringsutdata.
 * **[!UICONTROL Color Space]**: Anger den fördefinierade färgrymden som S_RGB, COATED_FOGRA27, JAPAN_COLOR_COATED eller SWOP, som kan användas för utdata i PDF/A-filer.
@@ -189,7 +190,7 @@ Konvertera till PDF/A-steget har följande egenskaper:
 
 Använd e-poststeget för att skicka ett e-postmeddelande, till exempel ett e-postmeddelande med ett postdokument, en länk till ett anpassat formulär <!-- , link of an interactive communication--> eller med ett bifogat PDF-dokument. Skicka e-post-steget stöder [HTML-e-post](https://en.wikipedia.org/wiki/HTML_email). HTML e-postmeddelanden är responsiva och anpassar sig efter mottagarnas e-postklient och skärmstorlek. Du kan använda en e-postmall från HTML för att definiera utseendet, färgschemat och beteendet för e-postmeddelandet.
 
-I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=sv-SE#sending-email) om du vill aktivera portar för att skicka e-post och aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
+I e-poststeget används Day CQ Mail Service för att skicka e-postmeddelanden. Kontrollera att e-posttjänsten är konfigurerad innan du använder e-poststeget. E-poststöd är som standard bara för HTTP- och HTTP-protokoll. [Kontakta supportteamet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=en#sending-email) om du vill aktivera portar för att skicka e-post och aktivera SMTP-protokoll för din miljö. Begränsningen bidrar till att förbättra plattformens säkerhet.
 
 E-poststeget har följande egenskaper:
 
@@ -255,11 +256,13 @@ Document Description XML (DDX) är ett deklarativt kodspråk vars element repres
 Anropa DDX-steget har följande egenskaper:
 
 **[!UICONTROL Input Documents]**: Används för att ange egenskaper för ett indatadokument. De olika alternativ som är tillgängliga under den här fliken är:
+
 * **[!UICONTROL Specify DDX Using]**: Anger indatadokumentet relativt till nyttolasten, har en absolut sökväg, kan anges som nyttolast eller lagras i en variabel av dokumentdatatypen.
 * **[!UICONTROL Create Map from Payload]**: Lägg till alla dokument under nyttolastmappen i Input Document&#39;s Map för invoke API i Assembler. Nodnamnet för varje dokument används som en nyckel på kartan.
 * **[!UICONTROL Input Document's Map]**: Alternativet används för att lägga till flera poster med knappen **[!UICONTROL ADD]**. Varje post representerar dokumentets nyckel på kartan och dokumentets källa.
 
 **[!UICONTROL Environment Options]**: Det här alternativet används för att ange bearbetningsinställningar för anrop-API. De olika alternativ som är tillgängliga under den här fliken är:
+
 * **[!UICONTROL Validate Only]**: Kontrollerar giltigheten för indata-DDX-dokumentet.
 * **[!UICONTROL Fail on Error]**: Ett booleskt värde som anger om API-anropstjänsten misslyckas, om ett fel uppstår eller inte. Som standard är värdet Falskt.
 * **[!UICONTROL First Bates Number]**: Anger talet, som ökar automatiskt. Det här självökande numret visas automatiskt på varje sida i följd.
@@ -270,6 +273,7 @@ Anropa DDX-steget har följande egenskaper:
 >Miljöalternativen hålls synkroniserade med HTTP-API:er.
 
 **[!UICONTROL Output Documents]**: Anger platsen där utdatafilen ska sparas. De olika alternativ som är tillgängliga under den här fliken är:
+
 * **[!UICONTROL Save Output in Payload]**: Sparar utdatadokument under nyttolastmappen, eller skriver över nyttolasten om nyttolasten är en fil.
 * **[!UICONTROL Output Document's Map]**: Anger platsen där varje dokumentfil ska sparas explicit genom att lägga till en post per dokument. Varje post representerar dokumentet och platsen där det ska sparas. Om det finns flera utdatadokument används det här alternativet.
 

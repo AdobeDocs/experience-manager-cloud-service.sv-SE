@@ -3,10 +3,10 @@ title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna hålls synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
-role: User, Admin, Architect
+role: User, Admin, Developer
 feature: Asset Management
 exl-id: a71aebdf-8e46-4c2d-8960-d188b14aaae9
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '3294'
 ht-degree: 9%
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/reuse-assets-using-msm.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/reuse-assets-using-msm.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 MSM-funktionaliteten (Multi Site Manager) i [!DNL Adobe Experience Manager] gör att användare kan återanvända innehåll som har skapats en gång och återanvänds på flera webbplatser. Samma funktionalitet är tillgänglig för digitala resurser med namnet MSM för [!DNL Assets]. Med MSM för [!DNL Assets] kan du:
@@ -289,7 +289,7 @@ En live-kopia är en kopia av den ursprungliga källan när den skapas. Metadata
 
 Du kan dock göra lokala ändringar i en live-kopia för att ändra vissa egenskaper. Om du vill göra lokala ändringar avbryter du arvet av den önskade egenskapen. När arvet efter ett eller flera metadatafält avbryts behålls resursens live-relation och arvet efter de andra metadatafälten. Synkronisering eller utrullning skriver inte över lokala ändringar. Om du vill göra det öppnar du sidan **[!UICONTROL Properties]** för en live-kopia av en resurs och klickar på alternativet **[!UICONTROL cancel inheritance]** bredvid ett metadatafält.
 
-Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på **[!UICONTROL Reset]** från verktygsfältet på sidan **[!UICONTROL Properties]** för en live-kopia.
+Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på **[!UICONTROL Properties]** från verktygsfältet på sidan **[!UICONTROL Reset]** för en live-kopia.
 
 ![Återställningsåtgärden skriver över lokala redigeringar och delar av den aktiva kopian med källan skrivs över.](assets/livecopy_reset.png)
 
@@ -359,7 +359,7 @@ I fler scenarier matchar MSM för [!DNL Assets] beteendet hos MSM för platsfunk
 * Platser har vanligtvis underordnade, men det har inte [!DNL Assets]. Alternativet att inkludera eller exkludera underordnade objekt finns inte när du skapar live-kopior av enskilda resurser.
 * Det går inte att ta bort kapitelsteget i guiden Skapa plats i MSM för [!DNL Assets].
 * Konfigurering av MSM-lås på sidegenskaper stöds inte i MSM för [!DNL Assets].
-* Använd bara **[!UICONTROL Standard rollout config]** för MSM för [!DNL Assets]. De andra rollout-konfigurationerna är inte tillgängliga för MSM för [!DNL Assets].
+* Använd bara [!DNL Assets] för MSM för **[!UICONTROL Standard rollout config]**. De andra rollout-konfigurationerna är inte tillgängliga för MSM för [!DNL Assets].
 
 >[!NOTE]
 >

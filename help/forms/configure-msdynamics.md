@@ -4,7 +4,7 @@ description: Lär dig hur du integrerar Microsoft Dynamics 365 med Adaptive Form
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 29ee324c-cd4c-403b-bb3d-b1eda8e8ad88
-source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '869'
 ht-degree: 0%
@@ -15,6 +15,7 @@ ht-degree: 0%
 # Konfigurera Microsoft® Dynamics 365 för AEM Forms
 
 Adobe Experience Manager Forms Data Integration innehåller en molntjänstkonfiguration som integrerar formulär med Microsoft Dynamics server. Det gör att du kan skapa FDM (Form Data Model) baserat på de enheter, attribut och tjänster som definieras i Microsoft Dynamics. Formulärdatamodellen (FDM) kan användas för att skapa adaptiv Forms som samverkar med Microsoft Dynamics-servern för att möjliggöra affärsarbetsflöden. Till exempel:
+
 * Fråga Microsoft Dynamics-servern efter data och fyll i adaptiva Forms i förväg.
 * Skriv data i Microsoft Dynamics när ni skickar in anpassade blanketter.
 * Skriv data i Microsoft Dynamics via anpassade entiteter som definieras i FDM (Form Data Model).
@@ -47,7 +48,9 @@ Kontrollera att du har utfört följande steg innan du integrerar [!DNL Microsof
    >[!VIDEO](https://video.tv.adobe.com/v/3444389/)
 
 1. **Skapa ett konto i Power Platform Admin Center**
-Skapa ett konto i **Power Platform Admin Center** för att:
+
+   Skapa ett konto i **Power Platform Admin Center** för att:
+
    * Lägg till dataversion
    * Aktivera Microsoft Dynamics 365-program
 
@@ -63,18 +66,18 @@ Skapa ett konto i **Power Platform Admin Center** för att:
 
    >[!NOTE]
    >
-   > * Om du vill skapa det anslutna [!DNL Microsoft® Dynamics 365]-programmet väljer du **Webb** som plattform och anger **Omdirigerings-URI** i följande format: `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html`.
-   > * Spara klient-ID:t (även kallat program-ID) och klienthemligheten för framtida referens.
+   >* Om du vill skapa det anslutna [!DNL Microsoft® Dynamics 365]-programmet väljer du **Webb** som plattform och anger **Omdirigerings-URI** i följande format: `https://'[server]:[port]'/libs/fd/fdm/gui/components/admin/fdmcloudservice/fdm.html`.
+   >* Spara klient-ID:t (även kallat program-ID) och klienthemligheten för framtida referens.
 
 ## Anslut Forms till Microsoft® Dynamics 365
 
 När du har konfigurerat ovanstående krav kan du fortsätta integrera Adaptive Forms med Microsoft® Dynamics 365. Så här skickar du data till Microsoft® Dynamics 365 när du skickar in formulär:
 
-[1. Konfigurera molntjänstkonfiguration för Microsoft Dynamics](#1-configure-cloud-service-configuration-for-microsoft-dynamics)
+[&#x200B;1. Konfigurera molntjänstkonfiguration för Microsoft Dynamics](#1-configure-cloud-service-configuration-for-microsoft-dynamics)
 
-[2. Skapa FDM (Form Data Model)](#2-create-form-data-model-fdm)
+[&#x200B;2. Skapa FDM (Form Data Model)](#2-create-form-data-model-fdm)
 
-### 1. Konfigurera molntjänstkonfiguration för Microsoft Dynamics
+### &#x200B;1. Konfigurera molntjänstkonfiguration för Microsoft Dynamics
 
 >[!VIDEO](https://video.tv.adobe.com/v/3444370/cloudconfiguration-dataintegration-adobeexperiencemanager-aemforms-microsoftdynamics)
 
@@ -123,7 +126,7 @@ Du kan kopiera **miljö-URL:en** från **Power Platform Admin Center** eller hä
 1. Logga in med dina [!DNL Microsoft® Dynamics 365]-autentiseringsuppgifter och godkänn för att tillåta molntjänstkonfigurationen att ansluta till [!DNL Microsoft® Dynamics 365]-tjänsten. Om anslutningen lyckas omdirigeras du till konfigurationssidan för molntjänsten [!DNL Microsoft® Dynamics 365] som visar ett meddelande om att anslutningen lyckades.
 1. Välj **[!UICONTROL Create]** om du vill spara konfigurationen.
 
-### 2. Skapa FDM (Form Data Model)
+### &#x200B;2. Skapa FDM (Form Data Model)
 
 >[!VIDEO](https://video.tv.adobe.com/v/3444367/aemforms-adobeexperiencemanager-formdatamodel--dataintegration-digitalforms)
 
@@ -156,4 +159,4 @@ Du kan sedan använda alternativet [Skicka med FDM (Form Data Model)](/help/form
 >
 >* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
 >* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
->  [Lägg till Forms Portal på en AEM Sites-sida &#x200B;](/help/forms/configure-forms-portal.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida ](/help/forms/configure-forms-portal.md)

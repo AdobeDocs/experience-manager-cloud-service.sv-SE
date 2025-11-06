@@ -4,8 +4,8 @@ description: Lär dig hur kodkvalitetstestning av rörledningar fungerar och hur
 exl-id: e2981be9-fb14-451c-ad1e-97c487e6dc46
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 91a1fb46d4300540eeecf38f7f049a2991513d29
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Se [Konfigurera CI-CD-pipeline](/help/implementing/cloud-manager/configuring-pip
 
 ## Regler för kodkvalitet {#understanding-code-quality-rules}
 
-Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. En kombination av SonarQube och granskning på innehållspaketnivå med OakPAL implementerar det här steget. Det finns mer än 100 regler som kombinerar allmänna Java-regler och AEM-specifika regler. Vissa AEM-specifika regler baseras på god praxis från AEM och kallas [anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
+Kodkvalitetstestning söker igenom källkoden för att säkerställa att den uppfyller vissa kvalitetskriterier. En kombination av SonarQube och granskning på innehållspaketnivå med OakPAL implementerar det här steget. Det finns mer än 100 regler som kombinerar generiska Java-regler och AEM-specifika regler. Vissa AEM-specifika regler är baserade på god praxis från AEM Engineering och kallas [anpassade regler för kodkvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md).
 
 Du kan hämta den aktuella fullständiga listan med regler [med den här länken](/help/implementing/cloud-manager/assets/CodeQuality-rules-latest-CS.xlsx).
 
@@ -66,7 +66,7 @@ I följande tabell sammanfattas klassificerings- och feltrösklarna för var och
 | Överhoppade enhetstester | Antal överhoppade enhetstester | Info | > 1 |
 | Öppna ärenden | Generella problemtyper - sårbarheter, fel och kodmellanslag | Info | > 0 |
 | Duplicerade rader | Definieras som antalet rader som ingår i duplicerade block. Ett kodblock anses duplicerat under följande villkor.<br>Projekt som inte är Java:<ul><li>Det ska finnas minst 100 efterföljande och duplicerade tokens.</li><li>Dessa variabler bör spridas över åtminstone </li><li>30 kodrader för COBOL </li><li>20 kodrader för ABAP </li><li>10 kodrader för andra språk</li></ul>Java-projekt:<ul></li><li> Det ska finnas minst 10 efterföljande och duplicerade satser oavsett antalet tokens och rader.</li></ul>Skillnader i indrag och i stränglitteraler ignoreras när dubbletter identifieras. | Info | > 1 % |
-| Kompatibilitet med Cloud Service | Antal identifierade kompatibilitetsproblem med molntjänster | Info | > 0 |
+| Cloud Service-kompatibilitet | Antal identifierade kompatibilitetsproblem med molntjänster | Info | > 0 |
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Kvalitetsskanningsprocessen är inte perfekt och identifierar ibland felaktigt p
 
 I dessa fall kan källkoden antecknas med Java `@SuppressWarnings`-standardanteckningen som anger regel-ID som anteckningsattribut. En vanlig positiv sak är att SonarQube-regeln för att identifiera hårdkodade lösenord kan vara aggressiv om hur ett hårdkodat lösenord identifieras.
 
-Följande kod är ganska vanlig i ett AEM projekt, som har kod för att ansluta till en extern tjänst.
+Följande kod är ganska vanlig i ett AEM-projekt, som har kod för att ansluta till en extern tjänst.
 
 ```java
 @Property(label = "Service Password")
@@ -111,7 +111,7 @@ Den rätta lösningen är sedan att ta bort det hårdkodade lösenordet.
 >Även om det är en god vana att göra `@SuppressWarnings`-anteckningen så specifik som möjligt - som att bara anteckna den programsats eller det block som orsakar problemet - är det också möjligt att anteckna på klassnivå.
 
 >[!NOTE]
->Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Servicen.
+>Även om det inte finns något uttryckligt steg för säkerhetstestning finns det säkerhetsrelaterade regler för kodkvalitet som utvärderas under steget för kodkvalitet. Se [Säkerhetsöversikt för AEM as a Cloud Service](/help/security/cloud-service-security-overview.md) om du vill veta mer om säkerhet i Cloud Service.
 
 ## Optimering av skanning av innehållspaket {#content-package-scanning-optimization}
 
@@ -129,5 +129,5 @@ Ett specialfall kan inträffa när innehållspaketet &quot;all&quot; innehåller
 
 >[!NOTE]
 >
->* Optimeringen påverkar inte de paket som distribueras till AEM.
+>* Optimeringen påverkar inte paket som distribueras till AEM.
 >* Matchningen mellan inbäddade innehållspaket och överhoppade innehållspaket beror på filnamn. Den här optimeringen kan inte utföras om flera överhoppade paket delar samma filnamn eller om filnamnet ändras under inbäddningen.

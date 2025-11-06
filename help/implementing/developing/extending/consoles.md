@@ -1,19 +1,19 @@
 ---
 title: Anpassa konsoler
-description: Lär dig mer om de olika alternativ som AEM har för att anpassa konsolerna i din redigeringsförekomst.
+description: Lär dig mer om de olika alternativ som finns i AEM för att anpassa konsolerna i din redigeringsinstans.
 exl-id: 832f9a86-07c4-4229-a0dc-8ad50a8195b0
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
 # Anpassa konsoler {#customizing-consoles}
 
-AEM innehåller alternativ för att anpassa konsolerna (och [funktionen för sidredigering](/help/implementing/developing/extending/page-authoring.md)) för redigeringsinstansen.
+AEM innehåller alternativ för att anpassa konsolerna (och [sidredigeringsfunktionen](/help/implementing/developing/extending/page-authoring.md)) för din redigeringsinstans.
 
 ## Clientlibs {#clientlibs}
 
@@ -23,9 +23,9 @@ Se [Använda bibliotek på klientsidan i AEM as a Cloud Service](/help/implement
 
 ## Övertäckningar {#overlays}
 
-Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna som finns under `/libs` med din egen anpassade funktion under `/apps`. När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [Delning av resurskonfusion](/help/implementing/developing/introduction/sling-resource-merger.md) tillåter arv.
+Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna som finns under `/libs` med din egen anpassade funktion under `/apps`. När du skapar en övertäckning krävs inte en :1-kopia av originalet, eftersom [Sling-resurskonfusion](/help/implementing/developing/introduction/sling-resource-merger.md) tillåter arv.
 
-Övertäckningar kan användas på många olika sätt för att utöka AEM. Flera exempel finns i följande avsnitt.
+Övertäckningar kan användas på många sätt för att utöka dina AEM-konsoler. Flera exempel finns i följande avsnitt.
 
 Se även [Övertäckningar för Adobe Experience Manager as a Cloud Service](/help/implementing/developing/introduction/overlays.md).
 

@@ -3,8 +3,8 @@ title: Namnkonventioner
 description: Noderna i databasen omfattas av namnkonventioner i Java Content Repository
 exl-id: 3c5c39dd-b209-488b-a93e-e840786fe224
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
@@ -13,19 +13,19 @@ ht-degree: 0%
 
 # Namnkonventioner{#naming-conventions}
 
-Noderna i databasen omfattas av namnkonventioner i Java Content Repository. AEM lägger dock till ytterligare konventioner för sidnodernas namn.
+Noderna i databasen omfattas av namnkonventioner i Java Content Repository. AEM har dock ytterligare konventioner för sidnodernas namn.
 
 ## Namnkonventioner för sidor {#naming-conventions-for-pages}
 
 Dessa namnkonventioner implementeras på olika nivåer:
 
-* JcrUtil: den AEM implementeringen av [JCR-verktygen](#jcr-utilities).
+* JcrUtil: AEM-implementeringen av [JCR-verktygen](#jcr-utilities).
 * PageManager: [Page Manager](#page-manager) innehåller metoder för sidnivååtgärder.
-* I AEM {#ui-behavior}
+* I AEM UI {#ui-behavior}
 
 ### JCR-verktyg {#jcr-utilities}
 
-[JcrUtil](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/jcr/JcrUtil.html) är den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
+[JcrUtil](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/commons/jcr/JcrUtil.html) är AEM-implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
 
 * `isValidName`
    * Kontrollerar om namnet inte är tomt och bara innehåller giltiga tecken.
@@ -40,7 +40,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### AEM gränssnittsbeteende {#ui-behavior}
 
-När AEM hanterar innehåll:
+När du hanterar innehåll kan AEM gränssnitt:
 
 * Validerar namnet enligt de begränsningar som PageManager har när något av följande inträffar:
    * en sidrubrik tillhandahålls för konvertering till nodnamnet

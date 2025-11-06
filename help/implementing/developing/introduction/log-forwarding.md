@@ -3,8 +3,8 @@ title: Loggvidarebefordran för AEM as a Cloud Service
 description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i AEM as a Cloud Service
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: afa88d89b24ac425ba1b69ee9062e589d49ebee9
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 0%
@@ -547,7 +547,7 @@ När du konfigurerar Sumo Logic för datainmatning visas en&quot;HTTP Source Add
 
 `https://collectors.de.sumologic.com/receiver/v1/http/ZaVnC...`
 
-Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [&#x200B; CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [&#x200B; Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
+Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [ CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [ Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
 
 ```yaml
 kind: "LogForwarding"

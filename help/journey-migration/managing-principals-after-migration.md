@@ -2,7 +2,7 @@
 title: Hantera huvudkonton efter migrering
 description: Lär dig konfigurera användare och grupper i IMS och AEM
 exl-id: 46c4abfb-7e28-4f18-a6d4-f729dd42ea7b
-source-git-commit: 50c8dd725e20cbd372a7d7858fc67b0f53a8d6d4
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '851'
 ht-degree: 0%
@@ -53,10 +53,11 @@ Om du vill veta vilka grupper varje användare ska tillhöra kan du använda anv
 När du skapar en Assets Collection eller en privat mapp skapas också grupper automatiskt för att hantera åtkomsten till det Assets-innehållet.  Dessa grupper migreras om de nämns i det migrerade innehållet, men de är inte konfigurerade att länka direkt till IMS-grupper. I AEM förblir de&quot;lokala grupper&quot; och kan inte hanteras via IMS.
 
 Eftersom de här grupperna inte finns i IMS kan inte verktyget för massöverföring användas för att skapa användare som direktmedlemmar.  IMS-användare som också finns i AEM kan läggas till i de här grupperna separat, men om du gör detta i grupp krävs ett extra steg.  Så här kan du göra:
+
 * Skapa en ny grupp eller grupper i Admin Console/IMS för åtkomst till samlingar/privata mappar och konfigurera dem för AEM.
 * Logga in som medlem i gruppen/grupperna så att grupperna skapas i AEM.
 * För migrerade samlingar eller privata mappar använder du Assets-gränssnittet för att lägga till den nya gruppen som redigerare/ägare/visningsprogram.
 * Lägg till (eller massöverföring) användare i de nya grupperna i Admin Console.
 * När användaren loggar in för första gången skapas IMS-användaren i AEM och bör ha tillgång till de nya grupperna och därmed till den ursprungliga samlingen eller privata mappgrupper.
 
-Obs! För grupptilldelning av användare måste ovanstående steg användas för att skapa användare i IMS. Användare som redan finns i IMS kan inte skapas igen via massöverföring, men massredigeraren kan användas för att göra den typen av ändringar (Se [Admin Console Bulk User Upload](https://helpx.adobe.com/se/enterprise/using/bulk-upload-users.html) under **Redigera användarinformation**).
+Obs! För grupptilldelning av användare måste ovanstående steg användas för att skapa användare i IMS. Användare som redan finns i IMS kan inte skapas igen via massöverföring, men massredigeraren kan användas för att göra den typen av ändringar (Se [Admin Console Bulk User Upload](https://helpx.adobe.com/enterprise/using/bulk-upload-users.html) under **Redigera användarinformation**).

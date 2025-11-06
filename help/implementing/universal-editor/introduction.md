@@ -3,8 +3,8 @@ title: Introduktion till Universal Editor
 description: Universal Editor är ett modernt visuellt redigeringsverktyg som ger er möjlighet att skapa slagkraftiga webbupplevelser.
 exl-id: d4fc2384-a0f5-4a6f-9572-62749786be4c
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 08997c760bf1d609dce1dd17de0c549a26083917
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -49,9 +49,9 @@ Universal Editor stöder följande två primära AEM-inställningar:
 Universal Editor stöds av:
 
 * AEM as a Cloud Service (version `2023.8.13099` eller senare)
-* [AEM 6.5 LTS](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts/content/implementing/developing/headless/universal-editor/introduction)
+* [AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/implementing/developing/headless/universal-editor/introduction)
    * Både lokala värdtjänster och AMS-värdtjänster stöds.
-* [AEM 6.5](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
+* [AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction)
    * Både lokala värdtjänster och AMS-värdtjänster stöds.
 
 Den här dokumentationen används för Universal Editor med AEM as a Cloud Service.
@@ -104,7 +104,7 @@ En marknadsförare vill skapa innehåll som är skräddarsytt efter layouten i e
 När du utforskar den universella redigeraren och fortsätter implementera den i dina egna projekt bör du tänka på följande begränsningar.
 
 * Högst 25 AEM-resurser (Content Fragments, pages, Experience Fragments, Assets, etc.) får vara referenser som instrument på en enda sida.
-* AEM as a Cloud Service, [AEM 6.5 LTS](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts/content/implementing/developing/headless/universal-editor/introduction) och [AEM 6.5](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) är de enda AEM-backends som stöds.
+* AEM as a Cloud Service, [AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/implementing/developing/headless/universal-editor/introduction) och [AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/headless/universal-editor/introduction) är de enda AEM-backends som stöds.
 * Versionen `2023.8.13099` eller senare krävs för AEM as a Cloud Service.
 * Innehållsförfattare måste ha sina egna Experience Cloud-konton.
 * Som en del av AEM stöder den universella redigeraren [samma webbläsare som AEM.](/help/overview/supported-platforms.md)

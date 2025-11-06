@@ -4,8 +4,8 @@ description: Börja här för en guidad resa med de kraftfulla och flexibla head
 exl-id: fe124c6b-932a-44fc-a87b-12691aefea56
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 18c997a5644288e870c109a8d745b196349b923d
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 0%
@@ -75,7 +75,7 @@ Som sådana resor är utformade för att stå på egen hand. Flera av dem kan do
 * [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md) - Den här dokumentationsresan ger dig en bred förståelse för headless-teknik, hur AEM fungerar som headless-innehåll och hur du kan översätta det.
 * [AEM Headless Developer Journey](/help/journey-headless/developer/overview.md) - Börja här för en guidad resa genom de kraftfulla och flexibla headless-funktionerna i AEM, deras funktioner och hur du använder dem i ditt första utvecklingsprojekt.
 * [Headless Architect Journey](/help/journey-headless/architect/overview.md) - Börja här för en introduktion till de kraftfulla och flexibla headless-funktionerna i Adobe Experience Manager as a Cloud Service och hur du modellerar innehåll för ditt projekt.
-* [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE) - Om du redan har en god förståelse för AEM och headless-teknik kan det vara bra att läsa våra tekniska dokument direkt.
+* [AEM as a Cloud Service tekniska dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html) - Om du redan har en god förståelse för AEM och headless-teknik kan det vara bra att läsa våra tekniska dokument direkt.
    * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
-* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE) - Om du föredrar att lära dig genom att göra och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar hur du skapar och använder program som bygger på AEM Headless.
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Om du föredrar att lära dig genom att göra och är tekniskt inriktad kan du ta del av våra praktiska självstudiekurser ordnade efter API och ramverk, som utforskar hur du skapar och använder program som bygger på AEM Headless.

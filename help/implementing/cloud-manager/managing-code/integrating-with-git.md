@@ -4,8 +4,8 @@ description: Lär dig hur du använder Cloud Manager Git-databaser och hur du in
 exl-id: 57e71b8a-4546-4d7f-825c-a1637d08e608
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 80206fc1396896fe45e2c959c78a0bf30eba71c5
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -67,5 +67,5 @@ Synkronisera versionstaggar från en Cloud Manager Git-databas i en kundhanterad
 ## Ytterligare resurser {#additional-resources}
 
 * [GitHub-resurser](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git)
-* [Atlassisk Git Tutorials](https://www.atlassian.com/git/tutorials/what-is-version-control)
+* [Atlassiskt Git-självstudiekurser](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)

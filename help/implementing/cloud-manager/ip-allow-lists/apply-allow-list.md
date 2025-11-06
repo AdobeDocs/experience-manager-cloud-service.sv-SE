@@ -4,8 +4,8 @@ description: Lär dig hur du använder och tar bort användningen av IP Tillåte
 exl-id: 7158496c-b0c4-4228-a306-71dc51003c57
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: aa33f84e6b38019f41ea0a4db8f49ccc201869f7
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '303'
 ht-degree: 0%

@@ -2,9 +2,9 @@
 title: Hantera Edge Delivery-webbplatser i Cloud Manager
 description: Lär dig hur du lägger till en CDN-konfiguration på en Edge Delivery-webbplats eller tar bort en Edge Delivery-webbplats.
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 960aa3c6-27b9-44b1-81ea-ad8c5bbc99a5
-source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '712'
 ht-degree: 0%
@@ -35,7 +35,7 @@ I Adobe Cloud Manager kan det finnas flera orsaker till varför du vill byta nam
 
    * Klicka på fliken **Edge Delivery** på sidan **Programöversikt**. Klicka på ellipsen i slutet av en rad vars webbplats du vill byta namn på i tabellen för Edge Delivery-webbplatser.
 Klicka på **Byt namn**.
-   * Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet på sidan för att visa den vänstra menyn. Klicka på ikonen ![Webbsidor](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) **Edge Delivery Sites** under rubriken **Tjänster**.
+   * Klicka på ![Visa menyikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) i det övre vänstra hörnet på sidan för att visa den vänstra menyn. Klicka på ikonen **Webbsidor** ![Edge Delivery Sites](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) under rubriken **Tjänster**.
 Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars webbplats du vill byta namn på i Edge Delivery-webbplatstabellen. Klicka på **Byt namn**.
 
 1. I dialogrutan **Redigera Edge Delivery-webbplats** anger du platsens nya namn i textfältet **Platsnamn**.

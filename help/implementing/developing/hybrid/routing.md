@@ -3,9 +3,9 @@ title: SPA-modellroutning
 description: För enkelsidiga program i AEM ansvarar appen för routningen. I det här dokumentet beskrivs routningsmekanismen, kontraktet och tillgängliga alternativ.
 exl-id: 1186b64e-11f8-43a6-bc75-450c4d7587ec
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -33,7 +33,7 @@ En detaljerad beskrivning finns i avsnittet [PageModelManager](blueprint.md#page
 
 ## Manuell kontra automatisk modellroutning {#manual-vs-automatic-model-routing}
 
-`ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar som behövs. Vid behov kan `ModelRouter` inaktiveras eller konfigureras för att ignorera sökvägar med hjälp av metaegenskaper (se avsnittet Metaegenskaper i [&#x200B; SPA Page Component &#x200B;](page-component.md) -dokumentet). Utvecklare på klientsidan kan sedan implementera sitt eget modellroutningslager genom att begära att `PageModelManager` läser in ett givet fragment av modellen med funktionen `getData()`.
+`ModelRouter` automatiserar hämtning av fragment av modellen. Men som alla automatiserade verktyg har de begränsningar som behövs. Vid behov kan `ModelRouter` inaktiveras eller konfigureras för att ignorera sökvägar med hjälp av metaegenskaper (se avsnittet Meta-egenskaper i [ SPA-sidkomponenten](page-component.md) -dokumentet). Utvecklare på klientsidan kan sedan implementera sitt eget modellroutningslager genom att begära att `PageModelManager` läser in ett givet fragment av modellen med funktionen `getData()`.
 
 >[!CAUTION]
 >

@@ -3,9 +3,9 @@ title: Introduktion och genomgång av SPA
 description: I den här artikeln beskrivs begreppen för ett SPA-program och du kan gå igenom hur du använder ett grundläggande SPA-program för att skapa, vilket visar hur det är relaterat till den underliggande AEM SPA-redigeraren.
 exl-id: 8dad48d5-fa90-467c-8bec-e4b76e057f80
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Genomgången baseras på AEM standardfunktioner och exempelprogrammet WKND SPA P
    * Du måste ha administratörsbehörighet för systemet.
 * [Exempelprogrammet WKND SPA Project är tillgängligt på GitHub](https://github.com/adobe/aem-guides-wknd-spa)
    * Hämta den [senaste versionen av React-appen](https://github.com/adobe/aem-guides-wknd-spa/releases) med namnet `wknd-spa-react.all-X.Y.Z-SNAPSHOT.zip`.
-   * Hämta de [senaste exempelbilderna för appen &#x200B;](https://github.com/adobe/aem-guides-wknd-spa/releases) med namnet `wknd-spa-sample-images-X.Y.Z.zip`.
+   * Hämta de [senaste exempelbilderna för appen ](https://github.com/adobe/aem-guides-wknd-spa/releases) med namnet `wknd-spa-sample-images-X.Y.Z.zip`.
    * [Använd pakethanteraren](/help/implementing/developing/tools/package-manager.md) för att installera båda paketen på samma sätt som andra paket i AEM.
    * Appen behöver inte installeras med Maven för den här genomgången.
 
@@ -48,7 +48,7 @@ Genomgången baseras på AEM standardfunktioner och exempelprogrammet WKND SPA P
 
 >[!TIP]
 >
->Alla AEM-projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE), som har stöd för SPA-projekt med React eller Angular och som använder SPA SDK.
+>Alla AEM-projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som har stöd för SPA-projekt med React eller Angular och som använder SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
@@ -94,10 +94,12 @@ Genom att återge på klientsidan reagerar sidelementen snabbare, och besökaren
 >[!TIP]
 >
 >Teknisk information om hur SPA fungerar i AEM finns i artiklarna:
+>
 >* [Komma igång med SPA i AEM med React](getting-started-react.md)
 >* [Komma igång med SPA i AEM med Angular](getting-started-angular.md)
 >
 >Mer information om design, arkitektur och tekniska arbetsflöden i SPA-redigeraren finns i artikeln:
+>
 >* [SPA-redigeraren - översikt](editor-overview.md).
 
 ## Innehållsredigering med SPA {#content-editing-experience-with-spa}

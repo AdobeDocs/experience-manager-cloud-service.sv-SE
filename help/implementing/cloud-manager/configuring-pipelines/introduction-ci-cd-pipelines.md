@@ -5,8 +5,8 @@ index: true
 exl-id: 40d6778f-65e0-4612-bbe3-ece02905709b
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: ac918008c3f99d74e01be59c9841083abf3604aa
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1546'
 ht-degree: 0%
@@ -71,7 +71,7 @@ I följande tabell sammanfattas de rörledningar som är tillgängliga i Cloud M
 | Produktion eller icke-produktion | Distribution | Fullhög | Distribuerar samtidigt kodbyggen för baksidan och framsidan tillsammans med HTTPD/Dispatcher-konfigurationer | Används när serverdelskoden måste distribueras samtidigt med AEM serverkod. Används när rörledningar i frontendänden eller konfigurationsledningar i webbskiktet ännu inte har antagits. |
 | Produktion eller icke-produktion | Distribution | Front-end | Distribuerar frontkodbygge som innehåller ett eller flera gränssnittsprogram på klientsidan | Stöder flera samtidiga frontendledningar<br>mycket snabbare än fullstacksdistributioner. |
 | Produktion eller icke-produktion | Distribution | Webbnivåkonfiguration | Distribuerar HTTPD/Dispatcher-konfigurationer | Distribuerar på några minuter |
-| Produktion eller icke-produktion | Distribution | Konfig | Distribuerar [konfiguration för ett antal funktioner &#x200B;](/help/operations/config-pipeline.md) som är relaterade till CDN, vidarebefordring av loggar och tömningsunderhåll | Distribuerar på några minuter |
+| Produktion eller icke-produktion | Distribution | Konfig | Distribuerar [konfiguration för ett antal funktioner ](/help/operations/config-pipeline.md) som är relaterade till CDN, vidarebefordring av loggar och tömningsunderhåll | Distribuerar på några minuter |
 | Icke-produktion | Kodkvalitet | Hel hög | Kör kodkvalitetsgenomsökningar på kod i full stack utan distribution | Stöd för flera rörledningar |
 | Icke-produktion | Kodkvalitet | Front-end | Kör kodkvalitetsgenomsökningar på slutkod utan distribution | Stöd för flera rörledningar |
 | Icke-produktion | Kodkvalitet | Webbnivåkonfiguration | Kör kodkvalitetsgenomsökningar på Dispatcher-konfigurationer utan distribution | Stöd för flera rörledningar |

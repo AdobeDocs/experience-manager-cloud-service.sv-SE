@@ -4,8 +4,8 @@ description: Med Cloud Manager användargränssnitt kan du lägga till en anpass
 exl-id: ed03bff9-dfcc-4dfe-a501-a7facd24aa7d
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: fdd86b966f0480c00b7cd975d63a48b82fb1d027
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 1%
@@ -19,8 +19,8 @@ ht-degree: 1%
 >id="aemcloud_golive_domains"
 >title="Hantera anpassade domännamn"
 >abstract="Med Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name" text="Lägga till ett anpassat domännamn"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/managing-custom-domain-names" text="Visa och uppdatera anpassat domännamn"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name" text="Lägga till ett anpassat domännamn"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/managing-custom-domain-names" text="Visa och uppdatera anpassat domännamn"
 
 Adobe Experience Manager as a Cloud Service har etablerats med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Med hjälp av Cloud Manager användargränssnitt kan du lägga till en anpassad domän för att identifiera din webbplats med ett unikt, varumärkesprofilerat namn på ett självbetjäningssätt. Standarddomännamnet `*.adobeaemcloud.com` kvarstår, även efter att du har associerat anpassade domännamn till webbplatsen.
 

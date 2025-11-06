@@ -3,8 +3,8 @@ title: Loggning för AEM as a Cloud Service
 description: Lär dig hur du använder loggning för AEM as a Cloud Service för att konfigurera globala parametrar för den centrala loggningstjänsten, specifika inställningar för de enskilda tjänsterna eller hur du begär dataloggning.
 exl-id: 262939cc-05a5-41c9-86ef-68718d2cd6a9
 feature: Log Files, Developing
-role: Admin, Architect, Developer
-source-git-commit: 5c32a088cf7e334ba6497a595b5176e5389ce9ed
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2556'
 ht-degree: 0%
@@ -158,6 +158,7 @@ Konfigurera java-loggning för anpassade Java-paket via OSGi-konfigurationer fö
 Om du ändrar andra konfigurationsegenskaper för LogManager OSGi kan det uppstå tillgänglighetsproblem i AEM as a Cloud Service.
 
 För att säkerställa en effektiv övervakning av kundens miljöer, som vi nämnt i ett tidigare avsnitt:
+
 * Loggnivån för AEM standardloggkonfiguration (Apache Sling Logging Configuration) får inte ändras från standardvärdet INFO.
 * Du kan ställa in loggnivåerna på DEBUG för enskilda paket med produktkod (med instanser av OSGi-konfigurationsfabriken &quot;Apache Sling Logging Logger configuration&quot;), men du bör spara tid för att förhindra prestandaförsämring och återställa till INFO när det inte längre behövs.
 * Det går bra att justera loggnivåer för kundutvecklad kod.
@@ -165,8 +166,10 @@ För att säkerställa en effektiv övervakning av kundens miljöer, som vi näm
 * Loggutdata måste vara kopplade till standardfilen &quot;logs/error.log&quot;.
 
 Därför får inte följande OSGi-egenskaper ändras:
+
 * **Konfiguration av Apache Sling-logg** (PID: `org.apache.sling.commons.log.LogManager`) — *alla egenskaper*
 * **Konfiguration av loggningsloggare för Apache Sling** (Factory PID: `org.apache.sling.commons.log.LogManager.factory.config`):
+
    * `org.apache.sling.commons.log.file`
    * `org.apache.sling.commons.log.pattern`
 

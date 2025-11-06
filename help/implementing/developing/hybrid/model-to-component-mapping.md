@@ -3,9 +3,9 @@ title: Dynamisk mappning av modell till komponent för SPA
 description: I den här artikeln beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för AEM.
 exl-id: 3a7b3f26-4a09-40c1-af03-bb8408a68e57
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Single-page Applications using the JavaScript SPA SDK for AEM are model-driven:
 1. Front-end-komponenter registrerar sig själva för [Component Mapping Store](#componentmapping-module).
 1. Sedan itererar [behållaren](blueprint.md#container), när den har tillhandahållits med en modell av [modellprovidern](blueprint.md#the-model-provider), över sitt modellinnehåll (`:items`).
 
-1. Om det finns en sida hämtar dess underordnade sidor (`:children`) först en komponentklass från [&#x200B; Component Mapping](blueprint.md#componentmapping) och instansierar den sedan.
+1. Om det finns en sida hämtar dess underordnade sidor (`:children`) först en komponentklass från [ Component Mapping](blueprint.md#componentmapping) och instansierar den sedan.
 
 ## Programinitiering {#app-initialization}
 

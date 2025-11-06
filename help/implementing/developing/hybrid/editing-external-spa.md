@@ -3,9 +3,9 @@ title: Redigera en extern SPA i AEM
 description: I det här dokumentet beskrivs de rekommenderade stegen för att överföra en fristående SPA till en AEM-instans, lägga till redigerbara innehållsavsnitt och aktivera redigering.
 exl-id: 7978208d-4a6e-4b3a-9f51-56d159ead385
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2370'
 ht-degree: 0%
@@ -28,9 +28,9 @@ I det här dokumentet beskrivs de rekommenderade stegen för att överföra en f
 Förutsättningarna är enkla.
 
 * Kontrollera att en instans av AEM körs lokalt.
-* Skapa ett basprojekt för AEM SPA med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE&#available-properties).
+* Skapa ett basprojekt för AEM SPA med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?#available-properties).
    * Forms ligger till grund för AEM-projektet som uppdateras med det externa SPA-programmet.
-   * För exemplen i det här dokumentet använder Adobe startpunkten för [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=sv-SE#spa-editor).
+   * För exemplen i det här dokumentet använder Adobe startpunkten för [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html#spa-editor).
 * Ha den fungerande, externa React SPA som du vill integrera till hands.
 
 ## Överför SPA till AEM Project {#upload-spa-to-aem-project}
@@ -241,7 +241,7 @@ Komponenten `TestPage` ser ut så här när den virtuella komponenten har lagts 
 
 >[!NOTE]
 >
->Kontrollera att `resourceType` har angetts för komponenten `AEMText` i konfigurationen så att du kan aktivera den här funktionen.
+>Kontrollera att `AEMText` har angetts för komponenten `resourceType` i konfigurationen så att du kan aktivera den här funktionen.
 
 Du kan nu distribuera ändringarna till AEM enligt stegen i avsnittet [Verifiera redigering av textinnehåll på AEM](#verify-text-edit). En platshållare visas för den `text_20`-nod som för närvarande inte finns.
 
@@ -373,8 +373,8 @@ RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett
 Följande referensmaterial kan vara användbart för att förstå SPA i samband med AEM.
 
 * [Headless and Headless in AEM](/help/implementing/developing/headful-headless.md)
-* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE)
-* [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=sv-SE)
+* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [WKND SPA-projektet](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html)
 * [Komma igång med SPA i AEM med React](/help/implementing/developing/hybrid/getting-started-react.md)
 * [SPA-referensmaterial (API-referenser)](/help/implementing/developing/hybrid/reference-materials.md)
 * [SPA Blueprint och PageModelManager](/help/implementing/developing/hybrid/blueprint.md#pagemodelmanager)

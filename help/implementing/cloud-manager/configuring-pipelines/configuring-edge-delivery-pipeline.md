@@ -3,12 +3,12 @@ title: Lägg till en Edge Delivery Pipeline
 description: Lär dig hur du lägger till en Edge Delivery-pipeline för att bygga och driftsätta din kod i produktionsmiljöer.
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 hide: false
 index: false
 hidefromtoc: false
 exl-id: 5ad342fa-dd71-4105-a9cb-2d999d402780
-source-git-commit: 9ad50747b46b75c33cb5b034e8b8e41d5079e967
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 0%
@@ -68,7 +68,7 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 
    * **Lägg till en Edge Delivery-pipeline från sidan för pipeline**
 
-      1. Klicka på ikonen **Arbetsflöde eller Pipelines** Pipelines **![i den vänstra listen under &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Program**.
+      1. Klicka på ikonen **Arbetsflöde eller Pipelines** Pipelines **![i den vänstra listen under ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Program**.
       1. Klicka på **Lägg till pipeline** > **Lägg till Edge Delivery-pipeline** på sidan Pipelines, i det övre högra hörnet.
 
          ![Sidan Pipelines med knappen Lägg till pipeline](/help/implementing/cloud-manager/configuring-pipelines/assets/pipelinespage-add-ed-pipeline.png)

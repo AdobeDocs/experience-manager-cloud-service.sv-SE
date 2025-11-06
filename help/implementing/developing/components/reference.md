@@ -3,23 +3,23 @@ title: Referenshandbok för komponenter
 description: En referenshandbok för utvecklare som beskriver komponenterna och deras struktur
 exl-id: 45e5265b-39d6-4a5c-be1a-e66bb7ea387d
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '3481'
+source-wordcount: '3476'
 ht-degree: 0%
 
 ---
 
 # Referenshandbok för komponenter {#components-reference-guide}
 
-Komponenterna utgör kärnan i AEM. [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) gör det enkelt att komma igång med en verktygsuppsättning med färdiga, robusta komponenter. [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) tar utvecklaren igenom hur de här verktygen används och hur du skapar anpassade komponenter för att skapa en AEM webbplats.
+Komponenterna utgör kärnan i byggandet av en upplevelse i AEM. [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) gör det enkelt att komma igång med en verktygsuppsättning med färdiga, robusta komponenter. [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) tar utvecklaren igenom hur de här verktygen används och hur du skapar anpassade komponenter för att skapa en AEM-webbplats.
 
 >[!TIP]
 >
->Innan du refererar till det här dokumentet bör du kontrollera att du har slutfört [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och därför känner till [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) och [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE).
+>Innan du refererar till det här dokumentet bör du kontrollera att du har slutfört [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och därför känner till [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
-Eftersom WKND-självstudiekursen täcker de flesta användningsfall är det här dokumentet endast avsett som komplement till dessa resurser. Den innehåller detaljerade tekniska detaljer om hur komponenterna är strukturerade och konfigurerade i AEM och är inte avsedd som en guide för att komma igång.
+Eftersom WKND-självstudiekursen täcker de flesta användningsfall är det här dokumentet endast avsett som komplement till dessa resurser. Här finns detaljerade tekniska detaljer om hur komponenterna är strukturerade och konfigurerade i AEM och inte avsedda att komma igång.
 
 ## Ökning {#overview}
 
@@ -34,16 +34,16 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
 * Kommer din komponent att behöva logik för att kunna markera/ändra innehållet?
    * Logiken ska hållas åtskild från användargränssnittslagret. HTML är utformat för att säkerställa att detta sker.
 * Behöver komponenten CSS-formatering?
-   * CSS-formateringen ska hållas åtskild från komponentdefinitionerna. Definiera konventioner för att namnge elementen i HTML så att du kan ändra dem via externa CSS-filer.
+   * CSS-formateringen ska hållas åtskild från komponentdefinitionerna. Definiera konventioner för att namnge dina HTML-element så att du kan ändra dem via externa CSS-filer.
 * Vilka säkerhetsåtgärder kan den nya komponenten ge upphov till?
 
 ### Återanvända befintliga komponenter {#reusing-components}
 
-Innan du lägger tid på att skapa en helt ny komponent bör du överväga att anpassa eller utöka befintliga komponenter. [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) innehåller en serie flexibla, robusta och väl testade produktionsklara komponenter.
+Innan du lägger tid på att skapa en helt ny komponent bör du överväga att anpassa eller utöka befintliga komponenter. [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) innehåller en serie flexibla, robusta och väl testade produktionsklara komponenter.
 
 #### Utöka kärnkomponenter {#extending-core-components}
 
-Core Components erbjuder även [tydliga anpassningsmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=sv-SE) som du kan använda för att anpassa dem efter ditt eget projekt.
+Core Components erbjuder även [tydliga anpassningsmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html) som du kan använda för att anpassa dem efter ditt eget projekt.
 
 #### Ersätta komponenter {#overlying-components}
 
@@ -57,21 +57,21 @@ Det innebär att du bara behöver definiera om skillnaderna, i stället för att
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
-Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). Komponenten måste definiera den HTML som behövs för att ta det önskade innehållet och sedan återge det efter behov, både i skribent- och publiceringsmiljöer.
+Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). Komponenten måste definiera den HTML som behövs för att kunna hantera det önskade innehållet och sedan återge det efter behov, både i skribent- och publiceringsmiljöer.
 
 Vi rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
-Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett riktigt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
+Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett riktigt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
 
 Den här (valfria) logiken kan implementeras på olika sätt och anropas från HTML med specifika kommandon:
 
-* Med Java - [Använd-API:t för HTL Java &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html?lang=sv-SE) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
-* Om du använder JavaScript - [Använd-API:t för HTML JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html?lang=sv-SE) aktiveras en HTML-fil för åtkomst till hjälpkod som skrivits i JavaScript. På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+* Med Java - [Använd-API:t för HTL Java ](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html) kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+* Om du använder JavaScript - [Använd-API:t för HTML JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/use-api-javascript.html) aktiveras en HTML-fil för åtkomst till hjälpkod som skrivits i JavaScript. På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 * Använda bibliotek på klientsidan - Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Mer information finns i dokumentet [Använda bibliotek på klientsidan på AEM as a Cloud Service](/help/implementing/developing/introduction/clientlibs.md).
 
 ## Komponentstruktur {#structure}
 
-Strukturen i en AEM är kraftfull och flexibel. Huvuddelarna är:
+Strukturen i en AEM-komponent är kraftfull och flexibel. Huvuddelarna är:
 
 * [Resurstyp](#resource-type)
 * [Komponentdefinition](#component-definition)
@@ -92,8 +92,8 @@ Detta är en abstraktion som hjälper till att se till att avsikten stannar kvar
 
 Definitionen av en komponent kan delas upp enligt följande:
 
-* AEM baseras på [Sling](https://sling.apache.org/documentation.html).
-* AEM finns under `/libs/core/wcm/components`.
+* AEM-komponenter baseras på [Sling](https://sling.apache.org/documentation.html).
+* AEM-komponenter finns under `/libs/core/wcm/components`.
 * Projekt-/platsspecifika komponenter finns under `/apps/<myApp>/components`.
 * AEM standardkomponenter definieras som `cq:Component` och har nyckelelementen:
    * jcr Properties - En lista med jcr-egenskaper. Dessa är variabla och vissa kan vara valfria genom att grundstrukturen för en komponentnod, dess egenskaper och undernoder definieras av definitionen `cq:Component`.
@@ -145,7 +145,7 @@ Om du vill avbryta arvet av ikoner från superkomponenter återställs standardb
 
 [Komponentkonsolen](/help/sites-cloud/authoring/components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
 
-#### Exempel på SVG-ikon {#svg-icon-example}
+#### Exempel på SVG-ikoner {#svg-icon-example}
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -205,7 +205,7 @@ Dialogrutor är ett nyckelelement i komponenten eftersom de tillhandahåller ett
 
 Beroende på komponentens komplexitet kan din dialogruta behöva en eller flera flikar.
 
-Dialogrutor för AEM:
+Dialogrutor för AEM-komponenter:
 
 * Är `cq:dialog` noder av typen `nt:unstructured`.
 * Finns under deras `cq:Component`-noder och bredvid deras komponentdefinitioner.
@@ -238,7 +238,7 @@ Granite-gränssnittet innehåller ett stort urval av de grundläggande widgetar 
 
 Mer information finns i följande resurser:
 
-* [Struktur för AEM](/help/implementing/developing/introduction/ui-structure.md)
+* [AEM användargränssnittets struktur](/help/implementing/developing/introduction/ui-structure.md)
 
 ### Anpassa dialogrutefält {#customizing-dialog-fields}
 
@@ -312,7 +312,7 @@ I det här avsnittet beskrivs hur du konfigurerar redigeringsbeteendet för en k
 Redigeringsbeteendet för en komponent konfigureras genom att en `cq:editConfig`-nod av typen `cq:EditConfig` läggs till under komponentnoden (av typen `cq:Component`) och genom att specifika egenskaper och underordnade noder läggs till. Följande egenskaper och underordnade noder är tillgängliga:
 
 * `cq:editConfig`-nodegenskaper
-* [`cq:editConfig` underordnade noder &#x200B;](#configuring-with-cq-editconfig-child-nodes):
+* [`cq:editConfig` underordnade noder ](#configuring-with-cq-editconfig-child-nodes):
    * `cq:dropTargets` (nodtyp `nt:unstructured`): definierar en lista med släppmål som kan acceptera en släppning från en resurs i innehållssökaren (ett enskilt släppmål tillåts)
    * `cq:inplaceEditing` (nodtyp `cq:InplaceEditingConfig`): definierar en redigeringskonfiguration på plats för komponenten
    * `cq:listeners` (nodtyp `cq:EditListenersConfig`): definierar vad som händer före eller efter att en åtgärd inträffar för komponenten
@@ -330,7 +330,7 @@ Den typiska HTML-koden för en platshållare är följande:
 <div class="cq-placeholder" data-emptytext="Component Name"></div>
 ```
 
-Det typiska HTL-skriptet som återger platshållaren HTML är följande:
+Det typiska HTML-skriptet som återger platshållaren HTML är följande:
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
@@ -339,7 +339,7 @@ Det typiska HTL-skriptet som återger platshållaren HTML är följande:
 
 I föregående exempel är `isEmpty` en variabel som bara är true när komponenten inte har något innehåll och är osynlig för författaren.
 
-För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare, [som den som finns i Core Components](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html).
+För att undvika upprepningar rekommenderar Adobe att implementerare av komponenter använder en HTML-mall för dessa platshållare, [som den som finns i Core-komponenterna](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html).
 
 Mallen i den föregående länken används sedan med följande rad i HTML:
 
@@ -350,9 +350,9 @@ Mallen i den föregående länken används sedan med följande rad i HTML:
 
 I det föregående exemplet är `model.text` variabeln som är sann bara när innehållet har innehåll och är synligt.
 
-Ett exempel på hur den här mallen används visas i kärnkomponenterna, [, till exempel i titelkomponenten &#x200B;](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27).
+Ett exempel på hur den här mallen används visas i kärnkomponenterna, [, till exempel i titelkomponenten ](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27).
 
-### Konfigurera med cq:EditConfig-underordnade noder {#configuring-with-cq-editconfig-child-nodes}
+### Konfigurerar med cq:EditConfig underordnade noder {#configuring-with-cq-editconfig-child-nodes}
 
 #### Släpp Assets i en dialogruta - cq:dropTargets {#cq-droptargets}
 
@@ -360,7 +360,7 @@ Noden `cq:dropTargets` (nodtypen `nt:unstructured`) definierar släppmålet som 
 
 Den underordnade noden av typen `cq:DropTargetConfig` definierar ett släppmål i komponenten.
 
-### lokal redigering - cq:inplaceEditing {#cq-inplaceediting}
+### Direktredigering - cq:inplaceEditing {#cq-inplaceediting}
 
 Med en lokal redigerare kan användaren redigera innehåll direkt i innehållsflödet utan att behöva öppna någon dialogruta. Standardkomponenterna **Text** och **Title** har till exempel båda en redigerare på plats.
 
@@ -372,7 +372,7 @@ Noden `cq:inplaceEditing` (nodtyp `cq:InplaceEditingConfig`) definierar en redig
 |---|---|---|
 | `active` | `Boolean` | `true` om du vill aktivera redigering på plats för komponenten. |
 | `configPath` | `String` | Sökväg till redigerarkonfigurationen, som kan anges av en konfigurationsnod |
-| `editorType` | `String` | De tillgängliga typerna är: `plaintext` för innehåll som inte är HTML, `title` konverterar grafiska titlar till en vanlig text innan redigeringen påbörjas och `text` använder RTF-redigeraren |
+| `editorType` | `String` | De tillgängliga typerna är: `plaintext` för icke-HTML-innehåll, `title` konverterar grafiska titlar till en vanlig text innan redigeringen påbörjas och `text` använder RTF-redigeraren |
 
 Följande konfiguration aktiverar redigering på plats för komponenten och definierar `plaintext` som redigerartyp:
 
@@ -383,7 +383,7 @@ Följande konfiguration aktiverar redigering på plats för komponenten och defi
         editorType="plaintext"/>
 ```
 
-### Hantera fälthändelser - cq:avlyssnare {#cq-listeners}
+### Hantera fälthändelser - cq:listeners {#cq-listeners}
 
 Metoden för att hantera händelser i dialogfält utförs med avlyssnare i ett anpassat [klientbibliotek](/help/implementing/developing/introduction/clientlibs.md).
 
@@ -439,7 +439,7 @@ Med följande konfiguration uppdateras sidan när komponenten har tagits bort, r
 
 ### Fältvalidering {#field-validation}
 
-Fältvalidering i GRENITUI och GRENITUI-widgetar görs med API:t `foundation-validation`. Mer information finns i [`foundation-valdiation` Granite-dokumentationen &#x200B;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html).
+Fältvalidering i GRENITUI och GRENITUI-widgetar görs med API:t `foundation-validation`. Mer information finns i [`foundation-valdiation` Granite-dokumentationen ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html).
 
 ### Dialogrutans tillgänglighet identifieras {#dialog-ready}
 

@@ -3,8 +3,8 @@ title: Hälsoutvärdering för produktions- och scenmiljöer
 description: Lär dig hur du använder Cloud Manager Health Assessment. Du kan skanna AEM-miljöer, köra och granska rapporter, visa probleminformation, exportera PDF:er och hantera tidigare körningar.
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 5f9d53958076b77cd333a042003c83853594db87
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1406'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Se även [Hälsobedömningsmönster](#ha-patterns) för regeldefinitioner och re
 
      ![Välja Hälsoutvärdering på ellipsmenyn i miljökortet](/help/implementing/cloud-manager/reports/assets/ha-myprograms-environments-card.png)
 
-   * På den vänstra menyn, under **Tjänster**, klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**. Klicka på ikonen ![Ellips eller Mer &#x200B;](https://spectrum.adobe.com/static/icons/ui_18/More.svg) till höger om ett miljönamn på sidan Miljöer och välj sedan **Hälsoutvärdering** på menyn.
+   * På den vänstra menyn, under **Tjänster**, klickar du på ![Dataikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) **Miljö**. Klicka på ikonen ![Ellips eller Mer ](https://spectrum.adobe.com/static/icons/ui_18/More.svg) till höger om ett miljönamn på sidan Miljöer och välj sedan **Hälsoutvärdering** på menyn.
 
      ![Välja Hälsoutvärdering på ellipsmenyn på miljösidan](/help/implementing/cloud-manager/reports/assets/ha-environments-page.png)
 
@@ -80,7 +80,7 @@ Se även [Hälsobedömningsmönster](#ha-patterns) för regeldefinitioner och re
 
 ### Visa den senaste rapportinformationen {#view-report-details}
 
-* På sidan **Hälsoutvärdering** till höger om titeln **Senaste rapport** klickar du på ikonen ![Ellips eller Mer &#x200B;](https://spectrum.adobe.com/static/icons/ui_18/More.svg) och sedan på **Visa information** eller **Hämta**.
+* På sidan **Hälsoutvärdering** till höger om titeln **Senaste rapport** klickar du på ikonen ![Ellips eller Mer ](https://spectrum.adobe.com/static/icons/ui_18/More.svg) och sedan på **Visa information** eller **Hämta**.
 
   Alternativet **Visa information** visar följande:
 
@@ -125,12 +125,12 @@ Nedan följer en fullständig lista över de antimönster och problem som Hälso
 
 | Mönsternamn | Kategori | Typ | Beskrivning | Effekt | Automatisk korrigering? |
 | --- | --- | --- | --- | --- | --- |
-| Anpassade AEM-grupper med tillägg direkt från användaren | Dokumentskydd | Innehållsanalys | Användare som läggs till direkt i AEM-grupper i stället för att lägga till IMS-grupper som medlemmar. | Behörighetshantering och säkerhetsstyrning kan bli komplicerade. [IMS-stöd](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/ims-support) | Nej |
-| JCR-innehållsnod saknas på sidor | Databasstruktur | Innehållsanalys | `jcr:content`-nod saknas på sidan. | Funktionsbegränsningar i Experience Manager as a Cloud Service. [Mönsteridentifiering - ACV](https://experienceleague.adobe.com/sv/docs/experience-manager-pattern-detection/table-of-contents/acv) | Nej |
-| Saknad typ av delningsresurs på sidor | Databasstruktur | Innehållsanalys | `sling:resourceType` saknas på sidan. | Funktionsbegränsningar i Experience Manager as a Cloud Service. [Mönsteridentifiering - ACV](https://experienceleague.adobe.com/sv/docs/experience-manager-pattern-detection/table-of-contents/acv) | Nej |
-| Sidor med mycket stort nodantal | Prestanda | Innehållsanalys | Sidorna innehåller ett stort antal noder i sin struktur. | Långsam sidladdningstid och dålig användarupplevelse. [Mönsteridentifiering - PCX](https://experienceleague.adobe.com/sv/docs/experience-manager-pattern-detection/table-of-contents/pcx) | Nej |
-| För många arbetsflödesinstanser som körs | Prestanda | Innehållsanalys | För många arbetsflödesinstanser körs. | Total försämring av systemprestanda. [Underhållsaktiviteter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance) | Nej |
-| Ej rensade slutförda arbetsflödesinstanser | Prestanda | Innehållsanalys | Äldre slutförda arbetsflödesinstanser rensas inte. | Minskad systemeffektivitet och ökade lagringskostnader. [Underhållsaktiviteter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance) | Nej |
+| Anpassade AEM-grupper med tillägg direkt från användaren | Dokumentskydd | Innehållsanalys | Användare som läggs till direkt i AEM-grupper i stället för att lägga till IMS-grupper som medlemmar. | Behörighetshantering och säkerhetsstyrning kan bli komplicerade. [IMS-stöd](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/ims-support) | Nej |
+| JCR-innehållsnod saknas på sidor | Databasstruktur | Innehållsanalys | `jcr:content`-nod saknas på sidan. | Funktionsbegränsningar i Experience Manager as a Cloud Service. [Mönsteridentifiering - ACV](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) | Nej |
+| Saknad typ av delningsresurs på sidor | Databasstruktur | Innehållsanalys | `sling:resourceType` saknas på sidan. | Funktionsbegränsningar i Experience Manager as a Cloud Service. [Mönsteridentifiering - ACV](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/acv) | Nej |
+| Sidor med mycket stort nodantal | Prestanda | Innehållsanalys | Sidorna innehåller ett stort antal noder i sin struktur. | Långsam sidladdningstid och dålig användarupplevelse. [Mönsteridentifiering - PCX](https://experienceleague.adobe.com/en/docs/experience-manager-pattern-detection/table-of-contents/pcx) | Nej |
+| För många arbetsflödesinstanser som körs | Prestanda | Innehållsanalys | För många arbetsflödesinstanser körs. | Total försämring av systemprestanda. [Underhållsaktiviteter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) | Nej |
+| Ej rensade slutförda arbetsflödesinstanser | Prestanda | Innehållsanalys | Äldre slutförda arbetsflödesinstanser rensas inte. | Minskad systemeffektivitet och ökade lagringskostnader. [Underhållsaktiviteter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance) | Nej |
 | Användningsstatistik för innehållsfragment | Statistik | Innehållsanalys | Spårar antalet innehållsfragment som används. | Ej tillämpligt | Ej tillämpligt |
 | Användningsstatistik för innehållsfragmentmodell | Statistik | Innehållsanalys | Spårar antalet innehållsfragmentmodeller som används. | Ej tillämpligt | Ej tillämpligt |
 | MSM stort antal utkast | Statistik | Innehållsanalys | Spårar antalet ritningar. | Det kan göra hanteringen mer komplicerad och göra innehållsstyrningen svårare. | Ej tillämpligt |

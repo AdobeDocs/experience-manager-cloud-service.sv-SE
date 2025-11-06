@@ -4,8 +4,8 @@ description: Cloud Manager genererar en unik och stegvis version för testnings-
 exl-id: 658bcbed-0733-45da-a3e3-9a5f817099c5
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%

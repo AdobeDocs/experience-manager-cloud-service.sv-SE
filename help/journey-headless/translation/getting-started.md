@@ -4,8 +4,8 @@ description: Lär dig hur du organiserar rubrikfritt innehåll och hur AEM över
 exl-id: 04ae2cd6-aba3-4785-9099-2f6ef24e1daf
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 66cd28d43c56f2e8fc44674175aa9b70b7a72ed1
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -193,4 +193,4 @@ Vi rekommenderar att du går vidare till nästa del av den headless-översättni
 * [Konfigurerar översättningsintegreringsramverket](/help/sites-cloud/administering/translation/integration-framework.md) - Lär dig hur du konfigurerar översättningsintegreringsramverket så att det integreras med översättningstjänster från tredje part.
 * [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md) - Lär dig hur du skapar och hanterar både maskinöversättningsprojekt och mänskliga översättningsprojekt i AEM.
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

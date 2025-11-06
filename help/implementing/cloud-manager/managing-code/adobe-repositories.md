@@ -1,10 +1,10 @@
 ---
 title: Lägg till en Adobe-databas i Cloud Manager
-description: Lär dig hur du lägger till en databas som hanteras med Adobe i Cloud Manager.
+description: Lär dig hur du lägger till en Adobe-hanterad databas i Cloud Manager.
 exl-id: 6c32c4ae-f48d-4440-bfc2-cdc1a3d59599
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: f2364de6237ca9f0285815b581bcf3881488188d
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Lägga till en Adobe-databas i Cloud Manager {#adobe-repositories}
 
-Lär dig hur du lägger till en databas som hanteras med Adobe i Cloud Manager.
+Lär dig hur du lägger till en Adobe-hanterad databas i Cloud Manager.
 
-Sidan **Databaser** gör det enkelt att lägga till ytterligare databaser som hanteras med Adobe i ett valt program.
+Sidan **Databaser** gör det enkelt att lägga till fler Adobe-hanterade databaser i ett valt program.
 
 **Så här lägger du till en Adobe-databas i Cloud Manager:**
 
-1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj den organisation och det program som du vill lägga till en databas som hanteras med Adobe.
+1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj den organisation och det program som du vill lägga till en Adobe-hanterad databas i.
 
 1. På sidan **Programöversikt** klickar du på fliken ![Mappikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) **Databaser** på sidomenyn.
 

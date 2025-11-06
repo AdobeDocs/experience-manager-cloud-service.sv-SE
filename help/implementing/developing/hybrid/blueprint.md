@@ -3,9 +3,9 @@ title: SPA Blueprint
 description: I det här dokumentet beskrivs det allmänna, ramverksoberoende kontraktet som alla SPA-ramverk ska uppfylla så att du kan implementera redigerbara SPA-komponenter i AEM.
 exl-id: 9d47c0e9-600c-4f45-9169-b3c9bbee9152
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Sidans innehållsstruktur lagras i AEM. Sidans modell används för att mappa oc
 
 SPA-komponenterna måste vara synkroniserade med sidmodellen och uppdateras om innehållet ändras i enlighet med detta. Ett mönster som använder dynamiska komponenter måste användas för att instansiera komponenter i farten efter den angivna sidmodellstrukturen.
 
-### Metafält {#meta-fields}
+### Meta-fält {#meta-fields}
 
 Sidmodellen använder JSON-modellens exporterare, som i sin tur är baserad på API:t [Sling Model](https://sling.apache.org/documentation/bundles/models.html) . De exporterbara snedsättningsmodellerna visar följande fältlista för att de underliggande biblioteken ska kunna tolka datamodellen:
 
@@ -83,7 +83,7 @@ Sidmodellen använder JSON-modellens exporterare, som i sin tur är baserad på 
 * `:itemsOrder`: Ordnad lista över underordnade. JSON-mappningsobjektet garanterar inte fältordningen. Genom att ha både kartan och den aktuella arrayen får API-konsumenten fördelarna med båda strukturerna
 * `:path`: Innehållssökväg för ett objekt (finns i objekt som representerar en sida)
 
-Se även [Komma igång med AEM Content Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE).
+Se även [Komma igång med AEM Content Services](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html).
 
 ### Ramverksspecifik modul {#framework-specific-module}
 

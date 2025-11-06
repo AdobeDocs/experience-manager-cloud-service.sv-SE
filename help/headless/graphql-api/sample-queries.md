@@ -4,9 +4,9 @@ description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll
 feature: Headless, Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
 role: Admin, Developer
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1938'
+source-wordcount: '1927'
 ht-degree: 0%
 
 ---
@@ -1980,10 +1980,10 @@ Följande fragment används för rätt modell.
 
 | Namn | Land | Population | Kategorier |
 |--- |--- |--- |--- |
-| Basel | Schweiz | 172258 | stad:emea |
-| Berlin | Tyskland | 3669491 | stad:huvudstad<br>stad:emea |
-| Bucharest | Rumänien | 1821000 | stad:huvudstad<br>stad:emea |
+| Basel | Schweiz | 172258 | stad :emea |
+| Berlin | Tyskland | 3669491 | city:capital<br>city:emea |
+| Bucharest | Rumänien | 1821000 | city:capital<br>city:emea |
 | San Francisco | USA | 883306 | city:beach<br>city:na |
-| San Jose | USA | 102635 | stad:na |
-| Stuttgart | Tyskland | 634830 | stad:emea |
-| Zürich | Schweiz | 415367 | stad:huvudstad<br>stad:emea |
+| San Jose | USA | 102635 | stad :na |
+| Stuttgart | Tyskland | 634830 | stad :emea |
+| Zürich | Schweiz | 415367 | city:capital<br>city:emea |

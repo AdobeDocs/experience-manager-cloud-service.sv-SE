@@ -1,11 +1,11 @@
 ---
 title: Innehållsfragment - Ta bort överväganden
-description: Granska dessa viktiga aspekter innan du definierar dina regler för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
+description: Granska dessa viktiga aspekter innan du definierar din princip för borttagning av innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 exl-id: d1726bff-3aa8-4758-bee7-0cacea1f660a
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Ta bort överväganden för innehållsfragment {#delete-considerations-content-fragments}
 
-Granska dessa viktiga aspekter innan du definierar borttagningsprinciper för innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
+Granska dessa viktiga aspekter innan du definierar din borttagningsprincip för innehållsfragment i AEM. Content Fragments är ett kraftfullt verktyg för att leverera headless-innehåll, och konsekvenserna av att ta bort dem måste noggrant övervägas.
 
 ## Behörigheter - ta bort eller inte ta bort {#permissions-delete-or-not-delete}
 
@@ -36,7 +36,7 @@ När det gäller borttagningsbehörigheter måste innehållsfragment beaktas på
 
 >[!NOTE]
 >
->Se även Granska åtgärder för användarhantering i AEM.
+>Se även How to Audit User Management Operations in AEM.
 
 ## Behörigheter krävs endast för redigeringsfunktionen {#permissions-required-for-editor-functionality-only}
 

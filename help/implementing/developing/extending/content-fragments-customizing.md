@@ -3,8 +3,8 @@ title: Anpassa och utöka innehållsfragment
 description: Ett innehållsfragment utökar en standardresurs. Lär dig hur du kan anpassa dem.
 exl-id: 58152d6e-21b6-4f45-a45c-0f46ee58825e
 feature: Developing, Content Fragments
-role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1689'
 ht-degree: 0%
@@ -44,7 +44,7 @@ De enskilda innehållsfragmenten baseras på modeller för innehållsfragment:
 
 ### Integration av webbplatser med Assets {#integration-of-sites-with-assets}
 
-CFM (Content Fragment Management) ingår i Adobe Experience Manager (AEM) Assets som:
+Content Fragment Management (CFM) ingår i Adobe Experience Manager (AEM) Assets som:
 
 * Innehållsfragment är resurser.
 * De använder befintliga Assets-funktioner.
@@ -63,7 +63,6 @@ Innehållsfragment, som baseras på en innehållsfragmentmodell, mappas till en 
 * Allt innehåll lagras under resursens `jcr:content/data`-nod:
 
    * Elementdata lagras under huvudundernoden:
-
      `jcr:content/data/master`
 
    * Variationer lagras under en undernod som har variantens namn:
@@ -99,9 +98,9 @@ Integrera med Assets Core:
 
 >[!CAUTION]
 >
->Komponenten [Innehållsfragment är en del av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE). Mer information finns i [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=sv-SE).
+>Komponenten [Innehållsfragment är en del av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html). Mer information finns i [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html).
 
-Innehållsfragment kan refereras från AEM sidor, precis som andra resurstyper. AEM innehåller kärnkomponenten **[Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE)** - en [komponent som gör att du kan ta med innehållsfragment på sidorna](/help/sites-cloud/authoring/fragments/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för **[innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html?lang=sv-SE)**.
+Innehållsfragment kan refereras från AEM-sidor, precis som andra resurstyper. AEM tillhandahåller kärnkomponenten **[Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)** - en [komponent som gör att du kan ta med innehållsfragment på dina sidor](/help/sites-cloud/authoring/fragments/content-fragments.md#adding-a-content-fragment-to-your-page). Du kan också utöka den här kärnkomponenten för **[innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html)**.
 
 * Komponenten använder egenskapen `fragmentPath` för att referera till det faktiska innehållsfragmentet. Egenskapen `fragmentPath` hanteras på samma sätt som liknande egenskaper för andra resurstyper, till exempel när innehållsfragmentet flyttas till en annan plats.
 
@@ -149,7 +148,7 @@ Innehållsfragment kan integreras med:
 
   >[!NOTE]
   >
-  >Det AEM arbetsflödet för översättning fungerar med `/content`:
+  >AEM översättningsarbetsflöde fungerar med `/content`:
   >
   >* Eftersom innehållsfragmentmodellerna finns i `/conf` inkluderas de inte i sådana översättningar. Du kan internationalisera gränssnittssträngarna.
 
@@ -285,11 +284,11 @@ Se följande:
 >
 >Tänk på den här bakgrundsinformationen. Du ska inte ändra någonting här (eftersom det är markerat som ett *privat område* i databasen), men det kan ibland hjälpa att förstå hur saker och ting fungerar under huven.
 
-Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är atomiskt. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett vanligt AEM, använder innehållsfragment det som kallas *redigeringssession*.
+Att redigera ett innehållsfragment, som kan sträcka sig över flera vyer (= HTML-sidor), är av avgörande betydelse. Eftersom sådana atomiska redigeringsfunktioner för flera vyer inte är ett typiskt AEM-koncept använder innehållsfragment det som kallas *redigeringssession*.
 
 En redigeringssession startas när användaren öppnar ett innehållsfragment i redigeraren. Redigeringssessionen avslutas när användaren lämnar redigeraren genom att välja **Spara** eller **Avbryt**.
 
-Tekniskt sett utförs alla redigeringar på *live*-innehåll, precis som med all annan AEM. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** utförs ingenting specifikt eftersom redigeringen kördes på *live* -innehåll, och därför behålls alla ändringar redan. Om du klickar på **Spara** utlöses även en del bakgrundsbearbetning, till exempel att du skapar fullständig textsökningsinformation eller hanterar blandade medieresurser, eller båda.
+Tekniskt sett utförs alla redigeringar på *live*-innehåll, precis som all annan redigering i AEM. När redigeringssessionen startas skapas en version av den aktuella, oredigerade statusen. Om en användare avbryter en redigering återställs den versionen. Om användaren klickar på **Spara** utförs ingenting specifikt eftersom redigeringen kördes på *live* -innehåll, och därför behålls alla ändringar redan. Om du klickar på **Spara** utlöses även en del bakgrundsbearbetning, till exempel att du skapar fullständig textsökningsinformation eller hanterar blandade medieresurser, eller båda.
 
 Det finns vissa säkerhetsåtgärder för kantärenden, till exempel om användaren försöker lämna redigeraren utan att spara eller avbryta redigeringssessionen. Det går även att spara data med jämna mellanrum.
 Två användare kan redigera samma innehållsfragment samtidigt och därför skriva över varandras ändringar. För att förhindra detta måste innehållsfragmentet låsas genom att DAM-administrationens *utcheckningsåtgärd* tillämpas på fragmentet.
@@ -351,4 +350,4 @@ Till exempel:
 
 Mer information finns i
 
-* [Kärnkomponenter - Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) (rekommenderas)
+* [Kärnkomponenter - Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) (rekommenderas)

@@ -3,10 +3,10 @@ title: Anpassa sidredigering
 description: Läs mer om de mekanismer som AEM as a Cloud Service har för att anpassa funktionerna för att skapa sidor.
 exl-id: 98d3c7ab-46d2-4e8d-b0da-5c8a7b398135
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Se [Använda bibliotek på klientsidan i AEM as a Cloud Service](/help/implement
 
 Övertäckningar är baserade på noddefinitioner och gör att du kan täcka över standardfunktionerna i `/libs` med dina egna anpassade funktioner i `/apps`.
 
-När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [sling-resurskonfusion](/help/implementing/developing/introduction/sling-resource-merger.md) tillåter arv.
+När du skapar en övertäckning krävs inte en :1-kopia av originalet, eftersom [sling-resurskonfusion](/help/implementing/developing/introduction/sling-resource-merger.md) tillåter arv.
 
 Mer information finns i [JS-dokumentationsuppsättningen](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
@@ -38,11 +38,11 @@ Mer information om övertäckningar finns i [Övertäckningar för Adobe Experie
 
 ## Lägg till nytt lager (läge) {#add-new-layer-mode}
 
-När du redigerar en sida finns det olika [lägen](/help/sites-cloud/authoring/page-editor/introduction.md#page-modes) tillgängliga. Dessa lägen implementeras med [lager](/help/implementing/developing/introduction/ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlägen AEM bland annat Redigera, Layout, Utvecklare, Timewarp, Live-kopieringsstatus och Målinriktning.
+När du redigerar en sida finns det olika [lägen](/help/sites-cloud/authoring/page-editor/introduction.md#page-modes) tillgängliga. Dessa lägen implementeras med [lager](/help/implementing/developing/introduction/ui-structure.md#layer). Dessa ger åtkomst till olika typer av funktioner för samma sidinnehåll. Standardlägen för AEM är bland annat Redigera, Layout, Utvecklare, Timewarp, Live Copy-status och Målinriktning.
 
 ### Exempel på lager: Live Copy-status {#layer-example-live-copy-status}
 
-En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data relaterade till [hantering av flera webbplatser](/help/sites-cloud/administering/msm/overview.md) och markerar dem i lagret.
+En AEM-standardinstans innehåller MSM-lagret. Detta ger åtkomst till data relaterade till [hantering av flera webbplatser](/help/sites-cloud/administering/msm/overview.md) och markerar dem i lagret.
 
 Om du vill se hur det fungerar kan du redigera en språkkopia i [WKND-exempelinnehållet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och välja **Live Copy-status** .
 
@@ -154,7 +154,7 @@ Så här implementerar du en ny redigerare på plats (i klientlib):
 
 #### Kodexempel för att skapa en ny lokal redigerare {#code-sample-for-creating-a-new-in-place-editor}
 
-`aem-authoring-extension-inplace-editor` är ett exempelpaket som visar hur du skapar en redigerare på plats i AEM.
+`aem-authoring-extension-inplace-editor` är ett exempelpaket som visar hur du skapar en lokal redigerare i AEM.
 
 Du hittar koden för den här sidan på [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-inplace-editor).
 

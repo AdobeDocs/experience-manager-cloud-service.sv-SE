@@ -2,14 +2,14 @@
 title: Så här publicerar den universella redigeraren innehåll
 description: Lär dig hur den universella redigeraren publicerar sitt innehåll, hur det skiljer sig från processen i Sites Console och hur du tar hänsyn till hur du utvecklar dina egna program för att arbeta med det.
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 0ee6689460ac0ecc5c025fb6a940d69a16699c85
+role: Admin, Developer
+exl-id: 60f0bb4a-ee60-4f73-83ae-8568735474ad
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
 
 ---
-
 
 # Så här publicerar den universella redigeraren innehåll {#publishing}
 
@@ -21,7 +21,7 @@ Lär dig hur den universella redigeraren publicerar sitt innehåll, hur det skil
 
 ## Likheter med platskonsolprocessen {#similarities}
 
-För användare av [AEM sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och [&#x200B; webbplatskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författartjänsten till publiceringstjänsten (eller till [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) om den är tillgänglig och beroende på vilka alternativ författaren väljer vid publiceringen.)
+För användare av [AEM sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och [ webbplatskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författartjänsten till publiceringstjänsten (eller till [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) om den är tillgänglig och beroende på vilka alternativ författaren väljer vid publiceringen.)
 
 ## Skillnader {#differences}
 

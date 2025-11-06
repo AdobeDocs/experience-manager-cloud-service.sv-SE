@@ -1,10 +1,10 @@
 ---
 title: Implementera en anpassad predikatutvärderare för Query Builder
-description: AEM i Query Builder är ett enkelt och anpassningsbart sätt att fråga innehållsdatabasen
+description: Query Builder i AEM är ett enkelt och anpassningsbart sätt att fråga innehållsarkivet
 exl-id: 8c2f8c22-1851-4313-a1c9-10d6d9b65824
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -17,7 +17,7 @@ I det här dokumentet beskrivs hur du utökar [Query Builder](query-builder-api.
 
 ## Ökning {#overview}
 
-[Query Builder](query-builder-api.md) är ett enkelt sätt att fråga innehållsdatabasen. AEM innehåller [en uppsättning predikatutvärderare](#query-builder-predicates.md) som hjälper dig att fråga dina data.
+[Query Builder](query-builder-api.md) är ett enkelt sätt att fråga innehållsdatabasen. AEM levereras med [en uppsättning predikatutvärderare](#query-builder-predicates.md) som hjälper dig att fråga dina data.
 
 Men du kanske vill förenkla dina frågor genom att implementera en anpassad predikatutvärderare som döljer komplexiteten och ger ett bättre semantiskt resultat.
 
@@ -101,7 +101,7 @@ Genom att gruppera metadata för replikering med en anpassad predikatutvärderar
 
 >[!TIP]
 >
->Inställningen av nya AEM, inklusive att använda maven, förklaras i detalj i [WKND-självstudiekursen](develop-wknd-tutorial.md).
+>Inställningarna av nya AEM-projekt, inklusive att använda maven, förklaras i detalj i [WKND-självstudiekursen](develop-wknd-tutorial.md).
 
 Först måste du uppdatera Maven-beroendena för ditt projekt. `PredicateEvaluator` är en del av `cq-search`-artefakten, så den måste läggas till i din Maven-pom-fil.
 
@@ -135,7 +135,7 @@ Projektet `cq-search` innehåller den abstrakta klassen `AbstractPredicateEvalua
 >I proceduren nedan beskrivs hur du skapar ett `Xpath`-uttryck för att filtrera data. Ett annat alternativ är att implementera metoden `includes` som markerar data på radbasis. Mer information finns i [Java-dokumentationen](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/PredicateEvaluator.html).
 
 1. Skapa en ny Java-klass som utökar `com.day.cq.search.eval.AbstractPredicateEvaluator`
-1. Anteckna din klass med ett `@Component`-liknande utdrag som visas i [enhetligt format &#x200B;](https://en.wikipedia.org/wiki/Diff#Unified_format)
+1. Anteckna din klass med ett `@Component`-liknande utdrag som visas i [enhetligt format ](https://en.wikipedia.org/wiki/Diff#Unified_format)
 
    ```text
    @@ -19,8 +19,11 @@

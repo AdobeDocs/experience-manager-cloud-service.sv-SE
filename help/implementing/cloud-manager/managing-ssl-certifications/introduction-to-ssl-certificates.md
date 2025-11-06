@@ -4,8 +4,8 @@ description: Läs mer om de självbetjäningsverktyg som Cloud Manager tillhanda
 exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 90527b1a160e6bde35562d58407a9056ae1f0a3a
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 0%
@@ -21,8 +21,8 @@ Lär dig mer om de självbetjäningsverktyg som Cloud Manager tillhandahåller f
 >id="aemcloud_golive_sslcert"
 >title="Hantera SSL-certifikat"
 >abstract="Läs om hur Cloud Manager har självbetjäningsverktyg för att installera och hantera SSL-certifikat för att skydda din webbplats för dina användare. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Visa, uppdatera och ersätta ett SSL-certifikat"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Kontrollera status för ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Visa, uppdatera och ersätta ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Kontrollera status för ett SSL-certifikat"
 
 ## Vad är SSL-certifikat? {#overview}
 
@@ -51,7 +51,7 @@ Båda modellerna har följande allmänna funktioner för att hantera dina certif
 
 >[!IMPORTANT]
 >
->[Om du vill lägga till och associera en anpassad domän med miljön &#x200B;](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
+>[Om du vill lägga till och associera en anpassad domän med miljön ](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
 
 ### Adobe-hanterade (DV) SSL-certifikat {#adobe-managed}
 

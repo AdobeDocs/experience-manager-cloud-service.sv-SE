@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management, Best Practices
 role: User
 exl-id: 6b3ce076-2dd9-47f6-9b68-4fa52bfedd42
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/organize-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/organize-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Alla digitala resurser, metadata och innehåll i Microsoft® Office- och PDF-dokument extraheras och blir sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar helt rätt behörigheter. Metadata beskrivs i detalj i Metadata i Digital Asset Management.
@@ -87,7 +87,7 @@ Så här lägger du till taggar i en resurs:
 
 1. Logga in på [!DNL Experience Manager Assets].
 1. Klicka på **[!UICONTROL Assets]** > **[!UICONTROL Files]**, markera resursen och klicka på **[!UICONTROL Properties]** för att öppna resursegenskaperna.
-1. Klicka på mappikonen i **[!UICONTROL Tags]**-metadata på fliken **[!UICONTROL Basic]**. Ett popup-fönster öppnas.
+1. Klicka på mappikonen i **[!UICONTROL Basic]**-metadata på fliken **[!UICONTROL Tags]**. Ett popup-fönster öppnas.
 1. Sök efter eller välj lämpliga taggar från de befintliga taggarna i `cq-tags`. Du kan tilldela flera taggar till resursen.
 
    Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]**-datum eller **[!UICONTROL Modified]**-datum. I följande illustration sorteras taggstrukturen i bokstavsordning baserat på **[!UICONTROL Name]**.
@@ -100,7 +100,7 @@ Mer information finns i följande artiklar:
 
 * [Redigera metadata för resurser](meta-edit.md)
 * [Smarta taggar i Assets](smart-tags.md)
-* [Lägga till taggar och predikat i sökpanelen](/help/assets/search-facets.md/#adding-a-tags-predicate)
+* [Lägga till taggar och predikat i sökpanelen](/help/assets/search-facets.md#adding-a-tags-predicate)
 
 ## Ordna som samlingar {#organize-as-collections}
 

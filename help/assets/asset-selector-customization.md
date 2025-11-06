@@ -3,7 +3,7 @@ title: Anpassa programmet Resursväljare
 description: Använd funktioner för att anpassa resursväljaren i programmet.
 role: Admin, User
 exl-id: 0fd0a9f7-8c7a-4c21-9578-7c49409df609
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1246'
 ht-degree: 0%
@@ -357,7 +357,7 @@ Använd följande kodutdrag för att visa popup-meddelanden om hur en resurs som
 
 Med resursväljaren kan du lägga till ett taggväljarfilter. Den har stöd för en tagggrupp som kombinerar alla relevanta taggar till en viss tagggrupp. Dessutom kan du välja ytterligare taggar som motsvarar den resurs du söker efter. Dessutom kan du ange standardtagggrupper under det kontextuella anropsfiltret som du använder mest så att de är tillgängliga oavsett var du är.
 
->
+>[!NOTE]
 >
 > * Du måste lägga till sammanhangsberoende kodfragment för att kunna aktivera taggningsfilter i sökningen.
 > * Det är obligatoriskt att använda namnegenskapen som motsvarar tagggruppstypen `(property=xcm:keywords.id=)`.

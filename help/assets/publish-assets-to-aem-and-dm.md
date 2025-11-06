@@ -4,7 +4,7 @@ description: Med Snabbpublicering i [!DNL Assets view] kan du publicera resurser
 exl-id: 147c1c35-0d81-4458-b4ed-7541d2b0dd54
 feature: Publishing, [!DNL Dynamic Media]
 role: User
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '922'
 ht-degree: 0%
@@ -42,18 +42,22 @@ Du kan publicera resurser på [!DNL AEM and Dynamic Media] när du överför res
 Så här publicerar du resurser när du överför dem till en mapp vars [!DNL Dynamic Media Publish Mode] är inställd på **[!UICONTROL Upon Activation]**:
 
 1. Klicka på **[!UICONTROL Add Assets]** > **[!UICONTROL Browse]** > **[!UICONTROL Browse Files]** för att navigera till rätt mapp för att överföra resurser. Avsnittet **[!UICONTROL Publish Options]** visar **[!UICONTROL DM Publish Mode]** som **[!UICONTROL Upon Activation]**.
+
    ![Överför bild vid aktivering](/help/assets/assets/upload-uactivation.svg)
-2. Markera **[!UICONTROL Publish to AEM and Dynamic Media]** och klicka på **[!UICONTROL Upload]**. Resurserna publiceras till [!DNL AEM and Dynamic Media] samtidigt. Information om den uppdaterade publiceringsstatusen för dessa resurser finns i [Kontrollera publiceringsstatus](#check-publish-status).
+
+1. Markera **[!UICONTROL Publish to AEM and Dynamic Media]** och klicka på **[!UICONTROL Upload]**. Resurserna publiceras till [!DNL AEM and Dynamic Media] samtidigt. Information om den uppdaterade publiceringsstatusen för dessa resurser finns i [Kontrollera publiceringsstatus](#check-publish-status).
 
 ### [!UICONTROL Dynamic Media Publish Mode] inställd på [!UICONTROL Immediate] {#dynamic-media-publish-mode-set-to-immediate}
 
 Så här publicerar du resurser när du överför dem till en mapp vars [!UICONTROL Dynamic Media Publish Mode] är inställd på **[!UICONTROL Immediate]**:
 
 1. Klicka på **[!UICONTROL Add Assets]** > **[!UICONTROL Browse]** > **[!UICONTROL Browse Files]** för att navigera till rätt mapp för att överföra resurser. Avsnittet **[!UICONTROL Publish Options]** visar **[!UICONTROL DM Publish Mode]** som **[!UICONTROL Immediate]**.
-   ![bild för filöverföring - omedelbart läge](/help/assets/assets/resized-image-pdf-svg-new.svg)
-När [!UICONTROL Dynamic Media Publish Mode] är **[!UICONTROL Immediate]** publiceras de överförda resurserna automatiskt till [!DNL Dynamic Media] när du klickar på **[!UICONTROL Upload]** .
 
-2. Välj **Publicera på AEM** om du vill publicera de överförda resurserna på [!DNL AEM] och klicka på **[!UICONTROL Upload]**.
+   ![bild för filöverföring - omedelbart läge](/help/assets/assets/resized-image-pdf-svg-new.svg)
+
+   Eftersom [!UICONTROL Dynamic Media Publish Mode] är **[!UICONTROL Immediate]** publiceras de överförda resurserna automatiskt till [!DNL Dynamic Media] när du klickar på **[!UICONTROL Upload]**.
+
+1. Välj **Publicera på AEM** om du vill publicera de överförda resurserna på [!DNL AEM] och klicka på **[!UICONTROL Upload]**.
 
    Om du väljer **Publicera på AEM** publiceras resurserna på [!DNL AEM and Dynamic Media], annars publiceras resurserna på [!DNL Dynamic Media].
 
@@ -64,9 +68,10 @@ När [!UICONTROL Dynamic Media Publish Mode] är **[!UICONTROL Immediate]** publ
 Så här publicerar du resurser under överföring till en mapp med [!UICONTROL Dynamic Media Publish Mode] inställd på **[!UICONTROL Selective Publish]**:
 
 1. Klicka på **[!UICONTROL Add Assets]** > **[!UICONTROL Browse]** > **[!UICONTROL Browse Files]** för att navigera till rätt mapp för att överföra resurser. Avsnittet **[!UICONTROL Publish Options]** visar **[!UICONTROL DM Publish Mode]** som **[!UICONTROL Selective Publish]**.
-   ![överför bildselektivt publiceringsläge](/help/assets/assets/upload-selective.svg)
 
-2. Välj **[!UICONTROL Publish to AEM]**, **[!UICONTROL Publish to Dynamic Media]** eller båda beroende på dina behov och klicka på **Överför**.
+![överför bildselektivt publiceringsläge](/help/assets/assets/upload-selective.svg)
+
+1. Välj **[!UICONTROL Publish to AEM]**, **[!UICONTROL Publish to Dynamic Media]** eller båda beroende på dina behov och klicka på **Överför**.
 
    Resurserna publiceras till [!DNL AEM and Dynamic Media] baserat på ditt val.
 
@@ -77,10 +82,13 @@ Så här publicerar du resurser under överföring till en mapp med [!UICONTROL 
 Så här publicerar du resurser via resursbläddringssidan:
 
 1. Klicka på **[!UICONTROL Assets]** i avsnittet **[!UICONTROL Assets Management]** i den vänstra rutan.
-2. Markera en eller flera resurser eller mappar som du vill publicera och klicka på **[!UICONTROL Publish]**.
-3. Välj **[!UICONTROL AEM]** och klicka på **[!UICONTROL Publish]** för att publicera resurser på [!DNL AEM and Dynamic Media].
+1. Markera en eller flera resurser eller mappar som du vill publicera och klicka på **[!UICONTROL Publish]**.
+1. Välj **[!UICONTROL AEM]** och klicka på **[!UICONTROL Publish]** för att publicera resurser på [!DNL AEM and Dynamic Media].
+
    Bläddra bland ![resurser](/help/assets/assets/browse-uactivation-immediate.svg)
-Du kan inte publicera en mapp som har publiceringsläget [!DNL Dynamic Media] inställt på **[!UICONTROL Selective Publishing]** . Alla andra markerade mappar eller resurser publiceras till [!DNL AEM and Dynamic Media] efter att du har valt [!DNL AEM].
+
+   Du kan inte publicera en mapp som har publiceringsläget [!DNL Dynamic Media] inställt på **[!UICONTROL Selective Publishing]**. Alla andra markerade mappar eller resurser publiceras till [!DNL AEM and Dynamic Media] efter att du har valt [!DNL AEM].
+
    Bläddra bland ![resurser](/help/assets/assets/browse-selective123.svg)
 
 ## Publicera resurser med sökresultatsidan {#publish-assets-using-search-results-page}
@@ -88,10 +96,13 @@ Du kan inte publicera en mapp som har publiceringsläget [!DNL Dynamic Media] in
 Så här publicerar du resurser med resurssökningens resultatsida:
 
 1. Ange villkoren i sökfältet och klicka på sökikonen för att visa resultatet.
-2. Välj de resurser som du behöver publicera och klicka på **[!UICONTROL Publish].**
-3. Välj [!DNL AEM, Dynamic Media] eller båda enligt dina krav och klicka på **[!UICONTROL Publish]**.
+1. Välj de resurser som du behöver publicera och klicka på **[!UICONTROL Publish].**
+1. Välj [!DNL AEM, Dynamic Media] eller båda enligt dina krav och klicka på **[!UICONTROL Publish]**.
+
    ![sökbild](/help/assets/assets/search-mode.svg)
-Alternativet att publicera till [!DNL Dynamic Media] på sökresultatsidan beror på [!DNL Dynamic Media] publiceringsläget som är inställt på den mapp där resursen är tillgänglig i databasen.
+
+   Alternativet att publicera till [!DNL Dynamic Media] på sökresultatsidan beror på publiceringsläget för [!DNL Dynamic Media] som är inställt på den mapp där resursen är tillgänglig i databasen.
+
    >[!NOTE]
    >
    >Om du markerar en mapp och klickar på **[!UICONTROL Publish]** på sökresultatsidan visar [!DNL Experience Manager Assets] ett alternativ för att publicera resurser på [!DNL AEM] och inte på [!DNL Dynamic Media], oavsett mappens [!DNL Dynamic Media] publiceringslägesinställningar.
@@ -101,12 +112,16 @@ Alternativet att publicera till [!DNL Dynamic Media] på sökresultatsidan beror
 Så här kontrollerar du publiceringsstatus för en resurs eller mapp:
 
 1. Klicka på **[!UICONTROL Assets]** i avsnittet **[!UICONTROL Assets Management]** i den vänstra rutan.
-2. Växla till listvyn med vyväljaren. Du kan visa resursegenskaper som [!UICONTROL AEM publish], [!UICONTROL Dynamic Media Publish], [!UICONTROL title], [!UICONTROL size], [!UICONTROL dimensions] och så vidare.\
+1. Växla till listvyn med vyväljaren. Du kan visa resursegenskaper som [!UICONTROL AEM publish], [!UICONTROL Dynamic Media Publish], [!UICONTROL title], [!UICONTROL size], [!UICONTROL dimensions] och så vidare.
+
    Om en resurs eller mapp inte publiceras visas statusen för kolumnerna **[!UICONTROL AEM Publish]** och **[!UICONTROL Dynamic Media Publish]** som **[!UICONTROL N/A]**.
+
    ![kontrollera publiceringsstatus1](/help/assets/assets/check-publish-status1.png)
-Om du inte kan visa kolumnerna [!DNL AEM] Publicera och [!DNL Dynamic Media] Publicera i listvyn:
+
+   Om du inte kan visa kolumnerna [!DNL AEM] Publicera och [!DNL Dynamic Media] Publicera i listvyn:
+
    1. Klicka på ![inställningar](/help/assets/assets/settings-icon.svg) och välj **[!UICONTROL AEM Publish]** och **[!UICONTROL Dynamic Media Publish]** kolumner i dialogrutan **[!UICONTROL Configurable Columns]**.
-   2. Klicka på **[!UICONTROL Confirm]**. [!DNL Experience Manager Assets] lägger till de markerade kolumnerna i listvyn.
+   1. Klicka på **[!UICONTROL Confirm]**. [!DNL Experience Manager Assets] lägger till de markerade kolumnerna i listvyn.
 
       ![kontrollera publiceringsstatus2](/help/assets/assets/check-publish-status2.png)
 

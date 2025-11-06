@@ -2,9 +2,9 @@
 title: Konfigurera Source
 description: Lär dig hur du konfigurerar innehållskällan för din Edge Delivery-webbplats. Använd fstab.yaml med Helix 4-arkitekturen eller använd guiden i Cloud Manager (eller API:t för konfigurationstjänsten) med Helix 5-arkitekturen.
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: f82eafc0-03d0-4c69-9b28-e769a012531b
-source-git-commit: 71618a5603328990603db2ee7554048c9020a883
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%

@@ -3,9 +3,9 @@ title: Lägg till en domänmappning
 description: Lär dig hur du lägger till en domänmappning för en Edge Delivery-webbplats eller en Cloud Manager-miljö.
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: 41e9b91d7edbe26bf764b9eac56f21c3c2e86a64
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Se även [Hanterat CDN för Adobe](https://www.aem.live/docs/byo-cdn-adobe-manag
 
    | Använd skiftläge | Steg |
    | --- | --- |
-   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på ikonen **Webbsidor** ![Edge Delivery Sites](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) på den vänstra menyn under **Tjänster**.<br>b. Klicka på ikonen ![Mer &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i Edge Delivery-tabellen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** . |
+   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på ikonen **Webbsidor** ![Edge Delivery Sites](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) på den vänstra menyn under **Tjänster**.<br>b. Klicka på ikonen ![Mer ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i Edge Delivery-tabellen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** . |
    | Jag vill lägga till en CDN-konfiguration i Cloud Manager | a. Klicka på **Ikonen för sociala nätverk** ![Domänmappningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) på den vänstra menyn under **Tjänster**.<br>b. Klicka på **Lägg till** i det övre högra hörnet på sidan Domänmappningar. |
 
 1. Välj CDN-typ och associerad konfiguration i dialogrutan **Koppla domän till CDN** genom att välja något av följande:

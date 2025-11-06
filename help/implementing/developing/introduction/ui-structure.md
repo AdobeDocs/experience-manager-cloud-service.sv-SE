@@ -1,19 +1,19 @@
 ---
-title: Struktur för AEM
-description: Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement
+title: AEM användargränssnittets struktur
+description: AEM-gränssnittet har flera bakomliggande principer och består av flera nyckelelement
 exl-id: ac211716-d699-4fdb-a286-a0a1122c86c5
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 7d09e0c990c716d7bbb305210960621ba8735de4
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '939'
 ht-degree: 0%
 
 ---
 
-# Struktur för AEM {#structure-of-the-aem-ui}
+# AEM användargränssnittets struktur {#structure-of-the-aem-ui}
 
-Det AEM användargränssnittet har flera bakomliggande principer och består av flera nyckelelement:
+AEM användargränssnitt har flera bakomliggande principer och består av flera nyckelelement:
 
 ## Konsoler {#consoles}
 
@@ -37,7 +37,7 @@ När upplösningen till exempel är lägre än 1 024 pixlar (som på en mobil en
 
 Rubrikraden visar globala element som:
 
-* Logotypen och den specifika produkt/lösning som du för närvarande använder. För AEM utgör det här elementet även en länk till den globala navigeringen
+* Logotypen och den specifika produkt/lösning som du för närvarande använder. För AEM utgör det här elementet även en länk till Global Navigation
 * Sök
 * Ikon för att komma åt hjälpresurserna
 * Ikon för att komma åt andra lösningar
@@ -144,7 +144,7 @@ Ett lager är ett oberoende funktionspaket som kan aktiveras för att:
 
 Lagren har avancerade funktioner för hela sidan, i motsats till specifika åtgärder för en enskild komponent.
 
-AEM innehåller flera lager som redan har implementerats för sidredigering, till exempel redigering, förhandsgranskning och anteckning av lager.
+AEM innehåller flera lager som redan är implementerade för att skapa sidor, till exempel redigering, förhandsgranskning och anteckningar.
 
 >[!NOTE]
 >
@@ -174,7 +174,7 @@ Mer teknisk information finns i [JS-dokumentationsuppsättningen](https://develo
 
 ### Enhetligt gränssnitt {#unified-shell}
 
-Se [AEM as a Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) om du använder det enhetliga gränssnittet som AEM.
+Se [AEM as a Cloud Service i enhetligt gränssnitt](/help/overview/aem-cloud-service-on-unified-shell.md) om du använder det enhetliga gränssnittet i AEM.
 
 Om du behöver göra, eller redan har gjort, anpassningar, kan den enhetliga versionen inaktiveras:
 

@@ -3,8 +3,8 @@ title: Anpassa teman och format för Edge Delivery Services för AEM Forms
 description: Anpassa teman och format för Edge Delivery Services för AEM Forms
 feature: Edge Delivery Services
 exl-id: c214711c-979b-4833-9541-8e35b2aa8e09
-role: Admin, Architect, Developer
-source-git-commit: bf35f847f6f00d21915dfedb10cf38ea74344988
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 0%
@@ -240,7 +240,7 @@ I listrutor används elementet `select` i stället för ett `input`-element:
 
 Ungdomsgrupper har en egen HTML-struktur och CSS-struktur, precis som komponenter i listrutor:
 
-+++ HTML Structure of Radio Group
++++ HTML Structure of Radio Group 
 
 ```HTML
 <fieldset class="radio-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -308,11 +308,11 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 }
 ```
 
-+++
++++ 
 
 ### Kryssrutegrupper
 
-+++ HTML Structure of Checkbox Group
++++ HTML Structure of Checkbox Group 
 
 ```HTML
 <fieldset class="checkbox-group-wrapper field-{Name} field-wrapper" id="{FieldId}" name="{Name}" data-required="{Required}">
@@ -434,7 +434,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
      }
   ```
 
-+++
++++ 
 
 ### Panel-/behållarkomponenter
 
@@ -480,7 +480,7 @@ Den här väljaren anger alla fältuppsättningar med klassen Radio-Group-wrappe
 - I fältuppsättningen, multipel .{Type}-wrapper-element (.text-wrapper och .password-wrapper i det här fallet) representerar enskilda formulärfält på panelen.
 - Varje wrapper innehåller en etikett, ett inmatningsfält och en beskrivning, som liknar de föregående exemplen.
 
-+++
++++ 
 
 +++ Exempel på CSS-väljare för panel-/behållarkomponenter
 
@@ -608,7 +608,7 @@ Varje panel har samma struktur som exemplet med en panel, med ytterligare attrib
 
 - Unika ID:n och namn: Varje element i panelen har ett unikt ID (till exempel name-1, email-1) och name-attribut baserat på panelens indexvärde (till exempel name=&quot;contact[0].name&quot;). Detta gör att data kan samlas in korrekt när flera paneler skickas.
 
-+++
++++ 
 
 +++ CSS-väljare för en upprepningsbar panel
 
@@ -698,7 +698,7 @@ Den här väljaren formaterar alla fältomslutningar på en repeterbar panel, vi
 - Attributen id och name för indataelementet matchar namnet på den bifogade filen (claim_form).
 - Avsnittet med fillistan är inledningsvis tomt. Den fylls i dynamiskt med JavaScript när filer överförs.
 
-+++
++++ 
 
 +++ CSS-väljare för komponenten Bifogad fil
 
@@ -816,7 +816,7 @@ Du kan använda CSS-väljare för att ange specifika fälttyper och använda for
 - Varje fält har en motsvarande etikett, indataelement och eventuella ytterligare element som platshållare och beskrivningar.
 
 
-+++
++++ 
 
 
 +++ Exempel på CSS-väljare
@@ -864,7 +864,7 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 </div>
 ```
 
-+++
++++ 
 
 +++ Exempel på CSS-väljare
 
@@ -878,5 +878,5 @@ Du kan också ange enskilda fält som mål efter namn för att använda unika fo
 
 Den här CSS-koden har alla indataelement som finns i ett element som har klassen `field-otp` som mål. Formulärets HTML-struktur följer konventionerna i det adaptiva Forms-blocket, vilket innebär att det finns en behållare som är markerad med klassen&quot;field-out&quot; som innehåller fältet med namnet&quot;otp&quot;.
 
-+++
++++ 
 

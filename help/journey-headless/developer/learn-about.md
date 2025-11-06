@@ -4,8 +4,8 @@ description: I den här delen av AEM Headless Developer Journey kan du lära dig
 exl-id: 8c1fcaf7-1551-4133-b363-6f50af681661
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1626'
 ht-degree: 0%
@@ -65,7 +65,7 @@ När vi talar om ett headless CMS hanterar CMS innehållet och fortsätter att l
 
 ![Headless CMS](assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från den headless CMS och erbjuder sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webshop, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS och erbjuder sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
 Om du utelämnar huvudet förenklas CMS genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
@@ -109,27 +109,27 @@ Det är omöjligt att förutsäga framtiden, men utan headless ger er möjlighet
 
 ## AEM och Headless {#aem-and-headless}
 
-När du fortsätter med den här utvecklarresan får du lära dig hur AEM stöder headless-leverans tillsammans med alla sina leveransfunktioner.
+När du fortsätter med den här utvecklingsresan får du lära dig hur AEM stöder headless-leverans tillsammans med alla sina leveransfunktioner.
 
-Som branschledare inom digital upplevelsehantering inser Adobe att den idealiska lösningen på verkliga utmaningar som upplevelseskapare står inför sällan är ett binärt val. Det är därför AEM inte bara stöder båda modellerna, utan också ger en unik kombination av de båda, vilket kombinerar fördelarna med headless och full stack, så att ni kan hjälpa era kunder med ert innehåll, oavsett var de befinner sig.
+Adobe är ledande inom digital upplevelsehantering och inser att den idealiska lösningen på verkliga utmaningar som upplevelseskapare står inför sällan är ett binärt val. Därför stöder AEM inte bara båda modellerna, utan också den sömlösa kombinationen av de två, som kombinerar fördelarna med headless och full stack, så att ni kan hjälpa era kunder på bästa sätt, oavsett var de befinner sig.
 
 Den här resan fokuserar på den headless-baserade modellen för innehållsleverans. Men när ni väl har fått den här grundläggande kunskapen kan ni utforska hur ni kan använda båda modellernas kraftfulla funktioner.
 
 ## What&#39;s Next {#what-is-next}
 
-Tack för att du kom igång med AEM resa utan trassel! Nu när du läser det här dokumentet bör du:
+Tack för att du kommer igång med din AEM resa utan trassel! Nu när du läser det här dokumentet bör du:
 
 * Förstå de grundläggande begreppen och terminologin för leverans av headless-innehåll.
 * Förstå varför och när headless behövs.
 * Lär dig på en hög nivå hur headless-koncept används och hur de hänger ihop.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM resa utan trassel genom att nästa gång granska dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md) där du får lära dig hur du konfigurerar de verktyg som behövs och hur du börjar fundera på hur AEM hanterar leverans av headless-innehåll och dess förutsättningar.
+Bygg vidare på den här kunskapen och fortsätt din AEM resa utan att behöva bekymra dig genom att gå igenom dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md) där du får lära dig hur du konfigurerar nödvändiga verktyg och hur du börjar fundera på hur AEM ska ta sig an leverans av headless-innehåll och dess förutsättningar.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
+Vi rekommenderar att du går vidare till nästa del av den headless-utvecklingsresan genom att granska dokumentet [Komma igång med AEM Headless as a Cloud Service](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta den headless-resan.
 
 * [En introduktion till arkitekturen i Adobe Experience Manager as a Cloud Service](/help/overview/architecture.md) - Förstå AEM as a Cloud Service struktur
 * En [introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
-* [AEM Headless Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE) - Använd de här praktiska självstudiekurserna för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja vad som är rätt för dig.
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [AEM Headless-självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) - Använd de här praktiska självstudiekurserna för att utforska hur du kan använda de olika alternativen för att leverera innehåll till headless-slutpunkter med AEM och välja det som passar dig bäst.

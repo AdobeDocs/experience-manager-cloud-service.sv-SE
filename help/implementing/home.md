@@ -5,8 +5,8 @@ landing-page-description: Läs om hur ni anpassar er distribution av Experience 
 exl-id: d1e359a0-8a03-4f57-aa9c-cf1d0e9b7d0c
 solution: Experience Manager
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 52%
@@ -16,7 +16,7 @@ ht-degree: 52%
 
 # Implementera program för AEM as a Cloud Service {#aem-implementation-guide}
 
-Hitta självhjälpsresurser om implementering för Experience Manager as a Cloud Service. Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service.
+Hitta självhjälp om implementering av Experience Manager as a Cloud Service. Läs om hur ni anpassar er distribution av Experience Manager as a Cloud Service.
 
 ## Viktiga implementeringsartiklar {#key-articles}
 

@@ -2,12 +2,12 @@
 title: Generera variationer
 description: Läs mer om Generera variationer, som kan hämtas från olika redigerare i AEM as a Cloud Service
 feature: Generate Variations, AI Tools
-role: Admin, Architect, Developer, User
+role: Admin, Developer, User
 exl-id: d380ddd6-43f9-4bbf-8167-a6a472b9fc01
-source-git-commit: b99cc846a1efbbcd12244f68c770aa25ac4e985d
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1418'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -172,7 +172,7 @@ Användningshanteringen beror på vilken åtgärd som vidtas:
 
   >[!NOTE]
   >
-  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
+  >Se [Adobe Experience Manager: Cloud Service | Produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/aem-cloud-service.html) för mer information om basberättiganden och kontakta din kontogrupp om du vill köpa mer generativa åtgärder.
 
 ## Få åtkomst till Generera variationer {#access-generate-variations}
 
@@ -328,9 +328,9 @@ Du kan även läsa mer om:
 
 * [GenAI Generera variationer på GitHub](https://github.com/adobe/aem-genai-assistant#setting-up-aem-genai-assistant)
 * [Edge Delivery Services Experimentation](https://www.aem.live/docs/experimentation)
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)
 
 * [Generera startsida för variationer på Experience Cloud](https://experience.adobe.com/solutions/aem-sites-genai-aem-genai-variations-mfe/static-assets/resources/ga.html)
 

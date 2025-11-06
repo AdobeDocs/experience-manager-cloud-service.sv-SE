@@ -3,9 +3,9 @@ title: Felsöka SSL-certifikatproblem
 description: Lär dig hur du felsöker SSL-certifikatproblem genom att identifiera vanliga orsaker så att du kan upprätthålla säkra anslutningar.
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 8fb8f708-51a5-46d0-8317-6ce118a70fab
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 0%
@@ -60,7 +60,7 @@ openssl rsa -noout -modulus -in ssl.key | openssl md5
 >
 >Utdata för dessa två kommandon måste vara exakt likadana. Om du inte kan hitta en matchande privat nyckel för ditt `main/server`-certifikat måste du ange en ny nyckel för certifikatet genom att generera en ny CSR och/eller begära ett uppdaterat certifikat från din SSL-leverantör.
 
-+++
++++ 
 
 +++**Ta bort klientcertifikat**
 
@@ -130,7 +130,7 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 
 +++
 
-++**Certifikatets giltighet
++++**Certifikatets giltighet
 
 ## Certifikatets giltighet {#validity}
 
@@ -138,7 +138,7 @@ Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar
 
 +++
 
-++**Fel SAN-certifikat används på min domän
++++**Fel SAN-certifikat används på min domän
 
 ## Fel SAN-certifikat används på min domän {#wrong-san-cert}
 

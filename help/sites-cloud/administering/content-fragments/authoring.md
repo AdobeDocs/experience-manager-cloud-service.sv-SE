@@ -2,10 +2,10 @@
 title: Skapa innehållsfragment
 description: Lär dig hur du skapar innehåll för dina innehållsfragment och skapar varianter av det innehållet utifrån syfte. Med Content Fragments får du större flexibilitet för både rubrikfri leverans och sidredigering.
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 117703794c84bebd659294a593ffd98f52ff89a2
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2778'
 ht-degree: 0%
@@ -267,7 +267,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 

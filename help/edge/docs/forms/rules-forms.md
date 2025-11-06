@@ -3,8 +3,8 @@ title: Använd regler för att lägga till dynamiskt beteende i ett formulär
 description: Edge Delivery Services för AEM Forms har tagits fram för bästa prestanda, vilket ger er möjlighet att förutse framtiden för smidig datainsamling och användarengagemang. Använd regler för att lägga till dynamiskt beteende i formulären.
 feature: Edge Delivery Services
 exl-id: 58042016-e655-446f-a2bf-83f1811525e3
-role: Admin, Architect, Developer
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2218'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 En av de kraftfulla funktionerna för att skapa formulär med hjälp av ett kalkylblad är möjligheten att använda inbyggda kalkylbladsfunktioner för att skapa regler, vilket gör det möjligt att villkorligt visa eller dölja formulärfält, automatisera beräkningar baserat på användarens indata och skapa en mer dynamisk användarupplevelse.
 
-I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva formulärblock, huvudsakligen [`Visible`](#visible-property), [`Visibility Expression`](#visible-expression-property) och [`Value Expression`](#value-expression-property) tillsammans med [-kalkylbladsfunktioner &#x200B;](#spreadsheet-functions-for-rules), för att skapa effektiva regler för dina formulär. Vi ska också titta på några exempel som visar hur dessa regler kan implementeras i praktiken.
+I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva formulärblock, huvudsakligen [`Visible`](#visible-property), [`Visibility Expression`](#visible-expression-property) och [`Value Expression`](#value-expression-property) tillsammans med [-kalkylbladsfunktioner ](#spreadsheet-functions-for-rules), för att skapa effektiva regler för dina formulär. Vi ska också titta på några exempel som visar hur dessa regler kan implementeras i praktiken.
 
 ## Om en linjes konstruktion
 

@@ -10,9 +10,9 @@ feature: HTML5 Forms,Mobile Forms
 exl-id: 85c9315e-1bc8-44a9-937e-af6fc7cf54d1
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2032'
 ht-degree: 0%
 
 ---
@@ -216,7 +216,7 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
 1. Körs initieringsskriptet och formulärready-händelsen flera gånger i HTML5-formulär?
 
-   Svar: Ja, initieringsskripten och händelser som är klara för formulär körs flera gånger, minst en gång på servern och en gång på klientsidan. Det rekommenderas att skriva skript som initialize eller form:ready-händelser baserat på viss affärslogik (formulär- eller fältdata) så att åtgärden utförs baserat på data och idempotent (om data är samma).
+   Svar: Ja, initieringsskripten och händelser som är klara för formulär körs flera gånger, minst en gång på servern och en gång på klientsidan. Det rekommenderas att skriva skript som initialize eller form:ready-händelser baserade på viss affärslogik (formulär- eller fältdata) så att åtgärden utförs baserat på datatillstånd och idempotent (om data är samma).
 
 ### Utforma XDP {#designing-xdp}
 

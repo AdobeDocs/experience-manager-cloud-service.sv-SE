@@ -4,8 +4,8 @@ description: I den här delen av Adobe Experience Manager (AEM) Headless Develop
 exl-id: f052183d-18fd-4615-a81e-e45db5928fc1
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 2ccca86a0e611b93c273e37abb6e0fd7870421d4
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 0%
@@ -270,5 +270,5 @@ Nu när du har lärt dig att modellera din struktur och skapa innehåll som är 
    * [Hantera innehållsfragment](/help/sites-cloud/administering/content-fragments/managing.md) - skapa och redigera innehållsfragment; den här sidan leder dig till andra detaljerade avsnitt
 * [AEM GraphQL Schemas](access-your-content.md) - hur GraphQL realiserar modeller
 * [Strukturen för exempelinnehållsfragment](/help/headless/graphql-api/sample-queries.md#content-fragment-structure-graphql)
-* [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE) - En kort videosjälvstudiekurs med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
-   * [Grundläggande om GraphQL-modellering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html?lang=sv-SE) - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.
+* [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - En kort videosjälvstudiekurs med en översikt över hur du använder AEM headless-funktioner, inklusive innehållsmodellering och GraphQL
+   * [Grundläggande om GraphQL-modellering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/modeling-basics.html) - Lär dig hur du definierar och använder innehållsfragment i Adobe Experience Manager (AEM) för användning med GraphQL.

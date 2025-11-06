@@ -4,8 +4,8 @@ description: Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterad
 exl-id: 0c0671a3-e400-46f3-ad86-166a6cfdd44b
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: f2364de6237ca9f0285815b581bcf3881488188d
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Lär dig hur du får åtkomst till och hanterar dina Adobe-hanterade Git-databas
 
 ## Få åtkomst till databasinformation från sidan Översikt {#overview-page}
 
-Med Cloud Manager är det enkelt att hämta databasåtkomstinformation för databaser som hanteras med Adobe med hjälp av **Åtkomst till repo** från **pipelines**-kortet.
+Med Cloud Manager är det enkelt att hämta databasåtkomstinformation för Adobe-hanterade databaser med **Åtkomst till repomaterial** från **pipeline**-kortet.
 
 I dialogrutan **Databasinformation** kan du visa följande åtkomstinformation för databaser som hanteras med Adobe:
 
@@ -48,7 +48,7 @@ Funktionen **Åtkomst till replikinformation** är synlig för användare med ro
 
    ![Bekräfta generering av lösenord](assets/confirm-generated-password.png)
 
-1. Klicka på ikonen ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) till höger om fältet **Lösenord** för att kopiera lösenordet till Urklipp.
+1. Klicka på ikonen **Kopiera** till höger om fältet ![Lösenord](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) för att kopiera lösenordet till Urklipp.
 
    * När du genererar ett lösenord blir det tidigare lösenordet ogiltigt.
    * Cloud Manager sparar inte lösenordet. Det är ditt ansvar att spara lösenordet på ett säkert sätt.
@@ -60,10 +60,10 @@ Med hjälp av dessa uppgifter kan du klona en lokal kopia av databasen, göra ä
 
 ## Få åtkomst till databasinformation från sidan Databaser {#repositories-window}
 
-Funktionen **Åtkomstrepo** är också tillgänglig från sidan [**Databaser**](managing-repositories.md). Samma information om åtkomst till databaser som hanteras av Adobe visas.
+Funktionen **Åtkomstrepo** är också tillgänglig från sidan [**Databaser**](managing-repositories.md). Här visas samma information om åtkomst till databaser som hanteras av Adobe.
 
 ## Återkalla ett lösenord {#revoke-password}
 
 Du kan återkalla ett lösenord när som helst.
 
-Om du vill göra det [skapar du en supportbiljett för den här begäran](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager&support-tab=home#support). Biljetten behandlas med hög prioritet och återkallas vanligen inom en dag.
+Om du vill göra det [skapar du en supportbiljett för den här begäran](https://experienceleague.adobe.com/?support-solution=Experience+Manager&support-tab=home#support). Biljetten behandlas med hög prioritet och återkallas vanligen inom en dag.

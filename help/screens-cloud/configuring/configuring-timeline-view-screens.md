@@ -4,7 +4,7 @@ description: På den här sidan beskrivs hur du konfigurerar en tidslinjevy i Sc
 exl-id: 53afe1f5-8f0b-4cca-a819-d3e9375cbe37
 feature: Administering Screens
 role: Admin, Developer, User
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 I det här avsnittet beskrivs hur du skapar en tidslinjevy för AEM Screens.
 
-AEM innehåller en serie funktioner som gör att flera personer i en organisation kan samarbeta när det gäller att skapa, hantera och använda kanaler.
+AEM har en uppsättning funktioner som gör att flera personer i en organisation kan samarbeta när det gäller att skapa, hantera och använda kanaler.
 Tidslinjen, som finns i det vänstra fältet, beskriver kanalerna, placeringen eller någon skärmmapps livscykel i tid för att visa vad som har hänt med den under dess livstid. Detta kan filtreras ned efter typ.
 På tidslinjen finns följande funktioner förutom loggarna för livscykeln.
 
@@ -36,7 +36,7 @@ I följande avsnitt beskrivs dessa steg i detalj.
 ### Lägg till en kommentar {#addcomment}
 
 Kommentarer som är tillgängliga via tidslinjen gör det möjligt för användare att skapa en centraliserad och historisk post för diskussioner som äger rum om kanalen, platsen eller valfri mapp på skärmen.
-Kommentarerna är ett bra, konsoliderat sätt för AEM att diskutera ett sätt som kan bevaras, vilket gör att andra kan förstå viktiga beslut.
+Kommentarerna är ett bra sätt för AEM-användare att diskutera ett sätt som kan bevaras, så att andra kan förstå viktiga beslut.
 
 1. Navigera till kanalen som du vill lägga till en kommentar för.
 1. Markera kanalen.
@@ -52,6 +52,7 @@ Informationen i tidslinjen uppdateras för att ange att kommentaren lades till.
 ### Spara en version {#saveversion}
 
 Versionshantering skapar en ögonblicksbild av en kanal vid en viss tidpunkt. Med versionshantering kan du utföra följande åtgärder:
+
 * Skapa en kanalversion.
 * Återställ en kanal till en tidigare version, till exempel:
    * om du vill ångra en ändring som du har gjort på sidan.

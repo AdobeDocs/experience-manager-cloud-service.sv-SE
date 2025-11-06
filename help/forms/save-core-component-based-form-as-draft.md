@@ -4,7 +4,7 @@ description: Lär dig spara grundkomponentbaserade adaptiva formulär som utkast
 feature: Adaptive Forms, Core Components
 exl-id: c0653bef-afeb-40c1-b131-7d87ca5542bc
 role: User, Developer
-source-git-commit: bf0a42e1376e4743fe8ce0650e1f807dfba2d050
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Spara formulär som utkast och lista dem på sidan Webbplatser
 
-<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
+<!--This article provides information about the Auto-save feature, which is currently available as a pre-release feature. The pre-release feature is accessible only through our [pre-release channel](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/prerelease#new-features).-->
 
 Tänk dig en användare som börjar fylla i ett formulär men behöver göra en paus och returnera det senare. AEM har ett `save-as-draft`-alternativ som gör att användaren kan spara formuläret som ett utkast för framtida slutförande. För att underlätta detta tillhandahåller AEM Forms Portal-komponenten **Utkast och inskickat material** som finns i kartongen och som visar utkast och inskickade data på AEM Sites sidor. Komponenten listar formulär som har sparats som utkast för senare ifyllnad samt de som har skickats in. Endast inloggade användare kan redigera sina utkast eller visa sina skickade formulär. Om en anonym användare navigerar genom listan med formulär med komponenten **Sök efter och visa** och sparar ett formulär som ett utkast, visas det utkastet inte med komponenten **Utkast och överföringar** . Om du vill visa utkast och inskickade formulär måste användarna vara inloggade när de skickas.
 
@@ -104,9 +104,11 @@ Konfigurera nu egenskaperna för komponenten **Utkast och överföringar** enlig
 ## Konfigurera egenskaper för komponenten Utkast och överföringar
 
 Du kan konfigurera egenskaperna för **Utkast och överföringar**:
+
 1. Markera komponenten **Utkast och överföringar**.
 1. Klicka på ikonen ![Konfigurera](assets/configure_icon.png) så visas dialogrutan.
 1. Ange följande i dialogrutan **[!UICONTROL Drafts and Submissions]**:
+
    * **Titel** Om du vill identifiera en komponent på en webbplatssida visas titeln som standard ovanpå komponenten.
    * **Välj typ**: Om du vill ange formulärlistan som utkast eller skickade formulär. Om du väljer **Utkast till Forms** visas de formulär som sparats som utkast. Om du väljer **Skickat Forms** visas även de formulär som skickats in av inloggade användare.
    * **Layout**: Om du vill visa en lista med formulärutkast eller skickade formulär i kort- eller listformat.
@@ -116,6 +118,7 @@ Du kan konfigurera egenskaperna för **Utkast och överföringar**:
 ## Konfigurera formulär som ska sparas som utkast
 
 Du kan konfigurera Adaptiv Forms på följande två sätt:
+
 * [Användaråtgärd](#user-action)
 * [Spara automatiskt](#auto-save)
 

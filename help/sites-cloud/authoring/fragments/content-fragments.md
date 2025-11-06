@@ -5,7 +5,7 @@ exl-id: 7a44fc4e-3793-4aa3-8c21-db0567c93244
 solution: Experience Manager Sites
 feature: Authoring, Content Fragments
 role: User
-source-git-commit: 369f0be002413d164911515349b3e25d33eb8b2f
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 0%
@@ -33,12 +33,13 @@ Innehållsfragment i Adobe Experience Manager (AEM) as a Cloud Service [skapas o
 >[!NOTE]
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md)** är olika funktioner i AEM:
+>
 >* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att få tillgång till strukturerade data, bland annat texter, siffror och datum.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 Innehållsfragmenten aktiverar:
 
@@ -88,7 +89,7 @@ Innehållsfragmenten aktiverar:
 
 >[!NOTE]
 >
->Se även [kärnkomponenter, komponenten Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=sv-SE)
+>Se även [kärnkomponenter, komponenten Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 I rätt konfigurationsdialogruta kan du välja tillgängliga parametrar, bland annat:
 
@@ -153,6 +154,7 @@ För mellanliggande innehåll kan du:
 >* Mellanliggande komponenter har en absolut position inom komponentsekvensen i fragmentflödet. Den här positionen ändras inte, även när innehållet i styckena i fragmentet ändras.
 >
 >  Detta kan få det att se ut som om den relativa placeringen har ändrats, eftersom mellanliggande stycken inte har någon kontextuell relation till (fragmentet) stycken som de är placerade bredvid.
+>
 >* Såvida inte de två styckestrukturerna står i konflikt med varandra, visas inte det mellanliggande innehållet (även om det fortfarande finns internt).
 
 ### Använda associerat innehåll {#using-associated-content}

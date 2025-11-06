@@ -4,7 +4,7 @@ description: Använd RTF-redigerare (Rich Text Editor) för fotnoter i en adapti
 feature: Adaptive Forms, Foundation Components
 exl-id: f04dae84-daab-42f8-876f-02fe426f62be
 role: User, Developer
-source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 **[!UICONTROL Footnote]** är den extra biten med information eller anteckningar som visas i slutet av sidan. [!UICONTROL Footnote] innehåller anteckningarna som anges i texten med siffror som upphöjda.
 
@@ -30,11 +30,12 @@ Fotnoterna numreras sekventiellt i den ordning som de visas på sidan. Varje fot
 * Ger extra information som kan avbryta det normala flödet av huvudinformationen.
 * Tillhandahåller parentetisk information eller copyrightbehörigheter.
 
-I Adaptiv Forms används [!UICONTROL footnote] för att visa information om hur du fyller i eller använder formuläret. Mer information om hur du skapar ett adaptivt Forms finns i [Skapa ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=sv-SE).
+I Adaptiv Forms används [!UICONTROL footnote] för att visa information om hur du fyller i eller använder formuläret. Mer information om hur du skapar ett adaptivt Forms finns i [Skapa ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html).
 
 ## Fotnot i Adaptiv Forms {#using-footnote-adaptiveforms}
 
 Så här lägger du till en fotnot i Adaptiv Forms:
+
 1. Öppna ett anpassat formulär i läget **Redigera**.
 1. Dra komponenten **[!UICONTROL Text]** från komponentwebbläsaren till det adaptiva formuläret.
 1. Markera **[!UICONTROL Text]**-komponenten som du har lagt till och välj ![cmpr](assets/configure-icon.svg) för att redigera dess egenskaper.

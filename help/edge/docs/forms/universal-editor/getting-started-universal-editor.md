@@ -2,10 +2,10 @@
 title: Komma igång med Edge Delivery Services för AEM Forms med Universal Editor
 description: Lär dig hur du skapar och publicerar högpresterande formulär med hjälp av den universella redigerarens WYSIWYG-redigering.
 feature: Edge Delivery Services
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 exl-id: 24a23d98-1819-4d6b-b823-3f1ccb66dbd8
-source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2608'
 ht-degree: 0%
@@ -70,7 +70,7 @@ För att Edge Delivery Services för AEM Forms ska fungera smidigt och framgång
 
 >[!TIP]
 >
-> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE).
+> Har du inte använt AEM tidigare? Börja med [AEM Sites Starthandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html).
 
 ## Sökväg A: Skapa ett nytt projekt med Forms
 
@@ -356,7 +356,7 @@ Du kommer att slutföra följande steg på hög nivå:
 
 2. **Hämta nödvändiga filer från AEM Forms-standardmallen**
 
-   Kopiera de här filerna från [AEM Forms-databasen &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-forms):
+   Kopiera de här filerna från [AEM Forms-databasen ](https://github.com/adobe-rnd/aem-boilerplate-forms):
 
    | Source | Mål | Syfte |
    |------------------------------------------------------------------------|----------------------------|----------------------------|

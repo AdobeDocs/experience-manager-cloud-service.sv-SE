@@ -4,7 +4,7 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 41e9b91d7edbe26bf764b9eac56f21c3c2e86a64
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1744'
 ht-degree: 2%
@@ -68,7 +68,7 @@ Du kan konfigurera en CDN-felsida så att den ersätter standardsidan utan varum
 
 Att ställa in TTL med HTTP-huvudet Cache-Control är ett effektivt sätt att balansera innehållets leveransprestanda och innehållets aktualitet. I scenarier där det är viktigt att leverera uppdaterat innehåll omedelbart kan det dock vara bra att rensa CDN-cachen direkt.
 
-Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/cdn-credentials-authentication.md/#purge-API-token) och [rensar cachelagrat CDN-innehåll](/help/implementing/dispatcher/cdn-cache-purge.md).
+Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token) och [rensar cachelagrat CDN-innehåll](/help/implementing/dispatcher/cdn-cache-purge.md).
 
 ### Grundläggande autentisering vid CDN {#basic-auth}
 

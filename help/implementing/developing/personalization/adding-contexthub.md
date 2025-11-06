@@ -3,8 +3,8 @@ title: Lägga till ContextHub på Pages och Access Stores
 description: Lägg till ContextHub på sidorna för att aktivera ContextHub-funktionerna och länka till ContextHub JavaScript-biblioteken
 exl-id: 8bfe2cff-3944-4e86-a95c-ebf1cb13913c
 feature: Developing, Personalization
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 0%
@@ -42,13 +42,13 @@ Alla butikstyper är tillägg till klassen [`ContextHub.Store.Core`](contexthub-
 
 Kontextnavlager använder ett av följande beständiga lägen:
 
-* **Lokal:** Använder HTML5 localStorage för att behålla data. Lokal lagring sparas i webbläsaren i alla sessioner.
-* **Session:** Använder HTML5 sessionStorage för att behålla data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
+* **Lokal:** Använder HTML5 localStorage för att lagra data. Lokal lagring sparas i webbläsaren i alla sessioner.
+* **Session:** Använder HTML5 sessionStorage för att lagra data. Sessionslagringsplatsen sparas under hela webbläsarsessionen och är tillgänglig för alla webbläsarfönster.
 * **Cookie:** Använder webbläsarens inbyggda stöd för cookies för datalagring. Cookie-data skickas till och från servern i HTTP-begäranden.
 * **Window.name:** Använder egenskapen window.name för att behålla data.
 * **Minne:** Använder ett JavaScript-objekt för att behålla data.
 
-Som standard använder Context Hub det lokala beständighetsläget. Om webbläsaren inte stöder eller tillåter lokalStorage för HTML5 används sessionens beständighet. Om webbläsaren inte stöder eller tillåter HTML5 sessionStorage, används Window.name persistence.
+Som standard använder Context Hub det lokala beständighetsläget. Om webbläsaren inte har stöd för eller tillåter HTML5 localStorage, används sessionens beständighet. Om webbläsaren inte stöder eller tillåter HTML5 sessionStorage, används Window.name persistence.
 
 ### Lagra data {#store-data}
 
@@ -145,7 +145,7 @@ De regler som används för att lösa dessa segment sammanfattas enligt följand
 
 ## Debugging ContextHub {#debugging-contexthub}
 
-Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub &#x200B;](configuring-contexthub.md#logging-debug-messages-for-contexthub).
+Det finns flera alternativ för felsökning av ContextHub, bland annat att generera loggar. Mer information finns i [Konfigurera ContextHub ](configuring-contexthub.md#logging-debug-messages-for-contexthub).
 
 ## Se en översikt över ContextHub Framework {#see-an-overview-of-the-contexthub-framework}
 

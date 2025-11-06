@@ -4,8 +4,8 @@ description: Lär dig hur du lägger till ett eget SSL-certifikat eller ett Adob
 exl-id: 104b5119-4a8b-4c13-99c6-f866b3c173b2
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 603602dc70f9d7cdf78b91b39e3b7ff5090a6bc0
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 0%
@@ -46,7 +46,7 @@ När du har lagt till det i Cloud Manager väntar du tills Adobe har utfärdat o
 * **För ett SSL-certifikat som hanteras av en kund (OV/EV):**
 
    * Hämta ditt OV/EV SSL-certifikat från en certifikatutfärdare. Mer information finns i [kraven för kundhanterade OV/EV SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements).
-   * [Lägg till information om ditt kundhanterade (OV/EV) SSL-certifikat &#x200B;](#add-customer-managed-ssl-cert) i Cloud Manager när certifikatet har förvärvats.
+   * [Lägg till information om ditt kundhanterade (OV/EV) SSL-certifikat ](#add-customer-managed-ssl-cert) i Cloud Manager när certifikatet har förvärvats.
    * När du har lagt till det anpassade domännamnet markeras det som verifierat och SSL-certifikatet används.
 
 I båda fallen är den anpassade domänen tillgänglig för säker användning i din miljö när certifikatet har verifierats och installerats. [Kontrollera domänens status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) i Cloud Manager-gränssnittet regelbundet för att kontrollera att allt fungerar som det ska.
@@ -111,7 +111,7 @@ Behöver du hjälp med att välja om du vill använda ett Adobe-hanterat SSL-cer
 
 1. Klicka på **Lägg till SSL-certifikat** i det övre högra hörnet på sidan SSL-certifikat.
 
-1. Välj **Kundhanterad (OV/EV)** i dialogrutan **Lägg till SSL-certifikat**, baserat på [ditt användningsfall](#which-ssl-to-add).
+1. Välj **Kundhanterad (OV/EV)** i dialogrutan [Lägg till SSL-certifikat](#which-ssl-to-add), baserat på **ditt användningsfall**.
 
 1. Ange ett namn för ditt certifikat i fältet **Certifikatnamn**.
 Det här fältet är avsett endast som information och kan vara vilket namn som helst som gör det enkelt att referera till ditt SSL-certifikat.

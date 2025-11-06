@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Spin Sets
 role: User
 exl-id: ed470472-62d9-4684-971b-30df3919c180
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1892'
 ht-degree: 7%
@@ -58,7 +58,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
-1. Ställ in [förinställningar för Vyhanteraren &#x200B;](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
+1. Ställ in [förinställningar för Vyhanteraren ](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
 
    Administratörer kan skapa eller ändra visningsförinställningar för rotationsuppsättningar. Om du vill visa rotationsuppsättningen med en visningsförinställning markerar du rotationsuppsättningen och väljer **Visningsprogram** i listrutan till vänster.
 

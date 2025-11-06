@@ -3,8 +3,8 @@ title: Edge Delivery Services - översikt
 description: Lär dig hur AEM as a Cloud Service kan dra nytta av de prestanda och den perfekta poängsättningen i Lighthouse som Edge Delivery Services erbjuder.
 feature: Edge Delivery Services
 exl-id: 03a1aa93-d2e6-4175-9cf3-c7ae25c0d24e
-role: Admin, Architect, Developer
-source-git-commit: 8cbcfbc074c69396980ba930339563d5437d5f17
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '988'
 ht-degree: 2%
@@ -19,6 +19,7 @@ ht-degree: 2%
 >**Vill du prova på saker direkt?**
 >
 >Om du vill prova på Edge Delivery Services direkt har du två alternativ.
+>
 >* [Börja skriva direkt med en färdig självstudiemiljö - helt konfigurerad och klar att användas.](https://www.aem.live/developer/ue-trial)
 >* Gräv in på mer av detaljerna och konfigurera en egen miljö på mindre än 30 minuter genom att [checka ut självstudiekursen på aem.live.](https://www.aem.live/developer/ue-tutorial)
 
@@ -77,7 +78,7 @@ Edge Delivery Services använder GitHub så att du kan hantera och distribuera k
 
 ## Drifttelemetri {#telemetry}
 
-Adobe Experience Manager använder [Operational Telemetry](https://www.aem.live/docs/operational-telemetry) för att samla in operationsdata som är absolut nödvändiga för att upptäcka och åtgärda funktions- och prestandaproblem på webbplatser med Adobe Experience Manager. Operativa telemetridata kan användas för att diagnostisera prestandaproblem och för att mäta effekten av försök. Operativ telemetri bevarar besökarnas integritet genom [sampling](https://www.aem.live/docs/operational-telemetry#operational-telemetry-data-is-sampled) (endast en liten del av alla sidvisningar övervakas) och [genom att personligt identifierbar information utesluts &#x200B;](https://www.aem.live/docs/operational-telemetry#what-data-is-being-collected) (PII).
+Adobe Experience Manager använder [Operational Telemetry](https://www.aem.live/docs/operational-telemetry) för att samla in operationsdata som är absolut nödvändiga för att upptäcka och åtgärda funktions- och prestandaproblem på webbplatser med Adobe Experience Manager. Operativa telemetridata kan användas för att diagnostisera prestandaproblem och för att mäta effekten av försök. Operativ telemetri bevarar besökarnas integritet genom [sampling](https://www.aem.live/docs/operational-telemetry#operational-telemetry-data-is-sampled) (endast en liten del av alla sidvisningar övervakas) och [genom att personligt identifierbar information utesluts ](https://www.aem.live/docs/operational-telemetry#what-data-is-being-collected) (PII).
 
 ## Börja utforska {#start-exploring}
 
@@ -91,7 +92,7 @@ Kom igång med AEM-redigering med Universal Editor och Edge Delivery Services:
 
 Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Delivery Services och AEM Sites finnas parallellt på samma domän, vilket är ett vanligt användningsexempel för större webbplatser. Dessutom kan dina AEM Sites-sidor enkelt förbruka innehåll från Edge Delivery Services, och det motsatta är också sant.
 
-Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration) och [Launch.](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration) och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
 
 ## Få hjälp från Adobe {#getting-help}
 

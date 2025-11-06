@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: ed51ff8df6d1e387960e8580c6dfb543a09ef8fa
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '3076'
+source-wordcount: '3068'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,12 @@ Vill du börja? Dokumentationen [Introduktion till HTML5-formulär](/help/forms/
 
 Snabba upp utvecklingen av AEM Forms Edge Delivery Services med AEM Forms CLI-verktyg. Med det här kommandoradsgränssnittet kan du direkt generera den kod och de kablar som behövs för att komma igång med utvecklingen av anpassade komponenter - utan någon mallsida, inget trassel.
 
->[!VIDEO]&#x200B;(<https://video.tv.adobe.com/v/3470514/aem-forms> utvecklingsverktyget för anpassade komponentgenerator-aem-forms cli-aem-forms custom component-aem-forms)
+<!--
+not sure what's going on with this video link. cleaned up version below
+>[!VIDEO](<https://video.tv.adobe.com/v/3470514/aem-forms> scaffolding-aem-custom component generator-aem-forms cli-aem-forms custom component-aem-forms development tool)
+-->
+
+>[!VIDEO](https://video.tv.adobe.com/v/3470514/)
 
 **Nyckelfunktioner:**
 
@@ -254,7 +259,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 

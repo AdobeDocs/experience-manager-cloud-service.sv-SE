@@ -3,8 +3,8 @@ title: Kör din egen universella redigeringstjänst
 description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lokal utveckling eller som en del av din egen infrastruktur.
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 5435f776e38abf5245c58985e747ce05443f3c2a
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 0%
@@ -45,7 +45,7 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -53,7 +53,7 @@ Universell redigeringstjänst är inte en fullständig kopia av Universell redig
 
 [NodeJS version 20](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 Spara filen `universal-editor-service.cjs` från programvarudistribution till den lokala utvecklingsmiljön.
 
@@ -73,7 +73,7 @@ Kommandot genererar en `key.pem`- och en `certificate.pem`-fil. Spara dessa file
 
 Ett antal miljövariabler måste anges i NodeJS för att den universella redigeringstjänsten ska kunna köras lokalt.
 
-Skapa en `.env`-fil med följande innehåll på samma sökväg som dina `universal-editor-service.cjs`-, `key.pem`- och `certificate.pem`-filer.
+Skapa en `universal-editor-service.cjs`-fil med följande innehåll på samma sökväg som dina `key.pem`-, `certificate.pem`- och `.env`-filer.
 
 ```text
 UES_PORT=8000

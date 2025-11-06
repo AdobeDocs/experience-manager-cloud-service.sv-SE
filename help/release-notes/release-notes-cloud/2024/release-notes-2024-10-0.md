@@ -4,9 +4,9 @@ description: Versionsinformation om 2024.10.0-utgåvan av  [!DNL Adobe Experienc
 feature: Release Information
 role: Admin
 exl-id: 7a63f04f-10f0-4879-bd06-4182bb288a9b
-source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1664'
+source-wordcount: '1663'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2024.10.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2022 eller 2023.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -44,6 +44,7 @@ Titta på videon med versionsöversikten för oktober 2024 om du vill se en samm
 **Moderniserade sidhändelser**
 
 Följande AEM Sites-sidhändelser är nu tillgängliga som externt konsumerbara händelser som är baserade på AEM as a Cloud Service Eventing Platform. Händelserna kan behandlas via Adobe I/O för att interagera med externa processer.
+
 * Sidan publicerad
 * Sidan har inte publicerats
 * Sidan har tagits bort
@@ -108,7 +109,7 @@ Administratörer kan nu kontrollera om utgångna resurser behöver vara synliga 
 
 * [Spara ett utkast automatiskt för Core Components-baserade Adaptive Forms](/help/forms/save-core-component-based-form-as-draft.md): Användare kan nu dra nytta av en autosparfunktion som sparar ett delvis ifyllt formulär som ett utkast automatiskt. De kan gå tillbaka senare för att slutföra ifyllningen på samma eller annan enhet. Den här funktionen förbättrar konverteringsgraden för organisationer genom att minska antalet ifyllda formulär, eftersom användarna inte behöver börja om från början.
 
-* [Uppdatera Adobe Sign-omfång enkelt](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms): Du kan ändra omfånget för en Adobe Sign-konfiguration direkt från sidan AEM Cloud Configurations, vilket gör det snabbare och enklare att uppdatera befintliga konfigurationer.
+* [Uppdatera Adobe Sign-omfång enkelt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/adobe-sign-integration-adaptive-forms): Du kan ändra omfånget för en Adobe Sign-konfiguration direkt från sidan AEM Cloud Configurations, vilket gör det snabbare och enklare att uppdatera befintliga konfigurationer.
 
 * [Stöd för asynkrona funktioner i Adaptiv Forms](/help/forms/using-async-funct-in-rule-editor.md): När ditt adaptiva formulär kräver asynkrona åtgärder, t.ex. att vänta på externa processer eller datahämtning, kan du implementera dessa åtgärder med anpassade funktioner och konfigurera dem i regelredigeraren.
 
@@ -120,7 +121,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 #### AEM Forms AI Assistant
 
-[Generativ AI för Adaptiv Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/forms-overview/early-access-ea-features#aem-forms-ai-assistant-gen-ai) ger en helt ny nivå av kraft och enkelhet i dina formulärutvecklingsprocesser. Det gör att ni kan skapa bättre formulär snabbare än någonsin.
+[Generativ AI för Adaptiv Forms](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/forms-overview/early-access-ea-features#aem-forms-ai-assistant-gen-ai) ger en helt ny nivå av kraft och enkelhet i dina formulärutvecklingsprocesser. Det gör att ni kan skapa bättre formulär snabbare än någonsin.
 
 ![Generativ AI-assistent, adaptiv Forms](/help/forms/assets/generative-ai-assistant.png)
 
@@ -156,7 +157,7 @@ För att styra formulärinskickade formulär för Coral- eller Foundation-formul
 1. **Lägg till tillåtna sökvägar**: Anger sökvägarna där formuläråtgärder tillåts.
 1. **Begränsa beteende**: Anger beteendet för begränsade sökvägar (sökvägar som inte ingår i tillåtelselista). Du kan välja mellan två alternativ:
    * **Popup** (standard): Visar ett popup-meddelande.
-   * **Förhindra**:Blockerar formulärskickning.
+   * **Förhindra**:Blocks att formulär skickas.
 
 >[!NOTE]
 >
@@ -164,7 +165,7 @@ För att styra formulärinskickade formulär för Coral- eller Foundation-formul
 
 ### Självbetjänad loggvidarebefordran med alternativet Avancerat nätverk {#log-forwarding}
 
-Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av &#x200B;](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM-loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
+Medan AEM (inklusive Apache/Dispatcher) och CDN-loggar kan hämtas från Cloud Manager tycker många att det är bra att strömma dessa loggar till ett önskat loggningsmål. AEM har nu stöd för [vidarebefordran av ](/help/implementing/developing/introduction/log-forwarding.md) till Azure Blob Storage, Datadog, HTTPS, Elasticsearch (och OpenSearch) och Splunk. AEM-loggar kan vidarebefordras över avancerade nätverkskonfigurationer, till exempel via en dedikerad IP-adress.
 
 Den här funktionen konfigureras av användare på ett självbetjäningssätt och distribueras med [konfigurationspipeline](/help/operations/config-pipeline.md).
 
@@ -194,7 +195,7 @@ Vem som helst kan komma åt den offentliga betaversionen genom att klicka på kn
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -214,4 +215,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

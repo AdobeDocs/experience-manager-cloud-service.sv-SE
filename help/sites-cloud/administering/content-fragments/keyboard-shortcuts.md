@@ -1,11 +1,11 @@
 ---
 title: Kortkommandon för konsolen Innehållsfragment
-description: Olika kortkommandon finns tillgängliga i hela AEM, inklusive en markering för hantering av innehållsfragment.
+description: Det finns olika kortkommandon i hela AEM, inklusive ett alternativ för hantering av innehållsfragment.
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 exl-id: 24eefa31-4081-4b4a-af98-c6299b213cea
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 0%
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Det finns ett urval kortkommandon som kan användas i konsolen Innehållsfragment.
 
-Olika kortkommandon finns i hela AEM. Vissa gäller när [sidor redigeras](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra när det gäller [allmän användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
+Det finns olika kortkommandon i hela AEM. Vissa gäller när [sidor redigeras](/help/sites-cloud/authoring/page-editor/keyboard-shortcuts.md), andra när det gäller [allmän användning av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->De [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>De [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM-kortkommandon varierar beroende på operativsystem.
 
 ## Console för innehållsfragment - kortkommandon {#content-fragments-console-keyboard-shortcuts}
 

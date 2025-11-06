@@ -4,7 +4,7 @@ description: Versionsinformation om 2025.4.0-utgåvan av  [!DNL Adobe Experience
 feature: Release Information
 role: Admin
 exl-id: 48e09824-5c67-49d8-8896-358d679649fc
-source-git-commit: 0664e5dc4a7619a52cd28c171a44ba02c592ea3d
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1828'
 ht-degree: 0%
@@ -19,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.4.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -37,7 +37,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten för april 2025 om du vill se en sammanfattning av funktioner som lagts till i version 2025.4.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3464006?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3463991?quality=12)
 
 ## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
 
@@ -65,7 +65,7 @@ Dessutom bör kunder som använder AEM 6.5 vara medvetna om att stacken Dynamic 
 
 Fliken Bandbredd i Dynamic Media Classic rapportkontrollpanel stöds inte längre från och med april 2025.
 
-Se [Bandbredd och lagring, rapporttyper](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/setup/administration-setup#types-of-reports).
+Se [Bandbredd och lagring, rapporttyper](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/setup/administration-setup#types-of-reports).
 
 ## Nya funktioner i Assets View {#new-features-assets-view}
 
@@ -127,7 +127,7 @@ Den här versionsinformationen innehåller en lista över de innovationer som le
 
 Utvecklare kan integrera AEM som Cloud Service-funktioner i sina egna program och verktyg. Nya AEM as a Cloud Service-API:er följer OpenAPI-specifikationen och har som mål att vara konsekventa, väldokumenterade och användarvänliga. Autentiseringsuppgifter för slutpunkter som kräver autentisering genereras genom att skapa Adobe Developer Console-projekt och ha stöd för OAuth Server-to-Server, Web App och Single Page App (SPA).
 
-[Se den fullständiga listan](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) med OpenAPI-baserade API:er, [läs mer](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
+[Se den fullständiga listan](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) med OpenAPI-baserade API:er, [läs mer](/help/implementing/developing/open-api-based-apis.md) och prova en [heltäckande självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/invoke-api-using-oauth-s2s) som visar konfiguration och användning.
 
 I den här videon får du lära dig hur du konfigurerar ett autentiserat API för senare användning:
 
@@ -164,12 +164,14 @@ Den mer prestandaanpassade Java 21 **runtime** distribueras automatiskt när en 
 För att säkerställa effektiv övervakning av kundmiljöer måste AEM Java-loggarna ha ett konsekvent format och bör inte åsidosättas av anpassade konfigurationer. Loggutdata måste vara dirigerade till standardfilerna. För AEM-produktkod måste standardloggnivåer bevaras. Du kan dock justera loggnivåerna för kundutvecklad kod.
 
 Därför bör ändringar inte göras i följande OSGi-egenskaper:
+
 * **Konfiguration av Apache Sling-logg** (PID: `org.apache.sling.commons.log.LogManager`) — *alla egenskaper*
 * **Konfiguration av loggningsloggare för Apache Sling** (Factory PID: `org.apache.sling.commons.log.LogManager.factory.config`):
    * `org.apache.sling.commons.log.file`
    * `org.apache.sling.commons.log.pattern`
 
 I mitten av maj kommer AEM att tillämpa en policy där anpassade ändringar av dessa egenskaper ignoreras. Granska och justera processerna i efterföljande led. Om du till exempel använder funktionen för vidarebefordran av loggar:
+
 * Om loggningsmålet förväntar sig ett anpassat (icke-standard) loggformat, kan du behöva uppdatera dina regler för inmatning.
 * Om ändringar i loggnivåer minskar loggens utförlighet bör du vara medveten om att standardloggnivåerna kan leda till en avsevärd ökning av loggvolymen.
 
@@ -198,7 +200,7 @@ Mejla [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@a
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -218,4 +220,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

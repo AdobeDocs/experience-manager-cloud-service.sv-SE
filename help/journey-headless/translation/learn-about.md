@@ -1,27 +1,27 @@
 ---
-title: Lär dig mer om Headless-innehåll och översättning i AEM
-description: Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
+title: Läs om Headless Content and Translation it in AEM
+description: Lär dig headless concepts, how they map to AEM, and the theof AEM translation.
 exl-id: 72bb6646-e573-4576-8d17-49787d8c8c7f
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '737'
 ht-degree: 0%
 
 ---
 
-# Lär dig mer om headless-innehåll och hur du översätter det i AEM {#learn-about}
+# Läs om headless content och hur du översätter det i AEM {#learn-about}
 
-Lär dig headless-koncept, hur de AEM och teorin om AEM översättning.
+Lär dig headless concepts, how they map to AEM, and the theof AEM translation.
 
 ## Syfte {#objective}
 
-Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras, hur AEM hanterar headless-innehåll och hur sådant innehåll kan översättas. När du har läst bör du:
+Det här dokumentet hjälper dig att förstå hur headless-innehåll levereras, hur AEM stöder headless och hur sådant innehåll kan översättas. När du har läst bör du:
 
 * Förstå de grundläggande begreppen för leverans av headless-innehåll.
-* Lär dig hur AEM hanterar headless och translation.
+* Läs om hur AEM hanterar headless och översättning.
 
 ## Leverans av högklassigt innehåll {#full-stack}
 
@@ -50,15 +50,15 @@ När vi talar om ett headless CMS hanterar CMS innehållet och fortsätter att l
 
 ![Headless CMS](/help/journey-headless/developer/assets/headless-cms.png)
 
-De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webbutik, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från CMS utan rubrik och erbjuder sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
+De konsumerande tjänsterna, oavsett om de är AR-upplevelser, en webbutik, mobilupplevelser, progressiva webbappar (PWA) och så vidare, tar in innehåll från det headless CMS och erbjuder sin egen rendering. De ser till att kunna erbjuda sina egna huvuden för ert innehåll.
 
 Om du utelämnar huvudet förenklas CMS genom att komplexiteten försvinner. När du gör det flyttas även ansvaret för att återge innehållet till de tjänster som faktiskt behöver innehållet och som ofta är bättre lämpade för sådan återgivning.
 
-## Översätta rubrikfritt innehåll i AEM {#translating-in-aem}
+## Översätta Headless-innehåll i AEM {#translating-in-aem}
 
-Förutom kraftfulla verktyg för att skapa, hantera och leverera traditionella webbsidor i full hög erbjuder AEM även möjligheten att skapa fristående innehållsmarkeringar och leverera dem utan problem.
+Förutom kraftfulla verktyg för att skapa, hantera och leverera traditionella webbsidor i fullskärmsläge erbjuder AEM även möjligheten att skapa fristående innehållsval och leverera dem utan problem.
 
-Tack vare AEM kan det leverera innehåll antingen utan huvud eller stackar eller i båda modellerna samtidigt. För översättningsexperten kan samma uppsättning översättningsverktyg användas för båda typerna av innehåll, vilket ger en enhetlig metod för översättning av ditt innehåll.
+Med kraften i AEM kan man leverera material i antingen headlessform, full-stack eller i båda modellerna samtidigt. För översättningsexperten kan samma uppsättning översättningsverktyg användas för båda typerna av innehåll, vilket ger en enhetlig metod för översättning av ditt innehåll.
 
 Lär dig mer om hur AEM översätter innehåll, men på en hög nivå är konceptet enkelt:
 
@@ -69,17 +69,17 @@ Lär dig mer om hur AEM översätter innehåll, men på en hög nivå är koncep
 
 ## What&#39;s Next {#what-is-next}
 
-Tack för att du kom igång med din AEM översättningsresa utan trassel! Nu när du läser det här dokumentet bör du:
+Tack för att du kom igång med din AEM headless-översättningsresa! Nu när du läser det här dokumentet bör du:
 
 * Förstå de grundläggande begreppen för leverans av headless-innehåll.
-* Lär dig hur AEM hanterar headless och translation.
+* Läs om hur AEM hanterar headless och översättning.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM översättningsresa utan rubriker genom att gå igenom dokumentet [Kom igång med AEM översättningen](getting-started.md) där du får en översikt över hur AEM hanterar innehåll utan rubriker och lär dig dess översättningsverktyg.
+Bygg vidare på den här kunskapen och fortsätt din arbetslösa översättningsresa med AEM genom att gå igenom dokumentet [Kom igång med AEM headless translation](getting-started.md) där du får en översikt över hur AEM hanterar headless-innehåll och lär dig dess översättningsverktyg.
 
 ## Ytterligare resurser {#additional-resources}
 
-Vi rekommenderar att du går vidare till nästa del av den headless-översättningsresan genom att granska dokumentet [Kom igång med AEM headless-översättning](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
+Vi rekommenderar att du går vidare till nästa del av den Headless-översättningsresan genom att granska dokumentet [Kom igång med AEM Headless-översättning](getting-started.md), men följande är ytterligare, valfria resurser som gör en djupdykning i vissa koncept som nämns i det här dokumentet, men de behöver inte fortsätta på den headless-resan.
 
-* [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om hur du AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
+* [MSM och översättning](/help/sites-cloud/administering/msm-and-translation.md) - Information om AEM Multi-Site Manager och hur det fungerar med översättningsverktygen
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

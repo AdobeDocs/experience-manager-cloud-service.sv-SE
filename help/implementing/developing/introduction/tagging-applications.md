@@ -1,17 +1,17 @@
 ---
-title: Bygga in märkord i AEM
-description: Arbeta med taggar eller utöka taggar i ett anpassat AEM
+title: Bygga taggar i AEM-program
+description: Arbeta med taggar eller utöka taggar i ett anpassat AEM-program
 exl-id: a106dce1-5d51-406a-a563-4dea83987343
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 0%
 
 ---
 
-# Bygga in märkord i AEM {#building-tagging-into-aem-applications}
+# Bygga taggar i AEM-program {#building-tagging-into-aem-applications}
 
 I det här dokumentet beskrivs användningen av
 
@@ -163,11 +163,11 @@ För taggning beror lokaliseringen på sammanhanget eftersom taggen `titles` kan
 
 I följande procedur beskrivs hur du lägger till ett nytt språk (till exempel finska) i dialogrutan **Taggredigering**:
 
-1. Redigera flervärdesegenskapen `languages` för noden `/content/cq:tags` i **CRXDE**.
+1. Redigera flervärdesegenskapen **för noden** i `languages`CRXDE`/content/cq:tags`.
 1. Lägg till `fi_fi`, som representerar den finska språkversionen, och spara ändringarna.
 
 Finska är nu tillgängligt i taggdialogrutan för sidegenskaperna och i dialogrutan **Redigera tagg** när du redigerar en tagg i konsolen **Taggning**.
 
 >[!NOTE]
 >
->Det nya språket måste vara ett av de AEM identifierade språken. Det måste alltså vara tillgängligt som en nod under `/libs/wcm/core/resources/languages`.
+>Det nya språket måste vara ett av de av AEM erkända språken. Det måste alltså vara tillgängligt som en nod under `/libs/wcm/core/resources/languages`.

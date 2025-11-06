@@ -2,10 +2,10 @@
 title: Visa och hantera Assets i konsolen för innehållsfragment
 description: Lär dig hur du visar och hanterar Assets i konsolen för innehållsfragment i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 exl-id: 865e1fa8-2956-45cf-9dd7-034d491808fe
 solution: Experience Manager Sites
-source-git-commit: fdfe0291ca190cfddf3bed363a8c2271a65593a1
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Visa och hantera Assets i konsolen för innehållsfragment {#viewing-managing-assets-content-fragments-console}
 
-Som standard visas dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) i Adobe Experience Manager as a Cloud Service.
+Som standard visas dina [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console) i konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) i Adobe Experience Manager as a Cloud Service.
 
 Du kan även visa och hantera alla andra typer av **Assets** i den här **konsolen för innehållsfragment**.
 

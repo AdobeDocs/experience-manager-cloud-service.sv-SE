@@ -3,8 +3,8 @@ title: AEM Developer Tools for Eclipse
 description: Lär dig hur du använder AEM Developer Tools för Eclipse, ett Eclipse-plugin-program som bygger på Eclipse-plugin för Apache Sling.
 exl-id: 7f9c0f99-e230-440a-8bc9-a0ab7465e3bf
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 676a10a98f850dbc803b2c7b367a61fce51089f4
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1228'
 ht-degree: 0%
@@ -121,7 +121,7 @@ Så här skapar du exempelprojektet:
 
    >[!TIP]
    >
-   >Mer information om hur du felsöker projekt som körs på en lokal AEM SDK finns i dokumentet [Fjärrfelsökning i AEM SDK.](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)
+   >Mer information om hur du felsöker projekt som körs på en lokal AEM SDK finns i dokumentet [Fjärrfelsökning i AEM SDK.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-sdk/remote-debugging)
 
 1. Klicka på **Slutför**.
 

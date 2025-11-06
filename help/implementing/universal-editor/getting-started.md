@@ -3,8 +3,8 @@ title: Komma igång med Universal Editor i AEM
 description: Lär dig hur du får tillgång till den universella redigeraren och hur du börjar använda den i ditt första AEM-program.
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 8e1610e2835a9e85de2d2bffa6a883777c92fe96
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 0%
@@ -102,8 +102,8 @@ Du kan använda prefixet `config` i anslutnings-URN för att ange tjänste- och 
 
 Om du inte vill använda den universella redigeringstjänsten, som hanteras av Adobe, men din egen värdversion, kan du ange detta i en metatagg. Om du vill skriva över standardtjänstslutpunkten som tillhandahålls av Universal Editor anger du en egen tjänstslutpunkt:
 
-* Meta name - `urn:adobe:aue:config:service`
-* Metainnehåll - `content="https://adobe.com"` (exempel)
+* Meta-namn - `urn:adobe:aue:config:service`
+* Meta-innehåll - `content="https://adobe.com"` (exempel)
 
 ```html
 <meta name="urn:adobe:aue:config:service" content="<url>">
@@ -111,8 +111,8 @@ Om du inte vill använda den universella redigeringstjänsten, som hanteras av A
 
 Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en metatagg. Om du vill hämta tillägg anger du slutpunkterna för tillägget:
 
-* Metanamn: `urn:adobe:aue:config:extensions`
-* Metainnehåll: `content="https://adobe.com,https://anotherone.com,https://onemore.com"` (exempel)
+* Meta-namn: `urn:adobe:aue:config:extensions`
+* Meta-innehåll: `content="https://adobe.com,https://anotherone.com,https://onemore.com"` (exempel)
 
 ```html
 <meta name="urn:adobe:aue:config:extensions" content="<url>,<url>,<url>">

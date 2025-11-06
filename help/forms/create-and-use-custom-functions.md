@@ -7,7 +7,7 @@ content-type: reference
 feature: Adaptive Forms, Core Components
 exl-id: 24607dd1-2d65-480b-a831-9071e20c473d
 role: User, Developer
-source-git-commit: 5b5b44f8dffc01a75eda464cd7759cf03028c2c6
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-core-components/create-and-use-custom-functions-core-components) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/create-and-use-custom-functions-core-components) |
 | AEM as a Cloud Service | Den här artikeln |
 
 AEM Forms har stöd för anpassade funktioner, vilket gör att man kan definiera JavaScript-funktioner för att implementera komplexa affärsregler. Dessa anpassade funktioner gör att man kan förbättra blanketternas funktioner genom att underlätta hantering och bearbetning av inmatade data för att uppfylla specifika krav. De gör det möjligt att dynamiskt ändra formulärbeteende baserat på fördefinierade kriterier. Med anpassade funktioner kan utvecklare också använda komplex valideringslogik, utföra dynamiska beräkningar och styra visningen eller beteendet för formulärelement baserat på användarinteraktioner eller fördefinierade kriterier.
@@ -31,6 +31,7 @@ AEM Forms har stöd för anpassade funktioner, vilket gör att man kan definiera
 ## Användning av anpassade funktioner {#uses-of-custom-function}
 
 Fördelarna med att använda anpassade funktioner i Adaptive Forms är:
+
 * **Databearbetning**: Anpassade funktioner hjälper dig att bearbeta data som anges i formulärfälten.
 * **Validering av data**: Med anpassade funktioner kan du utföra anpassade kontroller av formulärindata och tillhandahålla angivna felmeddelanden.
 * **Dynamiskt beteende**: Med anpassade funktioner kan du styra det dynamiska beteendet i dina formulär baserat på specifika villkor. Du kan till exempel visa/dölja fält, ändra fältvärden eller justera formulärlogiken dynamiskt.
@@ -119,7 +120,7 @@ Titta på följande kodfragment, där input2 definieras som en valfri parameter:
 
 Följande bild visas med den anpassade funktionen `OptionalParameterFunction` i regelredigeraren:
 
-![Valfria eller obligatoriska parametrar &#x200B;](/help/forms/assets/optional-default-params.png)
+![Valfria eller obligatoriska parametrar ](/help/forms/assets/optional-default-params.png)
 
 Du kan spara regeln utan att ange ett värde för de obligatoriska parametrarna, men regeln körs inte och ett varningsmeddelande visas som:
 

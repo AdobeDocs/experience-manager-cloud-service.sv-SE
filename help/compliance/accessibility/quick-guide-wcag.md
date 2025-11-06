@@ -3,8 +3,8 @@ title: En snabbguide till WCAG 2.1
 description: A Quick Guide to the Web Content Accessibility Guidelines (WCAG) version 2.1.
 exl-id: 56aa834b-cd07-41c5-88f2-915bc0596e48
 feature: Compliance
-role: Admin, Architect, Developer, Leader
-source-git-commit: bffc743b2d28c4c4815a17df75c04c8bfdc90a1e
+role: Admin, Developer, Leader
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1749'
 ht-degree: 86%
@@ -66,8 +66,8 @@ WCAG 2.1 består av fyra huvudprinciper för hjälpmedelsanpassad design, som ib
 1. **Robust**: Är webbinnehållet tillgängligt på det sätt som avses för en mängd olika webbläsarmiljöer, inklusive äldre och kommande webbläsarmiljöer?
 
 För att förtydliga:
-* Varje **princip** består av en eller flera **riktlinjer**.
 
+* Varje **princip** består av en eller flera **riktlinjer**.
 * Riktlinjerna är skrivna som instruktioner som antingen är positiva (gör det här…) eller negativa (gör inte det här…).
 * Riktlinjerna är numrerade från 1.1 till 4.1 där den första siffran motsvarar den överordnade principen.
 * Varje riktlinje består av ett eller flera **framgångskriterier**.
@@ -85,6 +85,7 @@ WCAG 2.1 i sig är ett stabilt dokument och kommer inte att ändras, men de fles
 ### WCAG 2.1-resurser {#wcag-resources}
 
 Denna förteckning är inte avsedd att vara uttömmande, utan innehåller en introduktion till de tillgängliga resurserna:
+
 * [En översikt över alla WCAG-relaterade dokument](https://www.w3.org/WAI/standards-guidelines/wcag/)
 * [En sammanfattning av de olika dokumenten](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 * [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
@@ -107,7 +108,7 @@ Techniques for WCAG 2.1 finns på sidan [Techniques for WCAG 2.1](https://www.w3
 
 **Tekniker** utgör nivån under framgångskriterierna i WCAG 2.1-hierarkin. De klassas av WAI som informativa, inte normativa. En specifik teknik behöver alltså inte följas för att en resurs ska uppfylla kraven i WCAG 2.1.
 
-Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (till exempel HTML eller video), eller en situation (till exempel e-handel eller e-utbildningsprogram). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
+Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (t.ex. HTML eller video), eller en situation (t.ex. e-handel eller e-learning-program). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
 
 Du kan komma åt tekniker:
 

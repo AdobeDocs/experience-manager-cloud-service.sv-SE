@@ -5,7 +5,7 @@ keywords: Hur man konfigurerar SharePoint Site med begränsad åtkomst?, Konfigu
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: 3230bab2-c1aa-409d-9f01-c42cf88b1135
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Fördelar med begränsad åtkomst till SharePoint Site:
 
 Följ stegen nedan för att konfigurera SharePoint Sites med begränsad åtkomst med hjälp av behörighetsområden:
 
-1. [Skapa ett program med &#x200B;](#create-an-application-with-the-limited-permission-in-the-azure-portal)
+1. [Skapa ett program med ](#create-an-application-with-the-limited-permission-in-the-azure-portal)
 1. [Ange auktoriseringsomfånget på AEM-instansen](#set-the-authorization-scope-at-aem-instance)
 
 ### Skapa ett program med begränsad behörighet i Azure-portalen
@@ -46,13 +46,14 @@ Skapa ett program i [Microsoft Azure-portalen](https://portal.azure.com/#home) m
 ![SharePoint har valt plats](/help/forms/assets/sharepoint-selected-site.png)
 
 Mer information om hur du hämtar `Client ID`, `Client Secret` och `Tenant ID` för `OAuth URL` finns i [Microsoft®-dokumentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
+
 * Lägg till omdirigerings-URI som `https://[author-instance]/libs/cq/sharepoint/content/configurations/wizard.html` i Microsoft® Azure-portalen. Ersätt `[author-instance]` med URL:en för din Author-instans.
 * Lägg till behörighetsomfånget `offline_access` och `Sites.Selected` i Microsoft Graph API för att ge begränsad åtkomst till webbplatser.
 * För OAuth-URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Ersätt `<tenant-id>` med `tenant-id` för din app från Microsoft® Azure-portalen.
 
 Om du vill använda API-behörigheten `Sites.Selected` måste du ha ett program som är registrerat i Azure-portalen med rätt behörigheter för SharePoint Online Sites. Installationen säkerställer att programmet har den behörighet som krävs för att interagera med SharePoint Site inom det definierade området, vilket ger den begränsade åtkomst som krävs.
 
-Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i &#x200B;](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
+Mer information om hur du utvecklar program som använder [-behörigheter för SharePoint Online-platser finns i ](https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/develop-applications-that-use-sites-selected-permissions-for-spo/ba-p/3790476)bloggartikeln - Utveckla program som använder platser.Markerade behörigheter för SPO-webbplatser`Sites.Selected`.
 
 ### Ange auktoriseringsomfånget på AEM-instansen
 
@@ -91,6 +92,7 @@ Nu kan du använda den här [SharePoint Sites-konfigurationen för att skicka-å
 ## Extra byte
 
 Så här hämtar du värdet för `SharePoint Site ID`:
+
 1. Gå till [API:erna för Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer).
 1. Klicka på `SharePoint Sites` i den vänstra rutan under API:erna för `Search for a SharePoint site by keyword`.
 1. Ersätt platshållaren `contoso` med det faktiska namnet på din SharePoint-webbplats för att hämta motsvarande plats-ID.

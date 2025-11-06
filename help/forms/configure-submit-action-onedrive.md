@@ -5,7 +5,7 @@ keywords: AEM Forms OneDrive-integrering, Anslut till Microsoft OneDrive, Konfig
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 exl-id: dbfa4094-1b92-4a7c-a799-f66973d27054
 role: User, Developer
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -64,7 +64,7 @@ Så här ansluter du AEM Forms till din Microsoft® OneDrive-lagring:
    >[!NOTE]
    >
    >* Som standard finns `forms-ootb-storage-adaptive-forms-submission` i OneDrive-behållaren.
-   > * Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om den inte redan finns, genom att klicka på **Skapa mapp**.
+   >* Skapa en mapp som `forms-ootb-storage-adaptive-forms-submission`, om den inte redan finns, genom att klicka på **Skapa mapp**.
 
 Nu kan du använda den här lagringskonfigurationen för OneDrive för att skicka-åtgärden i ett adaptivt formulär.
 

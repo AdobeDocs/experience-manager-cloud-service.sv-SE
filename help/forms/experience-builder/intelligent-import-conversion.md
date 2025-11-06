@@ -4,14 +4,14 @@ description: Lär dig hur du omvandlar befintliga dokument, PDF-filer och bilder
 hide: true
 index: false
 hidefromtoc: true
-role: Admin, Architect, Developer
-source-git-commit: de524aeddd5f53cbd713ff0523222966752ebbc0
+role: Admin, Developer
+exl-id: 7268c4be-1e4a-4d31-aa76-9076d7ee83ce
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 0%
 
 ---
-
 
 # Intelligent import och konvertering
 

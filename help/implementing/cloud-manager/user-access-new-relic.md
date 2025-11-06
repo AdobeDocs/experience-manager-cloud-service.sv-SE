@@ -4,8 +4,8 @@ description: Läs om New Relic One APM-tjänst (application performance monitori
 exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 0%
@@ -49,11 +49,11 @@ För ett nytt program skapas ett New Relic One-underkonto åt dig. Du måste doc
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program som du vill hantera dina New Relic One-användare för.
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och välj **Aktivera New Relic** längst ned på **miljökortet** på programöversiktssidan.
+1. Klicka på ikonen **Mer** och välj ![Aktivera New Relic](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst ned på **miljökortet** på programöversiktssidan.
 
    ![Hantera användare](assets/newrelic-activate-sub-account.png)
 
-   * Du kan även komma åt alternativet **Hantera användare**. Klicka på ![Utjämna fler ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst upp på skärmen **Miljö** i ditt program.
+   * Du kan även komma åt alternativet **Hantera användare**. Klicka på **Utjämna fler ikoner** längst upp på skärmen ![Miljö](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i ditt program.
 
 1. [Kör en pipeline](/help/implementing/cloud-manager/configuring-pipelines/managing-pipelines.md#running-pipelines) för samma miljö för att slutföra aktiveringen av underkontot.
 
@@ -71,11 +71,11 @@ Följ de här stegen för att definiera användare för ditt New Relic One-under
 
 1. Klicka på det program som du vill hantera dina New Relic One-användare för.
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och välj **Hantera användare** längst ned på **miljökortet** på programöversiktssidan.
+1. Klicka på ikonen **Mer** och välj ![Hantera användare](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst ned på **miljökortet** på programöversiktssidan.
 
    ![Hantera användare](assets/newrelic-manage-users.png)
 
-   * Du kan även komma åt alternativet **Hantera användare**. Klicka på ![Utjämna fler ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst upp på skärmen **Miljö** i ditt program.
+   * Du kan även komma åt alternativet **Hantera användare**. Klicka på **Utjämna fler ikoner** längst upp på skärmen ![Miljö](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i ditt program.
 
 1. I dialogrutan **Hantera New Relic-användare** anger du för- och efternamnet för den användare som du vill lägga till och klickar på knappen **Lägg till** . Upprepa det här steget för alla användare som du vill lägga till.
 
@@ -121,11 +121,11 @@ När du har [aktiverat ditt New Relic-konto](#activate-account) kan du komma åt
 
 1. Klicka på det program som du vill använda New Relic One för.
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst ned på **miljökortet** på programöversiktssidan och välj **Öppna New Relic**.
+1. Klicka på ikonen **Mer** längst ned på ![miljökortet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på programöversiktssidan och välj **Öppna New Relic**.
 
    ![Hantera användare](assets/newrelic-access.png)
 
-   * Du har även tillgång till New Relic. Klicka på ![Utjämna fler ikoner](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) längst upp på skärmen **Miljö** i ditt program.
+   * Du har även tillgång till New Relic. Klicka på **Utjämna fler ikoner** längst upp på skärmen ![Miljö](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i ditt program.
 
 1. Logga in på New Relic One på den nya webbläsarfliken som öppnas.
 
@@ -141,7 +141,7 @@ Om du uppmanas att verifiera din e-postadress under inloggningen på New Relic O
 
 Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Du kan undvika att verifiera din e-post under varje inloggning genom att klicka i kryssrutan **Kom ihåg mig** på inloggningsskärmen.
 
-Om du vill ha mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Felsöka New Relic One användaråtkomst {#troubleshooting}
 
@@ -181,7 +181,7 @@ Om du inte får något e-postmeddelande från New Relic gör du följande:
 >
 >Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
 
-Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Frågor och svar {#faqs}
 

@@ -4,7 +4,7 @@ description: Lär dig hur du skapar  [!DNL Dynamic Media] mallar med en WYSIWYG-
 hide: true
 role: User
 exl-id: 07de648e-4ae2-4524-8e05-3cf10bb6006d
-source-git-commit: d82d40ebb5417dfb7ce37c9995c5cadb74a2fe11
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '3605'
 ht-degree: 0%
@@ -51,7 +51,7 @@ ht-degree: 0%
     </tr>
 </table>
 
-Skapa anpassningsbara mallar i realtid för banners och flygblad med hjälp av [!DNL Dynamic Media]-mallar, en WYSIWYG-mallredigerare. Publicera din [!DNL Dynamic Media]-mall och använd den i program längre fram i kedjan. En [!DNL Dynamic Media]-mall innehåller bild- och textlager. Lägg till parametrar i bild- och textlagren i mallen och använd [[!DNL Dynamic Media] URL:er](https://experienceleague.adobe.com/sv/docs/commerce-admin/content-design/wysiwyg/storage/catalog-urls-dynamic-media) för att flytta och ändra storlek på lagret och uppdatera innehållet i realtid.
+Skapa anpassningsbara mallar i realtid för banners och flygblad med hjälp av [!DNL Dynamic Media]-mallar, en WYSIWYG-mallredigerare. Publicera din [!DNL Dynamic Media]-mall och använd den i program längre fram i kedjan. En [!DNL Dynamic Media]-mall innehåller bild- och textlager. Lägg till parametrar i bild- och textlagren i mallen och använd [[!DNL Dynamic Media] URL:er](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/wysiwyg/storage/catalog-urls-dynamic-media) för att flytta och ändra storlek på lagret och uppdatera innehållet i realtid.
 
 Några av de viktigaste funktionerna:
 
@@ -83,10 +83,10 @@ Lär dig att skapa en [!DNL Dynamic Media]-mall steg för steg i den här videon
 Uppfyll följande krav för att skapa en [!DNL Dynamic Media]-mall och generera dess leverans-URL:
 
 1. Åtkomst till [!DNL Dynamic Media].
-1. På startsidan för [!DNL Assets View] har du en mapp i **[!UICONTROL Dynamic Media Assets]** där du kan spara mallen. [Skapa en mapp](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets &#x200B;](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**&#x200B;för att replikera den mappen i **[!UICONTROL Dynamic Media Assets]**.
+1. På startsidan för [!DNL Assets View] har du en mapp i **[!UICONTROL Dynamic Media Assets]** där du kan spara mallen. [Skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**för att replikera den mappen i **[!UICONTROL Dynamic Media Assets]**.
 1. [Synkronisera bilderna som är tillgängliga i din [!DNL AEM Assets] instans med [!DNL Dynamic Media] för att använda dem för att skapa mallen](/help/assets/dynamic-media/config-dm.md).
 1. Publicera bilderna som ska användas när mallen skapas för att generera leverans-URL:en för mallen när den har skapats. Leverans-URL:en kan användas i program längre fram i kedjan.
-1. Om du vill använda ett annat teckensnitt än standardteckensnittet [!UICONTROL Adobe Sans F2] i mallens textlager [överför och publicerar du teckensnittsfilen till AEM och Dynamic Media samtidigt](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation). [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se även till att [bearbeta om](/help/assets/reprocessing-assets-view.md) befintliga teckensnitt för att använda dem. Mer information finns i [Teckensnitt](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/support-files/fonts).<!--(On [!DNL Assets View] home page, click ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigate to the font file location, select the font file one at a time and click ![Reprocess](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**)-->
+1. Om du vill använda ett annat teckensnitt än standardteckensnittet [!UICONTROL Adobe Sans F2] i mallens textlager [överför och publicerar du teckensnittsfilen till AEM och Dynamic Media samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation). [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se även till att [bearbeta om](/help/assets/reprocessing-assets-view.md) befintliga teckensnitt för att använda dem. Mer information finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).<!--(On [!DNL Assets View] home page, click ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigate to the font file location, select the font file one at a time and click ![Reprocess](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**)-->
 1. verifiera följande i Touch-gränssnittet:
    * **[!UICONTROL Edit [!DNL Dynamic Media] Configuration page]** som är inställd på **[!UICONTROL [!DNL Dynamic Media] sync mode]** på **[!UICONTROL Disabled by default]** används inte på alla AEM-mappar (**[!UICONTROL Sync all content]** är avmarkerad). Mer information finns i [Konfigurera Dynamic Media Cloud Service](/help/assets/dynamic-media/config-dm.md).
    * **[!UICONTROL [!DNL Dynamic Media] sync mode]** är inställt på **[!UICONTROL Enable for subfolders]** för målmappen eller undermappen där du vill spara mallen när den har skapats. Mer information finns i [Konfigurera [!DNL Dynamic Media] Cloud Service](/help/assets/dynamic-media/config-dm.md).
@@ -96,9 +96,9 @@ Uppfyll följande krav för att skapa en [!DNL Dynamic Media]-mall och generera 
 Utför följande steg för att skapa en [!DNL Dynamic Media]-mall:
 
 <!--
-1. Navigate to your [!DNL Assets View] and [create a folder](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) in ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. The folder tree in ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replicates in **[!UICONTROL Dynamic Media Assets]**. Save your [!DNL Dynamic Media] template in this [!UICONTROL Dynamic Media Assets] folder.
-1. Select ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** and [upload and publish your images to [!DNL AEM] and [!DNL Dynamic Media] simultaneously](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) to use them in creating the template. Publishing images is required to generate the template's delivery URL, after creating the template. The delivery URL can be used in downstream applications.
-1. [Execute these asset uploading and publishing steps](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) to upload and publish a font file to AEM and Dynamic Media simultaneously to use it in creating the template. [!UICONTROL Adobe Sans F2] is the only default font available in the text layer. [The supported font file formats are, AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Ensure to [reprocess](/help/assets/reprocessing-assets-view.md) the existing fonts to use them in creating the template (On [!DNL Assets View] home page, click ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigate to the font file location, select the font file one at a time and click ![Reprocess](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**). See [Fonts](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/support-files/fonts) to know more about fonts.
+1. Navigate to your [!DNL Assets View] and [create a folder](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) in ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**. The folder tree in ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** replicates in **[!UICONTROL Dynamic Media Assets]**. Save your [!DNL Dynamic Media] template in this [!UICONTROL Dynamic Media Assets] folder.
+1. Select ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]** and [upload and publish your images to [!DNL AEM] and [!DNL Dynamic Media] simultaneously](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm#dynamic-media-publish-mode-set-to-upon-activation) to use them in creating the template. Publishing images is required to generate the template's delivery URL, after creating the template. The delivery URL can be used in downstream applications.
+1. [Execute these asset uploading and publishing steps](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation) to upload and publish a font file to AEM and Dynamic Media simultaneously to use it in creating the template. [!UICONTROL Adobe Sans F2] is the only default font available in the text layer. [The supported font file formats are, AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Ensure to [reprocess](/help/assets/reprocessing-assets-view.md) the existing fonts to use them in creating the template (On [!DNL Assets View] home page, click ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigate to the font file location, select the font file one at a time and click ![Reprocess](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**). See [Fonts](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts) to know more about fonts.
 -->
 
 1. [Skapa en tom arbetsyta](#create-a-canvas)
@@ -145,7 +145,7 @@ Så här skapar du en tom arbetsyta:
 * ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg): Klicka på ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg) eller använd kortkommando, **Ctrl** + **Z** (Windows) eller **Cmd** + **Z** (Mac) för att ångra den senaste åtgärden.
 * ![mall för att skapa banners snabbt](/help/assets/assets/redo.svg): Klicka på mallen ![om du vill skapa banners snabbt](/help/assets/assets/redo.svg) eller använd kortkommando, **Ctrl** + **Y** (Windows) eller **Cmd** + **Y** (Mac) om du vill göra om den senaste åtgärden.
 * ![mall för att snabbt skapa flygblad](/help/assets/assets/zoom-in.svg): Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/zoom-in.svg) eller använd kortkommando, **Ctrl** + **+** (Windows) eller **Cmd** + **+** (Mac) om du vill zooma in arbetsytan.
-* ![mall för att skapa banners snabbt](/help/assets/assets/Zoom-out.svg): Klicka på mallen ![&#x200B; om du vill skapa banners snabbt](/help/assets/assets/Zoom-out.svg) eller använd kortkommando, **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac) om du vill zooma ut arbetsytan.
+* ![mall för att skapa banners snabbt](/help/assets/assets/Zoom-out.svg): Klicka på mallen ![ om du vill skapa banners snabbt](/help/assets/assets/Zoom-out.svg) eller använd kortkommando, **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac) om du vill zooma ut arbetsytan.
 * Tryck på **backspace** eller **delete** för att ta bort det markerade lagret om ingen text eller egenskap redigeras.
 
 Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/show-layers-list.svg) och välja fler alternativ (![](/help/assets/assets/three-dots.svg)) på lagret Canvas om du vill redigera arbetsytans dimensioner när du skapar mallen.
@@ -159,7 +159,7 @@ Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/show-l
 
 Gör så här för att lägga till bilder på arbetsytan:
 
-1. Klicka på ![skapa en banderoll på nolltid](/help/assets/assets/add-image.svg) för att öppna panelen [Resursväljare](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector). På panelen visas de bilder i din AEM Assets-instans som synkroniseras med [!DNL Dynamic Media].
+1. Klicka på ![skapa en banderoll på nolltid](/help/assets/assets/add-image.svg) för att öppna panelen [Resursväljare](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-selector/overview-asset-selector). På panelen visas de bilder i din AEM Assets-instans som synkroniseras med [!DNL Dynamic Media].
 1. Bläddra i panelen eller använd nyckelord i sökfältet för att hitta en viss bild.
 1. Dra och släpp en bild på arbetsytan för att använda den. Se [**[!UICONTROL Properties Panel]**](#reposition-resize-delete-a-layer) för att ändra storlek på eller flytta ett lager på arbetsytan.
    ![skapa en banderoll inom några sekunder](/help/assets/assets/add-image-to-canvas.png)
@@ -189,7 +189,7 @@ Utför följande steg för att formatera specifika delar av en sträng:
    * **Teckensnittsegenskaper**: Ändra teckensnittsfamilj, färg och storlek med respektive panelalternativ.
      ![format-substring](/help/assets/assets/format-substring.png)
 
-[Varje formaterad strängdel visas som en delsträng i delsträngsväljaren, som är tillgänglig på parameterpanelen. Lägg till parametrar i dessa formaterade delar för att formatera dem dynamiskt med mallens leverans-URL &#x200B;](#substring-parameterisation).
+[Varje formaterad strängdel visas som en delsträng i delsträngsväljaren, som är tillgänglig på parameterpanelen. Lägg till parametrar i dessa formaterade delar för att formatera dem dynamiskt med mallens leverans-URL ](#substring-parameterisation).
 
 ### Lägga till former på arbetsytan {#add-shapes-to-the-canvas}
 
@@ -214,7 +214,7 @@ Så här redigerar eller tar du bort ett lager på arbetsytan:
 
 ### Egenskapspanelen{#properties-panel}
 
-Panelen [!UICONTROL Properties] innehåller avsnitt för att [flytta](#reposition-resize-delete-a-layer), [ändra storlek](#reposition-resize-delete-a-layer) och [rotera](#reposition-resize-delete-a-layer) ett lager.  Den innehåller också färgfyllningsalternativ för [formlager](#add-shapes-to-the-canvas), [textformateringsalternativ](#text-formatting-options-on-properties-panel) för [textlager](#add-text-to-the-canvas) och ett alternativ för att [lägga till en [!UICONTROL CTA] länk &#x200B;](#add-CTA-in-dynamic-media-templates) till ett markerat lager.
+Panelen [!UICONTROL Properties] innehåller avsnitt för att [flytta](#reposition-resize-delete-a-layer), [ändra storlek](#reposition-resize-delete-a-layer) och [rotera](#reposition-resize-delete-a-layer) ett lager.  Den innehåller också färgfyllningsalternativ för [formlager](#add-shapes-to-the-canvas), [textformateringsalternativ](#text-formatting-options-on-properties-panel) för [textlager](#add-text-to-the-canvas) och ett alternativ för att [lägga till en [!UICONTROL CTA] länk ](#add-CTA-in-dynamic-media-templates) till ett markerat lager.
 Om du vill navigera till ett lagers egenskapspanel klickar du på ![Skapa snabbt innehåll](/help/assets/assets/show-layers-list.svg) och väljer lagret i listan för att visa dess [!UICONTROL Properties]-panel.
 
 ![skapa snabbt innehåll](/help/assets/assets/properties-panel.png)
@@ -233,7 +233,7 @@ Se de här vanliga redigeringsåtgärderna för lager när du vill redigera text
 #### Textformateringsalternativ{#text-formatting-options-on-properties-panel}
 
 Formatera texten till önskat teckensnitt, önskad storlek, färg, stil, justering (i lagret) genom att ändra deras värden i respektive fält under avsnittet **[!UICONTROL Text]** på panelen.
-Inkludera **[!UICONTROL Smart Text Resize]**. [!UICONTROL Smart Text Resize] fungerar med algoritmen [Textpassning](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/r-copy-fitting) för att fylla texten optimalt i textområdet och förhindrar textspill och minimerar extra utrymme längst ned i texten.
+Inkludera **[!UICONTROL Smart Text Resize]**. [!UICONTROL Smart Text Resize] fungerar med algoritmen [Textpassning](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/r-copy-fitting) för att fylla texten optimalt i textområdet och förhindrar textspill och minimerar extra utrymme längst ned i texten.
 
 ![Skapa innehåll på nolltid](/help/assets/assets/smart-text-resize.png)
 
@@ -280,7 +280,7 @@ Ta med följande parametrar för att redigera texten, teckensnittet, färgen och
 
 ##### Parametrisera delsträngar{#substring-parameterisation}
 
-Bläddra till avsnittet **[!UICONTROL Parameters]** i panelen **[!UICONTROL Substring Parameters]**. Det här avsnittet innehåller en **delsträngsväljare** som visar den fullständiga strängen (det markerade textlagret) med konsekvent formatering eller dess formaterade delar som separata delsträngar. Välj en delsträng för att [parametrisera dess text, teckensnittsfamilj, teckenstorlek och färg &#x200B;](#text-formatting-parameters).
+Bläddra till avsnittet **[!UICONTROL Parameters]** i panelen **[!UICONTROL Substring Parameters]**. Det här avsnittet innehåller en **delsträngsväljare** som visar den fullständiga strängen (det markerade textlagret) med konsekvent formatering eller dess formaterade delar som separata delsträngar. Välj en delsträng för att [parametrisera dess text, teckensnittsfamilj, teckenstorlek och färg ](#text-formatting-parameters).
 Använd delsträngsväljaren för att [dela delsträngar](#split-substring) om du vill parametrisera de enskilda delarna eller [sammanfoga delsträngar](#merge-substring) om du vill använda enhetliga parametrar.
 
 ###### Dela delsträng{#split-substring}
@@ -290,7 +290,7 @@ Om du vill parametrisera en viss del av en delsträng drar du ut delen så att d
 1. I delsträngsväljaren markerar du de tecken i en delsträng som du vill separera.
 1. Klicka på ![delad delsträng](/help/assets/assets/unmerge.svg) för att dra ut markeringen och göra den till en separat delsträng i **delsträngsväljaren**.
    ![delad delsträng](/help/assets/assets/split-a-substring.png)
-Du kan välja önskad delsträng för att [parametrisera text, teckensnittsfamilj, teckenstorlek och färg &#x200B;](#text-formatting-parameters) .
+Du kan välja önskad delsträng för att [parametrisera text, teckensnittsfamilj, teckenstorlek och färg ](#text-formatting-parameters) .
 
 ###### Sammanfoga delsträng{#merge-substring}
 
@@ -299,8 +299,11 @@ Utför följande steg för att sammanfoga två intilliggande delsträngar för a
 
 1. I delsträngsväljaren markerar du tecken över två intilliggande delsträngar med samma formatering.
 1. Klicka på ![sammanfoga delsträng](/help/assets/assets/merge.svg) för att sammanfoga delsträngarna.
+
    ![sammanfoga identiska delsträngar](/help/assets/assets/merge-two-substrings.png)
-Du kan använda enhetliga parametrar för den nya delsträngen.
+
+   Du kan använda enhetliga parametrar för den nya delsträngen.
+
    >[!NOTE]
    >
    >Endast delsträngar med identisk formatering kan sammanfogas.
@@ -396,8 +399,8 @@ Så här lägger du till en CTA-länk till ett lager:
     <div class="adobe-dynamicmedia-template-embed-container">
     <img id="<Image ID>>" src="<Image Source>>" alt="adobe dynamicmedia template" usemap="#adobe-dynamicmedia-template-map" width="800" height="300">
     <map name="adobe-dynamicmedia-template-map">
-    <area shape="rect" coords="417,-60,817,340" href="https://business.adobe.com/se/products.html" alt="Layer with CTA" title="https://business.adobe.com/se/products.html" target="_blank">
-    <area shape="rect" coords="6,206.57,129,231.43" href="https://business.adobe.com/se/products.html" alt="Layer with CTA" title="https://business.adobe.com/se/products.html" target="_blank">
+    <area shape="rect" coords="417,-60,817,340" href="https://business.adobe.com/products.html" alt="Layer with CTA" title="https://business.adobe.com/products.html" target="_blank">
+    <area shape="rect" coords="6,206.57,129,231.43" href="https://business.adobe.com/products.html" alt="Layer with CTA" title="https://business.adobe.com/products.html" target="_blank">
     </map>
     </div>
    ```

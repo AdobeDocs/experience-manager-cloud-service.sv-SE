@@ -4,8 +4,8 @@ description: Cloud Manager har en kontrollpanel där du enkelt kan se vilka AEMa
 exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: b5987ce142a92fee8fff30fbe66d147cd68bdb21
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Cloud Manager har en kontrollpanel där du enkelt kan se vilka Adobe Experience 
 
 >[!IMPORTANT]
 >
->Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
+>Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
 >Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md#program-cards).
 
@@ -59,7 +59,7 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 
 >[!TIP]
 >
->Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/se/enterprise/using/admin-console.html).
+>Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Visa användningsinformation {#view-usage-details}
 

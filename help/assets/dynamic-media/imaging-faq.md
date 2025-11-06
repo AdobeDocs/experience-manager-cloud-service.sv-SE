@@ -6,7 +6,7 @@ feature: Asset Management,Renditions,Best Practices
 role: User
 mini-toc-levels: 2
 exl-id: 863784d9-0c91-4deb-8edd-1354a21581c3
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '3184'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Och nu får du en bättre Google Core Web Vital-poäng för LCP (Störst Content
 >* Nätverksbandbredd
 >* DPR (Device Pixel Ratio)
 >
->Om du vill lära dig hur enkelt det är att använda ögonblicksbild kan du spela upp utbildningsvideon [för ögonblicksbild](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter och 17 sekunder).
+>Om du vill lära dig hur enkelt det är att använda ögonblicksbild kan du spela upp utbildningsvideon [för ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter och 17 sekunder).
 
 Smart Imaging drar nytta av den ökade prestandaförbättringen genom att vara helt integrerad med Adobe förstklassiga CDN-tjänst (Content Delivery Network). Den här tjänsten hittar den optimala Internet-vägen mellan servrar, nätverk och peering-punkter. Här hittas en väg som har lägst latens och lägst paketförlustfrekvens i stället för att använda standardvägen på Internet.
 
@@ -86,7 +86,7 @@ Om du aktiverar konvertering av webbläsarformat genom att lägga till `bfc=on` 
 
 Du kan inaktivera Smart Imaging genom att lägga till `bfc=off` till bildens URL.
 
-Se även [bfc](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc) i API:t för dynamisk mediabildsserver och återgivning.
+Se även [bfc](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc) i API:t för dynamisk mediabildsserver och återgivning.
 
 ### Om optimering av enhetens pixelproportioner {#dpr}
 
@@ -260,7 +260,7 @@ När du skapar ett supportärende anger du vilka smarta bildredigeringsfunktione
 
 **Så här skapar du ett supportärende för att aktivera Smart Imaging för ditt konto:**
 
-1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. Ange följande information i ditt supportärende:
 
    * **Information om primär kontakt:**
@@ -279,7 +279,7 @@ När du skapar ett supportärende anger du vilka smarta bildredigeringsfunktione
 
       * Visa alla relevanta domäner, till exempel *`company.com`* eller *`mycompany.scene7.com`*
       * Smart Imaging stöder både generiska och anpassade domäner.
-      * Identifiera dina domäner genom att öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga in på ditt företagskonto.
+      * Identifiera dina domäner genom att öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga in på ditt företagskonto.
 
          1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
          1. Kontrollera domänen genom att leta efter fältet **[!UICONTROL Published Server Name]**.
@@ -330,7 +330,7 @@ Ja. Du kan göra följande:
 1. Kontrollera att cachen är inaktiverad när utvecklingsverktygen är öppna.
 
    * I Windows® går du till inställningarna i rutan för utvecklarverktyget och markerar kryssrutan **[!UICONTROL Disable cache (while devtools is open)]**.
-   * I macOS väljer du **[!UICONTROL disable cache]** på fliken **[!UICONTROL Network]** i rutan Utvecklare.
+   * I macOS väljer du **[!UICONTROL Network]** på fliken **[!UICONTROL disable cache]** i rutan Utvecklare.
 
 1. Observera att innehållstypen har omvandlats till lämpligt format. På följande skärmbild visas en PNG-bild som konverteras dynamiskt till WebP på Chrome. Om din domän har AVIF aktiverat kan du även förvänta dig att se AVIF i innehållstypen.
 1. Upprepa testet i olika webbläsare och under olika användarförhållanden.
@@ -345,7 +345,7 @@ Ja. Du kan göra följande:
 
 +++**Finns det något sätt att lära sig fördelarna med Smart bildbehandling?**
 
-Ja. Huvudet Smart Imaging avgör fördelarna med Smart Imaging. När Smart Imaging är aktiverat kan du se `-X-Adobe-Smart-Imaging` efter att du har begärt en bild, under rubriken **[!UICONTROL Response Headers]**, enligt följande markerade exempel:
+Ja. Huvudet Smart Imaging avgör fördelarna med Smart Imaging. När Smart Imaging är aktiverat kan du se **[!UICONTROL Response Headers]** efter att du har begärt en bild, under rubriken `-X-Adobe-Smart-Imaging`, enligt följande markerade exempel:
 
 ![Rubrik för smart bildåtergivning](/help/assets/dynamic-media/assets/smartimagingheader.png)
 

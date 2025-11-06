@@ -4,8 +4,8 @@ description: Lär dig hur du får åtkomst till och hanterar loggar som hjälp i
 exl-id: f17274ce-acf5-4e7d-b875-75d4938806cd
 solution: Experience Manager
 feature: Log Files, Developing
-role: Admin, Architect, Developer
-source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -101,5 +101,5 @@ Läs mer om Cloud Manager API och Adobe I/O CLI i följande resurser:
 
 Mer information om loggfiler i AEM as a Cloud Service finns i följande resurser:
 
-* [Cloud 5 AEM-loggfiler](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files#)
-* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#)
+* [Cloud 5 AEM-loggfiler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files#)
+* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#)

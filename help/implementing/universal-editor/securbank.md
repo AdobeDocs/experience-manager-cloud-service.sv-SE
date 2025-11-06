@@ -3,8 +3,8 @@ title: SecurBank-exempelapp för Universal Editor
 description: Lär dig mer om den universella redigeraren med praktiska erfarenheter med SecurBank App, som är utformad för att visa kraften, flexibiliteten och användbarheten hos den universella redigeraren för att snabba upp framtagningen av innehåll.
 exl-id: 97e1395f-b51e-4cee-b1d0-2466a08f96af
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: c4dcb1cecb756f746ecb856fcfd65d73833a5ee0
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 0%
@@ -106,7 +106,7 @@ När allt är konfigurerat både i Cloud Manager och lokalt kan du köra webbapp
 
 1. Gå till mappen `react-app` på kommandoraden på den lokala datorn för det SecurBank-appprojekt som du hämtade och dekomprimerade.
 
-1. Installera SecurBank-appen med kommandot `node -i` i mappen `react-app`.
+1. Installera SecurBank-appen med kommandot `react-app` i mappen `node -i`.
 
 1. Starta SecurBank-appen med kommandot `npm start` när du har installerat den.
 

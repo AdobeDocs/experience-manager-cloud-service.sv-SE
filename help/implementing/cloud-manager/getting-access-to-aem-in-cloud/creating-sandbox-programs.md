@@ -4,8 +4,8 @@ description: Lär dig hur du använder Cloud Manager för att skapa ett eget san
 exl-id: 10011392-3059-4bb0-88db-0af1d390742e
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 87836c7f28c9e3c8269fac073f46c53ce73fecfa
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Läs mer om programtyper i dokumentet [Om program- och programtyper](program-typ
 
 1. I *Programguiden* skriver du det namn du vill använda för programmet i textfältet **Programnamn**.
 
-1. Under **Programmål** väljer du ![Trollstaven &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MagicWand_18_N.svg) **Konfigurera en sandlåda**.
+1. Under **Programmål** väljer du ![Trollstaven ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MagicWand_18_N.svg) **Konfigurera en sandlåda**.
 
    ![Skapa programtyp](assets/create-sandbox.png)
 

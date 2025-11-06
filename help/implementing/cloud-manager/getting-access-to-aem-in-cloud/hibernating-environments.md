@@ -4,8 +4,8 @@ description: Lär dig hur miljöer i ett sandlådeprogram automatiskt övergår 
 exl-id: c0771078-ea68-4d0d-8d41-2d9be86408a4
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 169de7971fba829b0d43e64d50a356439b6e57ca
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Du kan manuellt förvara ditt sandlådeprogram från Developer Console. Alla anv
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på ett *sandlådeprogram* som du vill ska gå i viloläge för att visa information om det.
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och klicka på **Developer Console**.
+1. Klicka på ikonen **Mer** på ![miljökortet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och klicka på **Developer Console**.
 
    * Mer information om Developer Console finns i [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console).
 
@@ -74,7 +74,7 @@ Du kan manuellt förvara ditt sandlådeprogram från Developer Console.
 
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** klickar du på det program du vill avvisa för att visa information om det.
 
-1. Klicka på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) på **miljökortet** och klicka på **Developer Console**.
+1. Klicka på ikonen **Mer** på ![miljökortet](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och klicka på **Developer Console**.
 
    * Mer information om Developer Console finns i [Åtkomst till Developer Console](/help/implementing/cloud-manager/manage-environments.md#accessing-developer-console).
 

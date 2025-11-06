@@ -3,8 +3,8 @@ title: Introduktion till Edge Delivery Services i Cloud Manager
 description: Lär dig hur du kan leverera dina Cloud Manager-projekt med Edge Delivery Services.
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: ac918008c3f99d74e01be59c9841083abf3604aa
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '819'
 ht-degree: 1%
@@ -87,7 +87,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 8 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 9 | GoLive | Se [Go-Live-checklista](https://www.aem.live/docs/go-live-checklist). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3441565?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 

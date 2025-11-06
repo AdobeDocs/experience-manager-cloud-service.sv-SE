@@ -4,7 +4,7 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: 03e46bb43e684a6b7057045cf298f40f9f1fe622
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '3136'
 ht-degree: 0%
@@ -338,13 +338,14 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
       * **Inkludera formulärobjekt som inte är bundna till datamodell**: Om du anger egenskapen inkluderas obundna fält från schemabaserat anpassat formulär i postdokumentet.
 
-      <!-- **Exclude hidden fields from the Document of Record**: Setting the property identifies the hidden fields for exclusion from Document of Record.-->
+        <!-- **Exclude hidden fields from the Document of Record**: Setting the property identifies the hidden fields for exclusion from Document of Record.-->
 
       * **Dölj beskrivning av paneler**: Om egenskapen anges utesluts beskrivning av panelen/tabellen från postdokumentet. Gäller för panel och tabell.
 
 
 
    1. **Egenskaper för formulärfält**:
+
       * **Visa endast de markerade värdena för komponenterna Kryssruta och Alternativknapp**: Om du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
       * **Avgränsare för flera värden**: Du kan välja en avgränsare, till exempel komma eller radbrytning, om du vill visa flera värden.
       * **Alternativ Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas i [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Om du ställer in egenskaperna från [!UICONTROL Form Field Properties] i DoR skrivs egenskaperna som angetts i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär över. Om du väljer alternativet [!UICONTROL Same as Aaptive form] används justeringen som konfigurerats i en författarinstans för adaptiva formulär för [!UICONTROL Document of Record]-fält.
@@ -353,6 +354,7 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
 
    1. **Egenskaper för mallsida**:
+
       * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
       * **Formulärtitel**: Titel på DoR.
       * **Huvudtext**: Text som visas i rubrikavsnittet i postdokumentet.
@@ -362,21 +364,21 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
       ![Egenskaper för mallsida](/help/forms/assets/dorpropertiesimg.png)
 
-   >[!NOTE]
-   >
-   >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
+      >[!NOTE]
+      >
+      >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
 
-   ```xml
-   <proto>
-   <font typeface="Arial"/>
-   <fill>
-   <color value="4,166,203"/>
-   </fill>
-   <edge>
-   <color value="4,166,203"/>
-   </edge>
-   </proto>
-   ```
+      ```xml
+      <proto>
+      <font typeface="Arial"/>
+      <fill>
+      <color value="4,166,203"/>
+      </fill>
+      <edge>
+      <color value="4,166,203"/>
+      </edge>
+      </proto>
+      ```
 
 1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
 

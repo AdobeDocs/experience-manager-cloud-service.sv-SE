@@ -5,10 +5,10 @@ keywords: AEM Forms REST Endpoint, Submit to REST Endpoint, Post Data to REST UR
 feature: Adaptive Forms, Core Components, Foundation Components, Edge Delivery Services
 role: User, Developer
 exl-id: 58c63ba6-aec5-4961-a70a-265990ab9cc8
-source-git-commit: 44a8d5d5fdd2919d6d170638c7b5819c898dcefe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1419'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -131,11 +131,14 @@ Så här konfigurerar du en åtgärd som baseras på Swagger Open API-specifikat
 
 1. Öppna det adaptiva formuläret för redigering.
 1. Klicka på tillägget **Redigera formuläregenskaper** i redigeraren.
-Dialogrutan **Formuläregenskaper** visas.
+
+   Dialogrutan **Formuläregenskaper** visas.
+
    >[!NOTE]
    >
    > * Om ikonen **Redigera formuläregenskaper** inte visas i det universella redigeringsgränssnittet aktiverar du tillägget **Redigera formuläregenskaper** i Extension Manager.
    > * Läs artikeln [Extension Manager Feature Highlights](https://developer.adobe.com/uix/docs/extension-manager/feature-highlights/#enablingdisabling-extensions) om du vill veta hur du aktiverar eller inaktiverar tillägg i den universella redigeraren.
+
 1. Klicka på fliken **Skicka** och välj åtgärden **[!UICONTROL Submit to Rest endpoint]** Skicka.
 
    Om du vill skicka data till en intern server anger du sökvägen till resursen. Data bokförs som resurssökväg. Exempel: `/content/restEndPoint`. För sådana efterfrågningar används autentiseringsinformationen i förfrågan.

@@ -4,8 +4,8 @@ description: Lär dig grunderna i att modellera innehåll för Headless CMS med 
 exl-id: dc460490-dfc8-4a46-a468-3d03e593447d
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 6306ad88b889197aff377dc0a72ea232cd76ff9c
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 0%

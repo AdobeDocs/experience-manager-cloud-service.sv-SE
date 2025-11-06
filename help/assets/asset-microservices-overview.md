@@ -3,9 +3,9 @@ title: Bearbeta resurser med hjälp av mikrotjänster för resurser
 description: Bearbeta era digitala resurser med molnbaserade och skalbara mikrotjänster för bearbetning av resurser.
 contentOwner: AG
 feature: Asset Compute Microservices, Asset Ingestion, Asset Processing
-role: Architect, Admin
+role: Developer, Admin
 exl-id: 1e069b95-a018-40ec-be01-9a74ed883b77
-source-git-commit: fb7ce7dbb58be9fef5ab087441457770828d73c8
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -96,6 +96,6 @@ Adobe Experience Manager kan konfigureras så att efterbearbetningen av arbetsfl
 >
 >* [Komma igång med mikrotjänster för material](asset-microservices-configure-and-use.md)
 >* [Filformat som stöds](file-format-support.md)
->* [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html)
->* [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE)
+>* [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html)
 >* [Apache Oak-dokumentation om direkt binär åtkomst](https://jackrabbit.apache.org/oak/docs/features/direct-binary-access.html)

@@ -3,8 +3,8 @@ title: Dataskydd och dataintegritet - AEM Sites beredskap
 description: Läs om Experience Manager as a Cloud Service Sites support for the various Data Protection and Data Privacy Regulations, including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act and how to compliance when implementation a new AEM as a Cloud Service project.
 exl-id: fdcad111-0cdd-46cc-964c-3f8669ca2030
 feature: Compliance
-role: Admin, Architect, Developer, Leader
-source-git-commit: 974f85b91a629ea6d4f34e2066d242c42a04015b
+role: Admin, Developer, Leader
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '989'
 ht-degree: 0%
@@ -78,13 +78,13 @@ Så här avanmäler du:
 
 AEM Sites innehåller en valfri integrering med Analytics Foundation som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html?lang=sv-SE).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Analytics finns i [Adobe Analytics och Dataintegritet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
 
 ## Personalization Foundation by Target {#personalization-foundation-by-target}
 
 AEM Sites innehåller en valfri integrering med Personalization Foundation by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=sv-SE).
+Mer information om hur du hanterar förfrågningar från registrerade personer relaterade till Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/cmp-privacy-and-general-data-protection-regulation.html).
 
 ## ContextHub {#contexthub}
 

@@ -4,15 +4,14 @@ description: Samling av beprövade promptmönster och exempel för att skapa for
 hide: true
 index: false
 hidefromtoc: true
-role: Admin, Architect, Developer
-exl-id: c8f64082-a23f-4919-ad66-042faad77d31
-source-git-commit: de524aeddd5f53cbd713ff0523222966752ebbc0
+role: Admin, Developer
+exl-id: 48eb137c-fe12-4e4f-b845-3321ca8b6075
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2193'
 ht-degree: 0%
 
 ---
-
 
 # Forms Experience Builder - Prompt Library
 
@@ -121,7 +120,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     
     **Anställningsinformation:*
     - Val av befattning och avdelning
-    - Startdatum med arbetsdagsvalidering&lbrace;9- ary information with privacy notice
+    - Startdatum med arbetsdagsvalidering{9- ary information with privacy notice
     - Reporting structure
     **Document Upload:**
     
@@ -178,7 +177,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     - Ort (obligatoriskt, listruta med vanliga städer)
     - Delstat/provins (obligatoriskt, listruta)
     - Postnummer (obligatoriskt, formatvalidering)
-    &rbrace;- Land (obligatoriskt, standard är USA)
+    }- Land (obligatoriskt, standard är USA)
     
     **Valideringsregler:*
     - Postnummer måste matcha delstatsval
@@ -297,7 +296,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     
     &quot;Inkludera en listruta för professionell certifiering som anpassas baserat på det valda jobbfältet&quot;
     
-    &quot;Lägg till ett internationellt telefonnummerfält som formateras baserat på det valda landet&quot;&lbrace;4&quot;Skapa ett urvalsfält för universitet med större institutioner organiserat per land och rankning&quot;
+    &quot;Lägg till ett internationellt telefonnummerfält som formateras baserat på det valda landet&quot;{4&quot;Skapa ett urvalsfält för universitet med större institutioner organiserat per land och rankning&quot;
     
     
 
@@ -373,7 +372,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     - Formatera data som JSON med kapslade objekt för adress och anställning
     - Hantera lyckade svar (201) genom att visa tackmeddelande
     
-    **&#x200B; Sekundära åtgärder:**
+    ** Sekundära åtgärder:**
     - Skicka e-postmeddelanden till sökande på @email address
     - Kopiera programdata till spårningssystemet
     - Utlös arbetsflöde för godkännandeprocess
@@ -492,4 +491,4 @@ Använd syntaxen `@fieldName` för att referera till befintliga fält i dina upp
 
 Mer information om god praxis och riktlinjer för validering finns i [Forms Experience Builder Getting Started Guide](/help/forms/experience-builder/forms-experience-builder-getting-started.md).
 
-*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html?lang=sv-SE).*
+*Detta promptbibliotek uppdateras kontinuerligt baserat på användarfeedback och nya funktioner i Forms Experience Builder. De senaste funktionerna och exemplen finns i [AEM Forms-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/home.html).*

@@ -3,10 +3,10 @@ title: Använda CRXDE Lite
 description: CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma åt och ändra databasen i dina lokala utvecklingsmiljöer i webbläsaren.
 exl-id: 1581a7e5-6f84-4a45-8e8f-c83692ea077a
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1677'
 ht-degree: 0%
 
 ---
@@ -17,24 +17,24 @@ CRXDE Lite är en del av AEM snabbstart och är tillgängligt för dig att komma
 
 >[!NOTE]
 >
->CRXDE Lite är endast tillgängligt i dina lokala utvecklingsmiljöer. Det finns inte i AEM as a Cloud Service.
+>CRXDE Lite finns endast i dina lokala utvecklingsmiljöer. Det finns inte i AEM as a Cloud Service.
 
 ## Komma igång med CRXDE Lite {#getting-started-with-crxde-lite}
 
-Så här kommer du igång med CRXDE Lite:
+Kom igång med CRXDE Lite:
 
 1. Kom igång snabbt med utvecklingen av AEM.
 1. Öppna URL:en `https://<host>:<port>/crx/de` i webbläsaren.
 1. Ange ditt **användarnamn** och **lösenord**.
 1. Klicka på **OK**.
 
-Gränssnittet CRXDE Lite visas så här i webbläsaren:
+CRXDE Lite användargränssnitt ser ut så här i webbläsaren:
 
-![Gränssnittet i CRXDE Lite](assets/crxde-lite.png)
+![CRXDE Lite-gränssnittet](assets/crxde-lite.png)
 
 >[!TIP]
 >
->Du kan också öppna CRXDE Lite från AEM-menyn. På huvudmenyn väljer du **Verktyg** > **Allmänt** > **CRXDE Lite**.
+>Du kan även öppna CRXDE Lite från AEM-menyn. På huvudmenyn väljer du **Verktyg** > **Allmänt** > **CRXDE Lite**.
 
 ## Översikt över användargränssnittet {#overview-of-the-user-interface}
 
@@ -42,7 +42,7 @@ CRXDE Lite användargränssnitt har många delar och många funktioner.
 
 ### Övre växlingsfält {#top-switcher-bar}
 
-Med det övre växlingsfältet kan du snabbt växla mellan CRXDE Lite och [pakethanteraren](package-manager.md).
+Med det övre växlingsfältet kan du snabbt växla mellan CRXDE Lite och [Package Manager](package-manager.md).
 
 ### Nodsökväg, widget {#node-path-widget}
 
@@ -64,7 +64,7 @@ Med Trädnavigeringsfilter (ikonen för kikaren) kan du filtrera noderna i datab
 
 I **redigeringsfönstret** kan du visa innehållet i den markerade filen i databasen. Varje fil som öppnas representeras som en egen flik i rutan.
 
-På fliken **Hem** kan du söka efter innehåll och/eller dokumentation och komma åt utvecklardokumentation och stöd för Adobe.
+På fliken **Hem** kan du söka efter innehåll och/eller dokumentation och komma åt utvecklardokumentation och Adobe support.
 
 Dubbelklicka på en fil i **Utforskarrutan** för att visa dess innehåll i **redigeringsrutan**. Du kan sedan ändra den och spara ändringarna.
 
@@ -202,7 +202,7 @@ Så här skapar du en egenskap med CRXDE Lite:
 
 1. Öppna CRXDE Lite i webbläsaren.
 1. I [**Utforskarrutan**](#explorer-pane) väljer du den nod där du vill lägga till den nya egenskapen.
-1. Ange **Namn**, **Typ** och **Värde** på fliken [**Egenskaper**](#properties-tab) i den nedre rutan.
+1. Ange [**Namn**](#properties-tab), **Typ** och **Värde** på fliken **Egenskaper** i den nedre rutan.
 1. Klicka på **Lägg till**.
 1. Klicka på knappen [**Spara alla**](#save-all-button) för att spara ändringarna på servern.
 
@@ -220,7 +220,7 @@ Så här skapar du en fil med CRXDE Lite:
 
 ## Exportera och importera nodtyper {#exporting-and-importing-node-types}
 
-Med CRXDE Lite kan du importera och/eller exportera nodtypsdefinitioner i [komprimerat namnutrymme och CND-notation (Node Type Definition)](https://jackrabbit.apache.org/jcr/node-type-notation.html).
+Med CRXDE Lite kan du importera och/eller exportera nodtypsdefinitioner i [Kompakt namnrymd och CND-notation](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
 Så här exporterar du en nodtypsdefinition i CRXDE Lite:
 
@@ -244,7 +244,7 @@ Så här importerar du en nodtypsdefinition:
 Med CRXDE Lite kan du visa filen `error.log` som finns i filsystemet på `<aem-install-dir>/crx-quickstart/logs` och filtrera den med rätt loggnivå. Gör så här:
 
 1. Öppna CRXDE Lite i webbläsaren.
-1. Välj **Serverloggar** på den nedrullningsbara menyn till höger om fliken [**Konsol**](#console-tab) längst ned i fönstret.
+1. Välj [**Serverloggar**](#console-tab) på den nedrullningsbara menyn till höger om fliken **Konsol** längst ned i fönstret.
 1. Klicka på ikonen **Stopp** för att visa meddelandena.
 
 Du kan:

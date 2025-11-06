@@ -1,13 +1,13 @@
 ---
 title: Bästa praxis för frågor och indexering
-description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för bästa praxis.
+description: Lär dig hur du optimerar index och frågor baserat på Adobe riktlinjer för god praxis.
 topic-tags: best-practices
 exl-id: 37eae99d-542d-4580-b93f-f454008880b1
 feature: Operations
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '3088'
+source-wordcount: '3086'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ När du utformar en taxonomi är det dessutom viktigt att tänka på om det är 
 
 ### Frågor i komponenter {#queries-in-components}
 
-Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i ett AEM är det en bra idé att undvika dem i dina komponenter. Om flera frågor körs varje gång en sida återges kan det ofta försämra systemets prestanda. Det finns två strategier som kan användas för att undvika att köra frågor vid återgivning av komponenter: **[gå igenom noder](#traversing-nodes)** och **[förhämta resultat](#prefetching-results)**.
+Eftersom frågor kan vara en av de mer beskattningsbara åtgärder som utförs i ett AEM-system är det bra att undvika dem i dina komponenter. Om flera frågor körs varje gång en sida återges kan det ofta försämra systemets prestanda. Det finns två strategier som kan användas för att undvika att köra frågor vid återgivning av komponenter: **[gå igenom noder](#traversing-nodes)** och **[förhämta resultat](#prefetching-results)**.
 
 ### Går igenom noder {#traversing-nodes}
 
@@ -69,7 +69,7 @@ AEM as a Cloud Service tillhandahåller [frågeprestandaverktyget](#query-perfor
 * Här visas redan utförda frågor med relevanta prestandaegenskaper och frågeplanen.
 * Det gör det möjligt att utföra ad hoc-frågor på olika nivåer, från att bara visa frågeplanen tills den fullständiga frågan körs.
 
-Det går att nå frågeprestandaverktyget via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE#queries). AEM as a Cloud Service Query Performance Tool innehåller mer information om hur frågan körs jämfört med AEM 6.x-versionen.
+Det går att nå frågeprestandaverktyget via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries). AEM as a Cloud Service Query Performance Tool innehåller mer information om hur frågan körs jämfört med AEM 6.x.
 
 I det här diagrammet visas det allmänna flödet för att använda verktyget Frågeprestanda för att optimera frågor.
 
@@ -87,7 +87,7 @@ Den primära begränsningen för en fråga bör vara en egenskapsmatchning, efte
 
 Frågemotorn hanterar bara ett enda index. Det innebär att ett befintligt index kan och bör anpassas genom att fler anpassade indexegenskaper läggs till i det.
 
-I [JCR-frågans &#x200B;](#jcr-query-cheatsheet)-mallavsnitt i det här dokumentet visas tillgängliga begränsningar och även hur en indexdefinition måste se ut så att den plockas upp. Använd [frågeprestandaverktyget](#query-performance-tool) för att testa frågan och kontrollera att rätt index används och att frågemotorn inte behöver utvärdera begränsningar utanför indexet.
+I [JCR-frågans ](#jcr-query-cheatsheet)-mallavsnitt i det här dokumentet visas tillgängliga begränsningar och även hur en indexdefinition måste se ut så att den plockas upp. Använd [frågeprestandaverktyget](#query-performance-tool) för att testa frågan och kontrollera att rätt index används och att frågemotorn inte behöver utvärdera begränsningar utanför indexet.
 
 ### Beställning {#ordering}
 
@@ -103,7 +103,7 @@ Om en viss resultatordning begärs, finns det två sätt för frågemotorn att u
 
 Den hämtade storleken på frågeresultatet är en viktig faktor för frågeprestanda. Eftersom resultatet hämtas på ett lat sätt är det skillnad på att bara hämta de första 20 resultaten jämfört med att hämta 10 000 resultat, både i körtid och minnesanvändning.
 
-Det innebär också att storleken på resultatmängden bara kan bestämmas korrekt om alla resultat hämtas. Därför bör den hämtade resultatuppsättningen alltid begränsas, antingen genom att frågan utökas (mer information finns i [JCR-frågans &#x200B;](#jcr-query-cheatsheet)-avsnitt i det här dokumentet) eller genom att resultatens läsningar begränsas.
+Det innebär också att storleken på resultatmängden bara kan bestämmas korrekt om alla resultat hämtas. Därför bör den hämtade resultatuppsättningen alltid begränsas, antingen genom att frågan utökas (mer information finns i [JCR-frågans ](#jcr-query-cheatsheet)-avsnitt i det här dokumentet) eller genom att resultatens läsningar begränsas.
 
 En sådan gräns förhindrar även att frågemotorn hissar på **traversal-gränsen** på 100 000 noder, vilket leder till ett framtvingat stopp av frågan.
 
@@ -111,7 +111,8 @@ Se avsnittet [Frågor med stora resultatuppsättningar](#queries-with-large-resu
 
 ## Prestandaverktyg för fråga {#query-performance-tool}
 
-Prestandaverktyget för frågor (finns på `/libs/granite/operations/content/diagnosistools/queryPerformance.html` och är tillgängligt via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE#queries)) innehåller -
+Prestandaverktyget för frågor (finns på `/libs/granite/operations/content/diagnosistools/queryPerformance.html` och är tillgängligt via [Developer Console i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries)) innehåller -
+
 * En lista med alla&quot;långsamma frågor&quot;, som för närvarande definieras som de som läser/skannar mer än 5 000 rader.
 * En lista med populära frågor
 * Verktyget Förklara fråga för att förstå hur en viss fråga kommer att köras av Oak.
@@ -119,6 +120,7 @@ Prestandaverktyget för frågor (finns på `/libs/granite/operations/content/dia
 ![Verktyget Frågeprestanda](assets/query-performance-tool.png)
 
 Tabellerna&quot;Långsvisa frågor&quot; och&quot;Populära frågor&quot; innehåller -
+
 * Frågesatsen själv.
 * Information om den senaste tråd som utförde frågan, vilket gör att sidan eller programfunktionen som kör frågan kan identifieras.
 * Poäng för&quot;Läsoptimering&quot; för frågan.
@@ -155,6 +157,7 @@ Så här förklarar du en fråga:
 
 När användaren har valt `Explain` visas ett popup-fönster som beskriver resultatet av frågeförklaringen (och körningen, om det är markerat).
 Det här popup-fönstret innehåller information om
+
 * De index som används när frågan körs (eller inget index om frågan skulle köras med [Databasgenomgång](#repository-traversal)).
 * Körningstiden (om kryssrutan `Include Execution Time` är markerad) och antalet resultat som har lästs (om kryssrutorna `Read first page of results` eller `Include Node Count` är markerade).
 * Körningsplanen, som innehåller detaljerad analys av hur frågan körs, finns i [Läsa frågekörningsplanen](#reading-query-execution-plan) för hur du tolkar detta.
@@ -172,6 +175,7 @@ Tänk på följande fråga -
 ```
 
 ...som innehåller -
+
 * 3 begränsningar
    * Nodetype (`dam:Asset`)
    * Sökväg (underordnade till `/content/dam`)
@@ -191,6 +195,7 @@ lucene:damAssetLucene-9(/oak:index/damAssetLucene-9) +:ancestors:/content/dam +j
 ```
 
 I det här avsnittet av planen anges att
+
 * Ett index används för att köra frågan -
    * I det här fallet kommer Lucene-indexet `/oak:index/damAssetLucene-9` att användas, så den återstående informationen finns i Lucene-frågesyntaxen.
 * Alla tre begränsningarna hanteras av indexet -
@@ -212,6 +217,7 @@ En annan fråga övervägs -
 ```
 
 ...som innehåller -
+
 * 3 begränsningar
    * Nodetype (`dam:Asset`)
    * Sökväg (underordnade till `/content/dam`)
@@ -231,6 +237,7 @@ lucene:damAssetLucene-9(/oak:index/damAssetLucene-9) :ancestors:/content/dam ord
 ```
 
 I det här avsnittet av planen anges att
+
 * Endast 2 (av 3) begränsningar hanteras av indexet -
    * Nodetype-begränsning
       * implicit, eftersom `damAssetLucene-9` bara indexerar noder av typen dam:Asset.
@@ -241,7 +248,7 @@ I det här avsnittet av planen anges att
 
 Den här frågekörningsplanen resulterar i att alla resurser under `/content/dam` läses från indexet och sedan filtreras ytterligare av frågemotorn (som endast inkluderar de som matchar den icke-indexerade egenskapsbegränsningen i resultatuppsättningen).
 
-Även om bara en liten procentandel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"` måste frågan läsa ett stort antal noder för att (försöka) fylla den begärda sidan med resultat. Detta kan resultera i en fråga som inte fungerar som den ska, vilket visas som ett lågt `Read Optimization`-resultat i verktyget Frågeprestanda) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [&#x200B; Indexgenomgång &#x200B;](#index-traversal)).
+Även om bara en liten procentandel av resurserna matchar begränsningen `jcr:content/metadata/myProperty = "My Property Value"` måste frågan läsa ett stort antal noder för att (försöka) fylla den begärda sidan med resultat. Detta kan resultera i en fråga som inte fungerar som den ska, vilket visas som ett lågt `Read Optimization`-resultat i verktyget Frågeprestanda) och kan leda till WARN-meddelanden som anger att ett stort antal noder gås igenom (se [ Indexgenomgång ](#index-traversal)).
 
 Om du vill optimera prestandan för den andra frågan skapar du en anpassad version av `damAssetLucene-9`-indexet (`damAssetLucene-9-custom-1`) och lägger till följande egenskapsdefinition -
 
@@ -255,7 +262,7 @@ Om du vill optimera prestandan för den andra frågan skapar du en anpassad vers
 
 ## JCR Query Cheat Sheet {#jcr-query-cheatsheet}
 
-[JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=sv-SE#jcrquerycheatsheet) kan hämtas och användas som referens under utvecklingen, vilket ger stöd för att skapa effektiva JCR-frågor och indexdefinitioner.
+[JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html#jcrquerycheatsheet) kan hämtas och användas som referens under utvecklingen, vilket ger stöd för att skapa effektiva JCR-frågor och indexdefinitioner.
 
 Den innehåller exempelfrågor för QueryBuilder, XPath och SQL-2, som omfattar flera scenarier som beter sig på olika sätt när det gäller frågeprestanda. Här finns också rekommendationer för hur du skapar eller anpassar Oak-index. Innehållet i detta värmeblad gäller AEM as a Cloud Service och AEM 6.5.
 
@@ -284,7 +291,7 @@ Automatiserade Cloud Manager pipeline-kontroller kommer att implementera några 
 
 Du bör undvika frågor med stora resultatuppsättningar, men det finns giltiga fall där stora resultatuppsättningar måste bearbetas. Resultatstorleken är ofta inte känd framifrån, och därför bör vissa försiktighetsåtgärder vidtas för att göra bearbetningen tillförlitlig.
 
-* Frågan ska inte köras i en begäran. I stället ska frågan köras som en del av ett Sling-jobb eller ett AEM arbetsflöde. Dessa har inga begränsningar i den totala körtiden och startas om om instansen skulle gå ned under bearbetningen av frågan och dess resultat.
+* Frågan ska inte köras i en begäran. I stället ska frågan köras som en del av ett Sling-jobb eller ett AEM-arbetsflöde. Dessa har inga begränsningar i den totala körtiden och startas om om instansen skulle gå ned under bearbetningen av frågan och dess resultat.
 * Om du vill kringgå frågegränsen på 100 000 noder bör du använda [Nyckeluppsättningssidnumrering](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Keyset_Pagination) och dela frågan i flera underfrågor.
 
 ## Databasgenomgång {#repository-traversal}

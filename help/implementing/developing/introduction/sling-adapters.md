@@ -3,8 +3,8 @@ title: Använda delningsadaptrar
 description: Sling erbjuder ett adaptermönster för att enkelt översätta objekt som implementerar gränssnittet Adaptable
 exl-id: 8ffe3bbd-01fe-44c2-bf60-7a4d25a6ba2b
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Det finns olika sätt att implementera `Adaptable.adaptTo()`:
 
 * En kombination av båda.
 
-I det första fallet kan Java™-dokumenten ange vad `adaptTo-targets` är möjligt. För vissa underklasser, t.ex. JCR-baserade resurser, går det ofta inte att använda den här programsatsen. I det senare fallet är implementeringar av `AdapterFactory` vanligtvis en del av de privata klasserna i ett paket och exponeras därför inte i ett klient-API och inte heller listas i Java™-dokument. Teoretiskt sett är det möjligt att komma åt alla `AdapterFactory`-implementeringar från [&#x200B; OSGi](/help/implementing/deploying/configuring-osgi.md)-tjänstmiljön och titta på deras&quot;adaptable&quot; (sources and target)-konfigurationer, men inte att mappa dem till varandra. I slutändan beror det på den interna logiken, som måste dokumenteras. Därför refererar vi till detta.
+I det första fallet kan Java™-dokumenten ange vad `adaptTo-targets` är möjligt. För vissa underklasser, t.ex. JCR-baserade resurser, går det ofta inte att använda den här programsatsen. I det senare fallet är implementeringar av `AdapterFactory` vanligtvis en del av de privata klasserna i ett paket och exponeras därför inte i ett klient-API och inte heller listas i Java™-dokument. Teoretiskt sett är det möjligt att komma åt alla `AdapterFactory`-implementeringar från [ OSGi](/help/implementing/deploying/configuring-osgi.md)-tjänstmiljön och titta på deras&quot;adaptable&quot; (sources and target)-konfigurationer, men inte att mappa dem till varandra. I slutändan beror det på den interna logiken, som måste dokumenteras. Därför refererar vi till detta.
 
 ## Referens {#reference}
 

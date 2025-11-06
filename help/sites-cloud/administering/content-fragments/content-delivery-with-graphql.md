@@ -2,10 +2,10 @@
 title: Headless Content Delivery using Content Fragments with GraphQL
 description: Lär dig de grundläggande begreppen för att förverkliga en AEM Headless CMS med hjälp av Content Fragments med GraphQL för leverans av headless-material.
 feature: Content Fragments, GraphQL API
-role: Developer, Architect
+role: Developer
 exl-id: 3aa7073a-6c6b-47b7-99d8-bba2d9a00af5
 solution: Experience Manager Sites
-source-git-commit: 0664e5dc4a7619a52cd28c171a44ba02c592ea3d
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
@@ -115,4 +115,4 @@ Se [Lära dig använda GraphQL med AEM - exempelinnehåll och frågor](/help/hea
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.

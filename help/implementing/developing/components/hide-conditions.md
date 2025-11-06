@@ -3,8 +3,8 @@ title: Använda Dölj villkor
 description: Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte.
 exl-id: 2a96f246-fb0f-4298-899e-ebbf9fc1c96f
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 7adfe0ca7fbab1f8a5bd488e524a48be62584966
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Använda Dölj villkor {#using-hide-conditions}
 
-Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [Core Component &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html?lang=sv-SE) i [mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
+Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) i [mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
 
 ## Ökning {#overview}
 
@@ -51,7 +51,7 @@ När du definierar ditt dolda uttryck ska du tänka på:
 
 ## Exempel {#example}
 
-Exempel på dolda villkor finns i hela AEM och i [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i synnerhet. Ta till exempel huvudkomponenten [list](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html?lang=sv-SE) som implementerad i [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
+Exempel på dolda villkor finns i hela AEM och i [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i synnerhet. Ta till exempel huvudkomponenten [list](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) som implementerad i [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
 [Med mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) kan mallskaparen i designdialogrutan definiera vilka alternativ för listkomponenten som är tillgängliga för sidförfattaren. Du kan till exempel välja om listan ska vara en statisk lista, en lista med underordnade sidor, en lista med taggade sidor och så vidare, eller om den ska aktiveras eller inaktiveras.
 

@@ -3,8 +3,8 @@ title: Universella redigeringsanrop
 description: Lär dig mer om de olika typer av samtal som görs till appen av den universella redigeraren som kan hjälpa dig vid felsökning.
 exl-id: 00d66e59-e445-4b5c-a5b1-c0a9f032ebd9
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -150,7 +150,7 @@ Ett `add`-anrop inträffar när du placerar en ny komponent i appen med den univ
 
 Dess nyttolast innehåller ett `path`-objekt som innehåller var innehållet ska läggas till.
 
-Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [&#x200B; för varje plugin](/help/implementing/universal-editor/architecture.md). Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
+Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [ för varje plugin](/help/implementing/universal-editor/architecture.md). Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
 
 >[!BEGINTABS]
 
@@ -308,9 +308,9 @@ Dess nyttolast inkluderar sökvägen till objektet som tas bort.
 
 >[!ENDTABS]
 
-## Publish {#publish}
+## Publicera {#publish}
 
-Ett `publish`-anrop inträffar när du klickar på knappen **Publish** i den universella redigeraren för att publicera det innehåll som du har redigerat.
+Ett `publish`-anrop inträffar när du klickar på knappen **Publicera** i den universella redigeraren för att publicera innehållet som du har redigerat.
 
 Den universella redigeraren itererar över innehållet och skapar en lista med referenser som också måste publiceras.
 

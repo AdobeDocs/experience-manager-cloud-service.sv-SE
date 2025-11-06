@@ -2,9 +2,9 @@
 title: Gruppmigrering
 description: Översikt över gruppmigrering i AEM as a Cloud Service.
 exl-id: 4a35fc46-f641-46a4-b3ff-080d090c593b
-source-git-commit: 50c8dd725e20cbd372a7d7858fc67b0f53a8d6d4
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1917'
 ht-degree: 0%
 
 ---
@@ -26,12 +26,12 @@ ht-degree: 0%
 >id="aemcloud_ctt_usermigration"
 >title="Användarna migreras inte"
 >abstract="Verktyget Innehållsöverföring migrerar inte längre användare. Användare bör hanteras i Admin Console."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/onboarding/journey/admin-console" text="Dokumentation för AEM Admin Console"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/admin-console" text="Dokumentation för AEM Admin Console"
 >additional-url="https://adminconsole.adobe.com/" text="AEM Admin Console"
 
 Som en del av övergångsresan till Adobe Experience Manager (AEM) as a Cloud Service måste grupper migreras från befintliga AEM-system till AEM as a Cloud Service. Den här åtgärden utförs av verktyget Innehållsöverföring.
 
-En stor förändring i AEM as a Cloud Service är den helintegrerade användningen av Adobe ID:n för att komma åt författarnivån. Den här processen kräver att [Adobe Admin Console](https://helpx.adobe.com/se/enterprise/using/admin-console.html) används för att hantera användare och användargrupper. Användarprofilinformationen är centraliserad i Adobe Identity Management System (IMS) som gör att du kan logga in på alla Adobe molnprogram samtidigt. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/what-is-new-and-different.html?lang=sv-SE#identity-management). På grund av den här ändringen skapas användare automatiskt på AEM när de loggar in på den via IMS.  CTT migrerar alltså inte användarna till molnsystemet.  IMS-användare måste placeras i IMS-grupper, som kan migreras eller nya grupper placeras i AEM-grupper som har behörighet att komma åt det AEM-innehåll som migreras.  På så sätt får användare i molnsystemet samma åtkomst som de hade i sitt AEM-källsystem.
+En stor förändring i AEM as a Cloud Service är den helintegrerade användningen av Adobe ID:n för att komma åt författarnivån. Den här processen kräver att [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html) används för att hantera användare och användargrupper. Användarprofilinformationen är centraliserad i Adobe Identity Management System (IMS) som gör att du kan logga in på alla Adobe molnprogram samtidigt. Mer information finns i [Identity Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/what-is-new-and-different.html#identity-management). På grund av den här ändringen skapas användare automatiskt på AEM när de loggar in på den via IMS.  CTT migrerar alltså inte användarna till molnsystemet.  IMS-användare måste placeras i IMS-grupper, som kan migreras eller nya grupper placeras i AEM-grupper som har behörighet att komma åt det AEM-innehåll som migreras.  På så sätt får användare i molnsystemet samma åtkomst som de hade i sitt AEM-källsystem.
 
 ## Information om gruppmigrering {#group-migration-detail}
 
@@ -46,7 +46,7 @@ Observera att sökvägen som loggas/rapporteras för en grupp bara är den förs
 
 De flesta migrerade grupper är konfigurerade att hanteras av IMS.  Detta innebär att en grupp i IMS med samma namn länkas till gruppen i AEM, och alla IMS-användare i IMS-gruppen blir AEM-användare och medlemmar i gruppen i AEM.  Detta gör att dessa användare har tillgång till innehållet enligt ACL- eller CUG-profiler för gruppen.
 
-Observera att migrerade grupper inte längre betraktas som&quot;lokala AEM-grupper&quot;. De är IMS-klara grupper i AEM även om de ännu inte finns i IMS.  De måste återskapas separat i IMS så att de kan synkroniseras mellan AEM och IMS.  Grupper kan skapas i IMS via Admin Console, bland annat på egen hand eller gruppvis.  Mer information om hur du skapar grupper individuellt eller gruppvis i Admin Console finns i [Hantera användargrupper](https://helpx.adobe.com/se/enterprise/using/user-groups.html).
+Observera att migrerade grupper inte längre betraktas som&quot;lokala AEM-grupper&quot;. De är IMS-klara grupper i AEM även om de ännu inte finns i IMS.  De måste återskapas separat i IMS så att de kan synkroniseras mellan AEM och IMS.  Grupper kan skapas i IMS via Admin Console, bland annat på egen hand eller gruppvis.  Mer information om hur du skapar grupper individuellt eller gruppvis i Admin Console finns i [Hantera användargrupper](https://helpx.adobe.com/enterprise/using/user-groups.html).
 
 Undantaget för den här IMS-konfigurationen gäller grupper som har skapats av Assets Collections och Privata mappar. När en samling eller en privat mapp skapas på AEM skapas grupper för åtkomst till det innehållet. Sådana grupper migreras till molnsystemet, men de är inte konfigurerade att hanteras av IMS.  Om du vill lägga till IMS-användare i dessa grupper måste de läggas till på sidan Gruppegenskaper i Assets-gränssnittet, antingen individuellt eller tillsammans som en del av en annan IMS-grupp.
 
@@ -65,12 +65,14 @@ När den här inställningen är inaktiverad migreras inte grupper, och det komm
 ## Rapport om huvudmigrering och användarrapport {#principal-migration-report}
 
 När grupper inkluderas under migreringen (standard) sparas en huvudmigreringsrapport som visar vad som händer med varje grupp under migreringen.  Så här laddar du ned den här rapporten när du har lagt till den:
+
 * I CAM går du till Innehållsöverföring och väljer Inmatningsjobb.
 * Klicka på ellipsen (..) på raden för det aktuella intrycket och välj &quot;Visa huvudsammanfattning&quot;.
 * I den dialogruta som visas väljer du&quot;Principal Migration Report&quot; i listrutan under&quot;Download a file...&quot; och klickar på knappen Download.
 * Spara den resulterande CSV-filen.
 
 En del information per grupp är:
+
 * Om den migreras, sökvägen till den första ACL eller CUG som gjorde att gruppen migrerades.
 * Om gruppen har migrerats tidigare. Om det aktuella intaget var ett icke-rensat intag kan vissa grupper ha migrerats under ett tidigare intag.
 * Om gruppen är en inbyggd grupp, migreras inte dessa grupper eftersom de alltid finns i AEMaaCS-målmiljön.
@@ -109,7 +111,7 @@ Se även [Hantera användare](https://helpx.adobe.com/ca/enterprise/using/users.
 
 * Om inställningen **Rensa befintligt innehåll i molninstansen innan** har angetts tas grupper som tidigare har överförts till Cloud Service-instansen bort tillsammans med hela den befintliga databasen. En ny databas skapas i vilken innehåll hämtas. Den här processen återställer även alla inställningar, inklusive behörigheter, för Cloud Service-målinstansen och gäller för alla användare som läggs till i gruppen **administratörer**. Administratörsanvändaren måste läggas till på nytt i gruppen **administratörer** för att hämta åtkomsttoken för CTT/CAM Ingesses.
 * När icke-rensningsförslag utförs (**Rensa befintligt innehåll** tas bort), och om innehållet inte överförs eftersom det inte har ändrats sedan den tidigare överföringen, överförs inte heller grupper som är kopplade till det innehållet. Den här regeln gäller även om grupperna har ändrats i källsystemet. Detta beror på att grupper endast migreras tillsammans med innehållet som de är associerade med. På grund av detta migreras i det här fallet inte grupper som är medlemmar i en grupp i källsystemet, såvida de inte tillhör en annan grupp som migreras eller i åtkomstkontrollistan för ett annat innehåll som migreras. Om du vill migrera de här grupperna i efterhand bör du överväga att använda paket, ta bort grupper från målet och migrera det relevanta innehållet igen eller migrera om med ett svep.
-* Om det finns en grupp med samma unika data (rep:PrincipalName, rep:authorizedId, jcr:uid eller rep:externalId) på både AEM-källinstansen och AEM Cloud-målinstansen under ett icke-rensningsbesök, migreras den aktuella gruppen _inte_ och den tidigare gruppen på molnsystemet ändras inte. Detta loggas i huvudmigreringsrapporten.
+* Om det finns en grupp med samma unika data (rep:principalName, rep:authorizableId, jcr:uuid eller rep:externalId) på både AEM-källinstansen och AEM Cloud-målinstansen under icke-rensningsinläsning migreras den aktuella gruppen _inte_ och den tidigare gruppen på molnsystemet ändras inte. Detta loggas i huvudmigreringsrapporten.
 * Se [Migrera stängda användargrupper](/help/journey-migration/content-transfer-tool/using-content-transfer-tool/closed-user-groups-migration.md) om du vill ha mer information om grupper som används i en CUG-princip (Closed User Group).
 
 ## Slutlig sammanfattning och rapport

@@ -3,8 +3,8 @@ title: Universella redigeringshändelser
 description: Lär dig mer om de olika händelser som den universella redigeraren skickar och som du kan använda för att reagera på innehåll eller användargränssnittsändringar i din fjärrapp.
 exl-id: c9f7c284-f378-4725-a4e6-e4799f0f8175
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%

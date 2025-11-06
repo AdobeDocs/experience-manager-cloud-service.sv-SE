@@ -3,8 +3,8 @@ title: Query Builder API
 description: Funktionerna i Asset Share Query Builder visas via Java&trade; API och REST API.
 exl-id: d5f22422-c9da-4c9d-b81c-ffa5ea7cdc87
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Query Builder API {#query-builder-api}
 
-Med Query Builder kan du enkelt hämta innehåll från AEM. Funktionerna visas via ett Java™-API och ett REST-API. I det här dokumentet beskrivs dessa API:er.
+Med Query Builder kan du enkelt hämta information från AEM innehållsdatabas. Funktionerna visas via ett Java™-API och ett REST-API. I det här dokumentet beskrivs dessa API:er.
 
 Frågebyggaren på serversidan ([`QueryBuilder`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/QueryBuilder.html)) accepterar en frågebeskrivning, skapar och kör en XPath-fråga, kan filtrera resultatuppsättningen och extrahera facets om så önskas.
 
@@ -25,19 +25,19 @@ REST API ger åtkomst till samma funktioner via HTTP med svar som skickas i JSON
 
 >[!NOTE]
 >
->QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga AEM JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR-API:t](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=sv-SE).
+>QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga AEM JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Fråga Adobe Experience Manager-data med JCR-API:t](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html).
 
 ## Gruppsession {#gem-session}
 
-[AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html?lang=sv-SE) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobe experter.
+[AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobe experter.
 
-Du kan [granska sessionen som är dedikerad till frågebyggaren](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-search-forms-using-querybuilder.html?lang=sv-SE) för en översikt över och användning av verktyget.
+Du kan [granska sessionen som är dedikerad till frågebyggaren](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-search-forms-using-querybuilder.html) för en översikt över och användning av verktyget.
 
 ## Exempelfrågor {#sample-queries}
 
 Dessa exempel anges i Java™-egenskapsformatsnotation. Om du vill använda dem med Java™ API använder du Java™ `HashMap` som i följande API-exempel.
 
-För JSON-serverns `QueryBuilder` innehåller varje exempel en exempellänk till en AEM (på standardplatsen `http://<host>:<port>`). Logga in på AEM innan du använder länkarna.
+För JSON-serverns `QueryBuilder` innehåller varje exempel en exempellänk till en AEM-installation (på standardplatsen `http://<host>:<port>`). Logga in på din AEM-instans innan du använder länkarna.
 
 >[!CAUTION]
 >
@@ -191,7 +191,7 @@ Använd predikatet `tagid` som i exemplet om du känner till det explicita tagg-
 
 Använd predikatet `tag` för taggens titelsökväg (utan blanksteg).
 
-I föregående exempel använder du den relativa sökvägen från den noden för `tagid.property`-predikatet, som är `jcr:content/cq:tags`, eftersom du söker efter sidor (`cq:Page` noder). Som standard är `tagid.property` `cq:tags`.
+I föregående exempel använder du den relativa sökvägen från den noden för `cq:Page`-predikatet, som är `tagid.property`, eftersom du söker efter sidor (`jcr:content/cq:tags` noder). Som standard är `tagid.property` `cq:tags`.
 
 ### Sök i flera banor (med grupper) {#search-under-multiple-paths-using-groups}
 
@@ -347,7 +347,7 @@ p.nodedepth=5
 
 ## Fler prognoser {#morepredicates}
 
-Mer information om predikat finns på sidan [Referens för frågeverktyget &#x200B;](query-builder-predicates.md).
+Mer information om predikat finns på sidan [Referens för frågeverktyget ](query-builder-predicates.md).
 
 Du kan också kontrollera [JavaScript för `PredicateEvaluator`-klasserna](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). Javadoc för dessa klasser innehåller en lista med egenskaper som du kan använda.
 
@@ -453,7 +453,7 @@ Alternativt kan du använda JSON-servern Query Builder på
 
 `path=/tmp` är endast ett exempel.
 
-### Allmän felsökning av Recommendations {#general-debugging-recommendations}
+### Allmänna felsökningsrekommendationer {#general-debugging-recommendations}
 
 ### Få förklarlig XPath via loggning {#obtain-explain-able-xpath-via-logging}
 

@@ -5,7 +5,7 @@ contentOwner: Rick Brough
 feature: Image Sets
 role: User
 exl-id: 2eb71f24-73d9-4b5c-8605-923a0e3d1505
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2078'
 ht-degree: 3%
@@ -247,6 +247,7 @@ Du kan utföra olika redigeringsåtgärder på bilduppsättningar, till exempel 
      >[!NOTE]
      >
      >Om du tar bort den bild som Experience Manager använder som miniatyrbild genom att ersätta den med en annan bild, visas fortfarande originalresursen.
+
    * Om du vill ta bort en resurs markerar du den och väljer **[!UICONTROL Delete Asset]**.
    * Om du vill använda en förinställning väljer du **[!UICONTROL Preset]** längst upp till höger på sidan och väljer sedan en visningsförinställning.
    * Om du vill lägga till eller ändra en miniatyrbild markerar du miniatyrbildikonen bredvid resursens högra sida. Navigera till den nya miniatyrbilden eller färgruteresursen, markera den och välj sedan **[!UICONTROL Select]**.

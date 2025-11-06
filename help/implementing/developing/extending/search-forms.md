@@ -3,8 +3,8 @@ title: Konfigurera Sök i Forms
 description: Konfigurera Sök i Forms för Adobe Experience Manager as a Cloud Service.
 exl-id: b06649c4-cc91-44e3-8699-00e90140b90d
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2036'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Manager as a Cloud Service har en kraftfull [sökfunktion](/help/sites-cloud/authoring/search.md).
 
-I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade aspekter som **Ändringsdatum**, **Publish-status** eller **Livecopy-status** som hjälper dig att snabbt hitta rätt resurser.
+I kombination med detta finns det också en uppsättning fördefinierade alternativ som hjälper dig att filtrera innehållet. Dessa innehåller fördefinierade aspekter som **Ändringsdatum**, **Publiceringsstatus** eller **Livecopy-status** som hjälper dig att snabbt hitta rätt resurser.
 
 ![sök- och filteranvändning](assets/csf-usage.png)
 
@@ -288,7 +288,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    <td>
     <ul>
      <li>Fältetikett</li>
-     <li>Publish-egenskapsnamn*</li>
+     <li>Namn på publiceringsegenskap*</li>
      <li>Egenskapsnamn för låsta sidor*</li>
      <li>Beskrivning</li>
     </ul> </td>
@@ -339,7 +339,7 @@ Följande predikat är tillgängliga, beroende på konfigurationen:
    </td>
   </tr>
   <tr>
-   <td>Publish-status</td>
+   <td>Publiceringsstatus</td>
    <td>Filtrera resurser baserat på deras publiceringsstatus.</td>
    <td>
     <ul>
@@ -541,10 +541,10 @@ I själva verket är det samma som **Alternativsökväg** , men bara det här ä
 * **En markering**
 Om det här alternativet är markerat återges alternativen som kryssrutor som bara tillåter ett urval. Om du av misstag markerar kryssrutan kan den avmarkeras.
 
-* **Egenskapsnamn för Publish och Live Copy**
+* **Egenskapsnamn för publicering och live-kopia**
 Etiketterna för publicerings- och Live copy-kryssrutorna för platsspecifika predikat.
 
-* &ast; på fältetiketterna på fliken **Settings** betyder det att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
+* &amp;ast; på fältetiketterna på fliken **Settings** betyder det att fälten är obligatoriska och om de lämnas tomma visas ett felmeddelande.
 
 ## Konfigurera din sökning i Forms {#configuring-your-search-forms}
 

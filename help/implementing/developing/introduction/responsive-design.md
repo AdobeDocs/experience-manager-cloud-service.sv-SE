@@ -3,8 +3,8 @@ title: Responsiv design
 description: Med responsiv design kan samma upplevelser visas effektivt på flera enheter i flera olika orienteringar.
 exl-id: be645062-d6d6-45a2-97dc-d8aa235539b8
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 0%
@@ -85,7 +85,7 @@ I [WKND-självstudien](develop-wknd-tutorial.md) används den här strategin fö
 
 ### Använda mediefrågor med AEM Pages {#using-media-queries-with-aem-pages}
 
-[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) använder [Page Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html?lang=sv-SE), som innehåller klientlibs via sidprincipen.
+[WKND-exempelprojektet](/help/implementing/developing/introduction/develop-wknd-tutorial.md) och [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) använder [Page Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/page.html), som innehåller klientlibs via sidprincipen.
 
 Om din egen sidkomponent inte är baserad på Page Core-komponenten kan du även inkludera klientbiblioteksmappen i HTML- eller JSP-skriptet för den. Om du gör det genereras och refereras CSS-filen med de mediefrågor som behövs för att det responsiva rutnätet ska fungera.
 
@@ -135,10 +135,10 @@ Enhetsgruppnoderna finns i mappen `/etc/mobile/groups`.
 
 Responsiva sidor anpassar sig dynamiskt till den enhet som de återges på, vilket ger en bättre upplevelse för användaren. Men det är också viktigt att resurserna optimeras till brytpunkten och enheten för att minimera sidinläsningstiden.
 
-[Core Component Image Component Component &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE) har funktioner som adaptiv bildmarkering.
+[Core Component Image Component Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) har funktioner som adaptiv bildmarkering.
 
-* Som standard använder Image-komponenten [Adaptive Image Server](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/adaptive-image-servlet.html?lang=sv-SE) för att leverera rätt återgivning.
-* [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) är också tillgängligt via en enkel kryssruta i policyn, som levererar bildresurser från DAM i WebP-format och kan minska hämtningsstorleken för en bild med i genomsnitt cirka 25 %.
+* Som standard använder Image-komponenten [Adaptive Image Server](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/adaptive-image-servlet.html) för att leverera rätt återgivning.
+* [Webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) är också tillgängligt via en enkel kryssruta i policyn, som levererar bildresurser från DAM i WebP-format och kan minska hämtningsstorleken för en bild med i genomsnitt cirka 25 %.
 
 ## Layoutbehållaren {#layout-container}
 

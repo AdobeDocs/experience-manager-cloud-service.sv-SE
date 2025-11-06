@@ -3,9 +3,9 @@ title: Sammansatta komponenter i SPA
 description: Lär dig hur du skapar egna sammansatta komponenter, komponenter som består av andra komponenter, som fungerar med AEM Single-Page Application (SPA) Editor.
 exl-id: fa1ab1dd-9e8e-4e2c-aa9a-5b46ed8a02cb
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Följande modeller för stöd av användning av sammansatta komponenter kräver 
 Det finns tre olika modeller för implementering av den sammansatta komponenten beroende på din SPA-implementering i AEM.
 
 * [Komponenten finns inte i ditt AEM-projekt](#component-does-not-exist).
-* [Komponenten finns i ditt AEM-projekt, men det obligatoriska innehållet gör inte &#x200B;](#content-does-not-exist).
+* [Komponenten finns i ditt AEM-projekt, men det obligatoriska innehållet gör inte ](#content-does-not-exist).
 * [Komponenten och dess obligatoriska innehåll finns båda i ditt AEM-projekt](#both-exist).
 
 I följande avsnitt ges exempel på hur du implementerar varje fall med kortkomponenten som exempel.
@@ -136,7 +136,7 @@ I det här fallet har kortkomponenten redan skapats i ditt AEM-projekt med titel
 
 Sedan kan du lägga till den i SPA-filen och hämta dess innehåll.
 
-1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM-resurstyper i SPA-projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående fall [&#128279;](#component-does-not-exist).
+1. Skapa en motsvarande komponent i SPA för detta. Se till att de underordnade komponenterna mappas till motsvarande AEM-resurstyper i SPA-projektet. I det här exemplet använder vi samma `AEMText`- och `AEMImage`-komponenter som i föregående fall [ ](#component-does-not-exist).
 
    ```javascript
    import React from 'react';
@@ -162,7 +162,7 @@ Sedan kan du lägga till den i SPA-filen och hämta dess innehåll.
     itemPath='root/responsivegrid' />
    ```
 
-1. Lägg till den skapade `wknd-spa/components/imagecard`-komponenten i de tillåtna komponenterna för behållarkomponenten [&#x200B; i sidmallen &#x200B;](/help/sites-cloud/authoring/page-editor/templates.md).
+1. Lägg till den skapade `wknd-spa/components/imagecard`-komponenten i de tillåtna komponenterna för behållarkomponenten [ i sidmallen ](/help/sites-cloud/authoring/page-editor/templates.md).
 
 Nu kan komponenten `imagecard` läggas till direkt i behållaren i AEM Editor.
 
@@ -180,4 +180,4 @@ Om innehållet finns i AEM kan det ingå direkt i SPA genom att ange sökvägen 
 
 ![Sammansatt sökväg i nodstruktur](assets/composite-path.png)
 
-Komponenten `AEMCard` är densamma som definierad [&#x200B; i föregående användningsfall &#x200B;](#content-does-not-exist). Här ingår det innehåll som definieras på ovanstående plats i AEM-projektet i SPA.
+Komponenten `AEMCard` är densamma som definierad [ i föregående användningsfall ](#content-does-not-exist). Här ingår det innehåll som definieras på ovanstående plats i AEM-projektet i SPA.

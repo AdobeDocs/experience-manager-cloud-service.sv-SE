@@ -3,9 +3,9 @@ title: Skapa snabbt webbplatser och anpassa gränssnittet
 description: Läs om hur verktyget för att skapa snabbwebbplatser använder webbplatsmallar, teman och produktionsflödet för att snabbt kunna driftsätta nya webbplatser och skapa en fristående utveckling.
 exl-id: 9ec5126b-bee4-445a-a4bb-0c27c1a93d3f
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 recommendations: noDisplay, noCatalog
-source-git-commit: 8c4b34a77ef85869048fae254728c58cf0d99b66
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%

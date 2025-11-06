@@ -3,8 +3,8 @@ title: Developing and Page Diff
 description: Förstå hur funktionen för sidskillnader fungerar och hur den kan påverka en utvecklare
 exl-id: 03c08616-2203-4b90-bed6-4836266e2507
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Med sidskillnaden kan användaren jämföra den aktuella sidan med startsidor, t
 
 ## Operationsinformation {#operation-details}
 
-När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Den här tidigare versionen är nödvändig för att återge innehållet [för jämförelse sida vid sida](/help/sites-cloud/authoring/sites-console/page-diff.md).
+När du jämför versioner av en sida skapas den tidigare versionen som användaren vill jämföra om av AEM i bakgrunden för att underlätta skillnaderna. Den här tidigare versionen är nödvändig för att återge innehållet [för jämförelse sida vid sida](/help/sites-cloud/authoring/sites-console/page-diff.md).
 
-Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRXDE Lite, skulle kunna se dessa återskapade versioner i innehållsstrukturen.
+Denna rekreationsåtgärd utförs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som visar databasen, till exempel i CRXDE Lite, skulle se dessa återskapade versioner i innehållsstrukturen.
 
 När innehållet jämförs återskapas hela trädet fram till sidan som ska jämföras på följande plats:
 
@@ -35,7 +35,7 @@ En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga inneh
 
 Skillnaden sker på klientsidan genom DOM-jämförelse, vilket gör diff-processen enkel. Det finns dock flera begränsningar som måste beaktas av utvecklaren.
 
-* Den här funktionen använder CSS-klasser som inte har något namn som AEM Produkten. Om andra anpassade CSS-klasser eller CSS-klasser från tredje part med samma namn inkluderas på sidan kan visningen av skillnaderna påverkas.
+* Den här funktionen använder CSS-klasser som inte har namngetts för AEM-produkten. Om andra anpassade CSS-klasser eller CSS-klasser från tredje part med samma namn inkluderas på sidan kan visningen av skillnaderna påverkas.
 
    * `html-added`
    * `html-removed`

@@ -3,9 +3,9 @@ title: Utveckla sajter med frontpipeline
 description: Framtidsförloppet ökar utvecklarnas oberoende och snabbar upp utvecklingsprocessen. I den här artikeln beskrivs viktiga aspekter av frontprocessen för att säkerställa optimala prestanda och effektivitet.
 exl-id: 996fb39d-1bb1-4dda-a418-77cdf8b307c5
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 recommendations: noDisplay, noCatalog
-source-git-commit: 8c4b34a77ef85869048fae254728c58cf0d99b66
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Klientmiljön stöder följande `Node.js`-versioner:
 * 14 (standard)
 * 12
 
-Du kan använda `NODE_VERSION` [miljövariabeln &#x200B;](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
+Du kan använda `NODE_VERSION` [miljövariabeln ](/help/implementing/cloud-manager/environment-variables.md) för att ange önskad version.
 
 ## Bästa tillvägagångssätt för att namnge och hantera rörledningar för slutanvändare i AEM {#single-source-of-truth}
 

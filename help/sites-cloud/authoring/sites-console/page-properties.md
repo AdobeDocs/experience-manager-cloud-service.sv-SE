@@ -6,7 +6,7 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 mini-toc-levels: 2
-source-git-commit: b9328a22ff544f2c663868d33d7b06e02819f1d7
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2138'
 ht-degree: 0%
@@ -35,27 +35,37 @@ Sidegenskaper kan styra många aspekter av en sida, från sidans titel och varum
 ### Titel och taggar {#title-tags}
 
 * **Titel** - Definierar sidmetanamnet för SEO-syften samt den rubrik som visas i sidinnehållet (om den inte åsidosätts)
+
    * Sidans titel visas på olika platser i AEM-gränssnittet, inklusive vyerna **Sites** kort/lista i [Platskonsolen.](/help/sites-cloud/authoring/sites-console/introduction.md)
    * Detta är ett obligatoriskt fält.
+
 * **Taggar** - Definierar sidmetataggar för SEO-syften
+
    * Du kan lägga till eller ta bort taggar från sidan genom att uppdatera listan i markeringsrutan.
    * Använd listrutan för att välja bland befintliga taggar.
    * När du har valt en tagg visas den under markeringsrutan. Du kan ta bort en tagg från den här listan med hjälp av x.
    * Du kan ange en helt ny tagg genom att skriva namnet i en tom markeringsruta.
+
       * Den nya taggen skapas när du trycker på Retur.
       * Den nya taggen visas sedan med en liten stjärna till höger som anger att det är en ny tagg.
+
    * Ett x-tecken visas när du för musen över en taggpost i markeringsrutan, som kan användas för att ta bort taggen för den här sidan.
    * Mer information om taggar finns i [Använda tagg.](/help/sites-cloud/authoring/sites-console/tags.md)
+
 * **Dölj i navigering** - Anger om sidan visas eller döljs i sidnavigeringen för den slutliga platsen
 
 ### Varumärke {#branding}
 
-Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
+Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
 * **Varumärkesinstruktion**
+
    * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
+
       * Värdet ärvs av alla underordnade sidor såvida inte deras **Åsidosätt**-värden också har angetts.
+
    * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
+
       * Värdet läggs till i sidtiteln efter ett lodstreck som `Cycling Tuscany | Always ready for the WKND`
 
 ### HTML ID {#html-id}
@@ -65,10 +75,14 @@ Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en
 ### Fler rubriker och beskrivning {#more-titles}
 
 * **Sidtitel** - En titel som ska användas på sidan
+
    * Detta används vanligtvis av titelkomponenter.
    * Om den är tom används **Title**.
+
 * **Navigeringstitel** - Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist).
+
    * Om den är tom används **sidrubriken**.
+
 * **Underrubrik** - Underrubrik för sidan
 * **Beskrivning** - Din beskrivning av sidan, dess syfte eller annan information som du vill lägga till
 
@@ -79,7 +93,7 @@ På-/avaktiveringstiden för en sida är ett praktiskt sätt att tillfälligt d�
 * **I tid** - Det datum och den tidpunkt då den publicerade sidan visas (återges) i publiceringsmiljön. Sidan måste publiceras, antingen manuellt eller med förkonfigurerad automatisk replikering.
 
    * Om den redan är [publicerad](/help/sites-cloud/authoring/sites-console/publishing-pages.md) är den här sidan tillgänglig på publiceringsinstansen, men den behåller vilande (dold) tills återgivningen sker vid den angivna tidpunkten.
-   * Om den inte publiceras och [konfigureras för automatisk replikering &#x200B;](/help/operations/replication.md#on-and-off-times-trigger-configuratio) publiceras sidan automatiskt och återges sedan vid den angivna tidpunkten.
+   * Om den inte publiceras och [konfigureras för automatisk replikering ](/help/operations/replication.md#on-and-off-times-trigger-configuratio) publiceras sidan automatiskt och återges sedan vid den angivna tidpunkten.
    * Om sidan inte är publicerad och inte konfigurerad för automatisk replikering publiceras den inte automatiskt. Därför visas 404 när ett försök görs att komma åt sidan.
 
 * **Fråntid** - Ungefär som och ofta används i kombination med **På tid**, definierar detta den tidpunkt då den publicerade sidan döljs i publiceringsmiljön.
@@ -205,7 +219,7 @@ Det här avsnittet används för att välja och konfigurera sidans miniatyrbild.
 
 ## Behörigheter {#permissions}
 
-Använd fliken **Behörigheter** för att definiera vilka användare, grupper eller [stängda användargrupper (CUG)](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html?lang=sv-SE) som kan komma åt och/eller ändra sidan.
+Använd fliken **Behörigheter** för att definiera vilka användare, grupper eller [stängda användargrupper (CUG)](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/closed-user-groups.html) som kan komma åt och/eller ändra sidan.
 
 * **Lägg till behörigheter**
 * **Redigera stängd användargrupp**
@@ -221,7 +235,7 @@ Den här fliken visas bara för sidor som fungerar som utkast. Utkast fungerar s
 
 ## Live Copy {#live-copy}
 
-Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Precis som med [utkast är &#x200B;](#blueprint) Live-kopior en del av [Multi Site Management (Hantering av flera webbplatser).](/help/sites-cloud/administering/msm/overview.md)
+Den här fliken visas bara för sidor som har konfigurerats som live-kopior. Precis som med [utkast är ](#blueprint) Live-kopior en del av [Multi Site Management (Hantering av flera webbplatser).](/help/sites-cloud/administering/msm/overview.md)
 
 * **Synkronisera** - Synkronisera Live-kopia med utkast, med lokala ändringar
 * **Återställ** - Återställ Live Copy till läget för utkast och ta bort lokala ändringar

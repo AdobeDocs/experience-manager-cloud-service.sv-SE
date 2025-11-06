@@ -3,8 +3,8 @@ title: ContextHub
 description: ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata
 exl-id: 604477c6-d96a-441f-b5fc-5def93832478
 feature: Developing, Personalization
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ContextHub {#contexthub}
 
-ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Dess primära funktion är att erbjuda möjligheten att [visa kontextdata samtidigt som man simulerar och växlar mellan olika profiler &#x200B;](/help/sites-cloud/authoring/personalization/contexthub.md).
+ContextHub är ett ramverk för att lagra, ändra och presentera kontextdata. Dess primära funktion är att erbjuda möjligheten att [visa kontextdata samtidigt som man simulerar och växlar mellan olika profiler ](/help/sites-cloud/authoring/personalization/contexthub.md).
 
 Med ContextHub kan du:
 
@@ -30,7 +30,7 @@ Verktygsfältet [ContextHub](/help/sites-cloud/authoring/personalization/context
 Varje ContextHub-gränssnittsmodul är en instans av en fördefinierad modultyp:
 
 * ContextHub innehåller flera [exempelmodultyper](sample-modules.md).
-* Använd AEM konsoler för att [lägga till gränssnittsmoduler](configuring-contexthub.md#adding-a-ui-module) och för att [gruppera dem i gränssnittslägen](configuring-contexthub.md#adding-a-ui-mode).
+* Använd AEM-konsoler för att [lägga till gränssnittsmoduler](configuring-contexthub.md#adding-a-ui-module) och för att [gruppera dem i gränssnittslägen](configuring-contexthub.md#adding-a-ui-mode).
 * Utvecklare kan [skapa anpassade modultyper](extending-contexthub.md#creating-contexthub-ui-module-types).
 
 Utvecklare måste [lägga till ContextHub-komponenten på sidan](configuring-contexthub.md).
@@ -42,7 +42,7 @@ ContextHub lagrar kontextdata på klienten. Med ContextHub JavaScript API kan du
 Varje ContextHub-butik är en instans av en fördefinierad lagringstyp:
 
 * ContextHub innehåller flera [typer av exempelarkiv](sample-stores.md).
-* Använd AEM för att [skapa butiker](configuring-contexthub.md#creating-a-contexthub-store).
+* Använd AEM-konsoler för att [skapa butiker](configuring-contexthub.md#creating-a-contexthub-store).
 * Utvecklare kan [skapa anpassade butikstyper](extending-contexthub.md#creating-custom-store-candidates).
 * Utvecklare kan [komma åt lagringsdata](adding-contexthub.md#interacting-with-contexthub-stores) via JavaScript.
 

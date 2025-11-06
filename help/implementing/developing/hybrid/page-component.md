@@ -3,9 +3,9 @@ title: SPA-sidkomponent
 description: I en SPA tillhandahåller inte sidkomponenten HTML-elementen i dess underordnade komponenter, utan delegerar i stället detta till SPA-ramverket. I det här dokumentet förklaras hur det gör sidkomponenten i en SPA unik.
 exl-id: 41b56a60-ebb8-499d-a0ab-a2e920f26227
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%
@@ -69,7 +69,7 @@ Meta-resursegenskaperna som beskriver SPA-innehållet:
 >
 >Standardmodellväljaren anges statiskt när Sling Model-representationen av en komponent begärs.
 
-## Metaegenskaper {#meta-properties}
+## Meta Properties {#meta-properties}
 
 * `cq:wcmmode`: Redigerarnas WCM-läge (till exempel sida, mall)
 * `cq:pagemodel_root_url`: URL för appens rotmodell. Viktigt vid direkt åtkomst till en underordnad sida eftersom den underordnade sidmodellen är ett fragment av appens rotmodell. `PageModelManager` komponerar sedan systematiskt om den inledande programmodellen när programmet anges från dess rotstartpunkt.

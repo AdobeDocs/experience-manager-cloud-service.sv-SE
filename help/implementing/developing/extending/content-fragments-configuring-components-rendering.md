@@ -3,8 +3,8 @@ title: Innehållsfragment Konfigurera komponenter för återgivning
 description: Innehållsfragment Konfigurera komponenter för återgivning
 exl-id: 6606dc3b-f1b8-4941-8fd0-f69cbd414afa
 feature: Developing, Content Fragments
-role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -136,7 +136,7 @@ För vissa funktioner måste komponenten följa fördefinierade konventioner. F�
 
 ## Exempel {#example}
 
-Se följande (i en AEM som inte finns i kartongen):
+Se följande (i en körklar AEM-instans) som exempel:
 
 ```
 /apps/core/wcm/config/com.adobe.cq.dam.cfm.impl.component.ComponentConfigImpl-core-comp-v1.config

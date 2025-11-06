@@ -3,9 +3,9 @@ title: SPA-referensmaterial
 description: En översikt över enkelsidiga API-referenser och källkodsdatabaser
 exl-id: c1cc2bd8-8ff1-406c-a0ce-0af001d66b53
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%

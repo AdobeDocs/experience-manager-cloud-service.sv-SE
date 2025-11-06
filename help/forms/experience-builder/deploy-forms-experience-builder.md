@@ -4,14 +4,14 @@ description: Lär dig använda Forms Experience Builder för att skapa och hante
 hide: true
 index: false
 hidefromtoc: true
-role: Admin, Architect, Developer
-source-git-commit: de524aeddd5f53cbd713ff0523222966752ebbc0
+role: Admin, Developer
+exl-id: 977f227e-e941-4797-ba74-53d5b8c60ca9
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1404'
 ht-degree: 0%
 
 ---
-
 
 # Installera och konfigurera Forms Experience Builder
 

@@ -4,8 +4,8 @@ description: Konfigurera RTF-redigeraren för att skapa innehåll i [!DNL Adobe 
 contentOwner: AG
 exl-id: 1f0ff800-5e95-429a-97f2-221db0668170
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 2c1b444d7b7dad94cc9ebda59783f9c6fde84a91
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1892'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Konfigurera RTF-redigeraren {#configure-the-rich-text-editor}
 
-Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa &#x200B;](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
+Med RTF-redigeraren får författarna ett stort antal funktioner för att redigera textinnehåll. Ikoner, markeringsrutor, verktygsfält och menyer finns för WYSIWYG textredigering. Administratörer konfigurerar RTE för att aktivera, inaktivera och utöka de funktioner som är tillgängliga i redigeringskomponenterna. Se hur författare [använder RTE för att skapa ](/help/sites-cloud/authoring/page-editor/rich-text-editor.md) webbinnehåll.
 
 De RTE-begrepp och -steg som krävs för att konfigurera den listas nedan.
 
@@ -95,13 +95,13 @@ Grundfunktionerna i textredigeraren aktiveras, eller inaktiveras, av värdet fö
 
 I följande tabell visas de aktuella plugin-programmen:
 
-* Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när [ett plugin-program &#x200B;](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) aktiveras.
+* Plugin-ID:n med en länk till API-dokumentationen. ID används som nodnamn när [ett plugin-program ](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#activateplugin) aktiveras.
 * Tillåtna värden för egenskapen `features`.
 * En beskrivning av de funktioner som tillhandahålls av plugin-programmet.
 
 | Plug-in-ID | funktioner | Beskrivning |
 |--- |--- |--- |
-| redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och klistra in &#x200B;](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
+| redigera | `cut`, `copy`, `paste-default`, `paste-plaintext`, `paste-wordhtml` | [Klipp ut, kopiera och klistra in ](/help/implementing/developing/extending/configure-rich-text-editor-plug-ins.md#textstyles). |
 | findreplace | `find`, `replace` | Sök och ersätt. |
 | format | `bold`, `italic`, `underline` | [Grundläggande textformatering](configure-rich-text-editor-plug-ins.md#textstyles). |
 | image | `image` | Grundläggande bildstöd (dra från innehåll eller Innehållssökning). Beroende på webbläsaren har stödet olika beteenden för författare |
@@ -159,7 +159,7 @@ Detaljerade konfigurationer av RTE-plugin-program finns i [Så här aktiverar oc
 <!-- TBD ENGREVIEW: To confirm if the sample works in CS or not?
 **Sample**: Download [this sample configuration](/help/sites-administering/assets/rte-sample-all-features-enabled-10.zip) that illustrates how to configure RTE. In this package all the features are enabled. -->
 
-Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html?lang=sv-SE).
+Med textkomponenten [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor) kan mallredigerare konfigurera många RTE-plugin-program med användargränssnittet som innehållsprinciper, vilket eliminerar behovet av teknisk konfiguration. Innehållsprinciper kan fungera med gränssnittskonfigurationer för textredigering enligt beskrivningen i det här dokumentet. Mer information finns i [Skapa sidmallar](/help/sites-cloud/authoring/page-editor/templates.md) och [Dokumentation för grundkomponentsutvecklare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/developing.html).
 
 >I referenssyfte finns textstandardkomponenterna (levereras som en del av en standardinstallation) på:
 >
@@ -233,7 +233,7 @@ De tillgängliga alternativen i textredigeraren flödar nedåt från användargr
 * Om användargränssnittskonfigurationen för textredigeraren har tagits bort eller inte aktiverar ett objekt kan innehållsprincipen inte konfigurera det.
 * En författare har bara tillgång till funktioner som är tillgängliga i användargränssnittskonfigurationerna och i innehållsprinciperna.
 
-Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE#the-text-component-and-the-rich-text-editor).
+Du kan till exempel se dokumentationen för [textkärnkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html#the-text-component-and-the-rich-text-editor).
 
 ## Anpassa mappningen mellan verktygsfältsikoner och kommandon {#iconstoolbar}
 

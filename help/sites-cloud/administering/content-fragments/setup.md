@@ -1,11 +1,11 @@
 ---
 title: Content Fragments - Setup
-description: Lär dig hur du aktiverar Content Fragment- och GraphQL-funktioner som kan användas med AEM headless-funktioner och sidredigering.
+description: Lär dig hur du aktiverar Content Fragment- och GraphQL-funktioner som kan användas med AEM headless-funktioner för leverans och sidredigering.
 feature: Content Fragments
-role: Developer, Architect
+role: Developer
 exl-id: 3974d698-1e7d-4a5f-a6d5-cbf8d96b4095
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 3%
@@ -73,6 +73,6 @@ Du kan ange ett namn. Om du lämnar fältet tomt genereras det automatiskt baser
 
 När konfigurationen **global** är aktiverad för funktionen Innehållsfragment gäller den alla Assets-mappar som är tillgängliga via **Assets**-konsolen.
 
-Om du vill använda andra konfigurationer (alltså inte globala) med en jämförbar Assets-mapp måste du definiera anslutningen. Det gör du genom att välja lämplig **konfiguration** på fliken **Cloud Service** i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (alltså inte globala) med en jämförbar Assets-mapp måste du definiera anslutningen. Det gör du genom att välja lämplig **konfiguration** på fliken **Cloud-tjänster** i **Mappegenskaper** för rätt mapp.
 
 ![Använd konfiguration](assets/cf-setup-apply-conf.png)

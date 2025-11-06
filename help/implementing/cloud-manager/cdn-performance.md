@@ -4,8 +4,8 @@ description: Lär dig hur Cloud Manager utvärderar prestanda för leveransnätv
 exl-id: ecd8c1ca-873f-4e73-ad73-b5f7561eb109
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: f24b2672431ecf7b7b0ed11b6dc9b09344946239
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Klicka på **Visa trend** om du vill ha mer information om CDN-prestanda och fö
 
 Klicka på **Visa** nedanför diagrammet om du vill ändra tidsintervallet.
 
-Om du vill ha förslag på hur du kan förbättra CDN-prestanda väljer du fliken **Recommendations**.
+Välj fliken **Rekommendationer** om du vill ha förslag på hur du kan förbättra CDN-prestanda.
 
 ![CDN-rekommendationer](assets/cdn-performance-recommendations.png)
 

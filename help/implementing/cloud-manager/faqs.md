@@ -4,8 +4,8 @@ description: Svar på de vanligaste frågorna om Cloud Manager i AEM as a Cloud 
 exl-id: eed148a3-4a40-4dce-bc72-c7210e8fd550
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Ja. Lägg till `maven-toolchains-plugin` med rätt inställningar för Java™ 1
 
 Processen är dokumenterad - se [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
 
-Se till exempel exempelprojektkoden [&#x200B; för &#x200B;](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)WKND.
+Se till exempel exempelprojektkoden [ för ](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)WKND.
 
 ## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java™ 8 till Java™ 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
 

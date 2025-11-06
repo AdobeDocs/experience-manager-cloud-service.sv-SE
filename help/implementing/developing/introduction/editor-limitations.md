@@ -3,8 +3,8 @@ title: Begränsningar för sidredigeraren
 description: I sidredigeraren används övertäckningar för att interagera med innehåll som begränsas i en iframe. Den här interaktionen skapar vissa begränsningar i både användningen av redigeraren och för utvecklare.
 exl-id: 6a4f0e43-1076-4da9-95dc-9c5bf83e30d0
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 8b38e26b16c1fb565f122777f0577d332f62c39c
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
@@ -22,7 +22,7 @@ En författare kan stöta på följande funktionella begränsningar när han ell
 
 ### Länkar som inte är aktiva {#links-not-active}
 
-Länkarna är inte aktiva när [en sida &#x200B;](/help/sites-cloud/authoring/page-editor/edit-content.md) redigeras.
+Länkarna är inte aktiva när [en sida ](/help/sites-cloud/authoring/page-editor/edit-content.md) redigeras.
 
 * [Växla till **förhandsgranskningsläget**](/help/sites-cloud/authoring/page-editor/introduction.md#preview-mode) om du vill navigera med hjälp av länkarna i ditt innehåll.
 

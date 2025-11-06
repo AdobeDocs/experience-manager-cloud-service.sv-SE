@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management, Renditions
 role: User, Admin
 exl-id: e848aa77-7829-4adc-8b88-0279791a4525
-source-git-commit: 0129bf13301a208b777b61f65623222cdf2b4b18
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -37,8 +37,8 @@ I följande förklaring beskrivs stödnivån för varje format.
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Manager Assets] har bara stöd för de filformat som anges i den här artikeln.
->&#x200B;>Vissa funktioner verkar fungera med andra format, men dessa format stöds inte officiellt. Resultatet kan vara inkonsekvent och funktionerna kanske inte fungerar som förväntat.
->&#x200B;>Använd endast de format som stöds för att få enhetliga och tillförlitliga resultat.
+>Vissa funktioner verkar fungera med andra format, men dessa format stöds inte officiellt. Resultatet kan vara inkonsekvent och funktionerna kanske inte fungerar som förväntat.
+>Använd endast de format som stöds för att få enhetliga och tillförlitliga resultat.
 
 ## Adobe-format {#adobe-formats}
 

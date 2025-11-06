@@ -3,8 +3,8 @@ title: ContextHub Diagnostics
 description: ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket
 exl-id: c8d4e160-ea02-49f3-9e31-119445ef5a68
 feature: Developing, Personalization
-role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # ContextHub Diagnostics {#contexthub-diagnostics}
 
-ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket. Öppna sidan genom att gå till sidan `contexthub.diagnostics.html` i AEM författarinstans, till exempel:
+ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket. Om du vill öppna sidan går du till sidan `contexthub.diagnostics.html` i din AEM-författarinstans, till exempel:
 
 `http://<host>:<port>/conf/<site>/settings/cloudsettings/default/contexthub.diagnostics.html`
 

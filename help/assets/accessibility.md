@@ -3,9 +3,9 @@ title: Tillgänglighet i  [!DNL Experience Manager Assets]
 description: Se hur tillgänglighetsfunktionerna i [!DNL Adobe Experience Manager] som en [!DNL Cloud Service] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 feature: Accessibility, Asset Management
-role: User, Architect, Leader
+role: User, Developer, Leader
 exl-id: a6d24ba6-3cb1-42cb-9942-f78572c93358
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1904'
 ht-degree: 0%

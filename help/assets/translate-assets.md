@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Asset Management, Translation
 role: Admin, User
 exl-id: 98df1412-a957-48a3-81c2-7dfe1d5e6d31
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2468'
 ht-degree: 12%
@@ -16,7 +16,7 @@ ht-degree: 12%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/multilingual-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/multilingual-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt. Med Adobe Experience Manager Assets kan du automatisera arbetsflöden för att översätta resurser (inklusive binärfiler, metadata och taggar) och generera resurser på andra språk för användning i flerspråkiga projekt.
@@ -30,11 +30,11 @@ Maskinresursöversättning i AEM: Maskinöversättningstjänsten översätter om
 <!--
 We have multiple articles around translation of assets. For now, dumping all content in this article to remove others and create only ONE UBER article.
 
-https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/translation-projects.html?lang=sv-SE
-https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/preparing-assets-for-translation.html?lang=sv-SE
-[Apply translation cloud services to folders](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/transition-cloud-services.html?lang=sv-SE)
+https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/translation-projects.html
+https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/preparing-assets-for-translation.html
+[Apply translation cloud services to folders](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/transition-cloud-services.html)
 
-One of these articles is a copy of [Preparing Content for Translation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-prep.html?lang=sv-SE
+One of these articles is a copy of [Preparing Content for Translation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/tc-prep.html
 
 -->
 
@@ -108,7 +108,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 1. Öppna rutan **[!UICONTROL References]** och välj **[!UICONTROL Language Copies]** under **[!UICONTROL Copies]**.
 1. Välj **[!UICONTROL Create & Translate]** längst ned.
 1. I listan **[!UICONTROL Target Languages]** väljer du de språk som du vill skapa en mappstruktur för.
-1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
+1. Välj **[!UICONTROL Project]** i listan **[!UICONTROL Create a new translation project]**.
 1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
 1. Välj på **[!UICONTROL Create]**. Assets från källmappen kopieras till målmapparna för de språkinställningar du valde i steg 4.
 1. Om du vill navigera till mappen markerar du språkkopian och klickar på **[!UICONTROL Reveal in Assets]**.
@@ -132,9 +132,11 @@ Om du använder det här alternativet körs översättningsarbetsflödet för re
 1. Välj **[!UICONTROL Create & Translate]** längst ned.
 1. I listan **[!UICONTROL Target Languages]** väljer du de språk som du vill skapa en mappstruktur för.
 1. I listan **[!UICONTROL Project]** väljer du **[!UICONTROL Add to existing translation project]** för att köra översättningsarbetsflödet för mappen.
+
    >[!NOTE]
    >
    >Om du väljer alternativet **[!UICONTROL Add to existing translation project]** läggs ditt översättningsprojekt till i ett befintligt projekt endast om dina projektinställningar exakt matchar inställningarna för det befintliga projektet. Annars skapas ett nytt projekt.
+
 1. Välj ett projekt i listan **[!UICONTROL Existing translation project]** som du vill lägga till resursen för översättning.
 1. Välj **[!UICONTROL Create]**. Resurserna som ska översättas läggs till i målmappen. Den uppdaterade mappen listas i avsnittet **[!UICONTROL Language Copies]**.
 1. Navigera till projektkonsolen och öppna det befintliga översättningsprojektet som du har lagt till i.

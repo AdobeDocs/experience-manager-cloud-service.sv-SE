@@ -5,8 +5,8 @@ description: I utvecklarläget öppnas en sidopanel med flera flikar som ger utv
 seo-description: Developer mode opens a side panel with several tabs that provide a developer with information about the current page
 exl-id: fbf11c0f-dc6e-43f3-bcf2-080eacc6ba99
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%
@@ -31,8 +31,7 @@ Detta hjälper en utvecklare att:
 >
 >Utvecklarläge:
 >
->* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
->  * Detta inträffar när bredden är mindre än 1024px.
+>* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar). Detta inträffar när bredden är mindre än 1024px.
 >* Är bara tillgänglig för användare som är medlemmar i gruppen `administrators`.
 
 ## Öppnar utvecklarläge {#opening-developer-mode}

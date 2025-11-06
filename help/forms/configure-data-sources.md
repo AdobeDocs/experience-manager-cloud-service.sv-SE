@@ -1,11 +1,11 @@
 ---
 title: Hur konfigurerar jag datakällor?
-description: Lär dig konfigurera RESTful-webbtjänster, SOAP webbtjänster och OData-tjänster som datakällor för en formulärdatamodell (FDM).
+description: Lär dig konfigurera RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster som datakällor för en formulärdatamodell (FDM).
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 level: Beginner
 exl-id: cb77a840-d705-4406-a94d-c85a6efc8f5d
-source-git-commit: c20b8909bb884f14bd7fe59f190de3cd375a7111
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2144'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/configure-data-sources.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/configure-data-sources.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
@@ -26,21 +26,22 @@ Med dataintegrering i [!DNL Experience Manager Forms] kan du konfigurera och ans
 
 * Relationsdatabaser - MySQL, [!DNL Microsoft® SQL Server], [!DNL IBM® DB2®], postgreSQL och [!DNL Oracle RDBMS]
 * RESTful web services
-* SOAP webbtjänster
+* SOAP-baserade webbtjänster
 * OData-tjänster (version 4.0)
 * Microsoft® Dynamics
 * Salesforce
 * Microsoft® Azure Blob Storage
 
-Dataintegrering har stöd för autentiseringstyperna OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering och API-nyckelautentisering som är körklara och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful-, SOAP- och OData-tjänster har konfigurerats i [!DNL Experience Manager] as a Cloud Service konfigureras JDBC för relationsdatabaser och koppling för användarprofilen [!DNL Experience Manager] i webbkonsolen [!DNL Experience Manager].
+Dataintegrering har stöd för autentiseringstyperna OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering och API-nyckelautentisering som är körklara och tillåter implementering av anpassad autentisering för åtkomst till webbtjänster. Medan RESTful, SOAP-baserade tjänster och OData-tjänster konfigureras i [!DNL Experience Manager] as a Cloud Service, konfigureras JDBC för relationsdatabaser och koppling för användarprofilen [!DNL Experience Manager] i webbkonsolen [!DNL Experience Manager].
 
 ## Konfigurera relationsdatabas {#configure-relational-database}
 
 ### Förutsättningar
 
 Innan du konfigurerar relationsdatabaser med hjälp av webbkonsolkonfigurationen i [!DNL Experience Manager] måste du:
-* [Aktivera avancerade nätverk via molnhanterings-API:t](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html?lang=sv-SE) eftersom portar är inaktiverade som standard.
-* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=sv-SE#mysql-driver-dependencies).
+
+* [Aktivera avancerade nätverk via molnhanterings-API:t](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html) eftersom portar är inaktiverade som standard.
+* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=en#mysql-driver-dependencies).
 
 
 ### Steg för att konfigurera en relationsdatabas
@@ -59,7 +60,7 @@ Du kan konfigurera relationsdatabaser med hjälp av webbkonsolkonfigurationen f�
    * Användarnamn och lösenord för anslutning till JDBC-drivrutinen
    * Ange en SELECT-fråga (SQL) i fältet **[!UICONTROL Validation Query]** om du vill validera anslutningar från poolen. Frågan måste returnera minst en rad. Baserat på din databas anger du något av följande:
       * SELECT 1 (MySQL och MS® SQL)
-      * VÄLJ 1 från dubbla (Oracle)
+      * SELECT 1 from dual (Oracle)
    * Datakällans namn
 
    Exempelsträngar för att konfigurera en relationsdatabas:
@@ -72,7 +73,7 @@ Du kan konfigurera relationsdatabaser med hjälp av webbkonsolkonfigurationen f�
 
    >[!NOTE]
    >
-   > Mer information finns i [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=sv-SE).
+   > Mer information finns i [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html).
 
 1. Välj **[!UICONTROL Save]** om du vill spara konfigurationen.
 
@@ -108,12 +109,12 @@ Alla molntjänstkonfigurationer i [!DNL Experience Manager] konsolideras i mappe
 Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
-   * Mer information finns i dokumentationen för [Configuration Browser](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=sv-SE).
+   * Mer information finns i dokumentationen för [Configuration Browser](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html).
 1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
    1. I **[!UICONTROL Configuration Browser]** markerar du mappen `global` och väljer **[!UICONTROL Properties]**.
 
-   1. Aktivera **[!UICONTROL Cloud Configurations]** i dialogrutan **[!UICONTROL Configuration Properties]**.
+   1. Aktivera **[!UICONTROL Configuration Properties]** i dialogrutan **[!UICONTROL Cloud Configurations]**.
 
    1. Välj **[!UICONTROL Save & Close]** om du vill spara konfigurationen och stänga dialogrutan.
 
@@ -126,7 +127,7 @@ Så här konfigurerar du mappen för molntjänstkonfigurationer:
 RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagger.io/specification/v2/) i JSON- eller YAML-format i en [!DNL Swagger] definitionsfil eller en Service Endpoint.
 
 >[!NOTE]
-> Om du vill konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service måste du ha antingen filen [!DNL Swagger] ([Swagger Version 2.0](https://swagger.io/specification/v2/)) eller filen [!DNL Swagger] ([Swagger Version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller den URL där filen finns.
+> Om du vill konfigurera RESTful-webbtjänsten i [!DNL Experience Manager] as a Cloud Service måste du ha antingen filen [!DNL Swagger] ([Swagger Version 2.0](https://swagger.io/specification/v2/)) eller filen [!DNL Swagger] ([Swagger Version 3.0](https://swagger.io/specification/v3/)) i filsystemet eller URL:en där filen finns.
 
 ### Konfigurera RESTful-tjänster för Open API Specification version 2.0 {#configure-restful-services-open-api-2.0}
 
@@ -137,8 +138,8 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
-   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger URL] till definitionsfilen [!DNL &#x200B; Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på indata från [!DNL &#x200B; Swagger] Source är följande fält förifyllda med värden:
+   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger URL] till definitionsfilen [!DNL  Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
+   * Baserat på indata från [!DNL  Swagger] Source är följande fält förifyllda med värden:
 
       * Schema: De överföringsprotokoll som används av REST API. Antalet schematyper som visas i den nedrullningsbara listan beror på scheman som definierats i källan [!DNL Swagger].
       * Värd: Domännamnet eller IP-adressen för värden som använder REST API. Det är ett obligatoriskt fält.
@@ -162,8 +163,8 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** för att öppna **[!UICONTROL Create Data Source Configuration wizard]**. Ange ett namn och eventuellt en rubrik för konfigurationen, välj **[!UICONTROL RESTful Service]** i listrutan **[!UICONTROL Service Type]**, bläddra och välj en miniatyrbild för konfigurationen och välj **[!UICONTROL Next]**.
 1. Ange följande information för RESTful-tjänsten:
 
-   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger 3.0 URL] till definitionsfilen [!DNL &#x200B; Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
-   * Baserat på indata från [!DNL &#x200B; Swagger] Source visas anslutningsinformationen med målservern.
+   * Välj en URL eller fil i listrutan [!UICONTROL Swagger Source] och ange därför [!DNL Swagger 3.0 URL] till definitionsfilen [!DNL  Swagger] eller överför filen [!DNL Swagger] från det lokala filsystemet.
+   * Baserat på indata från [!DNL  Swagger] Source visas anslutningsinformationen med målservern.
    * Välj autentiseringstypen - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering, API-nyckel eller Anpassad autentisering - för att få åtkomst till RESTful-tjänsten och ange därmed information för autentisering.
 
    Om du väljer **[!UICONTROL API Key]** som autentiseringstyp anger du värdet för API-nyckeln. API-nyckeln kan skickas som en begäranderubrik eller som en frågeparameter. Välj något av dessa alternativ i listrutan **[!UICONTROL Location]** och ange namnet på huvudet eller frågeparametern i fältet **[!UICONTROL Parameter Name]** i enlighet med detta.
@@ -173,6 +174,7 @@ RESTful-webbtjänster kan beskrivas med [Swagger-specifikationer](https://swagge
 1. Välj **[!UICONTROL Create]** om du vill skapa molnkonfigurationen för RESTful-tjänsten.
 
 En del åtgärder som inte stöds av RESTful services Open API Specification version 3.0 är:
+
 * Återanrop
 * en/något av
 * Fjärrreferens
@@ -252,9 +254,9 @@ I följande JSON-fil visas ett exempel:
 
 ## Konfigurera SOAP webbtjänster {#configure-soap-web-services}
 
-SOAP webbtjänster beskrivs med hjälp av [WSDL-specifikationerna (Web Services Description Language)](https://www.w3.org/TR/wsdl). [!DNL Experience Manager Forms] stöder inte WSDL-modellen av RPC-typ.
+SOAP-baserade webbtjänster beskrivs med hjälp av [WSDL-specifikationerna (Web Services Description Language)](https://www.w3.org/TR/wsdl). [!DNL Experience Manager Forms] stöder inte WSDL-modellen av RPC-typ.
 
-Om du vill konfigurera en SOAP webbtjänst i [!DNL Experience Manager] as a Cloud Service kontrollerar du att du har WSDL-URL:en för webbtjänsten och gör följande:
+Om du vill konfigurera en SOAP-baserad webbtjänst i [!DNL Experience Manager] as a Cloud Service kontrollerar du att du har WSDL-URL:en för webbtjänsten och gör följande:
 
 1. Gå till **[!UICONTROL Tools > Cloud Services > Data Sources]**. Välj den mapp där du vill skapa en molnkonfiguration.
 
@@ -265,7 +267,7 @@ Om du vill konfigurera en SOAP webbtjänst i [!DNL Experience Manager] as a Clou
 
    * WSDL-URL för webbtjänsten.
    * Tjänstslutpunkt. Ange ett värde i det här fältet om du vill åsidosätta tjänstslutpunkten som anges i WSDL.
-   * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering eller Anpassad autentisering - för att få åtkomst till SOAP och ange därefter information för autentisering.
+   * Välj autentiseringstyp - Ingen, OAuth2.0([Auktoriseringskod](https://oauth.net/2/grant-types/authorization-code/), [Klientautentiseringsuppgifter](https://oauth.net/2/grant-types/client-credentials/)), Grundläggande autentisering eller Anpassad autentisering - för att få åtkomst till SOAP-tjänsten och ange därefter information för autentisering.
 
      <!--If you select **[!UICONTROL X509 Token]** as the Authentication type, configure the X509 certificate. For more information, see [Set up certificates](install-configure-document-services.md#set-up-certificates-for-reader-extension-and-encryption-service).-->
      <!--Specify the KeyStore alias for the X509 certificate in the **[!UICONTROL Key Alias]** field. Specify the time, in seconds, until the authentication request remains valid, in the **[!UICONTROL Time To Live]** field. Optionally, select to sign the message body or timestamp header or both.-->
@@ -276,7 +278,7 @@ Om du vill konfigurera en SOAP webbtjänst i [!DNL Experience Manager] as a Clou
 
 ### Aktivera användning av importsatser i SOAP webbtjänster WSDL {#enable-import-statements}
 
-Du kan ange ett reguljärt uttryck som fungerar som filter för absoluta URL:er som tillåts som import-satser SOAP webbtjänstens WSDL. Som standard finns det inget värde i det här fältet. Därför blockerar [!DNL Experience Manager] alla importsatser som är tillgängliga i WSDL. Om du anger `.*` som värde i det här fältet tillåter [!DNL Experience Manager] alla importsatser.
+Du kan ange ett reguljärt uttryck som fungerar som filter för absoluta URL:er som tillåts som importsatser i SOAP webbtjänster WSDL. Som standard finns det inget värde i det här fältet. Därför blockerar [!DNL Experience Manager] alla importsatser som är tillgängliga i WSDL. Om du anger `.*` som värde i det här fältet tillåter [!DNL Experience Manager] alla importsatser.
 
 Ange egenskapen `importAllowlistPattern` för konfigurationen **[!UICONTROL Form Data Model SOAP Web Services Import Allowlist]** för att ange det reguljära uttrycket. I följande JSON-fil visas ett exempel:
 
@@ -286,7 +288,7 @@ Ange egenskapen `importAllowlistPattern` för konfigurationen **[!UICONTROL Form
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Konfigurera OData-tjänster {#config-odata}
 
@@ -316,19 +318,19 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 1. Välj **[!UICONTROL Create]** om du vill skapa molnkonfigurationen för OData-tjänsten.
 
 <!--
-## Configure Microsoft® SharePoint List {#config-sharepoint-list}
+## Configure Microsoft&reg; SharePoint List {#config-sharepoint-list}
 
-<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
-To save data in a tabular form use, Microsoft® SharePoint List. To configure a Microsoft SharePoint List in [!DNL Experience Manager] as a Cloud Service, do the following:
+To save data in a tabular form use, Microsoft&reg; SharePoint List. To configure a Microsoft SharePoint List in [!DNL Experience Manager] as a Cloud Service, do the following:
 
-1. Go to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft® SharePoint]**.   
+1. Go to **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** >  **[!UICONTROL Microsoft&reg; SharePoint]**.   
 1. Select a **Configuration Container**. The configuration is stored in the selected Configuration Container. 
 1. Click **[!UICONTROL Create]** > **[!UICONTROL SharePoint List]** from the drop-down list. The SharePoint configuration wizard appears.  
 1. Specify the **[!UICONTROL Title]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]** and **[!UICONTROL OAuth URL]**. For information on how to retrieve Client ID, Client Secret, Tenant ID for OAuth URL, see [Microsoft&reg; Documentation](https://learn.microsoft.com/en-us/graph/auth-register-app-v2).
     * You can retrieve the `Client ID` and `Client Secret` of your app from the Microsoft&reg; Azure portal.
     * In the Microsoft&reg; Azure portal, add the Redirect URI as `https://[author-instance]/libs/cq/sharepointlist/content/configurations/wizard.html`. Replace `[author-instance]` with the URL of your Author instance.
-    * Add the API permissions `offline_access` and `Sites.Manage.All` in the **Microsoft® Graph** tab to provide read/write permissions. Add `AllSites.Manage` permission in the **Sharepoint** tab to interact remotely with SharePoint data.
+    * Add the API permissions `offline_access` and `Sites.Manage.All` in the **Microsoft&reg; Graph** tab to provide read/write permissions. Add `AllSites.Manage` permission in the **Sharepoint** tab to interact remotely with SharePoint data.
     * Use OAuth URL: `https://login.microsoftonline.com/tenant-id/oauth2/v2.0/authorize`. Replace `<tenant-id>` with the `tenant-id` of your app from the Microsoft&reg; Azure portal.
 
       >[!NOTE]
@@ -337,7 +339,7 @@ To save data in a tabular form use, Microsoft® SharePoint List. To configure a 
 
 1. Click **[!UICONTROL Connect]**. On a successful connection, the `Connection Successful` message appears.
 1. Select **[!UICONTROL SharePoint Site]** and **[!UICONTROL SharePoint List]** from the drop-down list.
-1. Select **[!UICONTROL Create]** to create the cloud configuration for the Microsoft® SharePointList.
+1. Select **[!UICONTROL Create]** to create the cloud configuration for the Microsoft&reg; SharePointList.
 
 -->
 

@@ -5,8 +5,8 @@ description: Databasens webbläsare ger en skrivskyddad vy i databasen för alla
 seo-description: The repository browser provides a read-only view into the repository for all environments on author, publish, and preview tiers.
 exl-id: 22473a97-8f7b-4014-b885-1233116aeda6
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 9d1b51b465a148551de93f8180b056b8e7752db5
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Databasläsaren finns AEM version 6582 och senare.
+>Databasläsaren är tillgänglig i AEM version 6582 och senare.
 
 >[!INFO]
 >
->Du kan även titta på [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html?lang=sv-SE) för att få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
+>Du kan även titta på [det här klippet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/repository-browser.html) för att få en snabb videointroduktion om hur du använder Databasläsaren för att felsöka AEM as a Cloud Service.
 
 ## Introduktion {#introduction}
 
@@ -33,15 +33,15 @@ Den är tillgänglig från [AEM as a Cloud Service Developer Console](/help/impl
 
 Följande villkor måste vara uppfyllda för att du ska få åtkomst till AEM as a Cloud Service Developer Console eller databasläsaren
 
-Mer information om hur du kommer åt AEM as a Cloud Service Developer Console finns i [Developer Console-åtkomst](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
+Mer information om hur du kommer åt AEM as a Cloud Service Developer Console finns i [Developer Console-åtkomst](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console#developer-console-access).
 
 För att få åtkomst till Databasläsaren är kraven samma som för AEM as a Cloud Service Developer Console (anges ovan). Så här visar du innehållet i Databasläsaren för en viss instans:
 
 * Författarinstanser: Användare med AEM användarproduktprofil för **författarinstansen** kan visa databaswebbläsaren med minimal läsåtkomst. Användarens behörigheter respekteras när användaren bläddrar i databasen. Användare med AEM administratörsproduktprofil kan visa databaswebbläsaren med fullständig läsåtkomst.
 
-* Publish-instanser: Användare med AEM användarproduktprofil för **Publish-instansen** kan visa databaswebbläsaren med minimal läsåtkomst. Om produktprofilen inte anges kommer användarna att navigera som anonyma användare och vissa sökvägar visas inte på grund av begränsad behörighet.
+* Publiceringsinstanser: Användare med AEM-användarproduktprofil för **publiceringsinstansen** kan visa databaswebbläsaren med minimal läsåtkomst. Om produktprofilen inte anges kommer användarna att navigera som anonyma användare och vissa sökvägar visas inte på grund av begränsad behörighet.
 
-Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=sv-SE).
+Mer information om hur du konfigurerar användarbehörigheter finns i [Cloud Manager-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html).
 
 ### Starta Databasläsaren {#launching-the-repository-browser}
 
@@ -86,7 +86,7 @@ Gör följande om du vill göra platserna synliga:
 
    ![repobrowser8](/help/implementing/developing/tools/assets/repobrowser8.png)
 
-1. Skapa en produktprofil för administratörer. I exemplet nedan kallas det **DEV - AEM administratörer Publish**
+1. Skapa en produktprofil för administratörer. I exemplet nedan kallas det **DEV - AEM Administrators Publish**
 
    ![repobrowser9](/help/implementing/developing/tools/assets/repobrowser9.png)
 
@@ -94,16 +94,16 @@ Gör följande om du vill göra platserna synliga:
 
    ![repobrowser10](/help/implementing/developing/tools/assets/repobrowser10.png)
 
-1. Vänta i några minuter och öppna sedan konsolen **AEM författare**
+1. Vänta i några minuter och öppna sedan konsolen **AEM-författaren**
 1. Lägg till gruppen som motsvarar den nya produktprofilen som medlem i administratörsgruppen genom att klicka på **Verktyg - Dokumentskydd - grupper på författaren** och sedan på gruppen **administratörer** . Lägg sedan till gruppen enligt nedan
 
    ![repobrowser11](/help/implementing/developing/tools/assets/repobrowser11.png)
 
-1. Aktivera gruppen **administratörer** och den nya gruppen **DEV - AEM administratörer Publish** så att de blir tillgängliga vid publicering
+1. Aktivera gruppen **administratörer** och den nya gruppen **DEV - AEM Administrators Publish** så att de blir tillgängliga vid publicering
 
    ![repobrowser12](/help/implementing/developing/tools/assets/repobrowser12.png)
 
-1. Som en god säkerhetspraxis tar du bort den nya gruppen **DEV - AEM administratörer Publish** från administratörsgruppen på **författaren** så att den nya gruppen isoleras för publicering
+1. Som en god säkerhetspraxis tar du bort den nya gruppen **DEV - AEM Administrators Publish** från administratörsgruppen på **author** så att den nya gruppen isoleras för publicering
 
    ![repobrowser13](/help/implementing/developing/tools/assets/repobrowser13.png)
 

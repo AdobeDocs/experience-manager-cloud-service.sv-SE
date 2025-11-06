@@ -5,9 +5,9 @@ exl-id: 760e0a39-0805-498e-a2c9-038fd1e1058d
 solution: Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 58a0cb3fab9f3be1ff431aa5814797b6e6675265
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1994'
 ht-degree: 0%
 
 ---
@@ -130,18 +130,18 @@ Nu kan du välja den nya konfigurationen för redigering.
 
    ![config-target-settings-dialog](assets/config-target-settings-dialog.png)
 
-   <!-- Can this still occur?
+<!-- 
+Can this still occur?
 
-   >[!NOTE]
-   >
-   >When configuring A4T with AEM, you may see a Configuration reference missing entry. To be able to select the analytics framework, do the following:
-   >
-   >1. Navigate to **Tools** &gt; **General** &gt; **CRXDE Lite**.
-   >1. Navigate to **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
-   >1. Set the property **disable** to **false**.
-   >1. Select **Save All**.
-
-   -->
+>[!NOTE]
+>
+>When configuring A4T with AEM, you may see a Configuration reference missing entry. To be able to select the analytics framework, do the following:
+>
+>1. Navigate to **Tools** &gt; **General** &gt; **CRXDE Lite**.
+>1. Navigate to **/libs/cq/analytics/components/testandtargetpage/dialog/items/tabs/items/tab1_general/items/a4tAnalyticsConfig**
+>1. Set the property **disable** to **false**.
+>1. Select **Save All**.
+-->
 
 1. Ange värden för de här egenskaperna i dialogrutan **Adobe Target-inställningar**.
 
@@ -157,46 +157,46 @@ Nu kan du välja den nya konfigurationen för redigering.
 
    * **A4T Analytics Cloud Configuration**: Välj den Analytics-molnkonfiguration som används för mål- och mätvärden för aktivitet. Du behöver detta om du använder Adobe Analytics som rapportkälla när du skapar innehåll för målgruppsanpassning.
 
-     <!-- Is this needed?
-     If you do not see your cloud configuration, see note in [Configuring A4T Analytics Cloud Configuration](#configuring-a-t-analytics-cloud-configuration).
-     -->
+<!-- Is this needed?
+If you do not see your cloud configuration, see note in [Configuring A4T Analytics Cloud Configuration](#configuring-a-t-analytics-cloud-configuration).
+-->
 
-   * **Använd korrekt målinriktning:** Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
+* **Använd korrekt målinriktning:** Som standard är den här kryssrutan markerad. Om du väljer det här alternativet väntar molntjänstkonfigurationen på att kontexten ska läsas in innan innehållet läses in. Se följande.
 
-   * **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du alltid måste använda segment från Target. (AEM-termen för segment motsvarar målgruppen.)
+* **Synkronisera segment från Adobe Target:** Välj det här alternativet om du vill hämta segment som har definierats i Target för att använda dem i AEM. Välj det här alternativet när API-typegenskapen är REST, eftersom textbundna segment inte stöds och du alltid måste använda segment från Target. (AEM-termen för segment motsvarar målgruppen.)
 
-   * **Klientbibliotek:** som standard är AT.js (mbox.js är inaktuellt)
+* **Klientbibliotek:** som standard är AT.js (mbox.js är inaktuellt)
 
-     >[!NOTE]
-     >
-     >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=sv-SE), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
-     >
-     >mbox.js har tagits bort och kommer att tas bort i ett senare skede.
-     >
-     >Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
-     >
-     >AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
-     >
-     >* Förbättrade sidladdningstider för webbimplementeringar
-     >* Förbättrad säkerhet
-     >* Bättre implementeringsalternativ för ensidiga program
-     >* AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.js
-     >
-     >Du kan välja AT.js eller mbox.js i listrutan **Klientbibliotek** .
+  >[!NOTE]
+  >
+  >Målbiblioteksfilen, [AT.JS](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/at-js/how-atjs-works.html), är ett nytt implementeringsbibliotek för Adobe Target som är utformat för både vanliga webbimplementeringar och enkelsidiga program.
+  >
+  >mbox.js har tagits bort och kommer att tas bort i ett senare skede.
+  >
+  >Adobe rekommenderar att du använder AT.js i stället för mbox.js som klientbibliotek.
+  >
+  >AT.js har flera förbättringar jämfört med mbox.js-biblioteket:
+  >
+  >* Förbättrade sidladdningstider för webbimplementeringar
+  >* Förbättrad säkerhet
+  >* Bättre implementeringsalternativ för ensidiga program
+  >* AT.js innehåller komponenterna som ingick i target.js, så det finns inte längre något anrop till target.js
+  >
+  >Du kan välja AT.js eller mbox.js i listrutan **Klientbibliotek** .
 
-   * **Använd Tag Management System för att leverera klientbibliotek** - Välj det här alternativet om du vill använda klientbiblioteket från Adobe Launch eller ett annat tagghanteringssystem (eller DTM, som är inaktuellt).
+* **Använd Tag Management System för att leverera klientbibliotek** - Välj det här alternativet om du vill använda klientbiblioteket från Adobe Launch eller ett annat tagghanteringssystem (eller DTM, som är inaktuellt).
 
-   * **Anpassad AT.js**: Bläddra för att överföra din anpassade AT.js. Lämna tomt om du vill använda standardbiblioteket.
+* **Anpassad AT.js**: Bläddra för att överföra din anpassade AT.js. Lämna tomt om du vill använda standardbiblioteket.
 
-     >[!NOTE]
-     >
-     >Som standard aktiveras korrekt målgruppsanpassning när du väljer att använda konfigurationsguiden för Adobe Target.
-     >
-     >Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning, vad gäller prestanda, skapa en fördröjning på några millisekunder innan innehållet läses in.
-     >
-     >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock avaktivera korrekt målinriktning globalt genom att avmarkera kryssrutan intill Accurate Targeting i molntjänstkonfigurationen (**http://localhost:4502/etc/cloudservices.html**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
-     >
-     >Om du redan har ***skapat*** målkomponenter och du ändrar den här inställningen påverkar ändringarna inte dessa komponenter. Du måste göra ändringar i den komponenten direkt.
+  >[!NOTE]
+  >
+  >Som standard aktiveras korrekt målgruppsanpassning när du väljer att använda konfigurationsguiden för Adobe Target.
+  >
+  >Korrekt målinriktning innebär att molntjänstkonfigurationen väntar på att kontexten ska läsas in innan innehållet läses in. Därför kan en korrekt målinriktning, vad gäller prestanda, skapa en fördröjning på några millisekunder innan innehållet läses in.
+  >
+  >Korrekt målinriktning är alltid aktiverat på författarinstansen. På publiceringsinstansen kan du dock välja att inaktivera korrekt målinriktning globalt genom att avmarkera kryssrutan bredvid Exakt målanpassning i molntjänstkonfigurationen (**`http://localhost:4502/etc/cloudservices.html`**). Du kan även aktivera och inaktivera exakt målinriktning för enskilda komponenter, oavsett vilken inställning du har i molntjänstkonfigurationen.
+  >
+  >Om du redan har ***skapat*** målkomponenter och du ändrar den här inställningen påverkar ändringarna inte dessa komponenter. Du måste göra ändringar i den komponenten direkt.
 
 1. Klicka på **Anslut till Adobe Target** för att initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet **Anslutningen lyckades**. Klicka på **OK** i meddelandet och sedan på **OK** i dialogrutan.
 
@@ -241,7 +241,7 @@ Ditt ramverk har skapats. Om du vill replikera ramverket till publiceringsinstan
 <!--
 ### Associating Activities With the Target Cloud Configuration  {#associating-activities-with-the-target-cloud-configuration}
 
-Associate your [AEM activities](/help/sites-cloud/authoring/personalization/activities.md) with your Target cloud configuration so that you can mirror the activities in [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=sv-SE).
+Associate your [AEM activities](/help/sites-cloud/authoring/personalization/activities.md) with your Target cloud configuration so that you can mirror the activities in [Adobe Target](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 
 >[!NOTE]
 >
@@ -340,7 +340,7 @@ Så här exporterar du ett innehållsfragment från AEM till Target (efter att d
 
 ## Använda dina innehållsfragment i Adobe Target {#using-your-content-fragments-in-adobe-target}
 
-När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html?lang=sv-SE).
+När du har utfört de föregående åtgärderna visas innehållsfragmentet på sidan Erbjudanden i Mål. Mer information om vad du kan uppnå där finns i [specifik måldokumentation](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html).
 
 >[!NOTE]
 >
@@ -378,10 +378,10 @@ Mer information finns i följande:
 * [Creating a Target Cloud Configuration](/help/sites-cloud/integrating/integrating-adobe-target.md#create-configuration)
 -->
 
-* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE)
+* [Kärnkomponenter - Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
 
 * [Adobe Target-utveckling](https://developers.adobetarget.com/)
 
-* [Adobe Target - Använda AEM Content Fragments i Target-aktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html?lang=sv-SE)
+* [Adobe Target - Använda AEM Content Fragments i Target-aktiviteter för att underlätta optimering eller personalisering](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/content-fragments-aem.html)
 
-* [Adobe Target - Översikt över AEM Experience Fragments och Content Fragments](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html?lang=sv-SE)
+* [Adobe Target - Översikt över AEM Experience Fragments och Content Fragments](https://experienceleague.adobe.com/docs/target/using/integrate/aem/fragments/aem-experience-and-content-fragments.html)

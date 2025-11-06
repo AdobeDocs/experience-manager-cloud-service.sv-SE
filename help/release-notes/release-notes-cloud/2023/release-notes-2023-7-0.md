@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2023.7.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2023.7.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2023.7.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2023.7.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 7866d94c-e54c-4bb2-aaa6-66c019e46336
 feature: Release Information
 role: Admin
-source-git-commit: f28f212574dda0ece2cedb56a714d381e5bd7d3c
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '896'
 ht-degree: 0%
@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.7.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) för att lära dig mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -39,11 +39,11 @@ Titta på videon med versionsöversikten för juli 2023 om du vill se en sammanf
 
 ### Nya funktioner i [!DNL Experience Manager Sites] {#sites-features}
 
-* MSM för innehållsfragment. AEM Multisite Manager är nu tillgängligt för innehållsfragment, vilket gör att du kan skapa Live-kopior för innehållsfragment för massdistribution av innehåll. Detaljerade arvskontroller är tillgängliga ned till nivån för innehållselement och variationer.
+* MSM för innehållsfragment. AEM Multisite Manager finns nu för Content Fragments, som används för att skapa Content Fragment Live-kopior för distribution av större mängder innehåll. Detaljerade arvskontroller är tillgängliga ned till nivån för innehållselement och variationer.
 
 ### Nya funktioner i förhandsversionen av [!DNL Experience Manager Sites] {#prerelease-sites}
 
-* Med konsolen [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=sv-SE) kan användare nu visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användare behöver inte längre växla till Assets-gränssnittet för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
+* Med konsolen [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) kan användare nu visa taggar och söka efter taggar som används som metadata i innehållsfragment. Användare behöver inte längre växla till Assets-gränssnittet för den här funktionen, vilket minskar behovet av sammanhangsväxling och förbättrar effektiviteten.
 
 ![Taggning i konsolen för innehållsfragment](/help/assets/content-fragments-console-tags.png)
 
@@ -67,13 +67,13 @@ Experience Manager Assets använder nu ett förbättrat ramverk för artificiell
 
 **Konfigurera visning av kolumner för Assets listvy**
 
-Assets Essentials kan nu välja vilka kolumner som ska visas i listvyn i Assets, t.ex. Status, Format, Dimensioner, Storlek och så vidare.
+Med Resurser Essentials kan du nu välja vilka kolumner som ska visas i listvyn i Assets, till exempel Status, Format, Dimensioner, Storlek och så vidare.
 
 ![Konfigurera kolumner](/help/release-notes/assets/configure-columns.png)
 
 **Sortera sökresultat baserat på relevans**
 
-Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. Du kan sortera de sökda resurserna i stigande eller fallande ordning `Name`, `Relevance`, `Size`, `Modified` och `Created`.
+Resurser Essentials sorterar nu sökresultaten baserat på relevans som standard. Du kan sortera de sökda resurserna i stigande eller fallande ordning `Name`, `Relevance`, `Size`, `Modified` och `Created`.
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
@@ -84,7 +84,7 @@ Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. 
 
 * **[Reaktionskomponenter för Headless Forms](https://github.com/adobe/aem-forms-headless-components/tree/main/packages/react-vanilla-components)**: Nu kan du förhandsgranska och anpassa   Headless Adaptive Form renderings with the React components provided out of the box. Dessa komponenter använder BEM-klasser från adaptiva Forms Core-komponenter för formatering, vilket gör det enkelt för dig att anpassa deras utseende efter dina specifika krav.
 
-* [**Skapa adaptiv Forms med repeterbara avsnitt**](/help/forms/create-forms-repeatable-sections.md): Nu kan du göra komponenterna [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html?lang=sv-SE), [Guiden](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html?lang=sv-SE), [Panel](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) och [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html?lang=sv-SE), som är baserade på adaptiv form, repeterbara för att kunna hämta flera dataposter.  Dessa upprepningsbara avsnitt gör att du enkelt kan ange flera datainmatningar. Det är användbart när de nödvändiga instanserna av data är okända i förväg. En formuläranvändare kan enkelt lägga till eller ta bort avsnitt, göra formulären anpassningsbara till olika datainmatningsscenarier och förenkla insamlingen av flera förekomster av samma datapost.
+* [**Skapa adaptiv Forms med repeterbara avsnitt**](/help/forms/create-forms-repeatable-sections.md): Nu kan du göra komponenterna [Dragspel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion.html), [Guiden](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard.html), [Panel](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) och [Vågräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs.html), som är baserade på adaptiv form, repeterbara för att kunna hämta flera dataposter.  Dessa upprepningsbara avsnitt gör att du enkelt kan ange flera datainmatningar. Det är användbart när de nödvändiga instanserna av data är okända i förväg. En formuläranvändare kan enkelt lägga till eller ta bort avsnitt, göra formulären anpassningsbara till olika datainmatningsscenarier och förenkla insamlingen av flera förekomster av samma datapost.
 
 
 ### Förhandsutgåvor av funktioner som är tillgängliga i [!DNL Forms] {#pre-release-features-available-in-forms-channel}
@@ -95,7 +95,7 @@ Assets Essentials sorterar nu sökresultaten baserat på relevans som standard. 
 
 ### Headless Adaptive Forms early adopter {#forms-early-adopter}
 
-Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE) om du vill att utvecklarna ska kunna skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
+Använd [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) om du vill att utvecklarna ska kunna skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt. Headless adaptive forms help you:
 
 * bygga högkvalitativa flerkanalsformulär på valfritt programmeringsspråk
 * integrera formulär direkt i era datorprogram och mobilappar, webbplatser och chattapplikationer
@@ -112,9 +112,10 @@ Prenumerera på e-postmeddelanden som varnar dig när allvarliga incidenter intr
 
 ![Actions Center, bild](/help/assets/assets/actions-center.png)
 
-### CDN och WAF Rules early adopter program {#waf-early-adopter}
+### CDN och WAF Rules early adopter {#waf-early-adopter}
 
 Filtrera trafiken vid CDN baserat på:
+
 * begäranrubriker och egenskaper (t.ex. IP-adress)
 * trafikmönster som man vet är associerade med skadlig trafik
 
@@ -124,7 +125,7 @@ Läs mer om funktionen i artikeln [här](/help/security/traffic-filter-rules-inc
 
 ### Andra Foundation-ändringar {#other-foundation-changes}
 
-* Under veckan 7 augusti returnerar AEM felkod 429 i stället för felkod 503 när begäranden om att AEM instanser överskrider en felfri nivå. [Läs mer](/help/implementing/developing/introduction/development-guidelines.md).
+* Under veckan 7 augusti returnerar AEM felkod 429 i stället för felkod 503 när begäranden till AEM-instanser överskrider en felfri nivå. [Läs mer](/help/implementing/developing/introduction/development-guidelines.md).
 
 ## Versionsinformation om underhåll {#maintenance}
 

@@ -1,10 +1,10 @@
 ---
 title: Bildredigeraren
-description: Bildredigeraren är AEM och kan användas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
+description: Bildredigeraren är en viktig del av AEM och kan användas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
 exl-id: c8ae4f59-75b1-49b4-8dd4-957d2e33000b
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Bildredigeraren {#image-editor}
 
-Bildredigeraren är AEM och kan användas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
+Bildredigeraren är en viktig del av AEM och kan användas av komponenter för att underlätta redigering av bilder av innehållsförfattare.
 
 ## Relativa enheter för bildschema {#relative-units-for-image-map}
 
@@ -36,7 +36,7 @@ Exempel:
 `[rect(0,0,10,10)"https://www.adobe.com"|"_self"|"alt"|(0,0,0.8,0.8)]`
 `[circle(10,10,10)"https://www.adobe.com"|"_self"|"alt"|(0.8,0.8,0.8)]`
 
-## Stöd för SVG-bilder {#support-for-svg-images}
+## Stöd för SVG Images {#support-for-svg-images}
 
 Skalbar vektorgrafik (SVG) stöds av bildredigeraren.
 
@@ -44,13 +44,13 @@ Skalbar vektorgrafik (SVG) stöds av bildredigeraren.
 
 ## Aktivera plugin-program efter MIME-typ {#enabling-plugins-by-mime-type}
 
-I vissa situationer måste redigeringsåtgärderna begränsas för vissa MIME-typer på grund av att det inte finns stöd för bearbetning på serversidan. Det är till exempel inte tillåtet att redigera bilder i SVG.
+I vissa situationer måste redigeringsåtgärderna begränsas för vissa MIME-typer på grund av att det inte finns stöd för bearbetning på serversidan. Det är till exempel inte tillåtet att redigera SVG-bilder.
 
 Plugin-program i bildredigeraren kan aktiveras selektivt av MIME-typ genom att en `supportedMimeTypes`-egenskap anges på den enskilda plugin-programmets konfigurationsnod.
 
 ### Exempel {#example}
 
-Låt oss till exempel säga att beskärning bara ska vara tillåten för bilderna GIF, JPEG, PNG, WEBP och TIFF.
+Låt oss till exempel säga att möjligheten att beskära endast ska vara tillåten för GIF-, JPEG-, PNG-, WEBP- och TIFF-bilder.
 
 Egenskapen `supportedMimeTypes` måste sedan anges som en sträng med de tillåtna MIME-typerna på konfigurationsnoden för plugin-programmet på noden `cq:editConfig` i avbildningskomponenten.
 

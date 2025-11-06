@@ -6,7 +6,7 @@ exl-id: 110ceef5-2c35-4b81-8e89-26929c0da91b
 feature: Commerce Integration Framework
 role: Admin
 index: false
-source-git-commit: 0664e5dc4a7619a52cd28c171a44ba02c592ea3d
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -54,6 +54,6 @@ Affärslogik och backend-kommunikation med Adobe Commerce för AEM CIF Core Comp
 
 I projekt kan AEM CIF Core Components och anpassade projektkomponenter enkelt hämta den konfigurerade klienten för en Adobe Commerce-butik som är kopplad till en AEM-sida via Sling Context-Aware-konfiguration.
 
-## Sök {#search}
+## Sök
 
-CIF tillhandahåller en [sökkärnkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/commerce/search.html) som är en renderad sökupplevelse på serversidan som baseras på [Commerce GraphQL API.](https://developer.adobe.com/commerce/webapi/graphql/) Commerce-kunder kan använda [Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html?lang=sv-SE) i stället. Följ den här [länken](/help/commerce-cloud/cif-storefront/integrating/live-search-plp.md) om du vill veta mer om integrationen mellan CIF - Live Search.
+CIF tillhandahåller en [sökkärnkomponent](https://www.aemcomponents.dev/content/core-components-examples/library/commerce/search.html) som är en renderad sökupplevelse på serversidan som baseras på [Commerce GraphQL API.](https://developer.adobe.com/commerce/webapi/graphql/) Commerce-kunder kan använda [Live Search](https://experienceleague.adobe.com/docs/commerce-merchant-services/live-search/guide-overview.html) i stället. Följ den här [länken](/help/commerce-cloud/cif-storefront/integrating/live-search-plp.md) om du vill veta mer om integrationen mellan CIF - Live Search.

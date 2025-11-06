@@ -3,10 +3,10 @@ title: Integrera Edge Delivery Services med Adobe Managed CDN i Cloud Manager
 description: null
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 71ea3b810d4145d5581c29e26db9bc157c425a15
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Edge Delivery Services kan konfigureras med något av följande två alternativ.
 |  | Distributionsalternativ | Nyckeldokument | Funktion | Bäst för |
 | --- | --- | --- | --- | --- |
 | Alternativ 1 | *Med* en befintlig AEM as a Cloud Service-miljö (AEMaaCS) | [Konfigurera en proxy från en befintlig miljö](https://www.aem.live/docs/byo-cdn-adobe-managed#option-1-setup-a-proxy-from-an-existing-environment) | Config Pipeline är vanligtvis tillgänglig för AEMaaCS-miljöer | Team som redan kör Sites i Cloud Manager och vill ha en snabb prestandaökning med låg risk. |
-| Alternativ 2 | *Utan* en befintlig AEMaaCS-miljö, som kallas fristående&quot;Edge-miljö&quot;. | [Konfigurera en Edge Delivery-webbplats utan en befintlig miljö](https://www.aem.live/docs/byo-cdn-adobe-managed#option-2-setup-an-edge-delivery-site-without-an-existing-environment) | Config Pipeline finns för närvarande bara för Edge-miljöer genom det begränsade Beta-programmet.<br>Se [Lägg till Edge Delivery Config Pipeline](help/implementing/cloud-manager/release-notes/current.md##add-eds-pipeline). | Nya byggen eller migreringar som vill ta till sig hela Edge Delivery-arkitekturen och detaljstyrd routning. |
+| Alternativ 2 | *Utan* en befintlig AEMaaCS-miljö, som kallas fristående&quot;Edge-miljö&quot;. | [Konfigurera en Edge Delivery-webbplats utan en befintlig miljö](https://www.aem.live/docs/byo-cdn-adobe-managed#option-2-setup-an-edge-delivery-site-without-an-existing-environment) | Config Pipeline finns för närvarande bara för Edge-miljöer genom det begränsade Beta-programmet.<br>Se [Lägg till Edge Delivery Config Pipeline](/help/implementing/cloud-manager/release-notes/current.md#add-eds-pipeline). | Nya byggen eller migreringar som vill ta till sig hela Edge Delivery-arkitekturen och detaljstyrd routning. |
 
 <!-- Ultimately this URL above will need to be updated on GA -->
 

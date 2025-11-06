@@ -3,8 +3,8 @@ title: Dataskydd och dataintegritet - Adobe Experience Manager as a Cloud Servic
 description: Läs mer om Adobe Experience Manager as a Cloud Service Foundation-stöd för de olika dataskydds- och datasekretessreglerna. I denna artikel ingår EU:s allmänna dataskyddsförordning (GDPR), Kaliforniens konsumentintegritetslag (Privacy Act) och hur man följer den när man genomför ett nytt AEM as a Cloud Service-projekt.
 exl-id: 3a4b9d00-297d-4b1d-ae57-e75fbd5c490c
 feature: Compliance
-role: Admin, Architect, Developer, Leader
-source-git-commit: f9ba9fefc61876a60567a40000ed6303740032e1
+role: Admin, Developer, Leader
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Mer information om Adobe svar på sekretessfrågor och vad det innebär för dig som Adobe-kund finns i [Adobe Privacy Center](https://www.adobe.com/privacy.html).
+>Mer information om Adobe svar på sekretessfrågor och vad det innebär för dig som Adobe-kund finns i [Adobe Sekretesscenter](https://www.adobe.com/privacy.html).
 
-## Stöd för AEM Foundation Data Privacy and Protection {#aem-foundation-data-privacy-and-protection-support}
+## AEM Foundation Data Privacy and Protection - support {#aem-foundation-data-privacy-and-protection-support}
 
 På AEM Foundation-nivå lagras de personuppgifter som lagras i användarprofilen. Därför handlar informationen i den här artikeln främst om hur du får åtkomst till och tar bort användarprofiler, så att du kan hantera förfrågningar om åtkomst respektive borttagning.
 

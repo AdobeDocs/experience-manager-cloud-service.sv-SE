@@ -1,34 +1,34 @@
 ---
-title: AEM Taggningsramverk
-description: Tagga innehåll och använd infrastrukturen för AEM taggar för att kategorisera och organisera det.
+title: AEM Tagging Framework
+description: Tagga innehåll och använd AEM Tagging-infrastrukturen för att kategorisera och ordna det.
 exl-id: 25418d44-aace-4e73-be1a-4b1902f40403
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1559'
 ht-degree: 0%
 
 ---
 
-# AEM Taggning Framework {#aem-tagging-framework}
+# AEM Tagging Framework {#aem-tagging-framework}
 
 Taggning gör att innehållet kan kategoriseras och struktureras. Taggar kan klassificeras med ett namnutrymme och en taxonomi. Mer information om hur du använder taggar:
 
 * Mer information om hur du taggar innehåll som innehållsförfattare finns i [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md).
 * Se Administrera taggar för administratörens perspektiv om hur du skapar och hanterar taggar, och i vilka innehållstaggar har tillämpats.
 
-Den här artikeln fokuserar på det underliggande ramverket som stöder taggning i AEM och hur det används som utvecklare.
+Den här artikeln fokuserar på det underliggande ramverket som stöder taggning i AEM och hur du använder det som utvecklare.
 
 ## Introduktion {#introduction}
 
-Så här taggar du innehåll och använder infrastrukturen för AEM taggar:
+Så här taggar du innehåll och använder AEM Tagging-infrastrukturen:
 
 * Taggen måste finnas som en nod av typen [`cq:Tag`](#cq-tag-node-type) under [taxonomirotnoden](#taxonomy-root-node).
 * Den taggade innehållsnodens `NodeType` måste innehålla [`cq:Taggable`](#taggable-content-cq-taggable-mixin)-blandningen.
 * [`TagID`](#tagid) läggs till i innehållsnodens [`cq:tags`](#cq-tags-property)-egenskap och löses till en nod av typen [`cq:Tag`](#cq-tag-node-type).
 
-## cq:Tag Node Type {#cq-tag-node-type}
+## cq:Tag-nodtyp {#cq-tag-node-type}
 
 Deklarationen för en tagg hämtas i databasen i en nod av typen `cq:Tag.`
 
@@ -113,11 +113,11 @@ Genom att neka läsbehörighet för vissa taggar eller namnutrymmen kan du styra
 
 Ett typiskt exempel är:
 
-* Tillåter skrivåtkomst för gruppen/rollen `tag-administrators` till alla namnutrymmen (lägg till/ändra under `/content/cq:tags`). Den här gruppen levereras med AEM.
+* Tillåter skrivåtkomst för gruppen/rollen `tag-administrators` till alla namnutrymmen (lägg till/ändra under `/content/cq:tags`). Den här gruppen levereras med AEM färdiga.
 * Ge användare/författare läsåtkomst till alla namnutrymmen som ska vara läsbara för dem (oftast alla).
 * Ger användare/författare skrivåtkomst till de namnutrymmen där taggar ska kunna definieras fritt av användare/författare (`add_node` under `/content/cq:tags/some_namespace`)
 
-## Taggbart innehåll : cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
+## Taggbart innehåll: cq:Taggable mixin {#taggable-content-cq-taggable-mixin}
 
 För att programutvecklare ska kunna bifoga taggning till en innehållstyp måste nodens registrering ([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html)) innehålla `cq:Taggable` mixin eller `cq:OwnerTaggable` mixin.
 
@@ -151,13 +151,13 @@ De viktigaste definitionerna för nodtyperna i AEM är följande:
     mixin
 ```
 
-## cq:tagg, egenskap {#cq-tags-property}
+## cq:tags-egenskap {#cq-tags-property}
 
 Egenskapen `cq:tags` är en `String`-matris som används för att lagra en eller flera `TagID` när de tillämpas på innehåll av författare eller webbplatsbesökare. Egenskapen har bara betydelse när den läggs till i en nod som har definierats med [`cq:Taggable`](#taggable-content-cq-taggable-mixin)-mixinen.
 
 >[!NOTE]
 >
->Om du vill använda AEM taggningsfunktioner bör anpassade utvecklade program inte definiera andra taggegenskaper än `cq:tags`.
+>Om du vill använda taggningsfunktionen i AEM ska anpassade utvecklade program inte definiera andra taggegenskaper än `cq:tags`.
 
 ## Flytta och sammanfoga taggar {#moving-and-merging-tags}
 

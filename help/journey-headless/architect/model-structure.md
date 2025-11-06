@@ -4,8 +4,8 @@ description: Lär dig mer om koncepten och mekanismerna i att modellera innehål
 exl-id: fdfa79d3-fbed-4467-a898-c1b2678fc0cb
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 29c9b47fe10fd4109190ec91990e8ba7a0359f72
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '691'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author &#x200B;](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
 
 Den här artikeln bygger på dessa principer så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
 

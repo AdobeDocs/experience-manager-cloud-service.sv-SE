@@ -3,9 +3,9 @@ title: ASSETS HTTP API
 description: Skapa, läsa, uppdatera, ta bort, hantera digitala resurser med HTTP API i  [!DNL Experience Manager Assets].
 contentOwner: AG
 feature: Assets HTTP API
-role: Developer, Architect, Admin
+role: Developer, Admin
 exl-id: a3b7374d-f24b-4d6f-b6db-b9c9c962bb8d
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Kom igång med AEM [!DNL Assets] HTTP API {#overview}

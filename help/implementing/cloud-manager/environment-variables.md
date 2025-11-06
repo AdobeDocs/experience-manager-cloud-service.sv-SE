@@ -4,8 +4,8 @@ description: Standardmiljövariabler kan konfigureras och hanteras via Cloud Man
 exl-id: 5cdd5532-11fe-47a3-beb2-21967b0e43c6
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 2573eb5f8a8ff21a8e30b94287b554885cd1cd89
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Miljövariabler ger en mängd fördelar för användare av AEM as a Cloud Servic
 
 Exempel på vanliga användningsområden för miljövariabler är:
 
-* Ansluta AEM med olika externa slutpunkter
+* Koppla ditt AEM-program till olika externa slutpunkter
 * Använda en referens när du lagrar lösenord i stället för direkt i kodbasen
 * När det finns flera utvecklingsmiljöer i ett program och en del konfigurationer skiljer sig från en miljö till nästa
 
@@ -59,7 +59,7 @@ Om du lägger till en miljövariabel för första gången klickar du på **Lägg
    | --- | --- |
    | Namn | Ett unikt namn på konfigurationsvariabeln. Den identifierar den specifika variabeln som används i miljön. Den måste följa följande namngivningskonventioner:<ul><li>Variabler får bara innehålla alfanumeriska tecken och understreck (`_`).</li><li>Det finns en gräns på 200 variabler per miljö.</li><li>Varje namn får innehålla högst 100 tecken.</li></ul> |
    | Värde | Värdet som variabeln innehåller. |
-   | Steget används | Välj vilken tjänst variabeln gäller för. Markera **Alla** om du vill att variabeln ska användas för alla tjänster.<ul><li>**Alla**</li><li>**Författare**</li><li>**Publish**</li><li>**Förhandsgranska**</li></ul> |
+   | Steget används | Välj vilken tjänst variabeln gäller för. Markera **Alla** om du vill att variabeln ska användas för alla tjänster.<ul><li>**Alla**</li><li>**Författare**</li><li>**Publicera**</li><li>**Förhandsgranska**</li></ul> |
    | Typ | Välj om variabeln är normal eller en hemlighet. |
 
    ![Lägger till en variabel](assets/add-variable.png)
@@ -137,8 +137,8 @@ Miljövariabler kan användas på flera ställen enligt följande:
 
 | Där miljövariabler kan användas | Beskrivning |
 | --- | --- |
-| Författare, Förhandsgranska och Publish | Både vanliga miljövariabler och hemligheter kan användas i redigerings-, förhandsgransknings- och publiceringsmiljöer. |
-| Dispatcher | Endast reguljära miljövariabler kan användas med [Dispatcher](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/dispatcher).<ul><li>Hemligheter kan inte användas.</li><li>Miljövariabler kan inte användas i `IfDefine`-direktiv.</li><li>Verifiera din användning av miljövariabler med [Dispatcher lokalt](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools) innan du distribuerar.</li></ul> |
+| Skapa, förhandsgranska och publicera | Både vanliga miljövariabler och hemligheter kan användas i redigerings-, förhandsgransknings- och publiceringsmiljöer. |
+| Dispatcher | Endast reguljära miljövariabler kan användas med [Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher).<ul><li>Hemligheter kan inte användas.</li><li>Miljövariabler kan inte användas i `IfDefine`-direktiv.</li><li>Verifiera din användning av miljövariabler med [Dispatcher lokalt](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools) innan du distribuerar.</li></ul> |
 | OSGi-konfigurationer | Både vanliga miljövariabler och hemligheter kan användas i [OSGi-konfigurationer](/help/implementing/deploying/configuring-osgi.md). |
 | Rörledningsvariabler | Förutom miljövariabler finns det även variabler för pipeline som exponeras under byggfasen. Läs mer om pipeline-variabler i [Build Environment](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#pipeline-variables). |
 

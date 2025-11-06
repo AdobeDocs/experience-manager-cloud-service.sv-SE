@@ -2,10 +2,10 @@
 title: Hantera modeller för innehållsfragment
 description: Lär dig hur du hanterar modeller för innehållsfragment. Dessa fungerar som en grund för dina innehållsfragment i AEM och gör att du kan skapa strukturerat innehåll som ska användas för rubrikfri leverans eller sidredigering.
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 solution: Experience Manager Sites
 exl-id: f94f75c2-12fa-47c0-a71b-327f4210077d
-source-git-commit: a64e0ff18c1508a50400f1423543b3c907552d6a
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2459'
 ht-degree: 0%

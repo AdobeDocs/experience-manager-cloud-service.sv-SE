@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: df92b91e-f3b0-4a08-bd40-e99edc9a50a5
-source-git-commit: 5b5b44f8dffc01a75eda464cd7759cf03028c2c6
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Se bilden nedan för att visa var alternativen i listrutan ställs in när du kl
 
 Låt oss lära oss hur anpassade funktioner använder fält och globala objekt med hjälp av ett `Contact Us`-formulär.
 
-![Kontakta oss &#x200B;](/help/forms/assets/contact-us-form.png)
+![Kontakta oss ](/help/forms/assets/contact-us-form.png)
 
 Lägg till följande kod i den anpassade funktionen enligt beskrivningen i avsnittet [create-custom-function](/help/forms/custom-function-core-component-create-function.md) för att ange formulärfältet som `Required`.
 
@@ -169,7 +169,7 @@ I det här exemplet återställs panelen `personaldetails` när du klickar på k
 
 ![Knappen Rensa](/help/forms/assets/custom-function-reset-field.png)
 
-Se bilden nedan för att visa att panelen `personaldetails` återställs om användaren klickar på knappen `clear`:
+Se bilden nedan för att visa att panelen `clear` återställs om användaren klickar på knappen `personaldetails`:
 
 ![Återställ formulär](/help/forms/assets/custom-function-reset-form.png)
 
@@ -222,6 +222,7 @@ Låt oss lära oss hur anpassade funktioner använder fält och globala objekt f
 
 Följande kodrad:
 `globals.functions.submitForm(globals.functions.exportData(), false);` används för att skicka formulärdata efter manipulering.
+
 * Det första argumentet är de data som ska skickas.
 * Det andra argumentet anger om formuläret ska valideras innan det skickas in. Det är `optional` och inställt som `true` som standard.
 * Det tredje argumentet är `contentType` i överföringen, som också är valfritt med standardvärdet som `multipart/form-data`. De andra värdena kan vara `application/json` och `application/x-www-form-urlencoded`.
@@ -247,7 +248,7 @@ Lägg till följande kod i den anpassade funktionen enligt beskrivningen i avsni
     }
 ```
 
-I det här exemplet skickas `NA` till servern när formuläret skickas om användaren lämnar textrutan `comments` tom.
+I det här exemplet skickas `comments` till servern när formuläret skickas om användaren lämnar textrutan `NA` tom.
 
 Skapa nu en regel för knappen `Submit` som skickar data:
 
@@ -486,7 +487,7 @@ Låt oss lägga till en regel till knappen `Add Traveler` för att lägga till d
 
 ![Lägg till panelregel](/help/forms/assets/custom-function-add-panel.png)
 
-Se gif nedan som visar att panelen läggs till med egenskapen `dispatchEvent` när användaren klickar på knappen `Add Traveler`:
+Se gif nedan som visar att panelen läggs till med egenskapen `Add Traveler` när användaren klickar på knappen `dispatchEvent`:
 
 ![Lägg till panel](/help/forms/assets/custom-function-add-panel.gif)
 

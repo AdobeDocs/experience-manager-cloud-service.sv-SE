@@ -3,13 +3,13 @@ title: Hur konfigurerar man Salesforce från sin egen kartong för adaptiva Form
 description: Lär dig hur du integrerar Salesforce med Adaptive Forms.
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
-source-git-commit: 3a12fff170f521f6051f0c24a4eb28a12439eec1
+exl-id: 184db05b-7237-4dce-8059-03c39b93d7d7
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Salesforce för AEM Forms {#configure-azure-storage}
 
@@ -59,6 +59,7 @@ Utför följande steg för att konfigurera molntjänsten [!DNL Salesforce]:
 En [!DNL Salesforce]-formulärdatamodell (FDM) är tillgänglig direkt på [!DNL AEM Forms]-servern efter att du [har konfigurerat ett utvecklingsprojekt för Forms baserat på Experience Manager-arkityp](setup-local-development-environment.md#forms-cloud-service-local-development-environment).
 
 Så här kommer du åt formulärdatamodellen (FDM):
+
 1. Navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 1. Markera mappnamnet, markera **[!UICONTROL Salesforce Data Model]** och välj ikonen Redigera ![Redigera](assets/edit.png) för att visa formulärdatamodellen (FDM).
 
@@ -68,4 +69,4 @@ När du har konfigurerat [[!DNL Salesforce] Cloud Config-tjänsten](#configure-s
 >
 >* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
 >* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
->  [Lägg till Forms Portal på en AEM Sites-sida &#x200B;](/help/forms/configure-forms-portal.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida ](/help/forms/configure-forms-portal.md)

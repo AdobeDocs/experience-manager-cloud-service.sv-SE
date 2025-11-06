@@ -4,8 +4,8 @@ description: Lär dig hur du kan använda anpassade behörigheter för att skapa
 exl-id: 167da985-7f19-45b3-90a3-884817907da2
 solution: Experience Manager
 feature: Security, Developing
-role: Admin, Architect, Developer
-source-git-commit: 0afd74120380c9ae3d02db9fb684189c2f19648f
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1490'
 ht-degree: 1%
@@ -110,7 +110,7 @@ Nu kan du tilldela användare till den nya produktprofilen som du skapade med an
 
 1. Välj knappen **Lägg till användare** och tilldela användare till din nya produktprofil med anpassade behörigheter.
 
-Mer information om hur du använder Admin Console finns i avsnittet **Lägg till användare och användargrupper i en produktprofil** i dokumentet [Hantera produktprofiler för företagsanvändare](https://helpx.adobe.com/se/enterprise/using/manage-product-profiles.html).
+Mer information om hur du använder Admin Console finns i avsnittet **Lägg till användare och användargrupper i en produktprofil** i dokumentet [Hantera produktprofiler för företagsanvändare](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
 
 ## Konfigurerbara behörigheter {#configurable-permissions}
 

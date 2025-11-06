@@ -4,7 +4,7 @@ description: Lär dig hur du använder innehållsfragment i Adobe Experience Man
 feature: Headless, Content Fragments,GraphQL API
 exl-id: bdd60e7b-4ab9-4aa5-add9-01c1847f37f6
 role: Admin, Developer
-source-git-commit: 25e566ac2b1e8d59be25c34bd17fff5d28354ffd
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '5984'
 ht-degree: 0%
@@ -132,7 +132,7 @@ Mer information finns i [Aktivera cachelagring av beständiga frågor](/help/hea
 >
 >Om du vill tillåta direkta och/eller POST-frågor i Dispatcher kan du be systemadministratören att:
 >
->* Skapa en [Cloud Manager-miljövariabel &#x200B;](/help/implementing/cloud-manager/environment-variables.md) med namnet `ENABLE_GRAPHQL_ENDPOINT`
+>* Skapa en [Cloud Manager-miljövariabel ](/help/implementing/cloud-manager/environment-variables.md) med namnet `ENABLE_GRAPHQL_ENDPOINT`
 >* med värdet `true`
 
 >[!NOTE]
@@ -375,7 +375,7 @@ Du kan visa alla metadata för GraphQL-typer om du visar det genererade GraphQL-
 >[!NOTE]
 >
 >**Skillnad mellan normala metadata och arraymetadata**
->&#x200B;>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
+>Tänk på att både `StringMetadata` och `StringArrayMetadata` refererar till det som lagras i databasen, inte till hur du hämtar det.
 >
 >Om du till exempel anropar fältet `stringMetadata` får du en array med alla metadata som lagrats i databasen som `String` , och om du anropar `stringArrayMetadata` får du en array med alla metadata som lagrats i databasen som `String[]`.
 
@@ -755,7 +755,7 @@ Med webboptimerad bildleverans kan du använda en Graphql-fråga för att:
 
 Med AEM kan du
 
-* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) till GraphQL-frågor.
+* Skicka [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) till GraphQL-frågor.
 
 Det innebär att kommandona tillämpas under frågekörningen, på samma sätt som URL-parametrar på GET-begäranden för dessa bilder.
 
@@ -770,6 +770,7 @@ Lösningen i GraphQL innebär att man kan
 >[!NOTE]
 >
 >En **innehållsreferens** kan användas för både DAM-resurser och Dynamic Media-resurser. När du hämtar rätt URL används olika parametrar:
+>
 >* `_dynamicUrl` : en DAM-resurs
 >* `_dmS7Url` : en dynamisk mediaresurs
 > 
@@ -784,13 +785,17 @@ Strukturen och syntaxen är:
 * `format`: en uppräkning med alla format som stöds av dess tillägg: GIF, PNG, PNG8, JPG, PJPG, BJPG, WEBP, WEBPLL eller WEBPLY
 * `seoName`: en sträng som används som filnamn i stället för nodnamnet
 * `crop`: en bildruteunderstruktur, om bredd eller höjd utelämnas, används höjd eller bredd som samma värde
+
    * `xOrigin`: x-origo för bildrutan och är obligatoriskt
    * `yOrigin`: Bildrutans y-ursprung och är obligatoriskt
    * `width`: ramens bredd
    * `height`: bildrutans höjd
+
 * `size`: en dimensionsunderstruktur, om bredd eller höjd utelämnas, används höjd eller bredd som samma värde
+
    * `width`: dimensionens bredd
    * `height`: dimensionens höjd
+
 * `rotation`: en uppräkning av alla rotationer som stöds: R90, R180, R270
 * `flip`: en uppräkning av HORIZONTAL, VERTICAL, HORIZONTAL_AND_VERTICAL
 * `quality`: ett heltal mellan 1 och 100 som anger procentvärdet för bildkvaliteten
@@ -980,6 +985,7 @@ Lösningen i GraphQL innebär att man kan
 ### Exempelfråga för leverans av Dynamic Media-resurser via URL - Bildreferens{#sample-query-dynamic-media-asset-delivery-by-url-imageref}
 
 Här följer ett exempel på en fråga:
+
 * för flera innehållsfragment av typen `team` och `person`, returnerar `ImageRef`
 
 ```graphql
@@ -1007,6 +1013,7 @@ query allTeams {
 ### Exempelfråga för leverans av Dynamic Media-resurser via URL - Flera referenser{#sample-query-dynamic-media-asset-delivery-by-url-multiple-refs}
 
 Här följer ett exempel på en fråga:
+
 * för flera innehållsfragment av typen `team` och `person`, returnerar `ImageRef`, `MultimediaRef` och `DocumentRef`:
 
 ```graphql
@@ -1209,10 +1216,11 @@ Den grundläggande funktionen för frågor med GraphQL för AEM följer GraphQL 
    * Se [Exempelfråga för flera innehållsfragment och deras variationer för en viss modell](/help/headless/graphql-api/sample-queries.md#sample-wknd-multiple-fragment-variations-given-model)
 
   >[!CAUTION]
+  >
   >Det går inte att använda filtret `includeVariations` och det systemgenererade fältet `_variation` tillsammans i samma frågedefinition.
 
 * Om du vill använda ett logiskt OR:
-   * använd ` _logOp: OR`
+   * använd `_logOp: OR`
    * Se [Exempelfråga - Alla personer som har namnet &quot;Jobs&quot; eller &quot;Smith&quot;](/help/headless/graphql-api/sample-queries.md#sample-all-persons-jobs-smith)
 
 * Logiskt AND finns också, men är (ofta) implicit
@@ -1379,4 +1387,4 @@ AEM planerar att investera i AEM GraphQL API.*&quot;
 
 ## Självstudiekurs - Komma igång med AEM Headless och GraphQL {#tutorial}
 
-Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.
+Söker du en praktisk självstudiekurs? Ta en titt på [Komma igång med AEM Headless och GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html) - en komplett självstudiekurs som visar hur du bygger upp och exponerar innehåll med AEM GraphQL API:er och som används av en extern app i ett headless CMS-scenario.

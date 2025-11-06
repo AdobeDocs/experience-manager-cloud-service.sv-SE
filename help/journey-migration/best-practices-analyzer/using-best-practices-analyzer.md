@@ -4,7 +4,7 @@ description: Lär dig hur du använder Best Practices Analyzer för att förstå
 exl-id: e8498e17-f55a-4600-87d7-60584d947897
 feature: Migration
 role: Admin
-source-git-commit: 951f7fb56d1d8a3285973fda945cbc21f310925f
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2796'
 ht-degree: 30%
@@ -23,7 +23,7 @@ ht-degree: 30%
 
 Följ avsnittet nedan om du vill veta mer om viktiga aspekter av att köra Best Practices Analyzer (BPA):
 
-* BPA-rapporten byggs med utdata från Adobe Experience Manager (AEM) [Mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=sv-SE). Den version av Mönsteravkännare som används av BPA ingår i BPA-installationspaketet.
+* BPA-rapporten byggs med utdata från Adobe Experience Manager (AEM) [Mönsteravkännare](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html). Den version av Mönsteravkännare som används av BPA ingår i BPA-installationspaketet.
 
 * BPA kan bara köras av användaren **admin** eller en användare i gruppen **administratörer**.
 
@@ -166,8 +166,8 @@ For Adobe Experience Manager 6.1, the tool is not functional and only the HTTP i
 >id="aemcloud_bpa_interpreting"
 >title="Tolka rapporten Best Practices Analyzer"
 >abstract="Det finns två alternativ för att visa BPA-rapportutdata: UI och CSV. När verktyget Best Practices Analyzer körs i AEM-instansen visas UI-rapporten som resultat i verktygsfönstret. CSV-formatet för rapporten innehåller information som genereras från utdata för Mönsteravkännare, sorterat och organiserat efter kategorityp, undertyp och prioritetsnivå."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html?lang=sv-SE#analysis-report" text="Analysrapport om metodtips för granskning"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=sv-SE" text="Om rapportkategorier i Best Practices Analyzer"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-acceleration-manager/using-cam/cam-readiness-phase.html#analysis-report" text="Analysrapport om metodtips för granskning"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html" text="Om rapportkategorier i Best Practices Analyzer"
 
 När verktyget Best Practices Analyzer körs i AEM-instansen visas rapporten som resultat i verktygsfönstret.
 
@@ -184,7 +184,7 @@ Rapportens format är:
 Viktighetsgrad tilldelas varje resultat och anger ungefärlig prioritet för åtgärder.
 
 >[!NOTE]
->Mer information om de olika sökkategorierna finns i [Mönsterdetektorkategorierna](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html?lang=sv-SE).
+>Mer information om de olika sökkategorierna finns i [Mönsterdetektorkategorierna](https://experienceleague.adobe.com/docs/experience-manager-pattern-detection/table-of-contents/aso.html).
 
 Läs tabellen nedan för mer information om viktighetsgrad:
 
@@ -222,6 +222,7 @@ Värdet &quot;\N&quot; i en kolumn för enskilda resultat anger att inga data fi
 BPA har ett HTTP-gränssnitt som kan användas som ett alternativ till användargränssnittet i AEM. Gränssnittet har stöd för både HEAD- och GET-kommandon. Den kan användas för att generera BPA-rapporten och returnera den i ett av tre format: JSON, CSV och tabbseparerade värden (TSV).
 
 Följande URL:er är tillgängliga för HTTP-åtkomst, där `<host>` är värdnamnet och porten, om det behövs, för servern där BPA är installerat:
+
 * `http://<host>/apps/best-practices-analyzer/analysis/report.json` för JSON-format
 * `http://<host>/apps/best-practices-analyzer/analysis/report.csv` för CSV-format
 * `http://<host>/apps/best-practices-analyzer/analysis/report.tsv` för TSV-format
@@ -286,8 +287,8 @@ Värdet för den här egenskapen är cachelivslängden i sekunder. Administratö
 
 BPA använder ett användarkonto för systemtjänsten med namnet `repository-reader-service` för att köra mönsteravkännaren. Det här kontot är tillgängligt på AEM 6.2 och senare. På AEM 6.1 måste det här kontot skapas *innan*-installationen av BPA utförs enligt följande:
 
-1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=sv-SE#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
+1. Följ instruktionerna på [Skapa en ny tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html#creating-a-new-service-user) för att skapa en användare. Ange användar-ID till `repository-reader-service` och lämna den mellanliggande sökvägen tom. Klicka sedan på den gröna bockmarkeringen.
 
-2. Följ instruktionerna i [Hantera användare och grupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE#managing-users-and-groups). Särskilt instruktionerna för hur man lägger till användare i en grupp för att lägga till `repository-reader-service`-användaren i `administrators`-gruppen.
+2. Följ instruktionerna i [Hantera användare och grupper](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#managing-users-and-groups). Särskilt instruktionerna för hur man lägger till användare i en grupp för att lägga till `repository-reader-service`-användaren i `administrators`-gruppen.
 
 3. Installera BPA-paketet via Package Manager på AEM-källinstansen. (Detta lägger till den nödvändiga konfigurationsändringen i konfigurationen ServiceUserMapper för `repository-reader-service`-systemtjänstanvändaren.)

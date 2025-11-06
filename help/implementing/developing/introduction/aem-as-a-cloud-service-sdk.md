@@ -3,8 +3,8 @@ title: AEM as a Cloud Service SDK
 description: En översikt över AEM as a Cloud Service Software Development Kit.
 exl-id: 06f3d5ee-440e-4cc5-877a-5038f9bd44c6
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 82f5078740b2cf6ac481d83df40bbbc4fb3c1a77
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1242'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Vissa kunder som tidigare har distribuerats med AEM 6.5 eller tidigare använder
 
 ## Building for the SDK {#building-for-the-sdk}
 
-AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod. Se [dokumentationen för AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/using). På en hög nivå utförs följande steg:
+AEM as a Cloud Service SDK används för att skapa och distribuera anpassad kod. Se [dokumentationen för AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using). På en hög nivå utförs följande steg:
 
 * **Kompileringskod** - Source-koden kompileras och de resulterande innehållspaketen genereras.
 * **Skapa artefakter** - Artefakter skapas under den här processen.

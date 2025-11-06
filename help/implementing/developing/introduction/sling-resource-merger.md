@@ -3,8 +3,8 @@ title: Använda Sling Resource Merger i Adobe Experience Manager as a Cloud Serv
 description: Med Sling Resource Merger får du tillgång till och kan sammanfoga resurser
 exl-id: 5b6e5cb5-4c6c-4246-ba67-6b9f752867f5
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1158'
 ht-degree: 0%
@@ -198,7 +198,7 @@ Tillsammans med standardfunktionerna kan du:
       * typ: `String[]`
       * värde: en lista med underordnade noder (enligt definition i `/libs`) som ska döljas/ignoreras
 
-      Jokertecknet &ast; kan användas för att dölja/ignorera alla underordnade noder.
+      Jokertecknet &amp;ast; kan användas för att dölja/ignorera alla underordnade noder.
 
 * **Ändra ordning på noder**
 

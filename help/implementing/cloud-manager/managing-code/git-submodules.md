@@ -3,8 +3,8 @@ title: Stöd för Git-undermodul
 description: Lär dig hur du kan använda Git-undermoduler för att sammanfoga innehåll från flera grenar i Git-databaser vid byggtillfället.
 exl-id: fa5b0f49-4b87-4f39-ad50-7e62094d85f4
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 8a53bef8bdf592869c895cbaca1e79034e52f856
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -94,4 +94,4 @@ När du har konfigurerat din `pom.xml`-fil och kört `git submodule`-kommandona 
 
 * Git-URL:er för delmodulen kan vara i HTTPS- eller SSH-format, men måste peka på en GitHub.com. Det går inte att lägga till en Adobe-databasundermodul i en GitHub-aggregeringsdatabas eller den omvända.
 * GitHub-undermoduler måste vara tillgängliga för Adobe GitHub-appen.
-* [Begränsningarna med att använda Git-undermoduler med Adobe-hanterade databaser &#x200B;](#usage-notes-recommendations-adobe-repos) gäller också.
+* [Begränsningarna med att använda Git-undermoduler med Adobe-hanterade databaser ](#usage-notes-recommendations-adobe-repos) gäller också.

@@ -4,8 +4,8 @@ description: Lär dig hur du lägger till ett anpassat domännamn med Domäninst
 exl-id: 0fc427b9-560f-4f6e-ac57-32cdf09ec623
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 215f4630acb3eca4be501c7c5f5de7c60b550bf8
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Ta inte med `http://`, `https://` eller blanksteg när du anger domännamnet.
    | Om du valde certifikattypen | Beskrivning |
    | --- | ---  |
    | Adobe-hanterat certifikat | a. Slutför de [Adobe hanterade certifikatstegen](#adobe-managed-cert-steps) nedan. När du har slutfört stegen klickar du på **Verifiera** i dialogrutan **Verifiera domän**.<ul><li>DNS-verifiering kan ta några timmar att behandla på grund av fördröjd DNS-spridning.</li><li>Cloud Manager verifierar till slut ägarskap av domännamn och uppdaterar statusen i tabellen **Domäninställningar**. Mer information finns i [Kontrollera det anpassade domännamnets status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).</li>![Verifiera domänstatus](/help/implementing/cloud-manager/assets/domain-settings-verified.png)</li></ul>b. Du är nu redo att [lägga till ett Adobe-hanterat (DV) SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md#add-adobe-managed-ssl-cert).</li></ul> |
-   | Kundhanterat certifikat | a. Klicka på **OK**.<br>b. Du är nu redo att [lägga till ett SSL-certifikat som hanteras av kund (OV/EV) &#x200B;](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md#add-customer-managed-ssl-cert) .<br>När du har lagt till certifikatet markeras ditt domännamn som verifierat i tabellen **Domäninställningar** . Mer information finns i [Kontrollera det anpassade domännamnets status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).</li></ul><br>![Verifiera domän för ett kundhanterat EV/OV-certifikat](/help/implementing/cloud-manager/assets/verify-domain-customer-managed-step.png) |
+   | Kundhanterat certifikat | a. Klicka på **OK**.<br>b. Du är nu redo att [lägga till ett SSL-certifikat som hanteras av kund (OV/EV) ](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md#add-customer-managed-ssl-cert) .<br>När du har lagt till certifikatet markeras ditt domännamn som verifierat i tabellen **Domäninställningar** . Mer information finns i [Kontrollera det anpassade domännamnets status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md).</li></ul><br>![Verifiera domän för ett kundhanterat EV/OV-certifikat](/help/implementing/cloud-manager/assets/verify-domain-customer-managed-step.png) |
 
    >[!NOTE]
    >

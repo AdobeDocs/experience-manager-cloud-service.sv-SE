@@ -4,8 +4,8 @@ description: Få en översikt över de tre typer av tester som Cloud Manager aut
 exl-id: 5f5c97b1-4180-4f49-af8b-257d4744766e
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: ac918008c3f99d74e01be59c9841083abf3604aa
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%

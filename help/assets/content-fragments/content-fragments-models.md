@@ -3,9 +3,9 @@ title: Content Fragment Models (Assets - Content Fragments)
 description: Läs om hur Content Fragment Models fungerar som grund för ditt headless-innehåll i AEM, så att du kan skapa Content Fragments med strukturerat innehåll.
 exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
-role: User, Admin, Architect
+role: User, Admin, Developer
 solution: Experience Manager Sites
-source-git-commit: 8c9c51c349317250ddf7ef07e1b545860fd18351
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '3588'
 ht-degree: 1%
@@ -324,10 +324,10 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 >AEM har ett upprepningsskydd för:
 >
 >* Innehållsreferenser
->  &#x200B;>  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >* Fragmentreferenser i GraphQL
->  &#x200B;>  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+>  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 ### Innehållsreferens {#content-reference}
 

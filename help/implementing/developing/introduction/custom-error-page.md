@@ -3,8 +3,8 @@ title: Anpassade felsidor
 description: AEM har en standardfelhanterare för hantering av HTTP-fel som kan anpassas.
 exl-id: b74c65d1-8ef5-4ad4-8255-8187f3b1d84c
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: de50d20dd4c17204ded1ff216d12520d04eafd04
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -21,7 +21,7 @@ För att svara på fel tillhandahåller AEM ett `404.jsp`-skript under `/libs/sl
 
 >[!TIP]
 >
->Eftersom AEM baseras på Apache Sling finns mer information [&#x200B; i dokumentationen för hantering av Apache-fel &#x200B;](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html).
+>Eftersom AEM baseras på Apache Sling finns mer information [ i dokumentationen för hantering av Apache-fel ](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html).
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ Om du vill hantera 500 fel måste filnamnet för felhanterarskriptet vara detsam
 >[!NOTE]
 >
 >I AEM som Cloud Service visar CDN en allmän felsida när ett 5XX-fel tas emot från serverdelen. Om du vill tillåta att det faktiska svaret från backend skickas genom måste du lägga till följande rubrik i svaret: `x-aem-error-pass: true`.
->&#x200B;>Detta fungerar bara för svar från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
+>Detta fungerar bara för svar från AEM eller lagret Apache/Dispatcher. Andra oväntade fel från mellanliggande infrastrukturlager visar fortfarande den allmänna felsidan.
 
 >[!CAUTION]
 >

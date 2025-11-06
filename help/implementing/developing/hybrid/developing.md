@@ -3,9 +3,9 @@ title: Utveckla SPA för AEM
 description: I den här artikeln finns viktiga frågor att tänka på när en frontutvecklare ska utveckla en SPA för AEM. Den ger också en översikt över AEM arkitektur när det gäller SPA-program som man bör tänka på när man inför en utvecklad SPA på AEM.
 exl-id: f6c6f31a-69ad-48f6-b995-e6d0930074df
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2028'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Statisk routning fungerar mot [principen för bärbarhet](#portability) och begr
 
 ## AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM-projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE), som har stöd för SPA-projekt med React eller Angular och som använder SPA SDK.
+Alla AEM-projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som har stöd för SPA-projekt med React eller Angular och som använder SPA SDK.
 
 ## SPA-designmodeller {#spa-design-models}
 

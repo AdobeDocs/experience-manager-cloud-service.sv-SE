@@ -3,8 +3,8 @@ title: Anpassa vyer av Sidegenskaper
 description: Lär dig hur du visar och redigerar sidegenskaper av författare.
 exl-id: 363b3c2d-f965-485f-bdae-2ea5b4cecb83
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -35,13 +35,13 @@ Fälten måste vara specifikt konfigurerade om någon ändring krävs. Detta gö
 
 >[!TIP]
 >
->I självstudiekursen [Utöka sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html?lang=sv-SE) finns en guide om hur du anpassar sidegenskaper.
+>I självstudiekursen [Utöka sidegenskaper](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/page-properties-technical-video-develop.html) finns en guide om hur du anpassar sidegenskaper.
 
 ## Konfigurera dina sidegenskaper {#configuring-your-page-properties}
 
 Du kan också konfigurera fälten som är tillgängliga genom att konfigurera dialogrutan för sidkomponenten och använda lämpliga nodegenskaper.
 
-Som standard visar guiden **[&#128279;](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page)** Skapa sida de fält som är grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
+Som standard visar guiden [**** ](/help/sites-cloud/authoring/sites-console/creating-pages.md#creating-a-new-page)Skapa sida de fält som är grupperade under **Fler rubriker och beskrivning**. Så här döljer du dessa konfigurationer:
 
 1. Skapa sidkomponenten under `/apps`.
 1. Skapa en åsidosättning (med *dialog diff* från [Sling Resource Merger](/help/implementing/developing/introduction/sling-resource-merger.md)) för `basic`-delen av sidkomponenten, till exempel:

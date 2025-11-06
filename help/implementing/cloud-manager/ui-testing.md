@@ -4,8 +4,8 @@ description: Anpassad gränssnittstestning är en valfri funktion som gör att d
 exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 498a58c89910f41e6b86c5429629ec9282028987
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2601'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM tillhandahåller en integrerad svit med [Cloud Manager-portar för hög kvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) för att säkerställa smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview).
+Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
 
 Adobe rekommenderar att man använder Cypress eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för användare som inte har testat tidigare.
 

@@ -5,7 +5,7 @@ feature: Adaptive Forms, Core Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: ac85ff04-25dc-4566-a986-90ae374bf383
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2252'
 ht-degree: 0%
@@ -82,7 +82,7 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält. Du kan lägga till Else-satsen för att lägga till ytterligare villkor
 
-![Rensa värdet för &#x200B;](assets/clearvalueof.png)
+![Rensa värdet för ](assets/clearvalueof.png)
 
 >[!NOTE]
 >
@@ -169,6 +169,7 @@ Mer information om hur du konfigurerar tjänster i formulärdatamodellen (FDM) f
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen (FDM) finns i [[!DNL Experience Manager Forms] Dataintegrering](data-integration.md).
 
 Regeltypen **[!UICONTROL Set Property]** gör att du kan ange värdet för en egenskap för det angivna objektet baserat på en villkorsåtgärd. Du kan ställa in egenskapen på något av följande:
+
 * visible (Boolean)
 * label.value (String)
 * label.visible (Boolean)
@@ -351,7 +352,7 @@ På samma sätt kan du skriva **Navigera bland panelerna** för att flytta fokus
 
 #### [!UICONTROL Async Function call]
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 Regeltypen **[!UICONTROL Async Function call]** gör att du kan utföra asynkrona funktioner. Det gör att du kan initiera ett funktionsanrop som fungerar oberoende av huvudkörningstråden, vilket gör att andra processer kan fortsätta köras utan att vänta på att den asynkrona funktionen ska slutföras.
 

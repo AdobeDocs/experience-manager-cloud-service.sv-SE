@@ -3,8 +3,8 @@ title: API-referensmaterial
 description: AEM har omfattande och kraftfulla API:er som du kan använda för ditt digitala upplevelseprojekt.
 exl-id: d4ef3040-5a0a-4149-9e99-09eda9605038
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: d9db32110e1e0aaa5bdc20bd6b4bff6da6a3a3a3
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '659'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Om ett API tillhandahålls av AEM bör du föredra det framför Sling, JCR och O
 
 >[!TIP]
 >
->Mer information om de här riktlinjerna finns i dokumentet [Förstå Java API-metodtips](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=sv-SE).
+>Mer information om de här riktlinjerna finns i dokumentet [Förstå Java API-metodtips](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html).
 
 ## AEM Delivery and Content Management Services and APIs {#delivery-apis}
 
@@ -67,7 +67,7 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 
 | Funktion | Beskrivning |
 |---|---|
-| [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) | Standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser |
+| [Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) | Standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser |
 | [JSON-exporterare](/help/implementing/developing/components/json-exporter.md) | Leverera innehållet på alla AEM-sidor i JSON-datamodellformat |
 | [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md) | Generera JSON-export av komponentinnehåll baserat på ett modellramverk |
 | [OpenAPI:er för innehållsfragment och innehållsfragmentmodell](/help/headless/content-fragment-openapis.md) | OpenAPI:er för innehållsfragment och innehållsfragmentmodell |
@@ -76,7 +76,7 @@ AEM erbjuder anpassningsbara komponenter och alternativ för innehållsleverans.
 |  |  |
 | [Assets API](/help/assets/mac-api-assets.md) | Möjliggör åtgärder för att skapa/läsa-uppdatera-ta bort (CRUD) på resurser, inklusive binära filer, metadata, återgivningar och kommentarer. Se AEM Assets HTTP API |
 | [HTTP API för innehållsfragment](/help/assets/content-fragments/assets-api-content-fragments.md) | Få åtkomst till innehåll i innehållsfragment direkt via HTTP API via CRUD-åtgärder |
-| [Innehållsfragment Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=sv-SE) | Exakt format för HTTP-resursbegäranden som stöds |
+| [Innehållsfragment Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) | Exakt format för HTTP-resursbegäranden som stöds |
 
 >[!NOTE]
 >

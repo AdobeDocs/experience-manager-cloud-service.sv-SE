@@ -3,9 +3,9 @@ title: Komma igång med SPA i AEM med React
 description: I den här artikeln beskrivs ett exempel på ett SPA-program, hur det sätts samman och hur du snabbt kommer igång med ditt eget SPA med hjälp av React Framework.
 exl-id: 13998526-65e7-4d1b-bd47-452bad3780a2
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 0%
@@ -111,7 +111,7 @@ När paketet har skapats kan det överföras till en AEM-instans.
 
 ### AEM Project Archetype {#aem-project-archetype}
 
-Alla AEM-projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE), som har stöd för SPA-projekt med React eller Angular och som använder SPA SDK.
+Alla AEM-projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som har stöd för SPA-projekt med React eller Angular och som använder SPA SDK.
 
 ## Programstruktur {#application-structure}
 
@@ -250,7 +250,7 @@ export default MapTo('my-react-app/react/components/structure/page')(PageClass, 
 
 Funktionen `MapTo` returnerar en `Component` som är resultatet av en disposition som utökar den tillhandahållna `PageClass` med klassnamnen och attributen som aktiverar redigeringen. Den här komponenten kan exporteras för att senare instansieras i koden för programmet.
 
-När komponenten `Page` exporteras med funktionerna `MapTo` eller `withModel` kapslas den in med en `ModelProvider` -komponent som ger standardkomponenter tillgång till den senaste versionen av sidmodellen eller en exakt plats i den sidmodellen.
+När komponenten `MapTo` exporteras med funktionerna `withModel` eller `Page` kapslas den in med en `ModelProvider` -komponent som ger standardkomponenter tillgång till den senaste versionen av sidmodellen eller en exakt plats i den sidmodellen.
 
 Mer information finns i dokumentet [SPA-utkast](blueprint.md).
 

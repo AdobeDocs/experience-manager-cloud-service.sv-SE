@@ -2,11 +2,11 @@
 title: De bästa sätten att designa högpresterande Forms
 description: Lär dig de bästa sätten att skapa användarvänliga, tillgängliga och högpresterande formulär med AEM Forms. Förbättra datakvaliteten, användarupplevelsen och antalet lyckade ansökningar.
 feature: Edge Delivery Services
-role: Admin, Architect, Developer
+role: Admin, Developer
 hide: true
 hidefromtoc: true
 exl-id: 67b6873b-bb93-4d38-963c-2ca65a1a644b
-source-git-commit: 2e2a0bdb7604168f0e3eb1672af4c2bc9b12d652
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
@@ -53,27 +53,23 @@ Att skapa bra formulär går bortom bara tekniken. Så här ser du till att form
 ## Designa användarvänliga och tillgängliga Forms
 
 - **Använd tydliga, synliga etiketter:** Alla formulärfält behöver en `<label>`. Förlita dig inte bara på platshållartext (text i indatafältet), eftersom den försvinner när användaren skriver och inte är tillgänglig.
+
    - *Bra:* `<label for="email">Email Address:</label> <input type="email" id="email" placeholder="you@example.com">`
    - *Felaktig:* `<input type="email" placeholder="Email Address">`
+
 - **Behåll det enkelt:** Använd HTML standardindatatyper (`<input type="date">`, `<input type="tel">`) där det är möjligt. De har ofta bättre mobilstöd och tillgänglighet än komplexa anpassade widgetar.
 - **Logisk ordning och gruppering:** Ordna fält på ett sätt som är begripligt för användaren. Gruppera relaterade fält tillsammans med `<fieldset>` och `<legend>`.
 - **Ange tydliga instruktioner:** Ge kortfattad hjälptext eller verktygstips för fält som kan vara förvirrande.
 - **Tangentbordsnavigering:** Se till att användarna bara kan navigera genom hela formuläret via tangentbordet (Tabb, Skift+Tabb, Enter, Blanksteg).
 - **Felhantering:** Gör fel tydliga och enkla att korrigera. Visa felmeddelanden bredvid det relevanta fältet och förklara vad som behöver korrigeras.
-
 - **Kontrollera att Forms-inläsningen är snabb och synlig**
-
-   - **Placera Forms tydligt:** Om ett formulär är viktigt bör du se till att användarna ser det enkelt utan att behöva rulla för mycket (&quot;ovanför det veckade&quot; om möjligt). Adobe forskning visar att många formulär får låg interaktion eftersom de är dolda.
-   - **Optimera Assets:** Håll alla anpassade JavaScript- eller CSS-format för dina formulär så små som möjligt för att säkerställa snabba inläsningstider. Edge Delivery Services hjälper till med inläsningen av bassidor, men tunga formulärskript kan ändå göra det långsammare.
-
+- **Placera Forms tydligt:** Om ett formulär är viktigt bör du se till att användarna ser det enkelt utan att behöva rulla för mycket (&quot;ovanför det veckade&quot; om möjligt). Adobe forskning visar att många formulär får låg interaktion eftersom de är dolda.
+- **Optimera Assets:** Håll alla anpassade JavaScript- eller CSS-format för dina formulär så små som möjligt för att säkerställa snabba inläsningstider. Edge Delivery Services hjälper till med inläsningen av bassidor, men tunga formulärskript kan ändå göra det långsammare.
 - **Hantera användardata på ett ansvarsfullt sätt**
-   - **Fråga bara vad du behöver:** Ju mindre personligt ID-information (PII) du frågar efter, desto bättre. Varje fält kan vara en anledning till att en användare överger formuläret.
-   - **Var genomskinlig:** Förklara *varför* du behöver viss information och *hur den ska användas*. Länk till din integritetspolicy. Detta skapar förtroende.
-
+- **Fråga bara vad du behöver:** Ju mindre personligt ID-information (PII) du frågar efter, desto bättre. Varje fält kan vara en anledning till att en användare överger formuläret.
+- **Var genomskinlig:** Förklara *varför* du behöver viss information och *hur den ska användas*. Länk till din integritetspolicy. Detta skapar förtroende.
 - **Förbättra användarupplevelsen: Captcha-alternativ**
-
-   - **Rethink Visible Captchas:** Testen &quot;type the wavy text&quot; eller &quot;click all the car lights&quot; kan vara mycket frustrerande för användare, särskilt för personer med funktionshinder, och ofta leda till höga bortfall.
-
+- **Rethink Visible Captchas:** Testen &quot;type the wavy text&quot; eller &quot;click all the car lights&quot; kan vara mycket frustrerande för användare, särskilt för personer med funktionshinder, och ofta leda till höga bortfall.
 - **Ta hänsyn till alternativ:**
    - **Fläckfält:** Lägg till ett dolt fält som bara kan fyllas i med bågar. Om den innehåller data är överföringen trolig för skräppost.
    - **Tidsbaserade kontroller:** Mät hur snabbt ett formulär skickas. För snabba inlämningar är ofta stötande.

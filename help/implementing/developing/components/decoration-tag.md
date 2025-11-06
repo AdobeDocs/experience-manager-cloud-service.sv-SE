@@ -1,10 +1,10 @@
 ---
 title: Dekoration-tagg
-description: När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter komponenterna.
+description: När en komponent på en webbsida återges kan ett HTML-element genereras som kapslar in den återgivna komponenten i sig. För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna.
 exl-id: a90fd619-eff6-466f-9178-90374f988b5d
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -13,19 +13,19 @@ ht-degree: 0%
 
 # Dekoration-tagg {#decoration-tag}
 
-När en komponent på en webbsida återges kan ett HTML-element genereras och den återgivna komponenten kapslas in i sig själv. Detta har främst två syften:
+När en komponent på en webbsida återges kan ett HTML-element genereras som kapslar in den återgivna komponenten i sig. Detta har främst två syften:
 
 * En komponent kan bara redigeras när den är omsluten med ett HTML-element.
-* Omslutningselementet används för att tillämpa HTML-klasser som innehåller:
+* Elementet wrapping används för att tillämpa HTML-klasser som innehåller:
    * Layoutinformation
    * Formatinformation
 
-För utvecklare har AEM en tydlig och enkel logik som styr de dekorationstaggar som omsluter komponenterna. Om och hur dekorationstaggen återges definieras av en kombination av två faktorer som den här sidan kommer att dyka upp i:
+För utvecklare erbjuder AEM tydlig och enkel logik som styr de dekorationstaggar som omsluter de inkluderade komponenterna. Om och hur dekorationstaggen återges definieras av en kombination av två faktorer som den här sidan kommer att dyka upp i:
 
 * Själva komponenten kan konfigurera sin dekorationstagg med en uppsättning egenskaper.
 * De skript som innehåller komponenter kan definiera aspekterna för dekorationstaggen med include-parametrar.
 
-## Recommendations {#recommendations}
+## Rekommendationer {#recommendations}
 
 Här följer några allmänna rekommendationer för när wrapper-elementet ska tas med, som hjälper dig att undvika att stöta på oväntade problem:
 
@@ -37,7 +37,7 @@ Här följer några allmänna rekommendationer för när wrapper-elementet ska t
 
 Följande egenskaper och noder kan tillämpas på komponenterna för att styra beteendet för deras dekorationstagg:
 
-* **`cq:noDecoration {boolean}`:** Den här egenskapen kan läggas till i en komponent och ett true-värde AEM inte generera några wrapper-element över komponenten.
+* **`cq:noDecoration {boolean}`:** Den här egenskapen kan läggas till i en komponent och ett true-värde tvingar AEM att inte generera några wrapper-element över komponenten.
 * **`cq:htmlTag`-nod:** Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
    * **`cq:tagName {String}`:** Det här kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla komponenterna i stället för DIV-standardelementet.
    * **`class {String}`:** Det här kan användas för att ange CSS-klassnamn som ska läggas till i omslutningen.
@@ -57,7 +57,7 @@ Omslagets beteende kan också styras helt.
 
 Det går att helt styra beteendet för wrapper-taggarna från HTML-skript och tillhörande logik.
 
-Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=sv-SE).
+Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html).
 
 ### Beslutsträd {#decision-tree}
 

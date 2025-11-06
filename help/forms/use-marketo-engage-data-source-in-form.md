@@ -5,7 +5,7 @@ keywords: Använd Marketo Engage datakälla i Adaptive Forms, Hur ansluter jag e
 feature: Adaptive Forms, Form Data Model
 role: User, Developer
 exl-id: 4656ec65-f1ad-4e97-8d93-25933cdc7f7b
-source-git-commit: 4bb63932a658cf01cc493b9e5e68b96984cce49c
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 0%
@@ -109,8 +109,10 @@ Formuläret har nu konfigurerats med datakällan från den anslutna Marketo Enga
 **F: Vad händer när du ändrar formulärets koppling?**\
 **A:** Om du ändrar formulärets koppling blir de befintliga bindningarna ogiltiga.
 
-**F: Vilka tre åtgärder är tillgängliga i tjänsten Invoke i regelredigeraren för formulär som är integrerade med Marketo Engage?**\
+**F: Vilka tre åtgärder är tillgängliga i tjänsten Invoke i regelredigeraren för formulär som är integrerade med Marketo Engage?**
+
 **A:** De tre körklara åtgärderna i **Invoke Service** för formulär som är integrerade med Marketo Engage är:
+
 * Synkronisera lead
 * Hämta lead efter ID
 * Hämta lead efter filtertyp

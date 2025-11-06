@@ -2,9 +2,9 @@
 title: Konfigurera Skicka-åtgärder för AEM Forms med Edge Delivery Services
 description: Lär dig hur du konfigurerar skicka-åtgärder i AEM Forms med Edge Delivery Services. Välj mellan Forms Submission Service och AEM Publish Submit Action för att hantera formulärdata på ett säkert och effektivt sätt.
 feature: Edge Delivery Services
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 8f490054-f7b6-40e6-baa3-3de59d0ad290
-source-git-commit: 2d16a9bd1f498dd0f824e867fd3b5676fb311bb3
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -150,7 +150,7 @@ Konfigurera referensfiltret så att dina specifika Edge Delivery-webbplatsdomän
 
 3. Distribuera konfigurationen via Cloud Manager
 
-Mer information om konfigurationen för OSGi-referensfilter finns i [Handboken för referensfilter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter).
+Mer information om konfigurationen för OSGi-referensfilter finns i [Handboken för referensfilter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/deployment/referrer-filter).
 
 #### 3. CORS (Cross-Origin Resource Sharing) Issues
 
@@ -180,10 +180,10 @@ SetEnvIfExpr "env('CORSProcessing') == 'true' && req_novary('Origin') =~ m#(http
 >
 >Ersätt `main--abc--adobe.aem.live` och `main--abc1--adobe.aem.live` med de faktiska webbplatsdomänerna. Varje plats som lagras från samma databas kräver en separat CORS-konfigurationspost.
 
-Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
+Detaljerad CORS-konfiguration finns i [CORS-konfigurationsguiden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors).
 
 
-Om du vill aktivera CORS för din lokala utvecklingsmiljö läser du artikeln [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing).
+Om du vill aktivera CORS för din lokala utvecklingsmiljö läser du artikeln [Förstå korsdomänsresursdelning (CORS)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing).
 
 <!--
 #### 4. CDN Redirect Rules

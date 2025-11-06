@@ -2,9 +2,9 @@
 title: Page Editor och Universal Editor
 description: Sidredigeraren stöds fortfarande av Adobe, men den universella redigeraren ger nya projekt spännande möjligheter.
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 0a13fb52-623e-4aff-b254-186d8d117e4d
-source-git-commit: 90c542bfc6ba6bcab34b640e3539971b8b89034c
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%

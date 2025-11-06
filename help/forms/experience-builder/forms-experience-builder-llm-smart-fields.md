@@ -4,14 +4,14 @@ description: Lär dig skapa intelligenta formulärfält med förifyllda alternat
 hide: true
 index: false
 hidefromtoc: true
-role: Admin, Architect, Developer
-source-git-commit: de524aeddd5f53cbd713ff0523222966752ebbc0
+role: Admin, Developer
+exl-id: a03b247c-1e50-4dee-9182-bc81fb83a48b
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1474'
 ht-degree: 0%
 
 ---
-
 
 # Smarta fält som förbättrats med LLM i Forms Experience Builder {#llm-enhanced-smart-fields}
 
@@ -296,4 +296,3 @@ Kombinera kunskap om livslångt lärande med organisationens data:
 * [Skapa formulär med AI-funktioner](forms-experience-builder-prompt-examples-library.md)
 * [Skapa regler och logiska funktioner](forms-experience-builder-prompt-examples-library.md#rule-creation--business-logic)
 * [Inlämning och integration av blanketter](form-submission-integration.md)
-

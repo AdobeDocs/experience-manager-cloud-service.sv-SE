@@ -4,12 +4,12 @@ description: Läs om projekt i Adobe Developer Console och App Builder.
 version: Experience Manager as a Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
-role: Developer, Architect
+role: Developer
 level: Beginner
 kt: 9453, 9467, 9468, 9469
 thumbnail: 339162.jpg
 exl-id: bf358ead-cd39-4284-86d5-5b4ab0cf1ae3
-source-git-commit: 1bd36e584d956c5ae8da7b1d618e155da86a74f5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%

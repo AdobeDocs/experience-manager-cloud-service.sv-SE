@@ -4,7 +4,7 @@ description: I följande självstudiekurs går du igenom stegen för att skapa e
 exl-id: fe8e7bf2-6828-4a5a-b650-fb3d9c172b97
 feature: Developing Screens
 role: Admin, Developer, User
-source-git-commit: 1179e45f6e75a8a4f5e5e76903243f64d9f406ae
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 0%
@@ -30,12 +30,12 @@ Du behöver följande för att kunna slutföra den här självstudiekursen:
 
 1. Lokal utvecklingsmiljö
 
-Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en IDE för att utveckla [med AEM finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=sv-SE).
+Självstudiestegen och skärmbilderna utförs med **CRXDE Lite**. IDE kan också användas för att slutföra självstudiekursen. Mer information om hur du använder en IDE för att utveckla [med AEM finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html).
 
 
 ## Projektinställningar {#project-setup}
 
-Ett Screens-projekts källkod hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om hur du skapar ett projekt med AEM Project Archetype finns i [Projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=sv-SE).
+Ett Screens-projekts källkod hanteras vanligtvis som ett Maven-projekt med flera moduler. För att underlätta självstudiekursen har ett projekt förskapats med [AEM Project Archetype 13](https://github.com/adobe/aem-project-archetype). Mer information om hur du skapar ett projekt med AEM Project Archetype finns i [Projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html).
 
 1. Hämta och installera följande paket med [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp):
 
@@ -131,7 +131,7 @@ AEM Screens har intressanta begränsningar som inte nödvändigtvis är sanna f�
    <sly data-sly-test="${!production}" data-sly-include="edit.html" />
    ```
 
-   Screens-komponenter kräver två olika återgivningar beroende på vilket [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html?lang=sv-SE#page-modes) som används:
+   Screens-komponenter kräver två olika återgivningar beroende på vilket [redigeringsläge](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/authoring/author-environment-tools.html#page-modes) som används:
 
    1. **Produktion**: Förhandsgranska eller Publicera läge (wcmmode=disabled)
    1. **Redigera**: används för alla andra redigeringslägen, d.v.s. redigering, design, ställningar, utvecklare...
@@ -378,7 +378,7 @@ En tredje klientbibliotekskategori: `cq.screens.components.edit` kan användas f
 
 ## Skapa en designsida {#design-page}
 
-AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html?lang=sv-SE) och [designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html?lang=sv-SE) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
+AEM Screens använder [statiska sidmallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-static.html) och [designkonfigurationer](https://experienceleague.adobe.com/docs/experience-manager-64/authoring/siteandpage/default-components-designmode.html) för globala ändringar. Designkonfigurationer används ofta för att konfigurera tillåtna komponenter för parsys i en kanal. Ett tips är att lagra dessa konfigurationer på ett appspecifikt sätt.
 
 En sida för att köra webb.butik skapas nedan som lagrar alla konfigurationer som är specifika för Web.Retail Run-projektet.
 
@@ -548,7 +548,7 @@ I videon nedan visas den färdiga komponenten och hur den kan läggas till i en 
 
 ## Kod klar {#finished-code}
 
-Nedan visas den färdiga koden från självstudiekursen. **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip** och **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip** är kompilerade AEM-paket. **SRC-screens-weretail-run-0.0.1.zip &#x200B;** är den okompilerade källkoden som kan distribueras med Maven.
+Nedan visas den färdiga koden från självstudiekursen. **screens-weretail-run.ui.apps-0.0.1-SNAPSHOT.zip** och **screens-weretail-run.ui.content-0.0.1-SNAPSHOT.zip** är kompilerade AEM-paket. **SRC-screens-weretail-run-0.0.1.zip** är den okompilerade källkoden som kan distribueras med Maven.
 
 [Hämta fil](/help/screens-cloud/developing/assets/screens-weretail-runuiapps-001-snapshot.zip)
 

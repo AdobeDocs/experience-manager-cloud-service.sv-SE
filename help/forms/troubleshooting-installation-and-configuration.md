@@ -5,7 +5,7 @@ contentOwner: khsingh
 feature: Adaptive Forms
 role: User
 exl-id: 249ec8f2-4176-428a-bfcf-80b381ec7263
-source-git-commit: 0b693cb51a96011235fa87a5899426c6b0c2509a
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfiguration {#installation-and-configuration}
 
-Följande problem kan uppstå när du konfigurerar en Cloud Service:
+Följande problem kan uppstå när du konfigurerar en Cloud Service-miljö:
 
 ## Forms-alternativet är inte tillgängligt
 
@@ -30,7 +30,8 @@ Aktivera alternativet **[!UICONTROL Forms]**:
 1. Välj alternativet **[!UICONTROL Forms]** och klicka på **[!UICONTROL Save]**.
 
    ![Välj alternativet Forms](assets/installation-configuration-select-forms-option.png)
-1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=sv-SE#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=sv-SE) både produktions- och icke-produktionspipelines.
+
+1. [Skapa](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) och [kör](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) både produktions- och icke-produktionspipelines.
 
 När pipelinen har skapats och distribuerats är alternativet **[!UICONTROL Forms]** på sidan **[!UICONTROL Navigation]**.
 
@@ -62,4 +63,4 @@ Så här löser du problemet:
 1. Starta AEM och vänta tills alla paket är klara.
 1. Stoppa AEM (Ctrl + C).
 1. Placera Forms `.far`-filen i installationsmappen.
-1. Starta om AEM.
+1. Starta om AEM-servern.

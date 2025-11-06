@@ -6,7 +6,7 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: f772a193cce35a1054f5c6671557a6ec511671a9
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1766'
 ht-degree: 0%
@@ -87,6 +87,7 @@ Skapa ett `Get Information`-formulär som hämtar värden baserat på indata som
 **Formulärfält**
 
 Lägg till följande fält i formuläret:
+
 * **Ange husdjurs-ID**: Textruta
 * **Välj foto-URL:er**: Listruta
 * **Taggar**: Panel
@@ -103,6 +104,7 @@ Lägg till följande fält i formuläret:
 **Konfigurerar paneler**
 
 Ange panelerna som repetitiva med följande begränsningar:
+
 * Minsta värde: 1
 * Högsta värde: 4
 

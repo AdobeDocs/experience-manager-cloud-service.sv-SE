@@ -3,8 +3,8 @@ title: Modelldefinitioner, fält och komponenttyper
 description: Lär dig mer om fält och de komponenttyper som den universella redigeraren kan redigera på egenskapspanelen med exempel. Lär dig hur du kan mäta din egen app genom att skapa en modelldefinition och länka till komponenten.
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 90763049036dbdadaaed93acb088877294f2d750
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1588'
 ht-degree: 1%
@@ -612,7 +612,7 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 >[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
-![&#x200B; Skärmbild av flervalskomponenttyp med gruppering &#x200B;](assets/component-types/multiselect-group.png)
+![ Skärmbild av flervalskomponenttyp med gruppering ](assets/component-types/multiselect-group.png)
 
 >[!ENDTABS]
 

@@ -4,8 +4,8 @@ description: Lär dig att konfigurera RTF-redigeraren så att hjälpmedelsanpass
 contentOwner: AG
 exl-id: 54050fc9-0348-4033-8e2b-b3897588cb62
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 646ca4f4a441bf1565558002dcd6f96d3e228563
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Anvisningar om hur du konfigurerar RTE finns i [Konfigurera RTF-redigeraren](ric
 
 Om du vill aktivera några eller alla funktioner för ett plugin-program konfigurerar du plugin-programmet i rätt `rtePlugins`-undergren i CRXDE Lite.
 
-![CRXDE Lite med exempelplugin-programmet &#x200B;](assets/example-rteplugin-crxde-lite.png)
+![CRXDE Lite med exempelplugin](assets/example-rteplugin-crxde-lite.png)
 
 ### Exempel på hur du anger styckeformat i markeringsfältet för textredigering {#example-specifying-paragraph-formats-available-in-rte-selection-field}
 
@@ -52,7 +52,7 @@ Eftersom strukturella element är tillgängliga i textredigeraren via styckeform
 
 ## Använda Source Edit-funktionen {#use-of-the-source-edit-feature}
 
-I vissa fall måste innehållsförfattare granska och justera HTML källkoden som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med alternativet [källredigering](rich-text-editor.md#aboutplugins) i textredigeraren. Du kan ange funktionen [`sourceedit` i plugin-programmet `misctools` &#x200B;](rich-text-editor.md#aboutplugins).
+I vissa fall måste innehållsförfattare granska och justera HTML källkod som skapats med RTE. En del innehåll som skapats i en textredigerare kan till exempel kräva mer kod för att säkerställa överensstämmelse med WCAG 2.0. Detta kan du göra med alternativet [källredigering](rich-text-editor.md#aboutplugins) i textredigeraren. Du kan ange funktionen [`sourceedit` i plugin-programmet `misctools` ](rich-text-editor.md#aboutplugins).
 
 >[!CAUTION]
 >

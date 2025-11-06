@@ -7,7 +7,7 @@ feature-set: Experience Manager Assets,Experience Manager Sites,Experience Manag
 role: User, Developer
 level: Intermediate
 exl-id: 6ade40f1-bad5-4f5e-aa0e-84b7c6a82e02
-source-git-commit: d8294c358bcc31b7c5e41e3103ec73adc05da6d9
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 0%
@@ -20,6 +20,7 @@ ht-degree: 0%
 Som administratör för Adobe Experience Manager (AEM) Forms kan du publicera formulär från författarinstansen till Experience Manager Forms. Du kan också schemalägga publiceringen av ett formulär eller en mapp för ett senare datum eller en senare tidpunkt. Efter publiceringen kan användarna öppna och fylla i formulären.
 
 I Experience Manager Forms kan du publicera ett formulär på något av följande sätt:
+
 * [Publiceringsalternativ](#publish-forms-using-the-publish-option)
 * [Hantera publikation, alternativ](#publish-forms-using-the-manage-publication-option)
 
@@ -52,7 +53,7 @@ När du har publicerat formuläret med alternativet **Publicera** och dess relat
    När du klickar på knappen **[!UICONTROL Unpublish]** visas dialogrutan **Avpublicera resurs**.
 1. Klicka på **[!UICONTROL Unpublish]** för att starta avpubliceringsprocessen
 
-   ![Dialogrutan Upprepa &#x200B;](/help/forms/assets/unpublish-asset.png)
+   ![Dialogrutan Upprepa ](/help/forms/assets/unpublish-asset.png)
 
    När formuläret och dess relaterade resurser har avpublicerats visas dialogrutan **Slutfört**.
 1. Klicka på **Stäng**.
@@ -90,7 +91,7 @@ Med Hantera publikation kan du publicera eller avpublicera innehåll till och fr
       * **Senare**: Publicera formulär baserat på **aktiveringsdatum** eller tid
 
 1. Klicka på **Nästa** för att fortsätta.
-1. (Valfritt) Använd alternativet [Lägg till innehåll](#add-content) på fliken **Omfång** för att lägga till mer innehåll för publicering. Du kan t.ex. lägga till fler Forms- eller dokumentfiler.
+1. (Valfritt) Använd alternativet **Lägg till innehåll** på fliken [Omfång](#add-content) för att lägga till mer innehåll för publicering. Du kan t.ex. lägga till fler Forms- eller dokumentfiler.
    ![fliken Omfång](/help/forms/assets/scope-tab.png)
 1. Klicka på **[!UICONTROL Publish]** om du vill publicera formulären och tillhörande resurser och ett meddelande om att det lyckades visas.
    ![publicerade meddelande](/help/forms/assets/publish-successful.png)
@@ -166,10 +167,10 @@ Så här schemalägger du ett formulär för publicering eller avpublicering:
 
 1. Välj en **[!UICONTROL Activation date]** och ange datum och tid.
 1. Klicka på **[!UICONTROL Next]**.
-1. (Valfritt) Lägg till innehåll med **[!UICONTROL Add Content]** på fliken **Omfång** .
+1. (Valfritt) Lägg till innehåll med **på fliken** Omfång **[!UICONTROL Add Content]** .
    ![Hantera publikation, lägg till innehåll senare](/help/forms/assets/publish-later-add-content.png)
 1. Klicka på **[!UICONTROL Next]**.
-1. Ange **[!UICONTROL Workflow title]** på fliken **Arbetsflöden**.
+1. Ange **på fliken** Arbetsflöden **[!UICONTROL Workflow title]**.
 1. Klicka på **[!UICONTROL Publish Later]**.
 
    ![Hantera publikationsarbetsflöde](/help/forms/assets/manage-publication-workflows.png)

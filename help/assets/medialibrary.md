@@ -3,9 +3,9 @@ title: Använd mediebiblioteket för grundläggande hantering av digitala resurs
 description: '[!DNL Experience Manager Assets] och mediebibliotek för resurshantering.'
 contentOwner: AG
 feature: Asset Management, Publishing
-role: User, Architect, Leader
+role: User, Developer, Leader
 exl-id: 4737d5ee-9a93-49f3-9f20-d4368e60e9fb
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Define what is not included
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/medialibrary.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/medialibrary.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Plattformen [!DNL Adobe Experience Manager] har olika funktioner för att hantera resurser. Med mediebiblioteket kan användarna överföra ett litet antal resurser till databasen, söka efter och använda dem på webbsidorna och utföra enkla resurshanteringsåtgärder på resurserna.
@@ -116,5 +116,5 @@ Du kan inte använda smarta taggar, [!DNL Asset]-länk, [!DNL Asset]-väljare, b
 
 >[!MORELIKETHIS]
 >
->* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html?lang=sv-SE)
->* [[!DNL Experience Manager] som en [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-cloud-service.html)
+>* [DAM-funktioner i [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/home.html)
+>* [[!DNL Experience Manager] som en [!DNL Cloud Service] produktbeskrivning](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-cloud-service.html)

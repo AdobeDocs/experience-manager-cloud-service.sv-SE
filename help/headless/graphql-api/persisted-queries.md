@@ -4,7 +4,7 @@ description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Mana
 feature: Headless, Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 1%
@@ -13,13 +13,13 @@ ht-degree: 1%
 
 # Beständiga GraphQL-frågor {#persisted-graphql-queries}
 
-Beständiga frågor är GraphQL-frågor som skapas och lagras på Adobe Experience Manager (AEM) as a Cloud Service server. De kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med förfrågningar från POSTER där svaret inte enkelt kan cachas.
+Beständiga frågor är GraphQL-frågor som skapas och lagras på Adobe Experience Manager (AEM) as a Cloud Service-servern. De kan begäras med en GET-begäran från klientprogram. Svaret på en GET-begäran kan cachelagras på dispatcher- och CDN-lagren, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Detta skiljer sig från vanliga GraphQL-frågor, som körs med POST-begäranden där svaret inte enkelt kan cachas.
 
 >[!NOTE]
 >
 >Beständiga frågor rekommenderas. Läs [GraphQL Query Best Practices (Dispatcher)](/help/headless/graphql-api/content-fragments.md#graphql-query-best-practices) om du vill ha mer information och relaterad Dispatcher-konfiguration.
 
-[GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) är tillgänglig i AEM så att du kan utveckla, testa och behålla dina GraphQL-frågor innan du [överför till produktionsmiljön](#transfer-persisted-query-production). Om du behöver anpassa (till exempel när du [anpassar cachen](/help/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se exemplet på cURL i [Så här gör du för att behålla en GraphQL-fråga](#how-to-persist-query).
+[GraphiQL IDE](/help/headless/graphql-api/graphiql-ide.md) är tillgänglig i AEM så att du kan utveckla, testa och behålla dina GraphQL-frågor innan du [överför dem till produktionsmiljön](#transfer-persisted-query-production). Om du behöver anpassa (till exempel när du [anpassar cachen](/help/headless/graphql-api/graphiql-ide.md#caching-persisted-queries)) kan du använda API:t, se exemplet på cURL i [Så här gör du för att behålla en GraphQL-fråga](#how-to-persist-query).
 
 ## Beständiga frågor och slutpunkter {#persisted-queries-and-endpoints}
 
@@ -52,7 +52,7 @@ Om det till exempel finns en viss fråga med namnet `my-query` som använder mod
 
 ## Så här behåller du en GraphQL-fråga {#how-to-persist-query}
 
-Vi rekommenderar att du till att börja med behåller frågor i en AEM redigeringsmiljö och sedan [överför frågan](#transfer-persisted-query-production) till din AEM publiceringsmiljö, som kan användas av program.
+Vi rekommenderar att du till att börja med behåller frågor i en AEM-redigeringsmiljö och sedan [överför frågan](#transfer-persisted-query-production) till din publiceringsmiljö i AEM där den kan användas av program.
 
 Det finns olika metoder för beständiga frågor, bland annat:
 
@@ -277,11 +277,13 @@ När `CACHE_GRAPHQL_PERSISTED_QUERIES` är aktiverat för Dispatcher kodas param
 För att undvika denna situation:
 
    * Aktivera `DispatcherNoCanonURL` på Dispatcher.
-Detta instruerar Dispatcher att vidarebefordra den ursprungliga URL-adressen till AEM, så att dubblerade kodningar förhindras.
+Detta instruerar Dispatcher att vidarebefordra den ursprungliga URL:en till AEM, så att dubblerade kodningar förhindras.
 Den här inställningen fungerar för närvarande bara på nivån `vhost`, så om du redan har Dispatcher-konfigurationer för att skriva om URL:er (t.ex. när du använder förkortade URL:er) kan du behöva en separat `vhost` för beständiga fråge-URL:er.
 
    * Skicka `/` eller `\` tecken utan kodning.
-När du anropar den beständiga fråge-URL:en måste du se till att alla `/`- eller `\`-tecken förblir okodade i värdet för beständiga frågevariabler.
+
+     När du anropar den beständiga fråge-URL:en måste du se till att alla `/`- eller `\`-tecken förblir okodade i värdet för beständiga frågevariabler.
+
      >[!NOTE]
      >
      >Det här alternativet rekommenderas bara när `DispatcherNoCanonURL`-lösningen inte kan implementeras av någon anledning.
@@ -294,7 +296,7 @@ När du anropar den beständiga fråge-URL:en måste du se till att alla `/`- el
 
 Beständiga frågor rekommenderas eftersom de kan cachelagras på [Dispatcher](/help/headless/deployment/dispatcher.md) - och CDN-lagren (Content Delivery Network), vilket i slutänden förbättrar prestandan för det begärande klientprogrammet.
 
-Som standard blir cachen ogiltig AEM baserat på en TTL-definition (Time To Live). Dessa TTL:er kan definieras med följande parametrar. Dessa parametrar kan nås på olika sätt, med variationer i namnen beroende på vilken mekanism som används:
+Som standard gör AEM cachen ogiltig baserat på en TTL-definition (Time To Live). Dessa TTL:er kan definieras med följande parametrar. Dessa parametrar kan nås på olika sätt, med variationer i namnen beroende på vilken mekanism som används:
 
 | Cache-typ | [HTTP-huvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi-konfiguration  | Cloud Manager |
 |--- |--- |--- |--- |--- |
@@ -322,7 +324,7 @@ De var:
    * av en begäran som definierar inställningar för HTTP-huvudet med cURL; den bör innehålla lämpliga inställningar för `cache-control` och/eller `surrogate-control`; se till exempel [Hantera cache på den beständiga frågenivån](#cache-persisted-query-level)
    * om du anger värden i dialogrutan **Headers** i [GraphiQL IDE](#http-cache-headers-graphiql-ide)
 
-### Publish-instanser {#publish-instances}
+### Publicera förekomster {#publish-instances}
 
 Standardvärdena för publiceringsinstanser är:
 
@@ -335,7 +337,7 @@ Dessa kan skrivas över:
 
 * [från GraphQL IDE](#http-cache-headers-graphiql-ide)
 
-* [&#x200B; på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
+* [ på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
 
 * [med Cloud Manager-variabler](#cache-cloud-manager-variables)
 
@@ -349,7 +351,7 @@ GraphiQL IDE - se [Spara beständiga frågor](/help/headless/graphql-api/graphiq
 
 Detta innebär att skicka frågan till AEM med cURL i kommandoradsgränssnittet.
 
-Ett exempel på metoden PUT (skapa):
+Ett exempel på PUT-metoden (skapa):
 
 ```bash
 curl -u admin:admin -X PUT \
@@ -358,7 +360,7 @@ curl -u admin:admin -X PUT \
 --data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-Ett exempel på metoden POST (update):
+Ett exempel på POST-metoden (update):
 
 ```bash
 curl -u admin:admin -X POST \
@@ -367,7 +369,7 @@ curl -u admin:admin -X POST \
 --data '{ "query": "{articleList { items { _path author } } }", "cache-control": { "max-age": 300 }, "surrogate-control": {"max-age":600, "stale-while-revalidate":1000, "stale-if-error":1000} }'
 ```
 
-`cache-control` kan anges när den skapas (PUT) eller senare (till exempel via en POST-förfrågan). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Så här behåller du en GraphQL-fråga](#how-to-persist-query) om du vill se ett exempel på hur en fråga bevaras med cURL.
+`cache-control` kan anges när den skapas (PUT) eller senare (till exempel via en POST-begäran). Cachekontrollen är valfri när du skapar den beständiga frågan, eftersom AEM kan ange standardvärdet. Se [Så här behåller du en GraphQL-fråga](#how-to-persist-query) om du vill se ett exempel på hur en fråga bevaras med cURL.
 
 ### Hantera cache med Cloud Manager-variabler {#cache-cloud-manager-variables}
 
@@ -464,15 +466,15 @@ I vanlig text ser URI:n för begäran ut så här:
 /graphql/execute.json/wknd/adventure-by-path;adventurePath=/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp
 ```
 
-Om du vill använda en beständig fråga i en klientapp bör den AEM huvudlösa klientens SDK användas för [JavaScript](https://github.com/adobe/aem-headless-client-js), [Java](https://github.com/adobe/aem-headless-client-java) eller [NodeJS](https://github.com/adobe/aem-headless-client-nodejs). SDK för den Headless-klienten kodar automatiskt alla frågevariabler som behövs i begäran.
+Om du vill använda en beständig fråga i en klientapp bör AEM Headless-klienten SDK användas för [JavaScript](https://github.com/adobe/aem-headless-client-js), [Java](https://github.com/adobe/aem-headless-client-java) eller [NodeJS](https://github.com/adobe/aem-headless-client-nodejs). Den Headless Client SDK kodar automatiskt alla frågevariabler som behövs i begäran.
 
 ## Överför en beständig fråga till produktionsmiljön  {#transfer-persisted-query-production}
 
-Beständiga frågor ska alltid skapas på en AEM författartjänst och sedan publiceras (replikeras) till en AEM Publish-tjänst. Vanligtvis skapas och testas beständiga frågor i miljöer som lokala miljöer och utvecklingsmiljöer. Det är sedan nödvändigt att befordra beständiga frågor till miljöer på högre nivå, vilket i slutänden gör dem tillgängliga i en AEM Publish-miljö för att klientprogram ska kunna använda dem.
+Beständiga frågor ska alltid skapas i en AEM Author-tjänst och sedan publiceras (replikeras) i en AEM Publish-tjänst. Vanligtvis skapas och testas beständiga frågor i miljöer som lokala miljöer och utvecklingsmiljöer. Det är sedan nödvändigt att befordra beständiga frågor till miljöer på högre nivå och i slutänden göra dem tillgängliga i en produktionsmiljö i AEM Publish för att klientprogram ska kunna använda dem.
 
 ### Paketera beständiga frågor
 
-Beständiga frågor kan byggas in i [AEM paket](/help/implementing/developing/tools/package-manager.md). AEM paket kan sedan laddas ned och installeras i olika miljöer. AEM paket kan också replikeras från en AEM redigeringsmiljö till AEM Publish-miljöer.
+Beständiga frågor kan byggas in i [AEM-paket](/help/implementing/developing/tools/package-manager.md). AEM Packages kan sedan laddas ned och installeras i olika miljöer. AEM-paket kan också replikeras från en AEM Author-miljö till AEM Publish-miljöer.
 
 Skapa ett paket:
 

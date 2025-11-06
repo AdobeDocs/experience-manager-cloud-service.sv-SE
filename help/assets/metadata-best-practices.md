@@ -4,7 +4,7 @@ description: Lär dig mer om metadata och de effektivaste strategierna för att 
 role: User, Admin
 exl-id: d90519df-55a6-4e23-81ad-ff2365d71c0d
 feature: Metadata, Best Practices
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 0%
@@ -97,7 +97,7 @@ Bestäm var informationen kommer från och granska detaljerna i metadatastrategi
 
 >[!NOTE]
 >
->Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=sv-SE).
+>Lär dig hur du [hanterar metadata för dina digitala resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html).
 
 ### Var konsekvent med metadatastrategin
 
@@ -107,11 +107,13 @@ Vid namngivning och referering av resurser är det viktigt med konsekvent hanter
 
 Här är några av de bästa sätten att följa:
 
-* **Undvik dubblettvärden:** Om du har en samling bilder från en marknadsföringskampanj bör du använda konsekventa namn och undvika dubbletter.<br>
-I stället för att använda dubblettnamn som *campaign_image_001* och *campaign_image_002* kan du implementera en systematisk namnkonvention som *event_promotion* och *product_launch* för att säkerställa en tydlig och ordnad identifiering.
+* **Undvik dubblettvärden:** Om du har en samling bilder från en marknadsföringskampanj bör du använda konsekventa namn och undvika dubbletter.
 
-* **Använd kontrollerade vokabulärer effektivt:** Implementera kontrollerade vokabulärer genom att använda standardiserade termer för taggar. Lär dig hur du implementerar [AEM Tagging Framework](/help/implementing/developing/introduction/tagging-framework.md) effektivt.  <br>
-Använd till exempel termer som *product_launch* eller *event_Promotion* konsekvent när du taggar bilder med teman för att bibehålla en systematisk sekvens.
+  I stället för att använda dubblettnamn som *campaign_image_001* och *campaign_image_002* kan du implementera en systematisk namnkonvention som *event_promotion* och *product_launch* för att säkerställa en tydlig och ordnad identifiering.
+
+* **Använd kontrollerade vokabulärer effektivt:** Implementera kontrollerade vokabulärer genom att använda standardiserade termer för taggar. Lär dig hur du implementerar [AEM Tagging Framework](/help/implementing/developing/introduction/tagging-framework.md) effektivt.
+
+  Använd till exempel termer som *product_launch* eller *event_Promotion* konsekvent när du taggar bilder med teman för att bibehålla en systematisk sekvens.
 
 * **Bevara noggrannhet och fullständighet:** Det är viktigt att alla metadata är konsekventa, exakta, fullständiga och justerade mellan olika källor.
 Om du till exempel lägger till metadata i ett PDF-dokument bör du kontrollera att information som författarnamn och nyckelord är korrekta och fullständiga.
@@ -136,7 +138,7 @@ Du kan lägga till flera nyckelord och ordna dem efter din prioritet.
    1. Klicka på **[!UICONTROL Save & Close]**.
 Sök efter resursen med de nyckelord du har lagt till. Resursen visas bland de översta sökresultaten.
 
-  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=sv-SE).
+  Lär dig hur du [förbättrar sökningen i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
 
 * **Anpassade metadatafält:** Anpassa metadatafälten för att hämta ytterligare information om resurser. Du kan till exempel lägga till specifika fält för projektinformation, copyrightinformation eller andra relevanta data som förbättrar sökfunktionerna. Lär dig [att redigera eller lägga till anpassade metadata](meta-edit.md) i Experience Manager Assets.
 
@@ -166,4 +168,4 @@ Undersök innehållsförsörjningskedjan för att hitta metadatakällor och enga
 
 informera om mål, framsteg, milstolpar och utmaningar tidigt för att få synpunkter och samarbete från alla intressenter. Uppmuntra samarbete i hela organisationen för att skapa effektiva processer och värdefulla metadata.
 
-Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html?lang=sv-SE) för att effektivt hantera dina Experience Manager-metadata.
+Läs mer om [metadata och relaterade koncept](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/metadata-concepts.html) för att effektivt hantera dina Experience Manager-metadata.

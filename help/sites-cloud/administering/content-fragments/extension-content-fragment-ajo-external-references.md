@@ -2,15 +2,15 @@
 title: Använda AJO Externa referenser för innehållsfragment
 description: Läs mer om tillägget AJO External References i Content Fragment
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 solution: Experience Manager Sites
-source-git-commit: f755a5c621b68b3110642e6cfe150798555b6707
+exl-id: 79c90e6b-91da-4f5a-ac96-a98ef7f8d4cd
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
-
 
 # AJO-tillägget Externa referenser för innehållsfragment {#content-fragment-external-references-extension}
 
@@ -30,7 +30,7 @@ Så här använder du tillägget med AJO:
 
 >[!NOTE]
 >
->Se även [AJO-integrering](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/integrations/aem-fragments).
+>Se även [AJO-integrering](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/integrations/aem-fragments).
 
 1. Öppna konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md#content-fragments-console).
 

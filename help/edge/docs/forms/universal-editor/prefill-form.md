@@ -7,7 +7,7 @@ level: Beginner, Intermediate
 time: 45-60 minutes
 keywords: förifyllnadsformulär, adaptiva blanketttjänster, automatisk ifyllnad av blanketter
 exl-id: 7b6224e2-a19c-4146-8545-0ce9d1da9b29
-source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 0%
@@ -157,7 +157,7 @@ Universal Editor har två alternativ för förifyllningstjänsten:
 
 1. Klicka på **Skapa** för att öppna guiden **Skapa formulär**
 
-   >
+   >[!NOTE]
    >
    > Du kan konfigurera datakällan på fliken **Data** eller senare genom att redigera formuläregenskaperna.
 

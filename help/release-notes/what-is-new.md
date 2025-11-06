@@ -4,7 +4,7 @@ description: Nyheter i Adobe Experience Manager (AEM) as a Cloud Service.
 exl-id: f854aaf8-e84d-4904-832f-f72433590920
 feature: Release Information
 role: Admin
-source-git-commit: d2d45a7889b94d3886c6fd539231b72c5b796755
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
@@ -16,6 +16,7 @@ ht-degree: 0%
 Adobe Experience Manager (AEM) as a Cloud Service är en molnbaserad plattform som optimerar arbetsflöden för marknadsförare och utvecklare för hela innehållets livscykel, inklusive funktioner för webbinnehåll och hantering av digitala resurser. Eftersom programmet är inbyggt i molnet har det skalbara prestanda, en säker infrastruktur, får smidiga uppdateringar för att hålla sig uppdaterade och möjliggör problemfri driftsättning och administration.
 
 En översikt över Adobe Experience Manager as a Cloud Service finns i:
+
 * [Introduktion till AEM as a Cloud Service](/help/overview/introduction.md)
 * [Arkitekturen](/help/overview/architecture.md) i Adobe Experience Manager as a Cloud Service
 * En [översikt över AEM as a Cloud Service - Vad är nytt och vad är annorlunda](/help/overview/what-is-new-and-different.md)

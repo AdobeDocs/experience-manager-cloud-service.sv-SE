@@ -3,8 +3,8 @@ title: Exempel på ContextHub Store-kandidater
 description: ContextHub innehåller flera exempel på arkivkandidater som du kan använda i dina lösningar
 exl-id: 9493d91e-0b23-4dc4-a014-d8d13687efad
 feature: Developing, Personalization
-role: Admin, Architect, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
@@ -105,7 +105,7 @@ I butiken används ett dataträd som liknar följande exempel:
 
 >[!NOTE]
 >
->En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en säker anslutning. AEM tvingar därför även https-användning för API-anrop för geopositionering om AEM körs över https. Annars används http för att följa principen för samma ursprung.
+>En säkerhetsprincip som introducerades i Chrome 50.x kräver att alla geopositioneringsrelaterade anrop görs via en säker anslutning. Därför tvingar AEM även https-användning för API-anrop för geopositionering om AEM även körs över https. Annars används http för att följa principen för samma ursprung.
 >
 >Se [det här Google-blogginlägget](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only) för mer information om ändringen i Chrome.
 

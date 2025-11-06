@@ -4,12 +4,12 @@ description: Lär dig hur du skapar händelsestyrda App Builder-program.
 version: Experience Manager as a Cloud Service
 feature: App Builder, Developing
 topic: Integrations, Development
-role: Developer, Architect
+role: Developer
 level: Beginner
 kt: 9458,9479
 thumbnail: 339244.jpg
 exl-id: 6cd06ddc-2ce3-4e59-bd62-baee44763591
-source-git-commit: 1bd36e584d956c5ae8da7b1d618e155da86a74f5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

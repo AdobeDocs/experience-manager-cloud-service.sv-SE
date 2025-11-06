@@ -4,9 +4,9 @@ description: Lär dig hur du identifierar dubblettresurser
 contentOwner: KK
 mini-toc-levels: 3
 feature: Asset Management, Publishing,Collaboration, Asset Processing
-role: User, Architect, Admin
+role: User, Developer, Admin
 exl-id: 40f63933-4f4e-4318-8d42-4b5c9b01f7cd
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/duplicate-detection.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Om en DAM-användare överför en eller flera resurser som redan finns i databasen, upptäcker [!DNL Experience Manager] dupliceringen och meddelar användaren. Dubblettidentifiering är inaktiverat som standard eftersom det kan påverka prestanda beroende på databasens storlek och antalet överförda resurser.
@@ -29,7 +29,7 @@ Så här aktiverar du funktionen:
 
 1. Klicka på **[!UICONTROL Asset Duplication Detector]**.
 
-1. Klicka på **[!UICONTROL Enabled]** på [!UICONTROL Asset Duplication Detector page].
+1. Klicka på [!UICONTROL Asset Duplication Detector page] på **[!UICONTROL Enabled]**.
 
    Värdet `dam:sha1` för fältet Identifiera metadata ser till att dubblettresurser identifieras även om filnamnen är olika.
 

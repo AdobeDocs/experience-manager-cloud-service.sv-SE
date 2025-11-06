@@ -6,7 +6,7 @@ keywords: Captcha&reg; service, Adaptive Forms, CAPTCHA enge, Bot Prevention, Co
 feature: Adaptive Forms, Core Components
 exl-id: 6c559df2-7b6a-42fe-b44c-29a782570a0c
 role: User, Developer
-source-git-commit: 76301ca614ae2256f5f8b00c41399298c761ee33
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '909'
 ht-degree: 0%
@@ -20,6 +20,7 @@ ht-degree: 0%
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
 AEM Forms as a Cloud Service stöder följande CAPTCHA-lösningar:
+
 * [hCaptcha](#integrate-aem-forms-environment-with-hcaptcha-captcha)
 * [Google reCAPTCHA](/help/forms/captcha-adaptive-forms-core-components.md)
 * [hCaptcha](/help/forms/integrate-adaptive-forms-hcaptcha-core-components.md)
@@ -35,7 +36,7 @@ AEM Forms as a Cloud Service har stöd för Captcha® i adaptiva Forms Core-komp
 
 ### Förutsättningar för att integrera AEM Forms-miljön med Captcha® {#prerequisite}
 
-Om du vill konfigurera hCaptcha® med AEM Forms måste du hämta sitekey och hemlig nyckel [&#128279;](https://docs.hcaptcha.com/switch/#get-your-hcaptcha-sitekey-and-secret-key) för hCaptcha® från webbplatsen hCaptcha®.
+Om du vill konfigurera hCaptcha® med AEM Forms måste du hämta sitekey och hemlig nyckel [ för ](https://docs.hcaptcha.com/switch/#get-your-hcaptcha-sitekey-and-secret-key)hCaptcha® från webbplatsen hCaptcha®.
 
 ### Konfigurera hCaptcha® {#steps-to-configure-hcaptcha}
 
@@ -57,21 +58,19 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
 
 1. Konfigurera Cloud Service:
    1. Gå till ![tools-1](assets/tools-1.png) > **[!UICONTROL Cloud Services]** och välj **[!UICONTROL hCaptcha®]** i AEM-författarinstansen.
-
       ![hCaptcha® i ui](assets/hcaptcha-in-ui.png)
    1. Välj en konfigurationsbehållare, skapad eller uppdaterad, enligt beskrivningen i föregående avsnitt. Välj **[!UICONTROL Create]**.
-
       ![Configuration Captcha®](assets/config-hcaptcha.png)
-   1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för hCaptcha®-tjänsten [&#x200B; som hämtas i Krav](#prerequisite). Välj **[!UICONTROL Create]**.
+   1. Ange **[!UICONTROL Title]**, **[!UICONTROL Name]**, **[!UICONTROL Site Key]** och **[!UICONTROL Secret Key]** för hCaptcha®-tjänsten [ som hämtas i Krav](#prerequisite). Välj **[!UICONTROL Create]**.
 
       ![Konfigurera Cloud Service för att ansluta din AEM Forms-miljö till Captcha®](assets/create-hcaptcha-config.png)
 
    >[!NOTE]
-   > Användarna behöver inte ändra [Verifierings-URL:en för klientsidan &#x200B;](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Verifierings-URL:en för serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering.
+   > Användarna behöver inte ändra [Verifierings-URL:en för klientsidan ](https://docs.hcaptcha.com/#add-the-hcaptcha-widget-to-your-webpage) och [Verifierings-URL:en för serversidan](https://docs.hcaptcha.com/#verify-the-user-response-server-side) eftersom de redan är förfyllda för hCaptcha®-validering.
 
-   När hCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i ett [adaptivt formulär baserat på kärnkomponenter](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/introduction).
+   När hCAPTCHA-tjänsten har konfigurerats är den tillgänglig för användning i ett [adaptivt formulär baserat på kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction).
 
-## Använd hCaptcha® i en anpassad Forms Core-komponent {#using-hCaptcha®-core-components}
+## Använd Captcha® i en adaptiv Forms Core-komponent {#using-hCaptcha&reg;-core-components}
 
 1. Öppna AEM Forms as a Cloud Service-instansen.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.

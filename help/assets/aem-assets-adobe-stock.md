@@ -5,7 +5,7 @@ contentOwner: Vishabh Gupta
 feature: Adobe Stock
 role: Admin, User
 exl-id: 13f21d79-2a8d-4cb1-959e-c10cc44950ea
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2018'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Stock]-tjänsten ger designer och företag tillgång till miljontals utvalda och royaltyfria foton, vektorer, illustrationer, videor, mallar och 3D-resurser av hög kvalitet för alla kreativa projekt.
@@ -205,6 +205,7 @@ To configure the IMS account:
 ### Konfigurera ett program i [!DNL Developer Console] {#set-up-a-program-in-developer-console}
 
 Utför följande steg för att konfigurera ett program i [!DNL Developer Console]:
+
 1. Navigera till [[!DNL Adobe Developer Console]](https://developer.adobe.com/console/14431/user/servicesandapis) och logga in på din organisation.
 1. Välj **[!UICONTROL Create new project]** som är tillgänglig på kontrollpanelen **[!UICONTROL Projects]**.
    ![integrera aem-resurser med Adobe Stock](/help/assets/assets/create-new-project-in-adobe-dev-console.png)
@@ -212,8 +213,11 @@ Utför följande steg för att konfigurera ett program i [!DNL Developer Console
 1. Markera **[!UICONTROL Adobe Stock]** och klicka på **[!UICONTROL Next]**.
 1. Ange en **[!UICONTROL Credential name]** och verifiera att **[!UICONTROL OAuth Server-to-Server]** är markerad och klicka på **[!UICONTROL Next]**.
 1. Välj **[!UICONTROL AEM Assets]** **[!UICONTROL Product profile]** och klicka på **[!UICONTROL Save Configured API]**. Ett meddelande visas som bekräftar att du har skapat ett projekt i [!DNL Developer Console]. Projektets kontrollpanel öppnas och projektnamnet visas högst upp, **[!UICONTROL Adobe Stock]** under **[!UICONTROL APIS]** och **[!UICONTROL AEM Assets]** under **[!UICONTROL Product profile]** och **[!UICONTROL OAuth Server-to-Server]** under **[!UICONTROL Connected credentials]**.
+
    ![integrera aem-resurser och adobe stock](/help/assets/assets/adc-project-name.png)
+
 1. Välj autentiseringskortet **[!UICONTROL OAuth Server-to-Server]** så visas **[!UICONTROL Credential details]**. Använd dessa [!DNL OAuth Server-to-Server]-autentiseringsuppgifter för ditt projekt, till exempel **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]**, **[!UICONTROL Scope]**, **[!UICONTROL Credential Name]**, **[!UICONTROL Technical Account ID]**, **[!UICONTROL Organization ID]** för att [lägga till konfiguration i AEM-författarinstansen](#add-configuration-in-the-aem-author-instance).
+
    ![aem assets and adobe stock](/help/assets/assets/oauth-server-server-credentials-details-page.png)
 
 ### Lägg till konfiguration i författarinstansen [!DNL AEM] {#add-configuration-in-the-aem-author-instance}
@@ -226,21 +230,21 @@ Utför följande steg för att lägga till konfiguration i [!DNL AEM]-författar
 #### Konfigurera en ny [!DNL Adobe Stock IMS configuration] i din [!DNL AEM author]-instans {#set-up-adobe-stock-ims-configuration-in-aem-author-instance}
 
 Utför följande steg för att konfigurera en ny [!DNL Adobe Stock IMS configuration] i [!DNL AEM]-författarinstansen:
+
 1. Navigera till [!DNL AEM]-författarinstansen.
 1. Klicka på ![aem assets and adobe stock](/help/assets/assets/Hammer.svg), välj **[!UICONTROL Security]** och välj **[!UICONTROL Adobe IMS Configurations]**.
 1. Klicka på **[!UICONTROL Create]** om du vill skapa en ny IMS-konfiguration. På sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** visas flera fält, till exempel **[!UICONTROL Cloud Solution]**, **[!UICONTROL Title]**, **[!UICONTROL Authorization Server]**, **[!UICONTROL Client ID]**, **[!UICONTROL Client Secret]**, **[!UICONTROL Scope]** och **[!UICONTROL Org ID]**. Följ de här instruktionerna för att ange information i dessa fält:
+
    * **[!UICONTROL Cloud Solution]**: Välj **[!UICONTROL Adobe Stock]**.
    * **[!UICONTROL Title]**: Ange ett namn för den här integreringen.
    * **[!UICONTROL Authorization Server]**: Lägg till [https://ims-na1.adobelogin.com/](https://ims-na1.adobelogin.com/) som auktoriseringsserver.
    * **[!UICONTROL Client ID]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Client ID]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
-
    * **[!UICONTROL Client Secret]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, klicka på **[!UICONTROL Retrieve Client Secret]**, kopiera **[!UICONTROL client secret]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
-
    * **[!UICONTROL Scope]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Scope]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
-
    * **[!UICONTROL Org ID]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Organization ID]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
 
-     ![aem assets and adobe stock](/help/assets/assets/adobe-ims-technical-account-configuration.png)
+   ![aem assets and adobe stock](/help/assets/assets/adobe-ims-technical-account-configuration.png)
+
 1. Klicka på **[!UICONTROL Create]** så öppnas sidan **[!UICONTROL Adobe IMS Configurations]** och visar den [!DNL Adobe Stock]-integrering som du har skapat.
 
 #### Lägg till molnkonfigurationen för att ansluta till [!DNL Adobe Stock] {#add-cloud-configuration-to-connect-adobe-stock}
@@ -249,12 +253,17 @@ Utför följande steg för att lägga till molnkonfigurationen för att ansluta 
 
 1. Navigera till din [!DNL AEM author]-instans.
 1. Klicka på ![aem assets och adobe stock](/help/assets/assets/Hammer.svg), välj **[!UICONTROL Cloud Services]**, bläddra och välj **[!UICONTROL Adobe Stock]**.
+
    ![använder Adobe Stock med aem](/help/assets/assets/adding-cloud-config-to-adobe-stock.png)
+
 1. Klicka på **[!UICONTROL Create]** så visas flera fält på sidan **[!UICONTROL Adobe Stock Configuration]**. Följ de här instruktionerna för att ange information i dessa fält:
+
    * **[!UICONTROL Title]**: Navigera till sidan **[!UICONTROL Adobe IMS Technical Account Configuration]** (se [steg 3](#set-up-adobe-stock-ims-configuration-in-aem-author-instance)), kopiera titeln och klistra in den här.
    * **[!UICONTROL Associated Adobe IMS Configuration]**: Välj den [!DNL Adobe Stock]-integrering som du skapade.
    * **[!UICONTROL Locale]**: Välj **[!UICONTROL English (United States)]**.
+
 1. Klicka på **[!UICONTROL Save & Close]**.
+
    ![använder Adobe Stock med aem](/help/assets/assets/adobe-stock-config-page.png)
 
 <!--
@@ -276,6 +285,7 @@ To configure the [!DNL Adobe Stock] cloud service:
 
 1. Click **[!UICONTROL Save & Close]**. 
 -->
+
 Din [!DNL Experience Manager Assets]-författarinstans är nu integrerad med [!DNL Adobe Stock]. Du kan skapa flera [!DNL Adobe Stock]-konfigurationer (till exempel språkbaserade konfigurationer). Du kan nu komma åt, söka efter och licensiera [!DNL Adobe Stock]-resurserna inifrån användargränssnittet i [!DNL Experience Manager].
 
 ![search-stock-assets](assets/aem-stock-searchstocks.png)
@@ -305,7 +315,7 @@ Du kan skapa en användargrupp eller tilldela behörigheter till en befintlig an
 
 **För att ge åtkomst till en användargrupp från [!DNL Experience Manager]:**
 
-1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]** i användargränssnittet för [!DNL Experience Manager]. Skapa en användargrupp för [!DNL Adobe Stock].
+1. Navigera till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Security]** i användargränssnittet för **[!UICONTROL Groups]**. Skapa en användargrupp för [!DNL Adobe Stock].
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Permissions]**.
 
@@ -381,7 +391,7 @@ När en [!DNL Adobe Stock]-resurs har licensierats i [!DNL Experience Manager] k
 
 ![Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från din [!DNL Adobe Experience Manager]-arbetsyta](assets/adobe-stock-search-results-workspace.png)
 
-**A.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock]-ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterfönstret **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på webbplatsen [!DNL Adobe Stock] som liknar den valda resursen **&rbrace;H.** Visa de markerade resurserna på [!DNL Adobe Stock] webbplatsen **I.** Antal markerade resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
+**A.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock]-ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterfönstret **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på webbplatsen [!DNL Adobe Stock] som liknar den valda resursen **}H.** Visa de markerade resurserna på [!DNL Adobe Stock] webbplatsen **I.** Antal markerade resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
 
 ### Hitta resurser {#find-assets}
 
@@ -525,6 +535,6 @@ Users can see the properties for both, licensed and unlicensed assets.
 
 >[!MORELIKETHIS]
 >
->* [Videosjälvstudiekurs om hur du använder Adobe Stock-resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=sv-SE)
->* [Adobe Stock Enterprise Plan - hjälp](https://helpx.adobe.com/se/enterprise/using/adobe-stock-enterprise.html)
->* [Vanliga frågor om Adobe Stock](https://helpx.adobe.com/se/stock/faq.html)
+>* [Videosjälvstudiekurs om hur du använder Adobe Stock-resurser med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
+>* [Adobe Stock Enterprise Plan - hjälp](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
+>* [Vanliga frågor om Adobe Stock](https://helpx.adobe.com/stock/faq.html)

@@ -2,9 +2,9 @@
 title: Komponentdefinition
 description: Förstå JSON-kontraktet mellan komponentdefinitionen och den universella redigeraren i detalj.
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: e1bb1a54-50c0-412a-a8fd-8167c6f47d2b
-source-git-commit: b4e61ec6abcaf73119f8963d72317759b2bd7c76
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Filen `component-definition.json` definierar de komponenter som är tillgänglig
 
 >[!TIP]
 >
->Du behöver inte skapa en egen `component-definition.json`-fil från grunden. Projektmallen som du använder för att [bootstrap ditt projekt](https://www.aem.live/developer/ue-tutorial) innehåller en [fullt fungerande `component-definition.json` fil &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) som du kan anpassa efter dina behov.
+>Du behöver inte skapa en egen `component-definition.json`-fil från grunden. Projektmallen som du använder för att [bootstrap ditt projekt](https://www.aem.live/developer/ue-tutorial) innehåller en [fullt fungerande `component-definition.json` fil ](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) som du kan anpassa efter dina behov.
 
 ## Exempel på komponentdefinition {#example}
 
@@ -94,8 +94,8 @@ Följande är ett fullständigt, men enkelt `component-definition.json` som exem
 
 `plugins` definierar vilket plugin-program som ansvarar för att komponenten behålls. Vanliga plugin-program:
 
-* `aem` för [AEM as a Cloud Service.](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service)
-* `aem65` för [AEM 6.5.](https://experienceleague.adobe.com/sv/docs/experience-manager-65) och [AEM 6.5 LTS](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts)
+* `aem` för [AEM as a Cloud Service.](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service)
+* `aem65` för [AEM 6.5.](https://experienceleague.adobe.com/en/docs/experience-manager-65) och [AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts)
 * `xwalk` för [Redigering med AEM Sites för Edge Delivery Services.](https://www.aem.live/developer/ue-tutorial)
 
 ## `page` eller `cf` {#page-cf}
@@ -123,7 +123,7 @@ Om komponenten är relaterad till innehåll i ett innehållsfragment kan du ange
 
 * `name` definierar ett valfritt namn som har sparats i JCR för den nyskapade komponenten.
    * Endast informativ och visas vanligtvis inte i användargränssnittet som `title` är.
-* `cfModel` definierar [&#x200B; Content Fragment &#x200B;](/help/assets/content-fragments/content-fragments-models.md)-modellen för den nyskapade komponenten.
+* `cfModel` definierar [ Content Fragment ](/help/assets/content-fragments/content-fragments-models.md)-modellen för den nyskapade komponenten.
 * `cfFolder` definierar i vilken mapp innehållsfragmentet ska skapas.
 * `title` definierar titeln på det nya innehållsfragmentet.
 * `description` definierar en beskrivning av det nya innehållsfragmentet.

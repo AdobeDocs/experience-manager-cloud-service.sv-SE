@@ -3,9 +3,9 @@ title: Hantera domänmappningar
 description: Lär dig hur du använder Cloud Manager för att redigera och uppdatera eller ta bort CDN-konfigurationer för en Edge Delivery-webbplats eller en Cloud Manager-miljö.
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 2ec16c91-0195-4732-a26d-ac223e10afb9
-source-git-commit: c1040572085183f0ddd2a12f159f74e399c12df3
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -31,7 +31,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 **Så här redigerar du en CDN-konfiguration från sidan Domänmappningar:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **Domänmappningar** på den vänstra menyn under **Tjänster**.
+1. Klicka på ikonen **Sociala nätverk** ![Domänmappningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) på den vänstra menyn under **Tjänster**.
 1. I tabellen **Domänmappningar** klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad vars CDN-konfiguration du vill uppdatera.
 
 1. Klicka på **Redigera** i listrutan.
@@ -77,7 +77,7 @@ Innan en anpassad domän kan hantera trafik måste du slutföra DNS-konfiguratio
 **Så här konfigurerar du Go live-beredskap:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
-1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **Domänmappningar** på den vänstra menyn under **Tjänster**.
+1. Klicka på ikonen **Sociala nätverk** ![Domänmappningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) på den vänstra menyn under **Tjänster**.
 1. I tabellen Domänmappningar klickar du på **Gå live** i slutet av en rad som motsvarar ett CDN vars live-beredskap du vill konfigurera.
 
    ![Dialogrutan Gå live-beredskap](/help/implementing/cloud-manager/assets/domain-mappings-go-live-readiness.png)
@@ -105,7 +105,7 @@ En användare måste vara medlem i rollen **Affärsägare** eller **Distribution
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj rätt organisation och program.
 
-1. Klicka på ikonen ![Sociala nätverk](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) **Domänmappningar** på den vänstra menyn under **Tjänster**.
+1. Klicka på ikonen **Sociala nätverk** ![Domänmappningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) på den vänstra menyn under **Tjänster**.
 
 1. I tabellen Domänmappningar klickar du på ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i slutet av en rad som motsvarar det CDN som du vill ta bort och sedan på **Ta bort**.
 

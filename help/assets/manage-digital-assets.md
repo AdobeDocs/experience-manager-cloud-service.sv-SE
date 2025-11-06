@@ -4,9 +4,9 @@ description: Läs om olika metoder för resurshantering och redigering
 contentOwner: AG
 mini-toc-levels: 3
 feature: Asset Management, Publishing,Collaboration, Asset Processing
-role: User, Architect, Admin
+role: User, Developer, Admin
 exl-id: 51a26764-ac2b-4225-8d27-42a7fd906183
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '4129'
 ht-degree: 8%
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en) |
 | AEM as a Cloud Service | Den här artikeln |
 
 I den här artikeln beskrivs hur du hanterar och redigerar resurser i [!DNL Adobe Experience Manager Assets]. Mer information om hur du hanterar [!DNL Content Fragments] finns i [[!DNL Content Fragments]](content-fragments/content-fragments.md)-resurser.
@@ -59,10 +59,10 @@ Så här extraherar du ZIP-filerna:
 
    ![ZIP-extrahering](assets/zip-extraction.png)
 
->[!NOTE]
->
->* ZIP-filstorleken som stöds är 15 GB.
->* Du kan extrahera högst tre ZIP-filer åt gången.
+   >[!NOTE]
+   >
+   >* ZIP-filstorleken som stöds är 15 GB.
+   >* Du kan extrahera högst tre ZIP-filer åt gången.
 
 ## Förhandsgranska resurser {#previewing-assets}
 
@@ -70,7 +70,6 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. I Assets-användargränssnittet navigerar du till platsen för resursen som du vill förhandsgranska.
 1. Välj önskad resurs för att öppna den.
-
 1. I förhandsgranskningsläget är zoomalternativ tillgängliga för [bildtyper som stöds](/help/assets/file-format-support.md) (med interaktiv redigering).
 
    Om du vill zooma in på en resurs väljer du `+` (eller väljer förstoringsglaset på resursen). Om du vill zooma ut väljer du `-`. När du zoomar in kan du titta närmare på alla delar av bilden genom att panorera. Med den återställda zoompilen återgår du till den ursprungliga vyn.
@@ -80,7 +79,6 @@ Följ de här stegen för att förhandsgranska en resurs.
 ## Redigera egenskaper {#editing-properties}
 
 1. Navigera till platsen för resursen vars metadata du vill redigera.
-
 1. Markera resursen och välj **[!UICONTROL Properties]** i verktygsfältet för att visa resursegenskaper. Du kan också välja snabbåtgärden **[!UICONTROL Properties]** på resurskortet.
 
    ![properties_quickaction](assets/properties_quickaction.png)
@@ -97,17 +95,17 @@ Följ de här stegen för att förhandsgranska en resurs.
 
 1. Om du vill inaktivera resursen efter en viss tid väljer du datum/tid för inaktiveringen i datumväljaren bredvid fältet **[!UICONTROL Off Time]**. Inaktiveringsdatumet ska vara senare än aktiveringsdatumet för en tillgång. Efter [!UICONTROL Off Time] är en resurs och dess återgivningar inte tillgängliga via Assets webbgränssnitt eller via HTTP API.
 
-   <!--![chlimage_1-218](assets/chlimage_1-218.png)
+   <!--![chlimage_1-218](assets/chlimage_1-218.png)-->
+
 1. Markera en eller flera taggar i fältet **[!UICONTROL Tags]**. Om du vill lägga till en egen tagg skriver du namnet på taggen i rutan och väljer `Enter`. Den nya taggen sparas i [!DNL Experience Manager].
 
    YouTube kräver att taggar ska publiceras och ha en länk till YouTube (om en lämplig länk finns).
 
    >[!NOTE]
    >
-   > Om du vill skapa taggar måste du ha skrivbehörighet på sökvägen `/content/cq:tags/default` i CRX-databasen.
+   >Om du vill skapa taggar måste du ha skrivbehörighet på sökvägen `/content/cq:tags/default` i CRX-databasen.
 
 1. Välj **[!UICONTROL Save & Close]**.
-
 1. Gå till Assets användargränssnitt. De redigerade metadataegenskaperna, inklusive rubrik, beskrivning och taggar, visas på resurskortet i kortvyn och under relevanta kolumner i listvyn.
 
 <!-- TBD: Uncomment after verification for Dec release.
@@ -315,7 +313,7 @@ En stängd användargrupp (CUG) används för att begränsa åtkomst till specif
 CUG är ett extra sätt att begränsa åtkomsten till dina resurser. Du kan också konfigurera en inloggningssida för mappen.
 
 1. Välj en mapp i Assets-gränssnittet och välj egenskapsikonen i verktygsfältet för att visa egenskapssidan.
-1. Lägg till medlemmar eller grupper under **[!UICONTROL Closed User Group]** på fliken **[!UICONTROL Permissions]**.
+1. Lägg till medlemmar eller grupper under **[!UICONTROL Permissions]** på fliken **[!UICONTROL Closed User Group]**.
 
    ![add_user](assets/add_user.png)
 
@@ -659,7 +657,7 @@ curl -v -u admin:admin --location --request POST 'http://localhost:4502/conf/glo
 --data-urlencode '../../jcr:primaryType=sling:Folder'
 ```
 
-Om du vill ha mer information kan du läsa om hur du [bläddrar bland DAM-resurser med skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#browse-search-preview-assets) och [hur du använder Adobe Asset Link](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
+Om du vill ha mer information kan du läsa om hur du [bläddrar bland DAM-resurser med skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) och [hur du använder Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html).
 
 **Se även**
 

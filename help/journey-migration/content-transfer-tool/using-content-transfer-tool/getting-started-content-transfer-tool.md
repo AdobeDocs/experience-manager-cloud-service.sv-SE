@@ -4,9 +4,9 @@ description: Lär dig hur du kommer igång med verktyget Innehållsöverföring
 exl-id: c0cecf65-f419-484b-9d55-3cbd561e8dcd
 feature: Migration
 role: Admin
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1653'
 ht-degree: 2%
 
 ---
@@ -21,10 +21,10 @@ ht-degree: 2%
 >id="aemcloud_ctt_download"
 >title="Ladda ned"
 >abstract="Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet via Package Manager på Adobe Experience Manager-källinstansen (AEM). Glöm inte att hämta den senaste versionen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html?lang=sv-SE" text="Versionsinformation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html" text="Versionsinformation"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Programdistributionsportal"
 
-Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet med hjälp av [Package Manager](/help/implementing/developing/tools/package-manager.md) på Adobe Experience Manager-källinstansen (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html?lang=sv-SE).
+Innehållsöverföringsverktyget kan laddas ned som en zip-fil från Software Distribution Portal. Du kan installera paketet med hjälp av [Package Manager](/help/implementing/developing/tools/package-manager.md) på Adobe Experience Manager-källinstansen (AEM). Glöm inte att hämta den senaste versionen. Mer information om den senaste versionen finns i [Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current.html).
 
 Endast version 2.0.0 och senare stöds, och du bör använda den senaste versionen.
 
@@ -66,7 +66,7 @@ Det kan vara svårt att förstå SSL-/TLS-anslutningsproblem. Om du vill felsök
 >title="Verktyget Innehållsöverföring körs"
 >abstract="Lär dig hur du använder verktyget Innehållsöverföring för att migrera innehåll till AEM as a Cloud Service (författare/publicera)."
 >additional-url="https://video.tv.adobe.com/v/35460/?quality=12&learn=on" text=" Se demo"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=sv-SE#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverföring. Följ det här avsnittet för att lära dig hur du använder verktyget Innehållsöverföring för att migrera innehåll till AEM as a Cloud Service:
 
@@ -76,7 +76,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >id="aemcloud_ctt_extraction_setup"
 >title="Installationsfas för extrahering"
 >abstract="Lär dig skapa och hantera en migreringsuppsättning och hur du kopierar extraheringsnyckeln."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html?lang=sv-SE#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/content-transfer-tool.html#migration" text="Självstudiekurs - använda verktyget Innehållsöverföring"
 
 <!-- Contextualhelp id "aemcloud_ctt_extraction_setup" must be added here -->
 
@@ -118,7 +118,7 @@ Följande avsnitt gäller för den nya versionen av verktyget Innehållsöverfö
 >id="aemcloud_ctt_populate_migrationset"
 >title="Fyll i migreringsuppsättning"
 >abstract="När du har skapat en migreringsuppsättning måste den fyllas i med innehållet från källinstansen som måste flyttas till AEM as a Cloud Service-miljön. För att göra detta måste verktyget Innehållsöverföring vara installerat på källinstansen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content.html?lang=sv-SE" text="Extraherar innehåll"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/extracting-content.html" text="Extraherar innehåll"
 
 Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Manager installerar du den senaste versionen av verktyget Innehållsöverföring på Adobe Experience Manager-källinstansen (AEM). Följ det här avsnittet om du vill lära dig hur du fyller i migreringsuppsättningen.
 
@@ -149,8 +149,10 @@ Om du vill fylla i den migreringsuppsättning du skapade i Cloud Acceleration Ma
       >Från och med CTT-versionen (3.0.24) har nya funktioner inkluderats i verktyget Innehållsöverföring, vilket förbättrar processen att inkludera och exkludera banor. Tidigare var sökvägarna tvungna att väljas en i taget, vilket var tidsödande och tidsödande. Nu kan användare inkludera sökvägar direkt från användargränssnittet eller överföra en CSV-fil enligt sina önskemål.  CSV-filen måste ha en sökväg per rad och inga kommatecken.
 
    1. **Sökvägar som ska inkluderas**: Använd sökvägsläsaren för att välja sökvägar som ska migreras. Banväljaren accepterar indata genom att skriva eller genom att välja. Användare kan bara välja ett alternativ för att inkludera sökvägar: antingen från användargränssnittet eller genom att överföra en CSV-fil.
+
       >[!IMPORTANT]
       >Följande sökvägar är begränsade när du skapar en migreringsuppsättning:
+      >
       >* `/apps`
       >* `/libs`
       >* `/home`

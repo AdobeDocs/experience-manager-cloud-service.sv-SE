@@ -6,13 +6,13 @@ version: Experience Manager as a Cloud Service
 activity: setup
 feature: Commerce Integration Framework
 topic: Commerce
-role: Architect, Developer
+role: Developer, Developer
 level: Beginner
 kt: 10834
 thumbnail: 346811.jpeg
 exl-id: 30bb9b2c-5f00-488e-ad5c-9af7cd2c4735
 index: false
-source-git-commit: 80bd8da1531e009509e29e2433a7cbc8dfe58e60
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 0%
@@ -22,11 +22,11 @@ ht-degree: 0%
 
 # AEM-CIF kärnkomponenter och Adobe Experience Platform-integrering {#aem-cif-aep-integration}
 
-Kärnkomponenterna [Commerce integration framework (CIF)](https://github.com/adobe/aem-core-cif-components) erbjuder sömlös integrering med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html?lang=sv-SE) för att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan, som __lägg till i kundvagnen__.
+Kärnkomponenterna [Commerce integration framework (CIF)](https://github.com/adobe/aem-core-cif-components) erbjuder sömlös integrering med [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-overview.html) för att vidarebefordra butikshändelser och deras data från interaktioner på klientsidan, som __lägg till i kundvagnen__.
 
 Projektet [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) innehåller ett JavaScript-bibliotek med namnet [Adobe Experience Platform Connector för Adobe Commerce](https://github.com/adobe/aem-core-cif-components/tree/master/extensions/experience-platform-connector) som samlar in händelsedata från din Commerce-butik. Dessa händelsedata skickas till Experience Platform där de används i andra Adobe Experience Cloud-produkter, som Adobe Analytics och Adobe Target, för att skapa en helhetsprofil som täcker en kundresa. Genom att ansluta Commerce-data till andra produkter i Adobe Experience Cloud kan ni utföra uppgifter som att analysera användarbeteende på er webbplats, utföra AB-tester och skapa personaliserade kampanjer.
 
-Läs mer om [Experience Platform Data Collection](https://experienceleague.adobe.com/docs/experience-platform/collection/home.html?lang=sv-SE) med tekniker som gör att du kan samla in kundupplevelsedata från källor på klientsidan.
+Läs mer om [Experience Platform Data Collection](https://experienceleague.adobe.com/docs/experience-platform/collection/home.html) med tekniker som gör att du kan samla in kundupplevelsedata från källor på klientsidan.
 
 ## Skicka händelsedata för `addToCart` till Experience Platform {#send-addtocart-to-aep}
 
@@ -38,7 +38,7 @@ Följande steg visar hur du skickar händelsedata för `addToCart` från AEM-åt
 
 Använd en lokal utvecklingsmiljö för att slutföra denna demo. Detta inkluderar en instans av AEM som körs och som är konfigurerad och ansluten till en Adobe Commerce-instans. Granska kraven och stegen för [konfiguration av lokal utveckling med AEM as a Cloud Service SDK.](/help/commerce-cloud/cif-storefront/develop.md)
 
-Du behöver även åtkomst till [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-ui/ui-guide.html?lang=sv-SE) och behörigheter för att skapa schema, datamängd och datastreams för datainsamling. Mer information finns i [Behörighetshantering.](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=sv-SE)
+Du behöver även åtkomst till [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-ui/ui-guide.html) och behörigheter för att skapa schema, datamängd och datastreams för datainsamling. Mer information finns i [Behörighetshantering.](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html)
 
 ## Installation av AEM Commerce as a Cloud Service {#aem-setup}
 
@@ -150,7 +150,7 @@ Navigera till modulen `ui.frontend` och uppdatera filen `webpack.common.js` så 
 
 [Apollo-klienten](https://www.apollographql.com/docs/react/) används för att hantera både lokala data och fjärrdata med GraphQL. Resultaten av GraphQL-frågor lagras också i en lokal, normaliserad cache i minnet.
 
-Du behöver en [`InMemoryCache`-fil för att &#x200B;](https://www.apollographql.com/docs/react/caching/cache-configuration/)`possibleTypes.js` ska fungera effektivt. Mer information om hur du genererar den här filen finns i [Genererar possibleTypes automatiskt.](https://www.apollographql.com/docs/react/data/fragments/#generating-possibletypes-automatically)
+Du behöver en [`InMemoryCache`-fil för att ](https://www.apollographql.com/docs/react/caching/cache-configuration/)`possibleTypes.js` ska fungera effektivt. Mer information om hur du genererar den här filen finns i [Genererar possibleTypes automatiskt.](https://www.apollographql.com/docs/react/data/fragments/#generating-possibletypes-automatically)
 
 Se även [PWA Studio referensimplementering](https://github.com/magento/pwa-studio/blob/1977f38305ff6c0e2b23a9da7beb0b2f69758bed/packages/pwa-buildpack/lib/Utilities/graphQL.js#L106-L120) och ett exempel på en [`possibleTypes.js`](../assets/aep-integration/possibleTypes.js)-fil.
 
@@ -366,7 +366,7 @@ Om du vill definiera strukturen för e-handelshändelsedata måste du skapa ett 
 
 >[!TIP]
 >
->Mer information finns i [Grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=sv-SE).
+>Mer information finns i [Grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html).
 
 ### Skapa datauppsättning {#create-dataset}
 
@@ -392,7 +392,7 @@ Om du vill lagra händelsedata måste du skapa en datauppsättning som överenss
 
 >[!TIP]
 >
->Mer information finns i [Översikt över datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=sv-SE).
+>Mer information finns i [Översikt över datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html).
 
 
 ### Skapa dataström {#create-datastream}
@@ -419,7 +419,7 @@ Följ de här stegen för att skapa ett dataflöde i Experience Platform.
 
 >[!TIP]
 >
->Mer information finns i [Datastream-översikten](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=sv-SE).
+>Mer information finns i [Datastream-översikten](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html).
 
 ## Lägg till datastream-värde i AEM Commerce-konfigurationen {#add-aep-values-to-aem}
 
@@ -494,6 +494,6 @@ __Profil-XDM-händelser :__
 Mer information finns i följande resurser:
 
 - [PWA Studio](https://developer.adobe.com/commerce/pwa-studio/)
-- [[!DNL Data Connection] översikt](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/overview.html?lang=sv-SE)
-- [[!DNL Data Connection] Händelser](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/event-forwarding/events.html?lang=sv-SE)
-- [Adobe Experience Platform - översikt](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=sv-SE)
+- [[!DNL Data Connection] översikt](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/overview.html)
+- [[!DNL Data Connection] Händelser](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/event-forwarding/events.html)
+- [Adobe Experience Platform - översikt](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)

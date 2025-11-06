@@ -4,7 +4,7 @@ description: Versionsinformation om 2023.12.0-utgåvan av  [!DNL Adobe Experienc
 exl-id: b36add58-a2ba-4299-94be-e0026e9c553c
 feature: Release Information
 role: Admin
-source-git-commit: 8be0a9894bb5b3a138c0ec40a437d6c8e4bc7e25
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 0%
@@ -19,11 +19,11 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2023.12.
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2021 eller 2022.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -108,6 +108,7 @@ Nu kan du enkelt hitta innehåll genom att välja en bild och visa liknande bild
 ### Tidiga Adobe-program för domänmappning {#cdn-config-early-adopter}
 
 Förutom de nyligen släppta [trafikfilterreglerna](/help/security/traffic-filter-rules-including-waf.md), som innehåller de valfria brandväggsreglerna för webbprogram (WAF), finns det en möjlighet att använda konfigurationsflödet för att deklarera och distribuera andra typer av CDN-konfigurationer. Vi vill gärna veta mer om dina användningsexempel, bland annat:
+
 * 301/302 klientomdirigeringar
 * förbluffande förfrågningar vid kanten till godtyckliga ursprung
 * URL-omformningar

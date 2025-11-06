@@ -5,7 +5,7 @@ exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 5054b843a8bb6053bb6617e9efdfc16dd1eac6ca
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2247'
 ht-degree: 2%
@@ -87,12 +87,13 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 >[!NOTE]
 >
 >**Innehållsfragment** och **[Upplevelsefragment](/help/sites-cloud/authoring/fragments/content-fragments.md)** är olika funktioner i AEM:
+>
 >* **Innehållsfragment** är redaktionellt innehåll, med definition och struktur, men utan ytterligare visuell design och/eller layout. De kan användas för att komma åt strukturerade data, bland annat texter, siffror och datum.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
@@ -194,7 +195,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Assets (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Inbäddad i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md).
+   * Kan formateras när [fragmentet används/refereras på en sida ](/help/sites-cloud/authoring/fragments/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Det går bara att lägga till, ta bort eller flytta inom ett fragment med formatet [RTF i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).

@@ -3,9 +3,9 @@ title: SPA Editor - översikt
 description: Den här artikeln innehåller en omfattande översikt över SPA-redigeraren och hur den fungerar. Här finns detaljerade arbetsflöden för samverkan mellan SPA-redigeraren i AEM.
 exl-id: 9814d86e-8d87-4f7f-84ba-6943fe6da22f
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1633'
 ht-degree: 0%
@@ -191,6 +191,6 @@ AEM SPA Editor SDK har fullt stöd av Adobe och fortsätter att förbättras och
 * Redigera konfigurationer (till exempel avlyssnare)
 * Ångra/Gör om
 * Sidskillnader och tidsförskjutning
-* Funktioner som utför HTML-omskrivning på serversidan, till exempel [Länkkontroll, &#x200B;](/help/operations/link-checker.md) CDN-omskrivartjänst, URL-förkortning och så vidare.
+* Funktioner som utför HTML-omskrivning på serversidan, till exempel [Länkkontroll, ](/help/operations/link-checker.md) CDN-omskrivartjänst, URL-förkortning och så vidare.
 * Utvecklarläge
 * AEM Launches

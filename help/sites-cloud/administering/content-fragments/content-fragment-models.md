@@ -2,10 +2,10 @@
 title: Definiera modeller för innehållsfragment
 description: Läs om hur Content Fragment Models fungerar som grund för dina innehållsfragment i AEM, så att du kan skapa strukturerat innehåll som kan användas för rubrikfri leverans eller framtagning av sidor.
 feature: Content Fragments
-role: User, Developer, Architect
+role: User, Developer
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
 solution: Experience Manager Sites
-source-git-commit: 416cb98fbf48885688ee70d63e606e3f7c90f9f8
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '2201'
 ht-degree: 0%
@@ -313,10 +313,10 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 >AEM har upprepningsskydd för:
 >
 >* Innehållsreferenser
->  &#x200B;>  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
+>  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet och kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >* Fragmentreferenser i GraphQL
->  &#x200B;>  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+>  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 >[!CAUTION]
 >
@@ -331,6 +331,7 @@ Datatypen **Innehållsreferens** gör att du kan återge innehåll från en anna
 Förutom standardegenskaper kan du ange:
 
 * **Rotsökvägen** som anger, eller representerar, var det refererade innehållet ska lagras
+
   >[!NOTE]
   >
   >Detta är obligatoriskt om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
@@ -338,6 +339,7 @@ Förutom standardegenskaper kan du ange:
   >Mer information finns i [Referensbilder](/help/sites-cloud/administering/content-fragments/authoring.md#reference-images).
 
 * De innehållstyper som kan refereras
+
   >[!NOTE]
   >
   >Dessa måste innehålla **Bild** om du vill överföra och referera till bilder direkt i det här fältet när du använder redigeraren för innehållsfragment.
@@ -346,6 +348,7 @@ Förutom standardegenskaper kan du ange:
 
 * Begränsningar för filstorlekar
 * Om en bild refereras:
+
    * Visa miniatyrbild
    * Bildbegränsningar för höjd och bredd
 

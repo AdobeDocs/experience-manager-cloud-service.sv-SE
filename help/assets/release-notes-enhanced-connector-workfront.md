@@ -4,7 +4,7 @@ description: Versionsinformation för  [!DNL Workfront for Experience Manager en
 exl-id: 12de589d-fe5d-4bd6-b96b-48ec8f1ebcb6
 feature: Release Information
 role: Admin
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1658'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!NOTE]
 >
->AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/se/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=sv-SE).
+>AEM 6.4 har fått utökat stöd. Se våra [tekniska supportperioder](https://helpx.adobe.com/support/programs/eol-matrix.html). Hitta de versioner som stöds [här](https://experienceleague.adobe.com/docs/?lang=en).
 
 >[!IMPORTANT]
 >
@@ -65,9 +65,9 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 ### Januariversion 2024 {#january-2024-release}
 
-* [!DNL Workfront]-konfigurationen i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur du [konfigurerar behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html?lang=sv-SE#linked-folders).
+* [!DNL Workfront]-konfigurationen i [!DNL CRX DE] lagrar för närvarande inte `project ID`, vilket orsakar fel när skrivskyddad behörighet används. Läs mer om hur du [konfigurerar behörigheter](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#linked-folders).
 
-* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om att [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html?lang=sv-SE#metadata-schema-mapping).
+* Det finns ingen offentlig dokumentation om hur du lägger till anpassade egenskaper i indexdefinitionen utanför rutan. Läs mer om att [lägga till anpassad egenskap](https://experienceleague.adobe.com/docs/experience-manager-65/content/assets/integrations/workfront-connector-configure.html#metadata-schema-mapping).
 
 * Om du tar bort anslutningskonfigurationer på den utökade kopplingen påverkas händelsprenumerationer och andra sparade konfigurationer avsevärt, vilket gör att de pekar på en gammal URL.
 
@@ -201,13 +201,13 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
          Kontrollera att innehållet mellan `"objId": "",` och `"url"` matchar JSON-svaret. Den rekommenderade metoden är att kopiera från en händelseprenumeration som har en `objId` och sedan ta bort numret.
 
       1. Observera händelsens prenumerations-ID.
-
       1. Ta bort fel händelseprenumeration. Gör ett Delete API-anrop till `<your-aem-domain>/attask/eventsubscription/api/v1/subscriptions/<event-subscription-ID-from-previous-step>`
 
          `200` eftersom svarskoden innebär att felaktiga händelseprenumerationer har tagits bort.
-  >[!NOTE]
-  >
-  >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över det sista steget i den här proceduren.
+
+         >[!NOTE]
+         >
+         >Om du redan har tagit bort fel händelseprenumerationer innan du utför de steg som beskrivs i den här proceduren kan du hoppa över det sista steget i den här proceduren.
 
 ### Oktober 2022-versionen {#october-2022-release}
 
@@ -270,4 +270,4 @@ Den senaste versionen av [!DNL Workfront for Experience Manager enhanced connect
 
 >[!MORELIKETHIS]
 >
->* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=sv-SE)
+>* [Integrera [!DNL Workfront for Experience Manager enhanced connector] med Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/integrations/workfront-integrations.html?lang=en)

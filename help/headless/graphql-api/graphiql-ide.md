@@ -4,20 +4,20 @@ description: Lär dig använda GraphiQL IDE i Adobe Experience Manager.
 feature: Headless, Content Fragments,GraphQL API
 exl-id: be2ebd1b-e492-4d77-b6ef-ffdea9a9c775
 role: Admin, Developer
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
 
 # Använda GraphiQL IDE {#graphiql-ide}
 
-En implementering av standardmiljön [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) är tillgänglig för användning med GraphQL API för Adobe Experience Manager (AEM) as a Cloud Service.
+En implementering av standardutvecklingsmiljön [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) finns tillgänglig för användning med GraphQL-API:t för Adobe Experience Manager (AEM) as a Cloud Service.
 
 >[!NOTE]
 >
->GraphiQL ingår i alla miljöer med AEM (men är bara tillgängligt/synligt när du konfigurerar slutpunkterna).
+>GraphiQL ingår i alla AEM-miljöer (men är bara tillgängligt/synligt när du konfigurerar slutpunkterna).
 >
 >I tidigare versioner behövdes ett paket för att installera GraphiQL IDE. Om du har installerat den kan den nu tas bort.
 
@@ -25,13 +25,14 @@ En implementering av standardmiljön [GraphiQL](https://graphql.org/learn/servin
 >Du måste ha [konfigurerat dina slutpunkter](/help/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md#enable-content-fragment-functionality-configuration-browser) innan du kan använda GraphiQL IDE.
 
 Med verktyget **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktivera:
+
 * välj den **slutpunkt** som passar den platskonfiguration som du vill använda för dina frågor
 * direkt mata in nya frågor
 * skapa och få åtkomst till **[beständiga frågor](/help/headless/graphql-api/persisted-queries.md)**
 * köra dina frågor för att omedelbart se resultatet
 * hantera **frågevariabler**
 * spara och hantera **beständiga frågor**
-* publicera, eller avpublicera, **beständiga frågor** till antingen din **Publish**- eller **förhandsgranskningstjänst** , till exempel till/från `dev-publish`
+* publicera, eller avpublicera, **beständiga frågor** till antingen **Publicera** eller **Förhandsgranska** - till exempel till/från `dev-publish`
 * visa **historiken** för dina tidigare frågor
 * använd **Dokumentationsutforskaren** för att få tillgång till dokumentationen och för att lära dig mer och förstå vilka metoder som är tillgängliga.
 
@@ -42,7 +43,7 @@ Du kan öppna frågeredigeraren från:
 
 ![Gränssnittet GraphiQL](assets/cfm-graphiql-interface.png "Gränssnittet GraphiQL")
 
-Du kan använda GraphiQL på datorn så att frågor kan begäras av klientprogrammet med hjälp av GET-förfrågningar och för publiceringsfrågor. För produktionsanvändning kan du sedan [flytta dina frågor till din produktionsmiljö](/help/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production). Till att börja med måste produktionsförfattaren validera nyskrivet innehåll med frågorna och till sist publicera produktionen för direktkonsumtion.
+Du kan använda GraphiQL på datorn så att frågor kan begäras av klientprogrammet med hjälp av GET-begäranden och för publiceringsfrågor. För produktionsanvändning kan du sedan [flytta dina frågor till din produktionsmiljö](/help/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production). Till att börja med måste produktionsförfattaren validera nyskrivet innehåll med frågorna och till sist publicera produktionen för direktkonsumtion.
 
 ## Markera slutpunkten {#selecting-endpoint}
 
@@ -96,7 +97,7 @@ Till exempel:
 
 ## Hantera cache för dina beständiga frågor {#managing-cache}
 
-[Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) rekommenderas eftersom de kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Som standard blir cacheminnet för innehållsleveransnätverket (CDN) ogiltigt baserat på en TTL-standardinställning (Time To Live).
+[Beständiga frågor](/help/headless/graphql-api/persisted-queries.md) rekommenderas eftersom de kan cachas i skikten dispatcher och CDN, vilket i slutänden förbättrar prestanda för det begärande klientprogrammet. Som standard ogiltigförklarar AEM CDN-cachen (Content Delivery Network) baserat på en TTL-standardinställning (Time To Live).
 
 >[!NOTE]
 >
@@ -104,7 +105,7 @@ Till exempel:
 
 >[!NOTE]
 >
->Anpassade omskrivningsregler på Dispatcher kan åsidosätta standardvärden från AEM publicering.
+>Anpassade omskrivningsregler på Dispatcher kan åsidosätta standardinställningar från AEM publicering.
 >
 >Om du skickar TTL-baserade headers för cachekontroll från dispatchern, baserat på ett matchningsmönster för plats, kan du vid behov utelämna `/graphql/execute.json/*` från matchningarna.
 
@@ -133,9 +134,9 @@ Cacheminnen kan fortsätta att fungera som cachelagrat svar i händelse av ett f
 
 ## Publicera och förhandsgranska beständiga frågor {#publishing-previewing-persisted-queries}
 
-När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda åtgärden **Publish**.
+När du har valt din beständiga fråga i listan (den vänstra panelen) kan du använda åtgärden **Publicera**.
 
-Detta aktiverar frågan till den miljö du väljer. Du kan antingen välja din **Publish** -miljö (till exempel `dev-publish`) eller din **förhandsvisningsmiljö** så att dina program enkelt kan komma åt dem när du testar.
+Detta aktiverar frågan till den miljö du väljer. Du kan antingen välja **publiceringsmiljön** (till exempel `dev-publish`) eller **förhandsvisningsmiljön** så att dina program enkelt kommer åt dem när du testar.
 
 ![GraphiQL -Published Persisted Query](assets/cfm-graphiql-publish.png "GraphiQL - Publish Persisted Query")
 
@@ -147,7 +148,7 @@ Detta aktiverar frågan till den miljö du väljer. Du kan antingen välja din *
 
 Som vid publicering kan du använda åtgärden **Avpublicera** när du har valt din beständiga fråga i listan (den vänstra panelen).
 
-Detta inaktiverar frågan från den miljö du väljer, antingen din **Publish** -miljö eller din **förhandsvisningsmiljö** .
+Detta inaktiverar frågan från den miljö du väljer, antingen din **publiceringsmiljö** eller din **förhandsvisningsmiljö** .
 
 >[!NOTE]
 >

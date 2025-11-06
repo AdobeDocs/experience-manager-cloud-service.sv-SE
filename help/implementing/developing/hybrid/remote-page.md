@@ -3,9 +3,9 @@ title: RemotePage-komponenten
 description: RemotePage-komponenten är en anpassad sidkomponent för redigering av fjärreaktions-SPA i AEM.
 exl-id: d3465592-0392-49b0-b49d-de93983c1d6e
 feature: Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 index: false
-source-git-commit: 7a9d947761b0473f5ddac3c4d19dfe5bed5b97fe
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -38,7 +38,6 @@ Mer information om redigerbara externa SPA:er i AEM finns i artikeln [Redigera e
    * https://github.com/shellscape/webpack-manifest-plugin
    * https://github.com/webdeveric/webpack-assets-manifest
    * https://github.com/mugi-uno/parcel-plugin-bundle-manifest
-
      ![exempel på egenskapen entrypoints](assets/asset-manifest-entrypoints.png)
 * Programmet måste kunna initieras i ett `<div id="root"></div>` under elementet `body`. Om en annan kod förväntas för att programmet ska kunna instansieras måste detta justeras i HTML-skripten för proxykomponenten som har en `sling:resourceSuperType="spa-project-core/components/remotepage`.
 

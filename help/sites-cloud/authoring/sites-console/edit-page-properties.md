@@ -4,13 +4,13 @@ description: Lär dig hur du redigerar egenskaperna för en sida och ändrar sid
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 83e61ae4af3dcd76ad51722decd0032cceb737a5
+exl-id: 8fee7e24-bbaa-4cc4-a047-165c9f2cd973
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 1%
 
 ---
-
 
 # Redigera sidegenskaper {#page-properties}
 
@@ -24,7 +24,7 @@ Lär dig hur du redigerar [egenskaperna för en sida](/help/sites-cloud/authorin
 
 Du kan redigera sidegenskaper från ett antal platser i AEM.
 
-* [Från &#x200B;](#from-the-sites-console)
+* [Från ](#from-the-sites-console)
 * [Från sidredigeraren](#from-the-page-editor)
 * [Från den universella redigeraren](#from-the-universal-editor)
 
@@ -87,14 +87,18 @@ Du kan bara redigera sidor som:
 Massredigeringsfönstret är uppdelat i halva vertikalt:
 
 * Den vänstra sidan är en lista över de sidor som du har valt för massredigering.
+
    * Du kan markera/avmarkera sidorna efter behov.
    * Som standard är alla markerade.
+
 * Höger är en lista över [egenskaper som är tillgängliga för massredigering.](/help/implementing/developing/extending/bulk-editor.md)
+
    * På samma sätt som när du visar egenskaper för en enskild sida ordnas egenskaperna under flikar.
    * Egenskaper som är tillgängliga på alla markerade sidor och som uttryckligen har definierats som tillgängliga för massredigering visas.
    * Om du minskar sidmarkeringen till en sida visas alla egenskaper.
    * Endast egenskaper med ett gemensamt värde visas.
    * När fältet har flera värden (till exempel Taggar) visas värden bara när *all* är gemensamma. Om bara vissa är vanliga visas de bara när du redigerar.
+
 * Fält som är vanliga, men har olika värden på de olika sidorna, anges med ett särskilt värde som texten `<Mixed Entries>`.
 
 Du kan uppdatera värdena i fälten som är tillgängliga på de sidor du markerar. De nya värdena tillämpas på alla markerade sidor när du väljer **Klar**. När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.

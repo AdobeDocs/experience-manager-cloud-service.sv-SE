@@ -4,8 +4,8 @@ description: Läs om de tre olika typerna av funktionstestning som är inbyggda 
 exl-id: 7eb50225-e638-4c05-a755-4647a00d8357
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 5f9d53958076b77cd333a042003c83853594db87
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '1323'
 ht-degree: 0%
@@ -58,7 +58,7 @@ I följande diagram visas en detaljerad översikt över tillgängliga kvalitetsg
 
 Du uppmanas att tillhandahålla enhetstesterna för ditt AEM-program, som utgör grunden för varje teststrategi. De är avsedda att köras snabbt och ofta och ge snabb och snabb feedback. De är nära integrerade i utvecklararbetsflödena, din egen CI/CD och AEM molntjänster.
 
-De implementeras med JUnit och avrättas med Maven. Se kärnmodulen [i AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/using#unit-tests) för ett exempel på enhetstest för AEM och hur du kommer igång.
+De implementeras med JUnit och avrättas med Maven. Se kärnmodulen [i AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/using#unit-tests) för ett exempel på enhetstest för AEM och hur du kommer igång.
 
 ### Kodkvalitet
 

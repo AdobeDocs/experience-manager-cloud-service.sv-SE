@@ -4,8 +4,8 @@ description: I den här delen av AEM Headless Developer Journey lär du dig hur 
 exl-id: 84120856-fd1d-40f7-8df4-73d4cdfcc43b
 solution: Experience Manager
 feature: Headless, Content Fragments, GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: 8a3ee333a0bd5904c43c424967a7b9c752fd38c2
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -70,9 +70,9 @@ Du bör fortsätta din resa utan AEM genom att nästa gång granska dokumentet [
 * [Content Fragments och Content Fragment Models OpenAPIs](/help/headless/content-fragment-openapis.md)
 * [Stöd för innehållsfragment i AEM Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md)
 * [Arbeta med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md)
-* [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
-* [CORS/AEM förklarar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=sv-SE)
-* [Video - Utveckla för CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=sv-SE)
+* [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [CORS/AEM förklarar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+* [Video - Utveckla för CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html)
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

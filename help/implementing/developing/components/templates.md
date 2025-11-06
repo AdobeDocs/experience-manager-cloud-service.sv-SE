@@ -3,10 +3,10 @@ title: Redigerbara mallar
 description: Lär dig hur redigerbara mallar används när du skapar en sida, definierar dess ursprungliga innehåll, strukturerat innehåll, redigeringsprinciper och layout.
 exl-id: ea42fce9-9af2-4349-a4e4-547e6e8da05c
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3442'
 ht-degree: 0%
 
 ---
@@ -128,13 +128,13 @@ När du skapar en redigerbar mall:
 
 >[!TIP]
 >
->Ange aldrig någon information som måste internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE).
+>Ange aldrig någon information som måste internationaliseras i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 >[!NOTE]
 >
 >Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
 >
->Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
+>Adobe rekommenderar inte att man har fler än 1 000 mallar på grund av potentiella prestandaeffekter.
 
 >[!NOTE]
 >
@@ -155,7 +155,7 @@ Du kan använda följande mappar för att ordna dina mallar:
 >
 >Även om du kan kapsla dina mappar visas de som en platt struktur när användaren visar dem i konsolen **Mallar**.
 
-I en AEM finns mappen `global` redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en mapp (rekommenderas).
+I en standardinstans av AEM finns mappen `global` redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen. Du kan lägga till dina standardmallar i den här mappen eller skapa en mapp (rekommenderas).
 
 >[!NOTE]
 >
@@ -316,7 +316,7 @@ När du skapar en mall måste du ange en malltyp:
    * Rotnodens princip, som definierar vilka komponenter som tillåts i mallredigeraren.
    * Vi rekommenderar att du definierar brytpunkter för responsiva rutnät och inställningar för mobilemulatorn på malltypen.
 
-* AEM innehåller ett litet urval av färdiga malltyper som HTML5 Page och Adaptive Form Page.
+* AEM har ett litet urval färdiga malltyper som HTML5 Page och Adaptive Form Page.
 
    * Ytterligare exempel finns som en del av [WKND-självstudiekursen](/help/implementing/developing/introduction/develop-wknd-tutorial.md).
 
@@ -328,7 +328,7 @@ Malltyperna som inte finns lagrade under:
 
 >[!CAUTION]
 >
->Du får inte ändra något i sökvägen `/libs`. Detta beror på att innehållet i `/libs` kan skrivas över när som helst genom en uppdatering till AEM.
+>Du får inte ändra något i sökvägen `/libs`. Detta beror på att innehållet i `/libs` kan skrivas över när som helst genom en uppdatering av AEM.
 
 Platsspecifika malltyper bör lagras på samma plats som:
 
@@ -370,7 +370,7 @@ When creating an editable template, the value is copied from the template type t
 Om du har skapat en mall som kan användas som bas för andra mallar kan du kopiera den här mallen som en malltyp.
 
 1. Skapa en mall precis som vilken sidmall som helst. Se [Mallar för att skapa sidor som kan redigeras med sidredigeraren](/help/sites-cloud/authoring/page-editor/templates.md#creating-a-new-template-template-author). Detta fungerar som bas för malltypen.
-1. Kopiera med CRXDE Lite den skapade mallen från noden `templates` till noden `template-types` under [mallmappen](#template-folders).
+1. Kopiera den skapade mallen från noden `templates` med CRXDE Lite till noden `template-types` under [mallmappen](#template-folders).
 1. Ta bort mallen från noden `templates` under [mallmappen](#template-folders).
 1. I kopian av mallen som finns under noden `template-types` tar du bort alla `cq:template` - och `cq:templateType` -egenskaper från alla `jcr:content` -noder.
 
@@ -433,7 +433,7 @@ Huvudelementen är:
    * ` [policies](#policies)`
    * `thumbnail.png`
 
-### jcr:innehåll {#jcr-content}
+### jcr:content {#jcr-content}
 
 Den här noden innehåller egenskaper för mallen:
 
@@ -501,7 +501,6 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
    * Anger egenskapen status för noden `jcr:content`.
 
       * På:
-
         `/conf/<your-folder>/settings/wcm/templates/<your-template>/jcr:content`
 
       * Definiera egenskapen:
@@ -514,7 +513,6 @@ Med sidprofiler kan du definiera sidans [innehållsprincip](#content-policies) (
 
    * [Definiera tillåtna mallsökvägar på **Sidegenskaper**](/help/sites-cloud/authoring/page-editor/templates.md#allowing-a-template-author) för rätt sida eller rotsida i en underavdelning.
    * Ange egenskapen:
-
      `cq:allowedTemplates`
 På noden `jcr:content` för den begärda grenen.
 
@@ -534,7 +532,7 @@ Sidor skapade från redigerbara mallar:
 
    * `cq:templateType` - Tillhandahåller en referens till malltypen.
 
-![Hur mallar, innehåll och komponenter relaterar &#x200B;](assets/templates-content-components.png)
+![Hur mallar, innehåll och komponenter relaterar ](assets/templates-content-components.png)
 
 Diagrammet ovan visar hur mallar, innehåll och komponenter samverkar:
 
@@ -591,7 +589,7 @@ I följande diagram visas mallutvärderingsprocessen:
 
 >[!CAUTION]
 >
->AEM erbjuder flera egenskaper för att styra mallarna som tillåts under **Platser**. En kombination av dem kan dock leda till mycket komplexa regler som är svåra att spåra och hantera.
+>AEM erbjuder flera egenskaper för att styra mallarna som tillåts under **Webbplatser**. En kombination av dem kan dock leda till mycket komplexa regler som är svåra att spåra och hantera.
 >
 >Därför rekommenderar Adobe att du börjar enkelt genom att definiera:
 >

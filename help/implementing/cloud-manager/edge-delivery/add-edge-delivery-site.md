@@ -2,9 +2,9 @@
 title: Lägg till en Edge Delivery-webbplats i Cloud Manager
 description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt produktionsprogram eller sandlådeprogram.
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
+role: Admin, Developer
 exl-id: 17e842c9-599a-4877-9834-1e7220f508a8
-source-git-commit: ddf2d80330ecfddad4af8a05c95cdba7f968a986
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Läs om varför du måste lägga upp din Edge Delivery Services webbplats på Cloud Manager.
->&#x200B;>Se [Fördelar med att använda Adobe rekommenderade sökväg för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#recommended-path-eds).
+>Se [Fördelar med att använda Adobe rekommenderade sökväg för Edge Delivery Services](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md#recommended-path-eds).
 
 **Så här lägger du till en Edge Delivery-webbplats i Cloud Manager:**
 

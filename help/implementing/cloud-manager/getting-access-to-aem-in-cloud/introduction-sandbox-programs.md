@@ -4,8 +4,8 @@ description: Lär dig vilka sandlådeprogram som är och hur de skiljer sig frå
 exl-id: 4606590c-6826-4794-9d2e-5548a00aa2fa
 solution: Experience Manager
 feature: Cloud Manager, Developing
-role: Admin, Architect, Developer
-source-git-commit: 0712ba8918696f4300089be24cad3e4125416c02
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -31,7 +31,7 @@ I sandlådeprogram skapas automatiskt. När du [skapar ett sandlådeprogram](/he
 
   ![Välj lösningar och tillägg för en sandlåda](assets/sandbox-solutions-add-ons.png)
 
-* Ställer in en projektdatabas för Git med ett exempelprojekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview).
+* Ställer in en projektdatabas för Git med ett exempelprojekt baserat på [AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Skapar en utvecklingsmiljö.
 * Skapar en icke-produktionspipeline som distribueras till utvecklingsmiljön.
 

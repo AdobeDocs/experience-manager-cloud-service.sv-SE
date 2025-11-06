@@ -4,8 +4,8 @@ description: En introduktion till hur du använder Adobe Experience Manager as a
 exl-id: 065b00cb-a82d-4bcb-b2c9-44542cee6303
 solution: Experience Manager
 feature: Headless, Content Fragments,GraphQL API
-role: Admin, Architect, Developer
-source-git-commit: cc2e73da123d3e0676a8e175a18c1dc0bdff1daa
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 0%
@@ -80,13 +80,13 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 
 * [Introduktion till AEM som Headless CMS](/help/headless/introduction.md)
 
-* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)
 
 * AEM Headless Developer Journey
    * [Läs om CMS Headless Development](/help/journey-headless/developer/learn-about.md)
    * [Lär dig modellera ditt innehåll](/help/journey-headless/developer/model-your-content.md)
 
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 
 * [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
 

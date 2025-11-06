@@ -3,10 +3,10 @@ title: Utöka Multi Site Manager
 description: Lär dig hur du utökar funktionerna i Multi Site Manager.
 exl-id: 4b7a23c3-65d1-4784-9dea-32fcceca37d1
 feature: Developing
-role: Admin, Architect, Developer
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+role: Admin, Developer
+source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
 workflow-type: tm+mt
-source-wordcount: '2337'
+source-wordcount: '2336'
 ht-degree: 0%
 
 ---
@@ -183,17 +183,14 @@ Så här skapar du en utrullningskonfiguration:
 1. Lägg till följande egenskaper i den här noden:
 
    * **Namn**: `jcr:title`
-
      **Typ**: `String`
      **Värde**: En identifierande titel som visas i användargränssnittet
 
    * **Namn**: `jcr:description`
-
      **Typ**: `String`
      **Värde**: En valfri beskrivning.
 
    * **Namn**: `cq:trigger`
-
      **Typ**: `String`
      **Värde**: [Utlösaren för utrullning](/help/sites-cloud/administering/msm/live-copy-sync-config.md#rollout-triggers) ska användas
       * `rollout`
@@ -209,7 +206,7 @@ Utrullningskonfigurationer lagras under den [rollout-konfigurationsnod](#create-
 
 Lägg till underordnade noder av typen `cq:LiveSyncAction` för att lägga till synkroniseringsåtgärder i rollout-konfigurationen. Ordningen på synkroniseringsåtgärdsnoderna avgör i vilken ordning åtgärderna utförs.
 
-1. I CRXDE Lite väljer du noden [Utgående konfiguration](#create-the-rollout-configuration), till exempel `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`.
+1. I CRXDE Lite väljer du noden [Konfiguration för utrullning](#create-the-rollout-configuration), till exempel `/apps/msm/myproject/rolloutconfigs/myrolloutconfig`.
 
 1. Skapa en nod med följande nodegenskaper:
 
@@ -356,7 +353,7 @@ Följande `LiveActionFactory`-klass implementerar en `LiveAction` som loggar med
 
 1. Högerklicka på paketet `MyLiveActionFactory-bundle/src/main/java/com.adobe.example.msm` i Eclipse Project Explorer och klicka på **New** > **Class**.
 
-1. Ange `ExampleLiveActionFactory` som **namn** och klicka sedan på **Slutför**.
+1. Ange **som** namn`ExampleLiveActionFactory` och klicka sedan på **Slutför**.
 
 1. Öppna filen `ExampleLiveActionFactory.java`, ersätt innehållet med följande kod och spara filen.
 
@@ -639,7 +636,6 @@ Anger om en sidegenskap ska rullas ut och därför styrs arvet av egenskapen dia
       * **Typ**: `String`
       * **Värde**: Innehåller namnet på den aktuella egenskapen och är jämförbart med värdet för egenskapen `name`
          * Se till exempel
-
            `/libs/foundation/components/page/cq:dialog/content/items/tabs/items/basic/items/column/items/title/items/title`
 
 När `cq-msm-lockable` har definierats interagerar kedjan med MSM på följande sätt om kedjan bryts/stängs:
