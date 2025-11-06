@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.10.30
-description: Detta är versionsinformationen för version 2025.10.30 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.11.06
+description: Detta är versionsinformationen för version 2025.11.06 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: e3e571bef450ddc09eb30ab7d73b144ea521a87b
+source-git-commit: 5c762da645ee26164d39af3936fc6b3fcbd43f0b
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.10.30 {#release-notes}
+# Versionsinformation om Universal Editor 2025.11.06 {#release-notes}
 
-Det här är versionsinformationen för den 30 oktober 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 6 november 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -23,11 +23,6 @@ Det här är versionsinformationen för den 30 oktober 2025-versionen av Univers
 >[!TIP]
 >
 >Den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service finns på [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md).
-
-## Nyheter {#what-is-new}
-
-* [Den nya textredigeraren](#new-rte) kan nu infoga bilder.
-   * Den här funktionen är inaktiverad för OpenB och måste aktiveras explicit via en [filterdefinition.](/help/implementing/universal-editor/configure-rte.md#toolbar)
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -39,10 +34,12 @@ Den nya ProseMirror RTE med en sidväljare i länkdialogrutan är nu tillgängli
 
 ## Andra förbättringar {#other-improvements}
 
-* Uppdateringshändelsen informeras nu om åtgärden har ångrats.
-* Strängen `No results` är nu beroende av webbläsarens språkområde i Universella redigeringstaggar.
-* En extra radbrytning har korrigerats i Universal Editors publiceringsknapp.
-* Rensning gjordes för att korrigera API.
-* Knappen Välj innehåll visas nu i Safari.
-* RPM-bygget har åtgärdats.
-* CORS uppdaterar för att undvika att uppdatera den redigerade texten igen när du har sparat.
+* `og:title` metadatafält kan nu tas bort korrekt.
+* Ett navigeringsproblem har korrigerats när en användare redigerar platsfältet i redigeraren i webbläsaren så att ändringarna återspeglas korrekt och redigeraren och/eller appen nu navigerar till den begärda URL:en.
+* Fältmodellens upplösning korrigerades och redigeraren använder modellen från komponenten om sådan finns.
+* componentId finns nu med i åtgärden /add.
+* Möjligheten att ta bort vissa metadataegenskaper som tidigare inte kunde tas bort har åtgärdats.
+* Raw-hämtning görs nu villkorligt för xwalk när plugin-programmet för AEM inte anges.
+* MSM-hantering av innehållsfragment med RTE har korrigerats.
+* Bildmarkering i en bild stöds nu.
+
