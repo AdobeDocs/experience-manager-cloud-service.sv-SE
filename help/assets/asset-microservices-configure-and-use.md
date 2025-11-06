@@ -109,7 +109,7 @@ Det kan omvandla bild, video, dokument och andra filformat till olika renderinga
 
 Utvecklare kan använda [!DNL Asset Compute Service] för att [skapa anpassade program](https://experienceleague.adobe.com/en/docs/asset-compute/using/extend/develop-custom-application) för de användningsområden som stöds. [!DNL Experience Manager] kan anropa dessa anpassade program från användargränssnittet med hjälp av anpassade profiler som administratörer konfigurerar. [!DNL Asset Compute Service] har stöd för följande användningsfall för anrop av externa tjänster:
 
-* Använd [!DNL Adobe Photoshop]ImageCutout API[ för ](https://developer.adobe.com/photoshop/photoshop-api-docs/) och spara resultatet som en återgivning.
+* Använd [!DNL Adobe Photoshop]ImageCutout API[&#x200B; för &#x200B;](https://developer.adobe.com/photoshop/photoshop-api-docs/) och spara resultatet som en återgivning.
 * Anropa tredjepartssystem för att göra ändringar, till exempel ett PIM-system.
 * Använd API:t [!DNL Photoshop] för att skapa en mängd olika återgivningar baserade på Photoshop-mallen.
 * Använd [Adobe Lightroom API](https://developer.adobe.com/photoshop/photoshop-api-docs/) för att optimera de kapslade resurserna och spara dem som återgivningar.

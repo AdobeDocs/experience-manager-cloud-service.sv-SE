@@ -53,7 +53,7 @@ När du har publicerat formuläret med alternativet **Publicera** och dess relat
    När du klickar på knappen **[!UICONTROL Unpublish]** visas dialogrutan **Avpublicera resurs**.
 1. Klicka på **[!UICONTROL Unpublish]** för att starta avpubliceringsprocessen
 
-   ![Dialogrutan Upprepa ](/help/forms/assets/unpublish-asset.png)
+   ![Dialogrutan Upprepa &#x200B;](/help/forms/assets/unpublish-asset.png)
 
    När formuläret och dess relaterade resurser har avpublicerats visas dialogrutan **Slutfört**.
 1. Klicka på **Stäng**.

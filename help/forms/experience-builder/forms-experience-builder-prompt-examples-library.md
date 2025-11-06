@@ -120,7 +120,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     
     **Anställningsinformation:*
     - Val av befattning och avdelning
-    - Startdatum med arbetsdagsvalidering{9- ary information with privacy notice
+    - Startdatum med arbetsdagsvalidering&lbrace;9- ary information with privacy notice
     - Reporting structure
     **Document Upload:**
     
@@ -177,7 +177,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     - Ort (obligatoriskt, listruta med vanliga städer)
     - Delstat/provins (obligatoriskt, listruta)
     - Postnummer (obligatoriskt, formatvalidering)
-    }- Land (obligatoriskt, standard är USA)
+    &rbrace;- Land (obligatoriskt, standard är USA)
     
     **Valideringsregler:*
     - Postnummer måste matcha delstatsval
@@ -296,7 +296,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     
     &quot;Inkludera en listruta för professionell certifiering som anpassas baserat på det valda jobbfältet&quot;
     
-    &quot;Lägg till ett internationellt telefonnummerfält som formateras baserat på det valda landet&quot;{4&quot;Skapa ett urvalsfält för universitet med större institutioner organiserat per land och rankning&quot;
+    &quot;Lägg till ett internationellt telefonnummerfält som formateras baserat på det valda landet&quot;&lbrace;4&quot;Skapa ett urvalsfält för universitet med större institutioner organiserat per land och rankning&quot;
     
     
 
@@ -372,7 +372,7 @@ De här exemplen visar hur du skapar formulär steg för steg, startar enkelt oc
     - Formatera data som JSON med kapslade objekt för adress och anställning
     - Hantera lyckade svar (201) genom att visa tackmeddelande
     
-    ** Sekundära åtgärder:**
+    **&#x200B; Sekundära åtgärder:**
     - Skicka e-postmeddelanden till sökande på @email address
     - Kopiera programdata till spårningssystemet
     - Utlös arbetsflöde för godkännandeprocess

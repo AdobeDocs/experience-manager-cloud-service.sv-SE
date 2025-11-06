@@ -356,7 +356,7 @@ Du kommer att slutföra följande steg på hög nivå:
 
 2. **Hämta nödvändiga filer från AEM Forms-standardmallen**
 
-   Kopiera de här filerna från [AEM Forms-databasen ](https://github.com/adobe-rnd/aem-boilerplate-forms):
+   Kopiera de här filerna från [AEM Forms-databasen &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-forms):
 
    | Source | Mål | Syfte |
    |------------------------------------------------------------------------|----------------------------|----------------------------|

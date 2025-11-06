@@ -256,7 +256,7 @@ Välj den regeltyp som bäst matchar din avsikt.
 
 I det här exemplet visas villkorlig synlighet och automatiska beräkningar.
 
-![Skärmbild av gränssnittet i regelredigeraren som visar hur en villkorsregel skapas med logiken När-Då för formulärfältets synlighet ](/help/edge/docs/forms/assets/rule-editor-1.png)
+![Skärmbild av gränssnittet i regelredigeraren som visar hur en villkorsregel skapas med logiken När-Då för formulärfältets synlighet &#x200B;](/help/edge/docs/forms/assets/rule-editor-1.png)
 Bild: Formulär för momsberäkning med intelligenta villkorsfält
 
 Du skapar ett formulär som:

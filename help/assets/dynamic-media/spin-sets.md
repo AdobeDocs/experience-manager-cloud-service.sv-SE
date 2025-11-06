@@ -58,7 +58,7 @@ Så här kommer du igång snabbt med Spin Sets:
 
    Se [Arbeta med väljare](/help/assets/dynamic-media/working-with-selectors.md).
 
-1. Ställ in [förinställningar för Vyhanteraren ](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
+1. Ställ in [förinställningar för Vyhanteraren &#x200B;](/help/assets/dynamic-media/managing-viewer-presets.md) efter behov.
 
    Administratörer kan skapa eller ändra visningsförinställningar för rotationsuppsättningar. Om du vill visa rotationsuppsättningen med en visningsförinställning markerar du rotationsuppsättningen och väljer **Visningsprogram** i listrutan till vänster.
 

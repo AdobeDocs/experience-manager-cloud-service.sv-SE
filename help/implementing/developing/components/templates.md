@@ -532,7 +532,7 @@ Sidor skapade från redigerbara mallar:
 
    * `cq:templateType` - Tillhandahåller en referens till malltypen.
 
-![Hur mallar, innehåll och komponenter relaterar ](assets/templates-content-components.png)
+![Hur mallar, innehåll och komponenter relaterar &#x200B;](assets/templates-content-components.png)
 
 Diagrammet ovan visar hur mallar, innehåll och komponenter samverkar:
 

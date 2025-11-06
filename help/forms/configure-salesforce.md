@@ -69,4 +69,4 @@ När du har konfigurerat [[!DNL Salesforce] Cloud Config-tjänsten](#configure-s
 >
 >* [Konfigurera datakällor för AEM Forms](/help/forms/configure-data-sources.md)
 >* [Konfigurera Azure-lagring för AEM Forms](/help/forms/configure-azure-storage.md)
->  [Lägg till Forms Portal på en AEM Sites-sida ](/help/forms/configure-forms-portal.md)
+>  [Lägg till Forms Portal på en AEM Sites-sida &#x200B;](/help/forms/configure-forms-portal.md)

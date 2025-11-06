@@ -39,7 +39,7 @@ Gränssnittslägen visas som en serie ikoner till vänster i verktygsfältet. N�
 
 ![ContextHub-verktygsfältet](assets/contexthub-toolbar.png)
 
-Ikoner är referenser från ikonbiblioteket [Coral UI ](https://opensource.adobe.com/coral-spectrum/examples/#icon).
+Ikoner är referenser från ikonbiblioteket [Coral UI &#x200B;](https://opensource.adobe.com/coral-spectrum/examples/#icon).
 
 ### Lägga till ett gränssnittsläge {#adding-a-ui-mode}
 

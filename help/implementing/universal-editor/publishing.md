@@ -21,7 +21,7 @@ Lär dig hur den universella redigeraren publicerar sitt innehåll, hur det skil
 
 ## Likheter med platskonsolprocessen {#similarities}
 
-För användare av [AEM sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och [ webbplatskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författartjänsten till publiceringstjänsten (eller till [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) om den är tillgänglig och beroende på vilka alternativ författaren väljer vid publiceringen.)
+För användare av [AEM sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) och [&#x200B; webbplatskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) fungerar processen att publicera innehåll med den universella redigeraren som du är van vid: vid publicering i AEM replikeras innehållet från författartjänsten till publiceringstjänsten (eller till [förhandsgranskningstjänsten](/help/sites-cloud/authoring/sites-console/previewing-content.md) om den är tillgänglig och beroende på vilka alternativ författaren väljer vid publiceringen.)
 
 ## Skillnader {#differences}
 

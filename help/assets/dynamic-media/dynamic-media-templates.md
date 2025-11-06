@@ -83,7 +83,7 @@ Lär dig att skapa en [!DNL Dynamic Media]-mall steg för steg i den här videon
 Uppfyll följande krav för att skapa en [!DNL Dynamic Media]-mall och generera dess leverans-URL:
 
 1. Åtkomst till [!DNL Dynamic Media].
-1. På startsidan för [!DNL Assets View] har du en mapp i **[!UICONTROL Dynamic Media Assets]** där du kan spara mallen. [Skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets ](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**för att replikera den mappen i **[!UICONTROL Dynamic Media Assets]**.
+1. På startsidan för [!DNL Assets View] har du en mapp i **[!UICONTROL Dynamic Media Assets]** där du kan spara mallen. [Skapa en mapp](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/add-delete-assets-view) i ![Assets &#x200B;](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**&#x200B;för att replikera den mappen i **[!UICONTROL Dynamic Media Assets]**.
 1. [Synkronisera bilderna som är tillgängliga i din [!DNL AEM Assets] instans med [!DNL Dynamic Media] för att använda dem för att skapa mallen](/help/assets/dynamic-media/config-dm.md).
 1. Publicera bilderna som ska användas när mallen skapas för att generera leverans-URL:en för mallen när den har skapats. Leverans-URL:en kan användas i program längre fram i kedjan.
 1. Om du vill använda ett annat teckensnitt än standardteckensnittet [!UICONTROL Adobe Sans F2] i mallens textlager [överför och publicerar du teckensnittsfilen till AEM och Dynamic Media samtidigt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/publish-assets-to-aem-and-dm?lang=en#dynamic-media-publish-mode-set-to-upon-activation). [De teckensnittsfilformat som stöds är: AFM, OTF, PFB, PFM, PhotoFont, TTC, TTF](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/upload-publish/uploading-files#supported-asset-file-formats). Se även till att [bearbeta om](/help/assets/reprocessing-assets-view.md) befintliga teckensnitt för att använda dem. Mer information finns i [Teckensnitt](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/support-files/fonts).<!--(On [!DNL Assets View] home page, click ![Assets](/help/assets/assets/Asset-icon.svg)**[!UICONTROL Assets]**, navigate to the font file location, select the font file one at a time and click ![Reprocess](/help/assets/assets/Refresh-docs.svg)**[!UICONTROL Reprocess]**)-->
@@ -145,7 +145,7 @@ Så här skapar du en tom arbetsyta:
 * ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg): Klicka på ![skapa en mall som kan anpassas direkt](/help/assets/assets/undo.svg) eller använd kortkommando, **Ctrl** + **Z** (Windows) eller **Cmd** + **Z** (Mac) för att ångra den senaste åtgärden.
 * ![mall för att skapa banners snabbt](/help/assets/assets/redo.svg): Klicka på mallen ![om du vill skapa banners snabbt](/help/assets/assets/redo.svg) eller använd kortkommando, **Ctrl** + **Y** (Windows) eller **Cmd** + **Y** (Mac) om du vill göra om den senaste åtgärden.
 * ![mall för att snabbt skapa flygblad](/help/assets/assets/zoom-in.svg): Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/zoom-in.svg) eller använd kortkommando, **Ctrl** + **+** (Windows) eller **Cmd** + **+** (Mac) om du vill zooma in arbetsytan.
-* ![mall för att skapa banners snabbt](/help/assets/assets/Zoom-out.svg): Klicka på mallen ![ om du vill skapa banners snabbt](/help/assets/assets/Zoom-out.svg) eller använd kortkommando, **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac) om du vill zooma ut arbetsytan.
+* ![mall för att skapa banners snabbt](/help/assets/assets/Zoom-out.svg): Klicka på mallen ![&#x200B; om du vill skapa banners snabbt](/help/assets/assets/Zoom-out.svg) eller använd kortkommando, **Ctrl** + **-** (Windows) eller **Cmd** + **-** (Mac) om du vill zooma ut arbetsytan.
 * Tryck på **backspace** eller **delete** för att ta bort det markerade lagret om ingen text eller egenskap redigeras.
 
 Klicka på mallen ![om du vill skapa flygblad snabbt](/help/assets/assets/show-layers-list.svg) och välja fler alternativ (![](/help/assets/assets/three-dots.svg)) på lagret Canvas om du vill redigera arbetsytans dimensioner när du skapar mallen.
@@ -189,7 +189,7 @@ Utför följande steg för att formatera specifika delar av en sträng:
    * **Teckensnittsegenskaper**: Ändra teckensnittsfamilj, färg och storlek med respektive panelalternativ.
      ![format-substring](/help/assets/assets/format-substring.png)
 
-[Varje formaterad strängdel visas som en delsträng i delsträngsväljaren, som är tillgänglig på parameterpanelen. Lägg till parametrar i dessa formaterade delar för att formatera dem dynamiskt med mallens leverans-URL ](#substring-parameterisation).
+[Varje formaterad strängdel visas som en delsträng i delsträngsväljaren, som är tillgänglig på parameterpanelen. Lägg till parametrar i dessa formaterade delar för att formatera dem dynamiskt med mallens leverans-URL &#x200B;](#substring-parameterisation).
 
 ### Lägga till former på arbetsytan {#add-shapes-to-the-canvas}
 
@@ -214,7 +214,7 @@ Så här redigerar eller tar du bort ett lager på arbetsytan:
 
 ### Egenskapspanelen{#properties-panel}
 
-Panelen [!UICONTROL Properties] innehåller avsnitt för att [flytta](#reposition-resize-delete-a-layer), [ändra storlek](#reposition-resize-delete-a-layer) och [rotera](#reposition-resize-delete-a-layer) ett lager.  Den innehåller också färgfyllningsalternativ för [formlager](#add-shapes-to-the-canvas), [textformateringsalternativ](#text-formatting-options-on-properties-panel) för [textlager](#add-text-to-the-canvas) och ett alternativ för att [lägga till en [!UICONTROL CTA] länk ](#add-CTA-in-dynamic-media-templates) till ett markerat lager.
+Panelen [!UICONTROL Properties] innehåller avsnitt för att [flytta](#reposition-resize-delete-a-layer), [ändra storlek](#reposition-resize-delete-a-layer) och [rotera](#reposition-resize-delete-a-layer) ett lager.  Den innehåller också färgfyllningsalternativ för [formlager](#add-shapes-to-the-canvas), [textformateringsalternativ](#text-formatting-options-on-properties-panel) för [textlager](#add-text-to-the-canvas) och ett alternativ för att [lägga till en [!UICONTROL CTA] länk &#x200B;](#add-CTA-in-dynamic-media-templates) till ett markerat lager.
 Om du vill navigera till ett lagers egenskapspanel klickar du på ![Skapa snabbt innehåll](/help/assets/assets/show-layers-list.svg) och väljer lagret i listan för att visa dess [!UICONTROL Properties]-panel.
 
 ![skapa snabbt innehåll](/help/assets/assets/properties-panel.png)
@@ -280,7 +280,7 @@ Ta med följande parametrar för att redigera texten, teckensnittet, färgen och
 
 ##### Parametrisera delsträngar{#substring-parameterisation}
 
-Bläddra till avsnittet **[!UICONTROL Parameters]** i panelen **[!UICONTROL Substring Parameters]**. Det här avsnittet innehåller en **delsträngsväljare** som visar den fullständiga strängen (det markerade textlagret) med konsekvent formatering eller dess formaterade delar som separata delsträngar. Välj en delsträng för att [parametrisera dess text, teckensnittsfamilj, teckenstorlek och färg ](#text-formatting-parameters).
+Bläddra till avsnittet **[!UICONTROL Parameters]** i panelen **[!UICONTROL Substring Parameters]**. Det här avsnittet innehåller en **delsträngsväljare** som visar den fullständiga strängen (det markerade textlagret) med konsekvent formatering eller dess formaterade delar som separata delsträngar. Välj en delsträng för att [parametrisera dess text, teckensnittsfamilj, teckenstorlek och färg &#x200B;](#text-formatting-parameters).
 Använd delsträngsväljaren för att [dela delsträngar](#split-substring) om du vill parametrisera de enskilda delarna eller [sammanfoga delsträngar](#merge-substring) om du vill använda enhetliga parametrar.
 
 ###### Dela delsträng{#split-substring}
@@ -290,7 +290,7 @@ Om du vill parametrisera en viss del av en delsträng drar du ut delen så att d
 1. I delsträngsväljaren markerar du de tecken i en delsträng som du vill separera.
 1. Klicka på ![delad delsträng](/help/assets/assets/unmerge.svg) för att dra ut markeringen och göra den till en separat delsträng i **delsträngsväljaren**.
    ![delad delsträng](/help/assets/assets/split-a-substring.png)
-Du kan välja önskad delsträng för att [parametrisera text, teckensnittsfamilj, teckenstorlek och färg ](#text-formatting-parameters) .
+Du kan välja önskad delsträng för att [parametrisera text, teckensnittsfamilj, teckenstorlek och färg &#x200B;](#text-formatting-parameters) .
 
 ###### Sammanfoga delsträng{#merge-substring}
 

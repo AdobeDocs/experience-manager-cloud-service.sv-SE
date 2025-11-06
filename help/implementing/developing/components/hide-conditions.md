@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Använda Dölj villkor {#using-hide-conditions}
 
-Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) i [mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
+Dölj villkor kan användas för att avgöra om en komponentresurs återges eller inte. Ett exempel på detta är när en mallskapare konfigurerar listkomponenten [Core Component &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/list.html) i [mallredigeraren](/help/sites-cloud/authoring/page-editor/templates.md) och bestämmer sig för att inaktivera alternativen för att skapa listan baserat på underordnade sidor. Om du inaktiverar det här alternativet i designdialogrutan anges en egenskap så att när listkomponenten återges utvärderas dolda villkor och alternativet att visa underordnade sidor inte visas.
 
 ## Ökning {#overview}
 

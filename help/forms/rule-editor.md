@@ -137,7 +137,7 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
-![Rensa värdet för ](assets/clearvalueof1.png)
+![Rensa värdet för &#x200B;](assets/clearvalueof1.png)
 
 **[!UICONTROL Hide]** Döljer det angivna objektet.
 
@@ -436,7 +436,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
-   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen ****- respektive ****-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
+   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen **&#x200B;**- respektive **&#x200B;**-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
 
    ![Värden för alternativknappar från regelredigeraren](assets/radio-button-values.png)
 

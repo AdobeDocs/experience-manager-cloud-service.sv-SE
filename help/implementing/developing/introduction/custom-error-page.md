@@ -21,7 +21,7 @@ För att svara på fel tillhandahåller AEM ett `404.jsp`-skript under `/libs/sl
 
 >[!TIP]
 >
->Eftersom AEM baseras på Apache Sling finns mer information [ i dokumentationen för hantering av Apache-fel ](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html).
+>Eftersom AEM baseras på Apache Sling finns mer information [&#x200B; i dokumentationen för hantering av Apache-fel &#x200B;](https://sling.apache.org/documentation/the-sling-engine/errorhandling.html).
 
 >[!NOTE]
 >

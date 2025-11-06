@@ -149,7 +149,7 @@ Du kan skicka ett e-postmeddelande till `aem-forms-headless@adobe.com` från dit
 
 ### CDN-loggar {#cdn-logs}
 
-Ladda ned CDN-loggar från Cloud Manager, vilket är användbart för optimering av täckningsgrad och större insyn i leveransflödet. [Läs mer om ](/help/implementing/developing/introduction/logging.md#cdn-log) CDN-loggformatet. Den här funktionen lanseras gradvis för kunderna i början av september.
+Ladda ned CDN-loggar från Cloud Manager, vilket är användbart för optimering av täckningsgrad och större insyn i leveransflödet. [Läs mer om &#x200B;](/help/implementing/developing/introduction/logging.md#cdn-log) CDN-loggformatet. Den här funktionen lanseras gradvis för kunderna i början av september.
 
 ### CDN och WAF Rules early adopter {#waf-early-adopter}
 

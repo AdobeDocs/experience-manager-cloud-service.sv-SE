@@ -22,7 +22,7 @@ En författare kan stöta på följande funktionella begränsningar när han ell
 
 ### Länkar som inte är aktiva {#links-not-active}
 
-Länkarna är inte aktiva när [en sida ](/help/sites-cloud/authoring/page-editor/edit-content.md) redigeras.
+Länkarna är inte aktiva när [en sida &#x200B;](/help/sites-cloud/authoring/page-editor/edit-content.md) redigeras.
 
 * [Växla till **förhandsgranskningsläget**](/help/sites-cloud/authoring/page-editor/introduction.md#preview-mode) om du vill navigera med hjälp av länkarna i ditt innehåll.
 

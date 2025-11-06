@@ -23,7 +23,7 @@ Ja. Lägg till `maven-toolchains-plugin` med rätt inställningar för Java™ 1
 
 Processen är dokumenterad - se [Guiden Skapa projekt](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/using-the-wizard.md#getting-started).
 
-Se till exempel exempelprojektkoden [ för ](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)WKND.
+Se till exempel exempelprojektkoden [&#x200B; för &#x200B;](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)WKND.
 
 ## Mitt bygge misslyckas med ett fel om maven-scr-plugin efter byte från Java™ 8 till Java™ 11. Vad kan jag göra? {#build-fails-maven-scr-plugin}
 

@@ -69,7 +69,7 @@ Artikeln innehåller rekommendationer, referensmaterial och resurser för utveck
 I [!DNL Experience Manager] som [!DNL Cloud Service] kan du överföra resurserna direkt till molnlagringen med hjälp av HTTP API. Stegen för att överföra en binär fil visas nedan. Utför dessa steg i ett externt program och inte i JVM [!DNL Experience Manager].
 
 1. [Skicka en HTTP-begäran](#initiate-upload). Den informerar [!DNL Experience Manage]r-distributionen om din avsikt att överföra en ny binär fil.
-1. [PUT innehållet i binärfilen ](#upload-binary) till en eller flera URI:er som tillhandahålls av initieringsbegäran.
+1. [PUT innehållet i binärfilen &#x200B;](#upload-binary) till en eller flera URI:er som tillhandahålls av initieringsbegäran.
 1. [Skicka en HTTP-begäran](#complete-upload) för att informera servern om att innehållet i binärfilen har överförts.
 
 ![Översikt över protokollet för direkt binär överföring](assets/add-assets-technical.png)

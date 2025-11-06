@@ -94,4 +94,4 @@ När du har konfigurerat din `pom.xml`-fil och kört `git submodule`-kommandona 
 
 * Git-URL:er för delmodulen kan vara i HTTPS- eller SSH-format, men måste peka på en GitHub.com. Det går inte att lägga till en Adobe-databasundermodul i en GitHub-aggregeringsdatabas eller den omvända.
 * GitHub-undermoduler måste vara tillgängliga för Adobe GitHub-appen.
-* [Begränsningarna med att använda Git-undermoduler med Adobe-hanterade databaser ](#usage-notes-recommendations-adobe-repos) gäller också.
+* [Begränsningarna med att använda Git-undermoduler med Adobe-hanterade databaser &#x200B;](#usage-notes-recommendations-adobe-repos) gäller också.

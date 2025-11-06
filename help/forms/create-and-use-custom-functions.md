@@ -120,7 +120,7 @@ Titta på följande kodfragment, där input2 definieras som en valfri parameter:
 
 Följande bild visas med den anpassade funktionen `OptionalParameterFunction` i regelredigeraren:
 
-![Valfria eller obligatoriska parametrar ](/help/forms/assets/optional-default-params.png)
+![Valfria eller obligatoriska parametrar &#x200B;](/help/forms/assets/optional-default-params.png)
 
 Du kan spara regeln utan att ange ett värde för de obligatoriska parametrarna, men regeln körs inte och ett varningsmeddelande visas som:
 

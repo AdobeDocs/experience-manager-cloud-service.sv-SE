@@ -46,7 +46,7 @@ När du har lagt till det i Cloud Manager väntar du tills Adobe har utfärdat o
 * **För ett SSL-certifikat som hanteras av en kund (OV/EV):**
 
    * Hämta ditt OV/EV SSL-certifikat från en certifikatutfärdare. Mer information finns i [kraven för kundhanterade OV/EV SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md#requirements).
-   * [Lägg till information om ditt kundhanterade (OV/EV) SSL-certifikat ](#add-customer-managed-ssl-cert) i Cloud Manager när certifikatet har förvärvats.
+   * [Lägg till information om ditt kundhanterade (OV/EV) SSL-certifikat &#x200B;](#add-customer-managed-ssl-cert) i Cloud Manager när certifikatet har förvärvats.
    * När du har lagt till det anpassade domännamnet markeras det som verifierat och SSL-certifikatet används.
 
 I båda fallen är den anpassade domänen tillgänglig för säker användning i din miljö när certifikatet har verifierats och installerats. [Kontrollera domänens status](/help/implementing/cloud-manager/custom-domain-names/check-domain-name-status.md) i Cloud Manager-gränssnittet regelbundet för att kontrollera att allt fungerar som det ska.

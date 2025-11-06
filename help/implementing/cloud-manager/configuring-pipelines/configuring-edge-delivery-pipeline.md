@@ -68,7 +68,7 @@ Innan du börjar distribuera koden måste du konfigurera dina pipeline-inställn
 
    * **Lägg till en Edge Delivery-pipeline från sidan för pipeline**
 
-      1. Klicka på ikonen **Arbetsflöde eller Pipelines** Pipelines **![i den vänstra listen under ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Program**.
+      1. Klicka på ikonen **Arbetsflöde eller Pipelines** Pipelines **![i den vänstra listen under &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Program**.
       1. Klicka på **Lägg till pipeline** > **Lägg till Edge Delivery-pipeline** på sidan Pipelines, i det övre högra hörnet.
 
          ![Sidan Pipelines med knappen Lägg till pipeline](/help/implementing/cloud-manager/configuring-pipelines/assets/pipelinespage-add-ed-pipeline.png)

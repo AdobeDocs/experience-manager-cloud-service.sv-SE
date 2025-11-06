@@ -15,7 +15,7 @@ ht-degree: 0%
 
 En av de kraftfulla funktionerna för att skapa formulär med hjälp av ett kalkylblad är möjligheten att använda inbyggda kalkylbladsfunktioner för att skapa regler, vilket gör det möjligt att villkorligt visa eller dölja formulärfält, automatisera beräkningar baserat på användarens indata och skapa en mer dynamisk användarupplevelse.
 
-I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva formulärblock, huvudsakligen [`Visible`](#visible-property), [`Visibility Expression`](#visible-expression-property) och [`Value Expression`](#value-expression-property) tillsammans med [-kalkylbladsfunktioner ](#spreadsheet-functions-for-rules), för att skapa effektiva regler för dina formulär. Vi ska också titta på några exempel som visar hur dessa regler kan implementeras i praktiken.
+I den här artikeln beskrivs hur du använder olika egenskaper för adaptiva formulärblock, huvudsakligen [`Visible`](#visible-property), [`Visibility Expression`](#visible-expression-property) och [`Value Expression`](#value-expression-property) tillsammans med [-kalkylbladsfunktioner &#x200B;](#spreadsheet-functions-for-rules), för att skapa effektiva regler för dina formulär. Vi ska också titta på några exempel som visar hur dessa regler kan implementeras i praktiken.
 
 ## Om en linjes konstruktion
 

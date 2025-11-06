@@ -56,7 +56,7 @@ Se bilden nedan för att visa var alternativen i listrutan ställs in när du kl
 
 Låt oss lära oss hur anpassade funktioner använder fält och globala objekt med hjälp av ett `Contact Us`-formulär.
 
-![Kontakta oss ](/help/forms/assets/contact-us-form.png)
+![Kontakta oss &#x200B;](/help/forms/assets/contact-us-form.png)
 
 Lägg till följande kod i den anpassade funktionen enligt beskrivningen i avsnittet [create-custom-function](/help/forms/custom-function-core-component-create-function.md) för att ange formulärfältet som `Required`.
 
