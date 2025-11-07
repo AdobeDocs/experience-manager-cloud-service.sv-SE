@@ -5,7 +5,7 @@ products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
 exl-id: 926fd6af-aea1-40be-9d38-8f1ea0900132
-source-git-commit: 8f25010ed57bd76acac7c56533ba8e37913511b7
+source-git-commit: 957944da363b506c34c2630aeedbe984442f34b8
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Med Interactive Communication Templates i AEM kan man definiera återanvändbara
 
 ## Skapa en interaktiv kommunikationsmall
 
-Så här skapar du ett interaktivt kommunikationsfragment:
+Så här skapar du en interaktiv kommunikationsmall:
 
 1. Öppna din **Adobe Experience Manager (AEM) Forms as a Cloud Service-instans**.
 
@@ -78,4 +78,4 @@ Genom att följa stegen ovan kan du skapa en interaktiv kommunikationsmall. När
 ## Nästa steg
 
 [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-[&#x200B; Skapa ett interaktivt kommunikationsfragment &#x200B;](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
+[ Skapa ett interaktivt kommunikationsfragment ](/help/forms/interactive-communication/create-interactive-communication-fragment.md)

@@ -4,9 +4,9 @@ description: Med Dynamic Page Numbering i Interactive Communication Editor kan m
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 371838c77beafa8c67259a865b25325632bea0b0
+source-git-commit: 957944da363b506c34c2630aeedbe984442f34b8
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,25 @@ ht-degree: 0%
 ## Introduktion
 
 Med funktionen Dynamic Page Numbering i Interactive Communication (IC) kan man automatiskt visa sidnummer i PDF-utdata. Sidnumrering kan aktiveras på mallsidenivå, vilket ger en konsekvent numrering över alla associerade designsidor. Detta gör det lättare att hålla ordning på sidorna och ha en professionell layout i flersidig kommunikation.
+
+![Sök efter IC-dokument](/help/forms/interactive-communication/assets/dynamic-page.png)
+
+## Använda dynamisk sidnumrering i den interaktiva kommunikationsredigeraren
+
+1. Öppna Interactive Communication Editor
+Öppna Interactive Communication-projektet i IC Editor.
+
+1. Gå till mallsida
+Sidnumrering kan bara aktiveras på mallsidan. Navigera till huvudsidan i kommunikationen.
+
+1. Aktivera sidnumrering
+Aktivera alternativet Aktivera sidnummer i panelen Egenskaper. Då läggs sidnummer automatiskt till på alla associerade sidor.
+
+1. Anpassa placering
+Komponenten Sidnummer kan placeras var som helst på arbetsytan efter att ha släppts och anpassats fritt med hjälp av standardegenskaper för text.
+
+1. Förhandsgranska i PDF
+Sidnummer visas endast vid förhandsvisning av PDF och dynamisk numrering visas på alla sidor.
 
 ## Nyckelfunktioner
 

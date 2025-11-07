@@ -4,9 +4,9 @@ description: Malllås i den interaktiva kommunikationsredigeraren gör det möjl
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 371838c77beafa8c67259a865b25325632bea0b0
+source-git-commit: 957944da363b506c34c2630aeedbe984442f34b8
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,8 @@ ht-degree: 0%
 Med funktionen Template Lock i Interactive Communication (IC) Editor kan mallförfattare begränsa ändringar av vissa element i en kommunikationsmall. Detta säkerställer en enhetlig design, skyddar viktigt innehåll och upprätthåller styrning mellan team som återanvänder mallar för att skapa personaliserad kommunikation.
 
 När låsta komponenter används ser de ut som distinkta och kan inte ändras av författare eller medarbetare längre fram i kedjan, beroende på låstypen. Den här funktionen hjälper till att upprätthålla varumärkesstandarder, dataintegritet och enhetlig layout i all kommunikation.
+
+![Sök efter IC-dokument](/help/forms/interactive-communication/assets/template-lock.png)
 
 ## &#x200B;2. Lås typer
 
@@ -56,15 +58,29 @@ När det används kan författare inte:
 
 - Ändra storlek på elementets bredd eller höjd
 
-## &#x200B;3. Beteende i Härledd kommunikation
+## &#x200B;3. Så här använder du malllås i den interaktiva kommunikationsredigeraren
 
-- När en kommunikation skapas från en låst mall visas de låsta elementen som skrivskyddade i IC Editor för kommunikationsförfattare.
+Följ stegen nedan för att använda innehålls- eller layoutlås i mallen för interaktiv kommunikation:
 
-- Komponenter med innehållslås kan inte ha sina inre egenskaper eller bindningar ändrade.
+1. Öppna din mall
+Öppna eller skapa en mall, följ guiden [Skapa en interaktiv kommunikationsmall](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/interactive-communication/overview/create-interactive-communication-template)
 
-- Komponenter med layoutlås kan inte flyttas eller storleksändras.
+1. Välj komponenten
+Klicka på den komponent (textruta, bild eller delformulär) som du vill begränsa.
 
-Detta gör att mallskapare kan behålla kontrollen över design och struktur samtidigt som andra användare kan fokusera på variabelt innehåll och datadriven anpassning.
+1. Alternativ för Access Lock
+Gå till avsnittet Låsning i panelen Egenskaper.
+
+1. Använd lås
+
+   1. Content Lock: Förhindrar text-, format- och dataredigeringar.
+
+   1. Layoutlås: Begränsar förflyttning och storleksändring.
+
+   1. Du kan aktivera båda för fullständigt skydd.
+
+1. Spara och verifiera
+Spara mallen och skapa en ny IC som baseras på den för att bekräfta att låsta element inte kan ändras.
 
 ## &#x200B;4. Bästa praxis
 

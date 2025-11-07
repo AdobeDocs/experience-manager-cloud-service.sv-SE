@@ -4,9 +4,9 @@ description: Stöd för XDP-redigering i Interactive Communication Editor gör a
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 0cfbf6d61bc2d557b0a096db5b3cb26ae4570748
+source-git-commit: 957944da363b506c34c2630aeedbe984442f34b8
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,20 @@ ht-degree: 0%
 ## Introduktion
 
 Redigeraren för interaktiv kommunikation (IC) har nu **sömlöst stöd för redigering av XDP-filer (XML-datapaket)** i redigeringsmiljön. Förbättringen gör det möjligt för skribenter att hantera, ändra och underhålla XDP-mallar utan problem, utan att behöva använda externa verktyg. Med den här funktionen kan användare överföra, visa och redigera XDP-filer direkt i IC Editor, vilket ger ett enhetligt och effektivt arbetsflöde från design till leverans.
+
+## Använda stöd för XDP-redigering i interaktiv kommunikationsredigerare
+
+![Sök efter IC-dokument](/help/forms/interactive-communication/assets/support-xdp.png)
+
+1. Navigera till **Forms > Forms &amp; Documents**.
+
+1. Överför din .xdp-fil med alternativet **Skapa > Filöverföring** .
+
+1. Öppna XDP i **Interaktiv kommunikationsredigerare**.
+
+1. Gör nödvändiga ändringar i **design eller databindning**.
+
+1. Om du sparar ändringarna återspeglas uppdateringarna automatiskt i XDP-källfilen.
 
 ## Nyckelfunktioner
 
@@ -46,18 +60,6 @@ Om ett fragment saknas visas ett **varningsmeddelande** som anger att det nödv�
 - **Återanvändning av fragment i redigeraren:**
 Alla befintliga XDP-fragment visas på **fragmentpanelen** i IC Editor.
 Författare kan **dra och släppa** dessa fragment direkt på arbetsytan. Referenserna bevaras så att fragmentuppdateringarna sprids över alla XDP-filer som använder dem.
-
-## Exempel på användning
-
-1. Navigera till **Forms > Forms &amp; Documents**.
-
-1. Överför din .xdp-fil med alternativet **Skapa > Filöverföring** .
-
-1. Öppna XDP i **Interaktiv kommunikationsredigerare**.
-
-1. Gör nödvändiga ändringar i **design eller databindning**.
-
-1. Om du sparar ändringarna återspeglas uppdateringarna automatiskt i XDP-källfilen.
 
 ## Fördelar
 

@@ -1,10 +1,10 @@
 ---
-title: Numeriskt fältobjekt i interaktiv kommunikationsredigerare
-description: Numeriskt fältobjekt i Interactive Communication Editor i AEM Forms så att författare kan samla in numeriska data från användare i ett kontrollerat format.
+title: Numerisk fältkomponent i interaktiv kommunikationsredigerare
+description: Komponenten Numeric Field i Interactive Communication Editor i AEM Forms gör att författare kan samla in numeriska data från användare i ett kontrollerat format.
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: bd8992792afddb2243736578acd24bc47efad842
+source-git-commit: 957944da363b506c34c2630aeedbe984442f34b8
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 ---
 
 
-# Numeriskt fältobjekt i interaktiv kommunikationsredigerare
+# Numerisk fältkomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
@@ -130,6 +130,6 @@ Författare kan placera numeriska fält i layoutbehållare eller delformulär oc
 
 - Enhetligt utseende och typografi som överensstämmer med varumärkesriktlinjerna.
 
-Objektet **Numeriskt fält** i redigeraren för interaktiv kommunikation är ett exakt och tillförlitligt verktyg för sifferbaserad datainsamling. Tack vare effektiva formaterings-, synlighets- och databindningsfunktioner kan du säkerställa att numeriska data är korrekt inlästa och sömlöst integrerade i digitala formulär. När formuläret är formaterat och konfigurerat på rätt sätt blir det betydligt enklare att använda formuläret och dessutom blir informationen mer korrekt.
+Komponenten **Numeriskt fält** i redigeraren för interaktiv kommunikation är ett exakt och tillförlitligt verktyg för sifferbaserad datainsamling. Tack vare effektiva formaterings-, synlighets- och databindningsfunktioner kan du säkerställa att numeriska data är korrekt inlästa och sömlöst integrerade i digitala formulär. När formuläret är formaterat och konfigurerat på rätt sätt blir det betydligt enklare att använda formuläret och dessutom blir informationen mer korrekt.
 
 
