@@ -49,7 +49,7 @@ I Åtgärdscenter kan du se en lista med andra senaste meddelanden. Vi rekommend
 
 I de flesta fall bör popup-fönstret innehålla all den kontext som behövs för att lösa problemet. Om du har frågor om Adobe Support kan du klicka på länken **Kontakta support** i popup-fönstret. Här visas ett formulär där du kan beskriva frågan och skicka in den för att skapa en supportanmälan, som även innehåller en hänvisning till den specifika anmälan så att en Adobe supporttekniker har rätt sammanhang.
 
-![Kontakta support ](/help/operations/assets/contact-support1.png)
+![Kontakta support &#x200B;](/help/operations/assets/contact-support1.png)
 
 ![Kontakta support 2](/help/operations/assets/contact-support2.png)
 
