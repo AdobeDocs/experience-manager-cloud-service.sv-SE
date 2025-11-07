@@ -2,9 +2,9 @@
 title: Snabbpublicera till  [!DNL AEM and Dynamic Media]
 description: Med Snabbpublicering i [!DNL Assets view] kan du publicera resurser till  [!DNL AEM and Dynamic Media] samtidigt eller separat. Du kan välja resurser och mappar och välja att publicera till  [!DNL Dynamic Media] eller [!DNL AEM].
 exl-id: 147c1c35-0d81-4458-b4ed-7541d2b0dd54
-feature: Publishing, [!DNL Dynamic Media]
+feature: Publishing
 role: User
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '922'
 ht-degree: 0%

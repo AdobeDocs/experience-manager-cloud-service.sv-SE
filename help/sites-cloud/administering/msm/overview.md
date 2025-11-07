@@ -1,13 +1,13 @@
 ---
 title: Återanvända innehåll - Multi Site Manager och Live Copy
-description: Få en introduktion till att återanvända innehåll med AEM kraftfulla Live-kopior och Multi Site Manager-funktionerna.
+description: Få en introduktion till återanvändning av innehåll med AEM kraftfulla Live-kopior och Multi Site Manager-funktionerna.
 feature: Multi Site Manager
 role: Admin
 exl-id: 22b4041f-1df9-4189-8a09-cbc0c89fbf2e
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
-source-wordcount: '2721'
+source-wordcount: '2719'
 ht-degree: 0%
 
 ---
@@ -149,7 +149,7 @@ MSM är direkt tillgängligt i användargränssnittet med hjälp av olika altern
 
 >[!NOTE]
 >
->Aspekter på MSM-funktionalitet används i flera andra AEM funktioner som Launches. I dessa fall hanteras Live-kopian av den funktionen.
+>Aspekter på MSM-funktioner används i flera andra AEM-funktioner, som Launches. I dessa fall hanteras Live-kopian av den funktionen.
 
 ### Använda termer {#terms-used}
 
@@ -203,7 +203,7 @@ I föregående exempel är `/content/wknd/language-masters/en` den globala huvud
 >
 >Diagrammen och beskrivningarna i det här avsnittet representerar ögonblicksbilder av potentiella Live-kopior. De är inte heltäckande, men ger en översikt som framhäver specifika egenskaper.
 
-När du först skapar en Live-kopia återspeglas de valda källsidorna på 1:1-basis i Live-kopian. Därefter kan nya resurser (sidor och/eller stycken) också skapas direkt i Live-kopian, så det är praktiskt att vara medveten om dessa variationer och hur de påverkar synkroniseringen. Möjliga kompositioner:
+När du först skapar en Live-kopia återspeglas de valda källsidorna på :1-basis i Live-kopian. Därefter kan nya resurser (sidor och/eller stycken) också skapas direkt i Live-kopian, så det är praktiskt att vara medveten om dessa variationer och hur de påverkar synkroniseringen. Möjliga kompositioner:
 
 * [Live Copy med icke-Live-Copy-sidor](#live-copy-with-non-live-copy-pages)
 * [Kapslade Live-kopior](#nested-live-copies)
@@ -222,7 +222,7 @@ Det grundläggande formuläret i Live Copy har:
 
 #### Live-kopia med icke-Live-Copy-sidor {#live-copy-with-non-live-copy-pages}
 
-När du skapar en Live-kopia i AEM kan du se och navigera genom grenen Live-kopia och använda de normala AEM funktionerna i grenen Live-kopia. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. Exempel: en produkt för ett visst område eller land.
+När du skapar en Live-kopia i AEM kan du se och navigera genom Live Copy-grenen och använda de vanliga AEM-funktionerna i Live Copy-grenen. Det innebär att du (eller en process) kan skapa nya resurser (sidor och/eller stycken) inuti Live-kopian. Exempel: en produkt för ett visst område eller land.
 
 * Sådana resurser har ingen aktiv relation till käll-/ritningssidorna och är inte synkroniserade.
 * Scenarier kan inträffa som MSM hanterar som specialfall. När du till exempel (eller en process) skapar en sida med samma position och namn i både käll-/ritytan och Live-kopieringsgrenarna. Mer information finns i [MSM-utrullningskonflikter](rollout-conflicts.md).
@@ -242,7 +242,7 @@ Till exempel skrivs länkar som pekar från den andra till den första utkast om
 
 >[!NOTE]
 >
->Om du flyttar eller byter namn på en sida inom Live Copy-grenen behandlas den som en kapslad Live Copy så att AEM kan spåra relationerna.
+>Om du flyttar eller byter namn på en sida i Live Copy-grenen behandlas den som en kapslad Live Copy så att AEM kan spåra relationerna.
 
 #### Skiktade Live-kopior {#stacked-live-copies}
 

@@ -5,7 +5,7 @@ contentOwner: AG
 feature: Metadata
 role: User, Admin
 exl-id: fb70a068-3ba3-4459-952d-79155d286c42
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 4%
@@ -25,14 +25,14 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 >Om du vill importera metadata för anpassade namnutrymmen måste du först registrera namnutrymmena.
 
 1. Navigera till [!DNL Assets]-användargränssnittet, välj **[!UICONTROL Create]** i verktygsfältet och välj **[!UICONTROL Metadata]** på menyn.
-1. Klicka på **[!UICONTROL Select File]** på sidan **[!UICONTROL Metadata Import]**. Markera CSV-filen med metadata.
+1. Klicka på **[!UICONTROL Metadata Import]** på sidan **[!UICONTROL Select File]**. Markera CSV-filen med metadata.
 1. Ange följande parametrar:
 
    | Parameter | Beskrivning |
    | ---------------------- | ------- |
    | Batchstorlek | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | Fältavgränsare | Standardvärdet är `,` (komma). Du kan ange vilket annat tecken som helst. |
-   | Flervärdesavgränsare | Avgränsare för metadatavärden. Standardvärdet är `|`. |
+   | Flervärdesavgränsare | Avgränsare för metadatavärden. Standardvärdet är `\|`. |
    | Starta arbetsflöden | Falskt som standard. När inställningen är `true` och standardinställningarna används för arbetsflödet WriteBack för DAM-metadata (som skriver metadata till binära XMP-data). Om du aktiverar arbetsflödena blir systemet långsammare. |
    | Kolumnnamn för resurssökväg | Definierar kolumnnamnet för CSV-filen med resurser. |
 

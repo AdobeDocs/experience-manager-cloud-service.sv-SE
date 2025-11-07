@@ -5,7 +5,7 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '1918'
 ht-degree: 0%
@@ -95,13 +95,12 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | Trafik från DDOS-attacker | Exkluderad | DDOS-skydd. AEM identifierar några av DDOS-attackerna automatiskt och blockerar dem. DDOS-attacker om de upptäcks är inte fakturerbara. |
 | AEM as a Cloud Service New Relic Monitoring | Exkluderad | AEM as a Cloud Service global övervakning. |
 | URL till kunder som vill övervaka sina Cloud Service-program | Exkluderad | Adobe rekommenderar att du använder URL:en för att övervaka tillgänglighets- eller hälsokontrollen externt.<br><br>`/system/probes/health` |
-| AEM as a Cloud Service Pod Warm-up Service | Exkluderad |
-| Agent: skyline-service-warmup/1.* |
+| AEM as a Cloud Service Pod Warm-up Service | Exkluderad | Agent: skyline-service-warmup/1.* |
 | Välkända sökmotorer, sociala nätverk och HTTP-bibliotek (taggade med Fastly) | Exkluderad | Välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst:<br><br>Exempel:<br> ・ AddSearchBot<br> ・ AhrefsBot<br> ・ Applebot<br> ・ Ask Jeeves Corporate Spider<br> ・ Bingbot<br> ・ BingPreview<br> ・ BLEXBot<br> ‡ BuiltWith<br> pider<br> ;CrawlerKengo<br> avslutning Facebookexternalhit<br> avslutning Google AdsBot<br> avslutning Google AdsBot Mobile<br> avslutad Googlebot<br> avslutad Googlebot Mobile<br> avslutad lspider<br> avslutad LucidWorks<br> avslutning `MJ12bot`<br> avslutning <br>  avslutande Pinterest<br> <br> avslutningsprisBot  avslutad SiteImimprove  avslutad StashBot <br> avslutad StatusCake <br> avslutad YandexBot <br> pigg ContentKing <br> avslutad Claudebot |
 | Uteslut Commerce integration framework-samtal | Exkluderad | Begäranden som skickas till AEM som vidarebefordras till Commerce integration framework - URL:en börjar med `/api/graphql` - för att undvika dubbelräkning kan de inte debiteras för Cloud Service. |
 | Uteslut `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på en dator eller mobiltelefon. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
 | Uteslut `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON har vissa scenarier, som SAML-autentiseringsflöden, observerats returnera favoritikoner som HTML. Därför exkluderas favoritikoner uttryckligen från antalet. |
-| Experience Fragment (XF) - Återanvändning i samma domän | Exkluderad | Begäranden som gjorts för XF-sökvägar (till exempel `/content/experience-fragments/...`) från sidor som finns på samma domän (som identifieras av referensrubriken som matchar begärandevärden).<br><br> Exempel: En hemsida på `aem.customer.com` som drar in en XF-fil för en banderoll eller ett kort från samma domän.<br><br> ・ URL matchar /content/experience-fragments/..<br> ・ referensdomänen matchar `request_x_forwarded_host`<br><br>**Obs!** Om Experience Fragment-sökvägen är anpassad (till exempel med `/XFrags/...` eller någon sökväg utanför `/content/experience-fragments/`), kommer begäran inte att uteslutas och kan räknas, även om den är samma domän. Vi rekommenderar att Adobe standardstruktur för XF-sökväg används för att säkerställa att exkluderingslogiken tillämpas korrekt. |
+| Experience Fragment (XF) - Återanvändning i samma domän | Exkluderad | Begäranden som gjorts för XF-sökvägar (till exempel `/content/experience-fragments/...`) från sidor som finns på samma domän (som identifieras av referensrubriken som matchar begärandevärden).<br><br> Exempel: En hemsida på `aem.customer.com` som drar in en XF-fil för en banderoll eller ett kort från samma domän.<br><br> ・ URL matchar /content/experience-fragments/..<br> ・ referensdomänen matchar `request_x_forwarded_host`<br><br>**Obs!** Om Experience Fragment-sökvägen är anpassad (till exempel med `/XFrags/...` eller någon sökväg utanför `/content/experience-fragments/`), kommer begäran inte att uteslutas och kan räknas, även om den är samma domän. Vi rekommenderar att du använder Adobe XF-standardsökvägsstruktur för att säkerställa att exkluderingslogiken tillämpas korrekt. |
 
 ## Hantera innehållsförfrågningar {#managing-content-requests}
 

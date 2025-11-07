@@ -5,7 +5,7 @@ role: User, Leader, Admin, Developer
 contentOwner: AG
 exl-id: 5936ace2-318e-4888-9ad4-23e6f6bfb857
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 0%
@@ -55,10 +55,12 @@ De olika filtyperna har olika typer av stöd för användningsfall och funktione
 
 ## Söka efter, använda och redigera resurser {#support-to-search-use-edit}
 
+<!--writer - please check RAW files row below. There was an extra column, so I deleted a duplicate section. I think I did it right. -->
+
 | Tillgångstyp | [Hämta](/help/assets/manage-organize-assets-view.md#download) | Dra och släpp | [Bildredigeraren](/help/assets/edit-images-assets-view.md) | [Sökning](/help/assets/search-assets-view.md) | [Smarta taggar](/help/assets/metadata-assets-view.md#tags) | [Byt namn](/help/assets/manage-organize-assets-view.md) | [Versioner](/help/assets/manage-organize-assets-view.md#versions-of-assets) |
 |---------------|----------|---------------|--------------|----------|------------|----------|----------|
 | Rasterbilder | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| RAW-filer | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ | ✓ |
+| RAW-filer | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Mappar | ✓ | ✓ | - | ✓ | - | ✓ | ✓ |
 | Videor | ✓ | ✓ | - | ✓ | ✓ | ✓ | ✓ |
 | CC Libraries | - | - | - | - | - | ✓ | ✓ |
@@ -128,4 +130,4 @@ Användare av [!DNL Adobe Asset Link] kan överföra och checka in (överföra e
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)

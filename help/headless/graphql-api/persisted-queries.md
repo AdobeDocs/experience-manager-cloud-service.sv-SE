@@ -4,10 +4,10 @@ description: Lär dig hur du bibehåller GraphQL-frågor i Adobe Experience Mana
 feature: Headless, Content Fragments,GraphQL API
 exl-id: 080c0838-8504-47a9-a2a2-d12eadfea4c0
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '1952'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -301,7 +301,7 @@ Som standard gör AEM cachen ogiltig baserat på en TTL-definition (Time To Live
 | Cache-typ | [HTTP-huvud](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)  | cURL  | OSGi-konfiguration  | Cloud Manager |
 |--- |--- |--- |--- |--- |
 | Webbläsare | `max-age` | `cache-control : max-age` | `cacheControlMaxAge` | `graphqlCacheControl` |
-| CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` | `graphqlSurrogateControl` | 60 |
+| CDN | `s-maxage` | `surrogate-control : max-age` | `surrogateControlMaxAge` | `graphqlSurrogateControl` \|60 |
 | CDN | `stale-while-revalidate` | `surrogate-control : stale-while-revalidate ` | `surrogateControlStaleWhileRevalidate` | `graphqlStaleWhileRevalidate` |
 | CDN | `stale-if-error` | `surrogate-control : stale-if-error` | `surrogateControlStaleIfError` | `graphqlStaleIfError` |
 
@@ -337,7 +337,7 @@ Dessa kan skrivas över:
 
 * [från GraphQL IDE](#http-cache-headers-graphiql-ide)
 
-* [&#x200B; på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
+* [ på nivån för beständig fråga](#cache-persisted-query-level). Detta innebär att frågan skickas till AEM med cURL i kommandoradsgränssnittet och att den beständiga frågan publiceras.
 
 * [med Cloud Manager-variabler](#cache-cloud-manager-variables)
 

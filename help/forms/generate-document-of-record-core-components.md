@@ -4,7 +4,7 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '3136'
 ht-degree: 0%
@@ -262,7 +262,7 @@ I följande tabell beskrivs adaptiva formulärkomponenter och motsvarande XFA-ko
 | Adaptiv Form-komponent | Motsvarande XFA-komponent | Anteckningar |
 |---|---|---|
 | Bild | Bild | Komponenterna TextDraw och Image, oavsett om de är bundna eller obundna, visas alltid i registreringsdokumentet för ett XSD-baserat anpassat formulär, såvida de inte utelämnas med inställningarna för postdokument. |
-| Text | Text |
+| Text | Text |  |
 
 ### Tabeller {#tables}
 

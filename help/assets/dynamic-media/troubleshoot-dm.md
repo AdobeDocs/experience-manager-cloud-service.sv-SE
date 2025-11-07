@@ -1,24 +1,24 @@
 ---
-title: Felsöka Dynamic Media
+title: Felsöka dynamiska media
 description: Lär dig mer om felsökningstips du kan testa när du arbetar med bilder, uppsättningar och visningsprogram i Dynamic Media.
 contentOwner: Rick Brough
 feature: Troubleshooting,Image Sets,Viewers
 role: Admin,User
 exl-id: 3e8a085f-57eb-4009-a5e8-1080b4835ae2
-source-git-commit: 26afff3a39a2a80c1f730287b99f3fb33bff0673
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
 
-# Felsöka Dynamic Media {#troubleshooting-dynamic-media-scene-mode}
+# Felsöka dynamiska media {#troubleshooting-dynamic-media-scene-mode}
 
 I följande avsnitt beskrivs felsökning för Dynamic Media.
 
-## Ny Dynamic Media-konfiguration {#new-dm-config}
+## Ny konfiguration för dynamiska media {#new-dm-config}
 
-Se [Felsöka en ny Dynamic Media-konfiguration](/help/assets/dynamic-media/config-dm.md#troubleshoot-dm-config).
+Se [Felsöka en ny konfiguration för dynamiska media](/help/assets/dynamic-media/config-dm.md#troubleshoot-dm-config).
 
 ## Allmänt (alla Assets) {#general-all-assets}
 
@@ -26,18 +26,18 @@ Här följer några allmänna tips och tricks för alla resurser.
 
 ### Statusegenskaper för resurssynkronisering {#asset-synchronization-status-properties}
 
-Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta att resursen har synkroniserats från Adobe Experience Manager till Dynamic Media:
+Följande resursegenskaper kan granskas i CRXDE Lite för att bekräfta den lyckade synkroniseringen av resursen från Adobe Experience Manager till Dynamic Media:
 
 | **Egenskap** | **Exempel** | **Beskrivning** |
 |---|---|---|
-| `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
-| `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av mediefil till Dynamic Media. |
-| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att URL:er ska kunna genereras till Dynamic Media fjärråtkomst. |
+| `<object_node>/jcr:content/metadata/dam:scene7ID` | **`a\|364266`** | En allmän indikator på att noden är länkad till Dynamic Media. |
+| `<object_node>/jcr:content/metadata/dam:scene7FileStatus` | **PublishComplete** eller feltext | Status för överföring av resurs till Dynamic Media. |
+| `<object_node>/jcr:content/metadata/dam:scene7File` | **myCompany/myAssetID** | Måste fyllas i för att generera URL:er till fjärråtkomst av Dynamic Media. |
 | `<object_node>/jcr:content/dam:lastSyncStatus` | **success** eller **failed:`<error text>`** | Synkroniseringsstatus för uppsättningar (snurra uppsättningar, bilduppsättningar o.s.v.), bildförinställningar, visningsförinställningar, uppdateringar av bildscheman för en resurs eller bilder som har redigerats. |
 
 ### Synkroniseringsloggning {#synchronization-logging}
 
-Synkroniseringsfel och problem loggas i `error.log` (Experience Manager-serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG för paketet `com.adobe.cq.dam.ips` via Sling Console ([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)) för att samla in mer information.
+Synkroniseringsfel och problem har loggats i `error.log` (Experience Manager-serverkatalog `/crx-quickstart/logs/`). Tillräcklig loggning finns för att fastställa orsaken till de flesta problemen, men du kan öka loggningen till DEBUG för paketet `com.adobe.cq.dam.ips` via Sling Console ([https://localhost:4502/system/console/slinglog](https://localhost:4502/system/console/slinglog)) för att samla in mer information.
 
 ### Versionskontroll {#version-control}
 
@@ -70,7 +70,7 @@ Om du har problem med bilder och uppsättningar kan du läsa följande felsökni
     </ol> </td>
    <td><p>Uppdatera sida/navigera till en annan sida och gå tillbaka (JSP för sidorälar måste kompileras om)</p> <p>Om det inte fungerar:</p>
     <ul>
-     <li>Publish Assets.</li>
+     <li>Publicera resurs.</li>
      <li>Ladda upp resursen igen och publicera den.</li>
     </ul> </td>
   </tr>
@@ -126,7 +126,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
      <li>Tilldela en videoprofil till mappen.</li>
      <li>Redigera videoprofilen så att den innehåller fler än en kodningsförinställning.</li>
      <li>Vänta tills videon har bearbetats klart.</li>
-     <li>Innan du läser in videon igen bör du kontrollera att arbetsflödet för Dynamic Media Encode Video inte körs.<br/> </li>
+     <li>Innan du läser in videon igen kontrollerar du att arbetsflödet för Dynamic Media Encode-video inte körs.<br/> </li>
      <li>Ladda upp videon igen.</li>
     </ol> </td>
   </tr>
@@ -134,7 +134,7 @@ Om du har problem med video kan du läsa följande felsökningsguide.
    <td>Video är inte kodad</td>
    <td>
     <ul>
-     <li>Kontrollera om Dynamic Media Cloud Service är konfigurerad.</li>
+     <li>Kontrollera om Dynamic Media Cloud Service har konfigurerats.</li>
      <li>Kontrollera om en videoprofil är kopplad till mappen för överföring.</li>
     </ul> </td>
    <td>
@@ -180,14 +180,14 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 
    >[!NOTE]
    >
-   >Det kan ta ca 10 minuter efter konfigureringen av Dynamic Media molninställningar för de visningsprogramresurser som ska synkroniseras.
+   >Det kan ta ca 10 minuter efter konfigurationen av inställningarna för Dynamic Media-molnet för de visningsprogramresurser som ska synkroniseras.
 
 1. Om det finns oaktiverade resurser kvar väljer du någon av **Visa alla oaktiverade Assets**-knappar för att se information.
 
 **Lösning**
 
 1. Navigera till listan med visningsförinställningar i administratörsverktygen: `https://localhost:4502/libs/dam/gui/content/s7dam/samplemanager/samplemanager.html`
-1. Markera alla visningsförinställningar och välj sedan **Publish**.
+1. Markera alla visningsförinställningar och välj sedan **Publicera**.
 1. Navigera tillbaka till exempelhanteraren och observera att antalet oaktiverade resurser nu är noll.
 
 ### Problem: Förinställda bilder i visningsprogrammet returnerar 404 från Förhandsgranska i resursinformation eller Kopiera URL/Bädda in kod {#viewer-preset-404}
@@ -196,7 +196,7 @@ Om du har problem med visningsprogram kan du läsa följande felsökningsguide.
 
 Gör följande i CRXDE Lite:
 
-1. Navigera till mappen `<sync-folder>/_CSS/_OOTB` i din Dynamic Media-synkroniseringsmapp (till exempel `/content/dam/_CSS/_OOTB`).
+1. Navigera till mappen `<sync-folder>/_CSS/_OOTB` i mappen för synkronisering av dynamiska media (till exempel `/content/dam/_CSS/_OOTB`).
 1. Hitta metadatanoden för den problematiska resursen (till exempel `<sync-folder>/_CSS/_OOTB/CarouselDotsLeftButton_dark_sprite.png/jcr:content/metadata/`).
 1. Kontrollera om det finns `dam:scene7*` egenskaper. Om resursen synkroniserades och publicerades korrekt ser du att uppsättningen `dam:scene7FileStatus` är **PublishComplete**.
 1. Försök att begära teckningen direkt från Dynasmic Media genom att sammanfoga värdena för följande egenskaper och stränglitteraler:
@@ -216,7 +216,7 @@ Om exempelmaterialet eller den förinställda teckningen i visningsprogrammet in
 1. Gå till CRX Package Manager: `https://localhost:4502/crx/packmgr/`.
 1. Sök efter visningsprogrampaket i listan. Det börjar med `cq-dam-scene7-viewers-content`.
 1. Välj **Installera om**.
-1. Gå till konfigurationssidan för Dynamic Media under Cloud Service och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
+1. Gå till sidan Dynamisk mediekonfiguration under Cloud Services och öppna sedan konfigurationsdialogrutan för din Dynamic Media - S7-konfiguration.
 1. Välj **Spara** om du inte vill göra några ändringar.
 Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempelresurserna, CSS-förinställningen för visningsprogrammet och teckningen.
 
@@ -224,7 +224,7 @@ Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempe
 
 **Lösning**
 
-1. I Experience Manager väljer du Experience Manager logotypen för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
+1. I Experience Manager väljer du Experience Manager logotyp för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL Tools]** > **[!UICONTROL General]** > **[!UICONTROL CRXDE Lite]**.
 1. Navigera till mappen med exempelinnehåll på följande plats i den vänstra listen:
 
    `/content/dam/_DMSAMPLE`
@@ -235,6 +235,6 @@ Denna sparåtgärd aktiverar logiken igen för att skapa och synkronisera exempe
    `/conf/global/settings/dam/dm/presets/viewer`
 
 1. Ta bort mappen `viewer`.
-1. Markera **[!UICONTROL Save All]** i det övre vänstra hörnet på CRXDE Lite-sidan.
+1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du **[!UICONTROL Save All]**.
 1. I det övre vänstra hörnet på CRXDE Lite-sidan väljer du ikonen **Bakåt, hem** .
-1. Återskapa en [Dynamic Media-konfiguration i Cloud Service](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).
+1. Återskapa en [dynamisk mediekonfiguration i molntjänster](/help/assets/dynamic-media/config-dm.md#configuring-dynamic-media-cloud-services).

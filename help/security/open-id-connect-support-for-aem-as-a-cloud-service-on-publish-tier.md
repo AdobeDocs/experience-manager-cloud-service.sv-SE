@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar OIDC (Open ID Connect) för AEM as a C
 feature: Security
 role: Admin
 exl-id: d2f30406-546c-4a2f-ba88-8046dee3e09b
-source-git-commit: eb03c8941f848ff10c38a4880c8fe85387cc441f
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 0%
@@ -156,7 +156,7 @@ Nedan visas några av de mest relevanta attributen som ska konfigureras i Defaul
 | `user.dynamicMembership` | Vi rekommenderar att du aktiverar dynamiskt gruppmedlemskap | true |
 | `user.enforceDynamicMembership` | Vi rekommenderar att man aktiverar ett dynamiskt gruppmedlemskap | true |
 | `group.dynamicGroups` | Vi rekommenderar att du aktiverar dynamiska grupper | true |
-| user.propertyMapping | Den tillhandahållna implementeringen av `UserInfoProcessor` synkroniserar bara ett fåtal egenskaper. Den kan ändras och anpassas. | <code>&quot;profile/givenName=profile/given_name&quot;,</code><br><code>&quot;profile/familyName=profile/family_name&quot;,</code><br><code>&quot;rep:fullname=profile/name&quot;,</code><br><code>&quot;profile/email=profile/email&quot;,</code><br><code>&quot;access_token=access_token&quot;,</code><br><code>&quot;refresh_token=refresh_token&quot;</code> |  |
+| user.propertyMapping | Den tillhandahållna implementeringen av `UserInfoProcessor` synkroniserar bara ett fåtal egenskaper. Den kan ändras och anpassas. | <code>&quot;profile/givenName=profile/given_name&quot;,</code><br><code>&quot;profile/familyName=profile/family_name&quot;,</code><br><code>&quot;rep:fullname=profile/name&quot;,</code><br><code>&quot;profile/email=profile/email&quot;,</code><br><code>&quot;access_token=access_token&quot;,</code><br><code>&quot;refresh_token=refresh_token&quot;</code> |
 | `user.membershipNestingDepth` | Returnerar det maximala djupet för gruppkapsling när medlemsrelationer synkroniseras. Värdet 0 inaktiverar sökning efter gruppmedlemskap. Värdet 1 lägger bara till en användares direktgrupper. Det här värdet har ingen effekt vid synkronisering av enskilda grupper endast när en användares medlemskapshistorik synkroniseras. | 1 |
 
 ### Konfigurera modulen för extern inloggning {#configure-the-external-login-module}

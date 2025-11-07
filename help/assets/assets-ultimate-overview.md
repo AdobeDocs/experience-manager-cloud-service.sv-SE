@@ -4,7 +4,7 @@ description: Läs mer om viktiga aspekter av Assets Ultimate, t.ex. viktiga för
 feature: Asset Management
 role: User, Admin
 exl-id: 3ae96cd2-e0ac-43a5-a0bf-bebb1a028b10
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 0%
@@ -91,13 +91,13 @@ I följande tabell sammanfattas tillgängliga AEM Assets-användartyper, vilka b
 
 | Användarroll | Begränsade användare | Medarbetare | Kraftfulla användare | Administratörer |
 |---------------|----------|----------|-------------------------|---|
-| **Funktioner** |
+| **Funktioner** |  |  |  |  |
 | Få tillgång till varumärkesgodkända resurser på Content Hub-portalen | ✓ | ✓ | ✓ | ✓ |
 | Skapa och redigera material med inbyggda Adobe Express och Firefly | - | ✓ | ✓ | ✓ |
 | Integrering av resurser inom organisationen med Adobe och andra program än Adobe | - | ✓ | ✓ | ✓ |
 | Få tillgång till alla AEM Assets-funktioner, som hantering av resurser, metadata och övergripande styrning och automatisering | - | - | ✓ | ✓ |
 | Hantera behörigheter för innehåll i AEM Assets redigeringsmiljö | - | - | - | ✓ |
-| **Användaren måste finnas i dessa produktprofiler (Admin Console)** |
+| **Användaren måste finnas i dessa produktprofiler (Admin Console)** |  |  |  |  |
 | AEM > Delivery instance > AEM Assets Limited Users | ✓ | ✓ | ✓ | ✓ |
 | AEM > Production Author instance > AEM Assets Collaborator Users | - | ✓ | - | - |
 | AEM > Production Author instance > AEM Assets Power Users | - | - | ✓ | - |

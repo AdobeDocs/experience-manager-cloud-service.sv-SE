@@ -3,7 +3,7 @@ title: Distribuera  [!DNL Content Hub]
 description: Lär dig hur du distribuerar och aktiverar Content Hub och ger åtkomst till användare med olika typer av behörigheter (överföra resurser, Adobe Express-användare) och hur du ger administratörsbehörighet till användare.
 role: Admin
 exl-id: 58194858-6e1c-460b-bab3-3496176b2851
-source-git-commit: fbcfb88aa1b9510d1dc279475b26d85484ef3fe0
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '1815'
 ht-degree: 0%
@@ -38,12 +38,12 @@ I följande tabell sammanfattas tillgängliga Content Hub-användartyper, vilka 
 
 | Användarroll | Content Hub | Content Hub-användare med rättigheter att lägga till resurser | Content Hub-användare som har rätt att mixa om resurser | Content Hub-administratörer |
 |---------------|----------|----------|-------------------------|---|
-| **Funktioner** |
+| **Funktioner** |  |  |  |  |
 | Få tillgång till varumärkesgodkända resurser på Content Hub-portalen | ✓ | ✓ | ✓ | ✓ |
 | Överför resurser från Content Hub Portal | - | ✓ | ✓ | ✓ |
 | Använd Adobe Express-integrering för att redigera bilder | - | - | ✓ | - |
 | Åtkomst till Content Hub konfigurationsgränssnitt | - | - | - | ✓ |
-| **Användaren måste finnas i dessa produktprofiler (Admin Console)** |
+| **Användaren måste finnas i dessa produktprofiler (Admin Console)** |  |  |  |  |
 | AEM > Delivery instance > AEM Assets Limited Users | ✓ | ✓ | ✓ | ✓ |
 | AEM > Production Author instance > AEM Users | - | ✓ | ✓ | - |
 | AEM > Production Author instance > AEM Administrators | - | - | - | ✓ |

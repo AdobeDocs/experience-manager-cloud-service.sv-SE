@@ -4,7 +4,7 @@ description: Använda plugin-programmet Content Package Maven för att distribue
 exl-id: d631d6df-7507-4752-862b-9094af9759a0
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
 workflow-type: tm+mt
 source-wordcount: '1235'
 ht-degree: 0%
@@ -41,7 +41,7 @@ AEM as a Cloud Service följer de senaste metodstrategierna för pakethantering 
 
 >[!TIP]
 >
->Läs artikeln [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) . Båda stöds fullt ut för AEM 6.5.
+>Läs artikeln [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) . Båda stöds fullt ut för AEM 6.5.
 
 ## Hämta innehållspaketet Maven Plugin {#obtaining-the-content-package-maven-plugin}
 
@@ -97,7 +97,7 @@ Parametrarna i följande tabell är gemensamma för alla mål utom när de anges
 | `failOnError` | `boolean` | Nej | `false` | Värdet `true` gör att bygget misslyckas när ett fel inträffar. Värdet `false` gör att felet ignoreras. | Alla mål utom `package` |
 | `name` | `String` | `build`: Ja, `install`: Nej, `rm`: Ja | `build`: Inget standardvärde, `install`: Värdet för egenskapen `artifactId` i Maven-projektet | Namnet på paketet som ska användas | Alla mål utom `ls` |
 | `password` | `String` | Ja | `admin` | Lösenordet som används för autentisering med AEM | Alla mål utom `package` |
-| `serverId` | `String` | Nej | Server-ID som användarnamn och lösenord för autentisering ska hämtas från | Alla mål utom `package` |
+| `serverId` | `String` | Nej | Server-ID som användarnamn och lösenord för autentisering ska hämtas från | Alla mål utom `package` |  |
 | `targetURL` | `String` | Ja | `http://localhost:4502/crx/packmgr/service.jsp` | URL:en för HTTP-tjänstens API för AEM-pakethanteraren | Alla mål utom `package` |
 | `timeout` | `int` | Nej | `5` | Anslutningens timeout för kommunikation med pakethanterartjänsten, i sekunder | Alla mål utom `package` |
 | `useProxy` | `boolean` | Nej | `true` | Värdet `true` gör att Maven använder den första aktiva proxykonfigurationen som hittas för proxybegäranden till Package Manager. | Alla mål utom `package` |
@@ -215,4 +215,4 @@ Den senaste AEM Project Archetype-versionen implementerar den bästa paketstrukt
 
 >[!TIP]
 >
->Läs artikeln [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) . Båda stöds fullt ut för AEM 6.5.
+>Läs artikeln [AEM Project Structure](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen och dokumentationen för [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) . Båda stöds fullt ut för AEM 6.5.
