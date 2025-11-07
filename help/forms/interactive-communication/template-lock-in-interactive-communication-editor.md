@@ -63,7 +63,7 @@ När det används kan författare inte:
 Följ stegen nedan för att använda innehålls- eller layoutlås i mallen för interaktiv kommunikation:
 
 1. Öppna din mall
-Öppna eller skapa en mall, följ guiden [Skapa en interaktiv kommunikationsmall](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/interactive-communication/overview/create-interactive-communication-template)
+Öppna eller skapa en mall, följ guiden [Skapa en interaktiv kommunikationsmall](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/interactive-communication/overview/create-interactive-communication-template)
 
 1. Välj komponenten
 Klicka på den komponent (textruta, bild eller delformulär) som du vill begränsa.
