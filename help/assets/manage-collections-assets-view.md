@@ -4,9 +4,9 @@ description: En samling är en uppsättning resurser i vyn Experience Manager As
 exl-id: 540dc1d9-eaf4-4e08-8087-dc58da23a6e8
 feature: Collections, Asset Management
 role: User
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 836805b4eac5ab940dff5c66ec0dcf1ca8652837
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '1029'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,8 @@ Du kan utföra följande åtgärder för att hantera och använda samlingar:
 * [Lägga till resurser i en samling](#add-assets-to-collection)
 
 * [Ta bort resurser från en samling](#remove-assets-from-collection)
+
+* [Sök i samlingar](#search-collection)
 
 * [Skapa en smart samling](#create-smart-collection)
 
@@ -93,6 +95,32 @@ Så här tar du bort resurser från en samling:
 1. Klicka på samlingen och markera objekt som du vill ta bort från samlingen.
 
 1. Klicka på **[!UICONTROL Remove]**.
+
+## Sök i samlingar {#search-collection}
+
+Du kan söka i en samling för att enkelt hitta relevanta resurser. Gör så här:
+
+* Navigera till **[!DNL Collections]**. I sökfältet anger du ett nyckelord för att hitta önskad samling. Sökfältet visar platsen för den valda samlingen.
+
+* Om du vill förfina sökresultaten öppnar du **[!DNL Filters]** och ser till att **[!DNL Collections]** är markerat under **[!DNL Asset Type]**.
+
+* Välj något av följande alternativ i listrutan **[!DNL Collection Visibility]**:
+
+   * **[!DNL All]:** Visar alla samlingar, oavsett synlighet.
+   * **[!DNL Public Collection]:** Visar endast samlingar som är synliga för alla användare.
+   * **[!DNL Private Collection]:** Visar endast samlingar som är begränsade eller synliga för specifika användare eller grupper.
+
+* Välj något av följande alternativ i listrutan [!DNL Collection Type]:
+
+   * **[!DNL All]:** Visar både vanliga och smarta samlingar.
+   * **[!DNL Collection]:** Visar manuellt skapade samlingar där resurser läggs till individuellt.
+   * **[!DNL Smart Collection]:** Visar samlingar som automatiskt inkluderar resurser som har sparats under [Smarta samlingar](#manage-smart-collection).
+
+* Med listrutan **[!DNL Created Date]** kan du filtrera samlingar baserat på när de skapades. Du kan ange ett datumintervall för att söka efter nyligen skapade eller äldre samlingar.
+
+  ![Söksamling](assets/search-collection.png)
+
+Mer information finns i [söka efter resurser](search-assets-view.md), [filtrera sökresultat](search-assets-view.md#refine-search-results) eller [hantera sparade sökningar](search-assets-view.md##saved-search).
 
 ## Hantera en smart samling {#manage-smart-collection}
 
@@ -176,7 +204,7 @@ Så här hämtar du en samling:
 
 1. Välj den samling som du vill hämta och klicka på **[!UICONTROL Download]**.
 
-1. Klicka på **[!UICONTROL OK]** i dialogrutan [!UICONTROL Downloading Asset].
+1. Klicka på [!UICONTROL Downloading Asset] i dialogrutan **[!UICONTROL OK]**.
 
 Samlingen laddas ned som en ZIP-fil på den lokala datorn.
 
@@ -192,15 +220,15 @@ Så här tar du bort en samling:
 
 ## Hantera behörigheter för en privat samling{#manage-permissions-private-collection}
 
-Du kan tillåta administratörer att hantera [åtkomstnivåer](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions) för privata samlingar som är tillgängliga i databasen. Du kan tilldela användargrupperna eller användarna behörigheter som `Can View` och `Can Edit`. Du kan även delegera behörighetshanteringsbehörigheter till användargrupper. De användare som skapar privata samlingar är ägare av dessa samlingar. De kan använda åtgärden [!UICONTROL Manage Permissions] för att bevilja åtkomst till de andra användarna. Administratörer kan dessutom visa och hantera behörigheter för de privata samlingarna i databasen [!DNL Experience Manager].
+Du kan tillåta administratörer att hantera [åtkomstnivåer](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions) för privata samlingar som är tillgängliga i databasen. Du kan tilldela användargrupperna eller användarna behörigheter som `Can View` och `Can Edit`. Du kan även delegera behörighetshanteringsbehörigheter till användargrupper. De användare som skapar privata samlingar är ägare av dessa samlingar. De kan använda åtgärden [!UICONTROL Manage Permissions] för att bevilja åtkomst till de andra användarna. Administratörer kan dessutom visa och hantera behörigheter för de privata samlingarna i databasen [!DNL Experience Manager].
 <!--
 >[!NOTE]
 >
 >Adobe does not recommend to assign permissions to users.
 -->
-Mer information om hur du tilldelar tillgängliga behörigheter till användargrupper finns i [Lägga till behörigheter till användargrupper](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Mer information om hur du tilldelar tillgängliga behörigheter till användargrupper finns i [Lägga till behörigheter till användargrupper](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
-Mer information om arbetsflödet från början till slut finns i [Hantera behörigheter](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
+Mer information om arbetsflödet från början till slut finns i [Hantera behörigheter](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/get-started-admins/folder-access/manage-permissions).
 
 ## Nästa steg {#next-steps}
 
@@ -208,4 +236,4 @@ Mer information om arbetsflödet från början till slut finns i [Hantera behör
 
 * Ge feedback om dokumentationen med [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)

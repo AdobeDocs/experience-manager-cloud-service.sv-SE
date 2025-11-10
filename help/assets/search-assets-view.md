@@ -4,9 +4,9 @@ description: Läs om hur du söker efter och identifierar resurser i AEM Assets-
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 339528082561c432b7b98290d09e904ee058186f
+source-git-commit: 836805b4eac5ab940dff5c66ec0dcf1ca8652837
 workflow-type: tm+mt
-source-wordcount: '2171'
+source-wordcount: '2193'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >id="assets_search"
 >title="Sök i Assets"
 >abstract="Sök efter resurser genom att ange ett nyckelord i sökfältet eller genom att filtrera resurser baserat på status, filtyp, MIME-typ, storlek, skapande, ändring och förfallodatum. Du kan också använda egna filter förutom standardfiltren. Du kan spara de filtrerade resultaten som en sparad sökning eller som en smart samling."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=sv-SE#manage-smart-collection" text="Skapa smarta samlingar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=en#manage-smart-collection" text="Skapa smarta samlingar"
 
 [!DNL Assets view] innehåller en effektiv sökning som bara fungerar som standard. Sökningen är omfattande eftersom den är en fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och även sökningar via metadata som smarta taggar, titel, skapad den och copyright.
 
@@ -33,22 +33,19 @@ Så här söker du efter resurser:
 
 ## Filtrera sökresultaten {#refine-search-results}
 
+Du kan förfina sökresultaten för att hitta relevanta resurser genom att använda flera filter. Dessa filter, som konfigureras av en administratör, baseras på filer, mappar och samlingar. Se [Anpassa sökfilter](custom-search-filters.md).
+
+![Sökfilter](assets/filters-panel.gif)
+
 Du kan filtrera sökresultaten baserat på följande parametrar.
 
-![Sökfilter](assets/filters1.png)
-
-*Figur: Filtrera sökningar efter resurser baserat på olika parametrar.*
-
 * Resursstatus: Filtrera sökresultaten med en `Approved`-, `Rejected`- eller `No Status`-resursstatus.
-
 * Filtyp: Filtrera sökresultaten efter de filtyper som stöds, `Images`, `Documents` och `Videos`.
 * MIME-typ: Filtrera efter ett eller flera av de filformat som stöds. <!-- TBD:  [supported file formats](/help/using/supported-file-formats.md). -->
 * Bildstorlek: Ange en av flera av de minsta och högsta måtten för att filtrera bilder. Storleken anges i pixeldimensioner och är inte bildens filstorlek.
 * Skapad: Datum när resursen skapades enligt metadatan. Standarddatumformatet som används är `yyyy-mm-dd`.
 * Ändrad: Senaste ändringsdatum för resurserna. Standarddatumformatet som används är `yyyy-mm-dd`.
-
 * Förfallodatum: Filtrera sökresultaten baserat på en `Expired`-resursstatus. Du kan dessutom ange ett förfallodatumintervall för resurser för att ytterligare filtrera sökresultaten.
-
 * Egna filter: [Lägg till anpassade filter](#custom-filters) i användargränssnittet i vyn Assets. Använd de anpassade filtren utöver standardfiltren för att förfina sökresultaten.
 
 Du kan sortera de sökda resurserna i stigande eller fallande ordning `Name`, `Relevance`, `Size`, `Modified` och `Created`. De sökda resurserna sorteras som standard baserat på `Relevance`.
@@ -248,7 +245,7 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 * **Tilldela uppgifter**: Tilldela uppgifter till användare för en resurs.
 
-* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
+* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
 
 ## Konfigurera den första startsidan för sökning {#configuring-search-first-homepage}
 
@@ -369,12 +366,13 @@ Om du behöver ge feedback på funktionen för sammanhangsbaserad sökning klick
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html?lang=sv-SE)
+* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback genom att [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen.
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
+
 
 

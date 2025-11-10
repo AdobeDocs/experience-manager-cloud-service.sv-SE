@@ -3,9 +3,9 @@ title: Egna sökfilter
 description: Läs om hur du anpassar sökfilterformulär
 role: User, Leader, Developer
 exl-id: 383e8165-439e-447b-a19d-d5446238a13f
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 836805b4eac5ab940dff5c66ec0dcf1ca8652837
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1383'
 ht-degree: 2%
 
 ---
@@ -18,18 +18,41 @@ Se mer om [sökning](search-assets-view.md).
 
 Anpassa sökfilter AEM Assets kan bara mappas till poster i ditt sökbara egenskapsindex. Se till att alla anpassade metadata inkluderas innan du konfigurerar din anpassade filterupplevelse. [!DNL Assets view] hjälper till att anpassa sökfilter för att effektivisera sökprocessen. Så här anpassar du AEM Assets anpassade sökfilter:
 
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
-1. Gå till fliken **[!UICONTROL Search]**. Klicka på **[!UICONTROL Customize]** om du vill konfigurera sökformuläret.
+1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]** > **[!UICONTROL Search]**.
+
+   <!--1. Go to the **[!UICONTROL Search]** tab. Click **[!UICONTROL Customize]** to configure your search form.-->
 
    ![inställningar för anpassade sökfilter](assets/custom-search-filter.png)
 
-1. Formuläret [!UICONTROL Configure Filters] visas. Se till att du är i redigeringsläge så att du kan göra ändringar i mallen. Du kan växla till [!UICONTROL Preview mode] om du vill se förhandsgranskningen av ett befintligt sökformulär.
-1. Släpp filterelement från [anpassade filter](#available-custom-filters) på arbetsytan. Du kan dra och släppa komponenten för att ändra ordning om det behövs.
+1. I avsnittet **[!UICONTROL Filters]** kan du konfigurera följande:
 
-   >[!VIDEO](https://video.tv.adobe.com/v/3443080)
+   * **[!UICONTROL Files]:** Konfigureringen av filer omfattar filtyper, filformat, status för resurser, filstorlek, bilddimensioner, datum när filen skapades, ändringsdatum och så vidare.
+   * **[!UICONTROL Folders]:** Konfigureringen av mappar inbegriper datum som skapats, datum som ignorerats, tagits bort av och så vidare.
+   * **[!UICONTROL Collections]:** När du konfigurerar samlingar ingår synlighet för samlingen, samlingstyp, skapad den och så vidare.
 
-1. Klicka på **[!UICONTROL Preview mode]** om du vill granska ändringarna.
-1. Klicka på **[!UICONTROL Confirm]** om du vill spara.
+1. Du kan förhandsgranska standardformuläret **[!UICONTROL Preset Filters]** som är tillgängligt för filer, mappar eller samlingar. Du kan däremot inte anpassa eller ta bort detta befintliga formulär. Du kan också skapa ett anpassat filterformulär genom att klicka på **[!UICONTROL Add new form]**.
+
+   >[!NOTE]
+   >
+   >Endast ett anpassat filterformulär kan skapas per kategori (Fil, Mapp eller Samling).
+
+1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
+
+## Åtgärder i ett konfigurerat formulär {#Actions-on-configured-form}
+
+Du kan använda följande åtgärder på ett konfigurerat filterformulär:
+
+* **[!UICONTROL Customize]:** Klicka för att lägga till eller ändra formuläret. Du kan släppa filterelement från de [anpassade filtren](#available-custom-filters) på arbetsytan eller ändra ordning om det behövs.
+
+* **[!UICONTROL Preview]:** Klicka för att granska ändringarna.
+
+* **[!UICONTROL Set as default]:** Klicka för att ange det markerade formuläret som standard.
+
+* **[!UICONTROL Delete a form]:** Klicka på fler alternativ ![fler alternativ](assets/do-not-localize/more-icon.svg) och välj **[!UICONTROL Delete a form]** för att ta bort det markerade filterformuläret.
+
+* **[!UICONTROL Edit form labels]:** Klicka på fler alternativ ![fler alternativ](assets/do-not-localize/more-icon.svg) och lägg till ny etikett och beskrivning i det anpassade filterformuläret.
+
+  ![redigera formuläretiketter](assets/edit-form-labels.png)
 
 ## Tillgängliga anpassade filter {#available-custom-filters}
 
@@ -404,6 +427,7 @@ Varje filterelement är associerat med en uppsättning egenskaper. AEM Assets an
     </tr>
 </table>
 
+>[!VIDEO](https://video.tv.adobe.com/v/3443080)
 
 ## Ta bort ett filterelement {#delete-a-filter-element}
 
