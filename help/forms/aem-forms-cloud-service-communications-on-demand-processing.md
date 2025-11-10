@@ -525,7 +525,7 @@ Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API
 1. Navigera till API-dokumentation
    - Forms API: [Forms API Reference](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
    - Dokumenttjänster: [API-referens för Document Services](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
-Öppna [ Document Services API:er ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
+Öppna [&#x200B; Document Services API:er &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
 2. Expandera avsnittet **Dokumentgenerering** och välj [Skapar ett ifyllbart PDF-formulär från en XDP- eller PDF-mall, eventuellt med datasammanfogning](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm).
 3. Klicka på **Testa** i den högra rutan.
 
