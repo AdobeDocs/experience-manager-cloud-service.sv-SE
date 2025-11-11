@@ -5,7 +5,7 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: f9a767e3d5ae33cd46dc100c2ee59ec9ce8f63ac
 workflow-type: tm+mt
 source-wordcount: '1918'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Som vi nämnt i avsnittet [Varianter på Cloud Service-innehållsbegäranden](#c
 ### Implementeringstekniker som hanterar innehållsförfrågningar {#implementation-techniques-to-manage-crs}
 
 * Kontrollera att alla sidsvar som inte hittas levereras med HTTP-status 404.  Om de returneras med statusen 200 räknas de av mot innehållsförfrågningar.
-* Vidarebefordra hälsokontroller eller övervakningsverktyg till URL:en /systems/probes/health eller använd HEAD-metoden i stället för GET för att undvika att det uppstår innehållsförfrågningar.
+* Vidarebefordra hälsokontroller eller övervakningsverktyg till URL:en /system/probes/health eller använd HEAD-metoden i stället för GET för att undvika att det uppstår innehållsförfrågningar.
 * Balansera era behov av aktualitet i innehållet med AEM licenskostnader för alla skräddarsydda crawler som ni har integrerat med er webbplats.  En alltför aggressiv crawler kan förbruka många innehållsförfrågningar.
 * Hantera eventuella omdirigeringar som server (status 301 eller 302) i stället för på klientsidan (status 200 med javascript-omdirigering) för att undvika två separata innehållsförfrågningar.
 * Kombinera eller minska API-anrop, som är JSON-svar från AEM som kan läsas in för att återge sidan.
