@@ -4,16 +4,16 @@ description: Lär dig hur du använder API:t för AFP-utdatasynkronisering för 
 feature: Adaptive Forms, APIs & Integrations, Document Services
 role: Admin, User
 exl-id: 5602fc63-ef74-44eb-b3be-61b8f8a2795a
-source-git-commit: 33dcc771c8c2deb2e5fcb582de001ce5cfaa9ce4
+source-git-commit: cbf640e0c4643616638de96e9daa460cdcf2a4a5
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
 # Generera AFP-utdata med AEM Forms API
 
-<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
+<span class="preview"> Den här funktionen är en förhandsversion och kan nås via vår [förhandsutgåva](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
 
 AFP (Advanced Function Presentation) är ett högpresterande dokumentformat som huvudsakligen är avsett för tryck.\
 I den här guiden beskrivs alla nödvändiga steg och konfigurationer för att generera AFP-utdata med AEM Forms.
@@ -39,12 +39,12 @@ Skapar en AFP-fil (Advanced Function Presentation) med en XDP-mall och indata.
 
 ### Behörighet
 
-Du kan antingen använda **BasicAuth** (administratörsuppgifter) för lokala miljöer eller **BearerAuth**-auktorisering för AEM Cloud-instanser.
+Du kan antingen använda **BasicAuth** (administratörsautentiseringsuppgifter) för lokala miljöer eller **OAuth Server-till-Server**-auktorisering för AEM Cloud-instanser.
 
 ### Begäran
 
 **Slutpunkt:**
-`POST http://<server>:<port>/adobe/forms/document/generate/afp`
+[https://[publish-url].adobeaemcloud.com/adobe/forms/doc/v1/adobe/forms/doc/v1/generate/afp](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-sync/#tag/Communications-Services/paths/~1adobe~1forms~1doc~1v1~1generate~1afp/post)
 
 ### Sidhuvuden
 
