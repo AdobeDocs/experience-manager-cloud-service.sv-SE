@@ -116,7 +116,7 @@ Följ stegen nedan som visar hur du genererar en åtkomsttoken från JWT-autenti
 
 >[!NOTE]
 >
-> [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
+> [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
 
 Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för utvecklings-, scen- eller produktionsmiljöer.
 
