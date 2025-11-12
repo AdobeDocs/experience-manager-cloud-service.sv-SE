@@ -6,9 +6,9 @@ feature: Adaptive Forms, APIs & Integrations
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: fcc25eb44b485db69ec1c267f4cf8774c4279b24
+source-git-commit: a9ef6553a7f480895f53f1240cd454c6f4fc7d24
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Följ stegen nedan som visar hur du genererar en åtkomsttoken från JWT-autenti
 
 4. Generering av åtkomsttoken
 
-   Generera tokens programmatiskt med Adobe IMS API:
+   Generera tokens programmatiskt med kommandot cURL:
 
    **Nödvändiga autentiseringsuppgifter:**
 
@@ -92,7 +92,7 @@ Följ stegen nedan som visar hur du genererar en åtkomsttoken från JWT-autenti
    https://ims-na1.adobelogin.com/ims/token/v3
    ```
 
-   **Exempelbegäran (url):**
+   **Exempelbegäran (cURL):**
 
    ```bash
    curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
@@ -112,6 +112,11 @@ Följ stegen nedan som visar hur du genererar en åtkomsttoken från JWT-autenti
    "expires_in": 86399
    }
    ```
+
+
+>[!NOTE]
+>
+> [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
 
 Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för utvecklings-, scen- eller produktionsmiljöer.
 
