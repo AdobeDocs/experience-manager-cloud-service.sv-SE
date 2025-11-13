@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.11.06
-description: Detta är versionsinformationen för version 2025.11.06 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.11.13
+description: Detta är versionsinformationen för version 2025.11.13 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 5c762da645ee26164d39af3936fc6b3fcbd43f0b
+source-git-commit: 87c0288356fd561dd15249e3da08850f7c5d031a
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.11.06 {#release-notes}
+# Versionsinformation om Universal Editor 2025.11.13 {#release-notes}
 
-Det här är versionsinformationen för den 6 november 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 13 november 2025-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -23,6 +23,14 @@ Det här är versionsinformationen för den 6 november 2025-versionen av Univers
 >[!TIP]
 >
 >Den aktuella versionsinformationen för Adobe Experience Manager as a Cloud Service finns på [den här sidan](/help/release-notes/release-notes-cloud/release-notes-current.md).
+
+## Nyheter {#what-is-new}
+
+* Sammanhangsberoende åtgärder har flyttats till en listruta.
+* json-scheman levereras nu för validering.
+* [Inloggning för lokal utvecklare](/help/sites-cloud/authoring/universal-editor/navigation.md#local-developer-login) är nu en viktig del av Universal Editor och tillägget behövs inte längre.
+* Rätt spår migrerades till ett nytt användargränssnitt.
+* Objekt i innehållsträdet utökas nu automatiskt.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -34,12 +42,5 @@ Den nya ProseMirror RTE med en sidväljare i länkdialogrutan är nu tillgängli
 
 ## Andra förbättringar {#other-improvements}
 
-* `og:title` metadatafält kan nu tas bort korrekt.
-* Ett navigeringsproblem har korrigerats när en användare redigerar platsfältet i redigeraren i webbläsaren så att ändringarna återspeglas korrekt och redigeraren och/eller appen nu navigerar till den begärda URL:en.
-* Fältmodellens upplösning korrigerades och redigeraren använder modellen från komponenten om sådan finns.
-* componentId finns nu med i åtgärden /add.
-* Möjligheten att ta bort vissa metadataegenskaper som tidigare inte kunde tas bort har åtgärdats.
-* Raw-hämtning görs nu villkorligt för xwalk när plugin-programmet för AEM inte anges.
-* MSM-hantering av innehållsfragment med RTE har korrigerats.
-* Bildmarkering i en bild stöds nu.
-
+* En specifik bredd för snabbmenyn lades till.
+* Fel i Universal Editor-tjänsten på grund av vissa `null`-värden har åtgärdats.

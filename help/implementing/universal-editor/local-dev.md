@@ -4,9 +4,9 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: d938abce2b46786343b19113454da1738a824ed0
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '981'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -53,7 +53,7 @@ Universell redigeringstjänst är inte en fullständig kopia av Universell redig
 
 [NodeJS version 20](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 Spara filen `universal-editor-service.cjs` från programvarudistribution till den lokala utvecklingsmiljön.
 
@@ -160,5 +160,7 @@ Med den [universella redigeringstjänsten som körs lokalt](#running-ue) och [in
 
 1. Öppna webbläsaren på `https://localhost:8000/ping`.
 1. Be webbläsaren godkänna [ditt självsignerade certifikat](#ue-https).
-1. När det självsignerade certifikatet är betrott kan du redigera sidan med din lokala Universal Editor-tjänst.
+1. När det självsignerade certifikatet är betrott läses sidan in med din lokala Universal Editor-tjänst.
+1. Klicka på inloggningen [Lokal utvecklare](/help/sites-cloud/authoring/universal-editor/navigation.md#local-developer-login) i verktygsfältet och autentisera den lokala AEM-instansen.
 
+Nu kan du redigera sidor i den lokala AEM-testinstansen med den lokala universella redigeringstjänsten.

@@ -5,9 +5,9 @@ solution: Experience Manager Sites
 feature: Authoring
 role: User
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: 437b9bdf48fc8235ef90cac4a38c2a0b41f89a8f
+source-git-commit: d938abce2b46786343b19113454da1738a824ed0
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Experience Platform övre navigeringsfält finns alltid överst på skärmen. De
 
 ![Experience Cloud-rubriken](assets/experience-cloud-header.png)
 
-Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
+Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
 
 #### Konto {#user-properties}
 
@@ -131,7 +131,7 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren. Mer information finns i dokumentet [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md#undo-redo).
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 >[!TIP]
 >
@@ -142,6 +142,12 @@ Välj Ångra eller Gör om för att ångra eller göra om den senaste redigering
 Välj ikonen för autentiseringshuvuden om du behöver [ange en anpassad autentiseringshuvud för lokal utveckling](/help/implementing/universal-editor/developer-overview.md#auth-header).
 
 ![Inställningsknapp för autentiseringsrubriker](assets/authentication-header-settings.png)
+
+#### Lokal utvecklarinloggning {#local-developer-login}
+
+Välj den lokala utvecklarinloggningsikonen om du enkelt behöver autentisera till din lokala AEM SDK [vid lokal utveckling.](/help/implementing/universal-editor/local-dev.md)
+
+![Inloggningsknapp för lokal utvecklare](assets/local-developer-login.png)
 
 #### Responsivt läge {#emulator}
 
@@ -187,7 +193,7 @@ Markera ikonen för att öppna sidan som du redigerar på en egen webbläsarflik
 
 >[!NOTE]
 >
->Knappen [&#x200B; för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
+>Knappen [ för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
 
 #### Publicera {#publish}
 
@@ -201,7 +207,7 @@ Välj publiceringsknappen så att du kan publicera ändringarna i innehållet li
 
 >[!NOTE]
 >
->Publiceringsknappen [&#x200B; kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
+>Publiceringsknappen [ kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
 
 #### Ellips {#ellipsis}
 
@@ -319,7 +325,7 @@ Om du trycker på eller klickar på borttagningsknappen [tas komponenten](/help/
 Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implementing/universal-editor/field-types.md#container)
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 >[!TIP]
 >
