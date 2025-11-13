@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 5474d0c4295cf8eb576cc416589727c67ffafac7
+source-git-commit: 39993d115d58d9dfe1f9328c5ceba0d30a78569d
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1213'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 23320 {#23320}
+## Utgåva 23385 {#23385}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 23320, som offentliggjordes den 12 november 2025. Den tidigare underhållsversionen var version 22943.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 23385, som offentliggjordes den 13 november 2025. Den tidigare underhållsversionen var version 22943.
 
-Funktionsaktiveringen i 2025.11.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2025.11.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 >[!NOTE]
 >
->Version 23122 har gjorts privat den 3 november.
+>Versionerna 23320 och 23122 har gjorts privata.
 
-### Förbättringar {#enhancements-23320}
+### Förbättringar {#enhancements-23385}
 
 * CQ-4361363: De senaste översättningarna från AEM och Granite.
 * FORMS-21594: Aktivera låsning av innehåll och layout för interaktiva kommunikationsmallar för innehållsförfattare.
@@ -61,7 +61,7 @@ Funktionsaktiveringen i 2025.11.0 kommer att innehålla alla funktioner som finn
 * SKYOPS-118390: Uppdatera JCR-resursen till 3.3.6.
 * SKYOPS-121082: Uppdatera versioner av `org.apache.sling.discovery.standalone`, `org.apache.sling.jcr.packageinit` och `org.apache.sling.commons.fsclassloader` sling bundles.
 
-### Åtgärdade problem {#fixed-issues-23320}
+### Åtgärdade problem {#fixed-issues-23385}
 
 * ASSETS-58926: Korrigera funktionen för att ändra videons miniatyrbild i DM.
 * ASSETS-58623: Korrigera pe i omnissearch när config finns.
@@ -88,41 +88,42 @@ Funktionsaktiveringen i 2025.11.0 kommer att innehålla alla funktioner som finn
 * SITES-35409: Korrigerade ett fel som förhindrade återpublicering av justerade fragment när en sida flyttades.
 * SITES-15757: Korrigerade ett fel som förhindrade återpublicering av justerade sidor när en sida flyttades.
 * SITES-34638: Korrigerade ett fel där egenskaper från överordnade sidor inte skulle inkluderas när nya versioner skapades.
+* SITES-35226: Korrigerade en regression som gjorde att resursväljaren i sidredigeraren inte kunde läsas in under vissa omständigheter.
 * SITES-35071: CSV-export returnerar ofiltrerade resultat när citattecken används vid sökning.
 * SITES-32182: Edge Delivery med Universal Editor - åtgärda kodningsproblem med URL:er som innehåller redan kodade frågeparametrar.
 * SITES-34324: Edge Delivery with Universal Editor - fix rendering of links with a tel: protocol.
 * SITES-35333: Edge Delivery with Universal Editor - fix asset rendition selection for images in page metadata.
 * SITES-35549: Edge Delivery med Universal Editor - korrigera dubbelkodade html-entiteter i sidmetadata.
 
-#### AEM Guides {#guides-23320}
+#### AEM Guides {#guides-23385}
 
 * GUIDES-33597: Om ett tomt `prop`-element utan attribut eller värden läggs till i en DITAVAL-fil kan ytterligare `prop`-element inte läggas till.
 * GUIDES-33693: När du överför en redigerad bild igen via Experience Manager Guides-gränssnittet uppdateras bildens ursprungliga återgivning, men det tillhörande DITA-innehållet fortsätter att visa den tidigare versionen av bilden.
 * GUIDES-35607: Felloggar som genereras när en resurs överförs via Assets-gränssnittet eller när en ny fil skapas från redigeringsgränssnittet, använder felaktigt termen `predecessor` i stället för `successor` i loggmeddelandet.
 * GUIDES-37649: När en DITA-karta publiceras med baslinje på AEM Sites (med äldre komponentmappning) publiceras även mappningselementen med attributet `processing-role = resource-only`.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 
-### Kända fel {#known-issues-23320}
+### Kända fel {#known-issues-23385}
 
 * FORMS-22633: Formuläröverföringar kan misslyckas om anpassad kod som är beroende av API:erna för GuideBridge (`getData` eller `getDataXML`) används. Kontakta Adobe Support om du får problem.
 
-### Föråldrade funktioner och API:er {#deprecated-23320}
+### Föråldrade funktioner och API:er {#deprecated-23385}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-23320}
+### Säkerhetskorrigeringar {#security-23385}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 31 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-23320}
+### Inbäddade tekniker {#embedded-tech-23385}
 
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.88.0 | [Oak 1.8.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.88/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.2 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
