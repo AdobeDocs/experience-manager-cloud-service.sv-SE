@@ -73,7 +73,7 @@ Om du bara vill återställa data, som har gått förlorade, skadats eller av mi
      >
      >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
-1. I miljötabellen, till höger om en miljö vars källkod du vill återställa, klickar du på ikonen ![Mer eller Ellips ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ** > **Tidigare kod som distribuerats**.
+1. I miljötabellen, till höger om en miljö vars källkod du vill återställa, klickar du på ikonen ![Mer eller Ellips &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ** > **Tidigare kod som distribuerats**.
 
    ![Återställ tidigare alternativ för koddistribution från ellipsmenyn](/help/operations/assets/restore-previous-code-deployed-menu.png)
 
@@ -85,7 +85,7 @@ Om du bara vill återställa data, som har gått förlorade, skadats eller av mi
 
    ![Återställer aktiveringen](/help/operations/assets/restore-previous-code-deployed-restoring.png)
 
-1. I närheten av sidans övre högra hörn klickar du på ikonen ![Bell eller Meddelanden ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) **Notifications** för att ta reda på när återställningen börjar och slutar.
+1. I närheten av sidans övre högra hörn klickar du på ikonen ![Bell eller Meddelanden &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) **Notifications** för att ta reda på när återställningen börjar och slutar.
 
    ![Återställ tidigare kodmeddelanden när återställningen startas och när återställningen är slutförd](/help/operations/assets/restore-previous-code-notifications.png)
    *Meddelanden om återställning av tidigare kodjobb.*
