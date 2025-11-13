@@ -3,24 +3,27 @@ title: Återställ tidigare distribuerad Source-kod
 description: Lär dig hur du återställer en miljö till den senast slutförda bygg&emarginalen; ingen pipeline-körning krävs.
 feature: Operations
 role: Admin
-badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
 exl-id: 8f804f55-a66d-47ad-a48d-61b861cef4f7
-source-git-commit: 7968668766ae4c8a966bbde93aa2f2ac0c401659
+source-git-commit: 4008b2f81bbd81cef343c6d2b04ba536b66d7d89
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
 # Återställ tidigare källkod som distribuerats i AEM as a Cloud Service {#restore-previous-code-deployed}
 
+<!-- BETA BADGE REMOVED FOR NOVEMBER 2025 CM RELEASE badge: label="Beta" type="Positive" url="/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket"
+
 >[!NOTE]
 >
->Funktionen som beskrivs i den här artikeln är endast tillgänglig via betaprogrammet. Information om hur du registrerar dig för betaversionen finns i [Enklicksåterställning för pipeline-distributioner](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback).
+>The feature described in this article is only available through the beta program. To sign up for the beta, see [One-click rollback for pipeline deployments](/help/implementing/cloud-manager/release-notes/current.md##one-click-rollback). -->
 
 Använd **Återställ tidigare kod som distribuerats** för att omedelbart återställa en miljö till den senaste lyckade versionen - ingen pipeline-körning krävs.
 
 Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsmenyn](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och väljer **Återställ** > **Föregående kod som distribuerats** för att återställa den senast distribuerade källkoden på några sekunder.
+
+Se även [Återställ innehåll i AEM as a Cloud Service](/help/operations/restore.md).
 
 >[!TIP]
 >
@@ -32,7 +35,7 @@ Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsm
 
 * Endast en återställning tillåts per lyckad pipeline-körning. Om du vill återställa igen kan du slutföra en annan lyckad pipeline-körning.
 * Du har **behörighet att återställa miljön**. Mer information om hur du hanterar behörigheter finns i [Anpassade behörigheter](/help/implementing/cloud-manager/custom-permissions.md).
-* Din organisation är registrerad i betaprogrammet och funktionsflaggan är aktiverad.
+* Funktionsflaggan som guidar den här funktionen är aktiverad (på).
 * Programmet körs på AEM as a Cloud Service.
 * Den senaste pipeline för den miljön slutfördes och kördes för **mindre än 30 dagar** sedan.
 * Miljöstatusen är *Körs* och ingen pipeline pågår.
@@ -41,7 +44,7 @@ Du öppnar bara den markerade miljöns meny ![Mer ikon eller ikonen för ellipsm
 
 >[!IMPORTANT]
 >
->Adobe rekommenderar att du validerar proceduren i `Stage` *före* genom att använda den i `Production` för att minska riskerna och säkerställa stabiliteten.
+>För första gången rekommenderar Adobe att du validerar proceduren i `Stage` *before* genom att använda den i `Production` för att minska riskerna och säkerställa stabiliteten.
 
 
 Om en kontroll misslyckas öppnar Cloud Manager följande dialogruta med en eller flera villkor som inte uppfylls och **Bekräfta** inaktiveras, vilket förhindrar återställning.
@@ -70,7 +73,7 @@ Om du bara vill återställa data, som har gått förlorade, skadats eller av mi
      >
      >Kortet **Environment** innehåller endast tre miljöer. Klicka på **Visa alla** på kortet för att visa *alla* miljöer för programmet.
 
-1. I miljötabellen, till höger om en miljö vars källkod du vill återställa, klickar du på ikonen ![Mer eller Ellips &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ** > **Tidigare kod som distribuerats**.
+1. I miljötabellen, till höger om en miljö vars källkod du vill återställa, klickar du på ikonen ![Mer eller Ellips ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan på **Återställ** > **Tidigare kod som distribuerats**.
 
    ![Återställ tidigare alternativ för koddistribution från ellipsmenyn](/help/operations/assets/restore-previous-code-deployed-menu.png)
 
@@ -81,3 +84,8 @@ Om du bara vill återställa data, som har gått förlorade, skadats eller av mi
 1. Cloud Manager återställer miljön till den tidigare versionen, bibehåller innehåll och konfiguration och markerar miljön **Återställning** på sidan Miljöer tills distributionen är klar.
 
    ![Återställer aktiveringen](/help/operations/assets/restore-previous-code-deployed-restoring.png)
+
+1. I närheten av sidans övre högra hörn klickar du på ikonen ![Bell eller Meddelanden ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) **Notifications** för att ta reda på när återställningen börjar och slutar.
+
+   ![Återställ tidigare kodmeddelanden när återställningen startas och när återställningen är slutförd](/help/operations/assets/restore-previous-code-notifications.png)
+   *Meddelanden om återställning av tidigare kodjobb.*
