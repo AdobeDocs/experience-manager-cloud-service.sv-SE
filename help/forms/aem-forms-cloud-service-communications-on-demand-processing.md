@@ -6,9 +6,9 @@ feature: Adaptive Forms,APIs & Integrations
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: cbf640e0c4643616638de96e9daa460cdcf2a4a5
+source-git-commit: cb69041ff59ba1ff586e8c1c71090cc2eb9ad453
 workflow-type: tm+mt
-source-wordcount: '2574'
+source-wordcount: '2573'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Kontrollera att du har de behörigheter och behörigheter som krävs innan du b�
 
 >[!NOTE]
 >
-> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
+> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
 
 **Cloud Manager Access**
 
@@ -183,11 +183,11 @@ Exempel: `https://author-p43162-e177398.adobeaemcloud.com`
 
    - URL: `https://publish-pXXXXX-eYYYYY.adobeaemcloud.com`
    - Bucket: publish-pXXX-YYYY
-Exempel: `https://publish-author-p43162-e177398.adobeaemcloud.com`
+Exempel: `https://publish-p43162-e177398.adobeaemcloud.com`
 
 >[!NOTE]
 >
-> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
+> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
 ### Steg 4: API-åtkomstkonfiguration
 
@@ -318,7 +318,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 **B. För produktion**
 
-Generera tokens programmatiskt med Adobe IMS API:
+Generera tokens programmatiskt med kommandot cURL:
 
 **Nödvändiga autentiseringsuppgifter:**
 
@@ -525,7 +525,7 @@ Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API
 1. Navigera till API-dokumentation
    - Forms API: [Forms API Reference](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
    - Dokumenttjänster: [API-referens för Document Services](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/)
-Öppna [&#x200B; Document Services API:er &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
+Öppna [ Document Services API:er ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
 2. Expandera avsnittet **Dokumentgenerering** och välj [Skapar ett ifyllbart PDF-formulär från en XDP- eller PDF-mall, eventuellt med datasammanfogning](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm).
 3. Klicka på **Testa** i den högra rutan.
 
