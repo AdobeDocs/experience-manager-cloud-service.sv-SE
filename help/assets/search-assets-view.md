@@ -4,9 +4,9 @@ description: Läs om hur du söker efter och identifierar resurser i AEM Assets-
 role: User
 exl-id: abfe6a91-1699-436f-8bf4-0d0bf2369f46
 feature: Asset Management, Publishing, Collaboration, Asset Processing
-source-git-commit: 836805b4eac5ab940dff5c66ec0dcf1ca8652837
+source-git-commit: 391294cf461662d145a52b6c8a366e53f39ff84a
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >id="assets_search"
 >title="Sök i Assets"
 >abstract="Sök efter resurser genom att ange ett nyckelord i sökfältet eller genom att filtrera resurser baserat på status, filtyp, MIME-typ, storlek, skapande, ändring och förfallodatum. Du kan också använda egna filter förutom standardfiltren. Du kan spara de filtrerade resultaten som en sparad sökning eller som en smart samling."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=sv-SE#manage-smart-collection" text="Skapa smarta samlingar"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/manage-collections.html?lang=en#manage-smart-collection" text="Skapa smarta samlingar"
 
 [!DNL Assets view] innehåller en effektiv sökning som bara fungerar som standard. Sökningen är omfattande eftersom den är en fulltextsökning. Med de kraftfulla sökfunktionerna kan du snabbt hitta rätt resurs och hjälpa dig att förbättra innehållets hastighet. [!DNL Assets view] innehåller fulltextsökning och även sökningar via metadata som smarta taggar, titel, skapad den och copyright.
 
@@ -118,33 +118,29 @@ Så här tar du bort anpassade filter:
 
 1. Klicka på **[!UICONTROL Confirm]** om du vill ta bort filtren från användargränssnittet.
 
-## Semantisk sökning {#semantic-search}
+## AI-sökning {#ai-search}
 
-Semantisk sökning är en avancerad sökfunktion som förstår innebörden och avsikten bakom en användarfråga i stället för att förlita sig på exakta nyckelordsmatchningar. Det använder artificiell intelligens (AI), naturlig språkbearbetning (NLP) och maskininlärning för att leverera mer korrekta och kontextmedvetna resultat.
+AI-sökning är en avancerad sökfunktion som förstår innebörden och avsikten bakom en användarfråga i stället för att förlita sig på exakta nyckelordsmatchningar. Det använder artificiell intelligens (AI) och maskininlärning för att leverera mer korrekta och kontextmedvetna resultat.
 
-Till skillnad från traditionell nyckelordsbaserad sökning, som söker efter exakta termer, tolkas relationerna mellan ord, begrepp och användarmetod i Semantic Search. Detta gör att användarna hittar det de söker efter, även om deras fråga är formulerad på ett annat sätt, innehåller stavfel eller är på ett annat språk.
+Till skillnad från traditionell nyckelordsbaserad sökning, som söker efter exakta termer, tolkas relationerna mellan ord, begrepp och användarmetod i AI Search. Detta gör att användarna hittar det de söker efter, även om deras fråga är formulerad på ett annat sätt, innehåller stavfel eller är på ett annat språk.
 
 Några av fördelarna med den:
 
 * **Flerspråksstöd**: Sök på flera språk utan att exakta översättningar krävs. Användarna kan hitta relevant innehåll oavsett frågespråk.
 
-* **Hanterar felstavningar**: Korrigerar eller tolkar automatiskt stavfel och säkerställer korrekta resultat även om indata är felaktiga.
+* **Hanterar felstavningar**: Tolkar stavfel och typografiska stavfel, vilket ger korrekta resultat även om indata är felaktiga.
 
 * **Förstå synonymer**: Ger resultat för relaterade termer och fraser, så användarna behöver inte gissa rätt nyckelord.
 
-* **Kontextmedveten sökning**: Identifierar avsikten bakom en fråga, inte bara orden.
+* **Kontextmedveten sökning**: Identifierar avsikten bakom en fråga, inte bara de exakta orden.
 
->[!IMPORTANT]
->
-> Ange tre eller fler än tre ord för den semantiska sökningen för att visa lämpliga resultat.
-
-### Exempel på semantisk sökning {#examples-semantic-search}
+### Exempel på AI-sökning {#examples-ai-search}
 
 **Exempelfråga**: *Kvinna som dricker kaffe*
 
-Den traditionella nyckelordsbaserade sökningen söker efter exakta matchningar av metadata för resurser, t.ex. kvinna, kaffe osv., och returnerar resurser som innehåller dessa nyckelord.
+Den traditionella nyckelordsbaserade sökningen söker efter exakta matchningar av metadata för resurser, som `Woman`, `drinking`, `Coffee`, och returnerar resurser som innehåller alla dessa termer i metadata.
 
-Semantisk sökning söker dock efter liknande ord som `Girl`, `Lady` för `Woman` och kaffealternativ, som `Cappuccino` och `Latte` för `Coffee`.
+AI-sökning matchar emellertid liknande ord som `Girl`, `Lady` i fallet `Woman` och `Cappuccino` och `Latte` i fallet `Coffee`.
 
 På samma sätt kan du ange den här uppmaningen på spanska eller felstava `Woman` som `Wman` och ändå få samma resultat.
 
@@ -245,7 +241,7 @@ Du kan markera de resurser som visas i sökresultaten och göra följande:
 
 * **Tilldela uppgifter**: Tilldela uppgifter till användare för en resurs.
 
-* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
+* **Titta**: [Övervaka de åtgärder](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/search-assets) som utförs på en resurs.
 
 ## Konfigurera den första startsidan för sökning {#configuring-search-first-homepage}
 
@@ -280,99 +276,104 @@ Du kan förhandsgranska om du vill kontrollera layout och formatering för den f
 
    ![Sök i förhandsvisning av första hemsidan](/help/assets/assets/search-first-preview.gif)
 
-## Sammanhangsbaserad sökning {#contextual-search}
 
-Du kan också söka efter resurser som är tillgängliga i databasen genom att definiera textmeddelanden. Experience Manager Assets omvandlar automatiskt dessa textmeddelanden till sökfilter och visar sökresultaten. Du kan visa och ändra automatiska filter med hjälp av filterpanelen för att begränsa sökresultaten ytterligare.
+<!--
 
-### Åtkomst till sammanhangsbaserad sökning {#access-contextual-search}
+## Contextual Search {#contextual-search}
 
-Så här kommer du åt sammanhangsbaserad sökning i Experience Manager Assets:
+You can also search assets available in the repository by defining text prompts. Experience Manager Assets automatically transforms those text prompts to search filters and displays the search results. You can view and modify automatic filters using the Filters Pane to further narrow down the search results.
 
-1. Klicka på **[!UICONTROL Search]** i den vänstra rutan.
+### Access Contextual Search {#access-contextual-search}
 
-   ![Sammanhangsbaserad sökning](assets/access-contextual-search.png)
+To access Contextual Search in Experience Manager Assets:
 
-1. Definiera textprompten i söktextrutan och klicka på **[!UICONTROL Contextual Search]**.
+1. Click **[!UICONTROL Search]** in the left pane.
 
-   ![Sammanhangsberoende textfråga för sökning](/help/assets/assets/wknd-contextual-search.png)
+   ![Contextual Search](assets/access-contextual-search.png)
 
-   [!DNL Experience Manager Assets] visar sökresultaten.
+1. Define the text prompt in the Search text box and click **[!UICONTROL Contextual Search]**.
 
-### Filter som stöds {#supported-filters}
+   ![Contextual Search text prompt](/help/assets/assets/wknd-contextual-search.png)
 
-Sammanhangsbaserad sökning stöder följande färdiga filter. Basera dina textmeddelanden på dessa filter för att se rätt sökresultat.
+   [!DNL Experience Manager Assets] displays the search results.
 
-* Bildhöjd
+### Supported filters {#supported-filters}
 
-* Bildbredd
+Contextual Search supports the following filters out-of-the-box. Base your text prompts on these filters to view appropriate search results.
 
-* Filtyp: bild, dokument, video eller mapp.
+* Image height
 
-* MIME-typ: JPG, PNG, TIFF, GIF, MP4, PDF, PPTX, DOCX eller XLSX
+* Image width
 
-* Skapad den
+* File type: image, document, video, or folder.
 
-* Ändrat den
+* MIME type: JPG, PNG, TIFF, GIF, MP4, PDF, PPTX, DOCX or XLSX
 
-* Utgångsdatum
+* Created date
 
-* Resursstatus: Godkänd, Avvisad eller alla
+* Modified date
 
-* Utgångna resurser
+* Expiration date
 
-### Exempel på textmeddelanden {#text-prompts-examples}
+* Asset status: Approved, Rejected, or all
 
-**Exempel 1**
+* Expired assets
 
-**Textfråga**: Bilder skapade den här månaden.
+### Examples for the text prompts {#text-prompts-examples}
 
-[!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
+**Example 1**
 
-![Exempel på sammanhangsbaserad sökning 1](assets/contextual-search-example1.png)
+**Text Prompt**: Images created this month.
 
-**Exempel 2**
+[!DNL Experience Manager Assets] applies the following filters automatically and displays the search results:
 
-**Textprompt**: Bilder som är minst 200 pixlar höga och 100 pixlar breda med strand och klar himmel.
+![Contextual Search Example 1](assets/contextual-search-example1.png)
 
-[!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
+**Example 2**
 
-![Exempel på sammanhangsbaserad sökning 2](assets/contextual-search-example2.png)
+**Text prompt**: Images at least 200px tall and 100px wide with beach and clear sky.
 
-**Exempel 3**
+[!DNL Experience Manager Assets] applies the following filters automatically and displays the search results:
 
-**Textfråga**: Jag behöver bilder med blå himmel som är 1 500 och 2 500 pixlar höga och som har skapats den senaste månaden och som inte har gått ut och godkänts.
+![Contextual Search Example 2](assets/contextual-search-example2.png)
 
-[!DNL Experience Manager Assets] använder följande filter automatiskt och visar sökresultaten:
+**Example 3**
 
-![Exempel på sammanhangsbaserad sökning 3](assets/contextual-search-example3.png)
+**Text prompt**: I need images of blue sky that are 1500 and 2500 pixel height and created in the past month that is not expired and approved.
 
-I följande video visas hela processen, från att komma åt det kontextuella sökanvändargränssnittet till att definiera textmeddelanden och visa sökresultaten.
+[!DNL Experience Manager Assets] applies the following filters automatically and displays the search results:
+
+![Contextual Search Example 3](assets/contextual-search-example3.png)
+
+The following video illustrates the end-to-end process from accessing the Contextual Search User Interface to defining text prompts, and viewing the search results.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428407)
 
-### Inaktivera sammanhangsbaserad sökning {#disable-contextual-search}
+### Disable Contextual Search {#disable-contextual-search}
 
-Administratörer kan även inaktivera sammanhangsbaserad sökning för användare i din organisation. Gör så här:
+Administrators also have the option to disable Contextual Search for users in your organization. To do so, execute the following steps:
 
-1. Navigera till **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
+1. Navigate to **[!UICONTROL Settings]** > **[!UICONTROL General Settings]**.
 
-1. I avsnittet [!UICONTROL Contextual Search] stänger du av växeln **[!UICONTROL Enable Contextual Search for your organization]** för att inaktivera funktionen för sammanhangsbaserad sökning för alla användare i organisationen.
+1. In the [!UICONTROL Contextual Search] section, turn off the **[!UICONTROL Enable Contextual Search for your organization]** toggle to disable the Contextual Search feature for all users in your organization.  
 
-### Sammanhangsbaserad sökfeedback {#contextual-search-feedback}
+### Contextual Search feedback {#contextual-search-feedback}
 
-Om du behöver ge feedback på funktionen för sammanhangsbaserad sökning klickar du på ikonen ![Sammanhangsbaserad sökning](assets/do-not-localize/Smock_Help_18_N.svg) och sedan på ikonen för feedback. Välj typ av feedback, ange ämne och beskrivning och klicka på **[!UICONTROL Submit]**.
+If you need to provide feedback on the Contextual Search feature, click ![Contextual Search icon](assets/do-not-localize/Smock_Help_18_N.svg)  and click the Feedback icon. Select the feedback type, specify the subject and description, and click **[!UICONTROL Submit]**.
 
-![Sammanhangsbaserad sökfeedback](assets/contextual-search-feedback.png)
+![Contextual Search feedback](assets/contextual-search-feedback.png)
+
+-->
 
 ## Nästa steg {#next-steps}
 
-* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html?lang=sv-SE)
+* [Titta på en video om du vill söka efter resurser i Assets-vyn](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/basics/using.html)
 
 * Ge produktfeedback med alternativet [!UICONTROL Feedback] som finns i användargränssnittet i Assets-vyn
 
 * Ge feedback genom att [!UICONTROL Edit this page] ![redigera sidan](assets/do-not-localize/edit-page.png) eller [!UICONTROL Log an issue] ![skapa ett GitHub-problem](assets/do-not-localize/github-issue.png) som är tillgängligt på den högra sidopanelen.
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General#support)
 
 
 
