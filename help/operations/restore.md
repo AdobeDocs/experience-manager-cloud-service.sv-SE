@@ -77,17 +77,17 @@ För detaljer om hantering av behörigheter, se [Anpassade behörigheter](/help/
 
 1. Lista alla miljöer för programmet genom att göra någon av följande:
 
-   * Från vänstermenyn, under **Tjänster, klicka på** Dataikon![ ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg)Miljöer ****.
+   * Från vänstermenyn, under **Tjänster, klicka på** Dataikon![&#x200B; &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg)Miljöer **&#x200B;**.
 
      ![Fliken Miljöer](assets/environments-1.png)
 
-   * Från vänstermenyn, under **Program, klicka på**&#x200B;Översikt **, och från** Miljökortet **, klicka** på Arbetsflödesikonen![ ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Visa allt ****.
+   * Från vänstermenyn, under **Program, klicka på**&#x200B;Översikt **, och från** Miljökortet **, klicka** på Arbetsflödesikonen![&#x200B; &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Visa allt **&#x200B;**.
 
      ![Visa alla-alternativet](assets/environments-2.png)
 
      >[!NOTE]
      >
-     >Miljökortet **** listar endast tre miljöer. Klicka på **Visa alla** på kortet för att se *alla* miljöer i programmet.
+     >Miljökortet **&#x200B;**&#x200B;listar endast tre miljöer. Klicka på **Visa alla** på kortet för att se *alla* miljöer i programmet.
 
 1. I tabellen Miljöer, till höger om en miljö vars innehåll du vill återställa, klicka på ![Fler-ikonen eller ellipsmenyikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg), och sedan på **Återställ innehåll**.
 
@@ -165,7 +165,7 @@ Om kunder har specifika eller berättigade frågor om regional distribution, dat
 När Adobe bestämmer en lämplig dataregionkartläggning tillämpar de flera prioriterade kriterier:
 
 1. **Lämna inte den globala regionen**\
-   Utplaceringarna finns kvar inom en av de stora globala regionerna: **APAC,****EMEA** och **Amerika.**
+   Utplaceringarna finns kvar inom en av de stora globala regionerna: **APAC,**&#x200B;**EMEA** och **Amerika.**
 
 2. **Lämna inte kontinenten**\
    Där det är möjligt förblir datareplikering och failover på samma kontinent.
