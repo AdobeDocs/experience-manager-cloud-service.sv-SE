@@ -5,9 +5,9 @@ exl-id: bf0f54a9-fe86-4bfb-9fa6-03cf0fd5f404
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 4bebe8a3a283711a053320bfda4a8aac32096aa6
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Cloud Manager har en kontrollpanel där du enkelt kan se vilka Adobe Experience 
 
 >[!IMPORTANT]
 >
->Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
+>Kontrollpanelen för licenser gäller endast AEM as a Cloud Service-programmen. [AMS-program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction) ingår inte i kontrollpanelen för licenser.
 >
 >Information om vilken typ av tjänst ditt program har (AMS eller AEMaaCS) finns i [Navigera i användargränssnittet för Cloud Manager](/help/implementing/cloud-manager/navigation.md#program-cards).
 
 ## Ökning {#overview}
 
-Cloud Manager License Dashboard ger enkel åtkomst till tillgängliga lösningsrättigheter i alla program, inklusive vad som används och vad som är tillgängligt. Och innehållet begär konsumtionsstatistik trendad på månad för webbplatslösningen.
+Cloud Manager License Dashboard ger enkel åtkomst till tillgängliga lösningsrättigheter i alla program, inklusive hur mycket som används och hur mycket som är tillgängligt. Och innehållet begär konsumtionsstatistik trendad på månad för webbplatslösningen.
 
 ## Åtkomst till kontrollpanelen för licenser {#using-dashboard}
 
@@ -59,7 +59,7 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 
 >[!TIP]
 >
->Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/se/enterprise/using/admin-console.html).
+>Mer information om hur du hanterar dina Adobe-berättiganden i hela organisationen från Admin Console finns i [Admin Console-översikten](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 ## Visa användningsinformation {#view-usage-details}
 
@@ -67,6 +67,15 @@ I varje avsnitt sammanfattas vad som är tillgängligt och hur det används, om 
 The **View usage details** button gives access to the chosen solution's **Usage Details** window. This window gives a detailed breakdown including charts to show your solution's usage. How that usage is measured depends on the chosen solution. -->
 
 Knappen **Visa användningsinformation** i licensområdet för Cloud Manager innehåller en detaljerad beskrivning av din aktuella resursanvändning. När du klickar på den öppnas en rapport eller kontrollpanel med viktig information om din licens. <!-- ADD THIS SENTENCE IF ASSETS USAGE DETAILS GETS REINSTATED ", such as the number of users, storage consumption, or bandwidth usage, depending on the type of services you're using." --> Den här funktionen hjälper dig att övervaka och se till att du ligger inom avtalsgränserna samtidigt som du erbjuder insikter för bättre resursplanering och optimering.
+
+Knappen **Visa användningsinformation** är *inaktiverad* (inaktiverad) i följande fall:
+
+* Lösningen ingår inte i ditt kontrakt och har inga krediter. Knappen är tillgänglig om det finns krediter, även om alla krediter förbrukas.
+* Inget Cloud Manager-program har konfigurerats för den lösningen.
+* En funktionsflagga som styr användningsinformation är inaktiverad. Den måste vara *aktiverad* (aktiverad) för din organisation innan knappen blir tillgänglig.
+* Användning är uttryckligen inaktiverat för lösningen. För närvarande gäller detta endast Edge Delivery Services.
+
+
 
 ### Information om webbplatsanvändning {#sites-usage-details}
 
