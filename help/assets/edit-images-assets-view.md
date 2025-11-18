@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Assets-vyns gränssnitt möjliggör grundläggande bildredigering som drivs av Adobe Express, integrerat i UI:t. Denna redigering inkluderar storleksanpassning, bakgrundsborttagning, beskärning och konvertering mellan JPEG- och PNG-format. Dessutom möjliggör det avancerad redigering via Adobe Express-gränssnittet som är inbäddat i Assets-vyns gränssnitt.
 
-Efter att ha redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga tillgången senare om det behövs. För att redigera en bild, [öppna dess förhandsvisning](https://experienceleague.adobe.com/en/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klicka på **Redigera bild**.
+Efter att ha redigerat en bild kan du spara den nya bilden som en ny version. Versionshantering hjälper dig att återgå till den ursprungliga tillgången senare om det behövs. För att redigera en bild, [öppna dess förhandsvisning](https://experienceleague.adobe.com/sv/docs/experience-manager-assets-essentials/help/navigate-view#preview-assets) och klicka på **Redigera bild**.
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ Efter att ha redigerat en bild kan du spara den nya bilden som en ny version. Ve
 ## Redigera bild {#edit-image}
 
 Gå till Assets view UI, använd länken - [Assets View](https://experience.adobe.com/#/assets) och välj rätt arkiv. För att få tillgång, kontakta din organisations administratör.
-För ytterligare referensinformation, se - [Kom igång med Adobe Experience Manager Assets View](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view), [Förstå användargränssnittet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/navigate-assets-view#understand-interface-navigation) för Assets View och [Assets View användningsfall](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view#use-cases).
+För ytterligare referensinformation, se - [Kom igång med Adobe Experience Manager Assets View](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view), [Förstå användargränssnittet](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/navigate-assets-view#understand-interface-navigation) för Assets View och [Assets View användningsfall](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/get-started-assets-view#use-cases).
 <!--
 >[!CONTEXTUALHELP]
 >id="assets_express_integration"
@@ -154,7 +154,7 @@ The brush samples the retouched area and makes the repaired pixels blend seamles
 
 <!-- 
 TBD: See if we should give backlinks to PS docs for these concepts.
-For more information about how Spot Healing works in Photoshop, see [retouching and repairing photos](https://helpx.adobe.com/photoshop/using/retouching-repairing-images.html). 
+For more information about how Spot Healing works in Photoshop, see [retouching and repairing photos](https://helpx.adobe.com/se/photoshop/using/retouching-repairing-images.html). 
 -->
 <!-- 
 ### Crop and straighten images {#crop-straighten-images-using-photoshop-express}
