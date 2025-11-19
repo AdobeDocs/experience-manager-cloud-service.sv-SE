@@ -4,7 +4,7 @@ description: Lär dig hur du åsidosätter standardfelsidan genom att lagra stat
 feature: Dispatcher
 exl-id: 1ecc374c-b8ee-41f5-a565-5b36445d3c7c
 role: Admin
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -37,8 +37,6 @@ Konfigurationsexempel:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   errorPages:
     spa:
@@ -93,6 +91,6 @@ På så sätt utlöser du CDN:ens felhanterare direkt för att testa det synteti
 
 ### Självstudiekurs
 
-Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
+Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
 
 
