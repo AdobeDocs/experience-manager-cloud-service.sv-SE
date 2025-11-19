@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar CDN-trafik genom att deklarera regler 
 feature: Dispatcher
 exl-id: e0b3dc34-170a-47ec-8607-d3b351a8658e
 role: Admin
-source-git-commit: a8c313c3b1324e4195c2aeb70a5a56e4ef66fcf3
+source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
 workflow-type: tm+mt
 source-wordcount: '1698'
 ht-degree: 0%
@@ -44,8 +44,6 @@ Innan du kan konfigurera trafik på leveransnätverket måste du göra följande
    ```
    kind: "CDN"
    version: "1"
-   metadata:
-     envTypes: ["dev"]
    ```
 
 1. Placera filen någonstans under en mapp på den översta nivån med namnet *config* eller liknande, enligt beskrivningen under [Konfigurera pipeline](/help/operations/config-pipeline.md#folder-structure).
@@ -79,8 +77,6 @@ Konfigurationsexempel:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev", "stage", "prod"]
 data:
   requestTransformations:
     removeMarketingParams: true
@@ -227,8 +223,6 @@ Konfigurationsexempel:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["prod", "dev"]
 data:
   requestTransformations:
     rules:
@@ -313,8 +307,6 @@ Konfigurationsexempel:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["prod", "dev"]
 data:
   responseTransformations:
     rules:
@@ -397,8 +389,6 @@ Konfigurationsexempel:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   originSelectors:
     rules:
@@ -456,8 +446,6 @@ Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
 ```
 kind: CDN
 version: '1'
-metadata:
-  envTypes: ["dev"]
 data:
   originSelectors:
     rules:
@@ -483,8 +471,6 @@ Här är ett exempel på en väljarregel för origo som kan åstadkomma detta:
 ```
 kind: CDN
 version: '1'
-metadata:
-  envTypes: ["dev"]
 data:
   originSelectors:
     rules:
@@ -523,8 +509,6 @@ Konfigurationsexempel:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   redirects:
     rules:
