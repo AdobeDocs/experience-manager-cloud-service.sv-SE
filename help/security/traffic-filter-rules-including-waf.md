@@ -4,7 +4,7 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
 workflow-type: tm+mt
 source-wordcount: '4582'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring p
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
+På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
 Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver *standardtrafikfilterregler* som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas *WAF-regler*.
 
@@ -82,8 +82,6 @@ Nedan följer en högnivårekommenderad process från början till slut för att
    ```
    kind: "CDN"
    version: "1"
-   metadata:
-     envTypes: ["dev"]
    data:
      trafficFilters:
        rules:
@@ -120,8 +118,6 @@ Här är ett exempel på en uppsättning trafikfilterregler, som även innehåll
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -302,8 +298,6 @@ Den här regeln blockerar begäranden från **IP192.168.1.1**:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
      rules:
@@ -320,8 +314,6 @@ Den här regeln blockerar begäran på sökvägen `/helloworld` vid publicering 
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -342,8 +334,6 @@ Den här regeln blockerar begäranden vid publicering som innehåller frågepara
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -367,8 +357,6 @@ Den här regeln blockerar begäranden till sökvägen `/block-me` vid publicerin
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -393,8 +381,6 @@ Den här regeln blockerar åtkomst till OFAC-länder:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -449,8 +435,6 @@ Den här regeln blockerar en klient i 5 millisekunder när den överskrider ett 
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -475,8 +459,6 @@ Blockera begäranden på sökvägen/critical/resource i 60 sekunder när det öv
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -512,8 +494,6 @@ Varningsegenskapen kan användas för åtgärdsnoden för alla åtgärdstyper (a
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -538,8 +518,6 @@ Den här varningen är aktiverad som standard, men kan inaktiveras med egenskape
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
    defaultTrafficAlerts: false
@@ -578,8 +556,6 @@ I exemplet nedan visas ett exempel på `cdn.yaml` och två CDN-loggposter:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   trafficFilters:
     rules:
@@ -679,8 +655,6 @@ Börja med dessa regler:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev", "stage", "prod"]
 data:
   trafficFilters:
     rules:
@@ -803,7 +777,7 @@ Före juli 2025 rekommenderade Adobe de WAF-regler som anges nedan, som fortfara
 
 ## Självstudiekurs {#tutorial}
 
-Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
+Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
 
 Självstudiekurserna är följande:
 
