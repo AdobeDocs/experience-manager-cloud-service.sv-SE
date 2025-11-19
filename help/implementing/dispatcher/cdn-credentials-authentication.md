@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: edfefb163e2d48dc9f9ad90fa68809484ce6abb0
+source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
 workflow-type: tm+mt
 source-wordcount: '1939'
 ht-degree: 0%
@@ -46,8 +46,6 @@ Mer felsökningsinformation och vanliga fel finns i [Vanliga fel](/help/implemen
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   authentication:
     authenticators:
@@ -65,7 +63,7 @@ data:
 
 Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
-Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
+Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
 
 Ytterligare egenskaper är:
 
@@ -151,8 +149,6 @@ Syntaxen beskrivs nedan:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   authentication:
     authenticators:
@@ -187,7 +183,7 @@ Ytterligare egenskaper är:
 >[!NOTE]
 >Töm nyckel måste konfigureras som en [hemlig typ av Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras. Vi rekommenderar att du använder en unik slumpmässig nyckel med en längd på minst 32 byte. Open SSL-kryptografibiblioteket kan till exempel generera en slumpmässig nyckel genom att köra kommandot openssl rand -hex 32
 
-Du kan referera till [en självstudie](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
+Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
 ## Grundläggande autentisering {#basic-auth}
 
@@ -203,8 +199,6 @@ Syntaxen är följande:
 ```
 kind: "CDN"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   authentication:
     authenticators:
