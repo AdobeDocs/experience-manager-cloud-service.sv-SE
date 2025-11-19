@@ -4,7 +4,7 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
 workflow-type: tm+mt
 source-wordcount: '2478'
 ht-degree: 0%
@@ -111,8 +111,6 @@ Den här artikeln är organiserad på följande sätt:
    ```yaml
    kind: "LogForwarding"
    version: "1"
-   metadata:
-     envTypes: ["dev"]
    data:
      splunk:
        default:
@@ -135,8 +133,6 @@ Det går att ange olika värden mellan CDN-loggar och AEM-loggar (inklusive Apac
 ```yaml
    kind: "LogForwarding"
    version: "1"
-   metadata:
-     envTypes: ["dev"]
    data:
      splunk:
        default:
@@ -155,8 +151,6 @@ Ett annat scenario är att inaktivera vidarebefordran av CDN-loggar eller AEM-lo
 ```yaml
    kind: "LogForwarding"
    version: "1"
-   metadata:
-     envTypes: ["dev"]
    data:
      splunk:
        default:
@@ -218,8 +212,6 @@ I exemplet nedan visas hur du konfigurerar loggning på en vanlig HTTPS-port med
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   splunk:
     default:
@@ -254,9 +246,7 @@ Loggvidarebefordran till Amazon S3 stöder AEM- och Dispatcher-loggar, CDN-logga
 
 ```yaml
 kind: "LogForwarding"
-version: "1.0"
-metadata:
-  envTypes: ["dev"]
+version: "1"
 data:
   awsS3:
     default:
@@ -294,8 +284,6 @@ Mer information om hur du implementerar finns i [AWS Bucket Policy Documentation
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   azureBlob:
     default:
@@ -364,8 +352,6 @@ Se loggpostformaten under [Loggning för AEM as a Cloud Service](/help/implement
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   datadog:
     default:
@@ -392,8 +378,6 @@ data:
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   elasticsearch:
     default:
@@ -426,8 +410,6 @@ ctx._index = sourceType + "_" + envType + "_" + date;
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   https:
     default:
@@ -472,8 +454,6 @@ Logga vidarebefordran till New Relic använder New Relic HTTPS API för förtär
 ```yaml
   kind: "LogForwarding"
   version: "1"
-  metadata:
-    envTypes: ["dev"]
   data:
     newRelic:
       default:
@@ -499,8 +479,6 @@ Scope-attributet &quot;Ingest Logs&quot; krävs för token.
 ```yaml
   kind: "LogForwarding"
   version: "1"
-  metadata:
-    envTypes: ["dev"]
   data:
     dynatrace:
       default:
@@ -517,8 +495,6 @@ Scope-attributet &quot;Ingest Logs&quot; krävs för token.
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   splunk:
     default:
@@ -547,13 +523,11 @@ När du konfigurerar Sumo Logic för datainmatning visas en&quot;HTTP Source Add
 
 `https://collectors.de.sumologic.com/receiver/v1/http/ZaVnC...`
 
-Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [&#x200B; CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [&#x200B; Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
+Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [ CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [ Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
 
 ```yaml
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   sumoLogic:
     default:
