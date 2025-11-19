@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: b0357c9fcc19d29c3d685e6b14369a6fcc6832e1
+source-git-commit: 5e0626c57f233ac3814355d7efe7db010897d72b
 workflow-type: tm+mt
-source-wordcount: '1340'
+source-wordcount: '1378'
 ht-degree: 0%
 
 ---
@@ -63,21 +63,32 @@ Mer information om hur du skapar och konfigurerar **Edge Delivery**-konfiguratio
 Varje konfigurationsfil börjar med egenskaper som liknar följande exempelkodfragment:
 
 ```yaml
-   kind: "LogForwarding"
+   kind: "CDN"
    version: "1"
-   metadata:
-     envTypes: ["dev"]
+   metadata: ...
+   data: ...
 ```
 
 | Egenskap | Beskrivning | Standard |
 |---|---|---|
 | `kind` | En sträng som avgör vilken typ av konfiguration, till exempel vidarebefordran av loggfiler, trafikfilterregler eller begäranomvandlingar | Obligatoriskt, ingen standard |
 | `version` | En sträng som representerar schemaversionen | Obligatoriskt, ingen standard |
-| `envTypes` | Den här strängmatrisen är en underordnad egenskap för noden `metadata`. För **Publicera leverans** är möjliga värden dev, stage, prod eller valfri kombination, och avgör för vilka miljötyper konfigurationen bearbetas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. För **Edge Delivery** ska endast värdet `prod` användas. | Alla miljötyper, dvs. (dev, stage, prod) för Publish Delivery eller bara för Edge Delivery. |
+| `metadata` | (Valfritt) Detta innehåller en matris med strängar `envTypes` som avgör för vilka miljötyper konfigurationen bearbetas. För **Publicera leverans** är möjliga värden `dev`, `stage` och `prod`. För **Edge Delivery** ska endast värdet `prod` användas. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där. | Alla miljötyper, dvs. (dev, stage, prod) för Publish Delivery eller bara för Edge Delivery. |
 
 Du kan använda verktyget `yq` för att lokalt validera YAML-formateringen av konfigurationsfilen (till exempel `yq cdn.yaml`).
 
-## Mappstruktur {#folder-structure}
+## Publicera leverans {#yamls-for-aem}
+
+**Konfigurationer för publiceringsleverans** distribueras till en målmiljö. När du arbetar i flera miljöer kan du ordna de olika filerna på olika sätt. Om matrisen till exempel bara innehåller `dev` läses konfigurationen inte in i scen- eller produktmiljöer, även om konfigurationen distribueras där.
+
+```yaml
+   kind: "CDN"
+   version: "1"
+   metadata:
+    envType: ["dev"]
+```
+
+### Mappstruktur {#folder-structure}
 
 En mapp med namnet `/config` eller liknande bör finnas högst upp i trädet, med en eller flera YAML-filer någonstans i ett träd nedanför.
 
@@ -96,7 +107,7 @@ eller
     cdn.yaml
 ```
 
-Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde &#x200B;](#configurations).
+Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde ](#configurations).
 
 Konfigurationer distribueras vanligtvis till alla miljöer. Om alla egenskapsvärden är identiska för varje miljö räcker det med en YAML-fil. Det är dock vanligt att egenskapsvärden skiljer sig åt mellan olika miljöer, till exempel när en lägre miljö testas.
 
@@ -115,7 +126,7 @@ Filstrukturen liknar följande:
 Använd den här strukturen när samma konfiguration räcker för alla miljöer och för alla typer av konfigurationer (CDN, loggvidarebefordran osv.). I det här scenariot skulle matrisegenskapen `envTypes` innehålla alla miljötyper.
 
 ```yaml
-   kind: "cdn"
+   kind: "CDN"
    version: "1"
    metadata:
      envTypes: ["dev", "stage", "prod"]
@@ -175,7 +186,7 @@ Filstrukturen liknar följande:
 
 En variant av detta tillvägagångssätt är att ha en separat gren per miljö.
 
-### Edge Delivery Services {#yamls-for-eds}
+## Edge Delivery Services {#yamls-for-eds}
 
 Edge Delivery config-pipelines har inte separata miljöer för utveckling, staging och produktion. I Publicera leverans-miljöer ändrar du förloppet genom nivåerna dev, stage och prod. En Edge Delivery-konfigurationspipeline tillämpar däremot konfigurationen direkt på alla domänmappningar som är registrerade i Cloud Manager för en Edge Delivery-plats.
 
@@ -188,7 +199,7 @@ Distribuera en enkel filstruktur som:
   logForwarding.yaml
 ```
 
-Om en regel måste skilja sig åt mellan olika Edge Delivery-webbplatser kan du använda syntaxen *when* för att skilja reglerna från varandra. Observera till exempel att domänen matchar dev.example.com i kodutdraget nedan, som kan särskiljas från domänen www.example.com.
+Om en regel måste skilja sig åt mellan olika Edge Delivery-webbplatser kan du använda syntaxen *when* för att skilja reglerna från varandra. Observera till exempel att domänen matchar dev.example.com i kodutdraget nedan, som kan särskiljas från domänen `www.example.com`.
 
 ```
 kind: "CDN"
@@ -220,8 +231,6 @@ Följande kodutdrag är ett exempel på hur den hemliga miljövariabeln `${{SPLU
 ```
 kind: "LogForwarding"
 version: "1"
-metadata:
-  envTypes: ["dev"]
 data:
   splunk:
     default:
