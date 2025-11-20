@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: 87c0288356fd561dd15249e3da08850f7c5d031a
+source-git-commit: 434bf669f4a060f2d79dcc57f94fbcff27a840e1
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Versionsinformation om förhandsvisning i Universal Editor {#preview}
 
-Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att lanseras den 20 november 2025.
+Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att lanseras den 27 november 2025.
 
 Versionsinformationen **preview** är praktisk så att du vet vilka ändringar som kommer att göras i den universella redigeraren och kan testa dem genom att [växla till förhandsvisningsmiljön.](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties)
 
@@ -27,11 +27,11 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande nya funktioner {#what-is-new}
 
-* Popup har migrerats till ett nytt användargränssnitt.
+* En snabbmeny är nu tillgänglig i det strukturerade trädet när du högerklickar.
+* En snabbtangent har lagts till för att duplicera komponenter.
 
 ## Kommande förbättringar {#other-improvements}
 
-* Hanteringen av RTE-värden har förenklats.
-* Ett sällsynt verktygsfältstillstånd har åtgärdats.
-* Oanvända funktionsväxlar har tagits bort.
-* Beroenden uppdaterades.
+* Ett problem med att textredigeraren inte sparades korrekt på arbetsytan har lösts.
+* Urklippen i mappträdet för innehållsväljaren har åtgärdats.
+* `componentId` tillhandahålls nu under en tilläggsåtgärd.
