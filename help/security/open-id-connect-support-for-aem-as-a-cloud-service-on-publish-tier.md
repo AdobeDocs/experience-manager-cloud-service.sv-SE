@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar OIDC (Open ID Connect) för AEM as a C
 feature: Security
 role: Admin
 exl-id: d2f30406-546c-4a2f-ba88-8046dee3e09b
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: 75c2dbc4f1d77de48764e5548637f95bee9264dd
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1986'
 ht-degree: 0%
 
 ---
@@ -68,11 +68,22 @@ Först måste vi konfigurera OIDC-anslutningen. Flera OIDC-anslutningar kan konf
     "scopes":[
       "openid"
     ],
-    "baseUrl":"<https://login.microsoftonline.com/53279d7a-438f-41cd-a6a0-fdb09efc8891/v2.0>",
-    "clientId":"5199fc45-8000-473e-ac63-989f1a78759f",
+    "baseUrl":"<https://login.microsoftonline.com/tenant-id/v2.0>",
+    "clientId":"client-id-from-idp",
     "clientSecret":"xxxxxx"
    }
    ```
+
+I vissa miljöer kanske identitetsleverantören (IdP) inte visar en giltig `.well-known`-slutpunkt.
+När detta inträffar kan de nödvändiga slutpunkterna definieras manuellt genom att ange följande egenskaper i konfigurationsfilen.
+I det här konfigurationsläget får egenskapen `baseUrl` inte anges.
+
+```
+"authorizationEndpoint": "https://idp-url/oauth2/v1/authorize",
+"tokenEndpoint": "https://idp-url/oauth2/v1/token",
+"jwkSetURL":"https://idp-url/oauth2/v1/keys",
+"issuer": "https://idp-url"
+```
 
 1. Konfigurera egenskaperna enligt följande:
    * **&quot;name&quot;** kan definieras av användaren
@@ -97,12 +108,12 @@ Konfigurera nu OIDC-autentiseringshanteraren. Flera OIDC-anslutningar kan konfig
 
 1. Konfigurera sedan egenskaperna enligt följande:
    * `path`: sökvägen som ska skyddas
-   * `callbackUri`: Lägg till suffixet `/j_security_check` i sökvägen som ska skyddas.
+   * `callbackUri`: sökvägen som ska skyddas, lägger till suffixet: `/j_security_check`. Samma callbackUri måste även konfigureras i fjärr-IdP som omdirigerings-url.
    * `defaultConnectionName`: konfigurera med samma namn som definierats för OIDC-anslutningen i föregående steg+
    * `pkceEnabled`: `true` Korrekturnyckel för Kodutbyte (PKCE) i auktoriseringskodflöde
    * `idp`: namnet på [OAK-providern för extern identitet](https://jackrabbit.apache.org/oak/docs/security/authentication/identitymanagement.html). Observera att olika OAK IDP inte kan dela användare eller grupper
 
-### Konfigurera SlingUserInfoProcessor
+### Konfigurera SlingUserInfoProcessor {#configure-slinguserinfoprocessor}
 
 1. Skapa konfigurationsfilen. I det här exemplet använder vi `org.apache.sling.auth.oauth_client.impl.SlingUserInfoProcessor~azure.cfg.json`. `azure`-suffixet måste vara en unik identifierare. Se ett exempel på konfigurationsfilen nedan:
 
@@ -112,7 +123,8 @@ Konfigurera nu OIDC-autentiseringshanteraren. Flera OIDC-anslutningar kan konfig
       "groupsClaimName": "groups",
       "connection":"azure",
       "storeAccessToken": false,
-      "storeRefreshToken": false
+      "storeRefreshToken": false,
+      "idpNameInPrincipals": true
    }
    ```
 
@@ -122,6 +134,7 @@ Konfigurera nu OIDC-autentiseringshanteraren. Flera OIDC-anslutningar kan konfig
    * `connection`: konfigurera med samma namn som definierats för OIDC-anslutningen i föregående steg
    * `storeAccessToken`: true om åtkomsttoken måste lagras i databasen. Som standard är detta false. Ställ bara in det på true om AEM behöver komma åt resurser för användaren som lagras i externa servrar som skyddas av samma IdP.
    * `storeRefreshToken`: true om uppdateringstoken måste lagras i databasen. Som standard är detta false. Ställ bara in det på true om AEM behöver komma åt resurser för användarens räkning som lagras på externa servrar som skyddas av samma IdP och behöver uppdatera token från IdP:n.
+   * `idpNameInPrincipals`: Om värdet är true läggs namnet på IdP till som suffix till användar- och gruppobjektsobjekt avgränsade med &#39;;&#39;. Om IdP-namnet till exempel är `azure-idp` och användarnamnet är `john.doe`, kommer säkerhetsobjektet som lagras i eken att vara `john.doe;azure-idp`. Detta är användbart när flera IdPs är konfigurerade i eke för att undvika konflikter mellan användare eller grupper med samma namn som kommer från olika IdPs. Detta kan även ställas in för att undvika konflikter med användare eller grupper som skapats av andra autentiseringshanterare som Saml.
 Observera att Access Token och Refresh Token lagras krypterade med AEM huvudnyckel.
 
 
@@ -133,20 +146,23 @@ Skapa en fil med namnet `org.apache.jackrabbit.oak.spi.security.authentication.e
 
 ```
 {
-  "user.expirationTime":"300s",
-  "user.membershipExpTime":"300s",
+  "user.expirationTime":"1h",
+  "user.membershipExpTime":"1h",
+  "group.expirationTime": "1d"
   "user.propertyMapping":[
-    "profile/familyName=profile/familyName",
-    "profile/givenName=profile/givenName",
-    "rep:fullname=cn",
+    "profile/givenName=profile/given_name",
+    "profile/familyName=profile/family_name",
+    "rep:fullname=profile/name",
     "profile/email=profile/email",
-    "oauth-tokens"
+    "access_token=access_token",
+    "refresh_token=refresh_token"
   ],
   "user.pathPrefix":"azure",
   "handler.name":"azure"
 }
 ```
 
+Under utvecklingen kan förfallotiden minskas till ett lägre värde (till exempel 1s) för att snabba upp testningen av användar- och gruppsynkronisering i eken.
 Nedan visas några av de mest relevanta attributen som ska konfigureras i DefaultSyncHandler. Observera att dynamiskt gruppmedlemskap alltid ska vara aktiverat i molntjänster.
 
 | Egenskapsnamn | Anteckningar | Föreslaget värde |
@@ -181,6 +197,37 @@ Slutligen måste du konfigurera modulen för extern inloggning.
 
 Användaren autentiseras av en ID-token och ytterligare attribut hämtas i `userInfo`-slutpunkten som är definierad för IdP. Om ytterligare icke-standardåtgärder måste utföras är en anpassad implementering av [UserInfoProcessor](https://github.com/apache/sling-org-apache-sling-auth-oauth-client/blob/master/src/main/java/org/apache/sling/auth/oauth_client/impl/SlingUserInfoProcessorImpl.java) standardimplementeringen från Sling.
 
+### Konfigurera ACL för externa grupper {#configure-acl-for-external-groups}
+
+När användare autentiseras via OIDC synkroniseras deras gruppmedlemskap vanligtvis från den externa identitetsleverantören.
+Dessa externa grupper skapas dynamiskt i AEM-databasen men kopplas inte automatiskt till några åtkomstkontrollposter.
+För att användare ska ha rätt behörigheter måste åtkomstkontrollistor definieras explicit för dessa grupper.
+
+Det finns två primära metoder.
+
+### Alternativ 1 - Lokala grupper
+
+Den externa gruppen kan läggas till som en medlem i en lokal grupp som redan har de nödvändiga åtkomstkontrollistorna.
+* Den externa gruppen måste finnas i databasen, vilket sker automatiskt när en användare som tillhör den gruppen loggar in för första gången.
+* Det här alternativet är vanligtvis att föredra när stängda användargrupper (CUG) används, eftersom den lokala gruppen finns både i författar- och publiceringsmiljöer.
+
+### Alternativ 2 - Direkt åtkomstkontrollista för externa grupper via RepoInit
+
+ACL-listor kan tillämpas direkt på externa grupper med RepoInit-skript.
+* Den här metoden är mer effektiv och är att föredra när användargränssnitten inte används.
+* I följande exempel visas en RepoInit-konfiguration som tilldelar läsbehörigheter till en extern grupp. Alternativet `ignoreMissingPrincipal` tillåter att ACL skapas, även om gruppen inte finns i databasen än:
+
+  ```
+  {
+    "scripts":[
+      "set ACL for \"my-group;my-idp\"  (ACLOptions=ignoreMissingPrincipal)\r\n  allow jcr:read on /content/wknd/us/en/magazine\r\nend"
+    ]
+  }    
+  ```
+
+>[!NOTE]
+>Användargränssnittet för AEM-behörigheter kan användas för att inspektera åtkomstkontrollistor som tilldelats till grupprincipobjekt
+
 ## Exempel: Konfigurera OIDC-autentisering med Azure Active Directory
 
 ### Konfigurera ett nytt program i Azure Active Directory {#configure-a-new-application-in-azure-ad}
@@ -196,19 +243,19 @@ Användaren autentiseras av en ID-token och ytterligare attribut hämtas i `user
 1. Följ de tidigare dokumenterade stegen för att skapa de konfigurationsfiler som krävs. Nedan finns ett exempel som är specifikt för Azure AD där:
    * Vi definierar namnet på oidc-anslutningen, autentiseringshanteraren och DefaultSyncHandler som: `azure`
    * Webbplatsens URL är: `www.mywebsite.com`
-   * Vi skyddar sökvägen `/content/wknd/us/en/adventures`
+   * Vi skyddar sökvägen `/content/wknd/us/en/adventures` som bara är tillgänglig för autentiserade användare som är medlemmar i gruppen `adventures`
    * Innehavaren är: `tennat-id`,
    * Klient-ID: `client-id`,
    * Hemligheten är: `secret`,
    * Grupperna skickas i ID-token i ett anspråk med namnet: `groups`
 
-#### org.apache.sling.auth.oauth_client.impl.OidcConnectionImpl~azure.cfg.json
+### org.apache.sling.auth.oauth_client.impl.OidcConnectionImpl~azure.cfg.json
 
 ```
 {
   "name":"azure",
   "scopes":[
-    openid", "User.Read", "profile", "email
+    openid", "User.Read", "profile", "email"
   ],
   "baseUrl":"https://login.microsoftonline.com/tenant-id/v2.0",
   "clientId":"client-id",
@@ -216,7 +263,7 @@ Användaren autentiseras av en ID-token och ytterligare attribut hämtas i `user
 }
 ```
 
-#### org.apache.sling.auth.oauth_client.impl.OidcAuthenticationHandler~azure.cfg.json
+### org.apache.sling.auth.oauth_client.impl.OidcAuthenticationHandler~azure.cfg.json
 
 ```
 {
@@ -229,7 +276,7 @@ Användaren autentiseras av en ID-token och ytterligare attribut hämtas i `user
 }
 ```
 
-#### org.apache.jackrabbit.oak.spi.security.authentication.external.impl.ExternalLoginModuleFactory~azure.cfg.json
+### org.apache.jackrabbit.oak.spi.security.authentication.external.impl.ExternalLoginModuleFactory~azure.cfg.json
 
 ```
 {
@@ -238,12 +285,13 @@ Användaren autentiseras av en ID-token och ytterligare attribut hämtas i `user
 }
 ```
 
-#### org.apache.jackrabbit.oak.spi.security.authentication.external.impl.DefaultSyncHandler~azure.cfg.json
+### org.apache.jackrabbit.oak.spi.security.authentication.external.impl.DefaultSyncHandler~azure.cfg.json
 
 ```
 {
-  "user.expirationTime":"1s",
-  "user.membershipExpTime":"1s",
+  "user.expirationTime":"1h",
+  "user.membershipExpTime":"1h",
+  "group.expirationTime": "1d"
   "user.propertyMapping":[
     "profile/givenName=profile/given_name",
     "profile/familyName=profile/family_name",
@@ -259,7 +307,17 @@ Användaren autentiseras av en ID-token och ytterligare attribut hämtas i `user
 }
 ```
 
-#### org.apache.sling.auth.oauth_client.impl.SlingUserInfoProcessorImpl~azure.cfg.json
+### org.apache.sling.jcr.repoinit.RepositoryInitializer~azure.cfg.json
+
+```
+{
+  "scripts":[
+    "set ACL for \"adventures;azure\"  (ACLOptions=ignoreMissingPrincipal)\r\n  allow jcr:read on /content/wknd/us/en/adventures\r\nend"
+  ]
+}
+```
+
+### org.apache.sling.auth.oauth_client.impl.SlingUserInfoProcessorImpl~azure.cfg.json
 
 ```
 {
@@ -293,3 +351,15 @@ Filnamnet som måste ändras är `org.apache.sling.auth.oauth_client.impl.SlingU
   "storeRefreshToken": "false"
 }
 ```
+
+## Så här migrerar du från SAML-autentiseringshanterare till OID-autentiseringshanterare
+
+Om AEM redan har konfigurerats med en SAML-autentiseringshanterare och användare finns i databasen med [datasynkronisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) aktiverat, kan konflikter uppstå mellan de ursprungliga SAML-användarna och de nya OIDC-användarna.
+
+1. Konfigurera [OidcAuthenticationHandler](#configure-oidc-authentication-handler) och aktivera `idpNameInPrincipals` i konfigurationen [SlingUserInfoProcessor](#configure-slinguserinfoprocessor)
+1. Konfigurera [ACL för externa grupper](#configure-acl-for-external-groups).
+1. Efter inloggning från användare kan de gamla användarna som skapats med samma autentiseringshanterare tas bort.
+
+>[!NOTE]
+>När SAML Authentication Handler har inaktiverats och OIDC Authentication Handler har aktiverats blir befintliga sessioner ogiltiga om [datasynkronisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) inte har aktiverats. Användarna måste autentisera igen, vilket resulterar i att nya OIDC-användarnoder skapas i databasen.
+
