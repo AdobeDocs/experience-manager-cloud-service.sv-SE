@@ -91,6 +91,6 @@ På så sätt utlöser du CDN:ens felhanterare direkt för att testa det synteti
 
 ### Självstudiekurs
 
-Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
+Se självstudiekursen [CDN-felsidor](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages) för steg-instruktioner om hur du skapar, distribuerar och testar de CDN-hanterade felsidorna.
 
 
