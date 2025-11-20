@@ -354,12 +354,12 @@ Filnamnet som måste ändras är `org.apache.sling.auth.oauth_client.impl.SlingU
 
 ## Så här migrerar du från SAML-autentiseringshanterare till OID-autentiseringshanterare
 
-Om AEM redan har konfigurerats med en SAML-autentiseringshanterare och användare finns i databasen med [datasynkronisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) aktiverat, kan konflikter uppstå mellan de ursprungliga SAML-användarna och de nya OIDC-användarna.
+Om AEM redan har konfigurerats med en SAML-autentiseringshanterare och användare finns i databasen med [datasynkronisering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) aktiverat, kan konflikter uppstå mellan de ursprungliga SAML-användarna och de nya OIDC-användarna.
 
 1. Konfigurera [OidcAuthenticationHandler](#configure-oidc-authentication-handler) och aktivera `idpNameInPrincipals` i konfigurationen [SlingUserInfoProcessor](#configure-slinguserinfoprocessor)
 1. Konfigurera [ACL för externa grupper](#configure-acl-for-external-groups).
 1. Efter inloggning från användare kan de gamla användarna som skapats med samma autentiseringshanterare tas bort.
 
 >[!NOTE]
->När SAML Authentication Handler har inaktiverats och OIDC Authentication Handler har aktiverats blir befintliga sessioner ogiltiga om [datasynkronisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) inte har aktiverats. Användarna måste autentisera igen, vilket resulterar i att nya OIDC-användarnoder skapas i databasen.
+>När SAML Authentication Handler har inaktiverats och OIDC Authentication Handler har aktiverats blir befintliga sessioner ogiltiga om [datasynkronisering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) inte har aktiverats. Användarna måste autentisera igen, vilket resulterar i att nya OIDC-användarnoder skapas i databasen.
 
