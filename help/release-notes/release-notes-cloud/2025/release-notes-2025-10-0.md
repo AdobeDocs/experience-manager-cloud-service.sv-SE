@@ -1,20 +1,18 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+title: Versionsinformation om 2025.10.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2025.10.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 33655e7d58f19a5637ad120d8df537015f2f0aec
+source-git-commit: c5918c887be60c5198b762d860fe72afd31df352
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2025.10.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.10.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.11.0) är 20 november 2025. Nästa funktionsrelease (2025.12.0) planeras att släppas den 11 december 2025.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.10.0) är 30 oktober 2025. Nästa funktionsversion (2025.11.0) planeras bli 20 november 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -43,6 +41,14 @@ Have a look at the July 2025 Release Overview video for a summary of the feature
 >[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
+
+## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
+
+### Nya funktioner i Experience Manager Sites {#new-sites}
+
+* [Startar för innehållsfragment](/help/sites-cloud/administering/content-fragments/launches-for-content-fragments.md): Innehållsförfattare kan nu skapa och schemalägga framtida varianter av strukturerat innehåll med hjälp av startfunktioner för innehållsfragment. Med den nya konsolen för innehållsfragment kan du skapa, redigera, hantera och schemalägga Content Fragment som grenar för framtida innehåll som kan synkroniseras med källgrenen. En ny Diff-vy ger en tydlig översikt över alla innehållsändringar innan du implementerar en Launch för framtida publicering.
+
+* [Innehållsmodellredigeraren för AEM-innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) har moderniserats så att den justeras mot andra React Spectrum-baserade gränssnitt i AEM. Implementeringen av användargränssnittet och utbyggbarhetsmodellen överensstämmer nu med Content Fragment Editor och Universal Editor. Den nya modellredigeraren är nu standard när den öppnas från det nya gränssnittet för innehållsmodelladministratör. Om du öppnar en innehållsmodell i Touch-gränssnittet öppnas Touch UI-redigeraren och den nya redigeraren erbjuds att testa.
 
 <!--
 
@@ -63,6 +69,24 @@ Content Hub Administrators can now pin collections in Content Hub for quick acce
 -->
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
+
+### Nya funktioner i Experience Manager Forms {#new-features-forms}
+
+**Universell redigerare för adaptiva Forms och formulärfragment**
+
+Universalredigeraren ger nu en enhetlig redigeringsfunktion för att skapa adaptiva Forms och återanvändbara formulärfragment. Man kan visuellt utforma blanketter i en intuitiv WYSIWYG-miljö med kraftfulla funktioner för tillägg och inlämning. Redigeraren integrerar reCAPTCHA-validering för förbättrad säkerhet, tillhandahåller förifyllda tjänster för att minska manuell inmatning och stöder responsiv design på alla enheter.
+
+**Tillgängliga tillägg:**
+
+* **Regelredigerare**: Med den visuella regelredigeraren kan formulärförfattare lägga till dynamiskt beteende i formulärfält utan kodning, stöd för händelsestyrda regler, omedelbar validering och felhantering.
+* **Formuläregenskaper**: En guide som hjälper användare att konfigurera skicka-åtgärder, förifyllningstjänst, tackmeddelande och andra formulärrelaterade beteenden direkt i redigeraren.
+* **Formulärdata Source och bind referens**: Med datakälltillägget kan formulärförfattare lägga till komponenter som är kopplade till en datamodell direkt i ett adaptivt formulär och välja en bindningsreferens från ett trädval för alla komponenter.
+
+**Överföringsåtgärder som stöds:**
+
+Den universella redigeraren har stöd för ett stort antal inskickningsarbetsflöden, inklusive Custom Submit Action, Submit to Microsoft SharePoint, Submit to Microsoft OneDrive, Submit to Azure Blob Storage, Submit to REST endpoint, Invoke an AEM Workflow, Invoke a Power Automate flow, Submit to Marketo Engage (AEP), Submit to Spreadsheet, Submit using using Form Data Model (FDM), Submit to Workfront Fusion och Send Email.
+
+Fullständig information finns i dokumentationen för [Universal Editor för Edge Delivery Services för Forms](/help/edge/docs/forms/universal-editor/overview-universal-editor-for-edge-delivery-services-for-forms.md). Mer information om hur du konfigurerar skicka-åtgärder finns i [Åtgärden Skicka anpassat formulär](/help/edge/docs/forms/universal-editor/submit-action.md).
 
 <!-- ### Pre-Release features in AEM Forms 
 
@@ -121,11 +145,37 @@ With Forms Optimization, you get automated, data-driven recommendations and vari
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### [!DNL Experience Manager] som [!DNL Cloud Service] Foundation New Features {#foundation-new}
+### Nya funktioner i versionshantering {#new-features-release-management}
 
-#### Kommande Java API-borttagningar {#java-api-deprecation}
+**Pausa automatiska underhållsuppdateringar**
 
-Flera inaktuella API:er markerades för borttagning den 31 augusti och bör därför inte längre refereras. Du får meddelanden från Åtgärdscenter om föråldrad API-användning upptäcks i koden, och efter den 3 dec visas meddelanden under Cloud Manager-byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
+Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Våra nya självbetjäningsfunktioner](/help/implementing/deploying/quiet-hours-update-free-periods.md) avbryter automatiskt underhåll av uppdateringar när det behövs, så att era team kan fokusera.
+
+* Tysta timmar: Blockera automatiskt underhåll under fasta tider varje dag. Idealiskt för arbetstider, nattkörningar eller morgonavslutningar.
+* Uppdateringsfri period: Blockera automatiskt underhåll under en hel vecka. Använd den för lanseringar, kampanjer eller årsfrysningar.
+
+>[!NOTE]
+>
+>Tillgänglig som begränsad tillgänglighet den 25 september.
+>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
+
+### AEM Log Forwarding to More Destinations {#log-forwarding}
+
+Nu går det att vidarebefordra AEM-loggar till Amazon S3, Sumo Logic, Dynatrace och ditt eget New Relic-konto (inte till Adobe-kontot). Observera att AEM-loggar (inklusive Apache/Dispatcher) stöds för dessa loggningsmål, men inte CDN-loggar.
+
+Se hela uppsättningen med [loggvidarebefordringsmål som stöds](/help/implementing/developing/introduction/log-forwarding.md).
+
+### Konfigurera pipeline för Edge Delivery Services {#config-pipeline-eds}
+
+Config Pipelines stöds nu för sajter som byggts med Edge Delivery Services, vilket ger fler möjligheter än bara publicering via AEM Author och AEM. Du kan använda Konfigurera pipelines för att hantera inställningar som CDN-konfiguration, inklusive trafikfilterregler och ursprungsväljare. Se [Konfigurationer som stöds](/help/operations/config-pipeline.md#configurations).
+
+Edge Delivery config pipelines har också stöd för hemligheter via Cloud Manager pipeline-variabler.
+
+Se [Lägg till Edge Delivery-pipeline](/help/implementing/cloud-manager/configuring-pipelines/configuring-edge-delivery-pipeline.md).
+
+### Kommande Java API-borttagningar {#java-api-deprecation}
+
+Flera inaktuella API:er markerades för borttagning den 31 augusti och bör därför inte längre refereras. Du får meddelanden från Åtgärdscenter om föråldrad API-användning upptäcks i koden, och efter den 13 november visas meddelanden under Cloud Manager-byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
 
 +++ Expandera om du vill visa Java API-borttagningar
 
@@ -157,42 +207,27 @@ OSGi properties:
 
 -->
 
-#### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
+### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-Adobe uppgraderade miljöerna **Stage** och **Production** till **Java 21-miljön** med högre prestanda den 14 oktober 2025. Från och med **slutet av januari** fungerar varken AEM Cloud-tjänsten SDK eller några molnmiljöer med Java 11-miljön.
+Adobe uppgraderade miljöerna **Stage** och **Production** till **Java 21-miljön** med högre prestanda den 14 oktober 2025. Från och med slutet av januari fungerar varken AEM Cloud Service SDK eller någon molnmiljö med Java 11 runtime.
 
 >[!NOTE]
 >
 > För att kunna utnyttja de senaste prestandaoptimeringarna och språkförbättringarna rekommenderar vi att du bygger med Java 17 eller Java 21 (rekommenderas). Det finns fortfarande stöd för att bygga med Java 8 och Java 11, men det kommer att bli inaktuellt i en kommande version. Ett separat meddelande kommer att utfärdas innan den tas bort. Se avsnittet *Krav för byggtid* i [den här artikeln](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements).
 >
 
-#### Tillämpning av konfigurationspolicy för AEM Java-loggar {#logconfig-policy}
+### Tillämpning av konfigurationspolicy för AEM Java-loggar {#logconfig-policy}
 
 Som framgår av versionsinformationen för april måste AEM Java-loggarna följa ett standardformat för att säkerställa tillförlitlig övervakning i alla kundmiljöer. Anpassade loggkonfigurationer, t.ex. ändringar i loggformatering, utdatafiler eller standardloggnivåer, stöds inte längre. Loggar måste vara dirigerade till standardfilerna och standardloggnivåerna för AEM-produktkoden måste bevaras. Mer information finns i artikeln [Loggning](/help/implementing/developing/introduction/logging.md#configuration-loggers).
 
-Med början den **10 december** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
+Med början den **20 november** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
 
 Granska och uppdatera alla processer som är beroende av anpassat loggningsbeteende. Till exempel:
 
 * Om ditt system för vidarebefordring av loggar förväntar sig ett anpassat loggformat kan du behöva justera dina regler för inmatning.
 * Om du tidigare har minskat loggens utförlighet genom att ändra loggnivåerna bör du tänka på att en återställning till standardnivåerna kan öka loggvolymen.
 
-### [!DNL Experience Manager] som en [!DNL Cloud Service] Foundation Tidiga Adobe-funktioner {#foundation-early-adopter}
-
-#### Pausa automatiska underhållsuppdateringar {#pause-updates}
-
-Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Våra nya självbetjäningsfunktioner](/help/implementing/deploying/quiet-hours-update-free-periods.md) avbryter automatiskt underhåll av uppdateringar när det behövs, så att era team kan fokusera.
-
-* Tysta timmar: Blockera automatiskt underhåll under fasta tider varje dag. Idealiskt för arbetstider, nattkörningar eller morgonavslutningar.
-* Uppdateringsfri period: Blockera automatiskt underhåll under en hel vecka. Använd den för lanseringar, kampanjer eller årsfrysningar.
-
->[!NOTE]
->
->Tillgänglig som begränsad tillgänglighet den 25 september.
->Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
->
-
-#### Edge Computing (Beta Program) {#edge-computing}
+### Edge Computing (Beta Program) {#edge-computing}
 
 Med Edge kan du köra JavaScript på CDN-lagret, vilket tar databearbetningen närmare slutanvändaren. Detta minskar latensen och möjliggör responsiva, dynamiska upplevelser i framkanten.
 
@@ -206,14 +241,14 @@ Exempel på vanliga användningsområden:
 
 Vi har ett begränsat antal möjligheter, antingen för AEM Publish Delivery eller för Edge Delivery Services-projekt, för produktionssajter. Om du är intresserad av att delta eller vill veta mer kan du skicka ett e-postmeddelande till [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med en kort beskrivning av ditt användningsfall.
 
-#### Edge-autentisering för Edge Delivery Services (Beta-programmet) {#edge-authentication}
+### Edge-autentisering för Edge Delivery Services (Beta-programmet) {#edge-authentication}
 
 Med Edge Authentication kan du begränsa åtkomsten till Edge Delivery Services-sidor till endast de som har autentiserats hos din identitetsleverantör (IdP). Detta uppnås genom att distribuera en YAML-fil med OpenID Connect-konfiguration (OIDC).
 
 Om du är intresserad kan du skicka ett e-postmeddelande till [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med en kort beskrivning av ditt användningsfall och eventuella frågor du har.
 
 <!--
-#### CDN Configuration for Edge Delivery Services (Beta Program) {#cdn-eds-beta}
+### CDN Configuration for Edge Delivery Services (Beta Program) {#cdn-eds-beta}
 
 The Adobe-Managed CDN offers flexible configuration options, as described in the [Config Pipeline article](/help/operations/config-pipeline.md#configurations). 
 
@@ -221,7 +256,7 @@ Now in beta, youcan deploy a config pipeline for features including CDN origin s
 
 -->
 
-#### Kanarieproduktionsdistributioner till testkod innan Live-trafik godkänns (Beta-programmet) {#canary-beta}
+### Kanarieproduktionsdistributioner till testkod innan Live-trafik godkänns (Beta-programmet) {#canary-beta}
 
 Validera en produktionsbygge med intern testtrafik innan den visas för slutanvändarna. Leverera till produktion, dirigera endast kanarietrafik (med en särskild rubrik), övervaka beteendet och sedan antingen marknadsföra till livstrafik eller backa - utan att det påverkar kunderna.
 
@@ -230,7 +265,7 @@ Distribuera era kodreleaser till produktion, men begränsa den till enbart inter
 Skicka e-post till [aemcs-canary-deployments-beta@adobe.com](mailto:aemcs-canary-deployments-beta@adobe.com) för att begära åtkomst och dela feedback.
 
 
-#### AI-svar - Smartare, sammanhangsberoende svar för AEM Sites (Beta-programmet) {#ai-answers-beta}
+### AI-svar - Smartare, sammanhangsberoende svar för AEM Sites (Beta-programmet) {#ai-answers-beta}
 
 AI-svar introducerar ett nytt sätt för era besökare att interagera med ert innehåll. Den bygger på teknik från Retrieval-Augmented Generation (RAG) och använder data som hanteras av AEM för att leverera korrekta, varumärkeskonsekventa svar direkt i era digitala upplevelser.
 
@@ -238,19 +273,14 @@ Vi förbereder oss för att lansera Beta-programmet för AI-svar och bjuder nu i
 
 Kontakta [feedback-ai-answers@adobe.com](mailto:feedback-ai-answers@adobe.com) om du vill begära deltagande eller få uppdateringar.
 
-#### Snabba upp AEM-utvecklingen med AI (Alpha-programmet)  {#ai-dev-alpha}
 
-AEM Java-stackteam använder i allt större utsträckning AI-assisterad utveckling i verktyg som Cursor, Claude Code, Visual Studio och IntelliJ för att snabba upp leverans av funktioner och förbättra kodkvaliteten. Vi samlar verkliga upplevelser som hjälper till att utforma framtida AI-funktioner som stöds av Adobe.
-
-Dela vad som fungerar för ert team - och vad ni vill att Adobe ska tillhandahålla - genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
-
-#### Ögonblicksbilder för RDE (Alpha Program) {#rde-snapshot-program}
+### Ögonblicksbilder för RDE (Alpha Program) {#rde-snapshot-program}
 
 I alfa har Rapid Development Environment (RDE) nu stöd för en funktion som tar en ögonblicksbild av det aktuella kodläget och innehållet, som kan återställas vid ett senare tillfälle. Detta kan vara användbart när du synkroniserar kod som behöver återställas eller när du växlar mellan utveckling av olika funktioner. Det går också att återställa bara det ändringsbara innehållet som en känd startpunkt för testning.
 
 Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-support@adobe.com) om du är intresserad av att lämna feedback om funktionen.
 
-#### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
+### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
 AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
