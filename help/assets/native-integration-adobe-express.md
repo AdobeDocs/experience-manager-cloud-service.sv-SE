@@ -4,9 +4,9 @@ description: Tack vare AEM Assets inbyggda integrering med Adobe Express får du
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: 76f23be65e71970742c40068c475da7d04c41a9c
+source-git-commit: 3046da6d16b2494f6a3f18c60df7a4600afcd7ba
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -106,6 +106,9 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
         <td>[!UICONTROL MP4]</td>
         <td> 3 840 × 3 840 pixlar, maximalt 200 MB</td>
     </tr>
+    <tr>
+      <td colspan="2"> <i> Resursens storlek måste vara mindre än 80 MB för skrivbordsenheter och 40 MB för mobila enheter. </i></td>
+   </tr>
     </tbody>
 </table>
 
