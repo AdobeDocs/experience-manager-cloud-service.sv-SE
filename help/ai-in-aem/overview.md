@@ -1,40 +1,51 @@
 ---
 title: AI i AEM as a Cloud Service
 description: Läs mer om AI i Adobe Experience Manager as a Cloud Service
-feature: Generative AI, AI Assistant, AI Tools
+feature: Generative AI, AI Assistant, AI Tools, Agentic AI
 role: Admin, Developer, User
 exl-id: 60fd4c57-53ed-4b4a-aea1-1c132184916f
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 016d0f155278d6bde5dd09175ec179b10e6acb75
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '440'
 ht-degree: 2%
 
 ---
 
+
 # AI i AEM as a Cloud Service {#ai-in-aem-as-a-cloud-service}
 
-AI är en integrerad del av Adobe Experience Manager as a Cloud Service, som används för att hjälpa användare att hitta information eller skapa upplevelser.
+Artificiell intelligens (AI) är en viktig del av Adobe Experience Manager as a Cloud Service och stöder användarna i deras arbete med att hitta information eller skapa upplevelser.
 
 ## AI Assistant {#ai-assistant}
 
 [AI-assistenten i Adobe Experience Manager](/help/implementing/cloud-manager/ai-assistant-in-aem.md) har ett konversationsgränssnitt som är utformat för att göra det enklare att hitta svar på dina AEM-relaterade frågor.
 
+## AI på AEM {#agentic-ai-in-aem}
+
+AEM tillhandahåller ett urval av [affärsagenter](/help/ai-in-aem/agents/overview.md) som kan snabba upp skapandet av ditt innehåll och automatiskt hantera ändringar:
+
+* [Produktionsagent](/help/ai-in-aem/agents/production/overview.md)
+* [Agent för innehållsoptimering](/help/ai-in-aem/agents/content-optimization/using.md)
+* [Identifieringsagent](/help/ai-in-aem/agents/discovery/using.md)
+* [Utvecklingsagent](/help/ai-in-aem/agents/development/overview.md)
+* [Styrningsagent](/help/ai-in-aem/agents/governance/overview.md)
+
 ## Generativ AI i AEM {#generative-ai-in-aem}
 
 Med Adobe Generative AI for Adobe Experience Manager (AEM) as a Cloud Service kan varumärken skapa högpresterande upplevelser med både kopiering och bildgenerering i redigeringsgränssnittet. Med generativ AI kan ni skapa innehåll som är:
 
-* Varumärkesmedveten - Skapa innehåll som innehåller varumärkets ton, stilriktlinjer och andra specifika krav.
-* Personligt anpassat efter målgrupp - Utnyttja detaljerade insikter om innehållsprestanda för att skräddarsy innehåll för alla personligheter i alla kanaler.
-* Regionspecifik - gå bortom översättning och anpassa innehållet baserat på regionala preferenser och beteendemönster.
-* Kontinuerligt optimerad - Kör experiment för att avgöra vilka varianter som fungerar bäst och använd insikter för att förbättra framtida AI-genererat innehåll.
+* **Varumärkesmedveten** - Skapa innehåll som innehåller varumärkestoning, riktlinjer för format och andra specifika krav.
+* **Personaliserat efter målgrupp** - Utnyttja detaljerade insikter om innehållsprestanda för att skräddarsy innehåll för alla personligheter i alla kanaler.
+* **Regionspecifik** - Gå bortom översättning och anpassa ditt innehåll baserat på regionala inställningar och beteendemönster.
+* **Kontinuerligt optimerad** - Kör experiment för att avgöra vilka varianter som fungerar bäst och använd insikter för att förbättra framtida AI-genererat innehåll.
 
 Generativ AI används i hela AEM:
 
 * [Generera variationer - integrerat i AEM Editors](/help/generative-ai/generate-variations-integrated-editor.md)
 
-  Generate Variations använder generativ Artificial Intelligence (AI) för att skapa innehållsvariationer baserat på dina indata. När du har skapat varianter kan du använda innehållet på webbplatsen och även mäta hur de fungerar med hjälp av Experimentationsfunktionen i Edge Delivery Services.
+  Generate Variations använder generativ AI för att skapa innehållsvariationer baserat på dina indata. När du har skapat varianter kan du använda innehållet på webbplatsen och även mäta hur de fungerar med hjälp av Experimentationsfunktionen i Edge Delivery Services.
 
-   * Och föregående version [Generera variationer](/help/generative-ai/generate-variations.md)
+   * [Den tidigare versionen Generera variationer](/help/generative-ai/generate-variations.md) utanför redigeraren är fortfarande tillgänglig.
 
      >[!NOTE]
      >
@@ -62,6 +73,6 @@ Det finns många resurser, bland annat:
 
 * [Ansvarig AI på Adobe](https://www.adobe.com/trust/responsible-ai.html)
 
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)

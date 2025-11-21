@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2c863e0cfad3211e811665a5169def7705e8b907
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1814'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ För ett nytt program skapas ett New Relic One-underkonto åt dig. Du måste doc
 
 >[!NOTE]
 >
->En användare i rollen **Affärsägare** eller **Distributionshanterare** måste vara inloggad för att hantera New Relic One-underkontot.
+>En användare i rollen **Affärsägare** måste vara inloggad för att hantera New Relic One-underkontot.
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämplig organisation.
 
@@ -141,7 +141,7 @@ Om du uppmanas att verifiera din e-postadress under inloggningen på New Relic O
 
 Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Du kan undvika att verifiera din e-post under varje inloggning genom att klicka i kryssrutan **Kom ihåg mig** på inloggningsskärmen.
 
-Om du vill ha mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Felsöka New Relic One användaråtkomst {#troubleshooting}
 
@@ -181,7 +181,7 @@ Om du inte får något e-postmeddelande från New Relic gör du följande:
 >
 >Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
 
-Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Frågor och svar {#faqs}
 
