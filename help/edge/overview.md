@@ -78,7 +78,7 @@ Edge Delivery Services använder GitHub så att du kan hantera och distribuera k
 
 ## Drifttelemetri {#telemetry}
 
-Adobe Experience Manager använder [Operational Telemetry](https://www.aem.live/docs/operational-telemetry) för att samla in operationsdata som är absolut nödvändiga för att upptäcka och åtgärda funktions- och prestandaproblem på webbplatser med Adobe Experience Manager. Operativa telemetridata kan användas för att diagnostisera prestandaproblem och för att mäta effekten av försök. Operativ telemetri bevarar besökarnas integritet genom [sampling](https://www.aem.live/docs/operational-telemetry#operational-telemetry-data-is-sampled) (endast en liten del av alla sidvisningar övervakas) och [genom att personligt identifierbar information utesluts &#x200B;](https://www.aem.live/docs/operational-telemetry#what-data-is-being-collected) (PII).
+Adobe Experience Manager använder [Operational Telemetry](https://www.aem.live/docs/operational-telemetry) för att samla in operationsdata som är absolut nödvändiga för att upptäcka och åtgärda funktions- och prestandaproblem på webbplatser med Adobe Experience Manager. Operativa telemetridata kan användas för att diagnostisera prestandaproblem och för att mäta effekten av försök. Operativ telemetri bevarar besökarnas integritet genom [sampling](https://www.aem.live/docs/operational-telemetry#operational-telemetry-data-is-sampled) (endast en liten del av alla sidvisningar övervakas) och [genom att personligt identifierbar information utesluts ](https://www.aem.live/docs/operational-telemetry#what-data-is-being-collected) (PII).
 
 ## Börja utforska {#start-exploring}
 
@@ -92,7 +92,7 @@ Kom igång med AEM-redigering med Universal Editor och Edge Delivery Services:
 
 Edge Delivery Services ingår i Adobe Experience Manager. Därför kan Edge Delivery Services och AEM Sites finnas parallellt på samma domän, vilket är ett vanligt användningsexempel för större webbplatser. Dessutom kan dina AEM Sites-sidor enkelt förbruka innehåll från Edge Delivery Services, och det motsatta är också sant.
 
-Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration) och [Launch.](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
+Du kan också använda Edge Delivery Services med [Adobe Target](https://www.aem.live/developer/target-integration) och [Launch.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
 
 ## Få hjälp från Adobe {#getting-help}
 

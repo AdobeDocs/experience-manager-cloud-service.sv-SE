@@ -26,7 +26,7 @@ AEM Sites as a Cloud Service har funktioner för upplevelsehantering som en del 
 >* [Viktiga ändringar i AEM as a Cloud Service (versionsinformation)](/help/release-notes/aem-cloud-changes.md)
 >* [Viktiga ändringar i AEM Assets as a Cloud Service](/help/assets/assets-cloud-changes.md)
 >* [Nu kommer AEM Assets as a Cloud Service](/help/assets/overview.md)
->* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html?lang=sv-SE)
+>* [Självstudiekurser om Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/overview.html)
 
 Ändringarna och tilläggen i AEM Sites as a Cloud Service är följande:
 
@@ -52,9 +52,9 @@ Du kan visa status för asynkrona jobb från kontrollpanelen [Bakgrundsåtgärde
 
 ## Ny referenswebbplats och självstudiekurs {#new-reference-site-and-tutorial}
 
-[WKND](https://wknd.site/), en ny referenswebbplats för AEM, har uppdaterats och publicerats för att återspegla bästa praxis för att skapa en webbplats med AEM, och med den omfattande uppsättningen funktioner, komponenter och distributionsmodeller som finns i AEM. Den nya referenswebbplatsen och den [medföljande självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE) innehåller grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
+[WKND](https://wknd.site/), en ny referenswebbplats för AEM, har uppdaterats och publicerats för att återspegla bästa praxis för att skapa en webbplats med AEM, och med den omfattande uppsättningen funktioner, komponenter och distributionsmodeller som finns i AEM. Den nya referenswebbplatsen och den [medföljande självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) innehåller grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
-Tidigare installerades We.Retail som standard med AEM (förutom när det startades i produktionsläge). I AEM as a Cloud Service installeras ingen referensplats som standard. Istället anges den [Git-repo](https://github.com/adobe/aem-guides-wknd/) och [åtföljande självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE) med den uppdaterade WKND-referensplatskoden.
+Tidigare installerades We.Retail som standard med AEM (förutom när det startades i produktionsläge). I AEM as a Cloud Service installeras ingen referensplats som standard. Istället anges den [Git-repo](https://github.com/adobe/aem-guides-wknd/) och [åtföljande självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) med den uppdaterade WKND-referensplatskoden.
 
 ## Funktioner som inte är tillgängliga vid körning {#capabilities-not-available-at-runtime}
 

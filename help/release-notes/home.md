@@ -38,7 +38,7 @@ Om det till exempel är maj kan du utvärdera kommande funktioner som kommer att
 
 Den här konferensen ger dig ett rullande fönster där du kan bedöma effekten av kommande funktioner i dina projekt och anpassningar och planera lanseringar av sådana funktioner, tester och användarutbildning.
 
-I [Experience Manager-lanseringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service) finns mer information om kommande releaser.
+I [Experience Manager-lanseringarna](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service) finns mer information om kommande releaser.
 
 ## Förbereda för en release {#how-to-prepare}
 
@@ -51,7 +51,7 @@ Så här förbereder du en release:
 
 ## Markera dina kalendrar {#mark-calendars}
 
-Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleaser publiceras på [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html?lang=sv-SE#aem-as-cloud-service)
+Funktionsreleaser är schemalagda långt i förväg och aktiveringsdatumen för funktionsreleaser publiceras på [Adobe Experience League.](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap.html#aem-as-cloud-service)
 
 Notera releasedatumen så att du kan planera tiden för granskning och testning av kommande funktioner.
 
@@ -81,9 +81,9 @@ När du har testat de kommande funktionerna och bestämt dig för att använda d
 
 Adobe Experience League erbjuder massor av resurser för att lära sig AEMaaCS.
 
-* [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE)
-* [Självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html?lang=sv-SE)
-* [Den månatliga översiktsvideon &#x200B;](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
+* [AEMaaCS-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html)
+* [Självstudiekurser](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-tutorials/overview.html)
+* [Den månatliga översiktsvideon ](/help/release-notes/release-notes-cloud/release-notes-current.md#release-video) i versionsinformationen
 
 ## Viktig versionsinformation {#key-articles}
 
