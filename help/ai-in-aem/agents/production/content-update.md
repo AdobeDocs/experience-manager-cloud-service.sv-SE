@@ -3,9 +3,9 @@ title: Innehållsuppdateringskunskap
 description: Lär dig vad Experience Production Agents kompetens när det gäller innehållsuppdatering är och vad den kan göra för dig.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: d5b7a8343551c5880b40c692266f33a1864f9d2b
+source-git-commit: 7f42357292fab3001a3905919dfcb78f4dfd30ba
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -37,15 +37,17 @@ Du kan nå AEM Business Agents via AI Assistant.
 
 ![Åtkomstidentifieringsagent](/help/ai-in-aem/agents/production/assets/content-update-ai-assistant-example.png)
 
-<!--
-### Sample Prompts {#sample-prompts}
+### Exempelfrågor {#sample-prompts}
 
-To initiate content updates you can give a wide range of natural language prompts. You also need to specify the public facing URL of the page you want to update:
+För att starta innehållsuppdateringar kan du ge dig ett brett urval av naturliga språk. Du måste också ange den offentliga URL:en för sidan som du vill uppdatera. Till exempel:
 
-* Change your headlines
+* ändra följande sida https://www.your-url.com/sale Uppdatera huvudhjälterubriken till&quot;Black Friday Mega Sale - upp till 70 % rabatt&quot;, ändra nedräkningstimern till&quot;Ends in 48 hours&quot;, ta bort&quot;Sign up for updates&quot;, Ändra alla&quot;Shop Now&quot;-knappar till&quot;Get the Deal&quot;&quot;
 
-  * On your-URL change the headline from X to Y
--->
+* https://www.your-url.com/laptops/your-laptop-model Uppdatera banderollkopia till"Spara 300 USD endast idag", uppdatera priser från 1 299 USD till 999 USD, ta bort banderoll för finansieringsalternativ
+
+* https://www.your-url.com/your-sneaker Uppdatera Stock-status från Låg Stock till Tillbaka i Stock - begränsade kvantiteter, Ändra storleksväljaren så att tillgängliga storlekar markeras i grönt, ta bort ikonen Kommer snart
+
+* https://www.your-url.com/your-sneaker Uppdatera produktbilderna för att visa nya färger
 
 >[!NOTE]
 >
@@ -109,7 +111,7 @@ Om ett `process`-kommando utlöser uppdateringar kan svaren följa sekvensen:
 
 ### Aktivering {#activation}
 
-Om du vill aktivera och få tillgång till Production Agent med Jira måste du skicka ett e-postmeddelande till Adobe. Du kan kontakta:
+Om du vill aktivera och få tillgång till Experience Production Agent med Jira måste du skicka ett e-postmeddelande till Adobe. Du kan kontakta:
 
 * `experience-production-agent@adobe.com`
 * eller kontakta ditt kontoteam
