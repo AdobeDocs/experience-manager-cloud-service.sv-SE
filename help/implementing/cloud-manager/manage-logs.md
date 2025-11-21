@@ -99,5 +99,5 @@ Läs mer om Cloud Manager API och Adobe I/O CLI i följande resurser:
 
 Mer information om loggfiler i AEM as a Cloud Service finns i följande resurser:
 
-* [Cloud 5 AEM-loggfiler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files#)
-* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#)
+* [Cloud 5 AEM-loggfiler](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-log-files#)
+* [Felsöka AEM as a Cloud Service med loggar](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#)
