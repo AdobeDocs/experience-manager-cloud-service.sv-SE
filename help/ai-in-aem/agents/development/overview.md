@@ -1,19 +1,19 @@
 ---
-title: Översikt över Experience Development Agent
-description: Läs om hur Experience Development Agent i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
-feature: Edge Delivery Services, Agentic AI
+title: Översikt över utvecklingsagenten
+description: Läs om hur utvecklingsagenten i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
+feature: Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 1f20d2825befa0345f9ebde3a9854cab591de0f6
+source-git-commit: 3648dd25c3b3b46663cc09d379aeadfd07cedfa4
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
 
 
-# Översikt över Experience Development Agent {#development-agent-overview}
+# Utvecklingsagent - översikt {#development-agent-overview}
 
-Med Experience Development Agent kan AEM-utvecklare och -administratörer skapa, felsöka, driftsätta och optimera kod effektivare.
+Utvecklingsagenten hjälper AEM-utvecklare och -administratörer att skapa, felsöka, driftsätta och optimera kod effektivare.
 
 För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
 
@@ -27,11 +27,11 @@ För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka
 ## Cloud Manager Pipeline Troubleshooting  {#cloud-manager-pipeline-troubleshooting}
 -->
 
-## Få åtkomst till Experience Development Agent via Cloud Manager {#how-to-access-the-agent}
+## Gå till utvecklingsagenten via Cloud Manager {#how-to-access-the-agent}
 
-Du kommer åt Experience Development Agent via AI Assistant som finns i användargränssnitt som Cloud Manager eller Experience Hub.
+Du kommer åt utvecklingsagenten via AI-assistenten i användargränssnitt som Cloud Manager eller Experience Hub.
 
-**Så här kommer du åt Experience Development Agent via Cloud Manager:**
+**Så här kommer du åt utvecklingsagenten via Cloud Manager:**
 
 1. Kom igång genom att klicka på [Adobe Experience Cloud](https://experience.adobe.com/#/@foundationinternal/home) för att öppna startsidan.
 
@@ -73,7 +73,7 @@ Du kommer åt Experience Development Agent via AI Assistant som finns i använda
 
 ## Behörigheter {#permissions}
 
-Experience Development Agents pipeline-felsökningsjobb kräver antingen rollen Cloud Manager - Developer eller rollen Cloud Manager - Program Manager.
+Utvecklingsagentens pipeline-felsökningsjobb kräver antingen rollen Cloud Manager - Developer eller rollen Cloud Manager - Program Manager.
 
 
 
