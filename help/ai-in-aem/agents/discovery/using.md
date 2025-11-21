@@ -3,7 +3,7 @@ title: Översikt över identifieringsagent
 description: Lär dig hur du kan använda Discovery Agent för att leverera relevant AEM-innehåll på begäran via naturliga, konversationsmoment för att få en smidig, klickfri upptäckt.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: ab94d59ff93eb4cf29e15a8945063b8ae00c57e8
+source-git-commit: d4b5b0e606e9e680b0950538cce267d094a57d13
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
