@@ -3,9 +3,9 @@ title: Översikt över identifieringsagent
 description: Lär dig hur du kan använda Discovery Agent för att leverera relevant AEM-innehåll på begäran via naturliga, konversationsmoment för att få en smidig, klickfri upptäckt.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: d4b5b0e606e9e680b0950538cce267d094a57d13
+source-git-commit: 25ca9a85b3d3e9917ae144cd906dae7736adb2f0
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Obs! Formuläridentifiering har för närvarande bara stöd för Edge Delivery S
 
 ### Assets {#discovery-agent-search-results-assets}
 
-Identifieringsagenten returnerar de 20 främsta resultaten för varje fråga, sorterade efter relevans för att säkerställa att de exakta matchningarna visas först. Agenten kombinerar metadatadrivna frågor med semantisk sökning för att sätta ihop en fokuserad uppsättning troliga matchningar, och använder sedan ett LLM för att rangordna dem baserat på användaravsikten. Den här blandningsmetoden ger korrekta, sammanhangsberoende resultat utan att vara helt beroende av en direkt nyckelordsmatchning.
+Identifieringsagenten returnerar de översta resultaten för varje fråga, sorterade efter relevans för att säkerställa att de exakta matchningarna visas först. Agenten kombinerar metadatadrivna frågor med semantisk sökning för att sätta ihop en fokuserad uppsättning troliga matchningar, och använder sedan ett LLM för att rangordna dem baserat på användaravsikten. Den här blandningsmetoden ger korrekta, sammanhangsberoende resultat utan att vara helt beroende av en direkt nyckelordsmatchning.
 
 Varje resultat innehåller resursnamn tillsammans med metadata för nyckelresurser som resurssökväg, skapare, skapandedatum, titel, beskrivning, format, senaste ändringsdatum, filstorlek, dimensioner, [URL för dynamiska media](/help/assets/dynamic-media/dynamic-media.md) och associerade taggar. Om en resurs är i ett godkänt tillstånd innehåller resultatet även [Dynamic Media med OpenAPI URL](/help/assets/dynamic-media-open-apis-overview.md).
 
@@ -156,7 +156,7 @@ Du kan använda den här tillgångsinformationen för att snabbt utvärdera om e
 
 ### Innehållsfragment {#discovery-agent-search-results-content-fragments}
 
-Identifieringsagenten erbjuder fulltextsökningsfunktioner för innehållsfragment och returnerar de 20 bästa resultaten som matchar den angivna uppmaningen. Varje resultat innehåller innehållets fragmentnamn tillsammans med viktiga metadatafält, t.ex. sökvägen till innehållsfragmentet, skaparen, datum när det skapades, variationer, senaste modifiering och senast ändrade datumfält.
+Identifieringsagenten erbjuder fulltextsökningsfunktioner för innehållsfragment och returnerar de översta resultat som bäst matchar den angivna uppmaningen. Varje resultat innehåller innehållets fragmentnamn tillsammans med viktiga metadatafält, t.ex. sökvägen till innehållsfragmentet, skaparen, datum när det skapades, variationer, senaste modifiering och senast ändrade datumfält.
 
 ![Sök efter innehållsfragment med identifieringsagenten](/help/ai-in-aem/agents/discovery/assets/search-content-fragments-discovery-agent.png)
 
