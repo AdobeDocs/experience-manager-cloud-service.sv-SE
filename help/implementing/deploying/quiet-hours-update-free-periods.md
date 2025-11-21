@@ -5,9 +5,9 @@ feature: Deploying
 role: Admin
 badge: label="Begränsad tillgänglighet" type="Positive"
 exl-id: 54f86a58-eb56-43e6-ab51-7af7466a2d40
-source-git-commit: aec58ceffbbc6c7e2921c471d608ed3c381fe2e4
+source-git-commit: 19ef83258bf2cf8fa69411977d40ebbb8ac6432b
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Du kan konfigurera dessa tidsramar med två schemaläggningsalternativ:
 * **Tysta timmar** - Du kan definiera ett dagligt tidsintervall (upp till 8 timmar) där uppdateringar inte ska ske.
 * **Uppdatera lediga perioder** - Du kan definiera en 7-dagars tidsperiod under vilken uppdateringar inte kommer att ske. Du kan ha upp till tre kostnadsfria uppdateringsperioder inom en 12-månadersperiod.
 
-De kostnadsfria uppdateringsperioderna och funktionerna för tysta timmar konfigureras per program.
+De kostnadsfria uppdateringsperioderna och funktionerna för tysta timmar konfigureras per program. Kom ihåg att endast användare med användarrollen **Business Owner** och **Deployment Manager** kan visa och använda dessa funktioner.
 
-Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
+Mer information om schemalagda automatiska underhållsperioder för AEM as a Cloud Service finns på sidan [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) .
 
 ## Tysta timmar {#quiet-hours}
 
@@ -76,3 +76,13 @@ Gå till **Aktiviteter > Automatiska uppdateringar > Uppdateringsalternativ**.
 ![Uppdatera konfiguration för lediga perioder](assets/update-free-periods.png)
 
 En **aktiv**-ikon visas nära den aktiva uppdateringens lediga period och en **Complete** -ikon bredvid de slutförda uppdateringens lediga perioder.
+
+## Planerade undantagsperioder för underhåll {#planned-maintenance}
+
+Adobe har ett antal planerade undantagsperioder för underhåll. Dessa perioder definieras av Adobe för att minimera riskerna vid kritiska händelser och inträffar vanligen två eller tre gånger per år. Du kan visa det exakta schemat för uteslutningsperioder för underhåll på sidan [Underhållsreleaser](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+
+För att du lättare ska kunna konfigurera dina uppdateringsfria perioder visas även undantagsperioder för underhåll i användargränssnittet Tysta timmar och Uppdatera kostnadsfria perioder.
+
+![Planerade undantagsperioder för underhåll](assets/planned-maintenance.png)
+
+Observera att du inte kan skapa en kostnadsfri uppdateringsperiod under undantagsperioderna.
