@@ -3,15 +3,19 @@ title: Kommunikativ förmåga
 description: Lär dig mer om Experience Production Agents förmåga att skapa kommunikation och hur du använder naturligt språk för att skapa interaktiv kommunikation.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 701c35341ead684cdf306cadcacd8c638004facd
+source-git-commit: dab727f81a8863ca82c7c531e65c365b29fd5c23
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
 
 
 # Kunskap att skapa kommunikation {#ic-creation-skill}
+
+>[!NOTE]
+>
+> Kommunikationsskapandet är för närvarande alfavärdet. Om du vill delta skickar du en förfrågan från din officiella e-postadress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com).
 
 Interaktiv kommunikation är personaliserade, datadrivna dokument utformade för affärskommunikation som kontoutdrag, policydokument, räkningar, välkomstpaket och förmånsmeddelanden. Till skillnad från formulär som samlar in data från användare genererar interaktiv kommunikation utdatadokument med dynamiskt, mottagarspecifikt innehåll.
 
@@ -39,7 +43,9 @@ Några av fördelarna med att skapa kommunikationsfärdigheter är:
 * *Skapa en kommunikation från en bildfil på https://[aem-author-url]/path/to/image/file*
 * Skapa ett brev med PDF-fil på https://[aem-author-url]/path/to/pdf/file
 
+
 ## Förfina kommunikationen {#refine-with-ic-editor}
+
 
 När du har skapat en inledande kommunikationsstruktur med hjälp av AI Assistant kan du förfina och förbättra dokumentet med hjälp av Interactive Communications Editor. I Interactive Communications Editor kan du tillhandahålla uppmaningar på ett naturligt språk för att:
 
@@ -65,4 +71,3 @@ När du har skapat en inledande kommunikationsstruktur med hjälp av AI Assistan
 * *Ändra radavståndet för villkorsavsnittet till 1.5*
 
 Mer information om funktionerna i Interactive Communication Editor finns i [Dokumentation för interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md).
-
