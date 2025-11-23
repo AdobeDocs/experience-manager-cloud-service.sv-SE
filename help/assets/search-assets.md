@@ -6,10 +6,10 @@ mini-toc-levels: 1
 feature: Selectors, Adobe Stock, Asset Distribution, Asset Management, Asset Processing
 role: User, Admin
 exl-id: 68bdaf25-cbd4-47b3-8e19-547c32555730
-source-git-commit: 391294cf461662d145a52b6c8a366e53f39ff84a
+source-git-commit: 32bc8ba2a7e7a783b3e816c78873c6a8c559c1a1
 workflow-type: tm+mt
-source-wordcount: '6020'
-ht-degree: 3%
+source-wordcount: '5888'
+ht-degree: 2%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 [!DNL Adobe Experience Manager Assets] innehåller robusta metoder för resurssökning som hjälper dig att få högre innehållshastighet. Teamen kan korta time-to-market med smidig och intelligent sökfunktion med hjälp av färdiga funktioner och anpassade metoder. Funktionen för att söka resurser är central för användningen av ett digitalt resurshanteringssystem - vare sig det är till för kreativa användare, för robust hantering av resurser av företagsanvändare och marknadsförare eller för administration av DAM-administratörer. Enkla, avancerade och anpassade sökningar som du kan utföra via [!DNL Assets]-användargränssnittet eller andra appar och ytor hjälper dig att uppfylla dessa användningsfall.
@@ -86,7 +86,7 @@ Från och med augusti 2023 innehåller Experience Manager Assets en ny version a
 
 `damAssetLucene-9` ändrar beteendet för Oak Query Facet Count så att åtkomstkontrollen inte längre utvärderas för antalet facet som returneras av det underliggande sökindexet, vilket ger snabbare svarstider vid sökning. Detta kan leda till att användarna får se värden för antal ansikten, som innehåller resurser som de inte har tillgång till. Dessa användare kan inte komma åt, hämta eller läsa någon annan information om dessa resurser, inklusive sökvägar, eller få mer information om dem.
 
-Om du behöver växla till föregående beteende (`statistical`-läge) kan du läsa [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE) för att skapa en anpassad version av `damAssetLucene-9`-indexet. Adobe rekommenderar inte att du växlar till läget `secure` på grund av påverkan på svarstiderna för sökningar med stora resultatuppsättningar.
+Om du behöver växla till föregående beteende (`statistical`-läge) kan du läsa [Innehållssökning och indexering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html) för att skapa en anpassad version av `damAssetLucene-9`-indexet. Adobe rekommenderar inte att du växlar till läget `secure` på grund av påverkan på svarstiderna för sökningar med stora resultatuppsättningar.
 
 Mer information om Oak ansiktsfunktioner, inklusive en detaljerad beskrivning av dessa lägen, finns i [Faktablad - Oak-dokumentation - Lucene-index](https://jackrabbit.apache.org/oak/docs/query/lucene.html#facets).
 
@@ -147,9 +147,9 @@ Du kan förbättra nyckelordens relevans för vissa resurser för att öka sökn
 1. I rutan **[!UICONTROL Search Promote]** anger du ett nyckelord som du vill göra sökningen efter bilden snabbare och klickar sedan på **[!UICONTROL Add]**. Du kan ange flera nyckelord på samma sätt.
 1. Klicka på **[!UICONTROL Save & Close]**. Den resurs som du befordrade för det här nyckelordet visas bland de översta sökresultaten.
 
-Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [söka i [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=sv-SE).
+Du kan använda detta till din fördel genom att öka rankningen för vissa resurser i sökresultaten för nyckelordet target. Se exempelvideon nedan. Mer information finns i [söka i [!DNL Experience Manager]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/3444066/?captions=swe&quality=6)
+>[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=6)
 
 *Video: Förstå hur sökresultaten rangordnas och hur rangordningen kan påverkas.*
 
@@ -249,15 +249,15 @@ Här är några exempel på sökformat för komplexa frågor:
 
 ### Söka efter resurser från panelen Adobe Asset Link {#aal}
 
-Med Adobe Asset Link kan formgivarna nu komma åt innehåll som lagras i [!DNL Experience Manager Assets], utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen [!DNL Adobe Creative Cloud]-apparna kan du enkelt bläddra bland, söka efter, checka ut och checka in resurser: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator] och [!DNL Adobe InDesign]. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Sensei maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
+Med Adobe Asset Link kan formgivarna nu komma åt innehåll som lagras i [!DNL Experience Manager Assets], utan att lämna de Adobe Creative Cloud-program som stöds. Med hjälp av panelen i appen [!DNL Adobe Creative Cloud]-apparna kan du enkelt bläddra bland, söka efter, checka ut och checka in resurser: [!DNL Adobe Photoshop], [!DNL Adobe Illustrator] och [!DNL Adobe InDesign]. Med Asset Link kan du också söka visuellt liknande resultat. Visuella sökresultat bygger på Adobe Sensei maskininlärningsalgoritmer och hjälper användarna att hitta estetiskt liknande bilder. Se [söka efter och bläddra bland resurser](https://helpx.adobe.com/enterprise/using/manage-assets-using-adobe-asset-link.html#UseAdobeAssetLink) med Adobe Asset Link.
 
 ### Sök efter resurser i [!DNL Experience Manager]-datorprogrammet {#desktop-app}
 
-Creative-proffs använder skrivbordsappen för att göra [!DNL Experience Manager Assets] enkelt sökbar och tillgänglig på sin lokala dator (Win eller Mac). Creative Cloud-användare kan enkelt visa de önskade resurserna i Mac Finder eller Utforskaren i Windows, som öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan i [!DNL Experience Manager] med en ny version som skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, `*`, `?` jokertecken och operatorn `AND`. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE#browse-search-preview-assets) i skrivbordsappen.
+Creative-proffs använder skrivbordsappen för att göra [!DNL Experience Manager Assets] enkelt sökbar och tillgänglig på sin lokala dator (Win eller Mac). Creative Cloud-användare kan enkelt visa de önskade resurserna i Mac Finder eller Utforskaren i Windows, som öppnats i skrivbordsprogram och ändrats lokalt. Ändringarna sparas sedan i [!DNL Experience Manager] med en ny version som skapats i databasen. Programmet stöder enkla sökningar med ett eller flera nyckelord, `*`, `?` jokertecken och operatorn `AND`. Se [bläddra bland, söka efter och förhandsgranska resurser](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html#browse-search-preview-assets) i skrivbordsappen.
 
 ### Sök efter resurser i [!DNL Brand Portal] {#brand-portal}
 
-Affärsanvändare och marknadsförare använder Brand Portal för att effektivt och säkert dela godkända digitala resurser med interna team, partners och återförsäljare. Se [söka efter resurser på Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html?lang=sv-SE).
+Affärsanvändare och marknadsförare använder Brand Portal för att effektivt och säkert dela godkända digitala resurser med interna team, partners och återförsäljare. Se [söka efter resurser på Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/search-capabilities/brand-portal-searching.html).
 
 ### Sök efter [!DNL Adobe Stock] bilder {#adobe-stock1}
 
@@ -400,44 +400,23 @@ AI-sökning matchar emellertid liknande ord som `Girl`, `Lady` i fallet `Woman` 
 På samma sätt kan du ange den här uppmaningen på spanska eller felstava `Woman` som `Wman` och ändå få samma resultat.
 
 
+### Aktivera eller inaktivera AI-sökning i administratörsvyn {#enable-disable-ai-search}
+
+Utför följande steg för att aktivera eller inaktivera AI-sökning i administratörsvyn:
+
+1. Navigera till **[!UICONTROL Tools]** >> **[!UICONTROL Assets]** >> **[!UICONTROL Assets Configurations]** >> **[!UICONTROL Assets Omnisearch Configuration]**.
+
+1. I avsnittet **[!UICONTROL Search]** väljer du **[!UICONTROL AI Search]** för att aktivera AI-sökning eller **[!UICONTROL Keyword]** för att inaktivera den.
+
+   ![Aktivera eller inaktivera AI-sökning](/help/assets/assets/enable-ai-search-admin-view.png)
+
+1. Klicka på **[!UICONTROL Save]**.
+
 ## Konfigurations- och administrationsuppgifter som rör sökfunktioner {#configadmin}
 
 ### Sök i indexkonfigurationer {#searchindex}
 
 Resursidentifiering bygger på indexering av DAM-innehåll, inklusive metadata. Snabbare och exaktare tillgångsidentifiering bygger på optimerad indexering och lämpliga konfigurationer. Se [indexering](/help/operations/indexing.md).
-
-### Visuell sökning eller likhetssökning {#configvisualsearch}
-
-Visuell sökning använder smarta taggar. Följ de här stegen när du har konfigurerat funktionen för smart taggning.
-
-1. I [!DNL Experience Manager] CRXDE, i noden `/oak:index/lucene`, lägger du till följande egenskaper och värden och sparar ändringarna.
-
-   * Egenskapen `costPerEntry` av typen `Double` med värdet `10`.
-
-   * Egenskapen `costPerExecution` av typen `Double` med värdet `2`.
-
-   * Egenskapen `refresh` av typen `Boolean` med värdet `true`.
-
-   Den här konfigurationen tillåter sökningar från lämpligt index.
-
-1. Skapa en nod med namnet `/oak:index/damAssetLucene/indexRules/dam:Asset/properties` av typen `imageFeatures` i CRXDE vid `nt-unstructured` om du vill skapa Lucene-index. I noden `imageFeatures`,
-
-   * Lägg till egenskapen `name` av typen `String` med värdet `jcr:content/metadata/imageFeatures/haystack0`.
-
-   * Lägg till egenskapen `nodeScopeIndex` av typen `Boolean` med värdet `true`.
-
-   * Lägg till egenskapen `propertyIndex` av typen `Boolean` med värdet `true`.
-
-   * Lägg till egenskapen `useInSimilarity` av typen `Boolean` med värdet `true`.
-
-   Spara ändringarna.
-
-1. Få åtkomst till `/oak:index/damAssetLucene/indexRules/dam:Asset/properties/predictedTags` och lägg till egenskapen `similarityTags` av typen `Boolean` med värdet `true`.
-1. Använd smarta taggar för resurserna i din [!DNL Experience Manager]-databas. Se [Konfigurera smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/tagging.html?lang=sv-SE#configuring).
-1. I CRXDE, i noden `/oak-index/damAssetLucene`, ställer du in egenskapen `reindex` på `true`. Spara ändringarna.
-1. (Valfritt) Om du har anpassat sökformulär kopierar du noden `/libs/settings/dam/search/facets/assets/jcr%3Acontent/items/similaritysearch` till `/conf/global/settings/dam/search/facets/assets/jcr:content/items`. Spara ändringarna.
-
-Mer information finns i [Mer information om smarta taggar i Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=sv-SE) och [hur du hanterar smarta taggar](/help/assets/smart-tags.md).
 
 ### Obligatoriska metadata {#mandatorymetadata}
 
@@ -578,5 +557,5 @@ Navigera till mapplatsen för resurser som visas i sökresultaten. Markera resur
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] sökimplementeringsguide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html?lang=sv-SE)
->* [Avancerad konfiguration som förbättrar sökresultaten](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html?lang=sv-SE)
+>* [[!DNL Experience Manager] sökimplementeringsguide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/search-tutorial-develop.html)
+>* [Avancerad konfiguration som förbättrar sökresultaten](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search-boost.html)
