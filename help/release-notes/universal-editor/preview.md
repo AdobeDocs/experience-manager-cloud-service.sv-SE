@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: 434bf669f4a060f2d79dcc57f94fbcff27a840e1
+source-git-commit: b060b77954471124a5062fa4b08e905052bc9010
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,7 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande nya funktioner {#what-is-new}
 
+* Autentiseringsrubriker har inaktiverats till förmån för inloggningen för den [lokala utvecklaren.](/help/sites-cloud/authoring/universal-editor/navigation.md#local-developer-login)
 * En snabbmeny är nu tillgänglig i det strukturerade trädet när du högerklickar.
 * En snabbtangent har lagts till för att duplicera komponenter.
 
