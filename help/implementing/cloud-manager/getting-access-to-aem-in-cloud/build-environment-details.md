@@ -5,9 +5,9 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 897f6376c594604527231f6f5a05a8b85d6858f3
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1544'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Läs om Cloud Manager byggmiljö och hur den bygger och testar din kod.
 
 >[!TIP]
 >
->Det här dokumentet innehåller Cloud Manager byggmiljö för utveckling av ditt AEM as a Cloud Service-projekt. Mer information om klientplattformar som stöds av AEM as a Cloud Service för innehållsutveckling finns i dokumentet [Klientplattformar som stöds.](/help/overview/supported-platforms.md)
+>Det här dokumentet innehåller Cloud Manager byggmiljö för utveckling av ditt AEM as a Cloud Service-projekt. Mer information om klientplattformar som stöds av AEM as a Cloud Service för innehållsredigering finns i [Klientplattformar som stöds](/help/overview/supported-platforms.md).
 
 ## Information om byggmiljö {#build-environment-details}
 

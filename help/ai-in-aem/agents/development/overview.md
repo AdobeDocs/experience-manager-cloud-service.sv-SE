@@ -1,11 +1,11 @@
 ---
 title: Översikt över utvecklingsagenten
 description: Läs om hur utvecklingsagenten i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
-feature: Agentic AI
+feature: Agentic AI, AI Assistant, AI Tools, User Roles
 role: User, Admin, Architect, Developer
-source-git-commit: 3648dd25c3b3b46663cc09d379aeadfd07cedfa4
+source-git-commit: 897f6376c594604527231f6f5a05a8b85d6858f3
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Du kommer åt utvecklingsagenten via AI-assistenten i användargränssnitt som C
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
@@ -81,8 +81,8 @@ Utvecklingsagentens pipeline-felsökningsjobb kräver antingen rollen Cloud Mana
 
 | Fråga | Resultat |
 | --- | --- |
-| *Visa mina misslyckade pipelines för huvudprogrammet för programmet.* | Resultatet kan variera, men den här uppmaningen bör generera en tabell med misslyckade pipelines, med ett uppföljningsförslag som refererar till en viss pipeline som ska analyseras. |
-| *Analysera min misslyckade pipeline med namnet&quot;Dev Pipeline&quot;.* | Denna fråga bör resultera i en analys av den misslyckade pipeline med förslag på åtgärder. |
+| *Visa mina misslyckade pipelines för huvudprogrammet för programmet.* | Resultatet kan variera, men den här uppmaningen visar en tabell med misslyckade pipelines, med ett uppföljningsförslag som refererar till en viss pipeline som ska analyseras. |
+| *Analysera min misslyckade pipeline med namnet&quot;Dev Pipeline&quot;.* | Den här uppmaningen resulterar i en analys av den misslyckade pipeline med förslag på åtgärder. |
 
 ## Funktioner som inte är tillgängliga {#out-of-scope-features}
 

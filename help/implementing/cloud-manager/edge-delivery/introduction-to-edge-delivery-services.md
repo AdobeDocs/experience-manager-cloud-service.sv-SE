@@ -4,7 +4,7 @@ description: Lär dig hur du kan leverera dina Cloud Manager-projekt med Edge De
 exl-id: f33bd6f0-62fc-4ecc-b8d2-65d1f1c44d82
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 897f6376c594604527231f6f5a05a8b85d6858f3
 workflow-type: tm+mt
 source-wordcount: '819'
 ht-degree: 1%
@@ -73,7 +73,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 
 **Edge Delivery att göra-listan** i Cloud Manager är en boardinguppgiftschecklista som är avsedd att vägleda dig genom introduktionen och hantera din Edge Delivery-webbplats hela vägen till [Go-Live](/help/journey-onboarding/go-live-checklist.md).
 
-![Edge Delivery-lista med att göra-uppgifter för webbplatser i Cloud Manager.](/help/implementing/cloud-manager/assets/cm-eds-todo-list.png)
+![Edge Delivery-lista med att göra-uppgifter för webbplatser i Cloud Manager](/help/implementing/cloud-manager/assets/cm-eds-todo-list.png)
 
 |   | Uppgift | Beskrivning |
 | --- | --- | --- |
@@ -87,7 +87,7 @@ En Edge Delivery Services kan läggas till på flera olika sätt beroende på hu
 | 8 | Konfigurera push-validering | Se [Konfigurera push-validering för en Edge Delivery-plats](/help/implementing/cloud-manager/edge-delivery/cdn-setup-push-invalidation.md). |
 | 9 | GoLive | Se [Go-Live-checklista](https://www.aem.live/docs/go-live-checklist). |
 
->[!VIDEO](https://video.tv.adobe.com/v/3441565?captions=swe&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428020?learn=on)
 
 ## Logga en supportanmälan {#eds-support-ticket}
 
