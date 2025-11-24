@@ -67,7 +67,7 @@ Det första är det övre navigeringsfältet i Experience Platform, som är best
 * Med ![Visa menyikonen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) (visa eller dölj sidomenyn) får du tillgång till en mängd olika flikar som kan ta dig till specifika delar av ett enskilt program. Eller så kan du växla mellan [licensöversikten](/help/implementing/cloud-manager/license-dashboard.md) och konsolen **[Mina program](#my-programs-console)** beroende på sammanhanget.
 * Med ikonen ![Bell](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) ([Notifications](/help/implementing/cloud-manager/notifications.md)) får du bland annat tillgång till meddelanden och meddelanden.
 
-Mer information om det övre navigeringsfältet i Experience Platform finns i [Adobe Experience Platform användargränssnittshandbok](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar).
+Mer information om det övre navigeringsfältet i Experience Platform finns i [Adobe Experience Platform användargränssnittshandbok](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar).
 
 #### Verktygsfältet Program {#program-toolbar}
 
@@ -122,7 +122,7 @@ Ett kort (eller en rad i en tabell) representerar alla program och ger en övers
 * Namn som tilldelats programmet. I bilden ovan visas&quot;SecurBank Sample&quot; som programnamn.
 * Tjänsttyp:
    * **Experience Manager Cloud** - för AEM as a Cloud Service-program
-   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/introduction)
+   * **Experience Manager** - för [AMS-program (Adobe Managed Services)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/introduction)
 * [Programtyp](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/program-types.md):
    * Sandbox
    * Produktion
