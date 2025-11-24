@@ -3,9 +3,9 @@ title: Innehållsuppdateringskunskap
 description: Lär dig vad Experience Production Agents kompetens när det gäller innehållsuppdatering är och vad den kan göra för dig.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 7f42357292fab3001a3905919dfcb78f4dfd30ba
+source-git-commit: 8cd524891df550913a734a9355c1012dc11adf5b
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
@@ -109,9 +109,9 @@ Om ett `process`-kommando utlöser uppdateringar kan svaren följa sekvensen:
 
   ![Exempel på Jira som använder innehållsuppdateringskunskaper i Experience Production Agent](assets/content-update-jira-example.png)
 
-### Aktivering {#activation}
+## Aktivering {#activation}
 
-Om du vill aktivera och få tillgång till Experience Production Agent med Jira måste du skicka ett e-postmeddelande till Adobe. Du kan kontakta:
+Om du vill aktivera och få tillgång till Experience Production Agent måste du kontakta Adobe. Du kan kontakta:
 
 * `experience-production-agent@adobe.com`
 * eller kontakta ditt kontoteam
