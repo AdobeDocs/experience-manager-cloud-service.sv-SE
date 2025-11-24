@@ -108,7 +108,7 @@ Använd sorteringsalternativen för att enklare hitta det program du behöver.
    * **Skapad** (standard)
    * **Programnamn**
    * **Status**
-* ![Ikon för sorteringsordning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) Stigande (standard) / ![Ikon för sorteringsordning uppåt ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Fallande
+* ![Ikon för sorteringsordning nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) Stigande (standard) / ![Ikon för sorteringsordning uppåt &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Fallande
 * ![Ikon för klassisk stödrastervy](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) Stödrastervisning (standard)
 * ![Ikon för visningslista](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg)
 
@@ -149,7 +149,7 @@ Ikonen ![Mer](https://spectrum.adobe.com/static/icons/workflow_22/Smock_More_22_
 * Navigera till en viss ![dataikon](https://spectrum.adobe.com/static/icons/workflow_22/Smock_Data_22_N.svg) [Miljö](/help/implementing/cloud-manager/manage-environments.md) i programmet
 * Öppna ikonen ![Programöversikt](/help/implementing/cloud-manager/assets/program-overview.svg) [Programöversikt](#program-overview)
 * ![Ikonen Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) [Redigera programmet](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#editing)
-* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg)[Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
+* ![Ta bort ikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Delete_18_N.svg) [Ta bort ett sandlådeprogram](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/editing-programs.md#delete-sandbox-program)
 
 >[!TIP]
 >
