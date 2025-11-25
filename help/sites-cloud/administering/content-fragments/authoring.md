@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 8a8f63758cf216b502d5ee894ff5af7285777889
 workflow-type: tm+mt
-source-wordcount: '2778'
+source-wordcount: '2819'
 ht-degree: 0%
 
 ---
@@ -135,6 +135,12 @@ Från redigeraren kan du:
 * [Ta bort en variant](#delete-variation)
 
 ### Skapa en variant {#create-variation}
+
+>[!NOTE]
+>
+>Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans. Vi rekommenderar att du håller antalet variationer till ett hanterbart minimum.
+>
+>Ett tips är att inte överskrida tio varianter per innehållsfragment.
 
 Så här skapar du en variant av ditt innehållsfragment:
 
@@ -267,7 +273,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
