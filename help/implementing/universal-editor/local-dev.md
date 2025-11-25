@@ -4,9 +4,9 @@ description: Lär dig hur du kan köra din egen Universal Editor-tjänst för lo
 exl-id: ba1bf015-7768-4129-8372-adfb86e5a120
 feature: Developing
 role: Admin, Developer
-source-git-commit: d938abce2b46786343b19113454da1738a824ed0
+source-git-commit: 0df573a3d869f2718983b4e661a86c769b4d3f1a
 workflow-type: tm+mt
-source-wordcount: '981'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Lär dig hur du kan köra din egen Universal Editor-tjänst för lokal utvecklin
 
 >[!NOTE]
 >
->Lokala universella redigeringstjänster är inte obligatoriska eller stöds inte för projekt som använder AEM-redigering med Edge Delivery Services.
+>Lokala universella redigeringstjänster krävs inte för projekt som använder AEM-redigering med Edge Delivery Services.
 
 ## Ökning {#overview}
 
@@ -45,7 +45,7 @@ I en yttre ram som skyddas med HTTPS går det inte att läsa in en osäker HTTP-
 
 För att göra detta måste du konfigurera AEM för att köra HTTPS. I utvecklingssyfte kan du använda självsignerade certifikat.
 
-[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
+[Se det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html) om hur du konfigurerar AEM som körs på HTTPS med ett självsignerat certifikat som du kan använda.
 
 ## Installera Universal Editor-tjänsten {#install-ue-service}
 
@@ -53,7 +53,7 @@ Universell redigeringstjänst är inte en fullständig kopia av Universell redig
 
 [NodeJS version 20](https://nodejs.org/en/download/releases) krävs för att köra en lokal kopia av Universal Editor-tjänsten.
 
-Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE).
+Tjänsten Universal Editor är tillgänglig via Software Distribution. Mer information om hur du får åtkomst till programdistributionsdokumentationen finns i [dokumentationen för programvarudistribution](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html).
 
 Spara filen `universal-editor-service.cjs` från programvarudistribution till den lokala utvecklingsmiljön.
 
