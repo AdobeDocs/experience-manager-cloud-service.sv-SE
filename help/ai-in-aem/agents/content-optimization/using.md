@@ -3,9 +3,9 @@ title: Agent för innehållsoptimering
 description: Lär dig hur du använder Content Optimization Agent för att förändra hur användare förfinar och anpassar resurser genom att tillämpa naturliga språkinstruktioner för att skapa kanalklara varianter.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: ab94d59ff93eb4cf29e15a8945063b8ae00c57e8
+source-git-commit: 8b7bdb86c3d1b537b536173b6307c486fe436636
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '907'
 ht-degree: 0%
 
 ---
@@ -68,10 +68,9 @@ Channel Marketers, nyckelpersonen för Content Optimization Agent, kan välja r�
 
 Regional Marketers och Agency Workers kan också använda Content Optimization Agent för att snabbt generera kanalklara bildvarianter som stöder snabbare och enhetligare innehållsproduktion.
 
-
 ## Hur kommer jag åt Content Optimization Agent? {#access-content-optimization-agent}
 
-Du kan nå AEM Business Agents via AI Assistant. Logga in på experience.adobe.com så kan du börja interagera med AI Assistant genom att ange din uppmaning på det naturliga språket i fältet `Ask AI Assistant anything`:
+Du kommer åt agenterna i AEM via AI-assistenten. Logga in på experience.adobe.com så kan du börja interagera med AI Assistant genom att ange din uppmaning på det naturliga språket i fältet `Ask AI Assistant anything`:
 
 ![Åtkomstidentifieringsagent](/help/ai-in-aem/agents/discovery/assets/access-discovery-agent.png)
 

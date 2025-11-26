@@ -3,9 +3,9 @@ title: Innehållsuppdateringskunskap
 description: Lär dig vad Experience Production Agents kompetens när det gäller innehållsuppdatering är och vad den kan göra för dig.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 8cd524891df550913a734a9355c1012dc11adf5b
+source-git-commit: 8b7bdb86c3d1b537b536173b6307c486fe436636
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Du kan få åtkomst till innehållsuppdateringskunskaperna från:
 
 ## AI Assistant {#ai-assistant}
 
-Du kan nå AEM Business Agents via AI Assistant.
+Du kommer åt agenterna i AEM via AI-assistenten.
 
 Öppna AI Assistant från experience.adobe.com och börja sedan interagera genom att ange din uppmaning på ett naturligt språk i fältet `Ask AI Assistant anything`:
 

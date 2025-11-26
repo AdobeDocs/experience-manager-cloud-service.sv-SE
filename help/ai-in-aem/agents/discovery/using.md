@@ -3,9 +3,9 @@ title: Översikt över identifieringsagent
 description: Lär dig hur du kan använda Discovery Agent för att leverera relevant AEM-innehåll på begäran via naturliga, konversationsmoment för att få en smidig, klickfri upptäckt.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 25ca9a85b3d3e9917ae144cd906dae7736adb2f0
+source-git-commit: 8b7bdb86c3d1b537b536173b6307c486fe436636
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Byråer och partners kan enkelt hitta varumärkesgodkända mediefiler i Content 
 
 ## Hur kommer jag åt Discovery Agent? {#access-discovery-agent}
 
-Du kan nå AEM Business Agents via AI Assistant. Logga in på experience.adobe.com så kan du börja interagera med AI Assistant genom att ange din uppmaning på ett naturligt språk i sökrutan:
+Du kommer åt agenterna i AEM via AI-assistenten. Logga in på experience.adobe.com så kan du börja interagera med AI Assistant genom att ange din uppmaning på ett naturligt språk i sökrutan:
 
 ![Åtkomstidentifieringsagent](/help/ai-in-aem/agents/discovery/assets/access-discovery-agent.png)
 
