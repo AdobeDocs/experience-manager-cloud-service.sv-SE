@@ -5,9 +5,9 @@ exl-id: 0d41723c-c096-4882-a3fd-050b7c9996d8
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: fb4f5a92ac0ef14d9e5bde2155deb702800e2e81
+source-git-commit: b94debebf36f379fc2cb2f193a244fe154c77537
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1260'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,8 @@ Lär dig mer om de självbetjäningsverktyg som Cloud Manager tillhandahåller f
 >id="aemcloud_golive_sslcert"
 >title="Hantera SSL-certifikat"
 >abstract="Läs om hur Cloud Manager har självbetjäningsverktyg för att installera och hantera SSL-certifikat för att skydda din webbplats för dina användare. Cloud Manager använder en TLS-plattformstjänst för att hantera SSL-certifikat och privata nycklar som ägs av kunder och som erhållits från tredjepartscertifikatutfärdare."
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Visa, uppdatera och ersätta ett SSL-certifikat"
->additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Kontrollera status för ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Visa, uppdatera och ersätta ett SSL-certifikat"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-ssl-certificates/managing-certificates" text="Kontrollera status för ett SSL-certifikat"
 
 ## Vad är SSL-certifikat? {#overview}
 
@@ -51,7 +51,7 @@ Båda modellerna har följande allmänna funktioner för att hantera dina certif
 
 >[!IMPORTANT]
 >
->[Om du vill lägga till och associera en anpassad domän med miljön &#x200B;](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
+>[Om du vill lägga till och associera en anpassad domän med miljön ](/help/implementing/cloud-manager/custom-domain-names/introduction.md) måste du ha ett giltigt SSL-certifikat som omfattar domänen.
 
 ### Adobe-hanterade (DV) SSL-certifikat {#adobe-managed}
 
@@ -164,7 +164,7 @@ Om du har nått gränsen kan du granska dina certifikat och ta bort certifikat s
 
 ### Låt oss kryptera hastighetsbegränsningar för Adobe-hanterade DV-certifikat
 
-Adobe-hanterade DV-certifikat förlitar sig på Låt oss kryptera. Förutom Cloud Manager-gränsen för installerade certifikat tillämpar vi våra krypteringar sina egna hastighetsbegränsningar. En nyckelgräns är **Nya certifikat per exakt uppsättning identifierare**: upp till 5 certifikat kan utfärdas för samma uppsättning värdnamn inom en 7-dagarsperiod. Om den här gränsen uppnås visas motsvarande krypteringsfel i Cloud Manager och det går inte att skapa fler certifikat för värdnamnet förrän hastighetsbegränsningsfönstret har återställts. Information om de senaste värdena och andra relaterade begränsningar finns i dokumentationen om [Låt oss kryptera hastighetsbegränsningar](https://letsencrypt.org/docs/rate-limits/#new-certificates-per-exact-set-of-identifiers).
+Adobe-hanterade DV-certifikat förlitar sig på Låt oss kryptera. Förutom Cloud Manager-gränsen för installerade certifikat tillämpar vi våra krypteringar sina egna hastighetsbegränsningar. En nyckelgräns är **Nya certifikat per exakt uppsättning identifierare**: upp till 5 certifikat kan utfärdas för samma uppsättning värdnamn inom en 7-dagarsperiod. Om den här gränsen uppnås visas ett fel i Cloud Manager och det går inte att skapa fler certifikat för värdnamnet förrän hastighetsbegränsningsfönstret har återställts. Information om de senaste värdena och andra relaterade begränsningar finns i dokumentationen om [Låt oss kryptera hastighetsbegränsningar](https://letsencrypt.org/docs/rate-limits/#new-certificates-per-exact-set-of-identifiers).
 
 ## Läs mer {#learn-more}
 
