@@ -3,9 +3,9 @@ title: Kunskap om att skapa formulär
 description: Lär dig mer om Experience Production Agents kunskaper i att skapa formulär och hur du använder naturligt språk för att skapa formulär från grunden.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 701c35341ead684cdf306cadcacd8c638004facd
+source-git-commit: aa8369979c99535f0fd77e6a51af10cc17afd971
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,42 @@ När du har skapat en inledande formulärstruktur med hjälp av AI Assistant kan
 * **Konfigurera sändning**: Konfigurera var formulärdata skickas, inklusive konfigurera e-postmeddelanden, integrering med arbetsflöden eller anslutningar till externa system.
 
 Mer information finns i [Forms Experience Builder-dokumentation](/help/forms/experience-builder/product-overview.md).
+
+
+## Aktivering {#activation}
+
+Om du vill aktivera Experience Production Agent för din organisation måste aktiveringen initieras via Adobe. Börja processen genom att nå ut via:
+
+* E-post: `experience-production-agent@adobe.com`
+* Eller kontakta ett Adobe-kontoteam.
+
+För en effektiv introduktionsupplevelse kan du förbereda och lämna följande information:
+
+Dela följande identifierare för **AEM as a Cloud Service**:
+
+* Organisations-ID
+* `product_id`
+* `profile_id`
+
+Din AEM-administratör kan hitta följande:
+
+1. Navigerar till <https://adminconsole.adobe.com/>
+1. Väljer **Adobe Experience Manager as a Cloud Service**
+1. Välja lämplig AEM-instans i din miljö
+1. Välja en profil med läs-/skrivbehörighet för relevant innehåll
+1. Kopiera den fullständiga webbläsarens URL från den här sidan
+1. Extraherar värdena `product_id` och `profile_id` från URL:en\
+   (t.ex. en URL som `https://adminconsole.adobe.com/products/profiles/users` innehåller dessa parametrar).
+
+För **Edge Delivery Document Authoring** kan du förse ditt Adobe-team med:
+
+* Domäner för Edge Delivery Services
+* Motsvarande GitHub-information:
+   * Organisation (organisation)
+   * Databas (repo)
+   * Gren
+
+Fullständig och korrekt information snabbar upp aktiveringsprocessen och säkerställer att Experience Production Agent etableras i tid.
 
 <!-- 
 #### Import and convert {#import-and-convert}
