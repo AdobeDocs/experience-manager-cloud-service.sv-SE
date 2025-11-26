@@ -3,7 +3,7 @@ title: Översikt över agenter i AEM
 description: Läs om de agenter som finns i AEM för att snabba upp framtagningen av ditt material och automatiskt hantera ändringar.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 8b7bdb86c3d1b537b536173b6307c486fe436636
+source-git-commit: f981e7ed9f4bbd26226facf37c343f16a9e99263
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -32,11 +32,11 @@ Dessa agenter finns i Adobe Experience Manager (AEM) as a Cloud Service för att
 
 ## Agent för innehållsoptimering {#content-optimization-agent}
 
-[Agenten för innehållsoptimering](/help/ai-in-aem/agents/content-optimization/using.md) omvandlar hur användare förfinar och anpassar resurser genom att tillämpa naturliga språkinstruktioner för att skapa kanalanpassade variationer. Agenten tolkar användarmetoden och utför komplexa redigeringsuppgifter automatiskt för att utföra uppgifter som att generera nya renderingar, justera visuella egenskaper, ändra bakgrunder eller förbereda resurser för specifika digitala kanaler.
+[Agenten för innehållsoptimering](/help/ai-in-aem/agents/content-optimization/overview.md) omvandlar hur användare förfinar och anpassar resurser genom att tillämpa naturliga språkinstruktioner för att skapa kanalanpassade variationer. Agenten tolkar användarmetoden och utför komplexa redigeringsuppgifter automatiskt för att utföra uppgifter som att generera nya renderingar, justera visuella egenskaper, ändra bakgrunder eller förbereda resurser för specifika digitala kanaler.
 
 ## Identifieringsagent {#discovery-agent}
 
-[Identifieringsagenten](/help/ai-in-aem/agents/discovery/using.md) levererar AEM-innehåll för en smidig, klickfri identifieringsupplevelse. Programmet söker på ett intelligent sätt i Assets, Content Fragments och Adaptive Forms för att leverera relevant material som bilder, videor, PDF-dokument, artiklar och formulärmallar.
+[Identifieringsagenten](/help/ai-in-aem/agents/discovery/overview.md) levererar AEM-innehåll för en smidig, klickfri identifieringsupplevelse. Programmet söker på ett intelligent sätt i Assets, Content Fragments och Adaptive Forms för att leverera relevant material som bilder, videor, PDF-dokument, artiklar och formulärmallar.
 
 ## Utvecklingsagent {#development-agent}
 
