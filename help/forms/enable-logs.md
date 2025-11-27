@@ -3,14 +3,12 @@ title: Aktivera loggning för HTML5-formulär
 description: Med loggningsverktyget kan du logga ett formulär och felsöka formulärrelaterade problem.
 contentOwner: robhagat
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-docset: aem65
 feature: HTML5 Forms,Mobile Forms
 exl-id: 2f574c98-550c-4b84-be1e-46a2700e7277
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 3%
@@ -30,7 +28,7 @@ Utför följande steg för att konfigurera serversidesloggar:
 
 1. Gå till `https://'[server]:[port]'/system/console/configMgr`. Leta reda på och öppna alternativet *Loggningskonfiguration för parenteser*. En dialogruta visas:
 
-   ![&#x200B; Dialogrutan Konfiguration av loggningslogg för parenteser &#x200B;](assets/logconfig.png)
+   ![ Dialogrutan Konfiguration av loggningslogg för parenteser ](assets/logconfig.png)
 
    Konfigurationsalternativet Loggningslogg för Apace Sling
 
@@ -172,9 +170,9 @@ Till exempel:
 >[!NOTE]
 >
 >Standardloggnivån för varje loggkategori a (xfa), b (xfaView) och c (xfaPerf) är 2 (ERROR). För loggkonfigurationen 2-b6 är loggnivåerna för olika kategorier därför följande:
->&#x200B;>a (xfa): 2 (standardnivåfel)
->&#x200B;>b (xfaView): 6 (användarspecificerad TRACE)
->&#x200B;>a (xfaPerf): 2 (standardnivåfel)
+>a (xfa): 2 (standardnivåfel)
+>b (xfaView): 6 (användarspecificerad TRACE)
+>a (xfaPerf): 2 (standardnivåfel)
 
 ### Aktivera loggning med Configuration Manager {#enabling-logging-using-configuration-manager}
 

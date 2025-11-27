@@ -2,14 +2,13 @@
 title: Återger formulärmall för HTML5-formulär
 description: HTML5-formulärprofiler är kopplade till profilåtergivningar. Profilåtergivning är JSP-sidor som ansvarar för att generera HTML-representation av formuläret genom att anropa tjänsten Forms OSGi.
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: cb75b826-d044-44be-b364-790c046513e0
 feature: HTML5 Forms,Mobile Forms
 exl-id: 022b9953-2d64-473f-87b7-aac1602f6a7e
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -25,7 +24,7 @@ ht-degree: 0%
 
 HTML5-formulär har begreppet **Profiler** som visas som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. Dessa profiler har associerad **profilåtergivning**. De är JSP-sidor som ansvarar för att generera HTML-representation av formuläret genom att anropa tjänsten Forms OSGi. JCR-sökvägen för profilnoden avgör URL:en för återgivningens slutpunkt. Standardslutpunkten för återgivningen som pekar på standardprofilen ser ut så här:
 
-https://&lt;*host*>:&lt;*port*>/content/xfaforms/profiles/default.html?contentRoot=&lt;*sökväg till mappen som innehåller xdp*>&amp;template=&lt;*namnet på xdp*>
+https://<*host*>:<*port*>/content/xfaforms/profiles/default.html?contentRoot=<*sökväg till mappen som innehåller xdp*>&template=<*namnet på xdp*>
 
 Exempel: `http://localhost:4502/content/xfaforms/profiles/default.html?contentRoot=c:/xdps&template=sampleForm.xdp`
 

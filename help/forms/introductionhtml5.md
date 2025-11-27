@@ -1,16 +1,14 @@
 ---
 title: Introduktion till HTML5-blanketter
-description: HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som kan återge XFA-formulärmallar i HTML5-format.
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
+description: HTML5-formulär är en ny funktion i Adobe Experience Manager som kan återge XFA-formulärmallar i HTML5-format.
 topic-tags: hTML5_forms
-docset: aem65
 feature: HTML5 Forms,Mobile Forms
 exl-id: 0facca18-ffa1-420c-859a-6f1f2c449d71
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -20,9 +18,9 @@ ht-degree: 0%
 <span class="preview"> Funktionen HTML5 Forms erbjuds som en del av programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella (arbets) e-post till aem-forms-ea@adobe.com.
 </span>
 
-HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som kan återge XFA-formulärmallar i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-blanketter har inte bara stöd för XFA-blankettmallarnas funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
+HTML5-formulär är en ny funktion i Adobe Experience Manager som kan återge XFA-formulärmallar i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-blanketter har inte bara stöd för XFA-blankettmallarnas funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
 
-HTML5-blanketter genererar dokument som bygger på HTML5. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
+HTML5-blanketter genererar dokument som bygger på HTML5. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. <!--For more information about supported browsers, see [Supported client platforms](https://adobe.com/go/learn_aemforms_supportedplatforms_63).-->
 
 ![HTML5-formulärförhandsgranskning](assets/mobile_form_on_an_ipad_date_14.png)
 

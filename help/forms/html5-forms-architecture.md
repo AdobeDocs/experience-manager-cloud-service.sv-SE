@@ -3,18 +3,16 @@ title: Arkitektur för HTML5-formulär
 description: HTML5-formulär distribueras som ett paket i den inbäddade AEM-instansen och visar funktionaliteten som REST-slutpunkt över HTTP/S med hjälp av RESTful Apache Sling-arkitekturen.
 contentOwner: robhagat
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-docset: aem65
 feature: HTML5 Forms,Mobile Forms
 exl-id: ed8349a1-f761-483f-9186-bf435899df7d
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '1991'
 ht-degree: 0%
 
 ---
@@ -32,13 +30,13 @@ HTML5-formulärfunktionen distribueras som ett paket i den inbäddade AEM-instan
 
 ### Använda Sling Framework {#using-sling-framework}
 
-[Apache Sling](https://sling.apache.org/) är resurscentrerad. Den använder en begärande URL för att först matcha resursen. Varje resurs har en **sling:resourceType**- (eller **sling:resourceSuperType**)-egenskap. Baserat på den här egenskapen, förfrågningsmetoden och egenskaperna för begärande-URL:en, väljs sedan ett sling-skript för att hantera begäran. Det här snedstrecksskriptet kan vara en JSP eller en servlet. För HTML5-formulär fungerar **Profile**-noder som snedställningsresurser och **Profile Renderer** fungerar som snedskriftsskript som hanterar begäran om att återge mobilformuläret med en viss profil. En **profilrenderare** är en JSP som läser parametrar från en begäran och anropar Forms OSGi-tjänsten.
+[Apache Sling](https://sling.apache.org/) är resurscentrerad. Den använder en begärande URL för att först matcha resursen. Varje resurs har en **sling:resourceType**- (eller **sling:resourceSuperType**) egenskap. Baserat på den här egenskapen, förfrågningsmetoden och egenskaperna för begärande-URL:en, väljs sedan ett sling-skript för att hantera begäran. Det här snedstrecksskriptet kan vara en JSP eller en servlet. För HTML5-formulär fungerar **Profile**-noder som snedställningsresurser och **Profile Renderer** fungerar som snedskriftsskript som hanterar begäran om att återge mobilformuläret med en viss profil. En **profilrenderare** är en JSP som läser parametrar från en begäran och anropar Forms OSGi-tjänsten.
 
 Mer information om REST-slutpunkten och parametrar för begäran som stöds finns i [Återge formulärmall](/help/forms/rendering-form-template.md).
 
-När en användare gör en begäran från en klientenhet som webbläsaren iOS eller Android™, löser Sling först profilnoden baserat på den begärda URL:en. Från den här profilnoden läser den **sling:resourceSuperType** och **sling:resourceType** för att identifiera alla tillgängliga skript som kan hantera den här formuläråtergivningsbegäran. Sedan används väljare för Sling-begäran tillsammans med begärandemetoden för att identifiera det skript som lämpar sig bäst för att hantera denna begäran. När begäran når en profilåtergivnings-JSP anropar JSP:n Forms OSGi-tjänsten.
+När en användare gör en begäran från en klientenhet som webbläsaren iOS eller Android™, löser Sling först profilnoden baserat på den begärda URL:en. Från den här profilnoden läser den **sling:resourceSuperType** och **sling:resourceType** för att fastställa alla tillgängliga skript som kan hantera den här formuläråtergivningsbegäran. Sedan används väljare för Sling-begäran tillsammans med begärandemetoden för att identifiera det skript som lämpar sig bäst för att hantera denna begäran. När begäran når en profilåtergivnings-JSP anropar JSP:n Forms OSGi-tjänsten.
 
-Mer information om Sling-skriptupplösningen finns i [AEM Sling Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE) eller [Apache Sling Url-nedbrytning](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
+Mer information om Sling-skriptupplösningen finns i [AEM Sling Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) eller [Apache Sling Url-nedbrytning](https://sling.apache.org/documentation/the-sling-engine/url-decomposition.html).
 
 #### Vanligt anropsflöde för formulärbearbetning {#typical-form-processing-call-flow}
 
@@ -183,7 +181,7 @@ Profilnoden har egenskapen **sling:resourceSuperType** med värdet **xfaforms/pr
 * **xfaforms.profile**: Det här biblioteket innehåller implementering för XFA-skriptnings- och layoutmotorn.
 
 Dessa bibliotek är modellerade som CQ Client Libraries, som utnyttjar automatisk sammanfogning, miniatyrbildnings- och komprimeringsfunktioner i CQ framework JavaScript Libraries.
-Mer information om CQ-klientbibliotek finns i [CQ Clientlib-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE).
+Mer information om CQ-klientbibliotek finns i [CQ Clientlib-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
 
 Så som beskrivs ovan anropar profilåtergivaren JSP Forms Service via en sling include. Denna JSP anger också olika felsökningsalternativ baserat på administratörskonfigurationen eller frågeparametrarna.
 

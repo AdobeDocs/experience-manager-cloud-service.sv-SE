@@ -2,16 +2,14 @@
 title: Utforma formulärmallar för HTML5-formulär
 description: AEM Forms kan återge XFA-formulärmallen till HTML5-format. Formulärdesigners kan utforma blankettmallar med Designer och använda HTML5-renderingsfunktionen.
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
-docset: aem65
 feature: HTML5 Forms,Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -21,7 +19,7 @@ ht-degree: 0%
 <span class="preview"> Funktionen HTML5 Forms erbjuds som en del av programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella (arbets) e-post till aem-forms-ea@adobe.com.
 </span>
 
-HTML5-formulärkomponenten i AEM kan återge XFA-formulärmallen till HTML5-format. Formulärdesigners kan utforma formulärmallar med [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) och använda återgivningsfunktionen HTML5. Dessa formulärmallar, tillsammans med deras resurser, kan finnas i AEM-databasen, filsystemet eller visas via http. Men om du tänker hantera dina formulär med Forms Manager bör mallarna och resurserna finnas i AEM-databasen.
+HTML5-formulärkomponenten i AEM kan återge XFA-formulärmallen till HTML5-format. Formulärdesigners kan utforma blankettmallar med Forms Designer och använda återgivningsfunktionen HTML5. Dessa formulärmallar, tillsammans med deras resurser, kan finnas i AEM-databasen, filsystemet eller visas via http. Men om du tänker hantera dina formulär med Forms Manager bör mallarna och resurserna finnas i AEM-databasen.
 
 Även om HTML5-formulär i stor utsträckning matchar PDF forms beteende finns det vissa funktioner i båda formaten som inte kan användas i det andra formatet. Hur streckkoder tillämpas på ett PDF-formulär i Adobe Reader varierar till exempel från ett mobilformulär eller hur ett formulär signeras digitalt varierar också mellan formaten. Mer information om sådana variationer finns i [Funktionsdifferentiering mellan HTML5-formulär och PDF forms](/help/forms/feature-differentiation-html5-forms-pdf-forms.md).
 

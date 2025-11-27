@@ -2,16 +2,15 @@
 title: Optimera HTML5-formulär
 description: Du kan optimera utdatastorleken för HTML5-formulär.
 content-type: reference
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: bdb9edc2-6a37-4d3f-97d5-0fc5664316be
 feature: HTML5 Forms,Mobile Forms
 exl-id: 14309ebd-8d00-4ca5-b4ab-44d80d97d066
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
@@ -86,4 +85,4 @@ Apache kan kommunicera med JBoss med HTTP eller AJP-protokollet.
    </Location>
    ```
 
-1. Använd https://[Apache_server]:80 om du vill komma åt AEM-servern.
+1. Använd https://[Apache_server]:80 för att få åtkomst till AEM-servern.

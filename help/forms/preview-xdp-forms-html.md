@@ -1,14 +1,12 @@
 ---
 title: Generera HTML5-förhandsgranskning av ett XDP-formulär
 description: Fliken Förhandsgranska HTML i LiveCycle Designer kan användas för att förhandsgranska formulär så som de visas i en webbläsare.
-products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
-docset: aem65
 feature: HTML5 Forms,Mobile Forms
 exl-id: 548f302b-57f0-4bdc-8a99-1a4967caa32f
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 22aeedaaf4171ad295199a989e659b6bf5ce9834
+source-git-commit: 1496d7517d586c99c5f1001fff13d88275e91d09
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
@@ -90,7 +88,7 @@ Det **skyddade läget** är aktiverat som standard. Låt det vara aktiverat för
    >
    >Kontrollera att AEM Forms-servern är igång. HTML Preview ansluter till CRX-servern för att *generera* en förhandsvisning.
 
-   ![Alternativ för AEM Forms Designer &#x200B;](assets/server_options.png)
+   ![Alternativ för AEM Forms Designer ](assets/server_options.png)
 
    Alternativ för AEM Forms Designer
 
@@ -120,9 +118,9 @@ Om du testar formuläret med en exempeldatakälla ser du till att data och fält
 
 1. Välj **Arkiv > Formuläregenskaper**.
 
-1. Klicka på fliken **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
+2. Klicka på fliken **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
 
-1. Klicka på **OK**. Nästa gång du förhandsgranskar formuläret på fliken **Förhandsgranska HTML** visas datavärdena från XML-exempelfilen i respektive objekt.
+3. Klicka på **OK**. Nästa gång du förhandsgranskar formuläret på fliken **Förhandsgranska HTML** visas datavärdena från XML-exempelfilen i respektive objekt.
 
 ## Förhandsgranska formulär i en databas {#html-preview-of-forms-in-forms-manager}
 
