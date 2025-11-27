@@ -19,7 +19,7 @@ ht-degree: 0%
 <span class="preview"> Funktionen HTML5 Forms erbjuds som en del av programmet för tidig åtkomst. Om du vill begära åtkomst skickar du ett e-postmeddelande från din officiella (arbets) e-post till aem-forms-ea@adobe.com.
 </span>
 
-FormBridge är ett HTML5 Form Bridge-API som gör att du kan interagera med ett formulär. <!--For the FormBridge API reference, see [FormBridge API reference](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/developer-reference/form-bridge-apis).-->
+FormBridge är ett HTML5 Form Bridge-API som gör att du kan interagera med ett formulär. <!--For the FormBridge API reference, see [FormBridge API reference](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/developer-reference/form-bridge-apis).-->
 
 Du kan använda API:t för FormBridge för att hämta eller ange värden för formulärfält från HTML-sidan och skicka formuläret. Du kan till exempel använda API för att skapa en guideliknande upplevelse.
 
