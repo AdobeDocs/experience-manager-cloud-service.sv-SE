@@ -3,9 +3,9 @@ title: Innehållsuppdateringskunskap
 description: Lär dig vad Experience Production Agents kompetens när det gäller innehållsuppdatering är och vad den kan göra för dig.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 8b7bdb86c3d1b537b536173b6307c486fe436636
+source-git-commit: 437da39f61d7af2fe01a1617d3299fd60ee38ad5
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Med Experience Production Agent kan ni automatisera innehållsproduktionen och därmed snabba upp rutinuppgifterna för Adobe Experience Manager (AEM) as a Cloud Service och Edge Delivery Services.
 
-Innehållet uppdaterar befintligt innehåll i hela CMS, inklusive innehållsfragment, sidor, formulär och resurser. Agenten kan utföra åtgärder som att uppdatera, ta bort, ersätta eller lägga till innehållselement för att hålla upplevelsen korrekt och aktuell. Inmatningar kan vara naturliga språkbeskrivningar, och när de används med Jira PDF-filer och skärmbilder kan de också ge inmatning.
+Innehållet uppdaterar befintligt innehåll, inklusive innehållsfragment, sidor, formulär och resurser. Agenten kan utföra åtgärder som att uppdatera, ta bort, ersätta eller lägga till innehållselement för att hålla upplevelsen korrekt och aktuell. Inmatningar kan vara naturliga språkbeskrivningar, och när de används med Jira PDF-filer och skärmbilder kan de också ge inmatning.
 
 ## Ökning {#overview}
 
