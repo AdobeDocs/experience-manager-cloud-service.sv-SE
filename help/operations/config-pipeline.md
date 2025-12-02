@@ -4,9 +4,9 @@ description: Lär dig hur du kan använda konfigurationspipelines för att distr
 feature: Operations
 role: Admin
 exl-id: bd121d31-811f-400b-b3b8-04cdee5fe8fa
-source-git-commit: 5e0626c57f233ac3814355d7efe7db010897d72b
+source-git-commit: ac04829b63ca5e2fee71f6c71d0730f21c576382
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -49,6 +49,7 @@ I följande tabell finns en omfattande lista över sådana konfigurationer med l
 | [Grundläggande autentisering](/help/implementing/dispatcher/cdn-credentials-authentication.md#purge-API-token#basic-auth) | `CDN` | Deklarera användarnamn och lösenord för en grundläggande autentiseringsdialogruta som skyddar vissa URL:er. | X | X |
 | [Underhållsaktivitet för versionsrensning](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM-databasen genom att deklarera regler för när innehållsversioner ska rensas | X |  |
 | [Granskningslogg Rensa underhållsaktivitet](/help/operations/maintenance.md#purge-tasks) | `MaintenanceTasks` | Optimera AEM granskningslogg för bättre prestanda genom att ange regler för när loggarna ska rensas | X |  |
+| [Underhållsaktivitet för tömning av arbetsflöde](/help/operations/maintenance.md) | `MaintenanceTasks` | Minimera antalet arbetsflödesinstanser för att öka arbetsflödesmotorns prestanda.<br><br>Se även [Regelbunden rensning av arbetsflödesinstanser](/help/sites-cloud/administering/workflows-administering.md#regular-purging-of-workflow-instances) | X |  |
 | [Loggvidarebefordran](/help/implementing/developing/introduction/log-forwarding.md) | `LogForwarding` | Konfigurera slutpunkterna och autentiseringsuppgifterna för vidarebefordran av loggar till olika mål, inklusive Azure Blob Storage, Datadog, HTTPS, Elasticsearch, Splunk | X | X |
 | [Registrerar ett klient-ID](/help/implementing/developing/open-api-based-apis.md) | `API` | Omvandla Adobe Developer Console API-projekt till en viss AEM-miljö genom att registrera klient-ID:t. Krävs för användning av OpenAPI-baserade API:er som kräver autentisering | X |  |
 
@@ -107,7 +108,7 @@ eller
     cdn.yaml
 ```
 
-Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde &#x200B;](#configurations).
+Mappnamnen och filnamnen under `/config` är godtyckliga. YAML-filen måste dock innehålla ett giltigt [`kind`-egenskapsvärde ](#configurations).
 
 Konfigurationer distribueras vanligtvis till alla miljöer. Om alla egenskapsvärden är identiska för varje miljö räcker det med en YAML-fil. Det är dock vanligt att egenskapsvärden skiljer sig åt mellan olika miljöer, till exempel när en lägre miljö testas.
 

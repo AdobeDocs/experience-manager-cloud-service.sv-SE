@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: f9a767e3d5ae33cd46dc100c2ee59ec9ce8f63ac
+source-git-commit: 83ab0fb97b233828fe43c1b53e649c918ce7b100
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '1976'
 ht-degree: 0%
 
 ---
@@ -113,6 +113,7 @@ Som vi nämnt i avsnittet [Varianter på Cloud Service-innehållsbegäranden](#c
 * Balansera era behov av aktualitet i innehållet med AEM licenskostnader för alla skräddarsydda crawler som ni har integrerat med er webbplats.  En alltför aggressiv crawler kan förbruka många innehållsförfrågningar.
 * Hantera eventuella omdirigeringar som server (status 301 eller 302) i stället för på klientsidan (status 200 med javascript-omdirigering) för att undvika två separata innehållsförfrågningar.
 * Kombinera eller minska API-anrop, som är JSON-svar från AEM som kan läsas in för att återge sidan.
+* Se till att webbläsarens användaragent skickas korrekt till AEM för att utnyttja undantagsregeln&quot;välkänd sökmotor&quot; för innehållsbegäran som beskrivs ovan.  Ibland försvinner den ursprungliga användaragenten med vissa headless-implementeringar eller CDN-konfigurationer som kan förhindra uteslutning och leda till fler innehållsförfrågningar än om användaragenten skickades.
 
 ### Trafikfilterregler för att hantera innehållsförfrågningar {#traffic-filter-rules-to-manage-crs}
 
