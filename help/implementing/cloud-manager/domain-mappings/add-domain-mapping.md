@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
 exl-id: 672513d7-ee0a-4f6e-9ef0-7a41fabbaf9a
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: 4935fbf5f0eb10f2f17280fb32f07d99f69eb875
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -33,31 +33,46 @@ Se även [Hanterat CDN för Adobe](https://www.aem.live/docs/byo-cdn-adobe-manag
 
    | Använd skiftläge | Steg |
    | --- | --- |
-   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på ikonen **Webbsidor** ![Edge Delivery Sites](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) på den vänstra menyn under **Tjänster**.<br>b. Klicka på ikonen ![Mer &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i Edge Delivery-tabellen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** . |
+   | Jag vill lägga till en CDN-konfiguration på en *befintlig* Edge Delivery-webbplats i Cloud Manager | a. Klicka på ikonen **Webbsidor** ![Edge Delivery Sites](https://spectrum.adobe.com/static/icons/workflow_18/Smock_WebPages_18_N.svg) på den vänstra menyn under **Tjänster**.<br>b. Klicka på ikonen ![Mer ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) i Edge Delivery-tabellen i slutet av en rad som inte har någon associerad domän.<br>c. Klicka på **Konfigurera CDN** . |
    | Jag vill lägga till en CDN-konfiguration i Cloud Manager | a. Klicka på **Ikonen för sociala nätverk** ![Domänmappningar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SocialNetwork_18_N.svg) på den vänstra menyn under **Tjänster**.<br>b. Klicka på **Lägg till** i det övre högra hörnet på sidan Domänmappningar. |
 
-1. Välj CDN-typ och associerad konfiguration i dialogrutan **Koppla domän till CDN** genom att välja något av följande:
+1. Välj någon av följande CDN-typer i dialogrutan **Koppla domän till CDN**:
 
-   | CDN-typ | Konfigurationsinformation |
-   | --- | --- |
-   | Hanterat CDN från Adobe (rekommenderas) | Gör följande under **Konfigurationsinformation**:<br>a. Välj det domännamn du vill använda i listrutan **Domän** .<br>Inga verifierade domäner är tillgängliga i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).<br>b.<!-- In the **SSL certificate** drop-down list, select a certificate that you want to use.<br>No SSL certificates available in the drop-down list? See [Add an SSL certificate](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).--> |
-   | Annan CDN-leverantör | Välj det här alternativet om du använder en egen CDN-leverantör och inte det CDN som hanteras av Adobe och som är tillgängligt för dig.<br>Under **Konfigurationsinformation** väljer du det domännamn du vill använda i listrutan **Domän**.<br>Inga verifierade domäner är tillgängliga i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md). |
+   * **Hanterat CDN i Adobe (rekommenderas)** - Ett CDN som hanteras av Adobe används för den här konfigurationen. Den innehåller automatiserad installation och hantering samt inbyggda säkerhetsfunktioner.
+   * **Annan CDN-provider** - Ett självhanterat CDN-providernätverk används för den här konfigurationen.
 
-   ![Dialogrutan Koppla domän till CDN med alternativknappen för hanterad CDN från Adobe markerad](/help/implementing/cloud-manager/assets/cdn/map-domain-to-cdn-dialog-box-adobe-managed-cdn.png)
+1. Baserat på den valda CDN-typen i föregående steg gör du följande:
+
+   * **Hanterad CDN för Adobe**
+
+     ![Dialogrutan Koppla domän till CDN med alternativknappen för hanterad CDN från Adobe markerad](/help/implementing/cloud-manager/assets/cdn/map-domain-to-cdn-adobe-managed.png)
+
+      1. Välj något av följande i listrutan **Ursprung**:
+
+         | Listrutan Ursprung | Beskrivning |
+         | --- | --- |
+         | Sites | Välj en Edge Delivery-webbplats. |
+         | Miljö | Välj en specifik Cloud Service-miljö som du vill ha som mål i din AEM-konfiguration.<br>Välj något av följande i listrutan **Nivå**:<br> ・ Välj **Publicera** om du vill ange en aktiv produktionsmiljö där innehållet levereras till slutanvändarna som mål.<br> ・ Välj **Förhandsgranska** för miljöer där du testar ändringar innan de publiceras. |
+
+      1. Välj det domännamn du vill använda i listrutan **Domän**.<br>Inga verifierade domäner är tillgängliga i listrutan? Se [Lägg till ett eget domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+
+      1. Välj ett certifikat som du vill använda i listrutan **SSL-certifikat**.<br>Inga SSL-certifikat är tillgängliga i listrutan? Se [Lägg till ett SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/add-ssl-certificate.md).
+
+      1. Klicka på **Spara**.
+
+   * **Annan CDN-provider**
+
+     ![Dialogrutan Koppla domän till CDN med alternativknappen för hanterad CDN från Adobe markerad](/help/implementing/cloud-manager/assets/cdn/map-domain-to-cdn-other-provider.png)
+
+     Använd de angivna konfigurationsstegen för att tillämpa de nödvändiga inställningarna i CDN och bekräfta mappningen. Se även [Lägg till ett anpassat domännamn](/help/implementing/cloud-manager/custom-domain-names/add-custom-domain-name.md).
+
+      1. Klicka på **Jag har konfigurerat mitt CDN**.
 
    <!-- OLD IMAGE/UI (/help/implementing/cloud-manager/assets/configure-cdn-dialog.png)-->
 
-1. I fältet **Domän** anger du det kundtillvända värdnamn som du vill använda (till exempel `www.example.com`)
-1. i listrutan **Ursprung** väljer du något av följande:
+   <!-- In the **Domain** field, enter the customer-facing hostname you want to serve (for example, `www.example.com`) -->
 
-   | Listrutan Ursprung | Beskrivning |
-   | --- | --- |
-   | Sites | Välj en Edge Delivery-webbplats. |
-   | Miljö | Välj en specifik Cloud Service-miljö som du vill ha som mål i din AEM-konfiguration.<br>Välj något av följande i listrutan **Nivå**:<br> ・ Välj **Publicera** om du vill ange en aktiv produktionsmiljö där innehållet levereras till slutanvändarna som mål.<br> ・ Välj **Förhandsgranska** för miljöer där du testar ändringar innan de publiceras. |
-
-1. Klicka på **Spara konfiguration**.
-
-   Adobe rekommenderar att du testar domänmappningen.
+1. Adobe rekommenderar att du testar domänmappningen.
 
 ## Testa domänmappningen {#test-domain-mapping}
 
