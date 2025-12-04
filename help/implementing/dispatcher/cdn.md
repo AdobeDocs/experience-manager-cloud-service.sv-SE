@@ -4,9 +4,9 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 7f00e68eac0b1e0090bdb57a8188af7bbe21ad1b
 workflow-type: tm+mt
-source-wordcount: '1744'
+source-wordcount: '1768'
 ht-degree: 2%
 
 ---
@@ -157,6 +157,13 @@ x-aem-debug: byocdn=true,edge=true,edge-auth=edge-auth,edge-key=edgeKey1,X-AEM-E
 ```
 
 Den här processen gör att du kan verifiera information som värdvärden, edge-autentiseringskonfiguration och det x-forward-host-rubrikvärdet. Den identifierar också om en kantnyckel är inställd och vilken tangent som används om det finns en matchning.
+
+>[!NOTE]
+>
+>Du kan använda en Rapid Development Environment (RDE) för att distribuera och testa konfigurationen:
+>
+>* [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md)
+>* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 

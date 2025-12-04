@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till en Edge Delivery-webbplats i ditt prod
 feature: Cloud Manager, Developing
 role: Admin, Developer
 exl-id: 17e842c9-599a-4877-9834-1e7220f508a8
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 7c990e7e42477120c7ce0720bdb6dc7d03308f92
 workflow-type: tm+mt
-source-wordcount: '554'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,12 @@ Klicka på ![Länkikonen eller Lägg till](https://spectrum.adobe.com/static/ico
    | **3** | Skapa en pull-begäran i Git-databasen för de ändringar som du nyss skapade och sammanfoga den sedan till `main` för att bekräfta koden. |
 
 1. Klicka på **Verifiera**.
+
+   >[!NOTE]
+   >
+   >Om du använder Helix-autentisering på din Edge Delivery Services-webbplats är verifieringsproblemet inte tillgängligt. Inaktivera autentisering tillfälligt, slutför platsverifiering och aktivera sedan autentiseringen igen.
+
+
 
 När databasen har verifierats uppdateras dess status i Edge Delivery platstabell. En grön cirkel med en vit bock inuti visar statusen.
 
