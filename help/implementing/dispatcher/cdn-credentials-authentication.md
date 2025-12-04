@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar CDN-autentiseringsuppgifter och autent
 feature: Dispatcher
 exl-id: a5a18c41-17bf-4683-9a10-f0387762889b
 role: Admin
-source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
+source-git-commit: 68a41d468650228b4ac35315690a76465ffe4c0b
 workflow-type: tm+mt
-source-wordcount: '1939'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,38 @@ CDN som tillhandahålls av Adobe har flera funktioner och tjänster, varav vissa
 
 Var och en av dessa, inklusive konfigurationssyntaxen, beskrivs i sitt eget avsnitt nedan.
 
-Det finns ett avsnitt om hur du [roterar nycklar](#rotating-secrets), vilket är en bra säkerhetspraxis.
+Hemligheter för miljö eller pipeline (distributionssteg) kan refereras med `${{..}}`-syntax och kan användas där ett literalt värde kan användas, under villkor eller i set-metoder.
 
->[!NOTE]
-> Hemligheter som definieras som miljövariabler bör betraktas som oföränderliga. I stället för att ändra deras värde bör du skapa en ny hemlighet med ett nytt namn och en referens till hemligheten i konfigurationen. Om du inte gör det kommer hemligheterna att uppdateras på ett otillförlitligt sätt.
+```
+kind: "CDN"
+version: "1"
+data:
+  originSelectors:
+    rules:
+      - name: select-origin-example
+        when: { reqHeader: "x-auth-header", equals: "${{AUTH_HEADER}}" }
+        action:
+          type: selectOrigin
+          originName: origin-name
+          headers:
+            Authorization: "${{AUTH_HEADER}}"
+    ...
+```
 
->[!WARNING]
->Ta inte bort de miljövariabler som refereras i CDN-konfigurationen. Detta kan orsaka fel vid uppdatering av CDN-konfigurationen (till exempel uppdatering av regler eller anpassade domäner och certifikat).
+Här följer några riktlinjer som du bör tänka på när du arbetar med hemligheter:
+
+* Miljöhemligheter måste distribueras som en [Cloud Manager-miljövariabel av hemlig typ](/help/operations/config-pipeline.md#secret-env-vars). Välj Alla för fältet Tjänst används.
+* Hemliga referenser interpoleras inte i strängar (t.ex. `"Token ${{AUTH_TOKEN}}"` fungerar inte)
+* En refererad miljöhemlighet ska inte tas bort om den fortfarande refereras i konfigurationen.
+
+  >[!WARNING]
+  >Ta inte bort de miljövariabler som refereras i CDN-konfigurationen. Detta kan orsaka fel vid uppdatering av CDN-konfigurationen (till exempel uppdatering av regler eller anpassade domäner och certifikat).
+
+* Hemligheter bör roteras regelbundet. Det finns ett avsnitt om hur du [roterar nycklar](#rotating-secrets), vilket är en bra säkerhetspraxis.
+
+  >[!NOTE]
+  > Hemligheter som definieras som miljövariabler bör betraktas som oföränderliga. I stället för att ändra deras värde bör du skapa en ny hemlighet med ett nytt namn och en referens till hemligheten i konfigurationen. Om du inte gör det kommer hemligheterna att uppdateras på ett otillförlitligt sätt.
+
 
 ## Kundhanterat CDN HTTP-huvudvärde {#CDN-HTTP-value}
 
@@ -63,7 +88,7 @@ data:
 
 Se [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) för en beskrivning av egenskaperna ovanför noden `data`. Egenskapsvärdet `kind` ska vara *CDN* och egenskapen `version` ska vara `1`.
 
-Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
+Mer information finns i [Konfigurera och distribuera CDN-regel för HTTP-huvudvalidering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule).
 
 Ytterligare egenskaper är:
 
@@ -183,7 +208,7 @@ Ytterligare egenskaper är:
 >[!NOTE]
 >Töm nyckel måste konfigureras som en [hemlig typ av Cloud Manager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) innan konfigurationen som refererar till den distribueras. Vi rekommenderar att du använder en unik slumpmässig nyckel med en längd på minst 32 byte. Open SSL-kryptografibiblioteket kan till exempel generera en slumpmässig nyckel genom att köra kommandot openssl rand -hex 32
 
-Du kan referera till [en självstudie](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
+Du kan referera till [en självstudie](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache) som fokuserar på att konfigurera rensningsnycklar och utföra rensning av CDN-cache.
 
 ## Grundläggande autentisering {#basic-auth}
 
