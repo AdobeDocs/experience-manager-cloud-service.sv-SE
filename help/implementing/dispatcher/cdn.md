@@ -163,7 +163,7 @@ Den här processen gör att du kan verifiera information som värdvärden, edge-
 >Du kan använda en Rapid Development Environment (RDE) för att distribuera och testa konfigurationen:
 >
 >* [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md)
->* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
+>* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 
