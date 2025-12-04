@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerar
 feature: Developing
 role: Admin, Developer
 exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
-source-git-commit: 0557379b8d70205043ed87e104d9576ed40a13ce
+source-git-commit: edcba16831a40bd03c1413b33794268b6466d822
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 0%
 # Konfigurera RTE för Universal Editor {#configure-rte}
 
 Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerare.
-
->[!NOTE]
->
->Den här dokumentationen gäller den nya RTE-versionen för den universella redigeraren, som är tillgänglig som en tidig adopter-funktion. Om du är intresserad av att testa den här nya funktionen [kan du få mer information i versionsinformationen.](/help/release-notes/universal-editor/current.md#new-rte)
 
 ## Ökning {#overview}
 

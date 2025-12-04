@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.11.20
-description: Detta är versionsinformationen för version 2025.11.20 av Universal Editor.
+title: Versionsinformation om Universal Editor 2025.12.04
+description: Detta är versionsinformationen för version 2025.12.04 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: e36ff1c7c3f03124941c464cc340deef0cdd403b
+source-git-commit: e500b971e36fdb3d867e2d6b2a21eced66005182
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '166'
 ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.11.20 {#release-notes}
+# Versionsinformation om Universal Editor 2025.12.04 {#release-notes}
 
-Det här är versionsinformationen för den 20 november 2025-versionen av Universal Editor.
+Detta är versionsinformationen för den 4 december 2025-utgåvan av Universal Editor.
 
 >[!TIP]
 >
@@ -26,11 +26,9 @@ Det här är versionsinformationen för den 20 november 2025-versionen av Univer
 
 ## Nyheter {#what-is-new}
 
-* Popup har migrerats till ett nytt användargränssnitt.
-
-## Funktioner för tidig användning {#early-adopter}
-
-Om du är intresserad av att testa dessa kommande funktioner och dela med dig av dina synpunkter skickar du ett e-postmeddelande till din Adobe Customer Success Manager från den e-postadress som är kopplad till din Adobe ID.
+* Autentiseringsrubriker har inaktiverats till förmån för inloggningen för den [lokala utvecklaren.](/help/sites-cloud/authoring/universal-editor/navigation.md#local-developer-login)
+* En snabbmeny är nu tillgänglig i det [strukturerade trädet när du högerklickar.](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode)
+* En snabbtangent lades till i [duplicerade komponenter.](/help/sites-cloud/authoring/universal-editor/navigation.md#duplicate)
 
 ### Ny RTE {#new-rte}
 
@@ -38,7 +36,6 @@ Den nya ProseMirror RTE med en sidväljare i länkdialogrutan är nu tillgängli
 
 ## Andra förbättringar {#other-improvements}
 
-* Hanteringen av RTE-värden har förenklats.
-* Ett sällsynt verktygsfältstillstånd har åtgärdats.
-* Oanvända funktionsväxlar har tagits bort.
-* Beroenden uppdaterades.
+* Ett problem med att textredigeraren inte sparades korrekt på arbetsytan har lösts.
+* Urklippen i mappträdet för innehållsväljaren har åtgärdats.
+* `componentId` tillhandahålls nu under en tilläggsåtgärd.

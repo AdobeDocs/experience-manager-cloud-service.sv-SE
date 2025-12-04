@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: 73d85b27df338d91a001d5f97503a958a8edfdc7
+source-git-commit: 69afe04e848a5a1000fc4661f6b33815f29b5adf
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Versionsinformation om förhandsvisning i Universal Editor {#preview}
 
-Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner kommer att släppas den 4 december 2025.
+Det här är versionsinformationen för **förhandsvisningsversionen** av den universella redigeraren. De här funktionerna är för närvarande tillgängliga i den universella redigerarens **förhandsvisningsmiljö**. Dessa funktioner är planerade att släppas allmänt tillgängliga den 11 december 2025.
 
 Versionsinformationen **preview** är praktisk så att du vet vilka ändringar som kommer att göras i den universella redigeraren och kan testa dem genom att [växla till förhandsvisningsmiljön.](/help/sites-cloud/authoring/universal-editor/navigation.md#user-properties)
 
@@ -27,12 +27,22 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande nya funktioner {#what-is-new}
 
-* Autentiseringsrubriker har inaktiverats till förmån för inloggningen för den [lokala utvecklaren.](/help/sites-cloud/authoring/universal-editor/navigation.md#local-developer-login)
-* En snabbmeny är nu tillgänglig i det strukturerade trädet när du högerklickar.
-* En snabbtangent har lagts till för att duplicera komponenter.
+* Stöd läggs till i befintliga tabeller i den nya RTF-redigeraren.
+* Tabbtangenten är aktiverad för kapslade listor i den nya RTF-redigeraren.
+* Inloggningsfunktionen för utvecklare kan inaktiveras via metataggen `dev-login`.
+* En snabbmeny visas när du högerklickar i övertäckningsavsnittet.
+* Omfångsindrag stöds nu i den nya textredigeraren
+* Grund kopia har implementerats för innehållsfragment.
 
 ## Kommande förbättringar {#other-improvements}
 
-* Ett problem med att textredigeraren inte sparades korrekt på arbetsytan har lösts.
-* Urklippen i mappträdet för innehållsväljaren har åtgärdats.
-* `componentId` tillhandahålls nu under en tilläggsåtgärd.
+* Egenskapsfältet synkroniseras nu när flera fält ändras i sitt sammanhang.
+* Innehållsfragmentväljaren öppnas nu som väntat i AEM 6.5-instanser.
+* Esc-tangenten stänger nu dialogrutor i den nya RTF-redigeraren.
+* Åtgärden **Ta bort komponent** är nu bara tillgänglig när en komponent är markerad.
+* Den korrekta (gamla eller nya) redigeraren för innehållsfragment öppnas nu baserat på den använda instansen (om värdnamnet är AEM as a Cloud Service-mönstret använder du den nya redigeraren, annars använder du den äldre redigeraren).
+* Filtervalidering läggs till i dubblettåtgärden.
+* Långa titlar trunkeras nu i egenskapsfältet.
+* Matriser för hantering av flera webbplatser med fler än 10 värden hanteras nu korrekt.
+* Konfliktfel vid skapande av flera komponenter med samma namn hanteras nu korrekt.
+* Matrishantering för flera platser med värden >10 lades till.
