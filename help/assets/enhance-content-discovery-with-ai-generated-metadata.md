@@ -3,9 +3,9 @@ title: Förbättra innehållsidentifiering med AI-genererade metadata i administ
 description: Lär dig förbättra innehållsidentifiering med AI-genererade metadata i administratörsvyn
 feature: Smart Tags,Tagging
 role: Admin,User
-source-git-commit: 5dbad509f5a5a9addfe6b52c3c3dd7ce5fa3229d
+source-git-commit: f83324be68bdab65e5c76ef336eb7e4a2e318dd1
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,13 @@ Så här aktiverar du AI-genererade metadata:
 
 * Den lägsta version av AEM som krävs är `20626`.
 
-* Du måste underteckna ett GenAI Rider-avtal. Kontakta Adobe om du vill ha mer information.
-
 ## Konfigurera AI-genererade titlar {#configure-ai-generated-titles}
 
 Med AEM kan du konfigurera visningen av resursrubriker i kortvyn eller listvyn på sidan Resursbläddring. Du kan välja att visa resurstiteln som du har definierat, titeln som har genererats med AI, eller använda AI-genererad titel endast om det inte finns någon befintlig titel för resursen.
 
 Så här konfigurerar du AI-genererade titlar:
 
-1. Navigera till **[!UICONTROL Tools > Assets > Assets Configuration > Smart Tag Enhancement Configuration]**.
+1. Navigera till **[!UICONTROL Tools > Assets > Assets Configurations > Smart Tag Enhancement Configuration]**.
 
 1. Välj något av följande alternativ:
 
@@ -71,20 +69,12 @@ Utför följande steg om du vill använda den förbättrade funktionen för smar
 
 ## Inaktivera AI-genererade metadata {#disable-ai-generated-metadata}
 
-Du kan inaktivera AI-genererade metadata på mappnivå. Alla underordnade mappar ärver egenskaperna från den överordnade mappen.
+Så här inaktiverar du AI-genererade metadata:
 
-Så här inaktiverar du AI-genererade metadata på mappnivå:
+1. Navigera till **[!UICONTROL Tools > Assets > Assets Configurations > Smart Tag Enhancement Configuration]**.
 
-1. Navigera till **[!UICONTROL Adobe Experience Manager > Assets > Files]**.
+1. Välj **[!UICONTROL Disable Smart Tag Enhancements]**.
 
-1. Markera mappen och klicka på **[!UICONTROL Properties]**.
+1. Klicka på **[!UICONTROL Save]** .
 
-1. Gå till mappen **[!UICONTROL Asset Processing]** på fliken **[!UICONTROL Smart Tags Enhancements for images]**. Välj något av följande värden i listrutan:
-
-   * Ärvd - Mappen ärver aktiverings- eller inaktiveringsalternativen från den överordnade mappen.
-
-   * Aktivera - Aktiverar AI-genererade metadata för den valda mappen.
-
-   * Inaktivera - Inaktiverar AI-genererade metadata för den valda mappen.
-
-     ![Inaktivera AI-genererade metadata](assets/disable-ai-generated-metadata.png)
+De AI-genererade metadata inaktiveras för nya resurser eller mappar som du överför till AEM Assets. De befintliga resurserna eller mapparna som har AI-genererade metadatafält som redan genererats fortsätter att visa dessa fält.

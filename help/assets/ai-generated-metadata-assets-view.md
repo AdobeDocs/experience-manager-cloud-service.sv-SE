@@ -1,9 +1,9 @@
 ---
 title: Förbättra innehållsidentifiering med AI-genererade metadata
 description: Lär dig förbättra innehållsidentifiering med AI-genererade metadata
-source-git-commit: e5b4d7692c9c57ba3e9c76940f28d72ad14d9fc0
+source-git-commit: f83324be68bdab65e5c76ef336eb7e4a2e318dd1
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,6 @@ Så här aktiverar du AI-genererade metadata:
 
 * Den lägsta version av AEM som krävs är `20626`.
 
-* Du måste underteckna ett GenAI Rider-avtal. Kontakta Adobe om du vill ha mer information.
 
 ## Använda AI-genererade metadata {#using-ai-generated-smart-tags}
 

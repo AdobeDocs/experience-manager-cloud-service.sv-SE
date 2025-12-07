@@ -3,9 +3,9 @@ title: Översikt över identifieringsagent
 description: Lär dig hur du kan använda Discovery Agent för att leverera relevant AEM-innehåll på begäran via naturliga, konversationsmoment för att få en smidig, klickfri upptäckt.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 0a23cdf1cbc7738d843438b8d1aad358101c918e
+source-git-commit: f83324be68bdab65e5c76ef336eb7e4a2e318dd1
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1265'
 ht-degree: 0%
 
 ---
@@ -92,13 +92,13 @@ Exempeluppmaningar:
 * Visa resurser som ändrats efter `Nov 1 2025` i mappen `WKND`.
 * Lista `lifestyle` bilder i mappen `WKND`.
 
-**Upplösning och formatbaserad resursidentifiering**
+**Formatbaserad resursidentifiering**
 
-Identifieringsagenten kan identifiera resurser som uppfyller specifika kvalitetskrav, t.ex. filformat eller minimiupplösning, så att användarna snabbt kan hitta produktbilder som är klara för högkvalitativ leverans och återanvändning i olika kanaler.
+Identifieringsagenten kan identifiera resurser som uppfyller specifika kvalitetskrav, till exempel filformat, så att användarna snabbt kan hitta produktbilder som är klara för högkvalitativ leverans och återanvändning i olika kanaler.
 
 Exempelfråga:
 
-Hitta PNG-bilder med produktförpackningar som är minst 2 000 pixlar breda.
+Hitta PNG-bilder för produktförpackningar.
 
 **Orienteringsbaserad innehållsidentifiering**
 
