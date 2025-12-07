@@ -19,13 +19,13 @@ Du kan lägga till dina tillägg på nivån **Resurs**, **Mapp** och **Samling**
 >[!IMPORTANT]
 >
 > * [!DNL AEM Assets View] UI-utbyggbarhet är tillgänglig med [[!DNL Assets Ultimate]](/help/assets/assets-ultimate-overview.md).
-> * [!DNL Assets view]Skapa och skicka ett [kundsupportärende [!DNL Adobe]  om du vill få åtkomst till ](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) UI-utökningsbarhet.
+> * [!DNL Assets view]Skapa och skicka ett [kundsupportärende [!DNL Adobe]  om du vill få åtkomst till &#x200B;](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) UI-utökningsbarhet.
 > * Du kan ge feedback genom att expandera **[!UICONTROL Detailed Feedback options]** och klicka på **[!UICONTROL Report an issue]**.
 
 ## <a id="1"></a> Öppna Assets-vyn{#add-UI-Extensibility-in-AEM-Assets-View}
 
 Följ stegen som anges i bilden nedan för att komma åt [!DNL Assets View]:
-![ access-assets-view-ui ](/help/assets/assets/access-assets-view.jpg)
+![&#x200B; access-assets-view-ui &#x200B;](/help/assets/assets/access-assets-view.jpg)
 
 ## Visa gränssnittstillägg i [!DNL Assets View] {#ui-extensibility-panel-assets-view}
 
