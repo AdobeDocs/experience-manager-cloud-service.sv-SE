@@ -2,9 +2,9 @@
 title: Godkänn resurser för Content Hub
 description: Lär dig hur du godkänner mediefiler i Assets as a Cloud Service och gör dem tillgängliga i Content Hub.
 exl-id: fc849028-ab56-4388-b8d6-e36cac8f868f
-source-git-commit: 9c1104f449dc2ec625926925ef8c95976f1faf3d
+source-git-commit: aec2bd06ad498e92ce1e69ac587ee7fcd5106268
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1126'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Så här anger du godkännandemål:
 
 1. Markera resursen och klicka på **[!UICONTROL Details]** i verktygsfältet.
 
-1. Välj resursstatus i listrutan **[!UICONTROL Status]** på fliken **[!UICONTROL Basic]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
+1. Välj resursstatus i listrutan **[!UICONTROL Basic]** på fliken **[!UICONTROL Status]**. Möjliga värden är Godkänd, Avvisat och Ingen status (standard).
 
 1. Om du väljer **Godkänd** i steg 2 väljer du ett godkännandemål. Exempel på möjliga värden är Delivery och Content Hub.
 
@@ -82,10 +82,6 @@ Så här anger du godkännandemål:
 
 
    Mer information om de tillgängliga alternativen finns i [Standardmål för godkännande och publiceringsmål för godkända resurser](#default-approval-target-options-publish-destinations).
-
-   >[!NOTE]
-   >
-   >Att ange ett godkännandemål är en begränsad tillgänglighetsfunktion. Du kan aktivera eller inaktivera det genom att skapa en supportanmälan. Om du har aktiverat Dynamic Media med OpenAPI är det aktiverat som standard.
 
    ![Godkännandestatus](/help/assets/assets/approval-status-delivery.png)
 
@@ -125,13 +121,13 @@ Följ de här stegen för att automatisera godkännande av nyimporterade resurse
 1. Dra och släpp **[!UICONTROL Single Line Text Field]** från avsnittet **[!UICONTROL Build Form]** på höger sida till avsnittet Metadata i formuläret.
 1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
    1. Ändra **[!UICONTROL Field Label]** till _Godkänd Assets_.
-   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:status_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam :status_.
    1. Ändra standardvärdet till _godkänt_.
 
 1. Ungefär som i steg 6 drar du en **[!UICONTROL Single Line Text Field]** från avsnittet **[!UICONTROL Build Form]** till höger till avsnittet Metadata i formuläret.
 1. Klicka på det nya fältet och gör sedan följande uppdateringar på panelen **[!UICONTROL Settings]**:
    1. Ändra **[!UICONTROL Field Label]** till _Aktiveringsmål_.
-   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam:activationTarget_.
+   1. Uppdatera **[!UICONTROL Map to property]** till _./jcr:content/metadata/dam :activationTarget_.
    1. Ändra standardvärdet till _contenthub_.
 
 1. Klicka på **[!UICONTROL Save]**.
