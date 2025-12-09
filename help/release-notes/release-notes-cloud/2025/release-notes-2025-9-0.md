@@ -3,7 +3,7 @@ title: Versionsinformation om 2025.9.0-utgåvan av  [!DNL Adobe Experience Manag
 description: Versionsinformation om 2025.9.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: ed51ff8df6d1e387960e8580c6dfb543a09ef8fa
+source-git-commit: ecc32b6b501be4a53bf26f170e501dc1407d1a57
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 0%
@@ -18,7 +18,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.9.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -79,7 +79,7 @@ Content Hub-administratörer kan nu fästa samlingar i Content Hub för snabb å
 
 >[!IMPORTANT]
 >
->De här funktionerna är tillgängliga som funktioner för begränsad tillgänglighet. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
+>De här funktionerna är tillgängliga som funktioner för begränsad tillgänglighet. Du kan [skapa och skicka ett Adobe kundsupportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) för att aktivera det för din distribution.
 
 <!--
 
@@ -95,7 +95,7 @@ Content Hub Administrators can now pin collections in Content Hub for quick acce
 
 >[!NOTE]
 >
->These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
+>These features are available as Limited Availability features. You can [create and submit an Adobe Customer Support case](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) to enable it for your deployment.
 
 -->
 
@@ -117,15 +117,15 @@ I versionsinformationen visas de innovationer som levererats i den aktuella vers
 
 * **PDF Preview i Interactive Communication Editor**
 
-  Användare kan förhandsgranska interaktiva dokument utan data, med lokala JSON-datafiler eller med data från en datamodell, vilket möjliggör flexibel datadriven testning. Mer information finns i [PDF Preview i den interaktiva kommunikationsredigeraren](/help/forms/interactive-communication/pdf-preview-in-interactive-communication-editor-with-different-data-options.md).
+  Användare kan förhandsgranska interaktiva dokument utan data, med lokala JSON-datafiler eller med data från en datamodell, vilket möjliggör flexibel datadriven testning. Mer information finns i [PDF Preview i den interaktiva kommunikationsredigeraren](/help/forms/interactive-communication/generate-pdf-preview.md).
 
 * **Stöd för anpassade teckensnitt i interaktiv kommunikation**
 
-  Med funktionen för anpassade teckensnitt kan man bädda in anpassade eller organisationsgodkända teckensnitt i Interactive Communications för att säkerställa enhetlig och varumärkesprofilerad PDF-återgivning på olika enheter och plattformar. Mer information finns i [Stöd för anpassade teckensnitt i interaktiv kommunikation](/help/forms/interactive-communication/add-custom-fonts-to-interactive-communication-editor.md).
+  Med funktionen för anpassade teckensnitt kan man bädda in anpassade eller organisationsgodkända teckensnitt i Interactive Communications för att säkerställa enhetlig och varumärkesprofilerad PDF-återgivning på olika enheter och plattformar. Mer information finns i [Stöd för anpassade teckensnitt i interaktiv kommunikation](/help/forms/interactive-communication/add-custom-fonts.md).
 
 * **Importera och exportera interaktiv kommunikation**
 
-  Med den här funktionen kan du migrera och återanvända interaktiv kommunikation i olika miljöer. Nu kan du exportera en interaktiv kommunikation tillsammans med tillhörande fragment och datamodeller från en miljö och importera den till en annan. Mer information finns i [Importera och exportera interaktiv kommunikation](/help/forms/interactive-communication/import-and-export-interactive-communications.md).
+  Med den här funktionen kan du migrera och återanvända interaktiv kommunikation i olika miljöer. Nu kan du exportera en interaktiv kommunikation tillsammans med tillhörande fragment och datamodeller från en miljö och importera den till en annan. Mer information finns i [Importera och exportera interaktiv kommunikation](/help/forms/interactive-communication/import-and-export-the-interactive-communication.md).
 
 * **Förbättringar i regelredigeraren**
 
@@ -166,7 +166,7 @@ Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Vår
 >[!NOTE]
 >
 >Tillgänglig som begränsad tillgänglighet den 25 september.
->&#x200B;>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
+>Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
 
 ### Ny version av AEM Developer Tools for Eclipse {#aem-develeper-tools-for-eclipse}
 
@@ -282,12 +282,12 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -307,4 +307,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).

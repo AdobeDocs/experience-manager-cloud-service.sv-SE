@@ -7,12 +7,13 @@ hide: true
 index: false
 hidefromtoc: true
 exl-id: 4f28c260-9842-467e-8abb-bcca224280b8
-source-git-commit: aa8f6e129febaf246b70da43dd1d34b6caaf066d
+source-git-commit: 3a4119cfddda5d2d55f9a74848afe59eb0c1b709
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
 
 ---
+
 
 # Interaktiv kommunikation
 
@@ -25,7 +26,6 @@ Till skillnad från AEM Forms Desktop Designer, som bara kan installeras på Win
 ![Interaktiv kommunikationsredigerare](/help/forms/assets/ic-editor.png)
 
 Interactive Communications är det rätta verktyget för att enkelt och effektivt ta fram högklassig, säker och lagenligt korrespondens - från finansinstitut som tar fram kontoutdrag till myndigheter som effektiviserar förmånsmeddelandena.
-
 
 ## Kärnfunktioner
 

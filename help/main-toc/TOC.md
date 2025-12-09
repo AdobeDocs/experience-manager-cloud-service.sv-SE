@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Lär dig om hur Experience Manager as a Cloud Service fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM as a Cloud Service
-source-git-commit: 542f0d7b295a87e2f64bc8e47cea4569b2a295aa
+source-git-commit: b2b85d1e802c7f287b875d53a9347ca07ea2b806
 workflow-type: tm+mt
-source-wordcount: '6978'
+source-wordcount: '6886'
 ht-degree: 1%
 
 ---
@@ -301,7 +301,7 @@ ht-degree: 1%
 + Experience Hub {#experience-hub}
    + [Om Experience Hub](/help/experience-hub.md)
 + Onboarding {#onboarding}
-   + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=sv-SE)
+   + [Börja här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html)
    + Onboardresa {#journey}
       + [Översikt över introduktionsresan](/help/journey-onboarding/overview.md)
       + [Förberedelse för introduktion](/help/journey-onboarding/preparation.md)
@@ -526,7 +526,7 @@ ht-degree: 1%
                + [Konfigurera översättningsregler](/help/journey-sites/translation/translation-rules.md)
                + [Översätta innehåll](/help/journey-sites/translation/translate-content.md)
                + [Publicera översatt innehåll](/help/journey-sites/translation/publish-content.md)
-            + [Headless Translation Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=sv-SE)
+            + [Headless Translation Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)
             + [Översätta innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md)
             + [Förbereder innehåll för översättning](/help/sites-cloud/administering/translation/preparation.md)
             + [Hantera översättningsprojekt](/help/sites-cloud/administering/translation/managing-projects.md)
@@ -546,7 +546,7 @@ ht-degree: 1%
       + [Exportera innehållsfragment till Adobe Target](/help/sites-cloud/integrating/content-fragments-target.md)
       + [Exportera Experience Fragments till Adobe Target](/help/sites-cloud/integrating/experience-fragments-target.md)
       + [Integrera med Adobe Campaign](/help/sites-cloud/integrating/campaign.md)
-      + [Använda innehållsfragment i Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-with-journey-optimizer.html?lang=sv-SE)
+      + [Använda innehållsfragment i Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-with-journey-optimizer.html)
    + [Drifttelemetri för AEM as a Cloud Service](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md)
    + [Sammanhangsbaserad experimentering](/help/sites-cloud/administering/contextual-experimentation.md)
 + Assets {#assets}
@@ -629,7 +629,7 @@ ht-degree: 1%
    + Dela och distribuera resurser {#brand-portal}
       + [Konfigurera [!DNL Assets] med [!DNL Brand Portal]](/help/assets/configure-aem-assets-with-brand-portal.md)
       + [Publicera resurser på  [!DNL Brand Portal]](/help/assets/publish-to-brand-portal.md)
-      + [Publicera resurser från [!DNL Brand Portal] till [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=sv-SE)
+      + [Publicera resurser från [!DNL Brand Portal] till [!DNL Assets]](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html)
    + Innehållsfragment {#content-fragments}
       + [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
       + [Headless Delivery with Content Fragments and GraphQL](/help/assets/content-fragments/content-fragments-graphql.md)
@@ -901,9 +901,9 @@ ht-degree: 1%
                + [Lägga till formulärlänkar på webbplatssidan med hjälp av komponenten Länk](/help/forms/add-form-link-to-aem-sites-page.md)
       + Foundation Components {#authoring-adaptive-forms-foundation-components}
          + Konvertera din PDF forms till Adaptiv Forms {#afcs}
-            + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=sv-SE)
-            + [Konvertera ett befintligt PDF-formulär till ett adaptivt formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html?lang=sv-SE)
-            + [Granska och korrigera konverterade formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/review-correct-ui-edited.html?lang=sv-SE#welcome-to-review-and-correct-editor)
+            + [Introduktion till den automatiserade konverteringstjänsten för formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html)
+            + [Konvertera ett befintligt PDF-formulär till ett adaptivt formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/convert-existing-forms-to-adaptive-forms.html)
+            + [Granska och korrigera konverterade formulär](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/review-correct-ui-edited.html#welcome-to-review-and-correct-editor)
          + Skapa ett adaptivt formulär {#create-an-adaptive-form-on-forms-cs}
             + [Introduktion till framtagning av en adaptiv Forms](/help/forms/introduction-forms-authoring.md)
             + [Sammanhangsberoende hjälp för formulärfält](/help/forms/authoring-in-field-help.md)
@@ -921,7 +921,7 @@ ht-degree: 1%
             + [Använd CAPTCHA i anpassad form](/help/forms/captcha-adaptive-forms.md)
             + [Använd Captcha i anpassad form](/help/forms/integrate-adaptive-forms-hcaptcha.md)
             + [Använd Turnstile CAPTCHA i adaptiv form](/help/forms/integrate-adaptive-forms-turnstile.md)
-            + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
+            + [Använd kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
             + [Använd klottrar signatur](/help/forms/signing-forms-using-scribble.md)
             + [Lägga till en tabell i ett anpassat formulär](/help/forms/adaptive-forms-tables.md)
             + [Stöd för att lägga till fotnoter i ett anpassat formulär](/help/forms/footnotes-richtextsupport.md)
@@ -988,61 +988,64 @@ ht-degree: 1%
       + [Felsöka HTML5-formulär](/help/forms/debug.md)
       + [Skriptstöd för HTML5-formulär](/help/forms/scripting-support.md)
       + [Formuläruppsättning i AEM Forms](/help/forms/formset-in-aem-forms.md)
-   + Interaktiv kommunikation {#interactive-communication}
-      + Ökning {#overview}
-         + [Introduktion till Interactive Communication Editor](/help/forms/interactive-communication/introduction-to-interactive-communication-editor.md)
-         + [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-         + [Skapa en interaktiv kommunikationsmall](/help/forms/interactive-communication/create-interactive-communication-template.md)
-         + [Skapa ett interaktivt kommunikationsfragment](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
-         + [Introduktion till interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md)
-         + [Skapa din första interaktiva kommunikation](/help/forms/create-your-first-communication.md)
-      + Komponent {#component}
-         + [Textrutekomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/text-box-component-in-interactive-communication-editor.md)
-         + [Bildkomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/image-component-in-interactive-communication-editor.md)
-         + [Bildfältskomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/image-field-component-in-interactive-communication-editor.md)
-         + [Textfältskomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/text-field-component-in-interactive-communication-editor.md)
-         + [Numerisk fältkomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/numeric-field-component-in-interactive-communication-editor.md)
-         + [Datum-/tidfältskomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/date-time-field-component-in-interactive-communication-editor.md)
-         + [Datumfältskomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/date-field-component-in-interactive-communication-editor.md)
-         + [Kryssrutekomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/check-box-component-in-interactive-communication-editor.md)
-         + [Alternativknappskomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/radio-button-component-in-interactive-communication-editor.md)
-         + [Delformulärskomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/subform-component-in-interactive-communication-editor.md)
-         + [Komponenten Rectangle i Interactive Communication Editor](/help/forms/interactive-communication/rectangle-component-in-interactive-communication-editor.md)
-         + [Tabellkomponent i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/table-component-in-interactive-communication-editor.md)
-         + [Line Component in Interactive Communication Editor](/help/forms/interactive-communication/line-component-in-interactive-communication-editor.md)
-         + [Streckkodskomponent i Interactive Communication Editor](/help/forms/interactive-communication/barcode-component-in-interactive-communication-editor.md)
-      + [Databindning i Interactive Communication Editor](/help/forms/interactive-communication/data-binding-in-interactive-communication-editor.md)
-      + [Skapa regel i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/rule-creation-in-interactive-communication-editor.md)
-      + [Importera och exportera interaktiv kommunikation](/help/forms/interactive-communication/import-and-export-interactive-communications.md)
-      + [Lägg till anpassade teckensnitt i den interaktiva kommunikationsredigeraren](/help/forms/interactive-communication/add-custom-fonts-to-interactive-communication-editor.md)
-      + [PDF Preview in Interactive Communication Editor](/help/forms/interactive-communication/pdf-preview-in-interactive-communication-editor-with-different-data-options.md)
-      + [Lås mall i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/template-lock-in-interactive-communication-editor.md)
-      + [Dynamisk sidnumrering i Interactive Communication Editor](/help/forms/interactive-communication/dynamic-page-numbering-in-interactive-communicatio-editor.md)
-      + [Hantering av innehållsspill i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/content-overflow-handling-in-interactive-communication-editor.md)
-      + [Stöd för XDP-redigering i Interactive Communication Editor](/help/forms/interactive-communication/support-xdp-editing-in-interactive-communication-editor.md)
-      + [Vanliga frågor](/help/forms/interactive-communications-faq.md)
-   + Forms Centric Workflows {#create-form-centric-workflows}
-      + [Introduktion till Forms-centrerade arbetsflöden](/help/forms/aem-forms-workflow.md)
-      + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
-      + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
-      + [Dynamiskt val av användare eller grupp i AEM Workflow](/help/forms/dynamically-select-a-user-or-group-for-aem-workflow.md)
-      + [Hantera Forms-program och -uppgifter i AEM Inbox](/help/forms/manage-applications-inbox.md)
-      + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
-   + Kommunikations-API:er {#using-communications}
-      + [Översikt över kommunikations-API:er](/help/forms/aem-forms-communication-api-overview.md)
-      + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
-      + [Authentication-OAuth Server-to-Server](/help/forms/oauth-api-authetication.md)
-      + [Autentisering JWT (JSON Web Token)](/help/forms/jwt-api-authentication.md)
-      + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
-      + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
-      + [Kommunikations-API:er - On-Demand-bearbetning](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)
-      + [Generera AFP-utdata med AEM Forms API](/help/forms/document-generation-afp-api.md)
-      + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
-      + [Använd Forms Designer för att skapa mallar](/help/forms/use-forms-designer.md)
-      + [Ändra sidans nollinnehåll i Designer](/help/forms/changing-page-zero-content-designer.md)
-      + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
-      + [Lista över teckensnitt som stöds i PDF-dokument](/help/forms/supported-out-of-the-box-fonts.md)
-      + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
++ Interaktiv kommunikation {#interactive-communication}
+   + Interaktiv kommunikation {#overview}
+      + [Introduktion](/help/forms/interactive-communication/introduction.md)
+      + [Komma igång](/help/forms/interactive-communication/getting-started.md)
+      + [Skapa interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
+      + [Skapa mall för interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication-template.md)
+      + [Skapa interaktivt kommunikationsfragment](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
+      + [Introduktion till interaktiv kommunikation](/help/forms/introduction-to-interactive-communication.md)
+      + [Skapa din första interaktiva kommunikation](/help/forms/create-your-first-communication.md)
+   + Komponent {#component}
+      + [Textruta](/help/forms/interactive-communication/text-box.md)
+      + [Bild](/help/forms/interactive-communication/image.md)
+      + [Bildfält](/help/forms/interactive-communication/image-field.md)
+      + [Textfält](/help/forms/interactive-communication/text-field.md)
+      + [Numeriskt fält](/help/forms/interactive-communication/numeric-field.md)
+      + [Datum-/tidsfält](/help/forms/interactive-communication/date-time-field.md)
+      + [Datumfält](/help/forms/interactive-communication/date-field.md)
+      + [Kryssruta](/help/forms/interactive-communication/check-box.md)
+      + [Alternativknapp](/help/forms/interactive-communication/radio-button.md)
+      + [Delformulär](/help/forms/interactive-communication/subform.md)
+      + [Rektangel](/help/forms/interactive-communication/rectangle.md)
+      + [Tabell](/help/forms/interactive-communication//table.md)
+      + [Linje](/help/forms/interactive-communication/line.md)
+      + [Streckkod](/help/forms/interactive-communication/barcode.md)
+   + Använda {#howto}
+      + [Konfigurera databindning](/help/forms/interactive-communication/configure-data-binding.md)
+      + [Importera och exportera interaktiv kommunikation](/help/forms/interactive-communication/import-and-export-the-interactive-communication.md)
+      + [Lägg till anpassade teckensnitt](/help/forms/interactive-communication/add-custom-fonts.md)
+      + [Generera PDF Preview](/help/forms/interactive-communication/generate-pdf-preview.md)
+      + [Aktivera malllås](/help/forms/interactive-communication/enable-template-lock.md)
+      + [Implementera dynamisk sidnumrering](/help/forms/interactive-communication/implement-dynamic-page-numbering.md)
+      + [Hantera innehållsspill](/help/forms/interactive-communication/handle-content-overflow.md)
+      + [Stöd för XDP-redigering](/help/forms/interactive-communication/support-xdp-editing.md)
+   + Associera gränssnitt {#associateui}
+      + [Associera gränssnittet i interaktiv kommunikationsredigerare](/help/forms/interactive-communication/associate-ui-in-interactive-communication-editor.md)
+   + [Vanliga frågor](/help/forms/interactive-communications-faq.md)
++ Forms Centric Workflows {#create-form-centric-workflows}
+   + [Introduktion till Forms-centrerade arbetsflöden](/help/forms/aem-forms-workflow.md)
+   + [Använda Forms-centrerade steg i ett arbetsflöde + stegreferens](/help/forms/aem-forms-workflow-step-reference.md)
+   + [Använda variabler i ett Forms-centrerat arbetsflöde](/help/forms/variable-in-aem-workflows.md)
+   + [Dynamiskt val av användare eller grupp i AEM Workflow](/help/forms/dynamically-select-a-user-or-group-for-aem-workflow.md)
+   + [Hantera Forms-program och -uppgifter i AEM Inbox](/help/forms/manage-applications-inbox.md)
+   + [Använda alternativet Frånvarande](/help/forms/configure-out-of-office-settings.md)
++ Kommunikations-API:er {#using-communications}
+   + [Översikt över kommunikations-API:er](/help/forms/aem-forms-communication-api-overview.md)
+   + [Introduktion till kommunikations-API:er](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+   + [Authentication-OAuth Server-to-Server](/help/forms/oauth-api-authetication.md)
+   + [Autentisering JWT (JSON Web Token)](/help/forms/jwt-api-authentication.md)
+   + [Kommunikations-API:er - synkron bearbetning](/help/forms/aem-forms-cloud-service-communications.md)
+   + [Kommunikations-API:er - gruppbearbetning](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+   + [Kommunikations-API:er - On-Demand-bearbetning](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)
+   + [Generera AFP-utdata med AEM Forms API](/help/forms/document-generation-afp-api.md)
+   + [Installera och konfigurera Forms Designer](/help/forms/installing-configuring-designer.md)
+   + [Använd Forms Designer för att skapa mallar](/help/forms/use-forms-designer.md)
+   + [Ändra sidans nollinnehåll i Designer](/help/forms/changing-page-zero-content-designer.md)
+   + [Använda anpassade teckensnitt i PDF-dokument](/help/forms/use-custom-fonts.md)
+   + [Lista över teckensnitt som stöds i PDF-dokument](/help/forms/supported-out-of-the-box-fonts.md)
+   + [Kända fel, bästa praxis och vanliga frågor](/help/forms/communications-known-issues-limitations.md)
    + Transaktionsrapporter {#transaction-reports}
       + [Fakturerbara API:er för transaktionsrapporter](/help/forms/transaction-reports-billable-apis.md)
       + [Registrera en transaktion för en anpassad implementering](/help/forms/record-transaction-custom-implementation.md)
@@ -1232,7 +1235,7 @@ ht-degree: 1%
 + Headless {#headless}
    + [Vad är en Headless CMS?](/help/headless/what-is-headless.md)
    + [Introduktion till AEM Headless](/help/headless/introduction.md)
-   + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+   + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
    + [God praxis - konfigurera och använda](/help/headless/best-practices-setup-use.md)
    + Inställningar {#setup}
       + [Introduktion](/help/headless/setup/introduction.md)
@@ -1242,14 +1245,14 @@ ht-degree: 1%
       + [Innehållsfragment](/help/headless/setup/create-content-fragment.md)
       + [GraphQL Endpoint](/help/headless/setup/create-api-request.md)
    + Innehållsfragment {#content-fragments}
-      + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/overview.html?lang=sv-SE)
-      + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragment-models.html?lang=sv-SE)
-      + [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/managing.html?lang=sv-SE)
+      + [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/overview.html)
+      + [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragment-models.html)
+      + [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/managing.html)
       + Redigering{#authoring}
-         + [Redigering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/authoring.html?lang=sv-SE)
-         + [Markeringsredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/markdown.html?lang=sv-SE)
-      + [Förhandsgranska fragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/preview.html?lang=sv-SE)
-      + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/analysis.html?lang=sv-SE)
+         + [Redigering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/authoring.html)
+         + [Markeringsredigerare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/markdown.html)
+      + [Förhandsgranska fragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/preview.html)
+      + [Strukturträd](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/analysis.html)
    + Väljare för innehållsfragment {#content-fragment-selector}
       + [Micro-Frontend Content Fragment Selector - Översikt](/help/headless/content-fragment-selector/overview.md)
       + [Innehållsfragmentväljare - relaterade egenskaper](/help/headless/content-fragment-selector/properties.md)
@@ -1266,7 +1269,7 @@ ht-degree: 1%
       + [Felsöka GraphQL-frågor](/help/headless/graphql-api/persisted-queries-troubleshoot.md)
    + [AEM Content Fragment Delivery with OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)
    + [Content Fragments and Models OpenAPIs](/help/headless/content-fragment-openapis.md)
-   + [Stöd för innehållsfragment i Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html?lang=sv-SE)
+   + [Stöd för innehållsfragment i Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/assets-api-content-fragments.html)
    + Dokumentskydd {#security}
       + [Behörigheter](/help/headless/security/permissions.md)
       + [Autentisering](/help/headless/security/authentication.md)
@@ -1288,7 +1291,7 @@ ht-degree: 1%
          + [Hur man sammanför allt](/help/journey-headless/developer/put-it-all-together.md)
          + [Så här lever du med ditt headless-program](/help/journey-headless/developer/go-live.md)
          + [Valfritt - Så här skapar du single page-applikationer med AEM](/help/journey-headless/developer/create-spa.md)
-         + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+         + [Developer Portal (Additional Resources)](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
       + Headless Content Architect Journey {#architect}
          + [AEM Headless Content Architect Journey - översikt](/help/journey-headless/architect/overview.md)
          + [Innehållsmodellering för Headless med AEM - en introduktion](/help/journey-headless/architect/introduction.md)
@@ -1368,7 +1371,7 @@ ht-degree: 1%
       + [New Relic One](/help/implementing/cloud-manager/user-access-new-relic.md)
       + [Dynatrace](/help/implementing/cloud-manager/dynatrace.md)
       + [Meddelanden](/help/implementing/cloud-manager/notifications.md)
-      + [Avancerade nätverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=sv-SE)
+      + [Avancerade nätverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html)
       + Edge Delivery Sites {#edge-delivery-sites}
          + [Introduktion till Edge Delivery Services i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/introduction-to-edge-delivery-services.md)
          + [Lägg till en Edge Delivery-webbplats i Cloud Manager](/help/implementing/cloud-manager/edge-delivery/add-edge-delivery-site.md)
@@ -1435,8 +1438,8 @@ ht-degree: 1%
          + Komponenter och mallar {#components-templates}
             + [Komponenter - översikt](/help/implementing/developing/components/overview.md)
             + [Mallar](/help/implementing/developing/components/templates.md)
-            + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
-            + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=sv-SE)
+            + [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+            + [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html)
             + [JSON-exporterare för innehållstjänster](/help/implementing/developing/components/json-exporter.md)
             + [Aktivera JSON-export för en komponent](/help/implementing/developing/components/enabling-json-exporter.md)
             + [Bildredigeraren](/help/implementing/developing/components/image-editor.md)
@@ -1471,10 +1474,10 @@ ht-degree: 1%
          + [Utvecklaröversikt](/help/implementing/universal-editor/developer-overview.md)
          + [Lokal AEM Development](/help/implementing/universal-editor/local-dev.md)
          + [SecurBank-exempelapp](/help/implementing/universal-editor/securbank.md)
-      + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=sv-SE)
+      + [Headless Experience Management](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html)
       + Hybrid- och SPA-utveckling {#hybrid}
          + [Hybrid och SPA med AEM](https://business.adobe.com/content/dam/dx/us/en/products/experience-manager/sites/headless-content-management-system/pdfs/aem-hybrid-architecture-wp-1-18-19.pdf)
-         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html?lang=sv-SE)
+         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
          + [Borttagning av SPA-redigerare](/help/implementing/developing/hybrid/spa-editor-deprecation.md)
          + [Introduktion och genomgång av SPA](/help/implementing/developing/hybrid/introduction.md)
          + [SPA WKND - självstudiekurs](/help/implementing/developing/hybrid/wknd-tutorial.md)
@@ -1490,7 +1493,7 @@ ht-degree: 1%
          + [RemotePage-komponenten](/help/implementing/developing/hybrid/remote-page.md)
          + [Redigera en extern SPA i AEM](/help/implementing/developing/hybrid/editing-external-spa.md)
          + [Sammansatta komponenter i SPA](/help/implementing/developing/hybrid/composite-components.md)
-         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html?lang=sv-SE)
+         + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/components-templates/enabling-json-exporter.html)
          + [Starta integrering](/help/implementing/developing/hybrid/launch-integration.md)
          + [SPA-referensdokument](/help/implementing/developing/hybrid/reference-materials.md)
    + Utvecklarverktyg {#developer-tools}
@@ -1512,7 +1515,7 @@ ht-degree: 1%
       + [ContextHub Diagnostics](/help/implementing/developing/personalization/contexthub-diagnostics.md)
       + [Utökar ContextHub](/help/implementing/developing/personalization/extending-contexthub.md)
       + [ContextHub API](/help/implementing/developing/personalization/contexthub-api.md)
-      + [Konfigurerar segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/personalization/contexthub-segmentation.html?lang=sv-SE)
+      + [Konfigurerar segmentering med ContextHub](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/personalization/contexthub-segmentation.html)
    + Konfigurera och utöka AEM as a Cloud Service {#configuring-and-extending}
       + Utöka AEM med App Builder {#app-builder}
          + [Utöka AEM med Adobe Developer App Builder](/help/implementing/developing/extending/app-builder/extending-aem-with-app-builder.md)

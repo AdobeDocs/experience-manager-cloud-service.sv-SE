@@ -5,7 +5,7 @@ products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
 exl-id: c23145c9-078d-4b03-a8f4-2d835cdd1592
-source-git-commit: 8f25010ed57bd76acac7c56533ba8e37913511b7
+source-git-commit: d24e88b545a17e50c1e80e1aedbb1d0adf55f609
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Med interaktiv kommunikation kan ni skapa, hantera och leverera personaliserad o
 
 Tänk dig att du måste skicka ett kontoutdrag, en försäkring eller en faktura till tusentals kunder. Alla har samma layout men personaliserade data. Interaktiv kommunikation gör detta möjligt på ett effektivt sätt.
 
-![Sök efter IC Docu](/help/forms/interactive-communication/assets/introimg.png)
+![Sök efter IC Docu](/help/forms/interactive-communication/assets/introduction.png)
 
 Manuell framtagning av dessa dokument kan vara tidskrävande och leder ofta till inkonsekvenser, särskilt när personalisering och dataintegrering krävs. Med Interactive Communication Editor kan man effektivisera arbetet med att skapa interaktiv kommunikation.
 
@@ -94,4 +94,4 @@ Börja bygga interaktiv kommunikation för att effektivisera arbetsflödena och 
 ## Nästa steg
 
 [Skapa en interaktiv kommunikationsmall](/help/forms/interactive-communication/create-interactive-communication-template.md)
-[&#x200B; Skapa ett interaktivt kommunikationsfragment &#x200B;](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
+[ Skapa ett interaktivt kommunikationsfragment ](/help/forms/interactive-communication/create-interactive-communication-fragment.md)

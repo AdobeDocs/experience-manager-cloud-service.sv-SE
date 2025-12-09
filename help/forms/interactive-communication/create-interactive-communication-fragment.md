@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
 exl-id: d1c62f32-372b-475a-9258-67c2276e79f3
-source-git-commit: 8f25010ed57bd76acac7c56533ba8e37913511b7
+source-git-commit: d24e88b545a17e50c1e80e1aedbb1d0adf55f609
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ ht-degree: 0%
 
 Med ett interaktivt kommunikationsfragment kan användarna skapa återanvändbara, modulära innehållsblock som sidhuvuden, sidfötter och standardfriskrivningar som kan användas i flera kommunikationsdokument. Dessa fragment bidrar till att bibehålla enhetligheten, minska repetitiva arbetsmoment och snabba upp designprocessen när man skapar personaliserad, dataintegrerad kommunikation.
 
-## Förutsättning
-
-* [Kontrollera att författaren är medlem i gruppen för användare av formulär](/help/forms/setup-forms-cloud-service.md#configure-users)
+>[!NOTE]
+>
+> [Författaren måste vara medlem i gruppen&quot;forms-users&quot;](/help/forms/setup-forms-cloud-service.md#configure-users)
 
 ## Skapa ett interaktivt kommunikationsfragment
 
@@ -41,7 +41,7 @@ Så här skapar du ett interaktivt kommunikationsfragment:
 
 1. När du väljer Interactive Communication Fragment visas en skärm där du definierar viktiga fragmentdetaljer som titel, namn, beskrivning, datamodell (en strukturerad representation av backend-data) och taggar.
 
-   Mer information finns i [Konfigurationshandboken för datamodellen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models).
+   Mer information finns i [Konfigurationshandboken för datamodellen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models).
 
    ![Sök efter IC Docu](/help/forms/interactive-communication/assets/createfrgmnt.png)
 
@@ -55,4 +55,4 @@ Genom att skapa interaktiva kommunikationsfragment kan du säkerställa en enhet
 ## Nästa steg
 
 [Skapa en interaktiv kommunikation](/help/forms/interactive-communication/create-interactive-communication.md)
-[Skapa en interaktiv kommunikationsmall &#x200B;](/help/forms/interactive-communication/create-interactive-communication-template.md)
+[Skapa en interaktiv kommunikationsmall ](/help/forms/interactive-communication/create-interactive-communication-template.md)
