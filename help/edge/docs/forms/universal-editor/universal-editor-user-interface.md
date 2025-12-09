@@ -6,9 +6,9 @@ feature: Edge Delivery Services
 role: User, Developer, Admin
 level: Beginner
 exl-id: 90321e81-bb55-48b2-b329-4944bf926309
-source-git-commit: fd3c53cf5a6d1c097a5ea114a831ff626ae7ad7e
+source-git-commit: 0f372f4ddc0ff323a3beedacc84a8a59de8e6d2a
 workflow-type: tm+mt
-source-wordcount: '2390'
+source-wordcount: '2376'
 ht-degree: 0%
 
 ---
@@ -247,8 +247,6 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
 >[!IMPORTANT]
 >
-> **Tidig åtkomst:** Regelredigeraren kräver särskild åtkomst. Kontakta [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com) om du vill aktivera den här funktionen.
->
 > **Mer information:** Mer information finns i [Regelredigerarhandboken](/help/edge/docs/forms/universal-editor/rule-editor-universal-editor.md).
 
 #### **Inställningar för autentiseringshuvud**
@@ -354,7 +352,7 @@ Panelen Formuläregenskaper innehåller följande avsnitt:
 
     ![Generera variationer](/help/edge/docs/forms/universal-editor/assets/ue-variations.png)
 
-**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
+**Mer information:** [Guiden Generera variationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/generative-ai/generate-variations)
 
 #### **Innehållsutkast**
 
