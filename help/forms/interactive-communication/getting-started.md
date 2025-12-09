@@ -33,7 +33,7 @@ Om du vill använda interaktiv kommunikation måste du kontrollera att AEM Forms
 
 ### Verifiera webbläsaren
 
-Om du vill veta vilka webbläsare och klientplattformar som stöds kan du följa den länkade artikeln [Klientplattformar som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/overview/supported-platforms)
+Om du vill veta vilka webbläsare och klientplattformar som stöds kan du följa den länkade artikeln [Klientplattformar som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/overview/supported-platforms)
 
 >[!NOTE]
 >
@@ -42,14 +42,14 @@ Om du vill veta vilka webbläsare och klientplattformar som stöds kan du följa
 
 ### Konfigurera användarroller och behörigheter
 
-Åtkomsten till IC Editor-funktioner styrs av [användarroller i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions). Nedan följer de viktigaste rollerna för att skapa och hantera interaktiv kommunikation:
+Åtkomsten till IC Editor-funktioner styrs av [användarroller i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions). Nedan följer de viktigaste rollerna för att skapa och hantera interaktiv kommunikation:
 
 | **Roll** | **Beskrivning** | **Nyckelbehörigheter** |
 | --------------------- | ---------------------------------------------------------- | -------------------------------------------- |
 | **Formulärförfattare** | Skapa och redigera interaktiv kommunikation. | Skapa, redigera, förhandsgranska och publicera IC:er. |
 | **Mallförfattare** | Utformar återanvändbara mallar för interaktiv kommunikation. | Skapa och lås mallar, definiera layouter. |
 | **Administratör** | Hanterar användaråtkomst, behörigheter och konfigurationer. | Tilldela roller, hantera mallar, publicera konc. |
-| **FDM-författare** | [Skapar och hanterar FDM (Form Data Models)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models) för dataintegrering. | Skapa, redigera och konfigurera datakällor och modeller. |
+| **FDM-författare** | [Skapar och hanterar FDM (Form Data Models)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models) för dataintegrering. | Skapa, redigera och konfigurera datakällor och modeller. |
 
 >[!NOTE]
 >
