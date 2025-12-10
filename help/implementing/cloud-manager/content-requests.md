@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 83ab0fb97b233828fe43c1b53e649c918ce7b100
+source-git-commit: c5f4a3502153ff3c7e9fbce164a9c9b63196b547
 workflow-type: tm+mt
-source-wordcount: '1976'
+source-wordcount: '1968'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ I följande tabeller visas typerna av inkluderade och exkluderade innehållsbeg�
 
 | Typ av begäran | Innehållsbegäran | Beskrivning |
 | --- | --- | --- |
-| HTTP-kod 100-299 | Ingår | Innehåller lyckade begäranden som returnerar helt eller delvis HTML- eller JSON-innehåll.<br>HTTP-kod 206: Dessa begäranden levererar endast en del av det fullständiga innehållet. Till exempel en video eller stor bild. Förfrågningar med delvis innehåll inkluderas när de levererar en del av ett HTML- eller JSON-svar som används vid återgivning av sidinnehåll. |
+| HTTP-kod 100-299 | Ingår | Innehåller lyckade begäranden som returnerar helt eller delvis HTML- eller JSON-innehåll.<br>HTTP-kod 206: Dessa begäranden levererar endast en del av det fullständiga innehållet. Delvisa begäranden inkluderas när de levererar en del av ett HTML- eller JSON-svar som används vid återgivning av sidinnehåll. |
 | HTTP-bibliotek för automatisering | Ingår | Begäranden från verktyg eller bibliotek som hämtar sidinnehåll. Exempel: <br> ・ Amazon CloudFront<br> ・ Apache Http Client<br> ・ asynkron HTTP-klient <br> ・ Axios <br> ・ Azureus<br> ・ Curl<br> ・ GitHub Node Fetch<br> orist Guzzle<br> avslutad Go-http-client<br> avslutning Rubrik minus Chrome<br> avslutad Java™ Client <br> ¹ Jersey <br> bådautomated Node Node Oembed <br> avslutnings-http<br> bågförfrågningar <br> bågslut Netty<br> avslutningsmål <br> WinHTTP <br> avslutnings-HTTP <br> 7 GitHub Node Fetch <br> Netty |
 | Verktyg för övervakning och hälsokontroll | Ingår | Begäranden som används för att övervaka sidors hälsa eller tillgänglighet.<br>Se [Typer av begäranden om utelämnat innehåll](#excluded-content-request).<br>Exempel: <br> ・ `Amazon-Route53-Health-Check-Service`<br> ・ EyeMonIT_bot_version_0.1_[(https://eyemonit.com/)](https://eyemonit.com/)<br> ・ Investis-Site24x7<br> ・ Mozilla/5.0+(compatible; UptimeRobot/2.0; [https://uptimerobot.com/](https://uptimerobot.com/))<br> ・ ThousandEyes-yes Dragonfly-x1<br> ・ OmtrBot/1.0<br> ・ WebMon/2.0.0 |
 | `<link rel="prefetch">` förfrågningar | Ingår | När kunderna läser in innehåll i förväg eller hämtar innehåll i förväg (till exempel med `<link rel="prefetch">`) räknas dessa förfrågningar på serversidan. Se till att den här metoden kan öka trafiken, beroende på hur många av dessa sidor som är förhämtade. |
