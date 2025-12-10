@@ -5,9 +5,9 @@ feature: Administering
 role: Admin
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 372d8969b1939e9a24d7910a1678a17c0dc9f9fd
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -30,29 +30,25 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 1. Välj **Verktyg** och sedan **Arbetsflöde** med Navigering.
 1. Välj **Instanser** om du vill visa listan över pågående arbetsflödesinstanser.
 1. På den övre listen i det högra hörnet visar arbetsflödesinstanserna **Löpande arbetsflöden**, **Status** och **Information**.
-1. **Arbetsflöden som körs** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **pågående arbetsflöden** och **Status** för AEM:
+1. **Arbetsflöden som körs** visar antalet arbetsflöden som körs och deras status. I de angivna bilderna visas till exempel antalet **pågående arbetsflöden** och **Status** för AEM-instansen:
 
    * **Status: Felfri**
-
      ![status-hälsosam](/help/sites-cloud/administering/assets/status-healthy.png)
 
    * **Status: Ohälsosamt**
-
      ![statusfelfri](/help/sites-cloud/administering/assets/status-unhealthy.png)
 
 1. Om du vill ha **statusinformation** för arbetsflödesinstanser klickar du på **Information** för att visa **antalet arbetsflödesinstanser som körs**, **slutförda arbetsflödesinstanser**, **avbrutna arbetsflödesinstanser**, **misslyckade arbetsflödesinstanser** och så vidare. Nedan visas till exempel de bilder som visar **statusinformation** med:
 
    * **Statusinformation: Felfri**
-
      ![status-details-hälsosam](/help/sites-cloud/administering/assets/status-details-healthy.png)
 
    * **Statusinformation: Ohälsosam**
-
      ![status-details-unsafe](/help/sites-cloud/administering/assets/status-details-unhealthy.png)
 
    >[!NOTE]
    >
-   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis vid [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflödets bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html?lang=sv-SE).
+   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis vid [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflödets bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 
@@ -116,7 +112,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Fel** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
 
 * **Felinformation**
-Öppnar ett fönster för att visa **Felmeddelande**, **Steg och &#x200B;** Felhög** .
+Öppnar ett fönster för att visa **Felmeddelande**, **Steg och **Felhög** .
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.
@@ -138,7 +134,7 @@ Så här undersöker du fel och sedan återupptar eller avslutar du arbetsflöde
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen.
 
-Konfigurera **Rensa arbetsflöde för Adobe** om du vill rensa arbetsflödesinstanser utifrån deras ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
+Konfigurera **Adobe Granite Workflow Renge Configuration** om du vill rensa arbetsflödesinstanser utifrån deras ålder och status. Du kan också rensa arbetsflödesinstanser av alla modeller eller av en viss modell.
 
 Du kan också skapa flera konfigurationer av tjänsten för att rensa arbetsflödesinstanser som uppfyller olika villkor. Skapa till exempel en konfiguration som tömmer instanser av en viss arbetsflödesmodell när de körs mycket längre än förväntat. Skapa en annan konfiguration som tömmer alla slutförda arbetsflöden efter några dagar för att minimera databasens storlek.
 
@@ -150,43 +146,18 @@ Om du vill konfigurera tjänsten kan du konfigurera OSGi-konfigurationsfilerna i
 >Eftersom tjänsten är en fabrikstjänst måste namnet på noden `sling:OsgiConfig` ha ett identifierarsuffix, till exempel:
 >`com.adobe.granite.workflow.purge.Scheduler-myidentifier`
 
-<table>
- <tbody>
-  <tr>
-   <th>Egenskapsnamn (webbkonsol)</th>
-   <th>OSGi-egenskapsnamn</th>
-   <th>Beskrivning</th>
-  </tr>
-  <tr>
-   <td>Jobbnamn</td>
-   <td>scheduledpurge.name</td>
-   <td>Ett beskrivande namn för den schemalagda rensningen.</td>
-  </tr>
-  <tr>
-   <td>Arbetsflödesstatus</td>
-   <td>scheduledpurge.workflowStatus</td>
-   <td><p>Status för de arbetsflödesinstanser som ska rensas. Följande värden är giltiga:</p>
-    <ul>
-     <li>SLUTFÖRT: Slutförda arbetsflödesinstanser rensas.</li>
-     <li>KÖRNING: Körande arbetsflödesinstanser rensas.</li>
-    </ul> </td>
-  </tr>
-  <tr>
-   <td>Modeller att tömma</td>
-   <td>scheduledpurge.modelIds</td>
-   <td><p>ID:t för arbetsflödesmodellerna som ska rensas. ID är sökvägen till modellnoden, till exempel:<br /> /conf/global/settings/workflow/models/dam/update_asset/jcr:content/model<br /> Ange inget värde för att rensa instanser av alla arbetsflödesmodeller.</p> <p>Om du vill ange flera modeller klickar du på plusknappen (+) i webbkonsolen. </p> </td>
-  </tr>
-  <tr>
-   <td>Arbetsflödesålder</td>
-   <td>scheduledpurge.daysold</td>
-   <td>Åldern på arbetsflödesinstanserna som ska rensas, i dagar.</td>
-  </tr>
- </tbody>
-</table>
+| Egenskapsnamn (webbkonsol) | OSGi-egenskapsnamn | Beskrivning |
+|--- |--- |--- |
+| Jobbnamn  | `scheduledpurge.name` | Ett beskrivande namn för den schemalagda rensningen. |
+| Arbetsflödesstatus | `scheduledpurge.workflowStatus` | Status för de arbetsflödesinstanser som ska rensas. Följande värden är giltiga:<br><br>- SLUTFÖRT: Slutförda arbetsflödesinstanser rensas.<br>- KÖRNING: Körande arbetsflödesinstanser rensas. |
+| Modeller att tömma | `scheduledpurge.modelIds` | ID:t för arbetsflödesmodellerna som ska rensas.<br>ID är sökvägen till modellnoden, till exempel:<br> `/conf/global/settings/workflow/models/dam/update_asset/jcr:content/model` <br><br> Ange inget värde för att rensa instanser av alla arbetsflödesmodeller.<br>Om du vill ange flera modeller klickar du på knappen `+` i webbkonsolen. |
+| Arbetsflödesålder | `scheduledpurge.daysold` | Åldern på arbetsflödesinstanserna som ska rensas, i dagar. |
+| Arbetsflödets nyttolastspaket | `scheduledpurge.purgePackagePayload` | Anger om nyttolastpaketet ska rensas: `true` eller `false`. |
+
 
 ## Ange maximal storlek för inkorgen {#setting-the-maximum-size-of-the-inbox}
 
-Du kan ange den maximala storleken för inkorgen genom att konfigurera arbetsflödestjänsten **Adobe Granite**, se [Lägga till en OSGi-konfiguration i databasen](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs egenskapen som du konfigurerar.
+Du kan ange den maximala storleken för inkorgen genom att konfigurera **Adobe Granite Workflow Service**, se [Lägga till en OSGi-konfiguration i databasen](/help/implementing/deploying/configuring-osgi.md). I följande tabell beskrivs egenskapen som du konfigurerar.
 
 >[!NOTE]
 >För att lägga till konfigurationen i databasen är tjänst-PID:
@@ -198,7 +169,7 @@ Du kan ange den maximala storleken för inkorgen genom att konfigurera arbetsfl�
 
 ## Använda arbetsflödesvariabler för kundägda datalager {#using-workflow-variables-customer-datastore}
 
-Data som bearbetas av arbetsflöden lagras i den Adobe-tillhandahållna lagringen (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som Adobe tillhandahåller. I dessa avsnitt beskrivs hur du ställer in dessa variabler för extern lagring.
+Data som bearbetas av arbetsflöden lagras i Adobe tillhandahållna lagringsutrymme (JCR). Dessa data kan vara känsliga till sin natur. Du kanske vill spara alla användardefinierade metadata/data i ditt egna hanterade lagringsutrymme i stället för det lagringsutrymme som tillhandahålls av Adobe. I dessa avsnitt beskrivs hur du ställer in dessa variabler för extern lagring.
 
 ### Ange modellen för extern lagring av metadata {#set-model-for-external-storage}
 
