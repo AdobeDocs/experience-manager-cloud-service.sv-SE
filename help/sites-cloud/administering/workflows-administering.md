@@ -112,7 +112,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Fel** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
 
 * **Felinformation**
-Öppnar ett fönster för att visa **Felmeddelande**, **Steg och **Felhög** .
+Öppnar ett fönster för att visa **Felmeddelande**, **Steg och &#x200B;** Felhög** .
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.
