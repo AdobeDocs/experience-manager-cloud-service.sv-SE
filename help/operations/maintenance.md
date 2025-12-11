@@ -4,9 +4,9 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: f6e8066ecdfdbd0c7e79c2557dc19eec81657047
+source-git-commit: 5de6ff7e6ac777c90b41bfeb9a56b909c83ed7d3
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2054'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,8 @@ I tidigare versioner av AEM kunde du konfigurera underhållsåtgärder med under
 >
 >Adobe förbehåller sig rätten att åsidosätta en kunds konfigurationsinställningar för underhållsaktiviteter för att minska problem som prestandaförsämringar.
 
+### Underhållsaktiviteter {#maintenance-tasks}
+
 Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
 
 <table style="table-layout:auto">
@@ -47,14 +49,14 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
   <tr>
     <td>Rensa version</td>
     <td>Kund</td>
-    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
+    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Kund</td>
-    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
+    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
    </td>
   </tr>
@@ -85,11 +87,15 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Kund</td>
     <td>
     <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi">OSGi-egenskaper</a> för <b>Adobe Projects Renge Configuration</b> .</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi">OSGi-egenskaper</a> för <b>Adobe Projects Renge Configuration</b> .</p>
   </td>
   </tr>
   </tbody>
 </table>
+
+### Konfigurationer för underhållsfönstret {#maintenance-window-configurations}
+
+Följande tabell visar vilka konfigurationer av underhållsfönstret som är tillgängliga.
 
 <table style="table-layout:auto">
  <tbody>
@@ -138,15 +144,15 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     </tbody>
 </table>
 
-**Platser**:
+### Platser {#locations}
 
 * Dagligen - /apps/settings/granite/operations/intenance/granite_day
 * Varje vecka - /apps/settings/granite/operations/intenance/granite_week
 * Månadsvis - /apps/settings/granite/operations/intenance/granite_monthly
 
-**Kodexempel**:
+### Kodexempel {#code-samples}
 
-Kodexempel 1 (dagligen)
+**Kodexempel 1 (dagligen)**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -161,7 +167,7 @@ Kodexempel 1 (dagligen)
  />
 ```
 
-Kodexempel 2 (varje vecka)
+**Kodexempel 2 (varje vecka)**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -176,7 +182,7 @@ Kodexempel 2 (varje vecka)
    windowStartTime="14:30"/>
 ```
 
-Kodexempel 3 (månadsvis)
+**Kodexempel 3 (månadsvis)**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -220,54 +226,54 @@ Deklarera en konfigurationsfil och distribuera den enligt anvisningarna i följa
 > 
 >På samma sätt måste du behålla granskningsloggens deklarerade nod och inte ta bort den när du distribuerar granskningsloggens tömningsnod i konfigurationsfilen.
 
-**1** Skapa en fil med namnet `mt.yaml` eller liknande.
+1. Skapa en fil med namnet `mt.yaml` eller liknande.
 
-**2** Placera filen någonstans under en mapp på den översta nivån med namnet `config` eller liknande, enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
+1. Placera filen någonstans under en mapp på den översta nivån med namnet `config` eller liknande, enligt beskrivningen i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#folder-structure).
 
-**3** - Deklarera egenskaper i konfigurationsfilen, som innehåller:
+1. Deklarera egenskaper i konfigurationsfilen som innehåller:
 
-* några egenskaper ovanför datanoden - mer information finns i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska vara *MaintenanceTasks* och versionen ska vara *1*.
+   * några egenskaper ovanför datanoden - mer information finns i [Använda konfigurationsförlopp](/help/operations/config-pipeline.md#common-syntax) . Egenskapsvärdet `kind` ska vara *MaintenanceTasks* och versionen ska vara *1*.
 
-* ett dataobjekt med både `versionPurge` och `auditLogPurge` objekt.
+   * ett dataobjekt med både `versionPurge` och `auditLogPurge` objekt.
 
-Se definitioner och syntax för objekten `versionPurge` och `auditLogPurge` nedan.
+   Se definitioner och syntax för objekten `versionPurge` och `auditLogPurge` nedan.
 
-Strukturera konfigurationen på liknande sätt som i följande exempel:
+   Strukturera konfigurationen på liknande sätt som i följande exempel:
 
-```
-kind: "MaintenanceTasks"
-version: "1"
-metadata:
-  envTypes: ["dev"]
-data:
-  versionPurge:
-    maximumVersions: 15
-    maximumAgeDays: 20
-    paths: ["/content"]
-    minimumVersions: 1
-    retainLabelledVersions: false
-  auditLogPurge:
-    rules:
-      - replication:
-          maximumAgeDays: 15
-          contentPath: "/content"
-          types: ["Activate", "Deactivate", "Delete", "Test", "Reverse", "Internal Poll"]
-      - pages:
-          maximumAgeDays: 15
-          contentPath: "/content"
-          types: ["PageCreated", "PageModified", "PageMoved", "PageDeleted", "VersionCreated", "PageRestored", "PageValid", "PageInvalid"]
-      - dam:
-          maximumAgeDays: 15
-          contentPath: "/content"
-          types: ["ASSET_EXPIRING", "METADATA_UPDATED", "ASSET_EXPIRED", "ASSET_REMOVED", "RESTORED", "ASSET_MOVED", "ASSET_VIEWED", "PROJECT_VIEWED", "PUBLISHED_EXTERNAL", "COLLECTION_VIEWED", "VERSIONED", "ADDED_COMMENT", "RENDITION_UPDATED", "ACCEPTED", "DOWNLOADED", "SUBASSET_UPDATED", "SUBASSET_REMOVED", "ASSET_CREATED", "ASSET_SHARED", "RENDITION_REMOVED", "ASSET_PUBLISHED", "ORIGINAL_UPDATED", "RENDITION_DOWNLOADED", "REJECTED"]
-```
+   ```
+   kind: "MaintenanceTasks"
+   version: "1"
+   metadata:
+     envTypes: ["dev"]
+   data:
+     versionPurge:
+       maximumVersions: 15
+       maximumAgeDays: 20
+       paths: ["/content"]
+       minimumVersions: 1
+       retainLabelledVersions: false
+     auditLogPurge:
+       rules:
+         - replication:
+             maximumAgeDays: 15
+             contentPath: "/content"
+             types: ["Activate", "Deactivate", "Delete", "Test", "Reverse", "Internal Poll"]
+         - pages:
+             maximumAgeDays: 15
+             contentPath: "/content"
+             types: ["PageCreated", "PageModified", "PageMoved", "PageDeleted", "VersionCreated", "PageRestored", "PageValid", "PageInvalid"]
+         - dam:
+             maximumAgeDays: 15
+             contentPath: "/content"
+             types: ["ASSET_EXPIRING", "METADATA_UPDATED", "ASSET_EXPIRED", "ASSET_REMOVED", "RESTORED", "ASSET_MOVED", "ASSET_VIEWED", "PROJECT_VIEWED", "PUBLISHED_EXTERNAL", "COLLECTION_VIEWED", "VERSIONED", "ADDED_COMMENT", "RENDITION_UPDATED", "ACCEPTED", "DOWNLOADED", "SUBASSET_UPDATED", "SUBASSET_REMOVED", "ASSET_CREATED", "ASSET_SHARED", "RENDITION_REMOVED", "ASSET_PUBLISHED", "ORIGINAL_UPDATED", "RENDITION_DOWNLOADED", "REJECTED"]
+   ```
 
-Kom ihåg att för att konfigurationen ska vara giltig:
+   Kom ihåg att för att konfigurationen ska vara giltig:
 
-* alla egenskaper måste definieras. Det finns inga ärvda standardvärden.
-* Typerna (heltal, strängar, booleska värden etc.) i egenskapstabellen nedan måste respekteras.
+   * alla egenskaper måste definieras. Det finns inga ärvda standardvärden.
+   * Typerna (heltal, strängar, booleska värden etc.) i egenskapstabellen nedan måste respekteras.
 
-**4** - Skapa en konfigurationspipeline i Cloud Manager, enligt beskrivningen i [konfigurationspipeline-artikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager).
+1. Skapa en config pipeline i Cloud Manager, enligt beskrivningen i [konfigurationspipeline-artikeln](/help/operations/config-pipeline.md#managing-in-cloud-manager).
 
 ### Rensa version {#version-purge}
 
@@ -308,7 +314,6 @@ Kolumnerna som indikerar *standard* anger standardvärdena i framtiden, när sta
 | maximumVersions | 5 | 0 (ingen gräns) | Ja | Heltal | Alla versioner som är äldre än den n:te nyaste versionen tas bort. Om värdet är 0 utförs inte rensning baserat på antalet versioner. |
 | minimumVersions | 1 | 1 | Ja | Heltal | Det minsta antalet versioner som behålls oavsett ålder. Observera att minst en version alltid behålls. Värdet måste vara 1 eller högre. |
 | keepLabelledVersioned | false | false | Ja | boolesk | Avgör om explicit märkta versioner ska exkluderas från rensningen. För bättre databasoptimering rekommenderar vi att du anger värdet till false. |
-
 
 **Egenskapsinteraktioner**
 
@@ -366,7 +371,6 @@ Miljöer som skapades innan standardrensningen är aktiverad kommer att ha stand
 Tillåtna egenskaper visas nedan.
 
 Kolumnerna som indikerar *standard* anger standardvärdena i framtiden, när standardvärden används. *TBD* visar ett miljö-ID som fortfarande inte har bestämts.
-
 
 | Egenskaper | framtida standard för envs>TBD | framtida standard för envs&lt;=TBD | obligatoriskt | type | Värden |
 |-----------|--------------------------|-------------|-----------|---------------------|-------------|
