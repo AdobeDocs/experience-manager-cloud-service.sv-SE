@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerar
 feature: Developing
 role: Admin, Developer
 exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
-source-git-commit: edcba16831a40bd03c1413b33794268b6466d822
+source-git-commit: 482c9604bf4dd5e576b560d350361cdc598930e3
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -176,6 +176,44 @@ Bildåtgärder har stöd för figursättning av bildelement för att generera re
 * `wrapInPicture`: `false` (standard) - Generera enkla `<img>`-element
 * `wrapInPicture`: `true` - Radbryt bilder i `<picture>`-element för responsiv design
 
+### Indragskonfiguration {#indentation}
+
+Indrag har en konfiguration på funktionsnivå som styr omfattningen av indragsbeteendet, plus individuella åtgärdskonfigurationer för genvägar och etiketter.
+
+```json
+{
+  "actions": {
+    // Feature-level configuration
+    "indentation": {
+      "scope": "all"  // Controls what content can be indented (default: "all")
+    },
+
+    // Individual action configurations
+    "indent": {
+      "shortcut": "Tab",           // Custom keyboard shortcut
+      "label": "Increase Indent"   // Custom button label
+    },
+    "outdent": {
+      "shortcut": "Shift-Tab",     // Custom keyboard shortcut
+      "label": "Decrease Indent"   // Custom button label
+    }
+  }
+}
+```
+
+#### Alternativ för indrag i omfång {#indentation-options}
+
+* `scope`: `all` (standard) - Indrag/indrag gäller för allt innehåll:
+   * Listor: Kapsla/kapsla listobjekt
+   * Stycken och rubriker: Öka/minska det allmänna indraget
+* `scope`: `lists` - Indrag/indrag gäller bara för listobjekt:
+   * Listor: Kapsla/kapsla listobjekt
+   * Stycken och rubriker: Inget indrag (knappar inaktiverade för dessa)
+
+>[!NOTE]
+>
+>Listkapsling via tabb-/skift+tabbtangenter fungerar oberoende av allmänna indragsinställningar.
+
 ### Andra åtgärder {#other}
 
 Alla andra åtgärder har stöd för grundläggande anpassning. Följande avsnitt är tillgängliga.
@@ -307,6 +345,35 @@ Använd `wrapInParagraphs: true` när du behöver:
 * Flera stycken per listobjekt
 * Enhetlig formatering på blocknivå
 
+### `wrapInPicture`{#wrapinpicture}
+
+Alternativet `wrapInPicture` för bilder styr den HTML-struktur som skapas för bildinnehåll.
+
+#### wrapInPicture: false (standard) {#wrapinpicture-false}
+
+```html
+<img src="image.jpg" alt="Description" />
+```
+
+#### wrapInPicture: true {#wrapinpicture-true}
+
+```html
+<picture>
+  <img src="image.jpg" alt="Description" />
+</picture>
+```
+
+Använd `wrapInPicture: true` när du behöver:
+
+* Stöd för responsiva bilder med `<source>` element.
+* Funktioner för konsthantledning.
+* Framtidsgranskning för avancerade bildfunktioner.
+* Enhetlig struktur för bildelement.
+
+>[!NOTE]
+>
+>När `wrapInPicture: true` är aktiverat kan bilder förbättras med ytterligare `<source>`-element för olika mediefrågor och format, vilket gör dem mer flexibla för responsiv design.
+
 ### Alternativ för länkmål {#link-target}
 
 Alternativet `hideTarget` för länkar styr om attributet `target` ingår i genererade länkar och om dialogrutan för att skapa länkar innehåller ett fält för målval.
@@ -318,11 +385,60 @@ Alternativet `hideTarget` för länkar styr om attributet `target` ingår i gene
 <a href="https://example.com" target="_blank">External link</a>
 ```
 
-### `hideTarget: true` {#hideTarget-true}
+#### `hideTarget: true` {#hideTarget-true}
 
 ```html
 <a href="https://example.com">Link text</a>
 ```
+
+### Inaktivera länkar på bilder {#disableforimages}
+
+Alternativet `disableForImages` för länkar styr om användare kan skapa länkar i bilder och bildelement. Detta gäller för både infogade `<img>`-element och `<picture>`-element på blocknivå.
+
+#### `disableForImages: false` (standard) {#disableforimages-false}
+
+Användarna kan markera bilder och lägga dem i länkar.
+
+```html
+<!-- Inline image with link -->
+<a href="https://example.com">
+  <img src="image.jpg" alt="Description" />
+</a>
+
+<!-- Block-level picture with link -->
+<a href="https://example.com">
+  <picture>
+    <img src="image.jpg" alt="Description" />
+  </picture>
+</a>
+```
+
+#### disableForImages: true {#disableforimages-true}
+
+Länkknappen är inaktiverad när en bild eller bild är markerad. Användare kan bara skapa länkar i textinnehåll.
+
+```html
+<!-- Images remain standalone without links -->
+<img src="image.jpg" alt="Description" />
+
+<picture>
+  <img src="image.jpg" alt="Description" />
+</picture>
+
+<!-- Links work normally on text -->
+<a href="https://example.com">Link text</a>
+```
+
+Använd `disableForImages: true` när du vill:
+
+* Bevara den visuella enhetligheten genom att förhindra länkade bilder.
+* Förenkla innehållsstrukturen genom att separera bilder från navigeringen.
+* Använd profiler som begränsar bildlänkning.
+* Minska komplexiteten i innehållet.
+
+>[!NOTE]
+>
+>Den här inställningen påverkar bara möjligheten att skapa nya länkar i bilder. Befintliga länkar tas inte bort från bilder i innehållet.
 
 ### Märkordsalternativ {#tag}
 

@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: fd80b6b0a3c6d06f8dddaa8387dbae6c33f96038
+source-git-commit: 87368be0b4c934bb4d4799833a90edfee72348e6
 workflow-type: tm+mt
-source-wordcount: '2534'
+source-wordcount: '2625'
 ht-degree: 0%
 
 ---
@@ -75,11 +75,15 @@ Snabbmenyn öppnas ovanför det formaterade textblocket och innehåller grundlä
 
 #### Egenskapspanelen {#properties-rail}
 
-[egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) visar ett objekt för den markerade texten. Tryck på posten för att öppna en dialogruta med en större arbetsyta för att redigera texten.
+På [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) visas en post för den markerade RTF-komponenten.
+
+![RTF-komponent på egenskapspanelen](assets/rich-text-properties-panel.png)
+
+Tryck på posten för att öppna en dialogruta med en större arbetsyta för att redigera den formaterade texten.
 
 ![Dialogrutan för textredigering](assets/rich-text-canvas.png)
 
-Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara ändringarna.
+Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara ändringarna. Du kan också trycka på Esc-tangenten för att spara ändringarna och stänga dialogrutan.
 
 #### RTF-formateringsalternativ {#formatting-options}
 
@@ -92,8 +96,15 @@ RTF-redigeraren i Universal Editor gör att författaren kan använda standardte
 * Upphöjd
 * Nedsänkt
 * Punktlista
-* Numrerad lista
+   * Använd tabbtangenten för att dra in och Skift+tabbtangenten för att dra ut
+* Ordnad lista
+   * Använd tabbtangenten för att dra in och Skift+tabbtangenten för att dra ut
 * Länk
+* Bryt länk
+* Bild
+* Ta bort all formatering
+
+Befintliga tabeller kan redigeras med RTE, men nya tabeller kan inte skapas.
 
 RTE kan konfigureras för att dölja alternativ eller visa ytterligare alternativ beroende på författarens behov. Mer information finns i dokumentet [Configuring the RTE for the Universal Editor](/help/implementing/universal-editor/configure-rte.md).
 
@@ -122,7 +133,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -201,7 +212,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -217,7 +228,7 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
 1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.
@@ -230,7 +241,11 @@ Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläs
 >
 >Använd snabbtangenten `Command-C` eller `Command-V` för att kopiera respektive klistra in.
 
+## Sammanhangsalternativ {#context-options}
 
+När du redigerar på plats kommer redigeraren att erbjuda sammanhangsberoende alternativ med en högerklickning, som att duplicera, ta bort eller kopiera komponenter.
+
+![Snabbalternativmeny](assets/context-options-menu.png)
 
 ## Förhandsgranska innehåll {#previewing-content}
 

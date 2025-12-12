@@ -4,9 +4,9 @@ description: Lär dig mer om de olika alternativen för att anpassa den universe
 exl-id: 8d6523c8-b266-4341-b301-316d5ec224d7
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 42c82384a0683ca2baca522dc9b2d5153ce01b69
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,7 @@ Följande värden stöds för `content`, d.v.s. de funktioner som kan inaktivera
 | `copy` | Inaktiverar knapparna [Kopiera och Klistra in](/help/sites-cloud/authoring/universal-editor/authoring.md#copy-paste) |
 | `duplicate` | Inaktiverar knappen [Duplicera](/help/sites-cloud/authoring/universal-editor/navigation.md#duplicate) |
 | `header-open-page` | Inaktiverar knappen [Öppna sida](/help/sites-cloud/authoring/universal-editor/navigation.md#open-page) |
+| `dev-login` | Inaktiverar inloggningsknappen för [utvecklare](/help/sites-cloud/authoring/universal-editor/navigation.md#local-developer-login) |
 
 ## Ändra slutpunkten {#custom-endpoint}
 
