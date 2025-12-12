@@ -79,6 +79,6 @@ Om alternativet **Lägg till miljö** är nedtonat (inaktiverat) kan det bero p�
 
 ## Ytterligare resurser {#additional-resources}
 
-* Video: [Miljötyper i AEM Cloud Manager](https://experienceleague.adobe.com/en/perspectives/cloud-manager-environment-types)
+* Video: [Miljötyper i AEM Cloud Manager](https://experienceleague.adobe.com/sv/perspectives/cloud-manager-environment-types)
 * [Hantera miljöer](/help/implementing/cloud-manager/manage-environments.md)
 
