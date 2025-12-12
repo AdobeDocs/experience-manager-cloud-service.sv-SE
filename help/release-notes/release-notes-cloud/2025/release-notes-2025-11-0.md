@@ -1,20 +1,18 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+title: Versionsinformation om 2025.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2025.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 6d86413449dbde8566f0f653071a2f29ab9c13ab
+source-git-commit: 2cc6f1bea3fc9cd56a20048db0ce5357dbb5ee0e
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2025.11.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.11.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.12.0) är 11 december 2025. Nästa funktionsversion (2026.1.0) är planerad till 29 januari 2026.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.11.0) är 20 november 2025. Nästa funktionsrelease (2025.12.0) planeras att släppas den 11 december 2025.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -46,7 +44,7 @@ Have a look at the July 2025 Release Overview video for a summary of the feature
 
 ## Agenter i AEM {#agents-in-aem}
 
-AEM har ett stort antal agenter som gör att du kan snabba upp framtagningen av innehåll och automatiskt hantera ändringar. Mer information finns i [Översikt över agenter i AEM](/help/ai-in-aem/agents/overview.md).
+AEM har ett stort antal agenter som gör att du kan snabba upp framtagningen av innehåll och automatiskt hantera ändringar. Mer information finns i [Översikt över agenter](/help/ai-in-aem/agents/overview.md).
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -111,7 +109,7 @@ With Forms Optimization, you get automated, data-driven recommendations and vari
 
 #### Kommande Java API-borttagningar {#java-api-deprecation}
 
-Flera inaktuella API:er markerades för borttagning den 31 augusti och bör därför inte längre refereras. Du får meddelanden från Åtgärdscenter om inaktuell API-användning upptäcks i koden, och efter den 29 januari visas meddelanden under Cloud Manager-byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
+Flera inaktuella API:er markerades för borttagning den 31 augusti och bör därför inte längre refereras. Du får meddelanden från Åtgärdscenter om föråldrad API-användning upptäcks i koden, och efter den 3 dec visas meddelanden under Cloud Manager-byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
 
 +++ Expandera om du vill visa Java API-borttagningar
 
@@ -156,7 +154,7 @@ Adobe uppgraderade miljöerna **Stage** och **Production** till **Java 21-miljö
 
 Som framgår av versionsinformationen för april måste AEM Java-loggarna följa ett standardformat för att säkerställa tillförlitlig övervakning i alla kundmiljöer. Anpassade loggkonfigurationer, t.ex. ändringar i loggformatering, utdatafiler eller standardloggnivåer, stöds inte längre. Loggar måste vara dirigerade till standardfilerna och standardloggnivåerna för AEM-produktkoden måste bevaras. Mer information finns i artikeln [Loggning](/help/implementing/developing/introduction/logging.md#configuration-loggers).
 
-Med början den **29 januari** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
+Med början den **10 december** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
 
 Granska och uppdatera alla processer som är beroende av anpassat loggningsbeteende. Till exempel:
 
@@ -198,6 +196,15 @@ Med Edge Authentication kan du begränsa åtkomsten till Edge Delivery Services-
 
 Om du är intresserad kan du skicka ett e-postmeddelande till [aemcs-edgecompute-feedback@adobe.com](mailto:aemcs-edgecompute-feedback@adobe.com) med en kort beskrivning av ditt användningsfall och eventuella frågor du har.
 
+<!--
+#### CDN Configuration for Edge Delivery Services (Beta Program) {#cdn-eds-beta}
+
+The Adobe-Managed CDN offers flexible configuration options, as described in the [Config Pipeline article](/help/operations/config-pipeline.md#configurations). 
+
+Now in beta, youcan deploy a config pipeline for features including CDN origin selectors, response and request transformations, CDN log forwarding and more. Please reach out to [aemcs-cdn-config-adopter@adobe.com](mailto:aemcs-cdn-config-adopter@adobe.com) with the details of your use case.
+
+-->
+
 #### Kanarieproduktionsdistributioner till testkod innan Live-trafik godkänns (Beta-programmet) {#canary-beta}
 
 Validera en produktionsbygge med intern testtrafik innan den visas för slutanvändarna. Leverera till produktion, dirigera endast kanarietrafik (med en särskild rubrik), övervaka beteendet och sedan antingen marknadsföra till livstrafik eller backa - utan att det påverkar kunderna.
@@ -215,17 +222,17 @@ Vi förbereder oss för att lansera Beta-programmet för AI-svar och bjuder nu i
 
 Kontakta [feedback-ai-answers@adobe.com](mailto:feedback-ai-answers@adobe.com) om du vill begära deltagande eller få uppdateringar.
 
-#### Ögonblicksbilder för RDE (Beta Program) {#rde-snapshot-program}
-
-I betaversionen stöder nu Rapid Development Environment (RDE) en funktion som tar en ögonblicksbild av det aktuella läget för kod och innehåll, som kan återställas vid ett senare tillfälle. Detta kan vara användbart när du synkroniserar kod som behöver återställas eller när du växlar mellan utveckling av olika funktioner. Det går också att återställa bara det ändringsbara innehållet som en känd startpunkt för testning.
-
-Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-support@adobe.com) om du är intresserad av att använda och ge feedback på den här funktionen.
-
-#### Snabba upp AEM-utvecklingen med AI (Alpha-programmet) {#ai-dev-alpha}
+#### Snabba upp AEM-utvecklingen med AI (Alpha-programmet)  {#ai-dev-alpha}
 
 AEM Java-stackteam använder i allt större utsträckning AI-assisterad utveckling i verktyg som Cursor, Claude Code, Visual Studio och IntelliJ för att snabba upp leverans av funktioner och förbättra kodkvaliteten. Vi samlar verkliga upplevelser som hjälper till att utforma framtida AI-funktioner som stöds av Adobe.
 
 Dela vad som fungerar för ert team - och vad ni vill att Adobe ska tillhandahålla - genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
+
+#### Ögonblicksbilder för RDE (Alpha Program) {#rde-snapshot-program}
+
+I alfa har Rapid Development Environment (RDE) nu stöd för en funktion som tar en ögonblicksbild av det aktuella kodläget och innehållet, som kan återställas vid ett senare tillfälle. Detta kan vara användbart när du synkroniserar kod som behöver återställas eller när du växlar mellan utveckling av olika funktioner. Det går också att återställa bara det ändringsbara innehållet som en känd startpunkt för testning.
+
+Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-support@adobe.com) om du är intresserad av att lämna feedback om funktionen.
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
