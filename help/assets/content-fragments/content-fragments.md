@@ -195,7 +195,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Assets (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Inbäddad i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida ](/help/sites-cloud/authoring/fragments/content-fragments.md).
+   * Kan formateras när [fragmentet används/refereras på en sida &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Det går bara att lägga till, ta bort eller flytta inom ett fragment med formatet [RTF i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
