@@ -139,7 +139,7 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 
 >[!NOTE]
 >
->Många av dessa är [standardåtgärder för Assets](/help/assets/manage-digital-assets.md) och/eller [AEM-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/get-started.html).
+>Många av dessa är [standardåtgärder för Assets](/help/assets/manage-digital-assets.md) och/eller [AEM-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/get-started.html?lang=sv-SE).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 

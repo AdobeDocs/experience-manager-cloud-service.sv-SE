@@ -93,7 +93,7 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
+>Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
