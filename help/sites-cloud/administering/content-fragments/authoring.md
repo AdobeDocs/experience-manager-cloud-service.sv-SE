@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 8a8f63758cf216b502d5ee894ff5af7285777889
+source-git-commit: 8dc6874f3f8833ef67a4fa93d2a830fa8485b593
 workflow-type: tm+mt
-source-wordcount: '2819'
+source-wordcount: '2793'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,10 @@ Den här redigeraren innehåller:
 * Möjlighet att [visa versionsinformation](#view-version-history) i redigeraren. Du kan också återgå till en vald version.
 * Möjlighet att [visa och öppna överordnade referenser](#view-parent-references).
 * En hierarkisk vy av innehållsfragmentet och dess referenser med hjälp av [strukturträdet](#structure-tree).
+
+>[!NOTE]
+>
+>Observera [Bästa praxis](/help/sites-cloud/administering/content-fragments/overview.md) när du arbetar med modeller för innehållsfragment och innehållsfragment.
 
 >[!WARNING]
 >
@@ -89,7 +93,7 @@ I den vänstra panelen ser du:
 
 * listan med **[Variationer](#variations)** som har skapats för det här fragmentet:
    * **Main** är variationen som finns när innehållsfragmentet skapas, du kan lägga till andra senare
-   * Du kan använda Generera variationer(#generate-variationer) för att använda en promptbaserad mall som Adobe har skapat för ett visst ändamål.
+   * Du kan använda [Generera variationer](#generate-variations-ai) för att använda en promptbaserad mall som Adobe har skapat för ett visst användningsfall.
    * du kan även [skapa en variant](#create-variation)
 * **Fält** i fragmentet och dess varianter:
    * ikonen anger [datatypen](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types)
@@ -135,12 +139,6 @@ Från redigeraren kan du:
 * [Ta bort en variant](#delete-variation)
 
 ### Skapa en variant {#create-variation}
-
->[!NOTE]
->
->Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans. Vi rekommenderar att du håller antalet variationer till ett hanterbart minimum.
->
->Ett tips är att inte överskrida tio varianter per innehållsfragment.
 
 Så här skapar du en variant av ditt innehållsfragment:
 
@@ -273,7 +271,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 

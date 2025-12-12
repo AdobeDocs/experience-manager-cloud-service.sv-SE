@@ -5,9 +5,9 @@ exl-id: fd706c74-4cc1-426d-ab56-d1d1b521154b
 feature: Content Fragments, GraphQL API
 role: User, Admin, Developer
 solution: Experience Manager Sites
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 8dc6874f3f8833ef67a4fa93d2a830fa8485b593
 workflow-type: tm+mt
-source-wordcount: '3588'
+source-wordcount: '3604'
 ht-degree: 1%
 
 ---
@@ -22,6 +22,10 @@ Så här använder du modeller för innehållsfragment:
 1. [Skapa](#creating-a-content-fragment-model) och [konfigurera](#defining-your-content-fragment-model), dina modeller för innehållsfragment
 1. [Aktivera dina modeller för innehållsfragment](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment
 1. [Tillåt dina modeller för innehållsfragment i de nödvändiga Assets-mapparna](#allowing-content-fragment-models-assets-folder) genom att konfigurera **Profiler**.
+
+>[!NOTE]
+>
+>Observera [Bästa praxis](/help/assets/content-fragments/content-fragments.md) när du arbetar med modeller för innehållsfragment och innehållsfragment.
 
 >[!NOTE]
 >

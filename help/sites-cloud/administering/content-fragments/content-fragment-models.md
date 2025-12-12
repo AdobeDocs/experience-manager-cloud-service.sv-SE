@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
 solution: Experience Manager Sites
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 8dc6874f3f8833ef67a4fa93d2a830fa8485b593
 workflow-type: tm+mt
-source-wordcount: '2201'
+source-wordcount: '2217'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 Content Fragment Models i Adobe Experience Manager (AEM) as a Cloud Service definierar strukturen för innehållet i dina [Content Fragments](/help/sites-cloud/administering/content-fragments/overview.md). Dessa fragment kan sedan användas för att skapa sidor eller som grund för ditt headless-innehåll.
 
 På den här sidan beskrivs hur du definierar innehållsfragmentmodellen med den dedikerade redigeraren. Se [Hantera dina modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) för ytterligare uppgifter och alternativ som är tillgängliga när fragmenten har skapats, inklusive [åtgärder som är tillgängliga från konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#actions), [som tillåter modellen i din mapp](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#allowing-content-fragment-models-assets-folder) och [publicera modellen](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#publishing-a-content-fragment-model).
+
+>[!NOTE]
+>
+>Observera [Bästa praxis](/help/sites-cloud/administering/content-fragments/overview.md) när du arbetar med modeller för innehållsfragment och innehållsfragment.
 
 >[!CAUTION]
 >

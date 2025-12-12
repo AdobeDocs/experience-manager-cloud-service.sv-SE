@@ -5,9 +5,9 @@ exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2449bc380268ed42b6c8d23ae4a4fecaf1736889
 workflow-type: tm+mt
-source-wordcount: '2247'
+source-wordcount: '2576'
 ht-degree: 2%
 
 ---
@@ -93,7 +93,7 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
@@ -195,7 +195,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Assets (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Inbäddad i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md).
+   * Kan formateras när [fragmentet används/refereras på en sida ](/help/sites-cloud/authoring/fragments/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Det går bara att lägga till, ta bort eller flytta inom ett fragment med formatet [RTF i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
@@ -323,3 +323,47 @@ WKND-projektet innehåller:
 
 * Innehållsfragment (och annat innehåll) tillgängliga under:
   `http://<hostname>:<port>/assets.html/content/dam/wknd/en`
+
+## Bästa praxis {#best-practices}
+
+Innehållsfragment kan användas för att skapa komplexa strukturer. Adobe ger rekommendationer för bästa praxis när det gäller att definiera och använda både modeller och fragment.
+
+### Behåll det enkelt {#keep-it-simple}
+
+När du utformar strukturerat innehåll i AEM ska du hålla innehållsstrukturerna så enkla som möjligt för att säkerställa starka systemprestanda och effektiv styrning.
+
+### Antal modeller {#number-of-models}
+
+Skapa så många innehållsmodeller som behövs, men inte mer.
+
+För många modeller komplicerar styrningen och kan göra GraphQL-frågor långsammare. En liten uppsättning modeller, som är högst tio, är vanligtvis tillräckliga. Om du närmar dig de tiotals eller fler höga nivåerna bör du tänka om din modelleringsstrategi.
+
+### Kapslingsmodeller och fragment (mycket viktigt) {#nesting-models-and-fragments}
+
+Undvik djup eller överdriven kapsling av innehållsfragment med Content Fragment Reference, som gör att fragment kan referera till andra fragment, ibland på flera nivåer.
+
+Omfattande användning av Content Fragment-referenser kan i hög grad påverka systemets prestanda, användargränssnittets svarstider och körningen av GraphQL-frågor. Målet är att inte kapsla mer än tio nivåer.
+
+### Antal datafält och datatyper per per modell  {#number-of-data-fields-and-types-per-model}
+
+Inkludera endast de datafält och datatyper som modellen verkligen behöver.
+
+Överdrivet komplexa modeller leder till alltför komplexa fragment som kan göra redigeringen svår och minska redigeringsprestanda.
+
+### RTF-fält {#rich-text-fields}
+
+Använd RTF-fält (datatypen **Flera rader**) med hänsyn till detta.
+
+Begränsa antalet RTF-fält per modell. Även mängden text som lagras i varje fragment och mängden HTML-formatering. Mycket stort RTF-innehåll kan påverka systemets prestanda negativt.
+
+### Antal variationer {#number-of-variations}
+
+Skapa så många fragmentvariationer som behövs, men inte mer.
+
+Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans. Vi rekommenderar att du håller antalet variationer till ett hanterbart minimum.
+
+Ett tips är att inte överskrida tio varianter per innehållsfragment.
+
+### Testa före produktion {#test-before-production}
+
+När du är osäker kan du skapa prototyper för de avsedda innehållsstrukturerna innan du distribuerar dem till produktionen. Tidiga korrekturrundor och lämplig testning, både för tekniska frågor och för användaren, kan hjälpa dig att undvika problem senare när du måste klara deadlines i produktionen.
