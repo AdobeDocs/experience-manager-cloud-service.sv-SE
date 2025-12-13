@@ -179,11 +179,11 @@ Du kan dessutom använda API:t `guidelib.dataIntegrationUtils.executeOperation` 
 
 ### Anropa en formulärdatamodell (FDM) med anpassade funktioner {#invoke-form-data-model-using-custom-functions}
 
-Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner ](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
+Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner &#x200B;](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
 
 1. Gå till Experience Manager webbkonsol på `https://server:host/system/console/configMgr`.
 1. Sök efter **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
-1. Klicka på ikonen ![plus ](/help/forms/assets/Smock_Add_18_N.svg) för att lägga till konfigurationen.
+1. Klicka på ikonen ![plus &#x200B;](/help/forms/assets/Smock_Add_18_N.svg) för att lägga till konfigurationen.
 1. Lägg till **[!UICONTROL Content path pattern]** för att ange platsen för din adaptiva Forms.  Som standard är värdet `/content/forms/af/(.*)`, som innehåller alla adaptiva Forms. Du kan också ange sökvägen för ett visst anpassat formulär.
 1. Lägg till **[!UICONTROL Form Data Model path pattern]** för att ange platsen för formulärdatamodellen (FDM). Som standard är värdet `/content/dams/formsanddocuments-fdm/(.*)`, som innehåller alla formulärdatamodeller (FDM). Du kan också ange sökvägen för en viss formulärdatamodell (FDM).
 1. Spara inställningarna.
