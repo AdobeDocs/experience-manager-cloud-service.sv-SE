@@ -1,12 +1,12 @@
 ---
 title: Hur ansluter jag en databas till  [!DNL AEM Forms] as a Cloud Service?
-description: Hämta och spara data till RESTful-webbtjänster, SOAP webbtjänster och OData-tjänster från ett adaptivt formulär eller ett AEM arbetsflöde.
+description: Hämta och spara data till RESTful-webbtjänster, SOAP-baserade webbtjänster och OData-tjänster från ett adaptivt formulär eller ett AEM-arbetsflöde.
 feature: Adaptive Forms, Form Data Model
 role: Admin, User
 exl-id: 9d146275-de0a-4861-b060-d205ed6305f3
-source-git-commit: 5ee37f59bb959e0549c0541c6568aa8c135c330e
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/data-integration.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/data-integration.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -45,6 +45,26 @@ När du har skapat en formulärdatamodell (FDM) kan du använda den för att:
 * Förifyll anpassad Forms från konfigurerade datakällor
 * Anropa datakälltjänster/åtgärder med hjälp av regler för anpassat formulär
 * Skriv data för anpassat formulär till datakällor
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Kan AEM Forms användas för försäkringsansökningar?
+
+Ja. AEM Forms kan användas för att skapa ansökningsblanketter som samlar in ansökningsinformation, validerar indata och integreras med försäkringssystem.
+
+## Har AEM Forms stöd för försäkringsflöden?
+
+Ja, med arbetsflöden och integreringar. AEM Forms stöder arbetsflödesdrivna processer och serverdelsintegreringar som gör att applikationsdata kan flöda in i skriv- och beslutssystem.
+
+## Kan AEM Forms integreras med försäkringssystemen?
+
+Ja. AEM Forms stöder integrering med hjälp av REST- och SOAP-API:er, vilket gör det möjligt att ansluta till policyadministrationssystem, anspråkshanteringssystem och CRM:er.
+
+## Kan AEM Forms skriva blankettdata tillbaka till försäkringssystemen?
+
+Ja. AEM Forms har stöd för att skriva tillbaka data till backend-system som en del av formulärinlämning och arbetsflödeskörning.
 
 ## Kom igång med dataintegrering {#get-started-with-data-integration}
 

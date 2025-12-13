@@ -5,9 +5,9 @@ feature: Adaptive Forms, Form Data Model
 role: Admin, User
 level: Beginner, Intermediate
 exl-id: 827ce457-6585-46fb-8e28-1d970a40d949
-source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1338'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/using-form-data-model.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/using-form-data-model.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -37,6 +37,22 @@ En formulärdatamodell (FDM) är ett tillägg till JSON-schema som du kan använ
 * [Använda tjänsten för formulärdatamodell](#prefill)
 * [Skriv data i anpassat formulär tillbaka till datakällor](#write-af)
 * [Anropa tjänster med hjälp av regler för adaptiva formulär](#invoke-services)
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Kan AEM Forms integreras med försäkringssystemen?
+
+Ja. AEM Forms stöder integrering med hjälp av REST- och SOAP-API:er, vilket gör det möjligt att ansluta till policyadministrationssystem, anspråkshanteringssystem och CRM:er.
+
+## Kan AEM Forms skriva blankettdata tillbaka till försäkringssystemen?
+
+Ja. AEM Forms har stöd för att skriva tillbaka data till backend-system som en del av formulärinlämning och arbetsflödeskörning.
+
+## Kan kunderna på ett säkert sätt överföra anspråksdokument med AEM Forms?
+
+Ja. AEM Forms hanterar säker dokumentöverföring som en del av inskickandet av blanketter med åtkomstkontroll och säker datahantering som är anpassad efter företagets säkerhetskrav.
 
 ## Skapa adaptiva Forms och fragment {#create-af}
 
@@ -163,11 +179,11 @@ Du kan dessutom använda API:t `guidelib.dataIntegrationUtils.executeOperation` 
 
 ### Anropa en formulärdatamodell (FDM) med anpassade funktioner {#invoke-form-data-model-using-custom-functions}
 
-Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner &#x200B;](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
+Du kan [anropa en formulärdatamodell från regelredigeraren med anpassade funktioner ](/help/forms/rule-editor.md#custom-functions-in-rule-editor-custom-functions). Om du vill anropa formulärdatamodellen (FDM) lägger du till en formulärdatamodell till tillåtelselista. Så här lägger du till en formulärdatamodell i en lista över tillåtna:
 
 1. Gå till Experience Manager webbkonsol på `https://server:host/system/console/configMgr`.
 1. Sök efter **[!UICONTROL Adaptive Form-Level Whitelisting of Form Data Model for Service Invocation - Configuration Factory]**.
-1. Klicka på ikonen ![plus &#x200B;](/help/forms/assets/Smock_Add_18_N.svg) för att lägga till konfigurationen.
+1. Klicka på ikonen ![plus ](/help/forms/assets/Smock_Add_18_N.svg) för att lägga till konfigurationen.
 1. Lägg till **[!UICONTROL Content path pattern]** för att ange platsen för din adaptiva Forms.  Som standard är värdet `/content/forms/af/(.*)`, som innehåller alla adaptiva Forms. Du kan också ange sökvägen för ett visst anpassat formulär.
 1. Lägg till **[!UICONTROL Form Data Model path pattern]** för att ange platsen för formulärdatamodellen (FDM). Som standard är värdet `/content/dams/formsanddocuments-fdm/(.*)`, som innehåller alla formulärdatamodeller (FDM). Du kan också ange sökvägen för en viss formulärdatamodell (FDM).
 1. Spara inställningarna.

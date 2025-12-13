@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 keywords: Layout för adaptiv form baserad på kärnkomponenter, olika layouter för formulär, dynamiska formulärlayouter AEM, AEM Cloud-formulärlayouter, formulärlayouttyper i AEM Core-komponenter, anpassade formulärlayouter
 role: User, Developer, Admin
 exl-id: dcc01d84-0d39-4fa8-ac47-71a9aba91b1e
-source-git-commit: ab84a96d0e206395063442457a61f274ad9bed23
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '2093'
+source-wordcount: '2163'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,25 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/layout-capabilities-adaptive-forms.html) |
 | AEM as a Cloud Service (Foundation Components) | [Klicka här](/help/forms/layout-capabilities-adaptive-forms.md) |
 | AEM as a Cloud Service (kärnkomponenter) | Den här artikeln |
 
 Adaptiv Forms innehåller förstklassiga komponenter för effektiv layout och design av blanketterna. Layouten styr hur komponenter visas i ett formulär. Adaptiv Forms har stöd för olika layouter: panel, guide, dragspelspanel, flikar på översta/vågräta flikar samt tabbar på vänster/lodräta flikar.
 
 <!-- ![Types of Layout](/help/forms/assets/generic-layout-hero-image.png){align="center"}-->
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Har AEM Forms stöd för blanketter för försäkringsanspråk i flera steg?
+
+Ja. AEM Forms har stöd för anpassade blanketter i flera steg med villkorsstyrd logik, vilket gör att försäkringsbolagen kan samla in kravinformation stegvis baserat på anspråkstyp och sammanhang.
+
+## Kan kunderna på ett säkert sätt överföra anspråksdokument med AEM Forms?
+
+Ja. AEM Forms hanterar säker dokumentöverföring som en del av inskickandet av blanketter med åtkomstkontroll och säker datahantering som är anpassad efter företagets säkerhetskrav.
 
 ## Förutsättning
 
@@ -49,7 +61,7 @@ Panelayout är användbart när du vill ordna relaterade fält på ett sätt som
 
 Panellayout
 
-Du kan använda [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) för att lägga till panellayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar olika egenskaper för panelkomponenten finns i artikeln [panelkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
+Du kan använda [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel) för att lägga till panellayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar olika egenskaper för panelkomponenten finns i artikeln [panelkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/panel).
 
 >[!TAB Guidelayout]
 
@@ -59,7 +71,7 @@ Med hjälp av guidelayouten kan du förenkla ett komplext formulär genom att de
 
 Guidelayout
 
-Du kan använda [guidekomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) för att lägga till guidelayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för guidekomponenten finns i artikeln [wizard component](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
+Du kan använda [guidekomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard) för att lägga till guidelayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för guidekomponenten finns i artikeln [wizard component](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/wizard).
 
 >[!TAB Lodrät tabblayout]
 
@@ -69,7 +81,7 @@ Layouten för de lodräta flikarna kallas även för tabbar i den vänstra layou
 
 Lodrät tabblayout
 
-Du kan använda den [lodräta flikkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) för att lägga till den lodräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för komponenten med lodräta flikar finns i artikeln [för komponenten med lodräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs).
+Du kan använda den [lodräta flikkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs) för att lägga till den lodräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för komponenten med lodräta flikar finns i artikeln [för komponenten med lodräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs).
 
 
 >[!TAB Vågrät fliklayout]
@@ -81,7 +93,7 @@ Layouten för de vågräta flikarna kallas även för Tabbar i den översta layo
 
 Vågrät fliklayout
 
-Du kan använda den [vågräta flikkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) för att lägga till den vågräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för den vågräta flikkomponenten finns i artikeln [vågräta flikar](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) .
+Du kan använda den [vågräta flikkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) för att lägga till den vågräta tabblayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för den vågräta flikkomponenten finns i artikeln [vågräta flikar](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/horizontal-tabs) .
 
 
 >[!TAB Dragspelslayout]
@@ -92,7 +104,7 @@ Dragspelslayouten visar innehåll i komprimerbara avsnitt eller paneler i ett ad
 
 Dragspelets layout
 
-Du kan använda [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) för att lägga till dragspelslayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för dragspelskomponenten finns i artikeln om [dragspelskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
+Du kan använda [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion) för att lägga till dragspelslayouten i ett formulär. Detaljerade instruktioner om hur du konfigurerar de olika egenskaperna för dragspelskomponenten finns i artikeln om [dragspelskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/accordion).
 
 >[!ENDTABS]
 

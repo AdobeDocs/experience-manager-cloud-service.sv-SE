@@ -5,9 +5,9 @@ Keywords: document generation, PDF manipulation, document security, batch proces
 feature: Adaptive Forms, APIs & Integrations, Document Services
 role: Admin, Developer, User
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 8803896bf728524833a0dde004ddaa2e8b6bb103
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '2654'
+source-wordcount: '2711'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 > **Versionstillgänglighet**
 >
-> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=sv-SE)
+> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html)
 > * **AEM as a Cloud Service**: Den här artikeln
 
 ## Introduktion
@@ -41,6 +41,18 @@ API:er för kommunikation har en omfattande uppsättning funktioner för dokumen
 | Generera skräddarsydda dokument genom att sammanfoga mallar med data i olika format, inklusive PDF och utskriftsformat. | Kombinera, ordna om och validera PDF-dokument programmatiskt för att skapa nya dokumentpaket. | Extrahera egenskaper, metadata och innehåll från PDF-dokument för vidare bearbetning. | Konvertera dokument mellan format, inklusive PDF/A-validering för arkiveringsbehov. | Använd digitala signaturer, certifiering och kryptering för att skydda och skydda dokument. |
 
 [API-referensdokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och olika tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Kan AEM Forms generera försäkringsdokument?
+
+Ja. AEM Forms kan generera policyrelaterade dokument med hjälp av mallar och strukturerade data som hämtas via formulär.
+
+## Kan AEM Forms hantera försäkringsverksamhet i stor skala?
+
+Ja. När AEM Forms används med rekommenderade arkitekturer i Adobe Managed Services eller i molnet, har det stöd för stora volymer och arbetsbelastningar i storföretagsklass.
 
 ## Dokumentgenerering
 

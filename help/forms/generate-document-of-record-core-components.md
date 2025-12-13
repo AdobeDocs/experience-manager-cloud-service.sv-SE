@@ -4,9 +4,9 @@ description: Lär dig att generera en mall för ett dokument för inspelning (Do
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '3136'
+source-wordcount: '3197'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,18 @@ ht-degree: 0%
 När ett formulär fylls i eller skickas kan du spara en post med formuläret, i utskrift eller i dokumentformat. Den här posten kallas dokumentarkivhandling (DoR). Det är en utskriftsvänlig kopia av det inskickade formuläret. Du kan också hänvisa till urkunder för den information de fyller i vid ett senare tillfälle eller använda arkiveringsdokumentet för att arkivera formulär och innehåll tillsammans i PDF-format.
 
 ![Postdokument](assets/document-of-record.png)
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Kan AEM Forms generera försäkringsdokument?
+
+Ja. AEM Forms har stöd för att generera arkivhandlingar (Document of Record, DoR), vilket gör att försäkringsbolagen kan skapa PDF:er och arkivhandlingar som bygger på inlämnade formulärdata.
+
+## Är dokument som genererats av AEM Forms lämpliga för revision?
+
+Ja. AEM Forms har stöd för enhetlig dokumentgenerering, kontrollerad åtkomst och spårbarhet, vilket är viktigt för revision och regelefterlevnad.
 
 Om du vill skapa ett dokument med poster sammanfogas en XFA- eller Acrobat-baserad mall med data som samlats in via ett adaptivt formulär. Du kan generera ett dokument för inspelning automatiskt eller on-demand. Med alternativet on-demand kan du ange en anpassad XFA- eller Acrobat-baserad mall som ger ett anpassat utseende till ditt postdokument.
 

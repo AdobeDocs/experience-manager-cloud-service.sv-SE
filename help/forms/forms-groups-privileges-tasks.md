@@ -4,10 +4,10 @@ description: Lista över användargrupper som inte ingår i rutan och behörighe
 role: Admin, Developer, User
 feature: Adaptive Forms
 exl-id: bd66ce92-14d9-47fe-b5d3-022e3e468d25
-source-git-commit: 05548d56d791584781606b02839c5602b4469f7b
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 3%
+source-wordcount: '207'
+ht-degree: 2%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
-Du kan [skapa grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=sv-SE#accessing) och tilldela profiler och [användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html?lang=sv-SE#accessing) till grupperna. Dessa profiler styr behörigheter för de användare som ingår i gruppen.
+Du kan [skapa grupper](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) och tilldela profiler och [användare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions.html#accessing) till grupperna. Dessa profiler styr behörigheter för de användare som ingår i gruppen.
 
-När du har konfigurerat [!DNL AEM Forms] as a Cloud Service är grupperna som listas i tabellen nedan, som [!DNL forms-users] och formulär-power-user, automatiskt tillgängliga för tilldelning:
+När du har konfigurerat [!DNL AEM Forms] as a Cloud Service är de grupper som listas i tabellen nedan, som [!DNL forms-users] och användare med formulärfunktioner, automatiskt tillgängliga för tilldelning:
 
 <table>
  <tbody>
@@ -34,7 +34,7 @@ När du har konfigurerat [!DNL AEM Forms] as a Cloud Service är grupperna som l
     <ul> 
      <li>Skapa, förhandsgranska, publicera och skicka Adaptiv Forms</li> 
     <!-- <li>Create, preview, and publish interactive communications and document fragments</li> -->
-     <li>Överföra resurser till en AEM instans</li> 
+     <li>Överföra resurser till en AEM-instans</li> 
      <li>Skapa teman</li> 
     </ul> </td> 
   </tr>
@@ -107,6 +107,14 @@ När du har konfigurerat [!DNL AEM Forms] as a Cloud Service är grupperna som l
   </tr>
  </tbody>
 </table>
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Är AEM Forms enterprise-grade för försäkringsverksamhet?
+
+Ja. AEM Forms har funktioner som rollbaserad åtkomstkontroll, åtkomsthistorik, arbetsflödessamordning, dokumentgenerering och driftsättningsflexibilitet som krävs för storskalig försäkringsverksamhet.
 
 ## Se även
 

@@ -5,9 +5,9 @@ feature: Adaptive Forms, Core Components
 Role: Developer, Author
 exl-id: bc06542b-84c8-4c6a-a305-effbd16d5630
 role: User, Developer
-source-git-commit: cc2a226898f5dbe9073ba9b5a859218da664b1d7
+source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
 workflow-type: tm+mt
-source-wordcount: '2124'
+source-wordcount: '2154'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,14 @@ ht-degree: 0%
 AEM Forms har stöd för engelska (en), spanska (es), franska (fr), italienska (it), tyska (de), japanska (ja), portugisiska-brasilianska (pt-BR), kinesiska (zh-CN), kinesiska-taiwanesiska (zh-TW) och koreanska (ko-KR). Du kan även lägga till stöd för fler språkområden, som Hindi(hi_IN). Du kan också presentera Adaptiv Forms på höger-till-vänster-språk (RTL) som arabiska, persiska och urdu genom att lägga till dessa språkområden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433132/adaptive-forms-rtl--arabic-hebrew-farsi)
+
+## Tillämplighet och användningsfall
+
+### Försäkring
+
+## Har AEM Forms stöd för flerspråkiga försäkringsfall?
+
+Ja. AEM Forms har stöd för flerspråkiga blankettupplevelser, vilket är viktigt för försäkringsgivare som arbetar i olika regioner och på olika språk.
 
 ## Hur avgör AEM Forms språkområdet för ett adaptivt formulär?
 
@@ -117,7 +125,7 @@ Följ de här stegen för att lägga till stöd för nya språkområden i ett ad
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa uppgifter finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
    **Projektet är klart!**
 
@@ -140,7 +148,7 @@ Följ de här stegen för att lägga till stöd för nya språkområden i ett ad
      [AEMaaCS project directory]/ui.config/src/main/content/jcr_root/apps/<appid>/osgiconfig/config`. 
      ```
 
-     Ersätt `<appid>` med ditt projektspecifika program-ID. Du kan hitta `<appid>` för ditt AEM projekt i filen `archetype.properties`.
+     Ersätt `<appid>` med ditt projektspecifika program-ID. Du kan hitta `<appid>` för ditt AEM-projekt i filen `archetype.properties`.
 
      ![Egenskaper för arkitekttyp](/help/forms/assets/archetype-properties.png)
 
@@ -313,7 +321,7 @@ Det här steget gäller endast för andra språk än de som stöds vanligtvis: e
 
 1. Skapa språkkonfigurationsfilen:
 
-   Skapa en ny fil med namnet `.content.xml` i mappen `languages`. Kopiera inte filnamnet från det här dokumentet, utan skriv in namnet manuellt.
+   Skapa en ny fil med namnet `languages` i mappen `.content.xml`. Kopiera inte filnamnet från det här dokumentet, utan skriv in namnet manuellt.
 
    ![skapa en ny fil med namnet `.content.xml`](etc-content-xml.png)
 
@@ -347,7 +355,7 @@ Det här steget gäller endast för andra språk än de som stöds vanligtvis: e
 
 1. Spara filen.
 
-### Distribuera den nyligen skapade språkinställningen till AEM
+### Distribuera den nya språkinställningen till din AEM-miljö
 
 Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 
@@ -365,7 +373,7 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
       mvn -PautoInstallPackage clean install
       ```
 
-* Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud Service. Så här distribuerar du till din Cloud Service:
+* Distribuera AEM as a Cloud Service, [AEMaaCS-projektkatalogen], till din Cloud Service-miljö. Så här distribuerar du till din Cloud Service-miljö:
 
    1. Genomför dina ändringar:
 
@@ -373,9 +381,9 @@ Nu kan du börja använda det nya språkområdet med din adaptiva Forms. Du kan
 
    1. Distribuera den uppdaterade koden:
 
-      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline). Detta skapar och distribuerar automatiskt den uppdaterade koden med det nya språkstödet.
+      Utlös en distribution av koden via den [befintliga pipelinen för hela stacken](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline). Detta skapar och distribuerar automatiskt den uppdaterade koden med det nya språkstödet.
 
-      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline).
+      Om du inte redan har konfigurerat en pipeline kan du läsa guiden [Konfigurera en pipeline för AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=en#setup-pipeline).
 
 
 ## Förhandsgranska ett anpassat formulär med nyligen tillagda språk
@@ -388,13 +396,13 @@ Med de här stegen får du hjälp att förhandsgranska ett adaptivt formulär me
 1. Ange **Projektnamn** och välj **Målspråk** i listrutan i guiden **Lägg till ordlista i översättningsprojekt**.
 1. Klicka på **Klar** och kör det skapade översättningsprojektet.
 1. Gå till **Forms** > **Forms och dokument**.
-1. Markera det anpassade formuläret och välj alternativet **Förhandsgranska som HTML**.
+1. Markera det adaptiva formuläret och välj alternativet **Förhandsgranska som HTML**.
 1. Lägg till `&afAcceptLang=<locale-name>` i förhandsgransknings-URL:en och tryck på returtangenten. Ersätt `<locale-name>` med den faktiska språkkoden. Det anpassningsbara formuläret visas på det angivna språket.
 
 ## De bästa sätten att stödja ny lokalisering {#best-practices}
 
 * Adobe rekommenderar att du skapar ett översättningsprojekt när du har skapat ett adaptivt formulär. Detta effektiviserar lokaliseringsprocessen.
-* När komponenterna Numerisk ruta och Datumväljare översätts till ett visst språkområde kan det uppstå formateringsproblem. För att minska detta har ett **Language**-alternativ integrerats i dialogrutan Konfigurera för [datumväljarkomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-picker#format-tab) och [Numeric Box-komponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/numeric-box#formats-configure-tab).
+* När komponenterna Numerisk ruta och Datumväljare översätts till ett visst språkområde kan det uppstå formateringsproblem. För att minska detta har ett **Language**-alternativ integrerats i dialogrutan Konfigurera för [datumväljarkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/date-picker#format-tab) och [Numeric Box-komponenten](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/numeric-box#formats-configure-tab).
 
 
 * Hantera nya fält:
