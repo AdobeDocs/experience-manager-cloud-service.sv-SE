@@ -5,7 +5,7 @@ feature: Content Fragments
 role: User, Developer
 exl-id: a2f2b617-3bdf-4a22-ab64-95f2c65adc82
 solution: Experience Manager Sites
-source-git-commit: 8dc6874f3f8833ef67a4fa93d2a830fa8485b593
+source-git-commit: ce807274d6138473ff9661897a0816e0feb99f15
 workflow-type: tm+mt
 source-wordcount: '2793'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Den här redigeraren innehåller:
 
 >[!NOTE]
 >
->Observera [Bästa praxis](/help/sites-cloud/administering/content-fragments/overview.md) när du arbetar med modeller för innehållsfragment och innehållsfragment.
+>Observera [Bästa praxis](/help/sites-cloud/administering/content-fragments/overview.md#best-practices) när du arbetar med modeller för innehållsfragment och innehållsfragment.
 
 >[!WARNING]
 >
@@ -271,7 +271,7 @@ Då öppnas fältet Flera rader i helskärmsläge och:
 
   >[!CAUTION]
   >
-  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**&#x200B;till variationen*.
+  >Synkronisering är bara tillgängligt för att kopiera ändringar *från **Huvudsida**till variationen*.
   >
   >Det går inte att överföra ändringar *från en variation till **Main*** som ett alternativ.
 
