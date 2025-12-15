@@ -5,9 +5,9 @@ exl-id: db17eff1-4252-48d5-bb67-5e476e93ef7e
 feature: Content Fragments
 role: User
 solution: Experience Manager Sites
-source-git-commit: 2449bc380268ed42b6c8d23ae4a4fecaf1736889
+source-git-commit: bd7b822262e0e7994fe5140f3786c1b7ab96e7a1
 workflow-type: tm+mt
-source-wordcount: '2576'
+source-wordcount: '2610'
 ht-degree: 2%
 
 ---
@@ -93,7 +93,7 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns även i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
@@ -195,7 +195,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Assets (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Inbäddad i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md).
+   * Kan formateras när [fragmentet används/refereras på en sida ](/help/sites-cloud/authoring/fragments/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Det går bara att lägga till, ta bort eller flytta inom ett fragment med formatet [RTF i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
@@ -352,9 +352,15 @@ Inkludera endast de datafält och datatyper som modellen verkligen behöver.
 
 ### RTF-fält {#rich-text-fields}
 
-Använd RTF-fält (datatypen **Flera rader**) med hänsyn till detta.
+Använd RTF-fält (datatypen **Flera rader**) med hänsyn till:
 
-Begränsa antalet RTF-fält per modell. Även mängden text som lagras i varje fragment och mängden HTML-formatering. Mycket stort RTF-innehåll kan påverka systemets prestanda negativt.
+* Fält
+
+  Begränsa antalet RTF-fält per modell. Av prestandaskäl bör du inte ha fler än tio RTF-fält i en modell. Om det behövs rekommenderar vi att du använder [kapslade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md#using-references-to-form-nested-content).
+
+* Innehåll
+
+  Du bör också begränsa mängden text som lagras i varje fragment och mängden HTML-formatering. Mycket stort RTF-innehåll kan påverka systemets prestanda negativt.
 
 ### Antal variationer {#number-of-variations}
 
