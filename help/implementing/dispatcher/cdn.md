@@ -4,9 +4,9 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 7f00e68eac0b1e0090bdb57a8188af7bbe21ad1b
+source-git-commit: 29aded35239bb8c9a5cf71f9b9dd036c4c32f026
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1772'
 ht-degree: 2%
 
 ---
@@ -132,7 +132,7 @@ curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com --header "X-Forwa
 
 Det extra hoppet mellan kundens CDN och AEM CDN behövs bara om det finns ett cacheminne. Genom att använda de strategier för cacheoptimering som beskrivs i den här artikeln bör tillägget av en kund-CDN endast medföra försumbar fördröjning.
 
-Kundens CDN-konfiguration stöds för publiceringsnivån, men inte framför författarnivån.
+Kundens CDN-konfiguration stöds för publiceringsnivån och förhandsgranskningsnivån, men inte framför författarnivån.
 
 ### Felsökningskonfiguration
 
@@ -163,7 +163,7 @@ Den här processen gör att du kan verifiera information som värdvärden, edge-
 >Du kan använda en Rapid Development Environment (RDE) för att distribuera och testa konfigurationen:
 >
 >* [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md)
->* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
+>* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 
