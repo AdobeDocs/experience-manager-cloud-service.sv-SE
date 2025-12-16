@@ -4,7 +4,7 @@ description: Detta är versionsinformationen för version 2025.12.11 av Universa
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 577bc81c35ad052a96b85ed4de13b21f06e385aa
+source-git-commit: b7b89587a81d0cadc81d4b2a486c022557c4a9fb
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Det här är versionsinformationen för den 12 december 2025-versionen av Univer
 
 * Stöd har lagts till i befintliga tabeller i [RTF-redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options)
 * Tabbtangenten har aktiverats för kapslade listor i [RTF-redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options)
-* Inloggningsfunktionen för utvecklare kan nu inaktiveras via [meta-taggen `dev-login`.](/help/implementing/universal-editor/customizing.md#meta-tags)
+* Inloggningsfunktionen för utvecklare kan nu inaktiveras via [meta-taggen `aem-dev-login`.](/help/implementing/universal-editor/customizing.md#meta-tags)
 * En högerklickning i övertäckningssektionen visar nu en [snabbalternativmeny.](/help/sites-cloud/authoring/universal-editor/authoring.md#context-options)
 * [Omfångsindrag](/help/implementing/universal-editor/configure-rte.md#indentation) stöds nu i [RTF-redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options)
 
