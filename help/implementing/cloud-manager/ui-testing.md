@@ -5,9 +5,9 @@ exl-id: 3009f8cc-da12-4e55-9bce-b564621966dd
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 7d86ec9cd7cc283082da44111ad897a5aa548f58
 workflow-type: tm+mt
-source-wordcount: '2601'
+source-wordcount: '2664'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM tillhandahåller en integrerad svit med [Cloud Manager-portar för hög kvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) för att säkerställa smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview).
+Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
 
 Adobe rekommenderar att man använder Cypress eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för användare som inte har testat tidigare.
 
@@ -72,7 +72,7 @@ I det här avsnittet beskrivs stegen som krävs för att lägga till ett UI-test
 >
 >[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) kan generera ett UI Tests-projekt åt dig, som uppfyller följande beskrivning om du inte har några särskilda krav för programmeringsspråket.
 
-### Skapa en kontext för Docker Build {#generate-docker-build-context}
+### Generera kontext för Docker-bygge {#generate-docker-build-context}
 
 För att skapa en Docker-byggkontext behöver du en Maven-modul som:
 
@@ -159,7 +159,7 @@ Cloud Manager hämtar automatiskt kontextarkivet för Docker och skapar testbild
 
 Bygget ska antingen producera noll eller ett arkiv. Om inga arkiv skapas godkänns teststeget som standard. Om bygget skapar mer än ett arkiv är det valda arkivet inte deterministiskt.
 
-### Kundens deltagande {#customer-opt-in}
+### Kundanmälan {#customer-opt-in}
 
 För att Cloud Manager ska kunna bygga och köra dina gränssnittstester måste du välja den här funktionen genom att lägga till en fil i databasen.
 
@@ -182,11 +182,11 @@ Om du vill inkludera en `testing.properties`-fil i build-artefakten lägger du t
 [...]
 ```
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Om projektet inte innehåller den här raden redigerar du filen för att välja gränssnittstestning.
 >
->Filen kan innehålla en rad som anger att den inte ska redigeras. Orsaken är att den introduceras i ditt projekt innan gränssnittstestning för deltagande introducerades och klienterna inte var avsedda att redigera filen. Du kan tryggt ignorera anvisningarna.
+>Filen kan innehålla en rad som säger *ÄNDRA INTE*.&quot; Det är bara en äldre varning från äldre mallar/exempel och *inte* blockerar dig från att göra de ändringar av anmälan som krävs för Cloud Manager UI-testning. Du kan tryggt ignorera anvisningarna. Det innebär att du kan redigera `assembly-ui-test-docker-context.xml` och `pom.xml` i *ditt projekt* när du följer anmälningsstegen (till exempel för att inkludera `testing.properties`).
 
 Om du använder Adobe exempel:
 
@@ -202,7 +202,7 @@ Om du använder Adobe exempel:
 
 * Testexemplen av Cypress och Java Selenium som tillhandahålls av Adobe har redan flaggan opt-in.
 
-## Skriver gränssnittstester {#writing-ui-tests}
+## Skriv gränssnittstester {#writing-ui-tests}
 
 I det här avsnittet beskrivs de konventioner som Docker-bilden som innehåller dina gränssnittstester måste följa. Docker-bilden är inbyggd i Docker-konstruktionssammanhanget som beskrivs i föregående avsnitt.
 
@@ -273,6 +273,9 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 | Timeout | 30 m | Hur länge testet körs. |
 | Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testerna hålls inom denna tidsgräns. |
 
+* Om målförfattaren/publiceringen skyddas av IP-tillåtelselistning måste pipeline-gränssnittets testinfrastruktur vara tillåtslista, annars kan gränssnittstester misslyckas med 403 Ej tillåtet.
+Se även [UI-testfel i AEMaaCS på grund av IP-Tillåtelselistning](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26654#) och [Introduktion till IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
+
 >[!NOTE]
 >
 > Om du behöver mer resurser kan du skapa ett kundvårdsärende och beskriva ditt användningsfall. Adobe granskar din begäran och ger lämplig hjälp.
@@ -283,7 +286,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 >
 >Detta avsnitt gäller endast när Selenium är den valda testinfrastrukturen.
 
-### Väntar på att Selenium ska vara klart {#waiting-for-selenium}
+### Vänta tills Selenium är klart {#waiting-for-selenium}
 
 Innan testerna börjar är det dockningsbildens ansvar att säkerställa att Selenium-servern är igång. Att vänta på Selenium-tjänsten är en tvåstegsprocess.
 
@@ -440,11 +443,11 @@ if (proxyServer !== '') {
 > Ett exempel på implementering finns i testmodulen för Playwright Sample på [GitHub](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-playwright).
 
 
-## Köra gränssnittstester lokalt {#run-ui-tests-locally}
+## Kör gränssnittstester lokalt {#run-ui-tests-locally}
 
 Innan du aktiverar gränssnittstester i en Cloud Manager-pipeline rekommenderar Adobe att du kör UI-testerna lokalt mot [AEM as a Cloud Service SDK](/help/implementing/developing/introduction/aem-as-a-cloud-service-sdk.md). Eller kör mot en faktisk AEM as a Cloud Service-instans.
 
-### Cypress-testexempel {#cypress-sample}
+### Prov av cypress-provning {#cypress-sample}
 
 1. Öppna ett skal och navigera till mappen `ui.tests/test-module` i din databas
 
@@ -504,7 +507,7 @@ Innan du aktiverar gränssnittstester i en Cloud Manager-pipeline rekommenderar 
 >
 >Mer information finns i [AEM Test Samples-databasen](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-wdio).
 
-### Exempel på test av uppspelningsrätt {#playwright-sample}
+### Exempel på uppspelningsrätt {#playwright-sample}
 
 1. Öppna ett skal och navigera till mappen `ui.tests` i din databas
 
@@ -533,7 +536,7 @@ Innan du aktiverar gränssnittstester i en Cloud Manager-pipeline rekommenderar 
 >Mer information finns i [AEM Test Samples-databasen](https://github.com/adobe/aem-test-samples/tree/aem-cloud/ui-playwright).
 
 
-### Java Selenium WebDriver Test Sample {#java-sample}
+### Java Selenium WebDriver test sample {#java-sample}
 
 1. Öppna ett skal och navigera till mappen `ui.tests/test-module` i din databas
 

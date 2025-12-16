@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
 exl-id: 8fb8f708-51a5-46d0-8317-6ce118a70fab
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 7d86ec9cd7cc283082da44111ad897a5aa548f58
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
@@ -130,7 +130,7 @@ openssl x509 -in certificate.pem -text grep "Policy: 2.23.140.1.2.1" -B5
 
 +++
 
-+++**Certifikatets giltighet
++++Certifikatets giltighet
 
 ## Certifikatets giltighet {#validity}
 
@@ -138,16 +138,16 @@ Cloud Manager förväntar att SSL-certifikatet ska vara giltigt i minst 90 dagar
 
 +++
 
-+++**Fel SAN-certifikat används på min domän
++++Fel SAN-certifikat används på min domän
 
 ## Fel SAN-certifikat används på min domän {#wrong-san-cert}
 
 Säg att du vill länka `dev.yoursite.com` och `stage.yoursite.com` till din icke-produktionsmiljö och `prod.yoursite.com` till din produktionsmiljö.
 
-Om du vill konfigurera CDN för dessa domäner måste du ha ett certifikat installerat för varje, så du måste installera ett certifikat som omfattar `*.yoursite.com` för dina icke-produktionsdomäner och ett annat som även omfattar `*.yoursite.com` för dina produktionsdomäner.
+Om du vill konfigurera CDN för dessa domäner måste du ha ett certifikat installerat för varje, så att du kan installera ett certifikat som omfattar `*.yoursite.com` för dina icke-produktionsdomäner och ett annat som även omfattar `*.yoursite.com` för dina produktionsdomäner.
 
-Den här konfigurationen är giltig. När du uppdaterar ett av certifikaten, eftersom båda certifikaten omfattar samma SAN-post, kommer CDN att installera det senaste certifikatet på alla tillämpliga domäner, vilket kan verka oväntat.
+Den här konfigurationen är giltig. När du uppdaterar ett av certifikaten omfattar dock båda certifikaten fortfarande samma SAN-post. Därför installerar CDN det senaste certifikatet på alla tillämpliga domäner, vilket kan verka oväntat.
 
-Även om detta kan vara oväntat är detta inte ett fel och är standardbeteendet för det underliggande CDN. Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, och om den domänen täcks av ett certifikat och det andra uppdateras, kommer den senare nu att installeras för domänen.
+Även om detta scenario kan vara oväntat är det inte ett fel och är standardbeteendet för det underliggande CDN. Om du har två eller flera SAN-certifikat som täcker samma SAN-domänpost, installerar CDN det senast uppdaterade certifikatet för den domänen. Detta händer även när ett annat certifikat redan täcker samma domänpost.
 
 +++
