@@ -3,9 +3,9 @@ title: Agent för innehållsoptimering
 description: Lär dig hur du använder Content Optimization Agent för att förändra hur användare förfinar och anpassar resurser genom att tillämpa naturliga språkinstruktioner för att skapa kanalklara varianter.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: ad027974400bdce3428ce96e8804abfe087b48da
+source-git-commit: 3f44e74488fc73c406fefb6decc41782859d029b
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
@@ -154,6 +154,13 @@ När du anger en optimeringsprompt returnerar Content Optimization Agent den fö
 ![Resultat av innehållsoptimering](/help/ai-in-aem/agents/content-optimization/assets/download-content-optimization.png)
 
 Resultatet gör det enkelt att granska det optimerade resultatet och omedelbart använda det i efterföljande kanaler eller arbetsflöden.
+
+
+## Begränsningar {#limitations-content-optimization}
+
+* Innehållsoptimeringsagenten stöder för närvarande inte PNG-resurser.
+
+* Det går inte att ange bakgrundsfärg.
 
 <!--
 

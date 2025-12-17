@@ -1,7 +1,7 @@
 ---
 title: Förbättra innehållsidentifiering med AI-genererade metadata
 description: Lär dig förbättra innehållsidentifiering med AI-genererade metadata
-source-git-commit: f83324be68bdab65e5c76ef336eb7e4a2e318dd1
+source-git-commit: 3f44e74488fc73c406fefb6decc41782859d029b
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%
@@ -43,4 +43,4 @@ Utför följande steg om du vill använda den förbättrade funktionen för smar
 
 1. [Valfritt] Du kan lägga till ytterligare taggar eller skapa egna om du tror att relevanta taggar saknas. Det gör du genom att skriva dina taggar i fältet **[!UICONTROL Generated keywords]** och klicka på **[!UICONTROL Save]**.
 
-Mer information om hur du inaktiverar AI-genererade metadata finns i [Inaktivera AI-genererade metadata](/help/assets/smart-tags.md#disable-ai-generated-metadata).
+Mer information om hur du inaktiverar AI-genererade metadata finns i [Inaktivera AI-genererade metadata](/help/assets/enhance-content-discovery-with-ai-generated-metadata.md#disable-ai-generated-metadata).
