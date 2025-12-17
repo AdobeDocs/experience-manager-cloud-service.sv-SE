@@ -4,9 +4,9 @@ description: Lär dig mer om underhållsåtgärder i AEM as a Cloud Service och 
 exl-id: 5b114f94-be6e-4db4-bad3-d832e4e5a412
 feature: Operations
 role: Admin
-source-git-commit: 5de6ff7e6ac777c90b41bfeb9a56b909c83ed7d3
+source-git-commit: d5addc40eb48000c515b670ef5f7c7a7e8b79928
 workflow-type: tm+mt
-source-wordcount: '2054'
+source-wordcount: '2057'
 ht-degree: 0%
 
 ---
@@ -49,14 +49,14 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
   <tr>
     <td>Rensa version</td>
     <td>Kund</td>
-    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
+    <td>Borttagning av version är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa och Rensa granskningslogg </a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
   </td>
   </tr>
   <tr>
     <td>Rensa granskningslogg</td>
     <td>Kund</td>
-    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
+    <td>Rensa granskningslogg är för närvarande inaktiverat som standard, men principen kan konfigureras enligt beskrivningen i avsnittet <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/maintenance#purge_tasks">Rensa version och Rensa granskningslogg - underhållsaktiviteter</a>.<br/><br/>Rensning kommer snart att vara aktiverat som standard, med dessa värden åsidosatta.<br>
    </td>
    </td>
   </tr>
@@ -70,7 +70,7 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Ad hoc-aktivitetsrensning</td>
     <td>Kund</td>
     <td>
-    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>.</p>
+    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/conf/global/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>.</p>
     <p>Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation. Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan. Ge den namnet <code>granite_TaskPurgeTask</code>, med attributet <code>sling:resourceType</code> inställt på <code>granite/operations/components/maintenance/task</code> och attributet <code>granite.maintenance.name</code> inställt på <code>TaskPurge</code>. Konfigurera OSGI-egenskaperna, se <code>com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask</code> för en lista över egenskaper.</p>
   </td>
   </tr>
@@ -78,7 +78,7 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Rensa arbetsflöde</td>
     <td>Kund</td>
     <td>
-    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
+    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/conf/global/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
     <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_WorkflowPurgeTask</code>) med lämpliga egenskaper. Konfigurera OSGI-egenskaperna, se <a href="/help/sites-cloud/administering/workflows-administering.md#regular-purging-of-workflow-instances">Regelbunden rensning av arbetsflödesinstanser</a>.</p>
   </td>
   </tr>
@@ -86,8 +86,8 @@ Följande tabell visar vilka underhållsuppgifter som är tillgängliga.
     <td>Rensa projekt</td>
     <td>Kund</td>
     <td>
-    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/apps/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
-    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi">OSGi-egenskaper</a> för <b>Adobe Projects Renge Configuration</b> .</p>
+    <p>Måste göras i git. Åsidosätt den körklara konfigurationsnoden för underhållsfönstret under <code>/libs</code> genom att skapa egenskaper under mappen <code>/conf/global/settings/granite/operations/maintenance/granite_weekly</code>, <code>granite_daily</code> eller <code>granite_monthly</code>. Se tabellen i underhållsfönstret nedan för ytterligare konfigurationsinformation.</p>
+    <p>Aktivera underhållsaktiviteten genom att lägga till en annan nod under noden ovan (namnge den <code>granite_ProjectPurgeTask</code>) med lämpliga egenskaper. Se listan över <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi">OSGi-egenskaper</a> för <b>Adobe Projects Renge Configuration</b> .</p>
   </td>
   </tr>
   </tbody>
@@ -146,9 +146,9 @@ Följande tabell visar vilka konfigurationer av underhållsfönstret som är til
 
 ### Platser {#locations}
 
-* Dagligen - /apps/settings/granite/operations/intenance/granite_day
-* Varje vecka - /apps/settings/granite/operations/intenance/granite_week
-* Månadsvis - /apps/settings/granite/operations/intenance/granite_monthly
+* Dagligen - /conf/global/settings/granite/operations/intenance/granite_day
+* Varje vecka - /conf/global/settings/granite/operations/intenance/granite_week
+* Varje månad - /conf/global/settings/granite/operations/intenance/granite_monthly
 
 ### Kodexempel {#code-samples}
 
