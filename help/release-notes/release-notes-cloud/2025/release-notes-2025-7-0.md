@@ -3,9 +3,10 @@ title: Versionsinformation om 2025.7.0-utgåvan av  [!DNL Adobe Experience Manag
 description: Versionsinformation om 2025.7.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: 7787a195cc9ae39f8ac759da03c88a9f1e61226d
+exl-id: b1d25db0-d4a8-4663-b7fe-2d7381e12567
+source-git-commit: 76ccdf13f56d7020ef266bc54bebbcc6eff1067d
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2273'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.7.0
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -38,7 +39,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?quality=12&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -86,7 +87,7 @@ Content Hub innehåller nu alternativet **Visa alla** i filter, vilket gör att 
 
 Få automatisk uppladdning av nya filer och mappar, förbättrad filhantering, smartare resursidentifiering och smidig integrering med AEM - vilket gör innehållshanteringen snabbare, tydligare och mer intuitiv.
 
-En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes).
+En fullständig lista över funktioner finns i [Versionsinformation för skrivbordsapp](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes).
 
 ### Nya funktioner i Dynamic Media med OpenAPI-funktioner {#new-features-dynamic-media-with-openapi}
 
@@ -222,7 +223,7 @@ OSGi-egenskaper:
 
 ### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade &#x200B;** Java 21-miljön**.
+**Java 11-miljön*- är nu föråldrad och de flesta miljöer har redan uppgraderats till den mer avancerade **Java 21-miljön**.
 
 Om din miljö inte kunde uppgraderas på grund av beroenden som inte stöds (se [Java 21-körningskrav](/help/implementing/cloud-manager/getting-access-to-aem-in-cloud/build-environment-details.md#runtime-requirements)), bör du ha fått ett e-postmeddelande från Adobe med specifika nästa steg. Kontrollera att alla nödvändiga uppdateringar är slutförda senast den **28 augusti 2025** så att miljön kan uppgraderas utan avbrott.
 
@@ -241,18 +242,20 @@ Granska och uppdatera alla processer som är beroende av anpassat loggningsbetee
 
 ### Standardrensning av äldre versioner och granskningsloggar {#mt-defaults}
 
-För närvarande har innehållsversioner och granskningsloggar sina associerade *rensningsunderhållsaktiviteter - inaktiverade som standard och inga data tas bort om de inte uttryckligen konfigureras.
+För närvarande har innehållsversioner och granskningsloggar associerade *rensningsunderhållsaktiviteter* inaktiverats som standard och inga data tas bort om de inte uttryckligen konfigureras.
 
-För att optimera databasprestanda kommer rensning att vara aktiverat som standard vid ett framtida meddelande, enligt följande riktlinjer:
+För att optimera databasprestanda kommer rensning att vara aktiverat som standard vid ett framtida annonseringsdatum.
+
+Mer information finns i artikeln [Underhållsåtgärder](/help/operations/maintenance.md#defaults).
 
 #### Innehållsversioner {#mt-content}
 
-* **Nya miljöer*- (skapas efter ett kommande datum (kommer att meddelas senare)
-   * Versioner som är äldre än **30 dagar*- tas regelbundet bort.
+* **Nya miljöer** (skapas efter ett kommande datum, som ska kommuniceras senare):
+   * Versioner som är äldre än 30 dagar tas regelbundet bort.
    * De senaste fem versionerna under de senaste 30 dagarna bevaras tillsammans med den senaste versionen och den aktuella versionen, oavsett ålder.
 
-* **Befintliga miljöer*- (skapades före detta kommande datum):
-   * Versioner som är äldre än **7 år*- tas regelbundet bort.
+* **Befintliga miljöer** (skapades före detta kommande datum):
+   * Versioner som är äldre än 7 år tas regelbundet bort.
    * Alla versioner under de senaste 7 åren bevaras.
    * Detta höga standardtröskelvärde förhindrar oavsiktlig borttagning av senaste data. Vi rekommenderar dock att du konfigurerar lägre värden för att optimera databasens prestanda.
 
@@ -260,18 +263,16 @@ För att optimera databasprestanda kommer rensning att vara aktiverat som standa
 
 #### Granskningslogg {#mt-auditlogs}
 
-* **Nya miljöer*- (skapas efter ett kommande datum, som kommuniceras separat):
-   * Replikerings-, DAM- och sidgranskningsloggar som är äldre än **7 dagar* - tas regelbundet bort.
+* **Nya miljöer** (skapas efter ett kommande datum, som kommuniceras separat):
+   * Replikerings-, DAM- och sidgranskningsloggar som är äldre än 7 dagar tas regelbundet bort.
    * Alla händelser loggas som standard.
 
-* **Befintliga miljöer*- (skapades före detta kommande datum):
-   * Replikerings-, DAM- och sidgranskningsloggar som är äldre än **7 år* - tas regelbundet bort.
+* **Befintliga miljöer** (skapades före detta kommande datum):
+   * Replikerings-, DAM- och sidgranskningsloggar som är äldre än 7 år kommer regelbundet att tas bort.
    * Alla händelser loggas som standard.
    * Detta höga standardtröskelvärde förhindrar oavsiktlig borttagning av senaste data. Vi rekommenderar dock att du konfigurerar lägre värden för att optimera databasens prestanda.
 
 * Du kan ändra dessa standardvärden med hjälp av YAML-konfigurationen, som distribueras med konfigurationsflödet.
-
-Mer information finns i artikeln [Underhållsåtgärder](/help/operations/maintenance.md#defaults).
 
 ### Edge Computing (Alpha Program) {#edge-computing}
 
@@ -310,7 +311,7 @@ Läs mer i [dokumentationen för vidarebefordran av loggfiler](/help/implementin
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -330,4 +331,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
