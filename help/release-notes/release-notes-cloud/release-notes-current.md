@@ -1,13 +1,13 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service
 description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
 mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 6d86413449dbde8566f0f653071a2f29ab9c13ab
+source-git-commit: bdc4b266e2d5725674d00a24fbb1d2cbaac4a53f
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.12.0) är 11 december 2025. Nästa funktionsversion (2026.1.0) är planerad till 29 januari 2026.
 
-## Versionsinformation om underhåll {#maintenance}
+## Versionsinformation för underhåll {#maintenance}
 
 Du hittar den senaste underhållsversionsinformationen [här](/help/release-notes/maintenance/latest.md).
 
@@ -40,13 +40,41 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
-## Agenter i AEM {#agents-in-aem}
+## AEM betaprogram {#aem-beta-programs}
 
-AEM har ett stort antal agenter som gör att du kan snabba upp framtagningen av innehåll och automatiskt hantera ändringar. Mer information finns i [Översikt över agenter i AEM](/help/ai-in-aem/agents/overview.md).
+Adobe Experience Manager (AEM) betaprogram är ett sätt för kunderna att få tillgång till betaversionsfunktioner och -kod, ge feedback och vägleda framtiden för AEM.
+
+>[!IMPORTANT]
+>
+>Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Adobe rekommenderar sina kunder att iaktta försiktighet och inte förlita sig på att betaversioner fungerar eller fungerar som de ska, eller på medföljande dokumentation eller material. Funktioner och API:er i betaversionen kan ändras utan föregående meddelande. Därför är all användning av betaversioner helt och hållet på kundens egen risk.
+
+**Fördelar med att delta**
+Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och partners ge feedback och utforma produktutvecklingen. Det hjälper dem också att förbereda sig för att införa nya funktioner före allmän tillgänglighet.
+
+**Aktuella betaprogram**
+I följande avsnitt visas aktiva betaprogram.
+
+### Agenter i AEM (Beta-programmet)
+
+Få snabb tillgång till kraftfulla nya AEM-funktioner för produktion, styrning, optimering, upptäckt och utveckling. Din feedback är direkt till form för Adobe färdplan och slutfunktioner. Mer information finns i [Översikt över agenter i AEM](/help/ai-in-aem/agents/overview.md).
+
+Om du vill anmäla dig till att delta i det här programmet skickar du ett e-postmeddelande till [aemagentsteam@adobe.com](mailto:aemagentsteam@adobe.com) med följande information så långt det är möjligt:
+
+    * Namn och Adobe ID för gruppmedlemmar som aktivt ska använda agenter.
+    * Ange specifika agenter som du eller ditt team kommer att använda. Eller säg bara &quot;Alla agenter&quot;.
+
+### AEM Foundation (Beta-program)
+
+    Se [betaprogram för AEM Foundation](#foundation-early-adopter).
+
+### Cloud Manager (Beta-program)
+
+    Se [Cloud Manager betaprogram](/help/implementing/cloud-manager/release-notes/current.md).
+
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -225,15 +253,15 @@ Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-
 
 AEM Java-stackteam använder i allt större utsträckning AI-assisterad utveckling i verktyg som Cursor, Claude Code, Visual Studio och IntelliJ för att snabba upp leverans av funktioner och förbättra kodkvaliteten. Vi samlar verkliga upplevelser som hjälper till att utforma framtida AI-funktioner som stöds av Adobe.
 
-Dela vad som fungerar för ert team - och vad ni vill att Adobe ska tillhandahålla - genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
+Dela vad som fungerar för ditt team - och vad du vill att Adobe ska tillhandahålla - genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -253,4 +281,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
