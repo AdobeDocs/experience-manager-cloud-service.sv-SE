@@ -26,7 +26,7 @@ Anpassad gränssnittstestning är en valfri funktion som gör att du kan skapa o
 
 AEM tillhandahåller en integrerad svit med [Cloud Manager-portar för hög kvalitet](/help/implementing/cloud-manager/custom-code-quality-rules.md) för att säkerställa smidiga uppdateringar av anpassade program. I synnerhet har IT-testportar redan stöd för att skapa och automatisera anpassade tester med AEM API:er.
 
-Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/overview).
+Användargränssnittstester är paketerade i en Docker-bild för att ge ett brett urval på språk och i miljöer (t.ex. Cypress, Selenium, Java och Maven och JavaScript). Ett UI-testprojekt kan enkelt genereras med [AEM Project Archetype](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/overview).
 
 Adobe rekommenderar att man använder Cypress eftersom det ger realtidsladdning och automatisk väntetid, vilket sparar tid och förbättrar produktiviteten under testningen. Cypress har också en enkel och intuitiv syntax som gör det enkelt att lära sig och använda, även för användare som inte har testat tidigare.
 
@@ -274,7 +274,7 @@ Om Docker-bilden implementeras med andra programmeringsspråk eller testkörare 
 | Rekommenderad varaktighet | 15 m | Adobe rekommenderar att testerna hålls inom denna tidsgräns. |
 
 * Om målförfattaren/publiceringen skyddas av IP-tillåtelselistning måste pipeline-gränssnittets testinfrastruktur vara tillåtslista, annars kan gränssnittstester misslyckas med 403 Ej tillåtet.
-Se även [UI-testfel i AEMaaCS på grund av IP-Tillåtelselistning](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-26654#) och [Introduktion till IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
+Se även [UI-testfel i AEMaaCS på grund av IP-Tillåtelselistning](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-26654#) och [Introduktion till IP-Tillåtelselista](/help/implementing/cloud-manager/ip-allow-lists/introduction.md).
 
 >[!NOTE]
 >
