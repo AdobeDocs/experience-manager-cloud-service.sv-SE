@@ -4,9 +4,9 @@ description: Läs om Cloud Manager 2025.12.0 i Adobe Experience Manager as a Clo
 feature: Release Information
 role: Admin
 exl-id: 24d9fc6f-462d-417b-a728-c18157b23bbe
-source-git-commit: 431c3060b59dca852bdce14b6793dcb5c352139b
+source-git-commit: 7c1f1f1022fd63c190a493d312ab1f355859d15a
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
@@ -88,11 +88,15 @@ If you are interested in testing this new feature and sharing your feedback, sen
   Se [Skapa din första Edge Delivery-webbplats med ett klick](/help/implementing/cloud-manager/edge-delivery/create-edge-delivery-site.md).
 
 
-
-
 ## Beta {#private-beta-program}
 
 Delta i Cloud Manager betaprogram och få exklusiv tillgång till kommande funktioner innan de släpps.
+
+>[!IMPORTANT]
+>
+>Beta-releaser kan innehålla defekter och tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt ge support (via Adobe Support Services eller på annat sätt) för betaversioner. Adobe rekommenderar sina kunder att iaktta försiktighet och inte förlita sig på att betaversioner fungerar eller fungerar som de ska, eller på medföljande dokumentation eller material. Funktioner och API:er i betaversionen kan ändras utan föregående meddelande. Därför är all användning av betaversioner helt och hållet på kundens egen risk.
+
+Se även [AEM Beta-program](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs)
 
 Följande möjligheter är för närvarande tillgängliga:
 <!--
