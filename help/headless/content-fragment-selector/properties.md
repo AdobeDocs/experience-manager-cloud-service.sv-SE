@@ -3,9 +3,9 @@ title: Egenskaper för väljaren för innehållsfragment i mikrofon för Adobe E
 description: Egenskaper för att konfigurera Micro-Frontend Content Fragment Selector för att söka, hitta och hämta innehållsfragment från programmet.
 role: Admin, User
 exl-id: c81b5256-09fb-41ce-9581-f6d1ad316ca4
-source-git-commit: 58995ae9c29d5a76b3f94de43f2bafecdaf7cf68
+source-git-commit: 74b9493fc3cdba4a1fc64d1137f5c50c6bebca0a
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ Du kan använda följande egenskaper för att anpassa hur väljaren för innehå
 | `repoId` | string | Nej | | Databas-ID som används för fragmentväljaren. När det finns en sådan anslutning ansluter väljaren automatiskt till den angivna databasen och listrutan för databasen döljs. Om det inte anges kan användaren välja en databas i listan över tillgängliga databaser som de har åtkomst till. |
 | `defaultRepoId` | string | Nej | | Databas-ID som väljs som standard när databasväljaren visas. Används endast när `repoId` inte har angetts. Om `repoId` anges döljs databasväljaren och det här värdet ignoreras. |
 | `orgId` | string | Nej | | Organisations-ID som används för autentisering. Om det inte anges kan användaren välja en databas från olika organisationer som de har åtkomst till. Om användaren inte har åtkomst till någon databas eller organisation läses innehållet inte in. |
-| `locale` | string | Nej | &quot;en-US&quot; | Språk. |
+| `locale` | string | Nej | `en-US` | Språk. |
 | `env` | string | Nej | | Distributionsmiljö. Se typen `Env` för tillåtna miljönamn. |
 | `filters` | FragmentFilter | Nej | `{ folder: "/content/dam" }` | Filter som ska tillämpas på listan med innehållsfragment. Som standard visas fragment under `/content/dam`. |
 | `isOpen` | boolesk | Nej | `false` | Flagga för att styra om väljaren är öppen eller stängd. |
 | `noWrap` | boolesk | Nej | `false` | Avgör om fragmentväljaren återges utan någon omslutningsdialogruta. När värdet är `true` bäddas fragmentväljaren in direkt i den överordnade behållaren. Användbar för att integrera väljaren i anpassade layouter eller arbetsflöden. |
 | `onSelectionChange` | ({ contentFragments: `ContentFragmentSelection`, domainName?: `string`, tenantInfo?: `string`, repoId?: `string`, deliveryRepos?: `DeliveryRepository[]` }) => void | Nej | | Återanropsfunktionen aktiveras när valet av innehållsfragment ändras. Tillhandahåller de markerade fragmenten, domännamnet, innehavarinformationen, databas-ID och leveransdatabaserna. |
-| `onDismiss` | () => void | Nej | | Återanropsfunktionen aktiveras när åtgärden för att stänga av utförs (t.ex. när väljaren stängs). |
+| `onDismiss` | () => void | Nej | | Callback-funktionen aktiveras när dismiss-åtgärden utförs, till exempel när väljaren stängs. |
 | `onSubmit` | ({ contentFragments: `ContentFragmentSelection`, domainName?: `string`, tenantInfo?: `string`, repoId?: `string`, deliveryRepos?: `DeliveryRepository[]` }) => void | Nej | | Återanropsfunktionen aktiveras när användaren bekräftar sitt val. Tar emot valda innehållsfragment, domännamn, innehavarinformation, databas-ID och leveransdatabaser. |
 | `theme` | &quot;light&quot; eller &quot;dark&quot; | Nej | | Tema för fragmentväljaren. Som standard är den inställd på unifiedShell-miljötemat. |
 | `selectionType` | &quot;single&quot; eller &quot;multiple&quot; | Nej | `single` | Markeringstypen kan användas för att begränsa markeringen för fragmentväljaren. |
