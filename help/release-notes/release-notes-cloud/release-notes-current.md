@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: d1b3753261bd103fff5267a95db90a88f6749e59
+source-git-commit: ed358f58ba0dd4d5a9b283291702f867774515e4
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -76,6 +76,24 @@ Se [betaprogram för AEM Foundation](#foundation-early-adopter).
 ### Cloud Manager (Beta-program) {#cloud-manager-beta-programs}
 
 Se [Cloud Manager betaprogram](/help/implementing/cloud-manager/release-notes/current.md).
+
+
+## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
+
+**Det finns en ny version av Figma Plugin för integrering med AEM Assets**
+
+* Stöd för videofiler (MP4, MOV, WebM), animerade filer (GIF) och vektorfiler (SVG) när du importerar resurser från AEM-databasen till Figma-dokumentet.
+
+* Stöd för att kontrollera om det finns några uppdateringar av resurserna som används i Figma-dokument jämfört med resurserna som finns i AEM-databasen och hämta den senaste versionen av resurserna om det finns några uppdateringar.
+
+* Stöd för exportkonfigurationer vid export av PNG- (scale) och JPG-filformat (bildskala och kvalitet).
+
+  ![Figma plugin](/help/assets/assets/figma-v2-plugin.png)
+
+**Identifiering av skadlig kod för överförda resurser**
+
+AEM Assets innehåller nu automatisk skanning av skadlig kod av överförda filer, vilket säkerställer att misstänkta tillgångar sätts i karantän innan de går in i DAM för att skydda databasen mot hot. Administratörer kan konfigurera skanningsinställningar och karantänkvarhållningsprinciper för smidiga säkerhetskontroller.
+
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
@@ -259,11 +277,11 @@ Dela vad som fungerar för ditt team - och vad du vill att Adobe ska tillhandah�
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -283,4 +301,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
