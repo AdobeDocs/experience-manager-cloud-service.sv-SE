@@ -3,9 +3,9 @@ title: Egenskaper för väljaren för innehållsfragment i mikrofon för Adobe E
 description: Egenskaper för att konfigurera Micro-Frontend Content Fragment Selector för att söka, hitta och hämta innehållsfragment från programmet.
 role: Admin, User
 exl-id: c81b5256-09fb-41ce-9581-f6d1ad316ca4
-source-git-commit: a3d8961b6006903c42d983c82debb63ce8abe9ad
+source-git-commit: 58995ae9c29d5a76b3f94de43f2bafecdaf7cf68
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '1073'
 ht-degree: 0%
 
 ---
@@ -20,22 +20,28 @@ Du kan använda följande egenskaper för att anpassa hur väljaren för innehå
 
 | Egenskap | Typ | Obligatoriskt | Standard | Beskrivning |
 |--- |--- |--- |--- |--- |
-| `imsToken` | string | Nej | | IMS-token används för autentisering. |
-| `repoId` | string | Nej | | Databas-ID som används för autentisering. |
-| `orgId` | string | Ja | | Organisations-ID som används för autentisering. |
-| `locale` | string | Nej | | Språkdata. |
-| `env` | Miljö | Nej | | Distributionsmiljö för Content Fragment Selector. |
-| `filters` | FragmentFilter | Nej | | Filter som ska användas för listan med innehållsfragment. Som standard visas fragment under `/content/dam`. Standardvärde: `{ folder: "/content/dam" }` |
-| `isOpen` | boolesk | Ja | `false` | Flagga som utlöser öppning eller stängning av väljaren. |
-| `onDismiss` | () => void | Ja | | Funktion som ska anropas när **Dismiss** har valts. |
-| `onSubmit` | ({ contentFragments: `{id: string, path: string}[]`, domainNames: `string[]` }) => void | Ja | | Funktion som ska anropas när **Select** används efter att ett eller flera innehållsfragment har markerats. <br><br>Funktionen får:<br><ul><li> de markerade innehållsfragmenten med `id` och `path` fält</li><li>och domännamn relaterade till databasens program-ID och miljö-ID, som har status `ready` och `tier` Publish</li></ul><br>Om det inte finns några domännamn kommer den att användas som en reservdomän. |
-| `theme` | &quot;light&quot; eller &quot;dark&quot; | Nej | | Temat för väljaren för innehållsfragment. Standardtemat är inställt på temat för UnifiedShell-miljön. |
-| `selectionType` | &quot;single&quot; eller &quot;multiple&quot; | Nej | `single` | Markeringstyp som kan användas för att begränsa markering för FragmentSelector. |
-| `dialogSize` | &quot;fullscreen&quot; eller &quot;fullscreenTakeover&quot; | Nej | `fullscreen` | Valfri egenskap som styr dialogstorleken. |
-| `waitForImsToken` | boolesk | Nej | `false` | Anger om väljaren för innehållsfragment återges i kontexten för SUSI-flödet och måste vänta tills `imsToken` är klar. |
-| `imsAuthInfo` | ImsAuthInfo | Nej | | Objekt som innehåller IMS-autentiseringsinformation för den inloggade användaren. |
-| `runningInUnifiedShell` | boolesk | Nej | | Anger om väljaren för innehållsfragment körs under UnifiedShell eller fristående. |
-| `readonlyFilters` | ResursSkrivskyddadFilterFält | Nej | | Skrivskyddade filter som kan användas för innehållslistan och som inte kan tas bort. |
+| `ref` | FragmentSelectorRef | | | Referens till instansen `ContentFragmentSelector` som tillåter åtkomst till tillhandahållna funktioner som `reload`. |
+| `imsToken` | string | Nej | | IMS-token används för autentisering. Om inget anges initieras IMS-inloggningsflödet. |
+| `repoId` | string | Nej | | Databas-ID som används för fragmentväljaren. När det finns en sådan anslutning ansluter väljaren automatiskt till den angivna databasen och listrutan för databasen döljs. Om det inte anges kan användaren välja en databas i listan över tillgängliga databaser som de har åtkomst till. |
+| `defaultRepoId` | string | Nej | | Databas-ID som väljs som standard när databasväljaren visas. Används endast när `repoId` inte har angetts. Om `repoId` anges döljs databasväljaren och det här värdet ignoreras. |
+| `orgId` | string | Nej | | Organisations-ID som används för autentisering. Om det inte anges kan användaren välja en databas från olika organisationer som de har åtkomst till. Om användaren inte har åtkomst till någon databas eller organisation läses innehållet inte in. |
+| `locale` | string | Nej | &quot;en-US&quot; | Språk. |
+| `env` | string | Nej | | Distributionsmiljö. Se typen `Env` för tillåtna miljönamn. |
+| `filters` | FragmentFilter | Nej | `{ folder: "/content/dam" }` | Filter som ska tillämpas på listan med innehållsfragment. Som standard visas fragment under `/content/dam`. |
+| `isOpen` | boolesk | Nej | `false` | Flagga för att styra om väljaren är öppen eller stängd. |
+| `noWrap` | boolesk | Nej | `false` | Avgör om fragmentväljaren återges utan någon omslutningsdialogruta. När värdet är `true` bäddas fragmentväljaren in direkt i den överordnade behållaren. Användbar för att integrera väljaren i anpassade layouter eller arbetsflöden. |
+| `onSelectionChange` | ({ contentFragments: `ContentFragmentSelection`, domainName?: `string`, tenantInfo?: `string`, repoId?: `string`, deliveryRepos?: `DeliveryRepository[]` }) => void | Nej | | Återanropsfunktionen aktiveras när valet av innehållsfragment ändras. Tillhandahåller de markerade fragmenten, domännamnet, innehavarinformationen, databas-ID och leveransdatabaserna. |
+| `onDismiss` | () => void | Nej | | Återanropsfunktionen aktiveras när åtgärden för att stänga av utförs (t.ex. när väljaren stängs). |
+| `onSubmit` | ({ contentFragments: `ContentFragmentSelection`, domainName?: `string`, tenantInfo?: `string`, repoId?: `string`, deliveryRepos?: `DeliveryRepository[]` }) => void | Nej | | Återanropsfunktionen aktiveras när användaren bekräftar sitt val. Tar emot valda innehållsfragment, domännamn, innehavarinformation, databas-ID och leveransdatabaser. |
+| `theme` | &quot;light&quot; eller &quot;dark&quot; | Nej | | Tema för fragmentväljaren. Som standard är den inställd på unifiedShell-miljötemat. |
+| `selectionType` | &quot;single&quot; eller &quot;multiple&quot; | Nej | `single` | Markeringstypen kan användas för att begränsa markeringen för fragmentväljaren. |
+| `dialogSize` | &quot;fullscreen&quot; eller &quot;fullscreenTakeover&quot; | Nej | `fullscreen` | Valfri prop för att styra storleken på dialogrutan. |
+| `runningInUnifiedShell` | boolesk | Nej | | Anger om DestinationSelector körs under UnifiedShell eller fristående. |
+| `readonlyFilters` | ResourceReadonlyFiltersField[] | Nej | | Skrivskyddade filter som tillämpas på listan med innehållsfragment. Dessa filter kan inte tas bort av användaren. |
+| `selectedFragments` | ContentFragmentIdentifier[] | Nej | `[]` | Ursprungligt urval av innehållsfragment som ska vara förmarkerat när väljaren öppnas. |
+| `hipaaEnabled` | boolesk | Nej | `false` | Anger om HIPAA-kompatibilitet är aktiverad. |
+| `inventoryView` | InventoryViewType | Nej | `table` | Lagerstandardvytyp som ska användas i väljaren. |
+| `inventoryViewToggleEnabled` | boolesk | Nej | `false` | Anger om lagervyns växlingsknapp är aktiverad så att användaren kan växla mellan tabell- och stödrastervyer. |
 
 ## Egenskaper för ImsAuthProps {#imsauthprops-properties}
 
