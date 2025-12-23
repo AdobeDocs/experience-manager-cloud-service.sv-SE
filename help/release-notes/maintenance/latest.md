@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: 5e01d1674134db73fc0f5c0013e10170ad6747f7
+source-git-commit: c5cdcccdb3ac16c5088e46e3f64e8cfc4139e0e4
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 23862, som offentliggjordes den 23 december 2025. Den tidigare underhållsversionen var version 23482.
 
-Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-23862}
 
@@ -75,7 +75,7 @@ Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns
 * SITES-36570: Det går inte att skapa Live-kopior efter att den aktiverats.
 * SITES-36158: Rollout misslyckas med jobbet på grund av ett undantag.
 * SITES-35655: Den nya CF-redigeraren visar aktivt arv efter att den har brutits.
-* SITES-31425: Det olokaliserade felmeddelandet &quot;Error: {} field is required&quot; visas i startarbetsflödet på webbplatser.
+* SITES-31425: Olokaliserat felmeddelande `Error: {} field is required` visas i startarbetsflödet på webbplatser.
 * SITES-19802: Tooltip is unlocalized in Core Components site > Table of contents.
 * SITES-36543: Korrigerat problem som gjorde att administratören kunde redigera utcheckade innehållsfragment.
 * SITES-36967: NullPointerExceptions som uppstod när miniatyrdata för brutna innehållsfragment skulle genereras har åtgärdats.
@@ -106,8 +106,8 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.88.0 | [Oak 1.8.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.88.0/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.2 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
