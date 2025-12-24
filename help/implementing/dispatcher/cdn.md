@@ -4,7 +4,7 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: 29aded35239bb8c9a5cf71f9b9dd036c4c32f026
+source-git-commit: afe526e72ac2116cd2e7da73d73f62a15f011e70
 workflow-type: tm+mt
 source-wordcount: '1772'
 ht-degree: 2%
@@ -163,23 +163,23 @@ Den här processen gör att du kan verifiera information som värdvärden, edge-
 >Du kan använda en Rapid Development Environment (RDE) för att distribuera och testa konfigurationen:
 >
 >* [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md)
->* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
+>* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 
 Nedan visas flera konfigurationsexempel från flera ledande CDN-leverantörer.
 
-**Akamai**
+#### **Akamai** {#byocdn-akamai}
 
 ![Akamai1](assets/akamai1.png "Akamai")
 ![Akamai2](assets/akamai2.png "Akamai")
 
-**Amazon CloudFront**
+#### **Amazon CloudFront** {#byocdn-cloudfront}
 
 ![CloudFront1](assets/cloudfront1.png "Amazon CloudFront")
 ![CloudFront2](assets/cloudfront2.png "Amazon CloudFront")
 
-**Cloudflare**
+#### **Cloudflare** {#byocdn-cloudflare}
 
 ![Cloudflare1](assets/cloudflare1.png "Cloudflare")
 ![Cloudflare2](assets/cloudflare2.png "Cloudflare")
