@@ -4,9 +4,9 @@ description: Konfigurerar trafikfilterregler inklusive WAF-regler (Web Applicati
 exl-id: 6a0248ad-1dee-4a3c-91e4-ddbabb28645c
 feature: Security
 role: Admin
-source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
+source-git-commit: d967706a000edc8c06193d1a8a39a1931fffbb99
 workflow-type: tm+mt
-source-wordcount: '4582'
+source-wordcount: '4610'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Trafikfilterregler kan användas för att blockera eller tillåta förfrågninga
 
 Många av dessa trafikfilterregler är tillgängliga för alla AEM as a Cloud Service Sites- och Forms-kunder. De kallas *standardtrafikfilterregler* och arbetar huvudsakligen med begäranegenskaper och begäranrubriker, inklusive IP, värdnamn, sökväg och användaragent. Standardregler för trafikfilter innehåller regler för hastighetsbegränsning för att skydda mot trafiktoppar.
 
-En underkategori av trafikfilterregler kräver antingen en förbättrad säkerhetslicens eller en WAF-DDoS-skyddslicens. Dessa kraftfulla regler kallas trafikfilterregler för WAF (Brandvägg för webbaserade program) (eller *WAF-regler* för kort) och har tillgång till de [WAF-flaggor](#waf-flags-list) som beskrivs senare i den här artikeln.
+En underkategori av trafikfilterregler kräver antingen en utökad säkerhetslicens (tidigare kallad WAF-DDoS Protection) eller en utökad säkerhetslicens (tidigare kallad Enhanced Security). Dessa kraftfulla regler kallas trafikfilterregler för WAF (Brandvägg för webbaserade program) (eller *WAF-regler* för kort) och har tillgång till de [WAF-flaggor](#waf-flags-list) som beskrivs senare i den här artikeln.
 
 Trafikfilterregler kan driftsättas via Cloud Manager konfigureringsrörledningar för olika typer av dev-, stage- och produktionsmiljöer. Konfigurationsfilen kan distribueras till Rapid Development Environment (RDE) med kommandoradsverktyg.
 
@@ -59,7 +59,7 @@ Som standard vidtar Adobe åtgärder för att förhindra prestandaförsämring p
 
 Kunderna kan vidta förebyggande åtgärder för att mildra attacker i programlager (lager 7) genom att konfigurera regler i olika lager i innehållsleveransflödet.
 
-På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
+På exempelvis Apache-lagret kan kunderna konfigurera antingen [Dispatcher-modulen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration#configuring-access-to-content-filter) eller [ModSecurity](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection) för att begränsa åtkomsten till visst innehåll.
 
 Som beskrivs i den här artikeln kan trafikfilterregler distribueras till det hanterade CDN-nätverket i Adobe med hjälp av Cloud Manager [config pipelines](/help/operations/config-pipeline.md). Utöver *standardtrafikfilterregler* som baseras på egenskaper som IP-adress, sökväg och rubriker, eller regler som baseras på att hastighetsgränser anges, kan kunder även licensiera en kraftfull underkategori av trafikfilterregler som kallas *WAF-regler*.
 
@@ -111,7 +111,7 @@ Nedan följer en högnivårekommenderad process från början till slut för att
 
 Du kan konfigurera *trafikfilterregler* så att de matchar på mönster som IP, användaragent, begäranrubriker, värdnamn, geo och url.
 
-Kunder som licensierar erbjudandet Förbättrat skydd eller WAF-DDoS-skydd kan också konfigurera en särskild kategori av trafikfilterregler som kallas *WAF trafikfilterregler* (eller *WAF-regler* för kort) som refererar till en eller flera [WAF-flaggor](#waf-flags-list).
+Kunder som har licens för Extended Security (tidigare WAF-DDoS Protection) eller Extended Security for Healthcare (tidigare kallat Enhanced Security) kan också konfigurera en särskild kategori med trafikfilterregler som kallas *WAF trafikfilterregler* (eller *WAF-regler* för kort) som refererar till en eller flera [WAF-flaggor](#waf-flags-list).
 
 Här är ett exempel på en uppsättning trafikfilterregler, som även innehåller en WAF-regel.
 
@@ -430,7 +430,7 @@ Hastighetsgränserna utvärderas baserat på antingen trafik som faller i kanten
 
 **Exempel 1**
 
-Den här regeln blockerar en klient i 5 millisekunder när den överskrider ett genomsnitt på 60 req/sek (per CDN-POP) under de senaste 10 sektionerna:
+Den här regeln blockerar en klient i 5 minuter när den överskrider ett genomsnitt på 60 req/sek (per CDN POP) under de senaste 10 sektionerna:
 
 ```
 kind: "CDN"
@@ -641,7 +641,7 @@ Instrumentpanelsverktygen kan klonas direkt från GitHub-databasen [AEMCS-CDN-Lo
 
 ## Rekommenderade startregler {#recommended-starter-rules}
 
-Adobe föreslår att man börjar med trafikfilterreglerna nedan och sedan finjusterar dem över tiden. *Standardregler* är tillgängliga med en Sites- eller Forms-licens, medan *WAF-regler* kräver en Enhanced Security- eller WAF-DDoS-skyddslicens.
+Adobe föreslår att man börjar med trafikfilterreglerna nedan och sedan finjusterar dem över tiden. *Standardregler* är tillgängliga med en Sites- eller Forms-licens, medan *WAF-regler* kräver en utökad säkerhet (tidigare WAF-DDoS-skydd) eller utökad säkerhet för hälso- och sjukvård (tidigare kallat Förbättrat skydd)-licens.
 
 ### Rekommenderade standardregler {#recommended-nonwaf-starter-rules}
 
@@ -777,7 +777,7 @@ Före juli 2025 rekommenderade Adobe de WAF-regler som anges nedan, som fortfara
 
 ## Självstudiekurs {#tutorial}
 
-Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
+Arbeta med [en serie självstudiekurser](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview) för att få praktiska kunskaper och erfarenheter om trafikfilterregler, inklusive WAF regler.
 
 Självstudiekurserna är följande:
 
