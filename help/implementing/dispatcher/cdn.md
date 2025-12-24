@@ -4,7 +4,7 @@ description: Lär dig hur du använder det CDN som hanteras av AEM och hur du pe
 feature: Dispatcher
 exl-id: a3f66d99-1b9a-4f74-90e5-2cad50dc345a
 role: Admin
-source-git-commit: afe526e72ac2116cd2e7da73d73f62a15f011e70
+source-git-commit: a36eae0f32b36224c53f756238ba2f5f90699e6c
 workflow-type: tm+mt
 source-wordcount: '1772'
 ht-degree: 2%
@@ -39,7 +39,7 @@ För att förbereda dig för innehållsleverans med AEM inbyggda CDN via Cloud M
 * [Introduktion till SSL-certifikat](/help/implementing/cloud-manager/managing-ssl-certifications/introduction-to-ssl-certificates.md)
 * [Konfigurera ett CDN](/help/implementing/cloud-manager/domain-mappings/add-domain-mapping.md)
 
-**Begränsa trafik**
+### Begränsa trafik {#restricting-traffic}
 
 Som standard kan all offentlig trafik för en AEM-hanterad CDN-installation gå vidare till publiceringstjänsten, både för produktionsmiljöer och icke-produktionsmiljöer (utveckling och stadium). Du kan begränsa trafiken till publiceringstjänsten för en viss miljö (t.ex. begränsa mellanlagring med ett intervall av IP-adresser) via Cloud Manager användargränssnitt.
 
@@ -74,7 +74,7 @@ Läs om hur [konfigurerar en rensnings-API-token](/help/implementing/dispatcher/
 
 För användarvänliga autentiseringssituationer, inklusive affärsintressenter som granskar innehåll, skyddar du innehållet genom att visa en grundläggande autentiseringsdialog som kräver ett användarnamn och lösenord. [Läs mer](/help/implementing/dispatcher/cdn-credentials-authentication.md).
 
-## Kundhanterad CDN pekar på AEM hanterade CDN {#point-to-point-CDN}
+## Kundhanterad CDN pekar på AEM hanterade CDN {#point-to-point-cdn}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_golive_byocdn"
@@ -106,7 +106,7 @@ Innan du godkänner direkttrafik bör du med Adobe kundsupport validera att hela
 
 När du har angett `X-AEM-Edge-Key` kan du testa att begäran dirigeras korrekt enligt följande.
 
-I Linux®:
+I Linux:
 
 ```
 curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -H "X-Forwarded-Host: example.com" -H "X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>"
@@ -138,7 +138,7 @@ Kundens CDN-konfiguration stöds för publiceringsnivån och förhandsgranskning
 
 Om du vill felsöka en BYOCDN-konfiguration använder du huvudet `x-aem-debug` med värdet `edge=true`. Till exempel:
 
-I Linux®:
+I Linux:
 
 ```
 curl https://publish-p<PROGRAM_ID>-e<ENV-ID>.adobeaemcloud.com -v -H "X-Forwarded-Host: example.com" -H "X-AEM-Edge-Key: <PROVIDED_EDGE_KEY>" -H "x-aem-debug: edge=true"
@@ -163,23 +163,23 @@ Den här processen gör att du kan verifiera information som värdvärden, edge-
 >Du kan använda en Rapid Development Environment (RDE) för att distribuera och testa konfigurationen:
 >
 >* [Snabba utvecklingsmiljöer](/help/implementing/developing/introduction/rapid-development-environments.md)
->* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
+>* [Så här använder du Rapid Development Environment](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files)
 
 ### Exempel på CDN-leverantörskonfigurationer {#sample-configurations}
 
 Nedan visas flera konfigurationsexempel från flera ledande CDN-leverantörer.
 
-#### **Akamai** {#byocdn-akamai}
+#### Akamai {#byocdn-akamai}
 
 ![Akamai1](assets/akamai1.png "Akamai")
 ![Akamai2](assets/akamai2.png "Akamai")
 
-#### **Amazon CloudFront** {#byocdn-cloudfront}
+#### Amazon CloudFront {#byocdn-cloudfront}
 
 ![CloudFront1](assets/cloudfront1.png "Amazon CloudFront")
 ![CloudFront2](assets/cloudfront2.png "Amazon CloudFront")
 
-#### **Cloudflare** {#byocdn-cloudflare}
+#### Cloudflare {#byocdn-cloudflare}
 
 ![Cloudflare1](assets/cloudflare1.png "Cloudflare")
 ![Cloudflare2](assets/cloudflare2.png "Cloudflare")
@@ -188,15 +188,15 @@ Nedan visas flera konfigurationsexempel från flera ledande CDN-leverantörer.
 
 De angivna exempelkonfigurationerna visar de basinställningar som behövs. En kundkonfiguration kan dock ha andra regler som påverkar hur du tar bort, redigerar eller ordnar om de rubriker som behövs för att AEM as a Cloud Service ska kunna betjäna trafiken. Nedan visas vanliga fel som inträffar när en kundhanterad CDN konfigureras för att peka mot AEM as a Cloud Service.
 
-**Omdirigering till slutpunkten för publiceringstjänsten**
+#### Omdirigering till slutpunkten för publiceringstjänsten {#redirect-publish}
 
 När en begäran tar emot ett 403 ej tillåtet svar betyder det att begäran saknar vissa obligatoriska rubriker. En vanlig orsak till detta är att CDN hanterar både API- och `www`-domäntrafik, men inte lägger till rätt rubrik för domänen `www`. Du kan lösa det här problemet genom att kontrollera AEM as a Cloud Service CDN-loggarna och verifiera begäranderubrikerna.
 
-**Fel 421 Feldirigerad omdirigering**
+#### Fel 421 Felriktad omdirigering {#error-421}
 
 Ett 421-fel med meddelandet `Requested host does not match any Subject Alternative Names (SANs) on TLS certificate` anger att HTTP `Host` inte matchar några värdar som finns i certifikatet. Det här problemet indikerar vanligtvis att antingen `Host` eller SNI-inställningen är fel. Kontrollera att både `Host`- och SNI-inställningarna pekar på värden för publish-p&lt;PROGRAM_ID>-e.adobeaemcloud.com.
 
-**För många omdirigeringsslinga**
+#### För många omdirigeringsslingor {#redirect-loop}
 
 När en sida får en &quot;för många omdirigeringar&quot;-slinga läggs en del begärandehuvud till i CDN som matchar en omdirigering som tvingar den tillbaka till sig själv. Exempel:
 
