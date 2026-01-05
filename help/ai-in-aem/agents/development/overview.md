@@ -17,7 +17,7 @@ Utvecklingsagenten hjälper AEM-utvecklare och -administratörer att skapa, fels
 
 För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3478006?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3478011?captions=swe&quality=12&learn=on)
 
 >[!IMPORTANT]
 >
