@@ -3,7 +3,7 @@ title: Översikt över utvecklingsagenten
 description: Läs om hur utvecklingsagenten i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
 feature: Agentic AI, AI Assistant, AI Tools, User Roles
 role: User, Admin, Architect, Developer
-source-git-commit: 897f6376c594604527231f6f5a05a8b85d6858f3
+source-git-commit: 3e565ba0cd53d9064a9aed20f4d6663781759b63
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -16,6 +16,8 @@ ht-degree: 0%
 Utvecklingsagenten hjälper AEM-utvecklare och -administratörer att skapa, felsöka, driftsätta och optimera kod effektivare.
 
 För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3478006?quality=12&learn=on)
 
 >[!IMPORTANT]
 >
@@ -45,7 +47,7 @@ Du kommer åt utvecklingsagenten via AI-assistenten i användargränssnitt som C
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
