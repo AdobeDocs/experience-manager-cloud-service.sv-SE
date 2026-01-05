@@ -4,9 +4,9 @@ description: Upptäck associerat användargränssnitt i Interactive Communicatio
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 19270498fa60f860b31400ad40705ecd2f821cf8
+source-git-commit: 234b6dc747bbba21e9249d526bf894860572dfe5
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Författaren kan följa stegen nedan för att konfigurera och publicera en inter
 
 >[!NOTE]
 >
-> Komponenter som stöds för associationer: Datumfält, Numeriskt fält, Textfält.
+> Komponenter som stöds för associationer: Datumfält, Numeriskt fält, Textfält, DateTimeField, DateField, Checkbox, Radio Button, Dropdown.
 
 ### Skapa konc:n
 
