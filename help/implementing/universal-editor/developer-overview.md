@@ -4,7 +4,7 @@ description: Om du är AEM-utvecklare och är intresserad av hur den universella
 exl-id: d6f9ed78-f63f-445a-b354-f10ea37b0e9b
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 392fdb0a0c1982f9be59cb530e86f13aeea3316b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Den gör detta genom att ta ett standardexempel som de flesta av AEM utvecklare 
 
 Du behöver följande för att kunna följa med i den här översikten.
 
-* [En lokal utvecklingsinstans av AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE)
-   * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE).
+* [En lokal utvecklingsinstans av AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+   * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html).
    * [WKND-demowebbplatsen måste vara installerad](https://github.com/adobe/aem-guides-wknd).
 * [Åtkomst till Universal Editor](/help/implementing/universal-editor/getting-started.md#onboarding).
 * [En lokal Universal Editor-tjänst](/help/implementing/universal-editor/local-dev.md) som körs i utvecklingssyfte.
@@ -118,7 +118,7 @@ Inloggningstokens cookie skickas till AEM som en tredjepartsdomän. Därför må
 
    ![OSGi-egenskap för cookies för samma webbplats](assets/dev-cross-origin-osgi.png)
 
-1. Ändra egenskapen **SameSite-attributet för cookien** för inloggningstoken till `None`.
+1. Ändra egenskapen **SameSite-attributet för cookien** för inloggningstoken till `Partitioned`.
 
 1. Spara ändringarna.
 
@@ -578,8 +578,8 @@ När du börjar instrumentera ditt eget program bör du tänka på de grundlägg
 1. Du har uppdaterat inställningarna för AEM OSGi så att dess innehåll kan läsas in på fjärrbasis.
    * [`org.apache.sling.engine.impl.SlingMainServlet`](#sameorigin)
    * [`com.day.crx.security.token.impl.impl.TokenAuthenticationHandler`](#samesite-cookies)
-1. [Du har lagt till biblioteket `universal-editor-embedded.js` i filen `customheaderlibs.html` för sidkomponenten i appen &#x200B;](#ue-connect-remote-frame).
-1. [Du har definierat en anslutning som ska innehålla ändringar i `customheaderlibs.html`-filen för sidkomponenten i appen &#x200B;](#connection).
+1. [Du har lagt till biblioteket `universal-editor-embedded.js` i filen `customheaderlibs.html` för sidkomponenten i appen ](#ue-connect-remote-frame).
+1. [Du har definierat en anslutning som ska innehålla ändringar i `customheaderlibs.html`-filen för sidkomponenten i appen ](#connection).
    * Du definierade en anslutning till den lokala AEM-utvecklingsinstansen.
    * Du har även definierat en anslutning till den lokala tjänsten Universal Editor.
 1. [Du har instrumenterat teaserkomponenten](#instrumenting-components).
