@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/configure-data-sources.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/configure-data-sources.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ![Dataintegrering](do-not-localize/data-integeration.png)
@@ -40,8 +40,8 @@ Dataintegrering har stöd för autentiseringstyperna OAuth2.0([Auktoriseringskod
 
 Innan du konfigurerar relationsdatabaser med hjälp av webbkonsolkonfigurationen i [!DNL Experience Manager] måste du:
 
-* [Aktivera avancerade nätverk via molnhanterings-API:t](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html) eftersom portar är inaktiverade som standard.
-* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=en#mysql-driver-dependencies).
+* [Aktivera avancerade nätverk via molnhanterings-API:t](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/advanced-networking.html?lang=sv-SE) eftersom portar är inaktiverade som standard.
+* [Lägg till JDBC-drivrutinsberoenden i Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=sv-SE#mysql-driver-dependencies).
 
 
 ### Steg för att konfigurera en relationsdatabas
@@ -60,7 +60,7 @@ Du kan konfigurera relationsdatabaser med hjälp av webbkonsolkonfigurationen f�
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
 
    När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Mappen får ett namn efter programmet.
 
@@ -116,7 +116,7 @@ git push
 
 >[!NOTE]
 >
-> Mer information finns i [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html).
+> Mer information finns i [SQL-anslutningar med JDBC DataSourcePool](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool.html?lang=sv-SE).
 
 <!--
 1. Go to [!DNL Experience Manager] web console at `https://server:host/system/console/configMgr`.
@@ -178,7 +178,7 @@ Alla molntjänstkonfigurationer i [!DNL Experience Manager] konsolideras i mappe
 Så här konfigurerar du mappen för molntjänstkonfigurationer:
 
 1. Gå till **[!UICONTROL Tools > General > Configuration Browser]**.
-   * Mer information finns i dokumentationen för [Configuration Browser](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html).
+   * Mer information finns i dokumentationen för [Configuration Browser](https://experienceleague.adobe.com/docs/experience-manager-65/administering/introduction/configurations.html?lang=sv-SE).
 1. Gör följande för att aktivera den globala mappen för molnkonfigurationer eller hoppa över det här steget för att skapa och konfigurera en annan mapp för molntjänstkonfigurationer.
 
    1. I **[!UICONTROL Configuration Browser]** markerar du mappen `global` och väljer **[!UICONTROL Properties]**.
@@ -357,7 +357,7 @@ Ange egenskapen `importAllowlistPattern` för konfigurationen **[!UICONTROL Form
 }
 ```
 
-[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
+[Generera OSGi-konfigurationer med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#generating-osgi-configurations-using-the-aem-sdk-quickstart) och [distribuera konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=sv-SE#deployment-process) till din Cloud Service-instans om du vill ange värden för en konfiguration.
 
 ## Konfigurera OData-tjänster {#config-odata}
 
@@ -389,7 +389,7 @@ En OData-tjänst identifieras av tjänstens rot-URL. Om du vill konfigurera en O
 <!--
 ## Configure Microsoft&reg; SharePoint List {#config-sharepoint-list}
 
-<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html#new-features). </span>
+<span class="preview"> This is a pre-release feature and accessible through our [pre-release channel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE#new-features). </span>
 
 To save data in a tabular form use, Microsoft&reg; SharePoint List. To configure a Microsoft SharePoint List in [!DNL Experience Manager] as a Cloud Service, do the following:
 

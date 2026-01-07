@@ -40,7 +40,7 @@ Att integrera Adaptiv Forms med Azure SQL ger flera fördelar:
 
   ![Skapa Azure Db](/help/forms/assets/create-azure-db.png)
 
-* Aktivera [Avancerade nätverk som konfigurerats med en dedikerad utgående IP](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/dedicated-egress-ip-address) för den skapade Azure-databasen.
+* Aktivera [Avancerade nätverk som konfigurerats med en dedikerad utgående IP](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/dedicated-egress-ip-address) för den skapade Azure-databasen.
 
   >[!NOTE]
   >
@@ -72,7 +72,7 @@ Till exempel: `portOrigin: 30433 → portDest: 1433`
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
 
    När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Mappen får ett namn efter programmet.
 
@@ -84,7 +84,7 @@ Inkludera [SQL-drivrutinsberoendet](https://central.sonatype.com/artifact/com.mi
 
 >[!NOTE]
 >
-> Om du vill ta med SQL-beroendet i ditt projekt kan du läsa avsnittet [SQL-drivrutinsberoenden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool#mysql-driver-dependencies) .
+> Om du vill ta med SQL-beroendet i ditt projekt kan du läsa avsnittet [SQL-drivrutinsberoenden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool#mysql-driver-dependencies) .
 
 **Steg 3: Lägg till JDBC-konfiguration**
 
