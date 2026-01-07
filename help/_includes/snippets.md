@@ -171,7 +171,7 @@ I följande tabell visas skillnaden mellan de funktioner som är tillgängliga i
 >Om du vill undvika avbrott i körningen av frontendpipelinen kontrollerar du att det här IP-Tillåtelselista har lagts till i Cloud Manager *innan* du aktiverar pipelinen.
 >
 >**Cloud Manager IP Tillåtelselista**
->52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28},52.254.106.0/28,4.152.211.251
+>52.254.106.192/28,20.186.185.181,52.254.106.240/28,52.254.107.128/28,52.254.105.192/28,52.254.106.176/28,20.186.185.227,52.254.106.144/28,52.254.107.64/28,20.186.185.239,20.22.83.112,52.254.107.80/28,52.254.107.144/28,52.254.106.224/28,20.14.241.153,52.254.107.0/28,52.254.107.32/28,52.254.106.208/28,40.70.154.136/29,52.254.106.160/28,52.254.107.16/28&rbrace;,52.254.106.0/28,4.152.211.251
 >   
 
 ## Lägg till en Cloud Manager IP Tillåtelselista och rörledning för frontendsupport {#add-cm-allowlist-frontend-pipeline}
@@ -268,7 +268,7 @@ Om du vill logga en supportanmälan måste du först registrera din Edge Deliver
 
 >[!IMPORTANT]
 >
->Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [ har tagits bort](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md#pwa-features).
+>Funktionerna för det progressiva webbprogrammet (PWA) för AEM Sites [&#x200B; har tagits bort](/help/release-notes/release-notes-cloud/2025/release-notes-2025-1-0.md#pwa-features).
 >
 >Befintliga projekt som använder den här funktionen stöds fortfarande, men nya projekt bör inte använda den här funktionen.
 
