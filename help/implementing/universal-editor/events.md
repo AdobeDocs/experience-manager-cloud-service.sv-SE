@@ -31,7 +31,7 @@ Händelser inkluderar nyttolasten för begäran och svaret och aktiveras när mo
 
 ## Händelser för innehållsuppdatering {#content-events}
 
-### &amp;Klona;kolon;lägg till innehåll {#content-add}
+### &Klona;kolon;lägg till innehåll {#content-add}
 
 Händelsen `aue:content-add` utlöses när en ny komponent läggs till i en behållare.
 
@@ -53,7 +53,7 @@ Nyttolasten är innehåll från Universal Editor, med reservinnehåll från komp
 }
 ```
 
-### &amp;Klona;kolon;innehållsinformation {#content-details}
+### &Klona;kolon;innehållsinformation {#content-details}
 
 Händelsen `aue:content-details` aktiveras när en komponent läses in på egenskapspanelen.
 
@@ -70,7 +70,7 @@ Nyttolasten är komponentens innehåll och eventuellt dess schema.
 }
 ```
 
-### &amp;Klona;kolon;flytta innehåll {#content-move}
+### &Klona;kolon;flytta innehåll {#content-move}
 
 Händelsen `aue:content-move` utlöses när en komponent flyttas.
 
@@ -108,7 +108,7 @@ Nyttolasten är en JSON-korrigering av de uppdaterade egenskaperna.
 }
 ```
 
-### &amp;Klona;kolon;ta bort innehåll {#content-remove}
+### &Klona;kolon;ta bort innehåll {#content-remove}
 
 Händelsen `aue:content-remove` aktiveras när en komponent tas bort från en behållare.
 
@@ -204,7 +204,7 @@ Nyttolasten är tom för den här händelsen.
 }
 ```
 
-### aue&amp;kolon;ui-viewport-change {#ui-viewport-change}
+### aue&kolon;ui-viewport-change {#ui-viewport-change}
 
 Händelsen `aue:ui-viewport-change` aktiveras när visningsrutans storlek ändras.
 
@@ -219,7 +219,7 @@ Nyttolasten är vyportens dimensioner.
 }
 ```
 
-### &amp;Klona;kolon;initierad {#initialized}
+### &Klona;kolon;initierad {#initialized}
 
 Händelsen `aue:initialized` aktiveras för att fjärrsidan ska kunna känna till att den har lästs in i Universell redigerare.
 
