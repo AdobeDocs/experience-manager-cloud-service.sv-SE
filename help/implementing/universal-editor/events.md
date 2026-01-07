@@ -4,9 +4,9 @@ description: Lär dig mer om de olika händelser som den universella redigeraren
 exl-id: c9f7c284-f378-4725-a4e6-e4799f0f8175
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: ac361c31b116466cc9a718640c1de4e4ef396fba
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Händelser inkluderar nyttolasten för begäran och svaret och aktiveras när mo
 
 ## Händelser för innehållsuppdatering {#content-events}
 
-### aue:content-add {#content-add}
+### &amp;Klona;kolon;lägg till innehåll {#content-add}
 
 Händelsen `aue:content-add` utlöses när en ny komponent läggs till i en behållare.
 
@@ -53,7 +53,7 @@ Nyttolasten är innehåll från Universal Editor, med reservinnehåll från komp
 }
 ```
 
-### aue:content-details {#content-details}
+### &amp;Klona;kolon;innehållsinformation {#content-details}
 
 Händelsen `aue:content-details` aktiveras när en komponent läses in på egenskapspanelen.
 
@@ -70,7 +70,7 @@ Nyttolasten är komponentens innehåll och eventuellt dess schema.
 }
 ```
 
-### aue:content-move {#content-move}
+### &amp;Klona;kolon;flytta innehåll {#content-move}
 
 Händelsen `aue:content-move` utlöses när en komponent flyttas.
 
@@ -89,7 +89,7 @@ Nyttolasten är komponenten, källbehållaren och målbehållaren.
 }
 ```
 
-### aue:content-patch {#content-patch}
+### &amp;stämpel;kolon;innehållspatch {#content-patch}
 
 Händelsen `aue:content-patch` aktiveras när en komponents data uppdateras på egenskapspanelen.
 
@@ -108,7 +108,7 @@ Nyttolasten är en JSON-korrigering av de uppdaterade egenskaperna.
 }
 ```
 
-### aue:content-remove {#content-remove}
+### &amp;Klona;kolon;ta bort innehåll {#content-remove}
 
 Händelsen `aue:content-remove` aktiveras när en komponent tas bort från en behållare.
 
@@ -124,7 +124,7 @@ Nyttolasten är objekt-ID för den borttagna komponenten.
 }
 ```
 
-### aue:content-update {#content-update}
+### &amp;stämpel;kolon;innehållsuppdatering {#content-update}
 
 Händelsen `aue:content-update` aktiveras när egenskaperna för en komponent uppdateras i sitt sammanhang.
 
@@ -180,7 +180,7 @@ Svarsnyttolast
 
 ## UI-händelser {#ui-events}
 
-### aue:ui-preview {#ui-preview}
+### &amp;stämpel;kolon;ui-förhandsvisning {#ui-preview}
 
 Händelsen `aue:ui-preview` aktiveras när sidans redigeringsläge ändras till **Förhandsgranska**.
 
@@ -192,7 +192,7 @@ Nyttolasten är tom för den här händelsen.
 }
 ```
 
-### aue:ui-edit {#ui-edit}
+### &amp;stämpel;kolon;ui-redigera {#ui-edit}
 
 Händelsen `aue:ui-edit` aktiveras när sidans redigeringsläge ändras till **Redigera**.
 
@@ -204,7 +204,7 @@ Nyttolasten är tom för den här händelsen.
 }
 ```
 
-### aue:ui-viewport-change {#ui-viewport-change}
+### aue&amp;kolon;ui-viewport-change {#ui-viewport-change}
 
 Händelsen `aue:ui-viewport-change` aktiveras när visningsrutans storlek ändras.
 
@@ -219,7 +219,7 @@ Nyttolasten är vyportens dimensioner.
 }
 ```
 
-### aue:initialized {#initialized}
+### &amp;Klona;kolon;initierad {#initialized}
 
 Händelsen `aue:initialized` aktiveras för att fjärrsidan ska kunna känna till att den har lästs in i Universell redigerare.
 
@@ -257,4 +257,3 @@ Nyttolasten är tom för den här händelsen.
 ## Ytterligare resurser {#additional-resources}
 
 * [Universella redigeringsanrop](/help/implementing/universal-editor/calls.md)
-
