@@ -6,9 +6,9 @@ topic-tags: author, developer
 feature: Adaptive Forms, Foundation Components, Edge Delivery Services, Core Components
 role: Admin, User
 exl-id: d3efb450-a879-40ae-8958-0040f99bdafc
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 43535e52fd749cc599a4e30be25bcc0dbf20eaef
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1358'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 <span class="preview"> Funktionen är tillgänglig i ett program för tidig användning. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
-[Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html?lang=sv-SE) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter i stället för återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
+[Adobe Workfront Fusion](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/workfront-fusion-overview.html) automatiserar processen för att upprepa samma uppgifter, som dokumentgodkännandearbetsflöden, e-postfiltrering och sortering, så att du kan fokusera på nya uppgifter i stället för återkommande. Adobe Workfront Fusion innehåller flera scenarier. Ett scenario består av en serie moduler som utför dataöverföring mellan program och webbtjänster. I ett scenario lägger du till olika steg (moduler) för att automatisera en uppgift.
 
 Med Workfront Fusion kan du till exempel skapa ett scenario där du samlar in data med adaptiv form, bearbetar data och skickar data till ett datalager för arkivering. När ett scenario har konfigurerats utför Workfront Fusion automatiskt uppgifterna när en användare fyller i ett formulär och uppdaterar datalagret sömlöst.
 
@@ -38,8 +38,8 @@ AEM Forms as a Cloud Service har en OOTB-anslutning för att ansluta och skicka 
 
 För att upprätta en anslutning mellan Workfront Fusion och AEM Forms krävs följande:
 
-* En giltig [Workfront- och Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html?lang=sv-SE).
-* En AEM-användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) för att [hämta tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
+* En giltig [Workfront- och Workfront Fusion-licens](https://experienceleague.adobe.com/docs/workfront/using/adobe-workfront-fusion/get-started-with-workfront-fusion/license-automation-vs-integration.html).
+* En AEM-användare med behörighet att komma åt [Dev Console](https://my.cloudmanager.adobe.com/) för att [hämta tjänstens autentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
 
 ## Integrera AEM Forms med Adobe Workfront Fusion
 
@@ -88,7 +88,7 @@ Så här lägger du till en webkrok:
 
 >[!NOTE]
 >
-> Kontrollera att det tekniska kontot är medlem i gruppen **forms-users**. Annars misslyckas det att lägga till en webkrok.
+> Kontrollera att det tekniska kontot är medlem i gruppen **forms-users**. Annars misslyckas det att lägga till en webkrok. [Klicka här](#add-technical-account-to-the-forms-users-group) om du vill lägga till det tekniska kontot i gruppen med formuläranvändare i AEM.
 
 #### Lägga till en anslutning till en webkrok {#add-connection}
 
@@ -106,7 +106,7 @@ Så här lägger du till en anslutning:
    >
    > Instans-URL är den unika webbadressen som pekar på en viss AEM Forms-instans.
 
-   Du kan hämta inloggningsuppgifterna för [tjänsten från utvecklarkonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE) som krävs för att skapa en anslutning.
+   Du kan hämta inloggningsuppgifterna för [tjänsten från utvecklarkonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html) som krävs för att skapa en anslutning.
 
 1. Ersätt `ims-na1.adobelogin.com` i **IMS-slutpunkten** med värdet **imsEndpoint** från autentiseringsuppgifterna för tjänsten i utvecklarkonsolen.
 
@@ -197,6 +197,27 @@ Dialogrutan **Formuläregenskaper** visas.
 1. Klicka på **[!UICONTROL Save&Close]**.
 
 >[!ENDTABS]
+
+## Lägg till tekniskt konto i gruppen för formuläranvändare
+
+Så här lägger du till det tekniska kontot i gruppen `forms-users` i AEM:
+
+1. Gå till **Verktyg** > **Dokumentskydd** > **Användare**.
+1. I listan över användare letar du reda på e-postadressen till ditt tekniska konto för din organisation. Vi kan till exempel söka efter användaren som `Workfront-test`.
+1. Klicka på användaren för att visa användarinformationen.
+1. Välj fliken **Grupper** i användarinformationen.
+1. Välj `forms-users` i listrutan **[!UICONTROL Select Group]**.
+1. Klicka på **Spara och stäng**.
+
+![Lägg till tekniskt konto i gruppen](/help/forms/assets/add-technical-account.png)
+
+Du kan även verifiera gruppmedlemskapet för användaren:
+
+1. Gå till **Verktyg** > **Dokumentskydd** > **Grupper**.
+1. Sök efter gruppen `forms-users`.
+1. Öppna gruppen och gå till fliken **Medlemmar** och bekräfta att användaren visas i listan med gruppmedlemmar.
+
+![verify-group](/help/forms/assets/verify-group.png)
 
 ## Bästa praxis {#best-practices}
 

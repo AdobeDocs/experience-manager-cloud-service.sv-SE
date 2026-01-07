@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 43535e52fd749cc599a4e30be25bcc0dbf20eaef
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1826'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,8 @@ Här är några fördelar med att använda Invoke Service-åtgärden i regelredi
 Med den visuella regelredigeraren kan du skapa regler för hanterare för lyckade och misslyckade åtgärder för **Invoke Service** -åtgärder baserat på dess utdataresvar. Nedanstående bild visar **Invoke Service** i Visual rule editor för ett adaptivt format:
 
 ![Anropa tjänsthanterare](/help/forms/assets/invoke-service-rule-editor.png)
+
+### Adding Success Handler and Failure Handler
 
 Klicka på **[!UICONTROL Add Success Handler]** eller **[!UICONTROL Add Failure Handler]** om du vill lägga till en hanterare för lyckade eller misslyckade åtgärder.
 
@@ -160,6 +162,10 @@ För att uppnå detta skapar du en regel i textrutan `Pet ID` som anropar tjäns
 
 ![Ange nedrullningsbart värde](/help/forms/assets/set-dropdownoption.png)
 
+>[!NOTE]
+>
+> Mer information om hur du anger hanterare för lyckade och misslyckade åtgärder finns i avsnittet [Lägga till hanterare för lyckade och misslyckade åtgärder](#adding-success-handler-and-failure-handler).
+
 #### Utdata
 
 Ange `101` i textrutan `Pet ID` för att dynamiskt fylla i listrutealternativen baserat på det angivna värdet.
@@ -181,6 +187,10 @@ Skapa en regel i textrutan `Pet ID` för att anropa tjänsten `getPetById`. I **
 
 ![Skapa regel för repeterbar panel](/help/forms/assets/create-rule-repeatable-panel.png)
 
+>[!NOTE]
+>
+> Mer information om hur du anger hanterare för lyckade och misslyckade åtgärder finns i avsnittet [Lägga till hanterare för lyckade och misslyckade åtgärder](#adding-success-handler-and-failure-handler).
+
 #### Utdata
 
 Ange `101` i textrutan `Pet ID` om du vill fylla i den repeterbara panelen dynamiskt baserat på indatavärdet.
@@ -199,6 +209,10 @@ Det här användningsexemplet visar hur du dynamiskt anger värdet för en panel
 #### Implementering
 
 Skapa en regel i textrutan `Pet ID` för att anropa tjänsten `getPetById`. I **[!UICONTROL Add Success Handler]** lägger du till ett annat svar från en hanterare. Ange värdet `categoryname` för textrutan `category.name` i regeln.
+
+>[!NOTE]
+>
+> Mer information om hur du anger hanterare för lyckade och misslyckade åtgärder finns i avsnittet [Lägga till hanterare för lyckade och misslyckade åtgärder](#adding-success-handler-and-failure-handler).
 
 ![Skapa regel för repeterbar panel](/help/forms/assets/set-panel-values.png)
 
