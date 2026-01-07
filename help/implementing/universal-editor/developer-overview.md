@@ -32,8 +32,8 @@ Den gör detta genom att ta ett standardexempel som de flesta av AEM utvecklare 
 
 Du behöver följande för att kunna följa med i den här översikten.
 
-* [En lokal utvecklingsinstans av AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
-   * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html).
+* [En lokal utvecklingsinstans av AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE)
+   * Din lokala utvecklingsinstans måste vara [konfigurerad med HTTPS för utvecklingssyfte på `localhost`](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=sv-SE).
    * [WKND-demowebbplatsen måste vara installerad](https://github.com/adobe/aem-guides-wknd).
 * [Åtkomst till Universal Editor](/help/implementing/universal-editor/getting-started.md#onboarding).
 * [En lokal Universal Editor-tjänst](/help/implementing/universal-editor/local-dev.md) som körs i utvecklingssyfte.
