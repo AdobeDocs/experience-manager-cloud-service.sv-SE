@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerar
 feature: Developing
 role: Admin, Developer
 exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
-source-git-commit: 482c9604bf4dd5e576b560d350361cdc598930e3
+source-git-commit: af63b3ff705954fe2145303ea0dc80720ad9e552
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,13 @@ Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerare.
 Den universella redigeraren har en RTF-redigerare som både finns på plats och på egenskapspanelen där författare kan tillämpa formateringsändringar när de redigerar texten.
 
 Den här textredigeraren kan konfigureras med [-komponentfilter.](/help/implementing/universal-editor/filtering.md) Det här dokumentet beskriver vilka konfigurationsalternativ som är tillgängliga tillsammans med exempel.
+
+>[!NOTE]
+>
+>När du startar ett Universal Editor-projekt aktiveras automatiskt alla RTF-funktioner som stöds av din backend (AEM med Edge Delivery eller headless).
+>
+>* Du kan inaktivera de alternativ som du inte behöver.
+>* Aktiveringsalternativ som inte är kompatibla med din projekttyp stöds inte.
 
 ## Konfigurationsstruktur {#structure}
 
