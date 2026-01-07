@@ -4,7 +4,7 @@ Description: Learn how to configure an Azure SQL Database connection in AEM Form
 Keywords: Azure SQL integration with AEM Forms, Connecting Adaptive Forms to Azure SQL Database, JDBC connection for Azure SQL in AEM Forms, Storing Adaptive Form data in Azure SQL
 feature: Adaptive Forms, Core Components
 role: User, Developer
-source-git-commit: 40193d89f2a4ef864a564eb9932403531eaf1ff7
+source-git-commit: e29f70aa1a8164787c7d310a05c24d7e501803e5
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 Adaptiv Forms i Adobe Experience Manager (AEM) kan integreras med externa databaser för att lagra eller hämta data.
 I den här artikeln beskrivs hur du ansluter ett adaptivt formulär till en Azure SQL-databas med JDBC via AEM as a Cloud Service.
 
-> 
+>
 > 
 > Den här guiden gäller för icke-sandlådemiljöer i AEM as a Cloud Service med avancerade nätverk aktiverade.
 
@@ -40,7 +40,7 @@ Att integrera Adaptiv Forms med Azure SQL ger flera fördelar:
 
   ![Skapa Azure Db](/help/forms/assets/create-azure-db.png)
 
-* Aktivera [Avancerade nätverk som konfigurerats med en dedikerad utgående IP](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/dedicated-egress-ip-address) för den skapade Azure-databasen.
+* Aktivera [Avancerade nätverk som konfigurerats med en dedikerad utgående IP](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/dedicated-egress-ip-address) för den skapade Azure-databasen.
 
   >[!NOTE]
   >
@@ -53,7 +53,7 @@ Att integrera Adaptiv Forms med Azure SQL ger flera fördelar:
    * **portDest**: `1433` (standardport för Azure SQL)
 Till exempel: `portOrigin: 30433 → portDest: 1433`
 
-     > 
+     >
      > 
      > Du kan kontakta Adobe Cloud Manager support för att konfigurera portvidarebefordran.
 
@@ -72,7 +72,7 @@ Till exempel: `portOrigin: 30433 → portDest: 1433`
 
    **Var hittar du den här informationen?**
 
-   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git).
+   Stegvisa instruktioner om hur du hittar dessa detaljer finns i Adobe Experience League-artikeln [Accessing Git](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git).
 
    När kommandot har slutförts visas en ny mapp som har skapats i din lokala katalog. Mappen får ett namn efter programmet.
 
@@ -84,7 +84,7 @@ Inkludera [SQL-drivrutinsberoendet](https://central.sonatype.com/artifact/com.mi
 
 >[!NOTE]
 >
-> Om du vill ta med SQL-beroendet i ditt projekt kan du läsa avsnittet [SQL-drivrutinsberoenden](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool#mysql-driver-dependencies) .
+> Om du vill ta med SQL-beroendet i ditt projekt kan du läsa avsnittet [SQL-drivrutinsberoenden](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/examples/sql-datasourcepool#mysql-driver-dependencies) .
 
 **Steg 3: Lägg till JDBC-konfiguration**
 
@@ -115,7 +115,7 @@ Inkludera [SQL-drivrutinsberoendet](https://central.sonatype.com/artifact/com.mi
        }
    ```
 
-   > 
+   >
    >
    > Ersätt `jdbc.username` med det faktiska Azure-användarnamnet och `jdbc.password` med det faktiska säkra lösenordet.
 
