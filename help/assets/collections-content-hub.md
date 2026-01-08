@@ -124,7 +124,7 @@ Om du dessutom vill filtrera samlingsvyn baserat på åtkomstbehörigheter går 
 ## Hämta resurser som är tillgängliga i en samling{#download-assets-within-collection}
 
 Om du vill hämta resurser som är tillgängliga i en samling går du till fliken **[!UICONTROL Collections]**.\
-Klicka på ikonen ![Hämta ](assets/download-icon.svg) på samlingskortet.
+Klicka på ikonen ![Hämta &#x200B;](assets/download-icon.svg) på samlingskortet.
 
 ![Fliken Samling](assets/download-collection.png)
 
@@ -136,7 +136,7 @@ Lär dig hur du [hämtar en resurs från  [!DNL Content Hub]](download-assets-co
 
 ## Dela resurser som är tillgängliga i en samling {#share-assets-available-within-collection}
 
-Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela ](assets/share.svg) på resurskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
+Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela &#x200B;](assets/share.svg) på resurskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
 
 Content Hub Collections innehåller omfattande styrningsverktyg för effektiv filhantering, inklusive anpassningsbara delningsbehörigheter och samarbetsfunktioner. De här inställningarna ger allt från skrivskyddad åtkomst till fullständig administrativ kontroll och har stöd för finstyrning framför resursdistribution. När du delar en resurs antingen individuellt eller som en del av en samling bestäms omfattningen av åtkomsten av samlingens aktuella åtkomstnivå som tilldelats användaren. Du kan också inte dela en privat samling.
 
