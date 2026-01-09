@@ -6,199 +6,218 @@ feature: Adaptive Forms, APIs & Integrations
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: fcc25eb44b485db69ec1c267f4cf8774c4279b24
+source-git-commit: e2f57a32fcc098a2331ad74540a3d48832c2b3c3
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
 
 
-# OAuth Server-till-server-autentisering -Rekommenderad
+# OAuth Server-till-server-autentisering
 
-OAuth Server-till-Server-autentisering ger säker, tokenbaserad åtkomst till AEM Forms Communications API:er utan att användaren behöver göra något. Den här metoden är idealisk för automatiserade system, backend-tjänster och integreringar som behöver autentiseras programmatiskt.
+OAuth Server-till-Server-autentisering ger säker, tokenbaserad åtkomst till AEM Forms Communications API:er utan att användaren behöver göra något. OAuth server-till-server-autentisering stöds av Adobe Developer Console.
 
 ## Förutsättningar
 
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
-* Kontrollera att du har tillgång till [Adobe Developer Console](https://developer.adobe.com/console) som är specifik för den miljö du använder.
-* Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console för att aktivera åtkomst till Adobe Developer Console.
+* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
+* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
 
 ## Hur skapar man en åtkomsttoken med hjälp av OAuth Server-till-Server-autentisering?
 
-Följ stegen nedan som visar hur du skapar en åtkomsttoken från Adobe Developer-konsolen och gör ditt första API-anrop via OAuth Server-to-Server-autentisering.
+Följ stegen nedan för att generera en åtkomsttoken från Adobe Developer-konsolen och gör ditt första API-anrop via OAuth Server-to-Server-autentisering.
 
+### Adobe Developer Console Project Setup
 
 1. Navigera till [Adobe Developer Console](https://developer.adobe.com/console)
 2. Logga in med din Adobe ID
 
 3. Skapa nytt projekt eller navigera till ditt befintliga projekt
 
-   **Så här skapar du ett nytt projekt:**
+>[!BEGINTABS]
 
-   1. Klicka på **Skapa nytt projekt** i avsnittet **Snabbstart**
-   2. Ett nytt projekt skapas med ett standardnamn
+>[!TAB Så här skapar du ett nytt projekt]
 
-      ![Skapa ADC-projekt](/help/forms/assets/adc-home.png)
+1. Klicka på **Skapa nytt projekt** i avsnittet **Snabbstart**
+2. Ett nytt projekt skapas med ett standardnamn
 
-   3. Klicka på **Redigera projekt** längst upp till höger
+   ![Skapa ADC-projekt](/help/forms/assets/adc-home.png)
 
-      ![Redigera projekt](/help/forms/assets/adc-edit-project.png)
+3. Klicka på **Redigera projekt** längst upp till höger
 
-   4. Ange ett beskrivande namn (t.ex. &quot;formsproject&quot;)
-   5. Klicka på **Spara**
+   ![Redigera projekt](/help/forms/assets/adc-edit-project.png)
 
-      ![Redigera projektnamn](/help/forms/assets/adc-edit-projectname.png)
+4. Ange ett beskrivande namn (t.ex. &quot;formsproject&quot;)
+5. Klicka på **Spara**
 
+   ![Redigera projektnamn](/help/forms/assets/adc-edit-projectname.png)
 
-   **Navigera till ditt befintliga projekt:**
+>[!TAB Navigera till ditt befintliga projekt]
 
-   1. Klicka på **Alla projekt** i Adobe Developer Console
+1. Klicka på **Alla projekt** i Adobe Developer Console
 
-      ![Sökprojekt](/help/forms/assets/search-adc-project.png)
+   ![Sökprojekt](/help/forms/assets/search-adc-project.png)
 
-   2. Leta upp projektet och klicka för att öppna det.
+2. Leta upp projektet och klicka för att öppna det.
 
-      ![Hitta projekt](/help/forms/assets/locate-adc-project.png)
+   ![Hitta projekt](/help/forms/assets/locate-adc-project.png)
 
+>[!ENDTABS]
 
-      >[!NOTE]
-      >
-      > Du kan lägga till API:t och autentiseringsmetoden i ditt befintliga projekt genom att klicka på **Lägg till i projekt** > **API**\
-      > ![Lägg till API i befintligt projekt](/help/forms/assets/add-api-existing-project.png)
-      > Om du vill lägga till API och autentiseringsmetod utför du samma steg som beskrivs nedan för ditt befintliga projekt.
+### Lägg till Forms API:er
 
-4. Lägg till olika API:er för AEM Forms Communications beroende på dina behov.
+Lägg till Forms-API:er baserat på vad du vill göra:
 
-   **A. För Document Services API:er**
+* **AEM Forms Communications API:er**: använd när du behöver generera, konvertera, sätta ihop eller skydda dokument (PDF och relaterade format).
+* **Adaptiva Forms Runtime API:er** - använd när du behöver återge, skicka eller bearbeta adaptiv Forms vid körning.
 
-   1. Klicka på **Lägg till API**
+>[!BEGINTABS]
 
-      ![Lägg till API](/help/forms/assets/adc-add-api.png)
+>[!TAB För AEM Forms Communications API:er]
 
-   2. Välj **Forms Communication API:er**
-      1. I dialogrutan _Lägg till API_ kan du filtrera efter **Experience Cloud**
-      2. Välj **&quot;Forms Communication APIs&quot;**
+1. Klicka på **Lägg till API**
 
-         ![Lägg till Forms Communication API](/help/forms/assets/adc-add-forms-api.png)
+   ![Lägg till API](/help/forms/assets/adc-add-api.png)
 
+2. Välj **Forms Communication API:er**
+   1. I dialogrutan _Lägg till API_ kan du filtrera efter **Experience Cloud**
+   2. Välj **&quot;Forms Communication APIs&quot;**
 
-   3. Välj autentiseringsmetoden **OAuth Server-till-server**
+      ![Lägg till Forms Communication API](/help/forms/assets/adc-add-forms-api.png)
 
-      ![Välj autentiseringsmetod](/help/forms/assets/adc-add-authentication-method.png)
-
-
-   **B. För adaptiva Forms Runtime API:er**
-
-   1. **Klicka på Lägg till API**
-Klicka på knappen **Lägg till API** i ditt projekt
-
-      ![Lägg till API](/help/forms/assets/adc-add-api.png)
-
-   2. **Välj AEM Forms-leverans- och körnings-API**
-      1. I dialogrutan _Lägg till API_ kan du filtrera efter **Experience Cloud**
-      2. Välj **&quot;AEM Forms Delivery and Runtime API&quot;**
-      3. Klicka på **Nästa**
-
-   3. **Autentiseringsmetod**
-Välj autentiseringsmetoden **OAuth Server-to-Server** .
-
+   3. Klicka på **Nästa**
+   4. Välj autentiseringsmetoden **OAuth Server-till-server**
 
       ![Välj autentiseringsmetod](/help/forms/assets/adc-add-authentication-method.png)
 
-5. **Lägg till produktprofil**:
+>[!TAB För adaptiva Forms Runtime API:er]
 
-   1. Välj lämplig **produktprofil** utifrån den åtkomstnivå som krävs:
+1. **Klicka på Lägg till API**
 
-      | Åtkomsttyp | Produktprofil |
-      |------------------|----------------------|
-      | Skrivskyddad åtkomst | `AEM Users - author - Program XXX - Environment XXX` |
-      | Läs-/skrivåtkomst | `AEM Assets Collaborator Users - author - Program XXX - Environment XXX` |
-      | Fullständig administrativ åtkomst | `AEM Administrators - author - Program XXX - Environment XXX` |
+   ![Lägg till API](/help/forms/assets/adc-add-api.png)
 
-   2. Välj den **produktprofil** som matchar URL:en för författartjänsten (`https://author-pXXXXX-eYYYYY.adobeaemcloud.com`). Välj till exempel `https://author-pXXXXX-eYYYYY.adobeaemcloud.com`.
+2. **Välj AEM Forms-leverans- och körnings-API**
+   1. I dialogrutan _Lägg till API_ kan du filtrera efter **Experience Cloud**
+   2. Välj **&quot;AEM Forms Delivery and Runtime API&quot;**
+      ![Lägg till Forms Communication API](/help/forms/assets/adc-add-runtime-api.png)
 
-   3. Klicka på **Spara konfigurerat API**. API och produktprofil läggs till i ditt projekt
+   3. Klicka på **Nästa**
+   4. Välj autentiseringsmetoden **OAuth Server-to-Server**.
+      ![Välj autentiseringsmetod](/help/forms/assets/adc-add-authentication-method.png)
 
-      ![Välj projektkonfiguration](/help/forms/assets/adc-add-product-profile.png)
+>[!ENDTABS]
 
-6. Generera och spara autentiseringsuppgifter
+>[!NOTE]
+>
+> Du kan också lägga till API:t och autentiseringsmetoden i ditt befintliga projekt genom att klicka på **Lägg till i projekt** > **API**\
+> ![Lägg till API i befintligt projekt](/help/forms/assets/add-api-existing-project.png)
 
-   1. Navigera till ditt projekt i Adobe Developer Console
-   2. Klicka på autentiseringsuppgifter för **OAuth Server-till-Server**
-   3. Visa avsnittet **Information om autentiseringsuppgifter**
+### Lägg till produktprofil
 
-      ![Visa autentiseringsuppgifter](/help/forms/assets/adc-view-credential.png)
+Produktprofilen ger behörighet (eller behörighet) för inloggningsuppgifter för åtkomst till AEM-resurser.
 
-   4. Post-API-autentiseringsuppgifter
+1. Välj den **produktprofil** som matchar din AEM-instans-URL (`https://Service Type -Environment Type-Program XXX-Environment XXX.adobeaemcloud.com`).
 
-      ```text
-      API Credentials:
-      ================
-      Client ID: <your_client_id>
-      Client Secret: <your_client_secret>
-      Technical Account ID: <tech_account_id>
-      Organization ID: <org_id>
-      Scopes: AdobeID,openid,read_organizations
-      ```
+   * **Tjänsttyp** - anger tjänster eller behörigheter som är associerade med AEM-instansen
 
-7. Generering av åtkomsttoken
+   * **Miljötyp** - anger om miljön är för författare eller publiceringstjänst
 
-   **A. För testning**
+   * **Program XXX** - identifierar Cloud Manager program-ID
 
-   Generera åtkomsttoken manuellt i Adobe Developer Console:
+   * **Environment XXX** - identifierar det specifika miljö-ID:t i det programmet
 
-   1. **Navigera till ditt projekt**
-      1. Öppna ditt projekt i Adobe Developer Console
-      2. Klicka på **OAuth Server-to-Server**
+   >
+   >
+   > Produktprofiler är knutna till en viss AEM-instans (program + miljö). Välj alltid den profil som matchar din instans-URL.
 
-   2. **Generera åtkomsttoken**
-      1. Klicka på knappen **&quot;Generera åtkomsttoken&quot;** i projektets API-avsnitt
-      2. Kopiera genererad åtkomsttoken
+2. Klicka på **Spara konfigurerat API**. API och produktprofil läggs till i ditt projekt
 
-      ![Generera åtkomsttoken](/help/forms/assets/adc-access-token.png)
+   ![Välj projektkonfiguration](/help/forms/assets/adc-add-product-profile.png)
 
-      >[!NOTE]
-      >
-      > Åtkomsttoken är endast giltig i **24 timmar**
+### Generera och spara autentiseringsuppgifter
 
-   **B. För produktion**
+1. Navigera till ditt projekt i Adobe Developer Console
+2. Klicka på autentiseringsuppgifter för **OAuth Server-till-Server**
+3. Visa avsnittet **Information om autentiseringsuppgifter**
 
-   Generera tokens programmatiskt med Adobe IMS API:
+   ![Visa autentiseringsuppgifter](/help/forms/assets/adc-view-credential.png)
 
-   **Nödvändiga autentiseringsuppgifter:**
+**Post-API-autentiseringsuppgifter**
 
-   * Klient-ID
-   * Klienthemlighet
-   * Omfång (vanligtvis: `openid, AdobeID, read_organizations, additional_info.projectedProductContext, read_pc.dma_aem_cloud, aem.document`)
+```text
+    API Credentials:
+    ================
+    Client ID: <your_client_id>
+    Client Secret: <your_client_secret>
+    Technical Account ID: <tech_account_id>
+    Organization ID: <org_id>
+    Scopes: AdobeID,openid,read_organizations
+```
 
-   **Tokenslutpunkt:**
+### Generering av åtkomsttoken
 
-   ```
-   https://ims-na1.adobelogin.com/ims/token/v3
-   ```
+Generera åtkomsttoken antingen manuellt eller programmatiskt:
 
-   **Exempelbegäran (url):**
+>[!BEGINTABS]
 
-   ```bash
-   curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
-   -H 'Content-Type: application/x-www-form-urlencoded' \
-   -d 'grant_type=client_credentials' \
-   -d 'client_id=<YOUR_CLIENT_ID>' \
-   -d 'client_secret=<YOUR_CLIENT_SECRET>' \
-   -d 'scope=AdobeID,openid,read_organizations'
-   ```
+>[!TAB För testning]
 
-   **Svar:**
+Generera åtkomsttoken manuellt i Adobe Developer Console:
 
-   ```json
-   {
-   "access_token": "eyJhbGciOiJSUz...",
-   "token_type": "bearer",
-   "expires_in": 86399
-   }
-   ```
+1. **Navigera till ditt projekt**
+   1. Öppna ditt projekt i Adobe Developer Console
+   2. Klicka på **OAuth Server-to-Server**
+
+2. **Generera åtkomsttoken**
+   1. Klicka på knappen **&quot;Generera åtkomsttoken&quot;** i projektets API-avsnitt
+   2. Kopiera genererad åtkomsttoken
+
+   ![Generera åtkomsttoken](/help/forms/assets/adc-access-token.png)
+
+   >[!NOTE]
+   >
+   > Åtkomsttoken är endast giltig i **24 timmar**
+
+>[!TAB För produktion]
+
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+
+**Nödvändiga autentiseringsuppgifter:**
+
+* Klient-ID
+* Klienthemlighet
+* Omfång (vanligtvis: `openid, AdobeID, read_organizations, additional_info.projectedProductContext, read_pc.dma_aem_cloud, aem.document`)
+
+**Tokenslutpunkt:**
+
+```
+https://ims-na1.adobelogin.com/ims/token/v3
+```
+
+**Exempelbegäran (url):**
+
+```bash
+curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'grant_type=client_credentials' \
+-d 'client_id=<YOUR_CLIENT_ID>' \
+-d 'client_secret=<YOUR_CLIENT_SECRET>' \
+-d 'scope=AdobeID,openid,read_organizations'
+```
+
+**Svar:**
+
+```json
+    {
+    "access_token": "eyJhbGciOiJSUz...",
+    "token_type": "bearer",
+    "expires_in": 86399
+    }
+```
+
+>[!ENDTABS]
 
 Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för utvecklings-, scen- eller produktionsmiljöer.
 
@@ -206,7 +225,22 @@ Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för ut
 >
 > Om du vill veta mer om OAuth Server-till-Server-implementering för att generera åtkomsttoken och göra API-anrop [klickar du här](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation).
 
+## God praxis: Hantera autentiseringsuppgifter för utveckling, mellanlagring och produktion
+
+* Använd alltid separata autentiseringsuppgifter för utveckling, mellanlagring och produktion.
+
+* Mappa alla autentiseringsuppgifter till rätt URL för AEM-miljön.
+
+* Lagra hemligheter på ett säkert sätt och implementera dem aldrig i källkontrollen.
+
+* Giltigheten för spåråtkomsttoken, eftersom tokens endast är giltiga i 24 timmar.
+
 ## Nästa steg
+
+Mer information om hur du konfigurerar miljö för synkrona Forms Communication API:er finns i [Synkron bearbetning i AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md).
+
+
+## Relaterade artiklar
 
 Lär dig hur du ställer in miljön för API:er för synkron (On-Demand) och asynkron (Batch) Forms Communications:
 
