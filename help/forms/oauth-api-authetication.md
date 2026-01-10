@@ -6,9 +6,9 @@ feature: Adaptive Forms, APIs & Integrations
 hide: true
 hidefromtoc: true
 index: false
-source-git-commit: e2f57a32fcc098a2331ad74540a3d48832c2b3c3
+source-git-commit: 6bd2e1698cceaf8fe47e19e0645d0782c916644a
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -22,14 +22,14 @@ OAuth Server-till-Server-autentisering ger säker, tokenbaserad åtkomst till AE
 
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
-* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
-* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
+* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
+* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
 
 ## Hur skapar man en åtkomsttoken med hjälp av OAuth Server-till-Server-autentisering?
 
 Följ stegen nedan för att generera en åtkomsttoken från Adobe Developer-konsolen och gör ditt första API-anrop via OAuth Server-to-Server-autentisering.
 
-### Adobe Developer Console Project Setup
+### 1. Adobe Developer Console Project Setup
 
 1. Navigera till [Adobe Developer Console](https://developer.adobe.com/console)
 2. Logga in med din Adobe ID
@@ -66,7 +66,7 @@ Följ stegen nedan för att generera en åtkomsttoken från Adobe Developer-kons
 
 >[!ENDTABS]
 
-### Lägg till Forms API:er
+### &#x200B;2. Lägg till Forms API:er
 
 Lägg till Forms-API:er baserat på vad du vill göra:
 
@@ -109,12 +109,10 @@ Lägg till Forms-API:er baserat på vad du vill göra:
 
 >[!ENDTABS]
 
->[!NOTE]
->
-> Du kan också lägga till API:t och autentiseringsmetoden i ditt befintliga projekt genom att klicka på **Lägg till i projekt** > **API**\
-> ![Lägg till API i befintligt projekt](/help/forms/assets/add-api-existing-project.png)
+Du kan också lägga till API:t och autentiseringsmetoden i ditt befintliga projekt genom att klicka på **Lägg till i projekt** > **API**\
+![Lägg till API i befintligt projekt](/help/forms/assets/add-api-existing-project.png)
 
-### Lägg till produktprofil
+### &#x200B;3. Lägg till produktprofil
 
 Produktprofilen ger behörighet (eller behörighet) för inloggningsuppgifter för åtkomst till AEM-resurser.
 
@@ -128,7 +126,7 @@ Produktprofilen ger behörighet (eller behörighet) för inloggningsuppgifter f�
 
    * **Environment XXX** - identifierar det specifika miljö-ID:t i det programmet
 
-   >
+   >[!NOTE]
    >
    > Produktprofiler är knutna till en viss AEM-instans (program + miljö). Välj alltid den profil som matchar din instans-URL.
 
@@ -136,7 +134,7 @@ Produktprofilen ger behörighet (eller behörighet) för inloggningsuppgifter f�
 
    ![Välj projektkonfiguration](/help/forms/assets/adc-add-product-profile.png)
 
-### Generera och spara autentiseringsuppgifter
+### &#x200B;4. Generera och spara autentiseringsuppgifter
 
 1. Navigera till ditt projekt i Adobe Developer Console
 2. Klicka på autentiseringsuppgifter för **OAuth Server-till-Server**
@@ -156,7 +154,7 @@ Produktprofilen ger behörighet (eller behörighet) för inloggningsuppgifter f�
     Scopes: AdobeID,openid,read_organizations
 ```
 
-### Generering av åtkomsttoken
+### &#x200B;5. Generera åtkomsttoken
 
 Generera åtkomsttoken antingen manuellt eller programmatiskt:
 
@@ -182,7 +180,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 
@@ -221,7 +219,7 @@ curl -X POST 'https://ims-na1.adobelogin.com/ims/token/v3' \
 
 Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för utvecklings-, scen- eller produktionsmiljöer.
 
->[!NOTE]
+>
 >
 > Om du vill veta mer om OAuth Server-till-Server-implementering för att generera åtkomsttoken och göra API-anrop [klickar du här](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation).
 
