@@ -4,9 +4,9 @@ description: Definiera strukturen för det innehåll du ska skapa och tjäna med
 exl-id: 8e3e4d00-34d3-4d4f-bc3a-43b8a322b986
 feature: Headless, Content Fragments,GraphQL API
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 95624ebf1a77dac1f535e199b660096c8efdfa76
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
