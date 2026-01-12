@@ -3,10 +3,7 @@ title: Hur konfigurerar jag JWT-autentisering (JSON Web Token)?
 description: Lär dig konfigurera JWT-autentisering (JSON Web Token) för Adobe Experience Manager Forms as a Cloud Service
 role: Admin, Developer, User
 feature: Adaptive Forms, APIs & Integrations
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: e2f57a32fcc098a2331ad74540a3d48832c2b3c3
+source-git-commit: d9eb9a93aba71a5ef5940c9d1d75cfd4e738c26b
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -23,7 +20,7 @@ JWT server-till-server-autentisering i AEM Forms, särskilt för serverintegrati
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
 * Kontrollera att du har tillgång till [Adobe Cloud Manager](https://experience.adobe.com/#/@formsinternal01/cloud-manager/landing.html) som är specifik för den miljö du använder.
-* Tilldela [systemadministratörs- eller utvecklarrollen för åtkomst till Adobe Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/access-rights).
+* Tilldela [systemadministratörs- eller utvecklarrollen för åtkomst till Adobe Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights).
 
 ## Hur skapar man en åtkomsttoken med JWT-referenser?
 
@@ -109,7 +106,7 @@ Följ stegen nedan som visar hur du genererar en åtkomsttoken från JWT-autenti
 
 >[!NOTE]
 >
-> [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
+> [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
 
 Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för utvecklings-, scen- eller produktionsmiljöer.
 

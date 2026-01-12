@@ -5,9 +5,9 @@ Keywords: document generation, PDF manipulation, document security, batch proces
 feature: Adaptive Forms, APIs & Integrations, Document Services
 role: Admin, Developer, User
 exl-id: b6f05b2f-5665-4992-8689-d566351d54f1
-source-git-commit: 8f39bffd07e3b4e88bfa200fec51572e952ac837
+source-git-commit: e2716b7f9612d5769c422a0fc2915a604ea40de5
 workflow-type: tm+mt
-source-wordcount: '2711'
+source-wordcount: '2763'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 > **Versionstillgänglighet**
 >
-> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html?lang=sv-SE)
+> * **AEM 6.5**: [Översikt över AEM Document Services](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-services/overview-aem-document-services.html)
 > * **AEM as a Cloud Service**: Den här artikeln
 
 ## Introduktion
@@ -91,6 +91,10 @@ API:t för dokumentgenerering returnerar det genererade PDF-dokumentet eller AFP
 
 <span class="preview"> Överför genererade PDF-filer med hjälp av dokumentgenererings-API:t till Azure Blob Storage-funktionen under [Tidigt Adobe-program](/help/forms/early-access-ea-features.md). Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
+>
+>
+> API:er för dokumentgenerering omfattar slutpunkter för batchgenerering och synkron generering av utdata. Dessa API:er stöder autentisering server-till-server med JWT eller OAuth, beroende på slutpunkten. [Klicka här](/help/forms/aem-forms-communication-api-overview.md#document-generation-apis) om du vill veta mer om API:er för dokumentgenerering.
+
 #### Skapa dokument för PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) {#create-PS-PCL-ZPL-documents}
 
 Du kan använda API:er för dokumentgenerering för att skapa dokument i formaten PostScript (PS), Printer Command Language (PCL) och Zebra Printing Language (ZPL) som baseras på en XDP-formulärdesign eller ett PDF-dokument. Dessa API:er hjälper till att sammanfoga en formulärdesign med formulärdata för att generera ett dokument. Du kan spara dokumentet i en fil och utveckla en anpassad process för att skicka det till en skrivare.
@@ -104,6 +108,10 @@ Du kan använda API:er för dokumentgenerering för att skapa separata dokument 
 ## Dokumentmanipulering
 
 API:er för dokumentbearbetning (Document Transformation) hjälper dig att kombinera och ordna om PDF-dokument. Vanligtvis skapar du en DX och skickar den till dokumenthanterings-API:er för att montera eller ordna om ett dokument. [DDX-dokumentet](https://helpx.adobe.com/content/dam/help/en/experience-manager/forms-cloud-service/ddxRef.pdf) innehåller instruktioner om hur du använder källdokumenten för att skapa en uppsättning med obligatoriska dokument. DDX-referensdokumentationen innehåller detaljerad information om alla åtgärder som stöds.
+
+>
+>
+> API:er för dokumentredigering stöder server-till-server-autentisering med JWT. [Klicka här](/help/forms/aem-forms-communication-api-overview.md#document-manipulation-apis) om du vill veta mer om API:er för dokumentredigering.
 
 ### Funktioner för hantering av nyckeldokument
 
@@ -144,7 +152,10 @@ Med dokumentextraheringstjänsten kan du hämta egenskaperna för ett PDF-dokume
 * Extrahera användningsrättigheterna som är aktiverade i ett PDF-dokument och få åtkomst till användningsrättigheterna som är aktiverade eller inaktiverade i ett PDF-dokument för Adobe Acrobat Reader-utbyggbarhet.
 * Hämta metadatainformationen som finns i ett PDF-dokument. Metadata är information om dokumentet (som skiljer sig från dokumentets innehåll, som text och bilder). Adobe Extensible Metadata Platform (XMP) är en standard för hantering av dokumentmetadata. XMP Utilities kan hämta XMP-metadata från PDF-dokument och exportera XMP-metadata till PDF-dokument.
 
-[API-referensdokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) innehåller detaljerad information om alla parametrar, autentiseringsmetoder och tjänster som tillhandahålls av API:er. API-referensdokumentationen finns också i .yaml-format. Du kan hämta .yaml-filen och överföra den till Postman för att kontrollera API:ernas funktioner.
+>
+>
+> API:er för dokumentextrahering stöder server-till-server-autentisering med OAuth. [Klicka här](/help/forms/aem-forms-communication-api-overview.md#document-extraction-apis) om du vill veta mer om API:er för dokumentextrahering.
+>
 
 ## Dokumentkonvertering
 
@@ -157,6 +168,10 @@ API:er för dokumentkonvertering för kommunikation hjälper till att konvertera
 <span class="preview"> Funktionen för att konvertera PDF till XDP finns i Tidigt Adobe-program. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
 
 Konverterar PDF-dokument till XDP-filer. För att ett PDF-dokument ska kunna konverteras till en XDP-fil måste PDF-dokumentet innehålla en XFA-ström i ordlistan.
+
+>
+>
+> API:er för dokumentkonvertering har stöd för server-till-server-autentisering med OAuth. [Klicka här](/help/forms/aem-forms-communication-api-overview.md#document-conversion-apiss) om du vill veta mer om API:er för dokumentkonvertering.
 
 ## Document Assurance {#doc-assurance}
 
@@ -174,6 +189,10 @@ Med signatur-API:erna kan din organisation skydda säkerheten och sekretessen f�
 * Ta bort det angivna signaturfältet från ett PDF-dokument
 
 <span class="preview"> Ta bort signaturen från det angivna signaturfältet och ta bort det angivna signaturfältet från ett PDF-dokument som är tillgängligt under det tidiga adopterprogrammet. Du kan skriva till aem-forms-ea@adobe.com från ditt officiella e-post-id för att gå med i det tidiga adopterprogrammet och begära åtkomst till funktionen. </span>
+
+>
+>
+> Assurance-API:er för dokument har stöd för server-till-server-autentisering med OAuth. [Klicka här](/help/forms/aem-forms-communication-api-overview.md#document-assurance-apis) om du vill veta mer om API:er för Document Assurance.
 
 ### Krypterings-API:er
 

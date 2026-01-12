@@ -3,18 +3,15 @@ title: Hur konfigurerar jag Forms Communications Synchronous API:er?
 description: Konfigurera utvecklingsmiljö för Synkrona API:er för interaktiv kommunikation för Adobe Experience Manager Forms as a Cloud Service
 role: Admin, Developer, User
 feature: Adaptive Forms,APIs & Integrations
-hide: true
-hidefromtoc: true
-index: false
-source-git-commit: 77da2f4ddcd9074a79883f18a33b6fe50e32b266
+source-git-commit: a0db7a0a2dc82c9857b34b79fe3b3b6f3e179372
 workflow-type: tm+mt
-source-wordcount: '2396'
+source-wordcount: '2417'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera OAuth Server-till-Server-åtkomst för AEM Forms Communications Synchronous API:er
+# Konfigurera OAuth Server-till-Server-åtkomst för AEM Forms Communications API:er
 
 Den här guiden innehåller anvisningar för hur du konfigurerar och anropar AEM Forms Communications Synchronous API:er som nås via Adobe Developer Console med OAuth Server-to-Server-autentisering.
 
@@ -22,23 +19,28 @@ Den här guiden innehåller anvisningar för hur du konfigurerar och anropar AEM
 
 Om du vill konfigurera en miljö för att köra och testa AEM Forms Communications API:er måste du ha följande:
 
+### Uppdatera AEM as a Cloud Service-miljö
+
+* [AEM version 2024.10.18459.20241031T210302Z eller senare](#update-aem-instance)
+* Uppdatera produktprofiler om miljön skapades före november 2024
+
 ### Åtkomst och behörigheter
 
 Kontrollera att du har de behörigheter och behörigheter som krävs innan du börjar konfigurera kommunikations-API:erna.
 
 **Användar- och rollbehörigheter**
 
-- Utvecklarroll som tilldelats i Adobe Admin Console
-- Behörighet att skapa projekt i Adobe Developer Console
+* Utvecklarroll som tilldelats i Adobe Admin Console
+* Behörighet att skapa projekt i Adobe Developer Console
 
 >[!NOTE]
 >
-> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
+> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
 
 **Git-databasåtkomst**
 
-- Åtkomst till Cloud Manager Git-databas
-- Git-inloggningsuppgifter för kloning och push-ändringar
+* Åtkomst till Cloud Manager Git-databas
+* Git-inloggningsuppgifter för kloning och push-ändringar
 
 >[!NOTE]
 >
@@ -46,8 +48,8 @@ Kontrollera att du har de behörigheter och behörigheter som krävs innan du b�
 
 ### Generera åtkomsttoken med Adobe Developer Console (ADC)
 
-- Generera åtkomsttoken via Adobe Developer Console med OAuth Server-till-Server-autentisering.
-- Hämta klient-ID från Adobe Developer Console
+* Generera åtkomsttoken via Adobe Developer Console med OAuth Server-till-Server-autentisering.
+* Hämta klient-ID från Adobe Developer Console
 
 >[!NOTE]
 >
@@ -55,11 +57,11 @@ Kontrollera att du har de behörigheter och behörigheter som krävs innan du b�
 
 ### Utvecklingsverktyg
 
-- **Node.js** för att köra exempelprogram
-- Senaste versionen av **Git**
-- Åtkomst till **Terminal-/kommandorad**
-- **Textredigerare eller IDE** för redigering av konfigurationsfiler (VS-kod, IntelliJ, osv.)
-- **Postman** eller liknande verktyg för API-testning
+* **Node.js** för att köra exempelprogram
+* Senaste versionen av **Git**
+* Åtkomst till **Terminal-/kommandorad**
+* **Textredigerare eller IDE** för redigering av konfigurationsfiler (VS-kod, IntelliJ, osv.)
+* **Postman** eller liknande verktyg för API-testning
 
 >[!NOTE]
 >
@@ -120,7 +122,7 @@ Observera din AEM URL-instans på informationssidan **Miljö** .
 
 >[!NOTE]
 >
-> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
+> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
 ### Steg 2: Klona Git-databas
 
@@ -259,13 +261,13 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 
-- Klient-ID
-- Klienthemlighet
-- Omfång (vanligtvis: `openid, AdobeID, read_organizations, additional_info.projectedProductContext, read_pc.dma_aem_cloud, aem.document`)
+* Klient-ID
+* Klienthemlighet
+* Omfång (vanligtvis: `openid, AdobeID, read_organizations, additional_info.projectedProductContext, read_pc.dma_aem_cloud, aem.document`)
 
 **Tokenslutpunkt:**
 
@@ -340,16 +342,16 @@ Om du vill att ditt ADC-projekts klient-ID ska kunna kommunicera med AEM-instans
 
 I följande exempel förklaras konfigurationsparametrarna:
 
-- **sort**: Alltid inställt på `"API"` (identifierar detta som en API-konfiguration)
-- **version**: API-version, vanligtvis `"1"` eller `"1.0"`
-- **envTypes**: Array med miljötyper där den här konfigurationen gäller
-   - `["dev"]` - Endast utvecklingsmiljöer
-   - `["stage"]` - Endast mellanlagringsmiljöer
-   - `["prod"]` - endast produktionsmiljöer
-- **allowedClientIDs**: Klient-ID:n har åtkomst till din AEM-instans
-   - **författare**: Klient-ID för författarnivå
-   - **publicera**: Klient-ID för publiceringsskikt
-   - **förhandsgranskning**: Klient-ID för förhandsgranskningsnivå
+* **sort**: Alltid inställt på `"API"` (identifierar detta som en API-konfiguration)
+* **version**: API-version, vanligtvis `"1"` eller `"1.0"`
+* **envTypes**: Array med miljötyper där den här konfigurationen gäller
+   * `["dev"]` - Endast utvecklingsmiljöer
+   * `["stage"]` - Endast mellanlagringsmiljöer
+   * `["prod"]` - endast produktionsmiljöer
+* **allowedClientIDs**: Klient-ID:n har åtkomst till din AEM-instans
+   * **författare**: Klient-ID för författarnivå
+   * **publicera**: Klient-ID för publiceringsskikt
+   * **förhandsgranskning**: Klient-ID för förhandsgranskningsnivå
 
 ![Lägger till konfigurationsfil](/help/forms/assets/create-api-yaml-file.png)
 
@@ -383,9 +385,9 @@ I följande exempel förklaras konfigurationsparametrarna:
 
 #### 5.2 Välj typ av pipeline
 
-- **För utvecklingsmiljöer**: Välj **&quot;Lägg till icke-produktionsförlopp&quot;**. Rörledningar som inte är avsedda för produktion är avsedda för dev- och scenmiljöer
+* **För utvecklingsmiljöer**: Välj **&quot;Lägg till icke-produktionsförlopp&quot;**. Rörledningar som inte är avsedda för produktion är avsedda för dev- och scenmiljöer
 
-- **För produktionsmiljöer**: Välj **&quot;Lägg till produktionsförlopp&quot;**. Produktionspipelinjer kräver ytterligare godkännanden
+* **För produktionsmiljöer**: Välj **&quot;Lägg till produktionsförlopp&quot;**. Produktionspipelinjer kräver ytterligare godkännanden
 
 >[!NOTE]
 >
@@ -397,22 +399,22 @@ På fliken **Konfiguration**:
 
 a. **Förloppstyp**
 
-- Välj **&quot;Distributionspipeline&quot;**
+* Välj **&quot;Distributionspipeline&quot;**
 
 b. **Pipelinenamn**
 
-- Ange ett beskrivande namn, t.ex. ge pipelinen namnet `api-config-pipieline`
+* Ange ett beskrivande namn, t.ex. ge pipelinen namnet `api-config-pipieline`
 
 c. **Utlösare för distribution**
 
-- **Manuell**: Distribuera endast när manuellt utlöses (rekommenderas för den första konfigurationen)
-- **Vid Git-ändringar**: Distribuera automatiskt när ändringar överförs till grenen
+* **Manuell**: Distribuera endast när manuellt utlöses (rekommenderas för den första konfigurationen)
+* **Vid Git-ändringar**: Distribuera automatiskt när ändringar överförs till grenen
 
 d. **Beteende vid viktiga mätfel**
 
-- **Fråga varje gång**: Fråga efter åtgärder vid fel (standard)
-- **Misslyckades omedelbart**: Felsök automatiskt pipeline vid måttfel
-- **Fortsätt omedelbart**: Fortsätt trots fel
+* **Fråga varje gång**: Fråga efter åtgärder vid fel (standard)
+* **Misslyckades omedelbart**: Felsök automatiskt pipeline vid måttfel
+* **Fortsätt omedelbart**: Fortsätt trots fel
 
 e. Klicka på **&quot;Fortsätt&quot;** för att fortsätta till fliken **Source-kod**
 
@@ -424,21 +426,21 @@ På fliken **Source Code**:
 
 a. **Distributionstyp**
 
-- Välj **&quot;Måldistribution&quot;**
+* Välj **&quot;Måldistribution&quot;**
 
 b. **Distributionsalternativ**
 
-- Välj **&quot;Konfig&quot;** (endast distribuera konfigurationsfiler). Den talar om för Cloud Manager att detta är en konfigurationsdistribution.
+* Välj **&quot;Konfig&quot;** (endast distribuera konfigurationsfiler). Den talar om för Cloud Manager att detta är en konfigurationsdistribution.
 
 c. **Välj berättigad distributionsmiljö**
 
-- Välj den miljö där du vill distribuera konfigurationen. I det här fallet är det en `dev`-miljö.
+* Välj den miljö där du vill distribuera konfigurationen. I det här fallet är det en `dev`-miljö.
 
 d. **Definiera Source-koddetaljer**
 
-- **Databas**: Välj den databas som innehåller din `api.yaml`-fil. Välj till exempel databasen `AEMFormsInternal-ReleaseSanity-pXXXXX-ukYYYYY`.
-- **Git-grenen**: Välj din gren. I det här fallet distribueras till exempel vår kod på grenen `main`.
-- **Kodplats**: Ange sökvägen till katalogen `config`. Eftersom `api.yaml` finns i mappen `config` i roten anger du `/config`
+* **Databas**: Välj den databas som innehåller din `api.yaml`-fil. Välj till exempel databasen `AEMFormsInternal-ReleaseSanity-pXXXXX-ukYYYYY`.
+* **Git-grenen**: Välj din gren. I det här fallet distribueras till exempel vår kod på grenen `main`.
+* **Kodplats**: Ange sökvägen till katalogen `config`. Eftersom `api.yaml` finns i mappen `config` i roten anger du `/config`
 
 e. Klicka på **&quot;Spara&quot;** för att skapa pipelinen
 
@@ -462,9 +464,9 @@ Distribuera din `api.yaml`-konfiguration nu när pipeline har skapats
 
 #### 6.3 Verifiera lyckad distribution
 
-- Vänta på att pipeline ska slutföras.
-   - Om det lyckas ändras statusen till Slutfört (grön bock ✓).
-   - Om det misslyckas ändras statusen till&quot;Misslyckad&quot; (röd korsning ✗). Klicka på **Hämta loggar** för att visa felinformationen.
+* Vänta på att pipeline ska slutföras.
+   * Om det lyckas ändras statusen till Slutfört (grön bock ✓).
+   * Om det misslyckas ändras statusen till&quot;Misslyckad&quot; (röd korsning ✗). Klicka på **Hämta loggar** för att visa felinformationen.
 
      ![Pipelinen lyckades](/help/forms/assets/pipeline-suceess.png)
 
@@ -478,7 +480,7 @@ Nu när miljön är konfigurerad kan du börja testa API:erna för AEM Forms Com
 
 >[!TAB A. Använda Swagger-gränssnittet för API-testning ]
 
-Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API:er utan att behöva skriva kod. Använd funktionen **Prova** för att anropa och testa [generera Forms Communication API &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) för PDF.
+Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API:er utan att behöva skriva kod. Använd funktionen **Prova** för att anropa och testa [generera Forms Communication API ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) för PDF.
 
 1. Navigera till [Forms Communication API Reference](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/) och öppna [Forms Communication API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
 2. Expandera avsnittet **Dokumentgenerering** och välj [Skapar ett ifyllbart PDF-formulär från en XDP- eller PDF-mall, eventuellt med datasammanfogning](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm).
@@ -500,10 +502,10 @@ Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API
    ![Skicka API](/help/forms/assets/api-send.png)
 
 6. Kontrollera svaret på fliken **Svar**:
-   - Om svarskoden är `200` innebär det att PDF har skapats.
-   - Om svarskoden är `400` betyder det att parametrarna för begäran är ogiltiga eller har fel format.
-   - Om svarskoden är `500` betyder det att det finns ett internt serverfel.
-   - Om svarskoden är `403` betyder det att det finns ett auktoriseringsfel.
+   * Om svarskoden är `200` innebär det att PDF har skapats.
+   * Om svarskoden är `400` betyder det att parametrarna för begäran är ogiltiga eller har fel format.
+   * Om svarskoden är `500` betyder det att det finns ett internt serverfel.
+   * Om svarskoden är `403` betyder det att det finns ett auktoriseringsfel.
 
    I det här fallet är svarskoden `200`, vilket betyder att PDF har skapats:
 
@@ -523,11 +525,11 @@ Utveckla ett Node.js-program för att generera ett ifyllbart PDF-formulär från
 
 **Förutsättningar**
 
-- Node.js är installerat på datorn
-- Aktiv AEM as a Cloud Service-instans
-- Bearer-token för API-autentisering från Adobe Developer Console
-- Exempel på XDP-fil: [ClosingForm.xdp](/help/forms/assets/ClosingForm.xdp)
-- XML-exempelfil: [ClosingForm.xml](/help/forms/assets/ClosingForm.xml)
+* Node.js är installerat på datorn
+* Aktiv AEM as a Cloud Service-instans
+* Bearer-token för API-autentisering från Adobe Developer Console
+* Exempel på XDP-fil: [ClosingForm.xdp](/help/forms/assets/ClosingForm.xdp)
+* XML-exempelfil: [ClosingForm.xml](/help/forms/assets/ClosingForm.xml)
 
 Så här utvecklar du programmet Node.js:
 
@@ -721,57 +723,57 @@ Du kan öppna den [genererade PDF](/help/forms/assets/create-pdf.png) för att v
 
 **Symtomen:**
 
-- API-förfrågningar returnerar `403 Forbidden`
-- Felmeddelande: *Obehörig åtkomst*
+* API-förfrågningar returnerar `403 Forbidden`
+* Felmeddelande: *Obehörig åtkomst*
 
 **Möjlig orsak:**
 
-- Klient-ID har inte registrerats i AEM-instansens `api.yaml`-konfiguration
+* Klient-ID har inte registrerats i AEM-instansens `api.yaml`-konfiguration
 
 #### Problem 2: 401 Otillåtet fel
 
 **Symtomen:**
 
-- API-förfrågningar returnerar `401 Unauthorized`
-- Felmeddelande: *Ogiltig eller utgången token*
+* API-förfrågningar returnerar `401 Unauthorized`
+* Felmeddelande: *Ogiltig eller utgången token*
 
 **Möjliga orsaker:**
 
-- Åtkomsttoken har gått ut (gäller endast i 24 timmar)
-- Felaktigt eller felmatchat klient-ID och klienthemlighet
+* Åtkomsttoken har gått ut (gäller endast i 24 timmar)
+* Felaktigt eller felmatchat klient-ID och klienthemlighet
 
 #### Problem 3: 404 Det gick inte att hitta felet
 
 **Symtomen:**
 
-- API-förfrågningar returnerar `404 Not Found`
-- Felmeddelande: *Resursen hittades inte* eller *API-slutpunkten hittades inte*
+* API-förfrågningar returnerar `404 Not Found`
+* Felmeddelande: *Resursen hittades inte* eller *API-slutpunkten hittades inte*
 
 **Möjlig orsak:**
 
-- Felaktig bucket-parameter (matchar inte AEM-förekomsdentifierare)
+* Felaktig bucket-parameter (matchar inte AEM-förekomsdentifierare)
 
 #### Problem 4: Driftsättning av pipeline misslyckades
 
 **Symtomen:**
 
-- Körningen av konfigurationspipeline misslyckades
-- Distributionsloggar visar fel relaterade till `api.yaml`
+* Körningen av konfigurationspipeline misslyckades
+* Distributionsloggar visar fel relaterade till `api.yaml`
 
 **Möjliga orsaker:**
 
-- Ogiltig YAML-syntax (indrag, offert eller matrisformatproblem)
-- `api.yaml` placerades i fel katalog
-- Felaktigt eller felaktigt klient-ID i konfigurationen
-- Ogiltig klienthemlighet
+* Ogiltig YAML-syntax (indrag, offert eller matrisformatproblem)
+* `api.yaml` placerades i fel katalog
+* Felaktigt eller felaktigt klient-ID i konfigurationen
+* Ogiltig klienthemlighet
 
 #### Problem 5: Forms Communication API:er kan inte köras
 
 **Symtomen:**
 
-- API-begäranden returnerar fel som anger att funktioner som inte stöds eller inte är tillgängliga.
-- PDF-generering med XDP och XML fungerar inte.
-- Distributionen av pipeline har slutförts, men API-anrop för körning misslyckas.
+* API-begäranden returnerar fel som anger att funktioner som inte stöds eller inte är tillgängliga.
+* PDF-generering med XDP och XML fungerar inte.
+* Distributionen av pipeline har slutförts, men API-anrop för körning misslyckas.
 
 **Möjlig orsak:**
 
@@ -789,4 +791,4 @@ Så här uppdaterar du AEM-instansen för att hitta miljöinformation:
 
 ## Relaterade artiklar
 
-- Mer information om hur du konfigurerar miljö för batchbearbetning (asynkrona API:er) finns i [AEM Forms as a Cloud Service Communications Batch Processing](/help/forms/aem-forms-cloud-service-communications-batch-processing.md).
+* Mer information om hur du konfigurerar miljö för batchbearbetning (asynkrona API:er) finns i [AEM Forms as a Cloud Service Communications Batch Processing](/help/forms/aem-forms-cloud-service-communications-batch-processing.md).
