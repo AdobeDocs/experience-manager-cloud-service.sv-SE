@@ -20,7 +20,7 @@ JWT server-till-server-autentisering i AEM Forms, särskilt för serverintegrati
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
 * Kontrollera att du har tillgång till [Adobe Cloud Manager](https://experience.adobe.com/#/@formsinternal01/cloud-manager/landing.html) som är specifik för den miljö du använder.
-* Tilldela [systemadministratörs- eller utvecklarrollen för åtkomst till Adobe Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights).
+* Tilldela [systemadministratörs- eller utvecklarrollen för åtkomst till Adobe Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/access-rights).
 
 ## Hur skapar man en åtkomsttoken med JWT-referenser?
 
@@ -106,7 +106,7 @@ Följ stegen nedan som visar hur du genererar en åtkomsttoken från JWT-autenti
 
 >[!NOTE]
 >
-> [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
+> [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) om du vill veta mer om tjänstens autentiseringsuppgifter och hur du genererar en åtkomsttoken med Adobe IMS API.
 
 Du kan nu använda den genererade åtkomsttoken för att göra API-anrop för utvecklings-, scen- eller produktionsmiljöer.
 
