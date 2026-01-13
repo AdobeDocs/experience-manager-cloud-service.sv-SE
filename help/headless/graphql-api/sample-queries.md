@@ -4,7 +4,7 @@ description: Lär dig använda GraphQL med AEM så att du kan leverera innehåll
 feature: Headless, Content Fragments,GraphQL API
 exl-id: b60fcf97-4736-4606-8b41-4051b8b0c8a7
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 6f90bfebf2c9898bf8c1ad2643f8edc4ff4dda53
 workflow-type: tm+mt
 source-wordcount: '1927'
 ht-degree: 0%
@@ -374,7 +374,7 @@ Sedan kan du använda en fråga för att returnera information om `name` och `ta
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   cityList(
     includeVariations: true,
@@ -390,7 +390,7 @@ query {
 
 **Exempelresultat**
 
-```xml
+```json
 {
   "data": {
     "cityList": {
@@ -1662,7 +1662,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 query {
   articleList(
     includeVariations: true  ){
@@ -1689,7 +1689,7 @@ Den här frågan förhör:
 
 **Exempelfråga**
 
-```xml
+```graphql
 {
   articleList(
     includeVariations: true,
