@@ -1,10 +1,10 @@
 ---
-title: Åtkomst till KPI:er
-description: Lär dig hur du får tillgång till nyckeltal och definierar rapporteringsprocessen
+title: Utvärderar nyckeltal
+description: Lär dig hur du utvärderar nyckeltal och definierar rapporteringsprocessen
 exl-id: 8556e0e3-a557-4fd6-9b82-09cb1decff0a
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 2a3c93d1a2e214a584fca5ede9a9189143d04889
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 0%
@@ -17,8 +17,8 @@ ht-degree: 0%
 >id="aemcloud_assesskpis"
 >title="Utvärderar nyckeltal"
 >abstract="Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html?lang=sv-SE" text="Justera KPI:er"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html?lang=sv-SE" text="Välja rätt team"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/aligning-kpis.html" text="Justera KPI:er"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/best-practices/choose-right-team.html" text="Välja rätt team"
 
 Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projektet veta vilka de tre viktigaste nyckeltalen är och varför de spelar någon roll.
 
@@ -27,9 +27,9 @@ Innan du börjar lansera Adobe Experience Manager bör alla som deltar i projekt
 
 I en studie från 2018 analyserade IDC det affärsvärde som flera stora företag såg när de använde Adobe Experience Manager. I genomsnitt hade de organisationer som använder Experience Manager Sites förbättrat produktiviteten i sina digitala upplevelseteam med 23 %, minskat den tid som krävdes för att göra mindre redaktionella ändringar med 64 % och ökat antalet besökare per månad med 10 %. De företag som använder Experience Manager Assets ökade produktiviteten i sina team för digitala resurser med 19 %, kortade tiden för att skapa nya resurser med 47 % och minskade tiden för att lansera marknadsföringskampanjer med 20 %.
 
-För att uppnå samma dramatiska vinster måste ni ha tydliga mål för implementeringen av Experience Manager. Och ni måste ha nyckeltal som hjälper alla att fokusera på dessa mål.
+För att uppnå samma dramatiska vinster måste ni ha tydliga mål för er Experience Manager-implementering. Och ni måste ha nyckeltal som hjälper alla att fokusera på dessa mål.
 
-## Åtkomst till KPI:er
+## Utvärderar nyckeltal
 
 När du bedömer nyckeltal ska du se till att:
 
@@ -49,7 +49,7 @@ Tänk på följande när du definierar rapporteringsprocessen:
 1. Vilket format kommer rapporten att ha?
 1. Hur kommer rapporten att levereras?
 
-Efter lanseringen av Experience Manager får du snabbt en klar uppsättning nyckeltal som ger dig en uppfattning om du är på rätt spår. Om du inte uppfyller en av nyckeltalen måste du justera hur teamen använder Experience Manager. Om du snabbt överskrider ett av dina KPI-mål är det något att fira - men då måste du omkalibrera målet för att få ett ännu bättre resultat.
+När du har startat Experience Manager får du snabbt en bra uppsättning nyckeltal som ger dig en uppfattning om du är på rätt spår. Om du inte uppfyller någon av dina nyckeltal måste du justera hur teamen använder Experience Manager. Om du snabbt överskrider ett av dina KPI-mål är det något att fira - men då måste du omkalibrera målet för att få ett ännu bättre resultat.
 
 >[!TIP]
 >
