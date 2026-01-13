@@ -3,16 +3,16 @@ title: Hantera samlingar i Content Hub
 description: Lär dig hantera samlingar i Content Hub
 role: User
 exl-id: ea74456c-f980-4a02-b26b-d7c46dac6aee
-source-git-commit: 69140e717ebc25284f715f73a3abb0b36b66deb2
+source-git-commit: 91d8df7e002c899c3c4cfda0f10bb42af4423ca6
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
 
+
 # Hantera samlingar i [!DNL Content Hub] {#manage-collections}
 
-<!-- ![Manage collections](assets/manage-collections.jpg) -->
 ![Hantera samlingar](assets/manage-collection.png)
 
 En samling refererar till en uppsättning resurser som kan delas mellan användare. En samling kan innehålla resurser från olika platser och samtidigt bevara sin referensintegritet.
@@ -124,7 +124,7 @@ Om du dessutom vill filtrera samlingsvyn baserat på åtkomstbehörigheter går 
 ## Hämta resurser som är tillgängliga i en samling{#download-assets-within-collection}
 
 Om du vill hämta resurser som är tillgängliga i en samling går du till fliken **[!UICONTROL Collections]**.\
-Klicka på ikonen ![Hämta &#x200B;](assets/download-icon.svg) på samlingskortet.
+Klicka på ikonen ![Hämta ](assets/download-icon.svg) på samlingskortet.
 
 ![Fliken Samling](assets/download-collection.png)
 
@@ -136,7 +136,7 @@ Lär dig hur du [hämtar en resurs från  [!DNL Content Hub]](download-assets-co
 
 ## Dela resurser som är tillgängliga i en samling {#share-assets-available-within-collection}
 
-Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela &#x200B;](assets/share.svg) på resurskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
+Du kan också dela de tillgängliga resurserna i en samling. Se till att [aktivera delning av offentlig länk i Content Hub](configure-content-hub-ui-options.md#configure-collections-content-hub). Gå till fliken **[!UICONTROL Collections]**. Välj ikonen ![Dela ](assets/share.svg) på resurskortet. Delningslänken kopieras. Du kan dela den kopierade länken med mottagaren. Läs mer om att [dela resurser i  [!DNL Content Hub]](share-assets-content-hub.md).
 
 Content Hub Collections innehåller omfattande styrningsverktyg för effektiv filhantering, inklusive anpassningsbara delningsbehörigheter och samarbetsfunktioner. De här inställningarna ger allt från skrivskyddad åtkomst till fullständig administrativ kontroll och har stöd för finstyrning framför resursdistribution. När du delar en resurs antingen individuellt eller som en del av en samling bestäms omfattningen av åtkomsten av samlingens aktuella åtkomstnivå som tilldelats användaren. Du kan också inte dela en privat samling.
 
@@ -196,8 +196,3 @@ Du kan markera samlingar som favoriter i Content Hub, vilket gör det enklare at
    Samlingar som är markerade som favoriter visas nu på fliken **[!UICONTROL My Favorites]**. Du kan också ta bort samlingar från **[!UICONTROL My Favorites]**. Om du vill göra det klickar du på ikonen **[!UICONTROL More actions]** ![Fler åtgärder](assets/do-not-localize/more-actions.png) och väljer **[!UICONTROL Remove from Favorites]**.
 
    ![Ta bort samling som favorit](assets/remove-favorite-collection.png)
-
->[!NOTE]
->
->[Fäst- eller Ta bort nålsamling](#pin-unpin-collection) och [Markera samlingar som favoriter](#favorite-collection) är begränsade tillgänglighetsfunktioner. Du kan [skapa och skicka in](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html) ett kundsupportärende från Adobe för att aktivera dem för din distribution.
-
