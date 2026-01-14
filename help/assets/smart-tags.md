@@ -88,7 +88,7 @@ The applied smart tags are sorted in descending order of [confidence score](#con
 
 ## Otaggad Assets i DAM {#smart-tag-existing-assets}
 
-Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=en#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
+Befintliga eller äldre resurser i DAM är inte automatiskt smarta taggar. Du måste [bearbeta om &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/about-image-video-profiles.html?lang=sv-SE#adjusting-load) Assets manuellt för att skapa smarta taggar för dem. När processen har slutförts går du till sidan [!UICONTROL Properties] för en resurs i mappen. De automatiskt tillagda taggarna visas i avsnittet [!UICONTROL Smart Tags] på fliken [!UICONTROL Basic]. De använda smarta taggarna sorteras i fallande ordning efter [konfidensgrad](#confidence-score).
 
 <!--
 To smart tag assets, or folders (including subfolders) of assets that exist in assets repository, follow these steps:

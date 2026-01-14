@@ -284,8 +284,8 @@ _Dynamic Media Help topics_
 
 _Självstudiekurser för dynamiska media_
 
-* [Använd dynamiska media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
-* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamiska media_)
+* [Använd dynamiska media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html?lang=sv-SE)
+* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/sv?lang=en#recommended/solutions/experience-manager) (sök på _Dynamiska media_)
 
 _Dynamiska medievisningsprogram_
 

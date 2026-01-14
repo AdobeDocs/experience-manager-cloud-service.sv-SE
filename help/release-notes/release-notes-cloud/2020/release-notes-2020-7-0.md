@@ -27,7 +27,7 @@ Lanseringsdatumet för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är
 
 * En ny implementering av användargränssnittet ersätter implementeringen som baseras på det klassiska användargränssnittet.
 
-* Förenklade dialogrutor för användargränssnitt, vilket gör att ramverket skapas för variabelmappning och andra konfigurationer till [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html) och [Integrera Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html).
+* Förenklade dialogrutor för användargränssnitt, vilket gör att ramverket skapas för variabelmappning och andra konfigurationer till [!DNL Adobe Launch]. Se [Integrera Adobe Analytics](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-analytics.html?lang=sv-SE) och [Integrera Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/integrations/integrating-adobe-target.html?lang=sv-SE).
 
 * Konfigurationer lagras nu i `/conf` i stället för `/etc/cloudsettings` i Experience Manager-databasen.
 
@@ -57,20 +57,20 @@ Lanseringsdatumet för [!DNL Experience Manager] as a Cloud Service 2020.7.0 är
 
 AEM Commerce finns nu på Cloud Service.
 
-Mer information finns i [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/getting-started.html).
+Mer information finns i [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/commerce/getting-started.html?lang=sv-SE).
 
 ## Kärnkomponenter {#core-components}
 
 ### Nyheter {#what-is-new-core-components}
 
-Version 2.11.0 av [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites, inklusive:
+Version 2.11.0 av [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är nu tillgänglig som en del av AEM Sites, inklusive:
 
 * Introduktion av en ny [PDF Viewer-komponent](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/pdf-viewer.html).
 
 * Stöd för AMP (Accelerated Mobile Pages) för kärnkomponenter finns nu. Det hjälper till att skapa snabbare kundupplevelser genom att göra sidövergången direkt när du kommer in på webbplatsen från ett mobilsökresultat från Google, vilket förbättrar användarengagemanget och SEO.
-Mer information finns i [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html).
+Mer information finns i [AMP-stöd för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/amp.html?lang=sv-SE).
 
-* Kompatibilitet med version 1.0.2 av [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html).
+* Kompatibilitet med version 1.0.2 av [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE).
 
 * Felkorrigeringar och förbättringar av kodkvaliteten.
 
@@ -139,7 +139,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * Tidigare version av CRA kunde inte köras på Adobe Experience Manager (AEM) 6.1. Explicit stöd för att tillåta användare i administratörsgruppen har lagts till.
 
-  Mer information finns i [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html#installing-on-aem61).
+  Mer information finns i [Installera CRA på AEM 6.1](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/cloud-readiness-analyzer/using-cloud-readiness-analyzer.html?lang=sv-SE#installing-on-aem61).
 
 * Den förfallotidsstämpel som visades i sammanfattningsrapporten var felaktig.
 

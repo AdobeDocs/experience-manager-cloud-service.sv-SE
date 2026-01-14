@@ -21,7 +21,7 @@ I följande avsnitt beskrivs versionsinformationen för funktioner i 2022.5.0-ve
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
 
 ## Releasedatum {#release-date}
 
@@ -47,7 +47,7 @@ Titta på videon om versionsöversikten från maj 2022 om du vill se en sammanfa
 
 * [Dynamic Media Smart Imaging](https://medium.com/adobetech/one-solution-fits-all-smart-imaging-with-aem-dynamic-media-be690b62df9f) har nu stöd för AVIF-filformat - ytterligare förbättring av Google Core Web Vital (Störst Contentful Paint), med AVIF som ger en extra storleksminskning på 20 % jämfört med WebP. Totalt ger AVIF upp till 41 % genomsnittlig storleksminskning jämfört med JPEG (i vissa bilder till och med upp till 76 %).
 
-* [!UICONTROL Experience Manager Assets Brand Portal] kör nu automatiska jobb var tolfte timme för att ta bort alla Brand Portal-resurser som publicerats till AEM. Därför behöver du inte ta bort resurserna i Contribute-mappen manuellt för att mappstorleken ska hållas under tröskelvärdet. Se [Nyheter i Experience Manager Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
+* [!UICONTROL Experience Manager Assets Brand Portal] kör nu automatiska jobb var tolfte timme för att ta bort alla Brand Portal-resurser som publicerats till AEM. Därför behöver du inte ta bort resurserna i Contribute-mappen manuellt för att mappstorleken ska hållas under tröskelvärdet. Se [Nyheter i Experience Manager Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE).
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Assets] {#prerelease-features-assets}
 
