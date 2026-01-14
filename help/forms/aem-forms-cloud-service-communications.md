@@ -47,11 +47,11 @@ API-åtgärder för en innehavare har stöd för två typer av autentisering:
 
 * **Tokenbaserad autentisering:** Tokenbaserad autentisering använder en åtkomsttoken (Bearer-autentiseringstoken) för att göra begäranden till Experience Manager as a Cloud Service. AEM Forms as a Cloud Service tillhandahåller API:er för säker hämtning av åtkomsttoken. Så här hämtar och använder du token för att autentisera en begäran:
 
-   1. [Hämta Experience Manager as a Cloud Service-autentiseringsuppgifter från Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
-   1. [Installera Experience Manager as a Cloud Service-autentiseringsuppgifter i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html). (Programserver, webbserver eller andra icke-AEM-servrar) som är konfigurerade att skicka begäranden till (ringa anrop) molntjänsten.
-   1. [Generera en JWT-token och ersatte den med Adobe IMS-API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
+   1. [Hämta Experience Manager as a Cloud Service-autentiseringsuppgifter från Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
+   1. [Installera Experience Manager as a Cloud Service-autentiseringsuppgifter i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE). (Programserver, webbserver eller andra icke-AEM-servrar) som är konfigurerade att skicka begäranden till (ringa anrop) molntjänsten.
+   1. [Generera en JWT-token och ersatte den med Adobe IMS-API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
    1. Kör Experience Manager API med åtkomsttoken som token för Bearer-autentisering.
-   1. [Ange lämpliga behörigheter för den tekniska kontoanvändaren i Experience Manager-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+   1. [Ange lämpliga behörigheter för den tekniska kontoanvändaren i Experience Manager-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE#configure-access-in-aem).
 
   >[!NOTE]
   >

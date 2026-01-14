@@ -19,8 +19,8 @@ OAuth Server-till-Server-autentisering ger säker, tokenbaserad åtkomst till AE
 
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
-* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
-* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
+* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
+* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
 
 ## Hur skapar man en åtkomsttoken med hjälp av OAuth Server-till-Server-autentisering?
 
@@ -177,7 +177,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 
