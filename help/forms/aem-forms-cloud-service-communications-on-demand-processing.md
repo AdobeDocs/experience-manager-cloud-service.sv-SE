@@ -3,15 +3,15 @@ title: Hur konfigurerar jag Forms Communications Synchronous API:er?
 description: Konfigurera utvecklingsmiljö för Synkrona API:er för interaktiv kommunikation för Adobe Experience Manager Forms as a Cloud Service
 role: Admin, Developer, User
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: a0db7a0a2dc82c9857b34b79fe3b3b6f3e179372
+source-git-commit: 43b648eb3984867fda35ee04de10b78dd836b481
 workflow-type: tm+mt
-source-wordcount: '2417'
+source-wordcount: '2428'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera OAuth Server-till-Server-åtkomst för AEM Forms Communications API:er
+# Anropa AEM Forms Communications API:er med OAuth Server-till-Server-autentisering
 
 Den här guiden innehåller anvisningar för hur du konfigurerar och anropar AEM Forms Communications Synchronous API:er som nås via Adobe Developer Console med OAuth Server-to-Server-autentisering.
 
@@ -35,7 +35,7 @@ Kontrollera att du har de behörigheter och behörigheter som krävs innan du b�
 
 >[!NOTE]
 >
-> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
+> Mer information om hur du tilldelar roller och beviljar åtkomst till användare finns i artikeln [Lägg till användare och roller](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles).
 
 **Git-databasåtkomst**
 
@@ -122,7 +122,7 @@ Observera din AEM URL-instans på informationssidan **Miljö** .
 
 >[!NOTE]
 >
-> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
+> Information om hur du får åtkomst till AEM Cloud-tjänstmiljön och AEM Forms Endpoint finns i [Hantera miljödokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
 ### Steg 2: Klona Git-databas
 
@@ -261,7 +261,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 
@@ -480,7 +480,7 @@ Nu när miljön är konfigurerad kan du börja testa API:erna för AEM Forms Com
 
 >[!TAB A. Använda Swagger-gränssnittet för API-testning ]
 
-Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API:er utan att behöva skriva kod. Använd funktionen **Prova** för att anropa och testa [generera Forms Communication API &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) för PDF.
+Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API:er utan att behöva skriva kod. Använd funktionen **Prova** för att anropa och testa [generera Forms Communication API ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) för PDF.
 
 1. Navigera till [Forms Communication API Reference](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/) och öppna [Forms Communication API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
 2. Expandera avsnittet **Dokumentgenerering** och välj [Skapar ett ifyllbart PDF-formulär från en XDP- eller PDF-mall, eventuellt med datasammanfogning](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm).
@@ -789,6 +789,10 @@ Så här uppdaterar du AEM-instansen för att hitta miljöinformation:
 
    ![Uppdateringsmiljö](/help/forms/assets/update-env.png)
 
-## Relaterade artiklar
-
-* Mer information om hur du konfigurerar miljö för batchbearbetning (asynkrona API:er) finns i [AEM Forms as a Cloud Service Communications Batch Processing](/help/forms/aem-forms-cloud-service-communications-batch-processing.md).
+>[!MORELIKETHIS]
+>
+>* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+>* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
+>* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
+>* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Forms Communications API - självstudiekurs](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)

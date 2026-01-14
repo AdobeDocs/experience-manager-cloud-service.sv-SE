@@ -4,9 +4,9 @@ description: Sammanfoga data automatiskt med XDP- och PDF-mallar eller generera 
 exl-id: 9fa9959e-b4f2-43ac-9015-07f57485699f
 feature: Adaptive Forms,APIs & Integrations
 role: Admin, Developer, User
-source-git-commit: 2b76f1be2dda99c8638deb9633055e71312fbf1e
+source-git-commit: 43b648eb3984867fda35ee04de10b78dd836b481
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Forms as a Cloud Service - Med API:er för kommunikation kan ni skapa, sammanst�
 
 Tänk dig ett scenario där du har en eller flera mallar och flera poster med XML-data för varje mall. Du kan använda API:er för kommunikation för att generera ett utskriftsdokument för varje post. <!-- You can also combine the records into a single document. --> Resultatet är ett icke-interaktivt PDF-dokument. Ett icke-interaktivt PDF-dokument tillåter inte att användare anger data i sina fält.
 
-Forms as a Cloud Service - Communications innehåller on demand- och batch-API:er (asynkrona API:er) för schemalagd dokumentgenerering:
+Forms as a Cloud Service - Communications innehåller on-demand- och batch-API:er (asynkrona API:er) för schemalagd dokumentgenerering:
 
 * Synkrona API:er är lämpliga för dokumentgenerering on demand, med låg latens och en post. Dessa API:er lämpar sig bättre för användaråtgärdsbaserade användningsfall. Du kan till exempel skapa ett dokument när en användare har fyllt i ett formulär.
 
@@ -43,20 +43,23 @@ En synkron åtgärd är en process där dokument genereras linjärt. Dessa API:e
 
 API-åtgärder för en innehavare har stöd för två typer av autentisering:
 
-* **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och en base64-kodad sträng med användarnamn:password. Om klienten till exempel vill auktorisera som administratör/administratör skickar klienten det grundläggande [base64-kodade stränganvändarnamnet ]: [base64-kodade stränglösenordet].
+* **Grundläggande autentisering**: Grundläggande autentisering är ett enkelt autentiseringsschema som är inbyggt i HTTP-protokollet. Klienten skickar HTTP-begäranden med auktoriseringshuvudet som innehåller ordet Basic följt av ett blanksteg och ett base64-kodat stränganvändarnamn :password. Om klienten till exempel vill auktorisera som administratör/administratör skickar klienten det grundläggande [base64-kodade stränganvändarnamnet ]: [base64-kodade stränglösenordet].
 
-* **Tokenbaserad autentisering:** Tokenbaserad autentisering använder en åtkomsttoken (Bearer-autentiseringstoken) för att göra begäranden till Experience Manager as a Cloud Service. AEM Forms as a Cloud Service tillhandahåller API:er för att på ett säkert sätt hämta åtkomsttoken. Så här hämtar och använder du token för att autentisera en begäran:
+* **Tokenbaserad autentisering:** Tokenbaserad autentisering använder en åtkomsttoken (Bearer-autentiseringstoken) för att göra begäranden till Experience Manager as a Cloud Service. AEM Forms as a Cloud Service tillhandahåller API:er för säker hämtning av åtkomsttoken. Så här hämtar och använder du token för att autentisera en begäran:
 
-   1. [Hämta as a Cloud Service autentiseringsuppgifter för Experience Manager från Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
-   1. [Installera Experience Manager as a Cloud Service-autentiseringsuppgifter i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE). (Programserver, webbserver eller andra icke-AEM servrar) som är konfigurerade att skicka begäranden till (ringa anrop) molntjänsten.
-   1. [Generera en JWT-token och ersatte den med Adobe IMS-API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE).
-   1. Kör Experience Manager-API:t med åtkomsttoken som en Bearer-autentiseringstoken.
-   1. [Ange lämplig behörighet för den tekniska kontoanvändaren i Experience Manager-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE#configure-access-in-aem).
+   1. [Hämta Experience Manager as a Cloud Service-autentiseringsuppgifter från Developer Console](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
+   1. [Installera Experience Manager as a Cloud Service-autentiseringsuppgifter i din miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html). (Programserver, webbserver eller andra icke-AEM-servrar) som är konfigurerade att skicka begäranden till (ringa anrop) molntjänsten.
+   1. [Generera en JWT-token och ersatte den med Adobe IMS-API:er för en åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html).
+   1. Kör Experience Manager API med åtkomsttoken som token för Bearer-autentisering.
+   1. [Ange lämpliga behörigheter för den tekniska kontoanvändaren i Experience Manager-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
   >[!NOTE]
   >
   >Adobe rekommenderar att du använder tokenbaserad autentisering i en produktionsmiljö.
 
+  >[!IMPORTANT]
+  >
+  > Mer information finns i [OAuth server-till-server-autentisering](/help/forms/oauth-api-authetication.md) och [JWT server-till-server-autentisering](/help/forms/jwt-api-authentication.md).
 <!-- 
 
 ### Authenticate a multi-tenant API
@@ -124,13 +127,13 @@ While it is possible to do the entire JWT generation and exchange process in cus
 Följande krävs för att använda synkrona API:er:
 
 * Användare med administratörsbehörighet för Experience Manager
-* Överför mallar och annat material till Experience Manager Forms Cloud Service
+* Överför mallar och annat material till din Experience Manager Forms Cloud Service-instans
 
 ### (Endast för API:er för dokumentgenerering) Överför mallar och andra resurser till din Experience Manager-instans
 
 En organisation har vanligtvis flera mallar. Till exempel en mall var för kreditkortskontoutdrag, förmånskontoutdrag och ansökningar. Överför alla sådana XDP- och PDF-mallar till din Experience Manager-instans. Så här överför du en mall:
 
-1. Öppna instansen Experience Manager.
+1. Öppna Experience Manager.
 1. Gå till Forms > Forms och dokument
 1. Klicka på Skapa > Mapp och skapa en mapp. Öppna mappen.
 1. Klicka på Skapa > Filöverföring och överför mallarna.
@@ -143,7 +146,7 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 
 >[!NOTE]
 >
->Endast medlemmar i gruppen med formuläranvändare har åtkomst till kommunikationsAPI:er.
+> Lär dig de detaljerade stegen för hur du anropar AEM Forms Communication API:er, se artikeln [Anropa AEM Forms Communications API:er med OAuth Server-to-Server Authentication](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md).
 
 >[!MORELIKETHIS]
 >
@@ -151,3 +154,4 @@ En organisation har vanligtvis flera mallar. Till exempel en mall var för kredi
 >* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
 >* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
 >* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Forms Communications API - självstudiekurs](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)

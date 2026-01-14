@@ -3,7 +3,7 @@ title: AEM Forms Communications APIs - Översikt
 description: Översikt över AEM Forms Communications API:er, inklusive autentiseringsmetoder och fullständig API-referens
 role: Developer, User
 feature: Adaptive Forms, APIs & Integrations
-source-git-commit: d9eb9a93aba71a5ef5940c9d1d75cfd4e738c26b
+source-git-commit: 43b648eb3984867fda35ee04de10b78dd836b481
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -19,7 +19,7 @@ AEM Forms API:er är strukturerade och åtkomliga via två primära konsoler:
 
 * [Adobe Developer Console (ADC)](https://developer.adobe.com/developer-console/) - Adobe Developer Console är gateway till Adobe API:er, händelser, körningsmiljö och App Builder.
 
-* [AEM Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console) - AEM Developer Console ger åtkomst till information, konfigurationer, tekniska konton och inloggningsuppgifter på miljönivå som stöd för drifts- och integreringsuppgifter.
+* [AEM Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console) - AEM Developer Console ger åtkomst till information, konfigurationer, tekniska konton och inloggningsuppgifter på miljönivå som stöd för drifts- och integreringsuppgifter.
 
 Olika API:er stöder olika [autentiseringsmetoder](#authentication-methods).
 
@@ -64,15 +64,15 @@ I tabellen nedan visas alla [AEM Forms Communications API:er](https://developer.
 | ----- | ------ |------- | ------ |
 | [/adobe/forms/batch/output/config](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Configuration/operation/CreateBatchConfig) | Skapar en ny batchkonfiguration för dokumentgenereringsjobb. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/batch/output/config/{configName}](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Configuration/operation/GetBatchConfigbyName) | Hämtar information om en specifik batchkonfiguration. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
-| [/adobe/forms/batch/output/config/configs &#x200B;](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Configuration/operation/GetAllBatchConfigs) | Returnerar en lista med alla tillgängliga batchkonfigurationer. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
+| [/adobe/forms/batch/output/config/configs ](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Configuration/operation/GetAllBatchConfigs) | Returnerar en lista med alla tillgängliga batchkonfigurationer. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/batch/output/config/{configName}/execution](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Execution/operation/StartBatchRun) | Startar en batchutdatagenerering som körs med en konfiguration. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/batch/output/config/{configName}/execution/{executionId}](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Execution/operation/GetBatchRunInstanceState) | Hämtar körningsstatus för ett batchjobb. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/batch/output/config/{configName}/Executions](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-batch/#tag/Batch-Execution/operation/GetAllRunningInstancesForBatch) | Visar alla instanser som körs för en specifik batchkonfiguration. | Asynkron/batch | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/doc/v1/generatePDFOutput](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-sync/#tag/Communications-Services/paths/~1adobe~1forms~1doc~1v1~1generatePDFOutput/post) | Genererar PDF-utdata synkront baserat på mallar och data. | Synkron | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/doc/v1/generatePrintedOutput](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-sync/#tag/Batch-Execution/operation/GetAllRunningInstancesForBatch) | Genererar utskriftsklara utdataformat (t.ex. PCL, PostScript). | Synkron | [JWT](/help/forms/jwt-api-authentication.md) |
 | [/adobe/forms/doc/v1/generate/afp](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/output-sync/#tag/Communications-Services/paths/~1adobe~1forms~1doc~1v1~1generate~1afp/post) | Genererar AFP-utdata för stora utskriftsvolymer. | Synkron | [JWT](/help/forms/jwt-api-authentication.md) |
-| [/adobe/document/generate/pdfform &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) | Återger ett PDF-formulär (XFA/XDP) med sammanfogade data. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
-| [/adobe/document/generate/pdfform/job/{id}/status &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFFormJobStatus) | Hämtar status för ett PDF-formulärgenereringsjobb. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
+| [/adobe/document/generate/pdfform ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) | Återger ett PDF-formulär (XFA/XDP) med sammanfogade data. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
+| [/adobe/document/generate/pdfform/job/{id}/status ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFFormJobStatus) | Hämtar status för ett PDF-formulärgenereringsjobb. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
 | [/adobe/document/generate/pdfform/job/{id}/result](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFFormJobResult) | Hämtar utdata/resultat för ett slutfört PDF-formulärjobb. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
 
 
@@ -96,8 +96,8 @@ I tabellen nedan visas alla [AEM Forms Communications API:er](https://developer.
 |---------| -------|---------|----------------------|
 | [/adobe/forms/doc/v1/extract/pdfproperties](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#tag/Document-Extraction/paths/~1extract~1pdfproperties/post) | Extraherar egenskaper och strukturinformation från en PDF. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
 | [/adobe/forms/doc/v1/extract/usagerights](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/extractUsageRights) | Extraherar användarrättigheter som är inbäddade i en PDF. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
-| [/adobe/forms/doc/v1/extract/metadata &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#tag/Document-Extraction/paths/~1extract~1metadata/post) | Extraherar metadata som titel, författare och nyckelord. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
-| [/adobe/forms/doc/v1/extract/data &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/exportData) | Hämtar formulärdata (XML/JSON) från PDF forms. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
+| [/adobe/forms/doc/v1/extract/metadata ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#tag/Document-Extraction/paths/~1extract~1metadata/post) | Extraherar metadata som titel, författare och nyckelord. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
+| [/adobe/forms/doc/v1/extract/data ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/exportData) | Hämtar formulärdata (XML/JSON) från PDF forms. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
 | [/adobe/document/extract/security](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#tag/Document-Extraction/paths/~1extract~1security/post) | Extraherar skyddsinställningar som behörigheter och kryptering. | Synkron | [OAuth](/help/forms/oauth-api-authetication.md) |
 
 #### API:er för dokumentomvandling
@@ -185,4 +185,4 @@ Lär dig hur du ställer in miljön för API:er för synkron (On-Demand) och asy
 >* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
 >* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
 >* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
->* [Kommunikationsbearbetning - API:er på begäran](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)
+>* [Forms Communications API - självstudiekurs](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)

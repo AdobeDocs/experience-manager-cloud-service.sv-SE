@@ -3,9 +3,9 @@ title: Hur konfigurerar jag OAuth Server-to-Server-autentisering?
 description: Lär dig konfigurera OAuth Server-till-Server-autentisering för Adobe Experience Manager Forms as a Cloud Service
 role: Admin, Developer, User
 feature: Adaptive Forms, APIs & Integrations
-source-git-commit: d9eb9a93aba71a5ef5940c9d1d75cfd4e738c26b
+source-git-commit: 43b648eb3984867fda35ee04de10b78dd836b481
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ OAuth Server-till-Server-autentisering ger säker, tokenbaserad åtkomst till AE
 
 Kontrollera att följande krav är uppfyllda innan du börjar:
 
-* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
-* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
+* Kontrollera att du har [åtkomst till Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/access-rights) för just den miljö du använder.
+* [Tilldela systemadministratörs- eller utvecklarrollen i Adobe Admin Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/role-based-permissions) för att aktivera åtkomst till Adobe Developer Console.
 
 ## Hur skapar man en åtkomsttoken med hjälp av OAuth Server-till-Server-autentisering?
 
@@ -177,7 +177,7 @@ Generera åtkomsttoken manuellt i Adobe Developer Console:
 
 >[!TAB För produktion]
 
-Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
+Generera tokens programmatiskt med [Adobe IMS](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) API:
 
 **Nödvändiga autentiseringsuppgifter:**
 
@@ -288,4 +288,10 @@ Lär dig hur du ställer in miljön för API:er för synkron (On-Demand) och asy
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-
+>[!MORELIKETHIS]
+>
+>* [Introduktion till AEM Forms as a Cloud Service Communications](/help/forms/aem-forms-cloud-service-communications-introduction.md)
+>* [AEM Forms as a Cloud Service Architecture for Adaptive Forms and Communication APIs](/help/forms/aem-forms-cloud-service-architecture.md)
+>* [Kommunikationsbearbetning - Synkrona API:er](/help/forms/aem-forms-cloud-service-communications.md)
+>* [Kommunikationsbearbetning - Grupp-API:er](/help/forms/aem-forms-cloud-service-communications-batch-processing.md)
+>* [Forms Communications API - självstudiekurs](/help/forms/aem-forms-cloud-service-communications-on-demand-processing.md)
