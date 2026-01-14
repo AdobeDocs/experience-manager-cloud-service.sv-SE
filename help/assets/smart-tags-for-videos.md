@@ -1,10 +1,10 @@
 ---
 title: Smarta taggar för videomaterial
-description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe Sensei].
+description: Experience Manager lägger automatiskt till kontextuella och beskrivande smarta taggar i videoklipp med  [!DNL Adobe AI].
 feature: Smart Tags,Tagging
 role: Admin,User
 exl-id: 87d0eea2-83a1-4cfa-a4a5-425d0e8abba6
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 # Smarta taggar för videomaterial {#video-smart-tags}
 
-Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för automatisk taggning av videomaterial med artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Den [!DNL Adobe Sensei] strömlinjeformade videomatchningsfunktionen använder artificiell intelligensmodell för att analysera videoinnehåll och lägga till taggar i videoresurserna. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i den videon, medan den andra handlar om åtgärder som att dricka, köra och jogga.
+Det växande behovet av nytt innehåll kräver mindre manuella insatser för att leverera övertygande digitala upplevelser på nolltid. [!DNL Adobe Experience Manager] som [!DNL Cloud Service] har stöd för automatisk taggning av videomaterial med artificiell intelligens. Det kan vara tidskrävande att tagga videoklipp manuellt. Den [!DNL Adobe AI] strömlinjeformade videomatchningsfunktionen använder artificiell intelligensmodell för att analysera videoinnehåll och lägga till taggar i videoresurserna. På så sätt minskar tiden för DAM-användare att leverera avancerade upplevelser till sina kunder. Adobe maskininlärningstjänst genererar två uppsättningar taggar för en video. En uppsättning motsvarar objekt, scener och attribut i den videon, medan den andra handlar om åtgärder som att dricka, köra och jogga.
 
 Videotaggning är aktiverat som standard i [!DNL Adobe Experience Manager] som [!DNL Cloud Service]. Du kan dock [välja bort smart taggning för video](#opt-out-video-smart-tagging) i en mapp. Videor taggas automatiskt när du överför nya videoklipp eller bearbetar om befintliga. [!DNL Experience Manager] skapar också miniatyrbilder och extraherar metadata för videofilerna. De smarta taggarna visas i fallande ordning efter deras [konfidensgrad](#confidence-score-video-tag) i resursen [!UICONTROL Properties].
 
 ## Smart taggning av videoklipp vid överföring {#smart-tag-assets-on-ingestion}
 
-När du [överför videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som [!DNL Cloud Service] bearbetas videoklippen. När bearbetningen är klar går du till fliken [!UICONTROL Basic] på sidan för resursen [!UICONTROL Properties]. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. Resursmikrotjänsterna använder [!DNL Adobe Sensei] för att skapa de här smarta taggarna.
+När du [överför videomaterial](add-assets.md#upload-assets) till [!DNL Adobe Experience Manager] som [!DNL Cloud Service] bearbetas videoklippen. När bearbetningen är klar går du till fliken [!UICONTROL Basic] på sidan för resursen [!UICONTROL Properties]. Smarta taggar läggs automatiskt till i videon under [!UICONTROL Smart Tags]. Resursmikrotjänsterna använder [!DNL Adobe AI] för att skapa de här smarta taggarna.
 
 ![Smarta taggar läggs till i videoklipp och visas på fliken Grundläggande i resursegenskaper](assets/smart-tags-added-to-videos.png)
 
@@ -91,7 +91,7 @@ Så här avanmäler du dig från automatisk generering av smarta videotaggar fö
 
 1. Öppna fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties].
 
-1. Alternativet [!UICONTROL Inherited] är valt som standard på menyn [!UICONTROL Smart Tags for Videos] och den smarta videotaggen är aktiverad.
+1. Alternativet [!UICONTROL Smart Tags for Videos] är valt som standard på menyn [!UICONTROL Inherited] och den smarta videotaggen är aktiverad.
 
    När alternativet [!UICONTROL Inherited] är markerat visas även den ärvda mappsökvägen tillsammans med informationen om den är inställd på [!UICONTROL Enable] eller [!UICONTROL Disable].
 
@@ -101,7 +101,7 @@ Så här avanmäler du dig från automatisk generering av smarta videotaggar fö
 
 >[!IMPORTANT]
 >
->Om du har valt att inte tagga videofilmer i en mapp vid överföringen och vill tagga videofilmerna smart efter överföringen, **[!UICONTROL Enable Smart Tags for Videos]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option &#x200B;](#smart-tag-existing-videos) för att lägga till smarta taggar i videon.
+>Om du har valt att inte tagga videofilmer i en mapp vid överföringen och vill tagga videofilmerna smart efter överföringen, **[!UICONTROL Enable Smart Tags for Videos]** från fliken [!UICONTROL Asset Processing] i mappen [!UICONTROL Properties] och använder [[!UICONTROL Reprocess Asset] option ](#smart-tag-existing-videos) för att lägga till smarta taggar i videon.
 
 ## Konfidenspoäng {#confidence-score-video-tag}
 
@@ -111,7 +111,7 @@ Standardtröskelvärdet för åtgärd- och objekttaggar i [!DNL Adobe Experience
 
 Så här lägger du till OSGI-konfigurationen med konfidensgrad i projektet som distribuerats till [!DNL Adobe Experience Manager] som [!DNL Cloud Service] till [!DNL Cloud Manager]:
 
-* I [!DNL Adobe Experience Manager]-projektet (`ui.config` sedan Archetype 24, eller tidigare `ui.apps`) `config.author` OSGi-konfigurationen, inkluderar du en konfigurationsfil med namnet `com.adobe.cq.assetcompute.impl.senseisdk.SenseiSdkImpl.cfg.json` med följande innehåll:
+* I [!DNL Adobe Experience Manager]-projektet (`ui.config` sedan Archetype 24, eller tidigare `ui.apps`) `config.author` OSGi-konfigurationen, inkluderar du en konfigurationsfil med namnet `com.adobe.cq.assetcompute.impl.aisdk.AISdkImpl.cfg.json` med följande innehåll:
 
 ```json
 {
@@ -126,11 +126,11 @@ Så här lägger du till OSGI-konfigurationen med konfidensgrad i projektet som 
 
 ## Begränsningar {#video-smart-tagging-limitations}
 
-* Du kan inte utbilda tjänsten som tillämpar smarta taggar på videoklipp med hjälp av specifika videoklipp. Det fungerar med standardinställningarna för [!DNL Adobe Sensei].
+* Du kan inte utbilda tjänsten som tillämpar smarta taggar på videoklipp med hjälp av specifika videoklipp. Det fungerar med standardinställningarna för [!DNL Adobe AI].
 
 * Taggningsförloppet visas inte.
 
-* Endast videoklipp som är mindre än 300 MB i filstorlek taggas automatiskt. Tjänsten [!DNL Adobe Sensei] hoppar över videofiler som är större.
+* Endast videoklipp som är mindre än 300 MB i filstorlek taggas automatiskt. Tjänsten [!DNL Adobe AI] hoppar över videofiler som är större.
 
 * Endast videoklipp i de filformat och kodekar som stöds och som nämns i [Smarta taggar](/help/assets/smart-tags.md#smart-tags-supported-file-formats) är taggade.
 

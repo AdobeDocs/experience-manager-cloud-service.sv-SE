@@ -5,7 +5,7 @@ exl-id: 7f2d9a43-a7cb-4d9d-a108-b016cd1ff81e
 feature: Commerce Integration Framework
 role: Admin
 index: false
-source-git-commit: 80bd8da1531e009509e29e2433a7cbc8dfe58e60
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 # [!DNL Live Search] CIF-komponent {#live-search-cif-component}
 
-Live Search för Adobe Commerce ger en snabb, relevant och intuitiv sökupplevelse utan extra kostnad. Live Search som drivs av Adobe Sensei använder artificiell intelligens och maskininlärningsalgoritmer för att göra en djupgående analys av samlade besöksdata. När dessa data kombineras med din Adobe Commerce-katalog skapas en relevant och personaliserad shoppingupplevelse.
+Live Search för Adobe Commerce ger en snabb, relevant och intuitiv sökupplevelse utan extra kostnad. Live Search som drivs av Adobe AI använder artificiell intelligens och algoritmer för maskininlärning för att göra en djupgående analys av samlade besökardata. När dessa data kombineras med din Adobe Commerce-katalog skapas en relevant och personaliserad shoppingupplevelse.
 
 I det här avsnittet beskrivs hur du använder en AEM CIF-komponent för att implementera PLP-widgeten (Product Listing Page) för [!DNL Live Search] på din AEM-webbplats.
 
 ## Förutsättningar {#prerequisites}
 
-Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=sv-SE).
+Det här avsnittet förutsätter att du har konfigurerat en lokal [AEM-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
 
 PLP-komponenten kräver att [[!DNL Live Search] PowerCIF-komponenten](/help/commerce-cloud/cif-storefront/integrating/live-search-popover.md) är installerad. PLP-widgeten kräver en webbläsarsessionsvariabel som genereras av povern.
 

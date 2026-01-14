@@ -4,9 +4,9 @@ description: Med Adobe Experience Manager Assets kan du skilja mellan färger i 
 exl-id: 3afa949b-ea1b-4b8e-ac94-06566e2c7147
 feature: Smart Imaging, Interactive Images, Asset Management
 role: User, Admin
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '1143'
+source-wordcount: '1142'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ![Banderoll för färgtaggning](assets/banner-image.png)
 
-Adobe Experience Manager (AEM) Assets använder Adobe Sensei AI-funktioner för att skilja mellan färgerna i en bild och använda dem som taggar automatiskt vid intag. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
+Adobe Experience Manager (AEM) Assets använder Adobe AI-funktioner för att skilja mellan färgerna i en bild och använda dem som taggar automatiskt vid intag. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
 
 Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare. Experience Manager Assets använder märkorden baserat på färgmängden i en bild. Du kan också konfigurera visningsformatet för en färgtagg.
 

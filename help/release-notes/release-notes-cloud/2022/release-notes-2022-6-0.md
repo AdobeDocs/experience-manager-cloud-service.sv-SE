@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation för version 2022.6.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2022.6.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2022.6.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2022.6.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: cf2133dc-56cd-4a07-ab11-72e16f015ff5
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
 
 # Versionsinformation 2022.6.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.6.0-versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktioner i 2022.6.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.6.0
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -43,13 +43,13 @@ Titta på videon med versionsöversikten för juni 2022 om du vill se en sammanf
 
   ![Konsol för innehållsfragment](/help/release-notes/assets/cf-ui.png)
 
-* Den nya [innehållsförteckningskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/tableofcontents.html?lang=sv-SE) fungerar inte bara med kärnkomponenterna utan med alla komponenter, så att ToCS återges automatiskt på innehållssidor. Och eftersom den renderas på serversidan och cachas fullständigt av dispatchern är det också effektivt att läsa in den.
+* Den nya [innehållsförteckningskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/tableofcontents.html) fungerar inte bara med kärnkomponenterna utan med alla komponenter, så att ToCS återges automatiskt på innehållssidor. Och eftersom den renderas på serversidan och cachas fullständigt av dispatchern är det också effektivt att läsa in den.
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skilja mellan färger i en bild och använda dem som taggar automatiskt vid förtäring](/help/assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare.
+Experience Manager Assets använder Adobe AI-funktioner för att nu [skilja mellan färger i en bild och använda dem som taggar automatiskt vid förtäring](/help/assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare.
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -61,7 +61,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
   ![Guiden för att skapa ett anpassat formulär](/help/release-notes/assets/wizard.png)
 
-## CIF {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
@@ -73,7 +73,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
 * Förbättrat stöd för överskrivningar av GQL-klientkonfigurationen (ange t.ex. anpassad cachelagring)
 
-* Flera slutpunkter för e-handel stöds nu direkt och kan konfigureras via Cloud Manager. Mer information finns i den CIF bloggen [här](https://medium.com/adobetech/use-aem-as-a-cloud-service-with-multiple-adobe-commerce-systems-9295612a9554).
+* Flera slutpunkter för e-handel stöds nu direkt och kan konfigureras via Cloud Manager. Mer information finns i CIF-bloggen [här](https://medium.com/adobetech/use-aem-as-a-cloud-service-with-multiple-adobe-commerce-systems-9295612a9554).
 
 
 ### Felkorrigeringar {#bug-fixes-cif}
@@ -86,7 +86,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
 ### Nyheter {#what-is-new-demos}
 
-* Ny WKND Content &amp; Commerce-mall som omfattar WKND och en E2E-shoppingupplevelse med produktkatalog, kundvagn, utcheckning och mitt konto. I den här mallen används CIF och dess CIF kärnkomponenter, och du måste därför även installera det CIF tillägget. Mer information finns i den CIF bloggen [här](https://medium.com/adobetech/learn-how-to-create-a-shoppable-experience-with-the-new-wknd-reference-site-and-cif-b3b2c161f67e).
+* Ny WKND Content &amp; Commerce-mall som omfattar WKND och en E2E-shoppingupplevelse med produktkatalog, kundvagn, utcheckning och mitt konto. I den här mallen används CIF och dess CIF Core Components, och du måste därför även installera CIF-tillägget. Mer information finns i CIF-bloggen [här](https://medium.com/adobetech/learn-how-to-create-a-shoppable-experience-with-the-new-wknd-reference-site-and-cif-b3b2c161f67e).
 
 ![WKND shop](/help/assets/CIF/wknd_shop.png)
 
@@ -96,7 +96,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
 ### Nyheter {#what-is-new-foundation}
 
-* Som nämndes i versionsinformationen från maj (2022.5.0) togs alternativet &quot;Lägg till träd&quot; bort under administratörsfliken **Distribuera** på replikeringsagentens administratörsskärm. Paket med en trädhierarki av innehåll ska i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller arbetsflödet [Publish Content Tree](/help/operations/replication.md#manage-publication#publish-content-tree-workflow).
+* Som nämndes i versionsinformationen från maj (2022.5.0) togs alternativet &quot;Lägg till träd&quot; bort under administratörsfliken **Distribuera** på replikeringsagentens administratörsskärm. Paket med en trädhierarki av innehåll ska i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller arbetsflödet [Publicera innehållsträd](/help/operations/replication.md#manage-publication#publish-content-tree-workflow).
 
 ## Cloud Manager {#cloud-manager}
 

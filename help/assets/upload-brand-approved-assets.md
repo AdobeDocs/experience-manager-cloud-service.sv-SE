@@ -3,7 +3,7 @@ title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: dc0f6b5faf75fb7303611e3f25febe89b43a834d
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Om du vill förbättra resurssökningen ytterligare kan du göra följande med C
 
 * Generera automatiskt fler egenskaper för varje resurs när den har överförts, till exempel filstorlek, format, upplösning och andra egenskaper.
 
-* Använd artificiell intelligens från [Adobe Sensei](https://www.adobe.com/sensei.html) för att automatiskt tillämpa relevanta taggar på alla dina överförda resurser. Dessa taggar, som kallas smarta taggar, ökar innehållshastigheten i dina projekt genom att hjälpa dig att snabbt hitta relevanta resurser.
+* Använd artificiell intelligens från [Adobe AI](https://business.adobe.com/ai/adobe-genai.html) för att automatiskt tillämpa relevanta taggar på alla dina överförda resurser. Dessa taggar, som kallas smarta taggar, ökar innehållshastigheten i dina projekt genom att hjälpa dig att snabbt hitta relevanta resurser.
 
 Se till att du bara överför dina [varumärkesgodkända resurser till Content Hub](/help/assets/approve-assets.md).
 

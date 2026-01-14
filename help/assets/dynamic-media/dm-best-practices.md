@@ -9,9 +9,9 @@ feature: Adaptive Streaming, Best Practices, Smart Imaging, Image Profiles, Rule
 role: User, Admin
 mini-toc-levels: 4
 exl-id: 39e491bb-367d-4c72-b4ca-aab38d513ac5
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '4049'
+source-wordcount: '4048'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Några av de viktigaste scenerna i Dynamic Media är följande:
 * **Visningsbibliotek för upplevelser:** Anpassa visningsprogram och visningsprogram för varumärkesupplevelser för bilder och videor. De här tittarna kan smidigt integreras i era digitala upplevelser.
 * **Stöd för nya format:** Dynamiska medier gör det möjligt att leverera 3D-upplevelser och panoramaupplevelser.
 
-När du utforskar [Dynamic Media Journey](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1) kan du få ut så mycket som möjligt av funktionerna genom att granska den konsoliderade listan med bästa praxis nedan. Anpassa de här bästa metoderna för Dynamic Media till just era sammanhang och projektkrav så att ni kan optimera upplevelserna över olika kanaler och enheter.
+När du utforskar [Dynamic Media Journey](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1) kan du få ut så mycket som möjligt av funktionerna genom att granska den konsoliderade listan med bästa praxis nedan. Anpassa de här bästa metoderna för Dynamic Media till just era sammanhang och projektkrav så att ni kan optimera upplevelserna över olika kanaler och enheter.
 
 <!-- In Dynamic Media on AEM, there are sets of methods, techniques, and guidelines that can help you maximize the potential of your rich media content. These best practices can lead to optimal results and increase efficiency in your use of Dynamic Media. They represent the most efficient and effective courses of action in a particular situation. They also unlock high value for your audience and deliver high-quality, engaging content. -->
 
@@ -94,9 +94,9 @@ Använd komponenten Image v3 för smart beskärning för att förbättra bildres
 Ta endast med den primära JavaScript-filen för visningsprogrammet på sidan. Undvik att referera till andra JavaScript-filer som kan hämtas av visningsprogrammets körningslogik. Länka inte direkt till HTML5 SDK `Utils.js`-biblioteket från kontextsökvägen `/s7viewers` (kallas konsoliderad SDK include). Visningsprogrammets logik hanterar platsen för `Utils.js` eller liknande visningsprogrambibliotek vid körning, som kan ändras mellan olika versioner. Adobe behåller inte äldre versioner av sekundära visningsprograminkluderingar på servern, så om de refereras direkt kan visningsfunktionen brytas i framtida uppdateringar.
 * **Riktlinjer för inbäddning:**
 Använd dokumentationen för att bädda in riktlinjer som är specifika för varje visningsprogram.
-Vill du veta mer? Gå till [Visare för AEM Assets](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers).
+Vill du veta mer? Gå till [Visare för AEM Assets](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers).
 * **SDK självstudiekurs och exempel:**
-Granska [&#x200B; självstudiekurserna för SDK &#x200B;](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/c-tutorial) i visningsprogrammet och [&#x200B; programexemplen för HTML5 SDK &#x200B;](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för att få en mer detaljerad förståelse för API:er för SDK-komponenter.
+Granska [ självstudiekurserna för SDK ](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-tutorial) i visningsprogrammet och [ programexemplen för HTML5 SDK ](https://s7d9.scene7.com/s7sdk/2024.5/docs/jsdoc/index.html) för att få en mer detaljerad förståelse för API:er för SDK-komponenter.
 
 
 ## Förbered material för leverans
@@ -111,7 +111,7 @@ Använd en eller flera av följande metoder för effektiv resursorganisation som
 När du organiserar resurser måste du kategorisera dem i mappar, ungefär som när du ordnar filer på en dator. För att resurshanteringen ska bli så effektiv som möjligt är det viktigt att du namnger, strukturerar undermappar och hanterar filer i dessa mappar. Implementering av systematiska namnkonventioner och metadatarutiner maximerar nyttan med ert digitala resurslager.
 Vill du veta mer? Gå till [Ordna resurser i mappar](/help/assets/organize-assets.md#organize-using-folders).
 * **Ordna resurser med hjälp av taggar:**
-Taggning av resurser förbättrar sökbarheten, skapar samlingar och rankar sökningar. Adobe Sensei AI använder en självlärande algoritm för exakt taggning, vilket möjliggör snabb hämtning av resurser. Adobe Sensei identifierar och tilldelar även relevanta taggar - inklusive anpassade taggar - till resurser, vilket förenklar resurshanteringen med automatisk, beskrivande taggning.
+Taggning av resurser förbättrar sökbarheten, skapar samlingar och rankar sökningar. Adobe AI använder en självlärande algoritm för exakt taggning, vilket möjliggör snabb hämtning av resurser. Adobe AI identifierar och tilldelar även relevanta taggar, inklusive anpassade taggar, till resurser, vilket förenklar resurshanteringen med automatisk, beskrivande taggning.
 Vill du veta mer? Gå till [Organisera resurser med hjälp av taggar](/help/assets/organize-assets.md#use-tags-to-organize-assets).
 * **Ordna resurser som samlingar:**
 Med Dynamic Media och Experience Manager Assets kan du effektivt skapa, redigera och dela resurssamlingar mellan användare. Du kan skapa olika samlingstyper, bland annat statiska listor och dynamiska, sökbaserade kompileringar. De här samlingstyperna kan delas mellan olika platser med anpassningsbar åtkomst och redigeringsbehörighet.
@@ -132,7 +132,7 @@ Vill du veta mer? Gå till [Bästa tillvägagångssätt för att optimera kvalit
 
 Eftersom uppfattningen av bildkvaliteten varierar från människa till människa, kan ibland en systematisk undersökningsmetod vara nödvändig för att uppnå önskvärda resultat. Adobe Experience Manager hjälper till med den här processen med över 100 dynamiska mediakommandon för bildförbättring.
 
-Vill du veta mer? Titta på [ögonblicksbilden av dynamiska media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter, 17 sekunder).
+Vill du veta mer? Titta på [ögonblicksbilden av dynamiska media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter, 17 sekunder).
 
 Om du vill utvärdera hur de olika kommandona påverkar bildkvaliteten kan du överföra en bild till Dynamic Media, använda verktygets gränssnitt på den angivna URL:en och använda de kommandon som du vill testa.
 
@@ -150,11 +150,11 @@ Vill du prova det? Gå till [Grundläggande om att skapa bildförinställningar 
 
 **Affärsfall:** *Se till att huvudpunkten för mina bilder eller videofilmer förblir i fokus på olika enheter.*
 
-Smart Crop är en funktion i Dynamic Media som använder Adobe Sensei, Adobe AI och maskininlärningsramverk för att automatisera beskärningen av bilder och videor. Det identifierar och fokuserar på huvudmotivet eller intressepunkten i en bild eller video på ett intelligent sätt. Denna intelligens ser till att fokalpunkten bibehålls i olika skärmstorlekar på stationära datorer och mobila enheter.
+Smart Crop är en funktion i Dynamic Media som använder Adobe AI, Adobe AI och maskininlärningsramverk för att automatisera beskärningen av bilder och videor. Det identifierar och fokuserar på huvudmotivet eller intressepunkten i en bild eller video på ett intelligent sätt. Denna intelligens ser till att fokalpunkten bibehålls i olika skärmstorlekar på stationära datorer och mobila enheter.
 
-Ett tips är att skapa en bildprofil med Smart beskärning. I profilen kan du definiera olika skärmstorlekar och låta Adobe Sensei göra resten, så att dina bilder och videor alltid är optimerade för visningsprogrammets enhet.
+Ett tips är att skapa en bildprofil med Smart beskärning. I profilen kan du definiera olika skärmstorlekar och låta Adobe AI göra resten, så att dina bilder och videor alltid är optimerade för visningsprogrammets enhet.
 
-Vill du veta mer? Titta på [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder) och [Använda smart beskärning med dynamiska media för video](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video) (6 minuter, 22 sekunder).
+Vill du veta mer? Titta på [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder) och [Använda smart beskärning med dynamiska media för video](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video) (6 minuter, 22 sekunder).
 
 ### Förbättra SEO-rankningarna
 
@@ -182,7 +182,7 @@ Lär dig hur du villkorligt kan omvandla URL:er baserat på olika faktorer, vilk
 Vill du veta mer? Gå till [Använd regeluppsättningar för att omforma URL:er](/help/assets/dynamic-media/using-rulesets-to-transform-urls.md).
 * **Smart bildbehandling och smart beskärning:**
 Använd funktionerna Smart bildbehandling och Smart Crop i Dynamic Media för att leverera optimerade och responsiva bilder. Detta förbättrar inte bara sidinläsningstiden utan bidrar också positivt till SEO-rankningarna.
-Vill du veta mer? Gå till [Smart bildåtergivning](/help/assets/dynamic-media/imaging-faq.md) eller se [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder).
+Vill du veta mer? Gå till [Smart bildåtergivning](/help/assets/dynamic-media/imaging-faq.md) eller se [Använda smart beskärning med AEM Assets Dynamic Media](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/smart-crop-feature-video-use) (6 minuter, 35 sekunder).
 
 Kom ihåg att de här bästa sätten är anpassade efter Google metoder för SEO för bilder. Sådana metoder betonar vikten av att ge kontext och tydlighet till sökmotorer genom lämpliga namnkonventioner, strukturerade data och optimerad bildleverans.
 
@@ -200,7 +200,7 @@ Dynamic Media har en uppsättning kommandon för att redigera bilder och skapa v
 | --- | --- |
 | **Överför och publicera originalbilden** | <ul><li> Börja med att överföra originalbilden till Dynamic Media.</li><li> Kontrollera att den är publicerad och tillgänglig via en URL.</li><li> I det här exemplet överförs en stockbild av en bevakning med en vit bakgrund (vi kallar den &quot;Bild X&quot;) till Dynamic Media.<br>[https://s7g2.scene7.com/is/image/genaibeta/watch-silver-offer](https://s7g2.scene7.com/is/image/genaibeta/watch-silver-offer)</li></ul> |
 | **Skapa en mask** | <ul><li> Utveckla en mask som definierar motivet (området där du vill använda effekter) och bakgrunden (området som du vill ändra).<br>[https://s7g2.scene7.com/is/image/genaibeta/watch-silver-offer-maskps](https://s7g2.scene7.com/is/image/genaibeta/watch-silver-offer-maskps)</li><li> Masker är vanligtvis gråskalebilder, där vitt representerar motivet och svart representerar bakgrunden. Du kan skapa masker med verktyg som Adobe Photoshop.<br>Vill du veta mer? Gå till [Skapa och redigera en snabbmask i Photoshop](https://helpx.adobe.com/in/photoshop/using/create-temporary-quick-mask.html).</li><li> I Bild X skapar du en mask som exakt markerar det motiv du vill förbättra. Exempel: en person, ett objekt och så vidare.</li></ul> |
-| **Använd dynamiska medie-URL-kommandon för effekter** | När du har skapat masken använder du URL-kommandon för att använda effekter som yttre glöd eller ändra bakgrundsfärgen till &quot;Bild X&quot;. Här är två exempel:<ul><li> **Ytterglöd:**<br> Om du vill lägga till en yttre glödeffekt längs objektets gräns redigerar du URL-adressen så här:<br>[https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&maskUse=invert&effect=-1&pos=100,100&op_blur=75&op_grow=1&opac=25](https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&maskUse=invert&effect=-1&pos=100,100&op_blur=75&op_grow=1&opac=25)<br>I den här URL-adressen skapar parametrarna `op_blur`, `op_grow` och `opac` den yttre glödeffekten.</li><li> **Ändring av bakgrundsfärg:**<br> Om du vill ändra bakgrundsfärg använder du URL-adressen med ett annat bakgrundsfärgvärde:<br>[https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&maskUse=invert&maskUse=invert&color=255,255,0](https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&maskUse=invert&maskUse=invert&color=255,255,0)<br> I det här exemplet anger `color=255,255,0` bakgrundsfärgen till gul. Redigera bakgrunden till en viss färg för visuell påverkan.</li></ul> |
+| **Använd dynamiska medie-URL-kommandon för effekter** | När du har skapat masken använder du URL-kommandon för att använda effekter som yttre glöd eller ändra bakgrundsfärgen till &quot;Bild X&quot;. Här är två exempel:<ul><li> **Ytterglöd:**<br> Om du vill lägga till en yttre glödeffekt längs objektets gräns redigerar du URL-adressen så här:<br>[https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&amp;maskUse=invert&amp;effect=-1&amp;pos=100,100&amp;op_blur=75&amp;op_grow=1&amp;opac=25](https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&maskUse=invert&effect=-1&pos=100,100&op_blur=75&op_grow=1&opac=25)<br>I den här URL-adressen skapar parametrarna `op_blur`, `op_grow` och `opac` den yttre glödeffekten.</li><li> **Ändring av bakgrundsfärg:**<br> Om du vill ändra bakgrundsfärg använder du URL-adressen med ett annat bakgrundsfärgvärde:<br>[https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&amp;maskUse=invert&amp;maskUse=invert&amp;color=255,255,0](https://s7g10.scene7.com/is/image/genaibeta/watch-silver-offer?mask=watch-silver-offer-maskps&maskUse=invert&maskUse=invert&color=255,255,0)<br> I det här exemplet anger `color=255,255,0` bakgrundsfärgen till gul. Redigera bakgrunden till en viss färg för visuell påverkan.</li></ul> |
 
 #### Lägga till en bildkant
 
@@ -208,9 +208,9 @@ Med Dynamic Media kan du hantera bilder direkt via webbadresser, vilket gör det
 
 | Uppgift | Vad du ska göra |
 | --- | --- |
-| **Vit kantlinje** | Om du vill lägga till en vit kantlinje använder du följande URL:<br>[https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10](https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10)<br>I den här URL:en anger parametern `extend=10,10,10,10` kantstorleken på tio pixlar på alla sidor. |
-| **Oskärpa längs den vita kanten** | Om du vill lägga till en oskärpeeffekt längs den vita kanten kan du redigera URL-adressen på följande sätt:<br>[https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10&effect=-1&op_blur=60&color=0,0,0](https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10&effect=-1&op_blur=60&color=0,0,0)<br>I den här URL-adressen använder parametern `effect=-1` oskärpeeffekten och `op_blur=60` styr oskärpeintensiteten. |
-| **Skugga längs den yttre gränsen** | Om du vill lägga till en skuggeffekt längs den yttre gränsen använder du den här URL:en:<br>[https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10&effect=-1&$shadow$&amp;color=0,0,0](https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10&effect=-1&$shadow$&color=0,0,0)<br>Parametern `$shadow$` skapar skuggeffekten och `color=0,0,0` anger skuggfärgen som svart. |
+| **Vit kantlinje** | Om du vill lägga till en vit kantlinje använder du följande URL:<br>[https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&amp;extend=10,10,10,10](https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10)<br>I den här URL:en anger parametern `extend=10,10,10,10` kantstorleken på tio pixlar på alla sidor. |
+| **Oskärpa längs den vita kanten** | Om du vill lägga till en oskärpeeffekt längs den vita kanten kan du redigera URL-adressen på följande sätt:<br>[https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&amp;extend=10,10,10,10&amp;effect=-1&amp;op_blur=60&amp;color=0,0,0](https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10&effect=-1&op_blur=60&color=0,0,0)<br>I den här URL-adressen använder parametern `effect=-1` oskärpeeffekten och `op_blur=60` styr oskärpeintensiteten. |
+| **Skugga längs den yttre gränsen** | Om du vill lägga till en skuggeffekt längs den yttre gränsen använder du den här URL:en:<br>[https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&amp;extend=10,10,10,10&amp;effect=-1&amp;$shadow$&amp;color=0,0,0](https://s7g2.scene7.com/is/image/genaibeta/ocean-facing-hotel?size=400,400&extend=10,10,10,10&effect=-1&$shadow$&color=0,0,0)<br>Parametern `$shadow$` skapar skuggeffekten och `color=0,0,0` anger skuggfärgen som svart. |
 
 Experimentera fritt med dessa URL:er för att få de visuella effekter du vill.
 
@@ -222,9 +222,9 @@ Om du vill lägga en logotyp eller ikon ovanpå en befintlig bild är Dynamic Me
 | --- | --- |
 | **Överför och publicera basbilden** | Ladda först upp och publicera den basbild som du vill lägga logotypen eller ikonen ovanpå. Du kan använda vilken bild som helst som bas.<br>Här är till exempel en basbild:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa). |
 | **Överför och publicera logotypen eller ikonbilden** | Ladda sedan upp och publicera bilden som du vill lägga ovanpå basbilden. Den här bilden ska vara en genomskinlig PNG-bild med den logotyp eller ikon som du vill täcka över.<br>Här är den genomskinliga PNG-bilden för ett stjärnobjekt med genomskinlighetseffekter som kommer att läggas ovanpå:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorate-star](https://s7g2.scene7.com/is/image/genaibeta/decorate-star) |
-| **Använd URL för dynamiska media** | Skapa nu en dynamisk medie-URL som kombinerar basbilden med logotypen eller ikonbilden. Du kan använda URL-kommandon för att uppnå den här effekten.<br>URL-strukturen ser ut ungefär så här:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&src=decorate-star&scale=1.25&posN=0.33,-.25&fmt=png](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&src=decorate-star&scale=1.25&posN=0.33,-.25&fmt=png)<br>var resursen finns<ul><li> `hotspotRetailBaseImage` är basbilden.</li><li> `starxp` är logotypen/ikonbilden.</li><li> `layer=1` anger att logotypen eller ikonen ska placeras i lager över basbilden.</li><li> `scale=1.25` justerar storleken på logotypen/ikonen.</li><li> `posN=0.33,-.25` avgör logotypens/ikonens position i förhållande till basbilden.</li><li> `fmt=png` ser till att utdata är i PNG-format.</li></ul> |
+| **Använd URL för dynamiska media** | Skapa nu en dynamisk medie-URL som kombinerar basbilden med logotypen eller ikonbilden. Du kan använda URL-kommandon för att uppnå den här effekten.<br>URL-strukturen ser ut ungefär så här:<br>[https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&amp;src=decorate-star&amp;scale=1.25&amp;posN=0.33,-.25&amp;fmt=png](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa?layer=1&src=decorate-star&scale=1.25&posN=0.33,-.25&fmt=png)<br>var resursen finns<ul><li> `hotspotRetailBaseImage` är basbilden.</li><li> `starxp` är logotypen/ikonbilden.</li><li> `layer=1` anger att logotypen eller ikonen ska placeras i lager över basbilden.</li><li> `scale=1.25` justerar storleken på logotypen/ikonen.</li><li> `posN=0.33,-.25` avgör logotypens/ikonens position i förhållande till basbilden.</li><li> `fmt=png` ser till att utdata är i PNG-format.</li></ul> |
 
-Vad ska jag lära dig mer? Gå till [src](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-src) om du vill ha mer information om kommandot `src` och andra dynamiska medie-URL-kommandon.
+Vad ska jag lära dig mer? Gå till [src](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-src) om du vill ha mer information om kommandot `src` och andra dynamiska medie-URL-kommandon.
 
 
 #### Ersätta kampanjtext
@@ -234,7 +234,7 @@ Nedan beskrivs stegen för att täcka över ett reklamtextmeddelande i en bild m
 | Steg | Vad du ska göra |
 | --- | --- |
 | **Överför och publicera basbilden** | Ladda först upp och publicera den basbild som du vill lägga över texten på. Du kan använda vilken bild du vill. Här är till exempel en exempelbild:<br>[https://s7g2.scene7.com/is/image/genaibeta/leather-sofa](https://s7g2.scene7.com/is/image/genaibeta/leather-sofa)<br> |
-| **Använd dynamiska mediatextoperatorer** | Med Dynamic Media kan du använda textoperatorer för att täcka över dynamisk text direkt i bilden. Följande exempel-URL visar den här möjligheten:<br>[https://s7g10.scene7.com/is/image/genaibeta/leather-sofa?layer=1&posN=-0.3,-0.455&text=%7b\rtf1\ansi%7b\fonttbl%7b\f0+Arial;%7d%7b\colortbl+\red255\green255\blue255;%7d\copyfit1000\vertalc\qc%7b\cf0\fs42+New+Collection%7d%7d&amp;size=370,70&amp;textAttr=1 30&amp;bgcolor=FF3333&amp;wid=600&amp;hei=600](https://s7g10.scene7.com/is/image/genaibeta/leather-sofa?layer=1&posN=-0.3,-0.455&text=%7b\rtf1\ansi%7b\fonttbl%7b\f0+Arial;%7d%7d%7b\colortbl+\red255\green255\blue255;%7d\copyfit1000\vertalc\qc%7b\cf0\fs42+New+Collection%7d%7d&size=370,70&textAttr=130&bgcolor=FF3 333&wid=600&hei=600) |
+| **Använd dynamiska mediatextoperatorer** | Med Dynamic Media kan du använda textoperatorer för att täcka över dynamisk text direkt i bilden. Följande exempel-URL visar den här möjligheten:<br>[https://s7g10.scene7.com/is/image/genaibeta/leather-sofa?layer=1&amp;posN=-0.3,-0.455&amp;text=%7b\rtf1\ansi%7b\fonttbl%7b\f0+Arial;%7d%7b\colortbl+\red255\green255\blue255;%7d\copyfit1000\vertalc\qc%7b\cf0\fs42+New+Collection%7d%7d&amp;size=370,70&amp;textAttr=1 30&amp;bgcolor=FF3333&amp;wid=600&amp;hei=600](https://s7g10.scene7.com/is/image/genaibeta/leather-sofa?layer=1&posN=-0.3,-0.455&text=%7b\rtf1\ansi%7b\fonttbl%7b\f0+Arial;%7d%7d%7b\colortbl+\red255\green255\blue255;%7d\copyfit1000\vertalc\qc%7b\cf0\fs42+New+Collection%7d%7d&size=370,70&textAttr=130&bgcolor=FF3 333&wid=600&hei=600) |
 
 #### Storleksändring och beskärning för olika användningsområden
 
@@ -264,19 +264,19 @@ Låt oss titta på ett exempel som innehåller följande bild av vardagsrummet:
   [https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa](https://s7g2.scene7.com/is/image/genaibeta/decorative-room-sofa)
 * **Miniatyrbild (200 px x x 200 px):**
 En mindre version som passar för snabb inläsning eller visning.
-  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&hei=200&fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&hei=200&fit=crop)
+  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&amp;hei=200&amp;fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&hei=200&fit=crop)
 * **Miniatyrbild med beskärning (200 px x 200 px):**
 Beskuren för att fokusera på soffområdet.
-  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&hei=200&cropN=.24,.24,.6,.72&fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&hei=200&cropN=.24,.24,.6,.72&fit=crop)
+  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&amp;hei=200&amp;cropN=.24,.24,.6,.72&amp;fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=200&hei=200&cropN=.24,.24,.6,.72&fit=crop)
 * **Produktvisningsbild (800 px x 600 px):**
 Beskuren och storleksändrad för att visa upp soffan.
-  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=800&hei=600&cropN=.24,.24,.6,.72&fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=800&hei=600&cropN=.24,.24,.6,.72&fit=crop)
+  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=800&amp;hei=600&amp;cropN=.24,.24,.6,.72&amp;fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=800&hei=600&cropN=.24,.24,.6,.72&fit=crop)
 * **Banner (1720 px x 820 px):**
 Härledd från originalbilden, vilket betonar rummet.
-  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=1720&hei=820&cropN=0,.1,1,1&fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=1720&hei=820&cropN=0,.1,1,1&fit=crop)
+  [https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=1720&amp;hei=820&amp;cropN=0,.1,1,1&amp;fit=crop](https://s7g10.scene7.com/is/image/genaibeta/decorative-room-sofa?wid=1720&hei=820&cropN=0,.1,1,1&fit=crop)
 
 Experimentera med olika varianter efter just dina behov.
-Vill du veta mer om de kommandon som finns i en URL? Gå till [Kommandoreferens](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference).
+Vill du veta mer om de kommandon som finns i en URL? Gå till [Kommandoreferens](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference).
 
 ### Leverera GIF-bilder
 
@@ -320,7 +320,7 @@ Använd den angivna URL:en för att länka direkt till videon. Hyperlänka det p
    * **Bädda in videon:**
 Kopiera den inbäddade koden och klistra in den i HTML på webbsidan där du vill att videon ska visas. Om du gör det kan videon spelas upp direkt på din webbplats.
 
-Vill du veta mer? Gå till [Video](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/dynamicmedia/video).
+Vill du veta mer? Gå till [Video](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/dynamicmedia/video).
 
 ### Konfigurera videoklipp för optimal kvalitet och engagemang
 

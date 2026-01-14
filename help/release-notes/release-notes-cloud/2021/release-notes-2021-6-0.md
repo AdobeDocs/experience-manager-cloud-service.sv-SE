@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2021.6.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2021.6.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2021.6.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2021.6.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 2c72973b-5a51-4744-bf88-50da0013ba31
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
 source-wordcount: '1430'
 ht-degree: 0%
@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -37,7 +37,7 @@ Titta på videon [Versionsöversikt för juni 2021](https://video.tv.adobe.com/v
 ### Nyheter {#what-is-new-xml-documentation}
 
 * XML Documentation för AEM as a Cloud Service är nu GA.
-* Detta gör att befintliga AEM Cloud Service-kunder kan köpa XML Documentation-tillägg för import, skapande, hantering och leverans av tekniskt innehåll i flera kanaler, inklusive AEM sajter
+* Detta gör det möjligt för befintliga AEM Cloud-kunder att köpa XML Documentation-tillägg för import, skapande, hantering och leverans av tekniskt innehåll i flera kanaler, inklusive AEM webbplatser
 
 ## Cloud Manager {#cloud-manager}
 
@@ -62,15 +62,15 @@ Nästa version är planerad till 15 juli 2021.
 
 * Kvalitetsregeln `ImmutableMutableMixCheck` har uppdaterats för att klassificera `/oak:index`-noder som oföränderliga.
 
-* Kvalitetsreglerna `CQBP-84` och `CQBP-84--dependencies` har konsoliderats till en enda regel. Som en del av den här konsolideringen identifierar genomsökningen av beroenden mer korrekt problem i tredjepartsberoenden som distribueras till AEM.
+* Kvalitetsreglerna `CQBP-84` och `CQBP-84--dependencies` har konsoliderats till en enda regel. Som en del av konsolideringen identifierar sökningen av beroenden exaktare problem i tredjepartsberoenden som distribueras till AEM-miljön.
 
-* För att undvika problem har segmentraderna i Publish AEM och Publish Dispatcher konsoliderats på sidan Miljöinformation.
+* För att undvika missförstånd har segmentraderna Publicera AEM och Publicera Dispatcher på sidan Miljöinformation konsoliderats.
 
   ![Dispatcher-miljöer](/help/implementing/cloud-manager/release-notes/assets/aem-dispatcher.png)
 
 * En ny regel för kodkvalitet har lagts till för att validera strukturen för `damAssetLucene` index. Mer information finns i [Anpassade DAM-resurser, Lucene Oak-index](/help/implementing/cloud-manager/custom-code-quality-rules.md#oakpal-damAssetLucene-sanity-check).
 
-* Sidan med miljöinformation visar nu flera domännamn för Publish och förhandsgranskningstjänsterna (beroende på vad som är tillämpligt). Mer information finns i [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment).
+* Sidan med miljöinformation visar nu flera domännamn för tjänsterna Publicera och Förhandsgranska (efter behov). Mer information finns i [Miljöinformation](/help/implementing/cloud-manager/manage-environments.md#viewing-environment).
 
 ### Felkorrigeringar {#bug-fixes-junecm}
 
@@ -104,7 +104,7 @@ Nästa version är planerad till 15 juli 2021.
 * Vyinställningarna har förbättrats så att användarna kan välja en standardvy och en standardsorteringsparameter.
 * Länkdelningsfunktionen använder asynkrona nedladdningar som ökar nedladdningshastigheten.
 * Användare kan söka efter och filtrera mapparna baserat på egenskapspredikat.
-* [!DNL Experience Manager Assets] bäddar in PDF Viewer från [!DNL Adobe Document Cloud] för att förhandsgranska de dokument som stöds. Med den här funktionen kan användare förhandsgranska PDF och andra flersidiga filer utan komplex bearbetning. Detta förbättrar funktionspariteten med [!DNL Experience Manager] 6.5.
+* [!DNL Experience Manager Assets] bäddar in PDF Viewer från [!DNL Adobe Document Cloud] för att förhandsgranska de dokument som stöds. Med den här funktionen kan användare förhandsgranska PDF-filer och andra flersidiga filer utan komplex bearbetning. Detta förbättrar funktionspariteten med [!DNL Experience Manager] 6.5.
 
 ### Fel som har åtgärdats i [!DNL Assets] {#bugs-fixed-assets}
 
@@ -116,33 +116,33 @@ Nästa version är planerad till 15 juli 2021.
 
 ### Nya funktioner i [!DNL Sites] {#ga-features-sites}
 
-* Publish till förhandsgranskningsnivå visas nu som sidstatus i användargränssnittet för webbplatsadministratörer
-* Publish to Preview Tier now surface preview URL at end the action and persistent the URL in page properties for later reference
+* Publicera till förhandsgranskningsnivå visas nu som sidstatus i användargränssnittet för webbplatsadministratörer
+* Publicera på förhandsgranskningsnivå nu med förhandsgransknings-URL:en i slutet av åtgärden och behåll URL:en i sidegenskaperna för senare referens
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* Lagt till möjlighet att filtrera anpassade kolumner AEM Inkorgen.
+* Lagt till möjlighet att filtrera anpassade kolumner i AEM Inbox.
 * Lagt till möjlighet att använda temaredigeraren och stillagret i en adaptiv formulärredigerare för att formatera captcha-komponenten.
-* Snabbare och exaktare för automatisk detektering av logiska avsnitt i PDF forms och konvertering av dessa till motsvarande adaptiva formulärpaneler.
+* Snabbare och exaktare för automatisk detektering av logiska avsnitt i PDF forms-källfilen och konvertering av dessa till motsvarande adaptiva formulärpaneler.
 * Flyttningsåtgärd har lagts till för att flytta en PDF- eller XDP-fil från en mapp till en annan.
 
-### Beta-funktion i [!DNL Forms] {#what-is-new-forms-prerelease}
+### Beta-funktion i [!DNL Forms]  {#what-is-new-forms-prerelease}
 
 * **[!DNL AEM Forms as a Cloud Service - Communications]**: Kommunikations-API:er hjälper dig att kombinera XDP-mallar och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge. Med API:erna kan du skapa program som gör att du kan:
    * Generera slutliga formulärdokument genom att fylla i mallfiler med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
-   * Generera PDF från ett XFA-formulär i PDF och Adobe Acrobat-formulär (AcroForm).
+   * Generera utskrifts-PDF:er från ett XFA-formulär i PDF- och Adobe Acrobat-format (AcroForm).
 
-* **Variable Data Externalizer**: Du kan spara data AEM arbetsflödesvariabler i ett externt lagringssystem som hanteras av din organisation.
+* **Variable Data Externalizer**: Du kan spara data från AEM Workflow-variabler i ett externt lagringssystem som hanteras av din organisation.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
 ### Fel som har åtgärdats i [!DNL Forms] {#forms-bugs-fixed}
 
 * När ett fält valideras innan data skickas till backend-tjänsten via FDM (Form Data Model), lyckas valideringen men tjänsten Form Data Model kan inte anropa eftervalideringen.
-* När du skickar ett formulär som innehåller ett standardfält för överföring av HTML från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
+* När du skickar ett formulär som innehåller ett vanligt överföringsfält från HTML från en Apple iOS-enhet skickas ibland inte filens innehåll och en 0-byte-fil tas emot i den andra änden. Detta är ett känt problem i Apple iOS. [FB9117687](https://feedbackassistant.apple.com/feedback/9117687)
 
 ## [!DNL Experience Manager Screens] som en [!DNL Cloud Service] {#screens}
 
@@ -155,7 +155,7 @@ Releasedatum för AEM Screens as a Cloud Service är 24 juni 2021.
 ### Nyheter {#what-is-new-screens-june}
 
 >[!NOTE]
->Se [AEM Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/home.html?lang=sv-SE) Guide för grundläggande kunskaper som krävs för att installera, konfigurera och köra Screens as a Cloud Service samt länka till detaljerad teknisk dokumentation om koncept.
+>Läs [AEM Screens as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/screens-as-cloud-service/home.html) Guide om du vill ha grundläggande information om hur du installerar, konfigurerar och kör Screens as a Cloud Service samt länkar till detaljerad teknisk dokumentation om koncept.
 
 * Registreringshantering för flera enheter innebär att det går snabbare och effektivare att etablera stora mängder spelarenheter.
 
@@ -165,14 +165,14 @@ Releasedatum för AEM Screens as a Cloud Service är 24 juni 2021.
 
 * På sidan med objektinformation finns en sammanfattning av den mest relevanta informationen för varje objekt i ditt projekt.
 
-## CIF {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
-* Nya CIF för produkt- och kategorireferensdatatyper för innehållsfragment (Inkl. användargränssnitt för produkt-/kategoriväljare)
+* Nya referensdatatyper för CIF-produkter och kategorier för innehållsfragment (Inkl. användargränssnitt för produkt-/kategoriväljare)
 * Ny kärnkomponent i Commerce Content Fragment
-* Heltextbaserad e-handelssökning stöds i AEM
-* Commerce Core Components har stöd för Adobe Commerce Sensei Recs datainsamling
+* Heltextbaserad e-handelssökning stöds i AEM backend
+* Commerce Core Components har stöd för datainsamling i Adobe Commerce AI Recs
 * Förbättrade SEO-vänliga URL:er för kategorisidor
 * Stöd för anpassade HTTP-huvuden per plats/konfiguration
 
@@ -184,7 +184,7 @@ Releasedatum för Content Transfer Tool v1.5.4 är 28 juni 2021.
 
 ### Nyheter {#what-is-new-ctt-latest}
 
-* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html?lang=sv-SE)-steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när AEM är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
+* Stöd för ett valfritt [pre-copy](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/handling-large-content-repositories.html)-steg som lagts till för att användas med CTT. Steg före kopiering kan användas för att avsevärt snabba upp extraherings- och inmatningsfaserna i innehållsöverföringsaktiviteten när käll-AEM-instansen är konfigurerad att använda ett Amazon S3- eller Azure Blob Storage-datalager.
 
 * Guardrail har lagts till i CTT för att förhindra användare från att stoppa ett intag och eventuellt skada data när det har nått den kritiska punkten under intagningsfasen.
 
@@ -194,7 +194,7 @@ Releasedatum för Content Transfer Tool v1.5.4 är 28 juni 2021.
 
 ### Felkorrigeringar {#bug-fixes-ctt-latest}
 
-* När ett förtäring på författarinstansen stoppades skrev användargränssnittet över ett tidigare slutfört intag på Publish-instansen till `STOPPED` från `FINISHED`. Den här har åtgärdats.
+* När användaren stoppade ett inlägg på författarinstansen skrev användargränssnittet över ett tidigare slutfört intag på publiceringsinstansen till `STOPPED` från `FINISHED`. Den här har åtgärdats.
 
 ## Best Practices Analyzer {#best-practices-analyzer}
 

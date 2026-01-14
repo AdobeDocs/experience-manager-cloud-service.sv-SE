@@ -1,19 +1,19 @@
 ---
-title: Versionsinformation för version 2022.5.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2022.5.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2022.5.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2022.5.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 1b867582-e34c-435b-b8f8-fc71dddcaccb
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '794'
 ht-degree: 0%
 
 ---
 
 # Versionsinformation 2022.5.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.5.0-versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktioner i 2022.5.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ I följande avsnitt beskrivs versionsinformationen för funktionen för 2022.5.0
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -45,13 +45,13 @@ Titta på videon om versionsöversikten från maj 2022 om du vill se en sammanfa
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* [Dynamic Media Smart Imaging](https://medium.com/adobetech/one-solution-fits-all-smart-imaging-with-aem-dynamic-media-be690b62df9f) har nu stöd för AVIF-filformat - ytterligare förbättring av Google Core Web Vital (Störst Contentful Paint), med AVIF som ger en extra storleksminskning på 20 % jämfört med WebP. Totalt ger AVIF upp till 41 % genomsnittlig storleksminskning över JPEG (i vissa bilder till och med upp till 76 %).
+* [Dynamic Media Smart Imaging](https://medium.com/adobetech/one-solution-fits-all-smart-imaging-with-aem-dynamic-media-be690b62df9f) har nu stöd för AVIF-filformat - ytterligare förbättring av Google Core Web Vital (Störst Contentful Paint), med AVIF som ger en extra storleksminskning på 20 % jämfört med WebP. Totalt ger AVIF upp till 41 % genomsnittlig storleksminskning jämfört med JPEG (i vissa bilder till och med upp till 76 %).
 
-* [!UICONTROL Experience Manager Assets Brand Portal] kör nu automatiska jobb var tolfte timme för att ta bort alla Brand Portal-resurser som publicerats till AEM. Därför behöver du inte ta bort resurserna i Contribute-mappen manuellt för att mappstorleken ska hållas under tröskelvärdet. Se [Nyheter i Experience Manager Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE).
+* [!UICONTROL Experience Manager Assets Brand Portal] kör nu automatiska jobb var tolfte timme för att ta bort alla Brand Portal-resurser som publicerats till AEM. Därför behöver du inte ta bort resurserna i Contribute-mappen manuellt för att mappstorleken ska hållas under tröskelvärdet. Se [Nyheter i Experience Manager Assets Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Assets] {#prerelease-features-assets}
 
-Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skilja mellan färger i en bild och använda dem som taggar automatiskt vid förtäring](/help/assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare.
+Experience Manager Assets använder Adobe AI-funktioner för att nu [skilja mellan färger i en bild och använda dem som taggar automatiskt vid förtäring](/help/assets/color-tag-images.md). Dessa taggar möjliggör förbättrad sökning baserat på bildens färgkomposition. Du kan konfigurera antalet färger, inom intervallet 1 till 40, som taggas i en bild så att du kan söka efter bilder baserade på dessa färger senare.
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
@@ -64,7 +64,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
   ![Guiden för att skapa ett anpassat formulär](/help/release-notes/assets/wizard.png)
 
-## CIF {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
@@ -72,7 +72,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
 <!-- Image was not found during PR validation despite correct path   ![Enable wantlist](/help/assets/CIF/enable-wishlist.png) -->
 
-* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett tillägg till varukorgen och tillägg till önskad lista för att ringa till åtgärd
+* Stöd för ytterligare marknadsföringskomponenter: Komponenter kan konfigureras för att visa ett tillägg i kundvagnen och tillägg i önskelistan i call-to-action
 
   ![Kortkommando för webbplatsredigeraren till produktcockpit](/help/assets/CIF/sites-editor-shortcut-to-cockpit.png)
 
@@ -81,9 +81,9 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
 ### Nyheter {#what-is-new-foundation}
 
-* Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **fliken Distribuera**, som tidigare meddelats som borttagen, togs bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll ska i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publish Content Tree-arbetsflödet](/help/operations/replication.md#publish-content-tree-workflow).
+* Alternativet Lägg till träd under administratörsskärmen för replikeringsagenten **fliken Distribuera**, som tidigare meddelats som borttagen, togs bort den 20 juni 2022 eller snart därefter. Paket med en trädhierarki av innehåll ska i stället replikeras med [Hantera publikation](/help/operations/replication.md#manage-publication) eller arbetsflödet [Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow).
 
-* Användning av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) är föråldrat och verkställt den 12 september 2022 eller snart därefter. I stället måste [Hantera publikation](/help/operations/replication.md#manage-publication) eller arbetsflödet [Publish Content Tree](/help/operations/replication.md#publish-content-tree-workflow) användas för att replikera dessa stora innehållspaket. I juli visas ett varningsmeddelande på administratörsskärmen för replikeringsagenten på **fliken Distribuera** om du försöker replikera dessa stora innehållspaket och i AEM fellogg när replikerings-API används för att replikera dessa stora innehållspaket. I september ersattes varningarna av fel. Anpassa processerna därefter.
+* Användning av administratörsskärmen för replikeringsagenten eller replikerings-API:t för distribution av innehållspaket som är större än 10 MB (noder med egenskaper, exklusive binärfiler) är föråldrat och verkställt den 12 september 2022 eller snart därefter. I stället måste arbetsflödet [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Publicera innehållsträd](/help/operations/replication.md#publish-content-tree-workflow) användas för att replikera dessa stora innehållspaket. I juli visas ett varningsmeddelande på **fliken Distribuera** på administratörsskärmen för replikeringsagenten om du försöker replikera dessa stora innehållspaket och även i AEM fellogg när replikerings-API:t används för att replikera dessa stora innehållspaket. I september ersattes varningarna av fel. Anpassa processerna därefter.
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Experience Manager] {#prerelease-features-foundation}
 
@@ -93,7 +93,7 @@ Experience Manager Assets använder Adobe Sensei AI-funktioner för att nu [skil
 
 ### Borttagning av TLS 1.0, 1.1
 
-Från och med den 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM använder enbart TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versionerna 1.0 och 1.1 är nu inaktuella.
+Från och med 30 juni 2022 kommer Experience Manager as a Cloud Service att kräva säkrare nätverkskommunikation och datautbyte med användarsystem. AEM använder enbart TLS (Transport Layer Security), 1.2-protokollet. Äldre TLS-versionerna 1.0 och 1.1 är nu inaktuella.
 
 Om du fortsätter att använda äldre versioner av TLS som 1.0, 1.1 kan du förlora åtkomsten till Experience Manager as a Cloud Service.
 

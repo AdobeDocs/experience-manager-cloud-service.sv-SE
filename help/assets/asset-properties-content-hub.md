@@ -3,9 +3,9 @@ title: Förhandsgranska resursen och dess egenskaper i  [!DNL the Content Hub]
 description: Lär dig hur du förhandsgranskar resurser och egenskaper i  [!DNL Content Hub]
 role: User
 exl-id: a85af980-4c51-4d30-9fad-afd16370e9db
-source-git-commit: 45e731d2286b07db5852138ae1ac914a56b13a6a
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -109,9 +109,9 @@ Vissa egenskaper för resurser som visas i [!DNL Content Hub] härleds, eller ge
 
 <!--* **Tags:** Tags help you categorize assets that can be browsed and searched more efficiently. Tagging helps in propagating the appropriate taxonomy to other users and workflows. -->
 
-* **Smarta taggar:** [!DNL The Content Hub] använder Adobe Sensei smarta innehållstjänster för att utbilda resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL Experience Manager Assets] använder smarta taggar automatiskt på resurser som standard.
+* **Smarta taggar:** [!DNL The Content Hub] använder Adobe AI:s smarta innehållstjänster för att träna resurser med hjälp av igenkänningsalgoritmen i den taggbaserade strukturen. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Smarta taggar ökar innehållets hastighet genom att hjälpa dig att snabbt hitta relevanta resurser. De smarta taggarna är ett exempel på resursinformation som inte finns i bilden. [!DNL Experience Manager Assets] använder smarta taggar automatiskt på resurser som standard.
 
-* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=sv-SE) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe Sensei AI-funktioner.
+* **Färgtaggar:** [Med färgtaggar](#https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/color-tag-images.html?lang=en) kan du identifiera en resurs med hjälp av färger som identifieras automatiskt i en resurs med hjälp av Adobe AI-funktioner.
 
 * Överföringsdatum
 

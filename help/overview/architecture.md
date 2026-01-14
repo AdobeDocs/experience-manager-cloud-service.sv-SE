@@ -4,9 +4,9 @@ description: Introduktion till arkitekturen i Adobe Experience Manager as a Clou
 exl-id: 3fe856b7-a0fc-48fd-9c03-d64c31a51c5d
 feature: Release Information
 role: Admin
-source-git-commit: bb149cd43158bfd1ceb43b04cc536c8c8291f968
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '2711'
+source-wordcount: '2710'
 ht-degree: 8%
 
 ---
@@ -141,7 +141,7 @@ Det finns andra närliggande tjänster:
 * Operativ telemetritjänst:
    * Samlar in nyckeltal från en kundupplevelse (t.ex. sidvyer, centrala webbinarier, konverteringshändelser) och svarar på tillhörande frågor (t.ex. de översta sidvyerna för en viss domän de senaste 7 dagarna).
 * Tjänsten Assets Compute:
-   * Ansvarar för bearbetning av överförda bilder, videoklipp och dokument, till exempel PDF- och Adobe Photoshop-filer. Bearbetningen kan använda Adobe Sensei för att extrahera bild- och videometadata (till exempel beskrivande taggar eller primära färgtoner) och sedan generera återgivningar (till exempel olika storlekar eller format) med tillgång till API:er som Adobe Photoshop och Adobe Lightroom API:er.
+   * Ansvarar för bearbetning av överförda bilder, videoklipp och dokument, till exempel PDF- och Adobe Photoshop-filer. Bearbetningen kan använda Adobe AI för att extrahera bild- och videometadata (till exempel beskrivande taggar eller primära färgtoner) och sedan generera återgivningar (till exempel olika storlekar eller format) med tillgång till API:er som Adobe Photoshop och Adobe Lightroom API:er.
 * Identity Management-tjänsten (IMS):
    * Är den centrala plats som ansvarar för att hantera och autentisera användare och användargrupper för ett visst Adobe Experience Cloud-program (t.ex. Cloud Manager eller AEM författarnivå).
    * Är tillgänglig via Adobe Admin Console.
@@ -239,4 +239,4 @@ Den senaste arkitekturen för AEM as a Cloud Service innehåller några grundlä
 * Edge Delivery Services:
    * [AEM as a Cloud Service Overview - with Edge Delivery Services](/help/edge/overview.md)
    * [Använda Edge Delivery Services](/help/edge/overview.md)
-   * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=sv-SE)
+   * [Utforska den underliggande arkitekturen och viktiga delar av AEM as a Cloud Service med Edge Delivery Services](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html)

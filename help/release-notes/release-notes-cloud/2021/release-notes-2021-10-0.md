@@ -1,10 +1,10 @@
 ---
-title: Versionsinformation för version 2021.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2021.10.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2021.10.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2021.10.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: ab584923-5f06-4b54-941b-e00bc1158b81
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 0%
@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -46,7 +46,7 @@ Titta på videon [Oktober 2021 Release Overview](https://video.tv.adobe.com/v/33
 
 ### Ny funktion i betaversionskanalen [!DNL Assets] {#assets-prerelease-features}
 
-* [!DNL Dynamic Media] Image Smart Crop och Swatch drivs nu av de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
+* [!DNL Dynamic Media] Image Smart Crop och Swatch drivs nu av de senaste AI-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
 
 * Smarta taggar tillämpas automatiskt på resurserna med hjälp av resursmikrotjänster i stället för med smarta innehållstjänster. Den underliggande modellen uppdateras för att förbättra taggningsresultaten och minska bias. <!-- As it uses asset microservices, it is now possible to develop custom workers using Stock10-based Smart Tags. -->
 
@@ -64,30 +64,30 @@ No customer-reported bugs fixed in Oct release. Details in CQDOC-18404.
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#prerelease-features-forms-oct-2021}
 
-* **Gör AEM arbetsflödesdata externt för säker bearbetning**: Du kan lagra processdata AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+* **Gör AEM-arbetsflödesdata externt för säker bearbetning**: Du kan lagra processdata för AEM-arbetsflöden (AEM Workflow Variables-data) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM-databasen och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
-### Beta-funktioner i [!DNL Forms] {#what-is-new-forms-oct2021-beta}
+### Beta-funktioner i [!DNL Forms]  {#what-is-new-forms-oct2021-beta}
 
-* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html?lang=sv-SE) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
 
    * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
 
 Du kan skriva till [!DNL formscsbeta@adobe.com] för att registrera dig för betaprogrammet.
 
-## CIF {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
-* Tillägget CIF stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
+* CIF-tillägget stöder den senaste versionen av Commerce v2.4.3 med nya GraphQL API:er och scheman
 
-* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF ikon har lagts till i verktygsfältet som öppnar väljarna för att snabbt söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
+* Författare kan lägga till länkar till produkt- och katalogsidor i textfält med textredigeraren. En CIF-ikon har lagts till i verktygsfältet för textredigering som öppnar väljarna så att du snabbt kan söka efter och välja produkten eller kategorin utan att lämna sammanhanget.
 
-* Befintlig snabbkundvagn och utcheckning har ersatts med dedikerade AEM- och utcheckningssidor. Komponenterna på dessa sidor byggs med Adobe Commerce utökningsbara Premiere-komponenter
+* Befintlig kundvagn och utcheckning har ersatts med dedikerade kundvagn- och utcheckningssidor från AEM. Komponenterna på dessa sidor byggs med Adobe Commerce utökningsbara Premiere-komponenter
 
-* Marknadsförare kan dölja vissa produktkatalogkategorier i navigeringen med hjälp av Commerce serverdel. Den CIF kärnkomponenten för navigering respekterar e-handelsserverdelens konfiguration &quot;include in menu&quot; för att visa/dölja kategorier i navigering
+* Marknadsförare kan dölja vissa produktkatalogkategorier i navigeringen med hjälp av Commerce serverdel. CIF Navigation Core Component (kärnkomponent för navigering) respekterar serverdelskonfigurationen &quot;include in menu&quot; för att visa/dölja kategorier i navigeringen
 
-* AEM Storefront Venia returnerar HTTP 404-fel om kategori eller produktsida inte hittas
+* AEM Storefront Venia returnerar HTTP 404-fel om ingen kategori eller produktsida hittas
 
 ## Cloud Manager {#cloud-manager}
 
@@ -103,9 +103,9 @@ Nästa version är planerad till 9 december 2021.
 * Användare kan nu använda nya frontledningslinjer för att exklusivt distribuera slutkod på ett accelererat sätt. Mer information finns i [Cloud Manager Front End Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end).
 
   >[!IMPORTANT]
-  >Du måste ha AEM version `2021.10.5933.20211012T154732Z` för att kunna använda nya frontendpipelines.
+  >Du måste ha AEM-version `2021.10.5933.20211012T154732Z` för att kunna använda nya frontendpipelines.
 
-* Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
+* Tidslängden för bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett effektivare sätt utan att behöva skapa en hel AEM-bild. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
 
 * Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
 
@@ -156,7 +156,7 @@ Releasedatum för Cloud Manager i AEM as a Cloud Service 2021.10.0 är 14 oktobe
 
 * Cloud Manager-användare kan nu skicka feedback direkt från användargränssnittet via knappen **Feedback** överst till höger på landningssidan.
 
-* Årliga SLA-diagram kan nu hämtas från Cloud Manager användargränssnitt.
+* SLA Graphs kan nu laddas ned från Cloud Manager användargränssnitt.
 
 * Kodkvalitet och icke-produktionsrelaterade pipeline-körningar kommer nu att använda en mer effektiv, ytlig kloningsprocess under byggsteget, vilket ger en snabbare byggtid för kunder med särskilt stora Git-databaser.
 

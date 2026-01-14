@@ -2,9 +2,9 @@
 title: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 description: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: f72f72e87dabe89cafc0a56feb35f58ae1a97dfb
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '5078'
+source-wordcount: '5075'
 ht-degree: 0%
 
 ---
@@ -57,11 +57,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/get-started">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started">
    <img alt="Använd AEM datorprogram" src="./assets/desktop-app-upload.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/get-started">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started">
       <strong> Använda AEM-datorprogrammet </strong>
       </a>
    </div>
@@ -70,11 +70,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
    </p>
 </td>
 <td>
-   <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+   <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
    <img alt="Använd Adobe Asset Link" src="./assets/adobe-asset-link.jpeg" />
    </a>
    <div>
-      <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+      <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
       <strong> Använd Adobe Asset Link </strong>
       </a>
    </div>
@@ -86,9 +86,9 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 >[!TAB AI-funktioner]
 
-**Smarta taggar**: Smarta taggar använder det artificiellt intelligenta ramverket i Adobe Sensei för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Som standard lägger AEM automatiskt till smarta taggar i överförda resurser.
+**Smarta taggar**: Smarta taggar använder det artificiellt intelligenta ramverket i Adobe AI för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Som standard lägger AEM automatiskt till smarta taggar i överförda resurser.
 
-**Intelligent färgbaserad taggning och sökning**: AEM Assets använder Adobe Sensei AI-funktioner för att skilja mellan färger i en bild och tillämpa dessa egenskaper som taggar automatiskt vid förtäring. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
+**Intelligent färgbaserad taggning och sökning**: AEM Assets använder Adobe AI-funktioner för att skilja mellan färger i en bild och tillämpa dessa egenskaper som taggar automatiskt vid förtäring. Dessa taggar möjliggör en förbättrad sökfunktion baserat på bildens färgkomposition.
 
 **AI-genererade metadata**: AEM Assets använder AI för att generera metadata automatiskt, inklusive rubrik, beskrivning och nyckelord. Dessa AI-genererade fält gör metadata mer korrekta, vilket gör materialet enklare att söka, kategorisera och rekommendera. Detta tillvägagångssätt förbättrar inte bara effektiviteten genom att eliminera manuell taggning, utan garanterar också enhetlighet och skalbarhet för stora volymer digitalt innehåll.
 
@@ -193,7 +193,7 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 **Smart Imaging**: Smart Imaging ger ännu bättre prestanda för leverans av bildresurser genom att automatiskt optimera en bilds format och filstorlek baserat på en kunds webbläsarkapacitet. Det fungerar med befintliga bildförinställningar och använder intelligens vid leverans. Den här intelligensen minskar bildfilens storlek ytterligare baserat på webbläsarens och nätverkets anslutningshastighet.
 
-**Smart beskärning**: En Adobe Sensei AI-funktion, som identifierar fokalpunkten automatiskt i alla bilder och videoklipp, och beskär för att behålla den. Den fångar upp den avsedda intressepunkten oavsett skärmstorlek och eliminerar därmed långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla enheter och skärmar.
+**Smart beskärning**: En Adobe AI-funktion, som identifierar fokalpunkten automatiskt i alla bilder och videoklipp, och beskär för att behålla den. Den fångar upp den avsedda intressepunkten oavsett skärmstorlek och eliminerar därmed långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla enheter och skärmar.
 
 **AI-genererade videobeskrivningar**: AI-genererade videobeskrivningar i Adobe Dynamic Media använder artificiell intelligens för att generera bildtexter automatiskt för videoinnehåll. Den här funktionen är utformad för att förbättra tillgängligheten och användarupplevelsen genom att ge korrekta bildtexter. Bildtexter genereras från det ursprungliga ljudet, eventuella ytterligare ljudspår eller extra bildtexter finns på fliken `Captions and Audio` på sidan med videoegenskaper. Med stöd för över 60 språk kan bildtexter granskas och förhandsgranskas innan videon publiceras.
 <table>
@@ -213,11 +213,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
    <img alt="Smart beskärning" src="./assets/smart-cropping.jpg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
       <strong> Smart beskärning </strong>
       </a>
    </div>
@@ -297,7 +297,7 @@ AEM Assets innehåller funktioner som hjälper dig att snabbt hitta rätt resurs
 </td>
 </table>
 
-**Smarta taggar**: Smarta taggar använder det artificiellt intelligenta ramverket i Adobe Sensei för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Som standard lägger AEM automatiskt till smarta taggar i överförda resurser.
+**Smarta taggar**: Smarta taggar använder det artificiellt intelligenta ramverket i Adobe AI för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. Som standard lägger AEM automatiskt till smarta taggar i överförda resurser.
 
 **Sök efter resurser**: När du har rätt metadata på plats kan du söka med olika operatorer, jokertecken, avancerade frågor och anpassade filter i AEM Assets.
 
@@ -520,7 +520,7 @@ Du kan integrera resursväljaren med ett Adobe- eller ett program som inte komme
 
 * **Integrering med Adobe Workfront**: [!DNL Adobe Workfront] är ett arbetshanteringsprogram som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
-  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/sv/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations).
+  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations).
 
 * **Integrering med Figma**: AEM Assets kan integreras direkt med Figma, vilket gör att designers kan komma åt resurser som lagras direkt i AEM Assets inifrån Figma-användargränssnittet. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan i Figma och sedan spara nytt eller redigerat innehåll i AEM Assets-databasen. Klicka [här](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) om du vill få åtkomst till AEM Assets Connector på Figma Community-sidan.
 
@@ -581,16 +581,16 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
 
 * **Integrerar [!DNL AEM Assets] med [!DNL Universal Editor]-baserade redigeringsflöden för[!DNL Edge Delivery Services]**: Konfigurera [!DNL Universal Editor] för integrering med [!DNL AEM Assets]. Med den här integreringen kan du använda [!DNL Dynamic Media with OpenAPI capabilities] för att leverera resurser.
 
-   * Mer information om hur du lägger till en anpassad resursväljarfunktion i [&#x200B; finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
+   * Mer information om hur du lägger till en anpassad resursväljarfunktion i [ finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
    * Läs [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill veta hur du får åtkomst till [!DNL AEM Assets] och infogar resurserna när du redigerar i [!DNL Universal Editor].
 
 <table>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+   <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
    <img alt="Integrering med Adobe Journey Optimizer" src="./assets/integration-figma.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+      <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
       <strong>Integrering med Adobe Journey Optimizer</strong>
       </a>
    </div>
@@ -599,11 +599,11 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/commerce/aem-assets-integration/overview">
+   <a href="https://experienceleague.adobe.com/en/docs/commerce/aem-assets-integration/overview">
    <img alt="Integrering med Commerce" src="./assets/integration-ajo.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/commerce/aem-assets-integration/overview">
+      <a href="https://experienceleague.adobe.com/en/docs/commerce/aem-assets-integration/overview">
       <strong>Integrering med Commerce</strong>
       </a>
    </div>
@@ -704,7 +704,7 @@ Dynamic Media har följande viktiga funktioner:
 
 * **Adaptiva videouppsättningar**: En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format. Du börjar med den ursprungliga primära videon som du överför till systemet. Dynamic Media ändrar automatiskt storlek på videon, eller omkodar den till flera videor. När filmen levereras avgör den sedan på ett smart sätt vilken videoskärm, vilken kvalitet och vilket format som ska användas och skickar den till telefonen, surfplattan eller datorn.
 
-* **Smart beskärning**: En Adobe Sensei AI-funktion som automatiskt identifierar fokalpunkten i en bild eller video och beskär för att behålla den. Den fångar upp den avsedda intressepunkten oavsett skärmstorlek och eliminerar därmed långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla enheter och skärmar.
+* **Smart beskärning**: En Adobe AI-funktion som automatiskt identifierar fokalpunkten i en bild eller video och beskär för att behålla den. Den fångar upp den avsedda intressepunkten oavsett skärmstorlek och eliminerar därmed långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla enheter och skärmar.
 
 * **Dynamiska mediamallar**: Skapa anpassningsbara mallar i realtid för banners och flygblad med Dynamic Media-mallar, en WYSIWYG-mallredigerare. Publicera mallen för dynamiska media och använd den i program längre fram i kedjan. En mall för dynamiska media innehåller bild- och textlager. Lägg till parametrar i bild- och textlagren i mallen och använd dynamiska medie-URL:er för att flytta och ändra storlek på lagret och uppdatera innehållet i realtid.
 

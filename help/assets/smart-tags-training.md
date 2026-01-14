@@ -1,19 +1,19 @@
 ---
-title: Tagga resurser automatiskt med  [!DNL Adobe Sensei] smart tjänst
-description: Tagga tillgångar med en artificiellt intelligent tjänst som använder kontextuella och beskrivande affärstaggar.
+title: Tagga resurser automatiskt med  [!DNL Adobe AI] smart tjänst
+description: Tagga tillgångar med en artificiellt intelligent tjänst som tillämpar kontextuella och beskrivande affärstaggar.
 feature: Smart Tags,Tagging
 role: Admin,User
-source-git-commit: a579e2e25ecff93f6f1487ec0bcd317df09751cf
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
 source-wordcount: '1465'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
 
 # Utbildning om smarta taggar
 
-Med hjälp av utbildningsmaterialet för smarta taggar kan du träna dina taggar så att du kan ange information om de relevanta taggarna inte finns där. Den använder ett artificiellt intelligent ramverk av [Adobe Sensei](https://business.adobe.com/se/why-adobe/experience-cloud-artificial-intelligence.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och i din affärsmiljö. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
+Med hjälp av utbildningsmaterialet för smarta taggar kan du träna dina taggar så att du kan ange information om de relevanta taggarna inte finns där. Den använder ett artificiellt intelligent ramverk av [Adobe AI](https://business.adobe.com/ai/adobe-genai.html) för att utbilda sin bildigenkänningsalgoritm i din taggstruktur och din företagsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser. [!DNL Experience Manager Assets] använder automatiskt smarta taggar på överförda resurser som standard.
 
 ## Fastställa kraven på smarta taggar-utbildning {#smart-tag-training-requirement}
 
@@ -118,14 +118,14 @@ Kontrollera att bilderna i kursuppsättningen överensstämmer med följande rik
 >[!NOTE]
 >
 >Du kan använda samma bilder för att utbilda olika taggmodeller. Koppla emellertid inte en bild till mer än en tagg i en taggmodell. Du kan lägga till märkord i samma bild med olika märkord som tillhör olika taggmodeller.
->&#x200B;>Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
+>Du kan inte ångra kursen. Riktlinjerna ovan bör hjälpa dig att välja bra bilder att utbilda.
 
 ## Ange modell för anpassade taggar {#train-model}
 
 Följ de här stegen för att skapa och utbilda en modell för dina företagsspecifika taggar:
 
 1. Skapa nödvändiga taggar och rätt taggstruktur. Överför relevanta bilder i DAM-databasen.
-1. Gå till **[!UICONTROL Assets]** > **[!UICONTROL Smart Tag Training]** i användargränssnittet för [!DNL Experience Manager Cloud Service].
+1. Gå till [!DNL Experience Manager Cloud Service] > **[!UICONTROL Assets]** i användargränssnittet för **[!UICONTROL Smart Tag Training]**.
 1. Klicka på **[!UICONTROL Create]**. Ange **[!UICONTROL Title]**, **[!UICONTROL Description]**.
 1. Klicka på mappikonen i fältet **[!UICONTROL Tags]**. Ett popup-fönster öppnas.
 1. Sök efter eller välj lämpliga taggar från de befintliga taggarna i `cq-tags` som du vill lägga till i modellen. Klicka på **[!UICONTROL Next]**.
@@ -135,7 +135,7 @@ Följ de här stegen för att skapa och utbilda en modell för dina företagsspe
    >Du kan sortera taggstrukturen i stigande eller fallande ordning baserat på **[!UICONTROL Name]** (i alfabetisk ordning), **[!UICONTROL Created]**-datum eller **[!UICONTROL Modified]**-datum.
 
 
-1. Klicka **[!UICONTROL Add Assets]** mot varje tagg i dialogrutan **[!UICONTROL Select Assets]**. Sök i DAM-databasen eller bläddra i databasen för att välja minst 10 och högst 50 bilder. Välj resurser och inte mappen. När du har markerat bilderna klickar du på **[!UICONTROL Select]**.
+1. Klicka **[!UICONTROL Select Assets]** mot varje tagg i dialogrutan **[!UICONTROL Add Assets]**. Sök i DAM-databasen eller bläddra i databasen för att välja minst 10 och högst 50 bilder. Välj resurser och inte mappen. När du har markerat bilderna klickar du på **[!UICONTROL Select]**.
 
    ![Visa utbildningsstatus](assets/smart-tags-training-status.png)
 
@@ -151,7 +151,7 @@ Följ de här stegen för att skapa och utbilda en modell för dina företagsspe
 Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i utbildningsuppsättningen med resurser kan du läsa rapporten om utbildningsarbetsflödet i rapportkonsolen.
 
 1. I gränssnittet [!DNL Experience Manager Cloud Service] går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
-1. Klicka på **[!UICONTROL Create]** på sidan **[!UICONTROL Asset Reports]**.
+1. Klicka på **[!UICONTROL Asset Reports]** på sidan **[!UICONTROL Create]**.
 1. Välj rapporten **[!UICONTROL Smart Tags Training]** och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
 1. På sidan **[!UICONTROL Asset Reports]** markerar du rapporten som du skapat. Om du vill visa rapporten klickar du på **[!UICONTROL View]** i verktygsfältet.
@@ -161,15 +161,15 @@ Om du vill kontrollera om smarta taggar-tjänsten är utbildad i dina taggar i u
 >[!NOTE]
 >
 >Hur gör jag om jag vill överföra övergången från smarta taggar från en instans till en annan via en export?
->&#x200B;>Du behöver inte exportera utbildning för smarta taggar om miljön tillhör samma IMS-organisation. Den delas automatiskt. Om miljön fungerar på olika IMS-organ finns det inget sätt att dela eller exportera utbildning för smarta taggar.
+>Du behöver inte exportera utbildning för smarta taggar om miljön tillhör samma IMS-organisation. Den delas automatiskt. Om miljön fungerar på olika IMS-organ finns det inget sätt att dela eller exportera utbildning för smarta taggar.
 
 ## Begränsningar och bästa metoder för smarta taggar {#limitations-smart-tags-training}
 
 * Använd de bilder som passar bäst för att utbilda modellen. Utbildningen kan inte återupptas eller så kan utbildningsmodellen inte tas bort. Hur korrekt taggningen är beror på den aktuella kursen, så gör det med omsorg.
-* Du kan inte utbilda tjänsten som tillämpar smarta taggar på videoklipp med hjälp av specifika videoklipp. Det fungerar med standardinställningarna för [!DNL Adobe Sensei].
+* Du kan inte utbilda tjänsten som tillämpar smarta taggar på videoklipp med hjälp av specifika videoklipp. Det fungerar med standardinställningarna för [!DNL Adobe AI].
 
 
 >[!NOTE]
 >
 >Möjligheten att använda smarta taggar för att utbilda dig på dina taggar och använda dem på andra bilder beror på kvaliteten på de bilder du använder i utbildningen.
->&#x200B;>För bästa resultat rekommenderar Adobe att du använder visuellt liknande bilder för att utbilda tjänsten för varje tagg.
+>För bästa resultat rekommenderar Adobe att du använder visuellt liknande bilder för att utbilda tjänsten för varje tagg.

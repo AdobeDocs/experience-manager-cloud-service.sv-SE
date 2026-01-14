@@ -1,12 +1,12 @@
 ---
-title: Versionsinformation för version 2021.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
-description: Versionsinformation för version 2021.11.0 av  [!DNL Adobe Experience Manager] as a Cloud Service.
+title: Versionsinformation om 2021.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2021.11.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 exl-id: 86f8ddd1-af51-4874-9111-0935b5a162c1
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ I följande avsnitt beskrivs den allmänna versionsinformationen för den aktuel
 
 >[!NOTE]
 >
->Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html?lang=sv-SE).
+>Mer information om dokumentationsuppdateringar som inte är direkt relaterade till en release finns i [Senaste dokumentationsuppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/doc-updates/documentation-updates.html).
 
 ## Releasedatum {#release-date}
 
@@ -36,11 +36,11 @@ Titta på videon [Versionsöversikt för december 2021](https://video.tv.adobe.c
 
 ### Nya funktioner i [!DNL Assets] {#assets-features}
 
-* Dynamic Media Image Smart Crop och Swatch drivs nu av de senaste Sensei-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
+* Dynamic Media Image Smart Crop och Swatch drivs nu av de senaste Adobe AI-tjänsterna som genererar förbättrade beskärningar och färgrutor. Dessutom har en förbättring startats för att generera olika beskärningsinnehåll, med samma proportioner men med olika upplösningar. Dessutom behålls alla manuella redigeringar vid ombearbetningen om bredden och höjden inte ändras i bildprofilen.
 
 ### Nya funktioner i betaversionskanalen [!DNL Assets] {#assets-prerelease-features}
 
-* [!DNL Dynamic Media] - Du kan nu använda AEM Dynamic Media-gränssnitt för att konfigurera allmänna inställningar och Publish-inställningar i stället för att behöva gå igenom Dynamic Media Classic skrivbordsprogram.
+* [!DNL Dynamic Media] - Nu kan du använda AEM Dynamic Media-gränssnittet för att konfigurera allmänna inställningar och publiceringsinställningar i stället för att behöva gå igenom Dynamic Media Classic skrivbordsprogram.
 
 * [!DNL Dynamic Media] har nu stöd för hämtning, förhandsgranskning, uppspelning och publicering för MXF-videor. Anteckningar och videor som kan köpas för MXF-videor stöds ännu inte.
 
@@ -50,20 +50,20 @@ Titta på videon [Versionsöversikt för december 2021](https://video.tv.adobe.c
 
 ### Nyheter i [!DNL Forms] {#what-is-new-forms}
 
-* **Gör AEM arbetsflödesdata externt för säker bearbetning**: Du kan lagra processdata AEM arbetsflödesdata (AEM arbetsflödesvariabeldata) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
+* **Gör AEM-arbetsflödesdata externt för säker bearbetning**: Du kan lagra processdata för AEM-arbetsflöden (AEM Workflow Variables-data) som innehåller känsliga SPD-element (Personal Data) i en kundhanterad databas för säker bearbetning. Dataelementen och arbetsflödesvariablerna lagras inte i AEM-databasen och hämtas på begäran från en kundhanterad databas när arbetsflödet bearbetas.
 
 ### Nya funktioner som är tillgängliga i betaversionskanalen i [!DNL Forms] {#prerelease-features-forms}
 
-* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html?lang=sv-SE) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
+* **[!DNL AEM Forms as a Cloud Service - Communications]**: [Kommunikations-API:er](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/using-communications/aem-forms-cloud-service-communications.html) hjälper dig att kombinera en mall och XML-data för att generera utskriftsdokument i olika format. Med tjänsten kan du generera dokument i synkront läge och gruppläge. Med API:erna kan du skapa program som gör att du kan:
 
    * Generera dokument genom att fylla i mallfiler (PDF och XDP) med XML-data.
    * Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-utskriftsströmmar.
 
-* **Anpassade teckensnitt för dokument med dokumentinformation och PDF som skapats med kommunikations-API:er**: Du kan nu använda teckensnitt som godkänts av varumärket i PDF-dokument som skapats med kommunikations-API:er för att anpassa dem efter organisationens krav.
+* **Anpassade teckensnitt för dokument i dokumentformat och PDF-dokument som skapats med kommunikations-API:er**: Du kan nu använda teckensnitt som godkänts av varumärket i PDF-dokument som skapats med kommunikations-API:er för att anpassa dem efter organisationens krav.
 
-* **Forms Portal**: Du kan använda [Forms Portal](/help/forms/configure-forms-portal.md) för att lista dina publicerade adaptiva formulär på en AEM Sites-sida. Det hjälper en besökare att hitta alla tillgängliga formulär. Dessutom kan besökaren använda formulärportalen för att spara och komma åt utkast av ett adaptivt formulär och titta på PDF-versionen av ett skickat adaptivt formulär.
+* **Forms Portal**: Du kan använda [Forms Portal](/help/forms/configure-forms-portal.md) för att lista dina publicerade adaptiva formulär på en AEM Sites-sida. Det hjälper en besökare att hitta alla tillgängliga formulär. Dessutom kan besökaren använda formulärportalen för att spara och komma åt utkast av ett adaptivt formulär och titta på PDF-versionen av ett inskickat adaptivt formulär.
 
-## CIF {#cloud-services-cif}
+## CIF Add-on {#cloud-services-cif}
 
 ### Nyheter {#what-is-new-cif}
 
@@ -71,7 +71,7 @@ Titta på videon [Versionsöversikt för december 2021](https://video.tv.adobe.c
 
 ![Utökade komponenter för mitt konto](/help/assets/CIF/extended-myAccount-components.png)
 
-* Författare kan skapa ad hoc-produkter för Commerce Recommendations med hjälp av ytterligare rekommendationstyper
+* Författare kan skapa tillfälliga Commerce-produktrekommendationer med hjälp av ytterligare rekommendationstyper
 
 * Stöd för presentkort i AEM Storefront
 
@@ -89,9 +89,9 @@ Nästa version är planerad till 9 december 2021.
 * Användare kan nu använda nya frontledningslinjer för att exklusivt distribuera slutkod på ett accelererat sätt. Mer information finns i [Cloud Manager Front End Pipelines](/help/implementing/cloud-manager/configuring-pipelines/introduction-ci-cd-pipelines.md#front-end).
 
   >[!IMPORTANT]
-  >Du måste ha AEM version `2021.10.5933.20211012T154732Z` eller senare för att kunna använda nya frontendpipelines.
+  >Du måste vara i AEM version `2021.10.5933.20211012T154732Z` eller senare för att kunna använda nya frontendpipelines.
 
-* Varaktigheten i bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett mer effektivt sätt utan att behöva skapa en hel AEM. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
+* Tidslängden för bildrutorna för kodkvalitet minskar avsevärt genom att utföra kodanalysen på ett effektivare sätt utan att behöva skapa en hel AEM-bild. Denna förändring rullar ut progressivt under de veckor som följer efter releasen.
 
 * Git-implementerings-ID visas nu i körningsinformationen för pipeline, vilket gör det enklare att spåra koden som skapades.
 

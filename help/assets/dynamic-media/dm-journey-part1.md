@@ -11,9 +11,9 @@ mini-toc-levels: 4
 hide: false
 hidefromtoc: false
 exl-id: f3472006-d5ae-4f70-af3e-44e73aee85cc
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '3612'
+source-wordcount: '3611'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ Här är några fler användningsområden att tänka på.
 
 | **Utgåva** | **Dynamisk medielösning** |
 |---|---|
-| Tidsödande och arbetskrävande att manuellt rita, mäta och klippa bilder eller videor för att markera fokalpunkten och visa på rätt sätt på alla skärmstorlekar och enheter. | Använder Smart Crop i Dynamic Media, en Adobe Sensei AI-funktion, för att automatiskt identifiera fokalpunkten i bilder och videoklipp och beskära för att behålla den. |
+| Tidsödande och arbetskrävande att manuellt rita, mäta och klippa bilder eller videor för att markera fokalpunkten och visa på rätt sätt på alla skärmstorlekar och enheter. | Använder Smart Crop i Dynamic Media, en Adobe AI-funktion, för att automatiskt identifiera fokalpunkten i bilder och videoklipp och beskära för att behålla den. |
 | Förlorad tid som skulle kunna användas bättre för att skapa slagkraftiga upplevelser. | Fångar den avsedda intressepunkten oavsett skärmstorlek. |
 | Enkelt använda resurser som skapats för alla upplevelser och enheter. | Eliminerar långtråkiga manuella moment och levererar högkvalitativa, snabba bilder och video som ser bra ut på alla slags enheter och skärmar. |
 
@@ -284,8 +284,8 @@ _Dynamic Media Help topics_
 
 _Självstudiekurser för dynamiska media_
 
-* [Använd dynamiska media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html?lang=sv-SE)
-* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/sv?lang=en#recommended/solutions/experience-manager) (sök på _Dynamiska media_)
+* [Använd dynamiska media med Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-overview-feature-video-use.html)
+* [Adobe Experience Manager innehållsbibliotek](https://experienceleague.adobe.com/?lang=en#recommended/solutions/experience-manager) (sök på _Dynamiska media_)
 
 _Dynamiska medievisningsprogram_
 

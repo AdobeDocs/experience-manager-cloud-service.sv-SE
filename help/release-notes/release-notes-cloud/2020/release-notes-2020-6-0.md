@@ -1,19 +1,19 @@
 ---
 title: Versionsinformation om Adobe Experience Manager as a Cloud Service 2020.6.0
-description: "[!DNL Adobe Experience Manager] as a Cloud Service versionsinformation för 2020.6.0."
+description: '[!DNL Adobe Experience Manager] Versionsinformation om as a Cloud Service för 2020.6.0.'
 exl-id: fd6ebe2b-6d98-498c-a45d-b9a9c34e6be7
 feature: Release Information
 role: Admin
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1914'
 ht-degree: 0%
 
 ---
 
 # Versionsinformation om AEM as a Cloud Service 2020.6.0 {#release-notes}
 
-På den här sidan beskrivs den allmänna versionsinformationen för Experience Manager as a Cloud Service 2020.6.0.
+På den här sidan finns en översikt över den allmänna versionsinformationen för Experience Manager as a Cloud Service 2020.6.0.
 
 ## Releasedatum {#release-date}
 
@@ -25,7 +25,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ### Nyheter {#whats-new-2020.6.0}
 
-Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är nu tillgänglig som en del av AEM Sites inklusive:
+Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är nu tillgänglig som en del av AEM Sites inklusive:
 
 * Integrering mellan [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer) och Core Components
 * Konfigurerbara HTML ID-attribut för alla komponenter
@@ -38,7 +38,7 @@ Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/exper
 
 * Korrigerat problem med storleksändring av layoutkomponent.
 
-* Lagt till möjlighet att hantera endast Angular- och AEM/Angular-sidor.
+* Lagt till möjlighet att hantera routning på Angular-sidor och AEM/Angular-sidor.
 
 ### Tillgänglighet {#accessibility}
 
@@ -50,7 +50,7 @@ Version 2.9.0 av [Core Components](https://experienceleague.adobe.com/docs/exper
 
 ## Nyheter i Foundations i AEM as a Cloud Service {#foundations}
 
-AEM projektbyggtider förbättras genom att alla referenser i det AEM projektets pom.xml tas bort från fjärrdatabasen `https://downloads.experiencecloud.adobe.com/content/maven/public`.
+AEM projektbyggtider förbättras genom att alla referenser i AEM-projektets pom.xml tas bort från fjärrdatabasen `https://downloads.experiencecloud.adobe.com/content/maven/public`.
 
 AEM as a Cloud Service SDK API Jar, som tidigare fanns på den platsen, finns nu i Maven Central, som är Maven standardarkiv för artefakter.
 
@@ -62,11 +62,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen *Affärsägare* i Cloud Manager kan nu ta bort ett sandlådeprogram från landningssidan (via snabbåtgärdsknappen på programkortet) eller från programmet.
 
-  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html?lang=sv-SE).
+  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
 
 * En användare av sandlådeprogrammet i rollen *Business Owner* eller *Deployment Manager* i Cloud Manager kan nu ta bort sin produktions- och scenmiljö som angetts via Cloud Manager användargränssnitt. Alternativet Ta bort är nu tillgängligt både från miljökortet på sidan **Programöversikt** och på sidan **Miljö**. Om du väljer borttagningsalternativet för antingen produktion eller scen tas även det andra bort i uppsättningen.
 
-  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html?lang=sv-SE).
+  Mer information finns i [Ta bort ett sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/cloud-service-programs/creating-a-program.html).
 
 * Tips på landningssidan som informerar och instruerar användaren om grundläggande navigering.
 
@@ -78,11 +78,11 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * En användare i rollen SysAdmin har nu tillgång till den plats i Admin Console där användarroller och behörigheter till Cloud Manager kan hanteras med ett enda klick. En **Hantera åtkomst**-knapp är nu tillgänglig på landningssidan bredvid knappen **Lägg till program** .
 
-  Mer information finns i [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=sv-SE#sysadmin-tasks).
+  Mer information finns i [SysAdmin-uppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#sysadmin-tasks).
 
 * En användare i rollen SysAdmin har nu tillgång till författarinstansen med ett enda klick direkt från Cloud Manager.
 
-  Mer information finns i [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html?lang=sv-SE#manage-access-aem).
+  Mer information finns i [Hantera åtkomst till författarinstansen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/navigation.html#manage-access-aem).
 
 * Build-loggen innehåller nu en lista över identifierade artefakter, inklusive överhoppade innehållspaket.
 
@@ -94,7 +94,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 * I vissa situationer var ikonerna i dialogrutan **Skapa program** feljusterade.
 
-* Den AEM releaseidentifieraren visades inte konsekvent på sidan **Programöversikt**.
+* Identifieraren för AEM-versionen visades inte konsekvent på sidan **Programöversikt**.
 
 * När produktionsflödet konfigurerades var alternativet **Schemalagd distribution** inte synligt för vissa kunder.
 
@@ -106,7 +106,7 @@ Följ det här avsnittet för att lära dig mer om nyheter och uppdateringar fö
 
 ## Nyheter i [!DNL Adobe Experience Manager Assets] {#aem-assets}
 
-**Guided User Experience for Enhanced Smart Tags, från Adobe Sensei**
+**Guided User Experience for Enhanced Smart Tags, från Adobe AI**
 
 Förbättrade smarta taggar gör det möjligt för organisationer att utbilda smarta taggningsmodeller för att identifiera bilder som baseras på kundspecifika företagstaggar utöver generiska smarta taggar.
 
@@ -115,13 +115,13 @@ Utbilda förbättrade smarta taggar för mer intuitiv utbildning i Smarta taggar
 
 **Stöd för konsumtion, förhandsgranskning och leverans av 3D-innehåll**
 
-Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda olika centrala 3D-filer, inklusive OBJ-, STL-, GLTF- och GLB-filer. Med tillägget [!DNL Dynamic Media] kan du konfigurera och leverera 3D-upplevelser med hjälp av agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, en 3D Viewer-komponent för Sites och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i Dynamic Media](/help/assets/dynamic-media/assets-3d.md).
+Organisationer kan nu lagra och använda 3D-filer i AEM Assets. Användaren kan ladda upp, förhandsgranska och använda olika centrala 3D-filer, inklusive OBJ-, STL-, GLTF- och GLB-filer. Med tillägget [!DNL Dynamic Media] kan du konfigurera och leverera 3D-upplevelser med hjälp av agnostiska URL:er eller visningsprogram. Detta inkluderar en [!DNL Dynamic Media] 3D Experience Viewer, en 3D Viewer-komponent för Sites och möjligheten att leverera 3D-filer via [!DNL Dynamic Media] (AR/VR). Se [Arbeta med 3D-resurser i dynamiska media](/help/assets/dynamic-media/assets-3d.md).
 
 **Stöd för Adobe Asset Link för Adobe XD**
 
-I den senaste versionen stöder [!DNL Experience Manager Assets] ett nytt [!DNL Adobe Asset Link]-plugin-program som släpps med [!DNL Adobe XD] v29.3. Tack vare integreringen kan designers komma åt och använda resurser från [!DNL Experience Manager] i sin design, utan att behöva lämna [!DNL Adobe XD] -programmet. Se [Adobe Asset Link för Adobe XD-dokumentation](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link-for-xd.html).
+I den senaste versionen stöder [!DNL Experience Manager Assets] ett nytt [!DNL Adobe Asset Link]-plugin-program som släpps med [!DNL Adobe XD] v29.3. Tack vare integreringen kan designers komma åt och använda resurser från [!DNL Experience Manager] i sin design, utan att behöva lämna [!DNL Adobe XD] -programmet. Se [Adobe Asset Link för Adobe XD-dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link-for-xd.html).
 
-I den här versionen kan kreativa användare och designers nu arbeta med resurser som hanteras i [!DNL AEM Assets] med hjälp av [!DNL Adobe Asset Link] i ett antal datorprogram i Creative Cloud, inklusive [!DNL Adobe XD], [!DNL Photoshop], [!DNL Illustrator] och [!DNL InDesign].
+I den här versionen kan kreativa användare och designers nu arbeta med resurser som hanteras i [!DNL AEM Assets] med hjälp av [!DNL Adobe Asset Link] i en rad Creative Cloud-skrivbordsappar, bland annat [!DNL Adobe XD], [!DNL Photoshop], [!DNL Illustrator] och [!DNL InDesign].
 
 **Tillgänglighetsförbättringar**
 
