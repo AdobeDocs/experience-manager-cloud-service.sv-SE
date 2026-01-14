@@ -480,7 +480,7 @@ Nu när miljön är konfigurerad kan du börja testa API:erna för AEM Forms Com
 
 >[!TAB A. Använda Swagger-gränssnittet för API-testning ]
 
-Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API:er utan att behöva skriva kod. Använd funktionen **Prova** för att anropa och testa [generera Forms Communication API ](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) för PDF.
+Swagger-gränssnittet innehåller ett interaktivt gränssnitt för att testa API:er utan att behöva skriva kod. Använd funktionen **Prova** för att anropa och testa [generera Forms Communication API &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm) för PDF.
 
 1. Navigera till [Forms Communication API Reference](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/) och öppna [Forms Communication API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document) -dokumentationen i webbläsaren.
 2. Expandera avsnittet **Dokumentgenerering** och välj [Skapar ett ifyllbart PDF-formulär från en XDP- eller PDF-mall, eventuellt med datasammanfogning](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/#operation/renderPDFForm).
