@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2025.12.12
-description: Detta är versionsinformationen för version 2025.12.11 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.01.15
+description: Detta är versionsinformationen för version 2026.01.15 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: b7b89587a81d0cadc81d4b2a486c022557c4a9fb
+source-git-commit: 08e495b0859e9f0a0378a0fb8bd565bc76c777da
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2025.12.12 {#release-notes}
+# Versionsinformation om Universal Editor 2026.01.15 {#release-notes}
 
-Det här är versionsinformationen för den 12 december 2025-versionen av Universal Editor.
+Det här är versionsinformationen för den 15 januari 2026-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,11 +26,10 @@ Det här är versionsinformationen för den 12 december 2025-versionen av Univer
 
 ## Nyheter {#what-is-new}
 
-* Stöd har lagts till i befintliga tabeller i [RTF-redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options)
-* Tabbtangenten har aktiverats för kapslade listor i [RTF-redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options)
-* Inloggningsfunktionen för utvecklare kan nu inaktiveras via [meta-taggen `aem-dev-login`.](/help/implementing/universal-editor/customizing.md#meta-tags)
-* En högerklickning i övertäckningssektionen visar nu en [snabbalternativmeny.](/help/sites-cloud/authoring/universal-editor/authoring.md#context-options)
-* [Omfångsindrag](/help/implementing/universal-editor/configure-rte.md#indentation) stöds nu i [RTF-redigeraren.](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options)
+* Stöd för att ange och behålla [standardvärden för modellfält har lagts till.](/help/implementing/universal-editor/field-types.md)
+   * Om inget värde anges kommer Universal Editor att behålla det som definieras som `value` i modelldefinitionen.
+   * Detta säkerställer att det du ser matchar det som finns kvar i backend-objektet.
+   * Det här är en stor förändring.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -40,13 +39,6 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Egenskapsfältet synkroniseras nu när flera fält ändras i sitt sammanhang.
-* Innehållsfragmentväljaren öppnas nu som väntat i AEM 6.5-instanser.
-* Esc-tangenten stänger nu dialogrutor i RTF-redigeraren.
-* Åtgärden **Ta bort komponent** är nu bara tillgänglig när en komponent är markerad.
-* Den korrekta (gamla eller nya) redigeraren för innehållsfragment öppnas nu baserat på den använda instansen (om värdnamnet är AEM as a Cloud Service-mönstret använder du den nya redigeraren, annars använder du den äldre redigeraren).
-* Filtervalidering läggs till i dubblettåtgärden.
-* Långa titlar trunkeras nu i egenskapsfältet.
-* Matriser för hantering av flera webbplatser med fler än 10 värden hanteras nu korrekt.
-* Konfliktfel vid skapande av flera komponenter med samma namn hanteras nu korrekt.
-* Matrishantering för flera platser med värden >10 lades till.
+* Rensning av data utförs nu korrekt på innehållsväxling.
+* Flera åtgärder i tilläggens uppdatering stöds nu.
+* Stängningsknappen för utvecklarinloggning fungerar nu som förväntat.
