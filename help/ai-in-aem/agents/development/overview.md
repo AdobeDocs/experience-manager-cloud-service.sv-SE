@@ -3,9 +3,9 @@ title: Översikt över utvecklingsagenten
 description: Läs om hur utvecklingsagenten i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
 feature: Agentic AI, AI Assistant, AI Tools, User Roles
 role: User, Admin, Architect, Developer
-source-git-commit: b206c73853e2f81a1bd5a15bb1e0d5d7658f70a5
+source-git-commit: d10eb260195e402a6347ad40ddb851baf5949c83
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Utvecklingsagenten hjälper AEM-utvecklare och -administratörer att skapa, fels
 
 För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3478011?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3478006?quality=12&learn=on)
 
 >[!IMPORTANT]
 >
@@ -28,6 +28,8 @@ För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka
 <!-- 
 ## Cloud Manager Pipeline Troubleshooting  {#cloud-manager-pipeline-troubleshooting}
 -->
+
+Skicka e-post till [aem-devagent@adobe.com](mailto:aem-devagent@adobe.com) med feedback eller förfrågningar om åtkomst till den här agenten.
 
 ## Gå till utvecklingsagenten via Cloud Manager {#how-to-access-the-agent}
 
@@ -47,7 +49,7 @@ Du kommer åt utvecklingsagenten via AI-assistenten i användargränssnitt som C
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
@@ -81,13 +83,13 @@ Utvecklingsagentens pipeline-felsökningsjobb kräver antingen rollen Cloud Mana
 
 | Fråga | Resultat |
 | --- | --- |
+| *Felsök min felaktiga pipeline* | Utför en analys av varför en pipeline misslyckades. Om det är oklart vilken pipeline som hänvisas till kommer ytterligare frågor att tillfrågas användaren. |
 | *Visa mina misslyckade pipelines för huvudprogrammet för programmet.* | Resultatet kan variera, men den här uppmaningen visar en tabell med misslyckade pipelines, med ett uppföljningsförslag som refererar till en viss pipeline som ska analyseras. |
-| *Analysera min misslyckade pipeline med namnet&quot;Dev Pipeline&quot;.* | Den här uppmaningen resulterar i en analys av den misslyckade pipeline med förslag på åtgärder. |
+| *Analysera min misslyckade pipeline med namnet&quot;Dev Pipeline&quot;.* | Den här uppmaningen resulterar i en analys av den misslyckade pipeline med förslag på åtgärder. Om flera fel uppstår tillfrågas användaren om ytterligare frågor. |
+| *Felsöka pipeline-körning 1234567* | Genom att ange ett exakt ID för pipeline-körning utförs en pipeline-analys. |
 
 ## Funktioner som inte är tillgängliga {#out-of-scope-features}
 
 Felsökning av pipeline utförs i stegen för att bygga en hel pipeline. Om du vill se andra typer av pipeline och steg felsöker du genom att hämta och inspektera loggarna.
 
 Se [Åtkomst- och hämtningsloggar](/help/implementing/cloud-manager/manage-logs.md).
-
-Felsökning av pipeline stöds inte för program som använder BYOGIT (Bring Your Own Git).
