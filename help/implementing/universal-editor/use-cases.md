@@ -4,7 +4,7 @@ description: Lär dig mer om de viktigaste användningsexemplen i Universal Edit
 exl-id: 398ad0e2-c299-4c49-9784-05c84c67bec2
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 9adf2bc4f9f25ee7fc0a39b0f1a3ae9e45fce7d2
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -79,7 +79,7 @@ För att en sida eller ett program ska kunna redigeras av den universella redige
 
 * [Attribut och typer](/help/implementing/universal-editor/attributes-types.md) - För att ett program eller en sida ska kunna redigeras av den universella redigeraren måste det vara korrekt instrumenterat. Detta inkluderar rätt metadata så att redigeraren kan redigera innehållet i programmet.
 * [Modelldefinitioner, fält och komponenttyper](/help/implementing/universal-editor/field-types.md) - När metadata finns för att aktivera redigering av en komponent definierar du vilka fält och komponenttyper som de kan ändra på egenskapspanelen i redigeraren.
-* [Universella redigeringshändelser](/help/implementing/universal-editor/events.md) - Du kan anpassa appen ytterligare genom att förbättra redigeringsupplevelsen i appen genom att använda händelser som den universella redigeraren genererar på innehåll eller gränssnittsinteraktioner.
+* [Universella redigeringshändelser](/help/implementing/universal-editor/events-universal-editor.md) - Du kan anpassa appen ytterligare genom att förbättra redigeringsupplevelsen i appen genom att använda händelser som den universella redigeraren genererar på innehåll eller gränssnittsinteraktioner.
 
 Den universella redigeraren kan också anpassas efter dina projektbehov.
 

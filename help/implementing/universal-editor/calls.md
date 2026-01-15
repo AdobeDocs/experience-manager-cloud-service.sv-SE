@@ -4,7 +4,7 @@ description: Lär dig mer om de olika typer av samtal som görs till appen av de
 exl-id: 00d66e59-e445-4b5c-a5b1-c0a9f032ebd9
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 9adf2bc4f9f25ee7fc0a39b0f1a3ae9e45fce7d2
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -27,7 +27,7 @@ För utvecklaren kan det dock vara värdefullt att förstå dessa anrop och vad 
 * **Nyttolasten** för samtalet innehåller information om vad som uppdateras av redigeraren, inklusive identifiering av vad som ska uppdateras och hur det ska uppdateras.
 * **Svaret** innehåller information om exakt vad som uppdaterades av redigeringstjänsten. Detta är för att underlätta uppdatering av innehållet i redigeraren. I vissa fall, som vid ett `move`-anrop, måste hela sidan uppdateras.
 
-När ett samtal har slutförts aktiveras händelser som innehåller nyttolasten för begäran och svaret, som kan anpassas för din egen app. Mer information finns i dokumentet [Universal Editor Events](/help/implementing/universal-editor/events.md).
+När ett samtal har slutförts aktiveras händelser som innehåller nyttolasten för begäran och svaret, som kan anpassas för din egen app. Mer information finns i dokumentet [Universal Editor Events](/help/implementing/universal-editor/events-universal-editor.md).
 
 Nedan följer en lista över de typer av anrop som den universella redigeraren gör till ditt program tillsammans med exempel på nyttolaster och svar.
 
@@ -150,7 +150,7 @@ Ett `add`-anrop inträffar när du placerar en ny komponent i appen med den univ
 
 Dess nyttolast innehåller ett `path`-objekt som innehåller var innehållet ska läggas till.
 
-Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [&#x200B; för varje plugin](/help/implementing/universal-editor/architecture.md). Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
+Den innehåller även ett `content`-objekt med ytterligare objekt för slutpunktsspecifik information om innehållet som ska lagras [ för varje plugin](/help/implementing/universal-editor/architecture.md). Om din app till exempel baseras på innehåll från AEM och Magento, innehåller nyttolasten ett dataobjekt för varje system.
 
 >[!BEGINTABS]
 
@@ -384,5 +384,5 @@ Den universella redigeraren itererar över innehållet och skapar en lista med r
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Universella redigeringshändelser](/help/implementing/universal-editor/events.md)
+* [Universella redigeringshändelser](/help/implementing/universal-editor/events-universal-editor.md)
 
