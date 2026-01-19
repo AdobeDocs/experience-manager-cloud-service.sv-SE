@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: b4df0abb43d69f629d2c643c408cb77af697b942
+source-git-commit: be61c21e111e1655921325a35da6fa88545fb39f
 workflow-type: tm+mt
-source-wordcount: '1090'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Utgåva 23862 {#23862}
+## Utgåva 23963 {#23963}
 
->[!CAUTION]
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsreleasen 23963, som offentliggjordes den 19 januari 2026. Den tidigare underhållsversionen var version 23482.
+
+Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+
+>[!NOTE]
 >
-> Utgåva 23862 har gjorts privat. En ny underhållsrelease kommer snart.
+>Utgåva 23862 har gjorts privat.
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 23862, som offentliggjordes den 23 december 2025. Den tidigare underhållsversionen var version 23482.
-
-Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
-
-### Förbättringar {#enhancements-23862}
+### Förbättringar {#enhancements-23963}
 
 * CQ-4361812: Stöd har lagts till för den valfria param folderPath i rest api. Beskrivning: Ett nytt översättningsprojekt skapas av API:t och placeras i den sökväg som anges av den valfria parametern `folderPath`, annars används rotprojektsökvägen `/content/projects` som standard.
 * FORMS-21960: Stöd för redigering av arbetsytan har lagts till lokalt för interaktiv kommunikation, liknande blankettspa.
@@ -50,13 +50,14 @@ Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns
 * SITES-37794: Edge Delivery med Universal Editor: Förenkla guiden att skapa sidor.
 * SITES-36963: Migrera Audience/Segment Endpoint till mål-API v3 för Workspace Support.
 
-### Åtgärdade problem {#fixed-issues-23862}
+### Åtgärdade problem {#fixed-issues-23963}
 
 * CQ-4361831: Korrigerat problem som orsakar genai_dropdown_span har inte definierats.
 * CQ-4360895: Korrigerat felaktigt statusantal översättningsjobb i projekt under samtidiga uppdateringar.
 * CQ-4361599: Fast överhoppning av innehållsfragment från översättningsjobb efter uppgradering 2025.7.
 * CQ-4360747: Fasta upprepningsbara översättningsjobb skapar tomma nyttolaster och utlösare för ofta (NullPointerException i ScheduleRepeatTranslationProject).
 * CQ-4359994: Fast destinationLanguage-fälttyp inkonsekvent för ett- och flerspråkigt projekt.
+* FORMS-23557: Rhino-uppdateringsorsaken `*.js` kan inte instansieras korrekt av API:t Använd.
 * SITES-38153: Korrigera cf-publiceringsreferensprovidern för uuid-baserade referenser.
 * SITES-37594: Prestandaförbättringar för taggfunktionaliteten modell för modell.
 * SITES-37337: FragmentCreateProcessor: ange ytterligare felinformation i loggar.
@@ -93,25 +94,25 @@ Funktionsaktiveringen i 2026.1.0 kommer att innehålla alla funktioner som finns
 * SITES-37349: Edge Delivery med Universal Editor: Rendera flera fält med enstaka poster som listobjekt.
 * SITES-36148: Edge Delivery med Universal Editor: Fix data-aue-label for composite multi-fields.
 
-### Kända fel {#known-issues-23862}
+### Kända fel {#known-issues-23963}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-23862}
+### Föråldrade funktioner och API:er {#deprecated-23963}
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-23862}
+### Säkerhetskorrigeringar {#security-23963}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Denna underhållsrelease åtgärdar 23 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-23862}
+### Inbäddade tekniker {#embedded-tech-23963}
 
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.88.0 | [Oak 1.8.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.88.0/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.2 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
