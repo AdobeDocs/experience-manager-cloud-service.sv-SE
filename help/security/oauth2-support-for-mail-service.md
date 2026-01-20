@@ -4,9 +4,9 @@ description: OAuth2-stöd för e-posttjänsten i Adobe Experience Manager som en
 exl-id: 93e7db8b-a8bf-4cc7-b7f0-cda481916ae9
 feature: Security
 role: Admin
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: f924c2ee18017c7cf7b7cbdca5ce26174b2457ab
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,8 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skicka e-post](/
 
 1. Fyll i informationen enligt dina krav och klicka sedan på **Registrera**.
 1. Gå till den skapade appen och välj **API-behörigheter**.
-1. Klicka på **Lägg till behörighet** > **Diagrambehörighet** > **Delegerade behörigheter**.
+<!-- Alexandru: removing as a result of CQDOC-20609 
+1. Click **Add Permission** > **Graph Permission** > **Delegated Permissions**. -->
 1. Välj behörigheterna nedan för din app och klicka sedan på **Lägg till behörighet**:
 
    >[!NOTE]
@@ -49,7 +50,7 @@ Mer information om AEM as a Cloud Service Mail Service finns i [Skicka e-post](/
 1. Gå sedan till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk.
 1. Tryck på **Översikt** i den vänstra rutan och kopiera värdena för **Program-ID** och **katalog-ID** för senare bruk.
 
-Använd följande information för att konfigurera OAuth2 för e-posttjänsten på AEM sida:
+Använd följande information för att konfigurera OAuth2 för e-posttjänsten på AEM-sidan för att komma tillbaka:
 
 * Autentiserings-URL:en, som skapas med klient-ID:t. Den har följande format: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * Token-URL, som skapas med klient-ID. Den har följande format: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
@@ -82,7 +83,6 @@ Generera sedan uppdateringstoken, som är en del av OSGi-konfigurationen i ett e
    --header 'Content-Type: application/x-www-form-urlencoded' \
    --header 'Cookie: buid=0.ARgAep0nU49DzUGmoP2wnvyIkcQjsx26HEpOnvHS0akqXQgYAAA.AQABAAEAAAD--DLA3VO7QrddgJg7Wevry9XPJSKbGVlPt5NWYxLtTl3K1W0LwHXelrffApUo_K02kFrkvmGm94rfBT94t25Zq4bCd5IM3yFOjWb3V22yDM7-rl112sLzbBQBRCL3QAAgAA; esctx=AQABAAAAAAD--DLA3VO7QrddgJg7Wevr4a8wBjYcNbBXRievdTOd15caaeAsQdXeBAQA3tjVQaxmrOXFGkKaE7HBzsJrzA-ci4RRpor-opoo5gpGLh3pj_iMZuqegQPEb1V5sUVQV8_DUEbBv5YFV2eczS5EAhLBAwAd1mHx6jYOL8LwZNDFvd2-MhVXwPd6iKPigSuBxMogAA; x-ms-gateway-slice=estsfd; stsservicecookie=estsfd; fpc=Auv6lTuyAP1FuOOCfj9w0U_5vR5dAQAAALDXP9gOAAAAwIpkkQEAAACT2T_YDgAAAA' \
    --data-urlencode 'client_id=<clientID>' \
-   --data-urlencode 'scope=https://outlook.office.com/SMTP.Send https://graph.microsoft.com/Mail.Read https://graph.microsoft.com/Mail.Send https://graph.microsoft.com/User.Read email openid profile offline_access' \
    --data-urlencode 'redirect_uri=http://localhost' \
    --data-urlencode 'grant_type=authorization_code' \
    --data-urlencode 'client_secret=<clientSecret>' \
@@ -93,7 +93,7 @@ Generera sedan uppdateringstoken, som är en del av OSGi-konfigurationen i ett e
 
 ### Validerar token {#validating-the-tokens}
 
-Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera både accessToken och refreshToken med proceduren nedan:
+Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera både accessToken och refreshToken enligt följande procedur:
 
 1. Generera accessToken med hjälp av den refreshToken som skapades i föregående procedur genom att använda följande uttryck och ersätta värdena för `<client_id>`,`<client_secret>` och `<refreshToken>`:
 
@@ -150,7 +150,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
    * `email`
    * `profile`
 1. Skapa en OSGI-egenskapsfil `called com.day.cq.mailer.DefaultMailService.cfg.json`
-under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. Värdena `smtp.host` och `smtp.port` återspeglar den avancerade nätverkskonfigurationen, vilket beskrivs i självstudiekursen [E-posttjänst](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/examples/email-service).
+under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. Värdena `smtp.host` och `smtp.port` återspeglar den avancerade nätverkskonfigurationen, vilket beskrivs i självstudiekursen [E-posttjänst](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/examples/email-service).
 
    ```
    {
