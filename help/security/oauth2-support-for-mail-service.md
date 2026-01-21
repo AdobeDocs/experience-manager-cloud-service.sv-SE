@@ -151,7 +151,7 @@ Innan du fortsätter att konfigurera OAuth på AEM-sidan måste du verifiera bå
    * `email`
    * `profile`
 1. Skapa en OSGI-egenskapsfil `called com.day.cq.mailer.DefaultMailService.cfg.json`
-under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. Värdena `smtp.host` och `smtp.port` återspeglar den avancerade nätverkskonfigurationen, vilket beskrivs i självstudiekursen [E-posttjänst](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/networking/examples/email-service).
+under `/apps/<my-project>/osgiconfig/config` med syntaxen nedan. Värdena `smtp.host` och `smtp.port` återspeglar den avancerade nätverkskonfigurationen, vilket beskrivs i självstudiekursen [E-posttjänst](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/networking/examples/email-service).
 
    ```
    {
