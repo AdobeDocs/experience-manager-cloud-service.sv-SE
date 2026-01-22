@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 87368be0b4c934bb4d4799833a90edfee72348e6
+source-git-commit: bb946f28a3d1a1d64c564029d9903c315bb9ffbb
 workflow-type: tm+mt
-source-wordcount: '2625'
+source-wordcount: '2657'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ För att göra detta har den universella redigeraren ett intuitivt användargrä
 
 >[!NOTE]
 >
->Det här dokumentet förutsätter att du redan känner till hur du kommer åt och navigerar i den universella redigeraren. Om du inte är det läser du [Åtkomst till och navigering i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/navigation.md).
+>Det här dokumentet förutsätter att du redan känner till hur du kommer åt och navigerar i den universella redigeraren. Om du inte är det läser du [Åtkomst till och navigering i den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/navigation.md)
 
 >[!TIP]
 >
->En mer detaljerad introduktion till den universella redigeraren finns i [Introduktion till den universella redigeraren](/help/implementing/universal-editor/introduction.md).
+>En mer detaljerad introduktion till den universella redigeraren finns i [Introduktion till den universella redigeraren.](/help/implementing/universal-editor/introduction.md)
 
 ## Redigera innehåll {#editing-content}
 
@@ -39,9 +39,13 @@ Det är enkelt och intuitivt att redigera innehåll. När du för musen över in
 
 >[!TIP]
 >
->Som standard markeras det för redigering när du trycker eller klickar på ett innehåll. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläget](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode).
+>Som standard markeras det för redigering när du trycker eller klickar på ett innehåll. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläget.](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode)
 
-Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet på [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail).
+Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
+
+Varje redigerbart innehåll märks med den typ av innehåll det är. Beroende på innehållet kan du klicka på det här märket för snabb åtkomst till redigeringsåtgärder.
+
+![Redigerbara märkesalternativ](assets/editable-badge.png)
 
 ### Redigera oformaterad text {#edit-plain-text}
 
@@ -51,7 +55,7 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 Den tunna blå konturen ändras till en blå kontur som anger att den är markerad och en markör visas. Gör ändringarna och tryck sedan på Enter eller markera utanför textrutan för att spara ändringarna.
 
-När du markerar textkomponenten visas information om den på [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail). Du kan också redigera texten på panelen.
+När du markerar textkomponenten visas information om den på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) Du kan också redigera texten på panelen.
 
 ![Redigera text på egenskapspanelen](assets/ue-editing-text-component-rail.png)
 
@@ -110,7 +114,7 @@ RTE kan konfigureras för att dölja alternativ eller visa ytterligare alternati
 
 ### Redigera media {#edit-media}
 
-Du kan visa information om den i [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail).
+Du kan visa information om den i panelen [Egenskaper.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
 
 ![Redigerar media](assets/ue-edit-media.png)
 
@@ -123,7 +127,7 @@ Du kan visa information om den i [egenskapspanelen](/help/sites-cloud/authoring/
 
 ### Redigera innehållsfragment {#edit-content-fragment}
 
-Om du väljer ett [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) kan du redigera informationen på [egenskapspanelen](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail).
+Om du väljer ett [innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) kan du redigera informationen i [egenskapspanelen.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
 
 ![Redigera ett innehållsfragment](assets/ue-edit-cf.png)
 
@@ -133,7 +137,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -212,7 +216,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -228,7 +232,7 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
 1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.
@@ -251,7 +255,7 @@ När du redigerar på plats kommer redigeraren att erbjuda sammanhangsberoende a
 
 När du är klar med redigeringen av innehållet vill du ofta navigera i det och se hur det ser ut i innehållet på andra sidor. I [förhandsgranskningsläget](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode) kan du klicka på länkar för att navigera i ditt innehåll som en läsare skulle kunna. Innehållet återges i redigeraren på samma sätt som det publiceras.
 
-I förhandsgranskningsläget fungerar knapptryckning eller klickning på innehåll på samma sätt som för en läsare av innehållet. Om du vill markera innehållet som ska redigeras växlar du från [förhandsgranskningsläget](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode).
+I förhandsgranskningsläget fungerar knapptryckning eller klickning på innehåll på samma sätt som för en läsare av innehållet. Om du vill markera innehållet som ska redigeras kan du växla från [förhandsgranskningsläget.](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode)
 
 ## Redigera komponentarv {#inheritance}
 
@@ -261,7 +265,7 @@ Med den universella redigeraren kan du avbryta arv av innehåll genom att helt e
 
 Om **AEM Multi-Site-Management (MSM) Extension** är aktiverat för ditt program har du [ytterligare verktygsfältsalternativ](#inheritance-extension) som du kan använda för att visa och ändra arvsstatus för en enskild komponent i Universal Editor.
 
-Mer information om hur arv fungerar med den universella redigeraren finns i [Innehållsarv i den universella redigeraren](/help/sites-cloud/authoring/universal-editor/inheritance.md).
+Mer information om hur arv fungerar med den universella redigeraren finns i [Innehållsarv i den universella redigeraren.](/help/sites-cloud/authoring/universal-editor/inheritance.md)
 
 ## Valfria verktygsfältsfunktioner {#toolbar-options}
 

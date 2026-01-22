@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.01.15
-description: Detta är versionsinformationen för version 2026.01.15 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.01.22
+description: Detta är versionsinformationen för version 2026.01.22 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 08e495b0859e9f0a0378a0fb8bd565bc76c777da
+source-git-commit: 83653ef9938e02b58d3c82ebd6395773f293f1a4
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.01.15 {#release-notes}
+# Versionsinformation om Universal Editor 2026.01.22 {#release-notes}
 
-Det här är versionsinformationen för den 15 januari 2026-versionen av Universal Editor.
+Det här är versionsinformationen för den 22 januari 2026-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,10 +26,11 @@ Det här är versionsinformationen för den 15 januari 2026-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* Stöd för att ange och behålla [standardvärden för modellfält har lagts till.](/help/implementing/universal-editor/field-types.md)
-   * Om inget värde anges kommer Universal Editor att behålla det som definieras som `value` i modelldefinitionen.
-   * Detta säkerställer att det du ser matchar det som finns kvar i backend-objektet.
-   * Det här är en stor förändring.
+* Etiketter (som förhandsvisning av kort text) har lagts till i textblock i [innehållsträdet.](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode)
+* TextArea stöds nu för rena textfält.
+* Konfigurationsslutpunkten används nu för gränssnittsfunktioner.
+* TextArea från Content Fragments stöds nu.
+* Popup-API:t är nu exponerat för tillägg.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -39,6 +40,12 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Rensning av data utförs nu korrekt på innehållsväxling.
-* Flera åtgärder i tilläggens uppdatering stöds nu.
-* Stängningsknappen för utvecklarinloggning fungerar nu som förväntat.
+* Ett problem med arbetsytans layout vid navigering via platsfältet har korrigerats.
+* Ledande tomt utrymme renaliserades i textredigeraren.
+* Inline-redigering återställdes vid inmatning.
+* Dragetiketten återgick till att inte visa hela innehållet.
+* Problem med webbläsartillgänglighet har lösts.
+* `selectEditables([])` används nu för att avmarkera alla komponenter via utbyggbarhet.
+* Metadatabellen skapas nu på rätt plats.
+* Ett problem har korrigerats där kopierade innehållsfragmentresurser pekade på `/data/undefined`.
+
