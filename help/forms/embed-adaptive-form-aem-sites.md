@@ -5,9 +5,9 @@ feature: Adaptive Forms
 role: Admin, User, Developer
 Keywords: Forms AEM Sites, Embed Form to a Sites page, Adaptive Forms AEM Sites, Embed Adaptive Forms to AEM Page, Embed Forms in an AEM Sites page
 exl-id: 359b05e8-d8c1-4a77-9e70-6f6b6e668560
-source-git-commit: 958c166585ac7eeb667d73744403558b2dc5ce94
+source-git-commit: bc9fa030aeab4f2dddafc2241fade7b5d0689926
 workflow-type: tm+mt
-source-wordcount: '3105'
+source-wordcount: '3078'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-aem-sites.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-aem-sites.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -44,7 +44,7 @@ Using **[!UICONTROL Adaptive Forms – Embed(v2)]** in AEM Page Editor lets you 
 * **Tagging:** AEM Sites pages allow you to [assign tags or labels to a page, an asset, or other content](/help/implementing/developing/introduction/tagging-framework.md). Tags are keywords or metadata labels that provide a way to categorize and organize content based on specific criteria. You can assign one or more tags to pages, assets, or any other content items within AEM to improve search and categorize the assets. 
 * **Locking and Unlocking content:** AEM Sites allow users to [control access and modifications to pages](/help/sites-cloud/authoring/page-editor/edit-content.md) within the AEM Sites environment. When a page is locked, it means that it is protected from unauthorized changes or edits by other users. Only the user who has locked the content or a designated administrator can unlock it to allow modifications. 
 
-In addition, Adaptive Forms in AEM Page Editor use [Adaptive Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE#features). These Core Components provide a standard and easier methods to style and customize the components, identical to [AEM Sites WCM Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
+In addition, Adaptive Forms in AEM Page Editor use [Adaptive Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#features). These Core Components provide a standard and easier methods to style and customize the components, identical to [AEM Sites WCM Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=en).
 
 -->
 
@@ -75,9 +75,9 @@ Du kan utnyttja den här funktionen fullt ut genom att använda följande altern
 
 Innan du börjar bädda in ett nytt adaptivt formulär eller ett befintligt adaptivt formulär med **[!UICONTROL Adaptive Forms – Embed(v2)]** aktiverar du **Adaptiva Forms Core-komponenter** och lägger till **adaptiva Forms Client Libraries** på din AEM Sites-sida:
 
-### Aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö
+<!--### Enable Adaptive Forms Core Components for your AEM Cloud Service environment
 
-Installera den senaste versionen för att aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö.
+Install the latest far to enable Adaptive Forms Core Components for your AEM Cloud Service environment.-->
 
 ### Lägg till adaptiva Forms-klientbibliotek på din AEM Sites-sida eller Experience Fragment
 
@@ -89,7 +89,7 @@ När alternativet **[!UICONTROL When form covers entire width of a page]** är m
 
 Lägg till klientbiblioteken **CustomHeaderlibs** och **CustomFoterlibs** på din AEM Sites-sida med hjälp av distributionsflödet. Så här lägger du till klientbiblioteken:
 
-1. Få åtkomst till och klona din [AEM Cloud Service Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/repositories.html?lang=sv-SE).
+1. Få åtkomst till och klona din [AEM Cloud Service Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/repositories.html).
 2. Öppna mappen AEM Cloud Service Git-databas i en textredigerare för en plan. Exempel: Microsoft® Visual Code.
 3. Öppna filen `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\page\customheaderlibs.html` och lägg till följande kod i filen:
 
@@ -127,7 +127,7 @@ Lägg till klientbiblioteken **CustomHeaderlibs** och **CustomFoterlibs** på di
        </sly> 
    ```
 
-7. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html?lang=sv-SE) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
+7. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Så här bäddar du in ett befintligt adaptivt formulär på en webbplatssida:
 
 1. Öppna AEM Sites-sidan i redigeringsläge.
 1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** från komponentwebbläsaren till sidan Platser.
-1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten på sidan Platser och välj ![&#x200B; Egenskaper för adaptiv formulärbehållare &#x200B;](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
+1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten på sidan Platser och välj ![ Egenskaper för adaptiv formulärbehållare ](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i **[!UICONTROL Asset Path]**.
 1. Spara inställningarna. Det adaptiva formuläret är nu inbäddat på sidan.
 
@@ -227,7 +227,7 @@ Du kan också utöka formulärens tillgänglighet genom att bädda in dem i AEM 
 
 1. Öppna ett Experience Fragment i redigeringsläge.
 1. Dra och släpp komponenten **[!UICONTROL Adaptive Forms - Embed(v2)]** från komponentwebbläsaren till Experience Fragment.
-1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten i Experience Fragment och välj ![&#x200B; egenskaper för adaptiv formulärbehållare &#x200B;](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
+1. Markera **[!UICONTROL Adaptive Forms - Embed]**-komponenten i Experience Fragment och välj ![ egenskaper för adaptiv formulärbehållare ](/help/forms/assets/configure-icon.svg) i åtgärdsfältet. Dialogrutan **[!UICONTROL Edit Adaptive Forms - Embed(v2)]** öppnas.
 1. Bläddra och välj det adaptiva formulär som ska bäddas in i **[!UICONTROL Asset Path]**.
 1. Spara inställningarna. Det anpassade formuläret är nu inbäddat i Experience Fragment.
 
@@ -241,7 +241,7 @@ Så här konverterar du ett adaptivt formulär på en AEM Sites-sida till ett Ex
 
 1. Öppna AEM Sites-sidan som innehåller det adaptiva formuläret (i adaptiva Forms Container-komponenten) i redigeringsläge.
 1. Öppna innehållsträdet och markera **[!UICONTROL Adaptive Forms Container]** som är värd för ditt adaptiva formulär. En AEM Sites-sida kan vara värd för flera adaptiva Forms. Välj rätt adaptiva Forms-behållare.
-1. På menyraden väljer du ikonen ![Konvertera till upplevelsefragment-variationsikonen &#x200B;](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till upplevelsefragment-variationsikonen.
+1. På menyraden väljer du ikonen ![Konvertera till upplevelsefragment-variationsikonen ](/help/forms/assets/Smock_FilingCabinet_18_N.svg) Konvertera till upplevelsefragment-variationsikonen.
 
    ![Klicka på filkabinettlogotypen för att konvertera ett adaptivt formulär på AEM Sites-sidan till ett Experience Fragment](/help/forms/assets/convert-form-in-sites-page-to-an-experience-fragment.png)
 
