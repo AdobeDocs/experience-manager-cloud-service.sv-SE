@@ -34,7 +34,7 @@ Nästa planerade version är torsdagen den 5 februari 2026.
   ![Alternativet Visa/redigera variabler på den nedrullningsbara menyn för en vald pipeline](/help/implementing/cloud-manager/release-notes/assets/view-edit-variables-option.png)
   *Visa/redigera variabelalternativ i listrutan för en vald pipeline.*
 
-  ![Dialogrutan Variabelkonfiguration ](/help/implementing/cloud-manager/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogrutan Variabelkonfiguration.*
+  ![Dialogrutan Variabelkonfiguration &#x200B;](/help/implementing/cloud-manager/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogrutan Variabelkonfiguration.*
 
 * **Förbättrad stabilitet, prestanda och tillförlitlighet**
 
