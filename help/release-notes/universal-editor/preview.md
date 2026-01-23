@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: bb946f28a3d1a1d64c564029d9903c315bb9ffbb
+source-git-commit: cb8f4911b5285b92894ab1d4458561c6607a2d9c
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 * Definitionerna var utökningsbara.
 * Flyttkomponentmetoden exponerades för `editorActions`.
 * Komponentmetoden för tillägg exponerades för `editorActions`.
-* Blockinformation implementerad för V2.
+* Version 2.0 av API:t för dokumentredigering har släppts.
 
 ## Kommande förbättringar {#other-improvements}
 
