@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: b3e1d3a3770531728d696be125f074881f179573
 workflow-type: tm+mt
-source-wordcount: '2927'
+source-wordcount: '2937'
 ht-degree: 0%
 
 ---
@@ -267,7 +267,7 @@ Så här öppnar du fragmentet för redigering:
    * Skapar en kopia av det markerade innehållsfragmentet på dess plats.
    * Skapar kopior av alla fragment som det valda fragmentet refererar till.
 
-     De [platser som refererade fragment kopieras till &#x200B;](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
+     De [platser som refererade fragment kopieras till ](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
 
       * **Kopiera till den markerade mappen**
 När du väljer det här alternativet kopieras de refererade fragmenten till samma plats som det ursprungliga markerade fragmentet.
@@ -404,6 +404,10 @@ Du kan publicera dina innehållsfragment till:
 >
 >Om du publicerar ett innehållsfragment för vilket modellen ännu inte har publicerats, visas detta i en urvalslista och modellen publiceras med fragmentet.
 
+>[!TIP]
+>
+>Innehållsfragment kan [publiceras till Edge Delivery Services.](https://www.aem.live/developer/content-fragment-overlay)
+
 ### Publicering {#publishing}
 
 Du kan publicera dina innehållsfragment med alternativet **Publicera** från något av följande:
@@ -435,7 +439,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 
