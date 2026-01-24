@@ -291,7 +291,7 @@ Om problemen kvarstår:
 
 1. Kontrollera status för Adobe Experience Cloud-tjänst.
 2. Granska [Edge Delivery Services-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=sv-SE).
-3. Besök [Adobe Experience League Community](https://experienceleaguecommunities.adobe.com/).
+3. Besök [Adobe Experience League Community](https://experienceleaguecommunities.adobe.com/?profile.language=sv).
 4. Kontakta Adobe kundtjänst.
 
 +++

@@ -106,7 +106,7 @@ Se självhjälpsresurser om hur du konfigurerar och distribuerar till AEM as a C
 > Om du behöver mer hjälp kan du:
 >
 >1. [Kontakta Experience Manager Support Team](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=sv-SE)
->1. Utforska [Experience Manager Communities &amp; Forums](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+>1. Utforska [Experience Manager Communities &amp; Forums](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=sv)
 
 <br>
 
@@ -219,4 +219,4 @@ I fasen efter publicering bör du se till att tillfälliga filer rensas, granska
 > Om du behöver mer hjälp kan du:
 >
 >1. [Kontakta Experience Manager Support Team](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=sv-SE)
->1. Utforska [Experience Manager Communities &amp; Forums](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+>1. Utforska [Experience Manager Communities &amp; Forums](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=sv)

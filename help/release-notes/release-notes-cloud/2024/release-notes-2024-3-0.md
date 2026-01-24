@@ -49,7 +49,7 @@ AEM Sites kan nu användas som innehållskälla för Edge Delivery Services. Man
 
 ![AEM Authoring](/help/edge/assets/universal_editor_edge_delivery_services.png)
 
-Mer information finns i [dokumentationen](/help/edge/overview.md) och i [AEM Gems - Komma igång med AEM Authoring och Edge Delivery Services](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-gems-getting-started-with-aem-authoring-and-edge-delivery/m-p/652694#M43905)
+Mer information finns i [dokumentationen](/help/edge/overview.md) och i [AEM Gems - Komma igång med AEM Authoring och Edge Delivery Services](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/aem-gems-getting-started-with-aem-authoring-and-edge-delivery/m-p/652694?profile.language=sv#M43905)
 
 **Universell redigerare för Headless-implementeringar**
 

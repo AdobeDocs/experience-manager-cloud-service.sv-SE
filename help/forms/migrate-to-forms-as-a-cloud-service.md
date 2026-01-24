@@ -81,7 +81,7 @@ För att övergången från AEM Forms 6.5 till AEM as a Cloud Service ska bli s�
 
 Utför följande steg för att göra dina [!DNL AEM Forms]-resurser kompatibla med Cloud Service och överför dem till en [!DNL AEM] as a Cloud Service miljö.
 
-1. Skapa en [klon](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/correct-method-to-clone-the-aem-environment/qaq-p/363487) av din befintliga [!DNL AEM Forms]-miljö.
+1. Skapa en [klon](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/correct-method-to-clone-the-aem-environment/qaq-p/363487?profile.language=sv) av din befintliga [!DNL AEM Forms]-miljö.
 
    >[!NOTE]
    >
