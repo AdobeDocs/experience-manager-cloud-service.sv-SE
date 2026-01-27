@@ -129,7 +129,7 @@ Den här funktionen har inte bara basfunktioner utan också utbyggbarhet, vilket
 
 ### Utöka befintligt attribut {#existing-attribute}
 
-Om cacheminnet behöver rensas och inte täcks av den befintliga attributbaserade funktionen (till exempel `categoryUids`), kan du referera till [ den här referensfilen ](https://github.com/adobe/aem-cif-guides-venia/blob/main/core/src/main/java/com/venia/core/models/commerce/services/cacheinvalidation/ExtendedCategoryUidInvalidation.java) för att lägga till nya mönster och definiera ytterligare `invalidatePaths` som ska rensas från cacheminnet utöver vad den aktuella implementeringen hanterar.
+Om cacheminnet behöver rensas och inte täcks av den befintliga attributbaserade funktionen (till exempel `categoryUids`), kan du referera till [&#x200B; den här referensfilen &#x200B;](https://github.com/adobe/aem-cif-guides-venia/blob/main/core/src/main/java/com/venia/core/models/commerce/services/cacheinvalidation/ExtendedCategoryUidInvalidation.java) för att lägga till nya mönster och definiera ytterligare `invalidatePaths` som ska rensas från cacheminnet utöver vad den aktuella implementeringen hanterar.
 
 ### Lägger till nytt anpassat attribut {#new-custom-attribute}
 
