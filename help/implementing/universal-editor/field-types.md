@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Developer
-source-git-commit: 08e495b0859e9f0a0378a0fb8bd565bc76c777da
+source-git-commit: 022dea38f8597226c644fcdd8c2197a2299a1dfb
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1617'
 ht-degree: 1%
 
 ---
@@ -103,6 +103,10 @@ Ett fältobjekt har följande typdefinition.
 | `multi` | `boolean` | Är fältet ett flerfält<br/>Observera att behållarkapsling inte tillåts för flerfält i egenskapspanelen | Nej |
 | `validation` | `ValidationType` | Valideringsregel eller -regler för fältet | Nej |
 | `raw` | `unknown` | Raw-data som kan användas av komponenten | Nej |
+
+>[!NOTE]
+>
+>Understrecket (`_`) tillåts inte i fältnamn när plugin-program för [`aem` eller `xwalk` används.](/help/implementing/universal-editor/component-definition.md#plugins)
 
 ### namnfält och kapsling {#nesting}
 
@@ -612,7 +616,7 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 >[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
-![&#x200B; Skärmbild av flervalskomponenttyp med gruppering &#x200B;](assets/component-types/multiselect-group.png)
+![ Skärmbild av flervalskomponenttyp med gruppering ](assets/component-types/multiselect-group.png)
 
 >[!ENDTABS]
 
