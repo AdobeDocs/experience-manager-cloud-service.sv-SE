@@ -19,7 +19,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-adaptive-form.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/creating-adaptive-form.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Med AEM Forms formulärbyggare kan du skapa formulär som är engagerande, responsiva, dynamiska och anpassningsbara. Vare sig du är formulärskapare och bygger upp professionella formulär eller snabbt behöver skapa responsiva formulär, har AEM Forms en användarvänlig guide. Guiden har snabb fliknavigering för att enkelt välja förkonfigurerade mallar, format, fält och alternativ för att skicka.
@@ -28,7 +28,7 @@ Med AEM Forms formulärbyggare kan du skapa formulär som är engagerande, respo
 
 Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan använda:
 
-* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Du kan besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) om du vill visa tillgängliga kärnkomponenter i praktiken **Adobe rekommenderar att du använder dessa moderna och utbyggbara komponenter för att utveckla adaptiva Forms**.
+* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE): Dessa är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Du kan besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) om du vill visa tillgängliga kärnkomponenter i praktiken **Adobe rekommenderar att du använder dessa moderna och utbyggbara komponenter för att utveckla adaptiva Forms**.
 
 * [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar nya formulär rekommenderar Adobe att du använder [adaptiva Forms Core-komponenter för att skapa en adaptiv Forms](#create-an-adaptive-form-core-components).
 
@@ -100,7 +100,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Välj **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av anpassat formulär visas formulärelementen i det associerade <!--XFA form template, XML schema or --> JSON-schemat eller formulärdatamodellen (FDM) på fliken **[!UICONTROL Data Model Objects]** i **[!UICONTROL Content Browser]** i sidlisten.
 
-Nu kan du dra och släppa [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en#components) eller schemaelement för att skapa ditt adaptiva formulär.
+Nu kan du dra och släppa [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE#components) eller schemaelement för att skapa ditt adaptiva formulär.
 
 
 ## Redigera formulärmodellegenskaper för ett anpassat formulär {#edit-form-model-core-components-based-adaptive-forms}
@@ -117,11 +117,11 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 * **Behörigheter**: Lägg till dina användare i [!DNL forms-users] för att ge dem behörighet att skapa ett anpassat formulär. En detaljerad lista över formulärspecifika användargrupper finns i [Grupper och behörigheter](forms-groups-privileges-tasks.md).
 
-* **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Du kan [skapa ett tema](themes.md) eller [importera ett befintligt tema](import-export-forms-templates.md#uploading-a-theme). Du kan också distribuera den [senaste arketypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html#create-project) för vissa exempelteman.
+* **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Du kan [skapa ett tema](themes.md) eller [importera ett befintligt tema](import-export-forms-templates.md#uploading-a-theme). Du kan också distribuera den [senaste arketypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=sv-SE#create-project) för vissa exempelteman.
 
 * **En mall för adaptiva formulär**: En mall innehåller en grundläggande struktur och definierar utseendet (layouter och format) för ett adaptivt formulär. Den har förformaterade komponenter som innehåller vissa egenskaper och innehållsstruktur. Här finns också alternativ för att definiera ett tema och en skicka-åtgärd. Temat definierar utseendet, känslan och skickaåtgärden definierar vilken åtgärd som ska vidtas när ett adaptivt formulär skickas in. Du kan till exempel skicka insamlade data till en datakälla. Molntjänsten har stöd för två typer av mallar:
 
-   * **Redigerbar mall**: Du kan [skapa en](template-editor.md) eller [importera en befintlig redigerbar mall](migrate-to-forms-as-a-cloud-service.md). Du kan också distribuera den [senaste arketypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) för att få några exempel på redigerbara mallar.
+   * **Redigerbar mall**: Du kan [skapa en](template-editor.md) eller [importera en befintlig redigerbar mall](migrate-to-forms-as-a-cloud-service.md). Du kan också distribuera den [senaste arketypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=sv-SE#:~:text=The%20AEM%20Archetype%20is%20made%20up%20of%20modules%3A,and%20request%20filters.%20it.tests%3A%20are%20Java-based%20integration%20tests.) för att få några exempel på redigerbara mallar.
 
    * **Statisk mall**: Dessa är äldre mallar och rekommenderas endast för kunder som migrerar från Adobe Managed Services (AMS) och lokala AEM Forms-installationer (AEM 6.5 Forms eller tidigare). På så sätt kan du fortsätta att använda dina befintliga investeringar i statiska mallar. När du skapar ett adaptivt formulär använder du en redigerbar mall.
 

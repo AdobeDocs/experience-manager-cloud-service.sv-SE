@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/create-an-adaptive-form-core-components.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/create-an-adaptive-form-core-components.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 
@@ -25,7 +25,7 @@ Med AEM Forms formulärbyggare kan du skapa formulär som är engagerande, respo
 
 Innan du börjar får du lära dig mer om vilken typ av Forms-komponenter du kan använda:
 
-* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=en): Dessa är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Adobe rekommenderar att du använder dessa moderna och utbyggbara komponenter för att utveckla Adaptiv Forms.
+* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE): Dessa är standardiserade datainhämtningskomponenter. Dessa komponenter har anpassningsmöjligheter, kortare utvecklingstid och lägre underhållskostnader för era digitala registreringsupplevelser. En utvecklare kan enkelt anpassa och utforma dessa komponenter. Adobe rekommenderar att du använder dessa moderna och utbyggbara komponenter för att utveckla Adaptiv Forms.
 
 * [Adaptiva Forms Foundation-komponenter](creating-adaptive-form.md): Dessa är klassiska (gamla) datainhämtningskomponenter. Du kan fortsätta att använda dessa för att redigera dina befintliga grundläggande komponentbaserade adaptiva formulär. Om du skapar nya formulär rekommenderar Adobe att du använder [adaptiva Forms Core-komponenter](creating-adaptive-form-core-components.md) för att skapa en adaptiv Forms.
 
@@ -43,9 +43,9 @@ Du behöver följande för att skapa ett adaptivt formulär:
    * Mallen `blank` ingår i alla nya AEM Forms as a Cloud Service-program.
    * Du kan installera referenspaketet via Package Manager för att lägga till mallen `blank` i ditt AEM Forms as a Cloud Service-program.
    * Du kan även [skapa en anpassad Forms-mall (kärnkomponenter)](/help/forms/template-editor-core-components.md) från början.
-   * Du kan också distribuera [exempelmallar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) till din miljö. Med dessa kan du snabbt börja skapa formulär.
+   * Du kan också distribuera [exempelmallar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=sv-SE) till din miljö. Med dessa kan du snabbt börja skapa formulär.
 
-* **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter.  Mallen `Canvas` ingår i alla nya AEM Forms as a Cloud Service-program. Du kan också distribuera [exempelteman](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) till din miljö. Dessa hjälper dig att börja utforma formulären och skapa en grundstruktur för att skapa eller anpassa ett tema efter företagets behov.
+* **Ett adaptivt formulärtema**: Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter.  Mallen `Canvas` ingår i alla nya AEM Forms as a Cloud Service-program. Du kan också distribuera [exempelteman](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=sv-SE) till din miljö. Dessa hjälper dig att börja utforma formulären och skapa en grundstruktur för att skapa eller anpassa ett tema efter företagets behov.
 
   <!-- * You can install the reference package, via package manager, to add the `Canvas` template to your AEM Forms as a Cloud Service program.
     * You can also [create an Adaptive Forms theme (Core Components)](template-editor.md) and deploy it to your AEM Forms as a Cloud Service program. -->
@@ -56,7 +56,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 >[!NOTE]
 >
 >
-> In addition to the given themes and templates when you enable Core Components, you can also deploy the latest out-of-the box [sample themes and templates](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html) to your AEM environment for use in Core Components based Adaptive Forms.
+> In addition to the given themes and templates when you enable Core Components, you can also deploy the latest out-of-the box [sample themes and templates](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=sv-SE) to your AEM environment for use in Core Components based Adaptive Forms.
 -->
 
 ## Bygg ett anpassningsbart formulär  {#create-an-adaptive-form-core-components}
@@ -106,7 +106,7 @@ Du behöver följande för att skapa ett adaptivt formulär:
 
 1. Välj **[!UICONTROL Create]**. Ett adaptivt formulär skapas och öppnas i den adaptiva Forms-redigeraren. Redigeraren visar det innehåll som är tillgängligt i mallen.  Baserat på typen av anpassat formulär visas formulärelementen i det associerade <!--XFA form template, XML schema or --> JSON-schemat eller formulärdatamodellen (FDM) på fliken **[!UICONTROL Data Model Objects]** i **[!UICONTROL Content Browser]** i sidlisten. Du kan också dra och släppa dessa element för att skapa ett anpassat formulär.
 
-Nu kan du dra och släppa [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) till en adaptiv Forms-behållare för att utforma och skapa formuläret. Du kan även besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
+Nu kan du dra och släppa [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) till en adaptiv Forms-behållare för att utforma och skapa formuläret. Du kan även besöka [https://aemcomponents.dev/](https://aemcomponents.dev/) för att se hur de tillgängliga kärnkomponenterna fungerar i praktiken.
 
 >[!NOTE]
 >
