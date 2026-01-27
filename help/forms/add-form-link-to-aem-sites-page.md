@@ -4,9 +4,9 @@ description: Lär dig hur du lägger till formulärlänkar på AEM Sites-sidan.
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: a55d0776-8827-46cc-9625-5d6f5f6bda3b
-source-git-commit: 16b1e7ffa4e3812e9207bb283c63029939f7d14e
+source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,6 @@ I scenariot med bankwebbplatser förbättrar Forms Portal-komponenten **Link** n
 
 ![Länkikon](/help/forms/assets/link-forms.png)
 
-## Förutsättning
-
-Innan du utforskar de olika funktionerna i en Forms Portal-komponent kontrollerar du att kärnkomponenterna är aktiverade för din miljö. Installera den senaste versionen för att aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö.
-
-När du har distribuerat de senaste Core-komponenterna till din miljö blir Forms Portal-komponenterna tillgängliga i din redigeringsmiljö.
 
 ## Lägg till länkkomponenten på din webbplatssida
 

@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 Keywords: AF in Sites editor, af in aem sites, aem sites af, add af to a sites page, af aem sites, af sites, create af in a sites page, adaptive form in aem sites, forms aem sites, add form to a sites page, adaptive forms aem sites, add adaptive forms to aem page, create forms in an aem sites page
 exl-id: a1846c5d-7b0f-4f48-9d15-96b2a8836a9d
 role: User, Developer
-source-git-commit: bc9fa030aeab4f2dddafc2241fade7b5d0689926
+source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
 workflow-type: tm+mt
-source-wordcount: '3212'
+source-wordcount: '3206'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/create-or-add-an-adaptive-form-to-aem-sites-page.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Ökning {#overview}
@@ -41,7 +41,7 @@ Om du tidigare har skapat adaptiva Forms Foundation-komponenter eller rena HTML-
 * **Taggning:** På AEM Sites-sidor kan du [tilldela taggar eller etiketter till en sida, en resurs eller annat innehåll](/help/implementing/developing/introduction/tagging-framework.md). Taggar är nyckelord eller metadataetiketter som gör det möjligt att kategorisera och ordna innehåll baserat på specifika kriterier. Du kan tilldela en eller flera taggar till sidor, resurser eller andra innehållsobjekt i AEM för att förbättra sökningen och kategorisera resurserna.
 * **Låsa och låsa upp innehåll:** Med AEM Sites kan användare [styra åtkomst och ändringar av sidor](/help/sites-cloud/authoring/page-editor/edit-content.md) i AEM Sites-miljön. När en sida är låst innebär det att den skyddas från obehöriga ändringar och redigeringar av andra användare. Endast den användare som har låst innehållet eller en utsedd administratör kan låsa upp det för att tillåta ändringar.
 
-Dessutom använder Adaptiv Forms i AEM sidredigerare [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE#features). Dessa kärnkomponenter tillhandahåller en standard och enklare metod för att formatera och anpassa komponenterna, som är identisk med [AEM Sites WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
+Dessutom använder Adaptiv Forms i AEM sidredigerare [adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features). Dessa kärnkomponenter tillhandahåller en standard och enklare metod för att formatera och anpassa komponenterna, som är identisk med [AEM Sites WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 
 ## Hur skapar eller lägger man till ett adaptivt formulär på AEM Sites-sidan eller i AEM Experience Fragment? {#various-options-to-creat-or-add-an-adaptive-form-in-aem-sites-page-or-aem-experience-fragment}
@@ -70,11 +70,8 @@ Du kan utnyttja den här funktionen till fullo genom att använda följande alte
 
 ## Krav för att skapa eller lägga till ett adaptivt formulär på AEM Sites-sidan eller AEM Experience Fragment {#before-you-start-creating-an-adaptive-form}
 
-Innan du börjar skapa eller skapa ett adaptivt formulär ska du aktivera adaptiva Forms Core-komponenter och lägga till adaptiva Forms Client Libraries på din AEM Sites-sida:
+Innan du börjar skapa eller skapa ett adaptivt formulär lägger du till adaptiva Forms Client Libraries på din AEM Sites-sida:
 
-<!--### Enable Adaptive Forms Core Components for your AEM Cloud Service environment
-
-Install the latest far to enable Adaptive Forms Core Components for your AEM Cloud Service environment. -->
 
 ### Lägg till adaptiva Forms Client Libraries på din AEM Sites-sida eller i din Experience
 
@@ -82,7 +79,7 @@ Install the latest far to enable Adaptive Forms Core Components for your AEM Clo
 
 Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten lägger du till klientbiblioteken CustomHeaderlibs och CustomFoterlibs på din AEM Sites-sida via distributionsflödet. Så här lägger du till biblioteken:
 
-1. Få åtkomst till och klona din [AEM Cloud Service Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/repositories.html?lang=sv-SE).
+1. Få åtkomst till och klona din [AEM Cloud Service Git-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/repositories.html).
 1. Öppna mappen AEM Cloud Service Git-databas i en textredigerare för en plan. Exempel: Microsoft Visual Code.
 1. Öppna filen `ui.apps\src\main\content\jcr_root\apps\[your-project]\components\page\customheaderlibs.html` och lägg till följande kod i filen:
 
@@ -121,7 +118,7 @@ Om du vill aktivera alla funktioner för den adaptiva Forms-behållarkomponenten
        </sly> 
    ```
 
-1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html?lang=sv-SE) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
+1. [Kör distributionsflödet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/enable-front-end-pipeline.html) för att distribuera klientbiblioteken till din AEM as a Cloud Service-miljö.
 
 >[!NOTE]
 >

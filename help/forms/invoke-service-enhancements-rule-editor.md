@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 43535e52fd749cc599a4e30be25bcc0dbf20eaef
+source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1801'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,6 @@ Nedan visas de krav du måste uppfylla innan du kan använda **Anropa tjänst** 
 
 * Kontrollera att du har konfigurerat en datakälla. [Klicka här](/help/forms/configure-data-sources.md) om du vill ha anvisningar om hur du konfigurerar en datakälla.
 * Skapa en formulärdatamodell med den konfigurerade datakällan. [Klicka här](/help/forms/create-form-data-models.md) om du vill ha hjälp med att skapa en formulärdatamodell.
-* Kontrollera att kärnkomponenterna är aktiverade för din miljö. Installera den senaste versionen för att aktivera adaptiva Forms Core-komponenter för din AEM Cloud-tjänstmiljö.
 
 ## Utforska Invoke Service via olika användningsfall
 
