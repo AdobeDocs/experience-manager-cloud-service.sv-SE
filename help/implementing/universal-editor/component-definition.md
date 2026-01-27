@@ -25,7 +25,7 @@ Filen `component-definition.json` definierar de komponenter som är tillgänglig
 
 >[!TIP]
 >
->Du behöver inte skapa en egen `component-definition.json`-fil från grunden. Projektmallen som du använder för att [bootstrap ditt projekt](https://www.aem.live/developer/ue-tutorial) innehåller en [fullt fungerande `component-definition.json` fil ](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) som du kan anpassa efter dina behov.
+>Du behöver inte skapa en egen `component-definition.json`-fil från grunden. Projektmallen som du använder för att [bootstrap ditt projekt](https://www.aem.live/developer/ue-tutorial) innehåller en [fullt fungerande `component-definition.json` fil &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-xwalk/blob/main/component-definition.json) som du kan anpassa efter dina behov.
 
 ## Exempel på komponentdefinition {#example}
 
@@ -123,7 +123,7 @@ Om komponenten är relaterad till innehåll i ett innehållsfragment kan du ange
 
 * `name` definierar ett valfritt namn som har sparats i JCR för den nyskapade komponenten.
    * Endast informativ och visas vanligtvis inte i användargränssnittet som `title` är.
-* `cfModel` definierar [ Content Fragment ](/help/assets/content-fragments/content-fragments-models.md)-modellen för den nyskapade komponenten.
+* `cfModel` definierar [&#x200B; Content Fragment &#x200B;](/help/assets/content-fragments/content-fragments-models.md)-modellen för den nyskapade komponenten.
 * `cfFolder` definierar i vilken mapp innehållsfragmentet ska skapas.
 * `title` definierar titeln på det nya innehållsfragmentet.
 * `description` definierar en beskrivning av det nya innehållsfragmentet.
