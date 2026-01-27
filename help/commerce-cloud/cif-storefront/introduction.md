@@ -5,7 +5,7 @@ thumbnail: introducing-aem-commerce.jpg
 feature: Commerce Integration Framework
 role: Admin
 exl-id: 3f18f976-ff8a-4726-b4c5-db4e19ae7cee
-source-git-commit: 80bd8da1531e009509e29e2433a7cbc8dfe58e60
+source-git-commit: e707bddc17208d599491d27c5bc0134cb41233e0
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Med de kraftfulla CIF-verktygen i AEM kan innehållsskapare snabbt skapa komplex
 
 ### Tid till värde (TTV) {#ttv}
 
-CIF snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) och integreringsmönster för PWA (Headless content and commerce).
+CIF snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless content and commerce).
 
 CIF är utvecklat för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger dig tillgång till nya och förbättrade funktioner.
 
@@ -62,7 +62,7 @@ CIF ger dig standardiserade integreringsmönster baserade på bästa praxis. Det
    * Ingen åtkomst till mellanlagrade data
    * Behovet av produktdata och upplevelser i realtid
 * En växande digital mognad leder till ett behov av upplevelsehantering
-* &#x200B;
+* 
    * CIF har funktioner för hantering av produktupplevelser som kan införlivas stegvis utan ytterligare IT-arbete.
 * Redo för flera kanaler
    * CIF har stöd för en mängd olika kontakttekniker (serversidan, hybrid, klientsidan) med mönster, acceleratorer och kärnkomponenter.

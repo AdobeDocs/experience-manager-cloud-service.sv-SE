@@ -5,7 +5,7 @@ feature: Commerce Integration Framework
 role: Admin
 exl-id: f89c07c7-631f-41a4-b5b9-0f629ffc36f0
 index: false
-source-git-commit: 80bd8da1531e009509e29e2433a7cbc8dfe58e60
+source-git-commit: e707bddc17208d599491d27c5bc0134cb41233e0
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Som standard är funktionen för rensning av cache inaktiverad i CIF-konfigurati
 
    * Se även till att du anger motsvarande mönster som passar din produkt, kategori och CMS-sida måste läggas till i ovanstående konfigurationsfil för att den ska kunna tas bort från dispatchercachen.
 
-* Om du vill förbättra prestanda för SQL-frågor för att hitta motsvarande sida som är relaterad till produkten och kategorin lägger du till motsvarande index i projektet (rekommenderas). Mer information finns i [CICCacheInvalidationSupport.](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.apps/src/main/content/jcr_root/_oak_index/cifCacheInvalidationSupport/.content.xml)
+* Om du vill förbättra prestanda för SQL-frågor för att hitta motsvarande sida som är relaterad till produkten och kategorin lägger du till motsvarande index i projektet (rekommenderas). Mer information finns i [cifCacheInvalidationSupport.](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.apps/src/main/content/jcr_root/_oak_index/cifCacheInvalidationSupport/.content.xml)
 
 ## Verifierar funktionen Rensa cache {#verify-clear-cache}
 
@@ -129,7 +129,7 @@ Den här funktionen har inte bara basfunktioner utan också utbyggbarhet, vilket
 
 ### Utöka befintligt attribut {#existing-attribute}
 
-Om cacheminnet behöver rensas och inte täcks av den befintliga attributbaserade funktionen (till exempel `categoryUids`), kan du referera till [&#x200B; den här referensfilen &#x200B;](https://github.com/adobe/aem-cif-guides-venia/blob/main/core/src/main/java/com/venia/core/models/commerce/services/cacheinvalidation/ExtendedCategoryUidInvalidation.java) för att lägga till nya mönster och definiera ytterligare `invalidatePaths` som ska rensas från cacheminnet utöver vad den aktuella implementeringen hanterar.
+Om cacheminnet behöver rensas och inte täcks av den befintliga attributbaserade funktionen (till exempel `categoryUids`), kan du referera till [ den här referensfilen ](https://github.com/adobe/aem-cif-guides-venia/blob/main/core/src/main/java/com/venia/core/models/commerce/services/cacheinvalidation/ExtendedCategoryUidInvalidation.java) för att lägga till nya mönster och definiera ytterligare `invalidatePaths` som ska rensas från cacheminnet utöver vad den aktuella implementeringen hanterar.
 
 ### Lägger till nytt anpassat attribut {#new-custom-attribute}
 
