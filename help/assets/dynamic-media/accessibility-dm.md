@@ -55,12 +55,12 @@ Elementen i användargränssnittet i Dynamic Media fungerar med hjälpmedelstekn
 
 Alla komponenter för dynamiska medievisningsprogram som är färdiga att användas stöder tangentbordstillgänglighet för dina kunder.
 
-Se [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility#) i referenshandboken för dynamiska medievyer.
+Se [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility#) i referenshandboken för dynamiska medievyer.
 
 ## Stöd för hjälpfunktioner i Dynamic Media-visningsprogram {#assistive-technology=support-for-dm-viewers}
 
 Alla komponenter i Dynamic Media Viewer stöder rollerna och attributen ARIA (Accessible Rich Internet Applications) för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Läs hjälpavsnittet **Stöd för hjälpfunktioner** i avsnittet om anpassning av visningsprogram i referenshandboken för dynamiska medievyer. Se till exempel [Teknikstöd](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive#) för Video Viewer eller [Teknikstöd](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Läs hjälpavsnittet **Stöd för hjälpfunktioner** i avsnittet om anpassning av visningsprogram i referenshandboken för dynamiska medievyer. Se till exempel [Teknikstöd](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive#) för Video Viewer eller [Teknikstöd](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive#viewers-for-aem-assets-only) för Interactive Image Viewer.
 
 ## Stöd för undertexter i [!DNL Dynamic Media] {#closed-caption-support}
 
