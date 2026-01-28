@@ -5,16 +5,16 @@ feature: Content Fragments
 role: User
 exl-id: 6fbf8128-3b7f-4eda-bbbd-3336578d2586
 solution: Experience Manager Sites
-source-git-commit: f66ea281e6abc373e9704e14c97b77d82c55323b
+source-git-commit: 278242e0be1da5c64abfa5d9ac174013688ff422
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '559'
 ht-degree: 2%
 
 ---
 
 # Markering {#markdown}
 
-När du [redigerar](/help/sites-cloud/administering/content-fragments/authoring.md#edit-multi-line-text-fields-plaintext-markdown) kan [Flerradiga textfält](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types) ha definierats med **standardtyp** för **Markdown**. I Content Fragment Editor används syntaxen *markdown* för att du enkelt ska kunna skriva innehåll för både sidredigering och rubrikfri leverans:
+När du [redigerar](/help/sites-cloud/administering/content-fragments/authoring.md#edit-multi-line-text-fields-plaintext-markdown) innehållsfragment kan [Textfält med flera rader](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#data-types) ha definierats med **standardtypen** för **Markdown**. I Content Fragment Editor används syntaxen *markdown* för att du enkelt ska kunna skriva innehåll för både sidredigering och rubrikfri leverans:
 
 ![Markering Textfält med flera rader i redigeraren](/help/sites-cloud/administering/content-fragments/assets/cf-markdown-field-edit.png)
 
@@ -32,7 +32,7 @@ Du kan definiera:
 
 ## Rubriknotation {#heading-notation}
 
-Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) används för en H1, två hash-taggar (#) för en H2 och så vidare. Du kan använda upp till 6 hash-taggar. Till exempel:
+Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) anger en H1, två hash-taggar (##) för en H2 och så vidare. Du kan använda upp till 6 hash-taggar. Till exempel:
 
     `## This is an H2`
 
@@ -66,7 +66,7 @@ Detta är exempel på textbundna länkar:
 
     `This is [an example](https://example.com/ "Title") inline link.`
 
-    `This is [an example of an email link](emailto:myaddress@mydomain.info)`
+    `This is [an example (non-standard) of an email link](emailto:myaddress@mydomain.info)`
 
     `[This link](https://example.net/) has no title attribute.`
 
@@ -130,7 +130,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du symbolen &ast; före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen &amp;ast; före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -150,7 +150,7 @@ Om du vill skapa en ordnad lista lägger du till siffrorna, följt av en punkt, 
 
 Du kan lägga till kursiv stil eller fetstil i texten.
 
-Så här lägger du till kursiv stil:
+Du kan lägga till kursiv stil på följande sätt:
 
     `*single asterisks*`
 
@@ -182,7 +182,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
 ## Omvända snedstreck {#backslash-escapes}
 
-Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML-tagg med &lt;em>) kan du använda omvända snedstreck före asteriskerna, enligt följande:
+Du kan använda omvänt snedstreck för att generera litterala tecken som också har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omge ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
     `\\*literal asterisks\\*`
 
