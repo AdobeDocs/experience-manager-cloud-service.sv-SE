@@ -19,7 +19,7 @@ ht-degree: 2%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE) |
 | AEM as a Cloud Service | Den här artikeln |
 
 ## Tillgång till adaptiva Forms Core-komponenter
@@ -32,8 +32,8 @@ För **AEM 6.5 Forms** - och **AEM 6.5 LTS Forms** -miljöer är adaptiva Forms 
 
 Följ de relevanta guiderna:
 
-- För AEM 6.5 Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html).
-- För AEM 6.5 LTS Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 LTS Forms](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components).
+- För AEM 6.5 Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 Forms](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=sv-SE).
+- För AEM 6.5 LTS Forms: [Aktivera adaptiva Forms Core-komponenter i AEM 6.5 LTS Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components).
 
 **Obs!** Om några steg för att aktivera adaptiva Forms Core-komponenter i äldre AEM 6.5-miljöer är otydliga eller om det finns miljöspecifika krav måste du klargöra dessa krav innan du försöker aktivera.
 
