@@ -1,15 +1,15 @@
 ---
 title: Tillgänglighet i dynamiska media
-description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa metoderna för att koda videofilmer, publicera videofilmer i YouTube och visa videorapporter. Lär dig även hur du lägger till undertexter, bildtexter eller kapitelmarkörer i videoklipp.
+description: Lär dig hur du arbetar med video i Dynamic Media, t.ex. de bästa metoderna för att koda videofilmer och publicera videofilmer i YouTube. Lär dig även hur du lägger till undertexter, bildtexter eller kapitelmarkörer i videoklipp.
 contentOwner: Rick Brough
 topic-tags: introduction
 content-type: reference
 feature: Accessibility
 role: Admin,User
 exl-id: f8d2dcbf-f61a-4b27-a3fc-406e3662adcb
-source-git-commit: 36ab36ba7e14962eba3947865545b8a3f29f6bbc
+source-git-commit: 4a09e74ae62dba40deb192b1dfe38860bdb43921
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -55,12 +55,12 @@ Elementen i användargränssnittet i Dynamic Media fungerar med hjälpmedelstekn
 
 Alla komponenter för dynamiska medievisningsprogram som är färdiga att användas stöder tangentbordstillgänglighet för dina kunder.
 
-Se [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility.html?lang=sv-SE) i referenshandboken för dynamiska medievyer.
+Se [Tangentbordstillgänglighet och navigering](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/c-keyboard-accessibility#) i referenshandboken för dynamiska medievyer.
 
 ## Stöd för hjälpfunktioner i Dynamic Media-visningsprogram {#assistive-technology=support-for-dm-viewers}
 
 Alla komponenter i Dynamic Media Viewer stöder rollerna och attributen ARIA (Accessible Rich Internet Applications) för att förbättra integrationen med hjälpmedelstekniker som skärmläsare.
-Läs hjälpavsnittet **Stöd för hjälpfunktioner** i avsnittet om anpassning av visningsprogram i referenshandboken för dynamiska medievyer. Se till exempel [Teknikstöd](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive.html?lang=sv-SE) för Video Viewer eller [Teknikstöd](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive.html?lang=sv-SE#viewers-for-aem-assets-only) för Interactive Image Viewer.
+Läs hjälpavsnittet **Stöd för hjälpfunktioner** i avsnittet om anpassning av visningsprogram i referenshandboken för dynamiska medievyer. Se till exempel [Teknikstöd](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/video/r-html5-video-viewer-20-assistive#) för Video Viewer eller [Teknikstöd](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-assistive#viewers-for-aem-assets-only) för Interactive Image Viewer.
 
 ## Stöd för undertexter i [!DNL Dynamic Media] {#closed-caption-support}
 
@@ -71,5 +71,5 @@ Se [Video i dynamiska media - Lägg till undertexter till video](/help/assets/dy
 
 >[!MORELIKETHIS]
 >
->* [Tillgänglighet för Adobe-lösningar](https://www.adobe.com/accessibility.html)
+>* [Tillgänglighet för Adobe-lösningar](https://www.adobe.com/trust/accessibility.html)
 >* [Hjälpmedel i Experience Manager Assets](/help/assets/dynamic-media/accessibility-dm.md)

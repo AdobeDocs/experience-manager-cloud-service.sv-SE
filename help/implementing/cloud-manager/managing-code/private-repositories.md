@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar Cloud Manager så att det fungerar med
 exl-id: 5232bbf5-17a5-4567-add7-cffde531abda
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: 892339482c009edf9f73560f2a4b66f4317843fe
 workflow-type: tm+mt
 source-wordcount: '1000'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Genom att konfigurera Cloud Manager för integrering med ditt privata GitHub-mol
 >* GitHub Enterprise Server-databaser (värdbaserad version av GitHub).
 >* GitLab-databaser (både `gitlab.com` och självhanterade versioner av GitLab).
 >* Bitbucket-databaser (både `bitbucket.org` och Bitbucket Server, den självhanterade versionen av BitBucket).
->* Azure DevOps (både [dev.azure.com](http://dev.azure.com) och självhanterade versioner av Azure DevOps)-databaser.
+>* Azure DevOps (både [dev.azure.com](https://azure.microsoft.com/en-us/products/devops/?nav=min) och självhanterade versioner av Azure DevOps)-databaser.
 >
 >Se [Lägg till externa databaser i Cloud Manager - privat beta](/help/implementing/cloud-manager/managing-code/external-repositories.md).
 
