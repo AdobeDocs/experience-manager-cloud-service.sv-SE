@@ -5,7 +5,7 @@ feature: Content Fragments
 role: User
 exl-id: 7a6d4a63-faf8-4e1c-95da-90db2027a2dd
 solution: Experience Manager Sites
-source-git-commit: ea85381d63954af3093c34f612babd953c466e1e
+source-git-commit: 6173fc8a42525dcde435289da8ef8a533ea96de6
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 2%
@@ -44,7 +44,7 @@ Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken.
 
     `### This is an H3`
 
-    `###### This is a H6`
+    `###### This is an H6`
 
 Du kan också skapa en H1 genom att stryka under texten med lika stora tecken och skapa en H2 genom att stryka under texten med minustecken. Till exempel:
 
@@ -72,7 +72,7 @@ Detta är exempel på textbundna länkar:
 
     `This is [an example](https://example.com/ "Title") inline link.`
 
-    `This is [an example of an email link](emailto:myaddress@mydomain.info)`
+    `This is [an example (non-standard) of an email link](emailto:myaddress@mydomain.info)`
 
     `[This link](https://example.net/) has no title attribute.`
 
@@ -136,7 +136,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du symbolen &ast; före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen &amp;ast; före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -156,7 +156,7 @@ Om du vill skapa en ordnad lista lägger du till siffrorna, följt av en punkt, 
 
 Du kan lägga till kursiv stil eller fetstil i texten.
 
-Så här lägger du till kursiv stil:
+Du kan lägga till kursiv stil på följande sätt:
 
     `*single asterisks*`
 
