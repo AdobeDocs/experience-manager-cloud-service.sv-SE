@@ -3,9 +3,9 @@ title: Översikt över identifieringsagent
 description: Lär dig hur du kan använda Discovery Agent för att leverera relevant AEM-innehåll på begäran via naturliga, konversationsmoment för att få en smidig, klickfri upptäckt.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: f83324be68bdab65e5c76ef336eb7e4a2e318dd1
+source-git-commit: d0c683d20f8932683d3d0aa11a67be92d35b725c
 workflow-type: tm+mt
-source-wordcount: '1265'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -170,3 +170,6 @@ Ange kortfattade detaljer i dina naturliga språkfrågor så att agenten kan ret
 
 * Använd era organisationsspecifika metadata, t.ex. kategorier (löpande skor, elektronik), säsonger (höst, vår), händelser (svart fredag, produktlansering) och kanaler (webb, e-post, utskrift) för att filtrera innehållet ytterligare.
 
+## Begränsningar {#limitations-discovery-agent}
+
+Identifieringsagenten stöder endast dimensionsbaserade uppmaningar för formaten image och SVG. Exempel: `Find images wider than 1080px`.
