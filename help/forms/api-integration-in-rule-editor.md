@@ -125,7 +125,7 @@ På samma sätt använder **Land för Passport-utfärdande** och **destinationsl
 
 >
 >
-> Du kan [hämta egenskapsvärden från en JSON-array genom att anropa ett API och använda en anpassad funktion ](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array). På så sätt kan du extrahera värden och binda dem direkt till formulärfält.
+> Du kan [hämta egenskapsvärden från en JSON-array genom att anropa ett API och använda en anpassad funktion &#x200B;](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array). På så sätt kan du extrahera värden och binda dem direkt till formulärfält.
 
 ## Implementera återförsöksmekanism för API-fel
 
