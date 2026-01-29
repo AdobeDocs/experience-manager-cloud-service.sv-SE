@@ -5,9 +5,9 @@ exl-id: 9fa0c5eb-415d-4e56-8136-203d59be927e
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 2c863e0cfad3211e811665a5169def7705e8b907
+source-git-commit: c91ace39d34864b88f1e07fcc7d427f347f9ed31
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1786'
 ht-degree: 0%
 
 ---
@@ -29,13 +29,11 @@ När ett nytt produktionsprogram skapas skapas automatiskt det New Relic One-und
 
 New Relic One APM för AEM as a Cloud Service har många funktioner.
 
-* Direktåtkomst till ett dedikerat New Relic One-konto
+* Direktåtkomst till ett dedikerat New Relic One-konto.
 
-* Instrumenterad New Relic One APM-agent som visar exakta metodanrop med radnummer, inklusive externa beroenden och databaser
+* Instrumenterad New Relic One APM-agent som visar exakta metodanrop med radnummer, inklusive externa beroenden och databaser.
 
-* Holistisk prestandaoptimering genom att kombinera nyckelvärden från övervakning på infrastrukturnivå och programövervakning (Adobe Experience Manager)
-
-* AEM as a Cloud Service visar Java Management Extensions (JMX) MBeans och hälsokontroller direkt inifrån New Relic Insights, vilket möjliggör en djupgående undersökning av programmets prestanda och hälsomått.
+* Holistisk prestandaoptimering genom att kombinera nyckelvärden från övervakning på infrastrukturnivå och programövervakning (Adobe Experience Manager).
 
 ## Aktivera ditt New Relic One-underkonto {#activate-sub-account}
 
@@ -141,7 +139,7 @@ Om du uppmanas att verifiera din e-postadress under inloggningen på New Relic O
 
 Om du inte verifierar din e-postadress försöker New Relic logga in dig med den senast skapade användarposten som är kopplad till din e-postadress. Du kan undvika att verifiera din e-post under varje inloggning genom att klicka i kryssrutan **Kom ihåg mig** på inloggningsskärmen.
 
-Om du vill ha mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Felsöka New Relic One användaråtkomst {#troubleshooting}
 
@@ -181,7 +179,7 @@ Om du inte får något e-postmeddelande från New Relic gör du följande:
 >
 >Följ samma steg i avsnittet [Aktivera ditt New Relic One-underkonto](#activate-sub-account) i det här dokumentet om du vill återaktivera ditt New Relic One-underkonto.
 
-Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+Om du vill ha mer hjälp eller mer information om New Relic One-erbjudanden för ditt AEM as a Cloud Service-program kan du öppna ett supportärende via [AEM supportportal](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 
 ## Frågor och svar {#faqs}
 
