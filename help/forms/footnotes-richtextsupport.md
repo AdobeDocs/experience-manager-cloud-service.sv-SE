@@ -4,18 +4,16 @@ description: Använd RTF-redigerare (Rich Text Editor) för fotnoter i en adapti
 feature: Adaptive Forms, Foundation Components
 exl-id: f04dae84-daab-42f8-876f-02fe426f62be
 role: User, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: a7265b4f8df34efc09076c03d1433f9aae542e76
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
 
 # Fotnotskomponent {#footnotecomponent}
 
->[!NOTE]
->
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 **[!UICONTROL Footnote]** är den extra biten med information eller anteckningar som visas i slutet av sidan. [!UICONTROL Footnote] innehåller anteckningarna som anges i texten med siffror som upphöjda.
 
@@ -30,7 +28,7 @@ Fotnoterna numreras sekventiellt i den ordning som de visas på sidan. Varje fot
 * Ger extra information som kan avbryta det normala flödet av huvudinformationen.
 * Tillhandahåller parentetisk information eller copyrightbehörigheter.
 
-I Adaptiv Forms används [!UICONTROL footnote] för att visa information om hur du fyller i eller använder formuläret. Mer information om hur du skapar ett adaptivt Forms finns i [Skapa ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html?lang=sv-SE).
+I Adaptiv Forms används [!UICONTROL footnote] för att visa information om hur du fyller i eller använder formuläret. Mer information om hur du skapar ett adaptivt Forms finns i [Skapa ett adaptivt formulär](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/create-an-adaptive-form/create-an-adaptive-form-on-forms-cs/creating-adaptive-form.html).
 
 ## Fotnot i Adaptiv Forms {#using-footnote-adaptiveforms}
 
@@ -53,14 +51,15 @@ Så här lägger du till en fotnot i Adaptiv Forms:
 
 1. Dra komponenten **[!UICONTROL Footnote Placeholder]** från komponentwebbläsaren till det adaptiva formuläret.
 
-   >[!NOTE]
-   >
-   >* I publiceringsinstansen visas fotnoter på den plats där komponenten **[!UICONTROL Footnote Placeholder]** placeras i det adaptiva formuläret.
-   >* När du navigerar mellan olika paneler visas endast synliga fotnoter i **[!UICONTROL Footnote Placeholder]** som finns på den navigerade panelen.
-
 1. Spara egenskaperna.
 
 Vid körning visas siffran i texten som upphöjd och motsvarande beskrivning visas i komponenten **[!UICONTROL Footnote]** på den plats där [!UICONTROL Footnote Placeholder] placeras i det adaptiva formuläret. Du kan navigera direkt till fotnotsbeskrivningen genom att klicka på motsvarande nummer på [!UICONTROL Footnote].
+
+## Fotnotsplatshållarens beteende i Adaptiv Forms
+
+* I publiceringsinstansen visas fotnoter på den plats där komponenten **[!UICONTROL Footnote Placeholder]** placeras i det adaptiva formuläret.
+* Fotnoter har stöd för radbrytningar, vilket gör att formulärförfattare kan formatera innehåll över flera rader i komponenten **[!UICONTROL Footnote Placeholder]**.
+* Fotnoter är alltid synliga i **[!UICONTROL Footnote Placeholder]**, oavsett om de associerade panelerna är synliga eller inte.
 
 
 ## Se även {#see-also}

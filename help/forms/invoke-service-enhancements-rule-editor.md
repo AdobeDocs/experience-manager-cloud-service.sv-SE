@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
+source-git-commit: 07f1b64753387d9ee47b26d65955e41cd961f1a5
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '2116'
 ht-degree: 0%
 
 ---
@@ -171,6 +171,10 @@ Ange `101` i textrutan `Pet ID` för att dynamiskt fylla i listrutealternativen 
 
 ![Resultat](/help/forms/assets/output1.png)
 
+> 
+>
+> Alternativen för listrutor kan också fyllas i dynamiskt genom att en tjänst anropas, JSON-svaret tolkas och anpassade funktioner tillämpas. Mer information finns i [det här avsnittet](#retrieve-property-values-from-a-json-array).
+
 ### Användningsfall 2: Ange upprepningsbar panel med utdata från Invoke Service
 
 Det här användningsexemplet visar hur du fyller i repeterbara paneler dynamiskt baserat på utdata från en **Invoke Service**.
@@ -269,6 +273,123 @@ Du kan också konfigurera en felhanterare så att ett felmeddelande visas om anr
 När du klickar på knappen **Skicka** anropas API-tjänsten `redirect-api`. Användaren omdirigeras till sidan **Kontakta oss** när åtgärden har slutförts.
 
 ![Utdata för händelsenyttolast](/help/forms/assets/output5.gif)
+
+## Hämta egenskapsvärden från en JSON-array
+
+Adaptiv Forms stöder anrop av en tjänst, bearbetning av JSON-svar och dynamisk ifyllning av formulärfält. I det här avsnittet beskrivs hur du extraherar egenskapsvärden från en JSON-array och binder dem till formulärfält.
+
+### Exempel på JSON-svar
+
+I följande exempel visas USA:s försäljningsregioner och en lista över säljare:
+
+
+```json
+[
+  {
+    "region": "East",
+    "salesPerson": "Emily Carter"
+  },
+  {
+    "region": "South",
+    "salesPerson": "Michael Brown"
+  },
+  {
+    "region": "Midwest",
+    "salesPerson": "Sophia Martinez"
+  },
+  {
+    "region": "Southwest",
+    "salesPerson": "David Johnson"
+  },
+  {
+    "region": "West",
+    "salesPerson": "Linda Walker"
+  }
+]
+```
+
+### Egen funktion för att extrahera egenskapsvärden
+
+<span class="preview"> Det här är en tidig adopter-funktion. Om du är intresserad kan du skicka ett e-postmeddelande från din arbetsadress till mailto:aem-forms-ea@adobe.com och begära åtkomst till funktionen</a>. </span>
+
+Använd följande anpassade funktion för att extrahera egenskapsvärden från JSON-arrayen.
+
+```js
+/**
+ * Returns an array of values for a specific property from an array of objects.
+ *
+ * @name getPropertyValues
+ * @param {Object[]} jsonArray An array of objects
+ * @param {string} propertyName The property whose values should be extracted
+ * @returns {Array} An array containing the values of the specified property
+ *
+ */
+
+function getPropertyValues(jsonArray, propertyName)
+{
+    return jsonArray.map((obj) => obj[propertyName]);
+
+}
+```
+
+Den anpassade funktionen accepterar:
+
+* **jsonArray**: JSON-matrisen returnerades från tjänsten
+* **propertyName**: Egenskap att extrahera värde med
+
+Den anpassade funktionen returnerar en enkel array med värden.
+
+>[!NOTE]
+>
+> Detaljerade anvisningar om hur du lägger till anpassade funktioner finns i artikeln [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md) .
+
+
+### Använda funktionen i Regelredigeraren
+
+Så här hämtar du det specifika värdet från JSON-arrayen:
+
+```
+event.payload.invokeServiceResponse.rawPayloadBody
+```
+
+I följande exempel visas hur du fyller i ett `Sales Department`-formulär med det här svaret.
+
+Låt oss till exempel skapa ett `Sales Department`-formulär som innehåller listrutorna `Select Region` och `Select Sales Representative`.
+
+**Steg 1: Anropa tjänsten vid formulärinitiering**
+
+```
+WHEN
+    Form is initialized
+THEN
+    Invoke Service → salesdeptinfo
+```
+
+>[!NOTE]
+>
+> [Klicka här](/help/forms/api-integration-in-rule-editor.md) om du vill lära dig hur du integrerar API utan att skapa en formulärdatamodell i redigeraren för visuell regel.
+
+**Steg 2: Fyll i listrutan Region**
+
+Lägg till en Success Handler för tjänstanropet och konfigurera följande åtgärd:
+
+```
+Set enum → Region dropdown
+getPropertyValues(
+    event.payload.invokeServiceResponse.rawPayloadBody,
+    "region"
+)
+```
+
+Den här regeln läser JSON-arrayen, extraherar egenskapsvärdena för `region` och tilldelar värdena till listrutan `Select Region`.
+
+Konfigurera på samma sätt åtgärden för listrutan `Select Sales Representative` i Success Handler.
+
+![Händelsenyttolast för JSON-matris](/help/forms/assets/event-payload.png)
+
+När formuläret läser in JSON-data returneras och den anpassade funktionen extraherar egenskapsvärden och listrutan fylls i automatiskt:
+
+![Händelsenyttolastformulär](/help/forms/assets/event-payload-form.png)
 
 ## Frågor och svar
 

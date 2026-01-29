@@ -6,9 +6,9 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: integrera API i regelredigeraren, anropa tjänstförbättringar
 exl-id: fc51f86d-e672-4513-b473-6700757a0c3d
-source-git-commit: 0dba0003d8b13631e91147fa08c3b986c11b61d3
+source-git-commit: 478b9c21e5b96dc31f5926a49864ea867e1ae86c
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -123,6 +123,10 @@ När användaren till exempel öppnar **Land där han/hon är medborgare** visas
 
 På samma sätt använder **Land för Passport-utfärdande** och **destinationsland** samma API-anrop för att säkerställa konsekventa och aktuella data i alla tre fälten.
 
+>
+>
+> Du kan [hämta egenskapsvärden från en JSON-array genom att anropa ett API och använda en anpassad funktion ](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array). På så sätt kan du extrahera värden och binda dem direkt till formulärfält.
+
 ## Implementera återförsöksmekanism för API-fel
 
 När en API-begäran misslyckas är det ofta användbart att försöka utföra begäran igen innan ett fel rapporteras till användaren. Du kan implementera en avsöknings- och återförsöksmekanism genom att skriva egen kod i filen **function.js** .
@@ -195,10 +199,6 @@ function retryHandler(requestFn) {
 ```
 
 I ovanstående kod hanterar funktionen **retryHandler** API-begäranden med automatiska försök om fel uppstår. Den tar en begärandefunktion (requestFn) och försöker utföra begäran upp till två gånger, och lägger till metadata för varje nytt försök.
-
->[!NOTE]
->
-> Detaljerade anvisningar om hur du lägger till anpassade funktioner finns i artikeln [Introduktion till anpassade funktioner för adaptiv Forms baserat på kärnkomponenter](/help/forms/create-and-use-custom-functions.md) .
 
 ## Vanliga frågor
 

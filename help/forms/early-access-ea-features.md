@@ -6,9 +6,9 @@ Role: developer, user, author
 exl-id: 6b3f853c-2a6d-4544-9cad-8a3fc1e1f3b9
 feature: Adaptive Forms
 role: Admin, Developer, User
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: a2f686e7917d47138bdb9dcd4b5245732635bed7
 workflow-type: tm+mt
-source-wordcount: '3068'
+source-wordcount: '3096'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ När någon skickar ett formulär på din webbplats som skapats med AEM Adaptive
 
 Genom att effektivisera dataöverföringsprocessen kan kopplingen hjälpa dig att förbättra konverteringsgraden på webbplatsen. Genom att automatiskt skicka leaddata till Marketo kan ni se till att kvalificerade leads snabbt läggs in i era vårdsprogram.
 
-AEM Forms till Marketo Connector hjälper er att utnyttja båda plattformarnas styrkor för att skapa en effektivare marknadsföringstrå.
+AEM Forms till Marketo Connector hjälper er att utnyttja båda plattformarnas styrkor för att skapa en effektivare funnel för marknadsföring.
 
 Vill du börja? I följande artiklar finns detaljerade anvisningar om hur innovationen används.
 
@@ -259,7 +259,7 @@ AEM Forms har förbättrat sina säkerhetsfunktioner genom att lägga till stöd
 
 Genom att erbjuda flera CAPTCHA-alternativ har AEM Forms gett dig möjlighet att välja den lösning som bäst passar just dina behov.
 
-Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
+Vill du integrera någon av dessa CAPTCHA-lösningar med din adaptiva Forms? I vår dokumentation finns detaljerade anvisningar för varje: [Cloudflare Turnstile](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-turnstile-core-components), [hCaptcha](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/integrate-adaptive-forms-hcaptcha-core-components) och [Google reCAPTCHA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/captcha-adaptive-forms-core-components).
 
 ### Doc Assurance API:er
 
@@ -312,6 +312,8 @@ Genom att lagra PDF-filer i Azure Blob Storage kan man centralisera hanteringen 
 * [Förbättrad navigering med stöd för händelsenyttolast](/help/forms/invoke-service-enhancements-rule-editor.md#use-case-5-use-event-payload-in-navigate-to-action-in-invoke-service): Åtgärden **Navigera till** i Invoke Service-hanterarna har stöd för `EVENT_PAYLOAD`, vilket gör att formulärförfattare kan konfigurera uppföljningsåtgärder baserat på händelsesvar.
 
 * [Stöd för funktioner och matematiska uttryck i indataparametrar](/help/forms/rule-editor-core-components-user-interface.md#function-and-mathematical-expression-support-in-input-parameters): Indataparametrarna har nu stöd för både funktionsanrop och matematiska uttryck, vilket gör att formulärförfattare kan skicka dynamiskt beräknade värden direkt.
+
+* [Hämta egenskapsvärden från en JSON-array](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array): Anropa ett API med en anpassad funktion för att extrahera värden från en JSON-array och binda dem direkt till formulärfält.
 
 ## Se även
 
