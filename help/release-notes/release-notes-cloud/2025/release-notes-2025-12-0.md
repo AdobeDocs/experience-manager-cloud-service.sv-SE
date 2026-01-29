@@ -1,20 +1,18 @@
 ---
-title: Aktuell versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service
-description: Versionsinformation för  [!DNL Adobe Experience Manager] as a Cloud Service.
-mini-toc-levels: 1
-exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
+title: Versionsinformation om 2025.12.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
+description: Versionsinformation om 2025.12.0-utgåvan av  [!DNL Adobe Experience Manager] as a Cloud Service.
 feature: Release Information
 role: Admin
-source-git-commit: e4bab603da7022d868ce729309945649aa44d0fb
+source-git-commit: 9e81e0f3ed4b3e4ac02655cf4203191c61007b1d
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '1951'
 ht-degree: 0%
 
 ---
 
-# Aktuell versionsinformation för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
+# Versionsinformation 2025.12.0 för [!DNL Adobe Experience Manager] as a Cloud Service {#release-notes}
 
-I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) versionen av [!DNL Experience Manager] as a Cloud Service.
+I följande avsnitt beskrivs versionsinformationen för funktionen för 2025.12.0-versionen av [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -28,7 +26,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 
 ## Releasedatum {#release-date}
 
-Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2026.1.0) är 29 januari 2026. Nästa funktionsversion (2026.2.0) är planerad till den 26 februari 2026.
+Releasedatum för [!DNL Adobe Experience Manager] som [!DNL Cloud Service] aktuell funktionsversion (2025.12.0) är 11 december 2025. Nästa funktionsversion (2026.1.0) är planerad till 29 januari 2026.
 
 ## Versionsinformation om underhåll {#maintenance}
 
@@ -69,8 +67,6 @@ Om du vill anmäla dig till att delta i det här programmet skickar du ett e-pos
 * Namn och Adobe ID på gruppmedlemmar som aktivt kommer att använda agenter.
 * Visa en lista över specifika agenter som du eller ditt team vill använda. Eller säg bara &quot;Alla agenter&quot;.
 
-Kunder som valts ut att delta meddelas direkt av Adobe. Deltagandet är beroende av vad som gäller, inklusive kundlicenser och begränsad programkapacitet. Även om inte alla förfrågningar till att börja med kan hanteras, kan ytterligare kunder övervägas i framtida betaversioner.
-
 ### AEM Foundation (Beta-program) {#aem-foundation-beta-programs}
 
 Se [betaprogram för AEM Foundation](#foundation-early-adopter).
@@ -79,34 +75,26 @@ Se [betaprogram för AEM Foundation](#foundation-early-adopter).
 
 Se [Cloud Manager betaprogram](/help/implementing/cloud-manager/release-notes/current.md).
 
-## [!DNL Experience Manager Sites] som en [!DNL Cloud Service] {#sites}
-
-### Content MCP Server {#content-MCP}
-
-Chattapplikationer (t.ex. ChatGPT) och moderna IDE:er (t.ex. Cursor) kan använda MCP-protokollet (Model Context Protocol) för att låta en stor språkmodell (LLM) anropa verktyg som exponeras av en MCP-server. I stället för att skriva kod mot API-specifikationer på låg nivå kan du beskriva vad du vill på ett naturligt språk och låta LLM översätta den metoden till lämpliga API-anrop. Och i vissa fall kan det vara enklare att fråga än att navigera i ett användargränssnitt.
-
-Du kan till exempel uppmana ChatGPT: *Redigera /en/coffee.html i AEM: ändra texten Frescopa Coffee i innehållet till något som en 20-åring skulle vilja ha.*
-
-AEM har två MCP-innehållsservrar -**skrivskyddade** och **läs/skriv** - med verktyg för att arbeta med **sidor**, **innehållsfragment** och **Assets**. De här servrarna kan användas från följande MCP-klienter: **ChatGPT**, **Claude**, **Cursor** och **Microsoft Copilot Studio**.
-
-Läs mer i [Använda MCP med AEM Cloud-tjänsten](/help/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service.md). Om du har frågor eller vill ha feedback skickar du ett e-postmeddelande till [aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com).
 
 ## [!DNL Experience Manager Assets] som en [!DNL Cloud Service] {#assets}
 
-**AI-sökning**
+**Det finns en ny version av Figma Plugin för integrering med AEM Assets**
 
-Med AI Search introduceras en smart, sammanhangsberoende sökfunktion som går utöver traditionell nyckelordsmatchning genom att förstå innebörden och avsikten bakom användarfrågor. Med AI och maskininlärning får man exaktare resultat även när frågorna formuleras på olika sätt, innehåller felstavningar, använder synonymer eller skickas in på olika språk, vilket gör att man snabbare kan hitta relevant innehåll.
+* Stöd för videofiler (MP4, MOV, WebM), animerade filer (GIF) och vektorfiler (SVG) när du importerar resurser från AEM-databasen till Figma-dokumentet.
 
-Mer information finns i AI-sökning i [Assets-vyn](/help/assets/search-assets-view.md#ai-search) och [administratörsvyn](/help/assets/search-assets.md#ai-search).
+* Stöd för att kontrollera om det finns några uppdateringar av resurserna som används i Figma-dokument jämfört med resurserna som finns i AEM-databasen och hämta den senaste versionen av resurserna om det finns några uppdateringar.
 
-**Desktop App 3.0.1, version**
+* Stöd för exportkonfigurationer vid export av PNG- (scale) och JPG-filformat (bildskala och kvalitet).
 
-[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
+  ![Figma plugin](/help/assets/assets/figma-v2-plugin.png)
 
-**Adobe Asset Link CEP 2026.01.0**
+**Identifiering av skadlig kod för överförda resurser**
 
-[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
+AEM Assets innehåller nu automatisk skanning av skadlig kod av överförda filer, vilket säkerställer att misstänkta tillgångar sätts i karantän innan de går in i DAM för att skydda databasen mot hot. Administratörer kan konfigurera skanningsinställningar och karantänkvarhållningsprinciper för smidiga säkerhetskontroller.
 
+**AI-genererade metadata - behörighetsuppdatering**
+
+AI-genererade metadata i AEM Assets kräver inte längre att GenAI Rider signeras för att aktiveras. Funktionen är nu tillgänglig för både kunder som har signerat GenAI Rider och kunder som ännu inte har validerats. Funktionen kommer även fortsättningsvis att vara inaktiverad för kunder som uttryckligen har valt att inte använda GenAI. Mer information om hur du hanterar funktionsaktiveringen på miljönivå finns i [Inaktivera AI-genererade metadata](/help/assets/enhance-content-discovery-with-ai-generated-metadata.md#disable-ai-generated-metadata). Den här ändringen görs för kunder i version 23482 eller senare.
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
@@ -167,18 +155,11 @@ With Forms Optimization, you get automated, data-driven recommendations and vari
 
 ## [!DNL Experience Manager] som en [!DNL Cloud Service]-grund {#foundation}
 
-### [!DNL Experience Manager] som [!DNL Cloud Service] Foundation Viktigt Notices {#foundation-notices}
+### [!DNL Experience Manager] som [!DNL Cloud Service] Foundation New Features {#foundation-new}
 
-#### Java API-borttagningar {#java-api-deprecation}
+#### Kommande Java API-borttagningar {#java-api-deprecation}
 
-De borttagna API:erna med mål 2/26/2026 ska inte längre användas i koden. Om du vill förhindra distributionsblock tar du bort API-användning före 26 mars 2026. Viktiga datum:
-
-* **Från och med 26 januari 2026**: Meddelanden från Åtgärdscenter skickas **veckovis per miljö** som en påminnelse om att ta bort användningen av dessa API:er.
-* **26 februari 2026**: Cloud Manager-pipelines som innehåller kod som använder dessa API:er **pausas** under **kodkvalitet** -steget. Distributionshanteraren, projektledaren eller affärsägaren kan åsidosätta problemet så att pipeline kan fortsätta.
-* **26 mars 2026**: Cloud Manager-pipelines som innehåller kod som använder dessa API:er **misslyckas** under **Kodkvalitet** -steget, **blockerar distributioner** av ny kod tills användningen har tagits bort.
-* **30 april 2026**: Miljöer som fortfarande använder dessa API:er kan **inte längre få viktiga uppdateringar för Adobe-utgåvor**.
-
-Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
+Flera inaktuella API:er markerades för borttagning den 31 augusti och bör därför inte längre refereras. Du får meddelanden från Åtgärdscenter om inaktuell API-användning upptäcks i koden, och efter den 29 januari visas meddelanden under Cloud Manager-byggen för att förstärka vikten av att ta bort användningen. Mer information finns i artikeln [som inte längre används](/help/release-notes/deprecated-removed-features.md#aem-apis), men dessa API:er finns i listan nedan för att underlätta:
 
 +++ Expandera om du vill visa Java API-borttagningar
 
@@ -212,7 +193,7 @@ OSGi properties:
 
 #### Java 11 Runtime Deprecation {#java11-runtime-deprecation}
 
-Adobe uppgraderade miljöerna **Stage** och **Production** till **Java 21-miljön** med högre prestanda den 14 oktober 2025. Från och med **9 februari** (gradvis utrullning till och med 11 februari) fungerar varken AEM Cloud-tjänsten SDK eller någon molnmiljö med Java 11 runtime.
+Adobe uppgraderade miljöerna **Stage** och **Production** till **Java 21-miljön** med högre prestanda den 14 oktober 2025. Från och med **9 februari** fungerar varken AEM Cloud-tjänsten SDK eller någon molnmiljö med Java 11-miljön.
 
 >[!NOTE]
 >
@@ -221,9 +202,9 @@ Adobe uppgraderade miljöerna **Stage** och **Production** till **Java 21-miljö
 
 #### Tillämpning av konfigurationspolicy för AEM Java-loggar {#logconfig-policy}
 
-AEM Java-loggar måste följa ett standardformat för att säkerställa tillförlitlig övervakning i alla kundmiljöer. Anpassade loggkonfigurationer, t.ex. ändringar i loggformatering, utdatafiler eller standardloggnivåer, stöds inte längre. Loggar måste vara dirigerade till standardfilerna och standardloggnivåerna för AEM-produktkoden måste bevaras. Mer information finns i artikeln [Loggning](/help/implementing/developing/introduction/logging.md#configuration-loggers).
+Som framgår av versionsinformationen för april måste AEM Java-loggarna följa ett standardformat för att säkerställa tillförlitlig övervakning i alla kundmiljöer. Anpassade loggkonfigurationer, t.ex. ändringar i loggformatering, utdatafiler eller standardloggnivåer, stöds inte längre. Loggar måste vara dirigerade till standardfilerna och standardloggnivåerna för AEM-produktkoden måste bevaras. Mer information finns i artikeln [Loggning](/help/implementing/developing/introduction/logging.md#configuration-loggers).
 
-Alla anpassade loggningsåsidosättningar som inte stöds *ignoreras nu*. De flesta kunder påverkades inte och Adobe har kontaktat kunder vars aktuella konfiguration kan påverkas.
+Med början den **29 januari** kommer alla anpassade loggningsåsidosättningar som inte stöds att ignoreras. Baserat på vår analys kommer de flesta kunder inte att påverkas och Adobe har kontaktat kunder vars nuvarande konfiguration kan påverkas.
 
 Granska och uppdatera alla processer som är beroende av anpassat loggningsbeteende. Till exempel:
 
@@ -245,9 +226,9 @@ Dagar live, live event, toppförsäljning - dessa stunder kan inte brytas. [Vår
 >Skicka ett e-postmeddelande till [aemcs-update-free@adobe.com](mailto:aemcs-update-free@adobe.com) om du vill aktivera det i dina program.
 >
 
-#### Funktioner i AEM Edge (Beta) {#edge-functions}
+#### Edge Computing (Beta Program)
 
-Med funktionerna i AEM Edge (som i tidigare versionsinformation kallades *Edge Computing*) kan du köra JavaScript i CDN-lagret, vilket tar databearbetningen närmare slutanvändaren. Detta minskar latensen och möjliggör responsiva, dynamiska upplevelser i framkanten.
+Med Edge kan du köra JavaScript på CDN-lagret, vilket tar databearbetningen närmare slutanvändaren. Detta minskar latensen och möjliggör responsiva, dynamiska upplevelser i framkanten.
 
 Exempel på vanliga användningsområden:
 
@@ -273,6 +254,7 @@ Distribuera era kodreleaser till produktion, men begränsa den till enbart inter
 
 Skicka e-post till [aemcs-canary-deployments-beta@adobe.com](mailto:aemcs-canary-deployments-beta@adobe.com) för att begära åtkomst och dela feedback.
 
+
 #### AI-svar - Smartare, sammanhangsberoende svar för AEM Sites (Beta-programmet) {#ai-answers-beta}
 
 AI-svar introducerar ett nytt sätt för era besökare att interagera med ert innehåll. Den bygger på teknik från Retrieval-Augmented Generation (RAG) och använder data som hanteras av AEM för att leverera korrekta, varumärkeskonsekventa svar direkt i era digitala upplevelser.
@@ -285,16 +267,13 @@ Kontakta [feedback-ai-answers@adobe.com](mailto:feedback-ai-answers@adobe.com) o
 
 I betaversionen stöder nu Rapid Development Environment (RDE) en funktion som tar en ögonblicksbild av det aktuella läget för kod och innehåll, som kan återställas vid ett senare tillfälle. Detta kan vara användbart när du synkroniserar kod som behöver återställas eller när du växlar mellan utveckling av olika funktioner. Det går också att återställa bara det ändringsbara innehållet som en känd startpunkt för testning.
 
-Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-support@adobe.com) om du är intresserad av att använda och ge feedback om den här funktionen.
+Skicka ett e-postmeddelande till [aemcs-rde-support@adobe.com](mailto:aemcs-rde-support@adobe.com) om du är intresserad av att använda och ge feedback på den här funktionen.
 
-#### AI-verktyg för IDE för AEM Java och Dispatcher Development (Beta Program) {#ai-dev-beta}
+#### Snabba upp AEM-utvecklingen med AI (Alpha-programmet) {#ai-dev-alpha}
 
-Java-stackteam använder i allt större utsträckning AI-assisterad utveckling i verktyg som Cursor, Claude Code, Visual Studio och IntelliJ för att snabba upp leverans av funktioner och förbättra kodkvaliteten. Gå med i betaversionen:
+AEM Java-stackteam använder i allt större utsträckning AI-assisterad utveckling i verktyg som Cursor, Claude Code, Visual Studio och IntelliJ för att snabba upp leverans av funktioner och förbättra kodkvaliteten. Vi samlar verkliga upplevelser som hjälper till att utforma framtida AI-funktioner som stöds av Adobe.
 
-* Dela verkliga upplevelser för att utforma framtida AI-funktioner som stöds av Adobe
-* Prova IDE-verktyg som kan användas av AI-agenter för att generera och felsöka AEM-kod och dispatcherkonfiguration
-
-Mejla [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com) för mer information.
+Dela vad som fungerar för ditt team - och vad du vill att Adobe ska tillhandahålla - genom att skicka ett e-postmeddelande till [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com).
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
