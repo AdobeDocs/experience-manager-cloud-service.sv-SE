@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.01.22
-description: Detta är versionsinformationen för version 2026.01.22 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.01.29
+description: Detta är versionsinformationen för version 2026.01.29 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 83653ef9938e02b58d3c82ebd6395773f293f1a4
+source-git-commit: bdbe72b0afc19d0c28c56a7e5b2595c39711ca9c
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '198'
+ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.01.22 {#release-notes}
+# Versionsinformation om Universal Editor 2026.01.29 {#release-notes}
 
-Det här är versionsinformationen för den 22 januari 2026-versionen av Universal Editor.
+Det här är versionsinformationen för den 29 januari 2026-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,11 +26,12 @@ Det här är versionsinformationen för den 22 januari 2026-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* Etiketter (som förhandsvisning av kort text) har lagts till i textblock i [innehållsträdet.](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode)
-* TextArea stöds nu för rena textfält.
-* Konfigurationsslutpunkten används nu för gränssnittsfunktioner.
-* TextArea från Content Fragments stöds nu.
-* Popup-API:t är nu exponerat för tillägg.
+* Komponentmetoden för borttagning exponerades för `editorActions`.
+* Kopieringskomponentmetoden exponerades för `editorActions`.
+* Flyttkomponentmetoden exponerades för `editorActions`.
+* Komponentmetoden för tillägg exponerades för `editorActions`.
+* Definitionerna exponerades för [utökningsbarhet.](/help/implementing/universal-editor/extending.md)
+* Version 2.0 av API:t för dokumentredigering har släppts.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -40,12 +41,6 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Ett problem med arbetsytans layout vid navigering via platsfältet har korrigerats.
-* Ledande tomt utrymme renaliserades i textredigeraren.
-* Inline-redigering återställdes vid inmatning.
-* Dragetiketten återgick till att inte visa hela innehållet.
-* Problem med webbläsartillgänglighet har lösts.
-* `selectEditables([])` används nu för att avmarkera alla komponenter via utbyggbarhet.
-* Metadatabellen skapas nu på rätt plats.
-* Ett problem har korrigerats där kopierade innehållsfragmentresurser pekade på `/data/undefined`.
-
+* Extensiteten `content` har bytt namn till `details` för att följa API-schemat.
+* Sammanhangsberoende menybeteende har förbättrats.
+* Korrigerade ett fel när du klickade på märket för ett redigerbart objekt så att snabbmenyn öppnas korrekt.

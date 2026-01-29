@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: bb946f28a3d1a1d64c564029d9903c315bb9ffbb
+source-git-commit: 519319f137065c1ccc8778e42c7de8f23fb5c104
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2710'
 ht-degree: 0%
 
 ---
@@ -33,17 +33,25 @@ För att göra detta har den universella redigeraren ett intuitivt användargrä
 
 ## Redigera innehåll {#editing-content}
 
-Det är enkelt och intuitivt att redigera innehåll. När du för musen över innehåll i redigeraren markeras redigerbart innehåll med en tunn blå kontur.
+Det är enkelt och intuitivt att redigera innehåll. När du för musen över innehåll i redigeraren markeras redigerbart innehåll med en tunn, ljusblå kontur och ett märke.
 
-![Redigerbart innehåll är markerat med en blå ruta](assets/editable-content.png)
+![Redigerbart innehåll är markerat med en ljusblå ruta](assets/editable-content.png)
+
+Om du trycker eller klickar på det markerade innehållet markeras det och den tunna, ljusblå konturen blir en mörkblå kontur med ett märke.
+
+![Markerat innehåll är markerat med en mörkblå ruta](assets/selected-content.png)
 
 >[!TIP]
 >
 >Som standard markeras det för redigering när du trycker eller klickar på ett innehåll. Om du vill navigera i ditt innehåll genom att följa länkar växlar du till [förhandsgranskningsläget.](/help/sites-cloud/authoring/universal-editor/navigation.md#preview-mode)
 
-Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och du kan få ytterligare information och alternativ för innehållet på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
+Beroende på vilket innehåll du väljer kan du ha olika redigeringsalternativ på plats och ytterligare information och alternativ för innehållet på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail)
 
-Varje redigerbart innehåll märks med den typ av innehåll det är. Beroende på innehållet kan du klicka på det här märket för snabb åtkomst till redigeringsåtgärder.
+### Snabbmeny {#context-menu}
+
+Varje redigerbart innehåll märks med den typ av innehåll det är.
+
+Du kan klicka på det här märket om du snabbt vill komma åt en snabbmeny med redigeringsåtgärder. Om du högerklickar på ett redigerbart objekt som inte är markerat markeras det automatiskt och snabbmenyn öppnas.
 
 ![Redigerbara märkesalternativ](assets/editable-badge.png)
 
@@ -53,7 +61,7 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 ![Redigerar innehåll](assets/editing-content.png)
 
-Den tunna blå konturen ändras till en blå kontur som anger att den är markerad och en markör visas. Gör ändringarna och tryck sedan på Enter eller markera utanför textrutan för att spara ändringarna.
+Den tunna, ljusblå konturen blir en mörkblå kontur som anger att markeringen är markerad och en markör visas. Gör ändringarna och tryck sedan på Enter eller markera utanför textrutan för att spara ändringarna.
 
 När du markerar textkomponenten visas information om den på egenskapspanelen för [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-rail) Du kan också redigera texten på panelen.
 
@@ -69,9 +77,9 @@ Du kan redigera texten på plats genom att dubbelklicka eller dubbeltrycka på k
 
 Formateringsalternativen och informationen på texten finns på två ställen.
 
-#### Snabbmenyn {#context-menu}
+#### Snabbmenyn RTF {#rich-text-context-menu}
 
-Snabbmenyn öppnas ovanför det formaterade textblocket och innehåller grundläggande formateringsalternativ. På grund av utrymmesbegränsningar kan vissa alternativ vara dolda bakom ellipsknappen.
+En snabbmeny öppnas ovanför det formaterade textblocket och innehåller grundläggande formateringsalternativ. På grund av utrymmesbegränsningar kan vissa alternativ vara dolda bakom ellipsknappen.
 
 ![RTF-snabbmeny](assets/rich-text-context-menu.png)
 
@@ -137,7 +145,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -216,7 +224,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -232,7 +240,7 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
 1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.
