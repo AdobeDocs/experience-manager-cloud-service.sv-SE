@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: ef082184-4eb7-49c7-8887-03d925e3da6f
 feature: Release Information
 role: Admin
-source-git-commit: 2e257634313d3097db770211fe635b348ffb36cf
+source-git-commit: 2923a79a69ae537eaad591035e4fce9f3c593b23
 workflow-type: tm+mt
-source-wordcount: '3194'
+source-wordcount: '3434'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,16 @@ Under borttagningstiden kommer Adobe att påminna kunderna om vilka åtgärder d
 >
 >I vissa fall måste en funktion tas bort innan du kan installera en ny version av Cloud Manager eller uppgradera till den senaste versionen av AEM as a Cloud Service.
 
+>[!IMPORTANT]
+>  Flera [föråldrade API:er](#aem-apis) är avsedda för borttagning den **2 februari 2026**. Se dessa viktiga datum och effekter:
+>
+> * **Från och med 26 januari 2026**: Meddelanden från Åtgärdscenter skickas **veckovis per miljö** som en påminnelse om att ta bort användningen av dessa API:er.
+> * **26 februari 2026**: Cloud Manager-pipelines som innehåller kod som använder dessa API:er **pausas** under **kodkvalitet** -steget. Distributionshanteraren, projektledaren eller affärsägaren kan åsidosätta problemet så att pipeline kan fortsätta.
+> * **26 mars 2026**: Cloud Manager-pipelines som innehåller kod som använder dessa API:er **misslyckas** under **Kodkvalitet** -steget, **blockerar distributioner** av ny kod tills användningen har tagits bort.
+> * **30 april 2026**: Miljöer som fortfarande använder dessa API:er kan **inte längre få viktiga uppdateringar för Adobe-utgåvor**.
+>
+> Om du vill förhindra distributionsblock tar du bort API-användning före 26 mars 2026.
+
 ## Undertryckta funktioner {#deprecated-features}
 
 Funktionerna i tabellen nedan har meddelats att de är borttagna, men har ännu inte tagits bort.  Användning av funktioner måste upphöra innan målets borttagningsdatum eller problem som rör prestanda, tillgänglighet och säkerhet kan uppstå.
@@ -38,7 +48,7 @@ Funktionerna i tabellen nedan har meddelats att de är borttagna, men har ännu 
 | Sites | [Stöd för innehållsfragment i Assets HTTP API](/help/assets/content-fragments/assets-api-content-fragments.md) | [Leverans av innehållsfragment med OpenAPI](/help/headless/aem-content-fragment-delivery-with-openapi.md)<br>tillsammans med <br> [OpenAPI:er för hantering av innehållsfragment och innehållsfragmentmodeller](/help/headless/content-fragment-openapis.md) |
 | Sites | [PWA-funktioner](/help/sites-cloud/authoring/sites-console/enable-pwa.md) | Ingen |
 | Sites | [SPA-redigerare](/help/implementing/developing/hybrid/introduction.md) | De redigerare som rekommenderas för att hantera headless-innehåll i AEM är:<br>- [Universell redigerare](https://www.aem.live/docs/aem-authoring) för visuell redigering.<br>- [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering. |
-| [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/sv/docs/experience-manager-htl/content/java-use-api) |
+| [!DNL Sites] | [JavaScript Use API](https://github.com/adobe/htl-spec/blob/master/SPECIFICATION.md#42-javascript-use-api) | [Java Use API](https://experienceleague.adobe.com/en/docs/experience-manager-htl/content/java-use-api) |
 | [!DNL Sites] | Upplev fragmentegenskaper för **Status för sociala medier**. | Funktionen är planerad att tas bort snart. |
 | Sites | [Experience Cloud Setup Automation](/help/sites-cloud/integrating/adobe-analytics-exc-setup-automation.md) | Ingen |
 | [!DNL Sites] | Mallbaserade enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md). |
@@ -48,7 +58,7 @@ Funktionerna i tabellen nedan har meddelats att de är borttagna, men har ännu 
 | [!DNL Assets] | Konvertera videofilmer till mpeg. | Använd [Resursmikrotjänster](/help/assets/asset-microservices-overview.md) för att skapa miniatyrbilder för MPEG. Använd [Dynamiska media](/help/assets/manage-video-assets.md) för MPEG-omkodning. |
 | [!DNL Foundation] | Gränssnitt för trädreplikering på fliken Distribuera för replikeringsagenter (borttagning efter 30 september 2021) | [Hantera arbetsflödesmetoderna för publikation](/help/operations/replication.md#manage-publication) eller [Trädaktivering](/help/operations/replication.md#tree-activation). |
 | [!DNL Foundation] | Administratörsskärmbilden för replikeringsagenten har fliken Distribuera och replikerings-API:t kan inte replikera innehållspaket som är större än 10 MB. | [Hantera publikation](/help/operations/replication.md#manage-publication) eller [Arbetsflöde för trädaktivering](/help/operations/replication.md#tree-activation) |
-| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Från och med den 1 maj 2024 går det inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console. Befintliga JWT-autentiseringsuppgifter (Service Account) är fortfarande användbara för konfigurerade integreringar fram till 1 januari 2025. Därefter slutar de fungera, vilket kräver att kunderna migrerar till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
+| [!DNL Foundation] | Integrering med hjälp av autentiseringsuppgifter som genererats från Adobe Developer Console-projekt förlorar gradvis stöd för JWT-autentiseringsuppgifter (Service Account). Från och med den 1 maj 2024 går det inte att skapa nya JWT-autentiseringsuppgifter i Adobe Developer Console. Befintliga JWT-autentiseringsuppgifter (Service Account) är fortfarande användbara för konfigurerade integreringar fram till 1 januari 2025. Därefter slutar de fungera, vilket kräver att kunderna migrerar till OAuth Server-till-Server-autentiseringsuppgifter. [Läs mer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/jwt-credentials-deprecation-in-adobe-developer-console). | [Migrera](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration#migration-overview) till autentiseringsuppgifter för OAuth Server-till-Server. |
 | [!DNL Foundation] | Publicera arbetsflöde för innehållsträd och det relaterade arbetsflödessteget Publicera innehållsträd, som användes för replikeringar av innehållshierarkier. | Använd [Arbetsflödessteget för trädaktivering](/help/operations/replication.md#tree-activation), vilket är mer prestandaförbättrat. |
 | [!DNL Foundation] | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. | Adobe rekommenderar att man byter till Google Closure Compiler (GCC) för implementering. |
 
@@ -59,10 +69,10 @@ I det här avsnittet visas de funktioner som har tagits bort.
 | Område | Funktion | Ersättning | Borttagningsdatum för mål |
 | ------------ | ------------------ | ----------- | ------------------- |
 | Användargränssnitt | Klassiskt användargränssnitt har tagits bort från produktanvändargränssnittet. Det finns några dialogrutor för klassiskt användargränssnitt för ett fåtal utvalda funktioner, som Länkkontroll, Rensa version och vissa Cloud Service-konfigurationer. De kommande [produktuppdateringarna](/help/release-notes/home.md) kan ta bort Classic UI-tillgängligheten ytterligare. | Standardgränssnitt | Borttagen |
-| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/administering/integration/scene7#integration) och [Dynamic Media Hybrid Mode](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/dynamic/config-dynamic#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamiska media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
+| [!DNL Dynamic Media] | Tidigare integreringar med [Dynamic Media Classic](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/integration/scene7#integration) och [Dynamic Media Hybrid Mode](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dynamic#dynamic) är inte tillgängliga i [!DNL Experience Manager] som [!DNL Cloud Service]. | Använd [Dynamiska media](/help/assets/dynamic-media/dynamic-media.md) som tillhandahålls med [!DNL Experience Manager] som [!DNL Cloud Service]. | Borttagen |
 | [!DNL Sites] | Portal Director och Portlet Component | Dessa funktioner har tagits bort i [!DNL Experience Manager] 6.4 och har nu tagits bort från [!DNL Experience Manager]. | Borttagen |
 | [!DNL Sites] | Designimporteraren | Den här funktionen har tagits bort eftersom oföränderliga avsnitt i databasen [!DNL Experience Manager] inte är tillgängliga vid körning. | Borttagen |
-| [!DNL Assets] | Det går inte att dela [!DNL Assets] med tjänsten Assets Core och Creative Cloud. | Använd [!DNL Adobe Creative Cloud]Adobe Asset Link[&#x200B; för integrering med &#x200B;](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html). | Borttagen |
+| [!DNL Assets] | Det går inte att dela [!DNL Assets] med tjänsten Assets Core och Creative Cloud. | Använd [!DNL Adobe Creative Cloud]Adobe Asset Link[ för integrering med ](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html). | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Sling-datakällor (OSGi bundle org.apache.sling.datasource) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för JST-skriptmallar (OSGi bundle org.apache.sling.scripting.jst) | Ej tillämpligt | Borttagen |
 | [!DNL Foundation] | Stöd för Apache Felix Http Whiteboard | OSGi Http Whiteboard | Mars 2022 |
@@ -73,6 +83,17 @@ I det här avsnittet visas de funktioner som har tagits bort.
 ## Föråldrade API:er {#aem-apis}
 
 API:erna i tabellen nedan (klicka för att expandera för att visa dem) har meddelats att de är borttagna, men har ännu inte tagits bort.  Användningen av dessa API:er måste upphöra före målets borttagningsdatum, annars riskerar du problem med prestanda, tillgänglighet och säkerhet. Vissa API:er refererar till avsnittet API-vägledning för borttagning nedan.
+
+>[!IMPORTANT]
+> Flera API:er är schemalagda för borttagning den **26 februari 2026**. Se dessa viktiga datum och effekter:
+>
+> * **Från och med 26 januari 2026**: Meddelanden från Åtgärdscenter skickas **veckovis per miljö** som en påminnelse om att ta bort användningen av dessa API:er.
+> * **26 februari 2026**: Cloud Manager-pipelines som innehåller kod som använder dessa API:er **pausas** under **kodkvalitet** -steget. Distributionshanteraren, projektledaren eller affärsägaren kan åsidosätta problemet så att pipeline kan fortsätta.
+> * **26 mars 2026**: Cloud Manager-pipelines som innehåller kod som använder dessa API:er **misslyckas** under **Kodkvalitet** -steget, **blockerar distributioner** av ny kod tills användningen har tagits bort.
+> * **30 april 2026**: Miljöer som fortfarande använder dessa API:er kan **inte längre få viktiga uppdateringar för Adobe-utgåvor**.
+>
+> Om du vill förhindra distributionsblock tar du bort API-användning före 26 mars 2026.
+
 
 <details>
   <summary>Expandera om du vill visa en lista över inaktuella API:er.</summary>
@@ -88,100 +109,100 @@ API:erna i tabellen nedan (klicka för att expandera för att visa dem) har medd
     <td>org.apache.sling.commons.auth<br>org.apache.sling.commons.auth.spi</td>
     <td>Använd Slings gränssnitt Auth Core/Auth Core SPI som ett alternativ. <a href="#org.apache.sling.commons.auth">Se borttagningsanteckningar nedan.</a></td>
     <td>2015</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
 <td>org.eclipse.jetty.client<br>org.eclipse.jetty.client.api<br>org.eclipse.jetty.client.http<br>org.eclipse.jetty.client.util<br>org.eclipse.jetty.http<br>org.eclipse.jetty.http.pathmap<br>org.eclipse.jetty.io<br>org.eclipse.jetty.io.ssl<br>org.eclipse.jetty.security<br>org.eclipse.jetty.server<br>org.eclipse.jetty.server.handler<br>org.eclipse.jetty.server.handler.gzip<br>org.eclipse.jetty.server.session<br>org.eclipse.jetty.servlet<br>org.eclipse.jetty.servlet.listener<br>org.eclipse.jetty.util<br>org.eclipse.jetty.util.annotation<br>org.eclipse.jetty.util.component<br>org.eclipse.jetty.util.log<br>org.eclipse.jetty.util.resource<br>org.eclipse.jetty.util.security<br>org.eclipse.jetty.util.ssl<br>org.eclipse.jetty.util.statistic<br>org.eclipse.jetty.util.thread</td>
     <td>Paketen Eclipse Jetty och Felix Http Jetty stöds inte längre. <a href="#org.eclipse.jetty">Se borttagningsanteckningar nedan.</a></td>
     <td>2021-05-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
  <tr>     <td>com.mongodb<br>com.mongodb.annotations<br>com.mongodb.assertions<br>com.mongodb.async<br>com.mongodb.binding<br>com.mongodb.bulk<br>com.mongodb.client<br>com.mongodb.client.gridfs<br>com.mongodb.client.gridfs.codecs<br>com.mongodb.client.gridfs.model<br>com.mongodb.client.jndi<br>com.mongodb.client.model<br>com.mongodb.client.model.changestream<br>com.mongodb.client.model.geojson<br>com.mongodb.client.model.geojson.codecs<br>com.mongodb.client.result<br>com.mongodb.connection<br>com.mongodb.connection.netty<br>com.mongodb.diagnostics.logging<br>com.mongodb.event<br>com.mongodb.gridfs<br>com.mongodb.internal<br>com.mongodb.internal.async<br>com.mongodb.internal.authentication<br>com.mongodb.internal.connection<br>com.mongodb.internal.dns<br>com.mongodb.internal.event<br>com.mongodb.internal.management.jmx<br>com.mongodb.internal.session<br>com.mongodb.internal.thread<br>com.mongodb.internal.validator<br>com.mongodb.management<br>com.mongodb.operation<br>com.mongodb.selector<br>com.mongodb.session<br>com.mongodb.util</td>
     <td>Användning av detta API stöds inte i AEM as a Cloud Service. <a href="#com.mongodb">Se borttagningsanteckningar nedan.</a></td>
     <td>2021-05-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
    <tr>
     <td>org.apache.abdera<br>org.apache.abdera.model<br>org.apache.abdera.factory<br>org.apache.abdera.ext.media<br>org.apache.abdera.util<br>org.apache.abdera.i18n.iri<br>org.apache.abdera.writer<br>org.apache.abdera.i18n.rfc4646<br>org.apache.abdera.i18n.rfc4646.enums<br>org.apache.abdera.i18n.text<br>org.apache.abdera.filter<br>org.apache.abdera.xpath<br>org.apache.abdera.i18n.text.io<br>org.apache.abdera.i18n.text.data<br>org.apache.abdera.parser</td>
     <td>API:t används inte eftersom Apache Abdera är ett projekt som har gått tillbaka sedan 2017. <a href="#org.apache.abdera_or_org.apache.sling.atom.taglib">Se borttagningsanteckningar nedan.</a></td>
     <td>7/29/2021</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.apache.abdera.ext.opensearch<br>org.apache.abdera.ext.opensearch.model<br>org.apache.abdera.ext.opensearch.server<br>org.apache.abdera.ext.opensearch.server.impl<br>org.apache.abdera.ext.opensearch.server.processors<br>org.apache.abdera.i18n.iri.data<br>org.apache.abdera.i18n.lang<br>org.apache.abdera.i18n.templates<br>org.apache.abdera.i18n.unicode.data<br>org.apache.abdera.parser.stax<br>org.apache.abdera.parser.stax.util<br>org.apache.abdera.protocol<br>org.apache.abdera.protocol.client<br>org.apache.abdera.protocol.client.cache<br>org.apache.abdera.protocol.client.util<br>org.apache.abdera.protocol.error<br>org.apache.abdera.protocol.server<br>org.apache.abdera.protocol.server.context<br>org.apache.abdera.protocol.server.filters<br>org.apache.abdera.protocol.server.impl<br>org.apache.abdera.protocol.server.multipart<br>org.apache.abdera.protocol.server.processors<br>org.apache.abdera.protocol.server.provider.basic<br>org.apache.abdera.protocol.server.provider.managed<br>org.apache.abdera.protocol.server.servlet<br>org.apache.abdera.protocol.util<br>org.apache.abdera.util.filter</td>
     <td>API:t används inte eftersom Apache Abdera är ett projekt som har gått tillbaka sedan 2017. <a href="#org.apache.abdera_or_org.apache.sling.atom.taglib">Se borttagningsanteckningar nedan.</a></td>
     <td>4/8/2019</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.apache.felix.http.whiteboard</td>
     <td>Apache Felix Http Whiteboard stöds inte längre. Migrera koden till OSGi Http Whiteboard. <a href="#org.apache.felix.http.whiteboard">Se borttagningsanteckningar nedan.</a></td>
     <td>2022-1-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.apache.cocoon.xml.dom<br>org.apache.cocoon.xml.sax</td>
     <td>Detta API är inaktuellt. Migrera koden till de XML-API:er som finns i JDK.</td>
     <td>2022-1-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>ch.qos.logback.classic<br>ch.qos.logback.classic.boolex<br>ch.qos.logback.classic.db.names<br>ch.qos.logback.classic.db.script<br>ch.qos.logback.classic.encoder<br>ch.qos.logback.classic.filter<br>ch.qos.logback.classic.helpers<br>ch.qos.logback.classic.html<br>ch.qos.logback.classic.jmx<br>ch.qos.logback.classic.joran<br>ch.qos.logback.classic.joran.action<br>ch.qos.logback.classic.jul<br>ch.qos.logback.classic.layout<br>ch.qos.logback.classic.log4j<br>ch.qos.logback.classic.net<br>ch.qos.logback.classic.net.server<br>ch.qos.logback.classic.pattern<br>ch.qos.logback.classic.pattern.color<br>ch.qos.logback.classic.selector<br>ch.qos.logback.classic.selector.servlet<br>ch.qos.logback.classic.servlet<br>ch.qos.logback.classic.sift<br>ch.qos.logback.classic.spi<br>ch.qos.logback.classic.turbo<br>ch.qos.logback.classic.util<br>ch.qos.logback.core<br>ch.qos.logback.core.boolex<br>ch.qos.logback.core.encoder<br>ch.qos.logback.core.filter<br>ch.qos.logback.core.helpers<br>ch.qos.logback.core.hook<br>ch.qos.logback.core.html<br>ch.qos.logback.core.joran<br>ch.qos.logback.core.joran.action<br>ch.qos.logback.core.joran.conditional<br>ch.qos.logback.core.joran.event<br>ch.qos.logback.core.joran.event.stax<br>ch.qos.logback.core.joran.node<br>ch.qos.logback.core.joran.spi<br>ch.qos.logback.core.joran.util<br>ch.qos.logback.core.joran.util.beans<br>ch.qos.logback.core.layout<br>ch.qos.logback.core.net<br>ch.qos.logback.core.net.server<br>ch.qos.logback.core.net.ssl<br>ch.qos.logback.core.pattern<br>ch.qos.logback.core.pattern.color<br>ch.qos.logback.core.pattern.parser<br>ch.qos.logback.core.pattern.util<br>ch.qos.logback.core.property<br>ch.qos.logback.core.read<br>ch.qos.logback.core.recovery<br>ch.qos.logback.core.rolling<br>ch.qos.logback.core.rolling.helper<br>ch.qos.logback.core.sift<br>ch.qos.logback.core.spi<br>ch.qos.logback.core.status<br>ch.qos.logback.core.subst<br>ch.qos.logback.core.util</td>
     <td>AEM as a Cloud Service stöder inte detta interna API för återloggning. <a href="#ch.qos.logback">Se borttagningsanteckningar nedan.</a></td>
     <td>2022-1-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.slf4j.spi</td>
     <td>AEM as a Cloud Service stöder inte detta interna log4j API. <a href="#org.slf4j">Se borttagningsanteckningar nedan.</a></td>
     <td>2022-1-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.apache.log4j<br>org.apache.log4j.helpers<br>org.apache.log4j.spi<br>org.apache.log4j.xml</td>
     <td>Apache Log4j 1 upphörde 2015 och stöds inte längre. <a href="#org.apache.log4j">Se borttagningsanteckningar nedan.</a></td>
     <td>2022-1-27</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>  <td>com.google.common.annotations<br>com.google.common.base<br>com.google.common.cache<br>com.google.common.collect<br>com.google.common.escape<br>com.google.common.eventbus<br>com.google.common.hash<br>com.google.common.html<br>com.google.common.io<br>com.google.common.math<br>com.google.common.net<br>com.google.common.primitives<br>com.google.common.reflect<br>com.google.common.util.concurrent<br>com.google.common.xml</td>
     <td>Google Guava Core Libraries används inte i Cloud Service. <a href="#com.google.common">Se borttagningsanteckningar nedan.</a></td>
     <td>5/15/2023</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.slf4j.event</td>
     <td>AEM as a Cloud Service stöder inte detta interna slf4j-API. <a href="#org.slf4j">Se borttagningsanteckningar nedan.</a></td>
     <td>4/11/2022</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr> 
     <tr>
     <td>com.drew.*</td>
     <td>Du bör extrahera metadata från bilder och videoklipp via Asset Compute i Cloud Service eller via Apache POI eller Apache Tika.</td>
     <td>9/17/2024</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.apache.jackrabbit.oak.plugins.blob.*</td>
     <td>Detta API är endast internt.</td>
     <td>9/23/2024</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
     <td>org.apache.jackrabbit.oak.plugins.memory</td>
     <td>Detta API är endast internt.</td>
     <td>9/23/2024</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
   <tr>
 <td>org.apache.felix.webconsole<br>org.apache.felix.webconsole.bundleinfo<br>org.apache.felix.webconsole.i18n<br>org.apache.felix.webconsole.spi</td>
     <td>Felix webbkonsol stöds inte i molnmiljöer. <a href="#org.apache.felix.webconsole">Se borttagningsanteckningar nedan.</a></td>
     <td>4/30/2021</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>
 <td>org.bson<br/>org.bson.assertions<br/>org.bson.codecs<br/>org.bson.codecs.configuration<br/>org.bson.codecs.pojo<br/>org.bson.codecs.pojo.annotations<br/>org.bson.conversions<br/>org.bson.diagnostics<br/>org.bson.internal<br/>org.bson.io<br/>org.bson.json<br/>org.bson.types<br/>org.bson.util</td>
     <td>Användning av detta API stöds inte i AEM as a Cloud Service.</td>
     <td>10/31/2022</td>
-    <td>8/31/2025</td>
+    <td>2/26/2026</td>
   </tr>  
   <tr>
     <td>org.apache.sling.runmode</td>
@@ -438,7 +459,7 @@ Avsnitten nedan återspeglar konfigurationsytan för AEM as a Cloud Service OSGi
 
 Kundkoden kan konfigurera OSGi-konfigurationer som inte finns med i listan.
 
-Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
+Dessa regler valideras under Cloud Manager byggprocess. Ytterligare regler kan läggas till över tid och det förväntade datumet för verkställighet anges i tabellen. Kunderna förväntas följa dessa regler senast vid måldatumet. Om reglerna inte följs efter borttagningsdatumet genereras fel i Cloud Manager byggprocess. Maven-projekt bör innehålla [AEM as a Cloud Service SDK Build Analyzer Maven Plugin](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/developing/archetype/build-analyzer-maven-plugin) för att flagga OSGI-konfigurationsfel under lokal SDK-utveckling.
 
 Ytterligare information om OSGI-konfigurationen finns på [den här platsen](/help/implementing/deploying/configuring-osgi.md).
 
