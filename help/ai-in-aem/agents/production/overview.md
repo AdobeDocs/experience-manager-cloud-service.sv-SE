@@ -3,9 +3,9 @@ title: Översikt över Experience Production Agent
 description: Läs om hur Experience Production Agent i AEM hjälper er att skapa innehåll snabbare och automatiskt hantera ändringar.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 229c91706cec0a2689d9449549a1e2b2e236b87d
+source-git-commit: a0a6c14da73ba6881e55aa5089fbde13880f9ec5
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,12 @@ Agenten tillhandahåller följande jobb:
 * [Innehållsuppdatering](#content-update)
 * [Skapa formulär](#form-creation)
 * [Kommunikationsskapande](#communications-creation)
-* [Platsmigrering](#site-migration)
 
 >[!IMPORTANT]
 >
 >AI-genererade svar kan vara felaktiga eller vilseledande. Kontrollera att du dubbelkontrollerar föreslagna korrigeringar och svar.
 >
->Se även [Adobe Experience Cloud Generative AI User Guidelines](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html).
+>Se även [Adobe Experience Cloud Generative AI User Guidelines](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html)
 
 ### Innehållsuppdatering {#content-update}
 
@@ -44,15 +43,11 @@ Med kompetensen [Kommunikationsskapande](/help/ai-in-aem/agents/production/commu
 
 >[!NOTE]
 >
-> Kommunikationsskapandet är för närvarande alfavärdet. Om du vill delta skickar du en förfrågan från din officiella e-postadress till [aem-forms-ea@adobe.com](mailto:aem-forms-ea@adobe.com).
-
-### Platsmigrering {#site-migration}
-
-[Platsmigrering](/help/ai-in-aem/agents/production/site-migration.md) migrerar sömlöst icke-AEM-webbplatser till AEM-miljöer (Experience Delivery Services), vilket garanterar att de är presterande, kompatibla och agentklara. Agenten effektiviserar konfigurationen och omvandlingen, vilket minskar den manuella ansträngningen och tiden till värde.
-
-Medarbetaren bör kunna arbeta med andra agentfärdigheter, till exempel:
+> Kommunikationsskapandet är för närvarande alfavärdet. Om du vill delta skickar du en förfrågan från din officiella e-postadress till [aem-forms-ea@adobe.com.](mailto:aem-forms-ea@adobe.com)
 
 ## Användning tillsammans med andra läkemedel {#use-with-other-agents}
+
+Medarbetaren kan arbeta med andra agentfärdigheter, till exempel:
 
 * Hämta källmaterial från Experience Advisory Agent
 
