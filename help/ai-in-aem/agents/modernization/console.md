@@ -42,7 +42,7 @@ Utvecklarna har full kontroll över vilka fartyg som levereras. Alla ändringar 
 
 ## Navigering {#navigation}
 
-När du har loggat in på konsolen på [`aemcoder.adobe.io` ](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
+När du har loggat in på konsolen på [`aemcoder.adobe.io` &#x200B;](https://aemcoder.adobe.io) kommer du till hemskärmen på konsolen.
 
 ![Startskärmen för konsolen](assets/console-home.png)
 
