@@ -4,9 +4,9 @@ description: Läs mer om viktiga aspekter av Assets Prime, t.ex. viktiga fördel
 feature: Asset Management
 role: User, Admin
 exl-id: 012f94c5-b1c3-4799-8eaf-af68d06c036f
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 504464ed1277c1d9629ae1f96892ebaa5ef701c8
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,6 @@ Assets as a Cloud Service Prime innehåller ett lättviktigt DAM med vilket du k
   >
   >Dynamic Media med OpenAPI-funktioner som ger dig tillgång till grundläggande bildmodifierare som rotering, beskärning (endast manuellt - ingen smart beskärning), bläddring, höjd, bredd, kvalitet, format och adaptiv videoströmning finns också i Assets Prime. Kontakta Adobe kontoteam för mer information.
 
-1. [Skapa ett nytt program](/help/journey-onboarding/create-program.md).
-
 I takt med att DAM-behoven växer och du behöver fler funktioner, som UI-utökningsmöjligheter, API-driven automatisering och anpassad koddistribution, måste du överväga att uppgradera till [Assets Ultimate](/help/assets/assets-ultimate-overview.md).
 
 Den här artikeln innehåller ett komplett arbetsflöde för att aktivera Assets as a Cloud Service Prime.
@@ -55,7 +53,7 @@ Aktivera Assets Prime när du skapar ett nytt program med Cloud Manager. Utför 
 
 1. [Skapa ett nytt program](/help/journey-onboarding/create-program.md).
 
-   Välj **[!UICONTROL Assets Prime]** på fliken **[!UICONTROL Solutions & Add-ons]** när du skapar det nya programmet. Du kan också expandera **[!UICONTROL Assets Prime]** och välja **[!UICONTROL Content Hub]** för att aktivera [Content Hub](/help/assets/product-overview.md) för resursdistribution.
+   Välj **[!UICONTROL Solutions & Add-ons]** på fliken **[!UICONTROL Assets Prime]** när du skapar det nya programmet. Du kan också expandera **[!UICONTROL Assets Prime]** och välja **[!UICONTROL Content Hub]** för att aktivera [Content Hub](/help/assets/product-overview.md) för resursdistribution.
 
    ![AEM Assets Ultimate](assets/aem-assets-prime.png)
 
