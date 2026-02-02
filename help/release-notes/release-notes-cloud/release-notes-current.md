@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: c5c63e4ecfa099f953c1cf01861c0342ba4bae18
+source-git-commit: 6dfc3fe7e939794a7881a5c24c51ccc43f9af348
 workflow-type: tm+mt
-source-wordcount: '2145'
+source-wordcount: '2126'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -106,25 +106,29 @@ Mer information finns i AI-sökning i [Assets-vyn](/help/assets/search-assets-vi
 
 **Desktop App 3.0.1, version**
 
-[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
+[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
 
 **Adobe Asset Link CEP 2026.01.0**
 
-[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
+[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
 
-* [Förbättringar av fotnotsplatshållaren i Adaptiv Forms (Foundation Components)](/help/forms/footnotes-richtextsupport.md):
-   * Fotnotsåtergivning har förbättrats ytterligare för att ge stöd för flerradsformatering via radbrytningar, vilket ger tydligare och mer uttrycksfull presentation av fotnotsinnehåll.
-   * Fotnoter visas nu alltid synligt i fotnotsplatshållaren, oavsett vilka paneler som är kopplade till dem, vilket ger enhetlig åtkomst till viktig information.
+**Förbättringar av fotnotsplatshållaren i Adaptiv Forms (Foundation Components)**
 
+* [Stöd för flera rader har lagts till med radbrytningar](/help/forms/footnotes-richtextsupport.md), vilket ger tydligare och mer uttrycksfull presentation av fotnotsinnehåll.
+* Fotnoter är nu fortfarande synliga i fotnotsplatshållaren, oavsett vilka paneler som är kopplade till dem, vilket ger enhetlig åtkomst till viktig information.
 
 ### Nya funktioner för tidig åtkomst i AEM Forms {#forms-new-early-access-features}
 
-* [Hämta värden från en JSON-array](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array): Tack vare de utökade dataintegreringsfunktionerna kan API:er anropas via anpassade funktioner för att effektivt extrahera värden från JSON-arrayer och binda dem direkt till adaptiva formulärfält. Den här förbättringen effektiviserar dataanvändningen, minimerar manuell mappning och stöder mer dynamiska, datadrivna formulärupplevelser.
+**Hämta värden från en JSON-array**
 
-* **Anropa det associerade användargränssnittet i en publiceringsinstans**: Utökat stöd finns nu för att anropa det associerade användargränssnittet direkt i publiceringsinstanser. Den här funktionen definierar den konfiguration, nyttolaststruktur och det anropsflöde som krävs, vilket förenklar integrering och snabbar upp driftsättningen i olika miljöer.
+Utökade anpassade funktioner för att [extrahera värden från JSON-arrayer](/help/forms/invoke-service-enhancements-rule-editor.md#retrieve-property-values-from-a-json-array), ta emot via ett API-anrop och binda dem direkt till adaptiva formulärfält. Nu kan ni utveckla affärslogik och regler med minimal manuell datamappning.
+
+**Kör det associerade användargränssnittet på en publiceringsinstans**
+
+Nu kan du köra [Associate UI](/help/forms/interactive-communication/associate-ui-in-interactive-communication-editor.md) direkt på publiceringsinstanser. Detta gör att era agenter kan komma åt det tillhörande användargränssnittet och enkelt anpassa kommunikationen för era kunder.
 
 <!--
 **Forms Optimization opportunities**
@@ -276,11 +280,11 @@ Mejla [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com) för m
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -300,4 +304,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
