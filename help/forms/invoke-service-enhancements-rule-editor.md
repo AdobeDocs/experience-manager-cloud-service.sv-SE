@@ -6,7 +6,7 @@ role: User, Developer
 level: Beginner, Intermediate
 keywords: anropa tjänstförbättringar i VRE, fylla i listrutealternativ med hjälp av invoke-tjänst, ange repeterbar panel med hjälp av utdata från invoke-tjänst, ange panel med hjälp av utdata från invoke-tjänst, använd utdataparameter för invoke-tjänst för att validera andra fält.
 exl-id: 2ff64a01-acd8-42f2-aae3-baa605948cdd
-source-git-commit: 07f1b64753387d9ee47b26d65955e41cd961f1a5
+source-git-commit: 17dfa6e28d2510484731a736c1cf7fda22961e66
 workflow-type: tm+mt
 source-wordcount: '2116'
 ht-degree: 0%
@@ -276,6 +276,8 @@ När du klickar på knappen **Skicka** anropas API-tjänsten `redirect-api`. Anv
 
 ## Hämta egenskapsvärden från en JSON-array
 
+<span class="preview"> Det här är en tidig adopter-funktion. Om du är intresserad kan du skicka ett e-postmeddelande från din arbetsadress till mailto:aem-forms-ea@adobe.com och begära åtkomst till funktionen</a>. </span>
+
 Adaptiv Forms stöder anrop av en tjänst, bearbetning av JSON-svar och dynamisk ifyllning av formulärfält. I det här avsnittet beskrivs hur du extraherar egenskapsvärden från en JSON-array och binder dem till formulärfält.
 
 ### Exempel på JSON-svar
@@ -309,8 +311,6 @@ I följande exempel visas USA:s försäljningsregioner och en lista över sälja
 ```
 
 ### Egen funktion för att extrahera egenskapsvärden
-
-<span class="preview"> Det här är en tidig adopter-funktion. Om du är intresserad kan du skicka ett e-postmeddelande från din arbetsadress till mailto:aem-forms-ea@adobe.com och begära åtkomst till funktionen</a>. </span>
 
 Använd följande anpassade funktion för att extrahera egenskapsvärden från JSON-arrayen.
 
