@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 47e77f65a997b93ed71f58f873d8fcfa17c88382
+source-git-commit: 5d9d9455f47145f190bfba01c52478b2a302c439
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2009'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Have a look at the July 2025 Release Overview video for a summary of the features added in the 2025.7.0 release:
 
->[!VIDEO](https://video.tv.adobe.com/v/3440924?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440920?quality=12)
 
 -->
 
@@ -106,11 +106,11 @@ Mer information finns i AI-sökning i [Assets-vyn](/help/assets/search-assets-vi
 
 **Desktop App 3.0.1, version**
 
-[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
+[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
 
 **Adobe Asset Link CEP 2026.01.0**
 
-[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
+[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
@@ -256,14 +256,6 @@ Distribuera era kodreleaser till produktion, men begränsa den till enbart inter
 
 Skicka e-post till [aemcs-canary-deployments-beta@adobe.com](mailto:aemcs-canary-deployments-beta@adobe.com) för att begära åtkomst och dela feedback.
 
-#### AI-svar - Smartare, sammanhangsberoende svar för AEM Sites (Beta-programmet) {#ai-answers-beta}
-
-AI-svar introducerar ett nytt sätt för era besökare att interagera med ert innehåll. Den bygger på teknik från Retrieval-Augmented Generation (RAG) och använder data som hanteras av AEM för att leverera korrekta, varumärkeskonsekventa svar direkt i era digitala upplevelser.
-
-Vi förbereder oss för att lansera Beta-programmet för AI-svar och bjuder nu in kunderna att registrera sina intressen. Eftersom betaversionen har mycket begränsad kapacitet kommer tidiga registreringar att få prioritet. Genom att delta i betaversionen kan du utforska AI-svar i AEM Cloud-tjänstmiljön, validera prestanda och precision och hjälpa till att utforma den framtida upplevelsen innan den blir allmänt tillgänglig.
-
-Kontakta [feedback-ai-answers@adobe.com](mailto:feedback-ai-answers@adobe.com) om du vill begära deltagande eller få uppdateringar.
-
 #### Ögonblicksbilder för RDE (Beta Program) {#rde-snapshot-program}
 
 I betaversionen stöder nu Rapid Development Environment (RDE) en funktion som tar en ögonblicksbild av det aktuella läget för kod och innehåll, som kan återställas vid ett senare tillfälle. Detta kan vara användbart när du synkroniserar kod som behöver återställas eller när du växlar mellan utveckling av olika funktioner. Det går också att återställa bara det ändringsbara innehållet som en känd startpunkt för testning.
@@ -281,11 +273,11 @@ Mejla [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com) för m
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -305,4 +297,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
