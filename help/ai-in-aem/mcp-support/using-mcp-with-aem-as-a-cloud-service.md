@@ -3,9 +3,9 @@ title: Använda MCP med AEM as a Cloud Service
 description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud Service
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 3ff5ef0be78f5f5a61c81c8ab0388b56fa134047
+source-git-commit: 243fbd007235949fc03852658f606d483ef9ce4d
 workflow-type: tm+mt
-source-wordcount: '2016'
+source-wordcount: '2064'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Många AEM-team arbetar nu med IDE och chattbaserade program som Cursor, ChatGPT, Anthropic Claude och Microsoft Copilot Studio. Dessa program stöder Model Context Protocol (MCP), som gör att program kan visa back-end-verktyg för stora språkmodeller (LLM) på ett standardiserat sätt.
+Många Adobe Experience Manager-team (AEM) arbetar nu i Integrated Development Environment (IDE) och chattbaserade program som Cursor, ChatGPT, Anthropic Claude och Microsoft Copilot Studio. Dessa program stöder Model Context Protocol (MCP), som gör att program kan visa back-end-verktyg för stora språkmodeller (LLM) på ett standardiserat sätt.
 
 Med AEM MCP-integrering kan olika personer samarbeta kring samma innehåll:
 
@@ -119,19 +119,19 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 
 **ChatGPT**
 
-![Konfigurera ChatGPT-steg 1](assets/chatgpt-1.png)
+![Konfigurera ChatGPT - Inställningar](assets/chatgpt-1.png)
 
-![Konfigurera ChatGPT-steg 2](assets/chatgpt-2.png)
+![Konfigurera ChatGPT - Program och anslutningar - Avancerade inställningar](assets/chatgpt-2.png)
 
-![Konfigurera ChatGPT-steg 3](assets/chatgpt-3.png)
+![Konfigurera ChatGPT - Program och anslutningar - Utvecklarläge](assets/chatgpt-3.png)
 
-![Konfigurera ChatGPT-steg 4](assets/chatgpt-4.png)
+![Konfigurera ChatGPT - Program och anslutningar - Skapa app](assets/chatgpt-4.png)
 
-![Konfigurera ChatGPT-steg 5](assets/chatgpt-5.png)
+![Konfigurera ChatGPT - Program och anslutningar - ny app](assets/chatgpt-5.png)
 
-![Konfigurera ChatGPT-steg 6](assets/chatgpt-6.png)
+![Konfigurera ChatGPT - Program och anslutningar - AEM Content MCP-tjänst](assets/chatgpt-6.png)
 
-![Konfigurera ChatGPT-steg 7](assets/chatgpt-7.png)
+![Konfigurera ChatGPT - fråga AEM Content MCP Service](assets/chatgpt-7.png)
 
 * Lägg till URL:er för AEM MCP-server i området där MCP-anslutningar eller verktyg är konfigurerade
 * Utlös anslutningen och logga in med din Adobe ID när den omdirigeras
@@ -141,19 +141,19 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 
 **Claude**
 
-![Konfigurera Claude Step 1](assets/claude-1.png)
+![Konfigurera Claude - Inställningar](assets/claude-1.png)
 
-![Konfigurera Claude Step 2](assets/claude-2.png)
+![Konfigurera Claude - Connectors](assets/claude-2.png)
 
-![Konfigurera Claude Step 3](assets/claude-3.png)
+![Konfigurera Claude - Connectors - Lägg till anpassad koppling](assets/claude-3.png)
 
-![Konfigurera Claude Step 4](assets/claude-4.png)
+![Konfigurera Claude - Connectors - Ansluta anpassad koppling](assets/claude-4.png)
 
-![Konfigurera Claude Step 5](assets/claude-5.png)
+![Konfigurera Claude - Connectors - Konfigurera anpassad anslutning](assets/claude-5.png)
 
-![Konfigurera Claude Step 6](assets/claude-6.png)
+![Konfigurera Claude - Connectors - behörigheter för anpassat anslutningsverktyg](assets/claude-6.png)
 
-![Konfigurera Claude Step 7](assets/claude-7.png)
+![Konfigurera Claude - fråga AEM Content MCP Service](assets/claude-7.png)
 
 * Registrera AEM MCP-serverns URL:er i Claude&#39;s MCP-konfiguration
 * Slutför Adobe inloggningsflöde
@@ -163,15 +163,15 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 
 **Markör**
 
-![Konfigurera markör, steg 1](assets/cursor-1.png)
+![Konfigurera markör - Inställningar](assets/cursor-1.png)
 
-![Konfigurera markör, steg 2](assets/cursor-2.png)
+![Konfigurera markör - Verktyg och MCP - Lägg till anpassad MCP](assets/cursor-2.png)
 
-![Konfigurera markör, steg 3](assets/cursor-3.png)
+![Konfigurera markör - Lägg till anpassade MCP-inställningar](assets/cursor-3.png)
 
-![Konfigurera markör, steg 4](assets/cursor-4.png)
+![Konfigurera markör - Anslut](assets/cursor-4.png)
 
-![Konfigurera markör, steg 5](assets/cursor-5.png)
+![Konfigurera markör - fråga en ny tjänst](assets/cursor-5.png)
 
 * Skapa en ny MCP-serverpost med AEM MCP-URL:er i Markörens MCP-inställningar
 * Autentisera med din Adobe ID när du uppmanas till det
@@ -180,25 +180,25 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 
 **Microsoft Copilot Studio**
 
-![Konfigurera Copilot-steg 1](assets/copilot-1.png)
+![Konfigurera Copilot - Agenter](assets/copilot-1.png)
 
-![Konfigurera Copilot-steg 2](assets/copilot-2.png)
+![Konfigurera Copilot - Lägg till verktyg](assets/copilot-2.png)
 
-![Konfigurera Copilot-steg 3](assets/copilot-3.png)
+![Konfigurera Copilot - Lägg till verktyg - Modellkontextprotokoll](assets/copilot-3.png)
 
-![Konfigurera Copilot-steg 4](assets/copilot-4.png)
+![Konfigurera Copilot - Lägg till en modellkontextprotokollserver (förhandsgranskning)](assets/copilot-4.png)
 
-![Konfigurera Copilot-steg 5](assets/copilot-5.png)
+![Konfigurera Copilot - Lägg till verktyg - Skapa ny anslutning](assets/copilot-5.png)
 
-![Konfigurera Copilot-steg 6](assets/copilot-6.png)
+![Konfigurera Copilot - Lägg till verktyg - Lägg till och konfigurera](assets/copilot-6.png)
 
-![Konfigurera Copilot-steg 7](assets/copilot-7.png)
+![Konfigurera Copilot - Lägg till verktyg - Konfigurera](assets/copilot-7.png)
 
-![Konfigurera Copilot-steg 8](assets/copilot-8.png)
+![Konfigurera Copilot - Testa anslutning](assets/copilot-8.png)
 
-![Konfigurera Copilot-steg 9](assets/copilot-9.png)
+![Konfigurera Copilot - Hantera anslutningar](assets/copilot-9.png)
 
-![Konfigurera Copilot-steg 10](assets/copilot-10.png)
+![Konfigurera Copilot - Testagent](assets/copilot-10.png)
 
 * Skapa en ny agent
 * Navigera till verktygsavsnittet och klicka på **Lägg till verktyg**
