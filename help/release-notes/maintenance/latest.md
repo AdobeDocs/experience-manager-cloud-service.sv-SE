@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: a842a5f0bd5561563a86f6f0b6e8abf8cfd679ec
+source-git-commit: f01a98604e045c48ab7167122aee3b2468db6d52
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,17 @@ ht-degree: 0%
 
 I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuella underhållsversionen av Experience Manager as a Cloud Service.
 
-## Version 24222 {#24222}
+## Version 24288 {#24288}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 24222, som offentliggjordes den 3 februari 2026. Den tidigare underhållsversionen var version 23963.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 24288, som offentliggjordes den 4 februari 2026. Den tidigare underhållsversionen var version 23963.
 
-Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
-### Förbättringar {#enhancements-24222}
+>[!NOTE]
+>
+>Utgåva 2422 har gjorts privat.
+
+### Förbättringar {#enhancements-24288}
 
 * CNTBF-604: Skapa en ny paketversion för innehållbackflow.
 * CQ-4361592: Stöd för att lägga till TypeHint för att skapa och uppdatera projekt.
@@ -58,7 +62,7 @@ Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns
 * SKYOPS-125574: Uppdatera nätcentrerade AC-verktygspaket i QuickStart.
 * SKYOPS-126150: Förbättra det övre kommandot för generatorskript för tråddumpar.
 
-### Åtgärdade problem {#fixed-issues-24222}
+### Åtgärdade problem {#fixed-issues-24288}
 
 * FORMS-23687: Korrigera SSV-valideringsfel när innehåller regel används utan standardvärde.
 * GRANITE-48472: Localize error when changing password in the Edit User Settings tab.
@@ -75,10 +79,11 @@ Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns
 * GRANITE-63293: Korrigera obligatoriskt sökvägsfält och förlora den nödvändiga asterisken efter första redigeringen.
 * GRANITE-63360: Korrigera felaktig information som visas när flera sökvägar är markerade.
 * SITES-36242: Minska GraphQL execute regex för att korrigera förbikoppling av dispatcherfilter.
+* SITES-40122: Korrigera Edge Delivery-integrering med ImsService för innehållsdistribution.
 * SKYOPS-84379: Använd det senaste FAKTA-verktyget för att kunna växla upphämtning från RDE-enheter.
 * SKYOPS-121216: Återställ uppdatering till bibliotek för Jackson 2.20.0.
 
-#### AEM Guides {#guides-24222}
+#### AEM Guides {#guides-24288}
 
 * GUIDES-38198: När du uppdaterar en infogad MathML-ekvation med alternativet Redigera MathML på snabbmenyn återspeglas inte det uppdaterade värdet förrän sidan uppdateras.
 * GUIDES-38276: Det går inte att ta bort versionsetiketter från versionshistorikpanelen i Assets UI.
@@ -86,13 +91,13 @@ Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns
 * GUIDES-37837: När du försöker spara ett ämne eller en karta kan det hända att åtgärden misslyckas med ett fel av typen Det gick inte att spara, särskilt under intensiva resurshanteringsuppgifter eller översättningsarbetsflöden som körs i bakgrunden.
 * GUIDES-27774: Rapporten med den brutna listan innehåller felaktiga externa länkar, giltiga `keyrefs` och nyckelord som är korrekt lösta inom den aktuella kartans omfång.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
-### Kända fel {#known-issues-24222}
+### Kända fel {#known-issues-24288}
 
 Ingen.
 
-### Föråldrade funktioner och API:er {#deprecated-24222}
+### Föråldrade funktioner och API:er {#deprecated-24288}
 
 * AEMSRE-2896: Korrigera anpassad konfigurationshantering för logghanterare.
 * GRANITE-62802: Ta bort föråldrat `commons-lang`-beroende från `granite.auth.saml`.
@@ -109,17 +114,17 @@ Ingen.
 
 Inaktuella och borttagna funktioner och API:er i AEM as a Cloud Service beskrivs i dokumentet [Inaktuella och Borttagna funktioner och API:er](/help/release-notes/deprecated-removed-features.md).
 
-### Säkerhetskorrigeringar {#security-24222}
+### Säkerhetskorrigeringar {#security-24288}
 
 AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan för din plattform. Den här underhållsversionen åtgärdar 10 identifierade sårbarheter, vilket stärker vårt engagemang för robust systemskydd.
 
-### Inbäddade tekniker {#embedded-tech-24222}
+### Inbäddade tekniker {#embedded-tech-24288}
 
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.90.0 | [Oak 1.90.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.90.0/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.2 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
