@@ -6,9 +6,9 @@ feature: Interactive Communication
 role: User, Developer, Admin
 hide: true
 hidefromtoc: true
-source-git-commit: 6b90e8f2d26d6bfd22fbd94af0d6c68466c69bbb
+source-git-commit: 2f3badafddfdfe1dd21eb74be7189102aa0474bc
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
@@ -33,15 +33,14 @@ Tabellen nedan visar de olika verkliga scenarierna där Associate UI kan använd
 
 Innan du integrerar det associerade användargränssnittet med ditt program måste du se till att du har:
 
-- AEM Forms Cloud Service Publish, instans
-- Interaktiv kommunikation som skapats och publicerats i AEM
+- Interaktiv kommunikation skapad och publicerad
 - Webbläsare med popup-stöd aktiverat
-- Associerade användare måste ingå i gruppen **forms-associates**
-- Autentisering konfigurerad - [SAML 2.0](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0)
+- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
+- Autentisering konfigurerad - [SAML 2.0](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0)
 
 >[!NOTE]
 >
-> För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
+> För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
 
 ### Ytterligare SAML-konfigurationer för associerat användargränssnitt
 
@@ -144,10 +143,10 @@ const data = {
 | Komponent | Obligatoriskt | Beskrivning |
 |-----------|----------|-------------|
 | `id` | Ja | Identifieraren för den interaktiva kommunikation som ska läsas in |
-| `prefill` | Nej | Innehåller tjänstkonfiguration för förifyllning av data. |
-| `prefill.serviceName` | Nej | Namn på den formulärdatamodelltjänst som ska anropas för förifyllning av data |
-| `prefill.serviceParams` | Nej | Nyckelvärdepar som skickas till förifyllningstjänsten |
-| `options` | Nej | Ytterligare egenskaper som stöds för PDF-återgivning - nationella inställningar, includeAttachments, embedFonts, makeAccessible |
+| `prefill` | Valfritt | Innehåller tjänstkonfiguration för förifyllning av data. |
+| `prefill.serviceName` | Valfritt | Namn på den formulärdatamodelltjänst som ska anropas för förifyllning av data |
+| `prefill.serviceParams` | Valfritt | Nyckelvärdepar som skickas till förifyllningstjänsten |
+| `options` | Valfritt | Ytterligare egenskaper som stöds för PDF-återgivning - nationella inställningar, includeAttachments, embedFonts, makeAccessible |
 
 ### Steg 3: Implementera integreringsfunktionen
 
@@ -409,7 +408,7 @@ Använd detta för att dynamiskt fylla i konstruktorn med kunddata:
 {
   "id": "12345",
   "prefill": {
-    "serviceName": "FdmTestData",
+    "serviceName": "IC_FDM",
     "serviceParams": {
       "customerId": "101",
       "accountNumber": "ACC-98765"
@@ -425,11 +424,12 @@ Använd detta för att ange ytterligare återgivningsalternativ:
 
 ```json
 {
-  "id": "12345ß",
+  "id": "12345",
   "prefill": {
-    "serviceName": "FdmTestData",
-    "serviceParams": { 
-      "policyNumber": "POL-123" 
+    "serviceName": "IC_FDM",
+    "serviceParams": {
+      "customerId": "101",
+      "accountNumber": "ACC-98765"
     }
   },
   "options": { 
@@ -481,16 +481,16 @@ Använd detta för att ange ytterligare återgivningsalternativ:
 - För produktion: Ange den exakta URL-adressen till ditt program
 - Kontrollera att publiceringsinstansens CORS-inställningar tillåter programdomänen
 
-## Bästa praxis
+<!--## Best Practices
 
-Följ dessa metodtips när du implementerar integreringen av det associerade användargränssnittet:
+When implementing the Associate UI integration, follow these best practices:
 
-1. **Validering**: Verifiera alltid IC ID:t och JSON-nyttolasten innan du skickar
-2. **Felhantering**: Implementera korrekt felhantering för `window.open()` fel
-3. **Användarupplevelse**: Visa en inläsningsindikator medan Associate-gränssnittet initieras
-4. **Minneshantering**: Ta bort händelseavlyssnare efter initiering för att förhindra minnesläckage
-5. **Testning**: Testa integreringen med popup-blockerare aktiverade för att säkerställa smidig hantering
-6. **Användarbehörigheter**: Verifiera att användarna har lämplig åtkomst till gruppen med formulär-associater
+1. **Validation**: Always validate the IC ID and JSON payload before sending
+2. **Error Handling**: Implement proper error handling for `window.open()` failures
+3. **User Experience**: Display a loading indicator while the Associate UI initializes
+4. **Memory Management**: Remove event listeners after initialization to prevent memory leaks
+5. **Testing**: Test the integration with popup blockers enabled to ensure graceful handling
+6. **User Permissions**: Verify users have appropriate access to the forms-associates group-->
 
 ## Se även
 
