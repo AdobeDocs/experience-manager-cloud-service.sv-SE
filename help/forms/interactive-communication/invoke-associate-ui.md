@@ -6,9 +6,9 @@ feature: Interactive Communication
 role: User, Developer, Admin
 hide: true
 hidefromtoc: true
-source-git-commit: 2f3badafddfdfe1dd21eb74be7189102aa0474bc
+source-git-commit: bfee883205f81012fea75cbd7dc5fddd7169fdbb
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '905'
 ht-degree: 0%
 
 ---
@@ -35,12 +35,13 @@ Innan du integrerar det associerade användargränssnittet med ditt program mås
 
 - Interaktiv kommunikation skapad och publicerad
 - Webbläsare med popup-stöd aktiverat
-- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
-- Autentisering konfigurerad - [SAML 2.0](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0)
+- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
+- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
 
 >[!NOTE]
 >
-> För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
+>- I den här artikeln visas autentiseringskonfigurationen med SAML 2.0 med [Microsoft Entra ID (Azure AD) som identitetsleverantör](https://learn.microsoft.com/en-us/power-pages/security/authentication/openid-settings).
+>- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
 
 ### Ytterligare SAML-konfigurationer för associerat användargränssnitt
 
@@ -54,7 +55,7 @@ Skapa filen `com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json
   {
     "path": ["/libs/fd/associate"],
     "serviceProviderEntityId": "https://publish-p{program-id}-e{env-id}.adobeaemcloud.com",
-    "assertionConsumerServiceURL": "https://publish-p{program-id}-e{env-id}.adobeaemcloud.com/libs/fd/associate/saml_login",
+    "assertionConsumerServiceURL": "https://publish-p{program-id}-e{env-id}.adobeaemcloud.com/libs/fd/associate/saml_login"
     "idpUrl": "https://login.microsoftonline.com/{azure-tenant-id}/saml2",
     "idpCertAlias": "{your-certificate-alias}",
     "idpIdentifier": "https://sts.windows.net/{azure-tenant-id}/",
@@ -122,6 +123,8 @@ const AEM_URL = 'https://publish-p{program-id}-e{env-id}.adobeaemcloud.com/libs/
 ```
 
 Ersätt `{program-id}` och `{env-id}` med dina faktiska miljövärden.
+
+Av säkerhetsskäl skickas inte parametrar som Interactive Communication ID, prefill service och service-parametrar via URL:en. I stället skickas dessa parametrar säkert med en JavaScript-funktion som kommunicerar med det associerade användargränssnittet via webbläsarens postMessage-API.
 
 ### Steg 2: Förbered datanyttolasten
 
@@ -204,13 +207,13 @@ Anropa funktionen med lämpliga parametrar:
 launchAssociateUI('12345', '', {}, {});
 
 // With prefill service
-launchAssociateUI('12345', 'FdmTestData', 
+launchAssociateUI('12345', 'IC_FDM', 
   { customerId: '101'}, {});
 
 // With all parameters
-launchAssociateUI('12345', 'FdmTestData', 
-  { policyNumber: 'POL-123' }, 
-  { locale: 'en', acrobatVersion: 'Acrobat_11' });
+launchAssociateUI('12345', 'IC_FDM', 
+  { customerId: "101" }, 
+  { locale: 'en', includeAttachments: "true" });
 ```
 
 ## Testa integrationen med en exempelsida på HTML
