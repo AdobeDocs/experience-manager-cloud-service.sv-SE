@@ -30,7 +30,7 @@ Med [!DNL Content Hub] kan du skapa offentliga samlingar. Dessa samlingar är ti
 
 Det hjälper användarna att enkelt komma åt och hantera de olika resurserna som är tillgängliga i [!DNL Content Hub].
 
->[!VIDEO](https://video.tv.adobe.com/v/3435687/?learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3445304/?captions=swe&learn=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 

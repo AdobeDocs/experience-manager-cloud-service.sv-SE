@@ -35,7 +35,7 @@ Med Experience Manager Assets kan administratörer konfigurera de alternativ som
 
 * Alla anpassade länkar som du behöver inkludera på Content Hub förutom resurser, samlingar och insikter.
 
->[!VIDEO](https://video.tv.adobe.com/v/3472917/?learn=on&enablevpops){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3472950/?captions=swe&learn=on&enablevpops){transcript=true}
 
 ## Förutsättningar {#prerequisites-configuration-ui}
 

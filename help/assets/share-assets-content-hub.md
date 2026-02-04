@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Skapa en länk till valda resurser för att enkelt dela dem med andra. Som auktoriserad [!DNL Content Hub]-användare väljer du en eller flera resurser som är tillgängliga i din [!DNL Content Hub]-miljö, skapar en länk och skickar den till andra privata eller offentliga användare.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474890/?learn=on&enablevpops=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3474923/?captions=swe&learn=on&enablevpops=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 

@@ -27,7 +27,7 @@ Du kan importera resurser från följande datakällor:
 * Dropbox
 * OneDrive
 
->[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on){transcript=true}
+>[!VIDEO](https://video.tv.adobe.com/v/3451963/?captions=swe&learn=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 
