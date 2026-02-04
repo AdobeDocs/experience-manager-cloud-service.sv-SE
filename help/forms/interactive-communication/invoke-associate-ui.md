@@ -35,13 +35,13 @@ Innan du integrerar det associerade användargränssnittet med ditt program mås
 
 - Interaktiv kommunikation skapad och publicerad
 - Webbläsare med popup-stöd aktiverat
-- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
-- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
+- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
+- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
 
 >[!NOTE]
 >
 >- I den här artikeln visas autentiseringskonfigurationen med SAML 2.0 med [Microsoft Entra ID (Azure AD) som identitetsleverantör](https://learn.microsoft.com/en-us/power-pages/security/authentication/openid-settings).
->- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
+>- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
 
 ### Ytterligare SAML-konfigurationer för associerat användargränssnitt
 
