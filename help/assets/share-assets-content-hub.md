@@ -24,7 +24,7 @@ Skapa en länk till valda resurser för att enkelt dela dem med andra. Som aukto
 
 Så här delar du en eller flera resurser med privata eller offentliga användare:
 
-1. Navigera till din [!DNL Content Hub]-hemsida, markera en eller flera resurser och klicka på ![ dela ](/help/assets/assets/share.svg) **[!UICONTROL Share]** för att visa en enskild markerad resurs eller en lista med flera markerade resurser i dialogrutan **[!UICONTROL Share assets]** .
+1. Navigera till din [!DNL Content Hub]-hemsida, markera en eller flera resurser och klicka på ![&#x200B; dela &#x200B;](/help/assets/assets/share.svg) **[!UICONTROL Share]** för att visa en enskild markerad resurs eller en lista med flera markerade resurser i dialogrutan **[!UICONTROL Share assets]** .
 
    Du kan också markera och dela resurser som är tillgängliga i ![samlingar](/help/assets/assets/Smock_Collection_18_N.svg) **[!UICONTROL Collections]**.
 
