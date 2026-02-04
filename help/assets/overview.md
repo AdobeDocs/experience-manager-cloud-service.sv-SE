@@ -2,9 +2,9 @@
 title: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 description: Nu kommer Assets as a Cloud Service för Digital Asset Management i AEM
 exl-id: 4437f214-d058-4975-8b8f-869a12c8103b
-source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
+source-git-commit: d49bfaf7ca028b2386342d33fd68e566b8a2be1f
 workflow-type: tm+mt
-source-wordcount: '5075'
+source-wordcount: '5626'
 ht-degree: 0%
 
 ---
@@ -57,11 +57,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/get-started">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started">
    <img alt="Använd AEM datorprogram" src="./assets/desktop-app-upload.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/get-started">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/get-started">
       <strong> Använda AEM-datorprogrammet </strong>
       </a>
    </div>
@@ -70,11 +70,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
    </p>
 </td>
 <td>
-   <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+   <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
    <img alt="Använd Adobe Asset Link" src="./assets/adobe-asset-link.jpeg" />
    </a>
    <div>
-      <a href="https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html">
+      <a href="https://helpx.adobe.com/enterprise/using/adobe-asset-link.html">
       <strong> Använd Adobe Asset Link </strong>
       </a>
    </div>
@@ -108,7 +108,6 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
       <em>Lär dig hur du använder smarta taggar automatiskt på överförda resurser.</em>
    </p>
 </td>
-
 
 <td>
    <a href="/help/assets/color-tag-images.md">
@@ -213,11 +212,11 @@ Använd de här länkarna för att få tillgång till detaljerad dokumentation o
 
 
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
    <img alt="Smart beskärning" src="./assets/smart-cropping.jpg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/video/dynamic-media-smart-crop-video">
       <strong> Smart beskärning </strong>
       </a>
    </div>
@@ -270,11 +269,11 @@ AEM Assets innehåller funktioner som hjälper dig att snabbt hitta rätt resurs
 
 
 <td>
-   <a href="https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-blogs/how-to-manage-metadata-before-and-after-migrating-to-aem-assets/ba-p/744298?profile.language=sv">
+   <a href="https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-blogs/how-to-manage-metadata-before-and-after-migrating-to-aem-assets/ba-p/744298">
    <img alt="Metadatahantering, god praxis" src="./assets/metadata-best-practices.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-blogs/how-to-manage-metadata-before-and-after-migrating-to-aem-assets/ba-p/744298?profile.language=sv">
+      <a href="https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager-blogs/how-to-manage-metadata-before-and-after-migrating-to-aem-assets/ba-p/744298">
       <strong> Metadatahantering </strong>
       </a>
    </div>
@@ -375,7 +374,6 @@ Du kan också underhålla resursversioner, ange resursstatus och ange förfallod
       <em>Lär dig hur du utför grundläggande och avancerade resurshanteringsåtgärder.</em>
    </p>
 </td>
-
 
 <td>
    <a href="/help/assets/my-workspace-assets-view.md">
@@ -520,7 +518,7 @@ Du kan integrera resursväljaren med ett Adobe- eller ett program som inte komme
 
 * **Integrering med Adobe Workfront**: [!DNL Adobe Workfront] är ett arbetshanteringsprogram som hjälper dig att hantera hela arbetscykeln på ett och samma ställe. Integrationen mellan [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] gör att organisationer kan förbättra innehållets hastighet och time-to-market genom att knyta samman arbete och hantering av digitala resurser. När man arbetar i Workfront får man tillgång till dokument och bilder.
 
-  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/sv/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations).
+  Adobe erbjuder att [integrera [!DNL Workfront] och [!DNL Adobe Experience Manager Assets] internt](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/aem-asset-integrations).
 
 * **Integrering med Figma**: AEM Assets kan integreras direkt med Figma, vilket gör att designers kan komma åt resurser som lagras direkt i AEM Assets inifrån Figma-användargränssnittet. Du kan placera innehåll som hanteras i AEM Assets på arbetsytan i Figma och sedan spara nytt eller redigerat innehåll i AEM Assets-databasen. Klicka [här](https://www.figma.com/community/plugin/1512561378275712210/adobe-experience-manager-aem-assets-connector) om du vill få åtkomst till AEM Assets Connector på Figma Community-sidan.
 
@@ -581,16 +579,16 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
 
 * **Integrerar [!DNL AEM Assets] med [!DNL Universal Editor]-baserade redigeringsflöden för[!DNL Edge Delivery Services]**: Konfigurera [!DNL Universal Editor] för integrering med [!DNL AEM Assets]. Med den här integreringen kan du använda [!DNL Dynamic Media with OpenAPI capabilities] för att leverera resurser.
 
-   * Mer information om hur du lägger till en anpassad resursväljarfunktion i [&#x200B; finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
+   * Mer information om hur du lägger till en anpassad resursväljarfunktion i [ finns i  [!DNL Edge Delivery] Konfiguration i](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#configuration-in-edge-delivery-site)Plats[!DNL Universal Editor]. Med den anpassade resursväljaren kan du infoga resurser direkt i ditt [!DNL Universal Editor]-innehåll.
    * Läs [Tilläggsöversikt](https://developer.adobe.com/uix/docs/extension-manager/extension-developed-by-adobe/configurable-asset-picker/#extension-overview) om du vill veta hur du får åtkomst till [!DNL AEM Assets] och infogar resurserna när du redigerar i [!DNL Universal Editor].
 
 <table>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+   <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
    <img alt="Integrering med Adobe Journey Optimizer" src="./assets/integration-figma.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/combine/assets">
+      <a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/combine/assets">
       <strong>Integrering med Adobe Journey Optimizer</strong>
       </a>
    </div>
@@ -599,11 +597,11 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/sv/docs/commerce/aem-assets-integration/overview">
+   <a href="https://experienceleague.adobe.com/en/docs/commerce/aem-assets-integration/overview">
    <img alt="Integrering med Commerce" src="./assets/integration-ajo.jpeg" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/sv/docs/commerce/aem-assets-integration/overview">
+      <a href="https://experienceleague.adobe.com/en/docs/commerce/aem-assets-integration/overview">
       <strong>Integrering med Commerce</strong>
       </a>
    </div>
@@ -627,6 +625,123 @@ Om du redan har en [!DNL Edge Delivery Services]-webbplats kan du läsa [[!DNL A
 </table>
 
 +++
+
+>[!TAB AI-agenter]
+
+## AI-agenter {#ai-agents}
+
+AEM as a Cloud Service tillhandahåller intelligenta **agenter** som förbättrar innehållshantering, optimering och styrning. Med dessa agenter kan användarna snabbt hitta innehåll, optimera kampanjer och säkerställa regelefterlevnad för alla digitala resurser.
+
+**Identifieringsagent**
+
+Identifieringsagenten levererar AEM-material on demand via naturliga, konversationsmoment för en smidig, klickfri upptäckt. Den söker på ett intelligent sätt i **Assets, Content Fragments och Adaptive Forms** för att leverera relevant innehåll som bilder, videor, PDF-filer, artiklar och formulärmallar. Med ett naturligt språk kan du söka utan att behöva skapa komplexa frågor eller använda filter i AEM Assets gränssnitt. Baserat på din uppmaning returnerar agenten kuraterade resultat tillsammans med metadata för resursen och URL:er för leverans, som är klara att bäddas in i andra program.
+
+Några av fördelarna med Discovery Agent:
+
+* **Identifiering av enhetligt innehåll:** Få tillgång till alla typer av AEM-innehåll, som bilder, videor, PDF-dokument, artiklar och formulär från ett enda konversationsgränssnitt.
+* **Snabbare kampanjplanering:** Samla snabbt in bilder och formulär för marknadsföringskampanjer i e-postmeddelanden, på webben och i sociala kanaler.
+* **Förbättrad produktivitet:** Minska tiden som går åt till att söka i databaser eller filtrera metadata via automatiserad, avsiktsbaserad sökning.
+* **Konsekvent innehållsanvändning:** Ser till att godkända resurser och fragment återanvänds, vilket upprätthåller varumärkets enhetlighet i alla kanaler.
+
+**Kompetens:** Identifiering av naturligt språkinnehåll, taggbaserad resursidentifiering, mappbaserad innehållsidentifiering, Format- och orienteringsbaserad resursidentifiering\
+**Personas:** Kampanjchefer, kanalmarknadsförare, DAM-bibliotek, byråer och partners\
+**Åtkomst:** Via AI-assistenten i AEM
+
+**Vanliga användningsfall/Exempelfrågor:**
+
+* Visa bilder som taggats &quot;office&quot; i mappen WKND.
+* Lista alla publicerade innehållsfragment för WKND-drycker.
+* Sök efter formulär att söka efter för ett jobb.
+* Visa resurser med personer i liggande orientering.
+
+**Agent för innehållsoptimering**
+
+**Agenten för innehållsoptimering** hjälper dig att förfina och anpassa resurser med hjälp av naturliga språkuppmaningar. Det kan generera nya renderingar, justera bilder, ändra bakgrunder och skapa kanalklara variationer automatiskt. Fungerar med Discovery Agent och **Dynamic Media med OpenAPI** för smidig optimering.
+
+**Viktiga fördelar:**
+
+* **Smidig resursomformning:** Ändra storlek, skärpa, färga om eller spegla bilder.
+* **Kanaloptimerade utdata:** Generera återgivningar för Instagram, webbanners och andra marknadsföringskanaler.
+* **Creative-förbättringar i stor skala:** Använd bakgrundsändringar eller övertäckningar för arbetsflöden med stora volymer.
+
+**Åtkomst:** Via AI Assistant i AEM.
+
+**Exempelfrågor:**
+
+* `Create a 2000px JPEG rendition.`
+* `Sharpen the image.`
+* `Change background color to #ff8932.`
+* `Create a rendition for an Instagram story.`
+
+**Begränsningar:** Vissa optimeringar stöds inte för PNG-resurser.
+
+**Styrningsagent**
+
+Styrningsagenten hjälper er att säkerställa regelefterlevnad, varumärkestrohet och regelefterlevnad för AEM-innehåll. Det identifierar innehåll som inte uppfyller metadata, tillgänglighet eller företagsriktlinjer.
+
+Några av de viktigaste fördelarna med ett ledningsorgan är:
+
+* **Kompatibilitetsövervakning:** Upptäcker policyöverträdelser i innehållet.
+* **Metadatakrävning:** Ser till att resurser har nödvändiga metadata för styrning.
+* **Varumärkeskonsekvens:** Flaggar innehåll som inte uppfyller företagsstandarder.
+
+**Kompetens:** Kontroll av regelefterlevnad, validering av metadata, tillgänglighetsgranskning, automatiserade aviseringar för överträdelser\
+**Personas:** DAM-administratörer, efterlevnadsansvariga, varumärkesansvariga\
+**Åtkomst:** via AEM AI Assistant
+
+**Vanliga användningsfall/Exempelfrågor:**
+
+* Validera metadata för alla resurser i WKND-mappen.
+* Identifiera tillgångar som saknar varumärkesriktlinjer.
+* Granska publicerat innehåll för att se om det är tillgängligt.
+
+<table>
+<td>
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/discovery/overview">
+   <img alt="Översikt över identifieringsagent" src="./assets/discovery-agent-overview.jpeg" />
+   </a>
+   <div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/discovery/overview">
+      <strong> Översikt över identifieringsagenten </strong>
+      </a>
+   </div>
+   <p>
+      <em>Översikt över identifieringsagenten och dess funktioner för identifiering av konversationsinnehåll.</em>
+   </p>
+</td>
+
+<td>
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/content-optimization/overview">
+   <img alt="Översikt över optimering av innehåll" src="./assets/content-optimization-agent.jpeg" />
+   </a>
+   <div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/content-optimization/overview">
+      <strong> Innehållsoptimeringsagent - översikt </strong>
+      </a>
+   </div>
+   <p>
+      <em>Översikt över Content Optimization Agent och de optimeringsarbetsflöden som stöds.</em>
+   </p>
+</td>
+
+<td>
+   <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/governance/overview">
+   <img alt="Styrningsagent - översikt" src="./assets/governance-agent-overview.jpeg" />
+   </a>
+   <div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/governance/overview">
+      <strong>Styrningsagent - översikt</strong>
+      </a>
+   </div>
+   <p>
+      <em>Översikt över styrningsagenten för regelefterlevnad och policytillämpning.</em>
+   </p>
+</td>
+</table>
+
+### **Åtkomst till agenter i AEM**
+
+Agenter är tillgängliga via **AI-assistenten** i AEM Cloud-tjänsten. Logga in på [experience.adobe.com](https://experience.adobe.com/) och interagera med AI Assistant med hjälp av naturliga språkuppmaningar.
 
 >[!TAB Resursaktivering]
 
