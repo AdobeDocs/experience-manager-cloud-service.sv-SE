@@ -3,7 +3,7 @@ title: Attributbaserad åtkomstkontroll
 description: Lär dig hur du aktiverar attributbaserad åtkomstkontroll för att definiera metadatabaserade regler för att definiera åtkomstnivån för resurser som är tillgängliga i Content Hub
 role: Admin
 exl-id: 05f54b05-40b8-4a6c-af8f-5c3f7a2089d4
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 0%
@@ -27,6 +27,8 @@ Några av fördelarna med attributbaserad åtkomstkontroll är:
 * Tillåter administratörer att överföra resurser och retroaktivt fastställa behörighetsstrukturer
 
 * Minskar antalet dubbletter - förbättrar materialets integritet. Dubbletter behövs i mappbaserade behörigheter när samma resurser delas med olika grupper.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops){transcript=true}
 
 ## Hur aktiverar jag attributbaserad åtkomstkontroll? {#enable-attribute-based-access-control}
 

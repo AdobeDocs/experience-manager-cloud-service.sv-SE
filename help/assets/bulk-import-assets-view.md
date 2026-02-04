@@ -4,9 +4,9 @@ description: Lär dig hur du importerar resurser satsvis med det nya användargr
 exl-id: 10f9d679-7579-4650-9379-bc8287cb2ff1
 feature: Asset Management, Publishing, Collaboration, Asset Processing
 role: User
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
 workflow-type: tm+mt
-source-wordcount: '1701'
+source-wordcount: '1694'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,8 @@ Du kan importera resurser från följande datakällor:
 * Google Cloud
 * Dropbox
 * OneDrive
+
+>[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on){transcript=true}
 
 ## Förutsättningar {#prerequisites}
 
@@ -57,11 +59,11 @@ Utför följande steg:
 
 1. Ange ett namn för programmet och klicka på **[!UICONTROL Create app]**.
 
-1. Lägg till https://experience.adobe.com i avsnittet **[!UICONTROL Redirect URIs]** på fliken **[!UICONTROL Settings]** i ditt program.
+1. Lägg till https://experience.adobe.com i avsnittet **[!UICONTROL Settings]** på fliken **[!UICONTROL Redirect URIs]** i ditt program.
 
 1. Kopiera värdena för fälten **[!UICONTROL App key]** och **[!UICONTROL App secret]**. Värdena krävs när verktyget för bulkimport konfigureras i AEM Assets.
 
-1. Lägg till följande behörigheter i avsnittet **[!UICONTROL Individual scopes]** på fliken **[!UICONTROL Permissions]**.
+1. Lägg till följande behörigheter i avsnittet **[!UICONTROL Permissions]** på fliken **[!UICONTROL Individual scopes]**.
 
    * account_info.read
 
@@ -85,7 +87,7 @@ Skapa och konfigurera OneDrive-utvecklarprogrammet innan du importerar resurser 
 
 1. Utför följande steg för att lägga till omdirigerings-URI:er:
 
-   1. Välj **[!UICONTROL Web]** i listrutan **[!UICONTROL Select a platform]**.
+   1. Välj **[!UICONTROL Select a platform]** i listrutan **[!UICONTROL Web]**.
 
    1. Lägg till https://experience.adobe.com i avsnittet **[!UICONTROL Redirect URIs]**.
    <!-- Add the first URI and click **[!UICONTROL Configure]** to add it. You can add more by clicking **[!UICONTROL Add URI]** option available in the **[!UICONTROL Web]** section on the **[!UICONTROL Authentication]** page. -->
@@ -225,7 +227,3 @@ Klicka på ikonen ![Mer](assets/do-not-localize/more-icon.svg) som motsvarar kon
 ## Navigera till resurser när du har utfört bulkimport {#view-assets-after-bulk-import}
 
 Om du vill visa Assets-målplatsen där resurserna importeras efter att du har kört massimportjobbet klickar du på ![Mer ikon](assets/do-not-localize/more-icon.svg) som motsvarar konfigurationsnamnet och sedan på **[!UICONTROL View Assets]**.
-
-## Video: Importera resurser satsvis med Assets View
-
->[!VIDEO](https://video.tv.adobe.com/v/3428012)

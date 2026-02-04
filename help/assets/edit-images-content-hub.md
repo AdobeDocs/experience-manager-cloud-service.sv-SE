@@ -2,7 +2,7 @@
 title: Redigera bilder i Content Hub med Adobe Express
 description: Redigera bilder i Content Hub med Adobe Express
 exl-id: c9777862-226c-4d39-87da-9c4a30437dc5
-source-git-commit: 32fdbf9b4151c949b307d8bd587ade163682b2e5
+source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -12,6 +12,8 @@ ht-degree: 0%
 # Redigera bilder i Content Hub {#edit-images-content-hub}
 
 Med Content Hub kan du skapa nytt innehåll med Adobe Express. Du kan redigera befintligt innehåll med lättanvända verktyg, producera varumärkesanpassade varianter med mallar och märkeselement och skapa nytt innehåll med de senaste GenAI-funktionerna från Adobe Firefly.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3435003/?learn=on){transcript=true}
 
 ## Förutsättningar {#prereqs-edit-image-content-hub}
 
@@ -27,7 +29,7 @@ Så här redigerar du bilder med Content Hub:
 
 1. Klicka på **[!DNL Open in Adobe Express]** på resurskortet för bilden som du vill redigera. Du kan också klicka på bilden för att öppna informationen och sedan klicka på logotypen [!DNL Adobe Express]. Den inbäddade redigeraren för Adobe Express läses sedan in utan att någonsin behöva lämna Content Hub.
 
-   Du kan använda funktionen [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, till exempel [ändra storlek på bild](https://helpx.adobe.com/se/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/se/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/se/express/using/crop-image.html), kombinera bilden med AI-genererad bild eller text och mycket annat.
+   Du kan använda funktionen [!DNL Adobe Express] för att utföra alla bildredigeringsrelaterade åtgärder, till exempel [ändra storlek på bild](https://helpx.adobe.com/express/using/resize-image.html), [ta bort eller ändra bakgrundsfärg](https://helpx.adobe.com/express/using/remove-background.html), [beskära bild](https://helpx.adobe.com/express/using/crop-image.html), kombinera bilden med AI-genererad bild eller text och mycket annat.
 
 1. Utför ändringarna och klicka på **[!UICONTROL Save]** för att spara den redigerade resursen i någon av formattyperna:
 

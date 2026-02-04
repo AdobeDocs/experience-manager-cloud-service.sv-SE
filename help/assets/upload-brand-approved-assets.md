@@ -3,7 +3,7 @@ title: Överför varumärkesgodkända resurser till  [!DNL Content Hub]
 description: Lär dig hur du överför varumärkesgodkända mediefiler till Content Hub
 role: User
 exl-id: f1be7cfc-1803-4c17-bb58-947104aa883c
-source-git-commit: 281a8efcd18920dd926d92db9c757c0513d599fd
+source-git-commit: 655f84593adb1199bcfc21cb54071feb3c8523c5
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 0%
@@ -18,6 +18,8 @@ ht-degree: 0%
 >abstract="Lägg till godkända mediefiler i Content Hub antingen från det lokala filsystemet eller importera mediefiler från OneDrive eller Dropbox datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett mappstrukturen, för att förbättra sökfunktionerna."
 
 [Content Hub-användare med behörighet att lägga till resurser](/help/assets/deploy-content-hub.md#onboard-content-hub-users-add-assets) kan lägga till resurser i Content Hub antingen från det lokala filsystemet eller importera resurser från OneDrive eller Dropbox-datakällor. Alla resurser visas på den översta nivån i Content Hub, oavsett vilken mappstruktur som finns i det lokala filsystemet eller datakällorna i OneDrive och Dropbox, vilket förbättrar sökfunktionerna.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on){transcript=true}
 
 Resurserna som markerats som `Approved` i Assets as a Cloud Service är automatiskt tillgängliga i Content Hub. Mer information finns i [Godkänn resurser för Content Hub](/help/assets/approve-assets-content-hub.md).
 
