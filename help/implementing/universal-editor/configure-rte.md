@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerar
 feature: Developing
 role: Admin, Developer
 exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
-source-git-commit: af63b3ff705954fe2145303ea0dc80720ad9e552
+source-git-commit: e1773cbc2293cd8afe29c3624b29d1e011ea7e10
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
@@ -220,6 +220,28 @@ Indrag har en konfiguration på funktionsnivå som styr omfattningen av indragsb
 >[!NOTE]
 >
 >Listkapsling via tabb-/skift+tabbtangenter fungerar oberoende av allmänna indragsinställningar.
+
+### Klistra in som text {#paste-as-text}
+
+Redigeringsåtgärden i `paste_text` aktiverar ett standardarbetsflöde för inklistring som oformaterad text.
+
+* **Standardgenväg:** Mod-Shift-v (Cmd+Shift+V i macOS, Ctrl+Skift+V i Windows/Linux)
+* **Beteende:** Klistrar in från text/normal (källformatering ignoreras)
+   * I listor skapar nya listobjekt.
+
+```json
+{
+  "toolbar": {
+    "editor": ["removeformat", "paste_text"]
+  },
+  "actions": {
+    "paste_text": {
+      "shortcut": "Mod-Shift-v",
+      "label": "Paste as Text"
+    }
+  }
+}
+```
 
 ### Andra åtgärder {#other}
 

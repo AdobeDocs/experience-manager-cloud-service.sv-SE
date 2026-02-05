@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 519319f137065c1ccc8778e42c7de8f23fb5c104
+source-git-commit: 722ab0a32947ff3386d4bd6d2d78a8dc457aa06c
 workflow-type: tm+mt
-source-wordcount: '2710'
+source-wordcount: '2835'
 ht-degree: 0%
 
 ---
@@ -145,7 +145,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -202,7 +202,32 @@ Den markerade komponenten har tagits bort.
 >
 >Använd snabbtangenten `Shift+Backspace` för att ta bort den markerade komponenten från dess behållare.
 
-### Ändra ordning på komponenter {#reordering-components}
+### Ändra ordning på och flytta komponenter {#reordering-components}
+
+Du kan flytta och ordna om komponenter med hjälp av snabbmenyn eller innehållsträdet.
+
+#### Flytta komponenter med snabbmenyn {#move-context-menu}
+
+1. Högerklicka på en komponent eller klicka på den markerade komponentens emblem för att öppna snabbmenyn [för den.](#context-menu)
+1. Välj önskat flyttningsalternativ.
+   * Flytta längst upp
+   * Flytta uppåt
+   * Flytta nedåt
+   * Flytta längst ned
+     ![Flytta alternativ på snabbmenyn](assets/move-options-in-conext-menu.png)
+
+Komponenten flyttas både i redigeraren och i innehållsträdet.
+
+>[!TIP]
+>
+>Använd snabbtangenterna `Command-U` eller `Shift-Command-U` för att flytta uppåt respektive uppåt.
+>Använd snabbtangenterna `Command-J` eller `Shift-Command-J` för att flytta nedåt respektive nedåt.
+
+>[!NOTE]
+>
+>Alternativen på snabbmenyn kan bara flytta komponenter i sina behållare. [Använd innehållsträdet om du vill flytta komponenter mellan behållare.](#reorder-content-tree)
+
+#### Ändra ordning på komponenter med innehållsträdet {#reorder-content-tree}
 
 1. Om det inte redan är i [innehållsträdet](/help/sites-cloud/authoring/universal-editor/navigation.md#content-tree-mode) växlar du till det.
 1. Markera en behållarkomponent i innehållsträdet eller i redigeraren.
@@ -224,7 +249,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -240,7 +265,7 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
 1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.

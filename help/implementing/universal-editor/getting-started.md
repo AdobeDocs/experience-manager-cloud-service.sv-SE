@@ -4,9 +4,9 @@ description: Lär dig hur du får tillgång till den universella redigeraren och
 exl-id: 9091a29e-2deb-4de7-97ea-53ad29c7c44d
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: f73316b16b0fb90e225b954ba614008d734b8918
 workflow-type: tm+mt
-source-wordcount: '979'
+source-wordcount: '1018'
 ht-degree: 0%
 
 ---
@@ -118,20 +118,25 @@ Om du bara vill aktivera vissa tillägg för en sida kan du ange detta i en meta
 <meta name="urn:adobe:aue:config:extensions" content="<url>,<url>,<url>">
 ```
 
-## Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas. (Valfritt) {#content-paths}
+## Definiera för vilka innehållssökvägar eller `sling:resourceType`s den universella redigeraren ska öppnas och hur. (Valfritt) {#content-paths}
 
-Om du har ett befintligt AEM-projekt med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) öppnas sidorna automatiskt med sidredigeraren när innehållsförfattaren redigerar sidor. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna för `sling:resourceType`, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det valda innehållet.
+Om du har ett befintligt AEM-projekt med [sidredigeraren](/help/sites-cloud/authoring/page-editor/introduction.md) öppnas sidorna automatiskt med sidredigeraren när innehållsförfattaren redigerar sidor. Du kan definiera vilken redigerare AEM ska öppna baserat på innehållssökvägarna för `sling:resourceType` och hur det ska öppnas, vilket gör upplevelsen sömlös för författarna, oavsett vilken redigerare som krävs för det markerade innehållet.
 
 1. Öppna Configuration Manager.
 
    `http://<host>:<port>/system/console/configMgr`
 
-1. Leta reda på **URL-tjänsten för den universella redigeraren** i listan och klicka på **Redigera konfigurationsvärdena**.
+1. Leta upp **`Universal Editor URL Service`** i listan och klicka på **Redigera konfigurationsvärdena**.
 
 1. Definiera för vilka innehållssökvägar eller `sling:resourceType` som den universella redigeraren ska öppnas.
 
-   * Ange sökvägarna som den universella redigeraren öppnas för i fältet **Öppna mappning för den universella redigeraren**.
-   * I fältet **Sling:resourceTypes som ska öppnas av Universell redigerare** anger du en lista över resurser som ska öppnas direkt av Universell redigerare.
+   * Ange sökvägarna som den universella redigeraren är öppen för i fältet **`mappings`**.
+   * I fältet **`resourcetypes`** anger du en lista över resurser som öppnas direkt av den universella redigeraren.
+
+1. Definiera hur redigeraren ska öppnas.
+
+   * Markera alternativet **`aemdomain`** om du vill öppna redigeraren under din AEM-domän, till exempel `https://author-pXX-eYYY.adobeaemcloud.com...`, annars öppnas den under `https://experience.adobe.com...`.
+   * Markera alternativet **`editorreleasepreview`** om du vill att den universella redigeraren ska öppnas automatiskt i [förhandsvisningsmiljön](/help/release-notes/universal-editor/preview.md). Annars öppnas den i den aktuella versionen.
 
 1. Klicka på **Spara**.
 

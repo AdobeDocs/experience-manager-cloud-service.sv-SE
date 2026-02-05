@@ -4,9 +4,9 @@ description: Lär dig mer om fält och de komponenttyper som den universella red
 exl-id: cb4567b8-ebec-477c-b7b9-53f25b533192
 feature: Developing
 role: Admin, Developer
-source-git-commit: 022dea38f8597226c644fcdd8c2197a2299a1dfb
+source-git-commit: 7e01f5832d4ea56495b35c32689882b33d49d520
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1637'
 ht-degree: 1%
 
 ---
@@ -138,6 +138,7 @@ Följande komponenttyper kan användas för återgivningsfält.
 | [Välj](#select) | `select` |
 | [Tabb](#tab) | `tab` |
 | [Text](#text) | `text` |
+| [Textområde](#textarea) | `textarea` |
 
 #### AEM-tagg {#aem-tag}
 
@@ -616,7 +617,7 @@ En komponenttyp för flerval visar flera objekt för markering i en listruta, in
 >[!TAB Skärmbilder]
 
 ![Skärmbild av flervalskomponenttyp](assets/component-types/multiselect.png)
-![&#x200B; Skärmbild av flervalskomponenttyp med gruppering &#x200B;](assets/component-types/multiselect-group.png)
+![ Skärmbild av flervalskomponenttyp med gruppering ](assets/component-types/multiselect-group.png)
 
 >[!ENDTABS]
 
@@ -906,5 +907,33 @@ Text tillåter en enda rad med textinmatning.  Det innehåller ytterligare valid
 >[!TAB Skärmbild]
 
 ![Skärmbild av textkomponenttyp](assets/component-types/simpletext.png)
+
+>[!ENDTABS]
+
+#### Textområde {#textarea}
+
+Textområdet tillåter flera rader med textinmatning.
+
+>[!BEGINTABS]
+
+>[!TAB Exempel]
+
+```json
+{
+  "id": "longertext",
+  "fields": [
+    {
+      "component": "textarea",
+      "name": "textarea",
+      "label": "Text Area",
+      "valueType": "string"
+    }
+  ]
+}
+```
+
+>[!TAB Skärmbild]
+
+![Skärmbild av textområdes komponenttyp](assets/component-types/textarea.png)
 
 >[!ENDTABS]

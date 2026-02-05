@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.01.29
-description: Detta är versionsinformationen för version 2026.01.29 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.02.05
+description: Detta är versionsinformationen för version 2026.02.05 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: bdbe72b0afc19d0c28c56a7e5b2595c39711ca9c
+source-git-commit: d832d202eaf7f74293e2d15cc470b0226e883e13
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '157'
 ht-degree: 1%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.01.29 {#release-notes}
+# Versionsinformation om Universal Editor 2026.02.05 {#release-notes}
 
-Det här är versionsinformationen för den 29 januari 2026-versionen av Universal Editor.
+Detta är versionsinformationen för den 5 februari 2026-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,12 +26,8 @@ Det här är versionsinformationen för den 29 januari 2026-versionen av Univers
 
 ## Nyheter {#what-is-new}
 
-* Komponentmetoden för borttagning exponerades för `editorActions`.
-* Kopieringskomponentmetoden exponerades för `editorActions`.
-* Flyttkomponentmetoden exponerades för `editorActions`.
-* Komponentmetoden för tillägg exponerades för `editorActions`.
-* Definitionerna exponerades för [utökningsbarhet.](/help/implementing/universal-editor/extending.md)
-* Version 2.0 av API:t för dokumentredigering har släppts.
+* Flyttåtgärden är nu tillgänglig på [snabbmenyn.](/help/sites-cloud/authoring/universal-editor/authoring.md#context-menu)
+* RTE har nu stöd för [Klistra in som text.](/help/implementing/universal-editor/configure-rte.md#paste-as-text)
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -41,6 +37,4 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Extensiteten `content` har bytt namn till `details` för att följa API-schemat.
-* Sammanhangsberoende menybeteende har förbättrats.
-* Korrigerade ett fel när du klickade på märket för ett redigerbart objekt så att snabbmenyn öppnas korrekt.
+* Publicera för förhandsgranskning aktiverades för AEM 6.5 när plugin-programmet [`xwalk` användes.](/help/implementing/universal-editor/component-definition.md#plugins)
