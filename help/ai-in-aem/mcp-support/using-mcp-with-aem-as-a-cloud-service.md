@@ -3,7 +3,7 @@ title: Använda MCP med AEM as a Cloud Service
 description: Lär dig hur du använder Model Context Protocol med AEM as a Cloud Service
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 243fbd007235949fc03852658f606d483ef9ce4d
+source-git-commit: a5eeb2cedb16f7d0ba0b31e838b3b9fa27b0bf3f
 workflow-type: tm+mt
 source-wordcount: '2064'
 ht-degree: 0%
@@ -117,7 +117,7 @@ Det här steget utförs av varje användare (eller av en administratör för MCP
 
 Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög nivå.
 
-**ChatGPT**
+### ChatGPT {#chatgpt}
 
 ![Konfigurera ChatGPT - Inställningar](assets/chatgpt-1.png)
 
@@ -139,7 +139,7 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 
   *&quot;Använd de konfigurerade AEM MCP-verktygen för att lista alla webbplatser i vår författarmiljö.&quot;*
 
-**Claude**
+### Claude {#claude}
 
 ![Konfigurera Claude - Inställningar](assets/claude-1.png)
 
@@ -161,7 +161,7 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 * Kontrollera att MCP-servern är markerad innan du startar konversationen
 * Be Claude att utföra AEM-relaterade uppgifter. Claude väljer AEM-verktyg som exponeras av MCP-servern baserat på uppmaningen.
 
-**Markör**
+### Markör {#cursor}
 
 ![Konfigurera markör - Inställningar](assets/cursor-1.png)
 
@@ -178,7 +178,7 @@ Nedan finns exempel på hur detta ser ut i alla program som stöds på en hög n
 * Du kan även aktivera eller inaktivera enskilda verktyg genom att klicka på verktygsnamnen. Alla verktyg är aktiverade som standard.
 * Använd Markörens redigerare eller chatt för att starta AEM-verktyg som en del av arbetsflödena för utveckling och innehåll.
 
-**Microsoft Copilot Studio**
+### Microsoft Copilot Studio {#microsoft-copilot-studio}
 
 ![Konfigurera Copilot - Agenter](assets/copilot-1.png)
 
