@@ -3,9 +3,9 @@ title: Översikt över utvecklingsagenten
 description: Läs om hur utvecklingsagenten i AEM analyserar misslyckade pipelines i Cloud Manager och skapar loggar som föreslår kodkorrigeringar och snabbar upp felsökningen.
 feature: Agentic AI, AI Assistant, AI Tools, User Roles
 role: User, Admin, Architect, Developer
-source-git-commit: d10eb260195e402a6347ad40ddb851baf5949c83
+source-git-commit: 30b715d4e43bf83016622e3cf13f100062a1c08d
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Utvecklingsagenten hjälper AEM-utvecklare och -administratörer att skapa, fels
 
 För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka misslyckade konstruktionssteg genom att föreslå korrigeringar, vilket sparar tid vid felsökning av AEM as a Cloud Service-distributioner i utvecklings-, scen- och produktionsmiljöer. Den undersöker byggloggar och relaterad kod för att rekommendera en korrigering som du kan tillämpa manuellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3478011?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3478006?quality=12&learn=on)
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka
 ## Cloud Manager Pipeline Troubleshooting  {#cloud-manager-pipeline-troubleshooting}
 -->
 
-Skicka e-post till [aem-devagent@adobe.com](mailto:aem-devagent@adobe.com) med feedback eller förfrågningar om åtkomst till den här agenten.
+Om du vill få åtkomst till den här agenten kan du läsa [versionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs) för instruktioner om hur du registrerar dig i betaprogrammet och se till att du är intresserad av utvecklingsagenten. Du kan även skicka feedback specifikt för utvecklingsagenten via e-post till [aem-devagent@adobe.com](mailto:aem-devagent@adobe.com).
 
 ## Gå till utvecklingsagenten via Cloud Manager {#how-to-access-the-agent}
 
@@ -49,7 +49,7 @@ Du kommer åt utvecklingsagenten via AI-assistenten i användargränssnitt som C
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
