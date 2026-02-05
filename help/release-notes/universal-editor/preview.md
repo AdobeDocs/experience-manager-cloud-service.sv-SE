@@ -3,9 +3,9 @@ title: Versionsinformation om förhandsvisning i Universal Editor
 description: Det här är versionsinformationen för förhandsversionen av Universal Editor.
 feature: Release Information
 role: Admin
-source-git-commit: 722ab0a32947ff3386d4bd6d2d78a8dc457aa06c
+source-git-commit: b03ad4a29c55e6789b82d2da76708c6e31613c5e
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,10 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande nya funktioner {#what-is-new}
 
-* TBD
+* Dynamiska medialänkar stöds nu.
 
 ## Kommande förbättringar {#other-improvements}
 
-* TBD
+* Ett problem med felaktiga URL:er för videoklipp har åtgärdats.
+* Om du skapar flera komponenter med samma namn returneras inte längre 409.
+* Arbetsytan utan arbetsyta består nu av efterföljande uppdateringar av ett fält i behållaren.
