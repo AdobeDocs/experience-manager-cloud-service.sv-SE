@@ -1,33 +1,24 @@
 ---
-title: Anropa ett associerat användargränssnitt vid publicering-instans
-description: Läs om hur man integrerar och anropar AEM Forms Associate-gränssnittet vid publicering så att kundfokuserade proffs kan generera personaliserad interaktiv kommunikation i realtid.
+title: Integrera associerat gränssnitt för interaktiv kommunikation vid körning
+description: Lär dig hur du integrerar AEM Forms Associate-gränssnittet med programmet så att kundansvariga kan generera skräddarsydd interaktiv kommunikation i realtid vid publicering.
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
 hide: true
 hidefromtoc: true
-source-git-commit: bfee883205f81012fea75cbd7dc5fddd7169fdbb
+source-git-commit: b76f6dfe2462cec187d549234e9050f8ca9a8cdf
 workflow-type: tm+mt
-source-wordcount: '905'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
 
 
-# Generera anpassad kommunikation med associerat användargränssnitt
+# Integrera associerat gränssnitt i ditt program
 
 <span> Funktionen för interaktiv kommunikation är tillgänglig i programmet för tidig användning. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.</span>
 
-Associate-gränssnittet kan anropas direkt i Publish-instanser, vilket gör att kundfokuserade proffs som fältassociatörer och tjänsteagenter kan generera personaliserad kommunikation i realtid under kundinteraktioner.
-
-Tabellen nedan visar de olika verkliga scenarierna där Associate UI kan användas för att skicka personaliserade meddelanden till kunder:
-
-| Bransch | Användningsfall |
-|----------|----------|
-| **Finansiella tjänster** | Generera lånebekräftelsebrev, kontoutdrag och riskprofilsammanfattningar i realtid under kundmöten |
-| **Försäkring** | Ta fram ögonblickliga försäkringskort och sammanställningar av skaderegleringsblanketter hos serviceräknare |
-| **Hälsovård** | Skapa sammanfattningar av patientbehandlingsplaner med beräknade lönebelopp och scheman |
-| **Offentlig sektor** | Generera polisverifieringsrapporter, kvitton från allmänheten och sammanfattningar av ärendeuppdateringar på plats |
+I den här artikeln beskrivs hur du integrerar det associerade användargränssnittet med ditt program, vilket gör det möjligt för kundanvändare som fältassociatörer och tjänsteagenter att generera personaliserad interaktiv kommunikation i realtid vid publicering.
 
 ## Förutsättningar
 
@@ -35,19 +26,21 @@ Innan du integrerar det associerade användargränssnittet med ditt program mås
 
 - Interaktiv kommunikation skapad och publicerad
 - Webbläsare med popup-stöd aktiverat
-- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
-- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
+- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
+- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
 
 >[!NOTE]
 >
 >- I den här artikeln visas autentiseringskonfigurationen med SAML 2.0 med [Microsoft Entra ID (Azure AD) som identitetsleverantör](https://learn.microsoft.com/en-us/power-pages/security/authentication/openid-settings).
->- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
+>- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
 
 ### Ytterligare SAML-konfigurationer för associerat användargränssnitt
 
 När du konfigurerar SAML 2.0-autentisering för det associerade användargränssnittet måste du använda följande specifika inställningar i OSGi-konfigurationsfilerna.
 
 #### SAML-autentiseringshanterare
+
+SAML Authentication Handler är en OSGi-fabrikskonfiguration som tillåter flera SAML-konfigurationer för olika resursträd. Detta möjliggör driftsättning av AEM på flera platser och gör att du kan lägga till associerade gränssnittsresurser i din befintliga SAML-konfiguration.
 
 Skapa filen `com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` i `ui.config/src/main/content/jcr_root/apps/<project-name>/osgiconfig/config.publish`:
 
@@ -85,6 +78,8 @@ Skapa filen `com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json
 
 #### Sling Authenticator
 
+Sling-autentiseraren tvingar fram autentisering för åtkomst till associerade gränssnittsresurser vid publicering.
+
 Uppdatera filen `org.apache.sling.engine.impl.auth.SlingAuthenticator~saml.cfg.json` i `ui.config/src/main/content/jcr_root/apps/<project-name>/osgiconfig/config.publish`:
 
 ```json
@@ -95,6 +90,8 @@ Uppdatera filen `org.apache.sling.engine.impl.auth.SlingAuthenticator~saml.cfg.j
 ```
 
 #### Dispatcher Filter
+
+Lägg till följande regler för att se till att Interactive Communications API:er och Associate UI fungerar korrekt på Publish-instansen.
 
 Om den inte redan finns lägger du till följande regler i `dispatcher/src/conf.dispatcher.d/filters/filters.any`-filen:
 
@@ -112,23 +109,248 @@ Om den inte redan finns lägger du till följande regler i `dispatcher/src/conf.
 
 ## Anropa associerat gränssnitt vid publiceringsinstans
 
-Om du vill anropa det associerade användargränssnittet från programmet konfigurerar du Publish instance URL-adressen, förbereder datanyttolasten och använder integrationsfunktionen för att starta det associerade användargränssnittet i ett nytt webbläsarfönster.
+I det här avsnittet får du hjälp med att starta det associerade användargränssnittet från ditt eget program. Följ de här stegen för att komma igång snabbt. Börja med en färdig HTML-sida och konfigurera den sedan för din miljö.
 
-### Steg 1: Konfigurera publiceringsinstansens URL
+### Steg 1: Börja med HTML-exempelsidan
 
-Användargränssnittet för Associate nås via en specifik slutpunkt på din AEM Forms Cloud Service Publish-instans:
+Om du snabbt vill testa och förstå hur integreringen av användargränssnittet i Associate fungerar använder du följande exempelsida i HTML. Kopiera koden till en HTML-fil och öppna den i webbläsaren.
+
+I det här exemplet finns ett enkelt formulärgränssnitt där du kan ange din interaktiva kommunikationsinformation och starta det associerade användargränssnittet med ett enda klick.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Associate UI Integration</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .form-group {
+      margin: 20px 0;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea {
+      height: 80px;
+      font-family: monospace;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn-primary {
+      background: #007bff;
+      color: white;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #0056b3;
+    }
+    .error {
+      color: red;
+      font-size: 12px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Launch Associate UI</h1>
+
+  <form id="form">
+    <div class="form-group">
+      <label>IC ID *</label>
+      <input type="text" id="icId" placeholder="Enter Interactive Communication ID" required>
+    </div>
+
+    <div class="form-group">
+      <label>Prefill Service</label>
+      <input type="text" id="serviceName" placeholder="e.g., CustomerDataService">
+    </div>
+
+    <div class="form-group">
+      <label>Service Parameters (JSON)</label>
+      <textarea id="serviceParams" placeholder='{"customerId": "12345"}'>{}</textarea>
+      <span id="paramsError" class="error">Invalid JSON format</span>
+    </div>
+
+    <div class="form-group">
+      <label>Options (JSON)</label>
+      <textarea id="options" placeholder='{"mode": "edit", "locale": "en_US"}'>{}</textarea>
+      <span id="optionsError" class="error">Invalid JSON format</span>
+    </div>
+
+    <button type="button" onclick="reset()">Reset</button>
+    <button type="button" class="btn-primary" onclick="launch()">Launch Associate UI</button>
+  </form>
+
+  <script>
+    // Replace with your AEM Publish instance URL
+    const AEM_URL = 'https://publish-p{program-id}-e{env-id}.adobeaemcloud.com/libs/fd/associate/ui.html';
+
+    function validateJSON(str, errorId) {
+      const err = document.getElementById(errorId);
+      try {
+        const obj = JSON.parse(str || '{}');
+        err.style.display = 'none';
+        return obj;
+      } catch (e) {
+        err.style.display = 'block';
+        return null;
+      }
+    }
+
+    function launch() {
+      const icId = document.getElementById('icId').value.trim();
+      if (!icId) {
+        alert('IC ID is required');
+        return;
+      }
+
+      const params = validateJSON(document.getElementById('serviceParams').value, 'paramsError');
+      const opts = validateJSON(document.getElementById('options').value, 'optionsError');
+
+      if (!params || !opts) {
+        alert('Please fix JSON errors before launching');
+        return;
+      }
+
+      const data = {
+        id: icId,
+        prefill: {
+          serviceName: document.getElementById('serviceName').value.trim(),
+          serviceParams: params
+        },
+        options: opts
+      };
+
+      const win = window.open(AEM_URL, '_blank');
+      if (!win) {
+        alert('Pop-up blocked. Please enable pop-ups for this site.');
+        return;
+      }
+
+      const handler = (e) => {
+        if (e.data && e.data.type === 'READY' && e.data.source === 'APP') {
+          win.postMessage({ type: 'INIT', source: 'PORTAL', data }, '*');
+          window.removeEventListener('message', handler);
+        }
+      };
+
+      window.addEventListener('message', handler);
+
+      // Fallback timeout in case READY message is missed
+      setTimeout(() => {
+        if (win && !win.closed) {
+          win.postMessage({ type: 'INIT', source: 'PORTAL', data }, '*');
+          window.removeEventListener('message', handler);
+        }
+      }, 1000);
+    }
+
+    function reset() {
+      document.getElementById('form').reset();
+      document.getElementById('serviceParams').value = '{}';
+      document.getElementById('options').value = '{}';
+      document.getElementById('paramsError').style.display = 'none';
+      document.getElementById('optionsError').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
+```
+
+### Steg 2: Konfigurera din URL för publiceringsinstans
+
+Innan du kan starta det associerade användargränssnittet måste du peka exemplet mot AEM Forms Cloud Service Publish-instansen.
+
+I HTML-exemplet ovan hittar du följande rad i avsnittet `<script>`:
 
 ```javascript
 const AEM_URL = 'https://publish-p{program-id}-e{env-id}.adobeaemcloud.com/libs/fd/associate/ui.html';
 ```
 
-Ersätt `{program-id}` och `{env-id}` med dina faktiska miljövärden.
+Ersätt platshållarvärdena med den faktiska miljöinformationen:
+- `{program-id}`: Ditt program-ID för AEM Cloud-tjänsten
+- `{env-id}`: Ditt miljö-ID
 
-Av säkerhetsskäl skickas inte parametrar som Interactive Communication ID, prefill service och service-parametrar via URL:en. I stället skickas dessa parametrar säkert med en JavaScript-funktion som kommunicerar med det associerade användargränssnittet via webbläsarens postMessage-API.
+Om ditt program-ID till exempel är `12345` och miljö-ID är `67890` blir URL:en:
 
-### Steg 2: Förbered datanyttolasten
+```javascript
+const AEM_URL = 'https://publish-p12345`-e67890.adobeaemcloud.com/libs/fd/associate/ui.html';
+```
 
-Strukturera din datanyttolast med följande format:
+>[!NOTE]
+>
+> Av säkerhetsskäl skickas inte parametrar som Interactive Communication ID, prefill service och service-parametrar via URL:en. I stället skickas dessa parametrar säkert med JavaScript `postMessage` API.
+
+### Steg 3: Förstå JavaScript integrationsfunktion
+
+I exemplet på HTML används följande JavaScript-funktion för att starta Associate-gränssnittet. Den här funktionen validerar IC-ID:t, konstruerar datanyttolasten, öppnar det associerade användargränssnittet i ett nytt webbläsarfönster och skickar data med webbläsarens `postMessage`-API.
+
+```javascript
+function launchAssociateUI(icId, prefillService, prefillParams, options) {
+  if (!icId) {
+    console.error('IC ID required');
+    return;
+  }
+
+  const data = {
+    id: icId,
+    prefill: {
+      serviceName: prefillService || '',
+      serviceParams: prefillParams || {}
+    },
+    options: options || {}
+  };
+
+  const AEM_URL = 'https://your-aem.adobeaemcloud.com/libs/fd/associate/ui.html';
+  const win = window.open(AEM_URL, '_blank');
+
+  if (!win) {
+    alert('Please enable pop-ups for this site');
+    return;
+  }
+
+  const readyHandler = (event) => {
+    if (event.data && event.data.type === 'READY' && event.data.source === 'APP') {
+      win.postMessage({ type: 'INIT', source: 'PORTAL', data: data }, '*');
+      window.removeEventListener('message', readyHandler);
+    }
+  };
+
+  window.addEventListener('message', readyHandler);
+
+  // Fallback timeout in case READY message is missed
+  setTimeout(() => {
+    if (win && !win.closed) {
+      win.postMessage({ type: 'INIT', source: 'PORTAL', data: data }, '*');
+      window.removeEventListener('message', readyHandler);
+    }
+  }, 1000);
+}
+```
+
+Funktionen accepterar fyra parametrar: IC-ID (obligatoriskt), namn på förifyllningstjänsten, parametrar för förifyllningstjänsten och ytterligare alternativ. Dessa parametrar är strukturerade i datanyttolasten enligt beskrivningen nedan.
+
+### Steg 4: Förstå datanyttolastens struktur
+
+**Nyttolastformat:**
 
 ```javascript
 const data = {
@@ -146,249 +368,14 @@ const data = {
 | Komponent | Obligatoriskt | Beskrivning |
 |-----------|----------|-------------|
 | `id` | Ja | Identifieraren för den interaktiva kommunikation som ska läsas in |
-| `prefill` | Valfritt | Innehåller tjänstkonfiguration för förifyllning av data. |
+| `prefill` | Valfritt | Innehåller tjänstkonfiguration för förifyllning av data |
 | `prefill.serviceName` | Valfritt | Namn på den formulärdatamodelltjänst som ska anropas för förifyllning av data |
 | `prefill.serviceParams` | Valfritt | Nyckelvärdepar som skickas till förifyllningstjänsten |
-| `options` | Valfritt | Ytterligare egenskaper som stöds för PDF-återgivning - nationella inställningar, includeAttachments, embedFonts, makeAccessible |
+| `options` | Valfritt | Ytterligare egenskaper som stöds för PDF-återgivning - locale, includeAttachments, embedFonts, makeAccessible |
 
-### Steg 3: Implementera integreringsfunktionen
+#### Exempel på datanyttolast
 
-Skapa en JavaScript-funktion som startar Associate-gränssnittet och hanterar meddelandekommunikationen:
-
-```javascript
-function launchAssociateUI(icId, prefillService, prefillParams, options) {
-  if (!icId) {
-    console.error('IC ID required');
-    return;
-  }
-   
-  const data = {
-    id: icId,
-    prefill: {
-      serviceName: prefillService || '',
-      serviceParams: prefillParams || {}
-    },
-    options: options || {}
-  };
-   
-  const AEM_URL = 'https://your-aem.adobeaemcloud.com/libs/fd/associate/ui.html';
-  const win = window.open(AEM_URL, '_blank');
-   
-  if (!win) {
-    alert('Please enable pop-ups for this site');
-    return;
-  }
-   
-  const readyHandler = (event) => {
-    if (event.data && event.data.type === 'READY' && event.data.source === 'APP') {
-      win.postMessage({ type: 'INIT', source: 'PORTAL', data: data }, '*');
-      window.removeEventListener('message', readyHandler);
-    }
-  };
-   
-  window.addEventListener('message', readyHandler);
-   
-  // Fallback timeout in case READY message is missed
-  setTimeout(() => {
-    if (win && !win.closed) {
-      win.postMessage({ type: 'INIT', source: 'PORTAL', data: data }, '*');
-      window.removeEventListener('message', readyHandler);
-    }
-  }, 1000);
-}
-```
-
-### Steg 4: Anropa funktionen
-
-Anropa funktionen med lämpliga parametrar:
-
-```javascript
-// Basic invocation with IC ID only
-launchAssociateUI('12345', '', {}, {});
-
-// With prefill service
-launchAssociateUI('12345', 'IC_FDM', 
-  { customerId: '101'}, {});
-
-// With all parameters
-launchAssociateUI('12345', 'IC_FDM', 
-  { customerId: "101" }, 
-  { locale: 'en', includeAttachments: "true" });
-```
-
-## Testa integrationen med en exempelsida på HTML
-
-Här följer ett enkelt HTML-exempel om du vill se hur användargränssnittet för Associate visas i förgrunden och testa din integrering. På den här exempelsidan kan du ange IC-id:t, konfigurera parametrar för förifyllningstjänsten, ange PDF-alternativ och starta Associate-gränssnittet på din Publish-instans.
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Associate UI Integration</title>
-  <style>
-    body { 
-      font-family: sans-serif; 
-      max-width: 600px; 
-      margin: 50px auto; 
-      padding: 20px; 
-    }
-    .form-group { 
-      margin: 20px 0; 
-    }
-    label { 
-      display: block; 
-      margin-bottom: 5px; 
-      font-weight: bold; 
-    }
-    input, textarea { 
-      width: 100%; 
-      padding: 8px; 
-      border: 1px solid #ccc; 
-      border-radius: 4px; 
-      box-sizing: border-box;
-    }
-    textarea { 
-      height: 80px; 
-      font-family: monospace; 
-    }
-    button { 
-      padding: 10px 20px; 
-      margin: 5px; 
-      cursor: pointer; 
-      border-radius: 4px;
-    }
-    .btn-primary { 
-      background: #007bff; 
-      color: white; 
-      border: none; 
-    }
-    .btn-primary:hover {
-      background: #0056b3;
-    }
-    .error { 
-      color: red; 
-      font-size: 12px; 
-      display: none; 
-    }
-  </style>
-</head>
-<body>
-  <h1>Launch Associate UI</h1>
-  
-  <form id="form">
-    <div class="form-group">
-      <label>IC ID *</label>
-      <input type="text" id="icId" placeholder="Enter Interactive Communication ID" required>
-    </div>
-    
-    <div class="form-group">
-      <label>Prefill Service</label>
-      <input type="text" id="serviceName" placeholder="e.g., CustomerDataService">
-    </div>
-    
-    <div class="form-group">
-      <label>Service Parameters (JSON)</label>
-      <textarea id="serviceParams" placeholder='{"customerId": "12345"}'>{}</textarea>
-      <span id="paramsError" class="error">Invalid JSON format</span>
-    </div>
-    
-    <div class="form-group">
-      <label>Options (JSON)</label>
-      <textarea id="options" placeholder='{"mode": "edit", "locale": "en_US"}'>{}</textarea>
-      <span id="optionsError" class="error">Invalid JSON format</span>
-    </div>
-    
-    <button type="button" onclick="reset()">Reset</button>
-    <button type="button" class="btn-primary" onclick="launch()">Launch Associate UI</button>
-  </form>
-
-  <script>
-    // Replace with your AEM Publish instance URL
-    const AEM_URL = 'https://publish-p{program-id}-e{env-id}.adobeaemcloud.com/libs/fd/associate/ui.html';
-    
-    function validateJSON(str, errorId) {
-      const err = document.getElementById(errorId);
-      try {
-        const obj = JSON.parse(str || '{}');
-        err.style.display = 'none';
-        return obj;
-      } catch (e) {
-        err.style.display = 'block';
-        return null;
-      }
-    }
-    
-    function launch() {
-      const icId = document.getElementById('icId').value.trim();
-      if (!icId) { 
-        alert('IC ID is required'); 
-        return; 
-      }
-      
-      const params = validateJSON(document.getElementById('serviceParams').value, 'paramsError');
-      const opts = validateJSON(document.getElementById('options').value, 'optionsError');
-      
-      if (!params || !opts) { 
-        alert('Please fix JSON errors before launching'); 
-        return; 
-      }
-      
-      const data = {
-        id: icId,
-        prefill: {
-          serviceName: document.getElementById('serviceName').value.trim(),
-          serviceParams: params
-        },
-        options: opts
-      };
-      
-      const win = window.open(AEM_URL, '_blank');
-      if (!win) { 
-        alert('Pop-up blocked. Please enable pop-ups for this site.'); 
-        return; 
-      }
-      
-      const handler = (e) => {
-        if (e.data && e.data.type === 'READY' && e.data.source === 'APP') {
-          win.postMessage({ type: 'INIT', source: 'PORTAL', data }, '*');
-          window.removeEventListener('message', handler);
-        }
-      };
-      
-      window.addEventListener('message', handler);
-      
-      // Fallback timeout in case READY message is missed
-      setTimeout(() => {
-        if (win && !win.closed) {
-          win.postMessage({ type: 'INIT', source: 'PORTAL', data }, '*');
-          window.removeEventListener('message', handler);
-        }
-      }, 1000);
-    }
-    
-    function reset() {
-      document.getElementById('form').reset();
-      document.getElementById('serviceParams').value = '{}';
-      document.getElementById('options').value = '{}';
-      document.getElementById('paramsError').style.display = 'none';
-      document.getElementById('optionsError').style.display = 'none';
-    }
-  </script>
-</body>
-</html>
-```
-
-### Hur exemplet fungerar
-
-1. **IC ID-fält**: Ange identifieraren för interaktiv kommunikation (obligatoriskt)
-2. **Förifyll tjänst**: Ange formulärdatamodellens tjänstnamn för förifyllnad av data
-3. **Tjänsteparametrar**: Ange JSON-objekt med parametrar som ska skickas till förifyllningstjänsten
-4. **Alternativ**: Ange konfigurationsalternativ för PDF, till exempel locale, includeAttachments, embedFonts, makeAccessible
-5. **Startknapp**: Öppnar det associerade användargränssnittet i ett nytt fönster och skickar initieringsdata
-
-## Exempel på datanyttolast
-
-### Minimal nyttolast (endast IC)
+**Minimal nyttolast (endast IC ID)**
 
 Använd detta när inga förifyllda data krävs:
 
@@ -403,7 +390,7 @@ Använd detta när inga förifyllda data krävs:
 }
 ```
 
-### Med förifyllda data
+**Med förifyllda data**
 
 Använd detta för att dynamiskt fylla i konstruktorn med kunddata:
 
@@ -421,7 +408,7 @@ Använd detta för att dynamiskt fylla i konstruktorn med kunddata:
 }
 ```
 
-### Med konfiguration av alternativ
+**Med PDF renderingsalternativ**
 
 Använd detta för att ange ytterligare återgivningsalternativ:
 
@@ -436,14 +423,36 @@ Använd detta för att ange ytterligare återgivningsalternativ:
     }
   },
   "options": { 
-      locale: "en_US",
-      includeAttachments: "true",
-      webOptimized: "false",
-      embedFonts: "false",
-      makeAccessible: "false"
+      "locale": "en_US",
+      "includeAttachments": "true",
+      "webOptimized": "false",
+      "embedFonts": "false",
+      "makeAccessible": "false"
   }
 }
 ```
+
+### Steg 5: Ange IC-id:t och starta det associerade användargränssnittet
+
+Nu kan du starta Associate-gränssnittet med exempelsidan för HTML:
+
+1. **Ange IC-ID:t**: I fältet **IC-ID** anger du identifieraren för den publicerade interaktiva kommunikationen. Detta är det enda obligatoriska fältet.
+
+2. **Konfigurera förifyllningstjänst** (valfritt): Om du vill förifylla IC med dynamiska data anger du tjänstnamnet för formulärdatamodellen i fältet **Förifyll tjänst**. Använd till exempel `FdmTestData` för exempeldata eller `IC-FDM` för testdata.
+
+3. **Lägg till tjänstparametrar** (valfritt): I fältet **Tjänstparametrar (JSON)** anger du ett JSON-objekt med de parametrar som din förifyllningstjänst kräver. Till exempel:
+
+   ```json
+   {"customerId": "101", "accountNumber": "ACC-98765"}
+   ```
+
+4. **Ange PDF-alternativ** (valfritt): Konfigurera återgivningsalternativ som språkområde, bilagor eller hjälpmedelsinställningar i fältet **Alternativ (JSON)**.
+
+5. **Klicka på Starta associerat gränssnitt**: Klicka på knappen **Starta associerat gränssnitt**. Ett nytt webbläsarfönster öppnas med Associate-gränssnittet, som är förinläst med din interaktiva kommunikation.
+
+>[!NOTE]
+>
+> Om fönstret inte öppnas kontrollerar du att webbläsaren tillåter popup-fönster för den här platsen.
 
 ## Felsökning
 
