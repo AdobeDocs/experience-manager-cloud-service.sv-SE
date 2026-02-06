@@ -2,9 +2,10 @@
 title: Cachehantering i dynamiska media med öppna API:er
 description: Cachehantering i dynamiska media med öppna API:er
 role: User
-source-git-commit: 89f21f96a741acbd6458c3777227548fbc89e525
+exl-id: 203a5291-edb5-4900-8b0a-32e1ebae5395
+source-git-commit: 8c9e59108d28ee02a4609c58bf7a2543783f47e2
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -17,7 +18,7 @@ Långvarig cachelagring i Dynamic Media med Open API:er består av [Cachelagring
 
 ## Cachelagring av CDN-lager {#cdn-layer-caching}
 
-Resursleveranssvar cachelagras på [Adobe Managed CDN](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn#aem-managed-cdn) under en utökad period för att maximera prestanda och minimera inläsningen på ursprungsläget. Denna cachning hanteras helt av Adobe för att säkerställa en konsekvent högklassig upplevelse för slutanvändarna. Cachevaraktigheten är avsiktligt optimerad för prestanda och kan inte anpassas av användare för att bibehålla tillförlitligheten och en effektiv innehållsleverans över alla kunder.
+Resursleveranssvar cachelagras på [Adobe Managed CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn#aem-managed-cdn) under en utökad period för att maximera prestanda och minimera inläsningen på ursprungsläget. Denna cachning hanteras helt av Adobe för att säkerställa en konsekvent högklassig upplevelse för slutanvändarna. Cachevaraktigheten är avsiktligt optimerad för prestanda och kan inte anpassas av användare för att bibehålla tillförlitligheten och en effektiv innehållsleverans över alla kunder.
 
 Alla leverans-URL:er cachas vid kanten (snabbt) under en längre tid för att säkerställa optimala prestanda. De cachelagrade leveransobjekten innehåller statiska återgivningar, videoklipp, ursprungliga bildbinärfiler och dynamiskt omformade bilder, t.ex. storleksändrade eller omformade resurser som genererats via URL-parametrar. <!--The CDN is designed to serve these assets directly from the cache without revalidating them, unless an explicit purge is performed.-->
 
@@ -27,7 +28,7 @@ Resursleveranssvaren innehåller ett `Cache-Control`-huvud med standardvärdet `
 
 ### Anpassa kontrollrubriker för cache {#customizing-cache-control-headers}
 
-Om du ökar cachetiden till livevärden utöver standardkonfigurationen ökar sannolikheten för att gammalt innehåll skickas, vilket kan fördröja synligheten för innehållsuppdateringar i slutanvändarens upplevelse. Om du behöver ändra cachekontrollens beteende för ditt specifika användningsfall kan du konfigurera anpassade CDN-regler för att justera svarshuvuden. På så sätt kan du ange olika varaktigheter för cachen beroende på dina behov. Se [AEM anpassade CDN-regler för svarshuvuden](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic).
+Om du ökar cachetiden till livevärden utöver standardkonfigurationen ökar sannolikheten för att gammalt innehåll skickas, vilket kan fördröja synligheten för innehållsuppdateringar i slutanvändarens upplevelse. Om du behöver ändra cachekontrollens beteende för ditt specifika användningsfall kan du konfigurera anpassade CDN-regler för att justera svarshuvuden. På så sätt kan du ange olika varaktigheter för cachen beroende på dina behov. Se [AEM anpassade CDN-regler för svarshuvuden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic).
 
 ```
 responseTransformations:
@@ -53,7 +54,7 @@ När en resurs uppdateras, tas bort eller ändras (alla metadataändringar) blir
 
 ### Manuell cachetömning {#manual-cache-purging}
 
-Om du behöver rensa cachelagrat innehåll manuellt kan du göra det med AEM cacheminnet. Detaljerade instruktioner om hur du rensar specifika cacheURL:er finns i [AEM CDN Cache Invalidation](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-cache-purge#single-purge).
+Om du behöver rensa cachelagrat innehåll manuellt kan du göra det med AEM cacheminnet. Detaljerade instruktioner om hur du rensar specifika cacheURL:er finns i [AEM CDN Cache Invalidation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-cache-purge#single-purge).
 
 ## Frågor och svar{#faq-cache-management}
 
@@ -101,7 +102,7 @@ Den förlängda cachningen med händelsestyrd aktiv cachedvalidering kan använd
 
 +++ **Kan jag välja bort långvarig cachelagring för min databas?**
 
-Du kan kontakta [Adobe Support](https://helpx.adobe.com/in/contact.html) och förklara varför, så kommer Adobe att kontakta dig för diskussion.
+Om du vill avanmäla dig från förlängd cachelagring kontaktar du [Adobe Support](https://helpx.adobe.com/in/contact.html) och anger en logisk grund för din begäran.
 
 +++
 
