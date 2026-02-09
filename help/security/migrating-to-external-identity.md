@@ -787,6 +787,6 @@ Innan du distribuerar migreringsservrar till produktion:
 ## Ytterligare resurser {#additional-resources}
 
 * [Användar- och gruppsynkronisering för publiceringsnivå](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
-* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html)
+* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html?lang=sv-SE)
 * [Extern identitetsleverantör](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)
 * [Dynamiskt gruppmedlemskap](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)
