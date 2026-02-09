@@ -4,7 +4,7 @@ description: Teknisk guide för migrering av lokala användare och grupper till 
 solution: Experience Manager Sites
 feature: Security
 role: Developer, Admin
-source-git-commit: bb4b60523f60b1285c5f2fd2e49f6cc8cff24324
+source-git-commit: 1f8bd9eea249e0b2242f3fbe1490b3d51052f546
 workflow-type: tm+mt
 source-wordcount: '2232'
 ht-degree: 0%
@@ -576,14 +576,14 @@ curl -X POST "http://localhost:4503/bin/migration/step3?groupPath=/home/groups/c
 
 ### Checklista före migrering {#pre-migration-checklist}
 
-* [ ] **Konfigurera tjänstanvändare**: Skapa och konfigurera tjänstanvändaren (till exempel `group-provisioner`) med rätt behörigheter
-* [ ] **Verifiera ExternalPrincipal Configuration**: Kontrollera att tjänstanvändaren har konfigurerats att kringgå skyddet på `rep:externalId` och `rep:externalPrincipalNames`
-* [ ] **Testa tjänstens användarbehörigheter**: Verifiera att tjänstanvändaren kan ange externa identitetsegenskaper under utvecklingen
-* [ ] Identifiera all anpassad kod som skapar användare eller grupper
-* [ ] Granska och uppdatera anpassad kod för att använda en extern identitetsmodell
-* [ ] Testa uppdaterad kod i utvecklingsmiljön
-* [ ] Inventera alla befintliga lokala användare och grupper att migrera
-* [ ] Testa migreringsprocessen i lägre miljöer
+* **Konfigurera tjänstanvändare**: Skapa och konfigurera tjänstanvändaren (till exempel `group-provisioner`) med rätt behörigheter
+* **Verifiera ExternalPrincipal Configuration**: Kontrollera att tjänstanvändaren är konfigurerad att kringgå skyddet på `rep:externalId` och `rep:externalPrincipalNames`
+* **Testa tjänstens användarbehörigheter**: Verifiera att tjänstanvändaren kan ange externa identitetsegenskaper under utvecklingen
+* Identifiera all anpassad kod som skapar användare eller grupper
+* Granska och uppdatera anpassad kod för att använda en extern identitetsmodell
+* Testa uppdaterad kod i utvecklingsmiljön
+* Inventera alla befintliga lokala användare och grupper att migrera
+* Testa migreringsprocessen i lägre miljöer
 
 ### Körningssteg {#execution-steps}
 
@@ -773,12 +773,12 @@ Som ett extra säkerhetslager kan du konfigurera CDN-regler för att begränsa �
 
 Innan du distribuerar migreringsservrar till produktion:
 
-* [ ] Skapa IMS-integrering i AEM Developer Console
-* [ ] Konfigurera servlets för att verifiera det tekniska konto-ID:t
-* [ ] Testa autentiseringsflödet i utvecklings-/mellanlagringsmiljöer
-* [ ] Överväg ytterligare IP-baserade begränsningar på CDN-nivå
-* [ ] planerar att inaktivera eller ta bort migreringsservrar när migreringen är klar
-* [ ] Granska och logga all åtkomst till migreringsslutpunkter
+* Skapa IMS-integrering i AEM Developer Console
+* Konfigurera servlets för att validera det tekniska konto-ID:t
+* Testa autentiseringsflödet i utvecklings-/stagningsmiljöer
+* Överväg ytterligare IP-baserade begränsningar på CDN-nivå
+* Planera att inaktivera eller ta bort migreringsservrar när migreringen är klar
+* Granska och logga all åtkomst till migreringsslutpunkter
 
 >[!IMPORTANT]
 >
@@ -787,6 +787,6 @@ Innan du distribuerar migreringsservrar till produktion:
 ## Ytterligare resurser {#additional-resources}
 
 * [Användar- och gruppsynkronisering för publiceringsnivå](/help/sites-cloud/authoring/personalization/user-and-group-sync-for-publish-tier.md)
-* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html?lang=sv-SE)
+* [SAML 2.0-autentiseringshanterare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html)
 * [Extern identitetsleverantör](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html)
 * [Dynamiskt gruppmedlemskap](https://jackrabbit.apache.org/oak/docs/security/authentication/external/dynamic.html)
