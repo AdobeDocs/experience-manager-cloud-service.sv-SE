@@ -5,9 +5,9 @@ exl-id: a991e710-a974-419f-8709-ad86c333dbf8
 solution: Experience Manager Sites
 feature: Authoring, Personalization
 role: User
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 3cc787fe9a0be9a687f7c20744d93f1df4b76f87
 workflow-type: tm+mt
-source-wordcount: '1343'
+source-wordcount: '1487'
 ht-degree: 0%
 
 ---
@@ -26,15 +26,15 @@ Webbprogram har ofta funktioner för kontohantering så att slutanvändarna kan 
 
 ## Registrering {#registration}
 
-När en slutanvändare registrerar sig för ett konto i ett AEM program skapas ett användarkonto på den AEM Publish-tjänsten, vilket återspeglas på en användarresurs under `/home/users` i JCR-databasen.
+När en slutanvändare registrerar sig för ett konto i ett AEM-program skapas ett användarkonto i tjänsten AEM Publish, vilket återspeglas på en användarresurs under `/home/users` i JCR-databasen.
 
 Det finns två sätt att genomföra registreringen, som beskrivs nedan.
 
-### AEM hanterad {#aem-managed-registration}
+### AEM Managed {#aem-managed-registration}
 
-Du kan skriva en egen registreringskod som innehåller användarens användarnamn och lösenord och som skapar en användarpost i AEM som sedan kan användas för att autentisera mot vid inloggning. Följande steg används vanligtvis för att konstruera den här registreringsmekanismen:
+Du kan skriva en egen registreringskod som tar, minimalt, användarens användarnamn och lösenord och skapar en användarpost i AEM som sedan kan användas för autentisering vid inloggning. Följande steg används vanligtvis för att konstruera den här registreringsmekanismen:
 
-1. Visa en anpassad AEM som samlar in registreringsinformation
+1. Visa en anpassad AEM-komponent som samlar in registreringsinformation
 1. Vid inlämningen används en korrekt etablerad tjänstanvändare för
    1. Verifiera att en befintlig användare inte redan finns, med hjälp av någon av `findAuthorizables()`-metoderna i UserManager API
    1. Skapa en användarpost med en av UserManager API:ns `createUser()`-metoder
@@ -48,22 +48,22 @@ en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ### Extern {#external-managed-registration}
 
-I vissa fall har registrering eller skapande av användare tidigare skett i infrastruktur utanför AEM. I så fall skapas användarposten i AEM under inloggningen.
+I vissa fall har registrering eller skapande av användare tidigare skett i en infrastruktur utanför AEM. I så fall skapas användarposten i AEM under inloggningen.
 
 ## Inloggning {#login}
 
-När en slutanvändare har registrerats på AEM Publish-tjänst kan dessa användare logga in för att få autentiserad åtkomst (med hjälp av AEM autentiseringsmekanismer) och beständiga, användarspecifika data som profildata.
+När en slutanvändare har registrerats i tjänsten AEM Publish kan dessa användare logga in för att få autentiserad åtkomst (med hjälp av AEM autentiseringsmekanismer) och beständiga, användarspecifika data som profildata.
 
 ## Implementering {#implementation}
 
 Inloggning kan implementeras med följande två metoder:
 
-### AEM hanterad {#aem-managed-implementation}
+### AEM Managed {#aem-managed-implementation}
 
 Kunderna kan skriva egna komponenter. Om du vill veta mer kan du kanske börja lära dig mer om:
 
 * [Sling Authentication Framework](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html)
-* Och överväg att [fråga den AEM communityexpertsessionen](https://bit.ly/ATACEFeb15) om inloggning.
+* Och överväg att [fråga AEM Community Experts-sessionen](https://bit.ly/ATACEFeb15) om inloggning.
 
 **Förutsättning:**
 
@@ -80,19 +80,19 @@ Kunder kan använda SAML-baserad autentisering via SAML IdP. När en IdP använd
 
 >[!NOTE]
 >
->Endast den initiala autentiseringen av användarens autentiseringsuppgifter autentiseras av IdP:en och efterföljande begäranden till AEM utförs med en cookie för AEM inloggningstoken, så länge cookien är tillgänglig.
+>Endast den initiala autentiseringen av användarens inloggningsuppgifter autentiseras av IdP, och efterföljande förfrågningar till AEM utförs med en cookie för AEM-inloggningstoken, så länge cookien är tillgänglig.
 
-Mer information om autentiseringshanteraren [SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html?lang=sv-SE) finns i dokumentationen.
+Mer information om autentiseringshanteraren [SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html) finns i dokumentationen.
 
 **OAuth/SSO**
 
-Mer information om hur du AEM SSO-autentiseringshanterartjänsten finns i [dokumentationen för enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=sv-SE).
+Mer information om hur du använder AEM SSO-autentiseringshanterartjänst finns i [dokumentationen för enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html).
 
 Gränssnittet `com.adobe.granite.auth.oauth.provider` kan implementeras med valfri OAuth-provider.
 
 **Förutsättning:**
 
-Det bästa sättet är att alltid förlita sig på idP (Identity Provider) som en enda sanning när användarspecifika data lagras. Om den ytterligare användarinformationen lagras i den lokala databasen, som inte är en del av idP, ska du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupport som anger rätt program och miljöer. Förutom [datasynkronisering](#data-synchronization-data-synchronization), när det gäller SAML-autentiseringsprovidern, kontrollerar du att [dynamiskt gruppmedlemskap](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) är aktiverat.
+Det bästa sättet är att alltid förlita sig på idP (Identity Provider) som en enda sanning när användarspecifika data lagras. Om den ytterligare användarinformationen lagras i den lokala databasen, som inte är en del av idP, ska du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupport som anger rätt program och miljöer. Förutom [datasynkronisering](#data-synchronization-data-synchronization), när det gäller SAML-autentiseringsprovidern, kontrollerar du att [dynamiskt gruppmedlemskap](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) är aktiverat.
 
 ### Anteckningssessioner och inkapslade token {#sticky-sessions-and-encapsulated-tokens}
 
@@ -104,12 +104,12 @@ Om du vill utnyttja den inkapslade tokenfunktionen skickar du en begäran till k
 
 Det finns olika sätt att se på beständiga data, beroende på vilken typ av data det gäller.
 
-### AEM {#aem-repository}
+### AEM Repository {#aem-repository}
 
 Information om användarprofiler kan skrivas och läsas på två sätt:
 
 * Användning på serversidan med gränssnittet `com.adobe.granite.security.user` UserPropertiesManager, som placerar data under användarens nod i `/home/users`. Se till att sidor som är unika per användare inte cachelagras.
-* Klientsidan använder ContextHub, vilket beskrivs i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html?lang=sv-SE#personalization).
+* Klientsidan använder ContextHub, vilket beskrivs i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html#personalization).
 
 **Förutsättning:**
 
@@ -118,9 +118,9 @@ en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ### Datalager från tredje part {#third-party-data-stores}
 
-Slutanvändardata kan skickas till tredjepartsleverantörer som CRM och hämtas via API:er när användaren loggar in på AEM och sparas (eller uppdateras) på AEM profilnod, och användas av AEM efter behov.
+Slutanvändardata kan skickas till tredjepartsleverantörer som CRM och hämtas via API:er när användaren loggar in på AEM och sparas (eller uppdateras) på AEM-användarens profilnod, och användas av AEM efter behov.
 
-Det är möjligt att få åtkomst i realtid till tredjepartstjänster för att hämta profilattribut, men det är viktigt att se till att detta inte påverkar behandlingen av förfrågningar i AEM.
+Tillgång till tredjepartstjänster i realtid för att hämta profilattribut är möjlig, men det är viktigt att se till att detta inte i väsentlig grad påverkar behandlingen av förfrågningar i AEM.
 
 **Förutsättning:**
 
@@ -129,7 +129,7 @@ en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 
-Åtkomstprinciper på Publish-nivå, som även kallas för stängda användargrupper, definieras i AEM författare, se [Skapa en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=sv-SE#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du de CUG-grupper som behövs med hjälp av AEM författare, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
+Åtkomstprinciper på publiceringsnivå, som även kallas för stängda användargrupper, definieras i AEM-författaren, se [Skapa en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du användargränssnitten efter behov med hjälp av AEM-författaren, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
 
 * Om användare loggar in genom att autentisera med en identitetsleverantör (IdP) med SAML, identifierar autentiseringshanteraren användarens gruppmedlemskap (som ska matcha användargrupperna på publiceringsnivån) och behåller kopplingen mellan användaren och gruppen via en databaspost
 * Om inloggning sker utan IdP-integrering kan anpassad kod använda samma databasstrukturrelationer.
@@ -140,7 +140,7 @@ Oberoende av inloggning kan den anpassade koden också innehålla och hantera en
 
 Slutanvändarna på webbplatsen förväntar sig en enhetlig upplevelse på alla webbsidesförfrågningar eller till och med när de loggar in i en annan webbläsare, även om de inte känner till dem, kommer de till olika servernoder i infrastrukturen på publiceringsnivån. AEM as a Cloud Service uppnår detta genom att snabbt synkronisera mapphierarkin `/home` (användarprofilinformation, gruppmedlemskap och så vidare) över alla noder i publiceringsnivån.
 
-Till skillnad från andra AEM använder synkronisering av användare och gruppmedlemskap i AEM as a Cloud Service inte en metod för att skicka meddelanden från punkt till punkt, utan implementerar i stället en strategi för att publicera prenumerationer som inte kräver någon kundkonfiguration.
+Till skillnad från andra AEM-lösningar använder synkronisering av användare och grupper i AEM as a Cloud Service inte en metod för att peka-till-peka-meddelanden, utan implementerar i stället en strategi för att publicera-prenumerera som inte kräver någon kundkonfiguration.
 
 >[!NOTE]
 >
@@ -149,6 +149,22 @@ Till skillnad från andra AEM använder synkronisering av användare och gruppme
 >[!IMPORTANT]
 >
 >Testa implementeringen i stor skala innan du aktiverar datasynkronisering i produktionsmiljön. Beroende på användningsfallet och de data som bevaras kan det uppstå vissa problem med konsekvens och fördröjning.
+
+### Krav för anpassad kod och migrering {#custom-code-and-migration-requirements}
+
+Följande krav gäller endast om anpassad kod används för att skapa lokala användare eller lokala grupper. När Datasynkronisering är aktiverat måste sådan anpassad kod uppdateras för att skapa externa användare och externa grupper med dynamiskt gruppmedlemskap.
+
+**Nödvändiga steg:**
+
+* **Ändringar av anpassad kod**: Alla egna logiska funktioner som är ansvariga för att skapa användare eller grupper måste uppdateras till:
+
+   * Skapa externa användare genom att ange egenskapen `rep:externalId`
+   * Skapa externa grupper genom att ange egenskapen `rep:externalId`
+   * Implementera dynamiskt gruppmedlemskap med egenskapen `rep:externalPrincipalNames` i stället för att använda direkta relationer mellan användare och grupper
+
+* **Migrering av befintliga data**: Alla befintliga lokala användare och grupper måste migreras till den externa identitetsmodellen innan Datasynkronisering aktiveras i produktionsmiljöer.
+
+Detaljerad teknisk vägledning om hur du uppdaterar anpassade implementeringar och migrerar befintliga användare och grupper finns i [Migrera till extern identitet och dynamiskt gruppmedlemskap](/help/security/migrating-to-external-identity.md).
 
 ## Cacheöverväganden {#cache-considerations}
 
