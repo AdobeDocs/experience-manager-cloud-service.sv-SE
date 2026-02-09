@@ -4,9 +4,9 @@ description: Lär dig att underlätta kommunikationen mellan en tredjepartsserve
 exl-id: 20deaf8f-328e-4cbf-ac68-0a6dd4ebf0c9
 feature: Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 886c87b2408776e6ea877d835c81e574e5000acd
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2229'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Flödet server-till-server beskrivs nedan tillsammans med ett förenklat utveckl
 
 >[!NOTE]
 >
->In addition to this documentation, you can also consult the tutorials on [Token-based authentication for AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE#authentication) and [Getting a Login Token for Integrations](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-getting-login-token-integrations.html). -->
+>In addition to this documentation, you can also consult the tutorials on [Token-based authentication for AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html#authentication) and [Getting a Login Token for Integrations](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-getting-login-token-integrations.html). -->
 
 ## Server-till-server-flödet {#the-server-to-server-flow}
 
@@ -224,7 +224,6 @@ Så här uppnår du det här uppdateringstillägget:
 
 * När du har tryckt på knappen genereras en uppsättning autentiseringsuppgifter som innehåller ett nytt certifikat. Installera de nya autentiseringsuppgifterna på en server utanför AEM och kontrollera att anslutningen fungerar som förväntat, utan att ta bort de gamla autentiseringsuppgifterna.
 * Kontrollera att de nya autentiseringsuppgifterna används i stället för de gamla när du genererar åtkomsttoken.
-* Du kan också återkalla (och sedan ta bort) det tidigare certifikatet så att det inte längre kan användas för autentisering med AEM as a Cloud Service.
 
 ## Återkallande av autentiseringsuppgifter {#credentials-revocation}
 
@@ -252,3 +251,15 @@ Om den privata nyckeln komprometteras måste du skapa autentiseringsuppgifter me
    ![Återkalla certifikatbekräftelse](/help/implementing/developing/introduction/assets/s2s-revokecertificateconfirmation.png)
 
 1. Slutligen tar du bort det skadade certifikatet.
+
+### Anmärkning om återkallande av enskilda certifikat {#note-on-recovacting-individual-certificates}
+
+För JWT-handskakningen (som används för att hämta en innehavartoken) behöver du bara vara nöjd:
+
+1. Du har den privata nyckeln
+1. Det finns ett eller flera aktiva certifikat under respektive privata nyckel i Developer Console
+1. Under hämtningen av token (JWT-handskakning) kontrollerar IMS att JWT-signaturen matchar alla bundna och aktiva (inte utgångna) certifikat som finns registrerade i vårt system, som du kan se i konsolen.
+
+Om du lägger till ett nytt certifikat under en PK kan det verka som att återkallade certifikat fortfarande kan användas. I själva verket är alla certifikat under en PK likvärdiga. Om någon av dem är aktiv betraktas alla som aktiva.
+
+Om du anser att detta är ett säkerhetsproblem bör du skapa en separat privat nyckel och återkalla alla certifikat på den gamla privata nyckeln.
