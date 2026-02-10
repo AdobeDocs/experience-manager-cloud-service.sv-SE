@@ -5,9 +5,9 @@ exl-id: a059627b-df12-454d-9e2c-cc56986b7de6
 keywords: koppla samman AEM-blanketter med automatiserad strömhantering, automatiserad strömhantering AEM Forms, integrera automatiserad strömhantering till adaptiva Forms, skicka data från adaptiva Forms till Power Automate
 feature: Adaptive Forms, Foundation Components, Core Components, Edge Delivery Services
 role: Admin, User, Developer
-source-git-commit: 03f92d950744e653e4ef509bac3c3b4709477e41
+source-git-commit: 64b6ce166baa892fcddd13c2e9c8b5e7e0053815
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1509'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/forms-microsoft-power-automate-integration) |
 | AEM as a Cloud Service | Den här artikeln |
 
 <span class="preview"> Om du använder GovCloud och behöver ansluta till en GCC-klientorganisation (Government Cloud Computing) skickar du ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst via tidig Adobe-program. </span>
@@ -140,6 +140,14 @@ Klicka på `Add permissions` om du vill spara behörigheterna.
 1. På sidan Publicera väljer du **[!UICONTROL All Configurations]** och sedan **[!UICONTROL Publish]**. Publicera både Power Automate Dataverse och Power Automate Flow Service Cloud-konfigurationer.
 
 Din instans av Forms as a Cloud Service är nu ansluten till Microsoft® Power Automate. Nu kan du skicka adaptiva Forms-data till ett Power Automate-flöde.
+
+>[!IMPORTANT]
+>
+>Token som används för Microsoft® Power Automate-anslutningen upphör att gälla efter 90 dagar.
+>
+> Om du vill att integreringen ska fungera, autentiseras och publiceras på nytt, både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service, innan eller när token upphör att gälla, ska du följa de steg som beskrivs i [Publicera både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service Cloud-konfigurationer](#publish-microsoft-power-automate-dataverse-cloud-configuration).
+>
+> Mer information om principer för token-livstid finns i [Microsoft Entra-dokumentationen om konfigurerbara token-livstider](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens). Om token inte förnyas kan det hända att formulärinskickning till Power Automate misslyckas.
 
 ## Skicka data till ett Power Automate-flöde med Anropa en Microsoft® Power Automate-åtgärd {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 

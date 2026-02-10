@@ -5,9 +5,9 @@ feature: Adaptive Forms, Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 6fd38e9e-435e-415f-83f6-3be177738c00
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 64b6ce166baa892fcddd13c2e9c8b5e7e0053815
 workflow-type: tm+mt
-source-wordcount: '6448'
+source-wordcount: '6481'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
+> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/creating-adaptive-form-core-components.md) eller [lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter.
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM as a Cloud Service (Foundation Components) | Den här artikeln |
 | AEM as a Cloud Service (kärnkomponenter) | [Klicka här](/help/forms/rule-editor-core-components.md) |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/rule-editor.html) |
 
 ## Ökning {#overview}
 
@@ -137,7 +137,7 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
-![Rensa värdet för &#x200B;](assets/clearvalueof1.png)
+![Rensa värdet för ](assets/clearvalueof1.png)
 
 **[!UICONTROL Hide]** Döljer det angivna objektet.
 
@@ -436,7 +436,7 @@ Så här skriver du regler:
 
    ![write-rules-visual-editor-2](assets/write-rules-visual-editor-2.png)
 
-   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen **&#x200B;**- respektive **&#x200B;**-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
+   I alternativknappen Marital status tilldelas **[!UICONTROL Married]**- och **[!UICONTROL Single]**-alternativen ****- respektive ****-värden. Du kan verifiera tilldelade värden på fliken Titel i dialogrutan Redigera som visas nedan.
 
    ![Värden för alternativknappar från regelredigeraren](assets/radio-button-values.png)
 
@@ -538,7 +538,7 @@ Så här skriver du regler:
 
 Users added to the forms-power-users group can use code editor. The rule editor auto generates the JavaScript code for any rule you create using visual editor. You can switch from visual editor to the code editor to view the generated code. However, if you modify the rule code in the code editor, you cannot switch back to the visual editor. If you prefer writing rules in code editor rather than visual editor, you can write rules afresh in the code editor. The visual-code editors switcher helps you switch between the two modes.
 
-The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/se/experience-manager/6-5/forms/javascript-api/index.html).
+The code editor JavaScript is the expression language of Adaptive Forms. All the expressions are valid JavaScript expressions and use Adaptive Forms scripting model APIs. These expressions return values of certain types. For the complete list of Adaptive Forms classes, events, objects, and public APIs, see [JavaScript Library API reference for Adaptive Forms](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 For more information about guidelines to write rules in the code editor, see [Adaptive Form Expressions](adaptive-form-expressions.md).
 
@@ -556,6 +556,10 @@ While writing JavaScript code in the rule editor, the following visual cues help
 -->
 
 #### Anpassade funktioner i regelredigeraren {#custom-functions}
+
+>[!NOTE]
+>
+> Anpassade funktioner måste vara kompatibla med ECMAScript 5 (ES5). Foundation Forms har endast stöd för ES5. Användning av nyare ECMAScript-versioner (ES6 och senare) stöds inte och kan leda till fel eller oväntade beteenden.
 
 Förutom användningsklara funktioner som *Summan av* som listas under Funktioner Output, kan du skriva anpassade funktioner som du ofta behöver. Kontrollera att den funktion du skriver åtföljs av `jsdoc` ovan.
 
@@ -642,7 +646,7 @@ Du kan t.ex. lägga till en egen funktion som beräknar en kvadratyta. Sidlängd
 
 Så här skapar du ett klientbibliotek och lägger till det i CRX-databasen:
 
-1. Skapa ett klientbibliotek. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html?lang=sv-SE#developing).
+1. Skapa ett klientbibliotek. Mer information finns i [Använda klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/full-stack/clientlibs.html#developing).
 1. I CRXDE lägger du till egenskapen `categories` med strängtypsvärdet `customfunction` i mappen `clientlib`.
 
    >[!NOTE]
