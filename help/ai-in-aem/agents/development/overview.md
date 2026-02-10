@@ -31,7 +31,7 @@ För närvarande kan agenten hämta pipeline-status och hjälpa dig att felsöka
 
 Om du vill få åtkomst till den här agenten kan du läsa [versionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs) för instruktioner om hur du registrerar dig i betaprogrammet och se till att du är intresserad av utvecklingsagenten. Du kan även skicka feedback specifikt för utvecklingsagenten via e-post till [aem-devagent@adobe.com](mailto:aem-devagent@adobe.com).
 
-[Följ en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
+[Följ en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
 
 ## Gå till utvecklingsagenten via Cloud Manager {#how-to-access-the-agent}
 
