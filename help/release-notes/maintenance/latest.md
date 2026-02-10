@@ -4,9 +4,9 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: f01a98604e045c48ab7167122aee3b2468db6d52
+source-git-commit: 18f270e92bcf41b45946491dbbbde306c2352416
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 24288, som offentliggjordes den 4 februari 2026. Den tidigare underhållsversionen var version 23963.
 
-Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2026.2.0 innehåller alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 >[!NOTE]
 >
@@ -91,11 +91,11 @@ Funktionsaktiveringen i 2026.2.0 kommer att innehålla alla funktioner som finns
 * GUIDES-37837: När du försöker spara ett ämne eller en karta kan det hända att åtgärden misslyckas med ett fel av typen Det gick inte att spara, särskilt under intensiva resurshanteringsuppgifter eller översättningsarbetsflöden som körs i bakgrunden.
 * GUIDES-27774: Rapporten med den brutna listan innehåller felaktiga externa länkar, giltiga `keyrefs` och nyckelord som är korrekt lösta inom den aktuella kartans omfång.
 
-Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Mer information om de nya och förbättrade funktionerna och problemen som har åtgärdats i den här versionen finns i [Experience Manager Guides-lanseringens färdplan](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ### Kända fel {#known-issues-24288}
 
-Ingen.
+* SITES-40408: GraphQL-slutpunkten returnerar 404 på grund av anpassade omskrivningsregler för dispatcher.
 
 ### Föråldrade funktioner och API:er {#deprecated-24288}
 
@@ -123,8 +123,8 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.90.0 | [Oak 1.90.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.90.0/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.2 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
