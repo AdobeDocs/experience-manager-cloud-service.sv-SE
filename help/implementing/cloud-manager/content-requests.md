@@ -5,9 +5,9 @@ exl-id: 3666328a-79a7-4dd7-b952-38bb60f0967d
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 7bf48596f64dd9682fa2fb3e5d5db513a8a7fbdc
+source-git-commit: 4ddf90277a24e3ec30ebdd8a9c09b69f80825655
 workflow-type: tm+mt
-source-wordcount: '2054'
+source-wordcount: '2084'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Innehållsbegäranden mäts oavsett om svaret har skickats från CDN-cachen elle
 
 <!-- REMOVED AS PER EMAIL REQUEST FROM SHWETA DUA, JULY 30, 2024 TO RICK BROUGH AND ALEXANDRU SARCHIZ   For customers employing their own CDN, client-side collection offers a more precise reflection of interactions, ensuring a reliable measure of website engagement via the [Real Use Monitoring](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md) service. This gives customers advanced insights into their page traffic and performance. While it is beneficial for all customers, it offers a representative reflection of user interactions, ensuring a reliable measure of website engagement by capturing the number of page views from the client side. 
 
-For customers that bring their own CDN on top of AEM as a Cloud Service, server-side reporting results in numbers that cannot be used to compare with the licensed content requests. With the [Real Use Monitoring](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md), Adobe can reflect a reliable measure of website engagement. -->
+For customers that bring their own CDN on top of AEM as a Cloud Service, server-side reporting results in numbers that cannot be used to compare with the licensed content requests. With the [Real Use Monitoring](/help/sites-cloud/administering/real-use-monitoring-for-aem-as-a-cloud-service.md), Adobe can reflect a reliable measure of website  engagement. -->
 
 ### Olika typer av förfrågningar om Cloud Service-innehåll {#content-requests-variances}
 
@@ -97,9 +97,9 @@ Se även [License Dashboard](/help/implementing/cloud-manager/license-dashboard.
 | URL till kunder som vill övervaka sina Cloud Service-program | Exkluderad | Adobe rekommenderar att du använder URL:en för att övervaka tillgänglighets- eller hälsokontrollen externt.<br><br>`/system/probes/health` |
 | AEM as a Cloud Service Pod Warm-up Service | Exkluderad | Agent: skyline-service-warmup/1.* |
 | Välkända sökmotorer, sociala nätverk och HTTP-bibliotek (taggade med Fastly) | Exkluderad | Välkända tjänster som regelbundet besöker webbplatsen för att uppdatera deras sökindex eller tjänst:<br><br>Exempel:<br> ・ AddSearchBot<br> ・ AhrefsBot<br> ・ Applebot<br> ・ Ask Jeeves Corporate Spider<br> ・ Bingbot<br> ・ BingPreview<br> ・ BLEXBot<br> ‡ BuiltWith<br> pider<br> ;CrawlerKengo<br> avslutning Facebookexternalhit<br> avslutning Google AdsBot<br> avslutning Google AdsBot Mobile<br> avslutad Googlebot<br> avslutad Googlebot Mobile<br> avslutad lspider<br> avslutad LucidWorks<br> avslutning `MJ12bot`<br> avslutning <br>  avslutande Pinterest<br> <br> avslutningsprisBot  avslutad SiteImimprove  avslutad StashBot <br> avslutad StatusCake <br> avslutad YandexBot <br> pigg ContentKing <br> avslutad Claudebot |
-| Välkända AI/LLM-crawler (taggade med Fastly) | Exkluderad | Begäranden från kända AI/LLM-crawler som identifieras som välkända botar (till exempel av `User-Agent` eller andra robotklassificeringssignaler). Dessa förfrågningar kan inte faktureras.<br><br>Om en AI-agent inte identifieras som en välkänd robot (till exempel använder den en allmän webbläsare `User-Agent`) kan dess begäranden räknas som begäranden om fakturerbart innehåll. |
+| Välkända AI/LLM-crawler (taggade med Fastly) | Exkluderad | Begäranden från kända AI/LLM-crawler som identifieras som välkända botar (till exempel av `User-Agent` eller andra robotklassificeringssignaler). Dessa förfrågningar kan inte faktureras.<br><br>Exempel på sådana uteslutna robotar är: ChatGPT, Gmail Image Proxy, Baidu Spider, Outbrain, Yahoo! Mail Proxy, aiHitBot, Mail.Ru Bot, DomainStatsBot, Rainmeter, MetaInspector och Yahoo Gemini.<br><br>Om en AI-agent inte identifieras som en välkänd robot (till exempel använder den en allmän webbläsare `User-Agent`) kan dess begäranden räknas som begäranden om fakturerbart innehåll. |
 | Uteslut Commerce integration framework-samtal | Exkluderad | Begäranden som skickas till AEM som vidarebefordras till Commerce integration framework - URL:en börjar med `/api/graphql` - för att undvika dubbelräkning kan de inte debiteras för Cloud Service. |
-| Uteslut `manifest.json` | Exkluderad | Manifestet är inte ett API-anrop. Här finns information om hur du installerar webbplatser på en dator eller mobiltelefon. Adobe ska inte räkna JSON-begäran till `/etc.clientlibs/*/manifest.json` |
+| Klientbibliotek (/etc.clientlibs/*) - exkluderat | Exkluderad | Begäranden under /etc.clientlibs/* är klientbiblioteksresurser på plattformsnivå och konfigurationsfiler för körning som används av AEM. Dessa förfrågningar levererar inte kundskapat innehåll eller affärsdata och räknas därför inte som innehållsförfrågningar. |
 | Uteslut `favicon.ico` | Exkluderad | Även om det returnerade innehållet inte ska vara HTML eller JSON har vissa scenarier, som SAML-autentiseringsflöden, observerats returnera favoritikoner som HTML. Därför exkluderas favoritikoner uttryckligen från antalet. |
 | Experience Fragment (XF) - Återanvändning i samma domän | Exkluderad | Begäranden som gjorts för XF-sökvägar (till exempel `/content/experience-fragments/...`) från sidor som finns på samma domän (som identifieras av referensrubriken som matchar begärandevärden).<br><br> Exempel: En hemsida på `aem.customer.com` som drar in en XF-fil för en banderoll eller ett kort från samma domän.<br><br> ・ URL matchar /content/experience-fragments/..<br> ・ referensdomänen matchar `request_x_forwarded_host`<br><br>**Obs!** Om Experience Fragment-sökvägen är anpassad (till exempel med `/XFrags/...` eller en sökväg utanför `/content/experience-fragments/`), exkluderas inte begäran och kan räknas, även om den är samma domän. Adobe rekommenderar att du använder Adobe XF-standardsökvägsstruktur för att se till att exkluderingslogiken tillämpas korrekt. |
 
