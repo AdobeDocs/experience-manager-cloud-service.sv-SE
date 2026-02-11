@@ -4,9 +4,9 @@ description: Läs om hur du vidarebefordrar loggar till loggningsleverantörer i
 exl-id: 27cdf2e7-192d-4cb2-be7f-8991a72f606d
 feature: Developing
 role: Admin, Developer
-source-git-commit: 3a46db9c98fe634bf2d4cffd74b54771de748515
+source-git-commit: 41605c0feb5b8cf651ecb2971a05fde12bcb86d8
 workflow-type: tm+mt
-source-wordcount: '2478'
+source-wordcount: '2482'
 ht-degree: 0%
 
 ---
@@ -224,7 +224,7 @@ data:
       advancedNetworking: true
 ```
 
-För CDN-loggar kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till en https-server eller (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en känd IP-adress till deras slutliga mål.
+För CDN-loggar kan du tillåta att IP-adresserna listas enligt beskrivningen i [Snabbt dokumentation - offentlig IP-lista](https://www.fastly.com/documentation/reference/api/utils/public-ip-list/). Om listan med delade IP-adresser är för stor kan du skicka trafik till en https-server eller (ej Adobe) Azure Blob Store där logik kan skrivas för att skicka ut loggarna från en känd IP-adress till det slutliga målet.
 
 >[!NOTE]
 >
@@ -297,8 +297,8 @@ data:
 En SAS-token bör användas för autentisering. Den ska skapas från signatursidan för delad åtkomst, i stället för på tokensidan för delad åtkomst, och ska konfigureras med följande inställningar:
 
 * Tillåtna tjänster: Blobb måste väljas.
-* Tillåtna resurser: Objektet måste markeras.
-* Tillåtna behörigheter: Skriv, Lägg till, Skapa måste vara markerat.
+* Tillåtna resurser: Objekt och behållare måste markeras.
+* Tillåtna behörigheter: Läs, Skriv, Lägg till, Lista, Skapa måste väljas.
 * Ett giltigt start- och förfallodatum/-tid.
 
 Här följer en skärmbild av en exempelkonfiguration för SAS-token:
@@ -307,7 +307,7 @@ Här följer en skärmbild av en exempelkonfiguration för SAS-token:
 
 Om loggarna inte har levererats efter att de tidigare fungerat korrekt kontrollerar du om den SAS-token som du konfigurerade fortfarande är giltig eftersom den kan ha gått ut.
 
-#### Azure Blob Storage CDN-loggar {#azureblob-cdn}
+#### CDN-loggar för Azure Blob Storage {#azureblob-cdn}
 
 Var och en av de globalt distribuerade loggningsservrarna skapar en ny fil var sjätte sekund, under mappen `aemcdn`. När filen har skapats läggs den inte längre till. Filnamnsformatet är YYY-MM-DDThh:mm:ss.sss-uniqueid.log. Exempel: 2024-03-04T10:00:00.000-WnFWYN9BpOUs2aOVn4ee.log.
 
@@ -523,7 +523,7 @@ När du konfigurerar Sumo Logic för datainmatning visas en&quot;HTTP Source Add
 
 `https://collectors.de.sumologic.com/receiver/v1/http/ZaVnC...`
 
-Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [&#x200B; CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [&#x200B; Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
+Du måste kopiera det sista avsnittet i URL:en (utan föregående `/`) och lägga till det som en [ CloudManager-miljövariabel](/help/operations/config-pipeline.md#secret-env-vars) enligt beskrivningen i avsnittet [ Konfigurera](#setup) ovan, och sedan referera till variabeln i konfigurationen.  Ett exempel ges nedan.
 
 ```yaml
 kind: "LogForwarding"
