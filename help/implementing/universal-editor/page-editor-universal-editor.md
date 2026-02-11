@@ -4,9 +4,9 @@ description: Sidredigeraren stöds fortfarande av Adobe, men den universella red
 feature: Developing
 role: Admin, Developer
 exl-id: 0a13fb52-623e-4aff-b254-186d8d117e4d
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 1a04bebf073ac10100dede9b5e9f835665588cf3
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -74,10 +74,11 @@ Eftersom luckan mellan de två redigerarna ständigt krymper bör du läsa versi
 | Enhetssimulering | [!BADGE Tillgänglig]{type=Positive} | [Konfigurerade enheter kan simuleras,](/help/sites-cloud/administering/responsive-layout.md), men användaren kan inte ange några olika skärmdimensioner att simulera manuellt. | [!BADGE Tillgänglig]{type=Positive} | [Alla skärmdimensioner som ska simuleras kan anges manuellt,](/help/sites-cloud/authoring/universal-editor/navigation.md#emulator), men standardbrytpunkter kan inte konfigureras. |
 | [Sidlåsning](/help/sites-cloud/authoring/sites-console/managing-pages.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Respterar låsstatus som angetts i Sites Console med tillägg för att låsa/låsa upp sidor från redigeraren |
 | [Sidegenskaper](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Tillgängligt från Webbplatsadministratör, med tillägg för att även komma åt egenskaper för sidor från redigeraren |
-| Egenskaper för flera fält | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Planerad |
+| Egenskaper för flera fält | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | [Fjärr-DAM](/help/assets/dynamic-media-open-apis-overview.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
 | [Sidversionshantering](/help/sites-cloud/authoring/sites-console/page-versions.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} |  |
-| [TimeWarp](/help/sites-cloud/authoring/sites-console/page-versions.md#timewarp) och [Diff-vy](/help/sites-cloud/authoring/sites-console/page-diff.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Planerad |
+| [Diff-vy](/help/sites-cloud/authoring/sites-console/page-diff.md) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Delvis tillgänglig]{type=Caution} | Finns för Edge Delivery Services men inte för headless |
+| [TimeWarp](/help/sites-cloud/authoring/sites-console/page-versions.md#timewarp) | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Planerade versioner är fortfarande tillgängliga i Sites Console |
 | Visa i administratör | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Tillgänglig]{type=Positive} | Tillgängligt som tillägg för sidor |
 | Visa sidstatus | [!BADGE Tillgänglig]{type=Positive} |  | [!BADGE Inte tillgänglig]{type=Negative} | Finns i webbplatskonsolen |
 | Utbyggbarhet | [!BADGE Tillgänglig]{type=Positive} | Som AEM-övertäckningar | [!BADGE Tillgänglig]{type=Positive} | Som tydligt definierade tilläggspunkter med App Builder och mycket liten AEM-specifik kunskap |
