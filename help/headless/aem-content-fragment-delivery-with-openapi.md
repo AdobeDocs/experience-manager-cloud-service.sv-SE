@@ -1,10 +1,10 @@
 ---
 title: AEM Content Fragment Delivery with OpenAPI
-description: Läs mer om AEM Content Fragment Delivery med OpenAPI
+description: Läs om AEM Content Fragment Delivery med OpenAPI
 feature: Headless, Content Fragments, Edge Delivery Services
 role: Admin, Developer
 exl-id: b298db37-1033-4849-bc12-7db29fb77777
-source-git-commit: de161d6707dcb8cedf032ee1f286d79e733be94d
+source-git-commit: 73bfeb19eebe104a772d1c420fe6471fea3e1225
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 0%
