@@ -5,9 +5,9 @@ products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
 exl-id: c23145c9-078d-4b03-a8f4-2d835cdd1592
-source-git-commit: 98465743f73f38e2a766657dda8c9ff18ecea856
+source-git-commit: f587a30da747ae3d53848ef5bb30c32a9b5d78e1
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Mallarna säkerställer varumärkets enhetlighet och sparar tid för de vanligas
 
 1. Öppna instansen AEM Forms as a Cloud Service.
 1. Gå till **Forms > Forms &amp; Documents** och klicka på **Skapa > Interaktiv kommunikation**.
-1. I det formulär som skapas **väljer du** en aktiverad mall från mallväljaren.
+1. I det formulär som skapas **väljer du** en aktiverad mall från väljaren.
 1. Fyll i annan information som titel, namn, författare osv.
 1. Klicka på **Skapa** för att utforma kommunikationen med den valda mallstrukturen.
 1. Den öppnar konc.int. redigeraren där du kan börja utforma din kommunikation.
@@ -94,4 +94,4 @@ Börja bygga interaktiv kommunikation för att effektivisera arbetsflödena och 
 ## Nästa steg
 
 [Skapa en interaktiv kommunikationsmall](/help/forms/interactive-communication/create-interactive-communication-template.md)
-[&#x200B; Skapa ett interaktivt kommunikationsfragment &#x200B;](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
+[ Skapa ett interaktivt kommunikationsfragment ](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
