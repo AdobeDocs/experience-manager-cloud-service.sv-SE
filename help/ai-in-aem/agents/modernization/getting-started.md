@@ -3,9 +3,10 @@ title: Komma igång med agenten för upplevelsemodernisering
 description: Lär dig de första stegen för att snabbt bli produktiv med Experience Modernization Agent med Experience Modernization Console.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: c80ce5a9fc5f208fd910d5cef72225085248fb4d
+exl-id: 612c211e-43bf-47dc-89a8-9995a960e4d7
+source-git-commit: 76c0f41acb5c2e4e0f0a292f8205b0b9de5cda81
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '972'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ Lär dig de första stegen för att snabbt bli produktiv med Experience Moderniz
 
 1. Välj en [Edge Delivery Services](/help/edge/overview.md)-databas som ska användas med Experience Modernization Console.
    * Detta kan vara ett befintligt Edge Delivery Services-projekt eller så kan du skapa ett nytt efter [utvecklarsjälvstudiekursen](https://www.aem.live/developer/tutorial) med hjälp av [standarddatabasen.](https://github.com/adobe/aem-boilerplate)
-1. Kontrollera att [AEMY GitHub-appen](https://github.com/apps/aem-aemy) är installerad i databasen.
+1. Kontrollera att [AEM Code Connector](https://github.com/apps/aem-code-connector) är installerad i databasen.
    * Detta gör att konsolen kan inspektera koden.
 1. Kontrollera att [AEM Code Sync GitHub-appen](https://github.com/apps/aem-code-sync) är installerad i databasen.
    * Detta gör att Edge Delivery Services kan synkronisera din kod.
@@ -41,7 +42,7 @@ Konsolen frågar efter en databas när du loggar in första gången.
 ![Konsolens första inloggningsskärm](assets/first-sign-on.png)
 
 1. Klicka på **Anslut databas**.
-1. AEMY-appen öppnas på en ny webbläsarflik. Klicka på **Auktorisera AEM AEMY**.
+1. Då öppnas appen AEM Code Connector på en ny webbläsarflik. Klicka på **Auktorisera AEM Code Connector**.
 1. Gå tillbaka till konsolen, välj **Ägare**, **Databas** och **Grenval** och klicka på **Checka ut till arbetsyta**.
    ![Ansluter till GitHub-projekt](assets/connect-to-github-project.png)
 1. När du uppmanas att **Ersätt befintlig arbetsyta** klickar du på **Ersätt arbetsyta**.
