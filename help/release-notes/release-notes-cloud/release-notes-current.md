@@ -107,7 +107,7 @@ Mer information finns i AI-sökning i [Assets-vyn](/help/assets/search-assets-vi
 
 **Adobe Asset Link CEP 2026.01.0**
 
-[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
+[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}

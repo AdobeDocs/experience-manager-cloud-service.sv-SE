@@ -30,7 +30,7 @@ Du kan också välja att utföra ytterligare bearbetning av de överförda resur
 | [Assets Console-användargränssnitt](#upload-assets) | Tillfällig uppladdning, enkel nedladdning och dragning, uppladdning av sökare. Använd inte för att överföra många resurser. | Alla användare |
 | [Överför API](#upload-using-apis) | För dynamiska beslut under överföring. | Developer |
 | [[!DNL Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE) | Intag av resurser med låg volym, men inte för migrering. | Administratör, marknadsförare |
-| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Creative, Marketer |
+| [[!DNL Adobe Asset Link]](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) | Användbar när kreatörer och marknadsförare arbetar med resurser från de [!DNL Creative Cloud]-skrivbordsappar som stöds. | Creative, Marketer |
 | [Massinklistring av resurser](#asset-bulk-ingestor) | Rekommenderas för storskalig migrering och ibland även för bulkimport. Endast för datalager som stöds. | Administratör, utvecklare |
 
 ## Överför resurser {#upload-assets}
@@ -356,7 +356,7 @@ Experience Manager visar jobbhistoriken. På historiksidan för massimportjobb k
 
 Förutom webbläsargränssnittet stöder [!DNL Experience Manager] andra klienter på skrivbordet. De ger också en uppladdningsupplevelse utan att du behöver gå till webbläsaren.
 
-* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i skrivbordsprogrammen Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa skrivbordsprogram.
+* [[!DNL Adobe Asset Link]](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) ger åtkomst till resurser från [!DNL Experience Manager] i skrivbordsprogrammen Adobe Photoshop, Adobe Illustrator och Adobe InDesign. Du kan överföra det öppna dokumentet till [!DNL Experience Manager] direkt från Adobe Asset Link-användargränssnittet från dessa skrivbordsprogram.
 * [[!DNL Experience Manager] skrivbordsappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=sv-SE) gör det enklare att arbeta med resurser på skrivbordet, oberoende av filtyp eller vilket program som hanterar dem. Det är användbart att överföra filer i kapslade mapphierarkier från det lokala filsystemet, eftersom webbläsaröverföring bara stöder överföring av platta fillistor.
 
 ## Bearbeta resurser när de överförs {#process-when-uploaded}
@@ -423,5 +423,5 @@ Teknisk information om överförings-API:er och protokoll samt länkar till SDK 
 >
 >* [[!DNL Adobe Experience Manager] skrivbordsapp](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/introduction.html?lang=sv-SE)
 >* [Om [!DNL Adobe Asset Link]](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html)
->* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
+>* [[!DNL Adobe Asset Link] dokumentation](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html)
 >* [Teknisk referens för överföring av resurser](developer-reference-material-apis.md#asset-upload)
