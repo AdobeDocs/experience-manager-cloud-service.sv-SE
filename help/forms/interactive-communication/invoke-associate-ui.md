@@ -4,15 +4,13 @@ description: Lär dig hur du integrerar AEM Forms Associate-gränssnittet med pr
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-hide: true
-hidefromtoc: true
-source-git-commit: b76f6dfe2462cec187d549234e9050f8ca9a8cdf
+exl-id: f946ccea-86d0-4086-8208-9583b8206244
+source-git-commit: 749ad181c7e9e59a0601e0eddd85b0bd0e761f08
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
-
 
 # Integrera associerat gränssnitt i ditt program
 
@@ -26,13 +24,13 @@ Innan du integrerar det associerade användargränssnittet med ditt program mås
 
 - Interaktiv kommunikation skapad och publicerad
 - Webbläsare med popup-stöd aktiverat
-- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
-- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
+- Associerade [användare måste vara en del av gruppen för formulär-associater](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/administrator-help/setup-organize-users/creating-configuring-roles#assign-a-role-to-users-and-groups)
+- Autentisering konfigurerad med någon [autentiseringsmekanism som stöds av AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/authentication) (till exempel SAML 2.0, OAuth eller anpassade autentiseringshanterare)
 
 >[!NOTE]
 >
 >- I den här artikeln visas autentiseringskonfigurationen med SAML 2.0 med [Microsoft Entra ID (Azure AD) som identitetsleverantör](https://learn.microsoft.com/en-us/power-pages/security/authentication/openid-settings).
->- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
+>- För Associate UI krävs ytterligare SAML-konfigurationer utöver standardinställningarna som förklaras i artikeln [SAML 2.0-autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0). Mer information finns i avsnittet [Ytterligare SAML-konfigurationer för det associerade användargränssnittet](#additional-saml-configurations-for-associate-ui).
 
 ### Ytterligare SAML-konfigurationer för associerat användargränssnitt
 
@@ -115,7 +113,11 @@ I det här avsnittet får du hjälp med att starta det associerade användargrä
 
 Om du snabbt vill testa och förstå hur integreringen av användargränssnittet i Associate fungerar använder du följande exempelsida i HTML. Kopiera koden till en HTML-fil och öppna den i webbläsaren.
 
-I det här exemplet finns ett enkelt formulärgränssnitt där du kan ange din interaktiva kommunikationsinformation och starta det associerade användargränssnittet med ett enda klick.
+>[!NOTE]
+>
+> Det här exemplet på HTML kräver ett IC ID och en förifyllningstjänst. Du kan testa det med ditt IC-ID och exempeltjänsten Prefill&quot;FdmTestData&quot;.
+
+HTML exempel har ett enkelt formulärgränssnitt där du kan ange din interaktiva kommunikationsinformation och starta gränssnittet för Associate med ett enda klick.
 
 ```html
 <!DOCTYPE html>
@@ -438,21 +440,28 @@ Nu kan du starta Associate-gränssnittet med exempelsidan för HTML:
 
 1. **Ange IC-ID:t**: I fältet **IC-ID** anger du identifieraren för den publicerade interaktiva kommunikationen. Detta är det enda obligatoriska fältet.
 
-2. **Konfigurera förifyllningstjänst** (valfritt): Om du vill förifylla IC med dynamiska data anger du tjänstnamnet för formulärdatamodellen i fältet **Förifyll tjänst**. Använd till exempel `FdmTestData` för exempeldata eller `IC-FDM` för testdata.
+1. **Konfigurera förifyllningstjänst**: Om du vill förifylla IC med dynamiska data anger du tjänstnamnet för formulärdatamodellen i fältet **Förifyllningstjänst**. Använd till exempel `FdmTestData` som exempeldata.
 
-3. **Lägg till tjänstparametrar** (valfritt): I fältet **Tjänstparametrar (JSON)** anger du ett JSON-objekt med de parametrar som din förifyllningstjänst kräver. Till exempel:
+   ![Exempel på HTML-gränssnitt](/help/forms/assets/samplehtmlui.png)
+
+1. **Klicka på Starta associerat gränssnitt**: Klicka på knappen **Starta associerat gränssnitt**. Ett nytt webbläsarfönster öppnas med Associate-gränssnittet, som är förinläst med din interaktiva kommunikation.
+
+Ange data så visas det tillhörande användargränssnittet enligt nedan:
+
+![Associera gränssnitt](/help/forms/assets/associateui.png)
+
+>[!NOTE]
+>
+> Om fönstret inte öppnas kontrollerar du att webbläsaren tillåter popup-fönster för den här platsen.
+
+
+<!--**Add Service Parameters**: In the **Service Parameters (JSON)** field, enter a JSON object with the parameters your prefill service requires. For example:
 
    ```json
    {"customerId": "101", "accountNumber": "ACC-98765"}
    ```
 
-4. **Ange PDF-alternativ** (valfritt): Konfigurera återgivningsalternativ som språkområde, bilagor eller hjälpmedelsinställningar i fältet **Alternativ (JSON)**.
-
-5. **Klicka på Starta associerat gränssnitt**: Klicka på knappen **Starta associerat gränssnitt**. Ett nytt webbläsarfönster öppnas med Associate-gränssnittet, som är förinläst med din interaktiva kommunikation.
-
->[!NOTE]
->
-> Om fönstret inte öppnas kontrollerar du att webbläsaren tillåter popup-fönster för den här platsen.
+  **Set PDF Options** (optional): In the **Options (JSON)** field, configure rendering options such as locale, attachments, or accessibility settings.-->
 
 ## Felsökning
 
