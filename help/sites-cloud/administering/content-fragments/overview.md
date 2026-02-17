@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User, Developer
 exl-id: ce9cb811-57d2-4a57-a360-f56e07df1b1a
 solution: Experience Manager Sites
-source-git-commit: b3e1d3a3770531728d696be125f074881f179573
+source-git-commit: 8d8e45126a27b9ad5fdbc2276f08c28e4240c830
 workflow-type: tm+mt
-source-wordcount: '2401'
+source-wordcount: '2402'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragmen
 Innehållsfragment innehåller strukturerat innehåll:
 
 * Varje fragment baseras på en [innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md).
-   * [Content Fragment Model definierar strukturen &#x200B;](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) för det resulterande fragmentet.
+   * [Content Fragment Model definierar strukturen ](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) för det resulterande fragmentet.
 * Varje fragment består av:
    * **[Main](#main-and-variations)** - en integrerad del av fragmentet som innehåller kärninnehållet. Finns alltid, kan inte tas bort
    * **[Variationer](#main-and-variations)** - en eller flera permutationer av innehållet som skapats av författaren
@@ -61,7 +61,7 @@ Innehållsfragment innehåller strukturerat innehåll:
 Innehållsfragment kan också levereras i JSON-format med exportfunktionerna för Sling Model (JSON) i AEM kärnkomponenter. Leveranssätt:
 
 * gör att du kan använda komponenten för att hantera vilka element i ett fragment som ska levereras
-* tillåter massleverans, genom att lägga till flera [kärnkomponenter för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) på sidan som används för API-leverans
+* tillåter massleverans, genom att lägga till flera [kärnkomponenter för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) på sidan som används för API-leverans
 
 Antalet kommunikationskanaler ökar årligen. Kanalerna avser vanligen leveransmekanismen, antingen som:
 
@@ -90,7 +90,7 @@ Dessa innehållsfragment kan sedan monteras för att ge upplevelser över flera 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhåller och använder innehållsfragment:
 
@@ -122,7 +122,6 @@ När fragmenten har skapats kan du:
 >* [Sidredigering med innehållsfragment](/help/sites-cloud/authoring/fragments/content-fragments.md).
 >* OpenAPI:erna [Content Fragment och Content Fragment Model](/help/headless/content-fragment-openapis.md) är också tillgängliga.
 
-
 ## Huvud och variationer {#main-and-variations}
 
 Variationer är en viktig egenskap i AEM innehållsfragment. Med dem kan du skapa och redigera kopior av **Main** -innehållet som ska användas i vissa kanaler och scenarier, vilket gör innehållsleverans utan rubrik och sidredigering ännu mer flexibelt.
@@ -143,7 +142,7 @@ Variationer är en viktig egenskap i AEM innehållsfragment. Med dem kan du skap
 
 * **Variationer**
 
-   * Återgivning av fragmenttext som är specifik för redaktionella ändamål. Den kan vara relaterad till kanalen men är inte obligatorisk, men kan även användas för lokala ad hoc-ändringar.
+   * Återgivning av fragmenttext som är specifik för redaktionella ändamål. Kan vara relaterad till en kanal, men detta är inte obligatoriskt; kan även användas för lokala ad hoc-ändringar.
    * Skapas som kopior av **Main**, men kan sedan redigeras efter behov. Innehållet överlappar ofta mellan själva variationerna.
    * Kan definieras under fragmentredigering från den vänstra panelen.
    * Lagras i fragmentet för att undvika spridning av innehållskopior.
@@ -191,9 +190,9 @@ Innehållsfragmenten är:
 
 * Tillgängligt i sidredigeraren [genom att använda komponenten Content Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md) (refereringskomponent):
 
-   * [Kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) är tillgänglig för sidförfattare. De kan referera till, och leverera, önskat innehållsfragment i antingen HTML- eller JSON-format.
+   * [Kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) är tillgänglig för sidförfattare. De kan referera till, och leverera, önskat innehållsfragment i antingen HTML- eller JSON-format.
 
-Innehållsfragment är en innehållsstruktur som:
+Innehållsfragment är innehållsstrukturer som:
 
 * Är utan layout eller design (textformatering är möjlig för textfält).
 * Är oberoende av leveransmekanismen (till exempel sidan eller kanalen).
@@ -216,7 +215,7 @@ Resurserna för innehållsfragment består av följande delar (antingen direkt e
 * **Fragmentelement**
 
    * Elementen korrelerar till de datafält som innehåller innehåll.
-   * Du använder en [innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) för att skapa innehållsfragmentet. Elementen (fälten) [&#x200B; som anges i modellen definierar fragmentets struktur &#x200B;](/help/sites-cloud/administering/content-fragments/content-fragment-models.md). Dessa element (fält) kan vara av olika datatyper.
+   * Du använder en [innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) för att skapa innehållsfragmentet. Elementen (fälten) [ som anges i modellen definierar fragmentets struktur ](/help/sites-cloud/administering/content-fragments/content-fragment-models.md). Dessa element (fält) kan vara av olika datatyper.
 
 * **Fragmentera stycken**
 
@@ -249,10 +248,10 @@ Resurserna för innehållsfragment består av följande delar (antingen direkt e
 
 Om du vill skapa innehållsfragment behöver du:
 
-* **Innehållsmodell**
+* a **Content Fragment Model**
 
-   * Är [aktiverade med hjälp av Konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md).
-   * Skapas [med konsolen för innehållsfragment](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#creating-a-content-fragment-model).
+   * Är [aktiverat med hjälp av Konfigurationsläsaren](/help/sites-cloud/administering/content-fragments/setup.md).
+   * Skapas [med Content Fragment Console](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md#creating-a-content-fragment-model).
    * Krävs för att [skapa ett fragment](/help/sites-cloud/administering/content-fragments/managing.md#creating-content-fragments).
    * Definierar strukturen för ett fragment (rubrik, innehållselement, taggdefinitioner).
    * Definitioner av innehållsfragmentmodellen kräver en titel och ett dataelement. Allt annat är valfritt.
@@ -271,14 +270,14 @@ Om du vill använda dina innehållsfragment för leverans av headless-innehåll 
 
 Om du vill använda dina innehållsfragment för att skapa sidor behöver du också:
 
-* En **komponent för innehållsfragment**
+* a **Content Fragment Component**
 
    * Instrumentellt för att leverera fragmentet i HTML- och/eller JSON-format.
    * Krävs för att [referera till fragmentet på en sida](/help/sites-cloud/authoring/fragments/content-fragments.md).
    * Ansvarig för layout och leverans av ett fragment, t.ex. kanaler.
    * Fragment behöver en eller flera dedikerade komponenter för att definiera layout och leverera vissa eller alla element/varianter och tillhörande innehåll.
    * Om du drar ett fragment till en sida när du redigerar kopplas den nödvändiga komponenten automatiskt till.
-   * Se [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE).
+   * Se [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html).
 
 ## Konsolen Innehållsfragment {#content-fragments-console}
 
@@ -372,9 +371,12 @@ Använd RTF-fält (datatypen **Flera rader**) med hänsyn till:
 
 Skapa så många fragmentvariationer som behövs, men inte mer.
 
-Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans. Vi rekommenderar att du håller antalet variationer till ett hanterbart minimum.
+Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans.
 
-Ett tips är att inte överskrida tio varianter per innehållsfragment.
+Vi rekommenderar att du:
+
+* hålla antalet variationer till ett hanterbart minimum
+* överstiger inte tio variationer per innehållsfragment
 
 ### Testa före produktion {#test-before-production}
 
