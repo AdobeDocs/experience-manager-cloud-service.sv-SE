@@ -42,7 +42,7 @@ Med Adobe Experience Manager (AEM) as a Cloud Service kan du med Content Fragmen
 Innehållsfragment innehåller strukturerat innehåll:
 
 * Varje fragment baseras på en [innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md).
-   * [Content Fragment Model definierar strukturen ](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) för det resulterande fragmentet.
+   * [Content Fragment Model definierar strukturen &#x200B;](/help/sites-cloud/administering/content-fragments/content-fragment-models.md) för det resulterande fragmentet.
 * Varje fragment består av:
    * **[Main](#main-and-variations)** - en integrerad del av fragmentet som innehåller kärninnehållet. Finns alltid, kan inte tas bort
    * **[Variationer](#main-and-variations)** - en eller flera permutationer av innehållet som skapats av författaren
@@ -215,7 +215,7 @@ Resurserna för innehållsfragment består av följande delar (antingen direkt e
 * **Fragmentelement**
 
    * Elementen korrelerar till de datafält som innehåller innehåll.
-   * Du använder en [innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) för att skapa innehållsfragmentet. Elementen (fälten) [ som anges i modellen definierar fragmentets struktur ](/help/sites-cloud/administering/content-fragments/content-fragment-models.md). Dessa element (fält) kan vara av olika datatyper.
+   * Du använder en [innehållsfragmentmodell](/help/sites-cloud/administering/content-fragments/managing-content-fragment-models.md) för att skapa innehållsfragmentet. Elementen (fälten) [&#x200B; som anges i modellen definierar fragmentets struktur &#x200B;](/help/sites-cloud/administering/content-fragments/content-fragment-models.md). Dessa element (fält) kan vara av olika datatyper.
 
 * **Fragmentera stycken**
 
