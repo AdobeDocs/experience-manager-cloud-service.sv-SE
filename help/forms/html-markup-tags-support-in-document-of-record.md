@@ -1,24 +1,24 @@
 ---
-title: Märkordstaggar som stöds av HTML i arkivdokumentet
-description: Referenshandbok för HTML märkordstaggar stöds nu vid dokumentgenerering, inklusive återgivningsbeteende och tillgänglighetsaspekter
+title: Taggar som stöds av HTML i Submission PDF (tidigare Dokumentation)
+description: Referenshandbok för märkordstaggar i HTML som stöds vid generering av en Submission PDF (tidigare Document of Record), inklusive återgivningsbeteende och tillgänglighetsaspekter.
 feature: Adaptive Forms
 role: Developer, User
 exl-id: 8481b0dc-aae7-4bd2-acfe-1f1b6d747683
-source-git-commit: 1794ed6cac612ee4600c2f8e1ced18c6130b64a2
+source-git-commit: 0b112a5a1830fac9d0170771e052bbb2ef3cadbf
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
 
 
-# Märkordstaggar som stöds av HTML i arkivdokumentet
+# Taggar som stöds av HTML i Submission PDF (tidigare Dokumentation)
 
 ## Vad den här referensen omfattar?
 
-AEM Forms har nu stöd för HTML-taggar i RTF-fält när PDF-filer (Document of Record, DoR) genereras. Den här guiden förklarar vilka HTML-taggar du kan använda säkert i Adaptive Forms och hur de återges i de genererade dokumenten.
+AEM Forms har nu stöd för HTML märkordsetiketter i RTF-fält när en Submission PDF (tidigare Document of Record) PDF genereras. Den här guiden förklarar vilka HTML-taggar du kan använda säkert i Adaptive Forms och hur de återges i den genererade Submission PDF.
 
-Om du lägger till RTF-innehåll (t.ex. fetstil, listor eller länkar) i formulär är det viktigt att du förstår vilka taggar som stöds och vilka begränsningar de kan ha. Den här referensen hjälper dig att välja lämpliga taggar för att säkerställa att innehållet visas korrekt och att det är tillgängligt i dokumentdokumentet.
+Om du lägger till RTF-innehåll (t.ex. fetstil, listor eller länkar) i formulär är det viktigt att du förstår vilka taggar som stöds och vilka begränsningar de kan ha. Med hjälp av den här referensen kan du välja rätt taggar för att se till att ditt innehåll visas korrekt och är tillgängligt i Submission PDF.
 
 ## Innan du börjar
 
@@ -27,18 +27,18 @@ Om du lägger till RTF-innehåll (t.ex. fetstil, listor eller länkar) i formul�
 Du bör känna till:
 
 - Grundläggande syntax för HTML-markeringar
-- [Grundläggande om arkivhandlingar](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+- [Submission PDF (tidigare Document of Record) fundamentals](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
 - Tillgänglighetsprinciper och WCAG-riktlinjer
 - PDF tillgänglighetskrav
 - Adaptiva formulärkomponenter som accepterar HTML Markup
 
 ### Överväganden
 
-Dokumentet kan vara taggat i PDF, vilket gör att hjälpmedelstekniken blir mer tillgänglig och strukturerad korrekt. Om du vill aktivera taggade PDF-utdata [anger du XCI-egenskapen `config/present/pdf/tagged` till `true`](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#use-a-custom-xci-file). När du har skapat din PDF är det viktigt att kontrollera att hjälpmedelstaggar används på rätt sätt. Du kan använda [Adobe Acrobat för att kontrollera tillgänglighetstaggar](https://helpx.adobe.com/in/acrobat/using/create-verify-pdf-accessibility.html) och kontrollera att dokumentet uppfyller tillgänglighetsstandarder.
+PDF Submission (tidigare Document of Record) kan vara en taggad PDF, som hjälper till att säkerställa tillgänglighet och korrekt struktur för hjälpmedelstekniker. Om du vill aktivera taggade PDF-utdata [anger du XCI-egenskapen `config/present/pdf/tagged` till `true`](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#use-a-custom-xci-file). När du har skapat din PDF är det viktigt att kontrollera att hjälpmedelstaggar används på rätt sätt. Du kan använda [Adobe Acrobat för att kontrollera tillgänglighetstaggar](https://helpx.adobe.com/in/acrobat/using/create-verify-pdf-accessibility.html) och kontrollera att dokumentet uppfyller tillgänglighetsstandarder.
 
 ### Nyheter
 
-RTF-stöd i&quot;Document of Record&quot; är en ny förbättring. Tidigare visades RTF-innehåll som oformaterad text i genererade dokument. Med den här nya funktionen kan formaterat innehåll återges korrekt i PDF-utdata.
+RTF-stöd i Submission PDF är en ny förbättring. Tidigare visades RTF-innehåll som oformaterad text i genererade dokument. Med den här nya funktionen kan formaterat innehåll återges korrekt i PDF-utdata.
 
 ## Referens för stöd för HTML-taggar
 
@@ -46,7 +46,7 @@ RTF-stöd i&quot;Document of Record&quot; är en ny förbättring. Tidigare visa
 
 Dessa taggar stöds fullt ut när en hjälpmedelsnod skapas:
 
-| HTML-tagg | Beskrivning | Dokumentstöd | Tillgänglighet | Exempel |
+| HTML-tagg | Beskrivning | Skicka in PDF support | Tillgänglighet | Exempel |
 |----------|-------------|-------------|---------------|---------|
 | `<p>` | Stycke | Ja | Fullt stöd - korrekt `<P>`-nod | `<p>This is a paragraph.</p>` |
 | `<br/>` | Radbrytning | Ja | Fullt stöd - inom `<P>`-noden | `<p>Line 1<br/>Line 2</p>` |
@@ -135,7 +135,7 @@ Dessa taggar stöds inte och kommer inte att återges korrekt:
 ## Relaterat innehåll
 
 
-- [Generera arkivdokument för adaptiv Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
-- [Generera arkivdokument för kärnkomponenter](/help/forms/generate-document-of-record-core-components.md)
-- [Anpassning av dokumentmall](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#customize-the-branding-information-in-document-of-record)
+- [Generera Submission PDF (tidigare Document of Record) för Adaptive Forms](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
+- [Generera inskicknings-PDF för kärnkomponenter](/help/forms/generate-document-of-record-core-components.md)
+- [Anpassa PDF-mallen](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md#customize-the-branding-information-in-document-of-record)
 
