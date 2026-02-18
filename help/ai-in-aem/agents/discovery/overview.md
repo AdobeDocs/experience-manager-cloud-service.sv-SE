@@ -3,13 +3,13 @@ title: Översikt över identifieringsagent
 description: Lär dig hur du kan använda Discovery Agent för att leverera relevant AEM-innehåll på begäran via naturliga, konversationsmoment för att få en smidig, klickfri upptäckt.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: d0c683d20f8932683d3d0aa11a67be92d35b725c
+exl-id: 676300cd-b799-4c53-a58e-043e58a2cbc5
+source-git-commit: 5488fdb1ffc9c65ef2b569627f9a2ef414181290
 workflow-type: tm+mt
 source-wordcount: '1280'
 ht-degree: 0%
 
 ---
-
 
 # Identifieringsagent {#discovery-agent}
 
@@ -30,6 +30,8 @@ Några av fördelarna med Discovery Agent:
 >AI-genererade svar kan vara felaktiga eller vilseledande. Kontrollera att du dubbelkontrollerar föreslagna korrigeringar och svar.
 >
 >Se även [Adobe Experience Cloud Generative AI User Guidelines](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html).
+
+>[!VIDEO](https://video.tv.adobe.com/v/3479983)
 
 ## Kompetens {#skills-discovery-agent}
 
