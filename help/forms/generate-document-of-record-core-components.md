@@ -4,9 +4,9 @@ description: Lär dig generera en inskickningsversion av PDF från formulärinsk
 feature: Adaptive Forms, Core Components
 exl-id: 15540644-c0c3-45ce-97d3-3bdaa16fb4b6
 role: User, Developer
-source-git-commit: ab11addd98629499726c011cc0faca5666de26fb
+source-git-commit: 24068cb5219b81dc85769137e985cfa60486dd9e
 workflow-type: tm+mt
-source-wordcount: '3125'
+source-wordcount: '3100'
 ht-degree: 0%
 
 ---
@@ -166,12 +166,10 @@ While creating an adaptive form, in the Form Model tab of Adaptive Form properti
   Select the option to create an Adaptive Form without a form model. When the option is selected, the Document of Record is automatically generated for your Adaptive Form.
 
 * **[Associate form template as a Document of Record template](creating-adaptive-form.md#create-an-adaptive-form-based-on-an-xfa-form-template)**
-  
   Select the option to use an XFA Form as a template for Document of Record. 
 
 * **[Generate Document of Record](creating-adaptive-form.md#create-an-adaptive-form-based-on-xml-or-json-schema)**
   Select the option to use an XFA Form as a template. When the option is selected, the Document of Record is automatically generated for your Adaptive Form. When you use an XML schema as a template for an Adaptive Form, ensure that the adaptive form and associated XFA Form use the same XML schema as your Adaptive Form
-  
 
 When you select a form model, configure Document of Record using options available under Document of Record Template Configuration. See [Document of Record Template Configuration](#document-of-record-template-configuration). -->
 
@@ -354,8 +352,6 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
 
       * **Dölj beskrivning av paneler**: Om egenskapen anges utesluts beskrivning av panelen/tabellen från PDF Submission. Gäller för panel och tabell.
 
-
-
    1. **Egenskaper för formulärfält**:
 
       * **Visa endast de markerade värdena för komponenterna Kryssruta och Alternativknapp**: Om du anger egenskapen visas endast markerade värden för kryssrutor och alternativknappar i [!UICONTROL Document of Record].
@@ -363,35 +359,33 @@ Om du vill lokalisera den varumärkesinformation som du anger på fliken Dokumen
       * **Alternativ Justering**: Du kan välja önskad justering (Vågrät, Lodrät, Samma som adaptiv form) för att ange justeringen för fält som kryssruta eller alternativknapp som ska visas i [!UICONTROL Document of Record]. Som standard är den lodräta justeringen inställd för fälten i [!UICONTROL Document of Record]. Om du ställer in egenskaperna från [!UICONTROL Form Field Properties] i DoR skrivs egenskaperna som angetts i [!UICONTROL Item Alignment] för fälten i ett adaptivt formulär över. Om du väljer alternativet [!UICONTROL Same as Aaptive form] används justeringen som konfigurerats i en författarinstans för adaptiva formulär för [!UICONTROL Document of Record]-fält.
       * **Antal alternativ för vågrät justering**:You kan ange hur många alternativ som ska visas på Skicka-PDF för den vågräta justeringen.
 
-
-
    1. **Egenskaper för mallsida**:
 
       * **Logotypbild**: Du kan antingen välja att använda logotypbilden från det adaptiva formuläret, välja en från DAM eller överföra en från datorn.
       * **Formulärtitel**: Titel på DoR.
-* **Sidhuvudstext**: Text som visas i sidhuvudsavsnittet i PDF Submission.
-* **Ansvarsfriskrivning**: Etikett för friskrivning.
-* **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i PDF Submission.
-* **Ansvarsfriskrivning**: Ansvarsfriskrivning.
+      * **Sidhuvudstext**: Text som visas i sidhuvudsavsnittet i PDF Submission.
+      * **Ansvarsfriskrivning**: Etikett för friskrivning.
+      * **Ansvarsfriskrivning**: Text som anger omfattningen av rättigheter och skyldigheter i PDF Submission.
+      * **Ansvarsfriskrivning**: Ansvarsfriskrivning.
 
-      &lt;!—![Egenskaper för mallsidor](/help/forms/assets/dorpropertiesimg.png)—>
-     
-     >[!NOTE]
-     >
-     >Om du använder en mall för anpassat formulär som har skapats med en tidigare version av Designer än 6.3 måste du kontrollera att följande finns i mallen för anpassat formulär under rotdelformuläret:
-     
-      xml
-     &lt;proto>
-     &lt;font typeface=&quot;Arial&quot;/>
-     &lt;fill>
-     &lt;color value=&quot;4,166,203&quot;/>
-     &lt;/fill>
-      
-&lt;edge>      &lt;color value=&quot;4,166,203&quot;/>
-     &lt;/edge>
-     &lt;/proto>
-     &quot;
-  
+      <!--![Master Page Properties](/help/forms/assets/dorpropertiesimg.png)-->
+
+      >[!NOTE]
+      >
+      >Om du använder en mall för adaptiva formulär som har skapats med en tidigare version av Designer än 6.3 måste du se till att följande finns i mallen för adaptiva färger och teckensnittsfamiljer under rotdelformuläret:
+
+      ```xml
+      <proto>
+      <font typeface="Arial"/>
+      <fill>
+      <color value="4,166,203"/>
+      </fill>
+      <edge>
+      <color value="4,166,203"/>
+      </edge>
+      </proto>
+      ```
+
 1. Välj **[!UICONTROL Done]** om du vill spara profileringsändringarna.
 
 >[!NOTE]
@@ -408,11 +402,11 @@ Det anpassade formuläret kan vara långt och innehålla flera formulärfält. D
 
 Innan du genererar en Submission PDF-fil ska du i inställningarna för en panel välja Layout för postdokumentet för den panelen som Tabell eller Kolumn. Fälten i panelen ordnas därefter i PDF Submission.
 
-![Fält i en panel återges i en tabelllayout i PDF Submission &#x200B;](assets/dortablelayout.png)
+![Fält i en panel återges i en tabelllayout i PDF Submission ](assets/dortablelayout.png)
 
 Fält i en panel återges i en tabellayout i PDF Submit
 
-![Fält i en panel återges i en kolumnlayout i PDF Submission &#x200B;](assets/dorcolumnlayout.png)
+![Fält i en panel återges i en kolumnlayout i PDF Submission ](assets/dorcolumnlayout.png)
 
 Fält i en panel återges i en kolumnlayout i PDF Submit
 
@@ -444,4 +438,5 @@ Inställningen för dokumentkomponenten är tillgänglig under dess egenskaper. 
 
 **Exclude fields from DoR if hidden:** Set the property to exclude the hidden fields from Document of Record at form submission. When you enable [Revalidate on server](/help/forms/configuring-submit-actions.md#server-side-revalidation-in-adaptive-form-server-side-revalidation-in-adaptive-form), the server recomputes the hidden fields before excluding those fields from the Document of Record.
 
-!->>
+-->
+
