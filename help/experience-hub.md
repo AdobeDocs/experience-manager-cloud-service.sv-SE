@@ -22,7 +22,7 @@ Se även [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-
 
 Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (2 minuter, 40 sekunder).
 
->[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475196/?captions=swe&learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
