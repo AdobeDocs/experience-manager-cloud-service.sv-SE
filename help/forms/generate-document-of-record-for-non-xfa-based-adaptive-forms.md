@@ -430,11 +430,11 @@ Det anpassade formuläret kan vara långt och innehålla flera formulärfält. D
 
 Innan du genererar en Submission PDF-fil ska du i inställningarna för en panel välja Layout för postdokumentet för den panelen som Tabell eller Kolumn. Fälten i panelen ordnas därefter i PDF Submission.
 
-![Fält i en panel återges i en tabelllayout i PDF Submission ](assets/dortablelayout.png)
+![Fält i en panel återges i en tabelllayout i PDF Submission &#x200B;](assets/dortablelayout.png)
 
 Fält i en panel återges i en tabellayout i PDF Submit
 
-![Fält i en panel återges i en kolumnlayout i PDF Submission ](assets/dorcolumnlayout.png)
+![Fält i en panel återges i en kolumnlayout i PDF Submission &#x200B;](assets/dorcolumnlayout.png)
 
 Fält i en panel återges i en kolumnlayout i PDF Submit
 
