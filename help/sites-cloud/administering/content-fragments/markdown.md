@@ -5,7 +5,7 @@ feature: Content Fragments
 role: User
 exl-id: 6fbf8128-3b7f-4eda-bbbd-3336578d2586
 solution: Experience Manager Sites
-source-git-commit: 278242e0be1da5c64abfa5d9ac174013688ff422
+source-git-commit: be60f0371e652549cec6e57d1449b6e07b996514
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Du kan definiera:
 
 ## Rubriknotation {#heading-notation}
 
-Om du vill skapa en rubrik genom att placera en hash-tagg (#) framför rubriken. En hash-tagg (#) anger en H1, två hash-taggar (##) för en H2 och så vidare. Du kan använda upp till 6 hash-taggar. Till exempel:
+Om du vill skapa en rubrik placerar du en hash-symbol (#) framför rubriken. En hash-symbol (#) anger en H1, två hash-symboler (##) för en H2 och så vidare. Du kan använda upp till sex hash-symboler. Till exempel:
 
     `## This is an H2`
 
@@ -110,17 +110,13 @@ Du kan citera text genom att lägga till symbolen > före texten. Till exempel:
 
     `>This is block quotes`
 
-    `>asdhfjlkasdhlf`
-
-    `>asdfahsdlfasdfj`
-
 Du kan ha kapslade blockcitattecken. Till exempel:
 
     `> This is the first level of quoting.`
 
     `>`
 
-        `>> This is nested blockquote.`
+        `>> This is a nested blockquote.`
 
     `>`
 
@@ -130,7 +126,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du symbolen &ast; före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen &amp;ast; (asterisk) före objekten i listan. Till exempel:
 
     `* item in list`
 
