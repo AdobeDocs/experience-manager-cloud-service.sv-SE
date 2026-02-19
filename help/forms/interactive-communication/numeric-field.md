@@ -4,23 +4,19 @@ description: Komponenten Numeric Field i Interactive Communication Editor i AEM 
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 1f6bda20-7bce-4cfd-9985-f8b49d6e50e0
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
-
 
 # Numerisk fältkomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -131,5 +127,3 @@ Författare kan placera numeriska fält i layoutbehållare eller delformulär oc
 - Enhetligt utseende och typografi som överensstämmer med varumärkesriktlinjerna.
 
 Komponenten **Numeriskt fält** i redigeraren för interaktiv kommunikation är ett exakt och tillförlitligt verktyg för sifferbaserad datainsamling. Tack vare effektiva formaterings-, synlighets- och databindningsfunktioner kan du säkerställa att numeriska data är korrekt inlästa och sömlöst integrerade i digitala formulär. När formuläret är formaterat och konfigurerat på rätt sätt blir det betydligt enklare att använda formuläret och dessutom blir informationen mer korrekt.
-
-

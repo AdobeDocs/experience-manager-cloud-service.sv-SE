@@ -4,23 +4,19 @@ description: Med Line Component i Interactive Communication Editor i AEM Forms k
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 1ff5ac22-d8c8-4109-8334-217dbc239f1f
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
-
 
 # Line Component in Interactive Communication Editor
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -113,5 +109,3 @@ Line-komponenten används ofta för att:
 - Dölj onödiga linjer för att undvika störning samtidigt som du behåller mellanrummet i layouten.
 
 Line-komponenten i redigeraren för interaktiv kommunikation är ett enkelt men kraftfullt designelement. När det används strategiskt förbättrar det den visuella strukturen i kommunikationsdokument, vilket hjälper användarna att navigera bättre och säkerställa en renare och mer prydlig layout.
-
-

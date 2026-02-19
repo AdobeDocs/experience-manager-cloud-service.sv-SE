@@ -7,23 +7,19 @@ role: User, Developer, Admin
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: fe99fc4ddc1e2b3bdd1b2a5b583f2b4cb681dee9
+exl-id: 127abe2a-d8cf-4488-959f-f7316a8ddc3e
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
-
 
 # Kopiera och klistra in i Interactive Communication Editor
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med funktionen Kopiera och klistra in i redigeraren för interaktiv kommunikation kan författare duplicera en befintlig interaktiv kommunikation och återanvända den i en annan mapp eller på en annan plats. Detta gör att teamen kan arbeta effektivt genom att aktivera flera varianter av ett grafikkort utan att ändra den ursprungliga versionen.
 
@@ -88,4 +84,3 @@ Efter inklistring av interaktiv kommunikation:
 - Granska databindningar och utdatakanaler efter kopiering för att säkerställa att de är korrekta.
 
 Funktionen Kopiera och Klistra in i interaktiv kommunikation förenklar återanvändning och anpassning genom att tillåta författare att duplicera befintliga konc:er och ändra dem oberoende av varandra. Det möjliggör snabbare utveckling, säkrare experimenterande och enhetlig kommunikationsleverans - utan att riskera att ändringar görs i den ursprungliga interaktiva kommunikationen.
-

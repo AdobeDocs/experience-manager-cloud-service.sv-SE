@@ -7,23 +7,19 @@ role: User, Developer, Admin
 hide: true
 index: false
 hidefromtoc: true
-source-git-commit: 7f366823e1baeda8eacd8c92fe23300d10ec828a
+exl-id: ca9917c0-d8bb-4381-afab-7ab888d992e8
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '557'
 ht-degree: 0%
 
 ---
-
 
 # Versionshantering och kommentarer i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med interaktiv kommunikation kan organisationer skapa dynamiska, datadrivna dokument för personaliserad kundkommunikation. Interactive Communication Editor ger funktioner för versionshantering, granskning och kommentarer, vilket ger bättre stöd för samarbete, styrning och kontrollerade publiceringsflöden.
 

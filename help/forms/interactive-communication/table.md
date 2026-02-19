@@ -4,23 +4,19 @@ description: Med Table Component in Interactive Communication Editor i AEM Forms
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 7db24153-549a-4c36-8cb5-ab33fda8072a
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '608'
 ht-degree: 0%
 
 ---
-
 
 # Tabellkomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -118,5 +114,3 @@ Författare kan konfigurera antalet rader och kolumner, tillämpa villkorlig syn
 - Använd standardmallar för att standardisera tabellinnehåll i olika dokument.
 
 Table Component in the IC editor är en flexibel, datavänlig komponent som har utformats för att stödja strukturerat innehåll i kommunikationen. Med anpassningsbara layoutalternativ, formateringsfunktioner och kraftfull databindning kan man presentera information på ett tydligt och effektivt sätt.
-
-

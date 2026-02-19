@@ -4,13 +4,13 @@ description: Med Create Rules in Interactive Communication Editor kan man defini
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: b2b85d1e802c7f287b875d53a9347ca07ea2b806
+exl-id: 9538ae2e-e0f5-4e85-943e-00fe99a64725
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '449'
 ht-degree: 0%
 
 ---
-
 
 # Regelredigeraren i den interaktiva kommunikationsredigeraren
 
@@ -18,11 +18,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 
 ## &#x200B;1. Inledning
@@ -110,6 +105,3 @@ Regelredigeraren används ofta för att säkerställa att formulär och kommunik
 
 
 Genom att konfigurera regler noggrant kan man skapa kommunikation som på ett intelligent sätt svarar på data och användaråtgärder - effektivisera processer, minska antalet fel och leverera en smidig, personaliserad upplevelse.
-
-
-

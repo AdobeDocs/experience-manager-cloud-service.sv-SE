@@ -4,23 +4,19 @@ description: Med Radio Button Component (Alternativknappskomponent) i Interactiv
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: fe1608f0-8d93-4b89-9dd9-849339b0a175
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '571'
 ht-degree: 0%
 
 ---
-
 
 # Alternativknappskomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -118,5 +114,3 @@ Författare kan gruppera relaterade alternativknappar tillsammans och placera de
 - Använd konsekvent mellanrum och justering för bättre visuell skärpa, särskilt i mobilanpassade layouter.
 
 Alternativknappskomponenten i redigeraren för interaktiv kommunikation är en grundläggande indatakomponent som ger ett rent, strukturerat beslutsfattande för slutanvändarna. När den konfigureras med tydliga etiketter, genomtänkta mellanrum och databindning säkerställer den tillförlitlig datainsamling och en smidigare användarupplevelse för formulär, undersökningar och arbetsflöden för introduktion.
-
-

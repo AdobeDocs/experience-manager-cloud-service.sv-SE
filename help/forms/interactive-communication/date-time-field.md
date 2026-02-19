@@ -4,23 +4,19 @@ description: Datum-/tidfältskomponent i interaktiv kommunikationsredigerare i A
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 7ac93d8c-5454-4789-a7cd-438571a9ff28
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '676'
 ht-degree: 0%
 
 ---
-
 
 # Datum-/tidfältskomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -141,4 +137,3 @@ Författare kan kombinera fältet med layoutbehållare, valideringar eller villk
 - Bind fältet till en giltig schemasökväg för att säkerställa korrekt datainhämtning och databearbetning.
 
 Date/Time Field-komponenten i Interactive Communication Editor är en kraftfull och användarvänlig komponent som effektiviserar tidsbaserad inmatning. Med rätt konfiguration av formatering, datahantering och layoutkontroller kan man skapa rena, tillförlitliga och intuitiva formulärupplevelser för både användare och backend-system.
-

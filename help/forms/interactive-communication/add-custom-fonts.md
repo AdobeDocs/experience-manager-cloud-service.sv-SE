@@ -4,23 +4,19 @@ description: Lägg till anpassade teckensnitt i den interaktiva kommunikationsre
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 0b41fd1a-737f-495f-89da-6cc2e002b424
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
-
 
 # Lägg till anpassade teckensnitt i den interaktiva kommunikationsredigeraren
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med anpassade teckensnittsfunktioner kan du förbättra utseendet och känslan i din interaktiva kommunikation genom att aktivera anpassade eller organisationsgodkända teckensnitt. Med den här funktionen kan du paketera och bädda in teckensnitt i din AEM Forms as a Cloud Service-miljö, vilket ger en enhetlig PDF-återgivning för olika enheter och plattformar.
 
@@ -36,5 +32,5 @@ Med anpassade teckensnittsfunktioner kan du förbättra utseendet och känslan i
 
 >[!NOTE]
 >
-> För detaljerade konfigurationssteg kan användare följa guiden [Använd anpassade teckensnitt](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/using-communications/use-custom-fonts)
+> För detaljerade konfigurationssteg kan användare följa guiden [Använd anpassade teckensnitt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/using-communications/use-custom-fonts)
 >När du är klar med stegen och har kört pipeline kan du använda anpassade teckensnitt direkt i redigeraren för interaktiv kommunikation.

@@ -4,23 +4,19 @@ description: Med Rectangle Component i Interactive Communication Editor i AEM Fo
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: d2af7706-2b2a-4a40-a4a4-375b5f2b08fb
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
-
 
 # Komponenten Rectangle i Interactive Communication Editor
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -112,5 +108,3 @@ Rektanglar kan kombineras med andra layoutelement som delformulär eller behåll
 - Dölj rektanglar om de bara behövs för designändamål vid redigering, men inte för slutresultatet.
 
 Rektangelkomponenten är ett icke-interaktivt men kraftfullt verktyg i IC Editor. När de är formaterade och placerade effektivt förbättrar de layoutens precision, visuella flöde och användarupplevelse utan att databindningen eller interaktiviteten blir mer komplex.
-
-

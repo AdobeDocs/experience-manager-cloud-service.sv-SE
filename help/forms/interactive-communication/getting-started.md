@@ -4,23 +4,19 @@ description: Med interaktiv kommunikation kan organisationer utforma och leverer
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: d24e88b545a17e50c1e80e1aedbb1d0adf55f609
+exl-id: b30b3634-0457-4c29-84d3-78f1429b98d1
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
-
 
 # Komma igång med redigeraren för interaktiv kommunikation
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med **Interactive Communication (IC) Editor** i Adobe Experience Manager (AEM) Forms kan organisationer utforma och leverera personaliserade, datadrivna dokument som kontoutdrag, fakturor och brev i digitala och tryckta kanaler. Den här guiden ger dig en översikt över hur du kommer igång - från introduktion till navigering i gränssnittet för IC Editor.
 
@@ -33,7 +29,7 @@ Om du vill använda interaktiv kommunikation måste du kontrollera att AEM Forms
 
 ### Verifiera webbläsaren
 
-Om du vill veta vilka webbläsare och klientplattformar som stöds kan du följa den länkade artikeln [Klientplattformar som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/overview/supported-platforms)
+Om du vill veta vilka webbläsare och klientplattformar som stöds kan du följa den länkade artikeln [Klientplattformar som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/overview/supported-platforms)
 
 >[!NOTE]
 >
@@ -42,14 +38,14 @@ Om du vill veta vilka webbläsare och klientplattformar som stöds kan du följa
 
 ### Konfigurera användarroller och behörigheter
 
-Åtkomsten till IC Editor-funktioner styrs av [användarroller i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions). Nedan följer de viktigaste rollerna för att skapa och hantera interaktiv kommunikation:
+Åtkomsten till IC Editor-funktioner styrs av [användarroller i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions). Nedan följer de viktigaste rollerna för att skapa och hantera interaktiv kommunikation:
 
 | **Roll** | **Beskrivning** | **Nyckelbehörigheter** |
 | --------------------- | ---------------------------------------------------------- | -------------------------------------------- |
 | **Formulärförfattare** | Skapa och redigera interaktiv kommunikation. | Skapa, redigera, förhandsgranska och publicera IC:er. |
 | **Mallförfattare** | Utformar återanvändbara mallar för interaktiv kommunikation. | Skapa och lås mallar, definiera layouter. |
 | **Administratör** | Hanterar användaråtkomst, behörigheter och konfigurationer. | Tilldela roller, hantera mallar, publicera konc. |
-| **FDM-författare** | [Skapar och hanterar FDM (Form Data Models)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models) för dataintegrering. | Skapa, redigera och konfigurera datakällor och modeller. |
+| **FDM-författare** | [Skapar och hanterar FDM (Form Data Models)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models) för dataintegrering. | Skapa, redigera och konfigurera datakällor och modeller. |
 
 >[!NOTE]
 >

@@ -4,23 +4,19 @@ description: PDF Preview in Interactive Communication Editor with Different Data
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 9adc7a5669d8bf1e64cc93998cb2f91ffa9d3dd6
+exl-id: 17b3fe2b-6a1d-4fe2-9a92-a55a50400824
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
-
 
 # PDF Preview in Interactive Communication Editor
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med funktionen PDF Preview kan man förhandsgranska interaktiv kommunikation på tre olika sätt: utan data, med lokala JSON-baserade data eller med exempeldata från den konfigurerade datamodellen.
 
@@ -50,7 +46,7 @@ Förgranska interaktiv kommunikation utan data, lokala data eller exempeldata fr
 
 +++&#x200B;2. Förhandsgranska med lokala JSON-data
 
-2.1. Förbered en strukturerad JSON-fil. Som referens kan du kopiera exempeldata från JSON-schemat [(FDM)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model) som används för kommunikationen.
+2.1. Förbered en strukturerad JSON-fil. Som referens kan du kopiera exempeldata från JSON-schemat [(FDM)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/work-with-form-data-model) som används för kommunikationen.
 
 2.2. Gå till **PDF Preview** > Använda lokala data i IC Editor.
 
@@ -69,4 +65,3 @@ Förgranska interaktiv kommunikation utan data, lokala data eller exempeldata fr
 ![Sök efter IC Docu](/help/forms/interactive-communication/assets/datamodel.png)
 
 +++
-

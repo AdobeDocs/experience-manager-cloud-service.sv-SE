@@ -4,23 +4,19 @@ description: Textfältskomponenten i Interactive Communication Editor i AEM Form
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 6bb41cf2-8a9d-499c-979b-b0ee7d092e11
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
-
 
 # Textfältskomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -133,5 +129,3 @@ Författare kan placera fältet i delformulär eller layoutstödraster för just
 - Bind direkt till datamodellen när det är möjligt för enklare underhåll.
 
 Textfältskomponenten i IC-redigeraren är en mångsidig byggsten som effektiviserar datainhämtningen. När den konfigureras noggrant, med välvald typografi, tydliga etiketter, korrekt validering och solid databindning, ger den en sömlös, användarvänlig upplevelse och tillförlitliga data för bearbetning längre fram i kedjan.
-
-

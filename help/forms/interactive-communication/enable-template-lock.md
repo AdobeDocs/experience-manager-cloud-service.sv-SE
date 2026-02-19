@@ -4,23 +4,19 @@ description: Malllås i den interaktiva kommunikationsredigeraren gör det möjl
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 9adc7a5669d8bf1e64cc93998cb2f91ffa9d3dd6
+exl-id: 7c7461fe-a5d7-481e-b5f5-27fd5bcde2d0
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
-
 
 # Lås mall i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -63,7 +59,7 @@ När det används kan författare inte:
 Följ stegen nedan för att använda innehålls- eller layoutlås i mallen för interaktiv kommunikation:
 
 1. Öppna din mall
-Öppna eller skapa en mall, följ guiden [Skapa en interaktiv kommunikationsmall](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/interactive-communication/overview/create-interactive-communication-template)
+Öppna eller skapa en mall, följ guiden [Skapa en interaktiv kommunikationsmall](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/interactive-communication/overview/create-interactive-communication-template)
 
 1. Välj komponenten
 Klicka på den komponent (textruta, bild eller delformulär) som du vill begränsa.

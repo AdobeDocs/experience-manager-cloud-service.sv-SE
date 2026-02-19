@@ -4,23 +4,19 @@ description: Med Datumfältsobjekt i Interactive Communication Editor i AEM Form
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: f8cc1dd1-3b55-4cd9-b051-959c88195eb4
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
-
 
 # Datumfältsobjekt i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -139,5 +135,3 @@ Författare kan placera datumfältet i layoutbehållare eller delformulär och k
 - Dölj ej relevanta datumfält dynamiskt med synlighetsregler.
 
 Objektet **Datumfält** i redigeraren för interaktiv kommunikation är ett kraftfullt verktyg för att hämta tidskänsliga data med precision och enkelhet. När den är utformad med omsorg och kopplad till meningsfulla datasökvägar har den stöd för en sömlös användarupplevelse och effektiv bearbetning av tidsbaserade poster.
-
-

@@ -4,23 +4,19 @@ description: Med import och export av interaktiv kommunikation kan användarna s
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: 9adc7a5669d8bf1e64cc93998cb2f91ffa9d3dd6
+exl-id: 7e328932-070d-4eb3-8176-500ef31581be
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
-
 
 # Importera och exportera interaktiv kommunikation
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 Med import- och exportfunktionen i Interactive Communication (IC) kan man smidigt migrera, återanvända och hantera kommunikation i olika miljöer. Med den kan du exportera en interaktiv kommunikation (IC) tillsammans med tillhörande fragment och datamodeller från en miljö och importera den till en annan, vilket ger enhetlighet och minskar dubbelarbetet under driftsättningen.
 

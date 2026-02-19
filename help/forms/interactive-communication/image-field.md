@@ -4,23 +4,19 @@ description: Image Field Component in Interactive Communication Editor in AEM Fo
 products: SG_EXPERIENCEMANAGER/Cloud Service/FORMS
 feature: Interactive Communication
 role: User, Developer, Admin
-source-git-commit: e651869132a232db577e94946c082c46eea26bb3
+exl-id: 0af73ae2-fe1d-4763-ad4d-2934691cb9e1
+source-git-commit: cdaceaabb8eeeec931b1897e1161f408606540b9
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
-
 
 # Bildfältskomponent i interaktiv kommunikationsredigerare
 
 >[!NOTE]
 >
 > Funktionen för interaktiv kommunikation ingår i programmet för tidig anmälan. Skicka ett e-postmeddelande från din arbetsadress till `aem-forms-ea@adobe.com` för att begära åtkomst.
-
->[!IMPORTANT]
->
-> **Dokumentation som kan ändras**: Det här snabbbiblioteket testas för närvarande mot produkten och kan komma att uppdateras och revideras. Frågar, exempel och bästa metoder kan ändras i takt med att Forms Experience Builder fortsätter att utvecklas under det program som antagits tidigt.
 
 ## &#x200B;1. Inledning
 
@@ -111,7 +107,3 @@ Författare kan placera fältet i delformulär eller layoutbehållare för juste
 - Bind fältet till en meningsfull schemasökväg om det integreras med backend-objektet
 
 Bildfältskomponenten i den interaktiva kommunikationsredigeraren är en mångsidig komponent som förbättrar formulärinteraktiviteten genom att aktivera visuella innehållsöverföringar. När den har utformats med format, validering och databindning har den stöd för en smidig användarupplevelse och effektiv datainhämtning för bildbaserade överföringar.
-
-
-
-
