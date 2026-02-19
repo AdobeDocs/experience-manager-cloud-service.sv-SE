@@ -4,7 +4,7 @@ description: Aktuell information om underhållsversionen av  [!DNL Adobe Experie
 exl-id: eee42b4d-9206-4ebf-b88d-d8df14c46094
 feature: Release Information
 role: Admin
-source-git-commit: a58225edb8ca49db9743db6c9c5b08c786fa0144
+source-git-commit: c1e175128ab6e4b483e3940d9bd86a06540ef40f
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
@@ -18,9 +18,9 @@ I följande avsnitt beskrivs den tekniska versionsinformationen för den aktuell
 
 ## Version 24464 {#release-24464}
 
-Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 24464, som offentliggjordes den 17 februari 2026. Den tidigare underhållsversionen var version 24288.
+Nedan sammanfattas de kontinuerliga förbättringarna av underhållsutgåva 24464, som offentliggjordes den 18 februari 2026. Den tidigare underhållsversionen var version 24288.
 
-Funktionsaktiveringen i 2026.2.0 innehåller alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
+Funktionsaktiveringen i 2026.2.0 innehåller alla funktioner som finns i den här underhållsversionen. Mer information finns i [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap).
 
 ### Förbättringar {#enhancements-24464}
 
@@ -106,9 +106,9 @@ AEM as a Cloud Service strävar efter att optimera säkerheten och prestandan f�
 | Teknik | Version | Länk |
 |---|---|---|
 | AEM Oak | 1.90.0 | [Oak 1.90.0 API](https://www.javadoc.io/doc/org.apache.jackrabbit/oak-api/1.90.0/index.html) |
-| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 &#x200B;](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
+| AEM SLING API | 2.27.6 | [API:t för Apache Sling 2.27.6 ](https://www.javadoc.io/doc/org.apache.sling/org.apache.sling.api/latest/index.html) |
 | AEM HTL | 1.4.28-1.4.0 | [Språkspecifikation för HTML-mall](https://github.com/adobe/htl-spec) |
 | Apache HTTP-server | 2.4.65 | [Apache HTTP 2.4.65](https://apache.googlesource.com/httpd/+/refs/tags/2.4.65/CHANGES) |
 | Grundläggande komponenter i AEM | 2.30.4 | [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) |
-| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
+| Node.js | 14 (standard) | [Node.js-versioner som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines#node-versions) |
 
