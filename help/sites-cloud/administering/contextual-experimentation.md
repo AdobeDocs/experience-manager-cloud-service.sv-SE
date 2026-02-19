@@ -5,7 +5,7 @@ feature: Administering
 role: Admin
 badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 420f8d5e-27f9-4081-b174-b2d7752779f7
-source-git-commit: eed3a4866e3018b2ff6bc6e5c201523ab271c35f
+source-git-commit: ef20e6df5e19596ea742e6ac267b1f37b7517cfa
 workflow-type: tm+mt
 source-wordcount: '1805'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Experimentera är att testa webbplatsens design, funktioner och kod för att förbättra prestandan och göra webbplatsen effektivare och smidigare. Detta uppnås genom att ändra antingen innehåll eller funktionalitet, jämföra resultaten med en tidigare version och välja de förbättringar som har mätbara effekter.
 
-När det är rätt gjort är det ett kraftfullt mönster för att förbättra konverteringar, engagemang och besökarupplevelse. I allmänhet finns det ett par saker du bör undvika när du vill använda metoden:
+När det görs på rätt sätt är det ett kraftfullt mönster för att förbättra konverteringar, engagemang och besökarupplevelse. I allmänhet finns det ett par saker du bör undvika när du vill använda metoden:
 
 * **För lite**: De flesta företag experimenterar inte tillräckligt och när de gör det experimenterar de med för lite trafik för att få meningsfulla resultat.
 * **För långsamt**: Många experimentramverk gör webbplatsen så långsam att de potentiella nya konverteringarna inte kan kompensera för den trafik som går förlorad och studsar på grund av långsam återgivning.
@@ -33,9 +33,9 @@ För webbplatser som körs på Adobe Experience Manager finns det ett **plugin-p
 
 ## Innan du börjar {#before-start}
 
-Plugin-programmet för experimenterande används i kontexten för [Edge Delivery Services](/help/edge/overview.md) så du behöver ett Github-konto, en innehållsdatabas som SharePoint eller Google Drive, och du behöver även [AEM Sidekick](https://www.aem.live/docs/sidekick). Se även självstudiekursen [Komma igång - Universal Editor Developer Tutorial &#x200B;](https://www.aem.live/developer/tutorial) och [Getting Started - Developer Tutorial](https://www.aem.live/developer/tutorial).
+Plugin-programmet för experimenterande används i kontexten för [Edge Delivery Services](/help/edge/overview.md) så du behöver ett Github-konto, en innehållsdatabas som SharePoint eller Google Drive, och du behöver även [AEM Sidekick](https://www.aem.live/docs/sidekick). Se även självstudiekursen [Komma igång - Universal Editor Developer Tutorial ](https://www.aem.live/developer/tutorial) och [Getting Started - Developer Tutorial](https://www.aem.live/developer/tutorial).
 
-När du har konfigurerat allt kan du **titta på den här videon** med titeln [Direktexperiment](https://business.adobe.com/se/products/experience-manager/sites/testing-optimization.html) för att få en kort demonstration om hur plugin-programmet för experiment fungerar.
+När du har konfigurerat allt kan du **titta på den här videon** med titeln [Direktexperiment](https://business.adobe.com/products/experience-manager/sites/testing-optimization.html) för att få en kort demonstration om hur plugin-programmet för experiment fungerar.
 
 ## Vanliga termer {#frequently-used-terms}
 
@@ -50,7 +50,7 @@ Innan du följer resten av guiden för att konfigurera ditt första experiment f
 
 När du skapar ett experiment använder du i allmänhet en befintlig sida som kontrollsida. Sedan skapar du en utmanarsida som ersätter kontrollsidan för några av dina besökare. På utmanarsidan kan du testa olika saker som innehållsvarianter, olika sidlayouter, call-to-action (CTA) och så vidare. Du kan konfigurera dessa experimentella varianter genom att lägga till metadataparametrar på kontrollsidan (se nedan).
 
-Tjänsten [Operational Telemetry &#x200B;](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md) samlar sedan in data, till exempel antalet besökare på kontrollsidan jämfört med utmanarsidan. Sedan använder du dessa data för att välja de nödvändiga förbättringarna för din webbplats. Så länge du håller dig till det språk som webbplatsen är skriven på och använder den befintliga blockfunktionen bör du kunna skapa en experimentvariant och skicka den till produktion på några minuter.
+Tjänsten [Operational Telemetry ](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md) samlar sedan in data, till exempel antalet besökare på kontrollsidan jämfört med utmanarsidan. Sedan använder du dessa data för att välja de nödvändiga förbättringarna för din webbplats. Så länge du håller dig till det språk som webbplatsen är skriven på och använder den befintliga blockfunktionen bör du kunna skapa en experimentvariant och skicka den till produktion på några minuter.
 
 >[!NOTE]
 >Tänk på att plugin-programmet inte använder, och att det inte innehåller, några slutanvändardata som kan leda till att de identifieras. Inget slutanvändardeltagande eller cookie-samtycke krävs när standardkonfigurationen som använder tjänsten [Operational Telemetry i AEM as a Cloud Service](/help/sites-cloud/administering/operational-telemetry-for-aem-as-a-cloud-service.md) används.
