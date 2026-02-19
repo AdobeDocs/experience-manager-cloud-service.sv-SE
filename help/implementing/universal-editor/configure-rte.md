@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar RTF-redigeraren i Universell redigerar
 feature: Developing
 role: Admin, Developer
 exl-id: 350eab0a-f5bc-49c0-8e4d-4a36a12030a1
-source-git-commit: e1773cbc2293cd8afe29c3624b29d1e011ea7e10
+source-git-commit: 39137052e9fa409f7f5494be53fa7693aaa60b17
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---
@@ -87,9 +87,29 @@ Verktygsfältskonfigurationen styr vilka redigeringsalternativ som är tillgäng
 }
 ```
 
-## Åtgärdskonfiguration {#actions}
+## Åtgärdskonfiguration {#action}
 
 Med åtgärdskonfigurationen kan du anpassa beteendet och utseendet för enskilda redigeringsåtgärder. Det här är de tillgängliga avsnitten.
+
+### Alternativ för vanliga åtgärder {#common-action-options}
+
+De flesta åtgärder har stöd för följande vanliga alternativ:
+
+* `shortcut?`: string - Åsidosätter standardkortkommandot för åtgärden (om det finns något)
+* `label?`: string - Åsidosätter etiketten som används för åtgärden i användargränssnittet
+* `hideInline?`: boolesk - När `true` döljs den här åtgärden i kontextfältet (textbundet) för RTE-redigeraren
+
+```json
+{
+  "actions": {
+    "bold": {
+      "label": "Bold",
+      "shortcut": "Mod-B",
+      "hideInline": true
+    }
+  }
+}
+```
 
 ### Formatera funktionsmakron {#format}
 
@@ -134,6 +154,56 @@ Liståtgärder har stöd för innehållsbrytning för att styra HTML-strukturen.
   }
 }
 ```
+
+### Tabellåtgärder {#table-actions}
+
+Tabellåtgärder har stöd för innehållsbrytning som styr HTML-strukturen i tabellceller:
+
+```json
+{
+  "actions": {
+    "table": {
+      "wrapInParagraphs": false, // <td>content</td> (default)
+      "shortcut": "Mod-Alt-T",   // Custom shortcut
+      "label": "Insert Table"    // Custom label
+    }
+  }
+}
+```
+
+### Tabellkonfigurationsalternativ {#table-configuration-options}
+
+* `wrapInParagraphs`: `false` (standard) - Tabellceller innehåller ej radbrutet textinnehåll
+* `wrapInParagraphs`: `true` - Tabellceller radbryter innehåll i stycketaggar
+
+Exempel:
+
+När `wrapInParagraphs`: `false`:
+
+```html
+<!-- Single line -->
+<td>Cell content</td>
+
+<!-- Multiple paragraphs get <br> separation -->
+<td>Line 1<br />Line 2</td>
+```
+
+När `wrapInParagraphs`: `true`:
+
+```html
+<!-- Single paragraph -->
+<td><p>Cell content</p></td>
+
+<!-- Multiple paragraphs preserved -->
+<td>
+  <p>Line 1</p>
+  <p>Line 2</p>
+</td>
+```
+
+>[!NOTE]
+>
+>När stycken delas upp (`wrapInParagraphs`: `false`) infogar saneringsverktyget automatiskt `<br>` -taggar mellan flera stycken för att bevara synliga radbrytningar. Detta följer HTML standarder och vanliga praxis för alla större textredigerare.
 
 ### Länkåtgärder {#link}
 
@@ -487,3 +557,20 @@ Kortkommandon använder formatet `Mod-Key` där:
 
 * `Mod` = `Cmd` på Mac, `Ctrl` på Windows/Linux
 * Exempel: `Mod-B`, `Mod-Shift-8`, `Mod-Alt-1`
+
+## HTML stöds inte {#unsupported-html}
+
+Som standard tas okända HTML-taggar bort när de tolkas av redigeraren. Om du vill bevara dem väljer du att gå in via konfigurationsalternativet `unsupportedHtml`:
+
+```javascript
+const rteConfig = {
+  unsupportedHtml: true, // preserve unknown HTML tags (default: false)
+};
+```
+
+| Värde | Beteende |
+|---|---|
+| `false` (standard) | Okända HTML-taggar tas bort under parsning. |
+| `true` | Okända HTML-taggar placeras i en anpassad blocknod som inte stöds så att innehållet kan skickas vidare på ett säkert sätt. |
+
+När det här alternativet är aktiverat återges noder som inte stöds med en `rte-unsupported-block`-klass. Konsumentappar bör tillhandahålla formateringen för den här klassen (t.ex. border, padding, background). Taggetiketten i blocket använder `rte-unsupported-label`, som också kan anpassas.

@@ -5,9 +5,9 @@ exl-id: 15fbf5bc-2e30-4ae7-9e7f-5891442228dd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 689daf210bc0d867a0cafad32abac4aa178927ff
+source-git-commit: 3a76f7dde028eb2ba50a7bca344b347d585cc9ea
 workflow-type: tm+mt
-source-wordcount: '2838'
+source-wordcount: '2902'
 ht-degree: 0%
 
 ---
@@ -101,23 +101,30 @@ Tryck eller klicka på **Avbryt** eller **Klar** för att ignorera eller spara �
 
 RTF-redigeraren i Universal Editor gör att författaren kan använda standardtextformatering. Som standard är följande alternativ tillgängliga.
 
-* Stycke (h1, h2, h3 osv.)
-* Fet
-* Kursiv
-* Understruken
-* Upphöjd
-* Nedsänkt
-* Punktlista
-   * Använd tabbtangenten för att dra in och Skift+tabbtangenten för att dra ut
-* Ordnad lista
-   * Använd tabbtangenten för att dra in och Skift+tabbtangenten för att dra ut
-* Länk
-* Bryt länk
-* Bild
-* Klistra in som text
-* Ta bort all formatering
-
-Befintliga tabeller kan redigeras med RTE, men nya tabeller kan inte skapas.
+* **Styckeformat**
+   * Stycke, h1-h6, kod
+* **Fet**
+* **Kursiv**
+* **Understruken**
+* **Genomstruken**
+* **Upphöjd**
+* **Nedsänkt**
+* **Punktlista**
+   * Använd tabbtangenten för att dra in och Skift+tabbtangenten för att dra ut.
+* **Numrerad lista**
+   * Använd tabbtangenten för att dra in och Skift+tabbtangenten för att dra ut.
+* **Länk**
+   * Ange en URL-adress eller använd Content Browser för att välja en sökväg i AEM.
+* **Bryt länk**
+   * Ta bort länk från markerad text.
+* **Bild**
+   * Ange en URL eller använd [resursväljaren](/help/assets/overview-asset-selector.md#using-asset-selector) för att välja en resurs från AEM.
+* **Tabell**
+   * Använd listrutan för att infoga en ny tabell med det markerade antalet kolumner och rader eller infoga och ta bort nya kolumner/rader.
+* **Klistra in som text**
+   * Ta bort formatering från text i Urklipp innan du klistrar in den i Universell redigerare.
+* **Ta bort all formatering**
+   * Ta bort alla formateringsalternativ från den markerade texten.
 
 RTE kan konfigureras för att dölja alternativ eller visa ytterligare alternativ beroende på författarens behov. Mer information finns i dokumentet [Configuring the RTE for the Universal Editor](/help/implementing/universal-editor/configure-rte.md).
 
@@ -146,7 +153,7 @@ Om du markerar ett fält som är relaterat till ett innehållsfragment läses in
 
 Ändringarna sparas automatiskt när fokus lämnar det redigerade fältet på egenskapspanelen.
 
-Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** &#x200B;](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
+Om du vill redigera ditt innehållsfragment i [redigeraren för innehållsfragment](/help/sites-cloud/administering/content-fragments/authoring.md) i stället trycker eller klickar du på knappen [**Öppna i CF-redigeraren** ](/help/sites-cloud/authoring/universal-editor/navigation.md#edit) på egenskapspanelen.
 
 >[!TIP]
 >
@@ -250,7 +257,7 @@ Komponenterna ordnas om både i innehållsträdet och i redigeraren.
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren.
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 * Ångra och göra om kan göras för redigeringar som görs i sitt sammanhang, redigeringar som görs via panelen Egenskaper samt för att lägga till, duplicera, flytta och ta bort block.
 * Ångra och gör om är begränsat till den aktuella webbläsarsessionen.
@@ -266,7 +273,7 @@ Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implem
 Kopiera och klistra in kan finnas på samma webbläsarflik eller mellan webbläsarflikar, förutsatt att flikarna redan är öppna. Du kan inte kopiera ett objekt och sedan öppna en ny webbläsarflik för att klistra in det.
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 1. Markera en komponent i redigeraren eller i innehållsträdet.
 1. Ikonen **Kopiera** visas på egenskapspanelen i [.](/help/sites-cloud/authoring/universal-editor/navigation.md#properties-panel) Tryck eller klicka på den.

@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.02.13
-description: Detta är versionsinformationen för version 2026.02.13 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.02.19
+description: Detta är versionsinformationen för version 2026.02.19 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 33239a1725477d3325dc3245bcc99c438eb350c1
+source-git-commit: 39137052e9fa409f7f5494be53fa7693aaa60b17
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 1%
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.02.13 {#release-notes}
+# Versionsinformation om Universal Editor 2026.02.19 {#release-notes}
 
-Det här är versionsinformationen för den 13 februari 2026-versionen av Universal Editor.
+Det här är versionsinformationen för den 19 februari 2026-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,8 +26,14 @@ Det här är versionsinformationen för den 13 februari 2026-versionen av Univer
 
 ## Nyheter {#what-is-new}
 
-* Dynamiska medialänkar stöds nu.
-* Schema och datatyp för att skapa block med [Dokumentredigering](https://docs.da.live/developers/reference/universal-editor) är nu tillgängliga.
+* RTE har förbättrats.
+   * [Det finns nu stöd för att dölja verktygsfältsobjekt i kontext-RTE](/help/implementing/universal-editor/configure-rte.md#common-action-options).
+   * [Det finns nu stöd för figursättning av text i tabeller med stycken ](/help/implementing/universal-editor/configure-rte.md#table-actions).
+   * [HTML-taggar](/help/implementing/universal-editor/configure-rte.md#unsupported-html) som inte stöds kan nu bevaras av RTE.
+   * RTE-logik används nu från en separat fil.
+   * [Tabeller kan nu skapas](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options) och redigeras med RTE.
+* Om ingen etikett anges används komponentens rubrik från komponentdefinitionen.
+* `setEditorMode` är nu tillgängligt via tillägg.
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -37,6 +43,7 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* Ett problem med felaktiga URL:er för videoklipp har åtgärdats.
-* Om du skapar flera komponenter med samma namn returneras inte längre 409.
-* Arbetsytan utan arbetsyta består nu av efterföljande uppdateringar av ett fält i behållaren.
+* RTE-slutpunkter används nu för redigeraren på plats.
+* När du redigerar kapslade fält skrivs peer-poster från dessa strukturer inte längre över.
+* Obligatoriska RTE-fält kan inte längre sparas som tomma.
+* Formatering på plats används inte längre felaktigt när länkar läggs till efter formatering.
