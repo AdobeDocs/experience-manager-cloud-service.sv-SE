@@ -28,7 +28,7 @@ Det här är versionsinformationen för den 19 februari 2026-versionen av Univer
 
 * RTE har förbättrats.
    * [Det finns nu stöd för att dölja verktygsfältsobjekt i kontext-RTE](/help/implementing/universal-editor/configure-rte.md#common-action-options).
-   * [Det finns nu stöd för figursättning av text i tabeller med stycken ](/help/implementing/universal-editor/configure-rte.md#table-actions).
+   * [Det finns nu stöd för figursättning av text i tabeller med stycken &#x200B;](/help/implementing/universal-editor/configure-rte.md#table-actions).
    * [HTML-taggar](/help/implementing/universal-editor/configure-rte.md#unsupported-html) som inte stöds kan nu bevaras av RTE.
    * RTE-logik används nu från en separat fil.
    * [Tabeller kan nu skapas](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options) och redigeras med RTE.
