@@ -37,7 +37,7 @@ Så här skapar du ett interaktivt kommunikationsfragment:
 
 1. När du väljer Interactive Communication Fragment visas en skärm där du definierar viktiga fragmentdetaljer som titel, namn, beskrivning, datamodell (en strukturerad representation av backend-data) och taggar.
 
-   Mer information finns i [Konfigurationshandboken för datamodellen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models).
+   Mer information finns i [Konfigurationshandboken för datamodellen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/use-form-data-model/create-form-data-models).
 
    ![Sök efter IC Docu](/help/forms/interactive-communication/assets/createfrgmnt.png)
 
