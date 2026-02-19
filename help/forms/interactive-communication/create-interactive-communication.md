@@ -90,4 +90,4 @@ Börja bygga interaktiv kommunikation för att effektivisera arbetsflödena och 
 ## Nästa steg
 
 [Skapa en interaktiv kommunikationsmall](/help/forms/interactive-communication/create-interactive-communication-template.md)
-[ Skapa ett interaktivt kommunikationsfragment ](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
+[&#x200B; Skapa ett interaktivt kommunikationsfragment &#x200B;](/help/forms/interactive-communication/create-interactive-communication-fragment.md)
