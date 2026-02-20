@@ -5,9 +5,9 @@ mini-toc-levels: 1
 exl-id: a2d56721-502c-4f4e-9b72-5ca790df75c5
 feature: Release Information
 role: Admin
-source-git-commit: 087c29ddd1dcfe0fc4bda7428d71a5e6157e1325
+source-git-commit: b42a713bb66d55c991dc1a341987d79b083c6ccd
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '1888'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I följande avsnitt beskrivs versionsinformationen för den aktuella (senaste) v
 >
 >Härifrån kan du navigera till versionsinformation för tidigare versioner som 2023 eller 2024.
 >
->Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
+>Ta en titt på [Experience Manager Releases Roadmap](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/update-releases-roadmap) om du vill veta mer om kommande funktionsaktiveringar för [!DNL Experience Manager] as a Cloud Service.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten från januari 2026 om du vill se en sammanfattning av funktioner som lagts till i version 2026.1.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3479793/?captions=swe&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3479789/?quality=12)
 
 
 ## AEM Beta-program {#aem-beta-programs}
@@ -55,18 +55,20 @@ Genom att få tidig tillgång till funktioner som Adobe utvecklar kan kunder och
 **Aktuella betaprogram**
 I följande avsnitt visas aktiva beta- och Utforskarprogram.
 
-### Agenter i AEM (Utforskarprogrammet) {#agents-in-aem-beta-program}
+<!--
+### Agents in AEM (Explorer program) {#agents-in-aem-beta-program}
 
-Få snabb tillgång till kraftfulla nya AEM-funktioner för produktion, styrning, optimering, upptäckt och utveckling. Din feedback är direkt till form för Adobe färdplan och slutfunktioner. Mer information finns i [Översikt över agenter i AEM](/help/ai-in-aem/agents/overview.md).
+Gain early access to powerful, new AEM agentic capabilities across production, governance, optimization, discovery, and development. Your feedback directly shapes Adobe's roadmap and final features. See [Overview of Agents in AEM](/help/ai-in-aem/agents/overview.md) to learn more.
 
-Programmet varar normalt 4-6 veckor, men kan anpassas så att det är flexibelt att du aktivt kan delta.
+This program typically lasts 4-6 weeks, but can be tailored to be flexible around your ability to actively participate. 
 
-Om du vill anmäla dig till att delta i det här programmet skickar du ett e-postmeddelande till [aemagentsteam@adobe.com](mailto:aemagentsteam@adobe.com) med följande information så långt det är möjligt:
+To opt in to participate in this program, email [aemagentsteam@adobe.com](mailto:aemagentsteam@adobe.com) and include the following details to the extent possible:
 
-* Namn och Adobe ID på gruppmedlemmar som aktivt kommer att använda agenter.
-* Visa en lista över specifika agenter som du eller ditt team vill använda. Eller säg bara &quot;Alla agenter&quot;.
+* Names and Adobe ID's of team members who will actively use agents.
+* List Specific agents that you or your team will want to use. Or simply say "All Agents."
 
-Kunder som valts ut att delta meddelas direkt av Adobe. Deltagandet är beroende av vad som gäller, inklusive kundlicenser och begränsad programkapacitet. Även om inte alla förfrågningar till att börja med kan hanteras, kan ytterligare kunder övervägas i framtida betaversioner.
+Customers selected for participation will be notified directly by Adobe. Participation is subject to eligibility considerations, including customer licensing and limited program capacity. While not all requests can be accommodated initially, additional customers may be considered in future beta waves.
+-->
 
 ### AEM Foundation (Beta-program) {#aem-foundation-beta-programs}
 
@@ -103,11 +105,11 @@ Mer information finns i AI-sökning i [Assets-vyn](/help/assets/search-assets-vi
 
 **Desktop App 3.0.1, version**
 
-[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/sv/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
+[Skrivbordsapp 3.0.1 (20 december 2025)](https://experienceleague.adobe.com/en/docs/experience-manager-desktop-app/using/release-notes) förbättrar tillförlitlighet, prestanda och stabilitet i viktiga arbetsflöden. Den här versionen ger konsekvent namngivning av mappar genom att åtgärda synkroniseringsproblem med AEM Author, tillåter oavbruten användning av appen vid aktiva överföringar, förbättrar användargränssnittets svarstider genom asynkron bearbetning, optimerar stora filöverföringar med sidnumrering och löser stabilitetsproblem som Author server startar om och kraschar vid stora mappöverföringar och nedladdningar.
 
 **Adobe Asset Link CEP 2026.01.0**
 
-[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
+[Adobe Asset Link CEP 2026.01.0](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) introducerar ett nytt alternativ för länkar om saknade länkar i InDesign som automatiskt länkar om andra saknade resurser från samma AEM-mapp. Funktionen matchar resurser baserat på filnamn, vilket avsevärt minskar den manuella ansträngningen vid återställning av brutna länkar.
 
 
 ## [!DNL Experience Manager Forms] som en [!DNL Cloud Service] {#forms}
@@ -270,11 +272,11 @@ Mejla [aemcs-java-adopter@adobe.com](mailto:aemcs-java-adopter@adobe.com) för m
 
 #### Utökad APM (Application Performance Monitoring) (Alpha-program) {#apm-alpha}
 
-AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
+AEM Cloud-tjänsten har för närvarande stöd för [New Relic One](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/user-access-new-relic) som tillhandahålls av Adobe och kundhanterade [Dynatrace](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/dynatrace), vilket gör den observerbar. När vi utforskar stöd för ytterligare APM-alternativ kan du skicka ett e-postmeddelande till [aemcs-apm-beta@adobe.com](mailto:aemcs-apm-beta@adobe.com) med den leverantör eller teknik du föredrar, tillsammans med användningsexempel.
 
 ## [!DNL Experience Manager] stödlinjer {#guides}
 
-Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/sv/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
+Du hittar en fullständig lista över nya och förbättrade funktioner i den senaste utgåvan av Adobe Experience Manager Guides [här](https://experienceleague.adobe.com/en/docs/experience-manager-guides/using/release-info/aem-guides-releases-roadmap).
 
 ## Cloud Manager {#cloud-manager}
 
@@ -294,4 +296,4 @@ Du hittar en fullständig lista över versioner av Generera variationer [här](/
 
 ## Versionsinformation för Experience Cloud {#experience-cloud}
 
-Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/sv/docs/release-notes/experience-cloud/current).
+Du hittar information om releaser av andra Experience Cloud-program [här](https://experienceleague.adobe.com/en/docs/release-notes/experience-cloud/current).
