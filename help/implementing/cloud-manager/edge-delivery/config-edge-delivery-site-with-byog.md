@@ -29,7 +29,7 @@ Du kan konfigurera din Edge Delivery-webbplats så att koden hämtas från alla 
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet med Edge Delivery Services konfigurerat, där du vill konfigurera en Edge Delivery-webbplats så att den använder ett externt Git-svar.
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under rubriken ](/help/implementing/cloud-manager/edge-delivery/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under rubriken &#x200B;](/help/implementing/cloud-manager/edge-delivery/assets/overview.svg)Program**.
 1. Klicka på fliken **Edge Delivery** på sidan **Programöversikt**.
 1. Klicka på ikonen **Mer** i slutet av en rad vars webbplats du vill konfigurera för att använda ett externt svar i tabellen ![Edge Delivery-webbplatser](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och klicka sedan på **Hämta ett eget Git**.
 1. I dialogrutan Hämta din egen Git väljer du en Git-repo med statusen **i listrutan** Databasnamn`READY` och klickar sedan på **Bekräfta**.
