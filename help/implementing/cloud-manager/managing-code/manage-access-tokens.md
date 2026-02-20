@@ -4,9 +4,9 @@ description: Lär dig hur du visar, redigerar och tar bort åtkomsttoken som anv
 feature: Cloud Manager, Developing
 role: Admin, Developer
 exl-id: bc9f392c-61f5-4d39-972b-4c6c8f9bab4a
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2ea076c42a6406548bf48cd246227fc8ddb3a080
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '360'
 ht-degree: 0%
 
 ---
@@ -17,15 +17,9 @@ ht-degree: 0%
 
 Cloud Manager använder åtkomsttoken för att hantera databaser på externa Git-plattformar. Tidigare var det nödvändigt att återanvisa den associerade databasen om en token skulle upphöra att gälla för att fortsätta fungera.
 
-Med funktionen **Hantera åtkomsttoken** kan du nu hantera tokens mer effektivt. Du kan visa, byta namn på eller ta bort tokens som är anslutna till externa Git-providers som stöds, inklusive GitHub Enterprise, GitLab, Bitbucket och Azure DevOps.
+Nu kan du hantera tokens effektivare med funktionen **`Manage Access Tokens`**. Du kan visa, byta namn på eller ta bort tokens som är anslutna till externa Git-providers som stöds, inklusive GitHub Enterprise, GitLab, Bitbucket och Azure DevOps.
 
 Se även [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud-manager/managing-code/external-repositories.md).
-
-<!--
->[!NOTE]
->
->The features described in this article are only available through the private beta program. For more details and to sign up for the private beta, see [Bring Your Own Git](/help/implementing/cloud-manager/release-notes/current.md#gitlab-bitbucket).
--->
 
 ## Visa åtkomsttoken {#view-access-tokens}
 
@@ -60,4 +54,4 @@ Se även [Lägg till externa databaser i Cloud Manager](/help/implementing/cloud
 
    Ikonen är inaktiverad (![Ta bort dispositionsikon](https://spectrum.adobe.com/static/icons/workflow_18/Smock_DeleteOutline_18_N.svg)) för tokens som används.
 
-1. Klicka på **Ta bort** i dialogrutan **Ta bort åtkomsttoken** om du vill ta bort token permanent.
+1. Klicka på **`Delete Access Token`** Ta bort **i dialogrutan** om du vill ta bort token permanent.

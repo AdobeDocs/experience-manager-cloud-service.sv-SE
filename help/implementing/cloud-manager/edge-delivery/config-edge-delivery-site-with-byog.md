@@ -4,9 +4,9 @@ description: Lär dig hur du länkar en Edge Delivery-webbplats till en privat e
 feature: Cloud Manager, Developing
 role: Admin, Developer
 exl-id: 1dbaef34-efa3-4287-b7b1-f60db938146d
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 2ea076c42a6406548bf48cd246227fc8ddb3a080
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '282'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,21 @@ ht-degree: 0%
 
 Du kan konfigurera din Edge Delivery-webbplats så att koden hämtas från alla privata Git-databaser som redan är inbyggda i Cloud Manager.
 
-**Git-leverantörer som stöds**
+<!--
+**Supported Git Vendors**
 
-| Supportnivå | Leverantörer | Anteckningar |
+| Support level | Vendors | Notes |
 | --- | --- | --- |
-| Allmän tillgänglighet | ・ GitHub Enterprise (självvärdsversion)<br> ・ Bitbucket (molnversion)<br> ・ GitLab (molnversion och självvärdsversion) | Anslut utan aktiveringsbegäranden |
-| Alpha | Azure DevOps (molnversion) | [Begär åtkomst](mailto:grp-cloudmanager_byog@adobe.com) |
-| Beta | Adobe värddatabas (skapad i Cloud Manager) | [Begär åtkomst](mailto:grp-cloudmanager_byog@adobe.com) |
+| General availability | &bull; GitHub Enterprise (self-hosted version)<br>&bull; Bitbucket (Cloud version)<br>&bull; GitLab (Cloud and self-hosted version) | Connect without enablement requests |
+| Alpha program | Azure DevOps (Cloud version) | [Request access](mailto:grp-cloudmanager_byog@adobe.com) |
+| Beta program | Adobe-hosted repository (created in Cloud Manager) | [Request access](mailto:grp-cloudmanager_byog@adobe.com) |
+-->
 
 **Så här konfigurerar du en Edge Delivery-webbplats att använda en extern Git-databas:**
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj lämpligt program.
 1. På konsolen **[Mina program](/help/implementing/cloud-manager/navigation.md#my-programs)** väljer du programmet med Edge Delivery Services konfigurerat, där du vill konfigurera en Edge Delivery-webbplats så att den använder ett externt Git-svar.
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under rubriken &#x200B;](/help/implementing/cloud-manager/edge-delivery/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under rubriken ](/help/implementing/cloud-manager/edge-delivery/assets/overview.svg)Program**.
 1. Klicka på fliken **Edge Delivery** på sidan **Programöversikt**.
 1. Klicka på ikonen **Mer** i slutet av en rad vars webbplats du vill konfigurera för att använda ett externt svar i tabellen ![Edge Delivery-webbplatser](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och klicka sedan på **Hämta ett eget Git**.
 1. I dialogrutan Hämta din egen Git väljer du en Git-repo med statusen **i listrutan** Databasnamn`READY` och klickar sedan på **Bekräfta**.
