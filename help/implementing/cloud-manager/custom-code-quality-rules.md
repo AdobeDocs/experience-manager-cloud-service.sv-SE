@@ -5,9 +5,9 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 629cf9d88531b2e95627917ca139eed1fbddf09d
 workflow-type: tm+mt
-source-wordcount: '4349'
+source-wordcount: '4427'
 ht-degree: 0%
 
 ---
@@ -49,16 +49,16 @@ Metoderna `Thread.stop()` och `Thread.interrupt()` kan skapa problem som är sv�
 ```java
 public class DontDoThis implements Runnable {
   private Thread thread;
- 
+
   public void start() {
     thread = new Thread(this);
     thread.start();
   }
- 
+
   public void stop() {
     thread.stop();  // UNSAFE!
   }
- 
+
   public void run() {
     while (true) {
         somethingWhichTakesAWhileToDo();
@@ -73,16 +73,16 @@ public class DontDoThis implements Runnable {
 public class DoThis implements Runnable {
   private Thread thread;
   private boolean keepGoing = true;
- 
+
   public void start() {
     thread = new Thread(this);
     thread.start();
   }
- 
+
   public void stop() {
     keepGoing = false;
   }
- 
+
   public void run() {
     while (this.keepGoing) {
         somethingWhichTakesAWhileToDo();
@@ -125,7 +125,7 @@ Både Java™ HTTP Client (java.net.HttpUrlConnection) och den vanliga Apache HT
 ```java
 @Reference
 private HttpClientBuilderFactory httpClientBuilderFactory;
- 
+
 public void dontDoThis() {
   HttpClientBuilder builder = httpClientBuilderFactory.newBuilder();
   HttpClient httpClient = builder.build();
@@ -136,15 +136,15 @@ public void dontDoThis() {
 public void dontDoThisEither() {
   URL url = new URL("http://www.google.com");
   URLConnection urlConnection = url.openConnection();
- 
+
   BufferedReader in = new BufferedReader(new InputStreamReader(
     urlConnection.getInputStream()));
- 
+
   String inputLine;
   while ((inputLine = in.readLine()) != null) {
     logger.info(inputLine);
   }
- 
+
   in.close();
 }
 ```
@@ -154,7 +154,7 @@ public void dontDoThisEither() {
 ```java
 @Reference
 private HttpClientBuilderFactory httpClientBuilderFactory;
- 
+
 public void doThis() {
   HttpClientBuilder builder = httpClientBuilderFactory.newBuilder();
   RequestConfig requestConfig = RequestConfig.custom()
@@ -162,9 +162,9 @@ public void doThis() {
     .setSocketTimeout(5000)
     .build();
   builder.setDefaultRequestConfig(requestConfig);
- 
+
   HttpClient httpClient = builder.build();
-   
+
   // do something with the client
 }
 
@@ -173,15 +173,15 @@ public void orDoThis () {
   URLConnection urlConnection = url.openConnection();
   urlConnection.setConnectTimeout(5000);
   urlConnection.setReadTimeout(5000);
- 
+
   BufferedReader in = new BufferedReader(new InputStreamReader(
     urlConnection.getInputStream()));
- 
+
   String inputLine;
   while ((inputLine = in.readLine()) != null) {
     logger.info(inputLine);
   }
- 
+
   in.close();
 }
 ```
@@ -235,7 +235,7 @@ public void orDoThis(Session session) throws Exception {
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
-Så som beskrivs i [`Sling`-dokumentationen &#x200B;](https://sling.apache.org/documentation/the-sling-engine/servlets.html) rekommenderas inte bindningar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
+Så som beskrivs i [`Sling`-dokumentationen ](https://sling.apache.org/documentation/the-sling-engine/servlets.html) rekommenderas inte bindningar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-5}
 
@@ -512,6 +512,17 @@ Använd inte schemaläggaren `Sling` för aktiviteter som kräver en garanterad 
 
 Mer information om hur du hanterar jobb i klustrade miljöer finns i [`Apache Sling` Händelse och jobbhantering](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
+### Använd inte inaktuella API:er från Experience Manager {#sonarqube-aem-api-deprecated}
+
+* **Nyckel**: java:S1874
+* **Typ**: `Vulnerability` eller `Bug`/Cloud Service-kompatibilitet
+* **Allvarlighetsgrad**: Info, delversion eller större
+* **Sedan**: Version 2026.1.0
+
+Experience Manager API-ytan är under ständig revision för att identifiera API:er för vilka användningen måste stoppas. Denna API är inaktuell och markerad med ett borttagningsdatum.
+
+Ju närmare borttagningsdatumet infaller, desto allvarligare bryter regeln mot. Användning av sådan API måste ersättas med ett säkert alternativ.
+
 ### Använd inte inaktuella API:er från Experience Manager {#sonarqube-aem-deprecated}
 
 * **Nyckel**: AMSCORE-553
@@ -534,7 +545,7 @@ Det finns dock fall där en API är inaktuell i Experience Manager-sammanhang me
 
 Projektet `Apache Sling` uppmuntrar inte användning av anteckningen `@Inject` i kontexten för delningsmodeller, eftersom den kan leda till sämre prestanda när den kombineras med `DefaultInjectionStrategy.OPTIONAL` (antingen på fält- eller klassnivå). I stället bör mer specifika injektioner (som `@ValueMapValue` eller `@OsgiInjector` anteckningar) användas.
 
-Läs [`Apache Sling`-dokumentationen &#x200B;](https://sling.apache.org/documentation/bundles/models.html#discouraged-annotations-1) om du vill ha mer information om de rekommenderade anteckningarna och varför den här rekommendationen gjordes från början.
+Läs [`Apache Sling`-dokumentationen ](https://sling.apache.org/documentation/bundles/models.html#discouraged-annotations-1) om du vill ha mer information om de rekommenderade anteckningarna och varför den här rekommendationen gjordes från början.
 
 
 ### Återanvänd instanser av en HTTPClient {#sonarqube-reuse-httpclient}
@@ -1082,7 +1093,7 @@ Nodtypen `nt:base` kan betraktas som generisk eftersom alla nodtyper ärver frå
   - evaluatePathRestrictions: true
   - tags: [visualSimilaritySearch]
   - type: lucene
-  - includedPaths: ["/content/dam/"] 
+  - includedPaths: ["/content/dam/"]
   - queryPaths: ["/content/dam/"]
     + indexRules
       - jcr:primaryType: nt:unstructured
