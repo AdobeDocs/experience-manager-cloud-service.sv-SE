@@ -83,17 +83,17 @@ Kunder kan använda SAML-baserad autentisering via SAML IdP. När en IdP använd
 >
 >Endast den initiala autentiseringen av användarens inloggningsuppgifter autentiseras av IdP, och efterföljande förfrågningar till AEM utförs med en cookie för AEM-inloggningstoken, så länge cookien är tillgänglig.
 
-Mer information om autentiseringshanteraren [SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html) finns i dokumentationen.
+Mer information om autentiseringshanteraren [SAML 2.0](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html?lang=sv-SE) finns i dokumentationen.
 
 **OAuth/SSO**
 
-Mer information om hur du använder AEM SSO-autentiseringshanterartjänst finns i [dokumentationen för enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html).
+Mer information om hur du använder AEM SSO-autentiseringshanterartjänst finns i [dokumentationen för enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=sv-SE).
 
 Gränssnittet `com.adobe.granite.auth.oauth.provider` kan implementeras med valfri OAuth-provider.
 
 **Förutsättning:**
 
-Det bästa sättet är att alltid förlita sig på idP (Identity Provider) som en enda sanning när användarspecifika data lagras. Om den ytterligare användarinformationen lagras i den lokala databasen, som inte är en del av idP, ska du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupport som anger rätt program och miljöer. Förutom [datasynkronisering](#data-synchronization-data-synchronization), när det gäller SAML-autentiseringsprovidern, kontrollerar du att [dynamiskt gruppmedlemskap](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) är aktiverat.
+Det bästa sättet är att alltid förlita sig på idP (Identity Provider) som en enda sanning när användarspecifika data lagras. Om den ytterligare användarinformationen lagras i den lokala databasen, som inte är en del av idP, ska du aktivera [datasynkronisering](#data-synchronization-data-synchronization) genom att skicka en begäran till kundsupport som anger rätt program och miljöer. Förutom [datasynkronisering](#data-synchronization-data-synchronization), när det gäller SAML-autentiseringsprovidern, kontrollerar du att [dynamiskt gruppmedlemskap](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/authentication/saml-2-0) är aktiverat.
 
 ### Anteckningssessioner och inkapslade token {#sticky-sessions-and-encapsulated-tokens}
 
@@ -110,7 +110,7 @@ Det finns olika sätt att se på beständiga data, beroende på vilken typ av da
 Information om användarprofiler kan skrivas och läsas på två sätt:
 
 * Användning på serversidan med gränssnittet `com.adobe.granite.security.user` UserPropertiesManager, som placerar data under användarens nod i `/home/users`. Se till att sidor som är unika per användare inte cachelagras.
-* Klientsidan använder ContextHub, vilket beskrivs i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html#personalization).
+* Klientsidan använder ContextHub, vilket beskrivs i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/personalization/contexthub.html?lang=sv-SE#personalization).
 
 **Förutsättning:**
 
@@ -130,7 +130,7 @@ en förfrågan till kundsupport med uppgifter om lämpliga program och miljöer.
 
 ## Behörigheter (stängda användargrupper) {#permissions-closed-user-groups}
 
-Åtkomstprinciper på publiceringsnivå, som även kallas för stängda användargrupper, definieras i AEM-författaren, se [Skapa en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du användargränssnitten efter behov med hjälp av AEM-författaren, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
+Åtkomstprinciper på publiceringsnivå, som även kallas för stängda användargrupper, definieras i AEM-författaren, se [Skapa en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=sv-SE#applying-your-closed-user-group-to-content-pages). Om du vill begränsa vissa avsnitt eller sidor på en webbplats för vissa användare, tillämpar du användargränssnitten efter behov med hjälp av AEM-författaren, enligt beskrivningen här, och replikerar dem till publiceringsnivån.
 
 * Om användare loggar in genom att autentisera med en identitetsleverantör (IdP) med SAML, identifierar autentiseringshanteraren användarens gruppmedlemskap (som ska matcha användargrupperna på publiceringsnivån) och behåller kopplingen mellan användaren och gruppen via en databaspost
 * Om inloggning sker utan IdP-integrering kan anpassad kod använda samma databasstrukturrelationer.

@@ -49,7 +49,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
    >[!NOTE]
    >
-   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis vid [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflödets bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
+   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis vid [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflödets bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html?lang=sv-SE).
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 

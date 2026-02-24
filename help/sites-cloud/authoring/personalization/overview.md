@@ -137,7 +137,7 @@ Det finns olika steg och definitioner som krävs för att leverera ditt personal
 
 1. Konfigurera målgrupperna.
 
-   1. Beroende på målmotorn definierar du [målmålgruppen](https://experienceleague.adobe.com/docs/target/using/audiences/target.html) eller [ContextHub-segmentet](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md), tillsammans med reglerna.
+   1. Beroende på målmotorn definierar du [målmålgruppen](https://experienceleague.adobe.com/docs/target/using/audiences/target.html?lang=sv-SE) eller [ContextHub-segmentet](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md), tillsammans med reglerna.
 
 1. Skapa ditt [varumärke och dina aktiviteter](/help/sites-cloud/authoring/personalization/activities.md).
 

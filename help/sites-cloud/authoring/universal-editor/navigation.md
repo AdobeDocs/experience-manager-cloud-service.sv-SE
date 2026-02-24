@@ -79,7 +79,7 @@ Experience Platform övre navigeringsfält finns alltid överst på skärmen. De
 
 ![Experience Cloud-rubriken](assets/experience-cloud-header.png)
 
-Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
+Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
 
 #### Konto {#user-properties}
 

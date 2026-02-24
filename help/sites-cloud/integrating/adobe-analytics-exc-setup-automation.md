@@ -29,7 +29,7 @@ I den här videon utforskas hur en AEM-webbplats är integrerad med Experience P
 
 ## Krav
 
-Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM-webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverad. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
+Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM-webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE) aktiverad. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
 
 ## Förutsättningar {#prerequisites}
 

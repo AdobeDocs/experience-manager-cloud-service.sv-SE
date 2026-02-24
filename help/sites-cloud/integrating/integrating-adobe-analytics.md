@@ -18,7 +18,7 @@ ht-degree: 0%
 Genom att integrera Adobe Analytics och AEM as a Cloud Service kan du spåra webbsidesaktiviteten. Integreringen kräver:
 
 * med Touch-gränssnittet för att skapa en Analytics-konfiguration i AEM as a Cloud Service. IMS-autentisering krävs för att integrera Adobe Analytics med AEM as a Cloud Service.
-* lägger till och konfigurerar Adobe Analytics som ett tillägg i [Adobe Launch](#analytics-launch). Om du vill ha mer information om Adobe Launch kan du börja med [snabbstartsguiden](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
+* lägger till och konfigurerar Adobe Analytics som ett tillägg i [Adobe Launch](#analytics-launch). Om du vill ha mer information om Adobe Launch kan du börja med [snabbstartsguiden](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=sv-SE).
 
 Jämfört med tidigare versioner av AEM finns ramverksstöd inte i Analytics Configuration i AEM as a Cloud Service. I stället görs det nu via Adobe Launch, som är det defacto-verktyg för att skapa en AEM-webbplats med analysfunktioner (JS-bibliotek). I Adobe Launch skapas en egenskap där Adobe Analytics-tillägget kan konfigureras och regler skapas för att skicka data till Adobe Analytics. Adobe Launch har ersatt uppgiften med analys från sitecatalyst.
 
@@ -44,7 +44,7 @@ Fälten i konfigurationsfönstret är följande:
 |---|---|
 | Titel | Konfigurationsnamnet |
 | IMS-konfiguration | Välj IMS-konfigurationen (se kapitlet nedan) |
-| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns i [Om segment](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html). |
+| Segment | Möjlighet att använda ett analyssegment som definieras i den aktuella rapporteringssviten. Analysrapporterna filtreras baserat på segmentet. Mer information finns i [Om segment](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-overview.html?lang=sv-SE). |
 | Rapportsviter | En databas där du skickar data och hämtar rapporter. En rapportsvit definierar den fullständiga, oberoende rapporteringen på en vald webbplats, en uppsättning webbplatser eller en delmängd av webbplatssidor. Du kan visa rapporter som hämtats från en enda rapportserie och kan redigera det här fältet i en konfiguration när som helst enligt dina önskemål. |
 
 ### Adobe Analytics med IMS-autentisering {#configuration-parameters-ims}
@@ -67,9 +67,9 @@ Om du vill använda en Touch UI-konfiguration för en plats går du till **Webbp
 
 Adobe Analytics kan läggas till som ett tillägg i startegenskapen. Regler kan definieras för mappning och postanrop till Adobe Analytics:
 
-* Titta på [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
+* Titta på [den här videon](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/via-adobe-launch/basic-configuration-of-the-analytics-launch-extension.html?lang=sv-SE) om du vill lära dig hur du konfigurerar Analytics-tillägget i Launch för en grundläggande webbplats.
 
-* Mer information om hur du skapar regler och skickar data till Adobe Analytics finns i [Lägg till Adobe Analytics](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html).
+* Mer information om hur du skapar regler och skickar data till Adobe Analytics finns i [Lägg till Adobe Analytics](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=sv-SE).
 
 >[!NOTE]
 >

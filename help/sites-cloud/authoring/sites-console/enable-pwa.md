@@ -61,7 +61,7 @@ Core Components version 2.15.0 och senare har fullt stöd för PWA funktioner p�
 
 >[!NOTE]
 >
->Adobe rekommenderar inte att du använder PWA-funktionerna i anpassade komponenter eller komponenter som inte [har utökats från kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html).
+>Adobe rekommenderar inte att du använder PWA-funktionerna i anpassade komponenter eller komponenter som inte [har utökats från kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/customizing.html?lang=sv-SE).
 <!--
 Your components need to include the [manifest files](https://developer.mozilla.org/en-US/docs/Web/Manifest) and [service worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), which supports the PWA features.
 
@@ -224,7 +224,7 @@ Klientbibliotek levereras med en cacheväljare som observerar följande mönster
 
 Image Component (Bildkomponenten) för AEM Core Components (Core-komponenterna) avgör vilken frontdel som är den bästa renderingen att hämta. Den här mekanismen innehåller också en tidsstämpel som motsvarar den senaste ändringstiden för resursen. Den här mekanismen komplicerar konfigurationen av PWA-förcache.
 
-När användaren konfigurerar pre-cache måste han/hon visa alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi rekommenderar att du minskar antalet av dessa variationer till högst tre - liten, medel, stor. Det kan du göra via dialogrutan för innehållsprinciper i [bildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html).
+När användaren konfigurerar pre-cache måste han/hon visa alla sökvägsvariationer som kan hämtas. Dessa variationer består av parametrar som kvalitet och bredd. Vi rekommenderar att du minskar antalet av dessa variationer till högst tre - liten, medel, stor. Det kan du göra via dialogrutan för innehållsprinciper i [bildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE).
 
 Om den inte konfigureras noggrant kan minnes- och nätverkskonsumtionen påverka PWA prestanda negativt. Om du tänker skapa t.ex. 50 bilder framför varandra och har tre bredder per bild, måste användaren som underhåller webbplatsen ha en lista med upp till 150 poster i förhandscacheavsnittet för PWA i sidegenskaperna.
 

@@ -71,11 +71,11 @@ En annan fördel är att textalternativ gör det möjligt att indexera icke-text
 
 #### Så här möts innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
-För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Den här metoden kan användas i fältet **Alternativ text**. Se till exempel kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**.
+För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Den här metoden kan användas i fältet **Alternativ text**. Se till exempel kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE)**.
 
 >[!NOTE]
 >
->Vissa av de körklara kärnkomponenterna, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)**, innehåller inte något **alternativt textfält** för att lägga till alternativa textbeskrivningar till enskilda bilder, även om det finns fältet **Etikett** (**[Hjälpmedel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)** ) för hela komponenten.
+>Vissa av de körklara kärnkomponenterna, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=sv-SE)**, innehåller inte något **alternativt textfält** för att lägga till alternativa textbeskrivningar till enskilda bilder, även om det finns fältet **Etikett** (**[Hjälpmedel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=sv-SE#accessibility-tab)** ) för hela komponenten.
 >
 >När du implementerar versioner av dessa för din AEM-instans måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder attributet `alt`. Detta säkerställer att författare kan lägga till det i innehållet (se [Lägga till stöd för ytterligare HTML Elements och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
