@@ -1,20 +1,21 @@
 ---
 title: Arbeta med riktat innehåll på flera webbplatser
-description: Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni dra nytta av AEM inbyggda stöd för flera webbplatser för riktat innehåll
+description: Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 03d2d640-8de8-4c4c-8a1d-756bb2dc8457
 solution: Experience Manager Sites
 feature: Authoring, Personalization
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2844'
+source-wordcount: '2850'
 ht-degree: 3%
 
 ---
 
 # Arbeta med riktat innehåll på flera webbplatser {#working-with-targeted-content-in-multisites}
 
-Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni dra nytta av AEM inbyggda stöd för flera webbplatser för riktat innehåll.
+Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll.
 
 >[!NOTE]
 >
@@ -134,7 +135,7 @@ I följande diagram finns fyra platser där två delar huvudområdet (och alla a
 
 ![Diagramdetalj](/help/sites-cloud/authoring/assets/multisite-diagram-detail.png)
 
-För att uppnå detta i AEM gör du följande:
+Så här gör du i AEM:
 
 * Plats A länkar till mallområdet - inget område behöver skapas. Mallområde är markerat som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
 * Plats B länkar till mallområdet - inget område behöver skapas. Mallområde är markerat som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
@@ -160,7 +161,7 @@ Så här skapar du ett område:
 1. Ange ett namn för det nya området i fältet **Titel**. Du kan också välja taggar.
 1. Välj **Skapa**.
 
-   AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
+   AEM dirigerar om till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
 
    ![Skapa](/help/sites-cloud/authoring/assets/multisite-create.png)
 
@@ -195,7 +196,7 @@ Så här skapar du ett område som en livecopy:
 
 1. Välj **Skapa**.
 
-   AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
+   AEM dirigerar om till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
 
    ![Skapa område](/help/sites-cloud/authoring/assets/multisite-create-2.png)
 

@@ -3,11 +3,12 @@ title: Hantera innehållsfragment
 description: Lär dig hur du hanterar dina AEM Content Fragments från konsolen och redigeraren, skapar innehåll som bas för ditt headless-innehåll eller skapar sidor.
 feature: Content Fragments
 role: User, Developer
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: bcaa9f06-b15d-4790-bc4c-65db6a2d5e56
 solution: Experience Manager Sites
-source-git-commit: b3e1d3a3770531728d696be125f074881f179573
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2937'
+source-wordcount: '2943'
 ht-degree: 0%
 
 ---
@@ -149,7 +150,7 @@ Vid hovring över mappnamnet visas JCR-sökvägen.
 
      ![Konsolen Innehållsfragment - dialogrutan Arbetsflöden](assets/cf-managing-console-workflows-dialog.png)
 
-## Åtgärder {#actions}
+## Instruktioner {#actions}
 
 I konsolen finns ett antal åtgärder som du kan använda, antingen direkt eller efter att du har valt ett visst fragment:
 
@@ -267,7 +268,7 @@ Så här öppnar du fragmentet för redigering:
    * Skapar en kopia av det markerade innehållsfragmentet på dess plats.
    * Skapar kopior av alla fragment som det valda fragmentet refererar till.
 
-     De [platser som refererade fragment kopieras till &#x200B;](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
+     De [platser som refererade fragment kopieras till ](#locations-that-the-referenced-fragments-are-copied-to) beror på vilket alternativ du väljer:
 
       * **Kopiera till den markerade mappen**
 När du väljer det här alternativet kopieras de refererade fragmenten till samma plats som det ursprungliga markerade fragmentet.
@@ -439,7 +440,7 @@ Efter publiceringen uppdateras fragmentets status och visas i redigeraren och ko
 
 >[!NOTE]
 >
->När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
+>När du [publicerar en sida som använder fragmentet ](/help/sites-cloud/authoring/fragments/content-fragments.md#publishing) visas dessutom fragmentet i sidreferenserna.
 
 ## Avpublicera ett fragment {#unpublishing-a-fragment}
 

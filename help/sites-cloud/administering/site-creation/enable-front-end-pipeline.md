@@ -3,12 +3,13 @@ title: Aktivera frontendspipelinen
 description: Se hur du kan göra det möjligt att skapa rörliga bilder för befintliga traditionella AEM-webbplatser med publiceringsmaterial och använda webbplatsteman för att anpassa webbplatsen snabbare.
 feature: Administering
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 55d54d72-f87b-47c9-955f-67ec5244dd6e
 solution: Experience Manager Sites
 recommendations: noDisplay, noCatalog
-source-git-commit: 8c4b34a77ef85869048fae254728c58cf0d99b66
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ När du aktiverar frontendsflödet för en webbplats gör AEM följande ändring
 
 ## Krav {#requirements}
 
-AEM kan automatiskt anpassa din befintliga webbplats så att den kan användas i pipeline för frontservrar. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component (Sidkomponent) i Core Components](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/wcm-components/page).
+AEM kan automatiskt anpassa din befintliga webbplats så att den kan användas i pipeline för frontservrar. Om du vill kunna utföra det här arbetsflödet måste webbplatsen använda [v2 eller senare av Page Component (Sidkomponent) i Core Components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/wcm-components/page).
 
 ## Aktivera frontendspipeline {#enabling}
 
@@ -79,7 +80,7 @@ Front-End Pipeline kan användas med funktionen [Cloud Manager anpassade domäne
 
 Statiska front-end-resurser som distribueras via Front-End Pipeline hanteras som standard från Adobe fördefinierade statiska domän.
 
-Om du behöver en anpassad domän för klientresurser kan du installera en anpassad domän på publiceringsskiktet och konfigurera Dispatcher så att specifika sökvägar (till exempel `/static/`) dirigeras till Adobe statiska värdplats. Den här metoden kräver att [Dispatcher-reglerna](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/dispatcher) uppdateras för att begäranden om statiska resurser ska kunna vidarebefordras och cachelagras korrekt.
+Om du behöver en anpassad domän för klientresurser kan du installera en anpassad domän på publiceringsskiktet och konfigurera Dispatcher så att specifika sökvägar (till exempel `/static/`) dirigeras till Adobe statiska värdplats. Den här metoden kräver att [Dispatcher-reglerna](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher) uppdateras för att begäranden om statiska resurser ska kunna vidarebefordras och cachelagras korrekt.
 
 När du har konfigurerat din anpassade domän och dispatcher kan du konfigurera AEM så att dina frontendresurser hanteras från den statiska domänen.
 
@@ -106,7 +107,7 @@ Sidorna för webbplatsen refererar sedan till temaartefakter från den uppdatera
 
 Om du behöver utveckla och testa front-end-resurser lokalt innan du distribuerar via Front-End Pipeline bör du tänka på följande:
 
-* Använd proxyläget [&#x200B; i &#x200B;](https://github.com/adobe/aem-site-theme-builder?tab=readme-ov-file#proxy)Site Theme Builder för att åsidosätta temaartefakter lokalt för testning.
+* Använd proxyläget [ i ](https://github.com/adobe/aem-site-theme-builder?tab=readme-ov-file#proxy)Site Theme Builder för att åsidosätta temaartefakter lokalt för testning.
 * Hantera dina temafiler manuellt från en lokal utvecklingsserver och uppdatera `prefixPath` i `HtmlPageItemsConfig` så att de matchar den lokala serveradressen.
 * Kontrollera att webbläsarcachelagring är inaktiverat under testning för att se liveuppdateringar.
 

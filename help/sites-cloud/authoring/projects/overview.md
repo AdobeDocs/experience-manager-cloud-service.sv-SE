@@ -1,20 +1,21 @@
 ---
 title: Projekt
 description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, delade miljö gör det enkelt att hantera dina projekt
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: c5f3331e-637f-4816-be83-faf2df59bd5f
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1259'
 ht-degree: 7%
 
 ---
 
 # Projekt {#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor](#project-tiles).
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor](#project-tiles).
 
 >[!CAUTION]
 >
@@ -35,7 +36,7 @@ Se följande ytterligare ämnen:
 
 ## Projektkonsol {#projects-console}
 
-Projektkonsolen är den plats där du får åtkomst till och hanterar dina projekt i AEM.
+Projektkonsolen är där du kommer åt och hanterar dina projekt i AEM.
 
 ![Projektkonsolen](/help/sites-cloud/authoring/assets/projects-console.png)
 
@@ -68,7 +69,7 @@ I rutan **Assets** kan du samla alla resurser som du använder för ett visst pr
 
 ![Assets-panel](/help/sites-cloud/authoring/assets/projects-assets-tile.png)
 
-Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, snurruppsättningar eller blandade medieuppsättningar om du har Dynamic Media-tillägget.
+Du överför resurser direkt i rutan. Du kan dessutom skapa bilduppsättningar, snurpuppsättningar eller blandade medieuppsättningar om du har tilläggsprogrammet Dynamiska media.
 
 ![Bilduppsättning](/help/sites-cloud/authoring/assets/projects-image-sets.png)
 

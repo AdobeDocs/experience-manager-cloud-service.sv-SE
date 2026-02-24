@@ -1,13 +1,14 @@
 ---
 title: Quick Start Guide to Authoring
 description: Börja här om du vill ha en snabb guide på hög nivå som hjälper dig att komma igång med att skapa innehåll med hjälp av webbplatskonsolen.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: d37c9b61-7382-4bf6-8b90-59726b871264
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -25,11 +26,11 @@ Börja här om du vill ha en snabb guide på hög nivå som hjälper dig att kom
 
 Oavsett om du vill skapa nytt innehåll eller visa och hantera befintligt innehåll är den centrala översikten för dig konsolen **Platser**.
 
-När du först loggar in på AEM visas den globala navigeringsskärmen. Tryck eller klicka bara på **Webbplatser** för att öppna konsolen **Webbplatser**.
+När du loggar in på AEM första gången visas den globala navigeringsskärmen. Tryck eller klicka bara på **Webbplatser** för att öppna konsolen **Webbplatser**.
 
 ![Global navigering](assets/getting-started-global-navigation.png)
 
-Om du vill komma åt den globala navigeringen från någon annan plats i AEM trycker eller klickar du på länken **Adobe Experience Manager** längst upp till vänster på en AEM, vilket öppnar en nedrullningsbar övertäckning för den globala navigeringen.
+Om du vill komma åt den globala navigeringen från någon annan plats i AEM trycker eller klickar du på länken **Adobe Experience Manager** längst upp till vänster på någon av AEM-skärmarna, vilket öppnar en nedrullningsbar övertäckning för den globala navigeringen.
 
 I konsolen **Platser** är ditt innehåll enkelt att navigera i och visas som standard i en kolumnvy.
 
@@ -96,11 +97,11 @@ Om du vill flytta eller kopiera en sida markerar du sidan i konsolen och trycker
 
 ## Publicera innehåll {#publishing}
 
-När du är klar med ändringarna som du vill göra i ditt innehåll med konsolen **Platser** kan du publicera innehållet. Markera det innehåll som du vill publicera och tryck eller klicka på ikonen **Snabba Publish** i verktygsfältet.
+När du är klar med ändringarna som du vill göra i ditt innehåll med konsolen **Platser** kan du publicera innehållet. Markera det innehåll du vill publicera och tryck eller klicka på ikonen **Snabbpublicering** i verktygsfältet.
 
 ![Snabbpublicering](assets/getting-started-quick-publish.png)
 
-Bekräfta publikationen med en annan tryckning eller klicka på **Publish** i dialogrutan.
+Bekräfta publikationen med en annan tryckning eller klicka på **Publicera** i dialogrutan.
 
 ## Ytterligare resurser {#additional-resources}
 

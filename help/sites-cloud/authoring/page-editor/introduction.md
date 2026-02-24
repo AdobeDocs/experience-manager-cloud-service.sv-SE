@@ -1,13 +1,14 @@
 ---
 title: AEM Page Editor
 description: AEM sidredigerare är ett kraftfullt verktyg för att skapa innehåll.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: da7d5933-f6c9-4937-a483-ec4352fba86b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 0a458616afad836efae27e67dbe145fc44bee968
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1431'
+source-wordcount: '1437'
 ht-degree: 0%
 
 ---
@@ -115,7 +116,7 @@ Det finns olika lägen när du redigerar en sida som tillåter olika åtgärder:
 >* Utvecklarläget är inte tillgängligt på mobila enheter på grund av utrymmesbegränsningar.
 >* Det finns ett [kortkommando](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) ( `Ctrl-Shift-M`) som växlar mellan **Förhandsgranska** och det läge som är markerat (till exempel **Redigera**, **Layout**).
 
-#### Förhandsgranska {#preview}
+#### Förhandsgranskning {#preview}
 
 Knappen **Förhandsgranska** aktiverar [förhandsgranskningsläget](#preview-mode) och visar sidan så som den kommer att visas när den publiceras.
 
@@ -240,7 +241,7 @@ När du låser upp en sida liknar det [att låsa sidan](#locking-a-page). När s
 
 Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i verktygsfältet när det är lämpligt:
 
-![Knapparna Ångra och Gör om &#x200B;](assets/page-editor-redo.png)
+![Knapparna Ångra och Gör om ](assets/page-editor-redo.png)
 
 >[!TIP]
 >

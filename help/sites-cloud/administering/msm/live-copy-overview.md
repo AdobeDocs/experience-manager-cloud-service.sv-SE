@@ -3,11 +3,12 @@ title: Översiktskonsol för Live Copy
 description: Lär dig grunderna i Live Copy Overview Console för att snabbt förstå statusen för dina Live-kopior för att synkronisera innehåll.
 feature: Multi Site Manager
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 3ef7fbce-10a1-4b21-8486-d3c3706e537c
 solution: Experience Manager Sites
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 0%
 
 ---
@@ -52,7 +53,7 @@ Du kan öppna Live-kopieringsöversikt från:
 1. Öppna **Egenskaper** för lämplig ritningssida.
 1. Öppna fliken **Utskrift** - alternativet **Översikt över Live-kopia** visas i det övre verktygsfältet:
 
-   ![Egenskaper för utkast &#x200B;](../assets/live-copy-blueprint-tab.png)
+   ![Egenskaper för utkast ](../assets/live-copy-blueprint-tab.png)
 
 1. Välj **Översikt över Live-kopia** om du vill visa och använda översikten över alla Live-kopior som hör till den aktuella planen.
 

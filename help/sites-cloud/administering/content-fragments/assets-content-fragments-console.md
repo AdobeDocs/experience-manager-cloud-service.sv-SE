@@ -3,11 +3,12 @@ title: Visa och hantera Assets i konsolen för innehållsfragment
 description: Lär dig hur du visar och hanterar Assets i konsolen för innehållsfragment i Adobe Experience Manager as a Cloud Service.
 feature: Content Fragments
 role: User, Developer
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 865e1fa8-2956-45cf-9dd7-034d491808fe
 solution: Experience Manager Sites
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '253'
 ht-degree: 1%
 
 ---

@@ -4,10 +4,11 @@ description: Lär dig grunderna i hur du kommer åt och navigerar i den universe
 solution: Experience Manager Sites
 feature: Authoring
 role: User
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 213ef604-1a09-41f1-b051-3d8254b8164f
-source-git-commit: cca471c5511e7df57d2156d39649194f7a18a79c
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1880'
 ht-degree: 0%
 
 ---
@@ -78,7 +79,7 @@ Experience Platform övre navigeringsfält finns alltid överst på skärmen. De
 
 ![Experience Cloud-rubriken](assets/experience-cloud-header.png)
 
-Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
+Mer information om Experience Platform övre navigeringsfält finns i [Adobe Experience Platform användargränssnittsguide](https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-ui/ui-guide#top-navigation-bar)
 
 #### Konto {#user-properties}
 
@@ -131,7 +132,7 @@ Platsfältet visar adressen till sidan som du redigerar. Välj det här alternat
 Välj Ångra eller Gör om för att ångra eller göra om den senaste redigeringen i redigeraren. Mer information finns i dokumentet [Skapa innehåll med den universella redigeraren](/help/sites-cloud/authoring/universal-editor/authoring.md#undo-redo).
 
 ![Ångra-ikon](assets/undo.png)
-![Ikonen Gör om &#x200B;](assets/redo.png)
+![Ikonen Gör om ](assets/redo.png)
 
 >[!TIP]
 >
@@ -161,7 +162,7 @@ Du kan också välja att emulera en mobil enhet och i Universell redigerare:
 * Definiera bredd och höjd
 * Ändra orientering
 
-#### Förhandsgranska {#preview-mode}
+#### Förhandsgranskning {#preview-mode}
 
 I förhandsgranskningsläget återges sidan i redigeraren som den skulle se ut i din publicerade tjänst. Det gör att innehållsförfattaren kan navigera i innehållet genom att klicka på länkar och så vidare.
 
@@ -187,7 +188,7 @@ Markera ikonen för att öppna sidan som du redigerar på en egen webbläsarflik
 
 >[!NOTE]
 >
->Knappen [&#x200B; för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
+>Knappen [ för öppen sida kan inaktiveras](/help/implementing/universal-editor/customizing.md#open-page) och kanske inte visas i redigeraren.
 
 #### Publicera {#publish}
 
@@ -201,7 +202,7 @@ Välj publiceringsknappen så att du kan publicera ändringarna i innehållet li
 
 >[!NOTE]
 >
->Publiceringsknappen [&#x200B; kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
+>Publiceringsknappen [ kan inaktiveras](/help/implementing/universal-editor/customizing.md#disable-publish) och kanske inte visas i redigeraren.
 
 #### Ellips {#ellipsis}
 
@@ -326,7 +327,7 @@ Om du trycker på eller klickar på borttagningsknappen [tas komponenten](/help/
 Du kan kopiera och klistra in komponenter som finns i [behållare.](/help/implementing/universal-editor/field-types.md#container)
 
 ![Kopiera ikon](assets/copy.png)
-![Ikonen Klistra in &#x200B;](assets/paste.png)
+![Ikonen Klistra in ](assets/paste.png)
 
 >[!TIP]
 >

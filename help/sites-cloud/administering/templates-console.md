@@ -4,10 +4,11 @@ description: Lär dig hur mallkonsolen fungerar som en central plats för att vi
 solution: Experience Manager Sites
 feature: Administering
 role: User
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: d11d7176-dd35-4855-9dcd-dd40ff096510
-source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Mallkonsolen ordnas i mappar med en mapp per [konfiguration](/help/implementing/
 
 ![Mallkonsolen](assets/templates-console/templates-console.png)
 
-[Konsolens standardvy &#x200B;](/help/sites-cloud/authoring/quick-start.md) är kortvyn. Tryck eller klicka på en mapp för att utforska dess innehåll.
+[Konsolens standardvy ](/help/sites-cloud/authoring/quick-start.md) är kortvyn. Tryck eller klicka på en mapp för att utforska dess innehåll.
 
 ![Innehåll i mallmappen i mallkonsolen](assets/templates-console/templates-console-templates.png)
 
@@ -73,7 +74,7 @@ Om en författare startar en mall som har skapats med mallredigeraren och som re
 
 ## Egenskaper {#properties}
 
-Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper.Mallegenskaperna för &#x200B;](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) innehåller:
+Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper.Mallegenskaperna för ](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) innehåller:
 
 * Malltitel
 * Beskrivning

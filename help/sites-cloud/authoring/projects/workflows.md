@@ -1,13 +1,14 @@
 ---
 title: Arbeta med projektarbetsflöden
 description: Det finns en mängd olika projektarbetsflöden att välja mellan.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: a5c9a6df-7def-43f3-b41b-524a4f4211e9
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '455'
 ht-degree: 3%
 
 ---
@@ -30,12 +31,12 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 | Begär start | x |  |
 | Begär landningssida | x |  |
 | Begär e-post | x | |
-| DAM - skapa språkkopia&ast; |  | x |
-| DAM Skapa och översätt språkkopia&ast; |   | x |
+| DAM - skapa språkkopia&amp;ast; |  | x |
+| DAM Skapa och översätt språkkopia&amp;ast; |   | x |
 
 >[!NOTE]
 >
->&ast; dessa arbetsflöden startas inte från rutan **Arbetsflöde** i Projekt. Se [Skapa språkkopior för Assets](/help/sites-cloud/administering/translation/managing-projects.md).
+>&amp;ast; dessa arbetsflöden startas inte från rutan **Arbetsflöde** i Projekt. Se [Skapa språkkopior för Assets](/help/sites-cloud/administering/translation/managing-projects.md).
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 

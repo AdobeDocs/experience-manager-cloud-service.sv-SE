@@ -4,10 +4,11 @@ description: Lär dig hur du redigerar egenskaperna för en sida och ändrar sid
 solution: Experience Manager Sites
 feature: Authoring
 role: User
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 8fee7e24-bbaa-4cc4-a047-165c9f2cd973
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '867'
 ht-degree: 1%
 
 ---
@@ -24,7 +25,7 @@ Lär dig hur du redigerar [egenskaperna för en sida](/help/sites-cloud/authorin
 
 Du kan redigera sidegenskaper från ett antal platser i AEM.
 
-* [Från &#x200B;](#from-the-sites-console)
+* [Från ](#from-the-sites-console)
 * [Från sidredigeraren](#from-the-page-editor)
 * [Från den universella redigeraren](#from-the-universal-editor)
 

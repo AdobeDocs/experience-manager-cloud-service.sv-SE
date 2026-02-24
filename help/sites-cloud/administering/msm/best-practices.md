@@ -1,13 +1,14 @@
 ---
 title: MSM Best Practices
-description: Lär dig de bästa arbetssätten som skapats av tekniker och konsultteam på Adobe för att komma igång med AEM Multi Site Manager.
+description: Lär dig de bästa metoderna som Adobe tekniker och konsultteam har sammanställt för att komma igång med AEM Multi Site Manager.
 feature: Multi Site Manager
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 61b8ded8-3b9e-423f-85a9-7280e1a721cc
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1420'
 ht-degree: 0%
 
 ---
@@ -59,7 +60,7 @@ För att ge stöd åt kapsling av komponenter så att lokalt tillagda komponente
 
 ## Skapa webbplats {#create-site}
 
-Observera att AEM har två metoder för att skapa Live-kopior:
+Observera att AEM har två huvudmetoder för att skapa Live-kopior:
 
 * När [skapar en Live-kopia](creating-live-copies.md#creating-a-live-copy-of-a-page) - Detta kan betraktas som ett mer allmänt tillvägagångssätt, vilket gör att du kan skapa Live-kopior från vilken sida som helst. Innehållsstrukturen i en Live-kopia matchar källan exakt.
 
@@ -86,7 +87,7 @@ Tänk på följande när du skapar språkmallar:
    * Med MSM kan du avbryta arv på sid- och/eller komponentnivå. Detta förhindrar att översatt innehåll (från en Live-kopia, med ännu inte översatt innehåll från en ritning) skrivs över vid nästa utrullning.
       * Vissa översättningsanslutningar från tredje part automatiserar hanteringen av MSM-arv.
       * Kontakta översättningstjänsten för mer information.
-      * Ett annat sätt att skapa och översätta språkmallsidor är att använda språkkopior tillsammans med AEM färdiga integrationsramverk för översättning.
+      * Ett annat sätt att skapa och översätta språkmallsidor är att använda språkkopior i kombination med AEM färdiga integrationsramverk för översättning.
 
 Mer information finns i [Översätta innehåll för flerspråkiga platser](/help/sites-cloud/administering/translation/overview.md) och [Bästa praxis för översättning](/help/sites-cloud/administering/translation/best-practices.md).
 
@@ -141,7 +142,7 @@ Du bör därför bara använda `onModify`-utlösare om fördelarna med automatis
 
 ### Nodtyper/egenskaper {#node-types-properties}
 
-Förutom att anpassa utrullningsåtgärder kan MSM även anpassa nodegenskaper som introduceras. Med konfigurationen [MSM OSGi kan du undanta nodtyperna &#x200B;](live-copy-sync-config.md#excluding-properties-and-node-types-from-synchronization) från kopiering från källan till Live Copy.
+Förutom att anpassa utrullningsåtgärder kan MSM även anpassa nodegenskaper som introduceras. Med konfigurationen [MSM OSGi kan du undanta nodtyperna ](live-copy-sync-config.md#excluding-properties-and-node-types-from-synchronization) från kopiering från källan till Live Copy.
 
 ## Ytterligare information {#further-information}
 

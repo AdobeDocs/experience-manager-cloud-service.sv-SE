@@ -3,11 +3,12 @@ title: Webbplatsteman
 description: Läs om hur AEM webbplatsteman kan användas för att anpassa webbplatsens stil och design för AEM traditionella projekt med publiceringsleverans.
 feature: Administering
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 53d4afb3-d091-47a1-ba12-5bcec99f46b9
 solution: Experience Manager Sites
-source-git-commit: 9efba01add46c09e9839da6bb96b138d48018e54
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '394'
 ht-degree: 0%
 
 ---

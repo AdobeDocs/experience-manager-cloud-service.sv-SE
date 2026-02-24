@@ -1,13 +1,14 @@
 ---
 title: Webbplatskonsolen
 description: Lär dig hur du använder Sites-konsolen för att hantera och ordna dina AEM-sidor.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: b666e62a-c3dc-4be3-8932-d5fe67b178d6
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 4c42888af1e846c011242af2c328e553bb811cfd
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1659'
 ht-degree: 3%
 
 ---
@@ -132,7 +133,7 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
 
 1. I kortvyn:
 
-   ![Vyn Kort &#x200B;](assets/sites-console-card-view-select.png)
+   ![Vyn Kort ](assets/sites-console-card-view-select.png)
 
 1. När du har valt en resurs täcks den översta rubriken av verktygsfältet [Åtgärder](#actions-toolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
 

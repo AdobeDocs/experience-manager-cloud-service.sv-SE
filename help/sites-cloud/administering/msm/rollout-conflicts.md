@@ -3,11 +3,12 @@ title: utrullningskonflikter
 description: Lär dig hur du hanterar och löser flera sammanslagningskonflikter för Platshanteraren.
 feature: Multi Site Manager
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 733e9411-50a7-42a5-a5a8-4629f6153f10
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ I följande avsnitt används ett exempel på den nya sidan `b`, som har skapats 
 
 #### Före utrullning {#before-rollout}
 
-|  | Utskrift före utrullning | Live Copy Before Rolling | Publish före utrullning |
+|  | Utskrift före utrullning | Live Copy Before Rolling | Publicera före utrullning |
 |---|---|---|---|
 | Värde | `b` | `b` | `b` |
 | Kommentar | Skapat i en designgren, klar för utrullning | Manuellt skapat i Live Copy-grenen | Innehåller innehållet på sidan `b` som skapades manuellt i Live Copy-grenen |
@@ -63,7 +64,7 @@ AEM har [fördefinierat beteende när konflikthantering har inaktiverats](#behav
 
 ## Konflikthanterare {#conflict-handlers}
 
-AEM använder konflikthanterare för att lösa eventuella sidkonflikter som uppstår när innehåll distribueras från en plan till en Live-kopia. Att byta namn på sidor är den vanliga (inte bara) metoden att lösa sådana konflikter. Mer än en konflikthanterare kan vara användbar för att tillåta ett urval av olika beteenden.
+AEM använder konflikthanterare för att lösa eventuella sidkonflikter som uppstår när innehåll distribueras från en ritning till en Live Copy. Att byta namn på sidor är den vanliga (inte bara) metoden att lösa sådana konflikter. Mer än en konflikthanterare kan vara användbar för att tillåta ett urval av olika beteenden.
 
 AEM tillhandahåller:
 
@@ -96,7 +97,7 @@ Den här konflikthanteraren ger prioritet åt ritningen. Till exempel flyttas Li
 
 #### Efter utrullning {#after-rollout}
 
-|  | Utskrift efter utrullning | Live Copy After Rollout | Live Copy After Rollout | Publish efter utrullning |
+|  | Utskrift efter utrullning | Live Copy After Rollout | Live Copy After Rollout | Publicera efter utrullning |
 |---|---|---|---|---|
 | Värde | `b` | `b` | `b_msm_moved` | `b` |
 | Kommentar |  | Har innehållet på den planerade sidan `b` som har rullats ut | Har innehållet på sidan `b` som skapades manuellt i Live Copy-grenen | Ingen ändring; innehåller innehållet på originalsidan `b` som skapades manuellt i Live Copy-grenen och nu kallas `b_msm_moved` |
@@ -136,7 +137,7 @@ I det här fallet har Live Copy företräde. Den blå sidan `/b` kopieras inte o
 
 #### Efter utrullning {#after-rollout-no-conflict}
 
-|  | Utskrift efter utrullning | Live Copy After Rollout | Publish efter utrullning |
+|  | Utskrift efter utrullning | Live Copy After Rollout | Publicera efter utrullning |
 |---|---|---|---|
 | Värde | `b` | `b` | `b` |
 | Kommentar |  | Ingen ändring; har innehållet på sidan `b` som skapades manuellt i Live Copy-grenen | Ingen ändring; innehåller innehållet på sidan `b` som skapades manuellt i Live Copy-grenen |

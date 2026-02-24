@@ -3,11 +3,12 @@ title: Förbereder innehåll för översättning
 description: Lär dig hur du förbereder innehåll för översättning när du utvecklar flerspråkiga webbplatser.
 feature: Language Copy
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: afc577a2-2791-481a-ac77-468011e4302e
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Flerspråkiga webbplatser har i allmänhet en viss mängd innehåll på flera sp
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom översättning av ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealisk för dem som saknar AEM- eller översättningsupplevelse.
 
 Självstudiewebbplatsen [WKND](/help/implementing/developing/introduction/develop-wknd-tutorial.md) innehåller flera språkgrenar och använder följande struktur:
 
@@ -144,4 +145,4 @@ Språkrötter kan också grupperas under noder, till exempel efter region, samti
 
 >[!TIP]
 >
->I sådana fall kan språkrörelser ha vilket sidnamn som helst, i stället för bara språkets ISO-kod. AEM kontrollerar alltid sökvägen och namnet först, men om sidnamnet inte identifierar något språk AEM egenskapen `cq:language` för sidan för att se om det finns en språkidentifiering.
+>I sådana fall kan språkrörelser ha vilket sidnamn som helst, i stället för bara språkets ISO-kod. AEM kommer alltid att kontrollera sökvägen och namnet först, men om sidnamnet inte identifierar något språk kommer AEM att kontrollera sididentifieringsegenskapen `cq:language` för sidan.

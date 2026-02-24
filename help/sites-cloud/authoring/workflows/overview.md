@@ -1,20 +1,21 @@
 ---
 title: Arbeta med arbetsflöden
 description: Med arbetsflöden i AEM kan du automatisera en serie steg som utförs på en sida eller en resurs.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: ed157646-abb3-45c6-bafd-7889bd93fdf3
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
 # Arbeta med arbetsflöden {#working-with-workflows}
 
-Med AEM kan du automatisera en serie steg som utförs på (en eller flera) sidor och/eller resurser.
+Med AEM Workflows kan du automatisera en serie steg som utförs på (en eller flera) sidor och/eller resurser.
 
 Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver:
 

@@ -1,20 +1,21 @@
 ---
 title: Sök
 description: Hitta materialet snabbare med omfattande sökfunktioner
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 8a799e9a-1461-4e79-ae90-1978af6cf0ed
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '498'
 ht-degree: 6%
 
 ---
 
 # Sök {#search-feature}
 
-I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
+I AEM redigeringsmiljö finns olika metoder för att söka efter innehåll, beroende på resurstypen.
 
 ## Grunderna i sökning {#search-basics}
 
@@ -62,7 +63,7 @@ Så här söker och filtrerar du resurser:
    * Sparade sökningar
    * Sökkatalog
    * Taggar
-   * Sökvillkor, till exempel Ändrade datum, Publish-status, LiveCopy-status
+   * Sökvillkor, till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status
 
    >[!NOTE]
    >

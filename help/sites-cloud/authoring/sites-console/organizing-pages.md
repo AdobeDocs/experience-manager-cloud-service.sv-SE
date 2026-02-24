@@ -1,13 +1,14 @@
 ---
 title: Ordna sidor
 description: Lär dig hur du organiserar din webbplats med AEM.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: c57096ca-34fe-4b19-98e0-8f3cd43cf24e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 9a700e9eb3116252f42bb08db9dadc0e8a6adbf7
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '805'
 ht-degree: 2%
 
 ---
@@ -28,7 +29,7 @@ Du kan också använda [mappar](#creating-a-new-folder) för att ordna ditt inne
 
 Strukturen på en webbplats kan ses som ett träd som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan rubrikerna visas när sidinnehållet visas.
 
-I följande exempel visas ett exempel från webbplatsen [WKND Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE) där du kan få tillgång till en artikel om skateparker (`la-skateparks`):
+I följande exempel visas ett exempel från webbplatsen [WKND Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) där du kan få tillgång till en artikel om skateparker (`la-skateparks`):
 
 `http://<host>:<port>/editor.html/content/wknd/en/sports/la-skateparks.html`
 

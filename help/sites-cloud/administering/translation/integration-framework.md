@@ -3,34 +3,35 @@ title: Konfigurera översättningsintegreringsramverket
 description: Lär dig hur du konfigurerar TLF (Translation Integration Framework) för integrering med översättningstjänster från tredje part.
 feature: Language Copy
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 6e74cdee-7965-4087-a733-e9d81c4aa7c2
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1453'
 ht-degree: 0%
 
 ---
 
 # Konfigurera översättningsintegreringsramverket {#configuring-the-translation-integration-framework}
 
-Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM. Det handlar om tre grundläggande steg.
+Översättningsintegreringsramverket integreras med översättningstjänster från tredje part för att samordna översättningen av AEM-innehåll. Det handlar om tre grundläggande steg.
 
 1. [Anslut till översättningstjänsten](#connecting-to-a-translation-service-provider).
 1. [Skapa en konfiguration för översättningsintegreringsramverket](#creating-a-translation-integration-configuration).
 1. [Associera molnkonfigurationerna med dina sidor](#configuring-pages-for-translation).
 
-En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
+En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom översättning av ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealisk för dem som saknar AEM- eller översättningsupplevelse.
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
 Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverantören.
 
-AEM innehåller möjligheten att [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard. Andra översättningsteknikleverantörer med AEM anslutningar som är medlemmar i partnerprogrammet för Adobe Exchange finns [här](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE).
+AEM innehåller möjligheten att [ansluta till Microsoft® Translator](connect-ms-translator.md) som standard. Andra översättningsteknikleverantörer med AEM-anslutningar som är medlemmar i Adobe Exchange partnerprogram finns [här](https://exchange.adobe.com/apps/browse/ec?page=1&partnerLevel=All&product=AEM&q=experience+manager+translation&sort=RELEVANCE).
 
 När du har installerat ett kopplingspaket kan du skapa en molnkonfiguration för anslutningen. Vanligtvis måste du ange dina autentiseringsuppgifter för autentisering med översättningstjänsten. Mer information om hur du lägger till en molnkonfiguration för Microsoft® Translator-anslutningen finns i [Integrera med Microsoft® Translator](connect-ms-translator.md).
 
@@ -54,15 +55,15 @@ När du har konfigurerat ett ramverk för översättningsintegrering kan du [ass
 
 >[!TIP]
 >
->En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
+>En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
 
 En enda konfiguration av ramverket styr hur sidinnehåll och resurser översätts. Så här skapar du en översättningskonfiguration:
 
-1. På den [globala navigeringsmenyn](/help/sites-cloud/authoring/basic-handling.md#global-navigation) väljer du **Verktyg > Cloud Service och översättningsmeny**.
+1. Välj [Verktyg > Molntjänster och översättningsmolntjänster](/help/sites-cloud/authoring/basic-handling.md#global-navigation) på den **globala navigeringsmenyn**.
 1. Navigera till den plats där du vill skapa konfigurationen i innehållsstrukturen. Detta baseras ofta på en viss webbplats eller kan vara globalt.
 1. Ange följande information i fälten och välj sedan **Skapa**:
    1. Välj **Konfigurationstyp** i listrutan.
-   1. Ange en **titel** för din konfiguration. **Titel** identifierar konfigurationen i **Cloud Services**-konsolen och i listrutan för sidegenskaper.
+   1. Ange en **titel** för din konfiguration. **Titel** identifierar konfigurationen i **Cloud Services**-konsolen och i listrutor med sidegenskaper.
    1. Du kan också ange ett **namn** som ska användas för databasnoden som lagrar konfigurationen.
 1. Konfigurera egenskaperna på flikarna **Platser** och **Assets** i fönstret **Redigera konfiguration** och välj sedan **Spara och stäng**.
 
@@ -118,7 +119,7 @@ Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet
 Koppla en sida till översättningsleverantören som du använder för att översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som ska konfigureras och väljer **Visa egenskaper**.
-1. Markera fliken **Cloud Service**.
+1. Välj fliken **Molntjänster**.
 1. Välj konfigurationen i listrutan **Lägg till konfiguration**.
 1. Välj **Spara och stäng**.
 
@@ -127,6 +128,6 @@ Koppla en sida till översättningsleverantören som du använder för att över
 Koppla en sida till översättningsintegreringsramverket som definierar hur du vill översätta sidan och underordnade sidor.
 
 1. På webbplatskonsolen markerar du sidan som ska konfigureras och väljer **Visa egenskaper**.
-1. Markera fliken **Cloud Service**.
+1. Välj fliken **Molntjänster**.
 1. Välj konfigurationen i listrutan **Lägg till konfiguration**.
 1. Välj **Spara och stäng**.

@@ -1,13 +1,14 @@
 ---
 title: Publicera innehåll med den universella redigeraren
 description: Lär dig hur den universella redigeraren publicerar innehåll och hur dina appar kan hantera det publicerade innehållet.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: aee34469-37c2-4571-806b-06c439a7524a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: c0714a7b74cd223ad4a405934c89a3146fb8b5c4
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -56,7 +57,7 @@ Du har sedan samma alternativ för att avpublicera innehåll som du gjorde när 
 
 ## Publicera och avpublicera från Sites Console {#publishing-sites-console}
 
-Du kan också publicera [&#x200B; från webbplatskonsolen &#x200B;](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
+Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
 
 ## Ytterligare resurser {#additional-resources}
 

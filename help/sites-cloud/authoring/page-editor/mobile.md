@@ -1,13 +1,14 @@
 ---
 title: Skapa en sida för mobila enheter
 description: När du skapar för mobilen kan du växla mellan flera emulatorer för att se vad slutanvändaren ser
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: fabd4468-3304-402f-9522-342da3bbae94
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -18,13 +19,13 @@ Adobe Experience Manager sidor baseras på en responsiv layout. [Responsiv layou
 
 När du skapar en mobilsida visas sidan på ett sätt som emulerar den mobila enheten. När du redigerar sidan kan du växla mellan flera emulatorer för att se vad slutanvändaren ser när han/hon öppnar sidan.
 
-Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enhetens funktioner för att återge en sida. När slutanvändaren öppnar en mobilsida upptäcker AEM enheten och skickar den representation som motsvarar enhetsgruppen.
+Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enhetens funktioner för att återge en sida. När slutanvändaren kommer åt en mobilsida identifierar AEM enheten och skickar den representation som motsvarar enhetsgruppen.
 
 >[!NOTE]
 >
 >Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. Se [Skapa live-kopior](/help/sites-cloud/administering/msm/creating-live-copies.md).
 >
->AEM kan skapa nya enhetsgrupper. Se Skapa enhetsgruppsfilter.
+>AEM-utvecklare kan skapa nya enhetsgrupper. Se Skapa enhetsgruppsfilter.
 
 <!--
 >AEM developers can create new device groups. (See [Creating Device Group Filters](/help/sites-developing/groupfilters.md).)

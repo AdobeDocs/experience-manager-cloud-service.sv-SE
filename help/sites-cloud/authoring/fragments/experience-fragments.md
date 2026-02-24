@@ -1,13 +1,14 @@
 ---
 title: Upplevelsefragment
 description: Använd Experience Fragments i Adobe Experience Manager as a Cloud Service för att göra upplevelserna återanvändbara och flexibla.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 9dc33677-141f-47e5-a01e-6c7488686314
 solution: Experience Manager Sites
 feature: Authoring, Experience Fragments
 role: User
-source-git-commit: ff06dbd86c11ff5ab56b3db85d70016ad6e9b981
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2142'
+source-wordcount: '2148'
 ht-degree: 2%
 
 ---
@@ -52,7 +53,7 @@ Författare vill bara använda AEM för att skapa, men inte för att leverera ti
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!NOTE]
 >
@@ -439,7 +440,7 @@ Med väljaren `.plain.` i URL:en kan du komma åt den vanliga HTML-återgivninge
 
 >[!NOTE]
 >
->Även om detta är direkt tillgängligt från webbläsaren är det främsta syftet med [att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en &#x200B;](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
+>Även om detta är direkt tillgängligt från webbläsaren är det främsta syftet med [att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en ](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
 
 ## Publicera upplevelsefragment {#publishing-experience-fragments}
 

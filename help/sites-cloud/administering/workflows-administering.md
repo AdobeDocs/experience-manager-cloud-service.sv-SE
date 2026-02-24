@@ -3,11 +3,12 @@ title: Administrera arbetsflödesinstanser
 description: Lär dig administrera arbetsflödesinstanser med arbetsflödeskonsolen
 feature: Administering
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: d2adb5e8-3f0e-4a3b-b7d0-dbbc5450e45f
 solution: Experience Manager Sites
-source-git-commit: 372d8969b1939e9a24d7910a1678a17c0dc9f9fd
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1288'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 
    >[!NOTE]
    >
-   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis vid [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflödets bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html?lang=sv-SE).
+   > Om du vill att arbetsflödesinstansen ska vara felfri följer du god praxis vid [regelbunden rensning av arbetsflödesinstanser](#regular-purging-of-workflow-instances) eller [arbetsflödets bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
 
 ## Sök efter arbetsflödesinstanser {#search-workflow-instances}
 
@@ -112,7 +113,7 @@ Det finns en rad konsoler som du kan använda för att administrera dina arbetsf
 När ett arbetsflöde misslyckas tillhandahåller AEM konsolen **Fel** så att du kan undersöka och vidta lämpliga åtgärder när den ursprungliga orsaken har hanterats:
 
 * **Felinformation**
-Öppnar ett fönster för att visa **Felmeddelande**, **Steg och &#x200B;** Felhög** .
+Öppnar ett fönster för att visa **Felmeddelande**, **Steg och **Felhög** .
 
 * **Öppna historik**
 Visar information om arbetsflödeshistoriken.

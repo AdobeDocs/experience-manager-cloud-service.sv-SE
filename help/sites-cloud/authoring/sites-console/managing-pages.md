@@ -1,13 +1,14 @@
 ---
 title: Hantera sidor
 description: Lär dig hur du hanterar sidorna på din webbplats i AEM, inklusive flytt, kopiering och borttagning.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 355b60c5-a82e-4bbb-98ea-bfcc0126b7fd
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 45805d4baa8b93df2225b44152fee1457b421150
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1335'
 ht-degree: 0%
 
 ---
@@ -154,7 +155,7 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
    * **Nu** utlöser ett [asynkront jobb](#asynchronous-actions) för att flytta sidan omedelbart.
    * **Senare** låter dig schemalägga ett datum för flytten som ska bearbetas.
 
-   ![Definierar när &#x200B;](assets/managing-pages-move-page-now-later.png) ska flyttas
+   ![Definierar när ](assets/managing-pages-move-page-now-later.png) ska flyttas
 
 1. Tryck eller klicka på **Fortsätt** för att slutföra sidflytten.
 
@@ -208,7 +209,7 @@ Status för asynkrona jobb kan kontrolleras på kontrollpanelen [**Async Jobs St
 Du kan [låsa/låsa upp en sida](/help/sites-cloud/authoring/page-editor/edit-content.md#locking-a-page) från en konsol eller när du redigerar en enskild sida. Information om huruvida en sida är låst visas också på båda platserna.
 
 ![Lås-knapp](/help/sites-cloud/authoring/assets/lock.png)
-![&#x200B; Knappen Lås upp &#x200B;](/help/sites-cloud/authoring/assets/unlock.png)
+![ Knappen Lås upp ](/help/sites-cloud/authoring/assets/unlock.png)
 
 ### Skapa en ny mapp {#creating-a-new-folder}
 

@@ -1,13 +1,14 @@
 ---
 title: Administrera taggar
 description: Lär dig hur du administrerar taggar i AEM för att ordna ditt innehåll.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 42480699-b7a7-4678-a763-569a9b7573e2
 solution: Experience Manager Sites
 feature: Workflow
 role: Admin
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2200'
+source-wordcount: '2206'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 Taggar är ett intuitivt sätt att klassificera innehåll. De kan ses som nyckelord eller etiketter (metadata) som gör att innehållet kan hittas snabbare.
 
-I Adobe Experience Manager (AEM) kan en -tagg vara en egenskap för:
+I Adobe Experience Manager (AEM) kan en tagg vara en egenskap för:
 
 * En innehållsnod för en sida
    * Mer information finns i dokumentet [Använda taggar](/help/sites-cloud/authoring/sites-console/tags.md).
@@ -36,7 +37,7 @@ Taggar har robusta funktioner för att ordna och hantera innehåll.
    * Dessa taxonomier är globala i hela AEM.
 * Taggar kan användas av författare och av webbplatsbesökare.
 * Oavsett vem som skapat dem blir alla typer av taggar tillgängliga för markering, både när du tilldelar till en sida och när du söker.
-* Taggar används av [List Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=sv-SE) för att generera dynamiska listor baserat på de markerade taggarna.
+* Taggar används av [List Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html) för att generera dynamiska listor baserat på de markerade taggarna.
 
 ## Märkordskrav {#requirements}
 
@@ -76,7 +77,7 @@ Det finns flera steg för att skapa och använda taggar för att ordna ditt inne
 
 1. [Skapa ett namnutrymme för taggarna](#creating-namespaces) (eller välj ett befintligt som du vill återanvända).
 1. [Skapa en ny tagg](#creating-tags).
-1. [Publish the tag](#publishing-tags).
+1. [Publicera taggen](#publishing-tags).
 
 ### Skapa namnutrymmen {#creating-namespaces}
 
@@ -134,17 +135,17 @@ Precis som när du skapar annat innehåll i AEM finns det bara i redigeringsmilj
 
 1. Om du vill publicera en tagg öppnar du [taggningskonsolen](#tagging-console).
 
-1. Markera taggen eller taggarna som du vill publicera och välj **Publish** i verktygsfältet.
+1. Markera taggen eller taggarna som du vill publicera och välj **Publicera** i verktygsfältet.
 
    ![Markera taggar i konsolen](assets/select-tags.png)
 
-1. I dialogrutan **Publish-tagg** uppmanas du att bekräfta publiceringen av de markerade taggarna. Välj **Publish**.
+1. Dialogrutan **Publiceringstagg** innehåller en uppmaning om att bekräfta publiceringen av de markerade taggarna. Välj **Publicera**.
 
-   ![Bekräftelsemodal för Publish-tagg](assets/publish-tag.png)
+   ![Bekräftelsemodal publiceringstagg](assets/publish-tag.png)
 
 1. Publiceringsåtgärden har bekräftats med en **lyckad**-dialogruta.
 
-   ![Dialogrutan Publish-taggen lyckades](assets/publish-tag-success.png)
+   ![Dialogrutan Publicera tagg lyckades](assets/publish-tag-success.png)
 
 De markerade taggarna står i kö för publicering. Precis som sidinnehåll publiceras bara de markerade taggarna, oavsett om de har undertaggar eller inte.
 
@@ -218,13 +219,13 @@ Om du vill inaktivera taggen på författarinstansen och ta bort den från publi
 
    ![Markera taggar i konsolen](assets/select-tags.png)
 
-1. Dialogrutan **Avpublicera tagg** innehåller en uppmaning om att bekräfta publiceringen av de markerade taggarna. Välj **Publish**.
+1. Dialogrutan **Avpublicera tagg** innehåller en uppmaning om att bekräfta publiceringen av de markerade taggarna. Välj **Publicera**.
 
-   ![Bekräftelsemodal för Publish-tagg](assets/unpublish-tag.png)
+   ![Bekräftelsemodal publiceringstagg](assets/unpublish-tag.png)
 
 1. Avpubliceringsåtgärden har bekräftats med en **lyckad**-dialogruta.
 
-   ![Dialogrutan Publish-taggen lyckades](assets/unpublish-tag-success.png)
+   ![Dialogrutan Publicera tagg lyckades](assets/unpublish-tag-success.png)
 
 De markerade taggarna är köade för borttagning av publicering. Om den markerade taggen är en behållartagg inaktiveras alla dess underordnade taggar i redigeringsmiljön och tas bort från publiceringsmiljön.
 
@@ -311,7 +312,7 @@ Om taxonomin för taggning ändras och en tagg eller ett namnutrymme inte behöv
 
       ![Inga referenser hittades](assets/no-references-found.png)
 
-   1. Om referenser hittas visas de i AEM och en slutgiltig bekräftelse om att de ska tas bort.
+   1. Om referenser hittas visas de i AEM och en slutgiltig bekräftelse krävs för att de ska tas bort.
 
       ![Referenser hittades](assets/references-found.png)
 
@@ -374,10 +375,10 @@ Låt oss anta att vi har en tagg med namnet `Animals` som vi vill översätta ti
 
 För innehållssidor hämtas det språk som valts för taggen från sidspråket, om tillgängligt.
 
-I redigeringsmiljön använder AEM dock språkinställningen för användaren. I taggningskonsolen för taggen `Animals` visas `Animaux` för en användare som anger språket till franska i sina användaregenskaper.
+I redigeringsmiljön använder AEM dock språkinställningen för användare. I taggningskonsolen för taggen `Animals` visas `Animaux` för en användare som anger språket till franska i sina användaregenskaper.
 
-Om du vill lägga till ett nytt språk i dialogrutan läser du dokumentet [Bygger taggar i AEM program](/help/implementing/developing/introduction/tagging-applications.md#adding-a-new-language-to-the-edit-tag-dialog)
+Om du vill lägga till ett nytt språk i dialogrutan läser du dokumentet [Bygger taggar i AEM-program](/help/implementing/developing/introduction/tagging-applications.md#adding-a-new-language-to-the-edit-tag-dialog)
 
 >[!TIP]
 >
->Om du vill veta mer om AEM lokaliseringsfunktioner kan du läsa [Översätta ditt innehåll för flerspråkiga platser](/help/sites-cloud/administering/translation/overview.md).
+>Om du vill veta mer om AEM lokaliseringsfunktioner kan du läsa [Översätta ditt innehåll för flerspråkiga webbplatser](/help/sites-cloud/administering/translation/overview.md).

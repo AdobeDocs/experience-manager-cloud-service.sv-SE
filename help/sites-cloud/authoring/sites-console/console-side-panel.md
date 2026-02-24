@@ -1,13 +1,14 @@
 ---
 title: Sidopanelen i platskonsolen
 description: Lär dig hur du använder sidopanelen i AEM webbplatskonsol för att bättre förstå och navigera i ditt innehåll.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 7f2571d6-b847-4cce-8e94-94ba0d2e04a5
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 18cbf1c963fa4f12b69a08859a7ca855f0ac601b
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '834'
 ht-degree: 1%
 
 ---

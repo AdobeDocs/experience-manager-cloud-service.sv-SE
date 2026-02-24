@@ -1,11 +1,12 @@
 ---
 title: Creating Accessible Content for Adobe Experience Manager as a Cloud Service (WCAG 2.1-överensstämmelse)
 description: Använd AEM as a Cloud Service för att göra webbmaterial tillgängligt och användbart för personer med funktionshinder
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 294fd1ed-9b4a-42cb-8f9e-e7a5d7e6930e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: da192447ddc6edbca339c9a985f95dc063183cd3
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
 source-wordcount: '13672'
 ht-degree: 2%
@@ -39,7 +40,7 @@ Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägsta), Ni
 
 När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
-I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) med relaterade kriterier för lyckade resultat för överensstämmelsenivåerna Nivå A och Nivå AA [&#128279;](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1).
+I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) med relaterade kriterier för lyckade resultat för överensstämmelsenivåerna Nivå A och Nivå AA [](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1).
 
 >[!NOTE]
 >
@@ -54,7 +55,7 @@ I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/
 
 ### Textalternativ (1.1) {#text-alternatives}
 
-[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk &#x200B;](https://www.w3.org/TR/WCAG/#text-alternatives).
+[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk ](https://www.w3.org/TR/WCAG/#text-alternatives).
 
 ### Innehåll som inte är text (1.1.1) {#non-text-content}
 
@@ -70,11 +71,11 @@ En annan fördel är att textalternativ gör det möjligt att indexera icke-text
 
 #### Så här möts innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
-För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Den här metoden kan användas i fältet **Alternativ text**. Se till exempel kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE)**.
+För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Den här metoden kan användas i fältet **Alternativ text**. Se till exempel kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**.
 
 >[!NOTE]
 >
->Vissa av de körklara kärnkomponenterna, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=sv-SE)**, innehåller inte något **alternativt textfält** för att lägga till alternativa textbeskrivningar till enskilda bilder, även om det finns fältet **Etikett** (**[Hjälpmedel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=sv-SE#accessibility-tab)** ) för hela komponenten.
+>Vissa av de körklara kärnkomponenterna, till exempel **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)**, innehåller inte något **alternativt textfält** för att lägga till alternativa textbeskrivningar till enskilda bilder, även om det finns fältet **Etikett** (**[Hjälpmedel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)** ) för hela komponenten.
 >
 >När du implementerar versioner av dessa för din AEM-instans måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder attributet `alt`. Detta säkerställer att författare kan lägga till det i innehållet (se [Lägga till stöd för ytterligare HTML Elements och attribut](/help/implementing/developing/extending/rte-accessible-content.md#adding-support-for-additional-html-elements-and-attributes)).
 
@@ -523,7 +524,7 @@ Följ riktlinjerna under [Så här uppfyller du kriterierna 1.4.2](https://www.w
 
 * Kriteriet 1.4.3 lyckades
 * Nivå AA
-* Kontrast (minimal): Den visuella presentationen av text och bilder av text har ett kontrastförhållande på minst 4,5:1, utom följande:
+* Kontrast (minimal): Den visuella presentationen av text och bilder av text har ett kontrastförhållande på minst 4,5:1, förutom följande:
    * Stor text: Storskalig text och bilder av storskalig text har ett kontrastförhållande på minst 3:1.
    * Incident: Text eller bilder av text som är en del av en inaktiv användargränssnittskomponent, som är [ren dekoration](https://www.w3.org/TR/WCAG/#dfn-pure-decoration), som inte är synliga för någon eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
    * Logotyper: Text som ingår i en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
@@ -547,9 +548,9 @@ Personer med vissa nedsatt syn kanske inte kan skilja mellan vissa färgpar med 
 
 Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhållanden beror på textens storlek och stil:
 
-* För text som är mindre än 18 punkter (eller 14 punkter fet) bör kontrastförhållandet mellan text/bilder i texten och bakgrunden vara minst 4,5:1.
+* För text som är mindre än 18 punkter (eller 14 punkter fet) bör kontrastförhållandet mellan text/bilder i text och bakgrunden vara minst 4,5:1.
 * För text som är minst 18 punkter (eller 14 punkter fet) bör kontrastförhållandet vara minst 3:1.
-* Om en bakgrund är mönstrad ska bakgrunden runt all text skuggas så att proportionerna 4.5:1 eller 3:1 behålls.
+* Om en bakgrund är mönstrad bör bakgrunden runt all text skuggas så att förhållandet 4,5 :1 eller 3:1 behålls.
 
 >[!NOTE]
 >
@@ -613,7 +614,7 @@ Bilder av text används ofta när ett visst textformat är att föredra, t.ex. e
 
 #### Så här möts - bilder av text (1.4.5) {#how-to-meet-images-of-text}
 
-Om du måste använda bilder av text använder du CSS för att ersätta bilder av text med motsvarande text i HTML så att texten blir tillgänglig på ett anpassningsbart sätt. Ett exempel på hur detta kan uppnås finns i [C30: Använda CSS för att ersätta text med bilder av text och tillhandahålla gränssnittskontroller för att växla &#x200B;](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
+Om du måste använda bilder av text använder du CSS för att ersätta bilder av text med motsvarande text i HTML så att texten blir tillgänglig på ett anpassningsbart sätt. Ett exempel på hur detta kan uppnås finns i [C30: Använda CSS för att ersätta text med bilder av text och tillhandahålla gränssnittskontroller för att växla ](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
 
 #### Mer information - Textbilder (1.4.5) {#more-information-images-of-text}
 
@@ -777,7 +778,7 @@ Syftet med detta villkor är att personer som navigerar sekventiellt genom inneh
 
 #### Så här möts du - kringgå block (2.4.1) {#how-to-meet-bypass-blocks}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &lbrace;2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks).
 
 #### Mer information - Kringgå block (2.4.1) {#more-information-bypass-blocks}
 
@@ -817,7 +818,7 @@ Syftet med detta villkor är att se till att användare som navigerar sekventiel
 
 #### Så här möts du - fokusordning (2.4.3) {#how-to-meet-focus-order}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &lbrace;2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order).
 
 #### Mer information - Fokusordning (2.4.3) {#more-information-focus-order}
 
@@ -905,7 +906,7 @@ Syftet med detta kriterium är att göra det möjligt för användare att hitta 
 
 #### Så här möts du - flera sätt (2.4.5) {#how-to-meet-multiple-ways}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &lbrace;2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways).
 
 #### Mer information - Flera sätt (2.4.5) {#more-information-multiple-ways}
 
@@ -924,12 +925,12 @@ Syftet med detta kriterium är att hjälpa användarna att förstå vilken infor
 
 #### Hur man uppfyller kraven - rubriker och etiketter (2.4.6) {#how-to-meet-headings-and-labels}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &lbrace;2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
 
 #### Mer information - Rubriker och etiketter (2.4.6) {#more-information-headings-and-labels}
 
 * [Förstå villkor för slutförande 2.4.6](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html).
-* [Så här uppfyller du kriterierna för lyckade resultat &lbrace;2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
+* [Så här uppfyller du kriterierna för lyckade resultat {2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
 
 ### Synligt fokus (2.4.7)  {#focus-visible}
 
@@ -947,7 +948,7 @@ Om resultatvillkoret är&quot;driftssätt&quot;, ska detta beaktas för plattfor
 
 #### Hur man möter - Synligt fokus (2.4.7) {#how-to-meet-focus-visible}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &lbrace;2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible).
 
 #### Mer information - Synligt fokus (2.4.7) {#more-information-focus-visible}
 
@@ -1107,7 +1108,7 @@ Användare kan initiera en ändring av ordningen med hjälp av adaptiva använda
 
 #### Hur man möter - Enhetlig navigering (3.2.3) {#how-to-meet-consistent-navigation}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för lyckat resultat &lbrace;3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för lyckat resultat {3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation).
 
 #### Mer information - Enhetlig navigering (3.2.3) {#more-information-consistent-navigation}
 
@@ -1132,7 +1133,7 @@ Om det finns två komponenter på en webbsida som båda har samma funktioner som
 
 #### Hur man uppfyller kraven - konsekvent identifiering (3.2.4) {#how-to-meet-consistent-identification}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &#x200B;](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas ](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
 
 #### Mer information - Konsekvent identifiering (3.2.4) {#more-information-consistent-identification}
 
@@ -1266,7 +1267,7 @@ Användarstyrda data är användaranpassade data som användaren kan ändra och/
 
 #### Hur man ska uppfylla kraven - Förebyggande av fel (rättsliga, finansiella, uppgifter) (3.3.4) {#how-to-meet-error-prevention-legal-financial-data}
 
-Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas &lbrace;3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data).
 
 #### Mer information - Felförebyggande (Juridik, Finans, Data) (3.3.4) {#more-information-error-prevention-legal-financial-data}
 

@@ -1,13 +1,14 @@
 ---
 title: Mallar för att skapa sidor som är redigerbara med sidredigeraren
 description: Du kan använda mallredigeraren för att skapa mallar som innehållsförfattarna kan använda för att skapa sidor som kan redigeras med sidredigeraren.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 4c9dbf26-5852-45ab-b521-9f051c153b2e
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '4415'
+source-wordcount: '4421'
 ht-degree: 5%
 
 ---
@@ -85,7 +86,7 @@ När du skapar en redigerbar mall:
    * [Format](/help/sites-cloud/authoring/page-editor/style-system.md) - Definiera de format som ska användas med mallen och dess komponenter.
 * [Aktivera mallen](#enabling-a-template-template-author) för användning när du skapar en sida
 * [Tillåt mallen](#allowing-a-template-author) för den begärda sidan eller grenen på din webbplats
-* [Publish mallen](#publishing-a-template-template-author) för att göra den tillgänglig i publiceringsmiljön
+* [Publicera mallen](#publishing-a-template-template-author) för att göra den tillgänglig i publiceringsmiljön
 
 >[!NOTE]
 >
@@ -95,7 +96,7 @@ När du skapar en redigerbar mall:
 >
 >Ange aldrig någon information som måste vara [internationaliserad](/help/implementing/developing/extending/i18n/dev.md) i en mall.
 >
->Använd [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE) för mallelement som sidhuvuden och sidfötter som måste lokaliseras.
+>Använd [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html) för mallelement som sidhuvuden och sidfötter som måste lokaliseras.
 
 ### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
@@ -107,7 +108,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
    >[!NOTE]
    >
-   >I en AEM finns mappen **global** redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
+   >I en standardinstans av AEM finns mappen **global** redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
    >
    >Vi rekommenderar att du använder en [mallmapp som skapats för ditt projekt](/help/implementing/developing/components/templates.md#template-folders).
 
@@ -134,7 +135,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 >
 >Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
 >
->Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
+>Adobe rekommenderar inte att man har fler än 1 000 mallar på grund av potentiella prestandaeffekter.
 
 ### Definiera mallegenskaper - mallförfattare {#defining-template-properties-template-author}
 
@@ -210,7 +211,7 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 
 Eftersom mallen refereras när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
-Publish-mallar med **[Mallkonsolen](/help/sites-cloud/administering/templates-console.md)**.
+Publicera mallar med **[Mallkonsolen](/help/sites-cloud/administering/templates-console.md)**.
 
 ## Redigera mallar - mallskapare {#editing-templates-template-authors}
 
@@ -445,7 +446,7 @@ På fliken **Tillåtna komponenter** definierar du vilka komponenter som är til
 
 ###### Standardkomponenter {#default-components}
 
-På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till de angivna medietyperna så att AEM vet vilken komponent som ska associeras när en författare drar en resurs från resursläsaren. Endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
+På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt associeras med de angivna medietyperna så att AEM vet vilken komponent som ska associeras när en författare drar en resurs från resursläsaren. Endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
 Välj **Lägg till mappning** om du vill lägga till en helt ny komponent och MIME-typmappning.
 
@@ -495,7 +496,7 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 
 >[!NOTE]
 >
->**Inledande innehåll** kan användas för redigeringsläge för sidor som skapas med den mallen. Profiler definieras därför inte i **Inledande innehåll** utan i [**Struktur** &#x200B;](#editing-a-template-structure-template-author) .
+>**Inledande innehåll** kan användas för redigeringsläge för sidor som skapas med den mallen. Profiler definieras därför inte i **Inledande innehåll** utan i [**Struktur** ](#editing-a-template-structure-template-author) .
 
 * Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kantlinje:
 
@@ -518,7 +519,7 @@ Om strukturen uppdateras efter att sidor som är baserade på mallen har skapats
 >
 >Ursprungligt innehåll är avsett för att förbereda komponenter och den sidlayout som fungerar som en startpunkt för att skapa innehållet. Det är inte avsett att vara det faktiska innehåll som skulle förbli som det är. Därför går det inte att översätta det ursprungliga innehållet.
 >
->Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE).
+>Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 ### Redigera en mall - Layout - mallskapare {#editing-a-template-layout-template-author}
 
@@ -647,4 +648,4 @@ När du skapar mallar bör du tänka på följande:
    >AEM ger uttryckliga varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
 
 1. [Skapar egna mappar](#creating-a-template-folder-admin) för dina platsspecifika mallar.
-1. [Publish dina mallar](#publishing-a-template-template-author) från **[Mallkonsolen]**(/help/sites-cloud/administering/templates-console.md).
+1. [Publicera dina mallar](#publishing-a-template-template-author) från **[Mallkonsolen]**(/help/sites-cloud/administering/templates-console.md).

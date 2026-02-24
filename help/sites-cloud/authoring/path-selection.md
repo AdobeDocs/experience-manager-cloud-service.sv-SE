@@ -1,13 +1,14 @@
 ---
 title: Banmarkering med Bandläsaren
 description: Lär dig använda sökvägsläsaren för att välja resurser i AEM.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 8eb52793-b709-4e66-832d-533ef06bc0e1
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '328'
 ht-degree: 3%
 
 ---
@@ -26,7 +27,7 @@ Om du klickar på knappen **Öppna dialogruta för markering** i sökvägsfälte
 
 ![Öppna knappen i dialogrutan Markering](assets/path-selection-open-selection-dialog.png)
 
-Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
+Du kan också börja skriva i sökvägsfältet så kommer AEM att erbjuda matchande sökvägar när du skriver.
 
 ![Öppna knappen i dialogrutan Markering](assets/path-selection-open-selection-dialog.png)
 

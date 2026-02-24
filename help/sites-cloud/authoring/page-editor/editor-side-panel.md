@@ -1,20 +1,21 @@
 ---
 title: Sidredigeraren, sidopanel
-description: Lär dig hur du använder sidopanelen i AEM webbplatsredigeraren för att lägga till komponenter och resurser på sidan.
+description: Lär dig hur du använder sidopanelen i AEM webbplatsredigerare för att lägga till komponenter och resurser på sidan.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 5f025828-f2ca-4cbb-9cdf-a199e9e90cc7
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1128'
 ht-degree: 0%
 
 ---
 
 # Sidredigeraren, sidopanel {#side-panel}
 
-Lär dig hur du använder sidopanelen i AEM webbplatsredigeraren för att lägga till komponenter och resurser på sidan.
+Lär dig hur du använder sidopanelen i AEM webbplatsredigerare för att lägga till komponenter och resurser på sidan.
 
 ## Lägen i sidopanelen {#modes}
 
@@ -30,7 +31,7 @@ När du öppnar sidopanelen öppnas den från vänster sida och du kan sedan vä
 
 ## Komponentbläddraren {#components-browser}
 
-[Komponenter](/help/implementing/developing/components/overview.md) är byggstenarna som används för att skapa innehåll med AEM sidredigerare. Du placerar flera komponenter på en sida och konfigurerar deras alternativ för att skapa din innehållssida.
+[Komponenter](/help/implementing/developing/components/overview.md) är byggstenarna som används för att skapa innehåll med sidredigeraren i AEM. Du placerar flera komponenter på en sida och konfigurerar deras alternativ för att skapa din innehållssida.
 
 Komponentwebbläsaren visar alla komponenter som är tillgängliga för användning på den aktuella sidan. Dessa kan dras till rätt plats och sedan redigeras för att lägga till ditt innehåll.
 

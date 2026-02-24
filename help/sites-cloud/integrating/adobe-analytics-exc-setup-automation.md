@@ -3,11 +3,12 @@ title: Integrera Adobe Analytics med Experience Cloud Setup Automation
 description: Experience Cloud Setup Automation är ett enkelt och automatiserat sätt att integrera och instrumentera Experience Manager Sites med Experience Platform Tags och Adobe Analytics med ett enkelt gränssnitt. Lär dig hur du använder den automatiska konfigurationen med din egen webbplats.
 feature: Integration
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 351ead2c-7b0d-4bd9-a020-47516948d467
 solution: Experience Manager Sites
-source-git-commit: 4a3e65ef6a8aa08c8bc78db31f94272334994ac5
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '733'
 ht-degree: 0%
 
 ---
@@ -28,7 +29,7 @@ I den här videon utforskas hur en AEM-webbplats är integrerad med Experience P
 
 ## Krav
 
-Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM-webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE) aktiverad. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
+Automatiseringskonfigurationen är utformad för att fungera direkt med en AEM-webbplats som byggts med [AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) med [Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) aktiverad. Du kan skapa en ny webbplats som har dessa funktioner aktiverade automatiskt med [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) eller genom att skapa en webbplats med en [webbplatsmall](/help/journey-sites/quick-site/create-site.md).
 
 ## Förutsättningar {#prerequisites}
 
@@ -55,7 +56,7 @@ Miljön bör nu vara redo för Experience Cloud Setup Automation.
 1. Välj knappen **Integrera analys** .
 1. Ange ett namn för **Report Suite-ID** i den dialogruta som visas.
 
-   Den här strängen används för att skapa ett [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html?lang=sv-SE) i Adobe Analytics som datalager för analysdata för den valda AEM-webbplatsen. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
+   Den här strängen används för att skapa ett [Report Suite-ID](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html) i Adobe Analytics som datalager för analysdata för den valda AEM-webbplatsen. Den angivna strängen har bifogats med miljö- och skiktidentifierare för att säkerställa unikt utseende.
 
 1. Uppdatera sidan och panelen och välj **Kontrollera integreringsstatus** för att kontrollera automatiseringsstatus.
 

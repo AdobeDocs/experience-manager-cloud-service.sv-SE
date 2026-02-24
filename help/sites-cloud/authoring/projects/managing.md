@@ -1,13 +1,14 @@
 ---
 title: Hantera projekt
 description: Med projekt kan du ordna ditt projekt genom att gruppera resurser i en enhet som du kan komma åt och hantera i projektkonsolen
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: be4616e7-18bc-4b2d-89f6-d04178ac7f3a
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 6719e0bcaa175081faa8ddf6803314bc478099d7
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '882'
 ht-degree: 9%
 
 ---
@@ -24,7 +25,7 @@ I Projekt kan du skapa ett projekt, associera resurser med projektet och även t
 
 ## Skapa ett projekt {#creating-a-project}
 
-I AEM finns de här mallarna som du kan välja mellan när du skapar ett projekt:
+När du skapar ett projekt innehåller AEM följande mallar som du kan välja mellan:
 
 * Enkelt projekt
 * Medieprojekt

@@ -4,13 +4,14 @@ description: Lär dig hur sidredigeraren publicerar innehåll.
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 5871e04d3bd78bdd8df55d42e7619c98ea3f38ca
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
+exl-id: dc11ac02-2a8d-4d82-ae10-e0fb97025063
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
-
 
 # Publicera innehåll med webbplatsredigeraren {#publishing}
 
@@ -59,4 +60,4 @@ När du redigerar en sida med sidredigeraren och vill avpublicera sidan väljer 
 
 ## Publicera och avpublicera från Sites Console {#publishing-sites-console}
 
-Du kan också publicera [&#x200B; från webbplatskonsolen &#x200B;](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.
+Du kan också publicera [ från webbplatskonsolen ](/help/sites-cloud/authoring/sites-console/publishing-pages.md) som kan vara användbar när du vill publicera flera sidor med innehåll eller schemalägga publicering eller avpublicering.

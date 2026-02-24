@@ -3,11 +3,12 @@ title: Guiden Kopiera språk
 description: Läs om hur du använder guiden för språkkopiering i AEM.
 feature: Language Copy
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: bf8bdc53-0248-47de-bb9d-c884a7179ab0
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Guiden för språkkopiering är en guidad upplevelse för att skapa och instrume
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom översättning av ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealisk för dem som saknar AEM- eller översättningsupplevelse.
 
 >[!NOTE]
 >

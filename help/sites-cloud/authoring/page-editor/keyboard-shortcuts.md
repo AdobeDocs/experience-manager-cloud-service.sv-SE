@@ -1,24 +1,25 @@
 ---
 title: Kortkommandon för sidredigering
 description: Det finns olika kortkommandon i hela AEM, bland annat för sidredigering
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 6c501897-48f9-478a-b143-d3ad19643b8c
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
 # Kortkommandon för sidredigering {#keyboard-shortcuts-when-editing-pages}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, andra för [användningen av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) och andra gäller särskilt konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
+Det finns olika kortkommandon i hela AEM. Vissa gäller när du redigerar sidor, andra för [användningen av konsoler](/help/sites-cloud/authoring/sites-console/keyboard-shortcuts.md) och andra gäller särskilt konsolen [Innehållsfragment](/help/sites-cloud/administering/content-fragments/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->De [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>De [modifieringstangenter](#os-specific-modifier-keys) som krävs för AEM-kortkommandon varierar beroende på operativsystem.
 
 ## Redigera kortkommandon {#editing-keyboard-shortcuts}
 

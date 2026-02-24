@@ -1,13 +1,14 @@
 ---
 title: Sidskillnader
 description: Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid sida med skillnaderna markerade.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 6e5c7f14-c980-48e3-8bdd-a7ec10a9e680
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: ae1dedc3d0533205decc08d396c5a844c4525ba2
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -48,7 +49,7 @@ Om du till exempel jämför versioner visas den aktuella versionen till vänster
 
 Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webbläsarfönstret.
 
-![Versioner sida vid sida &#x200B;](/help/sites-cloud/authoring/assets/versions-side-by-side.png)
+![Versioner sida vid sida ](/help/sites-cloud/authoring/assets/versions-side-by-side.png)
 
 Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
 

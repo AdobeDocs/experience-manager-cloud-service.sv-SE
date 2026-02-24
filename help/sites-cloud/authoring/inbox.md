@@ -1,23 +1,24 @@
 ---
 title: Din inkorg
 description: Lär dig hur du använder meddelanden som kommer in i din Inkorg för att hantera dina uppgifter.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 37d0cf43-192f-4a50-b174-42d7dced3b63
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '916'
 ht-degree: 13%
 
 ---
 
 # Din inkorg {#your-inbox}
 
-Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt. Du kan till exempel få meddelanden om:
+Du kan få meddelanden från olika delar av AEM, inklusive arbetsflöden och projekt. Du kan till exempel få meddelanden om:
 
 * Uppgifter:
-   * Dessa kan också skapas vid olika punkter i AEM, till exempel under **Projekt**.
+   * Dessa kan också skapas vid olika tillfällen i AEM-gränssnittet, till exempel under **Projekt**.
    * Dessa kan ha sitt ursprung i arbetsflödessteget **Skapa uppgift** eller **Skapa projektuppgift**.
 * Arbetsflöden:
    * Arbetsobjekt som representerar åtgärder som du behöver utföra på sidinnehåll
@@ -46,11 +47,11 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 ## Öppna Inkorgen {#opening-the-inbox}
 
-Så här öppnar du AEM inkorg:
+Så här öppnar du AEM inkorg för meddelanden:
 
 1. Markera indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. Inkorgen **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. **AEM Inbox** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.
@@ -221,7 +222,7 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-cloud/authoring/proj
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM Inkorg**.
+1. Öppna **AEM Inbox**.
 
 1. Öppna filterväljaren:
 

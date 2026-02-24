@@ -1,12 +1,13 @@
 ---
 title: Drifttelemetri för AEM as a Cloud Service
 description: Läs mer om Operational Telemetry, en automatiserad tjänst som gör det möjligt att övervaka datainsamlingen på klientsidan.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 91fe9454-3dde-476a-843e-0e64f6f73aaf
 feature: Administering
 role: Admin
-source-git-commit: 100a8cd1a27cd8f0677ed001def0b1e0e7b20ed3
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1140'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Den operativa telemetritjänsten är utformad för att minimera datainsamling. D
 * Värdnamnet för den webbplats som besöktes, till exempel: `experienceleague.adobe.com`
 * Den breda användaragenttypen och det operativsystem som används för att visa sidan, till exempel: `desktop:windows` eller `mobile:ios`
 * Tidpunkten för datainsamlingen, till exempel: `2021-06-26 06:00:02.596000 UTC (in order to preserve privacy, we round all minutes to the previous hour, so that only seconds and milliseconds are tracked)`
-* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs?lang=sv-SE`
+* URL:en för sidan som besöks, till exempel: `https://experienceleague.adobe.com/docs`
 * Referens-URL (URL:en för sidan som länkade till den aktuella sidan, om användaren följde en länk)
 * Ett slumpmässigt genererat ID för sidvyn i ett format som liknar: `2Ac6`
 * Samplingsfrekvensen, t.ex. `100`, har samma vikt eller inverterad. Det betyder att bara en av hundra sidvisningar spelas in

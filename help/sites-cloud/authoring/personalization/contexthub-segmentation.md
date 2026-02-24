@@ -1,13 +1,14 @@
 ---
 title: Konfigurera segmentering med ContextHub
 description: Lär dig konfigurera segmentering med ContextHub.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: fbc38611-dbee-426e-b823-df64b6730c45
 solution: Experience Manager Sites
 feature: Authoring, Personalization
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1659'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Beroende på den information du redan har samlat in om webbplatsbesökarna och d
 
 Dessa segment används sedan för att förse en besökare med specifikt riktat innehåll. [Aktiviteter](activities.md) som definieras här kan inkluderas på alla sidor och definiera vilket besökarsegment det specialiserade innehållet gäller.
 
-AEM gör att ni enkelt kan personalisera användarnas upplevelser. Du kan också kontrollera resultatet av segmentdefinitionerna.
+Med AEM kan ni enkelt personalisera användarnas upplevelser. Du kan också kontrollera resultatet av segmentdefinitionerna.
 
 ## Åtkomst till segment {#accessing-segments}
 
@@ -89,7 +90,7 @@ Följande referenser är tillgängliga när du vill länka direkt till ett skrip
 
 Så här definierar du det nya segmentet:
 
-1. När [har öppnat segmenten](#accessing-segments) [navigerar &#x200B;](#organizing-segments) till mappen där du vill skapa segmentet.
+1. När [har öppnat segmenten](#accessing-segments) [navigerar ](#organizing-segments) till mappen där du vill skapa segmentet.
 
 1. Markera knappen **Skapa** och välj **Skapa ContextHub-segment**.
 
@@ -215,7 +216,6 @@ Om du har många segment kan det bli svårt att hantera dem som en platt lista. 
 1. Mappen visas i segmentlistan.
    * Hur du sorterar kolumnerna påverkar var i listan den nya mappen visas.
    * Du kan välja kolumnrubrikerna för att justera sorteringen.
-
      ![Den nya mappen](../assets/contexthub-folder.png)
 
 ### Ändra befintliga mappar {#modify-folders}

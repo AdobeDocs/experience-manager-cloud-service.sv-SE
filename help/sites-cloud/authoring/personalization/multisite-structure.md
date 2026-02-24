@@ -1,13 +1,14 @@
 ---
 title: Hur hantering av flera webbplatser för riktat innehåll är strukturerad
 description: Ett diagram visar hur stöd för flera webbplatser för riktat innehåll är strukturerat
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: c6b05c2a-0897-4514-8937-e23bfcf757d5
 solution: Experience Manager Sites
 feature: Authoring, Personalization
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ Områden visas under **/content/campaign/&lt;brand>** och som standard har varje
 
 ![Struktur för flera webbplatser](/help/sites-cloud/authoring/assets/multisite-structure.png)
 
-Om du vill söka efter riktat innehåll kan sidorna eller platserna mappas till ett område. Om inget område är konfigurerat återgår AEM till huvudområdet för det specifika varumärket.
+Om du vill söka efter riktat innehåll kan sidorna eller platserna mappas till ett område. Om inget område är konfigurerat återgår AEM till huvudområdet för det här specifika varumärket.
 
 Följande diagram är ett exempel på hur logiken fungerar för tre platser, som kallas site1, site2 och site3.
 

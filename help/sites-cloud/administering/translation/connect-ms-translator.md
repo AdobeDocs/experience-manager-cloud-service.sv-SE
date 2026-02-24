@@ -1,13 +1,14 @@
 ---
 title: Ansluta till Microsoft Translator
-description: Lär dig hur du kan koppla AEM till Microsoft Translator körklart för att automatisera ditt arbetsflöde för översättning.
+description: Lär dig hur du ansluter AEM till Microsoft Translator direkt för att automatisera ditt arbetsflöde för översättning.
 feature: Language Copy
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: ca3c50f9-005e-4871-8606-0cfd3ed21936
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ AEM tillhandahåller en inbyggd koppling för [Microsoft Translator](https://www
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom översättning av ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealisk för dem som saknar AEM- eller översättningsupplevelse.
 
 | Egenskap | Beskrivning |
 |---|---|
@@ -29,12 +30,12 @@ AEM tillhandahåller en inbyggd koppling för [Microsoft Translator](https://www
 
 Följande procedur skapar en Microsoft Translator-konfiguration.
 
-1. I [navigeringspanelen](/help/sites-cloud/authoring/basic-handling.md#first-steps) väljer du **Verktyg** > **Cloud Service** > **ÖversättningsCloud Service**.
+1. I [navigeringspanelen](/help/sites-cloud/authoring/basic-handling.md#first-steps) väljer du **Verktyg** > **Molntjänster** > **Översättningsmolntjänster**.
 1. Navigera till den plats där du vill skapa konfigurationen. Normalt finns det i platsroten eller så kan det vara en global standardkonfiguration.
 1. Klicka på knappen **Skapa**.
 1. Definiera konfigurationen.
    1. Välj **Microsoft Translator** i listrutan.
-   1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i konsolen Cloud Service och i listrutor för sidegenskaper.
+   1. Ange en rubrik för konfigurationen. Titeln identifierar konfigurationen i molntjänstkonsolen och i listrutor för sidegenskaper.
    1. Du kan också ange ett namn som ska användas för databasnoden som lagrar konfigurationen.
 
    ![Skapa översättningskonfiguration](../assets/create-translation-config.png)

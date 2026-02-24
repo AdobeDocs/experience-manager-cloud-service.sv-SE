@@ -1,13 +1,14 @@
 ---
 title: Delta i arbetsflöden
 description: Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en aktivitet på en sida eller en resurs.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 62192da9-0b5b-4997-9c2b-d1aee04b01f9
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 90f7f6209df5f837583a7225940a5984551f6622
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1513'
 ht-degree: 1%
 
 ---
@@ -75,7 +76,7 @@ Du kan slutföra ett deltagarsteg från:
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna **[AEM Inkorg](/help/sites-cloud/authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Fullständig** i verktygsfältet.
 1. Dialogrutan **Fullständigt arbetsobjekt** öppnas. Välj **Nästa steg** i listrutan och lägg till en **kommentar** om det behövs.
@@ -134,7 +135,7 @@ Du kan delegera ett deltagarsteg från antingen:
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna **[AEM Inkorg](/help/sites-cloud/authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **användaren** i listrutan (det kan också vara en grupp) och lägg till en **kommentar** om det behövs.
@@ -184,7 +185,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna **[AEM Inkorg](/help/sites-cloud/authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Stega bakåt** för att öppna dialogrutan.
 1. Ange **Föregående steg** och lägg till en **kommentar** om det behövs.
@@ -245,7 +246,7 @@ Du kan öppna information om arbetsobjekt från:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna **[AEM Inkorg](/help/sites-cloud/authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 1. Om det behövs väljer du lämplig åtgärd, anger information och bekräftar med **OK** (eller **Avbryt**).
@@ -266,7 +267,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
-1. Öppna **[AEM Inkorg](/help/sites-cloud/authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-cloud/authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill arbeta med (markera miniatyrbilden).
 1. Välj **Visa nyttolast** i verktygsfältet för att öppna dialogrutan.
    * Eftersom ett arbetsflödespaket är en samling pekare till sökvägar i databasen, kan du lägga till/ta bort/ändra posterna här för att justera vad som refereras av arbetsflödespaketet. Använd komponenten **Resursdefinition** för att lägga till nya poster.

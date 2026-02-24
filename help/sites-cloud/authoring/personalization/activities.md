@@ -1,13 +1,14 @@
 ---
 title: Hantera aktiviteter
 description: Med aktivitetskonsolen kan ni skapa, organisera och hantera marknadsföringsaktiviteter för era varumärken
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: e7cab16d-7678-472d-b75f-7f67b303ba8d
 solution: Experience Manager Sites
 feature: Authoring, Personalization
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1964'
 ht-degree: 14%
 
 ---
@@ -100,12 +101,12 @@ Så här lägger du till en aktivitet:
 1. Markera det varumärke som du skapar aktiviteten för och välj sedan **Skapa** och sedan **Skapa aktivitet**. Om du redigerar markerar du aktiviteten på skärmen Masterområde och klickar eller trycker på **Redigera aktivitet**.
 1. Ange följande information och välj sedan **Nästa**:
    * Ett namn för aktiviteten.
-   * Målmotorn som ska användas. ContextHub (AEM) är markerat som standard. Om du behöver använda Adobe Target skapar du aktiviteten i den aktiva innehållsredigeraren.
+   * Målmotorn som ska användas. ContextHub (AEM) är valt som standard. Om du behöver använda Adobe Target skapar du aktiviteten i den aktiva innehållsredigeraren.
    * Om du valde Adobe Target som målmotor väljer/redigerar du den molnkonfiguration som ska användas för att ansluta till Adobe Target. (Se till att du inte väljer något ramverk som du har skapat för din molnkonfiguration.)
    * (Valfritt) Syftet med eller en beskrivning av aktiviteten.
    * Välj aktivitetstyp.
 1. Lägg till en eller flera upplevelser till aktiviteten. Välj **Lägg till upplevelse**.
-1. Om ni använder AEM målinriktning eller Adobe Target upplevelseanpassning:
+1. Om ni använder AEM för målinriktning eller Adobe Target för upplevelser:
    1. Välj **Välj målgrupp** och markera det segment som upplevelsen ska rikta in sig på.
    1. Välj **Lägg till upplevelse**, skriv ett namn och välj **OK**.
    1. Välj **Nästa**.
@@ -143,9 +144,9 @@ Så här publicerar eller avpublicerar du aktiviteter:
 
    ![Publicerar från aktivitetskonsolen](/help/sites-cloud/authoring/assets/activities-console.png)
 
-1. Om du vill publicera väljer du **Publish**. Om du vill avpublicera väljer du **Avpublicera**. Dina aktiviteter publiceras eller avpubliceras och deras status ändras i aktivitetskonsolen (kan kräva en uppdatering).
+1. Om du vill publicera väljer du **Publicera**. Om du vill avpublicera väljer du **Avpublicera**. Dina aktiviteter publiceras eller avpubliceras och deras status ändras i aktivitetskonsolen (kan kräva en uppdatering).
 
-## Aktiviteter för författare och Publish-förekomster {#activities-on-author-and-publish-instances}
+## Aktiviteter för författare och publiceringsinstanser {#activities-on-author-and-publish-instances}
 
 När en aktivitet som använder Adobe Target målmotor aktiveras skapas en andra aktivitet i publiceringsinstansen:
 
@@ -196,20 +197,20 @@ När en aktivitet synkroniseras skapas en motsvarande kampanj i Adobe Target:
 
 Författaraktiviteterna synkroniseras omedelbart när aktiviteten ändras. Omedelbar synkronisering möjliggör simulering av aktiviteter med ContextHub.
 
-Publish-aktiviteter synkroniseras när aktiviteten publiceras till AEM publiceringsinstans.
+Publiceringsaktiviteterna synkroniseras när aktiviteten publiceras till AEM publiceringsinstans.
 
 ## Felsökning av aktivitetssynkronisering {#troubleshooting-activity-synchronization}
 
-När AEM synkroniserar en aktivitet med Adobe Target innehåller AEM en egenskap för aktiviteten med namnet `thirdPartyId`. Värdet för den här egenskapen baseras på sökvägen för aktiviteten i AEM. Två kampanjer i Adobe Target kan inte ha samma värde för egenskapen `thirdPartyId`. En aktivitet kan därför inte synkroniseras om en befintlig kampanj (av en annan typ AB, XT) i Adobe Target använder samma värde för `thirdPartyId`.
+När AEM synkroniserar en aktivitet med Adobe Target, innehåller AEM en egenskap för aktiviteten med namnet `thirdPartyId`. Värdet för den här egenskapen baseras på sökvägen för aktiviteten i AEM-databasen. Två kampanjer i Adobe Target kan inte ha samma värde för egenskapen `thirdPartyId`. En aktivitet kan därför inte synkroniseras om en befintlig kampanj (av en annan typ AB, XT) i Adobe Target använder samma värde för `thirdPartyId`.
 
 Denna situation kan uppstå under följande omständigheter:
 
 1. En aktivitet skapas och synkroniseras med Adobe Target.
-1. I en annan AEM skapas en aktivitet under samma varumärke och med samma namn. Synkronisering av den här aktiviteten misslyckas vid försök.
+1. I en annan instans av AEM skapas en aktivitet under samma varumärke och med samma namn. Synkronisering av den här aktiviteten misslyckas vid försök.
 
 Denna situation kan även uppstå under följande omständigheter:
 
-1. En aktivitet skapas och synkroniseras med Adobe Target. Aktiviteten tas sedan bort AEM.
+1. En aktivitet skapas och synkroniseras med Adobe Target. Aktiviteten tas sedan bort från AEM.
 1. En aktivitet skapas under samma varumärke och använder samma namn som den borttagna aktiviteten. Synkronisering av den här aktiviteten misslyckas vid försök.
 
 Använd alltid unika namn för aktiviteter för att undvika synkroniseringsproblem. Om en aktivitet inte kan synkroniseras kan du ta bort kampanjen i Adobe Target som använder samma namn om kampanjen inte används.

@@ -1,13 +1,14 @@
 ---
 title: Konfigurera layoutbehållaren och layoutläget
 description: Lär dig hur du konfigurerar layoutbehållare och layoutläge för att aktivera responsiva layouter för innehållsförfattare.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 469e8151-8231-4ccc-b7f6-855545f87440
 solution: Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 70a35cfeb163967b0f627d3ac6495f112d922974
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1383'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Lär dig hur du konfigurerar layoutbehållare och layoutläge för att aktivera 
 >I det här dokumentet beskrivs hur en webbplatsadministratör kan konfigurera layoutbehållaren så att den stöder responsiv webbdesign. Ytterligare resurser finns:
 >
 >* Information om hur du använder responsiva designfunktioner på en innehållssida finns i dokumentet [Responsiv layout.](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
->* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet &#x200B;](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
+>* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet ](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
 
 ## Ökning {#overview}
 
@@ -54,7 +55,7 @@ Med dessa responsiva rutnätsmekanismer kan du:
 
 ## Aktivera emulatorn {#enabling-emulator}
 
-[Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) och [Standard Site Template](/help/sites-cloud/administering/site-creation/site-templates.md#standard-site-template) har redan aktiverats för att använda emulatorn. Om du har utvecklat ditt eget innehåll som inte är baserat på kärnkomponenterna eller arkitekturen kan du läsa dokumentet [Responsiv design](/help/implementing/developing/introduction/responsive-design.md) för mer information om hur du utvecklar dina komponenter samtidigt som du utnyttjar dessa funktioner.
+[Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och [Standard Site Template](/help/sites-cloud/administering/site-creation/site-templates.md#standard-site-template) har redan aktiverats för att använda emulatorn. Om du har utvecklat ditt eget innehåll som inte är baserat på kärnkomponenterna eller arkitekturen kan du läsa dokumentet [Responsiv design](/help/implementing/developing/introduction/responsive-design.md) för mer information om hur du utvecklar dina komponenter samtidigt som du utnyttjar dessa funktioner.
 
 ## Aktivera layoutläge för webbplatsen {#activate-layout-mode-for-your-site}
 

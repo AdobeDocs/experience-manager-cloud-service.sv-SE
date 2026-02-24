@@ -4,10 +4,11 @@ description: Lär dig hur du hanterar modeller för innehållsfragment. Dessa fu
 feature: Content Fragments
 role: User, Developer
 solution: Experience Manager Sites
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: f94f75c2-12fa-47c0-a71b-327f4210077d
-source-git-commit: ce807274d6138473ff9661897a0816e0feb99f15
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2475'
+source-wordcount: '2481'
 ht-degree: 0%
 
 ---
@@ -151,7 +152,7 @@ När du väljer en viss modell visas modellens egenskaper (som de definieras nä
     Represents the GraphQL multiple query field name in the GraphQL schema.
 -->
 
-## Åtgärder {#actions}
+## Instruktioner {#actions}
 
 När du har markerat en mapp (i den vänstra panelen) finns det en rad åtgärder som du kan använda, antingen direkt eller efter att du har valt en viss modell:
 

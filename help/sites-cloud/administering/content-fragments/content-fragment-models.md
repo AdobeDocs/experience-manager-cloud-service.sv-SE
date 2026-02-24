@@ -3,11 +3,12 @@ title: Definiera modeller för innehållsfragment
 description: Läs om hur Content Fragment Models fungerar som grund för dina innehållsfragment i AEM, så att du kan skapa strukturerat innehåll som kan användas för rubrikfri leverans eller framtagning av sidor.
 feature: Content Fragments
 role: User, Developer
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 8ab5b15f-cefc-45bf-a388-928e8cc8c603
 solution: Experience Manager Sites
-source-git-commit: ce807274d6138473ff9661897a0816e0feb99f15
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2217'
+source-wordcount: '2223'
 ht-degree: 0%
 
 ---

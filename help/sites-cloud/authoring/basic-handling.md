@@ -1,13 +1,14 @@
 ---
 title: Grundläggande hantering
 description: Bekanta dig med navigeringen i AEM och dess grundläggande användning
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: ae87a63a-c6d3-4220-ab3d-07a20b21b93b
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 9a700e9eb3116252f42bb08db9dadc0e8a6adbf7
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '960'
 ht-degree: 0%
 
 ---
@@ -74,7 +75,7 @@ Följande konsoler finns i Navigation:
 | Sites | [Med platskonsolen](/help/sites-cloud/authoring/sites-console/introduction.md) kan du skapa, visa och hantera webbplatser som körs på din AEM-instans. Med den här konsolen kan du skapa, redigera, kopiera, flytta och ta bort sidor, starta arbetsflöden och publicera sidor. |
 | Upplevelsefragment | En [Experience Fragment](/help/sites-cloud/authoring/fragments/content-fragments.md) är en fristående upplevelse som kan återanvändas i olika kanaler och ha variationer, vilket sparar problem med att kopiera och klistra in upplevelser eller delar av upplevelser upprepade gånger. |
 | Assets | Med Assets-konsolen kan du importera och hantera [digitala resurser som bilder, videoklipp, dokument och ljudfiler](/help/assets/overview.md). Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. Du kan också skapa och hantera [innehållsfragment](/help/assets/content-fragments/content-fragments.md) från Assets-konsolen. |
-| Personalization | Den här konsolen innehåller ett ramverk med verktyg för [att skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
+| Personalisering | Den här konsolen innehåller ett ramverk med verktyg för [att skapa riktat innehåll och presentera personaliserade upplevelser](/help/sites-cloud/authoring/personalization/overview.md). |
 | Innehållsfragment | [Med innehållsfragment](/help/sites-cloud/administering/content-fragments/overview.md) kan du utforma, skapa, strukturera och publicera sidoberoende innehåll. De gör att du kan ta fram strukturerat innehåll som är klart för användning på flera platser/i flera kanaler, och som är idealiskt för både sidutveckling och headless-leverans. |
 | Generera variationer | [Generate Variations](/help/generative-ai/generate-variations.md) använder generativ artificiell intelligens (AI) för att skapa innehållsvariationer baserat på uppmaningar. Dessa uppmaningar tillhandahålls antingen av Adobe eller skapas, och hanteras av användare. |
 

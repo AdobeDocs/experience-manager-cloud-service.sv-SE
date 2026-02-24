@@ -4,10 +4,11 @@ description: Lär dig hur du skapar mallar som kan användas för att skapa sido
 solution: Experience Manager Sites
 feature: Authoring
 role: User
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: f0d60086-e92e-4492-ad50-bef84fed2a82
-source-git-commit: 3238b11cdd891cf18048199d4103397e3af75edf
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -34,7 +35,7 @@ Om du vill använda mallar för att skapa sidor som är redigerbara med den univ
 Aktivera först redigerbara mallar för platsens konfiguration.
 
 1. Använd konsolen **Platser** och [välj platsroten](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources).
-1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** &#x200B;](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
+1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
 1. På fliken **Avancerat** i egenskapsdialogrutan kan du notera värdet i fältet **Cloud-konfiguration**.
 1. I huvudnavigeringen väljer du **Verktyg** -> **Allmänt** -> **Konfigurationsläsaren**.
 1. I **[Konfigurationsläsaren](/help/implementing/developing/introduction/configurations.md)** markerar du den konfiguration du angav i föregående steg och trycker eller klickar på **Egenskaper** i verktygsfältet.
@@ -44,9 +45,9 @@ Aktivera först redigerbara mallar för platsens konfiguration.
 När konfigurationen är aktiverad måste du tillåta mallar för platsen.
 
 1. Använd konsolen **Platser** och [välj platsroten](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources).
-1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** &#x200B;](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
+1. När platsroten har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/page-properties.md) i verktygsfältet.
 1. Tryck eller klicka på knappen **Lägg till** på fliken **Avancerat** i dialogrutan för egenskaper under avsnittet **Mallinställningar** .
-1. Lägg till sökvägen `/conf/<site>/settings/wcm/templates/.*` i det nya, tomma fältet som visas under **Tillåtna mallar**.
+1. Lägg till sökvägen **i det nya, tomma fältet som visas under** Tillåtna mallar`/conf/<site>/settings/wcm/templates/.*`.
 1. Tryck eller klicka på **Spara och stäng**.
 
 Nu kan du använda mallar för att skapa sidor för din webbplats. Den här uppgiften får bara utföras en gång för varje plats/konfiguration där du vill använda mallar när du skapar sidor som kan redigeras med den universella redigeraren.
@@ -57,7 +58,7 @@ Du kan antingen [skapa en ny sida](/help/sites-cloud/authoring/sites-console/cre
 
 1. Använd konsolen **Platser** för att [navigera till den nya eller befintliga sidan](/help/sites-cloud/authoring/sites-console/introduction.md#selecting-resources) som du vill använda som mall och markera den genom att trycka eller klicka på den.
 
-1. När sidan har valts trycker eller klickar du på ikonen [**Egenskaper** &#x200B;](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) i verktygsfältet.
+1. När sidan har valts trycker eller klickar du på ikonen [**Egenskaper** ](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) i verktygsfältet.
 
 1. På fliken **Avancerat** i egenskapsdialogrutan under avsnittet **Mallinställningar** väljer du alternativet **Använd sida som mall**.
 

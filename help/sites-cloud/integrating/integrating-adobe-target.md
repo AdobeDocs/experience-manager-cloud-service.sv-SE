@@ -3,21 +3,22 @@ title: Integrera med Adobe Target
 description: Lär dig hur du integrerar Adobe Target med AEM as a Cloud Service med Touch-gränssnittet och Adobe Launch.
 feature: Integration
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: cf243fb6-5563-427f-a715-8b14fa0b0fc2
 solution: Experience Manager Sites
-source-git-commit: e5c529ced09a557585681ebf82f40daafc2c4402
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Experience Cloud kan du med [Adobe Target](https://experienceleague.adobe.com/sv/docs/target) öka innehållets relevans genom att målinrikta och mäta i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
+Som en del av Adobe Experience Cloud kan du med [Adobe Target](https://experienceleague.adobe.com/en/docs/target) öka innehållets relevans genom att målinrikta och mäta i alla kanaler. Integrering av Adobe Target och AEM as a Cloud Service kräver:
 
 * med Touch-gränssnittet för att skapa en målkonfiguration i AEM as a Cloud Service (IMS-konfiguration krävs).
-* lägger till och konfigurerar Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html?lang=sv-SE).
+* lägger till och konfigurerar Adobe Target som ett tillägg i [Adobe Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/quick-start.html).
 
 Adobe Launch krävs för att hantera egenskaper på klientsidan för både Analytics och Target på AEM-sidor (JS-bibliotek/-taggar). Integreringen med Launch behövs dock för&quot;Experience Targeting&quot;.
 
@@ -29,7 +30,7 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 
 >[!NOTE]
 >
->Se även Adobe Target-dokumentationen: [Integrera mål med Adobe Experience Manager (AEM)](https://experienceleague.adobe.com/sv/docs/target/using/integrate/aem/aem-target-integration).
+>Se även Adobe Target-dokumentationen: [Integrera mål med Adobe Experience Manager (AEM)](https://experienceleague.adobe.com/en/docs/target/using/integrate/aem/aem-target-integration).
 
 ## Skapa Adobe Target-konfigurationen {#create-configuration}
 
@@ -43,7 +44,7 @@ Om du vill exportera Experience Fragments och/eller Content Fragments till Targe
 
 ### IMS-konfiguration {#ims-configuration}
 
-Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System). IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) och videon [Integrating Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=sv-SE) om du vill veta mer om hur du skapar mål-IMS-konfigurationen.
+Integreringen av AEM med Adobe Target via Target Standard API kräver att du konfigurerar Adobe IMS (Identity Management System). IMS-konfigurationen för mål måste skapas (efter att Target har etablerats). Se [Konfigurera IMS-integreringar för AEM as a Cloud Service](/help/security/setting-up-ims-integrations-for-aem-as-a-cloud-service.md) och videon [Integrating Experience Platform Launch och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html) om du vill veta mer om hur du skapar mål-IMS-konfigurationen.
 
 >[!NOTE]
 >
@@ -153,7 +154,7 @@ I **Regel** definieras och ordnas en sekvens med åtgärder, som körs på webbp
 
 ### Bygg och publicera {#build-publish}
 
-Mer information om hur du skapar och publicerar finns på [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html?lang=sv-SE).
+Mer information om hur du skapar och publicerar finns på [sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-launch-adobe-io.html).
 
 ## Förändringar i innehållsstrukturen mellan Classic- och Touch UI-konfigurationer {#changes-content-structure}
 

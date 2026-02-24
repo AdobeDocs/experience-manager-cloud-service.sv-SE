@@ -1,13 +1,14 @@
 ---
 title: Målgruppsinriktning för Personalization och innehåll
-description: Lär dig hur du kan skapa personaliserat, riktat innehåll med AEM
+description: Läs om hur ni kan skapa personaliserat, målinriktat innehåll med AEM
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: b9b5dbf6-d491-48a6-99b1-19bc1b651b8c
 solution: Experience Manager Sites
 feature: Authoring, Personalization
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1060'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ En sida från en exempelwebbplats kan t.ex. använda erbjudanden som den suddgum
 
 ## Målgrupp {#audience}
 
-En målgrupp är en grupp slutanvändare som ni vill inrikta er på med personaliserat innehåll. När en besökare öppnar en webbsida avgör sidlogiken vilken målgrupp de tillhör baserat på känd information. Baserat på den bedömningen AEM det innehåll som du har skapat för den målgruppen.
+En målgrupp är en grupp slutanvändare som ni vill inrikta er på med personaliserat innehåll. När en besökare öppnar en webbsida avgör sidlogiken vilken målgrupp de tillhör baserat på känd information. Baserat på den bedömningen visar AEM det innehåll som du har skapat för den målgruppen.
 
 Målgrupperna bygger på marknadsföringssegment. De skapas antingen i AEM eller Adobe Target. Du kan skapa Adobe Target-målgrupper direkt i AEM med hjälp av publikkonsolen.
 
@@ -63,7 +64,7 @@ En aktivitet:
 * definierar den tidsperiod för vilken målinriktningen tillämpas
 * identifierar den [målmotor](#targeting-engine) som dina sidor använder
 
-Aktiviteten kan antingen vara en personaliseringsaktivitet eller en A/B-testaktivitet (för arbetsflödet AEM och Adobe Target personalisering).
+Aktiviteten kan antingen vara en personaliseringsaktivitet eller en A/B-testaktivitet (för personaliseringsarbetsflödet i AEM och Adobe Target).
 
 En aktivitet kan till exempel definiera upplevelser för två olika målgrupper: personer över 30 år och personer under 30 år. En sida på webbplatsen kan sedan visa olika produkter för varje målgrupp.
 
@@ -91,9 +92,9 @@ Du kan [skapa riktat innehåll](/help/sites-cloud/authoring/personalization/targ
 
 En grupperad uppsättning komponenter som utgör en upplevelse.
 
-[Experience Fragments](/help/sites-cloud/authoring/fragments/content-fragments.md#personalization-experience-fragment) är gjorda av innehåll och information (format, osv.) för att skapa en upplevelse. De kan användas direkt vid redigering av sidor. De kan ses som en delmängd av en AEM. De gör det möjligt för innehållsförfattare att återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
+[Experience Fragments](/help/sites-cloud/authoring/fragments/content-fragments.md#personalization-experience-fragment) är gjorda av innehåll och information (format, osv.) för att skapa en upplevelse. De kan användas direkt vid redigering av sidor. De kan ses som en delmängd av en AEM-sida. De gör det möjligt för innehållsförfattare att återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
 
-För ett personaliseringsexempel kan du kombinera en titel, bild, beskrivning och knappen Anropa till åtgärd för att skapa en suddig upplevelse. Att använda Experience Fragments är en viktig del i att använda Adobe Target personalisering.
+Ett personaliseringsexempel: en titel, en bild, en beskrivning och en Call to action-knapp kan kombineras för att skapa en teaserupplevelse. Att använda Experience Fragments är en viktig del i att använda Adobe Target personalisering.
 
 ## Målmotor {#targeting-engine}
 
@@ -101,20 +102,20 @@ Målmotorn är den mekanism som löser logiken för målinnehåll. [Aktiviteter]
 
 Målmotorn är den plattform eller mekanism som avgör vilket personaliseringssystem som ska användas.
 
-AEM kan använda:
+För närvarande kan AEM använda:
 
-* [AEM ContextHub](#aem-contexthub) (standard-AEM)
+* [AEM ContextHub](#aem-contexthub) (AEM som standard)
 * personaliseringsmotorn [Adobe Target](#adobe-target)
 
 >[!CAUTION]
 >
->En enda AEM kan inte använda båda motorerna samtidigt.
+>En AEM-sida kan inte använda båda motorerna samtidigt.
 >
 >Du kan använda båda motorerna på separata sidor på samma plats.
 
 ### AEM ContextHub {#aem-contexthub}
 
-AEM tillhandahåller den inbyggda målmotorn [ContextHub](/help/implementing/developing/personalization/contexthub.md) som hanterar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder den AEM målgruppsmotorn begränsas ni till att använda segment som skapas i AEM för att definiera målgrupperna för era upplevelser.
+AEM tillhandahåller den inbyggda målmotorn [ContextHub](/help/implementing/developing/personalization/contexthub.md) som hanterar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder AEM målgruppsmotor begränsas ni till att använda segment som skapats i AEM för att definiera målgrupperna för era upplevelser.
 
 ### Adobe Target {#adobe-target}
 
@@ -136,7 +137,7 @@ Det finns olika steg och definitioner som krävs för att leverera ditt personal
 
 1. Konfigurera målgrupperna.
 
-   1. Beroende på målmotorn definierar du [målmålgruppen](https://experienceleague.adobe.com/docs/target/using/audiences/target.html?lang=sv-SE) eller [ContextHub-segmentet](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md), tillsammans med reglerna.
+   1. Beroende på målmotorn definierar du [målmålgruppen](https://experienceleague.adobe.com/docs/target/using/audiences/target.html) eller [ContextHub-segmentet](/help/sites-cloud/authoring/personalization/contexthub-segmentation.md), tillsammans med reglerna.
 
 1. Skapa ditt [varumärke och dina aktiviteter](/help/sites-cloud/authoring/personalization/activities.md).
 

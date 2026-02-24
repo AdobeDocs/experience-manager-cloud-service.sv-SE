@@ -3,11 +3,12 @@ title: Konfigurera Live Copy-synkronisering
 description: Läs om de kraftfulla synkroniseringsalternativen för Live Copy och hur du kan konfigurera och anpassa dem efter dina projektbehov.
 feature: Multi Site Manager
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 0c97652c-edac-436e-9b5b-58000bccf534
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2420'
 ht-degree: 0%
 
 ---
@@ -59,13 +60,13 @@ Om de installerade rollout-konfigurationsåtgärderna inte uppfyller dina krav k
 
 ### Synkroniseringsåtgärder {#synchronization-actions}
 
-I följande tabell visas de synkroniseringsåtgärder som medföljer AEM.
+I följande tabell visas de synkroniseringsåtgärder som ingår i AEM.
 
 Om de installerade åtgärderna inte uppfyller dina krav kan du [skapa en ny synkroniseringsåtgärd](/help/implementing/developing/extending/msm.md#creating-a-new-synchronization-action).
 
 | Åtgärdsnamn | Beskrivning | Egenskaper |
 |---|---|---|
-| `contentCopy` | När det inte finns några noder i källan i Live Copy kopieras noderna till Live Copy. [Konfigurera **CQ MSM Content Copy Action** &#x200B;](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
+| `contentCopy` | När det inte finns några noder i källan i Live Copy kopieras noderna till Live Copy. [Konfigurera **CQ MSM Content Copy Action** ](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
 | `contentDelete` | Den här åtgärden tar bort noder i Live-kopian som inte finns i källan. [Konfigurera **CQ MSM Content Delete Action**-tjänsten](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
 | `contentUpdate` | Den här åtgärden uppdaterar Live Copy-innehållet med ändringarna från källan. [Konfigurera **CQ MSM Content Update Action**-tjänsten](#excluding-properties-and-node-types-from-synchronization) för att ange vilka nodtyper, styckeobjekt och sidegenskaper som ska uteslutas. |  |
 | `editProperties` | Den här åtgärden redigerar egenskaper för Live-kopian. Egenskapen `editMap` avgör vilka egenskaper som redigeras och deras värde. Värdet för egenskapen `editMap` måste ha följande format: <br>`[property_name_n]#[current_value]#[new_value]`<br>`current_value` och `new_value` är reguljära uttryck och `n` är ett inkrementellt heltal.<br>Tänk dig till exempel följande värde för `editMap`:<br>`sling:resourceType#/(contentpage` ‖`homepage)#/mobilecontentpage,cq:template#/contentpage#/mobilecontentpage`<br>Det här värdet redigerar egenskaperna för Live Copy-noderna enligt följande:<br>Egenskaperna `sling:resourceType` som är inställda på `contentpage` eller `homepage` är inställda på `mobilecontentpage`.<br>Egenskaperna `cq:template` som är inställda på `contentpage` är inställda på `mobilecontentpage`. | `editMap: (String)` identifierar egenskapen, det aktuella värdet och det nya värdet. Mer information finns i beskrivningen. |
@@ -94,7 +95,7 @@ Den nya rollout-konfigurationen är sedan tillgänglig för dig när du konfigur
 
 ### Exkludera egenskaper och nodtyper från synkronisering {#excluding-properties-and-node-types-from-synchronization}
 
-Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som hör till AEM interna funktion bör till exempel inte tas med i en Live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
+Du kan konfigurera flera OSGi-tjänster som stöder motsvarande synkroniseringsåtgärder så att de inte påverkar specifika nodtyper och egenskaper. Många egenskaper och delnoder som rör AEM interna funktion bör till exempel inte tas med i en Live-kopia. Endast det innehåll som är relevant för sidans användare ska kopieras.
 
 När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurera OSGi](/help/implementing/deploying/configuring-osgi.md) för mer information och rekommenderade rutiner.
 

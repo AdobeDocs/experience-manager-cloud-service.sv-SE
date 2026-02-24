@@ -1,13 +1,14 @@
 ---
 title: Skapande och publicering av begrepp
-description: Lär dig mer om redigering i AEM, med hjälp av redigerings-, förhandsgransknings- och publiceringsmiljöer.
+description: Lär dig mer om redigering i AEM med hjälp av skribent-, förhandsgransknings- och publiceringsmiljöer.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: ee9e4952-e075-4398-b31f-d7886153efff
 solution: Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ En AEM as a Cloud Service-installation kan ses som tre primära lager på den me
 
 * Författarnivå
 * Förhandsgranskningsnivå
-* Publish Tier
+* Publiceringsnivå
 
 Dessa nivåer interagerar så att ni kan göra innehåll tillgängligt på er webbplats så att era besökare kan komma åt det. Det grundläggande arbetsflödet är:
 
@@ -58,11 +59,11 @@ I dokumentet [Snabbstartsguide till redigering](/help/sites-cloud/authoring/quic
 
 ## Förhandsgranska innehåll {#previewing-content}
 
-AEM erbjuder också en förhandsgranskningstjänst som gör att utvecklare och innehållsförfattare kan förhandsgranska en webbplats slutliga upplevelse innan den når publiceringsmiljön och är tillgänglig för allmänheten.
+AEM har också en förhandsgranskningstjänst som gör att utvecklare och skribenter kan förhandsgranska en webbplats innan den når publiceringsmiljön och göra den tillgänglig för allmänheten.
 
 Mer information finns i dokumentet [Förhandsgranska innehåll](/help/sites-cloud/authoring/sites-console/previewing-content.md).
 
-## Publish Environment {#publish-environment}
+## Publiceringsmiljö {#publish-environment}
 
 När det är klart publiceras webbplatsens innehåll i publiceringsmiljön på publiceringsnivån. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med innehållsmallens utseende och känsla.
 

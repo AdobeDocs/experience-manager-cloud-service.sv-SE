@@ -3,22 +3,23 @@ title: Hantera översättningsprojekt
 description: Lär dig hur du skapar och hanterar både maskinöversättning och mänsklig översättning i AEM.
 feature: Language Copy
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: dc2f3958-72b5-4ae3-a224-93d8b258bc80
 solution: Experience Manager Sites
-source-git-commit: 17489f3f65a71c6fc0f805af37cb233ab1c5470a
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '4129'
+source-wordcount: '4135'
 ht-degree: 0%
 
 ---
 
 # Hantera översättningsprojekt {#managing-translation-projects}
 
-Med översättningsprojekt kan du hantera översättning av AEM. Ett översättningsprojekt är en typ av AEM [projekt](/help/sites-cloud/authoring/projects/overview.md) som innehåller resurser som ska översättas till andra språk. De här resurserna är sidorna och resurserna för [språkkopiorna](preparation.md) som skapas från språkinställningen.
+Med översättningsprojekt kan du hantera översättning av AEM-innehåll. Ett översättningsprojekt är en typ av AEM [project](/help/sites-cloud/authoring/projects/overview.md) som innehåller resurser som ska översättas till andra språk. De här resurserna är sidorna och resurserna för [språkkopiorna](preparation.md) som skapas från språkinställningen.
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom översättning av ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealisk för dem som saknar AEM- eller översättningsupplevelse.
 
 När resurser läggs till i ett översättningsprojekt skapas ett översättningsjobb för dem. Jobb innehåller kommandon och statusinformation som du använder för att hantera de mänskliga översättnings- och maskinöversättningsarbetsflödena som körs på resurserna.
 
@@ -32,16 +33,16 @@ När resurser läggs till i ett översättningsprojekt skapas ett översättning
 
 AEM identifierar om ett översättningsprojekt skapas för den inledande översättningen av innehåll eller för att uppdatera redan översatta språkkopior. När du skapar ett översättningsprojekt för en sida och anger vilka språkkopior du översätter för, identifierar AEM om källsidan redan finns i målspråkskopiorna:
 
-* **Språkkopian innehåller inte sidan:** AEM behandlar den här situationen som den inledande översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras AEM den direkt till språkkopian.
+* **Språkkopian innehåller inte sidan:** AEM behandlar den här situationen som den första översättningen. Sidan kopieras omedelbart till språkkopian och inkluderas i projektet. När den översatta sidan importeras till AEM kopieras den direkt till språkkopian av AEM.
 * **Språkkopian innehåller redan sidan:** AEM behandlar den här situationen som en uppdaterad översättning. En startsida skapas och en kopia av sidan läggs till i startprogrammet och ingår i projektet. Med det här programmet kan du granska uppdaterade översättningar innan du implementerar dem i språkkopian:
 
-   * När den översatta sidan importeras till AEM, skrivs sidan över vid start.
+   * När den översatta sidan importeras till AEM skrivs sidan över vid start.
    * Den översatta sidan skriver bara över språkkopian när startsidan höjs.
 
 Exempelvis skapas språkroten `/content/wknd/fr` för den franska översättningen av huvudspråket `/content/wknd/en`. Det finns inga andra sidor i den franska språkversionen.
 
 * Ett översättningsprojekt skapas för sidan `/content/wknd/en/products` och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian inte innehåller sidan `/content/wknd/fr/products` kopierar AEM omedelbart sidan `/content/wknd/en/products` och alla underordnade sidor till den franska språkkopian. Kopiorna ingår också i översättningsprojektet.
-* Ett översättningsprojekt skapas för sidan `/content/wknd/en` och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar sidan `/content/wknd/en` (språkroten), AEM kopierar sidan `/content/wknd/en` och alla underordnade sidor och lägger till dem i en start. Kopiorna ingår också i översättningsprojektet.
+* Ett översättningsprojekt skapas för sidan `/content/wknd/en` och alla underordnade sidor med den franska språkkopian som mål. Eftersom språkkopian innehåller den sida som motsvarar sidan `/content/wknd/en` (språkroten), kopierar AEM sidan `/content/wknd/en` och alla underordnade sidor och lägger till dem i en start. Kopiorna ingår också i översättningsprojektet.
 
 ## Översättning från webbplatskonsolen {#performing-initial-translations-and-updating-existing-translations}
 
@@ -189,7 +190,7 @@ Så här använder du funktionen:
 * En TMS måste konfigureras för användning med AEM.
 * Kopplingen måste implementera metoden [`storeTranslation`](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/adobe/granite/translation/api/TranslationService.html).
    * Koden i den här metoden avgör vad som händer med uppdateringsbegäran för översättningsminnet.
-   * Det AEM översättningsramverket skickar strängvärdepar (original och uppdaterad översättning) tillbaka till TMS via den här metodimplementeringen.
+   * AEM översättningsramverk skickar strängvärdepar (original och uppdaterad översättning) tillbaka till TMS via den här metodimplementeringen.
 
 Uppdateringarna av översättningsminnet kan fångas upp och skickas till en anpassad destination, i de fall där ett tillverkarspecifikt översättningsminne används.
 
@@ -211,7 +212,7 @@ Många översättningsuppgifter och avancerade alternativ finns i projektkonsole
 
 ### Om projektkonsolen
 
-Översättningsprojekt i AEM använder standardprojektkonsolen [AEM](/help/sites-cloud/authoring/projects/overview.md). Om du inte är van vid AEM kan du läsa den dokumentationen.
+Översättningsprojekt i AEM använder [AEM standardprojektkonsol](/help/sites-cloud/authoring/projects/overview.md). Om du inte är bekant med AEM projekt kan du läsa den dokumentationen.
 
 Som alla andra projekt består ett översättningsprojekt av plattor som ger en översikt över projektuppgifterna.
 
@@ -506,7 +507,7 @@ Du kan hämta innehållet i ett översättningsjobb, till exempel för att skick
 
 ### Importera ett översättningsjobb {#importing-a-translation-job}
 
-Du kan importera översatt innehåll till AEM när översättningsleverantören skickar det till dig eftersom det inte är integrerat med AEM via en koppling.
+Du kan importera översatt innehåll till AEM när översättningsleverantören skickar det till dig eftersom det inte är integrerat med AEM via en anslutning.
 
 1. Välj **Importera** i listrutan för översättningsjobbpanelen.
 1. Använd webbläsarens dialogruta för att markera filen som ska importeras.

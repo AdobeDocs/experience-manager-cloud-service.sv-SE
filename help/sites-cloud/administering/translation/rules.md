@@ -3,28 +3,29 @@ title: Identifiera innehåll som ska översättas
 description: Lär dig hur översättningsregler identifierar innehåll som behöver översättas.
 feature: Language Copy
 role: Admin
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: 24cc6aa6-5b3c-462b-a10a-8b25277229dc
 solution: Experience Manager Sites
-source-git-commit: 10580c1b045c86d76ab2b871ca3c0b7de6683044
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
 
 # Identifiera innehåll som ska översättas {#identifying-content-to-translate}
 
-Översättningsregler identifierar innehållet som ska översättas för sidor, komponenter och resurser som ingår i, eller utesluts från, översättningsprojekt. När en sida eller resurs översätts extraherar AEM innehållet så att det kan skickas till översättningstjänsten.
+Översättningsregler identifierar innehållet som ska översättas för sidor, komponenter och resurser som ingår i, eller utesluts från, översättningsprojekt. När en sida eller en resurs översätts extraherar AEM innehållet så att det kan skickas till översättningstjänsten.
 
 >[!TIP]
 >
->Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom att översätta ditt AEM Sites-innehåll med hjälp av AEM kraftfulla översättningsverktyg, som är idealisk för dem som saknar AEM eller översättningsupplevelse.
+>Om du inte är van vid att översätta innehåll läser du [Platsöversättningsresa](/help/journey-sites/translation/overview.md), som är en guidad väg genom översättning av ditt AEM Sites-innehåll med AEM kraftfulla översättningsverktyg, idealisk för dem som saknar AEM- eller översättningsupplevelse.
 
 ## Innehållsfragment och översättningsregler {#content-fragments}
 
 Översättningsreglerna som beskrivs i det här dokumentet gäller endast för innehållsfragment om alternativet **Aktivera innehållsmodellfält för översättning** inte har aktiverats på [konfigurationsnivån för översättningsramverket](integration-framework.md#assets-configuration-properties).
 
-Om alternativet **Aktivera fält för innehållsmodell för översättning** är aktivt använder AEM fältet **Översättningsbart** i [modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
+Om alternativet **Aktivera innehållsmodellfält för översättning** är aktivt, använder AEM fältet **Översättningsbart** i [modeller för innehållsfragment](/help/sites-cloud/administering/content-fragments/content-fragment-models.md#properties) för att avgöra om fältet ska översättas och skapar automatiskt översättningsregler i enlighet med detta. Det här alternativet ersätter eventuella översättningsregler som du har skapat och kräver inga åtgärder eller ytterligare steg.
 
 Om du vill använda översättningsregler för översättning av dina innehållsfragment måste alternativet **Aktivera innehållsmodellfält för översättning** i konfigurationen av översättningsintegreringsramverket inaktiveras och du måste följa stegen nedan för att skapa reglerna.
 
@@ -51,7 +52,7 @@ Du kan till exempel skapa en regel som översätter innehållet som författare 
 
 Det finns en [konsol](#translation-rules-ui) som har lagts till för att konfigurera översättningsregler. Definitionerna i användargränssnittet fyller i filen åt dig.
 
-En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
+En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga platser](overview.md).
 
 >[!NOTE]
 >
@@ -234,7 +235,7 @@ Resultatet i xml kommer att se ut så här:
 
 Filen `translation_rules.xml` som installeras med AEM innehåller en standarduppsättning med översättningsregler. Du kan redigera filen så att den uppfyller översättningsprojektens krav. Du kan till exempel lägga till regler så att innehållet i dina anpassade komponenter översätts.
 
-Om du redigerar filen `translation_rules.xml` sparar du en säkerhetskopia i ett innehållspaket. Om du installerar om vissa AEM kan den aktuella `translation_rules.xml`-filen ersättas med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
+Om du redigerar filen `translation_rules.xml` sparar du en säkerhetskopia i ett innehållspaket. Om du installerar om vissa AEM-paket kan den aktuella `translation_rules.xml`-filen ersättas med originalfilen. Om du vill återställa reglerna i den här situationen kan du installera det paket som innehåller säkerhetskopian.
 
 >[!NOTE]
 >

@@ -1,14 +1,15 @@
 ---
 title: Redigeringsövningar
 description: När du har skapat en startsida för sidan (eller en uppsättning sidor) kan du redigera innehållet i startkopian av sidorna.
+badgeSaas: label="AEM Sites" type="Positive" tooltip="Gäller AEM Sites)."
 exl-id: d3cd3383-e0a0-4019-9f97-8baa3be99e6e
 solution: Experience Manager Sites
 feature: Authoring, Launches
 role: User
-source-git-commit: bdf3e0896eee1b3aa6edfc481011f50407835014
+source-git-commit: 98c0c9b6adbc3d7997bc68311575b1bb766872a6
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 17%
+source-wordcount: '557'
+ht-degree: 16%
 
 ---
 
