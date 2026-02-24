@@ -38,7 +38,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten från januari 2026 om du vill se en sammanfattning av funktioner som lagts till i version 2026.1.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3479789/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3479793/?captions=swe&quality=12)
 
 
 ## AEM Beta-program {#aem-beta-programs}
