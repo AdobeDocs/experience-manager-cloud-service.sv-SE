@@ -28,7 +28,7 @@ Automatisera översättningen av sidinnehåll och resurser för att skapa och un
 
 1. [Anslut AEM till översättningstjänstleverantören](integration-framework.md#connecting-to-a-translation-service-provider) och [skapa konfigurationer för översättningsintegreringsramverk](integration-framework.md).
 1. [Koppla sidorna på din språkinställning](integration-framework.md#configuring-pages-for-translation) till översättningstjänsten och ramverkskonfigurationerna.
-1. [Identifiera den typ av innehåll ](rules.md) som ska översättas.
+1. [Identifiera den typ av innehåll &#x200B;](rules.md) som ska översättas.
 1. [Förbered innehållet för översättning](preparation.md) genom att skapa språkinställningen och skapa rotsidorna för språkkopior.
 1. [Skapa översättningsprojekt](managing-projects.md) för att samla in innehållet som ska översättas och förbereda översättningsprocessen.
 1. Använd översättningsprojekten för att [hantera innehållsöversättningsprocessen](managing-projects.md).

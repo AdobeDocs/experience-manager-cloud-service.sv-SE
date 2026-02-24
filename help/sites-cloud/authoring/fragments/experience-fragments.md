@@ -440,7 +440,7 @@ Med väljaren `.plain.` i URL:en kan du komma åt den vanliga HTML-återgivninge
 
 >[!NOTE]
 >
->Även om detta är direkt tillgängligt från webbläsaren är det främsta syftet med [att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en ](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
+>Även om detta är direkt tillgängligt från webbläsaren är det främsta syftet med [att tillåta andra program (till exempel webbprogram från tredje part, anpassade mobilimplementeringar) att komma åt innehållet i Experience Fragment direkt, med enbart URL:en &#x200B;](/help/implementing/developing/extending/experience-fragments.md#the-plain-html-rendition).
 
 ## Publicera upplevelsefragment {#publishing-experience-fragments}
 

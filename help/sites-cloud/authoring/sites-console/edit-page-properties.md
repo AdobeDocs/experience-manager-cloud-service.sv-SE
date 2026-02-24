@@ -25,7 +25,7 @@ Lär dig hur du redigerar [egenskaperna för en sida](/help/sites-cloud/authorin
 
 Du kan redigera sidegenskaper från ett antal platser i AEM.
 
-* [Från ](#from-the-sites-console)
+* [Från &#x200B;](#from-the-sites-console)
 * [Från sidredigeraren](#from-the-page-editor)
 * [Från den universella redigeraren](#from-the-universal-editor)
 

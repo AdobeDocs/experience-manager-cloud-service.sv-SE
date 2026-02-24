@@ -23,7 +23,7 @@ Lär dig hur du konfigurerar layoutbehållare och layoutläge för att aktivera 
 >I det här dokumentet beskrivs hur en webbplatsadministratör kan konfigurera layoutbehållaren så att den stöder responsiv webbdesign. Ytterligare resurser finns:
 >
 >* Information om hur du använder responsiva designfunktioner på en innehållssida finns i dokumentet [Responsiv layout.](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
->* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet ](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
+>* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet &#x200B;](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
 
 ## Ökning {#overview}
 

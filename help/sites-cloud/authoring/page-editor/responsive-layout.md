@@ -23,7 +23,7 @@ Med AEM kan du ha en responsiv layout för dina sidor med komponenten **Layoutbe
 >Det här dokumentet innehåller en översikt över de funktioner i layoutbehållaren som är tillgängliga för innehållsförfattare. Ytterligare resurser finns:
 >
 >* Information om hur du konfigurerar layoutbehållaren för dina platser för webbplatsadministratörer finns i [Konfigurera dokumentet Layoutbehållare och Layoutläge.](/help/sites-cloud/administering/responsive-layout.md)
->* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet ](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
+>* För utvecklare beskrivs information om layoutbehållaren och det responsiva stödrastret i [Det responsiva designdokumentet &#x200B;](/help/implementing/developing/introduction/responsive-design.md) som innehåller tips och tips om hur du använder layoutbehållare och responsiva stödraster när du designar din plats.
 
 ## Ökning {#overview}
 

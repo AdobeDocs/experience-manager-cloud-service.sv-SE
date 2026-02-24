@@ -133,7 +133,7 @@ Välja en specifik resurs beror på en kombination av vyn och enheten:
 
 1. I kortvyn:
 
-   ![Vyn Kort ](assets/sites-console-card-view-select.png)
+   ![Vyn Kort &#x200B;](assets/sites-console-card-view-select.png)
 
 1. När du har valt en resurs täcks den översta rubriken av verktygsfältet [Åtgärder](#actions-toolbar) som ger åtkomst till åtgärder som för närvarande gäller för den valda resursen.
 

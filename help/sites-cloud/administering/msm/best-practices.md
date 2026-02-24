@@ -142,7 +142,7 @@ Du bör därför bara använda `onModify`-utlösare om fördelarna med automatis
 
 ### Nodtyper/egenskaper {#node-types-properties}
 
-Förutom att anpassa utrullningsåtgärder kan MSM även anpassa nodegenskaper som introduceras. Med konfigurationen [MSM OSGi kan du undanta nodtyperna ](live-copy-sync-config.md#excluding-properties-and-node-types-from-synchronization) från kopiering från källan till Live Copy.
+Förutom att anpassa utrullningsåtgärder kan MSM även anpassa nodegenskaper som introduceras. Med konfigurationen [MSM OSGi kan du undanta nodtyperna &#x200B;](live-copy-sync-config.md#excluding-properties-and-node-types-from-synchronization) från kopiering från källan till Live Copy.
 
 ## Ytterligare information {#further-information}
 

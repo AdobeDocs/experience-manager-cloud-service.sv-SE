@@ -241,7 +241,7 @@ När du låser upp en sida liknar det [att låsa sidan](#locking-a-page). När s
 
 Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i verktygsfältet när det är lämpligt:
 
-![Knapparna Ångra och Gör om ](assets/page-editor-redo.png)
+![Knapparna Ångra och Gör om &#x200B;](assets/page-editor-redo.png)
 
 >[!TIP]
 >

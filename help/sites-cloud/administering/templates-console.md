@@ -39,7 +39,7 @@ Mallkonsolen ordnas i mappar med en mapp per [konfiguration](/help/implementing/
 
 ![Mallkonsolen](assets/templates-console/templates-console.png)
 
-[Konsolens standardvy ](/help/sites-cloud/authoring/quick-start.md) är kortvyn. Tryck eller klicka på en mapp för att utforska dess innehåll.
+[Konsolens standardvy &#x200B;](/help/sites-cloud/authoring/quick-start.md) är kortvyn. Tryck eller klicka på en mapp för att utforska dess innehåll.
 
 ![Innehåll i mallmappen i mallkonsolen](assets/templates-console/templates-console-templates.png)
 
@@ -74,7 +74,7 @@ Om en författare startar en mall som har skapats med mallredigeraren och som re
 
 ## Egenskaper {#properties}
 
-Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper.Mallegenskaperna för ](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) innehåller:
+Du kan redigera [egenskaperna för mallen](/help/sites-cloud/authoring/page-editor/templates.md) ungefär på samma sätt som du kan [redigera sidegenskaper.Mallegenskaperna för &#x200B;](/help/sites-cloud/authoring/sites-console/edit-page-properties.md) innehåller:
 
 * Malltitel
 * Beskrivning

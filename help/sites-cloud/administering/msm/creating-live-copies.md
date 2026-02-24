@@ -213,7 +213,7 @@ Så här visar du egenskaperna:
 
 ### Visa Live-kopior av en blå sida {#seeing-the-live-copies-of-a-blueprint-page}
 
-Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en designkonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på fliken **Utskrift** i sidegenskaperna [för ](/help/sites-cloud/authoring/sites-console/page-properties.md).
+Du får en lista över de Live Copy-sidor som använder den aktuella (utkast) sidan som källa för utkast (som refereras i en designkonfiguration). Använd den här listan för att hålla reda på Live-kopior. Listan visas på fliken **Utskrift** i sidegenskaperna [för &#x200B;](/help/sites-cloud/authoring/sites-console/page-properties.md).
 
 ![Fliken Utskrift för sidegenskaper](../assets/live-copy-blueprint-tab.png)
 
