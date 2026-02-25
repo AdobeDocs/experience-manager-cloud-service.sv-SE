@@ -3,7 +3,8 @@ title: Styrningsagent - översikt
 description: Läs om hur AEM Governance Agent skyddar varumärkets integritet och efterlevnad i hela AEM
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 9b26cd1f30ad6fa23e28c9f36fe48091e069962e
+exl-id: 2c73c578-6655-43bf-b03a-cb3eb2284d07
+source-git-commit: 568fd17353da93df0fa20e0c10e48d35890e7ed6
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -72,4 +73,3 @@ Med agenten kan ni hantera Assets digitala rättigheter i hela ert innehållseko
 * *Vilka resurser har nyligen gått ut?*
 * *Hitta resurser utan förfallodatum*
 * *Visa alla resurser i /content/dam/products som snart upphör att gälla inom 14 dagar*
-

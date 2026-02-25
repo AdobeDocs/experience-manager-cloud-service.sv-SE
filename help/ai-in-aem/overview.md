@@ -4,9 +4,9 @@ description: Läs mer om AI i Adobe Experience Manager as a Cloud Service
 feature: Generative AI, AI Assistant, AI Tools, Agentic AI
 role: Admin, Developer, User
 exl-id: 60fd4c57-53ed-4b4a-aea1-1c132184916f
-source-git-commit: 34469549451106c28fc3f95c90a8759b356bdd16
+source-git-commit: 92941c325f7702be8cf5f7f5b2ef3f9bd32c6354
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '439'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Artificiell intelligens (AI) är en viktig del av Adobe Experience Manager as a Cloud Service och stöder användarna i deras arbete med att hitta information eller skapa upplevelser.
 
-## AI Assistant {#ai-assistant}
+## AI-assistenten {#ai-assistant}
 
 [AI-assistenten i Adobe Experience Manager](/help/implementing/cloud-manager/ai-assistant-in-aem.md) har ett konversationsgränssnitt som är utformat för att göra det enklare att hitta svar på dina AEM-relaterade frågor.
 
@@ -24,10 +24,9 @@ Artificiell intelligens (AI) är en viktig del av Adobe Experience Manager as a 
 
 AEM har ett intervall med [agenter](/help/ai-in-aem/agents/overview.md) som gör att du kan skapa innehåll snabbare och automatiskt ordna ändringar:
 
-* [Experience Production Agent](/help/ai-in-aem/agents/production/overview.md)
-* [Agent för innehållsoptimering](/help/ai-in-aem/agents/content-optimization/overview.md)
-* [Identifieringsagent](/help/ai-in-aem/agents/discovery/overview.md)
-* [Utvecklingsagent](/help/ai-in-aem/agents/development/overview.md)
+* [Varumärkesupplevelseagenten](/help/ai-in-aem/agents/brand-experience/overview.md)
+* [Agent för Content Advisor](/help/ai-in-aem/agents/content-advisor/overview.md)
+* [Agent för upplevelsemodernisering](/help/ai-in-aem/agents/modernization/overview.md)
 * [Styrningsagent](/help/ai-in-aem/agents/governance/overview.md)
 
 ## Generativ AI i AEM {#generative-ai-in-aem}
@@ -73,6 +72,6 @@ Det finns många resurser, bland annat:
 
 * [Ansvarig AI på Adobe](https://www.adobe.com/trust/responsible-ai.html)
 
-* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai)
+* [Generativ AI i Experience Cloud-produkter](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai)
 
-   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/sv/docs/core-services/interface/features/generative-ai#aem)
+   * [Generativ AI i Experience Cloud-produkter - Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/core-services/interface/features/generative-ai#aem)
