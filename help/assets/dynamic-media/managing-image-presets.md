@@ -220,7 +220,7 @@ Skapa bildförinställningar så att du kan använda samma inställningar på al
 
 Om du tänker ge stöd för att lägga in AI-, PDF- och EPS-filer så att du kan generera en dynamisk återgivning av dessa filformat bör du granska följande information innan du skapar bildförinställningar.
 
-Se [Adobe Illustrator (AI), PostScript® (EPS) och PDF ](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
+Se [Adobe Illustrator (AI), PostScript® (EPS) och PDF &#x200B;](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet bör du granska följande information innan du skapar bildförinställningar.
 
