@@ -4,9 +4,9 @@ description: Lär dig vad uppdateringsjobbet för varumärkesupplevelseagenten �
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: e2d1dae8-38de-4357-bb14-ad35acb71aee
-source-git-commit: 71e3770a7a26b8d3144717513f3ec1c997b3b435
+source-git-commit: 36f4ba8207da67b8e68c9c9851311defc909b495
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Innehållsuppdateringsjobbet för [varumärkesagenten](/help/ai-in-aem/agents/br
 
 Innehållsuppdateringsjobbet uppdaterar befintligt innehåll, inklusive innehållsfragment, sidor, formulär och resurser. Jobbet kan utföra åtgärder som att uppdatera, ta bort, ersätta eller lägga till innehållselement för att hålla upplevelsen korrekt och aktuell. Inmatningar kan vara naturliga språkbeskrivningar, och när de används med Jira PDF-filer och skärmbilder kan de också ge inmatning.
 
-Innehållsuppdateringsjobbet omvandlar den information du anger, antingen på det naturliga språket eller visuellt, till innehållsuppdateringar på sidan. Du anger URL-adressen till en sida som behöver uppdateras, tillsammans med information om vad som behöver uppdateras, och agentens kompetens slutför uppgiften.
+Innehållsuppdateringsjobbet omvandlar den information du anger, antingen på det naturliga språket eller visuellt, till innehållsuppdateringar på sidan. Du anger URL-adressen till en sida som behöver uppdateras, tillsammans med information om vad som behöver uppdateras, och agentens kompetens slutför uppgiften. När det används med Adobe Experience Manager (AEM) as a Cloud Service skapas en ny [start](/help/sites-cloud/authoring/launches/overview.md) så att du kan granska uppdateringarna innan du tillämpar dem. När det används med dokumentredigering skapar jobbet en ny [version](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/document-authoring/how-to/document-versions#).
 
 ## Funktioner {#capabilities}
 
@@ -37,21 +37,40 @@ Du kommer åt jobbet i AEM via AI-assistenten.
 
 ![Innehållsuppdateringsjobb](/help/ai-in-aem/agents/brand-experience/experience-production/assets/content-update-ai-assistant-example.png)
 
-### Exempelfrågor {#sample-prompts}
+### Konfigurera publicerings-URL {#configuring-the-publish-url}
 
-För att starta innehållsuppdateringar kan du ge dig ett brett urval av naturliga språk. Du måste också ange den offentliga URL:en för sidan som du vill uppdatera. Till exempel:
+Om du vill använda en publicerings-URL (offentlig) måste en engångskonfiguration göras:
 
-* Ändra följande sida `https://www.your-url.com/sale` Uppdatera huvudhjälterubriken till&quot;Black Friday Mega Sale - upp till 70 % rabatt&quot;, ändra nedräkningstimern till&quot;Ends in 48 Hours&quot;, Ta bort&quot;Sign up for updates&quot;, Ändra alla&quot;Shop Now&quot;-knappar till&quot;Get the Deal&quot;&quot;
+* Förutsättningar:
 
-* `https://www.your-url.com/laptops/your-laptop-model` Uppdatera banderollkopia till&quot;Spara 300 USD endast idag&quot;, uppdatera priser från 1 299 USD till 999 USD, ta bort banderoll för finansieringsalternativ
+   * För att kunna göra konfigurationen måste användaren ha behörighet som systemadministratör eller produktadministratör.
 
-* `https://www.your-url.com/your-sneaker` Uppdatera Stock-status från Låg Stock till Tillbaka i Stock - begränsade kvantiteter, Ändra storleksväljaren så att tillgängliga storlekar markeras i grönt, ta bort ikonen Kommer snart
+* Konfiguration:
 
-* `https://www.your-url.com/your-sneaker` Uppdatera produktbilderna så att nya färger visas
+   1. Anropa kompetensen för innehållsuppdatering genom att begära en innehållsuppdatering för URL:en.
+   1. Assistenten vägleder dig genom konfigurationen genom att ställa ett antal frågor.
+   1. När publicerings-URL:en är klar konfigureras den och kan användas.
+
+Till exempel:
+
+![Kompetens för innehållsuppdatering - konfigurera publicerings-URL](/help/ai-in-aem/agents/brand-experience/experience-production/assets/content-update-publish-url-configuration.png)
+
+### Fråga {#prompts}
+
+För att starta innehållsuppdateringar kan du ge dig ett brett urval av naturliga språk. Du måste ange den offentliga webbadressen (publicerings-) eller webbadressen till författarmiljön för sidan som du vill uppdatera. Vissa, men inte alla, av de verb som stöds: ersätt, uppdatera, ta bort, ändra, ändra, justera, ta bort.
 
 >[!NOTE]
 >
 >Filöverföringar kan användas vid interaktion med [Jira](#jira), men stöds inte med AI Assistant.
+
+### Exempelfrågor {#sample-prompts}
+
+Exempeluppmaningar:
+
+* den `<your-publish-URL>` uppdateringen &quot;Det perfekta kaffet är fyra frågor bort!&quot; till &quot;Ditt kaffe, på ditt sätt!&quot;
+* på `<your-author-env-URL>` ersätt bilden från &quot;holkat.png&quot; till &quot;stairhead.png&quot;
+* på `<your-publish-URL>` ändra knappen &quot;Ta vår offefråga&quot; till en mer engagerande version&quot;
+* den `<your-author-env-URL>` ta bort avsnittet &quot;Rewards unclaimed is a Gift missing!&quot;
 
 ## Jira {#jira}
 
@@ -79,17 +98,11 @@ Skapa en Jira-biljett (av valfri typ). Det krävs två viktiga uppgifter i fält
 
 ### Anropa jobbet från din biljett {#invoke-the-job-from-your-ticket}
 
-Om du vill använda jobbet lägger du till en kommentar i din biljett. I kommentaren anger du jobbet med symbolen `@`, tillsammans med det kommando som det ska köra, till exempel:
+Om du vill använda jobbet lägger du till en kommentar i din biljett. I kommentaren anger du jobbet med symbolen `@`, tillsammans med instruktionerna.
 
-* `@aemagent@adobe.com process`
+Till exempel:
 
-Jobbet förstår för närvarande kommandona:
-
-* `process` - bearbeta begäran
-* `cancel` - avbryt en bearbetningsbegäran
-* `retry` - bearbeta en begäran igen
-* `feedback` - använd feedback på en tidigare generation
-* `reprocess` - bearbeta om den ursprungliga begäran
+* `@aemagent@adobe.com process this ticket`
 
 ### Hur jobbet samverkar {#how-the-agent-interacts}
 
@@ -109,34 +122,7 @@ Om ett `process`-kommando utlöser uppdateringar kan svaren följa sekvensen:
 
 ## Aktivering {#activation}
 
-Om du vill aktivera och få tillgång till kommunikationsjobbet måste du kontakta Adobe. Du kan antingen:
-
-* Kontakt `experience-production-agent@adobe.com`
-* Eller kontakta ditt kontoteam
-
-Om du vill snabba upp processen kan du få följande information:
-
-* För AEM as a Cloud Service måste du ange:
-   * Organisations-ID
-   * `product_id`
-   * `profile_id`
-
-   * Dessa värden finns i följande steg:
-      1. Din administratör måste besöka [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com)
-      1. Välj **Adobe Experience Manager as a Cloud Service**
-      1. Välj lämplig AEM-instans
-      1. Välj den profil som tillåter läs- och skrivåtgärder för innehållet i fråga
-      1. Hämta webbläsarens URL
-      1. Extrahera `product_id` och `profile_id` från URL:en.
-Exempel: `https://adminconsole.adobe.com/products/profiles/users`
-
-* Edge Delivery Document Authoring
-   * Ge ditt Adobe-team följande information:
-      * Relevanta domäner
-      * Relevant Github-information:
-         * Org
-         * Repo
-         * Gren
+Du kan utforska AEM Agents via [Playground](https://www.aem.live/developer/aem-playground) eller ansluta till din CSM eller TAM för att diskutera åtkomst via din SKU.
 
 ## Begränsningar {#limitations}
 

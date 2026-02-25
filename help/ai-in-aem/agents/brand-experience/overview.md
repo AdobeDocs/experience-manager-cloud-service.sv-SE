@@ -3,13 +3,13 @@ title: Varumärkesupplevelseagent
 description: Läs om hur Brand Experience Agent tar bort friktionen från föränderliga digitala upplevelser genom att utnyttja det tunga operativa arbetet bakom uppdateringar, kommunikationsskapande och felsökning, vilket hjälper team att leverera förändringar snabbare och med större självförtroende för dagens AI-era.
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
-source-git-commit: 722be0dda9eebe7337eee6b01a428e788fd5a0a7
+exl-id: e6cd421a-8791-4fe3-b284-9b3beae996fd
+source-git-commit: 4ad099edc7d580148a401f9a61c9536c1cb88346
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # Varumärkesupplevelseagent {#brand-experience-agent}
 
@@ -60,7 +60,5 @@ Medarbetaren kan arbeta med andra agentfärdigheter, till exempel:
 
 ## Aktivering {#activation}
 
-Om du vill aktivera och få tillgång till varumärkesagenten måste du kontakta Adobe genom att antingen:
+Du kan utforska AEM Agents via [Playground](https://www.aem.live/developer/aem-playground) eller ansluta till din CSM eller TAM för att diskutera åtkomst via din SKU.
 
-* Mejla `experience-production-agent@adobe.com`
-* Eller kontakta ert kontoteam

@@ -4,9 +4,9 @@ description: Läs mer om hur Brand Experience Agent skapar formulär och hur man
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: 24ad5f36-405b-4ea2-9819-de6aea856a7a
-source-git-commit: 71e3770a7a26b8d3144717513f3ec1c997b3b435
+source-git-commit: 36f4ba8207da67b8e68c9c9851311defc909b495
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -54,15 +54,9 @@ När du har skapat en inledande formulärstruktur med hjälp av AI-assistenten k
 
 Mer information finns i [dokumentationen för Forms Experience Builder.](/help/forms/experience-builder/product-overview.md)
 
-
 ## Aktivering {#activation}
 
-Om du vill aktivera formulärskapandet för din organisation måste aktiveringen initieras via Adobe. Börja processen genom att nå ut via:
-
-* E-post: `experience-production-agent@adobe.com`
-* Eller kontakta ett Adobe-kontoteam.
-
-Var noga med att ange ditt företags-ID för AEM as a Cloud Service när du kommer ut.
+Du kan utforska AEM Agents via [Playground](https://www.aem.live/developer/aem-playground) eller ansluta till din CSM eller TAM för att diskutera åtkomst via din SKU.
 
 <!-- 
 #### Import and convert {#import-and-convert}
