@@ -235,7 +235,7 @@ public void orDoThis(Session session) throws Exception {
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
-Så som beskrivs i [`Sling`-dokumentationen ](https://sling.apache.org/documentation/the-sling-engine/servlets.html) rekommenderas inte bindningar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
+Så som beskrivs i [`Sling`-dokumentationen &#x200B;](https://sling.apache.org/documentation/the-sling-engine/servlets.html) rekommenderas inte bindningar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-5}
 
@@ -547,7 +547,7 @@ Det finns dock fall där en API är inaktuell i Experience Manager-sammanhang me
 
 Projektet `Apache Sling` uppmuntrar inte användning av anteckningen `@Inject` i kontexten för delningsmodeller, eftersom den kan leda till sämre prestanda när den kombineras med `DefaultInjectionStrategy.OPTIONAL` (antingen på fält- eller klassnivå). I stället bör mer specifika injektioner (som `@ValueMapValue` eller `@OsgiInjector` anteckningar) användas.
 
-Läs [`Apache Sling`-dokumentationen ](https://sling.apache.org/documentation/bundles/models.html#discouraged-annotations-1) om du vill ha mer information om de rekommenderade anteckningarna och varför den här rekommendationen gjordes från början.
+Läs [`Apache Sling`-dokumentationen &#x200B;](https://sling.apache.org/documentation/bundles/models.html#discouraged-annotations-1) om du vill ha mer information om de rekommenderade anteckningarna och varför den här rekommendationen gjordes från början.
 
 
 ### Återanvänd instanser av en HTTPClient {#sonarqube-reuse-httpclient}
