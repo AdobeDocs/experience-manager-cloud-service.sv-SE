@@ -5,7 +5,7 @@ exl-id: a4e19c59-ef2c-4683-a1be-3ec6c0d2f435
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 897f6376c594604527231f6f5a05a8b85d6858f3
+source-git-commit: 5cdfdd401293873d13a85d5eb42c18ab2d0b3be3
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 0%
@@ -139,7 +139,7 @@ Uppdatera användningen av `bnd-maven-plugin` till version 6.4.0 för att säker
   Versioner 7 eller senare är inte kompatibla med Java 11 eller tidigare, så en uppgradering till den versionen rekommenderas inte.
 
 * **Minimiversion av `aemanalyser-maven-plugin`:**
-Uppdatera användningen av `aemanalyser-maven-plugin` till version 1.6.6 eller senare för att säkerställa stöd för nyare JVM-miljöer.
+Uppdatera användningen av `aemanalyser-maven-plugin` till version 1.6.16 eller senare för att säkerställa stöd för nyare JVM-miljöer.
 
 * **Minimiversion av `maven-bundle-plugin`:**
 Uppdatera användningen av `maven-bundle-plugin` till version 5.1.5 eller senare för att säkerställa stöd för nyare JVM-miljöer.
