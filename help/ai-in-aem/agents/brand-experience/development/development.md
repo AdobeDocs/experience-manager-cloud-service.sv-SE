@@ -32,7 +32,7 @@ Jobbet kan hämta pipeline-status och hjälpa dig att felsöka misslyckade konst
 
 Information om hur du registrerar dig i betaprogrammet finns i [versionsinformationen](/help/release-notes/release-notes-cloud/release-notes-current.md#aem-beta-programs). Där finns information om hur du registrerar dig och hur du är intresserad av utvecklingsjobbet. Du kan även skicka jobbspecifik feedback via e-post till [aem-devagent@adobe.com.](mailto:aem-devagent@adobe.com)
 
-[Följ en självstudiekurs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
+[Följ en självstudiekurs](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/ai/development-agent-troubleshoot-ci-cd-pipeline) för att lära dig hur du använder utvecklingsagenten för att felsöka pipeline-fel.
 
 ## Gå till utvecklingsjobbet via Cloud Manager {#how-to-access-the-job}
 
