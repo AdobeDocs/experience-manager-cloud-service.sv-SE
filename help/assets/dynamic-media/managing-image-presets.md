@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Image Presets,Viewers,Renditions
 role: User
 exl-id: a53f40ab-0e27-45f8-9142-781c077a04cc
-source-git-commit: c07c1f7e412e0c68338121d49781e33356f6c640
+source-git-commit: 012ce93f65d26d7f59fc874d1b225fbd458cf098
 workflow-type: tm+mt
-source-wordcount: '2539'
+source-wordcount: '2540'
 ht-degree: 5%
 
 ---
@@ -60,7 +60,7 @@ Bildförinställningar definierar hur Dynamic Media levererar bilder, inklusive 
 
 ### Återgivningsgenerering i AEM as a Cloud Service{#rendition-generation-in-aemaacs}
 
-I AEM as a Cloud Service genereras återgivningar med [Asset Microservices](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use#). Arbetsflödet för DAM-uppdatering av resurser är inte tillgängligt för anpassning i Cloud Service.
+I AEM as a Cloud Service genereras återgivningar med [Asset Microservices](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use#). Arbetsflödet för DAM-uppdatering av resurser är inte tillgängligt för anpassning i Cloud Service.
 
 Viktiga överväganden är följande:
 
@@ -68,11 +68,11 @@ Viktiga överväganden är följande:
 * Ändringar av en bearbetningsprofil påverkar nyligen överförda resurser. Befintliga resurser måste bearbetas om om nya återgivningar krävs.
 * Anpassning av arbetsflödesmodell stöds inte i AEM as a Cloud Service för återgivningsgenerering.
 
-Bildförinställningar refererar till tillgängliga återgivningar vid leveranstillfället. Kontrollera att de nödvändiga återgivningarna finns innan du konfigurerar eller använder bildförinställningar.
+Bildförinställningar refererar till tillgängliga återgivningar vid leveranstillfället. Kontrollera att de återgivningar som krävs finns innan du konfigurerar eller använder bildförinställningar.
 
 **Så här kontrollerar du vilka återgivningar som genereras:**
 
-1. Skapa eller redigera en [bearbetningsprofil](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use#).
+1. Skapa eller redigera en [bearbetningsprofil](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/asset-microservices-configure-and-use#).
 2. Konfigurera de återgivningsdefinitioner som krävs.
 3. Använd bearbetningsprofilen i lämplig mapp.
 
@@ -191,7 +191,7 @@ Thumbnail sizing is defined in the following format: **[!UICONTROL width:height:
 1. Select **[!UICONTROL Save]** to save the changes to the workflow.
 -->
 
-### Öka eller minska antalet bildförinställningar som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
+## Öka eller minska antalet bildförinställningar som visas {#increasing-or-decreasing-the-number-of-image-presets-that-display}
 
 De bildförinställningar du skapar är tillgängliga som dynamiska återgivningar när du förhandsgranskar resurser. Experience Manager visar olika dynamiska återgivningar när en resurs från **[!UICONTROL Detail View > Renditions]** visas. Du kan öka eller minska gränsen för de återgivningar som visas.
 
@@ -210,7 +210,7 @@ De bildförinställningar du skapar är tillgängliga som dynamiska återgivning
 1. I egenskapen limit ändrar du talet till önskat tal, till exempel `{empty requestPathInfo.selectors[1] ? "20" : requestPathInfo.selectors[1]}`
 1. Välj **[!UICONTROL Save All]**.
 
-### Skapa bildförinställningar {#creating-image-presets}
+## Skapa bildförinställningar {#creating-image-presets}
 
 Skapa bildförinställningar så att du kan använda samma inställningar på alla bilder när du förhandsgranskar eller publicerar.
 
@@ -220,7 +220,7 @@ Skapa bildförinställningar så att du kan använda samma inställningar på al
 
 Om du tänker ge stöd för att lägga in AI-, PDF- och EPS-filer så att du kan generera en dynamisk återgivning av dessa filformat bör du granska följande information innan du skapar bildförinställningar.
 
-Se [Adobe Illustrator (AI), PostScript® (EPS) och PDF &#x200B;](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
+Se [Adobe Illustrator (AI), PostScript® (EPS) och PDF ](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet bör du granska följande information innan du skapar bildförinställningar.
 
@@ -243,7 +243,7 @@ Se [InDesign-filformat (INDD)](#indesign-indd-file-format).
 
 1. Välj **[!UICONTROL Save]**.
 
-### Skapa en responsiv bildförinställning {#creating-a-responsive-image-preset}
+## Skapa en responsiv bildförinställning {#creating-a-responsive-image-preset}
 
 Om du vill skapa en responsiv bildförinställning utför du stegen i [Skapa bildförinställningar](#creating-image-presets). När du anger höjd och bredd i fönstret **[!UICONTROL Edit Image Preset]** raderar du värdena och låter dem vara tomma.
 
@@ -267,7 +267,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
 
 * **[!UICONTROL Sharpening: Resampling Mode]** - Välj **[!UICONTROL Sharp2]**.
 
-#### Alternativ på fliken Grundläggande {#basic-tab-options}
+### Alternativ på fliken Grundläggande {#basic-tab-options}
 
 | Fält | Beskrivning |
 | --- | --- |
@@ -276,7 +276,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
 | **Format** | Välj ett format på menyn.<br>Om du väljer **JPEG** får du tillgång till följande alternativ:<br> ・ **Kvalitet** - JPEG kvalitetsskala är 1-100. Skalan visas när du drar skjutreglaget.<br> ・ **Aktivera nedsampling av färgåtergivning i JPG** - Eftersom ögat är mindre känsligt för högfrekvent färginformation än högfrekvent luminans delas bildinformationen upp i JPEG-bilder i luminans- och färgkomponenter. När en JPEG-bild komprimeras lämnas luminanskomponenten i full upplösning, medan färgkomponenterna nedsamplas genom att medelvärdet av grupper med pixlar ökas. Nedsampling minskar datavolymen till hälften eller en tredjedel med minimal inverkan på den upplevda kvaliteten. Nedsampling kan inte användas för gråskalebilder. Den här tekniken minskar mängden komprimering som är användbar för bilder med hög kontrast (till exempel bilder med överlagrad text).<br><br>Om du väljer **GIF** eller **GIF med alfa** finns följande ytterligare alternativ för **GIF-färgkvantifiering**:<br> ・ **Typ** - Välj **Adaptiv** (standard), **Webb** eller **Macintosh**. Om du väljer **GIF med Alpha** är Macintosh-alternativet inte tillgängligt.<br> ・ **Gitter** - Välj **Diffusera** eller **Av**.<br> ・ **Antal färger** - Ange en siffra mellan 2 och 256.<br> ・ **Färglista** - Ange en kommaavgränsad lista. Ange till exempel `000000,888888,ffffff` för vitt, grått och svart.<br><br>Om du väljer **PDF**, **TIFF** eller **TIFF med alfa** får du följande alternativ:<br> ・ **Komprimering** - Välj en komprimeringsalgoritm. Algoritmalternativen för PDF är **Ingen**, **Zip** och **Jpeg**. För TIFF är de **Ingen**, **LZW**, **Jpeg** och **Zip** och för TIFF med Alpha är de **Inga** , **LZW** och **Zip** .<br><br>Om du väljer **PNG**, **PNG med Alpha** eller **EPS** finns inga ytterligare alternativ. |
 | **Skärpa** | Välj **Aktivera enkel skärpa** om du vill använda ett grundläggande skärpefilter på bilden när all skalning har gjorts. Skärpa kan kompensera för oskärpa som kan uppstå när du visar en bild i en annan storlek. |
 
-#### Avancerade flikalternativ {#advanced-tab-options}
+### Avancerade flikalternativ {#advanced-tab-options}
 
 <table>
  <tbody>
@@ -326,7 +326,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
     </ul>
     <div>
       Skärpa beskrivs i
-     <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media">Använda bildskärpa med Experience Manager Dynamic Media</a> -video, i <a href="https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/master-files/sharpening-image#master-files">Skärpa en bild</a> onlinehjälpavsnitt och i <a href="https://experienceleague.adobe.com/docs/dynamic-media-classic/assets/s7_sharpening_images.pdf?lang=sv-SE">Bästa tillvägagångssätt för skärpa i bilder i Dynamic Media Classic</a> hämtningsbar PDF.
+     <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-image-sharpening-feature-video-use#dynamic-media">Använda bildskärpa med Experience Manager Dynamic Media</a> -video, i <a href="https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/master-files/sharpening-image#master-files">Skärpa en bild</a> onlinehjälpavsnitt och i <a href="https://experienceleague.adobe.com/docs/dynamic-media-classic/assets/s7_sharpening_images.pdf">Bästa tillvägagångssätt för skärpa i bilder i Dynamic Media Classic</a> hämtningsbar PDF.
     </div> </td>
   </tr>
   <tr>
@@ -346,7 +346,7 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
   </tr>
   <tr>
    <td><strong>Bildmodifierare</strong></td>
-   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. De här parametrarna definieras i <a href="https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/syntax-and-features/image-serving-http/c-command-overview">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
+   <td><p>Förutom de vanliga bildinställningarna i användargränssnittet har Dynamic Media stöd för många avancerade bildändringar som du kan ange i fältet <strong>Bildmodifierare</strong>. De här parametrarna definieras i <a href="https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/syntax-and-features/image-serving-http/c-command-overview">Image Server Protocol-kommandoreferensen</a>.</p> <p>Viktigt: Följande funktioner i API:t stöds inte:</p>
     <ul>
      <li>Grundläggande kommandon för mallar och textåtergivning: <code>text= textAngle= textAttr= textFlowPath= textFlowXPath= textPath=</code> och <code>textPs=</code></li>
      <li>Localization commands: <code>locale=</code> och <code>req=xlate</code></li>
@@ -361,9 +361,9 @@ När du skapar eller redigerar bildförinställningar finns alternativen som bes
  </tbody>
 </table>
 
-### Definiera förinställningsalternativ för bilder med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
+## Definiera förinställningsalternativ för bilder med bildmodifierare {#defining-image-preset-options-with-image-modifiers}
 
-Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning är beroende av API:t för bildåtergivning för dynamiska media och definieras i detalj i [HTTP-protokollreferensen](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-rendering-api/http-protocol-reference/c-ir-introduction#image-rendering-api).
+Förutom alternativen på flikarna Grundläggande och Avancerat kan du definiera bildmodifierare som ger dig fler alternativ när du definierar bildförinställningar. Bildåtergivning är beroende av API:t för bildåtergivning för dynamiska media och definieras i detalj i [HTTP-protokollreferensen](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-rendering-api/http-protocol-reference/c-ir-introduction#image-rendering-api).
 
 Nedan följer några grundläggande exempel på vad du kan göra med bildmodifierare.
 
@@ -371,7 +371,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 >
 >Vissa bildmodifierare [kan inte användas i Experience Manager](#advanced-tab-options).
 
-* [op_invert](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert) - Inverterar varje färgkomponent för en negativ bildeffekt.
+* [op_invert](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-invert) - Inverterar varje färgkomponent för en negativ bildeffekt.
 
   ```xml {.line-numbers}
   &op_invert=1
@@ -379,7 +379,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
   ![6_5_imagepreset-edit-invert](assets/6_5_imagepreset-edit-invert.png)
 
-* [op_blur](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur) - Använder ett oskärpefilter på bilden.
+* [op_blur](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-blur) - Använder ett oskärpefilter på bilden.
 
   ```xml {.line-numbers}
   &op_blur=7
@@ -395,7 +395,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
   ![chlimage_1-80](assets/chlimage_1-501.png)
 
-* [op_brightness](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness) - Minskar eller ökar intensiteten.
+* [op_brightness](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-op-brightness) - Minskar eller ökar intensiteten.
 
   ```xml {.line-numbers}
   &op_brightness=58
@@ -403,7 +403,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
   ![6_5_imagepreset-edit-brightness](assets/6_5_imagepreset-edit-brightness.png)
 
-* [opac](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac) - Justerar bildens opacitet. Du kan minska förgrundens opacitet.
+* [opac](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-opac) - Justerar bildens opacitet. Du kan minska förgrundens opacitet.
 
   ```xml {.line-numbers}
   opac=29
@@ -411,7 +411,7 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 
   ![6_5_imagepreset-edit-opacity](assets/6_5_imagepreset-edit-opacity.png)
 
-### Redigera bildförinställningar {#modifying-image-presets}
+## Redigera bildförinställningar {#modifying-image-presets}
 
 1. I Experience Manager väljer du Experience Manager logotyp för att komma åt den globala navigeringskonsolen och går sedan till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
 
@@ -420,11 +420,11 @@ Nedan följer några grundläggande exempel på vad du kan göra med bildmodifie
 1. Välj en förinställning och välj sedan **[!UICONTROL Edit]**. Fönstret **[!UICONTROL Edit Image Preset]** öppnas.
 1. Gör ändringar och välj **[!UICONTROL Save]** om du vill spara ändringarna eller **[!UICONTROL Cancel]** om du vill avbryta ändringarna.
 
-### Publicera bildförinställningar {#publishing-image-presets}
+## Publicera bildförinställningar {#publishing-image-presets}
 
 Bildförinställningar publiceras automatiskt åt dig.
 
-### Ta bort bildförinställningar {#deleting-image-presets}
+## Ta bort bildförinställningar {#deleting-image-presets}
 
 1. I Experience Manager väljer du Experience Manager logotyp för att öppna den globala navigeringskonsolen och väljer verktygsikonen.
 1. Navigera till **[!UICONTROL Assets]** > **[!UICONTROL Image Presets]**.
