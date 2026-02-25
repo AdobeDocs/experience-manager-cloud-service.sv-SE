@@ -50,7 +50,7 @@ Du kommer åt utvecklingsjobbet via AI Assistant som finns i användargränssnit
    >
    >Vilka widgetar, verktyg och artefakter som visas beror på användarens personlighet, berättiganden och AEM driftsättningstyp (AEM as a Cloud Service eller Managed Services 6.5/6.5 LTS).
 
-1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under ](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
+1. Klicka på ikonen **Översikt** Översikt **![i den vänstra listen under &#x200B;](/help/implementing/cloud-manager/configuring-pipelines/assets/overview.svg)Program**.
 
 1. Klicka på en pipeline på sidan **Programöversikt** på kortet **Pipelines**.
 
