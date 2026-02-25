@@ -5,9 +5,9 @@ contentOwner: Rick Brough
 feature: Configuration,Dynamic Media
 role: Admin,User
 exl-id: 8e07bc85-ef26-4df4-8e64-3c69eae91e11
-source-git-commit: 2ca425f9a142432a5d3bcce8ce522c97e4c2cf2d
+source-git-commit: e9a347e229deb0af203503fe6a005f5b0a244484
 workflow-type: tm+mt
-source-wordcount: '3500'
+source-wordcount: '2955'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
 ## Skapa en dynamisk mediekonfiguration i molntjänster {#configuring-dynamic-media-cloud-services}
 
-<!-- **Before you creating a Dynamic Media Configuration in Cloud Services**: After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=sv-SE#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials. -->
+<!-- **Before you creating a Dynamic Media Configuration in Cloud Services**: After you receive your provisioning email with Dynamic Media credentials, you must open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account to change your password. The password provided in the provisioning email is system-generated and intended to be a temporary password only. It is important that you update the password so that Dynamic Media Cloud Service is set up with the correct credentials. -->
 
 1. I Experience Manager as a Cloud Service väljer du Experience Manager as a Cloud Service logotyp för att komma åt den globala navigeringskonsolen.
 1. Till vänster om konsolen väljer du verktygsikonen och går till **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
@@ -93,7 +93,7 @@ To migrate any custom viewer presets and configurations that you have created fr
 
    Om det behövs kan du kontrollera stavningen av ett lösenord som du har skrivit eller skrivit in igen genom att markera lösenordsikonen för att visa lösenordet. Klicka på ikonen igen om du vill dölja lösenordet.
 
-1. Skriv det nya lösenordet igen i fältet **[!UICONTROL Repeat Password]** och välj sedan **[!UICONTROL Done]**.
+1. Skriv det nya lösenordet igen i fältet **[!UICONTROL `Repeat Password`]** och välj sedan **[!UICONTROL Done]**.
 
    Det nya lösenordet sparas när du väljer **[!UICONTROL Save]** i det övre högra hörnet på sidan **[!UICONTROL Create Dynamic Media Configuration]**.
 
@@ -109,7 +109,7 @@ To migrate any custom viewer presets and configurations that you have created fr
    | Företagets rotmappsökväg | Företagets rotmappsökväg. |
    | Publicera Assets | Du kan välja mellan följande tre alternativ:<br>**[!UICONTROL Immediately]**- När resurser överförs importeras resurserna och URL/Embed anges omedelbart. Ingen användaråtgärd krävs för att publicera resurser.<br>**[!UICONTROL On Activation]** - Du måste publicera resursen explicit innan en URL/Embed-länk anges.<br>**[!UICONTROL Selective Publish]**- Assets publiceras automatiskt endast för säker förhandsvisning. De kan också publiceras explicit på Experience Manager as a Cloud Service utan att publiceras på DMS7 för att levereras offentligt. I framtiden har detta alternativ till syfte att publicera material till Experience Manager as a Cloud Service och publicera material till Dynamic Media, som inte utesluter varandra. Det innebär att du kan publicera resurser på DMS7 så att du kan använda funktioner som Smart Crop eller dynamiska återgivningar. Du kan också publicera resurser exklusivt i Experience Manager as a Cloud Service för förhandsgranskning. Samma resurser publiceras inte i DMS7 för att distribueras offentligt. |
    | Secure Preview Server | Här kan du ange URL-sökvägen till förhandsgranskningsservern för säkra återgivningar. Det innebär att när renderingar har skapats kan AEM as a Cloud Service på ett säkert sätt komma åt och förhandsgranska de dynamiska fjärrrenderingarna (inga binärfiler skickas tillbaka till Experience Manager as a Cloud Service-instansen).<br>Om du inte har en särskild överenskommelse om hur du ska använda företagets server eller en speciell server rekommenderar Adobe att du låter den här inställningen vara angiven. |
-   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera vissa resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**- Konfigurationen tillämpas som standard på alla mappar, såvida du inte markerar en mapp speciellt för undantag.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.<br>Om du vill markera en markerad mapp för synkronisering till dynamiska media markerar du en resursmapp och väljer **[!UICONTROL Properties]** i verktygsfältet. På fliken **[!UICONTROL Details]** i listrutan **[!UICONTROL Dynamic Media sync mode]** väljer du bland följande tre alternativ. Välj **[!UICONTROL Save]** när du är klar. _Kom ihåg: dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**&#x200B;tidigare._ Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).<br>**[!UICONTROL Inherited]**- Det finns inget explicit synkroniseringsvärde för mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering till dynamiska media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**- Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
+   | Synkronisera allt innehåll | Markerad som standard. Avmarkera det här alternativet om du vill inkludera eller exkludera vissa resurser från synkroniseringen till dynamiska media. Om du avmarkerar det här alternativet kan du välja mellan följande två synkroniseringslägen för dynamiska media:<br>**[!UICONTROL Dynamic Media sync mode]**<br>**[!UICONTROL Enable by default]**- Konfigurationen tillämpas som standard på alla mappar, såvida du inte markerar en mapp speciellt för undantag.<!-- you can then deselect the folders that you do not want the configuration applied to.--><br>**[!UICONTROL Disabled by default]** - Konfigurationen tillämpas inte på någon mapp förrän du uttryckligen markerar en markerad mapp för synkronisering till Dynamic Media.<br>Om du vill markera en markerad mapp för synkronisering till dynamiska media markerar du en resursmapp och väljer **[!UICONTROL Properties]** i verktygsfältet. På fliken **[!UICONTROL Details]** i listrutan **[!UICONTROL Dynamic Media sync mode]** väljer du bland följande tre alternativ. Välj **[!UICONTROL Save]** när du är klar. _Kom ihåg: dessa tre alternativ är inte tillgängliga om du valde **Synkronisera allt innehåll**tidigare._ Se även [Arbeta med selektiv publicering på mappnivå i Dynamic Media](/help/assets/dynamic-media/selective-publishing.md).<br>**[!UICONTROL Inherited]**- Det finns inget explicit synkroniseringsvärde för mappen. I stället ärver mappen synkroniseringsvärdet från en av de överordnade mapparna eller standardläget i molnkonfigurationen. Detaljerad status för ärvda program via ett verktygstips.<br>**[!UICONTROL Enable for subfolders]** - Inkludera allt i det här underträdet för synkronisering till dynamiska media. De mappspecifika inställningarna åsidosätter standardläget i molnkonfigurationen.<br>**[!UICONTROL Disabled for subfolders]**- Uteslut allt i det här underträdet från synkronisering till Dynamic Media. |
 
    >[!NOTE]
    >
@@ -130,10 +130,10 @@ To migrate any custom viewer presets and configurations that you have created fr
    >Det här inkorgsmeddelandet informerar dig om konfigurationen lyckades eller inte.
    > Mer information finns i [Felsöka en ny konfiguration för dynamiska media](#troubleshoot-dm-config) och [Inkorgen](/help/sites-cloud/authoring/inbox.md).
 
-1. För att förhandsgranska dynamiskt mediematerial säkert innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering och Experience Manager Author förhandsgranskar därför dynamiskt mediematerial som standard. Du kan *tillåtslista* ytterligare IP-adresser om du vill ge användarna åtkomst till förhandsgranskningsinnehållet på ett säkert sätt. Information om hur du konfigurerar den här åtgärden i Experience Manager as a Cloud Service finns i [Konfigurera inställningar för dynamisk mediepublicering för bildserver - säkerhet](/help/assets/dynamic-media/dm-publish-settings.md#security-tab). <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
+1. För att förhandsgranska dynamiskt mediematerial säkert innan det publiceras använder Experience Manager as a Cloud Service tokenbaserad validering och Experience Manager Author förhandsgranskar därför dynamiskt mediematerial som standard. Du kan *tillåtslista* ytterligare IP-adresser om du vill ge användarna åtkomst till förhandsgranskningsinnehållet på ett säkert sätt. Information om hur du konfigurerar den här åtgärden i Experience Manager as a Cloud Service finns i avsnittet [Konfigurera inställningar för dynamisk mediepublicering för bildserver - säkerhetsflik](/help/assets/dynamic-media/dm-publish-settings.md#security-tab). <!-- To securely preview Dynamic Media content before it gets published, you must "allowlist" the Experience Manager as a Cloud Service author instance to connect to Dynamic Media. To set up this action, do the following: -->
 
 <!--
-    * Open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=sv-SE#getting-started), then sign in to your account. Your credentials and sign-in details were provided by Adobe at the time of provisioning. If you do not have this information, contact Adobe Customer Support.
+    * Open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account. Your credentials and sign-in details were provided by Adobe at the time of provisioning. If you do not have this information, contact Adobe Customer Support.
     * On the navigation bar near the upper right corner of the page, go to **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
     * On the Image Server Publish page, in the **[!UICONTROL Publish Context]** drop-down list, select **[!UICONTROL Test Image Serving]**.
     * For the Client Address Filter, select **[!UICONTROL Add]**.
@@ -185,14 +185,14 @@ Det ändrade lösenordet sparas när du väljer **[!UICONTROL Save]** i det övr
 1. I Experience Manager as a Cloud Service väljer du Experience Manager as a Cloud Service logotyp för att komma åt den globala navigeringskonsolen.
 1. Till vänster om konsolen väljer du verktygsikonen och går till **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
 1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** i den vänstra rutan. Välj inte mappikonen till vänster om **[!UICONTROL global]**. Välj sedan **[!UICONTROL Edit]**.
-1. Välj **[!UICONTROL Change Password]** på sidan **[!UICONTROL Edit Dynamic Media Configuration]**, direkt under fältet **[!UICONTROL Password]**.
+1. Välj **[!UICONTROL Edit Dynamic Media Configuration]** på sidan **[!UICONTROL Password]**, direkt under fältet **[!UICONTROL Change Password]**.
 1. Gör följande i dialogrutan **[!UICONTROL Change Password]**:
 
    * Ange ett nytt lösenord i fältet **[!UICONTROL New Password]**.
 
      Fältet **[!UICONTROL Current Password]** är avsiktligt ifyllt och dolt för interaktion.
 
-   * Skriv det nya lösenordet igen i fältet **[!UICONTROL Repeat Password]** och välj sedan **[!UICONTROL Done]**.
+   * Skriv det nya lösenordet igen i fältet **[!UICONTROL `Repeat Password`]** och välj sedan **[!UICONTROL Done]**.
 
 1. I det övre högra hörnet på sidan **[!UICONTROL Edit Dynamic Media Configuration]** väljer du **[!UICONTROL Save]** och sedan **[!UICONTROL OK]**.
 
@@ -200,7 +200,7 @@ Det ändrade lösenordet sparas när du väljer **[!UICONTROL Save]** i det övr
 
 Om du vill anpassa konfigurationen och konfigurationen av Dynamic Media ytterligare, eller optimera dess prestanda, kan du utföra en eller flera av följande _valfria_ uppgifter:
 
-* [(Valfritt) Aktivera ACL-behörigheter i Dynamic Media](#optional-enable-acl)
+<!-- * [(Optional) Enable ACL permissions in Dynamic Media](#optional-enable-acl) -->
 * [(Valfritt) Konfigurera inställningar för Dynamic Media](#optional-setup-and-configuration-of-dynamic-media-scene-mode-settings)
 * [(Valfritt) Justera prestanda för Dynamic Media](#optional-tuning-the-performance-of-dynamic-media-scene-mode)
 
@@ -244,7 +244,7 @@ When you run Dynamic Media on AEM as a Cloud Service, it currently forwards `/is
 
 Använd Dynamic Media Classic användargränssnitt för att ändra inställningarna för Dynamic Media.
 
-<!-- Some of the tasks above require that you open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=sv-SE#getting-started), then sign in to your account. -->
+<!-- Some of the tasks above require that you open the [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#getting-started), then sign in to your account. -->
 
 Installations- och konfigureringsuppgifter omfattar följande:
 
@@ -275,9 +275,9 @@ Se [Konfigurera bildförinställningar](/help/assets/dynamic-media/managing-imag
 
 Så här konfigurerar du standardfärgegenskaperna för aktivering av färgkorrigering när du begär bilder:
 
-1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
+1. Öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga sedan in på ditt konto med de autentiseringsuppgifter som anges under etableringen.
 1. Gå till **[!UICONTROL Setup > Application Setup]**.
-1. Expandera området **[!UICONTROL Publish Setup]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
+1. Expandera området **[!UICONTROL `Publish Setup`]** och markera **[!UICONTROL Image Server]**. Ange **[!UICONTROL Publish Context]** som **[!UICONTROL Image Serving]** när du anger standardvärden för publiceringsinstanser.
 1. Bläddra till egenskapen som du måste ändra, till exempel en egenskap i området **[!UICONTROL Color Management Attributes]**.
 Du kan ange följande egenskaper för färgkorrigering:
 
@@ -397,9 +397,9 @@ Du kan lägga till anpassade MIME-typer för format som inte stöds i Experience
 Adobe rekommenderar följande finjusteringstips för synkroniseringsprestanda/skalbarhet för att Dynamic Media ska fungera smidigt:
 
 * [Uppdatera de fördefinierade jobbparametrarna för bearbetning av olika filformat](#update-job-para).
-* [Uppdatera de fördefinierade arbetsflödeskontakterna för Granite-arbetsflöden (videoresurser)](#update-granite-workflow-queue-worker-threads-video)
-* [Uppdatera de fördefinierade Granska tillfälliga arbetsflödesköerna (bilder och icke-videoresurser) för arbetstrådar](#update-granite-transient-workflow-queue-worker-threads-images).
-* [Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern (Scene7)](#update-max-s7-upload-connections).
+<!-- * [Update the predefined Granite Workflow Queue (video assets) worker threads](#update-granite-workflow-queue-worker-threads-video)
+* [Update the predefined Granite Transient Workflow Queue (images and non-video assets) worker threads](#update-granite-transient-workflow-queue-worker-threads-images).
+* [Update the maximum upload connections to the Dynamic Media Classic (Scene7) server](#update-max-s7-upload-connections).-->
 
 #### Uppdatera fördefinierade jobbparametrar för bearbetning av olika filformat {#update-job-para}
 
@@ -423,85 +423,88 @@ Om du vill uppdatera någon av de här parametrarna läser du [Redigera MIME-typ
 
 Se även [Lägga till MIME-typer för format som inte stöds](#adding-mime-types-for-unsupported-formats).
 
-#### Uppdatera de fördefinierade arbetsflödeskontakterna för Granite-arbetsflöden (videoresurser) {#update-granite-workflow-queue-worker-threads-video}
+<!--
+#### Update the predefined Granite Workflow Queue (video assets) worker threads {#update-granite-workflow-queue-worker-threads-video}
 
-Beviljad arbetsflödeskö används för icke-tillfälliga arbetsflöden. I Dynamic Media används den för att bearbeta video med arbetsflödet **[!UICONTROL Dynamic Media Encode Video]**.
+The Granite Workflow queue is used for non-transient workflows. In Dynamic Media, it is used to process video with the **[!UICONTROL Dynamic Media Encode Video]** workflow.
 
 >[!NOTE]
 >
->Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna utföra den här uppgiften.
+>You must be signed in to Experience Manager as a Cloud Service as the product administrator to complete this task.
 
-Om du inte har tillgång till OSGi läser du [OSGi Configuration](/help/implementing/developing/components/overview.md#osgi-configuration).
+If you do not have access to OSGi, see [OSGi Configuration](/help/implementing/developing/components/overview.md#osgi-configuration).
 
-**Så här uppdaterar du de fördefinierade arbetsflödeskö (videoresurser) för arbetstrådar:**
+**To update the predefined Granite Workflow Queue (video assets) worker threads:**
 
-1. Navigera till `https://<server>/system/console/configMgr` och sök efter **Kö: Begränsa arbetsflödeskö**.
+1. Navigate to `https://<server>/system/console/configMgr` and search for **Queue: Granite Workflow Queue**.
 
    >[!NOTE]
    >
-   >En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
+   >A text search is necessary instead of a direct URL because the OSGi PID is dynamically generated.
 
-1. Ändra talet till det önskade värdet i fältet **[!UICONTROL Maximum Parallel Jobs]**.
+1. In the **[!UICONTROL Maximum Parallel Jobs]** field, change the number to the desired value.
 
-   Som standard beror det maximala antalet parallella jobb på antalet tillgängliga CPU-kärnor. På en server med fyra kärnor tilldelas till exempel två arbetsflöden. (Ett värde mellan 0,0 och 1,0 är kvotbaserat, eller ett tal större än ett tilldelar antalet arbetstrådar.)
+   By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns two worker threads. (A value between 0.0 and 1.0 is ratio-based, or any numbers greater than one assigns the number of worker threads.)
 
-   I de flesta fall räcker standardinställningen 0,5.
+   For most use cases, the 0.5 default setting is sufficient.
 
-   ![Konfiguration av en jobbbehandlingskö](assets/chlimage_1-1.jpeg)
+   ![Configuration of a job processing queue](assets/chlimage_1-1.jpeg)
 
-1. Välj **[!UICONTROL Save]**.
+1. Select **[!UICONTROL Save]**.
 
-#### Uppdatera fördefinierade Granska tillfälliga arbetsflödesköarbetstrådar {#update-granite-transient-workflow-queue-worker-threads-images}
+#### Update the predefined Granite Transient Workflow Queue worker threads {#update-granite-transient-workflow-queue-worker-threads-images}
 
-Bevilja transittjänstens arbetsflödeskö används för arbetsflödet **[!UICONTROL DAM Update Asset]**. I Dynamic Media används den för att hämta och bearbeta bilder och andra resurser.
+The Granite Transit Workflow queue is used for the **[!UICONTROL DAM Update Asset]** workflow. In Dynamic Media, it is used for image and non-video asset ingestion and processing.
 
 >[!NOTE]
 >
->Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna utföra den här uppgiften.
+>You must be signed in to Experience Manager as a Cloud Service as the product administrator to complete this task.
 
-**Så här uppdaterar du fördefinierade Granska tillfälliga arbetsflödeskö för arbetstrådar:**
+**To update the predefined Granite Transient Workflow queue worker threads:**
 
-1. Navigera till **Adobe Experience Manager Web Console-konfigurationen** på `http://<host>:<port>/system/console/configMgr`
-1. Sök efter **kö: Bevilja tillfällig arbetsflödeskö**.
+1. Navigate to the **Adobe Experience Manager Web Console Configuration** at `http://<host>:<port>/system/console/configMgr`
+1. Search for **Queue: Granite Transient Workflow Queue**.
 
    >[!NOTE]
    >
-   >En textsökning är nödvändig i stället för en direkt URL eftersom OSGi PID genereras dynamiskt.
+   >A text search is necessary instead of a direct URL because the OSGi PID is dynamically generated.
 
-1. Ändra talet till det önskade värdet i fältet **[!UICONTROL Maximum Parallel Jobs]**.
+1. In the **[!UICONTROL Maximum Parallel Jobs]** field, change the number to the desired value.
 
-   Du kan öka **[!UICONTROL Maximum Parallel Jobs]** för att stödja tillräckligt stor överföring av filer till Dynamic Media. Det exakta värdet beror på maskinvarukapaciteten. I vissa scenarier, t.ex. en inledande migrering eller en massöverföring som görs en gång, kan du använda ett stort värde. Tänk dock på att användning av ett stort värde (till exempel två gånger antalet kärnor) kan ha negativa effekter på andra samtidiga aktiviteter. Testa och justera värdet utifrån ditt specifika användningsfall.
+   You can increase **[!UICONTROL Maximum Parallel Jobs]** to support adequately heavy upload of files to Dynamic Media. The exact value depends on hardware capacity. In certain scenarios, such as an initial migration or a one-time bulk upload, you can use a large value. Be aware, however, that using a large value (such as two times the number of cores) can have negative effects on other concurrent activities. As such, test and adjust the value based on your particular use case.
 
-<!--    By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
+   By default, the maximum number of parallel jobs depends on the number of available CPU cores. For example, on a 4-core server, it assigns 2 worker threads. (A value between 0.0 and 1.0 is ratio based, or any numbers greater than 1 will assign the number of worker threads.)
 
-   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic. -->
+   Adobe recommends that 32 **[!UICONTROL Maximum Parallel Jobs]** be configured to adequately support heavy upload of files to Dynamic Media Classic.
 
-![chlimage_1](assets/chlimage_1.jpeg)
+   ![chlimage_1](assets/chlimage_1.jpeg)
 
-1. Välj **[!UICONTROL Save]**.
+1. Select **[!UICONTROL Save]**.
+-->
+<!--
+#### Update the maximum upload connections to the Dynamic Media Classic (Scene7) server {#update-max-s7-upload-connections}
 
-#### Uppdatera de maximala överföringsanslutningarna till Dynamic Media Classic-servern (Scene7) {#update-max-s7-upload-connections}
-
-Inställningen Dynamic Media Classic (Scene7) Upload Connection synkroniserar Experience Manager-resurser till Dynamic Media Classic-servrar.
+The Dynamic Media Classic (Scene7) Upload Connection setting synchronizes Experience Manager assets to Dynamic Media Classic servers.
 
 >[!NOTE]
 >
->Du måste vara inloggad på Experience Manager as a Cloud Service som produktadministratör för att kunna utföra den här uppgiften.
+>You must be signed in to Experience Manager as a Cloud Service as the product administrator to complete this task.
 
-**Så här uppdaterar du det maximala antalet överföringsanslutningar till Dynamic Media Classic-servern (Scene7):**
+**To update the maximum upload connections to the Dynamic Media Classic (Scene7) server:**
 
-1. Navigera till `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
-1. I fältet **[!UICONTROL Number of connections]**, i fältet **[!UICONTROL Active job timeout]** eller båda, ändrar du talet efter behov.
+1. Navigate to `https://<server>/system/console/configMgr/com.day.cq.dam.scene7.impl.Scene7UploadServiceImpl`
+1. In the **[!UICONTROL Number of connections]** field, or the **[!UICONTROL Active job timeout]** field, or both, change the number as desired.
 
-   Inställningen **[!UICONTROL Number of connections]** styr det maximala antalet HTTP-anslutningar som tillåts för överföring av Experience Manager till dynamiska media. Det fördefinierade värdet för tio anslutningar är vanligtvis tillräckligt.
+   The **[!UICONTROL Number of connections]** setting controls the maximum number of HTTP connections allowed for Experience Manager to Dynamic Media upload. Typically, the predefined value of ten connections is sufficient.
 
-   Inställningen **[!UICONTROL Active job timeout]** definierar hur länge systemet väntar på att leveransservern ska publicera överförda dynamiska medieresurser. Det här värdet är som standard 2 100 sekunder eller 35 minuter.
+   The **[!UICONTROL Active job timeout]** setting defines how long the system waits for the delivery server to publish uploaded Dynamic Media assets. This value is 2100 seconds or 35 minutes by default.
 
-   I de flesta fall räcker det med inställningen 2 100.
+   For most use cases, the setting of 2100 is sufficient.
 
    ![Adobe Scene7 Upload Service](assets/chlimage_1-2.jpeg)
 
-1. Välj **[!UICONTROL Save]**.
+1. Select **[!UICONTROL Save]**.
+-->
 
 <!-- NOTE - OBSOLETE that customisations to replication agents to transform content are no longer used; the following content is obsolete now 
 
