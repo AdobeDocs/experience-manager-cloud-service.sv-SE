@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar OIDC (Open ID Connect) för AEM as a C
 feature: Security
 role: Admin
 exl-id: d2f30406-546c-4a2f-ba88-8046dee3e09b
-source-git-commit: 75c2dbc4f1d77de48764e5548637f95bee9264dd
+source-git-commit: c9b0f68751bbec69ff0d2a09aa3b7df31d35de3a
 workflow-type: tm+mt
-source-wordcount: '1986'
+source-wordcount: '2153'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Konfigurera nu OIDC-autentiseringshanteraren. Flera OIDC-anslutningar kan konfig
 
 ### Konfigurera SlingUserInfoProcessor {#configure-slinguserinfoprocessor}
 
-1. Skapa konfigurationsfilen. I det här exemplet använder vi `org.apache.sling.auth.oauth_client.impl.SlingUserInfoProcessor~azure.cfg.json`. `azure`-suffixet måste vara en unik identifierare. Se ett exempel på konfigurationsfilen nedan:
+1. Skapa konfigurationsfilen. I det här exemplet använder vi `org.apache.sling.auth.oauth_client.impl.SlingUserInfoProcessorImpl~azure.cfg.json`. `azure`-suffixet måste vara en unik identifierare. Se ett exempel på konfigurationsfilen nedan:
 
    ```
    {
@@ -208,12 +208,14 @@ Det finns två primära metoder.
 ### Alternativ 1 - Lokala grupper
 
 Den externa gruppen kan läggas till som en medlem i en lokal grupp som redan har de nödvändiga åtkomstkontrollistorna.
+
 * Den externa gruppen måste finnas i databasen, vilket sker automatiskt när en användare som tillhör den gruppen loggar in för första gången.
 * Det här alternativet är vanligtvis att föredra när stängda användargrupper (CUG) används, eftersom den lokala gruppen finns både i författar- och publiceringsmiljöer.
 
 ### Alternativ 2 - Direkt åtkomstkontrollista för externa grupper via RepoInit
 
 ACL-listor kan tillämpas direkt på externa grupper med RepoInit-skript.
+
 * Den här metoden är mer effektiv och är att föredra när användargränssnitten inte används.
 * I följande exempel visas en RepoInit-konfiguration som tilldelar läsbehörigheter till en extern grupp. Alternativet `ignoreMissingPrincipal` tillåter att ACL skapas, även om gruppen inte finns i databasen än:
 
@@ -240,7 +242,7 @@ ACL-listor kan tillämpas direkt på externa grupper med RepoInit-skript.
 
 ![ID för OIDC-anspråkstoken](/help/security/assets/oidc-claim-id-token.png)
 
-1. Följ de tidigare dokumenterade stegen för att skapa de konfigurationsfiler som krävs. Nedan finns ett exempel som är specifikt för Azure AD där:
+1. Följ de tidigare dokumenterade stegen för att skapa de konfigurationsfiler som krävs. Nedan visas ett exempel som är specifikt för Azure AD där:
    * Vi definierar namnet på oidc-anslutningen, autentiseringshanteraren och DefaultSyncHandler som: `azure`
    * Webbplatsens URL är: `www.mywebsite.com`
    * Vi skyddar sökvägen `/content/wknd/us/en/adventures` som bara är tillgänglig för autentiserade användare som är medlemmar i gruppen `adventures`
@@ -329,7 +331,7 @@ ACL-listor kan tillämpas direkt på externa grupper med RepoInit-skript.
 }
 ```
 
-### Ytterligare information om Azure AD Groups {#additional-information-about-azure-ad-groups}
+### Mer information om Azure AD Groups {#additional-information-about-azure-ad-groups}
 
 Om du vill konfigurera en grupp för företagsprogrammet i Microsoft Azure Portal måste du söka i programmet på: **Enterprise Applications** och lägga till grupperna: <!-- Alexandru: this bit cound be clearer-->
 
@@ -352,14 +354,58 @@ Filnamnet som måste ändras är `org.apache.sling.auth.oauth_client.impl.SlingU
 }
 ```
 
+## Anpassad omdirigering efter autentisering {#custom-redirect-after-authentication}
+
+Efter lyckad OIDC-autentisering omdirigeras användarna som standard tillbaka till den ursprungligen begärda URL:en. Du kan dock anpassa det här beteendet med frågeparametern `redirect`.
+
+### Använda omdirigeringsparametern
+
+När du initierar autentisering kan du ange en anpassad omdirigerings-URL genom att lägga till parametern `redirect` i din autentiseringsbegäran:
+
+```
+/content/wknd/us/en/adventures?redirect=/content/wknd/us/en/welcome
+```
+
+I det här exemplet kommer användaren att omdirigeras till `/content/wknd/us/en/welcome` i stället för till den ursprungligen begärda sidan när autentiseringen är klar.
+
+### Säkerhetsbegränsningar
+
+Av säkerhetsskäl har parametern `redirect` följande begränsningar:
+
+* **Måste vara en relativ sökväg**: Omdirigerings-URL:en måste börja med `/` (t.ex. `/content/mysite/dashboard`)
+* **Inga omdirigeringar mellan webbplatser**: Absoluta URL:er (t.ex. `https://external-site.com`) tillåts inte
+* **Inga protokollrelativa URL:er**: URL:er som börjar med `//` nekas för att förhindra protokollrelativa omdirigeringar
+
+Om en ogiltig omdirigerings-URL anges misslyckas autentiseringen med ett fel.
+
+### Exempel på användningsfall
+
+1. **Välkomstsida efter inloggning**: Omdirigera användare till en personlig välkomstsida efter deras första inloggning
+
+   ```
+   /content/mysite/secure-area?redirect=/content/mysite/welcome
+   ```
+
+2. **Omdirigering av instrumentpanel**: Direktanvändare till en specifik instrumentpanel efter autentisering
+
+   ```
+   /content/mysite/login?redirect=/content/mysite/user/dashboard
+   ```
+
+3. **Djuplänkning**: Tillåt användare att autentisera och sedan komma åt en specifik resurs
+
+   ```
+   /content/mysite/protected?redirect=/content/mysite/protected/specific-document
+   ```
+
 ## Så här migrerar du från SAML-autentiseringshanterare till OID-autentiseringshanterare
 
-Om AEM redan har konfigurerats med en SAML-autentiseringshanterare och användare finns i databasen med [datasynkronisering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) aktiverat, kan konflikter uppstå mellan de ursprungliga SAML-användarna och de nya OIDC-användarna.
+Om AEM redan har konfigurerats med en SAML-autentiseringshanterare och användare finns i databasen med [datasynkronisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) aktiverat, kan konflikter uppstå mellan de ursprungliga SAML-användarna och de nya OIDC-användarna.
 
 1. Konfigurera [OidcAuthenticationHandler](#configure-oidc-authentication-handler) och aktivera `idpNameInPrincipals` i konfigurationen [SlingUserInfoProcessor](#configure-slinguserinfoprocessor)
 1. Konfigurera [ACL för externa grupper](#configure-acl-for-external-groups).
 1. Efter inloggning från användare kan de gamla användarna som skapats med samma autentiseringshanterare tas bort.
 
 >[!NOTE]
->När SAML Authentication Handler har inaktiverats och OIDC Authentication Handler har aktiverats blir befintliga sessioner ogiltiga om [datasynkronisering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) inte har aktiverats. Användarna måste autentisera igen, vilket resulterar i att nya OIDC-användarnoder skapas i databasen.
+>När SAML Authentication Handler har inaktiverats och OIDC Authentication Handler har aktiverats blir befintliga sessioner ogiltiga om [datasynkronisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier#data-synchronization) inte har aktiverats. Användarna måste autentisera igen, vilket resulterar i att nya OIDC-användarnoder skapas i databasen.
 
