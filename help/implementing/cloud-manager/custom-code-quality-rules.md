@@ -5,9 +5,9 @@ exl-id: f40e5774-c76b-4c84-9d14-8e40ee6b775b
 solution: Experience Manager
 feature: Cloud Manager, Developing
 role: Admin, Developer
-source-git-commit: 629cf9d88531b2e95627917ca139eed1fbddf09d
+source-git-commit: d9a6e7c56a786792599e91ca7a2734dcf15fcb23
 workflow-type: tm+mt
-source-wordcount: '4427'
+source-wordcount: '4441'
 ht-degree: 0%
 
 ---
@@ -235,7 +235,7 @@ public void orDoThis(Session session) throws Exception {
 * **Allvarlighetsgrad**: Större
 * **Sedan**: Version 2018.4.0
 
-Så som beskrivs i [`Sling`-dokumentationen &#x200B;](https://sling.apache.org/documentation/the-sling-engine/servlets.html) rekommenderas inte bindningar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
+Så som beskrivs i [`Sling`-dokumentationen ](https://sling.apache.org/documentation/the-sling-engine/servlets.html) rekommenderas inte bindningar av sökvägar. Sökvägsbundna servrar kan inte använda vanliga JCR-åtkomstkontroller och därför krävs ytterligare säkerhetsproblem. I stället för att använda sökvägsbundna servrar rekommenderar vi att du skapar noder i databasen och registrerar servlets efter resurstyp.
 
 #### Kod som inte uppfyller kraven {#non-compliant-code-5}
 
@@ -519,9 +519,11 @@ Mer information om hur du hanterar jobb i klustrade miljöer finns i [`Apache Sl
 * **Allvarlighetsgrad**: Info, delversion eller större
 * **Sedan**: Version 2026.1.0
 
-Experience Manager API-ytan är under ständig revision för att identifiera API:er för vilka användningen måste stoppas. Denna API är inaktuell och markerad med ett borttagningsdatum.
+Experience Manager API-ytan är under ständig revision för att identifiera API:er för vilka användningen måste stoppas. Dessa API:er är inaktuella och markerade med ett borttagningsdatum.
 
-Ju närmare borttagningsdatumet infaller, desto allvarligare bryter regeln mot. Användning av sådan API måste ersättas med ett säkert alternativ.
+Ju närmare borttagningsdatumet infaller, desto allvarligare bryter regeln mot. Användning av sådana API:er måste ersättas med ett säkert alternativ.
+
+Använd [den här artikeln](/help/release-notes/deprecated-removed-features.md#aem-apis) som vägledning om hur du tar bort användning av inaktuella API:er.
 
 ### Använd inte inaktuella API:er från Experience Manager {#sonarqube-aem-deprecated}
 
@@ -545,7 +547,7 @@ Det finns dock fall där en API är inaktuell i Experience Manager-sammanhang me
 
 Projektet `Apache Sling` uppmuntrar inte användning av anteckningen `@Inject` i kontexten för delningsmodeller, eftersom den kan leda till sämre prestanda när den kombineras med `DefaultInjectionStrategy.OPTIONAL` (antingen på fält- eller klassnivå). I stället bör mer specifika injektioner (som `@ValueMapValue` eller `@OsgiInjector` anteckningar) användas.
 
-Läs [`Apache Sling`-dokumentationen &#x200B;](https://sling.apache.org/documentation/bundles/models.html#discouraged-annotations-1) om du vill ha mer information om de rekommenderade anteckningarna och varför den här rekommendationen gjordes från början.
+Läs [`Apache Sling`-dokumentationen ](https://sling.apache.org/documentation/bundles/models.html#discouraged-annotations-1) om du vill ha mer information om de rekommenderade anteckningarna och varför den här rekommendationen gjordes från början.
 
 
 ### Återanvänd instanser av en HTTPClient {#sonarqube-reuse-httpclient}
