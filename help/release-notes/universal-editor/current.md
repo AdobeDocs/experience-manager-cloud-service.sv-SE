@@ -1,20 +1,20 @@
 ---
-title: Versionsinformation om Universal Editor 2026.02.19
-description: Detta är versionsinformationen för version 2026.02.19 av Universal Editor.
+title: Versionsinformation om Universal Editor 2026.02.26
+description: Detta är versionsinformationen för version 2026.02.26 av Universal Editor.
 feature: Release Information
 role: Admin
 exl-id: d16ed78d-d5a3-45bf-a415-5951e60b53f9
-source-git-commit: 39137052e9fa409f7f5494be53fa7693aaa60b17
+source-git-commit: 53f77d76fc43932e16cd36e47435499f33513b18
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
 
-# Versionsinformation om Universal Editor 2026.02.19 {#release-notes}
+# Versionsinformation om Universal Editor 2026.02.26 {#release-notes}
 
-Det här är versionsinformationen för den 19 februari 2026-versionen av Universal Editor.
+Det här är versionsinformationen för den 26 februari 2026-versionen av Universal Editor.
 
 >[!TIP]
 >
@@ -26,14 +26,9 @@ Det här är versionsinformationen för den 19 februari 2026-versionen av Univer
 
 ## Nyheter {#what-is-new}
 
-* RTE har förbättrats.
-   * [Det finns nu stöd för att dölja verktygsfältsobjekt i kontext-RTE](/help/implementing/universal-editor/configure-rte.md#common-action-options).
-   * [Det finns nu stöd för figursättning av text i tabeller med stycken &#x200B;](/help/implementing/universal-editor/configure-rte.md#table-actions).
-   * [HTML-taggar](/help/implementing/universal-editor/configure-rte.md#unsupported-html) som inte stöds kan nu bevaras av RTE.
-   * RTE-logik används nu från en separat fil.
-   * [Tabeller kan nu skapas](/help/sites-cloud/authoring/universal-editor/authoring.md#formatting-options) och redigeras med RTE.
-* Om ingen etikett anges används komponentens rubrik från komponentdefinitionen.
-* `setEditorMode` är nu tillgängligt via tillägg.
+* Beskrivningar har lagts till i alla schemafält för att hjälpa utvecklare att generera modell-/filter-/komponentdefinitionsfiler.
+* Flerfältsuppdateringar av innehållsfragment stöds nu för kontextredigeringar.
+
 
 ## Funktioner för tidig användning {#early-adopter}
 
@@ -43,7 +38,7 @@ Om du är intresserad av att testa de kommande funktionerna som listas nedan och
 
 ## Andra förbättringar {#other-improvements}
 
-* RTE-slutpunkter används nu för redigeraren på plats.
-* När du redigerar kapslade fält skrivs peer-poster från dessa strukturer inte längre över.
-* Obligatoriska RTE-fält kan inte längre sparas som tomma.
-* Formatering på plats används inte längre felaktigt när länkar läggs till efter formatering.
+* Redigeraren använder inte längre `{}` som standardvärde innan innehållet kommer fram, vilket förhindrar dataförlust i vissa situationer.
+* Datakvaliteten när fältet är i fokus blev mer robust.
+* Ändringar går inte längre förlorade i vissa situationer när du redigerar i den vänstra panelen och sedan markerar ett annat objekt i redigeringsfönstret.
+* Ett beständigt problem med RTE-fält för innehållsfragment när OpenAPI-slutpunkter användes har åtgärdats.
