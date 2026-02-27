@@ -4,9 +4,9 @@ description: Använd Content Advisor för att upptäcka och få tillgång till A
 exl-id: d43e4451-da2a-444d-9aa4-4282130ee44f
 feature: Collaboration
 role: User
-source-git-commit: 54e66597d60621743cb39ef0b8edb21b6eea6c8d
+source-git-commit: 6d80567106fe7c32d8073ca093f895ff28500413
 workflow-type: tm+mt
-source-wordcount: '2483'
+source-wordcount: '2558'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ Klicka på ikonen ![förhandsgranska](assets/do-not-localize/preview-icon.svg) o
 
 ![Förhandsgranska dynamiska medierenderingar](assets/native-express-dynamic-media-preview.png)
 
-Klicka på **[!UICONTROL Add Modifiers]**, ange en modifierare i textrutan och tryck på Retur för att använda omvandlingen på återgivningarna i realtid. På samma sätt kan du lägga till flera modifierare i en återgivning och förhandsgranska dessa omvandlingar. Dra och släpp resursen från förhandsgranskningen på arbetsytan. Återgivningen efter att dessa modifierare har använts sparas inte. Se listan över modifierare som stöds för [Dynamic Media Scene7](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference) och [Dynamic Media med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
+Klicka på **[!UICONTROL Add Modifiers]**, ange en modifierare i textrutan och tryck på Retur för att använda omvandlingen på återgivningarna i realtid. På samma sätt kan du lägga till flera modifierare i en återgivning och förhandsgranska dessa omvandlingar. Dra och släpp resursen från förhandsgranskningen på arbetsytan. Återgivningen efter att dessa modifierare har använts sparas inte. Se listan över modifierare som stöds för [Dynamic Media Scene7](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference) och [Dynamic Media med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
 
 >[!IMPORTANT]
 > 
@@ -244,34 +244,23 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
 
 7. Klicka på **[!UICONTROL Upload]** för att överföra resurserna till AEM Assets.
 
-   <table> 
-    <tbody>
-     <tr>
-      <th><strong>Format som stöds</strong></th>
-      <th><strong>Storlek</strong></th>
-     </tr>
-    </tr>
-    <tr>
-        <td>[!UICONTROL JPEG]</td>
-        <td> 65 MP (t.ex. 8K x 8K eller 16 K x 4K) </td>
-    </tr>
-    <tr>
-        <td>[!UICONTROL PNG]</td>
-        <td> 65 MP (t.ex. 8K x 8K eller 16 K x 4K) </td>
-    </tr>
-    <tr>
-        <td>[!UICONTROL SVG]</td>
-        <td> Högst 250 kB</td>
-    </tr>
-    <tr>
-        <td>[!UICONTROL MP4]</td>
-        <td> 3 840 × 3 840 pixlar, maximalt 200 MB</td>
-    </tr>
-    <tr>
-      <td colspan="2"> <i> Resursens storlek måste vara mindre än 80 MB för skrivbordsenheter och 40 MB för mobila enheter. </i></td>
-   </tr>
-    </tbody>
-   </table>
+   >[!NOTE]
+   >
+   > Om du sparar resurser i Content Hub leveransdatabas är projekt- eller kampanjnamn ett obligatoriskt fält. I det här fallet behöver du inte välja någon målmapp eftersom den automatiskt hämtas från metadata.
+
+## Filformat som stöds {#supported-file-formats-import-assets}
+
+Adobe Express har inbyggt stöd för de format som finns på [Granska minimikraven för bilder](https://helpx.adobe.com/express/web/image-creation-and-editing/change-file-formats/image-requirements.html). AEM Assets har dock stöd för följande formattyper:
+
+| Format som stöds | Maximala dimensioner/upplösning | Maximal filstorlek |
+|------------------|---------------------------------------------|---------------|
+| JPEG | 65 MP (till exempel 8K × 8K eller 16K × 4K) | 80 MB stationär dator, 40 MB mobil |
+| PNG | 65 MP (till exempel 8K × 8K eller 16K × 4K) | 80 MB stationär dator, 40 MB mobil |
+| SVG | — | 250 kB |
+| MP4 | 3 840 × 3 840 pixlar | 200 MB |
+| PSD | 65 MP (till exempel 8K × 8K eller 16K × 4K) | 80 MB stationär dator, 40 MB mobil |
+| PDF | — | — |
+
 
 ## Begränsningar {#limitations}
 
