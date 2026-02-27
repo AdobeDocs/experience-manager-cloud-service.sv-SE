@@ -325,7 +325,7 @@ Du behöver en databas för att distribuera temat. Logga in på din [AEM Cloud M
 
 1. Skapa en ny databas för ett tema genom att klicka på **[!UICONTROL Repositories]** > **[!UICONTROL Add Repository]**.
 
-   ![skapa nytt tema ](/help/forms/assets/createrepo_canvastheme.png)
+   ![skapa nytt tema &#x200B;](/help/forms/assets/createrepo_canvastheme.png)
 
 
 1. Ange **databasnamnet** i dialogrutan **Lägg till databas**. Angivet namn är till exempel `custom-canvas-theme-repo`.
