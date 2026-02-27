@@ -4,9 +4,9 @@ description: Det här är versionsinformationen för förhandsversionen av Unive
 feature: Release Information
 role: Admin
 exl-id: e8d031aa-4676-4e45-977b-e5dffcc404c4
-source-git-commit: 8ebc8184e642f26c004df88a16eece2563780437
+source-git-commit: 6b4c4b92bb726da2f7222dfa0e223aa3d0309c8f
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Versionsinformationen **preview** är praktisk så att du vet vilka ändringar s
 
 ## Kommande funktioner {#upcoming-features}
 
-* En komponentväljare är nu tillgänglig på snabbmenyn.
+* Komponentväljaren har en ny design.
 * Nu finns det en färgväljare för textredigeraren.
 
 ## Kommande förbättringar {#upcoming-improvements}
