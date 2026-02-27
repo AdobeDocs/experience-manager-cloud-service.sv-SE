@@ -154,7 +154,7 @@ Klicka på ikonen ![förhandsgranska](assets/do-not-localize/preview-icon.svg) o
 
 ![Förhandsgranska dynamiska medierenderingar](assets/native-express-dynamic-media-preview.png)
 
-Klicka på **[!UICONTROL Add Modifiers]**, ange en modifierare i textrutan och tryck på Retur för att använda omvandlingen på återgivningarna i realtid. På samma sätt kan du lägga till flera modifierare i en återgivning och förhandsgranska dessa omvandlingar. Dra och släpp resursen från förhandsgranskningen på arbetsytan. Återgivningen efter att dessa modifierare har använts sparas inte. Se listan över modifierare som stöds för [Dynamic Media Scene7](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference) och [Dynamic Media med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
+Klicka på **[!UICONTROL Add Modifiers]**, ange en modifierare i textrutan och tryck på Retur för att använda omvandlingen på återgivningarna i realtid. På samma sätt kan du lägga till flera modifierare i en återgivning och förhandsgranska dessa omvandlingar. Dra och släpp resursen från förhandsgranskningen på arbetsytan. Återgivningen efter att dessa modifierare har använts sparas inte. Se listan över modifierare som stöds för [Dynamic Media Scene7](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference) och [Dynamic Media med OpenAPI](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/delivery/#operation/getAssetSeoFormat).
 
 >[!IMPORTANT]
 > 
@@ -250,7 +250,7 @@ Adobe rekommenderar att du anger värden i resten av fälten och skapar en förb
 
 ## Filformat som stöds {#supported-file-formats-import-assets}
 
-Adobe Express har inbyggt stöd för de format som finns på [Granska minimikraven för bilder](https://helpx.adobe.com/express/web/image-creation-and-editing/change-file-formats/image-requirements.html). AEM Assets har dock stöd för följande formattyper:
+Adobe Express har inbyggt stöd för de format som finns på [Granska minimikraven för bilder](https://helpx.adobe.com/se/express/web/image-creation-and-editing/change-file-formats/image-requirements.html). AEM Assets har dock stöd för följande formattyper:
 
 | Format som stöds | Maximala dimensioner/upplösning | Maximal filstorlek |
 |------------------|---------------------------------------------|---------------|
