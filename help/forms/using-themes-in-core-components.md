@@ -5,9 +5,9 @@ keywords: teman för formulärbyggare, adaptiva formulärformatmallar, verktyg f
 feature: Adaptive Forms, Core Components
 role: User, Developer
 exl-id: 11c52b66-dbb1-4c47-a94d-322950cbdac1
-source-git-commit: 5b55a280c5b445d366c7bf189b54b51e961f6ec2
+source-git-commit: c5bea0d9386617b8ff51309f5cba45e7068f71e8
 workflow-type: tm+mt
-source-wordcount: '2835'
+source-wordcount: '2843'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/create-or-customize-themes-for-adaptive-forms-core-components.html?lang=sv-SE) |
+| AEM 6.5 | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/create-or-customize-themes-for-adaptive-forms-core-components.html) |
 | AEM as a Cloud Service | Den här artikeln |
 
 Du kan skapa och använda teman för att utforma ett anpassat formulär. Ett tema innehåller formatinformation för komponenterna och panelerna. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder ett tema återspeglas det angivna formatet i motsvarande komponenter. Ett tema hanteras separat utan referens till ett adaptivt formulär och kan återanvändas i flera adaptiva Forms.
@@ -63,14 +63,14 @@ Att anpassa ett tema avser processen att ändra, formatera och anpassa ett temas
 
 ### Förutsättningar {#prerequisites-to-customize}
 
-* Bekanta dig med att [konfigurera en pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#setup-pipeline) och att ha grundläggande kunskaper om hur du konfigurerar en pipeline hjälper dig att hantera och distribuera dina temaanpassningar på ett effektivt sätt.
-* Lär dig hur du [konfigurerar en användare med rollen som medarbetare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=sv-SE). Genom att förstå hur du konfigurerar en användare med rollen Medarbetare kan du ge de behörigheter som krävs för att anpassa temat.
+* Bekanta dig med att [konfigurera en pipeline i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#setup-pipeline) och att ha grundläggande kunskaper om hur du konfigurerar en pipeline hjälper dig att hantera och distribuera dina temaanpassningar på ett effektivt sätt.
+* Lär dig hur du [konfigurerar en användare med rollen som medarbetare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html). Genom att förstå hur du konfigurerar en användare med rollen Medarbetare kan du ge de behörigheter som krävs för att anpassa temat.
 * Installera den senaste versionen av [Apache Maven](https://maven.apache.org/download.cgi). Apache Maven är ett automatiserat byggverktyg som ofta används för Java™-projekt. Genom att installera den senaste versionen får du de beroenden du behöver för att anpassa temat.
 * Installera en vanlig textredigerare. Exempel: Microsoft® Visual Studio Code. Med en vanlig textredigerare som Microsoft® Visual Studio Code får du en användarvänlig miljö där du kan redigera och ändra temafiler.
 
 ### Konfigurera din miljö
 
-* Konfigurera en [frontenddistributionspipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html?lang=sv-SE) för din Cloud Service-miljö. Du kan också konfigurera pipeline senare, så att du kan prioritera testning och finjustering av temat innan du ställer in distributionsflödet.
+* Konfigurera en [frontenddistributionspipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html) för din Cloud Service-miljö. Du kan också konfigurera pipeline senare, så att du kan prioritera testning och finjustering av temat innan du ställer in distributionsflödet.
 
 <!-- 
 To deploy your themes to a Forms as a Cloud Service environment, first test theme on a local development environment to address any issues. Once the theme is tested, configure the front-end deployment pipeline, which is responsible for deploying the themes.
@@ -316,15 +316,16 @@ Så här distribuerar du temat till din Cloud Service-miljö med hjälp av pipel
 
 * 5.1 [Skapa en databas för temat](#create-a-new-theme-repo)
 * 5.2 [Överför ändringarna till databasen](#committing-the-changes)
-* 5.3 [Kör frontpipeline](#run-a-frontend-pipeline)
+* 5.3 [Ställ in versionen Node.js till 20](#53-set-the-nodejs-version-to-20)
+* 5.4 [Kör frontpipeline](#run-a-frontend-pipeline)
 
 ##### 5.1 Skapa en databas för temat{#create-a-new-theme-repo}
 
-Du behöver en databas för att distribuera temat. Logga in på din [AEM Cloud Manager-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html?lang=sv-SE#accessing-git) och lägg till en ny databas för ditt tema.
+Du behöver en databas för att distribuera temat. Logga in på din [AEM Cloud Manager-databas](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/developers.html#accessing-git) och lägg till en ny databas för ditt tema.
 
 1. Skapa en ny databas för ett tema genom att klicka på **[!UICONTROL Repositories]** > **[!UICONTROL Add Repository]**.
 
-   ![skapa nytt tema &#x200B;](/help/forms/assets/createrepo_canvastheme.png)
+   ![skapa nytt tema ](/help/forms/assets/createrepo_canvastheme.png)
 
 
 1. Ange **databasnamnet** i dialogrutan **Lägg till databas**. Angivet namn är till exempel `custom-canvas-theme-repo`.
@@ -368,11 +369,25 @@ Nu kan du föra över ändringarna till temadatabasen för din AEM Forms Cloud S
 
    ![Ändringar har implementerats](/help/forms/assets/cmd_git_push.png)
 
+##### 5.3 Ange version 20 av Node.js
+
+Så här anger du versionen Node.js till 20 med pipelinekonfigurationen:
+
+1. Gå till avsnittet **Pipelines** och leta upp din frontendpipeline.
+2. Klicka på trepunktsmenyn **⋯** till höger om pipelinen och välj **Visa/redigera variabler** i listrutan.
+3. I dialogrutan **Variabelkonfiguration** fyller du i fälten enligt följande:
+   * **NAME** - NODE_VERSION
+   * **VÄRDE** - 20
+   * **STEP APPLIED** - Bygge
+   * **TYP** - Variabel
+4. Klicka på **Spara** för att använda konfigurationen.
+
+![pipeline-konfiguration](/help/forms/assets/pipeline-config.png)
 
 
-##### 5.3 Köra frontlinjen {#run-a-frontend-pipeline}
+##### 5.4 Köra frontlinjen {#run-a-frontend-pipeline}
 
-Temat distribueras med [front-end-pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html?lang=sv-SE). Så här distribuerar du temat:
+Temat distribueras med [front-end-pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline.html). Så här distribuerar du temat:
 
 1. Logga in på din AEM Cloud Manager-databas.
 1. Klicka på knappen **[!UICONTROL Add]** i avsnittet **[!UICONTROL Pipelines]**.
@@ -419,21 +434,6 @@ Steg för att tillämpa ett tema på ett adaptivt formulär är:
 
 Adaptiva formulärteman används som en del av en adaptiv formulärmall för att definiera format när du skapar ett adaptivt formulär.
 
-## Ange versionen Node.js till 20
-
-Så här anger du versionen Node.js till 20 med pipelinekonfigurationen:
-
-1. Gå till avsnittet **Pipelines** och leta upp din frontendpipeline.
-2. Klicka på trepunktsmenyn **⋯** till höger om pipelinen och välj **Visa/redigera variabler** i listrutan.
-3. I dialogrutan **Variabelkonfiguration** fyller du i fälten enligt följande:
-   * **NAME** - NODE_VERSION
-   * **VÄRDE** - 20
-   * **STEP APPLIED** - Bygge
-   * **TYP** - Variabel
-4. Klicka på **Spara** för att använda konfigurationen.
-
-![pipeline-konfiguration](/help/forms/assets/pipeline-config.png)
-
 ## God praxis {#best-practices}
 
 * **Undviker resurser från ett annat tema**
@@ -461,4 +461,4 @@ Så här anger du versionen Node.js till 20 med pipelinekonfigurationen:
 * [Ange formulärlayout för olika skärmstorlekar och enhetstyper](/help/sites-cloud/authoring/page-editor/responsive-layout.md)
 * [Generera urkunder för adaptiva Forms (kärnkomponenter)](/help/forms/generate-document-of-record-for-non-xfa-based-adaptive-forms.md)
 * [Skapa en adaptiv Forms med upprepningsbara avsnitt](/help/forms/create-forms-repeatable-sections.md)
-* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html?lang=sv-SE)
+* [Exempelmallar för teman och formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components.html)
