@@ -4,7 +4,7 @@ description: Lär dig vad uppdateringsjobbet för varumärkesupplevelseagenten �
 feature: Edge Delivery Services, Agentic AI
 role: User, Admin, Architect, Developer
 exl-id: e2d1dae8-38de-4357-bb14-ad35acb71aee
-source-git-commit: 36f4ba8207da67b8e68c9c9851311defc909b495
+source-git-commit: a3b00916c0d949fe9fac50bc0c3056b0a1b05358
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -20,7 +20,7 @@ Innehållsuppdateringsjobbet för [varumärkesagenten](/help/ai-in-aem/agents/br
 
 Innehållsuppdateringsjobbet uppdaterar befintligt innehåll, inklusive innehållsfragment, sidor, formulär och resurser. Jobbet kan utföra åtgärder som att uppdatera, ta bort, ersätta eller lägga till innehållselement för att hålla upplevelsen korrekt och aktuell. Inmatningar kan vara naturliga språkbeskrivningar, och när de används med Jira PDF-filer och skärmbilder kan de också ge inmatning.
 
-Innehållsuppdateringsjobbet omvandlar den information du anger, antingen på det naturliga språket eller visuellt, till innehållsuppdateringar på sidan. Du anger URL-adressen till en sida som behöver uppdateras, tillsammans med information om vad som behöver uppdateras, och agentens kompetens slutför uppgiften. När det används med Adobe Experience Manager (AEM) as a Cloud Service skapas en ny [start](/help/sites-cloud/authoring/launches/overview.md) så att du kan granska uppdateringarna innan du tillämpar dem. När det används med dokumentredigering skapar jobbet en ny [version](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/document-authoring/how-to/document-versions#).
+Innehållsuppdateringsjobbet omvandlar den information du anger, antingen på det naturliga språket eller visuellt, till innehållsuppdateringar på sidan. Du anger URL-adressen till en sida som behöver uppdateras, tillsammans med information om vad som behöver uppdateras, och agentens kompetens slutför uppgiften. När det används med Adobe Experience Manager (AEM) as a Cloud Service skapas en ny [start](/help/sites-cloud/authoring/launches/overview.md) så att du kan granska uppdateringarna innan du tillämpar dem. När det används med dokumentredigering skapar jobbet en ny [version](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/document-authoring/how-to/document-versions#).
 
 ## Funktioner {#capabilities}
 
@@ -118,7 +118,7 @@ Om ett `process`-kommando utlöser uppdateringar kan svaren följa sekvensen:
 
 * Följande bild visar ett exempel på Jira som utlöser kommandot `process` för innehållsuppdateringsjobbet:
 
-  ![Exempel-Jira som använder innehållsuppdateringsjobbet för Experience Production Agent](assets/content-update-jira-example.png)
+  ![Exempel-Jira som använder innehållsuppdateringsjobbet för varumärkesupplevelseagenten](assets/content-update-jira-example.png)
 
 ## Aktivering {#activation}
 
