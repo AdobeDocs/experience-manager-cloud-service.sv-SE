@@ -38,7 +38,7 @@ Du hittar den senaste underhållsversionsinformationen [här](/help/release-note
 
 Titta på videon med versionsöversikten från februari 2026 om du vill se en sammanfattning av funktioner som lagts till i version 2026.2.0:
 
->[!VIDEO](https://video.tv.adobe.com/v/3480399/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3480403/?captions=swe&quality=12)
 
 
 ## AEM Beta-program {#aem-beta-programs}
@@ -188,7 +188,7 @@ Vi har ett begränsat antal möjligheter, antingen för AEM Publish Delivery ell
 
 #### Cloud Manager MCP Server (Beta Program) {#cm-mcp-server}
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3480346/?captions=swe&quality=12)
 
 Moderna utvecklingsmiljöer använder MCP (Model Context Protocol) för att möjliggöra stora språkmodeller för att anropa verktyg som exponeras av MCP-servrar. I stället för att integrera direkt med lågnivå-API-specifikationer kan utvecklare beskriva sin avsikt på ett naturligt språk.
 
